@@ -34,7 +34,7 @@ Phần này nối khái niệm vừa học với “Điểm dễ nhầm trong đ
 - **생명 주기 = 개발 방법론** (vòng đời = phương pháp phát triển) là sai. SDLC là khung các giai đoạn; Waterfall, Spiral, Agile là các mô hình/phương pháp tổ chức hoặc thực hiện các giai đoạn đó.
 - **생명 주기 = chỉ coding** là sai. Coding (구현, implementation) chỉ là một phần; yêu cầu, kiểm thử và bảo trì cũng thuộc vòng đời.
 
-## 2. 폭포수 모형 — Waterfall Model — mô hình thác nước
+## 2. 폭포수 모형 — Waterfall mô hình (model / 모델) — mô hình thác nước
 
 **폭포수 모형은 한 단계가 완전히 끝나야만 다음 단계로 넘어갈 수 있는 선형 순차적 개발 모형이다.**
 
@@ -56,7 +56,7 @@ Phần này nối khái niệm vừa học với “Keyword cần nhớ”, giú
 
 Waterfall phù hợp khi yêu cầu ổn định, phạm vi có thể mô tả đầy đủ từ đầu và việc thay đổi bị kiểm soát nghiêm ngặt, ví dụ một dự án có quy định/hợp đồng chặt chẽ. Đừng hiểu “không thể quay lại” theo nghĩa vật lý tuyệt đối: thực tế vẫn có thể quay lại, nhưng mô hình giả định việc quay lại là đắt và cần quy trình phê duyệt, nên đề thi thường đối lập nó với tính linh hoạt của Agile.
 
-## 3. 나선형 모형 — Spiral Model — mô hình xoắn ốc
+## 3. 나선형 모형 — Spiral mô hình (model / 모델) — mô hình xoắn ốc
 
 **나선형 모형은 폭포수와 프로토타입 모형의 장점에 위험 분석 기능을 추가하여 점진적으로 개발하는 모형이다.**
 
@@ -78,7 +78,7 @@ Phần này nối khái niệm vừa học với “Keyword cần nhớ”, giú
 
 Waterfall ưu tiên trình tự và sự ổn định của tài liệu; Spiral ưu tiên quản lý rủi ro qua các vòng lặp. Agile cũng lặp, nhưng trọng tâm nổi bật của Agile là phản hồi nhanh với thay đổi yêu cầu, còn đặc điểm nhận diện của Spiral trong đề là **위험 분석 (risk analysis, phân tích rủi ro)**.
 
-## 4. 애자일 모형 — Agile Model — mô hình/phương pháp Agile
+## 4. 애자일 모형 — Agile mô hình (model / 모델) — mô hình/phương pháp Agile
 
 **애자일 모형은 고객의 요구사항 변화에 유연하게 대응할 수 있도록 일정한 주기를 반복하며 진행하는 개발 방법론을 통칭한다.**
 
@@ -110,13 +110,13 @@ Phần này nối khái niệm vừa học với “Vai trò và tạo tác”, 
 - **개발 팀 (Development Team, nhóm phát triển):** nhóm liên chức năng tạo phần tăng trưởng sản phẩm có thể sử dụng.
 - **스프린트 (Sprint, chu kỳ nước rút):** khoảng thời gian cố định, thường 2–4 tuần theo tài liệu nguồn, để tạo một phần sản phẩm hoàn chỉnh có thể xem xét.
 
-## 6. 스크럼 개발 프로세스 — Scrum process — quy trình vận hành Scrum
+## 6. 스크럼 개발 프로세스 — Scrum tiến trình (process / 프로세스) — quy trình vận hành Scrum
 
 **제품 백로그에서 시작하여 스프린트 계획, 실행, 검토, 회고를 거쳐 진행된다.**
 
-Quy trình bắt đầu từ Product Backlog. Trong Sprint Planning (스프린트 계획, lập kế hoạch Sprint), nhóm chọn việc ưu tiên và xác định mục tiêu Sprint. Trong khi thực hiện, Daily Scrum (일일 스크럼, họp Scrum hằng ngày) là cuộc họp ngắn, thường khoảng 15 phút, để đồng bộ công việc và phát hiện trở ngại; nó không phải cuộc họp báo cáo dài với quản lý.
+Quy trình bắt đầu từ sản phẩm (product / 제품) Backlog. Trong Sprint Planning (스프린트 계획, lập kế hoạch Sprint), nhóm chọn việc ưu tiên và xác định mục tiêu Sprint. Trong khi thực hiện, Daily Scrum (일일 스크럼, họp Scrum hằng ngày) là cuộc họp ngắn, thường khoảng 15 phút, để đồng bộ công việc và phát hiện trở ngại; nó không phải cuộc họp báo cáo dài với quản lý.
 
-Kết thúc Sprint, Sprint Review (스프린트 검토, xem xét Sprint) trình bày và kiểm tra kết quả với các bên liên quan để lấy phản hồi về sản phẩm. Sau đó Sprint Retrospective (스프린트 회고, hồi tưởng/cải tiến Sprint) nhìn lại cách cả nhóm làm việc và chọn cải tiến cho Sprint sau. Burn-down Chart (소멸 차트, biểu đồ công việc còn lại) cho thấy lượng công việc còn lại theo thời gian, nên hỗ trợ theo dõi xu hướng chứ không thay thế đánh giá chất lượng.
+Kết thúc Sprint, Sprint rà soát (review / 검토) trình bày và kiểm tra kết quả với các bên liên quan để lấy phản hồi về sản phẩm. Sau đó Sprint Retrospective (스프린트 회고, hồi tưởng/cải tiến Sprint) nhìn lại cách cả nhóm làm việc và chọn cải tiến cho Sprint sau. Burn-down Chart (소멸 차트, biểu đồ công việc còn lại) cho thấy lượng công việc còn lại theo thời gian, nên hỗ trợ theo dõi xu hướng chứ không thay thế đánh giá chất lượng.
 
 ## 7. XP — eXtreme Programming — lập trình cực hạn
 

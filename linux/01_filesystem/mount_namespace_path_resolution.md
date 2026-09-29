@@ -1,10 +1,13 @@
-# Phân giải đường dẫn, mount namespace và góc nhìn filesystem của tiến trình
+# Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình
 
-Trong Linux, đường dẫn không phải là “địa chỉ tuyệt đối” tồn tại độc lập với mọi tiến trình. Khi một tiến trình mở `/etc/hosts`, kernel phải bắt đầu từ root filesystem mà tiến trình đó nhìn thấy, đi qua từng thành phần đường dẫn, áp dụng mount point, symbolic link, permission và namespace để cuối cùng tìm ra object thực sự.
+> **Mạch đọc:** Đọc **Phân giải đường dẫn, mount không gian tên (namespace / 네임스페이스) và góc nhìn filesystem của tiến trình** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Pathname chỉ là tên, không phải đối tượng (object / 객체)** sang **Bắt đầu từ gốc (root / 루트) hoặc hiện tại (current / 현재) working directory**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Hiểu **phân giải đường dẫn (path resolution)** và **mount namespace** giúp giải thích rất nhiều lỗi khó: file có tồn tại trên host nhưng container không thấy, bind mount che nội dung cũ, `chroot` không phải sandbox hoàn chỉnh, service nhìn filesystem khác shell, hoặc một path giống nhau nhưng trỏ tới object khác nhau.
 
-## Pathname chỉ là tên, không phải object
+Trong Linux, đường dẫn không phải là “địa chỉ tuyệt đối” tồn tại độc lập với mọi tiến trình. Khi một tiến trình mở `/etc/hosts`, kernel phải bắt đầu từ gốc (root / 루트) filesystem mà tiến trình đó nhìn thấy, đi qua từng thành phần đường dẫn, áp dụng mount điểm (point / 지점), symbolic link, permission và không gian tên (namespace / 네임스페이스) để cuối cùng tìm ra đối tượng (object / 객체) thực sự.
+
+Hiểu **phân giải đường dẫn (path resolution)** và **mount không gian tên (namespace / 네임스페이스)** giúp giải thích rất nhiều lỗi khó: tệp (file / 파일) có tồn tại trên host nhưng bộ chứa (container / 컨테이너) không thấy, bind mount che nội dung cũ, `chroot` không phải sandbox hoàn chỉnh, dịch vụ (service / 서비스) nhìn filesystem khác shell, hoặc một đường dẫn (path / 경로) giống nhau nhưng trỏ tới đối tượng (object / 객체) khác nhau.
+
+## Pathname chỉ là tên, không phải đối tượng (object / 객체)
 
 Một pathname như:
 
@@ -12,25 +15,25 @@ Một pathname như:
 /opt/app/config.yml
 ```
 
-là một chuỗi tên cần được phân giải qua cây namespace. Object thật phía sau là inode/dentry/filesystem object.
+là một chuỗi tên cần được phân giải qua cây không gian tên (namespace / 네임스페이스). đối tượng (object / 객체) thật phía sau là inode/dentry/filesystem đối tượng (object / 객체).
 
-Nếu rename hoặc mount thay đổi namespace, cùng pathname có thể trỏ tới object khác mà process không nhất thiết thay đổi code.
+Nếu rename hoặc mount thay đổi không gian tên (namespace / 네임스페이스), cùng pathname có thể trỏ tới đối tượng (object / 객체) khác mà tiến trình (process / 프로세스) không nhất thiết thay đổi mã (code / 코드).
 
-## Bắt đầu từ root hoặc current working directory
+## Bắt đầu từ gốc (root / 루트) hoặc hiện tại (current / 현재) working directory
 
-Đường dẫn tuyệt đối bắt đầu từ root mà process nhìn thấy:
+Đường dẫn tuyệt đối bắt đầu từ gốc (root / 루트) mà tiến trình (process / 프로세스) nhìn thấy:
 
 ```text
 /etc/hosts
 ```
 
-Đường dẫn tương đối bắt đầu từ current working directory:
+Đường dẫn tương đối bắt đầu từ hiện tại (current / 현재) working directory:
 
 ```text
 ./config.yml
 ```
 
-Kernel giữ filesystem context của process, gồm root và working directory.
+Kernel giữ filesystem ngữ cảnh (context / 맥락) của tiến trình (process / 프로세스), gồm gốc (root / 루트) và working directory.
 
 Quan sát:
 
@@ -39,9 +42,9 @@ readlink /proc/<PID>/cwd
 readlink /proc/<PID>/root
 ```
 
-Hai process khác nhau có thể có root khác nhau nếu dùng chroot/container/mount namespace.
+Hai tiến trình (process / 프로세스) khác nhau có thể có gốc (root / 루트) khác nhau nếu dùng chroot/bộ chứa (container / 컨테이너)/mount không gian tên (namespace / 네임스페이스).
 
-## Dentry cache và path lookup
+## Dentry bộ nhớ đệm (cache / 캐시) và đường dẫn (path / 경로) lookup
 
 Kernel cần phân giải từng thành phần:
 
@@ -52,9 +55,9 @@ Kernel cần phân giải từng thành phần:
 → config.yml
 ```
 
-VFS dùng dentry cache để tăng tốc lookup tên đã từng truy cập. Vì vậy path lookup không phải lúc nào cũng chạm storage.
+VFS dùng dentry bộ nhớ đệm (cache / 캐시) để tăng tốc lookup tên đã từng truy cập. Vì vậy đường dẫn (path / 경로) lookup không phải lúc nào cũng chạm lưu trữ (storage / 저장소).
 
-Điều này nối trực tiếp với VFS và page cache nhưng là hai cache khác mục đích: dentry cache giúp tên → object, page cache giúp file offset → page dữ liệu.
+Điều này nối trực tiếp với VFS và page bộ nhớ đệm (cache / 캐시) nhưng là hai bộ nhớ đệm (cache / 캐시) khác mục đích: dentry bộ nhớ đệm (cache / 캐시) giúp tên → đối tượng (object / 객체), page bộ nhớ đệm (cache / 캐시) giúp tệp (file / 파일) offset → page dữ liệu.
 
 ## Quyền `x` trên thư mục là quyền traverse
 
@@ -64,39 +67,39 @@ VFS dùng dentry cache để tăng tốc lookup tên đã từng truy cập. Vì
 /a/b/c.txt
 ```
 
-process cần có khả năng traverse qua `/a` và `/a/b`, không chỉ quyền trên file cuối cùng.
+Tiến trình (process / 프로세스) cần có khả năng traverse qua `/a` và `/a/b`, không chỉ quyền trên tệp (file / 파일) cuối cùng.
 
 ```bash
 namei -l /a/b/c.txt
 ```
 
-Đây là công cụ rất hữu ích để tìm component nào gây `Permission denied`.
+Đây là công cụ rất hữu ích để tìm thành phần (component / 컴포넌트) nào gây `Permission denied`.
 
 ## Symbolic link
 
-Symlink chứa pathname khác. Khi lookup gặp symlink, kernel có thể tiếp tục phân giải target.
+Symlink chứa pathname khác. Khi lookup gặp symlink, kernel có thể tiếp tục phân giải mục tiêu (target / 대상).
 
 ```bash
 ln -s /srv/releases/v2 /opt/app/current
 ```
 
-`/opt/app/current/config.yml` phụ thuộc target hiện tại của symlink.
+`/opt/app/current/config.yml` phụ thuộc mục tiêu (target / 대상) hiện tại của symlink.
 
-Symlink loop hoặc quá nhiều lần dereference có thể gây `ELOOP`.
+Symlink vòng lặp (loop / 루프) hoặc quá nhiều lần dereference có thể gây `ELOOP`.
 
 ```bash
 readlink -f /opt/app/current
 ```
 
-## Hard link khác symlink ở tầng namespace
+## Hard link khác symlink ở tầng không gian tên (namespace / 네임스페이스)
 
-Hard link là nhiều directory entry cùng trỏ tới inode. Symlink là file đặc biệt chứa pathname target.
+Hard link là nhiều directory entry cùng trỏ tới inode. Symlink là tệp (file / 파일) đặc biệt chứa pathname mục tiêu (target / 대상).
 
-Vì vậy đổi target symlink không đổi inode của file đích cũ; còn hard link vẫn giữ cùng object cho tới khi link count về 0 và không còn open reference.
+Vì vậy đổi mục tiêu (target / 대상) symlink không đổi inode của tệp (file / 파일) đích cũ; còn hard link vẫn giữ cùng đối tượng (object / 객체) cho tới khi link count về 0 và không còn open tham chiếu (reference / 참조).
 
-## Mount point thay đổi namespace
+## Mount điểm (point / 지점) thay đổi không gian tên (namespace / 네임스페이스)
 
-Khi mount filesystem lên `/data`, directory `/data` cũ bị che trong namespace hiện tại.
+Khi mount filesystem lên `/data`, directory `/data` cũ bị che trong không gian tên (namespace / 네임스페이스) hiện tại.
 
 ```text
 trước mount:
@@ -108,11 +111,11 @@ sau mount:
 
 Dữ liệu cũ không bị xóa; nó chỉ bị che.
 
-Unmount sẽ làm namespace cũ hiện lại.
+Unmount sẽ làm không gian tên (namespace / 네임스페이스) cũ hiện lại.
 
 ## Bind mount
 
-Bind mount cho phép cùng subtree xuất hiện ở path khác:
+Bind mount cho phép cùng subtree xuất hiện ở đường dẫn (path / 경로) khác:
 
 ```bash
 mount --bind /opt/app/data /srv/data
@@ -120,42 +123,42 @@ mount --bind /opt/app/data /srv/data
 
 Hai pathname có thể cùng dẫn đến underlying objects giống nhau.
 
-Container runtime dùng bind mount rất nhiều để đưa config, secret, volume hoặc socket host vào container.
+Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) dùng bind mount rất nhiều để đưa cấu hình (config / 설정), secret, volume hoặc socket host vào bộ chứa (container / 컨테이너).
 
-## Mount namespace
+## Mount không gian tên (namespace / 네임스페이스)
 
-Mount namespace cho phép các nhóm process nhìn **cây mount khác nhau**.
+Mount không gian tên (namespace / 네임스페이스) cho phép các nhóm tiến trình (process / 프로세스) nhìn **cây mount khác nhau**.
 
-Một mount được tạo trong namespace A có thể không xuất hiện trong namespace B.
+Một mount được tạo trong không gian tên (namespace / 네임스페이스) A có thể không xuất hiện trong không gian tên (namespace / 네임스페이스) B.
 
-Quan sát namespace:
+Quan sát không gian tên (namespace / 네임스페이스):
 
 ```bash
 ls -l /proc/<PID>/ns/mnt
 ```
 
-Hai process có symlink namespace inode khác nhau nghĩa là chúng ở mount namespace khác.
+Hai tiến trình (process / 프로세스) có symlink không gian tên (namespace / 네임스페이스) inode khác nhau nghĩa là chúng ở mount không gian tên (namespace / 네임스페이스) khác.
 
-Có thể vào namespace bằng:
+Có thể vào không gian tên (namespace / 네임스페이스) bằng:
 
 ```bash
 sudo nsenter -t <PID> -m
 ```
 
-Sau đó `mount`, `findmnt`, `ls` sẽ nhìn theo namespace của process đích.
+Sau đó `mount`, `findmnt`, `ls` sẽ nhìn theo không gian tên (namespace / 네임스페이스) của tiến trình (process / 프로세스) đích.
 
-## Shared, slave, private propagation
+## Dùng chung (shared / 공유), slave, private propagation
 
-Mount namespace không chỉ là copy tĩnh. Mount propagation quyết định mount event có lan giữa các namespace liên quan hay không.
+Mount không gian tên (namespace / 네임스페이스) không chỉ là bản sao (copy / 복사) tĩnh. Mount propagation quyết định mount sự kiện (event / 이벤트) có lan giữa các không gian tên (namespace / 네임스페이스) liên quan hay không.
 
-Các mode quan trọng gồm:
+Các chế độ (mode / 모드) quan trọng gồm:
 
-- shared;
+- dùng chung (shared / 공유);
 - slave;
 - private;
 - unbindable.
 
-Đây là phần quan trọng với container runtime và Kubernetes vì mount trên host có thể cần hoặc không cần propagate vào container.
+Đây là phần quan trọng với bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) và Kubernetes vì mount trên host có thể cần hoặc không cần propagate vào bộ chứa (container / 컨테이너).
 
 Kiểm tra:
 
@@ -163,30 +166,30 @@ Kiểm tra:
 findmnt -o TARGET,PROPAGATION
 ```
 
-## `chroot` không phải container
+## `chroot` không phải bộ chứa (container / 컨테이너)
 
-`chroot` đổi root directory mà process nhìn thấy, nhưng không tự cô lập:
+`chroot` đổi gốc (root / 루트) directory mà tiến trình (process / 프로세스) nhìn thấy, nhưng không tự cô lập:
 
 - PID;
-- network;
-- user;
+- mạng (network / 네트워크);
+- người dùng (user / 사용자);
 - mount;
 - capabilities;
 - cgroup.
 
-Vì vậy `chroot` không phải security boundary đầy đủ.
+Vì vậy `chroot` không phải ranh giới bảo mật (security boundary / 보안 경계) đầy đủ.
 
-Container ghép nhiều namespace và policy khác nhau, trong đó mount namespace chỉ là một phần.
+Bộ chứa (container / 컨테이너) ghép nhiều không gian tên (namespace / 네임스페이스) và chính sách (policy / 정책) khác nhau, trong đó mount không gian tên (namespace / 네임스페이스) chỉ là một phần.
 
 ## `pivot_root`
 
-Container runtime thường cần thay root filesystem sâu hơn `chroot`. `pivot_root()` cho phép đổi root mount của namespace và di chuyển root cũ sang vị trí khác trước khi unmount.
+Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) thường cần thay gốc (root / 루트) filesystem sâu hơn `chroot`. `pivot_root()` cho phép đổi gốc (root / 루트) mount của không gian tên (namespace / 네임스페이스) và di chuyển gốc (root / 루트) cũ sang vị trí khác trước khi unmount.
 
-Đây là cơ chế nền tảng để container nhìn image root filesystem như `/` riêng.
+Đây là cơ chế nền tảng để bộ chứa (container / 컨테이너) nhìn ảnh (image / 이미지) gốc (root / 루트) filesystem như `/` riêng.
 
 ## Overlay filesystem
 
-Container image thường dùng layered filesystem như OverlayFS.
+Ảnh bộ chứa (container image / 컨테이너 이미지) thường dùng layered filesystem như OverlayFS.
 
 Khái niệm gồm:
 
@@ -196,42 +199,42 @@ upper layer : writable container layer
 merged view : filesystem process nhìn thấy
 ```
 
-Khi sửa file từ lower layer, copy-up có thể tạo bản sao ở upper layer.
+Khi sửa tệp (file / 파일) từ lower tầng (layer / 계층), copy-up có thể tạo bản sao ở upper tầng (layer / 계층).
 
-Điều này có ảnh hưởng hiệu năng và semantics, nhất là workload ghi nhiều.
+Điều này có ảnh hưởng hiệu năng và ngữ nghĩa (semantics / 의미론), nhất là tải công việc (workload / 워크로드) ghi nhiều.
 
-## Path resolution và race condition
+## Đường dẫn (path / 경로) resolution và race điều kiện (condition / 조건)
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```text
 check path
 → sau đó open path
 ```
 
-có thể có race nếu attacker hoặc process khác đổi namespace/path giữa hai bước.
+có thể có race nếu attacker hoặc tiến trình (process / 프로세스) khác đổi không gian tên (namespace / 네임스페이스)/đường dẫn (path / 경로) giữa hai bước.
 
 Đây là lý do API hiện đại như `openat()`, `openat2()` và dirfd-based operations tồn tại để giảm ambiguity và kiểm soát resolution tốt hơn.
 
 ## `openat()` và dirfd
 
-Thay vì luôn lookup từ cwd/root, `openat()` cho phép bắt đầu từ directory file descriptor.
+Thay vì luôn lookup từ cwd/gốc (root / 루트), `openat()` cho phép bắt đầu từ directory tệp (file / 파일) descriptor.
 
-Điều này hữu ích cho code cần thao tác trong directory đã mở và giảm phụ thuộc vào cwd có thể thay đổi.
+Điều này hữu ích cho mã (code / 코드) cần thao tác trong directory đã mở và giảm phụ thuộc vào cwd có thể thay đổi.
 
-`openat2()` trên Linux mới hơn thêm flags để kiểm soát resolution như không đi qua symlink hoặc không thoát khỏi subtree tùy use case.
+`openat2()` trên Linux mới hơn thêm flags để kiểm soát resolution như không đi qua symlink hoặc không thoát khỏi subtree tùy use trường hợp (case / 사례).
 
-## Deleted cwd và deleted file
+## Deleted cwd và deleted tệp (file / 파일)
 
-Process có thể giữ current working directory tới directory đã bị unlink khỏi namespace. `/proc/<PID>/cwd` có thể hiển thị `(deleted)`.
+Tiến trình (process / 프로세스) có thể giữ hiện tại (current / 현재) working directory tới directory đã bị unlink khỏi không gian tên (namespace / 네임스페이스). `/proc/<PID>/cwd` có thể hiển thị `(deleted)`.
 
-Tương tự file descriptor vẫn giữ inode sau khi pathname bị unlink.
+Tương tự tệp (file / 파일) descriptor vẫn giữ inode sau khi pathname bị unlink.
 
-Điều này nhắc lại nguyên tắc quan trọng: namespace name và object lifetime không giống nhau.
+Điều này nhắc lại nguyên tắc quan trọng: không gian tên (namespace / 네임스페이스) name và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명) không giống nhau.
 
-## Mount options là policy layer
+## Mount options là chính sách (policy / 정책) tầng (layer / 계층)
 
-Mount có thể thêm policy:
+Mount có thể thêm chính sách (policy / 정책):
 
 - `ro`;
 - `noexec`;
@@ -241,9 +244,9 @@ Mount có thể thêm policy:
 - `noatime`;
 - filesystem-specific options.
 
-Process có permission file đúng vẫn có thể bị policy mount chặn.
+Tiến trình (process / 프로세스) có permission tệp (file / 파일) đúng vẫn có thể bị chính sách (policy / 정책) mount chặn.
 
-## Debug “file tồn tại nhưng process không thấy”
+## Gỡ lỗi (debug / 디버그) “tệp (file / 파일) tồn tại nhưng tiến trình (process / 프로세스) không thấy”
 
 Quy trình tốt:
 
@@ -256,11 +259,11 @@ namei -l /path
 sudo nsenter -t <PID> -m -- ls -l /path
 ```
 
-Nếu host thấy file nhưng namespace process không thấy, vấn đề không nằm ở Java file API mà ở filesystem view.
+Nếu host thấy tệp (file / 파일) nhưng không gian tên (namespace / 네임스페이스) tiến trình (process / 프로세스) không thấy, vấn đề không nằm ở Java tệp (file / 파일) API mà ở filesystem view.
 
-## Systemd và filesystem namespace
+## Systemd và filesystem không gian tên (namespace / 네임스페이스)
 
-Systemd có thể tạo namespace riêng bằng directives như:
+Systemd có thể tạo không gian tên (namespace / 네임스페이스) riêng bằng directives như:
 
 - `ProtectSystem=`;
 - `ProtectHome=`;
@@ -268,21 +271,21 @@ Systemd có thể tạo namespace riêng bằng directives như:
 - `ReadOnlyPaths=`;
 - `BindPaths=`.
 
-Vì vậy service có thể nhìn `/tmp` hoặc filesystem khác shell admin.
+Vì vậy dịch vụ (service / 서비스) có thể nhìn `/tmp` hoặc filesystem khác shell admin.
 
-Đây là một nguyên nhân rất thực tế khi “SSH thấy file nhưng service không thấy”.
+Đây là một nguyên nhân rất thực tế khi “SSH thấy tệp (file / 파일) nhưng dịch vụ (service / 서비스) không thấy”.
 
-## Container volume
+## Bộ chứa (container / 컨테이너) volume
 
-Trong Docker/Kubernetes, volume/bind mount được đưa vào mount namespace của container.
+Trong Docker/Kubernetes, volume/bind mount được đưa vào mount không gian tên (namespace / 네임스페이스) của bộ chứa (container / 컨테이너).
 
-Nếu mount nhầm path, có thể che file có sẵn trong image.
+Nếu mount nhầm đường dẫn (path / 경로), có thể che tệp (file / 파일) có sẵn trong ảnh (image / 이미지).
 
-Ví dụ image có `/app/config/default.yml`, nhưng mount empty directory lên `/app/config` sẽ làm file trong image không còn thấy ở merged namespace.
+Ví dụ ảnh (image / 이미지) có `/app/config/default.yml`, nhưng mount empty directory lên `/app/config` sẽ làm tệp (file / 파일) trong ảnh (image / 이미지) không còn thấy ở merged không gian tên (namespace / 네임스페이스).
 
 ## Mô hình tư duy
 
-Khi process truy cập một path, hãy nghĩ theo chuỗi:
+Khi tiến trình (process / 프로세스) truy cập một đường dẫn (path / 경로), hãy nghĩ theo chuỗi:
 
 ```text
 process root/cwd
@@ -295,20 +298,22 @@ process root/cwd
 → inode/object
 ```
 
-Path không phải object. Nó là một truy vấn vào namespace động.
+Đường dẫn (path / 경로) không phải đối tượng (object / 객체). Nó là một truy vấn vào không gian tên (namespace / 네임스페이스) động.
 
 ## Những hiểu lầm phổ biến
 
-**“Đường dẫn tuyệt đối nghĩa là mọi process thấy cùng object.”** Không nếu root/mount namespace khác nhau.
+**“Đường dẫn tuyệt đối nghĩa là mọi tiến trình (process / 프로세스) thấy cùng đối tượng (object / 객체).”** Không nếu gốc (root / 루트)/mount không gian tên (namespace / 네임스페이스) khác nhau.
 
-**“Mount xóa dữ liệu directory cũ.”** Không; nó thường che namespace cũ.
+**“Mount xóa dữ liệu directory cũ.”** Không; nó thường che không gian tên (namespace / 네임스페이스) cũ.
 
-**“chroot là container.”** Không; nó chỉ thay root path view.
+**“chroot là bộ chứa (container / 컨테이너).”** Không; nó chỉ thay gốc (root / 루트) đường dẫn (path / 경로) view.
 
-**“File tồn tại trên host thì container chắc chắn thấy.”** Chỉ nếu namespace/mount đưa nó vào.
+**“tệp (file / 파일) tồn tại trên host thì bộ chứa (container / 컨테이너) chắc chắn thấy.”** Chỉ nếu không gian tên (namespace / 네임스페이스)/mount đưa nó vào.
 
-**“Permission đúng thì open chắc chắn thành công.”** Mount option, namespace, LSM và symlink resolution vẫn có thể chặn.
+**“Permission đúng thì open chắc chắn thành công.”** Mount option, không gian tên (namespace / 네임스페이스), LSM và symlink resolution vẫn có thể chặn.
 
 ## Kết nối kiến thức
 
 Chương này nối [filesystem/inode/link](./filesystem_paths_inodes_links.md), [VFS](./vfs_page_cache_writeback.md), [credentials/capabilities](../03_identity/credentials_capabilities_acl_mac.md), [systemd sandboxing](../05_system/systemd_units_dependencies_resources.md) và [namespace/container](../09_production/namespaces_cgroups_seccomp.md).
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [files streams descriptors](./files_streams_descriptors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

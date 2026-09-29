@@ -1,5 +1,8 @@
 # Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha
 
+> **Mạch đọc:** Đọc **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ một lần phân bố tới một đỉnh sắc ký** sang **Cân bằng phân bố**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Sắc ký (chromatography / 크로마토그래피)** tách các thành phần của hỗn hợp vì mỗi chất phân tích dành một phần thời gian khác nhau trong **pha động (mobile phase)** và **pha tĩnh (stationary phase)**. Một khác biệt rất nhỏ về mức ưu tiên giữa hai pha, khi được lặp lại hàng nghìn lần dọc cột, có thể tạo chênh lệch thời gian lưu đủ lớn để đo và định lượng.
 
 Mô hình tư duy sâu hơn không phải “các chất chạy với tốc độ khác nhau”, mà là:
@@ -184,15 +187,15 @@ Chất kỵ nước thường bị giữ mạnh hơn. Tăng tỷ lệ dung môi 
 
 Pha tĩnh phân cực và pha động ít phân cực hơn. Chất phân cực thường tương tác mạnh hơn với pha tĩnh và bị giữ lâu hơn.
 
-### Rửa giải đẳng dòng và gradient
+### Rửa giải đẳng dòng và độ dốc (gradient / 기울기)
 
 **Rửa giải đẳng dòng (isocratic elution)** giữ thành phần pha động không đổi.
 
-**Rửa giải gradient (gradient elution)** thay đổi thành phần pha động theo thời gian.
+**Rửa giải độ dốc (gradient / 기울기) (gradient elution)** thay đổi thành phần pha động theo thời gian.
 
-Gradient đặc biệt hữu ích khi hỗn hợp có chất lưu rất yếu và rất mạnh. Nó tương tự vai trò lập trình nhiệt độ trong GC: giữ điều kiện nhẹ ở đầu để tách chất ra sớm, rồi tăng sức rửa giải để đưa chất giữ mạnh ra khỏi cột.
+Độ dốc (gradient / 기울기) đặc biệt hữu ích khi hỗn hợp có chất lưu rất yếu và rất mạnh. Nó tương tự vai trò lập trình nhiệt độ trong GC: giữ điều kiện nhẹ ở đầu để tách chất ra sớm, rồi tăng sức rửa giải để đưa chất giữ mạnh ra khỏi cột.
 
-## pH và ion hóa — sắc ký cũng là hóa học acid–base
+## pH và ion hóa — sắc ký cũng là hóa học acid–cơ sở (base / 기반)
 
 Nếu chất phân tích có thể proton hóa hoặc khử proton, điện tích và độ kỵ nước sẽ phụ thuộc pH.
 
@@ -206,7 +209,7 @@ Dạng `HA` trung hòa thường có xu hướng lưu mạnh hơn trong pha đ�
 
 Do đó pH tương đối với `pKa` có thể làm thay đổi mạnh thời gian lưu, độ chọn lọc và hình dạng đỉnh.
 
-Nhóm silanol trên silica cũng có thể ion hóa và tương tác với chất phân tích base. Chọn **dung dịch đệm (buffer)** vì vậy là một phần của hóa học phương pháp, không chỉ là cài đặt vận hành.
+Nhóm silanol trên silica cũng có thể ion hóa và tương tác với chất phân tích cơ sở (base / 기반). Chọn **dung dịch đệm (buffer)** vì vậy là một phần của hóa học phương pháp, không chỉ là cài đặt vận hành.
 
 ## Sắc ký trao đổi ion
 
@@ -222,7 +225,7 @@ Pha tĩnh xốp phân tách chủ yếu theo kích thước thủy động lực
 
 Phân tử lớn không vào được nhiều lỗ xốp nên đi đường ngắn hơn và ra trước. Phân tử nhỏ tiếp cận được nhiều thể tích lỗ hơn nên ra muộn.
 
-Trong chế độ này, tương tác hấp phụ mạnh với bề mặt thường là điều không mong muốn vì nó phá vỡ logic tách theo kích thước.
+Trong chế độ này, tương tác hấp phụ mạnh với bề mặt thường là điều không mong muốn vì nó phá vỡ lô-gic (logic / 논리) tách theo kích thước.
 
 ## Sắc ký ái lực
 
@@ -281,7 +284,7 @@ Có thể điều chỉnh:
 - pH và dung dịch đệm;
 - nhiệt độ;
 - lưu lượng;
-- chương trình gradient;
+- chương trình độ dốc (gradient / 기울기);
 - kích thước cột;
 - kích thước hạt.
 
@@ -304,7 +307,7 @@ LC tách hỗn hợp theo thời gian; MS tách ion theo `m/z` và cung cấp th
 
 Ghép hai kỹ thuật làm giảm mạnh sự mơ hồ khi định danh. Tuy nhiên pha động phải tương thích với nguồn ion hóa; muối không bay hơi có thể gây ức chế ion hóa và làm bẩn nguồn.
 
-Đây là một trade-off hệ thống quan trọng:
+Đây là một sự đánh đổi (trade-off / 트레이드오프) hệ thống quan trọng:
 
 ```text
 điều kiện tối ưu cho sắc ký
@@ -385,3 +388,5 @@ truyền khối + dòng chảy
 Một phép tách tốt xuất hiện khi ba yếu tố này được tối ưu cùng nhau, không phải khi một thông số riêng lẻ đạt cực đại.
 
 Xem tiếp: [Phổ khối](./05_mass_spectrometry.md) và [Thẩm định phương pháp và hóa lượng học](./07_method_validation_and_chemometrics.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

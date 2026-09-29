@@ -1,6 +1,9 @@
 # Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS
 
-Bán dẫn là nơi nhiều lớp vật lý gặp nhau trực tiếp: cơ học lượng tử quyết định dải năng lượng; cơ học thống kê quyết định số trạng thái được chiếm; điện từ học quyết định thế và điện trường; khuếch tán quyết định chuyển động do gradient nồng độ; còn hình học thiết bị biến các cơ chế đó thành diode, transistor, LED và pin mặt trời.
+> **Mạch đọc:** Đọc **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bán dẫn nội tại và nồng độ hạt tải** sang **Pha tạp và mức Fermi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Bán dẫn là nơi nhiều lớp vật lý gặp nhau trực tiếp: cơ học lượng tử quyết định dải năng lượng; cơ học thống kê quyết định số trạng thái được chiếm; điện từ học quyết định thế và điện trường; khuếch tán quyết định chuyển động do độ dốc (gradient / 기울기) nồng độ; còn hình học thiết bị biến các cơ chế đó thành diode, transistor, LED và pin mặt trời.
 
 Điểm quan trọng là một transistor số cuối cùng vẫn được điều khiển bởi các đại lượng liên tục:
 
@@ -92,7 +95,7 @@ Mật độ dòng do drift có dạng
 \mathbf J_{n,drift}=qn\mu_n\mathbf E.
 ```
 
-Gradient concentration tạo diffusion. Với electron, một convention thường dùng là
+Độ dốc (gradient / 기울기) concentration tạo diffusion. Với electron, một convention thường dùng là
 
 ```math
 \mathbf J_{n,diff}=qD_n\nabla n.
@@ -105,15 +108,15 @@ Tổng dòng:
 =qn\mu_n\mathbf E+qD_n\nabla n.
 ```
 
-Với hole, dấu của diffusion term phụ thuộc cách viết carrier flux/current convention.
+Với hole, dấu của diffusion term phụ thuộc cách viết carrier flux/hiện tại (current / 현재) convention.
 
-Trong miền không suy biến, Einstein relation là
+Trong miền không suy biến, Einstein quan hệ (relation / 관계) là
 
 ```math
 D=\mu\frac{k_BT}{q}.
 ```
 
-Nó cho thấy drift và diffusion không phải hai cơ chế thống kê hoàn toàn độc lập; cả hai bắt nguồn từ transport của carrier trong môi trường nhiệt.
+Nó cho thấy drift và diffusion không phải hai cơ chế thống kê hoàn toàn độc lập; cả hai bắt nguồn từ vận chuyển (transport / 전송) của carrier trong môi trường nhiệt.
 
 ## Mobility không phải hằng số tuyệt đối
 
@@ -131,11 +134,11 @@ temperature
 
 Do đó phương trình drift đơn giản chỉ là mô hình low-field hiệu dụng.
 
-Ở field cao, carrier velocity có thể tiến tới saturation thay vì tiếp tục tăng tuyến tính với `E`.
+Ở trường dữ liệu (field / 필드) cao, carrier velocity có thể tiến tới saturation thay vì tiếp tục tăng tuyến tính với `E`.
 
 ## Tiếp giáp P–N hình thành như thế nào?
 
-Ngay sau khi ghép P và N, concentration gradient rất lớn.
+Ngay sau khi ghép P và N, concentration độ dốc (gradient / 기울기) rất lớn.
 
 Electron khuếch tán
 
@@ -153,7 +156,7 @@ Khi các carrier này tái hợp, gần junction còn lại các ion donor dươ
 
 Các ion cố định tạo **vùng nghèo (depletion region / 공핍층)** gần như thiếu mobile carrier.
 
-Charge separation tạo electric field hướng từ N sang P. Field này tạo drift chống lại diffusion.
+Charge separation tạo electric trường dữ liệu (field / 필드) hướng từ N sang P. trường dữ liệu (field / 필드) này tạo drift chống lại diffusion.
 
 Ở thermal equilibrium:
 
@@ -165,7 +168,7 @@ nhưng từng thành phần riêng không nhất thiết bằng zero.
 
 ## Band bending và electrostatic potential
 
-Electron energy thay đổi theo electrostatic potential `\phi` gần như
+Electron năng lượng (energy / 에너지) thay đổi theo electrostatic potential `\phi` gần như
 
 ```math
 E_{electron}\sim -q\phi.
@@ -175,9 +178,9 @@ Vì `\phi(x)` thay đổi trong depletion region, conduction-band edge và valen
 
 Hiện tượng này được gọi là **uốn cong dải năng lượng (band bending)**.
 
-Band diagram vì vậy là cách biểu diễn electrostatic potential bằng energy coordinates.
+Band diagram vì vậy là cách biểu diễn electrostatic potential bằng năng lượng (energy / 에너지) coordinates.
 
-Ở equilibrium, Fermi level phải phẳng xuyên qua junction. Nếu `E_F` thay đổi theo vị trí ở một hệ cân bằng, carrier sẽ có xu hướng tái phân bố.
+Ở equilibrium, Fermi mức (level / 수준) phải phẳng xuyên qua junction. Nếu `E_F` thay đổi theo vị trí ở một hệ cân bằng, carrier sẽ có xu hướng tái phân bố.
 
 ## Điện thế tiếp xúc nội tại
 
@@ -199,7 +202,7 @@ doping concentration
 → electrostatic barrier
 ```
 
-Nó không phải “pin ẩn” có thể lấy điện liên tục ra ngoài. Ở equilibrium, electrochemical potentials của toàn cấu trúc đã cân bằng nên không có net DC power output.
+Nó không phải “pin ẩn” có thể lấy điện liên tục ra ngoài. Ở equilibrium, electrochemical potentials của toàn cấu trúc đã cân bằng nên không có net DC power đầu ra (output / 출력).
 
 ## Depletion approximation
 
@@ -212,9 +215,9 @@ Poisson equation là
 =-\frac{\rho(x)}{\varepsilon_s}.
 ```
 
-Với abrupt junction, `\rho` gần piecewise constant trong depletion region, nên electric field gần piecewise linear và potential gần quadratic.
+Với abrupt junction, `\rho` gần piecewise constant trong depletion region, nên electric trường dữ liệu (field / 필드) gần piecewise tuyến tính (linear / 선형) và potential gần quadratic.
 
-Tổng depletion width dưới bias `V` có dạng xấp xỉ
+Tổng depletion width dưới độ lệch (bias / 편향) `V` có dạng xấp xỉ
 
 ```math
 W=
@@ -227,17 +230,17 @@ W=
 }.
 ```
 
-Khi reverse bias tăng, `V` âm theo convention forward-bias-positive, nên `W` tăng.
+Khi reverse độ lệch (bias / 편향) tăng, `V` âm theo convention forward-bias-positive, nên `W` tăng.
 
 Junction capacitance do đó phụ thuộc điện áp.
 
 ## Phân cực thuận và phân cực ngược
 
-### Forward bias
+### Forward độ lệch (bias / 편향)
 
-External voltage giảm effective barrier. Minority-carrier injection tăng mạnh, dẫn tới current lớn hơn.
+Bên ngoài (external / 외부) voltage giảm effective barrier. Minority-carrier injection tăng mạnh, dẫn tới hiện tại (current / 현재) lớn hơn.
 
-### Reverse bias
+### Reverse độ lệch (bias / 편향)
 
 Barrier tăng và depletion region rộng hơn. Dòng thường nhỏ cho đến breakdown.
 
@@ -248,7 +251,7 @@ Zener tunneling
 avalanche multiplication
 ```
 
-Cơ chế trội phụ thuộc doping và field scale.
+Cơ chế trội phụ thuộc doping và trường dữ liệu (field / 필드) quy mô (scale / 규모).
 
 ## Phương trình diode
 
@@ -263,7 +266,7 @@ I=I_S
 
 Dạng hàm mũ xuất hiện từ carrier statistics và minority-carrier diffusion, không phải từ một quy tắc mạch tùy ý.
 
-Các assumption thường gồm:
+Các giả định (assumption / 가정) thường gồm:
 
 ```text
 low-level injection
@@ -274,7 +277,7 @@ idealized recombination
 negligible series resistance
 ```
 
-Ở current lớn, series resistance; ở voltage thấp hoặc defect-rich junction, recombination; và ở reverse breakdown, các cơ chế khác làm phương trình đơn giản không còn đúng.
+Ở hiện tại (current / 현재) lớn, series resistance; ở voltage thấp hoặc defect-rich junction, recombination; và ở reverse breakdown, các cơ chế khác làm phương trình đơn giản không còn đúng.
 
 ## LED: band gap và photon
 
@@ -290,9 +293,9 @@ Do
 \lambda\approx\frac{hc}{E_g},
 ```
 
-band gap quyết định scale của emission wavelength.
+band gap quyết định quy mô (scale / 규모) của emission wavelength.
 
-Trong indirect-gap material như silicon, transition thường cần phonon để hỗ trợ crystal-momentum conservation, nên light emission kém hiệu quả hơn.
+Trong indirect-gap material như silicon, chuyển tiếp (transition / 전이) thường cần phonon để hỗ trợ crystal-momentum conservation, nên light emission kém hiệu quả hơn.
 
 ## Photodiode và pin mặt trời
 
@@ -304,11 +307,11 @@ hf\gtrsim E_g
 
 có thể tạo electron–hole pair.
 
-Built-in field trong junction giúp tách carrier trước khi chúng tái hợp.
+Built-in trường dữ liệu (field / 필드) trong junction giúp tách carrier trước khi chúng tái hợp.
 
-Photodiode tối ưu signal detection; solar cell tối ưu energy extraction. Hai device dùng cùng physics nhưng mục tiêu engineering khác nhau.
+Photodiode tối ưu tín hiệu (signal / 신호) detection; solar cell tối ưu năng lượng (energy / 에너지) extraction. Hai thiết bị (device / 장치) dùng cùng physics nhưng mục tiêu kỹ thuật (engineering / 엔지니어링) khác nhau.
 
-Loss channels của solar cell gồm:
+Mất mát (loss / 손실) channels của solar cell gồm:
 
 ```text
 sub-gap photons
@@ -328,11 +331,11 @@ metal/gate
 → semiconductor
 ```
 
-Oxide ngăn DC conduction lý tưởng nhưng cho electric field xuyên qua.
+Oxide ngăn DC conduction lý tưởng nhưng cho electric trường dữ liệu (field / 필드) xuyên qua.
 
-Gate voltage làm thay đổi surface potential trong semiconductor và do đó làm band edges cong gần interface.
+Gate voltage làm thay đổi surface potential trong semiconductor và do đó làm band edges cong gần giao diện (interface / 인터페이스).
 
-Đây là bản chất electrostatic của field-effect control.
+Đây là bản chất electrostatic của field-effect điều khiển (control / 제어).
 
 ## Accumulation, depletion và inversion
 
@@ -348,7 +351,7 @@ hole concentration tại surface tăng
 
 ### Depletion
 
-Gate voltage dương đẩy hole khỏi interface, để lại ion acceptor cố định:
+Gate voltage dương đẩy hole khỏi giao diện (interface / 인터페이스), để lại ion acceptor cố định:
 
 ```text
 surface mobile carrier giảm
@@ -358,7 +361,7 @@ surface mobile carrier giảm
 
 Tăng gate voltage dương thêm làm band bending đủ mạnh để electron trở thành carrier chiếm ưu thế ngay tại bề mặt, dù bulk vẫn P-type.
 
-Ta đã tạo một **inversion layer** N-like ngay dưới oxide.
+Ta đã tạo một **inversion tầng (layer / 계층)** N-like ngay dưới oxide.
 
 Đó chính là nền của kênh nMOS.
 
@@ -370,17 +373,17 @@ Với oxide dày `t_{ox}` và permittivity `\varepsilon_{ox}`, capacitance trên
 C_{ox}'=\frac{\varepsilon_{ox}}{t_{ox}}.
 ```
 
-Oxide mỏng hơn tăng gate control vì capacitance lớn hơn, nhưng quá mỏng làm tunneling leakage tăng.
+Oxide mỏng hơn tăng gate điều khiển (control / 제어) vì capacitance lớn hơn, nhưng quá mỏng làm tunneling leakage tăng.
 
-High-k dielectric cho phép tăng effective capacitance mà không cần physical thickness nhỏ đến mức tunneling quá mạnh.
+High-k dielectric cho phép tăng effective capacitance mà không cần vật lý (physical / 물리적) thickness nhỏ đến mức tunneling quá mạnh.
 
-Đây là ví dụ trực tiếp của trade-off giữa electrostatics và quantum tunneling.
+Đây là ví dụ trực tiếp của sự đánh đổi (trade-off / 트레이드오프) giữa electrostatics và quantum tunneling.
 
 ## Điện áp ngưỡng
 
-Threshold voltage `V_T` không phải một “công tắc kỳ diệu” nơi transistor đột ngột đổi từ zero current sang full current.
+Threshold voltage `V_T` không phải một “công tắc kỳ diệu” nơi transistor đột ngột đổi từ zero hiện tại (current / 현재) sang full hiện tại (current / 현재).
 
-Nó là một convention hữu ích đánh dấu regime hình thành strong inversion/channel theo model.
+Nó là một convention hữu ích đánh dấu regime hình thành strong inversion/channel theo mô hình (model / 모델).
 
 `V_T` phụ thuộc vào:
 
@@ -393,17 +396,17 @@ body bias
 temperature
 ```
 
-Vì vậy threshold là property của cả cấu trúc, không chỉ của material bulk.
+Vì vậy threshold là thuộc tính (property / 속성) của cả cấu trúc, không chỉ của material bulk.
 
-## MOSFET channel và drain bias
+## MOSFET channel và drain độ lệch (bias / 편향)
 
-Khi gate tạo inversion channel, source và drain nối carrier vào hai đầu channel.
+Khi gate tạo inversion channel, nguồn (source / 소스) và drain nối carrier vào hai đầu channel.
 
-Drain voltage tạo lateral electric field làm carrier drift.
+Drain voltage tạo lateral electric trường dữ liệu (field / 필드) làm carrier drift.
 
-Trong long-channel gradual-channel approximation, current có thể được suy ra bằng cách tích phân local channel charge và drift velocity.
+Trong long-channel gradual-channel approximation, hiện tại (current / 현재) có thể được suy ra bằng cách tích phân cục bộ (local / 로컬) channel charge và drift velocity.
 
-Ở vùng linear, dạng gần đúng quen thuộc là
+Ở vùng tuyến tính (linear / 선형), dạng gần đúng quen thuộc là
 
 ```math
 I_D
@@ -421,7 +424,7 @@ Khi
 V_{DS}\approx V_{GS}-V_T,
 ```
 
-channel gần drain bị pinch-off trong ideal long-channel picture và current đi vào saturation regime.
+channel gần drain bị pinch-off trong ideal long-channel picture và hiện tại (current / 현재) đi vào saturation regime.
 
 Dạng textbook saturation gần đúng:
 
@@ -433,13 +436,13 @@ I_{D,sat}
 (V_{GS}-V_T)^2.
 ```
 
-Các công thức này không phải law phổ quát; chúng dựa trên long-channel, mobility gần constant và quasi-static assumptions.
+Các công thức này không phải law phổ quát; chúng dựa trên long-channel, mobility gần constant và quasi-static các giả định (assumptions / 가정들).
 
 ## Subthreshold conduction
 
-Ngay dưới threshold, current không bằng zero. Carrier concentration tại surface thay đổi gần exponential với gate voltage, tạo subthreshold current.
+Ngay dưới threshold, hiện tại (current / 현재) không bằng zero. Carrier concentration tại surface thay đổi gần exponential với gate voltage, tạo subthreshold hiện tại (current / 현재).
 
-Subthreshold swing được đo bằng số millivolt gate voltage cần để current thay đổi một decade.
+Subthreshold swing được đo bằng số millivolt gate voltage cần để hiện tại (current / 현재) thay đổi một decade.
 
 Ở room temperature, MOSFET conventional có thermodynamic lower-bound lý tưởng khoảng
 
@@ -449,11 +452,11 @@ Subthreshold swing được đo bằng số millivolt gate voltage cần để c
 
 trong điều kiện thích hợp.
 
-Kết quả này liên hệ trực tiếp với Boltzmann statistics và là một giới hạn quan trọng của low-voltage logic.
+Kết quả này liên hệ trực tiếp với Boltzmann statistics và là một giới hạn quan trọng của low-voltage lô-gic (logic / 논리).
 
 ## Short-channel effects
 
-Khi channel length giảm, source/drain electrostatic fields bắt đầu cạnh tranh với gate trong việc điều khiển potential barrier.
+Khi channel length giảm, nguồn (source / 소스)/drain electrostatic fields bắt đầu cạnh tranh với gate trong việc điều khiển potential barrier.
 
 Các hiệu ứng gồm:
 
@@ -468,23 +471,23 @@ source-to-drain tunneling ở scale cực nhỏ
 
 DIBL (Drain-Induced Barrier Lowering) nghĩa là tăng drain voltage làm source-channel barrier giảm, khiến gate mất một phần quyền kiểm soát.
 
-Đây là lý do device scaling không thể hiểu chỉ bằng việc “thu nhỏ hình học”. Electrostatic length scales phải giảm tương ứng.
+Đây là lý do thiết bị (device / 장치) scaling không thể hiểu chỉ bằng việc “thu nhỏ hình học”. Electrostatic length scales phải giảm tương ứng.
 
 ## FinFET và gate-all-around
 
 Planar gate chỉ điều khiển channel chủ yếu từ một mặt.
 
-FinFET bao quanh channel nhiều mặt hơn; gate-all-around tiếp tục tăng electrostatic control.
+FinFET bao quanh channel nhiều mặt hơn; gate-all-around tiếp tục tăng electrostatic điều khiển (control / 제어).
 
-Các kiến trúc này không thay đổi nguyên lý transistor cơ bản. Chúng thay đổi geometry để gate field kiểm soát channel tốt hơn so với source/drain fields.
+Các kiến trúc này không thay đổi nguyên lý transistor cơ bản. Chúng thay đổi hình học (geometry / 기하학) để gate trường dữ liệu (field / 필드) kiểm soát channel tốt hơn so với nguồn (source / 소스)/drain fields.
 
 ## CMOS
 
 CMOS dùng nMOS và pMOS bổ sung.
 
-Trong ideal static state, một nhánh gần off nên direct DC path từ supply xuống ground rất nhỏ.
+Trong ideal static trạng thái (state / 상태), một nhánh gần off nên direct DC đường dẫn (path / 경로) từ supply xuống ground rất nhỏ.
 
-Dynamic energy dùng để nạp/xả capacitance:
+Động (dynamic / 동적) năng lượng (energy / 에너지) dùng để nạp/xả capacitance:
 
 ```math
 E_{switch}\sim CV^2.
@@ -496,63 +499,63 @@ Với activity factor `\alpha`:
 P_{dynamic}\approx\alpha CV^2f.
 ```
 
-Do phụ thuộc `V^2`, giảm supply voltage tiết kiệm energy rất mạnh. Nhưng voltage thấp làm giảm noise margin và drive current, nên xuất hiện trade-off power–performance–reliability.
+Do phụ thuộc `V^2`, giảm supply voltage tiết kiệm năng lượng (energy / 에너지) rất mạnh. Nhưng voltage thấp làm giảm noise margin và drive hiện tại (current / 현재), nên xuất hiện sự đánh đổi (trade-off / 트레이드오프) power–hiệu năng (performance / 성능)–độ tin cậy (reliability / 신뢰성).
 
 ## RC delay và interconnect
 
 Gate và wiring tạo capacitance; conductor có resistance.
 
-Một time scale đơn giản là
+Một thời gian (time / 시간) quy mô (scale / 규모) đơn giản là
 
 ```math
 \tau\sim RC.
 ```
 
-Khi transistor nhỏ dần, interconnect delay, parasitic capacitance, coupling, inductance và signal integrity có thể chi phối performance.
+Khi transistor nhỏ dần, interconnect delay, parasitic capacitance, coupling, inductance và tín hiệu (signal / 신호) integrity có thể chi phối hiệu năng (performance / 성능).
 
-Vì vậy CPU speed không được quyết định chỉ bởi transistor switching time.
+Vì vậy CPU speed không được quyết định chỉ bởi transistor switching thời gian (time / 시간).
 
 ## Quantum tunneling và scaling limit
 
 Oxide quá mỏng cho gate leakage qua tunneling.
 
-Channel cực ngắn có thể xuất hiện source-to-drain tunneling và quantum confinement làm band/device parameters thay đổi.
+Channel cực ngắn có thể xuất hiện source-to-drain tunneling và quantum confinement làm band/thiết bị (device / 장치) parameters thay đổi.
 
-Ngoài ra variability từ discrete dopants, line-edge roughness và atomic-scale interface trở nên đáng kể.
+Ngoài ra variability từ discrete dopants, line-edge roughness và atomic-scale giao diện (interface / 인터페이스) trở nên đáng kể.
 
-Ở nanoscale, “device parameter” không còn hoàn toàn là giá trị continuum deterministic; statistical variation trở thành vấn đề engineering trực tiếp.
+Ở nanoscale, “thiết bị (device / 장치) parameter” không còn hoàn toàn là giá trị continuum deterministic; statistical variation trở thành vấn đề kỹ thuật (engineering / 엔지니어링) trực tiếp.
 
-## Nhiệt và reliability
+## Nhiệt và độ tin cậy (reliability / 신뢰성)
 
 Power density tạo nhiệt.
 
 Temperature cao có thể thay đổi mobility, leakage, threshold voltage và accelerate degradation mechanisms.
 
-Vì vậy semiconductor physics nối trực tiếp với heat transport và reliability engineering.
+Vì vậy semiconductor physics nối trực tiếp với heat vận chuyển (transport / 전송) và độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
 
-Một chip không thể được tối ưu chỉ ở electrical model; thermal boundary conditions và package cooling cũng quan trọng.
+Một chip không thể được tối ưu chỉ ở electrical mô hình (model / 모델); thermal ranh giới (boundary / 경계) conditions và gói (package / 패키지) cooling cũng quan trọng.
 
-## Assumptions và giới hạn
+## Các giả định (assumptions / 가정들) và giới hạn
 
 ### Drift–diffusion
 
-Drift–diffusion hoạt động tốt khi carrier distribution gần local equilibrium và length scale đủ lớn. Ballistic hoặc strongly quantum transport cần mô hình sâu hơn.
+Drift–diffusion hoạt động tốt khi carrier phân phối (distribution / 분포) gần cục bộ (local / 로컬) equilibrium và length quy mô (scale / 규모) đủ lớn. Ballistic hoặc strongly quantum vận chuyển (transport / 전송) cần mô hình sâu hơn.
 
 ### Depletion approximation
 
-Rất hữu ích cho junction reasoning nhưng không mô tả chính xác mọi carrier distribution ở junction thật.
+Rất hữu ích cho junction lập luận (reasoning / 추론) nhưng không mô tả chính xác mọi carrier phân phối (distribution / 분포) ở junction thật.
 
 ### Long-channel MOSFET equations
 
-Các square-law equations mất chính xác trong modern short-channel devices do velocity saturation, mobility degradation, DIBL, quantum confinement và parasitic effects.
+Các square-law equations mất chính xác trong hiện đại (modern / 현대적) short-channel devices do velocity saturation, mobility degradation, DIBL, quantum confinement và parasitic effects.
 
 ### Band picture
 
-Basic semiconductor model thường dùng effective-mass/single-particle approximations. Strong interactions, disorder hoặc nanostructure có thể cần treatment khác.
+Basic semiconductor mô hình (model / 모델) thường dùng effective-mass/single-particle approximations. Strong interactions, disorder hoặc nanostructure có thể cần treatment khác.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Semiconductor device physics có thể nhìn như một chuỗi:
+Semiconductor thiết bị (device / 장치) physics có thể nhìn như một chuỗi:
 
 ```text
 band structure
@@ -565,7 +568,7 @@ band structure
 → circuit abstraction
 ```
 
-Logic digital `0/1` vì vậy nằm ở cuối một chuỗi physics liên tục, không phải ở đầu chuỗi.
+Lô-gic (logic / 논리) digital `0/1` vì vậy nằm ở cuối một chuỗi physics liên tục, không phải ở đầu chuỗi.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -577,24 +580,26 @@ Không. Bulk vẫn gần trung hòa; N/P nói carrier majority.
 
 Không. Ở equilibrium không có net power extraction vì electrochemical potential đã cân bằng.
 
-### “Threshold voltage nghĩa dưới `V_T` current bằng zero”
+### “Threshold voltage nghĩa dưới `V_T` hiện tại (current / 현재) bằng zero”
 
 Không. Subthreshold conduction vẫn tồn tại.
 
 ### “MOSFET saturation giống BJT saturation”
 
-Không. Từ “saturation” được dùng cho hai cơ chế device khác nhau.
+Không. Từ “saturation” được dùng cho hai cơ chế thiết bị (device / 장치) khác nhau.
 
 ### “Transistor càng nhỏ thì luôn càng nhanh và ít tốn điện”
 
-Không. Leakage, interconnect, electrostatic control, thermal density và quantum effects tạo nhiều trade-off mới.
+Không. Leakage, interconnect, electrostatic điều khiển (control / 제어), thermal density và quantum effects tạo nhiều sự đánh đổi (trade-off / 트레이드오프) mới.
 
 ### “Lỗ trống là proton chạy trong silicon”
 
 Sai. Hole là quasiparticle description của trạng thái thiếu electron trong band gần đầy.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Tinh thể và dải năng lượng](00_crystals_bands.md), [Điện tĩnh học](../05_electromagnetism/00_electrostatics.md), [Khuếch tán và vận chuyển](../03_continuum/02_transport_diffusion_heat.md), [Thống kê lượng tử](../08_quantum/05_identical_particles_quantum_statistics.md).
 
 **Liên hệ tiếp:** [Vận chuyển, từ tính và siêu dẫn](02_transport_magnetism_superconductivity.md), [Tín hiệu trên đường truyền](../05_electromagnetism/05_transmission_lines_waveguides.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 crystals bands](./00_crystals_bands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -195,13 +195,17 @@ def lesson_document(title: str, description: str, content: str) -> str:
 
 ## Từ khóa cần nhớ (Keyword)
 
-Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần nguồn. Khi ghi chú, dùng mẫu `용어 (English) (Tiếng Việt)` để nối tên gọi trong đề với ý nghĩa thực tế.
+Phần giải thích dùng tiếng Việt trước. Ở mọi lần xuất hiện, thuật ngữ SQLD dùng dạng `nghĩa Việt (English / 한국어)` để vừa giữ mạch đọc vừa đối chiếu được từ khóa trong đề.
 
 ## Mạch tư duy (Logic học)
 
-Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`); đây là cầu nối để hiểu vì sao cùng một truy vấn có thể cho kết quả khác nhau.
 
-> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **{title}** với bài trước bằng đối tượng dữ liệu/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+
+> **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại mục **từ khóa (Keyword)**, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
 
@@ -260,6 +264,8 @@ def main() -> None:
     readme = """# SQLD – Tài liệu học đã chuẩn hóa
 
 Tài liệu được chia theo hai môn của kỳ thi SQLD. Mỗi file là một bài học độc lập, giữ lại toàn bộ giải thích và ví dụ SQL từ nguồn, đồng thời có tiêu đề, mục tiêu học tập và mạch giảng mở đầu → giải thích → bàn giao → kết thúc.
+
+> **Mạch nối:** Đi từ mô hình dữ liệu → JOIN/subquery/group/window → transaction/DDL/DCL → các truy vấn nâng cao. Mỗi bài dùng object, điều kiện hoặc thứ tự xử lý của bài trước; hãy quay lại ví dụ khi chuyển sang bài kế tiếp.
 
 ## Môn 1 – 데이터 모델링의 이해 / Mô hình dữ liệu
 

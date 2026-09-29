@@ -1,5 +1,8 @@
 # Mối liên hệ Nước – Lương thực – Năng lượng
 
+> **Mạch đọc:** Đặt **Mối liên hệ Nước – Lương thực – Năng lượng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao ba hệ không thể được tối ưu riêng lẻ?** sang **Một khung cân bằng đơn giản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao ba hệ không thể được tối ưu riêng lẻ?
 
 Nước, lương thực và năng lượng thường được quản lý bởi các cơ quan và ngành khác nhau, nhưng về vật lý chúng tạo một mạng phụ thuộc chặt chẽ. Bơm, xử lý và khử mặn nước cần năng lượng; nông nghiệp cần nước và năng lượng; nhà máy điện cần nước làm mát hoặc dòng chảy; phân bón, cơ giới hóa, làm lạnh và vận tải thực phẩm đều cần năng lượng.
@@ -18,7 +21,7 @@ Nếu nhu cầu lấy nước liên tục vượt bổ cập:
 \Delta S_{water}=Recharge-Withdrawal<0
 \]
 
-thì nguồn nước đang suy giảm dù trong vài năm đầu vẫn còn rất nhiều. Logic tương tự áp dụng cho tồn kho nhiên liệu, độ phì đất hay trữ lượng hồ chứa.
+thì nguồn nước đang suy giảm dù trong vài năm đầu vẫn còn rất nhiều. lô-gic (logic / 논리) tương tự áp dụng cho tồn kho nhiên liệu, độ phì đất hay trữ lượng hồ chứa.
 
 Điểm cốt lõi là hệ thống có thể trông ổn trong ngắn hạn nhờ rút từ lượng tích lũy, trong khi quỹ đạo dài hạn không bền vững.
 
@@ -110,7 +113,7 @@ Một hệ tối ưu cho hiệu suất trung bình có thể dễ tổn thương
 
 Một dự án có thể trông hiệu quả nếu chỉ đo tại nhà máy nhưng kém hiệu quả khi tính điện đầu vào, khai thác nước thượng nguồn hoặc tác động chất thải hạ lưu. Vì vậy mọi phân tích nexus phải nói rõ **ranh giới hệ thống (system boundary)** và khoảng thời gian.
 
-Đây là connection trực tiếp với **đánh giá vòng đời (life-cycle assessment)**, kỹ thuật hệ thống, tối ưu hóa và phân tích chuỗi cung ứng.
+Đây là liên kết (connection / 연결) trực tiếp với **đánh giá vòng đời (life-cycle assessment)**, kỹ thuật hệ thống, tối ưu hóa và phân tích chuỗi cung ứng.
 
 ## Những hiểu lầm phổ biến
 
@@ -121,3 +124,5 @@ Một dự án có thể trông hiệu quả nếu chỉ đo tại nhà máy nh�
 > Hãy coi Nước–Lương thực–Năng lượng như **ba mạng chồng lên nhau với các điểm chuyển đổi**. Bơm biến điện thành khả năng tiếp cận nước; tưới biến nước và năng lượng thành sinh khối; thủy điện biến dòng nước thành điện. Mỗi điểm chuyển đổi có hiệu suất, chi phí, giới hạn và tác động ngoại vi. Đừng tối ưu một mạng trước khi xem dòng tài nguyên bị chuyển sang mạng nào khác.
 
 Xem thêm: [Thủy văn](../01_physical_geography/04_hydrology_rivers_groundwater.md), [Hệ thống lương thực](../02_human_geography/06_agriculture_food_systems.md), [Năng lượng và tài nguyên](../02_human_geography/07_industry_energy_resources.md), [Biến đổi khí hậu](./00_climate_change.md), [Tính bền vững](./04_environment_sustainability.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 climate change](./00_climate_change.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

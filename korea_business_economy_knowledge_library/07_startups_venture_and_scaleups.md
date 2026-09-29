@@ -1,6 +1,9 @@
 # Startup, venture và mở rộng quy mô tại Hàn Quốc (Startup & Venture / 스타트업·벤처기업·스케일업)
 
-Startup thường bị trộn với SME vì cả hai có thể nhỏ, ít nhân viên và chưa niêm yết. Nhưng logic kinh tế của hai loại rất khác. **SME (Small and Medium-sized Enterprise / 중소기업)** chủ yếu là phân loại theo quy mô hoặc tiêu chí pháp lý–chính sách; còn **startup (스타트업)** là tổ chức đang tìm kiếm hoặc mở rộng một mô hình kinh doanh có khả năng tăng quy mô nhanh trong điều kiện bất định cao.
+> **Mạch đọc:** Đặt **Startup, venture và mở rộng quy mô tại Hàn Quốc (Startup & Venture / 스타트업·벤처기업·스케일업)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Startup là bài toán bất định, không chỉ là quy mô nhỏ** sang **Product-Market Fit: hành vi khách hàng quan trọng hơn niềm tin của người sáng lập**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Startup thường bị trộn với SME vì cả hai có thể nhỏ, ít nhân viên và chưa niêm yết. Nhưng lô-gic (logic / 논리) kinh tế của hai loại rất khác. **SME (Small and Medium-sized Enterprise / 중소기업)** chủ yếu là phân loại theo quy mô hoặc tiêu chí pháp lý–chính sách; còn **startup (스타트업)** là tổ chức đang tìm kiếm hoặc mở rộng một mô hình kinh doanh có khả năng tăng quy mô nhanh trong điều kiện bất định cao.
 
 Một nhà hàng nhỏ có thể là SME nhưng không phải startup theo nghĩa venture. Một công ty phần mềm 30 người có thể là startup nếu sản phẩm có thể phục vụ 100.000 khách hàng mà chi phí không tăng gần tuyến tính theo số nhân viên.
 
@@ -82,7 +85,7 @@ Vì vậy câu “nhà đầu tư sở hữu 20%” chưa mô tả đầy đủ 
 
 Do đó **điều khoản đầu tư (term sheet)** quan trọng không kém con số định giá trên tiêu đề.
 
-## Burn rate và runway
+## Burn tỷ lệ (rate / 비율) và runway
 
 **Tốc độ đốt tiền ròng (net burn / 순현금소진)** đo lượng tiền mặt công ty mất trong một kỳ sau khi tính dòng tiền vào. **Thời gian tiền mặt còn đủ dùng (runway)** có thể ước tính:
 
@@ -222,11 +225,11 @@ Rút kinh nghiệm chỉ có giá trị khi cơ chế thất bại được ch�
 
 ## Cách phân tích một startup Hàn Quốc
 
-Một quy trình thực tế nên trả lời: vấn đề cụ thể nào đang được giải quyết; ai trả tiền và vì sao; mức giữ chân hoặc mua lại ra sao; biên gộp và biên đóng góp; CAC, thời gian hoàn vốn và giả định LTV; runway hiện tại; mức phụ thuộc vòng vốn tiếp theo; cap table và quyền nhà đầu tư; mức phụ thuộc quy định hoặc chính sách; tổng thị trường nội địa so với quốc tế; và năng lực tổ chức nào bắt buộc phải xây để mở rộng.
+Một quy trình thực tế nên trả lời: vấn đề cụ thể nào đang được giải quyết; ai trả tiền và vì sao; mức giữ chân hoặc mua lại ra sao; biên gộp và biên đóng góp; CAC, thời gian hoàn vốn và giả định LTV; runway hiện tại; mức phụ thuộc vòng vốn tiếp theo; cap bảng (table / 테이블) và quyền nhà đầu tư; mức phụ thuộc quy định hoặc chính sách; tổng thị trường nội địa so với quốc tế; và năng lực tổ chức nào bắt buộc phải xây để mở rộng.
 
 Với công nghệ sâu chưa có doanh thu, có thể thay CAC/retention bằng các cột mốc kỹ thuật, IP, lộ trình pháp lý, khách hàng thử nghiệm và runway tài chính.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Startup là một cỗ máy chuyển **bất định thành bằng chứng**. Vốn đầu tư mạo hiểm mua thời gian để học; PMF chứng minh giá trị khách hàng; kinh tế đơn vị chứng minh mở rộng có thể tạo giá trị kinh tế; năng lực tổ chức quyết định scale-up có sống sót hay không.
 
@@ -245,3 +248,5 @@ Với công nghệ sâu chưa có doanh thu, có thể thay CAC/retention bằng
 ## Liên kết
 
 Đọc cùng [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md) để so sánh tăng trưởng SME, [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) để hiểu thị trường vốn và thoái vốn, [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) cho cơ chế tài trợ và [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md) cho kinh tế đơn vị của nền tảng.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

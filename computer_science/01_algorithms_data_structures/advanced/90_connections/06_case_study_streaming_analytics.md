@@ -1,7 +1,10 @@
-# Case Study: Streaming Analytics với dữ liệu lớn
-**Streaming Analytics Case Study / 스트리밍 분석 사례**
+# Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn
 
-Streaming analytics xử lý chuỗi sự kiện đến liên tục thay vì một tập dữ liệu tĩnh đã biết trước. Ví dụ: log hệ thống, clickstream, giao dịch, packet mạng, metric observability hoặc sự kiện IoT.
+> **Mạch đọc:** Đọc **trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Những truy vấn điển hình** sang **2. chính xác (exact / 정확한) trạng thái (state / 상태) bằng băm (hash / 해시) Map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**Streaming Analytics trường hợp (case / 사례) Study / 스트리밍 분석 사례**
+
+Streaming analytics xử lý chuỗi sự kiện đến liên tục thay vì một tập dữ liệu tĩnh đã biết trước. Ví dụ: log hệ thống, clickstream, giao dịch, packet mạng, chỉ số (metric / 지표) khả năng quan sát (observability / 관측 가능성) hoặc sự kiện IoT.
 
 Khó khăn cốt lõi là:
 
@@ -13,7 +16,7 @@ có thể chấp nhận xấp xỉ cho một số truy vấn
 state phải gộp được giữa nhiều worker
 ```
 
-Case study này nối Hash Table, Heap, Count-Min Sketch, HyperLogLog, Reservoir Sampling, Sliding Window và distributed merge thành một pipeline thực tế.
+Trường hợp (case / 사례) study này nối bảng băm (hash table / 해시 테이블), vùng nhớ động (heap / 힙), Count-Min Sketch, HyperLogLog, Reservoir Sampling, Sliding cửa sổ (window / 윈도우) và phân tán (distributed / 분산) merge thành một chuỗi xử lý (pipeline / 파이프라인) thực tế.
 
 ## 1. Những truy vấn điển hình
 
@@ -31,7 +34,7 @@ Không phải mọi truy vấn đều cần cùng mức chính xác.
 
 Ví dụ số billing có thể cần chính xác; cardinality dashboard có thể chấp nhận sai số 1–2%; heavy hitter detection thường chỉ cần tìm đúng nhóm lớn nhất.
 
-## 2. Exact state bằng Hash Map
+## 2. chính xác (exact / 정확한) trạng thái (state / 상태) bằng băm (hash / 해시) Map
 
 Baseline cho tần suất:
 
@@ -39,9 +42,9 @@ Baseline cho tần suất:
 key -> count
 ```
 
-Hash Map cho update kỳ vọng `O(1)`.
+Băm (hash / 해시) Map cho cập nhật (update / 업데이트) kỳ vọng `O(1)`.
 
-Nhưng nếu cardinality của key lên hàng trăm triệu, memory tăng tuyến tính theo số key phân biệt. Đây là điểm hệ thống phải quyết định:
+Nhưng nếu cardinality của key lên hàng trăm triệu, bộ nhớ (memory / 메모리) tăng tuyến tính theo số key phân biệt. Đây là điểm hệ thống phải quyết định:
 
 ```text
 state chính xác còn vừa bộ nhớ không?
@@ -49,7 +52,7 @@ state chính xác còn vừa bộ nhớ không?
 
 Nếu không, cần approximation hoặc partitioning.
 
-## 3. Top-K với Hash Map + Heap
+## 3. Top-K với băm (hash / 해시) Map + vùng nhớ động (heap / 힙)
 
 Nếu vẫn giữ count chính xác, Top-K có thể được lấy bằng min-heap kích thước `K`:
 
@@ -67,11 +70,11 @@ O(n\log K)
 
 với `n` là số key phân biệt.
 
-Nếu cần Top-K liên tục sau mỗi event, cập nhật heap trực tiếp phức tạp hơn vì priority thay đổi. Có thể dùng indexed heap hoặc lazy entries.
+Nếu cần Top-K liên tục sau mỗi sự kiện (event / 이벤트), cập nhật vùng nhớ động (heap / 힙) trực tiếp phức tạp hơn vì priority thay đổi. Có thể dùng indexed vùng nhớ động (heap / 힙) hoặc lazy entries.
 
 ## 4. Count-Min Sketch khi không thể giữ mọi key
 
-CMS giữ ma trận bộ đếm nhỏ và nhiều hàm băm. Mỗi event cập nhật một ô ở mỗi hàng.
+CMS giữ ma trận bộ đếm nhỏ và nhiều hàm băm. Mỗi sự kiện (event / 이벤트) cập nhật một ô ở mỗi hàng.
 
 Ước lượng:
 
@@ -81,7 +84,7 @@ estimate(key) = min(counters corresponding to key)
 
 Trong mô hình cập nhật không âm, CMS không đánh giá thấp số đếm thật; va chạm chỉ làm tăng ước lượng.
 
-Memory phụ thuộc `ε`, `δ`, không phụ thuộc trực tiếp số key phân biệt.
+Bộ nhớ (memory / 메모리) phụ thuộc `ε`, `δ`, không phụ thuộc trực tiếp số key phân biệt.
 
 Đây là lý do CMS phù hợp telemetry có keyspace rất lớn.
 
@@ -99,7 +102,7 @@ hoặc dùng thuật toán như Misra–Gries/Space-Saving.
 
 Đây là ví dụ quan trọng:
 
-> Query by known key và discovery of unknown key là hai loại bài toán khác nhau.
+> truy vấn (query / 쿼리) by known key và discovery of unknown key là hai loại bài toán khác nhau.
 
 ## 6. Space-Saving cho heavy hitters
 
@@ -107,9 +110,9 @@ Space-Saving giữ một số lượng counter hữu hạn cho các candidate l�
 
 Khi key mới không có counter và mọi slot đã dùng, nó thay candidate có count nhỏ nhất rồi cập nhật sai số tương ứng.
 
-Với distribution lệch mạnh kiểu Zipf, nó có thể theo dõi heavy hitters rất hiệu quả.
+Với phân phối (distribution / 분포) lệch mạnh kiểu Zipf, nó có thể theo dõi heavy hitters rất hiệu quả.
 
-Một pipeline thực tế có thể dùng:
+Một chuỗi xử lý (pipeline / 파이프라인) thực tế có thể dùng:
 
 ```text
 Space-Saving -> candidate discovery
@@ -118,21 +121,21 @@ exact backend -> verify candidate
 
 ## 7. HyperLogLog cho distinct count
 
-Muốn đếm số user phân biệt chính xác cần Hash Set:
+Muốn đếm số người dùng (user / 사용자) phân biệt chính xác cần băm (hash / 해시) Set:
 
 ```text
 user_id -> membership
 ```
 
-Memory tăng theo cardinality.
+Bộ nhớ (memory / 메모리) tăng theo cardinality.
 
-HyperLogLog giữ thống kê trên hash và dùng rất ít memory so với Hash Set.
+HyperLogLog giữ thống kê trên băm (hash / 해시) và dùng rất ít bộ nhớ (memory / 메모리) so với băm (hash / 해시) Set.
 
-Các worker có thể merge HLL bằng phép `max` theo từng register, nên rất phù hợp distributed aggregation.
+Các worker có thể merge HLL bằng phép `max` theo từng register, nên rất phù hợp phân tán (distributed / 분산) aggregation.
 
 ## 8. Mergeability là tính chất hệ thống quan trọng
 
-Trong distributed stream processing, mỗi partition xử lý một phần dữ liệu:
+Trong phân tán (distributed / 분산) stream processing, mỗi partition xử lý một phần dữ liệu:
 
 ```text
 partition 1 -> sketch A
@@ -146,15 +149,15 @@ Nếu sketch có phép merge kết hợp:
 merge(merge(A,B),C) = merge(A,merge(B,C))
 ```
 
-coordinator có thể dùng tree reduction song song.
+coordinator có thể dùng cây (tree / 트리) reduction song song.
 
-Đây là lý do HLL/CMS/bottom-k hấp dẫn hơn nhiều cấu trúc exact không dễ merge ở quy mô lớn.
+Đây là lý do HLL/CMS/bottom-k hấp dẫn hơn nhiều cấu trúc chính xác (exact / 정확한) không dễ merge ở quy mô lớn.
 
-## 9. Time Window làm state khó hơn
+## 9. thời gian (time / 시간) cửa sổ (window / 윈도우) làm trạng thái (state / 상태) khó hơn
 
 “Distinct count từ đầu hệ thống” dễ hơn “distinct count 5 phút gần nhất”.
 
-Nếu sketch chỉ tăng đơn điệu, nó không tự quên event cũ.
+Nếu sketch chỉ tăng đơn điệu, nó không tự quên sự kiện (event / 이벤트) cũ.
 
 Các cách phổ biến:
 
@@ -167,44 +170,44 @@ sliding-window sketch chuyên dụng
 
 Ví dụ giữ 60 HLL cho 60 phút gần nhất rồi merge các bucket cần thiết.
 
-Đổi lại, boundary của window và memory tăng theo số bucket.
+Đổi lại, ranh giới (boundary / 경계) của cửa sổ (window / 윈도우) và bộ nhớ (memory / 메모리) tăng theo số bucket.
 
-## 10. Tumbling, Sliding và Session Window
+## 10. Tumbling, Sliding và Session cửa sổ (window / 윈도우)
 
-**Tumbling Window** chia thời gian thành các đoạn không chồng lấp.
+**Tumbling cửa sổ (window / 윈도우)** chia thời gian thành các đoạn không chồng lấp.
 
-**Sliding Window** có thể chồng lấp và cập nhật thường xuyên.
+**Sliding cửa sổ (window / 윈도우)** có thể chồng lấp và cập nhật thường xuyên.
 
-**Session Window** kết thúc khi user không hoạt động trong một khoảng timeout.
+**Session cửa sổ (window / 윈도우)** kết thúc khi người dùng (user / 사용자) không hoạt động trong một khoảng hết thời gian chờ (timeout / 타임아웃).
 
-Session window cần state theo key và timeout management; thường dùng timer queue/heap hoặc timer wheel.
+Session cửa sổ (window / 윈도우) cần trạng thái (state / 상태) theo key và hết thời gian chờ (timeout / 타임아웃) management; thường dùng timer hàng đợi (queue / 큐)/vùng nhớ động (heap / 힙) hoặc timer wheel.
 
-Cùng gọi là “window”, nhưng state machine rất khác nhau.
+Cùng gọi là “cửa sổ (window / 윈도우)”, nhưng máy trạng thái (state machine / 상태 머신) rất khác nhau.
 
-## 11. Event Time và Processing Time
+## 11. sự kiện (event / 이벤트) thời gian (time / 시간) và Processing thời gian (time / 시간)
 
-Streaming thực có event đến trễ hoặc ngoài thứ tự.
+Streaming thực có sự kiện (event / 이벤트) đến trễ hoặc ngoài thứ tự.
 
 ```text
 event time      -> thời gian sự kiện thực xảy ra
 processing time -> thời gian hệ thống xử lý
 ```
 
-Nếu dùng event time, phải quyết định chờ bao lâu cho event trễ. Watermark là một cách biểu diễn tiến độ thời gian logic.
+Nếu dùng sự kiện (event / 이벤트) thời gian (time / 시간), phải quyết định chờ bao lâu cho sự kiện (event / 이벤트) trễ. Watermark là một cách biểu diễn tiến độ thời gian lô-gic (logic / 논리).
 
-Đây không còn là DSA thuần nhưng state/window structure phải phù hợp semantics thời gian.
+Đây không còn là DSA thuần nhưng trạng thái (state / 상태)/cửa sổ (window / 윈도우) cấu trúc (structure / 구조) phải phù hợp ngữ nghĩa (semantics / 의미론) thời gian.
 
 ## 12. Reservoir Sampling
 
-Nếu muốn giữ một mẫu đại diện `k` event từ stream chưa biết trước độ dài, Reservoir Sampling dùng bộ nhớ `O(k)`.
+Nếu muốn giữ một mẫu đại diện `k` sự kiện (event / 이벤트) từ stream chưa biết trước độ dài, Reservoir Sampling dùng bộ nhớ `O(k)`.
 
-Nó tránh thiên lệch về event đầu hoặc cuối và rất hữu ích cho debug, inspection hoặc offline analysis.
+Nó tránh thiên lệch về sự kiện (event / 이벤트) đầu hoặc cuối và rất hữu ích cho gỡ lỗi (debug / 디버그), inspection hoặc offline phân tích (analysis / 분석).
 
 Sampling là cách giảm dữ liệu trong khi cố giữ phân phối đại diện.
 
 ## 13. Quantile Sketch
 
-Latency percentile không thể tính chỉ bằng average. Muốn p99 chính xác có thể cần giữ/sort lượng dữ liệu lớn.
+Độ trễ (latency / 지연 시간) percentile không thể tính chỉ bằng average. Muốn p99 chính xác có thể cần giữ/sort lượng dữ liệu lớn.
 
 Các sketch quantile như KLL/t-digest (tùy domain) nén phân phối để ước lượng percentile với bộ nhớ giới hạn.
 
@@ -215,7 +218,7 @@ mean -> aggregate đơn giản
 quantile -> cần thông tin về distribution
 ```
 
-Do đó state phức tạp hơn một counter.
+Do đó trạng thái (state / 상태) phức tạp hơn một counter.
 
 ## 14. Histogram
 
@@ -228,13 +231,13 @@ Một histogram cố định chia miền giá trị thành bucket:
 ...
 ```
 
-Memory nhỏ và merge rất dễ, nhưng precision phụ thuộc boundary.
+Bộ nhớ (memory / 메모리) nhỏ và merge rất dễ, nhưng precision phụ thuộc ranh giới (boundary / 경계).
 
-Nếu distribution thay đổi mạnh, bucket cố định có thể mất chi tiết ở vùng quan trọng.
+Nếu phân phối (distribution / 분포) thay đổi mạnh, bucket cố định có thể mất chi tiết ở vùng quan trọng.
 
-Đây là trade-off giữa simplicity, mergeability và precision.
+Đây là sự đánh đổi (trade-off / 트레이드오프) giữa simplicity, mergeability và precision.
 
-## 15. Approximate vs Exact Pipeline
+## 15. Approximate vs chính xác (exact / 정확한) chuỗi xử lý (pipeline / 파이프라인)
 
 Một kiến trúc mạnh thường dùng hai tầng:
 
@@ -254,23 +257,23 @@ CMS phát hiện endpoint có vẻ nóng
 → nếu vượt threshold thì alert
 ```
 
-Approximation giúp giảm search space, không nhất thiết thay thế kết quả chính xác cuối cùng.
+Approximation giúp giảm tìm kiếm (search / 검색) không gian (space / 공간), không nhất thiết thay thế kết quả chính xác cuối cùng.
 
 ## 16. Partitioning theo key
 
-Để state cùng key nằm một worker, hệ thống có thể dùng:
+Để trạng thái (state / 상태) cùng key nằm một worker, hệ thống có thể dùng:
 
 ```text
 partition = hash(key) mod N
 ```
 
-Hashing cân bằng tương đối nhưng khi số partition thay đổi sẽ remap nhiều key. Consistent/rendezvous hashing có thể giảm lượng state di chuyển trong một số kiến trúc.
+Hashing cân bằng tương đối nhưng khi số partition thay đổi sẽ remap nhiều key. Consistent/rendezvous hashing có thể giảm lượng trạng thái (state / 상태) di chuyển trong một số kiến trúc.
 
 Stateful streaming vì vậy nối trực tiếp với hashing phân tán.
 
 ## 17. Hot Key
 
-Nếu một key chiếm 30% lưu lượng, hash partitioning vẫn không cân bằng vì toàn bộ key đó đi cùng một worker.
+Nếu một key chiếm 30% lưu lượng, băm (hash / 해시) partitioning vẫn không cân bằng vì toàn bộ key đó đi cùng một worker.
 
 Các chiến lược gồm:
 
@@ -283,11 +286,11 @@ special-case hot keys
 
 Ví dụ split `celebrity_user` thành nhiều subkey rồi merge count ở tầng sau.
 
-Đây là vấn đề distribution, không phải lỗi của hash function.
+Đây là vấn đề phân phối (distribution / 분포), không phải lỗi của băm (hash / 해시) hàm (function / 함수).
 
 ## 18. Backpressure
 
-Nếu downstream xử lý chậm hơn upstream, queue tăng mãi.
+Nếu downstream xử lý chậm hơn upstream, hàng đợi (queue / 큐) tăng mãi.
 
 Cần chính sách:
 
@@ -299,15 +302,15 @@ scale consumers
 reduce fidelity
 ```
 
-Queue capacity là một phần của reliability contract.
+Hàng đợi (queue / 큐) sức chứa (capacity / 용량) là một phần của độ tin cậy (reliability / 신뢰성) đặc tả hợp đồng (contract / 계약).
 
 Streaming analytics vì vậy kết nối trực tiếp với scheduler/backpressure, không chỉ sketch.
 
 ## 19. Exactly-once, At-least-once và duplicate
 
-Nếu event có thể được xử lý lại sau retry, counter đơn giản có thể đếm trùng.
+Nếu sự kiện (event / 이벤트) có thể được xử lý lại sau thử lại (retry / 재시도), counter đơn giản có thể đếm trùng.
 
-Cần xác định semantics:
+Cần xác định ngữ nghĩa (semantics / 의미론):
 
 ```text
 at-most-once
@@ -315,13 +318,13 @@ at-least-once
 exactly-once theo phạm vi hệ thống
 ```
 
-Dedup có thể cần event ID + Hash Set/TTL index, nhưng state dedup cũng tốn memory.
+Dedup có thể cần sự kiện (event / 이벤트) ID + băm (hash / 해시) Set/TTL chỉ mục (index / 인덱스), nhưng trạng thái (state / 상태) dedup cũng tốn bộ nhớ (memory / 메모리).
 
-Approximate duplicate filters như Bloom Filter có thể tạo false positive, vì vậy không phải domain nào cũng chấp nhận được.
+Approximate duplicate filters như Bloom Filter có thể tạo false positive, vì vậy không phải lĩnh vực (domain / 도메인) nào cũng chấp nhận được.
 
-## 20. Snapshot và Recovery
+## 20. Snapshot và khôi phục (recovery / 복구)
 
-State phải được checkpoint:
+Trạng thái (state / 상태) phải được checkpoint:
 
 ```text
 Hash Map state
@@ -330,13 +333,13 @@ window buckets
 timers
 ```
 
-Nếu snapshot không nhất quán với input offset, recovery có thể mất hoặc đếm lại event.
+Nếu snapshot không nhất quán với đầu vào (input / 입력) offset, khôi phục (recovery / 복구) có thể mất hoặc đếm lại sự kiện (event / 이벤트).
 
-Một cấu trúc đúng trong RAM chưa đủ; distributed state cần protocol persistence tương ứng.
+Một cấu trúc đúng trong RAM chưa đủ; phân tán (distributed / 분산) trạng thái (state / 상태) cần giao thức (protocol / 프로토콜) persistence tương ứng.
 
 ## 21. Monitoring chính sketch
 
-Approximate structure cũng cần observability:
+Approximate cấu trúc (structure / 구조) cũng cần khả năng quan sát (observability / 관측 가능성):
 
 ```text
 Bloom saturation
@@ -347,11 +350,11 @@ merge compatibility
 bucket age
 ```
 
-Nếu dữ liệu tăng gấp 100 lần so với assumption ban đầu, error guarantee có thể không còn phù hợp.
+Nếu dữ liệu tăng gấp 100 lần so với giả định (assumption / 가정) ban đầu, lỗi (error / 오류) guarantee có thể không còn phù hợp.
 
 ## 22. Testing
 
-Dùng exact model trên dữ liệu nhỏ để đối chiếu:
+Dùng chính xác (exact / 정확한) mô hình (model / 모델) trên dữ liệu nhỏ để đối chiếu:
 
 ```text
 Hash Map exact counts
@@ -359,7 +362,7 @@ Hash Set exact cardinality
 full sorted values cho percentile
 ```
 
-Với sketch, kiểm tra distribution sai số qua nhiều seed/dataset thay vì một lần chạy.
+Với sketch, kiểm tra phân phối (distribution / 분포) sai số qua nhiều seed/dataset thay vì một lần chạy.
 
 Cần thử:
 
@@ -387,7 +390,7 @@ error distribution
 p95/p99 processing latency
 ```
 
-Không nên chỉ đo CPU throughput mà bỏ qua state growth và recovery cost.
+Không nên chỉ đo CPU thông lượng (throughput / 처리량) mà bỏ qua trạng thái (state / 상태) growth và khôi phục (recovery / 복구) chi phí (cost / 비용).
 
 ## 24. Kiến trúc khái niệm
 
@@ -414,6 +417,6 @@ Top-K / Alert / Dashboard
 
 ## Mô hình tư duy
 
-> Streaming analytics là bài toán **quản lý state dưới giới hạn tài nguyên**. Exact structure giữ chi tiết nhưng state tăng theo dữ liệu; sketch chủ động nén thông tin và đổi lại sai số có kiểm soát. Window thêm chiều thời gian, partitioning thêm chiều phân tán, còn backpressure quyết định hệ thống phản ứng thế nào khi tốc độ đến vượt khả năng xử lý.
+> Streaming analytics là bài toán **quản lý trạng thái (state / 상태) dưới giới hạn tài nguyên**. chính xác (exact / 정확한) cấu trúc (structure / 구조) giữ chi tiết nhưng trạng thái (state / 상태) tăng theo dữ liệu; sketch chủ động nén thông tin và đổi lại sai số có kiểm soát. cửa sổ (window / 윈도우) thêm chiều thời gian, partitioning thêm chiều phân tán, còn backpressure quyết định hệ thống phản ứng thế nào khi tốc độ đến vượt khả năng xử lý.
 
 Xem thêm: [Hash Tables](../01_linear_structures/04_hash_tables.md), [Priority Queues](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Probabilistic Data Structures](../05_specialized/06_probabilistic_data_structures.md), [Two Pointers & Sliding Window](../04_algorithmic_paradigms/07_two_pointers_sliding_window_prefix_difference.md).

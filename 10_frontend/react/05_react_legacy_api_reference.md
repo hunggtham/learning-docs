@@ -1,35 +1,39 @@
-# React Legacy API Reference — React 15 → 18
+# React Legacy API tham chiếu (reference / 참조) — React 15 → 18
 
-> File này là phần bổ sung cho bốn level chính. Không nên đọc trước Beginner. Mục tiêu là tra cứu nhanh nhưng vẫn đủ giải thích khi gặp project cũ.
+> **Mạch đọc:** Đọc **React Legacy API tham chiếu (reference / 참조) — React 15 → 18** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Cách dùng tệp (file / 파일) này** sang **1A. Old mẫu (pattern / 패턴) → new mẫu (pattern / 패턴) → reason → di chuyển (migration / 마이그레이션) → khi còn gặp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## 1. Cách dùng file này
+> tệp (file / 파일) này là phần bổ sung cho bốn mức (level / 수준) chính. Không nên đọc trước Beginner. Mục tiêu là tra cứu nhanh nhưng vẫn đủ giải thích khi gặp dự án (project / 프로젝트) cũ.
 
-Nếu gặp API lạ trong codebase cũ, hãy tìm ở đây để biết nó từng làm gì, version nào thường dùng, trạng thái hiện tại và hướng migrate. Việc một API được giữ trong tài liệu không có nghĩa API đó được khuyên dùng cho code mới.
+## 1. Cách dùng tệp (file / 파일) này
 
 ## 1A. Old pattern → new pattern → reason → migration → khi còn gặp
 Phần này nối mạch bài học với “1A. Old pattern → new pattern → reason → migration → khi còn gặp”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
 
-| Old | New/default | Reason và migration | Khi còn gặp |
+## 1A. Old mẫu (pattern / 패턴) → new mẫu (pattern / 패턴) → reason → di chuyển (migration / 마이그레이션) → khi còn gặp
+Phần “1A. Old mẫu (pattern / 패턴) → new mẫu (pattern / 패턴) → reason → di chuyển (migration / 마이그레이션) → khi còn gặp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
+
+| Old | New/default | Reason và di chuyển (migration / 마이그레이션) | Khi còn gặp |
 |---|---|---|---|
-| `createClass` + mixins | class rồi Function Component + Hooks | mixin dependency/autobind khó compose; tách concern từng phần trước khi đổi component form | React 0.x–15 |
-| class state/lifecycle | Function Component + Hooks | colocate concern; map state ownership trước, không đổi lifecycle 1:1 sang Effect | React 15–18 enterprise |
-| `componentWill*` | derivation/reducer/`componentDidUpdate`/Effect tùy intent | render phase có thể restart; xác định derive, reset, DOM hay network rồi chọn primitive | `UNSAFE_*` legacy |
-| HOC / render props | Custom Hook/composition khi phù hợp | giảm wrapper/prop collision; giữ old pattern nếu là public contract | Redux/router/headless libraries |
-| `ReactDOM.render`/`hydrate` | `createRoot`/`hydrateRoot` | modern root mở React 18 scheduling/batching; nâng 18.3 trước 19 và retest | React ≤17 bootstrap |
-| string refs / `findDOMNode` | explicit refs | ownership/composition/concurrency rõ hơn | animation/UI libs cũ |
-| legacy Context | `createContext` + modern consumers | propagation/composition rõ hơn | pre-16.3 |
-| mount-lifecycle fetch | Effect hoặc query/route/server layer | cancellation/cache/dedupe/invalidation tốt hơn | React 15–17 screens |
-| giant Redux store | local + URL + form + server-state + external store theo ownership | các dữ liệu có lifecycle khác nhau không nên mặc định chung store | enterprise Redux |
-| Enzyme/shallow instance tests | DOM behavior/integration/E2E | giảm coupling implementation; migrate assertion trước khi refactor component | class-era test suites |
+| `createClass` + mixins | lớp (class / 클래스) rồi hàm (function / 함수) thành phần (component / 컴포넌트) + Hooks | mixin phụ thuộc (dependency / 의존성)/autobind khó compose; tách concern từng phần trước khi đổi thành phần (component / 컴포넌트) form | React 0.x–15 |
+| lớp (class / 클래스) trạng thái (state / 상태)/vòng đời (lifecycle / 생명주기) | hàm (function / 함수) thành phần (component / 컴포넌트) + Hooks | colocate concern; map quyền sở hữu trạng thái (state ownership / 상태 소유권) trước, không đổi vòng đời (lifecycle / 생명주기) 1:1 sang tác động (effect / 효과) | React 15–18 enterprise |
+| `componentWill*` | derivation/reducer/`componentDidUpdate`/tác động (effect / 효과) tùy intent | kết xuất (render / 렌더링) phase có thể restart; xác định derive, reset, DOM hay mạng (network / 네트워크) rồi chọn thành phần nguyên thủy (primitive / 기본 요소) | `UNSAFE_*` legacy |
+| HOC / kết xuất (render / 렌더링) props | Custom Hook/composition khi phù hợp | giảm wrapper/prop collision; giữ old mẫu (pattern / 패턴) nếu là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) | Redux/router/headless libraries |
+| `ReactDOM.render`/`hydrate` | `createRoot`/`hydrateRoot` | hiện đại (modern / 현대적) gốc (root / 루트) mở React 18 scheduling/batching; nâng 18.3 trước 19 và retest | React ≤17 bootstrap |
+| string refs / `findDOMNode` | tường minh (explicit / 명시적) refs | quyền sở hữu (ownership / 소유권)/composition/tính đồng thời (concurrency / 동시성) rõ hơn | animation/UI libs cũ |
+| legacy ngữ cảnh (context / 맥락) | `createContext` + hiện đại (modern / 현대적) consumers | propagation/composition rõ hơn | pre-16.3 |
+| mount-lifecycle fetch | tác động (effect / 효과) hoặc truy vấn (query / 쿼리)/tuyến (route / 경로)/máy chủ (server / 서버) tầng (layer / 계층) | cancellation/bộ nhớ đệm (cache / 캐시)/dedupe/vô hiệu hóa (invalidation / 무효화) tốt hơn | React 15–17 screens |
+| giant Redux store | cục bộ (local / 로컬) + URL + form + server-state + bên ngoài (external / 외부) store theo quyền sở hữu (ownership / 소유권) | các dữ liệu có vòng đời (lifecycle / 생명주기) khác nhau không nên mặc định chung store | enterprise Redux |
+| Enzyme/shallow instance tests | DOM hành vi (behavior / 동작)/tích hợp (integration / 통합)/E2E | giảm coupling hiện thực (implementation / 구현); migrate assertion trước khi refactor thành phần (component / 컴포넌트) | class-era kiểm thử (test / 테스트) suites |
 
-Quy tắc là **migrate semantics, không migrate tên API**. Một lifecycle cũ có thể làm nhiều việc; tách render derivation, user event và external synchronization trước khi chọn API mới.
+Quy tắc là **migrate ngữ nghĩa (semantics / 의미론), không migrate tên API**. Một vòng đời (lifecycle / 생명주기) cũ có thể làm nhiều việc; tách kết xuất (render / 렌더링) derivation, người dùng (user / 사용자) sự kiện (event / 이벤트) và bên ngoài (external / 외부) synchronization trước khi chọn API mới.
 
-## 2. Component creation và composition
+## 2. thành phần (component / 컴포넌트) creation và composition
 
 ### `React.createClass`
 
-`React.createClass(spec)` tạo component từ object specification. API này từng cung cấp `getInitialState`, `getDefaultProps`, lifecycle, methods và mixins. Methods được autobind. React 15.5 deprecate nó khỏi core; legacy code có thể dùng package `create-react-class`.
+`React.createClass(spec)` tạo thành phần (component / 컴포넌트) từ đối tượng (object / 객체) specification. API này từng cung cấp `getInitialState`, `getDefaultProps`, vòng đời (lifecycle / 생명주기), methods và mixins. Methods được autobind. React 15.5 deprecate nó khỏi cốt lõi (core / 핵심); legacy mã (code / 코드) có thể dùng gói (package / 패키지) `create-react-class`.
 
 ```jsx
 const Counter = React.createClass({
@@ -56,7 +60,7 @@ const Counter = React.createClass({
 
 ### Mixins
 
-Mixins copy một nhóm methods/lifecycle vào nhiều `createClass` components. Chúng dễ tạo name collision và hidden dependency. Về lịch sử, HOC/render props và sau đó Hooks là các cách composition rõ hơn.
+Mixins bản sao (copy / 복사) một nhóm methods/vòng đời (lifecycle / 생명주기) vào nhiều `createClass` components. Chúng dễ tạo name collision và hidden phụ thuộc (dependency / 의존성). Về lịch sử, HOC/kết xuất (render / 렌더링) props và sau đó Hooks là các cách composition rõ hơn.
 
 ### Higher-Order Component
 Phần này nối mạch bài học với “Higher-Order Component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -67,7 +71,7 @@ const Enhanced =
   withFeature(Component);
 ```
 
-HOC không bị remove. Đây là pattern vẫn có thể hợp lệ, đặc biệt khi library API được thiết kế từ thời pre-Hooks.
+HOC không bị remove. Đây là mẫu (pattern / 패턴) vẫn có thể hợp lệ, đặc biệt khi thư viện (library / 라이브러리) API được thiết kế từ thời pre-Hooks.
 
 ### Render props
 Phần này nối mạch bài học với “Render props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -79,17 +83,17 @@ Phần này nối mạch bài học với “Render props”, nêu mục đích,
 </DataProvider>
 ```
 
-Vẫn hợp lệ. Hooks thường thuận tiện hơn khi mục tiêu là chia sẻ stateful logic.
+Vẫn hợp lệ. Hooks thường thuận tiện hơn khi mục tiêu là chia sẻ stateful lô-gic (logic / 논리).
 
-## 3. Class APIs
+## 3. lớp (class / 클래스) APIs
 
 ### `this.state`
 
-Local state object của class.
+Cục bộ (local / 로컬) trạng thái (state / 상태) đối tượng (object / 객체) của lớp (class / 클래스).
 
 ### `this.setState(partialStateOrUpdater, callback?)`
 
-Object form shallow-merges. Updater form nên dùng khi state mới phụ thuộc state cũ.
+Đối tượng (object / 객체) form shallow-merges. Updater form nên dùng khi trạng thái (state / 상태) mới phụ thuộc trạng thái (state / 상태) cũ.
 
 ```jsx
 this.setState(
@@ -102,37 +106,37 @@ this.setState(
 );
 ```
 
-Callback của `setState` là API class; Hook setter không có callback parameter tương đương.
+Callback của `setState` là API lớp (class / 클래스); Hook setter không có callback parameter tương đương.
 
 ### `this.forceUpdate(callback?)`
 
-Ép update khi dữ liệu bên ngoài React thay đổi mà component không nhận state/props update bình thường. Đây là escape hatch, không nên là data flow chính.
+Ép cập nhật (update / 업데이트) khi dữ liệu bên ngoài React thay đổi mà thành phần (component / 컴포넌트) không nhận trạng thái (state / 상태)/props cập nhật (update / 업데이트) bình thường. Đây là escape hatch, không nên là luồng dữ liệu (data flow / 데이터 흐름) chính.
 
 ### `React.PureComponent`
 
-Thêm shallow comparison mặc định cho props/state.
+Thêm shallow comparison mặc định cho props/trạng thái (state / 상태).
 
-## 4. Lifecycle APIs
+## 4. vòng đời (lifecycle / 생명주기) APIs
 
 ### Mount
 
 `constructor` → `render` → `componentDidMount`.
 
-### Update
+### Cập nhật (update / 업데이트)
 
-`shouldComponentUpdate` → `render` → `getSnapshotBeforeUpdate` → `componentDidUpdate`, với `getDerivedStateFromProps` tham gia theo lifecycle phù hợp.
+`shouldComponentUpdate` → `render` → `getSnapshotBeforeUpdate` → `componentDidUpdate`, với `getDerivedStateFromProps` tham gia theo vòng đời (lifecycle / 생명주기) phù hợp.
 
 ### Unmount
 
 `componentWillUnmount`.
 
-### Error
+### Lỗi (error / 오류)
 
 `getDerivedStateFromError` + `componentDidCatch`.
 
 ### Unsafe legacy lifecycles
 
-`componentWillMount`, `componentWillReceiveProps`, `componentWillUpdate` là tên cũ. Các tên `UNSAFE_...` tồn tại để làm rõ rằng assumptions của chúng không an toàn với rendering hiện đại. Không migrate bằng search-replace sang Effect; phải xác định intent.
+`componentWillMount`, `componentWillReceiveProps`, `componentWillUpdate` là tên cũ. Các tên `UNSAFE_...` tồn tại để làm rõ rằng các giả định (assumptions / 가정들) của chúng không an toàn với rendering hiện đại. Không migrate bằng search-replace sang tác động (effect / 효과); phải xác định intent.
 
 ## 5. Refs
 
@@ -162,39 +166,39 @@ Vẫn hợp lệ.
 
 ### `createRef`
 
-React 16.3+, thường dùng cho class.
+React 16.3+, thường dùng cho lớp (class / 클래스).
 
 ### `forwardRef`
 
-React 16.3+, đặc biệt quan trọng cho React 18/library compatibility.
+React 16.3+, đặc biệt quan trọng cho React 18/thư viện (library / 라이브러리) tính tương thích (compatibility / 호환성).
 
 ### `useRef`
 
-React 16.8+, dùng trong Function Component.
+React 16.8+, dùng trong hàm (function / 함수) thành phần (component / 컴포넌트).
 
 ### ref-as-prop
 
-React 19 cho Function Component nhận `ref` như prop.
+React 19 cho hàm (function / 함수) thành phần (component / 컴포넌트) nhận `ref` như prop.
 
 ### `findDOMNode`
 
-Escape hatch tìm DOM từ component instance. Deprecated 16.6, removed 19. Thay bằng explicit ref.
+Escape hatch tìm DOM từ thành phần (component / 컴포넌트) instance. Deprecated 16.6, removed 19. Thay bằng tường minh (explicit / 명시적) ref.
 
-## 6. Context
+## 6. ngữ cảnh (context / 맥락)
 
-### Legacy Context
+### Legacy ngữ cảnh (context / 맥락)
 
 `getChildContext`, `childContextTypes`, `contextTypes`. Deprecated 16.6, removed 19.
 
-### New Context
+### New ngữ cảnh (context / 맥락)
 
-`createContext`, `.Provider`, `.Consumer`, class `contextType`, Hook `useContext`. React 19 thêm provider shorthand `<Context value={...}>`.
+`createContext`, `.Provider`, `.Consumer`, lớp (class / 클래스) `contextType`, Hook `useContext`. React 19 thêm provider shorthand `<Context value={...}>`.
 
 ## 7. React element APIs
 
 ### `createElement`
 
-Vẫn hợp lệ và là primitive nền của JSX.
+Vẫn hợp lệ và là thành phần nguyên thủy (primitive / 기본 요소) nền của JSX.
 
 ```jsx
 React.createElement(
@@ -206,11 +210,11 @@ React.createElement(
 
 ### `cloneElement`
 
-Vẫn tồn tại nhưng nên dùng cẩn thận vì implicit data flow.
+Vẫn tồn tại nhưng nên dùng cẩn thận vì implicit luồng dữ liệu (data flow / 데이터 흐름).
 
 ### `isValidElement`
 
-Kiểm tra value có phải React element hay không.
+Kiểm tra giá trị (value / 값) có phải React element hay không.
 
 ### `Children`
 
@@ -224,7 +228,7 @@ Children.only
 Children.toArray
 ```
 
-Các API này vẫn tồn tại và hay gặp trong component library cũ.
+Các API này vẫn tồn tại và hay gặp trong thành phần (component / 컴포넌트) thư viện (library / 라이브러리) cũ.
 
 ### `createFactory`
 
@@ -238,7 +242,7 @@ DOM factory đời rất cũ; hiểu như tiền thân của JSX.
 
 ### `ReactDOM.render`
 
-Entry root cũ; deprecated 18, removed 19.
+Entry gốc (root / 루트) cũ; deprecated 18, removed 19.
 
 ### `ReactDOM.hydrate`
 
@@ -246,37 +250,37 @@ Hydration cũ; deprecated 18, removed 19.
 
 ### `unmountComponentAtNode`
 
-Unmount root cũ; deprecated 18, removed 19.
+Unmount gốc (root / 루트) cũ; deprecated 18, removed 19.
 
 ### `findDOMNode`
 
 Deprecated 16.6, removed 19.
 
-### Render callback
+### Kết xuất (render / 렌더링) callback
 
-`ReactDOM.render` cũ từng nhận callback sau render. Modern root không có one-to-one replacement; phải chọn Effect/ref/callback phù hợp mục tiêu thực tế.
+`ReactDOM.render` cũ từng nhận callback sau kết xuất (render / 렌더링). hiện đại (modern / 현대적) gốc (root / 루트) không có one-to-one replacement; phải chọn tác động (effect / 효과)/ref/callback phù hợp mục tiêu thực tế.
 
-## 9. Runtime typing và defaults
+## 9. thời gian chạy (runtime / 런타임) typing và defaults
 
 ### `React.PropTypes`
 
-Deprecated 15.5; chuyển sang package `prop-types`.
+Deprecated 15.5; chuyển sang gói (package / 패키지) `prop-types`.
 
 ### `Component.propTypes`
 
-Phổ biến từ React 15–18. Function Component `propTypes` không còn được React 19 xử lý.
+Phổ biến từ React 15–18. hàm (function / 함수) thành phần (component / 컴포넌트) `propTypes` không còn được React 19 xử lý.
 
 ### `Component.defaultProps`
 
-Function Component `defaultProps` bị loại trong React 19; dùng default parameter. Class `defaultProps` vẫn có thể tồn tại.
+Hàm (function / 함수) thành phần (component / 컴포넌트) `defaultProps` bị loại trong React 19; dùng default parameter. lớp (class / 클래스) `defaultProps` vẫn có thể tồn tại.
 
 ## 10. Events
 
-React web cũ dùng pooled `SyntheticEvent`, nên code async từng cần `event.persist()`. React 17 bỏ pooling behavior đó trên web; code hiện đại thường không cần `persist()`.
+React web cũ dùng pooled `SyntheticEvent`, nên mã (code / 코드) async từng cần `event.persist()`. React 17 bỏ pooling hành vi (behavior / 동작) đó trên web; mã (code / 코드) hiện đại thường không cần `persist()`.
 
 ## 11. Testing legacy
 
-`react-test-renderer` bị deprecate ở React 19. `react-test-renderer/shallow` bị remove khỏi path đó. `react-dom/test-utils` helpers bị cắt giảm; `act` chuyển về `react`. Codebase Enzyme/shallow-heavy nên migrate về test hành vi khi có thể.
+`react-test-renderer` bị deprecate ở React 19. `react-test-renderer/shallow` bị remove khỏi đường dẫn (path / 경로) đó. `react-dom/test-utils` helpers bị cắt giảm; `act` chuyển về `react`. Codebase Enzyme/shallow-heavy nên migrate về kiểm thử (test / 테스트) hành vi khi có thể.
 
 ## 12. JSX transform và import React
 
@@ -286,60 +290,62 @@ JSX transform cũ thường yêu cầu:
 import React from "react";
 ```
 
-ngay cả khi code không gọi biến `React` trực tiếp, vì JSX được transform thành `React.createElement(...)`.
+ngay cả khi mã (code / 코드) không gọi biến `React` trực tiếp, vì JSX được transform thành `React.createElement(...)`.
 
-Modern JSX transform cho phép JSX không cần import React chỉ vì transform. React 19 yêu cầu modern transform.
+Hiện đại (modern / 현대적) JSX transform cho phép JSX không cần import React chỉ vì transform. React 19 yêu cầu hiện đại (modern / 현대적) transform.
 
 ## 13. UMD builds
 
-Các project rất cũ có thể load React bằng script UMD trong HTML. React 19 không còn phát hành UMD build như trước; code hiện đại ưu tiên module/ESM hoặc bundler/framework.
+Các dự án (project / 프로젝트) rất cũ có thể tải (load / 로드) React bằng script UMD trong HTML. React 19 không còn phát hành UMD bản dựng (build / 빌드) như trước; mã (code / 코드) hiện đại ưu tiên mô-đun (module / 모듈)/ESM hoặc bundler/khung phần mềm (framework / 프레임워크).
 
-## 13A. Migrate lifecycle theo intent thay vì map tên method một-một
+## 13A. Migrate vòng đời (lifecycle / 생명주기) theo intent thay vì map tên phương thức (method / 메서드) một-một
 
-Class lifecycle thường chứa nhiều concern trong cùng method, nên bảng “method cũ → Hook mới” chỉ là gợi ý đọc code, không phải migration recipe.
+Lớp (class / 클래스) vòng đời (lifecycle / 생명주기) thường chứa nhiều concern trong cùng phương thức (method / 메서드), nên bảng “phương thức (method / 메서드) cũ → Hook mới” chỉ là gợi ý đọc mã (code / 코드), không phải di chuyển (migration / 마이그레이션) recipe.
 
-| Intent trong code cũ | Hướng hiện đại thường phù hợp | Ghi chú |
+| Intent trong mã (code / 코드) cũ | Hướng hiện đại thường phù hợp | Ghi chú |
 |---|---|---|
-| Tính value từ props/state | tính trực tiếp trong render, đôi khi `useMemo` nếu thực sự đắt | tránh copy props vào state rồi Effect sync |
-| Setup/cleanup subscription | `useEffect` với dependency mô tả configuration | nghĩ theo start/stop process |
-| DOM measurement trước paint | ref + `useLayoutEffect` | dùng tối thiểu vì block paint |
-| User click gây POST/navigation | event handler / action | không vòng qua flag + Effect |
-| Nhiều event cập nhật state phức tạp | `useReducer` hoặc state machine | reducer phải pure |
-| Reset local state khi entity đổi | đổi identity bằng `key` hoặc model state theo ID | thường rõ hơn Effect `setState` reset |
-| Error Boundary | có thể giữ class boundary hiện hữu | không cần rewrite chỉ vì component con dùng Hooks |
+| Tính giá trị (value / 값) từ props/trạng thái (state / 상태) | tính trực tiếp trong kết xuất (render / 렌더링), đôi khi `useMemo` nếu thực sự đắt | tránh bản sao (copy / 복사) props vào trạng thái (state / 상태) rồi tác động (effect / 효과) sync |
+| Setup/cleanup subscription | `useEffect` với phụ thuộc (dependency / 의존성) mô tả cấu hình (configuration / 구성) | nghĩ theo start/stop tiến trình (process / 프로세스) |
+| DOM đo lường (measurement / 측정) trước paint | ref + `useLayoutEffect` | dùng tối thiểu vì khối (block / 블록) paint |
+| người dùng (user / 사용자) click gây POST/điều hướng (navigation / 내비게이션) | sự kiện (event / 이벤트) handler / hành động (action / 동작) | không vòng qua flag + tác động (effect / 효과) |
+| Nhiều sự kiện (event / 이벤트) cập nhật trạng thái (state / 상태) phức tạp | `useReducer` hoặc máy trạng thái (state machine / 상태 머신) | reducer phải pure |
+| Reset cục bộ (local / 로컬) trạng thái (state / 상태) khi thực thể (entity / 엔터티) đổi | đổi định danh (identity / 식별자) bằng `key` hoặc mô hình (model / 모델) trạng thái (state / 상태) theo ID | thường rõ hơn tác động (effect / 효과) `setState` reset |
+| lỗi (error / 오류) ranh giới (boundary / 경계) | có thể giữ lớp (class / 클래스) ranh giới (boundary / 경계) hiện hữu | không cần rewrite chỉ vì thành phần (component / 컴포넌트) con dùng Hooks |
 
-Khi còn gặp `componentDidMount`/`componentDidUpdate`, hãy đọc side effect cụ thể: một method có thể vừa fetch, vừa log analytics, vừa sync DOM. Migration tốt thường tách chúng thành event/Effect/boundary riêng theo semantics, nhờ đó dependency và cleanup trở nên rõ hơn.
+Khi còn gặp `componentDidMount`/`componentDidUpdate`, hãy đọc side tác động (effect / 효과) cụ thể: một phương thức (method / 메서드) có thể vừa fetch, vừa log analytics, vừa sync DOM. di chuyển (migration / 마이그레이션) tốt thường tách chúng thành sự kiện (event / 이벤트)/tác động (effect / 효과)/ranh giới (boundary / 경계) riêng theo ngữ nghĩa (semantics / 의미론), nhờ đó phụ thuộc (dependency / 의존성) và cleanup trở nên rõ hơn.
 
-## 14. Migration checklist
+## 14. di chuyển (migration / 마이그레이션) checklist
 
-Khi nâng một codebase cũ, đừng cố nhảy thẳng từ “API cũ” sang “API mới” bằng mechanical replacement. Trước hết xác định project đang ở React version nào, renderer/root API nào, framework pin version gì và third-party library nào dựa vào internals.
+Khi nâng một codebase cũ, đừng cố nhảy thẳng từ “API cũ” sang “API mới” bằng mechanical replacement. Trước hết xác định dự án (project / 프로젝트) đang ở React phiên bản (version / 버전) nào, renderer/gốc (root / 루트) API nào, khung phần mềm (framework / 프레임워크) pin phiên bản (version / 버전) gì và third-party thư viện (library / 라이브러리) nào dựa vào internals.
 
-Một flow thực tế là: root API → deprecated class/context/ref APIs → tests → TypeScript/types → Strict Mode/concurrency assumptions → framework/server integration. Với React 18 lên 19, React team khuyến nghị dùng 18.3 như bước cảnh báo trung gian.
+Một luồng (flow / 흐름) thực tế là: gốc (root / 루트) API → deprecated lớp (class / 클래스)/ngữ cảnh (context / 맥락)/ref APIs → tests → TypeScript/types → Strict chế độ (mode / 모드)/tính đồng thời (concurrency / 동시성) các giả định (assumptions / 가정들) → khung phần mềm (framework / 프레임워크)/máy chủ (server / 서버) tích hợp (integration / 통합). Với React 18 lên 19, React nhóm (team / 팀) khuyến nghị dùng 18.3 như bước cảnh báo trung gian.
 
-## 14A. Khi nào nên giữ old pattern
+## 14A. Khi nào nên giữ old mẫu (pattern / 패턴)
 
-Legacy không đồng nghĩa phải rewrite. Class Component ổn định, có test tốt và ít thay đổi có thể tiếp tục tồn tại; HOC/render props vẫn hợp lệ nếu đó là public contract của library; Redux cũ vẫn có giá trị khi domain cần centralized event flow, middleware hoặc selector ecosystem. Chi phí migration phải được so với rủi ro và lợi ích thực tế.
+Legacy không đồng nghĩa phải rewrite. lớp (class / 클래스) thành phần (component / 컴포넌트) ổn định, có kiểm thử (test / 테스트) tốt và ít thay đổi có thể tiếp tục tồn tại; HOC/kết xuất (render / 렌더링) props vẫn hợp lệ nếu đó là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) của thư viện (library / 라이브러리); Redux cũ vẫn có giá trị khi lĩnh vực (domain / 도메인) cần centralized sự kiện (event / 이벤트) luồng (flow / 흐름), middleware hoặc selector ecosystem. Chi phí di chuyển (migration / 마이그레이션) phải được so với rủi ro và lợi ích thực tế.
 
-Nên ưu tiên migrate khi old API đã bị remove ở target React, khi Strict/concurrent semantics phơi ra bug cleanup/purity, khi dependency cũ chặn security/framework upgrade, hoặc khi code thay đổi thường xuyên và abstraction hiện tại làm feature work ngày càng khó. Mục tiêu là giảm risk và complexity chứ không phải đạt “100% Function Component”.
+Nên ưu tiên migrate khi old API đã bị remove ở mục tiêu (target / 대상) React, khi Strict/concurrent ngữ nghĩa (semantics / 의미론) phơi ra bug cleanup/purity, khi phụ thuộc (dependency / 의존성) cũ chặn bảo mật (security / 보안)/khung phần mềm (framework / 프레임워크) upgrade, hoặc khi mã (code / 코드) thay đổi thường xuyên và lớp trừu tượng (abstraction / 추상화) hiện tại làm tính năng (feature / 기능) công việc (work / 작업) ngày càng khó. Mục tiêu là giảm rủi ro (risk / 위험) và độ phức tạp (complexity / 복잡도) chứ không phải đạt “100% hàm (function / 함수) thành phần (component / 컴포넌트)”.
 
 ## 15. Bảng version nhanh
 Phần này nối mạch bài học với “15. Bảng version nhanh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
 
-| API / khái niệm | Mốc version cần nhớ |
+| API / khái niệm | Mốc phiên bản (version / 버전) cần nhớ |
 |---|---|
-| `React.createClass` deprecate khỏi core | 15.5 |
-| `React.PropTypes` deprecate khỏi core | 15.5 |
-| Error Boundary / portals / Fiber generation | 16.0 |
+| `React.createClass` deprecate khỏi cốt lõi (core / 핵심) | 15.5 |
+| `React.PropTypes` deprecate khỏi cốt lõi (core / 핵심) | 15.5 |
+| lỗi (error / 오류) ranh giới (boundary / 경계) / portals / Fiber generation | 16.0 |
 | Fragment | 16.2 |
-| new Context / `createRef` / `forwardRef` / `StrictMode` | 16.3 |
-| `memo` / `lazy` / Suspense code splitting / `contextType` | 16.6 |
+| new ngữ cảnh (context / 맥락) / `createRef` / `forwardRef` / `StrictMode` | 16.3 |
+| `memo` / `lazy` / Suspense mã (code / 코드) splitting / `contextType` | 16.6 |
 | Hooks | 16.8 |
-| `UNSAFE_*` lifecycle era | 16.9+ |
+| `UNSAFE_*` vòng đời (lifecycle / 생명주기) era | 16.9+ |
 | `createFactory` deprecated | 16.13 |
-| React 17 event/gradual-upgrade generation | 17 |
+| React 17 sự kiện (event / 이벤트)/gradual-upgrade generation | 17 |
 | `createRoot`, automatic batching, transitions | 18 |
-| 18.3 migration warnings | 18.3 |
+| 18.3 di chuyển (migration / 마이그레이션) warnings | 18.3 |
 | Actions, `use`, ref-as-prop, legacy removals | 19.0 |
 | `Activity`, `useEffectEvent` | 19.2 |
-| stable View Transition integration, Fragment refs | 19.3 |
+| stable View chuyển tiếp (transition / 전이) tích hợp (integration / 통합), Fragment refs | 19.3 |
+
+> **Bàn giao:** Sau **15. Bảng phiên bản (version / 버전) nhanh**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index](./00_index.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

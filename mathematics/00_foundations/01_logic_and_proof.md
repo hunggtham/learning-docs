@@ -1,6 +1,9 @@
-# Logic và chứng minh: ngôn ngữ của suy luận đúng
+# Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng
 
-Logic (logic / 논리) không nói một tiền đề có đúng ngoài đời hay không. Nó trả lời câu hỏi khác: **nếu chấp nhận các tiền đề hiện có, kết luận nào thực sự theo sau?** Đây là lý do logic đứng trước proof, discrete mathematics, algorithms, probability, database predicates và formal verification.
+> **Mạch đọc:** Đọc **lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Mệnh đề: đơn vị cơ bản của lập luận (reasoning / 추론)** sang **2. AND, OR, XOR và cách conditions tạo cấu trúc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Lô-gic (logic / 논리) không nói một tiền đề có đúng ngoài đời hay không. Nó trả lời câu hỏi khác: **nếu chấp nhận các tiền đề hiện có, kết luận nào thực sự theo sau?** Đây là lý do lô-gic (logic / 논리) đứng trước proof, discrete mathematics, algorithms, xác suất (probability / 확률), cơ sở dữ liệu (database / 데이터베이스) predicates và formal xác minh (verification / 확인).
 
 Một cách nhìn hữu ích là tách ba tầng:
 
@@ -10,9 +13,9 @@ mô hình / giả định
 → kết luận
 ```
 
-Nếu assumption sai, reasoning hoàn hảo vẫn có thể cho conclusion vô ích. Nếu assumption đúng nhưng inference sai, conclusion không được bảo đảm. Vì vậy mathematical rigor không thay thế modeling judgment; hai việc giải quyết hai loại lỗi khác nhau.
+Nếu giả định (assumption / 가정) sai, lập luận (reasoning / 추론) hoàn hảo vẫn có thể cho conclusion vô ích. Nếu giả định (assumption / 가정) đúng nhưng suy luận (inference / 추론) sai, conclusion không được bảo đảm. Vì vậy mathematical rigor không thay thế modeling judgment; hai việc giải quyết hai loại lỗi khác nhau.
 
-## 1. Mệnh đề: đơn vị cơ bản của reasoning
+## 1. Mệnh đề: đơn vị cơ bản của lập luận (reasoning / 추론)
 
 Mệnh đề (proposition / 명제) là câu có thể được gán giá trị đúng hoặc sai trong một ngữ cảnh xác định.
 
@@ -32,9 +35,9 @@ Nếu `p` là `x>5`, phủ định chính xác là
 x\le 5,
 ```
 
-không phải chỉ `x<5`, vì phủ định phải bao phủ **mọi case không thuộc statement gốc**.
+không phải chỉ `x<5`, vì phủ định phải bao phủ **mọi trường hợp (case / 사례) không thuộc statement gốc**.
 
-Đây là một pattern quan trọng: khi negate một claim, ta không đoán câu “nghe đối lập”; ta lấy complement logic của toàn bộ condition.
+Đây là một mẫu (pattern / 패턴) quan trọng: khi negate một claim, ta không đoán câu “nghe đối lập”; ta lấy complement lô-gic (logic / 논리) của toàn bộ điều kiện (condition / 조건).
 
 ## 2. AND, OR, XOR và cách conditions tạo cấu trúc
 
@@ -56,7 +59,7 @@ trong toán học thường là inclusive OR: ít nhất một proposition đún
 
 XOR (exclusive OR / 배타적 논리합) chỉ đúng khi chính xác một trong hai đúng.
 
-Điểm đáng học không phải bảng truth table riêng lẻ mà là việc **compound condition có thể được xem như một object toán học**. Điều này nối trực tiếp sang Boolean algebra, circuit design, SQL predicates và program guards.
+Điểm đáng học không phải bảng truth bảng (table / 테이블) riêng lẻ mà là việc **compound điều kiện (condition / 조건) có thể được xem như một đối tượng (object / 객체) toán học**. Điều này nối trực tiếp sang Boolean algebra, circuit thiết kế (design / 설계), SQL predicates và program guards.
 
 ## 3. Implication: statement về việc counterexample không được phép tồn tại
 
@@ -85,7 +88,7 @@ Ví dụ:
 
 Muốn bác bỏ, cần tìm một số chia hết cho 4 nhưng không chẵn. Không tìm được chỉ bằng vài examples chưa phải proof, nhưng nó cho ta biết **dạng counterexample cần tìm**.
 
-Trong software requirements, “nếu user là admin thì có quyền X” không nói rằng chỉ admin mới có quyền X. Suy ngược thành “có quyền X ⇒ admin” là đổi implication thành converse mà không có cơ sở.
+Trong software requirements, “nếu người dùng (user / 사용자) là admin thì có quyền X” không nói rằng chỉ admin mới có quyền X. Suy ngược thành “có quyền X ⇒ admin” là đổi implication thành converse mà không có cơ sở.
 
 ## 4. Converse, inverse, contrapositive
 
@@ -121,7 +124,7 @@ p\Rightarrow q
 \neg q\Rightarrow\neg p.
 ```
 
-Đây không phải mẹo proof. Nó đến từ việc hai statements loại trừ cùng một bad case: `p` đúng nhưng `q` sai.
+Đây không phải mẹo proof. Nó đến từ việc hai statements loại trừ cùng một bad trường hợp (case / 사례): `p` đúng nhưng `q` sai.
 
 Ví dụ:
 
@@ -145,7 +148,7 @@ Nếu
 p\Rightarrow q,
 ```
 
-thì `p` là sufficient condition cho `q`, còn `q` là necessary condition cho `p`.
+thì `p` là sufficient điều kiện (condition / 조건) cho `q`, còn `q` là necessary điều kiện (condition / 조건) cho `p`.
 
 “Chia hết cho 4” đủ để kết luận chẵn. “Chẵn” là điều cần nếu muốn chia hết cho 4.
 
@@ -164,7 +167,7 @@ p → q
 q → p
 ```
 
-Đây là pattern thường xuyên trong set equality, invertibility, characterization theorems và equivalence of algorithm conditions.
+Đây là mẫu (pattern / 패턴) thường xuyên trong set equality, invertibility, characterization theorems và equivalence of thuật toán (algorithm / 알고리즘) conditions.
 
 ## 6. Quantifiers: nơi rất nhiều proof sai
 
@@ -218,9 +221,9 @@ và
 
 thường rất khác nhau. Statement đầu cho phép chọn `y` khác nhau cho từng `x`; statement sau đòi một `y` duy nhất hoạt động cho mọi `x`.
 
-Đây là source của nhiều nhầm lẫn trong analysis, algorithms và optimization guarantees.
+Đây là nguồn (source / 소스) của nhiều nhầm lẫn trong phân tích (analysis / 분석), algorithms và tối ưu hóa (optimization / 최적화) guarantees.
 
-## 7. De Morgan: logic của complement
+## 7. De Morgan: lô-gic (logic / 논리) của complement
 
 De Morgan cho propositions:
 
@@ -236,7 +239,7 @@ De Morgan cho propositions:
 \neg p\land\neg q.
 ```
 
-Cùng structure xuất hiện trong set theory:
+Cùng cấu trúc (structure / 구조) xuất hiện trong set lý thuyết (theory / 이론):
 
 ```math
 (A\cap B)^c=A^c\cup B^c
@@ -246,7 +249,7 @@ Cùng structure xuất hiện trong set theory:
 (A\cup B)^c=A^c\cap B^c.
 ```
 
-Và trong code:
+Và trong mã (code / 코드):
 
 ```text
 !(isAdmin && isActive)
@@ -258,11 +261,11 @@ logic-equivalent với
 !isAdmin || !isActive
 ```
 
-nhưng runtime behavior có thể khác nếu expressions có side effects hoặc short-circuit semantics phức tạp. Đây là ví dụ cho distinction giữa **logical equivalence** và **operational equivalence**.
+nhưng hành vi thời gian chạy (runtime behavior / 런타임 동작) có thể khác nếu expressions có side effects hoặc short-circuit ngữ nghĩa (semantics / 의미론) phức tạp. Đây là ví dụ cho distinction giữa **logical equivalence** và **operational equivalence**.
 
 ## 8. Proof không phải một format duy nhất
 
-Proof là chuỗi reasoning biến assumptions thành conclusion bằng các bước hợp lệ. Method được chọn theo structure của claim.
+Proof là chuỗi lập luận (reasoning / 추론) biến các giả định (assumptions / 가정들) thành conclusion bằng các bước hợp lệ. phương thức (method / 메서드) được chọn theo cấu trúc (structure / 구조) của claim.
 
 ### Direct proof
 
@@ -280,7 +283,7 @@ a+b=2(m+n),
 
 mà `m+n` là integer, nên `a+b` chẵn.
 
-Proof mạnh vì nó expose structure “even = 2×integer”, không vì nó dài.
+Proof mạnh vì nó expose cấu trúc (structure / 구조) “even = 2×integer”, không vì nó dài.
 
 ### Proof by contrapositive
 
@@ -314,11 +317,11 @@ a^2=2b^2
 
 suy ra cả `a` và `b` chẵn, mâu thuẫn với lowest terms.
 
-Contradiction proof đặc biệt hữu ích khi statement nói một object **không thể tồn tại**.
+Contradiction proof đặc biệt hữu ích khi statement nói một đối tượng (object / 객체) **không thể tồn tại**.
 
 ### Proof by cases
 
-Khi domain tự nhiên chia thành finite cases, proof từng case có thể hợp lý. Ví dụ integer hoặc chẵn hoặc lẻ.
+Khi lĩnh vực (domain / 도메인) tự nhiên chia thành finite cases, proof từng trường hợp (case / 사례) có thể hợp lý. Ví dụ integer hoặc chẵn hoặc lẻ.
 
 Điểm quan trọng là cases phải **exhaustive** và ideally disjoint để không bỏ sót trạng thái.
 
@@ -326,17 +329,17 @@ Khi domain tự nhiên chia thành finite cases, proof từng case có thể h�
 
 Có hai kiểu chính.
 
-Constructive proof đưa ra object cụ thể.
+Constructive proof đưa ra đối tượng (object / 객체) cụ thể.
 
-Non-constructive proof chứng minh object phải tồn tại mà không nhất thiết cho algorithm để tìm nó.
+Non-constructive proof chứng minh đối tượng (object / 객체) phải tồn tại mà không nhất thiết cho thuật toán (algorithm / 알고리즘) để tìm nó.
 
-Mathematics chấp nhận cả hai; computer science thường quan tâm thêm câu hỏi computational: “tồn tại” có đi kèm cách tìm hiệu quả không?
+Mathematics chấp nhận cả hai; khoa học máy tính (computer science / 컴퓨터 과학) thường quan tâm thêm câu hỏi computational: “tồn tại” có đi kèm cách tìm hiệu quả không?
 
-## 9. Mathematical induction: proof trên recursive structure
+## 9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)
 
 Quy nạp toán học (mathematical induction / 수학적 귀납법) có hai phần:
 
-1. base case;
+1. cơ sở (base / 기반) trường hợp (case / 사례);
 2. inductive step `P(k)→P(k+1)`.
 
 Ví dụ:
@@ -345,7 +348,7 @@ Ví dụ:
 1+2+\cdots+n=\frac{n(n+1)}2.
 ```
 
-Base case `n=1` đúng.
+Cơ sở (base / 기반) trường hợp (case / 사례) `n=1` đúng.
 
 Giả sử
 
@@ -363,17 +366,17 @@ Khi đó
 \frac{(k+1)(k+2)}2.
 ```
 
-Induction không nói “statement đúng cho `k` vì ta muốn thế”. Inductive hypothesis là assumption **cục bộ trong bước chứng minh implication**.
+Induction không nói “statement đúng cho `k` vì ta muốn thế”. Inductive hypothesis là giả định (assumption / 가정) **cục bộ trong bước chứng minh implication**.
 
 Strong induction cho phép giả sử statement đúng cho mọi values nhỏ hơn `n`, rất tự nhiên trong divide-and-conquer và recurrence proofs.
 
-Structural induction áp cùng idea cho trees, syntax trees, recursive data structures và formal languages.
+Structural induction áp cùng idea cho trees, cú pháp (syntax / 문법) trees, recursive dữ liệu (data / 데이터) structures và formal languages.
 
 ## 10. Invariants: proof bằng điều không đổi
 
-Invariant là property được giữ qua mỗi transformation hoặc iteration.
+Bất biến (invariant / 불변식) là thuộc tính (property / 속성) được giữ qua mỗi transformation hoặc iteration.
 
-Trong loop proof, ta thường có:
+Trong vòng lặp (loop / 루프) proof, ta thường có:
 
 ```text
 initialization
@@ -383,9 +386,9 @@ initialization
 
 Đây chính là induction trên số iteration.
 
-Trong algorithms, chọn đúng invariant thường khó hơn algebra sau đó. Ví dụ binary search giữ invariant rằng nếu target tồn tại thì nó vẫn nằm trong current interval.
+Trong algorithms, chọn đúng bất biến (invariant / 불변식) thường khó hơn algebra sau đó. Ví dụ tìm kiếm nhị phân (binary search / 이진 탐색) giữ bất biến (invariant / 불변식) rằng nếu mục tiêu (target / 대상) tồn tại thì nó vẫn nằm trong hiện tại (current / 현재) interval.
 
-Trong physics, conservation laws đóng vai trò tương tự ở level model: một quantity không đổi dưới dynamics nhất định.
+Trong physics, conservation laws đóng vai trò tương tự ở mức (level / 수준) mô hình (model / 모델): một quantity không đổi dưới dynamics nhất định.
 
 ## 11. Counterexample: công cụ mạnh nhất để phá universal claim
 
@@ -399,7 +402,7 @@ chỉ cần một `x` sao cho `P(x)` sai.
 
 Ví dụ claim “mọi prime đều lẻ” bị phá bởi `2`.
 
-Counterexample không chỉ dùng để bác bỏ. Khi tìm counterexample, ta thường học được assumption nào còn thiếu để theorem trở thành đúng.
+Counterexample không chỉ dùng để bác bỏ. Khi tìm counterexample, ta thường học được giả định (assumption / 가정) nào còn thiếu để theorem trở thành đúng.
 
 Đây là workflow rất mạnh:
 
@@ -417,36 +420,38 @@ Nó giống debugging specification trong software.
 
 Một proof tốt thường có hai layers.
 
-**Proof idea** giải thích mechanism chính: invariant nào, contradiction nào, decomposition nào, induction measure nào.
+**Proof idea** giải thích cơ chế (mechanism / 메커니즘) chính: bất biến (invariant / 불변식) nào, contradiction nào, decomposition nào, induction measure nào.
 
 **Formal proof** đảm bảo không có logical gap.
 
-Nếu chỉ có formal symbols mà không có proof idea, người học khó transfer reasoning. Nếu chỉ có intuition mà không kiểm tra details, edge case có thể bị bỏ sót.
+Nếu chỉ có formal symbols mà không có proof idea, người học khó transfer lập luận (reasoning / 추론). Nếu chỉ có intuition mà không kiểm tra details, trường hợp biên (edge case / 경계 사례) có thể bị bỏ sót.
 
-Tài liệu này ưu tiên intuition trước, nhưng formalism xuất hiện sau đó để khóa reasoning lại.
+Tài liệu này ưu tiên intuition trước, nhưng formalism xuất hiện sau đó để khóa lập luận (reasoning / 추론) lại.
 
-## 13. Proof, testing và formal verification
+## 13. Proof, testing và formal xác minh (verification / 확인)
 
-Testing kiểm tra finite examples. Một test suite tốt có thể tăng confidence rất nhiều nhưng không chứng minh universal property trên infinite input domain.
+Testing kiểm tra finite examples. Một bộ kiểm thử (test suite / 테스트 스위트) tốt có thể tăng confidence rất nhiều nhưng không chứng minh universal thuộc tính (property / 속성) trên infinite đầu vào (input / 입력) lĩnh vực (domain / 도메인).
 
-Proof có thể chứng minh property của một model hoặc algorithm, nhưng không bảo đảm implementation thực tế đúng nếu model/specification không match code.
+Proof có thể chứng minh thuộc tính (property / 속성) của một mô hình (model / 모델) hoặc thuật toán (algorithm / 알고리즘), nhưng không bảo đảm hiện thực (implementation / 구현) thực tế đúng nếu mô hình (model / 모델)/specification không match mã (code / 코드).
 
-Formal verification cố đưa specification, program semantics và proof vào một system machine-checkable. Tuy nhiên verification vẫn phụ thuộc vào correctness của specification và abstraction boundary.
+Formal xác minh (verification / 확인) cố đưa specification, program ngữ nghĩa (semantics / 의미론) và proof vào một hệ thống (system / 시스템) machine-checkable. Tuy nhiên xác minh (verification / 확인) vẫn phụ thuộc vào tính đúng đắn (correctness / 정확성) của specification và lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계).
 
-## 14. Connection với Probability và Statistics
+## 14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics
 
-Logic xử lý truth dưới assumptions; probability mở rộng sang uncertainty về events. Event operations dùng cùng AND/OR/NOT structure:
+Lô-gic (logic / 논리) xử lý truth dưới các giả định (assumptions / 가정들); xác suất (probability / 확률) mở rộng sang bất định (uncertainty / 불확실성) về events. sự kiện (event / 이벤트) operations dùng cùng AND/OR/NOT cấu trúc (structure / 구조):
 
 ```math
 P(A\cap B),\qquad P(A\cup B),\qquad P(A^c).
 ```
 
-Bayes reasoning cũng phụ thuộc vào việc condition/event được định nghĩa chính xác. Nếu events mơ hồ, công thức đúng vẫn cho answer không meaningful.
+Bayes lập luận (reasoning / 추론) cũng phụ thuộc vào việc điều kiện (condition / 조건)/sự kiện (event / 이벤트) được định nghĩa chính xác. Nếu events mơ hồ, công thức đúng vẫn cho answer không meaningful.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Logic quản lý **đường đi hợp lệ từ assumptions đến conclusions**. Proof là một chương trình reasoning: definition tạo objects, inference rules là operations, invariant/contradiction/induction là control structures, và theorem là output. Một proof tốt không chỉ đúng; nó làm lộ mechanism khiến statement buộc phải đúng.
+> lô-gic (logic / 논리) quản lý **đường đi hợp lệ từ các giả định (assumptions / 가정들) đến conclusions**. Proof là một chương trình lập luận (reasoning / 추론): definition tạo objects, suy luận (inference / 추론) rules là operations, bất biến (invariant / 불변식)/contradiction/induction là điều khiển (control / 제어) structures, và theorem là đầu ra (output / 출력). Một proof tốt không chỉ đúng; nó làm lộ cơ chế (mechanism / 메커니즘) khiến statement buộc phải đúng.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-`p→q` không cho phép suy `q→p`. Không tìm được proof của `p` không đồng nghĩa `¬p`. Nhiều examples phù hợp không thay proof cho universal claim, nhưng một counterexample hợp lệ đủ để phá claim đó. Inductive hypothesis không phải circular reasoning; nó là assumption trong proof của implication `P(k)→P(k+1)`. Formal proof không tự đảm bảo model ban đầu mô tả đúng reality.
+`p→q` không cho phép suy `q→p`. Không tìm được proof của `p` không đồng nghĩa `¬p`. Nhiều examples phù hợp không thay proof cho universal claim, nhưng một counterexample hợp lệ đủ để phá claim đó. Inductive hypothesis không phải circular lập luận (reasoning / 추론); nó là giả định (assumption / 가정) trong proof của implication `P(k)→P(k+1)`. Formal proof không tự đảm bảo mô hình (model / 모델) ban đầu mô tả đúng reality.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematical thinking](./00_mathematical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

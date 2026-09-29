@@ -1,14 +1,17 @@
-# Inner product, trực giao và phép chiếu: geometry từ một phép đo alignment
+# Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment
 
-Dot product trong `\mathbb R^n` thường được học như một công thức:
+> **Mạch đọc:** Đọc **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Inner sản phẩm (product / 제품) là generalized notion của alignment** sang **2. Norm xuất hiện từ self-alignment**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Dot sản phẩm (product / 제품) trong `\mathbb R^n` thường được học như một công thức:
 
 ```math
 u\cdot v=\sum_i u_iv_i.
 ```
 
-Nhưng ý nghĩa sâu hơn là: nó tạo ra geometry. Từ một inner product, ta có length, angle, perpendicularity, projection, orthogonal basis và least squares.
+Nhưng ý nghĩa sâu hơn là: nó tạo ra hình học (geometry / 기하학). Từ một inner sản phẩm (product / 제품), ta có length, angle, perpendicularity, projection, orthogonal basis và least squares.
 
-Vì vậy chapter này nên được đọc như một chuỗi dependency:
+Vì vậy chapter này nên được đọc như một chuỗi phụ thuộc (dependency / 의존성):
 
 ```text
 inner product
@@ -21,17 +24,17 @@ inner product
 → QR / Fourier / PCA
 ```
 
-## 1. Inner product là generalized notion của alignment
+## 1. Inner sản phẩm (product / 제품) là generalized notion của alignment
 
-Trong Euclidean space:
+Trong Euclidean không gian (space / 공간):
 
 ```math
 \langle u,v\rangle=u^Tv.
 ```
 
-Một inner product abstract cần thỏa các properties như linearity, symmetry/conjugate symmetry và positive definiteness.
+Một inner sản phẩm (product / 제품) abstract cần thỏa các properties như linearity, symmetry/conjugate symmetry và positive definiteness.
 
-Trên real vector space:
+Trên real véc-tơ (vector / 벡터) không gian (space / 공간):
 
 ```math
 \langle u,v\rangle=\langle v,u\rangle
@@ -45,7 +48,7 @@ và
 
 cho mọi `v\ne0`.
 
-Điều này cho phép định nghĩa geometry mà không phụ thuộc vào coordinate representation cụ thể.
+Điều này cho phép định nghĩa hình học (geometry / 기하학) mà không phụ thuộc vào coordinate biểu diễn (representation / 표현) cụ thể.
 
 ## 2. Norm xuất hiện từ self-alignment
 
@@ -61,7 +64,7 @@ Distance:
 d(u,v)=\|u-v\|.
 ```
 
-Pythagoras chỉ là một consequence của inner product structure.
+Pythagoras chỉ là một consequence của inner sản phẩm (product / 제품) cấu trúc (structure / 구조).
 
 Nếu
 
@@ -119,7 +122,7 @@ như một quadratic theo `t`. Discriminant không thể dương theo cách tạ
 
 Theorem này không chỉ technical; nó bảo đảm notion cosine/angle consistent.
 
-## 4. Orthogonality là independence theo geometry đang chọn
+## 4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn
 
 Hai vectors trực giao khi
 
@@ -135,7 +138,7 @@ Proof idea: nếu
 c_1v_1+\cdots+c_kv_k=0,
 ```
 
-inner product hai vế với `v_j`:
+inner sản phẩm (product / 제품) hai vế với `v_j`:
 
 ```math
 c_j\|v_j\|^2=0,
@@ -145,9 +148,9 @@ nên `c_j=0`.
 
 Orthogonality làm coefficients tách rời nhau rất mạnh.
 
-## 5. Projection là nearest-point problem
+## 5. Projection là nearest-point bài toán (problem / 문제)
 
-Muốn approximate `v` bằng vector trên line span bởi `u`:
+Muốn approximate `v` bằng véc-tơ (vector / 벡터) trên line span bởi `u`:
 
 ```math
 cu.
@@ -176,13 +179,13 @@ Do đó
 {\langle u,u\rangle}u.
 ```
 
-Nếu `u` unit length:
+Nếu `u` đơn vị (unit / 단위) length:
 
 ```math
 \operatorname{proj}_u(v)=\langle v,u\rangle u.
 ```
 
-Projection formula không phải arbitrary formula; nó là solution của **closest point in a subspace**.
+Projection formula không phải arbitrary formula; nó là solution của **closest điểm (point / 지점) in a subspace**.
 
 ## 6. Orthogonal decomposition
 
@@ -210,17 +213,17 @@ v_{\perp}=v-v_{\parallel}.
 v_{\perp}\perp U.
 ```
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 vector = explainable component + residual component
 ```
 
-Đây chính là geometry của regression.
+Đây chính là hình học (geometry / 기하학) của regression.
 
 ## 7. Projection theorem trên subspace
 
-Nếu `U` là finite-dimensional subspace trong Euclidean space, mỗi vector `v` có unique decomposition:
+Nếu `U` là finite-dimensional subspace trong Euclidean không gian (space / 공간), mỗi véc-tơ (vector / 벡터) `v` có unique decomposition:
 
 ```math
 v=u+r,
@@ -234,19 +237,19 @@ u\in U,
 r\in U^\perp.
 ```
 
-`u` là unique point trong `U` gần `v` nhất.
+`u` là unique điểm (point / 지점) trong `U` gần `v` nhất.
 
-Điều này giải thích vì sao least squares solution có residual orthogonal với column space.
+Điều này giải thích vì sao least squares solution có residual orthogonal với column không gian (space / 공간).
 
 ## 8. Least squares là projection, không phải regression trick
 
-Cho system overdetermined:
+Cho hệ thống (system / 시스템) overdetermined:
 
 ```math
 Ax\approx b.
 ```
 
-Outputs reachable bởi model nằm trong column space:
+Outputs reachable bởi mô hình (model / 모델) nằm trong column không gian (space / 공간):
 
 ```math
 \mathcal C(A).
@@ -301,9 +304,9 @@ x=
 \langle x,q_i\rangle q_i.
 ```
 
-Không cần solve general linear system.
+Không cần solve general hệ tuyến tính (linear system / 선형 시스템).
 
-Matrix `Q` với orthonormal columns thỏa:
+Ma trận (matrix / 행렬) `Q` với orthonormal columns thỏa:
 
 ```math
 Q^TQ=I.
@@ -356,9 +359,9 @@ q_i=\frac{u_i}{\|u_i\|}.
 
 ## 11. Classical Gram–Schmidt vs numerical stability
 
-Trong exact arithmetic, Gram–Schmidt đẹp.
+Trong chính xác (exact / 정확한) arithmetic, Gram–Schmidt đẹp.
 
-Trong floating point, classical Gram–Schmidt có thể mất orthogonality khi vectors gần linearly dependent.
+Trong floating điểm (point / 지점), classical Gram–Schmidt có thể mất orthogonality khi vectors gần linearly dependent.
 
 Modified Gram–Schmidt hoặc Householder QR thường numerically stable hơn.
 
@@ -369,9 +372,9 @@ mathematically equivalent
 ≠ numerically equivalent
 ```
 
-## 12. Inner product không nhất thiết là ordinary dot product
+## 12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)
 
-Ta có thể define weighted inner product:
+Ta có thể define weighted inner sản phẩm (product / 제품):
 
 ```math
 \langle x,y\rangle_M=x^TMy
@@ -379,7 +382,7 @@ Ta có thể define weighted inner product:
 
 với `M` symmetric positive definite.
 
-Khi đó geometry thay đổi: angle, norm và “nearest” đều phụ thuộc `M`.
+Khi đó hình học (geometry / 기하학) thay đổi: angle, norm và “nearest” đều phụ thuộc `M`.
 
 Mahalanobis distance trong statistics:
 
@@ -388,9 +391,9 @@ d(x,\mu)^2
 =(x-\mu)^T\Sigma^{-1}(x-\mu)
 ```
 
-là Euclidean-like geometry sau khi account covariance scaling.
+là Euclidean-like hình học (geometry / 기하학) sau khi account covariance scaling.
 
-## 13. Function spaces cũng có inner product
+## 13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)
 
 Ví dụ:
 
@@ -400,7 +403,7 @@ Ví dụ:
 \int_a^b f(x)g(x)\,dx.
 ```
 
-Functions orthogonal nếu integral product bằng zero.
+Functions orthogonal nếu integral sản phẩm (product / 제품) bằng zero.
 
 Sine/cosine functions ở appropriate frequencies tạo orthogonal family.
 
@@ -412,7 +415,7 @@ signal
 → coefficients
 ```
 
-Fourier analysis vì vậy là linear algebra trong infinite-dimensional function space.
+Fourier phân tích (analysis / 분석) vì vậy là tuyến tính (linear / 선형) algebra trong infinite-dimensional hàm (function / 함수) không gian (space / 공간).
 
 ## 14. Cosine similarity và embeddings
 
@@ -426,11 +429,11 @@ Cosine similarity:
 
 Nó bỏ magnitude và đo directional alignment.
 
-Trong embedding space, interpretation phụ thuộc model training geometry. High cosine similarity không universal đồng nghĩa “semantically same”; nó chỉ nói representation vectors align theo metric được chọn.
+Trong embedding không gian (space / 공간), interpretation phụ thuộc mô hình (model / 모델) huấn luyện (training / 학습) hình học (geometry / 기하학). High cosine similarity không universal đồng nghĩa “semantically same”; nó chỉ nói biểu diễn (representation / 표현) vectors align theo chỉ số (metric / 지표) được chọn.
 
-## 15. Projection matrix
+## 15. Projection ma trận (matrix / 행렬)
 
-Nếu columns của `Q` orthonormal span subspace `U`, projection matrix là
+Nếu columns của `Q` orthonormal span subspace `U`, projection ma trận (matrix / 행렬) là
 
 ```math
 P=QQ^T.
@@ -450,7 +453,7 @@ P^T=P
 
 (symmetric).
 
-`P^2=P` có meaning: project lần hai không thay gì thêm.
+`P^2=P` có meaning: dự án (project / 프로젝트) lần hai không thay gì thêm.
 
 Nếu `A` full column rank nhưng columns chưa orthonormal:
 
@@ -458,9 +461,9 @@ Nếu `A` full column rank nhưng columns chưa orthonormal:
 P=A(A^TA)^{-1}A^T.
 ```
 
-Trong implementation, thường không form expression này explicit nếu numerical stability quan trọng.
+Trong hiện thực (implementation / 구현), thường không form expression này tường minh (explicit / 명시적) nếu numerical stability quan trọng.
 
-## 16. Pythagorean energy decomposition
+## 16. Pythagorean năng lượng (energy / 에너지) decomposition
 
 Nếu
 
@@ -481,34 +484,34 @@ Trong regression:
 signal explained by model + residual
 ```
 
-có geometric decomposition liên quan sum of squares dưới assumptions/setup phù hợp.
+có geometric decomposition liên quan sum of squares dưới các giả định (assumptions / 가정들)/setup phù hợp.
 
-Trong signal processing, orthogonal basis cũng cho energy decomposition.
+Trong tín hiệu (signal / 신호) processing, orthogonal basis cũng cho năng lượng (energy / 에너지) decomposition.
 
-## 17. PCA connection
+## 17. PCA liên kết (connection / 연결)
 
 PCA tìm directions orthonormal sao cho projected variance lớn nhất sequentially.
 
-First principal component solve conceptually:
+First principal thành phần (component / 컴포넌트) solve conceptually:
 
 ```math
 \max_{\|u\|=1}
 \operatorname{Var}(Xu).
 ```
 
-Projection lên low-dimensional principal subspace giữ lại nhiều squared energy/variance nhất theo criterion PCA.
+Projection lên low-dimensional principal subspace giữ lại nhiều squared năng lượng (energy / 에너지)/variance nhất theo criterion PCA.
 
-Orthogonality làm selected directions không redundant theo Euclidean geometry.
+Orthogonality làm selected directions không redundant theo Euclidean hình học (geometry / 기하학).
 
-## 18. Physics connection
+## 18. Physics liên kết (connection / 연결)
 
-Work:
+Công việc (work / 작업):
 
 ```math
 W=F\cdot d
 ```
 
-chỉ component của force theo displacement đóng góp.
+chỉ thành phần (component / 컴포넌트) của force theo displacement đóng góp.
 
 Projection giải thích trực tiếp:
 
@@ -516,7 +519,7 @@ Projection giải thích trực tiếp:
 force perpendicular to motion → zero work contribution
 ```
 
-Inner product là “alignment multiplier”.
+Inner sản phẩm (product / 제품) là “alignment multiplier”.
 
 ## 19. Proof idea: best projection vì residual orthogonal
 
@@ -538,19 +541,19 @@ Hai terms orthogonal, nên Pythagoras:
 
 Equality chỉ khi `u=p`.
 
-Đây là proof hình học rằng projection là nearest point.
+Đây là proof hình học rằng projection là nearest điểm (point / 지점).
 
-## 20. Assumptions và metric choice
+## 20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice
 
-Projection phụ thuộc inner product.
+Projection phụ thuộc inner sản phẩm (product / 제품).
 
-Nếu feature scales khác nhau mạnh, ordinary Euclidean inner product có thể tạo geometry không phù hợp.
+Nếu tính năng (feature / 기능) scales khác nhau mạnh, ordinary Euclidean inner sản phẩm (product / 제품) có thể tạo hình học (geometry / 기하학) không phù hợp.
 
-Standardization, whitening hoặc weighted metrics không chỉ preprocessing cosmetic; chúng thay notion length, angle và nearest point.
+Standardization, whitening hoặc weighted metrics không chỉ preprocessing cosmetic; chúng thay notion length, angle và nearest điểm (point / 지점).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Inner product nối:
+Inner sản phẩm (product / 제품) nối:
 
 ```text
 Pythagoras
@@ -565,10 +568,12 @@ Pythagoras
 → weighted statistical geometry
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Inner product là **máy đo alignment**. Orthogonality nghĩa “không share component” theo geometry đã chọn. Projection là **best approximation trong một subspace**. Least squares, Fourier coefficients, PCA và nhiều regression methods đều là các phiên bản của cùng một câu hỏi: phần nào của object nằm trong space ta có thể represent?
+> Inner sản phẩm (product / 제품) là **máy đo alignment**. Orthogonality nghĩa “không share thành phần (component / 컴포넌트)” theo hình học (geometry / 기하학) đã chọn. Projection là **best approximation trong một subspace**. Least squares, Fourier coefficients, PCA và nhiều regression methods đều là các phiên bản của cùng một câu hỏi: phần nào của đối tượng (object / 객체) nằm trong không gian (space / 공간) ta có thể represent?
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Orthogonality phụ thuộc inner product, không phải một notion tuyệt đối trong mọi geometry. Zero vector orthogonal với mọi vector nhưng không thể normalize. Normal equations đúng về lý thuyết nhưng có thể kém ổn định hơn QR/SVD. Cosine similarity bỏ magnitude nhưng không xóa mọi bias của representation. Gram–Schmidt trong exact math và floating-point implementation không có cùng numerical behavior.
+Orthogonality phụ thuộc inner sản phẩm (product / 제품), không phải một notion tuyệt đối trong mọi hình học (geometry / 기하학). Zero véc-tơ (vector / 벡터) orthogonal với mọi véc-tơ (vector / 벡터) nhưng không thể normalize. Normal equations đúng về lý thuyết nhưng có thể kém ổn định hơn QR/SVD. Cosine similarity bỏ magnitude nhưng không xóa mọi độ lệch (bias / 편향) của biểu diễn (representation / 표현). Gram–Schmidt trong chính xác (exact / 정확한) math và floating-point hiện thực (implementation / 구현) không có cùng numerical hành vi (behavior / 동작).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

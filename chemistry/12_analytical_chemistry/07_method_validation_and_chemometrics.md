@@ -1,5 +1,8 @@
 # Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy
 
+> **Mạch đọc:** Đọc **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thử nghiệm nhiễu** sang **Độ lặp lại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Thẩm định phương pháp (method validation / 분석법 검증)** trả lời câu hỏi: một phương pháp đo có thực sự phù hợp với mục đích sử dụng đã định hay không? **Chemometrics (hóa lượng học / 화학계량학)** sử dụng thống kê, đại số tuyến tính và mô hình tính toán để trích xuất thông tin hóa học từ dữ liệu nhiều chiều. Hai lĩnh vực gặp nhau ở một điểm chung: không chỉ tạo ra con số, mà phải chứng minh con số đó có ý nghĩa trong điều kiện thực tế.
 
 Một phương pháp có thể cho đường chuẩn đẹp nhưng vẫn không phù hợp nếu mẫu thật có hiệu ứng nền mạnh. Một mô hình máy học có thể có sai số trung bình thấp nhưng thất bại ở vùng nồng độ hoặc loại mẫu quan trọng. Vì vậy thẩm định không phải bước thủ tục ở cuối; nó là quá trình kiểm tra có hệ thống các giả định của toàn chuỗi đo.
@@ -85,13 +88,13 @@ Vì vậy cần xem phần dư, không chỉ nhìn \(R^2\).
 Độ chệch có thể viết:
 
 \[
-bias=\bar{x}-x_{ref}
+độ lệch (bias / 편향)=\bar{x}-x_{ref}
 \]
 
 hoặc ở dạng tương đối:
 
 \[
-relative\ bias=\frac{\bar{x}-x_{ref}}{x_{ref}}\times100\%
+relative\ độ lệch (bias / 편향)=\frac{\bar{x}-x_{ref}}{x_{ref}}\times100\%
 \]
 
 Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương pháp “đúng” chỉ dựa trên độ lặp lại là không hợp lệ.
@@ -99,6 +102,9 @@ Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương 
 # Độ chụm có nhiều tầng
 
 Độ chụm không phải một con số duy nhất.
+
+
+> **Chuyển mạch:** Từ **Thử nghiệm nhiễu**, ta sang **Độ lặp lại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Độ lặp lại
 
@@ -109,9 +115,15 @@ Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương 
 - khoảng thời gian ngắn;
 - cùng phòng thí nghiệm.
 
+
+> **Chuyển mạch:** Từ **Độ lặp lại**, ta sang **Độ chụm trung gian** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Độ chụm trung gian
 
 **Độ chụm trung gian (intermediate precision)** mở rộng sang khác ngày, khác người, khác lô thuốc thử hoặc đôi khi khác thiết bị trong cùng phòng thí nghiệm.
+
+
+> **Chuyển mạch:** Từ **Độ chụm trung gian**, ta sang **Độ tái lập** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Độ tái lập
 
@@ -177,7 +189,7 @@ Trong LC–MS, chất đồng rửa giải có thể ức chế hoặc tăng ion
 Một cách định lượng đơn giản:
 
 \[
-ME=\frac{slope_{matrix}}{slope_{solvent}}
+ME=\frac{slope_{ma trận (matrix / 행렬)}}{slope_{solvent}}
 \]
 
 Nếu tỉ số khác đáng kể 1, hiệu chuẩn trong dung môi tinh khiết có thể không đại diện cho mẫu thật.
@@ -229,14 +241,14 @@ Ví dụ nếu cần phân biệt 9,5 mg/L với giới hạn 10 mg/L, độ kh�
 Kết quả nên được hiểu dưới dạng:
 
 \[
-result\pm uncertainty
+kết quả (result / 결과)\pm bất định (uncertainty / 불확실성)
 \]
 
 và tiêu chí chấp nhận phải phản ánh hậu quả của quyết định sai.
 
 # Chemometrics — khi một tín hiệu trở thành ma trận dữ liệu
 
-Nhiều kỹ thuật hiện đại không cho một số đơn lẻ mà cho vector hoặc ma trận:
+Nhiều kỹ thuật hiện đại không cho một số đơn lẻ mà cho véc-tơ (vector / 벡터) hoặc ma trận:
 
 - phổ UV–Vis theo bước sóng;
 - phổ IR/Raman;
@@ -315,7 +327,7 @@ Nó hữu ích khi:
 - các biến tương quan mạnh;
 - muốn định lượng từ toàn phổ thay vì một bước sóng.
 
-Tuy nhiên PLS vẫn có thể overfit. Số thành phần phải được chọn bằng xác nhận chéo hoặc tập validation độc lập.
+Tuy nhiên PLS vẫn có thể overfit. Số thành phần phải được chọn bằng xác nhận chéo hoặc tập kiểm tra hợp lệ (validation / 검증) độc lập.
 
 # Phân loại
 
@@ -335,13 +347,13 @@ Nhưng mục tiêu phân loại không làm biến mất yêu cầu hóa học. 
 
 Ví dụ:
 
-1. chuẩn hóa toàn bộ dữ liệu trước khi chia train/test;
+1. chuẩn hóa toàn bộ dữ liệu trước khi chia train/kiểm thử (test / 테스트);
 2. chọn biến bằng toàn bộ dữ liệu rồi mới đánh giá;
-3. cùng một mẫu kỹ thuật xuất hiện ở cả train và test.
+3. cùng một mẫu kỹ thuật xuất hiện ở cả train và kiểm thử (test / 테스트).
 
 Kết quả đánh giá khi đó quá lạc quan.
 
-Mọi bước học từ dữ liệu — scaling, chọn biến, PCA, imputation — phải được fit chỉ trên tập huấn luyện trong từng vòng validation.
+Mọi bước học từ dữ liệu — scaling, chọn biến, PCA, imputation — phải được fit chỉ trên tập huấn luyện trong từng vòng kiểm tra hợp lệ (validation / 검증).
 
 # Xác nhận chéo
 
@@ -349,9 +361,9 @@ Mọi bước học từ dữ liệu — scaling, chọn biến, PCA, imputation
 
 Nhưng cách chia phải phản ánh ứng dụng thật.
 
-Nếu nhiều phổ đến từ cùng một mẫu vật lý, không nên tách các phổ lặp của cùng mẫu vào cả train và validation vì mô hình gần như đã nhìn thấy mẫu đó.
+Nếu nhiều phổ đến từ cùng một mẫu vật lý, không nên tách các phổ lặp của cùng mẫu vào cả train và kiểm tra hợp lệ (validation / 검증) vì mô hình gần như đã nhìn thấy mẫu đó.
 
-Trong dữ liệu theo batch, có thể cần block cross-validation theo ngày, lô hoặc thiết bị.
+Trong dữ liệu theo batch, có thể cần khối (block / 블록) cross-validation theo ngày, lô hoặc thiết bị.
 
 # Tập kiểm tra độc lập
 
@@ -377,7 +389,7 @@ RMSE nhấn mạnh sai số lớn do bình phương phần dư.
 Có thể bổ sung:
 
 - MAE;
-- bias;
+- độ lệch (bias / 편향);
 - \(R^2\);
 - phần dư theo nồng độ;
 - sai số theo từng lớp mẫu.
@@ -431,7 +443,7 @@ Do đó cần kết hợp:
 - hiểu cơ chế phổ;
 - thiết kế thí nghiệm;
 - kiểm soát nhiễu;
-- validation độc lập;
+- kiểm tra hợp lệ (validation / 검증) độc lập;
 - kiểm tra độ bền theo thời gian.
 
 # Theo dõi mô hình sau triển khai
@@ -468,11 +480,11 @@ xác định mục đích
 → giám sát sau triển khai
 ```
 
-Không nhất thiết mọi phương pháp đều dùng mọi bước ở cùng độ sâu, nhưng logic phải luôn quay lại câu hỏi: **bằng chứng hiện có có đủ để tin kết quả trong điều kiện sử dụng thật hay không?**
+Không nhất thiết mọi phương pháp đều dùng mọi bước ở cùng độ sâu, nhưng lô-gic (logic / 논리) phải luôn quay lại câu hỏi: **bằng chứng hiện có có đủ để tin kết quả trong điều kiện sử dụng thật hay không?**
 
 # Những hiểu lầm thường gặp
 
-### “Validation là chạy đường chuẩn rồi xem \(R^2\)”
+### “kiểm tra hợp lệ (validation / 검증) là chạy đường chuẩn rồi xem \(R^2\)”
 
 Không. Đường chuẩn chỉ kiểm tra một phần rất nhỏ của toàn phương pháp.
 
@@ -497,3 +509,5 @@ Không. Mô hình thống kê chỉ đáng tin trong miền dữ liệu và gi�
 Thẩm định phương pháp là **kiểm thử hợp đồng giữa phép đo và mục đích sử dụng**. Chemometrics là **cách nén và mô hình hóa dữ liệu hóa học nhiều chiều**, nhưng mọi mô hình cuối cùng vẫn phải được neo vào mẫu thật, cơ chế đo, kiểm soát chất lượng và độ không đảm bảo.
 
 Xem thêm: [Đo lường và lấy mẫu](./00_measurement_and_sampling.md), [Quang phổ](./03_spectroscopy.md), [Sắc ký](./04_chromatography.md), [Khối phổ](./05_mass_spectrometry.md) và [Sai số, độ không đảm bảo và phân tích dữ liệu](../17_laboratory/05_error_uncertainty_and_data_analysis.md).
+
+> **Bàn giao:** Sau **“Mô hình máy học có thể thay thế hiểu biết hóa học”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

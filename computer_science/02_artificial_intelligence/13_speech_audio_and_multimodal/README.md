@@ -1,6 +1,9 @@
 # Speech, Audio and Multimodal AI — Reading Map
 
-Folder này nối perception ngoài text vào AI system: waveform/audio representation → ASR/TTS → multimodal alignment → Vision-Language Models → multimodal Transformer → multimodal agents.
+> **Mạch đọc:** Đọc **Speech, Audio and Multimodal AI — Reading Map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **cốt lõi (core / 핵심) distinctions**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này nối perception ngoài văn bản (text / 텍스트) vào AI hệ thống (system / 시스템): waveform/audio biểu diễn (representation / 표현) → ASR/TTS → multimodal alignment → Vision-Language các mô hình (models / 모델들) → multimodal Transformer → multimodal agents.
 
 ```mermaid
 flowchart TD
@@ -27,7 +30,10 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [05 — Multimodal Transformers](./05_multimodal_transformers.md)
 - [06 — Multimodal Agents](./06_multimodal_agents.md)
 
-## Core distinctions
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) distinctions
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
@@ -43,7 +49,10 @@ Visual Text ≠ Trusted Instruction
 Multimodal Agent ≠ VLM With Click Tool Only
 ```
 
-## Mental Model
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -56,7 +65,10 @@ Physical signals / visual scenes
 → tool/action/output
 ```
 
-The library treats multimodal AI as an interface problem between heterogeneous measurement spaces, not as a buzzword layer over an LLM.
+The thư viện (library / 라이브러리) treats multimodal AI as an giao diện (interface / 인터페이스) bài toán (problem / 문제) between heterogeneous đo lường (measurement / 측정) spaces, not as a buzzword tầng (layer / 계층) over an LLM.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Connections** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Connections
 

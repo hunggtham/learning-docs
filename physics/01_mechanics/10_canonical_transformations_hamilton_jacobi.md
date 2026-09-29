@@ -1,5 +1,8 @@
 # Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi
 
+> **Mạch đọc:** Đọc **Cơ học Hamilton nâng cao: ngoặc Poisson, biến đổi chính tắc và Hamilton–Jacobi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cơ học Hamilton còn đi xa hơn hai phương trình Hamilton?** sang **Ngoặc Poisson: ngôn ngữ của biến thiên trong không gian pha**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao cơ học Hamilton còn đi xa hơn hai phương trình Hamilton?
 
 Khi mới học cơ học Hamilton (Hamiltonian mechanics / 해밀턴 역학), ta thường bắt đầu với
@@ -102,7 +105,7 @@ K=H+\frac{\partial F_2}{\partial t}.
 
 Thay vì phải đoán độc lập cả `Q(q,p)` và `P(q,p)`, ta tìm một hàm vô hướng có các đạo hàm sinh ra phép đổi biến phù hợp.
 
-Trong thực tế, hàm sinh giúp xây biến gắn với đại lượng bảo toàn, mode chuẩn hoặc tọa độ action–angle.
+Trong thực tế, hàm sinh giúp xây biến gắn với đại lượng bảo toàn, chế độ (mode / 모드) chuẩn hoặc tọa độ hành động (action / 동작)–angle.
 
 ## Phương trình Hamilton–Jacobi
 
@@ -137,9 +140,9 @@ Trong xấp xỉ bán cổ điển, hàm sóng thường được viết dưới
 
 Điều này cho thấy quỹ đạo cổ điển có thể xuất hiện từ cấu trúc pha của trạng thái lượng tử trong giới hạn thích hợp.
 
-## Biến action–angle
+## Biến hành động (action / 동작)–angle
 
-Với hệ tích phân được (integrable) có chuyển động liên kết và tuần hoàn, ta có thể định nghĩa biến action
+Với hệ tích phân được (integrable) có chuyển động liên kết và tuần hoàn, ta có thể định nghĩa biến hành động (action / 동작)
 
 ```math
 J_i=\frac{1}{2\pi}\oint p_i\,dq_i.
@@ -163,13 +166,13 @@ Một quỹ đạo phức tạp trong không gian cấu hình có thể trở th
 
 ## Liên hệ với lượng tử hóa bán cổ điển
 
-Các biến action cũng xuất hiện trong lượng tử hóa bán cổ điển. Trước cơ học lượng tử hiện đại, điều kiện Bohr–Sommerfeld có dạng gần
+Các biến hành động (action / 동작) cũng xuất hiện trong lượng tử hóa bán cổ điển. Trước cơ học lượng tử hiện đại, điều kiện Bohr–Sommerfeld có dạng gần
 
 ```math
 \oint p\,dq\approx nh.
 ```
 
-Dù không phải lý thuyết lượng tử hoàn chỉnh, nó cho thấy action trong không gian pha có liên hệ tự nhiên với thang lượng tử `h`.
+Dù không phải lý thuyết lượng tử hoàn chỉnh, nó cho thấy hành động (action / 동작) trong không gian pha có liên hệ tự nhiên với thang lượng tử `h`.
 
 ## Định lý Liouville
 
@@ -179,7 +182,7 @@ Dòng Hamilton bảo toàn thể tích trong không gian pha. Nếu một tập 
 
 Hệ quả quan trọng là ma sát thực không thể được mô tả như một hệ Hamilton kín đơn giản chỉ bằng các bậc tự do đang quan sát. Ma sát làm thể tích hiệu dụng trong không gian pha co lại. Muốn có mô tả Hamilton đầy đủ, phải mở rộng hệ để bao gồm môi trường nhận năng lượng.
 
-## Ví dụ: dao động tử điều hòa trong biến action–angle
+## Ví dụ: dao động tử điều hòa trong biến hành động (action / 동작)–angle
 
 Xét
 
@@ -187,7 +190,7 @@ Xét
 H=\frac{p^2}{2m}+\frac12m\omega^2q^2.
 ```
 
-Quỹ đạo trong không gian pha là một ellipse. Action bằng diện tích ellipse chia `2\pi`:
+Quỹ đạo trong không gian pha là một ellipse. hành động (action / 동작) bằng diện tích ellipse chia `2\pi`:
 
 ```math
 J=\frac{E}{\omega}.
@@ -205,7 +208,7 @@ và
 \dot\theta=\frac{\partial H}{\partial J}=\omega.
 ```
 
-Trong biến `(J,\theta)`, dao động tử không còn được mô tả như một vật đi qua đi lại mà như một góc quay đều với action không đổi.
+Trong biến `(J,\theta)`, dao động tử không còn được mô tả như một vật đi qua đi lại mà như một góc quay đều với hành động (action / 동작) không đổi.
 
 ## Khi nào formalism này đáng dùng?
 
@@ -213,7 +216,7 @@ Nếu bài toán chỉ là rơi tự do, ngôn ngữ Newton thường ngắn và
 
 Formalism nâng cao trở nên hữu ích khi bài toán có đối xứng, nhiều bậc tự do, nhiễu loạn nhỏ, chuyển động tuần hoàn, ensemble thống kê hoặc cần cầu nối sang cơ học lượng tử.
 
-Với hệ không tích phân được, tọa độ action–angle toàn cục có thể không tồn tại. Khi nhiễu loạn phá tính tích phân được, một số torus bất biến có thể sống sót còn một số bị phá. Đây là cửa ngõ sang lý thuyết KAM và hỗn loạn.
+Với hệ không tích phân được, tọa độ hành động (action / 동작)–angle toàn cục có thể không tồn tại. Khi nhiễu loạn phá tính tích phân được, một số torus bất biến có thể sống sót còn một số bị phá. Đây là cửa ngõ sang lý thuyết KAM và hỗn loạn.
 
 ## Giới hạn và giả định
 
@@ -221,7 +224,7 @@ Cơ học Hamilton cổ điển giả sử ta có thể mô tả hệ bằng cá
 
 Hamiltonian cũng không phải lúc nào đồng nhất đơn giản với “tổng động năng cộng thế năng”. Định nghĩa chính xác của nó đến từ biến đổi Legendre của Lagrangian và vai trò phần tử sinh của tiến hóa thời gian.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Cơ học Hamilton xem chuyển động như một dòng có cấu trúc hình học trong không gian pha. Biến đổi chính tắc là cách thay “hệ tọa độ của động lực học” mà vẫn giữ cấu trúc đó. Hamilton–Jacobi tìm cách chọn biến sao cho dòng càng đơn giản càng tốt.
 
@@ -250,8 +253,10 @@ Không. Nó đồng thời tổ chức lại tọa độ và động lượng sa
 
 Không. Tìm nghiệm đầy đủ của phương trình Hamilton–Jacobi có thể khó ngang bài toán ban đầu. Giá trị chính của formalism là bộc lộ cấu trúc, đối xứng và tạo nền cho các phương pháp xấp xỉ.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học giải tích](08_analytical_mechanics.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Động lực học phi tuyến và hỗn loạn](09_nonlinear_dynamics_chaos.md), [Ensemble thống kê](../04_thermal_statistical/03_ensembles_partition_functions.md), [Đối xứng và tích phân đường lượng tử](../08_quantum/07_symmetry_operator_path_integral.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

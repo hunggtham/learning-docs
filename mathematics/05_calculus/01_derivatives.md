@@ -1,8 +1,11 @@
-# Đạo hàm: local change, sensitivity và linear approximation
+# Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation
 
-Đạo hàm (derivative / 미분계수, 도함수) không nên được học như một bảng công thức differentiation. Nó xuất hiện vì ta cần mô tả **tốc độ thay đổi tại một trạng thái cụ thể**, trong khi phép chia hữu hạn chỉ cho average change trên một interval.
+> **Mạch đọc:** Đọc **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ba cách nhìn cần giữ cùng lúc** sang **Derive x^2 từ nguyên lý nền tảng (first principles / 제일 원리)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Nếu position của một object là `s(t)`, average velocity từ `t` đến `t+h` là
+
+Đạo hàm (derivative / 미분계수, 도함수) không nên được học như một bảng công thức differentiation. Nó xuất hiện vì ta cần mô tả **tốc độ thay đổi tại một trạng thái cụ thể**, trong khi phép chia hữu hạn chỉ cho average thay đổi (change / 변경) trên một interval.
+
+Nếu position của một đối tượng (object / 객체) là `s(t)`, average velocity từ `t` đến `t+h` là
 
 ```math
 \frac{s(t+h)-s(t)}{h}.
@@ -14,17 +17,17 @@ Nhưng câu hỏi vật lý “velocity ngay tại thời điểm `t` là bao nh
 s'(t)=\lim_{h\to0}\frac{s(t+h)-s(t)}{h}.
 ```
 
-Ta không chia cho zero. Ta nghiên cứu behavior của average rate khi interval trở nên arbitrarily small.
+Ta không chia cho zero. Ta nghiên cứu hành vi (behavior / 동작) của average tỷ lệ (rate / 비율) khi interval trở nên arbitrarily small.
 
 ## Ba cách nhìn cần giữ cùng lúc
 
-Derivative có ba interpretation tương đương nhưng hữu ích trong các context khác nhau.
+Derivative có ba interpretation tương đương nhưng hữu ích trong các ngữ cảnh (context / 맥락) khác nhau.
 
 **Slope viewpoint:** derivative là slope của tangent line.
 
-**Rate viewpoint:** derivative là output change trên một unit input change, ở local scale.
+**tỷ lệ (rate / 비율) viewpoint:** derivative là đầu ra (output / 출력) thay đổi (change / 변경) trên một đơn vị (unit / 단위) đầu vào (input / 입력) thay đổi (change / 변경), ở cục bộ (local / 로컬) quy mô (scale / 규모).
 
-**Linearization viewpoint:** derivative là coefficient của best first-order linear approximation:
+**Linearization viewpoint:** derivative là coefficient của best first-order tuyến tính (linear / 선형) approximation:
 
 ```math
 f(x+\Delta x)
@@ -32,9 +35,9 @@ f(x+\Delta x)
 f(x)+f'(x)\Delta x.
 ```
 
-Cách nhìn thứ ba là sâu nhất để nối sang multivariable calculus, optimization, numerical methods và machine learning.
+Cách nhìn thứ ba là sâu nhất để nối sang multivariable calculus, tối ưu hóa (optimization / 최적화), numerical methods và machine học tập (learning / 학습).
 
-## Derive `x^2` từ first principles
+## Derive `x^2` từ nguyên lý nền tảng (first principles / 제일 원리)
 
 Với
 
@@ -64,9 +67,9 @@ Trong quá trình limit, `h\neq0`, nên có thể factor/cancel:
 \lim_{h\to0}(2x+h)=2x.
 ```
 
-Formula `2x` không phải magic rule. Nó nói parabola có local slope tăng tuyến tính theo position.
+Formula `2x` không phải magic quy tắc (rule / 규칙). Nó nói parabola có cục bộ (local / 로컬) slope tăng tuyến tính theo position.
 
-## Vì sao power rule có dạng `nx^{n-1}`?
+## Vì sao power quy tắc (rule / 규칙) có dạng `nx^{n-1}`?
 
 Với positive integer `n`, binomial expansion cho
 
@@ -90,17 +93,17 @@ Khi `h\to0`, các higher-order terms vanish, còn lại
 \frac{d}{dx}x^n=nx^{n-1}.
 ```
 
-Đây cũng preview một idea lớn: derivative giữ lại **first-order term** và bỏ những effects nhỏ hơn theo order của `h`.
+Đây cũng preview một idea lớn: derivative giữ lại **first-order term** và bỏ những effects nhỏ hơn theo thứ tự (order / 순서) của `h`.
 
-## Units: derivative luôn là một rate
+## Units: derivative luôn là một tỷ lệ (rate / 비율)
 
-Nếu distance đo bằng meters và time bằng seconds:
+Nếu distance đo bằng meters và thời gian (time / 시간) bằng seconds:
 
 ```math
 \frac{ds}{dt}
 ```
 
-có unit m/s.
+có đơn vị (unit / 단위) m/s.
 
 Nếu revenue `R(q)` đo bằng dollars và quantity `q` là units sold:
 
@@ -108,11 +111,11 @@ Nếu revenue `R(q)` đo bằng dollars và quantity `q` là units sold:
 R'(q)
 ```
 
-có unit dollars per additional unit quanh current operating point.
+có đơn vị (unit / 단위) dollars per additional đơn vị (unit / 단위) quanh hiện tại (current / 현재) operating điểm (point / 지점).
 
-Units là sanity check mạnh. Nếu derivative có unit vô lý, model hoặc manipulation có thể sai.
+Units là sanity check mạnh. Nếu derivative có đơn vị (unit / 단위) vô lý, mô hình (model / 모델) hoặc manipulation có thể sai.
 
-## Product rule: khi hai factors cùng thay đổi
+## Sản phẩm (product / 제품) quy tắc (rule / 규칙): khi hai factors cùng thay đổi
 
 Cho
 
@@ -127,15 +130,15 @@ Nếu cả hai thay đổi một chút:
 =u\Delta v+v\Delta u+\Delta u\Delta v.
 ```
 
-Chia cho `\Delta x`. Trong limit, term cuối là second order và vanish dưới smoothness phù hợp. Ta nhận
+Chia cho `\Delta x`. Trong limit, term cuối là second thứ tự (order / 순서) và vanish dưới smoothness phù hợp. Ta nhận
 
 ```math
 (uv)'=u'v+uv'.
 ```
 
-Meaning: total first-order change là contribution từ `u` thay đổi khi `v` tạm fixed, cộng contribution từ `v` thay đổi khi `u` tạm fixed.
+Meaning: total first-order thay đổi (change / 변경) là contribution từ `u` thay đổi khi `v` tạm fixed, cộng contribution từ `v` thay đổi khi `u` tạm fixed.
 
-## Chain rule: sensitivity đi qua một pipeline
+## Chuỗi (chain / 사슬) quy tắc (rule / 규칙): sensitivity đi qua một chuỗi xử lý (pipeline / 파이프라인)
 
 Nếu
 
@@ -159,11 +162,11 @@ Interpretation bằng units rất tự nhiên:
 output per g-unit × g-unit per x-unit = output per x-unit.
 ```
 
-Nếu temperature ảnh hưởng pressure, pressure ảnh hưởng sensor voltage, chain rule đo sensitivity của voltage đối với temperature bằng cách multiply local sensitivities qua pipeline.
+Nếu temperature ảnh hưởng pressure, pressure ảnh hưởng sensor voltage, chuỗi (chain / 사슬) quy tắc (rule / 규칙) đo sensitivity của voltage đối với temperature bằng cách multiply cục bộ (local / 로컬) sensitivities qua chuỗi xử lý (pipeline / 파이프라인).
 
-Backpropagation trong neural networks chính là chain rule được tổ chức efficient trên computational graph.
+Backpropagation trong neural networks chính là chuỗi (chain / 사슬) quy tắc (rule / 규칙) được tổ chức efficient trên computational đồ thị (graph / 그래프).
 
-## Worked example — sensitivity qua một composed model
+## Worked example — sensitivity qua một composed mô hình (model / 모델)
 
 Giả sử
 
@@ -203,23 +206,23 @@ Tại `x=2`:
 y'(2)=\frac45.
 ```
 
-Nếu `x` tăng khoảng `0.01`, output tăng xấp xỉ
+Nếu `x` tăng khoảng `0.01`, đầu ra (output / 출력) tăng xấp xỉ
 
 ```math
 \Delta y\approx \frac45\cdot0.01=0.008.
 ```
 
-Derivative đã trở thành local prediction tool.
+Derivative đã trở thành cục bộ (local / 로컬) prediction công cụ (tool / 도구).
 
-## Exponential và logarithm: những derivatives có structure đặc biệt
+## Exponential và logarithm: những derivatives có cấu trúc (structure / 구조) đặc biệt
 
-Function `e^x` thỏa
+Hàm (function / 함수) `e^x` thỏa
 
 ```math
 \frac{d}{dx}e^x=e^x.
 ```
 
-Nó là eigenfunction của differentiation operator: derivative không đổi shape, chỉ scale factor bằng 1. Đây là lý do exponential xuất hiện tự nhiên trong systems nơi growth rate proportional current state.
+Nó là eigenfunction của differentiation operator: derivative không đổi shape, chỉ quy mô (scale / 규모) factor bằng 1. Đây là lý do exponential xuất hiện tự nhiên trong các hệ thống (systems / 시스템들) nơi growth tỷ lệ (rate / 비율) proportional trạng thái hiện tại (current state / 현재 상태).
 
 Logarithm có
 
@@ -227,7 +230,7 @@ Logarithm có
 \frac{d}{dx}\ln x=\frac1x,
 ```
 
-nên equal relative changes có structure đơn giản trong log coordinates.
+nên equal relative changes có cấu trúc (structure / 구조) đơn giản trong log coordinates.
 
 ## Trigonometric derivatives và vì sao radians quan trọng
 
@@ -241,9 +244,9 @@ Với radians:
 \frac{d}{dx}\cos x=-\sin x.
 ```
 
-Nếu đo bằng degrees, extra conversion factor xuất hiện. Radian không chỉ là convention; nó làm angle bằng arc-length/radius, khiến local geometry của circle phù hợp tự nhiên với calculus.
+Nếu đo bằng degrees, extra conversion factor xuất hiện. Radian không chỉ là convention; nó làm angle bằng arc-length/radius, khiến cục bộ (local / 로컬) hình học (geometry / 기하학) của circle phù hợp tự nhiên với calculus.
 
-## Implicit differentiation: relationship không cần solve explicit trước
+## Implicit differentiation: relationship không cần solve tường minh (explicit / 명시적) trước
 
 Circle
 
@@ -251,7 +254,7 @@ Circle
 x^2+y^2=r^2
 ```
 
-không phải global function `y=f(x)` nếu giữ cả hai halves, nhưng locally ta vẫn tìm slope.
+không phải toàn cục (global / 전역) hàm (function / 함수) `y=f(x)` nếu giữ cả hai halves, nhưng locally ta vẫn tìm slope.
 
 Differentiate theo `x`:
 
@@ -265,11 +268,11 @@ nên
 \frac{dy}{dx}=-\frac{x}{y}.
 ```
 
-Term `dy/dx` xuất hiện vì `y` itself changes with `x` along the constraint curve.
+Term `dy/dx` xuất hiện vì `y` itself changes with `x` along the ràng buộc (constraint / 제약조건) curve.
 
-## Derivative như error propagation
+## Derivative như lan truyền lỗi (error propagation / 오류 전파)
 
-Nếu measurement `x` có small error `\Delta x`, thì
+Nếu đo lường (measurement / 측정) `x` có small lỗi (error / 오류) `\Delta x`, thì
 
 ```math
 \Delta y
@@ -277,11 +280,11 @@ Nếu measurement `x` có small error `\Delta x`, thì
 f'(x)\Delta x.
 ```
 
-Derivative magnitude cho local error amplification.
+Derivative magnitude cho cục bộ (local / 로컬) lỗi (error / 오류) amplification.
 
-Ví dụ `y=x^2`, tại `x=100`, derivative là 200. Error `0.01` trong `x` tạo khoảng `2` units error trong `y`. Same input error ở `x=1` chỉ tạo khoảng `0.02`.
+Ví dụ `y=x^2`, tại `x=100`, derivative là 200. lỗi (error / 오류) `0.01` trong `x` tạo khoảng `2` units lỗi (error / 오류) trong `y`. Same đầu vào (input / 입력) lỗi (error / 오류) ở `x=1` chỉ tạo khoảng `0.02`.
 
-Sensitivity phụ thuộc operating point.
+Sensitivity phụ thuộc operating điểm (point / 지점).
 
 ## Relative sensitivity và elasticity
 
@@ -291,7 +294,7 @@ Absolute derivative phụ thuộc units. Dimensionless sensitivity thường dù
 E(x)=\frac{x}{f(x)}f'(x).
 ```
 
-Nó xấp xỉ percentage output change trên percentage input change.
+Nó xấp xỉ percentage đầu ra (output / 출력) thay đổi (change / 변경) trên percentage đầu vào (input / 입력) thay đổi (change / 변경).
 
 Nếu
 
@@ -309,23 +312,23 @@ Power-law exponent chính là elasticity constant.
 
 ## Differentiability mạnh hơn continuity
 
-Nếu function differentiable tại `a`, nó continuous tại `a`. Nhưng converse sai.
+Nếu hàm (function / 함수) differentiable tại `a`, nó continuous tại `a`. Nhưng converse sai.
 
-`|x|` continuous tại 0 nhưng left derivative là `-1`, right derivative là `1`; không có single local linear approximation nên derivative không tồn tại.
+`|x|` continuous tại 0 nhưng left derivative là `-1`, right derivative là `1`; không có single cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation nên derivative không tồn tại.
 
-Điều này cho thấy derivative không chỉ hỏi “graph có đứt không?” mà hỏi “zoom đủ gần có thấy một line duy nhất không?”.
+Điều này cho thấy derivative không chỉ hỏi “đồ thị (graph / 그래프) có đứt không?” mà hỏi “zoom đủ gần có thấy một line duy nhất không?”.
 
 ## Khi derivative không tồn tại
 
-Các common reasons:
+Các dùng chung (common / 공통) reasons:
 
 - jump/discontinuity;
 - corner như `|x|`;
 - cusp;
 - vertical tangent;
-- highly oscillatory behavior.
+- highly oscillatory hành vi (behavior / 동작).
 
-Không nên force symbolic rules ở point nơi assumptions của differentiability fail.
+Không nên force symbolic rules ở điểm (point / 지점) nơi các giả định (assumptions / 가정들) của differentiability thất bại (fail / 실패).
 
 ## Numerical differentiation khác symbolic derivative
 
@@ -335,34 +338,36 @@ Máy tính có thể approximate
 f'(x)\approx \frac{f(x+h)-f(x)}{h}.
 ```
 
-Nhưng `h` quá lớn gây truncation error; `h` quá nhỏ gây cancellation/rounding error. Mathematical derivative là limit ideal; finite-difference implementation là numerical approximation.
+Nhưng `h` quá lớn gây truncation lỗi (error / 오류); `h` quá nhỏ gây cancellation/rounding lỗi (error / 오류). Mathematical derivative là limit ideal; finite-difference hiện thực (implementation / 구현) là numerical approximation.
 
-Automatic differentiation lại khác cả hai: nó áp dụng chain rule chính xác ở machine arithmetic lên computation graph, không xấp xỉ derivative bằng finite differences.
+Automatic differentiation lại khác cả hai: nó áp dụng chuỗi (chain / 사슬) quy tắc (rule / 규칙) chính xác ở machine arithmetic lên computation đồ thị (graph / 그래프), không xấp xỉ derivative bằng finite differences.
 
 ## Physics, AI và Finance connections
 
-Trong physics, derivative tạo velocity, acceleration, force laws và field gradients. Trong AI, gradients đo local sensitivity của loss đối với parameters. Trong finance, delta của option là derivative của price theo underlying; duration/convexity là related sensitivity concepts. Trong software systems, derivative-like reasoning giúp hiểu local capacity sensitivity dù measurements thường noisy và discrete.
+Trong physics, derivative tạo velocity, acceleration, force laws và trường dữ liệu (field / 필드) gradients. Trong AI, gradients đo cục bộ (local / 로컬) sensitivity của mất mát (loss / 손실) đối với parameters. Trong finance, delta của option là derivative của price theo underlying; duration/convexity là related sensitivity concepts. Trong software các hệ thống (systems / 시스템들), derivative-like lập luận (reasoning / 추론) giúp hiểu cục bộ (local / 로컬) sức chứa (capacity / 용량) sensitivity dù measurements thường noisy và discrete.
 
-Điểm chung là cùng một mathematical structure: **local response to perturbation**.
+Điểm chung là cùng một mathematical cấu trúc (structure / 구조): **cục bộ (local / 로컬) phản hồi (response / 응답) to perturbation**.
 
-## Assumptions và failure modes
+## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
-Derivative là local object. Extrapolate một tangent line quá xa có thể sai mạnh nếu curvature lớn.
+Derivative là cục bộ (local / 로컬) đối tượng (object / 객체). Extrapolate một tangent line quá xa có thể sai mạnh nếu curvature lớn.
 
-Small derivative không luôn nghĩa input “không quan trọng” globally; effect có thể nonlinear hoặc derivative bằng zero đúng tại một special point.
+Small derivative không luôn nghĩa đầu vào (input / 입력) “không quan trọng” globally; tác động (effect / 효과) có thể nonlinear hoặc derivative bằng zero đúng tại một special điểm (point / 지점).
 
-A derivative computed from a model reflects model sensitivity, not automatically real-world causal sensitivity.
+A derivative computed from a mô hình (model / 모델) reflects mô hình (model / 모델) sensitivity, not automatically real-world nhân quả (causal / 인과적) sensitivity.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Đạo hàm là local gain của một system. Ta perturb input một lượng rất nhỏ và hỏi output phản ứng first-order ra sao. Slope, velocity, marginal cost, gradient và backpropagation đều là các biểu hiện của cùng idea: local linear response.
+> Đạo hàm là cục bộ (local / 로컬) gain của một hệ thống (system / 시스템). Ta perturb đầu vào (input / 입력) một lượng rất nhỏ và hỏi đầu ra (output / 출력) phản ứng first-order ra sao. Slope, velocity, marginal chi phí (cost / 비용), độ dốc (gradient / 기울기) và backpropagation đều là các biểu hiện của cùng idea: cục bộ (local / 로컬) tuyến tính (linear / 선형) phản hồi (response / 응답).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Derivative là slope của graph nên chỉ dùng cho geometry.”** Slope là một representation; derivative tổng quát là local sensitivity.
+**“Derivative là slope của đồ thị (graph / 그래프) nên chỉ dùng cho hình học (geometry / 기하학).”** Slope là một biểu diễn (representation / 표현); derivative tổng quát là cục bộ (local / 로컬) sensitivity.
 
-**“`dy/dx` chỉ là fraction.”** Notation có nhiều manipulations giống fraction vì chain rule/differentials, nhưng derivative được định nghĩa bằng limit/local linear map.
+**“`dy/dx` chỉ là fraction.”** Notation có nhiều manipulations giống fraction vì chuỗi (chain / 사슬) quy tắc (rule / 규칙)/differentials, nhưng derivative được định nghĩa bằng limit/cục bộ (local / 로컬) tuyến tính (linear / 선형) map.
 
-**“Derivative bằng 0 nghĩa function không thay đổi.”** Chỉ nói first-order change bằng zero tại point đó; higher-order change vẫn có thể lớn.
+**“Derivative bằng 0 nghĩa hàm (function / 함수) không thay đổi.”** Chỉ nói first-order thay đổi (change / 변경) bằng zero tại điểm (point / 지점) đó; higher-order thay đổi (change / 변경) vẫn có thể lớn.
 
-**“Có formula differentiable thì áp dụng ở mọi point.”** Domain, corners, discontinuities và denominator restrictions vẫn phải kiểm tra.
+**“Có formula differentiable thì áp dụng ở mọi điểm (point / 지점).”** lĩnh vực (domain / 도메인), corners, discontinuities và denominator restrictions vẫn phải kiểm tra.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 limits and continuity](./00_limits_and_continuity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

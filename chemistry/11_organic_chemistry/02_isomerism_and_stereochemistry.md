@@ -1,5 +1,8 @@
 # Đồng phân và hóa lập thể — cùng công thức, khác phân tử
 
+> **Mạch đọc:** Đọc **Đồng phân và hóa lập thể — cùng công thức, khác phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đồng phân cấu tạo — khi cách kết nối khác nhau** sang **Đồng phân lập thể — cùng đồ thị, khác cách sắp xếp 3D**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Đồng phân (isomers / 이성질체)** có cùng công thức phân tử nhưng khác cách các nguyên tử nối với nhau hoặc khác cách sắp xếp trong không gian. **Hóa lập thể (stereochemistry / 입체화학)** nghiên cứu cách cấu trúc phân tử tồn tại trong không gian ba chiều và vì sao cách sắp xếp 3D có thể làm thay đổi tính chất vật lý, con đường phản ứng và khả năng nhận diện sinh học.
 
 Một công thức phân tử chỉ cho biết “có bao nhiêu nguyên tử mỗi loại”. Nó không đủ để xác định phân tử. Bản sắc hóa học cần ít nhất hai lớp thông tin: **đồ thị liên kết (bond graph)** và **cách nhúng đồ thị đó vào không gian 3D**.
@@ -185,3 +188,5 @@ Không. Axial/equatorial đổi, còn up/down giữ nguyên.
 > Hãy xem phân tử như một **đồ thị được nhúng vào không gian 3D với các hàng rào năng lượng giữa những cách nhúng khác nhau**. Kết nối quyết định cái gì liên kết với cái gì; hóa lập thể quyết định định hướng, cấu dạng có thể tiếp cận và cách orbital/phân tử gặp nhau.
 
 Xem tiếp: [Cơ chế phản ứng hữu cơ](./03_organic_reaction_mechanisms.md), nơi hình học 3D trở thành ràng buộc trực tiếp lên dòng electron.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

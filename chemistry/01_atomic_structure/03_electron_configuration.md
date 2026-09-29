@@ -1,5 +1,8 @@
 # Cấu hình electron
 
+> **Mạch đọc:** Đọc **Cấu hình electron** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ obitan đến nguyên tử nhiều electron** sang **Nguyên lý loại trừ Pauli**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Cấu hình electron (electron configuration / 전자 배치)** mô tả cách các electron của một nguyên tử hoặc ion phân bố vào các obitan lượng tử có thể chiếm. Mục tiêu không phải học thuộc chuỗi `1s² 2s² 2p⁶...`, mà là hiểu vì sao cách sắp xếp electron quyết định tính tuần hoàn, liên kết hóa học và khả năng phản ứng của nguyên tố.
 
 ## Từ obitan đến nguyên tử nhiều electron
@@ -19,7 +22,7 @@ Một obitan được xác định bởi `n`, `l` và `m_l`. Vì số lượng t
 Do đó một phân lớp s chứa tối đa 2 electron, p chứa 6, d chứa 10 và f chứa 14:
 
 \[
-\text{sức chứa}=2(2l+1)
+\văn bản (text / 텍스트){sức chứa}=2(2l+1)
 \]
 
 Hệ số `2l+1` là số obitan trong phân lớp, còn hệ số 2 đến từ hai trạng thái spin.
@@ -241,3 +244,5 @@ Cấu hình electron là lời giải gần đúng cho một bài toán tối ư
 Nếu hiểu cấu hình electron theo cách này, bảng tuần hoàn trở thành kết quả tự nhiên thay vì một bảng cần học thuộc.
 
 Xem tiếp: [Bảng tuần hoàn và các xu hướng tuần hoàn](./04_periodic_table_and_periodic_trends.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atoms elements and isotopes](./00_atoms_elements_and_isotopes.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

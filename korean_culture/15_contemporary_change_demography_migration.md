@@ -1,5 +1,8 @@
 # Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực
 
+> **Mạch đọc:** Đặt **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Văn hoá thay đổi khi ràng buộc thay đổi** sang **Đọc số liệu dân số: số tại một thời điểm, dòng biến động và dự báo không giống nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Văn hoá thay đổi khi ràng buộc thay đổi
 
 Nếu chỉ học “truyền thống Hàn Quốc”, ta có thể nhận diện biểu tượng nhưng vẫn dự đoán sai đời sống thật. **Cấu trúc dân số (인구구조 / demography)** thay đổi số người ở từng độ tuổi; **cấu trúc hộ gia đình (가구구조 / household structure)** thay đổi ai sống với ai; thị trường lao động làm thay đổi chi phí của hôn nhân và chăm sóc; di cư làm thay đổi thành phần lớp học, nhà máy và khu dân cư; điện thoại thông minh thay đổi cách quan hệ được duy trì.

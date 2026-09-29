@@ -1,5 +1,8 @@
 # Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)
 
+> **Mạch đọc:** Đặt **Từ lịch sử đến mô hình kinh tế thị trường Hàn Quốc hiện nay (Economic Model & Historical Bridge / 한국 경제 발전과 현재 구조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Nền kinh tế hiện tại là kết quả nén của lịch sử** sang **Từ thiếu năng lực sản xuất đến nền kinh tế có năng lực sâu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Chương này là cây cầu giữa cụm lịch sử `00_history/` và phần phân tích kinh tế–doanh nghiệp hiện tại. Nếu chưa đọc chuỗi lịch sử, nên đi từ [giai đoạn trước 1945](./00_history/00_legacy_before_1945.md) đến [phả hệ doanh nghiệp](./00_history/08_company_genealogies.md) trước.
 
 Mục tiêu ở đây không phải kể lại dòng thời gian. Câu hỏi trung tâm là: **những cơ chế nào được hình thành trong lịch sử vẫn đang quyết định cách nền kinh tế Hàn Quốc vận hành hôm nay?**
@@ -23,7 +26,7 @@ graph LR
     I --> J[2020s: AI, an ninh kinh tế, già hóa, tăng trưởng chậm]
 ```
 
-Mỗi giai đoạn không xóa giai đoạn trước. Bán dẫn Hàn Quốc hôm nay phụ thuộc năng lực kỹ thuật tích lũy từ điện tử và chính sách công nghiệp trước đó. Hyundai Motor vẫn mang dấu vết của hệ sinh thái nhà cung cấp và logic quy mô hình thành trong công nghiệp hóa. Công bố thông tin và kỷ luật thị trường hiện nay lại mang dấu vết của cải cách sau 1997.
+Mỗi giai đoạn không xóa giai đoạn trước. Bán dẫn Hàn Quốc hôm nay phụ thuộc năng lực kỹ thuật tích lũy từ điện tử và chính sách công nghiệp trước đó. Hyundai Motor vẫn mang dấu vết của hệ sinh thái nhà cung cấp và lô-gic (logic / 논리) quy mô hình thành trong công nghiệp hóa. Công bố thông tin và kỷ luật thị trường hiện nay lại mang dấu vết của cải cách sau 1997.
 
 Vì vậy cấu trúc hiện tại có thể hiểu là **lịch sử được nén vào thể chế và năng lực**.
 
@@ -215,7 +218,7 @@ Fab bán dẫn, thép, hóa chất, pin và trung tâm dữ liệu AI đều c�
 
 Do đó giá điện, điện hạt nhân, LNG, năng lượng tái tạo và lưới truyền tải không phải chủ đề tách khỏi doanh nghiệp. Chúng ảnh hưởng trực tiếp chi phí và khả năng mở rộng công suất. Xem [năng lượng](./30_energy_security_power_market_and_transition.md).
 
-## Mental Model — Cách nén toàn bộ hệ thống
+## Mô hình tư duy (mental model / 사고 모델) — Cách nén toàn bộ hệ thống
 
 > Hàn Quốc hiện đại là một nền kinh tế thị trường có năng lực sản xuất toàn cầu rất sâu, được hình thành từ lịch sử nhà nước–ngân hàng–doanh nghiệp phối hợp mạnh, sau đó được bổ sung bởi kỷ luật thị trường vốn, công nghệ số và mạng sản xuất toàn cầu. Điểm mạnh của hệ thống là khả năng tích lũy năng lực và thực hiện dự án quy mô lớn; điểm yếu nằm ở tính hai tầng giữa doanh nghiệp lớn và SME/dịch vụ, nợ hộ gia đình, nhân khẩu học và phụ thuộc cao vào thương mại–năng lượng–địa chính trị.
 
@@ -232,3 +235,5 @@ Lịch sử / thể chế
 ```
 
 Sau đó lần theo dòng tiền và quyền quyết định. Đây là cách biến “kinh tế Hàn Quốc” từ một tập hợp sự kiện thành một hệ thống có thể suy luận.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Cách nén toàn bộ hệ thống**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 macro economy and business cycle](./01_macro_economy_and_business_cycle.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

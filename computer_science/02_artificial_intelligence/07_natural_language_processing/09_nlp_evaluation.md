@@ -1,29 +1,32 @@
-# NLP Evaluation: từ exact labels tới open-ended language quality
+# NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)
 
-NLP Evaluation (자연어 처리 평가) khó vì language cho phép nhiều outputs khác nhau cùng đúng. Classification có label rõ; translation/summarization/generation có vô số acceptable phrasings. Vì vậy evaluation cần chọn metric phù hợp task, tách automatic score khỏi human utility và luôn inspect failure categories.
+> **Mạch đọc:** Đặt **NLP Evaluation: từ chính xác (exact / 정확한) labels tới open-ended ngôn ngữ (language / 언어) chất lượng (quality / 품질)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Classification / NER** sang **Macro vs Micro F1**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+NLP Evaluation (자연어 처리 평가) khó vì ngôn ngữ (language / 언어) cho phép nhiều outputs khác nhau cùng đúng. Classification có label rõ; translation/summarization/generation có vô số acceptable phrasings. Vì vậy evaluation cần chọn chỉ số (metric / 지표) phù hợp tác vụ (task / 작업), tách automatic score khỏi human utility và luôn inspect thất bại (failure / 실패) categories.
 
 ## Classification / NER
 
 Classification dùng accuracy, precision, recall, F1, calibration như ML chung.
 
-NER nên entity/span-level F1 thay token accuracy vì class `O` dominate.
+NER nên thực thể (entity / 엔터티)/span-level F1 thay đơn vị từ (token / 토큰) accuracy vì lớp (class / 클래스) `O` dominate.
 
-Exact entity match strict:
+Chính xác (exact / 정확한) thực thể (entity / 엔터티) match strict:
 
 ```text
 Gold: [Seoul National University]
 Pred: [National University]
 ```
 
-count wrong dù overlap. Có thể thêm partial-match analysis nhưng report convention rõ.
+count wrong dù overlap. Có thể thêm partial-match phân tích (analysis / 분석) nhưng report convention rõ.
 
 ## Macro vs Micro F1
 
 Micro aggregate all examples/counts, dominated frequent classes.
 
-Macro average F1 each class equally, exposes rare-class weakness.
+Macro average F1 each lớp (class / 클래스) equally, exposes rare-class weakness.
 
-Weighted macro uses support weights.
+Weighted macro uses hỗ trợ (support / 지원) weights.
 
 NLP label distributions often imbalanced, nên report more than one view.
 
@@ -31,24 +34,24 @@ NLP label distributions often imbalanced, nên report more than one view.
 
 BLEU measures modified n-gram precision + brevity penalty relative references.
 
-Useful historical MT corpus metric, cheap/reproducible.
+Useful historical MT corpus chỉ số (metric / 지표), cheap/reproducible.
 
 Limitations:
 
 - valid paraphrases penalized;
-- semantics/factuality weak;
-- tokenization/reference count affect score;
+- ngữ nghĩa (semantics / 의미론)/factuality weak;
+- tokenization/tham chiếu (reference / 참조) count affect score;
 - sentence-level noisy.
 
 BLEU should compare same setup, not become universal language-quality score.
 
 ## ROUGE
 
-ROUGE family emphasizes overlap/recall, common summarization.
+ROUGE family emphasizes overlap/recall, dùng chung (common / 공통) summarization.
 
-ROUGE-L uses longest common subsequence. It rewards content overlap but cannot reliably detect factual inconsistency.
+ROUGE-L uses longest dùng chung (common / 공통) subsequence. It rewards content overlap but cannot reliably detect factual inconsistency.
 
-Extractive systems often score well because wording overlaps source.
+Extractive các hệ thống (systems / 시스템들) often score well because wording overlaps nguồn (source / 소스).
 
 ## METEOR / chrF
 
@@ -56,11 +59,11 @@ METEOR includes stemming/synonym/alignment heuristics.
 
 chrF uses character n-gram F-score and works well morphologically rich languages because less dependent word tokenization.
 
-No metric removes need for task-specific error analysis.
+No chỉ số (metric / 지표) removes need for task-specific lỗi (error / 오류) phân tích (analysis / 분석).
 
 ## BERTScore
 
-BERTScore matches candidate/reference tokens using contextual embedding similarity.
+BERTScore matches candidate/tham chiếu (reference / 참조) tokens using contextual embedding similarity.
 
 It captures paraphrases better than surface overlap.
 
@@ -68,42 +71,42 @@ But depends pretrained encoder and can reward semantically similar yet factually
 
 ## Learned Metrics
 
-COMET-style MT metrics learn from human judgments/source/reference representations and often correlate better with human quality.
+COMET-style MT metrics learn from human judgments/nguồn (source / 소스)/tham chiếu (reference / 참조) representations and often correlate better with human chất lượng (quality / 품질).
 
 Risks:
 
-- domain/model bias;
-- metric gaming;
-- version drift;
-- hidden training overlap.
+- lĩnh vực (domain / 도메인)/mô hình (model / 모델) độ lệch (bias / 편향);
+- chỉ số (metric / 지표) gaming;
+- phiên bản (version / 버전) drift;
+- hidden huấn luyện (training / 학습) overlap.
 
-Metric is another model requiring validation.
+Chỉ số (metric / 지표) is another mô hình (model / 모델) requiring kiểm tra hợp lệ (validation / 검증).
 
 ## Perplexity
 
-Language-model intrinsic metric:
+Language-model intrinsic chỉ số (metric / 지표):
 
 \[
 PPL=\exp(crossentropy)
 \]
 
-Useful compare same tokenization/test corpus. It measures next-token predictive fit, not downstream instruction/helpfulness directly.
+Useful compare same tokenization/kiểm thử (test / 테스트) corpus. It measures next-token predictive fit, not downstream instruction/helpfulness directly.
 
-## Exact Match
+## Chính xác (exact / 정확한) Match
 
-QA/structured extraction often use exact string match.
+QA/structured extraction often use chính xác (exact / 정확한) string match.
 
-Good when canonical answer strict, bad when formatting/paraphrase acceptable.
+Good when chuẩn gốc (canonical / 정본) answer strict, bad when formatting/paraphrase acceptable.
 
-Normalization can lowercase/remove punctuation/articles but policy must match task and languages.
+Normalization can lowercase/remove punctuation/articles but chính sách (policy / 정책) must match tác vụ (task / 작업) and languages.
 
-## Semantic QA Metrics
+## Ngữ nghĩa (semantic / 의미적) QA Metrics
 
-Token F1 for extractive QA compares overlap. Generative QA may use learned judge/entailment plus factual source checks.
+Đơn vị từ (token / 토큰) F1 for extractive QA compares overlap. Generative QA may use learned judge/entailment plus factual nguồn (source / 소스) checks.
 
 A semantically similar answer can still contain one dangerous wrong number; aggregate embedding similarity may miss it.
 
-## Faithfulness vs Quality
+## Faithfulness vs chất lượng (quality / 품질)
 
 Summaries can be fluent/relevant but unfaithful.
 
@@ -121,13 +124,13 @@ One overall score hides trade-offs.
 
 ## Human Evaluation
 
-Human judges can assess nuanced meaning, but evaluation has variance/bias.
+Human judges can assess nuanced meaning, but evaluation has variance/độ lệch (bias / 편향).
 
 Need:
 
 - clear rubric;
 - blind/randomized comparison;
-- multiple raters for subjective task;
+- multiple raters for subjective tác vụ (task / 작업);
 - inter-rater agreement;
 - representative samples;
 - adjudication for edge cases.
@@ -136,30 +139,30 @@ Pairwise preference often easier/more reliable than absolute 1–5 score.
 
 ## LLM-as-a-Judge Preview
 
-LLM can evaluate outputs cheaply at scale, especially pairwise/rubric tasks.
+LLM can evaluate outputs cheaply at quy mô (scale / 규모), especially pairwise/rubric tasks.
 
 But judge has biases:
 
-- position bias;
+- position độ lệch (bias / 편향);
 - verbosity/style preference;
 - self/model-family preference;
 - prompt sensitivity;
 - factual errors;
-- vulnerability to answer text injection.
+- vulnerability to answer văn bản (text / 텍스트) injection.
 
-Use calibrated judge against human labels and structured evidence where possible.
+Use calibrated judge against human labels and structured bằng chứng (evidence / 증거) where possible.
 
-## Data Contamination
+## Dữ liệu (data / 데이터) Contamination
 
 If benchmark appears in pretraining/fine-tuning, score may reflect memorization.
 
-Contamination hard prove for closed training data. New/private/time-split evaluation reduces risk.
+Contamination hard prove for closed dữ liệu huấn luyện (training data / 학습 데이터). New/private/time-split evaluation reduces rủi ro (risk / 위험).
 
-LLM era makes benchmark lifecycle important.
+LLM era makes benchmark vòng đời (lifecycle / 생명주기) important.
 
 ## Challenge Sets
 
-Average IID test may miss linguistic phenomena. Create targeted sets:
+Average IID kiểm thử (test / 테스트) may miss linguistic phenomena. Create targeted sets:
 
 ```text
 negation
@@ -172,11 +175,11 @@ adversarial spelling
 ambiguity
 ```
 
-Each tests specific capability/failure mode.
+Each tests specific năng lực (capability / 역량)/dạng thất bại (failure mode / 실패 모드).
 
 ## Robustness
 
-Perturb input without changing meaning:
+Perturb đầu vào (input / 입력) without changing meaning:
 
 ```text
 punctuation change
@@ -186,41 +189,41 @@ format reorder
 irrelevant sentence insertion
 ```
 
-Prediction should remain stable if task invariant.
+Prediction should remain stable if tác vụ (task / 작업) bất biến (invariant / 불변식).
 
-But perturbation must genuinely preserve semantics.
+But perturbation must genuinely preserve ngữ nghĩa (semantics / 의미론).
 
 ## Multilingual Evaluation
 
-Do not translate English benchmark and assume equivalence. Translation may change difficulty, culture, tokenization and ambiguity.
+Do not translate English benchmark and assume equivalence. Translation may thay đổi (change / 변경) difficulty, culture, tokenization and ambiguity.
 
 Use native-language datasets/raters and report per-language metrics.
 
-For Korean/Vietnamese, spacing/morphology/tokenization can affect exact/overlap metrics; character or semantic metrics may complement.
+For Korean/Vietnamese, spacing/morphology/tokenization can affect chính xác (exact / 정확한)/overlap metrics; character or ngữ nghĩa (semantic / 의미적) metrics may complement.
 
-## Statistical Uncertainty
+## Statistical bất định (uncertainty / 불확실성)
 
 Report confidence intervals via bootstrap over examples/documents when possible.
 
-If samples grouped by user/document, resample at independent unit.
+If samples grouped by người dùng (user / 사용자)/document, resample at independent đơn vị (unit / 단위).
 
-Tiny score difference without uncertainty should not drive deployment decision.
+Tiny score difference without bất định (uncertainty / 불확실성) should not drive triển khai (deployment / 배포) quyết định (decision / 결정).
 
 ## Online Evaluation
 
-Offline NLP metric does not capture user interaction. A/B testing can measure:
+Offline NLP chỉ số (metric / 지표) does not capture người dùng (user / 사용자) tương tác (interaction / 상호작용). A/B testing can measure:
 
-- task completion;
-- search success;
-- correction/retry rate;
+- tác vụ (task / 작업) completion;
+- tìm kiếm (search / 검색) success;
+- correction/thử lại (retry / 재시도) tỷ lệ (rate / 비율);
 - retention;
-- latency abandonment.
+- độ trễ (latency / 지연 시간) abandonment.
 
-But online metric can incentivize bad behavior (clickbait, verbosity). Guardrails needed.
+But online chỉ số (metric / 지표) can incentivize bad hành vi (behavior / 동작) (clickbait, verbosity). Guardrails needed.
 
-## Error Taxonomy
+## Lỗi (error / 오류) Taxonomy
 
-For generated output, manually categorize:
+For generated đầu ra (output / 출력), manually categorize:
 
 ```text
 wrong entity
@@ -234,11 +237,11 @@ language/style issue
 retrieval grounding failure
 ```
 
-Error counts guide engineering much more actionable than one BLEU/ROUGE score.
+Lỗi (error / 오류) counts guide kỹ thuật (engineering / 엔지니어링) much more actionable than one BLEU/ROUGE score.
 
 ## Reproducible Evaluation
 
-Record:
+Bản ghi (record / 레코드):
 
 ```text
 model/tokenizer version
@@ -251,30 +254,32 @@ random seed
 retrieval index/version if used
 ```
 
-Generation settings can materially change score.
+Generation settings can materially thay đổi (change / 변경) score.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> NLP evaluation is measurement design. First define what “good language behavior” means for the task; only then choose multiple measurements that approximate it.
+> NLP evaluation is đo lường (measurement / 측정) thiết kế (design / 설계). First define what “good ngôn ngữ (language / 언어) hành vi (behavior / 동작)” means for the tác vụ (task / 작업); only then choose multiple measurements that approximate it.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Automatic metric cao = output tốt cho user”
+### “Automatic chỉ số (metric / 지표) cao = đầu ra (output / 출력) tốt cho người dùng (user / 사용자)”
 
-Metric captures subset of desired properties.
+Chỉ số (metric / 지표) captures subset of desired properties.
 
-### “Semantic embedding metric solves paraphrase problem completely”
+### “ngữ nghĩa (semantic / 의미적) embedding chỉ số (metric / 지표) solves paraphrase bài toán (problem / 문제) completely”
 
 It may miss factual/number/logical errors.
 
 ### “Human evaluation is ground truth without noise”
 
-Humans disagree and have biases; rubric/design matter.
+Humans disagree and have biases; rubric/thiết kế (design / 설계) matter.
 
-### “Benchmark score is model capability”
+### “Benchmark score is mô hình (model / 모델) năng lực (capability / 역량)”
 
-It is performance on a sampled benchmark under specific prompt/eval protocol.
+It is hiệu năng (performance / 성능) on a sampled benchmark under specific prompt/eval giao thức (protocol / 프로토콜).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 NLP evaluation extends [Model Evaluation](../04_machine_learning/15_model_evaluation.md) and prepares dedicated LLM/RAG evaluation layers where open-ended generation, judges and grounding become central.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language as data](./00_language_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

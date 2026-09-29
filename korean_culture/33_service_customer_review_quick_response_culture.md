@@ -1,5 +1,8 @@
 # Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh
 
+> **Mạch đọc:** Đặt **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **“Dịch vụ tốt” không tự nhiên xuất hiện chỉ từ thái độ thân thiện** sang **서비스: một từ có nhiều nghĩa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## “Dịch vụ tốt” không tự nhiên xuất hiện chỉ từ thái độ thân thiện
 
 Hàn Quốc thường được trải nghiệm như một xã hội có nhiều dịch vụ nhanh: giao đồ ăn, giao hàng, đổi trả, đặt bàn, gọi taxi, phiếu quà tặng di động và hỗ trợ khách hàng. Nếu chỉ giải thích bằng câu “người Hàn coi trọng dịch vụ”, ta bỏ qua cơ chế.
@@ -392,3 +395,5 @@ Mục tiêu không phải “nghe mọi khách theo đúng nghĩa đen”, mà l
 ## Đọc tiếp
 
 Đọc cùng [`03_language_honorifics_nunchi_jeong_face.md`](03_language_honorifics_nunchi_jeong_face.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) và [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

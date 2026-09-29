@@ -1,4 +1,7 @@
-# Advanced DSA File Manifest
+# Advanced DSA tệp (file / 파일) Manifest
+
+> **Mạch đọc:** Đặt **Advanced DSA tệp (file / 파일) Manifest** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Độ phủ hiện tại** sang **Trạng thái các pass nội dung**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Manifest này theo dõi thư viện `computer_science/01_algorithms_data_structures/advanced/`. Số từ chỉ là **ước lượng để kiểm tra độ phủ**, không phải tiêu chí chất lượng duy nhất.
 
@@ -16,7 +19,7 @@ bản chất vấn đề
 → liên hệ hệ thống thực tế
 ```
 
-Phần giải thích dùng tiếng Việt làm ngôn ngữ chính; thuật ngữ Anh/Hàn được giữ như keyword bổ trợ khi hữu ích. Code, API, class/function name và tên thuật toán chuẩn không bị dịch máy móc.
+Phần giải thích dùng tiếng Việt làm ngôn ngữ chính; thuật ngữ Anh/Hàn được giữ như từ khóa (keyword / 키워드) bổ trợ khi hữu ích. mã (code / 코드), API, lớp (class / 클래스)/hàm (function / 함수) name và tên thuật toán chuẩn không bị dịch máy móc.
 
 ## Độ phủ hiện tại
 
@@ -86,19 +89,22 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 | `90_connections/07_case_study_scheduler_backpressure.md` | ~2,300 |
 | `README.md` | ~1,700 |
 
-Các `_index.md` cố ý ngắn vì chỉ làm navigation.
+Các `_index.md` cố ý ngắn vì chỉ làm điều hướng (navigation / 내비게이션).
 
 **Tổng quy mô ước lượng:** khoảng **204,000+ từ** cho Advanced DSA. Đây là coverage estimate, không phải word count tuyệt đối.
 
+
+> **Chuyển mạch:** Từ **Độ phủ hiện tại**, ta sang **Trạng thái các pass nội dung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Trạng thái các pass nội dung
 
-### Pass 1–4 — kiến trúc, độ phủ và core algorithms
+### Pass 1–4 — kiến trúc, độ phủ và cốt lõi (core / 핵심) algorithms
 
-Thư viện được chia thành Foundations, Linear Structures, Trees, Graphs, Algorithmic Paradigms, Specialized Structures, Language Implementations và System Connections. Các chủ đề core được mở rộng từ mức ghi chú/cheat sheet thành các chapter độc lập có reasoning, implementation và cross-links.
+Thư viện được chia thành Foundations, tuyến tính (linear / 선형) Structures, Trees, Graphs, Algorithmic Paradigms, Specialized Structures, ngôn ngữ (language / 언어) Implementations và hệ thống (system / 시스템) Connections. Các chủ đề cốt lõi (core / 핵심) được mở rộng từ mức ghi chú/cheat sheet thành các chapter độc lập có lập luận (reasoning / 추론), hiện thực (implementation / 구현) và cross-links.
 
-### Pass 5–6 — reasoning và độ sâu triển khai
+### Pass 5–6 — lập luận (reasoning / 추론) và độ sâu triển khai
 
-Các chapter cốt lõi được nâng theo hướng specification → invariant/proof → complexity → memory/runtime model → testing → production connection. Những vùng được tăng mạnh gồm correctness, mathematical toolkit, memory model, hash table, queue/deque/PQ, graph algorithms, sorting, DP, selection, language/runtime implementation và benchmarking.
+Các chapter cốt lõi được nâng theo hướng specification → bất biến (invariant / 불변식)/proof → độ phức tạp (complexity / 복잡도) → bộ nhớ (memory / 메모리)/thời gian chạy (runtime / 런타임) mô hình (model / 모델) → testing → môi trường vận hành (production / 운영 환경) liên kết (connection / 연결). Những vùng được tăng mạnh gồm tính đúng đắn (correctness / 정확성), mathematical toolkit, bộ nhớ (memory / 메모리) mô hình (model / 모델), bảng băm (hash table / 해시 테이블), hàng đợi (queue / 큐)/deque/PQ, đồ thị (graph / 그래프) algorithms, sorting, DP, selection, ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) hiện thực (implementation / 구현) và benchmarking.
 
 ### Language-normalization pass
 
@@ -106,49 +112,52 @@ Phần giải thích được chuẩn hóa sang tiếng Việt tự nhiên. Các
 
 ### Depth-normalization pass
 
-Các chapter trước đây lệch chiều sâu được nâng thêm: problem modeling, correctness, mathematical toolkit, queue/deque/PQ, hash table, sorting, hard problems, probabilistic structures, intervals/sweep line, amortized/randomized thinking, network flow, suffix structures, data-structure selection, systems connections, problem-solving workflow, Trie, balanced trees và two-pointers/sliding-window/prefix/difference.
+Các chapter trước đây lệch chiều sâu được nâng thêm: bài toán (problem / 문제) modeling, tính đúng đắn (correctness / 정확성), mathematical toolkit, hàng đợi (queue / 큐)/deque/PQ, bảng băm (hash table / 해시 테이블), sorting, hard problems, probabilistic structures, intervals/sweep line, amortized/randomized thinking, mạng (network / 네트워크) luồng (flow / 흐름), suffix structures, data-structure selection, các hệ thống (systems / 시스템들) connections, problem-solving workflow, Trie, balanced trees và two-pointers/sliding-window/prefix/difference.
 
-Sau pass này, những chapter khoảng 2,700–2,900 từ như `heaps`, `graph_modeling`, `union_find`, `greedy`, `recursion_backtracking` hoặc `DAG/SCC` vẫn được xem là **đủ core depth** vì đã có đầy đủ bản chất, invariants/proof, implementation, caveats và connections. Chúng không cần kéo dài chỉ để đồng đều số từ.
+Sau pass này, những chapter khoảng 2,700–2,900 từ như `heaps`, `graph_modeling`, `union_find`, `greedy`, `recursion_backtracking` hoặc `DAG/SCC` vẫn được xem là **đủ cốt lõi (core / 핵심) độ sâu (depth / 깊이)** vì đã có đầy đủ bản chất, invariants/proof, hiện thực (implementation / 구현), caveats và connections. Chúng không cần kéo dài chỉ để đồng đều số từ.
 
-### Systems case-study pass — nối kiến thức thành thiết kế hoàn chỉnh
+### Các hệ thống (systems / 시스템들) case-study pass — nối kiến thức thành thiết kế hoàn chỉnh
 
-Năm case study được thêm vào `90_connections`:
+Năm trường hợp (case / 사례) study được thêm vào `90_connections`:
 
-- Database Indexing — B+Tree, Hash Index, Buffer Pool, Bloom Filter, LSM, join và crash consistency;
-- Autocomplete/Search — Trie/Radix/FST, Top-K, fuzzy search, Unicode, cache, sharding;
-- Routing — graph representation, Dijkstra, PQ, dynamic update, longest-prefix match, ECMP/failover;
-- Streaming Analytics — exact map, CMS, HLL, heavy hitters, quantile sketch, time windows, distributed merge;
-- Scheduler/Backpressure — FIFO/priority/EDF, fairness, aging, batching, work stealing, bounded queue, retry và admission control.
+- cơ sở dữ liệu (database / 데이터베이스) Indexing — B+cây (tree / 트리), băm (hash / 해시) chỉ mục (index / 인덱스), Buffer Pool, Bloom Filter, LSM, phép nối (join / 조인) và crash consistency;
+- Autocomplete/tìm kiếm (search / 검색) — Trie/Radix/FST, Top-K, fuzzy tìm kiếm (search / 검색), Unicode, bộ nhớ đệm (cache / 캐시), sharding;
+- Routing — đồ thị (graph / 그래프) biểu diễn (representation / 표현), Dijkstra, PQ, động (dynamic / 동적) cập nhật (update / 업데이트), longest-prefix match, ECMP/failover;
+- Streaming Analytics — chính xác (exact / 정확한) map, CMS, HLL, heavy hitters, quantile sketch, thời gian (time / 시간) windows, phân tán (distributed / 분산) merge;
+- Scheduler/Backpressure — FIFO/priority/EDF, fairness, aging, batching, công việc (work / 작업) stealing, bounded hàng đợi (queue / 큐), thử lại (retry / 재시도) và admission điều khiển (control / 제어).
 
-Mỗi case đi theo workload → representation → invariant → composition → failure/update model → testing/benchmarking.
+Mỗi trường hợp (case / 사례) đi theo tải công việc (workload / 워크로드) → biểu diễn (representation / 표현) → bất biến (invariant / 불변식) → composition → thất bại (failure / 실패)/cập nhật (update / 업데이트) mô hình (model / 모델) → testing/benchmarking.
 
-### Advanced-depth pass — mở rộng sau core
+### Advanced-depth pass — mở rộng sau cốt lõi (core / 핵심)
 
-Review sau systems pass cho thấy khoảng trống không còn nằm ở core algorithms mà ở lớp **sau core**, nơi người học cần hiểu vì sao cùng một ADT/paradigm có nhiều cấu trúc chuyên biệt và cách chọn chúng theo workload. Bốn chapter mới được bổ sung:
+Rà soát (review / 검토) sau các hệ thống (systems / 시스템들) pass cho thấy khoảng trống không còn nằm ở cốt lõi (core / 핵심) algorithms mà ở lớp **sau cốt lõi (core / 핵심)**, nơi người học cần hiểu vì sao cùng một ADT/paradigm có nhiều cấu trúc chuyên biệt và cách chọn chúng theo tải công việc (workload / 워크로드). Bốn chapter mới được bổ sung:
 
 #### `02_trees/08_advanced_heaps_and_priority_queue_engineering.md`
 
-Mở rộng Priority Queue sang Indexed Heap, D-ary Heap, Binomial/Fibonacci/Pairing/Leftist/Skew Heap, monotone PQ, Dial/Radix Heap, calendar queue, stable priority, lazy deletion, median bằng hai heap, concurrent/relaxed PQ và external-memory PQ.
+Mở rộng Priority hàng đợi (queue / 큐) sang Indexed vùng nhớ động (heap / 힙), D-ary vùng nhớ động (heap / 힙), Binomial/Fibonacci/Pairing/Leftist/Skew vùng nhớ động (heap / 힙), monotone PQ, Dial/Radix vùng nhớ động (heap / 힙), calendar hàng đợi (queue / 큐), stable priority, lazy deletion, median bằng hai vùng nhớ động (heap / 힙), concurrent/relaxed PQ và external-memory PQ.
 
-Mục tiêu không phải học thuộc nhiều loại heap, mà hiểu vector thao tác `insert/extract/decrease-key/meld/delete` quyết định cấu trúc nào hợp lý.
+Mục tiêu không phải học thuộc nhiều loại vùng nhớ động (heap / 힙), mà hiểu véc-tơ (vector / 벡터) thao tác `insert/extract/decrease-key/meld/delete` quyết định cấu trúc nào hợp lý.
 
 #### `03_graphs/09_dynamic_temporal_and_large_scale_graphs.md`
 
-Bổ sung incremental/decremental/fully dynamic graph, offline dynamic connectivity bằng Segment Tree theo thời gian + Rollback DSU, Euler Tour Tree/Link-Cut Tree, dynamic MST/shortest path, temporal graph, sliding-window graph, graph streaming, partitioning, direction-optimizing BFS, landmarks/A* và Contraction Hierarchies.
+Bổ sung incremental/decremental/fully động (dynamic / 동적) đồ thị (graph / 그래프), offline động (dynamic / 동적) connectivity bằng Segment cây (tree / 트리) theo thời gian + quay lui (rollback / 롤백) DSU, Euler Tour cây (tree / 트리)/Link-Cut cây (tree / 트리), động (dynamic / 동적) MST/shortest đường dẫn (path / 경로), temporal đồ thị (graph / 그래프), sliding-window đồ thị (graph / 그래프), đồ thị (graph / 그래프) streaming, partitioning, direction-optimizing BFS, landmarks/A* và Contraction Hierarchies.
 
-Chương này làm rõ rằng dynamic graph cần thêm một chiều state: **phiên bản/thời gian của topology**.
+Chương này làm rõ rằng động (dynamic / 동적) đồ thị (graph / 그래프) cần thêm một chiều trạng thái (state / 상태): **phiên bản/thời gian của topology**.
 
 #### `04_algorithmic_paradigms/10_greedy_matroids_primal_dual_and_approximation.md`
 
-Đưa greedy từ các rule riêng lẻ lên cấu trúc tổng quát: independence systems, matroid exchange, graphic/partition matroid, primal–dual, Set Cover approximation, submodular diminishing returns, lazy greedy, online competitive analysis, local search và greedy + binary search/heap/DSU.
+Đưa greedy từ các quy tắc (rule / 규칙) riêng lẻ lên cấu trúc tổng quát: independence các hệ thống (systems / 시스템들), matroid exchange, graphic/partition matroid, primal–dual, Set Cover approximation, submodular diminishing returns, lazy greedy, online competitive phân tích (analysis / 분석), cục bộ (local / 로컬) tìm kiếm (search / 검색) và greedy + tìm kiếm nhị phân (binary search / 이진 탐색)/vùng nhớ động (heap / 힙)/DSU.
 
-Mục tiêu là trả lời sâu hơn câu hỏi: **vì sao một local choice có thể được khóa?**
+Mục tiêu là trả lời sâu hơn câu hỏi: **vì sao một cục bộ (local / 로컬) choice có thể được khóa?**
 
 #### `04_algorithmic_paradigms/11_constraint_search_branch_and_bound.md`
 
-Mở rộng Backtracking thành CSP/solver reasoning: forward checking, constraint propagation, arc consistency, MRV/LCV, symmetry breaking, canonical state, Branch-and-Bound, relaxation, best-first search, alpha-beta, transposition table, Zobrist hashing, SAT-style clause learning, iterative deepening, IDA*, dominance/Pareto frontier, reversible/persistent state, parallel và anytime search.
+Mở rộng Backtracking thành CSP/solver lập luận (reasoning / 추론): forward checking, ràng buộc (constraint / 제약조건) propagation, arc consistency, MRV/LCV, symmetry breaking, chuẩn gốc (canonical / 정본) trạng thái (state / 상태), Branch-and-Bound, relaxation, best-first tìm kiếm (search / 검색), alpha-beta, transposition bảng (table / 테이블), Zobrist hashing, SAT-style clause học tập (learning / 학습), iterative deepening, IDA*, dominance/Pareto frontier, reversible/persistent trạng thái (state / 상태), parallel và anytime tìm kiếm (search / 검색).
 
 Mục tiêu là chuyển tư duy từ “viết DFS đệ quy” sang **quản lý thông tin để chứng minh càng nhiều branch là không cần mở càng sớm càng tốt**.
+
+
+> **Chuyển mạch:** Từ **Trạng thái các pass nội dung**, ta sang **Đánh giá độ sâu hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Đánh giá độ sâu hiện tại
 
@@ -178,19 +187,22 @@ case study cache/allocator/compiler/search engine
 notation và terminology consistency toàn library
 ```
 
-## Tiêu chí “đủ sâu” cho các lần review sau
+
+> **Chuyển mạch:** Từ **Đánh giá độ sâu hiện tại**, ta sang **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau
 
 Một chapter chỉ được xem là hoàn thiện khi người đọc có thể trả lời, nếu các câu hỏi đó liên quan tới chủ đề:
 
 1. Khái niệm giải quyết vấn đề gì và tại sao cần nó?
 2. Cách biểu diễn và bất biến là gì?
 3. Vì sao thao tác/thuật toán đúng?
-4. Complexity đến từ đâu, thuộc worst-case/expected/amortized/high-probability loại nào?
-5. Khi nào các giả định hoặc invariant bị phá?
-6. Implementation trong C/Java/JavaScript có caveat quan trọng gì?
+4. độ phức tạp (complexity / 복잡도) đến từ đâu, thuộc worst-case/expected/amortized/high-probability loại nào?
+5. Khi nào các giả định hoặc bất biến (invariant / 불변식) bị phá?
+6. hiện thực (implementation / 구현) trong C/Java/JavaScript có caveat quan trọng gì?
 7. Có thể kiểm thử/validate bằng cách nào?
-8. Nó liên hệ với database/network/OS/runtime hoặc cấu trúc nào khác?
+8. Nó liên hệ với cơ sở dữ liệu (database / 데이터베이스)/mạng (network / 네트워크)/OS/thời gian chạy (runtime / 런타임) hoặc cấu trúc nào khác?
 9. Khi nào không nên dùng nó?
-10. Có biến thể nào đáng chọn khi workload thay đổi?
+10. Có biến thể nào đáng chọn khi tải công việc (workload / 워크로드) thay đổi?
 
 Nếu chapter thiếu một lớp quan trọng trong số này, nó vẫn là ứng viên cho pass tiếp theo.

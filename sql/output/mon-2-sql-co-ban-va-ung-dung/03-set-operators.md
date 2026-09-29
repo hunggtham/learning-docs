@@ -10,6 +10,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
 
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **Set Operators** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
@@ -92,7 +96,7 @@ Ta bắt đầu **제2절 집합 연산자 — Set Operators** bằng câu hỏi
 
 Bây giờ sang phần thứ hai trong ảnh.
 
-Set Operator kết hợp **kết quả của các SELECT**, không phải JOIN column theo chiều ngang.
+Set Operator kết hợp **kết quả của các SELECT**, không phải phép nối (join / 조인) column theo chiều ngang.
 
 Có 4 loại chính:
 
@@ -115,7 +119,7 @@ Ta bắt đầu **30. JOIN và Set Operator khác nhau như thế nào?** bằng
 
 Đây là cách hiểu cực nhanh.
 
-JOIN:
+Phép nối (join / 조인):
 
 ```text
 Table A       Table B
@@ -401,7 +405,7 @@ FROM B;
 ---
 
 **각 위치의 데이터 타입은 서로 호환 가능해야 한다.**
-→ Data type của các column ở cùng vị trí phải tương thích.
+→ dữ liệu (data / 데이터) kiểu (type / 타입) của các column ở cùng vị trí phải tương thích.
 
 Tức là:
 
@@ -435,7 +439,7 @@ Ta bắt đầu **36. Tên column kết quả lấy từ SELECT đầu tiên** b
 Ảnh nhấn mạnh:
 
 **전체 집합의 컬럼명과 데이터 타입은 첫 번째 집합에 의해 결정된다.**
-→ Tên cột hiển thị của kết quả set operation chủ yếu dựa vào SELECT đầu tiên; kiểu dữ liệu phải tương thích giữa các nhánh.
+→ Tên cột hiển thị của kết quả set thao tác (operation / 연산) chủ yếu dựa vào SELECT đầu tiên; kiểu dữ liệu phải tương thích giữa các nhánh.
 
 Ví dụ:
 
@@ -451,7 +455,7 @@ SELECT deptno,
 FROM dept;
 ```
 
-Tên output:
+Tên đầu ra (output / 출력):
 
 ```text
 ID
@@ -477,8 +481,8 @@ Ta bắt đầu **37. ORDER BY với Set Operator** bằng câu hỏi: **ta đan
 
 Ảnh có câu rất quan trọng:
 
-**개별 SELECT 문에는 ORDER BY를 사용할 수 없고 전체 집합 결과의 마지막에 사용한다.**
-→ Trong dạng set query thông thường, `ORDER BY` được đặt ở **cuối toàn bộ phép tập hợp**, không đặt trực tiếp sau từng SELECT thành phần.
+**개별 SELECT 문에는 thứ tự (order / 순서) BY를 사용할 수 없고 전체 집합 결과의 마지막에 사용한다.**
+→ Trong dạng set truy vấn (query / 쿼리) thông thường, `ORDER BY` được đặt ở **cuối toàn bộ phép tập hợp**, không đặt trực tiếp sau từng SELECT thành phần.
 
 Sai dạng cơ bản:
 
@@ -555,7 +559,7 @@ FROM OLD_EMP
 GROUP BY DEPTNO;
 ```
 
-Vì `GROUP BY` là logic nội bộ của từng SELECT.
+Vì `GROUP BY` là lô-gic (logic / 논리) nội bộ của từng SELECT.
 
 Còn `ORDER BY` thường dùng để sắp xếp **kết quả cuối cùng**.
 
@@ -623,7 +627,7 @@ Correlated Subquery
 Vì:
 
 * `Scalar` mô tả **hình dạng/vị trí kết quả**.
-* `Correlated` mô tả **quan hệ phụ thuộc với main query**.
+* `Correlated` mô tả **quan hệ phụ thuộc với main truy vấn (query / 쿼리)**.
 
 Đây là chỗ rất nhiều người học nhầm.
 
@@ -759,7 +763,7 @@ Subquery:
 WHERE E1.DEPTNO = E2.DEPTNO
 ```
 
-trong đó `E1` thuộc outer/main query →
+trong đó `E1` thuộc outer/main truy vấn (query / 쿼리) →
 
 Khi gom phần **⭐ Correlated** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 

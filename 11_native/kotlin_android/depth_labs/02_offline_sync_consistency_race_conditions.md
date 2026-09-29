@@ -1,12 +1,15 @@
-# Depth Lab 02 — Offline-First, Consistency, Race Condition và Sync Correctness
+# Độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)
 
-Offline-first không có nghĩa đơn giản là “lưu dữ liệu vào Room để app vẫn mở được khi mất mạng”. Một hệ thống offline-first thật sự phải trả lời những câu khó hơn: local và remote có thể lệch nhau bao lâu, mutation nào được phép reorder, retry có tạo duplicate effect không, nhiều device cùng sửa thì merge thế nào, logout giữa lúc sync ra sao, và nếu app bị kill sau local commit nhưng trước remote commit thì user intent có còn tồn tại hay không.
+> **Mạch đọc:** Đặt **độ sâu (depth / 깊이) Lab 02 — Offline-First, Consistency, Race điều kiện (condition / 조건) và Sync tính đúng đắn (correctness / 정확성)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trước tiên phải phân biệt ba khái niệm: nguồn chuẩn (source of truth / 정본), authority và replica** sang **2. Consistency mô hình (model / 모델) phải được chọn có chủ ý**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Depth Lab này đi sâu vào **consistency model** và **failure semantics** của sync engine.
+
+Offline-first không có nghĩa đơn giản là “lưu dữ liệu vào Room để app vẫn mở được khi mất mạng”. Một hệ thống offline-first thật sự phải trả lời những câu khó hơn: cục bộ (local / 로컬) và remote có thể lệch nhau bao lâu, mutation nào được phép reorder, thử lại (retry / 재시도) có tạo duplicate tác động (effect / 효과) không, nhiều thiết bị (device / 장치) cùng sửa thì merge thế nào, logout giữa lúc sync ra sao, và nếu app bị kill sau cục bộ (local / 로컬) lần ghi nhận (commit / 커밋) nhưng trước remote lần ghi nhận (commit / 커밋) thì người dùng (user / 사용자) intent có còn tồn tại hay không.
+
+Độ sâu (depth / 깊이) Lab này đi sâu vào **consistency mô hình (model / 모델)** và **thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** của sync engine.
 
 ---
 
-## 1. Trước tiên phải phân biệt ba khái niệm: source of truth, authority và replica
+## 1. Trước tiên phải phân biệt ba khái niệm: nguồn chuẩn (source of truth / 정본), authority và replica
 
 Trong nhiều app offline-first:
 
@@ -18,9 +21,9 @@ Device local DB = một replica có thể tạm lệch server
 
 Ba vai trò này không mâu thuẫn.
 
-UI đọc Room để có trải nghiệm reactive và offline. Server vẫn có thể là nơi quyết định business rule cuối cùng. Room có thể chứa desired state chưa được server xác nhận.
+UI đọc Room để có trải nghiệm reactive và offline. máy chủ (server / 서버) vẫn có thể là nơi quyết định nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) cuối cùng. Room có thể chứa desired trạng thái (state / 상태) chưa được máy chủ (server / 서버) xác nhận.
 
-Điều nguy hiểm là dùng từ “source of truth” mà không nói rõ phạm vi. Hãy luôn hỏi:
+Điều nguy hiểm là dùng từ “nguồn chuẩn (source of truth / 정본)” mà không nói rõ phạm vi. Hãy luôn hỏi:
 
 ```text
 truth cho UI hiện tại?
@@ -33,9 +36,9 @@ Ví dụ permission server-side không bao giờ nên lấy Room làm authority 
 
 ---
 
-## 2. Consistency model phải được chọn có chủ ý
+## 2. Consistency mô hình (model / 모델) phải được chọn có chủ ý
 
-Không phải mọi feature cần strong consistency.
+Không phải mọi tính năng (feature / 기능) cần strong consistency.
 
 Một bookmark có thể chấp nhận eventual consistency:
 
@@ -43,16 +46,16 @@ Một bookmark có thể chấp nhận eventual consistency:
 user tap -> local update ngay -> sync server sau
 ```
 
-Nhưng chuyển tiền không thể chỉ “sync khi có mạng” theo cùng mental model.
+Nhưng chuyển tiền không thể chỉ “sync khi có mạng” theo cùng mô hình tư duy (mental model / 사고 모델).
 
-Hãy phân loại operation:
+Hãy phân loại thao tác (operation / 연산):
 
 | Loại dữ liệu | Consistency thường phù hợp |
 |---|---|
 | UI preference | local-first |
 | bookmark/favorite | eventual consistency |
-| social like | eventual + conflict policy |
-| draft document | local durable + merge/versioning |
+| xã hội (social / 사회적) like | eventual + xung đột (conflict / 충돌) chính sách (policy / 정책) |
+| draft document | cục bộ (local / 로컬) durable + merge/versioning |
 | inventory reservation | server-authoritative |
 | payment | server-authoritative + idempotency |
 | authorization | server-authoritative |
@@ -61,18 +64,18 @@ Offline-first là chiến lược, không phải dogma áp cho mọi mutation.
 
 ---
 
-## 3. Outbox pattern bảo vệ user intent khỏi process death
+## 3. Outbox mẫu (pattern / 패턴) bảo vệ người dùng (user / 사용자) intent khỏi tiến trình (process / 프로세스) death
 
-Nếu code làm:
+Nếu mã (code / 코드) làm:
 
 ```kotlin
 localDao.setBookmarked(id, true)
 api.setBookmarked(id, true)
 ```
 
-và process chết sau dòng đầu, local state đã đổi nhưng không còn thứ gì nhắc hệ thống phải sync server.
+và tiến trình (process / 프로세스) chết sau dòng đầu, cục bộ (local / 로컬) trạng thái (state / 상태) đã đổi nhưng không còn thứ gì nhắc hệ thống phải sync máy chủ (server / 서버).
 
-Outbox giải quyết bằng cách transactionally lưu cả state và pending intent:
+Outbox giải quyết bằng cách transactionally lưu cả trạng thái (state / 상태) và pending intent:
 
 ```text
 transaction
@@ -80,7 +83,7 @@ transaction
 └── insert mutation into outbox
 ```
 
-Sau transaction, invariant là:
+Sau giao dịch (transaction / 트랜잭션), bất biến (invariant / 불변식) là:
 
 ```text
 nếu local state cần remote sync
@@ -91,9 +94,9 @@ Worker chỉ là executor đọc outbox. Worker có chết thì intent vẫn cò
 
 ---
 
-## 4. Outbox row phải mô tả intent, không chỉ request body
+## 4. Outbox row phải mô tả intent, không chỉ yêu cầu (request / 요청) body
 
-Một outbox tốt thường cần metadata như:
+Một outbox tốt thường cần siêu dữ liệu (metadata / 메타데이터) như:
 
 ```kotlin
 data class PendingMutation(
@@ -110,15 +113,15 @@ data class PendingMutation(
 )
 ```
 
-`accountId` đặc biệt quan trọng. Nếu user logout rồi login account khác, worker không được vô tình gửi mutation của account cũ với token mới.
+`accountId` đặc biệt quan trọng. Nếu người dùng (user / 사용자) logout rồi login account khác, worker không được vô tình gửi mutation của account cũ với đơn vị từ (token / 토큰) mới.
 
-Mutation ownership phải được namespace theo session/account.
+Mutation quyền sở hữu (ownership / 소유권) phải được không gian tên (namespace / 네임스페이스) theo session/account.
 
 ---
 
-## 5. Retry policy phải bắt đầu từ idempotency
+## 5. thử lại (retry / 재시도) chính sách (policy / 정책) phải bắt đầu từ idempotency
 
-Retry an toàn nếu operation có thể thực hiện nhiều lần mà business outcome không đổi.
+Thử lại (retry / 재시도) an toàn nếu thao tác (operation / 연산) có thể thực hiện nhiều lần mà nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과) không đổi.
 
 Ví dụ tốt:
 
@@ -129,7 +132,7 @@ PUT /articles/42/bookmark
 }
 ```
 
-Gửi `true` năm lần vẫn có cùng outcome.
+Gửi `true` năm lần vẫn có cùng kết quả (outcome / 결과).
 
 Nguy hiểm hơn:
 
@@ -137,34 +140,34 @@ Nguy hiểm hơn:
 POST /articles/42/toggle-bookmark
 ```
 
-Nếu response lần đầu bị mất rồi client retry, bookmark có thể bị toggle hai lần và quay về trạng thái cũ.
+Nếu phản hồi (response / 응답) lần đầu bị mất rồi máy khách (client / 클라이언트) thử lại (retry / 재시도), bookmark có thể bị toggle hai lần và quay về trạng thái cũ.
 
-Design API nên ưu tiên **set desired state** thay vì “toggle” khi operation cần retry.
+Thiết kế (design / 설계) API nên ưu tiên **set desired trạng thái (state / 상태)** thay vì “toggle” khi thao tác (operation / 연산) cần thử lại (retry / 재시도).
 
 ---
 
-## 6. Idempotency key bảo vệ operation có side effect
+## 6. Idempotency key bảo vệ thao tác (operation / 연산) có side tác động (effect / 효과)
 
-Với operation không tự nhiên idempotent, dùng mutation id:
+Với thao tác (operation / 연산) không tự nhiên idempotent, dùng mutation id:
 
 ```http
 POST /payments
 Idempotency-Key: 55c0f6d2-...
 ```
 
-Server lưu mapping:
+Máy chủ (server / 서버) lưu ánh xạ (mapping / 매핑):
 
 ```text
 idempotencyKey -> result
 ```
 
-Nếu client retry cùng key, server trả result cũ.
+Nếu máy khách (client / 클라이언트) thử lại (retry / 재시도) cùng key, máy chủ (server / 서버) trả kết quả (result / 결과) cũ.
 
-Điểm quan trọng là mutation id phải được tạo **trước lần gửi đầu tiên** và persist cùng durable intent. Tạo UUID mới cho mỗi retry phá toàn bộ ý nghĩa idempotency.
+Điểm quan trọng là mutation id phải được tạo **trước lần gửi đầu tiên** và persist cùng durable intent. Tạo UUID mới cho mỗi thử lại (retry / 재시도) phá toàn bộ ý nghĩa idempotency.
 
 ---
 
-## 7. Timeout không đồng nghĩa operation thất bại
+## 7. hết thời gian chờ (timeout / 타임아웃) không đồng nghĩa thao tác (operation / 연산) thất bại
 
 Timeline:
 
@@ -177,9 +180,9 @@ T4 network đứt
 T5 client timeout
 ```
 
-Client chỉ biết “không nhận response”, không biết server có commit hay chưa.
+Máy khách (client / 클라이언트) chỉ biết “không nhận phản hồi (response / 응답)”, không biết máy chủ (server / 서버) có lần ghi nhận (commit / 커밋) hay chưa.
 
-Đây là ambiguous outcome.
+Đây là ambiguous kết quả (outcome / 결과).
 
 Vì vậy:
 
@@ -193,19 +196,19 @@ không phải luôn:
 timeout -> FAILED
 ```
 
-Với operation quan trọng, client cần idempotency hoặc endpoint query trạng thái operation.
+Với thao tác (operation / 연산) quan trọng, máy khách (client / 클라이언트) cần idempotency hoặc endpoint truy vấn (query / 쿼리) trạng thái thao tác (operation / 연산).
 
 ---
 
 ## 8. Exponential backoff không đủ nếu không có jitter
 
-Nếu hàng trăm nghìn device cùng retry sau outage với lịch:
+Nếu hàng trăm nghìn thiết bị (device / 장치) cùng thử lại (retry / 재시도) sau outage với lịch:
 
 ```text
 1s, 2s, 4s, 8s, 16s
 ```
 
-chúng có thể cùng quay lại server đúng những thời điểm giống nhau, tạo **thundering herd**.
+chúng có thể cùng quay lại máy chủ (server / 서버) đúng những thời điểm giống nhau, tạo **thundering herd**.
 
 Thêm jitter:
 
@@ -214,9 +217,9 @@ baseDelay = 8s
 actualDelay = random(4s..12s)
 ```
 
-Mục tiêu là phân tán retry load.
+Mục tiêu là phân tán thử lại (retry / 재시도) tải (load / 로드).
 
-Retry policy nên dựa trên error class:
+Thử lại (retry / 재시도) chính sách (policy / 정책) nên dựa trên lỗi (error / 오류) lớp (class / 클래스):
 
 ```text
 network unavailable -> retry
@@ -230,9 +233,9 @@ HTTP 403 -> không retry như network error
 
 ---
 
-## 9. Ordering chỉ cần được bảo vệ khi business yêu cầu
+## 9. thứ tự (ordering / 순서) chỉ cần được bảo vệ khi nghiệp vụ (business / 비즈니스) yêu cầu
 
-Giả sử user thao tác:
+Giả sử người dùng (user / 사용자) thao tác:
 
 ```text
 T1 bookmark = true
@@ -240,9 +243,9 @@ T2 bookmark = false
 T3 bookmark = true
 ```
 
-Nếu ba mutation được gửi song song, response có thể về thứ tự khác.
+Nếu ba mutation được gửi song song, phản hồi (response / 응답) có thể về thứ tự khác.
 
-Nếu API dùng desired state và server last-write-wins theo version, ta có thể collapse queue.
+Nếu API dùng desired trạng thái (state / 상태) và máy chủ (server / 서버) last-write-wins theo phiên bản (version / 버전), ta có thể collapse hàng đợi (queue / 큐).
 
 Thay vì gửi 3 mutation:
 
@@ -252,19 +255,19 @@ false
 true
 ```
 
-có thể chỉ cần giữ desired state cuối:
+có thể chỉ cần giữ desired trạng thái (state / 상태) cuối:
 
 ```text
 true
 ```
 
-Nhưng chỉ được compact nếu semantics cho phép.
+Nhưng chỉ được compact nếu ngữ nghĩa (semantics / 의미론) cho phép.
 
-Một sequence “create comment -> edit comment -> delete comment” không thể compact tùy tiện nếu remote identity chưa tồn tại.
+Một chuỗi (sequence / 시퀀스) “create comment -> edit comment -> delete comment” không thể compact tùy tiện nếu remote định danh (identity / 식별자) chưa tồn tại.
 
 ---
 
-## 10. Queue compaction giúp giảm sync debt
+## 10. hàng đợi (queue / 큐) compaction giúp giảm sync debt
 
 Với preference-like mutation, outbox có thể compact:
 
@@ -280,25 +283,25 @@ thành:
 SET_BOOKMARK true
 ```
 
-Điều này giảm request count và thời gian recovery sau offline dài.
+Điều này giảm yêu cầu (request / 요청) count và thời gian khôi phục (recovery / 복구) sau offline dài.
 
-Tuy nhiên mutation compaction phải bảo vệ audit/business semantics. Payment event, analytics cần ordering hoặc append-only history có thể không được compact.
+Tuy nhiên mutation compaction phải bảo vệ kiểm tra (audit / 감사)/nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론). Payment sự kiện (event / 이벤트), analytics cần thứ tự (ordering / 순서) hoặc append-only lịch sử (history / 이력) có thể không được compact.
 
 ---
 
-## 11. Version number giúp chống stale response overwrite
+## 11. phiên bản (version / 버전) number giúp chống stale phản hồi (response / 응답) overwrite
 
-Giả sử local entity có:
+Giả sử cục bộ (local / 로컬) thực thể (entity / 엔터티) có:
 
 ```text
 version = 10
 ```
 
-Client gửi update A dựa trên version 10. Trong khi request đang chạy, update B từ device khác đưa server lên version 11.
+Máy khách (client / 클라이언트) gửi cập nhật (update / 업데이트) A dựa trên phiên bản (version / 버전) 10. Trong khi yêu cầu (request / 요청) đang chạy, cập nhật (update / 업데이트) B từ thiết bị (device / 장치) khác đưa máy chủ (server / 서버) lên phiên bản (version / 버전) 11.
 
-Nếu response cũ từ A về trễ và client ghi đè local state không kiểm tra version, dữ liệu mới có thể bị mất.
+Nếu phản hồi (response / 응답) cũ từ A về trễ và máy khách (client / 클라이언트) ghi đè cục bộ (local / 로컬) trạng thái (state / 상태) không kiểm tra phiên bản (version / 버전), dữ liệu mới có thể bị mất.
 
-Một pattern:
+Một mẫu (pattern / 패턴):
 
 ```kotlin
 if (incoming.version >= current.version) {
@@ -306,55 +309,55 @@ if (incoming.version >= current.version) {
 }
 ```
 
-Nhưng version policy phải do backend contract định nghĩa. Timestamp client không phải lúc nào đáng tin vì clock skew.
+Nhưng phiên bản (version / 버전) chính sách (policy / 정책) phải do backend đặc tả hợp đồng (contract / 계약) định nghĩa. Timestamp máy khách (client / 클라이언트) không phải lúc nào đáng tin vì clock skew.
 
 ---
 
-## 12. Optimistic concurrency control và If-Match
+## 12. Optimistic tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) và If-Match
 
-Server có thể yêu cầu client gửi version đã đọc:
+Máy chủ (server / 서버) có thể yêu cầu máy khách (client / 클라이언트) gửi phiên bản (version / 버전) đã đọc:
 
 ```http
 PUT /document/42
 If-Match: "v10"
 ```
 
-Nếu server hiện là v11:
+Nếu máy chủ (server / 서버) hiện là v11:
 
 ```http
 412 Precondition Failed
 ```
 
-Client lúc đó biết rõ đã có conflict thay vì silently overwrite.
+Máy khách (client / 클라이언트) lúc đó biết rõ đã có xung đột (conflict / 충돌) thay vì silently overwrite.
 
-Điều này đặc biệt hữu ích với document edit, profile hoặc resource có concurrent writer.
+Điều này đặc biệt hữu ích với document edit, profile hoặc tài nguyên (resource / 자원) có concurrent writer.
 
 ---
 
 ## 13. Last-write-wins đơn giản nhưng cần hiểu điều gì đang bị mất
 
-LWW thường dựa trên timestamp hoặc server revision.
+LWW thường dựa trên timestamp hoặc máy chủ (server / 서버) revision.
 
 Ưu điểm: dễ implement.
 
 Nhược điểm: một writer có thể xóa thay đổi của writer khác mà không biết.
 
-Ví dụ hai device edit profile:
+Ví dụ hai thiết bị (device / 장치) edit profile:
 
 ```text
 Device A: đổi avatar
 Device B: đổi display name
 ```
 
-Nếu toàn resource dùng LWW, update B có thể ghi lại avatar cũ.
+Nếu toàn tài nguyên (resource / 자원) dùng LWW, cập nhật (update / 업데이트) B có thể ghi lại avatar cũ.
 
-Tách field-level patch hoặc merge semantics có thể tránh lost update.
+Tách field-level patch hoặc merge ngữ nghĩa (semantics / 의미론) có thể tránh lost cập nhật (update / 업데이트).
 
 ---
 
-## 14. Conflict resolution nên dựa theo domain semantics
+## 14. giải quyết xung đột (conflict resolution / 충돌 해결) nên dựa theo lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론)
 
-Không có một thuật toán conflict chung cho mọi feature.
+Không có một thuật toán xung đột (conflict / 충돌) chung cho mọi tính năng (feature / 기능).
 
 Ví dụ:
 
@@ -366,19 +369,19 @@ profile fields -> field-level merge
 bank balance -> không client-merge
 ```
 
-Senior design là chọn conflict model theo domain, không theo thư viện đang dùng.
+Cấp cao (senior / 시니어) thiết kế (design / 설계) là chọn xung đột (conflict / 충돌) mô hình (model / 모델) theo lĩnh vực (domain / 도메인), không theo thư viện đang dùng.
 
 ---
 
 ## 15. Tombstone cần thiết khi delete cũng phải sync
 
-Nếu delete local row ngay lập tức:
+Nếu delete cục bộ (local / 로컬) row ngay lập tức:
 
 ```sql
 DELETE FROM article WHERE id = 42
 ```
 
-worker sau đó không còn biết entity nào cần delete remote.
+worker sau đó không còn biết thực thể (entity / 엔터티) nào cần delete remote.
 
 Tombstone giữ dấu vết:
 
@@ -388,9 +391,9 @@ deleted = true
 syncState = PENDING_DELETE
 ```
 
-Sau remote confirmation mới purge vật lý khi policy cho phép.
+Sau remote confirmation mới purge vật lý khi chính sách (policy / 정책) cho phép.
 
-Tombstone cũng giúp server/client phân biệt:
+Tombstone cũng giúp máy chủ (server / 서버)/máy khách (client / 클라이언트) phân biệt:
 
 ```text
 entity chưa từng tồn tại
@@ -416,22 +419,22 @@ cho tôi tất cả thay đổi kể từ checkpoint X
 
 Đừng mặc định một pagination API có thể dùng làm sync API.
 
-Sync API tốt thường có server-defined token:
+Sync API tốt thường có server-defined đơn vị từ (token / 토큰):
 
 ```text
 GET /sync?cursor=abc123
 -> changes + nextCursor
 ```
 
-Client chỉ advance cursor sau khi apply local transaction thành công.
+Máy khách (client / 클라이언트) chỉ advance cursor sau khi apply cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) thành công.
 
-Nếu advance trước rồi crash trước local commit, client có thể bỏ mất change vĩnh viễn.
+Nếu advance trước rồi crash trước cục bộ (local / 로컬) lần ghi nhận (commit / 커밋), máy khách (client / 클라이언트) có thể bỏ mất thay đổi (change / 변경) vĩnh viễn.
 
 ---
 
-## 17. Checkpoint phải commit cùng data
+## 17. Checkpoint phải lần ghi nhận (commit / 커밋) cùng dữ liệu (data / 데이터)
 
-Invariant:
+Bất biến (invariant / 불변식):
 
 ```text
 local applied changes và sync cursor phải tiến cùng transaction
@@ -446,7 +449,7 @@ db.withTransaction {
 }
 ```
 
-Nếu app chết trước transaction commit, cả data và cursor rollback. Lần sau fetch lại batch cũ — an toàn nếu apply idempotent.
+Nếu app chết trước giao dịch (transaction / 트랜잭션) lần ghi nhận (commit / 커밋), cả dữ liệu (data / 데이터) và cursor quay lui (rollback / 롤백). Lần sau fetch lại batch cũ — an toàn nếu apply idempotent.
 
 ---
 
@@ -456,15 +459,15 @@ Không có câu trả lời chung.
 
 ### Push-before-pull
 
-Ưu điểm: user intent local được gửi nhanh.
+Ưu điểm: người dùng (user / 사용자) intent cục bộ (local / 로컬) được gửi nhanh.
 
-Rủi ro: server đã có version mới; mutation có thể conflict.
+Rủi ro: máy chủ (server / 서버) đã có phiên bản (version / 버전) mới; mutation có thể xung đột (conflict / 충돌).
 
 ### Pull-before-push
 
-Ưu điểm: client update local base trước.
+Ưu điểm: máy khách (client / 클라이언트) cập nhật (update / 업데이트) cục bộ (local / 로컬) cơ sở (base / 기반) trước.
 
-Rủi ro: user mutation phải đợi; merge policy vẫn cần.
+Rủi ro: người dùng (user / 사용자) mutation phải đợi; merge chính sách (policy / 정책) vẫn cần.
 
 Nhiều sync engine dùng cycle:
 
@@ -475,19 +478,19 @@ Nhiều sync engine dùng cycle:
 4. pull acknowledgement/final state nếu cần
 ```
 
-Nhưng domain và API contract quyết định ordering thật.
+Nhưng lĩnh vực (domain / 도메인) và Đặc tả API (API contract / API 계약) quyết định thứ tự (ordering / 순서) thật.
 
 ---
 
-## 19. WorkManager là scheduler, không phải sync architecture
+## 19. WorkManager là scheduler, không phải sync kiến trúc (architecture / 아키텍처)
 
-WorkManager giúp đảm bảo durable background execution theo constraint. Nó không tự quyết định:
+WorkManager giúp đảm bảo durable background thực thi (execution / 실행) theo ràng buộc (constraint / 제약조건). Nó không tự quyết định:
 
-- source of truth,
+- nguồn chuẩn (source of truth / 정본),
 - idempotency,
-- ordering,
-- conflict policy,
-- account ownership,
+- thứ tự (ordering / 순서),
+- xung đột (conflict / 충돌) chính sách (policy / 정책),
+- account quyền sở hữu (ownership / 소유권),
 - cursor atomicity.
 
 Worker nên mỏng:
@@ -506,11 +509,11 @@ class SyncWorker(
 }
 ```
 
-Logic correctness nằm trong SyncEngine/data layer, không chôn trong Android scheduling callback.
+Lô-gic (logic / 논리) tính đúng đắn (correctness / 정확성) nằm trong SyncEngine/dữ liệu (data / 데이터) tầng (layer / 계층), không chôn trong Android scheduling callback.
 
 ---
 
-## 20. Unique work giúp tránh duplicate scheduler, không thay idempotency
+## 20. Unique công việc (work / 작업) giúp tránh duplicate scheduler, không thay idempotency
 
 Có thể enqueue:
 
@@ -524,11 +527,11 @@ WorkManager.getInstance(context).enqueueUniqueWork(
 
 Điều này giảm duplicate workers.
 
-Nhưng vẫn phải assume worker có thể chạy lại sau process restart, retry hoặc framework behavior. Operation bên trong vẫn cần idempotent.
+Nhưng vẫn phải assume worker có thể chạy lại sau tiến trình (process / 프로세스) restart, thử lại (retry / 재시도) hoặc khung phần mềm (framework / 프레임워크) hành vi (behavior / 동작). thao tác (operation / 연산) bên trong vẫn cần idempotent.
 
 ---
 
-## 21. Logout là một consistency event lớn
+## 21. Logout là một consistency sự kiện (event / 이벤트) lớn
 
 Khi logout, phải quyết định:
 
@@ -540,9 +543,9 @@ worker đang chạy có cancel không?
 request in-flight dùng token cũ hay mới?
 ```
 
-Một lỗi nguy hiểm là worker account A retry sau khi user login account B và lấy token B từ singleton session provider.
+Một lỗi nguy hiểm là worker account A thử lại (retry / 재시도) sau khi người dùng (user / 사용자) login account B và lấy đơn vị từ (token / 토큰) B từ singleton session provider.
 
-Mọi durable data liên quan session nên namespace theo account identity hoặc bị clear rõ ràng.
+Mọi durable dữ liệu (data / 데이터) liên quan session nên không gian tên (namespace / 네임스페이스) theo account định danh (identity / 식별자) hoặc bị clear rõ ràng.
 
 ---
 
@@ -556,7 +559,7 @@ logout
 login B -> epoch 42
 ```
 
-Worker/request capture epoch lúc bắt đầu. Trước khi commit result:
+Worker/yêu cầu (request / 요청) capture epoch lúc bắt đầu. Trước khi lần ghi nhận (commit / 커밋) kết quả (result / 결과):
 
 ```kotlin
 if (capturedEpoch != sessionManager.currentEpoch) {
@@ -564,13 +567,13 @@ if (capturedEpoch != sessionManager.currentEpoch) {
 }
 ```
 
-Điều này giúp chặn response từ session cũ ghi vào state session mới.
+Điều này giúp chặn phản hồi (response / 응답) từ session cũ ghi vào trạng thái (state / 상태) session mới.
 
 ---
 
-## 23. Stale network response cần guard
+## 23. Stale mạng (network / 네트워크) phản hồi (response / 응답) cần guard
 
-Ví dụ user search:
+Ví dụ người dùng (user / 사용자) tìm kiếm (search / 검색):
 
 ```text
 T0 query = "ko"
@@ -581,16 +584,16 @@ T4 B complete
 T5 A complete
 ```
 
-Nếu A ghi result cuối cùng, UI quay về data của query cũ.
+Nếu A ghi kết quả (result / 결과) cuối cùng, UI quay về dữ liệu (data / 데이터) của truy vấn (query / 쿼리) cũ.
 
 Có nhiều cách bảo vệ:
 
 - `flatMapLatest`,
-- cancel request cũ,
-- generation/request token,
-- compare query trước commit.
+- cancel yêu cầu (request / 요청) cũ,
+- generation/yêu cầu (request / 요청) đơn vị từ (token / 토큰),
+- compare truy vấn (query / 쿼리) trước lần ghi nhận (commit / 커밋).
 
-Flow operator chỉ là công cụ. Invariant thật là:
+Luồng (flow / 흐름) operator chỉ là công cụ. bất biến (invariant / 불변식) thật là:
 
 ```text
 result của request cũ không được thay thế state của request mới hơn
@@ -598,9 +601,9 @@ result của request cũ không được thay thế state của request mới h�
 
 ---
 
-## 24. Local optimistic state cần phân biệt confirmed và desired
+## 24. cục bộ (local / 로컬) optimistic trạng thái (state / 상태) cần phân biệt confirmed và desired
 
-Một model hữu ích:
+Một mô hình (model / 모델) hữu ích:
 
 ```kotlin
 data class SyncableField<T>(
@@ -610,17 +613,17 @@ data class SyncableField<T>(
 )
 ```
 
-Nếu server reject desired state, UI có đủ thông tin để:
+Nếu máy chủ (server / 서버) reject desired trạng thái (state / 상태), UI có đủ thông tin để:
 
-- rollback,
+- quay lui (rollback / 롤백),
 - giữ desired và báo lỗi,
-- yêu cầu user resolve.
+- yêu cầu người dùng (user / 사용자) resolve.
 
-Chỉ lưu một boolean không chứa đủ semantics.
+Chỉ lưu một boolean không chứa đủ ngữ nghĩa (semantics / 의미론).
 
 ---
 
-## 25. Partial failure khi batch sync
+## 25. Partial thất bại (failure / 실패) khi batch sync
 
 Batch 100 mutation có thể có:
 
@@ -633,13 +636,13 @@ Batch 100 mutation có thể có:
 
 Không nên chỉ trả `Boolean success`.
 
-Sync engine cần per-item outcome hoặc server contract atomic batch.
+Sync engine cần per-item kết quả (outcome / 결과) hoặc máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) atomic batch.
 
-Nếu batch là atomic, hoặc tất cả commit hoặc không. Nếu non-atomic, client phải persist kết quả từng mutation.
+Nếu batch là atomic, hoặc tất cả lần ghi nhận (commit / 커밋) hoặc không. Nếu non-atomic, máy khách (client / 클라이언트) phải persist kết quả từng mutation.
 
 ---
 
-## 26. Backpressure trong sync queue
+## 26. Backpressure trong sync hàng đợi (queue / 큐)
 
 Nếu app tạo mutation nhanh hơn khả năng upload, outbox tăng vô hạn.
 
@@ -653,15 +656,15 @@ success latency
 permanent failure count
 ```
 
-Sync correctness không chỉ là code path; observability cho biết hệ thống đang có sync debt hay không.
+Sync tính đúng đắn (correctness / 정확성) không chỉ là đường đi mã (code path / 코드 경로); khả năng quan sát (observability / 관측 가능성) cho biết hệ thống đang có sync debt hay không.
 
 ---
 
 ## 27. Poison mutation
 
-Một mutation malformed có thể fail mãi và chặn queue nếu worker xử lý strictly ordered.
+Một mutation malformed có thể thất bại (fail / 실패) mãi và chặn hàng đợi (queue / 큐) nếu worker xử lý strictly ordered.
 
-Cần policy:
+Cần chính sách (policy / 정책):
 
 ```text
 retry N lần
@@ -674,7 +677,7 @@ retry N lần
 
 ---
 
-## 28. Sync state machine nên explicit
+## 28. Sync máy trạng thái (state machine / 상태 머신) nên tường minh (explicit / 명시적)
 
 Ví dụ:
 
@@ -687,15 +690,15 @@ sealed interface MutationState {
 }
 ```
 
-Nếu app crash khi `InFlight`, startup recovery có thể đưa row về Pending vì network outcome chưa chắc biết. Idempotency key bảo vệ retry.
+Nếu app crash khi `InFlight`, startup khôi phục (recovery / 복구) có thể đưa row về Pending vì mạng (network / 네트워크) kết quả (outcome / 결과) chưa chắc biết. Idempotency key bảo vệ thử lại (retry / 재시도).
 
 ---
 
-## 29. Test sync bằng timeline và failure injection
+## 29. kiểm thử (test / 테스트) sync bằng timeline và thất bại (failure / 실패) injection
 
-Một suite tốt không chỉ test happy path.
+Một suite tốt không chỉ kiểm thử (test / 테스트) happy đường dẫn (path / 경로).
 
-Test các điểm:
+Kiểm thử (test / 테스트) các điểm:
 
 ```text
 crash sau local transaction
@@ -712,13 +715,13 @@ clock lệch
 network flapping
 ```
 
-Mỗi test phải assert invariant, không chỉ assert method được gọi.
+Mỗi kiểm thử (test / 테스트) phải assert bất biến (invariant / 불변식), không chỉ assert phương thức (method / 메서드) được gọi.
 
 ---
 
-## 30. Property-based test có giá trị với sync engine
+## 30. Property-based kiểm thử (test / 테스트) có giá trị với sync engine
 
-Có thể sinh ngẫu nhiên chuỗi event:
+Có thể sinh ngẫu nhiên chuỗi sự kiện (event / 이벤트):
 
 ```text
 local mutation
@@ -729,7 +732,7 @@ retry
 account switch
 ```
 
-Invariant cuối:
+Bất biến (invariant / 불변식) cuối:
 
 ```text
 không mất durable user intent
@@ -738,13 +741,13 @@ không duplicate business effect
 cursor không vượt quá data đã apply
 ```
 
-Property-based testing hữu ích vì race/order combination quá lớn để viết tay hết.
+Property-based testing hữu ích vì race/thứ tự (order / 순서) combination quá lớn để viết tay hết.
 
 ---
 
-## 31. Observability schema cho sync
+## 31. khả năng quan sát (observability / 관측 가능성) lược đồ (schema / 스키마) cho sync
 
-Log/trace nên có correlation fields:
+Log/dấu vết (trace / 추적) nên có correlation fields:
 
 ```text
 accountHash
@@ -758,9 +761,9 @@ outcome
 syncCycleId
 ```
 
-Không log token, raw PII hoặc payload nhạy cảm.
+Không log đơn vị từ (token / 토큰), raw PII hoặc payload nhạy cảm.
 
-Khi incident xảy ra, câu hỏi cần trả lời là:
+Khi sự cố (incident / 인시던트) xảy ra, câu hỏi cần trả lời là:
 
 ```text
 mutation nào bị stuck?
@@ -772,30 +775,30 @@ client version nào?
 
 ---
 
-## 32. Decision framework
+## 32. quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
-Trước khi build sync, trả lời:
+Trước khi bản dựng (build / 빌드) sync, trả lời:
 
 | Câu hỏi | Ý nghĩa |
 |---|---|
-| Local có được mutate khi offline không? | optimistic/local-first |
-| Server có authority cuối không? | validation/conflict |
-| Operation idempotent không? | retry safety |
-| Có concurrent writer không? | version/conflict |
-| Ordering có quan trọng không? | queue semantics |
+| cục bộ (local / 로컬) có được mutate khi offline không? | optimistic/local-first |
+| máy chủ (server / 서버) có authority cuối không? | kiểm tra hợp lệ (validation / 검증)/xung đột (conflict / 충돌) |
+| thao tác (operation / 연산) idempotent không? | thử lại (retry / 재시도) an toàn (safety / 안전) |
+| Có concurrent writer không? | phiên bản (version / 버전)/xung đột (conflict / 충돌) |
+| thứ tự (ordering / 순서) có quan trọng không? | hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론) |
 | Delete có cần sync không? | tombstone |
-| Mutation có account scope không? | session isolation |
-| Outcome có thể ambiguous không? | idempotency/query status |
-| Queue có thể compact không? | debt control |
-| Cursor commit cùng data chưa? | lost-update protection |
+| Mutation có account phạm vi (scope / 범위) không? | session isolation |
+| kết quả (outcome / 결과) có thể ambiguous không? | idempotency/truy vấn (query / 쿼리) status |
+| hàng đợi (queue / 큐) có thể compact không? | debt điều khiển (control / 제어) |
+| Cursor lần ghi nhận (commit / 커밋) cùng dữ liệu (data / 데이터) chưa? | lost-update protection |
 
 ---
 
 ## 33. Kết luận
 
-Offline-first đúng nghĩa là một distributed-system problem thu nhỏ trên mobile.
+Offline-first đúng nghĩa là một distributed-system bài toán (problem / 문제) thu nhỏ trên mobile.
 
-Mental model nên giữ:
+Mô hình tư duy (mental model / 사고 모델) nên giữ:
 
 ```text
 local intent
@@ -808,4 +811,6 @@ local intent
 -> observability
 ```
 
-Room và WorkManager chỉ giải quyết một phần cơ chế. Correctness đến từ consistency model, invariant, idempotency, versioning, failure classification và account isolation.
+Room và WorkManager chỉ giải quyết một phần cơ chế. tính đúng đắn (correctness / 정확성) đến từ consistency mô hình (model / 모델), bất biến (invariant / 불변식), idempotency, versioning, thất bại (failure / 실패) classification và account isolation.
+
+> **Bàn giao:** Sau **33. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

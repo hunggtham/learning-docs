@@ -1,5 +1,8 @@
 # Báo cáo tài chính và kế toán dành cho nhà đầu tư
 
+> **Mạch đọc:** Đặt **Báo cáo tài chính và kế toán dành cho nhà đầu tư** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Phương trình kế toán** sang **2. Kế toán dồn tích**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Mục tiêu của chương này không phải học kế toán để ghi sổ, mà để đọc doanh nghiệp như một hệ thống dòng tiền. Ba báo cáo tài chính phải được hiểu cùng nhau: báo cáo kết quả kinh doanh cho biết doanh nghiệp ghi nhận lợi nhuận như thế nào; bảng cân đối cho biết tài sản và nguồn vốn đang nằm ở đâu; báo cáo lưu chuyển tiền tệ cho biết tiền thật sự đi vào và đi ra ra sao.
 
 ## 1. Phương trình kế toán
@@ -197,7 +200,7 @@ Trong SaaS, khoản này có thể là nguồn tài trợ tốt và chỉ báo n
 
 ## 18. Tài sản cố định và capex
 
-Tài sản cố định hữu hình (Property, Plant & Equipment, PP&E) tăng khi doanh nghiệp đầu tư capex và giảm dần qua khấu hao hoặc thanh lý.
+Tài sản cố định hữu hình (property, Plant & Equipment, PP&E) tăng khi doanh nghiệp đầu tư capex và giảm dần qua khấu hao hoặc thanh lý.
 
 Capex tăng có thể là đầu tư tăng trưởng hoặc chỉ là duy trì công suất hiện tại. Hai loại có ý nghĩa kinh tế rất khác.
 
@@ -240,9 +243,9 @@ Nhà bán lẻ hoặc hãng hàng không có nghĩa vụ thuê lớn cần đư�
 
 Vốn chủ sở hữu kế toán gồm vốn góp, lợi nhuận giữ lại, cổ phiếu quỹ và các khoản điều chỉnh khác.
 
-Book value không phải giá trị nội tại; nó chỉ phản ánh lịch sử kế toán của tài sản và nghĩa vụ.
+Book giá trị (value / 값) không phải giá trị nội tại; nó chỉ phản ánh lịch sử kế toán của tài sản và nghĩa vụ.
 
-Ngành tài chính dùng book value nhiều hơn các doanh nghiệp dựa trên tài sản vô hình.
+Ngành tài chính dùng book giá trị (value / 값) nhiều hơn các doanh nghiệp dựa trên tài sản vô hình.
 
 ## 24. Other Comprehensive Income
 

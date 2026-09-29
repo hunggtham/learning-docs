@@ -1,18 +1,18 @@
-# 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
+# 7. 공통 모듈 (Common Module)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **7. 공통 모듈 (Common Module)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **8. 디자인 패턴 (Design Patterns)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **7. 공통 모듈 (Common Module)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **9. 효과적인 모듈 설계 방안 (Effective Module Design)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-소프트웨어, 품질, 특성
+공통, 모듈
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **9. 효과적인 모듈 설계 방안 (Effective Module Design)**에서 만든 기준을 이어받아 **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **2. 모듈 (Module) & 독립성 (Independence)**에서 만든 기준을 이어받아 **7. 공통 모듈 (Common Module)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,22 +20,28 @@ Mục đích của bài này là hiểu **9. 소프트웨어 품질 특성 (ISO/
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **7. 공통 모듈 (Common Module)** và nối nó với **9. 효과적인 모듈 설계 방안 (Effective Module Design)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
+## 7. 공통 모듈 (Common Module)
 
-Sau khi đã đặt nền bằng **9. 효과적인 모듈 설계 방안 (Effective Module Design)**, ta chuyển sang **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**. Đây là mắt xích 35/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **2. 모듈 (Module) & 독립성 (Independence)**, ta chuyển sang **7. 공통 모듈 (Common Module)**. Đây là mắt xích 35/57 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **7. 공통 모듈 (Common Module)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- 6 tiêu chuẩn chất lượng:
-  1. **기능성 (Functionality - Chức năng)**: Bảo mật, Tương tác, Chính xác.
-  2. **신뢰성 (Reliability - Độ tin cậy)**: Không lỗi, Phục hồi (회복성), Chịu lỗi (고장 허용성).
-  3. **사용성 (Usability - Khả năng sử dụng)**: Dễ học, Dễ hiểu, Hấp dẫn.
-  4. **효율성 (Efficiency - Hiệu quả)**: Thời gian phản hồi, Tiết kiệm tài nguyên.
-  5. **유지 보수성 (Maintainability - Khả năng bảo trì)**: Dễ phân tích, Dễ thay đổi, Ổn định.
-  6. **이식성 (Portability - Khả năng thay thế/di chuyển)**: Cài đặt dễ, Tương thích, Thay thế.
+**개념 (Khái niệm):** 여러 프로그램에서 공통적으로 사용할 수 있는 모듈 (Module dùng chung cho nhiều chương trình, ví dụ: Đăng nhập, tính toán).
 
-Ta có thể khép mục **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **8. 디자인 패턴 (Design Patterns)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+*   **명세 기법 5가지 (5 nguyên tắc viết đặc tả module):**
+    1.  **정확성 (Correctness):** 정확히 작성 (Chính xác).
+    2.  **명확성 (Clarity):** 중의적이지 않게 (Rõ ràng, không mơ hồ).
+    3.  **완전성 (Completeness):** 모든 것을 빠짐없이 (Đầy đủ).
+    4.  **일관성 (Consistency):** 상호 충돌 없게 (Nhất quán).
+    5.  **추적성 (Traceability):** 출처, 관계 추적 가능 (Có thể truy xuất nguồn gốc).
+💡 **Mẹo ghi nhớ:** C-M-H-N-T (Chính-Rõ-Đủ-Nhất-Truy) -> **Chỉ Mong Học Nhất Trường**
+
+---
+
+Ta có thể khép mục **7. 공통 모듈 (Common Module)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **9. 효과적인 모듈 설계 방안 (Effective Module Design)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

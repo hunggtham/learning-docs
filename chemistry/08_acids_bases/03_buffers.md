@@ -1,8 +1,11 @@
 # Dung dịch đệm — kiểm soát biến động của môi trường proton
 
-> **Dung dịch đệm (buffer / 완충 용액)** là hệ chứa một cặp acid–base liên hợp có khả năng hấp thụ một lượng giới hạn acid hoặc base được thêm vào, làm pH thay đổi ít hơn so với dung dịch không có đệm.
+> **Mạch đọc:** Đọc **Dung dịch đệm — kiểm soát biến động của môi trường proton** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cơ chế hoạt động của dung dịch đệm** sang **Suy ra phương trình Henderson–Hasselbalch**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Dung dịch đệm không “giữ pH cố định tuyệt đối”. Nó chỉ làm hệ ít nhạy hơn trước nhiễu loạn acid–base trong một khoảng dung lượng hữu hạn.
+
+> **Dung dịch đệm (buffer / 완충 용액)** là hệ chứa một cặp acid–cơ sở (base / 기반) liên hợp có khả năng hấp thụ một lượng giới hạn acid hoặc cơ sở (base / 기반) được thêm vào, làm pH thay đổi ít hơn so với dung dịch không có đệm.
+
+Dung dịch đệm không “giữ pH cố định tuyệt đối”. Nó chỉ làm hệ ít nhạy hơn trước nhiễu loạn acid–cơ sở (base / 기반) trong một khoảng dung lượng hữu hạn.
 
 ## Cơ chế hoạt động của dung dịch đệm
 
@@ -12,7 +15,7 @@ Với cặp:
 HA/A^-
 \]
 
-`HA` là kho dự trữ có thể trung hòa base mạnh, còn `A-` là kho dự trữ có thể nhận proton từ acid mạnh.
+`HA` là kho dự trữ có thể trung hòa cơ sở (base / 기반) mạnh, còn `A-` là kho dự trữ có thể nhận proton từ acid mạnh.
 
 Khi thêm acid:
 
@@ -20,13 +23,13 @@ Khi thêm acid:
 A^-+H^+\rightarrow HA
 \]
 
-Khi thêm base:
+Khi thêm cơ sở (base / 기반):
 
 \[
 HA+OH^-\rightarrow A^-+H_2O
 \]
 
-Thay vì để toàn bộ `H+` hoặc `OH-` mới thêm tồn tại tự do, hệ chuyển chúng thành dạng acid hoặc base yếu hơn. Kết quả là pH chỉ thay đổi theo sự thay đổi tỉ lệ `A-/HA`.
+Thay vì để toàn bộ `H+` hoặc `OH-` mới thêm tồn tại tự do, hệ chuyển chúng thành dạng acid hoặc cơ sở (base / 기반) yếu hơn. Kết quả là pH chỉ thay đổi theo sự thay đổi tỉ lệ `A-/HA`.
 
 ## Suy ra phương trình Henderson–Hasselbalch
 
@@ -66,9 +69,9 @@ thì:
 pH=pK_a
 \]
 
-Nếu tỉ lệ base/acid tăng 10 lần, pH tăng khoảng 1 đơn vị trong điều kiện xấp xỉ phù hợp.
+Nếu tỉ lệ cơ sở (base / 기반)/acid tăng 10 lần, pH tăng khoảng 1 đơn vị trong điều kiện xấp xỉ phù hợp.
 
-Vì sự phụ thuộc logarithm, dung dịch đệm có thể hấp thụ một lượng acid/base đáng kể mà pH chỉ thay đổi vừa phải cho tới khi một thành phần gần cạn.
+Vì sự phụ thuộc logarithm, dung dịch đệm có thể hấp thụ một lượng acid/cơ sở (base / 기반) đáng kể mà pH chỉ thay đổi vừa phải cho tới khi một thành phần gần cạn.
 
 ## Khoảng đệm
 
@@ -84,13 +87,13 @@ vì khi đó tỉ lệ:
 0.1\lesssim\frac{[A^-]}{[HA]}\lesssim10
 \]
 
-và cả hai kho acid/base vẫn có lượng đáng kể.
+và cả hai kho acid/cơ sở (base / 기반) vẫn có lượng đáng kể.
 
 Đây chỉ là hướng dẫn thực hành, không phải ranh giới vật lý cứng.
 
 ## Dung lượng đệm
 
-Hai dung dịch có cùng pH có thể chống lại lượng acid/base thêm vào rất khác nhau.
+Hai dung dịch có cùng pH có thể chống lại lượng acid/cơ sở (base / 기반) thêm vào rất khác nhau.
 
 Ví dụ:
 
@@ -104,14 +107,14 @@ và:
 1.0 M HA + 1.0 M A−
 ```
 
-có cùng tỉ lệ và gần cùng pH, nhưng dung dịch thứ hai chứa lượng dự trữ acid/base lớn hơn rất nhiều.
+có cùng tỉ lệ và gần cùng pH, nhưng dung dịch thứ hai chứa lượng dự trữ acid/cơ sở (base / 기반) lớn hơn rất nhiều.
 
 Đại lượng mô tả khả năng này là **dung lượng đệm (buffer capacity / 완충 용량)**.
 
 Một định nghĩa vi phân thường dùng:
 
 \[
-\beta=\frac{dn_{base\ mạnh}}{V\,d(pH)}
+\beta=\frac{dn_{cơ sở (base / 기반)\ mạnh}}{V\,d(pH)}
 \]
 
 với quy ước dấu tương ứng khi thêm acid.
@@ -128,11 +131,11 @@ Dung lượng đệm đạt cực đại gần:
 pH=pK_a
 \]
 
-vì lúc đó cả dạng acid và base đều hiện diện nhiều.
+vì lúc đó cả dạng acid và cơ sở (base / 기반) đều hiện diện nhiều.
 
 ## Thiết kế dung dịch đệm
 
-Để chọn đệm cho pH mục tiêu, trước hết chọn acid/base liên hợp có:
+Để chọn đệm cho pH mục tiêu, trước hết chọn acid/cơ sở (base / 기반) liên hợp có:
 
 \[
 pK_a\approx pH_{mục\ tiêu}
@@ -150,7 +153,7 @@ Tổng nồng độ được chọn dựa trên dung lượng đệm cần thi�
 
 ## Chuẩn bị đệm bằng cách trộn cặp liên hợp
 
-Có thể trộn trực tiếp acid yếu và muối của base liên hợp, chẳng hạn:
+Có thể trộn trực tiếp acid yếu và muối của cơ sở (base / 기반) liên hợp, chẳng hạn:
 
 ```text
 CH3CO2H + CH3CO2Na
@@ -158,7 +161,7 @@ CH3CO2H + CH3CO2Na
 
 với tỉ lệ phù hợp.
 
-Một cách khác là trung hòa một phần acid yếu bằng base mạnh:
+Một cách khác là trung hòa một phần acid yếu bằng cơ sở (base / 기반) mạnh:
 
 \[
 HA+OH^-\rightarrow A^-+H_2O
@@ -173,7 +176,7 @@ A− tạo thành: 40%
 
 Từ đó có thể tính tỉ lệ `A-/HA`.
 
-## Thêm acid mạnh hoặc base mạnh vào đệm
+## Thêm acid mạnh hoặc cơ sở (base / 기반) mạnh vào đệm
 
 Cách giải nên gồm hai giai đoạn.
 
@@ -195,7 +198,7 @@ n_{A^-}'=n_{A^-}-n_H
 n_{HA}'=n_{HA}+n_H
 \]
 
-Khi thêm base mạnh:
+Khi thêm cơ sở (base / 기반) mạnh:
 
 \[
 HA+OH^-\rightarrow A^-+H_2O
@@ -257,7 +260,7 @@ Trong phép đo chính xác hoặc thí nghiệm sinh hóa, cần quan tâm **h�
 
 Cặp `CO2/HCO3-` tham gia điều hòa pH máu.
 
-Khác với cốc dung dịch đóng, cơ thể là hệ mở: phổi điều chỉnh `CO2`, còn thận điều chỉnh bicarbonate và proton. Vì vậy pH máu được điều khiển bởi một hệ phản hồi hóa học–sinh lý chứ không chỉ một cặp acid/base tĩnh.
+Khác với cốc dung dịch đóng, cơ thể là hệ mở: phổi điều chỉnh `CO2`, còn thận điều chỉnh bicarbonate và proton. Vì vậy pH máu được điều khiển bởi một hệ phản hồi hóa học–sinh lý chứ không chỉ một cặp acid/cơ sở (base / 기반) tĩnh.
 
 ### Hệ phosphate
 
@@ -295,7 +298,7 @@ Các đệm sinh hóa như phosphate, Tris, HEPES, MES hay MOPS có ưu và như
 
 Không. Nó chỉ giảm độ nhạy của pH cho tới khi dung lượng bị vượt quá.
 
-### “Chỉ khi lượng acid và base bằng nhau mới tạo đệm”
+### “Chỉ khi lượng acid và cơ sở (base / 기반) bằng nhau mới tạo đệm”
 
 Không. Bất kỳ hỗn hợp có lượng đáng kể của cả hai dạng liên hợp đều có thể đệm; lượng bằng nhau chỉ cho `pH≈pKa`.
 
@@ -308,3 +311,5 @@ Không. Dạng nồng độ dựa trên xấp xỉ hoạt độ và thích hợp
 Dung dịch đệm là **hai kho hóa học nối với nhau bằng trao đổi proton**. Tỉ lệ hai kho quyết định pH; tổng kích thước hai kho quyết định dung lượng đệm.
 
 Xem tiếp: [Chuẩn độ acid–base](./04_titration.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 acid base models](./00_acid_base_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

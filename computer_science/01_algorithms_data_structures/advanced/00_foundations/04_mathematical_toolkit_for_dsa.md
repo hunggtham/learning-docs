@@ -1,4 +1,7 @@
 # Công cụ toán học cho cấu trúc dữ liệu và thuật toán
+
+> **Mạch đọc:** Đọc **Công cụ toán học cho cấu trúc dữ liệu và thuật toán** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Logarithm: số lần thu nhỏ theo tỷ lệ cố định** sang **Lũy thừa của hai và biểu diễn nhị phân**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Mathematical Toolkit for DSA / 알고리즘을 위한 수학 도구**
 
 DSA không yêu cầu toàn bộ toán cao cấp, nhưng liên tục sử dụng một số ý tưởng toán học: logarithm, tổng hữu hạn, truy hồi, tổ hợp, số học modulo, xác suất, kỳ vọng, quy nạp, đại số của phép gộp, đếm trên đồ thị và cận dưới. Mục tiêu của chương này không phải biến DSA thành môn toán thuần túy, mà giúp nhìn thấy **vì sao độ phức tạp và tính đúng đắn có hình dạng như vậy**.
@@ -19,7 +22,7 @@ suy ra:
 k\approx \log_2 n
 \]
 
-Đây là nguồn gốc của `O(log n)` trong binary search, balanced BST, heap, binary lifting và nhiều thuật toán divide-and-conquer.
+Đây là nguồn gốc của `O(log n)` trong tìm kiếm nhị phân (binary search / 이진 탐색), balanced BST, vùng nhớ động (heap / 힙), nhị phân (binary / 이진) lifting và nhiều thuật toán divide-and-conquer.
 
 Cơ số logarithm không quan trọng trong Big-O vì:
 
@@ -27,7 +30,7 @@ Cơ số logarithm không quan trọng trong Big-O vì:
 \log_a n = \frac{\log_b n}{\log_b a}
 \]
 
-hai logarithm khác cơ số chỉ khác một hệ số hằng. Nhưng ở cấp hệ thống, cơ số vẫn có ý nghĩa. B+Tree có chiều cao gần `log_B n` với `B` lớn vì mỗi page chứa nhiều khóa, nên số lần I/O giảm mạnh.
+hai logarithm khác cơ số chỉ khác một hệ số hằng. Nhưng ở cấp hệ thống, cơ số vẫn có ý nghĩa. B+cây (tree / 트리) có chiều cao gần `log_B n` với `B` lớn vì mỗi page chứa nhiều khóa, nên số lần I/O giảm mạnh.
 
 Mô hình tư duy:
 
@@ -55,7 +58,7 @@ thì:
 k=\lfloor \log_2 n \rfloor
 \]
 
-Sparse Table lưu block độ dài `2^k`. Binary Lifting lưu tổ tiên cách `2^k` cạnh. Fenwick Tree dùng bit 1 thấp nhất để xác định kích thước block phụ trách. Exponentiation by squaring phân rã số mũ theo bit.
+Sparse bảng (table / 테이블) lưu khối (block / 블록) độ dài `2^k`. nhị phân (binary / 이진) Lifting lưu tổ tiên cách `2^k` cạnh. Fenwick cây (tree / 트리) dùng bit 1 thấp nhất để xác định kích thước khối (block / 블록) phụ trách. Exponentiation by squaring phân rã số mũ theo bit.
 
 Một insight quan trọng là nhiều kỹ thuật tưởng khác nhau thực ra cùng dùng ý tưởng: **tiền xử lý các bước có kích thước tăng gấp đôi rồi ghép chúng theo biểu diễn nhị phân của một số nguyên**.
 
@@ -103,13 +106,13 @@ Tổng hình học:
 
 là nền tảng của nhiều phân tích doubling.
 
-Mảng động tăng capacity gấp đôi. Qua `n` lần append, số phần tử bị copy trong các lần resize xấp xỉ:
+Mảng động tăng sức chứa (capacity / 용량) gấp đôi. Qua `n` lần append, số phần tử bị bản sao (copy / 복사) trong các lần resize xấp xỉ:
 
 \[
 1+2+4+\cdots+\frac n2<n
 \]
 
-Do đó tổng copy là `O(n)`, dù một lần append riêng lẻ có thể tốn `O(n)`. Chi phí khấu hao mỗi append vẫn là `O(1)`.
+Do đó tổng bản sao (copy / 복사) là `O(n)`, dù một lần append riêng lẻ có thể tốn `O(n)`. Chi phí khấu hao mỗi append vẫn là `O(1)`.
 
 Điểm quan trọng: **amortized** không phải “trung bình theo xác suất”. Nó là bảo đảm về tổng chi phí của một chuỗi thao tác hợp lệ.
 
@@ -121,7 +124,7 @@ Tổng điều hòa:
 H_n=1+\frac12+\frac13+\cdots+\frac1n=\Theta(\log n)
 \]
 
-xuất hiện trong randomized algorithms, coupon-collector reasoning, một số phân tích hashing và nhiều quá trình xác suất.
+xuất hiện trong randomized algorithms, coupon-collector lập luận (reasoning / 추론), một số phân tích hashing và nhiều quá trình xác suất.
 
 Khi thấy tổng nghịch đảo `1/i`, nên nghĩ tới tăng trưởng logarithmic thay vì tuyến tính.
 
@@ -169,7 +172,7 @@ Mỗi tầng của cây đệ quy có tổng công việc `Θ(n)` và có `Θ(lo
 T(n)=\Theta(n\log n)
 \]
 
-Binary Search:
+Tìm kiếm nhị phân (binary search / 이진 탐색):
 
 \[
 T(n)=T(n/2)+c=\Theta(\log n)
@@ -181,7 +184,7 @@ Quicksort trường hợp xấu khi partition cực lệch:
 T(n)=T(n-1)+cn=\Theta(n^2)
 \]
 
-Truy hồi là bản mô tả toán học của hình dạng recursion tree. Nếu không hiểu recursion tree, dùng công thức dễ trở thành thao tác máy móc.
+Truy hồi là bản mô tả toán học của hình dạng recursion cây (tree / 트리). Nếu không hiểu recursion cây (tree / 트리), dùng công thức dễ trở thành thao tác máy móc.
 
 ## Master Theorem và giới hạn của nó
 
@@ -205,7 +208,7 @@ Master Theorem rất tiện khi subproblem có kích thước cân bằng, nhưn
 T(n)=T(n-1)+n
 \]
 
-hoặc subproblem không đều, recurrence phụ thuộc dữ liệu, hay randomized recurrence thường phù hợp hơn với substitution, recursion tree hoặc probabilistic analysis.
+hoặc subproblem không đều, recurrence phụ thuộc dữ liệu, hay randomized recurrence thường phù hợp hơn với substitution, recursion cây (tree / 트리) hoặc probabilistic phân tích (analysis / 분석).
 
 Bài học: theorem là công cụ cho một lớp cấu trúc, không phải phép biến đổi cú pháp tổng quát.
 
@@ -229,7 +232,7 @@ Cây backtracking thường được ước lượng thô bằng:
 O(b^d)
 \]
 
-với `b` là branching factor và `d` là độ sâu. Pruning làm branching factor hiệu dụng nhỏ hơn, nhưng không tự thay đổi worst-case nếu vẫn tồn tại input buộc duyệt gần toàn cây.
+với `b` là branching factor và `d` là độ sâu. Pruning làm branching factor hiệu dụng nhỏ hơn, nhưng không tự thay đổi worst-case nếu vẫn tồn tại đầu vào (input / 입력) buộc duyệt gần toàn cây.
 
 ## Combination và subset
 
@@ -285,11 +288,11 @@ sum(L,R)=P[R+1]-P[L]
 
 Điểm sâu hơn không phải công thức, mà là việc phép cộng có **phép nghịch đảo**: contribution của prefix trước `L` có thể bị loại bằng phép trừ.
 
-Điều này giải thích vì sao Prefix Sum làm range sum rất tự nhiên, còn prefix minimum không thể “trừ min cũ” để lấy min của một đoạn bất kỳ.
+Điều này giải thích vì sao Prefix Sum làm phạm vi (range / 범위) sum rất tự nhiên, còn prefix minimum không thể “trừ min cũ” để lấy min của một đoạn bất kỳ.
 
 ## Semigroup, monoid và group trong DSA
 
-Nhiều cấu trúc range query có thể hiểu bằng đại số.
+Nhiều cấu trúc phạm vi (range / 범위) truy vấn (query / 쿼리) có thể hiểu bằng đại số.
 
 ### Tính kết hợp
 
@@ -299,7 +302,7 @@ Một phép toán `*` có tính kết hợp nếu:
 (a*b)*c=a*(b*c)
 \]
 
-Khi đó ta có thể chia đoạn thành nhiều block rồi ghép kết quả theo bất kỳ cách đặt ngoặc nào. Segment Tree cần tính chất này.
+Khi đó ta có thể chia đoạn thành nhiều khối (block / 블록) rồi ghép kết quả theo bất kỳ cách đặt ngoặc nào. Segment cây (tree / 트리) cần tính chất này.
 
 Một tập cùng phép toán kết hợp tạo thành **semigroup**.
 
@@ -322,7 +325,7 @@ min -> identity +∞
 max -> identity -∞
 ```
 
-Identity rất hữu ích cho đoạn rỗng và accumulator ban đầu.
+Định danh (identity / 식별자) rất hữu ích cho đoạn rỗng và accumulator ban đầu.
 
 ### Phép nghịch đảo
 
@@ -332,7 +335,7 @@ Nếu mỗi phần tử có inverse phù hợp, monoid trở thành group. Prefi
 a+(-a)=0
 \]
 
-Fenwick Tree cho range sum rất tự nhiên vì prefix aggregate có thể “trừ” nhau.
+Fenwick cây (tree / 트리) cho phạm vi (range / 범위) sum rất tự nhiên vì prefix aggregate có thể “trừ” nhau.
 
 ### Idempotence
 
@@ -342,9 +345,9 @@ Một phép toán idempotent nếu:
 f(x,x)=x
 \]
 
-`min`, `max`, `gcd`, bitwise AND/OR có tính chất này. Classic Sparse Table có thể trả RMQ bằng hai block chồng lấn vì phần giao bị tính hai lần nhưng không thay kết quả.
+`min`, `max`, `gcd`, bitwise AND/OR có tính chất này. Classic Sparse bảng (table / 테이블) có thể trả RMQ bằng hai khối (block / 블록) chồng lấn vì phần giao bị tính hai lần nhưng không thay kết quả.
 
-Nhìn bằng đại số giúp trả lời câu hỏi “cấu trúc này có tổng quát sang operation khác không?” chính xác hơn việc học thuộc danh sách.
+Nhìn bằng đại số giúp trả lời câu hỏi “cấu trúc này có tổng quát sang thao tác (operation / 연산) khác không?” chính xác hơn việc học thuộc danh sách.
 
 ## Commutativity không giống associativity
 
@@ -354,7 +357,7 @@ Nhìn bằng đại số giúp trả lời câu hỏi “cấu trúc này có t�
 a*b=b*a
 \]
 
-không bắt buộc cho mọi cấu trúc. Segment Tree có thể làm việc với phép kết hợp không giao hoán, miễn ta giữ đúng thứ tự trái–phải.
+không bắt buộc cho mọi cấu trúc. Segment cây (tree / 트리) có thể làm việc với phép kết hợp không giao hoán, miễn ta giữ đúng thứ tự trái–phải.
 
 Ví dụ nối chuỗi là associative nhưng không commutative:
 
@@ -362,7 +365,7 @@ Ví dụ nối chuỗi là associative nhưng không commutative:
 "ab" + "cd" != "cd" + "ab"
 ```
 
-Phân biệt hai tính chất này tránh nhiều lỗi khi tổng quát hóa range structure.
+Phân biệt hai tính chất này tránh nhiều lỗi khi tổng quát hóa phạm vi (range / 범위) cấu trúc (structure / 구조).
 
 ## Số học modulo
 
@@ -376,7 +379,7 @@ Các đồng nhất thức cơ bản:
 (ab)\bmod m=((a\bmod m)(b\bmod m))\bmod m
 \]
 
-Modulo xuất hiện trong hashing, cyclic buffer, rolling hash và counting lớn.
+Modulo xuất hiện trong hashing, cyclic buffer, rolling băm (hash / 해시) và counting lớn.
 
 Phép chia không thể thay bằng chia số nguyên rồi `% m`. Muốn “chia” trong modulo cần **nghịch đảo modulo (modular inverse)** và inverse chỉ tồn tại khi điều kiện phù hợp được thỏa.
 
@@ -398,7 +401,7 @@ gcd(a,m)=1
 
 Khi đó `a` có modular inverse modulo `m`.
 
-Extended Euclidean Algorithm tìm `x,y` sao cho:
+Extended Euclidean thuật toán (algorithm / 알고리즘) tìm `x,y` sao cho:
 
 \[
 ax+by=gcd(a,b)
@@ -416,13 +419,13 @@ Một mẫu normalize thường gặp:
 ((x % m) + m) % m
 ```
 
-Nhưng implementation vẫn phải xét overflow trước khi cộng nếu kiểu số hữu hạn.
+Nhưng hiện thực (implementation / 구현) vẫn phải xét overflow trước khi cộng nếu kiểu số hữu hạn.
 
 ## Bit và lũy thừa của hai
 
 Với số nguyên dương `x`, nếu `x` là lũy thừa của hai thì biểu diễn nhị phân có đúng một bit 1.
 
-Một identity phổ biến:
+Một định danh (identity / 식별자) phổ biến:
 
 ```text
 x & (x - 1)
@@ -436,7 +439,7 @@ x > 0 && (x & (x - 1)) == 0
 
 kiểm tra lũy thừa của hai trong mô hình integer phù hợp.
 
-Fenwick Tree dùng:
+Fenwick cây (tree / 트리) dùng:
 
 ```text
 x & -x
@@ -452,7 +455,7 @@ Với hai biến cố độc lập:
 P(A\cap B)=P(A)P(B)
 \]
 
-Nhưng không được giả định độc lập chỉ vì hai sự kiện “trông khác nhau”. Hash functions tương quan hoặc randomness dùng lại có thể phá giả định này.
+Nhưng không được giả định độc lập chỉ vì hai sự kiện “trông khác nhau”. băm (hash / 해시) functions tương quan hoặc randomness dùng lại có thể phá giả định này.
 
 Xác suất có điều kiện:
 
@@ -480,7 +483,7 @@ không đòi hỏi `X` và `Y` độc lập.
 
 Nếu tổng chi phí là tổng contribution của nhiều sự kiện, ta có thể phân tích từng contribution rồi cộng expectation.
 
-Đây là một trong những lý do probabilistic analysis thường trở nên đơn giản hơn sau khi định nghĩa đúng biến ngẫu nhiên.
+Đây là một trong những lý do probabilistic phân tích (analysis / 분석) thường trở nên đơn giản hơn sau khi định nghĩa đúng biến ngẫu nhiên.
 
 ## Indicator variable
 
@@ -488,8 +491,8 @@ Nếu tổng chi phí là tổng contribution của nhiều sự kiện, ta có 
 
 \[
 I_i=\begin{cases}
-1 & \text{nếu sự kiện i xảy ra}\\
-0 & \text{nếu không}
+1 & \văn bản (text / 텍스트){nếu sự kiện i xảy ra}\\
+0 & \văn bản (text / 텍스트){nếu không}
 \end{cases}
 \]
 
@@ -511,9 +514,9 @@ thì:
 E[X]=\sum_i P(i\text{ xảy ra})
 \]
 
-Cách này rất hữu ích để đếm kỳ vọng số collision, số phần tử được chọn hoặc số lần một event xảy ra.
+Cách này rất hữu ích để đếm kỳ vọng số collision, số phần tử được chọn hoặc số lần một sự kiện (event / 이벤트) xảy ra.
 
-## Variance và tail behavior
+## Variance và tail hành vi (behavior / 동작)
 
 Kỳ vọng chỉ nói trung bình, không nói mức độ phân tán.
 
@@ -521,11 +524,11 @@ Kỳ vọng chỉ nói trung bình, không nói mức độ phân tán.
 Var(X)=E[(X-E[X])^2]
 \]
 
-Hai thuật toán có cùng expected runtime nhưng một thuật toán có tail latency lớn hơn rất nhiều có thể khác hẳn trong production.
+Hai thuật toán có cùng expected thời gian chạy (runtime / 런타임) nhưng một thuật toán có tail độ trễ (latency / 지연 시간) lớn hơn rất nhiều có thể khác hẳn trong môi trường vận hành (production / 운영 환경).
 
 Markov, Chebyshev, Chernoff và Hoeffding là các lớp công cụ để đưa ra cận xác suất vượt quá ngưỡng. Không cần thuộc toàn bộ công thức ngay, nhưng phải nhớ:
 
-> Expected value tốt không tự động chứng minh bad case hiếm.
+> Expected giá trị (value / 값) tốt không tự động chứng minh bad trường hợp (case / 사례) hiếm.
 
 ## Union bound
 
@@ -539,32 +542,32 @@ Không cần các biến cố độc lập.
 
 Union bound rất hữu ích khi muốn chứng minh “xác suất có ít nhất một lỗi trong nhiều vị trí” nhỏ bằng cách cộng các xác suất lỗi riêng lẻ.
 
-## Randomized algorithm và probabilistic data structure
+## Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)
 
 Cần phân biệt hai khái niệm.
 
-Randomized Quicksort luôn trả kết quả sort chính xác nhưng runtime phụ thuộc randomness.
+Randomized Quicksort luôn trả kết quả sort chính xác nhưng thời gian chạy (runtime / 런타임) phụ thuộc randomness.
 
-Bloom Filter có thể trả false positive; randomness ảnh hưởng cả representation và xác suất lỗi.
+Bloom Filter có thể trả false positive; randomness ảnh hưởng cả biểu diễn (representation / 표현) và xác suất lỗi.
 
-Một thuật toán có thể ngẫu nhiên nhưng exact, hoặc deterministic nhưng approximate, hoặc vừa randomized vừa approximate. Không nên trộn các loại guarantee này.
+Một thuật toán có thể ngẫu nhiên nhưng chính xác (exact / 정확한), hoặc deterministic nhưng approximate, hoặc vừa randomized vừa approximate. Không nên trộn các loại guarantee này.
 
 ## Quy nạp cấu trúc
 
-Tree, linked structure và recursive grammar tự nhiên với structural induction.
+Cây (tree / 트리), linked cấu trúc (structure / 구조) và recursive grammar tự nhiên với structural induction.
 
 ```text
 base: cấu trúc rỗng hoặc lá đúng
 step: giả sử các substructure đúng, chứng minh cách ghép ở node hiện tại đúng
 ```
 
-Đây là phiên bản toán học của contract đệ quy.
+Đây là phiên bản toán học của đặc tả hợp đồng (contract / 계약) đệ quy.
 
-## Quy nạp mạnh và Dynamic Programming
+## Quy nạp mạnh và động (dynamic / 동적) Programming
 
 Một trạng thái DP có thể phụ thuộc nhiều trạng thái nhỏ hơn. Strong induction giả sử tất cả trạng thái nhỏ hơn đã đúng rồi chứng minh trạng thái hiện tại.
 
-Bottom-up DP thực hiện chính thứ tự chứng minh đó: prerequisite được tính trước khi state mới sử dụng chúng.
+Bottom-up DP thực hiện chính thứ tự chứng minh đó: prerequisite được tính trước khi trạng thái (state / 상태) mới sử dụng chúng.
 
 ## Một số đẳng thức đồ thị cơ bản
 
@@ -590,7 +593,7 @@ Với cây có `n` đỉnh:
 
 Nếu một đồ thị vô hướng liên thông có `n-1` cạnh thì nó là cây. Nếu một đồ thị vô hướng không chu trình có `n-1` cạnh thì nó cũng phải liên thông.
 
-Các identity này vừa hỗ trợ chứng minh vừa hỗ trợ validator.
+Các định danh (identity / 식별자) này vừa hỗ trợ chứng minh vừa hỗ trợ validator.
 
 ## Đếm cạnh của đồ thị dày đặc
 
@@ -608,15 +611,15 @@ n(n-1)
 
 cạnh.
 
-Khi `m` gần `n²`, adjacency matrix có thể hợp lý hơn. Khi `m` gần tuyến tính theo `n`, adjacency list/CSR thường tiết kiệm hơn.
+Khi `m` gần `n²`, adjacency ma trận (matrix / 행렬) có thể hợp lý hơn. Khi `m` gần tuyến tính theo `n`, adjacency danh sách (list / 목록)/CSR thường tiết kiệm hơn.
 
-Toán đếm giúp chọn representation trước cả khi benchmark.
+Toán đếm giúp chọn biểu diễn (representation / 표현) trước cả khi benchmark.
 
-## Sparse matrix và graph
+## Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)
 
-Adjacency matrix của graph là một ma trận. Với graph thưa, phần lớn entry bằng 0. CSR và các sparse representation về bản chất là cách lưu chỉ các phần tử khác 0.
+Adjacency ma trận (matrix / 행렬) của đồ thị (graph / 그래프) là một ma trận. Với đồ thị (graph / 그래프) thưa, phần lớn entry bằng 0. CSR và các sparse biểu diễn (representation / 표현) về bản chất là cách lưu chỉ các phần tử khác 0.
 
-Nhiều phép toán graph có thể được nhìn dưới dạng linear algebra. Ví dụ số walk độ dài `k` liên hệ với lũy thừa ma trận kề. Tuy nhiên, cách nhìn ma trận không luôn là implementation tốt nhất cho graph traversal thông thường; nó cung cấp một mô hình toán học khác để thấy cấu trúc.
+Nhiều phép toán đồ thị (graph / 그래프) có thể được nhìn dưới dạng tuyến tính (linear / 선형) algebra. Ví dụ số walk độ dài `k` liên hệ với lũy thừa ma trận kề. Tuy nhiên, cách nhìn ma trận không luôn là hiện thực (implementation / 구현) tốt nhất cho đồ thị (graph / 그래프) traversal thông thường; nó cung cấp một mô hình toán học khác để thấy cấu trúc.
 
 ## Phân tích khấu hao: phương pháp tổng hợp
 
@@ -626,13 +629,13 @@ Nếu `n` thao tác có tổng chi phí `T(n)`, chi phí khấu hao là:
 \frac{T(n)}n
 \]
 
-Dynamic Array doubling là ví dụ điển hình: một số append đắt nhưng tổng chi phí vẫn tuyến tính.
+Động (dynamic / 동적) Array doubling là ví dụ điển hình: một số append đắt nhưng tổng chi phí vẫn tuyến tính.
 
 ## Phương pháp hạch toán
 
-Ta gán cho mỗi operation một “giá” có thể lớn hơn chi phí thực tế. Phần dư được coi như credit dành cho thao tác đắt trong tương lai.
+Ta gán cho mỗi thao tác (operation / 연산) một “giá” có thể lớn hơn chi phí thực tế. Phần dư được coi như credit dành cho thao tác đắt trong tương lai.
 
-Nếu chứng minh credit không bao giờ âm và tổng charge là `O(n)`, tổng actual cost cũng bị chặn bởi `O(n)`.
+Nếu chứng minh credit không bao giờ âm và tổng charge là `O(n)`, tổng actual chi phí (cost / 비용) cũng bị chặn bởi `O(n)`.
 
 Đây là cách suy nghĩ trực quan về việc các thao tác rẻ “trả trước” cho resize sau này.
 
@@ -646,13 +649,13 @@ Chi phí khấu hao:
 \hat c_i=c_i+\Phi(D_i)-\Phi(D_{i-1})
 \]
 
-Nếu một operation rẻ làm potential tăng, nó tích trữ “năng lượng”. Một operation đắt có thể làm potential giảm và phần giảm đó bù vào actual cost.
+Nếu một thao tác (operation / 연산) rẻ làm potential tăng, nó tích trữ “năng lượng”. Một thao tác (operation / 연산) đắt có thể làm potential giảm và phần giảm đó bù vào actual chi phí (cost / 비용).
 
-Potential method rất mạnh vì không cần gắn credit vào từng object cụ thể; chỉ cần một hàm đo toàn trạng thái.
+Potential phương thức (method / 메서드) rất mạnh vì không cần gắn credit vào từng đối tượng (object / 객체) cụ thể; chỉ cần một hàm đo toàn trạng thái.
 
 ## Lower bound theo lý thuyết thông tin
 
-Comparison sorting phải phân biệt `n!` thứ tự input có thể có. Mỗi comparison nhị phân chỉ tạo tối đa hai nhánh trong decision tree.
+Comparison sorting phải phân biệt `n!` thứ tự đầu vào (input / 입력) có thể có. Mỗi comparison nhị phân chỉ tạo tối đa hai nhánh trong cây quyết định (decision tree / 의사결정 트리).
 
 Chiều cao cây quyết định ít nhất:
 
@@ -662,17 +665,17 @@ Chiều cao cây quyết định ít nhất:
 
 Do đó không thể có general comparison sort worst-case `O(n)`.
 
-Counting Sort/Radix Sort không mâu thuẫn với cận này vì chúng khai thác thông tin khác ngoài pairwise comparison, chẳng hạn miền khóa hữu hạn hoặc representation chữ số.
+Counting Sort/Radix Sort không mâu thuẫn với cận này vì chúng khai thác thông tin khác ngoài pairwise comparison, chẳng hạn miền khóa hữu hạn hoặc biểu diễn (representation / 표현) chữ số.
 
-## Search lower bound
+## Tìm kiếm (search / 검색) lower bound
 
-Trên mảng chưa sắp xếp, để khẳng định target không tồn tại, trường hợp xấu nhất phải kiểm tra mọi phần tử:
+Trên mảng chưa sắp xếp, để khẳng định mục tiêu (target / 대상) không tồn tại, trường hợp xấu nhất phải kiểm tra mọi phần tử:
 
 \[
 \Omega(n)
 \]
 
-Sau khi sắp xếp, mỗi comparison có thể loại gần nửa candidate, dẫn tới logarithmic search.
+Sau khi sắp xếp, mỗi comparison có thể loại gần nửa candidate, dẫn tới logarithmic tìm kiếm (search / 검색).
 
 Lower bound thường bắt đầu từ câu hỏi:
 
@@ -696,9 +699,9 @@ Việc chỉ nói `O(n³)` cũng đúng về mặt cận trên nhưng quá lỏn
 
 Bốn khái niệm này không giống nhau.
 
-**Worst-case**: input tệ nhất trong miền hợp lệ.
+**Worst-case**: đầu vào (input / 입력) tệ nhất trong miền hợp lệ.
 
-**Average-case**: trung bình theo một phân phối input xác định.
+**Average-case**: trung bình theo một phân phối đầu vào (input / 입력) xác định.
 
 **Expected-case**: kỳ vọng, thường do randomness của thuật toán hoặc cấu trúc.
 
@@ -708,7 +711,7 @@ Trộn các khái niệm này dễ dẫn tới tuyên bố hiệu năng sai.
 
 ## Sai số số học và miền giá trị
 
-Toán học thường dùng số nguyên vô hạn, nhưng code dùng kiểu hữu hạn.
+Toán học thường dùng số nguyên vô hạn, nhưng mã (code / 코드) dùng kiểu hữu hạn.
 
 Nếu cộng `n` giá trị mỗi giá trị tối đa `M`, tổng có thể tới khoảng `nM`. Trước khi chọn `int` hay `long`, nên ước lượng upper bound.
 
@@ -718,7 +721,7 @@ Với multiplication, overflow có thể xảy ra trước modulo:
 (a * b) % m
 ```
 
-nếu `a*b` vượt miền kiểu. Correctness phải xét cả bước trung gian.
+nếu `a*b` vượt miền kiểu. tính đúng đắn (correctness / 정확성) phải xét cả bước trung gian.
 
 JavaScript `Number` chỉ biểu diễn chính xác mọi số nguyên tới `2^53-1`; các bài counting lớn có thể cần `BigInt`.
 
@@ -748,3 +751,5 @@ Những câu hỏi này giúp toán học trở thành công cụ thiết kế t
 Khi hiểu vì sao một cấu trúc cần associativity, vì sao `log n` xuất hiện khi chia đôi, vì sao `2^n` xuất hiện với subset, hoặc vì sao comparison sorting có cận `n log n`, ta có thể tự suy ra nhiều thuật toán thay vì ghi nhớ từng công thức riêng lẻ.
 
 Xem tiếp: [Problem Modeling](./00_dsa_as_problem_modeling.md), [Correctness & Invariants](./01_algorithm_correctness_and_invariants.md), [Complexity Analysis](./02_complexity_analysis.md), [Bit Manipulation](../05_specialized/02_bit_manipulation_and_bitsets.md), [Sparse Table](../05_specialized/05_sparse_table_and_static_range_queries.md) và [Amortized & Randomized Thinking](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dsa as problem modeling](./00_dsa_as_problem_modeling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

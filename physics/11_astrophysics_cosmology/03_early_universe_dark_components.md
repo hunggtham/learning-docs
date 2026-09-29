@@ -1,5 +1,8 @@
 # Vũ trụ sơ khai, vật chất tối và năng lượng tối
 
+> **Mạch đọc:** Đọc **Vũ trụ sơ khai, vật chất tối và năng lượng tối** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Big Bang không phải một vụ nổ tại một điểm trong không gian** sang **Phương trình Friedmann**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Vũ trụ sơ khai (early universe / 초기 우주) là chế độ nóng và đậm đặc nơi sự giãn nở của không-thời gian, vật lý hạt và nhiệt động lực học cùng quyết định tiến hóa của Vũ trụ.
 
 **Vật chất tối (dark matter / 암흑물질)** và **năng lượng tối (dark energy / 암흑에너지)** là tên của hai thành phần được suy ra từ nhiều quan sát hấp dẫn và vũ trụ học. Bản chất vi mô của chúng vẫn chưa được xác định đầy đủ.
@@ -14,7 +17,7 @@ Các thiên hà xa không nên được hình dung như mảnh vỡ bay từ m�
 
 ## Phương trình Friedmann
 
-Từ phương trình Einstein với metric FLRW, ta thu được phương trình Friedmann
+Từ phương trình Einstein với chỉ số (metric / 지표) FLRW, ta thu được phương trình Friedmann
 
 ```math
 H^2
@@ -140,7 +143,7 @@ Trước recombination, photon tán xạ mạnh với electron tự do, nên pho
 
 Hấp dẫn có xu hướng nén overdensity, còn áp suất bức xạ chống lại sự nén. Cạnh tranh này tạo các dao động acoustic.
 
-Khi electron kết hợp với hạt nhân và photon decouple, pattern dao động được ghi lại trong anisotropy của nền vi sóng vũ trụ (CMB).
+Khi electron kết hợp với hạt nhân và photon decouple, mẫu (pattern / 패턴) dao động được ghi lại trong anisotropy của nền vi sóng vũ trụ (CMB).
 
 CMB ngày nay gần phổ vật đen ở khoảng `2.7 K`.
 
@@ -184,7 +187,7 @@ Mô phỏng cấu trúc lớn tiến hóa các điều kiện ban đầu dưới
 
 ## Năng lượng tối và giãn nở tăng tốc
 
-Quan sát supernova Type Ia xa, kết hợp CMB và cấu trúc lớn, cho thấy lịch sử giãn nở phù hợp với sự tăng tốc ở thời kỳ muộn.
+Quan sát supernova kiểu (type / 타입) Ia xa, kết hợp CMB và cấu trúc lớn, cho thấy lịch sử giãn nở phù hợp với sự tăng tốc ở thời kỳ muộn.
 
 Trong mô hình `\Lambda CDM` đơn giản nhất, năng lượng tối là hằng số vũ trụ có mật độ gần không đổi và áp suất âm.
 
@@ -226,13 +229,13 @@ Inflation là giai đoạn giãn nở tăng tốc rất sớm được đề xu�
 
 Nó giúp giải thích:
 
-- horizon problem: các vùng CMB rất xa có nhiệt độ gần nhau;
-- flatness problem: curvature được đẩy gần giá trị phẳng;
+- horizon bài toán (problem / 문제): các vùng CMB rất xa có nhiệt độ gần nhau;
+- flatness bài toán (problem / 문제): curvature được đẩy gần giá trị phẳng;
 - nguồn nhiễu loạn ban đầu: fluctuation lượng tử có thể được kéo giãn tới thang vũ trụ trong nhiều mô hình.
 
-Inflation là một framework thành công về nhiều mặt nhưng cơ chế vi mô cụ thể và trường gây inflation vẫn là chủ đề nghiên cứu.
+Inflation là một khung phần mềm (framework / 프레임워크) thành công về nhiều mặt nhưng cơ chế vi mô cụ thể và trường gây inflation vẫn là chủ đề nghiên cứu.
 
-Không nên trình bày một inflation model cụ thể như lời giải duy nhất đã được chứng minh.
+Không nên trình bày một inflation mô hình (model / 모델) cụ thể như lời giải duy nhất đã được chứng minh.
 
 ## Baryogenesis và bất đối xứng vật chất–phản vật chất
 
@@ -262,19 +265,19 @@ Tương lai giãn nở phụ thuộc tính chất của năng lượng tối và
 
 Nếu năng lượng tối là hằng số vũ trụ dương không đổi, Vũ trụ về dài hạn tiến tới chế độ tăng tốc kiểu de Sitter; các cấu trúc không liên kết ở rất xa dần vượt chân trời quan sát.
 
-Nếu phương trình trạng thái của dark energy động, kịch bản tương lai có thể khác.
+Nếu phương trình trạng thái của dark năng lượng (energy / 에너지) động, kịch bản tương lai có thể khác.
 
-Dữ liệu hiện tại ràng buộc nhiều mô hình nhưng không cho phép nói rằng bản chất vi mô của dark energy đã được hiểu.
+Dữ liệu hiện tại ràng buộc nhiều mô hình nhưng không cho phép nói rằng bản chất vi mô của dark năng lượng (energy / 에너지) đã được hiểu.
 
 ## Miền áp dụng và giới hạn
 
 Phương trình Friedmann ở trên giả sử Vũ trụ đồng nhất và đẳng hướng ở quy mô lớn. Nó không mô tả trực tiếp cấu trúc cục bộ như thiên hà hoặc cụm thiên hà.
 
-`\Lambda CDM` là mô hình hiện tượng học rất thành công nhưng không đồng nghĩa với việc ta đã biết hạt dark matter hoặc cơ chế microscopic của dark energy.
+`\Lambda CDM` là mô hình hiện tượng học rất thành công nhưng không đồng nghĩa với việc ta đã biết hạt dark matter hoặc cơ chế microscopic của dark năng lượng (energy / 에너지).
 
-Các suy luận vũ trụ học còn phụ thuộc model, calibration, selection effect và tổ hợp dataset. Vì vậy tham số tốt nhất luôn cần đi cùng uncertainty và giả định mô hình.
+Các suy luận vũ trụ học còn phụ thuộc mô hình (model / 모델), calibration, selection tác động (effect / 효과) và tổ hợp dataset. Vì vậy tham số tốt nhất luôn cần đi cùng bất định (uncertainty / 불확실성) và giả định mô hình.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Vũ trụ học mô tả sự tiến hóa đồng thời của **hình học không-thời gian** và **nội dung năng lượng–vật chất**.
 
@@ -301,14 +304,16 @@ Không. Vật thể compact có thể đóng góp một phần trong một số 
 
 ### “Năng lượng tối là lực đẩy các thiên hà cục bộ”
 
-Không nên hình dung như vậy. Các hệ liên kết như nguyên tử, hệ Mặt Trời hoặc thiên hà không đơn giản giãn theo Hubble flow.
+Không nên hình dung như vậy. Các hệ liên kết như nguyên tử, hệ Mặt Trời hoặc thiên hà không đơn giản giãn theo Hubble luồng (flow / 흐름).
 
 ### “Redshift lớn có thể đổi thẳng thành vận tốc bằng `v=cz`”
 
 Chỉ đúng xấp xỉ ở `z` nhỏ. Ở `z` lớn phải dùng mô hình cosmological distance–redshift.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Thuyết tương đối rộng](../07_relativity/01_general_relativity.md), [Thiên hà và vũ trụ học](01_galaxies_cosmology.md), [Cơ học thống kê](../04_thermal_statistical/03_ensembles_partition_functions.md).
 
 **Liên hệ tiếp:** [Bất ổn hấp dẫn và hình thành cấu trúc](04_gravitational_instability_structure_formation.md), [Mô hình Chuẩn](../09_atomic_nuclear_particle/03_particle_standard_model.md), [Trường lượng tử](../09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md), [Suy luận dữ liệu](../12_experimental_computational/03_data_inference_inverse_problems.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 stars compact objects](./00_stars_compact_objects.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

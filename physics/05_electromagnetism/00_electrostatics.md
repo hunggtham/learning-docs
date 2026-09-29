@@ -1,5 +1,8 @@
 # Điện tích, điện trường, định luật Gauss, điện thế và tụ điện
 
+> **Mạch đọc:** Đọc **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Điện tích là gì?** sang **Bảo toàn điện tích**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Điện tĩnh học nghiên cứu điện tích đứng yên hoặc các cấu hình thay đổi đủ chậm để có thể bỏ qua hiệu ứng cảm ứng và bức xạ. Đây là điểm khởi đầu tự nhiên của điện từ học vì nó cho phép xây dựng từng lớp: điện tích → lực → điện trường → thông lượng → điện thế → vật dẫn → tụ điện.
 
 ## Điện tích là gì?
@@ -223,7 +226,7 @@ nên tích phân đường không phụ thuộc đường đi mà chỉ phụ th
 
 ## Quan hệ giữa điện trường và điện thế
 
-Điện trường là gradient âm của điện thế:
+Điện trường là độ dốc (gradient / 기울기) âm của điện thế:
 
 ```math
 \mathbf E=-\nabla V.
@@ -231,7 +234,7 @@ nên tích phân đường không phụ thuộc đường đi mà chỉ phụ th
 
 Điện trường chỉ hướng điện thế giảm nhanh nhất. Một điện tích dương tự do có xu hướng gia tốc về phía điện thế thấp hơn, trong khi điện tích âm chịu lực theo hướng ngược lại.
 
-Điện thế có lợi vì là đại lượng vô hướng. Thay vì cộng ba thành phần vectơ của điện trường, ta có thể cộng các điện thế rồi lấy gradient ở cuối.
+Điện thế có lợi vì là đại lượng vô hướng. Thay vì cộng ba thành phần vectơ của điện trường, ta có thể cộng các điện thế rồi lấy độ dốc (gradient / 기울기) ở cuối.
 
 ## Điện thế của điện tích điểm
 
@@ -391,7 +394,7 @@ force picture ↔ energy picture
 E-field ↔ potential
 ```
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Điện tích tạo cấu trúc trường trong không gian. Trường cho lực cục bộ lên điện tích thử. Trong điện tĩnh, trường bảo toàn nên có thể nén thông tin thành điện thế vô hướng. Định luật Gauss nối nguồn với thông lượng, còn điều kiện biên của vật dẫn quyết định cách điện tích tái phân bố.
 
@@ -399,7 +402,7 @@ E-field ↔ potential
 
 ### “Điện thế khác không thì điện trường phải khác không”
 
-Không. Điện trường phụ thuộc gradient của điện thế, không phụ thuộc giá trị tuyệt đối của `V`.
+Không. Điện trường phụ thuộc độ dốc (gradient / 기울기) của điện thế, không phụ thuộc giá trị tuyệt đối của `V`.
 
 ### “Định luật Gauss chỉ đúng cho hệ đối xứng”
 
@@ -413,8 +416,10 @@ Chỉ đúng trong cân bằng điện tĩnh lý tưởng. Dây đang dẫn dòn
 
 Điện tích tự do chủ yếu nằm trên các bản dẫn; điện môi phân cực và thay đổi trường cùng điện dung.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Mạch DC](01_dc_circuits.md), [Điện tĩnh dạng bài toán biên](10_boundary_value_image_multipoles.md), [Trường điện từ trong vật chất](07_fields_in_matter_dielectrics_magnetism.md), [Maxwell và sóng điện từ](04_maxwell_em_waves.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 dc circuits](./01_dc_circuits.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

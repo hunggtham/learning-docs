@@ -1,10 +1,13 @@
-# Memory Hierarchy và Bandwidth trong AI
+# Bộ nhớ (memory / 메모리) Hierarchy và Bandwidth trong AI
 
-AI workload xử lý tensor rất lớn. Trong nhiều trường hợp performance không bị giới hạn bởi số phép tính mà bởi việc **đưa dữ liệu tới compute unit nhanh đến đâu**. Vì vậy memory capacity, hierarchy và bandwidth là phần cốt lõi của AI infrastructure.
+> **Mạch đọc:** Đặt **bộ nhớ (memory / 메모리) Hierarchy và Bandwidth trong AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **bộ nhớ (memory / 메모리) Hierarchy** sang **sức chứa (capacity / 용량), Bandwidth và độ trễ (latency / 지연 시간)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Memory Hierarchy
 
-Một hệ thống có nhiều tầng memory:
+AI tải công việc (workload / 워크로드) xử lý tensor rất lớn. Trong nhiều trường hợp hiệu năng (performance / 성능) không bị giới hạn bởi số phép tính mà bởi việc **đưa dữ liệu tới compute đơn vị (unit / 단위) nhanh đến đâu**. Vì vậy bộ nhớ (memory / 메모리) sức chứa (capacity / 용량), hierarchy và bandwidth là phần cốt lõi của AI hạ tầng (infrastructure / 인프라).
+
+## Bộ nhớ (memory / 메모리) Hierarchy
+
+Một hệ thống có nhiều tầng bộ nhớ (memory / 메모리):
 
 ```text
 register
@@ -17,7 +20,7 @@ register
 
 Tầng gần compute nhanh hơn nhưng nhỏ hơn và đắt hơn. Tối ưu hiệu năng cố giữ dữ liệu nóng (hot data) ở tầng gần nhất có thể.
 
-## Capacity, Bandwidth và Latency
+## Sức chứa (capacity / 용량), Bandwidth và độ trễ (latency / 지연 시간)
 
 Ba khái niệm khác nhau:
 
@@ -27,9 +30,9 @@ bandwidth = truyền được bao nhiêu dữ liệu mỗi giây
 latency   = phải chờ bao lâu cho một lần truy cập
 ```
 
-GPU có thể đủ VRAM để fit model nhưng vẫn bị bandwidth bottleneck.
+GPU có thể đủ VRAM để fit mô hình (model / 모델) nhưng vẫn bị bandwidth bottleneck.
 
-## Weight Memory
+## Weight bộ nhớ (memory / 메모리)
 
 Với mô hình có `N` parameter, dung lượng xấp xỉ:
 
@@ -40,55 +43,55 @@ INT8 ≈ 1N byte
 INT4 ≈ 0.5N byte
 ```
 
-Nhưng inference còn buffer, activation và KV cache; training còn gradient và optimizer state.
+Nhưng suy luận (inference / 추론) còn buffer, activation và KV bộ nhớ đệm (cache / 캐시); huấn luyện (training / 학습) còn độ dốc (gradient / 기울기) và optimizer trạng thái (state / 상태).
 
-## Activation Memory
+## Activation bộ nhớ (memory / 메모리)
 
-Training cần lưu intermediate activation cho backpropagation.
+Huấn luyện (training / 학습) cần lưu intermediate activation cho backpropagation.
 
-Activation memory thường tăng theo:
+Activation bộ nhớ (memory / 메모리) thường tăng theo:
 
 ```text
 batch size × sequence length × hidden size × layers
 ```
 
-**Gradient checkpointing** giảm memory bằng cách không lưu toàn bộ activation mà recompute một phần trong backward pass.
+**độ dốc (gradient / 기울기) checkpointing** giảm bộ nhớ (memory / 메모리) bằng cách không lưu toàn bộ activation mà recompute một phần trong backward pass.
 
-Trade-off:
+Sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 ít memory hơn ↔ nhiều compute hơn
 ```
 
-## Optimizer State Memory
+## Optimizer trạng thái (state / 상태) bộ nhớ (memory / 메모리)
 
-Adam thường lưu first moment và second moment cho mỗi parameter. Nếu state ở FP32, optimizer memory có thể lớn hơn weight memory nhiều lần.
+Adam thường lưu first moment và second moment cho mỗi parameter. Nếu trạng thái (state / 상태) ở FP32, optimizer bộ nhớ (memory / 메모리) có thể lớn hơn weight bộ nhớ (memory / 메모리) nhiều lần.
 
-Optimizer sharding hoặc lower-precision state giúp giảm footprint.
+Optimizer sharding hoặc lower-precision trạng thái (state / 상태) giúp giảm footprint.
 
-## KV Cache
+## KV bộ nhớ đệm (cache / 캐시)
 
-Autoregressive Transformer cần lưu Key/Value của các token trước cho mỗi layer.
+Autoregressive Transformer cần lưu Key/giá trị (value / 값) của các đơn vị từ (token / 토큰) trước cho mỗi tầng (layer / 계층).
 
-KV cache size xấp xỉ tỉ lệ với:
+KV bộ nhớ đệm (cache / 캐시) kích thước (size / 크기) xấp xỉ tỉ lệ với:
 
 \[
 Layers\times SequenceLength\times KVHeads\times HeadDim\times Precision\times Batch
 \]
 
-Vì vậy long context và high concurrency có thể tiêu thụ memory nhanh hơn weights.
+Vì vậy long ngữ cảnh (context / 맥락) và high tính đồng thời (concurrency / 동시성) có thể tiêu thụ bộ nhớ (memory / 메모리) nhanh hơn weights.
 
 ## Multi-Query và Grouped-Query Attention
 
-Giảm số K/V head giúp giảm KV cache và memory bandwidth trong inference.
+Giảm số K/V head giúp giảm KV bộ nhớ đệm (cache / 캐시) và bộ nhớ (memory / 메모리) bandwidth trong suy luận (inference / 추론).
 
-Đây là ví dụ một thay đổi architecture xuất phát trực tiếp từ constraint hardware/runtime.
+Đây là ví dụ một thay đổi kiến trúc (architecture / 아키텍처) xuất phát trực tiếp từ ràng buộc (constraint / 제약조건) hardware/thời gian chạy (runtime / 런타임).
 
-## Memory Bandwidth
+## Bộ nhớ (memory / 메모리) Bandwidth
 
-Nếu mỗi token decode phải đọc một phần lớn model weights, throughput có thể bị giới hạn bởi HBM bandwidth.
+Nếu mỗi đơn vị từ (token / 토큰) decode phải đọc một phần lớn mô hình (model / 모델) weights, thông lượng (throughput / 처리량) có thể bị giới hạn bởi HBM bandwidth.
 
-Quantization giảm số byte cần đọc nên có thể tăng decode throughput ngay cả khi FLOP count gần như không đổi.
+Quantization giảm số byte cần đọc nên có thể tăng decode thông lượng (throughput / 처리량) ngay cả khi FLOP count gần như không đổi.
 
 ## Arithmetic Intensity
 
@@ -100,98 +103,98 @@ Arithmetic intensity thấp → thường memory-bound.
 
 Arithmetic intensity cao → thường compute-bound.
 
-## Roofline Model
+## Roofline mô hình (model / 모델)
 
-Performance ceiling xấp xỉ:
+Hiệu năng (performance / 성능) ceiling xấp xỉ:
 
 ```text
 min(peak compute,
     memory bandwidth × arithmetic intensity)
 ```
 
-Roofline giúp suy luận xem nên tối ưu compute hay memory traffic.
+Roofline giúp suy luận xem nên tối ưu compute hay bộ nhớ (memory / 메모리) traffic.
 
-## Data Reuse
+## Dữ liệu (data / 데이터) Reuse
 
-Matrix multiplication hiệu quả vì cùng tile dữ liệu được reuse cho nhiều multiply-accumulate operation.
+Phép nhân ma trận (matrix multiplication / 행렬 곱셈) hiệu quả vì cùng tile dữ liệu được reuse cho nhiều multiply-accumulate thao tác (operation / 연산).
 
-Tiling giữ submatrix trong on-chip memory để dùng lại trước khi phải fetch dữ liệu mới từ HBM.
+Tiling giữ submatrix trong on-chip bộ nhớ (memory / 메모리) để dùng lại trước khi phải fetch dữ liệu mới từ HBM.
 
-## Cache Locality
+## Bộ nhớ đệm (cache / 캐시) Locality
 
-Sequential hoặc coalesced access tận dụng cache và burst tốt hơn random access.
+Sequential hoặc coalesced truy cập (access / 접근) tận dụng bộ nhớ đệm (cache / 캐시) và burst tốt hơn random truy cập (access / 접근).
 
-Embedding lookup có irregular memory access nên behavior khác dense GEMM.
+Embedding lookup có irregular bộ nhớ (memory / 메모리) truy cập (access / 접근) nên hành vi (behavior / 동작) khác dense GEMM.
 
 ## Truyền dữ liệu giữa CPU RAM và GPU VRAM
 
-PCIe hoặc interconnect có bandwidth hữu hạn. Nếu mỗi request liên tục copy input lớn hoặc model từ host sang GPU, GPU có thể idle để chờ dữ liệu.
+PCIe hoặc interconnect có bandwidth hữu hạn. Nếu mỗi yêu cầu (request / 요청) liên tục bản sao (copy / 복사) đầu vào (input / 입력) lớn hoặc mô hình (model / 모델) từ host sang GPU, GPU có thể idle để chờ dữ liệu.
 
-Pinning, prefetch và async transfer giúp overlap compute với data transfer.
+Pinning, prefetch và async transfer giúp overlap compute với dữ liệu (data / 데이터) transfer.
 
 ## Offloading
 
-Khi model không fit GPU memory, có thể offload weights, optimizer state hoặc activation sang CPU hoặc NVMe.
+Khi mô hình (model / 모델) không fit GPU bộ nhớ (memory / 메모리), có thể offload weights, optimizer trạng thái (state / 상태) hoặc activation sang CPU hoặc NVMe.
 
-Offloading tăng effective capacity nhưng làm latency cao hơn vì đường truyền chậm hơn.
+Offloading tăng effective sức chứa (capacity / 용량) nhưng làm độ trễ (latency / 지연 시간) cao hơn vì đường truyền chậm hơn.
 
-Phù hợp khi memory capacity là hard constraint và workload chấp nhận overhead.
+Phù hợp khi bộ nhớ (memory / 메모리) sức chứa (capacity / 용량) là hard ràng buộc (constraint / 제약조건) và tải công việc (workload / 워크로드) chấp nhận overhead.
 
-## Unified Memory
+## Unified bộ nhớ (memory / 메모리)
 
-Unified virtual memory giúp lập trình đơn giản hơn, nhưng page migration vẫn có cost. “Unified” không nghĩa mọi memory access có hiệu năng giống nhau.
+Unified virtual bộ nhớ (memory / 메모리) giúp lập trình đơn giản hơn, nhưng page di chuyển (migration / 마이그레이션) vẫn có chi phí (cost / 비용). “Unified” không nghĩa mọi bộ nhớ (memory / 메모리) truy cập (access / 접근) có hiệu năng giống nhau.
 
-## Memory Fragmentation
+## Bộ nhớ (memory / 메모리) Fragmentation
 
-Allocation có kích thước thay đổi tạo các khoảng trống trong memory. LLM serving với nhiều sequence length rất dễ gặp fragmentation.
+Allocation có kích thước thay đổi tạo các khoảng trống trong bộ nhớ (memory / 메모리). LLM serving với nhiều chuỗi (sequence / 시퀀스) length rất dễ gặp fragmentation.
 
-Paged hoặc block KV cache dùng block kích thước cố định để reuse memory hiệu quả hơn.
+Paged hoặc khối (block / 블록) KV bộ nhớ đệm (cache / 캐시) dùng khối (block / 블록) kích thước cố định để reuse bộ nhớ (memory / 메모리) hiệu quả hơn.
 
-## Distributed Memory
+## Phân tán (distributed / 분산) bộ nhớ (memory / 메모리)
 
-Khi model được shard qua nhiều GPU, mỗi device giữ một phần weights hoặc activation. Khi đó communication trở thành một phần của effective memory access path.
+Khi mô hình (model / 모델) được shard qua nhiều GPU, mỗi thiết bị (device / 장치) giữ một phần weights hoặc activation. Khi đó communication trở thành một phần của effective bộ nhớ (memory / 메모리) truy cập (access / 접근) đường dẫn (path / 경로).
 
-Tensor parallelism thường trao đổi partial activation ở mỗi layer, vì vậy interconnect bandwidth cực kỳ quan trọng.
+Tensor parallelism thường trao đổi partial activation ở mỗi tầng (layer / 계층), vì vậy interconnect bandwidth cực kỳ quan trọng.
 
-## Storage I/O
+## Lưu trữ (storage / 저장소) I/O
 
-Large checkpoint có thể mất nhiều phút để load nếu storage hoặc network chậm. Distributed training cần parallel checkpointing và serialization hiệu quả.
+Large checkpoint có thể mất nhiều phút để tải (load / 로드) nếu lưu trữ (storage / 저장소) hoặc mạng (network / 네트워크) chậm. phân tán (distributed / 분산) huấn luyện (training / 학습) cần parallel checkpointing và serialization hiệu quả.
 
-Tần suất checkpoint có trade-off:
+Tần suất checkpoint có sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 thường xuyên hơn → ít mất công khi failure
                  nhưng I/O overhead lớn hơn
 ```
 
-## Economics của Long Context
+## Economics của Long ngữ cảnh (context / 맥락)
 
-Context length tăng không chỉ làm attention compute tăng mà còn làm KV cache lớn hơn. Serving 100 user với context dài có thể memory-bound dù model weights vẫn fit dễ dàng.
+Ngữ cảnh (context / 맥락) length tăng không chỉ làm attention compute tăng mà còn làm KV bộ nhớ đệm (cache / 캐시) lớn hơn. Serving 100 người dùng (user / 사용자) với ngữ cảnh (context / 맥락) dài có thể memory-bound dù mô hình (model / 모델) weights vẫn fit dễ dàng.
 
-## Precision và Memory
+## Precision và bộ nhớ (memory / 메모리)
 
 BF16/FP16 giảm một nửa số byte của weight hoặc activation so với FP32. INT8 và INT4 giảm thêm nữa.
 
-Tuy nhiên conversion, scale metadata và kernel không được hỗ trợ có thể làm giảm benefit kỳ vọng.
+Tuy nhiên conversion, quy mô (scale / 규모) siêu dữ liệu (metadata / 메타데이터) và kernel không được hỗ trợ có thể làm giảm benefit kỳ vọng.
 
-## Batch Sizing có nhận thức về Memory
+## Batch Sizing có nhận thức về bộ nhớ (memory / 메모리)
 
 Maximum batch không phải mục tiêu cuối. Cần chọn batch cân bằng:
 
-- memory headroom;
-- throughput;
-- tail latency;
-- OOM risk.
+- bộ nhớ (memory / 메모리) headroom;
+- thông lượng (throughput / 처리량);
+- tail độ trễ (latency / 지연 시간);
+- OOM rủi ro (risk / 위험).
 
-Dynamic workload cần chừa margin thay vì lấp đầy 100% VRAM.
+Động (dynamic / 동적) tải công việc (workload / 워크로드) cần chừa margin thay vì lấp đầy 100% VRAM.
 
-## OOM Failure
+## OOM thất bại (failure / 실패)
 
-Out-of-memory thường xảy ra vì peak allocation chứ không phải average allocation. Cần profile peak memory ở worst-case sequence length và batch size.
+Out-of-memory thường xảy ra vì peak allocation chứ không phải average allocation. Cần profile peak bộ nhớ (memory / 메모리) ở worst-case chuỗi (sequence / 시퀀스) length và batch kích thước (size / 크기).
 
-## Memory Leak và Caching
+## Bộ nhớ (memory / 메모리) Leak và Caching
 
-Long-running serving runtime có allocator và cache nên RSS hoặc VRAM có thể giữ high watermark. Không nên nhầm allocator caching với memory leak thật; cần inspect allocation behavior.
+Long-running serving thời gian chạy (runtime / 런타임) có allocator và bộ nhớ đệm (cache / 캐시) nên RSS hoặc VRAM có thể giữ high watermark. Không nên nhầm allocator caching với bộ nhớ (memory / 메모리) leak thật; cần inspect allocation hành vi (behavior / 동작).
 
 ## Mô hình tư duy
 
@@ -202,21 +205,21 @@ Compute hỏi: cần bao nhiêu phép toán?
 Memory hỏi: dữ liệu ở đâu, phải di chuyển bao nhiêu byte và có thể reuse bao nhiêu lần?
 ```
 
-Trong AI hiện đại, **data movement cũng là một phần lớn của computation cost**.
+Trong AI hiện đại, **dữ liệu (data / 데이터) movement cũng là một phần lớn của computation chi phí (cost / 비용)**.
 
 ## Những nhầm lẫn thường gặp
 
-### “Model fit VRAM nghĩa là serving ổn”
+### “mô hình (model / 모델) fit VRAM nghĩa là serving ổn”
 
-Không. KV cache, activation và concurrency còn cần thêm memory.
+Không. KV bộ nhớ đệm (cache / 캐시), activation và tính đồng thời (concurrency / 동시성) còn cần thêm bộ nhớ (memory / 메모리).
 
 ### “Nhiều VRAM hơn nghĩa là nhanh hơn”
 
-Không. Capacity và bandwidth là hai đại lượng khác nhau.
+Không. sức chứa (capacity / 용량) và bandwidth là hai đại lượng khác nhau.
 
-### “Unified memory loại bỏ transfer bottleneck”
+### “Unified bộ nhớ (memory / 메모리) loại bỏ transfer bottleneck”
 
-Không. Physical data movement vẫn tồn tại.
+Không. vật lý (physical / 물리적) dữ liệu (data / 데이터) movement vẫn tồn tại.
 
 ## Liên kết kiến thức
 

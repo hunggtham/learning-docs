@@ -1,38 +1,41 @@
 # Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology
 
-Quyết định tài chính không chỉ là bài toán tính lãi suất. Tiền gắn với an toàn, địa vị, tự do, identity, family expectation và fear of loss. Vì vậy cùng một thông tin tài chính có thể dẫn tới behavior rất khác giữa các cá nhân.
+> **Mạch đọc:** Đọc **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mental accounting** sang **mất mát (loss / 손실) aversion và đầu tư**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Quyết định tài chính không chỉ là bài toán tính lãi suất. Tiền gắn với an toàn, địa vị, tự do, định danh (identity / 식별자), family expectation và fear of mất mát (loss / 손실). Vì vậy cùng một thông tin tài chính có thể dẫn tới hành vi (behavior / 동작) rất khác giữa các cá nhân.
 
 ## Mental accounting
 
 **Kế toán tinh thần (mental accounting)** là cách con người chia tiền thành các “ngăn” tâm lý. Một khoản bonus có thể bị xem là tiền để tiêu, trong khi salary được xem là tiền sinh hoạt, dù về mặt số học cả hai đều là money.
 
-Mental accounting đôi khi hữu ích vì nó tạo budget boundary. Nhưng nó cũng có thể gây quyết định kỳ lạ, ví dụ giữ tiền mặt lãi thấp trong khi vay consumer debt lãi cao chỉ vì hai khoản nằm trong “ngăn” khác nhau.
+Mental accounting đôi khi hữu ích vì nó tạo ngân sách (budget / 예산) ranh giới (boundary / 경계). Nhưng nó cũng có thể gây quyết định kỳ lạ, ví dụ giữ tiền mặt lãi thấp trong khi vay bên tiêu thụ (consumer / 소비자) debt lãi cao chỉ vì hai khoản nằm trong “ngăn” khác nhau.
 
-## Loss aversion và đầu tư
+## Mất mát (loss / 손실) aversion và đầu tư
 
-Mất tiền thường gây distress mạnh hơn niềm vui từ gain tương đương. Điều này có thể làm investor giữ position lỗ quá lâu vì bán đồng nghĩa “xác nhận loss”, hoặc bán winner quá sớm để khóa cảm giác thắng.
+Mất tiền thường gây distress mạnh hơn niềm vui từ gain tương đương. Điều này có thể làm investor giữ position lỗ quá lâu vì bán đồng nghĩa “xác nhận mất mát (loss / 손실)”, hoặc bán winner quá sớm để khóa cảm giác thắng.
 
-Tuy nhiên loss aversion không giải thích mọi behavior tài chính. Tax, liquidity need, portfolio constraint và risk capacity đều quan trọng. Không nên dùng một bias để giải thích mọi quyết định.
+Tuy nhiên mất mát (loss / 손실) aversion không giải thích mọi hành vi (behavior / 동작) tài chính. Tax, liquidity need, portfolio ràng buộc (constraint / 제약조건) và rủi ro (risk / 위험) sức chứa (capacity / 용량) đều quan trọng. Không nên dùng một độ lệch (bias / 편향) để giải thích mọi quyết định.
 
 Xem [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]].
 
-## Present bias và saving
+## Present độ lệch (bias / 편향) và saving
 
-Saving đòi present self chịu cost còn future self nhận benefit. **Thiên lệch hiện tại (present bias)** làm immediate reward dễ thắng future reward.
+Saving đòi present self chịu chi phí (cost / 비용) còn future self nhận benefit. **Thiên lệch hiện tại (present bias)** làm immediate reward dễ thắng future reward.
 
-Automation như auto-transfer ngay sau payday giảm số lần phải “quyết định tiết kiệm”. Đây là environment design: thay vì kỳ vọng willpower mỗi tháng, system biến saving thành default.
+Automation như auto-transfer ngay sau payday giảm số lần phải “quyết định tiết kiệm”. Đây là môi trường (environment / 환경) thiết kế (design / 설계): thay vì kỳ vọng willpower mỗi tháng, hệ thống (system / 시스템) biến saving thành default.
 
 ## Scarcity và cognitive bandwidth
 
-Khi tài chính căng thẳng, attention bị hút vào urgent bill, debt và deadline. **Tư duy khan hiếm (scarcity mindset)** có thể tạo tunnel attention: rất tập trung vào problem trước mắt nhưng bỏ qua long-term consequence.
+Khi tài chính căng thẳng, attention bị hút vào urgent bill, debt và deadline. **Tư duy khan hiếm (scarcity mindset)** có thể tạo tunnel attention: rất tập trung vào bài toán (problem / 문제) trước mắt nhưng bỏ qua long-term consequence.
 
-Điều này không có nghĩa người thiếu tiền “quản lý kém”. Constraint thật sự làm decision space hẹp hơn và error cost cao hơn.
+Điều này không có nghĩa người thiếu tiền “quản lý kém”. ràng buộc (constraint / 제약조건) thật sự làm quyết định (decision / 결정) không gian (space / 공간) hẹp hơn và lỗi (error / 오류) chi phí (cost / 비용) cao hơn.
 
 ## Debt và psychological burden
 
-Debt không chỉ là số dư. Nó có thể tạo uncertainty, shame, avoidance và sleep problem. Khi shame cao, person có thể tránh mở statement hoặc trì hoãn negotiation với lender, làm problem nặng hơn.
+Debt không chỉ là số dư. Nó có thể tạo bất định (uncertainty / 불확실성), shame, avoidance và sleep bài toán (problem / 문제). Khi shame cao, person có thể tránh mở statement hoặc trì hoãn negotiation với lender, làm bài toán (problem / 문제) nặng hơn.
 
-Một framework hữu ích là tách:
+Một khung phần mềm (framework / 프레임워크) hữu ích là tách:
 
 ```text
 financial facts
@@ -43,67 +46,67 @@ financial facts
 = actual behavior
 ```
 
-Giải quyết debt thường cần cả arithmetic lẫn behavior design.
+Giải quyết debt thường cần cả arithmetic lẫn hành vi (behavior / 동작) thiết kế (design / 설계).
 
-## FOMO và social comparison
+## FOMO và xã hội (social / 사회적) comparison
 
-Thị trường tăng mạnh dễ tạo **sợ bỏ lỡ (fear of missing out — FOMO)**. Social media làm visible winner nhiều hơn loser, tạo sample bias.
+Thị trường tăng mạnh dễ tạo **sợ bỏ lỡ (fear of missing out — FOMO)**. xã hội (social / 사회적) media làm visible winner nhiều hơn loser, tạo mẫu (sample / 표본) độ lệch (bias / 편향).
 
-Nếu người dùng chỉ thấy screenshot lợi nhuận, base rate của failure bị ẩn. Đây là interaction giữa social comparison, availability bias và selective disclosure.
+Nếu người dùng chỉ thấy screenshot lợi nhuận, cơ sở (base / 기반) tỷ lệ (rate / 비율) của thất bại (failure / 실패) bị ẩn. Đây là tương tác (interaction / 상호작용) giữa xã hội (social / 사회적) comparison, availability độ lệch (bias / 편향) và selective disclosure.
 
 Xem [[05_digital_psychology_social_media_and_online_behavior]] và [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
 
 ## Overconfidence
 
-Người ta thường overestimate ability phân biệt skill với luck, đặc biệt trong environment noisy. Một chuỗi thắng ngắn có thể làm confidence tăng nhanh hơn evidence thực tế.
+Người ta thường overestimate ability phân biệt skill với luck, đặc biệt trong môi trường (environment / 환경) noisy. Một chuỗi thắng ngắn có thể làm confidence tăng nhanh hơn bằng chứng (evidence / 증거) thực tế.
 
-Decision log giúp bằng cách ghi forecast trước outcome: lý do mua, condition khiến thesis sai, expected horizon và downside. Sau đó có thể review calibration thay vì chỉ nhớ trade thành công.
+Quyết định (decision / 결정) log giúp bằng cách ghi forecast trước kết quả (outcome / 결과): lý do mua, điều kiện (condition / 조건) khiến thesis sai, expected horizon và downside. Sau đó có thể rà soát (review / 검토) calibration thay vì chỉ nhớ trade thành công.
 
-## Sunk cost
+## Sunk chi phí (cost / 비용)
 
-**Chi phí chìm (sunk cost)** là resource đã mất và không thể recover. Rationally, decision tiếp theo nên dựa vào future cost/benefit, nhưng con người dễ tiếp tục vì “đã bỏ quá nhiều vào đây”.
+**Chi phí chìm (sunk cost)** là tài nguyên (resource / 자원) đã mất và không thể recover. Rationally, quyết định (decision / 결정) tiếp theo nên dựa vào future chi phí (cost / 비용)/benefit, nhưng con người dễ tiếp tục vì “đã bỏ quá nhiều vào đây”.
 
-Điều này xuất hiện cả trong investment, subscription, education và career. Câu hỏi tốt hơn là: “nếu hôm nay chưa sở hữu position này, với information hiện tại mình có chọn mua không?”.
+Điều này xuất hiện cả trong investment, subscription, education và career. Câu hỏi tốt hơn là: “nếu hôm nay chưa sở hữu position này, với thông tin (information / 정보) hiện tại mình có chọn mua không?”.
 
 ## Lifestyle inflation
 
 Income tăng có thể kéo spending baseline tăng theo. Hedonic adaptation làm upgrade nhanh chóng trở thành normal, khiến subjective gain giảm dần.
 
-Không phải mọi lifestyle inflation đều xấu; quality of life thật sự có thể tăng. Vấn đề là tăng recurring obligation nhanh hơn margin of safety.
+Không phải mọi lifestyle inflation đều xấu; chất lượng (quality / 품질) of life thật sự có thể tăng. Vấn đề là tăng recurring obligation nhanh hơn margin of an toàn (safety / 안전).
 
 ## Financial stress và relationship
 
-Money conflict thường không chỉ về amount mà còn về meaning. Một người coi saving là safety; người kia coi spending cho family là care. Nếu tranh luận chỉ ở level “ai đúng con số”, underlying value conflict vẫn còn.
+Money xung đột (conflict / 충돌) thường không chỉ về amount mà còn về meaning. Một người coi saving là an toàn (safety / 안전); người kia coi spending cho family là care. Nếu tranh luận chỉ ở mức (level / 수준) “ai đúng con số”, underlying giá trị (value / 값) xung đột (conflict / 충돌) vẫn còn.
 
 Xem [[03_interpersonal_communication_and_conflict]] và [[../03_human_development_and_person/07_close_relationships_intimacy_and_family]].
 
-## Risk tolerance và risk capacity
+## Rủi ro (risk / 위험) tolerance và rủi ro (risk / 위험) sức chứa (capacity / 용량)
 
-**Khả năng chịu rủi ro tâm lý (risk tolerance)** khác **năng lực chịu rủi ro tài chính (risk capacity)**. Một người thích risk nhưng đang có short-term debt và emergency fund thấp có thể có capacity thấp.
+**Khả năng chịu rủi ro tâm lý (risk tolerance)** khác **năng lực chịu rủi ro tài chính (risk capacity)**. Một người thích rủi ro (risk / 위험) nhưng đang có short-term debt và emergency fund thấp có thể có sức chứa (capacity / 용량) thấp.
 
-Ngược lại, người có capacity cao vẫn có thể sleep poorly với volatility lớn. Plan tốt cần fit cả hai.
+Ngược lại, người có sức chứa (capacity / 용량) cao vẫn có thể sleep poorly với volatility lớn. Plan tốt cần fit cả hai.
 
 ## Default và automation
 
-Automatic saving, automatic bill payment và rebalancing rule giảm decision fatigue. Nhưng automation chỉ tốt khi rule đúng. Sai default có thể scale error rất nhanh.
+Automatic saving, automatic bill payment và rebalancing quy tắc (rule / 규칙) giảm quyết định (decision / 결정) fatigue. Nhưng automation chỉ tốt khi quy tắc (rule / 규칙) đúng. Sai default có thể quy mô (scale / 규모) lỗi (error / 오류) rất nhanh.
 
-Vì vậy nên định kỳ review automation thay vì “set and forget” mãi mãi.
+Vì vậy nên định kỳ rà soát (review / 검토) automation thay vì “set and forget” mãi mãi.
 
 ## Financial advice và trust
 
-Advisor, influencer và AI tool đều tạo vấn đề **appropriate reliance**. User cần biết incentive của source, uncertainty và giới hạn prediction.
+Advisor, influencer và AI công cụ (tool / 도구) đều tạo vấn đề **appropriate reliance**. người dùng (user / 사용자) cần biết incentive của nguồn (source / 소스), bất định (uncertainty / 불확실성) và giới hạn prediction.
 
-Không nên confuse confidence của presentation với quality của evidence. Một chart đẹp không thay due diligence.
+Không nên confuse confidence của presentation với chất lượng (quality / 품질) của bằng chứng (evidence / 증거). Một chart đẹp không thay due diligence.
 
 ## Những hiểu lầm phổ biến
 
-**“Chỉ cần biết nhiều tài chính thì behavior sẽ tốt.”** Knowledge cần thiết nhưng environment, habit, emotion và constraint cũng quyết định.
+**“Chỉ cần biết nhiều tài chính thì hành vi (behavior / 동작) sẽ tốt.”** kiến thức (knowledge / 지식) cần thiết nhưng môi trường (environment / 환경), habit, emotion và ràng buộc (constraint / 제약조건) cũng quyết định.
 
-**“Người có debt là thiếu kỷ luật.”** Có thể có behavioral factor, nhưng income shock, medical cost, family obligation và structural constraint cũng quan trọng.
+**“Người có debt là thiếu kỷ luật.”** Có thể có behavioral factor, nhưng income shock, medical chi phí (cost / 비용), family obligation và structural ràng buộc (constraint / 제약조건) cũng quan trọng.
 
-**“Investor giỏi là người ít cảm xúc.”** Goal thực tế là decision process không bị emotion chi phối vô thức, không phải loại bỏ cảm xúc.
+**“Investor giỏi là người ít cảm xúc.”** Goal thực tế là quyết định (decision / 결정) tiến trình (process / 프로세스) không bị emotion chi phối vô thức, không phải loại bỏ cảm xúc.
 
-**“Tiết kiệm càng nhiều càng tốt.”** Money là resource để phục vụ goal; extreme saving có thể conflict với health, relationship hoặc opportunity.
+**“Tiết kiệm càng nhiều càng tốt.”** Money là tài nguyên (resource / 자원) để phục vụ goal; extreme saving có thể xung đột (conflict / 충돌) với health, relationship hoặc opportunity.
 
 ## Mô hình tư duy
 
@@ -128,3 +131,5 @@ feedback vào stress và future options
 ## Kết nối kiến thức
 
 Xem [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]], [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]], [[03_interpersonal_communication_and_conflict]], [[05_digital_psychology_social_media_and_online_behavior]], [[12_psychology_in_daily_life_and_self_regulation]] và [[../00_foundations/08_causal_inference_and_psychological_evidence]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 work organization and leadership](./00_work_organization_and_leadership.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

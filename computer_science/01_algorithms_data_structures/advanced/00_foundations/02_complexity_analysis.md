@@ -1,7 +1,10 @@
 # Phân tích độ phức tạp
-**Complexity Analysis / 복잡도 분석**
 
-Độ phức tạp mô tả cách lượng tài nguyên cần thiết tăng theo kích thước đầu vào. Hai tài nguyên được nhắc đến nhiều nhất là **độ phức tạp thời gian (time complexity / 시간 복잡도)** và **độ phức tạp không gian (space complexity / 공간 복잡도)**. Trong hệ thống thực tế, ta còn phải quan tâm đến số lần I/O, số lần trượt bộ nhớ đệm (cache miss), số lượt trao đổi qua mạng (network round-trip), số lần cấp phát bộ nhớ, dự đoán sai nhánh và chi phí đồng bộ hóa (synchronization). Vì vậy, phân tích độ phức tạp không phải là một bảng Big-O để học thuộc mà là một **mô hình tăng trưởng** giúp dự đoán một thiết kế sẽ hoạt động ra sao khi dữ liệu lớn dần.
+> **Mạch đọc:** Đọc **Phân tích độ phức tạp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Tại sao không chỉ đo thời gian thực thi?** sang **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**phân tích độ phức tạp (complexity analysis / 복잡도 분석) / 복잡도 분석**
+
+Độ phức tạp mô tả cách lượng tài nguyên cần thiết tăng theo kích thước đầu vào. Hai tài nguyên được nhắc đến nhiều nhất là **độ phức tạp thời gian (time complexity / 시간 복잡도)** và **độ phức tạp không gian (space complexity / 공간 복잡도)**. Trong hệ thống thực tế, ta còn phải quan tâm đến số lần I/O, số lần trượt bộ nhớ đệm (cache miss / 캐시 미스), số lượt trao đổi qua mạng (network round-trip), số lần cấp phát bộ nhớ, dự đoán sai nhánh và chi phí đồng bộ hóa (synchronization). Vì vậy, phân tích độ phức tạp không phải là một bảng Big-O để học thuộc mà là một **mô hình tăng trưởng** giúp dự đoán một thiết kế sẽ hoạt động ra sao khi dữ liệu lớn dần.
 
 Một phép đo hiệu năng cho kết quả 2 ms ở hiện tại không trả lời được câu hỏi “điều gì xảy ra khi đầu vào tăng 100 lần?”. Phân tích độ phức tạp cố gắng trả lời câu hỏi đó bằng cách tạm bỏ qua nhiều chi tiết phần cứng và tập trung vào cấu trúc của quá trình tính toán.
 
@@ -57,7 +60,7 @@ Sau `k` bước:
 
 ## 3. Kích thước đầu vào không phải lúc nào cũng chỉ là `n`
 
-Đồ thị thường cần hai biến `V` và `E`. Ma trận có thể cần `R` và `C`. Thuật toán chuỗi có thể phụ thuộc vào `n + m`. Hiệu năng của bảng băm (Hash Table) còn phụ thuộc vào hệ số tải (load factor). Bài toán Knapsack có `n` vật phẩm và sức chứa `W`.
+Đồ thị thường cần hai biến `V` và `E`. Ma trận có thể cần `R` và `C`. Thuật toán chuỗi có thể phụ thuộc vào `n + m`. Hiệu năng của bảng băm (hash table / 해시 테이블) còn phụ thuộc vào hệ số tải (load factor). Bài toán Knapsack có `n` vật phẩm và sức chứa `W`.
 
 Ví dụ, BFS dùng danh sách kề có độ phức tạp:
 
@@ -225,7 +228,7 @@ Sự phân biệt này quan trọng khi chuyển từ thiết kế thuật toán
 
 ## 14. Mô hình so sánh và cận dưới
 
-Thuật toán sắp xếp dựa trên so sánh phải phân biệt `n!` hoán vị có thể có của đầu vào. Mỗi phép so sánh chỉ cho một số hữu hạn kết quả, vì vậy cây quyết định (decision tree) phải có độ sâu ít nhất:
+Thuật toán sắp xếp dựa trên so sánh phải phân biệt `n!` hoán vị có thể có của đầu vào. Mỗi phép so sánh chỉ cho một số hữu hạn kết quả, vì vậy cây quyết định (decision tree / 의사결정 트리) phải có độ sâu ít nhất:
 
 \[
 \Omega(\log(n!))=\Omega(n\log n)
@@ -243,7 +246,7 @@ Lớp trừu tượng của thư viện (library abstraction) không làm biến
 
 Trong Java, `ArrayList.get(i)` gần `O(1)` còn `LinkedList.get(i)` là `O(n)`. Trong JavaScript, `Array.shift()` có thể phát sinh chi phí đánh lại chỉ số hoặc nén mảng; `push()` và `pop()` ở cuối thường phù hợp hơn khi dùng mảng làm ngăn xếp. `HashMap` có thời gian tra cứu kỳ vọng nhanh, còn `TreeMap` duy trì thứ tự với chi phí `O(log n)`.
 
-Một lần tái cấu trúc chỉ thay cách triển khai tập hợp dữ liệu cũng có thể làm thay đổi bậc độ phức tạp của toàn hàm dù logic nghiệp vụ không đổi.
+Một lần tái cấu trúc chỉ thay cách triển khai tập hợp dữ liệu cũng có thể làm thay đổi bậc độ phức tạp của toàn hàm dù lô-gic (logic / 논리) nghiệp vụ không đổi.
 
 Vì vậy, độ phức tạp nên được xem là một phần của **hợp đồng kỹ thuật của API**.
 
@@ -260,9 +263,9 @@ Trong **mô hình bộ nhớ ngoài (external-memory model)**, đôi khi ta đ�
 
 Mô hình RAM tiệm cận vẫn rất hữu ích, nhưng khi phân tích hệ thống thực tế cần xét thêm tính cục bộ (locality) và chi phí di chuyển dữ liệu giữa các tầng bộ nhớ.
 
-## 17. CPU, dự đoán nhánh và vector hóa
+## 17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa
 
-Một thuật toán có nhiều nhánh phụ thuộc dữ liệu khó dự đoán có thể chậm hơn một phép quét tuyến tính đơn giản dù số lượng thao tác tương đương. Các mảng số nằm liên tiếp trong bộ nhớ còn có thể tận dụng **vector hóa (vectorization)** hoặc SIMD.
+Một thuật toán có nhiều nhánh phụ thuộc dữ liệu khó dự đoán có thể chậm hơn một phép quét tuyến tính đơn giản dù số lượng thao tác tương đương. Các mảng số nằm liên tiếp trong bộ nhớ còn có thể tận dụng **véc-tơ (vector / 벡터) hóa (vectorization)** hoặc SIMD.
 
 Điều này giải thích vì sao tìm kiếm nhị phân với ít phép so sánh chưa chắc nhanh hơn quét tuyến tính trên mảng rất nhỏ: chi phí phụ của dự đoán nhánh và bộ nhớ đệm có thể chi phối các hệ số hằng.
 
@@ -332,7 +335,7 @@ Giả sử hệ thống có 10 triệu bản ghi với khối lượng công vi�
 
 Bảng băm có thời gian tra cứu kỳ vọng tốt nhưng không hỗ trợ quét theo thứ tự trên một khoảng. Cây cân bằng có tra cứu `O(log n)` nhưng hỗ trợ thao tác theo khoảng tốt hơn. Trong thực tế, có thể dùng bảng băm cho các tra cứu chính xác thường xuyên và một chỉ mục có thứ tự riêng cho truy vấn khoảng, hoặc để hệ quản trị cơ sở dữ liệu quản lý cả hai đường truy cập.
 
-Phân tích độ phức tạp không tự chọn cấu trúc thay ta; nó giúp định lượng **sự đánh đổi (trade-off)** theo khối lượng công việc.
+Phân tích độ phức tạp không tự chọn cấu trúc thay ta; nó giúp định lượng **sự đánh đổi (trade-off / 트레이드오프)** theo khối lượng công việc.
 
 ## 23. Danh sách kiểm tra khi phân tích độ phức tạp
 
@@ -358,3 +361,5 @@ Hệ thống thực tế cần thông lượng trung bình hay độ trễ trư�
 Big-O cho biết hình dạng tăng trưởng. Phân tích khấu hao, kỳ vọng và trường hợp xấu nhất cho biết loại bảo đảm. Bộ nhớ đệm, cấp phát, I/O và tranh chấp tài nguyên bổ sung lớp mô hình thực tế hơn. Cuối cùng, phép đo hiệu năng xác nhận cách triển khai trên khối lượng công việc thật.
 
 Xem thêm: [Mathematical Toolkit](./04_mathematical_toolkit_for_dsa.md), [Memory Models](./03_memory_models_c_java_javascript.md), [Testing & Benchmarking](../80_language_implementations/03_cross_language_testing_and_benchmarking.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dsa as problem modeling](./00_dsa_as_problem_modeling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

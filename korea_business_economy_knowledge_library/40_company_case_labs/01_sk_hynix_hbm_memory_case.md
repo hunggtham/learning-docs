@@ -1,8 +1,11 @@
-# SK hynix Case Lab — HBM, chu kỳ bộ nhớ và kinh tế của phân bổ công suất
+# SK hynix trường hợp (case / 사례) Lab — HBM, chu kỳ bộ nhớ và kinh tế của phân bổ công suất
+
+> **Mạch đọc:** Đặt **SK hynix trường hợp (case / 사례) Lab — HBM, chu kỳ bộ nhớ và kinh tế của phân bổ công suất** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu từ cấu trúc nhu cầu, không bắt đầu từ mã cổ phiếu** sang **2. HBM không chỉ là “DRAM đắt hơn”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 SK hynix là một trường hợp phù hợp để học cách một công ty vẫn thuộc ngành bán dẫn bộ nhớ nhưng cơ cấu kinh tế có thể thay đổi mạnh khi hạ tầng AI làm HBM trở nên quan trọng hơn. Phân tích tốt phải tránh hai cực: coi bộ nhớ hoàn toàn là hàng hóa chu kỳ kiểu cũ, hoặc coi HBM là một mảng kinh doanh miễn nhiễm với chu kỳ.
 
-SK hynix bán DRAM, NAND và các giải pháp bộ nhớ liên quan. Năm tài chính 2025 là một ảnh chụp đặc biệt mạnh: công ty công bố doanh thu khoảng 97,1 nghìn tỷ KRW và lợi nhuận hoạt động khoảng 47,2 nghìn tỷ KRW, với HBM và bộ nhớ AI giá trị cao là động lực quan trọng. Chính vì lợi nhuận ở mức rất cao, case này đặc biệt hữu ích để học **chuẩn hóa lợi nhuận (normalization)**: lợi nhuận ở đỉnh chu kỳ hiện tại không được tự động kéo dài vô hạn sang tương lai.
+SK hynix bán DRAM, NAND và các giải pháp bộ nhớ liên quan. Năm tài chính 2025 là một ảnh chụp đặc biệt mạnh: công ty công bố doanh thu khoảng 97,1 nghìn tỷ KRW và lợi nhuận hoạt động khoảng 47,2 nghìn tỷ KRW, với HBM và bộ nhớ AI giá trị cao là động lực quan trọng. Chính vì lợi nhuận ở mức rất cao, trường hợp (case / 사례) này đặc biệt hữu ích để học **chuẩn hóa lợi nhuận (normalization)**: lợi nhuận ở đỉnh chu kỳ hiện tại không được tự động kéo dài vô hạn sang tương lai.
 
 ## 1. Bắt đầu từ cấu trúc nhu cầu, không bắt đầu từ mã cổ phiếu
 
@@ -27,7 +30,7 @@ Mỗi mũi tên đều có thể bị đứt. Tăng trưởng mô hình AI khôn
 
 HBM tạo **khác biệt kinh tế (economic differentiation)** nhờ băng thông, xếp chồng nhiều lớp chip, đóng gói tiên tiến, giới hạn nhiệt–điện, tỷ lệ thành phẩm và yêu cầu chứng nhận khách hàng. Vì sản phẩm phức tạp hơn, khả năng giữ lại giá trị có thể cao hơn DRAM thông thường trong một giai đoạn.
 
-Khi phân tích cần hỏi bốn câu. Thứ nhất, bao nhiêu công suất wafer và đóng gói có thể chuyển sang HBM? Thứ hai, tỷ lệ thành phẩm (yield) thực tế trên đầu vào wafer và stack là bao nhiêu? Thứ ba, khách hàng đã chứng nhận sản phẩm ở thế hệ nào? Thứ tư, HBM tăng có làm giảm lượng công suất dành cho DRAM thông thường và từ đó ảnh hưởng giá toàn ngành hay không?
+Khi phân tích cần hỏi bốn câu. Thứ nhất, bao nhiêu công suất wafer và đóng gói có thể chuyển sang HBM? Thứ hai, tỷ lệ thành phẩm (yield) thực tế trên đầu vào wafer và ngăn xếp (stack / 스택) là bao nhiêu? Thứ ba, khách hàng đã chứng nhận sản phẩm ở thế hệ nào? Thứ tư, HBM tăng có làm giảm lượng công suất dành cho DRAM thông thường và từ đó ảnh hưởng giá toàn ngành hay không?
 
 Điểm cuối đặc biệt quan trọng. Phân bổ công suất cho HBM tạo **chi phí cơ hội (opportunity cost)** đối với DRAM thông thường.
 
@@ -271,7 +274,7 @@ premium / discount theo chu kỳ
 
 Một luận điểm tích cực có thể bị phá bởi thất bại chứng nhận, yield cải thiện chậm, đối thủ tăng công suất HBM nhanh, cú sốc tập trung khách hàng, dư cung toàn ngành hoặc lợi suất CAPEX thấp. Một luận điểm tiêu cực có thể bị phá bởi lượng bộ nhớ AI trên mỗi hệ thống tăng mạnh hơn dự kiến, hạn chế nguồn cung kéo dài, năng lực thực thi vượt trội hoặc chi phí giảm nhanh.
 
-Case này dạy một nguyên tắc quan trọng:
+Trường hợp (case / 사례) này dạy một nguyên tắc quan trọng:
 
 > **HBM có thể thay đổi hình dạng của chu kỳ bộ nhớ, nhưng không xóa kinh tế cơ bản của công suất, yield, giá, CAPEX và cạnh tranh.**
 

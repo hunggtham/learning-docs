@@ -1,55 +1,167 @@
-# Scheduler internals, run queue và fairness/latency trade-offs
+# Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs
 
-Scheduler của operating system không đơn giản là “chọn process tiếp theo”. Nó phân phối một tài nguyên không thể dùng đồng thời trên cùng CPU core — **execution time** — giữa nhiều runnable tasks có mục tiêu khác nhau: throughput, interactive latency, fairness, deadline và energy efficiency.
+> **Mạch đọc:** Đặt **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Runnable không có nghĩa đang chạy** sang **2. Per-CPU run hàng đợi (queue / 큐): giảm contention nhưng tạo bài toán cân bằng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Runnable không có nghĩa đang chạy
 
-Task có thể đang running, runnable nhưng chờ CPU, sleeping vì chờ I/O, hoặc blocked trên synchronization primitive. Scheduler chủ yếu lựa chọn trong tập **runnable tasks**.
+Operating-system scheduler quyết định tác vụ (task / 작업) nào được chạy trên CPU nào, trong bao lâu và khi nào bị preempt. Ở mức advanced, bài toán không phải nhớ tên scheduling thuật toán (algorithm / 알고리즘) mà là hiểu bất biến (invariant / 불변식) của một tài nguyên (resource / 자원) allocator: **CPU thời gian (time / 시간) hữu hạn phải được phân phối theo chính sách (policy / 정책) trong khi scheduler cố giữ fairness/deadline, hạn chế starvation và không phá locality nhiều hơn mức cần thiết.**
 
-Một **run queue (실행 대기열)** biểu diễn các task có thể chạy. Trên multiprocessor, hệ điều hành thường duy trì scheduling state theo CPU để giảm contention và tăng locality. Điều này sinh thêm bài toán load balancing: CPU A có thể quá tải trong khi CPU B rảnh.
+Hiệu năng (performance / 성능) pressure làm bài toán khó vì cùng một quyết định có thể tốt cho fairness nhưng xấu cho bộ nhớ đệm (cache / 캐시) locality, tốt cho thông lượng (throughput / 처리량) nhưng xấu cho wake-up độ trễ (latency / 지연 시간).
 
-## Fairness là một policy, không phải định luật
+## 1. Runnable không có nghĩa đang chạy
 
-Round-robin chia time slice đều là mental model dễ hiểu nhưng production scheduler cần tinh vi hơn. Interactive task thường chạy ngắn rồi sleep chờ user/I/O; batch task có thể muốn dùng CPU liên tục. Nếu mọi task được đối xử hoàn toàn giống nhau theo từng quantum, latency cảm nhận và cache locality có thể không tối ưu.
+Một tác vụ (task / 작업) có thể đang running, runnable nhưng chờ CPU, sleeping/blocked vì I/O hoặc synchronization, hoặc stopped. Scheduler chủ yếu lựa chọn trong tập **runnable tasks**.
 
-Linux CFS truyền thống dùng khái niệm **virtual runtime** để xấp xỉ “CPU công bằng”: task đã nhận nhiều CPU time hơn sẽ có virtual runtime lớn hơn và ít ưu tiên hơn. Nice value thay đổi trọng số chứ không đơn giản là cộng một mức priority cố định.
+Nếu một dịch vụ (service / 서비스) có 64 runnable threads trên 8 cores, phần lớn threads đang chờ CPU dù tiến trình (process / 프로세스) không “blocked” theo nghĩa I/O. Đây là queueing ở tầng OS:
 
-Scheduler hiện đại có thể thay đổi implementation, nhưng invariant cần hiểu là policy cố gắng phân phối service theo trọng số trong khi vẫn giới hạn scheduling overhead và latency.
+```text
+arrival of runnable work
+→ per-CPU run queue
+→ CPU service time
+→ completion/block/preemption
+```
 
-## Context switch có nhiều loại cost
+Khi arrival pressure gần CPU dịch vụ (service / 서비스) sức chứa (capacity / 용량), scheduler delay trở thành thành phần của tail độ trễ (latency / 지연 시간).
 
-Context switch cần lưu/khôi phục architectural state, nhưng chi phí lớn hơn có thể đến từ cache/TLB locality bị phá. Chuyển sang task khác làm working set mới cạnh tranh cache với working set cũ. Vì vậy quantum quá nhỏ tăng responsiveness nhưng có thể giảm throughput.
+## 2. Per-CPU run hàng đợi (queue / 큐): giảm contention nhưng tạo bài toán cân bằng
 
-Ngược lại, quantum quá lớn làm interactive task chờ lâu. Đây là trade-off nền tảng giữa **latency** và **amortized scheduling overhead**.
+Một toàn cục (global / 전역) hàng đợi (queue / 큐) duy nhất trên multicore vừa tạo khóa (lock / 잠금)/contention vừa làm tác vụ (task / 작업) dễ nhảy cốt lõi (core / 핵심) và mất bộ nhớ đệm (cache / 캐시) warmth. Kernel hiện đại thường giữ scheduling trạng thái (state / 상태) theo CPU hoặc theo cấu trúc có tính cục bộ cao.
 
-## CPU affinity và locality
+Điều này tạo sự đánh đổi (trade-off / 트레이드오프) nền tảng:
 
-Di chuyển task sang core khác có thể giúp cân tải nhưng mất cache warmth và trong NUMA system còn có thể khiến task chạy xa memory mà nó thường truy cập. Scheduler vì vậy cân bằng giữa fairness toàn hệ thống và locality.
+```text
+keep task local  <------>  migrate task
+cache/NUMA warmth          load balance/fairness
+```
 
-**CPU affinity (CPU 친화성)** có thể hữu ích cho workload latency-sensitive hoặc benchmark, nhưng pin task tùy tiện có thể làm load imbalance tệ hơn. Affinity là constraint lên scheduler, không phải universal optimization.
+Nếu CPU A có hàng đợi (queue / 큐) dài còn CPU B rảnh, di chuyển (migration / 마이그레이션) có thể giảm wait. Nhưng migrate tác vụ (task / 작업) có working set lớn sang cốt lõi (core / 핵심)/socket khác có thể tăng trượt bộ nhớ đệm (cache miss / 캐시 미스) và remote NUMA truy cập (access / 접근).
 
-## Wakeup latency
+Bất biến (invariant / 불변식) không phải “hàng đợi (queue / 큐) mọi CPU luôn bằng nhau”. Mục tiêu là policy-level fairness/sức chứa (capacity / 용량) mà vẫn giữ locality hợp lý.
 
-Server request thường trải qua pattern: thread ngủ chờ socket, packet đến, interrupt/network stack đánh thức thread, task trở thành runnable, scheduler chọn thời điểm chạy. Latency từ wakeup tới execution có thể trở thành phần đáng kể của tail latency khi CPU saturated.
+## 3. Fairness là chính sách (policy / 정책) theo thời gian
 
-Điều này giải thích tại sao CPU utilization gần 100% không chỉ ảnh hưởng throughput. Khi run queue dài, request mới phải xếp hàng trước khi application code thậm chí bắt đầu chạy.
+Round-robin là mô hình tư duy (mental model / 사고 모델) dễ hiểu nhưng môi trường vận hành (production / 운영 환경) scheduler thường cần weighted fairness. Linux CFS lịch sử dùng **virtual thời gian chạy (runtime / 런타임)** để biểu diễn lượng CPU dịch vụ (service / 서비스) đã nhận tương đối theo weight; hiện thực (implementation / 구현) scheduler có thể thay đổi qua kernel versions, nhưng mô hình tư duy (mental model / 사고 모델) bền hơn tên cấu trúc dữ liệu cụ thể.
 
-## Priority và priority inversion
+Fairness cần trả lời câu hỏi: trong một cửa sổ (window / 윈도우) đủ dài, tác vụ (task / 작업) runnable liên tục nhận bao nhiêu CPU so với weight/chính sách (policy / 정책) của nó?
 
-Nếu high-priority task cần lock đang bị low-priority task giữ, trong khi medium-priority tasks liên tục preempt low-priority holder, high-priority task có thể bị chặn lâu. Đây là **priority inversion (우선순위 역전)**.
+Fairness không đồng nghĩa độ trễ (latency / 지연 시간) tối thiểu. Một tác vụ (task / 작업) có thể nhận “phần CPU công bằng” nhưng wake-up phải chờ quá lâu đối với yêu cầu (request / 요청) latency-sensitive.
 
-Các hệ thống real-time có thể dùng **priority inheritance**: lock holder tạm thời nhận priority cao hơn để hoàn thành critical section và giải phóng resource. Bài học rộng hơn là scheduling policy và synchronization không thể reasoning tách rời.
+## 4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)
 
-## Real-time khác với “nhanh”
+Một máy chủ (server / 서버) luồng thực thi (thread / 스레드) thường:
 
-Real-time scheduling quan tâm tới bounded latency và deadline guarantee, không đơn thuần average performance. Một task hoàn thành trung bình 1 ms nhưng đôi lúc 100 ms có thể tệ hơn task ổn định 5 ms trong hệ thống có deadline 10 ms.
+```text
+sleep/block chờ socket/futex/timer
+→ event/interrupt xảy ra
+→ kernel đánh thức task
+→ chọn target CPU
+→ enqueue runnable
+→ có thể preempt task hiện tại
+→ thread thật sự chạy application code
+```
 
-Soft real-time chấp nhận một số deadline miss; hard real-time yêu cầu guarantee nghiêm ngặt hơn và cần kiểm soát scheduler, interrupt, allocation, locking và I/O path.
+Thời gian từ wake-up tới thực thi (execution / 실행) là **scheduler độ trễ (latency / 지연 시간)**. Khi run hàng đợi (queue / 큐) dài hoặc CPU bị throttled, yêu cầu (request / 요청) có thể mất phần lớn độ trễ (latency / 지연 시간) ngân sách (budget / 예산) trước khi handler thực thi instruction hữu ích nào.
 
-## Production diagnosis
+Đây là lower tầng (layer / 계층) thường bị che bởi ứng dụng (application / 애플리케이션) tracing nếu span chỉ bắt đầu sau khi worker được schedule.
 
-Khi service chậm, CPU usage một mình không đủ. Cần phân biệt CPU thực sự execute application, runnable queue dài, steal time trong VM, throttling do cgroup, frequency scaling, lock contention hay I/O wait. Scheduler metrics phải được đọc cùng tracing và application-level latency.
+## 5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register
 
-## Mental model
+Direct context-switch công việc (work / 작업) gồm lưu/khôi phục architectural trạng thái (state / 상태), scheduler accounting và có thể address-space-related trạng thái (state / 상태). Nhưng indirect chi phí (cost / 비용) thường lớn hơn:
 
-> Scheduler là một resource allocator theo thời gian. Nó không “làm task nhanh hơn”; nó quyết định task nào được quyền dùng CPU, khi nào bị preempt và cost của fairness/locality/deadline được phân phối ra sao. Khi CPU saturated, scheduling queue trở thành queueing system và tail latency tăng trước khi throughput sụp hoàn toàn.
+```text
+cache working set bị thay
+TLB locality thay đổi
+branch predictor/pipeline phải warm lại
+NUMA locality có thể xấu đi
+```
+
+Quantum quá nhỏ tăng responsiveness nhưng tăng switching/locality chi phí (cost / 비용). Quantum quá lớn amortize overhead tốt nhưng làm interactive/wakeup độ trễ (latency / 지연 시간) xấu.
+
+Vì vậy “nhiều threads để tận dụng CPU” chỉ đúng tới điểm tính đồng thời (concurrency / 동시성) còn tạo useful parallelism. Sau đó scheduler và bộ nhớ đệm (cache / 캐시) interference có thể làm dịch vụ (service / 서비스) thời gian (time / 시간) tăng.
+
+## 6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)
+
+**CPU affinity (CPU 친화성)** giới hạn tác vụ (task / 작업) chạy trên tập CPU nhất định. Pinning có thể hữu ích cho benchmark ổn định, latency-sensitive tải công việc (workload / 워크로드), bộ nhớ đệm (cache / 캐시) locality hoặc NUMA placement.
+
+Nhưng pinning sai tạo hotspot và ngăn scheduler dùng idle sức chứa (capacity / 용량). Nếu bộ nhớ (memory / 메모리) của tác vụ (task / 작업) nằm chủ yếu ở nút (node / 노드) khác, pinning còn có thể cố định remote-memory penalty.
+
+Trước khi pin, cần có hypothesis và bằng chứng (evidence / 증거): di chuyển (migration / 마이그레이션) có thật sự là bottleneck hay không?
+
+## 7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem
+
+Trên NUMA machine, “CPU balance” và “bộ nhớ (memory / 메모리) locality” có thể xung đột. tác vụ (task / 작업) chạy trên nút (node / 노드) 0 nhưng working pages ở nút (node / 노드) 1 tạo remote accesses; migrate tác vụ (task / 작업) hoặc migrate pages đều có chi phí (cost / 비용).
+
+Vì vậy hiệu năng (performance / 성능) anomaly có thể xuất hiện như scheduler/tải (load / 로드) issue nhưng tầng dưới quyết định chi phí (cost / 비용) là interconnect + bộ nhớ (memory / 메모리) placement. Đọc cùng [NUMA và scalable coherence](../../02_computer_architecture/advanced/04_numa_interconnects_and_scalable_coherence.md).
+
+## 8. Priority inversion: scheduling và synchronization giao nhau
+
+High-priority tác vụ (task / 작업) có thể chờ khóa (lock / 잠금) do low-priority tác vụ (task / 작업) giữ. Nếu medium-priority tasks liên tục preempt low-priority holder, high-priority tác vụ (task / 작업) bị trì hoãn gián tiếp. Đây là **đảo ngược ưu tiên (priority inversion / 우선순위 역전)**.
+
+Priority inheritance tạm nâng priority của khóa (lock / 잠금) holder để nó hoàn tất trọng yếu (critical / 중요) section. Bài học rộng hơn: scheduler chính sách (policy / 정책) không thể lập luận (reasoning / 추론) tách khỏi khóa (lock / 잠금) quyền sở hữu (ownership / 소유권) và blocking đồ thị (graph / 그래프).
+
+Bất biến (invariant / 불변식) real-time không phải “tác vụ (task / 작업) priority cao luôn chạy”. Nó là deadline/blocking bound có thể chứng minh dưới các giả định (assumptions / 가정들) của scheduler + synchronization giao thức (protocol / 프로토콜).
+
+## 9. Real-time khác với “nhanh”
+
+Real-time quan tâm bounded worst-case/known độ trễ (latency / 지연 시간) hơn average speed. tác vụ (task / 작업) trung bình 1 ms nhưng đôi lúc 100 ms có thể không phù hợp deadline 10 ms, trong khi tác vụ (task / 작업) ổn định 5 ms lại phù hợp hơn.
+
+Hard real-time đòi hỏi điều khiển (control / 제어) chặt scheduling, interrupt, bộ nhớ (memory / 메모리) allocation, locks và I/O. Soft real-time chấp nhận một số misses nhưng vẫn cần tail-bound lập luận (reasoning / 추론).
+
+## 10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries
+
+Trong bộ chứa (container / 컨테이너), CPU quota/weight có thể throttle tải công việc (workload / 워크로드) dù host còn idle CPU theo cách nhìn tổng quát. Trong VM, **steal thời gian (time / 시간)** cho thấy vCPU runnable nhưng hypervisor chưa cấp vật lý (physical / 물리적) CPU.
+
+Do đó bất biến (invariant / 불변식) “dịch vụ (service / 서비스) có 4 vCPU” không đồng nghĩa bốn cores luôn available. sức chứa (capacity / 용량) thực tế phụ thuộc scheduler ở nhiều tầng:
+
+```text
+application workers
+→ guest/container scheduler boundary
+→ host scheduler
+→ physical CPU
+```
+
+## 11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure
+
+Scheduler hiếm khi “crash” ứng dụng (application / 애플리케이션) theo nghĩa lô-gic (logic / 논리), nhưng pressure có thể tạo hành vi khi thất bại (failure behavior / 실패 동작) cấp hệ thống:
+
+```text
+run queue dài → wake-up latency tăng → timeout
+threads quá nhiều → context-switch/cache interference → service time tăng
+CPU throttle → queue tăng dù host utilization nhìn chưa đầy
+priority inversion → deadline miss
+bad affinity → hotspot + remote NUMA access
+```
+
+Các thất bại (failure / 실패) này thường phản hồi (feedback / 피드백) sang thử lại (retry / 재시도)/overload ở tầng ứng dụng (application / 애플리케이션).
+
+## 12. bằng chứng vận hành (production evidence / 운영 증거)
+
+CPU utilization một mình không đủ. Khi điều tra scheduler pressure, cần kết hợp:
+
+```text
+per-CPU utilization và runnable queue
+voluntary/involuntary context switches
+scheduler/run-queue latency
+CPU migrations và affinity
+cgroup throttled time/quota pressure
+VM steal time nếu có
+NUMA local/remote memory evidence
+on-CPU vs off-CPU profile
+```
+
+Linux có nhiều facility như scheduler tracepoints, `perf`, pressure metrics và eBPF-based tooling; tên công cụ (tool / 도구) có thể thay nhưng bằng chứng (evidence / 증거) mô hình (model / 모델) không đổi: **tác vụ (task / 작업) runnable từ lúc nào, thật sự chạy lúc nào, bị preempt/khối (block / 블록) bởi gì, trên CPU/nút (node / 노드) nào**.
+
+## 13. liên kết (connection / 연결) với queueing/backpressure
+
+Run hàng đợi (queue / 큐) là một hàng đợi (queue / 큐) giống nhiều hàng đợi (queue / 큐) khác trong hệ thống (system / 시스템). Nếu ứng dụng (application / 애플리케이션) tiếp tục accept công việc (work / 작업) trong khi CPU already saturated, hàng đợi (queue / 큐) debt tăng rồi deadline hết hạn. Admission điều khiển (control / 제어) ở tầng ứng dụng (application / 애플리케이션) có thể bảo vệ scheduler khỏi phải giữ quá nhiều runnable công việc (work / 작업).
+
+Đây là lý do tính đồng thời (concurrency / 동시성) limit thường tốt hơn “spawn thêm threads khi chậm”. Đọc [Queueing, tail latency và backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md).
+
+## 14. Mô hình tư duy
+
+> Scheduler là tài nguyên (resource / 자원) allocator theo thời gian trên topology CPU/NUMA. **Run hàng đợi (queue / 큐) biểu diễn demand chưa được CPU phục vụ; chính sách (policy / 정책) quyết định fairness/priority; preemption/di chuyển (migration / 마이그레이션) đổi độ trễ (latency / 지연 시간) và locality; bằng chứng vận hành (production evidence / 운영 증거) phải tách useful CPU công việc (work / 작업) khỏi queueing, throttling và interference.** Khi pressure tăng, scheduler hành vi (behavior / 동작) trở thành một phần của end-to-end độ trễ (latency / 지연 시간) chứ không còn là chi tiết “bên dưới OS”.
+
+## Kết nối
+
+Đọc tiếp [Page faults, reclaim và memory pressure](./02_page_faults_reclaim_dirty_pages_and_memory_pressure.md), [NUMA architecture](../../02_computer_architecture/advanced/04_numa_interconnects_and_scalable_coherence.md), [End-to-end request latency](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) và [Debugging xuyên abstraction layers](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kernel execution contexts and syscall path](./00_kernel_execution_contexts_and_syscall_path.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

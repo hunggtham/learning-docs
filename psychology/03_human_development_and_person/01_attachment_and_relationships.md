@@ -1,5 +1,8 @@
 # Gắn bó và các mối quan hệ — Attachment & Relationships / 애착
 
+> **Mạch đọc:** Đọc **Gắn bó và các mối quan hệ — Attachment & Relationships / 애착** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao hệ thống gắn bó tồn tại?** sang **nội bộ (internal / 내부) working mô hình (model / 모델): mô hình làm việc bên trong**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 **Gắn bó (attachment / 애착)** là hệ thống tâm lý–sinh học giúp con người tìm kiếm sự gần gũi và an toàn khi có đe dọa, mệt mỏi hoặc bất định. Khái niệm này bắt đầu từ quan hệ trẻ–người chăm sóc nhưng về sau được mở rộng để nghiên cứu các mối quan hệ thân mật ở tuổi trưởng thành.
 
 Điều quan trọng nhất cần tránh là biến attachment thành một bộ nhãn tính cách cứng. `Secure`, `anxious`, `avoidant` không phải “căn cước” bất biến của một người. Gắn bó phản ánh mô hình kỳ vọng và chiến lược điều chỉnh quan hệ được hình thành qua trải nghiệm, có thể thay đổi theo người, bối cảnh và thời gian.
@@ -10,7 +13,7 @@ Trẻ nhỏ phụ thuộc người chăm sóc trong thời gian dài. Một cơ 
 
 Hai chức năng này rất quan trọng. Gắn bó không nhằm giữ trẻ gần người chăm sóc mọi lúc; một hệ thống an toàn phải vừa hỗ trợ tìm kiếm bảo vệ khi cần, vừa cho phép khám phá độc lập khi nguy cơ giảm.
 
-## Internal working model: mô hình làm việc bên trong
+## Nội bộ (internal / 내부) working mô hình (model / 모델): mô hình làm việc bên trong
 
 Bowlby đề xuất rằng trải nghiệm quan hệ dần tạo các **mô hình làm việc bên trong (internal working models)**. Đây là các kỳ vọng ngầm kiểu:
 
@@ -41,7 +44,7 @@ Do đó, cách nói `attachment style của bạn là lỗi của cha mẹ` vừ
 
 Khi có đe dọa, hệ gắn bó có thể được kích hoạt trước cả khi ta kịp mô tả bằng lời. Người có lo âu cao có thể khuếch đại tín hiệu quan hệ để giữ kết nối. Người có né tránh cao có thể giảm chú ý tới nhu cầu thân mật và cố tự điều chỉnh một mình.
 
-Hai chiến lược này có logic học tập. Nếu tìm kiếm hỗ trợ từng không ổn định, một người có thể học rằng phải tăng tín hiệu mới được chú ý. Nếu bộc lộ nhu cầu từng dẫn tới thất vọng hoặc xâm phạm, người đó có thể học cách giảm biểu hiện nhu cầu.
+Hai chiến lược này có lô-gic (logic / 논리) học tập. Nếu tìm kiếm hỗ trợ từng không ổn định, một người có thể học rằng phải tăng tín hiệu mới được chú ý. Nếu bộc lộ nhu cầu từng dẫn tới thất vọng hoặc xâm phạm, người đó có thể học cách giảm biểu hiện nhu cầu.
 
 Hiểu cơ chế này hữu ích hơn việc phán xét rằng một người “quá needy” hay “lạnh lùng”.
 
@@ -65,7 +68,7 @@ Nếu chỉ nhìn từng hành vi riêng lẻ, cả hai bên đều có thể th
 
 ## Demand–withdraw và repair
 
-Chu kỳ **đòi hỏi–rút lui (demand–withdraw)** là một pattern liên quan nhưng không đồng nhất với attachment. Một bên tăng yêu cầu, chỉ trích hoặc ép thảo luận; bên kia im lặng, tránh hoặc rời tình huống. Vấn đề không phải chỉ ai đúng, mà là cách vòng lặp làm khả năng xử lý nội dung xung đột giảm dần.
+Chu kỳ **đòi hỏi–rút lui (demand–withdraw)** là một mẫu (pattern / 패턴) liên quan nhưng không đồng nhất với attachment. Một bên tăng yêu cầu, chỉ trích hoặc ép thảo luận; bên kia im lặng, tránh hoặc rời tình huống. Vấn đề không phải chỉ ai đúng, mà là cách vòng lặp làm khả năng xử lý nội dung xung đột giảm dần.
 
 Khả năng **sửa chữa quan hệ (repair)** rất quan trọng. Repair có thể là thừa nhận hiểu sai, giảm giọng, xin nghỉ để hạ kích hoạt rồi quay lại, tóm tắt góc nhìn của đối phương, hoặc xin lỗi cụ thể thay vì xin lỗi chung chung.
 
@@ -79,12 +82,12 @@ An toàn không có nghĩa luôn bình tĩnh hoặc không cần ai. Một ngư�
 - tìm kiếm hỗ trợ tương đối trực tiếp;
 - chịu được khoảng cách tạm thời;
 - cho phép người khác có autonomy;
-- sửa chữa sau conflict;
-- cập nhật niềm tin khi evidence mới khác trải nghiệm cũ.
+- sửa chữa sau xung đột (conflict / 충돌);
+- cập nhật niềm tin khi bằng chứng (evidence / 증거) mới khác trải nghiệm cũ.
 
-## Earned security: an toàn có thể được học lại
+## Earned bảo mật (security / 보안): an toàn có thể được học lại
 
-Một số người có lịch sử quan hệ không ổn định nhưng về sau phát triển pattern an toàn hơn thông qua quan hệ đáng tin cậy, trị liệu, tự phản tư và kinh nghiệm sửa chữa lặp lại. Khái niệm **an toàn đạt được (earned security)** nhấn mạnh rằng lịch sử sớm ảnh hưởng quỹ đạo nhưng không khóa tương lai.
+Một số người có lịch sử quan hệ không ổn định nhưng về sau phát triển mẫu (pattern / 패턴) an toàn hơn thông qua quan hệ đáng tin cậy, trị liệu, tự phản tư và kinh nghiệm sửa chữa lặp lại. Khái niệm **an toàn đạt được (earned security)** nhấn mạnh rằng lịch sử sớm ảnh hưởng quỹ đạo nhưng không khóa tương lai.
 
 Điều này phù hợp với cách hiểu rộng hơn về tính dẻo và học tập: hệ thống dự đoán có thể được cập nhật khi dữ liệu mới đủ ổn định và có ý nghĩa.
 
@@ -116,9 +119,9 @@ Thay vì hỏi `tôi là kiểu attachment nào?`, các câu hỏi hành động
 2. Tôi thường làm gì ngay sau đó?
 3. Hành vi đó khiến người kia phản ứng thế nào?
 4. Phản ứng của họ xác nhận nỗi sợ ban đầu ra sao?
-5. Có điểm nào trong vòng lặp có thể thay bằng response ít khuếch đại hơn?
+5. Có điểm nào trong vòng lặp có thể thay bằng phản hồi (response / 응답) ít khuếch đại hơn?
 
-Ví dụ, thay vì gửi nhiều tin nhắn để giảm lo âu ngay lập tức, một người có thể nhận diện activation, kiểm tra evidence, tự điều chỉnh trước rồi gửi một yêu cầu rõ ràng. Người có xu hướng rút lui có thể xin thời gian nghỉ nhưng hẹn thời điểm quay lại thay vì biến mất hoàn toàn.
+Ví dụ, thay vì gửi nhiều tin nhắn để giảm lo âu ngay lập tức, một người có thể nhận diện activation, kiểm tra bằng chứng (evidence / 증거), tự điều chỉnh trước rồi gửi một yêu cầu rõ ràng. Người có xu hướng rút lui có thể xin thời gian nghỉ nhưng hẹn thời điểm quay lại thay vì biến mất hoàn toàn.
 
 ## Mô hình tư duy
 
@@ -127,3 +130,5 @@ Ví dụ, thay vì gửi nhiều tin nhắn để giảm lo âu ngay lập tức
 ## Kết nối kiến thức
 
 Xem [[00_lifespan_development]], [[06_stress_coping_and_emotion_regulation]], [[07_close_relationships_intimacy_and_family]], [[14_parenting_caregiving_and_family_development]] và [[../06_applied/03_interpersonal_communication_and_conflict]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

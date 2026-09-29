@@ -1,5 +1,8 @@
 # Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng
 
+> **Mạch đọc:** Đọc **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao điện tích đứng yên không liên tục phát bức xạ?** sang **Thế trễ: trường phản ứng với trạng thái quá khứ của nguồn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao điện tích đứng yên không liên tục phát bức xạ?
 
 Một điện tích đứng yên tạo điện trường tĩnh. Một điện tích chuyển động thẳng đều tạo trường điện từ khác, nhưng trong chân không nó không liên tục phát bức xạ chỉ vì đang chuyển động.
@@ -65,9 +68,9 @@ Nó cho thấy gia tốc của điện tích là nguồn cơ bản của bức x
 
 Không thể luôn cộng đơn giản công suất của từng electron nếu chuyển động của chúng có tương quan pha.
 
-## Vector Poynting và dòng năng lượng
+## Véc-tơ (vector / 벡터) Poynting và dòng năng lượng
 
-Dòng năng lượng điện từ được mô tả bởi vector Poynting
+Dòng năng lượng điện từ được mô tả bởi véc-tơ (vector / 벡터) Poynting
 
 ```math
 \mathbf S=\frac{1}{\mu_0}\mathbf E\times\mathbf B.
@@ -144,7 +147,7 @@ Vật chất có các cộng hưởng điện tử, dao động và quay. Trư�
 
 Hệ số hấp thụ phụ thuộc tần số và vật liệu. Ở cân bằng nhiệt, phát xạ và hấp thụ liên hệ với nhau qua detailed balance.
 
-Phổ vật đen vì vậy không chỉ là hiện tượng “vật nóng phát sáng”; nó phản ánh cân bằng thống kê giữa mode trường điện từ và vật chất.
+Phổ vật đen vì vậy không chỉ là hiện tượng “vật nóng phát sáng”; nó phản ánh cân bằng thống kê giữa chế độ (mode / 모드) trường điện từ và vật chất.
 
 ## Phản lực bức xạ và giới hạn của điện tích điểm cổ điển
 
@@ -197,7 +200,7 @@ Hệ số cụ thể phụ thuộc định nghĩa kỹ thuật, nhưng ý tưở
 
 ## Kiểm tra thứ nguyên và bậc độ lớn
 
-Công suất Larmor có đơn vị watt. Vector Poynting có đơn vị
+Công suất Larmor có đơn vị watt. véc-tơ (vector / 벡터) Poynting có đơn vị
 
 ```text
 W/m²
@@ -207,9 +210,9 @@ vì nó biểu diễn công suất qua một đơn vị diện tích.
 
 Nếu cường độ vùng xa giảm theo `1/r^2`, tích cường độ trên mặt cầu `4\pi r^2` sẽ gần không đổi nếu bỏ hấp thụ. Đây là một kiểm tra trực tiếp của bảo toàn năng lượng.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Bức xạ là phần của trường điện từ có thể tách khỏi nguồn và mang năng lượng ra xa. Điện tích gia tốc tạo nhiễu động; hình học và pha của nhiều điện tích quyết định pattern phát; vật chất nhận sóng rồi tạo trường thứ cấp quan sát được dưới dạng phản xạ, hấp thụ và tán xạ.
+Bức xạ là phần của trường điện từ có thể tách khỏi nguồn và mang năng lượng ra xa. Điện tích gia tốc tạo nhiễu động; hình học và pha của nhiều điện tích quyết định mẫu (pattern / 패턴) phát; vật chất nhận sóng rồi tạo trường thứ cấp quan sát được dưới dạng phản xạ, hấp thụ và tán xạ.
 
 Có thể hình dung chuỗi:
 
@@ -241,8 +244,10 @@ Không. Chuyển động thẳng đều trong hệ quán tính không tương đ
 
 Không. Ở miền gần, cấu trúc trường phụ thuộc nguồn và có thành phần phản kháng đáng kể.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Maxwell và sóng điện từ](04_maxwell_em_waves.md), [Thế điện từ và gauge](06_potentials_gauge.md), [Đường truyền](05_transmission_lines_waveguides.md).
 
 **Liên hệ tiếp:** [Quang học sóng](../06_optics/01_wave_optics.md), [Thiên văn quan sát và truyền bức xạ](../11_astrophysics_cosmology/02_observational_astrophysics_radiative_transfer.md), [Động lực lượng tử và tán xạ](../08_quantum/06_time_dependent_scattering.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

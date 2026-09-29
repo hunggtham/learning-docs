@@ -1,6 +1,9 @@
 # Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước
 
-> Nước tự nhiên không phải `H2O` tinh khiết. Nó là một dung dịch động chứa khí hòa tan, ion, phân tử hữu cơ, hạt keo, chất rắn lơ lửng và vi sinh vật. Hành vi của nước xuất hiện từ **cân bằng acid–base, oxy hóa–khử, hòa tan/kết tủa khoáng, tạo phức, hấp phụ và phản ứng sinh học trong một hệ có dòng vật chất liên tục**.
+> **Mạch đọc:** Đọc **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nước như một dung môi** sang **Khung acid–cơ sở (base / 기반)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Nước tự nhiên không phải `H2O` tinh khiết. Nó là một dung dịch động chứa khí hòa tan, ion, phân tử hữu cơ, hạt keo, chất rắn lơ lửng và vi sinh vật. Hành vi của nước xuất hiện từ **cân bằng acid–cơ sở (base / 기반), oxy hóa–khử, hòa tan/kết tủa khoáng, tạo phức, hấp phụ và phản ứng sinh học trong một hệ có dòng vật chất liên tục**.
 
 Một mẫu nước không thể được mô tả chỉ bằng pH. Hai mẫu có cùng pH vẫn có thể khác rất mạnh về độ kiềm, độ cứng, dạng tồn tại của kim loại, trạng thái redox và khả năng đệm.
 
@@ -22,7 +25,7 @@ Cường độ hydrat hóa phụ thuộc mật độ điện tích. Ion nhỏ, �
 
 Ví dụ `Mg2+` được hydrat hóa mạnh hơn `K+`, từ đó ảnh hưởng độ linh động, tạo phức và hành vi sinh học.
 
-## Khung acid–base
+## Khung acid–cơ sở (base / 기반)
 
 Nước tự ion hóa:
 
@@ -92,7 +95,7 @@ Với hệ carbonate chi phối:
 Alk\approx[HCO_3^-]+2[CO_3^{2-}]+[OH^-]-[H^+]
 \]
 
-Phosphate, borate và các base yếu khác cũng có thể đóng góp.
+Phosphate, borate và các cơ sở (base / 기반) yếu khác cũng có thể đóng góp.
 
 Độ kiềm không phải tên khác của pH.
 
@@ -120,7 +123,7 @@ K_{sp}=a_{Ca^{2+}}a_{CO_3^{2-}}
 
 Nếu pH giảm, `CO3²−` bị proton hóa thành `HCO3−` hoặc `CO2*`, làm hoạt độ carbonate giảm và có thể thúc đẩy calcite hòa tan thêm.
 
-Đây là ví dụ điển hình của **cân bằng độ tan ghép với acid–base**.
+Đây là ví dụ điển hình của **cân bằng độ tan ghép với acid–cơ sở (base / 기반)**.
 
 ## Chỉ số bão hòa và cáu cặn
 
@@ -140,7 +143,7 @@ SI > 0 → quá bão hòa
 
 Nhưng `SI > 0` không có nghĩa kết tủa xảy ra ngay. Tạo mầm và tăng trưởng tinh thể có thể chậm.
 
-Đây là bridge trực tiếp giữa [cân bằng độ tan](../08_acids_bases/05_solubility_equilibria.md) và [động học tạo mầm](../03_matter_and_phases/03_phase_changes_and_phase_diagrams.md).
+Đây là cầu nối (bridge / 브리지) trực tiếp giữa [cân bằng độ tan](../08_acids_bases/05_solubility_equilibria.md) và [động học tạo mầm](../03_matter_and_phases/03_phase_changes_and_phase_diagrams.md).
 
 ## Độ cứng
 
@@ -256,7 +259,7 @@ Muối Al hoặc Fe thủy phân, trung hòa điện tích và có thể tạo c
 
 Hiệu quả phụ thuộc pH vì cả dạng hydroxo của kim loại lẫn điện tích bề mặt đều thay đổi theo pH.
 
-**Thử nghiệm jar (jar test)** vì vậy là tối ưu hóa thực nghiệm dựa trên acid–base, tạo phức và hóa học keo.
+**Thử nghiệm jar (jar test)** vì vậy là tối ưu hóa thực nghiệm dựa trên acid–cơ sở (base / 기반), tạo phức và hóa học keo.
 
 ## Lắng và lọc
 
@@ -298,7 +301,7 @@ Chlorine phản ứng với chất hữu cơ tự nhiên có thể tạo trihalo
 
 Tăng liều chất khử trùng có thể cải thiện bất hoạt vi sinh nhưng cũng làm sản phẩm phụ tăng.
 
-Đây là trade-off điển hình:
+Đây là sự đánh đổi (trade-off / 트레이드오프) điển hình:
 
 ```text
 an toàn vi sinh
@@ -461,7 +464,7 @@ Không. Vận chuyển còn chịu nhiệt động thẩm thấu và hòa tan–
 
 ### “Càng nhiều chất khử trùng càng an toàn”
 
-Không. Có trade-off giữa bất hoạt mầm bệnh và sản phẩm phụ/ăn mòn/chất lượng cảm quan.
+Không. Có sự đánh đổi (trade-off / 트레이드오프) giữa bất hoạt mầm bệnh và sản phẩm phụ/ăn mòn/chất lượng cảm quan.
 
 ### “Eh là một con số mô tả toàn bộ trạng thái redox của nước”
 
@@ -494,3 +497,5 @@ công nghệ xử lý
 Khi gặp một vấn đề nước, đừng chỉ hỏi “nồng độ bao nhiêu?”. Hãy hỏi thêm **dạng nào, pha nào, pH nào, trạng thái redox nào và phép đo được bảo quản ra sao**.
 
 Xem tiếp: [Hóa học đất](./02_soil_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atmospheric chemistry](./00_atmospheric_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,7 @@
 # 11. Cách đọc văn bản hành chính tiếng Hàn
 
+> **Mạch đọc:** Đặt **11. Cách đọc văn bản hành chính tiếng Hàn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Đừng đọc từ đầu đến cuối như bài văn** sang **2. Từ khóa ở phần đầu văn bản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## 1. Đừng đọc từ đầu đến cuối như bài văn
 
 Văn bản hành chính Hàn Quốc thường dày đặc thuật ngữ và câu dài. Cách đọc hiệu quả là tìm **khối thông tin pháp lý** trước, sau đó mới đọc chi tiết.
@@ -19,6 +21,9 @@ Thứ tự nên dùng:
 → 불복방법
 → 담당자 연락처
 ```
+
+
+> **Chuyển mạch:** Từ **1. Đừng đọc từ đầu đến cuối như bài văn**, ta sang **2. Từ khóa ở phần đầu văn bản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Từ khóa ở phần đầu văn bản
 
@@ -44,6 +49,9 @@ Tiêu đề thường cho biết văn bản là:
 
 Số văn bản là khóa để liên hệ cơ quan. Khi gọi điện, đọc `문서번호` thường nhanh hơn giải thích toàn bộ câu chuyện.
 
+
+> **Chuyển mạch:** Từ **2. Từ khóa ở phần đầu văn bản**, ta sang **3. Các động từ pháp lý quan trọng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 3. Các động từ pháp lý quan trọng
 
 Sau khi nhận diện loại văn bản, hãy tập trung vào các động từ vì chúng cho biết hành động nào đã xảy ra, ai phải làm gì và quyết định đang ở trạng thái nào. Đọc động từ cùng chủ thể và thời hạn, không dịch từng từ rời.
@@ -66,6 +74,9 @@ Sau khi nhận diện loại văn bản, hãy tập trung vào các động từ
 
 `기각` và `각하` rất dễ nhầm. `기각` thường có nghĩa yêu cầu được xem xét nhưng không được chấp nhận về nội dung; `각하` thường liên quan việc không đi vào xét nội dung vì điều kiện thủ tục hoặc lý do pháp lý khác. Phải xem luật cụ thể.
 
+
+> **Chuyển mạch:** Từ **3. Các động từ pháp lý quan trọng**, ta sang **4. Từ khóa deadline** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 4. Từ khóa deadline
 
 Các từ khóa thời hạn là cầu nối giữa việc hiểu văn bản và hành động đúng ngày. Hãy ghi lại ngày bắt đầu tính, ngày làm việc và ngoại lệ trước khi tự cộng ngày trên lịch.
@@ -81,6 +92,9 @@ Các từ khóa thời hạn là cầu nối giữa việc hiểu văn bản và
 - `공휴일`: ngày nghỉ lễ.
 
 Không tự tính deadline bằng cách cộng số ngày trên lịch nếu văn bản dùng quy tắc khác. Kiểm tra luật và hướng dẫn.
+
+
+> **Chuyển mạch:** Từ **4. Từ khóa deadline**, ta sang **5. Cụm từ chỉ nghĩa vụ và ngoại lệ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. Cụm từ chỉ nghĩa vụ và ngoại lệ
 
@@ -121,6 +135,9 @@ Ngoại lệ là nơi nhiều bản dịch và cách hiểu máy móc bị sai. 
 
 Khi thấy `다만`, đừng dừng ở câu trước. Rất nhiều sai sót đến từ việc nhớ nguyên tắc mà quên ngoại lệ.
 
+
+> **Chuyển mạch:** Từ **5. Cụm từ chỉ nghĩa vụ và ngoại lệ**, ta sang **6. Cách đọc phần căn cứ pháp lý** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 6. Cách đọc phần căn cứ pháp lý
 
 Thường có dạng:
@@ -133,7 +150,10 @@ Thường có dạng:
 
 `같은 법` nghĩa là “cùng luật nói trên”.
 
-Khi thấy căn cứ, copy chính xác tên luật + số điều vào `law.go.kr`.
+Khi thấy căn cứ, bản sao (copy / 복사) chính xác tên luật + số điều vào `law.go.kr`.
+
+
+> **Chuyển mạch:** Từ **6. Cách đọc phần căn cứ pháp lý**, ta sang **7. 별지, 별표, 첨부 khác nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. `별지`, `별표`, `첨부` khác nhau
 
@@ -141,11 +161,14 @@ Sau khi hiểu câu chữ chính, hãy kiểm tra các phụ lục vì điều k
 
 - `별지`: form/biểu mẫu đính kèm;
 - `별표`: bảng/phụ lục pháp lý;
-- `첨부`: file đính kèm nói chung;
+- `첨부`: tệp (file / 파일) đính kèm nói chung;
 - `구비서류`: hồ sơ cần chuẩn bị;
 - `증빙서류`: giấy tờ chứng minh.
 
 Một hướng dẫn có thể ngắn nhưng toàn bộ điều kiện thực tế nằm trong `별표`.
+
+
+> **Chuyển mạch:** Từ **7. 별지, 별표, 첨부 khác nhau**, ta sang **8. Từ khóa trạng thái hồ sơ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Từ khóa trạng thái hồ sơ
 
@@ -162,6 +185,9 @@ Trạng thái hồ sơ mô tả hồ sơ đang ở đâu trong quy trình, khôn
 - `보류`: tạm giữ/chưa quyết định.
 
 Không suy rằng `접수완료` nghĩa là đã được chấp thuận. Nó thường chỉ nghĩa hệ thống đã nhận hồ sơ.
+
+
+> **Chuyển mạch:** Từ **8. Từ khóa trạng thái hồ sơ**, ta sang **9. Template dịch một văn bản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 9. Template dịch một văn bản
 
@@ -180,6 +206,9 @@ Không cần dịch từng từ trước. Hãy tạo bảng:
 | Liên hệ | |
 
 Sau khi hoàn thành bảng này mới dịch các đoạn khó.
+
+
+> **Chuyển mạch:** Từ **9. Template dịch một văn bản**, ta sang **10. Ví dụ cấu trúc 보완요청** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 10. Ví dụ cấu trúc `보완요청`
 
@@ -206,6 +235,9 @@ lý do thiếu gì?
 → cần gọi 담당자 xác nhận không?
 ```
 
+
+> **Chuyển mạch:** Từ **10. Ví dụ cấu trúc 보완요청**, ta sang **11. Cách gọi điện cho 담당자** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 11. Cách gọi điện cho 담당자
 
 Một script ngắn:
@@ -226,6 +258,9 @@ Sau cuộc gọi nên ghi:
 ```
 
 Cuộc gọi hữu ích để hiểu nghiệp vụ, nhưng với vấn đề quan trọng nên cố gắng có nguồn văn bản hoặc xác nhận chính thức.
+
+
+> **Chuyển mạch:** Từ **11. Cách gọi điện cho 담당자**, ta sang **12. Cảnh báo dịch máy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 12. Cảnh báo dịch máy
 

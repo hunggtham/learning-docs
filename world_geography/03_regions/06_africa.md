@@ -1,157 +1,162 @@
 # Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối
 
+> **Mạch đọc:** Đọc **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thesis không gian** sang **“Plateau continent” và hệ quả về river vận chuyển (transport / 전송)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Thesis không gian
 
-Châu Phi không phải một môi trường thống nhất. Lục địa trải từ Mediterranean climate qua Sahara, Sahel, rainforest, savanna, tropical highland đến subtropical/temperate south. Cấu trúc lớn được tổ chức bởi **plateau/basin + rainfall belts + major river basins + coastal gateways + sparse/uneven transport corridors**.
+Châu Phi không phải một môi trường thống nhất. Lục địa trải từ Mediterranean climate qua Sahara, Sahel, rainforest, savanna, tropical highland đến subtropical/temperate south. Cấu trúc lớn được tổ chức bởi **plateau/basin + rainfall belts + major river basins + coastal gateways + sparse/uneven vận chuyển (transport / 전송) corridors**.
 
-Chuỗi causal trung tâm:
+Chuỗi nhân quả (causal / 인과적) trung tâm:
 
-**relief/climate/water → settlement and livelihood → resource/agriculture zones → corridor/port → urban growth → trade/value capture → regional inequality and role**.
+**relief/climate/water → settlement and livelihood → tài nguyên (resource / 자원)/agriculture zones → corridor/cổng (port / 포트) → urban growth → trade/giá trị (value / 값) capture → regional inequality and role**.
 
-## “Plateau continent” và hệ quả về river transport
+## “Plateau continent” và hệ quả về river vận chuyển (transport / 전송)
 
 Phần lớn surface có elevation tương đối cao so với nhiều lục địa khác, trong khi coastal plain ở nhiều nơi hẹp. Nhiều river hạ độ cao mạnh khi gần coast, tạo rapid/fall.
 
-Chênh cao hỗ trợ hydropower nhưng làm continuous inland navigation từ ocean khó ở nhiều basin. Một river dài không tự động là transport highway.
+Chênh cao hỗ trợ hydropower nhưng làm continuous inland điều hướng (navigation / 내비게이션) từ ocean khó ở nhiều basin. Một river dài không tự động là vận chuyển (transport / 전송) highway.
 
-## Basin và highland tạo regional structure
+## Basin và highland tạo regional cấu trúc (structure / 구조)
 
 Congo Basin, Ethiopian/East African highland, southern plateau và Sahara–Sahel belt là các macro-unit ảnh hưởng climate, river và settlement.
 
-Địa hình kiểm road cost, hydropower site, rainfall và market access. Một remote highland city có effective distance tới port lớn hơn map distance gợi ý.
+Địa hình kiểm road chi phí (cost / 비용), hydropower site, rainfall và thị trường (market / 시장) truy cập (access / 접근). Một remote highland city có effective distance tới cổng (port / 포트) lớn hơn map distance gợi ý.
 
 ## East African Rift: hazard và opportunity cùng nguồn gốc
 
 Continental rifting tạo valley, escarpment, deep lake, volcano và seismicity. Cùng tectonic setting tạo geothermal potential, tourism landscape và fertile volcanic soil ở một số nơi.
 
-Đây là ví dụ điển hình: physical process không chỉ tạo hazard hay resource; nó tạo **bundle of constraints and opportunities**.
+Đây là ví dụ điển hình: vật lý (physical / 물리적) tiến trình (process / 프로세스) không chỉ tạo hazard hay tài nguyên (resource / 자원); nó tạo **bundle of các ràng buộc (constraints / 제약조건들) and opportunities**.
 
 ## ITCZ và seasonal rainfall
 
-ITCZ migration làm rainfall belt dịch bắc–nam theo season. Near equator có thể có bimodal rainy season; xa hơn thường có một wet season rõ hơn.
+ITCZ di chuyển (migration / 마이그레이션) làm rainfall belt dịch bắc–nam theo season. Near equator có thể có bimodal rainy season; xa hơn thường có một wet season rõ hơn.
 
-Agriculture quan tâm onset, length và dry spell chứ không chỉ annual total. Một năm có tổng rain gần normal nhưng phân bố timing xấu vẫn có thể làm crop fail.
+Agriculture quan tâm onset, length và dry spell chứ không chỉ annual total. Một năm có tổng rain gần normal nhưng phân bố timing xấu vẫn có thể làm crop thất bại (fail / 실패).
 
 ## Sahara và selective connectivity
 
-Sahara có population density thấp nhưng không phải blank space. Oasis, mineral/energy node, road và historical caravan route tạo selective corridor.
+Sahara có population density thấp nhưng không phải blank không gian (space / 공간). Oasis, mineral/năng lượng (energy / 에너지) nút (node / 노드), road và historical caravan tuyến (route / 경로) tạo selective corridor.
 
-Khi friction rất cao, network có ít edge hơn và mỗi edge trở nên critical. Đây là reason border post, road condition và fuel/water logistics có vai trò lớn.
+Khi friction rất cao, mạng (network / 네트워크) có ít edge hơn và mỗi edge trở nên trọng yếu (critical / 중요). Đây là reason border post, road điều kiện (condition / 조건) và fuel/water logistics có vai trò lớn.
 
 ## Sahel: climate variability và mobility
 
-Sahel là transition zone giữa hyper-arid north và wetter savanna south. Rainfall variability lớn làm pastoral mobility trở thành adaptation strategy.
+Sahel là chuyển tiếp (transition / 전이) zone giữa hyper-arid north và wetter savanna south. Rainfall variability lớn làm pastoral mobility trở thành adaptation chiến lược (strategy / 전략).
 
-Fixed administrative boundary hay land enclosure có thể conflict với ecological logic của seasonal pasture. Mobility không tự động là “lạc hậu”; trong variable environment nó có thể là risk management.
+Fixed administrative ranh giới (boundary / 경계) hay land enclosure có thể xung đột (conflict / 충돌) với ecological lô-gic (logic / 논리) của seasonal pasture. Mobility không tự động là “lạc hậu”; trong variable môi trường (environment / 환경) nó có thể là rủi ro (risk / 위험) management.
 
-## Congo Basin: water–forest–carbon system
+## Congo Basin: water–forest–carbon hệ thống (system / 시스템)
 
-Congo rainforest tương tác rainfall, evapotranspiration, carbon và biodiversity. River network là transport backbone tại nơi road sparse.
+Congo rainforest tương tác rainfall, evapotranspiration, carbon và biodiversity. River mạng (network / 네트워크) là vận chuyển (transport / 전송) backbone tại nơi road sparse.
 
-Forest loss thay runoff, habitat và moisture recycling. Nhưng impact phụ thuộc scale, soil và land-use pattern; slogan “forest = lungs” không đủ cho causal analysis.
+Forest mất mát (loss / 손실) thay runoff, habitat và moisture recycling. Nhưng impact phụ thuộc quy mô (scale / 규모), soil và land-use mẫu (pattern / 패턴); slogan “forest = lungs” không đủ cho nhân quả (causal / 인과적) phân tích (analysis / 분석).
 
-## Nile và upstream–downstream dependency
+## Nile và upstream–downstream phụ thuộc (dependency / 의존성)
 
-Nile nối highland/wetter source region với extremely dry downstream settlement corridor. Nơi tạo runoff và nơi sử dụng water lớn không trùng nhau.
+Nile nối highland/wetter nguồn (source / 소스) region với extremely dry downstream settlement corridor. Nơi tạo runoff và nơi sử dụng water lớn không trùng nhau.
 
-Đây là classic **functional basin vượt political boundary**. Reservoir, irrigation, evaporation và timing phải được phân tích theo basin scale.
+Đây là classic **functional basin vượt political ranh giới (boundary / 경계)**. Reservoir, irrigation, evaporation và timing phải được phân tích theo basin quy mô (scale / 규모).
 
-## Niger, Zambezi và các logic basin khác nhau
+## Niger, Zambezi và các lô-gic (logic / 논리) basin khác nhau
 
-Niger hỗ trợ floodplain agriculture, city và ecosystem ở West Africa; Zambezi có hydropower và transboundary flow ở southern Africa.
+Niger hỗ trợ floodplain agriculture, city và ecosystem ở West Africa; Zambezi có hydropower và transboundary luồng (flow / 흐름) ở southern Africa.
 
-Không nên áp cùng một reservoir/irrigation solution cho mọi basin. Slope, seasonality, sediment, ecology và settlement khác nhau làm trade-off khác.
+Không nên áp cùng một reservoir/irrigation solution cho mọi basin. Slope, seasonality, sediment, ecology và settlement khác nhau làm sự đánh đổi (trade-off / 트레이드오프) khác.
 
 ## Great Lakes và inland connectivity
 
-Large lakes ở East/Central Africa tạo fisheries, water, port và local maritime transport. Nhưng lake connectivity không tự chuyển thành continental market nếu road/rail từ lake port tới coast yếu.
+Large lakes ở East/Central Africa tạo fisheries, water, cổng (port / 포트) và cục bộ (local / 로컬) maritime vận chuyển (transport / 전송). Nhưng lake connectivity không tự chuyển thành continental thị trường (market / 시장) nếu road/rail từ lake cổng (port / 포트) tới coast yếu.
 
-Regional integration cần **lake/road/rail/port chain**, không chỉ một mode.
+Regional tích hợp (integration / 통합) cần **lake/road/rail/cổng (port / 포트) chuỗi (chain / 사슬)**, không chỉ một chế độ (mode / 모드).
 
-## Coast, port và landlocked dependency
+## Coast, cổng (port / 포트) và landlocked phụ thuộc (dependency / 의존성)
 
-Nhiều economy phụ thuộc vài coastal gateway. Landlocked state phải dùng corridor qua neighbor, nên cost gồm inland transport + border delay + port performance.
+Nhiều economy phụ thuộc vài coastal gateway. Landlocked trạng thái (state / 상태) phải dùng corridor qua neighbor, nên chi phí (cost / 비용) gồm inland vận chuyển (transport / 전송) + border delay + cổng (port / 포트) hiệu năng (performance / 성능).
 
-Đây là **corridor geography**: production zone/mine → road/rail → border → seaport → ocean route. Weakest link có thể quyết định total cost.
+Đây là **corridor geography**: môi trường vận hành (production / 운영 환경) zone/mine → road/rail → border → seaport → ocean tuyến (route / 경로). Weakest link có thể quyết định total chi phí (cost / 비용).
 
-## Infrastructure legacy và path dependence
+## Hạ tầng (infrastructure / 인프라) legacy và đường dẫn (path / 경로) dependence
 
-Nhiều historical rail line tập trung nối extraction zone với port hơn là tạo dense domestic mesh. Settlement và firm sau đó bám theo corridor cũ.
+Nhiều historical rail line tập trung nối extraction zone với cổng (port / 포트) hơn là tạo dense domestic mesh. Settlement và firm sau đó bám theo corridor cũ.
 
-New road/rail có thể thay pattern nhưng path dependence mạnh vì city, land market và supplier đã tích lũy quanh old network.
+New road/rail có thể thay mẫu (pattern / 패턴) nhưng đường dẫn (path / 경로) dependence mạnh vì city, land thị trường (market / 시장) và supplier đã tích lũy quanh old mạng (network / 네트워크).
 
-## Population growth là spatial process
+## Population growth là spatial tiến trình (process / 프로세스)
 
 “Population trẻ” hay “population tăng nhanh” không cho biết nơi growth xảy ra. Metro area, secondary city, fertile highland và rural frontier có trajectory khác nhau.
 
-Demographic dividend chỉ xuất hiện khi education, health, housing, transport và productive employment hấp thụ labor force. Age structure là potential, không phải guarantee.
+Demographic dividend chỉ xuất hiện khi education, health, housing, vận chuyển (transport / 전송) và productive employment hấp thụ labor force. Age cấu trúc (structure / 구조) là potential, không phải guarantee.
 
-## Urbanization không nhất thiết đi theo manufacturing-first model
+## Urbanization không nhất thiết đi theo manufacturing-first mô hình (model / 모델)
 
-Lagos, Cairo, Kinshasa, Nairobi, Johannesburg, Addis Ababa và nhiều city có function khác nhau: port, government, finance, industry, trade, service.
+Lagos, Cairo, Kinshasa, Nairobi, Johannesburg, Addis Ababa và nhiều city có hàm (function / 함수) khác nhau: cổng (port / 포트), government, finance, industry, trade, dịch vụ (service / 서비스).
 
-Urban growth có thể mạnh dù formal manufacturing share chưa cao, vì administration, services và informal economy cũng hút population. Điều này tạo housing/infrastructure challenge khác classic European industrialization.
+Urban growth có thể mạnh dù formal manufacturing share chưa cao, vì administration, services và informal economy cũng hút population. Điều này tạo housing/hạ tầng (infrastructure / 인프라) challenge khác classic European industrialization.
 
-## Informal economy và hidden urban network
+## Informal economy và hidden urban mạng (network / 네트워크)
 
-Informal trade/service thường bám market, station, border crossing và dense residential area. Official business registry có thể undercount activity.
+Informal trade/dịch vụ (service / 서비스) thường bám thị trường (market / 시장), station, border crossing và dense residential area. Official nghiệp vụ (business / 비즈니스) registry có thể undercount activity.
 
-Satellite night light, mobile data và household survey bổ sung evidence nhưng mỗi source có bias. Data-poor không có nghĩa activity-poor.
+Satellite night light, mobile dữ liệu (data / 데이터) và household survey bổ sung bằng chứng (evidence / 증거) nhưng mỗi nguồn (source / 소스) có độ lệch (bias / 편향). Data-poor không có nghĩa activity-poor.
 
-## Agriculture: climate chỉ là một layer
+## Agriculture: climate chỉ là một tầng (layer / 계층)
 
-Rainfed farming, irrigated agriculture, cash crop, livestock và Mediterranean system cùng tồn tại. Productivity phụ thuộc soil, seed, water, fertilizer, storage, finance và road-to-market.
+Rainfed farming, irrigated agriculture, cash crop, livestock và Mediterranean hệ thống (system / 시스템) cùng tồn tại. Productivity phụ thuộc soil, seed, water, fertilizer, lưu trữ (storage / 저장소), finance và road-to-market.
 
-Post-harvest loss làm field output khác market supply. Cold chain và rural road có thể tạo value ngang với increase yield trong một số context.
+Post-harvest mất mát (loss / 손실) làm trường dữ liệu (field / 필드) đầu ra (output / 출력) khác thị trường (market / 시장) supply. Cold chuỗi (chain / 사슬) và rural road có thể tạo giá trị (value / 값) ngang với increase yield trong một số ngữ cảnh (context / 맥락).
 
-## Resource belt và câu hỏi value capture
+## Tài nguyên (resource / 자원) belt và câu hỏi giá trị (value / 값) capture
 
-Copper/cobalt, gold, bauxite, iron ore, oil/gas và other resource phân bố thành belt/node. Mine thường remote và cần power, water, rail/road/port.
+Copper/cobalt, gold, bauxite, iron ore, oil/gas và other tài nguyên (resource / 자원) phân bố thành belt/nút (node / 노드). Mine thường remote và cần power, water, rail/road/cổng (port / 포트).
 
-Economic outcome phụ thuộc value chain. Nếu extraction tại A, refining tại B, manufacturing tại C, gross export từ A không đồng nghĩa A giữ phần lớn value.
+Economic kết quả (outcome / 결과) phụ thuộc giá trị (value / 값) chuỗi (chain / 사슬). Nếu extraction tại A, refining tại B, manufacturing tại C, gross export từ A không đồng nghĩa A giữ phần lớn giá trị (value / 값).
 
-## Energy geography: potential khác usable system
+## Năng lượng (energy / 에너지) geography: potential khác usable hệ thống (system / 시스템)
 
-Solar, wind, hydro và geothermal potential lớn ở nhiều subregion nhưng deployment cần grid, finance, maintenance và demand.
+Solar, wind, hydro và geothermal potential lớn ở nhiều subregion nhưng triển khai (deployment / 배포) cần grid, finance, maintenance và demand.
 
-Power plant xa load cần transmission; weak grid làm generation capacity không chuyển thành reliable electricity. Energy geography phải đọc **resource + network + system operation**.
+Power plant xa tải (load / 로드) cần transmission; weak grid làm generation sức chứa (capacity / 용량) không chuyển thành reliable electricity. năng lượng (energy / 에너지) geography phải đọc **tài nguyên (resource / 자원) + mạng (network / 네트워크) + hệ thống (system / 시스템) thao tác (operation / 연산)**.
 
-## Trade và regional market
+## Trade và regional thị trường (market / 시장)
 
-Map adjacency không bảo đảm trade lớn. Border delay, road quality, gauge, port orientation và historical commercial network tạo effective distance.
+Map adjacency không bảo đảm trade lớn. Border delay, road chất lượng (quality / 품질), gauge, cổng (port / 포트) orientation và historical commercial mạng (network / 네트워크) tạo effective distance.
 
-Một coastal economy đôi khi trade dễ với overseas market hơn land neighbor nếu domestic/cross-border corridor yếu. Đây là legacy của port-oriented network.
+Một coastal economy đôi khi trade dễ với overseas thị trường (market / 시장) hơn land neighbor nếu domestic/cross-border corridor yếu. Đây là legacy của port-oriented mạng (network / 네트워크).
 
-## Climate risk và exposure growth
+## Climate rủi ro (risk / 위험) và exposure growth
 
 Coastal city/river delta chịu flood, surge và erosion; dryland chịu drought/heat; highland có landslide; tropical coast có cyclone ở một số region.
 
-Rising disaster loss có thể đến từ hazard change hoặc exposure growth. Cần tách hai mechanism trước khi kết luận.
+Rising disaster mất mát (loss / 손실) có thể đến từ hazard thay đổi (change / 변경) hoặc exposure growth. Cần tách hai cơ chế (mechanism / 메커니즘) trước khi kết luận.
 
-## Regional role trong global economy
+## Regional role trong toàn cục (global / 전역) economy
 
-Africa cung cấp agricultural commodity, mineral, energy và growing urban market, đồng thời có strategic sea-lane adjacency ở nhiều coast. Nhưng regional role không nên nén thành “resource supplier”. Manufacturing, finance, digital service và intra-regional city network cũng quan trọng và rất không đồng đều.
+Africa cung cấp agricultural commodity, mineral, năng lượng (energy / 에너지) và growing urban thị trường (market / 시장), đồng thời có strategic sea-lane adjacency ở nhiều coast. Nhưng regional role không nên nén thành “tài nguyên (resource / 자원) supplier”. Manufacturing, finance, digital dịch vụ (service / 서비스) và intra-regional city mạng (network / 네트워크) cũng quan trọng và rất không đồng đều.
 
-Câu hỏi học tốt là: **nơi nào đang giữ value ở extraction, processing, logistics hay service layer?**
+Câu hỏi học tốt là: **nơi nào đang giữ giá trị (value / 값) ở extraction, processing, logistics hay dịch vụ (service / 서비스) tầng (layer / 계층)?**
 
-## Development inequality là vấn đề accessibility
+## Development inequality là vấn đề khả năng tiếp cận (accessibility / 접근성)
 
-National average che contrast metro–rural, coast–interior, corridor–off-corridor. Travel time tới port, market, school, hospital và power reliability thường giải thích opportunity tốt hơn straight-line distance.
+National average che contrast metro–rural, coast–interior, corridor–off-corridor. Travel thời gian (time / 시간) tới cổng (port / 포트), thị trường (market / 시장), school, hospital và power độ tin cậy (reliability / 신뢰성) thường giải thích opportunity tốt hơn straight-line distance.
 
-Infrastructure investment có thể giảm friction nhưng cũng có thể hút activity về core city nếu local capability không đủ.
+Hạ tầng (infrastructure / 인프라) investment có thể giảm friction nhưng cũng có thể hút activity về cốt lõi (core / 핵심) city nếu cục bộ (local / 로컬) năng lực (capability / 역량) không đủ.
 
 ## Cách so tiểu vùng
 
-Khi so North, West, East, Central và Southern Africa, dùng cùng framework: relief, rainfall/water, settlement, production, corridor, city system, external dependency và hazard.
+Khi so North, West, East, Central và Southern Africa, dùng cùng khung phần mềm (framework / 프레임워크): relief, rainfall/water, settlement, môi trường vận hành (production / 운영 환경), corridor, city hệ thống (system / 시스템), bên ngoài (external / 외부) phụ thuộc (dependency / 의존성) và hazard.
 
-Framework chung giúp tránh stereotype và làm rõ mechanism khác nhau.
+Khung phần mềm (framework / 프레임워크) chung giúp tránh stereotype và làm rõ cơ chế (mechanism / 메커니즘) khác nhau.
 
-## Common misconceptions
+## Dùng chung (common / 공통) misconceptions
 
-“Africa = tropical climate” sai. “Young population = automatic growth” sai. “Resource-rich = wealthy” bỏ qua value chain và institution. “Landlocked = isolated” bỏ qua corridor quality. “Low official GDP activity = little real activity” bỏ qua informal economy.
+“Africa = tropical climate” sai. “Young population = automatic growth” sai. “Resource-rich = wealthy” bỏ qua giá trị (value / 값) chuỗi (chain / 사슬) và institution. “Landlocked = isolated” bỏ qua corridor chất lượng (quality / 품질). “Low official GDP activity = little real activity” bỏ qua informal economy.
 
 ## Mô hình tư duy
 
-Châu Phi = **plateau/basin + rainfall belt + river/water constraint → agriculture/resource zone → selective corridor → fast urbanization → uneven value capture and market access**.
+Châu Phi = **plateau/basin + rainfall belt + river/water ràng buộc (constraint / 제약조건) → agriculture/tài nguyên (resource / 자원) zone → selective corridor → fast urbanization → uneven giá trị (value / 값) capture and thị trường (market / 시장) truy cập (access / 접근)**.
 
 Xem thêm: [Hydrology](../01_physical_geography/04_hydrology_rivers_groundwater.md), [Economic geography](../02_human_geography/05_economic_geography.md), [Transport & trade](../02_human_geography/08_transport_trade_globalization.md), [Development & inequality](../02_human_geography/09_development_inequality.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 how to read regions](./00_how_to_read_regions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

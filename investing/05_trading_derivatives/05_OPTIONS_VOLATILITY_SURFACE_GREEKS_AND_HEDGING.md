@@ -1,5 +1,7 @@
 # Quyền chọn, bề mặt biến động, Greeks và phòng vệ
 
+> **Mạch đọc:** Đặt **Quyền chọn, bề mặt biến động, Greeks và phòng vệ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Giá giao ngay và giá kỳ hạn** sang **2. Lợi ích hoặc chi phí nắm giữ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > Quyền chọn không chỉ là công cụ “đoán tăng hay giảm”. Giá quyền chọn phản ánh phân phối xác suất, thời gian, biến động và trạng thái thị trường. Chương này giải thích bằng tiếng Việt cách đọc quyền chọn theo sáu lớp: hướng giá, biến động, thời gian, độ lồi, thanh khoản và ký quỹ. Các thuật ngữ tiếng Anh được giữ trong ngoặc hoặc dưới dạng tên chuẩn như Delta, Gamma, Vega để tiện tra cứu.
 
 # Phần I — Từ giá giao ngay tới giá kỳ hạn

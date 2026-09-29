@@ -1,16 +1,19 @@
 # Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức
 
+> **Mạch đọc:** Đọc **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Familiarity và illusory truth** sang **2. nguồn (source / 소스) monitoring**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Thông tin sai lệch (misinformation) không tồn tại chỉ vì người ta “thiếu hiểu biết”. Con người ra quyết định dưới áp lực thời gian, chú ý hữu hạn, trí nhớ nguồn không hoàn hảo, động cơ bản sắc và môi trường truyền thông có incentive riêng. Vì vậy vulnerability với misinformation là kết quả của tương tác giữa nhận thức, xã hội và hệ thống phân phối thông tin.
 
-> **Trạng thái bằng chứng:** repetition/familiarity, source-memory failure và continued influence đều có nền tảng thực nghiệm. Debunking và prebunking/inoculation có thể cải thiện khả năng phân biệt thông tin đáng tin và không đáng tin, nhưng effect không phải vĩnh viễn, không đồng nhất ở mọi context và không thay thế source quality hay platform design.
+> **Trạng thái bằng chứng:** repetition/familiarity, source-memory thất bại (failure / 실패) và continued influence đều có nền tảng thực nghiệm. Debunking và prebunking/inoculation có thể cải thiện khả năng phân biệt thông tin đáng tin và không đáng tin, nhưng tác động (effect / 효과) không phải vĩnh viễn, không đồng nhất ở mọi ngữ cảnh (context / 맥락) và không thay thế nguồn (source / 소스) chất lượng (quality / 품질) hay nền tảng (platform / 플랫폼) thiết kế (design / 설계).
 
 ## 1. Familiarity và illusory truth
 
 **Hiệu ứng chân lý ảo (illusory truth effect)** mô tả việc một câu được lặp lại có thể được đánh giá là đáng tin hơn vì xử lý trở nên trôi chảy hơn.
 
-Điều này không có nghĩa repetition luôn thắng fact-check. Effect phụ thuộc prior knowledge, source cue, task và context. Nhưng nó giải thích vì sao một headline sai được lặp nhiều lần có thể trở nên “quen tai”.
+Điều này không có nghĩa repetition luôn thắng fact-check. tác động (effect / 효과) phụ thuộc prior kiến thức (knowledge / 지식), nguồn (source / 소스) cue, tác vụ (task / 작업) và ngữ cảnh (context / 맥락). Nhưng nó giải thích vì sao một headline sai được lặp nhiều lần có thể trở nên “quen tai”.
 
-## 2. Source monitoring
+## 2. nguồn (source / 소스) monitoring
 
 Người ta có thể nhớ nội dung nhưng quên nguồn. Đây là lỗi **giám sát nguồn (source monitoring)**.
 
@@ -23,21 +26,21 @@ quên provenance
 
 Xem [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]].
 
-## 3. Continued influence effect
+## 3. Continued influence tác động (effect / 효과)
 
-Ngay cả sau khi correction được chấp nhận, misinformation cũ vẫn có thể ảnh hưởng reasoning nếu nó từng lấp một chỗ trong causal model.
+Ngay cả sau khi correction được chấp nhận, misinformation cũ vẫn có thể ảnh hưởng lập luận (reasoning / 추론) nếu nó từng lấp một chỗ trong nhân quả (causal / 인과적) mô hình (model / 모델).
 
-Correction thường hữu ích hơn khi không chỉ nói “điều đó sai”, mà còn cung cấp explanation thay thế đủ để người đọc xây model mới.
+Correction thường hữu ích hơn khi không chỉ nói “điều đó sai”, mà còn cung cấp explanation thay thế đủ để người đọc xây mô hình (model / 모델) mới.
 
-## 4. Identity và motivated reasoning
+## 4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)
 
-Khi một claim gắn mạnh với political, moral hoặc group identity, evidence có thể được xử lý khác nhau tùy nó bảo vệ hay đe dọa self-concept.
+Khi một claim gắn mạnh với political, moral hoặc group định danh (identity / 식별자), bằng chứng (evidence / 증거) có thể được xử lý khác nhau tùy nó bảo vệ hay đe dọa self-concept.
 
-Điểm quan trọng là motivated reasoning không phải đặc điểm của “phe kia”. Nó có thể xuất hiện ở nhiều nhóm và nhiều chủ đề.
+Điểm quan trọng là motivated lập luận (reasoning / 추론) không phải đặc điểm của “phe kia”. Nó có thể xuất hiện ở nhiều nhóm và nhiều chủ đề.
 
-## 5. Confirmation bias không chỉ là chọn source mình thích
+## 5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích
 
-Thiên kiến xác nhận có thể xuất hiện trong cách chọn nguồn, diễn giải ambiguity, đặt threshold để chấp nhận evidence và nhớ kết quả thuận/không thuận.
+Thiên kiến xác nhận có thể xuất hiện trong cách chọn nguồn, diễn giải ambiguity, đặt threshold để chấp nhận bằng chứng (evidence / 증거) và nhớ kết quả thuận/không thuận.
 
 Một câu hỏi hữu ích là:
 
@@ -57,7 +60,7 @@ fact đúng
 → nhắc lại fact đúng
 ```
 
-Meta-analytic evidence cho thấy debunking nhìn chung có hiệu quả, nhưng misinformation vẫn có thể để lại ảnh hưởng. Hiệu quả phụ thuộc nội dung, mức người đọc đã đầu tư vào belief, chi tiết correction và bối cảnh truyền thông.
+Meta-analytic bằng chứng (evidence / 증거) cho thấy debunking nhìn chung có hiệu quả, nhưng misinformation vẫn có thể để lại ảnh hưởng. Hiệu quả phụ thuộc nội dung, mức người đọc đã đầu tư vào belief, chi tiết correction và bối cảnh truyền thông.
 
 ## 7. Prebunking / inoculation
 
@@ -67,35 +70,35 @@ Meta-analysis tín hiệu–phát hiện công bố 2026 trên 33 thí nghiệm,
 
 > **Bằng chứng tương đối vững:** inoculation có thể tăng discrimination trong điều kiện nghiên cứu đã kiểm tra.
 
-> **Giới hạn:** effect có thể decay, transfer sang tactic/nội dung khác không tuyệt đối và implementation ngoài đời còn phụ thuộc exposure, attention và platform context.
+> **Giới hạn:** tác động (effect / 효과) có thể decay, transfer sang tactic/nội dung khác không tuyệt đối và hiện thực (implementation / 구현) ngoài đời còn phụ thuộc exposure, attention và nền tảng (platform / 플랫폼) ngữ cảnh (context / 맥락).
 
 ## 8. Accuracy prompts
 
-Một số thí nghiệm cho thấy đưa attention về accuracy trước khi share có thể giảm willingness to share misinformation trong một số context.
+Một số thí nghiệm cho thấy đưa attention về accuracy trước khi share có thể giảm willingness to share misinformation trong một số ngữ cảnh (context / 맥락).
 
-Điều này gợi ý rằng sharing không phải lúc nào cũng đi sau full truth evaluation; social signaling, speed và emotion có thể cạnh tranh với accuracy goal.
+Điều này gợi ý rằng sharing không phải lúc nào cũng đi sau full truth evaluation; xã hội (social / 사회적) signaling, speed và emotion có thể cạnh tranh với accuracy goal.
 
 Không nên nâng accuracy prompt thành universal solution.
 
 ## 9. Empathy và correction
 
-Correction có thể thất bại về social communication dù fact đúng. Nếu người nghe cảm thấy bị humiliation hoặc status threat, họ có thể bảo vệ identity thay vì cập nhật belief.
+Correction có thể thất bại về xã hội (social / 사회적) communication dù fact đúng. Nếu người nghe cảm thấy bị humiliation hoặc status threat, họ có thể bảo vệ định danh (identity / 식별자) thay vì cập nhật belief.
 
-Điều này không có nghĩa “phải đồng ý với misinformation để giữ hòa khí”; nó nghĩa communication design là một phần của intervention.
+Điều này không có nghĩa “phải đồng ý với misinformation để giữ hòa khí”; nó nghĩa communication thiết kế (design / 설계) là một phần của intervention.
 
-## 10. Platform incentive
+## 10. nền tảng (platform / 플랫폼) incentive
 
-Misinformation không chỉ là cognitive problem. Platform có thể thưởng tốc độ, outrage, novelty và identity signal.
+Misinformation không chỉ là cognitive bài toán (problem / 문제). nền tảng (platform / 플랫폼) có thể thưởng tốc độ, outrage, novelty và định danh (identity / 식별자) tín hiệu (signal / 신호).
 
-Nếu content sensational nhận engagement cao, creator và recommender system đều có incentive khuếch đại nó.
+Nếu content sensational nhận engagement cao, creator và recommender hệ thống (system / 시스템) đều có incentive khuếch đại nó.
 
 Xem [[05_digital_psychology_social_media_and_online_behavior]].
 
 ## 11. Health misinformation
 
-Health misinformation có thể làm người dùng trì hoãn chăm sóc, thay đổi medication hoặc hiểu sai vaccine/treatment risk.
+Health misinformation có thể làm người dùng trì hoãn chăm sóc, thay đổi medication hoặc hiểu sai vaccine/treatment rủi ro (risk / 위험).
 
-Vì consequence cao, verification depth nên lớn hơn các claim ít quan trọng.
+Vì consequence cao, xác minh (verification / 확인) độ sâu (depth / 깊이) nên lớn hơn các claim ít quan trọng.
 
 ```text
 mức hậu quả cao
@@ -103,9 +106,9 @@ mức hậu quả cao
 → cần source gốc + independent confirmation
 ```
 
-## 12. AI-generated information
+## 12. AI-generated thông tin (information / 정보)
 
-Generative AI làm chi phí tạo plausible text giảm mạnh. Fluency và specificity có thể bị người dùng nhầm với accuracy.
+Generative AI làm chi phí tạo plausible văn bản (text / 텍스트) giảm mạnh. Fluency và specificity có thể bị người dùng nhầm với accuracy.
 
 ```text
 trôi chảy ≠ bằng chứng
@@ -115,41 +118,41 @@ confidence của câu chữ ≠ calibration
 
 Xem [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-## 13. Verification workflow
+## 13. xác minh (verification / 확인) workflow
 
 Một workflow thực dụng:
 
 1. xác định claim cụ thể;
 2. tách fact, interpretation và prediction;
 3. tìm nguồn gốc;
-4. kiểm tra date/context;
-5. tìm source độc lập;
+4. kiểm tra date/ngữ cảnh (context / 맥락);
+5. tìm nguồn (source / 소스) độc lập;
 6. xem counterevidence;
-7. cập nhật confidence theo evidence.
+7. cập nhật confidence theo bằng chứng (evidence / 증거).
 
-Depth nên match consequence; không phải mọi claim cần investigation như một paper review.
+Độ sâu (depth / 깊이) nên match consequence; không phải mọi claim cần investigation như một paper rà soát (review / 검토).
 
-## 14. Signal Detection Theory
+## 14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)
 
 Khi classify thông tin “đúng/sai”, threshold quá nghiêm làm reject cả truth; threshold quá lỏng làm accept misinformation.
 
-Mục tiêu vì vậy không phải “nghi ngờ mọi thứ”, mà là **calibration** với cost của false positive và false negative.
+Mục tiêu vì vậy không phải “nghi ngờ mọi thứ”, mà là **calibration** với chi phí (cost / 비용) của false positive và false negative.
 
 ## 15. Ranh giới bằng chứng
 
-**Bằng chứng tương đối vững:** repetition có thể tăng perceived truth; source memory có thể thất bại; debunking và prebunking có positive average effects; alternative explanation giúp correction trong nhiều tình huống.
+**Bằng chứng tương đối vững:** repetition có thể tăng perceived truth; nguồn (source / 소스) bộ nhớ (memory / 메모리) có thể thất bại; debunking và prebunking có positive average effects; alternative explanation giúp correction trong nhiều tình huống.
 
-**Lý thuyết/construct hiện đại:** motivated reasoning, identity-protective cognition, accuracy-attention accounts và inoculation mechanisms.
+**Lý thuyết/construct hiện đại:** motivated lập luận (reasoning / 추론), identity-protective cognition, accuracy-attention accounts và inoculation mechanisms.
 
-**Còn tranh luận:** persistence dài hạn, transfer giữa topic/platform/culture, effect ngoài laboratory và interaction với recommender systems.
+**Còn tranh luận:** persistence dài hạn, transfer giữa topic/nền tảng (platform / 플랫폼)/culture, tác động (effect / 효과) ngoài laboratory và tương tác (interaction / 상호작용) với recommender các hệ thống (systems / 시스템들).
 
 **Không được nói:** người thông minh miễn nhiễm misinformation, fact-check một lần xóa belief, hoặc prebunking là “vaccine vĩnh viễn”.
 
 ## 16. Những hiểu lầm phổ biến
 
-**“Critical thinking là đủ.”** Không; incentive và source environment cũng quan trọng.
+**“trọng yếu (critical / 중요) thinking là đủ.”** Không; incentive và nguồn (source / 소스) môi trường (environment / 환경) cũng quan trọng.
 
-**“Debunk càng mạnh càng tốt.”** Communication failure có thể làm correction kém hiệu quả.
+**“Debunk càng mạnh càng tốt.”** Communication thất bại (failure / 실패) có thể làm correction kém hiệu quả.
 
 **“Dạy manipulation tactic làm người ta hoài nghi mọi thứ.”** Meta-analysis gần đây cho thấy inoculation có thể tăng discrimination mà không nhất thiết tăng generalized skepticism.
 
@@ -165,7 +168,7 @@ memory + familiarity + identity
       belief update
 ```
 
-> Belief không nằm một mình trong đầu; nó nằm trong một mạng source–memory–identity–incentive.
+> Belief không nằm một mình trong đầu; nó nằm trong một mạng nguồn (source / 소스)–bộ nhớ (memory / 메모리)–định danh (identity / 식별자)–incentive.
 
 ## Kết nối kiến thức
 

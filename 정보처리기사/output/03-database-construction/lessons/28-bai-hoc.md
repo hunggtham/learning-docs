@@ -2,7 +2,7 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **4. SQL 문법의 종류 (Các loại cú pháp SQL)** khi chuyển sang phần tiếp theo.
 
@@ -20,13 +20,15 @@ Mục đích của bài này là hiểu **3. 데이터베이스와 절차형 SQL
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** và nối nó với **4. SQL 문법의 종류 (Các loại cú pháp SQL)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)
 
-Ở bước 28/55, **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** xuất hiện như phần tiếp nối của **204-219. SQL 명령어 심화 (SQL Commands Detail)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 28/56, **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** xuất hiện như phần tiếp nối của **204-219. SQL 명령어 심화 (SQL Commands Detail)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 

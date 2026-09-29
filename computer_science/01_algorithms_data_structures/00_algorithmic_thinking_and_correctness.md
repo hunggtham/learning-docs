@@ -1,14 +1,17 @@
-# Algorithmic thinking, specification và correctness
+# Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)
 
-Algorithm (thuật toán / 알고리즘) không phải một đoạn code có vẻ chạy được. Nó là một procedure hữu hạn, rõ nghĩa, biến input thành output theo một specification. Tư duy thuật toán bắt đầu trước code: xác định state nào quan trọng, operation nào được phép, invariant nào phải giữ, và bằng chứng nào cho thấy procedure thực sự giải đúng bài toán.
+> **Mạch đọc:** Đặt **Algorithmic thinking, specification và tính đúng đắn (correctness / 정확성)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ bài toán (problem / 문제) statement tới specification** sang **Partial tính đúng đắn (correctness / 정확성) và termination**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Từ problem statement tới specification
 
-Một câu như “tìm phần tử lớn nhất” còn thiếu nhiều điều. Input có thể rỗng không? Có duplicate không? Dữ liệu so sánh được bằng ordering nào? Ta trả value hay index? Nếu comparator không transitive thì chuyện gì xảy ra?
+Thuật toán (algorithm / 알고리즘) không phải một đoạn mã (code / 코드) có vẻ chạy được. Nó là một procedure hữu hạn, rõ nghĩa, biến đầu vào (input / 입력) thành đầu ra (output / 출력) theo một specification. Tư duy thuật toán bắt đầu trước mã (code / 코드): xác định trạng thái (state / 상태) nào quan trọng, thao tác (operation / 연산) nào được phép, bất biến (invariant / 불변식) nào phải giữ, và bằng chứng nào cho thấy procedure thực sự giải đúng bài toán.
 
-Specification (명세 / đặc tả) làm những assumptions này explicit. Với array không rỗng `A[0..n-1]`, specification của `max` có thể là: output `m` thuộc array và với mọi `i`, `m >= A[i]`.
+## Từ bài toán (problem / 문제) statement tới specification
 
-Một implementation đơn giản:
+Một câu như “tìm phần tử lớn nhất” còn thiếu nhiều điều. đầu vào (input / 입력) có thể rỗng không? Có duplicate không? Dữ liệu so sánh được bằng thứ tự (ordering / 순서) nào? Ta trả giá trị (value / 값) hay chỉ mục (index / 인덱스)? Nếu comparator không transitive thì chuyện gì xảy ra?
+
+Specification (명세 / đặc tả) làm những các giả định (assumptions / 가정들) này tường minh (explicit / 명시적). Với array không rỗng `A[0..n-1]`, specification của `max` có thể là: đầu ra (output / 출력) `m` thuộc array và với mọi `i`, `m >= A[i]`.
+
+Một hiện thực (implementation / 구현) đơn giản:
 
 ```text
 m = A[0]
@@ -18,64 +21,93 @@ for i = 1 .. n-1:
 return m
 ```
 
-Điểm đáng học không phải syntax mà là reasoning. Sau khi đã xử lý prefix `A[0..i]`, invariant là `m` bằng maximum của prefix đó. Ban đầu invariant đúng với prefix một phần tử. Mỗi iteration hoặc giữ `m`, hoặc thay bằng phần tử lớn hơn, nên invariant được bảo toàn. Khi loop kết thúc, prefix chính là toàn array; specification được thỏa.
+Điểm đáng học không phải cú pháp (syntax / 문법) mà là lập luận (reasoning / 추론). Sau khi đã xử lý prefix `A[0..i]`, bất biến (invariant / 불변식) là `m` bằng maximum của prefix đó. Ban đầu bất biến (invariant / 불변식) đúng với prefix một phần tử. Mỗi iteration hoặc giữ `m`, hoặc thay bằng phần tử lớn hơn, nên bất biến (invariant / 불변식) được bảo toàn. Khi vòng lặp (loop / 루프) kết thúc, prefix chính là toàn array; specification được thỏa.
 
-## Partial correctness và termination
 
-Một algorithm có thể “nếu kết thúc thì đúng” nhưng không bảo đảm kết thúc. Partial correctness nói output đúng nếu computation terminates. Total correctness cần cả partial correctness lẫn termination.
+> **Chuyển mạch:** Từ **Từ bài toán (problem / 문제) statement tới specification**, ta sang **Partial tính đúng đắn (correctness / 정확성) và termination** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Với loop, termination thường chứng minh bằng một **variant** giảm theo well-founded order. Binary search làm interval giảm; Euclidean algorithm làm remainder giảm; recursion cần tiến gần base case.
+## Partial tính đúng đắn (correctness / 정확성) và termination
 
-Trong production, termination còn có nghĩa thực dụng hơn: network call cần timeout; retry cần bound/backoff; queue consumer phải tránh poison message loop. Lý thuyết termination gặp trực tiếp reliability engineering.
+Một thuật toán (algorithm / 알고리즘) có thể “nếu kết thúc thì đúng” nhưng không bảo đảm kết thúc. Partial tính đúng đắn (correctness / 정확성) nói đầu ra (output / 출력) đúng nếu computation terminates. Total tính đúng đắn (correctness / 정확성) cần cả partial tính đúng đắn (correctness / 정확성) lẫn termination.
+
+Với vòng lặp (loop / 루프), termination thường chứng minh bằng một **variant** giảm theo well-founded thứ tự (order / 순서). tìm kiếm nhị phân (binary search / 이진 탐색) làm interval giảm; Euclidean thuật toán (algorithm / 알고리즘) làm remainder giảm; recursion cần tiến gần cơ sở (base / 기반) trường hợp (case / 사례).
+
+Trong môi trường vận hành (production / 운영 환경), termination còn có nghĩa thực dụng hơn: mạng (network / 네트워크) lời gọi (call / 호출) cần hết thời gian chờ (timeout / 타임아웃); thử lại (retry / 재시도) cần bound/backoff; hàng đợi (queue / 큐) bên tiêu thụ (consumer / 소비자) phải tránh poison message vòng lặp (loop / 루프). Lý thuyết termination gặp trực tiếp độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
+
+
+> **Chuyển mạch:** Từ **Partial tính đúng đắn (correctness / 정확성) và termination**, ta sang **Decomposition và subproblem** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Decomposition và subproblem
 
-Algorithmic thinking thường tìm cách biến problem thành subproblems dễ hơn. Merge sort chia array thành hai halves, sort từng nửa rồi merge. Dynamic programming nhận ra overlapping subproblems và lưu kết quả. Graph search biến câu hỏi “đi tới đâu được?” thành việc lặp lại expand frontier.
+Algorithmic thinking thường tìm cách biến bài toán (problem / 문제) thành subproblems dễ hơn. Merge sort chia array thành hai halves, sort từng nửa rồi merge. động (dynamic / 동적) programming nhận ra overlapping subproblems và lưu kết quả. đồ thị (graph / 그래프) tìm kiếm (search / 검색) biến câu hỏi “đi tới đâu được?” thành việc lặp lại expand frontier.
 
-Điểm quan trọng là decomposition phải preserve structure. Chia bừa một problem không tự động tạo algorithm tốt. Với divide-and-conquer, ta cần xác định cách combine; với greedy, phải chứng minh local choice không phá global optimum; với DP, cần state đủ để mô tả phần quá khứ ảnh hưởng tương lai.
+Điểm quan trọng là decomposition phải preserve cấu trúc (structure / 구조). Chia bừa một bài toán (problem / 문제) không tự động tạo thuật toán (algorithm / 알고리즘) tốt. Với divide-and-conquer, ta cần xác định cách combine; với greedy, phải chứng minh cục bộ (local / 로컬) choice không phá toàn cục (global / 전역) optimum; với DP, cần trạng thái (state / 상태) đủ để mô tả phần quá khứ ảnh hưởng tương lai.
 
-## Correctness proof không phải hình thức xa rời code
+
+> **Chuyển mạch:** Từ **Decomposition và subproblem**, ta sang **tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)
 
 Formal proof có thể nặng, nhưng tư duy proof mang lại câu hỏi thiết thực:
 
-- Precondition nào đang bị assumption ngầm?
-- Loop invariant là gì?
-- Data structure invariant nào method phải bảo toàn?
+- Precondition nào đang bị giả định (assumption / 가정) ngầm?
+- vòng lặp (loop / 루프) bất biến (invariant / 불변식) là gì?
+- cấu trúc dữ liệu (data structure / 자료구조) bất biến (invariant / 불변식) nào phương thức (method / 메서드) phải bảo toàn?
 - Nếu duplicate/empty/overflow xảy ra thì proof còn đúng không?
-- Nếu comparator không nhất quán thì ordering assumptions có vỡ không?
+- Nếu comparator không nhất quán thì thứ tự (ordering / 순서) các giả định (assumptions / 가정들) có vỡ không?
 
-Property-based testing cũng xuất phát từ tinh thần tương tự: thay vì chỉ kiểm tra vài expected outputs, encode properties như “sort output là ordered và là permutation của input”. Testing không thay proof, nhưng property thinking nâng chất lượng test.
+Property-based testing cũng xuất phát từ tinh thần tương tự: thay vì chỉ kiểm tra vài expected outputs, encode properties như “sort đầu ra (output / 출력) là ordered và là permutation của đầu vào (input / 입력)”. Testing không thay proof, nhưng thuộc tính (property / 속성) thinking nâng chất lượng kiểm thử (test / 테스트).
 
-## Deterministic, randomized và nondeterministic behavior
 
-Deterministic algorithm với cùng state/input cho cùng transition/output. Randomized algorithm dùng random choices, nên correctness/performance có thể được mô tả theo probability. QuickSort chọn random pivot có expected `O(n log n)` dù worst case vẫn `O(n²)`.
+> **Chuyển mạch:** Từ **tính đúng đắn (correctness / 정확성) proof không phải hình thức xa rời mã (code / 코드)**, ta sang **Deterministic, randomized và nondeterministic hành vi (behavior / 동작)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Concurrency tạo behavior có vẻ nondeterministic vì scheduling khác nhau, dù mỗi thread có code deterministic. Đây là lý do correctness concurrent systems cần reasoning về interleavings hoặc higher-level memory models.
+## Deterministic, randomized và nondeterministic hành vi (behavior / 동작)
+
+Deterministic thuật toán (algorithm / 알고리즘) với cùng trạng thái (state / 상태)/đầu vào (input / 입력) cho cùng chuyển tiếp (transition / 전이)/đầu ra (output / 출력). Randomized thuật toán (algorithm / 알고리즘) dùng random choices, nên tính đúng đắn (correctness / 정확성)/hiệu năng (performance / 성능) có thể được mô tả theo xác suất (probability / 확률). QuickSort chọn random pivot có expected `O(n log n)` dù worst trường hợp (case / 사례) vẫn `O(n²)`.
+
+Tính đồng thời (concurrency / 동시성) tạo hành vi (behavior / 동작) có vẻ nondeterministic vì scheduling khác nhau, dù mỗi luồng thực thi (thread / 스레드) có mã (code / 코드) deterministic. Đây là lý do tính đúng đắn (correctness / 정확성) concurrent các hệ thống (systems / 시스템들) cần lập luận (reasoning / 추론) về interleavings hoặc higher-level bộ nhớ (memory / 메모리) các mô hình (models / 모델들).
+
+
+> **Chuyển mạch:** Từ **Deterministic, randomized và nondeterministic hành vi (behavior / 동작)**, ta sang **Online và offline algorithms** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Online và offline algorithms
 
-Offline algorithm thấy toàn input trước khi xử lý. Online algorithm nhận input dần và phải quyết định khi chưa biết tương lai. Cache replacement, streaming, scheduling và rate limiting thường có tính online.
+Offline thuật toán (algorithm / 알고리즘) thấy toàn đầu vào (input / 입력) trước khi xử lý. Online thuật toán (algorithm / 알고리즘) nhận đầu vào (input / 입력) dần và phải quyết định khi chưa biết tương lai. bộ nhớ đệm (cache / 캐시) replacement, streaming, scheduling và tỷ lệ (rate / 비율) limiting thường có tính online.
 
-Sự khác biệt này thay đổi specification và benchmark. Một algorithm optimal khi biết toàn future có thể không implementable trong real-time system.
+Sự khác biệt này thay đổi specification và benchmark. Một thuật toán (algorithm / 알고리즘) optimal khi biết toàn future có thể không implementable trong real-time hệ thống (system / 시스템).
 
-## Exact, approximation và heuristic
 
-Không phải problem nào cũng cần exact optimum. Approximation algorithm có guarantee về độ gần optimal; heuristic ưu tiên hiệu quả thực nghiệm nhưng thường không có guarantee mạnh. Search engine ranking, compiler optimization và route planning có thể dùng heuristics vì state space khổng lồ.
+> **Chuyển mạch:** Từ **Online và offline algorithms**, ta sang **chính xác (exact / 정확한), approximation và heuristic** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Điều quan trọng là đừng gọi heuristic là “algorithm sai”. Nếu specification chấp nhận approximate solution, nó vẫn có thể đúng theo contract. Sai là khi guarantees bị hiểu quá mức.
+## Chính xác (exact / 정확한), approximation và heuristic
 
-## Mental Model
+Không phải bài toán (problem / 문제) nào cũng cần chính xác (exact / 정확한) optimum. Approximation thuật toán (algorithm / 알고리즘) có guarantee về độ gần optimal; heuristic ưu tiên hiệu quả thực nghiệm nhưng thường không có guarantee mạnh. tìm kiếm (search / 검색) engine ranking, trình biên dịch (compiler / 컴파일러) tối ưu hóa (optimization / 최적화) và tuyến (route / 경로) planning có thể dùng heuristics vì trạng thái (state / 상태) không gian (space / 공간) khổng lồ.
 
-> Một algorithm tốt không bắt đầu từ code. Hãy xác định **Input domain → State → Allowed transitions → Invariant → Termination → Output property → Resource cost**. Code chỉ là một representation của chuỗi reasoning đó.
+Điều quan trọng là đừng gọi heuristic là “thuật toán (algorithm / 알고리즘) sai”. Nếu specification chấp nhận approximate solution, nó vẫn có thể đúng theo đặc tả hợp đồng (contract / 계약). Sai là khi guarantees bị hiểu quá mức.
 
-## Common Misconceptions
 
-**“Chạy qua test cases là chứng minh đúng.”** Test chỉ cover sampled executions. Nó có thể cho confidence nhưng không chứng minh universal property trừ khi domain hữu hạn và được exhaust.
+> **Chuyển mạch:** Từ **chính xác (exact / 정확한), approximation và heuristic**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**“Nếu complexity tốt thì algorithm tốt.”** Algorithm sai specification với `O(1)` vẫn vô dụng. Correctness, constraints và maintainability đến trước micro-optimization.
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“Recursion luôn chậm.”** Recursion là cách mô tả decomposition. Performance phụ thuộc call overhead, optimization, data access và algorithmic structure; iterative form không tự động đổi complexity class.
+> Một thuật toán (algorithm / 알고리즘) tốt không bắt đầu từ mã (code / 코드). Hãy xác định **đầu vào (input / 입력) lĩnh vực (domain / 도메인) → trạng thái (state / 상태) → Allowed transitions → bất biến (invariant / 불변식) → Termination → đầu ra (output / 출력) thuộc tính (property / 속성) → tài nguyên (resource / 자원) chi phí (cost / 비용)**. mã (code / 코드) chỉ là một biểu diễn (representation / 표현) của chuỗi lập luận (reasoning / 추론) đó.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“Chạy qua kiểm thử (test / 테스트) cases là chứng minh đúng.”** kiểm thử (test / 테스트) chỉ cover sampled executions. Nó có thể cho confidence nhưng không chứng minh universal thuộc tính (property / 속성) trừ khi lĩnh vực (domain / 도메인) hữu hạn và được exhaust.
+
+**“Nếu độ phức tạp (complexity / 복잡도) tốt thì thuật toán (algorithm / 알고리즘) tốt.”** thuật toán (algorithm / 알고리즘) sai specification với `O(1)` vẫn vô dụng. tính đúng đắn (correctness / 정확성), các ràng buộc (constraints / 제약조건들) và maintainability đến trước micro-optimization.
+
+**“Recursion luôn chậm.”** Recursion là cách mô tả decomposition. hiệu năng (performance / 성능) phụ thuộc lời gọi (call / 호출) overhead, tối ưu hóa (optimization / 최적화), dữ liệu (data / 데이터) truy cập (access / 접근) và algorithmic cấu trúc (structure / 구조); iterative form không tự động đổi độ phức tạp (complexity / 복잡도) lớp (class / 클래스).
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-Correctness dựa trên [logic, state và invariants](../00_computation_information/03_logic_state_abstraction_and_invariants.md). Sau khi biết procedure đúng, bước tiếp theo là hỏi [nó tốn bao nhiêu time/space](./01_complexity_and_asymptotic_analysis.md), rồi cách [data layout](./02_memory_models_and_data_layout.md) làm chi phí lý thuyết gặp hardware thật.
+Tính đúng đắn (correctness / 정확성) dựa trên [logic, state và invariants](../00_computation_information/03_logic_state_abstraction_and_invariants.md). Sau khi biết procedure đúng, bước tiếp theo là hỏi [nó tốn bao nhiêu time/space](./01_complexity_and_asymptotic_analysis.md), rồi cách [data layout](./02_memory_models_and_data_layout.md) làm chi phí lý thuyết gặp hardware thật.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 complexity and asymptotic analysis](./01_complexity_and_asymptotic_analysis.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

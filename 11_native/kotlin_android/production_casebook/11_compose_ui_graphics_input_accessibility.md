@@ -1,16 +1,19 @@
-# Case 11 — Compose UI Systems: Layout, Drawing, Input, Animation, Accessibility và Adaptive UI
+# Trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI
 
-Jetpack Compose thường được học qua `Column`, `Row`, `LazyColumn`, `Button` và `remember`. Cách đó đủ để làm UI cơ bản nhưng chưa đủ để debug layout khó, jank do recomposition, gesture conflict, keyboard/focus bug hoặc accessibility issue. Để đi từ “biết viết Composable” lên Senior, cần hiểu Compose như một **UI runtime** có state model, composition tree, layout/draw pipeline, input/semantics tree và integration với Android window/system UI.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 11 — Compose UI các hệ thống (systems / 시스템들): bố cục (layout / 레이아웃), Drawing, đầu vào (input / 입력), Animation, khả năng tiếp cận (accessibility / 접근성) và Adaptive UI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Composition** sang **bố cục (layout / 레이아웃)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này không lặp lại syntax Compose cơ bản. Nó tập trung vào các boundary nơi UI production hay vỡ.
 
-# 1. Một Composable không phải View object
+Jetpack Compose thường được học qua `Column`, `Row`, `LazyColumn`, `Button` và `remember`. Cách đó đủ để làm UI cơ bản nhưng chưa đủ để gỡ lỗi (debug / 디버그) bố cục (layout / 레이아웃) khó, jank do recomposition, gesture xung đột (conflict / 충돌), keyboard/focus bug hoặc khả năng tiếp cận (accessibility / 접근성) issue. Để đi từ “biết viết Composable” lên cấp cao (senior / 시니어), cần hiểu Compose như một **UI thời gian chạy (runtime / 런타임)** có trạng thái (state / 상태) mô hình (model / 모델), composition cây (tree / 트리), bố cục (layout / 레이아웃)/draw chuỗi xử lý (pipeline / 파이프라인), đầu vào (input / 입력)/ngữ nghĩa (semantics / 의미론) cây (tree / 트리) và tích hợp (integration / 통합) với Android cửa sổ (window / 윈도우)/hệ thống (system / 시스템) UI.
 
-Composable function mô tả UI dựa trên state. Runtime ghi nhận cấu trúc composition và quản lý identity của các node. Khi state đọc bởi composition thay đổi, runtime xác định scope cần recomposition.
+Chapter này không lặp lại cú pháp (syntax / 문법) Compose cơ bản. Nó tập trung vào các ranh giới (boundary / 경계) nơi UI môi trường vận hành (production / 운영 환경) hay vỡ.
 
-Điều quan trọng: **recomposition không đồng nghĩa toàn màn hình redraw**, và **Composable function call không tương đương tạo một View object mới mỗi lần**.
+# 1. Một Composable không phải View đối tượng (object / 객체)
 
-Mental model:
+Composable hàm (function / 함수) mô tả UI dựa trên trạng thái (state / 상태). thời gian chạy (runtime / 런타임) ghi nhận cấu trúc composition và quản lý định danh (identity / 식별자) của các nút (node / 노드). Khi trạng thái (state / 상태) đọc bởi composition thay đổi, thời gian chạy (runtime / 런타임) xác định phạm vi (scope / 범위) cần recomposition.
+
+Điều quan trọng: **recomposition không đồng nghĩa toàn màn hình redraw**, và **Composable hàm (function / 함수) lời gọi (call / 호출) không tương đương tạo một View đối tượng (object / 객체) mới mỗi lần**.
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 state change
@@ -22,13 +25,13 @@ layout phase nếu geometry thay đổi
 draw phase nếu pixels cần thay đổi
 ```
 
-Không phải state change nào cũng kích hoạt cả ba phase.
+Không phải trạng thái (state / 상태) thay đổi (change / 변경) nào cũng kích hoạt cả ba phase.
 
-# 2. Ba phase: Composition → Layout → Draw
+# 2. Ba phase: Composition → bố cục (layout / 레이아웃) → Draw
 
 ## Composition
 
-Composition quyết định UI tree nào tồn tại và parameter/state nào node dùng.
+Composition quyết định UI cây (tree / 트리) nào tồn tại và parameter/trạng thái (state / 상태) nào nút (node / 노드) dùng.
 
 ```kotlin
 @Composable
@@ -39,9 +42,9 @@ fun Greeting(name: String) {
 
 Nếu `name` đổi, `Greeting` có thể recompose.
 
-## Layout
+## Bố cục (layout / 레이아웃)
 
-Layout gồm measurement và placement. Parent đưa constraint xuống child; child trả size lên; parent đặt child ở vị trí.
+Bố cục (layout / 레이아웃) gồm đo lường (measurement / 측정) và placement. Parent đưa ràng buộc (constraint / 제약조건) xuống child; child trả kích thước (size / 크기) lên; parent đặt child ở vị trí.
 
 ```text
 Parent constraints
@@ -53,17 +56,17 @@ Child size
 Parent placement
 ```
 
-Điều này khác web CSS mental model ở nhiều chỗ. Trong Compose, child không tự chọn arbitrary size vượt contract constraint mà không có modifier/layout custom xử lý rõ.
+Điều này khác web CSS mô hình tư duy (mental model / 사고 모델) ở nhiều chỗ. Trong Compose, child không tự chọn arbitrary kích thước (size / 크기) vượt đặc tả hợp đồng (contract / 계약) ràng buộc (constraint / 제약조건) mà không có modifier/bố cục (layout / 레이아웃) custom xử lý rõ.
 
 ## Draw
 
-Draw phase rasterize/render visual content. Nếu chỉ visual property thay đổi mà không ảnh hưởng geometry, có thể tránh composition/layout thừa bằng API phù hợp.
+Draw phase rasterize/kết xuất (render / 렌더링) visual content. Nếu chỉ visual thuộc tính (property / 속성) thay đổi mà không ảnh hưởng hình học (geometry / 기하학), có thể tránh composition/bố cục (layout / 레이아웃) thừa bằng API phù hợp.
 
-# 3. Constraint là ngôn ngữ thật của layout
+# 3. ràng buộc (constraint / 제약조건) là ngôn ngữ thật của bố cục (layout / 레이아웃)
 
-`Modifier.fillMaxWidth()` không có nghĩa “width bằng screen”. Nó có nghĩa child cố chiếm maximum width mà parent constraint cho phép.
+`Modifier.fillMaxWidth()` không có nghĩa “width bằng screen”. Nó có nghĩa child cố chiếm maximum width mà parent ràng buộc (constraint / 제약조건) cho phép.
 
-Trong nested layout:
+Trong nested bố cục (layout / 레이아웃):
 
 ```text
 Window
@@ -73,11 +76,11 @@ Window
 → Child
 ```
 
-mỗi level có thể transform constraint. Khi UI size “kỳ lạ”, debug constraint chain trước khi thêm random `width()`/`height()`.
+mỗi mức (level / 수준) có thể transform ràng buộc (constraint / 제약조건). Khi UI kích thước (size / 크기) “kỳ lạ”, gỡ lỗi (debug / 디버그) ràng buộc (constraint / 제약조건) chuỗi (chain / 사슬) trước khi thêm random `width()`/`height()`.
 
-# 4. Modifier ordering là semantic
+# 4. Modifier thứ tự (ordering / 순서) là ngữ nghĩa (semantic / 의미적)
 
-Modifier chain được áp dụng theo thứ tự và thứ tự có thể thay đổi layout, hit target, clipping và drawing.
+Modifier chuỗi (chain / 사슬) được áp dụng theo thứ tự và thứ tự có thể thay đổi bố cục (layout / 레이아웃), hit mục tiêu (target / 대상), clipping và drawing.
 
 Ví dụ:
 
@@ -95,15 +98,15 @@ Modifier
     .padding(16.dp)
 ```
 
-Ở chain đầu, padding xảy ra trước background theo modifier pipeline tương ứng nên vùng background khác chain sau.
+Ở chuỗi (chain / 사슬) đầu, padding xảy ra trước background theo modifier chuỗi xử lý (pipeline / 파이프라인) tương ứng nên vùng background khác chuỗi (chain / 사슬) sau.
 
-Senior rule: khi modifier có bug, đọc chain như transformation pipeline, không như danh sách option không thứ tự.
+Cấp cao (senior / 시니어) quy tắc (rule / 규칙): khi modifier có bug, đọc chuỗi (chain / 사슬) như transformation chuỗi xử lý (pipeline / 파이프라인), không như danh sách option không thứ tự.
 
-# 5. Custom layout
+# 5. Custom bố cục (layout / 레이아웃)
 
-Khi `Row`/`Column`/`Box` không đủ, có thể viết custom `Layout` hoặc modifier layout.
+Khi `Row`/`Column`/`Box` không đủ, có thể viết custom `Layout` hoặc modifier bố cục (layout / 레이아웃).
 
-Conceptual pattern:
+Conceptual mẫu (pattern / 패턴):
 
 ```kotlin
 Layout(
@@ -119,17 +122,17 @@ Layout(
 }
 ```
 
-Custom layout nên được dùng khi có invariant geometry rõ, không phải để né việc hiểu existing layout primitive.
+Custom bố cục (layout / 레이아웃) nên được dùng khi có bất biến (invariant / 불변식) hình học (geometry / 기하학) rõ, không phải để né việc hiểu existing bố cục (layout / 레이아웃) thành phần nguyên thủy (primitive / 기본 요소).
 
-# 6. Intrinsic measurement
+# 6. Intrinsic đo lường (measurement / 측정)
 
-Intrinsic measurement cho phép hỏi child về size “tự nhiên” trong một số scenario trước measurement thực. Nó hữu ích nhưng có cost và không phải mọi custom layout đều support dễ dàng.
+Intrinsic đo lường (measurement / 측정) cho phép hỏi child về kích thước (size / 크기) “tự nhiên” trong một số scenario trước đo lường (measurement / 측정) thực. Nó hữu ích nhưng có chi phí (cost / 비용) và không phải mọi custom bố cục (layout / 레이아웃) đều hỗ trợ (support / 지원) dễ dàng.
 
-Đừng dùng intrinsic như fix mặc định cho mọi alignment problem. Nếu design có thể dùng constraint/layout primitive trực tiếp, thường đơn giản hơn.
+Đừng dùng intrinsic như fix mặc định cho mọi alignment bài toán (problem / 문제). Nếu thiết kế (design / 설계) có thể dùng ràng buộc (constraint / 제약조건)/bố cục (layout / 레이아웃) thành phần nguyên thủy (primitive / 기본 요소) trực tiếp, thường đơn giản hơn.
 
-# 7. Lazy layout và identity
+# 7. Lazy bố cục (layout / 레이아웃) và định danh (identity / 식별자)
 
-`LazyColumn` chỉ compose/measure item cần thiết gần viewport. Nhưng item identity phải ổn định khi list reorder/insert.
+`LazyColumn` chỉ compose/measure item cần thiết gần viewport. Nhưng item định danh (identity / 식별자) phải ổn định khi danh sách (list / 목록) reorder/insert.
 
 ```kotlin
 items(
@@ -140,13 +143,13 @@ items(
 }
 ```
 
-Key không chỉ là performance hint; nó giúp runtime gắn remembered state/animation với logical item đúng.
+Key không chỉ là hiệu năng (performance / 성능) hint; nó giúp thời gian chạy (runtime / 런타임) gắn remembered trạng thái (state / 상태)/animation với logical item đúng.
 
-Index thường là key tệ cho mutable/reorderable list.
+Chỉ mục (index / 인덱스) thường là key tệ cho mutable/reorderable danh sách (list / 목록).
 
-# 8. State locality
+# 8. trạng thái (state / 상태) locality
 
-State nên sống gần nơi nó được dùng nhất nhưng ở owner đủ cao để giữ invariant.
+Trạng thái (state / 상태) nên sống gần nơi nó được dùng nhất nhưng ở đơn vị sở hữu (owner / 오너) đủ cao để giữ bất biến (invariant / 불변식).
 
 ```text
 pure visual toggle → local composable state
@@ -155,11 +158,11 @@ shared navigation/session state → higher owner
 persistent domain data → repository/database
 ```
 
-Nếu mọi state đều đẩy lên ViewModel, ViewModel thành UI implementation bucket. Nếu mọi state để local, business coordination khó test.
+Nếu mọi trạng thái (state / 상태) đều đẩy lên ViewModel, ViewModel thành UI hiện thực (implementation / 구현) bucket. Nếu mọi trạng thái (state / 상태) để cục bộ (local / 로컬), nghiệp vụ (business / 비즈니스) coordination khó kiểm thử (test / 테스트).
 
 # 9. `derivedStateOf`
 
-`derivedStateOf` hữu ích khi derived value thay đổi ít hơn input state hoặc computation cần tránh invalidation không cần thiết.
+`derivedStateOf` hữu ích khi derived giá trị (value / 값) thay đổi ít hơn đầu vào (input / 입력) trạng thái (state / 상태) hoặc computation cần tránh vô hiệu hóa (invalidation / 무효화) không cần thiết.
 
 ```kotlin
 val showButton by remember {
@@ -167,11 +170,11 @@ val showButton by remember {
 }
 ```
 
-Không dùng `derivedStateOf` cho mọi biến tính toán đơn giản; nó có overhead và làm code khó đọc nếu lạm dụng.
+Không dùng `derivedStateOf` cho mọi biến tính toán đơn giản; nó có overhead và làm mã (code / 코드) khó đọc nếu lạm dụng.
 
 # 10. `rememberUpdatedState`
 
-Effect lâu sống đôi khi cần callback/value mới nhất mà không restart effect.
+Tác động (effect / 효과) lâu sống đôi khi cần callback/giá trị (value / 값) mới nhất mà không restart tác động (effect / 효과).
 
 ```kotlin
 val currentOnTimeout by rememberUpdatedState(onTimeout)
@@ -182,27 +185,27 @@ LaunchedEffect(Unit) {
 }
 ```
 
-Không hiểu pattern này dễ dẫn tới stale closure hoặc effect restart quá nhiều.
+Không hiểu mẫu (pattern / 패턴) này dễ dẫn tới stale closure hoặc tác động (effect / 효과) restart quá nhiều.
 
-# 11. Side-effect APIs theo ownership
+# 11. Side-effect APIs theo quyền sở hữu (ownership / 소유권)
 
-Các API effect không interchangeable:
+Các API tác động (effect / 효과) không interchangeable:
 
-| API | Mental model |
+| API | mô hình tư duy (mental model / 사고 모델) |
 |---|---|
 | `LaunchedEffect(key)` | coroutine gắn composition, restart khi key đổi |
-| `DisposableEffect(key)` | acquire/release resource theo composition |
-| `SideEffect` | publish state sau successful recomposition |
-| `rememberCoroutineScope()` | launch từ user event, scope gắn composition |
-| `produceState` | bridge async source thành Compose state |
+| `DisposableEffect(key)` | acquire/bản phát hành (release / 릴리스) tài nguyên (resource / 자원) theo composition |
+| `SideEffect` | publish trạng thái (state / 상태) sau successful recomposition |
+| `rememberCoroutineScope()` | launch từ người dùng (user / 사용자) sự kiện (event / 이벤트), phạm vi (scope / 범위) gắn composition |
+| `produceState` | cầu nối (bridge / 브리지) async nguồn (source / 소스) thành Compose trạng thái (state / 상태) |
 
-Chọn API dựa trên lifecycle của side effect, không dựa vào ví dụ StackOverflow gần giống.
+Chọn API dựa trên vòng đời (lifecycle / 생명주기) của side tác động (effect / 효과), không dựa vào ví dụ StackOverflow gần giống.
 
-# Input system
+# Đầu vào (input / 입력) hệ thống (system / 시스템)
 
 ## 12. Clickable trước, pointerInput sau
 
-Nếu use case chỉ là click/toggle/scroll chuẩn, dùng high-level modifier như `clickable`, `combinedClickable`, scroll API. Chúng tích hợp semantics, focus, ripple/interaction và accessibility tốt hơn.
+Nếu use trường hợp (case / 사례) chỉ là click/toggle/scroll chuẩn, dùng high-level modifier như `clickable`, `combinedClickable`, scroll API. Chúng tích hợp ngữ nghĩa (semantics / 의미론), focus, ripple/tương tác (interaction / 상호작용) và khả năng tiếp cận (accessibility / 접근성) tốt hơn.
 
 `pointerInput` nên dùng khi cần gesture custom thực sự.
 
@@ -218,13 +221,13 @@ Modifier.pointerInput(itemId) {
 }
 ```
 
-Block `pointerInput` restart khi key đổi. Nếu capture state sai key, callback có thể stale hoặc gesture detector restart không cần thiết.
+Khối (block / 블록) `pointerInput` restart khi key đổi. Nếu capture trạng thái (state / 상태) sai key, callback có thể stale hoặc gesture detector restart không cần thiết.
 
 ## 14. Gesture competition
 
-Nested scroll, swipe, pager, draggable và click có thể tranh input. Không giải quyết bằng việc thêm nhiều detector ngẫu nhiên.
+Nested scroll, swipe, pager, draggable và click có thể tranh đầu vào (input / 입력). Không giải quyết bằng việc thêm nhiều detector ngẫu nhiên.
 
-Hãy xác định gesture ownership:
+Hãy xác định gesture quyền sở hữu (ownership / 소유권):
 
 ```text
 parent scroll?
@@ -237,11 +240,11 @@ và dùng API coordination như nested scroll khi cần.
 
 # Focus, keyboard và IME
 
-## 15. Focus là state machine riêng
+## 15. Focus là máy trạng thái (state machine / 상태 머신) riêng
 
-Text field input không chỉ là string state. Focus quyết định keyboard, validation UX, navigation bằng hardware keyboard và accessibility.
+Văn bản (text / 텍스트) trường dữ liệu (field / 필드) đầu vào (input / 입력) không chỉ là string trạng thái (state / 상태). Focus quyết định keyboard, kiểm tra hợp lệ (validation / 검증) UX, điều hướng (navigation / 내비게이션) bằng hardware keyboard và khả năng tiếp cận (accessibility / 접근성).
 
-Có thể dùng `FocusRequester` cho flow có user intent rõ, nhưng auto-focus quá mạnh có thể gây keyboard bật bất ngờ khi screen mở.
+Có thể dùng `FocusRequester` cho luồng (flow / 흐름) có người dùng (user / 사용자) intent rõ, nhưng auto-focus quá mạnh có thể gây keyboard bật bất ngờ khi screen mở.
 
 ## 16. IME action
 Phần này nối mạch Android vừa học với “16. IME action”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -260,21 +263,21 @@ TextField(
 )
 ```
 
-IME action nên phản ánh action business thật. “Next” chuyển focus, “Search” submit search, “Done” kết thúc input.
+IME hành động (action / 동작) nên phản ánh hành động (action / 동작) nghiệp vụ (business / 비즈니스) thật. “Next” chuyển focus, “tìm kiếm (search / 검색)” submit tìm kiếm (search / 검색), “Done” kết thúc đầu vào (input / 입력).
 
 ## 17. Insets và keyboard
 
-Edge-to-edge khiến content có thể nằm dưới system bars/IME. Không hardcode status bar height.
+Edge-to-edge khiến content có thể nằm dưới hệ thống (system / 시스템) bars/IME. Không hardcode status bar height.
 
-Compose cung cấp `WindowInsets`, padding modifier và scaffold patterns để content phản ứng system UI.
+Compose cung cấp `WindowInsets`, padding modifier và scaffold patterns để content phản ứng hệ thống (system / 시스템) UI.
 
-Target Android 15+ edge-to-edge đã được enforce mặc định ở platform context tương ứng, nên app hiện đại phải xem insets là core layout problem chứ không phải polish cuối dự án.
+Mục tiêu (target / 대상) Android 15+ edge-to-edge đã được enforce mặc định ở nền tảng (platform / 플랫폼) ngữ cảnh (context / 맥락) tương ứng, nên app hiện đại phải xem insets là cốt lõi (core / 핵심) bố cục (layout / 레이아웃) bài toán (problem / 문제) chứ không phải polish cuối dự án.
 
 # Drawing
 
 ## 18. Draw modifier
 
-Cho visual decoration tùy chỉnh, `drawBehind`, `drawWithContent`, `drawWithCache` thường nhẹ hơn custom Composable tree phức tạp.
+Cho visual decoration tùy chỉnh, `drawBehind`, `drawWithContent`, `drawWithCache` thường nhẹ hơn custom Composable cây (tree / 트리) phức tạp.
 
 ```kotlin
 Modifier.drawBehind {
@@ -284,19 +287,19 @@ Modifier.drawBehind {
 }
 ```
 
-`drawWithCache` phù hợp khi object/path/brush đắt tiền có thể cache theo size/state dependency.
+`drawWithCache` phù hợp khi đối tượng (object / 객체)/đường dẫn (path / 경로)/brush đắt tiền có thể bộ nhớ đệm (cache / 캐시) theo kích thước (size / 크기)/trạng thái (state / 상태) phụ thuộc (dependency / 의존성).
 
 ## 19. Canvas
 
-`Canvas` cho custom drawing 2D. Coordinate space dùng pixel trong draw scope, nên chuyển `Dp` bằng density khi cần.
+`Canvas` cho custom drawing 2D. Coordinate không gian (space / 공간) dùng điểm ảnh (pixel / 픽셀) trong draw phạm vi (scope / 범위), nên chuyển `Dp` bằng density khi cần.
 
-Custom draw cần nghĩ tới scaling, RTL, accessibility và hit testing—visual đẹp không tự động có semantics.
+Custom draw cần nghĩ tới scaling, RTL, khả năng tiếp cận (accessibility / 접근성) và hit testing—visual đẹp không tự động có ngữ nghĩa (semantics / 의미론).
 
 # Animation
 
-## 20. Chọn animation theo loại state transition
+## 20. Chọn animation theo loại chuyển tiếp trạng thái (state transition / 상태 전이)
 
-Compose có nhiều level:
+Compose có nhiều mức (level / 수준):
 
 ```text
 animate*AsState → một value đơn giản
@@ -306,25 +309,25 @@ Animatable → imperative/physics/custom control
 InfiniteTransition → animation lặp
 ```
 
-Đừng dùng `Animatable` cho mọi button color change; abstraction càng thấp càng nhiều state/lifecycle phải tự quản.
+Đừng dùng `Animatable` cho mọi button color thay đổi (change / 변경); lớp trừu tượng (abstraction / 추상화) càng thấp càng nhiều trạng thái (state / 상태)/vòng đời (lifecycle / 생명주기) phải tự quản.
 
-## 21. Animation và business state
+## 21. Animation và nghiệp vụ (business / 비즈니스) trạng thái (state / 상태)
 
-Animation state không nên trở thành source of truth cho business. Ví dụ “order success” là domain state; confetti animation chỉ là rendering side effect của state đó.
+Animation trạng thái (state / 상태) không nên trở thành nguồn chuẩn (source of truth / 정본) cho nghiệp vụ (business / 비즈니스). Ví dụ “thứ tự (order / 순서) success” là lĩnh vực (domain / 도메인) trạng thái (state / 상태); confetti animation chỉ là rendering side tác động (effect / 효과) của trạng thái (state / 상태) đó.
 
-Nếu process death xảy ra, không cần khôi phục confetti frame 63; cần khôi phục trạng thái order thành công.
+Nếu tiến trình (process / 프로세스) death xảy ra, không cần khôi phục confetti frame 63; cần khôi phục trạng thái thứ tự (order / 순서) thành công.
 
-## 22. Motion accessibility
+## 22. Motion khả năng tiếp cận (accessibility / 접근성)
 
-User có thể nhạy cảm với motion. Animation nên tránh gây cản trở, đặc biệt parallax/flashing/aggressive motion. Với accessibility-sensitive app, cân nhắc system animation scale/reduced-motion-like signals khi platform/API phù hợp.
+Người dùng (user / 사용자) có thể nhạy cảm với motion. Animation nên tránh gây cản trở, đặc biệt parallax/flashing/aggressive motion. Với accessibility-sensitive app, cân nhắc hệ thống (system / 시스템) animation quy mô (scale / 규모)/reduced-motion-like signals khi nền tảng (platform / 플랫폼)/API phù hợp.
 
-# Semantics và accessibility
+# Ngữ nghĩa (semantics / 의미론) và khả năng tiếp cận (accessibility / 접근성)
 
-## 23. Semantics tree không phải UI tree 1:1
+## 23. ngữ nghĩa (semantics / 의미론) cây (tree / 트리) không phải UI cây (tree / 트리) 1:1
 
-Compose tạo semantics tree song song để accessibility service và UI test hiểu ý nghĩa UI. Một layout có nhiều node visual có thể merge thành một semantics node meaningful.
+Compose tạo ngữ nghĩa (semantics / 의미론) cây (tree / 트리) song song để khả năng tiếp cận (accessibility / 접근성) dịch vụ (service / 서비스) và UI kiểm thử (test / 테스트) hiểu ý nghĩa UI. Một bố cục (layout / 레이아웃) có nhiều nút (node / 노드) visual có thể merge thành một ngữ nghĩa (semantics / 의미론) nút (node / 노드) meaningful.
 
-Accessibility vì vậy không được “thêm sau” chỉ bằng content description. Semantic role, state, action, traversal và grouping đều quan trọng.
+Khả năng tiếp cận (accessibility / 접근성) vì vậy không được “thêm sau” chỉ bằng content description. ngữ nghĩa (semantic / 의미적) role, trạng thái (state / 상태), hành động (action / 동작), traversal và grouping đều quan trọng.
 
 ## 24. Icon cần mô tả khi mang ý nghĩa
 Phần này nối mạch Android vừa học với “24. Icon cần mô tả khi mang ý nghĩa”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
@@ -337,35 +340,35 @@ Icon(
 )
 ```
 
-Nếu icon chỉ decorative cạnh text đã mô tả đầy đủ action, `contentDescription = null` có thể đúng để tránh screen reader đọc lặp.
+Nếu icon chỉ decorative cạnh văn bản (text / 텍스트) đã mô tả đầy đủ hành động (action / 동작), `contentDescription = null` có thể đúng để tránh screen reader đọc lặp.
 
 ## 25. Button nên là Button khi nó là button
 
-Một `Box.clickable` có thể click được nhưng thiếu semantics/style/focus behavior chuẩn nếu không cấu hình kỹ. Dùng component semantic cao khi phù hợp.
+Một `Box.clickable` có thể click được nhưng thiếu ngữ nghĩa (semantics / 의미론)/style/focus hành vi (behavior / 동작) chuẩn nếu không cấu hình kỹ. Dùng thành phần (component / 컴포넌트) ngữ nghĩa (semantic / 의미적) cao khi phù hợp.
 
-Accessibility thường tốt hơn khi chọn đúng primitive.
+Khả năng tiếp cận (accessibility / 접근성) thường tốt hơn khi chọn đúng thành phần nguyên thủy (primitive / 기본 요소).
 
-## 26. Minimum touch target
+## 26. Minimum touch mục tiêu (target / 대상)
 
-UI nhìn đẹp nhưng target quá nhỏ là usability/accessibility bug. Material component thường xử lý touch target chuẩn; custom control phải tự đảm bảo.
+UI nhìn đẹp nhưng mục tiêu (target / 대상) quá nhỏ là usability/khả năng tiếp cận (accessibility / 접근성) bug. Material thành phần (component / 컴포넌트) thường xử lý touch mục tiêu (target / 대상) chuẩn; custom điều khiển (control / 제어) phải tự đảm bảo.
 
-## 27. Dynamic content announcement
+## 27. động (dynamic / 동적) content announcement
 
-Không phải mọi state update đều nên interrupt screen reader. Error quan trọng hoặc status cần feedback có thể dùng semantics/live region pattern phù hợp. Nhưng lạm dụng announcement khiến app rất khó dùng.
+Không phải mọi trạng thái (state / 상태) cập nhật (update / 업데이트) đều nên interrupt screen reader. lỗi (error / 오류) quan trọng hoặc status cần phản hồi (feedback / 피드백) có thể dùng ngữ nghĩa (semantics / 의미론)/live region mẫu (pattern / 패턴) phù hợp. Nhưng lạm dụng announcement khiến app rất khó dùng.
 
 ## 28. Heading và traversal
 
-Large screen có section, pane và complex hierarchy. Semantic heading/traversal giúp screen reader user hiểu cấu trúc, tương tự heading trong document/web.
+Large screen có section, pane và complex hierarchy. ngữ nghĩa (semantic / 의미적) heading/traversal giúp screen reader người dùng (user / 사용자) hiểu cấu trúc, tương tự heading trong document/web.
 
-## 29. Accessibility testing
+## 29. khả năng tiếp cận (accessibility / 접근성) testing
 
-UI test dựa trên semantics, vì vậy semantics tốt đồng thời tăng testability. Nhưng test query pass không đảm bảo accessibility hoàn chỉnh. Cần manual testing với TalkBack/switch/hardware keyboard trong flow critical.
+UI kiểm thử (test / 테스트) dựa trên ngữ nghĩa (semantics / 의미론), vì vậy ngữ nghĩa (semantics / 의미론) tốt đồng thời tăng testability. Nhưng kiểm thử (test / 테스트) truy vấn (query / 쿼리) pass không đảm bảo khả năng tiếp cận (accessibility / 접근성) hoàn chỉnh. Cần manual testing với TalkBack/switch/hardware keyboard trong luồng (flow / 흐름) trọng yếu (critical / 중요).
 
 # Adaptive UI
 
 ## 30. Responsive khác adaptive
 
-Responsive UI co giãn. Adaptive UI có thể **thay đổi structure/navigation pattern** theo available space hoặc posture.
+Responsive UI co giãn. Adaptive UI có thể **thay đổi cấu trúc (structure / 구조)/điều hướng (navigation / 내비게이션) mẫu (pattern / 패턴)** theo available không gian (space / 공간) hoặc posture.
 
 Ví dụ:
 
@@ -376,7 +379,7 @@ expanded → list + detail two-pane
 
 Không chỉ tăng `padding` trên tablet.
 
-## 31. Window size thay vì device label
+## 31. cửa sổ (window / 윈도우) kích thước (size / 크기) thay vì thiết bị (device / 장치) label
 
 Đừng viết:
 
@@ -384,17 +387,17 @@ Không chỉ tăng `padding` trên tablet.
 if tablet
 ```
 
-như core architecture. Cùng một tablet có split-screen nhỏ; foldable thay posture; desktop window có thể resize.
+như cốt lõi (core / 핵심) kiến trúc (architecture / 아키텍처). Cùng một tablet có split-screen nhỏ; foldable thay posture; desktop cửa sổ (window / 윈도우) có thể resize.
 
-UI nên phản ứng actual window characteristics/size class.
+UI nên phản ứng actual cửa sổ (window / 윈도우) characteristics/kích thước (size / 크기) lớp (class / 클래스).
 
 ## 32. Material 3 Adaptive
 
-Material 3 Adaptive cung cấp building block cho adaptive scaffold, pane và navigation theo window/posture. Version library thay đổi nhanh, nên note architecture dựa trên concept: window info → layout strategy → navigation strategy, không hardcode một alpha API vào core domain.
+Material 3 Adaptive cung cấp building khối (block / 블록) cho adaptive scaffold, pane và điều hướng (navigation / 내비게이션) theo cửa sổ (window / 윈도우)/posture. phiên bản (version / 버전) thư viện (library / 라이브러리) thay đổi nhanh, nên ghi chú (note / 노트) kiến trúc (architecture / 아키텍처) dựa trên concept: cửa sổ (window / 윈도우) info → bố cục (layout / 레이아웃) chiến lược (strategy / 전략) → điều hướng (navigation / 내비게이션) chiến lược (strategy / 전략), không hardcode một alpha API vào cốt lõi (core / 핵심) lĩnh vực (domain / 도메인).
 
-## 33. Navigation rail/drawer/bar
+## 33. điều hướng (navigation / 내비게이션) rail/drawer/bar
 
-Navigation surface có thể thay đổi:
+Điều hướng (navigation / 내비게이션) surface có thể thay đổi:
 
 ```text
 compact → bottom navigation
@@ -402,37 +405,37 @@ medium → navigation rail
 expanded → rail/drawer + multi-pane
 ```
 
-Destination/business state không nên phụ thuộc trực tiếp vào loại navigation widget.
+Destination/nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) không nên phụ thuộc trực tiếp vào loại điều hướng (navigation / 내비게이션) widget.
 
 ## 34. Foldable posture
 
-Hinge/posture có thể chia usable region. UI hai pane nên tránh đặt primary interaction dưới hinge và cân nhắc continuity khi fold/unfold.
+Hinge/posture có thể chia usable region. UI hai pane nên tránh đặt primary tương tác (interaction / 상호작용) dưới hinge và cân nhắc continuity khi fold/unfold.
 
-Process thường không chết khi posture đổi, nhưng configuration/window state thay đổi có thể trigger recomposition/recreation tùy setup. State ownership đúng giúp UI adapt mà không mất business state.
+Tiến trình (process / 프로세스) thường không chết khi posture đổi, nhưng cấu hình (configuration / 구성)/cửa sổ (window / 윈도우) trạng thái (state / 상태) thay đổi có thể trigger recomposition/recreation tùy setup. quyền sở hữu trạng thái (state ownership / 상태 소유권) đúng giúp UI adapt mà không mất nghiệp vụ (business / 비즈니스) trạng thái (state / 상태).
 
-# Keyboard, mouse và non-touch input
+# Keyboard, mouse và non-touch đầu vào (input / 입력)
 
 ## 35. Android không còn chỉ là phone touch
 
-Tablet, Chromebook, desktop mode và external keyboard khiến hover, focus, keyboard shortcut, scroll wheel quan trọng hơn.
+Tablet, Chromebook, desktop chế độ (mode / 모드) và bên ngoài (external / 외부) keyboard khiến hover, focus, keyboard shortcut, scroll wheel quan trọng hơn.
 
-Một UI chỉ test bằng tap có thể unusable khi keyboard navigation.
+Một UI chỉ kiểm thử (test / 테스트) bằng tap có thể unusable khi keyboard điều hướng (navigation / 내비게이션).
 
 ## 36. Focus traversal
 
-Interactive element cần focusable order hợp lý. Custom layout có thể cần focus properties nếu visual order khác semantic order.
+Interactive element cần focusable thứ tự (order / 순서) hợp lý. Custom bố cục (layout / 레이아웃) có thể cần focus properties nếu visual thứ tự (order / 순서) khác ngữ nghĩa (semantic / 의미적) thứ tự (order / 순서).
 
 ## 37. Shortcut
 
-Power-user app có thể hỗ trợ Ctrl/Cmd-like shortcut theo platform pattern. Nhưng shortcut phải bổ sung, không thay action discoverable trên UI.
+Power-user app có thể hỗ trợ Ctrl/Cmd-like shortcut theo nền tảng (platform / 플랫폼) mẫu (pattern / 패턴). Nhưng shortcut phải bổ sung, không thay hành động (action / 동작) discoverable trên UI.
 
-# Text và localization
+# Văn bản (text / 텍스트) và localization
 
 ## 38. Không thiết kế width theo English string
 
-German/Vietnamese/Korean/Arabic text length khác. Font scaling accessibility có thể tăng mạnh text size.
+German/Vietnamese/Korean/Arabic văn bản (text / 텍스트) length khác. Font scaling khả năng tiếp cận (accessibility / 접근성) có thể tăng mạnh văn bản (text / 텍스트) kích thước (size / 크기).
 
-UI production cần chịu được:
+UI môi trường vận hành (production / 운영 환경) cần chịu được:
 
 ```text
 long translation
@@ -445,62 +448,64 @@ small window
 
 ## 39. RTL
 
-Dùng `start/end` semantics thay `left/right` khi layout directional. Icon directional có thể cần auto-mirroring hoặc asset riêng.
+Dùng `start/end` ngữ nghĩa (semantics / 의미론) thay `left/right` khi bố cục (layout / 레이아웃) directional. Icon directional có thể cần auto-mirroring hoặc asset riêng.
 
-## 40. Text measurement và truncation
+## 40. văn bản (text / 텍스트) đo lường (measurement / 측정) và truncation
 
-Ellipsis không phải universal fix. Nếu information critical bị truncate, cần expandable/layout khác. Test font scale cao để phát hiện button/row bị cắt.
+Ellipsis không phải universal fix. Nếu thông tin (information / 정보) trọng yếu (critical / 중요) bị truncate, cần expandable/bố cục (layout / 레이아웃) khác. kiểm thử (test / 테스트) font quy mô (scale / 규모) cao để phát hiện button/row bị cắt.
 
-# Performance
+# Hiệu năng (performance / 성능)
 
 ## 41. Recomposition count không tự động là bug
 
-Recomposition rẻ có thể hoàn toàn bình thường. Tối ưu dựa trên observed jank/allocation/trace, không chase zero recomposition.
+Recomposition rẻ có thể hoàn toàn bình thường. Tối ưu dựa trên observed jank/allocation/dấu vết (trace / 추적), không chase zero recomposition.
 
 ## 42. Stability
 
-Compose compiler/runtime dùng stability information để quyết định skip/recompose. Data model immutable và parameter stable giúp runtime reasoning tốt hơn, nhưng không nên gắn annotation chỉ để “làm compiler vui” mà phá semantic truth.
+Compose trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) dùng stability thông tin (information / 정보) để quyết định skip/recompose. mô hình dữ liệu (data model / 데이터 모델) immutable và parameter stable giúp thời gian chạy (runtime / 런타임) lập luận (reasoning / 추론) tốt hơn, nhưng không nên gắn annotation chỉ để “làm trình biên dịch (compiler / 컴파일러) vui” mà phá ngữ nghĩa (semantic / 의미적) truth.
 
-## 43. Avoid allocation trong hot draw path
+## 43. Avoid allocation trong hot draw đường dẫn (path / 경로)
 
-Custom drawing mỗi frame không nên tạo object/path/brush nặng nếu có thể cache. `drawWithCache` tồn tại cho use case này.
+Custom drawing mỗi frame không nên tạo đối tượng (object / 객체)/đường dẫn (path / 경로)/brush nặng nếu có thể bộ nhớ đệm (cache / 캐시). `drawWithCache` tồn tại cho use trường hợp (case / 사례) này.
 
-## 44. Lazy list image
+## 44. Lazy danh sách (list / 목록) ảnh (image / 이미지)
 
-Image decode/load nên size-aware và async. Key ổn định, content type hợp lý và tránh nested unbounded layout giúp list smooth hơn.
+Ảnh (image / 이미지) decode/tải (load / 로드) nên size-aware và async. Key ổn định, content kiểu (type / 타입) hợp lý và tránh nested unbounded bố cục (layout / 레이아웃) giúp danh sách (list / 목록) smooth hơn.
 
-# Interop với View system
+# Interop với View hệ thống (system / 시스템)
 
 ## 45. `AndroidView`
 
-Khi library/View chưa có Compose equivalent, dùng `AndroidView`. Nhưng phải quản lifecycle/state của View rõ, đặc biệt WebView/Map/Player.
+Khi thư viện (library / 라이브러리)/View chưa có Compose equivalent, dùng `AndroidView`. Nhưng phải quản vòng đời (lifecycle / 생명주기)/trạng thái (state / 상태) của View rõ, đặc biệt WebView/Map/Player.
 
-Không wrap whole legacy screen vào Compose chỉ để nói rằng “đã migrate”. Migration boundary nên có mục tiêu.
+Không wrap whole legacy screen vào Compose chỉ để nói rằng “đã migrate”. di chuyển (migration / 마이그레이션) ranh giới (boundary / 경계) nên có mục tiêu.
 
 ## 46. Compose trong Fragment/View app
 
-`ComposeView` cho incremental migration. Disposal strategy phải phù hợp View lifecycle để composition không sống lâu hơn Fragment view.
+`ComposeView` cho incremental di chuyển (migration / 마이그레이션). Disposal chiến lược (strategy / 전략) phải phù hợp View vòng đời (lifecycle / 생명주기) để composition không sống lâu hơn Fragment view.
 
-Đây là nơi hiểu Fragment lifecycle + Composition lifetime cực quan trọng.
+Đây là nơi hiểu Fragment vòng đời (lifecycle / 생명주기) + Composition thời gian tồn tại (lifetime / 수명) cực quan trọng.
 
-# Senior Notes
+# Cấp cao (senior / 시니어) Notes
 
-## 47. UI correctness trước visual polish
+## 47. UI tính đúng đắn (correctness / 정확성) trước visual polish
 
-State ownership, accessibility, focus, input, restore và adaptive behavior là correctness. Shadow/animation chỉ là polish sau đó.
+Quyền sở hữu trạng thái (state ownership / 상태 소유권), khả năng tiếp cận (accessibility / 접근성), focus, đầu vào (input / 입력), restore và adaptive hành vi (behavior / 동작) là tính đúng đắn (correctness / 정확성). Shadow/animation chỉ là polish sau đó.
 
-## 48. Semantics là public API của UI với accessibility và test
+## 48. ngữ nghĩa (semantics / 의미론) là API công khai (public API / 공개 API) của UI với khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트)
 
-Nếu visual node thay đổi nhưng semantics contract giữ ổn định, automated test bền hơn. Test bằng pixel/node structure quá chi tiết dễ brittle.
+Nếu visual nút (node / 노드) thay đổi nhưng ngữ nghĩa (semantics / 의미론) đặc tả hợp đồng (contract / 계약) giữ ổn định, automated kiểm thử (test / 테스트) bền hơn. kiểm thử (test / 테스트) bằng điểm ảnh (pixel / 픽셀)/nút (node / 노드) cấu trúc (structure / 구조) quá chi tiết dễ brittle.
 
-## 49. Adaptive layout là architecture concern
+## 49. Adaptive bố cục (layout / 레이아웃) là kiến trúc (architecture / 아키텍처) concern
 
-Nếu screen model giả định “chỉ có một pane”, thêm two-pane về sau có thể khó. Navigation state nên đủ neutral để list/detail cùng tồn tại khi window rộng.
+Nếu screen mô hình (model / 모델) giả định “chỉ có một pane”, thêm two-pane về sau có thể khó. điều hướng (navigation / 내비게이션) trạng thái (state / 상태) nên đủ neutral để danh sách (list / 목록)/detail cùng tồn tại khi cửa sổ (window / 윈도우) rộng.
 
-## 50. Edge-to-edge phải design từ đầu
+## 50. Edge-to-edge phải thiết kế (design / 설계) từ đầu
 
-Insets, IME và system bars ảnh hưởng scaffold/navigation/content. Patch bằng padding random cuối sprint thường sinh bug trên device/form factor khác.
+Insets, IME và hệ thống (system / 시스템) bars ảnh hưởng scaffold/điều hướng (navigation / 내비게이션)/content. Patch bằng padding random cuối sprint thường sinh bug trên thiết bị (device / 장치)/form factor khác.
 
 # Checklist kết thúc chapter
 
-Bạn nên giải thích được Composition/Layout/Draw khác nhau thế nào; constraint đi qua tree ra sao; modifier order vì sao quan trọng; khi nào custom layout/draw hợp lý; lazy key liên quan identity thế nào; effect API khác nhau theo lifetime nào; gesture/focus/IME cần ownership gì; semantics tree dùng cho accessibility và test ra sao; edge-to-edge/insets ảnh hưởng UI thế nào; responsive khác adaptive thế nào; và tại sao tablet/foldable/keyboard support phải dựa trên window/capability thay vì hardcode device type.
+Bạn nên giải thích được Composition/bố cục (layout / 레이아웃)/Draw khác nhau thế nào; ràng buộc (constraint / 제약조건) đi qua cây (tree / 트리) ra sao; modifier thứ tự (order / 순서) vì sao quan trọng; khi nào custom bố cục (layout / 레이아웃)/draw hợp lý; lazy key liên quan định danh (identity / 식별자) thế nào; tác động (effect / 효과) API khác nhau theo thời gian tồn tại (lifetime / 수명) nào; gesture/focus/IME cần quyền sở hữu (ownership / 소유권) gì; ngữ nghĩa (semantics / 의미론) cây (tree / 트리) dùng cho khả năng tiếp cận (accessibility / 접근성) và kiểm thử (test / 테스트) ra sao; edge-to-edge/insets ảnh hưởng UI thế nào; responsive khác adaptive thế nào; và tại sao tablet/foldable/keyboard hỗ trợ (support / 지원) phải dựa trên cửa sổ (window / 윈도우)/năng lực (capability / 역량) thay vì hardcode thiết bị (device / 장치) kiểu (type / 타입).
+
+> **Bàn giao:** Sau **50. Edge-to-edge phải thiết kế (design / 설계) từ đầu**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu
 
-> File này là lớp chuẩn hóa dùng chung cho toàn bộ `investing/`. Mục tiêu là giúp người đọc dùng cùng một hệ thuật ngữ, cùng quy ước công thức và cùng cách phân biệt dữ kiện, ước tính, giả định và luận điểm đầu tư. Phần giải thích luôn ưu tiên tiếng Việt; thuật ngữ tiếng Anh chỉ được giữ như từ khóa bổ sung để tra cứu tài liệu gốc.
+> **Mạch đọc:** Đặt **Thuật ngữ, quy ước công thức và tiêu chuẩn nghiên cứu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Quy tắc ngôn ngữ của thư viện** sang **2. Dữ kiện, ước tính, giả định, kịch bản và luận điểm đầu tư**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này là lớp chuẩn hóa dùng chung cho toàn bộ `investing/`. Mục tiêu là giúp người đọc dùng cùng một hệ thuật ngữ, cùng quy ước công thức và cùng cách phân biệt dữ kiện, ước tính, giả định và luận điểm đầu tư. Phần giải thích luôn ưu tiên tiếng Việt; thuật ngữ tiếng Anh chỉ được giữ như từ khóa bổ sung để tra cứu tài liệu gốc.
 
 ## 1. Quy tắc ngôn ngữ của thư viện
 
@@ -28,7 +31,7 @@ Một ghi chú nghiên cứu (research note) phải phân biệt rõ năm lớp 
 
 **Ước tính (estimate)** là con số dự báo của doanh nghiệp, nhà phân tích hoặc thị trường, ví dụ EPS đồng thuận (consensus EPS) cho năm sau. Ước tính luôn phải gắn với nguồn và thời điểm.
 
-**Giả định (assumption)** là đầu vào do người phân tích chủ động đặt vào mô hình, ví dụ biên lợi nhuận gộp (gross margin) 35% trong kịch bản cơ sở.
+**giả định (assumption / 가정)** là đầu vào do người phân tích chủ động đặt vào mô hình, ví dụ biên lợi nhuận gộp (gross margin) 35% trong kịch bản cơ sở.
 
 **Kịch bản (scenario)** là một tập hợp giả định nhất quán về đường đi của nền kinh tế hoặc doanh nghiệp.
 
@@ -150,7 +153,7 @@ Sharpe Ratio:
 Sharpe = (Portfolio Return - Risk-Free Return) / Portfolio Volatility
 ```
 
-Sortino thay tổng độ biến động bằng độ lệch giảm giá (downside deviation). Information Ratio so lợi suất chủ động với sai lệch bám chỉ số (tracking error):
+Sortino thay tổng độ biến động bằng độ lệch giảm giá (downside deviation). thông tin (information / 정보) Ratio so lợi suất chủ động với sai lệch bám chỉ số (tracking error):
 
 ```text
 IR = Active Return / Tracking Error
@@ -210,7 +213,7 @@ Một cầu nối đơn giản:
 Enterprise Value = Equity Value + Net Debt + Other Senior Claims - Non-operating Assets
 ```
 
-Giá trị doanh nghiệp (Enterprise Value, EV) và giá trị vốn chủ sở hữu (Equity Value) không thể dùng thay thế cho nhau. FCFF được chiết khấu bằng WACC để đi tới EV; FCFE được chiết khấu bằng chi phí vốn chủ sở hữu (cost of equity) để đi tới Equity Value.
+Giá trị doanh nghiệp (Enterprise value, EV) và giá trị vốn chủ sở hữu (Equity value) không thể dùng thay thế cho nhau. FCFF được chiết khấu bằng WACC để đi tới EV; FCFE được chiết khấu bằng chi phí vốn chủ sở hữu (cost of equity) để đi tới Equity giá trị (value / 값).
 
 ## 14. Dòng tiền tự do
 
@@ -460,3 +463,5 @@ Quy tắc mặc định:
 ```text
 Tiếng Việt để hiểu → Tiếng Anh trong ngoặc để tra cứu → Viết tắt để dùng thực tế
 ```
+
+> **Bàn giao:** Sau **33. Nguyên tắc cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ADVANCED DEPTH PATH](./ADVANCED_DEPTH_PATH.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

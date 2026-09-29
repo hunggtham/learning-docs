@@ -1,28 +1,37 @@
 # Turbulence, rheology và soft vật chất (matter): khi liên tục (continuum) trở nên phi tuyến và nhiều thang đo
 
+> **Mạch đọc:** Đọc **Turbulence, rheology và soft vật chất (matter): khi liên tục (continuum) trở nên phi tuyến và nhiều thang đo** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao Navier–Stokes chưa phải là “đã giải xong chất lưu”?** sang **số Reynolds như tỷ số cạnh tranh giữa inertia và độ nhớt (viscosity)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Tại sao Navier–Stokes chưa phải là “đã giải xong chất lưu”?
 
-Biết governing phương trình (equation) không đồng nghĩa biết solution. Navier–Stokes kết hợp bảo toàn (conservation) of khối lượng (mass), động lượng (momentum) và constitutive giả định (assumption) cho viscous ứng suất (stress). Nhưng phi tuyến (nonlinear) term
+Biết governing phương trình (equation) không đồng nghĩa biết solution. Navier–Stokes kết hợp bảo toàn (conservation) of khối lượng (mass), động lượng (momentum) và constitutive giả định (assumption / 가정) cho viscous ứng suất (stress). Nhưng phi tuyến (nonlinear) term
 
 ```math
 (\vec v\cdot\nabla)\vec v
 ```
 
-làm vận tốc (velocity) trường (field) tự advect chính nó. Ở số Reynolds (Reynolds number) lớn, small disturbances có thể tương tác qua nhiều các thang (scales) và tạo **turbulence (난류)**. Đây là ví dụ điển hình của physics: định luật (law) cục bộ (local) khá gọn nhưng tập thể (collective) hành vi (behavior) cực kỳ phức tạp.
+làm vận tốc (velocity) trường (field) tự advect chính nó. Ở số Reynolds (Reynolds number) lớn, small disturbances có thể tương tác qua nhiều các thang (scales) và tạo **turbulence (난류)**. Đây là ví dụ điển hình của physics: định luật (law) cục bộ (local / 로컬) khá gọn nhưng tập thể (collective) hành vi (behavior / 동작) cực kỳ phức tạp.
+
+
+> **Chuyển mạch:** Từ **Tại sao Navier–Stokes chưa phải là “đã giải xong chất lưu”?**, ta sang **số Reynolds như tỷ số cạnh tranh giữa inertia và độ nhớt (viscosity)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## số Reynolds như tỷ số cạnh tranh giữa inertia và độ nhớt (viscosity)
 
-thang (Scale) analysis cho incompressible dòng chảy (flow) với characteristic tốc độ (speed) `U`, độ dài (length) `L`, kinematic độ nhớt `\nu`:
+thang (Scale) phân tích (analysis / 분석) cho incompressible dòng chảy (flow) với characteristic tốc độ (speed) `U`, độ dài (length) `L`, kinematic độ nhớt `\nu`:
 
 ```math
 Re=\frac{UL}{\nu}.
 ```
 
-`Re` không phải “ngưỡng turbulence tuyệt đối”. Nó đo relative importance của inertial vận chuyển (transport) so với viscous động lượng khuếch tán (diffusion). chuyển mức (Transition) còn phụ thuộc hình học (geometry), nhiễu động (disturbance) và các điều kiện biên (boundary conditions). Pipe dòng chảy, lớp biên (boundary layer) và dòng chảy quanh vật thể (object) có critical hành vi khác nhau.
+`Re` không phải “ngưỡng turbulence tuyệt đối”. Nó đo relative importance của inertial vận chuyển (transport / 전송) so với viscous động lượng khuếch tán (diffusion). chuyển mức (Transition) còn phụ thuộc hình học (geometry / 기하학), nhiễu động (disturbance) và các điều kiện biên (boundary conditions). Pipe dòng chảy, lớp biên (boundary layer) và dòng chảy quanh vật thể (object) có trọng yếu (critical / 중요) hành vi khác nhau.
 
-## năng lượng (Energy) cascade
 
-Một mô hình tư duy (mental model) quan trọng của 3D turbulence là năng lượng injected ở thang lớn được phi tuyến các tương tác (interactions) chuyển qua intermediate eddies rồi dissipate bởi độ nhớt ở thang nhỏ. Trong inertial range, Kolmogorov lý thuyết (theory) dự đoán năng lượng phổ (spectrum) thu nhỏ quy mô (scaling) gần
+> **Chuyển mạch:** Từ **số Reynolds như tỷ số cạnh tranh giữa inertia và độ nhớt (viscosity)**, ta sang **năng lượng (energy / 에너지) cascade** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Năng lượng (energy / 에너지) cascade
+
+Một mô hình tư duy (mental model / 사고 모델) quan trọng của 3D turbulence là năng lượng injected ở thang lớn được phi tuyến các tương tác (interactions) chuyển qua intermediate eddies rồi dissipate bởi độ nhớt ở thang nhỏ. Trong inertial phạm vi (range / 범위), Kolmogorov lý thuyết (theory / 이론) dự đoán năng lượng phổ (spectrum) thu nhỏ quy mô (scaling) gần
 
 ```math
 E(k)\propto \varepsilon^{2/3}k^{-5/3},
@@ -30,13 +39,19 @@ E(k)\propto \varepsilon^{2/3}k^{-5/3},
 
 với `k` wavenumber và `\varepsilon` năng lượng dissipation tốc độ biến thiên (rate) per khối lượng.
 
-Đây không phải universal chính xác (exact) định luật cho mọi turbulent dòng chảy, nhưng cho thấy cách phân tích thứ nguyên (dimensional analysis) + thang locality có thể tạo dự đoán (prediction) mạnh khi vi mô (microscopic) details không cần biết đầy đủ.
+Đây không phải universal chính xác (exact / 정확한) định luật cho mọi turbulent dòng chảy, nhưng cho thấy cách phân tích thứ nguyên (dimensional analysis) + thang locality có thể tạo dự đoán (prediction) mạnh khi vi mô (microscopic) details không cần biết đầy đủ.
 
-## Boundary các lớp (layers) và lực cản (drag) crisis
 
-Gần no-slip wall, vận tốc phải chuyển từ không (zero) ở bề mặt (surface) đến tự do (free)-stream value. Region gradient lớn này là lớp biên. Khi lớp biên tách khỏi bề mặt, wake và áp suất (pressure) lực cản có thể tăng mạnh. Golf ball dimples khai thác chuyển mức của lớp biên để delay separation trong một range vận tốc, làm giảm áp suất lực cản dù skin ma sát (friction) có thể tăng.
+> **Chuyển mạch:** Từ **năng lượng (energy / 에너지) cascade**, ta sang **ranh giới (boundary / 경계) các lớp (layers) và lực cản (drag) crisis** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Vì vậy “bề mặt nhẵn luôn ít cản hơn” không phải rule tuyệt đối.
+## Ranh giới (boundary / 경계) các lớp (layers) và lực cản (drag) crisis
+
+Gần no-slip wall, vận tốc phải chuyển từ không (zero) ở bề mặt (surface) đến tự do (free)-stream giá trị (value / 값). Region độ dốc (gradient / 기울기) lớn này là lớp biên. Khi lớp biên tách khỏi bề mặt, wake và áp suất (pressure) lực cản có thể tăng mạnh. Golf ball dimples khai thác chuyển mức của lớp biên để delay separation trong một phạm vi (range / 범위) vận tốc, làm giảm áp suất lực cản dù skin ma sát (friction) có thể tăng.
+
+Vì vậy “bề mặt nhẵn luôn ít cản hơn” không phải quy tắc (rule / 규칙) tuyệt đối.
+
+
+> **Chuyển mạch:** Từ **ranh giới (boundary / 경계) các lớp (layers) và lực cản (drag) crisis**, ta sang **Rheology: khi ứng suất không tỷ lệ đơn giản với biến dạng tương đối (strain) tốc độ biến thiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Rheology: khi ứng suất không tỷ lệ đơn giản với biến dạng tương đối (strain) tốc độ biến thiên
 
@@ -50,11 +65,14 @@ với ứng suất cắt (shear stress) `\tau`, độ nhớt `\eta` và shear t�
 
 Ketchup và blood có thể shear-thinning: hiệu dụng (effective) độ nhớt giảm khi shear tốc độ biến thiên tăng. Cornstarch suspension có thể shear-thicken trong chế độ (regime) nhất định. Toothpaste và some gels có yield-ứng suất hành vi: dưới ứng suất threshold chúng gần chất rắn (solid)-like, trên threshold mới dòng chảy đáng kể.
 
-Rheology (Rheology / 유변학) vì thế hỏi quan hệ (relation) giữa ứng suất, biến dạng (deformation) và time. Polymer melts có memory vì chain cấu hình (configuration) cần thời gian relax; viscoelasticity kết hợp spring-like storage và dashpot-like dissipation.
+Rheology (Rheology / 유변학) vì thế hỏi quan hệ (relation / 관계) giữa ứng suất, biến dạng (deformation) và thời gian (time / 시간). Polymer melts có bộ nhớ (memory / 메모리) vì chuỗi (chain / 사슬) cấu hình (configuration / 구성) cần thời gian relax; viscoelasticity kết hợp spring-like lưu trữ (storage / 저장소) và dashpot-like dissipation.
 
-## Maxwell và Kelvin–Voigt các mô hình (models)
 
-Một tuyến tính (linear) viscoelastic mô hình (model) đơn giản nối spring và dashpot theo series — Maxwell mô hình. Nó mô tả ứng suất hồi phục (relaxation). Kelvin–Voigt mô hình nối song song, hữu ích cho creep hành vi khác. Các mô hình này không phải phân tử (molecular) truth; chúng là reduced constitutive các mô hình giống RC/RL analog trong mạch điện (circuit) lý thuyết.
+> **Chuyển mạch:** Từ **Rheology: khi ứng suất không tỷ lệ đơn giản với biến dạng tương đối (strain) tốc độ biến thiên**, ta sang **Maxwell và Kelvin–Voigt các mô hình (models / 모델들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Maxwell và Kelvin–Voigt các mô hình (models / 모델들)
+
+Một tuyến tính (linear / 선형) viscoelastic mô hình (model / 모델) đơn giản nối spring và dashpot theo series — Maxwell mô hình. Nó mô tả ứng suất hồi phục (relaxation). Kelvin–Voigt mô hình nối song song, hữu ích cho creep hành vi khác. Các mô hình này không phải phân tử (molecular) truth; chúng là reduced constitutive các mô hình giống RC/RL analog trong mạch điện (circuit) lý thuyết.
 
 phức (Complex) modulus dưới oscillatory forcing,
 
@@ -62,7 +80,10 @@ phức (Complex) modulus dưới oscillatory forcing,
 G^*(\omega)=G'(\omega)+iG''(\omega),
 ```
 
-phân tách storage modulus `G'` và tổn hao (loss) modulus `G''`. tần số (Frequency) sweep vì vậy probe bên trong (internal) hồi phục times của vật liệu (material).
+phân tách lưu trữ (storage / 저장소) modulus `G'` và tổn hao (loss) modulus `G''`. tần số (Frequency) sweep vì vậy probe bên trong (internal) hồi phục times của vật liệu (material).
+
+
+> **Chuyển mạch:** Từ **Maxwell và Kelvin–Voigt các mô hình (models / 모델들)**, ta sang **Soft vật chất: năng lượng các thang gần nhiệt (thermal) năng lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Soft vật chất: năng lượng các thang gần nhiệt (thermal) năng lượng
 
@@ -74,7 +95,10 @@ Brownian chuyển động (motion) của colloidal hạt (particle) là kết qu
 D=\mu k_BT.
 ```
 
-Đây là một dạng fluctuation–dissipation liên hệ (connection): ngẫu nhiên (random) các thăng giáng (fluctuations) và dissipative đáp ứng (response) không độc lập mà cùng xuất phát từ nhiệt environment.
+Đây là một dạng fluctuation–dissipation liên hệ (connection): ngẫu nhiên (random) các thăng giáng (fluctuations) và dissipative đáp ứng (response) không độc lập mà cùng xuất phát từ nhiệt môi trường (environment / 환경).
+
+
+> **Chuyển mạch:** Từ **Soft vật chất: năng lượng các thang gần nhiệt (thermal) năng lượng**, ta sang **sức căng bề mặt (Surface tension) + soft vật chất = droplets, emulsions và capillary number** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## sức căng bề mặt (Surface tension) + soft vật chất = droplets, emulsions và capillary number
 
@@ -88,15 +112,24 @@ so sánh viscous hiệu ứng (effect) với sức căng bề mặt. `Ca` nhỏ:
 
 vi lưu (Microfluidics) dùng chính competition này để tạo droplets đồng đều cho hóa học (chemistry), diagnostics và biological assays.
 
+
+> **Chuyển mạch:** Từ **sức căng bề mặt (Surface tension) + soft vật chất = droplets, emulsions và capillary number**, ta sang **động lực học chất lưu tính toán (Computational Fluid Dynamics) và turbulence các mô hình** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## động lực học chất lưu tính toán (Computational Fluid Dynamics) và turbulence các mô hình
 
-Direct số (Numerical) mô phỏng (Simulation) giải mọi relevant turbulent các thang nhưng cost tăng cực nhanh với số Reynolds. kỹ thuật (Engineering) thường dùng RANS hoặc LES: thay vì resolve tất cả các thang, mô hình hiệu ứng của unresolved các thăng giáng.
+Direct số (Numerical) mô phỏng (Simulation) giải mọi relevant turbulent các thang nhưng chi phí (cost / 비용) tăng cực nhanh với số Reynolds. kỹ thuật (engineering / 엔지니어링) thường dùng RANS hoặc LES: thay vì resolve tất cả các thang, mô hình hiệu ứng của unresolved các thăng giáng.
 
 Đây là cùng triết lý mô hình reduction thấy ở physics khác: câu hỏi không phải “mô phỏng có chính xác không?” mà “các thang nào cần resolve để đại lượng quan sát (observable) mình quan tâm có sai số (error) chấp nhận được?”
 
-## Mô hình tư duy (Mental Model)
 
-> liên tục physics không dừng ở phương trình vật liệu “đẹp”. Khi phi tuyến advection, memory, interfaces và các thăng giáng nhiệt cùng xuất hiện, hành vi phụ thuộc competition giữa nhiều timescales và độ dài các thang. các số vô thứ nguyên (Dimensionless numbers) là bản đồ cho biết competition nào đang thống trị.
+> **Chuyển mạch:** Từ **động lực học chất lưu tính toán (Computational Fluid Dynamics) và turbulence các mô hình**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> liên tục physics không dừng ở phương trình vật liệu “đẹp”. Khi phi tuyến advection, bộ nhớ (memory / 메모리), interfaces và các thăng giáng nhiệt cùng xuất hiện, hành vi phụ thuộc competition giữa nhiều timescales và độ dài các thang. các số vô thứ nguyên (Dimensionless numbers) là bản đồ cho biết competition nào đang thống trị.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Những ngộ nhận thường gặp (Common Misconceptions)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -106,14 +139,19 @@ Không. Nó báo inertia mạnh so với độ nhớt, nhưng chuyển mức ph�
 
 ### “độ nhớt là một hằng số của mọi chất lưu”
 
-Chỉ đúng cho Newtonian mô hình trong một chế độ. Non-Newtonian các chất lưu (fluids) có hiệu dụng đáp ứng phụ thuộc shear tốc độ biến thiên, lịch sử (history) và tần số.
+Chỉ đúng cho Newtonian mô hình trong một chế độ. Non-Newtonian các chất lưu (fluids) có hiệu dụng đáp ứng phụ thuộc shear tốc độ biến thiên, lịch sử (history / 이력) và tần số.
 
 ### “Turbulence chỉ là ngẫu nhiên nhiễu (noise)”
 
-Turbulence có stochastic-looking các thăng giáng nhưng vẫn chứa coherent structures, bảo toàn các ràng buộc (constraints) và statistical thu nhỏ quy mô. Nó không phải white nhiễu tùy ý.
+Turbulence có stochastic-looking các thăng giáng nhưng vẫn chứa coherent structures, bảo toàn các ràng buộc (constraints / 제약조건들) và statistical thu nhỏ quy mô. Nó không phải white nhiễu tùy ý.
 
-## Liên kết kiến thức (Knowledge Connection)
+
+> **Chuyển mạch:** Từ **Những ngộ nhận thường gặp (Common Misconceptions)**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Fluids](00_fluids.md), [Transport phenomena](02_transport_diffusion_heat.md), [Nonlinear dynamics](../01_mechanics/09_nonlinear_dynamics_chaos.md).
 
 **Liên hệ tiếp:** [Statistical mechanics](../04_thermal_statistical/01_entropy_statistical_mechanics.md), [Computational Physics](../12_experimental_computational/02_computational_physics.md), hóa học (chemical) kỹ thuật, biomechanics và vi lưu.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 fluids](./00_fluids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

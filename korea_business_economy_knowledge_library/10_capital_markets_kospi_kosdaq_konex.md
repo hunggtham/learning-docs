@@ -1,10 +1,13 @@
 # Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)
 
+> **Mạch đọc:** Đặt **Thị trường vốn Hàn Quốc: KOSPI, KOSDAQ, KONEX và cách thị trường biến kỳ vọng thành giá (Capital Markets / 자본시장·코스피·코스닥·코넥스)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thị trường sơ cấp và thị trường thứ cấp** sang **KOSPI: thị trường và chỉ số là hai khái niệm khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Thị trường chứng khoán không chỉ là nơi giá cổ phiếu lên xuống. Nó là hạ tầng giúp **doanh nghiệp huy động vốn chủ sở hữu, nhà đầu tư phân bổ tiết kiệm, chủ sở hữu tạo thanh khoản và nền kinh tế hình thành mức giá cho rủi ro**.
 
 Để hiểu một công ty Hàn Quốc, cần tách **kinh tế của doanh nghiệp** khỏi **cơ chế của thị trường**. Một công ty tốt vẫn có thể là khoản đầu tư kém nếu giá đã phản ánh quá nhiều kỳ vọng. Ngược lại, cổ phiếu của một công ty đang ở đáy chu kỳ vẫn có thể tăng nếu kết quả thực tế ít xấu hơn mức thị trường đã dự đoán.
 
-> Mental model: giá thị trường là giá của **kỳ vọng tương lai (future expectations)**, không phải điểm số đạo đức cho chất lượng doanh nghiệp hiện tại.
+> mô hình tư duy (mental model / 사고 모델): giá thị trường là giá của **kỳ vọng tương lai (future expectations)**, không phải điểm số đạo đức cho chất lượng doanh nghiệp hiện tại.
 
 ## Thị trường sơ cấp và thị trường thứ cấp
 
@@ -233,7 +236,7 @@ Hai công ty bán dẫn có cùng EV/EBITDA nhưng nhu cầu CAPEX thay thế t�
 
 Phải dùng bội số cùng với hiểu biết về mô hình kinh doanh.
 
-## Công ty tài chính cần logic định giá khác
+## Công ty tài chính cần lô-gic (logic / 논리) định giá khác
 
 Ngân hàng và bảo hiểm khác doanh nghiệp công nghiệp vì nợ và tiền gửi là một phần của hoạt động chứ không chỉ là lựa chọn tài trợ.
 
@@ -298,7 +301,7 @@ Vì vậy thị trường vốn là một lớp thể chế của quản trị d
 9. Đưa cổ tức và mua lại cổ phiếu vào tổng lợi suất cổ đông.
 10. Stress-test định giá dưới các kịch bản lợi nhuận và lợi suất yêu cầu khác nhau.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Thị trường vốn chuyển **tiết kiệm → quyền sở hữu → giá → tín hiệu phân bổ vốn**. Doanh nghiệp tạo dòng tiền; thị trường định giá xác suất và thời điểm của dòng tiền tương lai. Phân tích tốt phải kết nối hai lớp nhưng không được nhầm chúng với nhau.
 
@@ -323,3 +326,5 @@ Vì vậy thị trường vốn là một lớp thể chế của quản trị d
 ## Liên kết
 
 Đọc [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) trước khi định giá, [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) cho tài trợ nợ–trái phiếu, [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md) cho quá trình từ venture tới IPO và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình hoàn chỉnh.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

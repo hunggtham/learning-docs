@@ -1,11 +1,13 @@
 (() => {
   const LOS = {
     docs: [],
+    metaSearch: null,
     searchIndex: null,
     graph: null,
     installPrompt: null,
     readerPath: '',
     readerCleanup: () => {},
+    selectionTranslatorInstalled: false,
     enhanceQueued: false
   };
 
@@ -15,6 +17,7 @@
   const docStateKey = path => `study-shelf-doc-state:${path}`;
   const progressKey = path => `study-shelf-progress:${path}`;
   const bookmarksKey = path => `study-shelf-section-bookmarks:${path}`;
+  const readLaterKey = 'study-shelf-read-later';
   const statusLabels = { unread: 'Chưa đọc', reading: 'Đang đọc', review: 'Cần ôn lại', completed: 'Hoàn thành' };
 
   function readJson(key, fallback = null) {
@@ -42,6 +45,29 @@
   function bookmarksFor(path) {
     const value = readJson(bookmarksKey(path), []);
     return Array.isArray(value) ? value : [];
+  }
+  function readLaterItems() {
+    const value = readJson(readLaterKey, []);
+    return Array.isArray(value) ? value.filter(item => item && typeof item.path === 'string') : [];
+  }
+  function isReadLater(path) {
+    return readLaterItems().some(item => item.path === path);
+  }
+  function readLaterDocuments() {
+    return readLaterItems()
+      .map(item => ({ item, doc: docByPath(item.path) }))
+      .filter(entry => entry.doc)
+      .sort((a, b) => new Date(b.item.savedAt || 0) - new Date(a.item.savedAt || 0));
+  }
+  function setReadLater(path, force) {
+    const items = readLaterItems();
+    const index = items.findIndex(item => item.path === path);
+    const shouldAdd = typeof force === 'boolean' ? force : index < 0;
+    if (shouldAdd && index < 0) items.unshift({ path, savedAt: new Date().toISOString() });
+    if (!shouldAdd && index >= 0) items.splice(index, 1);
+    writeJson(readLaterKey, items);
+    window.dispatchEvent(new CustomEvent('study-shelf-read-later-change', { detail: { path, saved: shouldAdd } }));
+    return shouldAdd;
   }
   function percentFor(path) {
     const state = readDocState(path);
@@ -101,6 +127,198 @@
     node._timer = setTimeout(() => node.classList.remove('show'), 2200);
   }
 
+  function installSelectionTranslator() {
+    if (LOS.selectionTranslatorInstalled) return;
+    LOS.selectionTranslatorInstalled = true;
+
+    const popup = document.createElement('div');
+    popup.id = 'los-translation-popup';
+    popup.className = 'los-translation-popup';
+    popup.setAttribute('role', 'dialog');
+    popup.setAttribute('aria-label', 'Dịch nhanh sang tiếng Việt');
+    popup.setAttribute('aria-hidden', 'true');
+    document.body.append(popup);
+
+    const cache = new Map();
+    let selectionTimer = 0;
+    let requestController = null;
+    let requestId = 0;
+    let currentText = '';
+    let currentRect = null;
+
+    const clearPopup = () => {
+      clearTimeout(selectionTimer);
+      requestController?.abort();
+      requestController = null;
+      currentText = '';
+      currentRect = null;
+      popup.classList.remove('open');
+      popup.setAttribute('aria-hidden', 'true');
+    };
+
+    const googleTranslateUrl = text => `https://translate.google.com/?sl=auto&tl=vi&text=${encodeURIComponent(text)}&op=translate`;
+    const detectSelectionLanguage = text => {
+      const korean = (text.match(/[가-힣]/g) || []).length;
+      const latin = (text.match(/[A-Za-z]/g) || []).length;
+      if (korean && korean >= latin) return 'ko';
+      if (latin) return 'en';
+      return 'auto';
+    };
+    const translationTargets = language => language === 'ko'
+      ? [['vi', 'Tiếng Việt'], ['en', 'English']]
+      : language === 'en'
+        ? [['vi', 'Tiếng Việt'], ['ko', '한국어']]
+        : [['vi', 'Tiếng Việt']];
+    const selectedReaderText = selection => {
+      if (!selection || selection.isCollapsed || !selection.rangeCount) return null;
+      const anchor = selection.anchorNode?.parentElement?.closest('.markdown');
+      const focus = selection.focusNode?.parentElement?.closest('.markdown');
+      if (!anchor || anchor !== focus) return null;
+      const range = selection.getRangeAt(0);
+      if (!anchor.contains(range.commonAncestorContainer)) return null;
+      if (range.commonAncestorContainer.nodeType === Node.ELEMENT_NODE && range.commonAncestorContainer.closest('pre')) return null;
+      const text = selection.toString().replace(/\s+/g, ' ').trim();
+      if (!text || text.length > 240 || !/[A-Za-zÀ-ỹ가-힣]/.test(text)) return null;
+      return { text, rect: range.getBoundingClientRect() };
+    };
+    const positionPopup = rect => {
+      if (!rect) return;
+      const width = popup.offsetWidth || Math.min(320, innerWidth - 24);
+      const left = Math.max(12, Math.min(innerWidth - width - 12, rect.left + (rect.width / 2) - (width / 2)));
+      const above = rect.top - popup.offsetHeight - 10;
+      const top = above >= 12 ? above : Math.min(innerHeight - popup.offsetHeight - 12, rect.bottom + 10);
+      popup.style.left = `${Math.round(left)}px`;
+      popup.style.top = `${Math.max(12, Math.round(top))}px`;
+    };
+    const renderPopup = ({ text, translations = [], loading = false }) => {
+      popup.replaceChildren();
+      const head = document.createElement('div');
+      head.className = 'los-translation-head';
+      const label = document.createElement('span');
+      label.textContent = 'Dịch nhanh';
+      const close = document.createElement('button');
+      close.type = 'button';
+      close.className = 'los-translation-close';
+      close.setAttribute('aria-label', 'Đóng bản dịch');
+      close.textContent = '×';
+      close.onclick = clearPopup;
+      head.append(label, close);
+
+      const source = document.createElement('div');
+      source.className = 'los-translation-source';
+      source.textContent = text;
+      const results = document.createElement('div');
+      results.className = 'los-translation-results';
+      results.setAttribute('aria-live', 'polite');
+      if (loading) {
+        const result = document.createElement('div');
+        result.className = 'los-translation-result';
+        result.textContent = 'Đang dịch…';
+        results.append(result);
+      } else {
+        translations.forEach(({ label, value, error }) => {
+          const row = document.createElement('div');
+          row.className = 'los-translation-row';
+          const rowLabel = document.createElement('span');
+          rowLabel.className = 'los-translation-label';
+          rowLabel.textContent = label;
+          const rowValue = document.createElement('span');
+          rowValue.className = `los-translation-value${error ? ' error' : ''}`;
+          rowValue.textContent = value || 'Không có bản dịch.';
+          row.append(rowLabel, rowValue);
+          results.append(row);
+        });
+      }
+
+      const footer = document.createElement('div');
+      footer.className = 'los-translation-footer';
+      const note = document.createElement('span');
+      note.textContent = 'Dịch máy';
+      const fallback = document.createElement('a');
+      fallback.href = googleTranslateUrl(text);
+      fallback.target = '_blank';
+      fallback.rel = 'noreferrer';
+      fallback.textContent = 'Mở Google Translate ↗';
+      footer.append(note, fallback);
+      popup.append(head, source, results, footer);
+      popup.classList.add('open');
+      popup.setAttribute('aria-hidden', 'false');
+      requestAnimationFrame(() => positionPopup(currentRect));
+    };
+    const translate = async text => {
+      const language = detectSelectionLanguage(text);
+      const targets = translationTargets(language);
+      const cacheKey = (target, source) => `${source}:${target}:${text}`;
+      const cached = targets.map(([target, label]) => ({ label, value: cache.get(cacheKey(target, language)), target })).filter(item => item.value);
+      if (cached.length === targets.length) {
+        renderPopup({ text, translations: cached });
+        return;
+      }
+      requestController?.abort();
+      requestController = new AbortController();
+      const thisRequest = ++requestId;
+      let results;
+      try {
+        results = await Promise.all(targets.map(async ([target, label]) => {
+          const key = cacheKey(target, language);
+          const existing = cache.get(key);
+          if (existing) return { label, value: existing, target };
+          try {
+            const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${language}&tl=${target}&dt=t&q=${encodeURIComponent(text)}`;
+            const response = await fetch(url, { signal: requestController.signal, credentials: 'omit' });
+            if (!response.ok) throw new Error('translation unavailable');
+            const payload = await response.json();
+            const value = Array.isArray(payload?.[0]) ? payload[0].map(part => part?.[0] || '').join('').trim() : '';
+            if (!value) throw new Error('empty translation');
+            cache.set(key, value);
+            return { label, value, target };
+          } catch (error) {
+            if (error?.name === 'AbortError') throw error;
+            return { label, value: 'Không thể dịch lúc này.', target, error: true };
+          }
+        }));
+      } catch (error) {
+        if (error?.name === 'AbortError') return;
+        throw error;
+      }
+      if (thisRequest !== requestId || text !== currentText || requestController.signal.aborted) return;
+      renderPopup({ text, translations: results });
+    };
+    const showSelection = () => {
+      const selected = selectedReaderText(window.getSelection());
+      if (!selected) {
+        clearPopup();
+        return;
+      }
+      currentText = selected.text;
+      currentRect = selected.rect;
+      renderPopup({ text: selected.text, loading: true });
+      translate(selected.text);
+    };
+    const scheduleSelection = () => {
+      clearTimeout(selectionTimer);
+      selectionTimer = setTimeout(showSelection, 120);
+    };
+    const onPointerDown = event => {
+      if (!popup.contains(event.target)) clearPopup();
+    };
+    const onSelectionChange = () => {
+      if (window.getSelection()?.isCollapsed) clearPopup();
+      else scheduleSelection();
+    };
+    const onScroll = () => { if (popup.classList.contains('open')) clearPopup(); };
+    document.addEventListener('mousedown', onPointerDown);
+    document.addEventListener('selectionchange', onSelectionChange);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    LOS.selectionTranslatorCleanup = () => {
+      clearPopup();
+      popup.remove();
+      document.removeEventListener('mousedown', onPointerDown);
+      document.removeEventListener('selectionchange', onSelectionChange);
+      window.removeEventListener('scroll', onScroll);
+    };
+  }
+
   async function loadSearchIndex() {
     if (LOS.searchIndex) return LOS.searchIndex;
     const response = await fetch('./library/search-index.json');
@@ -118,17 +336,47 @@
 
   function decorateCards() {
     document.querySelectorAll('.doc-card').forEach(card => {
-      if (card.querySelector('.los-card-meta')) return;
+      if (card.querySelector('.los-card-meta')) {
+        const shell = card.closest('.doc-card-shell');
+        const path = shell?.dataset.path;
+        const button = shell?.querySelector('.los-card-read-later');
+        if (path && button) updateReadLaterButton(button, path);
+        return;
+      }
       const match = card.getAttribute('href')?.match(/^#\/read\/([^?]+)/);
       if (!match) return;
       const path = decodeURIComponent(match[1]);
       const state = readDocState(path);
       const pct = percentFor(path);
+      const shell = document.createElement('div');
+      shell.className = 'doc-card-shell';
+      shell.dataset.path = path;
+      card.replaceWith(shell);
+      shell.append(card);
       const meta = document.createElement('div');
       meta.className = 'los-card-meta';
       meta.innerHTML = `<span class="los-status-chip">${esc(statusLabels[state.status] || statusLabels.unread)}</span>${pct ? `<span class="los-card-progress">${Math.round(pct)}%</span>` : ''}`;
       card.append(meta);
+      const later = document.createElement('button');
+      later.type = 'button';
+      later.className = 'los-card-read-later';
+      later.dataset.path = path;
+      later.onclick = event => {
+        event.preventDefault();
+        event.stopPropagation();
+        setReadLater(path);
+      };
+      shell.append(later);
+      updateReadLaterButton(later, path);
     });
+  }
+
+  function updateReadLaterButton(button, path) {
+    const saved = isReadLater(path);
+    button.textContent = saved ? '★ Đã lưu đọc sau' : '☆ Đọc sau';
+    button.setAttribute('aria-pressed', String(saved));
+    button.classList.toggle('active', saved);
+    button.setAttribute('aria-label', saved ? 'Bỏ khỏi danh sách đọc sau' : 'Lưu vào danh sách đọc sau');
   }
 
   function recentDocuments() {
@@ -151,64 +399,135 @@
     const recent = recentDocuments();
     const bookmarks = readAllBookmarks().sort((a, b) => new Date(b.savedAt || 0) - new Date(a.savedAt || 0)).slice(0, 6);
     const review = LOS.docs.filter(doc => readDocState(doc.path).status === 'review').slice(0, 6);
+    const readLater = readLaterDocuments();
     const recentBody = recent.length ? `<div class="los-list">${recent.map(({ doc, pct, state }) => `<a class="los-item" href="${hrefFor(doc.path)}"><strong>${esc(doc.title)}</strong><span>${esc(statusLabels[state.status] || '')} · ${Math.round(pct)}%</span><div class="los-progress"><i style="width:${pct}%"></i></div></a>`).join('')}</div>` : '<p class="los-empty">Chưa có lịch sử đọc.</p>';
     const bookmarkBody = bookmarks.length ? `<div class="los-list">${bookmarks.map(item => docMiniItem(docByPath(item.path), item.title || 'Bookmark', item.headingId || '')).join('')}</div>` : '<p class="los-empty">Chưa có bookmark.</p>';
     const reviewBody = review.length ? `<div class="los-list">${review.map(doc => docMiniItem(doc, 'Cần ôn lại')).join('')}</div>` : '<p class="los-empty">Review queue đang trống.</p>';
+    const readLaterBody = readLater.length ? `<div class="los-list">${readLater.slice(0, 6).map(({ doc, item }) => docMiniItem(doc, `Đã lưu ${new Date(item.savedAt).toLocaleDateString()}`)).join('')}</div>` : '<p class="los-empty">Chưa có tài liệu nào.</p>';
     const section = document.createElement('section');
     section.id = 'los-dashboard';
     section.className = 'los-dashboard';
-    section.innerHTML = `<div class="library-heading"><div><p class="eyebrow">LEARNING OS</p><h2>Tiếp tục học</h2></div><button class="los-action" type="button" data-los-open="review">Mở Learning OS</button></div><div class="los-dashboard-grid">${dashboardPanel('Continue Reading', recent.length, recentBody)}${dashboardPanel('Global Bookmarks', readAllBookmarks().length, bookmarkBody)}${dashboardPanel('Review Queue', LOS.docs.filter(doc => readDocState(doc.path).status === 'review').length, reviewBody)}</div>`;
+    section.innerHTML = `<div class="library-heading"><div><p class="eyebrow">LEARNING OS</p><h2>Tiếp tục học</h2></div><button class="los-action" type="button" data-los-open="read-later">Mở Learning OS</button></div><div class="los-dashboard-grid">${dashboardPanel('Continue Reading', recent.length, recentBody)}${dashboardPanel('Đọc sau', readLater.length, readLaterBody)}${dashboardPanel('Global Bookmarks', readAllBookmarks().length, bookmarkBody)}${dashboardPanel('Review Queue', LOS.docs.filter(doc => readDocState(doc.path).status === 'review').length, reviewBody)}</div>`;
     home.before(section);
-    section.querySelector('[data-los-open]').onclick = () => openModal('review');
+    section.querySelector('[data-los-open]').onclick = () => openModal('read-later');
+  }
+
+  function renderLibrarySummary() {
+    const searchBox = document.querySelector('.search-box');
+    if (!searchBox || document.querySelector('#los-library-summary')) return;
+    const categories = new Set(LOS.docs.map(doc => doc.category).filter(Boolean)).size;
+    const folders = new Set(LOS.docs.map(doc => doc.folder).filter(Boolean)).size;
+    const summary = document.createElement('div');
+    summary.id = 'los-library-summary';
+    summary.className = 'los-library-summary';
+    summary.innerHTML = `<span><strong>${LOS.docs.length.toLocaleString()}</strong> tài liệu</span><span><strong>${categories}</strong> lĩnh vực</span><span><strong>${folders}</strong> thư mục</span>`;
+    searchBox.before(summary);
   }
 
   let searchTimer = 0;
-  async function runGlobalSearch(query, target) {
+  let searchRequestId = 0;
+
+  function metadataSearch(query) {
     const q = norm(query);
-    if (q.length < 2) { target.classList.remove('open'); target.innerHTML = ''; return; }
-    target.classList.add('open');
-    target.innerHTML = '<div class="los-search-head"><span>Đang tìm trong toàn bộ library…</span></div>';
+    const terms = q.split(/\s+/).filter(Boolean);
+    if (!LOS.metaSearch) {
+      LOS.metaSearch = LOS.docs.map(item => {
+        const title = norm(item.title);
+        const context = norm(`${item.displayPath || item.path} ${item.category || ''} ${item.language || ''}`);
+        return { item, title, context, haystack: `${title} ${context}` };
+      });
+    }
+    return LOS.metaSearch
+      .map(entry => {
+        if (terms.some(term => !entry.haystack.includes(term))) return null;
+        let score = 0;
+        terms.forEach(term => {
+          if (entry.title.includes(term)) score += 12;
+          if (entry.context.includes(term)) score += 4;
+        });
+        return { item: entry.item, score, snippet: '' };
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title));
+  }
+
+  function renderSearchResults(target, results, total, label, deepQuery = '') {
+    const visible = results.slice(0, 20);
+    const list = visible.length ? visible.map(({ item, snippet }) => `<a class="los-search-result" href="${hrefFor(item.path)}"><strong>${esc(item.title)}</strong><small>${esc(item.displayPath || item.path)}</small>${snippet ? `<p>${esc(snippet)}</p>` : ''}</a>`).join('') : '<p class="los-empty los-search-empty">Không tìm thấy tài liệu phù hợp.</p>';
+    const deepAction = deepQuery ? `<div class="los-search-footer"><span>Tìm nhanh dùng catalog nhẹ.</span><button class="los-deep-search" type="button">Tìm sâu trong nội dung</button></div>` : '';
+    target.innerHTML = `<div class="los-search-head"><span>${esc(label)}</span><span>${visible.length}${total > 20 ? '+' : ''} kết quả</span></div><div class="los-search-list">${list}</div>${deepAction}`;
+    if (deepQuery) target.querySelector('.los-deep-search').onclick = () => runDeepSearch(deepQuery, target);
+  }
+
+  async function runDeepSearch(query, target) {
+    const requestId = ++searchRequestId;
+    const q = norm(query);
+    if (q.length < 2) return;
+    target.innerHTML = '<div class="los-search-head"><span>Đang tải tìm kiếm nội dung…</span><span>chỉ lần này</span></div><p class="los-search-loading">Catalog nhanh vẫn dùng được mà không cần tải index này.</p>';
     try {
       const index = await loadSearchIndex();
+      if (requestId !== searchRequestId) return;
       const terms = q.split(/\s+/).filter(Boolean);
       const scored = [];
-      for (const item of index) {
+      for (let position = 0; position < index.length; position += 1) {
+        if (position && position % 120 === 0) {
+          await new Promise(resolve => requestAnimationFrame(resolve));
+          if (requestId !== searchRequestId) return;
+        }
+        const item = index[position];
         const title = norm(item.title);
         const path = norm(`${item.displayPath || item.path} ${item.category || ''}`);
         const headings = norm((item.headings || []).map(h => h.text).join(' '));
         const text = norm(item.text || '');
         let score = 0;
+        let matched = true;
         for (const term of terms) {
-          if (title.includes(term)) score += 12;
-          if (headings.includes(term)) score += 7;
-          if (path.includes(term)) score += 4;
-          if (text.includes(term)) score += 1;
+          let termScore = 0;
+          if (title.includes(term)) termScore += 12;
+          if (headings.includes(term)) termScore += 7;
+          if (path.includes(term)) termScore += 4;
+          if (text.includes(term)) termScore += 1;
+          if (!termScore) { matched = false; break; }
+          score += termScore;
         }
-        if (!score || terms.some(term => !`${title} ${headings} ${path} ${text}`.includes(term))) continue;
+        if (!matched || !score) continue;
         const rawText = item.text || '';
-        const first = terms.map(term => norm(rawText).indexOf(term)).filter(pos => pos >= 0).sort((a,b) => a-b)[0] ?? 0;
+        const first = terms.map(term => text.indexOf(term)).filter(pos => pos >= 0).sort((a,b) => a-b)[0] ?? 0;
         const start = Math.max(0, first - 90);
         const snippet = rawText.slice(start, start + 260);
         scored.push({ item, score, snippet });
       }
       scored.sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title));
-      const results = scored.slice(0, 20);
-      target.innerHTML = `<div class="los-search-head"><span>Global Search</span><span>${results.length}${scored.length > 20 ? '+' : ''} kết quả</span></div><div class="los-search-list">${results.length ? results.map(({ item, snippet }) => `<a class="los-search-result" href="${hrefFor(item.path)}"><strong>${esc(item.title)}</strong><small>${esc(item.displayPath || item.path)}</small>${snippet ? `<p>${esc(snippet)}</p>` : ''}</a>`).join('') : '<p class="los-empty" style="padding:14px">Không tìm thấy nội dung phù hợp.</p>'}</div>`;
+      if (requestId !== searchRequestId) return;
+      renderSearchResults(target, scored, scored.length, 'Tìm sâu trong nội dung');
     } catch {
-      target.innerHTML = '<p class="los-empty" style="padding:14px">Search index chưa sẵn sàng. Hãy deploy lại site.</p>';
+      if (requestId === searchRequestId) target.innerHTML = '<p class="los-empty los-search-empty">Search index chưa sẵn sàng. Tìm nhanh theo tiêu đề vẫn hoạt động.</p>';
     }
+  }
+
+  function runGlobalSearch(query, target) {
+    const q = norm(query);
+    searchRequestId += 1;
+    if (q.length < 2) { target.classList.remove('open'); target.innerHTML = ''; return; }
+    target.classList.add('open');
+    const results = metadataSearch(query);
+    renderSearchResults(target, results, results.length, 'Tìm nhanh', query);
   }
 
   function enhanceSearch() {
     const input = document.querySelector('#search');
     const box = input?.closest('.search-box');
     if (!input || !box || document.querySelector('#los-global-search')) return;
-    input.placeholder = 'Tìm tiêu đề, nội dung, heading trên toàn bộ library…';
+    input.placeholder = `Tìm nhanh trong ${LOS.docs.length.toLocaleString()} tài liệu…`;
+    const hint = document.createElement('p');
+    hint.className = 'los-search-hint';
+    hint.textContent = 'Tìm tiêu đề, đường dẫn và lĩnh vực ngay lập tức; chỉ tải index lớn khi bạn chọn tìm sâu.';
     const target = document.createElement('div');
     target.id = 'los-global-search';
     target.className = 'los-search-results';
-    box.after(target);
+    box.after(hint, target);
     input.addEventListener('input', () => {
+      searchRequestId += 1;
       clearTimeout(searchTimer);
       searchTimer = setTimeout(() => runGlobalSearch(input.value, target), 180);
     });
@@ -217,6 +536,7 @@
 
   function enhanceHome() {
     renderHomeDashboard();
+    renderLibrarySummary();
     enhanceSearch();
     decorateCards();
   }
@@ -274,6 +594,209 @@
     } catch { toast('Không thể lưu offline trên trình duyệt này.'); }
   }
 
+  function speechLanguage(doc) {
+    const raw = String(doc.language || document.documentElement.lang || 'en').toLowerCase();
+    const first = raw.split(/[-_,\s]+/)[0];
+    return ['ko', 'vi', 'en', 'ja', 'zh', 'fr', 'de', 'es'].includes(first) ? first : 'en';
+  }
+
+  function speechBlocks(content, startAt = 0) {
+    const clone = content.cloneNode(true);
+    clone.querySelectorAll('pre,.open-file,.los-related').forEach(node => node.remove());
+    const blocks = [...clone.querySelectorAll('h1,h2,h3,p,li,blockquote,th,td')]
+      .map(node => node.textContent.replace(/\s+/g, ' ').trim())
+      .filter(Boolean);
+    return (blocks.length ? blocks : [clone.textContent.replace(/\s+/g, ' ').trim()].filter(Boolean)).slice(startAt);
+  }
+
+  function visibleSpeechBlock(content) {
+    const nodes = [...content.querySelectorAll('h1,h2,h3,p,li,blockquote,th,td')]
+      .filter(node => !node.closest('.los-related'))
+      .filter(node => node.textContent.replace(/\s+/g, ' ').trim());
+    if (!nodes.length) return 0;
+    const readingLine = Math.min(180, Math.max(84, window.innerHeight * 0.18));
+    const index = nodes.findIndex(node => node.getBoundingClientRect().bottom > readingLine);
+    return index < 0 ? nodes.length - 1 : index;
+  }
+
+  function speechChunks(blocks, maxLength = 1100) {
+    const chunks = [];
+    let current = '';
+    const flush = () => {
+      if (current) chunks.push(current);
+      current = '';
+    };
+    blocks.forEach(block => {
+      let rest = block;
+      while (rest.length > maxLength) {
+        let boundary = rest.lastIndexOf(' ', maxLength);
+        if (boundary < Math.floor(maxLength * 0.6)) boundary = maxLength;
+        const part = rest.slice(0, boundary).trim();
+        if (part) chunks.push(part);
+        rest = rest.slice(boundary).trim();
+      }
+      if (!rest) return;
+      const candidate = current ? `${current} ${rest}` : rest;
+      if (candidate.length > maxLength) {
+        flush();
+        current = rest;
+      } else {
+        current = candidate;
+      }
+    });
+    flush();
+    return chunks;
+  }
+
+  function enhanceSpeechReader(doc, content, path) {
+    const toolbar = document.querySelector('#reader-toolbar');
+    if (!toolbar || !content || document.querySelector('#los-speech-controls')) return;
+    if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) return;
+    const title = document.querySelector('.reader-header h1')?.textContent.replace(/\s+/g, ' ').trim();
+    const allBlocks = speechBlocks(content);
+    const blocks = allBlocks.slice();
+    if (title && blocks[0] !== title) blocks.unshift(title);
+    let chunks = speechChunks(blocks);
+    if (!chunks.length) return;
+
+    const synth = window.speechSynthesis;
+    const language = speechLanguage(doc);
+    const controls = document.createElement('div');
+    controls.id = 'los-speech-controls';
+    controls.className = 'los-speech-controls';
+    controls.innerHTML = `<button class="los-action" id="los-speech-start" type="button">🔊 Đọc trang</button><button class="los-action" id="los-speech-pause" type="button" disabled>⏸ Tạm dừng</button><button class="los-action" id="los-speech-stop" type="button" disabled>■ Dừng</button><label class="los-speech-rate"><span>Tốc độ</span><select class="los-select" id="los-speech-rate"><option value="0.8">0,8×</option><option value="1">1×</option><option value="1.2">1,2×</option><option value="1.5">1,5×</option></select></label><span class="los-speech-status" id="los-speech-status" aria-live="polite">Sẵn sàng · ${chunks.length} đoạn</span>`;
+    toolbar.append(controls);
+
+    const startButton = controls.querySelector('#los-speech-start');
+    const pauseButton = controls.querySelector('#los-speech-pause');
+    const stopButton = controls.querySelector('#los-speech-stop');
+    const rateSelect = controls.querySelector('#los-speech-rate');
+    const status = controls.querySelector('#los-speech-status');
+    const edgeActions = document.querySelector('.reader-edge-actions');
+    let edgeSpeech = edgeActions?.querySelector('#edge-speech') || null;
+    if (edgeActions && !edgeSpeech) {
+      edgeSpeech = document.createElement('button');
+      edgeSpeech.id = 'edge-speech';
+      edgeSpeech.className = 'edge-button';
+      edgeSpeech.type = 'button';
+      edgeActions.prepend(edgeSpeech);
+    }
+    const savedRate = Number(readJson('study-shelf-speech-rate', 1));
+    if ([0.8, 1, 1.2, 1.5].includes(savedRate)) rateSelect.value = String(savedRate);
+
+    let chunkIndex = 0;
+    let active = false;
+    let paused = false;
+    let runId = 0;
+
+    const setStatus = message => { status.textContent = message; };
+    const updateButtons = () => {
+      startButton.disabled = active;
+      pauseButton.disabled = !active;
+      stopButton.disabled = !active;
+      pauseButton.textContent = paused ? '▶ Tiếp tục' : '⏸ Tạm dừng';
+      if (edgeSpeech) {
+        edgeSpeech.textContent = active ? (paused ? '▶' : '⏸') : '🔊';
+        edgeSpeech.setAttribute('aria-label', active ? (paused ? 'Tiếp tục đọc' : 'Tạm dừng đọc') : 'Đọc từ vị trí hiện tại');
+        edgeSpeech.title = active ? (paused ? 'Tiếp tục đọc' : 'Tạm dừng đọc') : 'Đọc từ vị trí hiện tại';
+        edgeSpeech.classList.toggle('active', active);
+      }
+    };
+    const pickVoice = () => {
+      const voices = synth.getVoices();
+      return voices.find(voice => voice.lang?.toLowerCase() === language)
+        || voices.find(voice => voice.lang?.toLowerCase().startsWith(`${language}-`));
+    };
+    const speakNext = () => {
+      if (!active || paused || routePath() !== path) return;
+      if (chunkIndex >= chunks.length) {
+        active = false;
+        paused = false;
+        updateButtons();
+        setStatus('Đã đọc xong trang.');
+        return;
+      }
+      const currentRun = runId;
+      const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
+      const voice = pickVoice();
+      utterance.lang = voice?.lang || language;
+      if (voice) utterance.voice = voice;
+      utterance.rate = Number(rateSelect.value) || 1;
+      utterance.onstart = () => setStatus(`Đang đọc · ${chunkIndex + 1}/${chunks.length}`);
+      utterance.onend = () => {
+        if (currentRun !== runId || !active) return;
+        chunkIndex += 1;
+        speakNext();
+      };
+      utterance.onerror = event => {
+        if (currentRun !== runId || ['canceled', 'interrupted'].includes(event.error)) return;
+        active = false;
+        paused = false;
+        updateButtons();
+        setStatus('Không thể đọc trên trình duyệt này.');
+      };
+      try {
+        synth.speak(utterance);
+      } catch {
+        active = false;
+        paused = false;
+        updateButtons();
+        setStatus('Không thể khởi động đọc chữ.');
+      }
+    };
+    const start = (fromCurrent = false) => {
+      const sourceBlocks = fromCurrent ? speechBlocks(content, visibleSpeechBlock(content)) : blocks;
+      chunks = speechChunks(sourceBlocks);
+      if (!chunks.length) return;
+      runId += 1;
+      synth.cancel();
+      chunkIndex = 0;
+      active = true;
+      paused = false;
+      updateButtons();
+      setStatus(`Đang chuẩn bị · ${chunks.length} đoạn`);
+      window.setTimeout(speakNext, 0);
+    };
+    const togglePause = () => {
+      if (!active) return;
+      if (paused) {
+        paused = false;
+        if (synth.speaking || synth.pending) synth.resume();
+        else speakNext();
+        setStatus(`Đang đọc · ${chunkIndex + 1}/${chunks.length}`);
+      } else {
+        paused = true;
+        synth.pause();
+        setStatus('Đã tạm dừng.');
+      }
+      updateButtons();
+    };
+    const stop = () => {
+      runId += 1;
+      synth.cancel();
+      active = false;
+      paused = false;
+      updateButtons();
+      setStatus('Đã dừng.');
+    };
+
+    startButton.textContent = '🔊 Đọc từ đây';
+    startButton.onclick = () => start(true);
+    pauseButton.onclick = togglePause;
+    stopButton.onclick = stop;
+    if (edgeSpeech) edgeSpeech.onclick = () => active ? togglePause() : start(true);
+    rateSelect.onchange = () => writeJson('study-shelf-speech-rate', Number(rateSelect.value));
+    synth.addEventListener?.('voiceschanged', pickVoice);
+    updateButtons();
+
+    const previousCleanup = LOS.readerCleanup;
+    LOS.readerCleanup = () => {
+      previousCleanup();
+      stop();
+      synth.removeEventListener?.('voiceschanged', pickVoice);
+    };
+  }
+
   async function renderRelated(doc, host) {
     if (!host || host.querySelector('.los-related') || host.dataset.losRelatedLoading === '1') return;
     host.dataset.losRelatedLoading = '1';
@@ -327,7 +850,7 @@
       const controls = document.createElement('div');
       controls.id = 'los-reader-controls';
       controls.className = 'los-reader-controls';
-      controls.innerHTML = `<label><span class="sr-only">Reading status</span><select id="los-status" class="los-select"><option value="unread">Chưa đọc</option><option value="reading">Đang đọc</option><option value="review">Cần ôn lại</option><option value="completed">Hoàn thành</option></select></label><button id="los-offline" class="los-action" type="button">↓ Lưu offline</button><button id="los-tools" class="los-action" type="button">Learning OS</button><span class="los-offline-badge">Progress ${Math.round(percentFor(path))}%</span>`;
+      controls.innerHTML = `<label><span class="sr-only">Reading status</span><select id="los-status" class="los-select"><option value="unread">Chưa đọc</option><option value="reading">Đang đọc</option><option value="review">Cần ôn lại</option><option value="completed">Hoàn thành</option></select></label><button id="los-read-later" class="los-action" type="button"></button><button id="los-offline" class="los-action" type="button">↓ Lưu offline</button><button id="los-tools" class="los-action" type="button">Learning OS</button><span class="los-offline-badge">Progress ${Math.round(percentFor(path))}%</span>`;
       header.append(controls);
       const select = controls.querySelector('#los-status');
       select.value = state.status || 'reading';
@@ -337,6 +860,13 @@
         writeDocState(path, patch);
         toast(`Trạng thái: ${statusLabels[select.value]}`);
       };
+      const later = controls.querySelector('#los-read-later');
+      later.onclick = () => {
+        const saved = setReadLater(path);
+        updateReadLaterButton(later, path);
+        toast(saved ? 'Đã thêm vào danh sách đọc sau.' : 'Đã bỏ khỏi danh sách đọc sau.');
+      };
+      updateReadLaterButton(later, path);
       controls.querySelector('#los-offline').onclick = () => cacheDocument(doc);
       controls.querySelector('#los-tools').onclick = () => openModal('bookmarks');
     }
@@ -345,6 +875,7 @@
     if (content) {
       linkifyInternalMarkdown(content, path);
       renderRelated(doc, content);
+      enhanceSpeechReader(doc, content, path);
     }
   }
 
@@ -384,7 +915,7 @@
     modal = document.createElement('div');
     modal.id = 'los-modal';
     modal.className = 'los-modal';
-    modal.innerHTML = `<button class="los-backdrop" type="button" aria-label="Đóng Learning OS"></button><section class="los-sheet" role="dialog" aria-modal="true" aria-label="Learning OS"><header class="los-sheet-head"><h2>Learning OS</h2><button class="los-close" type="button" aria-label="Đóng">×</button></header><nav class="los-tabs"><button class="los-tab" data-tab="bookmarks">Bookmarks</button><button class="los-tab" data-tab="review">Review</button><button class="los-tab" data-tab="graph">Graph</button><button class="los-tab" data-tab="sync">Sync</button><button class="los-tab" data-tab="offline">Offline</button></nav><div id="los-sheet-body" class="los-sheet-body"></div></section>`;
+    modal.innerHTML = `<button class="los-backdrop" type="button" aria-label="Đóng Learning OS"></button><section class="los-sheet" role="dialog" aria-modal="true" aria-label="Learning OS"><header class="los-sheet-head"><h2>Learning OS</h2><button class="los-close" type="button" aria-label="Đóng">×</button></header><nav class="los-tabs"><button class="los-tab" data-tab="read-later">Đọc sau</button><button class="los-tab" data-tab="bookmarks">Bookmarks</button><button class="los-tab" data-tab="review">Review</button><button class="los-tab" data-tab="graph">Graph</button><button class="los-tab" data-tab="sync">Sync</button><button class="los-tab" data-tab="offline">Offline</button></nav><div id="los-sheet-body" class="los-sheet-body"></div></section>`;
     document.body.append(modal);
     modal.querySelector('.los-backdrop').onclick = closeModal;
     modal.querySelector('.los-close').onclick = closeModal;
@@ -401,7 +932,10 @@
     const modal = ensureModal();
     modal.querySelectorAll('[data-tab]').forEach(button => button.classList.toggle('active', button.dataset.tab === tab));
     const body = modal.querySelector('#los-sheet-body');
-    if (tab === 'bookmarks') {
+    if (tab === 'read-later') {
+      const items = readLaterDocuments();
+      body.innerHTML = `<section class="los-tool-section"><h3>Đọc sau</h3><p>${items.length} tài liệu đang chờ đọc. Danh sách chỉ lưu trên thiết bị này.</p><div class="los-list">${items.length ? items.map(({ doc, item }) => docMiniItem(doc, `Đã lưu ${new Date(item.savedAt).toLocaleDateString()}`)).join('') : '<p class="los-empty">Chưa có tài liệu nào. Bấm “☆ Đọc sau” khi đang xem tài liệu.</p>'}</div></section>`;
+    } else if (tab === 'bookmarks') {
       const items = readAllBookmarks().sort((a,b) => new Date(b.savedAt || 0) - new Date(a.savedAt || 0));
       body.innerHTML = `<section class="los-tool-section"><h3>Global Bookmarks</h3><p>${items.length} section đã lưu trên toàn library.</p><div class="los-list">${items.length ? items.map(item => docMiniItem(docByPath(item.path), `${item.title || 'Bookmark'} · ${item.category || ''}`, item.headingId || '')).join('') : '<p class="los-empty">Chưa có bookmark.</p>'}</div></section>`;
     } else if (tab === 'review') {
@@ -480,10 +1014,12 @@
       LOS.docs = (await response.json()).documents || [];
     } catch { return; }
     installTopbar();
+    installSelectionTranslator();
     scheduleEnhance();
     const app = document.querySelector('#app');
     if (app) new MutationObserver(scheduleEnhance).observe(app, { childList: true, subtree: true });
     addEventListener('hashchange', scheduleEnhance);
+    addEventListener('study-shelf-read-later-change', scheduleEnhance);
     addEventListener('online', () => toast('Đã online trở lại.'));
     addEventListener('offline', () => toast('Đang offline. Tài liệu đã cache vẫn đọc được.'));
     addEventListener('beforeinstallprompt', event => { event.preventDefault(); LOS.installPrompt = event; });

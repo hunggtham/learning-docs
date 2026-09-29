@@ -1,10 +1,13 @@
-# Bộ nhớ, bộ nhớ ảo, page cache và OOM
+# Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM
+
+> **Mạch đọc:** Đọc **Bộ nhớ, bộ nhớ ảo, page bộ nhớ đệm (cache / 캐시) và OOM** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao cần bộ nhớ ảo?** sang **Trang nhớ (page)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 `free -h` thường làm người mới lo khi cột `free` nhỏ. Linux chủ động dùng phần RAM chưa cần thiết cho ứng dụng làm bộ nhớ đệm để tăng hiệu năng và có thể thu hồi phần bộ nhớ đó khi khối lượng công việc cần. Muốn hiểu **áp lực bộ nhớ (memory pressure)**, cần bỏ mô hình đơn giản "RAM chỉ có đã dùng và còn trống" và chuyển sang cách nhìn gồm **bộ nhớ ảo + trang nhớ + bộ nhớ đệm có thể thu hồi + tập trang đang hoạt động của tiến trình**.
 
 ## Tại sao cần bộ nhớ ảo?
 
-Nếu mỗi tiến trình trực tiếp dùng địa chỉ RAM vật lý, việc cô lập và phân bổ bộ nhớ sẽ rất khó. **Bộ nhớ ảo (virtual memory / 가상 메모리)** cung cấp cho mỗi tiến trình một không gian địa chỉ ảo riêng. MMU của CPU và bảng trang (page table) do kernel quản lý ánh xạ các trang ảo tới khung trang vật lý hoặc các trạng thái lưu trữ phía sau khác.
+Nếu mỗi tiến trình trực tiếp dùng địa chỉ RAM vật lý, việc cô lập và phân bổ bộ nhớ sẽ rất khó. **Bộ nhớ ảo (virtual memory / 가상 메모리)** cung cấp cho mỗi tiến trình một không gian địa chỉ ảo riêng. MMU của CPU và bảng trang (page table / 페이지 테이블) do kernel quản lý ánh xạ các trang ảo tới khung trang vật lý hoặc các trạng thái lưu trữ phía sau khác.
 
 Ứng dụng nhìn thấy một không gian địa chỉ tương đối liên tục và riêng biệt, còn kernel chịu trách nhiệm quản lý ánh xạ thật. Cơ chế này tạo ra sự cô lập, chia sẻ có kiểm soát, tệp ánh xạ bộ nhớ (memory-mapped file) và nạp trang theo nhu cầu (demand paging).
 
@@ -26,17 +29,17 @@ Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng c
 free -h
 ```
 
-Linux dùng RAM cho page cache và nhiều vùng đệm. Cột `free` thấp không tự động có nghĩa hệ thống thiếu bộ nhớ. `available` cố ước lượng lượng bộ nhớ có thể cấp cho khối lượng công việc mới mà không cần phải swap đáng kể, trong đó có tính tới phần bộ nhớ có thể thu hồi.
+Linux dùng RAM cho page bộ nhớ đệm (cache / 캐시) và nhiều vùng đệm. Cột `free` thấp không tự động có nghĩa hệ thống thiếu bộ nhớ. `available` cố ước lượng lượng bộ nhớ có thể cấp cho khối lượng công việc mới mà không cần phải swap đáng kể, trong đó có tính tới phần bộ nhớ có thể thu hồi.
 
 Vì vậy khi đánh giá áp lực bộ nhớ, `available` thường có ý nghĩa hơn việc chỉ nhìn `free`.
 
-## Page cache
+## Page bộ nhớ đệm (cache / 캐시)
 
-Dữ liệu tệp đã đọc có thể được giữ trong **bộ nhớ đệm trang (page cache)**. Lần đọc sau có thể tránh I/O tới thiết bị lưu trữ nếu trang vẫn còn trong cache. Khi ứng dụng cần RAM, kernel có thể thu hồi các trang cache sạch.
+Dữ liệu tệp đã đọc có thể được giữ trong **bộ nhớ đệm trang (page cache)**. Lần đọc sau có thể tránh I/O tới thiết bị lưu trữ nếu trang vẫn còn trong bộ nhớ đệm (cache / 캐시). Khi ứng dụng cần RAM, kernel có thể thu hồi các trang bộ nhớ đệm (cache / 캐시) sạch.
 
-Điều này giải thích vì sao sau khi đọc một tệp lớn, lượng RAM "đã dùng" tăng. Cache không phải rò rỉ bộ nhớ chỉ vì nó chiếm RAM.
+Điều này giải thích vì sao sau khi đọc một tệp lớn, lượng RAM "đã dùng" tăng. bộ nhớ đệm (cache / 캐시) không phải rò rỉ bộ nhớ chỉ vì nó chiếm RAM.
 
-Không nên thường xuyên xóa cache trên production chỉ để làm con số `free` đẹp hơn; việc đó có thể làm giảm hiệu năng và che khuất cách hệ thống thực sự quản lý bộ nhớ.
+Không nên thường xuyên xóa bộ nhớ đệm (cache / 캐시) trên môi trường vận hành (production / 운영 환경) chỉ để làm con số `free` đẹp hơn; việc đó có thể làm giảm hiệu năng và che khuất cách hệ thống thực sự quản lý bộ nhớ.
 
 ## RSS và VSZ
 
@@ -50,11 +53,11 @@ ps -p <PID> -o pid,%mem,rss,vsz,cmd
 
 Một JVM có `VSZ` lớn không đồng nghĩa nó đang chiếm lượng RAM vật lý tương ứng.
 
-## Heap không phải toàn bộ bộ nhớ của tiến trình
+## Vùng nhớ vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ của tiến trình
 
-Trong Java, `-Xmx` giới hạn heap nhưng tiến trình còn dùng metaspace, code cache, stack của các thread, direct buffer, thư viện native, cấu trúc nội bộ JVM và các tệp ánh xạ bộ nhớ. Vì vậy giới hạn bộ nhớ của host hoặc container phải tính toàn bộ bộ nhớ tiến trình chứ không chỉ heap.
+Trong Java, `-Xmx` giới hạn vùng nhớ động (heap / 힙) nhưng tiến trình còn dùng metaspace, mã (code / 코드) bộ nhớ đệm (cache / 캐시), ngăn xếp (stack / 스택) của các luồng thực thi (thread / 스레드), direct buffer, thư viện bản địa (native / 네이티브), cấu trúc nội bộ JVM và các tệp ánh xạ bộ nhớ. Vì vậy giới hạn bộ nhớ của host hoặc bộ chứa (container / 컨테이너) phải tính toàn bộ bộ nhớ tiến trình chứ không chỉ vùng nhớ động (heap / 힙).
 
-Đây là lý do JVM có heap 3 GiB trong container giới hạn 4 GiB vẫn có thể gặp OOM với một số khối lượng công việc.
+Đây là lý do JVM có vùng nhớ động (heap / 힙) 3 GiB trong bộ chứa (container / 컨테이너) giới hạn 4 GiB vẫn có thể gặp OOM với một số khối lượng công việc.
 
 ## Swap
 
@@ -70,7 +73,7 @@ Trong `vmstat`, `si`/`so` duy trì ở mức đáng kể có thể cho thấy h�
 
 ## Áp lực bộ nhớ và thu hồi
 
-Khi bộ nhớ `free`/`available` giảm, kernel cố thu hồi cache và có thể dùng swap tùy chính sách. Nếu không thể đáp ứng yêu cầu cấp phát, Linux có thể kích hoạt **OOM killer (Out Of Memory)** để kết thúc một tiến trình nhằm bảo vệ hệ thống.
+Khi bộ nhớ `free`/`available` giảm, kernel cố thu hồi bộ nhớ đệm (cache / 캐시) và có thể dùng swap tùy chính sách. Nếu không thể đáp ứng yêu cầu cấp phát, Linux có thể kích hoạt **OOM killer (Out Of memory)** để kết thúc một tiến trình nhằm bảo vệ hệ thống.
 
 Kiểm tra bằng chứng từ kernel:
 
@@ -80,17 +83,17 @@ journalctl -k | grep -i -E 'oom|out of memory|killed process'
 
 Nếu tiến trình Java biến mất và nhật ký ứng dụng dừng đột ngột, đây là một trong những kiểm tra quan trọng nhất.
 
-## OOM trong container và trên host
+## OOM trong bộ chứa (container / 컨테이너) và trên host
 
-Giới hạn bộ nhớ của cgroup có thể nhỏ hơn nhiều so với RAM của host. Tiến trình trong container có thể bị OOM do chạm giới hạn cgroup dù `free -h` trên host vẫn cho thấy còn nhiều bộ nhớ. Vì vậy phải biết khối lượng công việc đang chạy trong miền tài nguyên nào.
+Giới hạn bộ nhớ của cgroup có thể nhỏ hơn nhiều so với RAM của host. Tiến trình trong bộ chứa (container / 컨테이너) có thể bị OOM do chạm giới hạn cgroup dù `free -h` trên host vẫn cho thấy còn nhiều bộ nhớ. Vì vậy phải biết khối lượng công việc đang chạy trong miền tài nguyên nào.
 
 Xem [Linux và container](../09_production/linux_containers.md) để hiểu mối liên hệ với cgroup.
 
 ## Rò rỉ bộ nhớ
 
-**Rò rỉ bộ nhớ (memory leak)** là tình huống bộ nhớ đã cấp phát không còn hữu ích nhưng vẫn bị giữ lại hoặc không được giải phóng theo vòng đời mong muốn. Không nên kết luận có leak chỉ từ một ảnh chụp cho thấy bộ nhớ cao. Cần xem xu hướng: bộ nhớ có tăng theo thời gian hoặc tải, có giảm sau vòng đời dự kiến không, và bằng chứng ở heap/native cho thấy gì.
+**Rò rỉ bộ nhớ (memory leak)** là tình huống bộ nhớ đã cấp phát không còn hữu ích nhưng vẫn bị giữ lại hoặc không được giải phóng theo vòng đời mong muốn. Không nên kết luận có leak chỉ từ một ảnh chụp cho thấy bộ nhớ cao. Cần xem xu hướng: bộ nhớ có tăng theo thời gian hoặc tải, có giảm sau vòng đời dự kiến không, và bằng chứng ở vùng nhớ động (heap / 힙)/bản địa (native / 네이티브) cho thấy gì.
 
-Với JVM, có thể cần heap dump, histogram đối tượng hoặc metrics GC. `RSS` ở tầng Linux chỉ cho thấy triệu chứng bộ nhớ của tiến trình, không chỉ ra đối tượng Java nào đang giữ bộ nhớ.
+Với JVM, có thể cần vùng nhớ động (heap / 힙) dump, histogram đối tượng hoặc metrics GC. `RSS` ở tầng Linux chỉ cho thấy triệu chứng bộ nhớ của tiến trình, không chỉ ra đối tượng Java nào đang giữ bộ nhớ.
 
 ## `vmstat`
 
@@ -104,25 +107,25 @@ Công cụ này cung cấp góc nhìn gọn về tác vụ có thể chạy, b�
 
 ## NUMA và huge pages
 
-Trên máy chủ lớn, độ trễ truy cập RAM có thể khác nhau giữa các socket CPU, tạo mô hình **NUMA (Non-Uniform Memory Access)**. Huge pages giảm chi phí bảng trang và TLB trong một số khối lượng công việc. Đây là các chủ đề quan trọng với cơ sở dữ liệu, JVM và tối ưu hiệu năng, nhưng không nên bật hoặc tắt theo khuyến nghị chung chung; quyết định phải dựa vào nền tảng và workload thực tế.
+Trên máy chủ lớn, độ trễ truy cập RAM có thể khác nhau giữa các socket CPU, tạo mô hình **NUMA (Non-Uniform memory Access)**. Huge pages giảm chi phí bảng trang và TLB trong một số khối lượng công việc. Đây là các chủ đề quan trọng với cơ sở dữ liệu, JVM và tối ưu hiệu năng, nhưng không nên bật hoặc tắt theo khuyến nghị chung chung; quyết định phải dựa vào nền tảng và tải công việc (workload / 워크로드) thực tế.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Đừng coi RAM là một chiếc hộp chia thành "ứng dụng" và "còn trống". Hãy coi nó là một tập hợp các trang mà kernel liên tục phân bổ giữa vùng làm việc của tiến trình, page cache và nhu cầu của kernel. Không gian địa chỉ ảo của tiến trình là góc nhìn logic; việc trang nào đang thực sự nằm trong RAM vật lý là trạng thái động.
+Đừng coi RAM là một chiếc hộp chia thành "ứng dụng" và "còn trống". Hãy coi nó là một tập hợp các trang mà kernel liên tục phân bổ giữa vùng làm việc của tiến trình, page bộ nhớ đệm (cache / 캐시) và nhu cầu của kernel. Không gian địa chỉ ảo của tiến trình là góc nhìn lô-gic (logic / 논리); việc trang nào đang thực sự nằm trong RAM vật lý là trạng thái động.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
-**"RAM `free` thấp nghĩa là sắp hết RAM."** Cache có thể được thu hồi; cần nhìn `available` và các bằng chứng về áp lực bộ nhớ.
+**"RAM `free` thấp nghĩa là sắp hết RAM."** bộ nhớ đệm (cache / 캐시) có thể được thu hồi; cần nhìn `available` và các bằng chứng về áp lực bộ nhớ.
 
 **"VSZ là lượng RAM tiến trình đang chiếm."** Ánh xạ ảo khác với lượng trang hiện diện trong RAM vật lý.
 
-**"`Xmx` bằng tổng bộ nhớ Java sử dụng."** JVM còn nhiều thành phần native và ngoài heap.
+**"`Xmx` bằng tổng bộ nhớ Java sử dụng."** JVM còn nhiều thành phần bản địa (native / 네이티브) và ngoài vùng nhớ động (heap / 힙).
 
-**"Có dữ liệu trong swap nghĩa là server đang swap liên tục."** Lượng swap đang chứa dữ liệu khác với hoạt động swap vào/ra đang diễn ra.
+**"Có dữ liệu trong swap nghĩa là máy chủ (server / 서버) đang swap liên tục."** Lượng swap đang chứa dữ liệu khác với hoạt động swap vào/ra đang diễn ra.
 
 **"Tiến trình biến mất chắc chắn do ứng dụng crash."** Kernel hoặc cgroup OOM có thể đã kết thúc nó.
 
-**"Xóa cache giúp server nhanh hơn."** Thường ngược lại vì làm mất dữ liệu cache hữu ích; chỉ thực hiện khi có lý do cụ thể.
+**"Xóa bộ nhớ đệm (cache / 캐시) giúp máy chủ (server / 서버) nhanh hơn."** Thường ngược lại vì làm mất dữ liệu bộ nhớ đệm (cache / 캐시) hữu ích; chỉ thực hiện khi có lý do cụ thể.
 
 ## Kết nối kiến thức
 

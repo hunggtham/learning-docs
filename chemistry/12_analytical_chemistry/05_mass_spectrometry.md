@@ -1,5 +1,8 @@
 # Phổ khối — đo tỉ số khối lượng trên điện tích của ion
 
+> **Mạch đọc:** Đọc **Phổ khối — đo tỉ số khối lượng trên điện tích của ion** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao phải tạo ion?** sang **Kiến trúc chung của thiết bị**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phổ khối (mass spectrometry, MS / 질량분석법)** chuyển nguyên tử hoặc phân tử thành ion trong pha khí, tách hoặc đo các ion theo **tỉ số khối lượng trên điện tích \(m/z\)** rồi phát hiện chúng. Phổ thu được có thể cung cấp khối lượng phân tử, mẫu đồng vị, công thức nguyên tố, mảnh cấu trúc và lượng tương đối.
 
 MS thường được ví như “cân ở thang phân tử”, nhưng phép ví này chưa đủ. Máy phổ khối không cân trực tiếp phân tử trung hòa; nó điều khiển **chuyển động của hạt mang điện** trong điện trường hoặc từ trường rồi suy `m/z` từ chuyển động đó.
@@ -168,7 +171,7 @@ trong đó `Δm` phụ thuộc quy ước đo độ rộng đỉnh.
 **Độ chính xác khối lượng (mass accuracy)** mô tả độ lệch giữa giá trị đo và giá trị tham chiếu:
 
 \[
-error\,(ppm)=\frac{m_{đo}-m_{tham\ chiếu}}{m_{tham\ chiếu}}\times10^6
+lỗi (error / 오류)\,(ppm)=\frac{m_{đo}-m_{tham\ chiếu}}{m_{tham\ chiếu}}\times10^6
 \]
 
 Hai khái niệm khác nhau:
@@ -441,3 +444,5 @@ phân tử trung hòa
 Nguồn ion quyết định vật mang thông tin nào được tạo. Bộ phân tích biến `m/z` thành chuyển động, tần số hoặc thời gian có thể phân biệt. Phân mảnh cung cấp manh mối cấu trúc. Hiệu chuẩn và xử lý dữ liệu biến số ion thô thành bằng chứng hóa học.
 
 Xem tiếp: [Phương pháp điện phân tích](./06_electroanalytical_methods.md) và [Thẩm định phương pháp và hóa lượng học](./07_method_validation_and_chemometrics.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

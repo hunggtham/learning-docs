@@ -1,8 +1,11 @@
 # Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại
 
+> **Mạch đọc:** Đọc **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Định nghĩa tổng quát** sang **Vì sao so sánh Q với K cho biết chiều tự diễn ra?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Thương số phản ứng (reaction quotient, \(Q\) / 반응 지수)** có cùng cấu trúc toán học với hằng số cân bằng nhưng được tính từ **trạng thái hiện tại** của hệ. Nếu \(K\) mô tả vị trí cân bằng ở một nhiệt độ xác định, thì \(Q\) là tọa độ tức thời cho biết hỗn hợp đang nằm ở phía nào so với vị trí đó.
 
-Đây là một trong những công cụ reasoning mạnh nhất của hóa học cân bằng vì nó thay thế các khẩu hiệu kiểu “hệ sẽ chống lại thay đổi” bằng một tiêu chuẩn định lượng.
+Đây là một trong những công cụ lập luận (reasoning / 추론) mạnh nhất của hóa học cân bằng vì nó thay thế các khẩu hiệu kiểu “hệ sẽ chống lại thay đổi” bằng một tiêu chuẩn định lượng.
 
 ## Định nghĩa tổng quát
 
@@ -27,6 +30,9 @@ Q=K
 \]
 
 Ngoài cân bằng, \(Q\) có thể nhỏ hơn hoặc lớn hơn \(K\).
+
+
+> **Chuyển mạch:** Từ **Định nghĩa tổng quát**, ta sang **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Vì sao so sánh Q với K cho biết chiều tự diễn ra?
 
@@ -56,7 +62,10 @@ Q > K → ΔrG > 0 → chiều nghịch làm G giảm
 Q = K → ΔrG = 0 → cân bằng
 ```
 
-Đây không phải mẹo ghi nhớ. Nó là hệ quả trực tiếp của chemical potential và Gibbs free energy.
+Đây không phải mẹo ghi nhớ. Nó là hệ quả trực tiếp của chemical potential và Gibbs free năng lượng (energy / 에너지).
+
+
+> **Chuyển mạch:** Từ **Vì sao so sánh Q với K cho biết chiều tự diễn ra?**, ta sang **Q không phải “lượng sản phẩm”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Q không phải “lượng sản phẩm”
 
@@ -74,6 +83,9 @@ Q=\frac{a_{NH_3}^2}{a_{N_2}a_{H_2}^3}
 
 Một thay đổi nhỏ ở \(H_2\) có thể ảnh hưởng Q mạnh vì lũy thừa ba.
 
+
+> **Chuyển mạch:** Từ **Q không phải “lượng sản phẩm”**, ta sang **Q là “ảnh chụp”, K là “đích”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Q là “ảnh chụp”, K là “đích”
 
 Có thể hình dung:
@@ -85,6 +97,9 @@ so Q/K → chiều thermodynamic driving force
 ```
 
 K không phụ thuộc composition ban đầu; Q thì thay đổi mỗi khi composition, pressure hoặc activity thay đổi.
+
+
+> **Chuyển mạch:** Từ **Q là “ảnh chụp”, K là “đích”**, ta sang **Khí lý tưởng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Khí lý tưởng
 
@@ -110,6 +125,9 @@ Q_p\approx
 
 Nếu nén hệ, các partial pressures thay đổi và Q có thể thay đổi ngay trước khi composition kịp phản ứng. Chính thay đổi Q đó tạo driving force mới.
 
+
+> **Chuyển mạch:** Từ **Khí lý tưởng**, ta sang **Dung dịch và hoạt độ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Dung dịch và hoạt độ
 
 Trong dung dịch loãng:
@@ -128,7 +146,10 @@ với \(\gamma_i\) là **hệ số hoạt độ (activity coefficient)**.
 
 Nếu chỉ dùng concentration trong nước biển hoặc electrolyte đậm đặc, Q tính được có thể lệch đáng kể khỏi thermodynamic Q.
 
-Đây là lý do pH, solubility, electrochemistry và speciation ở hệ đậm đặc cần activity models.
+Đây là lý do pH, solubility, electrochemistry và speciation ở hệ đậm đặc cần activity các mô hình (models / 모델들).
+
+
+> **Chuyển mạch:** Từ **Dung dịch và hoạt độ**, ta sang **Chất rắn và chất lỏng tinh khiết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chất rắn và chất lỏng tinh khiết
 
@@ -144,7 +165,7 @@ CaCO_3(s)\rightleftharpoons CaO(s)+CO_2(g)
 Q\approx\frac{P_{CO_2}}{P^\circ}
 \]
 
-Thêm nhiều \(CaCO_3\) rắn hơn không trực tiếp làm Q đổi miễn pha đó đã hiện diện và vẫn tinh khiết. Đây là điểm mà reasoning “tăng reactant → shift right” kiểu máy móc có thể sai.
+Thêm nhiều \(CaCO_3\) rắn hơn không trực tiếp làm Q đổi miễn pha đó đã hiện diện và vẫn tinh khiết. Đây là điểm mà lập luận (reasoning / 추론) “tăng reactant → shift right” kiểu máy móc có thể sai.
 
 # Q sau một perturbation
 
@@ -204,7 +225,7 @@ Tại equilibrium:
 K=\frac{b+x}{a-x}
 \]
 
-**ICE (Initial–Change–Equilibrium)** chỉ là bảng giúp tổ chức stoichiometric bookkeeping. Physics nằm trong conservation + equilibrium condition, không nằm trong chữ ICE.
+**ICE (Initial–Change–Equilibrium)** chỉ là bảng giúp tổ chức stoichiometric bookkeeping. Physics nằm trong conservation + equilibrium điều kiện (condition / 조건), không nằm trong chữ ICE.
 
 # Extent of reaction là cách tổng quát hơn ICE
 
@@ -232,7 +253,7 @@ Equilibrium được tìm từ:
 Q(\xi_{eq})=K
 \]
 
-Cách này thống nhất ICE table với thermodynamics và mở rộng tự nhiên sang reaction networks.
+Cách này thống nhất ICE bảng (table / 테이블) với thermodynamics và mở rộng tự nhiên sang reaction networks.
 
 # Xấp xỉ “x nhỏ” phải được kiểm tra
 
@@ -254,14 +275,14 @@ Nhưng approximation phải được **kiểm tra sau khi giải**.
 
 # Khi phương trình equilibrium có nhiều nghiệm toán học
 
-Một phương trình polynomial có thể cho nhiều roots, nhưng không phải root nào cũng có ý nghĩa vật lý.
+Một phương trình polynomial có thể cho nhiều roots, nhưng không phải gốc (root / 루트) nào cũng có ý nghĩa vật lý.
 
 Nghiệm phải thỏa:
 
 - concentration không âm;
 - conservation laws;
 - extent nằm trong giới hạn reactants available;
-- phase assumptions ban đầu còn hợp lệ.
+- phase các giả định (assumptions / 가정들) ban đầu còn hợp lệ.
 
 Đây là lý do solving equilibrium không chỉ là giải đại số rồi chọn một số.
 
@@ -325,7 +346,7 @@ Với:
 MX(s)\rightleftharpoons M^++X^-
 \]
 
-ion activity product:
+ion activity sản phẩm (product / 제품):
 
 \[
 Q_{sp}=a_{M^+}a_{X^-}
@@ -371,11 +392,11 @@ Một phản ứng sinh hóa có \(\Delta G^\circ>0\) vẫn có thể đi thuậ
 \Delta G=\Delta G^\circ+RT\ln Q<0
 \]
 
-Tế bào duy trì non-equilibrium concentrations bằng metabolism và transport. Do đó biết standard free energy chưa đủ để biết direction trong vivo.
+Tế bào duy trì non-equilibrium concentrations bằng metabolism và vận chuyển (transport / 전송). Do đó biết tiêu chuẩn (standard / 표준) free năng lượng (energy / 에너지) chưa đủ để biết direction trong vivo.
 
 # Giải equilibrium bằng máy tính
 
-Hệ nhiều equilibria thường được giải bằng numerical root finding hoặc Gibbs minimization.
+Hệ nhiều equilibria thường được giải bằng numerical gốc (root / 루트) finding hoặc Gibbs minimization.
 
 Một workflow:
 
@@ -388,13 +409,13 @@ chọn species
 → kiểm tra conservation và phase stability
 ```
 
-Dùng \(\log c\) làm variable giúp concentration luôn dương và xử lý range nhiều orders of magnitude.
+Dùng \(\log c\) làm variable giúp concentration luôn dương và xử lý phạm vi (range / 범위) nhiều orders of magnitude.
 
 Các phần mềm địa hóa, combustion equilibrium và aqueous speciation đều dùng tư duy này.
 
 # Sensitivity — equilibrium composition nhạy với parameter nào?
 
-Nếu \(K\) có uncertainty hoặc temperature thay đổi, equilibrium composition cũng thay đổi.
+Nếu \(K\) có bất định (uncertainty / 불확실성) hoặc temperature thay đổi, equilibrium composition cũng thay đổi.
 
 Có thể hỏi:
 
@@ -402,9 +423,9 @@ Có thể hỏi:
 \frac{\partial x_{eq}}{\partial \ln K}
 \]
 
-để biết species nào nhạy nhất với equilibrium data.
+để biết species nào nhạy nhất với equilibrium dữ liệu (data / 데이터).
 
-Trong environmental modeling, uncertainty của formation constants có thể trở thành uncertainty lớn của predicted mobility/toxicity.
+Trong environmental modeling, bất định (uncertainty / 불확실성) của formation constants có thể trở thành bất định (uncertainty / 불확실성) lớn của predicted mobility/toxicity.
 
 # Những hiểu lầm thường gặp
 
@@ -416,7 +437,7 @@ Không. Q là một tỉ số có exponents và activities.
 
 Q cho thermodynamic direction. Tốc độ cần kinetics.
 
-### “ICE table là định luật hóa học”
+### “ICE bảng (table / 테이블) là định luật hóa học”
 
 Không. Nó chỉ là bookkeeping format.
 
@@ -426,7 +447,10 @@ Không. Supersaturation có thể tồn tại nếu nucleation chậm.
 
 ### “Mỗi equilibrium trong dung dịch có thể giải độc lập”
 
-Không khi chúng chia sẻ species. Phải giải coupled system.
+Không khi chúng chia sẻ species. Phải giải coupled hệ thống (system / 시스템).
+
+
+> **Chuyển mạch:** Từ **Chất rắn và chất lỏng tinh khiết**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -438,6 +462,8 @@ Q/K > 1 → slope xuống theo chiều nghịch
 Q/K = 1 → slope bằng 0 tại equilibrium
 ```
 
-Trong hệ phức tạp, không còn một Q đơn lẻ mà là một mạng các reaction quotients bị ràng buộc bởi mass balance, charge balance và phase constraints.
+Trong hệ phức tạp, không còn một Q đơn lẻ mà là một mạng các reaction quotients bị ràng buộc bởi mass balance, charge balance và phase các ràng buộc (constraints / 제약조건들).
 
 Xem tiếp: [Nguyên lý Le Châtelier](./03_le_chatelier_principle.md) và [Nhiệt động lực học của cân bằng](./04_thermodynamics_of_equilibrium.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

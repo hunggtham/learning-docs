@@ -1,5 +1,8 @@
 # Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế
 
+> **Mạch đọc:** Đặt **Danh mục đa tài sản, phòng vệ tiền tệ và phân bổ theo chế độ kinh tế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Đa tài sản không đồng nghĩa mua nhiều sản phẩm** sang **2. Khung tăng trưởng–lạm phát**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này nối các nhóm tài sản riêng lẻ thành một danh mục thực tế. Nội dung giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc ở lần xuất hiện cần thiết. Mục tiêu là hiểu vì sao cùng một tài sản có thể hữu ích trong chế độ này nhưng gây hại trong chế độ khác, vì sao tiền tệ có thể quyết định phần lớn kết quả của nhà đầu tư quốc tế và vì sao phòng vệ là công cụ quản trị rủi ro chứ không phải cách xóa biến động miễn phí.
 
 ## 1. Đa tài sản không đồng nghĩa mua nhiều sản phẩm
@@ -234,7 +237,7 @@ Vai trò của vàng nên được đánh giá qua nhiều chế độ, không p
 
 REIT có thể hưởng lợi từ tăng tiền thuê nhưng chịu rủi ro tỷ lệ vốn hóa và tái cấp vốn. Lạm phát cao không tự động có lợi nếu lãi suất tăng nhanh hơn thu nhập hoạt động ròng.
 
-Data center, logistics, văn phòng, nhà ở và bán lẻ có cấu trúc nhu cầu khác nhau nên không nên gom tất cả bất động sản thành một nhóm đồng nhất.
+Dữ liệu (data / 데이터) center, logistics, văn phòng, nhà ở và bán lẻ có cấu trúc nhu cầu khác nhau nên không nên gom tất cả bất động sản thành một nhóm đồng nhất.
 
 ## 24. Danh mục 60/40
 

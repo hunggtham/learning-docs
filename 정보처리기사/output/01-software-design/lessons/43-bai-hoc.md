@@ -1,18 +1,18 @@
-# 14. 미들웨어 (Middleware)
+# 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **14. 미들웨어 (Middleware)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **14. 미들웨어 (Middleware)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **6. 애자일 방법론 (Agile Methodology)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-미들웨어
+시스템, 연계, 인터페이스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**에서 만든 기준을 이어받아 **14. 미들웨어 (Middleware)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**에서 만든 기준을 이어받아 **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,27 +20,64 @@ Mục đích của bài này là hiểu **14. 미들웨어 (Middleware)** như m
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** và nối nó với **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 14. 미들웨어 (Middleware)
+## 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
 
-Ở bước 43/55, **14. 미들웨어 (Middleware)** xuất hiện như phần tiếp nối của **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 43/57, **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** xuất hiện như phần tiếp nối của **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **14. 미들웨어 (Middleware)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-**개념 (Khái niệm):** 운영체제와 응용 프로그램 사이의 중재자 (Phần mềm trung gian đứng giữa OS và Ứng dụng).
-💡 **Mẹo ghi nhớ 미들웨어:** DB, RPC, MOM, TP-Monitor, ORB, WAS
+Trước hết, ta đặt **13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
-1.  **DB 미들웨어:** 2-Tier 원격 연결 (ODBC, IDAPI, Glue). (Kết nối CSDL 2 lớp).
-2.  **RPC (Remote Procedure Call):** 원격을 로컬처럼 호출 (Entera, ONC/RPC). (Gọi hàm từ xa như gọi hàm cục bộ).
-3.  **MOM (Message Oriented Middleware):** 비동기 메시지, 데이터 동기 (IBM MQ, JMS). (Truyền tin nhắn bất đồng bộ, đồng bộ dữ liệu hệ thống khác nền tảng).
-4.  **TP-Monitor (Transaction Processing):** 항공/철도 예약, 빠른 응답/트랜잭션 감시 (tuxedo, tmax). (Giám sát giao dịch, đảm bảo tốc độ phản hồi nhanh cho đặt vé).
-5.  **ORB (Object Request Broker):** 객체 지향, CORBA 표준 (Orbix). (Môi giới yêu cầu đối tượng, chuẩn CORBA).
-6.  **WAS (Web Application Server):** 동적 콘텐츠, 웹 환경 핵심(Java/EJB) (WebLogic, WebSphere). (Xử lý nội dung web động, tác vụ doanh nghiệp quan trọng).
-    *   *Example:* Apache là Web Server (tĩnh), còn WebLogic/Tomcat là WAS (động).
+### 13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
 
-*   **솔루션 식별 & 명세서 작성:** 아키텍처 구성 정보, 구매 내역 확인 -> 제약사항 확인 (Xác định Middleware dựa trên kiến trúc và hóa đơn mua sắm -> Kiểm tra các hạn chế / constraints).
+Bây giờ ta đi vào nội dung của **13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
-Như vậy, **14. 미들웨어 (Middleware)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. 애자일 방법론 (Agile Methodology)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+1.  **DB Link:** DB 객체 이용 (Kết nối trực tiếp qua DB Link).
+2.  **API/Open API:** 프로그램 인터페이스 (Mở cổng API để ứng dụng khác gọi).
+3.  **EAI (연계 솔루션):** 중계 서버/클라이언트 사용 (Dùng máy chủ trung gian Enterprise Application Integration).
+4.  **Socket:** 포트 할당하여 연결 (Mở port mạng Socket để truyền dữ liệu).
+5.  **Web Service:** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
+
+Phần **13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)** không có nhiều dữ liệu rời để tách nhỏ, vì vậy hãy giữ câu hỏi mục đích và tự chốt bằng một câu giải thích trước khi đi tiếp.
+
+Ta vừa chốt **13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)
+
+Phần nguồn của **13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+*   **통신 유형 (Loại Giao tiếp):**
+    *   **단방향 (Unidirectional):** 응답 없음 (Chỉ gửi, không cần phản hồi).
+    *   **동기 (Synchronous):** 응답 대기 (Gửi và đợi phản hồi).
+    *   **비동기 (Asynchronous):** 다른 작업 수행 (Gửi xong làm việc khác, trả lời sau).
+*   **처리 유형 (Loại Xử lý):**
+    *   **실시간 (Real-time):** 즉시 처리 (Xử lý ngay lập tức).
+    *   **지연 처리 (Deferred):** 비용 절감을 위해 모아서 처리 (Trì hoãn xử lý để tiết kiệm chi phí).
+    *   **배치 (Batch):** 대용량 일괄 처리 (Gom dữ liệu lớn xử lý 1 lần).
+
+Các bullet của **13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)**, đừng bắt đầu lại từ số không. **13.3 명세화 (Specification)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Đoạn **13.3 명세화 (Specification)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 13.3 명세화 (Specification)
+
+Các ý ngay dưới **13.3 명세화 (Specification)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+*   **송수신 데이터 명세화:** 데이터 필드명, 타입, 사이즈, **암호화 여부** 정의 (Đặc tả dữ liệu: Tên trường, Kiểu, Kích thước, và có Cần Mã hóa không).
+*   **오류 식별 및 처리 방안 명세화:** 오류 코드, 메시지, 해결 방법 정의 (Đặc tả lỗi: Mã lỗi, Thông báo, Cách xử lý để dễ vận hành).
+
+---
+
+Các bullet của **13.3 명세화 (Specification)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **13.3 명세화 (Specification)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Như vậy, **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

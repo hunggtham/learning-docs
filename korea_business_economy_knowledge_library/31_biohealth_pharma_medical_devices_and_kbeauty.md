@@ -1,8 +1,11 @@
 # Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)
 
+> **Mạch đọc:** Đặt **Biohealth, dược phẩm, thiết bị y tế và K-Beauty Hàn Quốc (Biohealth / 바이오헬스·제약·의료기기·K뷰티)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Ba cổng của kinh tế biohealth** sang **Phát triển thuốc là một chuỗi xác suất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Biohealth là một trong những lĩnh vực cho thấy Hàn Quốc đang chuyển từ tăng trưởng thiên về sản xuất sang mô hình kết hợp **khoa học + quy định + IP + sản xuất giá trị cao**. Nhưng “bio” là nhãn rất rộng. Phát triển thuốc mới, biosimilar, CDMO, chẩn đoán, thiết bị y tế và mỹ phẩm có mô hình kinh doanh, yêu cầu vốn và dạng thất bại hoàn toàn khác nhau.
 
-Nếu dùng một bội số định giá hoặc một logic kiểu “già hóa → bio tốt” cho tất cả doanh nghiệp, phân tích gần như chắc chắn sai.
+Nếu dùng một bội số định giá hoặc một lô-gic (logic / 논리) kiểu “già hóa → bio tốt” cho tất cả doanh nghiệp, phân tích gần như chắc chắn sai.
 
 ## Ba cổng của kinh tế biohealth
 
@@ -24,7 +27,7 @@ Thất bại ở bất kỳ cổng nào đều có thể làm giá trị kỳ v�
 
 ## Phát triển thuốc là một chuỗi xác suất
 
-Một pipeline đơn giản:
+Một chuỗi xử lý (pipeline / 파이프라인) đơn giản:
 
 ```text
 Khám phá hoạt chất
@@ -47,7 +50,7 @@ P(thành\ công) \approx \prod_i p_i
 
 Đây là lý do một tài sản đang ở Phase 1 không thể được định giá chỉ bằng doanh số đỉnh tương lai rồi chiết khấu theo thời gian. Nó cần **giá trị đã điều chỉnh xác suất**.
 
-## rNPV: logic định giá đã điều chỉnh rủi ro
+## rNPV: lô-gic (logic / 논리) định giá đã điều chỉnh rủi ro
 
 Một rNPV đơn giản:
 
@@ -65,7 +68,7 @@ Kết quả thử nghiệm không chỉ phụ thuộc “thuốc có tác dụng
 
 Một thuốc có thể có tác dụng sinh học nhưng vẫn không đạt ngưỡng cơ quan quản lý hoặc ngưỡng thương mại cần thiết.
 
-Vì vậy người phân tích cần hiểu “thành công” trong protocol thực sự nghĩa là gì.
+Vì vậy người phân tích cần hiểu “thành công” trong giao thức (protocol / 프로토콜) thực sự nghĩa là gì.
 
 ## Runway tiền mặt: biotech có thể hết tiền trước khi khoa học cho câu trả lời
 
@@ -144,7 +147,7 @@ Kinh tế biosimilar vì vậy là sự kết hợp giữa khoa học, quy đị
 
 Doanh nghiệp vào sớm có thể giành thị phần hấp dẫn, nhưng khi nhiều đối thủ tham gia, giá thường chịu áp lực giảm.
 
-Vì vậy doanh nghiệp cần pipeline gồm nhiều biosimilar hoặc sản phẩm sinh học mới thay vì phụ thuộc mãi vào một phân tử.
+Vì vậy doanh nghiệp cần chuỗi xử lý (pipeline / 파이프라인) gồm nhiều biosimilar hoặc sản phẩm sinh học mới thay vì phụ thuộc mãi vào một phân tử.
 
 Thời điểm ra mắt từng sản phẩm trong danh mục trở thành biến quan trọng.
 
@@ -173,7 +176,7 @@ Bioreactor và nhà máy cần cơ sở vật chất đắt đỏ, hệ thống 
 
 Khi tỷ lệ sử dụng thấp, khấu hao và lao động cố định trên mỗi mẻ cao. Khi tỷ lệ sử dụng tăng, chi phí đơn vị giảm.
 
-Logic giống fab bán dẫn, nhưng quy định và yêu cầu chất lượng làm việc chuyển nhà sản xuất khó hơn.
+Lô-gic (logic / 논리) giống fab bán dẫn, nhưng quy định và yêu cầu chất lượng làm việc chuyển nhà sản xuất khó hơn.
 
 ## Chứng nhận và GMP tạo chi phí chuyển đổi
 
@@ -218,7 +221,7 @@ Nhà cung cấp có thể bán hoặc đặt thiết bị rồi tạo doanh thu 
 - hợp đồng dịch vụ;
 - nâng cấp phần mềm.
 
-Mô hình này gần với logic “máy in–mực in”: thiết bị tạo một nền khách hàng đã cài đặt, sau đó vật tư và dịch vụ tạo doanh thu lặp lại.
+Mô hình này gần với lô-gic (logic / 논리) “máy in–mực in”: thiết bị tạo một nền khách hàng đã cài đặt, sau đó vật tư và dịch vụ tạo doanh thu lặp lại.
 
 Nền thiết bị đã lắp đặt có thể tạo chi phí chuyển đổi vì nhân viên đã được đào tạo và workflow đã tích hợp.
 
@@ -288,7 +291,7 @@ Một SKU lan truyền mạnh có thể làm doanh thu bùng nổ.
 Nhưng tính bền vững cần:
 
 - mua lặp lại;
-- pipeline sản phẩm mới;
+- chuỗi xử lý (pipeline / 파이프라인) sản phẩm mới;
 - phân phối đa kênh;
 - đa dạng địa lý;
 - giá trị thương hiệu vượt khỏi một sản phẩm.
@@ -487,7 +490,7 @@ Beauty:
 
 # Mô hình tư duy
 
-> Biohealth biến **khoa học thành dòng tiền thông qua thành công kỹ thuật, quy định, chất lượng sản xuất và khả năng tiếp cận thương mại**. K-Beauty chia sẻ logic xuất khẩu/thương hiệu toàn cầu nhưng vận hành theo kinh tế hàng tiêu dùng thay vì kinh tế xác suất của dược phẩm.
+> Biohealth biến **khoa học thành dòng tiền thông qua thành công kỹ thuật, quy định, chất lượng sản xuất và khả năng tiếp cận thương mại**. K-Beauty chia sẻ lô-gic (logic / 논리) xuất khẩu/thương hiệu toàn cầu nhưng vận hành theo kinh tế hàng tiêu dùng thay vì kinh tế xác suất của dược phẩm.
 
 ```text
 Tri thức / công thức / IP

@@ -1,8 +1,10 @@
 # Hóa lượng — định lượng phản ứng từ các định luật bảo toàn
 
+> **Mạch đọc:** Đọc **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Độ chuyển hóa** sang **Độ chọn lọc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Hóa lượng (stoichiometry / 화학량론)** là ngôn ngữ định lượng của phản ứng hóa học. Nó dùng phương trình cân bằng để liên hệ lượng các chất thông qua bảo toàn nguyên tử, điện tích và khối lượng. Bản chất của hóa lượng không phải một tập công thức đổi gram–mol, mà là **một hệ ràng buộc tuyến tính giữa các lượng chất**.
 
-Ở mức cơ bản, ta dùng tỉ lệ mol. Ở mức sâu hơn, cùng tư duy được mở rộng thành **mức tiến triển phản ứng (extent of reaction)**, vector hệ số hóa lượng và ma trận stoichiometric cho cả mạng phản ứng.
+Ở mức cơ bản, ta dùng tỉ lệ mol. Ở mức sâu hơn, cùng tư duy được mở rộng thành **mức tiến triển phản ứng (extent of reaction)**, véc-tơ (vector / 벡터) hệ số hóa lượng và ma trận stoichiometric cho cả mạng phản ứng.
 
 # Chuỗi chuyển đổi nền tảng
 
@@ -135,7 +137,7 @@ Chuỗi đơn vị:
 g CH4 → mol CH4 → mol CO2 → g CO2
 ```
 
-là một phép kiểm logic rất mạnh. Nếu đơn vị không triệt tiêu như mong đợi, cấu trúc suy luận có vấn đề.
+là một phép kiểm lô-gic (logic / 논리) rất mạnh. Nếu đơn vị không triệt tiêu như mong đợi, cấu trúc suy luận có vấn đề.
 
 # Hóa lượng khí
 
@@ -199,7 +201,7 @@ Q=n_eF
 Nếu phản ứng điện cực cần \(z\) electron cho mỗi mol sản phẩm:
 
 \[
-n_{product}=\frac{Q}{zF}
+n_{sản phẩm (product / 제품)}=\frac{Q}{zF}
 \]
 
 Như vậy điện lượng cũng chỉ là một “cổng vào” khác để đi tới mol.
@@ -266,6 +268,9 @@ X_A=\frac{n_{A,0}-n_A}{n_{A,0}}
 
 cho biết phần A đã phản ứng.
 
+
+> **Chuyển mạch:** Từ **Độ chuyển hóa**, ta sang **Độ chọn lọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Độ chọn lọc
 
 Nếu A tạo sản phẩm mong muốn P và phụ phẩm U, có thể định nghĩa chọn lọc theo mol hoặc carbon tùy bài toán.
@@ -278,12 +283,15 @@ S_{P/U}=\frac{n_P}{n_U}
 
 sau khi hiệu chỉnh theo hóa lượng nếu cần.
 
+
+> **Chuyển mạch:** Từ **Độ chọn lọc**, ta sang **Hiệu suất tạo sản phẩm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Hiệu suất tạo sản phẩm
 
 Một định nghĩa thường dùng:
 
 \[
-Y_P\sim X_A\times\text{phần A đã phản ứng đi tới P}
+Y_P\sim X_A\times\văn bản (text / 텍스트){phần A đã phản ứng đi tới P}
 \]
 
 Các ngành khác nhau có thể dùng quy ước yield/selectivity khác, vì vậy luôn phải đọc định nghĩa trước khi so số liệu.
@@ -328,7 +336,7 @@ Bảo toàn nguyên tố không cần biết cơ chế phản ứng. Vì thế n
 
 # Ma trận thành phần và cân bằng phương trình
 
-Có thể biểu diễn thành phần nguyên tố bằng ma trận \(A\), còn vector hệ số hóa lượng là \(\boldsymbol{\nu}\).
+Có thể biểu diễn thành phần nguyên tố bằng ma trận \(A\), còn véc-tơ (vector / 벡터) hệ số hóa lượng là \(\boldsymbol{\nu}\).
 
 Điều kiện bảo toàn nguyên tố:
 
@@ -336,7 +344,7 @@ Có thể biểu diễn thành phần nguyên tố bằng ma trận \(A\), còn 
 A\boldsymbol{\nu}=0
 \]
 
-Nói cách khác, vector phản ứng nằm trong **không gian null (null space)** của ma trận thành phần.
+Nói cách khác, véc-tơ (vector / 벡터) phản ứng nằm trong **không gian null (null space)** của ma trận thành phần.
 
 Đây là lý do cân bằng phương trình hóa học có thể được giải bằng đại số tuyến tính.
 
@@ -356,7 +364,7 @@ Trong động học:
 \frac{d\mathbf n}{dt}=S\mathbf r
 \]
 
-với \(\mathbf r\) là vector tốc độ phản ứng.
+với \(\mathbf r\) là véc-tơ (vector / 벡터) tốc độ phản ứng.
 
 Đây là một trong những cấu trúc toán học quan trọng nhất nối hóa lượng với:
 
@@ -364,7 +372,7 @@ với \(\mathbf r\) là vector tốc độ phản ứng.
 - chuyển hóa sinh học;
 - combustion;
 - atmospheric chemistry;
-- flux balance analysis.
+- flux balance phân tích (analysis / 분석).
 
 # Ví dụ mạng phản ứng
 
@@ -413,21 +421,21 @@ Cấu trúc này vẫn đúng dù động học phức tạp; chỉ giá trị \
 Với một thiết bị quá trình:
 
 \[
-\text{tích lũy}
+\văn bản (text / 텍스트){tích lũy}
 =
-\text{vào}
+\văn bản (text / 텍스트){vào}
 -
-\text{ra}
+\văn bản (text / 텍스트){ra}
 +
-\text{sinh do phản ứng}
+\văn bản (text / 텍스트){sinh do phản ứng}
 -
-\text{tiêu thụ do phản ứng}
+\văn bản (text / 텍스트){tiêu thụ do phản ứng}
 \]
 
 Ở trạng thái ổn định:
 
 \[
-\text{tích lũy}=0
+\văn bản (text / 텍스트){tích lũy}=0
 \]
 
 Hóa lượng phản ứng cung cấp hạng sinh/tiêu thụ.
@@ -473,7 +481,7 @@ với \(P\) là độ tinh khiết. Nếu cân cực chính xác nhưng assay \(
 
 # Chữ số có nghĩa không đủ cho hóa lượng định lượng nghiêm ngặt
 
-Quy tắc chữ số có nghĩa là công cụ giáo dục hữu ích, nhưng không thay thế propagation of uncertainty.
+Quy tắc chữ số có nghĩa là công cụ giáo dục hữu ích, nhưng không thay thế propagation of bất định (uncertainty / 불확실성).
 
 Trong công việc phân tích, cần giữ thêm chữ số trong tính toán trung gian rồi làm tròn kết quả theo độ không đảm bảo cuối.
 
@@ -535,6 +543,8 @@ Không nếu selectivity thấp hoặc chi phí tách quá lớn.
 
 # Mô hình tư duy
 
-Hóa lượng là **hình học tuyến tính của bảo toàn vật chất**. Với một phản ứng, nó xuất hiện như tỉ lệ mol; với nhiều phản ứng, nó trở thành vector và ma trận. Mol là ngôn ngữ trung gian, còn extent cho biết hệ đã di chuyển bao xa dọc theo các hướng phản ứng được phép.
+Hóa lượng là **hình học tuyến tính của bảo toàn vật chất**. Với một phản ứng, nó xuất hiện như tỉ lệ mol; với nhiều phản ứng, nó trở thành véc-tơ (vector / 벡터) và ma trận. Mol là ngôn ngữ trung gian, còn extent cho biết hệ đã di chuyển bao xa dọc theo các hướng phản ứng được phép.
 
 Xem tiếp: [Chất phản ứng giới hạn và hiệu suất](./04_limiting_reagent_and_yield.md).
+
+> **Bàn giao:** Sau **“Conversion cao nghĩa quy trình tốt”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

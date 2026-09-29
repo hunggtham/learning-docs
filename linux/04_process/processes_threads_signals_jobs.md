@@ -1,10 +1,13 @@
 # Tiến trình, luồng, tín hiệu và tác vụ
 
-Chương trình nằm trên đĩa chỉ là mã và dữ liệu tĩnh. Khi được thực thi, Linux tạo một **ngữ cảnh thực thi khi đang chạy (runtime execution context)** gồm không gian địa chỉ, thông tin xác thực, các bộ mô tả tệp đang mở, trạng thái lập lịch và nhiều metadata khác. Đối tượng khi đang chạy đó là **tiến trình (process / 프로세스)**. Hiểu mô hình tiến trình là điều kiện để sử dụng đúng `ps`, `kill`, `top`, `systemctl` và các công cụ JVM.
+> **Mạch đọc:** Đọc **Tiến trình, luồng, tín hiệu và tác vụ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chương trình khác tiến trình** sang **PID và PPID**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Chương trình nằm trên đĩa chỉ là mã và dữ liệu tĩnh. Khi được thực thi, Linux tạo một **ngữ cảnh thực thi khi đang chạy (runtime execution context)** gồm không gian địa chỉ, thông tin xác thực, các bộ mô tả tệp đang mở, trạng thái lập lịch và nhiều siêu dữ liệu (metadata / 메타데이터) khác. Đối tượng khi đang chạy đó là **tiến trình (process / 프로세스)**. Hiểu mô hình tiến trình là điều kiện để sử dụng đúng `ps`, `kill`, `top`, `systemctl` và các công cụ JVM.
 
 ## Chương trình khác tiến trình
 
-Một tệp `app.jar` có thể được chạy nhiều lần và tạo ra nhiều tiến trình JVM. Ngược lại, một tiến trình có thể dùng `exec` để thay chương trình đang thực thi trong cùng ngữ cảnh tiến trình. Vì vậy **ứng dụng (application)** là khái niệm ở mức nghiệp vụ hoặc triển khai, còn **process** là lớp trừu tượng khi đang chạy do kernel quản lý.
+Một tệp `app.jar` có thể được chạy nhiều lần và tạo ra nhiều tiến trình JVM. Ngược lại, một tiến trình có thể dùng `exec` để thay chương trình đang thực thi trong cùng ngữ cảnh tiến trình. Vì vậy **ứng dụng (application / 애플리케이션)** là khái niệm ở mức nghiệp vụ hoặc triển khai, còn **tiến trình (process / 프로세스)** là lớp trừu tượng khi đang chạy do kernel quản lý.
 
 ```bash
 pgrep -af java
@@ -20,24 +23,24 @@ vì cách thứ hai có thể tự bắt cả tiến trình `grep` và mẫu tì
 
 ## PID và PPID
 
-Mỗi tiến trình có **PID (Process ID)** tại một thời điểm và có quan hệ với tiến trình cha thông qua **PPID (Parent Process ID)**.
+Mỗi tiến trình có **PID (process ID)** tại một thời điểm và có quan hệ với tiến trình cha thông qua **PPID (Parent process ID)**.
 
 ```bash
 ps -p 1234 -o pid,ppid,user,lstart,etime,cmd
 pstree -p
 ```
 
-`PID` không phải danh tính vĩnh viễn. Sau khi tiến trình kết thúc, kernel có thể tái sử dụng số PID đó. Vì vậy trước khi `kill PID` trên production, nên xác minh PID hiện vẫn thuộc đúng tiến trình cần xử lý.
+`PID` không phải danh tính vĩnh viễn. Sau khi tiến trình kết thúc, kernel có thể tái sử dụng số PID đó. Vì vậy trước khi `kill PID` trên môi trường vận hành (production / 운영 환경), nên xác minh PID hiện vẫn thuộc đúng tiến trình cần xử lý.
 
 ## Tạo tiến trình: `fork`/`clone` và `exec`
 
 Mô hình Unix truyền thống thường được giải thích theo hai bước: tạo một ngữ cảnh thực thi dựa trên tiến trình cha bằng `fork`, sau đó thay ảnh chương trình bằng chương trình mới qua `exec`. Linux hiện đại có `clone`, `clone3` và nhiều chi tiết phức tạp hơn, nhưng mô hình **tạo ngữ cảnh rồi thực thi chương trình mới** vẫn rất hữu ích để suy luận.
 
-Khi shell chạy một câu lệnh bên ngoài, nó phải tạo ngữ cảnh tiến trình, thiết lập môi trường và file descriptor rồi thực thi chương trình đích.
+Khi shell chạy một câu lệnh bên ngoài, nó phải tạo ngữ cảnh tiến trình, thiết lập môi trường và tệp (file / 파일) descriptor rồi thực thi chương trình đích.
 
 ## Luồng là gì?
 
-Các **luồng (thread / 스레드)** trong cùng tiến trình thường chia sẻ không gian địa chỉ và nhiều tài nguyên, nhưng mỗi luồng có trạng thái thực thi và thực thể lập lịch riêng. Một ứng dụng web Java có thể chỉ là một process nhưng chứa hàng trăm thread.
+Các **luồng (thread / 스레드)** trong cùng tiến trình thường chia sẻ không gian địa chỉ và nhiều tài nguyên, nhưng mỗi luồng có trạng thái thực thi và thực thể lập lịch riêng. Một ứng dụng web Java có thể chỉ là một tiến trình (process / 프로세스) nhưng chứa hàng trăm luồng thực thi (thread / 스레드).
 
 ```bash
 ps -p <PID> -o pid,nlwp,%cpu,%mem,cmd
@@ -86,11 +89,11 @@ Không nên giả định `kill -HUP` luôn có nghĩa "reload". Hãy đọc tà
 
 ## Quyền gửi tín hiệu
 
-Một tiến trình không thể tùy ý gửi signal tới mọi tiến trình khác. Kernel kiểm tra thông tin xác thực và capabilities. Đây là mối liên hệ trực tiếp với [Người dùng, nhóm và quyền truy cập](../03_identity/users_groups_permissions.md).
+Một tiến trình không thể tùy ý gửi tín hiệu (signal / 신호) tới mọi tiến trình khác. Kernel kiểm tra thông tin xác thực và capabilities. Đây là mối liên hệ trực tiếp với [Người dùng, nhóm và quyền truy cập](../03_identity/users_groups_permissions.md).
 
 ## Tiền cảnh, hậu cảnh và điều khiển tác vụ
 
-Shell tương tác có khái niệm nhóm tiến trình gắn với terminal. Tác vụ tiền cảnh nhận đầu vào terminal và các signal do terminal tạo ra. `&` đưa câu lệnh xuống hậu cảnh:
+Shell tương tác có khái niệm nhóm tiến trình gắn với terminal. Tác vụ tiền cảnh nhận đầu vào terminal và các tín hiệu (signal / 신호) do terminal tạo ra. `&` đưa câu lệnh xuống hậu cảnh:
 
 ```bash
 sleep 300 &
@@ -111,11 +114,11 @@ nohup java -jar app.jar >app.log 2>&1 &
 
 `nohup` làm chương trình bỏ qua `SIGHUP` theo cơ chế của công cụ và chuyển hướng đầu ra khi cần. Nó hữu ích với tác vụ đơn giản nhưng không cung cấp quản lý phụ thuộc, chính sách khởi động lại có cấu trúc, kiểm soát tài nguyên hoặc quản lý vòng đời dịch vụ như systemd.
 
-Với dịch vụ chạy lâu dài trên production, xem [Khởi động, systemd và dịch vụ](../05_system/systemd_boot_services.md).
+Với dịch vụ chạy lâu dài trên môi trường vận hành (production / 운영 환경), xem [Khởi động, systemd và dịch vụ](../05_system/systemd_boot_services.md).
 
 ## Môi trường của tiến trình
 
-Mỗi tiến trình nhận một bản chụp **biến môi trường (environment)** từ tiến trình cha khi được tạo. Thay đổi môi trường trong shell sau đó không tự động thay đổi tiến trình đã chạy.
+Mỗi tiến trình nhận một bản chụp **biến môi trường (environment / 환경)** từ tiến trình cha khi được tạo. Thay đổi môi trường trong shell sau đó không tự động thay đổi tiến trình đã chạy.
 
 Có thể quan sát tùy theo quyền:
 
@@ -123,7 +126,7 @@ Có thể quan sát tùy theo quyền:
 tr '\0' '\n' < /proc/<PID>/environ
 ```
 
-Cần thận trọng vì môi trường có thể chứa bí mật như token hoặc mật khẩu. Không nên sao chép hoặc ghi toàn bộ ra nhật ký một cách vô thức.
+Cần thận trọng vì môi trường có thể chứa bí mật như đơn vị từ (token / 토큰) hoặc mật khẩu. Không nên sao chép hoặc ghi toàn bộ ra nhật ký một cách vô thức.
 
 ## Giới hạn tài nguyên
 
@@ -140,11 +143,11 @@ Giới hạn `ulimit` của shell tương tác không đảm bảo dịch vụ s
 
 Tiến trình cha có trách nhiệm thu nhận trạng thái kết thúc của tiến trình con. Khi tiến trình cha biến mất, kernel và hệ thống init xử lý việc gán lại quan hệ cha-con. `PID 1` có vai trò đặc biệt trong vòng đời hệ thống và việc thu hồi tiến trình con.
 
-Trong vùng tên PID của container, vấn đề này càng rõ: tiến trình mang `PID 1` bên trong container cần xử lý signal và thu hồi tiến trình con đúng cách.
+Trong vùng tên PID của bộ chứa (container / 컨테이너), vấn đề này càng rõ: tiến trình mang `PID 1` bên trong bộ chứa (container / 컨테이너) cần xử lý tín hiệu (signal / 신호) và thu hồi tiến trình con đúng cách.
 
 ## Tiến trình tồn tại không đồng nghĩa dịch vụ khỏe mạnh
 
-Một tiến trình còn tồn tại chỉ chứng minh kernel vẫn duy trì ngữ cảnh thực thi cho nó. Ứng dụng có thể deadlock, cạn thread pool, mất phụ thuộc hoặc chưa gắn socket cần thiết.
+Một tiến trình còn tồn tại chỉ chứng minh kernel vẫn duy trì ngữ cảnh thực thi cho nó. Ứng dụng có thể deadlock, cạn luồng thực thi (thread / 스레드) pool, mất phụ thuộc hoặc chưa gắn socket cần thiết.
 
 Vì vậy quá trình kiểm tra sức khỏe nên tiếp tục qua nhiều lớp:
 
@@ -160,11 +163,11 @@ sudo ss -lntp | grep ':8080'
 curl -fsS -v http://127.0.0.1:8080/health
 ```
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Tiến trình là **ngữ cảnh khi đang chạy của một chương trình**: không gian địa chỉ + các luồng + thông tin xác thực + file descriptor + môi trường + trạng thái do kernel quản lý. Signal là kênh điều khiển/sự kiện; `PID` chỉ là một mã định danh tạm thời.
+Tiến trình là **ngữ cảnh khi đang chạy của một chương trình**: không gian địa chỉ + các luồng + thông tin xác thực + tệp (file / 파일) descriptor + môi trường + trạng thái do kernel quản lý. tín hiệu (signal / 신호) là kênh điều khiển/sự kiện; `PID` chỉ là một mã định danh tạm thời.
 
-Khi gỡ lỗi, đừng chỉ hỏi "Java có chạy không?". Hãy tách thành các câu hỏi cụ thể: tiến trình có tồn tại không? đang ở trạng thái nào? các luồng đang làm gì? file descriptor và socket ra sao? giới hạn tài nguyên thế nào? endpoint của dịch vụ có khỏe không?
+Khi gỡ lỗi, đừng chỉ hỏi "Java có chạy không?". Hãy tách thành các câu hỏi cụ thể: tiến trình có tồn tại không? đang ở trạng thái nào? các luồng đang làm gì? tệp (file / 파일) descriptor và socket ra sao? giới hạn tài nguyên thế nào? endpoint của dịch vụ có khỏe không?
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -174,7 +177,7 @@ Khi gỡ lỗi, đừng chỉ hỏi "Java có chạy không?". Hãy tách thành
 
 **"Zombie đang ăn CPU."** Zombie đã kết thúc; vấn đề là tiến trình cha chưa thu nhận trạng thái và có thể làm tích tụ mục trong bảng tiến trình nếu số lượng lớn.
 
-**"Chạy nền bằng `&` nghĩa là đã có daemon production."** `&` chỉ thay đổi quan hệ điều khiển tác vụ với shell.
+**"Chạy nền bằng `&` nghĩa là đã có daemon môi trường vận hành (production / 운영 환경)."** `&` chỉ thay đổi quan hệ điều khiển tác vụ với shell.
 
 **"Tiến trình tồn tại nghĩa là endpoint khỏe."** Cần xác minh thêm ở tầng ứng dụng và mạng.
 

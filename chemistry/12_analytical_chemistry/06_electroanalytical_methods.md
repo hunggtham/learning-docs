@@ -1,5 +1,8 @@
 # Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng
 
+> **Mạch đọc:** Đọc **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ba cửa sổ đo của điện phân tích** sang **Điện thế**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa điện phân tích (electroanalytical chemistry / 전기분석화학)** sử dụng các hiện tượng điện hóa để nhận biết hoặc định lượng chất trong mẫu. Điện thế phản ánh trạng thái nhiệt động gần cân bằng, dòng phản ánh tốc độ truyền điện tích và vận chuyển chất, còn điện lượng phản ánh tổng số electron đã trao đổi. Muốn từ ba tín hiệu này suy ra nồng độ đáng tin cậy, phải kiểm soát thêm điện cực, ma trận mẫu, hiệu chuẩn, phản ứng phụ và độ không đảm bảo.
 
 Chương này tập trung vào **phép đo và suy luận phân tích**. Lý thuyết chi tiết về Butler–Volmer, Tafel, khuếch tán, RDE và EIS được đặt tại [Động học điện hóa và trở kháng](../09_redox_and_electrochemistry/06_electrochemical_kinetics_and_impedance.md). Cách phân chia này tránh lặp nội dung: điện hóa học giải thích cơ chế, còn điện phân tích hỏi cách dùng cơ chế đó để tạo số liệu hóa học đáng tin cậy.
@@ -128,7 +131,7 @@ nồng độ của chúng lớn bao nhiêu?
 điện cực chọn lọc mục tiêu tốt hơn chúng tới mức nào?
 ```
 
-Một ISE hoạt động tốt trong chuẩn đơn giản có thể cho bias lớn trong nước biển, huyết thanh hoặc dịch công nghiệp có lực ion cao.
+Một ISE hoạt động tốt trong chuẩn đơn giản có thể cho độ lệch (bias / 편향) lớn trong nước biển, huyết thanh hoặc dịch công nghiệp có lực ion cao.
 
 ## Lực ion và dung dịch điều chỉnh
 
@@ -186,11 +189,11 @@ Do đó thiết kế dạng xung, chọn thời điểm đọc tín hiệu và t
 
 Chất phân tích tới bề mặt bằng ba cơ chế chính:
 
-1. **khuếch tán (diffusion)** do gradient nồng độ;
+1. **khuếch tán (diffusion)** do độ dốc (gradient / 기울기) nồng độ;
 2. **đối lưu (convection)** do dòng chất lỏng hoặc khuấy;
 3. **di chuyển trong điện trường (migration)** của ion.
 
-Trong nhiều phép voltammetry, điện ly nền được thêm với nồng độ lớn để giảm đóng góp migration của chất phân tích, làm bài toán chủ yếu phụ thuộc khuếch tán.
+Trong nhiều phép voltammetry, điện ly nền được thêm với nồng độ lớn để giảm đóng góp di chuyển (migration / 마이그레이션) của chất phân tích, làm bài toán chủ yếu phụ thuộc khuếch tán.
 
 Định luật Fick:
 
@@ -292,7 +295,7 @@ Sau bước nhảy điện thế, dòng khuếch tán trên điện cực phẳn
 i(t)=nFAC\sqrt{\frac{D}{\pi t}}
 \]
 
-Theo thời gian, lớp khuếch tán dày hơn và gradient nồng độ giảm, nên dòng giảm.
+Theo thời gian, lớp khuếch tán dày hơn và độ dốc (gradient / 기울기) nồng độ giảm, nên dòng giảm.
 
 Đây là một ví dụ tốt cho việc tín hiệu điện hóa không chỉ phụ thuộc nồng độ mà còn phụ thuộc **thời gian kể từ khi điều kiện biên thay đổi**.
 
@@ -350,7 +353,7 @@ Nhiệt độ ảnh hưởng mạnh vì độ nhớt và độ linh động ion 
 
 ## Chuẩn độ dẫn điện
 
-Trong chuẩn độ acid mạnh bằng base mạnh, \(H^+\) có độ linh động rất cao dần bị thay bằng các ion kém linh động hơn, nên độ dẫn giảm.
+Trong chuẩn độ acid mạnh bằng cơ sở (base / 기반) mạnh, \(H^+\) có độ linh động rất cao dần bị thay bằng các ion kém linh động hơn, nên độ dẫn giảm.
 
 Sau điểm tương đương, \(OH^-\) dư làm độ dẫn tăng trở lại.
 
@@ -364,7 +367,7 @@ Trong **stripping voltammetry**, chất phân tích được tích lũy trước
 
 Bước làm giàu trước giúp tăng độ nhạy cho phân tích vết.
 
-Trade-off là phương pháp trở nên nhạy với:
+Sự đánh đổi (trade-off / 트레이드오프) là phương pháp trở nên nhạy với:
 
 - trạng thái bề mặt;
 - thời gian tích lũy;
@@ -540,7 +543,7 @@ Không nhất thiết. Dòng còn phụ thuộc nồng độ, khuếch tán, di�
 
 ### “EIS khớp được mạch đẹp nghĩa cảm biến có cơ chế đúng”
 
-Không. Nhiều mô hình có thể khớp tương tự; cần bằng chứng hóa học và validation độc lập.
+Không. Nhiều mô hình có thể khớp tương tự; cần bằng chứng hóa học và kiểm tra hợp lệ (validation / 검증) độc lập.
 
 ### “Cảm biến càng nhạy càng tốt”
 
@@ -561,3 +564,5 @@ nồng độ / activity / trạng thái hóa học
 Thiết bị chỉ đo tín hiệu ở giữa chuỗi. Chất lượng kết quả phụ thuộc việc hiểu và kiểm soát toàn bộ các bước nối tín hiệu đó với lượng chất cần báo cáo.
 
 Xem tiếp: [Thẩm định phương pháp và chemometrics](./07_method_validation_and_chemometrics.md). Đối với lý thuyết điện hóa sâu hơn, xem [Điện thế pin và phương trình Nernst](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md) và [Động học điện hóa và trở kháng](../09_redox_and_electrochemistry/06_electrochemical_kinetics_and_impedance.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

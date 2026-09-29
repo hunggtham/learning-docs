@@ -1,10 +1,13 @@
 # Người dùng, nhóm, quyền truy cập và đặc quyền
 
+> **Mạch đọc:** Đọc **Người dùng, nhóm, quyền truy cập và đặc quyền** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Người dùng không chỉ là tên đăng nhập** sang **Các bit quyền truy cập**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Mô hình quyền của Linux tồn tại vì một máy có thể chạy nhiều tiến trình thuộc nhiều danh tính bảo mật khác nhau nhưng cùng chia sẻ hệ thống tệp, mạng và thiết bị. Câu hỏi nền tảng không phải "nên chmod số nào?" mà là: **tiến trình nào đang yêu cầu thao tác trên đối tượng nào, với thông tin xác thực nào, và kernel đang áp dụng chính sách nào?**
 
 ## Người dùng không chỉ là tên đăng nhập
 
-Kernel chủ yếu làm việc với **UID (User ID)** và **GID (Group ID)** dạng số. Tên người dùng và tên nhóm là ánh xạ dễ đọc cho con người do cơ sở dữ liệu không gian người dùng như `/etc/passwd`, `/etc/group` hoặc dịch vụ thư mục cung cấp.
+Kernel chủ yếu làm việc với **UID (user ID)** và **GID (Group ID)** dạng số. Tên người dùng và tên nhóm là ánh xạ dễ đọc cho con người do cơ sở dữ liệu không gian người dùng như `/etc/passwd`, `/etc/group` hoặc dịch vụ thư mục cung cấp.
 
 ```bash
 id
@@ -26,14 +29,14 @@ ps -o user,group,pid,cmd -p <PID>
 Chế độ quyền Unix truyền thống chia thành chủ sở hữu (owner), nhóm (group), người khác (others) và ba quyền cơ bản:
 
 - `r` — đọc (read);
-- `w` — ghi (write);
+- `w` — ghi (write / 쓰기);
 - `x` — thực thi hoặc đi xuyên thư mục (execute/search).
 
 ```text
 -rwxr-x---
 ```
 
-Có thể đọc thành: owner `rwx`, group `r-x`, others `---`.
+Có thể đọc thành: đơn vị sở hữu (owner / 오너) `rwx`, group `r-x`, others `---`.
 
 Cách viết bằng số dùng các giá trị bit 4/2/1:
 
@@ -78,7 +81,7 @@ làm thay đổi người sở hữu và nhóm. Thao tác đệ quy:
 chown -R app:app /opt/app
 ```
 
-có phạm vi ảnh hưởng lớn. Một thói quen tốt trong production là kiểm tra cây thư mục trước và tránh chạy lệnh đệ quy trên đường dẫn chưa được xác minh.
+có phạm vi ảnh hưởng lớn. Một thói quen tốt trong môi trường vận hành (production / 운영 환경) là kiểm tra cây thư mục trước và tránh chạy lệnh đệ quy trên đường dẫn chưa được xác minh.
 
 ## Vì sao `chmod -R 777` là một cách làm không tốt?
 
@@ -126,13 +129,13 @@ Sau khi thêm một người dùng vào nhóm, phiên đăng nhập hiện tại
 
 ## `sudo`: ủy quyền đặc quyền
 
-`sudo` không đơn giản là "biến thành root". Nó áp dụng chính sách để cho phép một danh tính chạy câu lệnh dưới danh tính đích, thường là `root`.
+`sudo` không đơn giản là "biến thành gốc (root / 루트)". Nó áp dụng chính sách để cho phép một danh tính chạy câu lệnh dưới danh tính đích, thường là `root`.
 
 ```bash
 sudo systemctl restart nginx
 ```
 
-Cách này thường tốt hơn giữ một shell root trong thời gian dài vì hành động cụ thể hơn và dễ kiểm tra lịch sử hơn.
+Cách này thường tốt hơn giữ một shell gốc (root / 루트) trong thời gian dài vì hành động cụ thể hơn và dễ kiểm tra lịch sử hơn.
 
 ```bash
 sudo -u appuser env
@@ -140,9 +143,9 @@ sudo -u appuser env
 
 chạy câu lệnh dưới danh tính khác, hữu ích khi muốn tái hiện môi trường và quyền của tài khoản dịch vụ.
 
-`sudo -i` mở shell đăng nhập của root và nên dùng thận trọng vì từ thời điểm đó mọi câu lệnh đều có phạm vi ảnh hưởng lớn hơn.
+`sudo -i` mở shell đăng nhập của gốc (root / 루트) và nên dùng thận trọng vì từ thời điểm đó mọi câu lệnh đều có phạm vi ảnh hưởng lớn hơn.
 
-## ACL: khi owner/group/others chưa đủ
+## ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ
 
 **Danh sách kiểm soát truy cập (Access Control List / ACL)** theo POSIX cho phép cấp quyền chi tiết cho thêm người dùng hoặc nhóm mà không phải thay đổi mô hình chủ sở hữu chính.
 
@@ -167,9 +170,9 @@ Tệp thực thi có `setuid` có thể làm tiến trình nhận `effective UID
 
 ## Capabilities
 
-Trong Unix truyền thống, root mang một gói đặc quyền rất lớn. **Linux capabilities** chia một phần đặc quyền thành các đơn vị nhỏ hơn như `CAP_NET_BIND_SERVICE`.
+Trong Unix truyền thống, gốc (root / 루트) mang một gói đặc quyền rất lớn. **Linux capabilities** chia một phần đặc quyền thành các đơn vị nhỏ hơn như `CAP_NET_BIND_SERVICE`.
 
-Ví dụ một tiến trình có thể được phép gắn vào cổng đặc quyền mà không cần toàn bộ quyền root, tùy mô hình triển khai. Đây là cách nguyên tắc đặc quyền tối thiểu được đưa xuống mức thông tin xác thực của kernel.
+Ví dụ một tiến trình có thể được phép gắn vào cổng đặc quyền mà không cần toàn bộ quyền gốc (root / 루트), tùy mô hình triển khai. Đây là cách nguyên tắc đặc quyền tối thiểu được đưa xuống mức thông tin xác thực của kernel.
 
 ## SELinux và AppArmor
 
@@ -188,7 +191,7 @@ chmod 700 ~/.ssh
 
 Đây không phải sự khó chịu vô lý. Khóa riêng tư là bí mật xác thực; nếu người dùng khác đọc được thì ranh giới danh tính không còn ý nghĩa.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Đừng chỉ hỏi "tệp có quyền gì?". Hãy nhìn toàn bộ chuỗi quyết định:
 
@@ -212,7 +215,7 @@ Quyền truy cập là một quyết định đối với **một thao tác cụ
 
 **"`777` giải quyết được vấn đề quyền."** Nó chỉ mở DAC rất rộng và có thể hoàn toàn không chạm tới nguyên nhân thật.
 
-**"Root luôn không bị giới hạn."** Namespace, capability, MAC, mount chỉ đọc và chính sách container vẫn có thể giới hạn hoạt động.
+**"gốc (root / 루트) luôn không bị giới hạn."** không gian tên (namespace / 네임스페이스), năng lực (capability / 역량), MAC, mount chỉ đọc và chính sách bộ chứa (container / 컨테이너) vẫn có thể giới hạn hoạt động.
 
 **"Tệp ghi được thì chắc chắn xóa được."** `unlink` phụ thuộc mục thư mục và quyền của thư mục chứa.
 

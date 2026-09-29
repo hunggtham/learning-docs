@@ -1,5 +1,8 @@
 # Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất
 
+> **Mạch đọc:** Đọc **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao từ trường phụ thuộc hệ quy chiếu?** sang **Bốn-thế điện từ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Điện động lực học tương đối tính (relativistic electrodynamics / 상대론적 전기동역학) viết điện trường, từ trường, điện tích và dòng điện trong ngôn ngữ không-thời gian để các định luật giữ cùng dạng dưới biến đổi Lorentz.
 
 Trong cách nhìn này, tensor trường điện từ (electromagnetic field tensor / 전자기장 텐서) gom `\mathbf E` và `\mathbf B` thành một đối tượng hình học thống nhất.
@@ -20,7 +23,7 @@ Thuyết tương đối hẹp giải quyết điều này bằng cách cho thấ
 A^\mu=\left(\frac{\phi}{c},\mathbf A\right),
 ```
 
-với dấu cụ thể phụ thuộc quy ước metric.
+với dấu cụ thể phụ thuộc quy ước chỉ số (metric / 지표).
 
 Biến đổi gauge có dạng hiệp biến
 
@@ -148,7 +151,7 @@ u=\frac12\left(
 \right).
 ```
 
-Mật độ động lượng liên hệ với vector Poynting:
+Mật độ động lượng liên hệ với véc-tơ (vector / 벡터) Poynting:
 
 ```math
 \mathbf g=\frac{\mathbf S}{c^2}.
@@ -195,7 +198,7 @@ Cấu trúc minimal coupling này xuất hiện lại trong cơ học lượng t
 
 Đây là cầu nối trực tiếp giữa thuyết tương đối, gauge potential và vật lý hạt.
 
-## Worked reasoning: dây dẫn có dòng điện
+## Worked lập luận (reasoning / 추론): dây dẫn có dòng điện
 
 Một dây trung hòa trong hệ phòng thí nghiệm gồm mạng ion dương gần đứng yên và electron dẫn chuyển động.
 
@@ -231,11 +234,11 @@ Bất biến giúp loại bỏ nhiều khả năng trước khi làm đại số
 
 ## Miền áp dụng và quy ước
 
-Dấu trong `F^{\mu\nu}`, `A^\mu` và tensor metric phụ thuộc quy ước ký hiệu. Khi so sánh giáo trình, cần kiểm tra metric signature và định nghĩa thành phần.
+Dấu trong `F^{\mu\nu}`, `A^\mu` và tensor chỉ số (metric / 지표) phụ thuộc quy ước ký hiệu. Khi so sánh giáo trình, cần kiểm tra chỉ số (metric / 지표) signature và định nghĩa thành phần.
 
 Điện động lực học cổ điển tương đối tính vẫn là lý thuyết cổ điển. Khi phát xạ từng photon, hiệu ứng chân không lượng tử hoặc quá trình tạo–hủy hạt quan trọng, cần điện động lực học lượng tử.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Thuyết tương đối không chỉ “sửa thêm vài công thức” cho điện từ học. Nó cho thấy điện trường và từ trường là hai cách người quan sát phân tách cùng một tensor không-thời gian.
 
@@ -268,8 +271,10 @@ Hiệu chỉnh số có thể nhỏ ở vận tốc thấp, nhưng cấu trúc k
 
 Không. Nó làm các bất biến và tính hiệp biến hiện rõ, đồng thời giảm nguy cơ áp dụng sai công thức ba-vectơ giữa các hệ quy chiếu.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md), [Maxwell](04_maxwell_em_waves.md), [Thế điện từ và gauge](06_potentials_gauge.md).
 
 **Liên hệ tiếp:** [Bức xạ và anten](08_radiation_scattering_antennas.md), [Trường lượng tử](../09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

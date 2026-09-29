@@ -1,5 +1,8 @@
 # Tiền, hệ thống tài chính và cơ chế vận hành thị trường
 
+> **Mạch đọc:** Đặt **Tiền, hệ thống tài chính và cơ chế vận hành thị trường** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu từ tiền thay vì bắt đầu từ cổ phiếu** sang **2. Tiền gửi ngân hàng và tạo tín dụng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này xây nền cho toàn bộ thư viện đầu tư. Sau khi đọc xong, bạn không chỉ biết cổ phiếu, trái phiếu hay ETF là gì, mà phải hiểu tiền đi qua hệ thống nào, quyền sở hữu và nghĩa vụ được ghi nhận ở đâu, lệnh được khớp thế nào, chi phí ẩn xuất hiện ở đâu và vì sao giá thị trường có thể tách khỏi giá trị nội tại trong ngắn hạn.
 
 ## 1. Bắt đầu từ tiền thay vì bắt đầu từ cổ phiếu
@@ -102,9 +105,9 @@ Nếu bid = 99 và ask = 100, người mua ngay có thể trả gần 100 còn n
 
 Spread thường rộng hơn khi thanh khoản thấp, biến động cao, bất định thông tin lớn hoặc nhà tạo lập chịu rủi ro tồn kho cao.
 
-Sổ lệnh chứa các lệnh giới hạn đang chờ. Độ sâu (depth) cho biết khối lượng ở nhiều mức giá. Một chứng khoán có thanh khoản ngày cao nhưng độ sâu thấp đúng lúc bạn giao dịch vẫn có thể tạo trượt giá lớn.
+Sổ lệnh chứa các lệnh giới hạn đang chờ. độ sâu (depth / 깊이) cho biết khối lượng ở nhiều mức giá. Một chứng khoán có thanh khoản ngày cao nhưng độ sâu thấp đúng lúc bạn giao dịch vẫn có thể tạo trượt giá lớn.
 
-## 10. Market, limit, stop và stop-limit
+## 10. thị trường (market / 시장), limit, stop và stop-limit
 
 Lệnh thị trường (market order) ưu tiên khả năng khớp, không bảo đảm giá chính xác. Khi thị trường có gap hoặc hoảng loạn, giá khớp có thể cách xa giá gần nhất.
 
@@ -118,7 +121,7 @@ Các điều kiện thời gian như DAY, GTC, IOC hoặc FOK mô tả lệnh t�
 
 ## 11. Ưu tiên giá–thời gian và đấu giá
 
-Nhiều sở giao dịch điện tử sử dụng logic gần với ưu tiên giá–thời gian (price-time priority): giá tốt hơn được ưu tiên trước; trong cùng giá, lệnh vào trước thường được ưu tiên trước.
+Nhiều sở giao dịch điện tử sử dụng lô-gic (logic / 논리) gần với ưu tiên giá–thời gian (price-time priority): giá tốt hơn được ưu tiên trước; trong cùng giá, lệnh vào trước thường được ưu tiên trước.
 
 Vì vậy đặt lệnh giới hạn đúng giá mua tốt nhất không có nghĩa sẽ được khớp ngay nếu trước bạn có hàng đợi lớn.
 
@@ -160,7 +163,7 @@ Thanh khoản có thay đổi không?
 
 ## 14. ETF, NAV và cơ chế tạo–mua lại
 
-Cổ phiếu ETF giao dịch trên sở nhưng quỹ đồng thời sở hữu hoặc mô phỏng một rổ tài sản. Giá trị tài sản ròng (Net Asset Value, NAV) phản ánh giá trị tài sản trừ nghĩa vụ trên mỗi chứng chỉ quỹ theo phương pháp tính.
+Cổ phiếu ETF giao dịch trên sở nhưng quỹ đồng thời sở hữu hoặc mô phỏng một rổ tài sản. Giá trị tài sản ròng (Net Asset value, NAV) phản ánh giá trị tài sản trừ nghĩa vụ trên mỗi chứng chỉ quỹ theo phương pháp tính.
 
 Thành viên tạo lập (Authorized Participant, AP) có thể tạo hoặc mua lại chứng chỉ ETF bằng rổ chứng khoán hoặc tiền mặt. Cơ chế chênh lệch giá này thường giúp giá ETF bám NAV.
 
@@ -246,3 +249,5 @@ Tiền / Nguồn vốn
 ```
 
 Hiểu chuỗi này giúp tránh một lỗi phổ biến: tập trung hoàn toàn vào dự báo giá nhưng không hiểu mình đang nắm quyền gì, qua pháp nhân nào và có thể mất tiền ở lớp vận hành nào.
+
+> **Bàn giao:** Sau **22. Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

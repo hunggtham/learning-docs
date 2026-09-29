@@ -1,67 +1,72 @@
-# Threat model và security principles
+# Threat mô hình (model / 모델) và bảo mật (security / 보안) principles
 
-Security (보안 / an toàn thông tin) không bắt đầu bằng encryption. Nó bắt đầu bằng câu hỏi: **ta đang bảo vệ asset nào, khỏi actor nào, qua attack surface nào, và property nào phải được giữ?** Không có threat model, từ “secure” quá mơ hồ để kiểm chứng.
+> **Mạch đọc:** Đặt **Threat mô hình (model / 모델) và bảo mật (security / 보안) principles** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **bảo mật (security / 보안) properties** sang **Threat mô hình (model / 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Security properties
 
-CIA triad là mental model cổ điển: Confidentiality giữ bí mật khỏi unauthorized readers; Integrity ngăn/nhận biết unauthorized modification; Availability giữ service/resources usable khi cần.
+Bảo mật (security / 보안) không bắt đầu bằng encryption. Nó bắt đầu bằng câu hỏi: **ta đang bảo vệ asset nào, khỏi actor nào, qua attack surface nào, và thuộc tính (property / 속성) nào phải được giữ?** Không có threat mô hình (model / 모델), từ “secure” quá mơ hồ để kiểm chứng.
 
-Ngoài ra còn authenticity (đúng thực thể), accountability/auditability, non-repudiation trong context phù hợp, privacy và safety. Một system có confidentiality mạnh nhưng availability tệ vẫn không “secure” theo nhu cầu vận hành.
+## Bảo mật (security / 보안) properties
 
-## Threat model
+CIA triad là mô hình tư duy (mental model / 사고 모델) cổ điển: Confidentiality giữ bí mật khỏi unauthorized readers; Integrity ngăn/nhận biết unauthorized modification; Availability giữ dịch vụ (service / 서비스)/resources usable khi cần.
 
-Threat model (위협 모델) xác định assets, trust boundaries, actors/capabilities, entry points và abuse cases. Internet attacker khác malicious insider; compromised application process khác physical attacker; nation-state khác opportunistic bot.
+Ngoài ra còn authenticity (đúng thực thể), accountability/auditability, non-repudiation trong ngữ cảnh (context / 맥락) phù hợp, privacy và an toàn (safety / 안전). Một hệ thống (system / 시스템) có confidentiality mạnh nhưng availability tệ vẫn không “secure” theo nhu cầu vận hành.
 
-Một control chỉ có ý nghĩa relative to threat. Disk encryption bảo vệ stolen powered-off laptop nhưng không ngăn malware đọc plaintext khi user logged in.
+## Threat mô hình (model / 모델)
 
-## Trust boundary
+Threat mô hình (model / 모델) xác định assets, trust boundaries, actors/capabilities, entry points và abuse cases. Internet attacker khác malicious insider; compromised ứng dụng (application / 애플리케이션) tiến trình (process / 프로세스) khác vật lý (physical / 물리적) attacker; nation-state khác opportunistic bot.
 
-Trust boundary là nơi data/control đi từ context có trust assumptions khác sang context khác: browser→server, user input→SQL, app→kernel, service A→service B, tenant→shared platform.
+Một điều khiển (control / 제어) chỉ có ý nghĩa relative to threat. Disk encryption bảo vệ stolen powered-off laptop nhưng không ngăn malware đọc plaintext khi người dùng (user / 사용자) logged in.
 
-Mọi boundary cần validation/authentication/authorization theo risk. “Internal network” không nên mặc định trusted tuyệt đối vì compromised internal service có thể pivot.
+## Trust ranh giới (boundary / 경계)
+
+Trust ranh giới (boundary / 경계) là nơi dữ liệu (data / 데이터)/điều khiển (control / 제어) đi từ ngữ cảnh (context / 맥락) có trust các giả định (assumptions / 가정들) khác sang ngữ cảnh (context / 맥락) khác: trình duyệt (browser / 브라우저)→máy chủ (server / 서버), người dùng (user / 사용자) đầu vào (input / 입력)→SQL, app→kernel, dịch vụ (service / 서비스) A→dịch vụ (service / 서비스) B, tenant→dùng chung (shared / 공유) nền tảng (platform / 플랫폼).
+
+Mọi ranh giới (boundary / 경계) cần kiểm tra hợp lệ (validation / 검증)/authentication/authorization theo rủi ro (risk / 위험). “nội bộ (internal / 내부) mạng (network / 네트워크)” không nên mặc định trusted tuyệt đối vì compromised nội bộ (internal / 내부) dịch vụ (service / 서비스) có thể pivot.
 
 ## Principle of least privilege
 
-Mỗi identity/process chỉ được rights cần thiết, trong scope/time cần thiết. DB application account không nên DROP toàn schema nếu chỉ CRUD vài tables; container không nên privileged; API token không nên admin nếu chỉ read.
+Mỗi định danh (identity / 식별자)/tiến trình (process / 프로세스) chỉ được rights cần thiết, trong phạm vi (scope / 범위)/thời gian (time / 시간) cần thiết. DB ứng dụng (application / 애플리케이션) account không nên DROP toàn lược đồ (schema / 스키마) nếu chỉ CRUD vài tables; bộ chứa (container / 컨테이너) không nên privileged; API đơn vị từ (token / 토큰) không nên admin nếu chỉ read.
 
-Least privilege giảm blast radius nhưng tăng management complexity. Good design dùng roles/scopes/capabilities để quyền vừa đủ mà không trở thành permission chaos.
+Least privilege giảm blast radius nhưng tăng management độ phức tạp (complexity / 복잡도). Good thiết kế (design / 설계) dùng roles/scopes/capabilities để quyền vừa đủ mà không trở thành permission chaos.
 
-## Defense in depth
+## Defense in độ sâu (depth / 깊이)
 
-Không control nào hoàn hảo. TLS + authentication + authorization + input validation + sandbox + monitoring + backups bảo vệ different failure modes. Layers nên có failure independence tương đối; ba controls cùng phụ thuộc một secret không thật sự độc lập.
+Không điều khiển (control / 제어) nào hoàn hảo. TLS + authentication + authorization + đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) + sandbox + monitoring + backups bảo vệ different thất bại (failure / 실패) modes. Layers nên có thất bại (failure / 실패) independence tương đối; ba controls cùng phụ thuộc một secret không thật sự độc lập.
 
 ## Secure defaults và fail-safe defaults
 
-Default nên deny/least privilege, explicit opt-in cho dangerous access. Error path không được “nếu auth service timeout thì allow”. Fail-open đôi khi cần availability-critical systems, nhưng phải là deliberate risk trade-off.
+Default nên deny/least privilege, tường minh (explicit / 명시적) opt-in cho dangerous truy cập (access / 접근). lỗi (error / 오류) đường dẫn (path / 경로) không được “nếu auth dịch vụ (service / 서비스) hết thời gian chờ (timeout / 타임아웃) thì allow”. Fail-open đôi khi cần availability-critical các hệ thống (systems / 시스템들), nhưng phải là deliberate rủi ro (risk / 위험) sự đánh đổi (trade-off / 트레이드오프).
 
 ## Minimize attack surface
 
-Mỗi endpoint, parser, dependency, open port, privilege và feature là potential attack surface. Remove unused services, reduce exposed APIs, patch dependencies, constrain inputs. Simplicity có security value vì fewer states/interactions để reason.
+Mỗi endpoint, parser, phụ thuộc (dependency / 의존성), open cổng (port / 포트), privilege và tính năng (feature / 기능) là potential attack surface. Remove unused services, reduce exposed APIs, patch dependencies, constrain inputs. Simplicity có bảo mật (security / 보안) giá trị (value / 값) vì fewer states/interactions để reason.
 
 ## Complete mediation
 
-Authorization cần check mọi protected access, không chỉ UI path. Hiding button không bảo vệ server API. Cache cũng phải preserve authorization semantics; cache key thiếu tenant/user context có thể leak data.
+Authorization cần check mọi protected truy cập (access / 접근), không chỉ UI đường dẫn (path / 경로). Hiding button không bảo vệ máy chủ (server / 서버) API. bộ nhớ đệm (cache / 캐시) cũng phải preserve authorization ngữ nghĩa (semantics / 의미론); bộ nhớ đệm (cache / 캐시) key thiếu tenant/người dùng (user / 사용자) ngữ cảnh (context / 맥락) có thể leak dữ liệu (data / 데이터).
 
 ## Separation of duties
 
-Critical action có thể require multiple independent roles/approvals, giảm abuse hoặc single credential compromise. Deployment approval, key management và financial workflows thường áp dụng.
+Trọng yếu (critical / 중요) hành động (action / 동작) có thể require multiple independent roles/approvals, giảm abuse hoặc single credential compromise. triển khai (deployment / 배포) approval, key management và financial workflows thường áp dụng.
 
-## Security vs usability/performance
+## Bảo mật (security / 보안) vs usability/hiệu năng (performance / 성능)
 
-Controls có cost. MFA thêm friction; strong KDF tốn CPU; encryption adds overhead; short session expiry increases reauth. Good engineering quantify threat/cost thay vì bỏ security hoặc maximize friction.
+Controls có chi phí (cost / 비용). MFA thêm friction; strong KDF tốn CPU; encryption adds overhead; short session expiry increases reauth. Good kỹ thuật (engineering / 엔지니어링) quantify threat/chi phí (cost / 비용) thay vì bỏ bảo mật (security / 보안) hoặc maximize friction.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Security là **quản lý trust dưới adversarial behavior**. Bắt đầu từ asset → threat → boundary → invariant → control → residual risk, không bắt đầu từ danh sách công nghệ.
+> bảo mật (security / 보안) là **quản lý trust dưới adversarial hành vi (behavior / 동작)**. Bắt đầu từ asset → threat → ranh giới (boundary / 경계) → bất biến (invariant / 불변식) → điều khiển (control / 제어) → residual rủi ro (risk / 위험), không bắt đầu từ danh sách công nghệ.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 **“Dùng HTTPS là secure.”** TLS bảo channel, không sửa broken authorization, injection hay compromised endpoint.
 
-**“Ở internal network thì trusted.”** Network location chỉ là một signal; identity/authorization vẫn cần.
+**“Ở nội bộ (internal / 내부) mạng (network / 네트워크) thì trusted.”** mạng (network / 네트워크) location chỉ là một tín hiệu (signal / 신호); định danh (identity / 식별자)/authorization vẫn cần.
 
-**“Security là feature thêm cuối.”** Data model, privilege boundary và protocol design quyết định rất nhiều properties từ đầu.
+**“bảo mật (security / 보안) là tính năng (feature / 기능) thêm cuối.”** mô hình dữ liệu (data model / 데이터 모델), privilege ranh giới (boundary / 경계) và giao thức (protocol / 프로토콜) thiết kế (design / 설계) quyết định rất nhiều properties từ đầu.
 
 ## Kết nối
 
-OS isolation ở [privilege/virtualization](../03_operating_systems/05_privilege_isolation_and_virtualization.md). Cryptographic mechanisms ở [cryptography](./01_cryptography_foundations.md); identity/access ở [authentication/authorization](./02_identity_authentication_and_authorization.md); implementation failures ở [vulnerabilities](./03_software_vulnerabilities.md).
+OS isolation ở [privilege/virtualization](../03_operating_systems/05_privilege_isolation_and_virtualization.md). Cryptographic mechanisms ở [cryptography](./01_cryptography_foundations.md); định danh (identity / 식별자)/truy cập (access / 접근) ở [authentication/authorization](./02_identity_authentication_and_authorization.md); hiện thực (implementation / 구현) failures ở [vulnerabilities](./03_software_vulnerabilities.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 cryptography foundations](./01_cryptography_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

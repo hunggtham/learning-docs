@@ -1,5 +1,8 @@
 # Thể thao, giải trí và văn hoá người hâm mộ
 
+> **Mạch đọc:** Đặt **Thể thao, giải trí và văn hoá người hâm mộ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thời gian rảnh cho thấy xã hội phân bổ thời gian, tiền và không gian như thế nào** sang **워라밸: thời gian rảnh như một yêu cầu về quyền đối với thời gian cá nhân**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Thời gian rảnh cho thấy xã hội phân bổ thời gian, tiền và không gian như thế nào
 
 **Giải trí và thời gian rảnh (여가 / leisure)** không chỉ là “không làm việc”. Nó phụ thuộc giờ làm, thu nhập, trách nhiệm gia đình, tuổi, giao thông và hạ tầng sẵn có. Hai người có cùng sở thích nhưng một người đi làm 90 phút, người kia làm gần nhà sẽ có ngân sách thời gian rảnh rất khác.
@@ -379,7 +382,7 @@ Văn hoá người hâm mộ lành mạnh cần ranh giới giữa tham gia nhi�
 
 ## 자기계발형 여가: khi thời gian rảnh vẫn phải “có ích”
 
-Lớp ngoại ngữ, học chứng chỉ, câu lạc bộ sách, phòng tập hoặc dự án lập trình phụ có thể vừa là giải trí vừa là đầu tư. `자기계발` làm thời gian rảnh mang một phần logic năng suất.
+Lớp ngoại ngữ, học chứng chỉ, câu lạc bộ sách, phòng tập hoặc dự án lập trình phụ có thể vừa là giải trí vừa là đầu tư. `자기계발` làm thời gian rảnh mang một phần lô-gic (logic / 논리) năng suất.
 
 Điều này không có nghĩa người Hàn “không biết nghỉ”. Một người có thể thật sự thích sở thích mang tính phát triển bản thân. Câu hỏi là hoạt động xuất phát từ niềm vui nội tại, áp lực bên ngoài hay cả hai.
 
@@ -437,9 +440,9 @@ người đến
 → kết nối giao thông
 ```
 
-Mỗi bước có công suất riêng. Nếu một bước quá yếu, trải nghiệm toàn chuỗi suy giảm. Đây là cùng logic với dịch vụ đô thị và hệ thống phần mềm: **điểm nghẽn thường nằm ở mắt xích yếu nhất, không phải ở trung bình toàn hệ thống**.
+Mỗi bước có công suất riêng. Nếu một bước quá yếu, trải nghiệm toàn chuỗi suy giảm. Đây là cùng lô-gic (logic / 논리) với dịch vụ đô thị và hệ thống phần mềm: **điểm nghẽn thường nằm ở mắt xích yếu nhất, không phải ở trung bình toàn hệ thống**.
 
-## Mô hình tư duy (mental model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Giải trí ở Hàn Quốc là nơi **địa lý, ngân sách thời gian, khả năng cơ thể, công nghệ, thị trường, quản trị sự kiện và danh tính** gặp nhau. Núi tạo điều kiện cho leo núi; băng rộng tạo thể thao điện tử; mật độ đô thị tạo golf mô phỏng và địa điểm sở thích; thiết kế tiếp cận quyết định ai có thể dùng không gian; nền tảng tạo nhóm; cộng đồng người hâm mộ biến người xem thành người tham gia. Khi hoạt động có quy mô lớn, văn hoá người hâm mộ còn phụ thuộc vào hàng đợi, an toàn đám đông, lối thoát, giao thông và năng lực quản trị.
 
@@ -462,3 +465,5 @@ Mỗi bước có công suất riêng. Nếu một bước quá yếu, trải ng
 “Bán đúng số vé theo sức chứa nghĩa là đám đông tự động an toàn” là sai; luồng người, điểm nghẽn, lối thoát và giao thông sau sự kiện mới quyết định rủi ro thực tế.
 
 “Hàng đợi mua vé chỉ là vấn đề mạng nhanh/chậm” bỏ qua quy tắc phân bổ, xác thực, chống đầu cơ và thiết kế công bằng của nền tảng.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (common misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

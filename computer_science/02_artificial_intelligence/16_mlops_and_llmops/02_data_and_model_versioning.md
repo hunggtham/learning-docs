@@ -1,6 +1,9 @@
-# Version hóa Dữ liệu và Mô hình
+# Phiên bản (version / 버전) hóa Dữ liệu và Mô hình
 
-Một hệ thống ML chỉ có thể tái lập tốt khi **dữ liệu, mã nguồn và artifact mô hình đều có danh tính rõ ràng**. Git quản lý mã nguồn rất tốt, nhưng tập dữ liệu lớn, bảng có thể thay đổi và đặc trưng được sinh tự động cần cơ chế versioning và lineage riêng.
+> **Mạch đọc:** Đặt **phiên bản (version / 버전) hóa Dữ liệu và Mô hình** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Phiên bản dữ liệu là gì?** sang **Dữ liệu có thể thay đổi nguy hiểm ở đâu?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Một hệ thống ML chỉ có thể tái lập tốt khi **dữ liệu, mã nguồn và sản phẩm tạo ra (artifact / 산출물) mô hình đều có danh tính rõ ràng**. Git quản lý mã nguồn rất tốt, nhưng tập dữ liệu lớn, bảng có thể thay đổi và đặc trưng được sinh tự động cần cơ chế versioning và lineage riêng.
 
 ## Phiên bản dữ liệu là gì?
 
@@ -38,23 +41,23 @@ mô hình nào dùng tập dữ liệu đó?
 
 Lineage hai chiều hỗ trợ phân tích ảnh hưởng (impact analysis): nếu một bảng nguồn thay đổi, những mô hình nào sẽ bị ảnh hưởng?
 
-## Version hóa Schema
+## Phiên bản (version / 버전) hóa lược đồ (schema / 스키마)
 
-Sự tiến hóa schema cần hợp đồng rõ. Đổi tên cột, đổi đơn vị hoặc đổi semantics có thể không gây lỗi cú pháp nhưng vẫn phá mô hình một cách âm thầm.
+Sự tiến hóa lược đồ (schema / 스키마) cần hợp đồng rõ. Đổi tên cột, đổi đơn vị hoặc đổi ngữ nghĩa (semantics / 의미론) có thể không gây lỗi cú pháp nhưng vẫn phá mô hình một cách âm thầm.
 
-Nên theo dõi cả metadata ngữ nghĩa như đơn vị, múi giờ, encoding và khoảng giá trị hợp lệ.
+Nên theo dõi cả siêu dữ liệu (metadata / 메타데이터) ngữ nghĩa như đơn vị, múi giờ, encoding và khoảng giá trị hợp lệ.
 
-## Version hóa đặc trưng
+## Phiên bản (version / 버전) hóa đặc trưng
 
-Một định nghĩa đặc trưng (feature definition) thực chất gồm mã nguồn, dependency dữ liệu và semantics theo thời gian.
+Một định nghĩa đặc trưng (feature definition) thực chất gồm mã nguồn, phụ thuộc (dependency / 의존성) dữ liệu và ngữ nghĩa (semantics / 의미론) theo thời gian.
 
 Ví dụ `avg_spend_30d` phải xác định rõ cửa sổ thời gian, múi giờ, loại giao dịch bị loại và thời điểm cutoff.
 
-Tính nhất quán giữa huấn luyện và phục vụ yêu cầu logic đặc trưng online tương thích với định nghĩa offline.
+Tính nhất quán giữa huấn luyện và phục vụ yêu cầu lô-gic (logic / 논리) đặc trưng online tương thích với định nghĩa offline.
 
-## Phiên bản Artifact của mô hình
+## Phiên bản sản phẩm tạo ra (artifact / 산출물) của mô hình
 
-Phiên bản mô hình không chỉ là trọng số. Gói artifact nên gắn cùng:
+Phiên bản mô hình không chỉ là trọng số. Gói sản phẩm tạo ra (artifact / 산출물) nên gắn cùng:
 
 ```text
 trọng số
@@ -71,7 +74,7 @@ Với ứng dụng LLM hoặc RAG còn cần phiên bản prompt và cấu hình
 
 ## Phiên bản ngữ nghĩa và ID bất biến
 
-Hash bất biến hoặc run ID phù hợp cho truy vết. Phiên bản phát hành dễ đọc phù hợp cho giao tiếp giữa con người.
+Băm (hash / 해시) bất biến hoặc run ID phù hợp cho truy vết. Phiên bản phát hành dễ đọc phù hợp cho giao tiếp giữa con người.
 
 Có thể dùng cả hai:
 
@@ -82,15 +85,15 @@ artifact sha: abc123...
 
 ## Checksum dữ liệu
 
-Checksum phát hiện thay đổi ở mức byte nhưng không cho biết hai tập dữ liệu có tương đương về ngữ nghĩa hay không. Pipeline dữ liệu cần cả hash lẫn metadata.
+Checksum phát hiện thay đổi ở mức byte nhưng không cho biết hai tập dữ liệu có tương đương về ngữ nghĩa hay không. chuỗi xử lý (pipeline / 파이프라인) dữ liệu cần cả băm (hash / 해시) lẫn siêu dữ liệu (metadata / 메타데이터).
 
 ## Tập dữ liệu lớn
 
-Không nên sao chép toàn bộ tập dữ liệu cho mỗi thí nghiệm nếu chi phí lưu trữ quá lớn. Snapshot, manifest hoặc lưu trữ theo nội dung (content-addressed storage) có thể tái sử dụng các block không đổi.
+Không nên sao chép toàn bộ tập dữ liệu cho mỗi thí nghiệm nếu chi phí lưu trữ quá lớn. Snapshot, manifest hoặc lưu trữ theo nội dung (content-addressed storage) có thể tái sử dụng các khối (block / 블록) không đổi.
 
 ## Quyền riêng tư và xóa dữ liệu
 
-Versioning không có nghĩa giữ mọi dữ liệu vĩnh viễn. Yêu cầu xóa vì quyền riêng tư và chính sách lưu giữ phải được truyền qua snapshot, cache và lineage huấn luyện.
+Versioning không có nghĩa giữ mọi dữ liệu vĩnh viễn. Yêu cầu xóa vì quyền riêng tư và chính sách lưu giữ phải được truyền qua snapshot, bộ nhớ đệm (cache / 캐시) và lineage huấn luyện.
 
 Trong một số trường hợp cần biết mô hình nào từng huấn luyện từ dữ liệu phải xóa để đánh giá việc huấn luyện lại hoặc biện pháp khắc phục.
 
@@ -114,17 +117,17 @@ Artifact mô hình
 Triển khai
 ```
 
-Mỗi cạnh trong graph cần metadata có thể truy vết.
+Mỗi cạnh trong đồ thị (graph / 그래프) cần siêu dữ liệu (metadata / 메타데이터) có thể truy vết.
 
 ## Những nhầm lẫn thường gặp
 
-### “Git LFS là đủ cho version hóa dữ liệu”
+### “Git LFS là đủ cho phiên bản (version / 버전) hóa dữ liệu”
 
-Có thể đủ với tập dữ liệu nhỏ và ít thay đổi, nhưng snapshot kho dữ liệu hoặc lineage quy mô lớn cần abstraction khác.
+Có thể đủ với tập dữ liệu nhỏ và ít thay đổi, nhưng snapshot kho dữ liệu hoặc lineage quy mô lớn cần lớp trừu tượng (abstraction / 추상화) khác.
 
 ### “Phiên bản mô hình chỉ là tên checkpoint”
 
-Không. Tokenizer, schema và cấu hình cũng là một phần của mô hình có thể thực thi.
+Không. Tokenizer, lược đồ (schema / 스키마) và cấu hình cũng là một phần của mô hình có thể thực thi.
 
 ### “Càng nhiều snapshot càng tốt”
 
@@ -133,3 +136,5 @@ Không. Chi phí lưu trữ, thời hạn lưu giữ và ràng buộc quyền ri
 ## Liên kết kiến thức
 
 Xem [Experiment Tracking](./01_experiment_tracking_and_reproducibility.md), [Data Governance](../14_data_for_ai/08_data_governance.md), [Model Registry](./03_model_registry.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

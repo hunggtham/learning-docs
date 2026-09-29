@@ -1,8 +1,11 @@
-# Evaluation, Reliability & Interpretability
+# Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability
 
-Folder này trả lời câu hỏi: **làm sao biết một AI system thực sự tốt, ổn định, có thể giải thích và đáng tin trong use case cụ thể?** Nội dung đi từ evaluation design tới calibration, robustness, interpretability, behavioral testing, red teaming và reliability engineering.
+> **Mạch đọc:** Đọc **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Reading thứ tự (order / 순서)** sang **phụ thuộc (dependency / 의존성) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Reading order
+
+Folder này trả lời câu hỏi: **làm sao biết một AI hệ thống (system / 시스템) thực sự tốt, ổn định, có thể giải thích và đáng tin trong use trường hợp (case / 사례) cụ thể?** Nội dung đi từ evaluation thiết kế (design / 설계) tới calibration, robustness, interpretability, behavioral testing, red teaming và độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
+
+## Reading thứ tự (order / 순서)
 
 Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
@@ -17,7 +20,10 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 07_reliability_engineering.md
 ```
 
-## Dependency map
+
+> **Chuyển mạch:** Từ **Reading thứ tự (order / 순서)**, ta sang **phụ thuộc (dependency / 의존성) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Phụ thuộc (dependency / 의존성) map
 
 Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
@@ -36,7 +42,10 @@ flowchart TD
     RT --> REL
 ```
 
-## Mental model
+
+> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -49,6 +58,9 @@ Define contract
 → adversarially search failures
 → engineer bounded failure and recovery
 ```
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Distinctions cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Distinctions cần giữ
 
@@ -66,6 +78,9 @@ Red Teaming          ≠ One-Time Jailbreak Test
 HTTP Availability    ≠ Task Reliability
 Fallback             ≠ Always Safer
 ```
+
+
+> **Chuyển mạch:** Từ **Distinctions cần giữ**, ta sang **Cross-links** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cross-links
 

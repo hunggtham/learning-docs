@@ -1,8 +1,11 @@
 # 10. Cổng chính thức và workflow tự tra cứu
 
+> **Mạch đọc:** Đặt **10. Cổng chính thức và workflow tự tra cứu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Mục tiêu** sang **2. Pháp luật**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## 1. Mục tiêu
 
-Một người sống lâu dài tại Hàn Quốc nên biết **đi đâu trước khi hỏi cộng đồng**. File này là bản đồ cổng chính thức theo loại vấn đề.
+Một người sống lâu dài tại Hàn Quốc nên biết **đi đâu trước khi hỏi cộng đồng**. tệp (file / 파일) này là bản đồ cổng chính thức theo loại vấn đề.
 
 ## 2. Pháp luật
 
@@ -152,7 +155,7 @@ Thông tin về một số cơ chế bảo lãnh/보증 nhà ở; điều kiện
 
 ## 9. Người tiêu dùng
 
-### 소비자24 — consumer.go.kr
+### 소비자24 — bên tiêu thụ (consumer / 소비자).go.kr
 
 Tổng hợp thông tin tiêu dùng và một số dịch vụ giải quyết vấn đề.
 
@@ -168,7 +171,7 @@ Tổng hợp thông tin tiêu dùng và một số dịch vụ giải quyết v�
 
 ### 금융감독원 — fss.or.kr
 
-Thông tin giám sát tài chính, consumer guidance và tranh chấp.
+Thông tin giám sát tài chính, bên tiêu thụ (consumer / 소비자) guidance và tranh chấp.
 
 ### FINE — fine.fss.or.kr
 
@@ -198,13 +201,13 @@ KIIP và chương trình hội nhập xã hội.
 
 ## 12. Công thức tìm kiếm hiệu quả bằng tiếng Hàn
 
-Thay vì search:
+Thay vì tìm kiếm (search / 검색):
 
 ```text
 foreigners overtime korea
 ```
 
-hãy search:
+hãy tìm kiếm (search / 검색):
 
 ```text
 외국인 근로자 연장근로수당 고용노동부
@@ -216,7 +219,7 @@ Hoặc:
 F-5 영주 체류자격 변경 출입국관리법 시행규칙
 ```
 
-Cấu trúc query tốt:
+Cấu trúc truy vấn (query / 쿼리) tốt:
 
 ```text
 [đối tượng] + [vấn đề] + [tên cơ quan hoặc tên luật]
@@ -242,14 +245,16 @@ Nên lưu khi:
 - bạn chuẩn bị nộp hồ sơ;
 - có deadline;
 - có tranh chấp;
-- trang web chỉ hiển thị nội dung dynamic;
+- trang web chỉ hiển thị nội dung động (dynamic / 동적);
 - cần chứng minh thông tin cơ quan đã cung cấp tại thời điểm đó.
 
-Tên file nên có ngày:
+Tên tệp (file / 파일) nên có ngày:
 
 ```text
 2026-09-21_F5_required_documents.pdf
 2026-09-21_MOEL_overtime_FAQ.pdf
 ```
 
-Cách này biến việc tra cứu thành một audit trail có thể kiểm tra lại.
+Cách này biến việc tra cứu thành một kiểm tra (audit / 감사) trail có thể kiểm tra lại.
+
+> **Bàn giao:** Sau **14. Khi nào cần lưu PDF/screenshot?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

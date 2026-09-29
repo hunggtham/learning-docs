@@ -1,79 +1,84 @@
-# Delivery, configuration và operations
+# Delivery, cấu hình (configuration / 구성) và operations
 
-Code chỉ tạo value khi artifact đúng được đưa vào đúng environment với configuration đúng và có thể vận hành/recover. Software delivery nối source control, build, tests, artifact, deployment, runtime config, observability và rollback thành một chain.
+> **Mạch đọc:** Đọc **Delivery, cấu hình (configuration / 구성) và operations** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **bản dựng (build / 빌드) once, promote same sản phẩm tạo ra (artifact / 산출물)** sang **cấu hình (configuration / 구성)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Build once, promote same artifact
 
-Một principle mạnh là build artifact immutable một lần rồi promote qua environments, thay vì rebuild khác nhau cho staging/production. Điều này giảm “works in staging artifact khác production”.
+Mã (code / 코드) chỉ tạo giá trị (value / 값) khi sản phẩm tạo ra (artifact / 산출물) đúng được đưa vào đúng môi trường (environment / 환경) với cấu hình (configuration / 구성) đúng và có thể vận hành/recover. Software delivery nối nguồn (source / 소스) điều khiển (control / 제어), bản dựng (build / 빌드), tests, sản phẩm tạo ra (artifact / 산출물), triển khai (deployment / 배포), thời gian chạy (runtime / 런타임) cấu hình (config / 설정), khả năng quan sát (observability / 관측 가능성) và quay lui (rollback / 롤백) thành một chuỗi (chain / 사슬).
 
-Environment-specific behavior nên đến từ configuration hoặc injected secrets, không phải source branch divergent.
+## Bản dựng (build / 빌드) once, promote same sản phẩm tạo ra (artifact / 산출물)
 
-## Configuration
+Một principle mạnh là hiện vật bản dựng (build artifact / 빌드 산출물) immutable một lần rồi promote qua environments, thay vì rebuild khác nhau cho staging/môi trường vận hành (production / 운영 환경). Điều này giảm “works in staging sản phẩm tạo ra (artifact / 산출물) khác môi trường vận hành (production / 운영 환경)”.
 
-Configuration là data thay đổi deployment/runtime behavior mà không đổi code. Nhưng config cũng cần schema, validation, versioning và ownership.
+Environment-specific hành vi (behavior / 동작) nên đến từ cấu hình (configuration / 구성) hoặc injected secrets, không phải nguồn (source / 소스) branch divergent.
 
-Một typo config có thể outage như code bug. Config changes nên audit/test/rollback được.
+## Cấu hình (configuration / 구성)
 
-## Feature flags
+Cấu hình (configuration / 구성) là dữ liệu (data / 데이터) thay đổi triển khai (deployment / 배포)/hành vi thời gian chạy (runtime behavior / 런타임 동작) mà không đổi mã (code / 코드). Nhưng cấu hình (config / 설정) cũng cần lược đồ (schema / 스키마), kiểm tra hợp lệ (validation / 검증), versioning và quyền sở hữu (ownership / 소유권).
 
-Feature flag tách deploy code khỏi release behavior. Nó giúp gradual rollout và emergency disable.
+Một typo cấu hình (config / 설정) có thể outage như mã (code / 코드) bug. cấu hình (config / 설정) changes nên kiểm tra (audit / 감사)/kiểm thử (test / 테스트)/quay lui (rollback / 롤백) được.
 
-Nhưng flags tạo combinatorial states và technical debt. Mỗi flag nên có owner/expiry plan; permanent zombie flags làm code khó reasoning.
+## Tính năng (feature / 기능) flags
+
+Cờ tính năng (feature flag / 기능 플래그) tách deploy mã (code / 코드) khỏi bản phát hành (release / 릴리스) hành vi (behavior / 동작). Nó giúp gradual rollout và emergency disable.
+
+Nhưng flags tạo combinatorial states và technical debt. Mỗi flag nên có đơn vị sở hữu (owner / 오너)/expiry plan; permanent zombie flags làm mã (code / 코드) khó lập luận (reasoning / 추론).
 
 ## CI
 
-Continuous Integration nghĩa developers integrate frequent changes và automated pipeline build/test chúng. CI goal là detect incompatibility sớm, không chỉ “có Jenkins/GitHub Actions”.
+Continuous tích hợp (integration / 통합) nghĩa developers integrate frequent changes và automated chuỗi xử lý (pipeline / 파이프라인) bản dựng (build / 빌드)/kiểm thử (test / 테스트) chúng. CI goal là detect incompatibility sớm, không chỉ “có Jenkins/GitHub Actions”.
 
-Pipeline feedback càng chậm thì batch size changes càng lớn và fix cost tăng.
+Chuỗi xử lý (pipeline / 파이프라인) phản hồi (feedback / 피드백) càng chậm thì batch kích thước (size / 크기) changes càng lớn và fix chi phí (cost / 비용) tăng.
 
 ## CD
 
-Continuous Delivery giữ system luôn ở trạng thái deployable, release có thể manual gate. Continuous Deployment tự động đưa passed changes tới production.
+Continuous Delivery giữ hệ thống (system / 시스템) luôn ở trạng thái deployable, bản phát hành (release / 릴리스) có thể manual gate. Continuous triển khai (deployment / 배포) tự động đưa passed changes tới môi trường vận hành (production / 운영 환경).
 
-Hai terms thường bị dùng lẫn; distinction nằm ở automatic production release.
+Hai terms thường bị dùng lẫn; distinction nằm ở automatic môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스).
 
-## Deployment strategies
+## Triển khai (deployment / 배포) strategies
 
-Rolling update thay instances dần. Blue-green giữ hai environments và switch traffic. Canary gửi small traffic tới version mới rồi tăng dần.
+Rolling cập nhật (update / 업데이트) thay instances dần. Blue-green giữ hai environments và switch traffic. Canary gửi small traffic tới phiên bản (version / 버전) mới rồi tăng dần.
 
-Strategy chọn theo rollback speed, capacity cost, state/schema compatibility và observability.
+Chiến lược (strategy / 전략) chọn theo quay lui (rollback / 롤백) speed, sức chứa (capacity / 용량) chi phí (cost / 비용), trạng thái (state / 상태)/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và khả năng quan sát (observability / 관측 가능성).
 
-## Database migration
+## Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)
 
-App deploy rollback không đơn giản nếu schema đã destructive change. Expand-contract pattern thêm compatible schema trước, deploy code dùng cả forms, migrate data rồi mới remove old fields.
+App deploy quay lui (rollback / 롤백) không đơn giản nếu lược đồ (schema / 스키마) đã destructive thay đổi (change / 변경). Expand-contract mẫu (pattern / 패턴) thêm compatible lược đồ (schema / 스키마) trước, deploy mã (code / 코드) dùng cả forms, migrate dữ liệu (data / 데이터) rồi mới remove old fields.
 
-Backward/forward compatibility là requirement xuyên nhiều deploy versions.
+Backward/forward tính tương thích (compatibility / 호환성) là yêu cầu (requirement / 요구사항) xuyên nhiều deploy versions.
 
-## Infrastructure as Code
+## Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)
 
-IaC version hóa infrastructure definitions giúp review/reproducibility. Nhưng state drift, provider behavior và secrets vẫn cần quản lý.
+IaC phiên bản (version / 버전) hóa hạ tầng (infrastructure / 인프라) definitions giúp rà soát (review / 검토)/reproducibility. Nhưng trạng thái (state / 상태) drift, provider hành vi (behavior / 동작) và secrets vẫn cần quản lý.
 
-Declarative config mô tả desired state; controller/tool reconcile actual state với desired state.
+Declarative cấu hình (config / 설정) mô tả desired trạng thái (state / 상태); controller/công cụ (tool / 도구) reconcile actual trạng thái (state / 상태) với desired trạng thái (state / 상태).
 
 ## Runbook và operational readiness
 
-Một service production cần biết owner, dashboard, alerts, dependencies, backup/restore, capacity assumptions và incident procedures.
+Một dịch vụ (service / 서비스) môi trường vận hành (production / 운영 환경) cần biết đơn vị sở hữu (owner / 오너), dashboard, alerts, dependencies, backup/restore, sức chứa (capacity / 용량) các giả định (assumptions / 가정들) và sự cố (incident / 인시던트) procedures.
 
-“Deploy thành công” không phải endpoint; operability là quality attribute.
+“Deploy thành công” không phải endpoint; operability là chất lượng (quality / 품질) attribute.
 
-## Rollback và roll-forward
+## Quay lui (rollback / 롤백) và roll-forward
 
-Rollback nhanh hữu ích nhưng không luôn possible sau irreversible data changes. Roll-forward bằng hotfix đôi khi safer.
+Quay lui (rollback / 롤백) nhanh hữu ích nhưng không luôn possible sau irreversible dữ liệu (data / 데이터) changes. Roll-forward bằng hotfix đôi khi safer.
 
-Release design nên biết trước recovery path thay vì nghĩ sau incident.
+Bản phát hành (release / 릴리스) thiết kế (design / 설계) nên biết trước khôi phục (recovery / 복구) đường dẫn (path / 경로) thay vì nghĩ sau sự cố (incident / 인시던트).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“CI/CD là tool.”** Tool chỉ hỗ trợ process; integration frequency, automation và recovery semantics mới là core.
+**“CI/CD là công cụ (tool / 도구).”** công cụ (tool / 도구) chỉ hỗ trợ tiến trình (process / 프로세스); tích hợp (integration / 통합) frequency, automation và khôi phục (recovery / 복구) ngữ nghĩa (semantics / 의미론) mới là cốt lõi (core / 핵심).
 
-**“Feature flag = config boolean vô hại.”** Flags tạo runtime state space và cần lifecycle.
+**“cờ tính năng (feature flag / 기능 플래그) = cấu hình (config / 설정) boolean vô hại.”** Flags tạo thời gian chạy (runtime / 런타임) trạng thái (state / 상태) không gian (space / 공간) và cần vòng đời (lifecycle / 생명주기).
 
-**“Container image giống nhau thì environments giống nhau.”** Kernel, network, secrets, data và external dependencies vẫn khác.
+**“ảnh bộ chứa (container image / 컨테이너 이미지) giống nhau thì environments giống nhau.”** Kernel, mạng (network / 네트워크), secrets, dữ liệu (data / 데이터) và bên ngoài (external / 외부) dependencies vẫn khác.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Delivery là state transition của socio-technical system. Mỗi release phải bảo toàn compatibility/invariants khi old và new versions có thể cùng tồn tại.
+> Delivery là chuyển tiếp trạng thái (state transition / 상태 전이) của socio-technical hệ thống (system / 시스템). Mỗi bản phát hành (release / 릴리스) phải bảo toàn tính tương thích (compatibility / 호환성)/invariants khi old và new versions có thể cùng tồn tại.
 
 ## Kết nối
 
 Đọc [version control/build/packages](../08_software_systems/01_version_control_build_link_and_packages.md), [supply-chain security](../07_security_reliability/08_supply_chain_and_secure_software_lifecycle.md), [reliability/observability](../07_security_reliability/05_fault_tolerance_observability_and_reliability.md) và [maintenance](./04_maintenance_evolution_and_technical_debt.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 requirements specification and engineering process](./00_requirements_specification_and_engineering_process.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

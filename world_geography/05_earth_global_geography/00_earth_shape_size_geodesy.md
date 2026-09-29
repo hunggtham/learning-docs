@@ -1,5 +1,8 @@
 # Hình dạng Trái Đất, trắc địa và đo lường hành tinh
 
+> **Mạch đọc:** Đặt **Hình dạng Trái Đất, trắc địa và đo lường hành tinh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao “Trái Đất là hình cầu” vừa đúng vừa chưa đủ** sang **Ba bề mặt cần phân biệt**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao “Trái Đất là hình cầu” vừa đúng vừa chưa đủ
 
 Ở quy mô giáo dục cơ bản, mô hình hình cầu giúp giải thích vĩ độ, kinh độ, ngày–đêm và vòng tròn lớn. Nhưng khi đo đạc chính xác, Trái Đất gần một **khối cầu dẹt (oblate spheroid)**: bán kính xích đạo lớn hơn bán kính cực do chuyển động quay và cân bằng vật chất dài hạn.
@@ -28,7 +31,7 @@ h = H + N
 
 trong đó \(N\) là undulation của geoid so với ellipsoid.
 
-Nếu pipeline drone mapping hoặc xây dựng lấy `h` làm “cao hơn mực nước biển” mà không áp mô hình geoid phù hợp, sai số phương đứng có thể lên tới hàng chục mét ở một số nơi.
+Nếu chuỗi xử lý (pipeline / 파이프라인) drone ánh xạ (mapping / 매핑) hoặc xây dựng lấy `h` làm “cao hơn mực nước biển” mà không áp mô hình geoid phù hợp, sai số phương đứng có thể lên tới hàng chục mét ở một số nơi.
 
 ## Trắc địa là khoa học về hình dạng, trọng lực và chuyển động
 
@@ -58,15 +61,15 @@ Một ellipsoid có kích thước đúng nhưng chưa biết “đặt ở đâ
 
 Các datum cũ thường được tối ưu cho một vùng và cố định với mảng kiến tạo địa phương. Các khung hiện đại mang tính địa tâm và ngày càng xử lý rõ chuyển động theo thời gian.
 
-Vì vậy hai tọa độ cùng viết bằng độ nhưng thuộc hai datum khác nhau có thể lệch. `Assign CRS` sai không phải lỗi nhỏ; nó làm toàn bộ geometry được diễn giải trong một thế giới tham chiếu khác.
+Vì vậy hai tọa độ cùng viết bằng độ nhưng thuộc hai datum khác nhau có thể lệch. `Assign CRS` sai không phải lỗi nhỏ; nó làm toàn bộ hình học (geometry / 기하학) được diễn giải trong một thế giới tham chiếu khác.
 
-## Reference frame và epoch
+## Tham chiếu (reference / 참조) frame và epoch
 
 Trái Đất không phải khối cứng. Các mảng kiến tạo dịch chuyển, băng tan làm vỏ nâng, nước ngầm thay đổi tải trọng, động đất dịch chuyển mặt đất và thủy triều rắn làm vỏ co giãn nhỏ.
 
 Do đó trắc địa độ chính xác cao dùng **khung quy chiếu (reference frame)** kèm thời điểm. Một tọa độ centimet-level phải được hiểu cùng **epoch**. Cùng điểm vật lý có thể có tọa độ khác vài centimet sau một năm trong một frame toàn cầu.
 
-Mental model phù hợp là: tọa độ chính xác cao không chỉ là `x,y,z`; nó là `x,y,z + frame + epoch`.
+Mô hình tư duy (mental model / 사고 모델) phù hợp là: tọa độ chính xác cao không chỉ là `x,y,z`; nó là `x,y,z + frame + epoch`.
 
 ## Geocenter và Earth orientation
 
@@ -90,10 +93,12 @@ Geodesy cung cấp bằng chứng trực tiếp về nhiều thay đổi hành t
 
 Ở bán đảo Triều Tiên và Việt Nam, GNSS hỗ trợ xây dựng, hạ tầng, bản đồ, logistics, nông nghiệp chính xác và quan trắc biến dạng. Tại các đồng bằng thấp, đặc biệt khu vực có khai thác nước ngầm hoặc trầm tích mềm, cần phân biệt mực nước biển dâng toàn cầu với **chuyển động mặt đất địa phương**.
 
-Một thành phố có thể trải nghiệm relative sea-level rise nhanh hơn trung bình toàn cầu nếu mặt đất đồng thời sụt. Đây là điểm nối trực tiếp giữa geodesy, hydrology, urbanization và climate risk.
+Một thành phố có thể trải nghiệm relative sea-level rise nhanh hơn trung bình toàn cầu nếu mặt đất đồng thời sụt. Đây là điểm nối trực tiếp giữa geodesy, hydrology, urbanization và climate rủi ro (risk / 위험).
 
 ## Mô hình tư duy
 
 Trắc địa là hệ thống nối **hành tinh vật lý → trường trọng lực → mô hình tham chiếu → phép đo → tọa độ**. Không có tọa độ chính xác “không cần bối cảnh”; mọi vị trí đều được đo so với một frame có quy ước và thời điểm.
 
 Xem tiếp: [Hệ quy chiếu toàn cầu](./06_global_reference_systems.md), [Trọng lực, geoid và từ trường](./05_gravity_geoid_magnetic_field.md), [Tọa độ và thời gian](../00_foundations/02_coordinates_time_maps.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 rotation orbit seasons time](./01_rotation_orbit_seasons_time.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,15 @@
-# Quality Audit — Round 10: geometry, probability, discrete structures and numerical optimization
+# Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)
 
-Round 10 tiếp tục chiến lược **quality over chapter count**. Mathematics Knowledge Library vẫn giữ nguyên **87 topic**; không thêm chapter mới chỉ để tăng coverage.
+> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiêu chí chọn chapter** sang **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mục tiêu của round này là nâng các chapter vẫn còn ngắn đáng kể so với các phần đã rewrite ở Round 5–9, đặc biệt các chapter nằm giữa những dependency chains quan trọng.
+
+Round 10 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리) vẫn giữ nguyên **87 topic**; không thêm chapter mới chỉ để tăng coverage.
+
+Mục tiêu của round này là nâng các chapter vẫn còn ngắn đáng kể so với các phần đã rewrite ở Round 5–9, đặc biệt các chapter nằm giữa những phụ thuộc (dependency / 의존성) chains quan trọng.
 
 ## Tiêu chí chọn chapter
 
-Round 10 ưu tiên file có một hoặc nhiều dấu hiệu:
+Round 10 ưu tiên tệp (file / 파일) có một hoặc nhiều dấu hiệu:
 
 ```text
 size/depth thấp hơn rõ so với chapter lân cận
@@ -30,9 +33,12 @@ intuition
 → mental model
 ```
 
-## Batch 1 — Geometry, Harmonics và Vector Calculus
 
-Commit:
+> **Chuyển mạch:** Từ **Tiêu chí chọn chapter**, ta sang **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus
+
+Lần ghi nhận (commit / 커밋):
 
 ```text
 c6ccfad65f21af681f89f30fcf8530297e3225f3
@@ -40,9 +46,9 @@ c6ccfad65f21af681f89f30fcf8530297e3225f3
 
 ### `03_geometry_trigonometry/06_circles_conics_and_loci.md`
 
-Bản cũ đã đúng về locus, standard forms và quadratic forms nhưng còn tương đối ngắn.
+Bản cũ đã đúng về locus, tiêu chuẩn (standard / 표준) forms và quadratic forms nhưng còn tương đối ngắn.
 
-Bản mới tổ chức learning flow:
+Bản mới tổ chức mạch học (learning flow / 학습 흐름):
 
 ```text
 distance constraint
@@ -57,20 +63,20 @@ distance constraint
 
 Các phần được tăng sâu:
 
-- gradient như normal của implicit curve;
+- độ dốc (gradient / 기울기) như normal của implicit curve;
 - focus/directrix derivation của parabola;
 - eccentricity như unified conic viewpoint;
 - `B²-4AC` cùng limitations/degenerate cases;
 - conic equation dưới dạng `x^TQx+d^Tx+F=0`;
 - diagonalization giải thích việc rotate axes;
-- implicit vs parametric representation;
-- covariance ellipse, Mahalanobis geometry và quadratic constraints.
+- implicit vs parametric biểu diễn (representation / 표현);
+- covariance ellipse, Mahalanobis hình học (geometry / 기하학) và quadratic các ràng buộc (constraints / 제약조건들).
 
 ### `03_geometry_trigonometry/07_trigonometric_identities_equations_and_harmonics.md`
 
 Bản mới tránh biến identities thành collection formulas.
 
-Learning dependency:
+Học tập (learning / 학습) phụ thuộc (dependency / 의존성):
 
 ```text
 unit circle
@@ -90,18 +96,18 @@ Các phần mới quan trọng:
 - identities như consequences của rotation composition;
 - product-to-sum như frequency mixing;
 - inverse trig principal branches;
-- phase vs time delay;
+- phase vs thời gian (time / 시간) delay;
 - state-space view của oscillator;
-- damping/forcing/resonance connection;
+- damping/forcing/resonance liên kết (connection / 연결);
 - orthogonality của harmonics;
 - aliasing/Nyquist intuition;
-- Fourier features trong signal/AI.
+- Fourier features trong tín hiệu (signal / 신호)/AI.
 
 ### `05_calculus/09_vector_calculus.md`
 
-Bản mới chuyển từ glossary của gradient/divergence/curl thành chapter **local-to-global calculus**.
+Bản mới chuyển từ glossary của độ dốc (gradient / 기울기)/divergence/curl thành chapter **local-to-global calculus**.
 
-Learning flow:
+Mạch học (learning flow / 학습 흐름):
 
 ```text
 scalar/vector field
@@ -116,21 +122,24 @@ scalar/vector field
 
 Các phần tăng sâu:
 
-- Cauchy–Schwarz proof idea cho steepest gradient;
-- gradient vuông góc level set;
+- Cauchy–Schwarz proof idea cho steepest độ dốc (gradient / 기울기);
+- độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set;
 - divergence như flux density;
 - curl qua rigid rotation example;
-- local curl-free vs global conservative và topology;
-- scalar vs vector line integrals;
+- cục bộ (local / 로컬) curl-free vs toàn cục (global / 전역) conservative và topology;
+- scalar vs véc-tơ (vector / 벡터) line integrals;
 - continuity equation;
-- generalized Fundamental-Theorem pattern;
+- generalized Fundamental-Theorem mẫu (pattern / 패턴);
 - coordinate Jacobian;
 - Maxwell/fluid/AI connections;
-- singularity/domain caveat trong flux theorem.
+- singularity/lĩnh vực (domain / 도메인) caveat trong flux theorem.
 
-## Batch 2 — Combinatorics và Multivariate Probability
 
-Commit:
+> **Chuyển mạch:** Từ **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus**, ta sang **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)
+
+Lần ghi nhận (commit / 커밋):
 
 ```text
 d2235a5a8007b362027ed4cb611227874428c59d
@@ -140,7 +149,7 @@ d2235a5a8007b362027ed4cb611227874428c59d
 
 Bản mới chuyển từ formula overview sang cấu trúc của finite possibility spaces.
 
-Learning flow:
+Mạch học (learning flow / 학습 흐름):
 
 ```text
 sum/product rules
@@ -157,9 +166,9 @@ sum/product rules
 
 Các phần mới:
 
-- khi product rule không áp dụng trực tiếp;
-- combinatorial proofs/Pascal identity;
-- stars-and-bars assumptions;
+- khi sản phẩm (product / 제품) quy tắc (rule / 규칙) không áp dụng trực tiếp;
+- combinatorial proofs/Pascal định danh (identity / 식별자);
+- stars-and-bars các giả định (assumptions / 가정들);
 - generalized pigeonhole principle;
 - bijection proofs;
 - recurrence counting;
@@ -170,7 +179,7 @@ Các phần mới:
 
 ### `06_probability_statistics/08_covariance_multivariate_probability_and_gaussian.md`
 
-Learning flow mới:
+Mạch học (learning flow / 학습 흐름) mới:
 
 ```text
 joint distribution
@@ -185,19 +194,19 @@ joint distribution
 
 Các phần tăng sâu:
 
-- covariance matrix PSD proof idea;
-- variance of linear combination;
+- covariance ma trận (matrix / 행렬) PSD proof idea;
+- variance of tuyến tính (linear / 선형) combination;
 - whitening;
 - Jacobian-based covariance propagation;
 - conditional Gaussian intuition;
 - zero covariance vs independence;
-- singular covariance as lower-dimensional support;
+- singular covariance as lower-dimensional hỗ trợ (support / 지원);
 - robustness/heavy-tail caveats;
 - portfolio variance worked example.
 
 ### `06_probability_statistics/09_common_distributions_and_when_they_arise.md`
 
-Bản mới tổ chức distributions theo **mechanism + support + assumptions**, không theo bảng formula.
+Bản mới tổ chức distributions theo **cơ chế (mechanism / 메커니즘) + hỗ trợ (support / 지원) + các giả định (assumptions / 가정들)**, không theo bảng formula.
 
 Đã làm sâu:
 
@@ -215,17 +224,20 @@ Log-normal / heavy-tail caution
 Các connections mới:
 
 - Poisson rare-event limit;
-- hazard rate;
+- hazard tỷ lệ (rate / 비율);
 - overdispersion;
 - conjugacy;
 - approximation relations giữa distributions;
 - support-based sanity checking;
-- likelihood/loss choices trong AI;
+- likelihood/mất mát (loss / 손실) choices trong AI;
 - Gaussian-tail limitations trong Finance.
 
-## Batch 3 — Trees, Orders, Lattices và Information Theory
 
-Commit:
+> **Chuyển mạch:** Từ **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)**, ta sang **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)
+
+Lần ghi nhận (commit / 커밋):
 
 ```text
 fdcec8f394fd93eb9250bdfc2932dfe3e37d11a8
@@ -233,7 +245,7 @@ fdcec8f394fd93eb9250bdfc2932dfe3e37d11a8
 
 ### `07_discrete_cs/05_trees_posets_and_lattices.md`
 
-Bản mới nối ba topics thành một learning chain duy nhất:
+Bản mới nối ba topics thành một học tập (learning / 학습) chuỗi (chain / 사슬) duy nhất:
 
 ```text
 tree
@@ -248,20 +260,20 @@ tree
 
 Các phần tăng sâu:
 
-- equivalent characterizations của tree;
-- traversal và height reasoning;
-- BST vs heap;
+- equivalent characterizations của cây (tree / 트리);
+- traversal và height lập luận (reasoning / 추론);
+- BST vs vùng nhớ động (heap / 힙);
 - MST cut intuition;
 - minimal/maximal vs minimum/maximum;
 - chains/antichains;
-- lattice meet/join;
-- compiler dataflow analysis;
-- fixed-point reasoning;
-- CRDT/join-semilattice connection.
+- lattice meet/phép nối (join / 조인);
+- trình biên dịch (compiler / 컴파일러) dataflow phân tích (analysis / 분석);
+- fixed-point lập luận (reasoning / 추론);
+- CRDT/join-semilattice liên kết (connection / 연결).
 
 ### `07_discrete_cs/06_information_theory_and_coding.md`
 
-Bản mới mở rộng thành full dependency chain:
+Bản mới mở rộng thành full phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬):
 
 ```text
 probability
@@ -282,17 +294,20 @@ Các phần tăng sâu:
 - Huffman vs arithmetic coding;
 - Kraft inequality;
 - data-processing inequality;
-- entropy rate;
-- KL as extra log-loss/code cost;
-- cross-entropy/negative log-likelihood connection;
-- binary symmetric channel capacity;
-- Hamming geometry;
-- linear codes over `GF(2)`;
-- feature selection/information bottleneck/perplexity caveats.
+- entropy tỷ lệ (rate / 비율);
+- KL as extra log-loss/mã (code / 코드) chi phí (cost / 비용);
+- cross-entropy/negative log-likelihood liên kết (connection / 연결);
+- nhị phân (binary / 이진) symmetric channel sức chứa (capacity / 용량);
+- Hamming hình học (geometry / 기하학);
+- tuyến tính (linear / 선형) codes over `GF(2)`;
+- tính năng (feature / 기능) selection/thông tin (information / 정보) bottleneck/perplexity caveats.
 
-## Batch 4 — Constrained Optimization và Numerical Solvers
 
-Commit:
+> **Chuyển mạch:** Từ **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)**, ta sang **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers
+
+Lần ghi nhận (commit / 커밋):
 
 ```text
 36aff1d613c93274730e472c3e1ea312b3427408
@@ -300,7 +315,7 @@ Commit:
 
 ### `08_optimization_numerical/03_constrained_optimization_lagrange_and_kkt.md`
 
-Learning flow mới:
+Mạch học (learning flow / 학습 흐름) mới:
 
 ```text
 feasible set
@@ -316,18 +331,18 @@ feasible set
 
 Các phần mới:
 
-- Lagrange geometry từ tangent/normal spaces;
+- Lagrange hình học (geometry / 기하학) từ tangent/normal spaces;
 - multiplier units/sensitivity;
 - active/slack worked example;
-- KKT assumptions;
-- Slater condition intuition;
+- KKT các giả định (assumptions / 가정들);
+- Slater điều kiện (condition / 조건) intuition;
 - weak/strong duality;
-- projection connection;
-- projected gradient;
+- projection liên kết (connection / 연결);
+- projected độ dốc (gradient / 기울기);
 - penalty vs barrier;
-- L1 geometry/sparsity;
+- L1 hình học (geometry / 기하학)/sparsity;
 - portfolio/resource-allocation examples;
-- second-order constrained reasoning.
+- second-order constrained lập luận (reasoning / 추론).
 
 ### `08_optimization_numerical/04_root_finding_interpolation_and_numerical_linear_algebra.md`
 
@@ -339,7 +354,7 @@ interpolation / approximation
 linear-system computation
 ```
 
-và đặt chúng dưới common framework:
+và đặt chúng dưới dùng chung (common / 공통) khung phần mềm (framework / 프레임워크):
 
 ```text
 convergence + conditioning + stability + error control
@@ -347,26 +362,29 @@ convergence + conditioning + stability + error control
 
 Các phần tăng sâu:
 
-- bisection guarantee/failure regime;
-- Newton local quadratic convergence + failure modes;
+- bisection guarantee/thất bại (failure / 실패) regime;
+- Newton cục bộ (local / 로컬) quadratic convergence + thất bại (failure / 실패) modes;
 - secant/hybrid methods;
 - contraction/fixed-point view;
 - stopping criteria;
-- interpolation error formula;
+- interpolation lỗi (error / 오류) formula;
 - Runge phenomenon + Chebyshev nodes;
 - splines;
-- LU/QR/Cholesky assumptions;
+- LU/QR/Cholesky các giả định (assumptions / 가정들);
 - sparse/direct/iterative solvers;
-- residual vs error;
-- condition number;
+- residual vs lỗi (error / 오류);
+- điều kiện (condition / 조건) number;
 - backward stability;
 - catastrophic cancellation;
 - preconditioning;
 - numerical eigenvalue methods.
 
-## Depth balance sau Round 10
 
-Sau Round 10, các dependency chains sau đã tương đối đồng đều về depth:
+> **Chuyển mạch:** Từ **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers**, ta sang **độ sâu (depth / 깊이) balance sau Round 10** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Độ sâu (depth / 깊이) balance sau Round 10
+
+Sau Round 10, các phụ thuộc (dependency / 의존성) chains sau đã tương đối đồng đều về độ sâu (depth / 깊이):
 
 ```text
 Geometry → Trigonometry → Fourier/vector-field connections
@@ -376,11 +394,14 @@ Probability → Entropy → Coding/ML losses
 Optimization → Constraints/KKT → Numerical computation
 ```
 
-Coverage không có major gap mới. Vì vậy các round tiếp theo vẫn nên **rewrite/chỉnh dependency**, không nên tăng topic count một cách cơ học.
+Coverage không có major gap mới. Vì vậy các round tiếp theo vẫn nên **rewrite/chỉnh phụ thuộc (dependency / 의존성)**, không nên tăng topic count một cách cơ học.
+
+
+> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) balance sau Round 10**, ta sang **Priority hợp lý cho Round 11** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Priority hợp lý cho Round 11
 
-Các chapter tiếp theo đáng audit theo depth:
+Các chapter tiếp theo đáng kiểm tra (audit / 감사) theo độ sâu (depth / 깊이):
 
 ```text
 03_geometry_trigonometry/08_topology_continuity_connectivity.md
@@ -393,12 +414,17 @@ Các chapter tiếp theo đáng audit theo depth:
 09_connections/* các chapter còn ngắn hơn standard
 ```
 
-Nhưng trước khi rewrite cần audit content thực tế: file size không phải criterion duy nhất. Một chapter ngắn nhưng conceptually complete không cần kéo dài chỉ để đồng đều số dòng.
+Nhưng trước khi rewrite cần kiểm tra (audit / 감사) content thực tế: tệp (file / 파일) kích thước (size / 크기) không phải criterion duy nhất. Một chapter ngắn nhưng conceptually complete không cần kéo dài chỉ để đồng đều số dòng.
+
+
+> **Chuyển mạch:** Từ **Priority hợp lý cho Round 11**, ta sang **Kết luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết luận
 
-Round 10 không thêm topic. Nó làm sâu **10 canonical chapters** và giữ learning flow hiện có.
+Round 10 không thêm topic. Nó làm sâu **10 chuẩn gốc (canonical / 정본) chapters** và giữ mạch học (learning flow / 학습 흐름) hiện có.
 
 Nguyên tắc tiếp tục giữ nguyên:
 
-> Không tối ưu library theo số file hoặc số dòng. Tối ưu theo khả năng người đọc hiểu bản chất, assumptions, derivations, failure modes và connections mà không phải ghép kiến thức rời rạc từ nơi khác.
+> Không tối ưu thư viện (library / 라이브러리) theo số tệp (file / 파일) hoặc số dòng. Tối ưu theo khả năng người đọc hiểu bản chất, các giả định (assumptions / 가정들), derivations, thất bại (failure / 실패) modes và connections mà không phải ghép kiến thức rời rạc từ nơi khác.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

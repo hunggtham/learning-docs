@@ -2,7 +2,7 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **123-125. 정규화 (Normalization)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **123-125. 정규화 (Normalization)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **123-125. 정규화 (Normalization)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** khi chuyển sang phần tiếp theo.
 
@@ -20,13 +20,15 @@ Mục đích của bài này là hiểu **123-125. 정규화 (Normalization)** n
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **123-125. 정규화 (Normalization)** và nối nó với **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 123-125. 정규화 (Normalization)
 
-Sau khi đã đặt nền bằng **116-121. 관계대수 (Relational Algebra)**, ta chuyển sang **123-125. 정규화 (Normalization)**. Đây là mắt xích 17/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **116-121. 관계대수 (Relational Algebra)**, ta chuyển sang **123-125. 정규화 (Normalization)**. Đây là mắt xích 17/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **123-125. 정규화 (Normalization)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 

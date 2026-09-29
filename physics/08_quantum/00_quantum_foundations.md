@@ -1,10 +1,13 @@
 # Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định
 
+> **Mạch đọc:** Đọc **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao vật lý cổ điển không đủ?** sang **Lượng tử hóa: vì sao một số đại lượng nhận giá trị rời rạc?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao vật lý cổ điển không đủ?
 
 Cơ học Newton, điện từ học Maxwell và nhiệt động lực học mô tả rất nhiều hiện tượng vĩ mô với độ chính xác cao. Tuy nhiên, cuối thế kỷ XIX và đầu thế kỷ XX xuất hiện một loạt dữ liệu mà khung cổ điển không thể giải thích nhất quán: phổ bức xạ vật đen, hiệu ứng quang điện, phổ vạch nguyên tử, độ bền của nguyên tử và hành vi của vật chất ở thang vi mô.
 
-Vấn đề không chỉ là “thiếu một lực mới”. Những thí nghiệm này cho thấy chính cách ta mô tả **trạng thái (state)**, **phép đo (measurement)**, **xác suất (probability)** và **quỹ đạo hạt (particle trajectory)** cần được thay đổi.
+Vấn đề không chỉ là “thiếu một lực mới”. Những thí nghiệm này cho thấy chính cách ta mô tả **trạng thái (state / 상태)**, **phép đo (measurement)**, **xác suất (probability / 확률)** và **quỹ đạo hạt (particle trajectory)** cần được thay đổi.
 
 Cơ học lượng tử (Quantum Mechanics / 양자역학) cung cấp một khung toán học khác để mô tả trạng thái và dự đoán phân bố xác suất của kết quả đo. Nó không nói thế giới vi mô “ngẫu nhiên hơn” một cách mơ hồ; nó đặt xác suất vào cấu trúc của lý thuyết theo một cách chính xác.
 
@@ -18,7 +21,7 @@ E_n=nhf,
 
 với `n=0,1,2,...`.
 
-Về sau, ta hiểu hiện tượng rời rạc sâu hơn. Trong nhiều bài toán lượng tử, các giá trị cho phép xuất hiện do trạng thái phải thỏa đồng thời phương trình động lực học và điều kiện biên. Về mặt toán học, đây thường là một bài toán trị riêng (eigenvalue problem), tương tự việc một sợi dây cố định hai đầu chỉ cho phép một số mode sóng dừng nhất định.
+Về sau, ta hiểu hiện tượng rời rạc sâu hơn. Trong nhiều bài toán lượng tử, các giá trị cho phép xuất hiện do trạng thái phải thỏa đồng thời phương trình động lực học và điều kiện biên. Về mặt toán học, đây thường là một bài toán trị riêng (eigenvalue problem), tương tự việc một sợi dây cố định hai đầu chỉ cho phép một số chế độ (mode / 모드) sóng dừng nhất định.
 
 Điểm quan trọng là không phải mọi đại lượng lượng tử đều rời rạc. Hạt tự do có thể có phổ động lượng liên tục. Vì vậy “lượng tử” không đồng nghĩa với “mọi thứ đều chia thành các bậc rời rạc”.
 
@@ -249,11 +252,11 @@ Trong nhiều bài toán lượng tử, điều kiện biên quyết định ph�
 \psi(0)=\psi(L)=0
 ```
 
-chỉ cho phép các mode có số sóng rời rạc. Vì thế năng lượng cũng rời rạc.
+chỉ cho phép các chế độ (mode / 모드) có số sóng rời rạc. Vì thế năng lượng cũng rời rạc.
 
 Điều này minh họa một nguyên tắc chung: **lượng tử hóa nhiều khi xuất hiện từ sự kết hợp giữa phương trình động lực học và điều kiện biên**, chứ không phải vì ta “ép” các con số thành số nguyên một cách tùy ý.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Trạng thái lượng tử không phải một danh sách các đại lượng cổ điển bị che giấu. Nó là đối tượng toán học từ đó ta suy ra biên độ xác suất cho các kết quả đo. Chồng chập, pha và tính không giao hoán của các toán tử là cấu trúc bên trong của lý thuyết, không phải lỗi do dụng cụ thiếu chính xác.
 
@@ -285,8 +288,10 @@ Sai. Một số phổ là rời rạc, một số liên tục và một số có
 
 Không. Giá trị kỳ vọng là trung bình thống kê qua nhiều phép chuẩn bị và đo lặp lại. Một phép đo đơn có thể cho một trị riêng khác xa giá trị kỳ vọng.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md), [Sóng và Fourier](../02_oscillations_waves/01_waves_fourier_sound.md).
 
 **Liên hệ tiếp:** [Các hệ lượng tử mẫu](01_quantum_systems.md), [Phép đo, rối và mất kết hợp](03_measurement_entanglement_decoherence.md), [Đối xứng, toán tử và tích phân đường](07_symmetry_operator_path_integral.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 quantum systems](./01_quantum_systems.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,8 +1,11 @@
 # Interrupt, softirq và mô hình thiết bị trong Linux
 
+> **Mạch đọc:** Đọc **Interrupt, softirq và mô hình thiết bị trong Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ polling tới interrupt** sang **Interrupt khác lời gọi hệ thống (system call / 시스템 호출)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Khi một ứng dụng gọi `read()`, gửi gói tin mạng hoặc chờ dữ liệu từ ổ đĩa, CPU không nhất thiết ngồi chờ thiết bị hoàn thành công việc. Phần cứng hoạt động theo tốc độ và cơ chế riêng, còn CPU cần tiếp tục chạy những tác vụ khác. **Ngắt (interrupt)** tồn tại để thiết bị có thể báo cho CPU rằng một sự kiện cần được xử lý.
 
-Hiểu interrupt quan trọng vì nhiều hiện tượng production như CPU cao nhưng tiến trình không nổi bật, mạng nhận gói chậm, packet drop, độ trễ tăng khi tải lớn hoặc một CPU bị quá tải có thể liên quan tới phần việc chạy trong kernel thay vì trực tiếp trong tiến trình ứng dụng.
+Hiểu interrupt quan trọng vì nhiều hiện tượng môi trường vận hành (production / 운영 환경) như CPU cao nhưng tiến trình không nổi bật, mạng nhận gói chậm, packet drop, độ trễ tăng khi tải lớn hoặc một CPU bị quá tải có thể liên quan tới phần việc chạy trong kernel thay vì trực tiếp trong tiến trình ứng dụng.
 
 ## Từ polling tới interrupt
 
@@ -32,9 +35,9 @@ kernel xử lý sự kiện
 
 Đây là một ví dụ về thiết kế **hướng sự kiện (event-driven)** ở mức phần cứng.
 
-## Interrupt khác system call
+## Interrupt khác lời gọi hệ thống (system call / 시스템 호출)
 
-System call bắt đầu từ tiến trình người dùng và đi vào kernel vì tiến trình chủ động yêu cầu một dịch vụ. Interrupt thường đến từ phần cứng hoặc cơ chế hệ thống bất đồng bộ.
+Lời gọi hệ thống (system call / 시스템 호출) bắt đầu từ tiến trình người dùng và đi vào kernel vì tiến trình chủ động yêu cầu một dịch vụ. Interrupt thường đến từ phần cứng hoặc cơ chế hệ thống bất đồng bộ.
 
 ```text
 system call:
@@ -44,11 +47,11 @@ hardware interrupt:
 device -> CPU/kernel
 ```
 
-Hai cơ chế đều làm CPU thực thi code kernel, nhưng nguyên nhân và ngữ cảnh khác nhau.
+Hai cơ chế đều làm CPU thực thi mã (code / 코드) kernel, nhưng nguyên nhân và ngữ cảnh khác nhau.
 
 ## Interrupt handler phải ngắn
 
-Khi CPU vào **trình xử lý ngắt (interrupt handler)**, hệ thống đang xử lý sự kiện cần phản hồi nhanh. Nếu handler làm công việc quá dài, các interrupt khác và workload bình thường có thể bị trì hoãn.
+Khi CPU vào **trình xử lý ngắt (interrupt handler)**, hệ thống đang xử lý sự kiện cần phản hồi nhanh. Nếu handler làm công việc quá dài, các interrupt khác và tải công việc (workload / 워크로드) bình thường có thể bị trì hoãn.
 
 Vì vậy Linux thường chia xử lý thành hai phần khái niệm:
 
@@ -62,11 +65,11 @@ hoãn phần việc lớn hơn
 softirq / tasklet / workqueue hoặc cơ chế khác
 ```
 
-Thiết kế này thường được mô tả bằng ý tưởng **top half** và **bottom half**. Thuật ngữ cụ thể trong kernel đã thay đổi theo subsystem, nhưng mental model vẫn hữu ích: phần interrupt trực tiếp cần rất ngắn, còn phần tốn thời gian được đẩy sang ngữ cảnh có thể xử lý linh hoạt hơn.
+Thiết kế này thường được mô tả bằng ý tưởng **top half** và **bottom half**. Thuật ngữ cụ thể trong kernel đã thay đổi theo subsystem, nhưng mô hình tư duy (mental model / 사고 모델) vẫn hữu ích: phần interrupt trực tiếp cần rất ngắn, còn phần tốn thời gian được đẩy sang ngữ cảnh có thể xử lý linh hoạt hơn.
 
 ## Softirq là gì?
 
-**Softirq** là một cơ chế deferred work trong kernel. Networking là ví dụ rất quan trọng. Khi card mạng nhận packet, interrupt handler không nên xử lý toàn bộ TCP/IP stack ngay trong hard interrupt context. Một phần công việc được chuyển sang softirq.
+**Softirq** là một cơ chế deferred công việc (work / 작업) trong kernel. Networking là ví dụ rất quan trọng. Khi card mạng nhận packet, interrupt handler không nên xử lý toàn bộ TCP/IP ngăn xếp (stack / 스택) ngay trong hard interrupt ngữ cảnh (context / 맥락). Một phần công việc được chuyển sang softirq.
 
 Có thể xem tổng hợp softirq:
 
@@ -85,11 +88,11 @@ RCU
 BLOCK
 ```
 
-`NET_RX` liên quan xử lý packet nhận vào; `NET_TX` liên quan đường truyền gửi; `BLOCK` có thể liên quan block I/O completion.
+`NET_RX` liên quan xử lý packet nhận vào; `NET_TX` liên quan đường truyền gửi; `BLOCK` có thể liên quan khối (block / 블록) I/O completion.
 
 ## Vì sao `ksoftirqd` xuất hiện?
 
-Nếu softirq phát sinh quá nhiều, kernel không thể dành vô hạn thời gian xử lý chúng ngay trong đường interrupt. Công việc có thể được đẩy sang các thread kernel dạng `ksoftirqd/<CPU>`.
+Nếu softirq phát sinh quá nhiều, kernel không thể dành vô hạn thời gian xử lý chúng ngay trong đường interrupt. Công việc có thể được đẩy sang các luồng thực thi (thread / 스레드) kernel dạng `ksoftirqd/<CPU>`.
 
 ```bash
 ps -eLo pid,psr,comm | grep ksoftirqd
@@ -112,9 +115,9 @@ Kết quả có thể giống:
   45:     12031      93211      10221      81120  IR-PCI-MSI  eth0
 ```
 
-Nếu gần như mọi interrupt của NIC dồn vào một CPU trong hệ thống nhiều core, core đó có thể thành bottleneck dù tổng CPU toàn máy vẫn thấp.
+Nếu gần như mọi interrupt của NIC dồn vào một CPU trong hệ thống nhiều cốt lõi (core / 핵심), cốt lõi (core / 핵심) đó có thể thành bottleneck dù tổng CPU toàn máy vẫn thấp.
 
-Đây là lý do **phân phối interrupt (IRQ affinity)** quan trọng trên máy chủ throughput cao.
+Đây là lý do **phân phối interrupt (IRQ affinity)** quan trọng trên máy chủ thông lượng (throughput / 처리량) cao.
 
 ## IRQ affinity
 
@@ -129,11 +132,11 @@ Không nên thay đổi affinity theo mẹo chung trên Internet. Hệ thống h
 
 ## RSS, RPS và RFS trong networking
 
-Một card mạng tốc độ cao có thể có nhiều receive queue. **Receive Side Scaling (RSS)** cho phép NIC phân phối packet vào nhiều queue, thường gắn với nhiều CPU.
+Một card mạng tốc độ cao có thể có nhiều receive hàng đợi (queue / 큐). **Receive Side Scaling (RSS)** cho phép NIC phân phối packet vào nhiều hàng đợi (queue / 큐), thường gắn với nhiều CPU.
 
-Linux còn có các cơ chế phần mềm như **Receive Packet Steering (RPS)** và **Receive Flow Steering (RFS)** để phân phối xử lý network stack.
+Linux còn có các cơ chế phần mềm như **Receive Packet Steering (RPS)** và **Receive luồng (flow / 흐름) Steering (RFS)** để phân phối xử lý mạng (network / 네트워크) ngăn xếp (stack / 스택).
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 NIC queues
@@ -149,7 +152,7 @@ socket receive queue
 application thread
 ```
 
-Nếu chỉ quan sát thread ứng dụng, ta bỏ qua nhiều tầng phía trước.
+Nếu chỉ quan sát luồng thực thi (thread / 스레드) ứng dụng, ta bỏ qua nhiều tầng phía trước.
 
 ## NAPI và vấn đề interrupt storm
 
@@ -158,17 +161,17 @@ Nếu NIC phát một interrupt cho từng packet ở tốc độ hàng triệu 
 Ý tưởng đơn giản:
 
 1. packet đầu tiên kích hoạt interrupt;
-2. kernel tạm hạn chế interrupt của queue đó;
+2. kernel tạm hạn chế interrupt của hàng đợi (queue / 큐) đó;
 3. kernel poll một batch packet;
-4. khi queue đã xử lý ổn, interrupt được bật lại.
+4. khi hàng đợi (queue / 큐) đã xử lý ổn, interrupt được bật lại.
 
 Đây là một ví dụ cho thấy polling và interrupt không phải hai lựa chọn loại trừ nhau. Kernel kết hợp chúng để giảm overhead trong tải cao.
 
 ## Interrupt coalescing
 
-Một số NIC có thể gom nhiều sự kiện trước khi phát interrupt. Điều này giảm số interrupt và tăng throughput, nhưng có thể tăng latency vì packet phải chờ thêm trước khi CPU được báo.
+Một số NIC có thể gom nhiều sự kiện trước khi phát interrupt. Điều này giảm số interrupt và tăng thông lượng (throughput / 처리량), nhưng có thể tăng độ trễ (latency / 지연 시간) vì packet phải chờ thêm trước khi CPU được báo.
 
-Đây là trade-off quen thuộc:
+Đây là sự đánh đổi (trade-off / 트레이드오프) quen thuộc:
 
 ```text
 ít interrupt hơn
@@ -177,13 +180,13 @@ Một số NIC có thể gom nhiều sự kiện trước khi phát interrupt. �
     -> nhưng có thể tăng latency
 ```
 
-Không có giá trị tối ưu cho mọi workload. Hệ thống giao dịch nhạy latency có yêu cầu khác server xử lý batch throughput lớn.
+Không có giá trị tối ưu cho mọi tải công việc (workload / 워크로드). Hệ thống giao dịch nhạy độ trễ (latency / 지연 시간) có yêu cầu khác máy chủ (server / 서버) xử lý batch thông lượng (throughput / 처리량) lớn.
 
-## Device driver là lớp nào?
+## Trình điều khiển thiết bị (device driver / 장치 드라이버) là lớp nào?
 
-**Trình điều khiển thiết bị (device driver)** là code kernel biết cách làm việc với một loại phần cứng hoặc giao diện thiết bị cụ thể.
+**trình điều khiển thiết bị (device driver / 장치 드라이버)** là mã (code / 코드) kernel biết cách làm việc với một loại phần cứng hoặc giao diện thiết bị cụ thể.
 
-Ứng dụng không cần biết thanh ghi của card mạng hay protocol nội bộ của SSD. Thay vào đó:
+Ứng dụng không cần biết thanh ghi của card mạng hay giao thức (protocol / 프로토콜) nội bộ của SSD. Thay vào đó:
 
 ```text
 application
@@ -197,7 +200,7 @@ device driver
 hardware
 ```
 
-Driver chuyển đổi abstraction chung của kernel thành thao tác phù hợp thiết bị.
+Driver chuyển đổi lớp trừu tượng (abstraction / 추상화) chung của kernel thành thao tác phù hợp thiết bị.
 
 ## `/sys` và mô hình thiết bị
 
@@ -209,7 +212,7 @@ ls /sys/class/block
 ls /sys/bus/pci/devices
 ```
 
-`/sys` không phải ổ đĩa chứa bản sao cấu hình tĩnh. Nó là giao diện cho object và thuộc tính kernel.
+`/sys` không phải ổ đĩa chứa bản sao cấu hình tĩnh. Nó là giao diện cho đối tượng (object / 객체) và thuộc tính kernel.
 
 Ví dụ mạng:
 
@@ -218,15 +221,15 @@ cat /sys/class/net/eth0/operstate
 cat /sys/class/net/eth0/mtu
 ```
 
-Block device:
+Khối (block / 블록) thiết bị (device / 장치):
 
 ```bash
 ls -l /sys/class/block
 ```
 
-## Device node trong `/dev`
+## Thiết bị (device / 장치) nút (node / 노드) trong `/dev`
 
-Nhiều thiết bị được tiếp cận từ user space thông qua **nút thiết bị (device node)** dưới `/dev`.
+Nhiều thiết bị được tiếp cận từ người dùng (user / 사용자) không gian (space / 공간) thông qua **nút thiết bị (device node)** dưới `/dev`.
 
 Ví dụ:
 
@@ -237,27 +240,27 @@ Ví dụ:
 /dev/random
 ```
 
-Device node chứa loại thiết bị và major/minor number để kernel ánh xạ thao tác tới driver phù hợp.
+Thiết bị (device / 장치) nút (node / 노드) chứa loại thiết bị và major/minor number để kernel ánh xạ thao tác tới driver phù hợp.
 
 ```bash
 ls -l /dev/null /dev/sda 2>/dev/null
 ```
 
-Ký tự đầu `c` thường là character device, `b` là block device.
+Ký tự đầu `c` thường là character thiết bị (device / 장치), `b` là khối (block / 블록) thiết bị (device / 장치).
 
 ## udev và thiết bị động
 
-Phần cứng có thể xuất hiện hoặc biến mất khi hệ thống đang chạy. **udev** xử lý các sự kiện device trong user space và có thể tạo tên, symlink hoặc áp dụng rule.
+Phần cứng có thể xuất hiện hoặc biến mất khi hệ thống đang chạy. **udev** xử lý các sự kiện thiết bị (device / 장치) trong người dùng (user / 사용자) không gian (space / 공간) và có thể tạo tên, symlink hoặc áp dụng quy tắc (rule / 규칙).
 
 ```bash
 udevadm info --query=all --name=/dev/nvme0n1
 ```
 
-Điều này giải thích vì sao tên thiết bị không chỉ là thứ kernel “ghi cứng”. Có một chuỗi kernel event → udev rule → user-space device naming.
+Điều này giải thích vì sao tên thiết bị không chỉ là thứ kernel “ghi cứng”. Có một chuỗi kernel sự kiện (event / 이벤트) → udev quy tắc (rule / 규칙) → user-space thiết bị (device / 장치) naming.
 
-## DMA: thiết bị có cần CPU copy từng byte không?
+## DMA: thiết bị có cần CPU bản sao (copy / 복사) từng byte không?
 
-**Truy cập bộ nhớ trực tiếp (Direct Memory Access - DMA)** cho phép thiết bị truyền dữ liệu tới/từ RAM mà không yêu cầu CPU copy từng byte.
+**Truy cập bộ nhớ trực tiếp (Direct memory Access - DMA)** cho phép thiết bị truyền dữ liệu tới/từ RAM mà không yêu cầu CPU bản sao (copy / 복사) từng byte.
 
 Ví dụ đường nhận packet có thể hình dung:
 
@@ -273,11 +276,11 @@ kernel xử lý descriptor
 network stack
 ```
 
-CPU vẫn tham gia điều phối và xử lý protocol, nhưng DMA giảm công việc copy ở mức phần cứng.
+CPU vẫn tham gia điều phối và xử lý giao thức (protocol / 프로토콜), nhưng DMA giảm công việc bản sao (copy / 복사) ở mức phần cứng.
 
-## Interrupt và độ trễ production
+## Interrupt và độ trễ môi trường vận hành (production / 운영 환경)
 
-Một máy có thể có CPU utilization tổng thể chỉ 40%, nhưng một số core bị softirq rất cao. Nếu các flow mạng chủ yếu vào những core đó, tail latency có thể tăng dù dashboard CPU trung bình trông “khỏe”.
+Một máy có thể có CPU utilization tổng thể chỉ 40%, nhưng một số cốt lõi (core / 핵심) bị softirq rất cao. Nếu các luồng (flow / 흐름) mạng chủ yếu vào những cốt lõi (core / 핵심) đó, tail độ trễ (latency / 지연 시간) có thể tăng dù dashboard CPU trung bình trông “khỏe”.
 
 Dùng:
 
@@ -294,16 +297,16 @@ sar -I SUM 1
 sar -n DEV 1
 ```
 
-Cần đọc cùng nhau thay vì dựa vào một metric.
+Cần đọc cùng nhau thay vì dựa vào một chỉ số (metric / 지표).
 
 ## Softirq và `top`
 
-Trong `top`, CPU time có thể được chia thành các loại như `us`, `sy`, `si`, `hi`, `wa` tùy phiên bản.
+Trong `top`, CPU thời gian (time / 시간) có thể được chia thành các loại như `us`, `sy`, `si`, `hi`, `wa` tùy phiên bản.
 
-- `hi` thường liên quan hard interrupt time;
-- `si` thường liên quan softirq time.
+- `hi` thường liên quan hard interrupt thời gian (time / 시간);
+- `si` thường liên quan softirq thời gian (time / 시간).
 
-Nếu `si` tăng mạnh cùng network traffic, đây là tín hiệu quan trọng.
+Nếu `si` tăng mạnh cùng mạng (network / 네트워크) traffic, đây là tín hiệu quan trọng.
 
 ## Khi packet drop nhưng ứng dụng không thấy gì
 
@@ -312,11 +315,11 @@ Packet có thể bị drop trước khi tới socket ứng dụng vì:
 - NIC ring đầy;
 - kernel backlog quá tải;
 - softirq không xử lý kịp;
-- firewall hoặc policy drop;
+- firewall hoặc chính sách (policy / 정책) drop;
 - socket receive buffer đầy;
-- application đọc quá chậm.
+- ứng dụng (application / 애플리케이션) đọc quá chậm.
 
-Vì vậy “không có log ứng dụng” không chứng minh request chưa bao giờ tới host.
+Vì vậy “không có log ứng dụng” không chứng minh yêu cầu (request / 요청) chưa bao giờ tới host.
 
 Điều tra có thể dùng:
 
@@ -331,19 +334,19 @@ Các counter cụ thể phụ thuộc driver.
 
 ## Workqueue
 
-Không phải deferred work nào cũng dùng softirq. Kernel có **workqueue** để thực hiện công việc trong context của kernel worker thread, nơi có thể ngủ trong nhiều trường hợp phù hợp hơn so với interrupt context.
+Không phải deferred công việc (work / 작업) nào cũng dùng softirq. Kernel có **workqueue** để thực hiện công việc trong ngữ cảnh (context / 맥락) của kernel worker luồng thực thi (thread / 스레드), nơi có thể ngủ trong nhiều trường hợp phù hợp hơn so với interrupt ngữ cảnh (context / 맥락).
 
-Bạn có thể thấy các thread dạng:
+Bạn có thể thấy các luồng thực thi (thread / 스레드) dạng:
 
 ```text
 kworker/...
 ```
 
-Nếu `kworker` dùng CPU cao, cần tìm subsystem gây work thay vì kết luận chính thread này là “ứng dụng lỗi”. Nó là worker chung cho nhiều loại công việc kernel.
+Nếu `kworker` dùng CPU cao, cần tìm subsystem gây công việc (work / 작업) thay vì kết luận chính luồng thực thi (thread / 스레드) này là “ứng dụng lỗi”. Nó là worker chung cho nhiều loại công việc kernel.
 
 ## Mô hình tư duy
 
-Một request production không chỉ tiêu CPU trong process:
+Một yêu cầu (request / 요청) môi trường vận hành (production / 운영 환경) không chỉ tiêu CPU trong tiến trình (process / 프로세스):
 
 ```text
 hardware event
@@ -359,20 +362,22 @@ socket / file descriptor
 application thread
 ```
 
-Do đó CPU time và latency có thể phát sinh ở nhiều tầng trước khi ứng dụng thực sự chạy.
+Do đó CPU thời gian (time / 시간) và độ trễ (latency / 지연 시간) có thể phát sinh ở nhiều tầng trước khi ứng dụng thực sự chạy.
 
 ## Những hiểu lầm phổ biến
 
-**“CPU cao luôn phải tìm process cao nhất.”** Một phần tải có thể nằm ở interrupt/softirq/kernel worker.
+**“CPU cao luôn phải tìm tiến trình (process / 프로세스) cao nhất.”** Một phần tải có thể nằm ở interrupt/softirq/kernel worker.
 
-**“Interrupt càng ít càng tốt.”** Coalescing quá mạnh có thể tăng latency. Mục tiêu là cân bằng overhead và latency.
+**“Interrupt càng ít càng tốt.”** Coalescing quá mạnh có thể tăng độ trễ (latency / 지연 시간). Mục tiêu là cân bằng overhead và độ trễ (latency / 지연 시간).
 
-**“Polling luôn lãng phí.”** NAPI cho thấy polling có kiểm soát rất hữu ích ở throughput cao.
+**“Polling luôn lãng phí.”** NAPI cho thấy polling có kiểm soát rất hữu ích ở thông lượng (throughput / 처리량) cao.
 
-**“`/dev/sda` chính là ổ cứng vật lý.”** Nó là device node đại diện cho thiết bị/block interface mà kernel expose; phía dưới có thể là NVMe, virtual disk, RAID hoặc storage khác.
+**“`/dev/sda` chính là ổ cứng vật lý.”** Nó là thiết bị (device / 장치) nút (node / 노드) đại diện cho thiết bị/khối (block / 블록) giao diện (interface / 인터페이스) mà kernel expose; phía dưới có thể là NVMe, virtual disk, RAID hoặc lưu trữ (storage / 저장소) khác.
 
-**“Driver chỉ cần quan tâm khi cài phần cứng.”** Driver quyết định cách kernel giao tiếp với thiết bị và ảnh hưởng trực tiếp tới performance, error counter và observability.
+**“Driver chỉ cần quan tâm khi cài phần cứng.”** Driver quyết định cách kernel giao tiếp với thiết bị và ảnh hưởng trực tiếp tới hiệu năng (performance / 성능), lỗi (error / 오류) counter và khả năng quan sát (observability / 관측 가능성).
 
 ## Kết nối kiến thức
 
-Chương này nối [kernel, user space và system call](./kernel_userspace_syscalls.md) với [I/O performance](../06_resources/io_performance.md), [IP routing/NAT](../07_networking/ip_routing_nat_conntrack.md) và [quan sát production](../09_production/observability_tracing_strace_perf.md). Khi network hoặc storage có throughput cao, interrupt và deferred work là tầng không nên bỏ qua.
+Chương này nối [kernel, user space và system call](./kernel_userspace_syscalls.md) với [I/O performance](../06_resources/io_performance.md), [IP routing/NAT](../07_networking/ip_routing_nat_conntrack.md) và [quan sát production](../09_production/observability_tracing_strace_perf.md). Khi mạng (network / 네트워크) hoặc lưu trữ (storage / 저장소) có thông lượng (throughput / 처리량) cao, interrupt và deferred công việc (work / 작업) là tầng không nên bỏ qua.
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [cpu privilege exceptions syscall path](./cpu_privilege_exceptions_syscall_path.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

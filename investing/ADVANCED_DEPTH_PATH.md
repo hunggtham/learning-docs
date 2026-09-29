@@ -1,6 +1,9 @@
-# Advanced Depth Path — Lộ trình học sâu Investing
+# Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing
 
-> File này là bản đồ dành cho giai đoạn sau khi đã đọc các chapter nền tảng. Mục tiêu không phải học thêm thật nhiều thuật ngữ, mà tăng khả năng **nối kiến thức → xây mô hình → dùng dữ liệu → kiểm thử → nhận diện failure mode → ra quyết định → đánh giá lại**.
+> **Mạch đọc:** Đặt **Advanced độ sâu (depth / 깊이) đường dẫn (path / 경로) — Lộ trình học sâu Investing** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách sử dụng** sang **01 — Thiết kế danh mục nâng cao**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này là bản đồ dành cho giai đoạn sau khi đã đọc các chapter nền tảng. Mục tiêu không phải học thêm thật nhiều thuật ngữ, mà tăng khả năng **nối kiến thức → xây mô hình → dùng dữ liệu → kiểm thử → nhận diện dạng thất bại (failure mode / 실패 모드) → ra quyết định → đánh giá lại**.
 
 ## Cách sử dụng
 
@@ -62,7 +65,7 @@ Bảng cân đối cá nhân
 
 Dữ liệu cần biết cách dùng gồm giá trị tài sản, nghĩa vụ theo thời gian và đồng tiền, dòng tiền tiết kiệm, độ biến động, covariance/correlation, drawdown, beta/factor exposure, liquidity bucket và chi phí giao dịch.
 
-Failure mode cần nhận diện gồm giả định tương quan lịch sử ổn định, dùng volatility thay cho khả năng thất bại mục tiêu, không tách tiền cho nghĩa vụ gần, đòn bẩy ẩn và tái cân bằng dựa trên cảm xúc.
+Dạng thất bại (failure mode / 실패 모드) cần nhận diện gồm giả định tương quan lịch sử ổn định, dùng volatility thay cho khả năng thất bại mục tiêu, không tách tiền cho nghĩa vụ gần, đòn bẩy ẩn và tái cân bằng dựa trên cảm xúc.
 
 **Gate hoàn thành:** phải tạo được `IPS + stress matrix + reverse stress test + rebalancing rules`, đồng thời giải thích được danh mục thất bại trong trạng thái nào.
 
@@ -83,11 +86,11 @@ Dòng tiền
 → vai trò trong danh mục
 ```
 
-Dữ liệu tối thiểu phải biết đọc gồm yield curve, real yield, credit spread, default/recovery, NAV/premium-discount, tracking difference, cap rate/NOI, commodity curve, FX forward points, volatility và thanh khoản.
+Dữ liệu tối thiểu phải biết đọc gồm yield curve, real yield, credit spread, default/khôi phục (recovery / 복구), NAV/premium-discount, tracking difference, cap tỷ lệ (rate / 비율)/NOI, commodity curve, FX forward points, volatility và thanh khoản.
 
-Failure mode gồm so tài sản chỉ bằng lợi suất danh nghĩa, nhầm ETF với asset class, nhìn private NAV ít biến động rồi kết luận rủi ro thấp, nhầm carry cao với expected return cao và bỏ qua embedded option/leverage.
+Dạng thất bại (failure mode / 실패 모드) gồm so tài sản chỉ bằng lợi suất danh nghĩa, nhầm ETF với asset lớp (class / 클래스), nhìn private NAV ít biến động rồi kết luận rủi ro thấp, nhầm carry cao với expected return cao và bỏ qua embedded option/leverage.
 
-**Gate hoàn thành:** phải so được ít nhất bốn asset class trên cùng một bảng `cash flow → duration → carry → liquidity → regime → failure mode → portfolio role`.
+**Gate hoàn thành:** phải so được ít nhất bốn asset lớp (class / 클래스) trên cùng một bảng `cash flow → duration → carry → liquidity → regime → failure mode → portfolio role`.
 
 ## 03 — Mô hình doanh nghiệp tích hợp
 
@@ -110,9 +113,9 @@ Mô hình kinh doanh
 
 Dữ liệu phải nối từ filings và dữ liệu vận hành tới revenue driver, margin, DSO/DIO/DPO, capex, debt maturity, dilution, ROIC tăng thêm, consensus revision và valuation.
 
-Failure mode gồm dự báo doanh thu bằng CAGR không có driver, dùng EPS mà bỏ qua cash conversion, loại mọi khoản “one-off”, dùng peak earnings để định giá doanh nghiệp chu kỳ, bỏ qua dilution/SBC, và tin vào moat không có bằng chứng kinh tế.
+Dạng thất bại (failure mode / 실패 모드) gồm dự báo doanh thu bằng CAGR không có driver, dùng EPS mà bỏ qua cash conversion, loại mọi khoản “one-off”, dùng peak earnings để định giá doanh nghiệp chu kỳ, bỏ qua dilution/SBC, và tin vào moat không có bằng chứng kinh tế.
 
-**Gate hoàn thành:** thay một driver vận hành phải làm thay đổi hợp lý ba báo cáo, FCF, valuation và thesis; phải có bear/base/bull cùng invalidation cụ thể.
+**Gate hoàn thành:** thay một driver vận hành phải làm thay đổi hợp lý ba báo cáo, FCF, valuation và thesis; phải có bear/cơ sở (base / 기반)/bull cùng vô hiệu hóa (invalidation / 무효화) cụ thể.
 
 ## 04 — Nowcasting và truyền dẫn vĩ mô
 
@@ -134,7 +137,7 @@ Dữ liệu
 
 Không chỉ đọc CPI/GDP. Phải biết dùng surprise vs consensus, revision, labor/wage/productivity, 2Y/10Y/real yield/breakeven, term premium, lending standards, credit growth/spread, repo/collateral, USD funding và financial conditions.
 
-Failure mode gồm suy luận `CPI ↑ → cổ phiếu ↓`, nhầm level với rate-of-change, bỏ qua điều thị trường đã pricing, không tách demand shock và supply shock, nhầm liquidity support với solvency repair và dùng một chỉ tiêu để gọi tên regime.
+Dạng thất bại (failure mode / 실패 모드) gồm suy luận `CPI ↑ → cổ phiếu ↓`, nhầm mức (level / 수준) với rate-of-change, bỏ qua điều thị trường đã pricing, không tách demand shock và supply shock, nhầm liquidity hỗ trợ (support / 지원) với solvency repair và dùng một chỉ tiêu để gọi tên regime.
 
 **Gate hoàn thành:** phải xây được một `surprise map + nowcast dashboard + policy reaction map + cross-asset transmission table` và nêu được dữ liệu nào sẽ bác bỏ kịch bản.
 
@@ -157,9 +160,9 @@ Giả thuyết
 → dừng chiến lược
 ```
 
-Dữ liệu phải được kiểm soát theo observation time, publication time, revision time, decision time và execution time. Kết quả phải bao gồm expectancy, distribution, drawdown, turnover, slippage, implementation shortfall, factor exposure, capacity và margin stress.
+Dữ liệu phải được kiểm soát theo observation thời gian (time / 시간), publication thời gian (time / 시간), revision thời gian (time / 시간), quyết định (decision / 결정) thời gian (time / 시간) và thực thi (execution / 실행) thời gian (time / 시간). Kết quả phải bao gồm expectancy, phân phối (distribution / 분포), drawdown, turnover, slippage, hiện thực (implementation / 구현) shortfall, factor exposure, sức chứa (capacity / 용량) và margin stress.
 
-Failure mode gồm look-ahead, survivorship, data snooping, overfit tham số, cost model cố định, full-size ngay sau backtest, nhầm margin với economic exposure, dùng stop như bảo đảm chống gap và đánh giá chiến lược chỉ bằng Sharpe.
+Dạng thất bại (failure mode / 실패 모드) gồm look-ahead, survivorship, dữ liệu (data / 데이터) snooping, overfit tham số, chi phí (cost / 비용) mô hình (model / 모델) cố định, full-size ngay sau backtest, nhầm margin với economic exposure, dùng stop như bảo đảm chống gap và đánh giá chiến lược chỉ bằng Sharpe.
 
 **Gate hoàn thành:** phải có `strategy specification + bias audit + OOS/walk-forward + cost-aware test + sizing rule + execution plan + kill switch + retirement rule`.
 
@@ -182,17 +185,17 @@ Chế độ toàn cầu
 → vị thế
 ```
 
-Dữ liệu phải nối được xuất khẩu, trade balance, FX, reserve/liquidity, rate/credit, foreign flow, market breadth, margin activity, sector revisions, company balance sheet và valuation. Với thông tin có tính thời điểm như chính sách, thuế, settlement, foreign room hoặc market classification phải kiểm tra nguồn chính thức trước khi dùng thực tế.
+Dữ liệu phải nối được xuất khẩu, trade balance, FX, reserve/liquidity, tỷ lệ (rate / 비율)/credit, foreign luồng (flow / 흐름), thị trường (market / 시장) breadth, margin activity, sector revisions, company balance sheet và valuation. Với thông tin có tính thời điểm như chính sách, thuế, settlement, foreign room hoặc thị trường (market / 시장) classification phải kiểm tra nguồn chính thức trước khi dùng thực tế.
 
-Failure mode gồm suy luận “KRW yếu = mọi exporter tốt”, “credit growth = mọi ngân hàng tốt”, nhầm liquidity rally với earnings recovery, dùng index return thay market breadth và bỏ qua custody/FX/tax/access trong cross-border return.
+Dạng thất bại (failure mode / 실패 모드) gồm suy luận “KRW yếu = mọi exporter tốt”, “credit growth = mọi ngân hàng tốt”, nhầm liquidity rally với earnings khôi phục (recovery / 복구), dùng chỉ mục (index / 인덱스) return thay thị trường (market / 시장) breadth và bỏ qua custody/FX/tax/truy cập (access / 접근) trong cross-border return.
 
-**Gate hoàn thành:** phải tạo được `country dashboard + sector map + company driver tree + valuation + liquidity-aware position plan + invalidation` cho ít nhất một case Hàn Quốc và một case Việt Nam.
+**Gate hoàn thành:** phải tạo được `country dashboard + sector map + company driver tree + valuation + liquidity-aware position plan + invalidation` cho ít nhất một trường hợp (case / 사례) Hàn Quốc và một trường hợp (case / 사례) Việt Nam.
 
 ## Advanced Practice Workbook — Biến kiến thức thành sản phẩm phân tích
 
 [ADVANCED_PRACTICE_WORKBOOK.md](./ADVANCED_PRACTICE_WORKBOOK.md)
 
-Workbook là bước bắt buộc nếu muốn tăng chiều sâu thực sự. Sáu module tương ứng sáu domain chính và mỗi module phải đi đủ:
+Workbook là bước bắt buộc nếu muốn tăng chiều sâu thực sự. Sáu mô-đun (module / 모듈) tương ứng sáu lĩnh vực (domain / 도메인) chính và mỗi mô-đun (module / 모듈) phải đi đủ:
 
 ```text
 Dữ liệu / giả định
@@ -206,7 +209,7 @@ Dữ liệu / giả định
 → tự chấm
 ```
 
-### Audit workbook
+### Kiểm tra (audit / 감사) workbook
 
 Khi làm bài, không được chỉ điền kết quả. Mỗi câu trả lời cần phân biệt:
 
@@ -218,13 +221,13 @@ Diễn giải (interpretation)
 Quyết định / rule
 ```
 
-Mỗi module phải có ít nhất một bài **reverse stress test** hoặc **counterfactual**. Ví dụ: thay vì chỉ hỏi “nếu yield tăng 100 bp thì sao?”, phải hỏi “điều kiện nào khiến hedge thất bại?” hoặc “kết quả nào quan sát được dù thesis ban đầu sai?”.
+Mỗi mô-đun (module / 모듈) phải có ít nhất một bài **reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** hoặc **counterfactual**. Ví dụ: thay vì chỉ hỏi “nếu yield tăng 100 bp thì sao?”, phải hỏi “điều kiện nào khiến hedge thất bại?” hoặc “kết quả nào quan sát được dù thesis ban đầu sai?”.
 
-Một bài chỉ đạt khi có thể chỉ ra **failure mode** và dữ liệu xác nhận/bác bỏ, không chỉ tính đúng công thức.
+Một bài chỉ đạt khi có thể chỉ ra **dạng thất bại (failure mode / 실패 모드)** và dữ liệu xác nhận/bác bỏ, không chỉ tính đúng công thức.
 
-## 07 — Case studies tích hợp
+## 07 — trường hợp (case / 사례) studies tích hợp
 
-Các tình huống trong [07_integrated_case_studies](./07_integrated_case_studies/README.md) là nơi kiểm tra integration. Mỗi case phải đi đủ chuỗi:
+Các tình huống trong [07_integrated_case_studies](./07_integrated_case_studies/README.md) là nơi kiểm tra tích hợp (integration / 통합). Mỗi trường hợp (case / 사례) phải đi đủ chuỗi:
 
 ```text
 Macro shock / question
@@ -240,9 +243,9 @@ Macro shock / question
 → Attribution / review
 ```
 
-Nếu một case dừng ở “macro tốt/xấu cho ngành”, case đó chưa đủ sâu.
+Nếu một trường hợp (case / 사례) dừng ở “macro tốt/xấu cho ngành”, trường hợp (case / 사례) đó chưa đủ sâu.
 
-Ưu tiên worked case có số liệu giả định để buộc người đọc tính duration, refinancing cost, earnings sensitivity, valuation sensitivity và portfolio loss thay vì chỉ đọc narrative.
+Ưu tiên worked trường hợp (case / 사례) có số liệu giả định để buộc người đọc tính duration, refinancing chi phí (cost / 비용), earnings sensitivity, valuation sensitivity và portfolio mất mát (loss / 손실) thay vì chỉ đọc narrative.
 
 ## 08 — Capstone: quy trình đầu tư hoàn chỉnh
 
@@ -264,9 +267,9 @@ Câu hỏi
 → cải thiện quy trình
 ```
 
-Capstone không được kết thúc bằng target price. Đầu ra cuối phải cho thấy **thesis sai trong điều kiện nào, bảng cân đối có sống sót không, danh mục chịu bao nhiêu loss trong bear case và phần P/L sau đó đến từ thesis hay từ beta/multiple/FX**.
+Capstone không được kết thúc bằng mục tiêu (target / 대상) price. Đầu ra cuối phải cho thấy **thesis sai trong điều kiện nào, bảng cân đối có sống sót không, danh mục chịu bao nhiêu mất mát (loss / 손실) trong bear trường hợp (case / 사례) và phần P/L sau đó đến từ thesis hay từ beta/multiple/FX**.
 
-## Ma trận audit chiều sâu toàn library
+## Ma trận kiểm tra (audit / 감사) chiều sâu toàn thư viện (library / 라이브러리)
 
 Ma trận dưới đây là công cụ kiểm tra độ phủ, không phải tuyên bố rằng mọi domain đã hoàn thiện vĩnh viễn. Đọc mỗi hàng theo chiều ngang để hỏi concept đã có mechanism, data, risk và failure mode hay chưa; sau đó mở case hoặc workbook để kiểm chứng bằng đầu ra.
 
@@ -274,12 +277,12 @@ Ma trận dưới đây là công cụ kiểm tra độ phủ, không phải tuy
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Foundations | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Advanced Lab + Workbook |
 | Asset Classes | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Advanced Lab + Workbook |
-| Company Analysis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Company Lab + sector cases |
+| Company phân tích (analysis / 분석) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Company Lab + sector cases |
 | Economics | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Macro Lab + CPI/credit cases |
-| Trading & Derivatives | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | System Lab + Workbook |
-| Korea / Vietnam | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Market Lab + country cases |
+| Trading & Derivatives | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | hệ thống (system / 시스템) Lab + Workbook |
+| Korea / Vietnam | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | thị trường (market / 시장) Lab + country cases |
 
-Dấu ✓ không có nghĩa nội dung đã “xong vĩnh viễn”. Nó có nghĩa library đã có vị trí canonical cho lớp kiến thức đó. Nội dung mới chỉ nên được thêm khi làm sâu cơ chế, dữ liệu, failure mode hoặc case, không nên tạo chapter mới chỉ vì gặp một thuật ngữ mới.
+Dấu ✓ không có nghĩa nội dung đã “xong vĩnh viễn”. Nó có nghĩa thư viện (library / 라이브러리) đã có vị trí chuẩn gốc (canonical / 정본) cho lớp kiến thức đó. Nội dung mới chỉ nên được thêm khi làm sâu cơ chế, dữ liệu, dạng thất bại (failure mode / 실패 모드) hoặc trường hợp (case / 사례), không nên tạo chapter mới chỉ vì gặp một thuật ngữ mới.
 
 ## Chuẩn đầu ra sau mỗi Advanced Lab
 

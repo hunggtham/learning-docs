@@ -1,5 +1,8 @@
 # Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học
 
+> **Mạch đọc:** Đọc **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Dạng tổng quát** sang **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phương trình tốc độ (rate law / 속도식)** mô tả tốc độ phản ứng phụ thuộc vào trạng thái hiện tại của hệ như thế nào. Nó là cầu nối giữa dữ liệu nồng độ–thời gian và cơ chế vi mô. Các số mũ trong phương trình tốc độ nói chung phải được xác định từ thực nghiệm hoặc suy ra từ một cơ chế đã được kiểm chứng; không thể đọc trực tiếp từ phương trình phản ứng tổng.
 
 Nếu chương trước trả lời “tốc độ là gì?”, chương này trả lời câu hỏi quan trọng hơn: **khi nồng độ thay đổi, tốc độ thay đổi theo quy luật nào?**
@@ -20,6 +23,9 @@ Trong đó:
 
 Bậc phản ứng có thể bằng 0, số nguyên, phân số hoặc thậm chí thay đổi hiệu dụng theo vùng nồng độ nếu cơ chế phức tạp. Vì thế “bậc phản ứng” là một thuộc tính của **mô hình tốc độ dưới điều kiện đang xét**, không phải nhãn cố định gắn vĩnh viễn lên phương trình tổng.
 
+
+> **Chuyển mạch:** Từ **Dạng tổng quát**, ta sang **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?
 
 Phương trình:
@@ -39,6 +45,9 @@ r=k[NO_2]^2[F_2]
 chỉ được suy trực tiếp từ hệ số khi phương trình đó thực sự là **bước cơ bản (elementary step)** phù hợp với định luật tác dụng khối lượng.
 
 Đây là lý do kinetics cung cấp thông tin cơ chế mà stoichiometry không thể cung cấp.
+
+
+> **Chuyển mạch:** Từ **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?**, ta sang **Ý nghĩa của bậc phản ứng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ý nghĩa của bậc phản ứng
 
@@ -68,6 +77,9 @@ thì trong vùng điều kiện đó, thay đổi \([A]\) không làm tốc đ�
 
 Bậc 0 không có nghĩa A “không tham gia phản ứng”. Nó có thể nghĩa vị trí xúc tác đã bão hòa, photon là yếu tố giới hạn hoặc một bước khác đang kiểm soát tốc độ.
 
+
+> **Chuyển mạch:** Từ **Ý nghĩa của bậc phản ứng**, ta sang **Đơn vị của hằng số tốc độ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Đơn vị của hằng số tốc độ
 
 Tốc độ thường có đơn vị:
@@ -90,9 +102,12 @@ bậc 1: s^-1
 bậc 2: L mol^-1 s^-1
 ```
 
-Đơn vị của \(k\) không phải chi tiết phụ; nó phản ánh cấu trúc toán học của rate law và giúp phát hiện lỗi mô hình.
+Đơn vị của \(k\) không phải chi tiết phụ; nó phản ánh cấu trúc toán học của tỷ lệ (rate / 비율) law và giúp phát hiện lỗi mô hình.
 
 # Ba cách chính để tìm phương trình tốc độ
+
+
+> **Chuyển mạch:** Từ **Đơn vị của hằng số tốc độ**, ta sang **1. Phương pháp tốc độ ban đầu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 1. Phương pháp tốc độ ban đầu
 
@@ -122,17 +137,23 @@ Nếu \([B]\) tăng gấp đôi nhưng tốc độ giữ gần như không đổ
 
 Ưu điểm của phương pháp tỉ số là \(k\) triệt tiêu. Nhược điểm là cần nhiều thí nghiệm được kiểm soát tốt và tốc độ ban đầu phải đo đáng tin cậy.
 
+
+> **Chuyển mạch:** Từ **1. Phương pháp tốc độ ban đầu**, ta sang **2. Theo dõi toàn bộ đường nồng độ–thời gian** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 2. Theo dõi toàn bộ đường nồng độ–thời gian
 
 Thay vì chỉ dùng vài độ dốc ban đầu, có thể fit toàn bộ trajectory vào nghiệm của phương trình vi phân.
 
 Cách này tận dụng nhiều dữ liệu hơn và đặc biệt hữu ích khi nhiễu làm đạo hàm cục bộ không ổn định.
 
-## 3. Dùng cơ chế để suy rate law
+
+> **Chuyển mạch:** Từ **2. Theo dõi toàn bộ đường nồng độ–thời gian**, ta sang **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law
 
 Nếu có một cơ chế đề xuất, ta viết tốc độ cho từng bước cơ bản rồi dùng xấp xỉ tiền cân bằng hoặc trạng thái ổn định để loại chất trung gian.
 
-Rate law suy được sau đó phải được so với thực nghiệm. Nếu không khớp, cơ chế hoặc giả định cần được xem lại.
+Tỷ lệ (rate / 비율) law suy được sau đó phải được so với thực nghiệm. Nếu không khớp, cơ chế hoặc giả định cần được xem lại.
 
 # Động học bậc không
 
@@ -198,11 +219,14 @@ không phụ thuộc \([A]_0\).
 
 Chính tính chất này làm phân rã phóng xạ trở thành ví dụ rất rõ của động học bậc nhất.
 
+
+> **Chuyển mạch:** Từ **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law**, ta sang **Vì sao hàm mũ xuất hiện?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Vì sao hàm mũ xuất hiện?
 
 Trong bậc nhất, mỗi phân tử có xác suất biến đổi gần như không đổi trên một đơn vị thời gian. Khi quần thể lớn, số phân tử mất đi mỗi giây tỉ lệ với số còn lại. Một quá trình “mất theo tỉ lệ phần trăm” tự nhiên tạo hàm mũ.
 
-Logic tương tự xuất hiện trong phóng xạ, dược động học đơn giản, điện học RC và nhiều hệ thống suy giảm khác.
+Lô-gic (logic / 논리) tương tự xuất hiện trong phóng xạ, dược động học đơn giản, điện học RC và nhiều hệ thống suy giảm khác.
 
 # Động học bậc hai
 
@@ -268,9 +292,12 @@ Hệ biểu hiện **động học giả bậc nhất (pseudo-first-order kineti
 
 Đây không phải “thay đổi bản chất” của bước phản ứng; nó là cách thiết kế thí nghiệm để biến một biến số gần như thành hằng số, giúp phân tích đơn giản hơn.
 
+
+> **Chuyển mạch:** Từ **Vì sao hàm mũ xuất hiện?**, ta sang **Ví dụ hóa sinh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Ví dụ hóa sinh
 
-Nếu substrate dư rất lớn so với một chất phản ứng khác, một quá trình hai thành phần có thể biểu hiện gần bậc nhất theo thành phần đang được theo dõi. Logic tương tự xuất hiện trong nhiều assay và phản ứng thủy phân trong dung môi nước dư khổng lồ.
+Nếu substrate dư rất lớn so với một chất phản ứng khác, một quá trình hai thành phần có thể biểu hiện gần bậc nhất theo thành phần đang được theo dõi. lô-gic (logic / 논리) tương tự xuất hiện trong nhiều assay và phản ứng thủy phân trong dung môi nước dư khổng lồ.
 
 # Half-life như dấu vân tay động học
 
@@ -296,7 +323,7 @@ ln[A] vs t        → bậc 1
 
 và chọn đồ thị “thẳng nhất”. Cách này hữu ích để học nhưng có hạn chế.
 
-Biến đổi logarithm hoặc nghịch đảo làm thay đổi phân bố sai số. Ví dụ sai số đo nồng độ đồng đều trên thang gốc không còn đồng đều sau phép \(1/[A]\). Vì thế hồi quy tuyến tính trên dữ liệu đã biến đổi có thể tạo parameter bias.
+Biến đổi logarithm hoặc nghịch đảo làm thay đổi phân bố sai số. Ví dụ sai số đo nồng độ đồng đều trên thang gốc không còn đồng đều sau phép \(1/[A]\). Vì thế hồi quy tuyến tính trên dữ liệu đã biến đổi có thể tạo parameter độ lệch (bias / 편향).
 
 Trong phân tích hiện đại, thường nên fit trực tiếp mô hình phi tuyến lên dữ liệu gốc và xem residuals.
 
@@ -330,7 +357,7 @@ Ví dụ một species có thể chiếm bề mặt xúc tác nhưng không ph�
 
 Bậc âm vì thế không vi phạm vật lý; nó chỉ cho biết ảnh hưởng thực nghiệm của thành phần đó lên mạng cơ chế.
 
-# Rate law và hoạt độ
+# Tỷ lệ (rate / 비율) law và hoạt độ
 
 Ở dung dịch loãng, thường dùng concentration:
 
@@ -338,13 +365,13 @@ Bậc âm vì thế không vi phạm vật lý; nó chỉ cho biết ảnh hư�
 r=k[A]^m
 \]
 
-Nhưng về nguyên tắc, phản ứng phụ thuộc **hoạt độ (activity)** và chemical potential. Khi dung dịch đậm đặc hoặc ionic strength cao, concentration-based rate constant có thể thay đổi theo môi trường.
+Nhưng về nguyên tắc, phản ứng phụ thuộc **hoạt độ (activity)** và chemical potential. Khi dung dịch đậm đặc hoặc ionic strength cao, concentration-based tỷ lệ (rate / 비율) constant có thể thay đổi theo môi trường.
 
 Điều này đặc biệt quan trọng với phản ứng ion vì tương tác điện tĩnh thay đổi khả năng hai ion tiếp cận trạng thái chuyển tiếp.
 
-# Nhiệt độ phải được kiểm soát khi xác định rate law
+# Nhiệt độ phải được kiểm soát khi xác định tỷ lệ (rate / 비율) law
 
-Hằng số \(k\) phụ thuộc mạnh nhiệt độ. Nếu hai thí nghiệm “chỉ khác nồng độ” nhưng nhiệt độ thực khác vài độ, phần thay đổi tốc độ có thể bị gán nhầm cho reaction order.
+Hằng số \(k\) phụ thuộc mạnh nhiệt độ. Nếu hai thí nghiệm “chỉ khác nồng độ” nhưng nhiệt độ thực khác vài độ, phần thay đổi tốc độ có thể bị gán nhầm cho reaction thứ tự (order / 순서).
 
 Với phản ứng tỏa nhiệt mạnh, nhiệt độ trong mẫu còn có thể cao hơn bath temperature. Vì vậy kinetics tốt cần đo trạng thái thật của hệ, không chỉ setpoint thiết bị.
 
@@ -358,11 +385,11 @@ Với mạng nhiều phản ứng:
 
 các nồng độ được nối qua hệ ODE phi tuyến. Khi không có nghiệm giải tích, ta dùng bộ giải số.
 
-Mô hình có thể chứa hàng chục tới hàng nghìn species trong combustion, atmospheric chemistry hoặc metabolism. Khi đó “rate law” không còn là một công thức đơn mà là một vector hàm tốc độ.
+Mô hình có thể chứa hàng chục tới hàng nghìn species trong combustion, atmospheric chemistry hoặc metabolism. Khi đó “tỷ lệ (rate / 비율) law” không còn là một công thức đơn mà là một véc-tơ (vector / 벡터) hàm tốc độ.
 
 # Stiff kinetics
 
-Nếu một mạng có phản ứng rất nhanh và rất chậm đồng thời, hệ ODE có thể trở thành **cứng (stiff)**. Bộ giải số explicit thông thường phải dùng bước thời gian cực nhỏ để ổn định, dù ta quan tâm quá trình chậm hơn nhiều.
+Nếu một mạng có phản ứng rất nhanh và rất chậm đồng thời, hệ ODE có thể trở thành **cứng (stiff)**. Bộ giải số tường minh (explicit / 명시적) thông thường phải dùng bước thời gian cực nhỏ để ổn định, dù ta quan tâm quá trình chậm hơn nhiều.
 
 Các solver implicit như BDF được dùng trong nhiều software kinetics. Đây là ví dụ rất rõ cho việc kiến thức hóa học dẫn trực tiếp tới lựa chọn thuật toán trong khoa học máy tính.
 
@@ -377,15 +404,15 @@ Nếu nhiều bộ \(k\) cho đường dự đoán gần như giống nhau, para
 
 Thêm chữ số cho giá trị fit không giải quyết thiếu thông tin. Cần thiết kế thí nghiệm mới, thay đổi điều kiện hoặc đo thêm species.
 
-# So sánh model bằng dự đoán, không chỉ bằng fit
+# So sánh mô hình (model / 모델) bằng dự đoán, không chỉ bằng fit
 
-Một rate law tốt nên giải thích được dữ liệu đã dùng để xây dựng **và** dự đoán được điều kiện mới trong phạm vi hợp lý.
+Một tỷ lệ (rate / 비율) law tốt nên giải thích được dữ liệu đã dùng để xây dựng **và** dự đoán được điều kiện mới trong phạm vi hợp lý.
 
 Ví dụ, fit dữ liệu ở một nồng độ ban đầu rồi thử dự đoán trajectory ở nồng độ khác là kiểm tra mạnh hơn việc chỉ báo \(R^2\) trên cùng dataset.
 
 # Những hiểu lầm thường gặp
 
-### “Hệ số stoichiometric chính là reaction order”
+### “Hệ số stoichiometric chính là reaction thứ tự (order / 순서)”
 
 Chỉ có thể suy như vậy cho một bước cơ bản phù hợp. Phương trình tổng không đủ thông tin.
 
@@ -395,15 +422,18 @@ Không. Bậc mô tả sự phụ thuộc toán học của tốc độ, không 
 
 ### “Đồ thị tuyến tính nhất chứng minh bậc phản ứng”
 
-Không. Linearization có thể bóp méo sai số; cần residuals, kiểm chứng ngoài mẫu và logic cơ chế.
+Không. Linearization có thể bóp méo sai số; cần residuals, kiểm chứng ngoài mẫu và lô-gic (logic / 논리) cơ chế.
 
 ### “k là hằng số tuyệt đối của phản ứng”
 
-\(k\) chỉ được xem là hằng trong điều kiện xác định. Nhiệt độ, dung môi, ionic strength và catalyst state có thể làm nó thay đổi.
+\(k\) chỉ được xem là hằng trong điều kiện xác định. Nhiệt độ, dung môi, ionic strength và catalyst trạng thái (state / 상태) có thể làm nó thay đổi.
 
-### “Reaction order phải là số nguyên không âm”
+### “Reaction thứ tự (order / 순서) phải là số nguyên không âm”
 
 Không. Mạng cơ chế có thể tạo bậc phân số, 0 hoặc âm.
+
+
+> **Chuyển mạch:** Từ **Ví dụ hóa sinh**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -419,3 +449,5 @@ trạng thái hiện tại C(t)
 Dạng tích phân chỉ là quỹ đạo sinh ra khi quy tắc cục bộ đó được áp dụng liên tục. Khi cơ chế phức tạp, máy tính thực hiện quá trình tích phân này bằng solver số.
 
 Xem tiếp: [Cơ chế phản ứng](./02_reaction_mechanisms.md) và [Ma trận hóa lượng và mạng phản ứng](../04_chemical_quantities/06_stoichiometric_matrices_and_reaction_networks.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reaction rates](./00_reaction_rates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

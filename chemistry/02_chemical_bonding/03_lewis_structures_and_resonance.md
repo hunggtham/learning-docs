@@ -1,5 +1,8 @@
 # Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử
 
+> **Mạch đọc:** Đọc **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hệ thiếu electron** sang **Species có số electron lẻ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Cấu trúc Lewis (Lewis structure / 루이스 구조)** là mô hình hạch toán electron hóa trị. Nó giúp trả lời nhanh nguyên tử nào nối với nguyên tử nào, có bao nhiêu cặp electron liên kết, cặp electron không liên kết và điện tích hình thức. Lewis không phải ảnh chụp mật độ electron thật; nó là một lớp mô hình đơn giản hóa cực kỳ hữu ích trước khi chuyển sang VSEPR, liên kết hóa trị và obitan phân tử.
 
 Nếu một người quên gần hết Hóa phổ thông, nên xem Lewis như **sổ kế toán electron**: trước khi hỏi phân tử có hình gì hay phản ứng ra sao, ta cần biết tổng electron hóa trị đã được phân bố nhất quán hay chưa.
@@ -103,13 +106,13 @@ O=C=O
 
 có formal charges bằng 0 trên cả ba atoms và phù hợp hơn với symmetry cũng như bonding.
 
-Điểm quan trọng là Lewis structure không chỉ được chọn bằng octet; formal charge và chemical plausibility cùng tham gia.
+Điểm quan trọng là Lewis cấu trúc (structure / 구조) không chỉ được chọn bằng octet; formal charge và chemical plausibility cùng tham gia.
 
 # Quy tắc octet và vì sao nó hữu ích
 
 Nguyên tố chu kỳ 2 chỉ có valence shell gồm 2s và 2p, nên cấu hình closed-shell với tám electron quanh atom thường đặc biệt ổn định.
 
-Đây là nguồn gốc hóa học của octet rule.
+Đây là nguồn gốc hóa học của octet quy tắc (rule / 규칙).
 
 Tuy nhiên ba nhóm ngoại lệ phải được hiểu sớm.
 
@@ -123,11 +126,17 @@ BF_3+NH_3\rightarrow F_3B\leftarrow NH_3
 
 Ngoại lệ octet ở đây trực tiếp giải thích reactivity.
 
+
+> **Chuyển mạch:** Từ **Hệ thiếu electron**, ta sang **Species có số electron lẻ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Species có số electron lẻ
 
 \(NO\) có tổng electron valence lẻ nên không thể ghép tất cả thành pairs.
 
 Các **gốc tự do (radicals / 라디칼)** thường có electron độc thân và có chemistry rất khác closed-shell molecules.
+
+
+> **Chuyển mạch:** Từ **Species có số electron lẻ**, ta sang **Hệ siêu hóa trị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Hệ siêu hóa trị
 
@@ -155,15 +164,15 @@ Phân tử thật **không nhảy qua lại** giữa ba hình. Electron density 
 
 # Resonance hybrid và dữ liệu thực nghiệm
 
-Nếu một contributor với N=O và hai N–O đơn là literal structure, ta kỳ vọng một bond ngắn khác hai bond dài.
+Nếu một contributor với N=O và hai N–O đơn là literal cấu trúc (structure / 구조), ta kỳ vọng một bond ngắn khác hai bond dài.
 
-Thực nghiệm cho ba N–O gần tương đương. Điều này phù hợp **lai cộng hưởng (resonance hybrid)**, trong đó bond order được phân bố trên nhiều liên kết.
+Thực nghiệm cho ba N–O gần tương đương. Điều này phù hợp **lai cộng hưởng (resonance hybrid)**, trong đó bond thứ tự (order / 순서) được phân bố trên nhiều liên kết.
 
-Resonance vì thế không chỉ là cách vẽ đẹp hơn; nó giải thích bond length, charge distribution và stability.
+Resonance vì thế không chỉ là cách vẽ đẹp hơn; nó giải thích bond length, charge phân phối (distribution / 분포) và stability.
 
 # Bậc liên kết trung bình
 
-Với carbonate \(CO_3^{2-}\), một double-bond contribution được chia cho ba C–O tương đương. Average bond order gần:
+Với carbonate \(CO_3^{2-}\), một double-bond contribution được chia cho ba C–O tương đương. Average bond thứ tự (order / 순서) gần:
 
 \[
 BO\approx\frac{4}{3}
@@ -213,13 +222,13 @@ Positive charge không nằm cố định trên một carbon.
 
 Trong conjugated polymer, delocalization mở rộng làm HOMO–LUMO gap giảm và tạo optical/electronic properties hữu ích.
 
-Đây là cầu nối Lewis resonance → MO theory → organic electronics.
+Đây là cầu nối Lewis resonance → MO lý thuyết (theory / 이론) → organic electronics.
 
 # Aromaticity không chỉ là “rất nhiều resonance”
 
 Benzene thường được vẽ bằng hai Kekulé structures, nhưng aromatic stabilization sâu hơn simple averaging of double bonds.
 
-Một cyclic, planar, conjugated π system có electron count phù hợp có thể có electronic stabilization đặc biệt. MO theory mô tả điều này tốt hơn Lewis.
+Một cyclic, planar, conjugated π hệ thống (system / 시스템) có electron count phù hợp có thể có electronic stabilization đặc biệt. MO lý thuyết (theory / 이론) mô tả điều này tốt hơn Lewis.
 
 Lewis contributors vẫn hữu ích để nhìn electron movement, nhưng không nên dùng chúng làm toàn bộ lý thuyết aromaticity.
 
@@ -240,7 +249,7 @@ Do đó nắm Lewis tốt là prerequisite trực tiếp của reaction mechanis
 
 # Formal charge khác partial charge
 
-Trong carbonyl \(C=O\), Lewis neutral structure có formal charge 0 trên C và O, nhưng oxygen vẫn có partial negative charge còn carbon partial positive vì electronegativity khác nhau.
+Trong carbonyl \(C=O\), Lewis neutral cấu trúc (structure / 구조) có formal charge 0 trên C và O, nhưng oxygen vẫn có partial negative charge còn carbon partial positive vì electronegativity khác nhau.
 
 Vì vậy:
 
@@ -252,21 +261,21 @@ oxidation state → ionic bookkeeping for redox
 
 Ba khái niệm trả lời ba câu hỏi khác nhau.
 
-# Formal charge khác oxidation state
+# Formal charge khác oxidation trạng thái (state / 상태)
 
-Với CO, formal-charge assignment và oxidation-state assignment khác vì chúng dùng rule phân electron khác nhau.
+Với CO, formal-charge assignment và oxidation-state assignment khác vì chúng dùng quy tắc (rule / 규칙) phân electron khác nhau.
 
 Formal charge chia bonding electrons equally.
 
-Oxidation state gán toàn bộ bonding electrons cho atom electronegative hơn.
+Oxidation trạng thái (state / 상태) gán toàn bộ bonding electrons cho atom electronegative hơn.
 
-Không nên dùng oxidation state để chọn resonance contributor hay dùng formal charge để cân bằng redox một cách máy móc.
+Không nên dùng oxidation trạng thái (state / 상태) để chọn resonance contributor hay dùng formal charge để cân bằng redox một cách máy móc.
 
-# Lewis acid và Lewis base
+# Lewis acid và Lewis cơ sở (base / 기반)
 
-Lewis structure làm lộ rõ lone pair và electron-deficient center.
+Lewis cấu trúc (structure / 구조) làm lộ rõ lone pair và electron-deficient center.
 
-**Lewis base** cho electron pair.
+**Lewis cơ sở (base / 기반)** cho electron pair.
 
 **Lewis acid** nhận electron pair.
 
@@ -276,11 +285,11 @@ Ví dụ:
 NH_3+BF_3\rightarrow H_3N\to BF_3
 \]
 
-Nhìn lone pair trên N và empty acceptor capacity ở B giúp dự đoán reaction trước cả khi học orbital chi tiết.
+Nhìn lone pair trên N và empty acceptor sức chứa (capacity / 용량) ở B giúp dự đoán reaction trước cả khi học orbital chi tiết.
 
-# Lewis structure và VSEPR
+# Lewis cấu trúc (structure / 구조) và VSEPR
 
-Sau khi xây Lewis structure, đếm electron domains quanh central atom để chuyển sang hình học.
+Sau khi xây Lewis cấu trúc (structure / 구조), đếm electron domains quanh central atom để chuyển sang hình học.
 
 Ví dụ H₂O:
 
@@ -288,16 +297,16 @@ Ví dụ H₂O:
 2 O–H bonds + 2 lone pairs = 4 electron domains
 ```
 
-→ electron geometry tetrahedral
-→ molecular geometry bent.
+→ electron hình học (geometry / 기하학) tetrahedral
+→ molecular hình học (geometry / 기하학) bent.
 
 Do đó Lewis là prerequisite trực tiếp của VSEPR.
 
-# Lewis structure và hybridization
+# Lewis cấu trúc (structure / 구조) và hybridization
 
-Lewis/VSEPR cho local coordination. Hybridization là một cách xây localized orbitals phù hợp geometry đó.
+Lewis/VSEPR cho cục bộ (local / 로컬) coordination. Hybridization là một cách xây localized orbitals phù hợp hình học (geometry / 기하학) đó.
 
-Nhưng không nên reasoning ngược kiểu:
+Nhưng không nên lập luận (reasoning / 추론) ngược kiểu:
 
 ```text
 sp3 vì sách nói sp3 → nên geometry tetrahedral
@@ -310,7 +319,7 @@ electron structure + geometry quan sát
 → localized orbital model sp3 là representation hữu ích
 ```
 
-# Lewis structure và MO theory
+# Lewis cấu trúc (structure / 구조) và MO lý thuyết (theory / 이론)
 
 Lewis mạnh ở:
 
@@ -327,7 +336,7 @@ MO mạnh hơn ở:
 - spectroscopy;
 - band formation.
 
-Hai mô hình không “đánh nhau”; chúng dùng mức abstraction khác nhau.
+Hai mô hình không “đánh nhau”; chúng dùng mức lớp trừu tượng (abstraction / 추상화) khác nhau.
 
 # Một quy trình giải Lewis đáng tin cậy
 
@@ -346,7 +355,7 @@ Khi gặp species mới:
 10. hỏi model Lewis có giới hạn gì với species này
 ```
 
-Bước 10 rất quan trọng: radical, electron-deficient, hypervalent và transition-metal species thường cần model cao hơn.
+Bước 10 rất quan trọng: radical, electron-deficient, hypervalent và transition-metal species thường cần mô hình (model / 모델) cao hơn.
 
 # Ví dụ tích hợp: nitrite NO₂⁻
 
@@ -368,37 +377,40 @@ Sau electron bookkeeping, hai contributors chính:
 O=N–O⁻ ↔ ⁻O–N=O
 ```
 
-Hai N–O tương đương trung bình, bond order gần 1.5.
+Hai N–O tương đương trung bình, bond thứ tự (order / 순서) gần 1.5.
 
-N còn một lone pair, nên quanh N có ba electron domains. VSEPR dự đoán electron geometry gần trigonal planar và molecular geometry bent.
+N còn một lone pair, nên quanh N có ba electron domains. VSEPR dự đoán electron hình học (geometry / 기하학) gần trigonal planar và molecular hình học (geometry / 기하학) bent.
 
-Một bài Lewis vì thế tự nhiên dẫn sang geometry chứ không kết thúc ở chấm electron.
+Một bài Lewis vì thế tự nhiên dẫn sang hình học (geometry / 기하학) chứ không kết thúc ở chấm electron.
 
 # Những hiểu lầm thường gặp
 
-### “Đạt octet là đủ để structure đúng”
+### “Đạt octet là đủ để cấu trúc (structure / 구조) đúng”
 
-Không. Còn formal charge, electronegativity, connectivity và experimental constraints.
+Không. Còn formal charge, electronegativity, connectivity và experimental các ràng buộc (constraints / 제약조건들).
 
 ### “Resonance contributors là các phân tử luân phiên tồn tại”
 
-Không. Chúng là nhiều representations của một electron state delocalized.
+Không. Chúng là nhiều representations của một electron trạng thái (state / 상태) delocalized.
 
 ### “Formal charge là charge thật trên atom”
 
-Không. Nó là bookkeeping model.
+Không. Nó là bookkeeping mô hình (model / 모델).
 
 ### “Expanded octet nghĩa central atom dùng d orbital mạnh”
 
 Không phải giải thích mặc định hiện đại cho main-group hypervalency.
 
-### “Lewis structure giải thích từ tính và màu”
+### “Lewis cấu trúc (structure / 구조) giải thích từ tính và màu”
 
-Thường không. Cần MO/electronic-state models.
+Thường không. Cần MO/electronic-state các mô hình (models / 모델들).
+
+
+> **Chuyển mạch:** Từ **Hệ siêu hóa trị**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
-Lewis theory nên được xem như **compiler frontend của cấu trúc hóa học**:
+Lewis lý thuyết (theory / 이론) nên được xem như **trình biên dịch (compiler / 컴파일러) frontend của cấu trúc hóa học**:
 
 ```text
 formula + electron count
@@ -411,3 +423,5 @@ formula + electron count
 Sau đó VSEPR, VB và MO cung cấp các lớp mô hình sâu hơn cho hình học, orbital và electron delocalization.
 
 Xem tiếp: [VSEPR và hình học phân tử](./04_vsepr_and_molecular_geometry.md), [Liên kết hóa trị và lai hóa](./05_valence_bond_and_hybridization.md), [MO theory](./06_molecular_orbital_theory.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

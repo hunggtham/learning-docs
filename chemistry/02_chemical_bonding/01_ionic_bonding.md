@@ -1,5 +1,8 @@
 # Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu
 
+> **Mạch đọc:** Đọc **Liên kết ion — từ lực Coulomb tới mạng tinh thể, khuyết tật và tính chất vật liệu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ sự hình thành ion đến tinh thể** sang **Lực hút Coulomb trong mạng tinh thể**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Liên kết ion (ionic bonding / 이온 결합)** là cách mô tả liên kết khi sự phân tách điện tích đủ lớn để hệ có thể được hiểu hữu ích như các cation và anion tương tác chủ yếu bằng lực hút tĩnh điện. Trong chất rắn ion, đối tượng cấu trúc quan trọng thường không phải một “phân tử NaCl riêng lẻ” mà là một **mạng tinh thể mở rộng (extended crystal lattice)**.
 
 Điểm quan trọng là không nên hình dung liên kết ion như một quá trình đơn giản gồm “nguyên tử A cho electron cho B rồi hai ion hút nhau”. Sự tạo thành chất rắn ion là kết quả của **một bài toán năng lượng tập thể** gồm ion hóa, ái lực electron, lực hút Coulomb, lực đẩy ở khoảng cách ngắn, hình học mạng, entropy và đôi khi cả đóng góp cộng hóa trị đáng kể.
@@ -10,7 +13,7 @@ Một cách giải thích quá ngắn thường nói sodium cho chlorine một e
 
 Muốn hiểu vì sao NaCl bền, phải xét **toàn bộ chu trình năng lượng**, không chỉ bước chuyển electron.
 
-Có thể hình dung chuỗi logic:
+Có thể hình dung chuỗi lô-gic (logic / 논리):
 
 ```text
 nguyên tử trung hòa
@@ -224,7 +227,7 @@ Ví dụ `AlCl₃` có đặc tính cộng hóa trị đáng kể hơn `NaCl` d�
 
 Điện tích hình thức `Na+`, `Cl−`, `Mg²+` rất hữu ích cho hóa lượng và điện trung hòa, nhưng điện tích thực suy ra từ mật độ electron có thể không bằng đúng số nguyên đó.
 
-Các phương pháp như phân tích mật độ electron, Bader charge hoặc population analysis cho những giá trị phụ thuộc mô hình phân chia electron.
+Các phương pháp như phân tích mật độ electron, Bader charge hoặc population phân tích (analysis / 분석) cho những giá trị phụ thuộc mô hình phân chia electron.
 
 Điều này không làm mô hình ion “sai”. Nó chỉ cho thấy mô hình ion là một **mức trừu tượng hóa** đặc biệt hiệu quả cho nhiều tính chất tập thể.
 
@@ -280,3 +283,5 @@ Không. Điện tích ion là mô hình rất hữu ích nhưng mật độ elec
 Chất rắn ion là **mạng điện tích ba chiều có năng lượng được quyết định đồng thời bởi Coulomb, lực đẩy ngắn hạn, hình học mạng và khuyết tật**. Từ mô hình đó có thể suy ra không chỉ nhiệt độ nóng chảy hay độ giòn, mà còn độ tan, dẫn ion, pha tạp và hành vi của nhiều vật liệu kỹ thuật.
 
 Xem tiếp: [Liên kết cộng hóa trị](./02_covalent_bonding.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

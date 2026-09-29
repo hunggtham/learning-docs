@@ -20,7 +20,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 > **Nguồn:** tổng hợp từ các Markdown đã generate trong `raw_md/final`, được đối chiếu với các nguồn `raw` và `raw_md` cùng môn. Nội dung gốc được giữ lại; chỉ chuẩn hoá cấu trúc bài học.
 
-> **Quy ước đọc:** thuật ngữ được ưu tiên theo mẫu `한국어 (English) (Tiếng Việt)`. Mỗi ý tiếng Hàn có phần giải thích Việt ngữ liền kề hoặc ngay sau đó; khi gặp từ kỹ thuật trong ngoặc, hãy xem đó là nghĩa cần nhớ khi làm đề.
+> **Quy ước ngôn ngữ:** phần giải thích ưu tiên tiếng Việt; ở mọi lần xuất hiện, thuật ngữ đề thi dùng dạng `nghĩa Việt (English / 한국어)` để không phải quay lại tìm nghĩa.
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
@@ -30,9 +30,9 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 ## 프로그래밍 언어 기초 (Programming Language Basics)
 
-Chúng ta bắt đầu mạch học bằng **프로그래밍 언어 기초 (Programming Language Basics)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/77 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
+Chúng ta bắt đầu mạch học bằng **프로그래밍 언어 기초 (Programming Language Basics)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/78 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
 
-Để đọc **프로그래밍 언어 기초 (Programming Language Basics)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **문자 (Character / Ký tự)**, **정수 (Integer / Số nguyên)**, **논리 (Boolean / Logic)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **프로그래밍 언어 기초 (Programming Language Basics)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 Trước hết, ta đặt **159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
@@ -40,11 +40,10 @@ Trước hết, ta đặt **159. C/JAVA의 자료형 (Data Types / Kiểu dữ l
 
 Bây giờ ta đi vào nội dung của **159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
-- **문자 (Character / Ký tự)**: `char` (1Byte) trong C và JAVA.
-- **정수 (Integer / Số nguyên)**: `int` (4Byte) trong C và JAVA; `long` (8Byte).
-- **논리 (Boolean / Logic)**: `boolean` (1Byte) chỉ có trong JAVA (C dùng 0/1).
+- **C (exam assumption / giả định đề thi phổ biến):** `char` 1 byte, `int` 4 bytes; `long` phụ thuộc ABI/compiler và không nên ghi là 8 bytes tuyệt đối.
+- **Java:** `byte` 1 byte, `short` 2 bytes, `int` 4 bytes, `long` 8 bytes, `char` 2 bytes (Unicode), `float` 4 bytes, `double` 8 bytes. `boolean` là kiểu logic; Java không quy định một kích thước lưu trữ cố định.
   - *Example / Ví dụ*: `int age = 25; boolean isStudent = true;`
-  - 💡 *Mẹo ghi nhớ*: 1 Byte = char/boolean, 4 Bytes = int, 8 Bytes = long.
+  - 💡 *Mẹo ghi nhớ*: Java `char` = 2 bytes; C `char` = 1 byte; không suy ra kích thước storage của `boolean` từ ví dụ JVM.
 
 Với **159. C/JAVA의 자료형 (Data Types / Kiểu dữ liệu)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
@@ -80,86 +79,13 @@ Các ý về **163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác
 
 Như vậy, **163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **프로그래밍 언어 기초 (Programming Language Basics)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
-
----
-
-## 프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)
-
-Sau khi đã đặt nền bằng **프로그래밍 언어 기초 (Programming Language Basics)**, ta chuyển sang **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**. Đây là mắt xích 2/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
-
-Để đọc **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **리스트 (List)**, **튜플 (Tuple)**, **range**, **문자 (Char)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-Ta bắt đầu phần nội dung bằng **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)**. Hãy xác định **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
-
-### 236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)
-
-Phần nguồn của **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- **리스트 (List)**: Khác kiểu dữ liệu, thêm xóa được.
-- **튜플 (Tuple)**: Không thể thay đổi (immutable).
-- **range**: Sinh dãy số liên tiếp.
-
-Các bullet của **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
-### 구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)
-
-Các ý ngay dưới **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
-- C언어: `struct sawon { char name[10]; int pay; };`
-
-Các bullet của **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Sau khi đọc **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)**, đừng bắt đầu lại từ số không. **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
-
-### 235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)
-
-Bây giờ ta đi vào nội dung của **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-- **문자 (Char)**: `char` (2Byte - Khác với C là 1Byte).
-- **정수 (Integer)**: `byte` (1Byte), `short` (2Byte), `int` (4Byte), `long` (8Byte).
-- **실수 (Float)**: `float` (4Byte), `double` (8Byte).
-- **논리 (Boolean)**: `boolean` (1Byte).
-  - 💡 *Mẹo ghi nhớ*: Java dùng Unicode nên `char` là 2 Bytes. Có thêm kiểu `byte` (1 Byte).
-
-Các bullet của **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-**235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)** vừa cho ta cách đặt câu hỏi. Bây giờ **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
-### 237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)
-
-Phần nguồn của **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- **헝가리안 표기법 (Hungarian Notation)**: 변수 선언 시 변수명에 데이터 타입을 명시하는 것. (Gắn tiền tố kiểu dữ liệu vào tên biến, vd: `strName`, `nAge`).
-- Mọi câu lệnh khai báo biến trong C/Java đều phải kết thúc bằng dấu chấm phẩy `;`.
-
-Các bullet của **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
-### 238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)
-
-Các ý ngay dưới **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
-- 메모리 공간을 강제로 해제 (Giải phóng không gian bộ nhớ không còn sử dụng).
-
-Các bullet của **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Điểm chốt của **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
-
-Ta có thể khép mục **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **프로그래밍 언어 기초 (Programming Language Basics)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)
 
-Từ **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, ta đã có điểm tựa để bước vào **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **프로그래밍 언어 기초 (Programming Language Basics)**, ta chuyển sang **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**. Đây là mắt xích 2/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô. Trong khối này, **데이터 타입 (Data Types)**, **변수 작성 규칙 (Variable Naming Rules)**, **연산자 (Operators)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -181,13 +107,13 @@ Từ **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics 
   - 논리 (Logical): `&&` (AND), `||` (OR), `!` (NOT).
   - 삼항 (Ternary): `(조건) ? (참) : (거짓);`
 
-Điểm chốt của **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)
 
-Ở bước 4/77, **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** xuất hiện như phần tiếp nối của **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**, ta đã có điểm tựa để bước vào **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/78 trước khi đi vào chi tiết.
 
 Để đọc **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -203,13 +129,13 @@ Kích thước bộ nhớ các biến trong C/C++. Chữ cái (char) chiếm 1 b
 
 ---
 
-Như vậy, **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
 
-Sau khi đã đặt nền bằng **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**, ta chuyển sang **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**. Đây là mắt xích 5/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 4/78, **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** xuất hiện như phần tiếp nối của **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -225,13 +151,13 @@ Java có 2 điểm khác biệt lớn với C: `char` chiếm 2 byte (để lưu
 
 ---
 
-Ta có thể khép mục **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
 
-Từ **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, ta đã có điểm tựa để bước vào **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, ta chuyển sang **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**. Đây là mắt xích 5/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **환경변수 명령어**, **운영체제별 주요 명령어 (Windows / Unix(Linux))** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -259,13 +185,13 @@ Từ **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, ta đã
 
 ---
 
-Điểm chốt của **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **237. 변수명 작성 규칙 (Variable Naming Rules)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **237. 변수명 작성 규칙 (Variable Naming Rules)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 237. 변수명 작성 규칙 (Variable Naming Rules)
 
-Ở bước 7/77, **237. 변수명 작성 규칙 (Variable Naming Rules)** xuất hiện như phần tiếp nối của **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, ta đã có điểm tựa để bước vào **237. 변수명 작성 규칙 (Variable Naming Rules)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/78 trước khi đi vào chi tiết.
 
 Để đọc **237. 변수명 작성 규칙 (Variable Naming Rules)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -280,21 +206,21 @@ Quy tắc đặt tên biến: Không được bắt đầu bằng số, không c
 
 ---
 
-Như vậy, **237. 변수명 작성 규칙 (Variable Naming Rules)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **연산자 (Operators)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **237. 변수명 작성 규칙 (Variable Naming Rules)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **연산자 (Operators)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 연산자 (Operators)
 
-Sau khi đã đặt nền bằng **237. 변수명 작성 규칙 (Variable Naming Rules)**, ta chuyển sang **연산자 (Operators)**. Đây là mắt xích 8/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 7/78, **연산자 (Operators)** xuất hiện như phần tiếp nối của **237. 변수명 작성 규칙 (Variable Naming Rules)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **연산자 (Operators)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)**. Hãy xác định **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Trước hết, ta đặt **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 164. 산술 연산자 (Arithmetic Operators / Toán tử số học)
 
-Phần nguồn của **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - `%`: 나머지 (Phần dư). 정수만 연산 가능 (Chỉ dùng cho số nguyên).
 - `++`: 증가 (Tăng 1).
@@ -307,11 +233,11 @@ Phần nguồn của **164. 산술 연산자 (Arithmetic Operators / Toán tử 
 Với **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **164. 산술 연산자 (Arithmetic Operators / Toán tử số học)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **165. 비트 연산자 (Bitwise Operators / Toán tử bit)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **165. 비트 연산자 (Bitwise Operators / Toán tử bit)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **165. 비트 연산자 (Bitwise Operators / Toán tử bit)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 165. 비트 연산자 (Bitwise Operators / Toán tử bit)
 
-Các ý ngay dưới **165. 비트 연산자 (Bitwise Operators / Toán tử bit)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **165. 비트 연산자 (Bitwise Operators / Toán tử bit)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - `&` (and): 모든 비트가 1일 때만 1. (Chỉ bằng 1 khi tất cả các bit đều là 1).
 - `^` (xor): 다르면 1, 같으면 0. (Khác nhau là 1, giống nhau là 0).
@@ -324,11 +250,11 @@ Các ý ngay dưới **165. 비트 연산자 (Bitwise Operators / Toán tử bit
 Với **165. 비트 연산자 (Bitwise Operators / Toán tử bit)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **165. 비트 연산자 (Bitwise Operators / Toán tử bit)**, đừng bắt đầu lại từ số không. **166. 논리 연산자 (Logical Operators / Toán tử logic)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **166. 논리 연산자 (Logical Operators / Toán tử logic)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **166. 논리 연산자 (Logical Operators / Toán tử logic)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 166. 논리 연산자 (Logical Operators / Toán tử logic)
 
-Bây giờ ta đi vào nội dung của **166. 논리 연산자 (Logical Operators / Toán tử logic)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **166. 논리 연산자 (Logical Operators / Toán tử logic)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - `!` (not): 부정 (Phủ định).
 - `&&` (and): 모두 참이면 참 (Cả hai đúng thì đúng).
@@ -339,11 +265,11 @@ Bây giờ ta đi vào nội dung của **166. 논리 연산자 (Logical Operato
 Các ý về **166. 논리 연산자 (Logical Operators / Toán tử logic)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 **166. 논리 연산자 (Logical Operators / Toán tử logic)** vừa cho ta cách đặt câu hỏi. Bây giờ **167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)
 
-Phần nguồn của **167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 조건에 따라 서로 다른 수식을 수행한다. (Thực hiện các biểu thức khác nhau tùy thuộc vào điều kiện).
 - `조건 ? 참일 때 : 거짓일 때`
@@ -353,11 +279,11 @@ Phần nguồn của **167. 조건 연산자 (Conditional Operator / Toán tử 
 Với **167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)
 
-Các ý ngay dưới **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 단항 (Unary) > 산술 (Arithmetic) > 시프트 (Shift) > 관계 (Relational) > 비트 (Bitwise) > 논리 (Logical) > 조건 (Conditional) > 대입 (Assignment) > 순서 (Comma).
 - 산술 연산자 중에서는 `*, /, %` ưu tiên cao hơn `+, -`.
@@ -368,21 +294,21 @@ Các ý về **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu
 
 Điểm chốt của **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **연산자 (Operators)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **연산자 심화 (Operators - Advanced)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **연산자 (Operators)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **연산자 심화 (Operators - Advanced)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 연산자 심화 (Operators - Advanced)
 
-Từ **연산자 (Operators)**, ta đã có điểm tựa để bước vào **연산자 심화 (Operators - Advanced)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **연산자 (Operators)**, ta chuyển sang **연산자 심화 (Operators - Advanced)**. Đây là mắt xích 8/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **연산자 심화 (Operators - Advanced)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Ta bắt đầu phần nội dung bằng **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)**. Hãy xác định **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 240. 관계 연산자 (Relational Operators / Toán tử quan hệ)
 
-Các ý ngay dưới **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 두 수의 관계를 비교하여 참(1) 또는 거짓(0)을 결과로 얻는다. (So sánh hai số trả về 1 (Đúng) hoặc 0 (Sai)).
 - `==` (Bằng), `!=` (Khác), `>`, `>=`, `<`, `<=`.
@@ -391,11 +317,11 @@ Các ý ngay dưới **240. 관계 연산자 (Relational Operators / Toán tử 
 Các bullet của **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **243. 대입 연산자 (Assignment Operators / Toán tử gán)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **243. 대입 연산자 (Assignment Operators / Toán tử gán)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **243. 대입 연산자 (Assignment Operators / Toán tử gán)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 243. 대입 연산자 (Assignment Operators / Toán tử gán)
 
-Bây giờ ta đi vào nội dung của **243. 대입 연산자 (Assignment Operators / Toán tử gán)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **243. 대입 연산자 (Assignment Operators / Toán tử gán)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 연산 후 결과를 대입한다. (Thực hiện phép tính xong rồi gán kết quả lại cho biến).
 - `+=`, `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`.
@@ -407,13 +333,13 @@ Với **243. 대입 연산자 (Assignment Operators / Toán tử gán)**, hãy �
 
 Điểm chốt của **243. 대입 연산자 (Assignment Operators / Toán tử gán)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Điểm chốt của **연산자 심화 (Operators - Advanced)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **239 - 243. 연산자 (Operators)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **연산자 심화 (Operators - Advanced)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **239 - 243. 연산자 (Operators)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 239 - 243. 연산자 (Operators)
 
-Ở bước 10/77, **239 - 243. 연산자 (Operators)** xuất hiện như phần tiếp nối của **연산자 심화 (Operators - Advanced)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **연산자 심화 (Operators - Advanced)**, ta đã có điểm tựa để bước vào **239 - 243. 연산자 (Operators)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/78 trước khi đi vào chi tiết.
 
 Để đọc **239 - 243. 연산자 (Operators)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận. Trong khối này, **산술 연산자**, **관계 연산자**, **비트 연산자**, **논리 연산자** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -426,13 +352,13 @@ Với **243. 대입 연산자 (Assignment Operators / Toán tử gán)**, hãy �
 
 ---
 
-Như vậy, **239 - 243. 연산자 (Operators)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **244. 조건(삼항) 연산자 (Ternary Operator)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **239 - 243. 연산자 (Operators)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **244. 조건(삼항) 연산자 (Ternary Operator)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 244. 조건(삼항) 연산자 (Ternary Operator)
 
-Sau khi đã đặt nền bằng **239 - 243. 연산자 (Operators)**, ta chuyển sang **244. 조건(삼항) 연산자 (Ternary Operator)**. Đây là mắt xích 11/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 10/78, **244. 조건(삼항) 연산자 (Ternary Operator)** xuất hiện như phần tiếp nối của **239 - 243. 연산자 (Operators)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **244. 조건(삼항) 연산자 (Ternary Operator)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -445,13 +371,13 @@ Toán tử 3 ngôi giúp viết tắt câu lệnh if-else trên 1 dòng. Trả v
 
 ---
 
-Ta có thể khép mục **244. 조건(삼항) 연산자 (Ternary Operator)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **245. 연산자 우선순위 (Operator Precedence)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **244. 조건(삼항) 연산자 (Ternary Operator)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **245. 연산자 우선순위 (Operator Precedence)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 245. 연산자 우선순위 (Operator Precedence)
 
-Từ **244. 조건(삼항) 연산자 (Ternary Operator)**, ta đã có điểm tựa để bước vào **245. 연산자 우선순위 (Operator Precedence)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **244. 조건(삼항) 연산자 (Ternary Operator)**, ta chuyển sang **245. 연산자 우선순위 (Operator Precedence)**. Đây là mắt xích 11/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **245. 연산자 우선순위 (Operator Precedence)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -467,21 +393,21 @@ Thứ tự ưu tiên tính toán: Ngoặc () -> Đơn nguyên (phủ định, t�
 
 ---
 
-Điểm chốt của **245. 연산자 우선순위 (Operator Precedence)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **입출력 (Input/Output)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **245. 연산자 우선순위 (Operator Precedence)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **입출력 (Input/Output)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 입출력 (Input/Output)
 
-Ở bước 13/77, **입출력 (Input/Output)** xuất hiện như phần tiếp nối của **245. 연산자 우선순위 (Operator Precedence)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **245. 연산자 우선순위 (Operator Precedence)**, ta đã có điểm tựa để bước vào **입출력 (Input/Output)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/78 trước khi đi vào chi tiết.
 
 Để đọc **입출력 (Input/Output)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **169. 주요 서식 문자열 (Format String / Chuỗi định dạng)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **169. 주요 서식 문자열 (Format String / Chuỗi định dạng)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Để không đọc **169. 주요 서식 문자열 (Format String / Chuỗi định dạng)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 169. 주요 서식 문자열 (Format String / Chuỗi định dạng)
 
-Bây giờ ta đi vào nội dung của **169. 주요 서식 문자열 (Format String / Chuỗi định dạng)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **169. 주요 서식 문자열 (Format String / Chuỗi định dạng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - `%d`: 정수형 10진수 (Số nguyên hệ thập phân).
 - `%c`: 문자 (Ký tự).
@@ -492,11 +418,11 @@ Bây giờ ta đi vào nội dung của **169. 주요 서식 문자열 (Format S
 Với **169. 주요 서식 문자열 (Format String / Chuỗi định dạng)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **169. 주요 서식 문자열 (Format String / Chuỗi định dạng)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **170. printf() 함수 (printf() Function / Hàm in C)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **170. printf() 함수 (printf() Function / Hàm in C)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **170. printf() 함수 (printf() Function / Hàm in C)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 170. printf() 함수 (printf() Function / Hàm in C)
 
-Phần nguồn của **170. printf() 함수 (printf() Function / Hàm in C)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **170. printf() 함수 (printf() Function / Hàm in C)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 인수로 주어진 값을 화면에 출력하는 함수이다. (Hàm in giá trị ra màn hình theo định dạng).
   - *Example / Ví dụ*: `printf("%d, %c", a, b);`
@@ -505,11 +431,11 @@ Phần nguồn của **170. printf() 함수 (printf() Function / Hàm in C)** s�
 Các ý về **170. printf() 함수 (printf() Function / Hàm in C)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Sau khi đọc **170. printf() 함수 (printf() Function / Hàm in C)**, đừng bắt đầu lại từ số không. **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)
 
-Các ý ngay dưới **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - `printf()`: Định dạng đầu ra. `System.out.printf("%d", r);`
 - `print()`: In không xuống dòng. `System.out.print(r + s);`
@@ -520,21 +446,21 @@ Các bullet của **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm 
 
 Như vậy, **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **입출력 (Input/Output)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **입출력 심화 (Input/Output - Advanced)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **입출력 (Input/Output)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **입출력 심화 (Input/Output - Advanced)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 입출력 심화 (Input/Output - Advanced)
 
-Sau khi đã đặt nền bằng **입출력 (Input/Output)**, ta chuyển sang **입출력 심화 (Input/Output - Advanced)**. Đây là mắt xích 14/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 13/78, **입출력 심화 (Input/Output - Advanced)** xuất hiện như phần tiếp nối của **입출력 (Input/Output)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **입출력 심화 (Input/Output - Advanced)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **출력 포맷**, **문자열 연결** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)**. Hãy xác định **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Trước hết, ta đặt **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 246. scanf() 함수 (scanf() Function / Hàm nhập trong C)
 
-Phần nguồn của **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - C언어의 표준 입력 함수로, 키보드로 입력받아 변수에 저장한다. (Hàm nhập chuẩn của C, lấy dữ liệu từ bàn phím lưu vào biến).
 - 형식: `scanf(서식 문자열, &변수)` (Định dạng, &Tên_biến).
@@ -545,11 +471,11 @@ Phần nguồn của **246. scanf() 함수 (scanf() Function / Hàm nhập trong
 Các ý về **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)
 
-Các ý ngay dưới **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - `%u`: 부호없는 정수 10진수 (Số nguyên hệ 10 không dấu).
 - `%o`: 정수 8진수 (Hệ bát phân - Octal).
@@ -561,11 +487,11 @@ Các ý ngay dưới **247. 서식 문자열 (Format String / Chuỗi định d�
 Với **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)**, đừng bắt đầu lại từ số không. **249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)
 
-Bây giờ ta đi vào nội dung của **249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - `\n`: new line (Xuống dòng).
 - `\b`: backspace (Lùi lại 1 ký tự).
@@ -579,11 +505,11 @@ Bây giờ ta đi vào nội dung của **249. 주요 제어문자 (Major Contro
 Các bullet của **249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **249. 주요 제어문자 (Major Control Characters / Ký tự điều khiển)** vừa cho ta cách đặt câu hỏi. Bây giờ **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)
 
-Phần nguồn của **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **출력 포맷**: `System.out.printf("%-8.2f", 200.2);`
   - `-`: Căn trái (왼쪽 정렬).
@@ -595,11 +521,11 @@ Phần nguồn của **250. JAVA에서의 표준 출력 (JAVA Standard Output / 
 Các bullet của **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầu ra chuẩn trong JAVA)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)
 
-Các ý ngay dưới **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - Nếu có nhiều hơn 1 câu lệnh thực thi, phải bọc trong `{ }` (Ngoặc nhọn).
   - *Example / Ví dụ*: `if(a > 10) { b = a - 10; printf("%d", b); }`
@@ -608,13 +534,13 @@ Với **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - N
 
 Điểm chốt của **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **입출력 심화 (Input/Output - Advanced)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **074. 데이터 입출력 (Data Input/Output)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **입출력 심화 (Input/Output - Advanced)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **074. 데이터 입출력 (Data Input/Output)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 074. 데이터 입출력 (Data Input/Output)
 
-Từ **입출력 심화 (Input/Output - Advanced)**, ta đã có điểm tựa để bước vào **074. 데이터 입출력 (Data Input/Output)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **입출력 심화 (Input/Output - Advanced)**, ta chuyển sang **074. 데이터 입출력 (Data Input/Output)**. Đây là mắt xích 14/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **074. 데이터 입출력 (Data Input/Output)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **표준 입력 함수 (C언어)**, **표준 출력 함수 (C언어)**, **서식 문자열 유형 (Format Strings)**, **이스케이프 문자** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -634,13 +560,13 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 
 ---
 
-Điểm chốt của **074. 데이터 입출력 (Data Input/Output)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **074. 데이터 입출력 (Data Input/Output)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)
 
-Ở bước 16/77, **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** xuất hiện như phần tiếp nối của **074. 데이터 입출력 (Data Input/Output)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **074. 데이터 입출력 (Data Input/Output)**, ta đã có điểm tựa để bước vào **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/78 trước khi đi vào chi tiết.
 
 Để đọc **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **`scanf("서식문자열", &변수)`**, **`printf("서식문자열", 변수)`**, **서식 문자열**, **제어문자 (Escape Sequence)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -657,21 +583,21 @@ Nhớ kĩ `scanf` phải có dấu `&` (địa chỉ) để nhét dữ liệu v�
 
 ---
 
-Như vậy, **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **제어문 (Control Statements)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **제어문 (Control Statements)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 제어문 (Control Statements)
 
-Sau khi đã đặt nền bằng **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)**, ta chuyển sang **제어문 (Control Statements)**. Đây là mắt xích 17/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 16/78, **제어문 (Control Statements)** xuất hiện như phần tiếp nối của **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **제어문 (Control Statements)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)**. Hãy xác định **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Trước hết, ta đặt **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)
 
-Phần nguồn của **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 조건이 한 개일 때 사용하는 제어문이다. (Câu lệnh điều khiển khi chỉ có một điều kiện).
   - *Example / Ví dụ*: `if (a > b) printf("참"); else printf("거짓");`
@@ -680,11 +606,11 @@ Phần nguồn của **172. 단순 if문 (Simple if statement / Câu lệnh if �
 Các ý về **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **172. 단순 if문 (Simple if statement / Câu lệnh if đơn giản)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **173. switch문 (switch statement / Câu lệnh switch)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **173. switch문 (switch statement / Câu lệnh switch)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **173. switch문 (switch statement / Câu lệnh switch)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 173. switch문 (switch statement / Câu lệnh switch)
 
-Các ý ngay dưới **173. switch문 (switch statement / Câu lệnh switch)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **173. switch문 (switch statement / Câu lệnh switch)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 조건에 따라 분기할 곳이 여러 곳인 경우 간단하게 처리할 수 있다. (Sử dụng khi có nhiều nhánh rẽ).
 - break문이 생략되면 모든 문장이 실행된다. (Nếu thiếu `break`, các câu lệnh bên dưới cũng sẽ được chạy theo hiệu ứng rơi xuyên).
@@ -694,11 +620,11 @@ Các ý ngay dưới **173. switch문 (switch statement / Câu lệnh switch)** 
 Các ý về **173. switch문 (switch statement / Câu lệnh switch)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Sau khi đọc **173. switch문 (switch statement / Câu lệnh switch)**, đừng bắt đầu lại từ số không. **174. for문 (for loop / Vòng lặp for)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **174. for문 (for loop / Vòng lặp for)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **174. for문 (for loop / Vòng lặp for)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 174. for문 (for loop / Vòng lặp for)
 
-Bây giờ ta đi vào nội dung của **174. for문 (for loop / Vòng lặp for)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **174. for문 (for loop / Vòng lặp for)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 초기값, 최종값, 증가값을 지정하여 정해진 횟수를 반복하는 제어문이다. (Vòng lặp với số lần xác định, bao gồm giá trị khởi tạo, điều kiện kết thúc và bước nhảy).
   - *Example / Ví dụ*: `for (i = 1; i <= 10 ; i++) sum = sum + i;`
@@ -707,11 +633,11 @@ Bây giờ ta đi vào nội dung của **174. for문 (for loop / Vòng lặp fo
 Với **174. for문 (for loop / Vòng lặp for)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 **174. for문 (for loop / Vòng lặp for)** vừa cho ta cách đặt câu hỏi. Bây giờ **175. while문 (while loop / Vòng lặp while)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **175. while문 (while loop / Vòng lặp while)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **175. while문 (while loop / Vòng lặp while)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 175. while문 (while loop / Vòng lặp while)
 
-Phần nguồn của **175. while문 (while loop / Vòng lặp while)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **175. while문 (while loop / Vòng lặp while)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 조건이 참인 동안 실행할 문장을 반복 수행한다. (Lặp lại chừng nào điều kiện còn đúng).
   - *Example / Ví dụ*: `while (i <= 10) { i++; }`
@@ -720,11 +646,11 @@ Phần nguồn của **175. while문 (while loop / Vòng lặp while)** sẽ l�
 Các ý về **175. while문 (while loop / Vòng lặp while)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **175. while문 (while loop / Vòng lặp while)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **176. do~while문 (do~while loop / Vòng lặp do~while)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **176. do~while문 (do~while loop / Vòng lặp do~while)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **176. do~while문 (do~while loop / Vòng lặp do~while)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 176. do~while문 (do~while loop / Vòng lặp do~while)
 
-Các ý ngay dưới **176. do~while문 (do~while loop / Vòng lặp do~while)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **176. do~while문 (do~while loop / Vòng lặp do~while)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 무조건 한 번 실행한 다음 조건을 판단하여 탈출 여부를 결정한다. (Thực hiện ít nhất một lần, sau đó mới kiểm tra điều kiện).
   - *Example / Ví dụ*: `do { i++; } while (i <= 10);`
@@ -734,21 +660,21 @@ Các ý về **176. do~while문 (do~while loop / Vòng lặp do~while)** đượ
 
 Điểm chốt của **176. do~while문 (do~while loop / Vòng lặp do~while)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **제어문 (Control Statements)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **제어문 심화 (Control Statements - Advanced)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **제어문 (Control Statements)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **제어문 심화 (Control Statements - Advanced)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 제어문 심화 (Control Statements - Advanced)
 
-Từ **제어문 (Control Statements)**, ta đã có điểm tựa để bước vào **제어문 심화 (Control Statements - Advanced)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **제어문 (Control Statements)**, ta chuyển sang **제어문 심화 (Control Statements - Advanced)**. Đây là mắt xích 17/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **제어문 심화 (Control Statements - Advanced)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **break**, **continue** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Ta bắt đầu phần nội dung bằng **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)**. Hãy xác định **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)
 
-Các ý ngay dưới **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 조건이 여러 개일 때 사용하는 제어문이다. (Sử dụng khi có nhiều điều kiện khác nhau).
 - `if (조건1) ... else if (조건2) ... else ...`
@@ -758,11 +684,11 @@ Các ý ngay dưới **252. 다중 if문 (Multi if statement / Câu lệnh if nh
 Các ý về **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **253. switch문 (switch statement / Câu lệnh switch - Bổ sung)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **253. switch문 (switch statement / Câu lệnh switch - Bổ sung)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **253. switch문 (switch statement / Câu lệnh switch - Bổ sung)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 253. switch문 (switch statement / Câu lệnh switch - Bổ sung)
 
-Bây giờ ta đi vào nội dung của **253. switch문 (switch statement / Câu lệnh switch - Bổ sung)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **253. switch문 (switch statement / Câu lệnh switch - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - `case`문의 레이블에는 상수만 지정할 수 있으며 변수는 지정할 수 없다. (Nhãn `case` chỉ chấp nhận hằng số, không dùng biến).
 - `int`, `char`, `enum`형의 상수만 가능하다. (Chỉ dùng được số nguyên, ký tự, hoặc kiểu enum).
@@ -772,11 +698,11 @@ Bây giờ ta đi vào nội dung của **253. switch문 (switch statement / Câ
 Các ý về **253. switch문 (switch statement / Câu lệnh switch - Bổ sung)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Sau khi đọc **253. switch문 (switch statement / Câu lệnh switch - Bổ sung)**, đừng bắt đầu lại từ số không. **254. for문 (for loop / Vòng lặp for - Bổ sung)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **254. for문 (for loop / Vòng lặp for - Bổ sung)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **254. for문 (for loop / Vòng lặp for - Bổ sung)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 254. for문 (for loop / Vòng lặp for - Bổ sung)
 
-Phần nguồn của **254. for문 (for loop / Vòng lặp for - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **254. for문 (for loop / Vòng lặp for - Bổ sung)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 처음부터 조건식을 만족하지 못하면 한 번도 수행하지 않는다. (Nếu điều kiện sai ngay từ đầu, vòng lặp không chạy lần nào).
 - `for(초기값; 최종값조건; 증가값) { 실행문; }`
@@ -784,11 +710,11 @@ Phần nguồn của **254. for문 (for loop / Vòng lặp for - Bổ sung)** s�
 Các bullet của **254. for문 (for loop / Vòng lặp for - Bổ sung)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **254. for문 (for loop / Vòng lặp for - Bổ sung)** vừa cho ta cách đặt câu hỏi. Bây giờ **255. while문 (while loop / Vòng lặp while - Bổ sung)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **255. while문 (while loop / Vòng lặp while - Bổ sung)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **255. while문 (while loop / Vòng lặp while - Bổ sung)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 255. while문 (while loop / Vòng lặp while - Bổ sung)
 
-Các ý ngay dưới **255. while문 (while loop / Vòng lặp while - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **255. while문 (while loop / Vòng lặp while - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - `while(조건) { 실행문; }`
 - Điều kiện được kiểm tra trước, nếu sai từ đầu sẽ bỏ qua.
@@ -797,11 +723,11 @@ Các ý ngay dưới **255. while문 (while loop / Vòng lặp while - Bổ sung
 Các ý về **255. while문 (while loop / Vòng lặp while - Bổ sung)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **255. while문 (while loop / Vòng lặp while - Bổ sung)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)
 
-Bây giờ ta đi vào nội dung của **256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 실행할 문장을 무조건 한 번 실행한 다음 조건을 판단. (Thực hiện ít nhất 1 lần rồi mới kiểm tra điều kiện ở cuối).
 - `do { 실행문; } while(조건);` (Nhớ có dấu chấm phẩy ở cuối `while`).
@@ -809,11 +735,11 @@ Bây giờ ta đi vào nội dung của **256. do~while문 (do~while loop / Vòn
 Các bullet của **256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **256. do~while문 (do~while loop / Vòng lặp do~while - Bổ sung)**, đừng bắt đầu lại từ số không. **257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)
 
-Phần nguồn của **257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **break**: switch문이나 반복문 안에서 나오면 블록을 벗어난다. (Thoát ngay lập tức khỏi vòng lặp hoặc switch).
 - **continue**: 이후의 문장을 실행하지 않고 반복문의 처음으로 옮긴다. (Bỏ qua các lệnh bên dưới và quay lại đầu vòng lặp để tiếp tục vòng lặp mới).
@@ -824,21 +750,21 @@ Với **257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)
 
 Như vậy, **257. break, continue (Keywords / Từ khóa điều khiển vòng lặp)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Điểm chốt của **제어문 심화 (Control Statements - Advanced)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **제어문 심화 (Control Statements - Advanced)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)
 
-Ở bước 19/77, **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** xuất hiện như phần tiếp nối của **제어문 심화 (Control Statements - Advanced)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **제어문 심화 (Control Statements - Advanced)**, ta đã có điểm tựa để bước vào **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/78 trước khi đi vào chi tiết.
 
 Để đọc **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **C언어의 구조체 (Struct in C / Cấu trúc trong C)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **C언어의 구조체 (Struct in C / Cấu trúc trong C)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Để không đọc **C언어의 구조체 (Struct in C / Cấu trúc trong C)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### C언어의 구조체 (Struct in C / Cấu trúc trong C)
 
-Bây giờ ta đi vào nội dung của **C언어의 구조체 (Struct in C / Cấu trúc trong C)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **C언어의 구조체 (Struct in C / Cấu trúc trong C)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 자료의 종류가 다른 변수의 모임이다. (Tập hợp các biến có kiểu dữ liệu khác nhau).
 - 예약어 `struct`를 이용해 정의한다. (Định nghĩa bằng từ khóa `struct`).
@@ -848,11 +774,11 @@ Bây giờ ta đi vào nội dung của **C언어의 구조체 (Struct in C / C�
 Các ý về **C언어의 구조체 (Struct in C / Cấu trúc trong C)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **C언어의 구조체 (Struct in C / Cấu trúc trong C)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **177. 1차원 배열 (1D Array / Mảng 1 chiều)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **177. 1차원 배열 (1D Array / Mảng 1 chiều)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **177. 1차원 배열 (1D Array / Mảng 1 chiều)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 177. 1차원 배열 (1D Array / Mảng 1 chiều)
 
-Phần nguồn của **177. 1차원 배열 (1D Array / Mảng 1 chiều)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **177. 1차원 배열 (1D Array / Mảng 1 chiều)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 변수들을 일직선상의 개념으로 조합한 배열이다. (Tập hợp các biến trên một đường thẳng).
   - *Example / Ví dụ*: `char a[3] = {'A', 'B', 'C'};`
@@ -861,11 +787,11 @@ Phần nguồn của **177. 1차원 배열 (1D Array / Mảng 1 chiều)** sẽ 
 Với **177. 1차원 배열 (1D Array / Mảng 1 chiều)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **177. 1차원 배열 (1D Array / Mảng 1 chiều)**, đừng bắt đầu lại từ số không. **178. 2차원 배열 (2D Array / Mảng 2 chiều)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **178. 2차원 배열 (2D Array / Mảng 2 chiều)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **178. 2차원 배열 (2D Array / Mảng 2 chiều)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 178. 2차원 배열 (2D Array / Mảng 2 chiều)
 
-Các ý ngay dưới **178. 2차원 배열 (2D Array / Mảng 2 chiều)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **178. 2차원 배열 (2D Array / Mảng 2 chiều)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 변수들을 평면, 즉 행과 열로 조합한 배열이다. (Tập hợp các biến theo dạng bảng gồm hàng và cột).
   - *Example / Ví dụ*: `int b[2][3] = {{11, 22, 33}, {44, 55, 66}};`
@@ -874,11 +800,11 @@ Các ý ngay dưới **178. 2차원 배열 (2D Array / Mảng 2 chiều)** cung 
 Với **178. 2차원 배열 (2D Array / Mảng 2 chiều)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 **178. 2차원 배열 (2D Array / Mảng 2 chiều)** vừa cho ta cách đặt câu hỏi. Bây giờ **179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)
 
-Bây giờ ta đi vào nội dung của **179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - C언어에서는 큰따옴표("")로 묶인 글자는 문자열로 처리된다. (Trong C, chữ nằm trong ngoặc kép được xem là chuỗi).
 - 배열에 문자열을 저장하면 널 문자('\0')가 문자열 끝에 자동으로 삽입된다. (Khi lưu chuỗi vào mảng, ký tự null `\0` tự động được thêm vào cuối).
@@ -888,11 +814,11 @@ Bây giờ ta đi vào nội dung của **179. 배열 형태의 문자열 변수
 Với **179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **179. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **180. 포인터와 포인터 변수 (Pointers / Con trỏ)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **180. 포인터와 포인터 변수 (Pointers / Con trỏ)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **180. 포인터와 포인터 변수 (Pointers / Con trỏ)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 180. 포인터와 포인터 변수 (Pointers / Con trỏ)
 
-Phần nguồn của **180. 포인터와 포인터 변수 (Pointers / Con trỏ)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **180. 포인터와 포인터 변수 (Pointers / Con trỏ)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 포인터 변수를 선언할 때는 자료형 뒤에 `*`를 붙인다. (Khai báo biến con trỏ bằng dấu `*`).
 - 변수의 주소를 알아낼 때는 `&`를 붙인다. (Lấy địa chỉ của biến bằng dấu `&`).
@@ -903,11 +829,11 @@ Phần nguồn của **180. 포인터와 포인터 변수 (Pointers / Con trỏ)
 Với **180. 포인터와 포인터 변수 (Pointers / Con trỏ)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **180. 포인터와 포인터 변수 (Pointers / Con trỏ)**, đừng bắt đầu lại từ số không. **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)
 
-Các ý ngay dưới **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 배열을 포인터 변수에 저장한 후 포인터를 이용해 배열의 요소에 접근할 수 있다. (Có thể dùng con trỏ để truy cập các phần tử mảng).
 - 배열의 대표명은 배열의 첫 번째 요소의 주소와 같다. (Tên mảng chính là địa chỉ của phần tử đầu tiên).
@@ -918,21 +844,21 @@ Với **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)**, h
 
 Như vậy, **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **배열 심화 (Arrays - Advanced)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **배열 심화 (Arrays - Advanced)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 배열 심화 (Arrays - Advanced)
 
-Sau khi đã đặt nền bằng **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**, ta chuyển sang **배열 심화 (Arrays - Advanced)**. Đây là mắt xích 20/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 19/78, **배열 심화 (Arrays - Advanced)** xuất hiện như phần tiếp nối của **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **배열 심화 (Arrays - Advanced)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)**. Hãy xác định **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Trước hết, ta đặt **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)
 
-Phần nguồn của **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 배열은 행 우선으로 데이터가 할당된다. (Mảng được cấp phát theo thứ tự ưu tiên hàng).
 - 첨자 없이 배열 이름을 사용하면 첫 번째 요소의 주소를 지정하는 것과 같다. (Tên mảng không có chỉ số chính là địa chỉ phần tử đầu tiên).
@@ -942,11 +868,11 @@ Phần nguồn của **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 
 Với **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chiều - Bổ sung)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)
 
-Các ý ngay dưới **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 변수들을 평면, 즉 행과 열로 조합한 배열. (Mảng kết hợp hàng và cột).
 - 형식: `자료형 변수명[행개수][열개수]`
@@ -958,21 +884,21 @@ Với **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)**, hãy đ
 
 Điểm chốt của **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **배열 심화 (Arrays - Advanced)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **배열과 포인터 심화 (Arrays & Pointers - Advanced)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **배열 심화 (Arrays - Advanced)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **배열과 포인터 심화 (Arrays & Pointers - Advanced)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 배열과 포인터 심화 (Arrays & Pointers - Advanced)
 
-Từ **배열 심화 (Arrays - Advanced)**, ta đã có điểm tựa để bước vào **배열과 포인터 심화 (Arrays & Pointers - Advanced)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **배열 심화 (Arrays - Advanced)**, ta chuyển sang **배열과 포인터 심화 (Arrays & Pointers - Advanced)**. Đây là mắt xích 20/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **배열과 포인터 심화 (Arrays & Pointers - Advanced)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Ta bắt đầu phần nội dung bằng **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)**. Hãy xác định **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)
 
-Các ý ngay dưới **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 배열 선언 시 초기값을 지정할 수 있다. (Có thể gán giá trị khởi tạo ngay khi khai báo mảng).
 - 배열의 크기를 생략하려면 반드시 초기값을 지정해야 한다. (Nếu bỏ trống kích thước mảng trong ngoặc `[]`, bắt buộc phải có giá trị khởi tạo để máy tự đếm).
@@ -983,11 +909,11 @@ Các ý ngay dưới **260. 배열의 초기화 (Array Initialization / Khởi t
 Với **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)
 
-Bây giờ ta đi vào nội dung của **261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 배열에 문자열을 저장할 때는 초기값으로 지정해야 하며, 이미 선언된 배열에는 대입 연산자로 문자열을 통째로 저장할 수 없다. (Chỉ được gán chuỗi trực tiếp lúc khởi tạo. Không được gán chuỗi vào mảng đã khai báo bằng dấu `=`).
 - `%s`를 이용해 문자열을 출력할 때는 배열 이름이나 포인터 변수만 적어주면 된다. (Khi in chuỗi bằng `%s`, chỉ cần truyền tên mảng hoặc con trỏ, không cần dấu `&`).
@@ -995,11 +921,11 @@ Bây giờ ta đi vào nội dung của **261. 배열 형태의 문자열 변수
 Các bullet của **261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **261. 배열 형태의 문자열 변수 (String as Array / Chuỗi dưới dạng mảng - Bổ sung)**, đừng bắt đầu lại từ số không. **262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)
 
-Phần nguồn của **262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 포인터 변수는 동적으로 할당되는 메모리 영역인 **힙(Heap) 영역**에 접근하는 동적 변수이다. (Con trỏ là biến động truy cập vào vùng nhớ Heap được cấp phát động).
 - `*` 연산자: 간접 연산자 (Lấy giá trị).
@@ -1009,11 +935,11 @@ Phần nguồn của **262. 포인터와 포인터 변수 (Pointer & Pointer Var
 Các bullet của **262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **262. 포인터와 포인터 변수 (Pointer & Pointer Variable / Con trỏ - Bổ sung)** vừa cho ta cách đặt câu hỏi. Bây giờ **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)
 
-Các ý ngay dưới **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - `p + 1`은 메모리 주소가 1 증가하는 것이 아니라 해당 자료형의 크기(int는 4Byte)만큼 증가한다. (`p + 1` không cộng thêm 1 vào địa chỉ, mà cộng thêm kích thước của kiểu dữ liệu, ví dụ int thì cộng thêm 4 Bytes).
   - *Example / Ví dụ*: `p` là `1000` -> `p + 1` là `1004` (với int).
@@ -1022,13 +948,13 @@ Các ý về **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng 
 
 Với **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Điểm chốt của **배열과 포인터 심화 (Arrays & Pointers - Advanced)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **배열과 포인터 심화 (Arrays & Pointers - Advanced)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)
 
-Ở bước 22/77, **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** xuất hiện như phần tiếp nối của **배열과 포인터 심화 (Arrays & Pointers - Advanced)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **배열과 포인터 심화 (Arrays & Pointers - Advanced)**, ta đã có điểm tựa để bước vào **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/78 trước khi đi vào chi tiết.
 
 Để đọc **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **배열 (Array)**, **조건문 (if/switch)**, **반복문 (for/while)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1049,13 +975,13 @@ Với **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ 
 
 ---
 
-Như vậy, **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **258 - 261. 배열과 문자열 (Arrays & Strings)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **258 - 261. 배열과 문자열 (Arrays & Strings)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 258 - 261. 배열과 문자열 (Arrays & Strings)
 
-Sau khi đã đặt nền bằng **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**, ta chuyển sang **258 - 261. 배열과 문자열 (Arrays & Strings)**. Đây là mắt xích 23/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 22/78, **258 - 261. 배열과 문자열 (Arrays & Strings)** xuất hiện như phần tiếp nối của **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **258 - 261. 배열과 문자열 (Arrays & Strings)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **배열 (Array)**, **2차원 배열**, **배열 초기화**, **배열 형태의 문자열 (C언어)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1069,13 +995,13 @@ Trong C, chuỗi "love" sẽ chiếm 5 ô nhớ (l, o, v, e, `\0`). Ký tự `\0
 
 ---
 
-Ta có thể khép mục **258 - 261. 배열과 문자열 (Arrays & Strings)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **262 - 263. 포인터 (Pointers)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **258 - 261. 배열과 문자열 (Arrays & Strings)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **262 - 263. 포인터 (Pointers)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 262 - 263. 포인터 (Pointers)
 
-Từ **258 - 261. 배열과 문자열 (Arrays & Strings)**, ta đã có điểm tựa để bước vào **262 - 263. 포인터 (Pointers)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **258 - 261. 배열과 문자열 (Arrays & Strings)**, ta chuyển sang **262 - 263. 포인터 (Pointers)**. Đây là mắt xích 23/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **262 - 263. 포인터 (Pointers)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **포인터 (Pointer)**, **포인터와 배열** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1085,26 +1011,26 @@ Từ **258 - 261. 배열과 문자열 (Arrays & Strings)**, ta đã có điểm 
 - **포인터와 배열**: 배열 이름은 포인터와 같음 (`배열명 == &배열명[0]`). 포인터 연산(`p+i`)으로 배열 요소에 접근 가능.
 
 **Giải thích (Vietnamese):**
-Pointer (Con trỏ) không lưu giá trị (như số 5), mà lưu "địa chỉ nhà" (ví dụ: nhà số 100A). 
+Pointer (Con trỏ) không lưu giá trị (như số 5), mà lưu "địa chỉ nhà" (ví dụ: nhà số 100A).
 `&a` là lấy địa chỉ nhà của a. `*p` là mở cửa vào nhà để lấy đồ (lấy giá trị).
 
 ---
 
-Điểm chốt của **262 - 263. 포인터 (Pointers)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **Python 기초 (Python Basics)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **262 - 263. 포인터 (Pointers)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **Python 기초 (Python Basics)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## Python 기초 (Python Basics)
 
-Ở bước 25/77, **Python 기초 (Python Basics)** xuất hiện như phần tiếp nối của **262 - 263. 포인터 (Pointers)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **262 - 263. 포인터 (Pointers)**, ta đã có điểm tựa để bước vào **Python 기초 (Python Basics)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/78 trước khi đi vào chi tiết.
 
 Để đọc **Python 기초 (Python Basics)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **리스트 (List)**, **튜플 (Tuple)**, **range**, **range를 이용하는 방식 (Dùng range)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Để không đọc **161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)
 
-Bây giờ ta đi vào nội dung của **161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **리스트 (List)**: 요소의 추가, 삭제, 변경 가능 (Có thể thêm, xóa, sửa phần tử).
 - **튜플 (Tuple)**: 요소의 추가, 삭제, 변경 불가능함 (Không thể thay đổi phần tử).
@@ -1115,11 +1041,11 @@ Bây giờ ta đi vào nội dung của **161. Python의 시퀀스 자료형 (Py
 Các ý về **161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **161. Python의 시퀀스 자료형 (Python Sequence Types / Kiểu chuỗi trong Python)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **185. Python의 리스트 (Python List / Danh sách trong Python)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **185. Python의 리스트 (Python List / Danh sách trong Python)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **185. Python의 리스트 (Python List / Danh sách trong Python)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 185. Python의 리스트 (Python List / Danh sách trong Python)
 
-Phần nguồn của **185. Python의 리스트 (Python List / Danh sách trong Python)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **185. Python의 리스트 (Python List / Danh sách trong Python)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 크기를 지정하지 않는다. 하나의 리스트에 다양한 자료형을 섞어 저장할 수 저장할 수 있다. (Không cần chỉ định kích thước. Có thể chứa nhiều kiểu dữ liệu khác nhau).
 - 위치는 0부터 시작한다. (Chỉ số bắt đầu từ 0).
@@ -1129,11 +1055,11 @@ Phần nguồn của **185. Python의 리스트 (Python List / Danh sách trong 
 Với **185. Python의 리스트 (Python List / Danh sách trong Python)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **185. Python의 리스트 (Python List / Danh sách trong Python)**, đừng bắt đầu lại từ số không. **186. Python의 딕셔너리 (Dictionary / Từ điển)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **186. Python의 딕셔너리 (Dictionary / Từ điển)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **186. Python의 딕셔너리 (Dictionary / Từ điển)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 186. Python의 딕셔너리 (Dictionary / Từ điển)
 
-Các ý ngay dưới **186. Python의 딕셔너리 (Dictionary / Từ điển)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **186. Python의 딕셔너리 (Dictionary / Từ điển)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 연관된 값을 묶어서 저장하는 용도. (Dùng để lưu trữ dữ liệu theo cặp Khóa - Giá trị).
 - 위치값 대신 사용자가 원하는 키를 직접 지정하여 사용한다. (Dùng Khóa tự định nghĩa thay vì chỉ số số học).
@@ -1143,11 +1069,11 @@ Các ý ngay dưới **186. Python의 딕셔너리 (Dictionary / Từ điển)**
 Với **186. Python의 딕셔너리 (Dictionary / Từ điển)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 **186. Python의 딕셔너리 (Dictionary / Từ điển)** vừa cho ta cách đặt câu hỏi. Bây giờ **187. Python의 Range (Python Range / Dãy số)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **187. Python의 Range (Python Range / Dãy số)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **187. Python의 Range (Python Range / Dãy số)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 187. Python의 Range (Python Range / Dãy số)
 
-Bây giờ ta đi vào nội dung của **187. Python의 Range (Python Range / Dãy số)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **187. Python의 Range (Python Range / Dãy số)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 연속된 숫자를 생성하는 것. (Tạo dãy số liên tiếp).
   - `range(5)` -> 0, 1, 2, 3, 4
@@ -1158,11 +1084,11 @@ Bây giờ ta đi vào nội dung của **187. Python의 Range (Python Range / D
 Các bullet của **187. Python의 Range (Python Range / Dãy số)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **187. Python의 Range (Python Range / Dãy số)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)
 
-Phần nguồn của **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 객체에서 일부를 잘라 반환하는 기능. (Trích xuất một phần của chuỗi hoặc mảng).
 - `a[1:3]`: Lấy từ index 1 đến 2.
@@ -1175,11 +1101,11 @@ Phần nguồn của **188. Python의 슬라이스 (Python Slice / Cắt chuỗi
 Các bullet của **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mảng)**, đừng bắt đầu lại từ số không. **182. Python의 input() 함수 (Python input() Function / Hàm nhập)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **182. Python의 input() 함수 (Python input() Function / Hàm nhập)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **182. Python의 input() 함수 (Python input() Function / Hàm nhập)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 182. Python의 input() 함수 (Python input() Function / Hàm nhập)
 
-Các ý ngay dưới **182. Python의 input() 함수 (Python input() Function / Hàm nhập)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **182. Python의 input() 함수 (Python input() Function / Hàm nhập)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 키보드로 입력받아 변수에 저장하는 함수이다. (Nhập từ bàn phím và lưu vào biến).
 - 입력되는 값은 기본적으로 문자열로 취급된다. (Giá trị mặc định luôn là chuỗi).
@@ -1188,11 +1114,11 @@ Các ý ngay dưới **182. Python의 input() 함수 (Python input() Function / 
 Với **182. Python의 input() 함수 (Python input() Function / Hàm nhập)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 **182. Python의 input() 함수 (Python input() Function / Hàm nhập)** vừa cho ta cách đặt câu hỏi. Bây giờ **183. Python의 print() 함수 (Python print() Function / Hàm in)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **183. Python의 print() 함수 (Python print() Function / Hàm in)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **183. Python의 print() 함수 (Python print() Function / Hàm in)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 183. Python의 print() 함수 (Python print() Function / Hàm in)
 
-Bây giờ ta đi vào nội dung của **183. Python의 print() 함수 (Python print() Function / Hàm in)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **183. Python의 print() 함수 (Python print() Function / Hàm in)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 인수로 주어진 값을 출력한다. (In giá trị ra màn hình).
   - *Example / Ví dụ*: `print(82, 24, sep='-', end=',')` -> `82-24,`
@@ -1201,11 +1127,11 @@ Bây giờ ta đi vào nội dung của **183. Python의 print() 함수 (Python 
 Với **183. Python의 print() 함수 (Python print() Function / Hàm in)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **183. Python의 print() 함수 (Python print() Function / Hàm in)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)
 
-Phần nguồn của **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - `input()` 함수는 무조건 문자열로 저장하므로, 숫자로 사용하려면 형 변환이 필요하다. (Vì `input()` trả về chuỗi, cần ép kiểu nếu muốn dùng số).
 - 변환할 데이터가 1개: `a = int(input())`
@@ -1215,11 +1141,11 @@ Phần nguồn của **184. 입력 값의 형변환 (Input Type Casting / Ép ki
 Với **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu dữ liệu đầu vào)**, đừng bắt đầu lại từ số không. **189. Python의 for문 (Python for loop)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **189. Python의 for문 (Python for loop)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **189. Python의 for문 (Python for loop)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 189. Python의 for문 (Python for loop)
 
-Các ý ngay dưới **189. Python의 for문 (Python for loop)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **189. Python의 for문 (Python for loop)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **range를 이용하는 방식 (Dùng range)**: `for i in range(1, 11): sum = sum + i`
 - **리스트를 이용하는 방식 (Dùng list)**: `for i in a:` (với `a` là list).
@@ -1228,11 +1154,11 @@ Các ý ngay dưới **189. Python의 for문 (Python for loop)** cung cấp dữ
 Với **189. Python의 for문 (Python for loop)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 **189. Python의 for문 (Python for loop)** vừa cho ta cách đặt câu hỏi. Bây giờ **191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)
 
-Bây giờ ta đi vào nội dung của **191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 클래스 없이 메소드만 단독으로 사용할 수 있다. (Có thể sử dụng phương thức độc lập mà không cần lớp).
 - 클래스를 사용하려면 속성과 메소드를 정의한 후 객체를 선언한다. (Để dùng lớp, định nghĩa thuộc tính và phương thức, sau đó khởi tạo đối tượng).
@@ -1243,21 +1169,21 @@ Với **191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp
 
 Với **191. Python의 클래스 및 메소드 (Python Classes & Methods / Lớp và phương thức)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Như vậy, **Python 기초 (Python Basics)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **Python 기본 문법 (Python Basic Syntax)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **Python 기초 (Python Basics)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **Python 기본 문법 (Python Basic Syntax)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## Python 기본 문법 (Python Basic Syntax)
 
-Sau khi đã đặt nền bằng **Python 기초 (Python Basics)**, ta chuyển sang **Python 기본 문법 (Python Basic Syntax)**. Đây là mắt xích 26/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 25/78, **Python 기본 문법 (Python Basic Syntax)** xuất hiện như phần tiếp nối của **Python 기초 (Python Basics)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **Python 기본 문법 (Python Basic Syntax)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **자료형 선언 없음**, **세미콜론 생략**, **연속 할당**, **코드 블록** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)**. Hãy xác định **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Trước hết, ta đặt **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)
 
-Phần nguồn của **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **자료형 선언 없음**: 변수 선언 시 타입을 명시하지 않는다. (Không cần khai báo kiểu dữ liệu).
 - **세미콜론 생략**: 문장 끝에 `;`이 필요 없다. (Không cần dấu chấm phẩy ở cuối câu).
@@ -1268,11 +1194,11 @@ Phần nguồn của **264. Python의 기본 문법 (Python Basic Syntax / Cú p
 Với **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp cơ bản của Python)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)
 
-Các ý ngay dưới **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 *(Các khái niệm này đã được đề cập kỹ ở phần trước, dưới đây là tóm tắt nhanh các điểm chú ý)*:
 - **`input()`**: Luôn trả về chuỗi. Dùng `int(input())` để ép kiểu. Đa trị: `map(int, input().split())`.
@@ -1285,13 +1211,13 @@ Các bullet của **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라
 
 Điểm chốt của **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **Python 기본 문법 (Python Basic Syntax)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **Python 기본 문법 (Python Basic Syntax)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 236. Python의 시퀀스 자료형 (Sequence Data Types in Python)
 
-Từ **Python 기본 문법 (Python Basic Syntax)**, ta đã có điểm tựa để bước vào **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/77 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **Python 기본 문법 (Python Basic Syntax)**, ta chuyển sang **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)**. Đây là mắt xích 26/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **리스트(List)**, **튜플(Tuple)**, **range** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1305,13 +1231,13 @@ List và Tuple đều dùng để lưu danh sách. Nhưng List có thể sửa �
 
 ---
 
-Điểm chốt của **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **264 - 274. 파이썬 문법 (Python Syntax & Basics)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **264 - 274. 파이썬 문법 (Python Syntax & Basics)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 264 - 274. 파이썬 문법 (Python Syntax & Basics)
 
-Ở bước 28/77, **264 - 274. 파이썬 문법 (Python Syntax & Basics)** xuất hiện như phần tiếp nối của **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)**, ta đã có điểm tựa để bước vào **264 - 274. 파이썬 문법 (Python Syntax & Basics)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/78 trước khi đi vào chi tiết.
 
 Để đọc **264 - 274. 파이썬 문법 (Python Syntax & Basics)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **기본 문법**, **입출력**, **형변환 (Casting)**, **자료형** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1333,13 +1259,84 @@ List và Tuple đều dùng để lưu danh sách. Nhưng List có thể sửa �
 
 ---
 
-Như vậy, **264 - 274. 파이썬 문법 (Python Syntax & Basics)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **라이브러리 및 예외 처리 (Libraries & Exception Handling)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **264 - 274. 파이썬 문법 (Python Syntax & Basics)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
+
+Ở bước 28/78, **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** xuất hiện như phần tiếp nối của **264 - 274. 파이썬 문법 (Python Syntax & Basics)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Trước hết, ta đặt **1. Java의 `==`는 문맥을 먼저 본다** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. Java의 `==`는 문맥을 먼저 본다** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+
+### 1. Java의 `==`는 문맥을 먼저 본다
+
+Bây giờ ta đi vào nội dung của **1. Java의 `==`는 문맥을 먼저 본다**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+```java
+int a = 1;
+double b = 1.0;
+System.out.println(a == b);        // true: 수치 승격 후 비교
+String x = new String("A");
+String y = new String("A");
+System.out.println(x == y);        // false: 서로 다른 객체 참조
+System.out.println(x.equals(y));   // true: 내용 비교
+```
+
+- 숫자형 피연산자는 binary numeric promotion 후 비교한다.
+- 참조형 `==`는 같은 객체를 가리키는지 비교하고, 문자열 내용 비교에는 `equals`를 사용한다.
+- `a == b == c`는 “세 값이 모두 같은가”가 아니라 왼쪽부터 계산되므로 별도 비교식이 필요하다.
+
+Với **1. Java의 `==`는 문맥을 먼저 본다**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Ta vừa chốt **1. Java의 `==`는 문맥을 먼저 본다** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. Python `for`와 `while`의 trace 포인트** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **2. Python `for`와 `while`의 trace 포인트**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 2. Python `for`와 `while`의 trace 포인트
+
+Phần nguồn của **2. Python `for`와 `while`의 trace 포인트** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+```python
+items = [1, 2, 3]
+total = 0
+for value in items:
+    if value == 2:
+        continue
+    total += value
+print(total)  # 4
+```
+
+`continue`는 현재 반복의 나머지를 건너뛰고 다음 반복으로 이동한다. `break`는 반복문 전체를 종료한다. 문제를 풀 때 초기값, 조건 검사 시점, 증감/자료 갱신 위치를 표로 추적한다.
+
+> **시험 함정:** Java 문자열의 `==`와 `equals`, Python의 `continue`와 `break`를 섞지 않는다.
+
+Với **2. Python `for`와 `while`의 trace 포인트**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Sau khi đọc **2. Python `for`와 `while`의 trace 포인트**, đừng bắt đầu lại từ số không. **자주 혼동하는 판별 포인트** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Đoạn **자주 혼동하는 판별 포인트** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 자주 혼동하는 판별 포인트
+
+Các ý ngay dưới **자주 혼동하는 판별 포인트** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- C 반복문은 초기값·조건·증감식과 실제 접근 인덱스를 따로 표로 적는다. `i += 2`이면 짝수 인덱스만 방문할 수 있다.
+- Java의 후위 감소 `y--`는 비교에 현재 값을 사용한 뒤 값을 줄인다. 반복 종료 시점의 변수값을 마지막 조건 평가까지 반영한다.
+- Python `split(delimiter)`는 지정한 구분자로 문자열을 나누고, `map(int, ...)`는 각 조각을 정수로 바꾼다.
+- IPv6는 128비트 주소와 anycast를 사용한다. IPv6 패킷/헤더 크기를 무제한으로 해석하거나 IPv4의 32비트와 혼동하지 않는다.
+
+Các bullet của **자주 혼동하는 판별 포인트** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **자주 혼동하는 판별 포인트** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Như vậy, **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **라이브러리 및 예외 처리 (Libraries & Exception Handling)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 라이브러리 및 예외 처리 (Libraries & Exception Handling)
 
-Sau khi đã đặt nền bằng **264 - 274. 파이썬 문법 (Python Syntax & Basics)**, ta chuyển sang **라이브러리 및 예외 처리 (Libraries & Exception Handling)**. Đây là mắt xích 29/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, ta chuyển sang **라이브러리 및 예외 처리 (Libraries & Exception Handling)**. Đây là mắt xích 29/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **라이브러리 및 예외 처리 (Libraries & Exception Handling)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **stdio.h**, **math.h**, **string.h**, **stdlib.h** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1380,7 +1377,7 @@ Ta có thể khép mục **라이브러리 및 예외 처리 (Libraries & Except
 
 ## 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
 
-Từ **라이브러리 및 예외 처리 (Libraries & Exception Handling)**, ta đã có điểm tựa để bước vào **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/77 trước khi đi vào chi tiết.
+Từ **라이브러리 및 예외 처리 (Libraries & Exception Handling)**, ta đã có điểm tựa để bước vào **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/78 trước khi đi vào chi tiết.
 
 Để đọc **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **C언어 표준 라이브러리**, **예외처리 (Exception Handling)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1396,15 +1393,13 @@ Từ **라이브러리 및 예외 처리 (Libraries & Exception Handling)**, ta 
 
 ---
 
-# Chapter 3. 응용 SW 기초 기술 활용 (Phần 3: Ứng dụng kỹ thuật cơ sở phần mềm)
-
 Điểm chốt của **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **279 - 280. 라이브러리 (Library)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 279 - 280. 라이브러리 (Library)
 
-Ở bước 31/77, **279 - 280. 라이브러리 (Library)** xuất hiện như phần tiếp nối của **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 31/78, **279 - 280. 라이브러리 (Library)** xuất hiện như phần tiếp nối của **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **279 - 280. 라이브러리 (Library)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **라이브러리**, **C언어 표준 라이브러리 (Header Files)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1426,7 +1421,7 @@ Như vậy, **279 - 280. 라이브러리 (Library)** không chỉ cung cấp cá
 
 ## 스크립트 및 운영체제 (Script Languages & Operating Systems)
 
-Sau khi đã đặt nền bằng **279 - 280. 라이브러리 (Library)**, ta chuyển sang **스크립트 및 운영체제 (Script Languages & Operating Systems)**. Đây là mắt xích 32/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **279 - 280. 라이브러리 (Library)**, ta chuyển sang **스크립트 및 운영체제 (Script Languages & Operating Systems)**. Đây là mắt xích 32/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **스크립트 및 운영체제 (Script Languages & Operating Systems)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **자바스크립트 (JavaScript)**, **PHP**, **파이썬 (Python)**, **쉘 스크립트 (Shell Script)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1546,7 +1541,7 @@ Ta có thể khép mục **스크립트 및 운영체제 (Script Languages & Ope
 
 ## 운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)
 
-Từ **스크립트 및 운영체제 (Script Languages & Operating Systems)**, ta đã có điểm tựa để bước vào **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/77 trước khi đi vào chi tiết.
+Từ **스크립트 및 운영체제 (Script Languages & Operating Systems)**, ta đã có điểm tựa để bước vào **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/78 trước khi đi vào chi tiết.
 
 Để đọc **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **최초 적합 (First Fit)**, **최적 적합 (Best Fit)**, **최악 적합 (Worst Fit)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1631,7 +1626,7 @@ Như vậy, **205. 스케줄링 - HRN (Highest Response-ratio Next)** đã hoàn
 
 ## 운영체제 (Operating Systems)
 
-Ở bước 34/77, **운영체제 (Operating Systems)** xuất hiện như phần tiếp nối của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 34/78, **운영체제 (Operating Systems)** xuất hiện như phần tiếp nối của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **운영체제 (Operating Systems)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **평가 기준 (Tiêu chí đánh giá)**, **제어 프로그램 (Control Program - Chương trình điều khiển)**, **처리 프로그램 (Processing Program - Chương trình xử lý)**, **선점형 멀티태스킹 (Preemptive Multi-Tasking)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1704,7 +1699,7 @@ Với **286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)**,
 Phần nguồn của **286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **시분할 시스템 (Time Sharing System)**: 시간을 분할하여 대화식으로 운영.
-- **개방형 시스템 (Open System)**: 소스 공개. (Hệ thống mở, mã nguồn mở).
+- **개방형 시스템 (Open System)**: 표준 인터페이스와 이식성을 중시하며, 개방형이라는 사실이 곧 소스 코드 공개나 오픈 소스 라이선스를 뜻하지는 않는다.
 - **네트워킹 (Networking)**: 통신망 관리용으로 적합.
 
 Các bullet của **286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
@@ -1722,19 +1717,19 @@ Các ý ngay dưới **287. UNIX 시스템의 구성 (UNIX System Structure / C�
 
 Các bullet của **287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-**287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)** vừa cho ta cách đặt câu hỏi. Bây giờ **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+**287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)** vừa cho ta cách đặt câu hỏi. Bây giờ **288. 파일 디스크립터 (File Descriptor)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Ở đoạn **288. 파일 디스크립터 (File Descriptor)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
-### 288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)
+### 288. 파일 디스크립터 (File Descriptor)
 
-Bây giờ ta đi vào nội dung của **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Bây giờ ta đi vào nội dung của **288. 파일 디스크립터 (File Descriptor)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
-- 파일을 관리하기 위한 시스템 제어 블록 (Khối dữ liệu chứa thông tin quản lý tập tin).
-- 사용자가 직접 참조할 수 없다. (Người dùng không thể truy cập trực tiếp).
+- 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 상태를 담는 FCB(또는 inode 등 커널 자료구조)와 동일한 개념이 아니다.
+- 응용 프로그램은 디스크립터 값을 통해 읽기·쓰기·닫기 연산을 요청한다.
 
-Các bullet của **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+Các bullet của **288. 파일 디스크립터 (File Descriptor)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Với **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+Với **288. 파일 디스크립터 (File Descriptor)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Như vậy, **운영체제 (Operating Systems)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **082. 운영체제 기능 및 종류 (Operating System OS)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
@@ -1742,7 +1737,7 @@ Như vậy, **운영체제 (Operating Systems)** không chỉ cung cấp các ý
 
 ## 082. 운영체제 기능 및 종류 (Operating System OS)
 
-Sau khi đã đặt nền bằng **운영체제 (Operating Systems)**, ta chuyển sang **082. 운영체제 기능 및 종류 (Operating System OS)**. Đây là mắt xích 35/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **운영체제 (Operating Systems)**, ta chuyển sang **082. 운영체제 기능 및 종류 (Operating System OS)**. Đây là mắt xích 35/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **082. 운영체제 기능 및 종류 (Operating System OS)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **운영체제의 주요 프로그램**, **제어 프로그램 (Control Program)**, **처리 프로그램 (Processing Program)**, **쉘(Shell)과 커널(Kernel)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1773,7 +1768,7 @@ Ta có thể khép mục **082. 운영체제 기능 및 종류 (Operating System
 
 ## 282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)
 
-Từ **082. 운영체제 기능 및 종류 (Operating System OS)**, ta đã có điểm tựa để bước vào **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/77 trước khi đi vào chi tiết.
+Từ **082. 운영체제 기능 및 종류 (Operating System OS)**, ta đã có điểm tựa để bước vào **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/78 trước khi đi vào chi tiết.
 
 Để đọc **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1786,7 +1781,7 @@ Từ **082. 운영체제 기능 및 종류 (Operating System OS)**, ta đã có 
 
 ## 283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)
 
-Ở bước 37/77, **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** xuất hiện như phần tiếp nối của **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 37/78, **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** xuất hiện như phần tiếp nối của **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **운영체제 구성**, **제어 프로그램**, **처리 프로그램**, **UNIX의 특징** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1796,7 +1791,7 @@ Từ **082. 운영체제 기능 및 종류 (Operating System OS)**, ta đã có 
 - **UNIX의 특징**: 대화식 운영체제, **C언어로 작성**되어 이식성이 높음. 트리(Tree) 구조의 파일 시스템.
   - **커널(Kernel)**: UNIX의 핵심. 하드웨어/메모리/프로세스 관리.
   - **쉘(Shell)**: 사용자의 명령어를 해석하여 커널에 전달하는 인터페이스.
-- **파일 디스크립터 (File Descriptor)**: 시스템이 파일을 관리하기 위해 이름, 위치, 크기 등의 속성을 담아두는 제어 블록 (사용자가 직접 볼 수 없음).
+- **파일 디스크립터 (File Descriptor)**: 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 속성을 담는 FCB/inode와 동일한 제어 블록이 아니다.
 - **UNIX 환경 변수**: `$HOME`(홈 디렉터리), `$PATH`(명령어 검색 경로), `$PWD`(현재 작업 폴더).
 - **UNIX 명령어**: `chmod`(권한 변경), `fork`(프로세스 복제).
 
@@ -1812,7 +1807,7 @@ Như vậy, **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** kh
 
 ## 083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)
 
-Sau khi đã đặt nền bằng **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)**, ta chuyển sang **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**. Đây là mắt xích 38/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)**, ta chuyển sang **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**. Đây là mắt xích 38/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **최초 적합 (First fit)**, **최적 적합 (Best fit)**, **최악 적합 (Worst fit)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1834,7 +1829,7 @@ Ta có thể khép mục **083. 메모리 관리 기법 - 배치 전략 (Memory 
 
 ## 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
 
-Từ **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**, ta đã có điểm tựa để bước vào **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/77 trước khi đi vào chi tiết.
+Từ **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**, ta đã có điểm tựa để bước vào **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/78 trước khi đi vào chi tiết.
 
 Để đọc **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **배치 전략 (Placement)**, **페이징(Paging)**, **세그먼테이션(Segmentation)**, **페이지 크기** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1857,7 +1852,7 @@ Từ **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies
 
 ## 프로세스 관리 (Process Management)
 
-Ở bước 40/77, **프로세스 관리 (Process Management)** xuất hiện như phần tiếp nối của **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 40/78, **프로세스 관리 (Process Management)** xuất hiện như phần tiếp nối của **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **프로세스 관리 (Process Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **Dispatch (디스패치)**, **Wake Up (깨움)**, **Spooling (스풀링)**, **스레드의 분류 (Thread Types)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1957,7 +1952,7 @@ Như vậy, **프로세스 관리 (Process Management)** không chỉ cung cấp
 
 ## 085. 프로세스 및 스레드 (Process & Thread)
 
-Sau khi đã đặt nền bằng **프로세스 관리 (Process Management)**, ta chuyển sang **085. 프로세스 및 스레드 (Process & Thread)**. Đây là mắt xích 41/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **프로세스 관리 (Process Management)**, ta chuyển sang **085. 프로세스 및 스레드 (Process & Thread)**. Đây là mắt xích 41/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **085. 프로세스 및 스레드 (Process & Thread)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **프로세스 상태 (Process States)**, **상태 전이 (State Transitions)**, **Dispatch**, **Timeout (Timer Runout)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1986,7 +1981,7 @@ Ta có thể khép mục **085. 프로세스 및 스레드 (Process & Thread)** 
 
 ## 086. 프로세스 스케줄링 (Process Scheduling)
 
-Từ **085. 프로세스 및 스레드 (Process & Thread)**, ta đã có điểm tựa để bước vào **086. 프로세스 스케줄링 (Process Scheduling)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/77 trước khi đi vào chi tiết.
+Từ **085. 프로세스 및 스레드 (Process & Thread)**, ta đã có điểm tựa để bước vào **086. 프로세스 스케줄링 (Process Scheduling)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/78 trước khi đi vào chi tiết.
 
 Để đọc **086. 프로세스 스케줄링 (Process Scheduling)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **선점형 (Preemptive)**, **비선점형 (Non-Preemptive)**, **FCFS**, **SJF** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2010,7 +2005,7 @@ Lập lịch cho CPU:
 
 ## 086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속
 
-Ở bước 43/77, **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** xuất hiện như phần tiếp nối của **086. 프로세스 스케줄링 (Process Scheduling)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 43/78, **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** xuất hiện như phần tiếp nối của **086. 프로세스 스케줄링 (Process Scheduling)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **교착상태(Deadlock) 4가지 필요충분조건**, **교착상태 해결 방법 (Handling Deadlocks)**, **예방 (Prevention)**, **회피 (Avoidance)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2043,7 +2038,7 @@ Như vậy, **086. 프로세스 스케줄링과 교착상태 (Process Scheduling
 
 ## 297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)
 
-Sau khi đã đặt nền bằng **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속**, ta chuyển sang **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**. Đây là mắt xích 44/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속**, ta chuyển sang **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**. Đây là mắt xích 44/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **프로세스(Process)**, **상태 전이**, **Dispatch**, **Timeout** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2066,7 +2061,7 @@ Ta có thể khép mục **297 - 302. 프로세스와 스레드, 스케줄링 (P
 
 ## 네트워크 통신 (Network Communication)
 
-Từ **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**, ta đã có điểm tựa để bước vào **네트워크 통신 (Network Communication)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/77 trước khi đi vào chi tiết.
+Từ **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**, ta đã có điểm tựa để bước vào **네트워크 통신 (Network Communication)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/78 trước khi đi vào chi tiết.
 
 Để đọc **네트워크 통신 (Network Communication)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **209. 데이터 링크 계층 (Data Link)**, **210. 네트워크 계층 (Network)**, **211. 전송 계층 (Transport)**, **212. 세션 계층 (Session)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2135,8 +2130,6 @@ Bây giờ ta đi vào nội dung của **TCP/IP 프로토콜 (TCP/IP Protocols)
 - **216. UDP**: 비연결형, 빠른 속도, 실시간 전송 유리 (Không kết nối, truyền nhanh, hợp với Real-time).
   - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game).
 
----
-
 Với **TCP/IP 프로토콜 (TCP/IP Protocols)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Điểm chốt của **TCP/IP 프로토콜 (TCP/IP Protocols)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
@@ -2147,7 +2140,7 @@ Với **TCP/IP 프로토콜 (TCP/IP Protocols)**, hãy đọc các công thức 
 
 ## 네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)
 
-Ở bước 46/77, **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)** xuất hiện như phần tiếp nối của **네트워크 통신 (Network Communication)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 46/78, **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)** xuất hiện như phần tiếp nối của **네트워크 통신 (Network Communication)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **A Class**, **B Class**, **C Class**, **D Class** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2190,8 +2183,6 @@ Các ý ngay dưới **네트워크 장비 (Network Devices - Bổ sung)** cung 
 - **게이트웨이 (Gateway)**: 다른 네트워크로부터 데이터를 주고받는 출입구 역할, 프로토콜 구조가 다른 네트워크 연결. (Cổng ra vào giữa các mạng có giao thức hoàn toàn khác nhau).
 - **NIC (Network Interface Card)**: 랜카드, 컴퓨터를 네트워크에 연결. (Card mạng).
 
----
-
 Các bullet của **네트워크 장비 (Network Devices - Bổ sung)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Như vậy, **네트워크 장비 (Network Devices - Bổ sung)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
@@ -2202,7 +2193,7 @@ Như vậy, **네트워크 프로토콜 및 장비 심화 (Network Protocols & D
 
 ## 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
 
-Sau khi đã đặt nền bằng **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**, ta chuyển sang **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**. Đây là mắt xích 47/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**, ta chuyển sang **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**. Đây là mắt xích 47/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **IEEE 802 표준**, **OSI 7계층 (상위 계층부터)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2232,7 +2223,7 @@ Ta có thể khép mục **088. 인터넷 구성과 네트워크 - OSI 7계층 (
 
 ## 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
 
-Từ **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**, ta đã có điểm tựa để bước vào **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/77 trước khi đi vào chi tiết.
+Từ **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**, ta đã có điểm tựa để bước vào **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/78 trước khi đi vào chi tiết.
 
 Để đọc **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **TCP (Transmission Control Protocol)**, **UDP (User Datagram Protocol)**, **TCP 흐름 제어 (Flow Control)**, **TCP 오류 제어 (Error Control)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2259,12 +2250,12 @@ Từ **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**, ta �
 
 ## 309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)
 
-Ở bước 49/77, **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** xuất hiện như phần tiếp nối của **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 49/78, **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** xuất hiện như phần tiếp nối của **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **응용 계층 (Application, 7계층)**, **전송 계층 (Transport, 4계층)**, **TCP**, **UDP** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - **응용 계층 (Application, 7계층)**: HTTP(웹), FTP(파일), SMTP(메일), DNS(도메인->IP 변환), SNMP(네트워크 관리).
-- **전송 계층 (Transport, 4계층)**: 
+- **전송 계층 (Transport, 4계층)**:
   - **TCP**: 연결형, 신뢰성 보장, 양방향. 흐름 제어.
   - **UDP**: 비연결형, 신뢰성 낮음. 속도가 빨라 스트리밍에 유리.
 - **인터넷/네트워크 계층 (Network, 3계층)**: 라우터 사용.
@@ -2285,7 +2276,7 @@ Như vậy, **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers 
 
 ## 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
 
-Sau khi đã đặt nền bằng **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**, ta chuyển sang **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**. Đây là mắt xích 50/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**, ta chuyển sang **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**. Đây là mắt xích 50/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **IPv4 헤더 필드**, **IPv4 클래스**, **IPv4 vs IPv6**, **데이터 전송 방법** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2296,7 +2287,7 @@ Sau khi đã đặt nền bằng **309 - 314. OSI 7계층과 네트워크 프로
   - Class C: `192.~` (소형 망)
 - **IPv4 vs IPv6**:
   - 주소 길이: IPv4(32비트) -> **IPv6(128비트)** 확장.
-  - IPv6 특징: 호스트 주소 자동 설정, 패킷 크기 제한 없음, 헤더 단순화, **보안(인증/무결성) 강화**, 플로 레이블링(QoS), 이동성 지원.
+  - IPv6 특징: 호스트 주소 자동 설정 지원, 기본 헤더 단순화, 플로 레이블링(QoS) 필드, 이동성 지원. 패킷 크기는 IPv6의 최대 패킷 크기와 경로 MTU 규칙을 따르며, IPsec 지원이 정의되어도 사용 여부는 별도 설정이다.
 - **데이터 전송 방법**:
   - **유니캐스트 (Unicast)**: 1:1 통신.
   - **멀티캐스트 (Multicast)**: 1:N (특정 그룹).
@@ -2321,7 +2312,7 @@ Ta có thể khép mục **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnettin
 
 ## 252. 다중 if문 (Multiple if Statement)
 
-Từ **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**, ta đã có điểm tựa để bước vào **252. 다중 if문 (Multiple if Statement)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/77 trước khi đi vào chi tiết.
+Từ **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**, ta đã có điểm tựa để bước vào **252. 다중 if문 (Multiple if Statement)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/78 trước khi đi vào chi tiết.
 
 Để đọc **252. 다중 if문 (Multiple if Statement)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2337,12 +2328,12 @@ Từ **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**, ta đã có đ
 
 ## 305 - 308. IP 주소 체계 (IPv4 vs IPv6)
 
-Ở bước 52/77, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** xuất hiện như phần tiếp nối của **252. 다중 if문 (Multiple if Statement)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 52/78, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** xuất hiện như phần tiếp nối của **252. 다중 if문 (Multiple if Statement)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **IPv4**, **IPv6**, **IPv6의 특징**, **IPv6 전송 방식** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - **IPv4**: 32비트 (8비트씩 4부분). 클래스 A~E로 나뉨.
-- **IPv6**: 128비트 (16비트씩 8부분). 콜론(`:`)으로 구분, 16진수 사용. 
+- **IPv6**: 128비트 (16비트씩 8부분). 콜론(`:`)으로 구분, 16진수 사용.
 - **IPv6의 특징**: 무한대에 가까운 주소, 보안 강화, 패킷 크기 확장, PnP(자동 설정).
 - **IPv6 전송 방식**: 유니캐스트(1:1), 멀티캐스트(1:N), 애니캐스트(가장 가까운 1:1).
 
@@ -2351,21 +2342,96 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 
 ---
 
-Như vậy, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 공학 및 실무 (Software Engineering & Practice)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 소프트웨어 공학 및 실무 (Software Engineering & Practice)
+
+Sau khi đã đặt nền bằng **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**, ta chuyển sang **소프트웨어 공학 및 실무 (Software Engineering & Practice)**. Đây là mắt xích 53/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **소프트웨어 공학 및 실무 (Software Engineering & Practice)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **리스트 (List)**, **튜플 (Tuple)**, **range**, **문자 (Char)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+---
+
+Ta bắt đầu phần nội dung bằng **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)**. Hãy xác định **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)
+
+Phần nguồn của **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **리스트 (List)**: Khác kiểu dữ liệu, thêm xóa được.
+- **튜플 (Tuple)**: Không thể thay đổi (immutable).
+- **range**: Sinh dãy số liên tiếp.
+
+Các bullet của **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **236. Python의 시퀀스 자료형 (Python Sequence Type / Kiểu chuỗi trong Python - Nhắc lại)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)
+
+Các ý ngay dưới **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- C언어: `struct sawon { char name[10]; int pay; };`
+
+Các bullet của **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)**, đừng bắt đầu lại từ số không. **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)
+
+Bây giờ ta đi vào nội dung của **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **문자 (Char)**: `char` (2Byte - Khác với C là 1Byte).
+- **정수 (Integer)**: `byte` (1Byte), `short` (2Byte), `int` (4Byte), `long` (8Byte).
+- **실수 (Float)**: `float` (4Byte), `double` (8Byte).
+- **논리 (Boolean)**: `boolean` (1Byte).
+  - 💡 *Mẹo ghi nhớ*: Java dùng Unicode nên `char` là 2 Bytes. Có thêm kiểu `byte` (1 Byte).
+
+Các bullet của **235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+**235. JAVA의 데이터 타입 크기 (JAVA Data Type Sizes / Kích thước kiểu dữ liệu JAVA)** vừa cho ta cách đặt câu hỏi. Bây giờ **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Với **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)
+
+Phần nguồn của **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **헝가리안 표기법 (Hungarian Notation)**: 변수 선언 시 변수명에 데이터 타입을 명시하는 것. (Gắn tiền tố kiểu dữ liệu vào tên biến, vd: `strName`, `nAge`).
+- Mọi câu lệnh khai báo biến trong C/Java đều phải kết thúc bằng dấu chấm phẩy `;`.
+
+Các bullet của **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **237. 변수의 개요 및 헝가리안 표기법 (Variables & Hungarian Notation / Biến và Ký pháp Hungary)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)
+
+Các ý ngay dưới **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- 메모리 공간을 강제로 해제 (Giải phóng không gian bộ nhớ không còn sử dụng).
+
+Các bullet của **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Ta có thể khép mục **소프트웨어 공학 및 실무 (Software Engineering & Practice)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
 
-Sau khi đã đặt nền bằng **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**, ta chuyển sang **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**. Đây là mắt xích 53/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **소프트웨어 공학 및 실무 (Software Engineering & Practice)**, ta đã có điểm tựa để bước vào **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/78 trước khi đi vào chi tiết.
 
 Để đọc **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **C**, **ALGOL**, **COBOL**, **FORTRAN** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)**. Hãy xác định **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)
 
-Phần nguồn của **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **C**: 1972년 데니스 리치 개발, UNIX 일부 구현, 포인터 제공. 고급+저급 특징 모두 가짐. (Phát triển bởi Dennis Ritchie năm 1972, có con trỏ, kết hợp đặc điểm của ngôn ngữ bậc cao và bậc thấp).
 - **ALGOL**: 과학 기술 계산용. PASCAL과 C의 모체. (Ngôn ngữ tính toán khoa học, là tiền thân của Pascal và C).
@@ -2376,11 +2442,11 @@ Phần nguồn của **275. 절차적 프로그래밍 언어의 종류 (Procedur
 Với **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)
 
-Các ý ngay dưới **276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **JAVA**: 분산 네트워크, 멀티스레드, 운영체제에 독립적(이식성 강함). (Hỗ trợ mạng phân tán, đa luồng, chạy độc lập không phụ thuộc hệ điều hành nhờ JVM).
 - **C++**: C언어에 객체지향 개념 적용. (Bổ sung tính năng OOP vào ngôn ngữ C).
@@ -2390,11 +2456,11 @@ Các ý ngay dưới **276. 객체지향 프로그래밍 언어의 종류 (Objec
 Với **276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)**, đừng bắt đầu lại từ số không. **278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)
 
-Bây giờ ta đi vào nội dung của **278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **HTML**: 하이퍼텍스트 문서. 단순 텍스트. (Ngôn ngữ đánh dấu văn bản siêu liên kết).
 - **XML**: 웹에서 구조화된 문서 상호 교환, 사용자 정의 태그. (Ngôn ngữ đánh dấu mở rộng, cho phép tự định nghĩa thẻ Tag, dùng để trao đổi dữ liệu).
@@ -2407,21 +2473,21 @@ Với **278. 선언형 프로그래밍 언어의 종류 (Declarative Programming
 
 Như vậy, **278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Ta có thể khép mục **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)
 
-Từ **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, ta đã có điểm tựa để bước vào **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/77 trước khi đi vào chi tiết.
+Ở bước 55/78, **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)** xuất hiện như phần tiếp nối của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **OPT (Optimal)**, **FIFO (First In First Out)**, **LRU (Least Recently Used)**, **LFU (Least Frequently Used)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **290. 페이징 기법 (Paging / Phân trang)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **290. 페이징 기법 (Paging / Phân trang)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **290. 페이징 기법 (Paging / Phân trang)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 290. 페이징 기법 (Paging / Phân trang)
 
-Các ý ngay dưới **290. 페이징 기법 (Paging / Phân trang)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **290. 페이징 기법 (Paging / Phân trang)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 프로그램을 **동일한 크기**로 나눔 (Chia chương trình thành các phần có kích thước BẰNG NHAU).
 - 프로그램 단위 = 페이지 (Page), 기억장치 단위 = 페이지 프레임 (Page Frame).
@@ -2430,11 +2496,11 @@ Các ý ngay dưới **290. 페이징 기법 (Paging / Phân trang)** cung cấp
 Với **290. 페이징 기법 (Paging / Phân trang)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **290. 페이징 기법 (Paging / Phân trang)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **291. 세그먼테이션 기법 (Segmentation / Phân đoạn)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **291. 세그먼테이션 기법 (Segmentation / Phân đoạn)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **291. 세그먼테이션 기법 (Segmentation / Phân đoạn)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 291. 세그먼테이션 기법 (Segmentation / Phân đoạn)
 
-Bây giờ ta đi vào nội dung của **291. 세그먼테이션 기법 (Segmentation / Phân đoạn)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **291. 세그먼테이션 기법 (Segmentation / Phân đoạn)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 프로그램을 배열이나 함수 같은 **다양한 크기의 논리적인 단위**로 나눔. (Chia theo khối logic kích thước KHÁC NHAU).
 - **외부 단편화 (External Fragmentation)** 발생 가능. (Có thể xảy ra phân mảnh ngoài).
@@ -2443,26 +2509,26 @@ Bây giờ ta đi vào nội dung của **291. 세그먼테이션 기법 (Segmen
 Với **291. 세그먼테이션 기법 (Segmentation / Phân đoạn)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **291. 세그먼테이션 기법 (Segmentation / Phân đoạn)**, đừng bắt đầu lại từ số không. **292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)
 
-Phần nguồn của **292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **OPT (Optimal)**: 앞으로 가장 오랫동안 사용하지 않을 페이지 교체. (Thay thế trang sẽ lâu được dùng nhất trong tương lai - Tốt nhất nhưng khó thực hiện).
 - **FIFO (First In First Out)**: 가장 먼저 들어온 페이지 교체. (Vào trước ra trước).
 - **LRU (Least Recently Used)**: 최근에 가장 오랫동안 사용하지 않은 페이지 교체. (Thay thế trang lâu nhất chưa được truy cập).
 - **LFU (Least Frequently Used)**: 사용 빈도가 가장 적은 페이지 교체. (Thay thế trang có số lần truy cập ít nhất).
-- **NUR (Not Used Recently)**: 참조 비트와 변형 비트 사용. (Tương tự LRU nhưng dùng 2 bit để theo dõi).
+- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 페이지를 네 등급으로 나누고 낮은 등급부터 교체한다. (Dùng hai bit R/M để phân loại bốn mức.)
 
 Các bullet của **292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)** vừa cho ta cách đặt câu hỏi. Bây giờ **293. 페이지 크기 (Page Size / Kích thước trang)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **293. 페이지 크기 (Page Size / Kích thước trang)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **293. 페이지 크기 (Page Size / Kích thước trang)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 293. 페이지 크기 (Page Size / Kích thước trang)
 
-Các ý ngay dưới **293. 페이지 크기 (Page Size / Kích thước trang)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **293. 페이지 크기 (Page Size / Kích thước trang)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **작을 경우 (Kích thước nhỏ)**: 단편화 감소, 매핑 늦어짐, 디스크 접근 많아짐. (Phân mảnh ít, nhưng bảng ánh xạ lớn, truy cập ổ đĩa nhiều hơn).
 - **클 경우 (Kích thước lớn)**: 단편화 증가, 매핑 빨라짐, 불필요한 내용까지 적재될 수 있음. (Phân mảnh nhiều, ánh xạ nhanh, có thể load cả những phần thừa).
@@ -2470,11 +2536,11 @@ Các ý ngay dưới **293. 페이지 크기 (Page Size / Kích thước trang)*
 Các bullet của **293. 페이지 크기 (Page Size / Kích thước trang)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **293. 페이지 크기 (Page Size / Kích thước trang)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **294. Locality (국부성 / Tính địa phương)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **294. Locality (국부성 / Tính địa phương)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **294. Locality (국부성 / Tính địa phương)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 294. Locality (국부성 / Tính địa phương)
 
-Bây giờ ta đi vào nội dung của **294. Locality (국부성 / Tính địa phương)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **294. Locality (국부성 / Tính địa phương)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 프로세스가 실행되는 동안 주기억장치의 일부 페이지만 집중적으로 참조하는 성질. (Tiến trình có xu hướng chỉ tập trung truy cập một số trang cụ thể).
 - **시간 구역성 (Temporal Locality)**: Loop, 스택, 변수 (Vòng lặp, stack, biến - Truy cập cùng 1 chỗ nhiều lần).
@@ -2483,11 +2549,11 @@ Bây giờ ta đi vào nội dung của **294. Locality (국부성 / Tính đị
 Các bullet của **294. Locality (국부성 / Tính địa phương)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **294. Locality (국부성 / Tính địa phương)**, đừng bắt đầu lại từ số không. **295. 워킹 셋 (Working Set / Tập làm việc)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **295. 워킹 셋 (Working Set / Tập làm việc)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **295. 워킹 셋 (Working Set / Tập làm việc)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 295. 워킹 셋 (Working Set / Tập làm việc)
 
-Phần nguồn của **295. 워킹 셋 (Working Set / Tập làm việc)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **295. 워킹 셋 (Working Set / Tập làm việc)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 프로세스가 자주 참조하는 페이지들의 집합. (Tập hợp các trang được truy cập thường xuyên nhất).
 - 주기억장치에 상주시킴으로써 페이지 부재(Page Fault)를 줄인다. (Giữ trong RAM để giảm thiểu lỗi trang).
@@ -2495,11 +2561,11 @@ Phần nguồn của **295. 워킹 셋 (Working Set / Tập làm việc)** sẽ 
 Các bullet của **295. 워킹 셋 (Working Set / Tập làm việc)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **295. 워킹 셋 (Working Set / Tập làm việc)** vừa cho ta cách đặt câu hỏi. Bây giờ **296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)
 
-Các ý ngay dưới **296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 페이지 교체 시간이 처리 시간보다 많아지는 현상. (Mất thời gian hoán đổi trang nhiều hơn thời gian xử lý thực tế).
 - 방지: 다중 프로그래밍 정도 조절, 워킹 셋 유지. (Kiểm soát đa nhiệm, dùng Working Set).
@@ -2508,15 +2574,17 @@ Các bullet của **296. 스래싱 (Thrashing / Hiện tượng tráo đổi qu�
 
 Với **296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Điểm chốt của **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **070. 서버개발 프레임워크 (Server Development Framework)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 공학 (Software Engineering)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
-## 070. 서버개발 프레임워크 (Server Development Framework)
+## 소프트웨어 공학 (Software Engineering)
 
-Ở bước 55/77, **070. 서버개발 프레임워크 (Server Development Framework)** xuất hiện như phần tiếp nối của **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**, ta chuyển sang **소프트웨어 공학 (Software Engineering)**. Đây là mắt xích 56/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **070. 서버개발 프레임워크 (Server Development Framework)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **모듈화 (Modularity)**, **재사용성 (Reusability)**, **확장성 (Extensibility)**, **제어 반전 (Inversion of Control, IoC)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **소프트웨어 공학 (Software Engineering)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **모듈화 (Modularity)**, **재사용성 (Reusability)**, **확장성 (Extensibility)**, **제어 반전 (Inversion of Control, IoC)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+---
 
 - **모듈화 (Modularity)**: 캡슐화로 영향 최소화, 유지보수 용이.
 - **재사용성 (Reusability)**: 반복 모듈 제공으로 생산성/품질 향상.
@@ -2528,13 +2596,13 @@ Framework (như Spring, Django) là một bộ khung có sẵn. Tính năng đ�
 
 ---
 
-Như vậy, **070. 서버개발 프레임워크 (Server Development Framework)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **소프트웨어 공학 (Software Engineering)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)
 
-Sau khi đã đặt nền bằng **070. 서버개발 프레임워크 (Server Development Framework)**, ta chuyển sang **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**. Đây là mắt xích 56/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **소프트웨어 공학 (Software Engineering)**, ta đã có điểm tựa để bước vào **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 57/78 trước khi đi vào chi tiết.
 
 Để đọc **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **버퍼 오버플로 (Buffer Overflow)**, **허상 포인터 (Dangling Pointer)**, **FTP 바운스 공격**, **SQL 삽입 (SQL Injection)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2552,13 +2620,13 @@ Sau khi đã đặt nền bằng **070. 서버개발 프레임워크 (Server Dev
 
 ---
 
-Ta có thể khép mục **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)
 
-Từ **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, ta đã có điểm tựa để bước vào **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 57/77 trước khi đi vào chi tiết.
+Ở bước 58/78, **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** xuất hiện như phần tiếp nối của **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **접근 제어자 (JAVA Access Modifiers)**, **클래스와 생성자 (Class & Constructor)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2573,13 +2641,13 @@ Từ **071. 보안 취약성 식별 (Security Vulnerability Identification / L�
 
 ---
 
-Điểm chốt của **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 079. 프로그래밍 언어의 종류 (Types of Programming Languages)
 
-Ở bước 58/77, **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** xuất hiện như phần tiếp nối của **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**, ta chuyển sang **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**. Đây là mắt xích 59/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **절차적 언어 (Procedural)**, **객체지향 언어 (Object-Oriented)**, **스크립트 언어 (Scripting)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2596,13 +2664,13 @@ Từ **071. 보안 취약성 식별 (Security Vulnerability Identification / L�
 
 ---
 
-Như vậy, **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)
 
-Sau khi đã đặt nền bằng **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**, ta chuyển sang **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**. Đây là mắt xích 59/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**, ta đã có điểm tựa để bước vào **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 60/78 trước khi đi vào chi tiết.
 
 Để đọc **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **FIFO (First In First Out)**, **OPT (Optimal)**, **LRU (Least Recently Used)**, **LFU (Least Frequently Used)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2611,7 +2679,7 @@ Sau khi đã đặt nền bằng **079. 프로그래밍 언어의 종류 (Types 
 - **OPT (Optimal)**: 앞으로 가장 오랫동안 사용되지 않을 페이지를 교체 (이론상 최적).
 - **LRU (Least Recently Used)**: (과거 기준) 가장 오랫동안 사용되지 않은 페이지를 교체.
 - **LFU (Least Frequently Used)**: 사용(참조) 횟수가 가장 적은 페이지 교체.
-- **NUR (Not Used Recently)**: 최근에 사용하지 않은 페이지 교체 (참조 비트 사용).
+- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 페이지를 네 등급으로 나누고 낮은 등급부터 교체한다.
 - **지역성 (Locality)**: 프로세스가 특정 메모리 영역을 집중적으로 참조하는 현상.
   - 공간 지역성: 근처 메모리 참조 (배열).
   - 시간 지역성: 방금 참조한 곳 다시 참조 (루프, 변수).
@@ -2626,13 +2694,13 @@ Khi RAM đầy, máy phải đẩy tạm dữ liệu ra ổ cứng.
 
 ---
 
-Ta có thể khép mục **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)
 
-Từ **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**, ta đã có điểm tựa để bước vào **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 60/77 trước khi đi vào chi tiết.
+Ở bước 61/78, **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** xuất hiện như phần tiếp nối của **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **교착상태(Deadlock)**, **상호배제 알고리즘 (Mutual Exclusion)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2643,21 +2711,21 @@ Từ **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật
   - Lamport: 고유 번호(티켓) 부여, 번호순 진입.
   - Semaphore: 정수 변수(P연산, V연산)를 이용해 접근 통제.
 
-Điểm chốt của **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)
 
-Ở bước 61/77, **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** xuất hiện như phần tiếp nối của **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**, ta chuyển sang **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**. Đây là mắt xích 62/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận. Trong khối này, **필수 요소 5가지**, **C/C++**, **JAVA** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **232. 배치 프로그램 (Batch Program)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **232. 배치 프로그램 (Batch Program)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **232. 배치 프로그램 (Batch Program)**. Hãy xác định **232. 배치 프로그램 (Batch Program)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 232. 배치 프로그램 (Batch Program)
 
-Bây giờ ta đi vào nội dung của **232. 배치 프로그램 (Batch Program)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **232. 배치 프로그램 (Batch Program)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 대량의 데이터를 사용자 개입 없이 정해진 순서에 따라 **일괄적으로 처리**하는 방식.
 - 야간 시간대 등 자원 소모가 적은 시간에 실행됨.
@@ -2669,11 +2737,11 @@ Chương trình Batch (xử lý hàng loạt) là loại phần mềm tự độ
 Các ý về **232. 배치 프로그램 (Batch Program)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **232. 배치 프로그램 (Batch Program)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)
 
-Phần nguồn của **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **C/C++**: `char`(1바이트), `short`(2바이트), `int`(4바이트), `float`(4바이트), `double`(8바이트).
 - **JAVA**: `byte`(1바이트), **`char`(2바이트, 유니코드 지원)**, `int`(4바이트), `boolean`(1바이트).
@@ -2684,11 +2752,11 @@ Lưu ý quan trọng: Trong C, `char` (kí tự) chiếm 1 byte. Nhưng trong Ja
 Các bullet của **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)**, đừng bắt đầu lại từ số không. **234. C언어의 구조체 (struct)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **234. C언어의 구조체 (struct)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **234. C언어의 구조체 (struct)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 234. C언어의 구조체 (struct)
 
-Các ý ngay dưới **234. C언어의 구조체 (struct)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **234. C언어의 구조체 (struct)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 서로 다른 데이터 타입을 하나로 묶어 관리하는 사용자 정의 자료형. 배열(동일 타입)과의 차이점.
 - (Ví dụ: Một `struct SinhVien` có thể chứa Tên(string), Tuổi(int), Điểm(float)).
@@ -2696,11 +2764,11 @@ Các ý ngay dưới **234. C언어의 구조체 (struct)** cung cấp dữ li�
 Các ý về **234. C언어의 구조체 (struct)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 **234. C언어의 구조체 (struct)** vừa cho ta cách đặt câu hỏi. Bây giờ **236. Python 시퀀스 자료형** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **236. Python 시퀀스 자료형**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **236. Python 시퀀스 자료형**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 236. Python 시퀀스 자료형
 
-Bây giờ ta đi vào nội dung của **236. Python 시퀀스 자료형**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **236. Python 시퀀스 자료형** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 리스트(List): `[]` 변경 가능.
 - 튜플(Tuple): `()` **변경 불가능(Immutable)**.
@@ -2709,22 +2777,22 @@ Bây giờ ta đi vào nội dung của **236. Python 시퀀스 자료형**. M�
 Các ý về **236. Python 시퀀스 자료형** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **236. Python 시퀀스 자료형** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **238. 가비지 콜렉터 (Garbage Collector)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **238. 가비지 콜렉터 (Garbage Collector)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **238. 가비지 콜렉터 (Garbage Collector)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 238. 가비지 콜렉터 (Garbage Collector)
 
-Phần nguồn của **238. 가비지 콜렉터 (Garbage Collector)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **238. 가비지 콜렉터 (Garbage Collector)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 사용되지 않는 메모리를 자동으로 해제해주는 기능 (메모리 누수 방지). Java 등 현대 언어의 핵심.
 
 Các bullet của **238. 가비지 콜렉터 (Garbage Collector)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **238. 가비지 콜렉터 (Garbage Collector)**, đừng bắt đầu lại từ số không. **239 - 244. 각종 연산자** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **239 - 244. 각종 연산자** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **239 - 244. 각종 연산자**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 239 - 244. 각종 연산자
 
-Các ý ngay dưới **239 - 244. 각종 연산자** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **239 - 244. 각종 연산자**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 산술(`%`, `++`), 관계(`==`, `!=`), 비트(`&`, `|`, `^`, `<<`), 논리(`&&`, `||`), 대입(`+=`), 조건 삼항연산자.
 - `a += 1`은 `a = a + 1`과 같다.
@@ -2734,13 +2802,13 @@ Với **239 - 244. 각종 연산자**, hãy đọc các công thức như một 
 
 Như vậy, **239 - 244. 각종 연산자** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **232. 배치 프로그램 (Batch Program)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **232. 배치 프로그램 (Batch Program)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 232. 배치 프로그램 (Batch Program)
 
-Sau khi đã đặt nền bằng **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**, ta chuyển sang **232. 배치 프로그램 (Batch Program)**. Đây là mắt xích 62/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**, ta đã có điểm tựa để bước vào **232. 배치 프로그램 (Batch Program)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 63/78 trước khi đi vào chi tiết.
 
 Để đọc **232. 배치 프로그램 (Batch Program)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2757,13 +2825,13 @@ Chương trình Batch (xử lý hàng loạt) tự động chạy ngầm để x
 
 ---
 
-Ta có thể khép mục **232. 배치 프로그램 (Batch Program)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **234. C언어의 구조체 (struct in C)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **232. 배치 프로그램 (Batch Program)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **234. C언어의 구조체 (struct in C)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 234. C언어의 구조체 (struct in C)
 
-Từ **232. 배치 프로그램 (Batch Program)**, ta đã có điểm tựa để bước vào **234. C언어의 구조체 (struct in C)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 63/77 trước khi đi vào chi tiết.
+Ở bước 64/78, **234. C언어의 구조체 (struct in C)** xuất hiện như phần tiếp nối của **232. 배치 프로그램 (Batch Program)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **234. C언어의 구조체 (struct in C)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2775,13 +2843,13 @@ Struct (Cấu trúc) dùng để gom nhóm nhiều biến khác kiểu lại v�
 
 ---
 
-Điểm chốt của **234. C언어의 구조체 (struct in C)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **238. 가비지 콜렉터 (Garbage Collector)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **234. C언어의 구조체 (struct in C)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **238. 가비지 콜렉터 (Garbage Collector)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 238. 가비지 콜렉터 (Garbage Collector)
 
-Ở bước 64/77, **238. 가비지 콜렉터 (Garbage Collector)** xuất hiện như phần tiếp nối của **234. C언어의 구조체 (struct in C)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **234. C언어의 구조체 (struct in C)**, ta chuyển sang **238. 가비지 콜렉터 (Garbage Collector)**. Đây là mắt xích 65/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **238. 가비지 콜렉터 (Garbage Collector)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2793,13 +2861,13 @@ Struct (Cấu trúc) dùng để gom nhóm nhiều biến khác kiểu lại v�
 
 ---
 
-Như vậy, **238. 가비지 콜렉터 (Garbage Collector)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **238. 가비지 콜렉터 (Garbage Collector)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 250. JAVA에서의 표준 출력 (Standard Output in JAVA)
 
-Sau khi đã đặt nền bằng **238. 가비지 콜렉터 (Garbage Collector)**, ta chuyển sang **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**. Đây là mắt xích 65/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **238. 가비지 콜렉터 (Garbage Collector)**, ta đã có điểm tựa để bước vào **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 66/78 trước khi đi vào chi tiết.
 
 Để đọc **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2810,13 +2878,13 @@ Sau khi đã đặt nền bằng **238. 가비지 콜렉터 (Garbage Collector)*
 
 ---
 
-Ta có thể khép mục **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **251. 단순 if문 (Simple if Statement)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **251. 단순 if문 (Simple if Statement)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 251. 단순 if문 (Simple if Statement)
 
-Từ **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**, ta đã có điểm tựa để bước vào **251. 단순 if문 (Simple if Statement)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 66/77 trước khi đi vào chi tiết.
+Ở bước 67/78, **251. 단순 if문 (Simple if Statement)** xuất hiện như phần tiếp nối của **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **251. 단순 if문 (Simple if Statement)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2826,25 +2894,25 @@ Từ **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**, ta đã có
 
 ---
 
-Điểm chốt của **251. 단순 if문 (Simple if Statement)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **253. switch문 (switch Statement)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **251. 단순 if문 (Simple if Statement)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **253. switch문 (switch Statement)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 253. switch문 (switch Statement)
 
-Ở bước 67/77, **253. switch문 (switch Statement)** xuất hiện như phần tiếp nối của **251. 단순 if문 (Simple if Statement)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **251. 단순 if문 (Simple if Statement)**, ta chuyển sang **253. switch문 (switch Statement)**. Đây là mắt xích 68/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **253. switch문 (switch Statement)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - 변수의 값에 따라 일치하는 `case` 문장을 실행하는 다분기 제어문.
 
-Như vậy, **253. switch문 (switch Statement)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **253. switch문 (switch Statement)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)
 
-Sau khi đã đặt nền bằng **253. switch문 (switch Statement)**, ta chuyển sang **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**. Đây là mắt xích 68/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **253. switch문 (switch Statement)**, ta đã có điểm tựa để bước vào **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 69/78 trước khi đi vào chi tiết.
 
 Để đọc **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **for문**, **while문**, **do~while문**, **break** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2862,17 +2930,17 @@ Sau khi đã đặt nền bằng **253. switch문 (switch Statement)**, ta chuy�
 
 ---
 
-Ta có thể khép mục **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)
 
-Từ **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**, ta đã có điểm tựa để bước vào **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 69/77 trước khi đi vào chi tiết.
+Ở bước 70/78, **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** xuất hiện như phần tiếp nối của **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **절차적 언어**, **객체지향 언어**, **선언형 언어** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **절차적 언어**: 실행 순서 중시. 
+- **절차적 언어**: 실행 순서 중시.
   - `COBOL` (사무용), `FORTRAN` (과학 기술 계산용), `C` (시스템 프로그래밍), `ALGOL`.
 - **객체지향 언어**: 데이터+기능 캡슐화. 재사용성 높음.
   - `JAVA` (플랫폼 독립성, JVM), `C++` (C의 객체지향 확장), `Smalltalk` (최초 GUI, 순수 객체지향).
@@ -2881,13 +2949,13 @@ Từ **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**, ta
 
 ---
 
-Điểm chốt của **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
 
-Ở bước 70/77, **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** xuất hiện như phần tiếp nối của **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**, ta chuyển sang **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**. Đây là mắt xích 71/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **매시업 (Mashup)**, **SOA (Service Oriented Architecture, 서비스 지향 아키텍처)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2899,13 +2967,13 @@ Từ **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**, ta
 
 ---
 
-Như vậy, **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 226 - 227. 데이터베이스 접속 기술 (Database Connectivity)
 
-Sau khi đã đặt nền bằng **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**, ta chuyển sang **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**. Đây là mắt xích 71/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**, ta đã có điểm tựa để bước vào **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/78 trước khi đi vào chi tiết.
 
 Để đọc **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **JDBC (Java DataBase Connectivity)**, **ODBC (Open DataBase Connectivity)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2916,35 +2984,35 @@ Sau khi đã đặt nền bằng **281. 매시업과 SOA (SW Related Terms: Mash
 - JDBC: Dành riêng cho ngôn ngữ Java.
 - ODBC: Mở (Open) cho mọi ngôn ngữ khác, dùng chung thông qua một "người quản lý tài xế" (Driver Manager) để dịch lệnh SQL gửi xuống Database.
 
-Ta có thể khép mục **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)
 
-Từ **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, ta đã có điểm tựa để bước vào **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/77 trước khi đi vào chi tiết.
+Ở bước 73/78, **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** xuất hiện như phần tiếp nối của **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념 (Khái niệm)**, **핵심 키워드 (Từ khóa)**, **시험 포인트 (Điểm thi)**, **한 문장 설명 (Tóm tắt)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 
-Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **개념 (Khái niệm)**: 소스 코드를 컴파일하지 않고 인터프리터(Interpreter)가 한 줄씩 즉시 해석하여 실행하는 프로그래밍 언어. (Ngôn ngữ lập trình dịch và thực thi từng dòng mã nguồn trực tiếp mà không cần biên dịch toàn bộ.)
 - **핵심 키워드 (Từ khóa)**: 자바 스크립트 (JavaScript), PHP, 파이썬 (Python), 쉘 스크립트 (Shell script).
 - **시험 포인트 (Điểm thi)**: 클라이언트용(Client-side: JS)과 서버용(Server-side: ASP, JSP, PHP) 스크립트 언어를 구분하는 것이 단골 문제. (Phân biệt ngôn ngữ cho Client và Server là câu hỏi thường gặp.)
-- **한 문장 설명 (Tóm tắt)**: 컴파일 과정이 없어 실행 속도가 빠르고 수정이 용이하여 웹 개발 및 시스템 관리에 널리 사용됨. (Tốc độ khởi động nhanh và dễ sửa đổi vì không cần biên dịch, phổ biến trong web và quản trị hệ thống.)
+- **한 문장 설명 (Tóm tắt)**: 컴파일 과정이 없어 수정과 실행 시작이 편리하지만, 반복 실행 성능은 일반적으로 컴파일 방식보다 느릴 수 있다. (Dễ sửa và bắt đầu chạy vì không cần biên dịch trước, nhưng hiệu năng chạy lặp thường có thể chậm hơn kiểu biên dịch.)
 
 Các bullet của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **TẦNG B – NOTE 보충 (HIỂU SÂU)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **TẦNG B – NOTE 보충 (HIỂU SÂU)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 
-Bây giờ ta đi vào nội dung của **TẦNG B – NOTE 보충 (HIỂU SÂU)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **TẦNG B – NOTE 보충 (HIỂU SÂU)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **자바 스크립트 (JavaScript)**: 웹 브라우저 내에서 동작하며 입력 사항 확인 등 클라이언트 측 제어에 사용. (Chạy trên trình duyệt, kiểm soát phía client như xác thực đầu vào.)
 - **PHP**: 서버용 스크립트로 C, Java와 문법이 유사. (Script cho server, cú pháp giống C/Java.)
@@ -2958,21 +3026,21 @@ Các ý về **TẦNG B – NOTE 보충 (HIỂU SÂU)** được nối với ví
 
 Điểm chốt của **TẦNG B – NOTE 보충 (HIỂU SÂU)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Điểm chốt của **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **284 & 294. 구역성 (Locality / Tính cục bộ)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **284 & 294. 구역성 (Locality / Tính cục bộ)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 284 & 294. 구역성 (Locality / Tính cục bộ)
 
-Ở bước 73/77, **284 & 294. 구역성 (Locality / Tính cục bộ)** xuất hiện như phần tiếp nối của **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**, ta chuyển sang **284 & 294. 구역성 (Locality / Tính cục bộ)**. Đây là mắt xích 74/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **284 & 294. 구역성 (Locality / Tính cục bộ)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **개념 (Khái niệm)**, **핵심 키워드 (Từ khóa)**, **시험 포인트 (Điểm thi)**, **한 문장 설명 (Tóm tắt)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **TẦNG A – NOTE NÉN (ÔN / ĐI THI)**. Hãy xác định **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 
-Bây giờ ta đi vào nội dung của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **개념 (Khái niệm)**: 프로세스가 실행되는 동안 주기억장치(Main memory)의 특정 영역만을 집중적으로 참조하는 성질. (Tính chất mà quá trình chỉ tham chiếu tập trung vào một số trang nhất định của bộ nhớ chính khi thực thi.)
 - **핵심 키워드 (Từ khóa)**: 시간 구역성 (Temporal locality), 공간 구역성 (Spatial locality), 집중 참조 (Concentrated reference).
@@ -2982,11 +3050,11 @@ Bây giờ ta đi vào nội dung của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 Các ý về **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **TẦNG B – NOTE 보충 (HIỂU SÂU)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **TẦNG B – NOTE 보충 (HIỂU SÂU)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 
-Phần nguồn của **TẦNG B – NOTE 보충 (HIỂU SÂU)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **TẦNG B – NOTE 보충 (HIỂU SÂU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **시간 구역성 (Temporal locality)**: 한 번 참조된 페이지는 가까운 시간 내에 다시 참조될 가능성이 높음. (Trang vừa dùng sẽ có khả năng cao được dùng lại sớm. Ví dụ: Vòng lặp/Loop, Ngăn xếp/Stack, Biến đếm.)
 - **공간 구역성 (Spatial locality)**: 특정 페이지가 참조되면 인근 위치의 페이지가 계속 참조될 가능성이 높음. (Trang vừa dùng thì các trang liền kề nó dễ được gọi theo. Ví dụ: Mảng/Array, duyệt tuần tự.)
@@ -2997,21 +3065,21 @@ Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, hãy đọc các công thức 
 
 Điểm chốt của **TẦNG B – NOTE 보충 (HIỂU SÂU)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Như vậy, **284 & 294. 구역성 (Locality / Tính cục bộ)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **285 & 295. 워킹 셋 (Working Set / Tập làm việc)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **284 & 294. 구역성 (Locality / Tính cục bộ)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **285 & 295. 워킹 셋 (Working Set / Tập làm việc)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 285 & 295. 워킹 셋 (Working Set / Tập làm việc)
 
-Sau khi đã đặt nền bằng **284 & 294. 구역성 (Locality / Tính cục bộ)**, ta chuyển sang **285 & 295. 워킹 셋 (Working Set / Tập làm việc)**. Đây là mắt xích 74/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **284 & 294. 구역성 (Locality / Tính cục bộ)**, ta đã có điểm tựa để bước vào **285 & 295. 워킹 셋 (Working Set / Tập làm việc)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 75/78 trước khi đi vào chi tiết.
 
 Để đọc **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **개념 (Khái niệm)**, **핵심 키워드 (Từ khóa)**, **시험 포인트 (Điểm thi)**, **예시 (Ví dụ)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **TẦNG A – NOTE NÉN (ÔN / ĐI THI)**. Hãy xác định **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 
-Phần nguồn của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **개념 (Khái niệm)**: 프로세스가 원활한 수행을 위해 일정 시간 동안 집중적으로 참조하는 페이지들의 집합. (Tập hợp các trang mà tiến trình tham chiếu tập trung trong một khoảng thời gian để chạy mượt mà.)
 - **핵심 키워드 (Từ khóa)**: 데닝 (Denning), Locality 활용 (Ứng dụng Locality), 페이지 부재 감소 (Giảm Page Fault), 동적 변경 (Thay đổi động).
@@ -3020,11 +3088,11 @@ Phần nguồn của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** sẽ lấp đầ
 Các bullet của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **TẦNG B – NOTE 보충 (HIỂU SÂU)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **TẦNG B – NOTE 보충 (HIỂU SÂU)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **TẦNG B – NOTE 보충 (HIỂU SÂU)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 
-Các ý ngay dưới **TẦNG B – NOTE 보충 (HIỂU SÂU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **TẦNG B – NOTE 보충 (HIỂU SÂU)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 데닝(Denning)이 제안한 모델로, 프로그램의 국부성(Locality)을 이용. (Mô hình do Denning đề xuất dựa trên tính cục bộ.)
 - 시간에 따라 참조하는 페이지가 달라지므로 지속적으로 (동적으로) 변경됨. (Thay đổi động theo thời gian.)
@@ -3035,21 +3103,21 @@ Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, hãy đọc các công thức 
 
 Điểm chốt của **TẦNG B – NOTE 보충 (HIỂU SÂU)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)
 
-Từ **285 & 295. 워킹 셋 (Working Set / Tập làm việc)**, ta đã có điểm tựa để bước vào **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 75/77 trước khi đi vào chi tiết.
+Ở bước 76/78, **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** xuất hiện như phần tiếp nối của **285 & 295. 워킹 셋 (Working Set / Tập làm việc)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념 (Khái niệm)**, **핵심 키워드 (Từ khóa)**, **시험 포인트 (Điểm thi)**, **커널 (Kernel)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 
-Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **개념 (Khái niệm)**: 커널(Kernel), 쉘(Shell), 유틸리티(Utility)의 계층적 구조. (Cấu trúc phân tầng gồm Kernel, Shell và Utility.)
 - **핵심 키워드 (Từ khóa)**: 커널(Kernel - Hạt nhân), 쉘(Shell - Vỏ), 명령어 해석기 (Trình thông dịch lệnh).
@@ -3058,11 +3126,11 @@ Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ 
 Các bullet của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **TẦNG B – NOTE 보충 (HIỂU SÂU)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **TẦNG B – NOTE 보충 (HIỂU SÂU)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 
-Bây giờ ta đi vào nội dung của **TẦNG B – NOTE 보충 (HIỂU SÂU)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **TẦNG B – NOTE 보충 (HIỂU SÂU)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **커널 (Kernel)**: 하드웨어를 직접 관리, 프로세스/메모리/파일 관리. 주기억장치에 상주. (Quản lý trực tiếp phần cứng, tiến trình, bộ nhớ. Nằm thường trực trong RAM.)
 - **쉘 (Shell)**: 사용자의 명령을 인식하여 수행하는 명령어 해석기 (인터페이스). (Trình biên dịch lệnh, nhận lệnh từ người dùng và gọi chương trình.)
@@ -3074,56 +3142,15 @@ Các ý về **TẦNG B – NOTE 보충 (HIỂU SÂU)** được nối với ví
 
 Điểm chốt của **TẦNG B – NOTE 보충 (HIỂU SÂU)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Điểm chốt của **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)
 
-Ở bước 76/77, **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** xuất hiện như phần tiếp nối của **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**, ta chuyển sang **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)**. Đây là mắt xích 77/78 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **개념 (Khái niệm)**, **핵심 키워드 (Từ khóa)**, **시험 포인트 (Điểm thi)**, **OPT (Optimal)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-Trước hết, ta đặt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
-
-### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
-
-Bây giờ ta đi vào nội dung của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-- **개념 (Khái niệm)**: 주기억장치 빈 공간이 없을 때 어떤 페이지를 내보낼지 결정하는 기법. (Kỹ thuật chọn trang để loại bỏ khi bộ nhớ chính đã đầy để nhường chỗ cho trang mới.)
-- **핵심 키워드 (Từ khóa)**: OPT, FIFO, LRU, LFU, NUR.
-- **시험 포인트 (Điểm thi)**: 각 알고리즘별 교체 대상 선정 기준 묻는 문제. (Tiêu chí chọn trang của từng thuật toán.)
-
-Các bullet của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **TẦNG B – NOTE 보충 (HIỂU SÂU)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
-### TẦNG B – NOTE 보충 (HIỂU SÂU)
-
-Phần nguồn của **TẦNG B – NOTE 보충 (HIỂU SÂU)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- **OPT (Optimal)**: 앞으로 가장 오랫동안 안 쓸 페이지 교체 (이론적 최고). (Thay trang sẽ lâu nhất không được dùng trong tương lai - Tốt nhất nhưng chỉ trên lý thuyết.)
-- **FIFO (First-In First-Out)**: 들어온 지 가장 오래된 페이지 교체. (Thay trang vào bộ nhớ sớm nhất.)
-- **LRU (Least Recently Used)**: 최근에 가장 오랫동안 안 쓴 페이지 교체. (Thay trang lâu nhất chưa được sử dụng tính từ hiện tại.)
-- **LFU (Least Frequently Used)**: 참조 횟수가 가장 적은 페이지 교체. (Thay trang có số lần sử dụng ít nhất.)
-- **NUR (Not Used Recently)**: 참조 비트와 변형 비트를 사용해 최근 미사용 페이지 교체. (Dùng bit tham chiếu và bit sửa đổi để loại trang không dùng gần đây.)
-- **예시 (Ví dụ)**: 스마트폰에서 앱을 여러 개 켜다가 램이 부족해지면, 제일 먼저 켰던 앱(FIFO)을 끄거나 최근에 가장 안 본 앱(LRU)을 종료시킴. (Khi điện thoại đầy RAM, nó sẽ tắt app mở đầu tiên (FIFO) hoặc app lâu rồi chưa đụng tới (LRU).)
-- 💡 **Mẹo ghi nhớ**: **R**ecently = Lâu không đụng (Thời gian), **F**requently = Ít dùng (Số lần).
-
-Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-Điểm chốt của **TẦNG B – NOTE 보충 (HIỂU SÂU)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
-
-Như vậy, **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **298. PCB (Process Control Block)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
-
----
-
-## 298. PCB (Process Control Block)
-
-Sau khi đã đặt nền bằng **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)**, ta chuyển sang **298. PCB (Process Control Block)**. Đây là mắt xích 77/77 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
-
-Để đọc **298. PCB (Process Control Block)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념 (Khái niệm)**, **핵심 키워드 (Từ khóa)**, **시험 포인트 (Điểm thi)**, **예시 (Ví dụ)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 Ta bắt đầu phần nội dung bằng **TẦNG A – NOTE NÉN (ÔN / ĐI THI)**. Hãy xác định **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
@@ -3131,9 +3158,9 @@ Ta bắt đầu phần nội dung bằng **TẦNG A – NOTE NÉN (ÔN / ĐI THI
 
 Phần nguồn của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
-- **개념 (Khái niệm)**: 운영체제가 각 프로세스를 관리하기 위해 정보를 저장하는 데이터 구조. (Cấu trúc dữ liệu HĐH dùng để lưu thông tin quản lý từng tiến trình.)
-- **핵심 키워드 (Từ khóa)**: 프로세스 상태 (Trạng thái tiến trình), 식별자 (PID), 우선순위 (Priority).
-- **시험 포인트 (Điểm thi)**: 프로세스 생성 시 고유하게 생성되며, 종료 시 제거됨. (Được tạo ra duy nhất khi tiến trình bắt đầu và bị xóa khi kết thúc.)
+- **개념 (Khái niệm)**: 주기억장치 빈 공간이 없을 때 어떤 페이지를 내보낼지 결정하는 기법. (Kỹ thuật chọn trang để loại bỏ khi bộ nhớ chính đã đầy để nhường chỗ cho trang mới.)
+- **핵심 키워드 (Từ khóa)**: OPT, FIFO, LRU, LFU, NUR.
+- **시험 포인트 (Điểm thi)**: 각 알고리즘별 교체 대상 선정 기준 묻는 문제. (Tiêu chí chọn trang của từng thuật toán.)
 
 Các bullet của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
@@ -3143,6 +3170,47 @@ Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều k
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 
 Các ý ngay dưới **TẦNG B – NOTE 보충 (HIỂU SÂU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **OPT (Optimal)**: 앞으로 가장 오랫동안 안 쓸 페이지 교체 (이론적 최고). (Thay trang sẽ lâu nhất không được dùng trong tương lai - Tốt nhất nhưng chỉ trên lý thuyết.)
+- **FIFO (First-In First-Out)**: 들어온 지 가장 오래된 페이지 교체. (Thay trang vào bộ nhớ sớm nhất.)
+- **LRU (Least Recently Used)**: 최근에 가장 오랫동안 안 쓴 페이지 교체. (Thay trang lâu nhất chưa được sử dụng tính từ hiện tại.)
+- **LFU (Least Frequently Used)**: 참조 횟수가 가장 적은 페이지 교체. (Thay trang có số lần sử dụng ít nhất.)
+- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 낮은 등급의 페이지부터 교체한다. (Dùng hai bit R/M để phân loại và thay trang.)
+- **예시 (Ví dụ)**: 스마트폰에서 앱을 여러 개 켜다가 램이 부족해지면, 제일 먼저 켰던 앱(FIFO)을 끄거나 최근에 가장 안 본 앱(LRU)을 종료시킴. (Khi điện thoại đầy RAM, nó sẽ tắt app mở đầu tiên (FIFO) hoặc app lâu rồi chưa đụng tới (LRU).)
+- 💡 **Mẹo ghi nhớ**: **R**ecently = Lâu không đụng (Thời gian), **F**requently = Ít dùng (Số lần).
+
+Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Điểm chốt của **TẦNG B – NOTE 보충 (HIỂU SÂU)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Ta có thể khép mục **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **298. PCB (Process Control Block)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 298. PCB (Process Control Block)
+
+Từ **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)**, ta đã có điểm tựa để bước vào **298. PCB (Process Control Block)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 78/78 trước khi đi vào chi tiết.
+
+Để đọc **298. PCB (Process Control Block)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념 (Khái niệm)**, **핵심 키워드 (Từ khóa)**, **시험 포인트 (Điểm thi)**, **예시 (Ví dụ)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+
+Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **개념 (Khái niệm)**: 운영체제가 각 프로세스를 관리하기 위해 정보를 저장하는 데이터 구조. (Cấu trúc dữ liệu HĐH dùng để lưu thông tin quản lý từng tiến trình.)
+- **핵심 키워드 (Từ khóa)**: 프로세스 상태 (Trạng thái tiến trình), 식별자 (PID), 우선순위 (Priority).
+- **시험 포인트 (Điểm thi)**: 프로세스 생성 시 고유하게 생성되며, 종료 시 제거됨. (Được tạo ra duy nhất khi tiến trình bắt đầu và bị xóa khi kết thúc.)
+
+Các bullet của **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **TẦNG B – NOTE 보충 (HIỂU SÂU)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **TẦNG B – NOTE 보충 (HIỂU SÂU)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### TẦNG B – NOTE 보충 (HIỂU SÂU)
+
+Bây giờ ta đi vào nội dung của **TẦNG B – NOTE 보충 (HIỂU SÂU)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 현재 상태(준비/실행/대기), CPU 레지스터 정보, 자원 정보 포함. (Chứa trạng thái hiện tại, thanh ghi CPU, tài nguyên được cấp.)
 - 문맥 교환(Context Switching) 시, 현재까지 진행 상황을 PCB에 저장. (Khi chuyển đổi ngữ cảnh, lưu tiến độ vào PCB để sau này chạy tiếp.)

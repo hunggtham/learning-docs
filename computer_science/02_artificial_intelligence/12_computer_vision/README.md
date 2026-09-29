@@ -1,6 +1,9 @@
 # Computer Vision — Reading Map
 
-Folder này xây Computer Vision từ bản chất image là measurement tensor, đi qua signal/image processing, hand-designed và learned features, CNN, các task spatial, rồi Vision Transformer và visual foundation models.
+> **Mạch đọc:** Đọc **Computer Vision — Reading Map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **cốt lõi (core / 핵심) distinctions**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này xây Computer Vision từ bản chất ảnh (image / 이미지) là đo lường (measurement / 측정) tensor, đi qua tín hiệu (signal / 신호)/xử lý ảnh (image processing / 이미지 처리), hand-designed và learned features, CNN, các tác vụ (task / 작업) spatial, rồi Vision Transformer và visual foundation các mô hình (models / 모델들).
 
 ```mermaid
 flowchart TD
@@ -31,7 +34,10 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [07 — Vision Transformers](./07_vision_transformers.md)
 - [08 — Modern Visual Representation](./08_modern_visual_representation.md)
 
-## Core distinctions
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) distinctions
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
@@ -48,7 +54,10 @@ ViT ≠ Automatically Better Than CNN
 Foundation Model ≠ Domain Validation No Longer Needed
 ```
 
-## Mental Model
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -61,7 +70,10 @@ Physical scene
 → task output
 ```
 
-Computer Vision luôn là inverse problem: infer hidden scene structure từ finite 2D/3D measurements chịu noise, viewpoint và sensor limitations.
+Computer Vision luôn là inverse bài toán (problem / 문제): infer hidden scene cấu trúc (structure / 구조) từ finite 2D/3D measurements chịu noise, viewpoint và sensor limitations.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Connections** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Connections
 

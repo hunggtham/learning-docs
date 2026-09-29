@@ -1,5 +1,7 @@
 # Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?
 
+> **Mạch đọc:** Đọc **Năng lượng hoạt hóa và phương trình Arrhenius — nhiệt độ làm tốc độ thay đổi như thế nào?** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ví dụ định tính** sang **“Ea là năng lượng phản ứng hấp thụ rồi biến mất”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Năng lượng hoạt hóa (activation energy, \(E_a\) / 활성화 에너지)** là tham số mô tả mức độ nhạy của hằng số tốc độ với nhiệt độ trong khuôn khổ Arrhenius. Nó liên quan tới hàng rào mà hệ phải vượt qua trên con đường từ chất phản ứng tới sản phẩm, nhưng không nên đồng nhất máy móc với “năng lượng phản ứng” hay một độ cao hình học duy nhất trong mọi cơ chế.
 
 Đây là chương nối ba ý tưởng: phân bố năng lượng của một quần thể phân tử, hàng rào phản ứng và tốc độ quan sát được.
@@ -12,9 +14,9 @@ Nếu:
 \Delta G<0
 \]
 
-sản phẩm thuận lợi hơn về nhiệt động ở điều kiện đang xét. Tuy nhiên để chuyển từ cấu trúc ban đầu sang cấu trúc cuối, hệ phải tái phân bố electron và hạt nhân. Con đường này thường đi qua những cấu hình có năng lượng tự do cao hơn cả reactant lẫn product.
+sản phẩm thuận lợi hơn về nhiệt động ở điều kiện đang xét. Tuy nhiên để chuyển từ cấu trúc ban đầu sang cấu trúc cuối, hệ phải tái phân bố electron và hạt nhân. Con đường này thường đi qua những cấu hình có năng lượng tự do cao hơn cả reactant lẫn sản phẩm (product / 제품).
 
-Xăng và oxygen là ví dụ quen thuộc. Cháy hydrocarbon rất thuận lợi về nhiệt động, nhưng hỗn hợp không tự bốc cháy ngay ở nhiệt độ phòng vì bước khởi đầu có barrier lớn. Tia lửa hoặc nhiệt tạo đủ population reactive để chain chemistry bắt đầu.
+Xăng và oxygen là ví dụ quen thuộc. Cháy hydrocarbon rất thuận lợi về nhiệt động, nhưng hỗn hợp không tự bốc cháy ngay ở nhiệt độ phòng vì bước khởi đầu có barrier lớn. Tia lửa hoặc nhiệt tạo đủ population reactive để chuỗi (chain / 사슬) chemistry bắt đầu.
 
 Do đó:
 
@@ -89,7 +91,7 @@ Nếu \(E_a\) lớn, cùng một thay đổi nhiệt độ tạo thay đổi \(k
 
 # Vì sao quy tắc “tăng 10 °C thì tốc độ gấp đôi” không phải định luật?
 
-Nếu \(E_a\), \(T\) và mechanism khác nhau, ratio \(k(T+10)/k(T)\) cũng khác nhau.
+Nếu \(E_a\), \(T\) và cơ chế (mechanism / 메커니즘) khác nhau, ratio \(k(T+10)/k(T)\) cũng khác nhau.
 
 Quy tắc này chỉ là **quy tắc kinh nghiệm (heuristic)** trong một số hệ sinh học hoặc hóa học ở một vùng nhiệt độ. Dùng nó ngoài phạm vi kiểm chứng có thể sai lớn.
 
@@ -103,7 +105,7 @@ Một giải thích quá đơn giản thường gọi \(A\) là “tần suất 
 - orientation;
 - degrees of freedom;
 - solvent cage;
-- entropy của activated configuration;
+- entropy của activated cấu hình (configuration / 구성);
 - cơ chế reaction.
 
 Do đó hai reactions có cùng \(E_a\) vẫn có thể có tốc độ rất khác nếu \(A\) khác mạnh.
@@ -120,11 +122,11 @@ p\propto e^{-E/(RT)}
 
 Khi nhiệt độ tăng, phần population có khả năng tiếp cận vùng năng lượng cao tăng rất mạnh. Đây là nguồn gốc trực giác của số hạng mũ trong Arrhenius.
 
-Tuy nhiên reaction coordinate không chỉ là “một phân tử có đủ kinetic energy”. Nó còn gồm orientation, solvation và collective coordinates, nên transition-state theory cho bức tranh sâu hơn.
+Tuy nhiên reaction coordinate không chỉ là “một phân tử có đủ kinetic năng lượng (energy / 에너지)”. Nó còn gồm orientation, solvation và collective coordinates, nên transition-state lý thuyết (theory / 이론) cho bức tranh sâu hơn.
 
 # Lý thuyết trạng thái chuyển tiếp
 
-**Lý thuyết trạng thái chuyển tiếp (transition-state theory, TST)** mô tả reactants và activated configuration bằng cân bằng thống kê gần đúng.
+**Lý thuyết trạng thái chuyển tiếp (transition-state theory, TST)** mô tả reactants và activated cấu hình (configuration / 구성) bằng cân bằng thống kê gần đúng.
 
 Phương trình Eyring:
 
@@ -160,7 +162,7 @@ Công thức này làm rõ rằng barrier có hai thành phần:
 
 # Entropy hoạt hóa — phản ứng có thể chậm vì phải “xếp đúng tư thế”
 
-Hai phân tử có thể va chạm rất nhiều nhưng chỉ một fraction nhỏ có geometry phù hợp để reaction coordinate tiến tới transition state.
+Hai phân tử có thể va chạm rất nhiều nhưng chỉ một fraction nhỏ có hình học (geometry / 기하학) phù hợp để reaction coordinate tiến tới chuyển tiếp (transition / 전이) trạng thái (state / 상태).
 
 Nếu activated complex đòi hỏi hai phân tử mất nhiều tự do tịnh tiến/quay, \(\Delta S^\ddagger\) có thể âm đáng kể, làm \(k\) nhỏ hơn.
 
@@ -168,17 +170,17 @@ Nếu activated complex đòi hỏi hai phân tử mất nhiều tự do tịnh 
 
 # Quan hệ giữa Arrhenius Ea và Eyring parameters
 
-\(E_a\) và \(\Delta H^\ddagger\) liên quan nhưng không hoàn toàn giống nhau. Với một elementary process đơn giản ở pha phù hợp, thường có relation gần:
+\(E_a\) và \(\Delta H^\ddagger\) liên quan nhưng không hoàn toàn giống nhau. Với một elementary tiến trình (process / 프로세스) đơn giản ở pha phù hợp, thường có quan hệ (relation / 관계) gần:
 
 \[
 E_a\approx\Delta H^\ddagger+RT
 \]
 
-Do đó không nên thay ký hiệu này cho ký hiệu kia mà không xem model đang dùng.
+Do đó không nên thay ký hiệu này cho ký hiệu kia mà không xem mô hình (model / 모델) đang dùng.
 
 Arrhenius là mô hình thực nghiệm rất mạnh; Eyring cung cấp diễn giải nhiệt động–thống kê sâu hơn.
 
-# Activation free energy quyết định tốc độ theo hàm mũ
+# Activation free năng lượng (energy / 에너지) quyết định tốc độ theo hàm mũ
 
 Từ Eyring:
 
@@ -188,11 +190,11 @@ k\propto e^{-\Delta G^\ddagger/(RT)}
 
 một chênh lệch nhỏ trong \(\Delta G^\ddagger\) có thể tạo ratio tốc độ rất lớn.
 
-Ở nhiệt độ phòng, thay đổi barrier chỉ vài kJ/mol đã có thể thay tốc độ nhiều lần. Đây là lý do catalyst hoặc substituent thay đổi rất nhỏ về electronic structure vẫn có thể làm reaction dramatically faster/slower.
+Ở nhiệt độ phòng, thay đổi barrier chỉ vài kJ/mol đã có thể thay tốc độ nhiều lần. Đây là lý do catalyst hoặc substituent thay đổi rất nhỏ về electronic cấu trúc (structure / 구조) vẫn có thể làm reaction dramatically faster/slower.
 
 # Chất xúc tác làm gì với barrier?
 
-Catalyst mở một network các elementary steps mới có barrier hiệu dụng thấp hơn.
+Catalyst mở một mạng (network / 네트워크) các elementary steps mới có barrier hiệu dụng thấp hơn.
 
 Nó không thay đổi:
 
@@ -212,39 +214,39 @@ Một phản ứng nhiều bước có profile:
 R → TS1 → I1 → TS2 → I2 → TS3 → P
 ```
 
-Không tồn tại một \(E_a\) duy nhất theo nghĩa cấu trúc cơ bản nếu nhiều steps cùng kiểm soát. Giá trị Arrhenius fit được từ overall rate là **apparent activation energy** và có thể là combination của nhiều enthalpy, equilibria và coverages.
+Không tồn tại một \(E_a\) duy nhất theo nghĩa cấu trúc cơ bản nếu nhiều steps cùng kiểm soát. Giá trị Arrhenius fit được từ overall tỷ lệ (rate / 비율) là **apparent activation năng lượng (energy / 에너지)** và có thể là combination của nhiều enthalpy, equilibria và coverages.
 
 Trong heterogeneous catalysis, apparent \(E_a\) thậm chí có thể nhỏ hoặc âm nếu adsorption equilibrium thay đổi mạnh với temperature.
 
-# Apparent activation energy có thể thay đổi theo điều kiện
+# Apparent activation năng lượng (energy / 에너지) có thể thay đổi theo điều kiện
 
-Nếu mechanism hoặc resting state thay đổi với temperature, slope Arrhenius cũng thay đổi.
+Nếu cơ chế (mechanism / 메커니즘) hoặc resting trạng thái (state / 상태) thay đổi với temperature, slope Arrhenius cũng thay đổi.
 
-Ví dụ ở nhiệt độ thấp surface coverage của reactant có thể cao; ở nhiệt độ cao desorption tăng và controlling regime thay đổi. Khi fit toàn bộ dải bằng một đường, \(E_a\) suy ra không có một physical interpretation đơn giản.
+Ví dụ ở nhiệt độ thấp surface coverage của reactant có thể cao; ở nhiệt độ cao desorption tăng và controlling regime thay đổi. Khi fit toàn bộ dải bằng một đường, \(E_a\) suy ra không có một vật lý (physical / 물리적) interpretation đơn giản.
 
 Đây là lý do cần kiểm tra residuals và từng temperature regime.
 
-# Non-Arrhenius behavior
+# Non-Arrhenius hành vi (behavior / 동작)
 
 Đồ thị Arrhenius có thể cong vì:
 
-- mechanism chuyển đổi;
-- catalyst phase/state thay đổi;
+- cơ chế (mechanism / 메커니즘) chuyển đổi;
+- catalyst phase/trạng thái (state / 상태) thay đổi;
 - enzyme bị biến tính;
 - diffusion trở thành rate-limiting;
-- solvent structure thay đổi;
+- solvent cấu trúc (structure / 구조) thay đổi;
 - quantum tunneling;
 - nhiều pathways cạnh tranh.
 
-Độ cong không phải “dữ liệu xấu” mặc định. Nó có thể là evidence rằng model Arrhenius đơn giản thiếu một phần physics.
+Độ cong không phải “dữ liệu xấu” mặc định. Nó có thể là bằng chứng (evidence / 증거) rằng mô hình (model / 모델) Arrhenius đơn giản thiếu một phần physics.
 
 # Xuyên hầm lượng tử
 
 Các hạt nhẹ, đặc biệt proton và hydrogen atom, có thể **xuyên hầm lượng tử (quantum tunneling)** qua barrier thay vì cần năng lượng cổ điển cao hơn barrier.
 
-Tunneling probability giảm rất mạnh khi barrier rộng hoặc particle nặng hơn. Vì vậy isotope substitution H → D có thể làm rate giảm đáng kể.
+Tunneling xác suất (probability / 확률) giảm rất mạnh khi barrier rộng hoặc particle nặng hơn. Vì vậy isotope substitution H → D có thể làm tỷ lệ (rate / 비율) giảm đáng kể.
 
-Ở nhiệt độ thấp, tunneling có thể làm rate ít phụ thuộc temperature hơn prediction Arrhenius.
+Ở nhiệt độ thấp, tunneling có thể làm tỷ lệ (rate / 비율) ít phụ thuộc temperature hơn prediction Arrhenius.
 
 # Hiệu ứng đồng vị động học
 
@@ -254,17 +256,17 @@ Tunneling probability giảm rất mạnh khi barrier rộng hoặc particle n�
 KIE=\frac{k_H}{k_D}
 \]
 
-Nếu bond tới H bị thay đổi mạnh trong rate-sensitive transition state, KIE có thể đáng kể.
+Nếu bond tới H bị thay đổi mạnh trong rate-sensitive chuyển tiếp (transition / 전이) trạng thái (state / 상태), KIE có thể đáng kể.
 
-KIE giúp suy mechanism, nhưng không được đọc như “KIE lớn = tunneling chắc chắn”. Zero-point energy và equilibrium isotope effects cũng đóng góp.
+KIE giúp suy cơ chế (mechanism / 메커니즘), nhưng không được đọc như “KIE lớn = tunneling chắc chắn”. Zero-point năng lượng (energy / 에너지) và equilibrium isotope effects cũng đóng góp.
 
 # Diffusion-controlled limit
 
-Trong solution, hai reactants trước hết phải khuếch tán tới gần nhau. Nếu intrinsic chemical step cực nhanh, overall rate không thể vượt xa tốc độ tạo encounter pair.
+Trong solution, hai reactants trước hết phải khuếch tán tới gần nhau. Nếu intrinsic chemical step cực nhanh, overall tỷ lệ (rate / 비율) không thể vượt xa tốc độ tạo encounter pair.
 
 Khi đó reaction trở thành **giới hạn khuếch tán (diffusion-controlled)**.
 
-Tăng reactivity electronic thêm nữa có thể gần như không làm observed rate tăng vì transport đã trở thành bottleneck.
+Tăng reactivity electronic thêm nữa có thể gần như không làm observed tỷ lệ (rate / 비율) tăng vì vận chuyển (transport / 전송) đã trở thành bottleneck.
 
 Đây là ví dụ rõ ràng cho việc barrier hóa học không phải lúc nào cũng là yếu tố duy nhất quyết định tốc độ quan sát.
 
@@ -278,7 +280,7 @@ Q_{10}=\frac{k(T+10)}{k(T)}
 
 để mô tả sensitivity gần một vùng temperature.
 
-Nhưng enzyme có folding equilibria, conformational dynamics và denaturation. Vì vậy ở temperature cao, rate có thể giảm dù elementary chemistry đáng lẽ nhanh hơn.
+Nhưng enzyme có folding equilibria, conformational dynamics và denaturation. Vì vậy ở temperature cao, tỷ lệ (rate / 비율) có thể giảm dù elementary chemistry đáng lẽ nhanh hơn.
 
 Một đường activity–temperature của enzyme là kết quả của nhiều quá trình ghép, không phải Arrhenius đơn thuần.
 
@@ -286,16 +288,16 @@ Một đường activity–temperature của enzyme là kết quả của nhiề
 
 Tốc độ oxidation, hydrolysis và degradation thường giảm khi temperature thấp. Đây là nền của refrigeration và accelerated aging tests.
 
-Trong thử độ bền vật liệu, dữ liệu ở temperature cao đôi khi được extrapolate xuống room temperature bằng Arrhenius model. Phép extrapolation chỉ đáng tin nếu **cùng mechanism chi phối ở hai vùng**.
+Trong thử độ bền vật liệu, dữ liệu ở temperature cao đôi khi được extrapolate xuống room temperature bằng Arrhenius mô hình (model / 모델). Phép extrapolation chỉ đáng tin nếu **cùng cơ chế (mechanism / 메커니즘) chi phối ở hai vùng**.
 
-Nếu high-temperature test kích hoạt mechanism khác, tuổi thọ extrapolated có thể sai nghiêm trọng.
+Nếu high-temperature kiểm thử (test / 테스트) kích hoạt cơ chế (mechanism / 메커니즘) khác, tuổi thọ extrapolated có thể sai nghiêm trọng.
 
 # Battery — nhiệt độ giúp kinetics nhưng cũng tăng degradation
 
 Ở pin, tăng temperature có thể:
 
 - tăng ionic conductivity;
-- tăng charge-transfer rate;
+- tăng charge-transfer tỷ lệ (rate / 비율);
 - tăng diffusion trong electrode;
 - đồng thời tăng side reactions và SEI growth.
 
@@ -327,35 +329,38 @@ Vì:
 E_a=-R\times slope
 \]
 
-uncertainty của slope truyền trực tiếp sang \(E_a\). Temperature uncertainty cũng đáng chú ý vì variable hồi quy là \(1/T\).
+Bất định (uncertainty / 불확실성) của slope truyền trực tiếp sang \(E_a\). Temperature bất định (uncertainty / 불확실성) cũng đáng chú ý vì variable hồi quy là \(1/T\).
 
-Nếu T chỉ được đọc từ setpoint thay vì actual sample temperature, systematic bias có thể lớn trong exothermic systems.
+Nếu T chỉ được đọc từ setpoint thay vì actual mẫu (sample / 표본) temperature, systematic độ lệch (bias / 편향) có thể lớn trong exothermic các hệ thống (systems / 시스템들).
 
 # Những hiểu lầm thường gặp
 
 ### “Ea là năng lượng phản ứng hấp thụ rồi biến mất”
 
-Không. Nó là parameter của temperature dependence và liên quan barrier, không phải net energy cost.
+Không. Nó là parameter của temperature dependence và liên quan barrier, không phải net năng lượng (energy / 에너지) chi phí (cost / 비용).
 
 ### “Phản ứng có ΔG âm thì Ea cũng nhỏ”
 
-Không. Driving force và barrier là hai chiều khác nhau của energy landscape.
+Không. Driving force và barrier là hai chiều khác nhau của năng lượng (energy / 에너지) landscape.
 
 ### “A chỉ là collision frequency”
 
 Không. Nó chứa cả configurational và entropic factors.
 
-### “Arrhenius plot thẳng chứng minh mechanism”
+### “Arrhenius plot thẳng chứng minh cơ chế (mechanism / 메커니즘)”
 
-Không. Nhiều mechanisms có thể cho vùng gần tuyến tính; cần evidence khác.
+Không. Nhiều mechanisms có thể cho vùng gần tuyến tính; cần bằng chứng (evidence / 증거) khác.
 
-### “Tăng temperature 10 °C luôn làm rate gấp đôi”
+### “Tăng temperature 10 °C luôn làm tỷ lệ (rate / 비율) gấp đôi”
 
-Không. Ratio phụ thuộc \(E_a\), temperature và mechanism.
+Không. Ratio phụ thuộc \(E_a\), temperature và cơ chế (mechanism / 메커니즘).
 
 ### “Catalyst làm ΔG phản ứng âm hơn”
 
 Không. Catalyst đổi pathway/barrier, không đổi equilibrium thermodynamics.
+
+
+> **Chuyển mạch:** Từ **Ví dụ định tính**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -369,6 +374,8 @@ catalyst → mở đường đèo khác
 transport → quyết định hệ có tới cửa đèo đủ nhanh hay không
 ```
 
-Arrhenius nén toàn bộ bức tranh đó thành một relation thực nghiệm rất hữu ích. TST mở relation đó ra thành enthalpy, entropy và transition-state population.
+Arrhenius nén toàn bộ bức tranh đó thành một quan hệ (relation / 관계) thực nghiệm rất hữu ích. TST mở quan hệ (relation / 관계) đó ra thành enthalpy, entropy và transition-state population.
 
 Xem tiếp: [Xúc tác](./04_catalysis.md) và [Năng lượng tự do Gibbs](../05_thermodynamics/03_gibbs_free_energy.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reaction rates](./00_reaction_rates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

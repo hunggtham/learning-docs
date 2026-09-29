@@ -1,8 +1,11 @@
-# Data as the Foundation of AI
+# Dữ liệu (data / 데이터) as the Foundation of AI
 
-Một AI model chỉ học được từ information mà data pipeline quan sát và giữ lại. Vì vậy **data (데이터)** không phải nguyên liệu trung tính; nó là kết quả của measurement, selection, labeling, logging và policy.
+> **Mạch đọc:** Đặt **dữ liệu (data / 데이터) as the Foundation of AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Dataset không phải Reality** sang **dữ liệu (data / 데이터) Generating tiến trình (process / 프로세스)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model:
+
+Một AI mô hình (model / 모델) chỉ học được từ thông tin (information / 정보) mà dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) quan sát và giữ lại. Vì vậy **dữ liệu (data / 데이터)** không phải nguyên liệu trung tính; nó là kết quả của đo lường (measurement / 측정), selection, labeling, logging và chính sách (policy / 정책).
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Real world
@@ -15,38 +18,38 @@ Real world
 → new real-world behavior/data
 ```
 
-Loop cuối quan trọng: deployed AI có thể thay đổi data tương lai.
+Vòng lặp (loop / 루프) cuối quan trọng: deployed AI có thể thay đổi dữ liệu (data / 데이터) tương lai.
 
 ## Dataset không phải Reality
 
-Dataset chỉ là sample từ process tạo data. Nếu process đó biased, model học bias của process.
+Dataset chỉ là mẫu (sample / 표본) từ tiến trình (process / 프로세스) tạo dữ liệu (data / 데이터). Nếu tiến trình (process / 프로세스) đó biased, mô hình (model / 모델) học độ lệch (bias / 편향) của tiến trình (process / 프로세스).
 
 Ví dụ loan dataset chỉ có repayment outcomes cho applicants đã được approve. Ta không observe counterfactual của rejected applicants.
 
-## Data Generating Process
+## Dữ liệu (data / 데이터) Generating tiến trình (process / 프로세스)
 
 Một useful question:
 
-> Data này xuất hiện bằng cơ chế nào?
+> dữ liệu (data / 데이터) này xuất hiện bằng cơ chế nào?
 
 Need understand:
 
-- ai tạo event;
+- ai tạo sự kiện (event / 이벤트);
 - sensor/log nào capture;
 - trường hợp nào bị missing;
-- policy nào quyết định inclusion;
+- chính sách (policy / 정책) nào quyết định inclusion;
 - label được xác định khi nào;
-- deployment khác collection environment ra sao.
+- triển khai (deployment / 배포) khác collection môi trường (environment / 환경) ra sao.
 
-## Observational Data
+## Observational dữ liệu (data / 데이터)
 
-Most production ML data is observational, not randomized experiment. Correlation may reflect confounding or selection effects.
+Most môi trường vận hành (production / 운영 환경) ML dữ liệu (data / 데이터) is observational, not randomized experiment. Correlation may reflect confounding or selection effects.
 
-Prediction may still work if deployment distribution similar, nhưng causal interpretation cần caution.
+Prediction may still công việc (work / 작업) if triển khai (deployment / 배포) phân phối (distribution / 분포) similar, nhưng nhân quả (causal / 인과적) interpretation cần caution.
 
-## Data Schema
+## Dữ liệu (data / 데이터) lược đồ (schema / 스키마)
 
-Schema không chỉ data types; cần semantic contract:
+Lược đồ (schema / 스키마) không chỉ dữ liệu (data / 데이터) types; cần ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약):
 
 ```text
 field meaning
@@ -59,22 +62,22 @@ allowed range
 privacy class
 ```
 
-`amount=100` vô nghĩa nếu không biết currency/unit/time.
+`amount=100` vô nghĩa nếu không biết currency/đơn vị (unit / 단위)/thời gian (time / 시간).
 
-## Event Time vs Processing Time
+## Sự kiện (event / 이벤트) thời gian (time / 시간) vs Processing thời gian (time / 시간)
 
-Streaming/transaction systems distinguish:
+Streaming/giao dịch (transaction / 트랜잭션) các hệ thống (systems / 시스템들) distinguish:
 
 ```text
 event_time      → when real-world event happened
 processing_time → when pipeline received/processed it
 ```
 
-ML leakage often occurs when feature computed using information available only after prediction time.
+ML leakage often occurs when tính năng (feature / 기능) computed using thông tin (information / 정보) available only after prediction thời gian (time / 시간).
 
-## Point-in-Time Correctness
+## Point-in-Time tính đúng đắn (correctness / 정확성)
 
-Training example at time `t` chỉ được use information that would have existed at `t` in production.
+Huấn luyện (training / 학습) example at thời gian (time / 시간) `t` chỉ được use thông tin (information / 정보) that would have existed at `t` in môi trường vận hành (production / 운영 환경).
 
 ```text
 prediction time = 10:00
@@ -82,30 +85,30 @@ feature uses chargeback discovered at 14:00
 → leakage
 ```
 
-Feature store/history queries need as-of semantics.
+Tính năng (feature / 기능) store/lịch sử (history / 이력) queries need as-of ngữ nghĩa (semantics / 의미론).
 
-## Unit of Observation
+## Đơn vị (unit / 단위) of Observation
 
 Dataset row may represent:
 
-- user;
-- transaction;
+- người dùng (user / 사용자);
+- giao dịch (transaction / 트랜잭션);
 - session;
-- image;
+- ảnh (image / 이미지);
 - document;
-- time window.
+- thời gian (time / 시간) cửa sổ (window / 윈도우).
 
-Incorrect unit can create duplicate weighting or leakage. Example splitting multiple images from same patient across train/test.
+Incorrect đơn vị (unit / 단위) can create duplicate weighting or leakage. Example splitting multiple images from same patient across train/kiểm thử (test / 테스트).
 
 ## Sampling
 
-Training distribution may intentionally oversample rare positives. This helps learning but changes class prior.
+Huấn luyện (training / 학습) phân phối (distribution / 분포) may intentionally oversample rare positives. This helps học tập (learning / 학습) but changes lớp (class / 클래스) prior.
 
-If deployment prior differs, probability calibration/threshold selection must account for sampling.
+If triển khai (deployment / 배포) prior differs, xác suất (probability / 확률) calibration/threshold selection must account for sampling.
 
 ## Coverage
 
-Dataset should cover intended operational space:
+Dataset should cover intended operational không gian (space / 공간):
 
 ```text
 languages
@@ -116,23 +119,23 @@ customer segments
 rare edge cases
 ```
 
-No model can generalize reliably to regions absent from training without assumptions/transfer.
+No mô hình (model / 모델) can generalize reliably to regions absent from huấn luyện (training / 학습) without các giả định (assumptions / 가정들)/transfer.
 
 ## Long Tail
 
-Real-world categories often follow heavy-tailed frequency. Common cases dominate data; rare but important failures have little supervision.
+Real-world categories often follow heavy-tailed frequency. dùng chung (common / 공통) cases dominate dữ liệu (data / 데이터); rare but important failures have little supervision.
 
-Long-tail strategy may require targeted collection, reweighting, synthetic data or separate rules.
+Long-tail chiến lược (strategy / 전략) may require targeted collection, reweighting, synthetic dữ liệu (data / 데이터) or separate rules.
 
-## Duplicate Data
+## Duplicate dữ liệu (data / 데이터)
 
-Duplicates inflate effective sample count and can leak across splits.
+Duplicates inflate effective mẫu (sample / 표본) count and can leak across splits.
 
-Near-duplicate detection is harder than exact hashes: resized/cropped images, copied documents, paraphrases.
+Near-duplicate detection is harder than chính xác (exact / 정확한) hashes: resized/cropped images, copied documents, paraphrases.
 
-## Data Versioning
+## Dữ liệu (data / 데이터) Versioning
 
-Dataset is an artifact. Need know:
+Dataset is an sản phẩm tạo ra (artifact / 산출물). Need know:
 
 ```text
 source snapshots
@@ -145,9 +148,9 @@ hash / manifest
 
 Without versioning, experiment cannot reproduce.
 
-## Data Lineage
+## Dữ liệu (data / 데이터) Lineage
 
-Lineage tracks where each feature/dataset comes from:
+Lineage tracks where each tính năng (feature / 기능)/dataset comes from:
 
 ```text
 source DB table
@@ -157,100 +160,102 @@ source DB table
 → model version
 ```
 
-Critical for debugging, compliance and impact analysis.
+Trọng yếu (critical / 중요) for debugging, compliance and impact phân tích (analysis / 분석).
 
-## Feedback Loops
+## Phản hồi (feedback / 피드백) Loops
 
-Recommendation model shows items → users interact with shown items → logs become next training data. Model influences what evidence it later sees.
+Recommendation mô hình (model / 모델) shows items → users interact with shown items → logs become next dữ liệu huấn luyện (training data / 학습 데이터). mô hình (model / 모델) influences what bằng chứng (evidence / 증거) it later sees.
 
-This can amplify popularity bias or hide alternatives.
+This can amplify popularity độ lệch (bias / 편향) or hide alternatives.
 
 ## Selective Labels
 
-We observe outcome only after specific decision. Examples:
+We observe kết quả (outcome / 결과) only after specific quyết định (decision / 결정). Examples:
 
 - loan default only for approved loans;
-- medical result only for tested patients;
+- medical kết quả (result / 결과) only for tested patients;
 - fraud confirmed only for investigated transactions.
 
-This violates simple i.i.d. assumptions and may require exploration/causal methods.
+This violates simple i.i.d. các giả định (assumptions / 가정들) and may require exploration/nhân quả (causal / 인과적) methods.
 
-## Missing Data
+## Missing dữ liệu (data / 데이터)
 
 Missingness mechanisms matter:
 
 - MCAR: missing unrelated to variables;
-- MAR: missing depends observed data;
-- MNAR: missing depends unobserved value/process.
+- MAR: missing depends observed dữ liệu (data / 데이터);
+- MNAR: missing depends unobserved giá trị (value / 값)/tiến trình (process / 프로세스).
 
-Imputation cannot magically recover arbitrary MNAR information.
+Imputation cannot magically recover arbitrary MNAR thông tin (information / 정보).
 
-## Structured vs Unstructured Data
+## Structured vs Unstructured dữ liệu (data / 데이터)
 
-Structured data has explicit schema; unstructured text/image/audio still has metadata, provenance and latent structure. “Unstructured” does not mean schema-free pipeline.
+Structured dữ liệu (data / 데이터) has tường minh (explicit / 명시적) lược đồ (schema / 스키마); unstructured văn bản (text / 텍스트)/ảnh (image / 이미지)/audio still has siêu dữ liệu (metadata / 메타데이터), provenance and latent cấu trúc (structure / 구조). “Unstructured” does not mean schema-free chuỗi xử lý (pipeline / 파이프라인).
 
-## Data for Foundation Models
+## Dữ liệu (data / 데이터) for Foundation các mô hình (models / 모델들)
 
-At web scale, curation includes:
+At web quy mô (scale / 규모), curation includes:
 
 - deduplication;
-- language identification;
-- quality filtering;
-- safety filtering;
+- ngôn ngữ (language / 언어) identification;
+- chất lượng (quality / 품질) filtering;
+- an toàn (safety / 안전) filtering;
 - license/provenance;
 - contamination removal;
 - mixture weighting.
 
-Data mixture is effectively part of training objective: more tokens from domain → more optimization attention to that domain.
+Dữ liệu (data / 데이터) mixture is effectively part of huấn luyện (training / 학습) mục tiêu (objective / 목표): more tokens from lĩnh vực (domain / 도메인) → more tối ưu hóa (optimization / 최적화) attention to that lĩnh vực (domain / 도메인).
 
 ## Benchmark Contamination
 
-If evaluation examples appear in training/pretraining, benchmark no longer estimates generalization cleanly.
+If evaluation examples appear in huấn luyện (training / 학습)/pretraining, benchmark no longer estimates generalization cleanly.
 
-Exact match insufficient because paraphrases/derived sources may contaminate.
+Chính xác (exact / 정확한) match insufficient because paraphrases/derived sources may contaminate.
 
-## Data Quantity vs Quality
+## Dữ liệu (data / 데이터) Quantity vs chất lượng (quality / 품질)
 
-More data often helps, but low-quality duplicated/noisy data can waste compute or teach harmful patterns.
+More dữ liệu (data / 데이터) often helps, but low-quality duplicated/noisy dữ liệu (data / 데이터) can waste compute or teach harmful patterns.
 
-Effective data value depends diversity, relevance, correctness and coverage, not row count alone.
+Effective dữ liệu (data / 데이터) giá trị (value / 값) depends diversity, relevance, tính đúng đắn (correctness / 정확성) and coverage, not row count alone.
 
-## Active Learning
+## Active học tập (learning / 학습)
 
-Instead label random examples, model identifies uncertain/informative examples for annotation. This can improve label efficiency but uncertainty heuristic may miss systematic blind spots.
+Instead label random examples, mô hình (model / 모델) identifies uncertain/informative examples for annotation. This can improve label efficiency but bất định (uncertainty / 불확실성) heuristic may miss systematic blind spots.
 
 ## Data-Centric AI
 
-When pipeline/model baseline stable, improving labels, coverage and definitions often gives more gain than architecture tweaks.
+When chuỗi xử lý (pipeline / 파이프라인)/mô hình (model / 모델) baseline stable, improving labels, coverage and definitions often gives more gain than kiến trúc (architecture / 아키텍처) tweaks.
 
-Data-centric approach does not mean model unimportant; it means treat data quality as an engineering object.
+Data-centric approach does not mean mô hình (model / 모델) unimportant; it means treat dữ liệu (data / 데이터) chất lượng (quality / 품질) as an kỹ thuật (engineering / 엔지니어링) đối tượng (object / 객체).
 
 ## Privacy
 
-Training data may contain personal/sensitive information. Collection needs purpose limitation, minimization, retention and access controls.
+Dữ liệu huấn luyện (training data / 학습 데이터) may contain personal/sensitive thông tin (information / 정보). Collection needs purpose limitation, minimization, retention and truy cập (access / 접근) controls.
 
-Anonymization is difficult for high-dimensional data; text/images can re-identify indirectly.
+Anonymization is difficult for high-dimensional dữ liệu (data / 데이터); văn bản (text / 텍스트)/images can re-identify indirectly.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Dataset là một instrumented view của reality, produced by a process. Muốn hiểu model, phải hiểu process tạo dataset.**
+> **Dataset là một instrumented view của reality, produced by a tiến trình (process / 프로세스). Muốn hiểu mô hình (model / 모델), phải hiểu tiến trình (process / 프로세스) tạo dataset.**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Data speaks for itself”
+### “dữ liệu (data / 데이터) speaks for itself”
 
-Data meaning depends measurement, schema and selection.
+Dữ liệu (data / 데이터) meaning depends đo lường (measurement / 측정), lược đồ (schema / 스키마) and selection.
 
-### “More rows always improve model”
+### “More rows always improve mô hình (model / 모델)”
 
-Duplicates/noise/coverage imbalance reduce marginal value.
+Duplicates/noise/coverage imbalance reduce marginal giá trị (value / 값).
 
-### “Random train/test split luôn đúng”
+### “Random train/kiểm thử (test / 테스트) split luôn đúng”
 
-Time/group/entity dependencies often require different splitting.
+Thời gian (time / 시간)/group/thực thể (entity / 엔터티) dependencies often require different splitting.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Data layer connects Statistics, Databases, Distributed Systems, Privacy và ML evaluation.
+Dữ liệu (data / 데이터) tầng (layer / 계층) connects Statistics, Databases, phân tán (distributed / 분산) các hệ thống (systems / 시스템들), Privacy và ML evaluation.
 
 Xem tiếp: [Data Collection](./01_data_collection.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 data collection](./01_data_collection.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

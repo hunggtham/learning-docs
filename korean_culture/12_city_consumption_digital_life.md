@@ -1,12 +1,15 @@
 # Đô thị, tiêu dùng và đời sống số
 
+> **Mạch đọc:** Đặt **Đô thị, tiêu dùng và đời sống số** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thành phố không chỉ là nơi ở đông người** sang **수도권 집중: Seoul là trung tâm nhưng không phải toàn bộ Hàn Quốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Thành phố không chỉ là nơi ở đông người
 
 Đô thị Hàn Quốc, đặc biệt vùng thủ đô **수도권 (Capital Region)**, là nơi hạ tầng, nền tảng số và thói quen xã hội ghép lại thành một hệ thống có độ trễ thấp. Người dùng có thể đi tàu điện, gọi đồ ăn, thanh toán, nhận bưu kiện, đặt bàn và nhắn tin chỉ bằng một điện thoại thông minh.
 
 Nếu chỉ gọi đây là “văn hoá tiện lợi”, ta sẽ bỏ qua cơ chế: mật độ dân cư tạo đủ nhu cầu cho dịch vụ; căn hộ giúp địa chỉ và giao hàng dễ chuẩn hoá; mạng băng rộng tạo lớp dữ liệu; thanh toán số giảm ma sát; cạnh tranh khiến doanh nghiệp tiếp tục rút ngắn thời gian phản hồi.
 
-Một **mô hình tư duy (mental model)** hữu ích là:
+Một **mô hình tư duy (mental model / 사고 모델)** hữu ích là:
 
 ```text
 mật độ đô thị
@@ -70,7 +73,7 @@ cửa nhà
 
 Nếu chỉ một mắt xích không tiếp cận được, “mạng giao thông tốt” trên bản đồ vẫn có thể không sử dụng được đối với cá nhân đó.
 
-Đây là lý do khả năng tiếp cận (accessibility) phải được đánh giá theo **hành trình**, không chỉ theo việc một cơ sở có gắn biểu tượng xe lăn hay không.
+Đây là lý do khả năng tiếp cận (accessibility / 접근성) phải được đánh giá theo **hành trình**, không chỉ theo việc một cơ sở có gắn biểu tượng xe lăn hay không.
 
 ## 엘리베이터, 저상버스 và đường vòng vô hình
 
@@ -232,7 +235,7 @@ Khi toàn bộ hành trình khách hàng được số hoá, doanh nghiệp đ�
 → tín hiệu càng mạnh
 ```
 
-Đây là vòng phản hồi (feedback loop). Độ phổ biến vừa là nguyên nhân vừa là kết quả của khả năng được nhìn thấy.
+Đây là vòng phản hồi (feedback loop / 피드백 루프). Độ phổ biến vừa là nguyên nhân vừa là kết quả của khả năng được nhìn thấy.
 
 ## 카드, 간편결제: thanh toán ít ma sát
 
@@ -286,7 +289,7 @@ hiệu suất bình thường
 ≠ khả năng phục hồi
 ```
 
-**Độ tin cậy (reliability)** hỏi hệ thống có hoạt động ổn định không. **Khả năng phục hồi (resilience)** hỏi khi đã hỏng, hệ thống có hấp thụ cú sốc và khôi phục được không.
+**độ tin cậy (reliability / 신뢰성)** hỏi hệ thống có hoạt động ổn định không. **Khả năng phục hồi (resilience)** hỏi khi đã hỏng, hệ thống có hấp thụ cú sốc và khôi phục được không.
 
 ## 단일 장애점: điểm lỗi duy nhất trong đời sống đô thị
 
@@ -427,7 +430,7 @@ nhà
 
 Một mắt xích thất bại có thể làm toàn bộ hành trình thất bại. Đây là lý do thiết kế phổ quát (universal design) và khả năng tiếp cận không nên được xử lý như một mục phụ ở cuối dự án.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Đời sống đô thị Hàn Quốc là một **hệ thống xã hội–kỹ thuật có độ trễ thấp (low-latency socio-technical system)**. Mật độ giúp đầu tư hạ tầng có hiệu quả; hạ tầng giúp nền tảng mở rộng; nền tảng làm dịch vụ nhanh; dịch vụ nhanh nâng kỳ vọng. Nhưng một đô thị mạnh không chỉ nhanh trong trạng thái bình thường. Nó còn phải có dự phòng, đường thay thế, khả năng suy giảm có kiểm soát và kênh thông tin để người có tuổi, khả năng cơ thể, ngôn ngữ và kỹ năng số khác nhau vẫn hoàn thành hành trình khi một phần hệ thống gặp lỗi.
 

@@ -1,6 +1,8 @@
 # Mạng & Hệ thống phân tán nâng cao
 
-Roadmap:
+Phần nâng cao không mở chapter chỉ để bao phủ tên công nghệ. Chapter mới chỉ được thêm khi topic có bất biến (invariant / 불변식), máy trạng thái (state machine / 상태 머신) và thất bại (failure / 실패) mô hình (model / 모델) độc lập đủ để trở thành phụ thuộc (dependency / 의존성) cho nhiều phần khác.
+
+## Chuẩn gốc (canonical / 정본) chapters
 
 1. [Giao dịch phân tán, exactly-once và failure semantics](./00_distributed_transactions_exactly_once_and_failure_semantics.md)
 2. [Failure detector, membership và gossip protocol](./01_failure_detectors_membership_and_gossip.md)
@@ -9,11 +11,34 @@ Roadmap:
 5. [CRDT, causal consistency và conflict resolution](./04_crdts_causal_consistency_and_conflict_resolution.md)
 6. [Multi-region replication và các đánh đổi geo-distributed](./05_multi_region_replication_and_geo_distributed_tradeoffs.md)
 7. [Thời gian, đồng hồ, thứ tự và quan hệ nhân quả](./06_time_clocks_ordering_and_causality.md)
-8. Message broker, consumer group và stream partitioning
-9. Backpressure, load shedding và overload collapse
-10. Service discovery, proxy, service mesh và connection management
-11. Network tail latency, retransmission và congestion interaction
-12. QUIC internals, multiplexing và connection migration
-13. Distributed observability, tracing context và clock uncertainty
+8. [BGP, routing policy, convergence và route security](./07_bgp_routing_policy_convergence_and_route_security.md)
+9. [Kernel packet path, qdisc, NIC offload và observability](./08_kernel_packet_path_qdisc_nic_offload_and_observability.md)
 
-Bảy chapter hiện có đi từ failure ambiguity và authority sang consensus, convergence, geo-replication rồi quay lại nền tảng thời gian/ordering cần để hiểu đúng causality, lease, timestamp và timeout. Phần tiếp theo nên nối messaging, overload và network behavior ở production scale thay vì tạo thêm một root domain mới.
+## Mô hình tư duy (mental models / 사고 모델들) cần đạt
+
+Khi đọc hết nhánh học (track / 트랙) này, người đọc cần phân biệt crash với partition, liveness với an toàn (safety / 안전), suspicion với authority, replication với durability, wall-clock thứ tự (order / 순서) với nhân quả (causal / 인과적) thứ tự (order / 순서), thử lại (retry / 재시도) với exactly-once illusion, control-plane reachability với data-plane forwarding và ứng dụng (application / 애플리케이션) socket progress với packet thực sự đã đi qua wire.
+
+Mỗi giao thức (protocol / 프로토콜)/đường dẫn (path / 경로) phải được đọc theo cùng một khung:
+
+```text
+vấn đề ban đầu
+→ invariant cần giữ
+→ mechanism giữ invariant
+→ failure/partition/pressure làm assumption nào mất hiệu lực
+→ queue hoặc state transition nào đổi behavior
+→ evidence nào chứng minh state hiện tại
+```
+
+## Mạng (network / 네트워크) đường dẫn (path / 경로) vẫn thuộc Khoa học máy tính (computer science / 컴퓨터 과학)
+
+DNS, TCP/QUIC, TLS, proxy/bộ cân bằng tải (load balancer / 로드 밸런서), liên kết (connection / 연결) pooling và mạng (network / 네트워크) tail độ trễ (latency / 지연 시간) vẫn thuộc conceptual ranh giới (boundary / 경계) của `computer_science/`. Foundation nằm tại [`basic/06_networks_distributed_systems`](../../basic/06_networks_distributed_systems/), còn lập luận (reasoning / 추론) môi trường vận hành (production / 운영 환경) end-to-end được nối tại [request path: DNS → TCP/TLS → proxy → runtime → DB](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
+
+BGP có chapter riêng vì nó có control-plane máy trạng thái (state machine / 상태 머신), inter-domain chính sách (policy / 정책), convergence, tuyến (route / 경로) leak/hijack và RIB→FIB ranh giới (boundary / 경계) độc lập. Kernel packet đường dẫn (path / 경로) có chapter riêng vì socket buffers, vận chuyển (transport / 전송) backpressure, qdisc, driver/NIC rings, interrupt/polling, RSS/ECMP skew và offload tạo một hàng đợi (queue / 큐)/bằng chứng (evidence / 증거) mô hình (model / 모델) khác với routing điều khiển (control / 제어) plane.
+
+Chapter packet đường dẫn (path / 경로) cố ý không duplicate kernel tracing internals. Khi cần instrumentation ngữ nghĩa (semantics / 의미론), đọc [eBPF/tracing](../../03_operating_systems/advanced/08_ebpf_tracing_kernel_observability_and_safety.md); khi cần scheduler/NUMA/DMA mechanics, quay về OS/Kiến trúc (architecture / 아키텍처) đơn vị sở hữu (owner / 오너) chapters.
+
+## Bằng chứng vận hành (production evidence / 운영 증거)
+
+Mạng (network / 네트워크)/phân tán (distributed / 분산) debugging cần phối hợp packet/liên kết (connection / 연결) bằng chứng (evidence / 증거) với phân tán (distributed / 분산) trạng thái (state / 상태): DNS resolution, liên kết (connection / 연결) establishment, retransmission/congestion signals, socket wait, qdisc backlog/sojourn, per-NIC-queue drop/utilization, softirq CPU, offload/capture ranh giới (boundary / 경계), proxy/LB hàng đợi (queue / 큐), yêu cầu (request / 요청) attempts, BGP advertisement/withdrawal, RIB/FIB trạng thái (state / 상태), leader term/epoch, quorum membership, replica positions, clock bất định (uncertainty / 불확실성) và dấu vết (trace / 추적) causality.
+
+Một hết thời gian chờ (timeout / 타임아웃) không tự chứng minh nút (node / 노드) đã chết; một BGP session `Established` không chứng minh ứng dụng (application / 애플리케이션) reachability; một syscall `send` thành công không chứng minh peer đã nhận bytes; một nút (node / 노드) `alive` không chứng minh nó còn authority; một replicated entry không tự chứng minh client-visible lần ghi nhận (commit / 커밋). Đây là các distinction cốt lõi của nhánh học (track / 트랙).

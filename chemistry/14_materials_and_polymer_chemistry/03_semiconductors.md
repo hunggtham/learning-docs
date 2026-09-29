@@ -1,5 +1,8 @@
 # Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp
 
+> **Mạch đọc:** Đọc **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ orbital phân tử tới vùng năng lượng** sang **Kim loại, chất bán dẫn và chất cách điện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Chất bán dẫn (semiconductor / 반도체)** là vật liệu mà mật độ và chuyển động của hạt tải điện có thể được điều chỉnh rất mạnh bằng nhiệt độ, ánh sáng, điện trường, thành phần hóa học, khuyết tật và pha tạp có kiểm soát. Điểm quan trọng không phải là “độ dẫn nằm giữa kim loại và chất cách điện”, mà là khả năng **thiết kế quần thể electron và lỗ trống bằng hóa học vật liệu**.
 
 Chương này nối trực tiếp các ý tưởng từ [orbital phân tử](../02_chemical_bonding/06_molecular_orbital_theory.md), [chất rắn](../03_matter_and_phases/02_solids.md), [xu hướng tuần hoàn](../01_atomic_structure/04_periodic_table_and_periodic_trends.md) và [hóa học bề mặt – mặt phân cách](./05_surface_and_interface_chemistry.md).
@@ -140,7 +143,7 @@ phía p → acceptor âm cố định
 
 Các điện tích cố định tạo **vùng nghèo hạt tải (depletion region)** và một điện trường nội tại chống lại khuếch tán tiếp tục.
 
-Cân bằng được thiết lập khi xu hướng khuếch tán do gradient nồng độ được cân bằng bởi chuyển động trôi do điện trường. Đây là cân bằng điện hóa chứ không phải một “bức tường” vật lý.
+Cân bằng được thiết lập khi xu hướng khuếch tán do độ dốc (gradient / 기울기) nồng độ được cân bằng bởi chuyển động trôi do điện trường. Đây là cân bằng điện hóa chứ không phải một “bức tường” vật lý.
 
 ### Phân cực thuận
 
@@ -284,7 +287,7 @@ Tốc độ và chất lượng màng phụ thuộc đồng thời vào:
 - nhiệt độ;
 - phản ứng phụ trong pha khí.
 
-Ở nhiệt độ thấp hoặc dòng tiền chất lớn, giới hạn có thể khác hẳn so với vùng nhiệt độ cao. Vì thế tối ưu CVD là bài toán ghép giữa kinetics và transport, không chỉ là chọn một phản ứng hóa học.
+Ở nhiệt độ thấp hoặc dòng tiền chất lớn, giới hạn có thể khác hẳn so với vùng nhiệt độ cao. Vì thế tối ưu CVD là bài toán ghép giữa kinetics và vận chuyển (transport / 전송), không chỉ là chọn một phản ứng hóa học.
 
 ### Lắng đọng lớp nguyên tử
 
@@ -324,7 +327,7 @@ Chất cản quang dương thường trở nên dễ hòa tan hơn ở vùng đ�
 
 Các hệ khuếch đại hóa học tạo **acid quang sinh (photoacid)**; một sự kiện hấp thụ photon có thể khởi phát nhiều phản ứng giải bảo vệ sau đó. Độ nhạy tăng nhưng đổi lại phải kiểm soát khuếch tán acid và độ nhám biên mẫu.
 
-Đây là một trade-off điển hình giữa **độ nhạy và độ phân giải không gian**.
+Đây là một sự đánh đổi (trade-off / 트레이드오프) điển hình giữa **độ nhạy và độ phân giải không gian**.
 
 ## Điện môi hằng số cao và cổng kim loại
 
@@ -374,7 +377,7 @@ Vì vậy chế tạo bán dẫn là hệ tích hợp của hóa bề mặt, hó
 
 Điện áp hở mạch chủ yếu phản ánh chênh lệch thế hóa điện có thể duy trì. Hiệu suất thực còn phụ thuộc liệu photon có được hấp thụ hay không, hạt tải có tái hợp trước khi tới điện cực không, điện trở nội có lớn không và tiếp xúc có chọn lọc hạt tải tốt không.
 
-Do đó một chỉ số điện áp không đủ để đánh giá toàn thiết bị. Đây cũng là logic tương tự trong pin điện hóa: thermodynamics đặt giới hạn, còn kinetics và transport quyết định hiệu suất vận hành.
+Do đó một chỉ số điện áp không đủ để đánh giá toàn thiết bị. Đây cũng là lô-gic (logic / 논리) tương tự trong pin điện hóa: thermodynamics đặt giới hạn, còn kinetics và vận chuyển (transport / 전송) quyết định hiệu suất vận hành.
 
 ## Những hiểu lầm thường gặp
 
@@ -415,6 +418,8 @@ thành phần + cấu trúc tinh thể
 → hành vi thiết bị
 ```
 
-Lý thuyết vùng cho biết trạng thái nào được phép tồn tại; pha tạp và khuyết tật quyết định có bao nhiêu hạt tải; mặt phân cách và quy trình chế tạo quyết định chúng di chuyển, bị bẫy và tái hợp ra sao. Kiến trúc thiết bị sau đó chuyển sự điều khiển vi mô này thành logic, ánh sáng hoặc chuyển đổi năng lượng.
+Lý thuyết vùng cho biết trạng thái nào được phép tồn tại; pha tạp và khuyết tật quyết định có bao nhiêu hạt tải; mặt phân cách và quy trình chế tạo quyết định chúng di chuyển, bị bẫy và tái hợp ra sao. Kiến trúc thiết bị sau đó chuyển sự điều khiển vi mô này thành lô-gic (logic / 논리), ánh sáng hoặc chuyển đổi năng lượng.
 
 Xem tiếp: [Vật liệu nano](./04_nanomaterials.md) và [Hóa học bề mặt – mặt phân cách](./05_surface_and_interface_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 materials from chemical bonding](./00_materials_from_chemical_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

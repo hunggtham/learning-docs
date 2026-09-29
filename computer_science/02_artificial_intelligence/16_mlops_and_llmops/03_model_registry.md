@@ -1,10 +1,13 @@
-# Sổ đăng ký Mô hình và Thăng cấp Artifact
+# Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)
 
-**Sổ đăng ký mô hình (Model Registry / 모델 레지스트리)** là nơi quản lý artifact mô hình cùng metadata và trạng thái vòng đời. Registry không chỉ là nơi lưu trữ. Nó trả lời mô hình nào là ứng viên, mô hình nào đã được kiểm định, mô hình nào đang chạy production và vì sao một artifact được thăng cấp.
+> **Mạch đọc:** Đặt **Sổ đăng ký Mô hình và Thăng cấp sản phẩm tạo ra (artifact / 산출물)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **sản phẩm tạo ra (artifact / 산출물) và Bản ghi Registry** sang **Trạng thái vòng đời**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Artifact và Bản ghi Registry
 
-Artifact có thể gồm các file:
+**Sổ đăng ký mô hình (Model Registry / 모델 레지스트리)** là nơi quản lý sản phẩm tạo ra (artifact / 산출물) mô hình cùng siêu dữ liệu (metadata / 메타데이터) và trạng thái vòng đời. Registry không chỉ là nơi lưu trữ. Nó trả lời mô hình nào là ứng viên, mô hình nào đã được kiểm định, mô hình nào đang chạy môi trường vận hành (production / 운영 환경) và vì sao một sản phẩm tạo ra (artifact / 산출물) được thăng cấp.
+
+## Sản phẩm tạo ra (artifact / 산출물) và Bản ghi Registry
+
+Sản phẩm tạo ra (artifact / 산출물) có thể gồm các tệp (file / 파일):
 
 ```text
 trọng số
@@ -14,7 +17,7 @@ preprocessor
 ánh xạ nhãn
 ```
 
-Bản ghi registry bổ sung metadata:
+Bản ghi registry bổ sung siêu dữ liệu (metadata / 메타데이터):
 
 ```text
 mô hình / phiên bản
@@ -53,26 +56,26 @@ Việc thăng cấp (promotion) không nên chỉ dựa vào một chỉ số �
 - độ trễ và chi phí;
 - độ bền vững trước nhiễu (robustness);
 - kiểm thử an toàn;
-- khả năng tương thích schema;
+- khả năng tương thích lược đồ (schema / 스키마);
 - phê duyệt pháp lý hoặc quản trị.
 
 ## Champion–Challenger
 
-Mô hình production hiện tại là **champion**; ứng viên mới là **challenger**. Nên so sánh trên bộ đánh giá cố định và dữ liệu shadow/canary trước khi thay thế.
+Mô hình môi trường vận hành (production / 운영 환경) hiện tại là **champion**; ứng viên mới là **challenger**. Nên so sánh trên bộ đánh giá cố định và dữ liệu shadow/canary trước khi thay thế.
 
 Mẫu này tránh tình trạng “checkpoint mới nhất tự động thắng”.
 
 ## Tách Registry khỏi Triển khai
 
-Trạng thái registry kiểu `production-approved` không nhất thiết nghĩa artifact đã được triển khai ở mọi vùng. Nền tảng triển khai đọc artifact đã được phê duyệt rồi rollout theo từng môi trường.
+Trạng thái registry kiểu `production-approved` không nhất thiết nghĩa sản phẩm tạo ra (artifact / 산출물) đã được triển khai ở mọi vùng. Nền tảng triển khai đọc sản phẩm tạo ra (artifact / 산출물) đã được phê duyệt rồi rollout theo từng môi trường.
 
-Tách phê duyệt khỏi thực thi giúp rollback và audit rõ hơn.
+Tách phê duyệt khỏi thực thi giúp quay lui (rollback / 롤백) và kiểm tra (audit / 감사) rõ hơn.
 
-## Artifact phải bất biến
+## Sản phẩm tạo ra (artifact / 산출물) phải bất biến
 
 Một phiên bản đã được đăng ký nên bất biến. Nếu cần sửa, tạo phiên bản mới.
 
-Artifact có thể thay đổi làm lineage mất ý nghĩa.
+Sản phẩm tạo ra (artifact / 산출물) có thể thay đổi làm lineage mất ý nghĩa.
 
 ## Khả năng tương thích
 
@@ -86,11 +89,11 @@ phiên bản tokenizer / preprocessor
 dependency runtime
 ```
 
-Cổng triển khai có thể phát hiện môi trường phục vụ không tương thích trước khi lỗi runtime xảy ra.
+Cổng triển khai có thể phát hiện môi trường phục vụ không tương thích trước khi lỗi thời gian chạy (runtime / 런타임) xảy ra.
 
 ## Registry cho ứng dụng LLM
 
-Với LLM được cung cấp qua dịch vụ (hosted LLM), artifact không nhất thiết là trọng số. Có thể cần registry cho toàn bộ **gói hành vi của ứng dụng (application bundle)**:
+Với LLM được cung cấp qua dịch vụ (hosted LLM), sản phẩm tạo ra (artifact / 산출물) không nhất thiết là trọng số. Có thể cần registry cho toàn bộ **gói hành vi của ứng dụng (application bundle)**:
 
 ```text
 model ID / version
@@ -106,19 +109,19 @@ chính sách an toàn
 
 Phiên bản hành vi phải bao phủ toàn bộ bundle này.
 
-## Rollback
+## Quay lui (rollback / 롤백)
 
-Registry cần biết bản phát hành tốt gần nhất (previous known-good release). Rollback phải khôi phục cả cấu hình và dependency dữ liệu tương thích, không chỉ trọng số mô hình.
+Registry cần biết bản phát hành tốt gần nhất (previous known-good release). quay lui (rollback / 롤백) phải khôi phục cả cấu hình và phụ thuộc (dependency / 의존성) dữ liệu tương thích, không chỉ trọng số mô hình.
 
 ## Dấu vết kiểm toán
 
 Ai đã thăng cấp? Khi nào? Dựa trên bằng chứng gì? Có ngoại lệ nào được phê duyệt?
 
-Dấu vết kiểm toán (audit trail) hữu ích cho debugging và governance.
+Dấu vết kiểm toán (audit trail) hữu ích cho debugging và quản trị (governance / 거버넌스).
 
-## Registry không nhất thiết chứa trực tiếp Binary lớn
+## Registry không nhất thiết chứa trực tiếp nhị phân (binary / 이진) lớn
 
-Binary lớn thường nằm trong object storage; registry giữ reference và metadata. Về mặt khái niệm:
+Nhị phân (binary / 이진) lớn thường nằm trong đối tượng (object / 객체) lưu trữ (storage / 저장소); registry giữ tham chiếu (reference / 참조) và siêu dữ liệu (metadata / 메타데이터). Về mặt khái niệm:
 
 ```text
 Metadata registry → URI / hash của artifact bất biến
@@ -136,11 +139,11 @@ Triển khai sử dụng artifact đã được phê duyệt
 
 ## Những nhầm lẫn thường gặp
 
-### “Registry chỉ là thư mục model/”
+### “Registry chỉ là thư mục mô hình (model / 모델)/”
 
 Không. Thư mục không thể hiện tốt vòng đời, lineage và phê duyệt.
 
-### “Production tag có thể đổi tùy ý mà không cần lịch sử”
+### “môi trường vận hành (production / 운영 환경) tag có thể đổi tùy ý mà không cần lịch sử”
 
 Alias có thể thay đổi được, nhưng phiên bản bất biến phía dưới và lịch sử phải được giữ lại.
 

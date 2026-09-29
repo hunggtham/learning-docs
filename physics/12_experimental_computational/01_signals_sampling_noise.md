@@ -1,5 +1,8 @@
 # Tín hiệu, nhiễu, lấy mẫu, Nyquist và ADC
 
+> **Mạch đọc:** Đọc **Tín hiệu, nhiễu, lấy mẫu, Nyquist và ADC** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tỉ số tín hiệu trên nhiễu** sang **Lấy mẫu và định lý Nyquist**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Tỉ số tín hiệu trên nhiễu
 
 Một hệ đo không chỉ nhận tín hiệu mong muốn mà còn nhận các dao động không mong muốn. Tỉ số tín hiệu trên nhiễu (signal-to-noise ratio, SNR / 신호 대 잡음비) so sánh mức của phần tín hiệu hữu ích với mức nhiễu.
@@ -76,7 +79,7 @@ Nếu so sánh biên độ trong cùng trở kháng, công suất tỉ lệ vớ
 
 ## Cửa sổ quan sát và rò rỉ phổ
 
-Trong thực nghiệm, ta chỉ quan sát tín hiệu trong một khoảng thời gian hữu hạn. Việc cắt tín hiệu tương đương với nhân nó với một hàm cửa sổ (window function). Trong miền tần số, phép nhân này trở thành phép chập và có thể làm năng lượng của một tần số lan sang các ô phổ lân cận, gọi là rò rỉ phổ (spectral leakage).
+Trong thực nghiệm, ta chỉ quan sát tín hiệu trong một khoảng thời gian hữu hạn. Việc cắt tín hiệu tương đương với nhân nó với một hàm cửa sổ (window function / 윈도우 함수). Trong miền tần số, phép nhân này trở thành phép chập và có thể làm năng lượng của một tần số lan sang các ô phổ lân cận, gọi là rò rỉ phổ (spectral leakage).
 
 Các ô của FFT không phải “những tần số duy nhất tồn tại trong tự nhiên”. Chúng là cách biểu diễn phụ thuộc độ dài bản ghi, tần số lấy mẫu và loại cửa sổ được chọn.
 
@@ -84,7 +87,7 @@ Các ô của FFT không phải “những tần số duy nhất tồn tại tro
 
 Âm thanh số, cảm biến ảnh, vô tuyến định nghĩa bằng phần mềm (software-defined radio) và lớp vật lý của mạng đều bắt đầu từ các ràng buộc lấy mẫu, băng thông, SNR và đồng bộ thời gian. Một lỗi ở tầng ứng dụng có thể hoàn toàn là vấn đề phần mềm; nhưng nếu bit bị sai do nhiễu, phản xạ đường truyền, jitter hoặc thiếu băng thông thì ranh giới giữa phần mềm và phần cứng trở nên rất cụ thể.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Dữ liệu số không xuất hiện trực tiếp trong tự nhiên. Cảm biến biến đại lượng vật lý thành tín hiệu tương tự; mạch lọc giới hạn băng thông; bộ lấy mẫu chọn các thời điểm; ADC lượng tử hóa biên độ; phần mềm mới nhận các số nguyên. Mỗi bước vừa bảo tồn một phần thông tin vừa có khả năng làm mất hoặc làm méo thông tin.
 
@@ -98,8 +101,10 @@ Dữ liệu số không xuất hiện trực tiếp trong tự nhiên. Cảm bi�
 
 Sai. Nhiễu có thể xuất hiện trước ADC, trong quá trình chuyển đổi hoặc sau đó do đồng bộ và truyền dữ liệu. Số hóa chỉ thay đổi cách biểu diễn tín hiệu.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Sóng, Fourier và âm thanh](../02_oscillations_waves/01_waves_fourier_sound.md).
 
 **Liên hệ tiếp:** [Mạch điện một chiều](../05_electromagnetism/01_dc_circuits.md), [Vật lý tính toán](02_computational_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement experiment](./00_measurement_experiment.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

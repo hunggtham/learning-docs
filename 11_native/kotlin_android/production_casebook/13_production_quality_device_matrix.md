@@ -1,12 +1,15 @@
-# Case 13 — Production Quality: Device Matrix, Localization, Battery, Privacy và Release Readiness
+# Trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness
 
-Một Android app có thể compile, pass unit test và chạy tốt trên điện thoại developer nhưng vẫn thất bại production vì khác OS version, OEM, locale, font scale, network condition, screen size, battery policy hoặc migration path. Quality engineering mobile vì vậy không chỉ là “test nhiều hơn”; nó là xây **risk matrix** phản ánh môi trường thật.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 13 — môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질): thiết bị (device / 장치) ma trận (matrix / 행렬), Localization, Battery, Privacy và bản phát hành (release / 릴리스) Readiness** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **5. String tài nguyên (resource / 자원), không hardcode UI văn bản (text / 텍스트)** sang **6. Plural**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này là lớp kiểm tra cuối của toàn bộ Kotlin + Android Master Notes. Mục tiêu là biết một feature “ready for production” nghĩa là gì ngoài happy path.
 
-# 1. Android là một platform matrix
+Một Android app có thể compile, pass đơn vị (unit / 단위) kiểm thử (test / 테스트) và chạy tốt trên điện thoại nhà phát triển (developer / 개발자) nhưng vẫn thất bại môi trường vận hành (production / 운영 환경) vì khác OS phiên bản (version / 버전), OEM, locale, font quy mô (scale / 규모), mạng (network / 네트워크) điều kiện (condition / 조건), screen kích thước (size / 크기), battery chính sách (policy / 정책) hoặc di chuyển (migration / 마이그레이션) đường dẫn (path / 경로). chất lượng (quality / 품질) kỹ thuật (engineering / 엔지니어링) mobile vì vậy không chỉ là “kiểm thử (test / 테스트) nhiều hơn”; nó là xây **rủi ro (risk / 위험) ma trận (matrix / 행렬)** phản ánh môi trường thật.
 
-Production Android tồn tại trên nhiều chiều:
+Chapter này là lớp kiểm tra cuối của toàn bộ Kotlin + Android Master Notes. Mục tiêu là biết một tính năng (feature / 기능) “ready for môi trường vận hành (production / 운영 환경)” nghĩa là gì ngoài happy đường dẫn (path / 경로).
+
+# 1. Android là một nền tảng (platform / 플랫폼) ma trận (matrix / 행렬)
+
+Môi trường vận hành (production / 운영 환경) Android tồn tại trên nhiều chiều:
 
 ```text
 OS version
@@ -22,29 +25,29 @@ OS version
 × app upgrade path
 ```
 
-Bạn không thể test Cartesian product đầy đủ. Vì vậy cần chọn matrix theo **risk**.
+Bạn không thể kiểm thử (test / 테스트) Cartesian sản phẩm (product / 제품) đầy đủ. Vì vậy cần chọn ma trận (matrix / 행렬) theo **rủi ro (risk / 위험)**.
 
-# 2. Risk-based device matrix
+# 2. Risk-based thiết bị (device / 장치) ma trận (matrix / 행렬)
 
-Một matrix tối thiểu thường nên có:
+Một ma trận (matrix / 행렬) tối thiểu thường nên có:
 
 | Nhóm | Mục đích |
 |---|---|
-| min/near-min API | compatibility cũ |
-| latest stable API | behavior mới |
-| target-SDK migration API | policy/permission mới |
-| low/mid/high device | performance/memory |
-| Samsung/Pixel + OEM quan trọng | vendor difference |
-| small phone | compact layout |
-| large/tablet/foldable nếu support | adaptive UI |
+| min/near-min API | tính tương thích (compatibility / 호환성) cũ |
+| latest stable API | hành vi (behavior / 동작) mới |
+| target-SDK di chuyển (migration / 마이그레이션) API | chính sách (policy / 정책)/permission mới |
+| low/mid/high thiết bị (device / 장치) | hiệu năng (performance / 성능)/bộ nhớ (memory / 메모리) |
+| Samsung/điểm ảnh (pixel / 픽셀) + OEM quan trọng | vendor difference |
+| small phone | compact bố cục (layout / 레이아웃) |
+| large/tablet/foldable nếu hỗ trợ (support / 지원) | adaptive UI |
 
-Nếu app phụ thuộc BLE/camera/NFC, thêm physical hardware representative thay vì chỉ emulator.
+Nếu app phụ thuộc BLE/camera/NFC, thêm vật lý (physical / 물리적) hardware representative thay vì chỉ emulator.
 
-# 3. Test upgrade path, không chỉ fresh install
+# 3. kiểm thử (test / 테스트) upgrade đường dẫn (path / 경로), không chỉ fresh install
 
-Fresh install bỏ qua một lớp bug lớn: schema cũ, SharedPreferences cũ, token cũ, cached file cũ, notification channel cũ và data migration.
+Fresh install bỏ qua một lớp bug lớn: lược đồ (schema / 스키마) cũ, SharedPreferences cũ, đơn vị từ (token / 토큰) cũ, cached tệp (file / 파일) cũ, notification channel cũ và dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션).
 
-Release test nên có:
+Bản phát hành (release / 릴리스) kiểm thử (test / 테스트) nên có:
 
 ```text
 version N production data
@@ -55,15 +58,15 @@ version N production data
 → rollback strategy nếu có
 ```
 
-Room migration phải test từ các schema version thực tế còn user ngoài production, không chỉ previous version gần nhất nếu user có thể skip nhiều release.
+Room di chuyển (migration / 마이그레이션) phải kiểm thử (test / 테스트) từ các lược đồ (schema / 스키마) phiên bản (version / 버전) thực tế còn người dùng (user / 사용자) ngoài môi trường vận hành (production / 운영 환경), không chỉ previous phiên bản (version / 버전) gần nhất nếu người dùng (user / 사용자) có thể skip nhiều bản phát hành (release / 릴리스).
 
-# 4. Downgrade và rollback compatibility
+# 4. Downgrade và quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)
 
-Play rollback không phải lúc nào tương đương cài APK cũ đơn giản; server/API/schema có thể đã thay đổi.
+Play quay lui (rollback / 롤백) không phải lúc nào tương đương cài APK cũ đơn giản; máy chủ (server / 서버)/API/lược đồ (schema / 스키마) có thể đã thay đổi.
 
-Khi staged rollout version N+1 ghi data format mà N không đọc được, rollback app binary có thể làm user crash.
+Khi staged rollout phiên bản (version / 버전) N+1 ghi dữ liệu (data / 데이터) format mà N không đọc được, quay lui (rollback / 롤백) app nhị phân (binary / 이진) có thể làm người dùng (user / 사용자) crash.
 
-Senior release design hỏi trước:
+Cấp cao (senior / 시니어) bản phát hành (release / 릴리스) thiết kế (design / 설계) hỏi trước:
 
 ```text
 N+1 thay local schema thế nào?
@@ -74,19 +77,19 @@ rollback binary có đọc dữ liệu mới được không?
 
 # Localization
 
-## 5. String resource, không hardcode UI text
+## 5. String tài nguyên (resource / 자원), không hardcode UI văn bản (text / 텍스트)
 
-User-facing string nên ở resource để localize, test và thay đổi theo locale.
+User-facing string nên ở tài nguyên (resource / 자원) để localize, kiểm thử (test / 테스트) và thay đổi theo locale.
 
 ```xml
 <string name="order_count">%1$d orders</string>
 ```
 
-Nhưng plural phải dùng plural resource thay vì nối số + noun thủ công.
+Nhưng plural phải dùng plural tài nguyên (resource / 자원) thay vì nối số + noun thủ công.
 
 ## 6. Plural
 
-Ngôn ngữ không có cùng plural rule. Dùng `<plurals>`/quantity string để framework chọn form.
+Ngôn ngữ không có cùng plural quy tắc (rule / 규칙). Dùng `<plurals>`/quantity string để khung phần mềm (framework / 프레임워크) chọn form.
 
 Đừng giả định chỉ singular/plural kiểu English.
 
@@ -100,13 +103,13 @@ Không tự format:
 
 nếu UI cần locale-aware display. Dùng formatter thích hợp cho currency/number/date.
 
-Domain value giữ semantic chuẩn; formatting là presentation concern.
+Lĩnh vực (domain / 도메인) giá trị (value / 값) giữ ngữ nghĩa (semantic / 의미적) chuẩn; formatting là presentation concern.
 
-## 8. Time zone
+## 8. thời gian (time / 시간) zone
 
-Timestamp server nên có semantic rõ: instant tuyệt đối hay local business date/time.
+Timestamp máy chủ (server / 서버) nên có ngữ nghĩa (semantic / 의미적) rõ: instant tuyệt đối hay cục bộ (local / 로컬) nghiệp vụ (business / 비즈니스) date/thời gian (time / 시간).
 
-`2026-09-20 09:00` không đủ nếu không biết timezone/context.
+`2026-09-20 09:00` không đủ nếu không biết timezone/ngữ cảnh (context / 맥락).
 
 Phân biệt:
 
@@ -117,51 +120,51 @@ LocalDateTime → local clock chưa gắn zone
 ZonedDateTime → local time + zone
 ```
 
-Mobile travel qua timezone dễ làm bug calendar/reminder nếu model sai từ đầu.
+Mobile travel qua timezone dễ làm bug calendar/reminder nếu mô hình (model / 모델) sai từ đầu.
 
-## 9. Locale change runtime
+## 9. Locale thay đổi (change / 변경) thời gian chạy (runtime / 런타임)
 
-Locale có thể đổi khi process/app đang tồn tại. Đừng cache formatted string global vô hạn.
+Locale có thể đổi khi tiến trình (process / 프로세스)/app đang tồn tại. Đừng bộ nhớ đệm (cache / 캐시) formatted string toàn cục (global / 전역) vô hạn.
 
-UI nên derive display text từ resource/formatter theo current configuration.
+UI nên derive display văn bản (text / 텍스트) từ tài nguyên (resource / 자원)/formatter theo hiện tại (current / 현재) cấu hình (configuration / 구성).
 
 # RTL
 
 ## 10. Start/end thay left/right
 
-Layout direction phải support RTL khi app localize Arabic/Hebrew. Dùng start/end cho alignment/margin khi semantic directional.
+Bố cục (layout / 레이아웃) direction phải hỗ trợ (support / 지원) RTL khi app localize Arabic/Hebrew. Dùng start/end cho alignment/margin khi ngữ nghĩa (semantic / 의미적) directional.
 
 Icon có direction như arrow/back có thể cần auto-mirror.
 
-## 11. BiDi text
+## 11. BiDi văn bản (text / 텍스트)
 
-Mixed Latin/Arabic/number/URL có thể render direction khó. Không tự đảo string. Dùng platform text handling và test real locale.
+Mixed Latin/Arabic/number/URL có thể kết xuất (render / 렌더링) direction khó. Không tự đảo string. Dùng nền tảng (platform / 플랫폼) văn bản (text / 텍스트) handling và kiểm thử (test / 테스트) real locale.
 
-# Font scaling và accessibility
+# Font scaling và khả năng tiếp cận (accessibility / 접근성)
 
-## 12. Large text
+## 12. Large văn bản (text / 텍스트)
 
-User có thể tăng font scale. Fixed-height container dễ cắt text.
+Người dùng (user / 사용자) có thể tăng font quy mô (scale / 규모). Fixed-height bộ chứa (container / 컨테이너) dễ cắt văn bản (text / 텍스트).
 
-Đừng design button/card theo một screenshot size duy nhất. Cho text wrap hoặc layout adapt.
+Đừng thiết kế (design / 설계) button/card theo một screenshot kích thước (size / 크기) duy nhất. Cho văn bản (text / 텍스트) wrap hoặc bố cục (layout / 레이아웃) adapt.
 
 ## 13. Screen reader
 
-Critical flow phải test manual với TalkBack ít nhất theo release cadence phù hợp. Semantics automated test giúp nhưng không thay trải nghiệm nghe thật.
+Trọng yếu (critical / 중요) luồng (flow / 흐름) phải kiểm thử (test / 테스트) manual với TalkBack ít nhất theo bản phát hành (release / 릴리스) cadence phù hợp. ngữ nghĩa (semantics / 의미론) automated kiểm thử (test / 테스트) giúp nhưng không thay trải nghiệm nghe thật.
 
 ## 14. Color/contrast
 
-Không truyền trạng thái chỉ bằng màu. Error/success/selected nên có text/icon/semantic state.
+Không truyền trạng thái chỉ bằng màu. lỗi (error / 오류)/success/selected nên có văn bản (text / 텍스트)/icon/ngữ nghĩa (semantic / 의미적) trạng thái (state / 상태).
 
-Dark mode và dynamic color có thể thay contrast; custom color cần test cả theme.
+Dark chế độ (mode / 모드) và động (dynamic / 동적) color có thể thay contrast; custom color cần kiểm thử (test / 테스트) cả theme.
 
-# Battery và background quality
+# Battery và background chất lượng (quality / 품질)
 
-## 15. Wakeup cost
+## 15. Wakeup chi phí (cost / 비용)
 
-Mỗi periodic task, location update, sensor listener, BLE scan và network poll có battery cost. Một app có nhiều team dễ tạo “death by a thousand timers”.
+Mỗi periodic tác vụ (task / 작업), location cập nhật (update / 업데이트), sensor listener, BLE scan và mạng (network / 네트워크) poll có battery chi phí (cost / 비용). Một app có nhiều nhóm (team / 팀) dễ tạo “death by a thousand timers”.
 
-Background work cần inventory tập trung:
+Background công việc (work / 작업) cần inventory tập trung:
 
 ```text
 job name
@@ -175,59 +178,59 @@ user-visible benefit
 
 ## 16. Batch thay polling khi có thể
 
-Nếu backend hỗ trợ push/stream/event, không nhất thiết poll 5 phút. Nếu work không cần exact time, để WorkManager/system batch giúp battery.
+Nếu backend hỗ trợ push/stream/sự kiện (event / 이벤트), không nhất thiết poll 5 phút. Nếu công việc (work / 작업) không cần chính xác (exact / 정확한) thời gian (time / 시간), để WorkManager/hệ thống (system / 시스템) batch giúp battery.
 
 ## 17. Doze/App Standby
 
-Background execution có thể bị delay khi device idle. Business logic không nên assume periodic worker chạy chính xác từng phút.
+Background thực thi (execution / 실행) có thể bị delay khi thiết bị (device / 장치) idle. lô-gic nghiệp vụ (business logic / 비즈니스 로직) không nên assume periodic worker chạy chính xác từng phút.
 
-Nếu product yêu cầu hard realtime, cần architecture/server push/user-visible foreground behavior phù hợp hơn.
+Nếu sản phẩm (product / 제품) yêu cầu hard realtime, cần kiến trúc (architecture / 아키텍처)/máy chủ (server / 서버) push/user-visible foreground hành vi (behavior / 동작) phù hợp hơn.
 
-# Network quality
+# Mạng (network / 네트워크) chất lượng (quality / 품질)
 
-## 18. Test slow network
+## 18. kiểm thử (test / 테스트) slow mạng (network / 네트워크)
 
-Wi-Fi văn phòng che giấu race/loading bug. Test latency cao, packet loss, offline giữa request, reconnect và server timeout.
+Wi-Fi văn phòng che giấu race/loading bug. kiểm thử (test / 테스트) độ trễ (latency / 지연 시간) cao, packet mất mát (loss / 손실), offline giữa yêu cầu (request / 요청), reconnect và máy chủ (server / 서버) hết thời gian chờ (timeout / 타임아웃).
 
 UI cần distinguish loading initial và refreshing existing content.
 
-## 19. Retry storm
+## 19. thử lại (retry / 재시도) storm
 
-Nếu 1 triệu device cùng retry ngay sau backend outage, exponential backoff + jitter giúp tránh thundering herd.
+Nếu 1 triệu thiết bị (device / 장치) cùng thử lại (retry / 재시도) ngay sau backend outage, exponential backoff + jitter giúp tránh thundering herd.
 
-Retry policy là distributed-system concern.
+Thử lại (retry / 재시도) chính sách (policy / 정책) là distributed-system concern.
 
-## 20. Payload size
+## 20. Payload kích thước (size / 크기)
 
-Mobile network đắt và không ổn định. API contract cần pagination, compression, selective fields/caching khi dataset lớn.
+Mobile mạng (network / 네트워크) đắt và không ổn định. Đặc tả API (API contract / API 계약) cần pagination, compression, selective fields/caching khi dataset lớn.
 
-Đừng download full history mỗi app launch.
+Đừng download full lịch sử (history / 이력) mỗi app launch.
 
-# Memory/CPU quality
+# Bộ nhớ (memory / 메모리)/CPU chất lượng (quality / 품질)
 
-## 21. Low-memory device
+## 21. Low-memory thiết bị (device / 장치)
 
-Test device RAM thấp giúp phát hiện bitmap cache, giant list, WebView/media memory và startup overhead.
+Kiểm thử (test / 테스트) thiết bị (device / 장치) RAM thấp giúp phát hiện bitmap bộ nhớ đệm (cache / 캐시), giant danh sách (list / 목록), WebView/media bộ nhớ (memory / 메모리) và startup overhead.
 
-Background process có thể bị kill thường xuyên hơn, làm state restoration bug lộ ra.
+Background tiến trình (process / 프로세스) có thể bị kill thường xuyên hơn, làm trạng thái (state / 상태) restoration bug lộ ra.
 
 ## 22. Thermal throttling
 
-CPU benchmark kéo dài có thể khác khi device nóng. Heavy camera/ML/video feature nên test thermal/battery thực tế chứ không chỉ một run ngắn.
+CPU benchmark kéo dài có thể khác khi thiết bị (device / 장치) nóng. Heavy camera/ML/video tính năng (feature / 기능) nên kiểm thử (test / 테스트) thermal/battery thực tế chứ không chỉ một run ngắn.
 
 # OEM fragmentation
 
-## 23. Không giả định mọi OEM giống Pixel
+## 23. Không giả định mọi OEM giống điểm ảnh (pixel / 픽셀)
 
-Một số OEM có aggressive battery/background management, camera/Bluetooth stack khác hoặc permission UI khác.
+Một số OEM có aggressive battery/background management, camera/Bluetooth ngăn xếp (stack / 스택) khác hoặc permission UI khác.
 
-Không viết code “detect Samsung rồi hack” ngay từ đầu. Trước tiên dựa public API; chỉ có workaround khi có evidence, isolate workaround và document scope/version.
+Không viết mã (code / 코드) “detect Samsung rồi hack” ngay từ đầu. Trước tiên dựa API công khai (public API / 공개 API); chỉ có workaround khi có bằng chứng (evidence / 증거), isolate workaround và document phạm vi (scope / 범위)/phiên bản (version / 버전).
 
-# Security quality
+# Bảo mật (security / 보안) chất lượng (quality / 품질)
 
-## 24. Debug feature không lọt production
+## 24. gỡ lỗi (debug / 디버그) tính năng (feature / 기능) không lọt môi trường vận hành (production / 운영 환경)
 
-Release build phải kiểm tra:
+Bản phát hành (release / 릴리스) bản dựng (build / 빌드) phải kiểm tra:
 
 ```text
 no debug endpoint
@@ -238,21 +241,21 @@ no WebView debugging ngoài ý muốn
 no backup exposure ngoài policy
 ```
 
-Build variant/configuration nên khiến insecure debug behavior khó lọt release.
+Bản dựng (build / 빌드) variant/cấu hình (configuration / 구성) nên khiến insecure gỡ lỗi (debug / 디버그) hành vi (behavior / 동작) khó lọt bản phát hành (release / 릴리스).
 
 ## 25. Log redaction
 
-Token, password, full card/account identifier, sensitive PII không nên log. Structured logging nên redaction từ source thay vì hy vọng dashboard filter sau.
+Đơn vị từ (token / 토큰), password, full card/account identifier, sensitive PII không nên log. Structured logging nên redaction từ nguồn (source / 소스) thay vì hy vọng dashboard filter sau.
 
 ## 26. Screenshot/screen recording sensitivity
 
-Một số screen như credential/payment/health có thể cần `FLAG_SECURE` hoặc policy tương đương tùy requirement. Nhưng đừng bật toàn app nếu làm hỏng legitimate user workflow không cần thiết.
+Một số screen như credential/payment/health có thể cần `FLAG_SECURE` hoặc chính sách (policy / 정책) tương đương tùy yêu cầu (requirement / 요구사항). Nhưng đừng bật toàn app nếu làm hỏng legitimate người dùng (user / 사용자) workflow không cần thiết.
 
-# Privacy quality
+# Privacy chất lượng (quality / 품질)
 
-## 27. Data inventory
+## 27. dữ liệu (data / 데이터) inventory
 
-Trước release, biết app thu dữ liệu gì:
+Trước bản phát hành (release / 릴리스), biết app thu dữ liệu gì:
 
 ```text
 field/event
@@ -263,54 +266,54 @@ third-party recipient
 user control
 ```
 
-Nếu team không biết event analytics chứa gì, rất khó đảm bảo privacy hoặc Data Safety declaration đúng.
+Nếu nhóm (team / 팀) không biết sự kiện (event / 이벤트) analytics chứa gì, rất khó đảm bảo privacy hoặc dữ liệu (data / 데이터) an toàn (safety / 안전) declaration đúng.
 
-## 28. Data minimization
+## 28. dữ liệu (data / 데이터) minimization
 
-Không gửi raw GPS/contacts/device identifier nếu business chỉ cần derived region/count.
+Không gửi raw GPS/contacts/thiết bị (device / 장치) identifier nếu nghiệp vụ (business / 비즈니스) chỉ cần derived region/count.
 
 Privacy tốt thường bắt đầu bằng **không thu dữ liệu không cần**.
 
-# Analytics và observability
+# Analytics và khả năng quan sát (observability / 관측 가능성)
 
-## 29. Analytics khác telemetry reliability
+## 29. Analytics khác telemetry độ tin cậy (reliability / 신뢰성)
 
-Product analytics trả lời user làm gì. Operational telemetry trả lời app có khỏe không.
+Sản phẩm (product / 제품) analytics trả lời người dùng (user / 사용자) làm gì. Operational telemetry trả lời app có khỏe không.
 
-Đừng dùng event analytics như crash/trace system thay thế.
+Đừng dùng sự kiện (event / 이벤트) analytics như crash/dấu vết (trace / 추적) hệ thống (system / 시스템) thay thế.
 
-## 30. Event schema versioning
+## 30. sự kiện (event / 이벤트) lược đồ (schema / 스키마) versioning
 
-Analytics event là contract với data pipeline. Rename field tùy tiện phá dashboard/experiment.
+Analytics sự kiện (event / 이벤트) là đặc tả hợp đồng (contract / 계약) với dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인). Rename trường dữ liệu (field / 필드) tùy tiện phá dashboard/experiment.
 
 ```text
 checkout_started.v1
 checkout_completed.v1
 ```
 
-không nhất thiết phải version trong tên, nhưng cần governance/schema contract rõ.
+không nhất thiết phải phiên bản (version / 버전) trong tên, nhưng cần quản trị (governance / 거버넌스)/lược đồ (schema / 스키마) đặc tả hợp đồng (contract / 계약) rõ.
 
 ## 31. Crash-free không đủ
 
-App không crash vẫn có thể slow, ANR, login loop hoặc sync fail silent. Monitor thêm ANR, startup, jank, network error, sync backlog và business invariant quan trọng.
+App không crash vẫn có thể slow, ANR, login vòng lặp (loop / 루프) hoặc sync thất bại (fail / 실패) silent. Monitor thêm ANR, startup, jank, mạng (network / 네트워크) lỗi (error / 오류), sync backlog và nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) quan trọng.
 
-# Feature flag
+# Cờ tính năng (feature flag / 기능 플래그)
 
-## 32. Flag là migration tool, không phải rác vĩnh viễn
+## 32. Flag là di chuyển (migration / 마이그레이션) công cụ (tool / 도구), không phải rác vĩnh viễn
 
-Feature flag giúp rollout/kill-switch. Nhưng flag cũ tạo combinatorial complexity.
+Cờ tính năng (feature flag / 기능 플래그) giúp rollout/kill-switch. Nhưng flag cũ tạo combinatorial độ phức tạp (complexity / 복잡도).
 
-Mỗi flag cần owner, default, expiry/removal plan.
+Mỗi flag cần đơn vị sở hữu (owner / 오너), default, expiry/removal plan.
 
 ## 33. Server-driven flag và offline
 
-App offline cần default/cached flag behavior. Không để app startup block vô hạn chờ config remote.
+App offline cần default/cached flag hành vi (behavior / 동작). Không để app startup khối (block / 블록) vô hạn chờ cấu hình (config / 설정) remote.
 
-# Release pipeline
+# Bản phát hành (release / 릴리스) chuỗi xử lý (pipeline / 파이프라인)
 
-## 34. Quality gate
+## 34. cổng chất lượng (quality gate / 품질 게이트)
 
-Một pipeline production có thể gồm:
+Một chuỗi xử lý (pipeline / 파이프라인) môi trường vận hành (production / 운영 환경) có thể gồm:
 
 ```text
 compile
@@ -326,43 +329,43 @@ compile
 → expand / pause / rollback
 ```
 
-Không phải team nào cần mọi gate trên mỗi PR; phân lớp theo cost và risk.
+Không phải nhóm (team / 팀) nào cần mọi gate trên mỗi PR; phân lớp theo chi phí (cost / 비용) và rủi ro (risk / 위험).
 
-## 35. Signed artifact là immutable output
+## 35. Signed sản phẩm tạo ra (artifact / 산출물) là immutable đầu ra (output / 출력)
 
-Artifact đã QA/review nên chính là artifact được promote. Tránh rebuild khác config giữa staging và production nếu không cần, vì bạn mất traceability.
+Sản phẩm tạo ra (artifact / 산출물) đã QA/rà soát (review / 검토) nên chính là sản phẩm tạo ra (artifact / 산출물) được promote. Tránh rebuild khác cấu hình (config / 설정) giữa staging và môi trường vận hành (production / 운영 환경) nếu không cần, vì bạn mất traceability.
 
-## 36. Version code
+## 36. phiên bản (version / 버전) mã (code / 코드)
 
-`versionCode` phải tăng để Play update. `versionName` là display version. Build metadata/commit SHA nên được trace trong observability để biết crash đến từ artifact nào.
+`versionCode` phải tăng để Play cập nhật (update / 업데이트). `versionName` là display phiên bản (version / 버전). bản dựng (build / 빌드) siêu dữ liệu (metadata / 메타데이터)/lần ghi nhận (commit / 커밋) SHA nên được dấu vết (trace / 추적) trong khả năng quan sát (observability / 관측 가능성) để biết crash đến từ sản phẩm tạo ra (artifact / 산출물) nào.
 
-# Play/App distribution awareness
+# Play/App phân phối (distribution / 분포) awareness
 
-## 37. AAB và dynamic delivery
+## 37. AAB và động (dynamic / 동적) delivery
 
-Android App Bundle cho Play generate APK tối ưu theo device. Nếu app dùng dynamic feature/module/resource delivery, test install/update path thực tế trên distribution track chứ không chỉ local APK.
+Android App Bundle cho Play generate APK tối ưu theo thiết bị (device / 장치). Nếu app dùng động (dynamic / 동적) tính năng (feature / 기능)/mô-đun (module / 모듈)/tài nguyên (resource / 자원) delivery, kiểm thử (test / 테스트) install/cập nhật (update / 업데이트) đường dẫn (path / 경로) thực tế trên phân phối (distribution / 분포) nhánh học (track / 트랙) chứ không chỉ cục bộ (local / 로컬) APK.
 
-## 38. Target API deadline
+## 38. mục tiêu (target / 대상) API deadline
 
-Google Play thay đổi target API requirement theo thời gian. Release engineering phải có cadence upgrade trước deadline, không đợi tuần cuối mới nâng target và xử lý tất cả behavior change cùng lúc.
+Google Play thay đổi mục tiêu (target / 대상) API yêu cầu (requirement / 요구사항) theo thời gian. bản phát hành (release / 릴리스) kỹ thuật (engineering / 엔지니어링) phải có cadence upgrade trước deadline, không đợi tuần cuối mới nâng mục tiêu (target / 대상) và xử lý tất cả hành vi (behavior / 동작) thay đổi (change / 변경) cùng lúc.
 
 # Backup và restore
 
-## 39. Auto Backup không phải luôn desirable cho mọi data
+## 39. Auto Backup không phải luôn desirable cho mọi dữ liệu (data / 데이터)
 
-Token/secret/device-bound credential có thể không nên restore sang device mới. Database/user preference khác có thể benefit từ backup.
+Đơn vị từ (token / 토큰)/secret/device-bound credential có thể không nên restore sang thiết bị (device / 장치) mới. cơ sở dữ liệu (database / 데이터베이스)/người dùng (user / 사용자) preference khác có thể benefit từ backup.
 
-Review backup rule theo data sensitivity và server rehydration capability.
+Rà soát (review / 검토) backup quy tắc (rule / 규칙) theo dữ liệu (data / 데이터) sensitivity và máy chủ (server / 서버) rehydration năng lực (capability / 역량).
 
-## 40. Restore version mismatch
+## 40. Restore phiên bản (version / 버전) mismatch
 
-Backup từ app version cũ có thể được restore vào version mới. Persistence layer phải xử lý schema/data version đúng.
+Backup từ app phiên bản (version / 버전) cũ có thể được restore vào phiên bản (version / 버전) mới. Persistence tầng (layer / 계층) phải xử lý lược đồ (schema / 스키마)/dữ liệu (data / 데이터) phiên bản (version / 버전) đúng.
 
-# Test account và seed data
+# Kiểm thử (test / 테스트) account và seed dữ liệu (data / 데이터)
 
-## 41. Production-like state
+## 41. Production-like trạng thái (state / 상태)
 
-QA cần account/data mô phỏng:
+QA cần account/dữ liệu (data / 데이터) mô phỏng:
 
 ```text
 new user
@@ -374,13 +377,13 @@ restricted entitlement
 large dataset
 ```
 
-Happy-path empty account không phát hiện nhiều bug production.
+Happy-path empty account không phát hiện nhiều bug môi trường vận hành (production / 운영 환경).
 
-# Incident readiness
+# Sự cố (incident / 인시던트) readiness
 
-## 42. Mobile incident khác server incident
+## 42. Mobile sự cố (incident / 인시던트) khác máy chủ (server / 서버) sự cố (incident / 인시던트)
 
-Server fix có thể deploy phút. Mobile binary đã nằm trên hàng triệu device không update ngay.
+Máy chủ (server / 서버) fix có thể deploy phút. Mobile nhị phân (binary / 이진) đã nằm trên hàng triệu thiết bị (device / 장치) không cập nhật (update / 업데이트) ngay.
 
 Do đó cần:
 
@@ -392,15 +395,15 @@ staged rollout
 old-client support window
 ```
 
-## 43. Diagnose theo version/device cohort
+## 43. Diagnose theo phiên bản (version / 버전)/thiết bị (device / 장치) cohort
 
-Khi crash tăng, breakdown theo app version, OS, OEM/device model, locale, feature flag cohort và rollout percentage giúp tìm regression nhanh.
+Khi crash tăng, breakdown theo app phiên bản (version / 버전), OS, OEM/thiết bị (device / 장치) mô hình (model / 모델), locale, cờ tính năng (feature flag / 기능 플래그) cohort và rollout percentage giúp tìm regression nhanh.
 
-# Definition of Done production
+# Definition of Done môi trường vận hành (production / 운영 환경)
 
-## 44. Feature complete không chỉ UI xong
+## 44. tính năng (feature / 기능) complete không chỉ UI xong
 
-Một feature quan trọng chỉ nên xem production-ready khi đã trả lời:
+Một tính năng (feature / 기능) quan trọng chỉ nên xem production-ready khi đã trả lời:
 
 ```text
 state restore thế nào?
@@ -416,32 +419,34 @@ test migration gì?
 rollback thế nào?
 ```
 
-Không phải mọi feature cần cùng mức rigor; payment/auth/sync cần sâu hơn tooltip đơn giản. Nhưng câu hỏi phải được cân nhắc.
+Không phải mọi tính năng (feature / 기능) cần cùng mức rigor; payment/auth/sync cần sâu hơn tooltip đơn giản. Nhưng câu hỏi phải được cân nhắc.
 
-# Senior Notes
+# Cấp cao (senior / 시니어) Notes
 
-## 45. Quality là architecture property
+## 45. chất lượng (quality / 품질) là kiến trúc (architecture / 아키텍처) thuộc tính (property / 속성)
 
-Nếu code không có clear source of truth, không thể test offline đúng. Nếu navigation truyền giant object, process restore khó. Nếu networking không typed error, UI recovery mơ hồ. QA không thể “test ra” một architecture thiếu recovery path.
+Nếu mã (code / 코드) không có clear nguồn chuẩn (source of truth / 정본), không thể kiểm thử (test / 테스트) offline đúng. Nếu điều hướng (navigation / 내비게이션) truyền giant đối tượng (object / 객체), tiến trình (process / 프로세스) restore khó. Nếu networking không typed lỗi (error / 오류), UI khôi phục (recovery / 복구) mơ hồ. QA không thể “kiểm thử (test / 테스트) ra” một kiến trúc (architecture / 아키텍처) thiếu khôi phục (recovery / 복구) đường dẫn (path / 경로).
 
-## 46. Matrix phải dựa telemetry
+## 46. ma trận (matrix / 행렬) phải dựa telemetry
 
-Sau production, dùng crash/device/OS/user distribution để cập nhật test matrix. Nếu 40% user dùng một OEM cụ thể, device đó quan trọng hơn một flagship hiếm.
+Sau môi trường vận hành (production / 운영 환경), dùng crash/thiết bị (device / 장치)/OS/người dùng (user / 사용자) phân phối (distribution / 분포) để cập nhật kiểm thử (test / 테스트) ma trận (matrix / 행렬). Nếu 40% người dùng (user / 사용자) dùng một OEM cụ thể, thiết bị (device / 장치) đó quan trọng hơn một flagship hiếm.
 
-## 47. Backward compatibility là mobile superpower
+## 47. Backward tính tương thích (compatibility / 호환성) là mobile superpower
 
-Server/API có khả năng phục vụ nhiều app version giúp rollout an toàn, incident recovery nhanh và user không bị bắt update ngay.
+Máy chủ (server / 서버)/API có khả năng phục vụ nhiều app phiên bản (version / 버전) giúp rollout an toàn, sự cố (incident / 인시던트) khôi phục (recovery / 복구) nhanh và người dùng (user / 사용자) không bị bắt cập nhật (update / 업데이트) ngay.
 
-## 48. Không tối ưu metric đơn lẻ
+## 48. Không tối ưu chỉ số (metric / 지표) đơn lẻ
 
-Giảm startup bằng lazy quá mức có thể làm first interaction lag. Giảm network request bằng cache quá lâu có thể stale. Giảm permission prompt bằng broad permission xin một lần có thể tệ privacy. Tối ưu luôn dựa user journey và system trade-off.
+Giảm startup bằng lazy quá mức có thể làm first tương tác (interaction / 상호작용) lag. Giảm mạng (network / 네트워크) yêu cầu (request / 요청) bằng bộ nhớ đệm (cache / 캐시) quá lâu có thể stale. Giảm permission prompt bằng broad permission xin một lần có thể tệ privacy. Tối ưu luôn dựa người dùng (user / 사용자) journey và hệ thống (system / 시스템) sự đánh đổi (trade-off / 트레이드오프).
 
 # Release-readiness checklist rút gọn
 
-Trước release lớn, review theo nhóm: compatibility/version; persistence/migration; permission/capability; lifecycle/process death; offline/network; localization/RTL/font scale; accessibility; adaptive UI; memory/performance/battery; security/privacy; analytics/observability; CI/signing/artifact; staged rollout/rollback.
+Trước bản phát hành (release / 릴리스) lớn, rà soát (review / 검토) theo nhóm: tính tương thích (compatibility / 호환성)/phiên bản (version / 버전); persistence/di chuyển (migration / 마이그레이션); permission/năng lực (capability / 역량); vòng đời (lifecycle / 생명주기)/tiến trình (process / 프로세스) death; offline/mạng (network / 네트워크); localization/RTL/font quy mô (scale / 규모); khả năng tiếp cận (accessibility / 접근성); adaptive UI; bộ nhớ (memory / 메모리)/hiệu năng (performance / 성능)/battery; bảo mật (security / 보안)/privacy; analytics/khả năng quan sát (observability / 관측 가능성); CI/signing/sản phẩm tạo ra (artifact / 산출물); staged rollout/quay lui (rollback / 롤백).
 
-Checklist không thay reasoning. Nếu một mục “N/A”, team nên biết vì sao N/A.
+Checklist không thay lập luận (reasoning / 추론). Nếu một mục “N/A”, nhóm (team / 팀) nên biết vì sao N/A.
 
 # Kết thúc chapter
 
-Sau chapter này, bạn nên có khả năng xây device/test matrix theo risk; test upgrade thay vì chỉ fresh install; phân biệt localization, timezone và RTL concern; đưa font scaling/accessibility vào correctness; đánh giá battery/background work; test slow/offline network; theo dõi OEM/low-memory behavior; quản privacy/data inventory; thiết kế feature flag/rollout; và định nghĩa production-ready feature dựa trên recovery, compatibility và observability chứ không chỉ screenshot đúng thiết kế.
+Sau chapter này, bạn nên có khả năng xây thiết bị (device / 장치)/kiểm thử (test / 테스트) ma trận (matrix / 행렬) theo rủi ro (risk / 위험); kiểm thử (test / 테스트) upgrade thay vì chỉ fresh install; phân biệt localization, timezone và RTL concern; đưa font scaling/khả năng tiếp cận (accessibility / 접근성) vào tính đúng đắn (correctness / 정확성); đánh giá battery/background công việc (work / 작업); kiểm thử (test / 테스트) slow/offline mạng (network / 네트워크); theo dõi OEM/low-memory hành vi (behavior / 동작); quản privacy/dữ liệu (data / 데이터) inventory; thiết kế cờ tính năng (feature flag / 기능 플래그)/rollout; và định nghĩa production-ready tính năng (feature / 기능) dựa trên khôi phục (recovery / 복구), tính tương thích (compatibility / 호환성) và khả năng quan sát (observability / 관측 가능성) chứ không chỉ screenshot đúng thiết kế.
+
+> **Bàn giao:** Sau **48. Không tối ưu chỉ số (metric / 지표) đơn lẻ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,10 +1,13 @@
 # Ancol, ete và amin — cặp electron tự do, proton hóa và cơ chế phản ứng
 
-> Các nhóm chức chứa oxygen và nitrogen đưa **cặp electron tự do (lone pair)**, tính phân cực, liên kết hydrogen và hóa học acid–base vào khung carbon. Thay vì học từng phản ứng như một danh sách, nên tổ chức chương quanh bốn câu hỏi: cặp electron tự do có sẵn để phản ứng không, dị nguyên tử đang ở trạng thái proton hóa nào, nhóm rời có đủ ổn định không và môi trường điện tử làm tâm nào trở nên ái nhân hay ái điện.
+> **Mạch đọc:** Đọc **Ancol, ete và amin — cặp electron tự do, proton hóa và cơ chế phản ứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ancol — một nhóm vừa có tính acid vừa có tính cơ sở (base / 기반)** sang **Alkoxide — dạng khử proton phản ứng mạnh hơn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Các nhóm chức chứa oxygen và nitrogen đưa **cặp electron tự do (lone pair)**, tính phân cực, liên kết hydrogen và hóa học acid–cơ sở (base / 기반) vào khung carbon. Thay vì học từng phản ứng như một danh sách, nên tổ chức chương quanh bốn câu hỏi: cặp electron tự do có sẵn để phản ứng không, dị nguyên tử đang ở trạng thái proton hóa nào, nhóm rời có đủ ổn định không và môi trường điện tử làm tâm nào trở nên ái nhân hay ái điện.
 
 Prerequisite chính của chương là [nhóm chức](./01_functional_groups.md), [acid–base](../08_acids_bases/00_acid_base_models.md) và [cơ chế phản ứng hữu cơ](./03_organic_reaction_mechanisms.md). Các ý về liên kết hydrogen và độ tan nối trực tiếp với [lực liên phân tử](../02_chemical_bonding/07_intermolecular_forces.md).
 
-## Ancol — một nhóm vừa có tính acid vừa có tính base
+## Ancol — một nhóm vừa có tính acid vừa có tính cơ sở (base / 기반)
 
 **Ancol (alcohol)** có nhóm:
 
@@ -12,23 +15,23 @@ Prerequisite chính của chương là [nhóm chức](./01_functional_groups.md)
 R-OH
 \]
 
-Oxygen có cặp electron tự do nên có thể nhận proton hoặc cho mật độ electron cho một tâm ái điện. Liên kết O–H đồng thời có thể mất proton khi gặp base đủ mạnh.
+Oxygen có cặp electron tự do nên có thể nhận proton hoặc cho mật độ electron cho một tâm ái điện. Liên kết O–H đồng thời có thể mất proton khi gặp cơ sở (base / 기반) đủ mạnh.
 
 Ancol đơn giản thường có \(pK_a\) khoảng 16–18 trong những so sánh gần môi trường nước, nhưng con số thay đổi theo cấu trúc và dung môi.
 
-Vì vậy ancol không “trung tính tuyệt đối”. Nó là acid Brønsted yếu và đồng thời có thể hành xử như base Brønsted/Lewis yếu.
+Vì vậy ancol không “trung tính tuyệt đối”. Nó là acid Brønsted yếu và đồng thời có thể hành xử như cơ sở (base / 기반) Brønsted/Lewis yếu.
 
 ## Alkoxide — dạng khử proton phản ứng mạnh hơn
 
-Phản ứng acid–base:
+Phản ứng acid–cơ sở (base / 기반):
 
 \[
 ROH+B^-\rightleftharpoons RO^-+HB
 \]
 
-Chiều cân bằng phụ thuộc \(pK_a\) tương đối của hai cặp acid–base.
+Chiều cân bằng phụ thuộc \(pK_a\) tương đối của hai cặp acid–cơ sở (base / 기반).
 
-**Alkoxide** \(RO^-\) có mật độ electron cao hơn ancol trung hòa nên thường là base và tác nhân ái nhân mạnh hơn.
+**Alkoxide** \(RO^-\) có mật độ electron cao hơn ancol trung hòa nên thường là cơ sở (base / 기반) và tác nhân ái nhân mạnh hơn.
 
 Nó có thể tham gia:
 
@@ -37,11 +40,11 @@ Nó có thể tham gia:
 - phản ứng thế;
 - phản ứng loại.
 
-Điểm cần nhớ là “mạnh hơn” không tự động nghĩa “chọn lọc hơn”. Base/ái nhân quá mạnh có thể mở thêm con đường phản ứng phụ.
+Điểm cần nhớ là “mạnh hơn” không tự động nghĩa “chọn lọc hơn”. cơ sở (base / 기반)/ái nhân quá mạnh có thể mở thêm con đường phản ứng phụ.
 
 ## Vì sao nhóm OH là nhóm rời kém?
 
-Nếu một liên kết C–O bị phá và \(OH^-\) rời đi, sản phẩm rời là một base mạnh. Trong nhiều điều kiện, điều này không thuận lợi.
+Nếu một liên kết C–O bị phá và \(OH^-\) rời đi, sản phẩm rời là một cơ sở (base / 기반) mạnh. Trong nhiều điều kiện, điều này không thuận lợi.
 
 Có hai cách phổ biến để cải thiện khả năng rời.
 
@@ -149,7 +152,7 @@ Hóa học nền vẫn là oxy hóa–khử hữu cơ, nhưng enzyme kiểm soá
 R-O-R'
 \]
 
-Không có proton O–H nên ete ít tham gia phản ứng acid–base kiểu mất proton hơn ancol. Tuy nhiên oxygen vẫn có cặp electron tự do, nên ete là base Lewis và dung môi phối trí hữu ích.
+Không có proton O–H nên ete ít tham gia phản ứng acid–cơ sở (base / 기반) kiểu mất proton hơn ancol. Tuy nhiên oxygen vẫn có cặp electron tự do, nên ete là cơ sở (base / 기반) Lewis và dung môi phối trí hữu ích.
 
 THF, diethyl ether và glyme có thể solvat hóa cation và hỗ trợ nhiều thuốc thử cơ kim.
 
@@ -165,7 +168,7 @@ Ete aryl–alkyl như anisole thường không bị \(S_N2\) ở carbon `sp²` c
 
 **Epoxide** là ete vòng ba cạnh. Góc vòng gần 60° khác xa hình học thuận lợi của carbon `sp³`, tạo ứng suất góc và ứng suất xoắn.
 
-Trong môi trường base, tác nhân ái nhân mạnh thường tấn công carbon ít thế hơn theo cơ chế giống \(S_N2\).
+Trong môi trường cơ sở (base / 기반), tác nhân ái nhân mạnh thường tấn công carbon ít thế hơn theo cơ chế giống \(S_N2\).
 
 Trong môi trường acid, epoxide bị proton hóa trước. Liên kết C–O trở nên phân cực hơn và carbon thế nhiều có thể mang đặc tính carbocation lớn hơn, làm xu hướng chọn vị trí thay đổi.
 
@@ -181,7 +184,7 @@ RO^-+R'X\rightarrow ROR'+X^-
 
 hoạt động tốt nhất khi \(R'X\) là methyl hoặc chất nền bậc một phù hợp với \(S_N2\).
 
-Nếu dùng halide bậc ba, base mạnh thường thúc đẩy E2 thay vì thế sạch.
+Nếu dùng halide bậc ba, cơ sở (base / 기반) mạnh thường thúc đẩy E2 thay vì thế sạch.
 
 Vì vậy lập kế hoạch tổng hợp cần quyết định:
 
@@ -190,7 +193,7 @@ mảnh nào → alkoxide
 mảnh nào → electrophile bậc thấp
 ```
 
-Đây là ví dụ về **retrosynthetic reasoning**: chọn cách chia phân tử sao cho cơ chế thuận lợi.
+Đây là ví dụ về **retrosynthetic lập luận (reasoning / 추론)**: chọn cách chia phân tử sao cho cơ chế thuận lợi.
 
 ## Crown ether và hóa học chủ–khách
 
@@ -200,19 +203,19 @@ Khi cation bị giữ trong crown ether, anion đối có thể trở nên “t�
 
 Đây là cầu nối từ cặp electron tự do đơn giản tới **hóa học chủ–khách (host–guest chemistry)** và hóa học siêu phân tử.
 
-## Amin — độ base và tính ái nhân không phải cùng một đại lượng
+## Amin — độ cơ sở (base / 기반) và tính ái nhân không phải cùng một đại lượng
 
 **Amin (amine)** có cặp electron tự do trên nitrogen.
 
-**Độ base (basicity)** là khái niệm nhiệt động, mô tả cân bằng nhận proton.
+**Độ cơ sở (base / 기반) (basicity)** là khái niệm nhiệt động, mô tả cân bằng nhận proton.
 
 **Tính ái nhân (nucleophilicity)** là khái niệm động học, mô tả tốc độ tấn công một tâm ái điện.
 
-Một chất có thể là base mạnh nhưng tác nhân ái nhân kém nếu quá cồng kềnh. Ngược lại, một chất mềm, dễ phân cực có thể là tác nhân ái nhân tốt nhưng không phải base mạnh nhất.
+Một chất có thể là cơ sở (base / 기반) mạnh nhưng tác nhân ái nhân kém nếu quá cồng kềnh. Ngược lại, một chất mềm, dễ phân cực có thể là tác nhân ái nhân tốt nhưng không phải cơ sở (base / 기반) mạnh nhất.
 
 Đây là một trong những phân biệt quan trọng nhất trong cơ chế hữu cơ.
 
-## Độ base của amin
+## Độ cơ sở (base / 기반) của amin
 
 Cân bằng proton hóa:
 
@@ -230,9 +233,9 @@ Các yếu tố gồm:
 - solvat hóa;
 - cản trở lập thể.
 
-Aniline yếu base hơn cyclohexylamine vì cặp electron trên N bị phi định xứ vào vòng thơm.
+Aniline yếu cơ sở (base / 기반) hơn cyclohexylamine vì cặp electron trên N bị phi định xứ vào vòng thơm.
 
-Nitrogen của amide yếu base hơn nhiều vì cặp electron tham gia cộng hưởng mạnh với carbonyl.
+Nitrogen của amide yếu cơ sở (base / 기반) hơn nhiều vì cặp electron tham gia cộng hưởng mạnh với carbonyl.
 
 Xem thêm: [pH và độ mạnh acid](../08_acids_bases/01_ph_and_acid_strength.md).
 
@@ -257,12 +260,12 @@ Amin bậc một và bậc hai thường là tác nhân ái nhân tốt đối v
 
 Amin bậc ba không có N–H nên không thể đi theo mọi con đường tạo imine trung hòa, nhưng vẫn có thể:
 
-- làm base;
+- làm cơ sở (base / 기반);
 - tạo muối ammonium;
 - tạo iminium trong hệ phù hợp;
 - làm chất xúc tác ái nhân.
 
-Base cồng kềnh như DIPEA thường được chọn khi muốn lấy proton nhưng giảm phản ứng tấn công trực tiếp vào tâm ái điện.
+Cơ sở (base / 기반) cồng kềnh như DIPEA thường được chọn khi muốn lấy proton nhưng giảm phản ứng tấn công trực tiếp vào tâm ái điện.
 
 ## Alkyl hóa amin và vấn đề alkyl hóa quá mức
 
@@ -270,7 +273,7 @@ Amin phản ứng với halogenua alkyl theo \(S_N2\) có thể tạo amin thế
 
 Nhưng sản phẩm amin mới vẫn còn cặp electron tự do và có thể tiếp tục phản ứng, cuối cùng tạo ammonium bậc bốn.
 
-Do đó alkyl hóa trực tiếp có trade-off:
+Do đó alkyl hóa trực tiếp có sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 cách làm đơn giản
@@ -321,7 +324,7 @@ Thuốc nhuộm azo có màu do hệ liên hợp mở rộng qua nhóm:
 
 ## Amin trong sinh học và dược lý
 
-Amino acid, chất dẫn truyền thần kinh, base nucleic và nhiều alkaloid đều chứa nitrogen có trạng thái proton hóa phụ thuộc pH.
+Amino acid, chất dẫn truyền thần kinh, cơ sở (base / 기반) nucleic và nhiều alkaloid đều chứa nitrogen có trạng thái proton hóa phụ thuộc pH.
 
 Ở pH sinh lý, tỉ lệ dạng trung hòa/ion hóa ảnh hưởng:
 
@@ -357,7 +360,7 @@ Trong tổng hợp nhiều bước, ancol có thể được bảo vệ dưới 
 
 Bảo vệ làm giảm khả năng phản ứng tạm thời, giúp thực hiện biến đổi ở vị trí khác.
 
-Trade-off là:
+Sự đánh đổi (trade-off / 트레이드오프) là:
 
 - thêm bước;
 - giảm hiệu suất tổng;
@@ -376,7 +379,7 @@ Hai phân tử cùng có nhóm `–OH`, nhưng bậc carbon làm cơ chế thay 
 
 Đây là lý do nhóm chức chỉ cho điểm bắt đầu; cấu trúc toàn phân tử mới quyết định đường phản ứng.
 
-## Ví dụ suy luận: vì sao aniline yếu base hơn alkylamine?
+## Ví dụ suy luận: vì sao aniline yếu cơ sở (base / 기반) hơn alkylamine?
 
 Trong alkylamine, cặp electron nitrogen tương đối cục bộ và sẵn sàng nhận proton.
 
@@ -395,17 +398,17 @@ Khi proton hóa, cặp electron không còn tham gia cộng hưởng theo cùng 
 
 ### “OH là nhóm rời tốt vì oxygen có độ âm điện cao”
 
-Sai. \(OH^-\) là base mạnh nên thường phải được proton hóa hoặc chuyển thành nhóm rời ổn định hơn trước.
+Sai. \(OH^-\) là cơ sở (base / 기반) mạnh nên thường phải được proton hóa hoặc chuyển thành nhóm rời ổn định hơn trước.
 
-### “Độ base và tính ái nhân của amin là cùng một thứ”
+### “Độ cơ sở (base / 기반) và tính ái nhân của amin là cùng một thứ”
 
-Không. Độ base thuộc cân bằng nhiệt động; tính ái nhân thuộc tốc độ phản ứng.
+Không. Độ cơ sở (base / 기반) thuộc cân bằng nhiệt động; tính ái nhân thuộc tốc độ phản ứng.
 
 ### “Ete không phản ứng”
 
 Ete thông thường tương đối bền nhưng vẫn có thể phối trí kim loại, bị proton hóa hoặc bị cắt trong điều kiện đủ mạnh.
 
-### “Càng nhiều nhóm alkyl thì amin càng base”
+### “Càng nhiều nhóm alkyl thì amin càng cơ sở (base / 기반)”
 
 Không phải luôn đúng trong dung dịch. Hiệu ứng cảm ứng, solvat hóa và cản trở lập thể cạnh tranh nhau.
 
@@ -431,3 +434,5 @@ dung môi và nhiệt độ làm pathway nào nổi trội?
 Từ các câu hỏi này có thể suy luận phần lớn phản ứng thay vì ghi nhớ từng trường hợp.
 
 Xem tiếp: [Hóa học carbonyl](./07_carbonyl_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

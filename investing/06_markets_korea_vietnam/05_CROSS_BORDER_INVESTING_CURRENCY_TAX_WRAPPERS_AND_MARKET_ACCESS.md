@@ -1,5 +1,7 @@
 # Đầu tư xuyên biên giới: tiền tệ, thuế, cấu trúc sản phẩm và khả năng tiếp cận thị trường
 
+> **Mạch đọc:** Đặt **Đầu tư xuyên biên giới: tiền tệ, thuế, cấu trúc sản phẩm và khả năng tiếp cận thị trường** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Đồng tiền giao dịch** sang **2. Đồng tiền kinh tế của tài sản cơ sở**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > Khi đầu tư tài sản nước ngoài, kết quả không chỉ phụ thuộc tài sản cơ sở. Nhà đầu tư còn chịu ảnh hưởng của tỷ giá, cấu trúc pháp lý của sản phẩm, lưu ký, thanh toán, thuế, khả năng tiếp cận thị trường và khả năng chuyển tiền. Một tài sản tốt nhưng được triển khai qua cấu trúc không phù hợp vẫn có thể tạo kết quả xấu.
 
 > **Dữ liệu động:** thuế suất, ưu đãi tài khoản, thuế khấu trừ tại nguồn, chu kỳ thanh toán, giới hạn sở hữu nước ngoài, quy định tiếp cận thị trường và khả năng hỗ trợ của nhà môi giới phải được kiểm tra lại theo nguồn chính thức tại thời điểm đầu tư.
@@ -111,7 +113,7 @@ Không nhất thiết chỉ có lựa chọn 0% hoặc 100%. Tỷ lệ hợp lý
 
 ## 13. Điểm kỳ hạn
 
-Giá ngoại hối kỳ hạn phản ánh chênh lệch lãi suất giữa hai đồng tiền theo logic cân bằng lãi suất có phòng vệ (covered interest parity), cùng các yếu tố thị trường khác.
+Giá ngoại hối kỳ hạn phản ánh chênh lệch lãi suất giữa hai đồng tiền theo lô-gic (logic / 논리) cân bằng lãi suất có phòng vệ (covered interest parity), cùng các yếu tố thị trường khác.
 
 Phòng vệ một đồng tiền có lãi suất cao hoặc thấp có thể tạo lợi suất nắm giữ khác nhau.
 
@@ -427,7 +429,7 @@ Tài sản xuyên biên giới còn liên quan quy định thừa kế. Với t�
 
 ## 59. Tuyên bố chính sách đầu tư
 
-Một **tuyên bố chính sách đầu tư (Investment Policy Statement, IPS)** xuyên biên giới nên ghi:
+Một **tuyên bố chính sách đầu tư (Investment policy Statement, IPS)** xuyên biên giới nên ghi:
 
 ```text
 Đồng tiền gốc

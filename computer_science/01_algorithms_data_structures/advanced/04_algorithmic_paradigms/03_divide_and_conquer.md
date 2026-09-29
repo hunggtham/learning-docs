@@ -1,17 +1,20 @@
 # chia để trị
+
+> **Mạch đọc:** Đọc **chia để trị** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Ba câu hỏi trước khi dùng chia để trị** sang **2. công thức truy hồi là ngôn ngữ tự nhiên của decomposition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Chia để trị / chia để trị / 분할 정복**
 
-chia để trị là một chiến lược thiết kế thuật toán trong đó một problem lớn được tách thành các subproblems nhỏ hơn có cấu trúc tương tự, giải các phần đó, rồi ghép kết quả lại. mẫu kinh điển:
+chia để trị là một chiến lược thiết kế thuật toán trong đó một bài toán (problem / 문제) lớn được tách thành các subproblems nhỏ hơn có cấu trúc tương tự, giải các phần đó, rồi ghép kết quả lại. mẫu kinh điển:
 
 ```text
 Divide → Conquer → Combine
 ```
 
-Điểm quan trọng không phải “dùng recursion”. Một hàm recursive chưa chắc là divide-and-conquer, và một thuật toán divide-and-conquer có thể được implement iterative. Bản chất nằm ở **decomposition**: problem được tách thành các phần nhỏ hơn sao cho mỗi phần có thể giải tương đối độc lập và phần kết hợp không phá lợi ích của việc chia nhỏ.
+Điểm quan trọng không phải “dùng recursion”. Một hàm recursive chưa chắc là divide-and-conquer, và một thuật toán divide-and-conquer có thể được implement iterative. Bản chất nằm ở **decomposition**: bài toán (problem / 문제) được tách thành các phần nhỏ hơn sao cho mỗi phần có thể giải tương đối độc lập và phần kết hợp không phá lợi ích của việc chia nhỏ.
 
 ## 1. Ba câu hỏi trước khi dùng chia để trị
 
-Khi nhìn một problem, hãy hỏi:
+Khi nhìn một bài toán (problem / 문제), hãy hỏi:
 
 ```text
 Có thể chia input/state thành những phần nhỏ hơn cùng loại không?
@@ -49,9 +52,9 @@ T(n)=3T(n/2)+\Theta(n)
 
 công thức truy hồi ghi lại chính **shape của computation cây**.
 
-## 3. cây đệ quy: xem work nằm ở đâu
+## 3. cây đệ quy: xem công việc (work / 작업) nằm ở đâu
 
-Với sắp xếp trộn, mỗi tầng có tổng kích thước đầu vào `n`, nên kết hợp work mỗi tầng là `Θ(n)`. Có `Θ(log n)` các tầng:
+Với sắp xếp trộn, mỗi tầng có tổng kích thước đầu vào `n`, nên kết hợp công việc (work / 작업) mỗi tầng là `Θ(n)`. Có `Θ(log n)` các tầng:
 
 \[
 T(n)=\Theta(n\log n)
@@ -63,9 +66,9 @@ Với:
 T(n)=2T(n/2)+\Theta(1)
 \]
 
-nội bộ work mỗi nút constant, nhưng số các nút lá là `Θ(n)`, nên total `Θ(n)`.
+nội bộ công việc (work / 작업) mỗi nút constant, nhưng số các nút lá là `Θ(n)`, nên total `Θ(n)`.
 
-Đừng nhìn thấy `2T(n/2)` rồi tự động kết luận `n log n`; hãy hỏi **work phân bố theo tầng thế nào**.
+Đừng nhìn thấy `2T(n/2)` rồi tự động kết luận `n log n`; hãy hỏi **công việc (work / 작업) phân bố theo tầng thế nào**.
 
 ## 4. Định lý Master: cách rút gọn có điều kiện
 
@@ -81,7 +84,7 @@ so sánh `f(n)` với:
 n^{\log_b a}
 \]
 
-Term này đại diện quy mô work của cây đệ quy nếu nội bộ kết hợp nhỏ.
+Term này đại diện quy mô công việc (work / 작업) của cây đệ quy nếu nội bộ kết hợp nhỏ.
 
 Định lý Master rất tiện nhưng không áp dụng cho mọi công thức truy hồi. Ví dụ:
 
@@ -89,11 +92,11 @@ Term này đại diện quy mô work của cây đệ quy nếu nội bộ kết
 T(n)=T(n/3)+T(2n/3)+\Theta(n)
 \]
 
-không đúng dạng equal-size subproblems. cây đệ quy/Akra–Bazzi reasoning phù hợp hơn.
+không đúng dạng equal-size subproblems. cây đệ quy/Akra–Bazzi lập luận (reasoning / 추론) phù hợp hơn.
 
 ## 5. sắp xếp trộn: kết hợp step dựa trên điều kiện trước mạnh
 
-Hai halves đã sorted, nên merge linear bằng hai con trỏ (two pointers):
+Hai halves đã sorted, nên merge tuyến tính (linear / 선형) bằng hai con trỏ (two pointers):
 
 ```text
 left smallest vs right smallest
@@ -101,11 +104,11 @@ chọn nhỏ hơn
 advance pointer tương ứng
 ```
 
-bất biến (invariant):
+Bất biến (invariant / 불변식):
 
 > Prefix đầu ra luôn là các phần tử nhỏ nhất đã được quyết định đúng thứ tự từ hai halves.
 
-Nếu halves chưa sorted, kết hợp `O(n)` này không tồn tại. Divide-and-conquer hiệu quả vì recursive work đã tạo ra **structure thuận lợi cho kết hợp**.
+Nếu halves chưa sorted, kết hợp `O(n)` này không tồn tại. Divide-and-conquer hiệu quả vì recursive công việc (work / 작업) đã tạo ra **cấu trúc (structure / 구조) thuận lợi cho kết hợp**.
 
 ## 6. tìm kiếm nhị phân: chia để trị một nhánh
 
@@ -139,7 +142,7 @@ T(n)=T(n-1)+O(n)=O(n^2)
 
 ngẫu nhiên hóa pivot giúp kỳ vọng hành vi tốt hơn, nhưng trường hợp xấu nhất vẫn khác kỳ vọng-case.
 
-## 8. Quickselect: objective quyết định số subproblems cần giải
+## 8. Quickselect: mục tiêu (objective / 목표) quyết định số subproblems cần giải
 
 Selection chỉ cần rank `k`, nên sau partition chỉ recurse vào side chứa `k`.
 
@@ -153,9 +156,9 @@ Sắp xếp toàn bộ sẽ tạo nhiều thông tin thứ tự hơn mức đầ
 
 Lesson:
 
-> Decomposition không có nghĩa phải solve tất cả branches. Solve đúng những subproblems mà objective thật sự cần.
+> Decomposition không có nghĩa phải solve tất cả branches. Solve đúng những subproblems mà mục tiêu (objective / 목표) thật sự cần.
 
-## 9. Closest Pair: kết hợp được cứu bởi geometry
+## 9. Closest Pair: kết hợp được cứu bởi hình học (geometry / 기하학)
 
 Cách đơn giản xét mọi cặp có độ phức tạp `O(n²)`. Cách chia để trị chia các điểm theo trục x, giải hai nửa rồi lấy khoảng cách tốt nhất `d`.
 
@@ -179,7 +182,7 @@ nên:
 T(n)=O(n^{\log_2 3})\approx O(n^{1.585})
 \]
 
-Optimization ở đây không giảm kích thước đầu vào nhiều hơn; nó giảm số branches `a`.
+Tối ưu hóa (optimization / 최적화) ở đây không giảm kích thước đầu vào nhiều hơn; nó giảm số branches `a`.
 
 ## 11. Fast Exponentiation
 
@@ -197,11 +200,11 @@ Mỗi bước halve exponent:
 O(\log n)
 \]
 
-mẫu này xuất hiện trong modular exponentiation, matrix exponentiation và nhảy nhị phân.
+mẫu này xuất hiện trong modular exponentiation, ma trận (matrix / 행렬) exponentiation và nhảy nhị phân.
 
-## 12. Matrix Multiplication và block decomposition
+## 12. phép nhân ma trận (matrix multiplication / 행렬 곱셈) và khối (block / 블록) decomposition
 
-Cách đơn giản matrix multiplication `O(n³)`. Divide matrix thành quadrants giúp tính cục bộ bộ nhớ đệm và mở đường cho các thuật toán giảm số recursive multiplications như Strassen.
+Cách đơn giản phép nhân ma trận (matrix multiplication / 행렬 곱셈) `O(n³)`. Divide ma trận (matrix / 행렬) thành quadrants giúp tính cục bộ bộ nhớ đệm và mở đường cho các thuật toán giảm số recursive multiplications như Strassen.
 
 Strassen giảm 8 recursive products xuống 7:
 
@@ -226,7 +229,7 @@ Dynamic Programming: many branches converge to same state
 
 Question hữu ích:
 
-> Hai histories khác nhau có dẫn tới cùng chính xác tương lai trạng thái (state) không?
+> Hai histories khác nhau có dẫn tới cùng chính xác tương lai trạng thái (state / 상태) không?
 
 Nếu có nhiều convergence, nghĩ tới DP.
 
@@ -246,7 +249,7 @@ Một công thức truy hồi:
 T(n)=T(n/10)+T(9n/10)+O(n)
 \]
 
-vẫn có thể `O(n log n)` dù split không 50/50, vì độ sâu vẫn logarithmic theo constant ratio và total tầng work linear theo reasoning phù hợp.
+vẫn có thể `O(n log n)` dù split không 50/50, vì độ sâu vẫn logarithmic theo constant ratio và total tầng công việc (work / 작업) tuyến tính (linear / 선형) theo lập luận (reasoning / 추론) phù hợp.
 
 Nhưng:
 
@@ -254,7 +257,7 @@ Nhưng:
 T(n)=T(1)+T(n-1)+O(n)
 \]
 
-có độ sâu linear và total quadratic.
+có độ sâu tuyến tính (linear / 선형) và total quadratic.
 
 Balance không cần hoàn hảo; quan trọng là **mỗi branch giảm theo tỷ lệ đủ mạnh hay không**.
 
@@ -272,9 +275,9 @@ pathological depth -> fallback heapsort/introsort
 
 Hybrid thuật toán giữ asymptotic bảo đảm nhưng tối ưu constants theo regime.
 
-## 17. Tail-recursion elimination cho Quicksort stack độ sâu
+## 17. Tail-recursion elimination cho Quicksort ngăn xếp (stack / 스택) độ sâu
 
-Nếu always recurse vào phân vùng nhỏ hơn trước và xử lý phân vùng lớn hơn bằng loop, ngăn xếp lời gọi độ sâu có thể giữ `O(log n)` ngay cả khi partitions không đẹp theo một phía.
+Nếu always recurse vào phân vùng nhỏ hơn trước và xử lý phân vùng lớn hơn bằng vòng lặp (loop / 루프), ngăn xếp lời gọi độ sâu có thể giữ `O(log n)` ngay cả khi partitions không đẹp theo một phía.
 
 mẫu:
 
@@ -284,7 +287,7 @@ recurse smaller side
 loop on larger side
 ```
 
-Ta đang dùng explicit control-flow phép biến đổi để giảm stack usage mà không đổi logic partitioning.
+Ta đang dùng tường minh (explicit / 명시적) control-flow phép biến đổi để giảm ngăn xếp (stack / 스택) usage mà không đổi lô-gic (logic / 논리) partitioning.
 
 ## 18. Parallel chia để trị
 
@@ -309,9 +312,9 @@ load imbalance
 
 Amdahl's Law nhắc rằng phần serial còn lại giới hạn speedup tổng thể.
 
-## 19. Grain Size trong parallel recursion
+## 19. Grain kích thước (size / 크기) trong parallel recursion
 
-Nếu spawn task tới từng subproblem rất nhỏ, bộ lập lịch overhead có thể lớn hơn actual work.
+Nếu spawn tác vụ (task / 작업) tới từng subproblem rất nhỏ, bộ lập lịch overhead có thể lớn hơn actual công việc (work / 작업).
 
 Trong hệ thống thực tế, fork-join thường có threshold:
 
@@ -322,48 +325,48 @@ else:
     split and parallelize
 ```
 
-Threshold là engineering parameter cần benchmark.
+Threshold là kỹ thuật (engineering / 엔지니어링) parameter cần benchmark.
 
-## 20. Work và Span
+## 20. công việc (work / 작업) và Span
 
-Trong parallel thuật toán analysis:
+Trong parallel thuật toán phân tích (analysis / 분석):
 
-- **Work** = tổng các thao tác nếu chạy sequential;
-- **Span / critical đường đi** = longest dependency chain.
+- **công việc (work / 작업)** = tổng các thao tác nếu chạy sequential;
+- **Span / trọng yếu (critical / 중요) đường đi** = longest phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬).
 
 Potential parallelism xấp xỉ:
 
 \[
-Work/Span
+công việc (work / 작업)/Span
 \]
 
-Divide-and-conquer tự nhiên cho mô hình này vì cây đệ quy thể hiện dependency structure rõ ràng.
+Divide-and-conquer tự nhiên cho mô hình này vì cây đệ quy thể hiện phụ thuộc (dependency / 의존성) cấu trúc (structure / 구조) rõ ràng.
 
 ## 21. Cache-oblivious các thuật toán
 
-Recursive decomposition thường xử lý smaller contiguous regions. Khi region đủ nhỏ để fit bộ nhớ đệm, tính cục bộ (locality) tự cải thiện dù thuật toán không biết bộ nhớ đệm size cụ thể.
+Recursive decomposition thường xử lý smaller contiguous regions. Khi region đủ nhỏ để fit bộ nhớ đệm, tính cục bộ (locality) tự cải thiện dù thuật toán không biết bộ nhớ đệm kích thước (size / 크기) cụ thể.
 
-Cache-oblivious matrix các thuật toán, recursive transpose/bố trí và divide-based searching tận dụng tính chất này.
+Cache-oblivious ma trận (matrix / 행렬) các thuật toán, recursive transpose/bố trí và divide-based searching tận dụng tính chất này.
 
-Đây là bridge giữa asymptotic decomposition và phân cấp bộ nhớ.
+Đây là cầu nối (bridge / 브리지) giữa asymptotic decomposition và phân cấp bộ nhớ.
 
 ## 22. In-place chia để trị vs extra bộ đệm
 
 sắp xếp trộn mảng thường cần bộ đệm `O(n)`. Quicksort có thể partition in-place với bộ nhớ phụ trợ chủ yếu ngăn xếp đệ quy.
 
-Nhưng in-place không luôn nhanh hơn: bộ đệm copy có thể sequential/thân thiện với bộ nhớ đệm hơn phức tạp swapping.
+Nhưng in-place không luôn nhanh hơn: bộ đệm bản sao (copy / 복사) có thể sequential/thân thiện với bộ nhớ đệm hơn phức tạp swapping.
 
 độ phức tạp bộ nhớ và bộ nhớ bandwidth phải được xét cùng nhau.
 
 ## 23. ổn định Partition khó hơn unstable partition
 
-Quicksort-style in-place partition thường không ổn định. Nếu hợp đồng đầu ra yêu cầu tính ổn định, kết hợp/partition strategy phức tạp hơn hoặc cần extra bộ nhớ.
+Quicksort-style in-place partition thường không ổn định. Nếu hợp đồng đầu ra yêu cầu tính ổn định, kết hợp/partition chiến lược (strategy / 전략) phức tạp hơn hoặc cần extra bộ nhớ.
 
-Một yêu cầu như “giữ order của equal các khóa” có thể thay đổi cách triển khai landscape dù asymptotic time tương tự.
+Một yêu cầu như “giữ thứ tự (order / 순서) của equal các khóa” có thể thay đổi cách triển khai landscape dù asymptotic thời gian (time / 시간) tương tự.
 
 ## 24. CDQ chia để trị
 
-Trong các bài toán ngoại tuyến, đệ quy có thể chia theo một chiều hoặc theo thứ tự thời gian, còn Fenwick Tree hoặc Segment Tree xử lý một chiều khác.
+Trong các bài toán ngoại tuyến, đệ quy có thể chia theo một chiều hoặc theo thứ tự thời gian, còn Fenwick cây (tree / 트리) hoặc Segment cây (tree / 트리) xử lý một chiều khác.
 
 CDQ thường xuất hiện trong dominance counting hoặc ngoại tuyến các truy vấn. Mô hình tư duy:
 
@@ -374,7 +377,7 @@ combine đếm cross-half contributions bằng data structure trên dimension B
 
 Divide-and-conquer ở đây không còn là “split mảng rồi sắp xếp trộn” đơn giản, mà là khung làm việc để xử lý cross interactions có cấu trúc.
 
-## 25. Divide-and-Conquer DP Optimization
+## 25. Divide-and-Conquer DP tối ưu hóa (optimization / 최적화)
 
 công thức truy hồi dạng:
 
@@ -394,7 +397,7 @@ ta có thể compute midpoint `i`, tìm best `j` trong narrowed interval, rồi 
 
 Kỹ thuật này dùng chia để trị để giảm **miền tìm kiếm của bước chuyển**, không phải để tách bài toán gốc thành hai nửa độc lập.
 
-## 26. Parallel prefix và quét connection
+## 26. Parallel prefix và quét liên kết (connection / 연결)
 
 Một số prefix các thao tác có thể được xây bằng upsweep/downsweep cây, nhìn như divide-and-conquer reduction rồi distribute các kết quả.
 
@@ -402,13 +405,13 @@ Tính kết hợp của phép toán cho phép ghép các kết quả tổng hợ
 
 ## 27. cây contraction và recursive separators
 
-đồ thị/cây các thuật toán nâng cao đôi khi dùng separators: loại một small separator chia problem thành regions nhỏ hơn, solve regions rồi kết hợp.
+đồ thị/cây các thuật toán nâng cao đôi khi dùng separators: loại một small separator chia bài toán (problem / 문제) thành regions nhỏ hơn, solve regions rồi kết hợp.
 
-Centroid decomposition trên cây là ví dụ: chọn centroid chia cây thành các thành phần không lớn hơn n/2, recurse từng thành phần. độ sâu `O(log n)` nhờ size giảm theo tỷ lệ.
+Centroid decomposition trên cây là ví dụ: chọn centroid chia cây thành các thành phần không lớn hơn n/2, recurse từng thành phần. độ sâu `O(log n)` nhờ kích thước (size / 크기) giảm theo tỷ lệ.
 
 Đây là chia để trị trên topology thay vì mảng interval.
 
-## 28. Geometry và spatial partitioning
+## 28. hình học (geometry / 기하학) và spatial partitioning
 
 Việc xây dựng KD-tree, quadtree/octree và BSP cũng mang tinh thần chia để trị: chia không gian thành các vùng rồi đệ quy theo từng vùng.
 
@@ -422,27 +425,27 @@ Nếu có 2 halves nhưng kết hợp `O(n²)` mỗi tầng:
 T(n)=2T(n/2)+O(n^2)=O(n^2)
 \]
 
-Divide không tự cứu complexity. Đôi khi kết hợp term dominate hoàn toàn.
+Divide không tự cứu độ phức tạp (complexity / 복잡도). Đôi khi kết hợp term dominate hoàn toàn.
 
-Khi thiết kế, hãy tính kết hợp ngay từ đầu thay vì chỉ vui vì “đã chia problem làm đôi”.
+Khi thiết kế, hãy tính kết hợp ngay từ đầu thay vì chỉ vui vì “đã chia bài toán (problem / 문제) làm đôi”.
 
 ## 30. dạng lỗi: hidden overlap
 
-Hai subproblems nhìn khác đầu vào index nhưng thực chất tính lại cùng trạng thái nội bộ. Nếu overlap lớn, cây đệ quy phình exponential.
+Hai subproblems nhìn khác đầu vào chỉ mục (index / 인덱스) nhưng thực chất tính lại cùng trạng thái nội bộ. Nếu overlap lớn, cây đệ quy phình exponential.
 
 Memoization có thể biến cây thành DAG computation.
 
-Đây là lý do phân biệt **subproblem identity** chứ không chỉ argument syntax.
+Đây là lý do phân biệt **subproblem định danh (identity / 식별자)** chứ không chỉ argument cú pháp (syntax / 문법).
 
 ## 31. dạng lỗi: bad partition adversarially
 
 Quicksort pivot đầu tiên trên already-mảng đã sắp xếp có thể tạo trường hợp xấu nhất nếu không có randomization/hybrid fallback.
 
-Trong hệ thống thực tế, thuật toán phải xét đối kháng đầu vào nếu API public. Randomization, median sampling hoặc introspective fallback giúp kiểm soát tail.
+Trong hệ thống thực tế, thuật toán phải xét đối kháng đầu vào nếu API công khai (public / 공개). Randomization, median sampling hoặc introspective fallback giúp kiểm soát tail.
 
 ## 32. kiểm thử chia để trị
 
-Các test nên nhắm vào các ranh giới nơi recursion chia:
+Các kiểm thử (test / 테스트) nên nhắm vào các ranh giới nơi recursion chia:
 
 ```text
 n = 0,1,2
@@ -461,7 +464,7 @@ Kiểm thử vi sai (kiểm thử vi sai) với thuật toán vét cạn hoặc 
 Một chứng minh điển hình dùng quy nạp mạnh theo kích thước đầu vào:
 
 1. trường hợp cơ sở đúng;
-2. assume thuật toán đúng cho mọi size nhỏ hơn `n`;
+2. assume thuật toán đúng cho mọi kích thước (size / 크기) nhỏ hơn `n`;
 3. prove divide tạo hợp lệ subproblems nhỏ hơn;
 4. recursive các kết quả đúng theo quy nạp hypothesis;
 5. prove kết hợp biến correct subresults thành correct whole kết quả.
@@ -486,8 +489,10 @@ pathological input có fallback không?
 
 ## Mô hình tư duy
 
-> chia để trị biến một toàn cục problem thành một **cây đệ quy of smaller obligations**. hiệu năng được quyết định bởi ba thứ: hệ số phân nhánh, tốc độ giảm size và kết hợp chi phí.
+> chia để trị biến một toàn cục bài toán (problem / 문제) thành một **cây đệ quy of smaller obligations**. hiệu năng được quyết định bởi ba thứ: hệ số phân nhánh, tốc độ giảm kích thước (size / 크기) và kết hợp chi phí.
 
 Nếu subproblems độc lập, decomposition mở đường cho recursion, parallelism và tính cục bộ bộ nhớ đệm. Nếu overlap mạnh, nghĩ DP. Nếu kết hợp hoặc partition xấu, khung làm việc không tự mang lại speedup.
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [Recursion & Backtracking](./02_recursion_and_backtracking.md), [Dynamic Programming](./05_dynamic_programming.md), [Selection/Top-K](./06_selection_and_top_k.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 searching](./00_searching.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -2,9 +2,9 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **소프트웨어 공학 및 실무 (Software Engineering & Practice)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -20,18 +20,20 @@ Mục đích của bài này là hiểu **305 - 308. IP 주소 체계 (IPv4 vs I
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** và nối nó với **소프트웨어 공학 및 실무 (Software Engineering & Practice)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 305 - 308. IP 주소 체계 (IPv4 vs IPv6)
 
-Ở bước 52/77, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** xuất hiện như phần tiếp nối của **252. 다중 if문 (Multiple if Statement)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 52/78, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** xuất hiện như phần tiếp nối của **252. 다중 if문 (Multiple if Statement)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **IPv4**, **IPv6**, **IPv6의 특징**, **IPv6 전송 방식** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - **IPv4**: 32비트 (8비트씩 4부분). 클래스 A~E로 나뉨.
-- **IPv6**: 128비트 (16비트씩 8부분). 콜론(`:`)으로 구분, 16진수 사용. 
+- **IPv6**: 128비트 (16비트씩 8부분). 콜론(`:`)으로 구분, 16진수 사용.
 - **IPv6의 특징**: 무한대에 가까운 주소, 보안 강화, 패킷 크기 확장, PnP(자동 설정).
 - **IPv6 전송 방식**: 유니캐스트(1:1), 멀티캐스트(1:N), 애니캐스트(가장 가까운 1:1).
 
@@ -40,4 +42,4 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 
 ---
 
-Như vậy, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 공학 및 실무 (Software Engineering & Practice)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

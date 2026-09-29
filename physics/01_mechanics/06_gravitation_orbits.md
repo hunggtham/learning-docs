@@ -1,5 +1,8 @@
 # Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo
 
+> **Mạch đọc:** Đọc **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Định luật hấp dẫn phổ quát** sang **Vì sao xuất hiện 1/r²?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hấp dẫn là một trong những ví dụ đẹp nhất cho cách Vật lý nối nhiều tầng mô hình: từ lực nghịch đảo bình phương, trường và thế năng đến quỹ đạo, thủy triều, chuyển quỹ đạo và cuối cùng là giới hạn nơi thuyết tương đối rộng trở nên cần thiết.
 
 ## Định luật hấp dẫn phổ quát
@@ -309,7 +312,7 @@ ta có độ biến thiên gần đúng
 |\Delta g|\sim\frac{2GM}{r^3}\Delta r.
 ```
 
-Đây là nguồn của lực thủy triều. Thủy triều đại dương, biến dạng vệ tinh và hiện tượng kéo dài gần vật thể hấp dẫn mạnh đều liên quan đến gradient của trường hấp dẫn chứ không chỉ độ lớn của `g` tại một điểm.
+Đây là nguồn của lực thủy triều. Thủy triều đại dương, biến dạng vệ tinh và hiện tượng kéo dài gần vật thể hấp dẫn mạnh đều liên quan đến độ dốc (gradient / 기울기) của trường hấp dẫn chứ không chỉ độ lớn của `g` tại một điểm.
 
 ## Điểm Lagrange
 
@@ -319,7 +322,7 @@ Trong hệ hai vật lớn quay quanh nhau, có những vị trí trong hệ quy
 
 ## Gravity assist
 
-Khi tàu vũ trụ bay qua một hành tinh đang chuyển động quanh Mặt Trời, trong hệ quy chiếu hành tinh tốc độ xa trước và sau tương tác có thể gần bằng nhau, nhưng hướng vận tốc đổi. Khi chuyển lại sang hệ quy chiếu Mặt Trời, vector vận tốc của hành tinh được cộng vào khác nhau trước và sau, nên tàu có thể tăng hoặc giảm năng lượng quỹ đạo quanh Mặt Trời.
+Khi tàu vũ trụ bay qua một hành tinh đang chuyển động quanh Mặt Trời, trong hệ quy chiếu hành tinh tốc độ xa trước và sau tương tác có thể gần bằng nhau, nhưng hướng vận tốc đổi. Khi chuyển lại sang hệ quy chiếu Mặt Trời, véc-tơ (vector / 벡터) vận tốc của hành tinh được cộng vào khác nhau trước và sau, nên tàu có thể tăng hoặc giảm năng lượng quỹ đạo quanh Mặt Trời.
 
 Năng lượng không được tạo ra miễn phí; có trao đổi một lượng rất nhỏ với năng lượng quỹ đạo của hành tinh.
 
@@ -353,9 +356,9 @@ Hấp dẫn Newton hoạt động rất tốt khi trường yếu và vận tố
 
 Trong các miền này cần thuyết tương đối rộng.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Quỹ đạo là chuyển động rơi tự do có mômen động lượng. Năng lượng quyết định hệ liên kết hay không và thang kích thước quỹ đạo; mômen động lượng quyết định hình học quay quanh nguồn; gradient của trường tạo hiệu ứng thủy triều. Cơ học quỹ đạo là bài toán tổ chức các định luật bảo toàn, không phải ghi nhớ từng công thức vệ tinh riêng lẻ.
+Quỹ đạo là chuyển động rơi tự do có mômen động lượng. Năng lượng quyết định hệ liên kết hay không và thang kích thước quỹ đạo; mômen động lượng quyết định hình học quay quanh nguồn; độ dốc (gradient / 기울기) của trường tạo hiệu ứng thủy triều. Cơ học quỹ đạo là bài toán tổ chức các định luật bảo toàn, không phải ghi nhớ từng công thức vệ tinh riêng lẻ.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -375,8 +378,10 @@ Không. Vận tốc ngang là thành phần quyết định để liên tục r�
 
 Không nhất thiết. Khi rơi xuống quỹ đạo tròn thấp hơn, vận tốc quỹ đạo có thể tăng dù tổng cơ năng giảm.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Động lực học Newton](01_newton_laws_dynamics.md), [Công và năng lượng](03_work_energy_power.md), [Chuyển động quay và mômen động lượng](05_rotation_rigid_body.md).
 
 **Liên hệ tiếp:** [Cơ học giải tích](08_analytical_mechanics.md), [Thuyết tương đối rộng](../07_relativity/01_general_relativity.md), [Vật lý sao](../11_astrophysics_cosmology/00_stars_compact_objects.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

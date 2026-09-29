@@ -1,8 +1,11 @@
-# LG CNS Case Lab — SI/SM, cloud, AX và kinh tế dự án
+# LG CNS trường hợp (case / 사례) Lab — SI/SM, cloud, AX và kinh tế dự án
+
+> **Mạch đọc:** Đặt **LG CNS trường hợp (case / 사례) Lab — SI/SM, cloud, AX và kinh tế dự án** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. SI và SM là hai cỗ máy kinh tế khác nhau** sang **2. Kinh tế của nhân lực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 LG CNS là một trường hợp phù hợp để học cách đọc một công ty CNTT doanh nghiệp trong bối cảnh Hàn Quốc. Mô hình kinh doanh không giống SaaS thuần túy: một phần doanh thu đến từ SI theo dự án, một phần từ SM hoặc dịch vụ quản lý định kỳ, cloud–hạ tầng, nhà máy/logistics thông minh và các dịch vụ số–AI. Vì vậy chất lượng tăng trưởng doanh thu thay đổi rất nhiều tùy cơ cấu mảng kinh doanh.
 
-LG CNS mô tả danh mục gồm Cloud & AI, Smart Engineering và Digital Business Service; trong đó SI & SM truyền thống vẫn là nền tảng quan trọng. Năm tài chính 2025 công ty công bố doanh thu năm vượt 6 nghìn tỷ KRW, nhưng case này không dùng quy mô để kết luận chất lượng. Mục tiêu là hiểu **mức sử dụng nhân lực + rủi ro dự án + doanh thu dịch vụ lặp lại + cơ cấu IP/cloud** cùng tạo ra lợi nhuận như thế nào.
+LG CNS mô tả danh mục gồm Cloud & AI, Smart kỹ thuật (engineering / 엔지니어링) và Digital nghiệp vụ (business / 비즈니스) dịch vụ (service / 서비스); trong đó SI & SM truyền thống vẫn là nền tảng quan trọng. Năm tài chính 2025 công ty công bố doanh thu năm vượt 6 nghìn tỷ KRW, nhưng trường hợp (case / 사례) này không dùng quy mô để kết luận chất lượng. Mục tiêu là hiểu **mức sử dụng nhân lực + rủi ro dự án + doanh thu dịch vụ lặp lại + cơ cấu IP/cloud** cùng tạo ra lợi nhuận như thế nào.
 
 ## 1. SI và SM là hai cỗ máy kinh tế khác nhau
 
@@ -13,7 +16,7 @@ LG CNS mô tả danh mục gồm Cloud & AI, Smart Engineering và Digital Busin
 Một mô hình SI theo nhân lực:
 
 \[
-Revenue_{SI} \approx Billable\ Resources \times Utilization \times Billing\ Rate
+Revenue_{SI} \approx Billable\ Resources \times Utilization \times Billing\ tỷ lệ (rate / 비율)
 \]
 
 Ngoài ra còn có hợp đồng giá cố định.
@@ -21,7 +24,7 @@ Ngoài ra còn có hợp đồng giá cố định.
 Một mô hình SM đơn giản:
 
 \[
-Revenue_{SM} \approx Managed\ Scope \times Contract\ Rate \times Contract\ Duration
+Revenue_{SM} \approx Managed\ phạm vi (scope / 범위) \times đặc tả hợp đồng (contract / 계약)\ tỷ lệ (rate / 비율) \times đặc tả hợp đồng (contract / 계약)\ Duration
 \]
 
 SI có cơ hội lợi nhuận từ dự án chuyển đổi lớn nhưng rủi ro phạm vi và chi phí cao. SM thường ổn định hơn nhưng tốc độ tăng trưởng và biên lợi nhuận có thể thấp nếu phụ thuộc nhiều vào lao động.
@@ -269,7 +272,7 @@ Hãy tìm doanh thu theo nhóm kinh doanh, doanh thu với bên liên quan và c
 
 Nếu công ty chỉ công bố phân khúc rộng, có thể dùng thuyết minh và tài liệu IR để dựng lại cơ cấu kinh doanh nhưng phải phân biệt rõ **nhận định của ban lãnh đạo** với **sự kiện đã được kiểm toán**.
 
-## 16. Logic định giá
+## 16. lô-gic (logic / 논리) định giá
 
 Công ty dịch vụ CNTT không nên được định giá như SaaS thuần túy chỉ vì có AI hoặc cloud. Cơ cấu doanh thu quyết định khả năng mở rộng.
 
@@ -291,7 +294,7 @@ Việc tăng hệ số định giá chỉ hợp lý nếu cơ cấu kinh tế th
 
 Luận điểm tích cực có thể thất bại nếu doanh thu AI/cloud chủ yếu là phần chi phí chuyển tiếp biên thấp, tỷ lệ sử dụng nhân lực giảm, chi phí lương và thầu phụ tăng nhanh hơn đơn giá tính phí, xuất hiện dự án giá cố định thua lỗ lớn hoặc năng lực cạnh tranh bên ngoài yếu. Luận điểm tiêu cực có thể thất bại nếu nền doanh thu SM/dịch vụ quản lý rất ổn định, nền tảng sở hữu riêng mở rộng tốt, năng suất AI được giữ lại trong biên lợi nhuận và cơ cấu khách hàng bên ngoài tăng.
 
-## 18. Bài tập cuối case
+## 18. Bài tập cuối trường hợp (case / 사례)
 
 Tạo ma trận danh mục dự án:
 
@@ -300,7 +303,7 @@ Tạo ma trận danh mục dự án:
 | SI giá cố định | mốc / tiến độ | vượt phạm vi / vượt chi phí | biến động | thấp–trung bình |
 | SI T&M | giờ × đơn giá | tỷ lệ sử dụng / đơn giá | tương đối trực tiếp | thấp |
 | SM | hợp đồng định kỳ | gia hạn / chi phí lao động | ổn định | trung bình |
-| Cloud managed service | mức sử dụng / hợp đồng | chi phí vendor / cạnh tranh | định kỳ | trung bình–cao |
+| Cloud managed dịch vụ (service / 서비스) | mức sử dụng / hợp đồng | chi phí vendor / cạnh tranh | định kỳ | trung bình–cao |
 | Phần mềm / AI sở hữu riêng | giấy phép / mức sử dụng | khả năng chấp nhận sản phẩm | định kỳ | cao nếu có IP thật |
 
 Sau đó ánh xạ doanh thu của công ty vào ma trận. Nếu thông tin công bố không đủ, hãy ghi rõ mức không chắc chắn thay vì đoán.

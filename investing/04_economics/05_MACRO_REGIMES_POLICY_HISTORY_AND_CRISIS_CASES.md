@@ -1,6 +1,8 @@
 # Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng
 
-> Lịch sử kinh tế hữu ích khi được dùng như một **thư viện cơ chế**, không phải danh sách năm và sự kiện để học thuộc. Chương này tổ chức các giai đoạn lớn theo cách: điều gì đã tích tụ, cú sốc nào kích hoạt, bảng cân đối nào chịu áp lực, policy phản ứng thế nào và giá tài sản truyền dẫn ra sao.
+> **Mạch đọc:** Đặt **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Regime là gì?** sang **2. Goldilocks**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+> Lịch sử kinh tế hữu ích khi được dùng như một **thư viện cơ chế**, không phải danh sách năm và sự kiện để học thuộc. Chương này tổ chức các giai đoạn lớn theo cách: điều gì đã tích tụ, cú sốc nào kích hoạt, bảng cân đối nào chịu áp lực, chính sách (policy / 정책) phản ứng thế nào và giá tài sản truyền dẫn ra sao.
 
 # Phần I — Tư duy theo chế độ vĩ mô
 
@@ -28,7 +30,7 @@ Growth ổn hoặc cải thiện
 Inflation giảm / ổn định
 ```
 
-Trạng thái này thường dễ chịu cho tài sản rủi ro vì earnings có thể tốt trong khi discount rate không chịu áp lực lớn.
+Trạng thái này thường dễ chịu cho tài sản rủi ro vì earnings có thể tốt trong khi discount tỷ lệ (rate / 비율) không chịu áp lực lớn.
 
 Nhưng valuation và positioning vẫn quyết định kết quả thực tế.
 
@@ -60,7 +62,7 @@ Growth ↓
 Inflation ↑
 ```
 
-Đây là trạng thái khó cho policy vì nới lỏng hỗ trợ tăng trưởng có thể làm inflation xấu hơn, trong khi tightening chống inflation làm growth yếu thêm.
+Đây là trạng thái khó cho chính sách (policy / 정책) vì nới lỏng hỗ trợ tăng trưởng có thể làm inflation xấu hơn, trong khi tightening chống inflation làm growth yếu thêm.
 
 ## 5. Deflationary bust
 
@@ -72,13 +74,13 @@ Inflation ↓
 Credit ↓
 ```
 
-Trong trạng thái này, deleveraging và demand destruction có thể quan trọng hơn mức policy rate ban đầu.
+Trong trạng thái này, deleveraging và demand destruction có thể quan trọng hơn mức chính sách (policy / 정책) tỷ lệ (rate / 비율) ban đầu.
 
 # Phần II — Soft landing và hard landing
 
 ## 6. Soft landing
 
-Soft landing là kịch bản inflation giảm mà unemployment và output không suy yếu quá mạnh.
+Soft landing là kịch bản inflation giảm mà unemployment và đầu ra (output / 출력) không suy yếu quá mạnh.
 
 Nó thường yêu cầu:
 
@@ -103,13 +105,13 @@ mạnh hơn dự kiến.
 
 ## 8. No landing
 
-“No landing” thường được dùng khi growth tiếp tục rất mạnh và inflation không giảm đủ, khiến policy phải giữ chặt lâu hơn.
+“No landing” thường được dùng khi growth tiếp tục rất mạnh và inflation không giảm đủ, khiến chính sách (policy / 정책) phải giữ chặt lâu hơn.
 
 Đây là cách mô tả thị trường, không phải một khái niệm kinh tế chính thức.
 
-# Phần III — Policy error
+# Phần III — chính sách (policy / 정책) lỗi (error / 오류)
 
-## 9. Policy error không nên được kết luận bằng hindsight
+## 9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight
 
 Một quyết định chỉ nên được đánh giá bằng thông tin có tại thời điểm đó.
 
@@ -122,11 +124,11 @@ Reaction function hợp lý không?
 Policy transmission có độ trễ nào?
 ```
 
-Không nên dùng outcome sau này để giả định quyết định lúc trước “rõ ràng sai”.
+Không nên dùng kết quả (outcome / 결과) sau này để giả định quyết định lúc trước “rõ ràng sai”.
 
 ## 10. Tightening quá ít
 
-Nếu policy quá dễ trong khi demand vượt capacity:
+Nếu chính sách (policy / 정책) quá dễ trong khi demand vượt sức chứa (capacity / 용량):
 
 ```text
 Inflation Persistence ↑
@@ -136,7 +138,7 @@ Inflation Persistence ↑
 
 ## 11. Tightening quá nhiều
 
-Nếu policy giữ chặt quá lâu:
+Nếu chính sách (policy / 정책) giữ chặt quá lâu:
 
 ```text
 Refinancing Cost ↑
@@ -152,10 +154,10 @@ Refinancing Cost ↑
 Thập niên 1970 kết hợp:
 
 - oil shock;
-- supply constraints;
+- supply các ràng buộc (constraints / 제약조건들);
 - wage-price dynamics;
 - inflation expectations;
-- policy credibility issues.
+- chính sách (policy / 정책) credibility issues.
 
 Bài học quan trọng là inflation supply-driven vẫn có thể trở nên bền nếu kỳ vọng và wage setting thích nghi.
 
@@ -165,13 +167,13 @@ Fed dưới Paul Volcker chấp nhận tightening mạnh để khôi phục cred
 
 Chi phí là recession và unemployment cao, nhưng inflation expectations cuối cùng giảm.
 
-Bài học: policy credibility có giá trị kinh tế nhưng việc khôi phục nó có thể rất đau đớn.
+Bài học: chính sách (policy / 정책) credibility có giá trị kinh tế nhưng việc khôi phục nó có thể rất đau đớn.
 
 # Phần V — Nhật Bản sau bong bóng tài sản
 
 ## 14. Bong bóng cuối thập niên 1980
 
-Property và equity prices tăng mạnh cùng credit expansion.
+Thuộc tính (property / 속성) và equity prices tăng mạnh cùng credit expansion.
 
 Khi bubble vỡ:
 
@@ -192,7 +194,7 @@ Ngay cả lãi suất thấp cũng không tạo credit demand mạnh nếu priva
 
 Deflation làm real debt burden tăng và có thể khuyến khích trì hoãn spending.
 
-Bài học là lãi suất danh nghĩa gần 0 không tự động nghĩa policy đủ dễ.
+Bài học là lãi suất danh nghĩa gần 0 không tự động nghĩa chính sách (policy / 정책) đủ dễ.
 
 # Phần VI — Asian Financial Crisis 1997
 
@@ -203,10 +205,10 @@ Nhiều nền kinh tế có:
 - short-term foreign debt;
 - currency mismatch;
 - fixed/managed FX;
-- reserve constraints;
+- reserve các ràng buộc (constraints / 제약조건들);
 - credit growth cao.
 
-## 18. Trigger và feedback
+## 18. Trigger và phản hồi (feedback / 피드백)
 
 Sau khi xác định vulnerability trước khủng hoảng châu Á, phần này chỉ ra trigger và vòng phản hồi làm cú sốc tỷ giá chuyển thành khủng hoảng nợ USD và ngân hàng. Hãy đọc sơ đồ theo từng mũi tên để xác định điểm can thiệp.
 
@@ -219,7 +221,7 @@ Capital Outflow
 → Corporate / Bank Stress ↑
 ```
 
-Đây là ví dụ điển hình của sudden stop và balance-sheet effect.
+Đây là ví dụ điển hình của sudden stop và balance-sheet tác động (effect / 효과).
 
 ## 19. Bài học
 
@@ -229,7 +231,7 @@ Không chỉ nhìn current-account deficit. Cần xem:
 - maturity;
 - reserve adequacy;
 - banking exposure;
-- foreign investor base.
+- foreign investor cơ sở (base / 기반).
 
 # Phần VII — Dot-com bubble
 
@@ -250,13 +252,13 @@ Price Paid vẫn có thể sai
 Khi capital quá dễ:
 
 - nhiều công ty mới xuất hiện;
-- capacity tăng;
+- sức chứa (capacity / 용량) tăng;
 - competition tăng;
 - future returns giảm.
 
 Một narrative đúng có thể tự tạo supply làm return kém đi.
 
-# Phần VIII — Global Financial Crisis 2008
+# Phần VIII — toàn cục (global / 전역) Financial Crisis 2008
 
 ## 22. Housing và leverage
 
@@ -288,16 +290,16 @@ Housing decline truyền tới bank capital, lending standards, household wealth
 
 Khủng hoảng tài chính trở thành recession thực.
 
-## 26. Policy response
+## 26. chính sách (policy / 정책) phản hồi (response / 응답)
 
 Phản ứng gồm:
 
 - lender-of-last-resort facilities;
 - bank recapitalization;
 - guarantees;
-- rate cuts;
+- tỷ lệ (rate / 비율) cuts;
 - QE;
-- fiscal support.
+- fiscal hỗ trợ (support / 지원).
 
 Mỗi công cụ giải quyết một phần vấn đề khác nhau.
 
@@ -309,7 +311,7 @@ Các nước dùng cùng EUR nhưng không chia sẻ hoàn toàn fiscal balance 
 
 Điều này tạo rủi ro spread giữa sovereigns.
 
-## 28. Sovereign–bank doom loop
+## 28. Sovereign–bank doom vòng lặp (loop / 루프)
 
 Doom loop nối rủi ro chủ quyền với vốn và funding của ngân hàng. Khi một phía suy yếu, phía kia mất giá trị hoặc khả năng cho vay, rồi feedback quay lại làm vị thế tài khóa xấu hơn.
 
@@ -324,7 +326,7 @@ Sovereign Risk ↑
 
 ## 29. Fragmentation
 
-Nếu lãi suất truyền dẫn khác nhau quá lớn giữa các quốc gia, monetary policy chung khó hoạt động đồng nhất.
+Nếu lãi suất truyền dẫn khác nhau quá lớn giữa các quốc gia, monetary chính sách (policy / 정책) chung khó hoạt động đồng nhất.
 
 # Phần X — COVID shock
 
@@ -335,11 +337,11 @@ COVID tạo đồng thời:
 - supply shutdown;
 - demand collapse ở dịch vụ;
 - liquidity stress;
-- global trade disruption.
+- toàn cục (global / 전역) trade disruption.
 
-## 31. Policy response
+## 31. chính sách (policy / 정책) phản hồi (response / 응답)
 
-Monetary easing kết hợp fiscal transfer rất lớn giúp household income và market liquidity phục hồi nhanh hơn nhiều cuộc suy thoái trước.
+Monetary easing kết hợp fiscal transfer rất lớn giúp household income và thị trường (market / 시장) liquidity phục hồi nhanh hơn nhiều cuộc suy thoái trước.
 
 ## 32. Reopening
 
@@ -360,37 +362,37 @@ Một cú sốc có thể thay đổi bản chất theo thời gian. Phân tích
 
 ## 34. Từ “temporary” tới persistence
 
-Ban đầu inflation tập trung ở goods và supply chain, nhưng sau đó mở rộng sang services và wages.
+Ban đầu inflation tập trung ở goods và supply chuỗi (chain / 사슬), nhưng sau đó mở rộng sang services và wages.
 
-Khi composition thay đổi, reaction function cũng thay đổi.
+Khi composition thay đổi, reaction hàm (function / 함수) cũng thay đổi.
 
 ## 35. Rapid hikes
 
 Central banks tăng lãi suất nhanh để kéo demand và expectations xuống.
 
-Tác động truyền không đồng đều do nhiều khoản nợ fixed rate chỉ repricing khi đáo hạn.
+Tác động truyền không đồng đều do nhiều khoản nợ fixed tỷ lệ (rate / 비율) chỉ repricing khi đáo hạn.
 
 # Phần XII — Banking stress do duration
 
-## 36. Duration loss
+## 36. Duration mất mát (loss / 손실)
 
-Nếu ngân hàng giữ long-duration bonds khi rates tăng mạnh, market value giảm.
+Nếu ngân hàng giữ long-duration bonds khi rates tăng mạnh, giá trị thị trường (market value / 시장 가치) giảm.
 
 Lỗ chưa thực hiện trở thành vấn đề lớn khi deposit outflow buộc bán tài sản.
 
 ## 37. Deposit concentration
 
-Bank có nhiều uninsured corporate deposits có risk run khác retail bank phân tán.
+Bank có nhiều uninsured corporate deposits có rủi ro (risk / 위험) run khác retail bank phân tán.
 
 Digital banking làm tốc độ run nhanh hơn.
 
 ## 38. Liquidity vs solvency
 
-Central-bank facility có thể giải quyết cash timing nhưng không xóa economic loss nếu tài sản thực sự không đủ giá trị.
+Central-bank facility có thể giải quyết cash timing nhưng không xóa economic mất mát (loss / 손실) nếu tài sản thực sự không đủ giá trị.
 
 # Phần XIII — Sovereign debt stress
 
-## 39. Debt level không đủ
+## 39. Debt mức (level / 수준) không đủ
 
 Cần xem:
 
@@ -406,13 +408,13 @@ Gross Financing Need
 
 ## 40. Maturity tạo độ trễ
 
-Nợ dài fixed-rate làm chi phí lãi tăng chậm hơn khi market yield tăng.
+Nợ dài fixed-rate làm chi phí lãi tăng chậm hơn khi thị trường (market / 시장) yield tăng.
 
 Nợ ngắn làm pressure truyền nhanh.
 
 ## 41. Domestic vs foreign currency debt
 
-Quốc gia vay bằng đồng tiền mình kiểm soát có risk structure khác quốc gia nợ nhiều bằng foreign currency.
+Quốc gia vay bằng đồng tiền mình kiểm soát có rủi ro (risk / 위험) cấu trúc (structure / 구조) khác quốc gia nợ nhiều bằng foreign currency.
 
 Không nên dùng một debt/GDP threshold cho mọi quốc gia.
 
@@ -433,13 +435,13 @@ FX Pressure ↑
 
 ## 43. Oil shock và stagflation
 
-Supply-driven oil shock có thể kéo inflation lên nhưng growth xuống, tạo policy trade-off khó.
+Supply-driven oil shock có thể kéo inflation lên nhưng growth xuống, tạo chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프) khó.
 
-# Phần XV — China property và rebalancing
+# Phần XV — China thuộc tính (property / 속성) và rebalancing
 
 ## 44. Property-led growth
 
-Property ảnh hưởng:
+Thuộc tính (property / 속성) ảnh hưởng:
 
 - household wealth;
 - local-government finance;
@@ -460,7 +462,7 @@ Land Sales ↓
 
 ## 46. Rebalancing
 
-Chuyển từ property/investment sang consumption hoặc high-tech manufacturing có thể thay đổi các nước và ngành hưởng lợi từ China growth.
+Chuyển từ thuộc tính (property / 속성)/investment sang consumption hoặc high-tech manufacturing có thể thay đổi các nước và ngành hưởng lợi từ China growth.
 
 # Phần XVI — Regime checklist
 
@@ -484,7 +486,7 @@ Demand hay Supply?
 Expectations anchored không?
 ```
 
-## 49. Policy
+## 49. chính sách (policy / 정책)
 
 Policy cần được đọc ở cả mức hiện tại, đường đi kỳ vọng và reaction function. Một mức lãi suất giống nhau có thể mang ý nghĩa nới lỏng hoặc thắt chặt tùy output gap và lạm phát.
 
@@ -554,7 +556,7 @@ Vulnerability
 = Crisis Severity
 ```
 
-## 55. Tách first-order và second-order effect
+## 55. Tách first-order và second-order tác động (effect / 효과)
 
 First-order là tác động trực tiếp. Second-order là phản ứng của người khác với tác động đó.
 
@@ -606,7 +608,7 @@ Bear:
 
 ## 58. Dấu hiệu chuyển regime
 
-Regime thay đổi khi nhiều biến cùng xác nhận, không phải vì một release đơn lẻ.
+Regime thay đổi khi nhiều biến cùng xác nhận, không phải vì một bản phát hành (release / 릴리스) đơn lẻ.
 
 Ví dụ:
 
@@ -634,4 +636,6 @@ Currency Mismatch
 Credit Cycle
 ```
 
-Mục tiêu không phải nói “lần này giống 1970s” hay “giống 2008”, mà xác định **vulnerability nào đang tồn tại, trigger nào có thể kích hoạt và feedback nào có thể khuếch đại cú sốc**.
+Mục tiêu không phải nói “lần này giống 1970s” hay “giống 2008”, mà xác định **vulnerability nào đang tồn tại, trigger nào có thể kích hoạt và phản hồi (feedback / 피드백) nào có thể khuếch đại cú sốc**.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

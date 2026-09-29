@@ -1,4 +1,7 @@
-# Korean Culture — Master Knowledge Book
+# Korean Culture — Master kiến thức (knowledge / 지식) Book
+
+> **Mạch đọc:** Đọc **Korean Culture — Master kiến thức (knowledge / 지식) Book** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mục tiêu của bộ sách** sang **Quy ước ngôn ngữ Việt–Hàn–Anh**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Bộ tài liệu Markdown chuyên sâu bằng tiếng Việt về **Văn hoá Hàn Quốc (한국문화 / Korean Culture)**, được tổ chức theo **quan hệ phụ thuộc khái niệm (conceptual dependency)** và **tư duy từ nguyên lý đầu tiên (First-Principles Thinking)**, không theo Beginner → Intermediate → Advanced.
 
@@ -8,7 +11,7 @@ Bản kiểm toán mức độ bao phủ dùng cho các vòng nâng cấp tiếp
 
 ## Mục tiêu của bộ sách
 
-Bộ này không được viết như một bộ sưu tập phép lịch sự, cẩm nang du lịch hay tài liệu tóm tắt về “người Hàn thường làm gì”. Mục tiêu là giải thích **vì sao một khuôn mẫu văn hoá (pattern) xuất hiện, ràng buộc (constraint) nào duy trì nó, thiết chế (institution) nào giúp nó mở rộng quy mô, công nghệ nào làm nó đổi nghĩa và trong bối cảnh nào khuôn mẫu đó không còn đúng**.
+Bộ này không được viết như một bộ sưu tập phép lịch sự, cẩm nang du lịch hay tài liệu tóm tắt về “người Hàn thường làm gì”. Mục tiêu là giải thích **vì sao một khuôn mẫu văn hoá (pattern) xuất hiện, ràng buộc (constraint / 제약조건) nào duy trì nó, thiết chế (institution) nào giúp nó mở rộng quy mô, công nghệ nào làm nó đổi nghĩa và trong bối cảnh nào khuôn mẫu đó không còn đúng**.
 
 Vì vậy mỗi chủ đề cố gắng đi theo chuỗi:
 
@@ -22,21 +25,27 @@ lịch sử / sinh thái
 → phản hồi / thất bại / thích nghi
 ```
 
-Cách tiếp cận này giúp tránh **định kiến khái quát (stereotype)** và cho phép người đọc cập nhật **mô hình tư duy (mental model)** khi gặp người, công ty, thế hệ hoặc vùng miền khác với ví dụ trong sách.
+Cách tiếp cận này giúp tránh **định kiến khái quát (stereotype)** và cho phép người đọc cập nhật **mô hình tư duy (mental model / 사고 모델)** khi gặp người, công ty, thế hệ hoặc vùng miền khác với ví dụ trong sách.
+
+
+> **Chuyển mạch:** Từ **Mục tiêu của bộ sách**, ta sang **Quy ước ngôn ngữ Việt–Hàn–Anh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Quy ước ngôn ngữ Việt–Hàn–Anh
 
 Tiếng Việt là ngôn ngữ giải thích chính. Thuật ngữ tiếng Anh chỉ đóng vai trò bổ sung nghĩa hoặc hỗ trợ tra cứu. Ví dụ nên viết `cơ chế (mechanism)`, `ràng buộc (constraint)`, `phản hồi (feedback)` thay vì chèn trực tiếp từ tiếng Anh vào giữa câu tiếng Việt.
 
-Nếu một ý đang được diễn đạt bằng cả câu hoặc cụm dài tiếng Anh, nội dung sẽ được viết lại thành một câu tiếng Việt tự nhiên; chỉ giữ lại một vài **từ khoá (keyword)** tiếng Anh thực sự hữu ích trong ngoặc. Không dịch máy móc tên riêng, tên file, code, API, công thức hoặc những thuật ngữ kỹ thuật mà bản gốc tiếng Anh cần được giữ để tra cứu.
+Nếu một ý đang được diễn đạt bằng cả câu hoặc cụm dài tiếng Anh, nội dung sẽ được viết lại thành một câu tiếng Việt tự nhiên; chỉ giữ lại một vài **từ khoá (keyword)** tiếng Anh thực sự hữu ích trong ngoặc. Không dịch máy móc tên riêng, tên tệp (file / 파일), mã (code / 코드), API, công thức hoặc những thuật ngữ kỹ thuật mà bản gốc tiếng Anh cần được giữ để tra cứu.
 
 Tên người, địa điểm, triều đại, sự kiện, công trình và văn bản quan trọng được ghi lần đầu theo mẫu **Tên tiếng Việt (한국어 원문 / English name)**. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Cao Ly (고려 / Goryeo)** và **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**.
 
 Xem bảng quy tắc và tên chuẩn tại [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md). Tên hiện đại không có cách Việt hoá tự nhiên sẽ giữ cách phiên âm La-tinh (romanization) để dễ nhận diện và tra cứu.
 
+
+> **Chuyển mạch:** Từ **Quy ước ngôn ngữ Việt–Hàn–Anh**, ta sang **Mức độ bao phủ hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mức độ bao phủ hiện tại
 
-Bộ sách dùng dải file `01–33`, trong đó một số file đóng vai trò kết nối, tra cứu hoặc chuẩn hoá. Phần nội dung chuyên đề hiện bao phủ phần lớn các hệ thống quan trọng của đời sống Hàn Quốc hiện đại và lịch sử:
+Bộ sách dùng dải tệp (file / 파일) `01–33`, trong đó một số tệp (file / 파일) đóng vai trò kết nối, tra cứu hoặc chuẩn hoá. Phần nội dung chuyên đề hiện bao phủ phần lớn các hệ thống quan trọng của đời sống Hàn Quốc hiện đại và lịch sử:
 
 - lịch sử cổ đại → Joseon → thuộc địa → chiến tranh → hiện đại hoá nén;
 - Nho giáo, tuổi, nhóm thế hệ, danh xưng, kính ngữ, `눈치`, `정`, `체면`;
@@ -72,7 +81,7 @@ Các chương nền tảng cũng được viết theo hướng “đọc để h
 - [`09_religion_ritual_worldview.md`](09_religion_ritual_worldview.md) phân biệt danh tính–niềm tin–thực hành–thiết chế và mở rộng các lớp Phật giáo, shaman giáo, Kitô giáo, nghi lễ tổ tiên, thế tục hoá và mạng hỗ trợ;
 - [`10_arts_music_performance_craft.md`](10_arts_music_performance_craft.md) mở rộng `국악`, `장단`, `사물놀이`, `산조`, gốm, thư pháp, sơn mài, lao động sáng tạo và bảo tồn số;
 - [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) đi sâu vào hạ tầng đô thị, giao thông, kiosk, cửa hàng tiện lợi, giao hàng, thanh toán, khả năng tiếp cận và độ tin cậy;
-- [`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md) nối sáng tạo–lao động–quyền–phân phối–dữ liệu–fandom với danh mục dự án, cửa sổ phát hành, catalog, giữ chân người dùng và vòng đời IP;
+- [`13_hallyu_media_platforms.md`](13_hallyu_media_platforms.md) nối sáng tạo–lao động–quyền–phân phối–dữ liệu–fandom với danh mục dự án, cửa sổ phát hành, danh mục (catalog / 카탈로그), giữ chân người dùng và vòng đời IP;
 - [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md) tách số liệu tại một thời điểm, dòng biến động và dự báo; đồng thời mở rộng già hoá, mức sinh, hộ một người, dân số có nền tảng di cư, kinh tế chăm sóc và khoảng cách số;
 - [`18_daily_etiquette_gifts_relationships.md`](18_daily_etiquette_gifts_relationships.md) mở rộng cuộc hẹn, quà tặng số, `경조사`, phép tang lễ, từ vựng quan hệ, ngân sách quan hệ, nhóm chat và quy tắc không gian công cộng;
 - [`19_beauty_fashion_body_culture.md`](19_beauty_fashion_body_culture.md) nối lao động làm đẹp, bằng chứng, bất cân xứng thông tin, camera/bộ lọc, ranh giới tiêu dùng–y khoa và văn hoá quản lý cơ thể;
@@ -80,6 +89,9 @@ Các chương nền tảng cũng được viết theo hướng “đọc để h
 - [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) mở rộng chaebol, thị trường lao động, tự kinh doanh, jeonse, bảng cân đối hộ, tài sản, đòn bẩy và lợi thế tích luỹ;
 - [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) mở rộng hành trình bệnh nhân, bảo hiểm, sàng lọc, y học truyền thống, sức khoẻ tinh thần, health literacy, continuity of care, lao động chăm sóc và sức khoẻ môi trường;
 - [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) mở rộng lịch sử cổng thông tin, sai lệch mẫu của cộng đồng, KakaoTalk, ảnh chụp màn hình, vòng đời tiếng lóng, kinh tế người sáng tạo, quyền riêng tư và vấn đề niềm tin do AI/deepfake.
+
+
+> **Chuyển mạch:** Từ **Mức độ bao phủ hiện tại**, ta sang **Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo
 
@@ -98,9 +110,12 @@ kiểm toán trùng lặp
 
 [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) hiện đóng vai trò đồ thị kiến thức xuyên chương; [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) là bảng tra Việt–Hàn–Anh và bản đồ nguồn; [`coverage_audit.md`](coverage_audit.md) là lớp kiểm soát chất lượng.
 
+
+> **Chuyển mạch:** Từ **Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo**, ta sang **Cách đọc theo mục tiêu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cách đọc theo mục tiêu
 
-Không cần đọc theo số file. Nếu muốn đi theo quan hệ nhân quả giữa các khái niệm, dùng [`00_index_and_dependency.md`](00_index_and_dependency.md).
+Không cần đọc theo số tệp (file / 파일). Nếu muốn đi theo quan hệ nhân quả giữa các khái niệm, dùng [`00_index_and_dependency.md`](00_index_and_dependency.md).
 
 ### Lộ trình 1 — sống và làm việc hằng ngày ở Hàn Quốc
 
@@ -190,16 +205,22 @@ Hallyu được đọc như chuỗi giá trị gồm IP, lao động sáng tạo
 
 Lộ trình 6 đặc biệt quan trọng nếu mục tiêu không chỉ là “biết Korean culture” mà là có thể gặp một hiện tượng mới rồi tự hỏi đúng câu hỏi, kiểm tra bằng chứng và tránh định kiến.
 
+
+> **Chuyển mạch:** Từ **Cách đọc theo mục tiêu**, ta sang **KIIP — 한국사회 이해 시험 대비** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## KIIP — 한국사회 이해 시험 대비
 
-Thư mục [`kiip/`](kiip/README.md) tồn tại như **một lớp ôn thi riêng bên trong Korean Culture**. Nó không quyết định cấu trúc hoặc độ sâu của Master Knowledge Book. Khi phát triển bộ `korean_culture/`, ưu tiên của các chương chính vẫn là hiểu bản chất văn hoá và **cơ chế xã hội (social mechanism)**, không tối ưu theo dạng đề KIIP.
+Thư mục [`kiip/`](kiip/README.md) là **bộ ghi chú (note / 노트) duy nhất về nội dung thi KIIP bên trong Korean Culture**. Nó không chia theo mức (level / 수준) và không quyết định cấu trúc hoặc độ sâu của Master kiến thức (knowledge / 지식) Book. Khi phát triển bộ `korean_culture/`, ưu tiên của các chương chính vẫn là hiểu bản chất văn hoá và **cơ chế xã hội (social mechanism)**, không tối ưu theo dạng đề KIIP.
+
+
+> **Chuyển mạch:** Từ **KIIP — 한국사회 이해 시험 대비**, ta sang **Nguyên tắc xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nguyên tắc xuyên suốt
 
 Các nguyên tắc dưới đây là tiêu chuẩn để đọc và viết mọi chapter trong library. Hãy dùng chúng như câu hỏi kiểm tra sau mỗi route, không chỉ như lời giới thiệu.
 
 - Hiểu bản chất quan trọng hơn ghi nhớ (Understanding > Memorization).
-- Cơ chế quan trọng hơn định kiến khái quát (Mechanism > stereotype).
+- Cơ chế quan trọng hơn định kiến khái quát (mechanism > stereotype).
 - Quan hệ và thiết chế quan trọng hơn cách nói về một “tính cách dân tộc”.
 - Các lớp lịch sử quan trọng hơn việc coi “truyền thống” là một khối bất biến.
 - Ràng buộc + động lực + công nghệ quan trọng hơn cách giải thích thuần bằng tính cách.
@@ -212,3 +233,5 @@ Các nguyên tắc dưới đây là tiêu chuẩn để đọc và viết mọi
 - Quy định hoặc dữ liệu hiện hành phải có mốc thời gian và được kiểm tra lại khi dùng thực tế.
 
 Các chương được thiết kế để đọc trực tiếp trong Obsidian, GitHub hoặc trình đọc Markdown. [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) dùng để nối các chương thành **đồ thị kiến thức (knowledge graph)**; [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) dùng để tra nhanh thuật ngữ Hàn–Anh–Việt và nguồn mở rộng; [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md) dùng để chuẩn hoá tên Việt–Hàn–Anh; [`coverage_audit.md`](coverage_audit.md) dùng để kiểm soát mức độ bao phủ và định hướng các vòng cập nhật tiếp theo.
+
+> **Bàn giao:** Sau **Nguyên tắc xuyên suốt**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

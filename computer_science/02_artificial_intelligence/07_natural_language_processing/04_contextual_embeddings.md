@@ -1,8 +1,11 @@
-# Contextual Embeddings: meaning thay đổi theo context
+# Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)
 
-Static word embedding gán một vector duy nhất cho mỗi word/token type. Nhưng language có polysemy và contextual meaning: `bank` trong `river bank` khác `bank loan`. **Contextual Embedding (문맥 임베딩)** tính representation của token như function của cả context.
+> **Mạch đọc:** Đặt **Contextual Embeddings: meaning thay đổi theo ngữ cảnh (context / 맥락)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Static vs Contextual** sang **ELMo: contextualization bằng bidirectional LM**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Transformer làm điều này bằng self-attention: token ban đầu có embedding lookup giống nhau, nhưng qua layers nó trao đổi information với neighboring/distant tokens và trở thành hidden state context-specific.
+
+Static word embedding gán một véc-tơ (vector / 벡터) duy nhất cho mỗi word/đơn vị từ (token / 토큰) kiểu (type / 타입). Nhưng ngôn ngữ (language / 언어) có polysemy và contextual meaning: `bank` trong `river bank` khác `bank loan`. **Contextual Embedding (문맥 임베딩)** tính biểu diễn (representation / 표현) của đơn vị từ (token / 토큰) như hàm (function / 함수) của cả ngữ cảnh (context / 맥락).
+
+Transformer làm điều này bằng self-attention: đơn vị từ (token / 토큰) ban đầu có embedding lookup giống nhau, nhưng qua layers nó trao đổi thông tin (information / 정보) với neighboring/distant tokens và trở thành hidden trạng thái (state / 상태) context-specific.
 
 ## Static vs Contextual
 
@@ -18,41 +21,41 @@ Contextual:
 h_i=f_\theta(x_1,...,x_T,i)
 \]
 
-Cùng token ID ở position/context khác có `h_i` khác.
+Cùng đơn vị từ (token / 토큰) ID ở position/ngữ cảnh (context / 맥락) khác có `h_i` khác.
 
 ## ELMo: contextualization bằng bidirectional LM
 
-ELMo là milestone trước Transformer. Nó dùng stacked bidirectional LSTMs; representation kết hợp hidden states từ multiple layers.
+ELMo là milestone trước Transformer. Nó dùng stacked bidirectional LSTMs; biểu diễn (representation / 표현) kết hợp hidden states từ multiple layers.
 
-Insight: different layers capture different linguistic information, and context-sensitive token representation improves downstream tasks.
+Insight: different layers capture different linguistic thông tin (information / 정보), and context-sensitive đơn vị từ (token / 토큰) biểu diễn (representation / 표현) improves downstream tasks.
 
 ## BERT representations
 
-BERT uses bidirectional Transformer encoder trained with masked-language-model objective.
+BERT uses bidirectional Transformer encoder trained with masked-language-model mục tiêu (objective / 목표).
 
-Input representation combines token/subword + position + segment/type embeddings (implementation-specific).
+Đầu vào (input / 입력) biểu diễn (representation / 표현) combines đơn vị từ (token / 토큰)/subword + position + segment/kiểu (type / 타입) embeddings (implementation-specific).
 
-After each Transformer layer, token vector becomes contextualized.
+After each Transformer tầng (layer / 계층), đơn vị từ (token / 토큰) véc-tơ (vector / 벡터) becomes contextualized.
 
 Final/selected layers feed classification, QA, NER etc.
 
-## Token Representation vs Sentence Representation
+## Đơn vị từ (token / 토큰) biểu diễn (representation / 표현) vs Sentence biểu diễn (representation / 표현)
 
 Token-level tasks use per-token hidden states.
 
 Sentence/document tasks need pooling:
 
-- `[CLS]` representation;
+- `[CLS]` biểu diễn (representation / 표현);
 - mean pooling;
 - max pooling;
 - attention pooling;
 - dedicated sentence-embedding fine-tuning.
 
-Raw BERT `[CLS]` is not automatically ideal semantic sentence embedding. Objective matters.
+Raw BERT `[CLS]` is not automatically ideal ngữ nghĩa (semantic / 의미적) sentence embedding. mục tiêu (objective / 목표) matters.
 
 ## Sentence-BERT / Contrastive Sentence Embeddings
 
-Cross-encoder BERT jointly processes two texts and can model rich token interactions, but expensive for retrieval because every query-document pair needs forward pass.
+Cross-encoder BERT jointly processes two texts and can mô hình (model / 모델) rich đơn vị từ (token / 토큰) interactions, but expensive for retrieval because every query-document pair needs forward pass.
 
 Bi-encoder encodes separately:
 
@@ -66,9 +69,9 @@ score:
 s(q,d)=cos(q,d)
 \]
 
-allows precompute document vectors + ANN search.
+allows precompute document vectors + ANN tìm kiếm (search / 검색).
 
-Sentence-BERT-style contrastive training makes pooled embeddings suitable semantic similarity/retrieval.
+Sentence-BERT-style contrastive huấn luyện (training / 학습) makes pooled embeddings suitable ngữ nghĩa (semantic / 의미적) similarity/retrieval.
 
 ## Bi-Encoder vs Cross-Encoder
 
@@ -80,7 +83,7 @@ query → vector ┐
  doc  → vector ┘
 ```
 
-Fast retrieval, information compressed into independent vectors.
+Fast retrieval, thông tin (information / 정보) compressed into independent vectors.
 
 **Cross-encoder**:
 
@@ -90,36 +93,36 @@ Fast retrieval, information compressed into independent vectors.
       relevance score
 ```
 
-More accurate pairwise interaction but costly.
+More accurate pairwise tương tác (interaction / 상호작용) but costly.
 
-Modern retrieval often:
+Hiện đại (modern / 현대적) retrieval often:
 
 ```text
 bi-encoder retrieve top K
 → cross-encoder rerank
 ```
 
-This architecture is core RAG retrieval stack.
+This kiến trúc (architecture / 아키텍처) is cốt lõi (core / 핵심) RAG retrieval ngăn xếp (stack / 스택).
 
-## Contextual token geometry
+## Contextual đơn vị từ (token / 토큰) hình học (geometry / 기하학)
 
-A token's hidden state encodes mixture of lexical, syntactic, semantic and positional factors. Layers often show progression but not clean strict hierarchy.
+A đơn vị từ (token / 토큰)'s hidden trạng thái (state / 상태) encodes mixture of lexical, syntactic, ngữ nghĩa (semantic / 의미적) and positional factors. Layers often show progression but not clean strict hierarchy.
 
-Probing studies can decode linguistic attributes from hidden states, but decodability does not prove causal use.
+Probing studies can decode linguistic attributes from hidden states, but decodability does not prove nhân quả (causal / 인과적) use.
 
-## Layer Selection
+## Tầng (layer / 계층) Selection
 
-Last layer optimized closest pretraining output objective; intermediate layers may be better for some linguistic tasks.
+Last tầng (layer / 계층) optimized closest pretraining đầu ra (output / 출력) mục tiêu (objective / 목표); intermediate layers may be better for some linguistic tasks.
 
 Some methods concatenate/learn weighted mixture across layers.
 
-No universal “last layer always best”.
+No universal “last tầng (layer / 계층) always best”.
 
-## Pooling and Length Bias
+## Pooling and Length độ lệch (bias / 편향)
 
-Mean pooling averages token vectors; long docs may dilute salient segments. `[CLS]` depends training objective; max pooling favors strongest feature per dimension.
+Mean pooling averages đơn vị từ (token / 토큰) vectors; long docs may dilute salient segments. `[CLS]` depends huấn luyện (training / 학습) mục tiêu (objective / 목표); max pooling favors strongest tính năng (feature / 기능) per dimension.
 
-For long document retrieval, chunk-level embeddings often better than one vector for entire document.
+For long document retrieval, chunk-level embeddings often better than one véc-tơ (vector / 벡터) for entire document.
 
 Chunking introduces segmentation/provenance trade-offs.
 
@@ -131,19 +134,19 @@ Embedding vectors often L2-normalized:
 \hat z=\frac{z}{\|z\|}
 \]
 
-Then dot product equals cosine similarity:
+Then dot sản phẩm (product / 제품) equals cosine similarity:
 
 \[
 \hat q^T\hat d=cos(q,d)
 \]
 
-ANN indexes may assume one metric; preprocessing must match model training/recommendation.
+ANN indexes may assume one chỉ số (metric / 지표); preprocessing must match mô hình (model / 모델) huấn luyện (training / 학습)/recommendation.
 
-## Contrastive Training
+## Contrastive huấn luyện (training / 학습)
 
 Positive query-doc pairs should score higher than negatives.
 
-InfoNCE-like loss:
+InfoNCE-like mất mát (loss / 손실):
 
 \[
 L_i=-\log\frac{e^{s(q_i,d_i^+)/\tau}}
@@ -152,17 +155,17 @@ L_i=-\log\frac{e^{s(q_i,d_i^+)/\tau}}
 
 In-batch negatives provide efficiency, but false negatives (actually relevant docs treated negative) hurt.
 
-Hard negatives improve discrimination near decision boundary.
+Hard negatives improve discrimination near quyết định (decision / 결정) ranh giới (boundary / 경계).
 
-## Domain Adaptation
+## Lĩnh vực (domain / 도메인) Adaptation
 
-General embedding model may fail specialized vocabulary/relations. Fine-tuning on domain query-document pairs can improve retrieval.
+General embedding mô hình (model / 모델) may thất bại (fail / 실패) specialized vocabulary/relations. Fine-tuning on lĩnh vực (domain / 도메인) query-document pairs can improve retrieval.
 
-However overfitting narrow domain may reduce general semantic behavior. Evaluation needs representative queries.
+However overfitting narrow lĩnh vực (domain / 도메인) may reduce general ngữ nghĩa (semantic / 의미적) hành vi (behavior / 동작). Evaluation needs representative queries.
 
 ## Multilingual Embeddings
 
-Multilingual encoders align sentences from multiple languages in shared vector space. Cross-lingual retrieval becomes possible:
+Multilingual encoders align sentences from multiple languages in dùng chung (shared / 공유) véc-tơ (vector / 벡터) không gian (space / 공간). Cross-lingual retrieval becomes possible:
 
 ```text
 Vietnamese query
@@ -170,13 +173,13 @@ Vietnamese query
 → retrieve Korean/English document vectors
 ```
 
-Alignment quality varies languages/domains and tokenizer efficiency.
+Alignment chất lượng (quality / 품질) varies languages/domains and tokenizer efficiency.
 
-## Context Length
+## Ngữ cảnh (context / 맥락) Length
 
-Embedding model max context may truncate long docs. Truncation silently loses tail information.
+Embedding mô hình (model / 모델) max ngữ cảnh (context / 맥락) may truncate long docs. Truncation silently loses tail thông tin (information / 정보).
 
-Production pipeline should explicitly:
+Môi trường vận hành (production / 운영 환경) chuỗi xử lý (pipeline / 파이프라인) should explicitly:
 
 ```text
 inspect token count
@@ -186,40 +189,42 @@ track source span
 
 ## Embedding Drift và Versioning
 
-Change embedding model/version → geometry changes. Old corpus vectors should not be mixed with new query vectors unless backward compatibility empirically validated.
+Thay đổi (change / 변경) embedding mô hình (model / 모델)/phiên bản (version / 버전) → hình học (geometry / 기하학) changes. Old corpus vectors should not be mixed with new truy vấn (query / 쿼리) vectors unless backward tính tương thích (compatibility / 호환성) empirically validated.
 
-Re-embedding/re-indexing can be costly; model version must live in vector-store metadata.
+Re-embedding/re-indexing can be costly; mô hình (model / 모델) phiên bản (version / 버전) must live in vector-store siêu dữ liệu (metadata / 메타데이터).
 
-## Semantic Similarity ≠ Relevance
+## Ngữ nghĩa (semantic / 의미적) Similarity ≠ Relevance
 
-Two texts can be semantically similar but irrelevant to query intent. Retrieval relevance includes task-specific utility, recency, authority, permissions and metadata constraints.
+Two texts can be semantically similar but irrelevant to truy vấn (query / 쿼리) intent. Retrieval relevance includes task-specific utility, recency, authority, permissions and siêu dữ liệu (metadata / 메타데이터) các ràng buộc (constraints / 제약조건들).
 
-Dense embedding should combine with lexical search, filters/rerankers when appropriate.
+Dense embedding should combine with lexical tìm kiếm (search / 검색), filters/rerankers when appropriate.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Static embedding asks “symbol này thường liên quan gì?”; contextual embedding asks “symbol/text này trong context hiện tại đang biểu diễn gì?”.
+> Static embedding asks “symbol này thường liên quan gì?”; contextual embedding asks “symbol/văn bản (text / 텍스트) này trong ngữ cảnh (context / 맥락) hiện tại đang biểu diễn gì?”.
 
-For retrieval, sentence embedding further asks “nén toàn bộ text thành vector nào để similarity phản ánh relevance objective?”.
+For retrieval, sentence embedding further asks “nén toàn bộ văn bản (text / 텍스트) thành véc-tơ (vector / 벡터) nào để similarity phản ánh relevance mục tiêu (objective / 목표)?”.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “BERT output nào cũng dùng làm embedding search được”
+### “BERT đầu ra (output / 출력) nào cũng dùng làm embedding tìm kiếm (search / 검색) được”
 
-Raw hidden state/pooling may not be trained for semantic similarity. Use retrieval/sentence embedding objective.
+Raw hidden trạng thái (state / 상태)/pooling may not be trained for ngữ nghĩa (semantic / 의미적) similarity. Use retrieval/sentence embedding mục tiêu (objective / 목표).
 
 ### “Cross-encoder luôn tốt hơn nên dùng cho toàn corpus”
 
-Pairwise cost quá cao; typical use rerank small candidate set.
+Pairwise chi phí (cost / 비용) quá cao; typical use rerank small candidate set.
 
 ### “Cosine similarity 0.9 nghĩa 90% relevant”
 
-Similarity score không calibrated probability.
+Similarity score không calibrated xác suất (probability / 확률).
 
-### “Multilingual shared space means all languages equally good”
+### “Multilingual dùng chung (shared / 공유) không gian (space / 공간) means all languages equally good”
 
-Training balance/tokenization/data quality lead uneven performance.
+Huấn luyện (training / 학습) balance/tokenization/dữ liệu (data / 데이터) chất lượng (quality / 품질) lead uneven hiệu năng (performance / 성능).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Contextual embeddings combine [Transformer](../06_deep_learning_architectures/05_transformer.md), [Contrastive Representation Learning](../05_neural_networks/08_representation_learning.md) and prepare [Information Retrieval](./08_search_and_information_retrieval.md), RAG and LLM embeddings.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language as data](./00_language_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

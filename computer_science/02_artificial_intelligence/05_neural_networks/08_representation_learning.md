@@ -1,26 +1,29 @@
-# Representation Learning: học cách biểu diễn dữ liệu
+# Biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu
 
-Representation Learning (표현 학습 / học biểu diễn) là một trong những ý tưởng trung tâm nhất của Deep Learning. Thay vì chỉ học mapping trực tiếp `input → output`, network học intermediate spaces trong đó những factors relevant cho task được sắp xếp theo geometry dễ xử lý hơn.
+> **Mạch đọc:** Đặt **biểu diễn (representation / 표현) học tập (learning / 학습): học cách biểu diễn dữ liệu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **biểu diễn (representation / 표현) là gì?** sang **tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một representation tốt không có nghĩa “vector nhìn đẹp”. Nó phải làm downstream computation đơn giản, robust hoặc transferable hơn.
 
-## Representation là gì?
+Biểu diễn (representation / 표현) học tập (learning / 학습) là một trong những ý tưởng trung tâm nhất của Deep học tập (learning / 학습). Thay vì chỉ học ánh xạ (mapping / 매핑) trực tiếp `input → output`, mạng (network / 네트워크) học intermediate spaces trong đó những factors relevant cho tác vụ (task / 작업) được sắp xếp theo hình học (geometry / 기하학) dễ xử lý hơn.
 
-Raw object có thể rất phức tạp:
+Một biểu diễn (representation / 표현) tốt không có nghĩa “véc-tơ (vector / 벡터) nhìn đẹp”. Nó phải làm downstream computation đơn giản, robust hoặc transferable hơn.
 
-- image: pixels;
-- text: token sequence;
+## Biểu diễn (representation / 표현) là gì?
+
+Raw đối tượng (object / 객체) có thể rất phức tạp:
+
+- ảnh (image / 이미지): pixels;
+- văn bản (text / 텍스트): đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스);
 - audio: waveform;
-- user: interaction history;
-- molecule: graph.
+- người dùng (user / 사용자): tương tác (interaction / 상호작용) lịch sử (history / 이력);
+- molecule: đồ thị (graph / 그래프).
 
-Encoder tạo vector/tensor:
+Encoder tạo véc-tơ (vector / 벡터)/tensor:
 
 \[
 z=f_\theta(x)
 \]
 
-`z` là learned representation.
+`z` là learned biểu diễn (representation / 표현).
 
 Downstream head:
 
@@ -28,15 +31,15 @@ Downstream head:
 \hat y=g_\phi(z)
 \]
 
-Nếu `z` organize task-relevant information tốt, `g` có thể rất simple.
+Nếu `z` organize task-relevant thông tin (information / 정보) tốt, `g` có thể rất simple.
 
-## Linear Probe như một test
+## Tuyến tính (linear / 선형) Probe như một kiểm thử (test / 테스트)
 
-Nếu frozen representation `z` cho phép linear classifier đạt performance cao, ta nói target information **linearly accessible**.
+Nếu frozen biểu diễn (representation / 표현) `z` cho phép tuyến tính (linear / 선형) classifier đạt hiệu năng (performance / 성능) cao, ta nói mục tiêu (target / 대상) thông tin (information / 정보) **linearly accessible**.
 
-Linear probe không đo toàn bộ semantic richness, nhưng là useful diagnostic: feature extractor đã “untangle” task đến mức nào?
+Tuyến tính (linear / 선형) probe không đo toàn bộ ngữ nghĩa (semantic / 의미적) richness, nhưng là useful diagnostic: tính năng (feature / 기능) extractor đã “untangle” tác vụ (task / 작업) đến mức nào?
 
-## Distributed Representation
+## Phân tán (distributed / 분산) biểu diễn (representation / 표현)
 
 One-hot symbol đặt mỗi category ở orthogonal axis; không encode similarity.
 
@@ -46,13 +49,13 @@ Dense learned embedding:
 z\in R^d
 \]
 
-có thể encode multiple factors distributed across dimensions/directions.
+có thể encode multiple factors phân tán (distributed / 분산) across dimensions/directions.
 
-Similarity relation xuất hiện từ training objective, không từ vector format tự thân.
+Similarity quan hệ (relation / 관계) xuất hiện từ huấn luyện (training / 학습) mục tiêu (objective / 목표), không từ véc-tơ (vector / 벡터) format tự thân.
 
-## Embedding Geometry
+## Embedding hình học (geometry / 기하학)
 
-Nếu contrastive training kéo related pairs gần nhau và đẩy unrelated pairs xa:
+Nếu contrastive huấn luyện (training / 학습) kéo related pairs gần nhau và đẩy unrelated pairs xa:
 
 ```text
 semantically related objects → nearby directions/regions
@@ -61,37 +64,37 @@ unrelated objects → farther apart
 
 thì cosine/dot-product retrieval becomes meaningful.
 
-Nhưng geometry objective-specific. Embedding tốt cho semantic search chưa chắc tốt cho sentiment clustering hoặc recommendation.
+Nhưng hình học (geometry / 기하학) objective-specific. Embedding tốt cho ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색) chưa chắc tốt cho sentiment clustering hoặc recommendation.
 
-## Supervised Representation Learning
+## Supervised biểu diễn (representation / 표현) học tập (learning / 학습)
 
-Classifier network learn hidden representation vì final task loss backprop through encoder.
+Classifier mạng (network / 네트워크) learn hidden biểu diễn (representation / 표현) vì final tác vụ (task / 작업) mất mát (loss / 손실) backprop through encoder.
 
-Hidden layers retain information useful cho target và có thể discard nuisance factors.
+Hidden layers retain thông tin (information / 정보) useful cho mục tiêu (target / 대상) và có thể discard nuisance factors.
 
-Nếu target narrow, representation cũng có thể narrow và transfer kém.
+Nếu mục tiêu (target / 대상) narrow, biểu diễn (representation / 표현) cũng có thể narrow và transfer kém.
 
-## Self-Supervised Representation Learning
+## Self-Supervised biểu diễn (representation / 표현) học tập (learning / 학습)
 
-Self-supervision tạo learning signal từ raw data.
+Self-supervision tạo học tập (learning / 학습) tín hiệu (signal / 신호) từ raw dữ liệu (data / 데이터).
 
 Examples:
 
-- predict next token;
-- reconstruct masked token/patch;
-- contrast views of same image;
+- predict next đơn vị từ (token / 토큰);
+- reconstruct masked đơn vị từ (token / 토큰)/patch;
+- contrast views of same ảnh (image / 이미지);
 - predict future segment;
-- reconstruct corrupted input.
+- reconstruct corrupted đầu vào (input / 입력).
 
-Mục tiêu là exploit abundant unlabeled data để learn reusable structure.
+Mục tiêu là exploit abundant unlabeled dữ liệu (data / 데이터) để learn reusable cấu trúc (structure / 구조).
 
-Foundation models largely rely on self-supervised pretraining rồi adapt downstream.
+Foundation các mô hình (models / 모델들) largely rely on self-supervised pretraining rồi adapt downstream.
 
-## Contrastive Learning
+## Contrastive học tập (learning / 학습)
 
-Given positive pair `(x,x⁺)` and negatives `x⁻`, objective encourage similarity positive > negatives.
+Given positive pair `(x,x⁺)` and negatives `x⁻`, mục tiêu (objective / 목표) encourage similarity positive > negatives.
 
-InfoNCE-style loss:
+InfoNCE-style mất mát (loss / 손실):
 
 \[
 L=-\log
@@ -101,11 +104,11 @@ L=-\log
 
 `τ` là temperature.
 
-Choice positive pairs defines invariance. Image augmentations say two crops/color variants should represent same semantic object. Wrong augmentation can erase task-relevant information.
+Choice positive pairs defines invariance. ảnh (image / 이미지) augmentations say two crops/color variants should represent same ngữ nghĩa (semantic / 의미적) đối tượng (object / 객체). Wrong augmentation can erase task-relevant thông tin (information / 정보).
 
-## Metric Learning
+## Chỉ số (metric / 지표) học tập (learning / 학습)
 
-Triplet loss:
+Triplet mất mát (loss / 손실):
 
 \[
 L=\max(0,d(a,p)-d(a,n)+m)
@@ -113,9 +116,9 @@ L=\max(0,d(a,p)-d(a,n)+m)
 
 push anchor-positive closer than anchor-negative by margin `m`.
 
-Hard-negative mining is critical: easy negatives produce little gradient; false negatives can damage semantic geometry.
+Hard-negative mining is trọng yếu (critical / 중요): easy negatives produce little độ dốc (gradient / 기울기); false negatives can damage ngữ nghĩa (semantic / 의미적) hình học (geometry / 기하학).
 
-## Autoencoder Representation
+## Autoencoder biểu diễn (representation / 표현)
 
 Encoder-decoder:
 
@@ -123,72 +126,72 @@ Encoder-decoder:
 x\to z\to\hat x
 \]
 
-Reconstruction objective forces `z` to preserve input information needed for reconstruction.
+Reconstruction mục tiêu (objective / 목표) forces `z` to preserve đầu vào (input / 입력) thông tin (information / 정보) needed for reconstruction.
 
-But pixel-perfect reconstruction may prioritize low-level detail not semantics. Bottleneck/denoising/variational constraints alter learned factors.
+But pixel-perfect reconstruction may prioritize low-level detail not ngữ nghĩa (semantics / 의미론). Bottleneck/denoising/variational các ràng buộc (constraints / 제약조건들) alter learned factors.
 
-Thus objective determines what “important information” means.
+Thus mục tiêu (objective / 목표) determines what “important thông tin (information / 정보)” means.
 
 ## Bottleneck và Compression
 
-A lower-dimensional `z` forces compression. Under an Information Bottleneck intuition, representation should keep information useful for target while discarding irrelevant variation.
+A lower-dimensional `z` forces compression. Under an thông tin (information / 정보) Bottleneck intuition, biểu diễn (representation / 표현) should keep thông tin (information / 정보) useful for mục tiêu (target / 대상) while discarding irrelevant variation.
 
-Formal Information Bottleneck studies trade-off between `I(X;Z)` and `I(Z;Y)`, but practical deep networks do not always directly optimize this formula.
+Formal thông tin (information / 정보) Bottleneck studies sự đánh đổi (trade-off / 트레이드오프) between `I(X;Z)` and `I(Z;Y)`, but practical deep networks do not always directly optimize this formula.
 
-Mental idea remains useful: good representation filters nuisance while preserving predictive structure.
+Mental idea remains useful: good biểu diễn (representation / 표현) filters nuisance while preserving predictive cấu trúc (structure / 구조).
 
 ## Invariance và Equivariance
 
-**Invariant** representation: transformation of input should not change representation/output.
+**bất biến (invariant / 불변식)** biểu diễn (representation / 표현): transformation of đầu vào (input / 입력) should not thay đổi (change / 변경) biểu diễn (representation / 표현)/đầu ra (output / 출력).
 
-Example image classification may want translation invariance.
+Example ảnh (image / 이미지) classification may want translation invariance.
 
-**Equivariant** representation: output changes predictably with input transformation.
+**Equivariant** biểu diễn (representation / 표현): đầu ra (output / 출력) changes predictably with đầu vào (input / 입력) transformation.
 
-For segmentation/pose, spatial shift should shift output correspondingly, not erase location.
+For segmentation/pose, spatial shift should shift đầu ra (output / 출력) correspondingly, not erase location.
 
-Architecture and augmentation encode these assumptions.
+Kiến trúc (architecture / 아키텍처) and augmentation encode these các giả định (assumptions / 가정들).
 
-## Transfer Learning
+## Transfer học tập (learning / 학습)
 
-Pretrained encoder learns broad representation, then downstream task uses:
+Pretrained encoder learns broad biểu diễn (representation / 표현), then downstream tác vụ (task / 작업) uses:
 
 - frozen features + new head;
 - partial fine-tuning;
 - full fine-tuning;
 - adapters/LoRA.
 
-Transfer works when pretraining representation covers factors relevant downstream.
+Transfer works when pretraining biểu diễn (representation / 표현) covers factors relevant downstream.
 
-Negative transfer occurs when source biases/objective mismatch target.
+Negative transfer occurs when nguồn (source / 소스) biases/mục tiêu (objective / 목표) mismatch mục tiêu (target / 대상).
 
-## Representation Collapse
+## Biểu diễn (representation / 표현) Collapse
 
-Some self-supervised objectives risk all inputs map to same constant vector. Then similarity trivial nhưng no information.
+Some self-supervised objectives rủi ro (risk / 위험) all inputs map to same constant véc-tơ (vector / 벡터). Then similarity trivial nhưng no thông tin (information / 정보).
 
-Contrastive negatives, stop-gradient asymmetry, predictor architecture, variance/covariance regularizers or teacher-student dynamics prevent collapse in different methods.
+Contrastive negatives, stop-gradient asymmetry, predictor kiến trúc (architecture / 아키텍처), variance/covariance regularizers or teacher-student dynamics prevent collapse in different methods.
 
-Understanding collapse clarifies why self-supervised loss design matters.
+Understanding collapse clarifies why self-supervised mất mát (loss / 손실) thiết kế (design / 설계) matters.
 
 ## Disentanglement
 
-Idealized disentangled representation assigns distinct latent factors to independent generative causes. Example rotation, lighting, identity separated.
+Idealized disentangled biểu diễn (representation / 표현) assigns distinct latent factors to independent generative causes. Example rotation, lighting, định danh (identity / 식별자) separated.
 
-In practice disentanglement is difficult and often not identifiable without inductive bias/supervision. Do not assume latent dimensions map cleanly to human concepts.
+In practice disentanglement is difficult and often not identifiable without inductive độ lệch (bias / 편향)/supervision. Do not assume latent dimensions map cleanly to human concepts.
 
 ## Sparse vs Dense Representations
 
-Sparse representation activates few components; dense uses many.
+Sparse biểu diễn (representation / 표현) activates few components; dense uses many.
 
-Sparse can improve interpretability/storage/retrieval properties. Dense embeddings are compact and differentiable.
+Sparse can improve interpretability/lưu trữ (storage / 저장소)/retrieval properties. Dense embeddings are compact and differentiable.
 
-Modern retrieval increasingly combines sparse lexical and dense semantic representations because they capture complementary structure.
+Hiện đại (modern / 현대적) retrieval increasingly combines sparse lexical and dense ngữ nghĩa (semantic / 의미적) representations because they capture complementary cấu trúc (structure / 구조).
 
-## Representation Drift
+## Biểu diễn (representation / 표현) Drift
 
-When encoder is retrained, embedding geometry changes. Stored vectors in vector database generated by old encoder may become incompatible.
+When encoder is retrained, embedding hình học (geometry / 기하학) changes. Stored vectors in véc-tơ (vector / 벡터) cơ sở dữ liệu (database / 데이터베이스) generated by old encoder may become incompatible.
 
-Production consequence:
+Môi trường vận hành (production / 운영 환경) consequence:
 
 ```text
 embedding model version change
@@ -196,48 +199,50 @@ embedding model version change
 → rebuild/revalidate index
 ```
 
-Representation versioning is an LLMOps/data-engineering concern, not just model theory.
+Biểu diễn (representation / 표현) versioning is an LLMOps/data-engineering concern, not just mô hình (model / 모델) lý thuyết (theory / 이론).
 
 ## Probing và Interpretability
 
-Probe classifiers can detect whether information exists in representation, but high probe accuracy does not prove base model actually uses that information causally.
+Probe classifiers can detect whether thông tin (information / 정보) exists in biểu diễn (representation / 표현), but high probe accuracy does not prove cơ sở (base / 기반) mô hình (model / 모델) actually uses that thông tin (information / 정보) causally.
 
 Interventions/ablation are needed for stronger claims.
 
-Representation interpretability must distinguish **decodability** from **causal use**.
+Biểu diễn (representation / 표현) interpretability must distinguish **decodability** from **nhân quả (causal / 인과적) use**.
 
 ## LLM Hidden States Preview
 
-Transformer converts token embeddings through layers into contextual representations. Same token can have different hidden vector depending context.
+Transformer converts đơn vị từ (token / 토큰) embeddings through layers into contextual representations. Same đơn vị từ (token / 토큰) can have different hidden véc-tơ (vector / 벡터) depending ngữ cảnh (context / 맥락).
 
-Final hidden state feeds output projection/softmax for next-token prediction. Intermediate layers may encode syntax, semantic, factual and task structure in distributed form.
+Final hidden trạng thái (state / 상태) feeds đầu ra (output / 출력) projection/softmax for next-token prediction. Intermediate layers may encode cú pháp (syntax / 문법), ngữ nghĩa (semantic / 의미적), factual and tác vụ (task / 작업) cấu trúc (structure / 구조) in phân tán (distributed / 분산) form.
 
 This chapter therefore directly prepares embeddings/Transformer/LLM sections.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Representation learning = học một coordinate system nơi relationships relevant cho objective trở nên dễ tính hơn.
+> biểu diễn (representation / 표현) học tập (learning / 학습) = học một coordinate hệ thống (system / 시스템) nơi relationships relevant cho mục tiêu (objective / 목표) trở nên dễ tính hơn.
 
-Raw space không nhất thiết có useful geometry; training bends/reorganizes space.
+Raw không gian (space / 공간) không nhất thiết có useful hình học (geometry / 기하학); huấn luyện (training / 학습) bends/reorganizes không gian (space / 공간).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “Embedding gần nhau nghĩa objects giống nhau tuyệt đối”
 
-Chúng gần theo geometry/objective/model/data cụ thể.
+Chúng gần theo hình học (geometry / 기하학)/mục tiêu (objective / 목표)/mô hình (model / 모델)/dữ liệu (data / 데이터) cụ thể.
 
 ### “Latent dimension 42 chắc chắn đại diện một concept”
 
-Information thường distributed/subspace-based.
+Thông tin (information / 정보) thường phân tán (distributed / 분산)/subspace-based.
 
-### “Self-supervised model không cần labels nên objective neutral”
+### “Self-supervised mô hình (model / 모델) không cần labels nên mục tiêu (objective / 목표) neutral”
 
-Pretext task, augmentation và sampling chính là inductive bias mạnh.
+Pretext tác vụ (task / 작업), augmentation và sampling chính là inductive độ lệch (bias / 편향) mạnh.
 
-### “Nếu information decodable từ hidden state thì model đang dùng nó”
+### “Nếu thông tin (information / 정보) decodable từ hidden trạng thái (state / 상태) thì mô hình (model / 모델) đang dùng nó”
 
-Decodability không chứng minh causal reliance.
+Decodability không chứng minh nhân quả (causal / 인과적) reliance.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Representation Learning nối [Dimensionality Reduction](../04_machine_learning/12_dimensionality_reduction.md), [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Regularization](./07_regularization.md) và sau này [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md), [RAG](../09_retrieval_and_rag/05_rag_fundamentals.md).
+Biểu diễn (representation / 표현) học tập (learning / 학습) nối [Dimensionality Reduction](../04_machine_learning/12_dimensionality_reduction.md), [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Regularization](./07_regularization.md) và sau này [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md), [RAG](../09_retrieval_and_rag/05_rag_fundamentals.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from linear models to neural networks](./00_from_linear_models_to_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

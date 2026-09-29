@@ -1,4 +1,7 @@
-# Đa thức và phân tích nhân tử: structure, roots và approximation
+# Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation
+
+> **Mạch đọc:** Đọc **Đa thức và phân tích nhân tử: cấu trúc (structure / 구조), roots và approximation** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Polynomial là gì và vì sao nó đặc biệt?** sang **2. Leading term và large-scale hành vi (behavior / 동작)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Đa thức (polynomial / 다항식) thường được gặp đầu tiên như biểu thức
 
@@ -6,7 +9,7 @@
 P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0,
 ```
 
-nhưng cách nhìn hữu ích hơn là: polynomial là một class functions có **algebraic structure rất giàu nhưng vẫn dễ tính toán**. Chúng cộng, nhân, đạo hàm, tích phân và approximate tốt; roots của chúng encode geometry; factorization làm lộ structure ẩn; còn trong numerical methods và computer algebra, representation của polynomial ảnh hưởng trực tiếp tới stability và cost.
+nhưng cách nhìn hữu ích hơn là: polynomial là một lớp (class / 클래스) functions có **algebraic cấu trúc (structure / 구조) rất giàu nhưng vẫn dễ tính toán**. Chúng cộng, nhân, đạo hàm, tích phân và approximate tốt; roots của chúng encode hình học (geometry / 기하학); factorization làm lộ cấu trúc (structure / 구조) ẩn; còn trong numerical methods và computer algebra, biểu diễn (representation / 표현) của polynomial ảnh hưởng trực tiếp tới stability và chi phí (cost / 비용).
 
 ## 1. Polynomial là gì và vì sao nó đặc biệt?
 
@@ -29,13 +32,13 @@ có degree 4.
 Polynomial đặc biệt vì nhiều operations giữ ta ở cùng family:
 
 - tổng hai polynomials vẫn là polynomial;
-- product vẫn là polynomial;
+- sản phẩm (product / 제품) vẫn là polynomial;
 - derivative vẫn là polynomial;
 - antiderivative cũng là polynomial cộng constant.
 
-Closure này làm polynomial trở thành “working language” tự nhiên của algebra và calculus.
+Closure này làm polynomial trở thành “working ngôn ngữ (language / 언어)” tự nhiên của algebra và calculus.
 
-## 2. Leading term và large-scale behavior
+## 2. Leading term và large-scale hành vi (behavior / 동작)
 
 Với
 
@@ -45,21 +48,21 @@ P(x)=a_nx^n+\cdots+a_0,
 
 khi `|x|` rất lớn, term `a_nx^n` thường dominate lower-order terms.
 
-Do đó end behavior phụ thuộc mạnh vào degree parity và sign của `a_n`.
+Do đó end hành vi (behavior / 동작) phụ thuộc mạnh vào degree parity và sign của `a_n`.
 
 Nếu `n` chẵn, hai ends đi cùng direction. Nếu `n` lẻ, hai ends đi opposite directions.
 
-Đây là first asymptotic reasoning: không cần biết mọi coefficient để biết large-scale shape.
+Đây là first asymptotic lập luận (reasoning / 추론): không cần biết mọi coefficient để biết large-scale shape.
 
-## 3. Roots là nơi polynomial mất output
+## 3. Roots là nơi polynomial mất đầu ra (output / 출력)
 
-Root/zero `r` thỏa
+Gốc (root / 루트)/zero `r` thỏa
 
 ```math
 P(r)=0.
 ```
 
-Graphically, đó là nơi graph gặp x-axis. Algebraically, root liên hệ trực tiếp với factor.
+Graphically, đó là nơi đồ thị (graph / 그래프) gặp x-axis. Algebraically, gốc (root / 루트) liên hệ trực tiếp với factor.
 
 Factor theorem:
 
@@ -83,11 +86,11 @@ vì divisor degree 1 nên remainder là constant. Thay `x=r`:
 P(r)=R.
 ```
 
-Vì thế `P(r)=0` khi và chỉ khi remainder bằng 0, tức `(x-r)` là exact factor.
+Vì thế `P(r)=0` khi và chỉ khi remainder bằng 0, tức `(x-r)` là chính xác (exact / 정확한) factor.
 
-Factor theorem không phải mẹo; nó là special case của polynomial division.
+Factor theorem không phải mẹo; nó là special trường hợp (case / 사례) của polynomial division.
 
-## 4. Zero-product property biến factors thành roots
+## 4. Zero-product thuộc tính (property / 속성) biến factors thành roots
 
 Nếu
 
@@ -107,15 +110,15 @@ trở thành
 (x-2)(x-3)=0.
 ```
 
-Trong real/complex numbers, product bằng zero khi ít nhất một factor bằng zero, nên
+Trong real/complex numbers, sản phẩm (product / 제품) bằng zero khi ít nhất một factor bằng zero, nên
 
 ```math
 x=2\quad\text{hoặc}\quad x=3.
 ```
 
-Factorization là powerful vì nó đổi một global expression thành local conditions trên factors.
+Factorization là powerful vì nó đổi một toàn cục (global / 전역) expression thành cục bộ (local / 로컬) conditions trên factors.
 
-## 5. Multiplicity nói gì về local geometry?
+## 5. Multiplicity nói gì về cục bộ (local / 로컬) hình học (geometry / 기하학)?
 
 Nếu
 
@@ -125,9 +128,9 @@ P(x)=(x-r)^mQ(x),\qquad Q(r)\ne0,
 
 thì `r` có multiplicity `m`.
 
-Nếu `m` odd, sign thường đổi khi đi qua `r`, nên graph cross x-axis.
+Nếu `m` odd, sign thường đổi khi đi qua `r`, nên đồ thị (graph / 그래프) cross x-axis.
 
-Nếu `m` even, sign thường giữ nguyên, nên graph touch rồi turn.
+Nếu `m` even, sign thường giữ nguyên, nên đồ thị (graph / 그래프) touch rồi turn.
 
 Ví dụ:
 
@@ -135,13 +138,13 @@ Ví dụ:
 P(x)=(x-1)^2(x+2).
 ```
 
-Root `x=1` multiplicity 2, root `x=-2` multiplicity 1.
+Gốc (root / 루트) `x=1` multiplicity 2, gốc (root / 루트) `x=-2` multiplicity 1.
 
-Calculus giải thích sâu hơn: high multiplicity đồng nghĩa nhiều derivatives đầu tiên cũng vanish tại root.
+Calculus giải thích sâu hơn: high multiplicity đồng nghĩa nhiều derivatives đầu tiên cũng vanish tại gốc (root / 루트).
 
 ## 6. Cùng polynomial, nhiều representations
 
-Một trong những bài học quan trọng nhất của algebra là **representation choice matters**.
+Một trong những bài học quan trọng nhất của algebra là **biểu diễn (representation / 표현) choice matters**.
 
 ### Expanded form
 
@@ -161,7 +164,7 @@ Factored form làm lộ các nhân tử và nghiệm tiềm năng. Dùng nó khi
 a(x-r_1)(x-r_2)
 ```
 
-làm roots và sign structure rõ.
+làm roots và sign cấu trúc (structure / 구조) rõ.
 
 ### Vertex form
 
@@ -171,11 +174,11 @@ Vertex form làm lộ đỉnh và phép tịnh tiến của parabola. Nó nối 
 a(x-h)^2+k
 ```
 
-làm extremum và geometry rõ.
+làm extremum và hình học (geometry / 기하학) rõ.
 
-Cùng một object nhưng mỗi form trả lời một loại câu hỏi khác nhau. Đây là pattern lặp lại trong linear algebra, Fourier analysis và numerical computing: đổi basis/representation để làm structure trở nên nhìn thấy được.
+Cùng một đối tượng (object / 객체) nhưng mỗi form trả lời một loại câu hỏi khác nhau. Đây là mẫu (pattern / 패턴) lặp lại trong tuyến tính (linear / 선형) algebra, Fourier phân tích (analysis / 분석) và numerical computing: đổi basis/biểu diễn (representation / 표현) để làm cấu trúc (structure / 구조) trở nên nhìn thấy được.
 
-## 7. Completing the square là representation change
+## 7. Completing the square là biểu diễn (representation / 표현) thay đổi (change / 변경)
 
 Với quadratic
 
@@ -195,7 +198,7 @@ x^2+6x+9-9+5
 
 Expanded form giúp đọc coefficients; vertex form ngay lập tức cho vertex `(-3,-4)`.
 
-Operation này cũng là nền của quadratic formula và Gaussian expressions trong probability.
+Thao tác (operation / 연산) này cũng là nền của quadratic formula và Gaussian expressions trong xác suất (probability / 확률).
 
 ## 8. Polynomial division và remainder theorem
 
@@ -215,13 +218,13 @@ Khi `D(x)=x-r`, remainder là constant và bằng `P(r)`.
 
 Điều này nối evaluation với divisibility.
 
-Trong computer algebra, polynomial division là primitive operation phía sau gcd algorithms, symbolic simplification và factorization methods.
+Trong computer algebra, polynomial division là thành phần nguyên thủy (primitive / 기본 요소) thao tác (operation / 연산) phía sau gcd algorithms, symbolic simplification và factorization methods.
 
 ## 9. Fundamental Theorem of Algebra: vì sao complex numbers đủ?
 
 Fundamental Theorem of Algebra nói rằng mọi nonconstant polynomial degree `n` với complex coefficients có exactly `n` complex roots counting multiplicity.
 
-Nói trực giác: complex numbers tạo một number system đủ lớn để polynomial equations không cần mở rộng thêm một class numbers mới chỉ để tìm roots.
+Nói trực giác: complex numbers tạo một number hệ thống (system / 시스템) đủ lớn để polynomial equations không cần mở rộng thêm một lớp (class / 클래스) numbers mới chỉ để tìm roots.
 
 Ví dụ
 
@@ -229,7 +232,7 @@ Ví dụ
 x^2+1=0
 ```
 
-không có real root nhưng có
+không có real gốc (root / 루트) nhưng có
 
 ```math
 x=\pm i.
@@ -261,9 +264,9 @@ r_1+r_2=-\frac ba,
 r_1r_2=\frac ca.
 ```
 
-Vieta's formulas cho thấy coefficients và roots chỉ là hai coordinate systems khác nhau của cùng polynomial structure.
+Vieta's formulas cho thấy coefficients và roots chỉ là hai coordinate các hệ thống (systems / 시스템들) khác nhau của cùng polynomial cấu trúc (structure / 구조).
 
-## 11. Worked example: chọn representation đúng
+## 11. Worked example: chọn biểu diễn (representation / 표현) đúng
 
 Xét
 
@@ -287,21 +290,21 @@ P(x)=(x-3)^2-1.
 
 Vertex: `(3,-1)`.
 
-Muốn evaluate tại many `x`, expanded/Horner representation có thể thuận tiện hơn.
+Muốn evaluate tại many `x`, expanded/Horner biểu diễn (representation / 표현) có thể thuận tiện hơn.
 
 Không có form “tốt nhất” tuyệt đối; form tốt phụ thuộc question.
 
-## 12. Polynomial interpolation: fit data bằng polynomial có giới hạn gì?
+## 12. Polynomial interpolation: fit dữ liệu (data / 데이터) bằng polynomial có giới hạn gì?
 
 Qua `n+1` points có distinct x-values, tồn tại unique polynomial degree at most `n` đi qua tất cả points.
 
-Điều này nghe rất mạnh, nhưng exact interpolation không đồng nghĩa good model.
+Điều này nghe rất mạnh, nhưng chính xác (exact / 정확한) interpolation không đồng nghĩa good mô hình (model / 모델).
 
-High-degree global polynomial có thể oscillate mạnh giữa sample points — Runge phenomenon. Data noise cũng có thể khiến exact fit overfit.
+High-degree toàn cục (global / 전역) polynomial có thể oscillate mạnh giữa mẫu (sample / 표본) points — Runge phenomenon. dữ liệu (data / 데이터) noise cũng có thể khiến chính xác (exact / 정확한) fit overfit.
 
-Vì vậy numerical work thường dùng splines, low-degree local approximation hoặc regularized fitting thay vì “degree càng cao càng tốt”.
+Vì vậy numerical công việc (work / 작업) thường dùng splines, low-degree cục bộ (local / 로컬) approximation hoặc regularized fitting thay vì “degree càng cao càng tốt”.
 
-## 13. Taylor polynomial: polynomial như local language của smooth functions
+## 13. Taylor polynomial: polynomial như cục bộ (local / 로컬) ngôn ngữ (language / 언어) của smooth functions
 
 Nếu `f` smooth quanh `a`, Taylor expansion bắt đầu:
 
@@ -313,7 +316,7 @@ f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\cdots.
 
 Coefficient được chọn để polynomial match derivatives của `f` tại `a`.
 
-Đây là lý do polynomial xuất hiện khắp calculus và numerical methods: gần một point, nhiều smooth functions behave như polynomial đến một order nhất định.
+Đây là lý do polynomial xuất hiện khắp calculus và numerical methods: gần một điểm (point / 지점), nhiều smooth functions behave như polynomial đến một thứ tự (order / 순서) nhất định.
 
 Ví dụ quanh `0`:
 
@@ -321,7 +324,7 @@ Ví dụ quanh `0`:
 \sin x\approx x-\frac{x^3}{3!}+\frac{x^5}{5!}.
 ```
 
-## 14. Horner's method: algebraic form trở thành algorithm
+## 14. Horner's phương thức (method / 메서드): algebraic form trở thành thuật toán (algorithm / 알고리즘)
 
 Thay vì evaluate
 
@@ -335,7 +338,7 @@ bằng cách tính từng power riêng, viết nested:
 P(x)=(((a_nx+a_{n-1})x+a_{n-2})x+\cdots)+a_0.
 ```
 
-Horner's method dùng `O(n)` multiplications/additions và giảm intermediate work.
+Horner's phương thức (method / 메서드) dùng `O(n)` multiplications/additions và giảm intermediate công việc (work / 작업).
 
 Ví dụ
 
@@ -349,19 +352,19 @@ thành
 ((2x-3)x+4)x-5.
 ```
 
-Đây là một connection trực tiếp giữa symbolic representation và computational efficiency.
+Đây là một liên kết (connection / 연결) trực tiếp giữa symbolic biểu diễn (representation / 표현) và computational efficiency.
 
 ## 15. Numerical conditioning của roots
 
-Không phải mọi root đều numerically stable. Small perturbations coefficients có thể gây large changes roots, đặc biệt với multiple hoặc clustered roots.
+Không phải mọi gốc (root / 루트) đều numerically stable. Small perturbations coefficients có thể gây large changes roots, đặc biệt với multiple hoặc clustered roots.
 
-Điều này quan trọng vì symbolic identity và numerical computation là hai tầng khác nhau. Một exact polynomial theorem không guarantee floating-point root-finding sẽ easy.
+Điều này quan trọng vì symbolic định danh (identity / 식별자) và numerical computation là hai tầng khác nhau. Một chính xác (exact / 정확한) polynomial theorem không guarantee floating-point root-finding sẽ easy.
 
-Companion matrices còn cho phép chuyển polynomial-root problem thành eigenvalue problem, nối algebra với linear algebra.
+Companion matrices còn cho phép chuyển polynomial-root bài toán (problem / 문제) thành eigenvalue bài toán (problem / 문제), nối algebra với tuyến tính (linear / 선형) algebra.
 
-## 16. Polynomials trong signals, control và approximation
+## 16. Polynomials trong signals, điều khiển (control / 제어) và approximation
 
-Transfer functions thường có numerator/denominator polynomials. Roots của denominator là poles, liên quan stability của dynamic system.
+Transfer functions thường có numerator/denominator polynomials. Roots của denominator là poles, liên quan stability của hệ động (dynamic system / 동적 시스템).
 
 Characteristic polynomial
 
@@ -369,9 +372,9 @@ Characteristic polynomial
 \det(A-\lambda I)
 ```
 
-có roots là eigenvalues. Vì vậy polynomial factorization kết nối trực tiếp với dynamics, control và linear algebra.
+có roots là eigenvalues. Vì vậy polynomial factorization kết nối trực tiếp với dynamics, điều khiển (control / 제어) và tuyến tính (linear / 선형) algebra.
 
-## 17. Failure modes khi factorization
+## 17. thất bại (failure / 실패) modes khi factorization
 
 ### Không phải polynomial nào cũng factor đẹp trên integers
 
@@ -381,40 +384,42 @@ Ví dụ
 x^2-2
 ```
 
-không factor thành linear factors với rational coefficients, nhưng factor trên reals:
+không factor thành tuyến tính (linear / 선형) factors với rational coefficients, nhưng factor trên reals:
 
 ```math
 (x-\sqrt2)(x+\sqrt2).
 ```
 
-### Repeated roots dễ bị bỏ sót nếu chỉ nhìn sign change
+### Repeated roots dễ bị bỏ sót nếu chỉ nhìn sign thay đổi (change / 변경)
 
 Even multiplicity roots có thể touch axis mà không đổi sign.
 
-### Exact symbolic factorization và numerical factorization khác nhau
+### Chính xác (exact / 정확한) symbolic factorization và numerical factorization khác nhau
 
 Trong high degree hoặc floating coefficients, “factor” có thể nhạy với noise và tolerance.
 
 ## Applications và connections
 
-**Computer Science:** Horner evaluation, symbolic algebra, polynomial hashing và coding theory.
+**Khoa học máy tính (computer science / 컴퓨터 과학):** Horner evaluation, symbolic algebra, polynomial hashing và coding lý thuyết (theory / 이론).
 
-**Physics:** characteristic equations, local approximations và perturbation models.
+**Physics:** characteristic equations, cục bộ (local / 로컬) approximations và perturbation các mô hình (models / 모델들).
 
-**AI:** polynomial features, kernel approximations và Taylor-based analysis.
+**AI:** polynomial features, kernel approximations và Taylor-based phân tích (analysis / 분석).
 
-**Finance:** local approximations của pricing/risk functions và polynomial regression, nhưng high-degree fits cần cảnh giác overfitting.
+**Finance:** cục bộ (local / 로컬) approximations của pricing/rủi ro (risk / 위험) functions và polynomial regression, nhưng high-degree fits cần cảnh giác overfitting.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Polynomial là một object có nhiều representations. Expanded coefficients, factors, roots, vertex form và Taylor form không phải các chủ đề riêng; chúng là những “camera angles” khác nhau. Algebra mạnh lên khi ta biết đổi representation để structure cần thiết trở nên nhìn thấy được.
+> Polynomial là một đối tượng (object / 객체) có nhiều representations. Expanded coefficients, factors, roots, vertex form và Taylor form không phải các chủ đề riêng; chúng là những “camera angles” khác nhau. Algebra mạnh lên khi ta biết đổi biểu diễn (representation / 표현) để cấu trúc (structure / 구조) cần thiết trở nên nhìn thấy được.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**Factorization chỉ là technique để solve quadratics.** Không; nó bộc lộ root, multiplicity và structural decomposition.
+**Factorization chỉ là technique để solve quadratics.** Không; nó bộc lộ gốc (root / 루트), multiplicity và structural decomposition.
 
 **Degree cao luôn fit tốt hơn.** Không; interpolation có thể oscillate và overfit.
 
-**Root là property tách khỏi number system.** Không; factorization phụ thuộc coefficient/domain field đang dùng.
+**gốc (root / 루트) là thuộc tính (property / 속성) tách khỏi number hệ thống (system / 시스템).** Không; factorization phụ thuộc coefficient/lĩnh vực (domain / 도메인) trường dữ liệu (field / 필드) đang dùng.
 
-**Polynomial evaluation chỉ là thay số.** Trong computation, representation như Horner form ảnh hưởng cost và numerical behavior.
+**Polynomial evaluation chỉ là thay số.** Trong computation, biểu diễn (representation / 표현) như Horner form ảnh hưởng chi phí (cost / 비용) và numerical hành vi (behavior / 동작).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algebraic language](./00_algebraic_language.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

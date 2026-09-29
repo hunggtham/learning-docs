@@ -1,5 +1,8 @@
 # Thư viện kiến thức Hóa học
 
+> **Mạch đọc:** Đọc **Thư viện kiến thức Hóa học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Trạng thái chuẩn gốc (canonical / 정본)** sang **phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa học (Chemistry / 화학)** nghiên cứu vật chất từ cấu trúc nguyên tử–electron đến phân tử, pha, phản ứng, năng lượng, tốc độ và vật liệu. Thư viện này được viết như một hệ thống học lâu dài cho người có thể đã quên gần như toàn bộ Hóa học phổ thông; mục tiêu là xây lại mô hình tư duy từ bản chất thay vì học thuộc công thức rời rạc.
 
 Đây không phải cheat sheet, bộ đề hay danh sách phản ứng phải nhớ. Mỗi chapter ưu tiên chuỗi:
@@ -14,19 +17,16 @@ khái niệm là gì
 → liên hệ với kiến thức khác
 ```
 
-## Branch làm việc hiện tại
+## Trạng thái chuẩn gốc (canonical / 정본)
 
-Chemistry Library hiện được phát triển trên branch canonical:
+Chemistry thư viện (library / 라이브러리) hiện là nội dung chuẩn gốc (canonical / 정본) trên `main`. Các branch `feat/chemistry-*` chỉ còn giá trị lịch sử kiểm tra (audit / 감사); không dùng tên branch để xác định nguồn chuẩn (source of truth / 정본) hiện tại.
 
-```text
-feat/chemistry-knowledge-library
-```
+Không tạo một thư viện `chemistry` mới hoặc các tệp (file / 파일) kiểu `_final`, `_updated`, `_v2` khi tệp chuẩn gốc (canonical file / 정본 파일) hiện tại có thể được cập nhật trực tiếp. Mọi thay đổi mới nên đi qua `main` và được ghi nhận trong `COVERAGE_AUDIT.md`.
 
-Branch `feat/chemistry-depth-pass` là ancestor cũ và đã được branch canonical bao trọn. Không tạo một thư viện `chemistry` mới hoặc các file kiểu `_final`, `_updated`, `_v2` khi canonical file hiện tại có thể được cập nhật trực tiếp.
 
-`main` có nhiều workstream khác phát triển song song, vì vậy việc merge chỉ nên thực hiện sau khi audit Chemistry hoàn tất và branch được đồng bộ an toàn với `main` mới nhất.
+> **Chuyển mạch:** Từ **Trạng thái chuẩn gốc (canonical / 정본)**, ta sang **phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Dependency flow cốt lõi
+## Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi
 
 Hóa học dễ bị học thành nhiều mảnh rời: nguyên tử, bảng tuần hoàn, mol, acid-base, pin... Thực tế chúng nối thành một chuỗi phụ thuộc khá chặt.
 
@@ -60,7 +60,10 @@ flowchart TD
 
 Đồ thị này là lộ trình mặc định, không phải thứ tự bắt buộc tuyệt đối. Một chapter chuyên ngành có thể quay lại prerequisite thông qua liên kết chéo.
 
-## Cấu trúc canonical hiện tại
+
+> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi**, ta sang **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cấu trúc chuẩn gốc (canonical / 정본) hiện tại
 
 Danh sách dưới đây biến dependency flow thành các chapter có thể mở và học được. Mỗi thư mục tiếp nhận kết quả của phần trước, vì vậy nên đọc phần mô hình nền trước khi nhảy vào công thức chuyên đề.
 
@@ -206,7 +209,10 @@ chemistry/
     └── chemistry_in_everyday_life.md
 ```
 
-Không tạo chapter mới chỉ để làm cây thư mục lớn hơn. Một file mới chỉ hợp lý khi có ranh giới khái niệm đủ lớn và không thể tích hợp sạch vào canonical file hiện tại.
+Không tạo chapter mới chỉ để làm cây thư mục lớn hơn. Một tệp (file / 파일) mới chỉ hợp lý khi có ranh giới khái niệm đủ lớn và không thể tích hợp sạch vào tệp chuẩn gốc (canonical file / 정본 파일) hiện tại.
+
+
+> **Chuyển mạch:** Từ **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại**, ta sang **Quy tắc ngôn ngữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Quy tắc ngôn ngữ
 
@@ -220,7 +226,7 @@ Không tạo chapter mới chỉ để làm cây thư mục lớn hơn. Một fi
 
 Không viết kiểu:
 
-> Reaction rate depends on activation barrier và molecular orientation.
+> Reaction tỷ lệ (rate / 비율) depends on activation barrier và molecular orientation.
 
 Nên viết:
 
@@ -229,6 +235,9 @@ Nên viết:
 Các ký hiệu và tên chuẩn quốc tế như `pH`, `pKa`, `Ka`, `ΔG`, `VSEPR`, `DFT`, `NMR`, `HPLC`, `HOMO`, `LUMO` được giữ nguyên khi dịch sẽ làm giảm khả năng tra cứu.
 
 Thuật ngữ tiếng Hàn chỉ là lớp bổ sung khi hữu ích cho học tập hoặc công việc tại Hàn Quốc; phần giải thích chính vẫn phải là tiếng Việt.
+
+
+> **Chuyển mạch:** Từ **Quy tắc ngôn ngữ**, ta sang **Ba tầng mô tả luôn phải nối với nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ba tầng mô tả luôn phải nối với nhau
 
@@ -248,7 +257,10 @@ hạt: Na+ và Cl− bị hydrat hóa và phân tán
 ký hiệu: NaCl(s) → Na+(aq) + Cl−(aq)
 ```
 
-Nếu một file chỉ có công thức mà không nối được về hiện tượng và cơ chế hạt, file đó chưa đạt chuẩn của library.
+Nếu một tệp (file / 파일) chỉ có công thức mà không nối được về hiện tượng và cơ chế hạt, tệp (file / 파일) đó chưa đạt chuẩn của thư viện (library / 라이브러리).
+
+
+> **Chuyển mạch:** Từ **Ba tầng mô tả luôn phải nối với nhau**, ta sang **Chuẩn về độ sâu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chuẩn về độ sâu
 
@@ -263,7 +275,10 @@ Một chapter được xem là đủ mạnh khi người đọc có thể trả 
 7. Có ví dụ định tính hoặc định lượng nào cho thấy cách suy luận?
 8. Nó nối sang chapter khác bằng quan hệ nhân quả nào?
 
-Độ dài file chỉ là tín hiệu audit, không phải tiêu chuẩn chất lượng. Một chapter phạm vi hẹp có thể ngắn mà vẫn hoàn chỉnh; một chapter phạm vi lớn nhưng chỉ vài đoạn thường cần đào sâu.
+Độ dài tệp (file / 파일) chỉ là tín hiệu kiểm tra (audit / 감사), không phải tiêu chuẩn chất lượng. Một chapter phạm vi hẹp có thể ngắn mà vẫn hoàn chỉnh; một chapter phạm vi lớn nhưng chỉ vài đoạn thường cần đào sâu.
+
+
+> **Chuyển mạch:** Từ **Chuẩn về độ sâu**, ta sang **Lộ trình cho người học lại từ gần số 0** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lộ trình cho người học lại từ gần số 0
 
@@ -304,32 +319,38 @@ Chặng 7
 90 Connections
 ```
 
-Người đọc không cần nhớ toàn bộ trước khi đi tiếp. Mục tiêu là giữ được mental model, biết prerequisite ở đâu và có thể quay lại bằng internal link.
+Người đọc không cần nhớ toàn bộ trước khi đi tiếp. Mục tiêu là giữ được mô hình tư duy (mental model / 사고 모델), biết prerequisite ở đâu và có thể quay lại bằng nội bộ (internal / 내부) link.
+
+
+> **Chuyển mạch:** Từ **Lộ trình cho người học lại từ gần số 0**, ta sang **Các liên hệ liên ngành được ưu tiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Các liên hệ liên ngành được ưu tiên
 
 ### Vật lý
 
-Quantum mechanics giải thích orbital và cấu trúc electron; electromagnetism giải thích tương tác điện tích; statistical mechanics nối vi trạng thái với entropy; solid-state physics nối orbital với band structure.
+Quantum mechanics giải thích orbital và cấu trúc electron; electromagnetism giải thích tương tác điện tích; statistical mechanics nối vi trạng thái với entropy; solid-state physics nối orbital với band cấu trúc (structure / 구조).
 
 ### Sinh học
 
-Acid–base, redox, liên kết hydro, hiệu ứng kỵ nước, enzyme kinetics và Gibbs coupling tạo nền cho protein, màng, ATP và metabolism.
+Acid–cơ sở (base / 기반), redox, liên kết hydro, hiệu ứng kỵ nước, enzyme kinetics và Gibbs coupling tạo nền cho protein, màng, ATP và metabolism.
 
 ### Vật liệu và điện tử
 
-Liên kết → cấu trúc tinh thể → khuyết tật → band structure → tính cơ, nhiệt, điện. Semiconductor fabrication, CVD/ALD, doping và interface chemistry đều nằm trên chuỗi này.
+Liên kết → cấu trúc tinh thể → khuyết tật → band cấu trúc (structure / 구조) → tính cơ, nhiệt, điện. Semiconductor fabrication, CVD/ALD, doping và giao diện (interface / 인터페이스) chemistry đều nằm trên chuỗi này.
 
 ### Năng lượng và pin
 
-Redox + Nernst + kinetics + mass transport + material stability quyết định điện áp, công suất, dung lượng, tuổi thọ và an toàn của cell.
+Redox + Nernst + kinetics + mass vận chuyển (transport / 전송) + material stability quyết định điện áp, công suất, dung lượng, tuổi thọ và an toàn của cell.
 
 ### Đời sống
 
 Nấu ăn, làm sạch, bảo quản thực phẩm, gỉ sắt, thuốc, nhựa và pin được giải thích bằng cùng các cơ chế nền, không tách thành danh sách mẹo.
 
+
+> **Chuyển mạch:** Từ **Các liên hệ liên ngành được ưu tiên**, ta sang **Bắt đầu học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Bắt đầu học
 
-Bắt đầu từ [Hóa học nghiên cứu điều gì?](./00_foundations/00_what_is_chemistry.md), tiếp theo [Vật chất và phép đo](./00_foundations/01_matter_and_measurement.md), rồi đi theo dependency flow ở đầu file.
+Bắt đầu từ [Hóa học nghiên cứu điều gì?](./00_foundations/00_what_is_chemistry.md), tiếp theo [Vật chất và phép đo](./00_foundations/01_matter_and_measurement.md), rồi đi theo phụ thuộc (dependency / 의존성) luồng (flow / 흐름) ở đầu tệp (file / 파일).
 
 Trạng thái chi tiết của từng domain và các pass còn cần làm được theo dõi trong [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md).

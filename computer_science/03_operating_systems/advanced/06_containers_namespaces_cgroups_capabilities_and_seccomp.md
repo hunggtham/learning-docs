@@ -1,12 +1,15 @@
-# Container internals: namespaces, cgroups, capabilities và seccomp
+# Bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp
 
-Container thường được mô tả như “máy ảo nhẹ”, nhưng mental model đó dễ dẫn đến hiểu sai. Một container Linux thông thường **không có kernel riêng**. Các process trong container vẫn là process của kernel host; cảm giác “một máy riêng” được tạo bởi nhiều cơ chế kernel phối hợp để thay đổi những gì process có thể nhìn thấy, sử dụng và thực hiện.
+> **Mạch đọc:** Đặt **bộ chứa (container / 컨테이너) internals: namespaces, cgroups, capabilities và seccomp** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. bộ chứa (container / 컨테이너) không phải một thành phần nguyên thủy (primitive / 기본 요소) duy nhất** sang **2. không gian tên (namespace / 네임스페이스) thay đổi “thế giới nhìn thấy”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Bộ chứa (container / 컨테이너) thường được mô tả như “máy ảo nhẹ”, nhưng mô hình tư duy (mental model / 사고 모델) đó dễ dẫn đến hiểu sai. Một bộ chứa (container / 컨테이너) Linux thông thường **không có kernel riêng**. Các tiến trình (process / 프로세스) trong bộ chứa (container / 컨테이너) vẫn là tiến trình (process / 프로세스) của kernel host; cảm giác “một máy riêng” được tạo bởi nhiều cơ chế kernel phối hợp để thay đổi những gì tiến trình (process / 프로세스) có thể nhìn thấy, sử dụng và thực hiện.
 
 Chapter này nối [kernel execution](./00_kernel_execution_contexts_and_syscall_path.md), [scheduler](./01_scheduler_run_queues_fairness_and_latency.md), [virtual memory](./03_virtual_memory_page_tables_tlb_shootdown_and_huge_pages.md) và [filesystem](./04_filesystem_crash_consistency_journaling_and_cow.md) thành một hệ thống isolation thực tế.
 
-## 1. Container không phải một primitive duy nhất
+## 1. bộ chứa (container / 컨테이너) không phải một thành phần nguyên thủy (primitive / 기본 요소) duy nhất
 
-Linux không có một syscall kiểu `create_container()`. Runtime như `runc` hoặc containerd phối hợp nhiều cơ chế:
+Linux không có một syscall kiểu `create_container()`. thời gian chạy (runtime / 런타임) như `runc` hoặc containerd phối hợp nhiều cơ chế:
 
 ```text
 namespaces     -> thay đổi view của process
@@ -17,39 +20,39 @@ filesystem     -> tạo root filesystem riêng
 LSM            -> SELinux/AppArmor policy
 ```
 
-Docker/Kubernetes xây abstraction cao hơn trên các primitive này.
+Docker/Kubernetes xây lớp trừu tượng (abstraction / 추상화) cao hơn trên các thành phần nguyên thủy (primitive / 기본 요소) này.
 
-> Container là một **hợp đồng cô lập (isolation contract)** được ghép từ nhiều cơ chế kernel, không phải một lớp ảo hóa duy nhất.
+> bộ chứa (container / 컨테이너) là một **hợp đồng cô lập (isolation contract)** được ghép từ nhiều cơ chế kernel, không phải một lớp ảo hóa duy nhất.
 
-## 2. Namespace thay đổi “thế giới nhìn thấy”
+## 2. không gian tên (namespace / 네임스페이스) thay đổi “thế giới nhìn thấy”
 
-**Không gian tên (namespace / 네임스페이스)** làm cho cùng một kernel object có thể xuất hiện khác nhau với các nhóm process khác nhau.
+**không gian tên (namespace / 네임스페이스)** làm cho cùng một kernel đối tượng (object / 객체) có thể xuất hiện khác nhau với các nhóm tiến trình (process / 프로세스) khác nhau.
 
-PID namespace tạo cây process riêng. Process có thể thấy mình là PID 1 bên trong container dù kernel host gán PID khác.
+PID không gian tên (namespace / 네임스페이스) tạo cây tiến trình (process / 프로세스) riêng. tiến trình (process / 프로세스) có thể thấy mình là PID 1 bên trong bộ chứa (container / 컨테이너) dù kernel host gán PID khác.
 
-Mount namespace cho mỗi nhóm process một view mount riêng. Network namespace cung cấp interface, routing table, socket namespace và firewall context riêng. UTS namespace cô lập hostname; IPC namespace cô lập một số IPC object; user namespace ánh xạ UID/GID giữa bên trong và host.
+Mount không gian tên (namespace / 네임스페이스) cho mỗi nhóm tiến trình (process / 프로세스) một view mount riêng. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) cung cấp giao diện (interface / 인터페이스), routing bảng (table / 테이블), socket không gian tên (namespace / 네임스페이스) và firewall ngữ cảnh (context / 맥락) riêng. UTS không gian tên (namespace / 네임스페이스) cô lập hostname; IPC không gian tên (namespace / 네임스페이스) cô lập một số IPC đối tượng (object / 객체); người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) ánh xạ UID/GID giữa bên trong và host.
 
-Điểm quan trọng: namespace chủ yếu giải quyết **visibility và naming**, không tự giới hạn lượng CPU/RAM mà process tiêu thụ.
+Điểm quan trọng: không gian tên (namespace / 네임스페이스) chủ yếu giải quyết **visibility và naming**, không tự giới hạn lượng CPU/RAM mà tiến trình (process / 프로세스) tiêu thụ.
 
-## 3. PID 1 trong container có ý nghĩa đặc biệt
+## 3. PID 1 trong bộ chứa (container / 컨테이너) có ý nghĩa đặc biệt
 
-Process đầu tiên của PID namespace trở thành PID 1 trong namespace đó. PID 1 có semantics signal và trách nhiệm thu gom process con khác process bình thường.
+Tiến trình (process / 프로세스) đầu tiên của PID không gian tên (namespace / 네임스페이스) trở thành PID 1 trong không gian tên (namespace / 네임스페이스) đó. PID 1 có ngữ nghĩa (semantics / 의미론) tín hiệu (signal / 신호) và trách nhiệm thu gom tiến trình (process / 프로세스) con khác tiến trình (process / 프로세스) bình thường.
 
-Nếu application chạy trực tiếp làm PID 1 nhưng không `wait()` child process đúng cách, zombie có thể tích tụ. Đây là lý do một số image dùng init nhỏ như `tini`.
+Nếu ứng dụng (application / 애플리케이션) chạy trực tiếp làm PID 1 nhưng không `wait()` child tiến trình (process / 프로세스) đúng cách, zombie có thể tích tụ. Đây là lý do một số ảnh (image / 이미지) dùng init nhỏ như `tini`.
 
-Vấn đề này cho thấy abstraction container không xóa semantics của OS; ngược lại, application đôi khi tiếp xúc trực tiếp hơn với chúng.
+Vấn đề này cho thấy lớp trừu tượng (abstraction / 추상화) bộ chứa (container / 컨테이너) không xóa ngữ nghĩa (semantics / 의미론) của OS; ngược lại, ứng dụng (application / 애플리케이션) đôi khi tiếp xúc trực tiếp hơn với chúng.
 
-## 4. Mount namespace và root filesystem
+## 4. Mount không gian tên (namespace / 네임스페이스) và gốc (root / 루트) filesystem
 
-Container có thể thấy một filesystem tree khác nhờ mount namespace kết hợp `pivot_root`/`chroot` và layered filesystem. Image layer thường bất biến; writable layer của container nằm phía trên.
+Bộ chứa (container / 컨테이너) có thể thấy một filesystem cây (tree / 트리) khác nhờ mount không gian tên (namespace / 네임스페이스) kết hợp `pivot_root`/`chroot` và layered filesystem. ảnh (image / 이미지) tầng (layer / 계층) thường bất biến; writable tầng (layer / 계층) của bộ chứa (container / 컨테이너) nằm phía trên.
 
-**Sao chép khi ghi (copy-on-write / CoW)** cho phép nhiều container chia sẻ layer gốc. Khi một container sửa file, block hoặc file tương ứng được tạo ở writable layer của nó.
+**Sao chép khi ghi (copy-on-write / CoW)** cho phép nhiều bộ chứa (container / 컨테이너) chia sẻ tầng (layer / 계층) gốc. Khi một bộ chứa (container / 컨테이너) sửa tệp (file / 파일), khối (block / 블록) hoặc tệp (file / 파일) tương ứng được tạo ở writable tầng (layer / 계층) của nó.
 
-Điều này tiết kiệm storage nhưng có chi phí metadata và I/O. Database có workload ghi nặng thường không nên coi writable image layer như storage bền vững chính; volume/bind mount phù hợp hơn.
+Điều này tiết kiệm lưu trữ (storage / 저장소) nhưng có chi phí siêu dữ liệu (metadata / 메타데이터) và I/O. cơ sở dữ liệu (database / 데이터베이스) có tải công việc (workload / 워크로드) ghi nặng thường không nên coi writable ảnh (image / 이미지) tầng (layer / 계층) như lưu trữ (storage / 저장소) bền vững chính; volume/bind mount phù hợp hơn.
 
-## 5. Network namespace tạo network stack logic riêng
+## 5. mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) tạo mạng (network / 네트워크) ngăn xếp (stack / 스택) lô-gic (logic / 논리) riêng
 
-Một container có thể có interface `eth0` riêng dù đó chỉ là một đầu của cặp `veth`. Đầu kia nằm ở host hoặc namespace khác và thường nối vào bridge.
+Một bộ chứa (container / 컨테이너) có thể có giao diện (interface / 인터페이스) `eth0` riêng dù đó chỉ là một đầu của cặp `veth`. Đầu kia nằm ở host hoặc không gian tên (namespace / 네임스페이스) khác và thường nối vào cầu nối (bridge / 브리지).
 
 ```text
 container eth0
@@ -61,51 +64,51 @@ host bridge
 physical NIC
 ```
 
-Packet có thể đi qua routing, NAT, conntrack và firewall rule. Vì vậy “container networking” vẫn là networking Linux; abstraction cao hơn chỉ tự động cấu hình đường đi.
+Packet có thể đi qua routing, NAT, conntrack và firewall quy tắc (rule / 규칙). Vì vậy “bộ chứa (container / 컨테이너) networking” vẫn là networking Linux; lớp trừu tượng (abstraction / 추상화) cao hơn chỉ tự động cấu hình đường đi.
 
-Khi debug latency hoặc packet loss, cần biết packet thực sự đi qua những namespace và rule nào thay vì chỉ nhìn service name của Kubernetes.
+Khi gỡ lỗi (debug / 디버그) độ trễ (latency / 지연 시간) hoặc packet mất mát (loss / 손실), cần biết packet thực sự đi qua những không gian tên (namespace / 네임스페이스) và quy tắc (rule / 규칙) nào thay vì chỉ nhìn dịch vụ (service / 서비스) name của Kubernetes.
 
-## 6. Cgroups giải quyết resource accounting và control
+## 6. Cgroups giải quyết tài nguyên (resource / 자원) accounting và điều khiển (control / 제어)
 
-**Nhóm điều khiển (control groups / cgroups / 제어 그룹)** nhóm process để kernel theo dõi và kiểm soát tài nguyên. Cgroup v2 cung cấp hierarchy thống nhất cho CPU, memory, I/O, process count và các controller khác.
+**Nhóm điều khiển (control groups / cgroups / 제어 그룹)** nhóm tiến trình (process / 프로세스) để kernel theo dõi và kiểm soát tài nguyên. Cgroup v2 cung cấp hierarchy thống nhất cho CPU, bộ nhớ (memory / 메모리), I/O, tiến trình (process / 프로세스) count và các controller khác.
 
-Namespace trả lời “process nhìn thấy gì”; cgroup trả lời “process được dùng bao nhiêu”. Hai khái niệm thường xuất hiện cùng container nhưng giải quyết vấn đề khác nhau.
+Không gian tên (namespace / 네임스페이스) trả lời “tiến trình (process / 프로세스) nhìn thấy gì”; cgroup trả lời “tiến trình (process / 프로세스) được dùng bao nhiêu”. Hai khái niệm thường xuất hiện cùng bộ chứa (container / 컨테이너) nhưng giải quyết vấn đề khác nhau.
 
 ## 7. CPU quota không tương đương CPU riêng
 
-Một container được quota 1 CPU không nhất thiết sở hữu một core vật lý riêng. Scheduler vẫn phân phối runnable task trên CPU host theo cpuset, weight và quota.
+Một bộ chứa (container / 컨테이너) được quota 1 CPU không nhất thiết sở hữu một cốt lõi (core / 핵심) vật lý riêng. Scheduler vẫn phân phối runnable tác vụ (task / 작업) trên CPU host theo cpuset, weight và quota.
 
-Quota có thể được mô hình hóa bằng ngân sách CPU trong một khoảng thời gian. Khi dùng hết ngân sách, cgroup bị **điều tiết (throttling)** cho tới kỳ tiếp theo. Application có thể thấy tail latency tăng dù host chưa đạt 100% CPU trung bình.
+Quota có thể được mô hình hóa bằng ngân sách CPU trong một khoảng thời gian. Khi dùng hết ngân sách, cgroup bị **điều tiết (throttling)** cho tới kỳ tiếp theo. ứng dụng (application / 애플리케이션) có thể thấy tail độ trễ (latency / 지연 시간) tăng dù host chưa đạt 100% CPU trung bình.
 
-Đây là lý do metric `CPU usage` đơn lẻ không đủ. Cần quan sát throttled time, run queue và latency distribution.
+Đây là lý do chỉ số (metric / 지표) `CPU usage` đơn lẻ không đủ. Cần quan sát throttled thời gian (time / 시간), run hàng đợi (queue / 큐) và độ trễ (latency / 지연 시간) phân phối (distribution / 분포).
 
-## 8. Memory limit và OOM trong container
+## 8. giới hạn bộ nhớ (memory limit / 메모리 제한) và OOM trong bộ chứa (container / 컨테이너)
 
-Memory cgroup theo dõi mức dùng bộ nhớ và có thể áp limit. Khi cgroup không thể reclaim đủ memory dưới giới hạn, kernel có thể kích hoạt **OOM trong phạm vi cgroup** thay vì giết process ngẫu nhiên trên toàn host.
+Bộ nhớ (memory / 메모리) cgroup theo dõi mức dùng bộ nhớ và có thể áp limit. Khi cgroup không thể reclaim đủ bộ nhớ (memory / 메모리) dưới giới hạn, kernel có thể kích hoạt **OOM trong phạm vi cgroup** thay vì giết tiến trình (process / 프로세스) ngẫu nhiên trên toàn host.
 
-Nhưng memory accounting không đơn giản chỉ là heap của application. Page cache, anonymous memory và một số kernel memory cũng ảnh hưởng tùy cấu hình/kernel.
+Nhưng bộ nhớ (memory / 메모리) accounting không đơn giản chỉ là vùng nhớ động (heap / 힙) của ứng dụng (application / 애플리케이션). Page bộ nhớ đệm (cache / 캐시), anonymous bộ nhớ (memory / 메모리) và một số kernel bộ nhớ (memory / 메모리) cũng ảnh hưởng tùy cấu hình/kernel.
 
-Một JVM đặt heap gần bằng container memory limit có thể vẫn bị OOMKill vì native memory, thread stack, direct buffer, JIT metadata và page cache cần không gian riêng.
+Một JVM đặt vùng nhớ động (heap / 힙) gần bằng bộ chứa (container / 컨테이너) giới hạn bộ nhớ (memory limit / 메모리 제한) có thể vẫn bị OOMKill vì bản địa (native / 네이티브) bộ nhớ (memory / 메모리), luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택), direct buffer, JIT siêu dữ liệu (metadata / 메타데이터) và page bộ nhớ đệm (cache / 캐시) cần không gian riêng.
 
-## 9. User namespace và root không nhất thiết là host root
+## 9. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) và gốc (root / 루트) không nhất thiết là host gốc (root / 루트)
 
-User namespace cho phép UID 0 bên trong namespace ánh xạ sang UID không đặc quyền trên host. Điều này giảm hậu quả nếu process thoát khỏi một số boundary.
+Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) cho phép UID 0 bên trong không gian tên (namespace / 네임스페이스) ánh xạ sang UID không đặc quyền trên host. Điều này giảm hậu quả nếu tiến trình (process / 프로세스) thoát khỏi một số ranh giới (boundary / 경계).
 
-Tuy nhiên, “rootless” không tự động có nghĩa là an toàn tuyệt đối. Kernel vẫn là shared attack surface và cấu hình namespace/capability/filesystem vẫn quan trọng.
+Tuy nhiên, “rootless” không tự động có nghĩa là an toàn tuyệt đối. Kernel vẫn là dùng chung (shared / 공유) attack surface và cấu hình không gian tên (namespace / 네임스페이스)/năng lực (capability / 역량)/filesystem vẫn quan trọng.
 
-## 10. Linux capabilities chia nhỏ quyền root
+## 10. Linux capabilities chia nhỏ quyền gốc (root / 루트)
 
-Unix truyền thống có mô hình gần như nhị phân: root hoặc không root. **Năng lực đặc quyền (Linux capabilities)** chia quyền root thành các quyền nhỏ hơn như `CAP_NET_BIND_SERVICE`, `CAP_SYS_ADMIN`, `CAP_NET_ADMIN`.
+Unix truyền thống có mô hình gần như nhị phân: gốc (root / 루트) hoặc không gốc (root / 루트). **Năng lực đặc quyền (Linux capabilities)** chia quyền gốc (root / 루트) thành các quyền nhỏ hơn như `CAP_NET_BIND_SERVICE`, `CAP_SYS_ADMIN`, `CAP_NET_ADMIN`.
 
-Container nên chỉ giữ capability thực sự cần. `CAP_SYS_ADMIN` đặc biệt rộng và thường được xem như một capability rất nhạy cảm.
+Bộ chứa (container / 컨테이너) nên chỉ giữ năng lực (capability / 역량) thực sự cần. `CAP_SYS_ADMIN` đặc biệt rộng và thường được xem như một năng lực (capability / 역량) rất nhạy cảm.
 
-Nguyên tắc ở đây là **đặc quyền tối thiểu (least privilege)**: application web không cần quyền quản trị network hoặc mount filesystem chỉ vì nó chạy trong container.
+Nguyên tắc ở đây là **đặc quyền tối thiểu (least privilege)**: ứng dụng (application / 애플리케이션) web không cần quyền quản trị mạng (network / 네트워크) hoặc mount filesystem chỉ vì nó chạy trong bộ chứa (container / 컨테이너).
 
 ## 11. Seccomp thu hẹp syscall surface
 
-**Seccomp** cho phép lọc syscall mà process được phép gọi. Nếu application không bao giờ cần `ptrace`, `mount` hoặc một syscall nguy hiểm khác, policy có thể chặn chúng.
+**Seccomp** cho phép lọc syscall mà tiến trình (process / 프로세스) được phép gọi. Nếu ứng dụng (application / 애플리케이션) không bao giờ cần `ptrace`, `mount` hoặc một syscall nguy hiểm khác, chính sách (policy / 정책) có thể chặn chúng.
 
-Điều này không sửa lỗ hổng trong kernel, nhưng giảm tập đường đi mà attacker có thể dùng sau khi chiếm được process. Security thường mạnh hơn khi nhiều lớp độc lập cùng giới hạn attacker:
+Điều này không sửa lỗ hổng trong kernel, nhưng giảm tập đường đi mà attacker có thể dùng sau khi chiếm được tiến trình (process / 프로세스). bảo mật (security / 보안) thường mạnh hơn khi nhiều lớp độc lập cùng giới hạn attacker:
 
 ```text
 namespace
@@ -116,27 +119,27 @@ namespace
 + read-only filesystem
 ```
 
-## 12. Container escape và shared kernel
+## 12. bộ chứa (container / 컨테이너) escape và dùng chung (shared / 공유) kernel
 
-VM thường đặt guest sau boundary hypervisor và guest kernel riêng. Container chia sẻ kernel host. Nếu attacker khai thác được kernel vulnerability thông qua syscall surface có thể truy cập, namespace không còn là boundary tuyệt đối.
+VM thường đặt guest sau ranh giới (boundary / 경계) hypervisor và guest kernel riêng. bộ chứa (container / 컨테이너) chia sẻ kernel host. Nếu attacker khai thác được kernel vulnerability thông qua syscall surface có thể truy cập, không gian tên (namespace / 네임스페이스) không còn là ranh giới (boundary / 경계) tuyệt đối.
 
-Do đó threat model quyết định isolation technology. Multi-tenant workload không tin cậy có thể cần VM, microVM hoặc sandbox bổ sung thay vì chỉ container tiêu chuẩn.
+Do đó threat mô hình (model / 모델) quyết định isolation technology. Multi-tenant tải công việc (workload / 워크로드) không tin cậy có thể cần VM, microVM hoặc sandbox bổ sung thay vì chỉ bộ chứa (container / 컨테이너) tiêu chuẩn.
 
 ## 13. Cgroups và Kubernetes requests/limits
 
-Kubernetes `requests` và `limits` cuối cùng phải được chuyển thành primitive của OS/runtime. CPU request chủ yếu ảnh hưởng scheduling/weight; CPU limit có thể thành quota. Memory limit trở thành giới hạn cgroup và có thể dẫn tới OOMKill.
+Kubernetes `requests` và `limits` cuối cùng phải được chuyển thành thành phần nguyên thủy (primitive / 기본 요소) của OS/thời gian chạy (runtime / 런타임). CPU yêu cầu (request / 요청) chủ yếu ảnh hưởng scheduling/weight; Giới hạn CPU (CPU limit / CPU 제한) có thể thành quota. giới hạn bộ nhớ (memory limit / 메모리 제한) trở thành giới hạn cgroup và có thể dẫn tới OOMKill.
 
-Điều này giải thích tại sao hiểu Kubernetes mà không hiểu scheduler, memory reclaim và cgroups sẽ tạo khoảng trống mental model. YAML chỉ là lớp cấu hình; hành vi cuối cùng xảy ra trong kernel.
+Điều này giải thích tại sao hiểu Kubernetes mà không hiểu scheduler, bộ nhớ (memory / 메모리) reclaim và cgroups sẽ tạo khoảng trống mô hình tư duy (mental model / 사고 모델). YAML chỉ là lớp cấu hình; hành vi cuối cùng xảy ra trong kernel.
 
 ## 14. Noisy neighbor
 
-Hai container trên cùng host vẫn chia sẻ nhiều tài nguyên: LLC cache, memory bandwidth, storage queue, NIC, kernel lock và đôi khi NUMA topology. Cgroup giúp kiểm soát một số tài nguyên nhưng không biến host thành các máy vật lý độc lập hoàn toàn.
+Hai bộ chứa (container / 컨테이너) trên cùng host vẫn chia sẻ nhiều tài nguyên: LLC bộ nhớ đệm (cache / 캐시), bộ nhớ (memory / 메모리) bandwidth, lưu trữ (storage / 저장소) hàng đợi (queue / 큐), NIC, kernel khóa (lock / 잠금) và đôi khi NUMA topology. Cgroup giúp kiểm soát một số tài nguyên nhưng không biến host thành các máy vật lý độc lập hoàn toàn.
 
-Một workload có thể không vượt CPU limit nhưng vẫn làm workload khác chậm do memory bandwidth hoặc I/O contention. Đây là **ảnh hưởng hàng xóm ồn (noisy-neighbor effect)**.
+Một tải công việc (workload / 워크로드) có thể không vượt Giới hạn CPU (CPU limit / CPU 제한) nhưng vẫn làm tải công việc (workload / 워크로드) khác chậm do bộ nhớ (memory / 메모리) bandwidth hoặc I/O contention. Đây là **ảnh hưởng hàng xóm ồn (noisy-neighbor effect)**.
 
-## 15. Debug từ container xuống kernel
+## 15. gỡ lỗi (debug / 디버그) từ bộ chứa (container / 컨테이너) xuống kernel
 
-Khi container “chậm”, cần phân tách các lớp:
+Khi bộ chứa (container / 컨테이너) “chậm”, cần phân tách các lớp:
 
 ```text
 application queue
@@ -152,22 +155,24 @@ NUMA / cache / memory bandwidth
 storage hoặc network
 ```
 
-`docker stats` hoặc dashboard Kubernetes chỉ là điểm bắt đầu. Production debugging sâu cần nối metric ở orchestration layer với kernel evidence.
+`docker stats` hoặc dashboard Kubernetes chỉ là điểm bắt đầu. môi trường vận hành (production / 운영 환경) debugging sâu cần nối chỉ số (metric / 지표) ở orchestration tầng (layer / 계층) với kernel bằng chứng (evidence / 증거).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Container là VM nhẹ.”** Hữu ích như phép so sánh ban đầu nhưng sai nếu hiểu theo kiến trúc: container thường chia sẻ host kernel.
+**“bộ chứa (container / 컨테이너) là VM nhẹ.”** Hữu ích như phép so sánh ban đầu nhưng sai nếu hiểu theo kiến trúc: bộ chứa (container / 컨테이너) thường chia sẻ host kernel.
 
-**“Namespace tạo security boundary hoàn chỉnh.”** Namespace cô lập view; security boundary thực tế cần capability, seccomp, LSM, filesystem permission và kernel security.
+**“không gian tên (namespace / 네임스페이스) tạo ranh giới bảo mật (security boundary / 보안 경계) hoàn chỉnh.”** không gian tên (namespace / 네임스페이스) cô lập view; ranh giới bảo mật (security boundary / 보안 경계) thực tế cần năng lực (capability / 역량), seccomp, LSM, filesystem permission và kernel bảo mật (security / 보안).
 
-**“CPU limit 1 nghĩa là có một CPU riêng.”** Không. Nó thường là quota/weight trên scheduler dùng chung.
+**“Giới hạn CPU (CPU limit / CPU 제한) 1 nghĩa là có một CPU riêng.”** Không. Nó thường là quota/weight trên scheduler dùng chung.
 
-**“Memory limit chỉ giới hạn Java heap.”** Không. Runtime còn dùng native memory và hệ thống còn nhiều loại memory accounting khác.
+**“giới hạn bộ nhớ (memory limit / 메모리 제한) chỉ giới hạn Java vùng nhớ động (heap / 힙).”** Không. thời gian chạy (runtime / 런타임) còn dùng bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và hệ thống còn nhiều loại bộ nhớ (memory / 메모리) accounting khác.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Container là một process bình thường được đặt trong một **thế giới quan bị giới hạn**, một **ngân sách tài nguyên**, và một **tập quyền bị thu hẹp**.
+> bộ chứa (container / 컨테이너) là một tiến trình (process / 프로세스) bình thường được đặt trong một **thế giới quan bị giới hạn**, một **ngân sách tài nguyên**, và một **tập quyền bị thu hẹp**.
 
-Khi abstraction container gây khó hiểu, hãy bóc nó trở lại process, namespace, cgroup, syscall, filesystem và scheduler. Đây cũng là cách reasoning hiệu quả khi debug Docker và Kubernetes.
+Khi lớp trừu tượng (abstraction / 추상화) bộ chứa (container / 컨테이너) gây khó hiểu, hãy bóc nó trở lại tiến trình (process / 프로세스), không gian tên (namespace / 네임스페이스), cgroup, syscall, filesystem và scheduler. Đây cũng là cách lập luận (reasoning / 추론) hiệu quả khi gỡ lỗi (debug / 디버그) Docker và Kubernetes.
 
 Xem tiếp: [Kernel execution contexts](./00_kernel_execution_contexts_and_syscall_path.md), [Security](../../07_security_reliability/advanced/README.md) và [Architecture](../../02_computer_architecture/advanced/README.md).
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kernel execution contexts and syscall path](./00_kernel_execution_contexts_and_syscall_path.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,14 @@
 # Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản
 
-> Chương này đi từ việc “mua chỉ số” sang hiểu chỉ số được xây thế nào, nhân tố là gì, vì sao cùng một nhãn value/quality/momentum có thể tạo kết quả khác nhau và vì sao danh mục nhiều sản phẩm vẫn có thể tập trung vào cùng một nguồn rủi ro.
+> **Mạch đọc:** Đặt **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Beta thị trường và Alpha** sang **2. Nhân tố là gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+> Chương này đi từ việc “mua chỉ số” sang hiểu chỉ số được xây thế nào, nhân tố là gì, vì sao cùng một nhãn giá trị (value / 값)/chất lượng (quality / 품질)/momentum có thể tạo kết quả khác nhau và vì sao danh mục nhiều sản phẩm vẫn có thể tập trung vào cùng một nguồn rủi ro.
 
 ## 1. Beta thị trường và Alpha
 
 Beta thị trường là mức phơi nhiễm với chuyển động chung của thị trường. Alpha là phần lợi suất không được giải thích bởi benchmark hoặc mô hình nhân tố đã chọn.
 
-Trước khi gọi một kết quả là alpha, cần kiểm tra liệu nó có thể được giải thích bởi value, size, quality, momentum, duration, tín dụng hoặc FX hay không.
+Trước khi gọi một kết quả là alpha, cần kiểm tra liệu nó có thể được giải thích bởi giá trị (value / 값), kích thước (size / 크기), chất lượng (quality / 품질), momentum, duration, tín dụng hoặc FX hay không.
 
 ## 2. Nhân tố là gì?
 
@@ -16,23 +18,23 @@ Một nhân tố hữu ích cần có định nghĩa rõ, lý do kinh tế/hành
 
 ## 3. Nhân tố giá trị
 
-Giá trị (value) ưu tiên tài sản rẻ hơn so với một thước đo cơ bản như lợi nhuận, giá trị sổ sách, dòng tiền hoặc doanh thu.
+Giá trị (value / 값) ưu tiên tài sản rẻ hơn so với một thước đo cơ bản như lợi nhuận, giá trị sổ sách, dòng tiền hoặc doanh thu.
 
-Rẻ không đồng nghĩa tốt. Doanh nghiệp có thể rẻ vì chất lượng kém hoặc ngành đang suy giảm cấu trúc. Value premium có thể liên quan phần bù rủi ro, hành vi quá phản ứng hoặc cả hai.
+Rẻ không đồng nghĩa tốt. Doanh nghiệp có thể rẻ vì chất lượng kém hoặc ngành đang suy giảm cấu trúc. giá trị (value / 값) premium có thể liên quan phần bù rủi ro, hành vi quá phản ứng hoặc cả hai.
 
 ## 4. Nhân tố tăng trưởng và câu chuyện dài hạn
 
-Tăng trưởng (growth) không phải nhân tố đối lập đơn giản với value. Một doanh nghiệp tăng trưởng cao vẫn có thể rẻ nếu giá chưa phản ánh đầy đủ dòng tiền tương lai, và doanh nghiệp tăng trưởng thấp vẫn có thể đắt.
+Tăng trưởng (growth) không phải nhân tố đối lập đơn giản với giá trị (value / 값). Một doanh nghiệp tăng trưởng cao vẫn có thể rẻ nếu giá chưa phản ánh đầy đủ dòng tiền tương lai, và doanh nghiệp tăng trưởng thấp vẫn có thể đắt.
 
 Phải tách **tốc độ tăng trưởng** khỏi **giá trả cho tăng trưởng**.
 
 ## 5. Chất lượng và khả năng sinh lời
 
-Nhân tố chất lượng (quality) thường kết hợp khả năng sinh lời, bảng cân đối, ổn định lợi nhuận và chất lượng dòng tiền.
+Nhân tố chất lượng (quality / 품질) thường kết hợp khả năng sinh lời, bảng cân đối, ổn định lợi nhuận và chất lượng dòng tiền.
 
 Các thước đo có thể gồm ROIC, ROE, biên lợi nhuận, nợ, biến động lợi nhuận và accrual.
 
-“Quality” không có một định nghĩa duy nhất; quỹ khác nhau có thể chọn thước đo rất khác.
+“chất lượng (quality / 품질)” không có một định nghĩa duy nhất; quỹ khác nhau có thể chọn thước đo rất khác.
 
 ## 6. Động lượng
 
@@ -54,7 +56,7 @@ Nó có thể tạo danh mục tập trung vào ngành phòng thủ, tiện ích
 
 ## 9. Cổ tức
 
-ETF cổ tức có thể nghiêng về value, quality hoặc các ngành trưởng thành. Lợi suất cổ tức cao có thể đến từ giá giảm vì rủi ro kinh doanh tăng.
+ETF cổ tức có thể nghiêng về giá trị (value / 값), chất lượng (quality / 품질) hoặc các ngành trưởng thành. Lợi suất cổ tức cao có thể đến từ giá giảm vì rủi ro kinh doanh tăng.
 
 Không nên coi dividend yield là nhân tố độc lập khỏi chất lượng bảng cân đối và khả năng duy trì payout.
 
@@ -109,7 +111,7 @@ Nó giúp kết hợp các tín hiệu có đơn vị khác nhau, nhưng nhạy 
 
 ## 14. Trung hòa ngành
 
-Một chiến lược value không trung hòa ngành có thể trở thành cược lớn vào ngân hàng, năng lượng hoặc vật liệu nếu các ngành đó rẻ hơn thị trường.
+Một chiến lược giá trị (value / 값) không trung hòa ngành có thể trở thành cược lớn vào ngân hàng, năng lượng hoặc vật liệu nếu các ngành đó rẻ hơn thị trường.
 
 Trung hòa ngành (sector neutralization) giúp tách hiệu ứng chọn cổ phiếu trong ngành khỏi cược ngành, nhưng cũng có thể loại bỏ một phần premium thật.
 
@@ -131,15 +133,15 @@ Market Beta
 
 ## 16. Phân rã nhân tố
 
-Phân rã lợi suất (factor attribution) giúp biết danh mục đang kiếm tiền vì value, momentum, size, quality hay chỉ vì beta thị trường.
+Phân rã lợi suất (factor attribution) giúp biết danh mục đang kiếm tiền vì giá trị (value / 값), momentum, kích thước (size / 크기), chất lượng (quality / 품질) hay chỉ vì beta thị trường.
 
 Kết quả phụ thuộc mô hình nhân tố được chọn. Một mô hình thiếu nhân tố quan trọng có thể gán nhầm phần dư thành alpha.
 
-## 17. Value Spread
+## 17. giá trị (value / 값) Spread
 
-Chênh lệch định giá giữa nhóm rẻ và nhóm đắt có thể cung cấp bối cảnh cho value factor.
+Chênh lệch định giá giữa nhóm rẻ và nhóm đắt có thể cung cấp bối cảnh cho giá trị (value / 값) factor.
 
-Nếu chênh lệch cực rộng, lợi suất kỳ vọng của value có thể hấp dẫn hơn, nhưng không có nghĩa điểm đảo chiều sắp xảy ra ngay.
+Nếu chênh lệch cực rộng, lợi suất kỳ vọng của giá trị (value / 값) có thể hấp dẫn hơn, nhưng không có nghĩa điểm đảo chiều sắp xảy ra ngay.
 
 Định giá là tín hiệu chậm, không phải công cụ thời điểm chính xác.
 
@@ -151,29 +153,29 @@ Khi unwinding, tương quan giữa các vị thế cùng factor tăng mạnh và
 
 ## 19. Factor Crash
 
-Momentum có thể sụp khi thị trường đảo chiều cực nhanh. Low volatility có thể chịu áp lực khi lãi suất tăng đột ngột. Value có thể chịu nhiều năm hoạt động kém khi cấu trúc thị trường thay đổi hoặc định giá growth tiếp tục mở rộng.
+Momentum có thể sụp khi thị trường đảo chiều cực nhanh. Low volatility có thể chịu áp lực khi lãi suất tăng đột ngột. giá trị (value / 값) có thể chịu nhiều năm hoạt động kém khi cấu trúc thị trường thay đổi hoặc định giá growth tiếp tục mở rộng.
 
-Mỗi factor có một dạng thất bại riêng. Cần stress test thay vì chỉ nhìn Sharpe lịch sử.
+Mỗi factor có một dạng thất bại riêng. Cần kiểm thử sức chịu tải (stress test / 스트레스 테스트) thay vì chỉ nhìn Sharpe lịch sử.
 
 ## 20. Turnover
 
-Nhân tố thay đổi nhanh như momentum thường cần turnover cao hơn value hoặc quality.
+Nhân tố thay đổi nhanh như momentum thường cần turnover cao hơn giá trị (value / 값) hoặc chất lượng (quality / 품질).
 
-Turnover làm tăng spread, market impact, thuế và tracking difference. Premium gộp cao không có ý nghĩa nếu bị chi phí triển khai ăn hết.
+Turnover làm tăng spread, thị trường (market / 시장) impact, thuế và tracking difference. Premium gộp cao không có ý nghĩa nếu bị chi phí triển khai ăn hết.
 
-## 21. Capacity
+## 21. sức chứa (capacity / 용량)
 
 Khi quy mô vốn tăng, chiến lược factor có thể phải giao dịch lượng lớn ở cùng chứng khoán, đặc biệt small cap.
 
-Capacity là giới hạn quy mô trước khi tác động thị trường làm lợi thế suy giảm đáng kể.
+Sức chứa (capacity / 용량) là giới hạn quy mô trước khi tác động thị trường làm lợi thế suy giảm đáng kể.
 
-## 22. Rebalancing Effect
+## 22. Rebalancing tác động (effect / 효과)
 
 Nhiều chỉ số factor tái cân bằng định kỳ. Ngày tái cân bằng có thể tạo dòng vốn có thể dự đoán phần nào và bị nhà giao dịch khác đi trước.
 
 Chi phí ẩn này nên được xem trong tracking difference dài hạn.
 
-## 23. Index Reconstitution
+## 23. chỉ mục (index / 인덱스) Reconstitution
 
 Khi chứng khoán được thêm hoặc loại khỏi chỉ số lớn, quỹ thụ động phải giao dịch. Giá có thể phản ứng trước ngày hiệu lực do thị trường dự đoán thay đổi.
 
@@ -181,7 +183,7 @@ Dòng vốn do chỉ số là yếu tố kỹ thuật; nó không thay đổi tr
 
 ## 24. Rủi ro phương pháp luận chỉ số
 
-Hai ETF cùng nhãn “quality” có thể khác vì:
+Hai ETF cùng nhãn “chất lượng (quality / 품질)” có thể khác vì:
 
 ```text
 Biến dùng để chấm điểm
@@ -199,9 +201,9 @@ Nhà đầu tư phải đọc methodology, không chỉ tên quỹ.
 
 Active Share cao nói danh mục khác benchmark nhiều, nhưng không nói khác theo cách nào.
 
-Một quỹ Active Share cao có thể chỉ là cược ngành hoặc cược size lớn. Vì vậy nên kết hợp Active Share với phân tích nhân tố.
+Một quỹ Active Share cao có thể chỉ là cược ngành hoặc cược kích thước (size / 크기) lớn. Vì vậy nên kết hợp Active Share với phân tích nhân tố.
 
-## 26. Tracking Error Budget
+## 26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)
 
 Danh mục factor có thể đặt ngân sách sai lệch bám chỉ số (tracking-error budget). Mục tiêu là nhận exposure đủ lớn để factor có ý nghĩa nhưng không làm tổng rủi ro chủ động vượt giới hạn.
 
@@ -209,7 +211,7 @@ Factor tilt nhỏ có thể không tạo khác biệt sau chi phí; tilt quá l�
 
 ## 27. Multi-Factor
 
-Kết hợp value, quality và momentum có thể giảm phụ thuộc vào một factor duy nhất.
+Kết hợp giá trị (value / 값), chất lượng (quality / 품질) và momentum có thể giảm phụ thuộc vào một factor duy nhất.
 
 Nhưng cách kết hợp quan trọng:
 
@@ -223,7 +225,7 @@ Hai cách tạo holdings, turnover và tương quan khác nhau.
 
 ## 28. Correlation giữa các nhân tố thay đổi
 
-Value và momentum có thể hỗ trợ nhau ở một giai đoạn nhưng cùng giảm ở giai đoạn khác. Quality và low-vol cũng có thể trùng lặp.
+Giá trị (value / 값) và momentum có thể hỗ trợ nhau ở một giai đoạn nhưng cùng giảm ở giai đoạn khác. chất lượng (quality / 품질) và low-vol cũng có thể trùng lặp.
 
 Không nên dùng một ma trận tương quan dài hạn cố định để kết luận diversification.
 

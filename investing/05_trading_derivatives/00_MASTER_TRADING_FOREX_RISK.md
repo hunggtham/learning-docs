@@ -1,6 +1,6 @@
 # Bản đồ tổng quan Trading, Forex và quản trị rủi ro
 
-> File này là bản đồ học tập cho toàn bộ `05_trading_derivatives/`. Mục tiêu không phải thay thế các chapter chuyên sâu, mà giúp người đọc hiểu trading là một hệ thống gồm **tín hiệu → quy mô vị thế → thực thi → chi phí → quản trị danh mục → review**.
+> Tệp (file / 파일) này là bản đồ học tập cho toàn bộ `05_trading_derivatives/`. Mục tiêu không phải thay thế các chapter chuyên sâu, mà giúp người đọc hiểu trading là một hệ thống gồm **tín hiệu → quy mô vị thế → thực thi → chi phí → quản trị danh mục → rà soát (review / 검토)**.
 
 > **Cách đọc dễ hơn:** đừng bắt đầu từ pattern. Hãy bắt đầu bằng một cặp tiền, tính một giao dịch bằng tiền thật, rồi mới thêm regime, backtest và vi cấu trúc. Lộ trình ví dụ số nằm ở [Bắt đầu từ đây — Cổ phiếu và Forex](../START_HERE_STOCKS_AND_FOREX.md).
 
@@ -33,7 +33,7 @@ Giá trị pip thực tế thay đổi theo cặp tiền, quy mô, tỷ giá và
 
 Trading không phải tập hợp các pattern vào lệnh. Một chiến lược chỉ có ý nghĩa khi lợi thế kỳ vọng còn tồn tại sau spread, slippage, financing, drawdown và lỗi vận hành.
 
-## 1. Mental model cốt lõi
+## 1. Mô hình tư duy (mental model / 사고 모델) cốt lõi
 
 Trước khi đi vào từng công cụ, hãy giữ một chuỗi vận hành duy nhất: giả thuyết tạo tín hiệu, tín hiệu dẫn tới rule vào/ra, rule quyết định size, execution tạo chi phí, rồi kết quả được review ở cấp danh mục. Chuỗi này là khung để đặt mọi phần sau vào đúng vị trí.
 
@@ -75,10 +75,10 @@ Timeframe càng nhỏ:
 
 - noise càng lớn;
 - spread/slippage chiếm tỷ trọng cao hơn;
-- execution quan trọng hơn;
+- thực thi (execution / 실행) quan trọng hơn;
 - số lượng giao dịch nhiều hơn.
 
-Không có timeframe “tốt nhất”; nó phải phù hợp strategy, cost và thời gian của trader.
+Không có timeframe “tốt nhất”; nó phải phù hợp chiến lược (strategy / 전략), chi phí (cost / 비용) và thời gian của trader.
 
 Điểm chốt là timeframe phải phục vụ rule và ngân sách chi phí. Từ đây, ta có thể hỏi thị trường đang ở trạng thái nào để biết cùng một timeframe có nên được diễn giải như nhau hay không.
 
@@ -96,7 +96,7 @@ Low Volatility
 Event-Driven State
 ```
 
-Một setup tốt trong trend có thể hoạt động kém trong range.
+Một setup tốt trong trend có thể hoạt động kém trong phạm vi (range / 범위).
 
 Mental model cần giữ là **setup luôn có điều kiện môi trường**. Sau khi nhận diện regime, ta chuyển sang market structure để mô tả dữ liệu cụ thể hơn thay vì gắn nhãn cảm tính.
 
@@ -106,7 +106,7 @@ Market structure là cách biến diễn biến giá thành một chuỗi quan s
 
 Market structure thường mô tả chuỗi swing high, swing low và cách giá phản ứng quanh vùng có order flow lớn.
 
-Các thuật ngữ như break of structure hoặc change of character chỉ nên dùng như cách mô tả dữ liệu, không phải quy luật tất định.
+Các thuật ngữ như break of cấu trúc (structure / 구조) hoặc thay đổi (change / 변경) of character chỉ nên dùng như cách mô tả dữ liệu, không phải quy luật tất định.
 
 Do đó, structure cung cấp ngôn ngữ để ghi rule và invalidation, chứ không bảo đảm kết quả. Bước kế tiếp là xem những vùng giá nào thường được dùng làm mốc quan sát hành vi đó.
 
@@ -134,7 +134,7 @@ Pullback là trường hợp ta không đuổi theo chuyển động đầu tiê
 
 Pullback strategy thường đánh cược rằng trend chính còn tiếp tục sau điều chỉnh tạm thời.
 
-Điểm quan trọng là định nghĩa trend, invalidation và risk/reward rõ ràng.
+Điểm quan trọng là định nghĩa trend, vô hiệu hóa (invalidation / 무효화) và rủi ro (risk / 위험)/reward rõ ràng.
 
 Nếu không định nghĩa được ba điều này trước khi vào lệnh, “pullback” chỉ là tên gọi sau sự kiện. Khi trend không còn là giả định hợp lý, mean reversion là mô hình đối chiếu cần được kiểm tra.
 
@@ -144,7 +144,7 @@ Mean reversion bắt đầu từ một giả định khác với pullback: thay 
 
 Mean reversion giả định giá có xu hướng quay về một mức tham chiếu sau khi đi quá xa.
 
-Nó có thể thất bại nặng khi thị trường chuyển từ range sang trend.
+Nó có thể thất bại nặng khi thị trường chuyển từ phạm vi (range / 범위) sang trend.
 
 Ranh giới của mô hình nằm ở regime shift; mean reversion không được xem là quy luật tự nhiên của mọi thị trường. Để đánh giá khả năng quay về, ta cần quan sát chất lượng khớp lệnh và thanh khoản, bắt đầu từ volume và liquidity.
 
@@ -155,8 +155,8 @@ Giá có thể trông “đẹp” trên chart nhưng vẫn khó giao dịch n�
 Volume cao không luôn đồng nghĩa liquidity tốt. Cần nhìn thêm:
 
 - spread;
-- depth;
-- market impact;
+- độ sâu (depth / 깊이);
+- thị trường (market / 시장) impact;
 - thời điểm trong ngày.
 
 Khi hiểu thanh khoản theo nhiều lớp, ta mới ước lượng được chi phí và độ trượt trong các trạng thái khác nhau. Đây là tiền đề để đọc volatility, vì biến động quyết định cả khoảng stop lẫn quy mô vị thế.
@@ -168,12 +168,12 @@ Volatility không chỉ là một con số mô tả giá rung lắc; nó thay đ
 Volatility quyết định:
 
 - stop distance hợp lý;
-- position size;
+- position kích thước (size / 크기);
 - expected move;
-- margin risk;
+- margin rủi ro (risk / 위험);
 - option pricing.
 
-Cùng một strategy không nên dùng size giống nhau trong mọi volatility regime.
+Cùng một chiến lược (strategy / 전략) không nên dùng kích thước (size / 크기) giống nhau trong mọi volatility regime.
 
 Vì vậy, volatility là cầu nối từ quan sát thị trường sang risk sizing. Các indicator ở phần sau chỉ nên được giữ lại khi chúng giúp đo hoặc diễn đạt rule này một cách kiểm chứng được.
 
@@ -183,7 +183,7 @@ Indicator là phép biến đổi từ price hoặc volume, nên mục tiêu kh�
 
 MA, RSI, MACD, ATR hay Bollinger Bands đều là biến đổi của price/volume.
 
-Indicator hữu ích khi nó phục vụ rule rõ ràng, không phải vì thêm nhiều indicator làm hệ thống “chắc chắn” hơn.
+Indicator hữu ích khi nó phục vụ quy tắc (rule / 규칙) rõ ràng, không phải vì thêm nhiều indicator làm hệ thống “chắc chắn” hơn.
 
 Điểm chốt là một indicator chỉ có ý nghĩa trong giả thuyết và điều kiện cụ thể. Các thuật ngữ SMC/ICT tiếp theo cũng cần được xử lý theo nguyên tắc tương tự: chuyển ngôn ngữ mô tả thành rule có thể kiểm tra.
 
@@ -193,7 +193,7 @@ SMC/ICT thường cung cấp từ vựng để mô tả vùng thanh khoản và 
 
 Các khái niệm như liquidity sweep, order block, fair value gap có thể dùng như ngôn ngữ mô tả price action.
 
-Nhưng phải chuyển chúng thành rule kiểm chứng được nếu muốn backtest.
+Nhưng phải chuyển chúng thành quy tắc (rule / 규칙) kiểm chứng được nếu muốn backtest.
 
 Như vậy, tên gọi không tự tạo lợi thế; khả năng kiểm chứng mới quyết định giá trị. Khi rule đã rõ, multi-timeframe có thể được dùng để phân vai context và timing mà không biến thành câu chuyện hindsight.
 
@@ -218,7 +218,7 @@ EUR/USD
 = giá EUR theo USD
 ```
 
-Phân tích cần nhìn relative rates, relative growth, risk sentiment và flow.
+Phân tích cần nhìn relative rates, relative growth, rủi ro (risk / 위험) sentiment và luồng (flow / 흐름).
 
 Điểm chốt là không thể phân tích EUR/USD chỉ bằng một biểu đồ EUR hoặc USD riêng lẻ. Khi đã hiểu đối tượng đang được so sánh, ta mới tính được đơn vị biến động và quy mô hợp đồng ở phần pip và lot.
 
@@ -267,7 +267,7 @@ Required Margin
 ≈ Notional / Leverage
 ```
 
-Margin không phải maximum loss.
+Margin không phải maximum mất mát (loss / 손실).
 
 Khi margin chỉ là điều kiện duy trì position, ta cần theo dõi equity và free margin để biết vị thế còn chịu được biến động hay đã tiến gần stop-out.
 
@@ -284,7 +284,7 @@ Margin Level
 = Equity / Used Margin × 100%
 ```
 
-Nếu equity giảm quá mức, broker có thể margin call hoặc stop-out theo rules riêng.
+Nếu equity giảm quá mức, broker có thể margin lời gọi (call / 호출) hoặc stop-out theo rules riêng.
 
 Do broker có quy tắc riêng và có thể trượt giá khi thị trường căng thẳng, margin level không thay thế stop-loss hay stress test. Bước kế tiếp là đảo ngược phép tính: bắt đầu từ mức lỗ chấp nhận được để tìm position size.
 
@@ -309,7 +309,7 @@ Stop-loss là điều kiện gửi lệnh thoát khi luận điểm bị vô hi�
 
 Stop là một execution instruction, không phải guarantee giá thoát.
 
-Trong gap hoặc event lớn, fill có thể xa trigger.
+Trong gap hoặc sự kiện (event / 이벤트) lớn, fill có thể xa trigger.
 
 Vì stop là lệnh thực thi có thể bị trượt, mức risk phải được tính với kịch bản fill xấu chứ không chỉ với giá trigger trên chart. Để so sánh các trade sau đó, ta quy đổi rủi ro ban đầu thành đơn vị R.
 
@@ -319,7 +319,7 @@ R-multiple đặt mọi trade lên cùng một thước đo: một R là số ti
 
 `R` là lượng rủi ro ban đầu.
 
-Ví dụ risk 100 USD:
+Ví dụ rủi ro (risk / 위험) 100 USD:
 
 ```text
 -1R = -100 USD
@@ -340,7 +340,7 @@ Expectancy
 - Loss Rate × Average Loss
 ```
 
-Win rate cao không bảo đảm có edge.
+Win tỷ lệ (rate / 비율) cao không bảo đảm có edge.
 
 Vì vậy, trước khi tăng size, cần kiểm tra expectancy có còn dương sau cost và ở các regime khác nhau. Nếu edge mỏng hoặc trade tương quan cao, nguy cơ không sống sót sẽ được mô tả bằng risk of ruin.
 
@@ -350,7 +350,7 @@ Risk of ruin chuyển câu hỏi từ “lợi nhuận kỳ vọng bao nhiêu?�
 
 Risk of ruin tăng khi:
 
-- risk/trade lớn;
+- rủi ro (risk / 위험)/trade lớn;
 - edge nhỏ;
 - drawdown kéo dài;
 - correlation giữa trade cao.
@@ -365,7 +365,7 @@ Các phiên Asia, London và New York không chỉ là nhãn thời gian; chúng
 
 Forex có đặc điểm khác nhau theo Asia, London và New York session.
 
-Liquidity và volatility thường thay đổi quanh overlap và data release.
+Liquidity và volatility thường thay đổi quanh overlap và dữ liệu (data / 데이터) bản phát hành (release / 릴리스).
 
 Do đó, một backtest cần giữ timestamp và điều kiện phiên, nếu không kết quả có thể trộn các môi trường không giống nhau. News event là trường hợp mà sự thay đổi đó diễn ra rất nhanh.
 
@@ -380,7 +380,7 @@ CPI, NFP, central-bank decision hoặc geopolitical shock có thể làm:
 - stop gap;
 - margin thay đổi.
 
-Event trading đòi hỏi execution plan trước release.
+Sự kiện (event / 이벤트) trading đòi hỏi thực thi (execution / 실행) plan trước bản phát hành (release / 릴리스).
 
 Kết luận là không nên dùng cùng một giả định fill và size cho ngày bình thường với ngày có event lớn. XAUUSD là ví dụ tiếp theo cho tài sản có nhiều driver cùng lúc và không thể rút gọn thành một quy tắc đơn.
 
@@ -430,7 +430,7 @@ Call = max(S-K, 0)
 Put  = max(K-S, 0)
 ```
 
-Trước expiry, giá option còn phụ thuộc volatility, time, rates và Greeks.
+Trước expiry, giá option còn phụ thuộc volatility, thời gian (time / 시간), rates và Greeks.
 
 Điểm chốt là cùng một hướng giá có thể tạo P/L khác nhau tùy IV, theta và cấu trúc vị thế. CFD là trường hợp đối chiếu về cấu trúc pháp lý và đối tác, nơi điều khoản broker cần được đọc trước payoff.
 
@@ -442,10 +442,10 @@ CFD thường là bilateral contract với broker.
 
 Cần kiểm tra:
 
-- legal entity;
-- financing cost;
+- legal thực thể (entity / 엔터티);
+- financing chi phí (cost / 비용);
 - spread;
-- execution model;
+- mô hình thực thi (execution model / 실행 모델);
 - stop-out;
 - jurisdiction.
 
@@ -459,10 +459,10 @@ Backtest phải cố tái tạo thông tin và execution có thể có thật t�
 
 Sai lầm phổ biến:
 
-- look-ahead bias;
-- survivorship bias;
-- data snooping;
-- bỏ transaction cost;
+- look-ahead độ lệch (bias / 편향);
+- survivorship độ lệch (bias / 편향);
+- dữ liệu (data / 데이터) snooping;
+- bỏ giao dịch (transaction / 트랜잭션) chi phí (cost / 비용);
 - bỏ slippage.
 
 Nếu bỏ một trong các bias hoặc cost trên, expectancy và drawdown có thể bị thổi phồng. Vì vậy, sau backtest cần một giai đoạn ngoài mẫu hoặc forward test trước khi đưa vốn đáng kể vào hệ thống.
@@ -501,10 +501,10 @@ Tâm lý là lớp thực thi của một hệ thống có edge. Nó không th�
 
 Tâm lý không thể sửa một strategy không có edge.
 
-Nhưng một strategy có edge vẫn có thể thất bại nếu trader:
+Nhưng một chiến lược (strategy / 전략) có edge vẫn có thể thất bại nếu trader:
 
-- tăng size sau loss;
-- bỏ rule;
+- tăng kích thước (size / 크기) sau mất mát (loss / 손실);
+- bỏ quy tắc (rule / 규칙);
 - revenge trade;
 - stop quá sớm;
 - overtrade.
@@ -519,7 +519,7 @@ Nhiều trade riêng lẻ có thể cùng chịu một factor.
 
 Ví dụ long EUR/USD, long GBP/USD và long gold có thể cùng là short-USD exposure.
 
-Cần nhìn tổng risk, không chỉ risk/trade.
+Cần nhìn tổng rủi ro (risk / 위험), không chỉ rủi ro (risk / 위험)/trade.
 
 Điểm chốt là sizing phải xét cả tương quan và stress chung, không chỉ công thức của từng lệnh. Kelly là một khung lý thuyết để nói về sizing theo growth, nhưng phải được thu nhỏ khi edge ước lượng không chắc.
 
@@ -532,7 +532,7 @@ Kelly criterion cho sizing tối ưu theo growth trong điều kiện giả đ�
 Thực tế thường dùng fractional Kelly vì:
 
 - edge estimate không chắc;
-- distribution có fat tail;
+- phân phối (distribution / 분포) có fat tail;
 - drawdown tâm lý lớn.
 
 Fractional Kelly tạo khoảng đệm cho sai số ước lượng và fat tail. Monte Carlo tiếp theo giúp nhìn nhiều thứ tự trade và phân phối drawdown, nhưng không thể cứu dữ liệu nguồn kém.
@@ -543,7 +543,7 @@ Monte Carlo không dự đoán thứ tự trade sẽ xảy ra; nó mô phỏng n
 
 Monte Carlo giúp kiểm tra nhiều thứ tự trade khác nhau để thấy drawdown distribution và risk of ruin.
 
-Nó không sửa được sample kém chất lượng.
+Nó không sửa được mẫu (sample / 표본) kém chất lượng.
 
 Sau khi biết phân phối rủi ro, ta quay về dữ liệu từng trade để xem giá đã đi ngược hoặc đi thuận bao xa trước khi đóng: đó là vai trò của MAE và MFE.
 
@@ -555,7 +555,7 @@ MAE và MFE biến đường đi trong trade thành dữ liệu để sửa stop
 
 **Maximum Favorable Excursion (MFE)** đo mức có lợi lớn nhất.
 
-Hai metric giúp cải thiện stop và exit rule.
+Hai chỉ số (metric / 지표) giúp cải thiện stop và exit quy tắc (rule / 규칙).
 
 Hãy dùng chúng để kiểm tra stop có quá chặt hay exit có bỏ lỡ phần lợi nhuận hợp lý, rồi đối chiếu với profit factor và drawdown thay vì tối ưu một metric riêng lẻ.
 
@@ -568,7 +568,7 @@ Profit Factor
 = Gross Profit / Gross Loss
 ```
 
-Cần đọc cùng sample size, drawdown và cost.
+Cần đọc cùng cỡ mẫu (sample size / 표본 크기), drawdown và chi phí (cost / 비용).
 
 Nếu profit factor chỉ đẹp trước phí hoặc dựa trên ít trade, nó không đủ làm bằng chứng. Các ratio Sharpe/Sortino/Calmar tiếp tục bổ sung góc nhìn về return trên risk nhưng cũng có giới hạn riêng.
 
@@ -578,10 +578,10 @@ Ba ratio này nén mối quan hệ giữa return và một cách đo risk khác 
 
 Các ratio này mô tả return so với risk theo góc khác nhau nhưng không thay thế:
 
-- tail risk;
+- tail rủi ro (risk / 위험);
 - liquidity;
 - leverage;
-- operational risk.
+- operational rủi ro (risk / 위험).
 
 Do đó, không chọn strategy chỉ vì một ratio cao. Cần hỏi ratio đó được tạo trong regime nào và có còn đúng khi điều kiện thị trường đổi hay không.
 
@@ -597,7 +597,7 @@ Cần biết edge phụ thuộc:
 - volatility;
 - carry;
 - liquidity;
-- macro environment.
+- macro môi trường (environment / 환경).
 
 Điểm chốt là cần ghi rõ phạm vi áp dụng và điều kiện vô hiệu hóa, thay vì quảng bá một kết quả trung bình cho mọi thời kỳ. Trước khi chạy bất kỳ rule nào, còn một lớp rủi ro nền tảng là broker và khả năng giữ tài sản.
 

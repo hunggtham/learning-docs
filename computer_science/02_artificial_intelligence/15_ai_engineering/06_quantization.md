@@ -1,8 +1,11 @@
 # Quantization trong AI
 
-**Lượng tử hóa (quantization / 양자화)** làm giảm độ chính xác số dùng để biểu diễn weights, activations hoặc KV cache. Mục tiêu là giảm memory, bandwidth, latency và cost trong khi vẫn giữ chất lượng ở mức chấp nhận được.
+> **Mạch đọc:** Đặt **Quantization trong AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ số thực tới các mức rời rạc** sang **Symmetric và Asymmetric Quantization**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Một mô hình được huấn luyện bằng FP32/BF16 không nhất thiết phải infer ở cùng precision. Nhiều workload có thể chạy bằng FP16, INT8, INT4 hoặc mixed precision.
+
+**Lượng tử hóa (quantization / 양자화)** làm giảm độ chính xác số dùng để biểu diễn weights, activations hoặc KV bộ nhớ đệm (cache / 캐시). Mục tiêu là giảm bộ nhớ (memory / 메모리), bandwidth, độ trễ (latency / 지연 시간) và chi phí (cost / 비용) trong khi vẫn giữ chất lượng ở mức chấp nhận được.
+
+Một mô hình được huấn luyện bằng FP32/BF16 không nhất thiết phải infer ở cùng precision. Nhiều tải công việc (workload / 워크로드) có thể chạy bằng FP16, INT8, INT4 hoặc mixed precision.
 
 ## Từ số thực tới các mức rời rạc
 
@@ -12,7 +15,7 @@ Một quantizer đơn giản ánh xạ giá trị thực `x` sang số nguyên `
 q=round(x/s)+z
 \]
 
-trong đó `s` là scale và `z` là zero-point.
+trong đó `s` là quy mô (scale / 규모) và `z` là zero-point.
 
 Dequantization xấp xỉ:
 
@@ -30,27 +33,27 @@ e=x-\hat{x}
 
 ## Symmetric và Asymmetric Quantization
 
-Quantization đối xứng (symmetric) thường dùng zero-point bằng 0 và range cân quanh 0. Cách này đơn giản hơn cho hardware implementation.
+Quantization đối xứng (symmetric) thường dùng zero-point bằng 0 và phạm vi (range / 범위) cân quanh 0. Cách này đơn giản hơn cho hardware hiện thực (implementation / 구현).
 
-Quantization bất đối xứng (asymmetric) cho phép range lệch, hữu ích khi distribution không đối xứng nhưng metadata và phép tính phức tạp hơn.
+Quantization bất đối xứng (asymmetric) cho phép phạm vi (range / 범위) lệch, hữu ích khi phân phối (distribution / 분포) không đối xứng nhưng siêu dữ liệu (metadata / 메타데이터) và phép tính phức tạp hơn.
 
 ## Per-Tensor, Per-Channel và Per-Group
 
-Dùng một scale cho cả tensor thì đơn giản nhưng khá thô.
+Dùng một quy mô (scale / 규모) cho cả tensor thì đơn giản nhưng khá thô.
 
-Per-channel dùng scale riêng theo channel đầu vào hoặc đầu ra, thường giữ accuracy tốt hơn.
+Per-channel dùng quy mô (scale / 규모) riêng theo channel đầu vào hoặc đầu ra, thường giữ accuracy tốt hơn.
 
-LLM quantization thường dùng **group-wise quantization**, trong đó mỗi nhóm weights có scale riêng để cân bằng giữa metadata cost và fidelity.
+LLM quantization thường dùng **group-wise quantization**, trong đó mỗi nhóm weights có quy mô (scale / 규모) riêng để cân bằng giữa siêu dữ liệu (metadata / 메타데이터) chi phí (cost / 비용) và fidelity.
 
 ## PTQ và QAT
 
-**Post-Training Quantization (PTQ)** lượng tử hóa sau khi training hoàn tất. Cách này nhanh, rẻ và thường không cần retrain nhiều.
+**Post-Training Quantization (PTQ)** lượng tử hóa sau khi huấn luyện (training / 학습) hoàn tất. Cách này nhanh, rẻ và thường không cần retrain nhiều.
 
-**Quantization-Aware Training (QAT)** mô phỏng quantization ngay trong training để mô hình thích nghi với quantization noise. Chi phí cao hơn nhưng có thể giữ chất lượng tốt hơn ở precision thấp.
+**Quantization-Aware huấn luyện (training / 학습) (QAT)** mô phỏng quantization ngay trong huấn luyện (training / 학습) để mô hình thích nghi với quantization noise. Chi phí cao hơn nhưng có thể giữ chất lượng tốt hơn ở precision thấp.
 
 ## Weight-Only Quantization
 
-LLM inference thường bị giới hạn bởi memory bandwidth. Quantize weights giúp:
+LLM suy luận (inference / 추론) thường bị giới hạn bởi bộ nhớ (memory / 메모리) bandwidth. Quantize weights giúp:
 
 ```text
 model chiếm ít memory hơn
@@ -62,15 +65,15 @@ Activation vẫn có thể giữ ở BF16 hoặc FP16.
 
 ## Activation Quantization
 
-Activation distribution thay đổi theo input và thường có outlier. Vì vậy quantize activation khó hơn quantize weights.
+Activation phân phối (distribution / 분포) thay đổi theo đầu vào (input / 입력) và thường có outlier. Vì vậy quantize activation khó hơn quantize weights.
 
-Calibration dataset thường được dùng để ước lượng range và scale phù hợp.
+Calibration dataset thường được dùng để ước lượng phạm vi (range / 범위) và quy mô (scale / 규모) phù hợp.
 
-Nếu calibration data không đại diện cho production workload, chất lượng thực tế có thể giảm mạnh.
+Nếu calibration dữ liệu (data / 데이터) không đại diện cho môi trường vận hành (production / 운영 환경) tải công việc (workload / 워크로드), chất lượng thực tế có thể giảm mạnh.
 
 ## Outlier
 
-Một số channel có magnitude lớn bất thường. Nếu dùng chung một scale, các giá trị nhỏ còn lại sẽ có độ phân giải kém.
+Một số channel có magnitude lớn bất thường. Nếu dùng chung một quy mô (scale / 규모), các giá trị nhỏ còn lại sẽ có độ phân giải kém.
 
 Các cách xử lý gồm:
 
@@ -78,13 +81,13 @@ Các cách xử lý gồm:
 - rescale channel;
 - dùng per-channel hoặc group quantization.
 
-## KV Cache Quantization
+## KV bộ nhớ đệm (cache / 캐시) Quantization
 
-LLM có long context có KV cache rất lớn. Quantize KV cache giúp tăng concurrency nhưng có thể làm giảm chất lượng ở long-context task.
+LLM có long ngữ cảnh (context / 맥락) có KV bộ nhớ đệm (cache / 캐시) rất lớn. Quantize KV bộ nhớ đệm (cache / 캐시) giúp tăng tính đồng thời (concurrency / 동시성) nhưng có thể làm giảm chất lượng ở long-context tác vụ (task / 작업).
 
-Đây là trade-off ở cấp hệ thống, không chỉ là bài toán nén weights.
+Đây là sự đánh đổi (trade-off / 트레이드오프) ở cấp hệ thống, không chỉ là bài toán nén weights.
 
-## Trực giác về Memory
+## Trực giác về bộ nhớ (memory / 메모리)
 
 Với mô hình có `N` parameter:
 
@@ -95,11 +98,11 @@ INT8 ≈ 1N byte
 INT4 ≈ 0.5N byte
 ```
 
-Thực tế còn có scale, metadata và runtime buffer nên con số không hoàn toàn chính xác.
+Thực tế còn có quy mô (scale / 규모), siêu dữ liệu (metadata / 메타데이터) và thời gian chạy (runtime / 런타임) buffer nên con số không hoàn toàn chính xác.
 
-## Quantization không tự động làm model nhanh hơn
+## Quantization không tự động làm mô hình (model / 모델) nhanh hơn
 
-Nếu hardware hoặc kernel không hỗ trợ low-precision operation hiệu quả, model nhỏ hơn nhưng latency có thể không cải thiện đáng kể.
+Nếu hardware hoặc kernel không hỗ trợ low-precision thao tác (operation / 연산) hiệu quả, mô hình (model / 모델) nhỏ hơn nhưng độ trễ (latency / 지연 시간) có thể không cải thiện đáng kể.
 
 Speedup phụ thuộc vào:
 
@@ -113,19 +116,19 @@ quantize/dequantize overhead
 
 ## Đánh giá chất lượng
 
-Không nên chỉ so perplexity. Cần task-level evaluation, long-context test, tool-use/output-format test và safety regression test.
+Không nên chỉ so perplexity. Cần task-level evaluation, long-context kiểm thử (test / 테스트), tool-use/output-format kiểm thử (test / 테스트) và an toàn (safety / 안전) regression kiểm thử (test / 테스트).
 
-Một mức giảm nhỏ ở metric trung bình vẫn có thể che failure nghiêm trọng ở một capability hiếm nhưng quan trọng.
+Một mức giảm nhỏ ở chỉ số (metric / 지표) trung bình vẫn có thể che thất bại (failure / 실패) nghiêm trọng ở một năng lực (capability / 역량) hiếm nhưng quan trọng.
 
 ## Mixed Precision
 
-Không cần mọi layer cùng precision. Thành phần nhạy số có thể giữ precision cao hơn.
+Không cần mọi tầng (layer / 계층) cùng precision. Thành phần nhạy số có thể giữ precision cao hơn.
 
-Mixed precision là một thỏa hiệp kỹ thuật giữa memory, speed và numerical fidelity.
+Mixed precision là một thỏa hiệp kỹ thuật giữa bộ nhớ (memory / 메모리), speed và numerical fidelity.
 
-## Quantization trong Training
+## Quantization trong huấn luyện (training / 학습)
 
-Low-precision training khác với inference quantization. BF16/FP16 training thường cần gradient scaling hoặc optimizer state ổn định; một số optimizer state vẫn được giữ ở precision cao.
+Low-precision huấn luyện (training / 학습) khác với suy luận (inference / 추론) quantization. BF16/FP16 huấn luyện (training / 학습) thường cần độ dốc (gradient / 기울기) scaling hoặc optimizer trạng thái (state / 상태) ổn định; một số optimizer trạng thái (state / 상태) vẫn được giữ ở precision cao.
 
 ## Mô hình tư duy
 
@@ -135,21 +138,21 @@ Phần này chốt mental model thành một chuỗi có thể dùng lại: bố
 Quantization = nén cách biểu diễn số, không trực tiếp thay đổi cấu trúc ngữ nghĩa của model
 ```
 
-Ta thay cách biểu diễn parameter và activation, không chủ động thay architecture.
+Ta thay cách biểu diễn parameter và activation, không chủ động thay kiến trúc (architecture / 아키텍처).
 
 ## Những nhầm lẫn thường gặp
 
-### “INT4 nghĩa là model nhỏ đúng 4 lần so với FP16”
+### “INT4 nghĩa là mô hình (model / 모델) nhỏ đúng 4 lần so với FP16”
 
-Không hoàn toàn. Metadata, scale và runtime buffer làm mức giảm thực tế khác lý thuyết.
+Không hoàn toàn. siêu dữ liệu (metadata / 메타데이터), quy mô (scale / 규모) và thời gian chạy (runtime / 런타임) buffer làm mức giảm thực tế khác lý thuyết.
 
-### “Model đã quantize luôn chạy nhanh hơn”
+### “mô hình (model / 모델) đã quantize luôn chạy nhanh hơn”
 
-Không. Chỉ nhanh hơn khi runtime và hardware tận dụng low precision hiệu quả.
+Không. Chỉ nhanh hơn khi thời gian chạy (runtime / 런타임) và hardware tận dụng low precision hiệu quả.
 
 ### “Benchmark accuracy không đổi nghĩa là không có regression”
 
-Không. Failure theo capability cụ thể vẫn có thể xuất hiện ngoài metric trung bình.
+Không. thất bại (failure / 실패) theo năng lực (capability / 역량) cụ thể vẫn có thể xuất hiện ngoài chỉ số (metric / 지표) trung bình.
 
 ## Liên kết kiến thức
 

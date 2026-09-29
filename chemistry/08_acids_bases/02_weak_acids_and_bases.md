@@ -1,6 +1,9 @@
-# Acid và base yếu — cân bằng, xấp xỉ và phân bố tiểu phần
+# Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần
 
-> Acid và base yếu không ion hóa hoàn toàn. Thành phần của dung dịch phải được xác định từ **cân bằng hóa học + cân bằng vật chất + cân bằng điện tích**. Đây là nơi hóa học acid–base chuyển từ hóa lượng trực tiếp sang một bài toán cân bằng thực sự.
+> **Mạch đọc:** Đọc **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Acid yếu một proton** sang **Phần trăm ion hóa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Acid và cơ sở (base / 기반) yếu không ion hóa hoàn toàn. Thành phần của dung dịch phải được xác định từ **cân bằng hóa học + cân bằng vật chất + cân bằng điện tích**. Đây là nơi hóa học acid–cơ sở (base / 기반) chuyển từ hóa lượng trực tiếp sang một bài toán cân bằng thực sự.
 
 ## Acid yếu một proton
 
@@ -41,16 +44,16 @@ Xấp xỉ phải được kiểm tra sau khi tính, không nên dùng tự đ�
 ## Phần trăm ion hóa
 
 \[
-\%\text{ion hóa}=\frac{x}{C}\times100\%
+\%\văn bản (text / 텍스트){ion hóa}=\frac{x}{C}\times100\%
 \]
 
 Với cùng một acid yếu, phần trăm ion hóa thường tăng khi pha loãng.
 
 Điều này không có nghĩa tổng số ion hydrogen nhất thiết tăng. **Tỉ lệ** phân tử bị ion hóa tăng trong khi nồng độ tổng giảm.
 
-## Base yếu
+## Cơ sở (base / 기반) yếu
 
-Với base `B`:
+Với cơ sở (base / 기반) `B`:
 
 \[
 B+H_2O\rightleftharpoons BH^++OH^-
@@ -78,13 +81,13 @@ pK_a+pK_b=pK_w
 
 khi dùng cùng dung môi và nhiệt độ.
 
-Acid càng mạnh thì base liên hợp càng yếu, và ngược lại.
+Acid càng mạnh thì cơ sở (base / 기반) liên hợp càng yếu, và ngược lại.
 
 ## Thủy phân muối
 
 Ion của muối có thể làm pH thay đổi.
 
-Acetate từ sodium acetate đóng vai trò base:
+Acetate từ sodium acetate đóng vai trò cơ sở (base / 기반):
 
 \[
 CH_3COO^-+H_2O\rightleftharpoons CH_3COOH+OH^-
@@ -96,7 +99,7 @@ Ammonium đóng vai trò acid:
 NH_4^++H_2O\rightleftharpoons NH_3+H_3O^+
 \]
 
-Vì vậy “dung dịch muối luôn trung tính” là sai. Phải xét tính acid–base của các ion tạo thành.
+Vì vậy “dung dịch muối luôn trung tính” là sai. Phải xét tính acid–cơ sở (base / 기반) của các ion tạo thành.
 
 ## Ion chung
 
@@ -166,7 +169,7 @@ CO_2^*+H_2O\rightleftharpoons H^++HCO_3^-
 HCO_3^-\rightleftharpoons H^++CO_3^{2-}
 \]
 
-Ở pH thấp, các dạng giàu `CO2` chiếm ưu thế. Gần trung tính đến hơi base, bicarbonate thường chiếm ưu thế. Ở pH cao, phần carbonate tăng.
+Ở pH thấp, các dạng giàu `CO2` chiếm ưu thế. Gần trung tính đến hơi cơ sở (base / 기반), bicarbonate thường chiếm ưu thế. Ở pH cao, phần carbonate tăng.
 
 Sự phân bố này kiểm soát độ kiềm, độ bão hòa khoáng carbonate và nhiều quá trình môi trường.
 
@@ -199,7 +202,7 @@ Thay đổi pH có thể làm thay đổi:
 - hoạt tính enzyme;
 - thời gian lưu trong sắc ký.
 
-Do đó acid–base không chỉ là bài toán chuẩn độ; nó ảnh hưởng trực tiếp tới hóa sinh, dược hóa và hóa học phân tích.
+Do đó acid–cơ sở (base / 기반) không chỉ là bài toán chuẩn độ; nó ảnh hưởng trực tiếp tới hóa sinh, dược hóa và hóa học phân tích.
 
 ## Cân bằng ghép
 
@@ -217,7 +220,7 @@ HL\rightleftharpoons H^++L^-
 
 Ở pH thấp, phần `L-` giảm nên khả năng tạo phức biểu kiến cũng giảm.
 
-Vì vậy cân bằng acid–base và cân bằng phối trí không phải lúc nào cũng có thể giải độc lập.
+Vì vậy cân bằng acid–cơ sở (base / 기반) và cân bằng phối trí không phải lúc nào cũng có thể giải độc lập.
 
 ## Cân bằng vật chất và cân bằng điện tích
 
@@ -239,7 +242,7 @@ Kết hợp cân bằng vật chất, cân bằng điện tích, `K_a`, `K_w` v�
 
 ## Giải bằng phương pháp số
 
-Trong hệ thực có nhiều acid, base, phức kim loại và kết tủa, việc dùng một bảng ICE duy nhất không còn đủ.
+Trong hệ thực có nhiều acid, cơ sở (base / 기반), phức kim loại và kết tủa, việc dùng một bảng ICE duy nhất không còn đủ.
 
 Một bộ giải số có thể:
 
@@ -273,6 +276,8 @@ Không. Nó chỉ là một công cụ hạch toán; bản chất nằm ở bả
 
 ## Mô hình tư duy
 
-Bài toán acid/base yếu là **bài toán phân bố tiểu phần dưới các ràng buộc cân bằng và bảo toàn**. `pH`, `pKa`, tổng lượng vật chất và môi trường ion cùng quyết định phần của mỗi dạng proton hóa.
+Bài toán acid/cơ sở (base / 기반) yếu là **bài toán phân bố tiểu phần dưới các ràng buộc cân bằng và bảo toàn**. `pH`, `pKa`, tổng lượng vật chất và môi trường ion cùng quyết định phần của mỗi dạng proton hóa.
 
 Xem tiếp: [Dung dịch đệm](./03_buffers.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 acid base models](./00_acid_base_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

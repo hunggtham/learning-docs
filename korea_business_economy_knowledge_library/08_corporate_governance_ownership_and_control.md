@@ -1,5 +1,8 @@
 # Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)
 
+> **Mạch đọc:** Đặt **Quản trị doanh nghiệp, quyền sở hữu và quyền kiểm soát tại Hàn Quốc (Corporate Governance / 기업지배구조·소유·지배)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hai loại vấn đề đại diện cần phân biệt** sang **Quyền sở hữu khác quyền kiểm soát**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 **Quản trị doanh nghiệp (corporate governance / 기업지배구조)** tồn tại vì người cung cấp vốn, người có quyền kiểm soát và người điều hành không phải lúc nào cũng là cùng một người. Khi quyền quyết định tách khỏi quyền hưởng lợi kinh tế, động cơ của các bên có thể lệch nhau. Quản trị doanh nghiệp là tập hợp cơ chế nhằm trả lời: ai có quyền quyết định, ai giám sát, ai hưởng phần tăng giá trị, ai chịu phần thiệt hại và ai có khả năng phản đối một quyết định gây xung đột lợi ích.
 
 Tại Hàn Quốc, quản trị phải được đọc đồng thời ở **cấp công ty** và **cấp tập đoàn doanh nghiệp**. Đây là điểm rất quan trọng vì cấu trúc chaebol khác đáng kể mô hình công ty có sở hữu phân tán thường xuất hiện trong sách giáo khoa Mỹ.
@@ -168,9 +171,9 @@ Do đó phân tích chia tách không nên dừng ở câu “tập trung vào n
 
 ## Sáp nhập và tỷ lệ hoán đổi
 
-Một sáp nhập có thể có logic công nghiệp hợp lý nhưng vẫn phân phối lại giá trị tùy **tỷ lệ hoán đổi (exchange ratio)**.
+Một sáp nhập có thể có lô-gic (logic / 논리) công nghiệp hợp lý nhưng vẫn phân phối lại giá trị tùy **tỷ lệ hoán đổi (exchange ratio)**.
 
-Cần tách ba câu hỏi: giao dịch có logic chiến lược không; định giá và tỷ lệ hoán đổi có công bằng không; và quyền kiểm soát thay đổi như thế nào.
+Cần tách ba câu hỏi: giao dịch có lô-gic (logic / 논리) chiến lược không; định giá và tỷ lệ hoán đổi có công bằng không; và quyền kiểm soát thay đổi như thế nào.
 
 Ba câu hỏi này không giống nhau. Hiệp lực có thể tồn tại nhưng cổ đông của một bên vẫn bị thiệt nếu tỷ lệ định giá bất lợi.
 
@@ -215,7 +218,7 @@ Giải pháp quản trị phải phù hợp với loại vấn đề đại di�
 9. So sánh ROIC với tốc độ tái đầu tư.
 10. Kiểm tra động cơ của người kiểm soát có phù hợp với cổ đông của pháp nhân hay không.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Quản trị doanh nghiệp là **hệ điều hành của quyền lực trong công ty**. Báo cáo tài chính cho biết điều gì đã xảy ra; quản trị giúp giải thích ai có quyền và động cơ để đưa ra những quyết định đó. Trong tập đoàn Hàn Quốc, luôn hỏi cả **ai sở hữu** và **ai kiểm soát thông qua mạng lưới**.
 
@@ -236,3 +239,5 @@ Giải pháp quản trị phải phù hợp với loại vấn đề đại di�
 ## Liên kết
 
 Đọc [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md) trước để hiểu sơ đồ sở hữu, sau đó đọc [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) để tìm bằng chứng trong hồ sơ công bố và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) để áp dụng toàn bộ quy trình.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -11,7 +11,7 @@
 
 > **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 90–94.
 >
-> **Liên kết bài trước:** DML thay đổi các hàng; DDL định nghĩa hoặc thay đổi cấu trúc chứa các hàng đó. Vì thế DDL được xử lý auto-commit và không rollback như DML chưa commit.
+> **Liên kết bài trước:** DML thay đổi các hàng; DDL định nghĩa hoặc thay đổi cấu trúc chứa các hàng đó. Vì thế DDL được xử lý auto-commit và không quay lui (rollback / 롤백) như DML chưa lần ghi nhận (commit / 커밋).
 
 Ta bắt đầu với **1. DDL (Data Definition Language) (ngôn ngữ định nghĩa dữ liệu)**. Hãy xác định mục đích của khái niệm này trước, rồi mới đọc định nghĩa, ví dụ SQL hoặc bảng so sánh bên dưới.
 
@@ -21,9 +21,9 @@ Ta bắt đầu **1. DDL (Data Definition Language) (ngôn ngữ định nghĩa 
 
 Nội dung dưới **1. DDL (Data Definition Language) (ngôn ngữ định nghĩa dữ liệu)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
-> **KR:** DDL은 데이터의 구조를 정의하는 언어로 객체 생성, 삭제, 변경에 사용하며 AUTO COMMIT이라 ROLLBACK이 불가하다.
+> **KR:** DDL은 데이터의 구조를 정의하는 언어로 객체 생성, 삭제, 변경에 사용하며 AUTO lần ghi nhận (commit / 커밋)이라 quay lui (rollback / 롤백)이 불가하다.
 
-DDL định nghĩa cấu trúc dữ liệu và các object (Object) (đối tượng CSDL) như schema (Schema) (lược đồ), domain (Domain) (miền giá trị), table (Table) (bảng), view (View) (khung nhìn) và index (Index) (chỉ mục). Các lệnh chính là `CREATE` (Create) (tạo), `ALTER` (Alter) (thay đổi), `TRUNCATE` (Truncate) (xóa toàn bộ hàng, giữ cấu trúc) và `DROP` (Drop) (xóa đối tượng). Tuy `TRUNCATE` xóa dữ liệu, nó là DDL vì auto-commit.
+DDL định nghĩa cấu trúc dữ liệu và các đối tượng (object / 객체) (Object) (đối tượng CSDL) như lược đồ (schema / 스키마) (Schema) (lược đồ), lĩnh vực (domain / 도메인) (Domain) (miền giá trị), bảng (table / 테이블) (Table) (bảng), view (View) (khung nhìn) và chỉ mục (index / 인덱스) (Index) (chỉ mục). Các lệnh chính là `CREATE` (Create) (tạo), `ALTER` (Alter) (thay đổi), `TRUNCATE` (Truncate) (xóa toàn bộ hàng, giữ cấu trúc) và `DROP` (Drop) (xóa đối tượng). Tuy `TRUNCATE` xóa dữ liệu, nó là DDL vì auto-commit.
 
 Vừa rồi ta đã khép **1. DDL (Data Definition Language) (ngôn ngữ định nghĩa dữ liệu)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **2. 데이터 유형 (Data type) (kiểu dữ liệu)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
 
@@ -43,7 +43,7 @@ Nội dung dưới **2. 데이터 유형 (Data type) (kiểu dữ liệu)** cung
 
 > **KR:** NUMBER(p, s), NUMERIC(p, s)는 정수와 실수 등의 숫자 정보이고 DATE, DATETIME은 날짜와 시각 정보이다.
 
-`NUMBER(p, s)`/`NUMERIC(p, s)` (Number/Numeric) (kiểu số) có `p` là tổng số chữ số và `s` là số chữ số phần thập phân: `NUMBER(6,2)` cho phép `1234.56` nhưng không `12345.67`. `DATE`/`DATETIME` (Date/Datetime) (ngày/giờ) lưu thông tin thời gian. Chọn kiểu dữ liệu đúng là nền tảng để constraint (Constraint) (ràng buộc) và so sánh/nhóm trong các bài SQL hoạt động đúng.
+`NUMBER(p, s)`/`NUMERIC(p, s)` (Number/Numeric) (kiểu số) có `p` là tổng số chữ số và `s` là số chữ số phần thập phân: `NUMBER(6,2)` cho phép `1234.56` nhưng không `12345.67`. `DATE`/`DATETIME` (Date/Datetime) (ngày/giờ) lưu thông tin thời gian. Chọn kiểu dữ liệu đúng là nền tảng để ràng buộc (constraint / 제약조건) (Constraint) (ràng buộc) và so sánh/nhóm trong các bài SQL hoạt động đúng.
 
 Vừa rồi ta đã khép **2. 데이터 유형 (Data type) (kiểu dữ liệu)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **3. CREATE TABLE (Create Table) (tạo bảng)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
 
@@ -66,7 +66,7 @@ CREATE TABLE [owner.]table_name (
 
 > **KR:** CREATE는 테이블, 인덱스 등의 객체를 생성하는 명령어이며 숫자 컬럼만 사이즈 생략이 가능하다.
 
-`CREATE TABLE` tạo bảng với tên bảng, cột, kiểu dữ liệu, giá trị `DEFAULT` (Default) (mặc định) và constraint tùy chọn. Theo PDF, tên owner có thể bỏ qua khi tạo trong schema của tài khoản hiện tại; kiểu số có thể bỏ kích thước còn kiểu ngày không khai báo kích thước. Tên bảng/tên cột không phân biệt hoa thường nếu không dùng quy tắc đặc biệt; mặc định DB biểu diễn tên không trích dẫn bằng chữ hoa.
+`CREATE TABLE` tạo bảng với tên bảng, cột, kiểu dữ liệu, giá trị `DEFAULT` (Default) (mặc định) và ràng buộc (constraint / 제약조건) tùy chọn. Theo PDF, tên đơn vị sở hữu (owner / 오너) có thể bỏ qua khi tạo trong lược đồ (schema / 스키마) của tài khoản hiện tại; kiểu số có thể bỏ kích thước còn kiểu ngày không khai báo kích thước. Tên bảng/tên cột không phân biệt hoa thường nếu không dùng quy tắc đặc biệt; mặc định DB biểu diễn tên không trích dẫn bằng chữ hoa.
 
 Vừa rồi ta đã khép **3. CREATE TABLE (Create Table) (tạo bảng)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **Quy tắc đặt tên cần nhớ** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
 
@@ -108,7 +108,7 @@ SELECT * INTO test
 FROM book;
 ```
 
-CTAS sao chép cột, kiểu dữ liệu, dữ liệu và `NULL` property (thuộc tính cho phép rỗng) của kết quả `SELECT`; alias (Alias) (bí danh) trong SELECT trở thành tên cột mới. Có thể đổi tên cột trong `CREATE TABLE`. `WHERE 1 = 2` tạo cấu trúc mà không lấy hàng nào. Tuy nhiên, PDF nhấn mạnh PK, FK, UNIQUE, CHECK và các constraint khác không được sao chép; chỉ `NOT NULL` được kế thừa. Đây là lý do một bảng CTAS không tự động có đầy đủ tính toàn vẹn như bảng gốc.
+CTAS sao chép cột, kiểu dữ liệu, dữ liệu và `NULL` thuộc tính (property / 속성) của kết quả `SELECT`; alias (Alias) (bí danh) trong SELECT trở thành tên cột mới. Có thể đổi tên cột trong `CREATE TABLE`. `WHERE 1 = 2` tạo cấu trúc mà không lấy hàng nào. Tuy nhiên, PDF nhấn mạnh PK, FK, UNIQUE, CHECK và các ràng buộc (constraint / 제약조건) khác không được sao chép; chỉ `NOT NULL` được kế thừa. Đây là lý do một bảng CTAS không tự động có đầy đủ tính toàn vẹn như bảng gốc.
 
 ```sql
 CREATE TABLE test (book_id, book_name) AS
@@ -120,7 +120,7 @@ CREATE TABLE test AS
 SELECT * FROM book WHERE 1 = 2;
 ```
 
-Để xem cấu trúc: Oracle dùng `DESCRIBE employees` hoặc `DESC employees`; SQL Server dùng `exec sp_help 'dbo.employees'`.
+Để xem cấu trúc: Oracle dùng `DESCRIBE employees` hoặc `DESC employees`; SQL máy chủ (server / 서버) dùng `exec sp_help 'dbo.employees'`.
 
 Vừa rồi ta đã khép **4. CTAS (Create Table As Select) (tạo bảng từ kết quả truy vấn)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **5. ALTER TABLE (Alter Table) (thay đổi cấu trúc bảng)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
 
@@ -136,7 +136,7 @@ Nội dung dưới **5. ALTER TABLE (Alter Table) (thay đổi cấu trúc bản
 
 > **KR:** ALTER는 테이블의 구조 변경에 사용하며 컬럼 순서 변경은 불가능하다.
 
-`ALTER TABLE` thêm, sửa, đổi tên hoặc xóa cột/ràng buộc. Cột mới luôn được thêm cuối bảng, không chỉ định vị trí. Đây là khác biệt quan trọng giữa thay đổi schema và thay đổi nội dung bảng: `ALTER` đổi definition (định nghĩa), không sửa từng hàng như `UPDATE`.
+`ALTER TABLE` thêm, sửa, đổi tên hoặc xóa cột/ràng buộc. Cột mới luôn được thêm cuối bảng, không chỉ định vị trí. Đây là khác biệt quan trọng giữa thay đổi lược đồ (schema / 스키마) và thay đổi nội dung bảng: `ALTER` đổi definition (định nghĩa), không sửa từng hàng như `UPDATE`.
 
 ```sql
 ALTER TABLE table_name ADD column_name data_type [DEFAULT value] [constraint];
@@ -161,7 +161,7 @@ Nội dung dưới **Thêm/sửa cột** cung cấp phần giải thích và b�
 
 > **KR:** 여러 컬럼 동시 추가는 가능하지만 반드시 괄호를 사용한다.
 
-Oracle cho phép thêm nhiều cột bằng ngoặc; cột thêm mới có thể có `DEFAULT` và constraint. Nếu bảng đã có dữ liệu, thêm cột `NOT NULL` không có default là không thể vì các hàng cũ sẽ nhận `NULL`; thêm default hợp lệ thì có thể. Oracle có thể `MODIFY` nhiều cột; theo PDF SQL Server sửa một cột cho mỗi lệnh `ALTER COLUMN`.
+Oracle cho phép thêm nhiều cột bằng ngoặc; cột thêm mới có thể có `DEFAULT` và ràng buộc (constraint / 제약조건). Nếu bảng đã có dữ liệu, thêm cột `NOT NULL` không có default là không thể vì các hàng cũ sẽ nhận `NULL`; thêm default hợp lệ thì có thể. Oracle có thể `MODIFY` nhiều cột; theo PDF SQL máy chủ (server / 서버) sửa một cột cho mỗi lệnh `ALTER COLUMN`.
 
 ```sql
 ALTER TABLE player ADD (birthday DATE, address VARCHAR2(80));
@@ -199,7 +199,7 @@ Nội dung dưới **Đổi tên và xóa** cung cấp phần giải thích và 
 
 > **KR:** 컬럼 이름 변경은 항상 가능하지만 동시에 여러 컬럼 이름 변경은 불가능하다.
 
-Oracle dùng `RENAME COLUMN`, SQL Server dùng `sp_rename`; đổi tên bảng cũng có cú pháp riêng. Xóa cột chỉ xóa một cột một lần, không phụ thuộc dữ liệu có hay không và không khôi phục được; bảng phải còn ít nhất một cột.
+Oracle dùng `RENAME COLUMN`, SQL máy chủ (server / 서버) dùng `sp_rename`; đổi tên bảng cũng có cú pháp riêng. Xóa cột chỉ xóa một cột một lần, không phụ thuộc dữ liệu có hay không và không khôi phục được; bảng phải còn ít nhất một cột.
 
 ```sql
 ALTER TABLE emp RENAME COLUMN ename TO first_name;
@@ -219,13 +219,13 @@ Ta bắt đầu **6. DROP và TRUNCATE** bằng câu hỏi: **khái niệm này 
 
 Nội dung dưới **6. DROP và TRUNCATE** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
-> **KR:** DROP TABLE은 테이블의 모든 데이터 및 구조를 삭제하고, TRUNCATE는 테이블 구조를 남기고 전체 데이터를 삭제한다.
+> **KR:** DROP bảng (table / 테이블)은 테이블의 모든 데이터 및 구조를 삭제하고, TRUNCATE는 테이블 구조를 남기고 전체 데이터를 삭제한다.
 
-`DROP TABLE` xóa cả cấu trúc lẫn dữ liệu; nếu có FK tham chiếu thì Oracle có thể cần `CASCADE CONSTRAINT`, còn PDF lưu ý SQL Server phải xóa FK/bảng tham chiếu trước. `TRUNCATE TABLE` xóa toàn bộ hàng, giữ cấu trúc và có thể kiểm tra lại bằng `DESC`; vì là DDL nên không rollback. Ngược lại, `DELETE` là DML, có thể xóa một phần/toàn bộ hàng và rollback trước commit.
+`DROP TABLE` xóa cả cấu trúc lẫn dữ liệu; nếu có FK tham chiếu thì Oracle có thể cần `CASCADE CONSTRAINT`, còn PDF lưu ý SQL máy chủ (server / 서버) phải xóa FK/bảng tham chiếu trước. `TRUNCATE TABLE` xóa toàn bộ hàng, giữ cấu trúc và có thể kiểm tra lại bằng `DESC`; vì là DDL nên không quay lui (rollback / 롤백). Ngược lại, `DELETE` là DML, có thể xóa một phần/toàn bộ hàng và quay lui (rollback / 롤백) trước lần ghi nhận (commit / 커밋).
 
-| Lệnh | Phân loại | Phạm vi | Rollback |
+| Lệnh | Phân loại | Phạm vi | quay lui (rollback / 롤백) |
 | --- | --- | --- | --- |
-| `DELETE` | DML | Một hoặc toàn bộ hàng | Có trước COMMIT |
+| `DELETE` | DML | Một hoặc toàn bộ hàng | Có trước lần ghi nhận (commit / 커밋) |
 | `DROP` | DDL | Dữ liệu và cấu trúc bảng | Không (auto-commit) |
 | `TRUNCATE` | DDL | Toàn bộ hàng, giữ cấu trúc | Không (auto-commit) |
 

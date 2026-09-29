@@ -1,6 +1,9 @@
 # `/proc`, `/sys` và giao diện quan sát kernel
 
-Linux có một đặc điểm rất mạnh: nhiều trạng thái của hạt nhân (kernel) và tiến trình (process) được trình bày qua các hệ thống tệp giả (pseudo-filesystem). Điều này khiến việc quan sát hệ thống trở nên thống nhất: thay vì mỗi subsystem cần một giao thức hoàn toàn khác, nhiều thông tin có thể được đọc qua đường dẫn giống như đọc tệp.
+> **Mạch đọc:** Đọc **/proc, /sys và giao diện quan sát kernel** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao kernel lại trình bày trạng thái qua filesystem?** sang **/proc: trạng thái tiến trình và kernel**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Linux có một đặc điểm rất mạnh: nhiều trạng thái của hạt nhân (kernel) và tiến trình (process / 프로세스) được trình bày qua các hệ thống tệp giả (pseudo-filesystem). Điều này khiến việc quan sát hệ thống trở nên thống nhất: thay vì mỗi subsystem cần một giao thức hoàn toàn khác, nhiều thông tin có thể được đọc qua đường dẫn giống như đọc tệp.
 
 Tuy nhiên `/proc` và `/sys` **không phải thư mục dữ liệu thông thường trên ổ đĩa**. Nội dung của chúng được kernel tạo động dựa trên trạng thái hiện tại.
 
@@ -50,7 +53,7 @@ Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu
 cat /proc/1234/status
 ```
 
-Tệp này cho thấy các trường như tên tiến trình, trạng thái, UID/GID, số luồng (threads), bộ nhớ và capability-related state.
+Tệp này cho thấy các trường như tên tiến trình, trạng thái, UID/GID, số luồng (threads), bộ nhớ và capability-related trạng thái (state / 상태).
 
 Nó hữu ích khi cần xác minh **trạng thái hiệu lực (effective state)** thay vì tin vào cấu hình mong muốn.
 
@@ -76,7 +79,7 @@ tr '\0' '\n' < /proc/1234/environ
 
 Cho phép quan sát biến môi trường (environment variables) của tiến trình nếu quyền truy cập cho phép.
 
-Cần đặc biệt cẩn thận vì môi trường có thể chứa token, mật khẩu hoặc secret. Không nên sao chép toàn bộ output vào ticket/chat/log nếu chưa kiểm tra dữ liệu nhạy cảm.
+Cần đặc biệt cẩn thận vì môi trường có thể chứa đơn vị từ (token / 토큰), mật khẩu hoặc secret. Không nên sao chép toàn bộ đầu ra (output / 출력) vào ticket/chat/log nếu chưa kiểm tra dữ liệu nhạy cảm.
 
 ### `/proc/<PID>/fd`
 
@@ -110,15 +113,15 @@ có thể đặt giả thuyết về rò rỉ descriptor, nhưng cần quan sát
 
 ## `/proc/<PID>/maps` và `smaps`
 
-`maps` cho thấy các vùng ánh xạ bộ nhớ (memory mappings): executable, shared libraries, heap-like regions, memory-mapped files.
+`maps` cho thấy các vùng ánh xạ bộ nhớ (memory mappings): executable, dùng chung (shared / 공유) libraries, heap-like regions, memory-mapped files.
 
 ```bash
 less /proc/1234/maps
 ```
 
-`smaps` chi tiết hơn và chứa các trường accounting như RSS/PSS cho từng mapping.
+`smaps` chi tiết hơn và chứa các trường accounting như RSS/PSS cho từng ánh xạ (mapping / 매핑).
 
-Đây là công cụ quan trọng để hiểu vì sao bộ nhớ tiến trình không chỉ là một “heap”. Với JVM, ngoài Java heap còn có thư viện native, code cache, thread stack, mapped JAR/shared objects và các vùng native khác.
+Đây là công cụ quan trọng để hiểu vì sao bộ nhớ tiến trình không chỉ là một “vùng nhớ động (heap / 힙)”. Với JVM, ngoài Java vùng nhớ động (heap / 힙) còn có thư viện bản địa (native / 네이티브), mã (code / 코드) bộ nhớ đệm (cache / 캐시), luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택), mapped JAR/dùng chung (shared / 공유) objects và các vùng bản địa (native / 네이티브) khác.
 
 ## `/proc/meminfo`
 
@@ -128,9 +131,9 @@ Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu
 cat /proc/meminfo
 ```
 
-`free` và nhiều tool khác đọc/diễn giải thông tin từ kernel. Các trường như `MemTotal`, `MemAvailable`, `Cached`, `SwapTotal`, `SwapFree` giúp quan sát bộ nhớ ở mức hệ thống.
+`free` và nhiều công cụ (tool / 도구) khác đọc/diễn giải thông tin từ kernel. Các trường như `MemTotal`, `MemAvailable`, `Cached`, `SwapTotal`, `SwapFree` giúp quan sát bộ nhớ ở mức hệ thống.
 
-Không nên tự tạo kết luận chỉ từ một trường. Ví dụ `Cached` lớn không có nghĩa memory leak.
+Không nên tự tạo kết luận chỉ từ một trường. Ví dụ `Cached` lớn không có nghĩa bộ nhớ (memory / 메모리) leak.
 
 Xem thêm: [Bộ nhớ và bộ nhớ ảo](../06_resources/memory_virtual_memory.md).
 
@@ -142,15 +145,15 @@ Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu
 cat /proc/loadavg
 ```
 
-Cho thấy tải trung bình và một số thông tin về runnable tasks/process count.
+Cho thấy tải trung bình và một số thông tin về runnable tasks/tiến trình (process / 프로세스) count.
 
-Tool `uptime` trình bày cùng loại dữ liệu theo cách dễ đọc hơn, nhưng hiểu `/proc/loadavg` giúp thấy tool user-space lấy state từ đâu.
+Công cụ (tool / 도구) `uptime` trình bày cùng loại dữ liệu theo cách dễ đọc hơn, nhưng hiểu `/proc/loadavg` giúp thấy công cụ (tool / 도구) user-space lấy trạng thái (state / 상태) từ đâu.
 
 ## `/proc/net`
 
-Một phần thông tin mạng cũng được expose dưới `/proc/net`, nhưng trong thực tế nên ưu tiên các tool hiện đại như `ss`, `ip`, `nstat` vì chúng diễn giải netlink/kernel state tốt hơn và ổn định hơn cho người vận hành.
+Một phần thông tin mạng cũng được expose dưới `/proc/net`, nhưng trong thực tế nên ưu tiên các công cụ (tool / 도구) hiện đại như `ss`, `ip`, `nstat` vì chúng diễn giải netlink/kernel trạng thái (state / 상태) tốt hơn và ổn định hơn cho người vận hành.
 
-## `/proc/sys`: tham số kernel runtime
+## `/proc/sys`: tham số kernel thời gian chạy (runtime / 런타임)
 
 Nhiều tham số kernel có thể đọc/ghi qua `/proc/sys`.
 
@@ -176,26 +179,26 @@ Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng c
 sudo sysctl -w net.ipv4.ip_forward=1
 ```
 
-Thay đổi này ảnh hưởng runtime hiện tại nhưng có thể mất sau reboot nếu không được cấu hình persistent.
+Thay đổi này ảnh hưởng thời gian chạy (runtime / 런타임) hiện tại nhưng có thể mất sau reboot nếu không được cấu hình persistent.
 
 ### Thay đổi persistent
 
-Thông thường cấu hình nằm trong các file như:
+Thông thường cấu hình nằm trong các tệp (file / 파일) như:
 
 ```text
 /etc/sysctl.conf
 /etc/sysctl.d/*.conf
 ```
 
-sau đó load bằng cơ chế phù hợp:
+sau đó tải (load / 로드) bằng cơ chế phù hợp:
 
 ```bash
 sudo sysctl --system
 ```
 
-Không nên copy các “kernel tuning” từ internet vào production mà không biết workload, kernel version và trade-off. Một giá trị tốt cho database host có thể không phù hợp với application server hoặc container host.
+Không nên bản sao (copy / 복사) các “kernel tuning” từ internet vào môi trường vận hành (production / 운영 환경) mà không biết tải công việc (workload / 워크로드), kernel phiên bản (version / 버전) và sự đánh đổi (trade-off / 트레이드오프). Một giá trị tốt cho cơ sở dữ liệu (database / 데이터베이스) host có thể không phù hợp với ứng dụng (application / 애플리케이션) máy chủ (server / 서버) hoặc bộ chứa (container / 컨테이너) host.
 
-## `/sys`: mô hình thiết bị và kernel object
+## `/sys`: mô hình thiết bị và kernel đối tượng (object / 객체)
 
 `/sys` (sysfs) trình bày các thiết bị và kernel objects theo cấu trúc phân cấp.
 
@@ -207,7 +210,7 @@ ls /sys/block
 ls /sys/devices
 ```
 
-### Network interface
+### Mạng (network / 네트워크) giao diện (interface / 인터페이스)
 
 Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
@@ -216,9 +219,9 @@ cat /sys/class/net/eth0/mtu
 cat /sys/class/net/eth0/operstate
 ```
 
-Có thể nhìn trạng thái và thuộc tính interface.
+Có thể nhìn trạng thái và thuộc tính giao diện (interface / 인터페이스).
 
-### Block device
+### Khối (block / 블록) thiết bị (device / 장치)
 
 Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
@@ -226,13 +229,13 @@ Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng c
 ls /sys/block/sda
 ```
 
-Thông tin queue, scheduler và device relationships có thể được expose ở đây.
+Thông tin hàng đợi (queue / 큐), scheduler và thiết bị (device / 장치) relationships có thể được expose ở đây.
 
-Các tool như `lsblk`, `udevadm`, `ip` thường dễ dùng hơn, nhưng `/sys` giúp hiểu dữ liệu gốc.
+Các công cụ (tool / 도구) như `lsblk`, `udevadm`, `ip` thường dễ dùng hơn, nhưng `/sys` giúp hiểu dữ liệu gốc.
 
-## `/dev`: device nodes và mối quan hệ với kernel
+## `/dev`: thiết bị (device / 장치) nodes và mối quan hệ với kernel
 
-`/dev` chứa device nodes, không phải thiết bị vật lý theo nghĩa “file nằm trên disk”. Device node là giao diện để user-space tương tác với driver/kernel subsystem.
+`/dev` chứa thiết bị (device / 장치) nodes, không phải thiết bị vật lý theo nghĩa “tệp (file / 파일) nằm trên disk”. thiết bị (device / 장치) nút (node / 노드) là giao diện để user-space tương tác với driver/kernel subsystem.
 
 Ví dụ:
 
@@ -244,15 +247,15 @@ Ví dụ:
 /dev/tty
 ```
 
-`/dev/null` không lưu dữ liệu. `/dev/tty` đại diện terminal phù hợp với tiến trình. `/dev/sda` đại diện block device nếu hệ thống đặt tên như vậy.
+`/dev/null` không lưu dữ liệu. `/dev/tty` đại diện terminal phù hợp với tiến trình. `/dev/sda` đại diện khối (block / 블록) thiết bị (device / 장치) nếu hệ thống đặt tên như vậy.
 
-Đây là lý do câu “everything is a file” nên được hiểu là **nhiều resource có thể dùng giao diện file-like**, không phải mọi thứ đều là regular file.
+Đây là lý do câu “everything is a tệp (file / 파일)” nên được hiểu là **nhiều tài nguyên (resource / 자원) có thể dùng giao diện file-like**, không phải mọi thứ đều là regular tệp (file / 파일).
 
 ## udev và thiết bị động
 
-Linux hiện đại thường dùng `udev` để quản lý device events và tạo các device nodes/symlinks phù hợp trong `/dev`.
+Linux hiện đại thường dùng `udev` để quản lý thiết bị (device / 장치) events và tạo các thiết bị (device / 장치) nodes/symlinks phù hợp trong `/dev`.
 
-Khi gắn USB/storage/network device, kernel phát hiện hardware, driver tạo kernel device object, rồi user-space device manager xử lý policy/naming.
+Khi gắn USB/lưu trữ (storage / 저장소)/mạng (network / 네트워크) thiết bị (device / 장치), kernel phát hiện hardware, driver tạo kernel thiết bị (device / 장치) đối tượng (object / 객체), rồi user-space thiết bị (device / 장치) manager xử lý chính sách (policy / 정책)/naming.
 
 Có thể quan sát:
 
@@ -266,11 +269,11 @@ hoặc monitor events:
 udevadm monitor
 ```
 
-Không nên chạy monitor vô thời hạn trên production nếu chỉ cần một kiểm tra ngắn; nó có thể tạo rất nhiều output.
+Không nên chạy monitor vô thời hạn trên môi trường vận hành (production / 운영 환경) nếu chỉ cần một kiểm tra ngắn; nó có thể tạo rất nhiều đầu ra (output / 출력).
 
 ## Khi nào nên đọc trực tiếp `/proc` hoặc `/sys`?
 
-Các tool chuẩn thường nên được ưu tiên vì dễ đọc hơn:
+Các công cụ (tool / 도구) chuẩn thường nên được ưu tiên vì dễ đọc hơn:
 
 ```bash
 ps
@@ -283,13 +286,13 @@ systemctl
 
 Nhưng `/proc` và `/sys` trở nên rất giá trị khi:
 
-- tool không hiển thị trường bạn cần;
+- công cụ (tool / 도구) không hiển thị trường bạn cần;
 - cần xác minh trạng thái thật của một PID cụ thể;
 - viết diagnostic script nhẹ;
-- muốn hiểu tool user-space đang lấy dữ liệu ở đâu;
-- container/minimal image không có nhiều tiện ích.
+- muốn hiểu công cụ (tool / 도구) user-space đang lấy dữ liệu ở đâu;
+- bộ chứa (container / 컨테이너)/minimal ảnh (image / 이미지) không có nhiều tiện ích.
 
-## Ví dụ: điều tra tiến trình Java bị nghi rò rỉ file descriptor
+## Ví dụ: điều tra tiến trình Java bị nghi rò rỉ tệp (file / 파일) descriptor
 
 Bước đầu không cần restart ngay.
 
@@ -305,29 +308,29 @@ Sau đó xem loại descriptor:
 sudo lsof -p "$PID" | head -100
 ```
 
-Nếu số descriptor tăng qua mỗi lần đo, hãy phân loại: socket, file, pipe hay deleted file.
+Nếu số descriptor tăng qua mỗi lần đo, hãy phân loại: socket, tệp (file / 파일), pipe hay deleted tệp (file / 파일).
 
-Chỉ khi có evidence về xu hướng mới chuyển sang code/runtime analysis.
+Chỉ khi có bằng chứng (evidence / 증거) về xu hướng mới chuyển sang mã (code / 코드)/thời gian chạy (runtime / 런타임) phân tích (analysis / 분석).
 
 ## Những hiểu lầm phổ biến
 
 **“`/proc` là thư mục thật trên ổ đĩa.”** Không. Nó là pseudo-filesystem do kernel sinh động.
 
-**“Sửa file trong `/proc/sys` là persistent.”** Thường không. Muốn giữ qua reboot cần cấu hình sysctl persistent.
+**“Sửa tệp (file / 파일) trong `/proc/sys` là persistent.”** Thường không. Muốn giữ qua reboot cần cấu hình sysctl persistent.
 
-**“Có thể chỉnh sysctl để tăng hiệu năng mà không có rủi ro.”** Sai. Kernel tuning luôn có trade-off và phụ thuộc workload.
+**“Có thể chỉnh sysctl để tăng hiệu năng mà không có rủi ro.”** Sai. Kernel tuning luôn có sự đánh đổi (trade-off / 트레이드오프) và phụ thuộc tải công việc (workload / 워크로드).
 
-**“`/sys` chỉ dành cho kernel developer.”** Không. Operator vẫn có thể dùng nó để hiểu device state, nhưng nên ưu tiên tool cấp cao khi có.
+**“`/sys` chỉ dành cho kernel nhà phát triển (developer / 개발자).”** Không. Operator vẫn có thể dùng nó để hiểu thiết bị (device / 장치) trạng thái (state / 상태), nhưng nên ưu tiên công cụ (tool / 도구) cấp cao khi có.
 
-**“Mọi thứ dưới `/proc/<PID>` luôn đọc được.”** Quyền, security policy và kernel settings có thể hạn chế truy cập.
+**“Mọi thứ dưới `/proc/<PID>` luôn đọc được.”** Quyền, bảo mật (security / 보안) chính sách (policy / 정책) và kernel settings có thể hạn chế truy cập.
 
 ## Mô hình tư duy
 
 Hãy xem `/proc` và `/sys` như hai bản đồ khác nhau của cùng hệ thống:
 
-- `/proc` nhấn mạnh **tiến trình và trạng thái runtime**;
-- `/sys` nhấn mạnh **thiết bị và mô hình kernel object**;
-- `/dev` cung cấp **điểm tương tác với device/resource**.
+- `/proc` nhấn mạnh **tiến trình và trạng thái thời gian chạy (runtime / 런타임)**;
+- `/sys` nhấn mạnh **thiết bị và mô hình kernel đối tượng (object / 객체)**;
+- `/dev` cung cấp **điểm tương tác với thiết bị (device / 장치)/tài nguyên (resource / 자원)**.
 
 Ba khu vực này tạo một cầu nối quan trọng giữa lý thuyết kernel và công việc vận hành thực tế.
 

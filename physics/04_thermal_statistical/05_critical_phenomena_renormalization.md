@@ -1,5 +1,8 @@
 # Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa
 
+> **Mạch đọc:** Đọc **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao chuyển pha không chỉ là “đổi trạng thái”?** sang **Tham số trật tự**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao chuyển pha không chỉ là “đổi trạng thái”?
 
 Nước sôi là ví dụ chuyển pha quen thuộc, nhưng nhiều hệ như nam châm sắt từ gần nhiệt độ Curie hoặc chất lưu gần điểm tới hạn cho thấy một hiện tượng sâu hơn: các dao động xuất hiện đồng thời trên rất nhiều thang chiều dài.
@@ -92,12 +95,12 @@ Nhóm tái chuẩn hóa (renormalization group, RG / 재규격화군) nghiên c�
 
 Một quy trình tư duy điển hình là:
 
-1. gom các bậc tự do vi mô thành block lớn hơn;
+1. gom các bậc tự do vi mô thành khối (block / 블록) lớn hơn;
 2. trung bình hoặc tích phân các dao động ở thang nhỏ;
 3. co giãn tọa độ để so sánh mô hình mới với mô hình cũ;
 4. theo dõi các coupling “chảy” trong không gian tham số.
 
-Một điểm bất động (fixed point) là nơi mô hình giữ cùng dạng sau phép đổi thang. Điểm tới hạn thường gắn với fixed point bất biến theo thang.
+Một điểm bất động (fixed point) là nơi mô hình giữ cùng dạng sau phép đổi thang. Điểm tới hạn thường gắn với fixed điểm (point / 지점) bất biến theo thang.
 
 Các coupling có thể được phân thành:
 
@@ -105,7 +108,7 @@ Các coupling có thể được phân thành:
 - **irrelevant**: giảm dần ảnh hưởng, làm hệ quên chi tiết vi mô;
 - **marginal**: cần phân tích bậc cao hơn để biết xu hướng.
 
-Tính phổ quát xuất hiện vì nhiều mô hình vi mô khác nhau có thể chảy về cùng một fixed point.
+Tính phổ quát xuất hiện vì nhiều mô hình vi mô khác nhau có thể chảy về cùng một fixed điểm (point / 지점).
 
 ## Bất biến theo thang và quy luật lũy thừa
 
@@ -115,7 +118,7 @@ Khi không còn một thang chiều dài đặc trưng, quy luật mũ suy giả
 C(r)\sim r^{-\alpha}.
 ```
 
-Quy luật lũy thừa cũng xuất hiện trong dòng rối, percolation và nhiều hệ phức tạp khác. Tuy nhiên, nhìn thấy một power law không tự động chứng minh hệ đang ở critical point; cần kiểm tra cơ chế, miền thang đo và hiệu ứng kích thước hữu hạn.
+Quy luật lũy thừa cũng xuất hiện trong dòng rối, percolation và nhiều hệ phức tạp khác. Tuy nhiên, nhìn thấy một power law không tự động chứng minh hệ đang ở trọng yếu (critical / 중요) điểm (point / 지점); cần kiểm tra cơ chế, miền thang đo và hiệu ứng kích thước hữu hạn.
 
 ## Chuyển pha bậc nhất và chuyển pha liên tục
 
@@ -125,7 +128,7 @@ Chuyển pha bậc nhất thường có ẩn nhiệt và đồng tồn tại pha
 
 Chuyển pha liên tục có tham số trật tự thay đổi liên tục nhưng susceptibility hoặc độ dài tương quan có thể phân kỳ.
 
-RG đặc biệt quan trọng đối với các chuyển pha liên tục, nơi dao động đa thang quyết định hành vi gần critical point.
+RG đặc biệt quan trọng đối với các chuyển pha liên tục, nơi dao động đa thang quyết định hành vi gần trọng yếu (critical / 중요) điểm (point / 지점).
 
 ## Mô hình Ising
 
@@ -161,9 +164,9 @@ Các số mũ không hoàn toàn độc lập. Các giả thuyết scaling tạo
 
 Lý thuyết Landau giả sử dao động quanh tham số trật tự trung bình không quá mạnh.
 
-Gần critical point, `\xi` tăng lớn và dao động xuất hiện trên nhiều thang. Ở số chiều thấp, chúng có thể làm xấp xỉ trường trung bình không còn đúng.
+Gần trọng yếu (critical / 중요) điểm (point / 지점), `\xi` tăng lớn và dao động xuất hiện trên nhiều thang. Ở số chiều thấp, chúng có thể làm xấp xỉ trường trung bình không còn đúng.
 
-Tiêu chuẩn Ginzburg (Ginzburg criterion / 긴즈부르크 기준) ước lượng miền nhiệt độ nơi dao động trở nên đủ mạnh để field theory trung bình mất độ tin cậy.
+Tiêu chuẩn Ginzburg (Ginzburg criterion / 긴즈부르크 기준) ước lượng miền nhiệt độ nơi dao động trở nên đủ mạnh để trường dữ liệu (field / 필드) lý thuyết (theory / 이론) trung bình mất độ tin cậy.
 
 ## Finite-size scaling trong mô phỏng
 
@@ -177,17 +180,17 @@ Finite-size scaling khai thác phụ thuộc theo `L` để ngoại suy giới h
 
 Mô phỏng Metropolis và các phương pháp Monte Carlo cho phép khảo sát hệ tới hạn lớn.
 
-Gần critical point, **critical slowing down** làm các thuật toán cập nhật cục bộ mất tương quan rất chậm, nên cần các thuật toán cluster như Wolff hoặc Swendsen–Wang.
+Gần trọng yếu (critical / 중요) điểm (point / 지점), **trọng yếu (critical / 중요) slowing down** làm các thuật toán cập nhật cục bộ mất tương quan rất chậm, nên cần các thuật toán cluster như Wolff hoặc Swendsen–Wang.
 
-Trong machine learning, coarse-graining và latent representation đôi khi được so sánh với RG. So sánh này hữu ích ở mức trực giác “loại bỏ bậc tự do không quan trọng theo thang”, nhưng RG là một khung toán–lý cụ thể chứ không đồng nghĩa với giảm chiều dữ liệu.
+Trong machine học tập (learning / 학습), coarse-graining và latent biểu diễn (representation / 표현) đôi khi được so sánh với RG. So sánh này hữu ích ở mức trực giác “loại bỏ bậc tự do không quan trọng theo thang”, nhưng RG là một khung toán–lý cụ thể chứ không đồng nghĩa với giảm chiều dữ liệu.
 
 ## Miền áp dụng và giới hạn
 
 Khai triển Landau hoạt động tốt khi tham số trật tự thay đổi chậm và dao động không quá mạnh. Nó không tự động dự đoán đúng số mũ tới hạn thực tế.
 
-RG cung cấp mô tả sâu hơn nhưng việc tính flow chính xác có thể khó. Trong nhiều hệ cần dùng khai triển nhiễu loạn, mô phỏng lattice hoặc phương pháp số chuyên dụng.
+RG cung cấp mô tả sâu hơn nhưng việc tính luồng (flow / 흐름) chính xác có thể khó. Trong nhiều hệ cần dùng khai triển nhiễu loạn, mô phỏng lattice hoặc phương pháp số chuyên dụng.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Điểm tới hạn là nơi hệ mất một thang đặc trưng. Dao động ở nhiều kích thước cùng quan trọng. RG hỏi điều gì còn tồn tại khi ta liên tục “zoom out”.
 
@@ -213,7 +216,7 @@ Không. Các hệ được chia thành nhiều lớp phổ quát khác nhau theo
 
 ### “Tái chuẩn hóa chỉ là mẹo xử lý vô cực trong QFT”
 
-Không. Ý tưởng tái chuẩn hóa rộng hơn nhiều; trong critical phenomena, trọng tâm là sự phụ thuộc theo thang và lý thuyết hiệu dụng.
+Không. Ý tưởng tái chuẩn hóa rộng hơn nhiều; trong trọng yếu (critical / 중요) phenomena, trọng tâm là sự phụ thuộc theo thang và lý thuyết hiệu dụng.
 
 ### “Trường trung bình sai nên vô dụng”
 
@@ -221,10 +224,12 @@ Không. Nó vẫn cho trực giác về tham số trật tự, symmetry breaking
 
 ### “Mọi power law đều chứng minh criticality”
 
-Không. Cần kiểm tra cơ chế, phạm vi scaling, finite-size effect và các mô hình thay thế.
+Không. Cần kiểm tra cơ chế, phạm vi scaling, finite-size tác động (effect / 효과) và các mô hình thay thế.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Chuyển pha](02_phase_transitions_heat_transfer.md), [Ensemble thống kê](03_ensembles_partition_functions.md).
 
 **Liên hệ tiếp:** [Vật chất tô pô và khuyết tật](../10_condensed_matter_devices/04_phonons_defects_topological_matter.md), [Trường lượng tử](../09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md), [Dòng rối](../03_continuum/03_turbulence_rheology_soft_matter.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 thermodynamics](./00_thermodynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

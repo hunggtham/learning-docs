@@ -1,5 +1,8 @@
 # 04 — Kinh tế học và vĩ mô (Economics)
 
+> **Mạch đọc:** Đọc **04 — Kinh tế học và vĩ mô (Economics)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tài chính toàn cầu. Mục tiêu không phải học thuộc GDP, CPI hay Fed, mà hiểu các kênh truyền dẫn từ quyết định của hộ gia đình và doanh nghiệp tới lãi suất, tín dụng, ngoại hối, thương mại, thanh khoản, chính sách tài khóa, tính bền vững của nợ, nhân khẩu học, năng suất và giá tài sản.
 
 ## Thứ tự đọc
@@ -20,16 +23,24 @@ Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tà
 
 [07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md](./07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md) là lớp học sâu: xây nowcast theo diffusion, tách bất ngờ dữ liệu khỏi mức tuyệt đối, đọc phản ứng đầu ngắn/đầu dài của đường cong, kênh tín dụng và FX, nhu cầu tài trợ chính phủ, chuyển chế độ kinh tế và tác động bậc một/bậc hai tới doanh nghiệp và tài sản.
 
+
+> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng nhận một cú sốc và tự xây chuỗi `cú sốc → thu nhập/giá cả → chính sách → lợi suất/FX/tín dụng → lợi nhuận ngành/doanh nghiệp → định giá`; phân biệt cú sốc cầu, cung, tín dụng, thanh khoản và tài khóa; đọc hàm phản ứng của ngân hàng trung ương; tách biến động đầu ngắn của đường cong khỏi phần bù kỳ hạn; phân tích tính bền vững của nợ bằng cán cân sơ cấp, chênh lệch r-g và cấu trúc kỳ hạn/tiền tệ; nối nhân khẩu học và năng suất với tăng trưởng tiềm năng, cơ sở thuế, lãi suất trung tính và định giá dài hạn.
 
 Bạn cũng cần biết khi nào dữ liệu tiêu đề chỉ là nhiễu chu kỳ và khi nào bảng cân đối, cấu trúc nợ hoặc xu hướng năng suất đang làm thay đổi chế độ cấu trúc.
 
+
+> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tích hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện chuỗi `số thực tế → mức bất ngờ → hàm phản ứng → đường cong/tỷ giá/tín dụng → lợi nhuận/định giá`. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để nối cơ chế tiền tệ, tài sản thế chấp, bảng cân đối ngân hàng và cơ chế khuếch đại tài chính vào nền kinh tế thực.
 
-Sau đó hoàn thành **Module 4 — Economics** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu là `macro_nowcast.md`, `surprise_map.md`, ma trận chế độ kinh tế và bảng truyền dẫn liên tài sản; mỗi kết luận phải chỉ rõ điều gì đã được thị trường kỳ vọng trước dữ liệu.
+Sau đó hoàn thành **mô-đun (module / 모듈) 4 — Economics** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu là `macro_nowcast.md`, `surprise_map.md`, ma trận chế độ kinh tế và bảng truyền dẫn liên tài sản; mỗi kết luận phải chỉ rõ điều gì đã được thị trường kỳ vọng trước dữ liệu.
 
 Sau đó chuyển sang [05 — Giao dịch và phái sinh](../05_trading_derivatives/README.md) hoặc [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
+
+> **Bàn giao:** Sau **Bài tập tích hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

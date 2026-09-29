@@ -1,5 +1,8 @@
 # Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào
 
+> **Mạch đọc:** Đọc **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Sai số và độ không đảm bảo không phải cùng một khái niệm** sang **Đại lượng cần đo và mô hình đo**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Một giá trị đo không kèm **độ không đảm bảo (uncertainty / 측정 불확도)** và bối cảnh phương pháp là một thông tin chưa hoàn chỉnh. Trong khoa học đo lường, mục tiêu không phải tạo ra một con số trông thật chính xác, mà là hiểu con số đó được tạo ra như thế nào, những nguồn biến thiên và độ chệch nào có thể ảnh hưởng nó, và mức độ tin cậy hợp lý của kết luận rút ra từ dữ liệu.
 
 Hóa học thực nghiệm luôn đi qua một chuỗi: mẫu thật → thao tác lấy mẫu và chuẩn bị → phản ứng hoặc phép tách → tín hiệu thiết bị → hiệu chuẩn → tính toán → kết luận. Mỗi mắt xích có thể thêm biến thiên, độ chệch hoặc giả định. Vì thế phân tích dữ liệu không phải bước làm đẹp con số ở cuối thí nghiệm; nó là phần của chính mô hình đo.
@@ -9,7 +12,7 @@ Hóa học thực nghiệm luôn đi qua một chuỗi: mẫu thật → thao t�
 **Sai số (error)** là độ lệch giữa kết quả đo và giá trị thật hoặc giá trị tham chiếu phù hợp:
 
 \[
-error=x_{measured}-x_{reference}
+lỗi (error / 오류)=x_{measured}-x_{tham chiếu (reference / 참조)}
 \]
 
 Nếu giá trị thật không biết chính xác — trường hợp rất phổ biến — thì sai số thật cũng không thể biết chính xác.
@@ -311,7 +314,7 @@ Báo cáo một nồng độ thấp hơn vùng định lượng đáng tin cậy
 Nếu thêm một lượng biết trước \(C_{added}\) vào mẫu:
 
 \[
-\%Recovery=
+\%khôi phục (recovery / 복구)=
 \frac{C_{spiked}-C_{original}}{C_{added}}\times100\%
 \]
 
@@ -380,7 +383,7 @@ Do đó không nên chọn biến đổi chỉ vì đồ thị “trông thẳng
 
 # Phân tích dữ liệu có thể học trực tiếp từ kỹ thuật phần mềm
 
-Với bộ dữ liệu lớn, một pipeline tốt nên có dạng:
+Với bộ dữ liệu lớn, một chuỗi xử lý (pipeline / 파이프라인) tốt nên có dạng:
 
 ```text
 dữ liệu thô bất biến
@@ -389,9 +392,9 @@ dữ liệu thô bất biến
 → hình/bảng/kết quả
 ```
 
-Không ghi đè dữ liệu thô. Các bước xử lý nên được thể hiện bằng mã nguồn hoặc quy trình có thể tái tạo. Quản lý phiên bản cho biết phân tích thay đổi khi nào; kiểm thử tự động có thể bắt lỗi chuyển đơn vị hoặc công thức; file môi trường giúp khóa phiên bản thư viện phần mềm.
+Không ghi đè dữ liệu thô. Các bước xử lý nên được thể hiện bằng mã nguồn hoặc quy trình có thể tái tạo. Quản lý phiên bản cho biết phân tích thay đổi khi nào; kiểm thử tự động có thể bắt lỗi chuyển đơn vị hoặc công thức; tệp (file / 파일) môi trường giúp khóa phiên bản thư viện phần mềm.
 
-Bảng tính vẫn hữu ích cho kiểm tra trực quan và phép tính đơn giản, nhưng trở nên rủi ro khi workflow phụ thuộc copy/paste thủ công, công thức ẩn và chỉnh sửa không có lịch sử.
+Bảng tính vẫn hữu ích cho kiểm tra trực quan và phép tính đơn giản, nhưng trở nên rủi ro khi workflow phụ thuộc bản sao (copy / 복사)/paste thủ công, công thức ẩn và chỉnh sửa không có lịch sử.
 
 ## Ví dụ về ngân sách độ không đảm bảo
 
@@ -443,3 +446,5 @@ Phần mềm chỉ thực hiện mô hình và lựa chọn đã được lập 
 Hãy xem mỗi con số báo cáo như **đầu ra của một mô hình đo cùng một phân bố độ không đảm bảo**, chứ không phải một điểm tuyệt đối. Muốn biết có nên tin con số đó hay không, phải truy ngược chuỗi: mẫu được lấy như thế nào, tín hiệu được tạo ra sao, chuẩn nào neo phép đo, biến thiên và độ chệch xuất hiện ở đâu, chúng truyền qua công thức ra sao, và dữ liệu có thực sự hỗ trợ số chữ số cũng như kết luận được báo cáo hay không.
 
 Xem thêm: [Hóa học và Toán học](../90_connections/chemistry_and_mathematics.md).
+
+> **Bàn giao:** Sau **“Phần mềm cho ra số nên kết quả khách quan”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lab safety](./00_lab_safety.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

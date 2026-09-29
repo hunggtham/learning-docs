@@ -2,6 +2,8 @@
 
 `library.config.json` is the only publication manifest. The Pages workflow copies only files under reviewed `allowedPrefixes` or explicit `allowedDocuments`; adding a file to the repository does not publish it.
 
+> **Mạch kiểm tra:** Quy trình đi theo `rights → manifest → audit → build → published reader`. Mỗi bước trả lời một câu hỏi khác nhau; pass ở bước trước không thay thế việc kiểm tra artifact và link ở bước sau.
+
 Before adding a Markdown or PDF file, confirm one of these in your own records:
 
 - you wrote it yourself;
@@ -17,7 +19,8 @@ Phần này giải thích quyết định audit hiện tại, để người xu�
 - Published: the author-confirmed technical notes and English grammar/exam guides listed in the manifest.
 - Held back: all Korean material for now, including `raw`, `raw_md`, `notion`, `generated_markdown*`, `final*`, `merged_subjects`, and PDF/DOCX captures. The generated Korean lessons contain source quotations and provenance notes, so they need a separate rights review and rewriting pass before publication.
 - Held back: `pmp/raw` and `pmp/workflow-output` because the cleaned text includes a publisher copyright notice and “all rights reserved”.
-- Held back: imported IELTS/SQL books and OCR/translation files, including `ielts_docs/raw*`, `input/*`, `sql/raw*`, and the SQL lessons that explicitly say they closely follow a source PDF.
+- English-language study materials are maintained in the separate `language-docs` repository; this repository does not store or publish English study Markdown files.
+- Held back: imported SQL books and OCR/translation files, including `input/*`, `sql/raw*`, and the SQL lessons that explicitly say they closely follow a source PDF.
 
 Official documentation links (for example MDN, W3C, Sass, Tailwind, IELTS.org or ETS) may remain as citations. A link is not a licence to republish the linked text, so do not copy passages, screenshots, test questions, or book pages into a published file.
 
@@ -27,10 +30,16 @@ To publish an approved file, add one object to `allowedDocuments`:
 {
   "path": "path/to/your-note.md",
   "title": "Readable title",
-  "category": "English",
-  "language": "en-vi",
+  "category": "Technical",
+  "language": "vi-en",
   "rights": "author-confirmed"
 }
 ```
 
+For an approved folder that should appear under a different web location, an
+`allowedPrefixes` entry may also set `displayPrefix`. This changes only the
+published navigation path; it does not move or duplicate the source files.
+
 Use `npm run audit:library` before `npm run build:library`. The site supports both `.md` and `.pdf`; Markdown under an approved prefix is discovered automatically, while PDFs remain explicit per-file entries after redistribution rights are confirmed. `raw` and `raw_md` are always skipped, and `output` is flattened only for display.
+
+> **Bàn giao:** Sau khi build, kiểm tra document count, search index và knowledge links; nếu nguồn nằm trong raw/imported thì quay lại canonical source hoặc generator thay vì đưa capture vào publication manifest.

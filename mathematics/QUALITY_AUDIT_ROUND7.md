@@ -1,30 +1,36 @@
-# Quality Audit — Round 7: depth balancing across Mathematics Knowledge Library
+# Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-Round 7 tiếp tục chiến lược **quality over chapter count**. Không thêm Mathematics Library mới và không tăng số topic chỉ để mở rộng coverage. Library vẫn giữ 87 topic; mục tiêu là làm các chapter nền có dependency centrality cao đạt chất lượng gần với các chapter mới hơn như Real Analysis, Complex Analysis, Bayesian Inference, Tensor/Matrix Calculus và Dynamic Programming.
+> **Mạch đọc:** Đặt **chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 7: độ sâu (depth / 깊이) balancing across Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tiêu chí Round 7** sang **Batch 1 — Algebra cốt lõi (core / 핵심)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Round 7 tiếp tục chiến lược **chất lượng (quality / 품질) over chapter count**. Không thêm Mathematics thư viện (library / 라이브러리) mới và không tăng số topic chỉ để mở rộng coverage. thư viện (library / 라이브러리) vẫn giữ 87 topic; mục tiêu là làm các chapter nền có phụ thuộc (dependency / 의존성) centrality cao đạt chất lượng gần với các chapter mới hơn như Real phân tích (analysis / 분석), Complex phân tích (analysis / 분석), Bayesian suy luận (inference / 추론), Tensor/ma trận (matrix / 행렬) Calculus và động (dynamic / 동적) Programming.
 
 ## Tiêu chí Round 7
 
 Các chapter được chọn khi có ít nhất một trong các dấu hiệu:
 
 - nhiều chapter downstream phụ thuộc vào concept đó;
-- nội dung đúng nhưng ngắn/mang dạng expanded note;
+- nội dung đúng nhưng ngắn/mang dạng expanded ghi chú (note / 노트);
 - formalism xuất hiện quá sớm so với intuition;
-- formula thiếu provenance hoặc assumptions;
-- connection với CS, Physics, AI, Finance còn chỉ được nhắc tên;
-- chapter overlap với chapter khác nhưng boundary chưa rõ;
-- misconception/failure mode chưa đủ để tạo engineering judgment.
+- formula thiếu provenance hoặc các giả định (assumptions / 가정들);
+- liên kết (connection / 연결) với CS, Physics, AI, Finance còn chỉ được nhắc tên;
+- chapter overlap với chapter khác nhưng ranh giới (boundary / 경계) chưa rõ;
+- misconception/dạng thất bại (failure mode / 실패 모드) chưa đủ để tạo kỹ thuật (engineering / 엔지니어링) judgment.
 
-Round 7 giữ chuẩn canonical trong [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md): intuition trước formalism, formula có meaning, theorem/rule có reason/proof idea, examples tạo reasoning transfer, assumptions được nói rõ và connections dựa trên shared structure.
+Round 7 giữ chuẩn chuẩn gốc (canonical / 정본) trong [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md): intuition trước formalism, formula có meaning, theorem/quy tắc (rule / 규칙) có reason/proof idea, examples tạo lập luận (reasoning / 추론) transfer, các giả định (assumptions / 가정들) được nói rõ và connections dựa trên dùng chung (shared / 공유) cấu trúc (structure / 구조).
 
-## Batch 1 — Algebra core
 
-Commit: `6fd6d6eebd8f846c782567d5d07fe035403af867`
+> **Chuyển mạch:** Từ **Tiêu chí Round 7**, ta sang **Batch 1 — Algebra cốt lõi (core / 핵심)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 1 — Algebra cốt lõi (core / 핵심)
+
+Lần ghi nhận (commit / 커밋): `6fd6d6eebd8f846c782567d5d07fe035403af867`
 
 ### `01_algebra/01_equations_and_inequalities.md`
 
-Bản mới chuyển từ solving rules sang viewpoint **constraint + solution set + equivalence transformation**.
+Bản mới chuyển từ solving rules sang viewpoint **ràng buộc (constraint / 제약조건) + solution set + equivalence transformation**.
 
-Learning flow mới:
+Mạch học (learning flow / 학습 흐름) mới:
 
 ```text
 solution set + domain
@@ -60,37 +66,43 @@ multiplicative growth
 
 ### `01_algebra/04_polynomials_and_factorization.md`
 
-Polynomial được viết như object có nhiều representations: expanded, factored, vertex, Taylor.
+Polynomial được viết như đối tượng (object / 객체) có nhiều representations: expanded, factored, vertex, Taylor.
 
-Bản mới thêm proof idea cho factor/remainder theorem, multiplicity geometry, Fundamental Theorem of Algebra intuition, Vieta, interpolation limitations, Horner evaluation, root conditioning và connection với eigenvalues/control.
+Bản mới thêm proof idea cho factor/remainder theorem, multiplicity hình học (geometry / 기하학), Fundamental Theorem of Algebra intuition, Vieta, interpolation limitations, Horner evaluation, gốc (root / 루트) conditioning và liên kết (connection / 연결) với eigenvalues/điều khiển (control / 제어).
 
-## Batch 2 — Coordinate Geometry, Transformations & Vectors
 
-Commit: `92685a0e9de0f4296311c193ca2c75eb84e5e71b`
+> **Chuyển mạch:** Từ **Batch 1 — Algebra cốt lõi (core / 핵심)**, ta sang **Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors
+
+Lần ghi nhận (commit / 커밋): `92685a0e9de0f4296311c193ca2c75eb84e5e71b`
 
 Ba chapter được rewrite quanh một concept chung:
 
-> coordinates are representations; vectors encode displacement/state; transformations act on those representations; symmetry studies invariants.
+> coordinates are representations; vectors encode displacement/trạng thái (state / 상태); transformations act on those representations; symmetry studies invariants.
 
 ### `03_geometry_trigonometry/01_coordinate_geometry.md`
 
-Bản mới phân biệt point/vector, derive line representations bằng direction/normal vectors, derive point-line distance bằng projection, giải thích affine combination, active/passive coordinate changes, frames trong graphics/robotics và metric assumptions trong AI/geospatial data.
+Bản mới phân biệt điểm (point / 지점)/véc-tơ (vector / 벡터), derive line representations bằng direction/normal vectors, derive point-line distance bằng projection, giải thích affine combination, active/passive coordinate changes, frames trong graphics/robotics và chỉ số (metric / 지표) các giả định (assumptions / 가정들) trong AI/geospatial dữ liệu (data / 데이터).
 
 ### `03_geometry_trigonometry/05_transformations_and_symmetry.md`
 
-Bản mới đi từ map trên space → rigid/affine transforms → homogeneous coordinates → noncommutative composition → symmetry groups → invariance/equivariance → Noether-style physics intuition → graphics/robotics/ML.
+Bản mới đi từ map trên không gian (space / 공간) → rigid/affine transforms → homogeneous coordinates → noncommutative composition → symmetry groups → invariance/equivariance → Noether-style physics intuition → graphics/robotics/ML.
 
 ### `04_vectors_linear_algebra/00_vectors.md`
 
-Bản mới chuyển từ “arrow/list of components” sang vector như object trong chosen basis. Nội dung làm sâu norm choices, dot product derivation, projection/residual, cross product, basis dependence, matrix-column viewpoint và applications trong Physics, Graphics, AI và Finance.
+Bản mới chuyển từ “arrow/danh sách (list / 목록) of components” sang véc-tơ (vector / 벡터) như đối tượng (object / 객체) trong chosen basis. Nội dung làm sâu norm choices, dot sản phẩm (product / 제품) derivation, projection/residual, cross sản phẩm (product / 제품), basis dependence, matrix-column viewpoint và applications trong Physics, Graphics, AI và Finance.
+
+
+> **Chuyển mạch:** Từ **Batch 2 — Coordinate hình học (geometry / 기하학), Transformations & Vectors**, ta sang **Batch 3 — Statistics & Regression** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Batch 3 — Statistics & Regression
 
-Commit: `f8f4136726abd8bcf50b4516564b87beedb741c6`
+Lần ghi nhận (commit / 커밋): `f8f4136726abd8bcf50b4516564b87beedb741c6`
 
 ### `06_probability_statistics/05_descriptive_and_inferential_statistics.md`
 
-Learning flow mới:
+Mạch học (learning flow / 학습 흐름) mới:
 
 ```text
 population/sample
@@ -104,21 +116,24 @@ population/sample
 → causality and sampling design
 ```
 
-Bản mới nhấn mạnh sample size không sửa systematic bias, p-value không phải probability hypothesis sai, effect size khác statistical significance và dataset shift là statistical assumption.
+Bản mới nhấn mạnh cỡ mẫu (sample size / 표본 크기) không sửa systematic độ lệch (bias / 편향), p-value không phải xác suất (probability / 확률) hypothesis sai, tác động (effect / 효과) kích thước (size / 크기) khác statistical significance và dataset shift là statistical giả định (assumption / 가정).
 
 ### `06_probability_statistics/06_regression_and_correlation.md`
 
-Bản mới nối covariance/correlation với geometry; derive OLS slope; giải thích regression như projection + conditional model; làm rõ omitted-variable bias, residual diagnostics, heteroskedasticity, serial dependence, prediction interval, regularization, multicollinearity, logistic regression và maximum-likelihood viewpoint.
+Bản mới nối covariance/correlation với hình học (geometry / 기하학); derive OLS slope; giải thích regression như projection + conditional mô hình (model / 모델); làm rõ omitted-variable độ lệch (bias / 편향), residual diagnostics, heteroskedasticity, serial dependence, prediction interval, regularization, multicollinearity, logistic regression và maximum-likelihood viewpoint.
 
-Causal interpretation được tách rõ khỏi fit/prediction.
+Nhân quả (causal / 인과적) interpretation được tách rõ khỏi fit/prediction.
 
-## Batch 4 — Gradient Optimization & Numerical Calculus
 
-Commit: `275ce7792ad68c70ad192e1919a26ed8503a7640`
+> **Chuyển mạch:** Từ **Batch 3 — Statistics & Regression**, ta sang **Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus
+
+Lần ghi nhận (commit / 커밋): `275ce7792ad68c70ad192e1919a26ed8503a7640`
 
 ### `08_optimization_numerical/01_gradient_descent_and_convexity.md`
 
-Bản mới tập trung riêng vào optimization dynamics thay vì duplicate general optimization chapter.
+Bản mới tập trung riêng vào tối ưu hóa (optimization / 최적화) dynamics thay vì duplicate general tối ưu hóa (optimization / 최적화) chapter.
 
 Nội dung trọng tâm:
 
@@ -137,7 +152,7 @@ local linear model
 
 ### `05_calculus/06_numerical_calculus.md`
 
-File này được **consolidate boundary** với general Numerical Methods.
+Tệp (file / 파일) này được **consolidate ranh giới (boundary / 경계)** với general Numerical Methods.
 
 Nó chỉ tập trung sâu vào:
 
@@ -145,16 +160,19 @@ Nó chỉ tập trung sâu vào:
 - truncation vs roundoff/noise;
 - higher-order differences/Richardson;
 - quadrature/adaptive quadrature;
-- Monte Carlo integration;
+- Monte Carlo tích hợp (integration / 통합);
 - automatic differentiation/JVP/VJP;
-- gradient checking;
+- độ dốc (gradient / 기울기) checking;
 - complex-step differentiation.
 
-Conditioning/root finding/numerical linear algebra/ODE stability vẫn thuộc canonical numerical-methods chapter, tránh duplicate nội dung.
+Conditioning/gốc (root / 루트) finding/numerical tuyến tính (linear / 선형) algebra/ODE stability vẫn thuộc chuẩn gốc (canonical / 정본) numerical-methods chapter, tránh duplicate nội dung.
+
+
+> **Chuyển mạch:** Từ **Batch 4 — độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화) & Numerical Calculus**, ta sang **Batch 5 — Recurrence, Induction & Recursive Algorithms** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Batch 5 — Recurrence, Induction & Recursive Algorithms
 
-Commit: `bbf6a7e35edeb62f0527278b740481935783702c`
+Lần ghi nhận (commit / 커밋): `bbf6a7e35edeb62f0527278b740481935783702c`
 
 ### `07_discrete_cs/02_recurrence_and_induction_in_algorithms.md`
 
@@ -166,9 +184,12 @@ recurrence = mathematical dependency
 induction = proof structure
 ```
 
-Nội dung làm sâu recursion trees, Master Theorem intuition, substitution proof, memoization vs recurrence semantics, dynamic-programming state design, loop invariants, structural induction, termination/ranking functions, matrix recurrence/eigenvalues và Bellman connection.
+Nội dung làm sâu recursion trees, Master Theorem intuition, substitution proof, memoization vs recurrence ngữ nghĩa (semantics / 의미론), dynamic-programming trạng thái (state / 상태) thiết kế (design / 설계), vòng lặp (loop / 루프) invariants, structural induction, termination/ranking functions, ma trận (matrix / 행렬) recurrence/eigenvalues và Bellman liên kết (connection / 연결).
 
-## Tác động lên learning dependency
+
+> **Chuyển mạch:** Từ **Batch 5 — Recurrence, Induction & Recursive Algorithms**, ta sang **Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)
 
 Sau Round 7, các đường học phổ biến cân bằng hơn:
 
@@ -182,7 +203,7 @@ algebra/logarithm
 → graph/DP
 ```
 
-### AI / Data
+### AI / dữ liệu (data / 데이터)
 
 ```text
 coordinates/vectors
@@ -193,7 +214,7 @@ coordinates/vectors
 → gradient optimization
 ```
 
-### Physics / Engineering
+### Physics / kỹ thuật (engineering / 엔지니어링)
 
 ```text
 geometry/vectors
@@ -215,40 +236,51 @@ ratio/percentage
 → optimization
 ```
 
-## Depth status sau Round 7
+
+> **Chuyển mạch:** Từ **Tác động lên học tập (learning / 학습) phụ thuộc (dependency / 의존성)**, ta sang **độ sâu (depth / 깊이) status sau Round 7** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Độ sâu (depth / 깊이) status sau Round 7
 
 Các major bottlenecks được xử lý trong Round 5–7 hiện gồm:
 
-- functions/exponential models;
+- functions/exponential các mô hình (models / 모델들);
 - trigonometry;
-- vectors/vector spaces;
-- matrices/linear transformations/SVD;
+- vectors/véc-tơ (vector / 벡터) spaces;
+- matrices/tuyến tính (linear / 선형) transformations/SVD;
 - limits/derivatives/multivariable calculus;
-- probability/statistics/regression;
-- graph theory/complexity/recurrence;
+- xác suất (probability / 확률)/statistics/regression;
+- đồ thị (graph / 그래프) lý thuyết (theory / 이론)/độ phức tạp (complexity / 복잡도)/recurrence;
 - numerical methods/numerical calculus;
-- general optimization/gradient optimization;
-- ratios/scaling/coordinate geometry/transformations.
+- general tối ưu hóa (optimization / 최적화)/độ dốc (gradient / 기울기) tối ưu hóa (optimization / 최적화);
+- ratios/scaling/coordinate hình học (geometry / 기하학)/transformations.
 
-Các advanced chapters như Real Analysis, Complex Analysis, Information Theory, Bayesian Inference, Dynamic Programming, Fourier/Laplace và Control hiện không phải depth bottleneck tương đối.
+Các advanced chapters như Real phân tích (analysis / 분석), Complex phân tích (analysis / 분석), thông tin (information / 정보) lý thuyết (theory / 이론), Bayesian suy luận (inference / 추론), động (dynamic / 동적) Programming, Fourier/Laplace và điều khiển (control / 제어) hiện không phải độ sâu (depth / 깊이) bottleneck tương đối.
+
+
+> **Chuyển mạch:** Từ **độ sâu (depth / 깊이) status sau Round 7**, ta sang **Priority hợp lý cho Round tiếp theo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Priority hợp lý cho Round tiếp theo
 
-Không nên mở rộng research-level topics trước khi polish thêm một số foundational nodes còn ngắn hơn median quality:
+Không nên mở rộng research-level topics trước khi polish thêm một số foundational nodes còn ngắn hơn median chất lượng (quality / 품질):
 
-1. `00_foundations/01_logic_and_proof.md` — tăng proof strategy, quantifier negation và formal-vs-informal reasoning.
-2. `00_foundations/02_sets_relations_and_mappings.md` — sâu hơn equivalence/order relations, cardinality và relation composition.
-3. `00_foundations/03_numbers_and_number_systems.md` — construction intuition, completeness motivation, representation vs value.
-4. `01_algebra/00_algebraic_language.md` — expressions/identities/equivalence/substitution as symbolic semantics.
-5. `03_geometry_trigonometry/00_euclidean_geometry.md` — axioms, congruence, parallelism, proof structure và non-Euclidean boundary.
-6. `06_probability_statistics/04_expectation_variance_and_limit_laws.md` — unify linearity, covariance, LLN/CLT and risk applications.
+1. `00_foundations/01_logic_and_proof.md` — tăng proof chiến lược (strategy / 전략), quantifier negation và formal-vs-informal lập luận (reasoning / 추론).
+2. `00_foundations/02_sets_relations_and_mappings.md` — sâu hơn equivalence/thứ tự (order / 순서) relations, cardinality và quan hệ (relation / 관계) composition.
+3. `00_foundations/03_numbers_and_number_systems.md` — construction intuition, completeness motivation, biểu diễn (representation / 표현) vs giá trị (value / 값).
+4. `01_algebra/00_algebraic_language.md` — expressions/identities/equivalence/substitution as symbolic ngữ nghĩa (semantics / 의미론).
+5. `03_geometry_trigonometry/00_euclidean_geometry.md` — axioms, congruence, parallelism, proof cấu trúc (structure / 구조) và non-Euclidean ranh giới (boundary / 경계).
+6. `06_probability_statistics/04_expectation_variance_and_limit_laws.md` — unify linearity, covariance, LLN/CLT and rủi ro (risk / 위험) applications.
 7. `07_discrete_cs/03_boolean_algebra_and_digital_logic.md` — strengthen algebra ↔ circuits ↔ predicates ↔ bit operations.
-8. `07_discrete_cs/04_number_theory_and_modular_arithmetic.md` — proof ideas, congruence structure, gcd/inverses/CRT.
+8. `07_discrete_cs/04_number_theory_and_modular_arithmetic.md` — proof ideas, congruence cấu trúc (structure / 구조), gcd/inverses/CRT.
 
-Những items này đều là **depth upgrades**, không phải yêu cầu thêm chapter mới.
+Những items này đều là **độ sâu (depth / 깊이) upgrades**, không phải yêu cầu thêm chapter mới.
+
+
+> **Chuyển mạch:** Từ **Priority hợp lý cho Round tiếp theo**, ta sang **Kết luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết luận
 
-Round 7 không thay đổi coverage count. Giá trị chính là giảm variance về chất lượng giữa các chapter cũ và mới. Library ngày càng giống một connected textbook/knowledge graph hơn là collection của các notes độc lập.
+Round 7 không thay đổi coverage count. Giá trị chính là giảm variance về chất lượng giữa các chapter cũ và mới. thư viện (library / 라이브러리) ngày càng giống một connected textbook/kiến thức (knowledge / 지식) đồ thị (graph / 그래프) hơn là collection của các notes độc lập.
 
-> Coverage trả lời “concept có tồn tại trong library không?”. Depth trả lời “người đọc có thể tự reasoning từ concept đó sang vấn đề mới không?”. Round 7 tiếp tục tối ưu cho câu hỏi thứ hai.
+> Coverage trả lời “concept có tồn tại trong thư viện (library / 라이브러리) không?”. độ sâu (depth / 깊이) trả lời “người đọc có thể tự lập luận (reasoning / 추론) từ concept đó sang vấn đề mới không?”. Round 7 tiếp tục tối ưu cho câu hỏi thứ hai.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [10 glossary](./10_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

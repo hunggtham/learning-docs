@@ -1,6 +1,9 @@
-# Data for AI — Reading Map
+# Dữ liệu (data / 데이터) for AI — Reading Map
 
-Folder này coi data như một **engineered observation system**, không phải CSV phụ trợ cho model. Reading path đi từ data-generating process tới collection, cleaning, labeling, quality, leakage, bias, synthetic data và governance.
+> **Mạch đọc:** Đọc **dữ liệu (data / 데이터) for AI — Reading Map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **cốt lõi (core / 핵심) distinctions**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này coi dữ liệu (data / 데이터) như một **engineered observation hệ thống (system / 시스템)**, không phải CSV phụ trợ cho mô hình (model / 모델). Reading đường dẫn (path / 경로) đi từ data-generating tiến trình (process / 프로세스) tới collection, cleaning, labeling, chất lượng (quality / 품질), leakage, độ lệch (bias / 편향), synthetic dữ liệu (data / 데이터) và quản trị (governance / 거버넌스).
 
 ```mermaid
 flowchart TD
@@ -28,7 +31,10 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [07 — Synthetic Data](./07_synthetic_data.md)
 - [08 — Data Governance](./08_data_governance.md)
 
-## Core distinctions
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) distinctions
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
@@ -45,7 +51,10 @@ Available in Database ≠ Available at Prediction Time
 Pseudonymization ≠ Anonymization
 ```
 
-## Mental Model
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -60,7 +69,10 @@ Reality
 → feedback into future data
 ```
 
-Data quality therefore depends on both statistical properties and the software/social process that generates observations.
+Dữ liệu (data / 데이터) chất lượng (quality / 품질) therefore depends on both statistical properties and the software/xã hội (social / 사회적) tiến trình (process / 프로세스) that generates observations.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Connections** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Connections
 

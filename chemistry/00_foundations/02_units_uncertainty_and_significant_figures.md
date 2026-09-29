@@ -1,5 +1,8 @@
 # Đơn vị, độ không đảm bảo và chữ số có nghĩa
 
+> **Mạch đọc:** Đọc **Đơn vị, độ không đảm bảo và chữ số có nghĩa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đơn vị SI và các đơn vị dẫn xuất** sang **Tiền tố là cách quản lý thang độ lớn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hóa học là một khoa học định lượng. Khi nói một phản ứng “nhanh”, một dung dịch “đậm đặc” hay một vật “nặng”, ta mới chỉ có mô tả định tính. Muốn so sánh, kiểm chứng và tính toán, ta cần **phép đo (measurement)**. Nhưng phép đo không bao giờ hoàn toàn tách khỏi giới hạn của thiết bị và phương pháp.
 
 Vì vậy một con số trong Hóa học phải luôn được đọc cùng ba câu hỏi: **đại lượng gì, đơn vị gì, và độ tin cậy tới đâu?**
@@ -14,7 +17,7 @@ Trong Hóa học, một số đơn vị cơ bản và đơn vị dẫn xuất xu
 |---|---|---|---|
 | chiều dài (length) | mét (metre) | `m` | 미터 |
 | khối lượng (mass) | kilogram | `kg` | 킬로그램 |
-| thời gian (time) | giây (second) | `s` | 초 |
+| thời gian (time / 시간) | giây (second) | `s` | 초 |
 | nhiệt độ (temperature) | kelvin | `K` | 켈빈 |
 | lượng chất (amount of substance) | mol (mole) | `mol` | 몰 |
 | cường độ dòng điện (electric current) | ampere | `A` | 암페어 |
@@ -41,7 +44,7 @@ Ví dụ:
 
 Điều quan trọng không phải học thuộc mọi tiền tố mà là nhìn chúng như lũy thừa của 10. Khi đó đổi đơn vị trở thành một bài đại số với lũy thừa.
 
-## Phân tích thứ nguyên như một hệ thống kiểm tra logic
+## Phân tích thứ nguyên như một hệ thống kiểm tra lô-gic (logic / 논리)
 
 **Phân tích thứ nguyên (dimensional analysis / 차원 분석)** dùng đơn vị như các thừa số đại số.
 
@@ -203,7 +206,7 @@ trong khi một mol chứa khoảng:
 
 hạt.
 
-Ngoài lũy thừa của 10, Hóa học còn dùng các **thang logarithm (logarithmic scales)** như pH. Logarithm xuất hiện vì nồng độ có thể trải qua nhiều bậc độ lớn. Ta sẽ giải thích bản chất của logarithm khi học acid–base thay vì chỉ học công thức `pH = -log[H+]`.
+Ngoài lũy thừa của 10, Hóa học còn dùng các **thang logarithm (logarithmic scales)** như pH. Logarithm xuất hiện vì nồng độ có thể trải qua nhiều bậc độ lớn. Ta sẽ giải thích bản chất của logarithm khi học acid–cơ sở (base / 기반) thay vì chỉ học công thức `pH = -log[H+]`.
 
 ## Lan truyền độ không đảm bảo: ý tưởng nền tảng
 
@@ -255,3 +258,5 @@ Lặp lại giúp xử lý biến thiên ngẫu nhiên, nhưng sai số hệ th�
 Sau khi biết cách quan sát và đo, ta cần một ngôn ngữ để biểu diễn thành phần và biến đổi của vật chất. Đó là vai trò của ký hiệu, công thức, phương trình và mô hình hóa học.
 
 Xem tiếp: [Ngôn ngữ và mô hình hóa học](./03_chemical_language_and_models.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is chemistry](./00_what_is_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

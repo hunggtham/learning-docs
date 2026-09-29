@@ -1,8 +1,11 @@
 # Động học: vị trí, vận tốc, gia tốc và quỹ đạo
 
+> **Mạch đọc:** Đọc **Động học: vị trí, vận tốc, gia tốc và quỹ đạo** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Động học tách “chuyển động thế nào” khỏi “vì sao chuyển động”** sang **Vận tốc: tốc độ biến thiên (rate) of thay đổi (change / 변경) của vị trí**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Động học tách “chuyển động thế nào” khỏi “vì sao chuyển động”
 
-Động học (Kinematics / 운동학) mô tả vị trí, vận tốc và gia tốc mà chưa cần biết lực nào gây ra chuyển động. Sự tách biệt này rất hữu ích: trước khi xây dựng mô hình nhân quả (causal model), ta cần ngôn ngữ chính xác để mô tả hành vi (behavior).
+Động học (Kinematics / 운동학) mô tả vị trí, vận tốc và gia tốc mà chưa cần biết lực nào gây ra chuyển động. Sự tách biệt này rất hữu ích: trước khi xây dựng mô hình nhân quả (causal model), ta cần ngôn ngữ chính xác để mô tả hành vi (behavior / 동작).
 
 Giả sử vị trí của một vật trên trục `x` phụ thuộc thời gian:
 
@@ -12,7 +15,7 @@ x=x(t)
 
 Đây là một hàm (Function / 함수): mỗi thời điểm `t` được ánh xạ tới một vị trí `x`.
 
-## Vận tốc: tốc độ biến thiên (rate) of change của vị trí
+## Vận tốc: tốc độ biến thiên (rate) of thay đổi (change / 변경) của vị trí
 
 Vận tốc trung bình:
 
@@ -47,7 +50,7 @@ speed=|\vec v|
 
 Vận tốc (Velocity / 속도) là vectơ (vector). Trong tiếng Hàn phổ thông đôi khi “속도” được dùng như tốc độ (speed), nhưng trong sách Vật lý Hàn Quốc thường phân biệt `속력` cho vô hướng (scalar) tốc độ và `속도` cho vectơ vận tốc (velocity).
 
-## Gia tốc: tốc độ biến thiên of change của vận tốc
+## Gia tốc: tốc độ biến thiên of thay đổi (change / 변경) của vận tốc
 
 Gia tốc (Acceleration / 가속도):
 
@@ -65,7 +68,7 @@ a(t)=\frac{dv}{dt}=\frac{d^2x}{dt^2}
 
 Một xe có thể gia tốc dù tốc độ không đổi nếu hướng vận tốc đổi. Chuyển động tròn đều là ví dụ: độ lớn (magnitude) của `v` không đổi nhưng vectơ `v` quay liên tục, nên `dv/dt` khác không.
 
-## Tích phân: tái tạo trạng thái từ tốc độ biến thiên of change
+## Tích phân: tái tạo trạng thái từ tốc độ biến thiên of thay đổi (change / 변경)
 
 Nếu biết vận tốc, ta có thể phục hồi độ dịch chuyển (displacement) bằng tích phân:
 
@@ -79,9 +82,9 @@ Nếu biết gia tốc:
 v(t)-v(t_0)=\int_{t_0}^{t}a(\tau)\,d\tau
 ```
 
-Tích phân (Integral / 적분) là phép cộng liên tục của vô số đóng góp cực nhỏ. Trên graph `v-t`, diện tích có dấu dưới đường cong bằng độ dịch chuyển.
+Tích phân (Integral / 적분) là phép cộng liên tục của vô số đóng góp cực nhỏ. Trên đồ thị (graph / 그래프) `v-t`, diện tích có dấu dưới đường cong bằng độ dịch chuyển.
 
-Đây là một liên kết kiến thức (knowledge connection) nền tảng: đạo hàm (derivative) hỏi cục bộ (local) tốc độ biến thiên; tích phân (integral) tích lũy tốc độ biến thiên để ra tổng (total) change. Trong tài chính (finance), lãi suất tức thời tích lũy thành tăng trưởng; trong mạng máy tính (networking), thông lượng dữ liệu (throughput) tích lũy theo thời gian thành lượng dữ liệu (data); trong physics, vận tốc tích lũy thành độ dịch chuyển.
+Đây là một liên kết kiến thức (knowledge connection / 지식 연결) nền tảng: đạo hàm (derivative) hỏi cục bộ (local / 로컬) tốc độ biến thiên; tích phân (integral) tích lũy tốc độ biến thiên để ra tổng (total) thay đổi (change / 변경). Trong tài chính (finance), lãi suất tức thời tích lũy thành tăng trưởng; trong mạng máy tính (networking), thông lượng dữ liệu (throughput) tích lũy theo thời gian thành lượng dữ liệu (data / 데이터); trong physics, vận tốc tích lũy thành độ dịch chuyển.
 
 ## Chuyển động gia tốc không đổi
 
@@ -173,7 +176,7 @@ Tầm xa:
 R=\frac{v_0^2\sin 2\theta}{g}
 ```
 
-Kết quả `45°` tối ưu chỉ đúng trong mô hình (model) mặt phẳng ngang, cùng độ cao đầu-cuối và không có lực cản. Trong thực tế bóng đá, golf, đạn đạo và baseball, lực cản và lực nâng (lift) làm góc tối ưu thay đổi.
+Kết quả `45°` tối ưu chỉ đúng trong mô hình (model / 모델) mặt phẳng ngang, cùng độ cao đầu-cuối và không có lực cản. Trong thực tế bóng đá, golf, đạn đạo và baseball, lực cản và lực nâng (lift) làm góc tối ưu thay đổi.
 
 ## Chuyển động tròn
 
@@ -225,7 +228,7 @@ Thay số:
 
 Nếu tốc độ ban đầu gấp đôi mà phanh (braking) gia tốc giữ nguyên, quãng đường phanh gấp bốn. Đây là lý do tăng tốc xe từ 50 lên 100 km/h nguy hiểm hơn nhiều so với trực giác tuyến tính “chỉ nhanh gấp đôi”.
 
-## rời rạc (Discrete) time và số (numerical) mô phỏng (simulation)
+## rời rạc (Discrete) thời gian (time / 시간) và số (numerical) mô phỏng (simulation)
 
 Máy tính không theo dõi thời gian liên tục vô hạn. Trong game physics hoặc mô phỏng, ta dùng bước `\Delta t`:
 
@@ -239,9 +242,9 @@ x_{n+1}\approx x_n+v_n\Delta t
 
 Đây là Euler tích phân (integration). Nó minh họa một liên hệ (connection) quan trọng giữa calculus liên tục và tính toán số (numerical computing). Nếu `\Delta t` quá lớn, sai số tích lũy và mô phỏng có thể mất ổn định. bộ máy vật lý (Physics engine) tốt dùng bộ tích phân (integrator) phù hợp như semi-implicit Euler, Verlet hoặc Runge-Kutta tùy mục tiêu.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Kinematics là việc xem chuyển động như một chuỗi “trạng thái theo thời gian”. Position là trạng thái hình học; vận tốc là tốc độ trạng thái thay đổi; gia tốc là tốc độ chính vận tốc thay đổi. đạo hàm đi từ trạng thái (state) xuống change-tốc độ biến thiên, tích phân đi ngược từ change-tốc độ biến thiên lên accumulated trạng thái.
+> Kinematics là việc xem chuyển động như một chuỗi “trạng thái theo thời gian”. Position là trạng thái hình học; vận tốc là tốc độ trạng thái thay đổi; gia tốc là tốc độ chính vận tốc thay đổi. đạo hàm đi từ trạng thái (state / 상태) xuống change-tốc độ biến thiên, tích phân đi ngược từ change-tốc độ biến thiên lên accumulated trạng thái.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -253,8 +256,10 @@ Không nhất thiết. Nếu `v<0` và `a>0`, gia tốc ngược hướng vận 
 
 Sai. Vận tốc tức thời bằng không nhưng hấp dẫn vẫn tác dụng, nên `a=-g`.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Vector và hệ quy chiếu](../00_foundations/02_space_time_vectors_frames.md), [Ngôn ngữ Toán](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Newtonian dynamics](01_newton_laws_dynamics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 newton laws dynamics](./01_newton_laws_dynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

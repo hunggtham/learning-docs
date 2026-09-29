@@ -1,6 +1,9 @@
 # Nhật ký, journal và khả năng quan sát hệ thống
 
-Nhật ký (log) không phải toàn bộ sự thật của hệ thống. Nó chỉ là một **kênh quan sát (observation channel)** do kernel, trình quản lý dịch vụ hoặc ứng dụng chủ động tạo ra. Ứng dụng có thể bị treo mà không ghi thêm log; thiết bị lưu trữ có thể lỗi ở tầng kernel trong khi ứng dụng chỉ báo timeout; gói tin mạng có thể bị loại bỏ trước khi yêu cầu tới được ứng dụng. Vì vậy **khả năng quan sát hệ thống (observability)** cần kết hợp nhật ký với số liệu đo (metrics), trạng thái tiến trình, socket, tài nguyên và mốc thời gian.
+> **Mạch đọc:** Đọc **Nhật ký, journal và khả năng quan sát hệ thống** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao nhật ký tồn tại?** sang **Tệp nhật ký truyền thống**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Nhật ký (log) không phải toàn bộ sự thật của hệ thống. Nó chỉ là một **kênh quan sát (observation channel)** do kernel, trình quản lý dịch vụ hoặc ứng dụng chủ động tạo ra. Ứng dụng có thể bị treo mà không ghi thêm log; thiết bị lưu trữ có thể lỗi ở tầng kernel trong khi ứng dụng chỉ báo hết thời gian chờ (timeout / 타임아웃); gói tin mạng có thể bị loại bỏ trước khi yêu cầu tới được ứng dụng. Vì vậy **khả năng quan sát hệ thống (observability)** cần kết hợp nhật ký với số liệu đo (metrics), trạng thái tiến trình, socket, tài nguyên và mốc thời gian.
 
 ## Vì sao nhật ký tồn tại?
 
@@ -27,7 +30,7 @@ tail -n 500 -F app.log
 
 ## Journal của systemd
 
-Trên hệ thống sử dụng systemd, `journald` thu thập nhật ký cùng metadata có cấu trúc từ nhiều nguồn.
+Trên hệ thống sử dụng systemd, `journald` thu thập nhật ký cùng siêu dữ liệu (metadata / 메타데이터) có cấu trúc từ nhiều nguồn.
 
 ```bash
 journalctl -u app
@@ -51,7 +54,7 @@ Lấy 200 bản ghi gần nhất:
 journalctl -u app -n 200 --no-pager
 ```
 
-`-u` lọc theo unit, giúp tránh tìm kiếm toàn bộ journal khi ta đã biết phạm vi dịch vụ cần kiểm tra.
+`-u` lọc theo đơn vị (unit / 단위), giúp tránh tìm kiếm toàn bộ journal khi ta đã biết phạm vi dịch vụ cần kiểm tra.
 
 ## `journalctl -xeu` thực sự làm gì?
 
@@ -61,7 +64,7 @@ Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu
 journalctl -xeu nginx
 ```
 
-`-u` chọn unit, `-e` đưa vị trí xem tới gần cuối journal, còn `-x` thêm phần giải thích cho một số mục có trong catalog. Câu lệnh này hữu ích khi dịch vụ không khởi động được, nhưng phần giải thích đi kèm không thay thế quá trình phân tích nguyên nhân gốc.
+`-u` chọn đơn vị (unit / 단위), `-e` đưa vị trí xem tới gần cuối journal, còn `-x` thêm phần giải thích cho một số mục có trong danh mục (catalog / 카탈로그). Câu lệnh này hữu ích khi dịch vụ không khởi động được, nhưng phần giải thích đi kèm không thay thế quá trình phân tích nguyên nhân gốc.
 
 ## Xoay vòng nhật ký
 
@@ -82,7 +85,7 @@ zgrep -Ein 'ERROR|Exception' app.log.2.gz
 zless app.log.2.gz
 ```
 
-Xoay vòng cần phối hợp với ứng dụng. Nếu tiến trình vẫn giữ file descriptor tới `inode` cũ sau khi tệp bị đổi tên hoặc xóa và không mở lại nhật ký mới, dung lượng có thể không được giải phóng như mong đợi. `lsof +L1` giúp tìm các tệp đã mất tên nhưng vẫn còn được mở.
+Xoay vòng cần phối hợp với ứng dụng. Nếu tiến trình vẫn giữ tệp (file / 파일) descriptor tới `inode` cũ sau khi tệp bị đổi tên hoặc xóa và không mở lại nhật ký mới, dung lượng có thể không được giải phóng như mong đợi. `lsof +L1` giúp tìm các tệp đã mất tên nhưng vẫn còn được mở.
 
 ## Nhật ký có cấu trúc
 
@@ -120,7 +123,7 @@ date -u
 timedatectl
 ```
 
-Đồng bộ thời gian bằng NTP cũng quan trọng với TLS, thời hạn token và việc đối chiếu sự kiện giữa nhiều máy chủ.
+Đồng bộ thời gian bằng NTP cũng quan trọng với TLS, thời hạn đơn vị từ (token / 토큰) và việc đối chiếu sự kiện giữa nhiều máy chủ.
 
 ## Nhật ký, số liệu đo và dấu vết phân tán
 
@@ -130,9 +133,9 @@ Ba khái niệm thường gặp là:
 - **số liệu đo (metrics)** — các đại lượng số theo thời gian như CPU, tốc độ yêu cầu hoặc percentile độ trễ;
 - **dấu vết (traces)** — đường đi của một yêu cầu qua nhiều thành phần và span trong hệ thống phân tán.
 
-Không loại nào thay thế hoàn toàn loại còn lại. CPU tăng đột biến có thể được metric phát hiện nhanh; log giải thích sự kiện trong ứng dụng; trace cho thấy độ trễ tập trung ở dịch vụ nào.
+Không loại nào thay thế hoàn toàn loại còn lại. CPU tăng đột biến có thể được chỉ số (metric / 지표) phát hiện nhanh; log giải thích sự kiện trong ứng dụng; dấu vết (trace / 추적) cho thấy độ trễ tập trung ở dịch vụ nào.
 
-Các công cụ dòng lệnh Linux như `vmstat`, `iostat`, `ss`, `pidstat` cung cấp quan sát cục bộ, còn production thường gửi metrics và traces tới hệ thống tập trung để lưu giữ và phân tích lâu dài.
+Các công cụ dòng lệnh Linux như `vmstat`, `iostat`, `ss`, `pidstat` cung cấp quan sát cục bộ, còn môi trường vận hành (production / 운영 환경) thường gửi metrics và traces tới hệ thống tập trung để lưu giữ và phân tích lâu dài.
 
 ## Nhật ký của kernel
 
@@ -165,29 +168,29 @@ free -h
 df -h
 ```
 
-Với Java dùng CPU cao hoặc bị treo, có thể cần lấy thread dump trước khi restart. Khởi động lại có thể phục hồi dịch vụ nhưng đồng thời làm mất bằng chứng khi đang chạy.
+Với Java dùng CPU cao hoặc bị treo, có thể cần lấy luồng thực thi (thread / 스레드) dump trước khi restart. Khởi động lại có thể phục hồi dịch vụ nhưng đồng thời làm mất bằng chứng khi đang chạy.
 
 Đây là khác biệt giữa **phục hồi dịch vụ (recovery)** và **phân tích nguyên nhân gốc (root-cause analysis)**. Hai mục tiêu có liên quan nhưng không giống nhau.
 
 ## Tỷ lệ tín hiệu trên nhiễu
 
-Nhiều log hơn không tự động tạo observability tốt hơn. DEBUG quá dày có thể làm tăng chi phí lưu trữ, làm tìm kiếm chậm và che khuất sự kiện quan trọng. Thiết kế nhật ký cần mức log có ý nghĩa, lấy mẫu hoặc giới hạn tốc độ khi phù hợp và chính sách lưu giữ rõ ràng.
+Nhiều log hơn không tự động tạo khả năng quan sát (observability / 관측 가능성) tốt hơn. gỡ lỗi (debug / 디버그) quá dày có thể làm tăng chi phí lưu trữ, làm tìm kiếm chậm và che khuất sự kiện quan trọng. Thiết kế nhật ký cần mức log có ý nghĩa, lấy mẫu hoặc giới hạn tốc độ khi phù hợp và chính sách lưu giữ rõ ràng.
 
-Không nên ghi bí mật, access token, mật khẩu hoặc dữ liệu cá nhân không cần thiết vào log. Khả năng quan sát cũng là một phần của thiết kế bảo mật và quyền riêng tư.
+Không nên ghi bí mật, truy cập (access / 접근) đơn vị từ (token / 토큰), mật khẩu hoặc dữ liệu cá nhân không cần thiết vào log. Khả năng quan sát cũng là một phần của thiết kế bảo mật và quyền riêng tư.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Hãy coi một sự cố như sự kiện đã xảy ra trong hệ thống nhiều lớp. Mỗi nguồn quan sát giống một camera nhìn từ một góc khác. Nhật ký ứng dụng không phải camera toàn cảnh. Nhiệm vụ là **đối chiếu các bằng chứng độc lập theo thời gian và theo giả thuyết nhân quả**.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
-**"Không có error log nghĩa là không có lỗi."** Thất bại có thể nằm ở kernel, mạng, phụ thuộc hoặc mã nguồn không ghi nhật ký đúng.
+**"Không có lỗi (error / 오류) log nghĩa là không có lỗi."** Thất bại có thể nằm ở kernel, mạng, phụ thuộc hoặc mã nguồn không ghi nhật ký đúng.
 
 **"Restart xong hết lỗi nghĩa là nguyên nhân là dịch vụ cần restart."** Restart chỉ thay đổi trạng thái; nó chưa chứng minh nguyên nhân.
 
-**"`tail -f` chính là observability."** Nó chỉ là một cách xem log thời gian thực, không có tổng hợp, đối chiếu hoặc ngữ cảnh tài nguyên.
+**"`tail -f` chính là khả năng quan sát (observability / 관측 가능성)."** Nó chỉ là một cách xem log thời gian thực, không có tổng hợp, đối chiếu hoặc ngữ cảnh tài nguyên.
 
-**"Hai log có cùng thời gian nghĩa là có quan hệ nhân quả."** Cần thêm danh tính và ngữ cảnh như request ID, trace ID và kiến trúc luồng xử lý.
+**"Hai log có cùng thời gian nghĩa là có quan hệ nhân quả."** Cần thêm danh tính và ngữ cảnh như yêu cầu (request / 요청) ID, dấu vết (trace / 추적) ID và kiến trúc luồng xử lý.
 
 **"Log càng chi tiết càng tốt."** Nhiễu, chi phí và rủi ro lộ dữ liệu nhạy cảm cũng tăng theo.
 

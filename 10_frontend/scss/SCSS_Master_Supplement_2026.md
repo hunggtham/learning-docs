@@ -1,54 +1,57 @@
 # SCSS Master Supplement — Dart Sass Deep Dive (2026)
 
+> **Mạch đọc:** Đọc **SCSS Master Supplement — Dart Sass Deep Dive (2026)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy ước thuật ngữ Việt–Anh** sang **Master quy tắc (rule / 규칙)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Đọc sau:
 >
-> ```text
+> ```văn bản (text / 텍스트)
 > SCSS_Beginner_to_Senior_2026.md
 > ```
 >
-> File này không lặp syntax cơ bản. Nó bổ sung các phần cần để đi từ **Senior SCSS → Sass library/tooling specialist**:
+> tệp (file / 파일) này không lặp cú pháp (syntax / 문법) cơ bản. Nó bổ sung các phần cần để đi từ **cấp cao (senior / 시니어) SCSS → Sass thư viện (library / 라이브러리)/tooling specialist**:
 >
-> ```text
-> module identity
-> canonical URLs
-> cấu hình (configuration) lifecycle
+> ```văn bản (text / 텍스트)
+> mô-đun (module / 모듈) định danh (identity / 식별자)
+> chuẩn gốc (canonical / 정본) URLs
+> cấu hình (configuration / 구성) lifecycle
 > advanced meta programming
 > bộ chọn (selector) algebra
 > deep các danh sách (lists)/các map khóa–giá trị (maps)
 > recursion
-> Sass giá trị (value) model
+> Sass giá trị (value / 값) mô hình (model / 모델)
 > calculations
-> CSS compatibility
+> CSS tính tương thích (compatibility / 호환성)
 > deprecations
 > migrator
 > JS API
 > custom importers/các hàm (functions)
 > embedded protocol awareness
-> package/library design
+> gói (package / 패키지)/thư viện (library / 라이브러리) thiết kế (design / 설계)
 > testing
-> hiệu năng (performance)
-> release engineering
+> hiệu năng (performance / 성능)
+> bản phát hành (release / 릴리스) engineering
 > ```
 
 ---
 
 ## Quy ước thuật ngữ Việt–Anh
 
-Trong tài liệu này, thuật ngữ Sass/SCSS được viết theo hướng tiếng Việt dễ hiểu nhưng vẫn giữ từ gốc để tra cứu. Ví dụ: **thời điểm biên dịch (compile-time)**, **thời gian chạy (runtime)**, **phạm vi (scope)**, **không gian tên (namespace)**, **đồ thị mô-đun (module graph)**, **nội suy (interpolation)**, **che khuất biến (shadowing)**, **luồng điều khiển (control flow)** và **hợp nhất bộ chọn (selector unification)**. Những tên directive, function, module và cú pháp Sass nằm trong mã vẫn được giữ nguyên.
+Trong tài liệu này, thuật ngữ Sass/SCSS được viết theo hướng tiếng Việt dễ hiểu nhưng vẫn giữ từ gốc để tra cứu. Ví dụ: **thời điểm biên dịch (compile-time)**, **thời gian chạy (runtime / 런타임)**, **phạm vi (scope / 범위)**, **không gian tên (namespace / 네임스페이스)**, **đồ thị mô-đun (module graph)**, **nội suy (interpolation)**, **che khuất biến (shadowing)**, **luồng điều khiển (control flow)** và **hợp nhất bộ chọn (selector unification)**. Những tên directive, hàm (function / 함수), mô-đun (module / 모듈) và cú pháp Sass nằm trong mã vẫn được giữ nguyên.
 
 
-# 0. Mastery Boundary
+# 0. Mastery ranh giới (boundary / 경계)
 
-# 0A. Modern Sass status — audit 2026-09
+# 0A. hiện đại (modern / 현대적) Sass status — kiểm tra (audit / 감사) 2026-09
 
-Canonical notes này lấy **Dart Sass 1.104.1** làm implementation/reference hiện tại. LibSass và Ruby Sass không còn là target cho code mới. Modern Sass đang chủ động tiến gần CSS platform: Sass `@import` và global built-in các hàm (functions) đã đã ngừng khuyến nghị (deprecated) từ 1.80.0; code mới dùng `@use`, `@forward` và built-in modules như `sass:math`, `sass:map`, `sass:color`. Legacy `if()` cũng đang trên lộ trình trạng thái ngừng khuyến nghị (deprecation) để tránh xung đột với CSS `if()` mới.
+Chuẩn gốc (canonical / 정본) notes này lấy **Dart Sass 1.104.1** làm hiện thực (implementation / 구현)/tham chiếu (reference / 참조) hiện tại. LibSass và Ruby Sass không còn là mục tiêu (target / 대상) cho mã (code / 코드) mới. hiện đại (modern / 현대적) Sass đang chủ động tiến gần CSS nền tảng (platform / 플랫폼): Sass `@import` và toàn cục (global / 전역) built-in các hàm (functions) đã đã ngừng khuyến nghị (deprecated) từ 1.80.0; mã (code / 코드) mới dùng `@use`, `@forward` và built-in modules như `sass:math`, `sass:map`, `sass:color`. Legacy `if()` cũng đang trên lộ trình trạng thái ngừng khuyến nghị (deprecation) để tránh xung đột với CSS `if()` mới.
 
-đồ thị mô-đun (module graph) là phần kiến trúc (architecture) cốt lõi. Mỗi `@use` load module một lần theo canonical URL, members được namespaced và private members không rò ra ngoài. `@forward` cho phép package tách implementation thành nhiều file thành phần (partial)/module nhưng xuất một facade ổn định. Khi audit library, hãy phân biệt tool module không emit CSS, style module có tác dụng phụ (side effect) CSS và entry/facade module quyết định bề mặt công khai (public surface)/dependency order.
+đồ thị mô-đun (module graph) là phần kiến trúc (architecture / 아키텍처) cốt lõi. Mỗi `@use` tải (load / 로드) mô-đun (module / 모듈) một lần theo chuẩn gốc (canonical / 정본) URL, members được namespaced và private members không rò ra ngoài. `@forward` cho phép gói (package / 패키지) tách hiện thực (implementation / 구현) thành nhiều tệp (file / 파일) thành phần (partial)/mô-đun (module / 모듈) nhưng xuất một facade ổn định. Khi kiểm tra (audit / 감사) thư viện (library / 라이브러리), hãy phân biệt công cụ (tool / 도구) mô-đun (module / 모듈) không emit CSS, style mô-đun (module / 모듈) có tác dụng phụ (side effect) CSS và entry/facade mô-đun (module / 모듈) quyết định bề mặt công khai (public surface)/phụ thuộc (dependency / 의존성) thứ tự (order / 순서).
 
-Mọi abstraction Sass cuối cùng phải được đánh giá bằng generated CSS. thời điểm biên dịch (compile-time) cleverness không được phép tạo bộ chọn (selector) explosion, duplicate các khai báo (declarations), độ đặc hiệu (specificity) escalation hoặc bundle vượt budget. Sass mastery là biết khi nào thời điểm biên dịch (compile-time) abstraction có giá trị và khi nào native CSS/custom các thuộc tính (properties)/các truy vấn vùng chứa (container queries)/các lớp phân tầng (cascade layers) đã là công cụ phù hợp hơn.
+Mọi lớp trừu tượng (abstraction / 추상화) Sass cuối cùng phải được đánh giá bằng generated CSS. thời điểm biên dịch (compile-time) cleverness không được phép tạo bộ chọn (selector) explosion, duplicate các khai báo (declarations), độ đặc hiệu (specificity) escalation hoặc bundle vượt ngân sách (budget / 예산). Sass mastery là biết khi nào thời điểm biên dịch (compile-time) lớp trừu tượng (abstraction / 추상화) có giá trị và khi nào bản địa (native / 네이티브) CSS/custom các thuộc tính (properties)/các truy vấn vùng chứa (container queries)/các lớp phân tầng (cascade layers) đã là công cụ phù hợp hơn.
 
 
-Để “master SCSS” cần phân biệt 3 layer:
+Để “master SCSS” cần phân biệt 3 tầng (layer / 계층):
 
 ```text
 Sass Language
@@ -56,7 +59,7 @@ Sass Language
 → Generated CSS / Browser
 ```
 
-Và khi tích hợp build:
+Và khi tích hợp bản dựng (build / 빌드):
 
 ```text
 SCSS
@@ -68,20 +71,20 @@ SCSS
 ```
 
 Nhiều bug được gán “SCSS” thực ra nằm ở:
-- load resolution,
+- tải (load / 로드) resolution,
 - CSS cơ chế phân tầng (cascade),
 - bundler,
-- đã ngừng khuyến nghị (deprecated) dependency,
-- bản đồ mã nguồn (source map),
+- đã ngừng khuyến nghị (deprecated) phụ thuộc (dependency / 의존성),
+- bản đồ mã nguồn (source map / 소스 맵),
 - post-processing.
 
 ---
 
-# 1. Dart Sass as Language Reference
+# 1. Dart Sass as ngôn ngữ (language / 언어) tham chiếu (reference / 참조)
 
-Modern Sass development thực tế xoay quanh Dart Sass.
+Hiện đại (modern / 현대적) Sass development thực tế xoay quanh Dart Sass.
 
-Các implementation cũ:
+Các hiện thực (implementation / 구현) cũ:
 ```text
 Ruby Sass
 LibSass / node-sass
@@ -89,29 +92,29 @@ LibSass / node-sass
 
 không hỗ trợ đầy đủ hệ mô-đun (module system) hiện đại.
 
-## Master rule
+## Master quy tắc (rule / 규칙)
 
-Nếu một package vẫn yêu cầu node-sass/LibSass compatibility:
-- treat as legacy constraint,
-- don't let it define new kiến trúc (architecture).
+Nếu một gói (package / 패키지) vẫn yêu cầu node-sass/LibSass tính tương thích (compatibility / 호환성):
+- treat as legacy ràng buộc (constraint / 제약조건),
+- don't let it define new kiến trúc (architecture / 아키텍처).
 
 ---
 
-# 2. CSS Compatibility Is a Core Sass Design Constraint
+# 2. CSS tính tương thích (compatibility / 호환성) Is a cốt lõi (core / 핵심) Sass thiết kế (design / 설계) ràng buộc (constraint / 제약조건)
 
 Sass cố gắng là CSS-compatible superset.
 
-Khi CSS thêm syntax mới:
+Khi CSS thêm cú pháp (syntax / 문법) mới:
 - slash separators,
-- native lồng cú pháp (nesting),
+- bản địa (native / 네이티브) lồng cú pháp (nesting),
 - Color 4,
-- CSS hàm (function) names,
+- CSS hàm (function / 함수) names,
 
-Sass đôi khi phải deprecate old language behavior.
+Sass đôi khi phải deprecate old ngôn ngữ (language / 언어) hành vi (behavior / 동작).
 
 Đây là nguồn của nhiều breaking changes.
 
-## mô hình tư duy (mental model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
@@ -124,14 +127,14 @@ CSS evolves
 
 ---
 
-# 3. Module Identity [DEEP]
+# 3. mô-đun (module / 모듈) định danh (identity / 식별자) [DEEP]
 
-`@use` không đơn thuần paste file.
+`@use` không đơn thuần paste tệp (file / 파일).
 
-trình biên dịch (compiler) resolves URL tới **canonical module identity**.
+Trình biên dịch (compiler / 컴파일러) resolves URL tới **chuẩn gốc (canonical / 정본) mô-đun (module / 모듈) định danh (identity / 식별자)**.
 
-Một module canonicalized giống nhau:
-- load once,
+Một mô-đun (module / 모듈) canonicalized giống nhau:
+- tải (load / 로드) once,
 - execute once,
 - CSS emit once.
 
@@ -139,40 +142,40 @@ Một module canonicalized giống nhau:
 
 ---
 
-# 4. Canonical URLs [DEEP]
+# 4. chuẩn gốc (canonical / 정본) URLs [DEEP]
 
-Importer resolves user URL:
+Importer resolves người dùng (user / 사용자) URL:
 
 ```text
 "tokens"
 ```
 
-thành canonical URL đại diện module duy nhất.
+thành chuẩn gốc (canonical / 정본) URL đại diện mô-đun (module / 모듈) duy nhất.
 
-Nếu cùng physical module được canonicalize thành 2 URLs khác nhau:
-- duplicate module load có thể xảy ra,
-- CSS/config/trạng thái (state) có thể khác expectation.
+Nếu cùng vật lý (physical / 물리적) mô-đun (module / 모듈) được canonicalize thành 2 URLs khác nhau:
+- duplicate mô-đun (module / 모듈) tải (load / 로드) có thể xảy ra,
+- CSS/cấu hình (config / 설정)/trạng thái (state / 상태) có thể khác expectation.
 
-## Library/tooling concern
+## Thư viện (library / 라이브러리)/tooling concern
 
 Custom importers phải implement canonicalization đúng.
 
 ---
 
-# 5. Module Execution Model [DEEP]
+# 5. mô-đun (module / 모듈) mô hình thực thi (execution model / 실행 모델) [DEEP]
 
-Một Sass module:
-1. dependencies load,
+Một Sass mô-đun (module / 모듈):
+1. dependencies tải (load / 로드),
 2. top-level statements execute,
 3. members defined,
 4. CSS generated,
-5. module cached.
+5. mô-đun (module / 모듈) cached.
 
-Import graph gần giống programming-language modules hơn text includes.
+Import đồ thị (graph / 그래프) gần giống programming-language modules hơn văn bản (text / 텍스트) includes.
 
 ---
 
-# 6. cấu hình (configuration) Timing [MUST]
+# 6. cấu hình (configuration / 구성) Timing [MUST]
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
@@ -182,24 +185,24 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 );
 ```
 
-cấu hình (configuration) áp khi module **first loaded**.
+Cấu hình (configuration / 구성) áp khi mô-đun (module / 모듈) **first loaded**.
 
-Nếu module đã load earlier:
+Nếu mô-đun (module / 모듈) đã tải (load / 로드) earlier:
 
 ```scss
 @use "theme";
 @use "theme" with (...);
 ```
 
-cấu hình (configuration) conflict/error.
+Cấu hình (configuration / 구성) xung đột (conflict / 충돌)/lỗi (error / 오류).
 
-## mẫu thiết kế (design pattern)
+## Mẫu thiết kế (design pattern / 디자인 패턴)
 
-Centralize cấu hình (configuration) in one entrypoint.
+Centralize cấu hình (configuration / 구성) in one điểm vào (entrypoint / 진입점).
 
 ---
 
-# 7. cấu hình (configuration) Ownership [ARCH]
+# 7. cấu hình (configuration / 구성) quyền sở hữu (ownership / 소유권) [ARCH]
 
 Bad:
 
@@ -218,7 +221,7 @@ application entrypoint
 
 ---
 
-# 8. Forward-before-use Pattern [ARCH]
+# 8. Forward-before-use mẫu (pattern / 패턴) [ARCH]
 
 Facade:
 
@@ -228,30 +231,30 @@ Facade:
 ```
 
 Reason:
-- downstream config can reach forward first,
-- current module can then use same configured instance.
+- downstream cấu hình (config / 설정) can reach forward first,
+- hiện tại (current / 현재) mô-đun (module / 모듈) can then use same configured instance.
 
 ---
 
-# 9. Private cấu hình (configuration) trạng thái ngừng khuyến nghị (deprecation) [2026]
+# 9. Private cấu hình (configuration / 구성) trạng thái ngừng khuyến nghị (deprecation) [2026]
 
-Modern Dart Sass deprecates configuring private các biến (variables) via `with`.
+Hiện đại (modern / 현대적) Dart Sass deprecates configuring private các biến (variables) via `with`.
 
-Private members are implementation details.
+Private members are hiện thực (implementation / 구현) details.
 
-## Rule
+## Quy tắc (rule / 규칙)
 
-If consumers need to configure giá trị (value):
-- make it public intentionally,
+If consumers need to configure giá trị (value / 값):
+- make it công khai (public / 공개) intentionally,
 - document it.
 
-Do not use private naming and still expose config.
+Do not use private naming and still expose cấu hình (config / 설정).
 
 ---
 
-# 10. giao diện công khai (public API) Surface Audit [ARCH]
+# 10. giao diện công khai (public API) Surface kiểm tra (audit / 감사) [ARCH]
 
-For each module danh sách (list):
+For each mô-đun (module / 모듈) danh sách (list / 목록):
 
 ```text
 public variables
@@ -262,13 +265,13 @@ configuration variables
 CSS side effects
 ```
 
-Treat emitted CSS itself as part of public behavior.
+Treat emitted CSS itself as part of công khai (public / 공개) hành vi (behavior / 동작).
 
 ---
 
-# 11. CSS Side-effect Modules vs Tool Modules [ARCH]
+# 11. CSS Side-effect Modules vs công cụ (tool / 도구) Modules [ARCH]
 
-## Tool module
+## Công cụ (tool / 도구) mô-đun (module / 모듈)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
@@ -279,7 +282,7 @@ variables
 no CSS emitted on load
 ```
 
-## CSS side-effect module
+## CSS side-effect mô-đun (module / 모듈)
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
@@ -291,7 +294,7 @@ emits CSS when used.
 
 Separate them where practical.
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```text
 tools/
@@ -302,7 +305,7 @@ Prevents accidental CSS emission from tiện ích (utility) imports.
 
 ---
 
-# 12. Side-effect-free Token Module [ARCH]
+# 12. Side-effect-free đơn vị từ (token / 토큰) mô-đun (module / 모듈) [ARCH]
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
@@ -314,15 +317,15 @@ $colors: (...);
 @function ... {}
 ```
 
-No bộ chọn (selector) output.
+No bộ chọn (selector) đầu ra (output / 출력).
 
-Any consumer can `@use` safely.
+Any bên tiêu thụ (consumer / 소비자) can `@use` safely.
 
 ---
 
-# 13. CSS Emission Entry Point [ARCH]
+# 13. CSS Emission Entry điểm (point / 지점) [ARCH]
 
-Library may expose:
+Thư viện (library / 라이브러리) may expose:
 
 ```text
 library
@@ -332,22 +335,22 @@ library/tools
 
 Concept:
 - tools for Sass consumers,
-- CSS entrypoint for full styles.
+- CSS điểm vào (entrypoint / 진입점) for full styles.
 
-Avoid surprising consumer:
-> I used one hàm (function) and 200KB CSS appeared.
+Avoid surprising bên tiêu thụ (consumer / 소비자):
+> I used one hàm (function / 함수) and 200KB CSS appeared.
 
 ---
 
 # 14. `meta.load-css()` Deep Use [ADV]
 
-`meta.load-css()` loads CSS from module in dynamic context.
+`meta.load-css()` loads CSS from mô-đun (module / 모듈) in động (dynamic / 동적) ngữ cảnh (context / 맥락).
 
 Unlike `@use`:
 - useful inside các khối trộn tái sử dụng (mixins),
-- designed for CSS loading, not member access.
+- designed for CSS loading, not member truy cập (access / 접근).
 
-Pattern:
+Mẫu (pattern / 패턴):
 ```text
 Configuration/condition
 → meta.load-css()
@@ -360,7 +363,7 @@ Use sparingly.
 
 # 15. `meta.module-variables()` [ADV]
 
-Reflection over loaded module public members.
+Reflection over loaded mô-đun (module / 모듈) công khai (public / 공개) members.
 
 Concept:
 
@@ -375,21 +378,21 @@ $vars:
 Returns map khóa–giá trị (map) of các biến (variables).
 
 Use cases:
-- token export tooling,
+- đơn vị từ (token / 토큰) export tooling,
 - documentation generation,
-- validation.
+- kiểm tra hợp lệ (validation / 검증).
 
 ---
 
 # 16. `meta.module-functions()` [ADV]
 
-Get các hàm (functions) exposed by module.
+Get các hàm (functions) exposed by mô-đun (module / 모듈).
 
-Can build generic plugin/dispatch systems.
+Can bản dựng (build / 빌드) generic plugin/dispatch các hệ thống (systems / 시스템들).
 
 ## Warning
 
-Reflection increases abstraction cost.
+Reflection increases lớp trừu tượng (abstraction / 추상화) chi phí (cost / 비용).
 
 Normal apps usually do not need.
 
@@ -397,13 +400,13 @@ Normal apps usually do not need.
 
 # 17. `meta.module-mixins()` [ADV]
 
-Modern Dart Sass can expose khối trộn tái sử dụng (mixin) references from module.
+Hiện đại (modern / 현대적) Dart Sass can expose khối trộn tái sử dụng (mixin) references from mô-đun (module / 모듈).
 
 Use:
 - framework-level composition,
 - introspection tooling.
 
-Don't dynamically call everything just because possible.
+Don't dynamically lời gọi (call / 호출) everything just because possible.
 
 ---
 
@@ -423,15 +426,15 @@ $result:
   meta.call($fn, ...);
 ```
 
-Pattern:
-- strategy hàm (function),
-- mapping pipeline.
+Mẫu (pattern / 패턴):
+- chiến lược (strategy / 전략) hàm (function / 함수),
+- ánh xạ (mapping / 매핑) chuỗi xử lý (pipeline / 파이프라인).
 
 ---
 
 # 19. First-class các khối trộn tái sử dụng (mixins) [ADV]
 
-Modern Sass supports khối trộn tái sử dụng (mixin) references via meta APIs.
+Hiện đại (modern / 현대적) Sass supports khối trộn tái sử dụng (mixin) references via meta APIs.
 
 Concept:
 ```text
@@ -439,11 +442,11 @@ retrieve mixin
 → meta.apply
 ```
 
-Useful advanced library technique.
+Useful advanced thư viện (library / 라이브러리) technique.
 
 ---
 
-# 20. Strategy Pattern in Sass [ARCH]
+# 20. chiến lược (strategy / 전략) mẫu (pattern / 패턴) in Sass [ARCH]
 
 Different transform các hàm (functions):
 
@@ -453,17 +456,17 @@ modular
 fluid
 ```
 
-Select hàm (function) reference from config.
+Select hàm (function / 함수) tham chiếu (reference / 참조) from cấu hình (config / 설정).
 
 Then apply generic generator.
 
-Equivalent to Strategy Pattern at compile time.
+Equivalent to chiến lược (strategy / 전략) mẫu (pattern / 패턴) at compile thời gian (time / 시간).
 
 ---
 
-# 21. Higher-order Sass Pattern [ADV]
+# 21. Higher-order Sass mẫu (pattern / 패턴) [ADV]
 
-hàm (function) receiving/using hàm (function) reference:
+Hàm (function / 함수) receiving/using hàm (function / 함수) tham chiếu (reference / 참조):
 
 ```text
 data
@@ -472,42 +475,42 @@ data
 ```
 
 Useful:
-- token processors,
-- scale generation.
+- đơn vị từ (token / 토큰) processors,
+- quy mô (scale / 규모) generation.
 
 Keep API narrow.
 
 ---
 
-# 22. Argument các danh sách (lists) as Data [DEEP]
+# 22. Argument các danh sách (lists) as dữ liệu (data / 데이터) [DEEP]
 
-`$args...` is special argument-list giá trị (value).
+`$args...` is special argument-list giá trị (value / 값).
 
 It can retain:
 - positional arguments,
-- keyword arguments.
+- từ khóa (keyword / 키워드) arguments.
 
-`meta.keywords($args)` returns keyword map khóa–giá trị (map).
+`meta.keywords($args)` returns từ khóa (keyword / 키워드) map khóa–giá trị (map).
 
-This is more than ordinary danh sách (list) ngữ nghĩa (semantics).
+This is more than ordinary danh sách (list / 목록) ngữ nghĩa (semantics / 의미론).
 
 ---
 
 # 23. Rest Argument Placement Deprecations [2026]
 
-Modern Sass tightened rules around misplaced rest arguments.
+Hiện đại (modern / 현대적) Sass tightened rules around misplaced rest arguments.
 
-Rule:
-- arbitrary/rest arguments belong where signature/call syntax expects,
+Quy tắc (rule / 규칙):
+- arbitrary/rest arguments belong where signature/lời gọi (call / 호출) cú pháp (syntax / 문법) expects,
 - don't rely on permissive historical parsing.
 
 Treat trạng thái ngừng khuyến nghị (deprecation) warnings as errors-to-fix.
 
 ---
 
-# 24. Keyword Argument Compatibility [ARCH]
+# 24. từ khóa (keyword / 키워드) Argument tính tương thích (compatibility / 호환성) [ARCH]
 
-Public hàm (function):
+Công khai (public / 공개) hàm (function / 함수):
 
 ```scss
 @function token(
@@ -516,7 +519,7 @@ Public hàm (function):
 ) {}
 ```
 
-Consumers may call:
+Consumers may lời gọi (call / 호출):
 
 ```scss
 token(
@@ -528,18 +531,18 @@ token(
 Rename `$fallback`:
 → potentially breaking API.
 
-Library chuyển đổi (migration):
-- temporarily accept old keyword where possible,
+Thư viện (library / 라이브러리) chuyển đổi (migration):
+- temporarily accept old từ khóa (keyword / 키워드) where possible,
 - issue warning,
-- document major release.
+- document major bản phát hành (release / 릴리스).
 
 ---
 
-# 25. Sass danh sách (list) Model [DEEP]
+# 25. Sass danh sách (list / 목록) mô hình (model / 모델) [DEEP]
 
-A danh sách (list) carries:
+A danh sách (list / 목록) carries:
 - elements,
-- separator: space/comma/slash,
+- separator: không gian (space / 공간)/comma/slash,
 - bracketed flag.
 
 Examples:
@@ -557,17 +560,17 @@ These are not always interchangeable.
 
 # 26. Single các giá trị (values) Are List-like [DEEP]
 
-Sass danh sách (list) các hàm (functions) may treat:
+Sass danh sách (list / 목록) các hàm (functions) may treat:
 
 ```scss
 10px
 ```
 
-as a one-element danh sách (list).
+as a one-element danh sách (list / 목록).
 
-This can surprise validation logic.
+This can surprise kiểm tra hợp lệ (validation / 검증) lô-gic (logic / 논리).
 
-Don't detect “is danh sách (list)” merely with naive assumptions.
+Don't detect “is danh sách (list / 목록)” merely with naive các giả định (assumptions / 가정들).
 
 ---
 
@@ -579,19 +582,19 @@ map khóa–giá trị (map):
 (a: 1, b: 2)
 ```
 
-can behave as danh sách (list) of two-element pairs in danh sách (list) các hàm (functions).
+can behave as danh sách (list / 목록) of two-element pairs in danh sách (list / 목록) các hàm (functions).
 
-Powerful but dangerous for generic code.
+Powerful but dangerous for generic mã (code / 코드).
 
-Prefer map khóa–giá trị (map) APIs when ngữ nghĩa (semantics) are map khóa–giá trị (map).
+Prefer map khóa–giá trị (map) APIs when ngữ nghĩa (semantics / 의미론) are map khóa–giá trị (map).
 
 ---
 
-# 28. Empty danh sách (list) / Empty map khóa–giá trị (map) Ambiguity [DEEP]
+# 28. Empty danh sách (list / 목록) / Empty map khóa–giá trị (map) Ambiguity [DEEP]
 
-Historically `()` can represent empty danh sách (list)/map khóa–giá trị (map) ngữ nghĩa (semantics) depending context.
+Historically `()` can represent empty danh sách (list / 목록)/map khóa–giá trị (map) ngữ nghĩa (semantics / 의미론) depending ngữ cảnh (context / 맥락).
 
-Reflection/type behavior must be understood when building generic các hàm (functions).
+Reflection/kiểu (type / 타입) hành vi (behavior / 동작) must be understood when building generic các hàm (functions).
 
 Avoid API relying on ambiguous emptiness.
 
@@ -599,17 +602,17 @@ Avoid API relying on ambiguous emptiness.
 
 # 29. Slash-separated các danh sách (lists) [DEEP]
 
-Modern Sass treats `/` as CSS-friendly separator direction.
+Hiện đại (modern / 현대적) Sass treats `/` as CSS-friendly separator direction.
 
-Create intentionally with appropriate danh sách (list) APIs where needed.
+Create intentionally with appropriate danh sách (list / 목록) APIs where needed.
 
 Do not use `/` arithmetic.
 
 ---
 
-# 30. Immutability mô hình tư duy (mental model) [ADV]
+# 30. Immutability mô hình tư duy (mental model / 사고 모델) [ADV]
 
-Sass danh sách (list)/map khóa–giá trị (map) các hàm (functions) generally return modified copies rather than mutate in place.
+Sass danh sách (list / 목록)/map khóa–giá trị (map) các hàm (functions) generally return modified copies rather than mutate in place.
 
 ```scss
 $new:
@@ -620,28 +623,28 @@ $new:
   );
 ```
 
-Think functional data transformations.
+Think functional dữ liệu (data / 데이터) transformations.
 
 ---
 
 # 31. Deep map khóa–giá trị (map) Operations [ADV]
 
-Modern `sass:map` supports nested operations:
+Hiện đại (modern / 현대적) `sass:map` supports nested operations:
 - nested `get`,
 - `set`,
 - deep merge,
 - deep remove.
 
-Good for hierarchical token systems.
+Good for hierarchical đơn vị từ (token / 토큰) các hệ thống (systems / 시스템들).
 
-## Rule
+## Quy tắc (rule / 규칙)
 
-If nested depth > 3–4 and every call uses long key paths:
-- reconsider token data model.
+If nested độ sâu (depth / 깊이) > 3–4 and every lời gọi (call / 호출) uses long key paths:
+- reconsider đơn vị từ (token / 토큰) mô hình dữ liệu (data model / 데이터 모델).
 
 ---
 
-# 32. Deep Merge ngữ nghĩa (semantics) [ADV]
+# 32. Deep Merge ngữ nghĩa (semantics / 의미론) [ADV]
 
 Need define:
 - does nested map khóa–giá trị (map) recursively merge?
@@ -650,7 +653,7 @@ Need define:
 
 Do not use deep merge blindly for themes.
 
-Test resulting map khóa–giá trị (map).
+Kiểm thử (test / 테스트) resulting map khóa–giá trị (map).
 
 ---
 
@@ -660,7 +663,7 @@ Sass allows recursive các hàm (functions)/các khối trộn tái sử dụng 
 
 Use:
 - flatten nested tokens,
-- tree processing.
+- cây (tree / 트리) processing.
 
 Example conceptual:
 
@@ -675,18 +678,18 @@ Example conceptual:
 # 34. Recursion Risks [ADV]
 
 Risks:
-- hard gỡ lỗi (debug),
-- trình biên dịch (compiler) work,
+- hard gỡ lỗi (debug / 디버그),
+- trình biên dịch (compiler / 컴파일러) công việc (work / 작업),
 - accidental infinite recursion,
-- unclear output.
+- unclear đầu ra (output / 출력).
 
 Prefer iterative `@each` for shallow known structures.
 
 ---
 
-# 35. Recursive Token Flattener Pattern [ARCH]
+# 35. Recursive đơn vị từ (token / 토큰) Flattener mẫu (pattern / 패턴) [ARCH]
 
-Input:
+Đầu vào (input / 입력):
 
 ```scss
 (
@@ -698,7 +701,7 @@ Input:
 )
 ```
 
-Output conceptual:
+Đầu ra (output / 출력) conceptual:
 
 ```text
 color-text-default: #111
@@ -706,19 +709,19 @@ color-text-default: #111
 
 Useful:
 - CSS biến (variable) export,
-- JSON-like token source.
+- JSON-like đơn vị từ (token / 토큰) nguồn (source / 소스).
 
-But if token thiết kế (design token) system already has external tooling, don't duplicate it in Sass.
+But if đơn vị từ (token / 토큰) thiết kế (design token) hệ thống (system / 시스템) already has bên ngoài (external / 외부) tooling, don't duplicate it in Sass.
 
 ---
 
-# 36. Sass giá trị (value) Equality [DEEP]
+# 36. Sass giá trị (value / 값) Equality [DEEP]
 
 `==` compares Sass các giá trị (values) semantically according to Sass rules.
 
 Units/colors can create interesting equivalences/conversions.
 
-Do not assume string representation equality.
+Do not assume string biểu diễn (representation / 표현) equality.
 
 ---
 
@@ -735,9 +738,9 @@ px * px
 px / s
 ```
 
-Not all compound units valid CSS output.
+Not all compound units valid CSS đầu ra (output / 출력).
 
-các hàm (functions) should validate output expectations.
+các hàm (functions) should validate đầu ra (output / 출력) expectations.
 
 ---
 
@@ -752,7 +755,7 @@ Example:
 }
 ```
 
-Good robust library design.
+Good robust thư viện (library / 라이브러리) thiết kế (design / 설계).
 
 ---
 
@@ -760,12 +763,12 @@ Good robust library design.
 
 CSS often allows unitless `0`.
 
-But Sass unit algebra:
+But Sass đơn vị (unit / 단위) algebra:
 ```text
 0
 0px
 ```
-can differ in hàm (function) compatibility/type logic.
+can differ in hàm (function / 함수) tính tương thích (compatibility / 호환성)/kiểu (type / 타입) lô-gic (logic / 논리).
 
 Don't strip units blindly.
 
@@ -773,16 +776,16 @@ Don't strip units blindly.
 
 # 40. CSS Calculations as Sass các giá trị (values) [DEEP]
 
-Modern Sass represents calculation expressions such as:
+Hiện đại (modern / 현대적) Sass represents calculation expressions such as:
 - `calc`,
 - `min`,
 - `max`,
 - `clamp`,
 and may simplify compatible parts.
 
-Do not assume every hàm (function) call returns plain number.
+Do not assume every hàm (function / 함수) lời gọi (call / 호출) returns plain number.
 
-Generic library code may need `meta.type-of()` awareness.
+Generic thư viện (library / 라이브러리) mã (code / 코드) may need `meta.type-of()` awareness.
 
 ---
 
@@ -803,46 +806,46 @@ $gutter: 2rem;
 }
 ```
 
-Modern Sass often supports interpolation-free calculation syntax too; prefer current clean syntax if trình biên dịch (compiler) handles it.
+Hiện đại (modern / 현대적) Sass often supports interpolation-free calculation cú pháp (syntax / 문법) too; prefer hiện tại (current / 현재) clean cú pháp (syntax / 문법) if trình biên dịch (compiler / 컴파일러) handles it.
 
 ---
 
-# 42. CSS hàm (function) Name Collisions [DEEP]
+# 42. CSS hàm (function / 함수) Name Collisions [DEEP]
 
 CSS keeps adding các hàm (functions).
 
-Sass historically had global các hàm (functions) with same names.
+Sass historically had toàn cục (global / 전역) các hàm (functions) with same names.
 
 This is one reason:
-- module các không gian tên (namespaces),
-- global built-in trạng thái ngừng khuyến nghị (deprecation),
-- plain CSS hàm (function) handling evolve.
+- mô-đun (module / 모듈) các không gian tên (namespaces),
+- toàn cục (global / 전역) built-in trạng thái ngừng khuyến nghị (deprecation),
+- plain CSS hàm (function / 함수) handling evolve.
 
-Master rule:
-> namespaced Sass hàm (function) when you mean Sass computation.
+Master quy tắc (rule / 규칙):
+> namespaced Sass hàm (function / 함수) when you mean Sass computation.
 
 ---
 
-# 43. Legacy `if()` hàm (function) trạng thái ngừng khuyến nghị (deprecation) [2026]
+# 43. Legacy `if()` hàm (function / 함수) trạng thái ngừng khuyến nghị (deprecation) [2026]
 
-Sass has historically had legacy `if()` hàm (function) syntax.
+Sass has historically had legacy `if()` hàm (function / 함수) cú pháp (syntax / 문법).
 
-Modern CSS is developing native conditional/giá trị (value) các hàm (functions), creating compatibility pressure.
+Hiện đại (modern / 현대적) CSS is developing bản địa (native / 네이티브) conditional/giá trị (value / 값) các hàm (functions), creating tính tương thích (compatibility / 호환성) pressure.
 
-Recent Sass deprecates legacy `if()` form toward newer syntax/ngữ nghĩa (semantics).
+Recent Sass deprecates legacy `if()` form toward newer cú pháp (syntax / 문법)/ngữ nghĩa (semantics / 의미론).
 
-Rule:
-- follow current Dart Sass chuyển đổi (migration) guidance,
-- don't build new library API around đã ngừng khuyến nghị (deprecated) legacy form.
+Quy tắc (rule / 규칙):
+- follow hiện tại (current / 현재) Dart Sass chuyển đổi (migration) guidance,
+- don't bản dựng (build / 빌드) new thư viện (library / 라이브러리) API around đã ngừng khuyến nghị (deprecated) legacy form.
 
 ---
 
 # 44. các hàm (functions)/các khối trộn tái sử dụng (mixins) Beginning `--` [2026]
 
-Sass đã ngừng khuyến nghị (deprecated) user Sass hàm (function)/khối trộn tái sử dụng (mixin) names beginning with `--`.
+Sass đã ngừng khuyến nghị (deprecated) người dùng (user / 사용자) Sass hàm (function / 함수)/khối trộn tái sử dụng (mixin) names beginning with `--`.
 
 Reason:
-- reserve compatibility space for possible native CSS các hàm (functions)/các khối trộn tái sử dụng (mixins) style syntax.
+- reserve tính tương thích (compatibility / 호환성) không gian (space / 공간) for possible bản địa (native / 네이티브) CSS các hàm (functions)/các khối trộn tái sử dụng (mixins) style cú pháp (syntax / 문법).
 
 Do not define:
 
@@ -855,11 +858,11 @@ Do not define:
 
 # 45. Adjacent Compound bộ chọn (selector) Changes [2026]
 
-Recent/coming Sass changes tighten các bộ chọn (selectors) with adjacent compounds to match CSS parsing/bộ chọn (selector) compatibility.
+Recent/coming Sass changes tighten các bộ chọn (selectors) with adjacent compounds to match CSS parsing/bộ chọn (selector) tính tương thích (compatibility / 호환성).
 
-If code relies on exotic generated bộ chọn (selector) concatenation:
-- run deprecation-clean build,
-- inspect current breaking changes docs.
+If mã (code / 코드) relies on exotic generated bộ chọn (selector) concatenation:
+- run deprecation-clean bản dựng (build / 빌드),
+- inspect hiện tại (current / 현재) breaking changes docs.
 
 ---
 
@@ -889,7 +892,7 @@ Concept:
 .foo + .bar
 ```
 
-may unify depending structure.
+may unify depending cấu trúc (structure / 구조).
 
 Useful for advanced khối trộn tái sử dụng (mixin) generation.
 
@@ -900,66 +903,66 @@ Useful for advanced khối trộn tái sử dụng (mixin) generation.
 Checks if all elements matched by bộ chọn (selector) B are also matched by A.
 
 Useful:
-- framework validation,
-- bộ chọn (selector) relationship reasoning.
+- khung phần mềm (framework / 프레임워크) kiểm tra hợp lệ (validation / 검증),
+- bộ chọn (selector) relationship lập luận (reasoning / 추론).
 
 ---
 
 # 49. Avoid String-built các bộ chọn (selectors) [MASTER]
 
-Bad advanced code:
+Bad advanced mã (code / 코드):
 ```scss
 $selector:
   ".foo" + " > " + ".bar";
 ```
 
 Better:
-- nội suy (interpolation) for simple known case,
+- nội suy (interpolation) for simple known trường hợp (case / 사례),
 - `sass:selector` for structural manipulation.
 
-Strings lose bộ chọn (selector) ngữ nghĩa (semantics).
+Strings lose bộ chọn (selector) ngữ nghĩa (semantics / 의미론).
 
 ---
 
-# 50. `@extend` Algorithm Awareness [DEEP]
+# 50. `@extend` thuật toán (algorithm / 알고리즘) Awareness [DEEP]
 
-Extend performs bộ chọn (selector) transformation across stylesheet/module extension phạm vi (scope).
+Extend performs bộ chọn (selector) transformation across biểu định kiểu (stylesheet / 스타일시트)/mô-đun (module / 모듈) extension phạm vi (scope / 범위).
 
 It may:
 - unify compound các bộ chọn (selectors),
 - generate permutations,
 - trim redundant các bộ chọn (selectors).
 
-This complexity explains output surprises.
+This độ phức tạp (complexity / 복잡도) explains đầu ra (output / 출력) surprises.
 
 ---
 
-# 51. Extend phạm vi (scope) under hệ mô-đun (module system) [ADV]
+# 51. Extend phạm vi (scope / 범위) under hệ mô-đun (module system) [ADV]
 
-hệ mô-đun (module system) makes extension behavior more controlled than global legacy imports.
+hệ mô-đun (module system) makes extension hành vi (behavior / 동작) more controlled than toàn cục (global / 전역) legacy imports.
 
 Still:
-- extension crosses certain module relationships,
-- understand dependency direction.
+- extension crosses certain mô-đun (module / 모듈) relationships,
+- understand phụ thuộc (dependency / 의존성) direction.
 
-Avoid designing public library where consumers depend heavily on hidden extends.
+Avoid designing công khai (public / 공개) thư viện (library / 라이브러리) where consumers depend heavily on hidden extends.
 
 ---
 
 # 52. Optional Extend [ADV]
 
-`@extend ... !optional` avoids error if target not found.
+`@extend ... !optional` avoids lỗi (error / 오류) if mục tiêu (target / 대상) not found.
 
 Use:
-- framework extension hooks where target genuinely optional.
+- khung phần mềm (framework / 프레임워크) extension hooks where mục tiêu (target / 대상) genuinely optional.
 
 Don't use to hide typo silently.
 
 ---
 
-# 53. `@at-root` Query Syntax [DEEP]
+# 53. `@at-root` truy vấn (query / 쿼리) cú pháp (syntax / 문법) [DEEP]
 
-Advanced `@at-root` can include/exclude rule types.
+Advanced `@at-root` can include/exclude quy tắc (rule / 규칙) types.
 
 Concept:
 
@@ -970,9 +973,9 @@ Concept:
 }
 ```
 
-or with rule categories depending syntax.
+or with quy tắc (rule / 규칙) categories depending cú pháp (syntax / 문법).
 
-Useful library metaprogramming.
+Useful thư viện (library / 라이브러리) metaprogramming.
 
 Rare app-level need.
 
@@ -980,9 +983,9 @@ Rare app-level need.
 
 # 54. Bubbling At-rules [DEEP]
 
-Sass historically “bubbles” nested at-rules such as media/supports outward while preserving bộ chọn (selector) context.
+Sass historically “bubbles” nested at-rules such as media/supports outward while preserving bộ chọn (selector) ngữ cảnh (context / 맥락).
 
-Example source:
+Example nguồn (source / 소스):
 
 ```scss
 .card {
@@ -992,26 +995,26 @@ Example source:
 }
 ```
 
-trình biên dịch (compiler) emits media wrapping `.card`.
+Trình biên dịch (compiler / 컴파일러) emits media wrapping `.card`.
 
-Understand this when output order matters.
+Understand this when đầu ra (output / 출력) thứ tự (order / 순서) matters.
 
 ---
 
-# 55. CSS Native lồng cú pháp (nesting) Compatibility [MASTER]
+# 55. CSS bản địa (native / 네이티브) lồng cú pháp (nesting) tính tương thích (compatibility / 호환성) [MASTER]
 
-SCSS lồng cú pháp (nesting) and native CSS lồng cú pháp (nesting) overlap but are not identical languages historically.
+SCSS lồng cú pháp (nesting) and bản địa (native / 네이티브) CSS lồng cú pháp (nesting) overlap but are not identical languages historically.
 
-Modern Sass continually aligns CSS compatibility.
+Hiện đại (modern / 현대적) Sass continually aligns CSS tính tương thích (compatibility / 호환성).
 
-If publishing plain CSS source:
-- don't assume SCSS lồng cú pháp (nesting) syntax always equals browser lồng cú pháp (nesting) ngữ nghĩa (semantics).
+If publishing plain CSS nguồn (source / 소스):
+- don't assume SCSS lồng cú pháp (nesting) cú pháp (syntax / 문법) always equals trình duyệt (browser / 브라우저) lồng cú pháp (nesting) ngữ nghĩa (semantics / 의미론).
 
 Compile SCSS.
 
 ---
 
-# 56. nội suy (interpolation) Changes ngữ nghĩa (semantics) [DEEP]
+# 56. nội suy (interpolation) Changes ngữ nghĩa (semantics / 의미론) [DEEP]
 
 Inside some Sass contexts, nội suy (interpolation) can turn typed các giá trị (values) into unquoted strings.
 
@@ -1022,17 +1025,17 @@ Example:
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 ```
 
-may lose numeric ngữ nghĩa (semantics) for subsequent Sass operations.
+may lose numeric ngữ nghĩa (semantics / 의미론) for subsequent Sass operations.
 
-Rule:
-- interpolate at output boundary,
+Quy tắc (rule / 규칙):
+- interpolate at đầu ra (output / 출력) ranh giới (boundary / 경계),
 - keep typed Sass các giá trị (values) internally.
 
 ---
 
-# 57. Stringification Boundary Pattern [ARCH]
+# 57. Stringification ranh giới (boundary / 경계) mẫu (pattern / 패턴) [ARCH]
 
-Internal:
+Nội bộ (internal / 내부):
 ```text
 typed number/color/map
 ```
@@ -1047,15 +1050,15 @@ Equivalent:
 
 ---
 
-# 58. Modern Color 4 Model [MUST]
+# 58. hiện đại (modern / 현대적) Color 4 mô hình (model / 모델) [MUST]
 
 Colors now have:
-- color space,
+- color không gian (space / 공간),
 - channels,
 - potentially missing channels,
 - gamut differences.
 
-Old assumption:
+Old giả định (assumption / 가정):
 ```text
 color = RGB-like tuple
 ```
@@ -1065,7 +1068,7 @@ is insufficient.
 
 # 59. `color.channel()` [ADV]
 
-Use explicit space where ambiguity exists.
+Use tường minh (explicit / 명시적) không gian (space / 공간) where ambiguity exists.
 
 Concept:
 
@@ -1083,13 +1086,13 @@ Different from display-p3 red channel.
 
 # 60. `color.to-space()` [ADV]
 
-Convert representation to target color space where supported.
+Convert biểu diễn (representation / 표현) to mục tiêu (target / 대상) color không gian (space / 공간) where supported.
 
 Use:
-- library transforms,
-- explicit palette calculations.
+- thư viện (library / 라이브러리) transforms,
+- tường minh (explicit / 명시적) palette calculations.
 
-Conversion may alter gamut representation.
+Conversion may alter gamut biểu diễn (representation / 표현).
 
 ---
 
@@ -1099,37 +1102,37 @@ Conversion may alter gamut representation.
 
 Adds/subtracts channel amount.
 
-## Scale
+## Quy mô (scale / 규모)
 
 Moves channel proportionally toward min/max.
 
-For design systems, `scale` often behaves more consistently across starting các giá trị (values).
+For thiết kế (design / 설계) các hệ thống (systems / 시스템들), `scale` often behaves more consistently across starting các giá trị (values).
 
 But choose based on desired math, not rule-of-thumb.
 
 ---
 
-# 62. Gamut Mapping Awareness [DEEP]
+# 62. Gamut ánh xạ (mapping / 매핑) Awareness [DEEP]
 
-Wide-gamut colors may not display in target gamut.
+Wide-gamut colors may not display in mục tiêu (target / 대상) gamut.
 
-Sass/browser conversion can involve out-of-gamut channels or mapping concerns.
+Sass/trình duyệt (browser / 브라우저) conversion can involve out-of-gamut channels or ánh xạ (mapping / 매핑) concerns.
 
 Master color tooling should:
-- choose color space explicitly,
-- test output on actual browsers/displays.
+- choose color không gian (space / 공간) explicitly,
+- kiểm thử (test / 테스트) đầu ra (output / 출력) on actual browsers/displays.
 
 ---
 
-# 63. thời điểm biên dịch (compile-time) Color vs thời gian chạy (runtime) Color [MASTER]
+# 63. thời điểm biên dịch (compile-time) Color vs thời gian chạy (runtime / 런타임) Color [MASTER]
 
-If source is:
+If nguồn (source / 소스) is:
 
 ```css
 var(--brand)
 ```
 
-Sass does not know actual thời gian chạy (runtime) color.
+Sass does not know actual thời gian chạy (runtime / 런타임) color.
 
 Cannot do:
 
@@ -1142,29 +1145,29 @@ as if it were Sass color.
 Use CSS:
 - `color-mix`,
 - relative colors,
-- thời gian chạy (runtime) color các hàm (functions).
+- thời gian chạy (runtime / 런타임) color các hàm (functions).
 
 ---
 
-# 64. Dynamic CSS biến (variable) Generator [ADV]
+# 64. động (dynamic / 동적) CSS biến (variable) Generator [ADV]
 
-hàm (function)/khối trộn tái sử dụng (mixin) should preserve:
+Hàm (function / 함수)/khối trộn tái sử dụng (mixin) should preserve:
 - numbers with units,
 - strings,
 - colors,
-- booleans/null ngữ nghĩa (semantics).
+- booleans/null ngữ nghĩa (semantics / 의미론).
 
 Need define:
-- how to serialize danh sách (list)?
+- how to serialize danh sách (list / 목록)?
 - how to serialize map khóa–giá trị (map) leaf?
 - should null skip?
 - should quoted string keep quotes?
 
-A production generator needs explicit policy.
+A môi trường vận hành (production / 운영 환경) generator needs tường minh (explicit / 명시적) chính sách (policy / 정책).
 
 ---
 
-# 65. CSS biến (variable) Serialization Policy [ARCH]
+# 65. CSS biến (variable) Serialization chính sách (policy / 정책) [ARCH]
 
 Example rules:
 
@@ -1177,11 +1180,11 @@ map    → recurse
 list   → emit only if explicitly allowed
 ```
 
-Don't rely on accidental `inspect()` output as production format.
+Don't rely on accidental `inspect()` đầu ra (output / 출력) as môi trường vận hành (production / 운영 환경) format.
 
 ---
 
-# 66. Token Collision Detection [ADV]
+# 66. đơn vị từ (token / 토큰) Collision Detection [ADV]
 
 Flatten:
 
@@ -1194,13 +1197,13 @@ could arise from:
 (color: (text: ...))
 ```
 
-and another source key.
+and another nguồn (source / 소스) key.
 
 Generator should detect duplicates and `@error`.
 
 ---
 
-# 67. Token Schema Validation [ARCH]
+# 67. đơn vị từ (token / 토큰) lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) [ARCH]
 
 Validate:
 - required groups,
@@ -1208,23 +1211,23 @@ Validate:
 - naming,
 - no null where forbidden.
 
-Sass has no static type system, so library must enforce contracts manually.
+Sass has no static hệ kiểu (type system / 타입 시스템), so thư viện (library / 라이브러리) must enforce contracts manually.
 
 ---
 
 # 68. Sass as a Weakly Typed DSL [MASTER]
 
-Sass supports typed thời gian chạy (runtime) các giá trị (values) but no thời điểm biên dịch (compile-time) interface/type các khai báo (declarations) like TypeScript.
+Sass supports typed thời gian chạy (runtime / 런타임) các giá trị (values) but no thời điểm biên dịch (compile-time) giao diện (interface / 인터페이스)/kiểu (type / 타입) các khai báo (declarations) like TypeScript.
 
-Therefore robust library relies on:
+Therefore robust thư viện (library / 라이브러리) relies on:
 - `meta.type-of`,
-- unit checks,
+- đơn vị (unit / 단위) checks,
 - map khóa–giá trị (map) key checks,
-- explicit errors.
+- tường minh (explicit / 명시적) errors.
 
 ---
 
-# 69. Defensive hàm (function) Pattern [ARCH]
+# 69. Defensive hàm (function / 함수) mẫu (pattern / 패턴) [ARCH]
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
@@ -1241,11 +1244,11 @@ Mục này chốt mental model của styling thành constraint, token, compositi
 }
 ```
 
-Use for reusable library boundaries, not every local helper.
+Use for reusable thư viện (library / 라이브러리) boundaries, not every cục bộ (local / 로컬) helper.
 
 ---
 
-# 70. Error Message Design [ARCH]
+# 70. lỗi (error / 오류) Message thiết kế (design / 설계) [ARCH]
 
 Bad:
 ```text
@@ -1259,13 +1262,13 @@ unknown spacing key `99`.
 Expected one of: 0,1,2,4,6.
 ```
 
-trình biên dịch (compiler) errors are developer UX.
+Trình biên dịch (compiler / 컴파일러) errors are nhà phát triển (developer / 개발자) UX.
 
 ---
 
-# 71. trạng thái ngừng khuyến nghị (deprecation) API Design [ARCH]
+# 71. trạng thái ngừng khuyến nghị (deprecation) API thiết kế (design / 설계) [ARCH]
 
-If own library replaces API:
+If own thư viện (library / 라이브러리) replaces API:
 
 ```scss
 @mixin old-button(...) {
@@ -1274,32 +1277,32 @@ If own library replaces API:
 }
 ```
 
-Maintain bridge for one version window when feasible.
+Maintain cầu nối (bridge / 브리지) for one phiên bản (version / 버전) cửa sổ (window / 윈도우) when feasible.
 
 ---
 
-# 72. trạng thái ngừng khuyến nghị (deprecation) Warnings as Product UX [MASTER]
+# 72. trạng thái ngừng khuyến nghị (deprecation) Warnings as sản phẩm (product / 제품) UX [MASTER]
 
 A warning should say:
 1. what đã ngừng khuyến nghị (deprecated),
 2. replacement,
-3. removal version/window if known,
-4. chuyển đổi (migration) link if library has docs.
+3. removal phiên bản (version / 버전)/cửa sổ (window / 윈도우) if known,
+4. chuyển đổi (migration) link if thư viện (library / 라이브러리) has docs.
 
 ---
 
-# 73. Sass Migrator kiến trúc (architecture) [ADV]
+# 73. Sass Migrator kiến trúc (architecture / 아키텍처) [ADV]
 
-Sass Migrator can mechanically rewrite source for supported migrations.
+Sass Migrator can mechanically rewrite nguồn (source / 소스) for supported migrations.
 
 Typical:
-- module chuyển đổi (migration),
+- mô-đun (module / 모듈) chuyển đổi (migration),
 - division chuyển đổi (migration).
 
-It operates on dependency graph with flags for dependencies/load paths.
+It operates on phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) with flags for dependencies/tải (load / 로드) paths.
 
 Always:
-- commit first,
+- lần ghi nhận (commit / 커밋) first,
 - migrate,
 - inspect diff,
 - compile,
@@ -1307,7 +1310,7 @@ Always:
 
 ---
 
-# 74. Module chuyển đổi (migration) Is Architectural [MASTER]
+# 74. mô-đun (module / 모듈) chuyển đổi (migration) Is Architectural [MASTER]
 
 Mechanical:
 ```text
@@ -1318,18 +1321,18 @@ but real questions:
 - các không gian tên (namespaces)?
 - giao diện công khai (public API)?
 - circular dependencies?
-- cấu hình (configuration) owner?
+- cấu hình (configuration / 구성) đơn vị sở hữu (owner / 오너)?
 - CSS các tác dụng phụ (side effects)?
 - private các biến (variables)?
 - extend relationships?
 
-Don't accept auto output without redesign.
+Don't accept auto đầu ra (output / 출력) without redesign.
 
 ---
 
-# 75. Circular Dependency [DEEP]
+# 75. Circular phụ thuộc (dependency / 의존성) [DEEP]
 
-Module systems generally cannot support arbitrary cycles like text import did.
+Mô-đun (module / 모듈) các hệ thống (systems / 시스템들) generally cannot hỗ trợ (support / 지원) arbitrary cycles like văn bản (text / 텍스트) import did.
 
 Example:
 
@@ -1338,16 +1341,16 @@ A @use B
 B @use A
 ```
 
-indicates kiến trúc (architecture) problem.
+indicates kiến trúc (architecture / 아키텍처) bài toán (problem / 문제).
 
 Fix:
-- extract shared C,
-- invert dependency,
-- move config.
+- extract dùng chung (shared / 공유) C,
+- invert phụ thuộc (dependency / 의존성),
+- move cấu hình (config / 설정).
 
 ---
 
-# 76. Dependency Inversion in Sass [ARCH]
+# 76. phụ thuộc (dependency / 의존성) Inversion in Sass [ARCH]
 
 Bad:
 ```text
@@ -1364,11 +1367,11 @@ tools
 components
 ```
 
-Dependencies point downward.
+Dependencies điểm (point / 지점) downward.
 
 ---
 
-# 77. Layered Sass Dependency Graph [ARCH]
+# 77. Layered Sass phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) [ARCH]
 
 Recommended:
 
@@ -1382,15 +1385,15 @@ runtime-token emission
 base/layout/components/utilities
 ```
 
-A lower layer shouldn't depend on upper component.
+A lower tầng (layer / 계층) shouldn't depend on upper thành phần (component / 컴포넌트).
 
 ---
 
-# 78. CSS lớp phân tầng (cascade layer) + Sass Module Layer [MASTER]
+# 78. CSS lớp phân tầng (cascade layer) + Sass mô-đun (module / 모듈) tầng (layer / 계층) [MASTER]
 
 They solve different problems.
 
-Sass module:
+Sass mô-đun (module / 모듈):
 ```text
 compile-time visibility/dependency
 ```
@@ -1410,11 +1413,11 @@ Can combine:
 }
 ```
 
-Or component files themselves emit within designated CSS layer.
+Or thành phần (component / 컴포넌트) files themselves emit within designated CSS tầng (layer / 계층).
 
 ---
 
-# 79. Avoid Naming Collision: “Module” vs “Layer”
+# 79. Avoid Naming Collision: “mô-đun (module / 모듈)” vs “tầng (layer / 계층)”
 
 Keep vocabulary:
 
@@ -1431,7 +1434,7 @@ They are orthogonal.
 
 Dart Sass exposes JavaScript APIs for programmatic compilation.
 
-Modern APIs include concepts:
+Hiện đại (modern / 현대적) APIs include concepts:
 - compile / compileString,
 - async các biến thể (variants),
 - importers,
@@ -1443,18 +1446,18 @@ Avoid legacy JS API.
 
 ---
 
-# 81. Modern JS API vs Legacy JS API [MUST for tooling]
+# 81. hiện đại (modern / 현대적) JS API vs Legacy JS API [MUST for tooling]
 
-Legacy Node Sass-style APIs have been đã ngừng khuyến nghị (deprecated).
+Legacy nút (node / 노드) Sass-style APIs have been đã ngừng khuyến nghị (deprecated).
 
 For new tooling:
-- use Dart Sass modern API.
+- use Dart Sass hiện đại (modern / 현대적) API.
 
-Check current JS API docs for exact signatures.
+Check hiện tại (current / 현재) JS API docs for chính xác (exact / 정확한) signatures.
 
 ---
 
-# 82. Programmatic Compile Pattern
+# 82. Programmatic Compile mẫu (pattern / 패턴)
 
 Concept:
 
@@ -1469,39 +1472,39 @@ const result =
 console.log(result.css);
 ```
 
-Exact package/module syntax depends project environment.
+Chính xác (exact / 정확한) gói (package / 패키지)/mô-đun (module / 모듈) cú pháp (syntax / 문법) depends dự án (project / 프로젝트) môi trường (environment / 환경).
 
 ---
 
-# 83. `compileString()` Use Case
+# 83. `compileString()` Use trường hợp (case / 사례)
 
 Compile dynamically generated Sass string:
 - playground,
 - editor,
-- test harness.
+- kiểm thử (test / 테스트) harness.
 
-Do not compile user-controlled Sass server-side without security/resource considerations.
+Do not compile user-controlled Sass server-side without bảo mật (security / 보안)/tài nguyên (resource / 자원) considerations.
 
 ---
 
 # 84. Custom các hàm (functions) from JS [ADV]
 
-Host language can expose hàm (function) to Sass.
+Host ngôn ngữ (language / 언어) can expose hàm (function / 함수) to Sass.
 
 Use cases:
-- read token thiết kế (design token) source,
-- integrate build metadata,
+- read đơn vị từ (token / 토큰) thiết kế (design token) nguồn (source / 소스),
+- integrate bản dựng (build / 빌드) siêu dữ liệu (metadata / 메타데이터),
 - domain-specific computation.
 
-Risk:
-- build becomes non-portable,
-- hàm (function) unavailable outside custom toolchain.
+Rủi ro (risk / 위험):
+- bản dựng (build / 빌드) becomes non-portable,
+- hàm (function / 함수) unavailable outside custom toolchain.
 
 ---
 
-# 85. Custom hàm (function) Boundary [ARCH]
+# 85. Custom hàm (function / 함수) ranh giới (boundary / 경계) [ARCH]
 
-Before adding JS custom hàm (function) ask:
+Before adding JS custom hàm (function / 함수) ask:
 
 ```text
 Could data be generated before Sass?
@@ -1509,44 +1512,44 @@ Could CSS variable solve runtime need?
 Could Sass map solve compile-time need?
 ```
 
-Custom host các hàm (functions) should be last-mile integration.
+Custom host các hàm (functions) should be last-mile tích hợp (integration / 통합).
 
 ---
 
 # 86. Custom Importers [ADV]
 
-Importer controls module URL resolution/loading.
+Importer controls mô-đun (module / 모듈) URL resolution/loading.
 
 Use:
 - virtual modules,
-- package aliases,
-- custom storage.
+- gói (package / 패키지) aliases,
+- custom lưu trữ (storage / 저장소).
 
 Requires correct:
 - canonicalization,
 - loading,
-- syntax identification.
+- cú pháp (syntax / 문법) identification.
 
 Tooling-specialist territory.
 
 ---
 
-# 87. Importer Canonicalization Contract [DEEP]
+# 87. Importer Canonicalization đặc tả hợp đồng (contract / 계약) [DEEP]
 
-If importer returns inconsistent canonical URL:
-- same module may load multiple times,
-- cấu hình (configuration) ngữ nghĩa (semantics) break,
+If importer returns inconsistent chuẩn gốc (canonical / 정본) URL:
+- same mô-đun (module / 모듈) may tải (load / 로드) multiple times,
+- cấu hình (configuration / 구성) ngữ nghĩa (semantics / 의미론) break,
 - CSS duplicate.
 
-Canonical URL must represent stable module identity.
+Chuẩn gốc (canonical / 정본) URL must represent stable mô-đun (module / 모듈) định danh (identity / 식별자).
 
 ---
 
-# 88. File Importer vs Custom Importer
+# 88. tệp (file / 파일) Importer vs Custom Importer
 
-Modern JS API distinguishes importer styles depending use case.
+Hiện đại (modern / 현대적) JS API distinguishes importer styles depending use trường hợp (case / 사례).
 
-Choose simplest built-in/file importer/load path before custom code.
+Choose simplest built-in/tệp (file / 파일) importer/tải (load / 로드) đường dẫn (path / 경로) before custom mã (code / 코드).
 
 ---
 
@@ -1554,13 +1557,13 @@ Choose simplest built-in/file importer/load path before custom code.
 
 Programmatic Sass compilation can intercept:
 - warnings,
-- gỡ lỗi (debug) messages,
+- gỡ lỗi (debug / 디버그) messages,
 - deprecations.
 
 CI can:
 - collect,
 - classify,
-- fail on first-party warnings.
+- thất bại (fail / 실패) on first-party warnings.
 
 ---
 
@@ -1569,16 +1572,16 @@ CI can:
 Dart Sass offers controls for:
 - silence selected deprecations,
 - future/fatal deprecations,
-- dependency warning behavior,
+- phụ thuộc (dependency / 의존성) warning hành vi (behavior / 동작),
 
-through CLI/API depending version.
+through CLI/API depending phiên bản (version / 버전).
 
-Policy:
+Chính sách (policy / 정책):
 - never global-silence indefinitely.
 
 ---
 
-# 91. CI trạng thái ngừng khuyến nghị (deprecation) Budget Pattern [ARCH]
+# 91. CI trạng thái ngừng khuyến nghị (deprecation) ngân sách (budget / 예산) mẫu (pattern / 패턴) [ARCH]
 
 Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
@@ -1593,11 +1596,11 @@ Then:
 
 ---
 
-# 92. Compilation hiệu năng (performance) [ADV]
+# 92. Compilation hiệu năng (performance / 성능) [ADV]
 
 Factors:
 - đồ thị mô-đun (module graph),
-- file I/O,
+- tệp (file / 파일) I/O,
 - huge loops,
 - bộ chọn (selector) extension,
 - recursion,
@@ -1608,11 +1611,11 @@ hệ mô-đun (module system) loads once, improving duplication compared to lega
 
 ---
 
-# 93. Measure Compile Time [MASTER]
+# 93. Measure Compile thời gian (time / 시간) [MASTER]
 
 Do not optimize by guess.
 
-Track:
+Nhánh học (track / 트랙):
 ```text
 cold build
 warm watch rebuild
@@ -1621,11 +1624,11 @@ source map bytes
 module count
 ```
 
-Set regression thresholds for very large design systems.
+Set regression thresholds for very large thiết kế (design / 설계) các hệ thống (systems / 시스템들).
 
 ---
 
-# 94. Generator hiệu năng (performance) [ADV]
+# 94. Generator hiệu năng (performance / 성능) [ADV]
 
 Nested loops:
 
@@ -1633,7 +1636,7 @@ Nested loops:
 N × M × K
 ```
 
-can explode compile work/output.
+can explode compile công việc (work / 작업)/đầu ra (output / 출력).
 
 Example:
 ```text
@@ -1643,24 +1646,24 @@ Example:
 = 4000 rule families
 ```
 
-Ask whether consumer needs all combinations.
+Ask whether bên tiêu thụ (consumer / 소비자) needs all combinations.
 
 ---
 
-# 95. Lazy Generation Pattern [ARCH]
+# 95. Lazy Generation mẫu (pattern / 패턴) [ARCH]
 
 Instead of generate every tiện ích (utility):
-- explicit enabled tiện ích (utility) groups,
-- generated from used design scale,
+- tường minh (explicit / 명시적) enabled tiện ích (utility) groups,
+- generated from used thiết kế (design / 설계) quy mô (scale / 규모),
 - separate entrypoints.
 
-Sass itself doesn't automatically tree-shake mang tính ngữ nghĩa (semantic) loops.
+Sass itself doesn't automatically tree-shake mang tính ngữ nghĩa (semantic / 의미적) loops.
 
 ---
 
-# 96. CSS Output Budget [MASTER]
+# 96. CSS đầu ra (output / 출력) ngân sách (budget / 예산) [MASTER]
 
-Define budget:
+Define ngân sách (budget / 예산):
 
 ```text
 base CSS <= X KB gzip
@@ -1670,25 +1673,25 @@ single component <= Z KB
 
 Numbers project-specific.
 
-Inspect compiled result, not SCSS lines.
+Inspect compiled kết quả (result / 결과), not SCSS lines.
 
 ---
 
-# 97. bản đồ mã nguồn (source map) Cost [ADV]
+# 97. bản đồ mã nguồn (source map / 소스 맵) chi phí (cost / 비용) [ADV]
 
 Development:
 - useful detailed các map khóa–giá trị (maps).
 
-Production:
-- bản đồ mã nguồn (source map) policy depends gỡ lỗi (debugging)/security/deployment.
+Môi trường vận hành (production / 운영 환경):
+- bản đồ mã nguồn (source map / 소스 맵) chính sách (policy / 정책) depends gỡ lỗi (debugging)/bảo mật (security / 보안)/triển khai (deployment / 배포).
 
-Sass các bản đồ mã nguồn (source maps) can be further transformed by downstream tools; ensure chain stays correct.
+Sass các bản đồ mã nguồn (source maps) can be further transformed by downstream tools; ensure chuỗi (chain / 사슬) stays correct.
 
 ---
 
-# 98. quy trình build (build pipeline) Ordering [MASTER]
+# 98. quy trình bản dựng (build / 빌드) (build pipeline) thứ tự (ordering / 순서) [MASTER]
 
-Common:
+Dùng chung (common / 공통):
 
 ```text
 SCSS
@@ -1699,9 +1702,9 @@ SCSS
 ```
 
 Why Sass first?
-PostCSS expects CSS, not Sass language, unless special parser/plugin used.
+PostCSS expects CSS, not Sass ngôn ngữ (language / 언어), unless special parser/plugin used.
 
-Framework tooling may encapsulate this.
+Khung phần mềm (framework / 프레임워크) tooling may encapsulate this.
 
 ---
 
@@ -1713,14 +1716,14 @@ That belongs:
 - PostCSS/Autoprefixer,
 - bundler transformations.
 
-Don't expect Sass update to fix prefix policy.
+Don't expect Sass cập nhật (update / 업데이트) to fix prefix chính sách (policy / 정책).
 
 ---
 
-# 100. Sass + Native CSS Modernization Strategy [MASTER]
+# 100. Sass + bản địa (native / 네이티브) CSS Modernization chiến lược (strategy / 전략) [MASTER]
 
 As CSS grows:
-- reduce Sass-only abstractions that native CSS now handles better.
+- reduce Sass-only abstractions that bản địa (native / 네이티브) CSS now handles better.
 
 Candidates:
 ```text
@@ -1765,15 +1768,15 @@ After:
 ```
 
 Do when:
-- theme/thời gian chạy (runtime) override matters.
+- theme/thời gian chạy (runtime / 런타임) override matters.
 
-Don't migrate build-only constants with no thời gian chạy (runtime) giá trị (value) just for fashion.
+Don't migrate build-only constants with no thời gian chạy (runtime / 런타임) giá trị (value / 값) just for fashion.
 
 ---
 
-# 102. Hybrid Token Pattern [MASTER]
+# 102. Hybrid đơn vị từ (token / 토큰) mẫu (pattern / 패턴) [MASTER]
 
-Sass source:
+Sass nguồn (source / 소스):
 
 ```scss
 $tokens: (...);
@@ -1788,17 +1791,17 @@ Emit:
 
 Sass các hàm (functions) can also use same map khóa–giá trị (map) for generated static fallbacks/các tiện ích (utilities).
 
-Single source can serve:
+Single nguồn (source / 소스) can serve:
 - thời điểm biên dịch (compile-time) generation,
-- thời gian chạy (runtime) CSS.
+- thời gian chạy (runtime / 런타임) CSS.
 
 ---
 
-# 103. External token thiết kế (design tokens) [MASTER]
+# 103. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design tokens) [MASTER]
 
-Large systems may use JSON/DTCG-like tokens outside Sass.
+Large các hệ thống (systems / 시스템들) may use JSON/DTCG-like tokens outside Sass.
 
-Pipeline:
+Chuỗi xử lý (pipeline / 파이프라인):
 
 ```text
 token source
@@ -1808,19 +1811,19 @@ token source
 → platform outputs
 ```
 
-At scale, Sass may be **consumer**, not source of truth.
+At quy mô (scale / 규모), Sass may be **bên tiêu thụ (consumer / 소비자)**, not nguồn chuẩn (source of truth / 정본).
 
 ---
 
 # 104. Don't Parse JSON in Sass [MASTER]
 
-If data source is JSON:
-- transform with công cụ build (build tool),
+If dữ liệu (data / 데이터) nguồn (source / 소스) is JSON:
+- transform with công cụ bản dựng (build / 빌드) (build tool),
 - generate Sass/CSS.
 
 Don't invent JSON parser with string các hàm (functions) in Sass.
 
-Use right language for build task.
+Use right ngôn ngữ (language / 언어) for bản dựng (build / 빌드) tác vụ (task / 작업).
 
 ---
 
@@ -1828,21 +1831,21 @@ Use right language for build task.
 
 Pure các hàm (functions) can be tested with:
 - compile fixtures,
-- assertion library/ecosystem,
-- expected CSS/error snapshots.
+- assertion thư viện (library / 라이브러리)/ecosystem,
+- expected CSS/lỗi (error / 오류) snapshots.
 
 Important cases:
 - valid,
-- boundary,
-- invalid type,
-- invalid unit,
+- ranh giới (boundary / 경계),
+- invalid kiểu (type / 타입),
+- invalid đơn vị (unit / 단위),
 - unknown key.
 
 ---
 
 # 106. Golden CSS Tests [ADV]
 
-Input SCSS:
+Đầu vào (input / 입력) SCSS:
 
 ```text
 fixture.scss
@@ -1864,7 +1867,7 @@ Normalize formatting when appropriate.
 
 ---
 
-# 107. Error Tests [ADV]
+# 107. lỗi (error / 오류) Tests [ADV]
 
 Ensure:
 
@@ -1874,52 +1877,52 @@ token(unknown)
 
 fails with expected diagnostic.
 
-Public library quality includes failure behavior.
+Công khai (public / 공개) thư viện (library / 라이브러리) chất lượng (quality / 품질) includes hành vi khi thất bại (failure behavior / 실패 동작).
 
 ---
 
 # 108. Visual Tests Still Required [MASTER]
 
-Sass unit test can prove:
-- generated CSS structure.
+Sass đơn vị (unit / 단위) kiểm thử (test / 테스트) can prove:
+- generated CSS cấu trúc (structure / 구조).
 
 Cannot prove:
-- browser layout correct,
-- accessible interaction,
+- trình duyệt (browser / 브라우저) bố cục (layout / 레이아웃) correct,
+- accessible tương tác (interaction / 상호작용),
 - đa trình duyệt (cross-browser) rendering.
 
-Need CSS visual/component tests.
+Need CSS visual/thành phần (component / 컴포넌트) tests.
 
 ---
 
-# 109. Snapshot Test Pitfall
+# 109. Snapshot kiểm thử (test / 테스트) Pitfall
 
 Generated CSS snapshot can be huge/noisy.
 
 Prefer:
 - targeted fixture,
-- mang tính ngữ nghĩa (semantic) assertions,
+- mang tính ngữ nghĩa (semantic / 의미적) assertions,
 - stable formatting.
 
-Don't snapshot entire 500KB bundle for every unit test.
+Don't snapshot entire 500KB bundle for every đơn vị (unit / 단위) kiểm thử (test / 테스트).
 
 ---
 
 # 110. Linting SCSS [MUST]
 
-Stylelint with SCSS-aware config/plugins can check:
+Stylelint with SCSS-aware cấu hình (config / 설정)/plugins can check:
 - Sass at-rules,
 - lồng cú pháp (nesting),
 - naming,
 - đã ngừng khuyến nghị (deprecated) patterns.
 
-Rules should align kiến trúc (architecture).
+Rules should align kiến trúc (architecture / 아키텍처).
 
 ---
 
 # 111. Ban Legacy Constructs [ARCH]
 
-Possible policy:
+Possible chính sách (policy / 정책):
 ```text
 no Sass @import
 no slash division
@@ -1930,13 +1933,13 @@ restricted @extend
 max nesting
 ```
 
-Tooling support varies; CI grep/custom lint can supplement.
+Tooling hỗ trợ (support / 지원) varies; CI grep/custom lint can supplement.
 
 ---
 
-# 112. Package Publishing [ARCH]
+# 112. gói (package / 패키지) Publishing [ARCH]
 
-Sass package should expose stable entrypoints.
+Sass gói (package / 패키지) should expose stable entrypoints.
 
 Example conceptual:
 ```text
@@ -1956,19 +1959,19 @@ Document both.
 
 ---
 
-# 113. Package Resolution [ADV]
+# 113. gói (package / 패키지) Resolution [ADV]
 
-Node package Sass imports may be resolved via bundler/importer/package conventions.
+Nút (node / 노드) gói (package / 패키지) Sass imports may be resolved via bundler/importer/gói (package / 패키지) conventions.
 
 Don't rely on undocumented resolution magic.
 
-Publish clear import examples tested in common toolchains.
+Publish clear import examples tested in dùng chung (common / 공통) toolchains.
 
 ---
 
-# 114. Version Compatibility Matrix [ARCH]
+# 114. phiên bản (version / 버전) tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) [ARCH]
 
-Library docs:
+Thư viện (library / 라이브러리) docs:
 
 ```text
 Library 3.x
@@ -1976,59 +1979,59 @@ requires Dart Sass >= X
 ```
 
 Needed when using newer:
-- module APIs,
+- mô-đun (module / 모듈) APIs,
 - map khóa–giá trị (map) các hàm (functions),
 - color APIs,
 - meta các khối trộn tái sử dụng (mixins),
-- CSS compatibility changes.
+- CSS tính tương thích (compatibility / 호환성) changes.
 
 ---
 
-# 115. LibSass Compatibility Is a Cost
+# 115. LibSass tính tương thích (compatibility / 호환성) Is a chi phí (cost / 비용)
 
-Supporting old implementation means losing:
+Supporting old hiện thực (implementation / 구현) means losing:
 - `@use`,
 - `@forward`,
-- built-in module APIs,
-- newer language features.
+- built-in mô-đun (module / 모듈) APIs,
+- newer ngôn ngữ (language / 언어) features.
 
-For modern library:
-- don't support dead trình biên dịch (compiler) unless business constraint explicit.
+For hiện đại (modern / 현대적) thư viện (library / 라이브러리):
+- don't hỗ trợ (support / 지원) dead trình biên dịch (compiler / 컴파일러) unless nghiệp vụ (business / 비즈니스) ràng buộc (constraint / 제약조건) tường minh (explicit / 명시적).
 
 ---
 
-# 116. Breaking Change Monitoring [MASTER]
+# 116. Breaking thay đổi (change / 변경) Monitoring [MASTER]
 
-Track official Sass breaking changes.
+Nhánh học (track / 트랙) official Sass breaking changes.
 
-Recent/current themes include:
-- imports/global các hàm (functions),
+Recent/hiện tại (current / 현재) themes include:
+- imports/toàn cục (global / 전역) các hàm (functions),
 - Color 4 APIs,
 - legacy JS API,
 - mixed các khai báo (declarations),
-- private cấu hình (configuration),
+- private cấu hình (configuration / 구성),
 - legacy if,
 - rest args,
 - bộ chọn (selector) parsing,
-- CSS hàm (function) names.
+- CSS hàm (function / 함수) names.
 
 Upgrade Sass proactively in CI.
 
 ---
 
-# 117. Pinning vs Floating trình biên dịch (compiler) Version
+# 117. Pinning vs Floating trình biên dịch (compiler / 컴파일러) phiên bản (version / 버전)
 
 Lockfile should make builds reproducible.
 
-But also have periodic dependency update process:
+But also have periodic phụ thuộc (dependency / 의존성) cập nhật (update / 업데이트) tiến trình (process / 프로세스):
 - renovate/dependabot/manual,
-- CI on new Sass release if critical library.
+- CI on new Sass bản phát hành (release / 릴리스) if trọng yếu (critical / 중요) thư viện (library / 라이브러리).
 
 Avoid surprise after 2 years frozen.
 
 ---
 
-# 118. Upgrade Test Matrix [ARCH]
+# 118. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬) [ARCH]
 
 On Sass upgrade:
 
@@ -2049,16 +2052,16 @@ Especially for hệ thống thiết kế (design system).
 
 Old Sass historically reordered các khai báo (declarations) around nested rules.
 
-Modern Sass follows CSS behavior/order.
+Hiện đại (modern / 현대적) Sass follows CSS hành vi (behavior / 동작)/thứ tự (order / 순서).
 
-chuyển đổi (migration) strategy:
-- keep base các khai báo (declarations) grouped,
+chuyển đổi (migration) chiến lược (strategy / 전략):
+- keep cơ sở (base / 기반) các khai báo (declarations) grouped,
 - avoid relying on historical hoisting,
-- inspect compiled order.
+- inspect compiled thứ tự (order / 순서).
 
 ---
 
-# 120. Global Built-in chuyển đổi (migration) [2026]
+# 120. toàn cục (global / 전역) Built-in chuyển đổi (migration) [2026]
 
 Mechanical idea:
 
@@ -2074,13 +2077,13 @@ map.get(...)
 ```
 
 Likewise:
-- danh sách (list),
+- danh sách (list / 목록),
 - math,
 - color,
 - string,
 - meta.
 
-Benefit is language compatibility, not just style.
+Benefit is ngôn ngữ (language / 언어) tính tương thích (compatibility / 호환성), not just style.
 
 ---
 
@@ -2091,15 +2094,15 @@ Old:
 lighten($brand, 10%)
 ```
 
-Don't mechanically replace with arbitrary hàm (function) without intent.
+Don't mechanically replace with arbitrary hàm (function / 함수) without intent.
 
 Decide:
 - adjust absolute lightness?
-- scale toward white?
+- quy mô (scale / 규모) toward white?
 - operate in HSL or Oklch?
-- thời gian chạy (runtime) or thời điểm biên dịch (compile-time)?
+- thời gian chạy (runtime / 런타임) or thời điểm biên dịch (compile-time)?
 
-Color chuyển đổi (migration) is design decision.
+Color chuyển đổi (migration) is thiết kế (design / 설계) quyết định (decision / 결정).
 
 ---
 
@@ -2115,15 +2118,15 @@ CSS separator remains:
 grid-row: 1 / 3;
 ```
 
-các danh sách (lists) may need explicit slash separator APIs for computed Sass danh sách (list) generation.
+các danh sách (lists) may need tường minh (explicit / 명시적) slash separator APIs for computed Sass danh sách (list / 목록) generation.
 
 ---
 
 # 123. Avoid trạng thái ngừng khuyến nghị (deprecation) Cargo Cult
 
-Don't rewrite code solely to silence warning without understanding mang tính ngữ nghĩa (semantic) change.
+Don't rewrite mã (code / 코드) solely to silence warning without understanding mang tính ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경).
 
-Process:
+Tiến trình (process / 프로세스):
 ```text
 read warning
 → read breaking-change page
@@ -2134,22 +2137,22 @@ read warning
 
 ---
 
-# 124. Master phản mẫu (anti-pattern) — Sass Framework Inside App
+# 124. Master phản mẫu (anti-pattern) — Sass khung phần mềm (framework / 프레임워크) Inside App
 
 Symptoms:
 - 100 generic các khối trộn tái sử dụng (mixins),
-- hàm (function) dispatch,
-- recursive config,
+- hàm (function / 함수) dispatch,
+- recursive cấu hình (config / 설정),
 - bộ chọn (selector) DSL,
 - huge generated các tiện ích (utilities),
-- no one knows output.
+- no one knows đầu ra (output / 출력).
 
-If app isn't publishing style framework:
+If app isn't publishing style khung phần mềm (framework / 프레임워크):
 simplify.
 
 ---
 
-# 125. Master phản mẫu (anti-pattern) — thời gian chạy (runtime) Logic in Sass
+# 125. Master phản mẫu (anti-pattern) — thời gian chạy (runtime / 런타임) lô-gic (logic / 논리) in Sass
 
 Bad expectation:
 ```text
@@ -2158,15 +2161,15 @@ if user selected dark...
 if server data...
 ```
 
-Sass runs before browser.
+Sass runs before trình duyệt (browser / 브라우저).
 
-Use CSS/JS thời gian chạy (runtime).
+Use CSS/JS thời gian chạy (runtime / 런타임).
 
 ---
 
 # 126. Master phản mẫu (anti-pattern) — CSS Hidden Behind các khối trộn tái sử dụng (mixins)
 
-Source:
+Nguồn (source / 소스):
 
 ```scss
 @include card-everything(
@@ -2182,11 +2185,11 @@ Reviewer can't see:
 - focus,
 - motion.
 
-Use các khối trộn tái sử dụng (mixins) for orthogonal reusable concerns, not whole component behavior unless library abstraction explicitly warrants.
+Use các khối trộn tái sử dụng (mixins) for orthogonal reusable concerns, not whole thành phần (component / 컴포넌트) hành vi (behavior / 동작) unless thư viện (library / 라이브러리) lớp trừu tượng (abstraction / 추상화) explicitly warrants.
 
 ---
 
-# 127. Master phản mẫu (anti-pattern) — Over-normalized Token các map khóa–giá trị (maps)
+# 127. Master phản mẫu (anti-pattern) — Over-normalized đơn vị từ (token / 토큰) các map khóa–giá trị (maps)
 
 Example:
 ```text
@@ -2195,20 +2198,20 @@ tokens.component.button.state.hover.color.background.default...
 
 Every lookup 7 keys deep.
 
-This mirrors database normalization, not useful styling.
+This mirrors cơ sở dữ liệu (database / 데이터베이스) normalization, not useful styling.
 
-Prefer mang tính ngữ nghĩa (semantic) flatness where practical.
+Prefer mang tính ngữ nghĩa (semantic / 의미적) flatness where practical.
 
 ---
 
-# 128. Master Pattern — Stable mang tính ngữ nghĩa (semantic) Boundary
+# 128. Master mẫu (pattern / 패턴) — Stable mang tính ngữ nghĩa (semantic / 의미적) ranh giới (boundary / 경계)
 
-Inside library can change:
+Inside thư viện (library / 라이브러리) can thay đổi (change / 변경):
 - color math,
 - spacing formula,
-- map khóa–giá trị (map) structure.
+- map khóa–giá trị (map) cấu trúc (structure / 구조).
 
-Public contract stays:
+Công khai (public / 공개) đặc tả hợp đồng (contract / 계약) stays:
 ```text
 token("color-action")
 @mixin focus-ring
@@ -2219,9 +2222,9 @@ $radius-default config
 
 ---
 
-# 129. Master Pattern — Build-time Adapter
+# 129. Master mẫu (pattern / 패턴) — Build-time Adapter
 
-External token source/vendor:
+Bên ngoài (external / 외부) đơn vị từ (token / 토큰) nguồn (source / 소스)/vendor:
 
 ```text
 upstream API
@@ -2229,13 +2232,13 @@ upstream API
 → internal canonical values
 ```
 
-All weird compatibility localized.
+All weird tính tương thích (compatibility / 호환성) localized.
 
 ---
 
-# 130. Master Pattern — thời điểm biên dịch (compile-time) Feature Flags
+# 130. Master mẫu (pattern / 패턴) — thời điểm biên dịch (compile-time) tính năng (feature / 기능) Flags
 
-Config:
+Cấu hình (config / 설정):
 
 ```scss
 $enable-grid-utilities: true !default;
@@ -2249,23 +2252,23 @@ Generator:
 }
 ```
 
-Good for library optional CSS bundles.
+Good for thư viện (library / 라이브러리) optional CSS bundles.
 
-Bad for thời gian chạy (runtime) feature trạng thái (state).
-
----
-
-# 131. Feature Flag Budget
-
-Too many flags create combinatorial test matrix.
-
-Expose only high-value build options.
+Bad for thời gian chạy (runtime / 런타임) tính năng (feature / 기능) trạng thái (state / 상태).
 
 ---
 
-# 132. Master Pattern — Explicit CSS các tác dụng phụ (side effects)
+# 131. cờ tính năng (feature flag / 기능 플래그) ngân sách (budget / 예산)
 
-Document module:
+Too many flags create combinatorial kiểm thử (test / 테스트) ma trận (matrix / 행렬).
+
+Expose only high-value bản dựng (build / 빌드) options.
+
+---
+
+# 132. Master mẫu (pattern / 패턴) — tường minh (explicit / 명시적) CSS các tác dụng phụ (side effects)
+
+Document mô-đun (module / 모듈):
 
 ```text
 @use "library/tools"
@@ -2275,13 +2278,13 @@ Document module:
 → emits components
 ```
 
-Consumer can reason bundle cost.
+Bên tiêu thụ (consumer / 소비자) can reason bundle chi phí (cost / 비용).
 
 ---
 
-# 133. Master Pattern — Layer-aware Library
+# 133. Master mẫu (pattern / 패턴) — Layer-aware thư viện (library / 라이브러리)
 
-Library can emit CSS in named layer:
+Thư viện (library / 라이브러리) can emit CSS in named tầng (layer / 계층):
 
 ```scss
 @layer ds.components {
@@ -2289,13 +2292,13 @@ Library can emit CSS in named layer:
 }
 ```
 
-Consumer controls global layer order.
+Bên tiêu thụ (consumer / 소비자) controls toàn cục (global / 전역) tầng (layer / 계층) thứ tự (order / 순서).
 
 This is often better than high độ đặc hiệu (specificity).
 
 ---
 
-# 134. Library Layer Contract
+# 134. thư viện (library / 라이브러리) tầng (layer / 계층) đặc tả hợp đồng (contract / 계약)
 
 Document:
 ```text
@@ -2305,15 +2308,15 @@ ds.components
 ds.utilities
 ```
 
-Consumers can define layer ordering early.
+Consumers can define tầng (layer / 계층) thứ tự (ordering / 순서) early.
 
-Don't hide layer behavior.
+Don't hide tầng (layer / 계층) hành vi (behavior / 동작).
 
 ---
 
-# 135. Sass Config vs CSS Token Override API
+# 135. Sass cấu hình (config / 설정) vs CSS đơn vị từ (token / 토큰) Override API
 
-Public library might offer both:
+Công khai (public / 공개) thư viện (library / 라이브러리) might offer both:
 
 thời điểm biên dịch (compile-time):
 ```scss
@@ -2322,7 +2325,7 @@ thời điểm biên dịch (compile-time):
 );
 ```
 
-thời gian chạy (runtime):
+Thời gian chạy (runtime / 런타임):
 ```css
 :root {
   --lib-brand: ...;
@@ -2333,21 +2336,21 @@ Different responsibilities.
 
 ---
 
-# 136. Master Decision Matrix
+# 136. Master quyết định (decision / 결정) ma trận (matrix / 행렬)
 
 ## Use Sass biến (variable) when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - thời điểm biên dịch (compile-time) only,
 - generation,
-- package config.
+- gói (package / 패키지) cấu hình (config / 설정).
 
 ## CSS biến (variable) when:
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - thời gian chạy (runtime) theme,
 - cơ chế phân tầng (cascade),
-- component override.
+- thành phần (component / 컴포넌트) override.
 
 ## Sass hàm (function) when:
 
@@ -2381,7 +2384,7 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 
 ---
 
-# 137. hiệu năng (performance) Decision Matrix
+# 137. hiệu năng (performance / 성능) quyết định (decision / 결정) ma trận (matrix / 행렬)
 
 Before generator:
 ```text
@@ -2418,22 +2421,22 @@ Workflow:
 
 ---
 
-# 139. gỡ lỗi (debugging) Module Errors
+# 139. gỡ lỗi (debugging) mô-đun (module / 모듈) Errors
 
 Check:
 - wrong URL,
-- load path,
-- không gian tên (namespace) collision,
-- module configured twice,
-- thành viên riêng tư (private member) access,
-- circular dependency,
+- tải (load / 로드) đường dẫn (path / 경로),
+- không gian tên (namespace / 네임스페이스) collision,
+- mô-đun (module / 모듈) configured twice,
+- thành viên riêng tư (private member) truy cập (access / 접근),
+- circular phụ thuộc (dependency / 의존성),
 - importer canonicalization.
 
 ---
 
 # 140. gỡ lỗi (debugging) “Wrong CSS”
 
-Determine layer:
+Determine tầng (layer / 계층):
 
 ```text
 SCSS source wrong?
@@ -2447,7 +2450,7 @@ Always inspect generated CSS before blaming Sass.
 
 ---
 
-# 141. gỡ lỗi (debugging) Type Errors
+# 141. gỡ lỗi (debugging) kiểu (type / 타입) Errors
 
 Print:
 
@@ -2458,7 +2461,7 @@ Print:
 
 Check:
 - number units,
-- map khóa–giá trị (map) vs danh sách (list),
+- map khóa–giá trị (map) vs danh sách (list / 목록),
 - quoted string,
 - null,
 - calculation.
@@ -2481,18 +2484,18 @@ Don't let missing map khóa–giá trị (map) key silently propagate `null` int
 # 143. gỡ lỗi (debugging) Color API
 
 Check:
-- color space,
+- color không gian (space / 공간),
 - channel name,
-- unit,
-- whether giá trị (value) is Sass color or CSS thời gian chạy (runtime) string/var.
+- đơn vị (unit / 단위),
+- whether giá trị (value / 값) is Sass color or CSS thời gian chạy (runtime / 런타임) string/var.
 
-Modern Color 4 makes implicit assumptions riskier.
+Hiện đại (modern / 현대적) Color 4 makes implicit các giả định (assumptions / 가정들) riskier.
 
 ---
 
 # 144. Master Lab 1 — đồ thị mô-đun (module graph)
 
-Build:
+Bản dựng (build / 빌드):
 ```text
 settings
 tools
@@ -2504,27 +2507,27 @@ application
 
 Verify:
 - no cycles,
-- config once,
+- cấu hình (config / 설정) once,
 - CSS emitted once.
 
 ---
 
-# 145. Master Lab 2 — Sass Library API
+# 145. Master Lab 2 — Sass thư viện (library / 라이브러리) API
 
 Expose:
-- 3 config vars,
+- 3 cấu hình (config / 설정) vars,
 - 2 các hàm (functions),
 - 2 các khối trộn tái sử dụng (mixins),
 - facade prefix,
 - one private helper.
 
-Write consumer examples.
+Ghi (write / 쓰기) bên tiêu thụ (consumer / 소비자) examples.
 
 ---
 
-# 146. Master Lab 3 — Deep Token trình biên dịch (compiler)
+# 146. Master Lab 3 — Deep đơn vị từ (token / 토큰) trình biên dịch (compiler / 컴파일러)
 
-Input nested map khóa–giá trị (map).
+Đầu vào (input / 입력) nested map khóa–giá trị (map).
 
 Features:
 - flatten,
@@ -2543,9 +2546,9 @@ Use:
 - Oklch,
 - `color.scale`,
 - `color.channel`,
-- explicit spaces.
+- tường minh (explicit / 명시적) spaces.
 
-Compare output with CSS thời gian chạy (runtime) color-mix.
+Compare đầu ra (output / 출력) with CSS thời gian chạy (runtime / 런타임) color-mix.
 
 ---
 
@@ -2556,11 +2559,11 @@ Use:
 - nest,
 - superselector checks.
 
-Inspect output and document why not string nội suy (interpolation).
+Inspect đầu ra (output / 출력) and document why not string nội suy (interpolation).
 
 ---
 
-# 149. Master Lab 6 — Migrate Legacy Project
+# 149. Master Lab 6 — Migrate Legacy dự án (project / 프로젝트)
 
 Legacy:
 ```text
@@ -2574,7 +2577,7 @@ global variables
 Migrate to:
 - modules,
 - built-ins,
-- modern color,
+- hiện đại (modern / 현대적) color,
 - `math.div`.
 
 Visual diff.
@@ -2584,87 +2587,87 @@ Visual diff.
 # 150. Master Lab 7 — JS API
 
 Programmatically:
-- compile file,
+- compile tệp (file / 파일),
 - capture warning,
 - custom logger,
-- bản đồ mã nguồn (source map) awareness.
+- bản đồ mã nguồn (source map / 소스 맵) awareness.
 
 ---
 
-# 151. Master Lab 8 — Custom hàm (function)
+# 151. Master Lab 8 — Custom hàm (function / 함수)
 
-Expose one safe JS custom hàm (function).
+Expose one safe JS custom hàm (function / 함수).
 
-Then write alternative build step and compare coupling.
+Then ghi (write / 쓰기) alternative bản dựng (build / 빌드) step and compare coupling.
 
 ---
 
 # 152. Master Lab 9 — Custom Importer
 
-Implement virtual module resolver.
+Implement virtual mô-đun (module / 모듈) resolver.
 
-Verify same logical module canonicalizes once.
+Verify same logical mô-đun (module / 모듈) canonicalizes once.
 
 Tooling-specialist exercise.
 
 ---
 
-# 153. Master Lab 10 — Output Budget
+# 153. Master Lab 10 — đầu ra (output / 출력) ngân sách (budget / 예산)
 
 Create tiện ích (utility) generator.
 
 Measure:
-- compile time,
+- compile thời gian (time / 시간),
 - raw CSS,
 - gzip,
 - coverage.
 
-Reduce output 30% without losing required API.
+Reduce đầu ra (output / 출력) 30% without losing required API.
 
 ---
 
 # 154. Master Self-Test
 
-1. Canonical module URL là gì?
-2. Vì sao module load once?
-3. cấu hình (configuration) được áp lúc nào?
-4. Vì sao configure-after-load fail?
-5. Tool module khác CSS side-effect module?
+1. chuẩn gốc (canonical / 정본) mô-đun (module / 모듈) URL là gì?
+2. Vì sao mô-đun (module / 모듈) tải (load / 로드) once?
+3. cấu hình (configuration / 구성) được áp lúc nào?
+4. Vì sao configure-after-load thất bại (fail / 실패)?
+5. công cụ (tool / 도구) mô-đun (module / 모듈) khác CSS side-effect mô-đun (module / 모듈)?
 6. `meta.load-css` khác `@use`?
 7. Reflection APIs phù hợp khi nào?
-8. Argument danh sách (list) khác normal danh sách (list)?
-9. map khóa–giá trị (map) list-like behavior có pitfall gì?
-10. Deep merge cần policy gì?
-11. Unit algebra ảnh hưởng hàm (function) design ra sao?
+8. Argument danh sách (list / 목록) khác normal danh sách (list / 목록)?
+9. map khóa–giá trị (map) list-like hành vi (behavior / 동작) có pitfall gì?
+10. Deep merge cần chính sách (policy / 정책) gì?
+11. đơn vị (unit / 단위) algebra ảnh hưởng hàm (function / 함수) thiết kế (design / 설계) ra sao?
 12. Sass calculation khác number?
 13. Vì sao interpolate late?
-14. Color space làm old color helpers problematic thế nào?
+14. Color không gian (space / 공간) làm old color helpers problematic thế nào?
 15. hợp nhất bộ chọn (selector unification) là gì?
-16. `@extend` không phải khai báo (declaration) copy vì sao?
-17. Module dependency cycle sửa thế nào?
-18. Sass module vs CSS layer?
-19. Modern JS API dùng cho gì?
+16. `@extend` không phải khai báo (declaration) bản sao (copy / 복사) vì sao?
+17. mô-đun (module / 모듈) phụ thuộc (dependency / 의존성) cycle sửa thế nào?
+18. Sass mô-đun (module / 모듈) vs CSS tầng (layer / 계층)?
+19. hiện đại (modern / 현대적) JS API dùng cho gì?
 20. Custom importer cần canonicalize vì sao?
-21. Custom hàm (function) có portability cost gì?
-22. Compile hiệu năng (performance) bottleneck nào?
-23. Vì sao source size không đại diện output size?
-24. Sass Migrator không thay kiến trúc (architecture) review vì sao?
-25. Private config trạng thái ngừng khuyến nghị (deprecation) nói gì về API design?
-26. Global built-in trạng thái ngừng khuyến nghị (deprecation) liên quan CSS compatibility thế nào?
+21. Custom hàm (function / 함수) có portability chi phí (cost / 비용) gì?
+22. Compile hiệu năng (performance / 성능) bottleneck nào?
+23. Vì sao nguồn (source / 소스) kích thước (size / 크기) không đại diện đầu ra (output / 출력) kích thước (size / 크기)?
+24. Sass Migrator không thay kiến trúc (architecture / 아키텍처) rà soát (review / 검토) vì sao?
+25. Private cấu hình (config / 설정) trạng thái ngừng khuyến nghị (deprecation) nói gì về API thiết kế (design / 설계)?
+26. toàn cục (global / 전역) built-in trạng thái ngừng khuyến nghị (deprecation) liên quan CSS tính tương thích (compatibility / 호환성) thế nào?
 27. Legacy `if()` trạng thái ngừng khuyến nghị (deprecation) liên quan CSS evolution ra sao?
-28. `--` Sass hàm (function)/khối trộn tái sử dụng (mixin) names vì sao đã ngừng khuyến nghị (deprecated)?
-29. Token schema validation thiết kế sao?
-30. Generated CSS serialization policy cần gì?
-31. External token source nên integrate thế nào?
+28. `--` Sass hàm (function / 함수)/khối trộn tái sử dụng (mixin) names vì sao đã ngừng khuyến nghị (deprecated)?
+29. đơn vị từ (token / 토큰) lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) thiết kế sao?
+30. Generated CSS serialization chính sách (policy / 정책) cần gì?
+31. bên ngoài (external / 외부) đơn vị từ (token / 토큰) nguồn (source / 소스) nên integrate thế nào?
 32. Sass testing khác visual testing?
-33. Package nên expose Sass + CSS entrypoints ra sao?
-34. Version matrix cần khi nào?
-35. Upgrade Sass cần test gì?
+33. gói (package / 패키지) nên expose Sass + CSS entrypoints ra sao?
+34. phiên bản (version / 버전) ma trận (matrix / 행렬) cần khi nào?
+35. Upgrade Sass cần kiểm thử (test / 테스트) gì?
 36. khối trộn tái sử dụng (mixin) duplication vs tiện ích (utility) tradeoff?
-37. Feature flag thời điểm biên dịch (compile-time) khác thời gian chạy (runtime)?
-38. Layer-aware Sass library có lợi gì?
-39. Khi nào Sass abstraction đã quá mức?
-40. Khi nào bỏ Sass để dùng native CSS?
+37. cờ tính năng (feature flag / 기능 플래그) thời điểm biên dịch (compile-time) khác thời gian chạy (runtime / 런타임)?
+38. Layer-aware Sass thư viện (library / 라이브러리) có lợi gì?
+39. Khi nào Sass lớp trừu tượng (abstraction / 추상화) đã quá mức?
+40. Khi nào bỏ Sass để dùng bản địa (native / 네이티브) CSS?
 
 ---
 
@@ -2676,15 +2679,15 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - modern modules,
 - các khối trộn tái sử dụng (mixins)/các hàm (functions),
 - các map khóa–giá trị (maps),
-- kiến trúc (architecture),
+- kiến trúc (architecture / 아키텍처),
 - clean deprecations.
 
 ## Sass Library Engineer
 
 Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - facade API,
-- cấu hình (configuration),
-- validation,
+- cấu hình (configuration / 구성),
+- kiểm tra hợp lệ (validation / 검증),
 - các bộ chọn (selectors)/meta,
 - tests,
 - versioning.
@@ -2695,21 +2698,21 @@ Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có
 - JS API,
 - importer,
 - custom các hàm (functions),
-- canonical URLs,
-- compile diagnostics/hiệu năng (performance).
+- chuẩn gốc (canonical / 정본) URLs,
+- compile diagnostics/hiệu năng (performance / 성능).
 
 ## Master
 Có thể:
 - thiết kế thời điểm biên dịch (compile-time) API,
-- migrate legacy system,
-- explain trình biên dịch (compiler)/module behavior,
-- predict output cost,
-- respond to CSS/Sass language evolution,
+- migrate legacy hệ thống (system / 시스템),
+- explain trình biên dịch (compiler / 컴파일러)/mô-đun (module / 모듈) hành vi (behavior / 동작),
+- predict đầu ra (output / 출력) chi phí (cost / 비용),
+- respond to CSS/Sass ngôn ngữ (language / 언어) evolution,
 - biết khi nào **không dùng Sass**.
 
 ---
 
-# 156. Modern 2026 Watchlist
+# 156. hiện đại (modern / 현대적) 2026 Watchlist
 
 Theo dõi official Sass Breaking Changes cho:
 ```text
@@ -2725,11 +2728,11 @@ plain CSS function compatibility
 mixed declaration semantics
 ```
 
-Đừng học version-specific workaround như permanent pattern.
+Đừng học version-specific workaround như permanent mẫu (pattern / 패턴).
 
 ---
 
-# 157. Production Checklist
+# 157. môi trường vận hành (production / 운영 환경) Checklist
 
 Before merge:
 
@@ -2753,14 +2756,14 @@ Before merge:
 
 ---
 
-# 158. Reference map khóa–giá trị (map)
+# 158. tham chiếu (reference / 참조) map khóa–giá trị (map)
 
 Official:
 - https://sass-lang.com/documentation/
 - https://sass-lang.com/documentation/at-rules/use/
 - https://sass-lang.com/documentation/at-rules/forward/
 - https://sass-lang.com/documentation/at-rules/mixin/
-- https://sass-lang.com/documentation/at-rules/function/
+- https://sass-lang.com/documentation/at-rules/hàm (function / 함수)/
 - https://sass-lang.com/documentation/modules/
 - https://sass-lang.com/documentation/modules/meta/
 - https://sass-lang.com/documentation/modules/selector/
@@ -2774,23 +2777,23 @@ Official:
 
 ---
 
-# 161. đồ thị mô-đun (module graph) Review — checklist ở mức library/tooling specialist
+# 161. đồ thị mô-đun (module graph) rà soát (review / 검토) — checklist ở mức thư viện (library / 라이브러리)/tooling specialist
 
-Khi review một Sass package, hãy vẽ dependency graph thay vì chỉ nhìn folder tree. Mỗi node nên được phân loại: tool-only, style-emitting, cấu hình (configuration) source hay facade/entry point. Cycle hoặc dependency ngược từ low-level token module lên component module là dấu hiệu boundary sai. Nếu một tool module cần component biến (variable) để hoạt động, ownership đang bị đảo.
+Khi rà soát (review / 검토) một Sass gói (package / 패키지), hãy vẽ phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) thay vì chỉ nhìn folder cây (tree / 트리). Mỗi nút (node / 노드) nên được phân loại: tool-only, style-emitting, cấu hình (configuration / 구성) nguồn (source / 소스) hay facade/entry điểm (point / 지점). Cycle hoặc phụ thuộc (dependency / 의존성) ngược từ low-level đơn vị từ (token / 토큰) mô-đun (module / 모듈) lên thành phần (component / 컴포넌트) mô-đun (module / 모듈) là dấu hiệu ranh giới (boundary / 경계) sai. Nếu một công cụ (tool / 도구) mô-đun (module / 모듈) cần thành phần (component / 컴포넌트) biến (variable) để hoạt động, quyền sở hữu (ownership / 소유권) đang bị đảo.
 
-`@use` bảo đảm module được evaluate một lần theo canonical URL, nhưng canonicalization/importer behavior vẫn quan trọng trong library tooling. Hai URL khác nhau trỏ cùng logical module cần được importer canonicalize đúng để tránh duplicate module identities. Đây là lý do custom importer/package design thuộc master-level Sass chứ không chỉ syntax.
+`@use` bảo đảm mô-đun (module / 모듈) được evaluate một lần theo chuẩn gốc (canonical / 정본) URL, nhưng canonicalization/importer hành vi (behavior / 동작) vẫn quan trọng trong thư viện (library / 라이브러리) tooling. Hai URL khác nhau trỏ cùng logical mô-đun (module / 모듈) cần được importer canonicalize đúng để tránh duplicate mô-đun (module / 모듈) identities. Đây là lý do custom importer/gói (package / 패키지) thiết kế (design / 설계) thuộc master-level Sass chứ không chỉ cú pháp (syntax / 문법).
 
-chuyển đổi (migration) từ `@import` nên được làm theo graph: xác định globals thật sự là public config, globals nào là accidental coupling, tách facade, rồi mới chạy migrator/replace syntax. Chuyển máy móc `@import` thành `@use as *` giữ lại global không gian tên (namespace) problem và bỏ lỡ phần lớn lợi ích hệ mô-đun (module system).
+chuyển đổi (migration) từ `@import` nên được làm theo đồ thị (graph / 그래프): xác định globals thật sự là công khai (public / 공개) cấu hình (config / 설정), globals nào là accidental coupling, tách facade, rồi mới chạy migrator/replace cú pháp (syntax / 문법). Chuyển máy móc `@import` thành `@use as *` giữ lại toàn cục (global / 전역) không gian tên (namespace / 네임스페이스) bài toán (problem / 문제) và bỏ lỡ phần lớn lợi ích hệ mô-đun (module system).
 
-Generated CSS là acceptance test cuối cùng. Sau chuyển đổi (migration), diff bộ chọn (selector) count, khai báo (declaration) duplication, layer/thứ tự nguồn (source order) và bundle bytes; compile success không đủ chứng minh behavior giữ nguyên.
+Generated CSS là acceptance kiểm thử (test / 테스트) cuối cùng. Sau chuyển đổi (migration), diff bộ chọn (selector) count, khai báo (declaration) duplication, tầng (layer / 계층)/thứ tự nguồn (source order) và bundle bytes; compile success không đủ chứng minh hành vi (behavior / 동작) giữ nguyên.
 
 ---
 
 # Kết luận
 
-“Master SCSS” không có nghĩa biến Sass thành programming language phức tạp nhất có thể.
+“Master SCSS” không có nghĩa biến Sass thành programming ngôn ngữ (language / 언어) phức tạp nhất có thể.
 
-Maturity path:
+Maturity đường dẫn (path / 경로):
 
 ```text
 Beginner:
@@ -2818,3 +2821,5 @@ Use Sass to make CSS authoring safer.
 Never make CSS behavior harder to understand
 just because Sass can generate it.
 ```
+
+> **Bàn giao:** Sau **Master**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [SCSS Beginner to Senior 2026](./SCSS_Beginner_to_Senior_2026.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

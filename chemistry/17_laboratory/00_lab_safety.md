@@ -1,5 +1,8 @@
 # An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm
 
+> **Mạch đọc:** Đọc **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mối nguy, phơi nhiễm và rủi ro** sang **Hệ phân cấp kiểm soát**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **An toàn phòng thí nghiệm (laboratory safety / 실험실 안전)** không phải tập hợp các câu “đừng làm X”. Nó là một dạng **kỹ thuật quản lý rủi ro (risk engineering)**: nhận diện mối nguy, hiểu đường phơi nhiễm, thiết kế lại thao tác để khả năng hỏng thấp hơn và hậu quả nhỏ hơn nếu sự cố vẫn xảy ra. An toàn tốt bắt đầu trước khi mở chai hóa chất.
 
 ## Mối nguy, phơi nhiễm và rủi ro
@@ -8,7 +11,7 @@
 
 **Phơi nhiễm (exposure)** mô tả đường tiếp xúc, cường độ và thời gian.
 
-**Rủi ro (risk)** phụ thuộc cả hai.
+**rủi ro (risk / 위험)** phụ thuộc cả hai.
 
 Một thuốc thử rất độc nhưng được giữ kín trong bình tương thích có thể tạo rủi ro thấp hơn cùng chất đó khi bị tạo aerosol trong lúc chuyển mẫu.
 
@@ -82,7 +85,7 @@ Tấm che mặt thường là lớp bổ sung chứ không thay thế bảo vệ
 
 ## SDS — nguồn thông tin, không phải thủ tục hình thức
 
-**Phiếu dữ liệu an toàn (Safety Data Sheet, SDS)** chứa thông tin về phân loại mối nguy, kiểm soát phơi nhiễm, tính chất vật lý, chất không tương thích, sơ cứu, ứng phó cháy, xử lý tràn và thải bỏ.
+**Phiếu dữ liệu an toàn (Safety data Sheet, SDS)** chứa thông tin về phân loại mối nguy, kiểm soát phơi nhiễm, tính chất vật lý, chất không tương thích, sơ cứu, ứng phó cháy, xử lý tràn và thải bỏ.
 
 Cần đọc những phần liên quan trực tiếp tới thao tác thực tế trước khi bắt đầu thí nghiệm.
 
@@ -96,7 +99,7 @@ Biểu tượng cho biết nhóm mối nguy chứ không phải toàn bộ đán
 
 Lưu trữ nên tách theo nhóm không tương thích thay vì chỉ sắp mọi chai theo bảng chữ cái.
 
-Các cặp cần chú ý ở cấp khái niệm gồm chất oxy hóa với nhiên liệu/chất khử; acid với base hoặc kim loại phản ứng; chất phản ứng với nước với nguồn ẩm; acid với một số muối có thể giải phóng khí độc; và dung môi có nguy cơ tạo peroxide khi lưu trữ lâu.
+Các cặp cần chú ý ở cấp khái niệm gồm chất oxy hóa với nhiên liệu/chất khử; acid với cơ sở (base / 기반) hoặc kim loại phản ứng; chất phản ứng với nước với nguồn ẩm; acid với một số muối có thể giải phóng khí độc; và dung môi có nguy cơ tạo peroxide khi lưu trữ lâu.
 
 Thông tin cụ thể trong SDS và quy trình của cơ sở luôn quan trọng hơn quy tắc tổng quát.
 
@@ -124,7 +127,7 @@ Vì vậy chúng cần được tách khỏi nhiên liệu hữu cơ, chất kh�
 
 ## Chất ăn mòn
 
-Acid và base mạnh có thể làm tổn thương mô và vật liệu.
+Acid và cơ sở (base / 기반) mạnh có thể làm tổn thương mô và vật liệu.
 
 Một số acid đậm đặc còn có tính oxy hóa, khử nước hoặc dễ bay hơi, vì vậy nhãn “acid” che giấu nhiều mối nguy khác nhau.
 
@@ -224,7 +227,7 @@ Với phơi nhiễm hóa chất, khử nhiễm nhanh thường rất quan trọn
 
 Bình chất thải phải tương thích hóa học và được ghi nhãn rõ.
 
-Các dòng không tương thích phải được tách. Cách phân loại có thể gồm dung môi halogen hóa/không halogen, chất thải nước acid/base, kim loại nặng, chất oxy hóa/phản ứng hoặc chất rắn nhiễm bẩn.
+Các dòng không tương thích phải được tách. Cách phân loại có thể gồm dung môi halogen hóa/không halogen, chất thải nước acid/cơ sở (base / 기반), kim loại nặng, chất oxy hóa/phản ứng hoặc chất rắn nhiễm bẩn.
 
 Nhóm cụ thể phụ thuộc quy định địa phương và hệ thống của cơ sở.
 
@@ -319,3 +322,5 @@ Không. Thành công trong quá khứ không loại bỏ các chế độ hỏng
 Làm việc an toàn trong phòng thí nghiệm là **thiết kế nhiều lớp hàng rào quanh một hệ có năng lượng hóa học và đường phơi nhiễm**. Hãy nhận diện chế độ hỏng, giảm mối nguy ngay từ nguồn, bao chứa phần còn lại, làm sai lệch trở nên dễ phát hiện và bảo đảm có cách dừng thí nghiệm an toàn khi điều kiện không còn như dự kiến.
 
 Xem tiếp: [Dụng cụ thủy tinh và thiết bị](./01_glassware_and_instruments.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 glassware and instruments](./01_glassware_and_instruments.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)
 
+> **Mạch đọc:** Đặt **Loại hình công ty và phân loại quy mô tại Hàn Quốc (Company Forms & Size Classes / 회사 형태와 기업 규모)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hình thức pháp lý không chỉ là thủ tục giấy tờ** sang **Năm loại hình công ty chính theo luật thương mại Hàn Quốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Trong đời sống hàng ngày, người ta thường gọi mọi tổ chức kinh doanh là “công ty”. Tuy nhiên, khi đọc hợp đồng, DART, tin tuyển dụng hoặc chính sách hỗ trợ, cần phân biệt ít nhất ba tầng: **pháp nhân (legal entity / 법인)** nào đang tồn tại, pháp nhân đó thuộc **nhóm quy mô (size class / 기업 규모)** nào, và nó có nằm trong một **tập đoàn doanh nghiệp (business group / 기업집단)** hay không.
 
 Ba câu hỏi này giúp tránh những nhầm lẫn phổ biến như “Samsung là một công ty”, “주식회사 nghĩa là công ty niêm yết” hoặc “một công ty con nhỏ của chaebol chắc chắn là doanh nghiệp vừa và nhỏ”.
@@ -24,7 +27,7 @@ Trong `합명회사`, các thành viên thường tham gia trực tiếp hơn v�
 
 ## 합자회사: kết hợp thành viên vô hạn và hữu hạn
 
-`합자회사` kết hợp thành viên chịu trách nhiệm vô hạn với thành viên chịu trách nhiệm hữu hạn. Logic kinh tế của nó là tách tương đối giữa người trực tiếp điều hành và người chủ yếu cung cấp vốn. Tuy nhiên, các tập đoàn hiện đại quy mô lớn thường không sử dụng hình thức này làm cấu trúc mặc định.
+`합자회사` kết hợp thành viên chịu trách nhiệm vô hạn với thành viên chịu trách nhiệm hữu hạn. lô-gic (logic / 논리) kinh tế của nó là tách tương đối giữa người trực tiếp điều hành và người chủ yếu cung cấp vốn. Tuy nhiên, các tập đoàn hiện đại quy mô lớn thường không sử dụng hình thức này làm cấu trúc mặc định.
 
 ## 유한책임회사: trách nhiệm hữu hạn với cấu trúc linh hoạt
 
@@ -168,7 +171,7 @@ Nhãn quy mô chỉ cung cấp một số dấu hiệu ban đầu chứ không q
 
 Chất lượng thực tế phụ thuộc vào đội nhóm, đơn vị kinh doanh và vai trò cụ thể, không chỉ vào phân loại pháp lý của công ty.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Khi gặp một công ty Hàn Quốc, hãy giải quyết ba tầng: **pháp nhân → nhóm quy mô → bối cảnh tập đoàn/quyền kiểm soát**. Hình thức pháp lý cho biết công ty tồn tại như thế nào; nhóm quy mô cho biết bối cảnh chính sách–kinh tế; tập đoàn cho biết mạng lưới kiểm soát.
 
@@ -205,3 +208,5 @@ Nguồn cuối bài dùng để xác minh định nghĩa pháp lý, tiêu chí p
 - Bộ Doanh nghiệp vừa và nhỏ và Khởi nghiệp Hàn Quốc: thống kê cơ bản SME năm 2024, công bố năm 2026.
 
 Đọc tiếp [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md), [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`07_startups_venture_and_scaleups.md`](./07_startups_venture_and_scaleups.md) và [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md).
+
+> **Bàn giao:** Sau **Nguồn và liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

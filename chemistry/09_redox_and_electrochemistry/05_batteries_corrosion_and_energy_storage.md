@@ -1,5 +1,8 @@
 # Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật
 
+> **Mạch đọc:** Đọc **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cell, battery và lưu trữ điện hóa** sang **Năng lượng và công suất là hai đại lượng khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Pin điện hóa (battery / 전지)** biến năng lượng tự do hóa học thành công điện bằng cách tách quá trình oxy hóa và khử về các điện cực khác nhau. Tuy nhiên một pin thực tế không chỉ gồm hai bán phản ứng. Hiệu năng phụ thuộc đồng thời vào nhiệt động lực học, động học điện cực, vận chuyển ion, chuyển pha, bề mặt phân cách, nhiệt và quá trình suy giảm vật liệu.
 
 ## Cell, battery và lưu trữ điện hóa
@@ -70,7 +73,7 @@ Các cặp oxy hóa-khử như \(Co^{3+}/Co^{4+}\), \(Ni^{2+}/Ni^{4+}\) hoặc \
 Điện áp cao hơn có thể tăng mật độ năng lượng:
 
 \[
-Energy\approx Voltage\times Capacity
+năng lượng (energy / 에너지)\approx Voltage\times sức chứa (capacity / 용량)
 \]
 
 nhưng vận hành ở điện áp cao cũng làm quá trình oxy hóa chất điện ly và suy giảm bề mặt phân cách nghiêm trọng hơn.
@@ -224,3 +227,5 @@ Không. Chất điện ly rắn có thể giảm một số rủi ro nhưng bề
 Pin là **mạng phản ứng oxy hóa-khử được thiết kế để hoạt động thuận nghịch và hữu ích**; ăn mòn là **mạng oxy hóa-khử tự phát xảy ra ở nơi ta không mong muốn**. Trong cả hai trường hợp, hiệu năng được quyết định bởi nhiệt động lực học, động học, vận chuyển, bề mặt phân cách và cơ học vật liệu.
 
 Xem thêm: [Vật liệu từ liên kết hóa học](../14_materials_and_polymer_chemistry/00_materials_from_chemical_bonding.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

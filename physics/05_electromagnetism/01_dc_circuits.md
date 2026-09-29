@@ -1,5 +1,8 @@
 # Dòng điện, điện trở, Kirchhoff và mạch DC
 
+> **Mạch đọc:** Đọc **Dòng điện, điện trở, Kirchhoff và mạch DC** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Dòng điện là tốc độ truyền điện tích** sang **Vận tốc trôi và tốc độ truyền tín hiệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Mạch điện một chiều là mô hình mức hệ thống của điện từ học. Nó thay các trường phân bố trong không gian bằng một số biến như điện áp, dòng điện, điện trở và điện dung. Mô hình này cực kỳ hữu ích, nhưng chỉ đúng khi kích thước mạch và tốc độ biến thiên cho phép bỏ qua độ trễ lan truyền đáng kể.
 
 ## Dòng điện là tốc độ truyền điện tích
@@ -374,7 +377,7 @@ Khi kích thước mạch trở nên đáng kể so với bước sóng tín hi�
 
 Một dây dài ở GHz không thể luôn được xem chỉ là một điện trở hoặc một kết nối lý tưởng.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Mạch DC là cách nén điện từ học thành một mạng các phần tử. Dòng điện là thông lượng điện tích, điện áp là chênh lệch năng lượng trên mỗi điện tích, KCL là bảo toàn điện tích và KVL là xấp xỉ quasi-static của trường điện bảo toàn.
 
@@ -398,8 +401,10 @@ Chỉ ở DC xác lập lý tưởng. Trong quá trình nạp/xả hoặc tín h
 
 Không. Quy tắc mạch tập trung là xấp xỉ của Maxwell; ở tần số cao hoặc kích thước lớn phải tính lan truyền và cảm ứng.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Điện tĩnh học](00_electrostatics.md), [Bảo toàn và thang đo](../00_foundations/04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Mạch AC và RLC](02_ac_rlc_circuits.md), [Đường truyền và ống dẫn sóng](05_transmission_lines_waveguides.md), [Bán dẫn và thiết bị](../10_condensed_matter_devices/01_semiconductors_devices.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

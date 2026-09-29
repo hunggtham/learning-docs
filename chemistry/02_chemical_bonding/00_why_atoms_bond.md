@@ -1,5 +1,8 @@
 # Vì sao nguyên tử tạo liên kết?
 
+> **Mạch đọc:** Đọc **Vì sao nguyên tử tạo liên kết?** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Khi hai nguyên tử tiến lại gần nhau** sang **Thế năng và độ bền**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Liên kết hóa học (chemical bond / 화학 결합)** tồn tại khi một cách sắp xếp các hạt nhân và electron có tổng năng lượng thấp hơn đáng kể so với các mảnh tách rời, tạo nên một cấu trúc đủ ổn định và có thời gian tồn tại đủ dài để được xem là một tiểu phần hóa học.
 
 Câu “nguyên tử liên kết để đạt octet” có thể hữu ích ở giai đoạn đầu nhưng đảo ngược nguyên nhân và kết quả. Nguyên tử không có mục tiêu “đạt octet”. Octet xuất hiện như một mẫu lặp vì nhiều hệ thuộc nhóm chính có cấu hình electron hóa trị đặc biệt ổn định khi tương tác liên kết làm giảm tổng năng lượng.
@@ -161,3 +164,5 @@ Nguyên tử không có mục tiêu. Liên kết xuất hiện khi cách sắp x
 Hãy coi liên kết là một bài toán về **bề mặt năng lượng của hệ hạt nhân + electron**. Khi hai hay nhiều nguyên tử tiến gần, lực hút, lực đẩy, cấu trúc obitan và các ràng buộc lượng tử cạnh tranh nhau. Nếu tồn tại một cực tiểu đủ sâu trên bề mặt năng lượng, một trạng thái liên kết có thể hình thành.
 
 Các chương tiếp theo sẽ lần lượt xem xét cách electron được tổ chức trong liên kết ion và liên kết cộng hóa trị.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 ionic bonding](./01_ionic_bonding.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

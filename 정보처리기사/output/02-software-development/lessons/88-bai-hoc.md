@@ -2,7 +2,7 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)** khi chuyển sang phần tiếp theo.
 
@@ -20,7 +20,9 @@ Mục đích của bài này là hiểu **핵심 034: 재사용 기법 (Reuse Te
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** và nối nó với **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -43,7 +45,5 @@ Mục đích của bài này là hiểu **핵심 034: 재사용 기법 (Reuse Te
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Reverse Engineering (Dịch ngược) = Từ Code -> Bản thiết kế. Migration = Chuyển nhà (môi trường).
 
 ---
-
-# Chapter 3. 제품 소프트웨어 패키징 (Product Software Packaging)
 
 Như vậy, **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

@@ -1,6 +1,8 @@
-# 12. KIIP ↔ Korean Culture / Korean History Cross Reference
+# 12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)
 
-Folder KIIP là lớp ôn thi. Khi cần hiểu sâu, dùng các chapter cha thay vì kéo toàn bộ kiến thức sâu vào note thi.
+> **Mạch đọc:** Đặt **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Culture map** sang **lịch sử (history / 이력) map**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Folder KIIP là lớp ôn thi. Khi cần hiểu sâu, dùng các chapter cha thay vì kéo toàn bộ kiến thức sâu vào ghi chú (note / 노트) thi.
 
 ## Culture map
 
@@ -23,7 +25,10 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 인구 변화 | [`../15_contemporary_change_demography_migration.md`](../15_contemporary_change_demography_migration.md) |
 | 시민사회·민주주의 | [`../25_civic_media_public_sphere_protest.md`](../25_civic_media_public_sphere_protest.md) |
 
-## History map
+
+> **Chuyển mạch:** Từ **Culture map**, ta sang **lịch sử (history / 이력) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Lịch sử (history / 이력) map
 
 Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → tự kiểm tra thay vì học thuộc danh sách rời.
 
@@ -44,6 +49,11 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 산업화 | [`../../korean_history/19_developmental_state_industrialization_1961_1979.md`](../../korean_history/19_developmental_state_industrialization_1961_1979.md) |
 | 민주화 | [`../../korean_history/20_gwangju_and_democratization_1987.md`](../../korean_history/20_gwangju_and_democratization_1987.md) |
 
+
+> **Chuyển mạch:** Từ **lịch sử (history / 이력) map**, ta sang **Cách dùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cách dùng
 
 `KIIP note → thấy fact khó nhớ → mở chapter sâu → hiểu nguyên nhân/cơ chế → quay lại KIIP → recall/contrast/oral`.
+
+> **Bàn giao:** Sau **Cách dùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

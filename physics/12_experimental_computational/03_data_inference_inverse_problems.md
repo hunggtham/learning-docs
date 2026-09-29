@@ -1,5 +1,8 @@
 # Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý
 
+> **Mạch đọc:** Đọc **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phép đo không kết thúc khi có một con số** sang **Luôn bắt đầu bằng mô hình thuận**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Phép đo không kết thúc khi có một con số
 
 Detector có thể tạo điện áp, số đếm, phổ hoặc ảnh. Nhưng câu hỏi vật lý thường liên quan tới đại lượng không quan sát trực tiếp như:
@@ -38,7 +41,7 @@ Bài toán ngược (inverse problem) hỏi hướng ngược lại:
 
 > dữ liệu đã quan sát cho phép suy ra gì về `\theta` hoặc nguồn ẩn?
 
-Nếu forward model sai, optimizer tốt đến đâu cũng chỉ tìm tham số tốt nhất cho một mô hình sai.
+Nếu forward mô hình (model / 모델) sai, optimizer tốt đến đâu cũng chỉ tìm tham số tốt nhất cho một mô hình sai.
 
 ## Least squares xuất hiện từ giả định nhiễu Gaussian
 
@@ -64,7 +67,7 @@ Tối đa hóa likelihood tương đương tối thiểu hóa
 
 Vì vậy least squares không phải “phương pháp mặc định luôn đúng”. Nó xuất hiện tự nhiên khi mô hình nhiễu Gaussian phù hợp.
 
-Nếu dữ liệu là số đếm Poisson, có outlier đuôi nặng hoặc có tương quan, loss function phù hợp sẽ khác.
+Nếu dữ liệu là số đếm Poisson, có outlier đuôi nặng hoặc có tương quan, hàm mất mát (loss function / 손실 함수) phù hợp sẽ khác.
 
 ## Sai số có tương quan và ma trận covariance
 
@@ -79,9 +82,9 @@ C^{-1}
 
 Bỏ qua correlation có thể:
 
-- đánh giá thấp uncertainty;
+- đánh giá thấp bất định (uncertainty / 불확실성);
 - gán trọng số sai cho dữ liệu;
-- làm tham số bị bias.
+- làm tham số bị độ lệch (bias / 편향).
 
 Sai số hiệu chuẩn chung là ví dụ điển hình tạo correlation giữa nhiều điểm dữ liệu.
 
@@ -94,12 +97,12 @@ Hessian của negative log-likelihood mô tả độ cong cục bộ. Nghịch �
 Tuy nhiên xấp xỉ này có thể thất bại khi:
 
 - posterior lệch mạnh;
-- có nhiều mode;
+- có nhiều chế độ (mode / 모드);
 - tham số bị chặn bởi biên vật lý;
 - mô hình phi tuyến mạnh;
 - tồn tại degeneracy dài và cong.
 
-Khi đó cần profile likelihood, bootstrap, Markov Chain Monte Carlo hoặc phương pháp sampling khác.
+Khi đó cần profile likelihood, bootstrap, Markov chuỗi (chain / 사슬) Monte Carlo hoặc phương pháp sampling khác.
 
 ## Suy luận Bayes
 
@@ -115,7 +118,7 @@ Trong đó:
 - `p(D|\theta)` là likelihood từ mô hình đo;
 - `p(\theta)` là prior;
 - `p(\theta|D)` là posterior;
-- `p(D)` là evidence chuẩn hóa.
+- `p(D)` là bằng chứng (evidence / 증거) chuẩn hóa.
 
 Prior không phải giấy phép để đưa ý kiến tùy ý vào kết quả. Nó phải có lý do, được khai báo rõ và nên được kiểm tra độ nhạy.
 
@@ -153,7 +156,7 @@ Với hệ tuyến tính
 A\mathbf x=\mathbf y,
 ```
 
-nếu `A` có singular value rất nhỏ, phép nghịch đảo trực tiếp sẽ khuếch đại mạnh thành phần noise theo các hướng tương ứng.
+nếu `A` có singular giá trị (value / 값) rất nhỏ, phép nghịch đảo trực tiếp sẽ khuếch đại mạnh thành phần noise theo các hướng tương ứng.
 
 ## Regularization
 
@@ -176,7 +179,7 @@ Hạng đầu buộc nghiệm khớp dữ liệu. Hạng thứ hai đưa vào gi
 
 Regularization không phục hồi thông tin đã mất một cách thần kỳ. Nó thêm cấu trúc tiên nghiệm để chọn một nghiệm ổn định trong tập nghiệm còn phù hợp với dữ liệu nhiễu.
 
-## Singular Value Decomposition
+## Singular giá trị (value / 값) Decomposition
 
 Phân rã SVD là
 
@@ -184,7 +187,7 @@ Phân rã SVD là
 A=U\Sigma V^T.
 ```
 
-Các singular value nhỏ tương ứng với những hướng trong không gian tham số mà dữ liệu gần như không ràng buộc được.
+Các singular giá trị (value / 값) nhỏ tương ứng với những hướng trong không gian tham số mà dữ liệu gần như không ràng buộc được.
 
 SVD vì vậy là công cụ quan trọng để chẩn đoán:
 
@@ -199,7 +202,7 @@ Thêm tham số thường giúp giảm residual trên tập dữ liệu đã dù
 
 > cải thiện đó có đủ để biện minh cho độ phức tạp tăng thêm không?
 
-Các công cụ như AIC, BIC, likelihood-ratio test, cross-validation hoặc Bayesian evidence có giả định khác nhau.
+Các công cụ như AIC, BIC, likelihood-ratio kiểm thử (test / 테스트), cross-validation hoặc Bayesian bằng chứng (evidence / 증거) có giả định khác nhau.
 
 Không tồn tại một quy tắc “score lớn nhất chính là mô hình thật”. Chọn mô hình phải cân bằng:
 
@@ -225,20 +228,20 @@ Residual nên được kiểm tra theo:
 - cường độ;
 - các biến điều khiển khác.
 
-Pattern có cấu trúc trong residual thường là dấu hiệu:
+Mẫu (pattern / 패턴) có cấu trúc trong residual thường là dấu hiệu:
 
 - thiếu physics;
 - calibration sai;
-- noise model sai;
+- noise mô hình (model / 모델) sai;
 - correlation chưa được mô hình hóa.
 
-Reduced chi-square gần 1 không tự động chứng minh mô hình đúng. Một mô hình sai với uncertainty bị thổi phồng cũng có thể cho chỉ số đẹp.
+Reduced chi-square gần 1 không tự động chứng minh mô hình đúng. Một mô hình sai với bất định (uncertainty / 불확실성) bị thổi phồng cũng có thể cho chỉ số đẹp.
 
-## Detection significance và look-elsewhere effect
+## Detection significance và look-elsewhere tác động (effect / 효과)
 
 Nếu quét hàng nghìn tần số, vị trí hoặc khối lượng để tìm peak, xác suất có ít nhất một fluctuation lớn tăng lên so với một phép thử duy nhất.
 
-Đây là look-elsewhere effect.
+Đây là look-elsewhere tác động (effect / 효과).
 
 Khi báo significance phải xét số lượng và correlation giữa các phép thử.
 
@@ -246,9 +249,9 @@ P-value cũng không phải xác suất giả thuyết null là đúng. Nó là 
 
 ## Khớp tham số không đồng nghĩa với suy luận nhân quả
 
-Một correlation tốt hoặc model fit tốt không tự chứng minh quan hệ nhân quả.
+Một correlation tốt hoặc mô hình (model / 모델) fit tốt không tự chứng minh quan hệ nhân quả.
 
-Trong phòng thí nghiệm, intervention, randomization và control condition giúp tách confounder.
+Trong phòng thí nghiệm, intervention, randomization và điều khiển (control / 제어) điều kiện (condition / 조건) giúp tách confounder.
 
 Trong thiên văn hoặc địa vật lý quan sát, không thể tùy ý can thiệp vào hệ. Khi đó lập luận nhân quả cần dựa trên:
 
@@ -257,22 +260,22 @@ Trong thiên văn hoặc địa vật lý quan sát, không thể tùy ý can th
 - natural experiment;
 - dự đoán có thể kiểm tra thêm.
 
-## Simulation-based inference
+## Simulation-based suy luận (inference / 추론)
 
 Một số mô hình thuận dễ mô phỏng nhưng likelihood gần như không thể viết hoặc tính trực tiếp.
 
-Các phương pháp như Approximate Bayesian Computation, neural density estimation hoặc likelihood-free inference dùng simulation để học quan hệ giữa tham số và dữ liệu.
+Các phương pháp như Approximate Bayesian Computation, neural density estimation hoặc likelihood-free suy luận (inference / 추론) dùng simulation để học quan hệ giữa tham số và dữ liệu.
 
-Machine learning có thể rất mạnh, nhưng assumption không biến mất. Chúng chuyển sang:
+Machine học tập (learning / 학습) có thể rất mạnh, nhưng giả định (assumption / 가정) không biến mất. Chúng chuyển sang:
 
 - simulator;
 - prior;
-- training distribution;
-- architecture;
+- huấn luyện (training / 학습) phân phối (distribution / 분포);
+- kiến trúc (architecture / 아키텍처);
 - preprocessing;
 - calibration của mô hình học máy.
 
-Nếu simulator không đại diện đúng thế giới thật, inference có thể rất chính xác về mặt số nhưng sai về vật lý.
+Nếu simulator không đại diện đúng thế giới thật, suy luận (inference / 추론) có thể rất chính xác về mặt số nhưng sai về vật lý.
 
 ## Ví dụ: đo thời gian sống của quá trình phân rã
 
@@ -309,15 +312,15 @@ Giả sử ảnh đo được là
 \mathbf y=A\mathbf x+\boldsymbol\epsilon,
 ```
 
-trong đó `A` mô tả point-spread function và sampling.
+trong đó `A` mô tả point-spread hàm (function / 함수) và sampling.
 
 Nếu một số tần số không gian bị hệ quang học triệt tiêu mạnh, `A` gần mất hạng ở các hướng đó. Nghịch đảo trực tiếp làm noise bùng lên.
 
 Regularization có thể ưu tiên nghiệm trơn hoặc sparse, nhưng kết quả cuối phản ánh cả dữ liệu và prior. Đây là lý do thuật toán sharpen không thể tạo lại duy nhất thông tin mà hệ quang học chưa từng ghi nhận.
 
-## Độ bất định phải được truyền qua pipeline
+## Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)
 
-Một pipeline vật lý thường có dạng
+Một chuỗi xử lý (pipeline / 파이프라인) vật lý thường có dạng
 
 ```text
 raw signal
@@ -328,35 +331,35 @@ raw signal
 → derived quantity
 ```
 
-Uncertainty ở bước đầu có thể lan truyền, tương quan và biến dạng qua các phép biến đổi phi tuyến.
+Bất định (uncertainty / 불확실성) ở bước đầu có thể lan truyền, tương quan và biến dạng qua các phép biến đổi phi tuyến.
 
-Do đó không nên chỉ gắn error bar ở cuối. Cần theo dõi covariance hoặc sampling uncertainty xuyên suốt pipeline khi nó có ảnh hưởng đáng kể.
+Do đó không nên chỉ gắn lỗi (error / 오류) bar ở cuối. Cần theo dõi covariance hoặc sampling bất định (uncertainty / 불확실성) xuyên suốt chuỗi xử lý (pipeline / 파이프라인) khi nó có ảnh hưởng đáng kể.
 
 ## Reproducibility
 
-Một kết quả inference cần đi cùng:
+Một kết quả suy luận (inference / 추론) cần đi cùng:
 
 - nguồn và phiên bản dữ liệu;
 - calibration;
 - phương trình mô hình;
-- assumption;
-- likelihood hoặc loss;
+- giả định (assumption / 가정);
+- likelihood hoặc mất mát (loss / 손실);
 - prior hoặc regularization;
-- phiên bản code;
-- uncertainty và covariance của tham số;
-- residual/validation checks.
+- phiên bản mã (code / 코드);
+- bất định (uncertainty / 불확실성) và covariance của tham số;
+- residual/kiểm tra hợp lệ (validation / 검증) checks.
 
-Một con số best-fit không có provenance và uncertainty rất khó audit khoa học.
+Một con số best-fit không có provenance và bất định (uncertainty / 불확실성) rất khó kiểm tra (audit / 감사) khoa học.
 
 ## Miền áp dụng và giới hạn
 
-Least squares chuẩn giả sử cấu trúc error phù hợp. Hessian approximation chỉ đáng tin khi posterior gần Gaussian quanh nghiệm.
+Least squares chuẩn giả sử cấu trúc lỗi (error / 오류) phù hợp. Hessian approximation chỉ đáng tin khi posterior gần Gaussian quanh nghiệm.
 
-Bayesian posterior chỉ có ý nghĩa trong mô hình đã chỉ định; nếu likelihood hoặc forward model sai, posterior vẫn có thể hẹp nhưng sai.
+Bayesian posterior chỉ có ý nghĩa trong mô hình đã chỉ định; nếu likelihood hoặc forward mô hình (model / 모델) sai, posterior vẫn có thể hẹp nhưng sai.
 
-Regularization cải thiện ổn định bằng cách thêm thông tin hoặc constraint. Nó không loại bỏ tính không xác định cơ bản của dữ liệu.
+Regularization cải thiện ổn định bằng cách thêm thông tin hoặc ràng buộc (constraint / 제약조건). Nó không loại bỏ tính không xác định cơ bản của dữ liệu.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Dữ liệu không trực tiếp “nói tham số bằng bao nhiêu”. Quan sát đi qua nhiều lớp:
 
@@ -369,7 +372,7 @@ physical system
 → recorded data
 ```
 
-Inference cố đi ngược chuỗi này:
+Suy luận (inference / 추론) cố đi ngược chuỗi này:
 
 ```text
 data
@@ -378,7 +381,7 @@ data
 → physical interpretation
 ```
 
-Một inference tốt phải giữ lại uncertainty, degeneracy và model assumptions thay vì ép mọi thứ thành một con số duy nhất.
+Một suy luận (inference / 추론) tốt phải giữ lại bất định (uncertainty / 불확실성), degeneracy và mô hình (model / 모델) các giả định (assumptions / 가정들) thay vì ép mọi thứ thành một con số duy nhất.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -390,16 +393,18 @@ Không. Nhiều mô hình có thể fit cùng một dataset hữu hạn. Predict
 
 Không. Regularization thêm giả định. Nó giúp ổn định nhưng phải được báo cáo và kiểm tra độ nhạy.
 
-### “Machine learning loại bỏ nhu cầu về mô hình vật lý”
+### “Machine học tập (learning / 학습) loại bỏ nhu cầu về mô hình vật lý”
 
-Không. Assumption chuyển sang dữ liệu huấn luyện, simulator, architecture và preprocessing.
+Không. giả định (assumption / 가정) chuyển sang dữ liệu huấn luyện, simulator, kiến trúc (architecture / 아키텍처) và preprocessing.
 
-### “Error bar nhỏ nghĩa kết quả chắc chắn đúng”
+### “lỗi (error / 오류) bar nhỏ nghĩa kết quả chắc chắn đúng”
 
-Không. Error bar có thể chỉ phản ánh uncertainty bên trong một mô hình; systematic error hoặc model discrepancy có thể lớn hơn nhiều.
+Không. lỗi (error / 오류) bar có thể chỉ phản ánh bất định (uncertainty / 불확실성) bên trong một mô hình; systematic lỗi (error / 오류) hoặc mô hình (model / 모델) discrepancy có thể lớn hơn nhiều.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Phép đo và độ bất định](00_measurement_experiment.md), [Tín hiệu và lấy mẫu](01_signals_sampling_noise.md), [Vật lý tính toán](02_computational_physics.md).
 
 **Liên hệ tiếp:** [Quang học Fourier và bài toán tạo ảnh](../06_optics/04_fourier_imaging_instrumentation.md), [Thiên văn quan sát](../11_astrophysics_cosmology/02_observational_astrophysics_radiative_transfer.md), [Vũ trụ sơ khai](../11_astrophysics_cosmology/03_early_universe_dark_components.md), [Các liên kết kiến thức](../13_connections/00_knowledge_connections.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement experiment](./00_measurement_experiment.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

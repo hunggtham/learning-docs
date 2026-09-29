@@ -1,5 +1,8 @@
 # Các phương pháp xấp xỉ trong cơ học lượng tử: nhiễu loạn, biến phân và bán cổ điển
 
+> **Mạch đọc:** Đọc **Các phương pháp xấp xỉ trong cơ học lượng tử: nhiễu loạn, biến phân và bán cổ điển** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phân loại bài toán trước khi chọn phương pháp** sang **Lý thuyết nhiễu loạn không phụ thuộc thời gian**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Phương trình Schrödinger xác định động lực học lượng tử, nhưng biết phương trình không đồng nghĩa với việc luôn tìm được nghiệm giải tích chính xác. Phần lớn nguyên tử nhiều electron, phân tử, vật rắn và hệ tương tác nhiều hạt không có nghiệm đóng đơn giản.
 
 Vì vậy **xấp xỉ có kiểm soát (controlled approximation)** không phải phần phụ của cơ học lượng tử; nó là cách làm việc thực tế của lý thuyết.
@@ -34,7 +37,7 @@ hệ nhiều hạt với interaction phức tạp?
 → mean-field / effective theory / numerical methods
 ```
 
-Không có một approximation method tốt nhất cho mọi bài toán.
+Không có một approximation phương thức (method / 메서드) tốt nhất cho mọi bài toán.
 
 ## Lý thuyết nhiễu loạn không phụ thuộc thời gian
 
@@ -70,7 +73,7 @@ E_n^{(1)}
 =\langle n^{(0)}|V|n^{(0)}\rangle.
 ```
 
-Ý nghĩa vật lý: ở bậc thấp nhất, energy shift là giá trị kỳ vọng của perturbing interaction trên trạng thái chưa bị perturb.
+Ý nghĩa vật lý: ở bậc thấp nhất, năng lượng (energy / 에너지) shift là giá trị kỳ vọng của perturbing tương tác (interaction / 상호작용) trên trạng thái chưa bị perturb.
 
 ## Correction trạng thái bậc một
 
@@ -98,7 +101,7 @@ hoặc
 energy denominator nhỏ
 ```
 
-Do đó “`V` nhỏ” phải luôn được hiểu tương đối với relevant energy gaps.
+Do đó “`V` nhỏ” phải luôn được hiểu tương đối với relevant năng lượng (energy / 에너지) gaps.
 
 ## Correction năng lượng bậc hai
 
@@ -117,7 +120,7 @@ E_n^{(0)}-E_m^{(0)}
 
 Đây là một formula rất giàu thông tin.
 
-Nếu một state gần degenerate với `n`, denominator nhỏ và correction có thể lớn dù perturbation coefficient nhỏ.
+Nếu một trạng thái (state / 상태) gần degenerate với `n`, denominator nhỏ và correction có thể lớn dù perturbation coefficient nhỏ.
 
 Một tiêu chí heuristic là
 
@@ -128,11 +131,11 @@ Một tiêu chí heuristic là
 \right|\ll1
 ```
 
-cho các state coupling đáng kể.
+cho các trạng thái (state / 상태) coupling đáng kể.
 
-## Ví dụ: Stark effect bậc một
+## Ví dụ: Stark tác động (effect / 효과) bậc một
 
-Đặt atom trong electric field `\mathbf E`. Perturbation có dạng
+Đặt atom trong electric trường dữ liệu (field / 필드) `\mathbf E`. Perturbation có dạng
 
 ```math
 V=q\mathbf E\cdot\mathbf r.
@@ -148,19 +151,19 @@ thì first-order shift có thể bằng zero.
 
 Điều này cho thấy symmetry có thể làm correction biến mất trước cả khi cần tính integral chi tiết.
 
-Trong degenerate subspace của hydrogen, electric field lại có thể mix mạnh states cùng energy và tạo linear Stark effect.
+Trong degenerate subspace của hydrogen, electric trường dữ liệu (field / 필드) lại có thể mix mạnh states cùng năng lượng (energy / 에너지) và tạo tuyến tính (linear / 선형) Stark tác động (effect / 효과).
 
 ## Nhiễu loạn suy biến
 
-Nếu nhiều state có cùng unperturbed energy, công thức non-degenerate chứa denominator zero và không dùng được.
+Nếu nhiều trạng thái (state / 상태) có cùng unperturbed năng lượng (energy / 에너지), công thức non-degenerate chứa denominator zero và không dùng được.
 
-Ta phải project perturbation vào degenerate subspace và diagonalize matrix
+Ta phải dự án (project / 프로젝트) perturbation vào degenerate subspace và diagonalize ma trận (matrix / 행렬)
 
 ```math
 V_{ij}=\langle i|V|j\rangle.
 ```
 
-Eigenvectors mới của matrix này là những linear combinations đúng để dùng làm zeroth-order basis.
+Eigenvectors mới của ma trận (matrix / 행렬) này là những tuyến tính (linear / 선형) combinations đúng để dùng làm zeroth-order basis.
 
 Đây là bài học tổng quát:
 
@@ -171,11 +174,11 @@ near degeneracy
 
 Thay đổi basis có thể quan trọng hơn việc thêm nhiều bậc perturbation.
 
-## Level repulsion và avoided crossing
+## Mức (level / 수준) repulsion và avoided crossing
 
-Khi hai level có cùng symmetry được coupled, degeneracy thường bị tách và tạo avoided crossing khi parameter thay đổi.
+Khi hai mức (level / 수준) có cùng symmetry được coupled, degeneracy thường bị tách và tạo avoided crossing khi parameter thay đổi.
 
-Một model `2×2` đơn giản là
+Một mô hình (model / 모델) `2×2` đơn giản là
 
 ```math
 H=
@@ -198,7 +201,7 @@ E_\pm
 
 Nếu `g\ne0`, hai branch không cắt nhau tại điểm bare levels trùng nhau.
 
-Cấu trúc này xuất hiện trong atomic spectra, coupled oscillators, qubits và band theory.
+Cấu trúc này xuất hiện trong atomic spectra, coupled oscillators, qubits và band lý thuyết (theory / 이론).
 
 ## Nhiễu loạn phụ thuộc thời gian
 
@@ -208,7 +211,7 @@ Nếu Hamiltonian là
 H(t)=H_0+V(t),
 ```
 
-perturbation có thể gây transition giữa eigenstates của `H_0`.
+perturbation có thể gây chuyển tiếp (transition / 전이) giữa eigenstates của `H_0`.
 
 Amplitude bậc một từ `|i\rangle` sang `|f\rangle` có dạng
 
@@ -227,11 +230,11 @@ trong đó
 \omega_{fi}=\frac{E_f-E_i}{\hbar}.
 ```
 
-Integral cho thấy transition mạnh khi perturbation có frequency component gần energy splitting của hệ.
+Integral cho thấy chuyển tiếp (transition / 전이) mạnh khi perturbation có frequency thành phần (component / 컴포넌트) gần năng lượng (energy / 에너지) splitting của hệ.
 
 Đây là nguồn gốc của resonance trong spectroscopy.
 
-## Fermi's Golden Rule
+## Fermi's Golden quy tắc (rule / 규칙)
 
 Trong weak coupling tới continuum of final states và long-time limit phù hợp,
 
@@ -261,11 +264,11 @@ coupling strength × phase space
 
 xuất hiện rộng trong atomic transitions, scattering, carrier relaxation, nuclear decay và particle physics.
 
-Golden rule có assumptions: weak coupling, continuum gần đủ dày, Markov/long-time reasoning và transition probability chưa phá mạnh state ban đầu.
+Golden quy tắc (rule / 규칙) có các giả định (assumptions / 가정들): weak coupling, continuum gần đủ dày, Markov/long-time lập luận (reasoning / 추론) và chuyển tiếp (transition / 전이) xác suất (probability / 확률) chưa phá mạnh trạng thái (state / 상태) ban đầu.
 
 ## Variational principle
 
-Với ground-state energy chính xác `E_0`, mọi normalized trial state `|\psi\rangle` đều thỏa
+Với ground-state năng lượng (energy / 에너지) chính xác `E_0`, mọi normalized trial trạng thái (state / 상태) `|\psi\rangle` đều thỏa
 
 ```math
 \frac{\langle\psi|H|\psi\rangle}
@@ -279,13 +282,13 @@ Ta chọn một family
 |\psi(\alpha_1,\alpha_2,\ldots)\rangle
 ```
 
-rồi minimize energy expectation theo parameters.
+rồi minimize năng lượng (energy / 에너지) expectation theo parameters.
 
-Nếu trial family đủ linh hoạt, kết quả có thể gần ground state rất tốt.
+Nếu trial family đủ linh hoạt, kết quả có thể gần ground trạng thái (state / 상태) rất tốt.
 
 ## Vì sao variational bound luôn ở phía trên?
 
-Khai triển trial state theo exact eigenbasis:
+Khai triển trial trạng thái (state / 상태) theo chính xác (exact / 정확한) eigenbasis:
 
 ```math
 |\psi\rangle=\sum_n c_n|n\rangle.
@@ -297,7 +300,7 @@ Khi normalized,
 \sum_n|c_n|^2=1.
 ```
 
-Energy expectation là
+Năng lượng (energy / 에너지) expectation là
 
 ```math
 \langle H\rangle
@@ -312,19 +315,19 @@ E_n\ge E_0,
 
 nên weighted average không thể thấp hơn `E_0`.
 
-Đây là derivation đơn giản nhưng làm rõ bản chất của variational method.
+Đây là derivation đơn giản nhưng làm rõ bản chất của variational phương thức (method / 메서드).
 
 ## Ví dụ tư duy variational
 
-Với một bound system, ta có thể chọn trial wavefunction có length scale `a`.
+Với một bound hệ thống (system / 시스템), ta có thể chọn trial wavefunction có length quy mô (scale / 규모) `a`.
 
-Kinetic energy thường tăng khi state bị localize mạnh:
+Kinetic năng lượng (energy / 에너지) thường tăng khi trạng thái (state / 상태) bị localize mạnh:
 
 ```math
 K\sim\frac{\hbar^2}{ma^2}.
 ```
 
-Potential energy có thể giảm khi localization tăng.
+Potential năng lượng (energy / 에너지) có thể giảm khi localization tăng.
 
 Minimize tổng
 
@@ -332,9 +335,9 @@ Minimize tổng
 E(a)=K(a)+V(a)
 ```
 
-tạo compromise length scale tự nhiên.
+tạo compromise length quy mô (scale / 규모) tự nhiên.
 
-Đây là first-principles reasoning rất hữu ích ngay cả trước khi làm integral chính xác.
+Đây là first-principles lập luận (reasoning / 추론) rất hữu ích ngay cả trước khi làm integral chính xác.
 
 ## Adiabatic approximation
 
@@ -357,9 +360,9 @@ Nếu hệ bắt đầu ở instantaneous eigenstate và variation đủ chậm 
 \ll1.
 ```
 
-Gần degeneracy hoặc level crossing, approximation dễ thất bại.
+Gần degeneracy hoặc mức (level / 수준) crossing, approximation dễ thất bại.
 
-Adiabatic reasoning là nền cho:
+Adiabatic lập luận (reasoning / 추론) là nền cho:
 
 ```text
 Born–Oppenheimer approximation
@@ -372,9 +375,9 @@ slow parameter cycles
 
 Nuclei nặng hơn electron rất nhiều.
 
-Một first approximation là giữ nuclei gần cố định khi giải electronic problem, rồi dùng electronic energy làm effective potential cho nuclear motion.
+Một first approximation là giữ nuclei gần cố định khi giải electronic bài toán (problem / 문제), rồi dùng electronic năng lượng (energy / 에너지) làm effective potential cho nuclear motion.
 
-Chuỗi reasoning là
+Chuỗi lập luận (reasoning / 추론) là
 
 ```text
 mass scale separation
@@ -383,7 +386,7 @@ mass scale separation
 → approximate factorization
 ```
 
-Approximation thất bại mạnh hơn gần electronic degeneracy hoặc nonadiabatic transition.
+Approximation thất bại mạnh hơn gần electronic degeneracy hoặc nonadiabatic chuyển tiếp (transition / 전이).
 
 ## WKB và giới hạn bán cổ điển
 
@@ -393,13 +396,13 @@ Trong 1D,
 -\frac{\hbar^2}{2m}\psi''+V(x)\psi=E\psi.
 ```
 
-Đặt local classical momentum
+Đặt cục bộ (local / 로컬) classical momentum
 
 ```math
 p(x)=\sqrt{2m(E-V(x))}.
 ```
 
-Khi potential thay đổi chậm trên local wavelength scale, nghiệm WKB trong classically allowed region có dạng
+Khi potential thay đổi chậm trên cục bộ (local / 로컬) wavelength quy mô (scale / 규모), nghiệm WKB trong classically allowed region có dạng
 
 ```math
 \psi(x)
@@ -411,9 +414,9 @@ Khi potential thay đổi chậm trên local wavelength scale, nghiệm WKB tron
 \right).
 ```
 
-Pha là classical action chia `\hbar`.
+Pha là classical hành động (action / 동작) chia `\hbar`.
 
-Điều này nối wavefunction với Hamilton–Jacobi/action formulation của mechanics.
+Điều này nối wavefunction với Hamilton–Jacobi/hành động (action / 동작) formulation của mechanics.
 
 ## WKB tunneling
 
@@ -435,9 +438,9 @@ T\sim
 
 Đây là generalization của rectangular-barrier tunneling.
 
-Alpha decay và fusion penetration có thể được hiểu bằng cùng structure.
+Alpha decay và fusion penetration có thể được hiểu bằng cùng cấu trúc (structure / 구조).
 
-## Turning point là nơi WKB thất bại cục bộ
+## Turning điểm (point / 지점) là nơi WKB thất bại cục bộ
 
 Tại
 
@@ -451,17 +454,17 @@ ta có
 p(x)=0.
 ```
 
-WKB amplitude `1/\sqrt{p}` trở nên singular, nên approximation không còn hợp lệ ngay tại turning point.
+WKB amplitude `1/\sqrt{p}` trở nên singular, nên approximation không còn hợp lệ ngay tại turning điểm (point / 지점).
 
-Cần connection formulas hoặc local Airy-function treatment để nối hai miền.
+Cần liên kết (connection / 연결) formulas hoặc cục bộ (local / 로컬) Airy-function treatment để nối hai miền.
 
 Đây là ví dụ quan trọng: một approximation có thể rất tốt gần như mọi nơi nhưng vẫn hỏng ở một vùng nhỏ có cấu trúc đặc biệt.
 
 ## Mean-field approximation
 
-Trong many-body system, interaction của mỗi particle với mọi particle khác tạo bài toán cực lớn.
+Trong many-body hệ thống (system / 시스템), tương tác (interaction / 상호작용) của mỗi particle với mọi particle khác tạo bài toán cực lớn.
 
-Mean-field idea thay fluctuating many-body environment bằng effective average field được xác định self-consistently.
+Mean-field idea thay fluctuating many-body môi trường (environment / 환경) bằng effective average trường dữ liệu (field / 필드) được xác định self-consistently.
 
 Hartree và Hartree–Fock là ví dụ điển hình.
 
@@ -474,15 +477,15 @@ initial guess
 → iterate to self-consistency
 ```
 
-Mean field thường bỏ qua correlation hoặc fluctuation beyond average response.
+Mean trường dữ liệu (field / 필드) thường bỏ qua correlation hoặc fluctuation beyond average phản hồi (response / 응답).
 
-Nó có thể rất tốt ở một số regime nhưng thất bại gần critical point, low dimension hoặc strongly correlated state.
+Nó có thể rất tốt ở một số regime nhưng thất bại gần trọng yếu (critical / 중요) điểm (point / 지점), low dimension hoặc strongly correlated trạng thái (state / 상태).
 
-## Effective theory và tích phân bỏ bậc tự do
+## Effective lý thuyết (theory / 이론) và tích phân bỏ bậc tự do
 
 Một cách xấp xỉ sâu hơn là không cố mô tả mọi microscopic degree of freedom.
 
-Ta giữ các biến low-energy/relevant và hấp thụ physics của scale cao vào effective parameters và operators.
+Ta giữ các biến low-energy/relevant và hấp thụ physics của quy mô (scale / 규모) cao vào effective parameters và operators.
 
 Ví dụ:
 
@@ -499,7 +502,7 @@ band structure
 
 Tư duy này xuất hiện từ condensed matter tới particle physics.
 
-## Error control và asymptotic series
+## Lỗi (error / 오류) điều khiển (control / 제어) và asymptotic series
 
 Perturbation series không nhất thiết hội tụ theo nghĩa toán học thông thường.
 
@@ -517,7 +520,7 @@ symmetry/conservation checks
 
 Không nên đồng nhất “có expansion” với “series chắc chắn hội tụ”.
 
-## Khi nào nên dùng numerical method?
+## Khi nào nên dùng numerical phương thức (method / 메서드)?
 
 Nếu không có small parameter rõ ràng và variational/semiclassical approximations không đủ, numerical methods có thể phù hợp hơn:
 
@@ -529,11 +532,11 @@ Monte Carlo
 DMRG / tensor-network methods
 ```
 
-Nhưng numerical result vẫn phải kiểm tra convergence và finite-size/basis truncation errors.
+Nhưng numerical kết quả (result / 결과) vẫn phải kiểm tra convergence và finite-size/basis truncation errors.
 
-Máy tính không loại bỏ approximation; nó chuyển approximation sang discretization và finite representation.
+Máy tính không loại bỏ approximation; nó chuyển approximation sang discretization và finite biểu diễn (representation / 표현).
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Các phương pháp xấp xỉ có thể nhìn theo ba câu hỏi:
 
@@ -549,26 +552,28 @@ Approximation tốt không phải “làm sai cho dễ”. Nó là việc bỏ �
 
 ### “Perturbation nhỏ nghĩa coefficient trước `V` nhỏ là đủ”
 
-Không. Relevant matrix elements phải nhỏ so với energy gaps; near degeneracy có thể phá approximation.
+Không. Relevant ma trận (matrix / 행렬) elements phải nhỏ so với năng lượng (energy / 에너지) gaps; near degeneracy có thể phá approximation.
 
-### “Variational method cho đúng ground state nếu minimize đủ tốt”
+### “Variational phương thức (method / 메서드) cho đúng ground trạng thái (state / 상태) nếu minimize đủ tốt”
 
 Không nhất thiết. Nó chỉ tối ưu trong trial family đã chọn. Family nghèo vẫn cho bound kém.
 
-### “Adiabatic nghĩa thay đổi chậm theo clock time”
+### “Adiabatic nghĩa thay đổi chậm theo clock thời gian (time / 시간)”
 
-Không có một threshold tuyệt đối. “Chậm” phải so với internal energy gaps/time scales của hệ.
+Không có một threshold tuyệt đối. “Chậm” phải so với nội bộ (internal / 내부) năng lượng (energy / 에너지) gaps/thời gian (time / 시간) scales của hệ.
 
 ### “WKB dùng được tại mọi điểm nếu `\hbar` nhỏ”
 
-Không. Turning point là vùng thất bại điển hình.
+Không. Turning điểm (point / 지점) là vùng thất bại điển hình.
 
-### “Numerical solution là exact”
+### “Numerical solution là chính xác (exact / 정확한)”
 
 Không. Basis cutoff, grid spacing, timestep và finite precision đều tạo approximation mới.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Các hệ lượng tử mẫu](01_quantum_systems.md), [Đại số tuyến tính và Taylor](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Động lực học phụ thuộc thời gian và tán xạ](06_time_dependent_scattering.md), [Vật lý nguyên tử](../09_atomic_nuclear_particle/00_atomic_physics.md), [Vật lý phân tử](../09_atomic_nuclear_particle/04_molecular_physics.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Berry phase và topology](../10_condensed_matter_devices/06_berry_phase_quantum_hall_topology.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

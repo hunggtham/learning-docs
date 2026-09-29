@@ -10,6 +10,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
 
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **Group Functions** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
@@ -140,9 +144,9 @@ Ta bắt đầu **1. Ba nhóm hàm phân tích dữ liệu trong SQL** bằng c�
 
 | Loại               | Korean | Ý nghĩa                                                               |
 | ------------------ | ------ | --------------------------------------------------------------------- |
-| Aggregate Function | 집계 함수  | Tổng hợp nhiều row thành một giá trị: `COUNT`, `SUM`, `AVG`, `MAX`... |
-| Group Function     | 그룹 함수  | Tạo nhiều cấp độ nhóm/tổng phụ: `ROLLUP`, `CUBE`, `GROUPING SETS`     |
-| Window Function    | 윈도우 함수 | Tính toán trên một "cửa sổ" row nhưng **không gom mất row**           |
+| Aggregate hàm (function / 함수) | 집계 함수  | Tổng hợp nhiều row thành một giá trị: `COUNT`, `SUM`, `AVG`, `MAX`... |
+| Group hàm (function / 함수)     | 그룹 함수  | Tạo nhiều cấp độ nhóm/tổng phụ: `ROLLUP`, `CUBE`, `GROUPING SETS`     |
+| hàm cửa sổ (window function / 윈도우 함수)    | 윈도우 함수 | Tính toán trên một "cửa sổ" row nhưng **không gom mất row**           |
 
 Ví dụ quan trọng:
 
@@ -154,7 +158,7 @@ GROUP BY DEPTNO;
 
 10 nhân viên có thể bị gom thành chỉ 3 dòng phòng ban.
 
-Trong khi Window Function:
+Trong khi hàm cửa sổ (window function / 윈도우 함수):
 
 ```sql
 SELECT EMPNO,
@@ -179,7 +183,7 @@ Ta bắt đầu **2. 집계 함수 — Aggregate Function** bằng câu hỏi: *
 Điểm quan trọng nhất của phần này:
 
 > **집계 함수는 일반적으로 NULL을 제외한다.**
-> Các Aggregate Function **thường bỏ qua NULL**.
+> Các Aggregate hàm (function / 함수) **thường bỏ qua NULL**.
 
 Đây là kiến thức rất dễ xuất hiện trong SQLD.
 
@@ -575,7 +579,7 @@ ORDER BY DNAME, JOB
 Phải nhớ:
 
 > **GROUP BY = grouping**
-> **ORDER BY = sorting**
+> **thứ tự (order / 순서) BY = sorting**
 
 Không được coi chúng là một.
 
@@ -677,7 +681,7 @@ Ta bắt đầu **10. Tại sao ROLLUP(A,B) có N+1 level?** bằng câu hỏi: 
 
 ## 10. Tại sao ROLLUP(A,B) có N+1 level?
 
-**KR:** ROLLUP에서 그룹핑 컬럼의 수가 N개이면 N+1개의 집계 Level이 생성된다.
+**KR:** ROLLUP에서 그룹핑 컬럼의 수가 N개이면 N+1개의 집계 mức (level / 수준)이 생성된다.
 **VI:** Nếu `ROLLUP` có N column thì sẽ tạo **N+1 cấp aggregation**.
 
 Ví dụ:
@@ -693,7 +697,7 @@ ROLLUP(A)
 ()
 ```
 
-2 level.
+2 mức (level / 수준).
 
 ```sql
 ROLLUP(A,B)
@@ -707,7 +711,7 @@ ROLLUP(A,B)
 ()
 ```
 
-3 level.
+3 mức (level / 수준).
 
 ```sql
 ROLLUP(A,B,C)
@@ -722,7 +726,7 @@ ROLLUP(A,B,C)
 ()
 ```
 
-4 level.
+4 mức (level / 수준).
 
 Khi gom phần **10. Tại sao ROLLUP(A,B) có N+1 level?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -920,7 +924,7 @@ ROLLUP(DNAME, (JOB,MGR))
 ()
 ```
 
-`JOB + MGR` được coi như **một package**.
+`JOB + MGR` được coi như **một gói (package / 패키지)**.
 
 ---
 
@@ -968,7 +972,7 @@ Ngược lại:
 GROUPING(column) = 0
 ```
 
-→ column đang tham gia grouping ở level đó; một NULL dữ liệu thật cũng không bị đánh dấu là subtotal.
+→ column đang tham gia grouping ở mức (level / 수준) đó; một NULL dữ liệu thật cũng không bị đánh dấu là subtotal.
 
 Tóm lại để đi thi:
 
@@ -1313,7 +1317,7 @@ ROLLUP → hierarchy → ORDER MATTERS
 CUBE   → combinations → ORDER DOESN'T MATTER
 ```
 
-Lưu ý: "order doesn't matter" ở đây nói về **các grouping set được sinh ra**, không có nghĩa SQL đảm bảo thứ tự hiển thị row. Muốn sort vẫn phải dùng `ORDER BY`.
+Lưu ý: "thứ tự (order / 순서) doesn't matter" ở đây nói về **các grouping set được sinh ra**, không có nghĩa SQL đảm bảo thứ tự hiển thị row. Muốn sort vẫn phải dùng `ORDER BY`.
 
 ---
 
@@ -1530,7 +1534,7 @@ Ví dụ:
 GROUP BY GROUPING SETS(DNAME, JOB)
 ```
 
-về logic tương đương:
+về lô-gic (logic / 논리) tương đương:
 
 ```sql
 SELECT DNAME, NULL AS JOB, ...
@@ -1686,7 +1690,7 @@ Ta bắt đầu **27. Cách suy luận nhanh khi gặp đề SQLD** bằng câu 
 
 ## 27. Cách suy luận nhanh khi gặp đề SQLD
 
-Đừng cố nhớ output bằng hình. Hãy **bung grouping set ra**.
+Đừng cố nhớ đầu ra (output / 출력) bằng hình. Hãy **bung grouping set ra**.
 
 Ví dụ đề hỏi:
 
@@ -1884,7 +1888,7 @@ Ta bắt đầu **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** b�
 ## 🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ
 
 1. **집계 함수는 일반적으로 NULL을 제외한다.**
-   Aggregate Function thường bỏ qua NULL.
+   Aggregate hàm (function / 함수) thường bỏ qua NULL.
 
 2. `COUNT(*)` → đếm row; `COUNT(column)` → bỏ NULL của column.
 
@@ -1920,9 +1924,9 @@ Ta bắt đầu **🔥 SQLD NOTE — 반드시 암기 / Bắt buộc nhớ** b�
 
 11. GROUPING SETS không tự tạo Grand Total; muốn total thêm `()`.
 
-12. `GROUPING(column)=1` → column bị loại khỏi grouping ở subtotal/total level do group function tạo ra.
+12. `GROUPING(column)=1` → column bị loại khỏi grouping ở subtotal/total mức (level / 수준) do group hàm (function / 함수) tạo ra.
 
-13. `ROLLUP(A,(B,C))` coi `(B,C)` là **một composite grouping unit**.
+13. `ROLLUP(A,(B,C))` coi `(B,C)` là **một composite grouping đơn vị (unit / 단위)**.
 
 14. Cả `ROLLUP` và `CUBE` đều có thể biểu diễn bằng `GROUPING SETS`.
 

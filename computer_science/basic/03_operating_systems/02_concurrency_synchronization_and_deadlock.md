@@ -1,73 +1,108 @@
-# Concurrency, synchronization và deadlock
+# Tính đồng thời (concurrency / 동시성), synchronization và deadlock
 
-Concurrency bugs khó vì behavior phụ thuộc timing/interleaving mà source code tuyến tính không thể hiện rõ. Hai threads cùng đúng khi chạy riêng có thể sai khi share mutable state.
+> **Mạch đọc:** Đọc **tính đồng thời (concurrency / 동시성), synchronization và deadlock** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race** sang **trọng yếu (critical / 중요) section và mutual exclusion**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Race condition và data race
 
-Race condition là correctness phụ thuộc relative timing. Data race theo nhiều language memory models là concurrent conflicting accesses tới cùng location, ít nhất một write, không có synchronization phù hợp.
+Tính đồng thời (concurrency / 동시성) bugs khó vì hành vi (behavior / 동작) phụ thuộc timing/interleaving mà mã nguồn (source code / 소스 코드) tuyến tính không thể hiện rõ. Hai threads cùng đúng khi chạy riêng có thể sai khi share mutable trạng thái (state / 상태).
 
-Ví dụ `counter++` không nhất thiết atomic. Nó có thể là load → add → store. Hai threads cùng load 10, cùng compute 11, cùng store 11; một increment bị mất.
+## Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race
 
-## Critical section và mutual exclusion
+Race điều kiện (condition / 조건) là tính đúng đắn (correctness / 정확성) phụ thuộc relative timing. dữ liệu (data / 데이터) race theo nhiều ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) các mô hình (models / 모델들) là concurrent conflicting accesses tới cùng location, ít nhất một ghi (write / 쓰기), không có synchronization phù hợp.
 
-Critical section truy cập shared invariant cần serialize. Mutex/lock (뮤텍스/락) bảo đảm một holder tại một thời điểm. Lock không “bảo vệ variable” tự động; correctness đến từ discipline rằng mọi accesses liên quan invariant dùng cùng synchronization protocol.
+Ví dụ `counter++` không nhất thiết atomic. Nó có thể là tải (load / 로드) → add → store. Hai threads cùng tải (load / 로드) 10, cùng compute 11, cùng store 11; một increment bị mất.
 
-Coarse-grained lock đơn giản nhưng contention cao. Fine-grained locks tăng parallelism nhưng phức tạp và tăng deadlock risk.
+
+> **Chuyển mạch:** Từ **Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race**, ta sang **trọng yếu (critical / 중요) section và mutual exclusion** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trọng yếu (critical / 중요) section và mutual exclusion
+
+Trọng yếu (critical / 중요) section truy cập dùng chung (shared / 공유) bất biến (invariant / 불변식) cần serialize. Mutex/khóa (lock / 잠금) bảo đảm một holder tại một thời điểm. khóa (lock / 잠금) không “bảo vệ variable” tự động; tính đúng đắn (correctness / 정확성) đến từ discipline rằng mọi accesses liên quan bất biến (invariant / 불변식) dùng cùng synchronization giao thức (protocol / 프로토콜).
+
+Coarse-grained khóa (lock / 잠금) đơn giản nhưng contention cao. Fine-grained locks tăng parallelism nhưng phức tạp và tăng deadlock rủi ro (risk / 위험).
+
+
+> **Chuyển mạch:** Từ **trọng yếu (critical / 중요) section và mutual exclusion**, ta sang **Atomic operations** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Atomic operations
 
-CPU cung cấp atomic read-modify-write như compare-and-swap (CAS). Atomicity bảo đảm operation không quan sát intermediate state. Lock-free algorithms dùng atomics để coordinate mà không mutex blocking, nhưng reasoning memory ordering, ABA problem và reclamation rất khó.
+CPU cung cấp atomic read-modify-write như compare-and-swap (CAS). Atomicity bảo đảm thao tác (operation / 연산) không quan sát intermediate trạng thái (state / 상태). Lock-free algorithms dùng atomics để coordinate mà không mutex blocking, nhưng lập luận (reasoning / 추론) bộ nhớ (memory / 메모리) thứ tự (ordering / 순서), ABA bài toán (problem / 문제) và reclamation rất khó.
 
-Atomic không đồng nghĩa toàn transaction logic atomic. Hai atomic variables riêng không tự bảo đảm invariant liên-variable.
+Atomic không đồng nghĩa toàn giao dịch (transaction / 트랜잭션) lô-gic (logic / 논리) atomic. Hai atomic variables riêng không tự bảo đảm bất biến (invariant / 불변식) liên-variable.
 
-## Memory ordering và happens-before
 
-Compiler và CPU được phép reorder operations trong giới hạn observable single-thread semantics. Multithread correctness không thể giả định source order luôn visible cùng thứ tự ở core khác.
+> **Chuyển mạch:** Từ **Atomic operations**, ta sang **bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và happens-before** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Language memory model định nghĩa happens-before relationships qua locks, volatile/atomic operations, thread start/join... Nếu write happens-before read, read được guarantee visibility theo model.
+## Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và happens-before
 
-Đây là tầng trên cache coherence: coherence không tự tạo program ordering semantics.
+Trình biên dịch (compiler / 컴파일러) và CPU được phép reorder operations trong giới hạn observable single-thread ngữ nghĩa (semantics / 의미론). Multithread tính đúng đắn (correctness / 정확성) không thể giả định nguồn (source / 소스) thứ tự (order / 순서) luôn visible cùng thứ tự ở cốt lõi (core / 핵심) khác.
 
-## Condition variables, semaphores và monitors
+Ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model / 모델) định nghĩa happens-before relationships qua locks, volatile/atomic operations, luồng thực thi (thread / 스레드) start/phép nối (join / 조인)... Nếu ghi (write / 쓰기) happens-before read, read được guarantee visibility theo mô hình (model / 모델).
 
-Condition variable cho thread ngủ tới khi predicate trên shared state có thể thay đổi; luôn re-check predicate trong loop vì wakeup/spurious wakeup/interleavings.
+Đây là tầng trên bộ nhớ đệm (cache / 캐시) coherence: coherence không tự tạo program thứ tự (ordering / 순서) ngữ nghĩa (semantics / 의미론).
 
-Semaphore giữ count permits, dùng giới hạn concurrency hoặc signaling. Binary semaphore giống mutex ở surface nhưng ownership semantics có thể khác.
 
-Monitor kết hợp mutual exclusion với condition synchronization trong một abstraction; Java `synchronized`/wait-notify là family idea.
+> **Chuyển mạch:** Từ **bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và happens-before**, ta sang **điều kiện (condition / 조건) variables, semaphores và monitors** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Điều kiện (condition / 조건) variables, semaphores và monitors
+
+Điều kiện (condition / 조건) variable cho luồng thực thi (thread / 스레드) ngủ tới khi predicate trên trạng thái dùng chung (shared state / 공유 상태) có thể thay đổi; luôn re-check predicate trong vòng lặp (loop / 루프) vì wakeup/spurious wakeup/interleavings.
+
+Semaphore giữ count permits, dùng giới hạn tính đồng thời (concurrency / 동시성) hoặc signaling. nhị phân (binary / 이진) semaphore giống mutex ở surface nhưng quyền sở hữu (ownership / 소유권) ngữ nghĩa (semantics / 의미론) có thể khác.
+
+Monitor kết hợp mutual exclusion với điều kiện (condition / 조건) synchronization trong một lớp trừu tượng (abstraction / 추상화); Java `synchronized`/wait-notify là family idea.
+
+
+> **Chuyển mạch:** Từ **điều kiện (condition / 조건) variables, semaphores và monitors**, ta sang **Deadlock** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Deadlock
 
-Deadlock (교착 상태) xảy ra khi tasks chờ nhau theo cycle và không task nào tiến được. Coffman conditions kinh điển: mutual exclusion, hold-and-wait, no preemption, circular wait. Phá ít nhất một điều kiện có thể ngăn class deadlock.
+Deadlock (교착 상태) xảy ra khi tasks chờ nhau theo cycle và không tác vụ (task / 작업) nào tiến được. Coffman conditions kinh điển: mutual exclusion, hold-and-wait, no preemption, circular wait. Phá ít nhất một điều kiện có thể ngăn lớp (class / 클래스) deadlock.
 
-Ví dụ thread A giữ lock X chờ Y; B giữ Y chờ X. Global lock ordering — luôn lấy X trước Y — phá circular wait.
+Ví dụ luồng thực thi (thread / 스레드) A giữ khóa (lock / 잠금) X chờ Y; B giữ Y chờ X. toàn cục (global / 전역) khóa (lock / 잠금) thứ tự (ordering / 순서) — luôn lấy X trước Y — phá circular wait.
 
-Deadlock không chỉ locks. Distributed services có thể chờ RPC cycles; thread pools có task chờ future queued vào chính saturated pool.
+Deadlock không chỉ locks. phân tán (distributed / 분산) services có thể chờ RPC cycles; luồng thực thi (thread / 스레드) pools có tác vụ (task / 작업) chờ future queued vào chính saturated pool.
+
+
+> **Chuyển mạch:** Từ **Deadlock**, ta sang **Livelock và starvation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Livelock và starvation
 
-Livelock: tasks vẫn hoạt động/thay state nhưng liên tục nhường/retry khiến không progress. Starvation: một task không được resource đủ lâu vì scheduling/lock unfairness.
+Livelock: tasks vẫn hoạt động/thay trạng thái (state / 상태) nhưng liên tục nhường/thử lại (retry / 재시도) khiến không progress. Starvation: một tác vụ (task / 작업) không được tài nguyên (resource / 자원) đủ lâu vì scheduling/khóa (lock / 잠금) unfairness.
 
-Correct concurrent system cần safety (“không xảy ra điều xấu”) và liveness (“điều tốt cuối cùng xảy ra”).
+Correct concurrent hệ thống (system / 시스템) cần an toàn (safety / 안전) (“không xảy ra điều xấu”) và liveness (“điều tốt cuối cùng xảy ra”).
+
+
+> **Chuyển mạch:** Từ **Livelock và starvation**, ta sang **Immutability và message passing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Immutability và message passing
 
-Cách tốt để giảm shared-state synchronization là giảm mutable sharing. Immutable values có thể share an toàn hơn. Actor/message-passing model isolate state và communicate bằng messages, chuyển complexity từ shared memory sang ordering, mailbox và failure semantics.
+Cách tốt để giảm shared-state synchronization là giảm mutable sharing. Immutable values có thể share an toàn hơn. Actor/message-passing mô hình (model / 모델) isolate trạng thái (state / 상태) và communicate bằng messages, chuyển độ phức tạp (complexity / 복잡도) từ dùng chung (shared / 공유) bộ nhớ (memory / 메모리) sang thứ tự (ordering / 순서), mailbox và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론).
 
-Không có free lunch: distributed/message systems cần xử lý duplicate, retry và partial failure.
+Không có free lunch: phân tán (distributed / 분산)/message các hệ thống (systems / 시스템들) cần xử lý duplicate, thử lại (retry / 재시도) và partial thất bại (failure / 실패).
 
-## Mental Model
 
-> Concurrent correctness là reasoning về **shared state + atomic boundaries + ordering + progress**. Hỏi ai có thể access state này, operation nào phải indivisible, visibility được bảo đảm bằng gì, và có cycle chờ nào không.
+> **Chuyển mạch:** Từ **Immutability và message passing**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Common Misconceptions
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“volatile làm mọi operation thread-safe.”** Volatile/atomic visibility/order guarantee không biến multi-step invariant thành transaction.
+> Concurrent tính đúng đắn (correctness / 정확성) là lập luận (reasoning / 추론) về **trạng thái dùng chung (shared state / 공유 상태) + atomic boundaries + thứ tự (ordering / 순서) + progress**. Hỏi ai có thể truy cập (access / 접근) trạng thái (state / 상태) này, thao tác (operation / 연산) nào phải indivisible, visibility được bảo đảm bằng gì, và có cycle chờ nào không.
 
-**“Không dùng lock thì không deadlock.”** Resource waits, futures, channels và distributed calls vẫn có wait cycles.
 
-**“Thread-safe collection làm toàn workflow thread-safe.”** Sequence check-then-act trên nhiều calls vẫn có race nếu không có higher-level atomicity.
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“volatile làm mọi thao tác (operation / 연산) thread-safe.”** Volatile/atomic visibility/thứ tự (order / 순서) guarantee không biến multi-step bất biến (invariant / 불변식) thành giao dịch (transaction / 트랜잭션).
+
+**“Không dùng khóa (lock / 잠금) thì không deadlock.”** tài nguyên (resource / 자원) waits, futures, channels và phân tán (distributed / 분산) calls vẫn có wait cycles.
+
+**“Thread-safe collection làm toàn workflow thread-safe.”** chuỗi (sequence / 시퀀스) check-then-act trên nhiều calls vẫn có race nếu không có higher-level atomicity.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-[Transactions](../05_data_databases/02_transactions_acid_and_concurrency_control.md) giải cùng bài toán atomicity/isolation ở database. [Distributed systems](../06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md) làm ordering khó hơn vì không có shared clock/memory. Hardware side nằm ở [cache coherence](../02_computer_architecture/02_memory_hierarchy_and_cache.md).
+[Transactions](../05_data_databases/02_transactions_acid_and_concurrency_control.md) giải cùng bài toán atomicity/isolation ở cơ sở dữ liệu (database / 데이터베이스). [Distributed systems](../06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md) làm thứ tự (ordering / 순서) khó hơn vì không có dùng chung (shared / 공유) clock/bộ nhớ (memory / 메모리). Hardware side nằm ở [cache coherence](../02_computer_architecture/02_memory_hierarchy_and_cache.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kernel syscalls and os abstractions](./00_kernel_syscalls_and_os_abstractions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,7 @@
 # 07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế
 
+> **Mạch đọc:** Đặt **07. Thuế, 4 bảo hiểm xã hội, phúc lợi và y tế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vì sao người nước ngoài dễ nhầm các hệ thống này?** sang **2. Thuế thu nhập và cơ quan thuế**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## 1. Vì sao người nước ngoài dễ nhầm các hệ thống này?
 
 Trong bảng lương Hàn Quốc, nhiều khoản bị trừ cùng lúc nên dễ nghĩ tất cả đều là “thuế”. Thực tế phải tách ít nhất bốn nhóm:
@@ -12,6 +14,9 @@ các khoản khác do hợp đồng hoặc công ty
 ```
 
 Một khoản bị trừ không nên được hiểu chỉ từ số tiền. Hãy nhìn `급여명세서` và tên khoản khấu trừ.
+
+
+> **Chuyển mạch:** Từ **1. Vì sao người nước ngoài dễ nhầm các hệ thống này?**, ta sang **2. Thuế thu nhập và cơ quan thuế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Thuế thu nhập và cơ quan thuế
 
@@ -29,9 +34,12 @@ Người lao động thường gặp:
 
 Với người nước ngoài, cách đánh thuế có thể phụ thuộc tình trạng cư trú thuế (`거주자/비거주자`), loại thu nhập, hiệp định tránh đánh thuế hai lần và lựa chọn/quy định đặc biệt. Không nên dùng visa như một proxy duy nhất cho tình trạng thuế.
 
+
+> **Chuyển mạch:** Từ **2. Thuế thu nhập và cơ quan thuế**, ta sang **3. National Pension — 국민연금** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 3. National Pension — 국민연금
 
-`국민연금` là hệ thống hưu trí công. National Pension Service (국민연금공단) hiện giải thích rằng người nước ngoài sống tại Hàn Quốc về nguyên tắc có thể thuộc đối tượng tham gia tương tự người Hàn, nhưng có ngoại lệ theo quốc tịch, chế độ tương hỗ, hiệp định an sinh xã hội, tuổi và tư cách cư trú.
+`국민연금` là hệ thống hưu trí công. National Pension dịch vụ (service / 서비스) hiện giải thích rằng người nước ngoài sống tại Hàn Quốc về nguyên tắc có thể thuộc đối tượng tham gia tương tự người Hàn, nhưng có ngoại lệ theo quốc tịch, chế độ tương hỗ, hiệp định an sinh xã hội, tuổi và tư cách cư trú.
 
 Một số từ cần biết:
 
@@ -44,6 +52,9 @@ Một số từ cần biết:
 
 Đặc biệt, `반환일시금` cho người nước ngoài **không áp dụng đồng nhất cho mọi quốc tịch và visa**. NPS hiện công bố danh sách quốc gia/đối tượng và điều kiện; phải kiểm tra bản hiện hành trước khi rời Hàn Quốc.
 
+
+> **Chuyển mạch:** Từ **3. National Pension — 국민연금**, ta sang **4. National Health Insurance — 국민건강보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 4. National Health Insurance — 국민건강보험
 
 `국민건강보험` là bảo hiểm y tế quốc gia. Người nước ngoài có thể tham gia theo diện:
@@ -55,6 +66,9 @@ Một số từ cần biết:
 NHIS có `외국인민원센터` và hỗ trợ tư vấn ngoại ngữ. Trang chính thức hiện nêu số tư vấn ngoại ngữ và phạm vi nghiệp vụ cho người nước ngoài; các chi tiết về điều kiện, mức phí hoặc thời điểm phát sinh tư cách có thể thay đổi.
 
 Điểm quan trọng: **bảo hiểm y tế** và **tình trạng visa** liên quan nhưng không phải cùng một hệ thống. Thay đổi nơi làm việc, địa chỉ, visa hoặc quan hệ gia đình có thể làm thay đổi loại tư cách bảo hiểm.
+
+
+> **Chuyển mạch:** Từ **4. National Health Insurance — 국민건강보험**, ta sang **5. Employment Insurance — 고용보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. Employment Insurance — 고용보험
 
@@ -73,9 +87,12 @@ Do quy định phân theo visa có thể thay đổi, cách kiểm tra đúng l�
 
 Không nên suy từ việc “có trừ bảo hiểm” rằng chắc chắn đủ điều kiện nhận mọi trợ cấp.
 
+
+> **Chuyển mạch:** Từ **5. Employment Insurance — 고용보험**, ta sang **6. Industrial Accident Insurance — 산업재해보상보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 6. Industrial Accident Insurance — 산업재해보상보험
 
-`산재보험` bảo vệ người lao động trước rủi ro tai nạn/bệnh nghề nghiệp trong phạm vi luật. Cơ quan trọng tâm là **Korea Workers' Compensation & Welfare Service (근로복지공단)**.
+`산재보험` bảo vệ người lao động trước rủi ro tai nạn/bệnh nghề nghiệp trong phạm vi luật. Cơ quan trọng tâm là **Korea Workers' Compensation & Welfare dịch vụ (service / 서비스)**.
 
 Khi xảy ra tai nạn, cần phân biệt:
 
@@ -95,6 +112,9 @@ Khi xảy ra tai nạn, cần phân biệt:
 
 Không nên đợi công ty tự xử lý nếu có nghi ngờ quyền lợi bị bỏ sót. Nên kiểm tra hướng dẫn của `근로복지공단` và lưu hồ sơ y tế, biên bản tai nạn, lịch làm việc.
 
+
+> **Chuyển mạch:** Từ **6. Industrial Accident Insurance — 산업재해보상보험**, ta sang **7. Bốn bảo hiểm xã hội — 4대보험** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 7. Bốn bảo hiểm xã hội — 4대보험
 
 Khái niệm `4대보험` thường gồm:
@@ -109,6 +129,9 @@ Khái niệm `4대보험` thường gồm:
 Nhưng điều kiện tham gia của **từng hệ thống** không hoàn toàn giống nhau. Một người có thể thuộc ba hệ thống nhưng không thuộc một hệ thống khác vì visa, quốc tịch, loại việc làm hoặc ngoại lệ pháp luật.
 
 `4대사회보험 정보연계센터` hữu ích để kiểm tra thông tin liên quan, nhưng khi có vấn đề chuyên sâu cần quay về cơ quan quản lý từng bảo hiểm.
+
+
+> **Chuyển mạch:** Từ **7. Bốn bảo hiểm xã hội — 4대보험**, ta sang **8. Phúc lợi (복지)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Phúc lợi (복지)
 
@@ -125,6 +148,9 @@ chính phủ trung ương
 
 Người nước ngoài không nên giả định “đóng thuế thì được mọi phúc lợi” hoặc “không phải công dân thì không được gì”. Điều kiện thường do từng luật/chương trình xác định.
 
+
+> **Chuyển mạch:** Từ **8. Phúc lợi (복지)**, ta sang **9. Hệ thống y tế trong đời sống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 9. Hệ thống y tế trong đời sống
 
 Khi đi khám, nên phân biệt:
@@ -140,6 +166,9 @@ Khi đi khám, nên phân biệt:
 - `건강검진`: khám sức khỏe định kỳ.
 
 Trong trường hợp cấp cứu, 119 là số cứu hỏa/cấp cứu. Đây không phải hotline tư vấn bảo hiểm.
+
+
+> **Chuyển mạch:** Từ **9. Hệ thống y tế trong đời sống**, ta sang **10. Workflow kiểm tra bảng lương** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 10. Workflow kiểm tra bảng lương
 
@@ -158,6 +187,9 @@ Bảng lương là nơi nhiều hệ thống cùng xuất hiện: thuế, bảo 
 
 Nếu một khoản không rõ, hỏi HR tên chính xác bằng tiếng Hàn rồi kiểm tra cơ quan phụ trách.
 
+
+> **Chuyển mạch:** Từ **10. Workflow kiểm tra bảng lương**, ta sang **11. Nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 11. Nguồn chính thức
 
 Các cổng dưới đây dùng cho thuế, bảo hiểm, phúc lợi và y tế; mỗi cổng có phạm vi dữ liệu khác nhau. Hãy bắt đầu từ loại khoản mục đang kiểm tra rồi chọn đúng cơ quan thay vì gửi cùng một câu hỏi cho mọi nơi.
@@ -171,6 +203,9 @@ Các cổng dưới đây dùng cho thuế, bảo hiểm, phúc lợi và y tế
 - 4대사회보험 정보연계센터: https://www.4insure.or.kr/
 - 복지로: https://www.bokjiro.go.kr/
 - 정부24: https://www.gov.kr/
+
+
+> **Chuyển mạch:** Từ **11. Nguồn chính thức**, ta sang **12. Quy tắc freshness** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 12. Quy tắc freshness
 

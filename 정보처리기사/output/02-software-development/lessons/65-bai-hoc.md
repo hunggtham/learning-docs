@@ -1,18 +1,18 @@
-# 55. APM (애플리케이션 성능 관리/모니터링)
+# 50. 애플리케이션 성능 측정 지표 (Performance Metrics)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **55. APM (애플리케이션 성능 관리/모니터링)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **55. APM (애플리케이션 성능 관리/모니터링)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **55. APM (애플리케이션 성능 관리/모니터링)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-APM
+애플리케이션, 성능, 측정, 지표
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**에서 만든 기준을 이어받아 **55. APM (애플리케이션 성능 관리/모니터링)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **A+ Deep Dive: 알고리즘 trace와 테스트 판정**에서 만든 기준을 이어받아 **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,24 +20,24 @@ APM
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** và nối nó với **55. APM (애플리케이션 성능 관리/모니터링)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 55. APM (애플리케이션 성능 관리/모니터링)
+## 50. 애플리케이션 성능 측정 지표 (Performance Metrics)
 
-Sau khi đã đặt nền bằng **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**, ta chuyển sang **55. APM (애플리케이션 성능 관리/모니터링)**. Đây là mắt xích 65/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **A+ Deep Dive: 알고리즘 trace와 테스트 판정**, ta chuyển sang **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**. Đây là mắt xích 65/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
-Để đọc **55. APM (애플리케이션 성능 관리/모니터링)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **리소스 방식**, **엔드투엔드(End-to-End) 방식** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **처리량 (Throughput)**, **응답 시간 (Response Time)**, **경과 시간 (Turn Around Time)**, **자원 사용률 (Resource Usage)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-* 애플리케이션의 성능 관리를 위해 자원 현황, 트랜잭션 등을 모니터링.
-* **리소스 방식**: Nagios, Zabbix, Cacti.
-* **엔드투엔드(End-to-End) 방식**: VisualVM, 제니퍼(Jennifer), 스카우터(Scouter).
-* **VI (Vietnamese) (Tiếng Việt):** Công cụ giám sát hiệu năng (APM). Có 2 loại: Theo dõi tài nguyên (Nagios) và Từ đầu đến cuối (VisualVM, Scouter).
+* **처리량 (Throughput)**: 일정 시간 내 처리하는 일의 양.
+* **응답 시간 (Response Time)**: 요청을 전달한 후 '응답이 도착할 때'까지 걸린 시간.
+* **경과 시간 (Turn Around Time)**: 작업을 의뢰한 후 '처리가 완료될 때'까지 걸린 시간.
+* **자원 사용률 (Resource Usage)**: CPU, 메모리, 네트워크 등의 자원 사용량.
+* **VI (Vietnamese) (Tiếng Việt):** Các chỉ số hiệu năng: Thông lượng (Throughput), Thời gian phản hồi (Response), Thời gian hoàn thành (Turn Around), Mức sử dụng tài nguyên (Resource Usage).
+* **Example**: 식당에서 주문하고 물이 나오는 시간(응답 시간), 음식을 다 먹고 나오는 시간(경과 시간).
+* 💡 **Mẹo ghi nhớ**: Response = Phản hồi đầu tiên. Turn Around = Hoàn thành toàn bộ.
 
----
-*(이하 전자계산기 구조 파트 - Computer Architecture)*
-
----
-
-Ta có thể khép mục **55. APM (애플리케이션 성능 관리/모니터링)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **55. APM (애플리케이션 성능 관리/모니터링)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

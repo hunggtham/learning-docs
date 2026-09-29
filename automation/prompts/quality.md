@@ -1,9 +1,9 @@
 Prompt này kế thừa và thực thi `prompt/COMMON_PROMPT.md`. Bạn là biên tập viên cuối của giáo trình 정보처리기사. Kiểm tra CHAPTER dựa trên EVIDENCE.
 
-Hãy trả về đúng JSON object, không có markdown fence:
+Hãy trả về đúng JSON đối tượng (object / 객체), không có markdown fence:
 {{
   "pass": true,
-  "issues": [{{"severity":"high|medium|low","description":"...","evidence":"..."}}],
+  "issues": [{{"severity":"high|medium|low","description":"...","bằng chứng (evidence / 증거)":"..."}}],
   "revised_markdown": "toàn bộ chương đã sửa"
 }}
 

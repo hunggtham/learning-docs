@@ -1,22 +1,28 @@
-# Java Core — Part 2: Intermediate — Rewritten Detailed
-## Từ “biết viết Java” sang “hiểu contract, concurrency, runtime và boundary”
+# Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed
 
-> Part 2 giả định bạn đã hoàn thành Part 1 và đã có thể tự viết một chương trình Java nhỏ bằng OOP, collections, Stream, Optional, `java.time`, file I/O và exceptions. Mục tiêu ở đây là nâng cách suy nghĩ từ “API nào làm được việc này?” thành “contract của API này là gì, object này thuộc về ai, thread nào được phép thay đổi state, resource tồn tại bao lâu, và lỗi nào có thể xảy ra ở runtime dù compiler vẫn cho qua?”.
+> **Mạch đọc:** Đọc **Java cốt lõi (core / 핵심) — Part 2: Intermediate — Rewritten Detailed** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”** sang **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+## Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”
+
+> Part 2 giả định bạn đã hoàn thành Part 1 và đã có thể tự viết một chương trình Java nhỏ bằng OOP, collections, Stream, Optional, `java.time`, tệp (file / 파일) I/O và exceptions. Mục tiêu ở đây là nâng cách suy nghĩ từ “API nào làm được việc này?” thành “đặc tả hợp đồng (contract / 계약) của API này là gì, đối tượng (object / 객체) này thuộc về ai, luồng thực thi (thread / 스레드) nào được phép thay đổi trạng thái (state / 상태), tài nguyên (resource / 자원) tồn tại bao lâu, và lỗi nào có thể xảy ra ở thời gian chạy (runtime / 런타임) dù trình biên dịch (compiler / 컴파일러) vẫn cho qua?”.
 >
-> Các ghi chú kiểu Senior, idiom và pattern không được tách thành mục riêng sau mỗi chương. Khi một tư duy nâng cao cần thiết, nó được giải thích ngay trong nội dung cùng ví dụ để bạn học như một phần tự nhiên của Java.
+> Các ghi chú kiểu cấp cao (senior / 시니어), idiom và mẫu (pattern / 패턴) không được tách thành mục riêng sau mỗi chương. Khi một tư duy nâng cao cần thiết, nó được giải thích ngay trong nội dung cùng ví dụ để bạn học như một phần tự nhiên của Java.
 
 
-## Vị trí của Part 2 trong learning flow
 
-Part 2 nối trực tiếp từ [Java Part 1 — Beginner](./java_part1_beginner_rewritten_detailed.md). Ở đây bạn không học lại syntax; bạn bắt đầu giải thích được contract của collections/generics, lifecycle của thread/resource, memory visibility, JDBC transaction, reflection, class loading và JVM. Sau khi hoàn thành Part 2, tiếp tục [Java Part 3 — Senior](./java_part3_senior_rewritten_detailed.md).
+> **Chuyển mạch:** Từ **Từ “biết viết Java” sang “hiểu đặc tả hợp đồng (contract / 계약), tính đồng thời (concurrency / 동시성), thời gian chạy (runtime / 런타임) và ranh giới (boundary / 경계)”**, ta sang **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)
+
+Part 2 nối trực tiếp từ [Java Part 1 — Beginner](./java_part1_beginner_rewritten_detailed.md). Ở đây bạn không học lại cú pháp (syntax / 문법); bạn bắt đầu giải thích được đặc tả hợp đồng (contract / 계약) của collections/generics, vòng đời (lifecycle / 생명주기) của luồng thực thi (thread / 스레드)/tài nguyên (resource / 자원), bộ nhớ (memory / 메모리) visibility, JDBC giao dịch (transaction / 트랜잭션), reflection, nạp lớp (class loading / 클래스 로딩) và JVM. Sau khi hoàn thành Part 2, tiếp tục [Java Part 3 — Senior](./java_part3_senior_rewritten_detailed.md).
 
 ---
 
-# 1. Intermediate Java nghĩa là bắt đầu học theo contract
+# 1. Intermediate Java nghĩa là bắt đầu học theo đặc tả hợp đồng (contract / 계약)
 
-Ở Beginner, bạn học `List.add`, `Map.get`, `Stream.map`, `Optional.orElseThrow`. Ở Intermediate, điều quan trọng hơn là contract phía sau chúng. `HashMap` có yêu cầu gì với `equals()` và `hashCode()`? `Comparator` phải thỏa tính chất nào để `TreeSet` không hành xử kỳ lạ? `Stream` có lazy hay eager? `volatile` đảm bảo visibility nhưng không đảm bảo atomicity nghĩa là gì? `ExecutorService.shutdown()` khác `shutdownNow()` ra sao? Một JDBC `Connection` thuộc sở hữu của ai và khi nào được close?
+Ở Beginner, bạn học `List.add`, `Map.get`, `Stream.map`, `Optional.orElseThrow`. Ở Intermediate, điều quan trọng hơn là đặc tả hợp đồng (contract / 계약) phía sau chúng. `HashMap` có yêu cầu gì với `equals()` và `hashCode()`? `Comparator` phải thỏa tính chất nào để `TreeSet` không hành xử kỳ lạ? `Stream` có lazy hay eager? `volatile` đảm bảo visibility nhưng không đảm bảo atomicity nghĩa là gì? `ExecutorService.shutdown()` khác `shutdownNow()` ra sao? Một JDBC `Connection` thuộc sở hữu của ai và khi nào được close?
 
-Java có rất nhiều API; bạn không thể master bằng cách thuộc toàn bộ methods. Bạn phải học mental model và contract để có thể dự đoán behavior khi gặp API mới.
+Java có rất nhiều API; bạn không thể master bằng cách thuộc toàn bộ methods. Bạn phải học mô hình tư duy (mental model / 사고 모델) và đặc tả hợp đồng (contract / 계약) để có thể dự đoán hành vi (behavior / 동작) khi gặp API mới.
 
 ---
 
@@ -28,9 +34,9 @@ Beginner nhìn:
 List<String>
 ```
 
-và hiểu list chỉ chứa String.
+và hiểu danh sách (list / 목록) chỉ chứa String.
 
-Intermediate cần hiểu generic type system giúp compiler kiểm tra **mối quan hệ type**, nhưng generic types trong Java phần lớn là invariant.
+Intermediate cần hiểu generic hệ kiểu (type system / 타입 시스템) giúp trình biên dịch (compiler / 컴파일러) kiểm tra **mối quan hệ kiểu (type / 타입)**, nhưng generic types trong Java phần lớn là bất biến (invariant / 불변식).
 
 Ví dụ:
 
@@ -51,7 +57,7 @@ Nếu cho phép, bạn có thể:
 numbers.add(3.14);
 ```
 
-và `integers` bỗng chứa `Double`, phá type safety.
+và `integers` bỗng chứa `Double`, phá kiểu (type / 타입) an toàn (safety / 안전).
 
 Vì vậy:
 
@@ -71,7 +77,7 @@ List<Integer> <: List<Number>
 
 # 3. Wildcard `? extends T`
 
-Nếu method chỉ **đọc** values như `T`, bạn có thể dùng upper-bounded wildcard.
+Nếu phương thức (method / 메서드) chỉ **đọc** values như `T`, bạn có thể dùng upper-bounded wildcard.
 
 ```java
 double sum(
@@ -87,7 +93,7 @@ double sum(
 }
 ```
 
-Method này nhận:
+Phương thức (method / 메서드) này nhận:
 
 ```text
 List<Integer>
@@ -97,15 +103,15 @@ List<Double>
 
 vì mỗi element có thể đọc như `Number`.
 
-Nhưng bạn không thể an toàn add `Integer` vào `List<? extends Number>` vì list thật có thể là `List<Double>`.
+Nhưng bạn không thể an toàn add `Integer` vào `List<? extends Number>` vì danh sách (list / 목록) thật có thể là `List<Double>`.
 
-Mental model: `extends` làm producer flexible. Bạn biết lấy ra được `T`, nhưng không biết exact subtype để add.
+Mô hình tư duy (mental model / 사고 모델): `extends` làm producer flexible. Bạn biết lấy ra được `T`, nhưng không biết chính xác (exact / 정확한) subtype để add.
 
 ---
 
 # 4. Wildcard `? super T`
 
-Nếu method cần **ghi** T vào collection:
+Nếu phương thức (method / 메서드) cần **ghi** T vào collection:
 
 ```java
 void addDefaults(
@@ -124,17 +130,17 @@ List<Number>
 List<Object>
 ```
 
-Bạn có thể add Integer vì tất cả những list đó đều chứa được Integer.
+Bạn có thể add Integer vì tất cả những danh sách (list / 목록) đó đều chứa được Integer.
 
-Khi đọc ra, static type an toàn nhất thường chỉ là `Object`.
+Khi đọc ra, static kiểu (type / 타입) an toàn nhất thường chỉ là `Object`.
 
-Từ hai ý trên sinh ra mnemonic **PECS**: Producer Extends, Consumer Super. Đừng học thuộc câu đó nếu chưa hiểu variance; nó chỉ là cách nhớ contract đã giải thích.
+Từ hai ý trên sinh ra mnemonic **PECS**: Producer Extends, bên tiêu thụ (consumer / 소비자) Super. Đừng học thuộc câu đó nếu chưa hiểu variance; nó chỉ là cách nhớ đặc tả hợp đồng (contract / 계약) đã giải thích.
 
 ---
 
-# 5. Type parameter bounds
+# 5. kiểu (type / 타입) parameter bounds
 
-Generic method:
+Generic phương thức (method / 메서드):
 
 ```java
 static <T extends Comparable<T>>
@@ -145,7 +151,7 @@ T max(T a, T b) {
 }
 ```
 
-`T extends Comparable<T>` nói type T phải implement contract so sánh với chính T.
+`T extends Comparable<T>` nói kiểu (type / 타입) T phải implement đặc tả hợp đồng (contract / 계약) so sánh với chính T.
 
 Multiple bounds:
 
@@ -154,15 +160,15 @@ Multiple bounds:
         & Comparable<T>>
 ```
 
-Nếu có class bound, nó phải đứng trước interface bounds.
+Nếu có lớp (class / 클래스) bound, nó phải đứng trước giao diện (interface / 인터페이스) bounds.
 
-Generic constraints giúp encode requirement ở compile time, thay vì runtime `instanceof` checks.
+Generic các ràng buộc (constraints / 제약조건들) giúp encode yêu cầu (requirement / 요구사항) ở compile thời gian (time / 시간), thay vì thời gian chạy (runtime / 런타임) `instanceof` checks.
 
 ---
 
-# 6. Type Erasure
+# 6. kiểu (type / 타입) Erasure
 
-Java generics được triển khai chủ yếu qua type erasure. Sau compile, runtime thường không giữ full generic type arguments theo cách bạn tưởng.
+Java generics được triển khai chủ yếu qua kiểu (type / 타입) erasure. Sau compile, thời gian chạy (runtime / 런타임) thường không giữ full generic kiểu (type / 타입) arguments theo cách bạn tưởng.
 
 Ví dụ:
 
@@ -171,7 +177,7 @@ List<String>
 List<Integer>
 ```
 
-đều là `List` ở nhiều runtime contexts.
+đều là `List` ở nhiều thời gian chạy (runtime / 런타임) contexts.
 
 Do đó:
 
@@ -189,13 +195,13 @@ if (obj instanceof List<?>) {
 }
 ```
 
-Type erasure giải thích vì sao không tạo được:
+Kiểu (type / 타입) erasure giải thích vì sao không tạo được:
 
 ```java
 new T[10]
 ```
 
-và vì sao reflection generic metadata có giới hạn/phức tạp.
+và vì sao reflection generic siêu dữ liệu (metadata / 메타데이터) có giới hạn/phức tạp.
 
 ---
 
@@ -207,7 +213,7 @@ Legacy:
 List values = new ArrayList();
 ```
 
-Raw type bypass generic checks.
+Raw kiểu (type / 타입) bypass generic checks.
 
 ```java
 values.add("hello");
@@ -220,15 +226,15 @@ Sau đó:
 List<String> strings = values;
 ```
 
-có unchecked warning và runtime `ClassCastException` có thể xảy ra xa nơi bug được tạo.
+có unchecked warning và thời gian chạy (runtime / 런타임) `ClassCastException` có thể xảy ra xa nơi bug được tạo.
 
-Đừng suppress unchecked warnings cả package. Nếu phải interop với legacy/raw API, hãy cô lập cast ở một boundary nhỏ, validate dữ liệu rồi expose typed API cho phần còn lại.
+Đừng suppress unchecked warnings cả gói (package / 패키지). Nếu phải interop với legacy/raw API, hãy cô lập cast ở một ranh giới (boundary / 경계) nhỏ, validate dữ liệu rồi expose typed API cho phần còn lại.
 
 ---
 
-# 8. Heap Pollution và `@SafeVarargs`
+# 8. vùng nhớ động (heap / 힙) Pollution và `@SafeVarargs`
 
-Generic varargs có thể tạo array representation không reified đầy đủ.
+Generic varargs có thể tạo array biểu diễn (representation / 표현) không reified đầy đủ.
 
 ```java
 static <T> void process(
@@ -236,27 +242,27 @@ static <T> void process(
 }
 ```
 
-Compiler có thể cảnh báo heap pollution.
+Trình biên dịch (compiler / 컴파일러) có thể cảnh báo vùng nhớ động (heap / 힙) pollution.
 
-`@SafeVarargs` chỉ nên dùng khi implementation thực sự không làm unsafe operations với varargs array. Annotation này là lời hứa của programmer với compiler, không phải công cụ tắt warning tùy tiện.
+`@SafeVarargs` chỉ nên dùng khi hiện thực (implementation / 구현) thực sự không làm unsafe operations với varargs array. Annotation này là lời hứa của programmer với trình biên dịch (compiler / 컴파일러), không phải công cụ tắt warning tùy tiện.
 
 ---
 
-# 9. Collections phải chọn theo semantics trước Big-O
+# 9. Collections phải chọn theo ngữ nghĩa (semantics / 의미론) trước Big-O
 
-Big-O cần biết nhưng không đủ. `ArrayList` và `LinkedList` có theoretical differences, nhưng CPU cache locality, allocation, traversal pattern và workload thật làm `ArrayList` thường tốt hơn trong application code.
+Big-O cần biết nhưng không đủ. `ArrayList` và `LinkedList` có theoretical differences, nhưng CPU bộ nhớ đệm (cache / 캐시) locality, allocation, traversal mẫu (pattern / 패턴) và tải công việc (workload / 워크로드) thật làm `ArrayList` thường tốt hơn trong ứng dụng (application / 애플리케이션) mã (code / 코드).
 
-Nếu cần indexed/read-heavy ordered sequence, bắt đầu bằng `ArrayList`.
+Nếu cần indexed/read-heavy ordered chuỗi (sequence / 시퀀스), bắt đầu bằng `ArrayList`.
 
 Nếu cần uniqueness, dùng `Set`.
 
 Nếu cần lookup bằng key, dùng `Map`.
 
-Nếu cần priority order, dùng `PriorityQueue`.
+Nếu cần priority thứ tự (order / 순서), dùng `PriorityQueue`.
 
-Nếu cần FIFO/LIFO queue, `ArrayDeque` thường là lựa chọn tốt.
+Nếu cần FIFO/LIFO hàng đợi (queue / 큐), `ArrayDeque` thường là lựa chọn tốt.
 
-Collection type nên nói intent của domain. Nếu business invariant là “không duplicate SKU”, `Set<Sku>` encode intent tốt hơn `List<Sku>` + manual duplicate search.
+Collection kiểu (type / 타입) nên nói intent của lĩnh vực (domain / 도메인). Nếu nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) là “không duplicate SKU”, `Set<Sku>` encode intent tốt hơn `List<Sku>` + manual duplicate tìm kiếm (search / 검색).
 
 ---
 
@@ -272,26 +278,26 @@ List<Integer> values =
 values.remove(1);
 ```
 
-xóa element index 1, tức `20`.
+xóa element chỉ mục (index / 인덱스) 1, tức `20`.
 
-Muốn xóa value 1:
+Muốn xóa giá trị (value / 값) 1:
 
 ```java
 values.remove(
     Integer.valueOf(1));
 ```
 
-Đây là ví dụ overloading + autoboxing có thể gây ambiguity về ý nghĩa. Khi API có overloaded primitive/object forms, đọc signature chứ đừng đoán.
+Đây là ví dụ overloading + autoboxing có thể gây ambiguity về ý nghĩa. Khi API có overloaded thành phần nguyên thủy (primitive / 기본 요소)/đối tượng (object / 객체) forms, đọc signature chứ đừng đoán.
 
 ---
 
-# 11. `HashSet` và equality contract
+# 11. `HashSet` và equality đặc tả hợp đồng (contract / 계약)
 
-`HashSet` dùng hash-based structure. Khi add object, hash code giúp chọn bucket; equality xác nhận object đã tồn tại chưa.
+`HashSet` dùng hash-based cấu trúc (structure / 구조). Khi add đối tượng (object / 객체), băm (hash / 해시) mã (code / 코드) giúp chọn bucket; equality xác nhận đối tượng (object / 객체) đã tồn tại chưa.
 
 Nếu hai objects bằng nhau theo `equals`, chúng bắt buộc phải có cùng `hashCode`.
 
-Sai contract có thể làm:
+Sai đặc tả hợp đồng (contract / 계약) có thể làm:
 
 ```text
 set contains duplicate logical values
@@ -299,7 +305,7 @@ contains() trả false
 remove() không tìm thấy object
 ```
 
-Đây không phải “HashSet bug”; structure dựa vào contract của key.
+Đây không phải “HashSet bug”; cấu trúc (structure / 구조) dựa vào đặc tả hợp đồng (contract / 계약) của key.
 
 ---
 
@@ -331,27 +337,27 @@ key.email =
     "b@example.com";
 ```
 
-Hash code thay đổi nhưng entry vẫn nằm ở bucket cũ.
+Băm (hash / 해시) mã (code / 코드) thay đổi nhưng entry vẫn nằm ở bucket cũ.
 
 ```java
 map.get(key)
 ```
 
-có thể fail.
+có thể thất bại (fail / 실패).
 
-Map keys nên thường immutable theo fields dùng trong equality/hash. Đây là một lý do value objects và records rất hữu ích.
+Map keys nên thường immutable theo fields dùng trong equality/băm (hash / 해시). Đây là một lý do giá trị (value / 값) objects và records rất hữu ích.
 
 ---
 
 # 13. `LinkedHashMap`, `TreeMap`, `EnumMap`
 
-`LinkedHashMap` preserve insertion order và có access-order mode, hữu ích cho cache-like structures nhỏ.
+`LinkedHashMap` preserve insertion thứ tự (order / 순서) và có access-order chế độ (mode / 모드), hữu ích cho cache-like structures nhỏ.
 
-`TreeMap` giữ keys sorted dựa comparator, hỗ trợ range/navigation operations.
+`TreeMap` giữ keys sorted dựa comparator, hỗ trợ phạm vi (range / 범위)/điều hướng (navigation / 내비게이션) operations.
 
 `EnumMap` chuyên cho enum keys, thường compact và fast hơn generic `HashMap<Enum,...>`.
 
-Nếu key domain là enum:
+Nếu key lĩnh vực (domain / 도메인) là enum:
 
 ```java
 EnumMap<PaymentType, Handler>
@@ -361,7 +367,7 @@ thể hiện intent rất rõ.
 
 ---
 
-# 14. Map như Index
+# 14. Map như chỉ mục (index / 인덱스)
 
 Giả sử bạn có 100.000 users và lặp nhiều lần để tìm theo ID.
 
@@ -386,7 +392,7 @@ Map<UserId, User> index =
 
 Sau đó lookup O(1)-average.
 
-“Index once, query many” là một programming pattern thường xuyên xuất hiện từ in-memory collections tới database indexes.
+“chỉ mục (index / 인덱스) once, truy vấn (query / 쿼리) many” là một mẫu lập trình (programming pattern / 프로그래밍 패턴) thường xuyên xuất hiện từ in-memory collections tới cơ sở dữ liệu (database / 데이터베이스) indexes.
 
 ---
 
@@ -406,15 +412,15 @@ for (User user : users) {
 }
 ```
 
-Mapping function nên đơn giản, nhanh và không gây side effect phức tạp, đặc biệt với concurrent maps. Nó có thể được gọi trong synchronization/atomic mechanics tùy implementation.
+Ánh xạ (mapping / 매핑) hàm (function / 함수) nên đơn giản, nhanh và không gây side tác động (effect / 효과) phức tạp, đặc biệt với concurrent maps. Nó có thể được gọi trong synchronization/atomic mechanics tùy hiện thực (implementation / 구현).
 
-Không dùng `computeIfAbsent` để gọi remote API chậm mà không hiểu concurrency consequences.
+Không dùng `computeIfAbsent` để gọi remote API chậm mà không hiểu tính đồng thời (concurrency / 동시성) consequences.
 
 ---
 
-# 16. `equals()` và `hashCode()` là contract hệ thống
+# 16. `equals()` và `hashCode()` là đặc tả hợp đồng (contract / 계약) hệ thống
 
-Value object:
+Giá trị (value / 값) đối tượng (object / 객체):
 
 ```java
 public record UserId(long value) {
@@ -426,9 +432,9 @@ public record UserId(long value) {
 }
 ```
 
-Record tự cung cấp value-based equality.
+Bản ghi (record / 레코드) tự cung cấp value-based equality.
 
-Nếu custom class:
+Nếu custom lớp (class / 클래스):
 
 ```java
 final class Money {
@@ -437,15 +443,15 @@ final class Money {
 }
 ```
 
-bạn phải quyết định equality semantics. `BigDecimal.equals` xem scale, nên `10.0` và `10.00` không equal. Nếu domain muốn numeric equality bất kể scale, normalize amount lúc construction hoặc custom equality carefully.
+bạn phải quyết định equality ngữ nghĩa (semantics / 의미론). `BigDecimal.equals` xem quy mô (scale / 규모), nên `10.0` và `10.00` không equal. Nếu lĩnh vực (domain / 도메인) muốn numeric equality bất kể quy mô (scale / 규모), normalize amount lúc construction hoặc custom equality carefully.
 
-Equality không chỉ để test. Nó ảnh hưởng maps, sets, caches, ORM entities và deduplication.
+Equality không chỉ để kiểm thử (test / 테스트). Nó ảnh hưởng maps, sets, caches, ORM entities và deduplication.
 
 ---
 
 # 17. `Comparable` vs `Comparator`
 
-`Comparable<T>` định nghĩa natural order của type.
+`Comparable<T>` định nghĩa natural thứ tự (order / 순서) của kiểu (type / 타입).
 
 ```java
 class Version
@@ -453,22 +459,22 @@ class Version
 }
 ```
 
-`Comparator<T>` định nghĩa external ordering strategy.
+`Comparator<T>` định nghĩa bên ngoài (external / 외부) thứ tự (ordering / 순서) chiến lược (strategy / 전략).
 
 ```java
 Comparator<User> byName =
     Comparator.comparing(User::name);
 ```
 
-Một type thường chỉ có một natural order hợp lý nhưng có thể có nhiều comparators.
+Một kiểu (type / 타입) thường chỉ có một natural thứ tự (order / 순서) hợp lý nhưng có thể có nhiều comparators.
 
-Comparator phải consistent enough với ordering contract: antisymmetry/transitivity và behavior ổn định. Comparator inconsistent có thể làm `TreeSet` tưởng hai objects “trùng” nếu compare trả 0 dù `equals` false.
+Comparator phải consistent enough với thứ tự (ordering / 순서) đặc tả hợp đồng (contract / 계약): antisymmetry/transitivity và hành vi (behavior / 동작) ổn định. Comparator inconsistent có thể làm `TreeSet` tưởng hai objects “trùng” nếu compare trả 0 dù `equals` false.
 
-Đây là lý do sorting contract không chỉ là “return negative/zero/positive”.
+Đây là lý do sorting đặc tả hợp đồng (contract / 계약) không chỉ là “return negative/zero/positive”.
 
 ---
 
-# 18. Immutable, Unmodifiable và Defensive Copy khác nhau
+# 18. Immutable, Unmodifiable và Defensive bản sao (copy / 복사) khác nhau
 
 Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
@@ -489,22 +495,22 @@ original.add("A");
 
 thì `view` nhìn thấy `"A"`.
 
-`List.copyOf(original)` tạo unmodifiable snapshot về structure tại thời điểm copy.
+`List.copyOf(original)` tạo unmodifiable snapshot về cấu trúc (structure / 구조) tại thời điểm bản sao (copy / 복사).
 
-Nếu class cần own collection state:
+Nếu lớp (class / 클래스) cần own collection trạng thái (state / 상태):
 
 ```java
 this.roles =
     List.copyOf(roles);
 ```
 
-rõ hơn giữ external mutable list.
+rõ hơn giữ bên ngoài (external / 외부) mutable danh sách (list / 목록).
 
-Nhưng nếu elements mutable, shallow copy không deep-copy elements. Ownership phải reason toàn object graph.
+Nhưng nếu elements mutable, shallow bản sao (copy / 복사) không deep-copy elements. quyền sở hữu (ownership / 소유권) phải reason toàn đối tượng (object / 객체) đồ thị (graph / 그래프).
 
 ---
 
-# 19. Stream là lazy pipeline
+# 19. Stream là lazy chuỗi xử lý (pipeline / 파이프라인)
 
 Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
@@ -518,7 +524,7 @@ Stream<User> stream =
          });
 ```
 
-Chưa có terminal operation, filter có thể chưa chạy.
+Chưa có terminal thao tác (operation / 연산), filter có thể chưa chạy.
 
 Khi:
 
@@ -526,9 +532,9 @@ Khi:
 long count = stream.count();
 ```
 
-pipeline mới evaluate.
+Chuỗi xử lý (pipeline / 파이프라인) mới evaluate.
 
-Laziness cho phép optimization và short-circuit.
+Laziness cho phép tối ưu hóa (optimization / 최적화) và short-circuit.
 
 ```java
 users.stream()
@@ -538,7 +544,7 @@ users.stream()
 
 có thể dừng khi tìm thấy first match.
 
-Không dựa vào stream pipeline để thực hiện side effect order phức tạp nếu semantics quan trọng.
+Không dựa vào stream chuỗi xử lý (pipeline / 파이프라인) để thực hiện side tác động (effect / 효과) thứ tự (order / 순서) phức tạp nếu ngữ nghĩa (semantics / 의미론) quan trọng.
 
 ---
 
@@ -550,7 +556,7 @@ Nếu:
 List<Order> orders
 ```
 
-mỗi order có:
+mỗi thứ tự (order / 순서) có:
 
 ```java
 List<OrderItem> items
@@ -577,7 +583,7 @@ Optional<Address> address =
         .flatMap(User::shippingAddress);
 ```
 
-`flatMap` rất quan trọng khi composition trả container/context cùng loại.
+`flatMap` rất quan trọng khi composition trả bộ chứa (container / 컨테이너)/ngữ cảnh (context / 맥락) cùng loại.
 
 ---
 
@@ -615,7 +621,7 @@ Map<Boolean, List<User>> split =
                 User::active));
 ```
 
-Collectors giúp biến stream thành aggregated data structures.
+Collectors giúp biến stream thành aggregated dữ liệu (data / 데이터) structures.
 
 ---
 
@@ -634,7 +640,7 @@ users.stream()
 
 Nếu duplicate email, collector throw `IllegalStateException`.
 
-Bạn phải quyết định business policy:
+Bạn phải quyết định nghiệp vụ (business / 비즈니스) chính sách (policy / 정책):
 
 ```java
 Collectors.toMap(
@@ -644,7 +650,7 @@ Collectors.toMap(
 )
 ```
 
-Nhưng silent “first wins” chỉ đúng nếu domain cho phép. Duplicate key thường có thể là data-quality bug nên fail-fast tốt hơn.
+Nhưng silent “first wins” chỉ đúng nếu lĩnh vực (domain / 도메인) cho phép. Duplicate key thường có thể là data-quality bug nên fail-fast tốt hơn.
 
 ---
 
@@ -660,15 +666,15 @@ int total =
                Integer::sum);
 ```
 
-`reduce` kết hợp elements thành một value.
+`reduce` kết hợp elements thành một giá trị (value / 값).
 
-Accumulator phải associative nếu muốn parallel semantics đúng.
+Accumulator phải associative nếu muốn parallel ngữ nghĩa (semantics / 의미론) đúng.
 
 Dùng specialized collectors/methods khi dễ đọc hơn. Không biến mọi aggregation thành abstract reduce nếu `sum()`/`count()`/collector thể hiện intent rõ hơn.
 
 ---
 
-# 24. Primitive Streams
+# 24. thành phần nguyên thủy (primitive / 기본 요소) Streams
 
 Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
@@ -681,7 +687,7 @@ int totalAge =
 
 `IntStream`, `LongStream`, `DoubleStream` giảm boxing và có operations như `sum`, `average`.
 
-Hot data-processing code có thể benefit, nhưng clarity trước. Đừng dùng primitive streams chỉ vì sợ boxing trong small business path chưa profile.
+Hot data-processing mã (code / 코드) có thể benefit, nhưng clarity trước. Đừng dùng thành phần nguyên thủy (primitive / 기본 요소) streams chỉ vì sợ boxing trong small nghiệp vụ (business / 비즈니스) đường dẫn (path / 경로) chưa profile.
 
 ---
 
@@ -695,17 +701,17 @@ users.parallelStream()
 
 không tự động nhanh hơn.
 
-Parallel work có overhead split/merge/scheduling và thường dùng common `ForkJoinPool`. Nếu operation blocking HTTP/DB, bạn có thể làm common pool starvation hoặc uncontrolled fan-out.
+Parallel công việc (work / 작업) có overhead split/merge/scheduling và thường dùng dùng chung (common / 공통) `ForkJoinPool`. Nếu thao tác (operation / 연산) blocking HTTP/DB, bạn có thể làm dùng chung (common / 공통) pool starvation hoặc uncontrolled fan-out.
 
-Chỉ parallelize khi workload CPU-bound/splittable, dataset đủ lớn và benchmark chứng minh.
+Chỉ parallelize khi tải công việc (workload / 워크로드) CPU-bound/splittable, dataset đủ lớn và benchmark chứng minh.
 
-Trong server application, explicit executor/concurrency limit thường dễ kiểm soát hơn parallel stream.
+Trong máy chủ (server / 서버) ứng dụng (application / 애플리케이션), tường minh (explicit / 명시적) executor/tính đồng thời (concurrency / 동시성) limit thường dễ kiểm soát hơn parallel stream.
 
 ---
 
 # 26. Optional nâng cao
 
-`Optional` nên thường là return type để nói “result có thể không tồn tại”.
+`Optional` nên thường là return kiểu (type / 타입) để nói “kết quả (result / 결과) có thể không tồn tại”.
 
 Bad style:
 
@@ -714,15 +720,15 @@ void process(
     Optional<User> user)
 ```
 
-thường làm caller phải wrap value vô ích.
+thường làm caller phải wrap giá trị (value / 값) vô ích.
 
-Field Optional cũng có framework/serialization concerns.
+Trường dữ liệu (field / 필드) Optional cũng có khung phần mềm (framework / 프레임워크)/serialization concerns.
 
 `orElseGet` lazy như Part 1.
 
 Java 9 thêm `ifPresentOrElse`, `or`, `stream`; Java 11 thêm `isEmpty`.
 
-Optional pipeline:
+Optional chuỗi xử lý (pipeline / 파이프라인):
 
 ```java
 String email =
@@ -732,13 +738,13 @@ String email =
               .orElseThrow(...);
 ```
 
-Nếu chain trở nên khó debug, explicit branching có thể rõ hơn.
+Nếu chuỗi (chain / 사슬) trở nên khó gỡ lỗi (debug / 디버그), tường minh (explicit / 명시적) branching có thể rõ hơn.
 
 ---
 
-# 27. Exception Design
+# 27. Exception thiết kế (design / 설계)
 
-Exception should carry semantics and cause.
+Exception should carry ngữ nghĩa (semantics / 의미론) and cause.
 
 Bad:
 
@@ -761,15 +767,15 @@ catch (SQLException e) {
 
 Original cause preserved.
 
-Catch nơi bạn có thể add value. Nếu layer chỉ catch để log `"error"` rồi rethrow, top layer sẽ log lại và tạo duplicate stack traces.
+Catch nơi bạn có thể add giá trị (value / 값). Nếu tầng (layer / 계층) chỉ catch để log `"error"` rồi rethrow, top tầng (layer / 계층) sẽ log lại và tạo duplicate ngăn xếp (stack / 스택) traces.
 
 ---
 
 # 28. Exception Translation at Boundaries
 
-Database layer có vendor exception. Application layer cần data-access semantics. HTTP layer cần status/error contract.
+Cơ sở dữ liệu (database / 데이터베이스) tầng (layer / 계층) có vendor exception. ứng dụng (application / 애플리케이션) tầng (layer / 계층) cần data-access ngữ nghĩa (semantics / 의미론). HTTP tầng (layer / 계층) cần status/lỗi (error / 오류) đặc tả hợp đồng (contract / 계약).
 
-Flow:
+Luồng (flow / 흐름):
 
 ```text
 SQLException
@@ -778,9 +784,9 @@ SQLException
 → HTTP 503/500 or domain response
 ```
 
-Không expose raw SQL exception cho REST client.
+Không expose raw SQL exception cho REST máy khách (client / 클라이언트).
 
-Đây là boundary translation pattern và là nền cho Spring's exception translation sau này.
+Đây là ranh giới (boundary / 경계) translation mẫu (pattern / 패턴) và là nền cho Spring's exception translation sau này.
 
 ---
 
@@ -795,7 +801,7 @@ try (Resource a = openA();
 }
 ```
 
-Resources close reverse order.
+Resources close reverse thứ tự (order / 순서).
 
 Nếu body throw `PrimaryException` và `close()` throw `CloseException`, Java giữ primary và attach close exception:
 
@@ -803,21 +809,21 @@ Nếu body throw `PrimaryException` và `close()` throw `CloseException`, Java g
 e.getSuppressed()
 ```
 
-Điều này tránh losing root cause.
+Điều này tránh losing nguyên nhân gốc (root cause / 근본 원인).
 
-Khi debug I/O, kiểm tra suppressed exceptions nếu close failure có ý nghĩa.
+Khi gỡ lỗi (debug / 디버그) I/O, kiểm tra suppressed exceptions nếu close thất bại (failure / 실패) có ý nghĩa.
 
 ---
 
 # 30. `java.time`: Instant, Offset, Zone
 
-`Instant` là point trên UTC timeline.
+`Instant` là điểm (point / 지점) trên UTC timeline.
 
-`OffsetDateTime` có date/time + fixed UTC offset.
+`OffsetDateTime` có date/thời gian (time / 시간) + fixed UTC offset.
 
 `ZonedDateTime` có zone region + rules, ví dụ `Asia/Seoul`.
 
-Store event timestamp:
+Store sự kiện (event / 이벤트) timestamp:
 
 ```java
 Instant createdAt;
@@ -830,7 +836,7 @@ createdAt.atZone(
     ZoneId.of("Asia/Seoul"));
 ```
 
-Không lưu “2026-11-01 01:30” rồi assume worldwide meaning. Local time có thể ambiguous trong DST zones.
+Không lưu “2026-11-01 01:30” rồi assume worldwide meaning. cục bộ (local / 로컬) thời gian (time / 시간) có thể ambiguous trong DST zones.
 
 ---
 
@@ -848,15 +854,15 @@ và:
 zoned.plusHours(24)
 ```
 
-có thể khác local wall time.
+có thể khác cục bộ (local / 로컬) wall thời gian (time / 시간).
 
-Business rule phải nói “ngày lịch” hay “elapsed 24 hours”.
+Nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) phải nói “ngày lịch” hay “elapsed 24 hours”.
 
-Korea hiện không DST nhưng global application vẫn gặp.
+Korea hiện không DST nhưng toàn cục (global / 전역) ứng dụng (application / 애플리케이션) vẫn gặp.
 
 ---
 
-# 32. Inject `Clock` cho deterministic time
+# 32. Inject `Clock` cho deterministic thời gian (time / 시간)
 
 Bad testability:
 
@@ -883,7 +889,7 @@ final class TokenService {
 }
 ```
 
-Test:
+Kiểm thử (test / 테스트):
 
 ```java
 Clock fixed =
@@ -893,11 +899,11 @@ Clock fixed =
         ZoneOffset.UTC);
 ```
 
-Dependency injection cho nondeterminism là plain Java design pattern, sau này Spring chỉ giúp wiring.
+Phụ thuộc (dependency / 의존성) injection cho nondeterminism là plain Java mẫu thiết kế (design pattern / 디자인 패턴), sau này Spring chỉ giúp wiring.
 
 ---
 
-# 33. BigDecimal scale và rounding policy
+# 33. BigDecimal quy mô (scale / 규모) và rounding chính sách (policy / 정책)
 
 Division:
 
@@ -909,7 +915,7 @@ new BigDecimal("10")
 
 có thể throw `ArithmeticException` nếu decimal expansion non-terminating.
 
-Specify scale/rounding:
+Specify quy mô (scale / 규모)/rounding:
 
 ```java
 amount.divide(
@@ -918,19 +924,19 @@ amount.divide(
     RoundingMode.HALF_UP);
 ```
 
-Nhưng “2, HALF_UP” không phải universal money rule. Currency/tax/product có policy riêng.
+Nhưng “2, HALF_UP” không phải universal money quy tắc (rule / 규칙). Currency/tax/sản phẩm (product / 제품) có chính sách (policy / 정책) riêng.
 
-Put rounding policy trong domain service/value object.
+Put rounding chính sách (policy / 정책) trong lĩnh vực (domain / 도메인) dịch vụ (service / 서비스)/giá trị (value / 값) đối tượng (object / 객체).
 
 ---
 
-# 34. `Path`/`Files` và large file strategy
+# 34. `Path`/`Files` và large tệp (file / 파일) chiến lược (strategy / 전략)
 
-`Files.readAllBytes` hoặc `readString` load toàn file vào memory.
+`Files.readAllBytes` hoặc `readString` tải (load / 로드) toàn tệp (file / 파일) vào bộ nhớ (memory / 메모리).
 
 10 KB okay. 10 GB không.
 
-Large data nên stream:
+Large dữ liệu (data / 데이터) nên stream:
 
 ```java
 try (Stream<String> lines =
@@ -942,13 +948,13 @@ try (Stream<String> lines =
 }
 ```
 
-`Files.list`/`Files.walk` cũng trả streams gắn resource; dùng try-with-resources.
+`Files.list`/`Files.walk` cũng trả streams gắn tài nguyên (resource / 자원); dùng try-with-resources.
 
-Resource-returning Stream là một contract quan trọng vì nó khác in-memory stream.
+Resource-returning Stream là một đặc tả hợp đồng (contract / 계약) quan trọng vì nó khác in-memory stream.
 
 ---
 
-# 35. ByteBuffer mental model
+# 35. ByteBuffer mô hình tư duy (mental model / 사고 모델)
 
 `ByteBuffer` có:
 
@@ -958,29 +964,29 @@ position
 limit
 ```
 
-Bạn write data:
+Bạn ghi (write / 쓰기) dữ liệu (data / 데이터):
 
 ```java
 buffer.put(bytes);
 ```
 
-Sau đó `flip()` chuyển buffer từ write mode sang read mode bằng cách set limit=current position rồi position=0.
+Sau đó `flip()` chuyển buffer từ ghi (write / 쓰기) chế độ (mode / 모드) sang read chế độ (mode / 모드) bằng cách set limit=hiện tại (current / 현재) position rồi position=0.
 
-`clear()` chuẩn bị ghi lại toàn buffer, không zero memory.
+`clear()` chuẩn bị ghi lại toàn buffer, không zero bộ nhớ (memory / 메모리).
 
 `compact()` giữ unread bytes rồi chuẩn bị ghi thêm.
 
-Nếu không hiểu position/limit, NIO code rất dễ bug.
+Nếu không hiểu position/limit, NIO mã (code / 코드) rất dễ bug.
 
 ---
 
 # 36. Channels
 
-`FileChannel` đọc/ghi qua buffers và hỗ trợ random access, transfer, mapping.
+`FileChannel` đọc/ghi qua buffers và hỗ trợ random truy cập (access / 접근), transfer, ánh xạ (mapping / 매핑).
 
-NIO không đồng nghĩa “luôn non-blocking”. FileChannel operations có thể block. Non-blocking selector model chủ yếu liên quan socket channels.
+NIO không đồng nghĩa “luôn non-blocking”. FileChannel operations có thể khối (block / 블록). Non-blocking selector mô hình (model / 모델) chủ yếu liên quan socket channels.
 
-Senior sẽ đi sâu direct buffers/mmap/zero-copy-like operations.
+Cấp cao (senior / 시니어) sẽ đi sâu direct buffers/mmap/zero-copy-like operations.
 
 ---
 
@@ -1013,21 +1019,21 @@ matcher.group(1)
 
 Java string escaping means regex backslash phải double escape.
 
-Regex `\d+` trong source:
+Regex `\d+` trong nguồn (source / 소스):
 
 ```java
 "\\d+"
 ```
 
-Precompile repeated pattern.
+Precompile repeated mẫu (pattern / 패턴).
 
-Cẩn thận catastrophic backtracking với untrusted input; regex có thể thành performance/security issue.
+Cẩn thận catastrophic backtracking với untrusted đầu vào (input / 입력); regex có thể thành hiệu năng (performance / 성능)/bảo mật (security / 보안) issue.
 
 ---
 
-# 38. Concurrency bắt đầu từ shared mutable state
+# 38. tính đồng thời (concurrency / 동시성) bắt đầu từ dùng chung (shared / 공유) mutable trạng thái (state / 상태)
 
-Race condition không phải chỉ “hai threads cùng chạy”. Nó xảy ra khi correctness phụ thuộc timing interleavings không được synchronize.
+Race điều kiện (condition / 조건) không phải chỉ “hai threads cùng chạy”. Nó xảy ra khi tính đúng đắn (correctness / 정확성) phụ thuộc timing interleavings không được synchronize.
 
 ```java
 count++;
@@ -1041,75 +1047,78 @@ add 1
 write count
 ```
 
-Hai threads có thể cùng read 10 và cùng write 11, mất một increment.
+Hai threads có thể cùng read 10 và cùng ghi (write / 쓰기) 11, mất một increment.
 
-Thread-safe design bắt đầu bằng việc giảm shared mutable state. Immutable data và thread confinement thường đơn giản hơn locks.
+Thread-safe thiết kế (design / 설계) bắt đầu bằng việc giảm dùng chung (shared / 공유) mutable trạng thái (state / 상태). Immutable dữ liệu (data / 데이터) và luồng thực thi (thread / 스레드) confinement thường đơn giản hơn locks.
 
 
 
 ---
 
-## `Thread`: object Java và execution context khác nhau thế nào?
 
-Trước khi học `synchronized`, executor hay virtual thread, cần hiểu `Thread` ở mức trực tiếp. Một `Thread` object biểu diễn một luồng thực thi có lifecycle. Tạo object chưa làm code chạy song song:
+> **Chuyển mạch:** Từ **Vị trí của Part 2 trong mạch học (learning flow / 학습 흐름)**, ta sang **luồng thực thi (thread / 스레드): đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## `Thread`: đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?
+
+Trước khi học `synchronized`, executor hay virtual luồng thực thi (thread / 스레드), cần hiểu `Thread` ở mức trực tiếp. Một `Thread` đối tượng (object / 객체) biểu diễn một luồng thực thi có vòng đời (lifecycle / 생명주기). Tạo đối tượng (object / 객체) chưa làm mã (code / 코드) chạy song song:
 
 ```java
 Thread thread =
     new Thread(() -> doWork());
 ```
 
-Chỉ khi gọi `thread.start()` JVM mới tạo/schedule execution mới và thread đó sau đó thực thi `run()`. Nếu gọi trực tiếp `thread.run()`, đó chỉ là một method call bình thường trên **thread hiện tại**; không có concurrency mới.
+Chỉ khi gọi `thread.start()` JVM mới tạo/schedule thực thi (execution / 실행) mới và luồng thực thi (thread / 스레드) đó sau đó thực thi `run()`. Nếu gọi trực tiếp `thread.run()`, đó chỉ là một phương thức (method / 메서드) lời gọi (call / 호출) bình thường trên **luồng thực thi (thread / 스레드) hiện tại**; không có tính đồng thời (concurrency / 동시성) mới.
 
-Bạn có thể chờ thread khác hoàn thành bằng `join()`. `join()` không chỉ “đợi cho xong”; việc thread kết thúc rồi thread khác join thành công còn tạo happens-before relationship, nên các effects trước khi thread kết thúc được thread join quan sát theo Java Memory Model.
+Bạn có thể chờ luồng thực thi (thread / 스레드) khác hoàn thành bằng `join()`. `join()` không chỉ “đợi cho xong”; việc luồng thực thi (thread / 스레드) kết thúc rồi luồng thực thi (thread / 스레드) khác phép nối (join / 조인) thành công còn tạo happens-before relationship, nên các effects trước khi luồng thực thi (thread / 스레드) kết thúc được luồng thực thi (thread / 스레드) phép nối (join / 조인) quan sát theo Java bộ nhớ (memory / 메모리) mô hình (model / 모델).
 
-`Thread.sleep(...)` chỉ tạm dừng thread hiện tại; nó không nhả monitor lock đang giữ và không phải primitive để chờ một condition. Nếu test hoặc production code dùng `sleep(100)` để “đợi task chắc chạy xong”, design đang phụ thuộc timing. Hãy dùng `join`, latch, `Future` hoặc condition phù hợp.
+`Thread.sleep(...)` chỉ tạm dừng luồng thực thi (thread / 스레드) hiện tại; nó không nhả monitor khóa (lock / 잠금) đang giữ và không phải thành phần nguyên thủy (primitive / 기본 요소) để chờ một điều kiện (condition / 조건). Nếu kiểm thử (test / 테스트) hoặc môi trường vận hành (production / 운영 환경) mã (code / 코드) dùng `sleep(100)` để “đợi tác vụ (task / 작업) chắc chạy xong”, thiết kế (design / 설계) đang phụ thuộc timing. Hãy dùng `join`, latch, `Future` hoặc điều kiện (condition / 조건) phù hợp.
 
-Platform thread có các trạng thái như `NEW`, `RUNNABLE`, `BLOCKED`, `WAITING`, `TIMED_WAITING`, `TERMINATED`. Trong production thread dump, state chỉ là đầu mối: một worker WAITING trên queue có thể hoàn toàn bình thường, còn hàng trăm threads BLOCKED trên cùng monitor mới là tín hiệu contention cần điều tra.
+Nền tảng (platform / 플랫폼) luồng thực thi (thread / 스레드) có các trạng thái như `NEW`, `RUNNABLE`, `BLOCKED`, `WAITING`, `TIMED_WAITING`, `TERMINATED`. Trong môi trường vận hành (production / 운영 환경) luồng thực thi (thread / 스레드) dump, trạng thái (state / 상태) chỉ là đầu mối: một worker WAITING trên hàng đợi (queue / 큐) có thể hoàn toàn bình thường, còn hàng trăm threads BLOCKED trên cùng monitor mới là tín hiệu contention cần điều tra.
 
-Daemon thread không giữ JVM sống khi tất cả non-daemon threads đã kết thúc. Background work quan trọng không nên dựa vào giả định “daemon thread sẽ còn kịp flush”. Durability phải đến từ explicit persistence và lifecycle.
+Daemon luồng thực thi (thread / 스레드) không giữ JVM sống khi tất cả non-daemon threads đã kết thúc. Background công việc (work / 작업) quan trọng không nên dựa vào giả định “daemon luồng thực thi (thread / 스레드) sẽ còn kịp flush”. Durability phải đến từ tường minh (explicit / 명시적) persistence và vòng đời (lifecycle / 생명주기).
 
-Trong application production, bạn hiếm khi tự tạo một platform `Thread` cho từng task; `ExecutorService` quản lý lifecycle và capacity tốt hơn. Java 21 Virtual Threads lại làm thread-per-task style khả thi với cost model khác. Nhưng hiểu `Thread` vẫn bắt buộc để đọc stack trace, thread dump, interruption và framework execution.
+Trong ứng dụng (application / 애플리케이션) môi trường vận hành (production / 운영 환경), bạn hiếm khi tự tạo một nền tảng (platform / 플랫폼) `Thread` cho từng tác vụ (task / 작업); `ExecutorService` quản lý vòng đời (lifecycle / 생명주기) và sức chứa (capacity / 용량) tốt hơn. Java 21 Virtual Threads lại làm thread-per-task style khả thi với chi phí (cost / 비용) mô hình (model / 모델) khác. Nhưng hiểu `Thread` vẫn bắt buộc để đọc dấu vết ngăn xếp (stack trace / 스택 트레이스), luồng thực thi (thread / 스레드) dump, interruption và khung phần mềm (framework / 프레임워크) thực thi (execution / 실행).
 
 ---
 
 # 39. Visibility
 
-Thread A:
+Luồng thực thi (thread / 스레드) A:
 
 ```java
 running = false;
 ```
 
-Thread B:
+Luồng thực thi (thread / 스레드) B:
 
 ```java
 while (running) {
 }
 ```
 
-Nếu không synchronization/volatile, Java Memory Model không guarantee B thấy update timely như bạn tưởng.
+Nếu không synchronization/volatile, Java bộ nhớ (memory / 메모리) mô hình (model / 모델) không guarantee B thấy cập nhật (update / 업데이트) timely như bạn tưởng.
 
-CPU caches/compiler/JIT reorder/optimize trong boundaries được phép.
+CPU caches/trình biên dịch (compiler / 컴파일러)/JIT reorder/optimize trong boundaries được phép.
 
-Concurrency correctness phải reason bằng happens-before, không bằng “RAM chắc update rồi”.
+Tính đồng thời (concurrency / 동시성) tính đúng đắn (correctness / 정확성) phải reason bằng happens-before, không bằng “RAM chắc cập nhật (update / 업데이트) rồi”.
 
 ---
 
-# 40. Happens-before ở level Intermediate
+# 40. Happens-before ở mức (level / 수준) Intermediate
 
-Happens-before là relationship đảm bảo visibility/ordering giữa actions.
+Happens-before là relationship đảm bảo visibility/thứ tự (ordering / 순서) giữa actions.
 
-Các mechanisms tạo happens-before gồm synchronized lock/unlock, volatile write/read, thread start/join và concurrency utilities theo contract.
+Các mechanisms tạo happens-before gồm synchronized khóa (lock / 잠금)/unlock, volatile ghi (write / 쓰기)/read, luồng thực thi (thread / 스레드) start/phép nối (join / 조인) và tính đồng thời (concurrency / 동시성) utilities theo đặc tả hợp đồng (contract / 계약).
 
-Nếu action A happens-before B, effects của A được B thấy theo JMM guarantee phù hợp.
+Nếu hành động (action / 동작) A happens-before B, effects của A được B thấy theo JMM guarantee phù hợp.
 
-Đây là nền để Senior học safe publication/final fields/VarHandle.
+Đây là nền để cấp cao (senior / 시니어) học safe publication/final fields/VarHandle.
 
 ---
 
 # 41. `synchronized`
 
-Method:
+Phương thức (method / 메서드):
 
 ```java
 synchronized void increment() {
@@ -1117,7 +1126,7 @@ synchronized void increment() {
 }
 ```
 
-Block:
+Khối (block / 블록):
 
 ```java
 synchronized (lock) {
@@ -1125,9 +1134,9 @@ synchronized (lock) {
 }
 ```
 
-`synchronized` cung cấp mutual exclusion và memory visibility.
+`synchronized` cung cấp mutual exclusion và bộ nhớ (memory / 메모리) visibility.
 
-Lock object phải stable/private nếu có thể.
+Khóa (lock / 잠금) đối tượng (object / 객체) phải stable/private nếu có thể.
 
 Bad:
 
@@ -1136,9 +1145,9 @@ synchronized (publicList) {
 }
 ```
 
-external code cũng có thể lock same object, gây hidden coupling/deadlock.
+Bên ngoài (external / 외부) mã (code / 코드) cũng có thể khóa (lock / 잠금) same đối tượng (object / 객체), gây hidden coupling/deadlock.
 
-Critical section nên chỉ chứa state operations cần bảo vệ. Đừng giữ lock trong remote HTTP call.
+Trọng yếu (critical / 중요) section nên chỉ chứa trạng thái (state / 상태) operations cần bảo vệ. Đừng giữ khóa (lock / 잠금) trong remote HTTP lời gọi (call / 호출).
 
 ---
 
@@ -1150,7 +1159,7 @@ Phần này nối khái niệm backend với một ví dụ hoặc quy trình c�
 private volatile boolean running = true;
 ```
 
-Volatile thích hợp cho simple visibility/state flag.
+Volatile thích hợp cho simple visibility/trạng thái (state / 상태) flag.
 
 Nhưng:
 
@@ -1161,7 +1170,7 @@ count++;
 
 vẫn không atomic.
 
-Compound invariant:
+Compound bất biến (invariant / 불변식):
 
 ```text
 balance >= 0
@@ -1170,7 +1179,7 @@ debit + ledger update
 
 không được bảo vệ bởi volatile đơn lẻ.
 
-Volatile không phải “lightweight synchronized replacement”; nó giải contract khác.
+Volatile không phải “lightweight synchronized replacement”; nó giải đặc tả hợp đồng (contract / 계약) khác.
 
 ---
 
@@ -1195,15 +1204,15 @@ getAndIncrement()
 
 Atomic classes phù hợp single-variable atomic transitions.
 
-Nếu invariant liên quan hai fields:
+Nếu bất biến (invariant / 불변식) liên quan hai fields:
 
 ```text
 available + reserved = total
 ```
 
-hai `AtomicInteger` không tự tạo atomic transaction giữa chúng.
+hai `AtomicInteger` không tự tạo atomic giao dịch (transaction / 트랜잭션) giữa chúng.
 
-Need lock/immutable state/CAS state object design.
+Need khóa (lock / 잠금)/immutable trạng thái (state / 상태)/CAS trạng thái (state / 상태) đối tượng (object / 객체) thiết kế (design / 설계).
 
 ---
 
@@ -1220,11 +1229,11 @@ adder.increment();
 
 nó phân tán contention qua cells rồi sum.
 
-Tốt cho metrics-style counters hơn exact synchronization point.
+Tốt cho metrics-style counters hơn chính xác (exact / 정확한) synchronization điểm (point / 지점).
 
 `sum()` không necessarily linearizable snapshot như `AtomicLong.get()` trong mọi concurrent timing.
 
-Chọn semantics trước throughput.
+Chọn ngữ nghĩa (semantics / 의미론) trước thông lượng (throughput / 처리량).
 
 ---
 
@@ -1244,7 +1253,7 @@ try {
 
 Bắt buộc unlock trong finally.
 
-`ReentrantLock` hữu ích khi cần `tryLock`, interruptible lock acquisition, multiple Conditions hoặc fairness policy.
+`ReentrantLock` hữu ích khi cần `tryLock`, interruptible khóa (lock / 잠금) acquisition, multiple Conditions hoặc fairness chính sách (policy / 정책).
 
 Nếu chỉ cần simple mutual exclusion, `synchronized` thường dễ đọc và ít bug hơn.
 
@@ -1252,14 +1261,14 @@ Nếu chỉ cần simple mutual exclusion, `synchronized` thường dễ đọc 
 
 # 46. `Condition`
 
-`Condition` tương tự wait/notify abstraction gắn với Lock.
+`Condition` tương tự wait/notify lớp trừu tượng (abstraction / 추상화) gắn với khóa (lock / 잠금).
 
 ```java
 Condition notEmpty =
     lock.newCondition();
 ```
 
-Wait phải trong loop:
+Wait phải trong vòng lặp (loop / 루프):
 
 ```java
 while (queue.isEmpty()) {
@@ -1267,23 +1276,23 @@ while (queue.isEmpty()) {
 }
 ```
 
-vì spurious wakeup và condition có thể đổi trước khi thread reacquire lock.
+vì spurious wakeup và điều kiện (condition / 조건) có thể đổi trước khi luồng thực thi (thread / 스레드) reacquire khóa (lock / 잠금).
 
-High-level `BlockingQueue` thường tốt hơn tự implement producer/consumer condition logic.
+High-level `BlockingQueue` thường tốt hơn tự implement producer/bên tiêu thụ (consumer / 소비자) điều kiện (condition / 조건) lô-gic (logic / 논리).
 
 ---
 
 # 47. ExecutorService
 
-Không tạo thread tùy tiện:
+Không tạo luồng thực thi (thread / 스레드) tùy tiện:
 
 ```java
 new Thread(task).start();
 ```
 
-cho mỗi job trong server.
+cho mỗi job trong máy chủ (server / 서버).
 
-Executor tách task submission khỏi thread management.
+Executor tách tác vụ (task / 작업) submission khỏi luồng thực thi (thread / 스레드) management.
 
 ```java
 ExecutorService executor =
@@ -1292,19 +1301,19 @@ ExecutorService executor =
 executor.submit(task);
 ```
 
-Sau đó lifecycle:
+Sau đó vòng đời (lifecycle / 생명주기):
 
 ```java
 executor.shutdown();
 ```
 
-Application/component sở hữu executor phải close/shutdown nó.
+Ứng dụng (application / 애플리케이션)/thành phần (component / 컴포넌트) sở hữu executor phải close/shutdown nó.
 
 ---
 
 # 48. ThreadPoolExecutor thực sự có ba phần chính
 
-Thread pool behavior không chỉ là “max threads”.
+Luồng thực thi (thread / 스레드) pool hành vi (behavior / 동작) không chỉ là “max threads”.
 
 Nó có:
 
@@ -1314,13 +1323,13 @@ queue
 rejection policy
 ```
 
-Khi tasks đến nhanh hơn xử lý, queue behavior quyết định latency/memory.
+Khi tasks đến nhanh hơn xử lý, hàng đợi (queue / 큐) hành vi (behavior / 동작) quyết định độ trễ (latency / 지연 시간)/bộ nhớ (memory / 메모리).
 
-Unbounded queue có thể làm memory grow thay vì reject.
+Unbounded hàng đợi (queue / 큐) có thể làm bộ nhớ (memory / 메모리) grow thay vì reject.
 
-Bounded queue + rejection policy làm overload explicit.
+Bounded hàng đợi (queue / 큐) + rejection chính sách (policy / 정책) làm overload tường minh (explicit / 명시적).
 
-Capacity là correctness property trong production.
+Sức chứa (capacity / 용량) là tính đúng đắn (correctness / 정확성) thuộc tính (property / 속성) trong môi trường vận hành (production / 운영 환경).
 
 ---
 
@@ -1328,11 +1337,11 @@ Capacity là correctness property trong production.
 
 `AbortPolicy` throw rejection exception.
 
-`CallerRunsPolicy` cho submitting thread chạy task, tạo natural slowdown/backpressure trong một số architecture.
+`CallerRunsPolicy` cho submitting luồng thực thi (thread / 스레드) chạy tác vụ (task / 작업), tạo natural slowdown/backpressure trong một số kiến trúc (architecture / 아키텍처).
 
-Discard policies bỏ task, chỉ đúng khi data loss acceptable.
+Discard policies bỏ tác vụ (task / 작업), chỉ đúng khi dữ liệu (data / 데이터) mất mát (loss / 손실) acceptable.
 
-Không chọn policy mà không biết business consequence của rejected task.
+Không chọn chính sách (policy / 정책) mà không biết nghiệp vụ (business / 비즈니스) consequence của rejected tác vụ (task / 작업).
 
 ---
 
@@ -1349,7 +1358,7 @@ Result result =
     future.get();
 ```
 
-`get()` block indefinitely nếu không timeout.
+`get()` khối (block / 블록) indefinitely nếu không hết thời gian chờ (timeout / 타임아웃).
 
 Better:
 
@@ -1359,7 +1368,7 @@ future.get(
     TimeUnit.SECONDS);
 ```
 
-Waiting policy phải explicit ở external/slow operations.
+Waiting chính sách (policy / 정책) phải tường minh (explicit / 명시적) ở bên ngoài (external / 외부)/slow operations.
 
 Cancellation:
 
@@ -1367,13 +1376,13 @@ Cancellation:
 future.cancel(true);
 ```
 
-yêu cầu cooperative interruption; không guarantee task chết ngay.
+yêu cầu cooperative interruption; không guarantee tác vụ (task / 작업) chết ngay.
 
 ---
 
 # 51. Interruption
 
-Thread interruption là cooperative cancellation signal.
+Luồng thực thi (thread / 스레드) interruption là cooperative cancellation tín hiệu (signal / 신호).
 
 Bad:
 
@@ -1383,7 +1392,7 @@ catch (InterruptedException e) {
 }
 ```
 
-Bạn mất signal.
+Bạn mất tín hiệu (signal / 신호).
 
 Nếu không handle:
 
@@ -1404,7 +1413,7 @@ Preserve interruption là thói quen cực quan trọng trong executors/shutdown
 
 # 52. ConcurrentHashMap
 
-`ConcurrentHashMap` cho concurrent access với atomic compound methods.
+`ConcurrentHashMap` cho concurrent truy cập (access / 접근) với atomic compound methods.
 
 Bad check-then-act:
 
@@ -1424,7 +1433,7 @@ map.computeIfAbsent(
     this::create);
 ```
 
-Mapping function phải tránh long blocking/reentrant updates phức tạp.
+Ánh xạ (mapping / 매핑) hàm (function / 함수) phải tránh long blocking/reentrant updates phức tạp.
 
 Concurrent collection iterator thường weakly consistent, không giống fail-fast normal collection iterator.
 
@@ -1432,7 +1441,7 @@ Concurrent collection iterator thường weakly consistent, không giống fail-
 
 # 53. CopyOnWriteArrayList
 
-Mỗi write tạo copy array mới.
+Mỗi ghi (write / 쓰기) tạo bản sao (copy / 복사) array mới.
 
 Excellent khi:
 
@@ -1444,13 +1453,13 @@ lists nhỏ/moderate
 
 Ví dụ listener registry.
 
-Tệ nếu write-heavy/large list.
+Tệ nếu write-heavy/large danh sách (list / 목록).
 
-Concurrency collection name không tự nghĩa “better list”.
+Tính đồng thời (concurrency / 동시성) collection name không tự nghĩa “better danh sách (list / 목록)”.
 
 ---
 
-# 54. BlockingQueue và Producer/Consumer
+# 54. BlockingQueue và Producer/bên tiêu thụ (consumer / 소비자)
 
 Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
@@ -1465,15 +1474,15 @@ Producer:
 queue.put(job);
 ```
 
-Consumer:
+Bên tiêu thụ (consumer / 소비자):
 
 ```java
 Job job = queue.take();
 ```
 
-Bounded queue tạo backpressure: nếu full, producer phải wait/fail theo chosen operation.
+Bounded hàng đợi (queue / 큐) tạo backpressure: nếu full, producer phải wait/thất bại (fail / 실패) theo chosen thao tác (operation / 연산).
 
-Đây là production pattern rất quan trọng. Queue vô hạn chỉ chuyển overload thành memory/latency.
+Đây là môi trường vận hành (production / 운영 환경) mẫu (pattern / 패턴) rất quan trọng. hàng đợi (queue / 큐) vô hạn chỉ chuyển overload thành bộ nhớ (memory / 메모리)/độ trễ (latency / 지연 시간).
 
 ---
 
@@ -1495,7 +1504,7 @@ future.thenApply(
     User::name);
 ```
 
-Dependent async result:
+Dependent async kết quả (result / 결과):
 
 ```java
 future.thenCompose(
@@ -1524,25 +1533,25 @@ CompletableFuture<Response> response =
         Response::new);
 ```
 
-Fan-out independent I/O có thể giảm latency, nhưng cũng tăng downstream load.
+Fan-out independent I/O có thể giảm độ trễ (latency / 지연 시간), nhưng cũng tăng downstream tải (load / 로드).
 
-Nếu một request fan-out 100 calls và system nhận 1000 requests, bạn tạo 100.000 downstream calls. Parallelism phải bounded.
+Nếu một yêu cầu (request / 요청) fan-out 100 calls và hệ thống (system / 시스템) nhận 1000 requests, bạn tạo 100.000 downstream calls. Parallelism phải bounded.
 
 ---
 
-# 57. CompletableFuture execution context
+# 57. CompletableFuture thực thi (execution / 실행) ngữ cảnh (context / 맥락)
 
 Async methods không chỉ khác suffix.
 
-`thenApply` có thể chạy trên completion thread/caller context.
+`thenApply` có thể chạy trên completion luồng thực thi (thread / 스레드)/caller ngữ cảnh (context / 맥락).
 
 `thenApplyAsync` sử dụng executor/default async facility.
 
-Nếu không truyền executor, common pool có thể được dùng.
+Nếu không truyền executor, dùng chung (common / 공통) pool có thể được dùng.
 
-Server code nên biết executor nào sở hữu workload.
+Máy chủ (server / 서버) mã (code / 코드) nên biết executor nào sở hữu tải công việc (workload / 워크로드).
 
-Hidden common pool là hidden capacity.
+Hidden dùng chung (common / 공통) pool là hidden sức chứa (capacity / 용량).
 
 ---
 
@@ -1555,11 +1564,11 @@ future.exceptionally(
     error -> fallback);
 ```
 
-`handle` nhận cả value/error.
+`handle` nhận cả giá trị (value / 값)/lỗi (error / 오류).
 
-`whenComplete` quan sát side effect nhưng không nhất thiết recover.
+`whenComplete` quan sát side tác động (effect / 효과) nhưng không nhất thiết recover.
 
-Error topology trong async graph dễ phức tạp. Preserve cause và define timeout/cancellation.
+Lỗi (error / 오류) topology trong async đồ thị (graph / 그래프) dễ phức tạp. Preserve cause và define hết thời gian chờ (timeout / 타임아웃)/cancellation.
 
 `join()` wrap checked completion failures thành unchecked `CompletionException`; `get()` dùng checked `ExecutionException`.
 
@@ -1567,7 +1576,7 @@ Error topology trong async graph dễ phức tạp. Preserve cause và define ti
 
 # 59. Virtual Threads Java 21
 
-Virtual thread là lightweight Java thread managed bởi JVM, phù hợp thread-per-task blocking style.
+Virtual luồng thực thi (thread / 스레드) là lightweight Java luồng thực thi (thread / 스레드) managed bởi JVM, phù hợp thread-per-task blocking style.
 
 ```java
 try (var executor =
@@ -1580,13 +1589,13 @@ try (var executor =
 }
 ```
 
-Không pool virtual threads để “tiết kiệm threads”; chúng đã lightweight. Giới hạn concurrency tại scarce resource như DB/remote service bằng pool/semaphore.
+Không pool virtual threads để “tiết kiệm threads”; chúng đã lightweight. Giới hạn tính đồng thời (concurrency / 동시성) tại scarce tài nguyên (resource / 자원) như DB/remote dịch vụ (service / 서비스) bằng pool/semaphore.
 
-Virtual threads tăng scalability của blocking concurrency, không làm CPU calculation nhanh hơn.
+Virtual threads tăng scalability của blocking tính đồng thời (concurrency / 동시성), không làm CPU calculation nhanh hơn.
 
 ---
 
-# 60. JDBC mental model
+# 60. JDBC mô hình tư duy (mental model / 사고 모델)
 
 JDBC layers:
 
@@ -1597,7 +1606,7 @@ Driver
 → ResultSet
 ```
 
-Query:
+Truy vấn (query / 쿼리):
 
 ```java
 try (Connection connection =
@@ -1623,13 +1632,13 @@ try (Connection connection =
 }
 ```
 
-Try-with-resources làm ownership rõ.
+Try-with-resources làm quyền sở hữu (ownership / 소유권) rõ.
 
 ---
 
 # 61. PreparedStatement
 
-PreparedStatement giúp parameter binding đúng type và tránh SQL injection nếu bạn không concatenate untrusted values vào SQL syntax.
+PreparedStatement giúp parameter binding đúng kiểu (type / 타입) và tránh SQL injection nếu bạn không concatenate untrusted values vào SQL cú pháp (syntax / 문법).
 
 Bad:
 
@@ -1652,23 +1661,23 @@ PreparedStatement còn có plan/reuse benefits tùy DB/driver.
 
 # 62. JDBC execute methods
 
-`executeQuery()` cho result set query.
+`executeQuery()` cho tập kết quả (result set / 결과 집합) truy vấn (query / 쿼리).
 
-`executeUpdate()` thường cho INSERT/UPDATE/DELETE và trả affected count.
+`executeUpdate()` thường cho INSERT/cập nhật (update / 업데이트)/DELETE và trả affected count.
 
-`execute()` generic hơn khi result type chưa chắc.
+`execute()` generic hơn khi kết quả (result / 결과) kiểu (type / 타입) chưa chắc.
 
-Generated keys có thể request qua appropriate statement options.
+Generated keys có thể yêu cầu (request / 요청) qua appropriate statement options.
 
-Không dùng API chỉ vì “nó chạy”; chọn method thể hiện expected SQL semantics.
+Không dùng API chỉ vì “nó chạy”; chọn phương thức (method / 메서드) thể hiện expected SQL ngữ nghĩa (semantics / 의미론).
 
 ---
 
 # 63. JDBC Transactions
 
-Default connection thường auto-commit true.
+Default liên kết (connection / 연결) thường auto-commit true.
 
-Manual transaction:
+Manual giao dịch (transaction / 트랜잭션):
 
 ```java
 connection.setAutoCommit(false);
@@ -1683,17 +1692,17 @@ try {
 }
 ```
 
-Transaction boundary phải phản ánh business atomic operation, không chỉ một repository method.
+Giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) phải phản ánh nghiệp vụ (business / 비즈니스) atomic thao tác (operation / 연산), không chỉ một repository phương thức (method / 메서드).
 
-Connection phải được dùng nhất quán trong unit of work; mở connection mới trong mỗi helper có thể phá atomicity.
+Liên kết (connection / 연결) phải được dùng nhất quán trong đơn vị (unit / 단위) of công việc (work / 작업); mở liên kết (connection / 연결) mới trong mỗi helper có thể phá atomicity.
 
 ---
 
 # 64. JDBC Isolation và Savepoints
 
-Connection cho phép set transaction isolation theo constants.
+Liên kết (connection / 연결) cho phép set giao dịch (transaction / 트랜잭션) isolation theo constants.
 
-Actual behavior phụ thuộc DB.
+Actual hành vi (behavior / 동작) phụ thuộc DB.
 
 Savepoint:
 
@@ -1702,13 +1711,13 @@ Savepoint sp =
     connection.setSavepoint();
 ```
 
-Rollback partial:
+Quay lui (rollback / 롤백) partial:
 
 ```java
 connection.rollback(sp);
 ```
 
-Useful cho nested-like local recovery nhưng complexity tăng. Đừng dùng savepoints nếu full transaction rollback là business behavior đúng.
+Useful cho nested-like cục bộ (local / 로컬) khôi phục (recovery / 복구) nhưng độ phức tạp (complexity / 복잡도) tăng. Đừng dùng savepoints nếu full giao dịch (transaction / 트랜잭션) quay lui (rollback / 롤백) là nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작) đúng.
 
 ---
 
@@ -1725,7 +1734,7 @@ int[] counts =
 
 Batch giảm round trips cho many similar DML.
 
-Nhưng huge batch có memory/transaction/log cost. Chunk size cần measure.
+Nhưng huge batch có bộ nhớ (memory / 메모리)/giao dịch (transaction / 트랜잭션)/log chi phí (cost / 비용). Chunk kích thước (size / 크기) cần measure.
 
 DB driver có settings ảnh hưởng real batching.
 
@@ -1752,9 +1761,9 @@ CLASS
 RUNTIME
 ```
 
-Target giới hạn nơi dùng.
+Mục tiêu (target / 대상) giới hạn nơi dùng.
 
-Runtime annotation chỉ tồn tại để reflection/framework đọc; tự nó không execute code.
+Thời gian chạy (runtime / 런타임) annotation chỉ tồn tại để reflection/khung phần mềm (framework / 프레임워크) đọc; tự nó không execute mã (code / 코드).
 
 Compile-time annotation processor là topic sâu hơn.
 
@@ -1762,7 +1771,7 @@ Compile-time annotation processor là topic sâu hơn.
 
 # 67. Reflection
 
-Get class:
+Get lớp (class / 클래스):
 
 ```java
 Class<?> type =
@@ -1788,15 +1797,15 @@ Object result =
     method.invoke(user);
 ```
 
-Reflection giảm compile-time type safety, có access/module considerations và runtime failure modes.
+Reflection giảm compile-time kiểu (type / 타입) an toàn (safety / 안전), có truy cập (access / 접근)/mô-đun (module / 모듈) considerations và thời gian chạy (runtime / 런타임) thất bại (failure / 실패) modes.
 
-Nó hợp ở infrastructure/framework boundary như serialization/DI/testing tools, không nên là default business dispatch.
+Nó hợp ở hạ tầng (infrastructure / 인프라)/khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계) như serialization/DI/testing tools, không nên là default nghiệp vụ (business / 비즈니스) dispatch.
 
 ---
 
-# 68. Dynamic Proxy
+# 68. động (dynamic / 동적) Proxy
 
-JDK dynamic proxy tạo object implement interfaces và intercept method calls.
+JDK động (dynamic / 동적) proxy tạo đối tượng (object / 객체) implement interfaces và intercept phương thức (method / 메서드) calls.
 
 ```java
 PaymentGateway proxy =
@@ -1817,41 +1826,41 @@ PaymentGateway proxy =
         });
 ```
 
-Đây là Proxy Pattern và là bridge rất quan trọng trước Spring AOP.
+Đây là Proxy mẫu (pattern / 패턴) và là cầu nối (bridge / 브리지) rất quan trọng trước Spring AOP.
 
-Caller tưởng đang gọi implementation contract, nhưng proxy chạy logic trước/sau.
-
----
-
-# 69. Classpath và Class Loading
-
-Classpath là nơi runtime/compiler tìm classes/resources.
-
-Common errors:
-
-`ClassNotFoundException` thường khi code cố load class theo name nhưng loader không tìm thấy.
-
-`NoClassDefFoundError` có thể xảy ra khi class cần thiết không thể load/initialize dù compile trước đó có class.
-
-`NoSuchMethodError` thường do binary dependency mismatch: compile với library version có method, runtime load version không có.
-
-Khi gặp linkage error, inspect actual dependency tree/artifact, không chỉ source.
+Caller tưởng đang gọi hiện thực (implementation / 구현) đặc tả hợp đồng (contract / 계약), nhưng proxy chạy lô-gic (logic / 논리) trước/sau.
 
 ---
 
-# 70. ClassLoader identity
+# 69. Classpath và nạp lớp (class loading / 클래스 로딩)
 
-Ở mức Intermediate, nhớ rằng class identity không chỉ name; defining classloader cũng matter.
+Classpath là nơi thời gian chạy (runtime / 런타임)/trình biên dịch (compiler / 컴파일러) tìm classes/resources.
 
-Hai `com.example.Plugin` loaded bởi different classloaders có thể được xem như distinct runtime types.
+Dùng chung (common / 공통) errors:
 
-Plugin containers/app servers dùng custom loaders và có classloader leaks/casting surprises. Senior sẽ đi sâu.
+`ClassNotFoundException` thường khi mã (code / 코드) cố tải (load / 로드) lớp (class / 클래스) theo name nhưng loader không tìm thấy.
+
+`NoClassDefFoundError` có thể xảy ra khi lớp (class / 클래스) cần thiết không thể tải (load / 로드)/initialize dù compile trước đó có lớp (class / 클래스).
+
+`NoSuchMethodError` thường do nhị phân (binary / 이진) phụ thuộc (dependency / 의존성) mismatch: compile với thư viện (library / 라이브러리) phiên bản (version / 버전) có phương thức (method / 메서드), thời gian chạy (runtime / 런타임) tải (load / 로드) phiên bản (version / 버전) không có.
+
+Khi gặp linkage lỗi (error / 오류), inspect actual phụ thuộc (dependency / 의존성) cây (tree / 트리)/sản phẩm tạo ra (artifact / 산출물), không chỉ nguồn (source / 소스).
 
 ---
 
-# 71. JPMS Module System
+# 70. ClassLoader định danh (identity / 식별자)
 
-Java 9 module descriptor:
+Ở mức Intermediate, nhớ rằng lớp (class / 클래스) định danh (identity / 식별자) không chỉ name; defining classloader cũng matter.
+
+Hai `com.example.Plugin` loaded bởi different classloaders có thể được xem như distinct thời gian chạy (runtime / 런타임) types.
+
+Plugin containers/app servers dùng custom loaders và có classloader leaks/casting surprises. cấp cao (senior / 시니어) sẽ đi sâu.
+
+---
+
+# 71. JPMS mô-đun (module / 모듈) hệ thống (system / 시스템)
+
+Java 9 mô-đun (module / 모듈) descriptor:
 
 ```java
 module com.example.app {
@@ -1864,19 +1873,19 @@ module com.example.app {
 }
 ```
 
-`exports` cho compile/runtime access public types.
+`exports` cho compile/thời gian chạy (runtime / 런타임) truy cập (access / 접근) công khai (public / 공개) types.
 
-`opens` cho deep reflection access.
+`opens` cho deep reflection truy cập (access / 접근).
 
-`uses`/`provides` hỗ trợ Service Provider Interface.
+`uses`/`provides` hỗ trợ dịch vụ (service / 서비스) Provider giao diện (interface / 인터페이스).
 
-Không phải mọi Spring/backend app cần JPMS, nhưng module encapsulation giải thích một số reflection access errors modern Java.
+Không phải mọi Spring/backend app cần JPMS, nhưng mô-đun (module / 모듈) encapsulation giải thích một số reflection truy cập (access / 접근) errors hiện đại (modern / 현대적) Java.
 
 ---
 
 # 72. ServiceLoader và SPI
 
-Interface:
+Giao diện (interface / 인터페이스):
 
 ```java
 public interface Parser {
@@ -1891,11 +1900,11 @@ ServiceLoader<Parser> loader =
     ServiceLoader.load(Parser.class);
 ```
 
-Đây là native Java plugin mechanism.
+Đây là bản địa (native / 네이티브) Java plugin cơ chế (mechanism / 메커니즘).
 
-Plugin discovery là Strategy + provider registry.
+Plugin discovery là chiến lược (strategy / 전략) + provider registry.
 
-Spring DI có hệ thống riêng phong phú hơn, nhưng SPI giúp hiểu framework extension architecture.
+Spring DI có hệ thống riêng phong phú hơn, nhưng SPI giúp hiểu khung phần mềm (framework / 프레임워크) extension kiến trúc (architecture / 아키텍처).
 
 ---
 
@@ -1933,7 +1942,7 @@ chủ yếu hữu ích khi cần annotations trên lambda params.
 
 ---
 
-# 74. Standard HTTP Client Java 11
+# 74. tiêu chuẩn (standard / 표준) HTTP máy khách (client / 클라이언트) Java 11
 
 Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
@@ -1945,7 +1954,7 @@ HttpClient client =
         .build();
 ```
 
-Request:
+Yêu cầu (request / 요청):
 
 ```java
 HttpRequest request =
@@ -1977,17 +1986,17 @@ client.sendAsync(
     BodyHandlers.ofString());
 ```
 
-Connect timeout và request timeout là distinct layers.
+Connect hết thời gian chờ (timeout / 타임아웃) và yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) là distinct layers.
 
-Reuse HttpClient where appropriate; connection pooling/resource setup benefit.
+Reuse HttpClient where appropriate; liên kết (connection / 연결) pooling/tài nguyên (resource / 자원) setup benefit.
 
 ---
 
-# 75. Timeout Budget
+# 75. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)
 
-Nếu incoming operation budget 2 seconds, downstream calls không nên mỗi cái timeout 5 seconds.
+Nếu incoming thao tác (operation / 연산) ngân sách (budget / 예산) 2 seconds, downstream calls không nên mỗi cái hết thời gian chờ (timeout / 타임아웃) 5 seconds.
 
-Budget thinking:
+Ngân sách (budget / 예산) thinking:
 
 ```text
 total deadline
@@ -1995,27 +2004,27 @@ total deadline
 → child operation timeout
 ```
 
-Intermediate chỉ cần hình thành nguyên tắc này. Senior sẽ đi vào deadline propagation/retry.
+Intermediate chỉ cần hình thành nguyên tắc này. cấp cao (senior / 시니어) sẽ đi vào deadline propagation/thử lại (retry / 재시도).
 
 ---
 
-# 76. Modern Java 14–17
+# 76. hiện đại (modern / 현대적) Java 14–17
 
 Switch expressions Java 14 giúp expression-style branching.
 
-Text blocks Java 15 giúp multiline SQL/JSON.
+Văn bản (text / 텍스트) blocks Java 15 giúp multiline SQL/JSON.
 
-Records Java 16 cho data/value carriers.
+Records Java 16 cho dữ liệu (data / 데이터)/giá trị (value / 값) carriers.
 
-Pattern matching for `instanceof` Java 16 giảm cast boilerplate.
+Mẫu (pattern / 패턴) matching for `instanceof` Java 16 giảm cast boilerplate.
 
 Sealed classes Java 17 giới hạn subtype set.
 
-Đây không chỉ syntax sugar; chúng làm data modeling rõ và compiler có thêm thông tin.
+Đây không chỉ cú pháp (syntax / 문법) sugar; chúng làm dữ liệu (data / 데이터) modeling rõ và trình biên dịch (compiler / 컴파일러) có thêm thông tin.
 
 ---
 
-# 77. Pattern Matching for Switch Java 21
+# 77. mẫu (pattern / 패턴) Matching for Switch Java 21
 
 Sealed hierarchy:
 
@@ -2038,20 +2047,20 @@ String message =
     };
 ```
 
-Compiler check exhaustiveness.
+Trình biên dịch (compiler / 컴파일러) check exhaustiveness.
 
-Guard with `when` trong pattern switch:
+Guard with `when` trong mẫu (pattern / 패턴) switch:
 
 ```java
 case Success s
     when s.id() > 100 -> ...
 ```
 
-Dùng khi decision là data-oriented closed variants. Nếu mỗi subtype có behavior tự nhiên, polymorphic method có thể tốt hơn.
+Dùng khi quyết định (decision / 결정) là data-oriented closed variants. Nếu mỗi subtype có hành vi (behavior / 동작) tự nhiên, polymorphic phương thức (method / 메서드) có thể tốt hơn.
 
 ---
 
-# 78. Record Patterns Java 21
+# 78. bản ghi (record / 레코드) Patterns Java 21
 
 Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
@@ -2071,13 +2080,13 @@ if (obj instanceof
 
 Nested records cho data-oriented matching.
 
-Pattern matching giúp parse/branch data structures, nhưng đừng biến domain thành massive switch nếu object-oriented behavior rõ hơn.
+Mẫu (pattern / 패턴) matching giúp parse/branch dữ liệu (data / 데이터) structures, nhưng đừng biến lĩnh vực (domain / 도메인) thành massive switch nếu object-oriented hành vi (behavior / 동작) rõ hơn.
 
 ---
 
 # 79. Sequenced Collections Java 21
 
-Interfaces như `SequencedCollection`, `SequencedSet`, `SequencedMap` thống nhất access first/last/reversed semantics cho ordered collections.
+Interfaces như `SequencedCollection`, `SequencedSet`, `SequencedMap` thống nhất truy cập (access / 접근) first/last/reversed ngữ nghĩa (semantics / 의미론) cho ordered collections.
 
 Ví dụ concept:
 
@@ -2087,7 +2096,7 @@ collection.getLast();
 collection.reversed();
 ```
 
-Trước Java 21, mỗi collection có APIs khác nhau hoặc cần index/iterator hacks.
+Trước Java 21, mỗi collection có APIs khác nhau hoặc cần chỉ mục (index / 인덱스)/iterator hacks.
 
 ---
 
@@ -2100,7 +2109,7 @@ UUID id =
     UUID.randomUUID();
 ```
 
-thích hợp identifiers không cần centralized sequence trong nhiều contexts, nhưng storage/indexing trade-offs tồn tại.
+thích hợp identifiers không cần centralized chuỗi (sequence / 시퀀스) trong nhiều contexts, nhưng lưu trữ (storage / 저장소)/indexing trade-offs tồn tại.
 
 Base64 là encoding, không encryption.
 
@@ -2114,13 +2123,13 @@ String encoded =
 
 `SecureRandom` cho cryptographic randomness.
 
-Không dùng `Random` tạo reset token/session secret.
+Không dùng `Random` tạo reset đơn vị từ (token / 토큰)/session secret.
 
 ---
 
 # 81. Locale, Currency, ResourceBundle
 
-Locale-sensitive formatting phải explicit.
+Locale-sensitive formatting phải tường minh (explicit / 명시적).
 
 ```java
 NumberFormat format =
@@ -2136,13 +2145,13 @@ Currency.getInstance("KRW");
 
 ResourceBundle cho localized resources.
 
-Không assume server default locale/timezone; container/server có thể khác local laptop.
+Không assume máy chủ (server / 서버) default locale/timezone; bộ chứa (container / 컨테이너)/máy chủ (server / 서버) có thể khác cục bộ (local / 로컬) laptop.
 
 ---
 
 # 82. Charset
 
-Bytes không tự là text. Cần encoding.
+Bytes không tự là văn bản (text / 텍스트). Cần encoding.
 
 ```java
 String text =
@@ -2151,29 +2160,29 @@ String text =
         StandardCharsets.UTF_8);
 ```
 
-Nếu write UTF-8 nhưng read EUC-KR, mojibake xuất hiện.
+Nếu ghi (write / 쓰기) UTF-8 nhưng read EUC-KR, mojibake xuất hiện.
 
-Make charset part of contract.
+Make charset part of đặc tả hợp đồng (contract / 계약).
 
-Platform default charset thay đổi qua Java generations/environments; explicit UTF-8 safest khi protocol/file contract định nghĩa UTF-8.
+Nền tảng (platform / 플랫폼) default charset thay đổi qua Java generations/environments; tường minh (explicit / 명시적) UTF-8 safest khi giao thức (protocol / 프로토콜)/tệp (file / 파일) đặc tả hợp đồng (contract / 계약) định nghĩa UTF-8.
 
 ---
 
-# 83. Native Java Serialization awareness
+# 83. bản địa (native / 네이티브) Java Serialization awareness
 
-`Serializable` cho built-in object serialization.
+`Serializable` cho built-in đối tượng (object / 객체) serialization.
 
-Nhưng native Java serialization có tight class coupling và historical security risks.
+Nhưng bản địa (native / 네이티브) Java serialization có tight lớp (class / 클래스) coupling và historical bảo mật (security / 보안) risks.
 
-Bạn cần biết để maintain legacy systems, không nên chọn làm default new API/message format.
+Bạn cần biết để maintain legacy các hệ thống (systems / 시스템들), không nên chọn làm default new API/message format.
 
 Use JSON/CBOR/Protobuf/etc theo ecosystem requirements thay vì `ObjectOutputStream` chỉ vì built-in.
 
 ---
 
-# 84. Security API awareness
+# 84. bảo mật (security / 보안) API awareness
 
-Hash:
+Băm (hash / 해시):
 
 ```java
 MessageDigest.getInstance(
@@ -2193,17 +2202,17 @@ Encryption:
 Cipher.getInstance(...);
 ```
 
-Nhưng cryptography là protocol design, không chỉ gọi API.
+Nhưng cryptography là giao thức (protocol / 프로토콜) thiết kế (design / 설계), không chỉ gọi API.
 
 Không tự invent encryption scheme.
 
-Password hashing không dùng raw SHA-256; cần adaptive password hash libraries/algorithms theo security policy.
+Password hashing không dùng raw SHA-256; cần adaptive password băm (hash / 해시) libraries/algorithms theo bảo mật (security / 보안) chính sách (policy / 정책).
 
-Senior/Master sẽ đi sâu.
+Cấp cao (senior / 시니어)/Master sẽ đi sâu.
 
 ---
 
-# 85. API Design: Strong Types
+# 85. API thiết kế (design / 설계): Strong Types
 
 Bad:
 
@@ -2215,7 +2224,7 @@ transfer(
     String currency);
 ```
 
-Better domain concepts:
+Better lĩnh vực (domain / 도메인) concepts:
 
 ```java
 transfer(
@@ -2226,23 +2235,23 @@ transfer(
 
 Strong types làm illegal argument mix khó compile.
 
-Primitive obsession là khi domain concepts bị biểu diễn bằng raw primitives/strings quá lâu.
+Thành phần nguyên thủy (primitive / 기본 요소) obsession là khi lĩnh vực (domain / 도메인) concepts bị biểu diễn bằng raw primitives/strings quá lâu.
 
 ---
 
-# 86. Command/Query Separation mindset
+# 86. Command/truy vấn (query / 쿼리) Separation mindset
 
-Method:
+Phương thức (method / 메서드):
 
 ```java
 User activate(User user)
 ```
 
-vừa mutate state vừa return data có thể okay, nhưng API khó hiểu nếu query methods có hidden side effects.
+vừa mutate trạng thái (state / 상태) vừa return dữ liệu (data / 데이터) có thể okay, nhưng API khó hiểu nếu truy vấn (query / 쿼리) methods có hidden side effects.
 
-Tư duy CQS nói command thay state và query đọc state nên thường dễ phân biệt.
+Tư duy CQS nói command thay trạng thái (state / 상태) và truy vấn (query / 쿼리) đọc trạng thái (state / 상태) nên thường dễ phân biệt.
 
-Không phải luật cấm methods vừa return result sau mutation; mục tiêu là side effects explicit.
+Không phải luật cấm methods vừa return kết quả (result / 결과) sau mutation; mục tiêu là side effects tường minh (explicit / 명시적).
 
 ---
 
@@ -2269,9 +2278,9 @@ final class LoggingSender
 }
 ```
 
-Bạn thêm behavior bằng wrapping thay vì subclass deep hierarchy.
+Bạn thêm hành vi (behavior / 동작) bằng wrapping thay vì subclass deep hierarchy.
 
-Java I/O và many framework proxies use this structural idea.
+Java I/O và many khung phần mềm (framework / 프레임워크) proxies use this structural idea.
 
 ---
 
@@ -2286,41 +2295,41 @@ Duration.ofSeconds(2)
 List.of(...)
 ```
 
-có thể communicate semantics tốt hơn overloaded constructors.
+có thể communicate ngữ nghĩa (semantics / 의미론) tốt hơn overloaded constructors.
 
-Factory có thể choose subtype/cache/reuse.
+Factory có thể choose subtype/bộ nhớ đệm (cache / 캐시)/reuse.
 
-Không tạo separate factory class nếu static factory đủ rõ.
+Không tạo separate factory lớp (class / 클래스) nếu static factory đủ rõ.
 
 ---
 
 # 89. Builder
 
-Builder phù hợp config object có many optional fields.
+Builder phù hợp cấu hình (config / 설정) đối tượng (object / 객체) có many optional fields.
 
-Nhưng Java records + named static factory có thể đủ cho small data structures.
+Nhưng Java records + named static factory có thể đủ cho small dữ liệu (data / 데이터) structures.
 
-Pattern là response to constructor readability/optional combinations, không phải requirement cho every domain entity.
+Mẫu (pattern / 패턴) là phản hồi (response / 응답) to constructor readability/optional combinations, không phải yêu cầu (requirement / 요구사항) cho every lĩnh vực (domain / 도메인) thực thể (entity / 엔터티).
 
 ---
 
-# 90. Template Method vs Strategy
+# 90. Template phương thức (method / 메서드) vs chiến lược (strategy / 전략)
 
-Template Method dùng inheritance để cố định algorithm skeleton.
+Template phương thức (method / 메서드) dùng inheritance để cố định thuật toán (algorithm / 알고리즘) skeleton.
 
-Strategy dùng composition để inject behavior.
+Chiến lược (strategy / 전략) dùng composition để inject hành vi (behavior / 동작).
 
-Nếu subclass hierarchy stable, template method okay.
+Nếu subclass hierarchy stable, template phương thức (method / 메서드) okay.
 
-Nếu cần combine behavior/runtime replace/testing, Strategy thường flexible.
+Nếu cần combine hành vi (behavior / 동작)/thời gian chạy (runtime / 런타임) replace/testing, chiến lược (strategy / 전략) thường flexible.
 
-Biết trade-off quan trọng hơn “composition always”.
+Biết sự đánh đổi (trade-off / 트레이드오프) quan trọng hơn “composition always”.
 
 ---
 
 # 91. Adapter
 
-Adapter chuyển external interface sang internal contract.
+Adapter chuyển bên ngoài (external / 외부) giao diện (interface / 인터페이스) sang nội bộ (internal / 내부) đặc tả hợp đồng (contract / 계약).
 
 ```java
 final class VendorPaymentAdapter
@@ -2332,13 +2341,13 @@ final class VendorPaymentAdapter
 
 Vendor exception/types dừng ở adapter.
 
-Đây là anti-corruption boundary và sẽ rất quan trọng trong Spring HTTP/JPA integrations.
+Đây là anti-corruption ranh giới (boundary / 경계) và sẽ rất quan trọng trong Spring HTTP/JPA integrations.
 
 ---
 
-# 92. Command Pattern với Functional Interfaces
+# 92. Command mẫu (pattern / 패턴) với Functional Interfaces
 
-Command object/lambda biểu diễn operation như data/behavior value.
+Command đối tượng (object / 객체)/lambda biểu diễn thao tác (operation / 연산) như dữ liệu (data / 데이터)/hành vi (behavior / 동작) giá trị (value / 값).
 
 ```java
 Runnable task =
@@ -2347,21 +2356,21 @@ Runnable task =
 
 Executors nhận commands.
 
-Complex command có thể là class chứa parameters + execute behavior.
+Complex command có thể là lớp (class / 클래스) chứa parameters + execute hành vi (behavior / 동작).
 
-Patterns trong modern Java thường được biểu diễn nhẹ hơn nhờ lambdas/records.
+Patterns trong hiện đại (modern / 현대적) Java thường được biểu diễn nhẹ hơn nhờ lambdas/records.
 
 ---
 
-# 93. JVM Memory: Stack, Heap, Metaspace, Native
+# 93. JVM bộ nhớ (memory / 메모리): ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙), Metaspace, bản địa (native / 네이티브)
 
-Mỗi thread có stack chứa frames/local execution state.
+Mỗi luồng thực thi (thread / 스레드) có ngăn xếp (stack / 스택) chứa frames/cục bộ (local / 로컬) thực thi (execution / 실행) trạng thái (state / 상태).
 
-Heap chứa most objects/arrays managed by GC.
+Vùng nhớ vùng nhớ động (heap / 힙) chứa most objects/arrays managed by GC.
 
-Metaspace chứa class metadata ngoài heap.
+Metaspace chứa lớp (class / 클래스) siêu dữ liệu (metadata / 메타데이터) ngoài vùng nhớ động (heap / 힙).
 
-Direct buffers/native libraries/thread stacks dùng native memory ngoài Java heap.
+Direct buffers/bản địa (native / 네이티브) libraries/luồng thực thi (thread / 스레드) stacks dùng bản địa (native / 네이티브) bộ nhớ (memory / 메모리) ngoài Java vùng nhớ động (heap / 힙).
 
 Do đó:
 
@@ -2369,27 +2378,27 @@ Do đó:
 -Xmx = 2G
 ```
 
-không nghĩa process RSS tối đa 2G.
+không nghĩa tiến trình (process / 프로세스) RSS tối đa 2G.
 
-Server/container memory planning phải chừa native headroom.
+Máy chủ (server / 서버)/bộ chứa (container / 컨테이너) bộ nhớ (memory / 메모리) planning phải chừa bản địa (native / 네이티브) headroom.
 
 ---
 
 # 94. Garbage Collection awareness
 
-GC tìm objects còn reachable từ roots như thread stacks/static/JNI references và reclaim unreachable objects.
+GC tìm objects còn reachable từ roots như luồng thực thi (thread / 스레드) stacks/static/JNI references và reclaim unreachable objects.
 
-Java memory leak vẫn có thể xảy ra khi object không còn business-useful nhưng vẫn reachable, ví dụ static list/cache/queue/listener.
+Java bộ nhớ (memory / 메모리) leak vẫn có thể xảy ra khi đối tượng (object / 객체) không còn business-useful nhưng vẫn reachable, ví dụ static danh sách (list / 목록)/bộ nhớ đệm (cache / 캐시)/hàng đợi (queue / 큐)/listener.
 
-Đầu tiên fix retention/ownership; đừng đổi collector để chữa logical leak.
+Đầu tiên fix retention/quyền sở hữu (ownership / 소유권); đừng đổi collector để chữa logical leak.
 
-Common collectors hiện đại gồm G1, ZGC, Parallel, Serial; selection/tuning sang Senior.
+Dùng chung (common / 공통) collectors hiện đại gồm G1, ZGC, Parallel, Serial; selection/tuning sang cấp cao (senior / 시니어).
 
 ---
 
 # 95. JIT và Warm-up
 
-JVM ban đầu interpret/compile progressively. Hot methods được JIT optimize dựa runtime profile.
+JVM ban đầu interpret/compile progressively. Hot methods được JIT optimize dựa thời gian chạy (runtime / 런타임) profile.
 
 Benchmark:
 
@@ -2403,94 +2412,94 @@ long elapsed =
 
 một lần không đủ kết luận vì warm-up, dead-code elimination, GC, CPU scaling và profiling.
 
-Use JMH mindset/tool cho microbenchmark quan trọng.
+Use JMH mindset/công cụ (tool / 도구) cho microbenchmark quan trọng.
 
-Senior sẽ đi sâu inlining/deoptimization/escape analysis.
+Cấp cao (senior / 시니어) sẽ đi sâu inlining/deoptimization/escape phân tích (analysis / 분석).
 
 ---
 
 # 96. `javac --release`
 
-Nếu develop bằng JDK 25 nhưng target Java 17:
+Nếu develop bằng JDK 25 nhưng mục tiêu (target / 대상) Java 17:
 
 ```bash
 javac --release 17 ...
 ```
 
-giúp compiler enforce Java 17 language/API platform baseline.
+giúp trình biên dịch (compiler / 컴파일러) enforce Java 17 ngôn ngữ (language / 언어)/API nền tảng (platform / 플랫폼) baseline.
 
-Chỉ `-source 17 -target 17` historically không luôn ngăn code gọi APIs mới có trong current JDK.
+Chỉ `-source 17 -target 17` historically không luôn ngăn mã (code / 코드) gọi APIs mới có trong hiện tại (current / 현재) JDK.
 
-Build tools thường expose equivalent release configuration.
+Bản dựng (build / 빌드) tools thường expose equivalent bản phát hành (release / 릴리스) cấu hình (configuration / 구성).
 
 ---
 
 # 97. JVM Options cơ bản
 
-Heap:
+Vùng nhớ vùng nhớ động (heap / 힙):
 
 ```bash
 -Xms512m
 -Xmx2g
 ```
 
-Thread stack:
+Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택):
 
 ```bash
 -Xss1m
 ```
 
-System property:
+Hệ thống (system / 시스템) thuộc tính (property / 속성):
 
 ```bash
 -Dapp.env=prod
 ```
 
-GC logging modern:
+GC logging hiện đại (modern / 현대적):
 
 ```bash
 -Xlog:gc*
 ```
 
-Heap dump on OOM:
+Vùng nhớ vùng nhớ động (heap / 힙) dump on OOM:
 
 ```bash
 -XX:+HeapDumpOnOutOfMemoryError
 ```
 
-Không copy production flags từ random blog. JVM defaults thay đổi theo version/hardware/container.
+Không bản sao (copy / 복사) môi trường vận hành (production / 운영 환경) flags từ random blog. JVM defaults thay đổi theo phiên bản (version / 버전)/hardware/bộ chứa (container / 컨테이너).
 
 ---
 
 # 98. `jcmd`, `jstack`, `jmap`, `jstat`
 
-Find Java process:
+Find Java tiến trình (process / 프로세스):
 
 ```bash
 jcmd
 ```
 
-Thread dump:
+Luồng thực thi (thread / 스레드) dump:
 
 ```bash
 jcmd <pid> Thread.print
 ```
 
-JFR start/dump và GC/class info cũng qua `jcmd`.
+JFR start/dump và GC/lớp (class / 클래스) info cũng qua `jcmd`.
 
-`jstack` cho thread stack legacy/common usage.
+`jstack` cho luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) legacy/dùng chung (common / 공통) usage.
 
 `jmap` có heap-related operations.
 
 `jstat` xem JVM stats sampling.
 
-Modern production habit: ưu tiên diagnostic tools dựa evidence thay vì restart trước khi collect data.
+Hiện đại (modern / 현대적) môi trường vận hành (production / 운영 환경) habit: ưu tiên diagnostic tools dựa bằng chứng (evidence / 증거) thay vì restart trước khi collect dữ liệu (data / 데이터).
 
 ---
 
 # 99. Java Flight Recorder awareness
 
-JFR là built-in low-overhead event recording/profiling facility.
+JFR là built-in low-overhead sự kiện (event / 이벤트) recording/profiling facility.
 
 Có thể capture:
 
@@ -2504,19 +2513,19 @@ I/O
 exceptions
 ```
 
-tùy settings/version.
+tùy settings/phiên bản (version / 버전).
 
-Senior sẽ dùng JFR như primary production diagnostic tool.
+Cấp cao (senior / 시니어) sẽ dùng JFR như primary môi trường vận hành (production / 운영 환경) diagnostic công cụ (tool / 도구).
 
-Intermediate chỉ cần biết Java có observability sâu hơn logs.
+Intermediate chỉ cần biết Java có khả năng quan sát (observability / 관측 가능성) sâu hơn logs.
 
 ---
 
 # 100. Logging awareness
 
-Java Core có `java.util.logging`, nhưng application ecosystems thường dùng abstraction/facade như SLF4J sau này.
+Java cốt lõi (core / 핵심) có `java.util.logging`, nhưng ứng dụng (application / 애플리케이션) ecosystems thường dùng lớp trừu tượng (abstraction / 추상화)/facade như SLF4J sau này.
 
-Core principle: log context, not secrets.
+Cốt lõi (core / 핵심) principle: log ngữ cảnh (context / 맥락), not secrets.
 
 ```text
 orderId
@@ -2526,7 +2535,7 @@ duration
 error category
 ```
 
-Không log password/token.
+Không log password/đơn vị từ (token / 토큰).
 
 Không concatenate huge strings nếu log disabled.
 
@@ -2534,9 +2543,9 @@ Logging không thay metrics/traces/profiles.
 
 ---
 
-# 101. Code Smells ở Intermediate
+# 101. mã (code / 코드) Smells ở Intermediate
 
-Primitive obsession xuất hiện khi `String` đại diện Email, Currency, Status, UserId khắp nơi.
+Thành phần nguyên thủy (primitive / 기본 요소) obsession xuất hiện khi `String` đại diện Email, Currency, Status, UserId khắp nơi.
 
 Boolean parameter explosion:
 
@@ -2546,37 +2555,37 @@ process(true, false, true)
 
 khó đọc.
 
-Feature envy khi class lấy hàng loạt getters của object khác rồi làm logic lẽ ra thuộc object kia.
+Tính năng (feature / 기능) envy khi lớp (class / 클래스) lấy hàng loạt getters của đối tượng (object / 객체) khác rồi làm lô-gic (logic / 논리) lẽ ra thuộc đối tượng (object / 객체) kia.
 
-Shotgun surgery khi một business change cần sửa 20 classes vì concept bị phân tán.
+Shotgun surgery khi một nghiệp vụ (business / 비즈니스) thay đổi (change / 변경) cần sửa 20 classes vì concept bị phân tán.
 
-Hidden side effect khi method tên `findUser()` lại update DB/cache/network.
+Hidden side tác động (effect / 효과) khi phương thức (method / 메서드) tên `findUser()` lại cập nhật (update / 업데이트) DB/bộ nhớ đệm (cache / 캐시)/mạng (network / 네트워크).
 
-Recognize smell là để investigate design pressure, không phải auto-refactor mọi case.
+Recognize smell là để investigate thiết kế (design / 설계) pressure, không phải auto-refactor mọi trường hợp (case / 사례).
 
 ---
 
-# 102. Error Handling Pattern trong Backend
+# 102. lỗi (error / 오류) Handling mẫu (pattern / 패턴) trong Backend
 
-Không retry programming bug.
+Không thử lại (retry / 재시도) programming bug.
 
-Không retry validation error.
+Không thử lại (retry / 재시도) kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류).
 
-Transient network/database errors có thể retry nếu operation idempotent và bounded.
+Transient mạng (network / 네트워크)/cơ sở dữ liệu (database / 데이터베이스) errors có thể thử lại (retry / 재시도) nếu thao tác (operation / 연산) idempotent và bounded.
 
 Preserve cause.
 
 Translate at boundaries.
 
-Log once at ownership boundary.
+Log once at quyền sở hữu (ownership / 소유권) ranh giới (boundary / 경계).
 
-Những rules này chuẩn bị cho resilience/Spring exception architecture.
+Những rules này chuẩn bị cho resilience/Spring exception kiến trúc (architecture / 아키텍처).
 
 ---
 
-# 103. Dependency Direction trước Spring
+# 103. phụ thuộc (dependency / 의존성) Direction trước Spring
 
-Application service:
+Ứng dụng (application / 애플리케이션) dịch vụ (service / 서비스):
 
 ```java
 final class PlaceOrderService {
@@ -2585,7 +2594,7 @@ final class PlaceOrderService {
 }
 ```
 
-Interfaces/ports thuộc core/application.
+Interfaces/ports thuộc cốt lõi (core / 핵심)/ứng dụng (application / 애플리케이션).
 
 JDBC/HTTP implementations depend inward:
 
@@ -2599,64 +2608,64 @@ HttpPaymentGateway
 
 Spring sau này chỉ wire implementations.
 
-Nếu bạn hiểu Dependency Inversion bằng plain Java, Spring DI sẽ không còn là magic.
+Nếu bạn hiểu phụ thuộc (dependency / 의존성) Inversion bằng plain Java, Spring DI sẽ không còn là magic.
 
 ---
 
-# 104. Package Visibility như Architecture Tool
+# 104. gói (package / 패키지) Visibility như kiến trúc (architecture / 아키텍처) công cụ (tool / 도구)
 
-Không public mọi implementation.
+Không công khai (public / 공개) mọi hiện thực (implementation / 구현).
 
 ```java
 final class JdbcUserMapper {
 }
 ```
 
-package-private nếu chỉ repository package cần.
+package-private nếu chỉ repository gói (package / 패키지) cần.
 
-Public surface nhỏ giảm accidental coupling.
+Công khai (public / 공개) surface nhỏ giảm accidental coupling.
 
-Package by feature giúp internal classes gần nhau và visibility hữu dụng hơn.
+Gói (package / 패키지) by tính năng (feature / 기능) giúp nội bộ (internal / 내부) classes gần nhau và visibility hữu dụng hơn.
 
 ---
 
-# 105. Testing Mindset trước Framework
+# 105. Testing Mindset trước khung phần mềm (framework / 프레임워크)
 
-Pure service với injected dependencies test dễ.
+Pure dịch vụ (service / 서비스) với injected dependencies kiểm thử (test / 테스트) dễ.
 
-Time dùng `Clock`.
+Thời gian (time / 시간) dùng `Clock`.
 
-IDs dùng `Supplier<UUID>` hoặc generator interface.
+IDs dùng `Supplier<UUID>` hoặc generator giao diện (interface / 인터페이스).
 
-External gateway fake/mock.
+Bên ngoài (external / 외부) gateway fake/mock.
 
-Không cần Mockito/Spring để hiểu testability. Framework tools chỉ automate seams mà design đã tạo.
+Không cần Mockito/Spring để hiểu testability. khung phần mềm (framework / 프레임워크) tools chỉ automate seams mà thiết kế (design / 설계) đã tạo.
 
 ---
 
 # 106. Legacy Java bạn sẽ gặp trong enterprise và cách hiện đại hóa mà không phá hệ thống
 
-Legacy Java không đồng nghĩa “code xấu”. Nhiều hệ thống quan trọng được viết đúng với constraints của Java 6/7/8 và framework thời đó. Kỹ năng cần có là **đọc mental model cũ, nhận ra replacement hiện đại, rồi migrate có kiểm soát** thay vì rewrite theo style mới chỉ vì nhìn đẹp hơn.
+Legacy Java không đồng nghĩa “mã (code / 코드) xấu”. Nhiều hệ thống quan trọng được viết đúng với các ràng buộc (constraints / 제약조건들) của Java 6/7/8 và khung phần mềm (framework / 프레임워크) thời đó. Kỹ năng cần có là **đọc mô hình tư duy (mental model / 사고 모델) cũ, nhận ra replacement hiện đại, rồi migrate có kiểm soát** thay vì rewrite theo style mới chỉ vì nhìn đẹp hơn.
 
-Trong code Java 8 hoặc cũ hơn, bạn sẽ gặp anonymous classes ở những nơi code mới dùng lambda. Đổi sang lambda có thể giảm noise, nhưng đừng biến callback nhiều state/logic thành lambda 30 dòng chỉ để “modernize”. Named class đôi khi vẫn dễ đọc hơn.
+Trong mã (code / 코드) Java 8 hoặc cũ hơn, bạn sẽ gặp anonymous classes ở những nơi mã (code / 코드) mới dùng lambda. Đổi sang lambda có thể giảm noise, nhưng đừng biến callback nhiều trạng thái (state / 상태)/lô-gic (logic / 논리) thành lambda 30 dòng chỉ để “modernize”. Named lớp (class / 클래스) đôi khi vẫn dễ đọc hơn.
 
-Bạn cũng sẽ gặp `Date`, `Calendar` và `SimpleDateFormat`. `SimpleDateFormat` mutable và không thread-safe; static shared formatter trong server có thể race. Code mới nên dùng `java.time` và immutable `DateTimeFormatter`. Khi migrate, phải xác định semantic trước: `Date` cũ đang đại diện exact instant, local business date hay chỉ timestamp DB? Chuyển bừa sang `LocalDateTime` có thể làm mất timezone meaning.
+Bạn cũng sẽ gặp `Date`, `Calendar` và `SimpleDateFormat`. `SimpleDateFormat` mutable và không thread-safe; static dùng chung (shared / 공유) formatter trong máy chủ (server / 서버) có thể race. mã (code / 코드) mới nên dùng `java.time` và immutable `DateTimeFormatter`. Khi migrate, phải xác định ngữ nghĩa (semantic / 의미적) trước: `Date` cũ đang đại diện chính xác (exact / 정확한) instant, cục bộ (local / 로컬) nghiệp vụ (business / 비즈니스) date hay chỉ timestamp DB? Chuyển bừa sang `LocalDateTime` có thể làm mất timezone meaning.
 
-Legacy collections có `Vector`, `Hashtable` và `Stack`. Chúng không “không dùng được”, nhưng synchronization semantics và API design thường không phải lựa chọn tốt cho code mới. `ArrayList`, `HashMap`/`ConcurrentHashMap`, `ArrayDeque` thường rõ hơn tùy requirement. Không thay `Hashtable` bằng `HashMap` chỉ vì mới hơn nếu old code thật sự dựa concurrent access; trước tiên phải xác định compound atomicity và ownership.
+Legacy collections có `Vector`, `Hashtable` và `Stack`. Chúng không “không dùng được”, nhưng synchronization ngữ nghĩa (semantics / 의미론) và API thiết kế (design / 설계) thường không phải lựa chọn tốt cho mã (code / 코드) mới. `ArrayList`, `HashMap`/`ConcurrentHashMap`, `ArrayDeque` thường rõ hơn tùy yêu cầu (requirement / 요구사항). Không thay `Hashtable` bằng `HashMap` chỉ vì mới hơn nếu old mã (code / 코드) thật sự dựa concurrent truy cập (access / 접근); trước tiên phải xác định compound atomicity và quyền sở hữu (ownership / 소유권).
 
-I/O legacy thường dùng `File`, `FileInputStream`, `FileReader` với platform default charset. Modern code nên ưu tiên `Path`/`Files` và charset explicit. Concurrency legacy có thể tạo raw `Thread`, dùng `wait/notify`, `Timer/TimerTask` hoặc synchronized collections; modern executors, `BlockingQueue`, scheduled executors và atomics thường dễ reason hơn, nhưng migration phải preserve protocol chứ không chỉ replace API names.
+I/O legacy thường dùng `File`, `FileInputStream`, `FileReader` với nền tảng (platform / 플랫폼) default charset. hiện đại (modern / 현대적) mã (code / 코드) nên ưu tiên `Path`/`Files` và charset tường minh (explicit / 명시적). tính đồng thời (concurrency / 동시성) legacy có thể tạo raw `Thread`, dùng `wait/notify`, `Timer/TimerTask` hoặc synchronized collections; hiện đại (modern / 현대적) executors, `BlockingQueue`, scheduled executors và atomics thường dễ reason hơn, nhưng di chuyển (migration / 마이그레이션) phải preserve giao thức (protocol / 프로토콜) chứ không chỉ replace API names.
 
-JDK 8 → 11 migration có một nhóm lỗi không nằm trong source style: JAXB/JAX-WS và Java EE/CORBA modules từng đi kèm JDK đã bị loại khỏi JDK 11. Code cũ có thể compile/run trên JDK 8 rồi báo missing class trên 11 cho tới khi dependencies được khai báo rõ trong build.
+JDK 8 → 11 di chuyển (migration / 마이그레이션) có một nhóm lỗi không nằm trong nguồn (source / 소스) style: JAXB/JAX-WS và Java EE/CORBA modules từng đi kèm JDK đã bị loại khỏi JDK 11. mã (code / 코드) cũ có thể compile/run trên JDK 8 rồi báo missing lớp (class / 클래스) trên 11 cho tới khi dependencies được khai báo rõ trong bản dựng (build / 빌드).
 
-JDK 17 tạo compatibility boundary khác: strong encapsulation của JDK internals mạnh hơn. Library cũ dùng reflection vào private fields của `java.*` có thể fail. `--add-opens` có thể là temporary migration bridge, nhưng long-term fix là update library hoặc chuyển sang supported API.
+JDK 17 tạo tính tương thích (compatibility / 호환성) ranh giới (boundary / 경계) khác: strong encapsulation của JDK internals mạnh hơn. thư viện (library / 라이브러리) cũ dùng reflection vào private fields của `java.*` có thể thất bại (fail / 실패). `--add-opens` có thể là temporary di chuyển (migration / 마이그레이션) cầu nối (bridge / 브리지), nhưng long-term fix là cập nhật (update / 업데이트) thư viện (library / 라이브러리) hoặc chuyển sang supported API.
 
-Khi lên Java 21, Virtual Threads không có nghĩa phải rewrite executor architecture ngay. Trước hết đo workload: bottleneck là blocking platform threads hay DB pool/CPU? Virtual thread giảm cost chờ của Java threads, nhưng pool 30 database connections vẫn chỉ có 30 connections.
+Khi lên Java 21, Virtual Threads không có nghĩa phải rewrite executor kiến trúc (architecture / 아키텍처) ngay. Trước hết đo tải công việc (workload / 워크로드): bottleneck là blocking nền tảng (platform / 플랫폼) threads hay DB pool/CPU? Virtual luồng thực thi (thread / 스레드) giảm chi phí (cost / 비용) chờ của Java threads, nhưng pool 30 cơ sở dữ liệu (database / 데이터베이스) connections vẫn chỉ có 30 connections.
 
-Cách migrate an toàn là tách **platform upgrade** khỏi **source modernization** khi có thể: chạy tests trên JDK mới, sửa dependencies/removed APIs, xử lý illegal reflection, đo GC/memory/latency baseline, rồi refactor từng vùng với tests. Hai mục tiêu có risk profile khác nhau.
+Cách migrate an toàn là tách **nền tảng (platform / 플랫폼) upgrade** khỏi **nguồn (source / 소스) modernization** khi có thể: chạy tests trên JDK mới, sửa dependencies/removed APIs, xử lý illegal reflection, đo GC/bộ nhớ (memory / 메모리)/độ trễ (latency / 지연 시간) baseline, rồi refactor từng vùng với tests. Hai mục tiêu có rủi ro (risk / 위험) profile khác nhau.
 
 ---
 
-# 107. Version Compatibility
+# 107. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)
 
 Có ba axes:
 
@@ -2666,61 +2675,63 @@ class-file target
 runtime/platform APIs
 ```
 
-Bạn có thể viết syntax Java 17 nhưng gọi Java 25 API nếu build config không enforce release correctly.
+Bạn có thể viết cú pháp (syntax / 문법) Java 17 nhưng gọi Java 25 API nếu bản dựng (build / 빌드) cấu hình (config / 설정) không enforce bản phát hành (release / 릴리스) correctly.
 
-Runtime old sẽ fail.
+Thời gian chạy (runtime / 런타임) old sẽ thất bại (fail / 실패).
 
-Dependencies cũng có minimum Java version.
+Dependencies cũng có minimum Java phiên bản (version / 버전).
 
-Upgrade JDK phải test libraries/build tools/runtime, không chỉ compiler.
-
----
-
-# 108. Intermediate Project: Order Processing Service Core
-
-Viết plain Java application xử lý orders với `Order`, `Money`, `OrderStatus`, `CustomerId`, repository interface và JDBC implementation.
-
-Dùng Flyway-like SQL scripts manually if needed, nhưng mục tiêu là JDBC transaction đúng.
-
-Thêm external HTTP Client Java 11 để gọi fake payment API với timeout.
-
-Thêm executor/CompletableFuture để load two independent datasets concurrently, sau đó giới hạn concurrency.
-
-Dùng JFR/jcmd để quan sát thread/heap.
-
-Viết reflection-based simple annotation scanner nhỏ để hiểu metadata/proxy trước Spring.
-
-Project này là bridge trực tiếp sang Senior và Spring.
+Upgrade JDK phải kiểm thử (test / 테스트) libraries/bản dựng (build / 빌드) tools/thời gian chạy (runtime / 런타임), không chỉ trình biên dịch (compiler / 컴파일러).
 
 ---
 
-# 109. Intermediate → Senior Gate
+# 108. Intermediate dự án (project / 프로젝트): thứ tự (order / 순서) Processing dịch vụ (service / 서비스) cốt lõi (core / 핵심)
 
-Bạn sẵn sàng sang Senior khi có thể giải thích invariance, PECS, type erasure và unsafe raw types; chọn collection dựa semantics; hiểu equals/hashCode/comparator contracts; phân biệt immutable snapshot và unmodifiable view; giải thích Stream laziness, flatMap, collectors và parallel-stream risks.
+Viết plain Java ứng dụng (application / 애플리케이션) xử lý orders với `Order`, `Money`, `OrderStatus`, `CustomerId`, repository giao diện (interface / 인터페이스) và JDBC hiện thực (implementation / 구현).
 
-Bạn phải reason concurrency bằng race/visibility/atomicity/happens-before; biết khi nào synchronized, volatile, atomic, locks, executors, blocking queues, CompletableFuture và virtual threads phù hợp.
+Dùng Flyway-like SQL scripts manually if needed, nhưng mục tiêu là JDBC giao dịch (transaction / 트랜잭션) đúng.
 
-Bạn phải viết JDBC resource lifecycle/transaction đúng, hiểu reflection/dynamic proxy/classpath/classloader errors và đọc modern Java 11–21 features.
+Thêm bên ngoài (external / 외부) HTTP máy khách (client / 클라이언트) Java 11 để gọi fake payment API với hết thời gian chờ (timeout / 타임아웃).
 
-Bạn phải biết JVM memory không chỉ heap, GC không chữa logical leak, JIT cần warm-up và JFR/jcmd tồn tại để debug bằng evidence.
+Thêm executor/CompletableFuture để tải (load / 로드) two independent datasets concurrently, sau đó giới hạn tính đồng thời (concurrency / 동시성).
 
-Ở level này, “code chạy” chưa đủ. Bạn cần biết **vì sao nó đúng dưới nhiều inputs, threads, environments và failures**.
+Dùng JFR/jcmd để quan sát luồng thực thi (thread / 스레드)/vùng nhớ động (heap / 힙).
+
+Viết reflection-based simple annotation scanner nhỏ để hiểu siêu dữ liệu (metadata / 메타데이터)/proxy trước Spring.
+
+Dự án (project / 프로젝트) này là cầu nối (bridge / 브리지) trực tiếp sang cấp cao (senior / 시니어) và Spring.
 
 ---
 
-# 110. Điều để sang Senior
+# 109. Intermediate → cấp cao (senior / 시니어) Gate
 
-Senior sẽ đào sâu bytecode, stack frames, JIT inlining/deoptimization, escape analysis, class loading identity/initialization, Java Memory Model formal hơn, safe publication, deadlocks/contention, CAS/ABA, advanced concurrent collections, executor saturation, CompletableFuture failure topology, virtual-thread production trade-offs, GC roots/leaks, G1/ZGC, native memory, JFR incident workflow, performance engineering, NIO/direct buffers, remote-call resilience, MethodHandle, JDBC pool/isolation, security, API compatibility, architecture và distributed-system patterns.
+Bạn sẵn sàng sang cấp cao (senior / 시니어) khi có thể giải thích invariance, PECS, kiểu (type / 타입) erasure và unsafe raw types; chọn collection dựa ngữ nghĩa (semantics / 의미론); hiểu equals/hashCode/comparator contracts; phân biệt immutable snapshot và unmodifiable view; giải thích Stream laziness, flatMap, collectors và parallel-stream risks.
+
+Bạn phải reason tính đồng thời (concurrency / 동시성) bằng race/visibility/atomicity/happens-before; biết khi nào synchronized, volatile, atomic, locks, executors, blocking queues, CompletableFuture và virtual threads phù hợp.
+
+Bạn phải viết JDBC tài nguyên (resource / 자원) vòng đời (lifecycle / 생명주기)/giao dịch (transaction / 트랜잭션) đúng, hiểu reflection/động (dynamic / 동적) proxy/classpath/classloader errors và đọc hiện đại (modern / 현대적) Java 11–21 features.
+
+Bạn phải biết JVM bộ nhớ (memory / 메모리) không chỉ vùng nhớ động (heap / 힙), GC không chữa logical leak, JIT cần warm-up và JFR/jcmd tồn tại để gỡ lỗi (debug / 디버그) bằng bằng chứng (evidence / 증거).
+
+Ở mức (level / 수준) này, “mã (code / 코드) chạy” chưa đủ. Bạn cần biết **vì sao nó đúng dưới nhiều inputs, threads, environments và failures**.
+
+---
+
+# 110. Điều để sang cấp cao (senior / 시니어)
+
+Cấp cao (senior / 시니어) sẽ đào sâu bytecode, ngăn xếp (stack / 스택) frames, JIT inlining/deoptimization, escape phân tích (analysis / 분석), nạp lớp (class loading / 클래스 로딩) định danh (identity / 식별자)/initialization, Java bộ nhớ (memory / 메모리) mô hình (model / 모델) formal hơn, safe publication, deadlocks/contention, CAS/ABA, advanced concurrent collections, executor saturation, CompletableFuture thất bại (failure / 실패) topology, virtual-thread môi trường vận hành (production / 운영 환경) trade-offs, GC roots/leaks, G1/ZGC, bản địa (native / 네이티브) bộ nhớ (memory / 메모리), JFR sự cố (incident / 인시던트) workflow, hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링), NIO/direct buffers, remote-call resilience, MethodHandle, JDBC pool/isolation, bảo mật (security / 보안), API tính tương thích (compatibility / 호환성), kiến trúc (architecture / 아키텍처) và distributed-system patterns.
 
 ---
 
 # References for version-sensitive topics
 
-Oracle Java SE Support Roadmap:
+Oracle Java SE hỗ trợ (support / 지원) Roadmap:
 https://www.oracle.com/java/technologies/java-se-support-roadmap.html
 
 Oracle Java API:
 https://docs.oracle.com/en/java/javase/
 
-OpenJDK JEP index:
+OpenJDK JEP chỉ mục (index / 인덱스):
 https://openjdk.org/jeps/0
+
+> **Bàn giao:** Sau **luồng thực thi (thread / 스레드): đối tượng (object / 객체) Java và thực thi (execution / 실행) ngữ cảnh (context / 맥락) khác nhau thế nào?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [java master supplement rewritten detailed](./java_master_supplement_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

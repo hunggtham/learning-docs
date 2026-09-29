@@ -1,22 +1,24 @@
 # Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)
 
-Ở chapter trước, tế bào (cell) đã có energy và mạng lưới chuyển hóa (metabolic network). Nhưng một hệ sống không thể chỉ có bộ máy (machinery); nó cần **điều khiển (control)**. Cell phải biết khi nào chất dinh dưỡng (nutrient) đủ, khi nào DNA bị hỏng, khi nào tế bào lân cận (neighboring cell) gửi signal, khi nào cần tăng trưởng, khi nào nên divide và khi nào nên dừng.
+> **Mạch đọc:** Đọc **Truyền tín hiệu và Chu kỳ tế bào — Cell Signaling and Cell Cycle (세포 신호전달과 세포주기)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Tại sao cell cần signaling?** sang **2. tín hiệu (signal / 신호), receptor và đáp ứng (response)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này nghiên cứu **truyền tín hiệu tế bào (cell signaling / 세포 신호전달)** như hệ thống xử lý thông tin và **chu kỳ tế bào (cell cycle / 세포주기)** như một quyết định được kiểm soát chặt. Đây là bridge tự nhiên từ sinh học tế bào (cell biology) sang genetics: signaling có thể đổi protein hoạt động (activity) trong vài giây, nhưng response dài hạn thường cần đổi biểu hiện gen (gene expression).
+Ở chapter trước, tế bào (cell) đã có năng lượng (energy / 에너지) và mạng lưới chuyển hóa (metabolic network). Nhưng một hệ sống không thể chỉ có bộ máy (machinery); nó cần **điều khiển (control / 제어)**. Cell phải biết khi nào chất dinh dưỡng (nutrient) đủ, khi nào DNA bị hỏng, khi nào tế bào lân cận (neighboring cell) gửi tín hiệu (signal / 신호), khi nào cần tăng trưởng, khi nào nên divide và khi nào nên dừng.
 
-> **Mô hình tư duy (mental model):** signaling là quá trình biến một thay đổi ở bên ngoài hoặc bên trong thành một chuỗi thay đổi molecular có tổ chức. Chu kỳ tế bào (cell cycle) là một máy trạng thái (state machine) sinh học chỉ chuyển state khi các checkpoint cho phép.
+Chapter này nghiên cứu **truyền tín hiệu tế bào (cell signaling / 세포 신호전달)** như hệ thống xử lý thông tin và **chu kỳ tế bào (cell cycle / 세포주기)** như một quyết định được kiểm soát chặt. Đây là cầu nối (bridge / 브리지) tự nhiên từ sinh học tế bào (cell biology) sang genetics: signaling có thể đổi protein hoạt động (activity) trong vài giây, nhưng phản hồi (response / 응답) dài hạn thường cần đổi biểu hiện gen (gene expression).
+
+> **mô hình tư duy (mental model / 사고 모델):** signaling là quá trình biến một thay đổi ở bên ngoài hoặc bên trong thành một chuỗi thay đổi molecular có tổ chức. Chu kỳ tế bào (cell cycle) là một máy trạng thái (state machine / 상태 머신) sinh học chỉ chuyển trạng thái (state / 상태) khi các checkpoint cho phép.
 
 ## 1. Tại sao cell cần signaling?
 
-Một sinh vật đơn bào (unicellular organism) phải sense nutrient, toxin, temperature và mating signal. Trong sinh vật đa bào (multicellular organism), cell còn phải coordinate với tissue.
+Một sinh vật đơn bào (unicellular organism) phải sense nutrient, toxin, temperature và mating tín hiệu (signal / 신호). Trong sinh vật đa bào (multicellular organism), cell còn phải coordinate với tissue.
 
-Nếu liver cell, muscle cell và nơron (neuron) đều tự quyết định độc lập, organism không thể giữ cân bằng nội môi (homeostasis). Hoóc-môn (hormone), neurotransmitter, yếu tố tăng trưởng (growth factor) và cytokine tạo communication layer giúp nhiều cell hoạt động như một system.
+Nếu liver cell, muscle cell và nơron (neuron) đều tự quyết định độc lập, organism không thể giữ cân bằng nội môi (homeostasis). Hoóc-môn (hormone), neurotransmitter, yếu tố tăng trưởng (growth factor) và cytokine tạo communication tầng (layer / 계층) giúp nhiều cell hoạt động như một hệ thống (system / 시스템).
 
-Signal không chỉ đến từ bên ngoài. Tổn thương DNA (DNA damage), low ATP, protein chưa gấp cuộn đúng (unfolded protein) hay thiếu oxy (low oxygen) cũng kích hoạt truyền tín hiệu nội bào (intracellular signaling).
+Tín hiệu (signal / 신호) không chỉ đến từ bên ngoài. Tổn thương DNA (DNA damage), low ATP, protein chưa gấp cuộn đúng (unfolded protein) hay thiếu oxy (low oxygen) cũng kích hoạt truyền tín hiệu nội bào (intracellular signaling).
 
-## 2. Tín hiệu (signal), receptor và đáp ứng (response)
+## 2. tín hiệu (signal / 신호), receptor và đáp ứng (response)
 
-Một signaling system thường có ba lớp:
+Một signaling hệ thống (system / 시스템) thường có ba lớp:
 
 ```text
 signal
@@ -28,13 +30,13 @@ signal transduction network
 cellular response
 ```
 
-**Ligand (리간드)** là molecule bind receptor. **Thụ thể (receptor) (수용체)** là protein nhận signal. **Chuyển đổi tín hiệu (signal transduction) (신호전달)** là chuỗi event chuyển signal thành response.
+**Ligand (리간드)** là molecule bind receptor. **Thụ thể (receptor) (수용체)** là protein nhận tín hiệu (signal / 신호). **Chuyển đổi tín hiệu (signal transduction) (신호전달)** là chuỗi sự kiện (event / 이벤트) chuyển tín hiệu (signal / 신호) thành phản hồi (response / 응답).
 
-Response có thể là mở kênh ion (ion channel), thay metabolism, di chuyển, tiết molecule, đổi biểu hiện gen, divide hoặc apoptosis.
+Phản hồi (response / 응답) có thể là mở kênh ion (ion channel), thay metabolism, di chuyển, tiết molecule, đổi biểu hiện gen, divide hoặc apoptosis.
 
 ## 3. Receptor không chỉ “nhận” mà còn dịch ngôn ngữ
 
-Signal ngoài cell thường không đi thẳng vào nucleus. Receptor làm nhiệm vụ transduce: biến một kiểu information thành kiểu molecular event khác.
+Tín hiệu (signal / 신호) ngoài cell thường không đi thẳng vào nucleus. Receptor làm nhiệm vụ transduce: biến một kiểu thông tin (information / 정보) thành kiểu molecular sự kiện (event / 이벤트) khác.
 
 Ví dụ insulin bind insulin receptor ở màng (membrane). Receptor activation kích hoạt chuỗi phosphoryl hóa (phosphorylation cascade), thay transporter localization và metabolic enzyme hoạt động.
 
@@ -44,11 +46,11 @@ Một molecule peptide ngoài cell cuối cùng có thể đổi glucose uptake 
 
 **Truyền tín hiệu tự tiết (autocrine signaling)**: cell tác động chính nó.
 
-**Truyền tín hiệu cận tiết (paracrine signaling)**: signal tác động cell gần.
+**Truyền tín hiệu cận tiết (paracrine signaling)**: tín hiệu (signal / 신호) tác động cell gần.
 
 **Truyền tín hiệu nội tiết (endocrine signaling)**: hoóc-môn đi xa qua tuần hoàn (circulation).
 
-**Truyền tín hiệu qua synap (synaptic signaling)**: neuron truyền signal nhanh và định hướng qua synapse.
+**Truyền tín hiệu qua synap (synaptic signaling)**: neuron truyền tín hiệu (signal / 신호) nhanh và định hướng qua synapse.
 
 **Truyền tín hiệu phụ thuộc tiếp xúc (contact-dependent signaling)**: receptor và ligand trên hai cell tiếp xúc trực tiếp.
 
@@ -60,33 +62,33 @@ Ligand ưa nước (hydrophilic ligand) thường không xuyên membrane dễ n�
 
 Thụ thể nội bào thường trực tiếp hoặc gián tiếp điều chỉnh transcription.
 
-Cùng một mục tiêu “đổi cell hành vi (behavior)”, chemistry của ligand quyết định architecture signaling phù hợp.
+Cùng một mục tiêu “đổi cell hành vi (behavior / 동작)”, chemistry của ligand quyết định kiến trúc (architecture / 아키텍처) signaling phù hợp.
 
-## 6. G protein-coupled receptor: signal nhỏ, network lớn
+## 6. G protein-coupled receptor: tín hiệu (signal / 신호) nhỏ, mạng (network / 네트워크) lớn
 
 **GPCR (G protein-coupled receptor / G단백질 연결 수용체)** là family receptor lớn.
 
-Ligand bind làm receptor đổi conformation, activation heterotrimeric G protein, rồi effector enzym (enzyme)/channel được điều chỉnh. GTP hydrolysis giúp reset system.
+Ligand bind làm receptor đổi conformation, activation heterotrimeric G protein, rồi effector enzym (enzyme)/channel được điều chỉnh. GTP hydrolysis giúp reset hệ thống (system / 시스템).
 
-Một receptor có thể activate nhiều G protein; một enzyme có thể tạo nhiều chất truyền tin thứ hai (second messenger). Đây là **tín hiệu (signal) khuếch đại (amplification)**.
+Một receptor có thể activate nhiều G protein; một enzyme có thể tạo nhiều chất truyền tin thứ hai (second messenger). Đây là **tín hiệu (signal / 신호) khuếch đại (amplification)**.
 
-## 7. Chất truyền tin thứ hai: đưa signal đi nhanh trong cytoplasm
+## 7. Chất truyền tin thứ hai: đưa tín hiệu (signal / 신호) đi nhanh trong cytoplasm
 
 **Chất truyền tin thứ hai (2차 전달자)** là small intracellular molecule/ion như cAMP, Ca²⁺, IP₃.
 
-Một receptor activation có thể tạo rất nhiều cAMP; cAMP activate protein kinase A; kinase phosphorylate nhiều target.
+Một receptor activation có thể tạo rất nhiều cAMP; cAMP activate protein kinase A; kinase phosphorylate nhiều mục tiêu (target / 대상).
 
-Tín hiệu khuếch đại giúp lượng ligand nhỏ tạo response lớn, nhưng cũng đòi hỏi shutdown mechanism để tránh runaway activation.
+Tín hiệu khuếch đại giúp lượng ligand nhỏ tạo phản hồi (response / 응답) lớn, nhưng cũng đòi hỏi shutdown cơ chế (mechanism / 메커니즘) để tránh runaway activation.
 
-## 8. Calcium: ion vừa structural vừa signal
+## 8. Calcium: ion vừa structural vừa tín hiệu (signal / 신호)
 
-Cytosolic Ca²⁺ thường được giữ thấp so với extracellular space và ER. Gradient này cho phép Ca²⁺ tăng tạm thời trở thành signal mạnh.
+Cytosolic Ca²⁺ thường được giữ thấp so với extracellular không gian (space / 공간) và ER. độ dốc (gradient / 기울기) này cho phép Ca²⁺ tăng tạm thời trở thành tín hiệu (signal / 신호) mạnh.
 
-Ca²⁺ có thể bind calmodulin, activate enzyme, trigger co cơ (muscle contraction) hoặc vesicle release.
+Ca²⁺ có thể bind calmodulin, activate enzyme, trigger co cơ (muscle contraction) hoặc vesicle bản phát hành (release / 릴리스).
 
 Sau đáp ứng, pump đưa Ca²⁺ trở lại store/outside. Nếu Ca²⁺ cao kéo dài không kiểm soát, cell có thể bị damage.
 
-Một gradient được membrane chapter tạo ra giờ trở thành information channel.
+Một độ dốc (gradient / 기울기) được membrane chapter tạo ra giờ trở thành thông tin (information / 정보) channel.
 
 ## 9. Receptor tyrosine kinase và sinh trưởng (growth) tín hiệu
 
@@ -102,15 +104,15 @@ Mutation làm RTK/pathway active liên tục có thể góp phần cancer.
 
 **Protein kinase (단백질 키나아제)** transfer phosphate lên protein; **phosphatase (인산가수분해효소)** bỏ phosphate.
 
-Phosphorylation có thể tăng hoặc giảm activity, đổi localization hoặc interaction.
+Phosphorylation có thể tăng hoặc giảm activity, đổi localization hoặc tương tác (interaction / 상호작용).
 
-Một điểm cần tránh là nghĩ “phosphorylation luôn bật”. Effect phụ thuộc protein/site.
+Một điểm cần tránh là nghĩ “phosphorylation luôn bật”. tác động (effect / 효과) phụ thuộc protein/site.
 
-Kinase–phosphatase pair tạo reversible control rất phù hợp cho dynamic system.
+Kinase–phosphatase pair tạo reversible điều khiển (control / 제어) rất phù hợp cho hệ động (dynamic system / 동적 시스템).
 
 ## 11. Signaling cascade và lôgic (logic) mạng lưới (network)
 
-Pathway thường được vẽ tuyến tính A → B → C, nhưng cell thật là mạng lưới (network). Một node có thể nhận nhiều input, branch ra nhiều output và có phản hồi (feedback).
+Pathway thường được vẽ tuyến tính A → B → C, nhưng cell thật là mạng lưới (network). Một nút (node / 노드) có thể nhận nhiều đầu vào (input / 입력), branch ra nhiều đầu ra (output / 출력) và có phản hồi (feedback / 피드백).
 
 ```mermaid
 flowchart TD
@@ -122,43 +124,43 @@ E -. feedback .-> B
 F[Stress signal] --> C
 ```
 
-Cross-talk giúp cell integrate context thay vì phản ứng mechanical với một signal duy nhất.
+Cross-talk giúp cell integrate ngữ cảnh (context / 맥락) thay vì phản ứng mechanical với một tín hiệu (signal / 신호) duy nhất.
 
-## 12. Độ đặc hiệu: cùng signal nhưng cell khác phản ứng khác
+## 12. Độ đặc hiệu: cùng tín hiệu (signal / 신호) nhưng cell khác phản ứng khác
 
-Adrenaline có thể tác động nhiều tissue nhưng response khác vì receptor subtype và downstream protein khác.
+Adrenaline có thể tác động nhiều tissue nhưng phản hồi (response / 응답) khác vì receptor subtype và downstream protein khác.
 
-Một cell chỉ “nghe” signal nếu có receptor phù hợp và truyền tín hiệu machinery tương ứng.
+Một cell chỉ “nghe” tín hiệu (signal / 신호) nếu có receptor phù hợp và truyền tín hiệu machinery tương ứng.
 
 Đây là principle quan trọng của multicellularity: organism có thể dùng cùng hormone nhưng nhiều tissue interpret khác nhau.
 
-## 13. Desensitization: tại sao signal kéo dài không luôn tạo response kéo dài?
+## 13. Desensitization: tại sao tín hiệu (signal / 신호) kéo dài không luôn tạo phản hồi (response / 응답) kéo dài?
 
 Cell có thể giảm sensitivity bằng receptor internalization, phosphorylation receptor, degrade chất truyền tin thứ hai hoặc tăng inhibitor.
 
 Đây là **thích nghi (adaptation)/desensitization**.
 
-Ví dụ odor receptor đáp ứng (response) giảm khi mùi kéo dài. System quan tâm change mới hơn là absolute signal cố định.
+Ví dụ odor receptor đáp ứng (response) giảm khi mùi kéo dài. hệ thống (system / 시스템) quan tâm thay đổi (change / 변경) mới hơn là absolute tín hiệu (signal / 신호) cố định.
 
-Điều khiển system luôn cần reset.
+Điều khiển hệ thống (system / 시스템) luôn cần reset.
 
-## 14. Feedback và feedforward trong truyền tín hiệu (signaling)
+## 14. phản hồi (feedback / 피드백) và feedforward trong truyền tín hiệu (signaling)
 
-Phản hồi âm (negative feedback) giúp ổn định hoặc tạo thích nghi. Phản hồi dương (positive feedback) có thể tạo công tắc (switch)-like behavior. Feedforward giúp anticipation hoặc lọc noise.
+Phản hồi âm (negative feedback) giúp ổn định hoặc tạo thích nghi. Phản hồi dương (positive feedback) có thể tạo công tắc (switch)-like hành vi (behavior / 동작). Feedforward giúp anticipation hoặc lọc noise.
 
-Mạng lưới sinh học (biological network) đôi khi tạo **tính lưỡng ổn (bistability)**: system có hai stable state và tín hiệu đủ mạnh mới chuyển state.
+Mạng lưới sinh học (biological network) đôi khi tạo **tính lưỡng ổn (bistability)**: hệ thống (system / 시스템) có hai stable trạng thái (state / 상태) và tín hiệu đủ mạnh mới chuyển trạng thái (state / 상태).
 
-Tế bào-cycle commitment là ví dụ nơi phản hồi dương giúp decision trở nên rõ ràng thay vì lưng chừng.
+Tế bào-cycle commitment là ví dụ nơi phản hồi dương giúp quyết định (decision / 결정) trở nên rõ ràng thay vì lưng chừng.
 
-## 15. Biểu hiện gen là response chậm nhưng bền hơn
+## 15. Biểu hiện gen là phản hồi (response / 응답) chậm nhưng bền hơn
 
 Signaling có thể phosphorylate enzyme trong vài giây. Nhưng nếu cell cần thay program nhiều giờ/ngày, pathway thường activate yếu tố phiên mã (transcription factor).
 
-Yếu tố phiên mã vào nucleus/bind DNA và thay biểu hiện gen. Protein mới được tạo, làm state cell thay đổi lâu hơn.
+Yếu tố phiên mã vào nucleus/bind DNA và thay biểu hiện gen. Protein mới được tạo, làm trạng thái (state / 상태) cell thay đổi lâu hơn.
 
-Đây là bridge trực tiếp sang molecular genetics.
+Đây là cầu nối (bridge / 브리지) trực tiếp sang molecular genetics.
 
-## 16. Chu kỳ tế bào: division không phải default state
+## 16. Chu kỳ tế bào: division không phải default trạng thái (state / 상태)
 
 **Chu kỳ tế bào** gồm G1, S, G2 và M phase. Một số cell rời cycle vào G0.
 
@@ -171,33 +173,33 @@ Yếu tố phiên mã vào nucleus/bind DNA và thay biểu hiện gen. Protein 
 
 ## 17. Cyclin và CDK: oscillator molecular của chu kỳ tế bào
 
-**Cyclin-dependent kinase, CDK** là kinase được activate bởi cyclin. Cyclin level thay đổi theo cycle, tạo thời điểm (timing).
+**Cyclin-dependent kinase, CDK** là kinase được activate bởi cyclin. Cyclin mức (level / 수준) thay đổi theo cycle, tạo thời điểm (timing).
 
-CDK phosphorylate target để drive transition giữa phase. Cyclin được synthesize và degraded có kiểm soát.
+CDK phosphorylate mục tiêu (target / 대상) để drive chuyển tiếp (transition / 전이) giữa phase. Cyclin được synthesize và degraded có kiểm soát.
 
-Control bằng synthesis + destruction cho cycle có directionality.
+Điều khiển (control / 제어) bằng synthesis + destruction cho cycle có directionality.
 
 ## 18. Checkpoint: “đi tiếp hay dừng?”
 
-Checkpoint là network quyết định transition có an toàn không.
+Checkpoint là mạng (network / 네트워크) quyết định chuyển tiếp (transition / 전이) có an toàn không.
 
-G1/S checkpoint đánh giá growth condition và Tổn thương DNA trước replication. G2/M kiểm tra DNA replication/damage. Spindle checkpoint kiểm tra chromosome attachment trước segregation.
+G1/S checkpoint đánh giá growth điều kiện (condition / 조건) và Tổn thương DNA trước replication. G2/M kiểm tra DNA replication/damage. Spindle checkpoint kiểm tra chromosome attachment trước segregation.
 
-Checkpoint không phải physical gate; nó là mạng lưới điều hòa (regulatory network).
+Checkpoint không phải vật lý (physical / 물리적) gate; nó là mạng lưới điều hòa (regulatory network).
 
-## 19. Tổn thương DNA response và p53
+## 19. Tổn thương DNA phản hồi (response / 응답) và p53
 
-Tổn thương DNA activate sensor con đường (pathway). **p53** có thể induce cell-cycle arrest, repair program, senescence hoặc apoptosis tùy context.
+Tổn thương DNA activate sensor con đường (pathway). **p53** có thể induce cell-cycle arrest, repair program, senescence hoặc apoptosis tùy ngữ cảnh (context / 맥락).
 
-p53 thường được gọi “guardian of the genome”, nhưng mô hình tư duy tốt hơn là transcriptional decision node nhận stress tín hiệu.
+p53 thường được gọi “guardian of the genome”, nhưng mô hình tư duy tốt hơn là transcriptional quyết định (decision / 결정) nút (node / 노드) nhận stress tín hiệu.
 
-Mutation p53 pathway có thể cho damaged cell tiếp tục proliferate, tăng cancer risk.
+Mutation p53 pathway có thể cho damaged cell tiếp tục proliferate, tăng cancer rủi ro (risk / 위험).
 
-## 20. Mitosis: mục tiêu là chia chromosome đã copy chính xác
+## 20. Mitosis: mục tiêu là chia chromosome đã bản sao (copy / 복사) chính xác
 
 Sau S phase, mỗi chromosome có nhiễm sắc tử chị em (sister chromatid). Trong mitosis, spindle microtubule attach kinetochore, align và kéo nhiễm sắc tử chị em sang hai pole.
 
-Phases như prophase, metaphase, anaphase, telophase hữu ích để mô tả, nhưng mechanism quan trọng hơn tên phase: chromosome condense, attach, tension được kiểm tra, cohesion bị release, segregation diễn ra.
+Phases như prophase, metaphase, anaphase, telophase hữu ích để mô tả, nhưng cơ chế (mechanism / 메커니즘) quan trọng hơn tên phase: chromosome condense, attach, tension được kiểm tra, cohesion bị bản phát hành (release / 릴리스), segregation diễn ra.
 
 Cytokinesis sau đó chia cytoplasm.
 
@@ -209,7 +211,7 @@ Meiosis có một lần DNA replication nhưng hai lần division. Nhiễm sắc
 
 Trao đổi chéo (crossing-over) và phân ly độc lập (independent assortment) tạo combination allele mới.
 
-Meiosis là cầu nối (bridge) giữa chu kỳ tế bào và di truyền (inheritance) di truyền học (genetics).
+Meiosis là cầu nối (bridge / 브리지) giữa chu kỳ tế bào và di truyền (inheritance) di truyền học (genetics).
 
 ## 22. Apoptosis: chết tế bào (cell death) có thể là chương trình có lợi cho sinh vật (organism)
 
@@ -217,21 +219,21 @@ Meiosis là cầu nối (bridge) giữa chu kỳ tế bào và di truyền (inhe
 
 Apoptosis loại damaged cell và sculpt tissue trong phát triển (development). Ví dụ mô giữa developing digits bị loại để tạo ngón tách biệt.
 
-Ở sinh vật đa bào, survival của individual cell không phải mục tiêu tối cao; integrity của organism mới là context lớn hơn.
+Ở sinh vật đa bào, survival của individual cell không phải mục tiêu tối cao; integrity của organism mới là ngữ cảnh (context / 맥락) lớn hơn.
 
-## 23. Cancer: failure của multi-layer control
+## 23. Cancer: thất bại (failure / 실패) của multi-layer điều khiển (control / 제어)
 
-Cancer không đơn giản là “cell chia nhanh”. Nó là evolutionary process trong mô, thường cần nhiều alteration ảnh hưởng growth tín hiệu, checkpoint, apoptosis, độ ổn định hệ gen (genome stability), metabolism và interaction với microenvironment.
+Cancer không đơn giản là “cell chia nhanh”. Nó là evolutionary tiến trình (process / 프로세스) trong mô, thường cần nhiều alteration ảnh hưởng growth tín hiệu, checkpoint, apoptosis, độ ổn định hệ gen (genome stability), metabolism và tương tác (interaction / 상호작용) với microenvironment.
 
-Một tumor cell có mutation tăng proliferation; clone đó expand; thêm mutation có thể tiếp tục được selection trong tumor environment.
+Một tumor cell có mutation tăng proliferation; clone đó expand; thêm mutation có thể tiếp tục được selection trong tumor môi trường (environment / 환경).
 
 Cancer nối truyền tín hiệu tế bào (cell signaling) với genetics và tiến hóa (evolution).
 
-## 24. Tình huống phân tích (case study): insulin signal nối organism với cell chuyển hóa (metabolism)
+## 24. Tình huống phân tích (case study): insulin tín hiệu (signal / 신호) nối organism với cell chuyển hóa (metabolism)
 
-Sau meal, đường huyết (blood glucose) tăng. Pancreatic beta cell release insulin. Insulin receptor trên target cell activate signaling cascade. Ở muscle/adipose context, GLUT4 vesicle được đưa ra màng, tăng glucose uptake. Enzym metabolism cũng được regulation.
+Sau meal, đường huyết (blood glucose) tăng. Pancreatic beta cell bản phát hành (release / 릴리스) insulin. Insulin receptor trên mục tiêu (target / 대상) cell activate signaling cascade. Ở muscle/adipose ngữ cảnh (context / 맥락), GLUT4 vesicle được đưa ra màng, tăng glucose uptake. Enzym metabolism cũng được regulation.
 
-Chuỗi nhiều scale:
+Chuỗi nhiều quy mô (scale / 규모):
 
 ```text
 meal
@@ -249,26 +251,26 @@ Một hormone không “hạ đường” trực tiếp; nó thay cell hành vi.
 
 Yếu tố tăng trưởng bind receptor → MAPK signaling → yếu tố phiên mã → cyclin expression → tế bào-cycle entry.
 
-Nếu receptor/con đường mutation làm signal “on” ngay cả không có ligand, cell có thể nhận false message rằng môi trường đang cho phép growth.
+Nếu receptor/con đường mutation làm tín hiệu (signal / 신호) “on” ngay cả không có ligand, cell có thể nhận false message rằng môi trường đang cho phép growth.
 
-Đây là ví dụ information processing failure.
+Đây là ví dụ thông tin (information / 정보) processing thất bại (failure / 실패).
 
 ## 26. Các hiểu lầm phổ biến (common misconceptions)
 
-“Signal mạnh hơn luôn response lớn hơn tuyến tính” sai; pathway có bão hòa (saturation), ngưỡng (threshold), feedback và thích nghi.
+“tín hiệu (signal / 신호) mạnh hơn luôn phản hồi (response / 응답) lớn hơn tuyến tính” sai; pathway có bão hòa (saturation), ngưỡng (threshold), phản hồi (feedback / 피드백) và thích nghi.
 
 “Một receptor chỉ có một pathway” thường sai; cross-talk và branching phổ biến.
 
 “Phosphorylation luôn activate” sai.
 
-“Chu kỳ tế bào chạy như đồng hồ độc lập” sai; nó tích hợp environmental/internal signal.
+“Chu kỳ tế bào chạy như đồng hồ độc lập” sai; nó tích hợp environmental/nội bộ (internal / 내부) tín hiệu (signal / 신호).
 
-“Cancer do một gene duy nhất” thường sai; cancer thường là multistep evolutionary process.
+“Cancer do một gene duy nhất” thường sai; cancer thường là multistep evolutionary tiến trình (process / 프로세스).
 
 “Apoptosis luôn xấu” sai; controlled chết tế bào cần cho development và tissue health.
 
 <!-- depth-audit-2026:signal-quantitation -->
-## Định lượng signal–response: receptor occupancy không phải toàn bộ câu chuyện
+## Định lượng tín hiệu (signal / 신호)–phản hồi (response / 응답): receptor occupancy không phải toàn bộ câu chuyện
 
 Nếu ligand \(L\) gắn receptor với hằng số phân ly \(K_d\), phần receptor được chiếm trong mô hình đơn giản là:
 
@@ -276,37 +278,39 @@ Nếu ligand \(L\) gắn receptor với hằng số phân ly \(K_d\), phần rec
 f=\frac{[L]}{K_d+[L]}
 \]
 
-Quan hệ này bão hòa: tăng ligand từ rất thấp tới gần \(K_d\) tạo thay đổi lớn, nhưng khi receptor gần bão hòa, thêm ligand tạo ít khác biệt hơn. Downstream network còn có amplification, phosphatase, feedback và threshold nên **đáp ứng tế bào không đồng nhất với receptor occupancy**.
+Quan hệ này bão hòa: tăng ligand từ rất thấp tới gần \(K_d\) tạo thay đổi lớn, nhưng khi receptor gần bão hòa, thêm ligand tạo ít khác biệt hơn. Downstream mạng (network / 네트워크) còn có amplification, phosphatase, phản hồi (feedback / 피드백) và threshold nên **đáp ứng tế bào không đồng nhất với receptor occupancy**.
 
 Với hệ có tính hiệp đồng, phương trình Hill thường được dùng như mô hình hiện tượng:
 
 \[
-response=\frac{[L]^n}{K^n+[L]^n}
+phản hồi (response / 응답)=\frac{[L]^n}{K^n+[L]^n}
 \]
 
 \(n>1\) tạo đường cong dốc hơn và có thể giúp quyết định trở nên switch-like. Nhưng \(n\) là tham số mô tả; không nên tự động diễn giải nó như đúng số phân tử cùng gắn.
 
 ## Tế bào mã hóa thông tin bằng thời gian
 
-Hai signal có cùng nồng độ trung bình vẫn có thể tạo kết quả khác nếu một signal liên tục còn signal kia phát xung. Ca²⁺, ERK, NF-κB và nhiều pathway có thể dùng **tần số, độ dài xung và lịch sử kích thích (signal history)** để mã hóa trạng thái. Feedback âm tạo adaptation; feedback dương tạo commitment; degradation và phosphatase xác định memory của pathway.
+Hai tín hiệu (signal / 신호) có cùng nồng độ trung bình vẫn có thể tạo kết quả khác nếu một tín hiệu (signal / 신호) liên tục còn tín hiệu (signal / 신호) kia phát xung. Ca²⁺, ERK, NF-κB và nhiều pathway có thể dùng **tần số, độ dài xung và lịch sử kích thích (signal history)** để mã hóa trạng thái. phản hồi (feedback / 피드백) âm tạo adaptation; phản hồi (feedback / 피드백) dương tạo commitment; degradation và phosphatase xác định bộ nhớ (memory / 메모리) của pathway.
 
 ## Commitment của cell cycle cần cơ chế làm quyết định khó đảo ngược
 
-G1/S transition không chỉ là “cyclin đủ cao”. Trục RB–E2F tạo feedback giúp cell vượt **điểm hạn chế (restriction point)** khi tín hiệu tăng trưởng, dinh dưỡng và genome integrity phù hợp. Sau đó, ubiquitin ligase như SCF và APC/C phá hủy protein điều hòa theo thứ tự, làm transition có tính hướng và giảm khả năng quay ngược tùy tiện.
+G1/S chuyển tiếp (transition / 전이) không chỉ là “cyclin đủ cao”. Trục RB–E2F tạo phản hồi (feedback / 피드백) giúp cell vượt **điểm hạn chế (restriction point)** khi tín hiệu tăng trưởng, dinh dưỡng và genome integrity phù hợp. Sau đó, ubiquitin ligase như SCF và APC/C phá hủy protein điều hòa theo thứ tự, làm chuyển tiếp (transition / 전이) có tính hướng và giảm khả năng quay ngược tùy tiện.
 
-Cơ chế này giải thích vì sao failure ở cell cycle thường là failure của network chứ không phải một nút đơn. Oncogene có thể tăng drive, tumor suppressor loss làm mất brake, repair defect tăng variation; selection trong mô sau đó giữ clone có lợi thế tăng trưởng. Cancer vì vậy nối trực tiếp **regulation → failure → somatic evolution**.
+Cơ chế này giải thích vì sao thất bại (failure / 실패) ở cell cycle thường là thất bại (failure / 실패) của mạng (network / 네트워크) chứ không phải một nút đơn. Oncogene có thể tăng drive, tumor suppressor mất mát (loss / 손실) làm mất brake, repair defect tăng variation; selection trong mô sau đó giữ clone có lợi thế tăng trưởng. Cancer vì vậy nối trực tiếp **regulation → thất bại (failure / 실패) → somatic evolution**.
 
-## 27. Cầu nối: signal ngắn hạn trở thành chương trình dài hạn bằng cách nào?
+## 27. Cầu nối: tín hiệu (signal / 신호) ngắn hạn trở thành chương trình dài hạn bằng cách nào?
 
-Truyền tín hiệu cho phép cell sense và respond. Nhưng khi yếu tố phiên mã được activate, nó phải đọc một physical information hệ thống (system). DNA sequence ở đâu? Gene là gì? Làm sao trình tự (sequence) được copy, transcribed và translated? Làm sao mutation thay protein?
+Truyền tín hiệu cho phép cell sense và respond. Nhưng khi yếu tố phiên mã được activate, nó phải đọc một vật lý (physical / 물리적) thông tin (information / 정보) hệ thống (system / 시스템). DNA chuỗi (sequence / 시퀀스) ở đâu? Gene là gì? Làm sao trình tự (sequence) được bản sao (copy / 복사), transcribed và translated? Làm sao mutation thay protein?
 
 Đó là câu hỏi của [DNA, Gene và Biểu hiện gene](../02_genetics_molecular_biology/00_dna_genes_and_gene_expression.md).
 
 Sau đó, meiosis vừa học sẽ được nối với Mendelian inheritance trong [Di truyền, Biến dị và Đột biến](../02_genetics_molecular_biology/01_inheritance_variation_and_mutation.md).
 
-> **Mô hình tư duy cuối chapter:** truyền tín hiệu tế bào là computation bằng molecule: receptor nhận input, network transform/integrate signal, effector tạo đầu ra (output), phản hồi điều chỉnh gain. Chu kỳ tế bào là một decision system gắn chặt với signaling và genome integrity; genetics là layer information giúp các decision này được duy trì qua thời gian.
+> **Mô hình tư duy cuối chapter:** truyền tín hiệu tế bào là computation bằng molecule: receptor nhận đầu vào (input / 입력), mạng (network / 네트워크) transform/integrate tín hiệu (signal / 신호), effector tạo đầu ra (output / 출력), phản hồi điều chỉnh gain. Chu kỳ tế bào là một quyết định (decision / 결정) hệ thống (system / 시스템) gắn chặt với signaling và genome integrity; genetics là tầng (layer / 계층) thông tin (information / 정보) giúp các quyết định (decision / 결정) này được duy trì qua thời gian.
 
 ---
 
 <!-- biology-learning-navigation -->
 **Điều hướng học:** [← Chuyển hóa, Hô hấp tế bào và Quang hợp](01_metabolism_respiration_photosynthesis.md) · [Mục lục Biology](../README.md) · [Đa bào, mô và chất nền ngoại bào →](03_multicellularity_tissues_and_extracellular_matrix.md)
+
+> **Bàn giao:** Sau **27. Cầu nối: tín hiệu (signal / 신호) ngắn hạn trở thành chương trình dài hạn bằng cách nào?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 cells membranes and transport](./00_cells_membranes_and_transport.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

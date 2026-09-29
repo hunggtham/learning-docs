@@ -11,7 +11,7 @@
 
 ### 002. 폭포수 모형 (Waterfall Model / Mô hình thác nước)
 - 이전 단계로 돌아갈 수 없다는 전제하에 각 단계를 확실히 매듭짓고 다음 단계를 진행하는 개발 방법론이다. (Là phương pháp phát triển với tiền đề không thể quay lại giai đoạn trước, hoàn thành dứt điểm từng giai đoạn rồi mới tiến sang giai đoạn tiếp theo.)
-- 보헴이 제시한 고전적 생명 주기 모형이다. (Là mô hình vòng đời cổ điển do Boehm đề xuất.)
+- 고전적 생명 주기 모형이다. 보헴(Boehm)은 나선형 모형(Spiral Model)을 제안했다. (Là mô hình vòng đời cổ điển. Boehm là người đề xuất mô hình xoắn ốc.)
 - 요구사항을 반영하기 어렵다. (Khó phản ánh/thay đổi yêu cầu.)
 - **Ví dụ (Example):** Xây dựng một ngôi nhà, bạn không thể xây mái nhà khi chưa làm xong móng. (Phải theo tuần tự).
 - 💡 **Mẹo ghi nhớ (Mnemonic):** Nước chảy từ trên xuống, không chảy ngược lại (이전 단계로 돌아갈 수 없음).
@@ -23,7 +23,7 @@
 - 💡 **Mẹo ghi nhớ (Mnemonic):** **KNKK** (Kế - Nguy - Khai - Khách): **Kế Nguy Khách Khóc** (Lập KH - Rủi ro - Phát triển - Khách hàng).
 
 ### 004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)
-- 스크럼 (Scrum
+- 스크럼 (Scrum)
 - XP (eXtreme Programming)
 - 기능 중심 개발 (FDD; Feature Driven Development)
 - 칸반 (Kanban)
@@ -994,7 +994,6 @@
   - **기본 원리 (Principles)**: Pair Programming, CI (Tích hợp liên tục), TDD (Test-Driven Development), Refactoring (Tái cấu trúc mã), 40-Hour Work.
 
 ---
-# Chapter 2. 화면 설계 (Screen Design)
 
 ## 1. 사용자 인터페이스 (User Interface - UI)
 - **UI 유형 (UI Types)**: 
@@ -1002,7 +1001,7 @@
   - **모바일 제스처 (Mobile Gestures)**: Tap (Chạm), Double Tap, Drag (Kéo), Pan (Di chuyển liên tục), Press (Nhấn giữ), Flick (Vuốt nhanh), Pinch (Phóng to/thu nhỏ bằng 2 ngón).
 - **UI 기본 원칙 (4 Principles)**:
   - **직관성 (Intuitiveness)**: Dễ hiểu, trực quan.
-  - **유효성 (Efficiency)**: Đạt được mục tiêu chính xác.
+  - **유효성 (Effectiveness)**: Đạt được mục tiêu của người dùng một cách chính xác và đầy đủ.
   - **학습성 (Learnability)**: Dễ học.
   - **유연성 (Flexibility)**: Linh hoạt, giảm thiểu lỗi.
   - 💡 **Mẹo ghi nhớ**: T/H/H/N -> **Trực Học Hằng Ngày**
@@ -1013,7 +1012,6 @@
   - **프로토타입 (Prototype)**: Mô hình động, có thể tương tác.
 
 ---
-# Chapter 3. 애플리케이션 설계 (Application Design)
 
 ## 1. 소프트웨어 아키텍처 (Software Architecture)
 - **상위 설계 (High-level)**: 아키텍처 (Architecture), 자료구조 (Data Structure), 인터페이스 (Interface).
@@ -1059,7 +1057,6 @@
 - **행위 패턴 (Behavioral - 11)**: Strategy, Mediator, Command, Observer, State, Iterator, Visitor, Chain of Responsibility, Interpreter, Memento, Template Method. (Hành vi, tương tác)
 
 ---
-# Chapter 4. 인터페이스 설계 (Interface Design)
 
 ## 1. 요구사항 개발 기법 (Requirements Elicitation Techniques)
 - **도출 (Elicitation) 기법**:
@@ -1084,7 +1081,7 @@
   - **WAS (Web Application Server)**: Xử lý nội dung web động (동적인 콘텐츠).
 
 ---
-# 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
+## 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
 
 ## 1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
 - **개념**: Toàn bộ quá trình phát triển (Yêu cầu -> Thiết kế -> Code -> Test -> Bảo trì). Là tiêu chuẩn để quản lý dự án, chi phí, nhân lực.
@@ -1188,7 +1185,6 @@
 
 
 
-# Subject 1 - Part 3
 
 ## 1. 객체지향 설계 5대 원칙 (SOLID)
 **개념 (Khái niệm):** 시스템의 변경이나 확장에 유연하게 대응하기 위해 지켜야 할 5가지 원칙 (5 nguyên tắc thiết kế hướng đối tượng giúp hệ thống linh hoạt trước các thay đổi và mở rộng).
@@ -1480,4 +1476,29 @@
 
 *   **솔루션 식별 & 명세서 작성:** 아키텍처 구성 정보, 구매 내역 확인 -> 제약사항 확인 (Xác định Middleware dựa trên kiến trúc và hóa đơn mua sắm -> Kiểm tra các hạn chế / constraints).
 
+## A+ Deep Dive: 개발 모형 선택과 요구사항 검증
 
+### 1. 모형 선택 비교표
+
+| 모형 | 가장 강한 신호 | 변경 대응 | 시험 함정 |
+|---|---|---|---|
+| 폭포수 (Waterfall) | 요구사항이 안정적이고 단계 산출물이 명확함 | 낮음 | 순차적이라는 뜻이 곧 테스트가 없다는 뜻은 아님 |
+| 프로토타입 (Prototype) | 사용자가 원하는 결과를 말로 확정하기 어려움 | 요구사항 확인에 유리 | 시제품을 그대로 운영 제품으로 착각하지 않음 |
+| 나선형 (Spiral) | 대규모·고위험·불확실성이 큼 | 반복마다 위험 분석 | 보헴(Boehm)과 연결되는 모형은 나선형 |
+| 애자일 (Agile) | 짧은 주기와 지속적인 고객 피드백 | 높음 | Agile은 단일 방법론이 아니라 가치와 원칙의 묶음 |
+
+### 2. 요구사항 검증 미니 트레이스
+
+1. **완전성(Completeness)**: 모든 기능·제약이 빠짐없이 적혔는가?
+2. **일관성(Consistency)**: 서로 모순되는 요구가 없는가?
+3. **추적성(Traceability)**: 요구사항 ID가 설계·테스트 항목과 연결되는가?
+4. **검증 가능성(Verifiability)**: `빠른 응답` 대신 `95% 요청을 2초 이내 처리`처럼 시험 가능한가?
+
+> **시험 함정:** 검증(Verification)은 명세에 맞게 만들었는지, 확인(Validation)은 사용자의 실제 목적에 맞는지를 묻는다.
+
+### 자주 혼동하는 판별 포인트
+
+- **형상 관리 항목**은 소스 코드만이 아니라 요구사항·설계서·설치/운영 문서처럼 변경 이력을 추적해야 하는 산출물까지 포함한다. 개인 일정이나 예산 자체는 형상 항목이 아니다.
+- **EAI Hybrid**는 Hub-and-Spoke와 Message Bus를 조합한다. 모든 애플리케이션을 직접 연결하는 Point-to-Point와 다르다.
+- **N-S 차트**는 순차·선택·반복이라는 구조적 제어 흐름을 표현한다. 클래스 메모리 배치나 패킷 헤더를 표현하는 도구가 아니다.
+- 내부 자료를 직접 참조하는 모듈은 **내용 결합도**가 강하다. 독립성을 높이려면 결합도는 낮추고 응집도는 높인다.

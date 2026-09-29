@@ -1,14 +1,17 @@
 # Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử
 
-> **Phức phối trí (coordination complex / 배위 화합물)** là một tiểu phân hóa học trong đó nguyên tử hoặc ion trung tâm — thường là kim loại — được bao quanh bởi **phối tử (ligand / 리간드)** cung cấp mật độ electron. Hóa học phối trí kết nối acid–base Lewis, hình học, nhiệt động lực học, động học, phổ học, từ tính và xúc tác trong cùng một khung lý thuyết.
+> **Mạch đọc:** Đọc **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Liên kết phối trí bắt đầu từ acid–cơ sở (base / 기반) Lewis, nhưng không kết thúc ở đó** sang **Nguyên tử cho electron và độ càng của phối tử**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Phức phối trí (coordination complex / 배위 화합물)** là một tiểu phân hóa học trong đó nguyên tử hoặc ion trung tâm — thường là kim loại — được bao quanh bởi **phối tử (ligand / 리간드)** cung cấp mật độ electron. Hóa học phối trí kết nối acid–cơ sở (base / 기반) Lewis, hình học, nhiệt động lực học, động học, phổ học, từ tính và xúc tác trong cùng một khung lý thuyết.
 
 Không nên hình dung một phức phối trí đơn giản như “kim loại ở giữa và vài phân tử dính xung quanh”. Phối tử có thể thay đổi năng lượng orbital, thế oxy hóa-khử, trạng thái spin, độ tan và con đường phản ứng của tâm kim loại. Nói cách khác, môi trường phối tử có thể biến cùng một ion kim loại thành những hệ hóa học rất khác nhau.
 
 Nếu các khái niệm nền đã mờ, nên quay lại [mô hình acid–base Lewis](../08_acids_bases/00_acid_base_models.md), [cân bằng hóa học](../07_chemical_equilibrium/01_equilibrium_constant.md), [năng lượng tự do Gibbs](../05_thermodynamics/03_gibbs_free_energy.md), [orbital phân tử](../02_chemical_bonding/06_molecular_orbital_theory.md) và [oxy hóa–khử](../09_redox_and_electrochemistry/00_oxidation_and_reduction.md). Chapter này sử dụng lại các ý tưởng đó ở một hệ có tâm kim loại và nhiều phối tử cạnh tranh đồng thời.
 
-## Liên kết phối trí bắt đầu từ acid–base Lewis, nhưng không kết thúc ở đó
+## Liên kết phối trí bắt đầu từ acid–cơ sở (base / 기반) Lewis, nhưng không kết thúc ở đó
 
-Trong cách ghi sổ đơn giản, phối tử là **base Lewis** cho một cặp electron tự do; tâm kim loại là **acid Lewis** nhận mật độ electron.
+Trong cách ghi sổ đơn giản, phối tử là **cơ sở (base / 기반) Lewis** cho một cặp electron tự do; tâm kim loại là **acid Lewis** nhận mật độ electron.
 
 Ví dụ:
 
@@ -72,7 +75,7 @@ Fe(II) là \(d^6\). Từ đó, kết hợp thông tin trường phối tử, ta 
 
 Danh pháp phối trí nên được học như một **hệ mã hóa (encoding scheme)**. Một tên gọi tốt cho phép khôi phục loại phối tử, số lượng, kim loại và trạng thái oxy hóa; từ công thức cũng có thể xây lại tên.
 
-Thay vì học thuộc hàng loạt hậu tố, nên tập trung vào logic: tên phối tử, thứ tự chữ cái, tiền tố số lượng, số oxy hóa của kim loại và cách gọi đặc biệt cho phức anion.
+Thay vì học thuộc hàng loạt hậu tố, nên tập trung vào lô-gic (logic / 논리): tên phối tử, thứ tự chữ cái, tiền tố số lượng, số oxy hóa của kim loại và cách gọi đặc biệt cho phức anion.
 
 Trong giáo trình Hàn Quốc, các thuật ngữ thường gặp gồm **착이온 (ion phức)**, **배위 결합 (liên kết phối trí)**, **배위수 (số phối trí)** và **리간드 (phối tử)**.
 
@@ -120,7 +123,7 @@ Các hằng số từng bước thường giảm khi các vị trí phối trí 
 
 Một giá trị \(K_f\) được công bố không tự động cho biết thành phần thật của dung dịch. Phối tử có thể bị proton hóa, kim loại có thể thủy phân, kết tủa có thể xảy ra và các phối tử khác có thể cạnh tranh liên kết.
 
-Ví dụ khả năng EDTA liên kết kim loại phụ thuộc pH vì chỉ một phần EDTA tồn tại ở dạng khử proton đủ để liên kết mạnh. Vì vậy hóa phân tích thường dùng **hằng số tạo phức có điều kiện (conditional formation constant)** để gộp ảnh hưởng của cân bằng acid–base.
+Ví dụ khả năng EDTA liên kết kim loại phụ thuộc pH vì chỉ một phần EDTA tồn tại ở dạng khử proton đủ để liên kết mạnh. Vì vậy hóa phân tích thường dùng **hằng số tạo phức có điều kiện (conditional formation constant)** để gộp ảnh hưởng của cân bằng acid–cơ sở (base / 기반).
 
 Đây là cầu nối trực tiếp giữa cân bằng phối trí, [acid–base](../08_acids_bases/00_acid_base_models.md) và bài toán [dạng tồn tại trong cân bằng ghép](../07_chemical_equilibrium/01_equilibrium_constant.md).
 
@@ -211,3 +214,5 @@ Không. Proton hóa phối tử, thủy phân, kết tủa và các phối tử 
 > Hãy xem tâm kim loại như một **trung tâm điện tử** và phối tử như môi trường đang lập trình trung tâm đó. Phối tử không chỉ chiếm chỗ; chúng điều chỉnh năng lượng orbital, phân bố điện tích, trạng thái oxy hóa-khử, spin, động học và khả năng nhận diện phân tử.
 
 Xem tiếp: [Trường tinh thể và trường phối tử](./04_crystal_field_and_ligand_field.md), nơi ta đi sâu vào cách môi trường phối tử tái định hình cảnh quan năng lượng orbital d.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 inorganic compounds](./00_inorganic_compounds.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

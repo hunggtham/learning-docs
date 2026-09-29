@@ -1,18 +1,18 @@
-# 9. 암호화 기술 (Công nghệ Mã hóa)
+# 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **9. 암호화 기술 (Công nghệ Mã hóa)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **9. 암호화 기술 (Công nghệ Mã hóa)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-암호화, 기술
+오류, 제어, 교환, 방식
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**에서 만든 기준을 이어받아 **9. 암호화 기술 (Công nghệ Mã hóa)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**에서 만든 기준을 이어받아 **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,49 +20,105 @@ Mục đích của bài này là hiểu **9. 암호화 기술 (Công nghệ Mã 
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** và nối nó với **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 9. 암호화 기술 (Công nghệ Mã hóa)
+## 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
-Từ **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, ta đã có điểm tựa để bước vào **9. 암호화 기술 (Công nghệ Mã hóa)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/18 trước khi đi vào chi tiết.
+Từ **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**, ta đã có điểm tựa để bước vào **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/61 trước khi đi vào chi tiết.
 
-Để đọc **9. 암호화 기술 (Công nghệ Mã hóa)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Để không đọc **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
-### 9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)
+### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
 
-Các ý ngay dưới **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
-- **개인키(대칭키) 암호화 (Private/Symmetric Key):**
-  - **동일한 키**로 암호화/복호화. 속도가 빠름. 암호화 키 개수: n(n-1)/2.
-  - 종류: 
-    - **블록 암호화:** DES, SEED, AES, ARIA, IDEA
-    - **스트림 암호화:** LFSR, RC4
-- **공개키(비대칭키) 암호화 (Public/Asymmetric Key):**
-  - 암호화(공개키), 복호화(비밀키/개인키). 키 개수: **2n**.
-  - 대표 알고리즘: **RSA** (소인수분해 기반).
-- **Tiếng Việt:** 
-  - Khóa cá nhân (Đối xứng): Cùng 1 khóa, nhanh. (DES, AES, ARIA).
-  - Khóa công khai (Bất đối xứng): 2 khóa (Public để mã hóa, Private để giải mã), an toàn nhưng chậm. (RSA).
+- **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
+- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등). 오버헤드가 크고 역채널이 필요 없다.
+- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 검출에 사용되고, Stop-and-Wait·Go-Back-N·Selective Repeat가 대표적인 ARQ 방식이다.
+- **Tiếng Việt:**
+  - FEC: Tự sửa lỗi (vd: Hamming Code).
+  - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
 
-Các bullet của **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+Các bullet của **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Ta vừa chốt **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **9.2 해시 및 기타 암호화 요소** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **9.2 해시 및 기타 암호화 요소**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Ta vừa chốt **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
-### 9.2 해시 및 기타 암호화 요소
+### 4.2 ARQ (자동 반복 요청) 및 오류 검출 방식
 
-Bây giờ ta đi vào nội dung của **9.2 해시 및 기타 암호화 요소**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Bây giờ ta đi vào nội dung của **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
-- **해시 (Hash):** 임의의 길이를 고정된 길이로 변환. 복호화가 불가한 **일방향 함수**. (종류: SHA, MD4, MD5 등).
-- **솔트 (Salt):** 암호화 전 원문에 무작위 값을 덧붙이는 과정. (패스워드 보안 강화용).
-- **Tiếng Việt:** Hash là hàm một chiều không thể giải mã (SHA, MD5). Salt là thêm chuỗi ngẫu nhiên trước khi mã hóa để chống tấn công từ điển.
+- **ARQ 종류:**
+  - **Stop-and-Wait:** 한 블록 보내고 기다림.
+  - **Go-Back-N:** 오류 발생 지점부터 *모두* 재전송.
+  - **Selective Repeat:** 오류 발생 블록*만* 재전송 (버퍼 필요, 복잡).
+  - **Adaptive:** 채널 상태에 따라 동적 변경.
+- **오류 검출 및 수정:**
+  - **패리티 (Parity):** 1비트 검출, 짝수오류 검출 불가.
+  - **CRC:** 다항식 기반, 집단 오류 검출 특화 (HDLC 사용).
+  - **해밍 코드 (Hamming Code):** 1비트 *수정* 가능. `2^n` 번째 자리에 비트 삽입.
+- **Tiếng Việt:**
+  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi.
+  - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming Code: Sửa được lỗi 1 bit.
 
-Các bullet của **9.2 해시 및 기타 암호화 요소** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+Các bullet của **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Điểm chốt của **9.2 해시 및 기타 암호화 요소** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+Sau khi đọc **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**, đừng bắt đầu lại từ số không. **4.3 교환 방식 (Switching Methods)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Với **4.3 교환 방식 (Switching Methods)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
-Điểm chốt của **9. 암호화 기술 (Công nghệ Mã hóa)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+### 4.3 교환 방식 (Switching Methods)
+
+Phần nguồn của **4.3 교환 방식 (Switching Methods)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **회선 교환 (Circuit Switching):** 물리적 전용선 할당. 고정 대역, 연속적 데이터 전송. (접속 지연 O, 전송 지연 X). 전화망.
+- **축적 교환 (Store-and-Forward):** 데이터를 저장했다가 경로를 찾아 전송.
+  - **메시지 교환 (Message Switching):** 전체 메시지 전송. 지연 매우 긺.
+  - **패킷 교환 (Packet Switching):** 패킷 단위로 잘라서 전송 (다음 파트에서 상세 서술).
+- **Tiếng Việt:**
+  - Circuit Switching (Chuyển mạch kênh): Tạo đường truyền vật lý (Điện thoại).
+  - Message Switching (Chuyển mạch thông điệp): Lưu rồi chuyển toàn bộ.
+
+Các bullet của **4.3 교환 방식 (Switching Methods)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+**4.3 교환 방식 (Switching Methods)** vừa cho ta cách đặt câu hỏi. Bây giờ **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Đoạn **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)
+
+Các ý ngay dưới **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **가상 회선 (Virtual Circuit):** 패킷 교환 전에 논리적인 가상 회선을 설정. 전송 순서가 보장되며 신뢰성이 높음. (호 설정 → 데이터 전송 → 호 해제).
+- **데이터그램 (Datagram):** 연결 경로 설정 없이 각 패킷이 독립적으로 운반됨. 패킷마다 경로가 다르고 순서가 다를 수 있음. 짧은 데이터 전송에 적합.
+- **패킷 교환망의 기능:** 패킷 다중화, 논리 채널 설정, 경로 제어, 순서 제어, 트래픽 제어, 오류 제어.
+- **Tiếng Việt:**
+  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo).
+  - Datagram: Truyền độc lập không cần tạo đường dẫn (thứ tự có thể thay đổi).
+
+Các bullet của **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)
+
+Bây giờ ta đi vào nội dung của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **경로 설정 방식 (Routing Strategies):**
+  - **고정 경로 (Static):** 미리 정해진 경로 사용.
+  - **적응 경로 (Adaptive):** 트래픽 상황에 따라 동적 변경.
+  - **범람 (Flooding):** 모든 경로로 패킷 복사 전송 (네트워크 정보 불필요).
+  - **임의 경로 (Random):** 인접 교환기 중 임의 선택.
+- **폭주(혼잡) 제어 (Congestion Control):** 오버플로를 방지하기 위해 네트워크 내 패킷 수 조절.
+- **Tiếng Việt:** Routing có Static (Tĩnh), Adaptive (Động), Flooding (Tràn ngập). Congestion Control giúp chống quá tải mạng.
+
+Các bullet của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Điểm chốt của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

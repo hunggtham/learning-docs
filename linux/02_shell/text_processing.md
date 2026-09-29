@@ -1,10 +1,13 @@
 # Xử lý văn bản trên Linux
 
+> **Mạch đọc:** Đọc **Xử lý văn bản trên Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ câu hỏi, không bắt đầu từ câu lệnh** sang **grep: chọn dòng theo mẫu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Máy chủ Linux tạo ra rất nhiều dữ liệu dạng văn bản: nhật ký, tệp cấu hình, danh sách tiến trình, đầu ra câu lệnh, dữ liệu gần giống CSV và các ảnh chụp chẩn đoán. Sức mạnh của shell không nằm ở từng tiện ích riêng lẻ mà ở khả năng đưa **luồng văn bản (text stream)** qua nhiều phép biến đổi nhỏ để trả lời một câu hỏi cụ thể.
 
 ## Bắt đầu từ câu hỏi, không bắt đầu từ câu lệnh
 
-Giả sử môi trường production có `access.log`. Câu hỏi "máy chủ có lỗi không?" quá rộng. Có thể thu hẹp thành: trong 10 phút xảy ra sự cố, mã trạng thái HTTP nào tăng mạnh? IP nào tạo nhiều yêu cầu nhất? endpoint nào thường xuất hiện cùng phản hồi `500`? Khi câu hỏi đủ rõ, câu lệnh trở thành công cụ triển khai quá trình suy luận.
+Giả sử môi trường vận hành (production / 운영 환경) có `access.log`. Câu hỏi "máy chủ có lỗi không?" quá rộng. Có thể thu hẹp thành: trong 10 phút xảy ra sự cố, mã trạng thái HTTP nào tăng mạnh? IP nào tạo nhiều yêu cầu nhất? endpoint nào thường xuất hiện cùng phản hồi `500`? Khi câu hỏi đủ rõ, câu lệnh trở thành công cụ triển khai quá trình suy luận.
 
 Một luồng xử lý văn bản tốt thường có dạng:
 
@@ -38,7 +41,7 @@ Lấy thêm ngữ cảnh quanh dòng khớp:
 grep -C 10 'NullPointerException' app.log
 ```
 
-`-C 10` thường hữu ích hơn chỉ lấy dòng khớp vì dấu vết ngăn xếp (stack trace) và ngữ cảnh yêu cầu có thể nằm ở các dòng xung quanh.
+`-C 10` thường hữu ích hơn chỉ lấy dòng khớp vì dấu vết ngăn xếp (stack trace / 스택 트레이스) và ngữ cảnh yêu cầu có thể nằm ở các dòng xung quanh.
 
 Khi mẫu phải được hiểu đúng như chuỗi ký tự thông thường, `-F` tránh việc diễn giải theo regex:
 
@@ -60,7 +63,7 @@ grep -E '^ERROR|^WARN' app.log
 
 ## `find`: truy vấn cây hệ thống tệp
 
-`find` không chỉ tìm tên tệp; nó có thể truy vấn đối tượng theo loại, thời gian, kích thước và nhiều metadata khác:
+`find` không chỉ tìm tên tệp; nó có thể truy vấn đối tượng theo loại, thời gian, kích thước và nhiều siêu dữ liệu (metadata / 메타데이터) khác:
 
 ```bash
 find /var/log -type f -name '*.log' -size +500M
@@ -86,13 +89,13 @@ Trước thao tác có tính phá hủy, hãy quan sát kết quả trước:
 find /backup -type f -mtime +30 -print
 ```
 
-Chỉ sau khi kiểm tra mới cân nhắc thêm `-delete`. Tách **quan sát** khỏi **thay đổi trạng thái** giúp giảm rủi ro production.
+Chỉ sau khi kiểm tra mới cân nhắc thêm `-delete`. Tách **quan sát** khỏi **thay đổi trạng thái** giúp giảm rủi ro môi trường vận hành (production / 운영 환경).
 
 ## `sort` và `uniq`: từ sự kiện thành tần suất
 
 Nhật ký thường là một chuỗi sự kiện. Để tìm giá trị xuất hiện nhiều nhất, mô hình kinh điển là: lấy trường cần quan tâm → sắp xếp → đếm → sắp xếp theo số lần.
 
-Nếu cột đầu của access log là IP máy khách:
+Nếu cột đầu của truy cập (access / 접근) log là IP máy khách:
 
 ```bash
 awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -20
@@ -109,11 +112,11 @@ ORDER BY COUNT(*) DESC
 LIMIT 20
 ```
 
-Pipeline của shell và SQL khác cú pháp nhưng cùng chia sẻ một cách suy luận dữ liệu: **chọn trường → nhóm → tổng hợp → sắp xếp**.
+Chuỗi xử lý (pipeline / 파이프라인) của shell và SQL khác cú pháp nhưng cùng chia sẻ một cách suy luận dữ liệu: **chọn trường → nhóm → tổng hợp → sắp xếp**.
 
 ## `awk`: xử lý bản ghi và trường
 
-`awk` mặc định coi mỗi dòng là một bản ghi (record) và tách trường theo khoảng trắng. Vì vậy:
+`awk` mặc định coi mỗi dòng là một bản ghi (record / 레코드) và tách trường theo khoảng trắng. Vì vậy:
 
 ```bash
 awk '{print $1}' access.log
@@ -137,7 +140,7 @@ awk '{count[$9]++} END {for (s in count) print s, count[s]}' access.log
 
 `awk` thực chất là một ngôn ngữ lập trình nhỏ, không chỉ là công cụ in cột.
 
-Tuy nhiên nhật ký thực tế có thể chứa trường trong dấu nháy, JSON hoặc stack trace nhiều dòng. Không nên giả định mọi dữ liệu đều tách được bằng khoảng trắng. Với nhật ký JSON, `jq` thường phù hợp hơn nếu có sẵn.
+Tuy nhiên nhật ký thực tế có thể chứa trường trong dấu nháy, JSON hoặc dấu vết ngăn xếp (stack trace / 스택 트레이스) nhiều dòng. Không nên giả định mọi dữ liệu đều tách được bằng khoảng trắng. Với nhật ký JSON, `jq` thường phù hợp hơn nếu có sẵn.
 
 ## `sed`: chỉnh sửa luồng văn bản
 
@@ -159,7 +162,7 @@ Sau khi chắc chắn mới chỉnh trực tiếp, ví dụ:
 sed -i.bak 's/old/new/g' app.conf
 ```
 
-Sao lưu trước thay thế tự động đặc biệt quan trọng với cấu hình production.
+Sao lưu trước thay thế tự động đặc biệt quan trọng với cấu hình môi trường vận hành (production / 운영 환경).
 
 ## `cut`, `tr` và `paste`
 
@@ -191,7 +194,7 @@ tail -n 20 access.log
 less -N access.log
 ```
 
-Một thói quen tốt ở mức vận hành nâng cao là xem mẫu trước để xác nhận định dạng rồi mới viết `awk '$9...'`. Nếu giả định về cấu trúc sai, pipeline vẫn có thể chạy đúng cú pháp nhưng trả về kết quả sai về ý nghĩa.
+Một thói quen tốt ở mức vận hành nâng cao là xem mẫu trước để xác nhận định dạng rồi mới viết `awk '$9...'`. Nếu giả định về cấu trúc sai, chuỗi xử lý (pipeline / 파이프라인) vẫn có thể chạy đúng cú pháp nhưng trả về kết quả sai về ý nghĩa.
 
 ## Nhật ký đã nén
 
@@ -216,7 +219,7 @@ curl -v https://service.example 2>&1 | tee curl-debug.txt
 
 ## Dữ liệu phân cách bằng NUL và tên tệp an toàn
 
-Tên tệp trên Unix có thể chứa khoảng trắng và thậm chí ký tự xuống dòng. Pipeline dựa hoàn toàn vào newline có thể sai với các tên bất thường. `find` và `xargs` hỗ trợ ký tự NUL làm dấu phân cách:
+Tên tệp trên Unix có thể chứa khoảng trắng và thậm chí ký tự xuống dòng. chuỗi xử lý (pipeline / 파이프라인) dựa hoàn toàn vào newline có thể sai với các tên bất thường. `find` và `xargs` hỗ trợ ký tự NUL làm dấu phân cách:
 
 ```bash
 find . -type f -name '*.log' -print0 | xargs -0 grep -n 'ERROR'
@@ -242,9 +245,9 @@ journalctl -u app --since '16:00' --until '16:15' | grep -E 'ERROR|Exception'
 
 Phạm vi tốt không chỉ làm câu lệnh chạy nhanh hơn mà còn giảm lượng bằng chứng không liên quan, từ đó làm quá trình suy luận chính xác hơn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Có thể xem xử lý văn bản trên dòng lệnh như một **bộ máy truy vấn (query engine)** được tách thành nhiều toán tử nhỏ. Mỗi bước nên có trách nhiệm rõ: chọn nguồn, lọc, biến đổi, tổng hợp hoặc trình bày. Khi kết quả sai, hãy kiểm tra từng bước thay vì nhìn toàn pipeline như một câu thần chú.
+Có thể xem xử lý văn bản trên dòng lệnh như một **bộ máy truy vấn (query engine)** được tách thành nhiều toán tử nhỏ. Mỗi bước nên có trách nhiệm rõ: chọn nguồn, lọc, biến đổi, tổng hợp hoặc trình bày. Khi kết quả sai, hãy kiểm tra từng bước thay vì nhìn toàn chuỗi xử lý (pipeline / 파이프라인) như một câu thần chú.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -256,7 +259,7 @@ Có thể xem xử lý văn bản trên dòng lệnh như một **bộ máy truy
 
 **"`sed -i` nhanh nên có thể dùng ngay."** Xem trước kết quả biến đổi giúp tránh chỉnh sửa hàng loạt sai.
 
-**"Đầu ra câu lệnh luôn là dữ liệu có cấu trúc ổn định."** Đầu ra dành cho con người có thể thay đổi theo phiên bản hoặc locale. Script production nên ưu tiên giao diện đọc bằng máy khi công cụ có hỗ trợ.
+**"Đầu ra câu lệnh luôn là dữ liệu có cấu trúc ổn định."** Đầu ra dành cho con người có thể thay đổi theo phiên bản hoặc locale. Script môi trường vận hành (production / 운영 환경) nên ưu tiên giao diện đọc bằng máy khi công cụ có hỗ trợ.
 
 ## Kết nối kiến thức
 

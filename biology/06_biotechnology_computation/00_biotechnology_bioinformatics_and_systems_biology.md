@@ -1,28 +1,31 @@
-# Công nghệ sinh học, Tin sinh học và Systems Biology — Biotechnology, Bioinformatics and Systems Biology (생명공학, 생물정보학과 시스템생물학)
+# Công nghệ sinh học, Tin sinh học và các hệ thống (systems / 시스템들) Biology — Biotechnology, Bioinformatics and các hệ thống (systems / 시스템들) Biology (생명공학, 생물정보학과 시스템생물학)
 
-Toàn bộ các chapter trước xây một đồ thị kiến thức (knowledge graph) từ molecule tới ecosystem. Biotechnology bắt đầu khi ta hỏi một câu mới: **nếu đã hiểu mechanism, ta có thể đo, khuếch đại, chỉnh sửa hoặc thiết kế nó như thế nào?** Bioinformatics xuất hiện khi dữ liệu quá lớn để xử lý thủ công; sinh học hệ thống (systems biology) xuất hiện khi danh sách component không còn đủ để giải thích behavior của network.
+> **Mạch đọc:** Đọc **Công nghệ sinh học, Tin sinh học và các hệ thống (systems / 시스템들) Biology — Biotechnology, Bioinformatics and các hệ thống (systems / 시스템들) Biology (생명공학, 생물정보학과 시스템생물학)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Biotechnology không bắt đầu từ CRISPR** sang **2. PCR: làm một đoạn DNA trở thành hàng triệu bản sao (copy / 복사)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> **Mô hình tư duy (mental model):** công nghệ sinh học (biotechnology) biến biological mechanism thành tool; sinh tin học (bioinformatics) biến biological data thành representation có thể tính toán; sinh học hệ thống biến list component thành model về interaction và động lực học (dynamics).
+
+Toàn bộ các chapter trước xây một đồ thị kiến thức (knowledge graph) từ molecule tới ecosystem. Biotechnology bắt đầu khi ta hỏi một câu mới: **nếu đã hiểu cơ chế (mechanism / 메커니즘), ta có thể đo, khuếch đại, chỉnh sửa hoặc thiết kế nó như thế nào?** Bioinformatics xuất hiện khi dữ liệu quá lớn để xử lý thủ công; sinh học hệ thống (systems biology) xuất hiện khi danh sách thành phần (component / 컴포넌트) không còn đủ để giải thích hành vi (behavior / 동작) của mạng (network / 네트워크).
+
+> **mô hình tư duy (mental model / 사고 모델):** công nghệ sinh học (biotechnology) biến biological cơ chế (mechanism / 메커니즘) thành công cụ (tool / 도구); sinh tin học (bioinformatics) biến biological dữ liệu (data / 데이터) thành biểu diễn (representation / 표현) có thể tính toán; sinh học hệ thống biến danh sách (list / 목록) thành phần (component / 컴포넌트) thành mô hình (model / 모델) về tương tác (interaction / 상호작용) và động lực học (dynamics).
 
 ## 1. Biotechnology không bắt đầu từ CRISPR
 
 Con người đã dùng lên men (fermentation), selective breeding và food biotechnology từ lâu trước sinh học phân tử (molecular biology).
 
-Modern biotechnology khác ở mức precision: ta có thể isolate DNA, amplify sequence, trình tự (sequence) hệ gen (genome), edit locus và measure thousands gene cùng lúc.
+Hiện đại (modern / 현대적) biotechnology khác ở mức precision: ta có thể isolate DNA, amplify chuỗi (sequence / 시퀀스), trình tự (sequence) hệ gen (genome), edit locus và measure thousands gene cùng lúc.
 
-Nhưng mỗi tool vẫn dựa mechanism tự nhiên: PCR dùng DNA polymerase; restriction enzyme đến từ bacterial defense; CRISPR đến từ microbial immunity.
+Nhưng mỗi công cụ (tool / 도구) vẫn dựa cơ chế (mechanism / 메커니즘) tự nhiên: PCR dùng DNA polymerase; restriction enzyme đến từ bacterial defense; CRISPR đến từ microbial immunity.
 
-## 2. PCR: làm một đoạn DNA trở thành hàng triệu copy
+## 2. PCR: làm một đoạn DNA trở thành hàng triệu bản sao (copy / 복사)
 
-**Polymerase chain reaction, PCR (중합효소연쇄반응)** cần template DNA, two primers, thermostable DNA polymerase, nucleotide và buffer.
+**Polymerase chuỗi (chain / 사슬) reaction, PCR (중합효소연쇄반응)** cần template DNA, two primers, thermostable DNA polymerase, nucleotide và buffer.
 
 Một cycle gồm:
 
 1. denaturation: tách Mạch DNA (DNA strand) bằng heat;
-2. annealing: primer bind sequence complement;
+2. annealing: primer bind chuỗi (sequence / 시퀀스) complement;
 3. extension: polymerase kéo dài.
 
-Nếu efficiency lý tưởng, amount target tăng gần:
+Nếu efficiency lý tưởng, amount mục tiêu (target / 대상) tăng gần:
 
 \[
 N_n=N_0 2^n
@@ -32,9 +35,9 @@ sau \(n\) cycle. Real efficiency thấp hơn 100% và reaction cuối sẽ plate
 
 ## 3. Primer tạo độ đặc hiệu (specificity)
 
-PCR không “copy toàn genome”. Primer xác định boundary region được khuếch đại.
+PCR không “bản sao (copy / 복사) toàn genome”. Primer xác định ranh giới (boundary / 경계) region được khuếch đại.
 
-Primer design phải cân nhắc melting temperature, GC content, secondary structure và off-target binding.
+Primer thiết kế (design / 설계) phải cân nhắc melting temperature, GC content, secondary cấu trúc (structure / 구조) và off-target binding.
 
 Một mismatch gần 3′ end có thể ảnh hưởng extension mạnh hơn một mismatch ở vị trí khác.
 
@@ -44,35 +47,35 @@ Specificity là nhận dạng phân tử (molecular recognition) vấn đề (pr
 
 **qPCR** đo huỳnh quang (fluorescence) theo cycle để estimate initial template amount.
 
-Cycle threshold thấp hơn thường gợi ý starting amount cao hơn vì mẫu (sample) đạt detectable fluorescence sớm hơn.
+Cycle threshold thấp hơn thường gợi ý starting amount cao hơn vì mẫu (sample / 표본) đạt detectable fluorescence sớm hơn.
 
-Quantification cần standard/normalization và efficiency assumption; Ct value không nên so trực tiếp vô điều kiện giữa assay khác nhau.
+Quantification cần tiêu chuẩn (standard / 표준)/normalization và efficiency giả định (assumption / 가정); Ct giá trị (value / 값) không nên so trực tiếp vô điều kiện giữa assay khác nhau.
 
 ## 5. RT-PCR: RNA phải được chuyển thành DNA trước
 
-RNA không được standard DNA polymerase PCR copy trực tiếp. **Reverse transcriptase** tạo complementary DNA (cDNA), sau đó PCR amplify cDNA.
+RNA không được tiêu chuẩn (standard / 표준) DNA polymerase PCR bản sao (copy / 복사) trực tiếp. **Reverse transcriptase** tạo complementary DNA (cDNA), sau đó PCR amplify cDNA.
 
 Technique này dùng đo transcript hoặc detect RNA virus trong nhiều assay.
 
-Tên “RT-PCR” đôi khi bị dùng lẫn với real-time PCR; context phải rõ.
+Tên “RT-PCR” đôi khi bị dùng lẫn với real-time PCR; ngữ cảnh (context / 맥락) phải rõ.
 
-## 6. Gel electrophoresis: phân tử (molecule) được tách nhờ charge và matrix
+## 6. Gel electrophoresis: phân tử (molecule) được tách nhờ charge và ma trận (matrix / 행렬)
 
 DNA mang negative charge do phosphate backbone nên chạy về positive electrode trong điện trường (electric field).
 
-Agarose gel tạo mesh; fragment nhỏ di chuyển nhanh hơn fragment lớn trong condition phù hợp.
+Agarose gel tạo mesh; fragment nhỏ di chuyển nhanh hơn fragment lớn trong điều kiện (condition / 조건) phù hợp.
 
-Band position được so với DNA ladder để estimate size.
+Band position được so với DNA ladder để estimate kích thước (size / 크기).
 
-Electrophoresis biến size molecular thành spatial pattern nhìn thấy.
+Electrophoresis biến kích thước (size / 크기) molecular thành spatial mẫu (pattern / 패턴) nhìn thấy.
 
 ## 7. Restriction enzyme và recombinant DNA
 
-Restriction enzyme nhận sequence đặc hiệu và cắt DNA. DNA ligase nối fragment.
+Restriction enzyme nhận chuỗi (sequence / 시퀀스) đặc hiệu và cắt DNA. DNA ligase nối fragment.
 
-Plasmid vector có origin replication, selectable marker và cloning site. Insert được ligate vào plasmid rồi đưa vào bacteria để propagate/expression.
+Plasmid véc-tơ (vector / 벡터) có origin replication, selectable marker và cloning site. Insert được ligate vào plasmid rồi đưa vào bacteria để propagate/expression.
 
-Recombinant DNA là “assembly” dựa recognition sequence và cellular bộ máy sao chép (replication machinery).
+Recombinant DNA là “assembly” dựa recognition chuỗi (sequence / 시퀀스) và cellular bộ máy sao chép (replication machinery).
 
 ## 8. Transformation và chọn lọc (selection)
 
@@ -80,21 +83,21 @@ Không phải bacterial cell nào cũng nhận plasmid. Selectable marker như k
 
 Đây là artificial selection ở microbial culture.
 
-Marker lab cần biosafety và design phù hợp; concept không đồng nghĩa clinical resistance management.
+Marker lab cần biosafety và thiết kế (design / 설계) phù hợp; concept không đồng nghĩa clinical resistance management.
 
-## 9. DNA sequencing: từ molecule thành string data
+## 9. DNA sequencing: từ molecule thành string dữ liệu (data / 데이터)
 
-Sanger sequencing dùng chain-terminating nucleotide để đọc sequence, phù hợp fragment nhỏ/validation.
+Sanger sequencing dùng chain-terminating nucleotide để đọc chuỗi (sequence / 시퀀스), phù hợp fragment nhỏ/kiểm tra hợp lệ (validation / 검증).
 
 Next-generation sequencing song song hóa hàng triệu fragment, tạo massive read dataset.
 
-Long-read platform đọc fragment dài hơn, hữu ích cho repeat, structural variant và assembly.
+Long-read nền tảng (platform / 플랫폼) đọc fragment dài hơn, hữu ích cho repeat, structural variant và assembly.
 
-Không platform nào “tốt nhất”; choice phụ thuộc read length, độ chính xác (accuracy), throughput, cost và câu hỏi (question).
+Không nền tảng (platform / 플랫폼) nào “tốt nhất”; choice phụ thuộc read length, độ chính xác (accuracy), thông lượng (throughput / 처리량), chi phí (cost / 비용) và câu hỏi (question).
 
-## 10. Sequencing pipeline cơ bản
+## 10. Sequencing chuỗi xử lý (pipeline / 파이프라인) cơ bản
 
-Một genomics pipeline có dòng chảy (flow):
+Một genomics chuỗi xử lý (pipeline / 파이프라인) có dòng chảy (flow):
 
 ```text
 biological sample
@@ -109,241 +112,243 @@ biological sample
 → biological interpretation
 ```
 
-Mỗi arrow có assumption và source error. “Data từ máy” chưa phải kết luận sinh học (biological conclusion).
+Mỗi arrow có giả định (assumption / 가정) và nguồn (source / 소스) lỗi (error / 오류). “dữ liệu (data / 데이터) từ máy” chưa phải kết luận sinh học (biological conclusion).
 
 ## 11. FASTA và FASTQ
 
-FASTA lưu sequence với header. FASTQ lưu sequence kèm điểm chất lượng (quality score) cho từng base.
+FASTA lưu chuỗi (sequence / 시퀀스) với header. FASTQ lưu chuỗi (sequence / 시퀀스) kèm điểm chất lượng (quality score) cho từng cơ sở (base / 기반).
 
-Representation này quan trọng vì bioinformatics làm việc trên file/cấu trúc dữ liệu (data structure), không trực tiếp trên tube DNA.
+Biểu diễn (representation / 표현) này quan trọng vì bioinformatics làm việc trên tệp (file / 파일)/cấu trúc dữ liệu (data structure / 자료구조), không trực tiếp trên tube DNA.
 
 Biology chuyển thành computer-readable symbols.
 
-## 12. Căn chỉnh (alignment): tìm correspondence giữa sequence
+## 12. Căn chỉnh (alignment): tìm correspondence giữa chuỗi (sequence / 시퀀스)
 
-Căn chỉnh trình tự (sequence alignment) có thể global hoặc local.
+Căn chỉnh trình tự (sequence alignment) có thể toàn cục (global / 전역) hoặc cục bộ (local / 로컬).
 
-Dynamic programming algorithm như Needleman–Wunsch/Smith–Waterman tối ưu score theo match, mismatch và gap.
+Động (dynamic / 동적) programming thuật toán (algorithm / 알고리즘) như Needleman–Wunsch/Smith–Waterman tối ưu score theo match, mismatch và gap.
 
-Time complexity của exact alignment làm database-scale search cần heuristic/index strategy.
+Thời gian (time / 시간) độ phức tạp (complexity / 복잡도) của chính xác (exact / 정확한) alignment làm database-scale tìm kiếm (search / 검색) cần heuristic/chỉ mục (index / 인덱스) chiến lược (strategy / 전략).
 
-Đây là nơi computer science giải biological scale problem.
+Đây là nơi khoa học máy tính (computer science / 컴퓨터 과학) giải biological quy mô (scale / 규모) bài toán (problem / 문제).
 
-## 13. BLAST: similarity search không phải proof of function
+## 13. BLAST: similarity tìm kiếm (search / 검색) không phải proof of hàm (function / 함수)
 
-BLAST tìm local sequence similarity nhanh bằng heuristic.
+BLAST tìm cục bộ (local / 로컬) chuỗi (sequence / 시퀀스) similarity nhanh bằng heuristic.
 
-High similarity có thể gợi ý homology/chức năng (function), nhưng function annotation cần context, domain, phylogeny và thí nghiệm (experiment).
+High similarity có thể gợi ý homology/chức năng (function), nhưng hàm (function / 함수) annotation cần ngữ cảnh (context / 맥락), lĩnh vực (domain / 도메인), phylogeny và thí nghiệm (experiment).
 
-“BLAST hit = cùng function” là shortcut nguy hiểm.
+“BLAST hit = cùng hàm (function / 함수)” là shortcut nguy hiểm.
 
 ## 14. Genome assembly như bài toán reconstruction
 
-Nếu genome bị cắt thành reads, assembly phải reconstruct original sequence.
+Nếu genome bị cắt thành reads, assembly phải reconstruct original chuỗi (sequence / 시퀀스).
 
-Short-read assembler thường dùng de Bruijn graph: k-mer là nút (node)/edge tùy formulation và overlap tạo path.
+Short-read assembler thường dùng de Bruijn đồ thị (graph / 그래프): k-mer là nút (node / 노드)/edge tùy formulation và overlap tạo đường dẫn (path / 경로).
 
-Repeat tạo ambiguity vì cùng sequence xuất hiện nhiều nơi.
+Repeat tạo ambiguity vì cùng chuỗi (sequence / 시퀀스) xuất hiện nhiều nơi.
 
-Long read giúp bridge repeat nhưng cũng có error/cost trade-off.
+Long read giúp cầu nối (bridge / 브리지) repeat nhưng cũng có lỗi (error / 오류)/chi phí (cost / 비용) sự đánh đổi (trade-off / 트레이드오프).
 
-Lý thuyết đồ thị (graph theory) trực tiếp trở thành genomics tool.
+Lý thuyết đồ thị (graph theory) trực tiếp trở thành genomics công cụ (tool / 도구).
 
 ## 15. Gọi biến thể (variant calling)
 
-Alignment read với reference cho phép detect SNV, indel và structural variant.
+Alignment read với tham chiếu (reference / 참조) cho phép detect SNV, indel và structural variant.
 
-Nhưng sequencing error, mapping ambiguity, coverage thấp và sample mixture có thể tạo false call.
+Nhưng sequencing lỗi (error / 오류), ánh xạ (mapping / 매핑) ambiguity, coverage thấp và mẫu (sample / 표본) mixture có thể tạo false lời gọi (call / 호출).
 
-Variant caller dùng statistical/probabilistic model để phân biệt signal khỏi noise.
+Variant caller dùng statistical/probabilistic mô hình (model / 모델) để phân biệt tín hiệu (signal / 신호) khỏi noise.
 
 ## 16. RNA-seq
 
-RNA được chuyển thành cDNA/library rồi sequencing. Read được map/quantify để estimate mức độ phong phú của bản phiên mã (transcript abundance).
+RNA được chuyển thành cDNA/thư viện (library / 라이브러리) rồi sequencing. Read được map/quantify để estimate mức độ phong phú của bản phiên mã (transcript abundance).
 
-Biểu hiện khác biệt (differential expression) analysis so condition nhưng cần normalization, replicate và model count distribution.
+Biểu hiện khác biệt (differential expression) phân tích (analysis / 분석) so điều kiện (condition / 조건) nhưng cần normalization, replicate và mô hình (model / 모델) count phân phối (distribution / 분포).
 
-P-value nhỏ không tự có biological importance; effect size và context cần đi cùng.
+P-value nhỏ không tự có biological importance; tác động (effect / 효과) kích thước (size / 크기) và ngữ cảnh (context / 맥락) cần đi cùng.
 
 ## 17. Single-tế bào (cell) sequencing
 
 Single-cell RNA-seq gắn barcode theo tế bào, cho phép profile thousands cell.
 
-Pipeline thường gồm filtering, normalization, giảm chiều dữ liệu (dimensionality reduction), clustering, marker analysis và trajectory inference.
+Chuỗi xử lý (pipeline / 파이프라인) thường gồm filtering, normalization, giảm chiều dữ liệu (dimensionality reduction), clustering, marker phân tích (analysis / 분석) và trajectory suy luận (inference / 추론).
 
-Mỗi bước transform data; cluster là computational construct cần biological validation.
+Mỗi bước transform dữ liệu (data / 데이터); cluster là computational construct cần biological kiểm tra hợp lệ (validation / 검증).
 
 ## 18. Dimension reduction
 
-Gen (gene)-expression matrix có hàng nghìn dimension. PCA tìm linear direction variance lớn; t-SNE/UMAP tạo low-dimensional visualization nonlinear.
+Gen (gene)-expression ma trận (matrix / 행렬) có hàng nghìn dimension. PCA tìm tuyến tính (linear / 선형) direction variance lớn; t-SNE/UMAP tạo low-dimensional visualization nonlinear.
 
-Khoảng cách trên UMAP/t-SNE không nên đọc quá literal như physical distance; parameter và tiền xử lý (preprocessing) ảnh hưởng hình.
+Khoảng cách trên UMAP/t-SNE không nên đọc quá literal như vật lý (physical / 물리적) distance; parameter và tiền xử lý (preprocessing) ảnh hưởng hình.
 
-Visualization là mô hình (model), không phải raw reality.
+Visualization là mô hình (model / 모델), không phải raw reality.
 
 ## 19. CRISPR-Cas genome editing
 
-Guide RNA đưa Cas nuclease tới target sequence có complementarity và PAM phù hợp. Cas tạo cut; cell repair qua NHEJ hoặc HDR có thể tạo edit.
+Guide RNA đưa Cas nuclease tới mục tiêu (target / 대상) chuỗi (sequence / 시퀀스) có complementarity và PAM phù hợp. Cas tạo cut; cell repair qua NHEJ hoặc HDR có thể tạo edit.
 
-NHEJ thường gây indel, hữu ích knockout. HDR có thể đưa template-defined change nhưng efficiency/context khác.
+NHEJ thường gây indel, hữu ích knockout. HDR có thể đưa template-defined thay đổi (change / 변경) nhưng efficiency/ngữ cảnh (context / 맥락) khác.
 
-CRISPR không “viết DNA tùy ý không giới hạn”; delivery, off-target, repair biology và loại tế bào (cell type) là ràng buộc (constraint).
+CRISPR không “viết DNA tùy ý không giới hạn”; delivery, off-target, repair biology và loại tế bào (cell type) là ràng buộc (constraint / 제약조건).
 
-## 20. Base editing và prime editing
+## 20. cơ sở (base / 기반) editing và prime editing
 
-Base editor kết hợp targeting CRISPR với deaminase để đổi base nhất định không cần đứt gãy hai mạch (double-strand break) cổ điển trong nhiều design.
+Cơ sở (base / 기반) editor kết hợp targeting CRISPR với deaminase để đổi cơ sở (base / 기반) nhất định không cần đứt gãy hai mạch (double-strand break) cổ điển trong nhiều thiết kế (design / 설계).
 
-Prime editing dùng reverse-transcriptase-based mechanism và pegRNA để viết edit linh hoạt hơn ở một số bối cảnh (context).
+Prime editing dùng reverse-transcriptase-based cơ chế (mechanism / 메커니즘) và pegRNA để viết edit linh hoạt hơn ở một số bối cảnh (context).
 
-Mỗi tool có edit window, byproduct và delivery constraint riêng.
+Mỗi công cụ (tool / 도구) có edit cửa sổ (window / 윈도우), byproduct và delivery ràng buộc (constraint / 제약조건) riêng.
 
 ## 21. Functional genomics
 
 CRISPR screen, RNAi hoặc overexpression screen perturb thousands gene rồi đo kiểu hình (phenotype).
 
-Observation genomics tìm association; functional genomics cố tạo causal evidence bằng perturbation.
+Observation genomics tìm association; functional genomics cố tạo nhân quả (causal / 인과적) bằng chứng (evidence / 증거) bằng perturbation.
 
 Kết hợp screening + giải trình tự (sequencing) biến cell population thành high-throughput experiment.
 
 ## 22. Sinh học tổng hợp (synthetic biology)
 
-Sinh học tổng hợp cố thiết kế mạch di truyền (genetic circuit), con đường chuyển hóa (metabolic pathway) hoặc cell behavior với engineering mindset.
+Sinh học tổng hợp cố thiết kế mạch di truyền (genetic circuit), con đường chuyển hóa (metabolic pathway) hoặc cell hành vi (behavior / 동작) với kỹ thuật (engineering / 엔지니어링) mindset.
 
-Promoter, ribosome-binding site, regulator và sensor có thể xem như module, nhưng biological component không hoàn toàn orthogonal như electronic part; context và burden gây interaction.
+Promoter, ribosome-binding site, regulator và sensor có thể xem như mô-đun (module / 모듈), nhưng biological thành phần (component / 컴포넌트) không hoàn toàn orthogonal như electronic part; ngữ cảnh (context / 맥락) và burden gây tương tác (interaction / 상호작용).
 
-Engineering life cần hiểu noise, evolution và host physiology.
+Kỹ thuật (engineering / 엔지니어링) life cần hiểu noise, evolution và host physiology.
 
 ## 23. Mạch di truyền
 
 Một toggle switch có thể dùng two repressors ức chế nhau để tạo tính lưỡng ổn (bistability). Oscillator dùng delayed phản hồi âm (negative feedback).
 
-Circuit behavior xuất hiện từ mạng lưới (network) dynamics chứ không chỉ component list.
+Circuit hành vi (behavior / 동작) xuất hiện từ mạng lưới (network) dynamics chứ không chỉ thành phần (component / 컴포넌트) danh sách (list / 목록).
 
-Đây là sinh học hệ thống theo hướng design.
+Đây là sinh học hệ thống theo hướng thiết kế (design / 설계).
 
 ## 24. Kỹ thuật chuyển hóa (metabolic engineering)
 
 Ta có thể redirect flux để microbe tạo drug, enzym (enzyme), biofuel hoặc chemical.
 
-Nhưng tăng một enzyme chưa chắc tăng product nếu pathway bottleneck chuyển sang step khác hoặc cofactor thiếu.
+Nhưng tăng một enzyme chưa chắc tăng sản phẩm (product / 제품) nếu pathway bottleneck chuyển sang step khác hoặc cofactor thiếu.
 
-Flux balance và systems-level model giúp identify bottleneck.
+Flux balance và systems-level mô hình (model / 모델) giúp identify bottleneck.
 
 ## 25. Sinh học hệ thống
 
-Sinh học hệ thống hỏi: mạng lưới đáp ứng (response) theo time thế nào khi component tương tác?
+Sinh học hệ thống hỏi: mạng lưới đáp ứng (response) theo thời gian (time / 시간) thế nào khi thành phần (component / 컴포넌트) tương tác?
 
-Model có thể dùng ordinary differential equation:
+Mô hình (model / 모델) có thể dùng ordinary differential equation:
 
 \[
 \frac{dx_i}{dt}=f_i(x_1,x_2,...,u)
 \]
 
-Mỗi \(x_i\) là concentration/hoạt động (activity); function mô tả sự tạo ra (production)/phân giải (degradation)/interactions.
+Mỗi \(x_i\) là concentration/hoạt động (activity); hàm (function / 함수) mô tả sự tạo ra (production)/phân giải (degradation)/interactions.
 
-Parameter fitting và phân tích độ nhạy (sensitivity analysis) giúp tìm control point.
+Parameter fitting và phân tích độ nhạy (sensitivity analysis) giúp tìm điều khiển (control / 제어) điểm (point / 지점).
 
 ## 26. Mạng lưới sinh học (biology)
 
-Graph representation:
+Đồ thị (graph / 그래프) biểu diễn (representation / 표현):
 
 - nút: gen/protein (protein)/metabolite/loài (species);
 - edge: điều hòa (regulation), liên kết (binding), reaction, feeding.
 
-Degree, centrality, motif và quần xã (community) structure có thể gợi ý organization.
+Degree, centrality, motif và quần xã (community) cấu trúc (structure / 구조) có thể gợi ý organization.
 
-Nhưng network database có sai lệch (bias); high-degree node đôi khi vì được nghiên cứu nhiều.
+Nhưng mạng (network / 네트워크) cơ sở dữ liệu (database / 데이터베이스) có sai lệch (bias); high-degree nút (node / 노드) đôi khi vì được nghiên cứu nhiều.
 
 ## 27. Học máy (machine learning) trong Sinh học
 
-ML có thể classify loại tế bào, predict cấu trúc protein (protein structure)/đặc tính (property), interpret microscopy, prioritize variant hoặc model trình tự.
+ML có thể classify loại tế bào, predict cấu trúc protein (protein structure)/đặc tính (property), interpret microscopy, prioritize variant hoặc mô hình (model / 모델) trình tự.
 
-Nhưng model performance phụ thuộc training distribution. Dataset leakage, class imbalance và quần thể (population) bias có thể làm metric đẹp nhưng generalization kém.
+Nhưng mô hình (model / 모델) hiệu năng (performance / 성능) phụ thuộc huấn luyện (training / 학습) phân phối (distribution / 분포). Dataset leakage, lớp (class / 클래스) imbalance và quần thể (population) độ lệch (bias / 편향) có thể làm chỉ số (metric / 지표) đẹp nhưng generalization kém.
 
-Biological ML cần external validation và causal caution.
+Biological ML cần bên ngoài (external / 외부) kiểm tra hợp lệ (validation / 검증) và nhân quả (causal / 인과적) caution.
 
-## 28. Supervised và unsupervised learning
+## 28. Supervised và unsupervised học tập (learning / 학습)
 
-Supervised learning cần label; unsupervised tìm structure không có label rõ.
+Supervised học tập (learning / 학습) cần label; unsupervised tìm cấu trúc (structure / 구조) không có label rõ.
 
 Clustering biểu hiện gen (gene expression) là unsupervised-ish discovery; disease classifier là supervised.
 
-Không nên gọi mọi statistics trên biological data là “AI”. Tool phải phù hợp question.
+Không nên gọi mọi statistics trên biological dữ liệu (data / 데이터) là “AI”. công cụ (tool / 도구) phải phù hợp question.
 
 ## 29. Cấu trúc protein prediction
 
-Protein sequence chứa constraint shape nhưng folding chịu physics/bối cảnh. Modern deep-learning model có thể predict structure rất tốt ở nhiều case.
+Protein chuỗi (sequence / 시퀀스) chứa ràng buộc (constraint / 제약조건) shape nhưng folding chịu physics/bối cảnh. hiện đại (modern / 현대적) deep-learning mô hình (model / 모델) có thể predict cấu trúc (structure / 구조) rất tốt ở nhiều trường hợp (case / 사례).
 
-Tuy nhiên structure prediction không tự cho chức năng, động lực học, interaction hay effect mutation đầy đủ.
+Tuy nhiên cấu trúc (structure / 구조) prediction không tự cho chức năng, động lực học, tương tác (interaction / 상호작용) hay tác động (effect / 효과) mutation đầy đủ.
 
 Experimental structural biology vẫn quan trọng.
 
-## 30. Database và reproducibility
+## 30. cơ sở dữ liệu (database / 데이터베이스) và reproducibility
 
-Bioinformatics workflow dùng hệ gen tham chiếu (reference genome), annotation version, software version và tham số (parameter). Kết quả có thể thay khi reference/tool đổi.
+Bioinformatics workflow dùng hệ gen tham chiếu (reference genome), annotation phiên bản (version / 버전), software phiên bản (version / 버전) và tham số (parameter). Kết quả có thể thay khi tham chiếu (reference / 참조)/công cụ (tool / 도구) đổi.
 
-Reproducible analysis cần version control, môi trường (environment)/container, metadata và workflow documentation.
+Reproducible phân tích (analysis / 분석) cần phiên bản (version / 버전) điều khiển (control / 제어), môi trường (environment / 환경)/bộ chứa (container / 컨테이너), siêu dữ liệu (metadata / 메타데이터) và workflow documentation.
 
-Software engineering trở thành một phần scientific rigor.
+Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) trở thành một phần scientific rigor.
 
 ## 31. Causality: omics correlation không đủ
 
 Nếu gene X expression cao ở bệnh (disease), có thể X gây disease, disease làm X tăng hoặc third factor làm cả hai.
 
-Perturbation experiment, temporal data, genetic instrument hoặc causal model giúp phân biệt.
+Perturbation experiment, temporal dữ liệu (data / 데이터), genetic instrument hoặc nhân quả (causal / 인과적) mô hình (model / 모델) giúp phân biệt.
 
-High-dimensional data làm false correlation dễ xuất hiện; kiểm định nhiều lần (multiple testing) và replication bắt buộc.
+High-dimensional dữ liệu (data / 데이터) làm false correlation dễ xuất hiện; kiểm định nhiều lần (multiple testing) và replication bắt buộc.
 
-## 32. Ethics và governance
+## 32. Ethics và quản trị (governance / 거버넌스)
 
-Genome data có privacy implication; gene editing germline có intergenerational consequence; synthetic organism có biosafety concern.
+Genome dữ liệu (data / 데이터) có privacy implication; gene editing germline có intergenerational consequence; synthetic organism có biosafety concern.
 
 Technical ability không tự trả lời “nên làm hay không”. Ethics, điều hòa, informed consent và equity phải đi cùng technology.
 
-## 33. Tình huống phân tích (case study): từ patient sample tới variant diễn giải (interpretation)
+## 33. Tình huống phân tích (case study): từ patient mẫu (sample / 표본) tới variant diễn giải (interpretation)
 
-Blood/mô (tissue) → DNA extraction → giải trình tự → căn chỉnh → gọi biến thể → annotation → quần thể tần số (frequency) → predicted consequence → clinical correlation/functional evidence.
+Blood/mô (tissue) → DNA extraction → giải trình tự → căn chỉnh → gọi biến thể → annotation → quần thể tần số (frequency) → predicted consequence → clinical correlation/functional bằng chứng (evidence / 증거).
 
-Mỗi bước giảm uncertainty nhưng không xóa hoàn toàn.
+Mỗi bước giảm bất định (uncertainty / 불확실성) nhưng không xóa hoàn toàn.
 
-Một report tốt phải phân biệt observation, inference và độ tin cậy (confidence).
+Một report tốt phải phân biệt observation, suy luận (inference / 추론) và độ tin cậy (confidence).
 
 ## 34. Tình huống phân tích: engineered insulin
 
-Human insulin gene/cDNA được đưa vào microbial expression system; cell culture sản xuất recombinant protein; purification/kiểm soát chất lượng (quality control) tạo therapeutic product.
+Human insulin gene/cDNA được đưa vào microbial expression hệ thống (system / 시스템); cell culture sản xuất recombinant protein; purification/kiểm soát chất lượng (quality control) tạo therapeutic sản phẩm (product / 제품).
 
-Technology này kết nối biểu hiện gen, plasmid, lên men, sự gấp cuộn protein (protein folding) và industrial process.
+Technology này kết nối biểu hiện gen, plasmid, lên men, sự gấp cuộn protein (protein folding) và industrial tiến trình (process / 프로세스).
 
 ## 35. Các hiểu lầm phổ biến (common misconceptions)
 
-“PCR cho biết có gene hoạt động” sai; standard PCR chỉ detect/amplify DNA target, activity cần expression assay.
+“PCR cho biết có gene hoạt động” sai; tiêu chuẩn (standard / 표준) PCR chỉ detect/amplify DNA mục tiêu (target / 대상), activity cần expression assay.
 
-“Giải trình tự đọc được genome hoàn hảo” sai; coverage, repeat và error tạo độ bất định (uncertainty).
+“Giải trình tự đọc được genome hoàn hảo” sai; coverage, repeat và lỗi (error / 오류) tạo độ bất định (uncertainty / 불확실성).
 
 “CRISPR cắt đúng 100%” sai; targeting/off-target/delivery/repair có giới hạn (limitation).
 
-“More omics data = more understanding” sai nếu question/model yếu.
+“More omics dữ liệu (data / 데이터) = more understanding” sai nếu question/mô hình (model / 모델) yếu.
 
-“AI tìm được correlation thì đó là cơ chế (mechanism)” sai.
+“AI tìm được correlation thì đó là cơ chế (mechanism / 메커니즘)” sai.
 
 <!-- depth-audit-2026:dbtl-causal-engineering -->
-## Biotechnology hiện đại là vòng Design–Build–Test–Learn, không phải danh sách tool
+## Biotechnology hiện đại là vòng thiết kế (design / 설계)–bản dựng (build / 빌드)–kiểm thử (test / 테스트)–Learn, không phải danh sách công cụ (tool / 도구)
 
-Sinh học kỹ thuật (engineering biology) thường chạy theo vòng **thiết kế → xây dựng → kiểm thử → học (Design–Build–Test–Learn, DBTL)**. Design chọn mechanism và target; Build tạo construct/cell line; Test đo phenotype; Learn cập nhật model rồi quay lại design. Nếu measurement không phản ánh đúng mechanism, vòng lặp có thể tối ưu nhầm objective dù kỹ thuật thực hiện hoàn hảo.
+Sinh học kỹ thuật (engineering biology) thường chạy theo vòng **thiết kế → xây dựng → kiểm thử → học (Design–Build–Test–Learn, DBTL)**. thiết kế (design / 설계) chọn cơ chế (mechanism / 메커니즘) và mục tiêu (target / 대상); bản dựng (build / 빌드) tạo construct/cell line; kiểm thử (test / 테스트) đo phenotype; Learn cập nhật mô hình (model / 모델) rồi quay lại thiết kế (design / 설계). Nếu đo lường (measurement / 측정) không phản ánh đúng cơ chế (mechanism / 메커니즘), vòng lặp có thể tối ưu nhầm mục tiêu (objective / 목표) dù kỹ thuật thực hiện hoàn hảo.
 
-CRISPR minh họa rõ structure → mechanism → failure. Guide RNA xác định recognition; Cas tạo hoặc xúc tác biến đổi tại target; DNA repair quyết định outcome cuối. Failure có thể đến từ off-target, on-target rearrangement, delivery không đều hoặc mosaicism. Vì vậy “edit thành công” phải được định nghĩa bằng genotype, expression, phenotype và unintended effect chứ không chỉ thấy một band PCR đúng kích thước.
+CRISPR minh họa rõ cấu trúc (structure / 구조) → cơ chế (mechanism / 메커니즘) → thất bại (failure / 실패). Guide RNA xác định recognition; Cas tạo hoặc xúc tác biến đổi tại mục tiêu (target / 대상); DNA repair quyết định kết quả (outcome / 결과) cuối. thất bại (failure / 실패) có thể đến từ off-target, on-target rearrangement, delivery không đều hoặc mosaicism. Vì vậy “edit thành công” phải được định nghĩa bằng genotype, expression, phenotype và unintended tác động (effect / 효과) chứ không chỉ thấy một band PCR đúng kích thước.
 
-Perturbation mạnh hơn observation cho causal inference nhưng vẫn cần control. Knockout có thể gây compensation; overexpression có thể tạo mức protein phi sinh lý; cell line khác organism. Biotechnology tốt luôn hỏi intervention đang thay node nào, network có feedback gì và model organism bỏ qua layer nào.
+Perturbation mạnh hơn observation cho nhân quả (causal / 인과적) suy luận (inference / 추론) nhưng vẫn cần điều khiển (control / 제어). Knockout có thể gây compensation; overexpression có thể tạo mức protein phi sinh lý; cell line khác organism. Biotechnology tốt luôn hỏi intervention đang thay nút (node / 노드) nào, mạng (network / 네트워크) có phản hồi (feedback / 피드백) gì và mô hình (model / 모델) organism bỏ qua tầng (layer / 계층) nào.
 
-## 36. Bridge sang connections: Sinh học đang dùng lại cùng một số idea toán học
+## 36. cầu nối (bridge / 브리지) sang connections: Sinh học đang dùng lại cùng một số idea toán học
 
-Tới đây ta đã thấy exponential amplification, logarithm, xác suất (probability), graph, dynamic system, optimization và statistics xuất hiện liên tục.
+Tới đây ta đã thấy exponential amplification, logarithm, xác suất (probability / 확률), đồ thị (graph / 그래프), hệ động (dynamic system / 동적 시스템), tối ưu hóa (optimization / 최적화) và statistics xuất hiện liên tục.
 
-[Biology × Mathematics × Computation × Scale](../90_connections/00_biology_math_computation_and_scale.md) sẽ gom các motif này lại để cho thấy Sinh học, Toán và Computer Science không phải ba domain đứng cạnh nhau mà là ba cách mô tả cùng system.
+[Biology × Mathematics × Computation × Scale](../90_connections/00_biology_math_computation_and_scale.md) sẽ gom các motif này lại để cho thấy Sinh học, Toán và Khoa học máy tính (computer science / 컴퓨터 과학) không phải ba lĩnh vực (domain / 도메인) đứng cạnh nhau mà là ba cách mô tả cùng hệ thống (system / 시스템).
 
-> **Mô hình tư duy cuối chapter:** biotechnology là “biology made operational”. Ta không thể edit hay model một system nếu không hiểu mechanism; cũng không thể hiểu dữ liệu hiện đại nếu thiếu probability, algorithms và tư duy hệ thống (systems thinking). Công nghệ mạnh nhất xuất hiện khi molecular insight, quantitative model và engineering discipline gặp nhau.
+> **Mô hình tư duy cuối chapter:** biotechnology là “biology made operational”. Ta không thể edit hay mô hình (model / 모델) một hệ thống (system / 시스템) nếu không hiểu cơ chế (mechanism / 메커니즘); cũng không thể hiểu dữ liệu hiện đại nếu thiếu xác suất (probability / 확률), algorithms và tư duy hệ thống (systems thinking). Công nghệ mạnh nhất xuất hiện khi molecular insight, quantitative mô hình (model / 모델) và kỹ thuật (engineering / 엔지니어링) discipline gặp nhau.
 
 ---
 
 <!-- biology-learning-navigation -->
 **Điều hướng học:** [← Quần xã sinh học, biến đổi toàn cầu và sinh quyển](../05_ecology/02_biomes_global_change_and_biosphere.md) · [Mục lục Biology](../README.md) · [Phương pháp thực nghiệm và đo lường trong Sinh học →](01_experimental_methods_and_measurement.md)
+
+> **Bàn giao:** Sau **36. cầu nối (bridge / 브리지) sang connections: Sinh học đang dùng lại cùng một số idea toán học**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 experimental methods and measurement](./01_experimental_methods_and_measurement.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

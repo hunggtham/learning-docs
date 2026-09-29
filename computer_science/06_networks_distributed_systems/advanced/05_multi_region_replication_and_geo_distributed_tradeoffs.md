@@ -1,51 +1,298 @@
 # Sao chép đa vùng và các đánh đổi của hệ thống phân tán theo địa lý
 
-Khi các bản sao nằm ở nhiều vùng địa lý, tốc độ ánh sáng và cấu trúc mạng trở thành một phần của mô hình nhất quán. Không giao thức nào có thể biến một vòng khứ hồi Seoul–Virginia thành truy cập bộ nhớ cục bộ. Kiến trúc phải quyết định thao tác nào cần chờ phối hợp xuyên vùng và thao tác nào có thể xử lý tại chỗ rồi hòa giải sau.
+> **Mạch đọc:** Đặt **Sao chép đa vùng và các đánh đổi của hệ thống phân tán theo địa lý** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bài toán ban đầu: độ trễ (latency / 지연 시간), availability và consistency cùng chịu physics** sang **2. bất biến (invariant / 불변식) đầu tiên: chỉ một authority hợp lệ được phép quyết định lịch sử (history / 이력) cần single-writer**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Sàn độ trễ do khoảng cách vật lý
 
-Vòng khứ hồi mạng giữa các vùng tạo **giới hạn dưới của độ trễ (latency floor)** cho giao thức đồng bộ. Nếu một lần ghi cần quorum trải trên nhiều châu lục, người dùng phải trả ít nhất một phần chi phí của các vòng truyền mạng đó.
+Khi các bản sao nằm ở nhiều vùng địa lý, tốc độ ánh sáng, topology mạng và failure-domain trở thành một phần của consistency mô hình (model / 모델). Không giao thức (protocol / 프로토콜) nào biến một round trip Seoul–Virginia thành bộ nhớ (memory / 메모리) truy cập (access / 접근) cục bộ. kiến trúc (architecture / 아키텍처) phải quyết định **bất biến (invariant / 불변식) nào xứng đáng trả coordination chi phí (cost / 비용) xuyên vùng** và bất biến (invariant / 불변식) nào có thể giữ cục bộ rồi reconcile sau.
 
-Tối ưu phần mềm có thể giảm chi phí xử lý nhưng không loại bỏ khoảng cách vật lý. Vì vậy vị trí triển khai là quyết định kiến trúc, không chỉ là chi tiết vận hành.
+Mô hình tư duy (mental model / 사고 모델) của chương này là: **multi-region replication phân phối authority và lịch sử (history / 이력) qua khoảng cách. tính đúng đắn (correctness / 정확성) phụ thuộc vào ai có quyền accept ghi (write / 쓰기), replica nào có lịch sử (history / 이력) đủ mới để serve/read/promote, và failover có ngăn old authority tiếp tục ghi hay không.**
 
-## Sao chép đồng bộ và bất đồng bộ
+## 1. Bài toán ban đầu: độ trễ (latency / 지연 시간), availability và consistency cùng chịu physics
 
-**Sao chép đồng bộ (synchronous replication)** giảm mục tiêu mất dữ liệu RPO vì chỉ xác nhận ghi sau khi các bản sao cần thiết đã lưu bền vững, nhưng làm tăng độ trễ và có thể giảm khả năng phục vụ khi vùng từ xa không truy cập được.
+Một synchronous coordination round qua nhiều regions có độ trễ (latency / 지연 시간) floor theo mạng (network / 네트워크) propagation + processing. Nếu ghi (write / 쓰기) phải chờ remote quorum, user-facing độ trễ (latency / 지연 시간) chứa ít nhất một phần remote RTT và remote hàng đợi (queue / 큐)/lưu trữ (storage / 저장소) chi phí (cost / 비용).
 
-**Sao chép bất đồng bộ (asynchronous replication)** cho phép xác nhận tại vùng cục bộ nhanh hơn, nhưng khi chuyển vùng có thể mất các lần ghi gần nhất hoặc phải xử lý xung đột.
+Tối ưu software có thể giảm overhead nhưng không bỏ khoảng cách vật lý. Vì vậy region placement là **ngữ nghĩa (semantic / 의미적)/sức chứa (capacity / 용량) quyết định (decision / 결정)**, không chỉ triển khai (deployment / 배포) preference.
 
-RPO và RTO phải gắn với ngữ nghĩa sao chép thật sự, không chỉ với con số SLA trong tài liệu tiếp thị.
+## 2. bất biến (invariant / 불변식) đầu tiên: chỉ một authority hợp lệ được phép quyết định lịch sử (history / 이력) cần single-writer
 
-## Sao chép địa lý với một leader
+Với single-leader hệ thống (system / 시스템), bất biến (invariant / 불변식) thường là:
 
-Một leader toàn cục đơn giản hóa thứ tự ghi nhưng máy khách ở xa leader phải chịu độ trễ cao. Replica đọc tại địa phương giảm độ trễ đọc nhưng có thể trả dữ liệu cũ.
+> Tại một epoch/term có thẩm quyền, chỉ leader hợp lệ được phép accept writes tạo authoritative lịch sử (history / 이력).
 
-Bảo đảm “đọc thấy lần ghi của chính mình” (read-your-writes) có thể cần giữ phiên tại một vùng, dùng token phiên bản hoặc định tuyến yêu cầu đọc tới replica đã theo kịp.
+Mạng (network / 네트워크) partition làm hai nodes đều “không nghe thấy nhau”; nó không chứng minh nút (node / 노드) bên kia chết. Failover vì vậy phải dựa vào consensus/lease/fencing/epoch cơ chế (mechanism / 메커니즘) chứ không chỉ health-check hết thời gian chờ (timeout / 타임아웃).
 
-## Nhiều leader
+Nếu primary cũ vẫn ghi sau khi new primary được promoted, split-brain có thể tạo two divergent histories mà async replication không tự hòa giải được.
 
-Cho phép mỗi vùng nhận ghi cục bộ cải thiện khả năng phục vụ và độ trễ, nhưng cập nhật đồng thời tạo xung đột. Ràng buộc duy nhất, bộ đếm và tồn kho trở nên khó vì bất biến có thể bị vi phạm trước khi các vùng trao đổi dữ liệu.
+## 3. Replication trạng thái (state / 상태) không phải nhị phân (binary / 이진) “đồng bộ/chưa đồng bộ”
 
-Giải quyết xung đột cần ngữ nghĩa của miền nghiệp vụ, không nên chỉ áp dụng máy móc “timestamp mới nhất thắng”.
+Một log entry/ghi (write / 쓰기) có thể đi qua:
 
-## Chủ quyền dữ liệu và vị trí lưu trữ
+```text
+created at leader
+→ appended locally
+→ persisted locally
+→ sent
+→ received by replica
+→ persisted remotely
+→ acknowledged by quorum/rule
+→ applied to replica state
+→ visible to replica reads
+```
 
-Kiến trúc địa lý còn bị ràng buộc bởi yêu cầu cư trú dữ liệu và tuân thủ: dữ liệu nào được phép rời một khu vực pháp lý, bản sao lưu nằm ở đâu, log có chứa dữ liệu cá nhân hay không. Vì vậy chính sách vị trí vừa là vấn đề hiệu năng vừa là vấn đề quản trị.
+Các các hệ thống (systems / 시스템들) đặt acknowledgement/read ranh giới (boundary / 경계) ở vị trí khác nhau. Do đó cần hỏi cụ thể:
 
-## Chuyển đổi khi lỗi
+```text
+ack sau receive hay persist?
+quorum nào phải ack?
+read replica serve theo received, applied hay committed frontier?
+promotion cần frontier nào?
+```
 
-**Chuyển đổi dự phòng (failover)** không chỉ là nâng một replica thành primary. TTL của DNS và cache, connection pool, máy khách còn giữ thông tin cũ, độ trễ sao chép và split-brain đều ảnh hưởng quá trình.
+Số replicas tự nó không trả lời durability/consistency.
 
-Khóa quyền ghi của primary cũ bằng cơ chế fencing là bước quan trọng để tránh hai writer cùng có thẩm quyền. Xem thêm: [Lease, fencing token và ngăn split-brain](./02_leases_fencing_tokens_and_split_brain_prevention.md).
+## 4. Synchronous replication đổi thất bại (failure / 실패) mô hình (model / 모델) và đường găng (critical path / 임계 경로)
 
-## Active-active không đồng nghĩa không bao giờ gián đoạn
+Nếu máy khách (client / 클라이언트) chỉ nhận success sau remote quorum persistence, RPO trước một số nút (node / 노드) failures có thể nhỏ hơn. Đổi lại remote mạng (network / 네트워크)/lưu trữ (storage / 저장소) nằm trên đường găng (critical path / 임계 경로).
 
-Hai vùng cùng hoạt động vẫn có thể chia sẻ dependency, control plane toàn cục hoặc đường dữ liệu sao chép. Một lỗi phần mềm có tương quan có thể làm cả hai vùng cùng hỏng. Đánh giá khả năng sẵn sàng cần phân tích miền lỗi (failure domain), không chỉ đếm số vùng.
+Một follower chậm có thể kéo p99 nếu quorum chính sách (policy / 정책) cần nó; giao thức (protocol / 프로토콜) có thể chọn quorum subset, nhưng lựa chọn đó phải vẫn giữ intersection/authority bất biến (invariant / 불변식).
 
-## Phân vùng theo địa lý
+Câu hỏi không phải “sync có an toàn hơn async” chung chung. Câu hỏi là **acknowledgement này hứa survive thất bại (failure / 실패) set nào?**
 
-Nếu người dùng hoặc dữ liệu có tính cục bộ tự nhiên, phân vùng theo “vùng nhà” có thể giữ phần lớn giao dịch ở địa phương và chỉ đi xuyên vùng cho thao tác thật sự cần thiết. Cách này thường hiệu quả hơn việc sao chép mọi lần ghi tới mọi nơi.
+## 5. Asynchronous replication tạo thất bại (failure / 실패) cửa sổ (window / 윈도우) có chủ đích
 
-## Mô hình tư duy
+Leader có thể ack cục bộ (local / 로컬) durable ghi (write / 쓰기) rồi ship log sau. Foreground độ trễ (latency / 지연 시간) thấp hơn nhưng failover trước replication có thể mất acknowledged writes tùy đặc tả hợp đồng (contract / 계약).
 
-> Thiết kế phân tán theo địa lý là bài toán phân bổ sự phối hợp theo khoảng cách. Đồng thuận toàn cục mạnh hơn phải trả bằng độ trễ và khả năng phục vụ; tự chủ cục bộ phải trả bằng dữ liệu cũ và xung đột. Kiến trúc tốt chỉ đặt phối hợp toàn cục tại những bất biến thật sự cần nó và giữ phần còn lại gần người dùng hoặc dữ liệu.
+Cửa sổ (window / 윈도우) này phải được diễn đạt bằng **mục tiêu điểm khôi phục (Recovery Point Objective, RPO)** và measured replication lag, không bằng câu “thường chỉ vài ms”. Tail lag trong sự cố (incident / 인시던트) mới là thứ quyết định data-loss cửa sổ (window / 윈도우).
+
+## 6. Read consistency phải được thiết kế riêng
+
+Read replica giảm độ trễ (latency / 지연 시간) và offload leader, nhưng có thể stale. Các guarantees có strength khác nhau:
+
+```text
+eventual read
+monotonic reads
+read-your-writes
+causal/session consistency
+linearizable/leader/quorum-style read
+```
+
+Nếu người dùng (user / 사용자) vừa cập nhật (update / 업데이트) profile ở region A rồi yêu cầu (request / 요청) chuyển sang replica B chưa apply ghi (write / 쓰기), người dùng (user / 사용자) có thể thấy old trạng thái (state / 상태).
+
+Read-your-writes có thể dùng session/phiên bản (version / 버전) đơn vị từ (token / 토큰), sticky routing, wait-until-replica-frontier, hoặc tuyến (route / 경로) tới authority đủ mới. cơ chế (mechanism / 메커니즘) khác nhau nhưng bất biến (invariant / 불변식) là:
+
+> Read phải được serve từ replica có lịch sử (history / 이력) frontier đáp ứng consistency đặc tả hợp đồng (contract / 계약) của yêu cầu (request / 요청).
+
+## 7. Replica lag là một distance trong lịch sử (history / 이력), không chỉ seconds
+
+Time-based lag dễ hiểu nhưng có thể gây nhầm khi clocks/skew hoặc ghi (write / 쓰기) tỷ lệ (rate / 비율) biến động. Một replica 2 seconds behind trong burst 100k writes khác 2 seconds behind lúc idle.
+
+Useful bằng chứng (evidence / 증거) gồm log/LSN/offset/lần ghi nhận (commit / 커밋)/applied positions và hàng đợi (queue / 큐)/backlog. mô hình tư duy (mental model / 사고 모델) là đo **lịch sử (history / 이력) distance + ứng dụng (application / 애플리케이션) delay + mạng (network / 네트워크) delay**, không chỉ một wall-clock number.
+
+## 8. Failover là chuyển authority, không chỉ đổi DNS
+
+Một safe failover cần giải nhiều trạng thái (state / 상태) transitions:
+
+```text
+xác định old authority không còn quyền ghi
+→ chọn candidate có history đủ hợp lệ
+→ assign new epoch/term/fencing token
+→ promote
+→ redirect clients/control plane
+→ invalidate/drain stale connections/routes
+→ verify read/write invariants
+```
+
+DNS/TTL chỉ là traffic steering. Nó không giải authority. liên kết (connection / 연결) pools và clients có thể giữ old endpoint lâu hơn DNS thay đổi (change / 변경).
+
+Đọc [leases, fencing tokens và split-brain prevention](./02_leases_fencing_tokens_and_split_brain_prevention.md).
+
+## 9. Failover candidate mới nhất chưa chắc tự động là candidate an toàn
+
+Một replica có nhiều bytes nhất nhưng bytes đó chưa chắc thuộc committed authoritative lịch sử (history / 이력) nếu giao thức (protocol / 프로토콜) chưa xác nhận. Consensus hệ thống (system / 시스템) cần term/commit-index-like authority rules; primary-replica hệ thống (system / 시스템) cần promotion quy tắc (rule / 규칙) rõ.
+
+Bất biến (invariant / 불변식) là **new leader không được invent lịch sử (history / 이력) trái với lần ghi nhận (commit / 커밋) đặc tả hợp đồng (contract / 계약) đã hứa cho clients**.
+
+Đây là lý do “bản sao (copy / 복사) nhiều dữ liệu (data / 데이터) nhất rồi promote” không phải generic failover thuật toán (algorithm / 알고리즘).
+
+## 10. Failback còn khó hơn failover nếu histories đã đổi
+
+Sau khi region cũ hồi phục, không nên đơn giản bật ghi (write / 쓰기) lại. Nó có thể chứa stale/divergent trạng thái (state / 상태).
+
+Safe failback thường cần:
+
+```text
+rejoin as follower/non-authoritative
+→ catch up / snapshot / repair
+→ prove frontier consistency
+→ only then consider authority transfer
+```
+
+Operational runbook phải coi failback là giao thức (protocol / 프로토콜) chuyển tiếp (transition / 전이), không phải reverse DNS edit.
+
+## 11. Multi-leader chuyển bài toán (problem / 문제) từ authority sang xung đột (conflict / 충돌) ngữ nghĩa (semantics / 의미론)
+
+Cho phép mỗi region accept cục bộ (local / 로컬) writes giảm ghi (write / 쓰기) độ trễ (latency / 지연 시간) và tăng autonomy, nhưng concurrent writes có thể xung đột.
+
+Một last-write-wins quy tắc (rule / 규칙) dựa timestamp có thể làm mất nghiệp vụ (business / 비즈니스) intent và phụ thuộc clock các giả định (assumptions / 가정들). Unique username, inventory decrement, quota và account balance thường có invariants không thể reconcile chỉ bằng chọn “latest giá trị (value / 값)”.
+
+Cần phân loại trạng thái (state / 상태):
+
+```text
+commutative/mergeable
+conflict-tolerant
+requires single authority or coordination
+```
+
+Toàn cục (global / 전역) coordination chỉ nên đặt tại invariants thật sự không thể tách/merge an toàn.
+
+## 12. CRDT giải một lớp xung đột (conflict / 충돌) nhưng không xóa nghiệp vụ (business / 비즈니스) các ràng buộc (constraints / 제약조건들)
+
+CRDT cho phép merge trạng thái (state / 상태) với algebraic properties cụ thể mà không cần total thứ tự (order / 순서) cho mọi thao tác (operation / 연산). Nhưng nếu nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) là “không bán quá 100 vé toàn cầu”, merge-friendly counter không tự tạo sức chứa (capacity / 용량) reservation toàn cục (global / 전역) an toàn.
+
+Đọc [CRDT, causal consistency và conflict resolution](./04_crdts_causal_consistency_and_conflict_resolution.md).
+
+## 13. Geo-partitioning giữ coordination gần quyền sở hữu (ownership / 소유권) tự nhiên
+
+Nếu users/dữ liệu (data / 데이터) có “home region”, partition by quyền sở hữu (ownership / 소유권) có thể giữ đa số writes cục bộ (local / 로컬) và chỉ coordinate cross-region khi nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) thật sự vượt ranh giới (boundary / 경계).
+
+Ví dụ:
+
+```text
+customer profile owned by home region
+regional inventory owned locally
+analytics replicated globally asynchronously
+```
+
+Ranh giới (boundary / 경계) tốt giảm toàn cục (global / 전역) coordination volume. ranh giới (boundary / 경계) xấu tạo cross-region phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) cho mọi yêu cầu (request / 요청).
+
+## 14. Hotspot và skew phá giả định (assumption / 가정) “traffic phân bố đều”
+
+Geo sharding theo user-id có thể trông cân bằng trên paper nhưng tenant lớn, sự kiện (event / 이벤트) viral hoặc region traffic peak tạo skew.
+
+Một shard/leader nóng có thể saturate CPU/mạng (network / 네트워크)/lưu trữ (storage / 저장소) trong khi fleet average thấp. Multi-region sức chứa (capacity / 용량) planning cần nhìn per-shard/per-tenant frontier, không chỉ aggregate regional utilization.
+
+## 15. thất bại (failure / 실패) domains phải độc lập thật sự
+
+Ba replicas không tương đương ba independent copies nếu cùng rack, power lĩnh vực (domain / 도메인), mạng (network / 네트워크) điều khiển (control / 제어) plane, credential gốc (root / 루트), lưu trữ (storage / 저장소) backend hoặc triển khai (deployment / 배포) bug.
+
+Availability lập luận (reasoning / 추론) cần map:
+
+```text
+hardware failure domain
+network failure domain
+region/provider/control-plane dependency
+software rollout/config dependency
+security/identity dependency
+```
+
+Correlated thất bại (failure / 실패) thường phá kiến trúc (architecture / 아키텍처) mà “N regions” marketing diagram không thể hiện.
+
+## 16. Active-active không đồng nghĩa zero downtime
+
+Active-active regions vẫn có dùng chung (shared / 공유) dependencies: toàn cục (global / 전역) định danh (identity / 식별자) issuer, lược đồ (schema / 스키마) registry, KMS gốc (root / 루트), DNS/điều khiển (control / 제어) plane, replication channel hoặc dùng chung (common / 공통) nhị phân (binary / 이진)/cấu hình (config / 설정).
+
+Một bad deploy hoặc bảo mật (security / 보안) chính sách (policy / 정책) rollout có thể thất bại (fail / 실패) tất cả regions cùng lúc. Geographic redundancy chỉ bảo vệ thất bại (failure / 실패) modes thực sự independent với nó.
+
+## 17. Cross-region hết thời gian chờ (timeout / 타임아웃)/thử lại (retry / 재시도) có thể khuếch đại outage
+
+Remote lời gọi (call / 호출) có RTT cao và variability lớn hơn. hết thời gian chờ (timeout / 타임아웃) quá sát normal tail tạo false hết thời gian chờ (timeout / 타임아웃); máy khách (client / 클라이언트) thử lại (retry / 재시도) sang region khác có thể duplicate công việc (work / 작업) và tăng tải (load / 로드) đúng lúc failover.
+
+Nhân quả (causal / 인과적) vòng lặp (loop / 루프):
+
+```text
+region latency ↑
+→ timeout ↑
+→ retry/failover traffic ↑
+→ alternate region queue ↑
+→ its latency ↑
+→ more retries
+→ cascading regional failure
+```
+
+Failover sức chứa (capacity / 용량) phải tính **redirected demand**, không chỉ normal cục bộ (local / 로컬) traffic.
+
+Đọc [end-to-end request và retry overload](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
+
+## 18. Consistency chính sách (policy / 정책) cũng là sức chứa (capacity / 용량) chính sách (policy / 정책)
+
+Strong remote read/ghi (write / 쓰기) yêu cầu coordination/mạng (network / 네트워크)/lưu trữ (storage / 저장소) trên đường găng (critical path / 임계 경로). Stale-local read giảm chi phí (cost / 비용) nhưng đổi ngữ nghĩa (semantics / 의미론). Session consistency ở giữa cần đơn vị từ (token / 토큰)/frontier tracking.
+
+Hệ thống (system / 시스템) thiết kế (design / 설계) nên phân loại operations theo bất biến (invariant / 불변식):
+
+```text
+must be globally current
+must read own write
+can tolerate seconds stale
+can reconcile asynchronously
+```
+
+Sau đó mới chọn replication/read đường dẫn (path / 경로). Chọn “strong consistency toàn bộ” hoặc “eventual toàn bộ” trước khi phân loại tải công việc (workload / 워크로드) thường tạo chi phí (cost / 비용) hoặc tính đúng đắn (correctness / 정확성) bài toán (problem / 문제) không cần thiết.
+
+## 19. dữ liệu (data / 데이터) residency và ranh giới bảo mật (security boundary / 보안 경계) đi cùng replication topology
+
+Dữ liệu (data / 데이터) nào được replicate sang region nào là cả hiệu năng (performance / 성능), privacy, compliance và blast-radius quyết định (decision / 결정). Logs, backups, caches và tìm kiếm (search / 검색) indexes cũng là replicas theo nghĩa quản trị (governance / 거버넌스) dù ứng dụng (application / 애플리케이션) kiến trúc (architecture / 아키텍처) không gọi chúng như vậy.
+
+Định danh (identity / 식별자)/KMS topology cần phù hợp: region có thể autonomous khi mạng (network / 네트워크) partition hay mọi decrypt/auth thao tác (operation / 연산) vẫn phụ thuộc điều khiển (control / 제어) plane toàn cục (global / 전역)?
+
+## 20. bằng chứng vận hành (production evidence / 운영 증거) phải reconstruct authority + lịch sử (history / 이력) timeline
+
+Bằng chứng (evidence / 증거) hữu ích:
+
+```text
+Replication:
+- leader/term/epoch
+- commit/durable/applied frontier per replica
+- send/receive/apply lag
+- snapshot/catch-up state
+
+Network:
+- inter-region RTT/loss/retransmission
+- bandwidth/queue saturation
+
+Storage:
+- WAL/log flush latency per region
+- replica persistence latency
+
+Traffic:
+- read/write routing by region
+- failover/retry rate
+- redirected load and queue wait
+
+Correctness:
+- stale-read/session-token violations
+- conflict/repair events
+- fencing/promotion history
+```
+
+Một “replication lag = 0” chỉ số (metric / 지표) không chứng minh no split-brain; một leader election log không chứng minh replica lưu trữ (storage / 저장소) healthy. Cần nối authority và dữ liệu (data / 데이터) frontier.
+
+## 21. thất bại (failure / 실패) testing phải bao gồm partial thất bại (failure / 실패), không chỉ kill tiến trình (process / 프로세스)
+
+Kiểm thử (test / 테스트) đáng giá:
+
+```text
+partition leader khỏi subset replicas
+inject asymmetric packet loss/latency
+slow one replica storage
+expire lease/fencing boundary
+fail leader với outstanding acknowledged/unacknowledged writes
+route reads tới lagging replica
+promote rồi rejoin old leader
+simulate capacity after full-region traffic shift
+```
+
+Sau kiểm thử (test / 테스트), kiểm tra data-loss cửa sổ (window / 윈도우) đúng đặc tả hợp đồng (contract / 계약), no dual authority, session/read consistency đúng chính sách (policy / 정책) và old leader không thể mutate trạng thái (state / 상태) sau fencing.
+
+## 22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
+
+Nếu người dùng (user / 사용자) đọc stale dữ liệu (data / 데이터), consistency/read-routing frontier quyết định hành vi (behavior / 동작). Nếu failover mất dữ liệu (data / 데이터), ack/replication/persistence quy tắc (rule / 규칙) mới là trọng tâm. Nếu outage lan sang region khỏe, sức chứa (capacity / 용량)/thử lại (retry / 재시도) phản hồi (feedback / 피드백) có thể là gốc (root / 루트) cơ chế (mechanism / 메커니즘). Nếu two primaries cùng ghi, authority/fencing giao thức (protocol / 프로토콜) là bất biến (invariant / 불변식) bị phá.
+
+## 23. Mô hình tư duy
+
+> Multi-region replication là bài toán **phân phối authority, lịch sử (history / 이력) và sức chứa (capacity / 용량) qua khoảng cách**. Synchronous coordination trả độ trễ (latency / 지연 시간) để làm lần ghi nhận (commit / 커밋) frontier mạnh hơn; asynchronous replication đổi độ trễ (latency / 지연 시간) lấy thất bại (failure / 실패) cửa sổ (window / 윈도우); replica reads đổi freshness lấy locality; failover là chuyển authority được fencing, không phải chỉ đổi tuyến (route / 경로). **toàn cục (global / 전역) coordination chỉ nên đặt ở bất biến (invariant / 불변식) cần nó, còn bằng chứng vận hành (production evidence / 운영 증거) phải theo dõi cả authority frontier lẫn dữ liệu (data / 데이터) frontier.**
+
+## Kết nối
+
+Ôn [distributed consistency foundation](../../basic/06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md), [replication/consensus foundation](../../basic/06_networks_distributed_systems/05_replication_partitioning_and_consensus.md), đọc [failure detectors](./01_failure_detectors_membership_and_gossip.md), [leases/fencing](./02_leases_fencing_tokens_and_split_brain_prevention.md), [consensus internals](./03_consensus_log_replication_reconfiguration_and_snapshots.md), [time/causality](./06_time_clocks_ordering_and_causality.md), [MVCC/WAL](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md) và [durability path](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 distributed transactions exactly once and failure semantics](./00_distributed_transactions_exactly_once_and_failure_semantics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

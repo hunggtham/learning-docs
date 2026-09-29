@@ -1,6 +1,9 @@
 # Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng
 
-Trong mạch tần số thấp, ta thường giả định một dây dẫn là một node có cùng điện áp tại mọi điểm ở cùng thời điểm. Giả định này chỉ đúng khi thời gian lan truyền dọc dây nhỏ hơn nhiều thang thời gian biến thiên của tín hiệu. Khi dây đủ dài hoặc cạnh tín hiệu đủ nhanh, điện áp và dòng điện trở thành các trường phụ thuộc cả vị trí lẫn thời gian. Khi đó phải dùng mô hình đường truyền (transmission line).
+> **Mạch đọc:** Đọc **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ mạch tập trung đến hệ phân bố** sang **Đường truyền lý tưởng không tổn hao**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Trong mạch tần số thấp, ta thường giả định một dây dẫn là một nút (node / 노드) có cùng điện áp tại mọi điểm ở cùng thời điểm. Giả định này chỉ đúng khi thời gian lan truyền dọc dây nhỏ hơn nhiều thang thời gian biến thiên của tín hiệu. Khi dây đủ dài hoặc cạnh tín hiệu đủ nhanh, điện áp và dòng điện trở thành các trường phụ thuộc cả vị trí lẫn thời gian. Khi đó phải dùng mô hình đường truyền (transmission line).
 
 ## Từ mạch tập trung đến hệ phân bố
 
@@ -169,7 +172,7 @@ VSWR=\frac{V_{max}}{V_{min}}
 
 Nếu `\Gamma=0`, VSWR bằng 1. VSWR lớn cho biết mismatch mạnh.
 
-Trong RF, antenna feedline và microwave systems, VSWR là một phép đo thực dụng của chất lượng matching.
+Trong RF, antenna feedline và microwave các hệ thống (systems / 시스템들), VSWR là một phép đo thực dụng của chất lượng matching.
 
 ## Đường truyền có tổn hao
 
@@ -189,7 +192,7 @@ Z_0=
 \sqrt{\frac{R'+i\omega L'}{G'+i\omega C'}}.
 ```
 
-Khi loss nhỏ,
+Khi mất mát (loss / 손실) nhỏ,
 
 ```math
 R'\ll\omega L',
@@ -199,7 +202,7 @@ G'\ll\omega C',
 
 thì `Z_0` gần giá trị lossless và `\alpha` nhỏ nhưng không bằng không.
 
-Skin effect, dielectric loss và surface roughness làm suy hao tăng ở tần số cao.
+Skin tác động (effect / 효과), dielectric mất mát (loss / 손실) và surface roughness làm suy hao tăng ở tần số cao.
 
 ## Khi nào phải bỏ mô hình lumped circuit?
 
@@ -211,7 +214,7 @@ Nếu propagation delay một chiều
 t_d=\frac{\ell}{v}
 ```
 
-không còn rất nhỏ so với rise time `t_r`, đường nối nên được xem là transmission line.
+không còn rất nhỏ so với rise thời gian (time / 시간) `t_r`, đường nối nên được xem là transmission line.
 
 Một quy tắc kỹ thuật thường dùng là khi
 
@@ -219,9 +222,9 @@ Một quy tắc kỹ thuật thường dùng là khi
 t_d\gtrsim\frac{t_r}{6}
 ```
 
-hoặc cùng bậc với `t_r`, reflection và distributed effects có thể đáng kể. Hệ số chính xác phụ thuộc yêu cầu signal integrity, nhưng tư tưởng cốt lõi là **edge speed quan trọng hơn clock frequency đơn thuần**.
+hoặc cùng bậc với `t_r`, reflection và phân tán (distributed / 분산) effects có thể đáng kể. Hệ số chính xác phụ thuộc yêu cầu tín hiệu (signal / 신호) integrity, nhưng tư tưởng cốt lõi là **edge speed quan trọng hơn clock frequency đơn thuần**.
 
-## Ví dụ: PCB trace dài 15 cm
+## Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm
 
 Giả sử vận tốc truyền trên PCB khoảng
 
@@ -242,11 +245,11 @@ t_d=\frac{0.15}{1.7\times10^8}
 \approx0.88\,ns.
 ```
 
-Nếu driver có rise time `5 ns`, lumped approximation có thể còn tạm chấp nhận tùy yêu cầu. Nhưng nếu rise time chỉ `0.5 ns`, delay đã lớn hơn rise time; trace chắc chắn phải được xem như một đường truyền.
+Nếu driver có rise thời gian (time / 시간) `5 ns`, lumped approximation có thể còn tạm chấp nhận tùy yêu cầu. Nhưng nếu rise thời gian (time / 시간) chỉ `0.5 ns`, delay đã lớn hơn rise thời gian (time / 시간); dấu vết (trace / 추적) chắc chắn phải được xem như một đường truyền.
 
 ## Trở kháng nhìn vào của đường truyền hữu hạn
 
-Đường truyền lossless dài `\ell`, tải `Z_L`, có input impedance
+Đường truyền lossless dài `\ell`, tải `Z_L`, có đầu vào (input / 입력) impedance
 
 ```math
 Z_{in}
@@ -295,11 +298,11 @@ Di chuyển dọc đường truyền tương ứng quay pha của `\Gamma`. Vì 
 
 ## Ống dẫn sóng khác đường truyền TEM như thế nào?
 
-Trong coax hoặc hai dây lý tưởng, mode TEM có điện trường và từ trường đều ngang với hướng truyền và không có cutoff lý tưởng.
+Trong coax hoặc hai dây lý tưởng, chế độ (mode / 모드) TEM có điện trường và từ trường đều ngang với hướng truyền và không có cutoff lý tưởng.
 
-Trong ống dẫn sóng kim loại rỗng, điều kiện biên không cho mode TEM đơn giản. Các mode TE và TM có cấu trúc trường riêng và có tần số cutoff.
+Trong ống dẫn sóng kim loại rỗng, điều kiện biên không cho chế độ (mode / 모드) TEM đơn giản. Các chế độ (mode / 모드) TE và TM có cấu trúc trường riêng và có tần số cutoff.
 
-Với một mode,
+Với một chế độ (mode / 모드),
 
 ```math
 \beta^2
@@ -312,11 +315,11 @@ Nếu
 \omega<\omega_c,
 ```
 
-thì `\beta` trở thành thuần ảo và trường suy giảm theo chiều dài thay vì lan truyền tự do. Đây là mode evanescent.
+thì `\beta` trở thành thuần ảo và trường suy giảm theo chiều dài thay vì lan truyền tự do. Đây là chế độ (mode / 모드) evanescent.
 
 ## Ống dẫn sóng chữ nhật
 
-Với waveguide chữ nhật kích thước `a×b`, cutoff của mode `TE_{mn}` hoặc `TM_{mn}` có dạng
+Với waveguide chữ nhật kích thước `a×b`, cutoff của chế độ (mode / 모드) `TE_{mn}` hoặc `TM_{mn}` có dạng
 
 ```math
 f_{c,mn}
@@ -327,7 +330,7 @@ f_{c,mn}
 }.
 ```
 
-Mode cơ bản thường là `TE_{10}` nếu `a>b`, nên
+Chế độ (mode / 모드) cơ bản thường là `TE_{10}` nếu `a>b`, nên
 
 ```math
 f_c\approx\frac{c}{2a}.
@@ -355,40 +358,42 @@ v_pv_g=c^2,
 
 nên khi `v_p>c`, vận tốc nhóm `v_g<c`.
 
-## Liên hệ với signal integrity và Computer Engineering
+## Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)
 
-Một bit trên PCIe, DDR hay Ethernet cuối cùng vẫn là một cấu trúc trường điện từ lan truyền trong interconnect. Protocol có thể là rời rạc, nhưng physical layer phải tuân Maxwell, Fourier, noise và boundary conditions.
+Một bit trên PCIe, DDR hay Ethernet cuối cùng vẫn là một cấu trúc trường điện từ lan truyền trong interconnect. giao thức (protocol / 프로토콜) có thể là rời rạc, nhưng vật lý (physical / 물리적) tầng (layer / 계층) phải tuân Maxwell, Fourier, noise và ranh giới (boundary / 경계) conditions.
 
 Reflection có thể tạo ringing, overshoot, undershoot, crossing-time shift và eye-diagram closure. Do đó nhiều “bug digital” ở tốc độ cao thực chất là vấn đề vật lý tương tự sóng trên dây.
 
-Termination resistor, controlled impedance PCB trace, differential pair và return-path design đều là cách kiểm soát điều kiện biên của trường điện từ.
+Termination resistor, controlled impedance PCB dấu vết (trace / 추적), differential pair và return-path thiết kế (design / 설계) đều là cách kiểm soát điều kiện biên của trường điện từ.
 
 ## Giới hạn của mô hình transmission line
 
-Mô hình một chiều giả định chỉ một mode đáng kể và tiết diện ngang nhỏ so với bước sóng tương ứng. Khi tần số đủ cao để kích thích higher-order modes, hoặc discontinuity có hình học ba chiều phức tạp, cần full-wave electromagnetic simulation.
+Mô hình một chiều giả định chỉ một chế độ (mode / 모드) đáng kể và tiết diện ngang nhỏ so với bước sóng tương ứng. Khi tần số đủ cao để kích thích higher-order modes, hoặc discontinuity có hình học ba chiều phức tạp, cần full-wave electromagnetic simulation.
 
-Các tham số `R',L',G',C'` cũng có thể phụ thuộc tần số do skin effect, dispersion và dielectric loss. Vì vậy dùng hằng số cố định trên dải rất rộng có thể sai.
+Các tham số `R',L',G',C'` cũng có thể phụ thuộc tần số do skin tác động (effect / 효과), dispersion và dielectric mất mát (loss / 손실). Vì vậy dùng hằng số cố định trên dải rất rộng có thể sai.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Một interconnect tốc độ cao không phải “dây mang điện áp tức thời”. Nó là **một cấu trúc dẫn sóng có năng lượng điện trường và từ trường phân bố**. `Z_0` mô tả tỉ số trường của sóng chạy; tải đặt điều kiện biên; mismatch tạo phản xạ; hình học đặt mode và cutoff.
+Một interconnect tốc độ cao không phải “dây mang điện áp tức thời”. Nó là **một cấu trúc dẫn sóng có năng lượng điện trường và từ trường phân bố**. `Z_0` mô tả tỉ số trường của sóng chạy; tải đặt điều kiện biên; mismatch tạo phản xạ; hình học đặt chế độ (mode / 모드) và cutoff.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
-### “Clock thấp thì không cần transmission-line analysis”
+### “Clock thấp thì không cần transmission-line phân tích (analysis / 분석)”
 
-Không nhất thiết. Rise/fall time quyết định thành phần tần số cao của cạnh số và thường quan trọng hơn tần số clock danh nghĩa.
+Không nhất thiết. Rise/fall thời gian (time / 시간) quyết định thành phần tần số cao của cạnh số và thường quan trọng hơn tần số clock danh nghĩa.
 
 ### “50 Ω là điện trở DC của coax”
 
-Không. Đây là characteristic impedance của mode truyền, bắt nguồn từ `L'` và `C'` phân bố.
+Không. Đây là characteristic impedance của chế độ (mode / 모드) truyền, bắt nguồn từ `L'` và `C'` phân bố.
 
 ### “Phase velocity lớn hơn `c` nghĩa là truyền thông tin nhanh hơn ánh sáng”
 
-Không. Phase velocity không trực tiếp là signal velocity. Nhân quả vẫn được bảo toàn.
+Không. Phase velocity không trực tiếp là tín hiệu (signal / 신호) velocity. Nhân quả vẫn được bảo toàn.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Maxwell và sóng điện từ](04_maxwell_em_waves.md), [Mạch AC/RLC](02_ac_rlc_circuits.md), [Sóng và Fourier](../02_oscillations_waves/01_waves_fourier_sound.md).
 
 **Liên hệ tiếp:** [Quang sóng](../06_optics/01_wave_optics.md), [Bán dẫn và thiết bị](../10_condensed_matter_devices/01_semiconductors_devices.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 electrostatics](./00_electrostatics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

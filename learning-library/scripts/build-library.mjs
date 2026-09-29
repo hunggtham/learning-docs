@@ -10,8 +10,13 @@ if (audit.errors.length) {
   throw new Error(`Publication audit failed with ${audit.errors.length} error(s).`);
 }
 
-const allowedDocuments = new Map(config.allowedDocuments.map(normalizeEntry).filter(Boolean).map(entry => [entry.path.replaceAll('\\', '/'), entry]));
-const allowedPrefixes = (config.allowedPrefixes || []).map(normalizeEntry).filter(Boolean);
+const normalizePath = value => value.replaceAll('\\', '/').normalize('NFC');
+const normalizeManifestEntry = entry => {
+  const normalized = normalizeEntry(entry);
+  return normalized ? { ...normalized, path: normalizePath(normalized.path) } : null;
+};
+const allowedDocuments = new Map(config.allowedDocuments.map(normalizeManifestEntry).filter(Boolean).map(entry => [entry.path, entry]));
+const allowedPrefixes = (config.allowedPrefixes || []).map(normalizeManifestEntry).filter(Boolean);
 const excluded = new Set(['.git', 'node_modules', '.DS_Store', 'dist', 'learning-library', ...(config.ignoredSegments || [])]);
 const allowed = new Set(['.md', '.pdf']);
 const documents = [];
@@ -24,7 +29,13 @@ function manifestFor(relative) {
   return allowedPrefixes.find(entry => relative === entry.path || relative.startsWith(`${entry.path}/`));
 }
 
-function displayPath(relative) {
+function displayPath(relative, manifestEntry) {
+  const displayPrefix = manifestEntry?.displayPrefix?.replace(/^\/+|\/+$/g, '');
+  const sourcePrefix = manifestEntry?.path?.replace(/^\/+|\/+$/g, '');
+  if (displayPrefix && sourcePrefix && (relative === sourcePrefix || relative.startsWith(`${sourcePrefix}/`))) {
+    const suffix = relative.slice(sourcePrefix.length).replace(/^\/+/, '');
+    return [displayPrefix, suffix].filter(Boolean).join('/');
+  }
   return relative.split('/').filter(segment => segment.toLowerCase() !== 'output').join('/');
 }
 
@@ -56,7 +67,7 @@ async function walk(directory) {
     const absolute = path.join(directory, entry.name);
     if (entry.isDirectory()) await walk(absolute);
     else if (allowed.has(path.extname(entry.name).toLowerCase())) {
-      const relative = path.relative(contentRoot, absolute).split(path.sep).join('/');
+      const relative = normalizePath(path.relative(contentRoot, absolute));
       const manifestEntry = manifestFor(relative);
       if (!manifestEntry) continue;
       if (!allowedDocuments.has(relative) && path.extname(entry.name).toLowerCase() === '.pdf') continue;
@@ -67,7 +78,7 @@ async function walk(directory) {
         throw new Error(`Publication audit failed for ${relative}.`);
       }
       const info = await stat(absolute);
-      const visiblePath = displayPath(relative);
+      const visiblePath = displayPath(relative, manifestEntry);
       const type = path.extname(entry.name).toLowerCase() === '.pdf' ? 'PDF' : 'MD';
       documents.push({
         path: relative,

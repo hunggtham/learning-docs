@@ -1,63 +1,98 @@
 # Privilege, isolation, containers và virtualization
 
-Chạy nhiều workloads an toàn cần giới hạn “ai có thể làm gì” và “resource nào họ nhìn thấy”. CPU privilege, process address spaces, OS permissions, namespaces, cgroups và virtual machines là các layers khác nhau của isolation.
+> **Mạch đọc:** Đặt **Privilege, isolation, containers và virtualization** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Protection rings và privilege** sang **người dùng (user / 사용자), group và capabilities**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Chạy nhiều workloads an toàn cần giới hạn “ai có thể làm gì” và “tài nguyên (resource / 자원) nào họ nhìn thấy”. CPU privilege, tiến trình (process / 프로세스) address spaces, OS permissions, namespaces, cgroups và virtual machines là các layers khác nhau của isolation.
 
 ## Protection rings và privilege
 
-CPU có privileged execution modes. Kernel dùng privileged instructions để quản lý memory/devices; user code bị giới hạn. System call là controlled gate.
+CPU có privileged thực thi (execution / 실행) modes. Kernel dùng privileged instructions để quản lý bộ nhớ (memory / 메모리)/devices; người dùng (user / 사용자) mã (code / 코드) bị giới hạn. lời gọi hệ thống (system call / 시스템 호출) là controlled gate.
 
-Privilege separation giảm blast radius: browser tab, database process hay app server không nên có kernel quyền. Nhưng bug trong kernel/driver có thể phá toàn machine vì chạy ở trust level cao.
+Privilege separation giảm blast radius: trình duyệt (browser / 브라우저) tab, cơ sở dữ liệu (database / 데이터베이스) tiến trình (process / 프로세스) hay app máy chủ (server / 서버) không nên có kernel quyền. Nhưng bug trong kernel/driver có thể phá toàn machine vì chạy ở trust mức (level / 수준) cao.
 
-## User, group và capabilities
 
-OS authorization model có identities và permissions. Unix mode bits chia owner/group/others với read/write/execute; ACLs mở rộng granularity. Root traditionally có rộng quyền, nhưng Linux capabilities tách privileges như bind low port, raw network, admin operations thành units nhỏ hơn.
+> **Chuyển mạch:** Từ **Protection rings và privilege**, ta sang **người dùng (user / 사용자), group và capabilities** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Principle of least privilege yêu cầu process chỉ có quyền thực sự cần.
+## Người dùng (user / 사용자), group và capabilities
+
+OS authorization mô hình (model / 모델) có identities và permissions. Unix chế độ (mode / 모드) bits chia đơn vị sở hữu (owner / 오너)/group/others với read/ghi (write / 쓰기)/execute; ACLs mở rộng granularity. gốc (root / 루트) traditionally có rộng quyền, nhưng Linux capabilities tách privileges như bind low cổng (port / 포트), raw mạng (network / 네트워크), admin operations thành units nhỏ hơn.
+
+Principle of least privilege yêu cầu tiến trình (process / 프로세스) chỉ có quyền thực sự cần.
+
+
+> **Chuyển mạch:** Từ **người dùng (user / 사용자), group và capabilities**, ta sang **Virtual machines** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Virtual machines
 
-Hypervisor virtualize hardware để guest OS tưởng có machine riêng. Type-1 hypervisor chạy gần hardware; hosted virtualization có thêm host OS layer tùy architecture.
+Hypervisor virtualize hardware để guest OS tưởng có machine riêng. Type-1 hypervisor chạy gần hardware; hosted virtualization có thêm host OS tầng (layer / 계층) tùy kiến trúc (architecture / 아키텍처).
 
-Hardware virtualization extensions hỗ trợ trap/emulate privileged operations và nested page translation. VM isolation mạnh vì guest có kernel riêng, nhưng footprint/boot overhead lớn hơn process container.
+Hardware virtualization extensions hỗ trợ trap/emulate privileged operations và nested page translation. VM isolation mạnh vì guest có kernel riêng, nhưng footprint/boot overhead lớn hơn tiến trình (process / 프로세스) bộ chứa (container / 컨테이너).
+
+
+> **Chuyển mạch:** Từ **Virtual machines**, ta sang **Containers** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Containers
 
-Container không phải mini-VM theo nghĩa có kernel riêng. Linux containers chủ yếu dùng namespaces để isolate views (PID, mount, network, user...), cgroups để limit/account resources, capabilities/seccomp/LSM để giảm privileges, cùng filesystem layers.
+Bộ chứa (container / 컨테이너) không phải mini-VM theo nghĩa có kernel riêng. Linux containers chủ yếu dùng namespaces để isolate views (PID, mount, network, user...), cgroups để limit/account resources, capabilities/seccomp/LSM để giảm privileges, cùng filesystem layers.
 
-Containers trên cùng host share kernel. Kernel vulnerability vì vậy có thể cross container boundary nếu controls bị bypass.
+Containers trên cùng host share kernel. Kernel vulnerability vì vậy có thể cross bộ chứa (container / 컨테이너) ranh giới (boundary / 경계) nếu controls bị bypass.
 
-## Namespace vs cgroup
 
-Namespace trả lời “process nhìn thấy cái gì?” Cgroup trả lời “process được dùng bao nhiêu resource/được account thế nào?” Hai mechanisms bổ sung nhau.
+> **Chuyển mạch:** Từ **Containers**, ta sang **không gian tên (namespace / 네임스페이스) vs cgroup** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Memory cgroup limit có thể OOM-kill workload dù host còn memory. CPU quota/throttling làm latency spikes. Production debugging phải nhìn container limits chứ không chỉ host metrics.
+## Không gian tên (namespace / 네임스페이스) vs cgroup
+
+Không gian tên (namespace / 네임스페이스) trả lời “tiến trình (process / 프로세스) nhìn thấy cái gì?” Cgroup trả lời “tiến trình (process / 프로세스) được dùng bao nhiêu tài nguyên (resource / 자원)/được account thế nào?” Hai mechanisms bổ sung nhau.
+
+Bộ nhớ (memory / 메모리) cgroup limit có thể OOM-kill tải công việc (workload / 워크로드) dù host còn bộ nhớ (memory / 메모리). CPU quota/throttling làm độ trễ (latency / 지연 시간) spikes. môi trường vận hành (production / 운영 환경) debugging phải nhìn bộ chứa (container / 컨테이너) limits chứ không chỉ host metrics.
+
+
+> **Chuyển mạch:** Từ **không gian tên (namespace / 네임스페이스) vs cgroup**, ta sang **Sandbox** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Sandbox
 
-Sandbox giới hạn capabilities của untrusted code bằng process isolation, syscall filters, language/runtime restrictions hoặc VM. Browser renderers, mobile apps và serverless runtimes dùng nhiều layers.
+Sandbox giới hạn capabilities của untrusted mã (code / 코드) bằng tiến trình (process / 프로세스) isolation, syscall filters, ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) restrictions hoặc VM. trình duyệt (browser / 브라우저) renderers, mobile apps và serverless runtimes dùng nhiều layers.
 
-Sandbox security luôn phụ thuộc attack surface của boundary; parser/IPC/kernel bugs có thể escape.
+Sandbox bảo mật (security / 보안) luôn phụ thuộc attack surface của ranh giới (boundary / 경계); parser/IPC/kernel bugs có thể escape.
+
+
+> **Chuyển mạch:** Từ **Sandbox**, ta sang **Virtualization và emulation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Virtualization và emulation
 
-Virtualization thường chạy guest instructions trực tiếp hoặc gần trực tiếp trên compatible hardware, trapping sensitive operations. Emulation mô phỏng architecture khác và có thể chạy ISA khác nhưng thường overhead cao hơn. Apple Rosetta-style binary translation nằm giữa: translate instruction sets động/tĩnh.
+Virtualization thường chạy guest instructions trực tiếp hoặc gần trực tiếp trên compatible hardware, trapping sensitive operations. Emulation mô phỏng kiến trúc (architecture / 아키텍처) khác và có thể chạy ISA khác nhưng thường overhead cao hơn. Apple Rosetta-style nhị phân (binary / 이진) translation nằm giữa: translate instruction sets động/tĩnh.
 
-## Containers không thay thế security design
 
-Image isolation không sửa SQL injection, broken authorization hay secrets leak. Container là one boundary trong defense-in-depth. Workload vẫn cần application security, network policy và identity controls.
+> **Chuyển mạch:** Từ **Virtualization và emulation**, ta sang **Containers không thay thế bảo mật (security / 보안) thiết kế (design / 설계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Mental Model
+## Containers không thay thế bảo mật (security / 보안) thiết kế (design / 설계)
 
-> Isolation được xây bằng nhiều boundaries: **CPU privilege → process/VM address isolation → OS identity/capability → namespace/resource controls → application authorization**. Boundary càng sâu thường càng mạnh nhưng chi phí khác nhau.
+Ảnh (image / 이미지) isolation không sửa SQL injection, broken authorization hay secrets leak. bộ chứa (container / 컨테이너) là one ranh giới (boundary / 경계) trong defense-in-depth. tải công việc (workload / 워크로드) vẫn cần ứng dụng (application / 애플리케이션) bảo mật (security / 보안), chính sách mạng (network policy / 네트워크 정책) và định danh (identity / 식별자) controls.
 
-## Common Misconceptions
 
-**“Container có kernel riêng.”** Thông thường container share host kernel.
+> **Chuyển mạch:** Từ **Containers không thay thế bảo mật (security / 보안) thiết kế (design / 설계)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**“VM luôn an toàn tuyệt đối.”** Hypervisor/device emulation cũng có vulnerabilities; isolation mạnh hơn không nghĩa invulnerable.
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“Root trong container = root toàn host.”** User namespaces/capabilities có thể hạn chế, nhưng privileged container hoặc misconfiguration có thể gần host-root; cần xem actual boundary.
+> Isolation được xây bằng nhiều boundaries: **CPU privilege → tiến trình (process / 프로세스)/VM address isolation → OS định danh (identity / 식별자)/năng lực (capability / 역량) → không gian tên (namespace / 네임스페이스)/tài nguyên (resource / 자원) controls → ứng dụng (application / 애플리케이션) authorization**. ranh giới (boundary / 경계) càng sâu thường càng mạnh nhưng chi phí khác nhau.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“bộ chứa (container / 컨테이너) có kernel riêng.”** Thông thường bộ chứa (container / 컨테이너) share host kernel.
+
+**“VM luôn an toàn tuyệt đối.”** Hypervisor/thiết bị (device / 장치) emulation cũng có vulnerabilities; isolation mạnh hơn không nghĩa invulnerable.
+
+**“gốc (root / 루트) trong bộ chứa (container / 컨테이너) = gốc (root / 루트) toàn host.”** người dùng (user / 사용자) namespaces/capabilities có thể hạn chế, nhưng privileged bộ chứa (container / 컨테이너) hoặc misconfiguration có thể gần host-root; cần xem actual ranh giới (boundary / 경계).
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-[Kernel privilege](./00_kernel_syscalls_and_os_abstractions.md) và [virtual memory](./03_virtual_memory_and_address_spaces.md) là nền. Security principles ở [threat models](../07_security_reliability/00_threat_models_and_security_principles.md); deployment boundaries ở [software systems](../08_software_systems/03_state_queues_backpressure_and_boundaries.md).
+[Kernel privilege](./00_kernel_syscalls_and_os_abstractions.md) và [virtual memory](./03_virtual_memory_and_address_spaces.md) là nền. bảo mật (security / 보안) principles ở [threat models](../07_security_reliability/00_threat_models_and_security_principles.md); triển khai (deployment / 배포) boundaries ở [software systems](../08_software_systems/03_state_queues_backpressure_and_boundaries.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kernel syscalls and os abstractions](./00_kernel_syscalls_and_os_abstractions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

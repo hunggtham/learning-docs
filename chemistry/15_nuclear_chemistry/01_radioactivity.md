@@ -1,5 +1,8 @@
 # Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ
 
+> **Mạch đọc:** Đọc **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Định luật phân rã** sang **Chu kỳ bán rã**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phóng xạ (radioactivity / 방사능)** là sự biến đổi tự phát của các hạt nhân không bền. Mỗi sự kiện phân rã riêng lẻ có bản chất xác suất lượng tử, nhưng một quần thể lớn hạt nhân lại tuân theo thống kê hàm mũ rất chính xác. Đây là một ví dụ điển hình cho việc tính ngẫu nhiên vi mô có thể tạo ra khả năng dự đoán vĩ mô.
 
 ## Định luật phân rã
@@ -368,3 +371,5 @@ Không. Rủi ro phụ thuộc liều và bối cảnh phơi nhiễm.
 Phóng xạ là **động học xác suất bậc nhất của một quần thể hạt nhân không bền**. Hoạt độ cho biết biến đổi xảy ra thường xuyên đến đâu; vận chuyển bức xạ cho biết năng lượng đi đâu; liều cho biết bao nhiêu năng lượng tới vật chất; sinh học quyết định hệ quả của năng lượng đó.
 
 Xem tiếp: [Phản ứng hạt nhân](./02_nuclear_reactions.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic nucleus](./00_atomic_nucleus.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

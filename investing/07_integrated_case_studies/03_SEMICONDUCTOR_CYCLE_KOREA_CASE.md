@@ -1,5 +1,8 @@
 # Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá
 
+> **Mạch đọc:** Đặt **Tình huống 03 — Chu kỳ bán dẫn Hàn Quốc: từ capex AI tới lợi nhuận và định giá** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu từ chuỗi giá trị** sang **2. Nhu cầu không đồng nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Thị trường Hàn Quốc có tỷ trọng lớn ở ngành bán dẫn, nhưng “chu kỳ tăng bán dẫn” không phải một biến duy nhất. Tình huống này tách nhu cầu, tồn kho, giá bán bình quân (ASP), công suất sử dụng, capex, tỷ trọng HBM, nhà cung cấp thiết bị/vật liệu, tỷ giá, điều chỉnh dự báo lợi nhuận và định giá để tránh luận điểm đơn giản kiểu “AI tăng → mọi cổ phiếu chip tăng”.
 
 ## 1. Bắt đầu từ chuỗi giá trị
@@ -215,7 +218,7 @@ Hàm lượng HBM trên mỗi bộ tăng tốc là bao nhiêu?
 
 ## 18. Chất lượng nhu cầu
 
-Nhu cầu chất lượng cao hơn khi được hỗ trợ bởi công suất sử dụng bền vững, workload có khả năng tạo doanh thu, dòng tiền của khách hàng và cơ sở khách hàng mở rộng.
+Nhu cầu chất lượng cao hơn khi được hỗ trợ bởi công suất sử dụng bền vững, tải công việc (workload / 워크로드) có khả năng tạo doanh thu, dòng tiền của khách hàng và cơ sở khách hàng mở rộng.
 
 Nhu cầu chất lượng thấp hơn nếu phần lớn là tích trữ tồn kho, xây công suất nhờ trợ cấp hoặc đơn hàng đầu cơ.
 

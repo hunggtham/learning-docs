@@ -1,5 +1,8 @@
 # Tư duy địa lý: không gian, nơi chốn, quy mô, dòng và quan hệ
 
+> **Mạch đọc:** Đọc **Tư duy địa lý: không gian, nơi chốn, quy mô, dòng và quan hệ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Địa lý không phải môn học thuộc địa danh** sang **Vị trí có ba lớp: tuyệt đối, tương đối và quan hệ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Địa lý không phải môn học thuộc địa danh
 
 Địa lý bắt đầu từ một câu hỏi rất đơn giản: **vì sao hiện tượng này xảy ra ở đây mà không phải ở nơi khác?** Muốn trả lời, ta phải nối vị trí với quá trình, khoảng cách, mạng lưới, môi trường, lịch sử và quy mô.
@@ -20,9 +23,9 @@ Một thành phố nội địa có thể trở thành gateway nếu nằm trên
 
 Nơi chốn cũng không tĩnh. Metro mới, cảng mới, suy giảm công nghiệp hoặc thay đổi khí hậu có thể làm chức năng của nơi thay đổi mà tọa độ không đổi. Do đó tư duy địa lý luôn cần chiều thời gian.
 
-## Pattern không tự giải thích process
+## Mẫu (pattern / 패턴) không tự giải thích tiến trình (process / 프로세스)
 
-Bản đồ cho ta thấy **mẫu (pattern)**: cụm núi lửa, dải đô thị ven biển, vành đai công nghiệp, vùng bệnh cao. Nhưng mẫu chỉ là bằng chứng ban đầu. Hai biến cùng tập trung ở một nơi không chứng minh biến này gây biến kia.
+Bản đồ cho ta thấy **mẫu (pattern / 패턴)**: cụm núi lửa, dải đô thị ven biển, vành đai công nghiệp, vùng bệnh cao. Nhưng mẫu chỉ là bằng chứng ban đầu. Hai biến cùng tập trung ở một nơi không chứng minh biến này gây biến kia.
 
 Quy trình suy luận tốt là:
 
@@ -34,19 +37,19 @@ Núi lửa quanh Thái Bình Dương trở nên có ý nghĩa khi nối với h�
 
 **Khoảng cách Euclid** đo đường thẳng; **khoảng cách mạng (network distance)** đi theo đường/cáp; **khoảng cách thời gian** phụ thuộc tốc độ; **khoảng cách kinh tế** phụ thuộc chi phí; **khoảng cách thể chế** có thể tăng do biên giới, visa hoặc tiêu chuẩn khác nhau.
 
-Khái niệm **ma sát khoảng cách (friction of distance / 거리 마찰)** mô tả việc tương tác thường giảm khi chi phí di chuyển tăng. Nhưng công nghệ thay đổi ma sát không đồng đều: video call giảm ma sát thông tin nhiều hơn ma sát vận chuyển thép hoặc nước.
+Khái niệm **ma sát khoảng cách (friction of distance / 거리 마찰)** mô tả việc tương tác thường giảm khi chi phí di chuyển tăng. Nhưng công nghệ thay đổi ma sát không đồng đều: video lời gọi (call / 호출) giảm ma sát thông tin nhiều hơn ma sát vận chuyển thép hoặc nước.
 
 Vì thế câu “thế giới phẳng hơn” chỉ đúng cho một số dòng và một số người.
 
 ## Khả năng tiếp cận quan trọng hơn gần–xa
 
-**Khả năng tiếp cận (accessibility)** hỏi một người hay doanh nghiệp có thể đến cơ hội nào trong thời gian/chi phí nhất định. Một bệnh viện cách 15 km nhưng không có giao thông công cộng có thể kém tiếp cận hơn bệnh viện cách 30 km trên tuyến metro.
+**khả năng tiếp cận (accessibility / 접근성)** hỏi một người hay doanh nghiệp có thể đến cơ hội nào trong thời gian/chi phí nhất định. Một bệnh viện cách 15 km nhưng không có giao thông công cộng có thể kém tiếp cận hơn bệnh viện cách 30 km trên tuyến metro.
 
 Khả năng tiếp cận nối địa lý với bất bình đẳng: khoảng cách tới việc làm, trường học, y tế và thị trường khác nhau giữa nhóm thu nhập, tuổi và địa điểm.
 
-## Phân bố: mật độ, cụm và gradient
+## Phân bố: mật độ, cụm và độ dốc (gradient / 기울기)
 
-Một hiện tượng có thể **tập trung (clustered)**, **phân tán (dispersed)** hoặc tạo **gradient** theo khoảng cách/độ cao/vĩ độ. Địa lý không chỉ hỏi “bao nhiêu?” mà hỏi “bao nhiêu ở đâu và thay đổi theo hướng nào?”.
+Một hiện tượng có thể **tập trung (clustered)**, **phân tán (dispersed)** hoặc tạo **độ dốc (gradient / 기울기)** theo khoảng cách/độ cao/vĩ độ. Địa lý không chỉ hỏi “bao nhiêu?” mà hỏi “bao nhiêu ở đâu và thay đổi theo hướng nào?”.
 
 Dữ liệu không gian thường có **tự tương quan không gian (spatial autocorrelation)**: các vị trí gần nhau có xu hướng giống nhau hơn vì chia sẻ môi trường hoặc tương tác. Điều này làm nhiều giả định thống kê độc lập bị vi phạm và là lý do cần phương pháp không gian chuyên biệt.
 
@@ -66,13 +69,13 @@ Không có một cách chia thế giới duy nhất đúng cho mọi câu hỏi.
 
 ## Mạng lưới và dòng thường quan trọng hơn diện tích
 
-Không gian địa lý gồm **nút (nodes)**, **liên kết (links)** và **dòng (flows)**. Cảng, thành phố, sân bay, nhà máy điện và data center là nút; đường, tuyến biển, lưới điện và cáp là liên kết; hàng hóa, người, điện, vốn và dữ liệu là dòng.
+Không gian địa lý gồm **nút (nodes)**, **liên kết (links)** và **dòng (flows)**. Cảng, thành phố, sân bay, nhà máy điện và dữ liệu (data / 데이터) center là nút; đường, tuyến biển, lưới điện và cáp là liên kết; hàng hóa, người, điện, vốn và dữ liệu là dòng.
 
 Một nơi nhỏ có thể quan trọng nếu có **tính trung tâm (centrality)** cao. Ngược lại lãnh thổ rộng có thể ít kết nối nếu thiếu hạ tầng.
 
 Khi phân tích, hãy hỏi: dòng đi qua đâu, công suất bao nhiêu, có tuyến thay thế không và sự cố ở nút nào sẽ lan rộng nhất?
 
-## Con người–môi trường: constraint, opportunity và adaptation
+## Con người–môi trường: ràng buộc (constraint / 제약조건), opportunity và adaptation
 
 Tránh **thuyết quyết định môi trường (environmental determinism)**. Môi trường không viết sẵn tương lai xã hội. Nó tạo ràng buộc và cơ hội; công nghệ, thể chế, văn hóa và vốn quyết định cách con người phản ứng.
 
@@ -86,9 +89,9 @@ Do đó câu “tại sao ở đây?” thường cần hai câu trả lời: l�
 
 ## Bằng chứng địa lý luôn có sai số
 
-Tọa độ GPS có sai số; ảnh vệ tinh bị mây; điều tra dân số có thiếu đếm; ranh giới hành chính thay đổi; dữ liệu mạng di động chỉ đại diện người có thiết bị. Vì vậy bản đồ không phải cửa sổ trực tiếp nhìn vào thực tại mà là kết quả của **measurement model**.
+Tọa độ GPS có sai số; ảnh vệ tinh bị mây; điều tra dân số có thiếu đếm; ranh giới hành chính thay đổi; dữ liệu mạng di động chỉ đại diện người có thiết bị. Vì vậy bản đồ không phải cửa sổ trực tiếp nhìn vào thực tại mà là kết quả của **đo lường (measurement / 측정) mô hình (model / 모델)**.
 
-Khi đọc bản đồ, cần hỏi: dữ liệu được đo bằng gì, lúc nào, ở độ phân giải nào, bị thiếu ở đâu, và cách tổng hợp có tạo bias không?
+Khi đọc bản đồ, cần hỏi: dữ liệu được đo bằng gì, lúc nào, ở độ phân giải nào, bị thiếu ở đâu, và cách tổng hợp có tạo độ lệch (bias / 편향) không?
 
 ## So sánh và phản thực tế
 
@@ -106,10 +109,12 @@ Ví dụ muốn biết vai trò của cảng đối với công nghiệp, không
 
 ## Những hiểu lầm phổ biến
 
-Bản đồ không phải thực tại; correlation không phải mechanism; gần về kilomet không đồng nghĩa dễ tiếp cận; vùng không phải hộp tự nhiên bất biến; trung bình quốc gia không đại diện mọi địa phương; và “địa lý quan trọng” không đồng nghĩa “địa lý quyết định tất cả”.
+Bản đồ không phải thực tại; correlation không phải cơ chế (mechanism / 메커니즘); gần về kilomet không đồng nghĩa dễ tiếp cận; vùng không phải hộp tự nhiên bất biến; trung bình quốc gia không đại diện mọi địa phương; và “địa lý quan trọng” không đồng nghĩa “địa lý quyết định tất cả”.
 
 ## Mô hình tư duy
 
-> Địa lý là khoa học về **mẫu + quá trình + mạng + quy mô + bằng chứng**. Khi gặp một hiện tượng mới, đừng bắt đầu bằng ghi nhớ địa danh. Hãy tìm gradient, nút, dòng, ranh giới, cơ chế và dữ liệu có thể bác bỏ lời giải thích của mình.
+> Địa lý là khoa học về **mẫu + quá trình + mạng + quy mô + bằng chứng**. Khi gặp một hiện tượng mới, đừng bắt đầu bằng ghi nhớ địa danh. Hãy tìm độ dốc (gradient / 기울기), nút, dòng, ranh giới, cơ chế và dữ liệu có thể bác bỏ lời giải thích của mình.
 
 Xem tiếp: [Tọa độ và thời gian](./02_coordinates_time_maps.md), [Bản đồ và phép chiếu](./03_cartography_projections_scale.md), [GIS và viễn thám](./04_geospatial_data_gis_remote_sensing.md), [Cách đọc vùng](../03_regions/00_how_to_read_regions.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 earth as system](./01_earth_as_system.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

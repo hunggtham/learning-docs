@@ -1,12 +1,15 @@
 # Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc
 
-Dãy số (sequence / 수열) là function có domain rời rạc, thường là
+> **Mạch đọc:** Đọc **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. chuỗi (sequence / 시퀀스) là hàm (function / 함수) trên discrete chỉ mục (index / 인덱스)** sang **2. tường minh (explicit / 명시적) formula và recurrence encode thông tin (information / 정보) khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Dãy số (sequence / 수열) là hàm (function / 함수) có lĩnh vực (domain / 도메인) rời rạc, thường là
 
 ```math
 n=0,1,2,\ldots
 ```
 
-Thay vì hỏi “output thay đổi thế nào theo real input liên tục?”, sequence hỏi “state ở step `n` là gì?”. Đây là ngôn ngữ tự nhiên của monthly balance, iteration, population generations, algorithm runtime và discrete-time systems.
+Thay vì hỏi “đầu ra (output / 출력) thay đổi thế nào theo real đầu vào (input / 입력) liên tục?”, chuỗi (sequence / 시퀀스) hỏi “trạng thái (state / 상태) ở step `n` là gì?”. Đây là ngôn ngữ tự nhiên của monthly balance, iteration, population generations, thuật toán (algorithm / 알고리즘) thời gian chạy (runtime / 런타임) và discrete-time các hệ thống (systems / 시스템들).
 
 Ba khái niệm cần phân biệt ngay từ đầu:
 
@@ -16,15 +19,15 @@ recurrence → rule chuyển từ state cũ sang state mới
 series     → accumulation của sequence terms
 ```
 
-## 1. Sequence là function trên discrete index
+## 1. chuỗi (sequence / 시퀀스) là hàm (function / 함수) trên discrete chỉ mục (index / 인덱스)
 
-Một sequence có thể viết
+Một chuỗi (sequence / 시퀀스) có thể viết
 
 ```math
 a_0,a_1,a_2,\ldots
 ```
 
-hoặc như function:
+hoặc như hàm (function / 함수):
 
 ```math
 a:\mathbb N\to\mathbb R.
@@ -42,11 +45,11 @@ Các terms:
 1,3,5,7,...
 ```
 
-Cách nhìn function giúp sequence nối tự nhiên với limits, asymptotics và algorithms.
+Cách nhìn hàm (function / 함수) giúp chuỗi (sequence / 시퀀스) nối tự nhiên với limits, asymptotics và algorithms.
 
-## 2. Explicit formula và recurrence encode information khác nhau
+## 2. tường minh (explicit / 명시적) formula và recurrence encode thông tin (information / 정보) khác nhau
 
-Explicit form:
+Tường minh (explicit / 명시적) form:
 
 ```math
 a_n=2n+1
@@ -61,11 +64,11 @@ a_{n+1}=a_n+2,
 \qquad a_0=1
 ```
 
-nhấn mạnh transition rule.
+nhấn mạnh chuyển tiếp (transition / 전이) quy tắc (rule / 규칙).
 
-Hai representations có thể mô tả cùng sequence nhưng phục vụ questions khác nhau.
+Hai representations có thể mô tả cùng chuỗi (sequence / 시퀀스) nhưng phục vụ questions khác nhau.
 
-Explicit formula phù hợp random access. Recurrence phù hợp process evolution.
+Tường minh (explicit / 명시적) formula phù hợp random truy cập (access / 접근). Recurrence phù hợp tiến trình (process / 프로세스) evolution.
 
 Trong computing, đây gần distinction giữa:
 
@@ -75,7 +78,7 @@ vs
 state iteration
 ```
 
-## 3. Arithmetic sequence = constant additive change
+## 3. Arithmetic chuỗi (sequence / 시퀀스) = constant additive thay đổi (change / 변경)
 
 Nếu difference constant `d`:
 
@@ -89,9 +92,9 @@ thì
 a_n=a_0+nd.
 ```
 
-Đây là discrete counterpart của linear function.
+Đây là discrete counterpart của tuyến tính (linear / 선형) hàm (function / 함수).
 
-Mental connection:
+Mental liên kết (connection / 연결):
 
 ```text
 constant discrete difference → linear sequence
@@ -100,7 +103,7 @@ constant derivative → linear continuous function
 
 Finite difference đóng vai trò gần giống derivative trong discrete setting.
 
-## 4. Arithmetic series và vì sao sum scale như n²
+## 4. Arithmetic series và vì sao sum quy mô (scale / 규모) như n²
 
 Tổng:
 
@@ -127,9 +130,9 @@ S_n=\frac{n(n+1)}2.
 
 Nếu term grow như `O(n)`, cumulative sum thường grow như `O(n^2)`.
 
-Đây là intuition quan trọng trong complexity analysis: accumulation tăng order growth lên một bậc trong nhiều trường hợp polynomial.
+Đây là intuition quan trọng trong phân tích độ phức tạp (complexity analysis / 복잡도 분석): accumulation tăng thứ tự (order / 순서) growth lên một bậc trong nhiều trường hợp polynomial.
 
-## 5. Geometric sequence = constant multiplicative change
+## 5. Geometric chuỗi (sequence / 시퀀스) = constant multiplicative thay đổi (change / 변경)
 
 Nếu ratio constant `r`:
 
@@ -180,7 +183,7 @@ S_n=a_0\frac{1-r^n}{1-r},
 
 Formula xuất hiện vì shift-by-one làm almost all terms cancel.
 
-Đây là một proof pattern rất phổ biến: transform expression để structure cancellation lộ ra.
+Đây là một proof mẫu (pattern / 패턴) rất phổ biến: transform expression để cấu trúc (structure / 구조) cancellation lộ ra.
 
 ## 7. Infinite geometric series là limit của partial sums
 
@@ -206,9 +209,9 @@ nên
 \frac{a_0}{1-r}.
 ```
 
-Condition `|r|<1` là essential assumption, không phải decoration.
+Điều kiện (condition / 조건) `|r|<1` là essential giả định (assumption / 가정), không phải decoration.
 
-## 8. Recurrence là equation của state transition
+## 8. Recurrence là equation của chuyển tiếp trạng thái (state transition / 상태 전이)
 
 General first-order recurrence:
 
@@ -216,15 +219,15 @@ General first-order recurrence:
 a_{n+1}=F(a_n,n).
 ```
 
-Nếu `F` không phụ thuộc explicit vào `n`:
+Nếu `F` không phụ thuộc tường minh (explicit / 명시적) vào `n`:
 
 ```math
 a_{n+1}=F(a_n),
 ```
 
-ta có discrete dynamical system.
+ta có discrete dynamical hệ thống (system / 시스템).
 
-Fixed point `a_*` thỏa
+Fixed điểm (point / 지점) `a_*` thỏa
 
 ```math
 F(a_*)=a_*.
@@ -232,9 +235,9 @@ F(a_*)=a_*.
 
 Stability hỏi nếu bắt đầu gần `a_*`, iterations có quay về đó không.
 
-Đây là bridge sang numerical methods, optimization và control.
+Đây là cầu nối (bridge / 브리지) sang numerical methods, tối ưu hóa (optimization / 최적화) và điều khiển (control / 제어).
 
-## 9. Linear first-order recurrence
+## 9. tuyến tính (linear / 선형) first-order recurrence
 
 Xét
 
@@ -242,14 +245,14 @@ Xét
 a_{n+1}=ra_n+b.
 ```
 
-Fixed point nếu `r\ne1`:
+Fixed điểm (point / 지점) nếu `r\ne1`:
 
 ```math
 a_*=
 \frac{b}{1-r}.
 ```
 
-Subtract fixed point:
+Subtract fixed điểm (point / 지점):
 
 ```math
 u_n=a_n-a_*.
@@ -273,7 +276,7 @@ và
 a_n=a_*+r^n(a_0-a_*).
 ```
 
-Nếu `|r|<1`, state converge tới fixed point.
+Nếu `|r|<1`, trạng thái (state / 상태) converge tới fixed điểm (point / 지점).
 
 Nếu `|r|>1`, deviations grow.
 
@@ -281,7 +284,7 @@ Nếu `|r|>1`, deviations grow.
 
 ## 10. Finance example: balance recurrence
 
-Nếu account balance tăng rate `r` mỗi period và thêm contribution `c` cuối period:
+Nếu account balance tăng tỷ lệ (rate / 비율) `r` mỗi period và thêm contribution `c` cuối period:
 
 ```math
 B_{n+1}=(1+r)B_n+c.
@@ -300,7 +303,7 @@ Geometric sum cho closed form.
 
 Compound interest và annuity formulas thực chất là recurrence + geometric series.
 
-## 11. Fibonacci: recurrence order 2
+## 11. Fibonacci: recurrence thứ tự (order / 순서) 2
 
 Fibonacci:
 
@@ -308,9 +311,9 @@ Fibonacci:
 F_{n+1}=F_n+F_{n-1}.
 ```
 
-State ở step `n+1` cần hai previous values.
+Trạng thái (state / 상태) ở step `n+1` cần hai previous values.
 
-Ta gom thành vector state:
+Ta gom thành véc-tơ (vector / 벡터) trạng thái (state / 상태):
 
 ```math
 \begin{bmatrix}
@@ -334,9 +337,9 @@ Sau nhiều steps:
 x_n=A^nx_0.
 ```
 
-Eigenvalues của `A` giải thích long-run growth rate.
+Eigenvalues của `A` giải thích long-run growth tỷ lệ (rate / 비율).
 
-Đây là connection sâu giữa recurrence và linear algebra.
+Đây là liên kết (connection / 연결) sâu giữa recurrence và tuyến tính (linear / 선형) algebra.
 
 ## 12. Characteristic equation intuition
 
@@ -366,17 +369,17 @@ r^2-pr-q=0.
 
 Roots của characteristic polynomial quyết định modes của solution.
 
-Đây hoàn toàn analogous với solving linear differential equations bằng `e^{\lambda t}`.
+Đây hoàn toàn analogous với solving tuyến tính (linear / 선형) differential equations bằng `e^{\lambda t}`.
 
-## 13. Recurrence trong algorithm analysis
+## 13. Recurrence trong thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석)
 
-Binary search:
+Tìm kiếm nhị phân (binary search / 이진 탐색):
 
 ```math
 T(n)=T(n/2)+c.
 ```
 
-Mỗi step halve input, nên depth gần
+Mỗi step halve đầu vào (input / 입력), nên độ sâu (depth / 깊이) gần
 
 ```math
 \log_2n.
@@ -388,15 +391,15 @@ Merge sort:
 T(n)=2T(n/2)+cn.
 ```
 
-Recursion tree có `\log n` levels và mỗi level tổng work `O(n)`:
+Recursion cây (tree / 트리) có `\log n` levels và mỗi mức (level / 수준) tổng công việc (work / 작업) `O(n)`:
 
 ```math
 T(n)=O(n\log n).
 ```
 
-Runtime recurrence không phải code recursion itself; nó là mathematical model của work dependency.
+Thời gian chạy (runtime / 런타임) recurrence không phải mã (code / 코드) recursion itself; nó là mathematical mô hình (model / 모델) của công việc (work / 작업) phụ thuộc (dependency / 의존성).
 
-## 14. Memoization thay computation graph, không thay recurrence definition
+## 14. Memoization thay computation đồ thị (graph / 그래프), không thay recurrence definition
 
 Naive Fibonacci recursion recompute same states nhiều lần.
 
@@ -406,13 +409,13 @@ Recurrence:
 F_n=F_{n-1}+F_{n-2}
 ```
 
-không sai. Problem nằm ở evaluation strategy.
+không sai. bài toán (problem / 문제) nằm ở evaluation chiến lược (strategy / 전략).
 
-Memoization lưu solved states, biến computation từ exponential call tree thành roughly linear number of distinct states.
+Memoization lưu solved states, biến computation từ exponential lời gọi (call / 호출) cây (tree / 트리) thành roughly tuyến tính (linear / 선형) number of distinct states.
 
-Dynamic programming = recurrence + systematic state reuse/order.
+Động (dynamic / 동적) programming = recurrence + systematic trạng thái (state / 상태) reuse/thứ tự (order / 순서).
 
-## 15. Convergence của sequence
+## 15. Convergence của chuỗi (sequence / 시퀀스)
 
 `a_n` converge tới `L` nếu:
 
@@ -425,7 +428,7 @@ n\ge N
 |a_n-L|<\varepsilon.
 ```
 
-Intuition: sau một index đủ lớn, mọi terms còn lại nằm trong bất kỳ tolerance band nào quanh `L`.
+Intuition: sau một chỉ mục (index / 인덱스) đủ lớn, mọi terms còn lại nằm trong bất kỳ tolerance band nào quanh `L`.
 
 Ví dụ:
 
@@ -433,11 +436,11 @@ Ví dụ:
 a_n=\frac1n\to0.
 ```
 
-Sequence convergence là foundation cho series, iterative numerical methods và stochastic limit laws.
+Chuỗi (sequence / 시퀀스) convergence là foundation cho series, iterative numerical methods và stochastic limit laws.
 
 ## 16. Bounded không imply convergent
 
-Sequence
+Chuỗi (sequence / 시퀀스)
 
 ```math
 a_n=(-1)^n
@@ -445,13 +448,13 @@ a_n=(-1)^n
 
 bounded trong `[-1,1]` nhưng không converge vì oscillates giữa ±1.
 
-Monotone bounded theorem nói nếu sequence monotone và bounded phù hợp thì converge.
+Monotone bounded theorem nói nếu chuỗi (sequence / 시퀀스) monotone và bounded phù hợp thì converge.
 
-Assumptions matter: boundedness alone chưa đủ.
+Các giả định (assumptions / 가정들) matter: boundedness alone chưa đủ.
 
-## 17. Series là accumulation, không phải sequence
+## 17. Series là accumulation, không phải chuỗi (sequence / 시퀀스)
 
-Cho sequence `a_n`, series là
+Cho chuỗi (sequence / 시퀀스) `a_n`, series là
 
 ```math
 \sum_{n=1}^{\infty}a_n.
@@ -463,9 +466,9 @@ Ta define partial sums:
 S_N=\sum_{n=1}^{N}a_n.
 ```
 
-Series converge iff sequence `S_N` converge.
+Series converge iff chuỗi (sequence / 시퀀스) `S_N` converge.
 
-Vì vậy series convergence là sequence convergence của accumulated state.
+Vì vậy series convergence là chuỗi (sequence / 시퀀스) convergence của accumulated trạng thái (state / 상태).
 
 ## 18. Vì sao a_n → 0 chưa đủ?
 
@@ -495,11 +498,11 @@ Grouping:
 + ...
 ```
 
-mỗi block sau có sum ít nhất khoảng `1/2`, nên total không bounded.
+mỗi khối (block / 블록) sau có sum ít nhất khoảng `1/2`, nên total không bounded.
 
 Terms giảm nhưng không đủ nhanh.
 
-## 19. Comparison test là asymptotic reasoning
+## 19. Comparison kiểm thử (test / 테스트) là asymptotic lập luận (reasoning / 추론)
 
 Nếu
 
@@ -517,9 +520,9 @@ converges, thì `\sum a_n` converges.
 
 Nếu `a_n\ge b_n\ge0` và `\sum b_n` diverges, thì `\sum a_n` diverges.
 
-Ta không cần exact sum; chỉ cần compare accumulation rate.
+Ta không cần chính xác (exact / 정확한) sum; chỉ cần compare accumulation tỷ lệ (rate / 비율).
 
-## 20. Ratio test nhìn multiplicative shrink
+## 20. Ratio kiểm thử (test / 테스트) nhìn multiplicative shrink
 
 Ratio test so sánh độ lớn các số hạng liên tiếp để đo tốc độ co theo cấp số nhân. Điều kiện hội tụ đến từ việc chuỗi bị chi phối bởi một geometric decay đủ nhanh.
 
@@ -535,13 +538,13 @@ Nếu `L<1`, terms eventually shrink gần geometric factor dưới 1, nên abso
 
 Nếu `L>1`, terms không thể tiến về zero phù hợp.
 
-Nếu `L=1`, test inconclusive.
+Nếu `L=1`, kiểm thử (test / 테스트) inconclusive.
 
-Test không phải magic rule; nó compare series với geometric behavior.
+Kiểm thử (test / 테스트) không phải magic quy tắc (rule / 규칙); nó compare series với geometric hành vi (behavior / 동작).
 
 ## 21. Generating-function intuition
 
-Một sequence có thể encode thành power series:
+Một chuỗi (sequence / 시퀀스) có thể encode thành power series:
 
 ```math
 G(x)=\sum_{n=0}^{\infty}a_nx^n.
@@ -549,31 +552,31 @@ G(x)=\sum_{n=0}^{\infty}a_nx^n.
 
 Recurrence relations có thể biến thành algebraic equations cho `G(x)`.
 
-Generating functions là bridge từ discrete sequences sang algebra/complex analysis/combinatorics.
+Generating functions là cầu nối (bridge / 브리지) từ discrete sequences sang algebra/complex phân tích (analysis / 분석)/combinatorics.
 
-Không cần đi sâu ở chapter này; important idea là representation change có thể turn recurrence into algebra.
+Không cần đi sâu ở chapter này; important idea là biểu diễn (representation / 표현) thay đổi (change / 변경) có thể turn recurrence into algebra.
 
-## 22. Difference equations và control
+## 22. Difference equations và điều khiển (control / 제어)
 
-Continuous systems:
+Continuous các hệ thống (systems / 시스템들):
 
 ```math
 \frac{dx}{dt}=Ax+Bu.
 ```
 
-Discrete-time systems:
+Discrete-time các hệ thống (systems / 시스템들):
 
 ```math
 x_{k+1}=Ax_k+Bu_k.
 ```
 
-Matrix powers `A^k` quyết định state evolution.
+Ma trận (matrix / 행렬) powers `A^k` quyết định trạng thái (state / 상태) evolution.
 
-Eigenvalues inside unit circle thường liên quan stability của discrete linear system, analogous real-part-negative eigenvalues trong continuous systems.
+Eigenvalues inside đơn vị (unit / 단위) circle thường liên quan stability của discrete hệ tuyến tính (linear system / 선형 시스템), analogous real-part-negative eigenvalues trong continuous các hệ thống (systems / 시스템들).
 
 ## 23. Worked example: iterative approximation
 
-Newton method:
+Newton phương thức (method / 메서드):
 
 ```math
 x_{n+1}
@@ -584,7 +587,7 @@ x_n-
 
 Đây là recurrence.
 
-Convergence analysis hỏi error
+Convergence phân tích (analysis / 분석) hỏi lỗi (error / 오류)
 
 ```math
 e_n=x_n-x_*
@@ -592,7 +595,7 @@ e_n=x_n-x_*
 
 biến đổi thế nào từ step này sang step khác.
 
-Nếu near root:
+Nếu near gốc (root / 루트):
 
 ```math
 |e_{n+1}|\approx C|e_n|^2,
@@ -600,19 +603,19 @@ Nếu near root:
 
 ta nói quadratic convergence.
 
-Numerical algorithms vì vậy là dynamical systems trên approximation state.
+Numerical algorithms vì vậy là dynamical các hệ thống (systems / 시스템들) trên approximation trạng thái (state / 상태).
 
-## 24. Common modeling patterns
+## 24. dùng chung (common / 공통) modeling patterns
 
-Additive update:
+Additive cập nhật (update / 업데이트):
 
 ```math
 x_{n+1}=x_n+c
 ```
 
-→ linear/arithmetic growth.
+→ tuyến tính (linear / 선형)/arithmetic growth.
 
-Multiplicative update:
+Multiplicative cập nhật (update / 업데이트):
 
 ```math
 x_{n+1}=rx_n
@@ -620,7 +623,7 @@ x_{n+1}=rx_n
 
 → exponential/geometric growth.
 
-Feedback update:
+Phản hồi (feedback / 피드백) cập nhật (update / 업데이트):
 
 ```math
 x_{n+1}=F(x_n)
@@ -636,11 +639,11 @@ S_{n+1}=S_n+a_{n+1}
 
 → series/ running totals.
 
-Nhận ra pattern quan trọng hơn nhớ từng formula riêng.
+Nhận ra mẫu (pattern / 패턴) quan trọng hơn nhớ từng formula riêng.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Sequence/recurrence nối:
+Chuỗi (sequence / 시퀀스)/recurrence nối:
 
 ```text
 functions on integers
@@ -655,10 +658,10 @@ functions on integers
 → discrete control
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Sequence là state theo discrete time. Recurrence là transition law. Series là accumulated state. Khi rule additive ta thấy linear behavior; khi multiplicative ta thấy exponential behavior; khi rule feedback nonlinear, stability và fixed points trở thành câu hỏi trung tâm.
+> chuỗi (sequence / 시퀀스) là trạng thái (state / 상태) theo discrete thời gian (time / 시간). Recurrence là chuyển tiếp (transition / 전이) law. Series là accumulated trạng thái (state / 상태). Khi quy tắc (rule / 규칙) additive ta thấy tuyến tính (linear / 선형) hành vi (behavior / 동작); khi multiplicative ta thấy exponential hành vi (behavior / 동작); khi quy tắc (rule / 규칙) phản hồi (feedback / 피드백) nonlinear, stability và fixed points trở thành câu hỏi trung tâm.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 Recursive definition không đồng nghĩa recursive implementation là tốt nhất. `a_n\to0` không đủ để `\sum a_n` converge. Bounded sequence chưa chắc converge. Infinite series là limit của partial sums, không phải hành động “thực hiện vô hạn phép cộng”. Closed form không phải lúc nào cũng computationally superior; numerical stability và cost vẫn matter.

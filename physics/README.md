@@ -1,10 +1,13 @@
 # Thư viện Kiến thức Vật lý
 
-Bộ tài liệu này là một **Knowledge Library về Vật lý**, viết chủ yếu bằng tiếng Việt và tổ chức theo **sự phụ thuộc khái niệm (concept dependency)**. Mục tiêu không phải học thuộc công thức theo cấp độ Beginner → Advanced, mà đi theo chuỗi:
+> **Mạch đọc:** Đọc **Thư viện Kiến thức Vật lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quan hệ phụ thuộc tổng quát** sang **Điểm nối sang Electrical kỹ thuật (engineering / 엔지니어링)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Bộ tài liệu này là một **thư viện kiến thức (knowledge library / 지식 라이브러리) về Vật lý**, viết chủ yếu bằng tiếng Việt và tổ chức theo **sự phụ thuộc khái niệm (concept dependency)**. Mục tiêu không phải học thuộc công thức theo cấp độ Beginner → Advanced, mà đi theo chuỗi:
 
 > hiện tượng → đại lượng đo được → mô hình → quan hệ toán học → suy dẫn → giả định → miền áp dụng → giới hạn → liên kết kiến thức.
 
-Thư viện hiện có **88 file Markdown**, bao phủ nền tảng Vật lý đại cương và core undergraduate, kèm các cầu nối có chọn lọc sang advanced undergraduate/graduate topics. Đây không phải một encyclopedia cho mọi specialization.
+Thư viện hiện có **88 tệp (file / 파일) Markdown**, bao phủ nền tảng Vật lý đại cương và cốt lõi (core / 핵심) undergraduate, kèm các cầu nối có chọn lọc sang advanced undergraduate/graduate topics. Đây không phải một encyclopedia cho mọi specialization.
 
 ## Quan hệ phụ thuộc tổng quát
 
@@ -39,7 +42,20 @@ graph TD
     A --> EXP[Experiment / Signals / Computation / Inference]
 ```
 
-Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và đi theo dependency graph. Nếu học một chủ đề cụ thể, có thể vào thẳng chapter và dùng phần **Knowledge Connection** để quay lại prerequisite hoặc đi tiếp.
+Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và đi theo phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프). Nếu học một chủ đề cụ thể, có thể vào thẳng chapter và dùng phần **liên kết kiến thức (knowledge connection / 지식 연결)** để quay lại prerequisite hoặc đi tiếp.
+
+## Điểm nối sang Electrical kỹ thuật (engineering / 엔지니어링)
+
+Physics dừng ở việc mô tả các định luật và giới hạn tự nhiên. Khi câu hỏi chuyển sang **chọn topology, thiết kế mạch, quản lý timing/power, đóng vòng điều khiển hoặc biến peripheral thành software đặc tả hợp đồng (contract / 계약)**, hãy đi tiếp sang [Electrical Engineering Knowledge Library](../electrical_engineering/README.md). tuyến (route / 경로) cầu nối (bridge / 브리지) là:
+
+```text
+Maxwell / circuits / semiconductor / signal-noise
+→ electronics
+→ digital logic
+→ computer architecture
+→ embedded
+→ software
+```
 
 # Mục lục
 
@@ -192,6 +208,6 @@ Phần cuối giúp kiểm tra dependency, đường đọc và chất lượng 
 
 Thuật ngữ quan trọng ưu tiên dạng `Tên tiếng Việt (English term / 한국어 용어)` tại lần xuất hiện có ý nghĩa đầu tiên. English/Korean được dùng để tra textbook, paper, documentation và tài liệu kỹ thuật, không thay phần giải thích tiếng Việt.
 
-Một chapter core nên làm rõ: câu hỏi vật lý, định nghĩa đại lượng, mô hình và giả định, derivation/reasoning, đơn vị và limiting cases, worked reasoning, miền hiệu lực, failure modes, common misconceptions và knowledge connections.
+Một chapter cốt lõi (core / 핵심) nên làm rõ: câu hỏi vật lý, định nghĩa đại lượng, mô hình và giả định, derivation/lập luận (reasoning / 추론), đơn vị và limiting cases, worked lập luận (reasoning / 추론), miền hiệu lực, thất bại (failure / 실패) modes, dùng chung (common / 공통) misconceptions và kiến thức (knowledge / 지식) connections.
 
 Xem [Coverage Audit](13_connections/02_coverage_audit.md) để theo dõi độ sâu và intentional scope của library.

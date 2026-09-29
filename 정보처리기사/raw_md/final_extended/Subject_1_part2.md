@@ -187,7 +187,7 @@
   - **모바일 제스처 (Mobile Gestures)**: Tap (Chạm), Double Tap, Drag (Kéo), Pan (Di chuyển liên tục), Press (Nhấn giữ), Flick (Vuốt nhanh), Pinch (Phóng to/thu nhỏ bằng 2 ngón).
 - **UI 기본 원칙 (4 Principles)**:
   - **직관성 (Intuitiveness)**: Dễ hiểu, trực quan.
-  - **유효성 (Efficiency)**: Đạt được mục tiêu chính xác.
+  - **유효성 (Effectiveness)**: Đạt được mục tiêu của người dùng một cách chính xác và đầy đủ.
   - **학습성 (Learnability)**: Dễ học.
   - **유연성 (Flexibility)**: Linh hoạt, giảm thiểu lỗi.
   - 💡 **Mẹo ghi nhớ**: T/H/H/N -> **Trực Học Hằng Ngày**
@@ -369,5 +369,4 @@
   - **이벤트 중심 (Event-driven)**: Dựa trên sự kiện (VD: Chuông báo cháy).
   - **변환형 (Transformational)**: Biến đổi dữ liệu (VD: Trình biên dịch - Compiler).
   - **객체 영속형 (Object Persistence)**: Lưu trữ lâu dài (VD: Database Server).
-
 

@@ -1,8 +1,10 @@
 # SOURCES — Nguồn chính thức và chính sách cập nhật
 
+> **Mạch đọc:** Đặt **SOURCES — Nguồn chính thức và chính sách cập nhật** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Pháp luật và pháp chế** sang **국가법령정보센터**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Lần kiểm tra nguồn:** 2026-09-21.
 
-Thư viện này ưu tiên nguồn chính thức của Chính phủ Hàn Quốc, cơ quan tư pháp, cơ quan lập pháp và các tổ chức công có thẩm quyền. Link có thể thay đổi đường dẫn con; khi link con hỏng, hãy vào domain gốc và tìm bằng thuật ngữ Hàn trong file tương ứng.
+Thư viện này ưu tiên nguồn chính thức của Chính phủ Hàn Quốc, cơ quan tư pháp, cơ quan lập pháp và các tổ chức công có thẩm quyền. Link có thể thay đổi đường dẫn con; khi link con hỏng, hãy vào lĩnh vực (domain / 도메인) gốc và tìm bằng thuật ngữ Hàn trong tệp (file / 파일) tương ứng.
 
 ## 1. Pháp luật và pháp chế
 
@@ -29,6 +31,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - Mục đích: giải thích pháp luật theo tình huống đời sống.
 - Lưu ý: chính trang này nêu nội dung giải thích không phải 유권해석/phán quyết có giá trị pháp lý; luôn quay lại luật gốc khi cần.
 
+
+> **Chuyển mạch:** Từ **1. Pháp luật và pháp chế**, ta sang **2. Cấu trúc nhà nước và civic** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 2. Cấu trúc nhà nước và civic
 
 ### 대한민국 국회
@@ -52,6 +57,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - tra trên https://www.law.go.kr/
 - Dùng để kiểm tra các loại chính quyền địa phương và cơ sở pháp lý hiện hành.
 
+
+> **Chuyển mạch:** Từ **2. Cấu trúc nhà nước và civic**, ta sang **3. Tòa án, cảnh sát, công tố** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 3. Tòa án, cảnh sát, công tố
 
 ### 대한민국 법원
@@ -74,7 +82,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 - https://www.police.go.kr/
 - 112: khẩn cấp cảnh sát.
-- 182: police civil service/call center theo thông tin của 경찰청.
+- 182: police civil dịch vụ (service / 서비스)/lời gọi (call / 호출) center theo thông tin của 경찰청.
 
 ### 대검찰청
 
@@ -82,6 +90,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 - https://www.spo.go.kr/
 - Dùng để tra cơ cấu và chức năng công tố.
+
+
+> **Chuyển mạch:** Từ **3. Tòa án, cảnh sát, công tố**, ta sang **4. Hành chính, 민원, khiếu nại** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 4. Hành chính, 민원, khiếu nại
 
@@ -110,6 +121,9 @@ Nguồn đã kiểm tra:
 - 국민신문고 소개 / 고충민원: ACRC, nội dung truy cập 2026-09-21.
 - 온라인 행정심판 안내: ACRC.
 
+
+> **Chuyển mạch:** Từ **4. Hành chính, 민원, khiếu nại**, ta sang **5. Lao động** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 5. Lao động
 
 ### 고용노동부
@@ -128,7 +142,7 @@ Nguồn đã kiểm tra:
 Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.work24.go.kr/
-- Dùng cho: việc làm, 고용보험, hệ thống lao động nước ngoài, policy guides.
+- Dùng cho: việc làm, 고용보험, hệ thống lao động nước ngoài, chính sách (policy / 정책) guides.
 
 Nguồn đã kiểm tra:
 - hướng dẫn 2026 về `외국인근로자 전용보험`;
@@ -158,6 +172,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - Điều 27: 해고사유 등의 서면통지.
 - Điều 28: 부당해고등의 구제신청.
 - Điều 56: 연장·야간·휴일근로 가산.
+
+
+> **Chuyển mạch:** Từ **5. Lao động**, ta sang **6. Nhà ở và đăng ký bất động sản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 6. Nhà ở và đăng ký bất động sản
 
@@ -198,6 +215,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.khug.or.kr/
 - Dùng để kiểm tra sản phẩm 보증 liên quan thuê nhà tại thời điểm thực tế.
 
+
+> **Chuyển mạch:** Từ **6. Nhà ở và đăng ký bất động sản**, ta sang **7. Thuế** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 7. Thuế
 
 ### 국세청
@@ -220,6 +240,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 - https://www.wetax.go.kr/
 - Dùng cho nhiều nghiệp vụ thuế địa phương.
+
+
+> **Chuyển mạch:** Từ **7. Thuế**, ta sang **8. Bảo hiểm xã hội và phúc lợi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Bảo hiểm xã hội và phúc lợi
 
@@ -265,6 +288,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.bokjiro.go.kr/
 - Dùng để tìm chương trình phúc lợi hiện hành.
 
+
+> **Chuyển mạch:** Từ **8. Bảo hiểm xã hội và phúc lợi**, ta sang **9. Người tiêu dùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 9. Người tiêu dùng
 
 ### 한국소비자원
@@ -286,6 +312,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.ftc.go.kr/
+
+
+> **Chuyển mạch:** Từ **9. Người tiêu dùng**, ta sang **10. Tài chính và tín dụng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 10. Tài chính và tín dụng
 
@@ -321,6 +350,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.law.go.kr/
 - Bản kiểm tra: hiệu lực 2026-01-02 trong kết quả hiện hành.
 
+
+> **Chuyển mạch:** Từ **10. Tài chính và tín dụng**, ta sang **11. Xuất nhập cảnh, thường trú và quốc tịch** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 11. Xuất nhập cảnh, thường trú và quốc tịch
 
 ### Hi Korea
@@ -335,7 +367,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
 - https://www.immigration.go.kr/
-- Dùng cho visa guides, policy notices, statistics, office info.
+- Dùng cho visa guides, chính sách (policy / 정책) notices, statistics, office info.
 
 ### 1345 Immigration Contact Center
 
@@ -365,9 +397,12 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.socinet.go.kr/
 - KIIP và chương trình hội nhập.
 
+
+> **Chuyển mạch:** Từ **11. Xuất nhập cảnh, thường trú và quốc tịch**, ta sang **12. Chính sách cập nhật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 12. Chính sách cập nhật
 
-Khi sửa library:
+Khi sửa thư viện (library / 라이브러리):
 
 ```text
 1. giữ nguyên giải thích cơ chế nếu vẫn đúng

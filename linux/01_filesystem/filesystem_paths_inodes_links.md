@@ -1,12 +1,15 @@
 # Hệ thống tệp, đường dẫn, inode và liên kết
 
+> **Mạch đọc:** Đọc **Hệ thống tệp, đường dẫn, inode và liên kết** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ thiết bị lưu trữ khối tới hệ thống tệp** sang **Đường dẫn là cách tìm đối tượng, không phải bản thân dữ liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một trong những lỗi tư duy phổ biến khi học Linux là đồng nhất "tệp" với "tên tệp". Nếu hiểu rằng **đường dẫn (pathname)** chỉ là một tên trong **vùng tên (namespace)** dẫn tới một đối tượng của hệ thống tệp, nhiều hành vi tưởng như kỳ lạ sẽ trở nên hợp lý: một liên kết cứng (hard link) có thể tạo thêm tên cho cùng dữ liệu, đổi tên thường rất nhanh, và một tệp đã `rm` vẫn có thể chiếm dung lượng nếu tiến trình còn mở nó.
 
 ## Từ thiết bị lưu trữ khối tới hệ thống tệp
 
-Ổ đĩa hoặc SSD về cơ bản cung cấp khả năng lưu trữ theo các khối (block). Nếu hệ thống chỉ có số thứ tự khối, ứng dụng phải tự nhớ khối nào thuộc tệp nào, đâu là siêu dữ liệu (metadata), đâu là vùng trống và làm sao phục hồi sau sự cố. **Hệ thống tệp (filesystem / 파일 시스템)** tạo ra một cấu trúc dữ liệu cao hơn để quản lý vùng tên, metadata, phân bổ không gian và tính nhất quán.
+Ổ đĩa hoặc SSD về cơ bản cung cấp khả năng lưu trữ theo các khối (block / 블록). Nếu hệ thống chỉ có số thứ tự khối, ứng dụng phải tự nhớ khối nào thuộc tệp nào, đâu là siêu dữ liệu (metadata / 메타데이터), đâu là vùng trống và làm sao phục hồi sau sự cố. **Hệ thống tệp (filesystem / 파일 시스템)** tạo ra một cấu trúc dữ liệu cao hơn để quản lý vùng tên, siêu dữ liệu (metadata / 메타데이터), phân bổ không gian và tính nhất quán.
 
-Các hệ thống tệp Linux phổ biến gồm ext4 và XFS. Hệ thống tệp không chỉ "chứa tệp"; nó định nghĩa cách các đối tượng, dữ liệu và metadata được tổ chức trên thiết bị lưu trữ.
+Các hệ thống tệp Linux phổ biến gồm ext4 và XFS. Hệ thống tệp không chỉ "chứa tệp"; nó định nghĩa cách các đối tượng, dữ liệu và siêu dữ liệu (metadata / 메타데이터) được tổ chức trên thiết bị lưu trữ.
 
 ## Đường dẫn là cách tìm đối tượng, không phải bản thân dữ liệu
 
@@ -26,11 +29,11 @@ cd /var/log
 less myapp/app.log
 ```
 
-`myapp/app.log` ở đây phụ thuộc vào thư mục hiện tại. Đây là lý do script dùng trong production phải thận trọng với đường dẫn tương đối: cùng một script chạy từ thư mục làm việc khác có thể tác động tới một đối tượng khác.
+`myapp/app.log` ở đây phụ thuộc vào thư mục hiện tại. Đây là lý do script dùng trong môi trường vận hành (production / 운영 환경) phải thận trọng với đường dẫn tương đối: cùng một script chạy từ thư mục làm việc khác có thể tác động tới một đối tượng khác.
 
 ## Inode: danh tính của đối tượng trong hệ thống tệp
 
-Trên nhiều hệ thống tệp kiểu Unix, **`inode` (아이노드)** chứa metadata của đối tượng như loại đối tượng, chủ sở hữu, quyền truy cập, dấu thời gian, kích thước và các tham chiếu tới vùng dữ liệu. Tên tệp không nằm trong `inode` theo cách người mới thường hình dung; **mục thư mục (directory entry)** ánh xạ một tên tới số `inode`.
+Trên nhiều hệ thống tệp kiểu Unix, **`inode` (아이노드)** chứa siêu dữ liệu (metadata / 메타데이터) của đối tượng như loại đối tượng, chủ sở hữu, quyền truy cập, dấu thời gian, kích thước và các tham chiếu tới vùng dữ liệu. Tên tệp không nằm trong `inode` theo cách người mới thường hình dung; **mục thư mục (directory entry)** ánh xạ một tên tới số `inode`.
 
 Có thể quan sát bằng:
 
@@ -101,7 +104,7 @@ Có thể tìm các tệp đã bị xóa tên nhưng vẫn đang được mở:
 sudo lsof +L1
 ```
 
-Đây là một tình huống production rất quan trọng để hiểu mô hình tham chiếu của `inode`. Khởi động lại tiến trình có thể làm tham chiếu được giải phóng, nhưng trước đó cần xác nhận đúng tiến trình và nguyên nhân khiến nhật ký tăng bất thường.
+Đây là một tình huống môi trường vận hành (production / 운영 환경) rất quan trọng để hiểu mô hình tham chiếu của `inode`. Khởi động lại tiến trình có thể làm tham chiếu được giải phóng, nhưng trước đó cần xác nhận đúng tiến trình và nguyên nhân khiến nhật ký tăng bất thường.
 
 ## `df` và `du` trả lời hai câu hỏi khác nhau
 
@@ -172,13 +175,13 @@ Nó cho phép xem quyền của từng thành phần trong đường dẫn.
 
 ## Các dấu thời gian: `mtime`, `ctime`, `atime`
 
-`mtime` phản ánh thời điểm nội dung tệp thay đổi. `ctime` trên Unix không có nghĩa đơn giản là "thời gian tạo"; nó phản ánh thời điểm trạng thái/metadata của `inode` thay đổi. `atime` liên quan thời điểm truy cập và có thể được chính sách của hệ thống tệp tối ưu để tránh phát sinh quá nhiều thao tác ghi.
+`mtime` phản ánh thời điểm nội dung tệp thay đổi. `ctime` trên Unix không có nghĩa đơn giản là "thời gian tạo"; nó phản ánh thời điểm trạng thái/siêu dữ liệu (metadata / 메타데이터) của `inode` thay đổi. `atime` liên quan thời điểm truy cập và có thể được chính sách của hệ thống tệp tối ưu để tránh phát sinh quá nhiều thao tác ghi.
 
 ```bash
 stat file.txt
 ```
 
-Hiểu đúng các dấu thời gian rất quan trọng khi điều tra "tệp bị thay lúc nào". `ctime` thay đổi không nhất thiết có nghĩa nội dung thay đổi; `chmod` hoặc `chown` cũng có thể làm metadata thay đổi.
+Hiểu đúng các dấu thời gian rất quan trọng khi điều tra "tệp bị thay lúc nào". `ctime` thay đổi không nhất thiết có nghĩa nội dung thay đổi; `chmod` hoặc `chown` cũng có thể làm siêu dữ liệu (metadata / 메타데이터) thay đổi.
 
 ## Cạn kiệt inode
 
@@ -204,6 +207,8 @@ Một ứng dụng tạo hàng triệu tệp rất nhỏ có thể gây tình hu
 
 ## Kết nối kiến thức
 
-Chỉ mục cơ sở dữ liệu và cặp thư mục/`inode` của hệ thống tệp không phải cùng một cấu trúc dữ liệu, nhưng có một điểm chung đáng chú ý: cả hai đều tách **khóa tra cứu logic** khỏi **vị trí dữ liệu vật lý**. Ứng dụng dùng đường dẫn; hệ thống tệp chịu trách nhiệm phân giải và xác định đối tượng thực tế. Lớp trừu tượng này cho phép bố trí lưu trữ thay đổi mà ứng dụng không cần biết sector cụ thể.
+Chỉ mục cơ sở dữ liệu và cặp thư mục/`inode` của hệ thống tệp không phải cùng một cấu trúc dữ liệu, nhưng có một điểm chung đáng chú ý: cả hai đều tách **khóa tra cứu lô-gic (logic / 논리)** khỏi **vị trí dữ liệu vật lý**. Ứng dụng dùng đường dẫn; hệ thống tệp chịu trách nhiệm phân giải và xác định đối tượng thực tế. Lớp trừu tượng này cho phép bố trí lưu trữ thay đổi mà ứng dụng không cần biết sector cụ thể.
 
 Mô hình hệ thống tệp dẫn trực tiếp tới [Tệp, luồng dữ liệu và bộ mô tả tệp](./files_streams_descriptors.md), nơi câu hỏi chuyển từ "đối tượng nằm ở đâu trong vùng tên?" sang "tiến trình đang giữ và thực hiện I/O với đối tượng bằng cách nào?".
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [files streams descriptors](./files_streams_descriptors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

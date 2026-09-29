@@ -1,10 +1,13 @@
 # Giám sát và Khả năng Quan sát cho Hệ thống AI
 
-AI production cần quan sát đồng thời **hành vi hệ thống (system behavior)** và **hành vi mô hình (model behavior)**. Dịch vụ có thể trả HTTP 200 rất nhanh nhưng chất lượng dự đoán đã hỏng; ngược lại chất lượng mô hình có thể tốt nhưng độ trễ p99 không đạt SLO. Vì vậy giám sát AI phải nối kỹ thuật độ tin cậy với giám sát thống kê.
+> **Mạch đọc:** Đặt **Giám sát và Khả năng Quan sát cho Hệ thống AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Giám sát và Khả năng quan sát khác nhau thế nào?** sang **Bốn nhóm tín hiệu chính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+AI môi trường vận hành (production / 운영 환경) cần quan sát đồng thời **hành vi hệ thống (system behavior)** và **hành vi mô hình (model behavior)**. Dịch vụ có thể trả HTTP 200 rất nhanh nhưng chất lượng dự đoán đã hỏng; ngược lại chất lượng mô hình có thể tốt nhưng độ trễ p99 không đạt SLO. Vì vậy giám sát AI phải nối kỹ thuật độ tin cậy với giám sát thống kê.
 
 ## Giám sát và Khả năng quan sát khác nhau thế nào?
 
-**Giám sát (monitoring / 모니터링)** theo dõi các chỉ số và cảnh báo đã biết trước. **Khả năng quan sát (observability / 관측 가능성)** giúp suy ra trạng thái nội bộ từ log, metric và trace khi lỗi chưa được dự đoán trước.
+**Giám sát (monitoring / 모니터링)** theo dõi các chỉ số và cảnh báo đã biết trước. **khả năng quan sát (observability / 관측 가능성)** giúp suy ra trạng thái nội bộ từ log, chỉ số (metric / 지표) và dấu vết (trace / 추적) khi lỗi chưa được dự đoán trước.
 
 ## Bốn nhóm tín hiệu chính
 
@@ -24,11 +27,11 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 - tốc độ request;
 - tỷ lệ lỗi;
 - độ trễ p50/p95/p99;
-- thời gian chờ queue;
+- thời gian chờ hàng đợi (queue / 큐);
 - mức sử dụng CPU/GPU;
-- bộ nhớ/KV cache;
-- throughput;
-- timeout/retry.
+- bộ nhớ/KV bộ nhớ đệm (cache / 캐시);
+- thông lượng (throughput / 처리량);
+- hết thời gian chờ (timeout / 타임아웃)/thử lại (retry / 재시도).
 
 ### Chỉ số dữ liệu
 
@@ -48,10 +51,10 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 - phân phối score hoặc prediction;
 - confidence/calibration;
-- cân bằng class;
+- cân bằng lớp (class / 클래스);
 - tỷ lệ abstention/fallback;
-- độ dài output;
-- tính hợp lệ của output có cấu trúc.
+- độ dài đầu ra (output / 출력);
+- tính hợp lệ của đầu ra (output / 출력) có cấu trúc.
 
 ### Chỉ số kết quả
 
@@ -66,15 +69,15 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 
 Kết quả thường đến trễ nhưng là tín hiệu quan trọng nhất vì nó gần mục tiêu thực tế nhất.
 
-## Metric, Log và Trace
+## Chỉ số (metric / 지표), Log và dấu vết (trace / 추적)
 
-**Metric** là chuỗi thời gian số đã được tổng hợp.
+**chỉ số (metric / 지표)** là chuỗi thời gian số đã được tổng hợp.
 
 **Log** giữ chi tiết sự kiện.
 
-**Trace phân tán (distributed trace)** nối một request xuyên qua gateway, retrieval, model, tool và database.
+**dấu vết (trace / 추적) phân tán (distributed trace)** nối một yêu cầu (request / 요청) xuyên qua gateway, retrieval, mô hình (model / 모델), công cụ (tool / 도구) và cơ sở dữ liệu (database / 데이터베이스).
 
-Workflow AI có nhiều giai đoạn nên tracing rất quan trọng để xác định độ trễ hoặc lỗi xuất phát từ component nào.
+Workflow AI có nhiều giai đoạn nên tracing rất quan trọng để xác định độ trễ hoặc lỗi xuất phát từ thành phần (component / 컴포넌트) nào.
 
 ## Khả năng quan sát cho LLM
 
@@ -93,18 +96,18 @@ kết quả verification
 ước tính chi phí
 ```
 
-Prompt hoặc context có thể chứa dữ liệu nhạy cảm; không nên log nội dung thô theo mặc định. Có thể dùng redaction, hashing hoặc chính sách lấy mẫu phù hợp.
+Prompt hoặc ngữ cảnh (context / 맥락) có thể chứa dữ liệu nhạy cảm; không nên log nội dung thô theo mặc định. Có thể dùng redaction, hashing hoặc chính sách lấy mẫu phù hợp.
 
 ## Đo chất lượng khi chưa có Nhãn ngay lập tức
 
-Nhiều tác vụ production không có ground truth ngay. Có thể dùng tín hiệu thay thế như:
+Nhiều tác vụ môi trường vận hành (production / 운영 환경) không có ground truth ngay. Có thể dùng tín hiệu thay thế như:
 
-- distribution shift;
-- mẫu được human review;
+- phân phối (distribution / 분포) shift;
+- mẫu được human rà soát (review / 검토);
 - verifier check;
 - kết quả nghiệp vụ;
 - delayed label;
-- user correction.
+- người dùng (user / 사용자) correction.
 
 Proxy không nên được coi là chỉ số chất lượng thật nếu mối liên hệ với chất lượng chưa được kiểm chứng.
 
@@ -122,7 +125,7 @@ invalid JSON output tăng đột biến
 chi phí/request tăng gấp đôi
 ```
 
-## Golden Signal cho Model Serving
+## Golden tín hiệu (signal / 신호) cho mô hình (model / 모델) Serving
 
 Có thể bắt đầu bằng:
 
@@ -139,11 +142,11 @@ sau đó bổ sung tín hiệu mô hình và tín hiệu dữ liệu.
 
 Chỉ số tổng hợp có thể che lỗi của một subgroup. Nên theo dõi các lát dữ liệu có ý nghĩa như vùng, thiết bị, ngôn ngữ, phân khúc khách hàng hoặc loại tài liệu.
 
-Nhưng quá nhiều slice gây nhiễu và bài toán so sánh nhiều lần; nên chọn slice dựa trên rủi ro và use case.
+Nhưng quá nhiều slice gây nhiễu và bài toán so sánh nhiều lần; nên chọn slice dựa trên rủi ro và use trường hợp (case / 사례).
 
 ## Phân phối tham chiếu
 
-Giám sát drift cần một cửa sổ tham chiếu. Tham chiếu có thể là dữ liệu huấn luyện, validation hoặc một giai đoạn production ổn định gần đây. Mỗi lựa chọn trả lời một câu hỏi khác nhau.
+Giám sát drift cần một cửa sổ tham chiếu. Tham chiếu có thể là dữ liệu huấn luyện, kiểm tra hợp lệ (validation / 검증) hoặc một giai đoạn môi trường vận hành (production / 운영 환경) ổn định gần đây. Mỗi lựa chọn trả lời một câu hỏi khác nhau.
 
 ## Chất lượng dữ liệu và Chất lượng mô hình
 
@@ -151,13 +154,13 @@ Phân phối đầu vào thay đổi không chứng minh hiệu năng mô hình 
 
 ## Vòng phản hồi
 
-Output mô hình có thể làm thay đổi dữ liệu được quan sát về sau. Hệ thống gợi ý chỉ thấy click trên những item nó đã hiển thị. Vì vậy monitoring cần hiểu dữ liệu phụ thuộc policy như thế nào.
+Đầu ra (output / 출력) mô hình có thể làm thay đổi dữ liệu được quan sát về sau. Hệ thống gợi ý chỉ thấy click trên những item nó đã hiển thị. Vì vậy monitoring cần hiểu dữ liệu phụ thuộc chính sách (policy / 정책) như thế nào.
 
-## SLO, SLA và Error Budget
+## SLO, SLA và lỗi (error / 오류) ngân sách (budget / 예산)
 
-SLO là mục tiêu nội bộ, SLA là cam kết với bên ngoài. Ngân sách lỗi (error budget) định lượng mức failure hệ thống chấp nhận được.
+SLO là mục tiêu nội bộ, SLA là cam kết với bên ngoài. Ngân sách lỗi (error budget) định lượng mức thất bại (failure / 실패) hệ thống chấp nhận được.
 
-Quality SLO của AI khó định nghĩa hơn latency SLO vì nhãn có thể đến trễ hoặc mang tính chủ quan, nhưng vẫn cần contract đo được.
+Chất lượng (quality / 품질) SLO của AI khó định nghĩa hơn độ trễ (latency / 지연 시간) SLO vì nhãn có thể đến trễ hoặc mang tính chủ quan, nhưng vẫn cần đặc tả hợp đồng (contract / 계약) đo được.
 
 ## Khả năng quan sát về Chi phí
 
@@ -175,9 +178,9 @@ Nếu chỉ nhìn hóa đơn hàng tháng, rất khó biết phần nào cần t
 
 ## Khả năng quan sát có nhận thức về Quyền riêng tư
 
-Log cũng là một kho dữ liệu. Cần retention, kiểm soát truy cập, mã hóa và redaction. Prompt hoặc kết quả tool nhạy cảm không nên bị sao chép vô hạn vào trace.
+Log cũng là một kho dữ liệu. Cần retention, kiểm soát truy cập, mã hóa và redaction. Prompt hoặc kết quả công cụ (tool / 도구) nhạy cảm không nên bị sao chép vô hạn vào dấu vết (trace / 추적).
 
-## Ví dụ điều tra Incident
+## Ví dụ điều tra sự cố (incident / 인시던트)
 
 Triệu chứng: chất lượng câu trả lời giảm.
 
@@ -210,11 +213,11 @@ Khả năng quan sát giúp giải thích sai ở đâu và vì sao.
 
 Không. Sức khỏe dịch vụ không đồng nghĩa độ đúng của tác vụ.
 
-### “Log toàn bộ prompt để debug cho dễ”
+### “Log toàn bộ prompt để gỡ lỗi (debug / 디버그) cho dễ”
 
 Không nên mặc định như vậy vì rủi ro quyền riêng tư và bảo mật lớn.
 
-### “Drift metric tăng thì retrain ngay”
+### “Drift chỉ số (metric / 지표) tăng thì retrain ngay”
 
 Không. Drift cần được diễn giải cùng kết quả và hiệu năng.
 

@@ -1,5 +1,7 @@
 # Chất khí — từ chuyển động phân tử tới khí thực
 
+> **Mạch đọc:** Đọc **Chất khí — từ chuyển động phân tử tới khí thực** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ hiện tượng vĩ mô tới mô hình vi mô** sang **Bốn biến trạng thái cơ bản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Chất khí (gas / 기체)** là trạng thái vật chất trong đó khoảng cách trung bình giữa các hạt thường lớn hơn nhiều kích thước riêng của chúng và các hạt chuyển động liên tục trong không gian. Vì vậy khí dễ nén, nhanh chóng lấp đầy bình chứa và thể hiện rất rõ mối liên hệ giữa chuyển động vi mô với các đại lượng vĩ mô như áp suất, nhiệt độ và thể tích.
 
 Chương này bắt đầu từ mô hình khí lý tưởng để xây trực giác, sau đó mở rộng sang phân bố vận tốc, va chạm phân tử, khí hỗn hợp, khuếch tán và cuối cùng là khí thực. Mục tiêu không phải học thuộc nhiều công thức khí, mà hiểu chúng là các lớp mô hình có phạm vi áp dụng khác nhau.
@@ -56,7 +58,7 @@ R=0.082057\;\mathrm{L\,atm\,mol^{-1}\,K^{-1}}
 Nếu giữ \(n\) và \(T\) không đổi:
 
 \[
-PV=\text{hằng số}
+PV=\văn bản (text / 텍스트){hằng số}
 \]
 
 nên:
@@ -231,7 +233,7 @@ Khi kích thước thiết bị gần với quãng đường tự do trung bình
 
 ## Khuếch tán không đơn giản là phân tử bay thẳng từ nơi cao tới nơi thấp
 
-**Khuếch tán (diffusion / 확산)** xuất hiện từ chuyển động nhiệt ngẫu nhiên. Ở cấp từng phân tử, quỹ đạo là một chuỗi ngẫu nhiên của nhiều va chạm; ở cấp tập thể, dòng ròng xuất hiện theo gradient nồng độ.
+**Khuếch tán (diffusion / 확산)** xuất hiện từ chuyển động nhiệt ngẫu nhiên. Ở cấp từng phân tử, quỹ đạo là một chuỗi ngẫu nhiên của nhiều va chạm; ở cấp tập thể, dòng ròng xuất hiện theo độ dốc (gradient / 기울기) nồng độ.
 
 Định luật Fick mô tả gần đúng:
 
@@ -466,7 +468,7 @@ Xem thêm: [Hóa học khí quyển](../16_environmental_chemistry/00_atmospheri
 
 Nhưng không phải mọi va chạm đều gây phản ứng. Ngoài năng lượng đủ lớn, cấu hình va chạm và bề mặt thế năng cũng quan trọng.
 
-Do đó chuỗi reasoning là:
+Do đó chuỗi lập luận (reasoning / 추론) là:
 
 ```text
 nhiệt độ
@@ -568,3 +570,5 @@ chuyển động phân tử
 Khí lý tưởng là giới hạn nền rất mạnh. Khí thực xuất hiện khi kích thước phân tử, lực tương tác và dao động mật độ không còn có thể bỏ qua.
 
 Từ đây có thể chuyển sang [Chất lỏng](./01_liquids.md), nơi các hạt ở gần nhau đến mức tương tác liên phân tử trở thành yếu tố trung tâm.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 liquids](./01_liquids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

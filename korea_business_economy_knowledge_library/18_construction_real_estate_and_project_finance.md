@@ -1,5 +1,8 @@
 # Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)
 
+> **Mạch đọc:** Đặt **Xây dựng, bất động sản và tài trợ dự án tại Hàn Quốc (Construction, Real Estate & PF / 건설·부동산·프로젝트 파이낸싱)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lịch sử: xây dựng là hạ tầng của công nghiệp hóa** sang **Ai là ai trong một dự án phát triển bất động sản?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Xây dựng và bất động sản là nơi bảng cân đối của hộ gia đình, giá đất, lãi suất, vốn ngân hàng–chứng khoán và các nhà thầu lớn gặp nhau. Vì ngành dùng đòn bẩy cao và dự án kéo dài nhiều năm, một vấn đề ở một dự án có thể truyền sang chủ đầu tư, nhà thầu, bên cho vay, công ty chứng khoán, nhà cung cấp và kinh tế địa phương.
 
 Điểm đầu tiên cần nhớ: **chủ đầu tư, nhà thầu xây dựng, bên cho vay và chủ sở hữu bất động sản không phải một**. Nhiều tin tức trở nên dễ hiểu ngay khi tách đúng vai trò.
@@ -20,7 +23,7 @@ Bài học lịch sử là xây dựng vừa là một ngành kinh doanh vừa l
 
 **Nhà thầu xây dựng (contractor / 시공사)** thi công theo hợp đồng và hưởng biên lợi nhuận xây dựng.
 
-**Tổ chức tài chính (lender / 금융기관)** như ngân hàng, công ty chứng khoán, ngân hàng tiết kiệm, bảo hiểm hoặc quỹ cung cấp bridge loan hoặc vốn PF.
+**Tổ chức tài chính (lender / 금융기관)** như ngân hàng, công ty chứng khoán, ngân hàng tiết kiệm, bảo hiểm hoặc quỹ cung cấp cầu nối (bridge / 브리지) loan hoặc vốn PF.
 
 **Người mua hoặc người thuê** tạo dòng tiền thông qua tiền đặt mua trước, tiền bán hoặc tiền thuê.
 
@@ -61,13 +64,13 @@ Trả nợ / thoái vốn
 
 Rủi ro cao nhất ở giai đoạn đầu vì quyền sử dụng đất, giấy phép, nguồn vốn chính và nhu cầu chưa chắc chắn. Khi dự án vượt qua từng mốc, rủi ro có thể giảm và chi phí tài trợ cũng có thể thấp hơn.
 
-## Bridge loan: vốn ngắn hạn trước khi dự án được giảm rủi ro đầy đủ
+## Cầu nối (bridge / 브리지) loan: vốn ngắn hạn trước khi dự án được giảm rủi ro đầy đủ
 
-**Bridge loan (브릿지론)** tài trợ mua đất hoặc giai đoạn đầu trước khi có đầy đủ giấy phép, presale hoặc PF chính.
+**cầu nối (bridge / 브리지) loan (브릿지론)** tài trợ mua đất hoặc giai đoạn đầu trước khi có đầy đủ giấy phép, presale hoặc PF chính.
 
 Đặc điểm thường là kỳ hạn ngắn, lãi suất cao hơn, phụ thuộc mạnh vào tái cấp vốn và mức bất định dự án lớn hơn.
 
-Rủi ro cốt lõi là **rủi ro tái cấp vốn (refinancing risk)**. Dự án có thể khả thi dài hạn nhưng vẫn thất bại nếu bridge loan đáo hạn trước khi 본PF được thu xếp.
+Rủi ro cốt lõi là **rủi ro tái cấp vốn (refinancing risk)**. Dự án có thể khả thi dài hạn nhưng vẫn thất bại nếu cầu nối (bridge / 브리지) loan đáo hạn trước khi 본PF được thu xếp.
 
 Đây là cùng nguyên tắc chênh lệch kỳ hạn trong tài chính doanh nghiệp.
 
@@ -79,7 +82,7 @@ Nhưng được phê duyệt 본PF không có nghĩa dự án hết rủi ro. Ch
 
 Rủi ro chỉ chuyển hình thức theo từng giai đoạn.
 
-## Project Finance: nợ dựa vào kinh tế của chính dự án
+## Dự án (project / 프로젝트) Finance: nợ dựa vào kinh tế của chính dự án
 
 Về khái niệm:
 
@@ -108,7 +111,7 @@ LTV = \frac{Nợ}{Giá\ trị\ tài\ sản\ bảo\ đảm}
 LTC = \frac{Nợ}{Tổng\ chi\ phí\ phát\ triển}
 \]
 
-Với tài sản cho thuê đã ổn định, **DSCR (Debt Service Coverage Ratio)**:
+Với tài sản cho thuê đã ổn định, **DSCR (Debt service Coverage Ratio)**:
 
 \[
 DSCR = \frac{Dòng\ tiền\ khả\ dụng\ để\ trả\ nợ}{Gốc + Lãi\ đến\ hạn}
@@ -177,27 +180,27 @@ Khoản trả nợ mua nhà tăng làm sức mua yếu đi; chi phí lãi PF tă
 
 Do đó cùng một cú sốc lãi suất có thể đánh đồng thời vào cầu, dòng tiền và giá trị tài sản bảo đảm.
 
-## Cap rate và bất động sản tạo thu nhập
+## Cap tỷ lệ (rate / 비율) và bất động sản tạo thu nhập
 
 Với tài sản cho thuê ổn định:
 
 \[
 Giá\ trị\ bất\ động\ sản
 \approx
-\frac{NOI}{Cap\ Rate}
+\frac{NOI}{Cap\ tỷ lệ (rate / 비율)}
 \]
 
-Nếu NOI năm = 4 và cap rate = 4%, giá trị xấp xỉ 100. Nếu cap rate tăng lên 5%, cùng NOI chỉ tương đương giá trị khoảng 80.
+Nếu NOI năm = 4 và cap tỷ lệ (rate / 비율) = 4%, giá trị xấp xỉ 100. Nếu cap tỷ lệ (rate / 비율) tăng lên 5%, cùng NOI chỉ tương đương giá trị khoảng 80.
 
-Một thay đổi nhỏ của cap rate có thể tạo thay đổi giá trị rất lớn. Đó là lý do office/logistics REIT nhạy với lãi suất dù tiền thuê hiện tại tương đối ổn định.
+Một thay đổi nhỏ của cap tỷ lệ (rate / 비율) có thể tạo thay đổi giá trị rất lớn. Đó là lý do office/logistics REIT nhạy với lãi suất dù tiền thuê hiện tại tương đối ổn định.
 
 ## Bất động sản phát triển khác bất động sản cho thuê/REIT
 
 Dự án phát triển kiếm lợi nhuận bằng cách tạo ra và bán tài sản. Bất động sản cho thuê tạo tiền từ tiền thuê định kỳ và giá trị cuối kỳ.
 
-Nhà đầu tư REIT quan tâm occupancy, tăng tiền thuê, lịch hết hạn hợp đồng, chi phí vốn, cap rate và payout.
+Nhà đầu tư REIT quan tâm occupancy, tăng tiền thuê, lịch hết hạn hợp đồng, chi phí vốn, cap tỷ lệ (rate / 비율) và payout.
 
-Không nên dùng logic dự án chung cư cho office REIT hoặc ngược lại.
+Không nên dùng lô-gic (logic / 논리) dự án chung cư cho office REIT hoặc ngược lại.
 
 ## Backlog xây dựng: quy mô chưa đủ
 
@@ -223,7 +226,7 @@ Nếu chúng tăng nhanh hơn doanh thu trong thời gian dài, cần kiểm tra
 
 Dòng tiền chuyển đổi rất quan trọng.
 
-## Giá đất và logic giá trị còn lại
+## Giá đất và lô-gic (logic / 논리) giá trị còn lại
 
 Chủ đầu tư thường tính mức giá đất có thể trả từ giá trị dự án cuối trừ toàn bộ chi phí và lợi nhuận yêu cầu.
 
@@ -247,7 +250,7 @@ Giá cao kích hoạt nhiều dự án, nhưng nguồn cung chỉ đến sau —
 
 ## Hàn Quốc không phải một thị trường nhà ở duy nhất
 
-Seoul lõi, vùng 수도권, thành phố công nghiệp và địa phương tỉnh có việc làm, di cư, hình thành hộ gia đình, hạn chế đất, lượng 미분양 và pipeline cung khác nhau.
+Seoul lõi, vùng 수도권, thành phố công nghiệp và địa phương tỉnh có việc làm, di cư, hình thành hộ gia đình, hạn chế đất, lượng 미분양 và chuỗi xử lý (pipeline / 파이프라인) cung khác nhau.
 
 Giá trung bình toàn quốc có thể che giấu việc một nơi tăng nóng trong khi nơi khác căng thẳng. Danh mục dự án của công ty phải được lập bản đồ theo địa lý.
 
@@ -301,11 +304,11 @@ Tỷ lệ nợ thấp chưa đủ nếu sổ bảo lãnh lớn.
 
 ## Cách phân tích một dự án bất động sản
 
-Hãy hỏi giá đất, tổng chi phí phát triển, tỷ lệ nợ/vốn chủ, kỳ hạn bridge, 본PF đã có chưa, giả định presale/cho thuê, giá bán hòa vốn, bên bảo lãnh, địa lý–nhân khẩu học và kế hoạch thoái vốn/tái cấp vốn.
+Hãy hỏi giá đất, tổng chi phí phát triển, tỷ lệ nợ/vốn chủ, kỳ hạn cầu nối (bridge / 브리지), 본PF đã có chưa, giả định presale/cho thuê, giá bán hòa vốn, bên bảo lãnh, địa lý–nhân khẩu học và kế hoạch thoái vốn/tái cấp vốn.
 
 Nếu nhiều câu trả lời cùng phụ thuộc vào một giả định lạc quan, rủi ro đang chồng lên nhau.
 
-## Stress test
+## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Có thể thử kịch bản:
 
@@ -320,7 +323,7 @@ Sau đó tính lại giá trị còn lại, nhu cầu vốn và khả năng bả
 
 PF thường thất bại vì **nhiều sai lệch nhỏ cộng lại**, không nhất thiết vì một biến duy nhất sụp đổ.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > PF là cỗ máy **thời điểm + đòn bẩy + tài sản bảo đảm + doanh thu tương lai**. Trong kịch bản tốt, đòn bẩy khuếch đại lợi suất vốn chủ; trong kịch bản xấu, chính đòn bẩy biến chậm tiến độ và giảm giá vừa phải thành khủng hoảng tái cấp vốn.
 
@@ -357,3 +360,5 @@ Trả nợ
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) và [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

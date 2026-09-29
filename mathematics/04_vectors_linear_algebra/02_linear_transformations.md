@@ -1,6 +1,9 @@
-# Phép biến đổi tuyến tính: cấu trúc, basis và information flow
+# Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)
 
-Phép biến đổi tuyến tính (linear transformation / 선형변환) là một mapping giữa hai vector spaces bảo toàn cách chúng ta cộng vectors và scale bằng scalars. Formal definition thường được viết ngay:
+> **Mạch đọc:** Đọc **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ basis đến toàn bộ transformation** sang **Vì sao ma trận (matrix / 행렬) biểu diễn (representation / 표현) phụ thuộc basis?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Phép biến đổi tuyến tính (linear transformation / 선형변환) là một ánh xạ (mapping / 매핑) giữa hai véc-tơ (vector / 벡터) spaces bảo toàn cách chúng ta cộng vectors và quy mô (scale / 규모) bằng scalars. Formal definition thường được viết ngay:
 
 ```math
 T(u+v)=T(u)+T(v),
@@ -10,9 +13,9 @@ T(u+v)=T(u)+T(v),
 T(cu)=cT(u).
 ```
 
-Nhưng intuition nên đến trước: **linearity nghĩa là transformation tôn trọng superposition**. Nếu một state được tạo bằng cách trộn các components theo weights nào đó, thì transform whole state tương đương transform từng component rồi trộn lại với chính weights đó.
+Nhưng intuition nên đến trước: **linearity nghĩa là transformation tôn trọng superposition**. Nếu một trạng thái (state / 상태) được tạo bằng cách trộn các components theo weights nào đó, thì transform whole trạng thái (state / 상태) tương đương transform từng thành phần (component / 컴포넌트) rồi trộn lại với chính weights đó.
 
-Đây là lý do linear models rất mạnh. Ta không cần biết transformation làm gì với vô số vectors; chỉ cần biết nó làm gì với một basis.
+Đây là lý do tuyến tính (linear / 선형) các mô hình (models / 모델들) rất mạnh. Ta không cần biết transformation làm gì với vô số vectors; chỉ cần biết nó làm gì với một basis.
 
 ## Từ basis đến toàn bộ transformation
 
@@ -22,21 +25,21 @@ Giả sử `V` có basis
 v_1,\ldots,v_n.
 ```
 
-Mọi vector `x` viết duy nhất thành
+Mọi véc-tơ (vector / 벡터) `x` viết duy nhất thành
 
 ```math
 x=c_1v_1+\cdots+c_nv_n.
 ```
 
-Nếu `T` linear thì
+Nếu `T` tuyến tính (linear / 선형) thì
 
 ```math
 T(x)=c_1T(v_1)+\cdots+c_nT(v_n).
 ```
 
-Vì vậy toàn bộ behavior của `T` được quyết định bởi images của basis vectors. Đây là lý do finite-dimensional linear transformation có thể được lưu bằng một matrix.
+Vì vậy toàn bộ hành vi (behavior / 동작) của `T` được quyết định bởi images của basis vectors. Đây là lý do finite-dimensional tuyến tính (linear / 선형) transformation có thể được lưu bằng một ma trận (matrix / 행렬).
 
-Nếu dùng standard basis `e_1,...,e_n`, column thứ `j` của matrix `A` chính là
+Nếu dùng tiêu chuẩn (standard / 표준) basis `e_1,...,e_n`, column thứ `j` của ma trận (matrix / 행렬) `A` chính là
 
 ```math
 Ae_j.
@@ -44,13 +47,13 @@ Ae_j.
 
 Nói cách khác, columns không phải những con số tùy ý: chúng cho biết từng coordinate axis bị gửi đi đâu.
 
-## Vì sao matrix representation phụ thuộc basis?
+## Vì sao ma trận (matrix / 행렬) biểu diễn (representation / 표현) phụ thuộc basis?
 
-Transformation là object abstract; matrix chỉ là representation của nó dưới một pair of bases cụ thể.
+Transformation là đối tượng (object / 객체) abstract; ma trận (matrix / 행렬) chỉ là biểu diễn (representation / 표현) của nó dưới một pair of bases cụ thể.
 
-Một vector vật lý có thể giống nhau nhưng coordinates thay đổi khi đổi basis. Tương tự, cùng transformation `T` có matrix `A` trong basis này và matrix `B` trong basis khác.
+Một véc-tơ (vector / 벡터) vật lý có thể giống nhau nhưng coordinates thay đổi khi đổi basis. Tương tự, cùng transformation `T` có ma trận (matrix / 행렬) `A` trong basis này và ma trận (matrix / 행렬) `B` trong basis khác.
 
-Nếu `P` là change-of-basis matrix phù hợp thì thường xuất hiện relation
+Nếu `P` là change-of-basis ma trận (matrix / 행렬) phù hợp thì thường xuất hiện quan hệ (relation / 관계)
 
 ```math
 B=P^{-1}AP.
@@ -58,11 +61,11 @@ B=P^{-1}AP.
 
 Hai matrices này look khác nhau nhưng represent cùng operator.
 
-Đây là reason eigenbasis, PCA basis hay Fourier basis quan trọng: chúng không thay đổi underlying object; chúng chọn coordinate system khiến operator hoặc data structure dễ nhìn hơn.
+Đây là reason eigenbasis, PCA basis hay Fourier basis quan trọng: chúng không thay đổi underlying đối tượng (object / 객체); chúng chọn coordinate hệ thống (system / 시스템) khiến operator hoặc cấu trúc dữ liệu (data structure / 자료구조) dễ nhìn hơn.
 
-## Worked example — rotation như linear transformation
+## Worked example — rotation như tuyến tính (linear / 선형) transformation
 
-Rotation 2D góc `\theta` có matrix
+Rotation 2D góc `\theta` có ma trận (matrix / 행렬)
 
 ```math
 R(\theta)=
@@ -72,7 +75,7 @@ R(\theta)=
 \end{bmatrix}.
 ```
 
-Tại sao columns có form đó? Vì standard basis vectors
+Tại sao columns có form đó? Vì tiêu chuẩn (standard / 표준) basis vectors
 
 ```math
 e_1=(1,0),\qquad e_2=(0,1)
@@ -88,17 +91,17 @@ T(e_1)=(\cos\theta,\sin\theta),
 T(e_2)=(-\sin\theta,\cos\theta).
 ```
 
-Đặt hai images đó làm columns, ta nhận matrix rotation. Đây là cách derive matrix từ action on basis, không cần học thuộc.
+Đặt hai images đó làm columns, ta nhận ma trận (matrix / 행렬) rotation. Đây là cách derive ma trận (matrix / 행렬) từ hành động (action / 동작) on basis, không cần học thuộc.
 
 ## Kernel: directions nào bị mất?
 
-Kernel hoặc null space là
+Kernel hoặc null không gian (space / 공간) là
 
 ```math
 \ker T=\{x:T(x)=0\}.
 ```
 
-Nếu tồn tại nonzero `x` trong kernel, transformation đã collapse direction đó thành zero. Khi đó hai inputs khác nhau có thể tạo cùng output:
+Nếu tồn tại nonzero `x` trong kernel, transformation đã collapse direction đó thành zero. Khi đó hai inputs khác nhau có thể tạo cùng đầu ra (output / 출력):
 
 ```math
 T(u)=T(v)
@@ -106,7 +109,7 @@ T(u)=T(v)
 T(u-v)=0.
 ```
 
-Nếu kernel chỉ có zero vector, transformation injective.
+Nếu kernel chỉ có zero véc-tơ (vector / 벡터), transformation injective.
 
 Kernel vì vậy là **information-loss subspace**.
 
@@ -118,29 +121,29 @@ T(x,y,z)=(x,y,0)
 
 có kernel là toàn bộ z-axis. Mọi khác biệt chỉ theo `z` bị projection xóa hoàn toàn.
 
-## Image: outputs nào reachable?
+## Ảnh (image / 이미지): outputs nào reachable?
 
-Image là
+Ảnh (image / 이미지) là
 
 ```math
 \operatorname{Im}T=\{T(x):x\in V\}.
 ```
 
-Trong matrix form, image là column space. Nếu `A:R^n\to R^m`, equation
+Trong ma trận (matrix / 행렬) form, ảnh (image / 이미지) là column không gian (space / 공간). Nếu `A:R^n\to R^m`, equation
 
 ```math
 Ax=b
 ```
 
-có solution khi và chỉ khi `b` nằm trong image của transformation.
+có solution khi và chỉ khi `b` nằm trong ảnh (image / 이미지) của transformation.
 
-Rank chính là dimension của image:
+Rank chính là dimension của ảnh (image / 이미지):
 
 ```math
 \operatorname{rank}(T)=\dim(\operatorname{Im}T).
 ```
 
-Nó đo số independent output directions mà transformation có thể tạo.
+Nó đo số independent đầu ra (output / 출력) directions mà transformation có thể tạo.
 
 ## Rank-nullity: accounting của degrees of freedom
 
@@ -152,7 +155,7 @@ Với finite-dimensional `V`:
 \operatorname{rank}T+\operatorname{nullity}T.
 ```
 
-Đây không chỉ là formula. Nó nói mỗi input degree of freedom rơi vào một trong hai loại: hoặc vẫn ảnh hưởng tới output, hoặc bị collapse vào kernel.
+Đây không chỉ là formula. Nó nói mỗi đầu vào (input / 입력) degree of freedom rơi vào một trong hai loại: hoặc vẫn ảnh hưởng tới đầu ra (output / 출력), hoặc bị collapse vào kernel.
 
 Ví dụ map từ `R^3` xuống plane bằng projection có rank 2 và nullity 1:
 
@@ -162,19 +165,19 @@ Ví dụ map từ `R^3` xuống plane bằng projection có rank 2 và nullity 1
 
 Một dimension bị mất, hai dimensions sống sót.
 
-## Injective, surjective và invertible dưới góc nhìn geometry
+## Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)
 
 Nếu `T:V\to W`:
 
-- injective nghĩa không có information direction bị mất;
-- surjective nghĩa mọi target trong `W` đều reachable;
+- injective nghĩa không có thông tin (information / 정보) direction bị mất;
+- surjective nghĩa mọi mục tiêu (target / 대상) trong `W` đều reachable;
 - bijective nghĩa cả hai điều trên cùng đúng.
 
-Trong finite dimensions bằng nhau, injective và surjective trở thành equivalent. Với square matrix `A`, các conditions này tương đương với full rank và invertibility.
+Trong finite dimensions bằng nhau, injective và surjective trở thành equivalent. Với square ma trận (matrix / 행렬) `A`, các conditions này tương đương với full rank và invertibility.
 
-Nếu dimensions khác nhau, intuition thay đổi. Map từ `R^3` sang `R^2` không thể injective nếu linear, vì phải collapse ít nhất một direction. Map từ `R^2` sang `R^3` không thể surjective, vì image tối đa chỉ là 2D subspace.
+Nếu dimensions khác nhau, intuition thay đổi. Map từ `R^3` sang `R^2` không thể injective nếu tuyến tính (linear / 선형), vì phải collapse ít nhất một direction. Map từ `R^2` sang `R^3` không thể surjective, vì ảnh (image / 이미지) tối đa chỉ là 2D subspace.
 
-## Affine transformation khác linear transformation ở đâu?
+## Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?
 
 Map
 
@@ -182,33 +185,33 @@ Map
 T(x)=Ax+b
 ```
 
-với `b\neq0` không linear vì
+với `b\neq0` không tuyến tính (linear / 선형) vì
 
 ```math
 T(0)=b\neq0.
 ```
 
-Nó là affine transformation. Geometry vẫn bảo toàn nhiều structures như straight lines và parallelism, nhưng origin không còn fixed.
+Nó là affine transformation. hình học (geometry / 기하학) vẫn bảo toàn nhiều structures như straight lines và parallelism, nhưng origin không còn fixed.
 
-Trong machine learning, layer thường viết
+Trong machine học tập (learning / 학습), tầng (layer / 계층) thường viết
 
 ```math
 z=Wx+b.
 ```
 
-Framework có thể gọi đây là “linear layer”, nhưng mathematically đó là affine map. Distinction này quan trọng khi reasoning về composition, symmetries và proofs.
+Khung phần mềm (framework / 프레임워크) có thể gọi đây là “tuyến tính (linear / 선형) tầng (layer / 계층)”, nhưng mathematically đó là affine map. Distinction này quan trọng khi lập luận (reasoning / 추론) về composition, symmetries và proofs.
 
-## Linearization: vì sao linear transformations còn quan trọng với nonlinear systems?
+## Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?
 
-Ngay cả khi system nonlinear, behavior local quanh một point thường được approximate bởi linear map.
+Ngay cả khi hệ thống (system / 시스템) nonlinear, hành vi (behavior / 동작) cục bộ (local / 로컬) quanh một điểm (point / 지점) thường được approximate bởi tuyến tính (linear / 선형) map.
 
-Với differentiable function
+Với differentiable hàm (function / 함수)
 
 ```math
 f:\mathbb R^n\to\mathbb R^m,
 ```
 
-Jacobian tại `x_0` cho local linear approximation:
+Jacobian tại `x_0` cho cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation:
 
 ```math
 f(x_0+\Delta x)
@@ -216,13 +219,13 @@ f(x_0+\Delta x)
 f(x_0)+J_f(x_0)\Delta x.
 ```
 
-Vì vậy linear algebra không chỉ áp dụng cho “linear world”. Nó là first-order language để hiểu nonlinear systems locally.
+Vì vậy tuyến tính (linear / 선형) algebra không chỉ áp dụng cho “tuyến tính (linear / 선형) world”. Nó là first-order ngôn ngữ (language / 언어) để hiểu nonlinear các hệ thống (systems / 시스템들) locally.
 
-Đây là bridge tới multivariable calculus, optimization, control và neural-network backpropagation.
+Đây là cầu nối (bridge / 브리지) tới multivariable calculus, tối ưu hóa (optimization / 최적화), điều khiển (control / 제어) và neural-network backpropagation.
 
-## Composition và matrix multiplication
+## Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)
 
-Nếu `T:V\to W` và `S:W\to U` đều linear, composition `S\circ T` cũng linear.
+Nếu `T:V\to W` và `S:W\to U` đều tuyến tính (linear / 선형), composition `S\circ T` cũng tuyến tính (linear / 선형).
 
 Trong coordinates:
 
@@ -236,7 +239,7 @@ thì
 [S\circ T]=BA.
 ```
 
-Order phản ánh process order. Apply `T` trước, rồi `S`; matrix product vì vậy đọc từ right sang left khi acting on vectors.
+Thứ tự (order / 순서) phản ánh tiến trình (process / 프로세스) thứ tự (order / 순서). Apply `T` trước, rồi `S`; ma trận (matrix / 행렬) sản phẩm (product / 제품) vì vậy đọc từ right sang left khi acting on vectors.
 
 ## Eigenvectors: directions transformation không đổi hướng
 
@@ -246,50 +249,52 @@ Nếu
 Av=\lambda v,
 ```
 
-thì direction `v` được transformation giữ nguyên, chỉ scale bởi `\lambda`.
+thì direction `v` được transformation giữ nguyên, chỉ quy mô (scale / 규모) bởi `\lambda`.
 
-Eigenvectors là natural directions của operator. Trong eigenbasis phù hợp, repeated application của transformation có thể trở nên rất đơn giản:
+Eigenvectors là natural directions của operator. Trong eigenbasis phù hợp, repeated ứng dụng (application / 애플리케이션) của transformation có thể trở nên rất đơn giản:
 
 ```math
 A^k=P D^k P^{-1}.
 ```
 
-Đây là reason eigen-analysis xuất hiện trong dynamic systems, Markov chains, PCA, vibrations và stability.
+Đây là reason eigen-analysis xuất hiện trong động (dynamic / 동적) các hệ thống (systems / 시스템들), Markov chains, PCA, vibrations và stability.
 
-## Physics connection — superposition
+## Physics liên kết (connection / 연결) — superposition
 
-Linear differential equations và linear transformations chia sẻ superposition principle. Nếu response với input `u` là `T(u)` và response với `v` là `T(v)`, thì response với `au+bv` là
+Tuyến tính (linear / 선형) differential equations và tuyến tính (linear / 선형) transformations chia sẻ superposition principle. Nếu phản hồi (response / 응답) với đầu vào (input / 입력) `u` là `T(u)` và phản hồi (response / 응답) với `v` là `T(v)`, thì phản hồi (response / 응답) với `au+bv` là
 
 ```math
 T(au+bv)=aT(u)+bT(v).
 ```
 
-Điều này cho phép phân rã signals thành modes, frequencies hoặc basis states, xử lý từng component rồi combine lại. Fourier analysis dựa sâu vào logic này.
+Điều này cho phép phân rã signals thành modes, frequencies hoặc basis states, xử lý từng thành phần (component / 컴포넌트) rồi combine lại. Fourier phân tích (analysis / 분석) dựa sâu vào lô-gic (logic / 논리) này.
 
-## AI connection — representations và local geometry
+## AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)
 
-Embeddings là vectors; weight matrices transform representations giữa feature spaces. Attention dùng projections như `W_Qx`, `W_Kx`, `W_Vx`. Backpropagation repeatedly composes local linear maps represented by Jacobians.
+Embeddings là vectors; weight matrices transform representations giữa tính năng (feature / 기능) spaces. Attention dùng projections như `W_Qx`, `W_Kx`, `W_Vx`. Backpropagation repeatedly composes cục bộ (local / 로컬) tuyến tính (linear / 선형) maps represented by Jacobians.
 
-Nhưng whole neural network nonlinear vì có activations. Linear transformations vẫn là building blocks và local sensitivity operators.
+Nhưng whole neural mạng (network / 네트워크) nonlinear vì có activations. tuyến tính (linear / 선형) transformations vẫn là building blocks và cục bộ (local / 로컬) sensitivity operators.
 
-## Failure modes và assumptions
+## Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)
 
-Linearity là assumption mạnh. Nếu doubling input không roughly double output, hoặc interactions giữa features tạo nonlinear effects, linear map có thể không model system globally.
+Linearity là giả định (assumption / 가정) mạnh. Nếu doubling đầu vào (input / 입력) không roughly double đầu ra (output / 출력), hoặc interactions giữa features tạo nonlinear effects, tuyến tính (linear / 선형) map có thể không mô hình (model / 모델) hệ thống (system / 시스템) globally.
 
-Một coordinate matrix cũng không có intrinsic meaning nếu basis không rõ. Hai teams có thể lưu cùng geometric operator bằng matrices khác nhau vì convention axis/order khác nhau.
+Một coordinate ma trận (matrix / 행렬) cũng không có intrinsic meaning nếu basis không rõ. Hai teams có thể lưu cùng geometric operator bằng matrices khác nhau vì convention axis/thứ tự (order / 순서) khác nhau.
 
-Trong numerical work, transformation có thể mathematically invertible nhưng practically unstable nếu near-singular. Structural theory cần đi cùng conditioning.
+Trong numerical công việc (work / 작업), transformation có thể mathematically invertible nhưng practically unstable nếu near-singular. Structural lý thuyết (theory / 이론) cần đi cùng conditioning.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Linear transformation là một machine tôn trọng mixtures. Vì mọi vector là mixture của basis vectors, chỉ cần biết machine làm gì với basis là đủ. Kernel nói information nào bị mất; image nói outputs nào reachable; matrix là coordinate encoding của machine; đổi basis là đổi cách mô tả chứ không đổi machine.
+> tuyến tính (linear / 선형) transformation là một machine tôn trọng mixtures. Vì mọi véc-tơ (vector / 벡터) là mixture của basis vectors, chỉ cần biết machine làm gì với basis là đủ. Kernel nói thông tin (information / 정보) nào bị mất; ảnh (image / 이미지) nói outputs nào reachable; ma trận (matrix / 행렬) là coordinate encoding của machine; đổi basis là đổi cách mô tả chứ không đổi machine.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Matrix chính là transformation.”** Không hoàn toàn. Matrix là representation của transformation dưới chosen bases.
+**“ma trận (matrix / 행렬) chính là transformation.”** Không hoàn toàn. ma trận (matrix / 행렬) là biểu diễn (representation / 표현) của transformation dưới chosen bases.
 
-**“Có `b` term vẫn là linear.”** `Ax+b` với `b\neq0` là affine, vì origin không map về origin.
+**“Có `b` term vẫn là tuyến tính (linear / 선형).”** `Ax+b` với `b\neq0` là affine, vì origin không map về origin.
 
-**“Rank chỉ là số nonzero rows sau elimination.”** Đó là cách tính. Meaning sâu hơn là dimension của reachable output space.
+**“Rank chỉ là số nonzero rows sau elimination.”** Đó là cách tính. Meaning sâu hơn là dimension của reachable đầu ra (output / 출력) không gian (space / 공간).
 
-**“Linear model nghĩa line thẳng trong mọi context.”** Không. Linear map giữa high-dimensional vector spaces có thể represent rotations, projections, shears, filters và many operators phức tạp.
+**“mô hình tuyến tính (linear model / 선형 모델) nghĩa line thẳng trong mọi ngữ cảnh (context / 맥락).”** Không. tuyến tính (linear / 선형) map giữa high-dimensional véc-tơ (vector / 벡터) spaces có thể represent rotations, projections, shears, filters và many operators phức tạp.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

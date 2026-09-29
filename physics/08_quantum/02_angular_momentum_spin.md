@@ -1,5 +1,8 @@
 # Mômen động lượng lượng tử, spin và phép cộng mômen động lượng
 
+> **Mạch đọc:** Đọc **Mômen động lượng lượng tử, spin và phép cộng mômen động lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ mômen động lượng cổ điển đến toán tử lượng tử** sang **Trị riêng của L^2 và Lz**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Mômen động lượng trong cơ học lượng tử không chỉ là phiên bản lượng tử của đại lượng cổ điển `\mathbf L=\mathbf r\times\mathbf p`. Nó là một ví dụ điển hình cho cách **đối xứng quay (rotational symmetry)** được mã hóa thành cấu trúc toán tử, trị riêng và quy tắc ghép trạng thái.
 
 Spin còn đi xa hơn: nó là mômen động lượng nội tại, không có mô hình cổ điển đơn giản tương đương.
@@ -82,11 +85,11 @@ mà là
 
 ## Vì sao chỉ đo được một thành phần cùng với `L^2`?
 
-Nếu `L_x`, `L_y`, `L_z` cùng xác định chính xác, commutator giữa chúng phải không gây uncertainty bắt buộc. Nhưng quan hệ giao hoán cho thấy các thành phần ngang không thể đồng thời có phân bố tùy ý hẹp.
+Nếu `L_x`, `L_y`, `L_z` cùng xác định chính xác, commutator giữa chúng phải không gây bất định (uncertainty / 불확실성) bắt buộc. Nhưng quan hệ giao hoán cho thấy các thành phần ngang không thể đồng thời có phân bố tùy ý hẹp.
 
 Ta thường chọn trục `z` chỉ vì một hệ tọa độ cần một trục tham chiếu. Nếu hệ không có trường ngoài phá đối xứng, không có hướng `z` nào “cơ bản hơn” các hướng khác.
 
-Khi đặt từ trường ngoài, trục của từ trường trở thành hướng vật lý đặc biệt và `m` có thể liên hệ trực tiếp với energy splitting.
+Khi đặt từ trường ngoài, trục của từ trường trở thành hướng vật lý đặc biệt và `m` có thể liên hệ trực tiếp với năng lượng (energy / 에너지) splitting.
 
 ## Toán tử nâng và hạ
 
@@ -256,7 +259,7 @@ Chúng là biểu diễn `2×2` cơ bản của algebra spin-1/2.
 
 ## Bloch sphere
 
-Một trạng thái spin-1/2 thuần có thể viết, bỏ qua global phase,
+Một trạng thái spin-1/2 thuần có thể viết, bỏ qua toàn cục (global / 전역) phase,
 
 ```math
 |\psi\rangle
@@ -268,7 +271,7 @@ Một trạng thái spin-1/2 thuần có thể viết, bỏ qua global phase,
 
 Cặp góc `\theta,\phi` biểu diễn một điểm trên Bloch sphere.
 
-Bloch sphere không có nghĩa spin là một vector cổ điển thực sự nằm trên mặt cầu. Nó là hình học của không gian trạng thái hai mức sau khi bỏ global phase.
+Bloch sphere không có nghĩa spin là một véc-tơ (vector / 벡터) cổ điển thực sự nằm trên mặt cầu. Nó là hình học của không gian trạng thái hai mức sau khi bỏ toàn cục (global / 전역) phase.
 
 Đây là cầu nối trực tiếp giữa quantum mechanics, NMR/MRI và quantum computing.
 
@@ -291,9 +294,9 @@ Với spin-1/2,
 U(2\pi)=-I.
 ```
 
-Sau phép quay `2\pi`, spinor đổi dấu. Phải quay `4\pi` mới trở về cùng vector trạng thái chính xác.
+Sau phép quay `2\pi`, spinor đổi dấu. Phải quay `4\pi` mới trở về cùng véc-tơ (vector / 벡터) trạng thái chính xác.
 
-Global phase `-1` không quan sát được đối với một trạng thái cô lập đơn lẻ, nhưng sự khác biệt pha có thể xuất hiện trong interferometry khi so sánh các nhánh khác nhau.
+Toàn cục (global / 전역) phase `-1` không quan sát được đối với một trạng thái cô lập đơn lẻ, nhưng sự khác biệt pha có thể xuất hiện trong interferometry khi so sánh các nhánh khác nhau.
 
 Đây là dấu hiệu sâu của quan hệ giữa nhóm quay không gian `SO(3)` và nhóm phủ đôi `SU(2)`.
 
@@ -301,7 +304,7 @@ Global phase `-1` không quan sát được đối với một trạng thái cô
 
 Trong Stern–Gerlach, chùm nguyên tử đi qua từ trường không đồng đều và tách thành các nhánh rời rạc theo projection của magnetic moment.
 
-Đối với hệ hiệu dụng spin-1/2, ta quan sát hai kết quả thay vì một distribution liên tục như vector cổ điển định hướng ngẫu nhiên.
+Đối với hệ hiệu dụng spin-1/2, ta quan sát hai kết quả thay vì một phân phối (distribution / 분포) liên tục như véc-tơ (vector / 벡터) cổ điển định hướng ngẫu nhiên.
 
 Thí nghiệm này cho thấy projection của mômen động lượng lượng tử có phổ rời rạc.
 
@@ -332,7 +335,7 @@ Nếu chọn `B` theo trục `z`, các giá trị projection khác nhau tạo c�
 
 Đây là hiệu ứng Zeeman (Zeeman effect / 제만 효과).
 
-Cùng cấu trúc spin–field coupling xuất hiện trong:
+Cùng cấu trúc spin–trường dữ liệu (field / 필드) coupling xuất hiện trong:
 
 ```text
 NMR
@@ -342,7 +345,7 @@ atomic clocks
 quantum sensing
 ```
 
-Chi tiết hệ số và moment khác nhau giữa electron, nucleus và atom, nhưng logic coupling với trường ngoài là chung.
+Chi tiết hệ số và moment khác nhau giữa electron, nucleus và atom, nhưng lô-gic (logic / 논리) coupling với trường ngoài là chung.
 
 ## Larmor precession
 
@@ -426,7 +429,7 @@ Trạng thái singlet là
 \right).
 ```
 
-Singlet là trạng thái rối lượng tử. Tổng mômen động lượng bằng zero, nhưng điều đó không có nghĩa mỗi spin riêng lẻ có một vector cổ điển xác định và đối nhau trước phép đo.
+Singlet là trạng thái rối lượng tử. Tổng mômen động lượng bằng zero, nhưng điều đó không có nghĩa mỗi spin riêng lẻ có một véc-tơ (vector / 벡터) cổ điển xác định và đối nhau trước phép đo.
 
 ## Clebsch–Gordan coefficients
 
@@ -456,7 +459,7 @@ nuclear spin coupling
 particle decay channels
 ```
 
-Vì vậy chúng không chỉ là bảng hệ số đại số; chúng mã hóa cách các representation của rotational symmetry kết hợp.
+Vì vậy chúng không chỉ là bảng hệ số đại số; chúng mã hóa cách các biểu diễn (representation / 표현) của rotational symmetry kết hợp.
 
 ## Spin–orbit coupling
 
@@ -492,13 +495,13 @@ J^2-L^2-S^2
 
 Nhờ đó năng lượng spin–orbit có thể được biểu diễn bằng các số lượng tử `j,\ell,s`.
 
-Đây là ví dụ rõ về việc symmetry algebra biến một tương tác vector phức tạp thành bài toán trị riêng gọn hơn.
+Đây là ví dụ rõ về việc symmetry algebra biến một tương tác véc-tơ (vector / 벡터) phức tạp thành bài toán trị riêng gọn hơn.
 
 ## Selection rules và symmetry
 
-Mômen động lượng còn quyết định những transition nào được phép hoặc bị suppressed.
+Mômen động lượng còn quyết định những chuyển tiếp (transition / 전이) nào được phép hoặc bị suppressed.
 
-Trong electric-dipole transition, các quy tắc điển hình gồm
+Trong electric-dipole chuyển tiếp (transition / 전이), các quy tắc điển hình gồm
 
 ```math
 \Delta\ell=\pm1
@@ -512,9 +515,9 @@ và
 
 với các điều kiện khác tùy hệ.
 
-Các selection rules không phải quy ước ghi nhớ tùy ý. Chúng phản ánh symmetry, parity và matrix element của interaction operator.
+Các selection rules không phải quy ước ghi nhớ tùy ý. Chúng phản ánh symmetry, parity và ma trận (matrix / 행렬) element của tương tác (interaction / 상호작용) operator.
 
-## Assumptions và giới hạn
+## Các giả định (assumptions / 가정들) và giới hạn
 
 ### Spin không phải rotation của vật thể có kích thước
 
@@ -522,13 +525,13 @@ Không nên gán electron một radius cổ điển rồi tính tốc độ bề
 
 ### `m` phụ thuộc trục lượng tử hóa
 
-Giá trị `m` luôn được định nghĩa so với một trục chọn trước, thường do external field hoặc geometry xác định.
+Giá trị `m` luôn được định nghĩa so với một trục chọn trước, thường do bên ngoài (external / 외부) trường dữ liệu (field / 필드) hoặc hình học (geometry / 기하학) xác định.
 
-### Addition rules phụ thuộc representation
+### Addition rules phụ thuộc biểu diễn (representation / 표현)
 
-Quy tắc cộng `j` áp dụng cho angular-momentum representations. Nó không có nghĩa mọi vector lượng tử đều cộng như vector cổ điển với góc xác định trước.
+Quy tắc cộng `j` áp dụng cho angular-momentum representations. Nó không có nghĩa mọi véc-tơ (vector / 벡터) lượng tử đều cộng như véc-tơ (vector / 벡터) cổ điển với góc xác định trước.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Mômen động lượng lượng tử nên được hiểu như **generator của phép quay**.
 
@@ -540,7 +543,7 @@ rotational symmetry
 → selection rules
 ```
 
-Spin là representation nội tại của cùng symmetry, không phải miniature mechanical rotation.
+Spin là biểu diễn (representation / 표현) nội tại của cùng symmetry, không phải miniature mechanical rotation.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -548,20 +551,22 @@ Spin là representation nội tại của cùng symmetry, không phải miniatur
 
 Sai. Spin là degree of freedom lượng tử nội tại.
 
-### “Vector spin luôn chỉ theo một hướng xác định trước phép đo”
+### “véc-tơ (vector / 벡터) spin luôn chỉ theo một hướng xác định trước phép đo”
 
 Không nói chung. Trạng thái có thể là superposition theo basis của trục đang đo.
 
 ### “Sau phép quay `2π`, vật lý thay đổi hoàn toàn vì spinor đổi dấu”
 
-Không. Global phase không quan sát trực tiếp cho trạng thái đơn lẻ; điều quan trọng là relative phase trong phép so sánh/interference.
+Không. toàn cục (global / 전역) phase không quan sát trực tiếp cho trạng thái đơn lẻ; điều quan trọng là relative phase trong phép so sánh/interference.
 
-### “Hai spin singlet chỉ là hai vector ngược hướng”
+### “Hai spin singlet chỉ là hai véc-tơ (vector / 벡터) ngược hướng”
 
-Không. Singlet là trạng thái rối có correlation lượng tử không thể mô tả đầy đủ bằng cặp vector cổ điển cố định.
+Không. Singlet là trạng thái rối có correlation lượng tử không thể mô tả đầy đủ bằng cặp véc-tơ (vector / 벡터) cổ điển cố định.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Chuyển động quay cổ điển](../01_mechanics/05_rotation_rigid_body.md), [Đối xứng và bảo toàn](../00_foundations/04_symmetry_conservation_scale.md).
 
 **Liên hệ tiếp:** [Phép đo và rối lượng tử](03_measurement_entanglement_decoherence.md), [Vật lý nguyên tử](../09_atomic_nuclear_particle/00_atomic_physics.md), [Mô hình Chuẩn](../09_atomic_nuclear_particle/03_particle_standard_model.md), [Đối xứng và path integral](07_symmetry_operator_path_integral.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

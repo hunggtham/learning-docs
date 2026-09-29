@@ -1,20 +1,23 @@
-# Compute Economics, Capacity và Energy
+# Compute Economics, sức chứa (capacity / 용량) và năng lượng (energy / 에너지)
 
-Hạ tầng AI không chỉ là bài toán hiệu năng mà còn là bài toán kinh tế. Một hệ thống phải đạt quality và SLO trong giới hạn budget, power, availability và năng lực vận hành của team. **Kinh tế tính toán (compute economics)** hỏi: mỗi đơn vị công việc hữu ích tiêu tốn bao nhiêu tài nguyên và chi phí?
+> **Mạch đọc:** Đặt **Compute Economics, sức chứa (capacity / 용량) và năng lượng (energy / 에너지)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Accelerator-Hour** sang **Chi phí trên đơn vị từ (token / 토큰), suy luận (inference / 추론) và tác vụ (task / 작업)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Hạ tầng AI không chỉ là bài toán hiệu năng mà còn là bài toán kinh tế. Một hệ thống phải đạt chất lượng (quality / 품질) và SLO trong giới hạn ngân sách (budget / 예산), power, availability và năng lực vận hành của nhóm (team / 팀). **Kinh tế tính toán (compute economics)** hỏi: mỗi đơn vị công việc hữu ích tiêu tốn bao nhiêu tài nguyên và chi phí?
 
 ## Accelerator-Hour
 
-Training cost thường được nhìn theo accelerator-hour:
+Huấn luyện (training / 학습) chi phí (cost / 비용) thường được nhìn theo accelerator-hour:
 
 \[
-Cost\approx devices\times hours\times price/device-hour
+chi phí (cost / 비용)\approx devices\times hours\times price/device-hour
 \]
 
-Nhưng raw device-hour chưa phản ánh utilization. Một training job dùng 100 GPU nhưng 40% thời gian idle vì communication vẫn phải trả toàn bộ chi phí.
+Nhưng raw device-hour chưa phản ánh utilization. Một huấn luyện (training / 학습) job dùng 100 GPU nhưng 40% thời gian idle vì communication vẫn phải trả toàn bộ chi phí.
 
-## Chi phí trên Token, Inference và Task
+## Chi phí trên đơn vị từ (token / 토큰), suy luận (inference / 추론) và tác vụ (task / 작업)
 
-Serving nên đo chi phí gần business unit hơn:
+Serving nên đo chi phí gần nghiệp vụ (business / 비즈니스) đơn vị (unit / 단위) hơn:
 
 ```text
 cost / 1k tokens
@@ -23,33 +26,33 @@ cost / completed task
 cost / successful agent trajectory
 ```
 
-Cost/request có thể gây hiểu sai nếu độ dài token giữa các request rất khác nhau.
+Chi phí (cost / 비용)/yêu cầu (request / 요청) có thể gây hiểu sai nếu độ dài đơn vị từ (token / 토큰) giữa các yêu cầu (request / 요청) rất khác nhau.
 
 ## Chi phí đã điều chỉnh theo Chất lượng
 
-Mô hình rẻ hơn chưa chắc thật sự rẻ nếu failure, retry hoặc escalation tăng.
+Mô hình rẻ hơn chưa chắc thật sự rẻ nếu thất bại (failure / 실패), thử lại (retry / 재시도) hoặc escalation tăng.
 
-Một metric khái niệm hữu ích:
+Một chỉ số (metric / 지표) khái niệm hữu ích:
 
 \[
-Cost\ per\ successful\ task=\frac{Total\ cost}{Verified\ successful\ tasks}
+chi phí (cost / 비용)\ per\ successful\ tác vụ (task / 작업)=\frac{Total\ chi phí (cost / 비용)}{Verified\ successful\ tasks}
 \]
 
 ## Utilization
 
-Accelerator idle vẫn tiêu tốn capex hoặc cloud cost. Tuy nhiên online fleet cần headroom để giữ latency SLO.
+Accelerator idle vẫn tiêu tốn capex hoặc cloud chi phí (cost / 비용). Tuy nhiên online fleet cần headroom để giữ độ trễ (latency / 지연 시간) SLO.
 
-Batch hoặc training cluster thường có thể chạy utilization cao hơn serving fleet.
+Batch hoặc huấn luyện (training / 학습) cluster thường có thể chạy utilization cao hơn serving fleet.
 
 ## Reserved, On-Demand và Spot
 
-Cloud economics thường có trade-off:
+Cloud economics thường có sự đánh đổi (trade-off / 트레이드오프):
 
 - on-demand: linh hoạt nhưng đắt;
 - reserved/committed: rẻ hơn nhưng ít linh hoạt;
 - spot/preemptible: rẻ nhưng có thể bị thu hồi.
 
-Training workload có checkpoint phù hợp với spot hơn latency-sensitive serving.
+Huấn luyện (training / 학습) tải công việc (workload / 워크로드) có checkpoint phù hợp với spot hơn latency-sensitive serving.
 
 ## Tự xây hay Thuê
 
@@ -72,29 +75,29 @@ Cloud:
 - phụ thuộc provider và egress cost
 ```
 
-Quyết định phụ thuộc scale, khả năng dự đoán utilization và chuyên môn của team.
+Quyết định phụ thuộc quy mô (scale / 규모), khả năng dự đoán utilization và chuyên môn của nhóm (team / 팀).
 
-## Economics của Model Size
+## Economics của mô hình (model / 모델) kích thước (size / 크기)
 
 Mô hình lớn hơn thường làm tăng:
 
-- weight memory;
+- weight bộ nhớ (memory / 메모리);
 - số accelerator cần thiết;
-- inference latency;
+- suy luận (inference / 추론) độ trễ (latency / 지연 시간);
 - năng lượng;
-- cost/token.
+- chi phí (cost / 비용)/đơn vị từ (token / 토큰).
 
-Quality gain từ scaling phải đủ lớn để biện minh cho total cost. Model routing hoặc specialized model có thể tạo Pareto improvement tốt hơn.
+Chất lượng (quality / 품질) gain từ scaling phải đủ lớn để biện minh cho total chi phí (cost / 비용). mô hình (model / 모델) routing hoặc specialized mô hình (model / 모델) có thể tạo Pareto improvement tốt hơn.
 
-## Economics của Context Length
+## Economics của ngữ cảnh (context / 맥락) Length
 
-Long context làm prefill compute và KV cache tăng. “Hỗ trợ context 1M token” không nghĩa mọi request đều nên gửi 1M token.
+Long ngữ cảnh (context / 맥락) làm prefill compute và KV bộ nhớ đệm (cache / 캐시) tăng. “Hỗ trợ ngữ cảnh (context / 맥락) 1M đơn vị từ (token / 토큰)” không nghĩa mọi yêu cầu (request / 요청) đều nên gửi 1M đơn vị từ (token / 토큰).
 
-Context engineering hoặc retrieval thường rẻ hơn việc append toàn bộ dữ liệu một cách brute-force.
+Ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링) hoặc retrieval thường rẻ hơn việc append toàn bộ dữ liệu một cách brute-force.
 
-## Economics của Agent
+## Economics của tác nhân (agent / 에이전트)
 
-Agent loop có số bước biến động. Nên đặt budget:
+Tác nhân (agent / 에이전트) vòng lặp (loop / 루프) có số bước biến động. Nên đặt ngân sách (budget / 예산):
 
 ```text
 max LLM calls
@@ -107,9 +110,9 @@ Nếu không có guardrail, một số trajectory runaway hiếm có thể chi�
 
 ## Economics của RAG
 
-RAG làm phát sinh chi phí embedding, index và reranking, nhưng có thể giảm nhu cầu dùng model lớn hơn hoặc fine-tuning, đồng thời tăng grounding.
+RAG làm phát sinh chi phí embedding, chỉ mục (index / 인덱스) và reranking, nhưng có thể giảm nhu cầu dùng mô hình (model / 모델) lớn hơn hoặc fine-tuning, đồng thời tăng grounding.
 
-Có thể tách cost thành:
+Có thể tách chi phí (cost / 비용) thành:
 
 ```text
 ingestion được amortize
@@ -119,28 +122,28 @@ extra context tokens
 generation
 ```
 
-## Economics của Training
+## Economics của huấn luyện (training / 학습)
 
-Pretraining từ đầu rất đắt. Domain adaptation thường ưu tiên:
+Pretraining từ đầu rất đắt. lĩnh vực (domain / 도메인) adaptation thường ưu tiên:
 
 - SFT;
 - LoRA hoặc PEFT;
 - distillation;
 - retrieval.
 
-Lựa chọn đúng phụ thuộc nhu cầu là behavior adaptation, knowledge freshness hay kiểm soát architecture.
+Lựa chọn đúng phụ thuộc nhu cầu là hành vi (behavior / 동작) adaptation, kiến thức (knowledge / 지식) freshness hay kiểm soát kiến trúc (architecture / 아키텍처).
 
-## Opportunity Cost
+## Opportunity chi phí (cost / 비용)
 
-GPU được dùng cho một experiment thì không còn sẵn cho production hoặc research khác. Priority của scheduler nên phản ánh business value thay vì chỉ first-come-first-served.
+GPU được dùng cho một experiment thì không còn sẵn cho môi trường vận hành (production / 운영 환경) hoặc research khác. Priority của scheduler nên phản ánh nghiệp vụ (business / 비즈니스) giá trị (value / 값) thay vì chỉ first-come-first-served.
 
 ## Power
 
-Power consumption ảnh hưởng trực tiếp operating cost và datacenter capacity. TDP của accelerator không phải toàn bộ system power; network, CPU và cooling cũng tiêu thụ năng lượng.
+Power consumption ảnh hưởng trực tiếp operating chi phí (cost / 비용) và datacenter sức chứa (capacity / 용량). TDP của accelerator không phải toàn bộ hệ thống (system / 시스템) power; mạng (network / 네트워크), CPU và cooling cũng tiêu thụ năng lượng.
 
 ## Hiệu quả năng lượng
 
-Các metric có thể gồm:
+Các chỉ số (metric / 지표) có thể gồm:
 
 ```text
 tokens / joule
@@ -148,25 +151,25 @@ inferences / watt
 training progress / energy
 ```
 
-Precision thấp hơn và kernel tối ưu có thể cải thiện cả cost lẫn energy efficiency.
+Precision thấp hơn và kernel tối ưu có thể cải thiện cả chi phí (cost / 비용) lẫn năng lượng (energy / 에너지) efficiency.
 
 ## Ràng buộc nhiệt
 
-Accelerator mật độ cao cần hệ thống cooling phù hợp. Thermal throttling có thể làm performance giảm. Vì vậy infrastructure design phải xét power delivery và cooling, không chỉ server.
+Accelerator mật độ cao cần hệ thống cooling phù hợp. Thermal throttling có thể làm hiệu năng (performance / 성능) giảm. Vì vậy hạ tầng (infrastructure / 인프라) thiết kế (design / 설계) phải xét power delivery và cooling, không chỉ máy chủ (server / 서버).
 
 ## Carbon Accounting
 
-Environmental impact phụ thuộc nguồn điện, utilization, quá trình sản xuất hardware và workload efficiency. Chỉ nhìn operational energy là chưa đầy đủ nhưng vẫn có thể đo được.
+Environmental impact phụ thuộc nguồn điện, utilization, quá trình sản xuất hardware và tải công việc (workload / 워크로드) efficiency. Chỉ nhìn operational năng lượng (energy / 에너지) là chưa đầy đủ nhưng vẫn có thể đo được.
 
-Không nên gán một giá trị carbon cố định cho mọi model call vì region, hardware và utilization khác nhau.
+Không nên gán một giá trị carbon cố định cho mọi mô hình (model / 모델) lời gọi (call / 호출) vì region, hardware và utilization khác nhau.
 
 ## Depreciation và vòng đời Hardware
 
-Accelerator lỗi thời nhanh khi thế hệ mới có performance/watt tốt hơn. Economics của cluster sở hữu cần tính depreciation và khả năng tái sử dụng hoặc resale sau vòng đời chính.
+Accelerator lỗi thời nhanh khi thế hệ mới có hiệu năng (performance / 성능)/watt tốt hơn. Economics của cluster sở hữu cần tính depreciation và khả năng tái sử dụng hoặc resale sau vòng đời chính.
 
-## Capacity Planning
+## Sức chứa (capacity / 용량) Planning
 
-Capacity forecast nên mô hình hóa:
+Sức chứa (capacity / 용량) forecast nên mô hình hóa:
 
 ```text
 traffic growth
@@ -178,11 +181,11 @@ failure headroom
 training campaigns
 ```
 
-Nếu model size tăng gấp đôi mỗi quý, chỉ nhìn số GPU dư hiện tại là không đủ để forecast.
+Nếu mô hình (model / 모델) kích thước (size / 크기) tăng gấp đôi mỗi quý, chỉ nhìn số GPU dư hiện tại là không đủ để forecast.
 
-## Unit Economics
+## Đơn vị (unit / 단위) Economics
 
-Với sản phẩm AI, cần nối infrastructure cost với business outcome:
+Với sản phẩm AI, cần nối hạ tầng (infrastructure / 인프라) chi phí (cost / 비용) với nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과):
 
 ```text
 revenue / value trên mỗi successful task
@@ -191,16 +194,16 @@ revenue / value trên mỗi successful task
 - failure cost
 ```
 
-Inference rẻ nhưng tạo ít giá trị không tự động là business tốt.
+Suy luận (inference / 추론) rẻ nhưng tạo ít giá trị không tự động là nghiệp vụ (business / 비즈니스) tốt.
 
 ## Thứ tự tối ưu về Economics
 
 Các đòn bẩy thường có hiệu quả cao theo thứ tự:
 
-1. loại bỏ call không cần thiết;
+1. loại bỏ lời gọi (call / 호출) không cần thiết;
 2. cải thiện routing và caching;
-3. giảm context và output;
-4. chọn đúng model;
+3. giảm ngữ cảnh (context / 맥락) và đầu ra (output / 출력);
+4. chọn đúng mô hình (model / 모델);
 5. tăng batching và hardware utilization;
 6. quantize hoặc compress;
 7. tối ưu kernel thấp tầng.
@@ -215,18 +218,20 @@ Compute economics = lượng công việc hữu ích đã điều chỉnh theo c
 
 ## Những nhầm lẫn thường gặp
 
-### “API có giá rẻ nhất nghĩa là system rẻ nhất”
+### “API có giá rẻ nhất nghĩa là hệ thống (system / 시스템) rẻ nhất”
 
-Không. Retry, quality, tool call và operational cost đều ảnh hưởng.
+Không. thử lại (retry / 재시도), chất lượng (quality / 품질), công cụ (tool / 도구) lời gọi (call / 호출) và operational chi phí (cost / 비용) đều ảnh hưởng.
 
 ### “Utilization cao nhất luôn tối ưu về kinh tế”
 
 Không. Serving cần headroom; vi phạm SLO cũng có chi phí.
 
-### “Energy efficiency chỉ là chủ đề môi trường”
+### “năng lượng (energy / 에너지) efficiency chỉ là chủ đề môi trường”
 
 Không. Nó ảnh hưởng trực tiếp datacenter power, thermal limit và chi phí vận hành.
 
 ## Liên kết kiến thức
 
 Xem [Latency/Throughput/Cost](../15_ai_engineering/09_latency_throughput_and_cost.md), [Model Compression](../15_ai_engineering/08_model_compression.md), [Cluster Scheduling](./07_cluster_scheduling_and_interconnect.md) và [Ethics/Governance](../19_ai_safety_security_alignment/README.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 compute foundations](./00_compute_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen
 
-Thuyết tương đối rộng (General Relativity / 일반상대성이론) thay đổi cách ta hiểu hấp dẫn: thay vì xem hấp dẫn chỉ là một lực nằm trên nền không gian–thời gian cố định, lý thuyết cho metric của không-thời gian trở thành một trường động lực học chịu ảnh hưởng của năng lượng và động lượng.
+> **Mạch đọc:** Đọc **Thuyết tương đối rộng: nguyên lý tương đương, độ cong, đường trắc địa và lỗ đen** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ nguyên lý tương đương đến hình học** sang **Cục bộ phẳng không có nghĩa toàn cục phẳng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Thuyết tương đối rộng (General Relativity / 일반상대성이론) thay đổi cách ta hiểu hấp dẫn: thay vì xem hấp dẫn chỉ là một lực nằm trên nền không gian–thời gian cố định, lý thuyết cho chỉ số (metric / 지표) của không-thời gian trở thành một trường động lực học chịu ảnh hưởng của năng lượng và động lượng.
 
 Cấu trúc khái niệm có thể tóm tắt bằng chuỗi:
 
@@ -51,7 +54,7 @@ và
 được gia tốc trong không gian không hấp dẫn
 ```
 
-Điều này gợi ý hấp dẫn liên quan tới cấu trúc của hệ quy chiếu và hình học không-thời gian, chứ không chỉ là một force field kiểu Newton.
+Điều này gợi ý hấp dẫn liên quan tới cấu trúc của hệ quy chiếu và hình học không-thời gian, chứ không chỉ là một force trường dữ liệu (field / 필드) kiểu Newton.
 
 ## Cục bộ phẳng không có nghĩa toàn cục phẳng
 
@@ -73,21 +76,21 @@ curvature / tidal gravity
 
 Một elevator nhỏ có thể gần như không cảm thấy gravity, nhưng hai vật rơi cách nhau một khoảng vẫn có thể hội tụ hoặc phân kỳ.
 
-## Metric
+## Chỉ số (metric / 지표)
 
-Metric tensor `g_{\mu\nu}(x)` xác định cách đo interval trong spacetime:
+Chỉ số (metric / 지표) tensor `g_{\mu\nu}(x)` xác định cách đo interval trong spacetime:
 
 ```math
 ds^2=g_{\mu\nu}dx^\mu dx^\nu.
 ```
 
-Với timelike worldline và convention dấu `(-,+,+,+)`, proper time thỏa
+Với timelike worldline và convention dấu `(-,+,+,+)`, proper thời gian (time / 시간) thỏa
 
 ```math
 c^2d\tau^2=-ds^2.
 ```
 
-Metric quyết định:
+Chỉ số (metric / 지표) quyết định:
 
 ```text
 proper time
@@ -97,11 +100,11 @@ causal structure
 geodesic
 ```
 
-Trong special relativity, metric Minkowski là cố định. Trong GR, metric là một field cần được giải từ Einstein equation.
+Trong special relativity, chỉ số (metric / 지표) Minkowski là cố định. Trong GR, chỉ số (metric / 지표) là một trường dữ liệu (field / 필드) cần được giải từ Einstein equation.
 
 ## Geodesic
 
-Một free-falling test particle đi theo geodesic:
+Một free-falling kiểm thử (test / 테스트) particle đi theo geodesic:
 
 ```math
 \frac{d^2x^\mu}{d\tau^2}
@@ -127,9 +130,9 @@ Christoffel symbol là
 \right).
 ```
 
-Geodesic equation có thể được suy ra bằng extremizing proper time của free particle.
+Geodesic equation có thể được suy ra bằng extremizing proper thời gian (time / 시간) của free particle.
 
-Điều này tương tự principle of stationary action trong mechanics, nhưng action bây giờ được xây từ spacetime geometry.
+Điều này tương tự principle of stationary hành động (action / 동작) trong mechanics, nhưng hành động (action / 동작) bây giờ được xây từ spacetime hình học (geometry / 기하학).
 
 ## Vì sao phi hành gia trên quỹ đạo thấy không trọng lượng?
 
@@ -139,11 +142,11 @@ Họ thấy gần weightless vì cả tàu và cơ thể đều free-fall theo g
 
 Không có normal force từ sàn giữ cơ thể đứng yên như trên mặt đất.
 
-Do đó cảm giác “trọng lượng” thường liên quan proper acceleration do support force hơn là chỉ magnitude của gravitational field theo Newton.
+Do đó cảm giác “trọng lượng” thường liên quan proper acceleration do hỗ trợ (support / 지원) force hơn là chỉ magnitude của gravitational trường dữ liệu (field / 필드) theo Newton.
 
 ## Geodesic deviation: độ cong đo được bằng tidal motion
 
-Xét hai geodesic gần nhau có separation vector `\xi^\mu` và four-velocity `u^\mu`.
+Xét hai geodesic gần nhau có separation véc-tơ (vector / 벡터) `\xi^\mu` và four-velocity `u^\mu`.
 
 Sự thay đổi tương đối của chúng được mô tả bởi geodesic-deviation equation:
 
@@ -163,9 +166,9 @@ curvature
 → relative acceleration của nearby free-fall particles
 ```
 
-Tidal stretching gần black hole, relative displacement do gravitational wave và nhiều phép đo gravity gradient đều liên hệ với cấu trúc này.
+Tidal stretching gần black hole, relative displacement do gravitational wave và nhiều phép đo gravity độ dốc (gradient / 기울기) đều liên hệ với cấu trúc này.
 
-## Einstein field equation
+## Einstein trường dữ liệu (field / 필드) equation
 
 Phương trình trường là
 
@@ -181,13 +184,13 @@ Trong đó:
 - `G_{\mu\nu}` được xây từ curvature;
 - `\Lambda` là cosmological constant.
 
-Stress-energy tensor không chỉ chứa mass density. Nó còn chứa energy density, momentum density, energy flux, pressure và shear stress.
+Stress-energy tensor không chỉ chứa mass density. Nó còn chứa năng lượng (energy / 에너지) density, momentum density, năng lượng (energy / 에너지) flux, pressure và shear stress.
 
-Do đó trong GR, pressure cũng góp vào gravitational source.
+Do đó trong GR, pressure cũng góp vào gravitational nguồn (source / 소스).
 
 ## Conservation trong GR
 
-Bianchi identity dẫn tới
+Bianchi định danh (identity / 식별자) dẫn tới
 
 ```math
 \nabla_\mu G^{\mu\nu}=0.
@@ -199,9 +202,9 @@ Kết hợp Einstein equation cho
 \nabla_\mu T^{\mu\nu}=0.
 ```
 
-Đây là local covariant conservation law của stress-energy.
+Đây là cục bộ (local / 로컬) covariant conservation law của stress-energy.
 
-Trong curved spacetime tổng energy toàn cục không phải lúc nào cũng định nghĩa được theo cách đơn giản như trong Newtonian mechanics. Vì vậy không nên áp trực giác “một scalar total energy luôn tồn tại” vào mọi spacetime tùy ý.
+Trong curved spacetime tổng năng lượng (energy / 에너지) toàn cục không phải lúc nào cũng định nghĩa được theo cách đơn giản như trong Newtonian mechanics. Vì vậy không nên áp trực giác “một scalar total năng lượng (energy / 에너지) luôn tồn tại” vào mọi spacetime tùy ý.
 
 ## Giới hạn trường yếu
 
@@ -214,7 +217,7 @@ pressure << energy density
 field thay đổi chậm
 ```
 
-Viết metric gần Minkowski:
+Viết chỉ số (metric / 지표) gần Minkowski:
 
 ```math
 g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu},
@@ -246,7 +249,7 @@ Einstein equation đồng thời giảm gần về Poisson equation:
 
 Đây là cầu nối chính xác giữa GR và Newtonian gravity.
 
-## Gravitational time dilation trong trường yếu
+## Gravitational thời gian (time / 시간) dilation trong trường yếu
 
 Từ
 
@@ -264,7 +267,7 @@ d\tau
 \left(1+\frac{\Phi}{c^2}\right)dt.
 ```
 
-Nếu `\Phi` âm sâu hơn trong gravitational well, proper time tích lũy chậm hơn so với vị trí có potential cao hơn.
+Nếu `\Phi` âm sâu hơn trong gravitational well, proper thời gian (time / 시간) tích lũy chậm hơn so với vị trí có potential cao hơn.
 
 Gần mặt đất với height difference `\Delta h` nhỏ,
 
@@ -288,11 +291,11 @@ general-relativistic gravitational time shift do altitude
 
 Hai hiệu ứng có dấu khác nhau và phải được tính đồng thời.
 
-GPS vì vậy là một ví dụ engineering nơi relativity không phải “correction triết học” mà là thành phần của system design.
+GPS vì vậy là một ví dụ kỹ thuật (engineering / 엔지니어링) nơi relativity không phải “correction triết học” mà là thành phần của hệ thống (system / 시스템) thiết kế (design / 설계).
 
 ## Schwarzschild spacetime
 
-Bên ngoài một body spherical, nonrotating, vacuum solution có metric
+Bên ngoài một body spherical, nonrotating, vacuum solution có chỉ số (metric / 지표)
 
 ```math
 ds^2
@@ -309,21 +312,21 @@ r_s=\frac{2GM}{c^2}.
 
 `r_s` là Schwarzschild radius.
 
-Nếu vật thể bị compact bên trong scale này trong ideal GR solution, `r=r_s` là event horizon.
+Nếu vật thể bị compact bên trong quy mô (scale / 규모) này trong ideal GR solution, `r=r_s` là sự kiện (event / 이벤트) horizon.
 
-## Event horizon là causal boundary
+## Sự kiện (event / 이벤트) horizon là nhân quả (causal / 인과적) ranh giới (boundary / 경계)
 
-Event horizon không phải bề mặt vật liệu.
+Sự kiện (event / 이벤트) horizon không phải bề mặt vật liệu.
 
-Nó được định nghĩa toàn cục bởi causal structure: tín hiệu phát từ bên trong không thể tới future null infinity.
+Nó được định nghĩa toàn cục bởi nhân quả (causal / 인과적) cấu trúc (structure / 구조): tín hiệu phát từ bên trong không thể tới future null infinity.
 
-Một free-falling observer qua horizon của sufficiently large black hole không nhất thiết thấy local curvature vô hạn ngay tại horizon.
+Một free-falling observer qua horizon của sufficiently large black hole không nhất thiết thấy cục bộ (local / 로컬) curvature vô hạn ngay tại horizon.
 
-Một số coordinate systems như Schwarzschild coordinates có singular-looking components tại `r_s`, nhưng đây là coordinate singularity, không phải curvature singularity.
+Một số coordinate các hệ thống (systems / 시스템들) như Schwarzschild coordinates có singular-looking components tại `r_s`, nhưng đây là coordinate singularity, không phải curvature singularity.
 
 ## Curvature singularity
 
-Ở `r=0` của ideal Schwarzschild solution, curvature invariant như Kretschmann scalar diverges.
+Ở `r=0` của ideal Schwarzschild solution, curvature bất biến (invariant / 불변식) như Kretschmann scalar diverges.
 
 Điều này khác horizon.
 
@@ -333,7 +336,7 @@ Không nên diễn giải singularity như một vật thể đã được hiể
 
 ## Quỹ đạo và perihelion precession
 
-GR sửa Newtonian orbital dynamics bằng các correction nhỏ trong weak field.
+GR sửa Newtonian orbital dynamics bằng các correction nhỏ trong weak trường dữ liệu (field / 필드).
 
 Với orbit gần Keplerian quanh mass `M`, perihelion advance mỗi vòng gần
 
@@ -364,13 +367,13 @@ Một light ray đi gần spherical mass với impact parameter `b` bị deflect
 \frac{4GM}{bc^2}
 ```
 
-trong weak field.
+trong weak trường dữ liệu (field / 필드).
 
-Gravitational lensing ngày nay là công cụ quan trọng để đo mass distribution, dark matter và distant galaxies.
+Gravitational lensing ngày nay là công cụ quan trọng để đo mass phân phối (distribution / 분포), dark matter và distant galaxies.
 
-## Shapiro time delay
+## Shapiro thời gian (time / 시간) delay
 
-Tín hiệu điện từ đi qua vùng gravitational potential sâu có travel time lớn hơn giá trị Euclidean-flat expectation.
+Tín hiệu điện từ đi qua vùng gravitational potential sâu có travel thời gian (time / 시간) lớn hơn giá trị Euclidean-flat expectation.
 
 Hiệu ứng Shapiro là một trong các classical tests của GR và hiện được đo với radar ranging cùng pulsar timing.
 
@@ -378,13 +381,13 @@ Hiệu ứng Shapiro là một trong các classical tests của GR và hiện đ
 
 Photon phát sâu trong gravitational potential được quan sát ở vị trí cao hơn với frequency thấp hơn.
 
-Ta có thể hiểu nó nhất quán qua comparison of local clock rates thay vì nói photon “mất energy một cách tuyệt đối” khi leo khỏi gravity.
+Ta có thể hiểu nó nhất quán qua comparison of cục bộ (local / 로컬) clock rates thay vì nói photon “mất năng lượng (energy / 에너지) một cách tuyệt đối” khi leo khỏi gravity.
 
 Frequency luôn được đo bởi observer cụ thể.
 
 ## Gravitational waves
 
-Linearize metric:
+Linearize chỉ số (metric / 지표):
 
 ```math
 g_{\mu\nu}=\eta_{\mu\nu}+h_{\mu\nu}.
@@ -398,25 +401,25 @@ Trong vacuum và gauge thích hợp, perturbation thỏa wave equation gần
 
 Sóng hấp dẫn lan với tốc độ `c`.
 
-Do conservation of mass-energy và momentum, lowest radiative multipole cho isolated source không phải monopole hay dipole mà là quadrupole.
+Do conservation of mass-energy và momentum, lowest radiative multipole cho isolated nguồn (source / 소스) không phải monopole hay dipole mà là quadrupole.
 
-Binary compact objects vì vậy là nguồn gravitational-wave mạnh.
+Nhị phân (binary / 이진) compact objects vì vậy là nguồn gravitational-wave mạnh.
 
 ## Strain
 
-Detector thường mô tả signal bằng dimensionless strain
+Detector thường mô tả tín hiệu (signal / 신호) bằng dimensionless strain
 
 ```math
 h\sim\frac{\Delta L}{L}.
 ```
 
-Interferometer đo differential change giữa hai arm.
+Interferometer đo differential thay đổi (change / 변경) giữa hai arm.
 
-LIGO không đo “force của sóng” theo cách cảm biến gia tốc cổ điển; nó đo relative spacetime distortion giữa freely suspended test masses.
+LIGO không đo “force của sóng” theo cách cảm biến gia tốc cổ điển; nó đo relative spacetime distortion giữa freely suspended kiểm thử (test / 테스트) masses.
 
 ## Cosmology từ Einstein equation
 
-Nếu giả sử universe homogeneous và isotropic ở scale lớn, metric FLRW cùng Einstein equation dẫn tới Friedmann equations.
+Nếu giả sử universe homogeneous và isotropic ở quy mô (scale / 규모) lớn, chỉ số (metric / 지표) FLRW cùng Einstein equation dẫn tới Friedmann equations.
 
 Một dạng là
 
@@ -429,15 +432,15 @@ H^2
 +\frac{\Lambda c^2}{3}.
 ```
 
-Đây là cầu nối từ local geometric gravity sang expansion history của toàn universe.
+Đây là cầu nối từ cục bộ (local / 로컬) geometric gravity sang expansion lịch sử (history / 이력) của toàn universe.
 
 Chi tiết cosmology được phát triển ở chapter riêng.
 
-## Assumptions và phạm vi của GR classical
+## Các giả định (assumptions / 가정들) và phạm vi của GR classical
 
-GR là classical field theory của spacetime.
+GR là classical trường dữ liệu (field / 필드) lý thuyết (theory / 이론) của spacetime.
 
-Nó hoạt động cực kỳ tốt từ solar-system tests đến binary pulsars và gravitational waves.
+Nó hoạt động cực kỳ tốt từ solar-system tests đến nhị phân (binary / 이진) pulsars và gravitational waves.
 
 Nhưng nó chưa bao gồm quantum gravity.
 
@@ -449,9 +452,9 @@ classical singularities
 early quantum spacetime regimes
 ```
 
-Ngoài ra để giải một bài GR cụ thể, cần specification của matter model, symmetry và boundary/initial conditions. Einstein equation một mình không tự chọn solution duy nhất.
+Ngoài ra để giải một bài GR cụ thể, cần specification của matter mô hình (model / 모델), symmetry và ranh giới (boundary / 경계)/initial conditions. Einstein equation một mình không tự chọn solution duy nhất.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 GR có thể giữ trong đầu bằng ba tầng:
 
@@ -466,17 +469,17 @@ stress-energy
 → nguồn động lực học của geometry
 ```
 
-Free-fall không phải “vật bị kéo khỏi đường thẳng”; trong geometry phù hợp, geodesic chính là đường chuyển động tự do tự nhiên.
+Free-fall không phải “vật bị kéo khỏi đường thẳng”; trong hình học (geometry / 기하학) phù hợp, geodesic chính là đường chuyển động tự do tự nhiên.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Gravity biến mất trong free-fall nên spacetime phẳng”
 
-Không. Connection có thể triệt tiêu cục bộ, nhưng curvature/tidal effects có thể vẫn khác zero.
+Không. liên kết (connection / 연결) có thể triệt tiêu cục bộ, nhưng curvature/tidal effects có thể vẫn khác zero.
 
-### “Event horizon là singularity”
+### “sự kiện (event / 이벤트) horizon là singularity”
 
-Không. Với Schwarzschild black hole, horizon là causal boundary; curvature singularity nằm ở `r=0` trong classical solution.
+Không. Với Schwarzschild black hole, horizon là nhân quả (causal / 인과적) ranh giới (boundary / 경계); curvature singularity nằm ở `r=0` trong classical solution.
 
 ### “Black hole hút mạnh bất thường ở mọi khoảng cách”
 
@@ -484,18 +487,20 @@ Không. Xa một spherical black hole, exterior gravity gần giống mass khác
 
 ### “Einstein equation nói vật chất trực tiếp tạo force hấp dẫn”
 
-Chính xác hơn, stress-energy liên hệ với curvature, còn test particle free-fall theo geodesic của metric.
+Chính xác hơn, stress-energy liên hệ với curvature, còn kiểm thử (test / 테스트) particle free-fall theo geodesic của chỉ số (metric / 지표).
 
 ### “Newtonian gravity sai hoàn toàn”
 
 Không. Nó là weak-field, low-velocity limit cực kỳ tốt của GR.
 
-### “Energy luôn có một total scalar global rõ ràng trong mọi spacetime”
+### “năng lượng (energy / 에너지) luôn có một total scalar toàn cục (global / 전역) rõ ràng trong mọi spacetime”
 
-Không. Local covariant conservation luôn quan trọng, nhưng global energy definition phụ thuộc symmetry/boundary structure của spacetime.
+Không. cục bộ (local / 로컬) covariant conservation luôn quan trọng, nhưng toàn cục (global / 전역) năng lượng (energy / 에너지) definition phụ thuộc symmetry/ranh giới (boundary / 경계) cấu trúc (structure / 구조) của spacetime.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Thuyết tương đối hẹp](00_special_relativity.md), [Hấp dẫn Newton và quỹ đạo](../01_mechanics/06_gravitation_orbits.md), [Tensor và PDE](../00_foundations/05_pde_boundary_green_tensors.md).
 
 **Liên hệ tiếp:** [Sao và thiên thể đặc](../11_astrophysics_cosmology/00_stars_compact_objects.md), [Thiên hà và vũ trụ học](../11_astrophysics_cosmology/01_galaxies_cosmology.md), [Vũ trụ sơ khai](../11_astrophysics_cosmology/03_early_universe_dark_components.md), [Vật lý thiên văn quan sát](../11_astrophysics_cosmology/02_observational_astrophysics_radiative_transfer.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 special relativity](./00_special_relativity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

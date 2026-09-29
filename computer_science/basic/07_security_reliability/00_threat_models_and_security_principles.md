@@ -1,5 +1,8 @@
 # Mô hình đe dọa và các nguyên tắc bảo mật
 
+> **Mạch đọc:** Đọc **Mô hình đe dọa và các nguyên tắc bảo mật** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Các thuộc tính bảo mật** sang **Mô hình đe dọa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Bảo mật (security / 보안) không bắt đầu từ mã hóa. Nó bắt đầu bằng câu hỏi: **ta đang bảo vệ tài sản nào, khỏi tác nhân nào, qua bề mặt tấn công nào và thuộc tính nào phải được giữ vững?** Nếu không có **mô hình đe dọa (threat model)**, từ “an toàn” quá mơ hồ để kiểm chứng.
 
 ## Các thuộc tính bảo mật
@@ -22,9 +25,9 @@ Mỗi ranh giới cần kiểm tra dữ liệu, xác thực và phân quyền th
 
 ## Nguyên tắc đặc quyền tối thiểu
 
-**Đặc quyền tối thiểu (principle of least privilege)** yêu cầu mỗi danh tính hoặc tiến trình chỉ có quyền cần thiết, trong phạm vi và khoảng thời gian cần thiết. Tài khoản ứng dụng của cơ sở dữ liệu không nên có quyền `DROP` toàn bộ schema nếu chỉ cần CRUD trên vài bảng; container không nên chạy đặc quyền cao nếu không cần; token API chỉ đọc không nên có quyền quản trị.
+**Đặc quyền tối thiểu (principle of least privilege)** yêu cầu mỗi danh tính hoặc tiến trình chỉ có quyền cần thiết, trong phạm vi và khoảng thời gian cần thiết. Tài khoản ứng dụng của cơ sở dữ liệu không nên có quyền `DROP` toàn bộ lược đồ (schema / 스키마) nếu chỉ cần CRUD trên vài bảng; bộ chứa (container / 컨테이너) không nên chạy đặc quyền cao nếu không cần; đơn vị từ (token / 토큰) API chỉ đọc không nên có quyền quản trị.
 
-Giảm quyền giúp thu hẹp phạm vi thiệt hại (blast radius) nhưng làm quản lý phức tạp hơn. Thiết kế tốt dùng vai trò, phạm vi và capability để quyền vừa đủ mà không biến hệ thống thành mê cung permission.
+Giảm quyền giúp thu hẹp phạm vi thiệt hại (blast radius) nhưng làm quản lý phức tạp hơn. Thiết kế tốt dùng vai trò, phạm vi và năng lực (capability / 역량) để quyền vừa đủ mà không biến hệ thống thành mê cung permission.
 
 ## Phòng thủ nhiều lớp
 
@@ -32,17 +35,17 @@ Không biện pháp nào hoàn hảo. TLS, xác thực, phân quyền, kiểm tr
 
 ## Mặc định an toàn
 
-Cấu hình mặc định nên từ chối hoặc cấp quyền tối thiểu và yêu cầu bật tường minh cho quyền nguy hiểm. Đường xử lý lỗi không nên biến thành “dịch vụ xác thực timeout thì cho phép truy cập”. Một số hệ thống ưu tiên tính sẵn sàng có thể cố ý mở khi lỗi (fail-open), nhưng đó phải là quyết định đánh đổi rủi ro có chủ đích.
+Cấu hình mặc định nên từ chối hoặc cấp quyền tối thiểu và yêu cầu bật tường minh cho quyền nguy hiểm. Đường xử lý lỗi không nên biến thành “dịch vụ xác thực hết thời gian chờ (timeout / 타임아웃) thì cho phép truy cập”. Một số hệ thống ưu tiên tính sẵn sàng có thể cố ý mở khi lỗi (fail-open), nhưng đó phải là quyết định đánh đổi rủi ro có chủ đích.
 
 ## Giảm bề mặt tấn công
 
-Mỗi endpoint, bộ phân tích dữ liệu, dependency, cổng mở, đặc quyền và tính năng đều có thể trở thành **bề mặt tấn công (attack surface)**. Loại bỏ dịch vụ không dùng, giảm API công khai, cập nhật dependency và giới hạn đầu vào giúp giảm số trạng thái mà hệ thống phải bảo vệ.
+Mỗi endpoint, bộ phân tích dữ liệu, phụ thuộc (dependency / 의존성), cổng mở, đặc quyền và tính năng đều có thể trở thành **bề mặt tấn công (attack surface)**. Loại bỏ dịch vụ không dùng, giảm API công khai, cập nhật phụ thuộc (dependency / 의존성) và giới hạn đầu vào giúp giảm số trạng thái mà hệ thống phải bảo vệ.
 
 Sự đơn giản có giá trị bảo mật vì càng ít trạng thái và tương tác thì càng dễ suy luận về hành vi.
 
 ## Kiểm tra quyền ở mọi đường truy cập
 
-Nguyên tắc **kiểm tra đầy đủ (complete mediation)** yêu cầu phân quyền ở mọi lần truy cập tài nguyên được bảo vệ, không chỉ trên giao diện. Ẩn một nút không bảo vệ API phía máy chủ. Cache cũng phải giữ đúng ngữ nghĩa phân quyền; khóa cache thiếu thông tin tenant hoặc người dùng có thể làm rò rỉ dữ liệu giữa các đối tượng.
+Nguyên tắc **kiểm tra đầy đủ (complete mediation)** yêu cầu phân quyền ở mọi lần truy cập tài nguyên được bảo vệ, không chỉ trên giao diện. Ẩn một nút không bảo vệ API phía máy chủ. bộ nhớ đệm (cache / 캐시) cũng phải giữ đúng ngữ nghĩa phân quyền; khóa bộ nhớ đệm (cache / 캐시) thiếu thông tin tenant hoặc người dùng có thể làm rò rỉ dữ liệu giữa các đối tượng.
 
 ## Phân tách nhiệm vụ
 
@@ -67,3 +70,5 @@ Biện pháp bảo mật luôn có chi phí. MFA thêm thao tác; hàm dẫn xu�
 ## Kết nối
 
 Cô lập của hệ điều hành nằm ở [đặc quyền và ảo hóa](../03_operating_systems/05_privilege_isolation_and_virtualization.md). Cơ chế mật mã nằm ở [nền tảng mật mã học](./01_cryptography_foundations.md); danh tính và quyền truy cập ở [xác thực và phân quyền](./02_identity_authentication_and_authorization.md); lỗi triển khai ở [lỗ hổng phần mềm](./03_software_vulnerabilities.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 cryptography foundations](./01_cryptography_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

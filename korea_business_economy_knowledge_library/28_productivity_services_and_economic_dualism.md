@@ -1,5 +1,8 @@
 # Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)
 
+> **Mạch đọc:** Đặt **Năng suất, kinh tế dịch vụ và cấu trúc hai tốc độ của Hàn Quốc (Productivity & Economic Dualism / 생산성·서비스업·경제 이중구조)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Năng suất thực sự là gì?** sang **Vì sao năng suất sản xuất thường cao hơn nhiều dịch vụ truyền thống?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Kinh tế Hàn Quốc thường được nhìn qua fab bán dẫn, xưởng đóng tàu, nhà máy ô tô và pin. Hình ảnh đó đúng nhưng chưa đủ. Phần lớn việc làm lại nằm trong dịch vụ và SME. Vì vậy Hàn Quốc có một nghịch lý quan trọng: **một nền kinh tế có những “đảo xuất sắc” với năng suất rất cao vẫn có năng suất tổng thể thấp hơn tiềm năng vì phần còn lại vận hành ở mức thấp hơn nhiều**.
 
 Đây là ý nghĩa cốt lõi của **cấu trúc kinh tế hai tốc độ (economic dualism / 경제 이중구조)**: cùng một thị trường lao động và thị trường vốn nhưng tồn tại các doanh nghiệp có công nghệ, mức lương, năng lực quản lý và quyền thương lượng khác nhau rất lớn.
@@ -28,7 +31,7 @@ Trong đó `Y` là sản lượng, `K` là vốn, `L` là lao động và `A` l�
 
 Sản xuất thường dễ tiêu chuẩn hóa và tự động hóa hơn. Một máy hoặc dây chuyền có thể tạo hàng nghìn đơn vị giống nhau, trong khi chi phí cố định được chia trên sản lượng lớn.
 
-Nhiều dịch vụ truyền thống lại cần tương tác trực tiếp của con người. Cắt tóc, chăm sóc người già, giữ trẻ hoặc phục vụ nhà hàng khó tăng sản lượng trên mỗi giờ vô hạn mà không giảm chất lượng. Đây gần với logic **bệnh chi phí Baumol (Baumol cost disease)**: lương lao động dịch vụ vẫn phải tăng theo mặt bằng chung dù năng suất vật lý tăng chậm.
+Nhiều dịch vụ truyền thống lại cần tương tác trực tiếp của con người. Cắt tóc, chăm sóc người già, giữ trẻ hoặc phục vụ nhà hàng khó tăng sản lượng trên mỗi giờ vô hạn mà không giảm chất lượng. Đây gần với lô-gic (logic / 논리) **bệnh chi phí Baumol (Baumol cost disease)**: lương lao động dịch vụ vẫn phải tăng theo mặt bằng chung dù năng suất vật lý tăng chậm.
 
 Nhưng không nên gom mọi dịch vụ vào cùng một nhóm. Phần mềm, cloud, game, fintech, nội dung số hoặc nền tảng có thể có chi phí phát triển ban đầu cao nhưng chi phí phục vụ thêm khách hàng thấp và có khả năng mở rộng toàn cầu.
 
@@ -114,7 +117,7 @@ Thực hành quản lý vì vậy là một loại **vốn vô hình (intangible
 
 Một dashboard MES hiển thị tỷ lệ lỗi sẽ không giúp nhiều nếu quản đốc không có quyền dừng dây chuyền hoặc tổ chức không có quy trình tìm nguyên nhân gốc.
 
-Đây là điểm giao trực tiếp với Software Engineering: phần mềm doanh nghiệp không chỉ “hỗ trợ nghiệp vụ”; nó định hình luồng thông tin và độ trễ ra quyết định của tổ chức.
+Đây là điểm giao trực tiếp với Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): phần mềm doanh nghiệp không chỉ “hỗ trợ nghiệp vụ”; nó định hình luồng thông tin và độ trễ ra quyết định của tổ chức.
 
 ## Năng suất và lương
 
@@ -158,7 +161,7 @@ Game, K-content, phần mềm, dịch vụ kỹ thuật, tài chính, y tế và
 
 ## AI: công cụ năng suất hay chỉ là chi phí mới?
 
-AI có thể tăng năng suất bằng tự động hóa tác vụ lặp lại, hỗ trợ lập trình, dịch, dự báo, kiểm tra chất lượng và chăm sóc khách hàng. Nhưng ROI không đến chỉ từ việc “có model”.
+AI có thể tăng năng suất bằng tự động hóa tác vụ lặp lại, hỗ trợ lập trình, dịch, dự báo, kiểm tra chất lượng và chăm sóc khách hàng. Nhưng ROI không đến chỉ từ việc “có mô hình (model / 모델)”.
 
 Doanh nghiệp cần dữ liệu tốt, tích hợp vào quy trình và nhân viên biết kiểm tra kết quả. Có thể hình dung:
 
@@ -196,7 +199,7 @@ Gia nhập
 
 Nếu chỉ khuyến khích thành lập doanh nghiệp mà không tạo đường scale-up và exit, nền kinh tế có thể có rất nhiều doanh nghiệp nhỏ nhưng năng suất thấp kéo dài.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Năng suất không chỉ là “làm nhanh hơn”. Nó là **khả năng biến lao động, vốn và tri thức thành giá trị cao hơn**. Dualism xuất hiện khi công nghệ, vốn, quản lý và nhân tài tập trung ở một phần nhỏ của nền kinh tế trong khi phần lớn lao động nằm ở khu vực không tích lũy được các lợi thế đó.
 
@@ -207,3 +210,5 @@ Năng suất thấp không có nghĩa người lao động lười. Dịch vụ 
 ## Liên kết
 
 Đọc cùng [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md), [`17_platform_telecom_content_retail_services.md`](./17_platform_telecom_content_retail_services.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) và [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

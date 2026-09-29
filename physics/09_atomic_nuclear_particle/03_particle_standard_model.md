@@ -1,5 +1,8 @@
 # Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử
 
+> **Mạch đọc:** Đọc **Hạt cơ bản, Mô hình Chuẩn, đối xứng và trường lượng tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình Chuẩn mô tả những gì?** sang **Đối xứng chuẩn (gauge symmetry)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Mô hình Chuẩn mô tả những gì?
 
 Mô hình Chuẩn (Standard Model / 표준 모형) mô tả ba tương tác cơ bản: điện từ, yếu và mạnh. Nó không cung cấp một lý thuyết lượng tử hoàn chỉnh của hấp dẫn.
@@ -92,12 +95,14 @@ Mô hình Chuẩn cực kỳ thành công nhưng không phải lý thuyết củ
 
 Những giới hạn này không làm Mô hình Chuẩn “sai”. Chúng xác định miền mà mô hình đã được kiểm nghiệm rất tốt và những câu hỏi nơi cần vật lý mới.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Danh sách hạt chỉ là bề mặt của Mô hình Chuẩn. Cấu trúc sâu hơn nằm ở các trường lượng tử, đối xứng, cách đối xứng bị phá vỡ và những tương tác được phép giữa các trường.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](../08_quantum/00_quantum_foundations.md), [Thuyết tương đối hẹp](../07_relativity/00_special_relativity.md).
 
 **Liên hệ tiếp:** [Thiên hà và vũ trụ học](../11_astrophysics_cosmology/01_galaxies_cosmology.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic physics](./00_atomic_physics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

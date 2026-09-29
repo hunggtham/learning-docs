@@ -1,10 +1,10 @@
-# Mục lục và Knowledge Dependency — Lịch sử Hàn Quốc
+# Mục lục và Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성) — Lịch sử Hàn Quốc
 
 ## Quy ước tên riêng Việt – Hàn – Anh
 
-Trong toàn bộ library, tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.
+Trong toàn bộ thư viện (library / 라이브러리), tên người, địa danh, triều đại, công trình, sự kiện, tác phẩm và các danh xưng lịch sử quan trọng được ghi theo nguyên tắc **tiếng Việt trước, tiếng Hàn gốc thứ hai, English/Romanization thứ ba** ở lần xuất hiện đầu tiên trong mỗi tài liệu. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**, **Cao Ly (고려 / Goryeo)** và **Lý Thuấn Thần (이순신 / Yi Sun-sin)**.
 
-Với tên lịch sử có Hán tự và đã có cách đọc Hán–Việt hữu ích, tài liệu ưu tiên dạng Việt hoá để người đọc hiểu nghĩa và liên hệ với sử liệu Việt Nam/Đông Á. Với tên người và địa danh hiện đại mà tiếng Việt không có tên dịch ổn định, tài liệu giữ romanization quốc tế làm tên chính, đồng thời ghi nguyên bản tiếng Hàn; không ép dịch Hán–Việt nếu cách gọi đó khiến tên trở nên xa lạ hoặc dễ gây nhầm. Tên file vẫn dùng tiếng Anh/romanization để URL, Git và cross-link ổn định.
+Với tên lịch sử có Hán tự và đã có cách đọc Hán–Việt hữu ích, tài liệu ưu tiên dạng Việt hoá để người đọc hiểu nghĩa và liên hệ với sử liệu Việt Nam/Đông Á. Với tên người và địa danh hiện đại mà tiếng Việt không có tên dịch ổn định, tài liệu giữ romanization quốc tế làm tên chính, đồng thời ghi nguyên bản tiếng Hàn; không ép dịch Hán–Việt nếu cách gọi đó khiến tên trở nên xa lạ hoặc dễ gây nhầm. Tên tệp (file / 파일) vẫn dùng tiếng Anh/romanization để URL, Git và cross-link ổn định.
 
 Các tên có thể mang nhiều convention khác nhau trong tiếng Việt sẽ được ghi chú ở glossary. Mục tiêu của quy ước này không phải thay thế tên Hàn Quốc bằng tên Hán–Việt, mà giúp người đọc nhận ra rằng **Cung Cảnh Phúc – Gyeongbokgung – 경복궁** là cùng một thực thể.
 
@@ -84,15 +84,15 @@ Các trục xuyên thời gian:
 
 ## Lớp đọc mới: timeline + kinh tế + Việt Nam + địa điểm + geography
 
-Các file `33`–`36` tạo một **context layer** chạy song song toàn bộ `02`–`23`.
+Các tệp (file / 파일) `33`–`36` tạo một **ngữ cảnh (context / 맥락) tầng (layer / 계층)** chạy song song toàn bộ `02`–`23`.
 
-[`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md) đặt từng giai đoạn Hàn Quốc vào cùng trục thời gian với Việt Nam, đồng thời giải thích economy, state capacity, everyday context và transition. Comparison dùng để tạo mốc neo thời gian, không giả định hai xã hội có cùng trajectory.
+[`33_korea_vietnam_parallel_timeline_and_context.md`](33_korea_vietnam_parallel_timeline_and_context.md) đặt từng giai đoạn Hàn Quốc vào cùng trục thời gian với Việt Nam, đồng thời giải thích economy, trạng thái (state / 상태) sức chứa (capacity / 용량), everyday ngữ cảnh (context / 맥락) và chuyển tiếp (transition / 전이). Comparison dùng để tạo mốc neo thời gian, không giả định hai xã hội có cùng trajectory.
 
-[`34_historical_places_field_guide.md`](34_historical_places_field_guide.md) nối từng giai đoạn với physical evidence: dolmen, Gyeongju, Baekje Historic Areas, Gaya tumuli, Ganghwa, Haeinsa, Gyeongbokgung, Hwaseong, Deoksugung, Seodaemun Prison, DMZ, Gwangju, Ulsan/Pohang và urban landscape hiện đại. Mục tiêu là biết **đến đó thì phải nhìn gì và câu hỏi lịch sử nào có thể đọc ra từ không gian**.
+[`34_historical_places_field_guide.md`](34_historical_places_field_guide.md) nối từng giai đoạn với vật lý (physical / 물리적) bằng chứng (evidence / 증거): dolmen, Gyeongju, Baekje Historic Areas, Gaya tumuli, Ganghwa, Haeinsa, Gyeongbokgung, Hwaseong, Deoksugung, Seodaemun Prison, DMZ, Gwangju, Ulsan/Pohang và urban landscape hiện đại. Mục tiêu là biết **đến đó thì phải nhìn gì và câu hỏi lịch sử nào có thể đọc ra từ không gian**.
 
-[`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md) theo dõi production, land, tax, trade, labor, household, class/status, industrialization và đời sống thường ngày qua từng thời kỳ. Nó đóng vai trò bridge dễ đọc trước khi đi sâu vào các chapter thematic như `26` và `27`.
+[`35_economy_society_everyday_life_by_period.md`](35_economy_society_everyday_life_by_period.md) theo dõi môi trường vận hành (production / 운영 환경), land, tax, trade, labor, household, lớp (class / 클래스)/status, industrialization và đời sống thường ngày qua từng thời kỳ. Nó đóng vai trò cầu nối (bridge / 브리지) dễ đọc trước khi đi sâu vào các chapter thematic như `26` và `27`.
 
-[`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md) giải thích vì sao Han River basin, mountain pass, coast, capital, port, railway và logistics làm một nơi trở thành strategic node. File này giúp trả lời câu hỏi mà timeline thường bỏ qua: **vì sao sự kiện lại xảy ra ở chính địa điểm đó?**
+[`36_geography_routes_and_historical_space.md`](36_geography_routes_and_historical_space.md) giải thích vì sao Han River basin, mountain pass, coast, capital, cổng (port / 포트), railway và logistics làm một nơi trở thành strategic nút (node / 노드). Tệp (file / 파일) này giúp trả lời câu hỏi mà timeline thường bỏ qua: **vì sao sự kiện lại xảy ra ở chính địa điểm đó?**
 
 Đường đọc khuyến nghị từ nay là:
 
@@ -112,15 +112,15 @@ chapter chronology 02–23
 26–29: thematic deep dive khi cần
 ```
 
-Không bắt buộc mở các file cùng lúc. Mỗi chapter chính vẫn phải tự giải thích được vấn đề; `33`–`36` chỉ tăng chiều sâu và giúp xây mental map.
+Không bắt buộc mở các tệp (file / 파일) cùng lúc. Mỗi chapter chính vẫn phải tự giải thích được vấn đề; `33`–`36` chỉ tăng chiều sâu và giúp xây mental map.
 
-## Vì sao dependency này không phải Beginner → Advanced
+## Vì sao phụ thuộc (dependency / 의존성) này không phải Beginner → Advanced
 
-Ta cần biết Tam Quốc trước khi hiểu vì sao Goryeo tự đặt mình trong một legacy cụ thể; cần biết Goryeo trước khi hiểu những gì Joseon thay đổi; cần hiểu Joseon trước khi hiểu vì sao các cải cách cuối thế kỷ XIX đụng tới land, status, examination và ritual; cần hiểu colonial period trước khi hiểu division; và cần hiểu chiến tranh trước khi hiểu security state, nghĩa vụ quân sự và development model sau 1953.
+Ta cần biết Tam Quốc trước khi hiểu vì sao Goryeo tự đặt mình trong một legacy cụ thể; cần biết Goryeo trước khi hiểu những gì Joseon thay đổi; cần hiểu Joseon trước khi hiểu vì sao các cải cách cuối thế kỷ XIX đụng tới land, status, examination và ritual; cần hiểu colonial period trước khi hiểu division; và cần hiểu chiến tranh trước khi hiểu bảo mật (security / 보안) trạng thái (state / 상태), nghĩa vụ quân sự và development mô hình (model / 모델) sau 1953.
 
-Đây là dependency về **causal context (bối cảnh nhân quả / 인과적 맥락)**, không phải difficulty level.
+Đây là phụ thuộc (dependency / 의존성) về **nhân quả (causal / 인과적) ngữ cảnh (context / 맥락)**, không phải difficulty mức (level / 수준).
 
-## Mermaid knowledge graph
+## Mermaid kiến thức (knowledge / 지식) đồ thị (graph / 그래프)
 
 Sau bản đồ tuyến tính, sơ đồ mạng cho thấy một chapter có thể nối tới nhiều giai đoạn và nhiều loại bằng chứng. Đây là điểm chuyển từ học theo thời gian sang suy luận theo dependency và cơ chế.
 
@@ -158,12 +158,12 @@ graph TD
     ZB --> ZC[Historical Places Field Guide]
 ```
 
-## Mental Model chung
+## Mô hình tư duy (mental model / 사고 모델) chung
 
-> Hãy đọc mỗi giai đoạn như một hệ thống có “state”: population, territory, institutions, technology, resource flows, status rules và beliefs. Một sự kiện lớn tạo shock, nhưng state mới luôn kế thừa một phần data và constraint của state cũ. Vì vậy lịch sử có cả rupture lẫn continuity.
+> Hãy đọc mỗi giai đoạn như một hệ thống có “trạng thái (state / 상태)”: population, territory, institutions, technology, tài nguyên (resource / 자원) flows, status rules và beliefs. Một sự kiện lớn tạo shock, nhưng trạng thái (state / 상태) mới luôn kế thừa một phần dữ liệu (data / 데이터) và ràng buộc (constraint / 제약조건) của trạng thái (state / 상태) cũ. Vì vậy lịch sử có cả rupture lẫn continuity.
 
-Với mỗi giai đoạn, thêm năm câu hỏi bắt buộc: **mốc thời gian nào là anchor; economy tạo và chuyển surplus ra sao; cùng lúc Việt Nam đang ở phase nào; geography/logistics tạo constraint nào; và ngày nay còn có thể nhìn thấy system đó ở địa điểm/di tích nào?** Nếu một lời giải thích chỉ trả lời “ai lên ngôi, ai đánh ai” mà không trả lời được các câu này, nó chưa đủ cho mục tiêu của library.
+Với mỗi giai đoạn, thêm năm câu hỏi bắt buộc: **mốc thời gian nào là anchor; economy tạo và chuyển surplus ra sao; cùng lúc Việt Nam đang ở phase nào; geography/logistics tạo ràng buộc (constraint / 제약조건) nào; và ngày nay còn có thể nhìn thấy hệ thống (system / 시스템) đó ở địa điểm/di tích nào?** Nếu một lời giải thích chỉ trả lời “ai lên ngôi, ai đánh ai” mà không trả lời được các câu này, nó chưa đủ cho mục tiêu của thư viện (library / 라이브러리).
 
 ## Liên kết với bộ Văn hoá Hàn Quốc
 
-Bộ này tập trung vào **historical process**. Khi cần giải thích sâu về `유교`, `눈치`, `정`, `회식`, `아파트`, `재벌`, `한류` hoặc đời sống đương đại, xem thư mục anh em [`../korean_culture/`](../korean_culture/).
+Bộ này tập trung vào **historical tiến trình (process / 프로세스)**. Khi cần giải thích sâu về `유교`, `눈치`, `정`, `회식`, `아파트`, `재벌`, `한류` hoặc đời sống đương đại, xem thư mục anh em [`../korean_culture/`](../korean_culture/).

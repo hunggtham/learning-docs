@@ -1,6 +1,9 @@
 # Thiết kế giao diện, khả năng tiếp cận và tính dễ sử dụng
 
-Tính dễ sử dụng (usability) không hoàn toàn là cảm giác chủ quan. Ta có thể quan sát tỷ lệ hoàn thành nhiệm vụ, tỷ lệ lỗi, thời gian thực hiện, khả năng học và mức hài lòng. **Khả năng tiếp cận (accessibility / 접근성)** mở rộng câu hỏi: giao diện có thể sử dụng được với người có khả năng giác quan, vận động, nhận thức và thiết bị khác nhau hay không?
+> **Mạch đọc:** Đọc **Thiết kế giao diện, khả năng tiếp cận và tính dễ sử dụng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tính dễ sử dụng phụ thuộc người dùng và nhiệm vụ** sang **Kiến trúc thông tin**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Tính dễ sử dụng (usability) không hoàn toàn là cảm giác chủ quan. Ta có thể quan sát tỷ lệ hoàn thành nhiệm vụ, tỷ lệ lỗi, thời gian thực hiện, khả năng học và mức hài lòng. **khả năng tiếp cận (accessibility / 접근성)** mở rộng câu hỏi: giao diện có thể sử dụng được với người có khả năng giác quan, vận động, nhận thức và thiết bị khác nhau hay không?
 
 ## Tính dễ sử dụng phụ thuộc người dùng và nhiệm vụ
 
@@ -24,25 +27,25 @@ Kích thước, khoảng cách, vị trí, độ tương phản và cách nhóm 
 
 Biểu mẫu cần nhãn rõ ràng, ràng buộc đầu vào dễ hiểu, thông báo lỗi gần trường liên quan và giữ dữ liệu người dùng đã nhập khi kiểm tra thất bại.
 
-Kiểm tra sớm ở phía máy khách giúp phản hồi nhanh, nhưng kiểm tra phía máy chủ vẫn bắt buộc vì không thể tin cậy dữ liệu từ client. Thông báo lỗi tốt nói rõ điều gì sai và cách sửa, thay vì chỉ hiển thị “Invalid input”.
+Kiểm tra sớm ở phía máy khách giúp phản hồi nhanh, nhưng kiểm tra phía máy chủ vẫn bắt buộc vì không thể tin cậy dữ liệu từ máy khách (client / 클라이언트). Thông báo lỗi tốt nói rõ điều gì sai và cách sửa, thay vì chỉ hiển thị “Invalid đầu vào (input / 입력)”.
 
 ## Khả năng tiếp cận không phải phần thêm vào cuối dự án
 
 HTML có ngữ nghĩa, điều hướng bằng bàn phím, thứ tự focus, văn bản thay thế, độ tương phản và khả năng phóng to chữ ảnh hưởng kiến trúc thành phần ngay từ đầu.
 
-Trình đọc màn hình (screen reader) dựa vào cây accessibility và ngữ nghĩa, chứ không “nhìn pixel” như người có thị lực bình thường.
+Trình đọc màn hình (screen reader) dựa vào cây khả năng tiếp cận (accessibility / 접근성) và ngữ nghĩa, chứ không “nhìn điểm ảnh (pixel / 픽셀)” như người có thị lực bình thường.
 
 ## Bàn phím và focus
 
 Các điều khiển tương tác phải có thể tiếp cận bằng bàn phím khi nền tảng và trường hợp sử dụng yêu cầu. Chỉ báo focus cho biết phần tử đang nhận thao tác; hộp thoại modal phải quản lý việc đưa focus vào, giữ focus bên trong khi cần và trả focus về vị trí hợp lý sau khi đóng.
 
-Một `div` tự chế để bấm thường thiếu ngữ nghĩa bàn phím và vai trò accessibility nếu lập trình viên không bổ sung đầy đủ hành vi tương ứng.
+Một `div` tự chế để bấm thường thiếu ngữ nghĩa bàn phím và vai trò khả năng tiếp cận (accessibility / 접근성) nếu lập trình viên không bổ sung đầy đủ hành vi tương ứng.
 
 ## Màu sắc
 
 Không nên dùng màu làm kênh duy nhất để truyền trạng thái vì người dùng có khả năng nhận màu khác nhau, và hệ thống có thể chạy ở chế độ đơn sắc hoặc tương phản cao.
 
-Trạng thái lỗi có thể kết hợp biểu tượng, văn bản và màu. Độ tương phản cần đáp ứng hướng dẫn accessibility tương ứng; ngưỡng cụ thể phụ thuộc tiêu chuẩn và ngữ cảnh.
+Trạng thái lỗi có thể kết hợp biểu tượng, văn bản và màu. Độ tương phản cần đáp ứng hướng dẫn khả năng tiếp cận (accessibility / 접근성) tương ứng; ngưỡng cụ thể phụ thuộc tiêu chuẩn và ngữ cảnh.
 
 ## Thiết kế đáp ứng
 
@@ -70,11 +73,11 @@ Ví dụ tăng số lần bấm thông báo không đồng nghĩa tăng lợi í
 
 ## Những hiểu nhầm thường gặp
 
-**“Accessibility chỉ dành cho một nhóm nhỏ.”** Không đúng. Chấn thương tạm thời, tuổi tác, ánh sáng mạnh, sử dụng một tay và mạng kém đều tạo ra nhu cầu tiếp cận theo tình huống.
+**“khả năng tiếp cận (accessibility / 접근성) chỉ dành cho một nhóm nhỏ.”** Không đúng. Chấn thương tạm thời, tuổi tác, ánh sáng mạnh, sử dụng một tay và mạng kém đều tạo ra nhu cầu tiếp cận theo tình huống.
 
-**“HTML có ngữ nghĩa chỉ tốt cho SEO.”** Không đúng. Nó hỗ trợ accessibility, hành vi trình duyệt và khả năng bảo trì.
+**“HTML có ngữ nghĩa chỉ tốt cho SEO.”** Không đúng. Nó hỗ trợ khả năng tiếp cận (accessibility / 접근성), hành vi trình duyệt và khả năng bảo trì.
 
-**“Biến thể thắng A/B test nghĩa thiết kế tốt hơn.”** Chỉ đúng đối với chỉ số, khoảng thời gian và nhóm người dùng đã chọn; vẫn phải xem ảnh hưởng rộng hơn.
+**“Biến thể thắng A/B kiểm thử (test / 테스트) nghĩa thiết kế tốt hơn.”** Chỉ đúng đối với chỉ số, khoảng thời gian và nhóm người dùng đã chọn; vẫn phải xem ảnh hưởng rộng hơn.
 
 ## Mô hình tư duy
 
@@ -83,3 +86,5 @@ Ví dụ tăng số lần bấm thông báo không đồng nghĩa tăng lợi í
 ## Kết nối
 
 Đọc [HCI và yếu tố con người](./00_hci_human_factors_and_interaction_models.md), [bảo mật web](../07_security_reliability/06_web_application_security.md) và [đạo đức máy tính](../12_society_ethics_profession/00_computing_ethics_privacy_and_professional_responsibility.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 hci human factors and interaction models](./00_hci_human_factors_and_interaction_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

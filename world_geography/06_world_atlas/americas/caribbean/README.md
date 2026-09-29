@@ -1,6 +1,8 @@
 # Caribbean
 
-Caribbean trong UN M49 gồm 28 country/area. Không nên đọc vùng chỉ như một tập hợp “đảo du lịch”: đây là hệ không gian gồm Greater Antilles, Lesser Antilles, Bahamas–Turks and Caicos, các đảo san hô thấp, đảo núi lửa cao và một số node dịch vụ quốc tế.
+> **Mạch đọc:** Đọc **Caribbean** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+
+Caribbean trong UN M49 gồm 28 country/area. Không nên đọc vùng chỉ như một tập hợp “đảo du lịch”: đây là hệ không gian gồm Greater Antilles, Lesser Antilles, Bahamas–Turks and Caicos, các đảo san hô thấp, đảo núi lửa cao và một số nút (node / 노드) dịch vụ quốc tế.
 
 Các cơ chế chung cần theo dõi là **quy mô đảo nhỏ, giới hạn nước ngọt, phụ thuộc nhập khẩu, hurricane corridor, rạn san hô–mangrove, độ dốc núi lửa, cảng/sân bay và tính mùa du lịch**.
 
@@ -32,3 +34,5 @@ Các cơ chế chung cần theo dõi là **quy mô đảo nhỏ, giới hạn n�
 - [Trinidad and Tobago](./TTO_trinidad_tobago.md)
 - [Turks and Caicos Islands](./TCA_turks_caicos.md)
 - [United States Virgin Islands](./VIR_us_virgin_islands.md)
+
+> **Bàn giao:** Sau **Caribbean**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ABW aruba](./ABW_aruba.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

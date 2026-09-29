@@ -1,91 +1,129 @@
-# Type systems, generics và polymorphism
+# Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism
 
-Type (kiểu / 타입) thường được học như nhãn `int`, `String`, `boolean`. Nhưng type system (타입 시스템) sâu hơn: nó là một static hoặc dynamic discipline dùng để phân loại values/expressions và giới hạn operations nhằm loại bỏ một lớp invalid programs hoặc định nghĩa runtime behavior rõ hơn.
+> **Mạch đọc:** Đọc **kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **kiểu (type / 타입) là một proposition về giá trị (value / 값)** sang **kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Type là một proposition về value
 
-Nếu expression có type `int`, language cho phép một tập operations tương ứng và loại bỏ những operations không có semantics hợp lệ trong model đó.
+Kiểu (type / 타입) thường được học như nhãn `int`, `String`, `boolean`. Nhưng hệ kiểu (type system / 타입 시스템) sâu hơn: nó là một static hoặc động (dynamic / 동적) discipline dùng để phân loại values/expressions và giới hạn operations nhằm loại bỏ một lớp invalid programs hoặc định nghĩa hành vi thời gian chạy (runtime behavior / 런타임 동작) rõ hơn.
 
-Static typing kiểm tra nhiều properties trước runtime; dynamic typing gắn type information/checks nhiều hơn với runtime values. Đây là continuum thiết kế, không phải binary “an toàn vs không an toàn”.
+## Kiểu (type / 타입) là một proposition về giá trị (value / 값)
 
-Một static type system vẫn có thể có unsafe escape hatches; một dynamically typed language vẫn có memory safety và strong runtime checks.
+Nếu expression có kiểu (type / 타입) `int`, ngôn ngữ (language / 언어) cho phép một tập operations tương ứng và loại bỏ những operations không có ngữ nghĩa (semantics / 의미론) hợp lệ trong mô hình (model / 모델) đó.
 
-## Type safety không đồng nghĩa business correctness
+Static typing kiểm tra nhiều properties trước thời gian chạy (runtime / 런타임); động (dynamic / 동적) typing gắn kiểu (type / 타입) thông tin (information / 정보)/checks nhiều hơn với thời gian chạy (runtime / 런타임) values. Đây là continuum thiết kế, không phải nhị phân (binary / 이진) “an toàn vs không an toàn”.
 
-`transfer(Account from, Account to, Money amount)` có thể type-check hoàn hảo nhưng vẫn cho phép amount âm nếu type `Money` không encode constraint đó.
+Một static hệ kiểu (type system / 타입 시스템) vẫn có thể có unsafe escape hatches; một dynamically typed ngôn ngữ (language / 언어) vẫn có bộ nhớ (memory / 메모리) an toàn (safety / 안전) và strong thời gian chạy (runtime / 런타임) checks.
 
-Type system chỉ bảo đảm properties mà nó biểu diễn. Một thiết kế richer type như `PositiveMoney` có thể chuyển invariant từ runtime check sang construction rule.
 
-Đây là principle “make invalid states unrepresentable”, nhưng quá nhiều type complexity cũng tăng cognitive cost.
+> **Chuyển mạch:** Từ **kiểu (type / 타입) là một proposition về giá trị (value / 값)**, ta sang **kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)
+
+`transfer(Account from, Account to, Money amount)` có thể type-check hoàn hảo nhưng vẫn cho phép amount âm nếu kiểu (type / 타입) `Money` không encode ràng buộc (constraint / 제약조건) đó.
+
+Hệ kiểu (type system / 타입 시스템) chỉ bảo đảm properties mà nó biểu diễn. Một thiết kế richer kiểu (type / 타입) như `PositiveMoney` có thể chuyển bất biến (invariant / 불변식) từ thời gian chạy (runtime / 런타임) check sang construction quy tắc (rule / 규칙).
+
+Đây là principle “make invalid states unrepresentable”, nhưng quá nhiều kiểu (type / 타입) độ phức tạp (complexity / 복잡도) cũng tăng cognitive chi phí (cost / 비용).
+
+
+> **Chuyển mạch:** Từ **kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)**, ta sang **Nominal và structural typing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nominal và structural typing
 
-Nominal typing dựa trên declared identity/relationship: class `UserId` khác `OrderId` dù internal representation cùng là integer nếu language dùng nominal identity.
+Nominal typing dựa trên declared định danh (identity / 식별자)/relationship: lớp (class / 클래스) `UserId` khác `OrderId` dù nội bộ (internal / 내부) biểu diễn (representation / 표현) cùng là integer nếu ngôn ngữ (language / 언어) dùng nominal định danh (identity / 식별자).
 
-Structural typing dựa trên shape/capabilities: nếu object có các fields/methods cần thiết thì có thể satisfy type. TypeScript interfaces thường thể hiện structural behavior.
+Structural typing dựa trên shape/capabilities: nếu đối tượng (object / 객체) có các fields/methods cần thiết thì có thể satisfy kiểu (type / 타입). TypeScript interfaces thường thể hiện structural hành vi (behavior / 동작).
 
-Hai models ảnh hưởng API evolution, compatibility và abstraction boundary.
+Hai các mô hình (models / 모델들) ảnh hưởng API evolution, tính tương thích (compatibility / 호환성) và lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계).
+
+
+> **Chuyển mạch:** Từ **Nominal và structural typing**, ta sang **Subtyping và substitutability** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Subtyping và substitutability
 
-Nếu `S` là subtype của `T`, value `S` có thể dùng ở nơi `T` được yêu cầu mà không phá contract. Đây là tinh thần của Liskov Substitution Principle.
+Nếu `S` là subtype của `T`, giá trị (value / 값) `S` có thể dùng ở nơi `T` được yêu cầu mà không phá đặc tả hợp đồng (contract / 계약). Đây là tinh thần của Liskov Substitution Principle.
 
-Inheritance syntax không tự đảm bảo semantic substitutability. Một subclass có thể type-compatible nhưng strengthen precondition hoặc weaken postcondition theo cách phá caller assumptions.
+Inheritance cú pháp (syntax / 문법) không tự đảm bảo ngữ nghĩa (semantic / 의미적) substitutability. Một subclass có thể type-compatible nhưng strengthen precondition hoặc weaken postcondition theo cách phá caller các giả định (assumptions / 가정들).
+
+
+> **Chuyển mạch:** Từ **Subtyping và substitutability**, ta sang **Parametric polymorphism và generics** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Parametric polymorphism và generics
 
-Generic function như `identity<T>(x: T): T` làm việc đồng nhất cho mọi `T`. Đây là parametric polymorphism.
+Generic hàm (function / 함수) như `identity<T>(x: T): T` làm việc đồng nhất cho mọi `T`. Đây là parametric polymorphism.
 
-Generic containers như `List<T>` cho phép reuse data structure mà vẫn giữ type relation giữa input/output.
+Generic containers như `List<T>` cho phép reuse cấu trúc dữ liệu (data structure / 자료구조) mà vẫn giữ kiểu (type / 타입) quan hệ (relation / 관계) giữa đầu vào (input / 입력)/đầu ra (output / 출력).
 
-Implementation có thể monomorphize thành version riêng cho mỗi concrete type (như nhiều trường hợp C++ templates/Rust generics) hoặc erase type parameters ở runtime (như Java type erasure cho nhiều generics). Trade-off là code size, specialization performance và runtime type information.
+Hiện thực (implementation / 구현) có thể monomorphize thành phiên bản (version / 버전) riêng cho mỗi concrete kiểu (type / 타입) hoặc erase kiểu (type / 타입) parameters ở thời gian chạy (runtime / 런타임) (như Java type erasure cho nhiều generics). sự đánh đổi (trade-off / 트레이드오프) là mã (code / 코드) kích thước (size / 크기), specialization hiệu năng (performance / 성능) và thời gian chạy (runtime / 런타임) kiểu (type / 타입) thông tin (information / 정보).
+
+
+> **Chuyển mạch:** Từ **Parametric polymorphism và generics**, ta sang **Variance** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Variance
 
 Nếu `Cat <: Animal`, có phải `List<Cat> <: List<Animal>`? Không phải luôn.
 
-Nếu mutable `List<Cat>` được coi là `List<Animal>`, caller có thể insert `Dog`, phá invariant. Read-only producer có thể covariance an toàn hơn; consumer có thể contravariance.
+Nếu mutable `List<Cat>` được coi là `List<Animal>`, caller có thể insert `Dog`, phá bất biến (invariant / 불변식). Read-only producer có thể covariance an toàn hơn; bên tiêu thụ (consumer / 소비자) có thể contravariance.
 
-Java wildcard rule “Producer Extends, Consumer Super” là practical reflection của variance theory.
+Java wildcard quy tắc (rule / 규칙) “Producer Extends, bên tiêu thụ (consumer / 소비자) Super” là practical reflection của variance lý thuyết (theory / 이론).
 
-## Sum types và product types
 
-Product type kết hợp nhiều fields cùng tồn tại, như tuple/record. Sum type biểu diễn một trong nhiều alternatives, như enum có payload hoặc algebraic data type.
+> **Chuyển mạch:** Từ **Variance**, ta sang **Sum types và sản phẩm (product / 제품) types** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Ví dụ result:
+## Sum types và sản phẩm (product / 제품) types
+
+Sản phẩm (product / 제품) kiểu (type / 타입) kết hợp nhiều fields cùng tồn tại, như tuple/bản ghi (record / 레코드). Sum kiểu (type / 타입) biểu diễn một trong nhiều alternatives, như enum có payload hoặc algebraic dữ liệu (data / 데이터) kiểu (type / 타입).
+
+Ví dụ kết quả (result / 결과):
 
 ```text
 Result<T, E> = Ok(T) | Error(E)
 ```
 
-encode success/failure vào type thay vì sentinel `null` hoặc exception-only protocol.
+encode success/thất bại (failure / 실패) vào kiểu (type / 타입) thay vì sentinel `null` hoặc exception-only giao thức (protocol / 프로토콜).
 
-Pattern matching có thể buộc exhaustiveness, giúp compiler phát hiện case bị bỏ sót.
+Mẫu (pattern / 패턴) matching có thể buộc exhaustiveness, giúp trình biên dịch (compiler / 컴파일러) phát hiện trường hợp (case / 사례) bị bỏ sót.
+
+
+> **Chuyển mạch:** Từ **Sum types và sản phẩm (product / 제품) types**, ta sang **Nullability và option types** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nullability và option types
 
-Nếu `null` có thể xuất hiện ở hầu hết reference types, nhiều invalid states lan vào program. Nullable type `T?` hoặc `Option<T>` tách “có value” và “không có value” thành explicit type state.
+Nếu `null` có thể xuất hiện ở hầu hết tham chiếu (reference / 참조) types, nhiều invalid states lan vào program. Nullable kiểu (type / 타입) `T?` hoặc `Option<T>` tách “có giá trị (value / 값)” và “không có giá trị (value / 값)” thành tường minh (explicit / 명시적) kiểu (type / 타입) trạng thái (state / 상태).
 
-Static nullability không loại mọi null bug, nhưng thu hẹp nơi cần reasoning.
+Static nullability không loại mọi null bug, nhưng thu hẹp nơi cần lập luận (reasoning / 추론).
+
+
+> **Chuyển mạch:** Từ **Nullability và option types**, ta sang **Gradual typing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Gradual typing
 
-Một số languages kết hợp static và dynamic typing. TypeScript thêm static layer trên JavaScript nhưng erase types khi emit JS. Python type hints chủ yếu phục vụ tools/checkers chứ runtime semantics mặc định không enforce toàn bộ annotations.
+Một số languages kết hợp static và động (dynamic / 동적) typing. TypeScript thêm static tầng (layer / 계층) trên JavaScript nhưng erase types khi emit JS. Python kiểu (type / 타입) hints chủ yếu phục vụ tools/checkers chứ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) mặc định không enforce toàn bộ annotations.
 
-Điều này cho phép adoption từng bước nhưng boundary typed/untyped cần được validate.
+Điều này cho phép adoption từng bước nhưng ranh giới (boundary / 경계) typed/untyped cần được validate.
 
-## Common Misconceptions
 
-**“Static typing làm program đúng.”** Nó chỉ chứng minh một tập properties theo type system; logic, concurrency và business bugs vẫn tồn tại.
+> **Chuyển mạch:** Từ **Gradual typing**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**“Dynamic typing nghĩa là không có types.”** Values vẫn có runtime types; khác ở thời điểm và cơ chế checking.
+## Dùng chung (common / 공통) Misconceptions
 
-**“Inheritance và subtyping là cùng một thứ.”** Inheritance là reuse/nominal mechanism; semantic substitutability là property mạnh hơn.
+**“Static typing làm program đúng.”** Nó chỉ chứng minh một tập properties theo hệ kiểu (type system / 타입 시스템); lô-gic (logic / 논리), tính đồng thời (concurrency / 동시성) và nghiệp vụ (business / 비즈니스) bugs vẫn tồn tại.
 
-## Mental Model
+**“động (dynamic / 동적) typing nghĩa là không có types.”** Values vẫn có thời gian chạy (runtime / 런타임) types; khác ở thời điểm và cơ chế checking.
 
-> Type system là một language nhỏ bên trong language lớn, mô tả những states/operations nào được coi là hợp lệ trước hoặc trong runtime.
+**“Inheritance và subtyping là cùng một thứ.”** Inheritance là reuse/nominal cơ chế (mechanism / 메커니즘); ngữ nghĩa (semantic / 의미적) substitutability là thuộc tính (property / 속성) mạnh hơn.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> hệ kiểu (type system / 타입 시스템) là một ngôn ngữ (language / 언어) nhỏ bên trong ngôn ngữ (language / 언어) lớn, mô tả những states/operations nào được coi là hợp lệ trước hoặc trong thời gian chạy (runtime / 런타임).
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-Đọc cùng [values/references/memory](./01_types_values_references_and_memory.md), [language semantics](./00_language_semantics_and_execution_models.md), [API contracts](../08_software_systems/00_abstraction_modularity_interfaces_and_apis.md) và các note Java/TypeScript trong repo để thấy cùng concepts được triển khai khác nhau.
+Đọc cùng [values/references/memory](./01_types_values_references_and_memory.md), [language semantics](./00_language_semantics_and_execution_models.md), [API contracts](../08_software_systems/00_abstraction_modularity_interfaces_and_apis.md) và các ghi chú (note / 노트) Java/TypeScript trong repo để thấy cùng concepts được triển khai khác nhau.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language semantics and execution models](./00_language_semantics_and_execution_models.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

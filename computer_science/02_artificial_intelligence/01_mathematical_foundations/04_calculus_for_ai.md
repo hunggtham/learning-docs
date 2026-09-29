@@ -1,26 +1,29 @@
 # Calculus cho Artificial Intelligence
 
-Calculus (미적분학 / giải tích) là ngôn ngữ để mô tả **change**. Trong AI, câu hỏi quan trọng không chỉ là “loss hiện tại bằng bao nhiêu?” mà còn là: nếu thay một parameter rất nhỏ, loss sẽ thay đổi theo hướng nào và nhanh đến mức nào? Derivative, partial derivative và gradient biến câu hỏi đó thành quantities có thể tính được.
+> **Mạch đọc:** Đặt **Calculus cho Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **hàm (function / 함수) là điểm xuất phát** sang **Limit và derivative**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Nếu Linear Algebra mô tả representation và transformation, Calculus cho ta biết transformation **nhạy** với input hoặc parameter ra sao. Neural-network training, backpropagation, gradient-based optimization, sensitivity analysis và nhiều phần của probabilistic modeling đều dựa trên idea này.
+
+Calculus (미적분학 / giải tích) là ngôn ngữ để mô tả **thay đổi (change / 변경)**. Trong AI, câu hỏi quan trọng không chỉ là “mất mát (loss / 손실) hiện tại bằng bao nhiêu?” mà còn là: nếu thay một parameter rất nhỏ, mất mát (loss / 손실) sẽ thay đổi theo hướng nào và nhanh đến mức nào? Derivative, partial derivative và độ dốc (gradient / 기울기) biến câu hỏi đó thành quantities có thể tính được.
+
+Nếu tuyến tính (linear / 선형) Algebra mô tả biểu diễn (representation / 표현) và transformation, Calculus cho ta biết transformation **nhạy** với đầu vào (input / 입력) hoặc parameter ra sao. Neural-network huấn luyện (training / 학습), backpropagation, gradient-based tối ưu hóa (optimization / 최적화), sensitivity phân tích (analysis / 분석) và nhiều phần của probabilistic modeling đều dựa trên idea này.
 
 Xem trước: [Linear Algebra for AI](./01_linear_algebra_for_ai.md).
 
-## Function là điểm xuất phát
+## Hàm (function / 함수) là điểm xuất phát
 
-Một model có thể viết:
+Một mô hình (model / 모델) có thể viết:
 
 \[
 \hat y=f_\theta(x)
 \]
 
-Loss:
+Mất mát (loss / 손실):
 
 \[
 L(\theta)=\ell(f_\theta(x),y)
 \]
 
-Training muốn thay `θ` để `L` nhỏ hơn.
+Huấn luyện (training / 학습) muốn thay `θ` để `L` nhỏ hơn.
 
 Nếu `θ` chỉ là một số, derivative:
 
@@ -28,11 +31,11 @@ Nếu `θ` chỉ là một số, derivative:
 \frac{dL}{d\theta}
 \]
 
-mô tả local rate of change.
+mô tả cục bộ (local / 로컬) tỷ lệ (rate / 비율) of thay đổi (change / 변경).
 
-Nếu derivative positive, tăng `θ` một chút có xu hướng tăng loss; giảm `θ` có xu hướng giảm loss. Nếu derivative negative, direction ngược lại.
+Nếu derivative positive, tăng `θ` một chút có xu hướng tăng mất mát (loss / 손실); giảm `θ` có xu hướng giảm mất mát (loss / 손실). Nếu derivative negative, direction ngược lại.
 
-Đây là intuition phía sau gradient descent.
+Đây là intuition phía sau độ dốc (gradient / 기울기) descent.
 
 ## Limit và derivative
 
@@ -44,11 +47,11 @@ f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
 
 Ratio này đo slope của secant line khi interval `h` nhỏ dần tới 0.
 
-Trong numerical computation, máy không thật sự lấy `h=0`; analytic derivative hoặc automatic differentiation tránh nhiều error của naive finite difference.
+Trong numerical computation, máy không thật sự lấy `h=0`; analytic derivative hoặc automatic differentiation tránh nhiều lỗi (error / 오류) của naive finite difference.
 
-## Local linear approximation
+## Cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation
 
-Derivative quan trọng vì smooth function gần một point có thể được approximate tuyến tính:
+Derivative quan trọng vì smooth hàm (function / 함수) gần một điểm (point / 지점) có thể được approximate tuyến tính:
 
 \[
 f(x+\Delta x)\approx f(x)+f'(x)\Delta x
@@ -60,11 +63,11 @@ Trong nhiều dimensions:
 f(\mathbf{x}+\Delta\mathbf{x})\approx f(\mathbf{x})+\nabla f(\mathbf{x})^T\Delta\mathbf{x}
 \]
 
-Gradient vì vậy là best local linear signal mô tả output thay đổi theo input directions.
+Độ dốc (gradient / 기울기) vì vậy là best cục bộ (local / 로컬) tuyến tính (linear / 선형) tín hiệu (signal / 신호) mô tả đầu ra (output / 출력) thay đổi theo đầu vào (input / 입력) directions.
 
 ## Partial derivative
 
-Nếu function phụ thuộc nhiều variables:
+Nếu hàm (function / 함수) phụ thuộc nhiều variables:
 
 \[
 f(x,y)
@@ -78,17 +81,17 @@ partial derivative theo `x`:
 
 thay đổi `x` trong khi giữ `y` cố định.
 
-Neural network có millions/billions parameters, nên loss là function high-dimensional:
+Neural mạng (network / 네트워크) có millions/billions parameters, nên mất mát (loss / 손실) là hàm (function / 함수) high-dimensional:
 
 \[
 L(\theta_1,\theta_2,\ldots,\theta_p)
 \]
 
-Mỗi partial derivative trả lời parameter đó locally ảnh hưởng loss thế nào.
+Mỗi partial derivative trả lời parameter đó locally ảnh hưởng mất mát (loss / 손실) thế nào.
 
-## Gradient
+## Độ dốc (gradient / 기울기)
 
-Gradient gom partial derivatives thành vector:
+Độ dốc (gradient / 기울기) gom partial derivatives thành véc-tơ (vector / 벡터):
 
 \[
 \nabla_\theta L=
@@ -99,31 +102,31 @@ Gradient gom partial derivatives thành vector:
 \end{bmatrix}
 \]
 
-Gradient point theo direction steepest local increase dưới Euclidean geometry. Vì vậy negative gradient là steepest local decrease direction.
+Độ dốc (gradient / 기울기) điểm (point / 지점) theo direction steepest cục bộ (local / 로컬) increase dưới Euclidean hình học (geometry / 기하학). Vì vậy negative độ dốc (gradient / 기울기) là steepest cục bộ (local / 로컬) decrease direction.
 
-Gradient-descent update:
+Gradient-descent cập nhật (update / 업데이트):
 
 \[
 \theta_{t+1}=\theta_t-\eta\nabla_\theta L(\theta_t)
 \]
 
-`η` là learning rate.
+`η` là học tập (learning / 학습) tỷ lệ (rate / 비율).
 
-Gradient không nói minimum toàn cục ở đâu; nó chỉ cung cấp local information.
+Độ dốc (gradient / 기울기) không nói minimum toàn cục ở đâu; nó chỉ cung cấp cục bộ (local / 로컬) thông tin (information / 정보).
 
 ## Directional derivative
 
-Nếu muốn biết `f` thay đổi theo direction unit vector `u`:
+Nếu muốn biết `f` thay đổi theo direction đơn vị (unit / 단위) véc-tơ (vector / 벡터) `u`:
 
 \[
 D_{\mathbf{u}}f=\nabla f^T\mathbf{u}
 \]
 
-Dot product này nối Calculus với Linear Algebra. Gradient là vector chứa đủ information để tính local rate theo mọi direction.
+Dot sản phẩm (product / 제품) này nối Calculus với tuyến tính (linear / 선형) Algebra. độ dốc (gradient / 기울기) là véc-tơ (vector / 벡터) chứa đủ thông tin (information / 정보) để tính cục bộ (local / 로컬) tỷ lệ (rate / 비율) theo mọi direction.
 
-## Chain rule
+## Chuỗi (chain / 사슬) quy tắc (rule / 규칙)
 
-Chain rule là foundation của backpropagation.
+Chuỗi (chain / 사슬) quy tắc (rule / 규칙) là foundation của backpropagation.
 
 Nếu:
 
@@ -137,15 +140,15 @@ thì:
 \frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}
 \]
 
-Ý nghĩa: ảnh hưởng của `x` lên `y` đi qua intermediate `u`; tổng sensitivity là product của local sensitivities.
+Ý nghĩa: ảnh hưởng của `x` lên `y` đi qua intermediate `u`; tổng sensitivity là sản phẩm (product / 제품) của cục bộ (local / 로컬) sensitivities.
 
-Neural network chính là composition nhiều functions:
+Neural mạng (network / 네트워크) chính là composition nhiều functions:
 
 \[
 f(x)=f_L(f_{L-1}(...f_1(x)))
 \]
 
-Chain rule cho phép propagate effect của final loss ngược qua từng layer.
+Chuỗi (chain / 사슬) quy tắc (rule / 규칙) cho phép propagate tác động (effect / 효과) của final mất mát (loss / 손실) ngược qua từng tầng (layer / 계층).
 
 ## Một example đơn giản của backpropagation
 
@@ -169,7 +172,7 @@ Ta cần:
 \frac{\partial L}{\partial w}
 \]
 
-Chain rule:
+Chuỗi (chain / 사슬) quy tắc (rule / 규칙):
 
 \[
 \frac{\partial L}{\partial w}=
@@ -178,7 +181,7 @@ Chain rule:
 \frac{\partial z}{\partial w}
 \]
 
-Với sigmoid + binary cross-entropy, terms simplify đẹp thành:
+Với sigmoid + nhị phân (binary / 이진) cross-entropy, terms simplify đẹp thành:
 
 \[
 \frac{\partial L}{\partial z}=\hat y-y
@@ -190,11 +193,11 @@ và:
 \frac{\partial L}{\partial w}=(\hat y-y)x
 \]
 
-Gradient vì vậy có intuitive structure: prediction error nhân với input signal.
+Độ dốc (gradient / 기울기) vì vậy có intuitive cấu trúc (structure / 구조): prediction lỗi (error / 오류) nhân với đầu vào (input / 입력) tín hiệu (signal / 신호).
 
-## Computation graph
+## Computation đồ thị (graph / 그래프)
 
-Một model có thể được biểu diễn như directed acyclic graph của operations.
+Một mô hình (model / 모델) có thể được biểu diễn như directed acyclic đồ thị (graph / 그래프) của operations.
 
 ```mermaid
 flowchart LR
@@ -207,53 +210,53 @@ flowchart LR
     Y[y] --> LOSS
 ```
 
-Forward pass tính values từ input tới loss.
+Forward pass tính values từ đầu vào (input / 입력) tới mất mát (loss / 손실).
 
-Backward pass dùng chain rule để truyền derivatives từ loss về parameters.
+Backward pass dùng chuỗi (chain / 사슬) quy tắc (rule / 규칙) để truyền derivatives từ mất mát (loss / 손실) về parameters.
 
-Framework autograd lưu graph hoặc information đủ để compute vector-Jacobian products hiệu quả.
+Khung phần mềm (framework / 프레임워크) autograd lưu đồ thị (graph / 그래프) hoặc thông tin (information / 정보) đủ để compute vector-Jacobian products hiệu quả.
 
-## Backpropagation không phải gradient descent
+## Backpropagation không phải độ dốc (gradient / 기울기) descent
 
 Hai khái niệm thường bị trộn.
 
-**Backpropagation (역전파)** là algorithm hiệu quả để compute gradients của composed function bằng chain rule.
+**Backpropagation (역전파)** là thuật toán (algorithm / 알고리즘) hiệu quả để compute gradients của composed hàm (function / 함수) bằng chuỗi (chain / 사슬) quy tắc (rule / 규칙).
 
-**Gradient descent** là optimization strategy dùng gradients để update parameters.
+**độ dốc (gradient / 기울기) descent** là tối ưu hóa (optimization / 최적화) chiến lược (strategy / 전략) dùng gradients để cập nhật (update / 업데이트) parameters.
 
-Ta có thể dùng backprop với Adam, SGD, RMSProp hoặc optimizer khác. Và gradient descent có thể dùng cho functions không phải neural network.
+Ta có thể dùng backprop với Adam, SGD, RMSProp hoặc optimizer khác. Và độ dốc (gradient / 기울기) descent có thể dùng cho functions không phải neural mạng (network / 네트워크).
 
 ## Jacobian
 
-Nếu function map vector sang vector:
+Nếu hàm (function / 함수) map véc-tơ (vector / 벡터) sang véc-tơ (vector / 벡터):
 
 \[
 \mathbf{y}=f(\mathbf{x})
 \]
 
-Jacobian là matrix:
+Jacobian là ma trận (matrix / 행렬):
 
 \[
 J_{ij}=\frac{\partial y_i}{\partial x_j}
 \]
 
-Jacobian mô tả local linear transformation từ input perturbation sang output perturbation:
+Jacobian mô tả cục bộ (local / 로컬) tuyến tính (linear / 선형) transformation từ đầu vào (input / 입력) perturbation sang đầu ra (output / 출력) perturbation:
 
 \[
 \Delta \mathbf{y}\approx J\Delta\mathbf{x}
 \]
 
-Trong Deep Learning, explicitly constructing huge Jacobian thường quá expensive. Automatic differentiation tính products với Jacobian mà không materialize toàn matrix.
+Trong Deep học tập (learning / 학습), explicitly constructing huge Jacobian thường quá expensive. Automatic differentiation tính products với Jacobian mà không materialize toàn ma trận (matrix / 행렬).
 
 ## Hessian và curvature
 
-Với scalar function `f(x)`, Hessian là matrix second derivatives:
+Với scalar hàm (function / 함수) `f(x)`, Hessian là ma trận (matrix / 행렬) second derivatives:
 
 \[
 H_{ij}=\frac{\partial^2 f}{\partial x_i\partial x_j}
 \]
 
-Gradient nói slope; Hessian nói curvature.
+Độ dốc (gradient / 기울기) nói slope; Hessian nói curvature.
 
 Second-order approximation:
 
@@ -261,15 +264,15 @@ Second-order approximation:
 f(\mathbf{x}+\Delta)\approx f(\mathbf{x})+\nabla f^T\Delta+\frac{1}{2}\Delta^T H\Delta
 \]
 
-Newton's method uses curvature:
+Newton's phương thức (method / 메서드) uses curvature:
 
 \[
 \theta_{new}=\theta-H^{-1}\nabla L
 \]
 
-Nhưng Hessian của large neural networks quá lớn để invert trực tiếp, nên practical optimization thường dùng first-order methods hoặc approximations.
+Nhưng Hessian của large neural networks quá lớn để invert trực tiếp, nên practical tối ưu hóa (optimization / 최적화) thường dùng first-order methods hoặc approximations.
 
-## Derivatives của common activations
+## Derivatives của dùng chung (common / 공통) activations
 
 ### Sigmoid
 
@@ -283,7 +286,7 @@ Derivative:
 \sigma'(x)=\sigma(x)(1-\sigma(x))
 \]
 
-Khi `|x|` lớn, derivative gần 0. Deep stacks sigmoid dễ gặp vanishing gradient.
+Khi `|x|` lớn, derivative gần 0. Deep stacks sigmoid dễ gặp vanishing độ dốc (gradient / 기울기).
 
 ### Tanh
 
@@ -309,20 +312,20 @@ ReLU'(x)=
 \end{cases}
 \]
 
-Tại `x=0`, derivative strict không defined, nhưng implementation chọn subgradient convention.
+Tại `x=0`, derivative strict không defined, nhưng hiện thực (implementation / 구현) chọn subgradient convention.
 
 ReLU giúp mitigate saturation ở positive region nhưng neurons có thể “die” nếu persistently negative.
 
 ## Vanishing gradients
 
-Chain rule multiply nhiều derivatives:
+Chuỗi (chain / 사슬) quy tắc (rule / 규칙) multiply nhiều derivatives:
 
 \[
 \frac{\partial L}{\partial h_1}=\frac{\partial L}{\partial h_L}
 \prod_{k=2}^{L}\frac{\partial h_k}{\partial h_{k-1}}
 \]
 
-Nếu norms của factors thường <1, gradient shrink exponentially qua depth.
+Nếu norms của factors thường <1, độ dốc (gradient / 기울기) shrink exponentially qua độ sâu (depth / 깊이).
 
 Điều này từng làm train deep networks và long RNNs rất khó.
 
@@ -332,7 +335,7 @@ Architectural solutions gồm:
 - careful initialization;
 - residual connections;
 - normalization;
-- LSTM/GRU gating cho sequence models.
+- LSTM/GRU gating cho chuỗi (sequence / 시퀀스) các mô hình (models / 모델들).
 
 ## Exploding gradients
 
@@ -342,19 +345,19 @@ Consequences:
 
 - unstable updates;
 - NaN/Inf;
-- loss spikes.
+- mất mát (loss / 손실) spikes.
 
-Gradient clipping giới hạn norm:
+Độ dốc (gradient / 기울기) clipping giới hạn norm:
 
 \[
 g\leftarrow g\cdot\min\left(1,\frac{c}{\|g\|}\right)
 \]
 
-Nó không giải quyết root cause mọi instability nhưng thường useful trong RNN/Transformer training.
+Nó không giải quyết nguyên nhân gốc (root cause / 근본 원인) mọi instability nhưng thường useful trong RNN/Transformer huấn luyện (training / 학습).
 
 ## Residual connections từ Calculus perspective
 
-Residual block:
+Residual khối (block / 블록):
 
 \[
 y=x+F(x)
@@ -366,19 +369,19 @@ Derivative:
 \frac{dy}{dx}=I+\frac{\partial F}{\partial x}
 \]
 
-Identity path cung cấp direct gradient route. Đây là một reason residual architectures train deep models tốt hơn.
+Định danh (identity / 식별자) đường dẫn (path / 경로) cung cấp direct độ dốc (gradient / 기울기) tuyến (route / 경로). Đây là một reason residual architectures train deep các mô hình (models / 모델들) tốt hơn.
 
-## Derivative của matrix operations
+## Derivative của ma trận (matrix / 행렬) operations
 
-Deep Learning dùng matrix calculus. Ví dụ:
+Deep học tập (learning / 학습) dùng ma trận (matrix / 행렬) calculus. Ví dụ:
 
 \[
 \mathbf{y}=W\mathbf{x}
 \]
 
-Nếu scalar loss `L`, gradient theo `W` phụ thuộc outer product giữa upstream gradient và input.
+Nếu scalar mất mát (loss / 손실) `L`, độ dốc (gradient / 기울기) theo `W` phụ thuộc outer sản phẩm (product / 제품) giữa upstream độ dốc (gradient / 기울기) và đầu vào (input / 입력).
 
-Framework autograd che notation phức tạp, nhưng shape reasoning vẫn cần:
+Khung phần mềm (framework / 프레임워크) autograd che notation phức tạp, nhưng shape lập luận (reasoning / 추론) vẫn cần:
 
 ```text
 W: m × n
@@ -388,9 +391,9 @@ x: n
 ∂L/∂W: m × n
 ```
 
-Gradient của parameter phải có same shape với parameter.
+Độ dốc (gradient / 기울기) của parameter phải có same shape với parameter.
 
-## Gradient của softmax + cross-entropy
+## Độ dốc (gradient / 기울기) của softmax + cross-entropy
 
 Cho logits `z`, softmax:
 
@@ -398,19 +401,19 @@ Cho logits `z`, softmax:
 p_i=\frac{e^{z_i}}{\sum_j e^{z_j}}
 \]
 
-Cross-entropy với one-hot target `y`:
+Cross-entropy với one-hot mục tiêu (target / 대상) `y`:
 
 \[
 L=-\sum_i y_i\log p_i
 \]
 
-Gradient simplify thành:
+Độ dốc (gradient / 기울기) simplify thành:
 
 \[
 \frac{\partial L}{\partial z_i}=p_i-y_i
 \]
 
-Đây là một elegant connection: gradient trực tiếp là difference giữa predicted distribution và target distribution.
+Đây là một elegant liên kết (connection / 연결): độ dốc (gradient / 기울기) trực tiếp là difference giữa predicted phân phối (distribution / 분포) và mục tiêu (target / 대상) phân phối (distribution / 분포).
 
 ## Automatic differentiation
 
@@ -420,79 +423,79 @@ Có ba ideas cần phân biệt:
 
 **Numerical differentiation** approximate bằng finite differences.
 
-**Automatic differentiation (자동 미분)** áp dụng chain rule qua primitive operations để compute derivative chính xác tới floating-point arithmetic.
+**Automatic differentiation (자동 미분)** áp dụng chuỗi (chain / 사슬) quy tắc (rule / 규칙) qua thành phần nguyên thủy (primitive / 기본 요소) operations để compute derivative chính xác tới floating-point arithmetic.
 
-Reverse-mode autodiff đặc biệt hiệu quả khi có many inputs/parameters và một scalar loss, đúng shape của neural-network training.
+Reverse-mode autodiff đặc biệt hiệu quả khi có many inputs/parameters và một scalar mất mát (loss / 손실), đúng shape của neural-network huấn luyện (training / 학습).
 
-Backpropagation là reverse-mode differentiation specialized trên network/computation graph.
+Backpropagation là reverse-mode differentiation specialized trên mạng (network / 네트워크)/computation đồ thị (graph / 그래프).
 
-## Finite-difference gradient checking
+## Finite-difference độ dốc (gradient / 기울기) checking
 
-Có thể verify gradient implementation bằng:
+Có thể verify độ dốc (gradient / 기울기) hiện thực (implementation / 구현) bằng:
 
 \[
 \frac{\partial f}{\partial x}\approx\frac{f(x+\epsilon)-f(x-\epsilon)}{2\epsilon}
 \]
 
-Nếu autograd gradient khác finite difference nhiều, có thể có bug.
+Nếu autograd độ dốc (gradient / 기울기) khác finite difference nhiều, có thể có bug.
 
-Nhưng `ε` quá nhỏ gây floating-point cancellation; quá lớn gây approximation error. Gradient checking phù hợp debugging small cases, không phải training method.
+Nhưng `ε` quá nhỏ gây floating-point cancellation; quá lớn gây approximation lỗi (error / 오류). độ dốc (gradient / 기울기) checking phù hợp debugging small cases, không phải huấn luyện (training / 학습) phương thức (method / 메서드).
 
 ## Differentiability và subgradients
 
-Không phải mọi useful function differentiable mọi nơi. ReLU nondifferentiable tại 0. L1 norm nondifferentiable tại 0.
+Không phải mọi useful hàm (function / 함수) differentiable mọi nơi. ReLU nondifferentiable tại 0. L1 norm nondifferentiable tại 0.
 
-Optimization vẫn có thể dùng **subgradient** hoặc generalized derivatives.
+Tối ưu hóa (optimization / 최적화) vẫn có thể dùng **subgradient** hoặc generalized derivatives.
 
-Do đó “Deep Learning cần mọi operation differentiable tuyệt đối” là oversimplification. Cần derivative-like signal đủ cho optimization almost everywhere hoặc surrogate approach phù hợp.
+Do đó “Deep học tập (learning / 학습) cần mọi thao tác (operation / 연산) differentiable tuyệt đối” là oversimplification. Cần derivative-like tín hiệu (signal / 신호) đủ cho tối ưu hóa (optimization / 최적화) almost everywhere hoặc surrogate approach phù hợp.
 
-## Discrete operations và gradient problem
+## Discrete operations và độ dốc (gradient / 기울기) bài toán (problem / 문제)
 
-Sampling token, argmax hoặc hard routing là discrete và derivative không straightforward.
+Sampling đơn vị từ (token / 토큰), argmax hoặc hard routing là discrete và derivative không straightforward.
 
 Đây là lý do nhiều methods dùng:
 
 - soft relaxations;
-- policy gradient / REINFORCE;
+- chính sách (policy / 정책) độ dốc (gradient / 기울기) / REINFORCE;
 - straight-through estimators;
 - Gumbel-softmax;
 - differentiable surrogate losses.
 
-Connection này quan trọng khi học Reinforcement Learning và generative discrete models.
+Liên kết (connection / 연결) này quan trọng khi học Reinforcement học tập (learning / 학습) và generative discrete các mô hình (models / 모델들).
 
-## Gradient không phải explanation
+## Độ dốc (gradient / 기울기) không phải explanation
 
-Biết gradient của output theo input có thể tạo saliency map, nhưng derivative sensitivity không tự động là causal explanation.
+Biết độ dốc (gradient / 기울기) của đầu ra (output / 출력) theo đầu vào (input / 입력) có thể tạo saliency map, nhưng derivative sensitivity không tự động là nhân quả (causal / 인과적) explanation.
 
-Một feature có gradient nhỏ tại current point vẫn có thể quan trọng globally; correlated features làm interpretation khó.
+Một tính năng (feature / 기능) có độ dốc (gradient / 기울기) nhỏ tại hiện tại (current / 현재) điểm (point / 지점) vẫn có thể quan trọng globally; correlated features làm interpretation khó.
 
-Explainability cần thận trọng hơn “gradient cao = feature quan trọng”.
+Explainability cần thận trọng hơn “độ dốc (gradient / 기울기) cao = tính năng (feature / 기능) quan trọng”.
 
-## Calculus của continuous-time models
+## Calculus của continuous-time các mô hình (models / 모델들)
 
-Một số AI models nhìn dynamics như differential equation:
+Một số AI các mô hình (models / 모델들) nhìn dynamics như differential equation:
 
 \[
 \frac{d\mathbf{h}(t)}{dt}=f(\mathbf{h}(t),t,\theta)
 \]
 
-Neural ODEs và diffusion-related continuous formulations nối Deep Learning với differential equations.
+Neural ODEs và diffusion-related continuous formulations nối Deep học tập (learning / 학습) với differential equations.
 
-Không cần differential equations để bắt đầu ML, nhưng chúng cho thấy Calculus không chỉ tồn tại ở training gradient mà còn có thể nằm trong model dynamics.
+Không cần differential equations để bắt đầu ML, nhưng chúng cho thấy Calculus không chỉ tồn tại ở huấn luyện (training / 학습) độ dốc (gradient / 기울기) mà còn có thể nằm trong mô hình (model / 모델) dynamics.
 
 ## Integral và expectation
 
-Probability expectation continuous:
+Xác suất (probability / 확률) expectation continuous:
 
 \[
 \mathbb{E}[f(X)]=\int f(x)p(x)dx
 \]
 
-Nhiều objective probabilistic yêu cầu integral khó giải closed-form, dẫn tới Monte Carlo approximation, variational inference hoặc numerical integration.
+Nhiều mục tiêu (objective / 목표) probabilistic yêu cầu integral khó giải closed-form, dẫn tới Monte Carlo approximation, variational suy luận (inference / 추론) hoặc numerical tích hợp (integration / 통합).
 
-Calculus và Probability vì vậy gắn chặt, không phải hai môn tách rời.
+Calculus và xác suất (probability / 확률) vì vậy gắn chặt, không phải hai môn tách rời.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -507,26 +510,26 @@ Hessian         = local curvature
 Autograd        = engine tự động tính derivative từ primitive operations
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Gradient chỉ direction tới minimum”
+### “độ dốc (gradient / 기울기) chỉ direction tới minimum”
 
-Gradient cho local steepest ascent; negative gradient cho local descent. Nó không biết global minimum nằm ở đâu.
+Độ dốc (gradient / 기울기) cho cục bộ (local / 로컬) steepest ascent; negative độ dốc (gradient / 기울기) cho cục bộ (local / 로컬) descent. Nó không biết toàn cục (global / 전역) minimum nằm ở đâu.
 
-### “Backpropagation là cách neural network học”
+### “Backpropagation là cách neural mạng (network / 네트워크) học”
 
-Backprop chỉ compute gradients. Learning behavior còn phụ thuộc loss, optimizer, data, architecture, regularization và training schedule.
+Backprop chỉ compute gradients. học tập (learning / 학습) hành vi (behavior / 동작) còn phụ thuộc mất mát (loss / 손실), optimizer, dữ liệu (data / 데이터), kiến trúc (architecture / 아키텍처), regularization và huấn luyện (training / 학습) schedule.
 
 ### “Derivative bằng 0 nghĩa là optimum”
 
-Có thể là local minimum, local maximum, saddle point hoặc flat region.
+Có thể là cục bộ (local / 로컬) minimum, cục bộ (local / 로컬) maximum, saddle điểm (point / 지점) hoặc flat region.
 
 ### “Autograd khiến Calculus không cần thiết”
 
-Autograd tính derivative, nhưng không giải thích vanishing gradients, saturation, learning dynamics hoặc instability.
+Autograd tính derivative, nhưng không giải thích vanishing gradients, saturation, học tập (learning / 학습) dynamics hoặc instability.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Calculus nối trực tiếp sang [Optimization](./06_optimization.md), Neural Networks và Backpropagation. Khi debug training, hãy hỏi: gradient magnitude ra sao, computation path nào truyền gradient, activation có saturate không, loss geometry local thế nào và numerical precision có làm gradient biến mất không.
+Calculus nối trực tiếp sang [Optimization](./06_optimization.md), Neural Networks và Backpropagation. Khi gỡ lỗi (debug / 디버그) huấn luyện (training / 학습), hãy hỏi: độ dốc (gradient / 기울기) magnitude ra sao, computation đường dẫn (path / 경로) nào truyền độ dốc (gradient / 기울기), activation có saturate không, mất mát (loss / 손실) hình học (geometry / 기하학) cục bộ (local / 로컬) thế nào và numerical precision có làm độ dốc (gradient / 기울기) biến mất không.
 
 Xem tiếp: [Optimization for AI](./06_optimization.md) và [Numerical Computation](./07_numerical_computation.md).

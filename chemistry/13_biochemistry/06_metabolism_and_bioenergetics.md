@@ -1,20 +1,23 @@
 # Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do
 
-> **Chuyển hóa (metabolism / 대사)** là mạng phản ứng hóa học liên kết với nhau để biến đổi vật chất, lưu trữ/giải phóng năng lượng tự do và duy trì tổ chức tế bào. **Sinh năng lượng (bioenergetics / 생물에너지학)** nghiên cứu cách tế bào ghép phản ứng thuận lợi với phản ứng bất lợi, di chuyển electron, tạo gradient ion và biến gradient đó thành công hóa học.
+> **Mạch đọc:** Đọc **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Dị hóa và đồng hóa** sang **Vì sao tế bào dùng nhiều bước thay vì một phản ứng khổng lồ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Chuyển hóa (metabolism / 대사)** là mạng phản ứng hóa học liên kết với nhau để biến đổi vật chất, lưu trữ/giải phóng năng lượng tự do và duy trì tổ chức tế bào. **Sinh năng lượng (bioenergetics / 생물에너지학)** nghiên cứu cách tế bào ghép phản ứng thuận lợi với phản ứng bất lợi, di chuyển electron, tạo độ dốc (gradient / 기울기) ion và biến độ dốc (gradient / 기울기) đó thành công hóa học.
 
 Chuyển hóa không nên được học như danh sách con đường. Nó là một **mạng phản ứng ngoài cân bằng có ghép nối**, trong đó thông lượng thay đổi theo nguồn dinh dưỡng, trạng thái năng lượng và nhu cầu sinh tổng hợp.
 
 Các prerequisite quan trọng:
 
 - [Năng lượng tự do Gibbs](../05_thermodynamics/03_gibbs_free_energy.md) để hiểu `ΔG`, ghép phản ứng và động lực nhiệt động;
-- [Cân bằng hóa học](../07_chemical_equilibrium/00_dynamic_equilibrium.md) để phân biệt equilibrium với steady state;
+- [Cân bằng hóa học](../07_chemical_equilibrium/00_dynamic_equilibrium.md) để phân biệt equilibrium với steady trạng thái (state / 상태);
 - [Điện thế pin và Nernst](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md) để hiểu dòng electron và `ΔG = -nFΔE`;
 - [Enzyme](./05_enzymes.md) để hiểu kiểm soát động học;
 - [Ma trận hóa lượng và mạng phản ứng](../04_chemical_quantities/06_stoichiometric_matrices_and_reaction_networks.md) để hiểu thông lượng và FBA.
 
 ## Dị hóa và đồng hóa
 
-**Dị hóa (catabolism / 이화작용)** phân giải phân tử giàu năng lượng thành sản phẩm nhỏ hơn và thu một phần năng lượng tự do vào ATP, NADH hoặc gradient ion.
+**Dị hóa (catabolism / 이화작용)** phân giải phân tử giàu năng lượng thành sản phẩm nhỏ hơn và thu một phần năng lượng tự do vào ATP, NADH hoặc độ dốc (gradient / 기울기) ion.
 
 **Đồng hóa (anabolism / 동화작용)** dùng năng lượng tự do và tiền chất để xây protein, acid nucleic, lipid, polysaccharide và các chất chuyển hóa chuyên biệt.
 
@@ -176,7 +179,7 @@ nối trực tiếp điện hóa với sinh năng lượng.
 
 `O2` là chất nhận electron cuối mạnh trong hô hấp hiếu khí vì khử oxygen thành nước cho `ΔE` dương lớn và vì vậy `ΔG` âm đáng kể.
 
-## Đường phân — đọc bằng logic hóa học thay vì thuộc mười tên phản ứng
+## Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng
 
 **Đường phân (glycolysis)** chuyển glucose thành pyruvate qua chuỗi enzyme trong bào tương.
 
@@ -238,13 +241,13 @@ Khi chất trung gian bị rút ra, **phản ứng bổ sung (anaplerotic reacti
 
 Do đó chu trình vừa là đường oxy hóa vừa là trung tâm phân phối carbon.
 
-## Chuỗi truyền electron — biến năng lượng redox thành gradient proton
+## Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton
 
 NADH cho electron vào chuỗi hô hấp ở màng trong ty thể.
 
 Electron đi qua các chất mang có điện thế khử tăng dần về phía `O2`.
 
-Một số phức hợp ghép chuyển electron thuận lợi với bơm proton ra khỏi matrix.
+Một số phức hợp ghép chuyển electron thuận lợi với bơm proton ra khỏi ma trận (matrix / 행렬).
 
 Chuỗi biến đổi:
 
@@ -256,7 +259,7 @@ năng lượng redox
 
 ## Động lực proton
 
-Gradient proton có hai thành phần:
+Độ dốc (gradient / 기울기) proton có hai thành phần:
 
 1. chênh lệch hoạt độ proton;
 2. chênh lệch điện thế màng.
@@ -271,9 +274,9 @@ Với ion điện tích `z`:
 
 Màng vì vậy vừa có đặc tính của pin nồng độ vừa có đặc tính của tụ điện.
 
-## ATP synthase — ghép gradient với chuyển động cấu dạng
+## ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng
 
-Proton đi xuống gradient qua phần `F0` của ATP synthase và gây chuyển động quay.
+Proton đi xuống độ dốc (gradient / 기울기) qua phần `F0` của ATP synthase và gây chuyển động quay.
 
 Chuyển động cơ học/cấu dạng trong `F1` làm thay đổi ái lực của vị trí xúc tác đối với ADP, `Pi` và ATP.
 
@@ -292,7 +295,7 @@ oxy hóa chất dinh dưỡng
 
 ## Phosphoryl hóa oxy hóa và hiện tượng mất ghép
 
-Chuỗi truyền electron và tổng hợp ATP được ghép qua gradient proton.
+Chuỗi truyền electron và tổng hợp ATP được ghép qua độ dốc (gradient / 기울기) proton.
 
 Nếu màng trở nên thấm proton, hiện tượng **mất ghép (uncoupling)** xảy ra:
 
@@ -424,7 +427,7 @@ ROS không hoàn toàn “xấu”; ở mức kiểm soát chúng còn tham gia 
 
 Mạng chuyển hóa có thể biểu diễn bằng đồ thị hoặc ma trận.
 
-Nếu `S` là ma trận hóa lượng và `v` là vector thông lượng, trạng thái ổn định của chất trung gian thường được viết:
+Nếu `S` là ma trận hóa lượng và `v` là véc-tơ (vector / 벡터) thông lượng, trạng thái ổn định của chất trung gian thường được viết:
 
 \[
 S\mathbf{v}=0
@@ -493,4 +496,6 @@ nguồn carbon / electron
 
 Thermodynamics xác định động lực; kinetics xác định tốc độ; stoichiometry giới hạn quan hệ dòng; enzyme và tín hiệu điều khiển phân bố thông lượng.
 
-Xem tiếp: [Hóa học môi trường](../16_environmental_chemistry/00_atmospheric_chemistry.md) để thấy cùng logic mạng phản ứng, redox và steady state ở một hệ lớn hơn tế bào.
+Xem tiếp: [Hóa học môi trường](../16_environmental_chemistry/00_atmospheric_chemistry.md) để thấy cùng lô-gic (logic / 논리) mạng phản ứng, redox và steady trạng thái (state / 상태) ở một hệ lớn hơn tế bào.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 chemistry of life](./00_chemistry_of_life.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

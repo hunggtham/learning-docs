@@ -1,5 +1,8 @@
 # Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)
 
+> **Mạch đọc:** Đọc **Thập niên 1990 và khủng hoảng 1997: toàn cầu hóa, đòn bẩy và cuộc tái cơ cấu lớn (Asian Financial Crisis / 외환위기·기업구조조정)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Toàn cầu hóa thay đổi luật chơi** sang **Khả năng thanh toán và thanh khoản: bài học cốt lõi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Thập niên 1990 là điểm chuyển giữa hai mô hình tăng trưởng của Hàn Quốc. Một bên là hệ thống đã tạo ra công nghiệp hóa rất nhanh: tài chính dựa vào ngân hàng, đầu tư cao, chaebol mở rộng và sự phối hợp mạnh giữa nhà nước–ngân hàng–doanh nghiệp. Bên kia là nền kinh tế ngày càng mở, nơi vốn quốc tế có thể vào ra nhanh hơn, nhà đầu tư đòi hỏi minh bạch cao hơn và doanh nghiệp phải chịu kỷ luật thị trường mạnh hơn.
 
 Khủng hoảng 1997 không phải tai nạn tách rời lịch sử trước đó. Nó là thời điểm **những điểm mạnh từng giúp Hàn Quốc tăng trưởng—đầu tư cao, đòn bẩy, phối hợp tập đoàn và mở rộng nhanh—gặp một môi trường mới nơi tái cấp vốn và niềm tin của chủ nợ nước ngoài trở thành giới hạn thực sự**.
@@ -165,10 +168,12 @@ Doanh nghiệp vay
 
 Nếu mắt xích cuối rút vốn, áp lực truyền ngược qua ngân hàng tới doanh nghiệp. Vì vậy dự trữ ngoại hối, cấu trúc nợ nước ngoài và thanh khoản hệ thống trở thành vấn đề an ninh kinh tế.
 
-## Connection — Hàn Quốc sau 1997 khác trước 1997 như thế nào?
+## Liên kết (connection / 연결) — Hàn Quốc sau 1997 khác trước 1997 như thế nào?
 
 Sau khủng hoảng, Hàn Quốc vẫn giữ các tập đoàn lớn và nền sản xuất xuất khẩu, nhưng môi trường tài chính thay đổi rõ rệt hơn: minh bạch cao hơn, đòn bẩy doanh nghiệp giảm ở nhiều nhóm, thị trường vốn quan trọng hơn, nhà đầu tư nước ngoài có vai trò lớn hơn và khả năng sinh lời/dòng tiền được chú ý hơn.
 
 Chương tiếp theo, [thập niên 2000: tái cơ cấu, CNTT và doanh nghiệp toàn cầu](./06_2000s_restructuring_it_and_global_firms.md), giải thích cách nền kinh tế hậu khủng hoảng kết hợp cải cách tài chính với băng rộng, điện tử, thương hiệu toàn cầu và sự trỗi dậy của Trung Quốc.
 
-> **Mental Model cuối:** 1997 là thời điểm Hàn Quốc học rằng năng lực công nghiệp mạnh không thể bù cho cấu trúc tài trợ yếu. Sau khủng hoảng, câu hỏi của doanh nghiệp chuyển từ “có thể tăng quy mô nhanh đến đâu?” sang “tăng trưởng này có tạo dòng tiền, chịu được nợ và bảo vệ được các bên cung cấp vốn hay không?”.
+> **mô hình tư duy (mental model / 사고 모델) cuối:** 1997 là thời điểm Hàn Quốc học rằng năng lực công nghiệp mạnh không thể bù cho cấu trúc tài trợ yếu. Sau khủng hoảng, câu hỏi của doanh nghiệp chuyển từ “có thể tăng quy mô nhanh đến đâu?” sang “tăng trưởng này có tạo dòng tiền, chịu được nợ và bảo vệ được các bên cung cấp vốn hay không?”.
+
+> **Bàn giao:** Sau **liên kết (connection / 연결) — Hàn Quốc sau 1997 khác trước 1997 như thế nào?**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

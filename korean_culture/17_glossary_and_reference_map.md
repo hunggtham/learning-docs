@@ -1,6 +1,9 @@
 # Bảng thuật ngữ và bản đồ nguồn tham khảo
 
-> File này là phụ lục tra cứu cho toàn bộ bộ sách, không thay thế các chương giải thích. Mỗi thuật ngữ chỉ được định vị ngắn để người đọc tìm ngược về khái niệm chính. Cột **English** được cố ý giữ lại để hỗ trợ tra cứu; phần giải thích ưu tiên tiếng Việt.
+> **Mạch đọc:** Đặt **Bảng thuật ngữ và bản đồ nguồn tham khảo** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Quan hệ và giao tiếp** sang **Gia đình, chăm sóc và vòng đời**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này là phụ lục tra cứu cho toàn bộ bộ sách, không thay thế các chương giải thích. Mỗi thuật ngữ chỉ được định vị ngắn để người đọc tìm ngược về khái niệm chính. Cột **English** được cố ý giữ lại để hỗ trợ tra cứu; phần giải thích ưu tiên tiếng Việt.
 
 ## Quan hệ và giao tiếp
 
@@ -14,13 +17,13 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 예 | Ritual propriety | Lễ; nghi thức và cách hành xử đúng vai | 02 |
 | 존댓말 | Polite/honorific speech | Lối nói kính trọng | 03 |
 | 반말 | Intimate/non-honorific speech | Lối nói thân mật, không dùng kính ngữ | 03 |
-| 높임말 | Honorific language | Hệ thống kính ngữ | 03 |
+| 높임말 | Honorific ngôn ngữ (language / 언어) | Hệ thống kính ngữ | 03 |
 | 호칭 | Forms of address | Danh xưng, cách xưng hô | 03 |
-| 눈치 | Social perception | Khả năng đọc bối cảnh xã hội | 03 |
+| 눈치 | xã hội (social / 사회적) perception | Khả năng đọc bối cảnh xã hội | 03 |
 | 정 | Affective relational bond | Tình nghĩa và sự gắn bó tích luỹ | 03 |
 | 체면 | Face | Thể diện xã hội | 03 |
 | 한 | Han | Nỗi uất, đau hoặc khát vọng được diễn giải trong văn hoá Hàn | 03 |
-| 선배 | Senior | Tiền bối; người vào trước | 02, 30 |
+| 선배 | cấp cao (senior / 시니어) | Tiền bối; người vào trước | 02, 30 |
 | 후배 | Junior | Hậu bối; người vào sau | 02, 30 |
 | 갑질 | Abuse of superior position | Lạm dụng vị thế mạnh | 02, 24 |
 | 꼰대 | Kkondae | Người áp đặt thâm niên hoặc kinh nghiệm một cách giáo điều | 06 |
@@ -42,7 +45,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 돌잔치 | First-birthday celebration | Tiệc mừng một tuổi | 04, 29 |
 | 백일 | Hundredth-day celebration | Mốc hoặc tiệc 100 ngày của trẻ | 29 |
 | 태교 | Prenatal culture/practice | Thực hành văn hoá trước sinh | 29 |
-| 산후조리 | Postpartum recovery care | Chăm sóc và hồi phục sau sinh | 29 |
+| 산후조리 | Postpartum khôi phục (recovery / 복구) care | Chăm sóc và hồi phục sau sinh | 29 |
 | 산후조리원 | Postpartum care center | Trung tâm chăm sóc sau sinh | 29 |
 | 육아 | Child-rearing | Nuôi dạy và chăm trẻ | 29 |
 | 독박육아 | Solo/unequal childcare burden | Một người gánh gần như toàn bộ việc nuôi con | 29 |
@@ -59,7 +62,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 1인가구 | One-person household | Hộ một người | 15 |
 | 육아휴직 | Parental leave | Nghỉ việc tạm thời để chăm con theo cơ chế cho phép | 29, 06 |
 | 아빠육아 | Father-involved childcare | Người cha trực tiếp tham gia và chịu trách nhiệm chăm con | 29 |
-| 돌봄망 | Care network | Mạng lưới người và thiết chế cùng tham gia chăm sóc | 29, 15 |
+| 돌봄망 | Care mạng (network / 네트워크) | Mạng lưới người và thiết chế cùng tham gia chăm sóc | 29, 15 |
 
 ## Giáo dục, campus và công việc
 
@@ -71,11 +74,11 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 수능 | CSAT | Kỳ thi năng lực tuyển sinh đại học | 05 |
 | 학원 | Private academy | Học viện tư, nơi học thêm | 05 |
 | 학벌 | Academic pedigree | Uy tín của trường học và bằng cấp | 05 |
-| 선행학습 | Advanced learning | Học trước chương trình | 05 |
-| 평생교육 | Lifelong learning | Học tập suốt đời | 05 |
+| 선행학습 | Advanced học tập (learning / 학습) | Học trước chương trình | 05 |
+| 평생교육 | Lifelong học tập (learning / 학습) | Học tập suốt đời | 05 |
 | 재교육 | Reskilling/retraining | Đào tạo lại hoặc cập nhật kỹ năng | 05 |
-| 사내교육 | In-house training | Đào tạo trong doanh nghiệp | 05, 06 |
-| 경력전환 | Career transition | Chuyển hướng hoặc chuyển nghề | 05, 24 |
+| 사내교육 | In-house huấn luyện (training / 학습) | Đào tạo trong doanh nghiệp | 05, 06 |
+| 경력전환 | Career chuyển tiếp (transition / 전이) | Chuyển hướng hoặc chuyển nghề | 05, 24 |
 | 자격증 | Certification | Chứng chỉ hoặc giấy chứng nhận năng lực theo phạm vi nhất định | 05 |
 | 포트폴리오 | Portfolio | Hồ sơ sản phẩm/dự án dùng làm bằng chứng năng lực | 05, 30 |
 | 학번 | Student cohort/entry-year number | Mã hoặc năm nhập học của sinh viên | 30 |
@@ -83,7 +86,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 동기 | Same-cohort peer | Người cùng khoá, cùng đợt gia nhập | 30 |
 | 동아리 | Club | Câu lạc bộ | 30 |
 | 과잠 | Department jacket | Áo khoác khoa hoặc trường | 30 |
-| MT | Membership Training | Hoạt động gắn kết nhóm hoặc campus | 30 |
+| MT | Membership huấn luyện (training / 학습) | Hoạt động gắn kết nhóm hoặc campus | 30 |
 | 휴학 | Leave of absence | Bảo lưu, nghỉ học tạm thời | 30 |
 | 복학 | Return to school | Quay lại học sau bảo lưu | 30 |
 | 수강신청 | Course registration | Đăng ký môn học | 30 |
@@ -99,7 +102,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 교환학생 | Exchange student | Sinh viên trao đổi | 30 |
 | 취업준비생 | Job seeker preparing for employment | Người đang chuẩn bị xin việc | 30 |
 | 공모전 | Competition/contest | Cuộc thi, thường dùng để xây dự án hoặc hồ sơ | 30 |
-| 대외활동 | External activity | Hoạt động ngoài trường | 30 |
+| 대외활동 | bên ngoài (external / 외부) activity | Hoạt động ngoài trường | 30 |
 | 직급 | Rank | Cấp bậc nhân sự | 06 |
 | 직책 | Position/role | Vai trò hoặc chức trách quản lý | 06 |
 | 연차 | Years/tenure | Số năm kinh nghiệm hoặc thâm niên | 06 |
@@ -107,13 +110,13 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 결재 | Approval | Phê duyệt | 06 |
 | 회식 | Company/group dinner | Liên hoan công ty hoặc nhóm | 06 |
 | 야근 | Overtime | Làm thêm muộn, làm đêm | 06 |
-| 재택근무 | Remote work | Làm việc tại nhà/từ xa | 06 |
-| 하이브리드근무 | Hybrid work | Làm việc kết hợp từ xa và tại văn phòng | 06 |
+| 재택근무 | Remote công việc (work / 작업) | Làm việc tại nhà/từ xa | 06 |
+| 하이브리드근무 | Hybrid công việc (work / 작업) | Làm việc kết hợp từ xa và tại văn phòng | 06 |
 | 담당자 | Person in charge | Người phụ trách trực tiếp một việc | 06 |
 | 업무분장 | Division of duties | Phân công phạm vi công việc và trách nhiệm | 06 |
 | 책임소재 | Accountability locus | Nơi xác định trách nhiệm khi có vấn đề | 06 |
 | 인수인계 | Handover | Bàn giao công việc, trạng thái và bối cảnh | 06 |
-| 장애 | Incident/outage | Sự cố hoặc gián đoạn hệ thống | 06 |
+| 장애 | sự cố (incident / 인시던트)/outage | Sự cố hoặc gián đoạn hệ thống | 06 |
 | 사후회고 | Postmortem/retrospective | Hậu kiểm sau sự cố hoặc sự kiện để rút bài học | 06 |
 
 ## Ăn uống, nhà ở và khu dân cư
@@ -127,7 +130,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 김치 | Kimchi | Rau muối lên men theo phong cách Hàn | 07 |
 | 김장 | Kimjang | Làm và chia sẻ kimchi theo mùa | 07, 32 |
 | 장 | Fermented sauces/pastes | Nhóm tương và nước tương lên men | 07 |
-| 소반 | Small dining table | Bàn ăn nhỏ cá nhân | 07 |
+| 소반 | Small dining bảng (table / 테이블) | Bàn ăn nhỏ cá nhân | 07 |
 | 술 | Alcohol | Rượu, đồ uống có cồn | 07 |
 | 해장 | Hangover relief | Ăn hoặc uống để hồi phục sau nhậu | 07 |
 | 온돌 | Ondol | Hệ thống sưởi sàn | 08, 32 |
@@ -140,18 +143,18 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 단청 | Dancheong | Sơn hoa văn màu trên kiến trúc gỗ | 08 |
 | 이사 | Moving | Chuyển nhà | 31 |
 | 포장이사 | Full-service moving | Dịch vụ chuyển nhà trọn gói, có đóng gói | 31 |
-| 손 없는 날 | Auspicious moving/event day | Ngày dân gian được xem là thuận cho việc lớn | 31 |
+| 손 없는 날 | Auspicious moving/sự kiện (event / 이벤트) day | Ngày dân gian được xem là thuận cho việc lớn | 31 |
 | 관리사무소 | Management office | Văn phòng quản lý khu căn hộ | 31 |
-| 경비실 | Security office | Chốt hoặc phòng bảo vệ | 31 |
+| 경비실 | bảo mật (security / 보안) office | Chốt hoặc phòng bảo vệ | 31 |
 | 층간소음 | Inter-floor noise | Tiếng ồn giữa các tầng | 31 |
 | 택배 | Parcel delivery | Giao bưu kiện | 31 |
 | 무인택배함 | Unmanned parcel locker | Tủ nhận hàng tự động | 31 |
 | 분리수거 | Waste sorting | Phân loại rác | 31 |
-| 종량제 | Volume-based waste fee system | Hệ thống thu phí rác theo lượng | 31 |
+| 종량제 | Volume-based waste fee hệ thống (system / 시스템) | Hệ thống thu phí rác theo lượng | 31 |
 | 음식물쓰레기 | Food waste | Rác thực phẩm | 31 |
 | 동네 | Neighbourhood | Khu mình sống, khu phố | 31 |
 | 무장애 | Barrier-free | Không rào cản trong thiết kế và tiếp cận | 12, 26, 31 |
-| 접근성 | Accessibility | Khả năng tiếp cận vật lý, số hoặc thông tin | 12, 26, 31 |
+| 접근성 | khả năng tiếp cận (accessibility / 접근성) | Khả năng tiếp cận vật lý, số hoặc thông tin | 12, 26, 31 |
 
 ## Tôn giáo, nghệ thuật và di sản
 
@@ -181,7 +184,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 민화 | Folk painting | Tranh dân gian | 10 |
 | 큐레이터 | Curator | Giám tuyển | 10 |
 | 비엔날레 | Biennale | Triển lãm nghệ thuật quy mô lớn theo chu kỳ | 10 |
-| 독립공간 | Independent art space | Không gian nghệ thuật độc lập | 10 |
+| 독립공간 | Independent art không gian (space / 공간) | Không gian nghệ thuật độc lập | 10 |
 
 ## Lễ hội, thành phố, mùa và đời sống số
 
@@ -203,8 +206,8 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 배달 | Delivery | Giao hàng, giao đồ ăn | 12, 33 |
 | 카공족 | Cafe-study people | Người học hoặc làm việc lâu ở quán cà phê | 12 |
 | 교통약자 | Mobility-vulnerable traveller | Người gặp hạn chế khi sử dụng giao thông | 12 |
-| 디지털 접근성 | Digital accessibility | Khả năng tiếp cận dịch vụ và giao diện số | 12, 26 |
-| 우회경로 | Alternate route | Đường hoặc phương án thay thế khi tuyến chính lỗi | 12 |
+| 디지털 접근성 | Digital khả năng tiếp cận (accessibility / 접근성) | Khả năng tiếp cận dịch vụ và giao diện số | 12, 26 |
+| 우회경로 | Alternate tuyến (route / 경로) | Đường hoặc phương án thay thế khi tuyến chính lỗi | 12 |
 | 재난문자 | Emergency alert message | Tin nhắn cảnh báo khẩn cấp/thảm hoạ | 12 |
 | 사계절 | Four seasons | Bốn mùa | 32 |
 | 벚꽃 | Cherry blossom | Hoa anh đào | 32 |
@@ -224,7 +227,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 | 한국어 | English | Tiếng Việt | Chương |
 |---|---|---|---|
-| 서비스 | Service/free extra in colloquial use | Dịch vụ; trong khẩu ngữ cũng có thể chỉ đồ tặng thêm | 33 |
+| 서비스 | dịch vụ (service / 서비스)/free extra in colloquial use | Dịch vụ; trong khẩu ngữ cũng có thể chỉ đồ tặng thêm | 33 |
 | 고객님 | Honored customer | Cách gọi khách hàng lịch sự | 33 |
 | 감정노동 | Emotional labour | Lao động cảm xúc | 33 |
 | 진상 고객 | Difficult/abusive customer | Khách gây khó hoặc đòi hỏi quá mức | 33 |
@@ -232,10 +235,10 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 무료배송 | Free shipping | Giao hàng không thu phí trực tiếp | 33 |
 | 반품 | Return | Trả hàng | 33 |
 | 교환 | Exchange | Đổi hàng | 33 |
-| 리뷰 | Review | Đánh giá của người dùng | 33 |
-| 리뷰 이벤트 | Review incentive event | Chương trình tặng lợi ích để khuyến khích đánh giá | 33 |
+| 리뷰 | rà soát (review / 검토) | Đánh giá của người dùng | 33 |
+| 리뷰 이벤트 | rà soát (review / 검토) incentive sự kiện (event / 이벤트) | Chương trình tặng lợi ích để khuyến khích đánh giá | 33 |
 | 맛집 | Popular/good restaurant | Quán ăn nổi tiếng hoặc được đánh giá ngon | 33 |
-| 웨이팅 | Waiting/queue | Xếp hàng, chờ lượt | 33 |
+| 웨이팅 | Waiting/hàng đợi (queue / 큐) | Xếp hàng, chờ lượt | 33 |
 | 팝업스토어 | Pop-up store | Cửa hàng tạm thời | 33 |
 | 기프티콘 | Mobile gift coupon | Phiếu quà tặng trên điện thoại | 33 |
 | 알바 | Part-time job | Việc làm thêm | 33 |
@@ -255,16 +258,16 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 웹툰 | Webtoon | Truyện tranh dọc trên nền tảng số | 13 |
 | 저작권 | Copyright | Quyền tác giả/quyền đối với tác phẩm theo phạm vi pháp lý | 13 |
 | 크레딧 | Credit | Ghi công đóng góp | 13 |
-| 2차적저작물 | Derivative work | Tác phẩm phái sinh/chuyển thể theo phạm vi pháp lý | 13 |
+| 2차적저작물 | Derivative công việc (work / 작업) | Tác phẩm phái sinh/chuyển thể theo phạm vi pháp lý | 13 |
 | 현지화 | Localization | Bản địa hoá nội dung cho thị trường/ngôn ngữ cụ thể | 13 |
-| 카탈로그 | Catalog | Kho/danh mục nội dung có thể tiếp tục được khai thác | 13 |
+| 카탈로그 | danh mục (catalog / 카탈로그) | Kho/danh mục nội dung có thể tiếp tục được khai thác | 13 |
 | 초고령사회 | Super-aged society | Xã hội siêu già | 15 |
 | 저출산 | Low fertility | Mức sinh thấp | 15, 29 |
 | 다문화가정 | Multicultural family | Gia đình đa văn hoá | 15 |
 | 이주배경인구 | Migration-background population | Dân số có nền tảng di cư theo định nghĩa thống kê | 15 |
-| 부양비 | Dependency ratio | Tỷ số phụ thuộc theo cấu trúc tuổi | 15 |
+| 부양비 | phụ thuộc (dependency / 의존성) ratio | Tỷ số phụ thuộc theo cấu trúc tuổi | 15 |
 | 생활인구 | De facto/activity population | Dân số hiện diện hoặc sử dụng địa phương theo dòng hoạt động | 15 |
-| 지방소멸 | Local extinction risk | Nguy cơ suy giảm dân số và dịch vụ địa phương | 15 |
+| 지방소멸 | cục bộ (local / 로컬) extinction rủi ro (risk / 위험) | Nguy cơ suy giảm dân số và dịch vụ địa phương | 15 |
 | MZ세대 | Millennials + Gen Z label | Nhãn thế hệ MZ | 06, 15, 30 |
 
 ## Thuật ngữ vùng miền
@@ -301,11 +304,11 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 로마자 표기 | Romanization | Cách biểu diễn tên/từ Hàn bằng chữ La-tinh | 22, 28 |
 | 영어이름 | English name | Tên tiếng Anh dùng trong một số môi trường quốc tế/công sở | 22 |
 | 닉네임 | Nickname | Biệt danh hoặc tên hiển thị | 22, 27 |
-| 개인정보 | Personal information | Thông tin cá nhân | 22, 27 |
-| 병역 | Military service obligation | Nghĩa vụ quân sự | 23 |
+| 개인정보 | Personal thông tin (information / 정보) | Thông tin cá nhân | 22, 27 |
+| 병역 | Military dịch vụ (service / 서비스) obligation | Nghĩa vụ quân sự | 23 |
 | 입대 | Enlistment | Nhập ngũ | 23 |
 | 전역 | Discharge | Xuất ngũ | 23 |
-| 선임 | Senior member | Người vào trước, cấp đàn anh | 23 |
+| 선임 | cấp cao (senior / 시니어) member | Người vào trước, cấp đàn anh | 23 |
 | 후임 | Junior member | Người vào sau, cấp đàn em | 23 |
 | 예비군 | Reserve forces | Lực lượng dự bị | 23 |
 | 재벌 | Chaebol | Tập đoàn gia đình quy mô lớn | 24 |
@@ -336,7 +339,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 신조어 | Neologism | Từ mới | 27 |
 | 밈 | Meme | Meme, mẫu nội dung lan truyền | 27 |
 | 악플 | Malicious comment | Bình luận ác ý | 27 |
-| 티켓팅 | Ticketing race/process | Quá trình săn/mua vé trực tuyến trong điều kiện khan hiếm | 20 |
+| 티켓팅 | Ticketing race/tiến trình (process / 프로세스) | Quá trình săn/mua vé trực tuyến trong điều kiện khan hiếm | 20 |
 
 ## Các khái niệm phân tích xuyên chương
 
@@ -344,29 +347,29 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 | Khái niệm | English | Ý nghĩa sử dụng trong bộ sách | Chương tiêu biểu |
 |---|---|---|---|
-| vòng phản hồi | Feedback loop | Đầu ra quay lại làm thay đổi điều kiện tạo đầu ra tiếp theo | 05, 12, 13, 16 |
-| bất cân xứng thông tin | Information asymmetry | Một bên có nhiều hoặc tốt hơn thông tin bên kia | 05, 12, 13, 19, 24, 26 |
+| vòng phản hồi | vòng phản hồi (feedback loop / 피드백 루프) | Đầu ra quay lại làm thay đổi điều kiện tạo đầu ra tiếp theo | 05, 12, 13, 16 |
+| bất cân xứng thông tin | thông tin (information / 정보) asymmetry | Một bên có nhiều hoặc tốt hơn thông tin bên kia | 05, 12, 13, 19, 24, 26 |
 | tác động ngoại biên | Externality | Chi phí/lợi ích của hành động rơi sang người khác | 12, 20, 31 |
-| phụ thuộc đường đi lịch sử | Path dependence | Quyết định và hạ tầng cũ làm một số lựa chọn sau dễ hơn lựa chọn khác | 01, 16 |
+| phụ thuộc đường đi lịch sử | đường dẫn (path / 경로) dependence | Quyết định và hạ tầng cũ làm một số lựa chọn sau dễ hơn lựa chọn khác | 01, 16 |
 | kỹ năng chuyển giao | Transferable skill | Kỹ năng giữ giá trị khi chuyển vai trò hoặc công cụ | 05 |
-| năng lực tái đào tạo | Reskilling capacity | Khả năng thực tế để học lại dựa trên thời gian, tiền và hỗ trợ | 05, 15 |
-| tải quản lý vô hình | Mental/coordination load | Công việc nhớ, lập kế hoạch, theo dõi và dự đoán ngoại lệ | 29, 06, 16 |
-| hợp đồng giữa các thế hệ | Intergenerational contract | Cách xã hội phân phối đóng góp và hỗ trợ qua các giai đoạn tuổi | 15, 16 |
-| chuỗi nhân quả chính sách | Policy causal chain | Các bước trung gian nối chính sách với kết quả cuối | 15, 16 |
-| tối thiểu hoá dữ liệu | Data minimization | Chỉ thu thập dữ liệu cần cho mục đích xác định | 22 |
+| năng lực tái đào tạo | Reskilling sức chứa (capacity / 용량) | Khả năng thực tế để học lại dựa trên thời gian, tiền và hỗ trợ | 05, 15 |
+| tải quản lý vô hình | Mental/coordination tải (load / 로드) | Công việc nhớ, lập kế hoạch, theo dõi và dự đoán ngoại lệ | 29, 06, 16 |
+| hợp đồng giữa các thế hệ | Intergenerational đặc tả hợp đồng (contract / 계약) | Cách xã hội phân phối đóng góp và hỗ trợ qua các giai đoạn tuổi | 15, 16 |
+| chuỗi nhân quả chính sách | chính sách (policy / 정책) chuỗi nhân quả (causal chain / 인과 사슬) | Các bước trung gian nối chính sách với kết quả cuối | 15, 16 |
+| tối thiểu hoá dữ liệu | dữ liệu (data / 데이터) minimization | Chỉ thu thập dữ liệu cần cho mục đích xác định | 22 |
 | ghép nối | Matching | Chức năng nối người với cơ hội, mạng lưới hoặc tổ chức | 30 |
 | độ trễ thiết chế | Institutional lag | Thiết chế thay đổi chậm hơn cấu trúc xã hội hoặc công nghệ | 15 |
 | tính chính danh | Legitimacy | Mức độ quyền lực/quy tắc được nhìn nhận là hợp lý và đáng tuân theo | 02, 06, 16 |
 | phản thực tế | Counterfactual | Hỏi điều gì sẽ xảy ra nếu cơ chế nghi ngờ không tồn tại hoặc thay đổi | 01, 16 |
 | biến gây nhiễu | Confounder | Yếu tố thứ ba làm hai biến đi cùng nhau mà chưa chắc có quan hệ nhân quả trực tiếp | 01 |
-| thiên lệch chọn mẫu | Selection bias | Mẫu quan sát bị chọn theo cơ chế khiến nó không đại diện đầy đủ | 01, 13, 19, 27 |
-| điểm lỗi duy nhất | Single point of failure | Một nút hỏng có thể làm phần lớn hệ thống dừng | 06, 12, 16 |
+| thiên lệch chọn mẫu | Selection độ lệch (bias / 편향) | Mẫu quan sát bị chọn theo cơ chế khiến nó không đại diện đầy đủ | 01, 13, 19, 27 |
+| điểm lỗi duy nhất | Single điểm (point / 지점) of thất bại (failure / 실패) | Một nút hỏng có thể làm phần lớn hệ thống dừng | 06, 12, 16 |
 | suy giảm có kiểm soát | Graceful degradation | Hệ thống giảm chức năng nhưng vẫn giữ được chức năng cốt lõi khi lỗi | 12 |
 | đường thay thế | Fallback | Phương án thay thế khi đường chính không dùng được | 12, 16, 33 |
 | năng lực sức khoẻ | Health literacy | Khả năng hiểu thông tin, rủi ro và lựa chọn để tham gia quyết định chăm sóc | 26 |
 | đồng thuận có hiểu biết | Informed consent | Đồng ý sau khi đã hiểu đủ mục tiêu, lựa chọn, rủi ro và giới hạn | 19, 26 |
 | lợi thế tích luỹ | Cumulative advantage | Lợi thế ban đầu tạo thêm nguồn lực làm lợi thế tiếp tục tăng | 13, 16, 24 |
-| vòng đời nội dung | Content lifecycle | Quá trình từ phát triển, sản xuất, phát hành đến tái khai thác/lưu trữ | 13 |
+| vòng đời nội dung | Content vòng đời (lifecycle / 생명주기) | Quá trình từ phát triển, sản xuất, phát hành đến tái khai thác/lưu trữ | 13 |
 
 ## Bản đồ nguồn: nên dùng gì khi mở rộng
 
@@ -378,17 +381,17 @@ Mục này là điểm tra cứu nguồn cho chủ đề vừa học. Hãy dùng
 - Ministry of Culture, Sports and Tourism (`문화체육관광부`, MCST): Hallyu, chính sách văn hoá và khảo sát ngành văn hoá.
 - Korea.net: nguồn giới thiệu văn hoá và lịch sử chính thức; nên dùng như điểm khởi đầu, không phải nguồn duy nhất cho vấn đề còn tranh luận.
 - UNESCO Intangible Cultural Heritage: tình trạng và mô tả các yếu tố di sản phi vật thể.
-- `국가유산청` / Korea Heritage Service và `국가유산진흥원`: di sản, nghi lễ, thủ công và bảo tồn.
+- `국가유산청` / Korea Heritage dịch vụ (service / 서비스) và `국가유산진흥원`: di sản, nghi lễ, thủ công và bảo tồn.
 - `국립민속박물관` / National Folk Museum of Korea: đời sống hằng ngày, phong tục theo mùa và văn hoá vật chất.
-- `국립국어원` / National Institute of Korean Language: ngôn ngữ, cách dùng chuẩn và thuật ngữ.
-- `국사편찬위원회` / National Institute of Korean History: niên đại, tư liệu lịch sử gốc và diễn giải lịch sử.
+- `국립국어원` / National Institute of Korean ngôn ngữ (language / 언어): ngôn ngữ, cách dùng chuẩn và thuật ngữ.
+- `국사편찬위원회` / National Institute of Korean lịch sử (history / 이력): niên đại, tư liệu lịch sử gốc và diễn giải lịch sử.
 - `한국학중앙연구원` / Academy of Korean Studies: tên riêng, bản quán, thiết chế, khái niệm và bách khoa Korean Studies.
 - `법제처` / Ministry of Government Legislation: tiêu chuẩn pháp lý và văn bản hiện hành.
 - `병무청` / Military Manpower Administration: quy định nghĩa vụ quân sự, phân loại, nhập ngũ và dự bị; luôn kiểm tra phiên bản theo năm.
-- `국토교통부` / Ministry of Land, Infrastructure and Transport và `한국부동산원` / Korea Real Estate Board: nhà ở, hệ thống thuê và dữ liệu bất động sản.
+- `국토교통부` / Ministry of Land, hạ tầng (infrastructure / 인프라) and vận chuyển (transport / 전송) và `한국부동산원` / Korea Real Estate Board: nhà ở, hệ thống thuê và dữ liệu bất động sản.
 - `공정거래위원회` / Korea Fair Trade Commission: tập đoàn lớn, mức tập trung doanh nghiệp và chính sách cạnh tranh.
 - `한국언론진흥재단` / Korea Press Foundation: khảo sát sử dụng truyền thông, hành vi portal/mạng xã hội và nghiên cứu báo chí.
-- `국민건강보험공단` / National Health Insurance Service và `보건복지부` / Ministry of Health and Welfare: thiết chế y tế và bảo hiểm.
+- `국민건강보험공단` / National Health Insurance dịch vụ (service / 서비스) và `보건복지부` / Ministry of Health and Welfare: thiết chế y tế và bảo hiểm.
 - `기상청` / Korea Meteorological Administration: thời tiết, khí hậu, nắng nóng, mưa, bão và dữ liệu môi trường theo mùa.
 - Trang của chính quyền địa phương về rác và tái chế: cách triển khai `분리수거`, `종량제`, rác thực phẩm và lịch thu gom; không giả định mọi địa phương dùng cùng một quy tắc.
 

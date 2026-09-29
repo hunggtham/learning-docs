@@ -1,6 +1,9 @@
 # CI/CD/CT cho Hệ thống AI
 
-Trong phần mềm truyền thống, **CI/CD** chủ yếu kiểm tra mã nguồn và triển khai ứng dụng. Hệ thống AI cần thêm kiểm tra cho dữ liệu, artifact mô hình và hành vi. Vì vậy MLOps thường nói tới **CI/CD/CT**: tích hợp liên tục (Continuous Integration), phân phối/triển khai liên tục (Continuous Delivery/Deployment) và huấn luyện liên tục (Continuous Training).
+> **Mạch đọc:** Đặt **CI/CD/CT cho Hệ thống AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Tích hợp liên tục** sang **Kiểm tra dữ liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Trong phần mềm truyền thống, **CI/CD** chủ yếu kiểm tra mã nguồn và triển khai ứng dụng. Hệ thống AI cần thêm kiểm tra cho dữ liệu, sản phẩm tạo ra (artifact / 산출물) mô hình và hành vi. Vì vậy MLOps thường nói tới **CI/CD/CT**: tích hợp liên tục (Continuous Integration), phân phối/triển khai liên tục (Continuous Delivery/Deployment) và huấn luyện liên tục (Continuous Training).
 
 ## Tích hợp liên tục
 
@@ -17,7 +20,7 @@ kiểm tra hợp lý của đánh giá
 kiểm tra bảo mật / static analysis
 ```
 
-Một pipeline có thể thất bại dù mã nguồn biên dịch bình thường nếu schema upstream thay đổi hoặc phân phối đặc trưng bất thường.
+Một chuỗi xử lý (pipeline / 파이프라인) có thể thất bại dù mã nguồn biên dịch bình thường nếu lược đồ (schema / 스키마) upstream thay đổi hoặc phân phối đặc trưng bất thường.
 
 ## Kiểm tra dữ liệu
 
@@ -31,19 +34,19 @@ Ví dụ:
 - tính đúng theo thời điểm (point-in-time correctness);
 - khả năng sẵn có của nhãn.
 
-Kiểm tra dữ liệu không chứng minh dữ liệu “đúng hoàn toàn”, nhưng giúp chặn nhiều failure phổ biến trước khi huấn luyện.
+Kiểm tra dữ liệu không chứng minh dữ liệu “đúng hoàn toàn”, nhưng giúp chặn nhiều thất bại (failure / 실패) phổ biến trước khi huấn luyện.
 
-## Smoke Test cho Huấn luyện
+## Smoke kiểm thử (test / 테스트) cho Huấn luyện
 
-Không cần huấn luyện toàn bộ mô hình trong CI. Có thể chạy trên tập con nhỏ để xác nhận pipeline thực thi end-to-end, loss hữu hạn và artifact có thể được tải lại.
+Không cần huấn luyện toàn bộ mô hình trong CI. Có thể chạy trên tập con nhỏ để xác nhận chuỗi xử lý (pipeline / 파이프라인) thực thi end-to-end, mất mát (loss / 손실) hữu hạn và sản phẩm tạo ra (artifact / 산출물) có thể được tải lại.
 
 Huấn luyện đầy đủ thường chạy ở một job điều phối riêng.
 
 ## Phân phối liên tục và Triển khai liên tục
 
-**Continuous Delivery** đảm bảo ứng viên luôn ở trạng thái có thể triển khai nhưng việc thăng cấp lên production vẫn cần phê duyệt.
+**Continuous Delivery** đảm bảo ứng viên luôn ở trạng thái có thể triển khai nhưng việc thăng cấp lên môi trường vận hành (production / 운영 환경) vẫn cần phê duyệt.
 
-**Continuous Deployment** tự động đưa thay đổi đã vượt qua gate vào production.
+**Continuous triển khai (deployment / 배포)** tự động đưa thay đổi đã vượt qua gate vào môi trường vận hành (production / 운영 환경).
 
 Với AI có rủi ro cao, delivery kết hợp phê duyệt có kiểm soát thường phù hợp hơn triển khai hoàn toàn tự động.
 
@@ -60,7 +63,7 @@ cổng tương thích
 cổng shadow / canary
 ```
 
-Ngưỡng của gate nên được version hóa và có thể review.
+Ngưỡng của gate nên được phiên bản (version / 버전) hóa và có thể rà soát (review / 검토).
 
 ## Huấn luyện liên tục
 
@@ -84,13 +87,13 @@ kích hoạt huấn luyện
 
 ## Trigger Huấn luyện lại và Trigger Triển khai lại
 
-Có thể huấn luyện lại nhưng không triển khai nếu mô hình mới không tốt hơn. Ngược lại có thể triển khai lại cùng mô hình vì hạ tầng hoặc runtime được vá mà không cần huấn luyện lại.
+Có thể huấn luyện lại nhưng không triển khai nếu mô hình mới không tốt hơn. Ngược lại có thể triển khai lại cùng mô hình vì hạ tầng hoặc thời gian chạy (runtime / 런타임) được vá mà không cần huấn luyện lại.
 
 Tách hai khái niệm này làm vòng đời rõ hơn.
 
-## Rollback
+## Quay lui (rollback / 롤백)
 
-Rollback cần khôi phục bộ mô hình, tokenizer/preprocessor, prompt và cấu hình tương thích. Nếu database hoặc index schema đã migrate theo cách không tương thích, chỉ rollback mô hình có thể vẫn thất bại.
+Quay lui (rollback / 롤백) cần khôi phục bộ mô hình, tokenizer/preprocessor, prompt và cấu hình tương thích. Nếu cơ sở dữ liệu (database / 데이터베이스) hoặc chỉ mục (index / 인덱스) lược đồ (schema / 스키마) đã migrate theo cách không tương thích, chỉ quay lui (rollback / 롤백) mô hình có thể vẫn thất bại.
 
 ## Triển khai Canary
 
@@ -100,13 +103,13 @@ Canary cần chú ý thiên lệch lựa chọn (selection bias): tập traffic 
 
 ## Triển khai Shadow
 
-Ứng viên nhận bản sao request nhưng output không ảnh hưởng người dùng. Cách này hữu ích để đo độ trễ và hành vi trên traffic thật.
+Ứng viên nhận bản sao yêu cầu (request / 요청) nhưng đầu ra (output / 출력) không ảnh hưởng người dùng. Cách này hữu ích để đo độ trễ và hành vi trên traffic thật.
 
 Shadow có thể gần như nhân đôi chi phí suy luận và vẫn phải tuân thủ kiểm soát quyền riêng tư.
 
 ## CI/CD cho LLM
 
-Ứng dụng LLM có thể thay đổi prompt, retrieval, tool hoặc model provider. CI nên có bộ kiểm thử hành vi (behavioral test set) cho:
+Ứng dụng LLM có thể thay đổi prompt, retrieval, công cụ (tool / 도구) hoặc mô hình (model / 모델) provider. CI nên có bộ kiểm thử hành vi (behavioral test set) cho:
 
 ```text
 độ đúng của câu trả lời
@@ -118,17 +121,17 @@ trường hợp prompt injection
 chi phí / độ trễ
 ```
 
-So sánh chuỗi chính xác thường quá giòn với output sinh nội dung; nên dùng kiểm tra có cấu trúc hoặc đánh giá bằng verifier khi phù hợp.
+So sánh chuỗi chính xác thường quá giòn với đầu ra (output / 출력) sinh nội dung; nên dùng kiểm tra có cấu trúc hoặc đánh giá bằng verifier khi phù hợp.
 
-## Pipeline như Mã nguồn
+## Chuỗi xử lý (pipeline / 파이프라인) như Mã nguồn
 
-Pipeline huấn luyện và triển khai nên được version hóa như mã nguồn để có thể review diff, tái lập và rollback.
+Chuỗi xử lý (pipeline / 파이프라인) huấn luyện và triển khai nên được phiên bản (version / 버전) hóa như mã nguồn để có thể rà soát (review / 검토) diff, tái lập và quay lui (rollback / 롤백).
 
 Cấu hình chỉ tồn tại trong UI thủ công dễ tạo trạng thái ẩn khó truy vết.
 
 ## Secret và Môi trường
 
-Log của training hoặc CI không được làm lộ API key, credential hoặc dữ liệu nhạy cảm. Quyền giữa dev, staging và production nên được tách rõ.
+Log của huấn luyện (training / 학습) hoặc CI không được làm lộ API key, credential hoặc dữ liệu nhạy cảm. Quyền giữa dev, staging và môi trường vận hành (production / 운영 환경) nên được tách rõ.
 
 ## Mô hình tư duy
 
@@ -142,13 +145,13 @@ CD → đưa artifact đã được phê duyệt qua các môi trường một c
 
 ## Những nhầm lẫn thường gặp
 
-### “Continuous Training nghĩa là luôn huấn luyện mô hình mới nhất”
+### “Continuous huấn luyện (training / 학습) nghĩa là luôn huấn luyện mô hình mới nhất”
 
 Không. Tần suất huấn luyện phải dựa trên dữ liệu, giá trị và chi phí, không phải chỉ vì có thể tự động hóa.
 
 ### “Vượt benchmark offline thì nên tự động triển khai”
 
-Không. Phân phối production và ràng buộc hệ thống có thể khác.
+Không. Phân phối môi trường vận hành (production / 운영 환경) và ràng buộc hệ thống có thể khác.
 
 ### “CI của LLM chỉ cần kiểm tra cú pháp prompt”
 

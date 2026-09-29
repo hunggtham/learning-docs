@@ -1,5 +1,8 @@
 # Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)
 
+> **Mạch đọc:** Đặt **Ngân hàng, tài chính và cách doanh nghiệp huy động vốn (Corporate Funding / 기업금융과 자금조달)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Ba nguồn vốn cơ bản** sang **Ghép kỳ hạn nguồn vốn với vòng đời tài sản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một doanh nghiệp có thể **có lợi nhuận trên báo cáo nhưng vẫn phá sản nếu tiền mặt đến sai thời điểm**. Vì vậy tài chính doanh nghiệp không chỉ hỏi “hoạt động kinh doanh có lời không?”, mà còn hỏi doanh nghiệp được tài trợ bằng nguồn nào, kỳ hạn ra sao, lãi suất thế nào, bằng đồng tiền nào và tiền mặt có về trước khi nghĩa vụ đáo hạn hay không.
 
 Đây là sự khác biệt giữa **khả năng thanh toán dài hạn (solvency / 지급능력)** và **thanh khoản (liquidity / 유동성)**. Solvency hỏi giá trị tài sản và năng lực kinh doanh dài hạn có đủ bù nghĩa vụ hay không; liquidity hỏi hôm nay công ty có đủ tiền để trả lương, nhà cung cấp, lãi vay và khoản nợ đáo hạn hay không.
@@ -207,17 +210,17 @@ Trong đó `w_e`, `w_d` là tỷ trọng vốn chủ và nợ; `r_e`, `r_d` là 
 
 Ban điều hành dùng **tỷ suất tối thiểu (hurdle rate)** để đánh giá CAPEX, M&A hoặc R&D. Khi chi phí vốn tăng nhưng lợi suất kỳ vọng của dự án không đổi, NPV giảm.
 
-## Project Finance (PF)
+## Dự án (project / 프로젝트) Finance (PF)
 
 **Tài trợ dự án (Project Finance / 프로젝트 파이낸싱)** thường tách dự án vào một pháp nhân dự án và dựa nhiều vào dòng tiền tương lai của chính dự án hơn bảng cân đối của nhà tài trợ.
 
 PF phù hợp với hạ tầng hoặc bất động sản có dòng tiền riêng, nhưng cấu trúc hợp đồng rất phức tạp. Người cho vay phải nhìn rủi ro hoàn thành, nhu cầu, tài sản bảo đảm, bảo lãnh và thứ tự phân phối tiền.
 
-Bất động sản Hàn Quốc còn có bridge financing, presale và hỗ trợ tín dụng từ nhà thầu. Xem [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
+Bất động sản Hàn Quốc còn có cầu nối (bridge / 브리지) financing, presale và hỗ trợ tín dụng từ nhà thầu. Xem [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md).
 
 ## Công ty chứng khoán và tài chính phi ngân hàng
 
-Hệ thống tài trợ không chỉ có ngân hàng. Công ty chứng khoán có thể bảo lãnh phát hành trái phiếu, chứng khoán hóa tài sản, cung cấp bridge finance hoặc cấu trúc sản phẩm. Công ty bảo hiểm và quản lý tài sản là các nhà đầu tư tổ chức mua trái phiếu và cổ phiếu.
+Hệ thống tài trợ không chỉ có ngân hàng. Công ty chứng khoán có thể bảo lãnh phát hành trái phiếu, chứng khoán hóa tài sản, cung cấp cầu nối (bridge / 브리지) finance hoặc cấu trúc sản phẩm. Công ty bảo hiểm và quản lý tài sản là các nhà đầu tư tổ chức mua trái phiếu và cổ phiếu.
 
 Tài chính phi ngân hàng giúp đa dạng hóa nguồn vốn nhưng có kiểu rủi ro thanh khoản khác. Nguồn vốn dựa trên thị trường thường nhạy với tâm lý nhà đầu tư hơn quan hệ tín dụng ngân hàng.
 
@@ -251,7 +254,7 @@ Sau khi có vốn, ban điều hành phải phân bổ giữa CAPEX duy trì, CA
 
 Giá trị được tạo ra hay phá hủy phụ thuộc vào lợi suất của những quyết định này, không phụ thuộc việc doanh nghiệp “có nhiều tiền”. Một bảng cân đối mạnh vẫn có thể phá hủy giá trị nếu liên tục mua tài sản lợi suất thấp.
 
-## Stress test tài trợ
+## Kiểm thử sức chịu tải (stress test / 스트레스 테스트) tài trợ
 
 Một cách đọc thực tế là dựng kịch bản:
 
@@ -266,9 +269,9 @@ Thị trường trái phiếu khó tái cấp vốn
 
 Sau đó hỏi tiền mặt còn dương không, covenant có bị vi phạm không và khoản nợ đáo hạn nào trở thành điểm nguy hiểm.
 
-Stress test hữu ích hơn một tỷ số duy nhất vì rủi ro tài trợ thường xuất hiện khi nhiều cú sốc xảy ra cùng lúc.
+Kiểm thử sức chịu tải (stress test / 스트레스 테스트) hữu ích hơn một tỷ số duy nhất vì rủi ro tài trợ thường xuất hiện khi nhiều cú sốc xảy ra cùng lúc.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Khả năng sinh lời trả lời **doanh nghiệp có tạo giá trị không**. Tài trợ trả lời **doanh nghiệp có sống đủ lâu để thu được giá trị đó không**. Phân bổ vốn trả lời **giá trị tạo ra có được tái đầu tư hiệu quả không**.
 
@@ -305,3 +308,5 @@ Giá trị dài hạn
 ## Liên kết
 
 Đọc cùng [`01_macro_economy_and_business_cycle.md`](./01_macro_economy_and_business_cycle.md), [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md), [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) và [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

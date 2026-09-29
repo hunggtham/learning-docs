@@ -1,5 +1,8 @@
 # Loạn thần và phổ tâm thần phân liệt
 
+> **Mạch đọc:** Đọc **Loạn thần và phổ tâm thần phân liệt** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Triệu chứng không đồng nghĩa chẩn đoán** sang **2. Triệu chứng dương tính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 **Loạn thần (psychosis)** không phải tên của một bệnh duy nhất. Đây là nhóm hiện tượng trong đó tri giác, cách hình thành niềm tin, cảm nhận mức độ quan trọng của sự kiện, tổ chức tư duy hoặc khả năng kiểm tra thực tại thay đổi đáng kể. Các triệu chứng loạn thần có thể xuất hiện trong phổ tâm thần phân liệt, rối loạn khí sắc, trạng thái do chất, bệnh lý thần kinh–y khoa hoặc một số tình trạng cấp tính khác.
 
 > **Trạng thái bằng chứng:** ảo giác, hoang tưởng, tư duy vô tổ chức, triệu chứng âm tính và khó khăn nhận thức là những hiện tượng lâm sàng đã được mô tả tương đối vững. Các mô hình về gán ý nghĩa bất thường (aberrant salience), xử lý dự đoán (predictive processing), dopamine hay rối loạn mạng lưới thần kinh là **lý thuyết hiện đại**, không phải một lời giải duy nhất cho mọi trường hợp.

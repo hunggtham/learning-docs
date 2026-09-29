@@ -1,6 +1,9 @@
 # Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách
 
-> File này đưa kiến thức kinh tế từ mức “biết chỉ tiêu” lên mức “phân tích hệ thống”. Mục tiêu là theo được chuỗi **dữ liệu → bất ngờ so kỳ vọng → phản ứng chính sách → lợi suất → tín dụng / FX → lợi nhuận doanh nghiệp → định giá tài sản**.
+> **Mạch đọc:** Đặt **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Macro không phải là đoán GDP** sang **2. Xây bản đồ “điều gì đang được định giá”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này đưa kiến thức kinh tế từ mức “biết chỉ tiêu” lên mức “phân tích hệ thống”. Mục tiêu là theo được chuỗi **dữ liệu → bất ngờ so kỳ vọng → phản ứng chính sách → lợi suất → tín dụng / FX → lợi nhuận doanh nghiệp → định giá tài sản**.
 
 ## 1. Macro không phải là đoán GDP
 
@@ -108,7 +111,7 @@ Hai khái niệm này khác nhau về hướng thay đổi của mức giá. Ph�
 
 Hai trạng thái có ý nghĩa hoàn toàn khác với doanh thu danh nghĩa, nợ và chính sách tiền tệ.
 
-## 8. Output gap là cầu nối giữa tăng trưởng và lạm phát
+## 8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát
 
 Khoảng cách sản lượng (output gap) dương nghĩa là cầu đang vượt năng lực cung bền vững; âm nghĩa là nền kinh tế còn công suất dư.
 
@@ -175,7 +178,7 @@ Spread ↑
 
 Credit thường là cầu nối giữa vĩ mô và kinh tế doanh nghiệp.
 
-## 13. Lending standards có thể quan trọng hơn policy rate
+## 13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)
 
 Ngân hàng trung ương có thể dừng tăng lãi nhưng ngân hàng thương mại vẫn siết tín dụng.
 
@@ -305,7 +308,7 @@ Tín dụng
 
 Một “Goldilocks” với định giá cực cao không giống Goldilocks với định giá thấp.
 
-## 22. Regime transition quan trọng hơn nhãn hiện tại
+## 22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại
 
 Giá tài sản phản ứng mạnh khi thị trường nhận ra nền kinh tế **đang chuyển** từ chế độ này sang chế độ khác.
 
@@ -335,7 +338,7 @@ Equity sector reaction
 
 Sau vài tháng, bảng này cho thấy thị trường đang nhạy nhất với biến nào.
 
-## 24. Phân biệt first-order và second-order effect
+## 24. Phân biệt first-order và second-order tác động (effect / 효과)
 
 Ví dụ dầu tăng do nguồn cung:
 
@@ -352,7 +355,7 @@ Chính sách tiền tệ khó nới lỏng
 
 Các tác động bậc hai thường quyết định lợi nhuận doanh nghiệp sau vài quý.
 
-## 25. Policy reaction function phải được cập nhật
+## 25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật
 
 Ngân hàng trung ương có thể thay trọng số giữa:
 

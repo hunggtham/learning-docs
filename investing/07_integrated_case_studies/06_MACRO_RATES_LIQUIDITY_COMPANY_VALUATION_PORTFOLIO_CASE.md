@@ -1,6 +1,9 @@
 # Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục
 
-> Đây là worked case dùng **số liệu giả định** để nối toàn bộ chuỗi `macro → rates → liquidity → industry → company → valuation → portfolio`. Mục tiêu không phải dự báo giá hay đưa ra khuyến nghị mua/bán, mà luyện cách biến một cú sốc vĩ mô thành các biến có thể đo trong mô hình doanh nghiệp và danh mục.
+> **Mạch đọc:** Đặt **Tình huống tích hợp 06 — Từ cú sốc lạm phát và lãi suất tới thanh khoản, doanh nghiệp, định giá và danh mục** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Câu hỏi nghiên cứu** sang **2. Trạng thái trước cú sốc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Đây là worked trường hợp (case / 사례) dùng **số liệu giả định** để nối toàn bộ chuỗi `macro → rates → liquidity → industry → company → valuation → portfolio`. Mục tiêu không phải dự báo giá hay đưa ra khuyến nghị mua/bán, mà luyện cách biến một cú sốc vĩ mô thành các biến có thể đo trong mô hình doanh nghiệp và danh mục.
 
 ## 1. Câu hỏi nghiên cứu
 
@@ -92,7 +95,7 @@ Vì vậy không thể dùng một dấu `+` hoặc `-` cho toàn bộ cổ phi�
 
 ## 4. Lớp 1 — Macro: xác định biến thay đổi thật sự
 
-Cú sốc ban đầu là lạm phát, nhưng biến đầu tư quan trọng hơn là **điều gì thay đổi trong distribution của chính sách và tăng trưởng**.
+Cú sốc ban đầu là lạm phát, nhưng biến đầu tư quan trọng hơn là **điều gì thay đổi trong phân phối (distribution / 분포) của chính sách và tăng trưởng**.
 
 Chuỗi:
 
@@ -105,11 +108,11 @@ Lạm phát dịch vụ dai dẳng
 → nhu cầu và capex có thể giảm với độ trễ
 ```
 
-Failure mode của cách đọc đơn giản là chỉ nhìn CPI mà bỏ qua PMI suy yếu. Nếu tăng trưởng giảm nhanh hơn, vài tháng sau thị trường có thể chuyển từ “higher for longer” sang “policy easing vì suy thoái”.
+Dạng thất bại (failure mode / 실패 모드) của cách đọc đơn giản là chỉ nhìn CPI mà bỏ qua PMI suy yếu. Nếu tăng trưởng giảm nhanh hơn, vài tháng sau thị trường có thể chuyển từ “higher for longer” sang “chính sách (policy / 정책) easing vì suy thoái”.
 
 ## 5. Lớp 2 — Rates: tách đầu ngắn, đầu dài và real yield
 
-US 2Y tăng 50 bp chủ yếu phản ánh thay đổi đường đi kỳ vọng của policy rate.
+US 2Y tăng 50 bp chủ yếu phản ánh thay đổi đường đi kỳ vọng của chính sách (policy / 정책) tỷ lệ (rate / 비율).
 
 US 10Y tăng 70 bp có thể gồm:
 
@@ -133,7 +136,7 @@ Con số này là xấp xỉ bậc một; convexity, carry và curve shape có t
 
 ## 6. Lớp 3 — Liquidity và credit: tại sao rates shock có thể trở thành funding shock
 
-Credit spread tăng 80 bp cho thấy chi phí vốn doanh nghiệp không chỉ tăng vì risk-free rate.
+Credit spread tăng 80 bp cho thấy chi phí vốn doanh nghiệp không chỉ tăng vì risk-free tỷ lệ (rate / 비율).
 
 Nếu trước cú sốc một doanh nghiệp vay ở:
 
@@ -161,9 +164,9 @@ Chi phí lãi tăng gần đúng
 = 2,25 mỗi năm
 ```
 
-2,25 không lớn so với EBIT 180, nhưng đây mới là **direct interest effect**. Tác động lớn hơn có thể đến từ khách hàng cắt capex vì WACC tăng và financing khó hơn.
+2,25 không lớn so với EBIT 180, nhưng đây mới là **direct interest tác động (effect / 효과)**. Tác động lớn hơn có thể đến từ khách hàng cắt capex vì WACC tăng và financing khó hơn.
 
-## 7. Failure mode của phân tích thanh khoản
+## 7. dạng thất bại (failure mode / 실패 모드) của phân tích thanh khoản
 
 Sai lầm thường gặp:
 
@@ -277,7 +280,7 @@ So với 180 trước shock:
 EBIT giảm gần 19%
 ```
 
-Đây là lý do doanh thu giảm nhẹ không đồng nghĩa earnings risk nhỏ.
+Đây là lý do doanh thu giảm nhẹ không đồng nghĩa earnings rủi ro (risk / 위험) nhỏ.
 
 ## 11. FCF sau cú sốc
 
@@ -326,7 +329,7 @@ Khách hàng có thể chậm thanh toán không?
 
 Nếu EBIT giảm nhưng bảng cân đối vẫn khỏe, vấn đề chủ yếu có thể là valuation/cycle. Nếu refinancing wall gần và covenant mỏng, cùng shock có thể biến thành vấn đề sống sót.
 
-## 13. Lớp 7 — Valuation: tách earnings effect và discount-rate effect
+## 13. Lớp 7 — Valuation: tách earnings tác động (effect / 효과) và discount-rate tác động (effect / 효과)
 
 Một sai lầm lớn là chỉ giảm EPS hoặc chỉ tăng WACC. Shock này làm cả hai.
 
@@ -338,7 +341,7 @@ Long-term growth: 3,0%
 Normalized FCF năm kế tiếp: 100
 ```
 
-Terminal value đơn giản hóa:
+Terminal giá trị (value / 값) đơn giản hóa:
 
 ```text
 TV = FCF1 / (WACC - g)
@@ -360,15 +363,15 @@ TV = 90 / (10,5% - 2,5%)
 = 1.125
 ```
 
-Terminal value trong ví dụ giảm khoảng 32,5%.
+Terminal giá trị (value / 값) trong ví dụ giảm khoảng 32,5%.
 
-Đây không phải mục tiêu giá; nó minh họa độ nhạy của valuation khi **cash flow và discount rate cùng xấu đi**.
+Đây không phải mục tiêu giá; nó minh họa độ nhạy của valuation khi **cash luồng (flow / 흐름) và discount tỷ lệ (rate / 비율) cùng xấu đi**.
 
 ## 14. Reverse DCF sau shock
 
-Thay vì chỉ hỏi fair value giảm bao nhiêu, hỏi:
+Thay vì chỉ hỏi fair giá trị (value / 값) giảm bao nhiêu, hỏi:
 
-> Giá hiện tại đang yêu cầu recovery nhanh tới mức nào?
+> Giá hiện tại đang yêu cầu khôi phục (recovery / 복구) nhanh tới mức nào?
 
 Kiểm tra ba biến:
 
@@ -445,27 +448,27 @@ Tác động gần đúng:
 5% × 0%    = 0%
 ```
 
-Tổng stress loss gần đúng:
+Tổng stress mất mát (loss / 손실) gần đúng:
 
 ```text
 ≈ -13,65%
 ```
 
-Điểm cần học không phải con số -13,65%, mà là **10% company position chỉ là một phần; concentration thật nằm trong common factors**.
+Điểm cần học không phải con số -13,65%, mà là **10% company position chỉ là một phần; concentration thật nằm trong dùng chung (common / 공통) factors**.
 
 ## 18. Hedge phải khớp factor
 
-Nếu mục tiêu chỉ là giảm equity beta, index future có thể hữu ích.
+Nếu mục tiêu chỉ là giảm equity beta, chỉ mục (index / 인덱스) future có thể hữu ích.
 
-Nếu mục tiêu là giảm duration/rate risk, equity hedge có thể không đủ.
+Nếu mục tiêu là giảm duration/tỷ lệ (rate / 비율) rủi ro (risk / 위험), equity hedge có thể không đủ.
 
-Nếu mục tiêu là giảm KRW risk, cần FX hedge.
+Nếu mục tiêu là giảm KRW rủi ro (risk / 위험), cần FX hedge.
 
-Nếu mục tiêu là bảo vệ tail loss nhưng giữ upside, options có thể phù hợp về cơ chế nhưng phải tính premium, skew, expiry và basis risk.
+Nếu mục tiêu là bảo vệ tail mất mát (loss / 손실) nhưng giữ upside, options có thể phù hợp về cơ chế nhưng phải tính premium, skew, expiry và basis rủi ro (risk / 위험).
 
-Không tồn tại “hedge tốt nhất” độc lập với risk cần hedge.
+Không tồn tại “hedge tốt nhất” độc lập với rủi ro (risk / 위험) cần hedge.
 
-## 19. Failure mode của hedge
+## 19. dạng thất bại (failure mode / 실패 모드) của hedge
 
 Một hedge có thể thất bại khi:
 
@@ -479,9 +482,9 @@ Option IV quá đắt
 FX exposure thực khác exposure ước tính
 ```
 
-Do đó case study phải ghi cả **hedge failure mode**, không chỉ hedge instrument.
+Do đó trường hợp (case / 사례) study phải ghi cả **hedge dạng thất bại (failure mode / 실패 모드)**, không chỉ hedge instrument.
 
-## 20. Data dashboard sau cú sốc
+## 20. dữ liệu (data / 데이터) dashboard sau cú sốc
 
 Theo dõi theo tầng:
 
@@ -522,7 +525,7 @@ WACC mới là 10,5%                → giả định định giá
 Portfolio shock loss -13,65%     → kết quả kịch bản
 ```
 
-Nếu trộn năm lớp này, research note dễ tạo cảm giác chắc chắn giả.
+Nếu trộn năm lớp này, research ghi chú (note / 노트) dễ tạo cảm giác chắc chắn giả.
 
 ## 22. Counterfactual: điều gì nếu thesis macro đúng nhưng cổ phiếu vẫn tăng?
 
@@ -552,9 +555,9 @@ Working capital xấu
 Governance / capital allocation yếu
 ```
 
-Case study tích hợp phải giữ **company-specific risk** độc lập với macro.
+Trường hợp (case / 사례) study tích hợp phải giữ **company-specific rủi ro (risk / 위험)** độc lập với macro.
 
-## 24. Invalidation theo từng tầng
+## 24. vô hiệu hóa (invalidation / 무효화) theo từng tầng
 
 Một case tích hợp không thể chỉ có một điều kiện vô hiệu hóa chung. Ta cần kiểm tra riêng macro, rates, liquidity, industry và company để biết chính xác tầng nào đã hỏng và tầng nào vẫn còn đứng vững.
 
@@ -595,11 +598,11 @@ Portfolio loss đến từ factor nào?
 Hedge giảm được bao nhiêu loss?
 ```
 
-Một quyết định có thể có outcome tốt nhưng logic sai. Attribution giúp tránh học nhầm từ may mắn.
+Một quyết định có thể có kết quả (outcome / 결과) tốt nhưng lô-gic (logic / 논리) sai. Attribution giúp tránh học nhầm từ may mắn.
 
 ## 26. Bài tập bắt buộc
 
-Không đọc case rồi dừng. Hãy thay ít nhất ba giả định:
+Không đọc trường hợp (case / 사례) rồi dừng. Hãy thay ít nhất ba giả định:
 
 ```text
 A. Real yield chỉ tăng 10 bp thay vì 50 bp
@@ -621,7 +624,7 @@ Mục tiêu là thấy **kết quả phụ thuộc giả định nào mạnh nh�
 
 ## 27. Đầu ra chuẩn
 
-Tạo một note gồm:
+Tạo một ghi chú (note / 노트) gồm:
 
 ```text
 01_macro_surprise.md
@@ -650,7 +653,7 @@ Các tài liệu sau mở rộng từng tầng của worked case theo đúng th�
 
 ## Kết luận
 
-Một macro shock chỉ trở thành investment analysis khi nó được truyền xuống:
+Một macro shock chỉ trở thành investment phân tích (analysis / 분석) khi nó được truyền xuống:
 
 ```text
 Macro

@@ -1,12 +1,15 @@
-# AI vs Machine Learning vs Deep Learning vs Generative AI
+# AI vs Machine học tập (learning / 학습) vs Deep học tập (learning / 학습) vs Generative AI
 
-Các thuật ngữ `AI`, `Machine Learning`, `Deep Learning`, `Generative AI`, `Foundation Model` và `LLM` thường được dùng lẫn nhau trong media và cả trong công việc. Điều đó dễ tạo một mental model sai: rằng chúng là các “generation” nối tiếp nhau và cái mới thay thế cái cũ. Thực tế chúng có quan hệ **subset, overlap và application pattern** phức tạp hơn.
+> **Mạch đọc:** Đọc **AI vs Machine học tập (learning / 학습) vs Deep học tập (learning / 학습) vs Generative AI** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Artificial Intelligence là umbrella trường dữ liệu (field / 필드)** sang **Machine học tập (learning / 학습): hành vi (behavior / 동작) được học từ dữ liệu (data / 데이터)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Artificial Intelligence là umbrella field
 
-Artificial Intelligence (AI / 인공지능 / Trí tuệ nhân tạo) là phạm vi rộng nhất trong nhóm này. Nó nghiên cứu system có capability như perception, reasoning, search, planning, learning, language processing và decision making.
+Các thuật ngữ `AI`, `Machine Learning`, `Deep Learning`, `Generative AI`, `Foundation Model` và `LLM` thường được dùng lẫn nhau trong media và cả trong công việc. Điều đó dễ tạo một mô hình tư duy (mental model / 사고 모델) sai: rằng chúng là các “generation” nối tiếp nhau và cái mới thay thế cái cũ. Thực tế chúng có quan hệ **subset, overlap và ứng dụng (application / 애플리케이션) mẫu (pattern / 패턴)** phức tạp hơn.
 
-Một system AI không bắt buộc phải học từ data. Chess engine dùng minimax/search, expert system dùng rule, constraint solver dùng explicit constraints vẫn thuộc phạm vi AI.
+## Artificial Intelligence là umbrella trường dữ liệu (field / 필드)
+
+Artificial Intelligence (AI / 인공지능 / Trí tuệ nhân tạo) là phạm vi rộng nhất trong nhóm này. Nó nghiên cứu hệ thống (system / 시스템) có năng lực (capability / 역량) như perception, lập luận (reasoning / 추론), tìm kiếm (search / 검색), planning, học tập (learning / 학습), ngôn ngữ (language / 언어) processing và quyết định (decision / 결정) making.
+
+Một hệ thống (system / 시스템) AI không bắt buộc phải học từ dữ liệu (data / 데이터). Chess engine dùng minimax/tìm kiếm (search / 검색), expert hệ thống (system / 시스템) dùng quy tắc (rule / 규칙), ràng buộc (constraint / 제약조건) solver dùng tường minh (explicit / 명시적) các ràng buộc (constraints / 제약조건들) vẫn thuộc phạm vi AI.
 
 ```mermaid
 flowchart TD
@@ -22,11 +25,11 @@ flowchart TD
     DL --> GEN[Generative Models]
 ```
 
-Sơ đồ chỉ minh họa dependency chính, không phải taxonomy tuyệt đối. Generative modeling tồn tại cả trước foundation-model era và không phải mọi foundation model đều chỉ dùng cho generation.
+Sơ đồ chỉ minh họa phụ thuộc (dependency / 의존성) chính, không phải taxonomy tuyệt đối. Generative modeling tồn tại cả trước foundation-model era và không phải mọi foundation mô hình (model / 모델) đều chỉ dùng cho generation.
 
-## Machine Learning: behavior được học từ data
+## Machine học tập (learning / 학습): hành vi (behavior / 동작) được học từ dữ liệu (data / 데이터)
 
-Machine Learning (ML / 기계학습 / học máy) tập trung vào algorithms cải thiện performance dựa trên data hoặc experience.
+Machine học tập (learning / 학습) tập trung vào algorithms cải thiện hiệu năng (performance / 성능) dựa trên dữ liệu (data / 데이터) hoặc experience.
 
 Ta có dataset:
 
@@ -34,7 +37,7 @@ Ta có dataset:
 D = \{(x_i, y_i)\}_{i=1}^{n}
 \]
 
-và muốn học function:
+và muốn học hàm (function / 함수):
 
 \[
 f_\theta(x) \approx y
@@ -42,17 +45,17 @@ f_\theta(x) \approx y
 
 trong đó `θ` là parameters.
 
-Điều quan trọng không phải model nhớ training samples mà phải **generalize** tới unseen data cùng một distribution hoặc distribution đủ gần.
+Điều quan trọng không phải mô hình (model / 모델) nhớ huấn luyện (training / 학습) samples mà phải **generalize** tới unseen dữ liệu (data / 데이터) cùng một phân phối (distribution / 분포) hoặc phân phối (distribution / 분포) đủ gần.
 
-Các family phổ biến gồm linear models, trees, SVM, nearest neighbors, ensemble methods, clustering và neural networks.
+Các family phổ biến gồm tuyến tính (linear / 선형) các mô hình (models / 모델들), trees, SVM, nearest neighbors, ensemble methods, clustering và neural networks.
 
-Machine Learning là subset của AI vì learning chỉ là một cách tạo intelligent behavior.
+Machine học tập (learning / 학습) là subset của AI vì học tập (learning / 학습) chỉ là một cách tạo intelligent hành vi (behavior / 동작).
 
-## Deep Learning: Machine Learning bằng deep neural representations
+## Deep học tập (learning / 학습): Machine học tập (learning / 학습) bằng deep neural representations
 
-Deep Learning (DL / 딥러닝 / học sâu) là subset của Machine Learning sử dụng neural networks với nhiều tầng transformation để học hierarchical hoặc distributed representations.
+Deep học tập (learning / 학습) là subset của Machine học tập (learning / 학습) sử dụng neural networks với nhiều tầng transformation để học hierarchical hoặc phân tán (distributed / 분산) representations.
 
-Nếu classical ML pipeline thường trông như:
+Nếu classical ML chuỗi xử lý (pipeline / 파이프라인) thường trông như:
 
 ```text
 Raw Data
@@ -61,7 +64,7 @@ Raw Data
 → Prediction
 ```
 
-Deep Learning thường cố học nhiều phần representation trực tiếp:
+Deep học tập (learning / 학습) thường cố học nhiều phần biểu diễn (representation / 표현) trực tiếp:
 
 ```text
 Raw-ish Data
@@ -70,13 +73,13 @@ Raw-ish Data
 → Prediction / Generation
 ```
 
-Deep Learning đặc biệt thành công với high-dimensional unstructured data như image, audio và language.
+Deep học tập (learning / 학습) đặc biệt thành công với high-dimensional unstructured dữ liệu (data / 데이터) như ảnh (image / 이미지), audio và ngôn ngữ (language / 언어).
 
-Tuy nhiên deep learning không mặc định tốt hơn cho mọi dataset. Với tabular data nhỏ hoặc business rule rõ, tree ensemble hoặc classical model có thể đơn giản, nhanh và dễ vận hành hơn.
+Tuy nhiên deep học tập (learning / 학습) không mặc định tốt hơn cho mọi dataset. Với tabular dữ liệu (data / 데이터) nhỏ hoặc nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) rõ, cây (tree / 트리) ensemble hoặc classical mô hình (model / 모델) có thể đơn giản, nhanh và dễ vận hành hơn.
 
-## Generative AI: model tạo sample/content mới
+## Generative AI: mô hình (model / 모델) tạo mẫu (sample / 표본)/content mới
 
-**Generative AI (생성형 AI / AI tạo sinh)** tập trung vào model có thể tạo output mới dựa trên learned data distribution.
+**Generative AI (생성형 AI / AI tạo sinh)** tập trung vào mô hình (model / 모델) có thể tạo đầu ra (output / 출력) mới dựa trên learned dữ liệu (data / 데이터) phân phối (distribution / 분포).
 
 Một discriminative classifier thường quan tâm tới:
 
@@ -84,35 +87,35 @@ Một discriminative classifier thường quan tâm tới:
 P(y\mid x)
 \]
 
-trong khi generative modeling có thể học distribution như:
+trong khi generative modeling có thể học phân phối (distribution / 분포) như:
 
 \[
 P(x)
 \]
 
-hoặc joint/conditional distribution:
+hoặc joint/conditional phân phối (distribution / 분포):
 
 \[
 P(x,y), \quad P(x\mid c)
 \]
 
-Trong language modeling, sequence probability được factorize:
+Trong ngôn ngữ (language / 언어) modeling, chuỗi (sequence / 시퀀스) xác suất (probability / 확률) được factorize:
 
 \[
 P(x_1,\ldots,x_T)=\prod_{t=1}^{T}P(x_t\mid x_{<t})
 \]
 
-Model sinh text bằng cách lặp lại việc dự đoán distribution của next token rồi chọn/sample token.
+Mô hình (model / 모델) sinh văn bản (text / 텍스트) bằng cách lặp lại việc dự đoán phân phối (distribution / 분포) của next đơn vị từ (token / 토큰) rồi chọn/mẫu (sample / 표본) đơn vị từ (token / 토큰).
 
-Generative model không chỉ là LLM. GAN, VAE, diffusion model và autoregressive image/audio models đều thuộc generative modeling.
+Generative mô hình (model / 모델) không chỉ là LLM. GAN, VAE, diffusion mô hình (model / 모델) và autoregressive ảnh (image / 이미지)/audio các mô hình (models / 모델들) đều thuộc generative modeling.
 
-## Large Language Model
+## Large ngôn ngữ (language / 언어) mô hình (model / 모델)
 
-**Large Language Model (LLM / 대규모 언어 모델)** là language model ở scale lớn, thường dựa trên Transformer, được train trên lượng text/code lớn bằng self-supervised objective như next-token prediction hoặc variant liên quan.
+**Large ngôn ngữ (language / 언어) mô hình (model / 모델)** là ngôn ngữ (language / 언어) mô hình (model / 모델) ở quy mô (scale / 규모) lớn, thường dựa trên Transformer, được train trên lượng văn bản (text / 텍스트)/mã (code / 코드) lớn bằng self-supervised mục tiêu (objective / 목표) như next-token prediction hoặc variant liên quan.
 
-LLM có thể làm nhiều task mà không cần train model riêng cho từng task vì task được biểu diễn bằng natural language context.
+LLM có thể làm nhiều tác vụ (task / 작업) mà không cần train mô hình (model / 모델) riêng cho từng tác vụ (task / 작업) vì tác vụ (task / 작업) được biểu diễn bằng natural ngôn ngữ (language / 언어) ngữ cảnh (context / 맥락).
 
-Một simplified inference flow:
+Một simplified suy luận (inference / 추론) luồng (flow / 흐름):
 
 ```text
 Text
@@ -125,13 +128,13 @@ Text
 → Next Token
 ```
 
-Lặp lại process này tạo sequence.
+Lặp lại tiến trình (process / 프로세스) này tạo chuỗi (sequence / 시퀀스).
 
-LLM là một loại generative/foundation model, không đồng nghĩa với toàn bộ Generative AI.
+LLM là một loại generative/foundation mô hình (model / 모델), không đồng nghĩa với toàn bộ Generative AI.
 
-## Foundation Model
+## Foundation mô hình (model / 모델)
 
-**Foundation Model (기반 모델)** là model pretrained trên broad data và có thể adapt cho nhiều downstream tasks.
+**Foundation mô hình (model / 모델)** là mô hình (model / 모델) pretrained trên broad dữ liệu (data / 데이터) và có thể adapt cho nhiều downstream tasks.
 
 Key idea là reuse:
 
@@ -145,15 +148,15 @@ Prompting | Fine-tuning | Retrieval | Tools
 Many Applications
 ```
 
-Language model, vision-language model và multimodal model đều có thể là foundation model.
+Ngôn ngữ (language / 언어) mô hình (model / 모델), vision-language mô hình (model / 모델) và multimodal mô hình (model / 모델) đều có thể là foundation mô hình (model / 모델).
 
-## Supervised, Unsupervised, Self-Supervised và Reinforcement Learning
+## Supervised, Unsupervised, Self-Supervised và Reinforcement học tập (learning / 학습)
 
-Đây là learning paradigms, không phải “loại AI theo generation”.
+Đây là học tập (learning / 학습) paradigms, không phải “loại AI theo generation”.
 
-### Supervised Learning
+### Supervised học tập (learning / 학습)
 
-Training data có target label:
+Dữ liệu huấn luyện (training data / 학습 데이터) có mục tiêu (target / 대상) label:
 
 \[
 (x_i,y_i)
@@ -161,29 +164,29 @@ Training data có target label:
 
 Ví dụ email → spam/not spam.
 
-### Unsupervised Learning
+### Unsupervised học tập (learning / 학습)
 
-Không có explicit target label. Model tìm structure trong data, ví dụ clustering.
+Không có tường minh (explicit / 명시적) mục tiêu (target / 대상) label. mô hình (model / 모델) tìm cấu trúc (structure / 구조) trong dữ liệu (data / 데이터), ví dụ clustering.
 
-### Self-Supervised Learning
+### Self-Supervised học tập (learning / 학습)
 
-Supervision được tạo từ chính data. Language modeling là ví dụ: context đóng vai input, token tiếp theo trong text đóng vai target.
+Supervision được tạo từ chính dữ liệu (data / 데이터). ngôn ngữ (language / 언어) modeling là ví dụ: ngữ cảnh (context / 맥락) đóng vai đầu vào (input / 입력), đơn vị từ (token / 토큰) tiếp theo trong văn bản (text / 텍스트) đóng vai mục tiêu (target / 대상).
 
-Self-supervised learning đặc biệt quan trọng vì internet-scale text không cần con người label từng sample thủ công.
+Self-supervised học tập (learning / 학습) đặc biệt quan trọng vì internet-scale văn bản (text / 텍스트) không cần con người label từng mẫu (sample / 표본) thủ công.
 
-### Reinforcement Learning
+### Reinforcement học tập (learning / 학습)
 
-Agent interaction với environment và nhận reward. Goal là học behavior maximize expected cumulative return.
+Tác nhân (agent / 에이전트) tương tác (interaction / 상호작용) với môi trường (environment / 환경) và nhận reward. Goal là học hành vi (behavior / 동작) maximize expected cumulative return.
 
 RL có thể kết hợp với LLM alignment, nhưng RL không phải subset của LLM.
 
 ## Predictive AI và Generative AI
 
-Một useful distinction trong product design:
+Một useful distinction trong sản phẩm (product / 제품) thiết kế (design / 설계):
 
-**Predictive AI** thường trả structured prediction như probability, class, score hoặc forecast.
+**Predictive AI** thường trả structured prediction như xác suất (probability / 확률), lớp (class / 클래스), score hoặc forecast.
 
-**Generative AI** tạo richer artifact như text, code, image hoặc audio.
+**Generative AI** tạo richer sản phẩm tạo ra (artifact / 산출물) như văn bản (text / 텍스트), mã (code / 코드), ảnh (image / 이미지) hoặc audio.
 
 Ví dụ banking:
 
@@ -194,13 +197,13 @@ Customer support draft → generative AI
 Document summarization → generative AI
 ```
 
-Một product có thể dùng cả hai. LLM không nên thay thế fraud model chỉ vì nó “mới hơn”. Task structure quyết định approach.
+Một sản phẩm (product / 제품) có thể dùng cả hai. LLM không nên thay thế fraud mô hình (model / 모델) chỉ vì nó “mới hơn”. tác vụ (task / 작업) cấu trúc (structure / 구조) quyết định approach.
 
 ## NLP không bằng LLM
 
-Natural Language Processing (NLP / 자연어 처리) là domain xử lý human language. NLP tồn tại trước LLM rất lâu và gồm tokenization, parsing, information extraction, retrieval, translation, classification và nhiều task khác.
+Natural ngôn ngữ (language / 언어) Processing (NLP / 자연어 처리) là lĩnh vực (domain / 도메인) xử lý human ngôn ngữ (language / 언어). NLP tồn tại trước LLM rất lâu và gồm tokenization, parsing, thông tin (information / 정보) extraction, retrieval, translation, classification và nhiều tác vụ (task / 작업) khác.
 
-LLM là một approach rất mạnh trong NLP nhưng domain NLP rộng hơn LLM.
+LLM là một approach rất mạnh trong NLP nhưng lĩnh vực (domain / 도메인) NLP rộng hơn LLM.
 
 Tương tự:
 
@@ -215,7 +218,7 @@ Agent ≠ LLM
 
 ## RAG nằm ở đâu?
 
-Retrieval-Augmented Generation (RAG / 검색 증강 생성) thường **không phải một model family**. Nó là system architecture kết hợp retrieval với generative model.
+Retrieval-Augmented Generation (RAG / 검색 증강 생성) thường **không phải một mô hình (model / 모델) family**. Nó là hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처) kết hợp retrieval với generative mô hình (model / 모델).
 
 ```text
 External Knowledge
@@ -229,13 +232,13 @@ LLM
 Grounded Response
 ```
 
-RAG bổ sung knowledge tại inference time thay vì bắt tất cả knowledge phải nằm trong model parameters.
+RAG bổ sung kiến thức (knowledge / 지식) tại suy luận (inference / 추론) thời gian (time / 시간) thay vì bắt tất cả kiến thức (knowledge / 지식) phải nằm trong mô hình (model / 모델) parameters.
 
-## Agent nằm ở đâu?
+## Tác nhân (agent / 에이전트) nằm ở đâu?
 
-Agent cũng là system abstraction, không phải model type.
+Tác nhân (agent / 에이전트) cũng là hệ thống (system / 시스템) lớp trừu tượng (abstraction / 추상화), không phải mô hình (model / 모델) kiểu (type / 타입).
 
-Một LLM có thể đóng vai decision component trong agent:
+Một LLM có thể đóng vai quyết định (decision / 결정) thành phần (component / 컴포넌트) trong tác nhân (agent / 에이전트):
 
 ```text
 Goal
@@ -247,29 +250,29 @@ Goal
 → Repeat
 ```
 
-Agent có thể sử dụng RAG, database, search engine, calculator và nhiều models.
+Tác nhân (agent / 에이전트) có thể sử dụng RAG, cơ sở dữ liệu (database / 데이터베이스), tìm kiếm (search / 검색) engine, calculator và nhiều các mô hình (models / 모델들).
 
-## Một taxonomy theo câu hỏi engineering
+## Một taxonomy theo câu hỏi kỹ thuật (engineering / 엔지니어링)
 
 Khi chọn technology, taxonomy thực dụng hơn là hỏi:
 
 | Câu hỏi | Nhóm approach thường liên quan |
 |---|---|
-| Cần tìm path/plan? | Search, Planning |
-| Cần explicit rule/constraint? | Symbolic AI, Constraint Solving |
-| Cần predict label/score từ historical data? | Machine Learning |
-| Input là image/audio/text phức tạp? | Deep Learning |
-| Cần generate content? | Generative Model |
-| Cần broad natural-language capability? | LLM/Foundation Model |
-| Cần current/private knowledge? | Retrieval/RAG |
-| Cần thực hiện multi-step actions? | Workflow/Agent |
-| Cần học từ sequential reward? | Reinforcement Learning |
+| Cần tìm đường dẫn (path / 경로)/plan? | tìm kiếm (search / 검색), Planning |
+| Cần tường minh (explicit / 명시적) quy tắc (rule / 규칙)/ràng buộc (constraint / 제약조건)? | Symbolic AI, ràng buộc (constraint / 제약조건) Solving |
+| Cần predict label/score từ historical dữ liệu (data / 데이터)? | Machine học tập (learning / 학습) |
+| đầu vào (input / 입력) là ảnh (image / 이미지)/audio/văn bản (text / 텍스트) phức tạp? | Deep học tập (learning / 학습) |
+| Cần generate content? | Generative mô hình (model / 모델) |
+| Cần broad natural-language năng lực (capability / 역량)? | LLM/Foundation mô hình (model / 모델) |
+| Cần hiện tại (current / 현재)/private kiến thức (knowledge / 지식)? | Retrieval/RAG |
+| Cần thực hiện multi-step actions? | Workflow/tác nhân (agent / 에이전트) |
+| Cần học từ sequential reward? | Reinforcement học tập (learning / 학습) |
 
-Không có rule rằng “dùng AI thì phải dùng LLM”.
+Không có quy tắc (rule / 규칙) rằng “dùng AI thì phải dùng LLM”.
 
-## Example: eKYC system
+## Example: eKYC hệ thống (system / 시스템)
 
-Một eKYC pipeline có thể kết hợp nhiều AI categories:
+Một eKYC chuỗi xử lý (pipeline / 파이프라인) có thể kết hợp nhiều AI categories:
 
 ```text
 ID image quality check      → Computer Vision
@@ -283,9 +286,9 @@ Internal policy retrieval   → RAG
 Case-handling assistant     → Agent/Workflow
 ```
 
-Gọi toàn bộ system là “AI” đúng ở level umbrella, nhưng engineering cần biết từng component thuộc loại problem nào.
+Gọi toàn bộ hệ thống (system / 시스템) là “AI” đúng ở mức (level / 수준) umbrella, nhưng kỹ thuật (engineering / 엔지니어링) cần biết từng thành phần (component / 컴포넌트) thuộc loại bài toán (problem / 문제) nào.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 Thay vì nhớ hierarchy như buzzword, hãy dùng ba axis:
 
@@ -295,28 +298,30 @@ Thay vì nhớ hierarchy như buzzword, hãy dùng ba axis:
 3. Mechanism: logic, optimization, retrieval, sampling hay interaction?
 ```
 
-Một system hiện đại thường phối hợp nhiều mechanism.
+Một hệ thống (system / 시스템) hiện đại thường phối hợp nhiều cơ chế (mechanism / 메커니즘).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “Generative AI mới bắt đầu từ ChatGPT”
 
-Generative modeling có lịch sử lâu hơn nhiều. Sự bùng nổ gần đây đến từ foundation models, Transformers, scale và product accessibility.
+Generative modeling có lịch sử lâu hơn nhiều. Sự bùng nổ gần đây đến từ foundation các mô hình (models / 모델들), Transformers, quy mô (scale / 규모) và sản phẩm (product / 제품) khả năng tiếp cận (accessibility / 접근성).
 
-### “Deep Learning thay thế Machine Learning”
+### “Deep học tập (learning / 학습) thay thế Machine học tập (learning / 학습)”
 
-Deep Learning là một phần của ML. Classical methods vẫn rất hữu ích, đặc biệt cho tabular data, low-data settings và interpretable baselines.
+Deep học tập (learning / 학습) là một phần của ML. Classical methods vẫn rất hữu ích, đặc biệt cho tabular dữ liệu (data / 데이터), low-data settings và interpretable baselines.
 
-### “LLM biết database của công ty nếu model mạnh”
+### “LLM biết cơ sở dữ liệu (database / 데이터베이스) của công ty nếu mô hình (model / 모델) mạnh”
 
-Không. Private/current knowledge phải được đưa qua context, retrieval, fine-tuning phù hợp hoặc tool access. Model strength không tự cấp quyền truy cập dữ liệu.
+Không. Private/hiện tại (current / 현재) kiến thức (knowledge / 지식) phải được đưa qua ngữ cảnh (context / 맥락), retrieval, fine-tuning phù hợp hoặc công cụ (tool / 도구) truy cập (access / 접근). mô hình (model / 모델) strength không tự cấp quyền truy cập dữ liệu.
 
-### “Agent là layer sau RAG”
+### “tác nhân (agent / 에이전트) là tầng (layer / 계층) sau RAG”
 
-Không có hierarchy bắt buộc đó. Agent có thể dùng hoặc không dùng RAG; RAG có thể tồn tại hoàn toàn không agentic.
+Không có hierarchy bắt buộc đó. tác nhân (agent / 에이전트) có thể dùng hoặc không dùng RAG; RAG có thể tồn tại hoàn toàn không agentic.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Chapter này là bản đồ thuật ngữ. Từ đây library sẽ đi sâu từng mechanism: Mathematics → Machine Learning → Neural Networks → Transformer → LLM → Retrieval/RAG → Agent, đồng thời giữ các nhánh Classical AI, Reinforcement Learning, Computer Vision và Safety như các domain độc lập có connection rõ ràng.
+Chapter này là bản đồ thuật ngữ. Từ đây thư viện (library / 라이브러리) sẽ đi sâu từng cơ chế (mechanism / 메커니즘): Mathematics → Machine học tập (learning / 학습) → Neural Networks → Transformer → LLM → Retrieval/RAG → tác nhân (agent / 에이전트), đồng thời giữ các nhánh Classical AI, Reinforcement học tập (learning / 학습), Computer Vision và an toàn (safety / 안전) như các lĩnh vực (domain / 도메인) độc lập có liên kết (connection / 연결) rõ ràng.
 
 Xem thêm: [Artificial Intelligence là gì?](./00_what_is_artificial_intelligence.md) và [Mathematics for AI](../01_mathematical_foundations/00_mathematics_for_ai.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is artificial intelligence](./00_what_is_artificial_intelligence.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

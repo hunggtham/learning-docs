@@ -1,14 +1,20 @@
 # 00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần
 
+> **Mạch đọc:** Đặt **00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách đọc tag** sang **Phạm vi cơ bản từ bộ PDF**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Cách đọc tag
 
 `공통` = phần cơ bản dùng để ôn `영주용`, đồng thời là nền tảng mà người thi `귀화용` vẫn phải biết.  
 `귀화용 심화` = học thêm về tư cách công dân, quyền–nghĩa vụ, phúc lợi, hiến pháp, nhà nước và quá trình hình thành nền dân chủ hiện đại.  
 `현재 확인` = con số, luật hoặc chính sách có thể đổi theo thời gian và cần đối chiếu nguồn chính thức.
 
-Folder này cố ý **không tách hai track thành hai bộ note**. Bộ Tư pháp hiện mô tả `한국사회 이해` là 70 giờ đối với mục tiêu 영주 và 100 giờ đối với mục tiêu 국적; sự khác nhau về course hours không có nghĩa hai bên cần hai knowledge tree hoàn toàn riêng. Trong library này, kiến thức chung được học một lần và phần cần mở rộng được đánh dấu ngay tại chỗ.
+Folder này cố ý **không tách hai nhánh học (track / 트랙) thành hai bộ ghi chú (note / 노트)**. Bộ Tư pháp hiện mô tả `한국사회 이해` là 70 giờ đối với mục tiêu 영주 và 100 giờ đối với mục tiêu 국적; sự khác nhau về course hours không có nghĩa hai bên cần hai kiến thức (knowledge / 지식) cây (tree / 트리) hoàn toàn riêng. Trong thư viện (library / 라이브러리) này, kiến thức chung được học một lần và phần cần mở rộng được đánh dấu ngay tại chỗ.
 
-Nguồn current structure: `법무부 사회통합프로그램` — https://www.moj.go.kr/moj/369/subview.do
+Nguồn hiện tại (current / 현재) cấu trúc (structure / 구조): `법무부 사회통합프로그램` — https://www.moj.go.kr/moj/369/subview.do
+
+
+> **Chuyển mạch:** Từ **Cách đọc tag**, ta sang **Phạm vi cơ bản từ bộ PDF** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Phạm vi cơ bản từ bộ PDF
 
@@ -27,7 +33,10 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 
 > **시험 범위: 공통**
 
-Đây là xương sống 50 bài trong 8 PDF người học cung cấp. Người ôn 영주 học toàn bộ khối này. Người ôn 귀화 cũng học cùng khối, sau đó đọc thêm các section `귀화용 심화` ngay trong từng domain.
+Đây là xương sống 50 bài trong 8 PDF người học cung cấp. Người ôn 영주 học toàn bộ khối này. Người ôn 귀화 cũng học cùng khối, sau đó đọc thêm các section `귀화용 심화` ngay trong từng lĩnh vực (domain / 도메인).
+
+
+> **Chuyển mạch:** Từ **Phạm vi cơ bản từ bộ PDF**, ta sang **Phần 심화 được gộp vào đâu?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Phần 심화 được gộp vào đâu?
 
@@ -46,9 +55,12 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 
 Điểm khác biệt không phải “học một bộ hoàn toàn khác”, mà là phải **giải thích sâu hơn**: `국민` khác `영주자` thế nào, quyền đi cùng nghĩa vụ ra sao, `헌법` định nghĩa trật tự nhà nước như thế nào, `사회보험` khác `공공부조` ra sao, và chuỗi `광복 → 정부수립 → 전쟁 → 민주화` có ý nghĩa gì.
 
+
+> **Chuyển mạch:** Từ **Phần 심화 được gộp vào đâu?**, ta sang **Học theo 5 vòng thay vì đọc một lần** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Học theo 5 vòng thay vì đọc một lần
 
-### Vòng 1 — Structure
+### Vòng 1 — cấu trúc (structure / 구조)
 
 Đọc 01→08 để biết “cái gì nằm ở đâu”. Chưa cần thuộc mọi chi tiết.
 
@@ -67,22 +79,25 @@ Mỗi khái niệm phải ghép với thứ dễ nhầm:
 
 ### Vòng 3 — Numbers & institutions
 
-Dùng [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md). Chỉ học cứng số có tính cấu trúc; số liệu thống kê/pháp luật thay đổi phải đi qua file current facts.
+Dùng [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md). Chỉ học cứng số có tính cấu trúc; số liệu thống kê/pháp luật thay đổi phải đi qua tệp (file / 파일) hiện tại (current / 현재) facts.
 
 ### Vòng 4 — Active recall
 
 Dùng [`14_active_recall_bank.md`](14_active_recall_bank.md), tự trả lời trước khi nhìn đáp án. Không chỉ nhận diện; phải nói được một câu giải thích.
 
-### Vòng 5 — Output
+### Vòng 5 — đầu ra (output / 출력)
 
 Dùng [`10_작문_구술.md`](10_작문_구술.md), [`13_exam_question_patterns.md`](13_exam_question_patterns.md), sau đó làm mock 01 và mock 02.
+
+
+> **Chuyển mạch:** Từ **Học theo 5 vòng thay vì đọc một lần**, ta sang **Ba mức độ ghi nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ba mức độ ghi nhớ
 
 Một fact chỉ được coi là “đã học” khi đạt đủ ba tầng:
 
 1. **Recognition** — nhìn thấy và biết đáp án.
-2. **Recall** — không nhìn note vẫn nhớ được.
+2. **Recall** — không nhìn ghi chú (note / 노트) vẫn nhớ được.
 3. **Explanation** — nói được bằng câu tiếng Hàn đơn giản.
 
 Ví dụ với `삼권분립`:
@@ -91,6 +106,11 @@ Ví dụ với `삼권분립`:
 - recall: tự viết được `국회–정부–법원`;
 - explanation: `국가 권력이 한 곳에 집중되지 않도록 권력을 나누는 원리입니다.`
 
+
+> **Chuyển mạch:** Từ **Ba mức độ ghi nhớ**, ta sang **Dữ liệu có thể thay đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Dữ liệu có thể thay đổi
 
-Các PDF là bản tóm tắt học tập ở một thời điểm. Không tự động thay nội dung nguồn bằng dữ liệu mới. Khi một con số/quy định có khả năng đổi, xem riêng [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md): file đó luôn tách rõ **PDF ghi gì** và **current verification ghi gì**.
+Các PDF là bản tóm tắt học tập ở một thời điểm. Không tự động thay nội dung nguồn bằng dữ liệu mới. Khi một con số/quy định có khả năng đổi, xem riêng [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md): tệp (file / 파일) đó luôn tách rõ **PDF ghi gì** và **hiện tại (current / 현재) xác minh (verification / 확인) ghi gì**.
+
+> **Bàn giao:** Sau **Dữ liệu có thể thay đổi**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -14,7 +14,7 @@ SUBJECTS = [
     ("02-software-development", "Môn 2 — 소프트웨어 개발 (Software Development) (Phát triển phần mềm)", "Subject_2.md", ((1, 526), (1083, 1464), (1731, None))),
     ("03-database-construction", "Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)", "Subject_3.md", ((1, 315), (437, None))),
     ("04-programming-language", "Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)", "Subject_4.md", ((23, 331), (349, 681), (1312, None))),
-    ("05-information-system-management", "Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)", "Subject_5.md", ((1, 659),)),
+    ("05-information-system-management", "Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)", "Subject_5.md", ((1, 659), (2617, None))),
 ]
 
 # A stable thematic order makes the merged source easier to study.  Unknown or
@@ -41,6 +41,7 @@ def clean_source(text: str) -> str:
     # The source already contains Korean and Vietnamese explanations. Normalize its
     # presentation without removing study content, examples, tables or mnemonics.
     lines = text.splitlines()
+    lines = [line.rstrip() for line in lines]
     if lines and lines[0].startswith("# "):
         lines = lines[1:]
     text = "\n".join(lines).strip()
@@ -104,7 +105,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 > **Nguồn:** tổng hợp từ các Markdown đã generate trong `raw_md/final`, được đối chiếu với các nguồn `raw` và `raw_md` cùng môn. Nội dung gốc được giữ lại; chỉ chuẩn hoá cấu trúc bài học.
 
-> **Quy ước đọc:** thuật ngữ được ưu tiên theo mẫu `한국어 (English) (Tiếng Việt)`. Mỗi ý tiếng Hàn có phần giải thích Việt ngữ liền kề hoặc ngay sau đó; khi gặp từ kỹ thuật trong ngoặc, hãy xem đó là nghĩa cần nhớ khi làm đề.
+> **Quy ước ngôn ngữ:** phần giải thích ưu tiên tiếng Việt; ở mọi lần xuất hiện, thuật ngữ đề thi dùng dạng `nghĩa Việt (English / 한국어)` để không phải quay lại tìm nghĩa.
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
@@ -384,7 +385,7 @@ def lesson_document(title: str, lesson: str, previous_title: str | None,
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **{plain}**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **{plain}**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 {objective_vi}
 
@@ -402,7 +403,9 @@ def lesson_document(title: str, lesson: str, previous_title: str | None,
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **{plain}** và nối nó với **{next_hint}**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -411,6 +414,8 @@ def lesson_document(title: str, lesson: str, previous_title: str | None,
 
 def subject_readme(title: str, guide_name: str, lesson_rows: list[str]) -> str:
     return f"""# {title}
+
+> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
 
 ## Bài học
 
@@ -446,6 +451,7 @@ Checklist này khép lại bài bằng các câu hỏi kiểm tra; hãy dùng n�
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     index_rows = []
+    coverage_rows = []
     for folder, title, source_name, ranges in SUBJECTS:
         source_path = SOURCE / source_name
         content = select_lines(source_path.read_text(encoding="utf-8"), ranges)
@@ -489,7 +495,13 @@ def main() -> None:
                 encoding="utf-8",
             )
             lesson_rows.append(f"{number}. [{heading}](lessons/{lesson_name})")
-        (target / "README.md").write_text(subject_readme(title, guide_name, lesson_rows), encoding="utf-8")
+        readme = subject_readme(title, guide_name, lesson_rows)
+        if folder == "01-software-design":
+            readme += (
+                "\n## Bài học bổ sung / Deep Dive\n\n"
+                "- [Vòng đời và phương pháp phát triển phần mềm](01-vong-doi-va-phuong-phap-phat-trien.md)\n"
+            )
+        (target / "README.md").write_text(readme, encoding="utf-8")
         index_rows.append(f"- [{title}]({folder}/README.md)")
 
     (OUTPUT / "README.md").write_text(
@@ -504,6 +516,34 @@ def main() -> None:
         "- `raw/notion/`: nội dung Notion theo môn.\n"
         "- `raw_md/generated_markdown*`, `final`, `final_extended`, `merged_subjects`: các lần OCR/dịch/tổng hợp trước.\n"
         "- Các file `final/Subject_*.md` cũ có đoạn ghép nhầm môn. Output đã lọc lại theo ranh giới môn trong `raw/notion/` (Môn 1: 0–72; Môn 2: 73–162; Môn 3: 163–231; Môn 4: 232–314; Môn 5: 315–376), đồng thời giữ các phần mở rộng cùng chủ đề.\n",
+        encoding="utf-8",
+    )
+    (OUTPUT / "COVERAGE_MATRIX.md").write_text(
+        "# 정보처리기사 필기 — Coverage Matrix\n\n"
+        "> Baseline của branch: 출제기준 Q-Net 2023.1.1–2025.12.31. Kiểm tra lại Q-Net trước kỳ thi; ma trận này không xác nhận syllabus 2026.\n\n"
+        "> **Mạch nối:** Dùng ma trận để định vị độ phủ và quay về guide/lesson tương ứng; nó là bản đồ kiểm tra, không thay phần giải thích cơ chế trong từng môn.\n\n"
+        "| Môn | Lessons | Source canonical | Status |\n"
+        "|---|---:|---|---|\n"
+        + "\n".join(coverage_rows)
+        + "\n\n## Quality gates\n\n"
+        "- Link nội bộ được kiểm tra bởi `scripts/audit_learning_output.py`.\n"
+        "- Output được regenerate từ `raw_md/final/` bằng `scripts/build_learning_output.py`.\n"
+        "- `실기` không nằm trong phạm vi hoàn tất của output này.\n",
+        encoding="utf-8",
+    )
+    (OUTPUT / "RESEARCH_REGISTER.md").write_text(
+        "# 정보처리기사 필기 — Research Register\n\n"
+        "이 문서는 시험 범위의 canonical source와 기술 사실 확인에 사용한 1차/공식 자료를 구분한다.\n\n"
+        "> **Mạch nối:** Đọc register này khi cần kiểm tra claim trong guide hoặc lesson; sau khi xác minh nguồn, quay lại đúng topic để nối evidence với cơ chế và bẫy đề.\n\n"
+        "## 시험 범위\n\n"
+        "- [Q-Net 정보처리기사 출제기준(2023.1.1~2025.12.31)](https://www.q-net.or.kr/cst006.do?artlSeq=5210765&brdId=Q006&code=1202&gId=&gSite=Q&id=cst00602) — 시험 범위 baseline.\n\n"
+        "## 기술 사실 확인\n\n"
+        "- [RFC 8200 IPv6 Specification](https://www.rfc-editor.org/rfc/rfc8200) — 128-bit addressing, anycast, header/MTU semantics.\n"
+        "- [Oracle Java Language Specification](https://docs.oracle.com/javase/specs/jls/se26/html/jls-4.html) — primitive types, `char`, `boolean` and numeric widths.\n\n"
+        "- [PostgreSQL SELECT documentation](https://www.postgresql.org/docs/17/queries-order.html) — `WHERE`/`GROUP BY`/`HAVING`/`ORDER BY` reasoning and result ordering.\n"
+        "- [Python control-flow tutorial](https://docs.python.org/3/tutorial/controlflow.html) — `for`, `continue`, `break` and trace behavior.\n"
+        "- [OWASP CSRF Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/CSRF_Prevention_Cheat_Sheet.html) — token and SameSite defense limits.\n\n"
+        "외부 자료는 기술 사실을 검증하기 위한 참고이며, 실제 응시 전에는 Q-Net 출제기준의 최신 게시물을 우선한다.\n",
         encoding="utf-8",
     )
 

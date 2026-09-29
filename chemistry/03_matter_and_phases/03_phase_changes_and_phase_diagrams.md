@@ -1,5 +1,8 @@
 # Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất
 
+> **Mạch đọc:** Đọc **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Pha không đồng nghĩa chỉ với rắn, lỏng, khí** sang **Chuyển pha vật lý khác phản ứng hóa học như thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Pha (phase / 상)** là một vùng vật chất có tính chất và thành phần vĩ mô đồng nhất tương đối. **Chuyển pha (phase transition / 상전이)** xảy ra khi trạng thái ổn định hoặc trạng thái được quan sát của hệ thay đổi do nhiệt độ, áp suất hay thành phần thay đổi. Giản đồ pha là bản đồ cho biết những pha nào bền hoặc cùng tồn tại dưới các điều kiện khác nhau.
 
 Giản đồ pha không chỉ là một hình cần học thuộc. Nó là biểu diễn hình học của một nguyên lý nhiệt động lực học: ở cân bằng, các pha cùng tồn tại phải có **thế hóa học phù hợp bằng nhau** cho mỗi thành phần có thể trao đổi.
@@ -70,7 +73,7 @@ Tại một chuyển pha bậc nhất ở áp suất không đổi, năng lượ
 
 Đó là lý do đường cong gia nhiệt có đoạn plateau lý tưởng tại nóng chảy hoặc sôi.
 
-Trong mẫu thực, plateau có thể không hoàn toàn phẳng do gradient nhiệt, hỗn hợp, quá nhiệt hoặc truyền nhiệt không lý tưởng.
+Trong mẫu thực, plateau có thể không hoàn toàn phẳng do độ dốc (gradient / 기울기) nhiệt, hỗn hợp, quá nhiệt hoặc truyền nhiệt không lý tưởng.
 
 ## Cân bằng pha là cân bằng thế hóa học
 
@@ -349,3 +352,5 @@ thành phần + T + P
 Nhiệt động lực học trả lời “đích cân bằng ở đâu?”, còn tạo mầm, khuếch tán và truyền nhiệt trả lời “hệ có tới đích đó hay không và nhanh thế nào?”.
 
 Xem tiếp: [Dung dịch và độ tan](./04_solutions_and_solubility.md), [Nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md) và [Hóa học vật liệu](../14_materials_and_polymer_chemistry/00_materials_from_chemical_bonding.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 gases](./00_gases.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

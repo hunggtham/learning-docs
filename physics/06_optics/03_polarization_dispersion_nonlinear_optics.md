@@ -1,5 +1,8 @@
 # Phân cực, tán sắc và quang học phi tuyến
 
+> **Mạch đọc:** Đọc **Phân cực, tán sắc và quang học phi tuyến** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phân cực cho biết điện trường dao động theo hướng nào** sang **véc-tơ (vector / 벡터) Jones: đại số tuyến tính của ánh sáng kết hợp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Phân cực cho biết điện trường dao động theo hướng nào
 
 Ánh sáng là sóng điện từ. Với sóng phẳng truyền theo trục `z`, điện trường nằm trong mặt phẳng vuông góc hướng truyền.
@@ -24,9 +27,9 @@ Trường hợp tổng quát tạo phân cực elip.
 
 Phân cực không phải “hướng photon bay”. Nó mô tả cấu trúc ngang của trường điện từ.
 
-## Vector Jones: đại số tuyến tính của ánh sáng kết hợp
+## Véc-tơ (vector / 벡터) Jones: đại số tuyến tính của ánh sáng kết hợp
 
-Với ánh sáng đơn sắc và kết hợp hoàn toàn, hai biên độ phức có thể viết thành vector Jones:
+Với ánh sáng đơn sắc và kết hợp hoàn toàn, hai biên độ phức có thể viết thành véc-tơ (vector / 벡터) Jones:
 
 ```math
 \mathbf J=
@@ -163,16 +166,16 @@ Kỹ thuật thực tế dùng kết hợp:
 
 Đây là cầu nối trực tiếp từ đáp ứng điện từ của vật liệu tới hạ tầng truyền thông Internet.
 
-## Stokes parameters: khi Jones vector không còn đủ
+## Stokes parameters: khi Jones véc-tơ (vector / 벡터) không còn đủ
 
-Ánh sáng thực có thể chỉ phân cực một phần. Khi đó Jones vector không đủ vì nó giả sử một biên độ phức xác định hoàn toàn.
+Ánh sáng thực có thể chỉ phân cực một phần. Khi đó Jones véc-tơ (vector / 벡터) không đủ vì nó giả sử một biên độ phức xác định hoàn toàn.
 
 Ta có thể dùng bốn tham số Stokes `S_0,S_1,S_2,S_3`:
 
 - `S_0` biểu diễn tổng cường độ;
 - các tham số còn lại mô tả ưu thế giữa các cơ sở phân cực tuyến tính và độ thuận tay tròn.
 
-Polarimeter đo cường độ qua nhiều analyzer để tái dựng vector Stokes.
+Polarimeter đo cường độ qua nhiều analyzer để tái dựng véc-tơ (vector / 벡터) Stokes.
 
 Jones calculus mô tả biên độ trường kết hợp; Stokes/Mueller formalism mô tả tương quan cường độ và phù hợp với hệ phân cực một phần.
 
@@ -223,7 +226,7 @@ Chỉ có thành phần `2\omega` chưa đủ để chuyển đổi hiệu quả
 
 Các trường được tạo ở những vị trí khác nhau trong tinh thể phải cộng pha thuận lợi. Nếu chúng lệch pha dần, đóng góp từ vùng này có thể triệt tiêu vùng khác.
 
-Điều kiện phase matching bảo đảm quan hệ vector sóng phù hợp, gần dạng
+Điều kiện phase matching bảo đảm quan hệ véc-tơ (vector / 벡터) sóng phù hợp, gần dạng
 
 ```math
 \Delta k=k_{2\omega}-2k_\omega\approx0.
@@ -249,7 +252,7 @@ Các hạng phi tuyến có thể ghép nhiều tần số.
 
 Với `\chi^{(2)}`, có thể xuất hiện sum-frequency hoặc difference-frequency generation.
 
-Với `\chi^{(3)}`, four-wave mixing cho phép ba mode quang học ghép để tạo mode thứ tư theo điều kiện bảo toàn năng lượng và phase matching.
+Với `\chi^{(3)}`, four-wave mixing cho phép ba chế độ (mode / 모드) quang học ghép để tạo chế độ (mode / 모드) thứ tư theo điều kiện bảo toàn năng lượng và phase matching.
 
 Các quá trình này là nền tảng của chuyển đổi tần số, khuếch đại tham số và nhiều nguồn photon lượng tử.
 
@@ -289,7 +292,7 @@ P=\varepsilon_0(\chi^{(1)}E+\chi^{(2)}E^2+\cdots)
 
 chỉ hữu ích khi đáp ứng có thể biểu diễn bằng chuỗi theo trường. Ở cường độ cực cao, ion hóa, damage, plasma formation hoặc hiệu ứng không nhiễu loạn có thể làm mô hình susceptibility bậc thấp không còn phù hợp.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phân cực mô tả hình học của vectơ trường. Tán sắc mô tả việc vật liệu phản ứng khác nhau với các tần số khác nhau. Quang học phi tuyến xuất hiện khi trường mạnh đến mức đáp ứng không còn tỉ lệ đơn giản với đầu vào.
 
@@ -315,8 +318,10 @@ Không. Đáp ứng phi tuyến có thể hoàn toàn thuận nghịch và xuấ
 
 Không. Hiệu suất còn phụ thuộc tensor `\chi^{(2)}`, đối xứng vật liệu, độ dài tương tác và phase matching.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Sóng Maxwell](../05_electromagnetism/04_maxwell_em_waves.md), [Quang học sóng](01_wave_optics.md), [Trường trong vật chất](../05_electromagnetism/07_fields_in_matter_dielectrics_magnetism.md).
 
 **Liên hệ tiếp:** [Laser và tính kết hợp](02_photons_lasers_coherence.md), [Quang học Fourier](04_fourier_imaging_instrumentation.md), [Đáp ứng tuyến tính và FDT](../04_thermal_statistical/07_linear_response_fluctuation_dissipation.md), [Tín hiệu](../12_experimental_computational/01_signals_sampling_noise.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geometric optics](./00_geometric_optics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

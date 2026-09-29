@@ -1,5 +1,8 @@
 # 06 — Thị trường Hàn Quốc và Việt Nam
 
+> **Mạch đọc:** Đọc **06 — Thị trường Hàn Quốc và Việt Nam** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Lĩnh vực này áp dụng toàn bộ kiến thức từ Nền tảng → Các nhóm tài sản → Phân tích doanh nghiệp → Kinh tế học → Giao dịch vào hai thị trường cụ thể. Mục tiêu không chỉ là biết KOSPI, VN-Index, BOK hay SBV, mà có thể tự xây quy trình nghiên cứu cho một chứng khoán thật, hiểu cú sốc toàn cầu truyền tới ngành/doanh nghiệp ra sao và quản lý thêm các lớp tiền tệ, cấu trúc sản phẩm, lưu ký, thanh toán, thuế, thanh khoản và tiếp cận thị trường.
 
 ## Thứ tự đọc
@@ -16,9 +19,12 @@ Lĩnh vực này áp dụng toàn bộ kiến thức từ Nền tảng → Các 
 
 [05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md](./05_CROSS_BORDER_INVESTING_CURRENCY_TAX_WRAPPERS_AND_MARKET_ACCESS.md) giải quyết lớp triển khai cho nhà đầu tư sống và đầu tư đa quốc gia: khung bốn loại tiền tệ, phân rã lợi suất theo đồng tiền cơ sở, phòng vệ tự nhiên, vốn con người, phòng vệ tiền tệ chiến lược/động, điểm kỳ hạn, cơ sở hoán đổi tiền tệ, cấu trúc quỹ, nơi thành lập quỹ, sở hữu trực tiếp so với sản phẩm nội địa, chứng chỉ lưu ký, lệch ngày nghỉ/múi giờ/thanh toán, lưu ký, quyền sở hữu thụ hưởng, pháp nhân môi giới, room ngoại, free float, giới hạn giá, kiểm soát vốn, chuyển tiền về nước, thuế cư trú, hiệp định thuế, khấu trừ, tổng chi phí, phân bổ theo quốc gia/tiền tệ/nhân tố và kiểm thử căng thẳng tổng hợp.
 
-[06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md](./06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md) đi sâu động cơ kinh tế của từng ngành. Hàn Quốc bao gồm memory/HBM, foundry, thiết bị/vật liệu, ô tô/EV, pin, đóng tàu, công nghiệp/quốc phòng, ngân hàng, bảo hiểm, môi giới, nền tảng, game, biotech, xây dựng, lọc dầu/hóa dầu, tiện ích, bán lẻ và thương hiệu tiêu dùng. Việt Nam bao gồm ngân hàng, chứng khoán, bất động sản, khu công nghiệp/FDI, bán lẻ/hàng tiêu dùng, hàng không/sân bay, cảng/logistics, dầu khí, thủy điện/nhiệt điện/năng lượng tái tạo, thép/xi măng, dịch vụ công nghệ, viễn thông, bảo hiểm, nông nghiệp và hóa chất. Mỗi ngành được nối với cầu, cung, giá/chênh lệch, tồn kho, công suất sử dụng, vốn lưu động, capex, bảng cân đối, bẫy kế toán, định giá và độ nhạy vĩ mô.
+[06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md](./06_SECTOR_DEEP_DIVES_KOREA_VIETNAM.md) đi sâu động cơ kinh tế của từng ngành. Hàn Quốc bao gồm bộ nhớ (memory / 메모리)/HBM, foundry, thiết bị/vật liệu, ô tô/EV, pin, đóng tàu, công nghiệp/quốc phòng, ngân hàng, bảo hiểm, môi giới, nền tảng, game, biotech, xây dựng, lọc dầu/hóa dầu, tiện ích, bán lẻ và thương hiệu tiêu dùng. Việt Nam bao gồm ngân hàng, chứng khoán, bất động sản, khu công nghiệp/FDI, bán lẻ/hàng tiêu dùng, hàng không/sân bay, cảng/logistics, dầu khí, thủy điện/nhiệt điện/năng lượng tái tạo, thép/xi măng, dịch vụ công nghệ, viễn thông, bảo hiểm, nông nghiệp và hóa chất. Mỗi ngành được nối với cầu, cung, giá/chênh lệch, tồn kho, công suất sử dụng, vốn lưu động, capex, bảng cân đối, bẫy kế toán, định giá và độ nhạy vĩ mô.
 
-[07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md](./07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md) là lớp học sâu nối chế độ toàn cầu với bảng cân đối quốc gia, ràng buộc chính sách, FX/tín dụng/thanh khoản, ngành, earnings revisions, định giá, market access và quy mô vị thế. Lab yêu cầu xây scenario matrix thay vì giải thích thị trường bằng một headline.
+[07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md](./07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md) là lớp học sâu nối chế độ toàn cầu với bảng cân đối quốc gia, ràng buộc chính sách, FX/tín dụng/thanh khoản, ngành, earnings revisions, định giá, thị trường (market / 시장) truy cập (access / 접근) và quy mô vị thế. Lab yêu cầu xây scenario ma trận (matrix / 행렬) thay vì giải thích thị trường bằng một headline.
+
+
+> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
@@ -26,10 +32,15 @@ Bạn cần có khả năng mở một cổ phiếu Hàn Quốc hoặc Việt Na
 
 Với vị thế xuyên biên giới, cần thêm lớp `kinh tế của tài sản → quốc gia/nhân tố → tiền tệ → cấu trúc sản phẩm/nơi thành lập/quyền lợi pháp lý → lưu ký/tiếp cận/thanh toán → thuế/chi phí → chuyển tiền/thanh khoản → khớp nghĩa vụ`.
 
+
+> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tổng hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Bài tập tổng hợp
 
 Sau lĩnh vực này, chuyển sang [07 — Bài tập tích hợp](../07_integrated_case_studies/README.md). Hai tình huống quan trọng nhất cho nghiên cứu theo thị trường là [Chu kỳ bán dẫn Hàn Quốc](../07_integrated_case_studies/03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md) và [Chu kỳ bất động sản–ngân hàng Việt Nam](../07_integrated_case_studies/04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md).
 
-Sau đó hoàn thành **Module 6 — Korea & Vietnam** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu gồm dashboard riêng cho hai quốc gia, sector scorecard, bản đồ truyền dẫn cú sốc, checklist đầu tư xuyên biên giới và bảng rủi ro vị thế có giới hạn thanh khoản/FX.
+Sau đó hoàn thành **mô-đun (module / 모듈) 6 — Korea & Vietnam** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu gồm dashboard riêng cho hai quốc gia, sector scorecard, bản đồ truyền dẫn cú sốc, checklist đầu tư xuyên biên giới và bảng rủi ro vị thế có giới hạn thanh khoản/FX.
 
 Sau khi hoàn thành, bước tiếp theo không phải đọc thêm vô hạn mà là xây sổ nghiên cứu cho 5–10 chứng khoán/ngành thật, duy trì bảng theo dõi quốc gia/tiền tệ/thanh khoản và cập nhật luận điểm theo chu kỳ phù hợp.
+
+> **Bàn giao:** Sau **Bài tập tổng hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

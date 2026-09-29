@@ -1,12 +1,15 @@
 # Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức
 
+> **Mạch đọc:** Đọc **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vị trí trong thư viện Khoa học máy tính** sang **Cấu trúc đầy đủ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Đây là thư viện chuyên sâu về **Cấu trúc dữ liệu và thuật toán (Data Structures & Algorithms — DSA / 자료구조와 알고리즘)** trong nhánh Khoa học máy tính của repository.
 
-Nếu các tài liệu nền tảng giải thích những mô hình chung của Khoa học máy tính, thư viện này đi sâu vào từng ranh giới khái niệm của DSA: cách biểu diễn (representation), bất biến (invariant), chứng minh tính đúng đắn, độ phức tạp, cách triển khai, trường hợp biên và cách cấu trúc dữ liệu được dùng trong hệ thống thực tế.
+Nếu các tài liệu nền tảng giải thích những mô hình chung của Khoa học máy tính, thư viện này đi sâu vào từng ranh giới khái niệm của DSA: cách biểu diễn (representation / 표현), bất biến (invariant / 불변식), chứng minh tính đúng đắn, độ phức tạp, cách triển khai, trường hợp biên và cách cấu trúc dữ liệu được dùng trong hệ thống thực tế.
 
 Quay lại lớp nền tảng: [Thuật toán và cấu trúc dữ liệu — Nền tảng Khoa học máy tính](../../basic/01_algorithms_data_structures/).
 
-DSA không phải danh mục công thức để học thuộc. **Cấu trúc dữ liệu (data structure / 자료구조)** là cách tổ chức trạng thái để một nhóm thao tác trở nên hiệu quả hơn. **Thuật toán (algorithm / 알고리즘)** là cách tổ chức quá trình biến đổi trạng thái từ đầu vào tới đầu ra. Cách biểu diễn và thuật toán luôn liên quan vì hình dạng dữ liệu quyết định thông tin nào có thể truy cập, loại bỏ hoặc tổng hợp nhanh.
+DSA không phải danh mục công thức để học thuộc. **cấu trúc dữ liệu (data structure / 자료구조)** là cách tổ chức trạng thái để một nhóm thao tác trở nên hiệu quả hơn. **thuật toán (algorithm / 알고리즘)** là cách tổ chức quá trình biến đổi trạng thái từ đầu vào tới đầu ra. Cách biểu diễn và thuật toán luôn liên quan vì hình dạng dữ liệu quyết định thông tin nào có thể truy cập, loại bỏ hoặc tổng hợp nhanh.
 
 Ba ngôn ngữ trong thư viện có vai trò khác nhau. **C** làm lộ bố trí bộ nhớ, con trỏ, cấp phát và quyền sở hữu. **Java** cho thấy cùng ý tưởng trong collection tổng quát, mô hình đối tượng và bộ gom rác. **JavaScript** cho thấy DSA trong môi trường thực thi động, nơi `Array`, `Map`, `Number`, `TypedArray` và JIT tạo mô hình chi phí khác nhưng các bất biến thuật toán vẫn giữ nguyên.
 
@@ -31,6 +34,9 @@ computer_science/
 ```
 
 Từ **nâng cao (advanced)** mô tả vị trí của thư viện so với lớp nền tảng. Bên trong vẫn không tổ chức cứng theo Beginner → Intermediate → Advanced; các chương được chia theo quan hệ phụ thuộc kiến thức và ranh giới khái niệm.
+
+
+> **Chuyển mạch:** Từ **Vị trí trong thư viện Khoa học máy tính**, ta sang **Cấu trúc đầy đủ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cấu trúc đầy đủ
 
@@ -110,6 +116,9 @@ advanced/
 
 Mỗi nhóm có `_index.md` để điều hướng ngắn gọn trong Obsidian, GitHub và GitHub Pages.
 
+
+> **Chuyển mạch:** Từ **Cấu trúc đầy đủ**, ta sang **Quan hệ phụ thuộc kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Quan hệ phụ thuộc kiến thức
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -156,6 +165,9 @@ flowchart TD
 
 Quan hệ phụ thuộc không phải mức độ khó. Nó chỉ cho biết một mô hình tư duy trước được tái sử dụng trong mô hình sau.
 
+
+> **Chuyển mạch:** Từ **Quan hệ phụ thuộc kiến thức**, ta sang **Cách đọc nếu đã học phần nền tảng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cách đọc nếu đã học phần nền tảng
 
 Không cần đọc toàn bộ phần nâng cao theo thứ tự cứng. Nên bắt đầu bằng `00_foundations` để đồng bộ thuật ngữ và mô hình chi phí, sau đó đi vào nhánh liên quan đến vấn đề đang học.
@@ -200,7 +212,10 @@ Heap → binary heap → indexed/meldable/radix/relaxed priority queues
 
 Các từ trong sơ đồ được giữ bằng tiếng Anh khi chúng là tên cấu trúc, tên thuật toán hoặc từ khóa tra cứu; phần giải thích xung quanh ưu tiên tiếng Việt.
 
-## Case study xuyên nhiều cấu trúc
+
+> **Chuyển mạch:** Từ **Cách đọc nếu đã học phần nền tảng**, ta sang **trường hợp (case / 사례) study xuyên nhiều cấu trúc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Trường hợp (case / 사례) study xuyên nhiều cấu trúc
 
 Sau khi đã đọc các chapter theo chủ đề, nhóm `90_connections` cung cấp các bài tổng hợp để luyện cách ghép nhiều cấu trúc thành một thiết kế hoàn chỉnh.
 
@@ -221,15 +236,18 @@ Scheduler & Backpressure
   Queue + Deque + Priority Queue + fairness + work stealing + admission control
 ```
 
-Các case study không giới thiệu “một thuật toán mới”. Chúng kiểm tra khả năng chuyển từ yêu cầu hệ thống sang workload, state, invariant, representation, composition, failure mode, testing và benchmark.
+Các trường hợp (case / 사례) study không giới thiệu “một thuật toán mới”. Chúng kiểm tra khả năng chuyển từ yêu cầu hệ thống sang tải công việc (workload / 워크로드), trạng thái (state / 상태), bất biến (invariant / 불변식), biểu diễn (representation / 표현), composition, dạng thất bại (failure mode / 실패 모드), testing và benchmark.
 
-Một cách đọc hiệu quả là đọc case study một lần để hiểu kiến trúc, quay lại các chapter được liên kết để đào sâu từng primitive, sau đó đọc lại case study và tự thay đổi workload. Ví dụ, database chuyển từ read-heavy sang write-heavy sẽ làm lựa chọn giữa B+Tree và LSM thay đổi; autocomplete chuyển từ dictionary tĩnh sang cập nhật liên tục sẽ làm lựa chọn giữa FST và Trie thay đổi.
+Một cách đọc hiệu quả là đọc trường hợp (case / 사례) study một lần để hiểu kiến trúc, quay lại các chapter được liên kết để đào sâu từng thành phần nguyên thủy (primitive / 기본 요소), sau đó đọc lại trường hợp (case / 사례) study và tự thay đổi tải công việc (workload / 워크로드). Ví dụ, cơ sở dữ liệu (database / 데이터베이스) chuyển từ read-heavy sang write-heavy sẽ làm lựa chọn giữa B+cây (tree / 트리) và LSM thay đổi; autocomplete chuyển từ dictionary tĩnh sang cập nhật liên tục sẽ làm lựa chọn giữa FST và Trie thay đổi.
+
+
+> **Chuyển mạch:** Từ **trường hợp (case / 사례) study xuyên nhiều cấu trúc**, ta sang **Mô hình tư duy xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy xuyên suốt
 
 > Không có cấu trúc dữ liệu “tốt nhất”. Chỉ có cách biểu diễn phù hợp với khối lượng công việc (workload), bất biến và mô hình chi phí cụ thể.
 
-Khi gặp bài toán mới, đừng bắt đầu bằng câu hỏi “đây là bài dùng tree hay DP?”. Hãy chuyển bài toán thành các thao tác và ràng buộc: tra cứu chính xác, tra cứu theo thứ tự, thêm/xóa, min/max, tiền tố, truy vấn khoảng, tính liên thông, khả năng đi tới, đường đi ngắn nhất, phụ thuộc, ghép cặp hoặc chuyển trạng thái.
+Khi gặp bài toán mới, đừng bắt đầu bằng câu hỏi “đây là bài dùng cây (tree / 트리) hay DP?”. Hãy chuyển bài toán thành các thao tác và ràng buộc: tra cứu chính xác, tra cứu theo thứ tự, thêm/xóa, min/max, tiền tố, truy vấn khoảng, tính liên thông, khả năng đi tới, đường đi ngắn nhất, phụ thuộc, ghép cặp hoặc chuyển trạng thái.
 
 Sau đó hỏi:
 
@@ -245,23 +263,32 @@ Cần kết quả chính xác hay xấp xỉ đã đủ?
 
 Đó là cách DSA trở thành công cụ thiết kế thay vì danh sách công thức.
 
+
+> **Chuyển mạch:** Từ **Mô hình tư duy xuyên suốt**, ta sang **Tại sao có các chương ngoài “DSA phỏng vấn”?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Tại sao có các chương ngoài “DSA phỏng vấn”?
 
 Một thư viện dùng lâu dài không nên dừng ở mảng → cây → đồ thị → quy hoạch động. Hệ thống thực tế tạo ra nhiều mô hình chi phí khác nhau.
 
-B/B+Tree xuất hiện khi I/O theo trang quan trọng hơn số lần so sánh. Cây tăng cường (augmented tree) xuất hiện khi khóa có thứ tự cần thêm thông tin như hạng hoặc tóm tắt khoảng. Skip list cho thấy ngẫu nhiên có thể thay thế bất biến cân bằng xác định. Luồng mạng (network flow) mô hình hóa dung lượng chứ không chỉ khả năng đi tới. Cấu trúc hậu tố tái sử dụng thông tin tiền tố và thứ tự trên văn bản. Bloom filter, Count-Min Sketch và HyperLogLog chấp nhận sai số có giới hạn để giảm bộ nhớ.
+B/B+cây (tree / 트리) xuất hiện khi I/O theo trang quan trọng hơn số lần so sánh. Cây tăng cường (augmented tree) xuất hiện khi khóa có thứ tự cần thêm thông tin như hạng hoặc tóm tắt khoảng. Skip danh sách (list / 목록) cho thấy ngẫu nhiên có thể thay thế bất biến cân bằng xác định. Luồng mạng (network flow) mô hình hóa dung lượng chứ không chỉ khả năng đi tới. Cấu trúc hậu tố tái sử dụng thông tin tiền tố và thứ tự trên văn bản. Bloom filter, Count-Min Sketch và HyperLogLog chấp nhận sai số có giới hạn để giảm bộ nhớ.
 
-Các chapter sau-core mở rộng tiếp: heap nâng cao phân biệt các workload cần `meld`, `decrease-key` hoặc priority nguyên; đồ thị động/temporal xem topology và trọng số như trạng thái thay đổi theo thời gian; matroid và primal-dual giải thích sâu hơn khi nào greedy thực sự đúng hoặc chỉ gần tối ưu; constraint search kết nối backtracking với propagation, bound và solver hiện đại.
+Các chapter sau-core mở rộng tiếp: vùng nhớ động (heap / 힙) nâng cao phân biệt các tải công việc (workload / 워크로드) cần `meld`, `decrease-key` hoặc priority nguyên; đồ thị động/temporal xem topology và trọng số như trạng thái thay đổi theo thời gian; matroid và primal-dual giải thích sâu hơn khi nào greedy thực sự đúng hoặc chỉ gần tối ưu; ràng buộc (constraint / 제약조건) tìm kiếm (search / 검색) kết nối backtracking với propagation, bound và solver hiện đại.
 
 Những phần này cho thấy cùng các nguyên lý nền tảng được mở rộng như thế nào khi khối lượng công việc thay đổi.
+
+
+> **Chuyển mạch:** Từ **Tại sao có các chương ngoài “DSA phỏng vấn”?**, ta sang **C, Java và JavaScript không phải ba bộ DSA riêng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## C, Java và JavaScript không phải ba bộ DSA riêng
 
 Các chương trong `80_language_implementations/` cho thấy cùng một thuật toán gặp mô hình chi phí môi trường thực thi khác nhau.
 
-C buộc ta suy luận về quyền sở hữu, vòng đời con trỏ và cấp phát. Java thêm hợp đồng collection, boxing và bộ gom rác. JavaScript thêm độ chính xác của `Number`, biểu diễn động của object/array, `TypedArray`, giới hạn đệ quy và hành vi JIT.
+C buộc ta suy luận về quyền sở hữu, vòng đời con trỏ và cấp phát. Java thêm hợp đồng collection, boxing và bộ gom rác. JavaScript thêm độ chính xác của `Number`, biểu diễn động của đối tượng (object / 객체)/array, `TypedArray`, giới hạn đệ quy và hành vi JIT.
 
 Mô hình thuật toán không đổi; các ràng buộc triển khai thay đổi.
+
+
+> **Chuyển mạch:** Từ **C, Java và JavaScript không phải ba bộ DSA riêng**, ta sang **Kiểm tra phạm vi thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kiểm tra phạm vi thư viện
 

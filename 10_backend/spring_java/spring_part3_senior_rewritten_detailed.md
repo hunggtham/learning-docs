@@ -1,21 +1,27 @@
-# Java Spring — Part 3: Senior
-## Spring Framework 7 / Spring Boot 4 dưới góc nhìn kiến trúc, runtime, failure và production
+# Java Spring — Part 3: cấp cao (senior / 시니어)
 
-> Part 3 không nhằm biến bạn thành người nhớ nhiều annotation hơn. Một Senior Spring engineer phải có khả năng thiết kế boundary, dự đoán failure mode, giải thích proxy/transaction/context, tìm bottleneck bằng evidence và xử lý production incident mà không đổ mọi thứ cho “Spring magic”.
+> **Mạch đọc:** Đọc **Java Spring — Part 3: cấp cao (senior / 시니어)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)** sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+## Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)
+
+> Part 3 không nhằm biến bạn thành người nhớ nhiều annotation hơn. Một cấp cao (senior / 시니어) Spring engineer phải có khả năng thiết kế ranh giới (boundary / 경계), dự đoán dạng thất bại (failure mode / 실패 모드), giải thích proxy/giao dịch (transaction / 트랜잭션)/ngữ cảnh (context / 맥락), tìm bottleneck bằng bằng chứng (evidence / 증거) và xử lý môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) mà không đổ mọi thứ cho “Spring magic”.
 
 ---
 
 
 <!-- VERSION_UPDATE_2026-09-12_START -->
-## Bản đồ version dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
-Tài liệu dùng **Spring Boot 4.1.1 + Spring Framework 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring Framework 7.0.9 trở lên. Với Servlet stack, generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM Native Image support của Boot 4.1 yêu cầu GraalVM 25 trở lên.
+> **Chuyển mạch:** Từ **Spring khung phần mềm (framework / 프레임워크) 7 / Spring Boot 4 dưới góc nhìn kiến trúc, thời gian chạy (runtime / 런타임), thất bại (failure / 실패) và môi trường vận hành (production / 운영 환경)**, ta sang **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Khi học để làm việc enterprise, bạn vẫn phải nhận biết **Spring Boot 3.5.16 + Spring Framework 6.2.19+**. Đây là maintenance line quan trọng của generation 3.x, vẫn yêu cầu Java 17+, tương thích đến Java 25 và thuộc Servlet 6.0 generation. Đây cũng là bridge tốt nhất trước khi migrate một hệ thống Boot 3 sang Boot 4.
+## Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21
 
-Generation legacy **Spring Boot 2.7 + Spring Framework 5.3** cần được nhận biết để maintain code cũ. Dấu hiệu rõ nhất là Java 8/11-era code và namespace `javax.*`. Từ Boot 3 / Framework 6, Spring chuyển sang Java 17+ và `jakarta.*`. Từ Boot 4 / Framework 7, Spring tiếp tục nâng Jakarta EE 11, modularize Boot mạnh hơn và dùng Jackson 3 làm JSON generation ưu tiên.
+Tài liệu dùng **Spring Boot 4.1.1 + Spring khung phần mềm (framework / 프레임워크) 7.0.9** làm baseline stable hiện đại. Spring Boot 4.1.1 yêu cầu tối thiểu Java 17, tương thích đến Java 26 và yêu cầu Spring khung phần mềm (framework / 프레임워크) 7.0.9 trở lên. Với Servlet ngăn xếp (stack / 스택), generation này dùng Servlet 6.1, điển hình với Tomcat 11 hoặc Jetty 12.1. GraalVM bản địa (native / 네이티브) ảnh (image / 이미지) hỗ trợ (support / 지원) của Boot 4.1 yêu cầu GraalVM 25 trở lên.
 
-Ở phía preview, **Spring Boot 4.2.0-M1 + Spring Framework 7.1.0-M1** đã có tài liệu nhưng vẫn là milestone. Tài liệu này chỉ note direction, không dùng preview API làm baseline.
+Khi học để làm việc enterprise, bạn vẫn phải nhận biết **Spring Boot 3.5.16 + Spring khung phần mềm (framework / 프레임워크) 6.2.19+**. Đây là maintenance line quan trọng của generation 3.x, vẫn yêu cầu Java 17+, tương thích đến Java 25 và thuộc Servlet 6.0 generation. Đây cũng là cầu nối (bridge / 브리지) tốt nhất trước khi migrate một hệ thống Boot 3 sang Boot 4.
+
+Generation legacy **Spring Boot 2.7 + Spring khung phần mềm (framework / 프레임워크) 5.3** cần được nhận biết để maintain mã (code / 코드) cũ. Dấu hiệu rõ nhất là Java 8/11-era mã (code / 코드) và không gian tên (namespace / 네임스페이스) `javax.*`. Từ Boot 3 / khung phần mềm (framework / 프레임워크) 6, Spring chuyển sang Java 17+ và `jakarta.*`. Từ Boot 4 / khung phần mềm (framework / 프레임워크) 7, Spring tiếp tục nâng Jakarta EE 11, modularize Boot mạnh hơn và dùng Jackson 3 làm JSON generation ưu tiên.
+
+Ở phía preview, **Spring Boot 4.2.0-M1 + Spring khung phần mềm (framework / 프레임워크) 7.1.0-M1** đã có tài liệu nhưng vẫn là milestone. Tài liệu này chỉ ghi chú (note / 노트) direction, không dùng preview API làm baseline.
 
 ```text
 Boot 2.7 + Framework 5.3
@@ -41,23 +47,23 @@ Boot 4.2 M1 + Framework 7.1 M1
 → theo dõi direction, không dùng làm production baseline
 ```
 
-Version chỉ được nhắc ở nơi nó thật sự thay đổi package, dependency, API, runtime behavior hoặc migration; không biến tài liệu thành changelog.
+Phiên bản (version / 버전) chỉ được nhắc ở nơi nó thật sự thay đổi gói (package / 패키지), phụ thuộc (dependency / 의존성), API, hành vi thời gian chạy (runtime behavior / 런타임 동작) hoặc di chuyển (migration / 마이그레이션); không biến tài liệu thành changelog.
 <!-- VERSION_UPDATE_2026-09-12_END -->
 
 ---
-# 1. Senior Spring là gì?
+# 1. cấp cao (senior / 시니어) Spring là gì?
 
-Ở Intermediate, bạn đã biết container tạo bean qua definitions và post-processors, AOP dùng proxy, MVC có dispatch pipeline, transaction có propagation và JPA có persistence context.
+Ở Intermediate, bạn đã biết bộ chứa (container / 컨테이너) tạo bean qua definitions và post-processors, AOP dùng proxy, MVC có dispatch chuỗi xử lý (pipeline / 파이프라인), giao dịch (transaction / 트랜잭션) có propagation và JPA có persistence ngữ cảnh (context / 맥락).
 
-Ở Senior, câu hỏi thay đổi. Khi method có `@Transactional`, bạn phải đánh giá transaction có giữ connection quá lâu không, có remote call bên trong không, có `REQUIRES_NEW` khiến pool cạn không. Khi bật virtual threads, bạn phải hỏi DB connection pool, downstream concurrency và pinning chứ không chỉ nhìn thread count. Khi thêm cache, bạn phải hỏi stale tolerance và stampede. Khi publish event, bạn phải hỏi process crash giữa commit và publish. Khi latency p99 tăng, bạn phải biết lấy trace, JFR, DB metrics và thread dump để xây hypothesis.
+Ở cấp cao (senior / 시니어), câu hỏi thay đổi. Khi phương thức (method / 메서드) có `@Transactional`, bạn phải đánh giá giao dịch (transaction / 트랜잭션) có giữ liên kết (connection / 연결) quá lâu không, có remote lời gọi (call / 호출) bên trong không, có `REQUIRES_NEW` khiến pool cạn không. Khi bật virtual threads, bạn phải hỏi DB liên kết (connection / 연결) pool, downstream tính đồng thời (concurrency / 동시성) và pinning chứ không chỉ nhìn luồng thực thi (thread / 스레드) count. Khi thêm bộ nhớ đệm (cache / 캐시), bạn phải hỏi stale tolerance và stampede. Khi publish sự kiện (event / 이벤트), bạn phải hỏi tiến trình (process / 프로세스) crash giữa lần ghi nhận (commit / 커밋) và publish. Khi độ trễ (latency / 지연 시간) p99 tăng, bạn phải biết lấy dấu vết (trace / 추적), JFR, DB metrics và luồng thực thi (thread / 스레드) dump để xây hypothesis.
 
-Framework skill ở level Senior là **reasoning about boundaries and runtime consequences**.
+Khung phần mềm (framework / 프레임워크) skill ở mức (level / 수준) cấp cao (senior / 시니어) là **lập luận (reasoning / 추론) about boundaries and thời gian chạy (runtime / 런타임) consequences**.
 
 ---
 
 # 2. Spring không thay kiến trúc của bạn
 
-Spring có thể inject dependency nhưng không quyết định dependency direction có đúng không. Nó có thể mở transaction nhưng không biết business operation nào phải atomic. Nó có thể tạo REST controller nhưng không biết public API nên version thế nào. Nó có thể cache method nhưng không biết dữ liệu stale 30 giây có chấp nhận được không.
+Spring có thể inject phụ thuộc (dependency / 의존성) nhưng không quyết định phụ thuộc (dependency / 의존성) direction có đúng không. Nó có thể mở giao dịch (transaction / 트랜잭션) nhưng không biết nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) nào phải atomic. Nó có thể tạo REST controller nhưng không biết API công khai (public API / 공개 API) nên phiên bản (version / 버전) thế nào. Nó có thể bộ nhớ đệm (cache / 캐시) phương thức (method / 메서드) nhưng không biết dữ liệu stale 30 giây có chấp nhận được không.
 
 Vì vậy hãy phân biệt:
 
@@ -67,17 +73,17 @@ Framework capability
 Architecture decision
 ```
 
-Một hệ thống đầy `@Service`, `@Repository`, `@Transactional` vẫn có thể có coupling tệ, transaction sai và boundary mơ hồ.
+Một hệ thống đầy `@Service`, `@Repository`, `@Transactional` vẫn có thể có coupling tệ, giao dịch (transaction / 트랜잭션) sai và ranh giới (boundary / 경계) mơ hồ.
 
-**Language Idiom — Framework at the edges.** Domain/value objects và phần lớn business decisions nên có thể hiểu bằng Java bình thường. Spring annotations tập trung ở composition/infrastructure boundaries khi có thể.
+**lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구) — khung phần mềm (framework / 프레임워크) at the edges.** lĩnh vực (domain / 도메인)/giá trị (value / 값) objects và phần lớn nghiệp vụ (business / 비즈니스) decisions nên có thể hiểu bằng Java bình thường. Spring annotations tập trung ở composition/hạ tầng (infrastructure / 인프라) boundaries khi có thể.
 
 ---
 
-# 3. Container startup dưới góc Senior
+# 3. bộ chứa (container / 컨테이너) startup dưới góc cấp cao (senior / 시니어)
 
-Startup không phải “scan rồi new beans”. Một application lớn có nhiều stages: environment/config data được chuẩn bị, configuration classes được parse, definitions được register, factory post-processors sửa metadata, bean post-processors được tạo, eager singletons được instantiate, dependencies resolved, initialization callbacks chạy, auto-proxy creators có thể wrap target, rồi lifecycle infrastructure mới start.
+Startup không phải “scan rồi new beans”. Một ứng dụng (application / 애플리케이션) lớn có nhiều stages: môi trường (environment / 환경)/cấu hình (config / 설정) dữ liệu (data / 데이터) được chuẩn bị, cấu hình (configuration / 구성) classes được parse, definitions được register, factory post-processors sửa siêu dữ liệu (metadata / 메타데이터), bean post-processors được tạo, eager singletons được instantiate, dependencies resolved, initialization callbacks chạy, auto-proxy creators có thể wrap mục tiêu (target / 대상), rồi vòng đời (lifecycle / 생명주기) hạ tầng (infrastructure / 인프라) mới start.
 
-Khi startup chậm, bạn phải phân loại cost:
+Khi startup chậm, bạn phải phân loại chi phí (cost / 비용):
 
 ```text
 classpath/config scanning
@@ -90,43 +96,46 @@ custom @PostConstruct
 AOT/native constraints
 ```
 
-Đừng bật global lazy initialization như phản xạ. Nó giảm startup bằng cách chuyển lỗi sang first request.
+Đừng bật toàn cục (global / 전역) lazy initialization như phản xạ. Nó giảm startup bằng cách chuyển lỗi sang first yêu cầu (request / 요청).
 
 ---
 
 <!-- SPRING_BATCH1_IOC_SENIOR -->
-## Dependency resolution ở production: type contract, lifecycle và exposed object phải được xem cùng nhau
 
-Ở production, “bean tồn tại” chưa đủ. Bạn cần phân biệt **definition type**, **target type** và **exposed type**. Một `@Bean` factory method có thể khai báo interface return type trong khi object thật là implementation cụ thể; sau đó auto-proxying có thể expose JDK proxy chỉ implement interfaces hoặc class proxy subclass target. Code dùng `getBean(SomeConcreteClass.class)` có thể vì vậy phụ thuộc proxy strategy một cách vô tình, trong khi constructor injection theo stable interface ít nhạy hơn.
+> **Chuyển mạch:** Từ **Bản đồ phiên bản (version / 버전) dùng xuyên suốt tài liệu — cập nhật 2026-09-21**, ta sang **phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Dependency resolution cũng có lifecycle cost. Injecting một heavy singleton trực tiếp vào infrastructure bean có thể kéo cả application graph vào startup sớm. Injecting `ObjectProvider<T>` hoặc thiết kế lại boundary đôi khi không phải “lazy trick” mà là cách giữ phase separation đúng. Tuy nhiên provider bị dùng khắp business code lại làm dependencies khó nhìn, nên deferred lookup chỉ nên xuất hiện khi lifecycle/optionality thực sự cần.
+## Phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau
 
-Khi custom framework code can thiệp vào bean creation, hãy giữ một invariant: metadata processors không nên vô tình instantiate application beans, instance processors không nên phụ thuộc sâu vào business graph, và caller không nên phụ thuộc implementation detail của proxy. Ba nguyên tắc này giảm phần lớn các lỗi startup/proxy khó đoán.
+Ở môi trường vận hành (production / 운영 환경), “bean tồn tại” chưa đủ. Bạn cần phân biệt **definition kiểu (type / 타입)**, **mục tiêu (target / 대상) kiểu (type / 타입)** và **exposed kiểu (type / 타입)**. Một `@Bean` factory phương thức (method / 메서드) có thể khai báo giao diện (interface / 인터페이스) return kiểu (type / 타입) trong khi đối tượng (object / 객체) thật là hiện thực (implementation / 구현) cụ thể; sau đó auto-proxying có thể expose JDK proxy chỉ implement interfaces hoặc lớp (class / 클래스) proxy subclass mục tiêu (target / 대상). mã (code / 코드) dùng `getBean(SomeConcreteClass.class)` có thể vì vậy phụ thuộc proxy chiến lược (strategy / 전략) một cách vô tình, trong khi constructor injection theo stable giao diện (interface / 인터페이스) ít nhạy hơn.
+
+Phụ thuộc (dependency / 의존성) resolution cũng có vòng đời (lifecycle / 생명주기) chi phí (cost / 비용). Injecting một heavy singleton trực tiếp vào hạ tầng (infrastructure / 인프라) bean có thể kéo cả ứng dụng (application / 애플리케이션) đồ thị (graph / 그래프) vào startup sớm. Injecting `ObjectProvider<T>` hoặc thiết kế lại ranh giới (boundary / 경계) đôi khi không phải “lazy trick” mà là cách giữ phase separation đúng. Tuy nhiên provider bị dùng khắp nghiệp vụ (business / 비즈니스) mã (code / 코드) lại làm dependencies khó nhìn, nên deferred lookup chỉ nên xuất hiện khi vòng đời (lifecycle / 생명주기)/optionality thực sự cần.
+
+Khi custom khung phần mềm (framework / 프레임워크) mã (code / 코드) can thiệp vào bean creation, hãy giữ một bất biến (invariant / 불변식): siêu dữ liệu (metadata / 메타데이터) processors không nên vô tình instantiate ứng dụng (application / 애플리케이션) beans, instance processors không nên phụ thuộc sâu vào nghiệp vụ (business / 비즈니스) đồ thị (graph / 그래프), và caller không nên phụ thuộc hiện thực (implementation / 구현) detail của proxy. Ba nguyên tắc này giảm phần lớn các lỗi startup/proxy khó đoán.
 <!-- SPRING_BATCH1_IOC_SENIOR_END -->
 
 ---
 
 # 4. Early Bean Creation và “not eligible for all BeanPostProcessors”
 
-Một advanced startup bug xảy ra khi infrastructure bean trong lúc tạo post-processor lại yêu cầu application bean quá sớm. Bean đó được instantiate trước khi toàn bộ post-processors được register. Kết quả nó có thể không nhận proxy/advice mà bạn kỳ vọng.
+Một advanced startup bug xảy ra khi hạ tầng (infrastructure / 인프라) bean trong lúc tạo post-processor lại yêu cầu ứng dụng (application / 애플리케이션) bean quá sớm. Bean đó được instantiate trước khi toàn bộ post-processors được register. Kết quả nó có thể không nhận proxy/advice mà bạn kỳ vọng.
 
-Nếu log nói bean “not eligible for getting processed by all BeanPostProcessors” và transaction/AOP không chạy, hãy trace **ai kéo bean vào creation sớm**.
+Nếu log nói bean “not eligible for getting processed by all BeanPostProcessors” và giao dịch (transaction / 트랜잭션)/AOP không chạy, hãy dấu vết (trace / 추적) **ai kéo bean vào creation sớm**.
 
-Đây là framework lifecycle problem, không sửa bằng thêm `@Transactional`.
-
----
-
-# 5. BeanPostProcessor ordering và infrastructure coupling
-
-Spring infrastructure dùng ordering contracts như `PriorityOrdered`, `Ordered` và `@Order`. Khi bạn tự viết nhiều custom post-processors phụ thuộc order, bạn đang xây mini-framework.
-
-Application code bình thường không nên dùng post-processor để implement business feature. Vì post-processor chạy ở lifecycle layer, lỗi dễ ảnh hưởng toàn context và khó debug.
-
-Nếu một requirement có thể giải bằng explicit composition/bean configuration, ưu tiên nó trước metaprogramming.
+Đây là khung phần mềm (framework / 프레임워크) vòng đời (lifecycle / 생명주기) bài toán (problem / 문제), không sửa bằng thêm `@Transactional`.
 
 ---
 
-# 6. Proxy chain là runtime architecture
+# 5. BeanPostProcessor thứ tự (ordering / 순서) và hạ tầng (infrastructure / 인프라) coupling
+
+Spring hạ tầng (infrastructure / 인프라) dùng thứ tự (ordering / 순서) contracts như `PriorityOrdered`, `Ordered` và `@Order`. Khi bạn tự viết nhiều custom post-processors phụ thuộc thứ tự (order / 순서), bạn đang xây mini-framework.
+
+Ứng dụng (application / 애플리케이션) mã (code / 코드) bình thường không nên dùng post-processor để implement nghiệp vụ (business / 비즈니스) tính năng (feature / 기능). Vì post-processor chạy ở vòng đời (lifecycle / 생명주기) tầng (layer / 계층), lỗi dễ ảnh hưởng toàn ngữ cảnh (context / 맥락) và khó gỡ lỗi (debug / 디버그).
+
+Nếu một yêu cầu (requirement / 요구사항) có thể giải bằng tường minh (explicit / 명시적) composition/bean cấu hình (configuration / 구성), ưu tiên nó trước metaprogramming.
+
+---
+
+# 6. Proxy chuỗi (chain / 사슬) là thời gian chạy (runtime / 런타임) kiến trúc (architecture / 아키텍처)
 
 Một bean có thể được bao bởi nhiều interceptors.
 
@@ -142,19 +151,19 @@ caller
 → target
 ```
 
-Thứ tự này không chỉ performance; nó thay semantics.
+Thứ tự này không chỉ hiệu năng (performance / 성능); nó thay ngữ nghĩa (semantics / 의미론).
 
-Ví dụ retry **ngoài** transaction có thể tạo transaction mới cho từng attempt. Retry **trong** transaction có thể retry trong transaction đã rollback-only, vô nghĩa hoặc sai.
+Ví dụ thử lại (retry / 재시도) **ngoài** giao dịch (transaction / 트랜잭션) có thể tạo giao dịch (transaction / 트랜잭션) mới cho từng attempt. thử lại (retry / 재시도) **trong** giao dịch (transaction / 트랜잭션) có thể thử lại (retry / 재시도) trong giao dịch (transaction / 트랜잭션) đã rollback-only, vô nghĩa hoặc sai.
 
-Cache ngoài security có thể cache response không phân biệt permission nếu key sai.
+Bộ nhớ đệm (cache / 캐시) ngoài bảo mật (security / 보안) có thể bộ nhớ đệm (cache / 캐시) phản hồi (response / 응답) không phân biệt permission nếu key sai.
 
-Khi một method có nhiều cross-cutting annotations, hãy vẽ interceptor stack.
+Khi một phương thức (method / 메서드) có nhiều cross-cutting annotations, hãy vẽ interceptor ngăn xếp (stack / 스택).
 
 ---
 
 # 7. Advisor, Pointcut, MethodInterceptor
 
-Ở Spring AOP, một Advisor gắn advice với pointcut. Method interceptor có thể gọi `proceed()` để chuyển control tới interceptor tiếp theo hoặc target.
+Ở Spring AOP, một Advisor gắn advice với pointcut. phương thức (method / 메서드) interceptor có thể gọi `proceed()` để chuyển điều khiển (control / 제어) tới interceptor tiếp theo hoặc mục tiêu (target / 대상).
 
 Pseudo:
 
@@ -175,27 +184,27 @@ Object invoke(MethodInvocation invocation)
 }
 ```
 
-Transactions, observations và custom aspects có thể conceptually nằm trong chain kiểu này.
+Transactions, observations và custom aspects có thể conceptually nằm trong chuỗi (chain / 사슬) kiểu này.
 
-Đây là Proxy + Chain of Responsibility/Interceptor.
-
----
-
-# 8. JDK Proxy và CGLIB dưới góc API design
-
-JDK proxy expose interfaces. Class-based proxy subclass target.
-
-Nếu business API đã có interface ổn định, JDK proxy thường tự nhiên. Nếu codebase inject concrete types và cần advise concrete methods, class proxy có thể cần.
-
-Class proxy có limitation với final/private methods vì subclass không override được.
-
-Spring Framework 7 tiếp tục proxy-based Spring AOP và có thêm control finer-grained như `@Proxyable` cho per-bean proxy choice trong current generation.
-
-Senior không nên ép toàn project sang một proxy type vì benchmark blog. Hãy thiết kế public abstraction trước.
+Đây là Proxy + chuỗi (chain / 사슬) of Responsibility/Interceptor.
 
 ---
 
-# 9. Self-invocation là dấu hiệu boundary, không chỉ technical caveat
+# 8. JDK Proxy và CGLIB dưới góc API thiết kế (design / 설계)
+
+JDK proxy expose interfaces. Class-based proxy subclass mục tiêu (target / 대상).
+
+Nếu nghiệp vụ (business / 비즈니스) API đã có giao diện (interface / 인터페이스) ổn định, JDK proxy thường tự nhiên. Nếu codebase inject concrete types và cần advise concrete methods, lớp (class / 클래스) proxy có thể cần.
+
+Lớp (class / 클래스) proxy có limitation với final/private methods vì subclass không override được.
+
+Spring khung phần mềm (framework / 프레임워크) 7 tiếp tục proxy-based Spring AOP và có thêm điều khiển (control / 제어) finer-grained như `@Proxyable` cho per-bean proxy choice trong hiện tại (current / 현재) generation.
+
+Cấp cao (senior / 시니어) không nên ép toàn dự án (project / 프로젝트) sang một proxy kiểu (type / 타입) vì benchmark blog. Hãy thiết kế công khai (public / 공개) lớp trừu tượng (abstraction / 추상화) trước.
+
+---
+
+# 9. Self-invocation là dấu hiệu ranh giới (boundary / 경계), không chỉ technical caveat
 
 Nếu bạn có:
 
@@ -218,27 +227,30 @@ class AccountingService {
 
 và `process()` gọi `this.saveAudit()`, advice thứ hai bị bypass.
 
-Technical fix có thể dùng self proxy, nhưng architecture fix thường tốt hơn: `AuditService` là collaborator có transaction policy riêng.
+Technical fix có thể dùng self proxy, nhưng kiến trúc (architecture / 아키텍처) fix thường tốt hơn: `AuditService` là collaborator có giao dịch (transaction / 트랜잭션) chính sách (policy / 정책) riêng.
 
-Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu chúng đại diện hai execution boundaries khác nhau.
+Khi hai methods cần proxy policies khác nhau, đó thường là dấu hiệu chúng đại diện hai thực thi (execution / 실행) boundaries khác nhau.
 
 ---
 
 <!-- SPRING_BATCH2_REQUEST_SENIOR -->
-## Request lifecycle dưới góc production: queueing, context và failure ownership
 
-Senior debugging cần nối HTTP lifecycle với capacity. Một request có thể chờ ở connector accept queue, server executor, Security filter, rate limiter, DB connection pool, remote HTTP client hoặc lock. Tất cả đều biểu hiện cuối cùng là “endpoint chậm”, nhưng cách xử lý hoàn toàn khác. Metrics và traces phải cho phép tách **server queue time, application execution time và downstream wait time** thay vì chỉ có một timer tổng.
+> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) resolution ở môi trường vận hành (production / 운영 환경): kiểu (type / 타입) đặc tả hợp đồng (contract / 계약), vòng đời (lifecycle / 생명주기) và exposed đối tượng (object / 객체) phải được xem cùng nhau**, ta sang **vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Filter order là security/correctness concern. CORS preflight phải được xử lý đúng trước authentication assumptions; correlation/tracing context phải có sớm để security/controller logs cùng một request ID; body-caching/logging filter có thể phá streaming hoặc tăng memory nếu wrap toàn payload. Interceptor phù hợp cho handler-aware policy, nhưng không nhìn thấy request bị security chain reject trước controller.
+## Vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)
 
-Một rule vận hành quan trọng là layer nào tạo side effect thì layer đó phải chịu lifecycle của side effect. Filter mở MDC/context phải đóng trong `finally`. Controller không nên manually close transaction-managed EntityManager. Service không nên giữ servlet request để dùng trong async background task sau khi request đã kết thúc. Tách ownership đúng làm shutdown, timeout và error handling dễ reasoning hơn.
+Cấp cao (senior / 시니어) debugging cần nối HTTP vòng đời (lifecycle / 생명주기) với sức chứa (capacity / 용량). Một yêu cầu (request / 요청) có thể chờ ở connector accept hàng đợi (queue / 큐), máy chủ (server / 서버) executor, bảo mật (security / 보안) filter, tỷ lệ (rate / 비율) limiter, DB liên kết (connection / 연결) pool, remote HTTP máy khách (client / 클라이언트) hoặc khóa (lock / 잠금). Tất cả đều biểu hiện cuối cùng là “endpoint chậm”, nhưng cách xử lý hoàn toàn khác. Metrics và traces phải cho phép tách **máy chủ (server / 서버) hàng đợi (queue / 큐) thời gian (time / 시간), ứng dụng (application / 애플리케이션) thực thi (execution / 실행) thời gian (time / 시간) và downstream wait thời gian (time / 시간)** thay vì chỉ có một timer tổng.
+
+Filter thứ tự (order / 순서) là bảo mật (security / 보안)/tính đúng đắn (correctness / 정확성) concern. CORS preflight phải được xử lý đúng trước authentication các giả định (assumptions / 가정들); correlation/tracing ngữ cảnh (context / 맥락) phải có sớm để bảo mật (security / 보안)/controller logs cùng một yêu cầu (request / 요청) ID; body-caching/logging filter có thể phá streaming hoặc tăng bộ nhớ (memory / 메모리) nếu wrap toàn payload. Interceptor phù hợp cho handler-aware chính sách (policy / 정책), nhưng không nhìn thấy yêu cầu (request / 요청) bị bảo mật (security / 보안) chuỗi (chain / 사슬) reject trước controller.
+
+Một quy tắc (rule / 규칙) vận hành quan trọng là tầng (layer / 계층) nào tạo side tác động (effect / 효과) thì tầng (layer / 계층) đó phải chịu vòng đời (lifecycle / 생명주기) của side tác động (effect / 효과). Filter mở MDC/ngữ cảnh (context / 맥락) phải đóng trong `finally`. Controller không nên manually close transaction-managed EntityManager. dịch vụ (service / 서비스) không nên giữ servlet yêu cầu (request / 요청) để dùng trong async background tác vụ (task / 작업) sau khi yêu cầu (request / 요청) đã kết thúc. Tách quyền sở hữu (ownership / 소유권) đúng làm shutdown, hết thời gian chờ (timeout / 타임아웃) và lỗi (error / 오류) handling dễ lập luận (reasoning / 추론) hơn.
 <!-- SPRING_BATCH2_REQUEST_SENIOR_END -->
 
 ---
 
-# 10. Transaction Internals: từ annotation tới resource
+# 10. giao dịch (transaction / 트랜잭션) Internals: từ annotation tới tài nguyên (resource / 자원)
 
-Declarative transaction flow:
+Declarative giao dịch (transaction / 트랜잭션) luồng (flow / 흐름):
 
 ```text
 caller
@@ -253,84 +265,87 @@ caller
 → unbind/release
 ```
 
-Với JDBC, physical connection thường được lấy từ DataSource và gắn với execution context để repositories trong cùng transaction dùng cùng transactional connection.
+Với JDBC, vật lý (physical / 물리적) liên kết (connection / 연결) thường được lấy từ DataSource và gắn với thực thi (execution / 실행) ngữ cảnh (context / 맥락) để repositories trong cùng giao dịch (transaction / 트랜잭션) dùng cùng transactional liên kết (connection / 연결).
 
-Hiểu điều này giải thích vì sao transaction historically thread-bound và vì sao async execution không tự động “mang transaction theo”.
+Hiểu điều này giải thích vì sao giao dịch (transaction / 트랜잭션) historically thread-bound và vì sao async thực thi (execution / 실행) không tự động “mang giao dịch (transaction / 트랜잭션) theo”.
 
 ---
 
 <!-- SPRING_BATCH3_TX_SENIOR -->
-## Suspend, resume, timeout và rollback-only là resource semantics chứ không phải annotation trivia
 
-Khi propagation yêu cầu transaction mới, manager có thể phải suspend resources/context của transaction hiện tại, bind resources mới, chạy inner scope rồi resume outer resources. `REQUIRES_NEW` vì vậy vừa tạo isolation boundary vừa tăng concurrent resource demand. Với local JDBC/JPA, “suspend” không biến outer transaction thành free; connection/locks của outer có thể vẫn tồn tại trong lúc inner transaction cần thêm capacity.
+> **Chuyển mạch:** Từ **vòng đời yêu cầu (request lifecycle / 요청 생명주기) dưới góc môi trường vận hành (production / 운영 환경): queueing, ngữ cảnh (context / 맥락) và thất bại (failure / 실패) quyền sở hữu (ownership / 소유권)**, ta sang **Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Timeout cũng phải được nhìn từ resource layer. Spring transaction timeout có thể được truyền tới resource operations tùy manager/driver, nhưng nó không thay thế HTTP deadline, database statement timeout hay lock timeout ở mọi layer. Một use case có 2 giây budget nhưng remote client timeout 30 giây và DB lock wait 60 giây vẫn có thể phá latency SLO dù `@Transactional(timeout=5)` tồn tại.
+## Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia
 
-Rollback-only là trạng thái của logical/physical transaction, không phải exception decoration. Một inner participant có thể đánh dấu transaction không còn committable; outer method catch exception chỉ thay Java control flow, không xóa trạng thái resource. Đây là lý do senior code review phải xem exception taxonomy cùng propagation graph.
+Khi propagation yêu cầu giao dịch (transaction / 트랜잭션) mới, manager có thể phải suspend resources/ngữ cảnh (context / 맥락) của giao dịch (transaction / 트랜잭션) hiện tại, bind resources mới, chạy inner phạm vi (scope / 범위) rồi resume outer resources. `REQUIRES_NEW` vì vậy vừa tạo isolation ranh giới (boundary / 경계) vừa tăng concurrent tài nguyên (resource / 자원) demand. Với cục bộ (local / 로컬) JDBC/JPA, “suspend” không biến outer giao dịch (transaction / 트랜잭션) thành free; liên kết (connection / 연결)/locks của outer có thể vẫn tồn tại trong lúc inner giao dịch (transaction / 트랜잭션) cần thêm sức chứa (capacity / 용량).
+
+Hết thời gian chờ (timeout / 타임아웃) cũng phải được nhìn từ tài nguyên (resource / 자원) tầng (layer / 계층). Spring giao dịch (transaction / 트랜잭션) hết thời gian chờ (timeout / 타임아웃) có thể được truyền tới tài nguyên (resource / 자원) operations tùy manager/driver, nhưng nó không thay thế HTTP deadline, cơ sở dữ liệu (database / 데이터베이스) statement hết thời gian chờ (timeout / 타임아웃) hay khóa (lock / 잠금) hết thời gian chờ (timeout / 타임아웃) ở mọi tầng (layer / 계층). Một use trường hợp (case / 사례) có 2 giây ngân sách (budget / 예산) nhưng remote máy khách (client / 클라이언트) hết thời gian chờ (timeout / 타임아웃) 30 giây và DB khóa (lock / 잠금) wait 60 giây vẫn có thể phá độ trễ (latency / 지연 시간) SLO dù `@Transactional(timeout=5)` tồn tại.
+
+Rollback-only là trạng thái của logical/vật lý (physical / 물리적) giao dịch (transaction / 트랜잭션), không phải exception decoration. Một inner participant có thể đánh dấu giao dịch (transaction / 트랜잭션) không còn committable; outer phương thức (method / 메서드) catch exception chỉ thay Java điều khiển (control / 제어) luồng (flow / 흐름), không xóa trạng thái tài nguyên (resource / 자원). Đây là lý do cấp cao (senior / 시니어) rà soát mã (code review / 코드 리뷰) phải xem exception taxonomy cùng propagation đồ thị (graph / 그래프).
 <!-- SPRING_BATCH3_TX_SENIOR_END -->
 
 ---
 
-# 11. Physical transaction và logical scopes
+# 11. vật lý (physical / 물리적) giao dịch (transaction / 트랜잭션) và logical scopes
 
-Outer REQUIRED và inner REQUIRED có hai logical annotation scopes nhưng thường chia sẻ một physical DB transaction.
+Outer REQUIRED và inner REQUIRED có hai logical annotation scopes nhưng thường chia sẻ một vật lý (physical / 물리적) DB giao dịch (transaction / 트랜잭션).
 
-Nếu inner làm transaction rollback-only, outer catch exception không thể biến physical transaction thành committable. Commit outer sẽ fail/rollback.
+Nếu inner làm giao dịch (transaction / 트랜잭션) rollback-only, outer catch exception không thể biến vật lý (physical / 물리적) giao dịch (transaction / 트랜잭션) thành committable. lần ghi nhận (commit / 커밋) outer sẽ thất bại (fail / 실패)/quay lui (rollback / 롤백).
 
-`UnexpectedRollbackException` tồn tại để application không nhận false success.
+`UnexpectedRollbackException` tồn tại để ứng dụng (application / 애플리케이션) không nhận false success.
 
-Senior phải xem logical call graph và physical resource cùng lúc.
-
----
-
-# 12. `REQUIRES_NEW` và connection starvation
-
-Giả sử connection pool 20. Có 20 concurrent requests, mỗi outer transaction giữ một connection. Mỗi request gọi inner `REQUIRES_NEW`, cần connection khác.
-
-Tất cả 20 inner calls chờ connection, nhưng 20 connections đang bị chính outer transactions của chúng giữ.
-
-Đây có thể tạo starvation/deadlock-like condition.
-
-Do đó `REQUIRES_NEW` không phải “save independent cho chắc”. Nó có resource topology.
+Cấp cao (senior / 시니어) phải xem logical lời gọi (call / 호출) đồ thị (graph / 그래프) và vật lý (physical / 물리적) tài nguyên (resource / 자원) cùng lúc.
 
 ---
 
-# 13. TransactionSynchronization và after-commit behavior
+# 12. `REQUIRES_NEW` và liên kết (connection / 연결) starvation
 
-Spring transaction infrastructure hỗ trợ callbacks quanh commit/completion. `@TransactionalEventListener` tận dụng transaction phase semantics ở high level.
+Giả sử liên kết (connection / 연결) pool 20. Có 20 concurrent requests, mỗi outer giao dịch (transaction / 트랜잭션) giữ một liên kết (connection / 연결). Mỗi yêu cầu (request / 요청) gọi inner `REQUIRES_NEW`, cần liên kết (connection / 연결) khác.
 
-Nhưng after-commit callback vẫn trong process. Nếu DB commit thành công và process chết trước khi durable message được publish, callback không cứu được.
+Tất cả 20 inner calls chờ liên kết (connection / 연결), nhưng 20 connections đang bị chính outer transactions của chúng giữ.
 
-Đây là boundary giữa **local transaction synchronization** và **distributed reliability**.
+Đây có thể tạo starvation/deadlock-like điều kiện (condition / 조건).
+
+Do đó `REQUIRES_NEW` không phải “save independent cho chắc”. Nó có tài nguyên (resource / 자원) topology.
 
 ---
 
-# 14. Transaction với nhiều DataSources
+# 13. TransactionSynchronization và after-commit hành vi (behavior / 동작)
 
-Nếu application có `primaryDataSource` và `auditDataSource`, mỗi cái có local transaction manager riêng.
+Spring giao dịch (transaction / 트랜잭션) hạ tầng (infrastructure / 인프라) hỗ trợ callbacks quanh lần ghi nhận (commit / 커밋)/completion. `@TransactionalEventListener` tận dụng giao dịch (transaction / 트랜잭션) phase ngữ nghĩa (semantics / 의미론) ở high mức (level / 수준).
+
+Nhưng after-commit callback vẫn trong tiến trình (process / 프로세스). Nếu DB lần ghi nhận (commit / 커밋) thành công và tiến trình (process / 프로세스) chết trước khi durable message được publish, callback không cứu được.
+
+Đây là ranh giới (boundary / 경계) giữa **cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) synchronization** và **phân tán (distributed / 분산) độ tin cậy (reliability / 신뢰성)**.
+
+---
+
+# 14. giao dịch (transaction / 트랜잭션) với nhiều DataSources
+
+Nếu ứng dụng (application / 애플리케이션) có `primaryDataSource` và `auditDataSource`, mỗi cái có cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) manager riêng.
 
 ```java
 @Transactional("primaryTxManager")
 ```
 
-không làm audit DB join atomic transaction một cách thần kỳ.
+không làm kiểm tra (audit / 감사) DB phép nối (join / 조인) atomic giao dịch (transaction / 트랜잭션) một cách thần kỳ.
 
-Hai local transactions:
+Hai cục bộ (local / 로컬) transactions:
 
 ```text
 DB A commit
 DB B fail
 ```
 
-vẫn có partial result.
+vẫn có partial kết quả (result / 결과).
 
-Muốn atomic distributed transaction cần JTA/XA hoặc thường trong modern services dùng eventual consistency/business patterns như outbox/saga tùy requirement.
+Muốn atomic phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) cần JTA/XA hoặc thường trong hiện đại (modern / 현대적) services dùng eventual consistency/nghiệp vụ (business / 비즈니스) patterns như outbox/saga tùy yêu cầu (requirement / 요구사항).
 
 ---
 
 # 15. Keep DB Transactions Short
 
-Một transaction nên giữ locks/connections chỉ cho phần cần atomic.
+Một giao dịch (transaction / 트랜잭션) nên giữ locks/connections chỉ cho phần cần atomic.
 
 Bad:
 
@@ -344,57 +359,60 @@ public void placeOrder() {
 }
 ```
 
-Nếu payment mất 5 giây, connection bị giữ 5 giây. Nếu shipping fail sau payment success, DB rollback không undo payment external.
+Nếu payment mất 5 giây, liên kết (connection / 연결) bị giữ 5 giây. Nếu shipping thất bại (fail / 실패) sau payment success, DB quay lui (rollback / 롤백) không undo payment bên ngoài (external / 외부).
 
-Senior thiết kế local transaction + durable state transition/outbox, rồi external effects có retry/idempotency.
+Cấp cao (senior / 시니어) thiết kế cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) + durable chuyển tiếp trạng thái (state transition / 상태 전이)/outbox, rồi bên ngoài (external / 외부) effects có thử lại (retry / 재시도)/idempotency.
 
 ---
 
 # 16. Isolation không thể hiểu chỉ bằng enum Spring
 
-`Isolation.READ_COMMITTED` là intent mapping. Actual phenomena phụ thuộc database MVCC/locking implementation.
+`Isolation.READ_COMMITTED` là intent ánh xạ (mapping / 매핑). Actual phenomena phụ thuộc cơ sở dữ liệu (database / 데이터베이스) MVCC/locking hiện thực (implementation / 구현).
 
-Bạn phải biết database đang dùng. PostgreSQL READ COMMITTED, MySQL InnoDB semantics và Oracle có khác biệt.
+Bạn phải biết cơ sở dữ liệu (database / 데이터베이스) đang dùng. PostgreSQL READ COMMITTED, MySQL InnoDB ngữ nghĩa (semantics / 의미론) và Oracle có khác biệt.
 
-Spring chỉ truyền isolation policy xuống transaction resource; nó không định nghĩa database physics.
+Spring chỉ truyền isolation chính sách (policy / 정책) xuống giao dịch (transaction / 트랜잭션) tài nguyên (resource / 자원); nó không định nghĩa cơ sở dữ liệu (database / 데이터베이스) physics.
 
 ---
 
-# 17. Database deadlock và Spring
+# 17. cơ sở dữ liệu (database / 데이터베이스) deadlock và Spring
 
-Deadlock xảy ra khi transactions giữ lock theo cycle.
+Deadlock xảy ra khi transactions giữ khóa (lock / 잠금) theo cycle.
 
-Ví dụ transaction A update Order rồi Payment; transaction B update Payment rồi Order.
+Ví dụ giao dịch (transaction / 트랜잭션) A cập nhật (update / 업데이트) thứ tự (order / 순서) rồi Payment; giao dịch (transaction / 트랜잭션) B cập nhật (update / 업데이트) Payment rồi thứ tự (order / 순서).
 
-DB phát hiện cycle và abort một transaction.
+DB phát hiện cycle và abort một giao dịch (transaction / 트랜잭션).
 
-Application mitigation gồm consistent lock ordering, transaction ngắn, index đúng để tránh lock nhiều rows, retry carefully với idempotency.
+Ứng dụng (application / 애플리케이션) mitigation gồm consistent khóa (lock / 잠금) thứ tự (ordering / 순서), giao dịch (transaction / 트랜잭션) ngắn, chỉ mục (index / 인덱스) đúng để tránh khóa (lock / 잠금) nhiều rows, thử lại (retry / 재시도) carefully với idempotency.
 
-Đừng chỉ tăng timeout.
+Đừng chỉ tăng hết thời gian chờ (timeout / 타임아웃).
 
 ---
 
 <!-- SPRING_BATCH3_JPA_SENIOR -->
-## Từ Spring Data repository tới EntityManager: persistence runtime thật sự nằm ở đâu?
 
-Spring Data repository interface thường được triển khai bằng proxy, nhưng proxy không phải database engine. Nó dịch repository invocation thành implementation/query execution dùng JPA `EntityManager`. `EntityManager` mà application inject thường là một shared proxy: mỗi call được route tới transaction-bound persistence context phù hợp. Vì vậy repository có thể trông stateless trong Java trong khi persistence context giữ managed entities và pending changes theo transaction.
+> **Chuyển mạch:** Từ **Suspend, resume, hết thời gian chờ (timeout / 타임아웃) và rollback-only là tài nguyên (resource / 자원) ngữ nghĩa (semantics / 의미론) chứ không phải annotation trivia**, ta sang **Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-`save(entity)` cũng không đồng nghĩa “chạy INSERT ngay”. `SimpleJpaRepository` quyết định entity có mới hay không; entity mới thường đi `persist`, entity được xem là existing thường đi `merge`. `merge` trả về managed copy và object truyền vào không nhất thiết trở thành chính instance managed. SQL INSERT/UPDATE có thể chỉ xuất hiện ở flush/commit, do JPA write-behind. Vì vậy debugger nhìn thấy `save()` return chưa có nghĩa database đã commit.
+## Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?
 
-Flush là synchronization giữa persistence context và database transaction, còn commit là durable transaction boundary. Query có thể trigger flush tùy flush mode để bảo đảm query thấy changes. `saveAndFlush` ép synchronization sớm hơn nhưng vẫn không biến local transaction thành committed transaction. Dùng nó để “chắc chắn đã save” thường che việc chưa hiểu flush/commit semantics.
+Spring dữ liệu (data / 데이터) repository giao diện (interface / 인터페이스) thường được triển khai bằng proxy, nhưng proxy không phải cơ sở dữ liệu (database / 데이터베이스) engine. Nó dịch repository invocation thành hiện thực (implementation / 구현)/truy vấn (query / 쿼리) thực thi (execution / 실행) dùng JPA `EntityManager`. `EntityManager` mà ứng dụng (application / 애플리케이션) inject thường là một dùng chung (shared / 공유) proxy: mỗi lời gọi (call / 호출) được tuyến (route / 경로) tới transaction-bound persistence ngữ cảnh (context / 맥락) phù hợp. Vì vậy repository có thể trông stateless trong Java trong khi persistence ngữ cảnh (context / 맥락) giữ managed entities và pending changes theo giao dịch (transaction / 트랜잭션).
 
-Open Session/EntityManager in View giữ persistence context qua web request để lazy relation còn có thể load trong serialization/view. Nó giảm `LazyInitializationException` nhưng làm SQL có thể phát sinh rất muộn, khó thấy transaction/query ownership và dễ tạo N+1. Senior design nên chủ động fetch/projection ở application boundary thay vì dựa lazy loading trong serializer.
+`save(entity)` cũng không đồng nghĩa “chạy INSERT ngay”. `SimpleJpaRepository` quyết định thực thể (entity / 엔터티) có mới hay không; thực thể (entity / 엔터티) mới thường đi `persist`, thực thể (entity / 엔터티) được xem là existing thường đi `merge`. `merge` trả về managed bản sao (copy / 복사) và đối tượng (object / 객체) truyền vào không nhất thiết trở thành chính instance managed. SQL INSERT/cập nhật (update / 업데이트) có thể chỉ xuất hiện ở flush/lần ghi nhận (commit / 커밋), do JPA write-behind. Vì vậy debugger nhìn thấy `save()` return chưa có nghĩa cơ sở dữ liệu (database / 데이터베이스) đã lần ghi nhận (commit / 커밋).
+
+Flush là synchronization giữa persistence ngữ cảnh (context / 맥락) và cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션), còn lần ghi nhận (commit / 커밋) là durable giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계). truy vấn (query / 쿼리) có thể trigger flush tùy flush chế độ (mode / 모드) để bảo đảm truy vấn (query / 쿼리) thấy changes. `saveAndFlush` ép synchronization sớm hơn nhưng vẫn không biến cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) thành committed giao dịch (transaction / 트랜잭션). Dùng nó để “chắc chắn đã save” thường che việc chưa hiểu flush/lần ghi nhận (commit / 커밋) ngữ nghĩa (semantics / 의미론).
+
+Open Session/EntityManager in View giữ persistence ngữ cảnh (context / 맥락) qua web yêu cầu (request / 요청) để lazy quan hệ (relation / 관계) còn có thể tải (load / 로드) trong serialization/view. Nó giảm `LazyInitializationException` nhưng làm SQL có thể phát sinh rất muộn, khó thấy giao dịch (transaction / 트랜잭션)/truy vấn (query / 쿼리) quyền sở hữu (ownership / 소유권) và dễ tạo N+1. cấp cao (senior / 시니어) thiết kế (design / 설계) nên chủ động fetch/projection ở ứng dụng (application / 애플리케이션) ranh giới (boundary / 경계) thay vì dựa lazy loading trong serializer.
 <!-- SPRING_BATCH3_JPA_SENIOR_END -->
 
 ---
 
-# 18. JPA Persistence Context như Unit of Work
+# 18. JPA Persistence ngữ cảnh (context / 맥락) như đơn vị (unit / 단위) of công việc (work / 작업)
 
-Persistence context giữ managed entities, identity map và pending changes.
+Persistence ngữ cảnh (context / 맥락) giữ managed entities, định danh (identity / 식별자) map và pending changes.
 
-Senior phải quan tâm **kích thước** context.
+Cấp cao (senior / 시니어) phải quan tâm **kích thước** ngữ cảnh (context / 맥락).
 
-Nếu load 100.000 entities rồi update trong một transaction, context giữ reference và dirty-check metadata cho toàn bộ. Memory tăng, flush chậm.
+Nếu tải (load / 로드) 100.000 entities rồi cập nhật (update / 업데이트) trong một giao dịch (transaction / 트랜잭션), ngữ cảnh (context / 맥락) giữ tham chiếu (reference / 참조) và dirty-check siêu dữ liệu (metadata / 메타데이터) cho toàn bộ. bộ nhớ (memory / 메모리) tăng, flush chậm.
 
 Batch processing thường cần chunk:
 
@@ -405,33 +423,33 @@ load/persist batch
 → repeat
 ```
 
-hoặc dùng bulk SQL nếu business logic cho phép.
+hoặc dùng bulk SQL nếu lô-gic nghiệp vụ (business logic / 비즈니스 로직) cho phép.
 
 ---
 
-# 19. Dirty Checking cost và side effects
+# 19. Dirty Checking chi phí (cost / 비용) và side effects
 
-Dirty checking tiện vì bạn chỉ mutate managed entity. Nhưng sự tiện này có hidden SQL.
+Dirty checking tiện vì bạn chỉ mutate managed thực thể (entity / 엔터티). Nhưng sự tiện này có hidden SQL.
 
-Mapper hoặc helper vô tình call setter trên managed entity có thể tạo update khi transaction flush.
+Mapper hoặc helper vô tình lời gọi (call / 호출) setter trên managed thực thể (entity / 엔터티) có thể tạo cập nhật (update / 업데이트) khi giao dịch (transaction / 트랜잭션) flush.
 
-Do đó entity mutation API nên có semantic rõ:
+Do đó thực thể (entity / 엔터티) mutation API nên có ngữ nghĩa (semantic / 의미적) rõ:
 
 ```java
 order.cancel(reason);
 ```
 
-thay vì public setters mọi field.
+thay vì công khai (public / 공개) setters mọi trường dữ liệu (field / 필드).
 
 ---
 
-# 20. Flush Timing và Query interaction
+# 20. Flush Timing và truy vấn (query / 쿼리) tương tác (interaction / 상호작용)
 
-JPA provider có thể flush trước query nếu cần đảm bảo query thấy pending changes.
+JPA provider có thể flush trước truy vấn (query / 쿼리) nếu cần đảm bảo truy vấn (query / 쿼리) thấy pending changes.
 
-Bạn có thể thấy SQL UPDATE xảy ra giữa method trước commit và tưởng framework “commit sớm”. Thực ra đó có thể là flush.
+Bạn có thể thấy SQL cập nhật (update / 업데이트) xảy ra giữa phương thức (method / 메서드) trước lần ghi nhận (commit / 커밋) và tưởng khung phần mềm (framework / 프레임워크) “lần ghi nhận (commit / 커밋) sớm”. Thực ra đó có thể là flush.
 
-Debug JPA phải phân biệt:
+Gỡ lỗi (debug / 디버그) JPA phải phân biệt:
 
 ```text
 SQL execution
@@ -440,33 +458,33 @@ transaction commit
 
 ---
 
-# 21. N+1 ở production
+# 21. N+1 ở môi trường vận hành (production / 운영 환경)
 
-N+1 không chỉ làm “nhiều query”. Nó tăng DB round trips, connection occupation, CPU parsing/execution và p99 latency.
+N+1 không chỉ làm “nhiều truy vấn (query / 쿼리)”. Nó tăng DB round trips, liên kết (connection / 연결) occupation, CPU parsing/thực thi (execution / 실행) và p99 độ trễ (latency / 지연 시간).
 
-Một endpoint local test với 5 orders có vẻ nhanh. Production user có 500 orders sẽ tạo 501 queries.
+Một endpoint cục bộ (local / 로컬) kiểm thử (test / 테스트) với 5 orders có vẻ nhanh. môi trường vận hành (production / 운영 환경) người dùng (user / 사용자) có 500 orders sẽ tạo 501 queries.
 
-Bạn phải instrument query counts/tracing/SQL metrics thay vì chờ user complain.
+Bạn phải instrument truy vấn (query / 쿼리) counts/tracing/SQL metrics thay vì chờ người dùng (user / 사용자) complain.
 
 ---
 
-# 22. Fetch Join và Cartesian Explosion
+# 22. Fetch phép nối (join / 조인) và Cartesian Explosion
 
-Order có 10 items và 5 payments. Join fetch cả hai collections có thể tạo 50 result rows cho một order.
+Thứ tự (order / 순서) có 10 items và 5 payments. phép nối (join / 조인) fetch cả hai collections có thể tạo 50 kết quả (result / 결과) rows cho một thứ tự (order / 순서).
 
-ORM de-duplicate object graph nhưng DB/network đã xử lý 50 rows.
+ORM de-duplicate đối tượng (object / 객체) đồ thị (graph / 그래프) nhưng DB/mạng (network / 네트워크) đã xử lý 50 rows.
 
 Nếu thêm third collection, multiplication tăng mạnh.
 
-Senior không “fetch join everything”. Có thể dùng multiple queries, projections hoặc batch fetching.
+Cấp cao (senior / 시니어) không “fetch phép nối (join / 조인) everything”. Có thể dùng multiple queries, projections hoặc batch fetching.
 
 ---
 
 # 23. Pagination và Fetch Collection
 
-Database pagination áp lên rows, nhưng collection fetch join nhân rows. ORM có thể không thể paginate entity roots đúng bằng SQL offset/limit hoặc phải xử lý memory.
+Cơ sở dữ liệu (database / 데이터베이스) pagination áp lên rows, nhưng collection fetch phép nối (join / 조인) nhân rows. ORM có thể không thể paginate thực thể (entity / 엔터티) roots đúng bằng SQL offset/limit hoặc phải xử lý bộ nhớ (memory / 메모리).
 
-Common strategy:
+Dùng chung (common / 공통) chiến lược (strategy / 전략):
 
 ```text
 page root IDs
@@ -479,11 +497,11 @@ hoặc projection/keyset pagination.
 
 # 24. DTO Projection và CQRS-lite
 
-Một order detail command flow cần rich entity/domain model. Một dashboard chỉ cần order ID, customer name, total, status.
+Một thứ tự (order / 순서) detail command luồng (flow / 흐름) cần rich thực thể (entity / 엔터티)/lĩnh vực (domain / 도메인) mô hình (model / 모델). Một dashboard chỉ cần thứ tự (order / 순서) ID, customer name, total, status.
 
-Không cần hydrate toàn graph rồi serialize.
+Không cần hydrate toàn đồ thị (graph / 그래프) rồi serialize.
 
-Projection query:
+Projection truy vấn (query / 쿼리):
 
 ```java
 record OrderSummary(
@@ -494,25 +512,25 @@ record OrderSummary(
 }
 ```
 
-Read model tối ưu riêng là pragmatic CQRS-lite, không cần dựng event sourcing.
+Read mô hình (model / 모델) tối ưu riêng là pragmatic CQRS-lite, không cần dựng sự kiện (event / 이벤트) sourcing.
 
 ---
 
 # 25. JPA Batch Inserts
 
-Batching phụ thuộc Hibernate/JDBC settings, ID generation và flush pattern.
+Batching phụ thuộc Hibernate/JDBC settings, ID generation và flush mẫu (pattern / 패턴).
 
 `IDENTITY` có thể hạn chế insert batching vì ID cần DB round trip sớm tùy provider.
 
-Nếu performance matters, đo SQL/batch behavior trên actual DB.
+Nếu hiệu năng (performance / 성능) matters, đo SQL/batch hành vi (behavior / 동작) trên actual DB.
 
-Không copy `hibernate.jdbc.batch_size=1000` mà chưa measure transaction/memory/DB packet effects.
+Không bản sao (copy / 복사) `hibernate.jdbc.batch_size=1000` mà chưa measure giao dịch (transaction / 트랜잭션)/bộ nhớ (memory / 메모리)/DB packet effects.
 
 ---
 
-# 26. Bulk Update và stale Persistence Context
+# 26. Bulk cập nhật (update / 업데이트) và stale Persistence ngữ cảnh (context / 맥락)
 
-JPQL bulk update:
+JPQL bulk cập nhật (update / 업데이트):
 
 ```jpql
 update User u
@@ -520,53 +538,53 @@ set u.active = false
 where u.lastLogin < :cutoff
 ```
 
-bypass normal entity dirty checking.
+bypass normal thực thể (entity / 엔터티) dirty checking.
 
-Nếu context đã có `User` managed, object memory có thể vẫn `active=true` dù DB changed.
+Nếu ngữ cảnh (context / 맥락) đã có `User` managed, đối tượng (object / 객체) bộ nhớ (memory / 메모리) có thể vẫn `active=true` dù DB changed.
 
-Sau bulk operation cần clear/refresh strategy phù hợp.
-
----
-
-# 27. Optimistic Locking là business conflict
-
-`@Version` failure không nhất thiết 500.
-
-Hai users cùng sửa same resource là expected concurrent conflict.
-
-API có thể map thành `409 Conflict`, prompt client reload hoặc retry if operation safely retryable.
-
-Retry tự động mọi optimistic lock failure có thể ghi đè user intent nếu merge semantics không rõ.
+Sau bulk thao tác (operation / 연산) cần clear/refresh chiến lược (strategy / 전략) phù hợp.
 
 ---
 
-# 28. Connection Pool là Bulkhead
+# 27. Optimistic Locking là nghiệp vụ (business / 비즈니스) xung đột (conflict / 충돌)
 
-Connection pool không chỉ optimization để reuse connections. Nó giới hạn số concurrent DB operations.
+`@Version` thất bại (failure / 실패) không nhất thiết 500.
 
-App có 10 instances × pool 100 = up to 1000 DB connections. Database có thể chỉ handle tốt 200.
+Hai users cùng sửa same tài nguyên (resource / 자원) là expected concurrent xung đột (conflict / 충돌).
 
-Virtual threads không thay đổi DB capacity.
+API có thể map thành `409 Conflict`, prompt máy khách (client / 클라이언트) reload hoặc thử lại (retry / 재시도) if thao tác (operation / 연산) safely retryable.
 
-**Programming Pattern — Bulkhead.** Pool bảo vệ scarce downstream resource.
+Thử lại (retry / 재시도) tự động mọi optimistic khóa (lock / 잠금) thất bại (failure / 실패) có thể ghi đè người dùng (user / 사용자) intent nếu merge ngữ nghĩa (semantics / 의미론) không rõ.
 
 ---
 
-# 29. Pool Timeout không đồng nghĩa Pool quá nhỏ
+# 28. liên kết (connection / 연결) Pool là Bulkhead
 
-Khi threads chờ connection quá lâu, nguyên nhân có thể là slow queries, transaction giữ connection trong HTTP calls, lock contention hoặc connection leak.
+Liên kết (connection / 연결) pool không chỉ tối ưu hóa (optimization / 최적화) để reuse connections. Nó giới hạn số concurrent DB operations.
+
+App có 10 instances × pool 100 = up to 1000 DB connections. cơ sở dữ liệu (database / 데이터베이스) có thể chỉ handle tốt 200.
+
+Virtual threads không thay đổi DB sức chứa (capacity / 용량).
+
+**mẫu lập trình (programming pattern / 프로그래밍 패턴) — Bulkhead.** Pool bảo vệ scarce downstream tài nguyên (resource / 자원).
+
+---
+
+# 29. Pool hết thời gian chờ (timeout / 타임아웃) không đồng nghĩa Pool quá nhỏ
+
+Khi threads chờ liên kết (connection / 연결) quá lâu, nguyên nhân có thể là slow queries, giao dịch (transaction / 트랜잭션) giữ liên kết (connection / 연결) trong HTTP calls, tranh chấp khóa (lock contention / 잠금 경합) hoặc liên kết (connection / 연결) leak.
 
 Tăng pool có thể làm DB overloaded hơn.
 
-Senior workflow: nhìn active/pending connection, acquisition latency, query latency, transaction duration và DB CPU/locks.
+Cấp cao (senior / 시니어) workflow: nhìn active/pending liên kết (connection / 연결), acquisition độ trễ (latency / 지연 시간), truy vấn (query / 쿼리) độ trễ (latency / 지연 시간), giao dịch (transaction / 트랜잭션) duration và DB CPU/locks.
 
 ---
 
-# 30. MVC với Platform Threads
+# 30. MVC với nền tảng (platform / 플랫폼) Threads
 
-Classic servlet application có request mapped lên platform thread từ container pool. Blocking JDBC/HTTP làm thread chờ.
+Classic servlet ứng dụng (application / 애플리케이션) có yêu cầu (request / 요청) mapped lên nền tảng (platform / 플랫폼) luồng thực thi (thread / 스레드) từ bộ chứa (container / 컨테이너) pool. Blocking JDBC/HTTP làm luồng thực thi (thread / 스레드) chờ.
 
-Capacity roughly bound bởi thread pool và downstream resources.
+Sức chứa (capacity / 용량) roughly bound bởi luồng thực thi (thread / 스레드) pool và downstream resources.
 
 Đây là mô hình rất dễ hiểu và đã chạy enterprise hàng chục năm.
 
@@ -583,35 +601,35 @@ spring:
       enabled: true
 ```
 
-blocking-style request có thể chạy trên lightweight virtual threads.
+blocking-style yêu cầu (request / 요청) có thể chạy trên lightweight virtual threads.
 
-Điều này làm high concurrent I/O dễ scale mà vẫn giữ imperative code.
+Điều này làm high concurrent I/O dễ quy mô (scale / 규모) mà vẫn giữ imperative mã (code / 코드).
 
-Nhưng CPU-bound operation không nhanh hơn. DB pool, remote API concurrency và file descriptors vẫn hữu hạn.
+Nhưng CPU-bound thao tác (operation / 연산) không nhanh hơn. DB pool, remote API tính đồng thời (concurrency / 동시성) và tệp (file / 파일) descriptors vẫn hữu hạn.
 
-Boot 4.1 docs hiện khuyến nghị modern JDK versions cho trải nghiệm virtual thread tốt hơn; pinned virtual thread có thể được quan sát qua JFR/jcmd.
+Boot 4.1 docs hiện khuyến nghị hiện đại (modern / 현대적) JDK versions cho trải nghiệm virtual luồng thực thi (thread / 스레드) tốt hơn; pinned virtual luồng thực thi (thread / 스레드) có thể được quan sát qua JFR/jcmd.
 
 ---
 
 # 32. Pinning
 
-Một virtual thread có thể bị pinned vào carrier trong một số blocking/monitor/native scenarios tùy JDK version.
+Một virtual luồng thực thi (thread / 스레드) có thể bị pinned vào carrier trong một số blocking/monitor/bản địa (native / 네이티브) scenarios tùy JDK phiên bản (version / 버전).
 
 Không sửa bằng “remove synchronized everywhere”. Hãy đo.
 
-JFR virtual-thread events và tooling giúp xem workload có pinning đáng kể không.
+JFR virtual-thread events và tooling giúp xem tải công việc (workload / 워크로드) có pinning đáng kể không.
 
-Modern JDK đã cải tiến virtual thread/synchronized interaction qua releases, vì vậy đừng dùng advice Java 21 ban đầu như chân lý mãi mãi.
+Hiện đại (modern / 현대적) JDK đã cải tiến virtual luồng thực thi (thread / 스레드)/synchronized tương tác (interaction / 상호작용) qua releases, vì vậy đừng dùng advice Java 21 ban đầu như chân lý mãi mãi.
 
 ---
 
-# 33. Request Deadline thay vì nhiều Timeout rời rạc
+# 33. yêu cầu (request / 요청) Deadline thay vì nhiều hết thời gian chờ (timeout / 타임아웃) rời rạc
 
-Client cho bạn SLA 2 giây.
+Máy khách (client / 클라이언트) cho bạn SLA 2 giây.
 
-Nếu service A đặt DB timeout 5s, payment 5s, inventory 5s và retry 3 lần, request không thể tôn trọng 2s.
+Nếu dịch vụ (service / 서비스) A đặt DB hết thời gian chờ (timeout / 타임아웃) 5s, payment 5s, inventory 5s và thử lại (retry / 재시도) 3 lần, yêu cầu (request / 요청) không thể tôn trọng 2s.
 
-Senior design dùng budget:
+Cấp cao (senior / 시니어) thiết kế (design / 설계) dùng ngân sách (budget / 예산):
 
 ```text
 incoming deadline
@@ -619,33 +637,33 @@ incoming deadline
 → downstream remaining budget
 ```
 
-Một downstream call bắt đầu ở 1.8s không nên có 5s timeout.
+Một downstream lời gọi (call / 호출) bắt đầu ở 1.8s không nên có 5s hết thời gian chờ (timeout / 타임아웃).
 
 ---
 
-# 34. Streaming Response
+# 34. Streaming phản hồi (response / 응답)
 
-Nếu export 5GB file, không đọc toàn bộ thành byte array rồi trả.
+Nếu export 5GB tệp (file / 파일), không đọc toàn bộ thành byte array rồi trả.
 
-Streaming giữ memory bounded nhưng resource lifecycle khó hơn: client disconnect, file close, transaction boundary và backpressure.
+Streaming giữ bộ nhớ (memory / 메모리) bounded nhưng tài nguyên (resource / 자원) vòng đời (lifecycle / 생명주기) khó hơn: máy khách (client / 클라이언트) disconnect, tệp (file / 파일) close, giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) và backpressure.
 
-Không giữ JPA transaction mở hàng phút để stream lazy entity rows nếu có lựa chọn tốt hơn.
-
----
-
-# 35. Request Payload Limits
-
-Public endpoint cần limit JSON/multipart/header sizes ở server/framework/gateway layers.
-
-Unbounded upload có thể gây memory/disk exhaustion.
-
-File upload còn cần sanitize filename/path, validate content và storage isolation.
+Không giữ JPA giao dịch (transaction / 트랜잭션) mở hàng phút để stream lazy thực thể (entity / 엔터티) rows nếu có lựa chọn tốt hơn.
 
 ---
 
-# 36. WebFlux là execution model khác
+# 35. yêu cầu (request / 요청) Payload Limits
 
-WebFlux dựa trên Reactive Streams và non-blocking/event-loop-friendly architecture.
+Công khai (public / 공개) endpoint cần limit JSON/multipart/header sizes ở máy chủ (server / 서버)/khung phần mềm (framework / 프레임워크)/gateway layers.
+
+Unbounded upload có thể gây bộ nhớ (memory / 메모리)/disk exhaustion.
+
+Tệp (file / 파일) upload còn cần sanitize filename/đường dẫn (path / 경로), validate content và lưu trữ (storage / 저장소) isolation.
+
+---
+
+# 36. WebFlux là mô hình thực thi (execution model / 실행 모델) khác
+
+WebFlux dựa trên Reactive Streams và non-blocking/event-loop-friendly kiến trúc (architecture / 아키텍처).
 
 Bạn không học WebFlux bằng cách đổi:
 
@@ -659,9 +677,9 @@ thành:
 Mono<User>
 ```
 
-rồi giữ mọi blocking JPA call.
+rồi giữ mọi blocking JPA lời gọi (call / 호출).
 
-Nếu event loop thread gọi JDBC blocking, nó chặn nhiều requests cùng share loop.
+Nếu vòng lặp sự kiện (event loop / 이벤트 루프) luồng thực thi (thread / 스레드) gọi JDBC blocking, nó chặn nhiều requests cùng share vòng lặp (loop / 루프).
 
 ---
 
@@ -669,7 +687,7 @@ Nếu event loop thread gọi JDBC blocking, nó chặn nhiều requests cùng s
 
 `Mono<T>` biểu diễn 0 hoặc 1 item async stream. `Flux<T>` biểu diễn 0..N.
 
-Pipeline được build trước rồi work thường xảy ra khi subscribe.
+Chuỗi xử lý (pipeline / 파이프라인) được bản dựng (build / 빌드) trước rồi công việc (work / 작업) thường xảy ra khi subscribe.
 
 ```java
 webClient.get()
@@ -678,79 +696,79 @@ webClient.get()
     .map(this::toDomain);
 ```
 
-Nếu subscribe nhiều lần vào cold publisher, work có thể chạy nhiều lần.
+Nếu subscribe nhiều lần vào cold publisher, công việc (work / 작업) có thể chạy nhiều lần.
 
 ---
 
 # 38. `map` vs `flatMap` trong Reactor
 
-`map` biến value synchronously:
+`map` biến giá trị (value / 값) synchronously:
 
 ```text
 User → UserResponse
 ```
 
-`flatMap` dùng khi function trả publisher:
+`flatMap` dùng khi hàm (function / 함수) trả publisher:
 
 ```text
 UserId → Mono<User>
 ```
 
-Unconstrained `flatMap` có thể tăng concurrency và reorder results. `concatMap` giữ sequence hơn nhưng giảm concurrency.
+Unconstrained `flatMap` có thể tăng tính đồng thời (concurrency / 동시성) và reorder results. `concatMap` giữ chuỗi (sequence / 시퀀스) hơn nhưng giảm tính đồng thời (concurrency / 동시성).
 
-Concurrency operator cũng là capacity decision.
+Tính đồng thời (concurrency / 동시성) operator cũng là sức chứa (capacity / 용량) quyết định (decision / 결정).
 
 ---
 
 # 39. Backpressure
 
-Reactive Streams subscriber báo demand. Producer không nên phát vô hạn khi consumer chậm.
+Reactive Streams subscriber báo demand. Producer không nên phát vô hạn khi bên tiêu thụ (consumer / 소비자) chậm.
 
-Backpressure là protocol first-class, khác việc tạo million futures rồi để memory queue.
+Backpressure là giao thức (protocol / 프로토콜) first-class, khác việc tạo million futures rồi để bộ nhớ (memory / 메모리) hàng đợi (queue / 큐).
 
-Nếu problem cần streaming data và end-to-end reactive support, WebFlux có lợi thế thật. Nếu CRUD blocking/JPA, MVC + virtual threads có thể đơn giản hơn.
+Nếu bài toán (problem / 문제) cần streaming dữ liệu (data / 데이터) và end-to-end reactive hỗ trợ (support / 지원), WebFlux có lợi thế thật. Nếu CRUD blocking/JPA, MVC + virtual threads có thể đơn giản hơn.
 
 ---
 
-# 40. Reactor Context
+# 40. Reactor ngữ cảnh (context / 맥락)
 
-Reactive execution có thể hop threads nên ThreadLocal không đủ reliable cho request metadata.
+Reactive thực thi (execution / 실행) có thể hop threads nên ThreadLocal không đủ reliable cho yêu cầu (request / 요청) siêu dữ liệu (metadata / 메타데이터).
 
-Reactor Context đi cùng subscriber/pipeline.
+Reactor ngữ cảnh (context / 맥락) đi cùng subscriber/chuỗi xử lý (pipeline / 파이프라인).
 
-Tracing/security reactive integrations phải propagate context theo reactive model.
+Tracing/bảo mật (security / 보안) reactive integrations phải propagate ngữ cảnh (context / 맥락) theo reactive mô hình (model / 모델).
 
-Đây là lý do copy blocking/thread-local patterns vào WebFlux gây bugs.
+Đây là lý do bản sao (copy / 복사) blocking/thread-local patterns vào WebFlux gây bugs.
 
 ---
 
 # 41. R2DBC không phải Reactive JPA
 
-R2DBC cung cấp reactive relational access.
+R2DBC cung cấp reactive relational truy cập (access / 접근).
 
-Nó không có traditional JPA persistence context/dirty checking/lazy loading model.
+Nó không có traditional JPA persistence ngữ cảnh (context / 맥락)/dirty checking/lazy loading mô hình (model / 모델).
 
-Nếu chuyển từ JPA sang R2DBC, bạn đang đổi programming model, không chỉ driver.
+Nếu chuyển từ JPA sang R2DBC, bạn đang đổi programming mô hình (model / 모델), không chỉ driver.
 
 ---
 
 # 42. Chọn MVC, MVC+Virtual Threads hay WebFlux
 
-MVC platform threads tốt khi hệ thống đơn giản, concurrency vừa và ecosystem blocking.
+MVC nền tảng (platform / 플랫폼) threads tốt khi hệ thống đơn giản, tính đồng thời (concurrency / 동시성) vừa và ecosystem blocking.
 
-MVC + virtual threads rất hấp dẫn cho imperative, blocking I/O workload với concurrency cao.
+MVC + virtual threads rất hấp dẫn cho imperative, blocking I/O tải công việc (workload / 워크로드) với tính đồng thời (concurrency / 동시성) cao.
 
-WebFlux phù hợp khi end-to-end reactive, streaming/backpressure, reactive DB/client và event-loop model mang lợi ích rõ.
+WebFlux phù hợp khi end-to-end reactive, streaming/backpressure, reactive DB/máy khách (client / 클라이언트) và event-loop mô hình (model / 모델) mang lợi ích rõ.
 
 Không có “WebFlux luôn nhanh hơn”.
 
 ---
 
-# 43. HTTP Client như Infrastructure Adapter
+# 43. HTTP máy khách (client / 클라이언트) như hạ tầng (infrastructure / 인프라) Adapter
 
-External Payment API không nên leak `RestClient` response types vào domain.
+Bên ngoài (external / 외부) Payment API không nên leak `RestClient` phản hồi (response / 응답) types vào lĩnh vực (domain / 도메인).
 
-Domain port:
+Lĩnh vực (domain / 도메인) cổng (port / 포트):
 
 ```java
 interface PaymentGateway {
@@ -773,33 +791,33 @@ class HttpPaymentGateway
 }
 ```
 
-Vendor DTO/HTTP exceptions được translate thành domain/application concepts.
+Vendor DTO/HTTP exceptions được translate thành lĩnh vực (domain / 도메인)/ứng dụng (application / 애플리케이션) concepts.
 
-**Design Pattern — Anti-Corruption Layer.** Vendor model dừng ở boundary.
+**mẫu thiết kế (design pattern / 디자인 패턴) — Anti-Corruption tầng (layer / 계층).** Vendor mô hình (model / 모델) dừng ở ranh giới (boundary / 경계).
 
 ---
 
-# 44. Remote Failure Taxonomy
+# 44. Remote thất bại (failure / 실패) Taxonomy
 
-HTTP dependency có thể fail ở DNS, connection, TLS handshake, pool acquisition, write, response timeout, 4xx, 5xx hoặc serialization.
+HTTP phụ thuộc (dependency / 의존성) có thể thất bại (fail / 실패) ở DNS, liên kết (connection / 연결), TLS handshake, pool acquisition, ghi (write / 쓰기), phản hồi (response / 응답) hết thời gian chờ (timeout / 타임아웃), 4xx, 5xx hoặc serialization.
 
 Không map mọi thứ thành `PaymentException`.
 
-Business rejection như card declined khác transient network failure. Retry policy phụ thuộc classification.
+Nghiệp vụ (business / 비즈니스) rejection như card declined khác transient mạng (network / 네트워크) thất bại (failure / 실패). thử lại (retry / 재시도) chính sách (policy / 정책) phụ thuộc classification.
 
 ---
 
-# 45. Retry đúng cách
+# 45. thử lại (retry / 재시도) đúng cách
 
-Retry cần bốn điều: failure transient, operation idempotent hoặc được bảo vệ bằng idempotency key, attempts bounded, và delay/backoff/jitter nằm trong deadline.
+Thử lại (retry / 재시도) cần bốn điều: thất bại (failure / 실패) transient, thao tác (operation / 연산) idempotent hoặc được bảo vệ bằng idempotency key, attempts bounded, và delay/backoff/jitter nằm trong deadline.
 
-Payment POST không có idempotency key mà retry sau timeout có thể charge hai lần vì client không biết server đã xử lý request trước khi response mất.
+Payment POST không có idempotency key mà thử lại (retry / 재시도) sau hết thời gian chờ (timeout / 타임아웃) có thể charge hai lần vì máy khách (client / 클라이언트) không biết máy chủ (server / 서버) đã xử lý yêu cầu (request / 요청) trước khi phản hồi (response / 응답) mất.
 
 ---
 
 # 46. Circuit Breaker
 
-Circuit breaker ngừng gửi request vào dependency đang fail liên tục.
+Circuit breaker ngừng gửi yêu cầu (request / 요청) vào phụ thuộc (dependency / 의존성) đang thất bại (fail / 실패) liên tục.
 
 States concept:
 
@@ -812,50 +830,50 @@ HALF_OPEN
 → probe
 ```
 
-Nó không thay retry. Retry cố lại operation; circuit breaker bảo vệ hệ thống khỏi hammering dependency fail.
+Nó không thay thử lại (retry / 재시도). thử lại (retry / 재시도) cố lại thao tác (operation / 연산); circuit breaker bảo vệ hệ thống khỏi hammering phụ thuộc (dependency / 의존성) thất bại (fail / 실패).
 
-Spring Core không ép một circuit-breaker implementation duy nhất; thường dùng resilience ecosystem libraries.
+Spring cốt lõi (core / 핵심) không ép một circuit-breaker hiện thực (implementation / 구현) duy nhất; thường dùng resilience ecosystem libraries.
 
 ---
 
 # 47. Bulkhead
 
-Payment, report và notification nên có capacity riêng nếu một dependency có thể làm nghẽn tất cả workers/connections.
+Payment, report và notification nên có sức chứa (capacity / 용량) riêng nếu một phụ thuộc (dependency / 의존성) có thể làm nghẽn tất cả workers/connections.
 
-Implementation có thể là Semaphore, pool hoặc connection limit.
+Hiện thực (implementation / 구현) có thể là Semaphore, pool hoặc liên kết (connection / 연결) limit.
 
-Virtual threads càng làm bulkhead quan trọng vì thread creation không còn là natural limiter.
-
----
-
-# 48. Load Shedding
-
-Khi system saturated, trả 429/503 sớm có thể tốt hơn queue 60 giây rồi timeout.
-
-Load shedding là business/operational policy: request nào drop được, request nào phải persist, client retry ra sao.
+Virtual threads càng làm bulkhead quan trọng vì luồng thực thi (thread / 스레드) creation không còn là natural limiter.
 
 ---
 
-# 49. Local Transaction không solve Distributed Transaction
+# 48. tải (load / 로드) Shedding
 
-Service A:
+Khi hệ thống (system / 시스템) saturated, trả 429/503 sớm có thể tốt hơn hàng đợi (queue / 큐) 60 giây rồi hết thời gian chờ (timeout / 타임아웃).
+
+Tải (load / 로드) shedding là nghiệp vụ (business / 비즈니스)/operational chính sách (policy / 정책): yêu cầu (request / 요청) nào drop được, yêu cầu (request / 요청) nào phải persist, máy khách (client / 클라이언트) thử lại (retry / 재시도) ra sao.
+
+---
+
+# 49. cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) không solve phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션)
+
+Dịch vụ (service / 서비스) A:
 
 ```text
 DB transaction
 → call Service B
 ```
 
-Service B không tự join transaction A qua HTTP.
+Dịch vụ (service / 서비스) B không tự phép nối (join / 조인) giao dịch (transaction / 트랜잭션) A qua HTTP.
 
-Nếu cần cross-service consistency, dùng saga, outbox, idempotency hoặc distributed transaction technology tùy architecture.
+Nếu cần cross-service consistency, dùng saga, outbox, idempotency hoặc phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션) technology tùy kiến trúc (architecture / 아키텍처).
 
-Microservices đổi consistency model; Spring annotation không xóa network boundary.
+Microservices đổi consistency mô hình (model / 모델); Spring annotation không xóa mạng (network / 네트워크) ranh giới (boundary / 경계).
 
 ---
 
-# 50. Dual Write Problem
+# 50. Dual ghi (write / 쓰기) bài toán (problem / 문제)
 
-Code:
+Mã (code / 코드):
 
 ```text
 save Order DB
@@ -863,17 +881,17 @@ commit
 publish Kafka
 ```
 
-process crash giữa commit và publish tạo missing event.
+Tiến trình (process / 프로세스) crash giữa lần ghi nhận (commit / 커밋) và publish tạo missing sự kiện (event / 이벤트).
 
-Nếu publish trước rồi DB rollback, consumer thấy event cho data không tồn tại.
+Nếu publish trước rồi DB quay lui (rollback / 롤백), bên tiêu thụ (consumer / 소비자) thấy sự kiện (event / 이벤트) cho dữ liệu (data / 데이터) không tồn tại.
 
-Đây là dual-write problem.
+Đây là dual-write bài toán (problem / 문제).
 
 ---
 
 # 51. Transactional Outbox
 
-Trong **cùng local DB transaction**:
+Trong **cùng cục bộ (local / 로컬) DB giao dịch (transaction / 트랜잭션)**:
 
 ```text
 insert/update Order
@@ -881,29 +899,29 @@ insert/update Order
 insert OutboxEvent
 ```
 
-Commit đồng thời.
+Lần ghi nhận (commit / 커밋) đồng thời.
 
 Separate publisher đọc outbox và publish broker.
 
-Nếu publisher crash sau publish nhưng trước mark sent, event có thể publish lại. Consumer cần idempotency.
+Nếu publisher crash sau publish nhưng trước mark sent, sự kiện (event / 이벤트) có thể publish lại. bên tiêu thụ (consumer / 소비자) cần idempotency.
 
 Outbox giải quyết durable intent, không tạo exactly-once end-to-end magic.
 
 ---
 
-# 52. Idempotent Consumer
+# 52. Idempotent bên tiêu thụ (consumer / 소비자)
 
-Message có `eventId`/business key.
+Message có `eventId`/nghiệp vụ (business / 비즈니스) key.
 
-Consumer lưu processed ID hoặc thực hiện state transition có uniqueness constraint để duplicate delivery không tạo duplicate effect.
+Bên tiêu thụ (consumer / 소비자) lưu processed ID hoặc thực hiện chuyển tiếp trạng thái (state transition / 상태 전이) có uniqueness ràng buộc (constraint / 제약조건) để duplicate delivery không tạo duplicate tác động (effect / 효과).
 
-At-least-once delivery + idempotent consumer là pattern phổ biến.
+At-least-once delivery + idempotent bên tiêu thụ (consumer / 소비자) là mẫu (pattern / 패턴) phổ biến.
 
 ---
 
 # 53. Saga
 
-Cross-service flow:
+Cross-service luồng (flow / 흐름):
 
 ```text
 reserve inventory
@@ -911,64 +929,64 @@ reserve inventory
 → create shipment
 ```
 
-Nếu shipment fail, saga có thể trigger compensation:
+Nếu shipment thất bại (fail / 실패), saga có thể trigger compensation:
 
 ```text
 refund/release payment
 release inventory
 ```
 
-Compensation là business operation, không phải rollback database time machine.
+Compensation là nghiệp vụ (business / 비즈니스) thao tác (operation / 연산), không phải quay lui (rollback / 롤백) cơ sở dữ liệu (database / 데이터베이스) thời gian (time / 시간) machine.
 
 ---
 
-# 54. Spring Application Event vs Integration Event
+# 54. Spring ứng dụng (application / 애플리케이션) sự kiện (event / 이벤트) vs tích hợp (integration / 통합) sự kiện (event / 이벤트)
 
 `ApplicationEvent` là in-process.
 
-Integration event là cross-system contract.
+Tích hợp (integration / 통합) sự kiện (event / 이벤트) là cross-system đặc tả hợp đồng (contract / 계약).
 
-Đừng serialize internal JPA entity rồi gọi đó là event contract.
+Đừng serialize nội bộ (internal / 내부) JPA thực thể (entity / 엔터티) rồi gọi đó là sự kiện (event / 이벤트) đặc tả hợp đồng (contract / 계약).
 
-Integration event cần stable schema/version evolution và payload chỉ chứa dữ liệu consumer cần.
-
----
-
-# 55. Cache là Consistency System
-
-Trước `@Cacheable`, hỏi source of truth, stale tolerance, TTL, max size, eviction, multi-node behavior và update ordering.
-
-Nếu DB update commit nhưng cache eviction fail, cache stale.
-
-Nếu cache updated trước DB commit rồi transaction rollback, cache chứa future state không tồn tại.
-
-Transaction/cache interaction cần design.
+Tích hợp (integration / 통합) sự kiện (event / 이벤트) cần stable lược đồ (schema / 스키마)/phiên bản (version / 버전) evolution và payload chỉ chứa dữ liệu bên tiêu thụ (consumer / 소비자) cần.
 
 ---
 
-# 56. Cache Stampede
+# 55. bộ nhớ đệm (cache / 캐시) là Consistency hệ thống (system / 시스템)
+
+Trước `@Cacheable`, hỏi nguồn chuẩn (source of truth / 정본), stale tolerance, TTL, max kích thước (size / 크기), eviction, multi-node hành vi (behavior / 동작) và cập nhật (update / 업데이트) thứ tự (ordering / 순서).
+
+Nếu DB cập nhật (update / 업데이트) lần ghi nhận (commit / 커밋) nhưng bộ nhớ đệm (cache / 캐시) eviction thất bại (fail / 실패), bộ nhớ đệm (cache / 캐시) stale.
+
+Nếu bộ nhớ đệm (cache / 캐시) updated trước DB lần ghi nhận (commit / 커밋) rồi giao dịch (transaction / 트랜잭션) quay lui (rollback / 롤백), bộ nhớ đệm (cache / 캐시) chứa future trạng thái (state / 상태) không tồn tại.
+
+Giao dịch (transaction / 트랜잭션)/bộ nhớ đệm (cache / 캐시) tương tác (interaction / 상호작용) cần thiết kế (design / 설계).
+
+---
+
+# 56. bộ nhớ đệm (cache / 캐시) Stampede
 
 Popular key hết hạn cùng lúc, 10.000 requests miss rồi cùng hit DB.
 
 Mitigations: per-key single-flight, refresh-ahead, stale-while-revalidate, TTL jitter.
 
-Cache provider có thể hỗ trợ một số mechanism, nhưng annotation Spring không tự giải quyết hết.
+Bộ nhớ đệm (cache / 캐시) provider có thể hỗ trợ một số cơ chế (mechanism / 메커니즘), nhưng annotation Spring không tự giải quyết hết.
 
 ---
 
-# 57. Local vs Distributed Cache
+# 57. cục bộ (local / 로컬) vs phân tán (distributed / 분산) bộ nhớ đệm (cache / 캐시)
 
-Local Caffeine-like cache rất nhanh nhưng mỗi instance có state riêng.
+Cục bộ (local / 로컬) Caffeine-like bộ nhớ đệm (cache / 캐시) rất nhanh nhưng mỗi instance có trạng thái (state / 상태) riêng.
 
-Distributed Redis-like cache nhất quán chia sẻ hơn nhưng thêm network latency, serialization, availability và cluster complexity.
+Phân tán (distributed / 분산) Redis-like bộ nhớ đệm (cache / 캐시) nhất quán chia sẻ hơn nhưng thêm mạng (network / 네트워크) độ trễ (latency / 지연 시간), serialization, availability và cluster độ phức tạp (complexity / 복잡도).
 
-Nếu stale 5 giây chấp nhận được, local TTL có thể đủ. Đừng dùng distributed cache chỉ vì app có nhiều instances nếu semantics không cần.
+Nếu stale 5 giây chấp nhận được, cục bộ (local / 로컬) TTL có thể đủ. Đừng dùng phân tán (distributed / 분산) bộ nhớ đệm (cache / 캐시) chỉ vì app có nhiều instances nếu ngữ nghĩa (semantics / 의미론) không cần.
 
 ---
 
-# 58. Spring Security Filter Architecture
+# 58. Spring bảo mật (security / 보안) Filter kiến trúc (architecture / 아키텍처)
 
-Servlet request thường đi:
+Servlet yêu cầu (request / 요청) thường đi:
 
 ```text
 Servlet container
@@ -979,33 +997,36 @@ Servlet container
 → DispatcherServlet
 ```
 
-`DelegatingFilterProxy` bridge servlet filter registration với Spring-managed security infrastructure.
+`DelegatingFilterProxy` cầu nối (bridge / 브리지) servlet filter registration với Spring-managed bảo mật (security / 보안) hạ tầng (infrastructure / 인프라).
 
-`FilterChainProxy` chọn security chain phù hợp request.
+`FilterChainProxy` chọn bảo mật (security / 보안) chuỗi (chain / 사슬) phù hợp yêu cầu (request / 요청).
 
-Hiểu flow này quan trọng khi có multiple chains cho `/api/**`, `/admin/**`.
+Hiểu luồng (flow / 흐름) này quan trọng khi có multiple chains cho `/api/**`, `/admin/**`.
 
 ---
 
 <!-- SPRING_BATCH4_SECURITY_SENIOR -->
-## Security production model: credential transport, key lifecycle và object-level authorization
 
-Security configuration phải bắt đầu từ credential transport. Session cookie nghĩa browser tự gửi credential và CSRF threat quan trọng. Bearer token trong `Authorization` header có threat khác nhưng vẫn cần XSS/storage/leak controls ở client. CORS chỉ là browser origin policy; nó không authenticate request và không thay authorization.
+> **Chuyển mạch:** Từ **Từ Spring dữ liệu (data / 데이터) repository tới EntityManager: persistence thời gian chạy (runtime / 런타임) thật sự nằm ở đâu?**, ta sang **bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Với JWT resource server, signature validation mới chỉ chứng minh token phù hợp key/algorithm. Production policy còn phải kiểm issuer, audience, time claims/clock skew, key rotation/JWK refresh và mapping claims thành authorities đúng domain. Log không được ghi raw access token. Nếu identity provider outage xảy ra, behavior phụ thuộc key cache/discovery strategy; đây là availability dependency cần được observability hóa.
+## Bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization
 
-Authorization theo role thường chưa đủ cho business resource. “USER có thể cancel order” còn cần xác minh order thuộc user nào, trạng thái order và tenant. Policy này nên nằm ở use-case/domain authorization collaborator hoặc method authorization có access tới domain facts, không chỉ ở URL matcher. Nếu policy chỉ nằm controller, internal/batch/message entry point có thể bypass.
+Bảo mật (security / 보안) cấu hình (configuration / 구성) phải bắt đầu từ credential vận chuyển (transport / 전송). Session cookie nghĩa trình duyệt (browser / 브라우저) tự gửi credential và CSRF threat quan trọng. Bearer đơn vị từ (token / 토큰) trong `Authorization` header có threat khác nhưng vẫn cần XSS/lưu trữ (storage / 저장소)/leak controls ở máy khách (client / 클라이언트). CORS chỉ là trình duyệt (browser / 브라우저) origin chính sách (policy / 정책); nó không authenticate yêu cầu (request / 요청) và không thay authorization.
+
+Với JWT tài nguyên (resource / 자원) máy chủ (server / 서버), signature kiểm tra hợp lệ (validation / 검증) mới chỉ chứng minh đơn vị từ (token / 토큰) phù hợp key/thuật toán (algorithm / 알고리즘). môi trường vận hành (production / 운영 환경) chính sách (policy / 정책) còn phải kiểm issuer, audience, thời gian (time / 시간) claims/clock skew, key rotation/JWK refresh và ánh xạ (mapping / 매핑) claims thành authorities đúng lĩnh vực (domain / 도메인). Log không được ghi raw truy cập (access / 접근) đơn vị từ (token / 토큰). Nếu định danh (identity / 식별자) provider outage xảy ra, hành vi (behavior / 동작) phụ thuộc key bộ nhớ đệm (cache / 캐시)/discovery chiến lược (strategy / 전략); đây là availability phụ thuộc (dependency / 의존성) cần được khả năng quan sát (observability / 관측 가능성) hóa.
+
+Authorization theo role thường chưa đủ cho nghiệp vụ (business / 비즈니스) tài nguyên (resource / 자원). “người dùng (user / 사용자) có thể cancel thứ tự (order / 순서)” còn cần xác minh thứ tự (order / 순서) thuộc người dùng (user / 사용자) nào, trạng thái thứ tự (order / 순서) và tenant. chính sách (policy / 정책) này nên nằm ở use-case/lĩnh vực (domain / 도메인) authorization collaborator hoặc phương thức (method / 메서드) authorization có truy cập (access / 접근) tới lĩnh vực (domain / 도메인) facts, không chỉ ở URL matcher. Nếu chính sách (policy / 정책) chỉ nằm controller, nội bộ (internal / 내부)/batch/message entry điểm (point / 지점) có thể bypass.
 <!-- SPRING_BATCH4_SECURITY_SENIOR_END -->
 
 ---
 
 # 59. AuthenticationManager và AuthenticationProvider
 
-Authentication filter tạo authentication request/token rồi gọi `AuthenticationManager`.
+Authentication filter tạo authentication yêu cầu (request / 요청)/đơn vị từ (token / 토큰) rồi gọi `AuthenticationManager`.
 
-`ProviderManager` là common implementation phối hợp nhiều `AuthenticationProvider`.
+`ProviderManager` là dùng chung (common / 공통) hiện thực (implementation / 구현) phối hợp nhiều `AuthenticationProvider`.
 
-Provider có thể authenticate password, JWT hoặc custom credential type.
+Provider có thể authenticate password, JWT hoặc custom credential kiểu (type / 타입).
 
 Sau success, authenticated `Authentication` đi vào SecurityContext.
 
@@ -1013,7 +1034,7 @@ Sau success, authenticated `Authentication` đi vào SecurityContext.
 
 # 60. Multiple SecurityFilterChains
 
-Bạn có thể có chain riêng:
+Bạn có thể có chuỗi (chain / 사슬) riêng:
 
 ```text
 /api/**
@@ -1023,19 +1044,19 @@ Bạn có thể có chain riêng:
 → stricter admin config
 ```
 
-Matcher/order quyết định chain nào xử lý request.
+Matcher/thứ tự (order / 순서) quyết định chuỗi (chain / 사슬) nào xử lý yêu cầu (request / 요청).
 
-Mis-order có thể khiến request rơi vào default chain.
+Mis-order có thể khiến yêu cầu (request / 요청) rơi vào default chuỗi (chain / 사슬).
 
-Security debug nên trace matcher + filter chain, không chỉ controller.
+Bảo mật (security / 보안) gỡ lỗi (debug / 디버그) nên dấu vết (trace / 추적) matcher + filter chuỗi (chain / 사슬), không chỉ controller.
 
 ---
 
-# 61. JWT Resource Server
+# 61. JWT tài nguyên (resource / 자원) máy chủ (server / 서버)
 
-Spring Security có OAuth2 Resource Server support để validate JWT từ authorization server.
+Spring bảo mật (security / 보안) có OAuth2 tài nguyên (resource / 자원) máy chủ (server / 서버) hỗ trợ (support / 지원) để validate JWT từ authorization máy chủ (server / 서버).
 
-Config issuer:
+Cấu hình (config / 설정) issuer:
 
 ```yaml
 spring:
@@ -1046,9 +1067,9 @@ spring:
           issuer-uri: https://idp.example.com
 ```
 
-Framework có thể discover keys/metadata và verify signature/issuer/timestamps theo configuration.
+Khung phần mềm (framework / 프레임워크) có thể discover keys/siêu dữ liệu (metadata / 메타데이터) và verify signature/issuer/timestamps theo cấu hình (configuration / 구성).
 
-Production authorization còn phải quan tâm audience và mapping claims/scopes đúng application.
+Môi trường vận hành (production / 운영 환경) authorization còn phải quan tâm audience và ánh xạ (mapping / 매핑) claims/scopes đúng ứng dụng (application / 애플리케이션).
 
 ---
 
@@ -1056,65 +1077,68 @@ Production authorization còn phải quan tâm audience và mapping claims/scope
 
 Signed JWT payload thường đọc được.
 
-Không đặt password/secret vì nghĩ “token encoded nên private”.
+Không đặt password/secret vì nghĩ “đơn vị từ (token / 토큰) encoded nên private”.
 
-Signature bảo integrity/authenticity theo key/algorithm, không tự mã hóa confidentiality.
+Signature bảo integrity/authenticity theo key/thuật toán (algorithm / 알고리즘), không tự mã hóa confidentiality.
 
 ---
 
-# 63. Scope, Authority và Role
+# 63. phạm vi (scope / 범위), Authority và Role
 
-OAuth scope đại diện permission delegated cho token/client. Application authorities/roles là model authorization của app.
+OAuth phạm vi (scope / 범위) đại diện permission delegated cho đơn vị từ (token / 토큰)/máy khách (client / 클라이언트). ứng dụng (application / 애플리케이션) authorities/roles là mô hình (model / 모델) authorization của app.
 
-Có thể map scope thành authority, nhưng đừng coi role và scope là universal same concept.
+Có thể map phạm vi (scope / 범위) thành authority, nhưng đừng coi role và phạm vi (scope / 범위) là universal same concept.
 
-Complex ownership permission có thể cần domain authorization service.
+Complex quyền sở hữu (ownership / 소유권) permission có thể cần lĩnh vực (domain / 도메인) authorization dịch vụ (service / 서비스).
 
 ---
 
 # 64. CSRF và Cookie Authentication
 
-Browser tự attach cookies vào cross-site requests, vì vậy state-changing cookie-authenticated applications cần CSRF protection.
+Trình duyệt (browser / 브라우저) tự attach cookies vào cross-site requests, vì vậy state-changing cookie-authenticated applications cần CSRF protection.
 
-Bearer token trong `Authorization` header không tự được browser attach theo same way, nên threat model khác.
+Bearer đơn vị từ (token / 토큰) trong `Authorization` header không tự được trình duyệt (browser / 브라우저) attach theo same way, nên threat mô hình (model / 모델) khác.
 
-Security policy phải xuất phát từ credential transport, không từ câu “đây là REST”.
+Bảo mật (security / 보안) chính sách (policy / 정책) phải xuất phát từ credential vận chuyển (transport / 전송), không từ câu “đây là REST”.
 
 ---
 
-# 65. Security Context và Async
+# 65. bảo mật (security / 보안) ngữ cảnh (context / 맥락) và Async
 
-Security context có execution-context propagation concerns. Nếu submit task sang arbitrary executor, principal không nhất thiết tự xuất hiện.
+Bảo mật (security / 보안) ngữ cảnh (context / 맥락) có execution-context propagation concerns. Nếu submit tác vụ (task / 작업) sang arbitrary executor, principal không nhất thiết tự xuất hiện.
 
-Spring Security có context propagation integrations, nhưng bạn phải biết execution boundary.
+Spring bảo mật (security / 보안) có ngữ cảnh (context / 맥락) propagation integrations, nhưng bạn phải biết thực thi (execution / 실행) ranh giới (boundary / 경계).
 
-Reactive security lại dùng Reactor context model.
+Reactive bảo mật (security / 보안) lại dùng Reactor ngữ cảnh (context / 맥락) mô hình (model / 모델).
 
 ---
 
 <!-- SPRING_BATCH5_OBS_SENIOR -->
-## Observability phải phản ánh queue/resource boundaries của Spring application
 
-Một request timer duy nhất không đủ để biết request chậm ở đâu. Production dashboard nên cho thấy server request latency, active/in-flight requests, executor/virtual-thread behavior phù hợp runtime, DB pool active/pending/acquisition time, query latency, HTTP-client latency, cache hit/miss và JVM CPU/GC. Khi mỗi scarce resource có saturation signal, bạn có thể phân biệt CPU-bound với queue-bound hoặc downstream-bound.
+> **Chuyển mạch:** Từ **bảo mật (security / 보안) môi trường vận hành (production / 운영 환경) mô hình (model / 모델): credential vận chuyển (transport / 전송), key vòng đời (lifecycle / 생명주기) và object-level authorization**, ta sang **khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Trace là causal path, nhưng trace không thay metric. Sampling có thể bỏ mất request hiếm; metrics cho distribution/p95/p99 và saturation liên tục. JFR lại trả lời JVM-level CPU/allocation/lock/GC mà tracing không thấy. Troubleshooting tốt chuyển giữa bốn lớp: metrics xác định thời điểm/phạm vi, trace tìm dependency/span, logs lấy domain/error context, profile/JFR/DB plan xác minh execution cost.
+## Khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)
+
+Một yêu cầu (request / 요청) timer duy nhất không đủ để biết yêu cầu (request / 요청) chậm ở đâu. môi trường vận hành (production / 운영 환경) dashboard nên cho thấy máy chủ (server / 서버) yêu cầu (request / 요청) độ trễ (latency / 지연 시간), active/in-flight requests, executor/virtual-thread hành vi (behavior / 동작) phù hợp thời gian chạy (runtime / 런타임), DB pool active/pending/acquisition thời gian (time / 시간), truy vấn (query / 쿼리) độ trễ (latency / 지연 시간), HTTP-client độ trễ (latency / 지연 시간), bộ nhớ đệm (cache / 캐시) hit/miss và JVM CPU/GC. Khi mỗi scarce tài nguyên (resource / 자원) có saturation tín hiệu (signal / 신호), bạn có thể phân biệt CPU-bound với queue-bound hoặc downstream-bound.
+
+Dấu vết (trace / 추적) là nhân quả (causal / 인과적) đường dẫn (path / 경로), nhưng dấu vết (trace / 추적) không thay chỉ số (metric / 지표). Sampling có thể bỏ mất yêu cầu (request / 요청) hiếm; metrics cho phân phối (distribution / 분포)/p95/p99 và saturation liên tục. JFR lại trả lời JVM-level CPU/allocation/khóa (lock / 잠금)/GC mà tracing không thấy. Troubleshooting tốt chuyển giữa bốn lớp: metrics xác định thời điểm/phạm vi, dấu vết (trace / 추적) tìm phụ thuộc (dependency / 의존성)/span, logs lấy lĩnh vực (domain / 도메인)/lỗi (error / 오류) ngữ cảnh (context / 맥락), profile/JFR/DB plan xác minh thực thi (execution / 실행) chi phí (cost / 비용).
 <!-- SPRING_BATCH5_OBS_SENIOR_END -->
 
 ---
 
-# 66. Observability: Metrics, Traces, Logs
+# 66. khả năng quan sát (observability / 관측 가능성): Metrics, Traces, Logs
 
-Metrics trả lời “hệ thống đang xảy ra bao nhiêu/lâu bao nhiêu”. Traces trả lời “request cụ thể đi qua đâu”. Logs cho detailed events/context. JFR/profile cho runtime.
+Metrics trả lời “hệ thống đang xảy ra bao nhiêu/lâu bao nhiêu”. Traces trả lời “yêu cầu (request / 요청) cụ thể đi qua đâu”. Logs cho detailed events/ngữ cảnh (context / 맥락). JFR/profile cho thời gian chạy (runtime / 런타임).
 
 Không một nguồn nào đủ.
 
-Khi p99 tăng, trace có thể chỉ downstream span chậm; DB metrics cho lock; JFR cho CPU/GC; logs cho error detail.
+Khi p99 tăng, dấu vết (trace / 추적) có thể chỉ downstream span chậm; DB metrics cho khóa (lock / 잠금); JFR cho CPU/GC; logs cho lỗi (error / 오류) detail.
 
 ---
 
 # 67. Micrometer Observation
 
-Observation là abstraction cho operation instrumentation.
+Observation là lớp trừu tượng (abstraction / 추상화) cho thao tác (operation / 연산) instrumentation.
 
 Concept:
 
@@ -1125,13 +1149,13 @@ Observation
 → metrics/tracing
 ```
 
-Một custom business operation `order.checkout` có low-cardinality tags như channel/payment type và high-cardinality trace fields như orderId.
+Một custom nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) `order.checkout` có low-cardinality tags như channel/payment kiểu (type / 타입) và high-cardinality dấu vết (trace / 추적) fields như orderId.
 
 ---
 
-# 68. Metric Cardinality
+# 68. chỉ số (metric / 지표) Cardinality
 
-Đừng tag metric:
+Đừng tag chỉ số (metric / 지표):
 
 ```text
 userId
@@ -1140,7 +1164,7 @@ raw URL with IDs
 traceId
 ```
 
-Mỗi unique value tạo time series.
+Mỗi unique giá trị (value / 값) tạo thời gian (time / 시간) series.
 
 Metrics backend có thể chết vì cardinality explosion dù app vẫn chạy.
 
@@ -1148,53 +1172,53 @@ High-cardinality identifiers thuộc logs/traces.
 
 ---
 
-# 69. Distributed Tracing và Context Propagation
+# 69. phân tán (distributed / 분산) Tracing và ngữ cảnh (context / 맥락) Propagation
 
-Request vào service A có trace/span context, HTTP client phải propagate headers sang B. Async task cũng cần context propagation.
+Yêu cầu (request / 요청) vào dịch vụ (service / 서비스) A có dấu vết (trace / 추적)/span ngữ cảnh (context / 맥락), HTTP máy khách (client / 클라이언트) phải propagate headers sang B. Async tác vụ (task / 작업) cũng cần ngữ cảnh (context / 맥락) propagation.
 
-ThreadLocal-only model không đủ cho reactive thread hops. Virtual threads thay đổi thread quantity nhưng mỗi request có thể vẫn thread-confined khá tự nhiên tùy design.
+ThreadLocal-only mô hình (model / 모델) không đủ cho reactive luồng thực thi (thread / 스레드) hops. Virtual threads thay đổi luồng thực thi (thread / 스레드) quantity nhưng mỗi yêu cầu (request / 요청) có thể vẫn thread-confined khá tự nhiên tùy thiết kế (design / 설계).
 
-Senior phải hiểu library/framework đang dùng context mechanism nào.
+Cấp cao (senior / 시니어) phải hiểu thư viện (library / 라이브러리)/khung phần mềm (framework / 프레임워크) đang dùng ngữ cảnh (context / 맥락) cơ chế (mechanism / 메커니즘) nào.
 
 ---
 
 # 70. Actuator Management Surface
 
-Endpoints như `env`, `configprops`, `mappings`, `heapdump`, `threaddump` có diagnostic value nhưng có thể lộ secrets/internal topology.
+Endpoints như `env`, `configprops`, `mappings`, `heapdump`, `threaddump` có diagnostic giá trị (value / 값) nhưng có thể lộ secrets/nội bộ (internal / 내부) topology.
 
-Management network/security phải được thiết kế riêng.
+Management mạng (network / 네트워크)/bảo mật (security / 보안) phải được thiết kế riêng.
 
-Không expose `/actuator/**` public vì “chỉ dev biết URL”.
-
----
-
-# 71. Health Check Semantics
-
-Readiness nên phản ánh khả năng phục vụ traffic. Liveness chỉ fail nếu process state hỏng và restart có ích.
-
-Nếu DB down, readiness false hợp lý. Liveness false có thể khiến tất cả pods restart đồng loạt, làm incident tệ hơn.
-
-Health indicator phải bounded; không probe dependency với unbounded network call.
+Không expose `/actuator/**` công khai (public / 공개) vì “chỉ dev biết URL”.
 
 ---
 
-# 72. `@Async` trong Production
+# 71. Health Check ngữ nghĩa (semantics / 의미론)
 
-Fire-and-forget `@Async void` cho email marketing có thể chấp nhận nếu mất một task không critical.
+Readiness nên phản ánh khả năng phục vụ traffic. Liveness chỉ thất bại (fail / 실패) nếu tiến trình (process / 프로세스) trạng thái (state / 상태) hỏng và restart có ích.
 
-Nhưng payment, legal audit hoặc shipment creation cần durability. In-memory task mất khi pod crash/redeploy.
+Nếu DB down, readiness false hợp lý. Liveness false có thể khiến tất cả pods restart đồng loạt, làm sự cố (incident / 인시던트) tệ hơn.
 
-Nếu operation business-critical, message/job queue durable thường phù hợp hơn.
+Health indicator phải bounded; không probe phụ thuộc (dependency / 의존성) với unbounded mạng (network / 네트워크) lời gọi (call / 호출).
 
 ---
 
-# 73. Executor Capacity
+# 72. `@Async` trong môi trường vận hành (production / 운영 환경)
 
-Platform ThreadPoolTaskExecutor có core/max/queue. Queue unbounded hide overload.
+Fire-and-forget `@Async void` cho email marketing có thể chấp nhận nếu mất một tác vụ (task / 작업) không trọng yếu (critical / 중요).
+
+Nhưng payment, legal kiểm tra (audit / 감사) hoặc shipment creation cần durability. In-memory tác vụ (task / 작업) mất khi pod crash/redeploy.
+
+Nếu thao tác (operation / 연산) business-critical, message/job hàng đợi (queue / 큐) durable thường phù hợp hơn.
+
+---
+
+# 73. Executor sức chứa (capacity / 용량)
+
+Nền tảng (platform / 플랫폼) ThreadPoolTaskExecutor có cốt lõi (core / 핵심)/max/hàng đợi (queue / 큐). hàng đợi (queue / 큐) unbounded hide overload.
 
 CallerRuns/rejection hoặc bounded queues làm overload visible.
 
-Virtual thread per task bỏ scarce-thread pool, nhưng bạn vẫn phải add Semaphore/bulkhead cho downstream limit.
+Virtual luồng thực thi (thread / 스레드) per tác vụ (task / 작업) bỏ scarce-thread pool, nhưng bạn vẫn phải add Semaphore/bulkhead cho downstream limit.
 
 ---
 
@@ -1204,13 +1228,13 @@ Virtual thread per task bỏ scarce-thread pool, nhưng bạn vẫn phải add S
 
 Nếu có 5 replicas, 5 executions.
 
-Nếu job là cleanup idempotent và parallel-safe có thể okay. Nếu monthly billing phải exactly one logical run, cần leader/distributed lock/job platform.
+Nếu job là cleanup idempotent và parallel-safe có thể okay. Nếu monthly billing phải exactly one logical run, cần leader/phân tán (distributed / 분산) khóa (lock / 잠금)/job nền tảng (platform / 플랫폼).
 
 ---
 
 # 75. Graceful Shutdown
 
-Deployment không chỉ “Spring context close”.
+Triển khai (deployment / 배포) không chỉ “Spring ngữ cảnh (context / 맥락) close”.
 
 Ideal:
 
@@ -1224,13 +1248,13 @@ readiness off
 → context close
 ```
 
-Configure shutdown timeout phù hợp max request/task duration và Kubernetes termination grace period.
+Configure shutdown hết thời gian chờ (timeout / 타임아웃) phù hợp max yêu cầu (request / 요청)/tác vụ (task / 작업) duration và Kubernetes termination grace period.
 
 ---
 
-# 76. Startup Performance
+# 76. Startup hiệu năng (performance / 성능)
 
-Startup time matters trong autoscaling/serverless/container rollout.
+Startup thời gian (time / 시간) matters trong autoscaling/serverless/bộ chứa (container / 컨테이너) rollout.
 
 Measure sources:
 
@@ -1243,7 +1267,7 @@ bean init
 classloading
 ```
 
-Spring provides startup instrumentation facilities and Boot condition info.
+Spring provides startup instrumentation facilities and Boot điều kiện (condition / 조건) info.
 
 Fix actual bottleneck, không blindly turn everything lazy.
 
@@ -1251,27 +1275,27 @@ Fix actual bottleneck, không blindly turn everything lazy.
 
 # 77. AOT Processing
 
-Spring AOT analyzes application ahead of runtime và generate code/metadata/hints.
+Spring AOT analyzes ứng dụng (application / 애플리케이션) ahead of thời gian chạy (runtime / 런타임) và generate mã (code / 코드)/siêu dữ liệu (metadata / 메타데이터)/hints.
 
-AOT không đồng nghĩa native image. Nó có thể phục vụ optimized startup modes và GraalVM native workflow.
+AOT không đồng nghĩa bản địa (native / 네이티브) ảnh (image / 이미지). Nó có thể phục vụ optimized startup modes và GraalVM bản địa (native / 네이티브) workflow.
 
-Dynamic reflection/proxy/resource behavior phải được known/inferred ahead of time hơn.
+Động (dynamic / 동적) reflection/proxy/tài nguyên (resource / 자원) hành vi (behavior / 동작) phải được known/inferred ahead of thời gian (time / 시간) hơn.
 
 ---
 
-# 78. GraalVM Native Image
+# 78. GraalVM bản địa (native / 네이티브) ảnh (image / 이미지)
 
-Native image compile application thành native executable.
+Bản địa (native / 네이티브) ảnh (image / 이미지) compile ứng dụng (application / 애플리케이션) thành bản địa (native / 네이티브) executable.
 
-Lợi ích thường là startup nhanh và memory footprint thấp hơn. Trade-off là build time/complexity, closed-world constraints và khác biệt runtime performance so JVM JIT.
+Lợi ích thường là startup nhanh và bộ nhớ (memory / 메모리) footprint thấp hơn. sự đánh đổi (trade-off / 트레이드오프) là bản dựng (build / 빌드) thời gian (time / 시간)/độ phức tạp (complexity / 복잡도), closed-world các ràng buộc (constraints / 제약조건들) và khác biệt thời gian chạy (runtime / 런타임) hiệu năng (performance / 성능) so JVM JIT.
 
-Đừng benchmark 1 request rồi kết luận native tốt hơn toàn diện.
+Đừng benchmark 1 yêu cầu (request / 요청) rồi kết luận bản địa (native / 네이티브) tốt hơn toàn diện.
 
 ---
 
 # 79. RuntimeHints
 
-Custom dynamic feature có thể cần hints:
+Custom động (dynamic / 동적) tính năng (feature / 기능) có thể cần hints:
 
 ```text
 reflection
@@ -1280,41 +1304,41 @@ serialization
 JDK proxies
 ```
 
-Spring AOT tự infer nhiều standard Spring cases. Custom reflection/metaprogramming có thể cần `RuntimeHintsRegistrar`.
+Spring AOT tự infer nhiều tiêu chuẩn (standard / 표준) Spring cases. Custom reflection/metaprogramming có thể cần `RuntimeHintsRegistrar`.
 
-Native deployment phải test actual executable.
+Bản địa (native / 네이티브) triển khai (deployment / 배포) phải kiểm thử (test / 테스트) actual executable.
 
 ---
 
 # 80. Boot 4 và Jackson 3
 
-Spring Boot 4 ưu tiên Jackson 3. Jackson 3 thay group/package cho nhiều modules (`tools.jackson` generation), trong khi annotations có compatibility specifics.
+Spring Boot 4 ưu tiên Jackson 3. Jackson 3 thay group/gói (package / 패키지) cho nhiều modules (`tools.jackson` generation), trong khi annotations có tính tương thích (compatibility / 호환성) specifics.
 
-Nếu code chỉ dùng normal DTO + Boot auto-config, migration dễ hơn.
+Nếu mã (code / 코드) chỉ dùng normal DTO + Boot auto-config, di chuyển (migration / 마이그레이션) dễ hơn.
 
-Nếu bạn inject/customize Jackson internal types everywhere, migration lớn hơn.
+Nếu bạn inject/customize Jackson nội bộ (internal / 내부) types everywhere, di chuyển (migration / 마이그레이션) lớn hơn.
 
-Depend on stable framework/application abstractions, không leak third-party implementation sâu khắp domain.
+Depend on stable khung phần mềm (framework / 프레임워크)/ứng dụng (application / 애플리케이션) abstractions, không leak third-party hiện thực (implementation / 구현) sâu khắp lĩnh vực (domain / 도메인).
 
 ---
 
-# 81. Boot 3 → Boot 4 Migration
+# 81. Boot 3 → Boot 4 di chuyển (migration / 마이그레이션)
 
 Không nhảy blind.
 
-Nên đưa project lên latest 3.5 first, xử lý deprecations, dependencies và tests, rồi Boot 4.
+Nên đưa dự án (project / 프로젝트) lên latest 3.5 first, xử lý deprecations, dependencies và tests, rồi Boot 4.
 
-Boot 4 yêu cầu Spring Framework 7, Jakarta EE 11/Servlet 6.1 baseline và có dependency/module changes. Jackson 3 là change lớn.
+Boot 4 yêu cầu Spring khung phần mềm (framework / 프레임워크) 7, Jakarta EE 11/Servlet 6.1 baseline và có phụ thuộc (dependency / 의존성)/mô-đun (module / 모듈) changes. Jackson 3 là thay đổi (change / 변경) lớn.
 
-Migration test phải cover startup, web serialization, security, JPA/data, custom auto-config và observability agents.
+Di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) phải cover startup, web serialization, bảo mật (security / 보안), JPA/dữ liệu (data / 데이터), custom auto-config và khả năng quan sát (observability / 관측 가능성) agents.
 
 ---
 
 # 82. Linkage Errors khi Upgrade
 
-`NoSuchMethodError`, `NoClassDefFoundError`, `AbstractMethodError` thường chỉ compile/runtime dependency mismatch.
+`NoSuchMethodError`, `NoClassDefFoundError`, `AbstractMethodError` thường chỉ compile/thời gian chạy (runtime / 런타임) phụ thuộc (dependency / 의존성) mismatch.
 
-Ví dụ app compile với library v2 nhưng runtime load v1.
+Ví dụ app compile với thư viện (library / 라이브러리) v2 nhưng thời gian chạy (runtime / 런타임) tải (load / 로드) v1.
 
 Use:
 
@@ -1322,7 +1346,7 @@ Use:
 ./mvnw dependency:tree
 ```
 
-và inspect actual packaged artifact/classloader.
+và inspect actual packaged sản phẩm tạo ra (artifact / 산출물)/classloader.
 
 Đừng chữa bằng random `clean` mãi.
 
@@ -1330,17 +1354,17 @@ và inspect actual packaged artifact/classloader.
 
 # 83. Modular Monolith
 
-Microservices không phải default “Senior architecture”.
+Microservices không phải default “cấp cao (senior / 시니어) kiến trúc (architecture / 아키텍처)”.
 
-Một Spring Boot deployment có modules `order`, `payment`, `inventory`, `customer` với boundary rõ có nhiều lợi ích: local transaction dễ, operations đơn giản, refactor nhanh.
+Một Spring Boot triển khai (deployment / 배포) có modules `order`, `payment`, `inventory`, `customer` với ranh giới (boundary / 경계) rõ có nhiều lợi ích: cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) dễ, operations đơn giản, refactor nhanh.
 
-Module communication nên qua public application APIs/events, không import repository/entity internals tùy tiện.
+Mô-đun (module / 모듈) communication nên qua công khai (public / 공개) ứng dụng (application / 애플리케이션) APIs/events, không import repository/thực thể (entity / 엔터티) internals tùy tiện.
 
 ---
 
-# 84. Package Boundary
+# 84. gói (package / 패키지) ranh giới (boundary / 경계)
 
-Feature module có thể expose:
+Tính năng (feature / 기능) mô-đun (module / 모듈) có thể expose:
 
 ```java
 public interface OrderApplication {
@@ -1349,9 +1373,9 @@ public interface OrderApplication {
 }
 ```
 
-Internal adapters/repositories package-private hoặc internal package.
+Nội bộ (internal / 내부) adapters/repositories package-private hoặc nội bộ (internal / 내부) gói (package / 패키지).
 
-Dependency direction phải enforce bằng architecture tests/modulith tooling khi project lớn.
+Phụ thuộc (dependency / 의존성) direction phải enforce bằng kiến trúc (architecture / 아키텍처) tests/modulith tooling khi dự án (project / 프로젝트) lớn.
 
 Folder names không đủ.
 
@@ -1359,7 +1383,7 @@ Folder names không đủ.
 
 # 85. Spring Modulith Awareness
 
-Spring Modulith cung cấp support để model application modules, verify dependencies, test module và document architecture/event interactions.
+Spring Modulith cung cấp hỗ trợ (support / 지원) để mô hình (model / 모델) ứng dụng (application / 애플리케이션) modules, verify dependencies, kiểm thử (test / 테스트) mô-đun (module / 모듈) và document kiến trúc (architecture / 아키텍처)/sự kiện (event / 이벤트) interactions.
 
 Nó hữu ích cho modular monolith, nhưng không thay việc thiết kế bounded responsibilities.
 
@@ -1367,9 +1391,9 @@ Master Supplement sẽ đi sâu hơn nếu cần.
 
 ---
 
-# 86. Hexagonal Architecture với Spring
+# 86. Hexagonal kiến trúc (architecture / 아키텍처) với Spring
 
-Core defines ports:
+Cốt lõi (core / 핵심) defines ports:
 
 ```java
 interface OrderRepository {
@@ -1390,15 +1414,15 @@ Kafka event publisher
 
 Spring DI assemble.
 
-Lợi ích là domain/application không phụ thuộc trực tiếp HTTP/JPA/vendor.
+Lợi ích là lĩnh vực (domain / 도메인)/ứng dụng (application / 애플리케이션) không phụ thuộc trực tiếp HTTP/JPA/vendor.
 
-Đừng tạo 5 layers interfaces cho CRUD trivial chỉ để “clean architecture”. Architecture complexity phải proportional problem complexity.
+Đừng tạo 5 layers interfaces cho CRUD trivial chỉ để “clean kiến trúc (architecture / 아키텍처)”. kiến trúc (architecture / 아키텍처) độ phức tạp (complexity / 복잡도) phải proportional bài toán (problem / 문제) độ phức tạp (complexity / 복잡도).
 
 ---
 
-# 87. Anti-Corruption Layer
+# 87. Anti-Corruption tầng (layer / 계층)
 
-External vendor payment có model:
+Bên ngoài (external / 외부) vendor payment có mô hình (model / 모델):
 
 ```text
 VendorPaymentStatus
@@ -1406,7 +1430,7 @@ VendorMoney
 VendorErrorCode
 ```
 
-Không để chúng đi xuyên application.
+Không để chúng đi xuyên ứng dụng (application / 애플리케이션).
 
 Adapter map:
 
@@ -1415,23 +1439,23 @@ VendorResponse
 → PaymentResult
 ```
 
-Khi đổi vendor, domain ít đổi.
+Khi đổi vendor, lĩnh vực (domain / 도메인) ít đổi.
 
 ---
 
-# 88. Transaction Script vs Rich Domain
+# 88. giao dịch (transaction / 트랜잭션) Script vs Rich lĩnh vực (domain / 도메인)
 
-Simple admin CRUD có thể dùng service methods + repository, gọi là transaction-script style.
+Simple admin CRUD có thể dùng dịch vụ (service / 서비스) methods + repository, gọi là transaction-script style.
 
-Complex order/pricing/risk domain có thể cần value objects, entities và invariants.
+Complex thứ tự (order / 순서)/pricing/rủi ro (risk / 위험) lĩnh vực (domain / 도메인) có thể cần giá trị (value / 값) objects, entities và invariants.
 
-Senior không force DDD cho todo app và cũng không để complex banking rules thành 2.000-line service.
+Cấp cao (senior / 시니어) không force DDD cho todo app và cũng không để complex banking rules thành 2.000-line dịch vụ (service / 서비스).
 
 ---
 
 # 89. Annotation Soup
 
-Method:
+Phương thức (method / 메서드):
 
 ```java
 @Transactional
@@ -1443,103 +1467,106 @@ Method:
 public Result execute() { ... }
 ```
 
-là signal cần review.
+là tín hiệu (signal / 신호) cần rà soát (review / 검토).
 
-Bạn phải giải thích exact ordering, thread, transaction, retry, cache và security context. Nếu không, split responsibilities/policies.
+Bạn phải giải thích chính xác (exact / 정확한) thứ tự (ordering / 순서), luồng thực thi (thread / 스레드), giao dịch (transaction / 트랜잭션), thử lại (retry / 재시도), bộ nhớ đệm (cache / 캐시) và bảo mật (security / 보안) ngữ cảnh (context / 맥락). Nếu không, split responsibilities/policies.
 
-Spring annotations giảm boilerplate nhưng có thể tăng hidden control flow.
+Spring annotations giảm boilerplate nhưng có thể tăng hidden điều khiển (control / 제어) luồng (flow / 흐름).
 
 ---
 
-# 90. God Service
+# 90. God dịch vụ (service / 서비스)
 
-`OrderService` 3.000 lines có business, email, SQL, file, HTTP, cache và reporting là low cohesion.
+`OrderService` 3.000 lines có nghiệp vụ (business / 비즈니스), email, SQL, tệp (file / 파일), HTTP, bộ nhớ đệm (cache / 캐시) và reporting là low cohesion.
 
-Tách theo use case/capability, không chỉ tách thành `OrderServiceHelper`.
+Tách theo use trường hợp (case / 사례)/năng lực (capability / 역량), không chỉ tách thành `OrderServiceHelper`.
 
-Dependency count, change reasons và test setup cho thấy boundaries.
+Phụ thuộc (dependency / 의존성) count, thay đổi (change / 변경) reasons và kiểm thử (test / 테스트) setup cho thấy boundaries.
 
 ---
 
 # 91. Static ApplicationContext Holder
 
-Pattern:
+Mẫu (pattern / 패턴):
 
 ```java
 SpringContext.getBean(Foo.class)
 ```
 
-cho phép bất kỳ code nào kéo dependency global.
+cho phép bất kỳ mã (code / 코드) nào kéo phụ thuộc (dependency / 의존성) toàn cục (global / 전역).
 
-Nó biến DI thành Service Locator và phá dependency visibility.
+Nó biến DI thành dịch vụ (service / 서비스) Locator và phá phụ thuộc (dependency / 의존성) visibility.
 
-Chỉ dùng trong integration constraints rất đặc biệt, không làm default architecture.
+Chỉ dùng trong tích hợp (integration / 통합) các ràng buộc (constraints / 제약조건들) rất đặc biệt, không làm default kiến trúc (architecture / 아키텍처).
 
 ---
 
-# 92. Entity Everywhere
+# 92. thực thể (entity / 엔터티) Everywhere
 
-Nếu `UserEntity` dùng làm API DTO, Kafka message, cache value, domain object và batch format, mọi schema/persistence change có blast radius lớn.
+Nếu `UserEntity` dùng làm API DTO, Kafka message, bộ nhớ đệm (cache / 캐시) giá trị (value / 값), lĩnh vực (domain / 도메인) đối tượng (object / 객체) và batch format, mọi lược đồ (schema / 스키마)/persistence thay đổi (change / 변경) có blast radius lớn.
 
-Tách representation ở boundaries có lifecycle/compatibility khác nhau.
+Tách biểu diễn (representation / 표현) ở boundaries có vòng đời (lifecycle / 생명주기)/tính tương thích (compatibility / 호환성) khác nhau.
 
 ---
 
 <!-- SPRING_BATCH5_TROUBLESHOOTING_SENIOR -->
-## Production troubleshooting theo symptom → layer → evidence
 
-Nếu application **không start**, bắt đầu từ first meaningful cause trong exception chain rồi phân loại: configuration binding, missing/ambiguous bean, condition mismatch, schema migration, database connectivity, classpath/linkage hay custom initialization. Condition report và dependency tree hữu ích hơn thêm annotation thử nghiệm.
+> **Chuyển mạch:** Từ **khả năng quan sát (observability / 관측 가능성) phải phản ánh hàng đợi (queue / 큐)/tài nguyên (resource / 자원) boundaries của Spring ứng dụng (application / 애플리케이션)**, ta sang **môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Nếu request trả **404**, trước tiên kiểm mapping/servlet context/path. Nếu **400**, nhìn conversion, JSON deserialize và Bean Validation. Nếu **401**, trace authentication chain/credential. Nếu **403**, xác định principal đã authenticated chưa và authorization rule nào deny. Nếu controller breakpoint không bao giờ hit, đừng debug service trước filter/mapping layer.
+## Môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)
 
-Nếu endpoint **chậm nhưng CPU thấp**, tìm wait: DB connection acquisition, slow SQL/locks, remote HTTP, executor queue, synchronized lock. Nếu **CPU cao**, dùng JFR/profile trước; JSON serialization, crypto, regex, mapper loops, GC hoặc busy loop đều có thể là nguyên nhân. Nếu **RSS tăng nhưng heap ổn**, nhìn thread count/stacks, direct buffer/native memory, metaspace và agents chứ không chỉ heap dump.
+Nếu ứng dụng (application / 애플리케이션) **không start**, bắt đầu từ first meaningful cause trong exception chuỗi (chain / 사슬) rồi phân loại: cấu hình (configuration / 구성) binding, missing/ambiguous bean, điều kiện (condition / 조건) mismatch, lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션), cơ sở dữ liệu (database / 데이터베이스) connectivity, classpath/linkage hay custom initialization. điều kiện (condition / 조건) report và phụ thuộc (dependency / 의존성) cây (tree / 트리) hữu ích hơn thêm annotation thử nghiệm.
 
-Nếu bật virtual threads mà throughput không tăng, kiểm downstream scarce resource. 50 DB connections vẫn chỉ cho khoảng 50 concurrent DB operations bất kể có 500 hay 50.000 virtual threads. Nếu latency tăng, queueing ở pool/semaphore/downstream vẫn là bottleneck thật.
+Nếu yêu cầu (request / 요청) trả **404**, trước tiên kiểm ánh xạ (mapping / 매핑)/servlet ngữ cảnh (context / 맥락)/đường dẫn (path / 경로). Nếu **400**, nhìn conversion, JSON deserialize và Bean kiểm tra hợp lệ (validation / 검증). Nếu **401**, dấu vết (trace / 추적) authentication chuỗi (chain / 사슬)/credential. Nếu **403**, xác định principal đã authenticated chưa và authorization quy tắc (rule / 규칙) nào deny. Nếu controller breakpoint không bao giờ hit, đừng gỡ lỗi (debug / 디버그) dịch vụ (service / 서비스) trước filter/ánh xạ (mapping / 매핑) tầng (layer / 계층).
+
+Nếu endpoint **chậm nhưng CPU thấp**, tìm wait: DB liên kết (connection / 연결) acquisition, slow SQL/locks, remote HTTP, executor hàng đợi (queue / 큐), synchronized khóa (lock / 잠금). Nếu **CPU cao**, dùng JFR/profile trước; JSON serialization, crypto, regex, mapper loops, GC hoặc busy vòng lặp (loop / 루프) đều có thể là nguyên nhân. Nếu **RSS tăng nhưng vùng nhớ động (heap / 힙) ổn**, nhìn luồng thực thi (thread / 스레드) count/stacks, direct buffer/bản địa (native / 네이티브) bộ nhớ (memory / 메모리), metaspace và agents chứ không chỉ vùng nhớ động (heap / 힙) dump.
+
+Nếu bật virtual threads mà thông lượng (throughput / 처리량) không tăng, kiểm downstream scarce tài nguyên (resource / 자원). 50 DB connections vẫn chỉ cho khoảng 50 concurrent DB operations bất kể có 500 hay 50.000 virtual threads. Nếu độ trễ (latency / 지연 시간) tăng, queueing ở pool/semaphore/downstream vẫn là bottleneck thật.
 <!-- SPRING_BATCH5_TROUBLESHOOTING_SENIOR_END -->
 
 ---
 
-# 93. Production Debugging: `@Transactional` không chạy
+# 93. môi trường vận hành (production / 운영 환경) Debugging: `@Transactional` không chạy
 
-Checklist reasoning:
+Checklist lập luận (reasoning / 추론):
 
-Bean có do Spring quản lý không? Call có đi qua proxy không? Method có proxyable không? Transaction manager đúng không? Annotation đặt ở method/class mà proxy metadata resolve được không? Exception bị catch/swallow không? Rollback rule có phù hợp không?
+Bean có do Spring quản lý không? lời gọi (call / 호출) có đi qua proxy không? phương thức (method / 메서드) có proxyable không? giao dịch (transaction / 트랜잭션) manager đúng không? Annotation đặt ở phương thức (method / 메서드)/lớp (class / 클래스) mà proxy siêu dữ liệu (metadata / 메타데이터) resolve được không? Exception bị catch/swallow không? quay lui (rollback / 롤백) quy tắc (rule / 규칙) có phù hợp không?
 
-Enable targeted transaction logs nếu cần và observe DB connection/commit behavior. Đừng thêm annotation thứ hai.
+Enable targeted giao dịch (transaction / 트랜잭션) logs nếu cần và observe DB liên kết (connection / 연결)/lần ghi nhận (commit / 커밋) hành vi (behavior / 동작). Đừng thêm annotation thứ hai.
 
 ---
 
-# 94. Production Debugging: N+1
+# 94. môi trường vận hành (production / 운영 환경) Debugging: N+1
 
-Trace endpoint. Count SQL per request. Xem serialization có access lazy relation. Check OSIV. Check mapper loops. Xem fetch graph/query.
+Dấu vết (trace / 추적) endpoint. Count SQL per yêu cầu (request / 요청). Xem serialization có truy cập (access / 접근) lazy quan hệ (relation / 관계). Check OSIV. Check mapper loops. Xem fetch đồ thị (graph / 그래프)/truy vấn (query / 쿼리).
 
-Fix bằng fetch plan/projection, rồi measure query count/p99 lại.
+Fix bằng fetch plan/projection, rồi measure truy vấn (query / 쿼리) count/p99 lại.
 
 Không chỉ nhìn “endpoint chậm” và tăng CPU.
 
 ---
 
-# 95. Production Debugging: DB Pool Exhausted
+# 95. môi trường vận hành (production / 운영 환경) Debugging: DB Pool Exhausted
 
-Check pool pending/acquisition time, active count, transaction duration, slow queries, locks và remote calls trong transaction.
+Check pool pending/acquisition thời gian (time / 시간), active count, giao dịch (transaction / 트랜잭션) duration, slow queries, locks và remote calls trong giao dịch (transaction / 트랜잭션).
 
-Thread dump có thể cho thấy nhiều requests đang wait connection.
+Luồng thực thi (thread / 스레드) dump có thể cho thấy nhiều requests đang wait liên kết (connection / 연결).
 
-Tăng max pool chỉ sau khi biết DB còn capacity.
-
----
-
-# 96. Production Debugging: CPU 100%
-
-Use JFR/profile. Check hot Java stacks, JSON serialization, crypto, regex, GC CPU, busy loop, ORM mapping.
-
-Spring Actuator metrics cho symptom; JFR cho execution detail.
+Tăng max pool chỉ sau khi biết DB còn sức chứa (capacity / 용량).
 
 ---
 
-# 97. CPU thấp nhưng Latency cao
+# 96. môi trường vận hành (production / 운영 환경) Debugging: CPU 100%
 
-Đây thường là waiting problem:
+Use JFR/profile. Check hot Java stacks, JSON serialization, crypto, regex, GC CPU, busy vòng lặp (loop / 루프), ORM ánh xạ (mapping / 매핑).
+
+Spring Actuator metrics cho symptom; JFR cho thực thi (execution / 실행) detail.
+
+---
+
+# 97. CPU thấp nhưng độ trễ (latency / 지연 시간) cao
+
+Đây thường là waiting bài toán (problem / 문제):
 
 ```text
 DB lock/query
@@ -1551,13 +1578,13 @@ thread lock
 queue
 ```
 
-Distributed trace và thread dump rất hữu ích.
+Phân tán (distributed / 분산) dấu vết (trace / 추적) và luồng thực thi (thread / 스레드) dump rất hữu ích.
 
 ---
 
-# 98. Memory Growth
+# 98. bộ nhớ (memory / 메모리) Growth
 
-Possible application causes:
+Possible ứng dụng (application / 애플리케이션) causes:
 
 ```text
 unbounded cache
@@ -1570,71 +1597,69 @@ metrics cardinality
 large buffers
 ```
 
-Heap dump/JFR/JVM tools cần phối hợp. RSS cao nhưng heap bình thường có thể là native/direct/thread stack issue từ Java Core.
+Vùng nhớ vùng nhớ động (heap / 힙) dump/JFR/JVM tools cần phối hợp. RSS cao nhưng vùng nhớ động (heap / 힙) bình thường có thể là bản địa (native / 네이티브)/direct/luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) issue từ Java cốt lõi (core / 핵심).
 
-Spring không thay JVM memory model.
-
----
-
-# 99. Security Incident Reasoning
-
-401/403 cần trace security chain, authentication mechanism và authorization decision.
-
-CORS browser error có thể che backend 401/403.
-
-JWT issue cần check signature keys, issuer, audience, clock skew/expiry và claim mapping.
-
-Không disable security để “xác nhận endpoint”.
+Spring không thay JVM bộ nhớ (memory / 메모리) mô hình (model / 모델).
 
 ---
 
-# 100. Logging và Sensitive Data
+# 99. bảo mật (security / 보안) sự cố (incident / 인시던트) lập luận (reasoning / 추론)
 
-Request/response body logging có thể leak password/token/PII, tăng memory vì buffering và phá streaming.
+401/403 cần dấu vết (trace / 추적) bảo mật (security / 보안) chuỗi (chain / 사슬), authentication cơ chế (mechanism / 메커니즘) và authorization quyết định (decision / 결정).
 
-Production logging nên structured, redact fields và sample large/high-frequency data khi cần.
+CORS trình duyệt (browser / 브라우저) lỗi (error / 오류) có thể che backend 401/403.
 
-Expected 404 không nhất thiết ERROR stack trace.
+JWT issue cần check signature keys, issuer, audience, clock skew/expiry và claim ánh xạ (mapping / 매핑).
+
+Không disable bảo mật (security / 보안) để “xác nhận endpoint”.
+
+---
+
+# 100. Logging và Sensitive yêu cầu dữ liệu (data request / 데이터 요청)/phản hồi (response / 응답) body logging có thể leak password/đơn vị từ (token / 토큰)/PII, tăng bộ nhớ (memory / 메모리) vì buffering và phá streaming.
+
+Môi trường vận hành (production / 운영 환경) logging nên structured, redact fields và mẫu (sample / 표본) large/high-frequency dữ liệu (data / 데이터) khi cần.
+
+Expected 404 không nhất thiết lỗi (error / 오류) dấu vết ngăn xếp (stack trace / 스택 트레이스).
 
 ---
 
 # 101. SSRF trong RestClient/WebClient
 
-Nếu endpoint cho user nhập URL và server fetch:
+Nếu endpoint cho người dùng (user / 사용자) nhập URL và máy chủ (server / 서버) fetch:
 
 ```text
 https://...
 ```
 
-attacker có thể target internal metadata service/localhost/private network.
+attacker có thể mục tiêu (target / 대상) nội bộ (internal / 내부) siêu dữ liệu (metadata / 메타데이터) dịch vụ (service / 서비스)/localhost/private mạng (network / 네트워크).
 
-Restrict allowed schemes/hosts/ports, DNS/IP ranges và redirects theo threat model.
+Restrict allowed schemes/hosts/ports, DNS/IP ranges và redirects theo threat mô hình (model / 모델).
 
-Spring client API không tự làm business allow-list.
+Spring máy khách (client / 클라이언트) API không tự làm nghiệp vụ (business / 비즈니스) allow-list.
 
 ---
 
-# 102. Deserialization Security
+# 102. Deserialization bảo mật (security / 보안)
 
-Public JSON không nên cho uncontrolled polymorphic type instantiation.
+Công khai (public / 공개) JSON không nên cho uncontrolled polymorphic kiểu (type / 타입) instantiation.
 
-Bound request size/depth và control allowed types.
+Bound yêu cầu (request / 요청) kích thước (size / 크기)/độ sâu (depth / 깊이) và điều khiển (control / 제어) allowed types.
 
 DTO boundaries giảm mass assignment và deserialization attack surface.
 
 ---
 
-# 103. Supply Chain
+# 103. Supply chuỗi (chain / 사슬)
 
-Spring app kéo nhiều transitive dependencies. Theo dõi Boot maintenance line, CVEs, SBOM/dependency scanning.
+Spring app kéo nhiều transitive dependencies. Theo dõi Boot maintenance line, CVEs, SBOM/phụ thuộc (dependency / 의존성) scanning.
 
-Đừng override managed versions tùy tiện rồi vô tình kéo incompatible/security-old transitive graph.
+Đừng override managed versions tùy tiện rồi vô tình kéo incompatible/security-old transitive đồ thị (graph / 그래프).
 
 ---
 
-# 104. Performance Engineering
+# 104. hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)
 
-Senior optimization loop:
+Cấp cao (senior / 시니어) tối ưu hóa (optimization / 최적화) vòng lặp (loop / 루프):
 
 ```text
 define SLO
@@ -1645,25 +1670,25 @@ define SLO
 → measure again
 ```
 
-“WebFlux nhanh”, “native nhanh”, “virtual thread nhanh”, “JPA chậm” đều là slogans nếu không gắn workload.
+“WebFlux nhanh”, “bản địa (native / 네이티브) nhanh”, “virtual luồng thực thi (thread / 스레드) nhanh”, “JPA chậm” đều là slogans nếu không gắn tải công việc (workload / 워크로드).
 
 ---
 
-# 105. Tail Latency
+# 105. Tail độ trễ (latency / 지연 시간)
 
 Average 100ms có thể che p99 3s.
 
-External service, GC, DB lock và queueing thường làm tail.
+Bên ngoài (external / 외부) dịch vụ (service / 서비스), GC, DB khóa (lock / 잠금) và queueing thường làm tail.
 
-Track p50/p95/p99 và correlate với dependency spans.
+Nhánh học (track / 트랙) p50/p95/p99 và correlate với phụ thuộc (dependency / 의존성) spans.
 
 ---
 
-# 106. Pagination và Result Limits
+# 106. Pagination và kết quả (result / 결과) Limits
 
-Unbounded `/users` endpoint có thể trả millions rows, exhaust heap/DB.
+Unbounded `/users` endpoint có thể trả millions rows, exhaust vùng nhớ động (heap / 힙)/DB.
 
-Bound size.
+Bound kích thước (size / 크기).
 
 Deep offset:
 
@@ -1673,200 +1698,205 @@ offset 1000000 limit 20
 
 có thể đắt.
 
-Keyset/cursor pagination dùng stable ordered key để seek tiếp, thường scale tốt hơn.
+Keyset/cursor pagination dùng stable ordered key để seek tiếp, thường quy mô (scale / 규모) tốt hơn.
 
 ---
 
 # 107. Compression
 
-HTTP compression giảm bandwidth cho JSON/text lớn nhưng dùng CPU.
+HTTP compression giảm bandwidth cho JSON/văn bản (text / 텍스트) lớn nhưng dùng CPU.
 
-Không nén file đã compressed hoặc tiny payload vô ích.
+Không nén tệp (file / 파일) đã compressed hoặc tiny payload vô ích.
 
-Measure network vs CPU trade-off.
-
----
-
-# 108. Native Image vs JVM
-
-Native image tốt cho cold start/autoscaling footprint. JVM JIT thường rất mạnh cho long-running throughput.
-
-Một platform có service chạy 24/7 và memory dư có thể không cần native. Serverless/CLI có thể benefit lớn.
-
-Senior chọn theo deployment economics, không hype.
+Measure mạng (network / 네트워크) vs CPU sự đánh đổi (trade-off / 트레이드오프).
 
 ---
 
-# 109. Testing Architecture
+# 108. bản địa (native / 네이티브) ảnh (image / 이미지) vs JVM
 
-Một healthy suite có nhiều plain unit tests cho business, slice tests cho framework boundaries, integration tests với real DB/external fakes và ít full end-to-end tests.
+Bản địa (native / 네이티브) ảnh (image / 이미지) tốt cho cold start/autoscaling footprint. JVM JIT thường rất mạnh cho long-running thông lượng (throughput / 처리량).
 
-Không cần ratio cố định. Mỗi test phải trả lời câu hỏi cụ thể.
+Một nền tảng (platform / 플랫폼) có dịch vụ (service / 서비스) chạy 24/7 và bộ nhớ (memory / 메모리) dư có thể không cần bản địa (native / 네이티브). Serverless/CLI có thể benefit lớn.
+
+Cấp cao (senior / 시니어) chọn theo triển khai (deployment / 배포) economics, không hype.
+
+---
+
+# 109. Testing kiến trúc (architecture / 아키텍처)
+
+Một healthy suite có nhiều plain đơn vị (unit / 단위) tests cho nghiệp vụ (business / 비즈니스), slice tests cho khung phần mềm (framework / 프레임워크) boundaries, tích hợp (integration / 통합) tests với real DB/bên ngoài (external / 외부) fakes và ít full end-to-end tests.
+
+Không cần ratio cố định. Mỗi kiểm thử (test / 테스트) phải trả lời câu hỏi cụ thể.
 
 ---
 
 <!-- SPRING_BATCH4_TEST_SENIOR -->
-## Testing architecture phải mô phỏng đúng failure boundary
 
-Một test suite production-grade không được dùng một kiểu test cho mọi thứ. Business invariant nên được ép qua plain unit/property tests; persistence concurrency cần real database vì locking/isolation khác H2; HTTP adapter cần contract/stub server để kiểm headers, timeout và error mapping; Security cần test cả unauthenticated, authenticated-but-forbidden và object ownership; transaction/outbox cần test commit thật.
+> **Chuyển mạch:** Từ **môi trường vận hành (production / 운영 환경) troubleshooting theo symptom → tầng (layer / 계층) → bằng chứng (evidence / 증거)**, ta sang **Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Context caching là một phần hiệu năng test. Profiles, dynamic properties, bean overrides và configuration classes tham gia cache identity. `@DirtiesContext` làm context bị loại khỏi cache và nên được coi là expensive operation. Nếu một test cần mutate global singleton state rồi dirties context để cleanup, đó có thể là feedback rằng production design có global mutable state khó cô lập.
+## Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)
 
-Testcontainers tăng fidelity nhưng không phải lý do đưa mọi unit test vào Docker. Hãy dùng container ở boundary nơi engine semantics quan trọng: PostgreSQL JSON/locking/index behavior, Kafka broker protocol, Redis TTL/serialization. Test nhanh ở inner loop và realistic ở integration boundary là hai mục tiêu bổ sung nhau.
+Một bộ kiểm thử (test suite / 테스트 스위트) production-grade không được dùng một kiểu kiểm thử (test / 테스트) cho mọi thứ. nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식) nên được ép qua plain đơn vị (unit / 단위)/thuộc tính (property / 속성) tests; persistence tính đồng thời (concurrency / 동시성) cần real cơ sở dữ liệu (database / 데이터베이스) vì locking/isolation khác H2; HTTP adapter cần đặc tả hợp đồng (contract / 계약)/stub máy chủ (server / 서버) để kiểm headers, hết thời gian chờ (timeout / 타임아웃) và lỗi (error / 오류) ánh xạ (mapping / 매핑); bảo mật (security / 보안) cần kiểm thử (test / 테스트) cả unauthenticated, authenticated-but-forbidden và đối tượng (object / 객체) quyền sở hữu (ownership / 소유권); giao dịch (transaction / 트랜잭션)/outbox cần kiểm thử (test / 테스트) lần ghi nhận (commit / 커밋) thật.
+
+Ngữ cảnh (context / 맥락) caching là một phần hiệu năng kiểm thử (test / 테스트). Profiles, động (dynamic / 동적) properties, bean overrides và cấu hình (configuration / 구성) classes tham gia bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자). `@DirtiesContext` làm ngữ cảnh (context / 맥락) bị loại khỏi bộ nhớ đệm (cache / 캐시) và nên được coi là expensive thao tác (operation / 연산). Nếu một kiểm thử (test / 테스트) cần mutate toàn cục (global / 전역) singleton trạng thái (state / 상태) rồi dirties ngữ cảnh (context / 맥락) để cleanup, đó có thể là phản hồi (feedback / 피드백) rằng môi trường vận hành (production / 운영 환경) thiết kế (design / 설계) có toàn cục (global / 전역) mutable trạng thái (state / 상태) khó cô lập.
+
+Testcontainers tăng fidelity nhưng không phải lý do đưa mọi đơn vị (unit / 단위) kiểm thử (test / 테스트) vào Docker. Hãy dùng bộ chứa (container / 컨테이너) ở ranh giới (boundary / 경계) nơi engine ngữ nghĩa (semantics / 의미론) quan trọng: PostgreSQL JSON/locking/chỉ mục (index / 인덱스) hành vi (behavior / 동작), Kafka broker giao thức (protocol / 프로토콜), Redis TTL/serialization. kiểm thử (test / 테스트) nhanh ở inner vòng lặp (loop / 루프) và realistic ở tích hợp (integration / 통합) ranh giới (boundary / 경계) là hai mục tiêu bổ sung nhau.
 <!-- SPRING_BATCH4_TEST_SENIOR_END -->
 
 ---
 
 # 110. Transactional Tests Pitfall
 
-`@Transactional` test rollback sau test tiện cleanup, nhưng có thể che commit-time constraints, after-commit listeners và lazy-loading behavior.
+`@Transactional` kiểm thử (test / 테스트) quay lui (rollback / 롤백) sau kiểm thử (test / 테스트) tiện cleanup, nhưng có thể che commit-time các ràng buộc (constraints / 제약조건들), after-commit listeners và lazy-loading hành vi (behavior / 동작).
 
-Code production transaction closed trước serialization nhưng test transaction vẫn open có thể làm test pass và production fail.
+Mã (code / 코드) môi trường vận hành (production / 운영 환경) giao dịch (transaction / 트랜잭션) closed trước serialization nhưng kiểm thử (test / 테스트) giao dịch (transaction / 트랜잭션) vẫn open có thể làm kiểm thử (test / 테스트) pass và môi trường vận hành (production / 운영 환경) thất bại (fail / 실패).
 
 Use transactional tests intentionally.
 
 ---
 
-# 111. Testcontainers và Production Engine
+# 111. Testcontainers và môi trường vận hành (production / 운영 환경) Engine
 
-Repository test với real PostgreSQL bắt được JSONB syntax, locking, sequences và dialect differences H2 bỏ sót.
+Repository kiểm thử (test / 테스트) với real PostgreSQL bắt được JSONB cú pháp (syntax / 문법), locking, sequences và dialect differences H2 bỏ sót.
 
-Migrations cũng được test.
+Migrations cũng được kiểm thử (test / 테스트).
 
-Integration test chậm hơn unit, nhưng confidence đúng layer.
-
----
-
-# 112. Contract Testing
-
-HTTP client adapter có contract với external API. Test request path, headers, serialization, error mapping và timeout behavior against stub/mock server.
-
-Repository port có semantic contract; fake/JPA implementations nên giữ behavior expected.
+Kiểm thử tích hợp (integration test / 통합 테스트) chậm hơn đơn vị (unit / 단위), nhưng confidence đúng tầng (layer / 계층).
 
 ---
 
-# 113. Native Executable Testing
+# 112. đặc tả hợp đồng (contract / 계약) Testing
 
-AOT/native image có closed-world differences. Reflection/resource paths chỉ chạy trong production cần được test actual native artifact.
+HTTP máy khách (client / 클라이언트) adapter có đặc tả hợp đồng (contract / 계약) với bên ngoài (external / 외부) API. kiểm thử (test / 테스트) đường đi của yêu cầu (request path / 요청 경로), headers, serialization, lỗi (error / 오류) ánh xạ (mapping / 매핑) và hết thời gian chờ (timeout / 타임아웃) hành vi (behavior / 동작) against stub/mock máy chủ (server / 서버).
 
-Tracing agent/hints không thay coverage.
-
----
-
-# 114. Language Idioms Senior
-
-**Framework at the edge.** Business objects không cần Spring dependency vô lý.
-
-**Transaction at use-case boundary.** Atomic DB policy gần business operation.
-
-**Bounded everything.** Timeout, queue, pool, cache, payload, retry đều có giới hạn.
-
-**Explicit side effects.** DB/HTTP/message boundaries dễ nhìn.
-
-**Measure before optimize.** JFR/trace/metrics/DB plan trước tuning.
-
-**Stable external contracts.** DTO/event/error codes không phụ thuộc entity/vendor class.
+Repository cổng (port / 포트) có ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약); fake/JPA implementations nên giữ hành vi (behavior / 동작) expected.
 
 ---
 
-# 115. Programming Patterns Senior
+# 113. bản địa (native / 네이티브) Executable Testing
 
-**Transactional Outbox** cho DB + message intent. **Idempotency** cho retry/message/payment. **Bulkhead** cho scarce resources. **Retry + Backoff + Jitter** cho transient failure. **Deadline Propagation** cho latency budget. **Cache Aside/Single Flight** cho cache. **Anti-Corruption Layer** cho vendor boundary. **CQRS-lite** cho optimized read models. **Graceful Shutdown** cho deployment. **Optimistic Concurrency** cho concurrent edits.
+AOT/bản địa (native / 네이티브) ảnh (image / 이미지) có closed-world differences. Reflection/tài nguyên (resource / 자원) paths chỉ chạy trong môi trường vận hành (production / 운영 환경) cần được kiểm thử (test / 테스트) actual bản địa (native / 네이티브) sản phẩm tạo ra (artifact / 산출물).
 
----
-
-# 116. Design Patterns trong Spring Senior
-
-Proxy là nền của AOP/transaction/security/cache/async/declarative clients. Chain of Responsibility thể hiện qua servlet/security/interceptor chains. Adapter nằm ở MVC HandlerAdapter, persistence và external gateways. Observer liên hệ application events. Factory xuất hiện trong BeanFactory/FactoryBean. Strategy xuất hiện ở providers/handlers/policies. Front Controller là DispatcherServlet.
-
-Ở Senior, pattern quan trọng không phải tên mà là trade-off: hidden control flow, testability, ordering và lifecycle.
+Tracing tác nhân (agent / 에이전트)/hints không thay coverage.
 
 ---
 
-# 117. Senior Mini Project: Production Order Platform
+# 114. ngôn ngữ (language / 언어) Idioms cấp cao (senior / 시니어)
+
+**khung phần mềm (framework / 프레임워크) at the edge.** nghiệp vụ (business / 비즈니스) objects không cần Spring phụ thuộc (dependency / 의존성) vô lý.
+
+**giao dịch (transaction / 트랜잭션) at use-case ranh giới (boundary / 경계).** Atomic DB chính sách (policy / 정책) gần nghiệp vụ (business / 비즈니스) thao tác (operation / 연산).
+
+**Bounded everything.** hết thời gian chờ (timeout / 타임아웃), hàng đợi (queue / 큐), pool, bộ nhớ đệm (cache / 캐시), payload, thử lại (retry / 재시도) đều có giới hạn.
+
+**tường minh (explicit / 명시적) side effects.** DB/HTTP/message boundaries dễ nhìn.
+
+**Measure before optimize.** JFR/dấu vết (trace / 추적)/metrics/DB plan trước tuning.
+
+**Stable bên ngoài (external / 외부) contracts.** DTO/sự kiện (event / 이벤트)/lỗi (error / 오류) codes không phụ thuộc thực thể (entity / 엔터티)/vendor lớp (class / 클래스).
+
+---
+
+# 115. Programming Patterns cấp cao (senior / 시니어)
+
+**Transactional Outbox** cho DB + message intent. **Idempotency** cho thử lại (retry / 재시도)/message/payment. **Bulkhead** cho scarce resources. **thử lại (retry / 재시도) + Backoff + Jitter** cho transient thất bại (failure / 실패). **Deadline Propagation** cho độ trễ (latency / 지연 시간) ngân sách (budget / 예산). **bộ nhớ đệm (cache / 캐시) Aside/Single Flight** cho bộ nhớ đệm (cache / 캐시). **Anti-Corruption tầng (layer / 계층)** cho vendor ranh giới (boundary / 경계). **CQRS-lite** cho optimized read các mô hình (models / 모델들). **Graceful Shutdown** cho triển khai (deployment / 배포). **Optimistic tính đồng thời (concurrency / 동시성)** cho concurrent edits.
+
+---
+
+# 116. thiết kế (design / 설계) Patterns trong Spring cấp cao (senior / 시니어)
+
+Proxy là nền của AOP/giao dịch (transaction / 트랜잭션)/bảo mật (security / 보안)/bộ nhớ đệm (cache / 캐시)/async/declarative clients. chuỗi (chain / 사슬) of Responsibility thể hiện qua servlet/bảo mật (security / 보안)/interceptor chains. Adapter nằm ở MVC HandlerAdapter, persistence và bên ngoài (external / 외부) gateways. Observer liên hệ ứng dụng (application / 애플리케이션) events. Factory xuất hiện trong BeanFactory/FactoryBean. chiến lược (strategy / 전략) xuất hiện ở providers/handlers/policies. Front Controller là DispatcherServlet.
+
+Ở cấp cao (senior / 시니어), mẫu (pattern / 패턴) quan trọng không phải tên mà là sự đánh đổi (trade-off / 트레이드오프): hidden điều khiển (control / 제어) luồng (flow / 흐름), testability, thứ tự (ordering / 순서) và vòng đời (lifecycle / 생명주기).
+
+---
+
+# 117. cấp cao (senior / 시니어) Mini dự án (project / 프로젝트): môi trường vận hành (production / 운영 환경) thứ tự (order / 순서) nền tảng (platform / 플랫폼)
 
 Xây modular monolith gồm `order`, `payment`, `inventory`, `customer`, `notification`.
 
-Order creation dùng local transaction để lưu order + outbox. Một publisher background gửi integration event. Consumer simulation phải idempotent.
+Thứ tự (order / 순서) creation dùng cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) để lưu thứ tự (order / 순서) + outbox. Một publisher background gửi tích hợp (integration / 통합) sự kiện (event / 이벤트). bên tiêu thụ (consumer / 소비자) simulation phải idempotent.
 
-Payment adapter dùng RestClient/HTTP interface, timeout, error taxonomy, idempotency key, bounded retry và bulkhead.
+Payment adapter dùng RestClient/HTTP giao diện (interface / 인터페이스), hết thời gian chờ (timeout / 타임아웃), lỗi (error / 오류) taxonomy, idempotency key, bounded thử lại (retry / 재시도) và bulkhead.
 
-JPA phải có optimistic locking, một read projection, một N+1 test/fix và batch processing experiment.
+JPA phải có optimistic locking, một read projection, một N+1 kiểm thử (test / 테스트)/fix và batch processing experiment.
 
-Security dùng OAuth2 Resource Server JWT. Authorization cancel order phải ở use-case boundary.
+Bảo mật (security / 보안) dùng OAuth2 tài nguyên (resource / 자원) máy chủ (server / 서버) JWT. Authorization cancel thứ tự (order / 순서) phải ở use-case ranh giới (boundary / 경계).
 
-Observability gồm Actuator, Micrometer, tracing và custom checkout observation với low-cardinality tags.
+Khả năng quan sát (observability / 관측 가능성) gồm Actuator, Micrometer, tracing và custom checkout observation với low-cardinality tags.
 
-Chạy load test platform threads vs virtual threads. Đo throughput, p95/p99, DB pool waiting, CPU, memory và thread counts.
+Chạy kiểm thử tải (load test / 부하 테스트) nền tảng (platform / 플랫폼) threads vs virtual threads. Đo thông lượng (throughput / 처리량), p95/p99, DB pool waiting, CPU, bộ nhớ (memory / 메모리) và luồng thực thi (thread / 스레드) counts.
 
-Build native image experiment và so startup/RSS/steady-state thay vì tuyên bố winner.
+Bản dựng (build / 빌드) bản địa (native / 네이티브) ảnh (image / 이미지) experiment và so startup/RSS/steady-state thay vì tuyên bố winner.
 
 ---
 
-# 118. Senior → Master Supplement Gate
+# 118. cấp cao (senior / 시니어) → Master Supplement Gate
 
-Bạn sẵn sàng sang Master Supplement khi có thể giải thích bằng causal flow, không dùng câu “Spring tự làm”.
+Bạn sẵn sàng sang Master Supplement khi có thể giải thích bằng nhân quả (causal / 인과적) luồng (flow / 흐름), không dùng câu “Spring tự làm”.
 
-Với container, bạn phải hiểu definitions, post-processors, early bean creation và proxy chain. Với AOP, bạn phải giải thích Advisor/MethodInterceptor, proxy types, self-invocation và ordering.
+Với bộ chứa (container / 컨테이너), bạn phải hiểu definitions, post-processors, early bean creation và proxy chuỗi (chain / 사슬). Với AOP, bạn phải giải thích Advisor/MethodInterceptor, proxy types, self-invocation và thứ tự (ordering / 순서).
 
-Với transaction, bạn phải phân biệt logical/physical transactions, resource binding, rollback-only, REQUIRES_NEW resource impact và local-vs-distributed boundary.
+Với giao dịch (transaction / 트랜잭션), bạn phải phân biệt logical/vật lý (physical / 물리적) transactions, tài nguyên (resource / 자원) binding, rollback-only, REQUIRES_NEW tài nguyên (resource / 자원) impact và local-vs-distributed ranh giới (boundary / 경계).
 
-Với JPA, bạn phải diagnose N+1/cartesian fetch, dirty checking cost, batching, locking, pool sizing và OSIV trade-off.
+Với JPA, bạn phải diagnose N+1/cartesian fetch, dirty checking chi phí (cost / 비용), batching, locking, pool sizing và OSIV sự đánh đổi (trade-off / 트레이드오프).
 
-Với web, bạn phải chọn MVC platform threads, MVC virtual threads hay WebFlux dựa workload. Với reactive, hiểu event loop/backpressure/context.
+Với web, bạn phải chọn MVC nền tảng (platform / 플랫폼) threads, MVC virtual threads hay WebFlux dựa tải công việc (workload / 워크로드). Với reactive, hiểu vòng lặp sự kiện (event loop / 이벤트 루프)/backpressure/ngữ cảnh (context / 맥락).
 
-Với Security, phải trace Servlet filter architecture, authentication manager/providers, JWT validation, method authorization, CSRF/CORS contexts.
+Với bảo mật (security / 보안), phải dấu vết (trace / 추적) Servlet filter kiến trúc (architecture / 아키텍처), authentication manager/providers, JWT kiểm tra hợp lệ (validation / 검증), phương thức (method / 메서드) authorization, CSRF/CORS contexts.
 
-Với production, phải giải thích outbox, idempotency, saga, cache stampede, graceful shutdown, observability cardinality, AOT/native constraints và incident debugging.
+Với môi trường vận hành (production / 운영 환경), phải giải thích outbox, idempotency, saga, bộ nhớ đệm (cache / 캐시) stampede, graceful shutdown, khả năng quan sát (observability / 관측 가능성) cardinality, AOT/bản địa (native / 네이티브) các ràng buộc (constraints / 제약조건들) và sự cố (incident / 인시던트) debugging.
 
 ---
 
 # 119. Những gì cố ý để sang Master Supplement
 
-Master Supplement sẽ không lặp application patterns. Nó sẽ đi vào **Spring source/framework-author level**: `DefaultListableBeanFactory`, configuration-class processing, `AutowiredAnnotationBeanPostProcessor`, auto-proxy creation internals, `AdvisedSupport/ProxyFactory`, `TransactionInterceptor` source flow, `TransactionSynchronizationManager`, DispatcherServlet initialization, handler mappings/adapters registry, Boot auto-configuration import metadata, custom starter authoring, Spring TestContext internals, AOT processors/runtime hints deeper, Spring 7 null-safety/JSpecify, Boot 4 modularization và Spring 7.1 preview/current evolution.
+Master Supplement sẽ không lặp ứng dụng (application / 애플리케이션) patterns. Nó sẽ đi vào **Spring nguồn (source / 소스)/framework-author mức (level / 수준)**: `DefaultListableBeanFactory`, configuration-class processing, `AutowiredAnnotationBeanPostProcessor`, auto-proxy creation internals, `AdvisedSupport/ProxyFactory`, `TransactionInterceptor` nguồn (source / 소스) luồng (flow / 흐름), `TransactionSynchronizationManager`, DispatcherServlet initialization, handler mappings/adapters registry, Boot auto-configuration import siêu dữ liệu (metadata / 메타데이터), custom starter authoring, Spring TestContext internals, AOT processors/thời gian chạy (runtime / 런타임) hints deeper, Spring 7 null-safety/JSpecify, Boot 4 modularization và Spring 7.1 preview/hiện tại (current / 현재) evolution.
 
-Đó là layer cần thiết nếu mục tiêu là “master Spring itself”, không chỉ Senior Spring application engineer.
+Đó là tầng (layer / 계층) cần thiết nếu mục tiêu là “master Spring itself”, không chỉ cấp cao (senior / 시니어) Spring ứng dụng (application / 애플리케이션) engineer.
 
 ---
 
 <!-- VERSION_DETAIL_PART3_2026-09-21_START -->
-# Version Deep Dive cho Senior: migration và production behavior theo generation
+# Phiên bản (version / 버전) Deep Dive cho cấp cao (senior / 시니어): di chuyển (migration / 마이그레이션) và môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작) theo generation
 
-Đường migration an toàn từ Boot 3 sang Boot 4 là đưa application lên **latest Boot 3.5.x trước**, xử lý deprecations/dependency conflicts rồi mới chuyển 4.x. Boot 4 loại bỏ nhiều API deprecated và đồng thời nâng major versions của portfolio projects.
+Đường di chuyển (migration / 마이그레이션) an toàn từ Boot 3 sang Boot 4 là đưa ứng dụng (application / 애플리케이션) lên **latest Boot 3.5.x trước**, xử lý deprecations/phụ thuộc (dependency / 의존성) conflicts rồi mới chuyển 4.x. Boot 4 loại bỏ nhiều API deprecated và đồng thời nâng major versions của portfolio projects.
 
-Boot 4 có modular design rõ hơn. Main modules và test infrastructure được tách theo technology, nhiều integrations có `spring-boot-starter-<technology>` và `spring-boot-starter-<technology>-test`. Migration phải review cả production dependency tree lẫn test dependency tree.
+Boot 4 có modular thiết kế (design / 설계) rõ hơn. Main modules và kiểm thử (test / 테스트) hạ tầng (infrastructure / 인프라) được tách theo technology, nhiều integrations có `spring-boot-starter-<technology>` và `spring-boot-starter-<technology>-test`. di chuyển (migration / 마이그레이션) phải rà soát (review / 검토) cả môi trường vận hành (production / 운영 환경) phụ thuộc (dependency / 의존성) cây (tree / 트리) lẫn kiểm thử (test / 테스트) phụ thuộc (dependency / 의존성) cây (tree / 트리).
 
-Jackson 3 là breaking point lớn. Boot 4 còn `spring-boot-jackson2` như stop-gap compatibility module nhưng module này deprecated theo hướng loại bỏ trong tương lai. Custom serializers, mapper modules, polymorphic typing, persisted JSON và Security serialization cần test riêng khi migrate.
+Jackson 3 là breaking điểm (point / 지점) lớn. Boot 4 còn `spring-boot-jackson2` như stop-gap tính tương thích (compatibility / 호환성) mô-đun (module / 모듈) nhưng mô-đun (module / 모듈) này deprecated theo hướng loại bỏ trong tương lai. Custom serializers, mapper modules, polymorphic typing, persisted JSON và bảo mật (security / 보안) serialization cần kiểm thử (test / 테스트) riêng khi migrate.
 
-Framework 7 dùng JSpecify và deprecated Spring null-safety annotations cũ trong `org.springframework.lang`. Với Java static analysis hoặc Kotlin, upgrade có thể tạo compile-time warnings/errors mới dù method names gần như không đổi.
+Khung phần mềm (framework / 프레임워크) 7 dùng JSpecify và deprecated Spring null-safety annotations cũ trong `org.springframework.lang`. Với Java static phân tích (analysis / 분석) hoặc Kotlin, upgrade có thể tạo compile-time warnings/errors mới dù phương thức (method / 메서드) names gần như không đổi.
 
-Framework 7 có native API-versioning support cho MVC/WebFlux và `@Proxyable` từ 7.0. `@Proxyable` chỉ gợi ý proxy type nếu bean thật sự được auto-proxy; nó không tự tạo proxy.
+Khung phần mềm (framework / 프레임워크) 7 có bản địa (native / 네이티브) API-versioning hỗ trợ (support / 지원) cho MVC/WebFlux và `@Proxyable` từ 7.0. `@Proxyable` chỉ gợi ý proxy kiểu (type / 타입) nếu bean thật sự được auto-proxy; nó không tự tạo proxy.
 
-Boot 4.1 bổ sung notable features gồm Spring gRPC support, Jackson configuration/customization improvements, HTTP client SSRF mitigation với `InetAddressFilter`, OpenTelemetry/observability enhancements và Log4j file rotation support.
+Boot 4.1 bổ sung notable features gồm Spring gRPC hỗ trợ (support / 지원), Jackson cấu hình (configuration / 구성)/customization improvements, HTTP máy khách (client / 클라이언트) SSRF mitigation với `InetAddressFilter`, OpenTelemetry/khả năng quan sát (observability / 관측 가능성) enhancements và Log4j tệp (file / 파일) rotation hỗ trợ (support / 지원).
 
-Spring Security cũng đã sang major generation 7. Security 6.5 là preparation line cho migration; current docs tại thời điểm cập nhật liệt kê stable 7.1.1, 7.0.7 và 6.5.11. Khi dùng Boot, ưu tiên version management của Boot trừ khi có lý do security/compatibility rõ và đã test matrix.
+Spring bảo mật (security / 보안) cũng đã sang major generation 7. bảo mật (security / 보안) 6.5 là preparation line cho di chuyển (migration / 마이그레이션); hiện tại (current / 현재) docs tại thời điểm cập nhật liệt kê stable 7.1.1, 7.0.7 và 6.5.11. Khi dùng Boot, ưu tiên phiên bản (version / 버전) management của Boot trừ khi có lý do bảo mật (security / 보안)/tính tương thích (compatibility / 호환성) rõ và đã kiểm thử (test / 테스트) ma trận (matrix / 행렬).
 
-Preview hiện tại là Boot 4.2.0-M1 + Framework 7.1.0-M1. Senior/Master nên đọc để biết direction nhưng không nên dạy milestone API như stable production API.
+Preview hiện tại là Boot 4.2.0-M1 + khung phần mềm (framework / 프레임워크) 7.1.0-M1. cấp cao (senior / 시니어)/Master nên đọc để biết direction nhưng không nên dạy milestone API như stable môi trường vận hành (production / 운영 환경) API.
 <!-- VERSION_DETAIL_PART3_2026-09-21_END -->
 
 ---
 
-# 120. Version References
+# 120. phiên bản (version / 버전) References
 
-Current stable Boot system requirements: https://docs.spring.io/spring-boot/system-requirements.html
+Hiện tại (current / 현재) stable Boot hệ thống (system / 시스템) requirements: https://docs.spring.io/spring-boot/system-requirements.html
 
-Spring AOP proxying: https://docs.spring.io/spring-framework/reference/core/aop/proxying.html
+Spring AOP proxying: https://docs.spring.io/spring-framework/tham chiếu (reference / 참조)/cốt lõi (core / 핵심)/aop/proxying.html
 
-Spring Transactions: https://docs.spring.io/spring-framework/reference/data-access/transaction.html
+Spring Transactions: https://docs.spring.io/spring-framework/tham chiếu (reference / 참조)/data-access/giao dịch (transaction / 트랜잭션).html
 
-Spring MVC: https://docs.spring.io/spring-framework/reference/web/webmvc.html
+Spring MVC: https://docs.spring.io/spring-framework/tham chiếu (reference / 참조)/web/webmvc.html
 
-Spring WebFlux: https://docs.spring.io/spring-framework/reference/web/webflux.html
+Spring WebFlux: https://docs.spring.io/spring-framework/tham chiếu (reference / 참조)/web/webflux.html
 
-Spring Security: https://docs.spring.io/spring-security/reference/
+Spring bảo mật (security / 보안): https://docs.spring.io/spring-security/tham chiếu (reference / 참조)/
 
-Spring Boot Actuator: https://docs.spring.io/spring-boot/reference/actuator/
+Spring Boot Actuator: https://docs.spring.io/spring-boot/tham chiếu (reference / 참조)/actuator/
 
-Spring Native Images: https://docs.spring.io/spring-boot/reference/packaging/native-image/
+Spring bản địa (native / 네이티브) Images: https://docs.spring.io/spring-boot/tham chiếu (reference / 참조)/packaging/native-image/
 
-Boot 4 Migration: https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide
+Boot 4 di chuyển (migration / 마이그레이션): https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide
+
+> **Bàn giao:** Sau **Testing kiến trúc (architecture / 아키텍처) phải mô phỏng đúng thất bại (failure / 실패) ranh giới (boundary / 경계)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [spring part1 beginner rewritten detailed](./spring_part1_beginner_rewritten_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

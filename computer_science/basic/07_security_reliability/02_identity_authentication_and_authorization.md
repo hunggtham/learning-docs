@@ -1,5 +1,8 @@
 # Danh tính, xác thực và phân quyền
 
+> **Mạch đọc:** Đọc **Danh tính, xác thực và phân quyền** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Danh tính** sang **Xác thực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hệ thống danh tính cần trả lời ba câu hỏi khác nhau: **đây là ai hoặc thực thể nào, họ chứng minh danh tính bằng gì, và họ được phép làm gì?** Nhầm lẫn giữa **xác thực (authentication)** và **phân quyền (authorization)** là nguyên nhân phổ biến của lỗi bảo mật.
 
 ## Danh tính
@@ -7,6 +10,9 @@ Hệ thống danh tính cần trả lời ba câu hỏi khác nhau: **đây là 
 **Danh tính (identity / 신원)** là định danh tương đối ổn định cho người dùng, dịch vụ, thiết bị hoặc khối lượng công việc trong một miền quản lý. Tên đăng nhập hoặc email có thể thay đổi, vì vậy mã định danh chủ thể nội bộ (subject ID) thường phù hợp hơn cho liên kết lâu dài.
 
 Danh tính có vòng đời: cấp mới, đăng ký thông tin xác thực, thay đổi vai trò, tạm khóa và xóa. Tài khoản hoặc khóa bị bỏ quên sau khi không còn sử dụng là một rủi ro bảo mật.
+
+
+> **Chuyển mạch:** Từ **Danh tính**, ta sang **Xác thực** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Xác thực
 
@@ -16,6 +22,9 @@ Các yếu tố thường được chia thành thứ người dùng biết, th�
 
 Một lần đăng nhập thành công không có nghĩa phiên làm việc sẽ đáng tin vô thời hạn. Sự kiện xác thực luôn có mức bảo đảm, thời điểm và bối cảnh cụ thể.
 
+
+> **Chuyển mạch:** Từ **Xác thực**, ta sang **Phân quyền** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Phân quyền
 
 **Phân quyền (authorization / 인가)** quyết định một hành động trên một tài nguyên có được phép hay không. Một số mô hình phổ biến gồm:
@@ -23,9 +32,12 @@ Một lần đăng nhập thành công không có nghĩa phiên làm việc sẽ
 - **RBAC**: quyền gắn với vai trò, danh tính nhận vai trò.
 - **ABAC**: chính sách dựa trên thuộc tính của chủ thể, tài nguyên, môi trường và hành động.
 - **ACL**: tài nguyên liệt kê chủ thể và quyền tương ứng.
-- **Capability-based**: việc sở hữu một token hoặc tham chiếu không thể giả mạo trao quyền thực hiện hành động nhất định.
+- **Capability-based**: việc sở hữu một đơn vị từ (token / 토큰) hoặc tham chiếu không thể giả mạo trao quyền thực hiện hành động nhất định.
 
 Hệ thống thực tế thường kết hợp nhiều mô hình.
+
+
+> **Chuyển mạch:** Từ **Phân quyền**, ta sang **Xác thực không đồng nghĩa với phân quyền** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Xác thực không đồng nghĩa với phân quyền
 
@@ -33,35 +45,56 @@ Máy chủ có thể biết yêu cầu đến từ người dùng 123 nhưng v�
 
 Mỗi lần truy cập tài nguyên cần được kiểm tra quyền đầy đủ tại điểm thực thi, thay vì chỉ dựa vào giao diện phía người dùng.
 
+
+> **Chuyển mạch:** Từ **Xác thực không đồng nghĩa với phân quyền**, ta sang **Phiên làm việc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Phiên làm việc
 
-Sau khi xác thực, máy chủ có thể tạo **mã phiên (session ID)** và lưu nó trong cookie, trong khi trạng thái phiên nằm ở phía máy chủ. Hệ thống dựa trên token có thể mang các tuyên bố đã ký, ví dụ JWT, nhưng token vẫn phải được kiểm tra chữ ký, bên phát hành, đối tượng nhận, thời hạn, thời điểm có hiệu lực, trạng thái khóa và bối cảnh phân quyền.
+Sau khi xác thực, máy chủ có thể tạo **mã phiên (session ID)** và lưu nó trong cookie, trong khi trạng thái phiên nằm ở phía máy chủ. Hệ thống dựa trên đơn vị từ (token / 토큰) có thể mang các tuyên bố đã ký, ví dụ JWT, nhưng đơn vị từ (token / 토큰) vẫn phải được kiểm tra chữ ký, bên phát hành, đối tượng nhận, thời hạn, thời điểm có hiệu lực, trạng thái khóa và bối cảnh phân quyền.
 
-JWT không tự làm hệ thống trở thành “không trạng thái” nếu việc thu hồi token, trạng thái người dùng, quyền hoặc refresh token vẫn cần dữ liệu phía máy chủ.
+JWT không tự làm hệ thống trở thành “không trạng thái” nếu việc thu hồi đơn vị từ (token / 토큰), trạng thái người dùng, quyền hoặc refresh đơn vị từ (token / 토큰) vẫn cần dữ liệu phía máy chủ.
+
+
+> **Chuyển mạch:** Từ **Phiên làm việc**, ta sang **Cookie và bảo mật trình duyệt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cookie và bảo mật trình duyệt
 
 Thuộc tính `HttpOnly` hạn chế JavaScript truy cập cookie; `Secure` yêu cầu cookie chỉ được gửi qua HTTPS; `SameSite` kiểm soát việc gửi cookie trong ngữ cảnh khác trang và hỗ trợ phòng chống CSRF. Mã phiên phải khó đoán và được bảo vệ khỏi đánh cắp hoặc cố định phiên.
 
-**CSRF** lợi dụng việc trình duyệt tự động đính kèm thông tin xác thực vào yêu cầu khác trang. Token chống CSRF, `SameSite` và kiểm tra nguồn yêu cầu có thể giảm rủi ro tùy kiến trúc. **XSS** có thể thực hiện hành động dưới danh nghĩa người dùng và đọc dữ liệu không được `HttpOnly` bảo vệ, vì vậy phòng chống XSS vẫn rất quan trọng.
+**CSRF** lợi dụng việc trình duyệt tự động đính kèm thông tin xác thực vào yêu cầu khác trang. đơn vị từ (token / 토큰) chống CSRF, `SameSite` và kiểm tra nguồn yêu cầu có thể giảm rủi ro tùy kiến trúc. **XSS** có thể thực hiện hành động dưới danh nghĩa người dùng và đọc dữ liệu không được `HttpOnly` bảo vệ, vì vậy phòng chống XSS vẫn rất quan trọng.
+
+
+> **Chuyển mạch:** Từ **Cookie và bảo mật trình duyệt**, ta sang **Trực giác về OAuth 2.0 và OpenID Connect** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trực giác về OAuth 2.0 và OpenID Connect
 
-OAuth 2.0 là **khung phân quyền ủy quyền (delegated authorization framework)**; OpenID Connect (OIDC) bổ sung tầng danh tính và xác thực với ID token cùng các endpoint chuẩn. Không nên dùng access token của OAuth như một token đăng nhập tùy ý nếu chưa kiểm tra đúng mục đích và ngữ nghĩa của nó.
+OAuth 2.0 là **khung phân quyền ủy quyền (delegated authorization framework)**; OpenID Connect (OIDC) bổ sung tầng danh tính và xác thực với ID đơn vị từ (token / 토큰) cùng các endpoint chuẩn. Không nên dùng truy cập (access / 접근) đơn vị từ (token / 토큰) của OAuth như một đơn vị từ (token / 토큰) đăng nhập tùy ý nếu chưa kiểm tra đúng mục đích và ngữ nghĩa của nó.
 
-Luồng Authorization Code kết hợp PKCE là lựa chọn phổ biến cho nhiều ứng dụng công khai. Khuyến nghị triển khai có thể thay đổi theo đặc tả và nhà cung cấp, vì vậy cần theo tài liệu hiện hành của hệ thống được sử dụng.
+Luồng Authorization mã (code / 코드) kết hợp PKCE là lựa chọn phổ biến cho nhiều ứng dụng công khai. Khuyến nghị triển khai có thể thay đổi theo đặc tả và nhà cung cấp, vì vậy cần theo tài liệu hiện hành của hệ thống được sử dụng.
+
+
+> **Chuyển mạch:** Từ **Trực giác về OAuth 2.0 và OpenID Connect**, ta sang **Danh tính dịch vụ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Danh tính dịch vụ
 
-Microservice cũng cần danh tính máy. Các lựa chọn gồm chứng chỉ mTLS, danh tính khối lượng công việc (workload identity), token ngắn hạn hoặc IAM của nền tảng cloud. Chia sẻ một API key tĩnh cho nhiều dịch vụ làm mất khả năng truy vết và khiến việc xoay vòng khóa trở nên thô và rủi ro.
+Microservice cũng cần danh tính máy. Các lựa chọn gồm chứng chỉ mTLS, danh tính khối lượng công việc (workload identity), đơn vị từ (token / 토큰) ngắn hạn hoặc IAM của nền tảng cloud. Chia sẻ một API key tĩnh cho nhiều dịch vụ làm mất khả năng truy vết và khiến việc xoay vòng khóa trở nên thô và rủi ro.
+
+
+> **Chuyển mạch:** Từ **Danh tính dịch vụ**, ta sang **Đặc quyền tối thiểu và phạm vi quyền** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Đặc quyền tối thiểu và phạm vi quyền
 
-Phạm vi token và vai trò nên giới hạn đúng những gì chủ thể cần làm. Thông tin xác thực sống ngắn giảm thời gian bị khai thác nếu rò rỉ, nhưng cơ chế làm mới và xoay vòng trở thành phần quan trọng của thiết kế.
+Phạm vi đơn vị từ (token / 토큰) và vai trò nên giới hạn đúng những gì chủ thể cần làm. Thông tin xác thực sống ngắn giảm thời gian bị khai thác nếu rò rỉ, nhưng cơ chế làm mới và xoay vòng trở thành phần quan trọng của thiết kế.
+
+
+> **Chuyển mạch:** Từ **Đặc quyền tối thiểu và phạm vi quyền**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
-> **Danh tính = chủ thể. Xác thực = chứng minh quyền kiểm soát danh tính. Phân quyền = quyết định chính sách cho hành động trên tài nguyên. Phiên hoặc token = mang bằng chứng và bối cảnh theo thời gian.** Hãy giữ các tầng này tách biệt trong thiết kế.
+> **Danh tính = chủ thể. Xác thực = chứng minh quyền kiểm soát danh tính. Phân quyền = quyết định chính sách cho hành động trên tài nguyên. Phiên hoặc đơn vị từ (token / 토큰) = mang bằng chứng và bối cảnh theo thời gian.** Hãy giữ các tầng này tách biệt trong thiết kế.
+
+
+> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những hiểu lầm thường gặp
 
@@ -71,6 +104,11 @@ Phạm vi token và vai trò nên giới hạn đúng những gì chủ thể c�
 
 **“OAuth = xác thực.”** OAuth cốt lõi giải quyết phân quyền ủy quyền; OIDC bổ sung ngữ nghĩa xác thực và danh tính.
 
+
+> **Chuyển mạch:** Từ **Những hiểu lầm thường gặp**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Kết nối
 
-Đọc thêm về ranh giới tin cậy trong [nguyên tắc bảo mật](./00_threat_models_and_security_principles.md), token và chứng chỉ trong [mật mã học](./01_cryptography_foundations.md), kênh trình duyệt trong [DNS/HTTP/TLS](../06_networks_distributed_systems/03_dns_http_tls_and_web_request.md) và các kiểu tấn công ứng dụng trong [lỗ hổng phần mềm](./03_software_vulnerabilities.md).
+Đọc thêm về ranh giới tin cậy trong [nguyên tắc bảo mật](./00_threat_models_and_security_principles.md), đơn vị từ (token / 토큰) và chứng chỉ trong [mật mã học](./01_cryptography_foundations.md), kênh trình duyệt trong [DNS/HTTP/TLS](../06_networks_distributed_systems/03_dns_http_tls_and_web_request.md) và các kiểu tấn công ứng dụng trong [lỗ hổng phần mềm](./03_software_vulnerabilities.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 threat models and security principles](./00_threat_models_and_security_principles.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

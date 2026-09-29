@@ -20,7 +20,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 > **Nguồn:** tổng hợp từ các Markdown đã generate trong `raw_md/final`, được đối chiếu với các nguồn `raw` và `raw_md` cùng môn. Nội dung gốc được giữ lại; chỉ chuẩn hoá cấu trúc bài học.
 
-> **Quy ước đọc:** thuật ngữ được ưu tiên theo mẫu `한국어 (English) (Tiếng Việt)`. Mỗi ý tiếng Hàn có phần giải thích Việt ngữ liền kề hoặc ngay sau đó; khi gặp từ kỹ thuật trong ngoặc, hãy xem đó là nghĩa cần nhớ khi làm đề.
+> **Quy ước ngôn ngữ:** phần giải thích ưu tiên tiếng Việt; ở mọi lần xuất hiện, thuật ngữ đề thi dùng dạng `nghĩa Việt (English / 한국어)` để không phải quay lại tìm nghĩa.
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
@@ -30,7 +30,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 ## 1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)
 
-Chúng ta bắt đầu mạch học bằng **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/18 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
+Chúng ta bắt đầu mạch học bằng **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/61 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
 
 Để đọc **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** như một bài học cho người mới, hãy giữ câu hỏi: **một dự án đi qua những giai đoạn nào, mỗi mô hình phân bổ công việc và rủi ro ra sao?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -100,21 +100,149 @@ Các ý về **1.4 소프트웨어 개발 프레임워크 (Software Development 
 
 Với **1.4 소프트웨어 개발 프레임워크 (Software Development Framework)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Như vậy, **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)
+
+Sau khi đã đặt nền bằng **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, ta chuyển sang **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**. Đây là mắt xích 2/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** như một bài học cho người mới, hãy giữ câu hỏi: **một dự án đi qua những giai đoạn nào, mỗi mô hình phân bổ công việc và rủi ro ra sao?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **내부적 기준**, **외부적 기준**, **종류** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **1. 테일러링 (Tailoring)**. Hãy xác định **1. 테일러링 (Tailoring)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 1. 테일러링 (Tailoring)
+
+Phần nguồn của **1. 테일러링 (Tailoring)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+프로젝트 특성에 맞게 개발 방법론의 절차나 기법을 수정 및 보완하는 작업.
+- **내부적 기준**: 목표 환경, 요구사항, 프로젝트 규모, 보유 기술.
+- **외부적 기준**: 법적 제약사항, 표준 품질 기준.
+
+Các bullet của **1. 테일러링 (Tailoring)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 테일러링 (Tailoring)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 소프트웨어 개발 프레임워크 (Framework)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **2. 소프트웨어 개발 프레임워크 (Framework)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 2. 소프트웨어 개발 프레임워크 (Framework)
+
+Các ý ngay dưới **2. 소프트웨어 개발 프레임워크 (Framework)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+공통 사용되는 구성 요소와 아키텍처를 일반화하여 제공하는 반제품 형태의 시스템. (예외 처리, 트랜잭션, DB 연동 등 기본 기능 제공).
+- **종류**: 스프링(Spring - Java용), 닷넷(.NET - Windows용), 전자정부 프레임워크(공공부문 지원).
+
+Các bullet của **2. 소프트웨어 개발 프레임워크 (Framework)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 소프트웨어 개발 프레임워크 (Framework)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Ta có thể khép mục **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 프레임워크 특징 및 SW 신기술 (Framework & SW Tech)
+
+Từ **소프트웨어 개발 방법론 테일러링 및 프레임워크 (Tailoring & Framework)**, ta đã có điểm tựa để bước vào **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/61 trước khi đi vào chi tiết.
+
+Để đọc **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **모듈화 (Modularity)**, **재사용성 (Reusability)**, **확장성 (Extensibility)**, **제어의 역흐름 (Inversion of Control)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **1. 프레임워크의 특성 (Characteristics of Framework)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 1. 프레임워크의 특성 (Characteristics of Framework)
+
+Các ý ngay dưới **1. 프레임워크의 특성 (Characteristics of Framework)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **모듈화 (Modularity)**: 캡슐화로 모듈화를 강화하여 변경 영향을 최소화.
+- **재사용성 (Reusability)**: 재사용 가능한 모듈 제공으로 생산성 향상.
+- **확장성 (Extensibility)**: 다형성을 통한 인터페이스 확장.
+- **제어의 역흐름 (Inversion of Control)**: 개발자가 아닌 프레임워크가 객체들을 제어하고 통제.
+
+Các bullet của **1. 프레임워크의 특성 (Characteristics of Framework)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 프레임워크의 특성 (Characteristics of Framework)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. SDE (Software-Defined Everything)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **2. SDE (Software-Defined Everything)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 2. SDE (Software-Defined Everything)
+
+Bây giờ ta đi vào nội dung của **2. SDE (Software-Defined Everything)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+하드웨어 자원을 가상화하여 소프트웨어만으로 제어 및 관리하는 기술.
+- **SDN**: 소프트웨어 정의 네트워킹 (네트워크 가상화)
+- **SDDC**: 소프트웨어 정의 데이터 센터 (데이터 센터 전체 가상화)
+- **SDS**: 소프트웨어 정의 스토리지 (스토리지 가상화)
+
+Các bullet của **2. SDE (Software-Defined Everything)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. SDE (Software-Defined Everything)**, đừng bắt đầu lại từ số không. **3. 주요 SW 및 관련 용어** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Với **3. 주요 SW 및 관련 용어**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 3. 주요 SW 및 관련 용어
+
+Phần nguồn của **3. 주요 SW 및 관련 용어** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **SOA (Service Oriented Architecture)**: 서비스나 컴포넌트 중심으로 구축하는 아키텍처.
+- **디지털 트윈 (Digital Twin)**: 물리적 자산을 소프트웨어로 가상화(복제)하여 효율성을 높이는 기술.
+- **텐서플로 (TensorFlow)**: 구글이 만든 딥러닝/데이터 흐름용 오픈소스 라이브러리.
+- **도커 (Docker)**: 컨테이너(Container) 기술을 자동화하는 오픈소스 프로젝트.
+
+Các bullet của **3. 주요 SW 및 관련 용어** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **3. 주요 SW 및 관련 용어** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Điểm chốt của **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크
+
+Ở bước 4/61, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** xuất hiện như phần tiếp nối của **프레임워크 특징 및 SW 신기술 (Framework & SW Tech)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Như vậy, **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 336. 소프트웨어 개발 프레임워크 (Software Development Framework)
+
+Sau khi đã đặt nền bằng **5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크**, ta chuyển sang **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**. Đây là mắt xích 5/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **개념**, **특성**, **Tiếng Việt** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 개발에 공통 사용되는 구조를 제공하여 생산성을 높이는 기반.
+- **특성**: 모듈화, 재사용성, 확장성, **제어의 역흐름(IoC)**.
+- **Tiếng Việt**: Nền tảng cấu trúc sẵn giúp tăng năng suất (như Spring, .NET). Đặc tính: Module hóa, Tái sử dụng, Mở rộng, Đảo ngược luồng điều khiển (IoC).
+
+Ta bắt đầu phần nội dung bằng **자주 혼동하는 판별 포인트**. Hãy xác định **자주 혼동하는 판별 포인트** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 자주 혼동하는 판별 포인트
+
+Phần nguồn của **자주 혼동하는 판별 포인트** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- COCOMO의 고전 유형은 **Organic / Semi-Detached / Embedded**이며 Sequential은 유형명이 아니다.
+- RIP는 거리 벡터 방식이고 최대 15홉을 사용한다. OSPF는 링크 상태 방식, BGP는 AS 간 경로 제어다.
+- AES·DES·SEED는 대칭키, RSA는 공개키 알고리즘이다. 해시(MD5/SHA 계열)는 암·복호화 키를 교환하는 알고리즘이 아니라 일방향 요약 함수다.
+- Chinese Wall은 이해상충 방지, Bell-LaPadula는 기밀성, Biba는 무결성 중심 모델이다.
+
+Các bullet của **자주 혼동하는 판별 포인트** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Với **자주 혼동하는 판별 포인트**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+
+Ta có thể khép mục **336. 소프트웨어 개발 프레임워크 (Software Development Framework)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)
 
-Sau khi đã đặt nền bằng **1. 소프트웨어 개발 방법론 및 프레임워크 (Phương pháp luận & Framework phát triển PM)**, ta chuyển sang **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Đây là mắt xích 2/18 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **336. 소프트웨어 개발 프레임워크 (Software Development Framework)**, ta đã có điểm tựa để bước vào **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/61 trước khi đi vào chi tiết.
 
 Để đọc **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **3.1 소프트웨어 프로젝트 관리 (Software Project Management)**. Hãy xác định **3.1 소프트웨어 프로젝트 관리 (Software Project Management)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **3.1 소프트웨어 프로젝트 관리 (Software Project Management)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 3.1 소프트웨어 프로젝트 관리 (Software Project Management)
 
-Phần nguồn của **3.1 소프트웨어 프로젝트 관리 (Software Project Management)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **3.1 소프트웨어 프로젝트 관리 (Software Project Management)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 주어진 기간 내에 최소의 비용으로 사용자를 만족시키는 시스템을 개발하기 위한 전반적인 활동.
 - **Tiếng Việt:** Hoạt động tổng thể để phát triển hệ thống làm hài lòng người dùng với chi phí tối thiểu trong thời gian quy định.
@@ -122,20 +250,20 @@ Phần nguồn của **3.1 소프트웨어 프로젝트 관리 (Software Project
 Các bullet của **3.1 소프트웨어 프로젝트 관리 (Software Project Management)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **3.1 소프트웨어 프로젝트 관리 (Software Project Management)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **3.2 하향식/상향식 비용 산정 (Cost Estimation)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **3.2 하향식/상향식 비용 산정 (Cost Estimation)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **3.2 하향식/상향식 비용 산정 (Cost Estimation)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 3.2 하향식/상향식 비용 산정 (Cost Estimation)
 
-Các ý ngay dưới **3.2 하향식/상향식 비용 산정 (Cost Estimation)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **3.2 하향식/상향식 비용 산정 (Cost Estimation)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 Phần **3.2 하향식/상향식 비용 산정 (Cost Estimation)** không có nhiều dữ liệu rời để tách nhỏ, vì vậy hãy giữ câu hỏi mục đích và tự chốt bằng một câu giải thích trước khi đi tiếp.
 
 Sau khi đọc **3.2 하향식/상향식 비용 산정 (Cost Estimation)**, đừng bắt đầu lại từ số không. **LOC 기법 (Lines of Code)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **LOC 기법 (Lines of Code)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **LOC 기법 (Lines of Code)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 #### LOC 기법 (Lines of Code)
 
-Bây giờ ta đi vào nội dung của **LOC 기법 (Lines of Code)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **LOC 기법 (Lines of Code)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 각 기능의 원시 코드 라인 수의 비관치, 낙관치, 기대치를 측정하여 예측.
 - **공식 (Formulas):**
@@ -148,34 +276,33 @@ Bây giờ ta đi vào nội dung của **LOC 기법 (Lines of Code)**. Mỗi bu
 Với **LOC 기법 (Lines of Code)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 **LOC 기법 (Lines of Code)** vừa cho ta cách đặt câu hỏi. Bây giờ **수학적 산정 기법 (Mathematical Models)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **수학적 산정 기법 (Mathematical Models)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **수학적 산정 기법 (Mathematical Models)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 #### 수학적 산정 기법 (Mathematical Models)
 
-Phần nguồn của **수학적 산정 기법 (Mathematical Models)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **수학적 산정 기법 (Mathematical Models)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
-- **COCOMO 모형:** 원시 프로그램의 규모(LOC)에 의한 산정.
-  - 개발 유형: **조직형 (Organic, <50K)**, **반분리형 (Semi-Detached, <300K)**, **내장형 (Embedded, >300K)**.
+- **COCOMO 모형:** 원시 프로그램의 규모(LOC)와 개발 유형에 의한 비용 산정. 고전 COCOMO의 경계는 조직형 `≤ 50 KDSI`, 반분리형 `> 50 ~ 300 KDSI`, 내장형 `> 300 KDSI`로 겹치지 않게 해석한다.
 - **Putnam 모형:** 생명 주기 동안 사용될 노력의 분포를 가정 (Rayleigh-Norden 곡선 기초). **SLIM** 도구 사용.
 - **기능 점수 (FP) 모형:** 기능적 요구사항을 점수화. 가중치 증대 요인: 자료 입력, 정보 출력, 명령어(질의), 데이터 파일, 외부 루틴 인터페이스.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - COCOMO: Dựa vào số dòng code (LOC). Gồm Organic (nhỏ), Semi-Detached (vừa), Embedded (lớn).
   - Putnam: Dựa trên đường cong Rayleigh-Norden (Công cụ: SLIM).
-  - FP (Function Point): Dựa trên tính năng. 
+  - FP (Function Point): Dựa trên tính năng.
 
 Các bullet của **수학적 산정 기법 (Mathematical Models)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **수학적 산정 기법 (Mathematical Models)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **3.3 일정 관리 (Schedule Management)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **3.3 일정 관리 (Schedule Management)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **3.3 일정 관리 (Schedule Management)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 3.3 일정 관리 (Schedule Management)
 
-Các ý ngay dưới **3.3 일정 관리 (Schedule Management)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **3.3 일정 관리 (Schedule Management)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **PERT (프로그램 평가 및 검토 기술):** 낙관, 가능, 비관적인 경우로 나누어 종료 시기를 결정. 결정 경로와 임계 경로를 알 수 있음.
 - **CPM (임계 경로 기법):** 임계 경로는 프로젝트에서 가장 긴(최장) 경로를 의미한다.
 - **간트 차트 (Gantt Chart):** 작업 일정을 막대 도표로 표시 (수평 막대 길이는 기간).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - PERT: Dựa trên thời gian lạc quan, bi quan, khả thi.
   - Đường găng (Critical Path): Đường dài nhất trong sơ đồ mạng.
   - Biểu đồ Gantt: Thể hiện tiến độ bằng thanh ngang.
@@ -183,11 +310,11 @@ Các ý ngay dưới **3.3 일정 관리 (Schedule Management)** cung cấp dữ
 Các bullet của **3.3 일정 관리 (Schedule Management)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **3.3 일정 관리 (Schedule Management)**, đừng bắt đầu lại từ số không. **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)
 
-Bây giờ ta đi vào nội dung của **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **위험 관리 (Risk Analysis):** 돌발 상황(위험)을 미리 예상하고 적절한 대책을 수립.
 - **방법론 테일러링 (Tailoring):** 프로젝트 상황에 맞게 방법론 절차나 기법을 수정/보완.
@@ -199,21 +326,133 @@ Các bullet của **3.4 위험 관리 및 테일러링 (Risk Management & Tailor
 
 Như vậy, **3.4 위험 관리 및 테일러링 (Risk Management & Tailoring)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Ta có thể khép mục **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **프로젝트 일정 관리 (Project Schedule Management)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 프로젝트 일정 관리 (Project Schedule Management)
+
+Ở bước 7/61, **프로젝트 일정 관리 (Project Schedule Management)** xuất hiện như phần tiếp nối của **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **프로젝트 일정 관리 (Project Schedule Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Trước hết, ta đặt **1. PERT (Program Evaluation and Review Technique)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. PERT (Program Evaluation and Review Technique)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+
+### 1. PERT (Program Evaluation and Review Technique)
+
+Bây giờ ta đi vào nội dung của **1. PERT (Program Evaluation and Review Technique)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+과거 경험이 없어 예측이 어려운 프로젝트에 사용. 각 작업별로 낙관치, 기대치, 비관치를 나누어 종료 시기를 계산합니다.
+- `예측치 = (비관치 + 4*기대치 + 낙관치) / 6`
+
+Với **1. PERT (Program Evaluation and Review Technique)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Ta vừa chốt **1. PERT (Program Evaluation and Review Technique)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. CPM (Critical Path Method, 임계 경로 기법)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **2. CPM (Critical Path Method, 임계 경로 기법)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 2. CPM (Critical Path Method, 임계 경로 기법)
+
+Phần nguồn của **2. CPM (Critical Path Method, 임계 경로 기법)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+작업 사이의 의존 관계를 노드와 간선으로 구성. 네트워크에서 최장 경로가 **임계 경로(Critical Path)**가 됩니다.
+
+Phần **2. CPM (Critical Path Method, 임계 경로 기법)** không có nhiều dữ liệu rời để tách nhỏ, vì vậy hãy giữ câu hỏi mục đích và tự chốt bằng một câu giải thích trước khi đi tiếp.
+
+Sau khi đọc **2. CPM (Critical Path Method, 임계 경로 기법)**, đừng bắt đầu lại từ số không. **3. 간트 차트 (Gantt Chart, 시간선 차트)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Đoạn **3. 간트 차트 (Gantt Chart, 시간선 차트)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 3. 간트 차트 (Gantt Chart, 시간선 차트)
+
+Các ý ngay dưới **3. 간트 차트 (Gantt Chart, 시간선 차트)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+각 작업의 시작과 종료를 막대 도표로 표시하는 일정표. 적응성이 약하지만 이정표와 작업 기간을 한눈에 파악하기 쉽습니다.
+
+Phần **3. 간트 차트 (Gantt Chart, 시간선 차트)** không có nhiều dữ liệu rời để tách nhỏ, vì vậy hãy giữ câu hỏi mục đích và tự chốt bằng một câu giải thích trước khi đi tiếp.
+
+Như vậy, **3. 간트 차트 (Gantt Chart, 시간선 차트)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Như vậy, **프로젝트 일정 관리 (Project Schedule Management)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 비용 산정 기법 (Software Cost Estimation)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 소프트웨어 비용 산정 기법 (Software Cost Estimation)
+
+Sau khi đã đặt nền bằng **프로젝트 일정 관리 (Project Schedule Management)**, ta chuyển sang **소프트웨어 비용 산정 기법 (Software Cost Estimation)**. Đây là mắt xích 8/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **소프트웨어 비용 산정 기법 (Software Cost Estimation)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **공식**, **COCOMO 모형 (Boehm 제안)**, **Putnam 모형 (생명 주기 예측 모형)**, **FP (Function Point, 기능 점수) 모형** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **1. LOC (Line Of Code) 기법**. Hãy xác định **1. LOC (Line Of Code) 기법** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 1. LOC (Line Of Code) 기법
+
+Phần nguồn của **1. LOC (Line Of Code) 기법** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- 원시 코드(Source Code) 라인 수의 낙관치, 비관치, 기대치를 측정해 예측치를 구하여 비용을 산정.
+- **공식**:
+  - 노력(인월, Man-Month) = `LOC / 1인당 월평균 생산 코드 라인 수` = `개발 기간 × 투입 인원`
+  - 개발 비용 = `노력(인월) × 단위 비용(월평균 인건비)`
+
+Với **1. LOC (Line Of Code) 기법**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Ta vừa chốt **1. LOC (Line Of Code) 기법** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 수학적 산정 기법** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **2. 수학적 산정 기법** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 2. 수학적 산정 기법
+
+Các ý ngay dưới **2. 수학적 산정 기법** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+과거의 프로젝트 데이터를 기반으로 한 상향식 비용 산정 모델입니다.
+- **COCOMO 모형 (Boehm 제안)**: LOC 기반 산정. 고전 COCOMO의 경계는 다음처럼 겹치지 않게 해석한다.
+  1. **조직형 (Organic)**: `≤ 50 KDSI` (중소 규모 업무용).
+  2. **반분리형 (Semi-Detached)**: `> 50 ~ 300 KDSI` (컴파일러, 유틸리티).
+  3. **내장형 (Embedded)**: `> 300 KDSI` (초대형 운영체제, 미사일 제어).
+- **Putnam 모형 (생명 주기 예측 모형)**: 시간에 따른 **Rayleigh-Norden 곡선**의 노력 분포도를 기초로 산정.
+- **FP (Function Point, 기능 점수) 모형**: 알브레히트(Albrecht) 제안. 기능 요인(입력, 출력, 사용자 질의, 데이터 파일, 외부 인터페이스)별로 가중치를 부여해 산정.
+
+> **Vietnamese Explanation**:
+> - **LOC**: Tính chi phí dựa trên số dòng code.
+> - **COCOMO**: Phân loại theo độ lớn dự án (Organic: nhỏ, Semi: vừa, Embedded: lớn).
+> - **Putnam**: Dựa trên đường cong phân bố nỗ lực theo thời gian Rayleigh-Norden.
+> - **FP (Function Point)**: Dựa trên số lượng chức năng phần mềm mang lại cho người dùng.
+
+💡 **Mẹo ghi nhớ (Mnemonics):**
+- FP의 5가지 요인: **I.O.Q.F.I** (Input, Output, inQuiry, File, Interface).
+
+Các bullet của **2. 수학적 산정 기법** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 수학적 산정 기법** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Ta có thể khép mục **소프트웨어 비용 산정 기법 (Software Cost Estimation)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)
+
+Từ **소프트웨어 비용 산정 기법 (Software Cost Estimation)**, ta đã có điểm tựa để bước vào **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/61 trước khi đi vào chi tiết.
+
+Để đọc **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **개념**, **종류**, **COCOMO**, **Putnam** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 통계 공식을 활용한 비용 예측 기법 (Dự toán chi phí dựa trên công thức toán học).
+- **종류**:
+  - **COCOMO**: LOC(라인 수) 기반 (Dựa vào số dòng code).
+  - **Putnam**: 시간에 따른 인력 분포 곡선(Rayleigh-Norden) 활용 (Dựa vào đường cong phân bổ nhân lực).
+  - **FP (Function Point)**: 입력, 출력, 인터페이스 등 기능적 요인 기반 (Dựa vào điểm chức năng).
+
+Điểm chốt của **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)
 
-Từ **3. 프로젝트 관리 및 비용 산정 (Quản lý dự án & Ước tính chi phí)**, ta đã có điểm tựa để bước vào **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/18 trước khi đi vào chi tiết.
+Ở bước 10/61, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** xuất hiện như phần tiếp nối của **323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **4.1 ISO/IEC 12207** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **4.1 ISO/IEC 12207** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **4.1 ISO/IEC 12207** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 4.1 ISO/IEC 12207
 
-Các ý ngay dưới **4.1 ISO/IEC 12207** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **4.1 ISO/IEC 12207**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **기본 생명 주기:** 획득, 공급, 개발, 운영, 유지보수.
 - **지원 생명 주기:** 품질 보증, 검증, 확인, 문서화, 형상 관리 등.
@@ -223,11 +462,11 @@ Các ý ngay dưới **4.1 ISO/IEC 12207** cung cấp dữ liệu và quy tắc 
 Các bullet của **4.1 ISO/IEC 12207** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **4.1 ISO/IEC 12207** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)
 
-Bây giờ ta đi vào nội dung của **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 1. **초기 (Initial):** 프로세스 없음.
 2. **관리 (Managed):** 프로젝트 단위 관리.
@@ -240,11 +479,11 @@ Bây giờ ta đi vào nội dung của **4.2 CMMI 성숙도 5단계 (CMMI Matur
 Các bullet của **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **4.2 CMMI 성숙도 5단계 (CMMI Maturity Levels)**, đừng bắt đầu lại từ số không. **4.3 SPICE (ISO/IEC 15504)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **4.3 SPICE (ISO/IEC 15504)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **4.3 SPICE (ISO/IEC 15504)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 4.3 SPICE (ISO/IEC 15504)
 
-Phần nguồn của **4.3 SPICE (ISO/IEC 15504)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **4.3 SPICE (ISO/IEC 15504)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 소프트웨어 프로세스 평가 및 개선 국제 표준.
 - **수행 능력 6단계 (Capability Levels):**
@@ -260,45 +499,94 @@ Các bullet của **4.3 SPICE (ISO/IEC 15504)** đang nén nhiều ý thành cá
 
 Như vậy, **4.3 SPICE (ISO/IEC 15504)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Điểm chốt của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)
+
+Sau khi đã đặt nền bằng **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**, ta chuyển sang **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**. Đây là mắt xích 11/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **1. ISO/IEC 12207**. Hãy xác định **1. ISO/IEC 12207** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 1. ISO/IEC 12207
+
+Phần nguồn của **1. ISO/IEC 12207** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+표준 소프트웨어 생명 주기 프로세스. 3가지(기본, 지원, 조직 프로세스)로 분류.
+
+Phần **1. ISO/IEC 12207** không có nhiều dữ liệu rời để tách nhỏ, vì vậy hãy giữ câu hỏi mục đích và tự chốt bằng một câu giải thích trước khi đi tiếp.
+
+Ta vừa chốt **1. ISO/IEC 12207** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. CMMI (Capability Maturity Model Integration)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **2. CMMI (Capability Maturity Model Integration)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 2. CMMI (Capability Maturity Model Integration)
+
+Các ý ngay dưới **2. CMMI (Capability Maturity Model Integration)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+조직의 성숙도를 평가하는 모델 (5단계).
+- **초기(Initial) -> 관리(Managed) -> 정의(Defined) -> 정량적 관리(Quantitatively Managed) -> 최적화(Optimizing)**
+
+Các bullet của **2. CMMI (Capability Maturity Model Integration)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. CMMI (Capability Maturity Model Integration)**, đừng bắt đầu lại từ số không. **3. SPICE (ISO/IEC 15504)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **3. SPICE (ISO/IEC 15504)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 3. SPICE (ISO/IEC 15504)
+
+Bây giờ ta đi vào nội dung của **3. SPICE (ISO/IEC 15504)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+프로세스 수행 능력 단계를 평가 (6단계).
+- **불완전(Incomplete) -> 수행(Performed) -> 관리(Managed) -> 확립(Established) -> 예측(Predictable) -> 최적화(Optimizing)**
+
+> **Vietnamese Explanation**:
+> Các tiêu chuẩn như CMMI và SPICE dùng để đánh giá xem một công ty phần mềm làm việc chuyên nghiệp đến đâu. CMMI có 5 cấp độ (từ lộn xộn đến tối ưu hóa liên tục), còn SPICE có 6 cấp độ.
+
+Các bullet của **3. SPICE (ISO/IEC 15504)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **3. SPICE (ISO/IEC 15504)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Ta có thể khép mục **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)
 
-Ở bước 4/18, **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** xuất hiện như phần tiếp nối của **4. 프로세스 품질 표준 (Tiêu chuẩn chất lượng quy trình)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **소프트웨어 프로세스 품질 및 성숙도 표준 (Quality & Maturity Standards)**, ta đã có điểm tựa để bước vào **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/61 trước khi đi vào chi tiết.
 
 Để đọc **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **1.1 데이터 통신 및 주요 발전** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1.1 데이터 통신 및 주요 발전** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Để không đọc **1.1 데이터 통신 및 주요 발전** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 1.1 데이터 통신 및 주요 발전
 
-Bây giờ ta đi vào nội dung của **1.1 데이터 통신 및 주요 발전**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **1.1 데이터 통신 및 주요 발전** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **데이터 통신:** 컴퓨터와 통신기기 사이에서 디지털(0과 1) 정보를 송수신. (데이터 통신 = 데이터 전송 기술 + 데이터 처리 기술).
 - **정보 통신:** 전기 통신 + 컴퓨터 (정보 처리). 통신의 3요소: 정보원, 수신원, 전송 매체.
-- **주요 시스템:** 
+- **주요 시스템:**
   - `SAGE`: 최초의 데이터 통신 시스템.
-  - `SABRE`: 최초 상업용. 
-  - `ARPANET`: 인터넷의 효시. 
+  - `SABRE`: 최초 상업용.
+  - `ARPANET`: 인터넷의 효시.
   - `ALOHA`: 최초 무선 패킷 교환.
 - **Tiếng Việt:** Truyền thông dữ liệu truyền thông tin số (0, 1). 3 yếu tố: Nguồn, Đích, Môi trường truyền. ARPANET là tiền thân của Internet.
 
 Với **1.1 데이터 통신 및 주요 발전**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **1.1 데이터 통신 및 주요 발전** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **1.2 통신 회선 및 매체 (Transmission Media)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **1.2 통신 회선 및 매체 (Transmission Media)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **1.2 통신 회선 및 매체 (Transmission Media)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 1.2 통신 회선 및 매체 (Transmission Media)
 
-Phần nguồn của **1.2 통신 회선 및 매체 (Transmission Media)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **1.2 통신 회선 및 매체 (Transmission Media)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **꼬임선 (Twisted Pair):** 저렴하고 설치 간편, 간섭에 취약.
 - **동축 케이블 (Coaxial Cable):** 대역폭이 넓고 누화 적음, 중계기 필요.
 - **광섬유 케이블 (Optical Fiber):** 빛의 반사 원리. 가장 빠르고 대역폭 큼. 도청 어려워 보안성 우수. 무유도, 무누화.
 - **마이크로파/위성 통신:** 장거리 대용량 통신. 다중 접속 방식: FDMA(주파수), TDMA(시간), CDMA(코드).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Twisted Pair: Rẻ, dễ nhiễu.
   - Coaxial: Băng thông rộng, ít nhiễu.
   - Optical Fiber: Cáp quang (phản xạ ánh sáng), siêu tốc, siêu bảo mật.
@@ -307,11 +595,11 @@ Phần nguồn của **1.2 통신 회선 및 매체 (Transmission Media)** sẽ 
 Các bullet của **1.2 통신 회선 및 매체 (Transmission Media)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **1.2 통신 회선 및 매체 (Transmission Media)**, đừng bắt đầu lại từ số không. **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 1.3 통신 제어장치 (CCU) & 전처리기 (FEP)
 
-Các ý ngay dưới **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **CCU:** 데이터 신호의 직·병렬 변환 등 전반적인 제어.
 - **FEP (Front-End Processor):** 호스트와 단말기 사이에 위치해 통신 제어를 전담하여 메인 컴퓨터의 부하를 줄임.
@@ -321,37 +609,37 @@ Các bullet của **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** đang n
 
 Như vậy, **1.3 통신 제어장치 (CCU) & 전처리기 (FEP)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)
 
-Sau khi đã đặt nền bằng **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**, ta chuyển sang **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**. Đây là mắt xích 5/18 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 13/61, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** xuất hiện như phần tiếp nối của **1. 데이터 통신 개요 (Tổng quan Truyền thông Dữ liệu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)**. Hãy xác định **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Trước hết, ta đặt **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)
 
-Phần nguồn của **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **방향에 따른 분류:** 단방향 (Simplex), 반이중 (Half-Duplex, 무전기), 전이중 (Full-Duplex, 전화).
 - **비동기식 (Asynchronous):** 문자마다 Start Bit / Stop Bit를 붙여 전송. 저속 단거리, 오버헤드 큼.
 - **동기식 (Synchronous):** 프레임(블록) 단위로 일시에 전송. 속도 빠르고 효율 좋음. 비트/블록 동기 방식.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Đơn công (Simplex), Bán song công (Half-Duplex), Song công toàn phần (Full-Duplex).
   - Bất đồng bộ: Dùng Start/Stop bit (overhead cao). Đồng bộ: Truyền theo block (nhanh, hiệu quả).
 
 Các bullet của **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **2.1 통신 방식 및 전송 동기 (Transmission Modes & Sync)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2.2 신호 변환 장치 (MODEM & DSU)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **2.2 신호 변환 장치 (MODEM & DSU)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **2.2 신호 변환 장치 (MODEM & DSU)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 2.2 신호 변환 장치 (MODEM & DSU)
 
-Các ý ngay dưới **2.2 신호 변환 장치 (MODEM & DSU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **2.2 신호 변환 장치 (MODEM & DSU)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **모뎀 (MODEM):** 디지털 ↔ 아날로그 변환.
 - **DSU (Digital Service Unit):** 디지털 ↔ 디지털 (단극성 ↔ 양극성 변환). 디지털 전용선에 사용.
@@ -361,11 +649,11 @@ Các ý ngay dưới **2.2 신호 변환 장치 (MODEM & DSU)** cung cấp dữ 
 Với **2.2 신호 변환 장치 (MODEM & DSU)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **2.2 신호 변환 장치 (MODEM & DSU)**, đừng bắt đầu lại từ số không. **2.3 디지털 변조 (Digital Modulation - Keying)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **2.3 디지털 변조 (Digital Modulation - Keying)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **2.3 디지털 변조 (Digital Modulation - Keying)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 2.3 디지털 변조 (Digital Modulation - Keying)
 
-Bây giờ ta đi vào nội dung của **2.3 디지털 변조 (Digital Modulation - Keying)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **2.3 디지털 변조 (Digital Modulation - Keying)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **ASK (진폭 편이):** 진폭 변화.
 - **FSK (주파수 편이):** 주파수 변화 (1,200bps 이하).
@@ -376,11 +664,11 @@ Bây giờ ta đi vào nội dung của **2.3 디지털 변조 (Digital Modulati
 Các bullet của **2.3 디지털 변조 (Digital Modulation - Keying)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **2.3 디지털 변조 (Digital Modulation - Keying)** vừa cho ta cách đặt câu hỏi. Bây giờ **2.4 PCM (Pulse Code Modulation)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **2.4 PCM (Pulse Code Modulation)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **2.4 PCM (Pulse Code Modulation)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 2.4 PCM (Pulse Code Modulation)
 
-Phần nguồn của **2.4 PCM (Pulse Code Modulation)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **2.4 PCM (Pulse Code Modulation)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 아날로그 데이터를 디지털 신호로 변환. CODEC 이용.
 - **과정:** 표본화(Sampling) → 양자화(Quantizing) → 부호화(Encoding) → 복호화(Decoding) → 여파화(Filtering).
@@ -392,21 +680,21 @@ Với **2.4 PCM (Pulse Code Modulation)**, hãy đọc các công thức như m�
 
 Với **2.4 PCM (Pulse Code Modulation)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Ta có thể khép mục **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)
 
-Từ **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, ta đã có điểm tựa để bước vào **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/18 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **2. 데이터 전송 방식 및 변조 (Phương thức truyền & Điều chế)**, ta chuyển sang **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**. Đây là mắt xích 14/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **3.1 다중화기 (Multiplexer)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Ta bắt đầu phần nội dung bằng **3.1 다중화기 (Multiplexer)**. Hãy xác định **3.1 다중화기 (Multiplexer)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 3.1 다중화기 (Multiplexer)
 
-Các ý ngay dưới **3.1 다중화기 (Multiplexer)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **3.1 다중화기 (Multiplexer)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 여러 단말기가 하나의 통신 회선을 공유.
 - **FDM (주파수 분할 다중화):** 주파수를 분할. 보호 대역(Guard Band) 필요(대역폭 낭비). 아날로그, 비동기식.
@@ -415,19 +703,19 @@ Các ý ngay dưới **3.1 다중화기 (Multiplexer)** cung cấp dữ liệu v
   - **ATDM (비동기식/통계적):** 데이터가 있는 단말에만 시간 할당 (효율 높음).
 - **역 다중화기 (Inverse MUX):** 하나의 고속 채널을 2개의 저속 채널로 분할.
 - **집중화기 (Concentrator):** 회선이 부족할 때 동적으로 할당(버퍼 필요). (입력 > 출력 회선).
-- **Tiếng Việt:** 
-  - FDM: Chia tần số (cần khoảng vệ bảo vệ Guard Band). 
-  - TDM: Chia thời gian. (STDM: Cố định, ATDM: Động/Thống kê). 
+- **Tiếng Việt:**
+  - FDM: Chia tần số (cần khoảng vệ bảo vệ Guard Band).
+  - TDM: Chia thời gian. (STDM: Cố định, ATDM: Động/Thống kê).
   - Concentrator: Gom kênh, cần bộ đệm, số đầu vào > đầu ra.
 
 Các bullet của **3.1 다중화기 (Multiplexer)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **3.1 다중화기 (Multiplexer)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **3.2 통신 속도 (Speed Metrics)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **3.2 통신 속도 (Speed Metrics)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **3.2 통신 속도 (Speed Metrics)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 3.2 통신 속도 (Speed Metrics)
 
-Bây giờ ta đi vào nội dung của **3.2 통신 속도 (Speed Metrics)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **3.2 통신 속도 (Speed Metrics)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **변조 속도 (Baud):** 1초 동안 신호 변화 횟수. (Baud = Bps / 상태 변화 수).
 - **신호 속도 (Bps):** 1초 동안 전송 비트 수.
@@ -437,11 +725,11 @@ Bây giờ ta đi vào nội dung của **3.2 통신 속도 (Speed Metrics)**. M
 Với **3.2 통신 속도 (Speed Metrics)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **3.2 통신 속도 (Speed Metrics)**, đừng bắt đầu lại từ số không. **3.3 전송 제어 (Transmission Control)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **3.3 전송 제어 (Transmission Control)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **3.3 전송 제어 (Transmission Control)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 3.3 전송 제어 (Transmission Control)
 
-Phần nguồn của **3.3 전송 제어 (Transmission Control)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **3.3 전송 제어 (Transmission Control)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **5단계 절차:** 회선 접속 → 링크 설정 → 메시지 전송 → 링크 해제 → 회선 절단.
 - **전송 제어 문자:**
@@ -455,11 +743,11 @@ Phần nguồn của **3.3 전송 제어 (Transmission Control)** sẽ lấp đ�
 Các bullet của **3.3 전송 제어 (Transmission Control)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **3.3 전송 제어 (Transmission Control)** vừa cho ta cách đặt câu hỏi. Bây giờ **3.4 HDLC 프로토콜 (High-level Data Link Control)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **3.4 HDLC 프로토콜 (High-level Data Link Control)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **3.4 HDLC 프로토콜 (High-level Data Link Control)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 3.4 HDLC 프로토콜 (High-level Data Link Control)
 
-Các ý ngay dưới **3.4 HDLC 프로토콜 (High-level Data Link Control)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **3.4 HDLC 프로토콜 (High-level Data Link Control)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **비트(Bit) 위주**의 프로토콜. 전이중/반이중 지원, 동기식 전송.
 - **비트 투과성 (Bit Stuffing):** 연속된 '1'이 5개면 강제로 '0' 추가 (플래그 `01111110`과 구분).
@@ -474,37 +762,37 @@ Các bullet của **3.4 HDLC 프로토콜 (High-level Data Link Control)** đang
 
 Với **3.4 HDLC 프로토콜 (High-level Data Link Control)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Điểm chốt của **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)
 
-Ở bước 7/18, **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** xuất hiện như phần tiếp nối của **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **3. 다중화 및 전송 제어 (Đa hợp & Điều khiển truyền)**, ta đã có điểm tựa để bước vào **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/61 trước khi đi vào chi tiết.
 
 Để đọc **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Để không đọc **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 4.1 오류 발생 원인 및 제어 (Error Causes & Control)
 
-Bây giờ ta đi vào nội dung của **4.1 오류 발생 원인 및 제어 (Error Causes & Control)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **원인:** 감쇠, 지연 왜곡, 상호 변조, 누화 잡음, 충격성 잡음(디지털 통신 주요인).
-- **FEC (순방향 오류 수정):** 수신 측에서 스스로 수정 (해밍 코드 등). 오버헤드 큼, 역채널 불필요.
-- **BEC (역방향 오류 수정):** 오류 시 재전송(ARQ) 요구 (패리티, CRC 등).
-- **Tiếng Việt:** 
-  - FEC: Tự sửa lỗi (vd: Hamming Code). 
+- **FEC (순방향 오류 수정):** 여분 비트를 함께 보내 수신 측이 재전송 없이 오류를 검출·수정 (해밍 코드 등). 오버헤드가 크고 역채널이 필요 없다.
+- **BEC/ARQ (역방향 오류 제어):** 수신 측이 오류를 검출한 뒤 송신 측에 재전송을 요청한다. CRC·패리티는 주로 검출에 사용되고, Stop-and-Wait·Go-Back-N·Selective Repeat가 대표적인 ARQ 방식이다.
+- **Tiếng Việt:**
+  - FEC: Tự sửa lỗi (vd: Hamming Code).
   - BEC: Yêu cầu gửi lại (vd: CRC, Parity).
 
 Các bullet của **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **4.1 오류 발생 원인 및 제어 (Error Causes & Control)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 4.2 ARQ (자동 반복 요청) 및 오류 검출 방식
 
-Phần nguồn của **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **ARQ 종류:**
   - **Stop-and-Wait:** 한 블록 보내고 기다림.
@@ -515,53 +803,51 @@ Phần nguồn của **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**
   - **패리티 (Parity):** 1비트 검출, 짝수오류 검출 불가.
   - **CRC:** 다항식 기반, 집단 오류 검출 특화 (HDLC 사용).
   - **해밍 코드 (Hamming Code):** 1비트 *수정* 가능. `2^n` 번째 자리에 비트 삽입.
-- **Tiếng Việt:** 
-  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi. 
+- **Tiếng Việt:**
+  - Go-Back-N: Gửi lại từ lỗi. Selective Repeat: Chỉ gửi lại gói lỗi.
   - CRC: Kiểm tra đa thức (phổ biến nhất). Hamming Code: Sửa được lỗi 1 bit.
 
 Các bullet của **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **4.2 ARQ (자동 반복 요청) 및 오류 검출 방식**, đừng bắt đầu lại từ số không. **4.3 교환 방식 (Switching Methods)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **4.3 교환 방식 (Switching Methods)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **4.3 교환 방식 (Switching Methods)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 4.3 교환 방식 (Switching Methods)
 
-Các ý ngay dưới **4.3 교환 방식 (Switching Methods)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **4.3 교환 방식 (Switching Methods)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **회선 교환 (Circuit Switching):** 물리적 전용선 할당. 고정 대역, 연속적 데이터 전송. (접속 지연 O, 전송 지연 X). 전화망.
 - **축적 교환 (Store-and-Forward):** 데이터를 저장했다가 경로를 찾아 전송.
   - **메시지 교환 (Message Switching):** 전체 메시지 전송. 지연 매우 긺.
   - **패킷 교환 (Packet Switching):** 패킷 단위로 잘라서 전송 (다음 파트에서 상세 서술).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Circuit Switching (Chuyển mạch kênh): Tạo đường truyền vật lý (Điện thoại).
   - Message Switching (Chuyển mạch thông điệp): Lưu rồi chuyển toàn bộ.
-
-EOF
 
 Các bullet của **4.3 교환 방식 (Switching Methods)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **4.3 교환 방식 (Switching Methods)** vừa cho ta cách đặt câu hỏi. Bây giờ **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)
 
-Bây giờ ta đi vào nội dung của **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **가상 회선 (Virtual Circuit):** 패킷 교환 전에 논리적인 가상 회선을 설정. 전송 순서가 보장되며 신뢰성이 높음. (호 설정 → 데이터 전송 → 호 해제).
 - **데이터그램 (Datagram):** 연결 경로 설정 없이 각 패킷이 독립적으로 운반됨. 패킷마다 경로가 다르고 순서가 다를 수 있음. 짧은 데이터 전송에 적합.
 - **패킷 교환망의 기능:** 패킷 다중화, 논리 채널 설정, 경로 제어, 순서 제어, 트래픽 제어, 오류 제어.
-- **Tiếng Việt:** 
-  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo). 
+- **Tiếng Việt:**
+  - Virtual Circuit: Tạo đường dẫn ảo trước khi truyền (thứ tự được đảm bảo).
   - Datagram: Truyền độc lập không cần tạo đường dẫn (thứ tự có thể thay đổi).
 
 Các bullet của **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **4.4 패킷 교환 방식 및 네트워크 기능 (Packet Switching & Network Functions)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)
 
-Phần nguồn của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **경로 설정 방식 (Routing Strategies):**
   - **고정 경로 (Static):** 미리 정해진 경로 사용.
@@ -575,21 +861,45 @@ Các bullet của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control &
 
 Điểm chốt của **4.5 트래픽 제어 및 라우팅 심화 (Traffic Control & Routing)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Như vậy, **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## ⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)
+
+Ở bước 16/61, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** xuất hiện như phần tiếp nối của **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Như vậy, **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **2. 자원 처리 오류 (Resource Handling Errors)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 2. 자원 처리 오류 (Resource Handling Errors)
+
+Sau khi đã đặt nền bằng **⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)**, ta chuyển sang **2. 자원 처리 오류 (Resource Handling Errors)**. Đây là mắt xích 17/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **2. 자원 처리 오류 (Resource Handling Errors)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **부적절한 자원 해제 (Improper Resource Release)**, **해제된 자원 사용 (Use After Free)**, **초기화되지 않은 변수 사용 (Uninitialized Variable)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **부적절한 자원 해제 (Improper Resource Release)**: 힙 메모리나 소켓을 사용 후 반환(close)하지 않아 자원 고갈 발생. (Không giải phóng bộ nhớ, kết nối sau khi dùng xong).
+- **해제된 자원 사용 (Use After Free)**: 반환된 메모리를 다시 참조하여 오작동 유발. (Dùng lại vùng nhớ đã được giải phóng).
+- **초기화되지 않은 변수 사용 (Uninitialized Variable)**: 변수 선언 후 값을 넣지 않고 사용하여 이전 쓰레기 값이 노출됨. (Dùng biến chưa khởi tạo giá trị).
+
+Ta có thể khép mục **2. 자원 처리 오류 (Resource Handling Errors)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)
 
-Sau khi đã đặt nền bằng **4. 오류 제어 및 교환 방식 (Kiểm soát lỗi & Chuyển mạch)**, ta chuyển sang **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**. Đây là mắt xích 8/18 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **2. 자원 처리 오류 (Resource Handling Errors)**, ta đã có điểm tựa để bước vào **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/61 trước khi đi vào chi tiết.
 
 Để đọc **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **5.1 신기술 동향 (New Technologies)**. Hãy xác định **5.1 신기술 동향 (New Technologies)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **5.1 신기술 동향 (New Technologies)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 5.1 신기술 동향 (New Technologies)
 
-Phần nguồn của **5.1 신기술 동향 (New Technologies)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **5.1 신기술 동향 (New Technologies)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **SDN (Software Defined Networking):** 네트워크를 가상화하여 소프트웨어로 제어/관리.
 - **SDS (Software-Defined Storage):** 물리적 스토리지를 가상화하여 하나처럼 관리.
@@ -601,7 +911,7 @@ Phần nguồn của **5.1 신기술 동향 (New Technologies)** sẽ lấp đ�
 - **SSO (Single Sign On):** 한 번 로그인으로 여러 사이트 이용.
 - **메시 네트워크 (Mesh Network):** 여러 디바이스를 그물망처럼 유기적으로 연결.
 - **피코넷 (PICONET):** 블루투스/UWB 기술로 형성하는 독립적 무선망.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - SDN/SDS/SDDC: Ảo hóa và điều khiển mạng/lưu trữ/trung tâm dữ liệu bằng phần mềm.
   - PaaS-TA: Nền tảng cloud mở của Hàn Quốc.
   - SSO: Đăng nhập một lần.
@@ -610,11 +920,11 @@ Phần nguồn của **5.1 신기술 동향 (New Technologies)** sẽ lấp đ�
 Các bullet của **5.1 신기술 동향 (New Technologies)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **5.1 신기술 동향 (New Technologies)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **5.2 LAN 표준 및 위상 (LAN Standards & Topology)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 5.2 LAN 표준 및 위상 (LAN Standards & Topology)
 
-Các ý ngay dưới **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **5.2 LAN 표준 및 위상 (LAN Standards & Topology)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **CSMA/CD:** IEEE 802.3 유선 LAN 매체 접속 제어 방식 (충돌 감지).
 - **CSMA/CA:** 무선 랜(WLAN) 데이터 전송 시 충돌을 피하기 위해 일정 시간 기다림 (충돌 회피).
@@ -623,7 +933,7 @@ Các ý ngay dưới **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** cu
 - **버스형 (Bus Topology):** 한 통신 회선에 여러 단말장치 연결.
 - **VLAN (Virtual LAN):** 물리적 배치와 무관하게 논리적으로 네트워크 분리.
 - **WDM (Wavelength Division Multiplexing):** 파장이 다른 광선을 이용해 동시 통신 (광다중화).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - CSMA/CD: Phát hiện xung đột (Mạng có dây).
   - CSMA/CA: Tránh xung đột (Mạng không dây).
   - VLAN: Mạng LAN ảo, phân chia logic không phụ thuộc vật lý.
@@ -631,17 +941,17 @@ Các ý ngay dưới **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** cu
 Các bullet của **5.2 LAN 표준 및 위상 (LAN Standards & Topology)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **5.2 LAN 표준 및 위상 (LAN Standards & Topology)**, đừng bắt đầu lại từ số không. **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)
 
-Bây giờ ta đi vào nội dung của **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **ARP (Address Resolution Protocol):** IP 주소를 MAC 주소로 변환.
 - **RIP (Routing Information Protocol):** 거리 벡터 라우팅 (최대 홉 15 제한).
 - **OSPF (Open Shortest Path First):** 링크 상태 기반 최단 경로 라우팅 (대규모 망).
 - **흐름 제어 - 정지-대기 (Stop-and-Wait):** 수신 측의 ACK(확인 신호)를 받은 후 다음 패킷 전송.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - ARP: IP -> MAC.
   - RIP: Dựa trên số Hop (tối đa 15).
   - OSPF: Dựa trên trạng thái Link, tìm đường ngắn nhất.
@@ -651,56 +961,56 @@ Các bullet của **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protoc
 
 Như vậy, **5.3 라우팅 프로토콜 및 흐름 제어 (Routing Protocols & Flow Control)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Ta có thể khép mục **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)
 
-Từ **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**, ta đã có điểm tựa để bước vào **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/18 trước khi đi vào chi tiết.
+Ở bước 19/61, **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)** xuất hiện như phần tiếp nối của **5. 네트워크 및 인프라 기술 (Công nghệ Mạng & Hạ tầng)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **5.1 LAN 및 매체 접근 제어 (LAN & MAC)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **5.1 LAN 및 매체 접근 제어 (LAN & MAC)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **5.1 LAN 및 매체 접근 제어 (LAN & MAC)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 5.1 LAN 및 매체 접근 제어 (LAN & MAC)
 
-Các ý ngay dưới **5.1 LAN 및 매체 접근 제어 (LAN & MAC)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **5.1 LAN 및 매체 접근 제어 (LAN & MAC)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **LAN (Local Area Network):** 단일 기관 소유, 고속 전송, 오류율 낮음.
 - **IEEE 802 주요 규격:**
   - `802.1` (전체 구성), `802.2` (LLC), `802.3` (CSMA/CD), `802.4` (토큰 버스), `802.5` (토큰 링), `802.11` (무선 LAN).
-- **CSMA/CD (Carrier Sense Multiple Access/Collision Detection):** 채널 사용권 경쟁. 충돌 감지. 
+- **CSMA/CD (Carrier Sense Multiple Access/Collision Detection):** 채널 사용권 경쟁. 충돌 감지.
   - 규격 명칭 (예: `10 BASE T` - 10Mbps, 베이스밴드, 꼬임선).
   - **이더넷 (Ethernet):** CSMA/CD 방식을 사용하는 LAN.
-- **Tiếng Việt:** Mạng LAN cục bộ. IEEE 802.3 là tiêu chuẩn CSMA/CD (Ethernet - phát hiện xung đột). 
+- **Tiếng Việt:** Mạng LAN cục bộ. IEEE 802.3 là tiêu chuẩn CSMA/CD (Ethernet - phát hiện xung đột).
 
 Các bullet của **5.1 LAN 및 매체 접근 제어 (LAN & MAC)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **5.1 LAN 및 매체 접근 제어 (LAN & MAC)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **5.2 기타 통신망 (VAN, ISDN)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **5.2 기타 통신망 (VAN, ISDN)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **5.2 기타 통신망 (VAN, ISDN)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 5.2 기타 통신망 (VAN, ISDN)
 
-Bây giờ ta đi vào nội dung của **5.2 기타 통신망 (VAN, ISDN)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **5.2 기타 통신망 (VAN, ISDN)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **VAN (부가 가치 통신망):** 공중 통신망을 임대해 정보 가공/변환 등 부가 가치를 첨가해 서비스 제공.
 - **ISDN (종합 정보 통신망):** 음성/문자/영상을 디지털 방식으로 종합 제공.
-- **Tiếng Việt:** 
-  - VAN: Mạng giá trị gia tăng (thuê đường truyền, thêm dịch vụ). 
+- **Tiếng Việt:**
+  - VAN: Mạng giá trị gia tăng (thuê đường truyền, thêm dịch vụ).
   - ISDN: Mạng số đa dịch vụ tích hợp.
 
 Các bullet của **5.2 기타 통신망 (VAN, ISDN)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **5.2 기타 통신망 (VAN, ISDN)**, đừng bắt đầu lại từ số không. **5.3 인터넷 주소 체계 (IP Addresses)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **5.3 인터넷 주소 체계 (IP Addresses)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **5.3 인터넷 주소 체계 (IP Addresses)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 5.3 인터넷 주소 체계 (IP Addresses)
 
-Phần nguồn của **5.3 인터넷 주소 체계 (IP Addresses)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **5.3 인터넷 주소 체계 (IP Addresses)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **IPv4:** 32비트 (8비트 × 4부분). 클래스 A~E (A: 대형 ~ C: 소규모망, D: 멀티캐스트).
-- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분). 주소 부족 문제 해결.
+- **IPv6:** 128비트 (16비트 × 8부분, 16진수, 콜론 `:` 구분)로 주소 공간을 확장한다. 기본 헤더는 단순화되고 브로드캐스트 대신 멀티캐스트·애니캐스트를 사용한다.
 - **IPv4 → IPv6 전환 전략:** 듀얼 스택(Dual Stack), 터널링(Tunneling), 헤더/전송/응용 게이트웨이 변환(Translation).
 - **DNS (Domain Name System):** 문자 도메인 네임을 IP 주소로 변환.
 - **Tiếng Việt:** IPv4 (32 bit, Class A-E). IPv6 (128 bit, giải quyết cạn kiệt IP). DNS dịch tên miền sang IP.
@@ -709,18 +1019,18 @@ Phần nguồn của **5.3 인터넷 주소 체계 (IP Addresses)** sẽ lấp �
 Các bullet của **5.3 인터넷 주소 체계 (IP Addresses)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **5.3 인터넷 주소 체계 (IP Addresses)** vừa cho ta cách đặt câu hỏi. Bây giờ **5.4 네트워크 관련 장비 (Network Devices)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **5.4 네트워크 관련 장비 (Network Devices)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **5.4 네트워크 관련 장비 (Network Devices)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 5.4 네트워크 관련 장비 (Network Devices)
 
-Các ý ngay dưới **5.4 네트워크 관련 장비 (Network Devices)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **5.4 네트워크 관련 장비 (Network Devices)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **허브 (Hub):** 물리 계층, 포트 통합 관리 및 리피터 역할.
 - **리피터 (Repeater):** 물리 계층, 신호 재생 및 증폭.
 - **브리지 (Bridge):** 데이터 링크 계층, LAN-LAN 연결.
 - **라우터 (Router):** 네트워크 계층, 경로 선택(Routing) 및 서로 다른 망 연결.
 - **게이트웨이 (Gateway):** 전 계층(주로 상위), 프로토콜이 전혀 다른 네트워크 연결.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - L1: Hub, Repeater (Khuếch đại tín hiệu).
   - L2: Bridge (Nối LAN).
   - L3: Router (Định tuyến).
@@ -730,21 +1040,148 @@ Các bullet của **5.4 네트워크 관련 장비 (Network Devices)** đang né
 
 Với **5.4 네트워크 관련 장비 (Network Devices)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Điểm chốt của **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **6. 통신 프로토콜 (Giao thức Truyền thông)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **네트워크 구조 및 기술 (Network Structures & Technologies)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 네트워크 구조 및 기술 (Network Structures & Technologies)
+
+Sau khi đã đặt nền bằng **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**, ta chuyển sang **네트워크 구조 및 기술 (Network Structures & Technologies)**. Đây là mắt xích 20/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **네트워크 구조 및 기술 (Network Structures & Technologies)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **성형 (Star, 중앙 집중형)**, **링형 (Ring, 루프형)**, **버스형 (Bus)**, **계층형 (Tree, 분산형)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **1. 네트워크 설치 구조 (Network Topologies)**. Hãy xác định **1. 네트워크 설치 구조 (Network Topologies)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 1. 네트워크 설치 구조 (Network Topologies)
+
+Phần nguồn của **1. 네트워크 설치 구조 (Network Topologies)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **성형 (Star, 중앙 집중형)**: 중앙 컴퓨터를 중심으로 단말기가 연결 (Point-to-Point).
+- **링형 (Ring, 루프형)**: 이웃하는 장치끼리 연결. 단방향 시 하나만 고장나도 전체 마비.
+- **버스형 (Bus)**: 한 개의 통신 회선에 여러 장치 연결 (단말기 추가/제거 용이).
+- **계층형 (Tree, 분산형)**: 중앙에서 중간 단말장치로 다시 분기되는 형태.
+- **망형 (Mesh)**: 모든 지점을 연결. 통신량이 많을 때 유리하며 회선이 가장 많이 필요함 (`n(n-1)/2` 개).
+
+Các bullet của **1. 네트워크 설치 구조 (Network Topologies)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 네트워크 설치 구조 (Network Topologies)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 근거리 통신망 (LAN) 표준 및 기술** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **2. 근거리 통신망 (LAN) 표준 및 기술** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 2. 근거리 통신망 (LAN) 표준 및 기술
+
+Các ý ngay dưới **2. 근거리 통신망 (LAN) 표준 및 기술** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **IEEE 802 규격**: 802.3(CSMA/CD), 802.4(토큰 버스), 802.5(토큰 링), 802.11(무선 LAN).
+- **VLAN**: 물리적 배치와 상관없이 논리적으로 분리하는 기술.
+- **CSMA/CA**: 무선 LAN(802.11)에서 매체가 비어있음을 확인 후 충돌 회피(Avoidance)를 위해 기다렸다가 전송하는 방식.
+
+Các bullet của **2. 근거리 통신망 (LAN) 표준 및 기술** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. 근거리 통신망 (LAN) 표준 및 기술**, đừng bắt đầu lại từ số không. **3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)
+
+Bây giờ ta đi vào nội dung của **3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **IGP (내부 게이트웨이 프로토콜)**: AS 내에서 사용. **RIP**(거리 벡터, 최대 15홉 제한)와 **OSPF**(링크 상태, 대규모 망)가 있음.
+- **EGP / BGP**: AS(자율 시스템) 간의 라우팅 프로토콜.
+- **흐름 제어**: **정지-대기(Stop-and-Wait)** (수신 확인 후 다음 패킷 전송) / **슬라이딩 윈도우(Sliding Window)** (수신 확인 없이 윈도우 크기만큼 연속 전송).
+
+💡 **Mẹo ghi nhớ (Mnemonics):**
+- **RIP**: 15 Hops max (Dùng cho mạng nhỏ).
+- **OSPF**: Link State (Dùng cho mạng lớn).
+- **CSMA/CD**: Mạng LAN có dây (Collision Detection).
+- **CSMA/CA**: Mạng không dây (Collision Avoidance).
+
+Các bullet của **3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **3. 경로 제어 (Routing) 및 흐름 제어 (Flow Control)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Ta có thể khép mục **네트워크 구조 및 기술 (Network Structures & Technologies)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 네트워크 및 정보 침해 공격 (Network & Info Security Attacks)
+
+Từ **네트워크 구조 및 기술 (Network Structures & Technologies)**, ta đã có điểm tựa để bước vào **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/61 trước khi đi vào chi tiết.
+
+Để đọc **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **DDoS (분산 서비스 거부 공격)**, **스머핑 (SMURFING)**, **세션 하이재킹 (Session Hijacking)**, **스위치 재밍 (Switch Jamming)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **1. 네트워크 공격** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 1. 네트워크 공격
+
+Các ý ngay dưới **1. 네트워크 공격** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **DDoS (분산 서비스 거부 공격)**: 여러 대의 PC(Agent/Zombie)를 이용해 특정 서버에 대량의 트래픽을 보내 마비시킴. (툴: Trin00, TFN, TFN2K, Stacheldraht).
+- **스머핑 (SMURFING)**: IP/ICMP 특성을 악용해 한 사이트에 엄청난 데이터를 집중시키는 공격.
+- **세션 하이재킹 (Session Hijacking)**: 클라이언트 세션을 가로채어 정상적인 사용자인 척하는 공격.
+- **스위치 재밍 (Switch Jamming)**: 위조된 MAC 주소를 대량으로 보내 스위치를 더미 허브처럼 작동하게 만듦.
+
+Các bullet của **1. 네트워크 공격** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 네트워크 공격** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 블루투스 공격** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **2. 블루투스 공격**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 2. 블루투스 공격
+
+Bây giờ ta đi vào nội dung của **2. 블루투스 공격**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **블루버그 (BlueBug)**: 원격 조종 및 통화 감청.
+- **블루스나프 (BlueSnarf)**: 장비 파일에 접근해 정보 탈취.
+- **블루재킹 (BlueJacking)**: 스팸 메시지를 익명으로 퍼뜨림.
+
+Các bullet của **2. 블루투스 공격** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. 블루투스 공격**, đừng bắt đầu lại từ số không. **3. 시스템 및 소프트웨어 공격** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Với **3. 시스템 및 소프트웨어 공격**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 3. 시스템 및 소프트웨어 공격
+
+Phần nguồn của **3. 시스템 및 소프트웨어 공격** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **제로 데이 공격 (Zero Day Attack)**: 보안 취약점이 공표되기 전, 혹은 패치가 나오기 전에 신속하게 이루어지는 공격.
+- **랜섬웨어 (Ransomware)**: 파일을 암호화하고 돈(Ransom)을 요구하는 악성 프로그램.
+- **백도어 (Back Door)**: 관리자 편의를 위해 만들어 놓은 비밀 통로를 악용.
+
+💡 **Mẹo ghi nhớ (Mnemonics):**
+- **BlueSnarf**: Sniff (Đánh hơi/Trộm thông tin).
+- **BlueBug**: Bug (Cài bọ/Nghe lén).
+- **BlueJacking**: Hijack (Chặn tin/Gửi tin nhắn rác).
+
+Các bullet của **3. 시스템 및 소프트웨어 공격** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **3. 시스템 및 소프트웨어 공격** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Điểm chốt của **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **네트워크 보안 기술 (Network Security Tech)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 네트워크 보안 기술 (Network Security Tech)
+
+Ở bước 22/61, **네트워크 보안 기술 (Network Security Tech)** xuất hiện như phần tiếp nối của **네트워크 및 정보 침해 공격 (Network & Info Security Attacks)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **네트워크 보안 기술 (Network Security Tech)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **VPN (가상 사설 통신망)**, **SSH (시큐어 셸)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **VPN (가상 사설 통신망)**: 공중 네트워크를 전용 회선처럼 사용할 수 있게 해주는 암호화 보안 솔루션.
+- **SSH (시큐어 셸)**: 원격 로그인, 파일 복사 등을 안전하게 수행하는 프로토콜 (포트 22번 사용, 데이터 암호화 지원).
+
+Như vậy, **네트워크 보안 기술 (Network Security Tech)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. 통신 프로토콜 (Giao thức Truyền thông)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 6. 통신 프로토콜 (Giao thức Truyền thông)
 
-Ở bước 10/18, **6. 통신 프로토콜 (Giao thức Truyền thông)** xuất hiện như phần tiếp nối của **5. 네트워크 통신망 및 주소 체계 (Mạng lưới & Hệ thống Địa chỉ)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **네트워크 보안 기술 (Network Security Tech)**, ta chuyển sang **6. 통신 프로토콜 (Giao thức Truyền thông)**. Đây là mắt xích 23/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **6. 통신 프로토콜 (Giao thức Truyền thông)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)**. Hãy xác định **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 6.1 통신 프로토콜 3요소 (Protocol 3 Elements)
 
-Bây giờ ta đi vào nội dung của **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **구문 (Syntax):** 데이터 형식, 코딩.
 - **의미 (Semantics):** 제어 정보 및 오류 관리.
@@ -754,11 +1191,11 @@ Bây giờ ta đi vào nội dung của **6.1 통신 프로토콜 3요소 (Proto
 Các bullet của **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **6.1 통신 프로토콜 3요소 (Protocol 3 Elements)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **6.2 OSI 7계층 (OSI 7 Layers)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **6.2 OSI 7계층 (OSI 7 Layers)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **6.2 OSI 7계층 (OSI 7 Layers)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 6.2 OSI 7계층 (OSI 7 Layers)
 
-Phần nguồn của **6.2 OSI 7계층 (OSI 7 Layers)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **6.2 OSI 7계층 (OSI 7 Layers)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 1. **물리 계층 (Physical):** 기계/전기적 특성 (RS-232C, 리피터).
 2. **데이터 링크 계층 (Data Link):** 인접 시스템 간 신뢰성 보장, 오류/흐름 제어 (HDLC, LLC).
@@ -773,40 +1210,38 @@ Phần nguồn của **6.2 OSI 7계층 (OSI 7 Layers)** sẽ lấp đầy khung 
 Các bullet của **6.2 OSI 7계층 (OSI 7 Layers)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **6.2 OSI 7계층 (OSI 7 Layers)**, đừng bắt đầu lại từ số không. **6.3 주요 네트워크 프로토콜** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **6.3 주요 네트워크 프로토콜** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **6.3 주요 네트워크 프로토콜**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 6.3 주요 네트워크 프로토콜
 
-Các ý ngay dưới **6.3 주요 네트워크 프로토콜** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **6.3 주요 네트워크 프로토콜**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **X.25:** 패킷 교환망 프로토콜 (물리 - 프레임 - 패킷 계층). LAPB 사용.
 - **TCP/IP:**
   - **응용 계층:** FTP, SMTP, HTTP, DNS 등.
-  - **전송 계층:** 
+  - **전송 계층:**
     - **TCP:** 연결형, 신뢰성 보장, 순서/흐름 제어, 스트림 전송.
     - **UDP:** 비연결형, 빠른 전송.
-  - **인터넷 계층:** 
+  - **인터넷 계층:**
     - **IP:** 비연결형(데이터그램), 경로 선택(Routing).
     - **ICMP:** IP 오류 처리 및 제어 메시지.
     - **ARP:** IP → MAC / **RARP:** MAC → IP.
   - **네트워크 액세스 계층:** 이더넷, X.25, RS-232C.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - TCP: Tin cậy, hướng kết nối. UDP: Nhanh, không kết nối.
   - IP: Định tuyến. ICMP: Báo lỗi mạng. ARP: Đổi IP sang MAC.
-
-# 정보처리기사 (Information Processing Engineer) - Part 2
 
 Các bullet của **6.3 주요 네트워크 프로토콜** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Như vậy, **6.3 주요 네트워크 프로토콜** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **6. 통신 프로토콜 (Giao thức Truyền thông)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **기본 프로토콜 (Basic Protocols)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **6. 통신 프로토콜 (Giao thức Truyền thông)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **기본 프로토콜 (Basic Protocols)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 기본 프로토콜 (Basic Protocols)
 
-Sau khi đã đặt nền bằng **6. 통신 프로토콜 (Giao thức Truyền thông)**, ta chuyển sang **기본 프로토콜 (Basic Protocols)**. Đây là mắt xích 11/18 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **6. 통신 프로토콜 (Giao thức Truyền thông)**, ta đã có điểm tựa để bước vào **기본 프로토콜 (Basic Protocols)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/61 trước khi đi vào chi tiết.
 
 Để đọc **기본 프로토콜 (Basic Protocols)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **ARP**, **RARP**, **RTCP**, **WAP** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -829,21 +1264,21 @@ Sau khi đã đặt nền bằng **6. 통신 프로토콜 (Giao thức Truyền 
 
 ---
 
-Ta có thể khép mục **기본 프로토콜 (Basic Protocols)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **기본 프로토콜 (Basic Protocols)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)
 
-Từ **기본 프로토콜 (Basic Protocols)**, ta đã có điểm tựa để bước vào **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/18 trước khi đi vào chi tiết.
+Ở bước 25/61, **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** xuất hiện như phần tiếp nối của **기본 프로토콜 (Basic Protocols)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **7.1 회복 및 동시성 제어 (Recovery & Concurrency)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **7.1 회복 및 동시성 제어 (Recovery & Concurrency)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **7.1 회복 및 동시성 제어 (Recovery & Concurrency)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 7.1 회복 및 동시성 제어 (Recovery & Concurrency)
 
-Các ý ngay dưới **7.1 회복 및 동시성 제어 (Recovery & Concurrency)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **7.1 회복 및 동시성 제어 (Recovery & Concurrency)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **회복 (Recovery):** 장애 발생 시 손상 이전의 정상 상태로 복구.
 - **즉각 갱신 기법 (Immediate Update):** 트랜잭션 부분 완료 전이라도 즉시 DB에 반영. 갱신 내용은 **Log에 보관**하여 회복에 대비.
@@ -851,18 +1286,18 @@ Các ý ngay dưới **7.1 회복 및 동시성 제어 (Recovery & Concurrency)*
   - **단위가 크면:** 로크 수가 작아 관리하기 쉽지만 병행성 저하.
   - **단위가 작으면:** 로크 수가 많아 관리 복잡/오버헤드 증가, 하지만 병행성 상승.
 - **타임 스탬프 순서 (Time Stamp Ordering):** 직렬성 순서를 결정하기 위해 트랜잭션 처리 순서를 미리 선택.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Immediate Update: Cập nhật ngay lập tức (dùng Log để phục hồi).
   - Locking Granularity: Kích thước khóa. Khóa lớn -> dễ quản lý, đồng thời thấp. Khóa nhỏ -> khó quản lý, đồng thời cao.
 
 Các bullet của **7.1 회복 및 동시성 제어 (Recovery & Concurrency)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **7.1 회복 및 동시성 제어 (Recovery & Concurrency)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **7.2 교착상태 (Deadlock)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **7.2 교착상태 (Deadlock)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **7.2 교착상태 (Deadlock)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 7.2 교착상태 (Deadlock)
 
-Bây giờ ta đi vào nội dung của **7.2 교착상태 (Deadlock)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **7.2 교착상태 (Deadlock)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **발생 4가지 조건:** 상호 배제(Mutual Exclusion), 점유와 대기(Hold and Wait), 비선점(Non-preemption), 환형 대기(Circular Wait).
 - **회피 기법 (Avoidance):** 교착상태 가능성을 피해 나가는 방법. 주로 **은행원 알고리즘 (Banker's Algorithm, E. J. Dijkstra)** 사용.
@@ -873,21 +1308,46 @@ Các bullet của **7.2 교착상태 (Deadlock)** đang nén nhiều ý thành c
 
 Điểm chốt của **7.2 교착상태 (Deadlock)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Điểm chốt của **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **데이터베이스 신기술 (DB New Technologies)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 데이터베이스 신기술 (DB New Technologies)
+
+Sau khi đã đặt nền bằng **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**, ta chuyển sang **데이터베이스 신기술 (DB New Technologies)**. Đây là mắt xích 26/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **데이터베이스 신기술 (DB New Technologies)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **하둡 (Hadoop)**, **맵리듀스 (MapReduce)**, **데이터 마이닝 (Data Mining)**, **OLAP** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **1. 빅데이터 및 분석 기술**. Hãy xác định **1. 빅데이터 및 분석 기술** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 1. 빅데이터 및 분석 기술
+
+Phần nguồn của **1. 빅데이터 및 분석 기술** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **하둡 (Hadoop)**: 대용량 데이터를 병렬로 처리하기 위한 자바 소프트웨어 프레임워크 (오픈소스).
+- **맵리듀스 (MapReduce)**: 하둡 기반 분산 처리 프로그래밍 모델 (Map으로 분류, Reduce로 추출).
+- **데이터 마이닝 (Data Mining)**: 대량의 데이터에서 패턴을 규명하여 유용한 정보를 추출하는 기법.
+- **OLAP**: 다차원 데이터로부터 통계적 요약 정보를 분석하여 의사결정에 활용. (연산: Roll-up, Drill-down, Pivoting 등).
+
+Các bullet của **1. 빅데이터 및 분석 기술** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Với **1. 빅데이터 및 분석 기술**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+
+Ta có thể khép mục **데이터베이스 신기술 (DB New Technologies)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)
 
-Ở bước 13/18, **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** xuất hiện như phần tiếp nối của **7. 데이터베이스 핵심 기술 (Công nghệ lõi Cơ sở dữ liệu)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Từ **데이터베이스 신기술 (DB New Technologies)**, ta đã có điểm tựa để bước vào **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/61 trước khi đi vào chi tiết.
 
 Để đọc **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **8.1 보안 기본 요소 및 프레임워크** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **8.1 보안 기본 요소 및 프레임워크** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Để không đọc **8.1 보안 기본 요소 및 프레임워크** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 8.1 보안 기본 요소 및 프레임워크
 
-Bây giờ ta đi vào nội dung của **8.1 보안 기본 요소 및 프레임워크**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **8.1 보안 기본 요소 및 프레임워크** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **보안 3대 요소 (CIA Triad):**
   - **기밀성 (Confidentiality):** 인가된 사용자에게만 접근 허용.
@@ -902,21 +1362,21 @@ Bây giờ ta đi vào nội dung của **8.1 보안 기본 요소 및 프레임
 Các bullet của **8.1 보안 기본 요소 및 프레임워크** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **8.1 보안 기본 요소 및 프레임워크** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **8.2 시스템 보안 기술** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **8.2 시스템 보안 기술**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **8.2 시스템 보안 기술**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 8.2 시스템 보안 기술
 
-Phần nguồn của **8.2 시스템 보안 기술** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **8.2 시스템 보안 기술**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **TCP 래퍼 (TCP Wrapper):** 외부 접속 인가 여부를 점검하여 허용/거부하는 도구.
 - **Secure OS:** 보안 기능을 갖춘 커널을 이식하여 시스템 자원 보호.
 - **침입 탐지 시스템 (IDS):** 실시간으로 비정상적 사용 탐지 (오용 탐지: 패턴 기반, 이상 탐지: 평균 상태 기준).
 - **고가용성 솔루션 (HACMP):** 장애 발생 시 즉시 다른 시스템으로 대체 가능하게 하는 환경.
 - **인증 (Authentication):** 지식 기반(패스워드), 소유 기반(스마트카드), 행위 기반(서명).
-- **커널 로그:** 
-  - `wtmp`: 성공한 로그인/로그아웃. 
-  - `utmp`: 현재 로그인 상태. 
-  - `btmp`: 실패한 로그인. 
+- **커널 로그:**
+  - `wtmp`: 성공한 로그인/로그아웃.
+  - `utmp`: 현재 로그인 상태.
+  - `btmp`: 실패한 로그인.
   - `lastlog`: 마지막 성공 로그인.
 - **Tiếng Việt:** Secure OS, IDS (phát hiện xâm nhập), HACMP (giải pháp độ sẵn sàng cao). Phân loại log kernel (wtmp, utmp, v.v.).
 
@@ -924,21 +1384,21 @@ Các bullet của **8.2 시스템 보안 기술** đang nén nhiều ý thành c
 
 Điểm chốt của **8.2 시스템 보안 기술** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Như vậy, **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Điểm chốt của **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)
 
-Sau khi đã đặt nền bằng **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**, ta chuyển sang **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**. Đây là mắt xích 14/18 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Ở bước 28/61, **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** xuất hiện như phần tiếp nối của **8. 정보 보안 일반 및 시스템 보안 (Bảo mật thông tin & Hệ thống)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **10.1 웹 및 애플리케이션 취약점**. Hãy xác định **10.1 웹 및 애플리케이션 취약점** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Trước hết, ta đặt **10.1 웹 및 애플리케이션 취약점** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **10.1 웹 및 애플리케이션 취약점** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 10.1 웹 및 애플리케이션 취약점
 
-Phần nguồn của **10.1 웹 및 애플리케이션 취약점** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **10.1 웹 및 애플리케이션 취약점**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **SQL 삽입 (SQL Injection):** SQL을 삽입하여 DB 유출/변조 및 인증 우회.
 - **크로스사이트 스크립팅 (XSS):** 악의적인 스크립트를 삽입하여 방문자 정보 탈취.
@@ -950,11 +1410,11 @@ Phần nguồn của **10.1 웹 및 애플리케이션 취약점** sẽ lấp đ
 Các bullet của **10.1 웹 및 애플리케이션 취약점** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **10.1 웹 및 애플리케이션 취약점** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Với **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)
 
-Các ý ngay dưới **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **세션 하이재킹 (Session Hijacking):** 클라이언트의 세션 정보를 가로채는 공격.
 - **DDoS 공격:** 여러 분산된 지점에서 한 곳을 공격. (툴: Trin00, TFN, TFN2K, Stacheldraht).
@@ -962,24 +1422,24 @@ Các ý ngay dưới **10.2 네트워크 및 분산 서비스 거부 공격 (DoS
 - **Ping Flood:** 많은 ICMP 메시지를 보내 응답으로 자원 고갈시킴.
 - **스머핑 (SMURFING):** IP/ICMP 특성을 악용해 한 사이트에 집중적으로 데이터 보냄.
 - **DPI (Deep Packet Inspection):** 전 계층의 프로토콜과 패킷 내부를 파악해 침입 탐지.
-- **Tiếng Việt:** 
-  - DDoS: Tấn công từ chối dịch vụ phân tán. 
+- **Tiếng Việt:**
+  - DDoS: Tấn công từ chối dịch vụ phân tán.
   - Ping of Death: Gửi gói ICMP quá lớn.
   - SMURFING: Gửi lượng lớn dữ liệu tập trung.
 
 Các bullet của **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **10.2 네트워크 및 분산 서비스 거부 공격 (DoS/DDoS)**, đừng bắt đầu lại từ số không. **10.3 시스템 해킹 및 악성코드** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **10.3 시스템 해킹 및 악성코드**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **10.3 시스템 해킹 및 악성코드** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 10.3 시스템 해킹 및 악성코드
 
-Bây giờ ta đi vào nội dung của **10.3 시스템 해킹 및 악성코드**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **10.3 시스템 해킹 및 악성코드** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **백도어 (Back Door):** 보안을 제거하고 만들어 놓은 비밀 통로 (탐지: 무결성 검사, 열린 포트 등).
 - **키로거 공격 (Key Logger):** 키보드 움직임을 탐지해 개인정보 탈취.
 - **랜섬웨어 (Ransomware):** 문서 암호화 후 돈(Ransom)을 요구.
-- **웜 (Worm):** 연속적으로 **자신을 복제**하여 시스템 부하 유발 (바이러스의 일종).
+- **웜 (Worm):** 네트워크를 통해 스스로 전파·복제되는 악성 코드로, 숙주 파일에 기생해야 하는 바이러스와 구분한다.
 - **허니팟 (Honeypot):** 비정상 접근 탐지를 위해 의도적으로 설치한 시스템 (미끼).
 - **피싱 (Phishing):** 공공/금융 기관을 사칭해 개인정보 탈취.
 - **Tiếng Việt:** Backdoor (Cửa hậu), Key Logger (Ghi thao tác bàn phím), Ransomware (Mã độc tống tiền), Worm (Giun máy tính - tự nhân bản), Honeypot (Hệ thống mồi nhử).
@@ -987,11 +1447,11 @@ Bây giờ ta đi vào nội dung của **10.3 시스템 해킹 및 악성코드
 Các bullet của **10.3 시스템 해킹 및 악성코드** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **10.3 시스템 해킹 및 악성코드** vừa cho ta cách đặt câu hỏi. Bây giờ **10.4 기타 네트워크 공격** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Với **10.4 기타 네트워크 공격**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ở đoạn **10.4 기타 네트워크 공격**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 10.4 기타 네트워크 공격
 
-Phần nguồn của **10.4 기타 네트워크 공격** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **10.4 기타 네트워크 공격**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **스위치 재밍 (Switch Jamming):** 위조된 MAC 주소를 흘려보내 스위치를 더미 허브로 작동하게 만듦.
 - **블루투스 관련 공격:**
@@ -1006,42 +1466,219 @@ Với **10.4 기타 네트워크 공격**, hãy đọc các công thức như m�
 
 Với **10.4 기타 네트워크 공격**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Ta có thể khép mục **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **9. 암호화 기술 (Công nghệ Mã hóa)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Như vậy, **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 정보 보안 및 하드웨어 신기술 (Security & HW Tech)
+
+Sau khi đã đặt nền bằng **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, ta chuyển sang **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**. Đây là mắt xích 29/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **BaaS (Blockchain as a Service)**, **OWASP**, **허니팟 (Honeypot)**, **Secure OS** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **1. 보안 용어 및 Secure OS**. Hãy xác định **1. 보안 용어 및 Secure OS** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 1. 보안 용어 및 Secure OS
+
+Phần nguồn của **1. 보안 용어 및 Secure OS** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **BaaS (Blockchain as a Service)**: 클라우드 기반 블록체인 개발 환경 제공.
+- **OWASP**: 웹 취약점을 연구하는 비영리 단체 (10대 취약점 발표).
+- **허니팟 (Honeypot)**: 침입자를 속여 정보를 수집하기 위해 설치해 둔 시스템 (미끼).
+- **Secure OS**: 기존 OS에 보안 기능 커널을 이식한 운영체제. 암호적, 논리적, 시간적, 물리적 분리 방법을 통해 보호하며 식별, 인증, 접근통제(MAC, DAC) 기능을 제공합니다.
+
+Các bullet của **1. 보안 용어 및 Secure OS** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 보안 용어 및 Secure OS** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 하드웨어 신기술** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **2. 하드웨어 신기술** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 2. 하드웨어 신기술
+
+Các ý ngay dưới **2. 하드웨어 신기술** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **HA (High Availability, 고가용성)**: 장애 발생 시 즉시 다른 시스템으로 대체 가능한 이중화 환경.
+- **RAID**: 여러 개의 하드디스크에 데이터를 분산 저장하여 속도와 안정성을 향상시키는 기술.
+- **트러스트존 (TrustZone)**: 프로세서 내에 일반 구역과 보안 구역을 분할하는 ARM의 하드웨어 보안 기술.
+
+Các bullet của **2. 하드웨어 신기술** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 하드웨어 신기술** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Ta có thể khép mục **정보 보안 및 하드웨어 신기술 (Security & HW Tech)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **소프트웨어 보안 (Software Security)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 소프트웨어 보안 (Software Security)
+
+Từ **정보 보안 및 하드웨어 신기술 (Security & HW Tech)**, ta đã có điểm tựa để bước vào **소프트웨어 보안 (Software Security)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/61 trước khi đi vào chi tiết.
+
+Để đọc **소프트웨어 보안 (Software Security)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **기밀성 (Confidentiality)**, **무결성 (Integrity)**, **가용성 (Availability)**, **방법론** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **1. 보안 3대 요소 (CIA Triad)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 1. 보안 3대 요소 (CIA Triad)
+
+Các ý ngay dưới **1. 보안 3대 요소 (CIA Triad)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **기밀성 (Confidentiality)**: 인가된 사용자만 접근 가능 (암호화).
+- **무결성 (Integrity)**: 인가된 사용자만 수정 가능 (변조 방지).
+- **가용성 (Availability)**: 인가된 사용자는 언제든 사용 가능.
+- 기타: 인증(Authentication), 부인 방지(Non-Repudiation).
+
+Các bullet của **1. 보안 3대 요소 (CIA Triad)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 보안 3대 요소 (CIA Triad)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. Secure SDLC** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **2. Secure SDLC**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 2. Secure SDLC
+
+Bây giờ ta đi vào nội dung của **2. Secure SDLC**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+보안상 안전한 SW 개발을 위해 SDLC(생명주기)에 보안 활동을 추가한 것.
+- **방법론**: CLASP(초기 단계 중심), SDL(MS사 개발), Seven Touchpoints(각 단계별 모범사례 적용).
+
+Các bullet của **2. Secure SDLC** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. Secure SDLC**, đừng bắt đầu lại từ số không. **3. 주요 보안 약점 및 방어** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Với **3. 주요 보안 약점 및 방어**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 3. 주요 보안 약점 및 방어
+
+Phần nguồn của **3. 주요 보안 약점 및 방어** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **SQL 삽입 (SQL Injection)**: 입력 폼에 SQL 명령어를 넣어 DB를 조작. (방어: 입력값 필터링 및 매개변수화).
+- **XSS (크로스사이트 스크립팅)**: 웹페이지에 악성 스크립트를 삽입해 사용자 정보 탈취. (방어: `<, >, &` 등 특수문자 치환).
+- **메모리 버퍼 오버플로**: 할당된 메모리 범위를 넘어서 기록하여 오동작 유발.
+  - **스택 가드 (Stack Guard)**: 복귀 주소와 변수 사이에 특정 값을 넣어 오버플로를 탐지하는 기술.
+- **접근 지정자 (Access Modifier)**: `Public`(모두 접근), `Protected`(패키지+상속), `Default`(같은 패키지), `Private`(클래스 내부만).
+
+💡 **Mẹo ghi nhớ (Mnemonics):**
+- 보안 3요소: **C.I.A** (Confidentiality - Integrity - Availability).
+- 접근 한정자: **P.P.D.P** (Public - Protected - Default - Private).
+
+Các bullet của **3. 주요 보안 약점 및 방어** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **3. 주요 보안 약점 및 방어** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Điểm chốt của **소프트웨어 보안 (Software Security)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **인증 및 보안 체계 (Authentication & Security System)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 인증 및 보안 체계 (Authentication & Security System)
+
+Ở bước 31/61, **인증 및 보안 체계 (Authentication & Security System)** xuất hiện như phần tiếp nối của **소프트웨어 보안 (Software Security)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **인증 및 보안 체계 (Authentication & Security System)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **지식 기반 (Something You Know)**, **소유 기반 (Something You Have)**, **생체 기반 (Something You Are)**, **위치 기반 (Somewhere You Are)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Trước hết, ta đặt **1. 인증 수단 4가지** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. 인증 수단 4가지** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+
+### 1. 인증 수단 4가지
+
+Bây giờ ta đi vào nội dung của **1. 인증 수단 4가지**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **지식 기반 (Something You Know)**: 패스워드, PIN (머릿속 기억).
+- **소유 기반 (Something You Have)**: 신분증, 스마트카드, OTP.
+- **생체 기반 (Something You Are)**: 지문, 홍채, 정맥 인식.
+- **위치 기반 (Somewhere You Are)**: 접속 IP 위치, GPS.
+
+Các bullet của **1. 인증 수단 4가지** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 인증 수단 4가지** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 보안 체계 3영역** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **2. 보안 체계 3영역**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 2. 보안 체계 3영역
+
+Phần nguồn của **2. 보안 체계 3영역** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **관리적 보안**: 정보보호 정책, 조직, 교육 등 사람 중심.
+- **물리적 보안**: 출입 통제, 전산실 관리 등 물리적 보호.
+- **기술적 보안**: 사용자 인증, 암호화, 접근 제어 등 IT 기술 보호.
+
+Các bullet của **2. 보안 체계 3영역** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 보안 체계 3영역** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Như vậy, **인증 및 보안 체계 (Authentication & Security System)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **소프트웨어 개발 보안 관련 법규**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 소프트웨어 개발 보안 관련 법규
+
+Sau khi đã đặt nền bằng **인증 및 보안 체계 (Authentication & Security System)**, ta chuyển sang **소프트웨어 개발 보안 관련 법규**. Đây là mắt xích 32/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **소프트웨어 개발 보안 관련 법규** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **개인정보 보호법**, **정보통신망법**, **신용정보법**, **위치정보법** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개인정보 보호법**: 개인정보 처리 및 보호에 관한 전반적 사항.
+- **정보통신망법**: 정보통신망을 통한 개인정보 수집/이용 보호.
+- **신용정보법**: 개인의 신용정보 취급 보호.
+- **위치정보법**: 개인 위치정보 수집 및 제공 보호.
+
+Ta có thể khép mục **소프트웨어 개발 보안 관련 법규** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## ⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)
+
+Từ **소프트웨어 개발 보안 관련 법규**, ta đã có điểm tựa để bước vào **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/61 trước khi đi vào chi tiết.
+
+Để đọc **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Điểm chốt của **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)
+
+Ở bước 34/61, **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** xuất hiện như phần tiếp nối của **⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **적절한 인증 없이 중요기능 허용 (Missing Authentication)**, **중요정보 평문 저장 및 전송 (Plaintext Storage/Transmission)**, **하드코드된 비밀번호 (Hardcoded Password)**, **오류 메시지 통한 정보 노출 (Information Exposure Through Error Message)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **적절한 인증 없이 중요기능 허용 (Missing Authentication)**: 중대한 기능에 재인증이 없음. (Không yêu cầu xác thực lại khi làm việc quan trọng).
+- **중요정보 평문 저장 및 전송 (Plaintext Storage/Transmission)**: 패스워드를 암호화 없이 저장/전송. (Lưu hoặc truyền mật khẩu không mã hóa).
+- **하드코드된 비밀번호 (Hardcoded Password)**: 소스코드에 비밀번호를 직접 작성. (Ghi cứng mật khẩu trong source code).
+- **오류 메시지 통한 정보 노출 (Information Exposure Through Error Message)**: 시스템 내부 구조나 파일 경로가 오류 메시지에 포함되어 노출됨. (Thông báo lỗi làm lộ đường dẫn nội mục hệ thống).
+- **예시 (Example)**:
+  - (KR) DB 연결 실패 시 "root 계정 연결 실패" 같은 메시지를 띄우지 않고 "일시적인 오류입니다"로 대체.
+  - (VN) Thay vì hiện lỗi "Không kết nối được tài khoản root", chỉ hiển thị "Lỗi hệ thống tạm thời".
+
+---
+
+Như vậy, **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **9. 암호화 기술 (Công nghệ Mã hóa)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 9. 암호화 기술 (Công nghệ Mã hóa)
 
-Từ **10. 해킹 및 보안 위협 (Các hình thức tấn công & Đe dọa bảo mật)**, ta đã có điểm tựa để bước vào **9. 암호화 기술 (Công nghệ Mã hóa)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/18 trước khi đi vào chi tiết.
+Sau khi đã đặt nền bằng **4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)**, ta chuyển sang **9. 암호화 기술 (Công nghệ Mã hóa)**. Đây là mắt xích 35/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **9. 암호화 기술 (Công nghệ Mã hóa)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Ta bắt đầu phần nội dung bằng **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)**. Hãy xác định **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)
 
-Các ý ngay dưới **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Phần nguồn của **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **개인키(대칭키) 암호화 (Private/Symmetric Key):**
   - **동일한 키**로 암호화/복호화. 속도가 빠름. 암호화 키 개수: n(n-1)/2.
-  - 종류: 
+  - 종류:
     - **블록 암호화:** DES, SEED, AES, ARIA, IDEA
     - **스트림 암호화:** LFSR, RC4
 - **공개키(비대칭키) 암호화 (Public/Asymmetric Key):**
   - 암호화(공개키), 복호화(비밀키/개인키). 키 개수: **2n**.
   - 대표 알고리즘: **RSA** (소인수분해 기반).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Khóa cá nhân (Đối xứng): Cùng 1 khóa, nhanh. (DES, AES, ARIA).
   - Khóa công khai (Bất đối xứng): 2 khóa (Public để mã hóa, Private để giải mã), an toàn nhưng chậm. (RSA).
 
 Các bullet của **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **9.1 개인키 vs 공개키 암호화 (대칭키 vs 비대칭키)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **9.2 해시 및 기타 암호화 요소** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **9.2 해시 및 기타 암호화 요소**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Đoạn **9.2 해시 및 기타 암호화 요소** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 9.2 해시 및 기타 암호화 요소
 
-Bây giờ ta đi vào nội dung của **9.2 해시 및 기타 암호화 요소**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Các ý ngay dưới **9.2 해시 및 기타 암호화 요소** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **해시 (Hash):** 임의의 길이를 고정된 길이로 변환. 복호화가 불가한 **일방향 함수**. (종류: SHA, MD4, MD5 등).
 - **솔트 (Salt):** 암호화 전 원문에 무작위 값을 덧붙이는 과정. (패스워드 보안 강화용).
@@ -1051,27 +1688,98 @@ Các bullet của **9.2 해시 및 기타 암호화 요소** đang nén nhiều 
 
 Điểm chốt của **9.2 해시 및 기타 암호화 요소** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Điểm chốt của **9. 암호화 기술 (Công nghệ Mã hóa)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Ta có thể khép mục **9. 암호화 기술 (Công nghệ Mã hóa)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **암호화 기법 (Encryption Techniques)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 암호화 기법 (Encryption Techniques)
+
+Từ **9. 암호화 기술 (Công nghệ Mã hóa)**, ta đã có điểm tựa để bước vào **암호화 기법 (Encryption Techniques)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/61 trước khi đi vào chi tiết.
+
+Để đọc **암호화 기법 (Encryption Techniques)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **종류**, **종류**, **해시 (Hash)**, **솔트 (Salt)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **1. 개인키 (대칭키) 암호화 (Private Key / Symmetric Key)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 1. 개인키 (대칭키) 암호화 (Private Key / Symmetric Key)
+
+Các ý ngay dưới **1. 개인키 (대칭키) 암호화 (Private Key / Symmetric Key)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- 암호화와 복호화에 **동일한 키(비밀키)**를 사용합니다.
+- 장점: 속도가 빠름 / 단점: 키 분배가 어렵고 키 개수가 많아짐.
+- 필요한 키의 개수: `n(n-1) / 2`
+- **종류**: DES, 3DES, AES, SEED(국내), ARIA(국내).
+
+Các bullet của **1. 개인키 (대칭키) 암호화 (Private Key / Symmetric Key)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 개인키 (대칭키) 암호화 (Private Key / Symmetric Key)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)
+
+Bây giờ ta đi vào nội dung của **2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- 암호화할 때는 공개키(Public Key), 복호화할 때는 비밀키(Private Key)를 사용합니다.
+- 장점: 키 분배 용이, 키 개수 적음 / 단점: 암복호화 속도가 느림.
+- 필요한 키의 개수: `2n`
+- **종류**: RSA.
+
+Các bullet của **2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. 공개키 (비대칭키) 암호화 (Public Key / Asymmetric Key)**, đừng bắt đầu lại từ số không. **3. 해시(Hash)와 솔트(Salt)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Với **3. 해시(Hash)와 솔트(Salt)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 3. 해시(Hash)와 솔트(Salt)
+
+Phần nguồn của **3. 해시(Hash)와 솔트(Salt)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **해시 (Hash)**: 임의의 길이 데이터를 고정된 길이의 값으로 변환하는 일방향 함수다. 무결성 검증에 사용하며, 패스워드는 전용 password hashing/KDF와 salt를 사용해야 한다. 해시는 암호화처럼 복호화하지 않는다 (예: SHA-256, MD5).
+- **솔트 (Salt)**: 암호화 전 원문에 덧붙이는 무작위 값. 동일한 패스워드라도 솔트가 다르면 해시값이 달라져 레인보우 테이블 공격을 방어합니다.
+
+> **Vietnamese Explanation**:
+> **Mã hóa đối xứng (Private Key)**: Dùng chung 1 chìa khóa để khóa và mở (nhanh nhưng khó chia sẻ chìa khóa an toàn).
+> **Mã hóa bất đối xứng (Public Key)**: Dùng khóa công khai để khóa, khóa bí mật để mở (chậm hơn nhưng an toàn).
+> **Hash (Băm)** là mã hóa 1 chiều (không dịch ngược được). **Salt (Muối)** là thêm chuỗi ngẫu nhiên vào mật khẩu trước khi băm để tăng độ khó.
+
+Các bullet của **3. 해시(Hash)와 솔트(Salt)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **3. 해시(Hash)와 솔트(Salt)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Điểm chốt của **암호화 기법 (Encryption Techniques)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **1. 암호화 기본 개념 (Concepts)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 1. 암호화 기본 개념 (Concepts)
+
+Ở bước 37/61, **1. 암호화 기본 개념 (Concepts)** xuất hiện như phần tiếp nối của **암호화 기법 (Encryption Techniques)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **1. 암호화 기본 개념 (Concepts)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **평문 (Plain)**, **암호문 (Cipher)**, **치환 암호 (Substitution Cipher)**, **전치 암호 (Transposition Cipher)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **평문 (Plain)**: Bản rõ (chưa mã hoá)
+- **암호문 (Cipher)**: Bản mã (đã mã hoá)
+- **치환 암호 (Substitution Cipher)**: 문자를 다른 문자로 대체 (Mã hoá thay thế, vd: A -> C).
+- **전치 암호 (Transposition Cipher)**: 문자의 위치를 바꿈 (Mã hoá hoán vị, vd: ABC -> BCA).
+
+Như vậy, **1. 암호화 기본 개념 (Concepts)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)
 
-Ở bước 16/18, **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** xuất hiện như phần tiếp nối của **9. 암호화 기술 (Công nghệ Mã hóa)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **1. 암호화 기본 개념 (Concepts)**, ta chuyển sang **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**. Đây là mắt xích 38/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **2.1 소프트웨어 재사용 (Software Reuse)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **2.1 소프트웨어 재사용 (Software Reuse)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **2.1 소프트웨어 재사용 (Software Reuse)**. Hãy xác định **2.1 소프트웨어 재사용 (Software Reuse)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 2.1 소프트웨어 재사용 (Software Reuse)
 
-Bây giờ ta đi vào nội dung của **2.1 소프트웨어 재사용 (Software Reuse)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **2.1 소프트웨어 재사용 (Software Reuse)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **이점 (Benefits):** 개발 시간과 비용 단축, 품질 향상, 생산성 향상, 시스템 명세/설계/코드 등 문서 공유.
 - **방법 (Methods):**
   - **합성 중심 (Composition-based):** 전자 칩 같은 소프트웨어 부품(모듈)을 만들어 끼워 맞추는 방법.
   - **생성 중심 (Generation-based):** 추상화 형태로 쓰여진 명세를 구체화하여 프로그램을 만드는 방법.
-- **Tiếng Việt:** Tái sử dụng phần mềm giúp giảm thời gian/chi phí, tăng chất lượng. 
+- **Tiếng Việt:** Tái sử dụng phần mềm giúp giảm thời gian/chi phí, tăng chất lượng.
   - Tổng hợp: lắp ráp các module (như chip).
   - Khởi tạo: tạo chương trình từ đặc tả trừu tượng.
 - **Example:**
@@ -1081,11 +1789,11 @@ Bây giờ ta đi vào nội dung của **2.1 소프트웨어 재사용 (Softwar
 Các ý về **2.1 소프트웨어 재사용 (Software Reuse)** được nối với ví dụ để chuyển từ thuật ngữ sang tình huống. Hãy thử dự đoán kết quả hoặc lựa chọn trước khi đọc phần ví dụ, rồi đối chiếu xem quy tắc nào đã dẫn đến kết luận đó.
 
 Ta vừa chốt **2.1 소프트웨어 재사용 (Software Reuse)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2.2 소프트웨어 재공학 (Software Reengineering)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **2.2 소프트웨어 재공학 (Software Reengineering)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **2.2 소프트웨어 재공학 (Software Reengineering)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 2.2 소프트웨어 재공학 (Software Reengineering)
 
-Phần nguồn của **2.2 소프트웨어 재공학 (Software Reengineering)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **2.2 소프트웨어 재공학 (Software Reengineering)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - 기존 소프트웨어의 데이터와 기능을 변경 및 개선하여 유지보수성과 품질을 높이는 기법.
 - **이점 (Benefits):** 위험 부담 감소, 개발 시간/비용 단축, 시스템 명세 오류 억제.
@@ -1100,11 +1808,11 @@ Phần nguồn của **2.2 소프트웨어 재공학 (Software Reengineering)** 
 Các bullet của **2.2 소프트웨어 재공학 (Software Reengineering)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **2.2 소프트웨어 재공학 (Software Reengineering)**, đừng bắt đầu lại từ số không. **2.3 CASE (Computer Aided Software Engineering)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **2.3 CASE (Computer Aided Software Engineering)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **2.3 CASE (Computer Aided Software Engineering)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 2.3 CASE (Computer Aided Software Engineering)
 
-Các ý ngay dưới **2.3 CASE (Computer Aided Software Engineering)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **2.3 CASE (Computer Aided Software Engineering)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - 소프트웨어 개발 과정 전체 또는 일부를 자동화하는 전용 도구.
 - **원천 기술 (Core Technologies):** 구조적 기법, 프로토타이핑, 자동 프로그래밍, 정보 저장소, 분산처리.
@@ -1118,21 +1826,21 @@ Các ý về **2.3 CASE (Computer Aided Software Engineering)** được nối v
 
 Như vậy, **2.3 CASE (Computer Aided Software Engineering)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Như vậy, **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)
 
-Sau khi đã đặt nền bằng **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**, ta chuyển sang **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**. Đây là mắt xích 17/18 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **2. 소프트웨어 공학 기법 (Kỹ thuật Công nghệ Phần mềm)**, ta đã có điểm tựa để bước vào **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/61 trước khi đi vào chi tiết.
 
 Để đọc **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **6.1 최신 IT 기술 동향**. Hãy xác định **6.1 최신 IT 기술 동향** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **6.1 최신 IT 기술 동향** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 6.1 최신 IT 기술 동향
 
-Phần nguồn của **6.1 최신 IT 기술 동향** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **6.1 최신 IT 기술 동향** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **도커 (Docker):** 컨테이너 기술을 자동화하여 쉽게 사용할 수 있게 하는 오픈소스 프로젝트.
 - **매시업 (Mashup):** 웹에서 제공하는 정보/서비스를 융합하여 새로운 서비스를 만드는 기술.
@@ -1141,7 +1849,7 @@ Phần nguồn của **6.1 최신 IT 기술 동향** sẽ lấp đầy khung gi�
 - **스크래피 (Scrapy):** Python 기반의 대규모 웹 크롤링 프레임워크.
 - **텐서플로 (TensorFlow):** 구글의 기계학습/데이터 흐름 프로그래밍용 오픈소스 라이브러리.
 - **앤 스크린 (N-Screen):** 여러(N개) 단말기에서 동일한 콘텐츠를 자유롭게 이용.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Docker: Nền tảng container hóa mã nguồn mở.
   - Mashup: Kết hợp các API/dịch vụ web để tạo dịch vụ mới.
   - Digital Twin: Bản sao kỹ thuật số của thế giới thực.
@@ -1150,17 +1858,17 @@ Phần nguồn của **6.1 최신 IT 기술 동향** sẽ lấp đầy khung gi�
 Các bullet của **6.1 최신 IT 기술 동향** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **6.1 최신 IT 기술 동향** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **6.2 데이터 분석 및 분산 처리** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **6.2 데이터 분석 및 분산 처리** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **6.2 데이터 분석 및 분산 처리**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 6.2 데이터 분석 및 분산 처리
 
-Các ý ngay dưới **6.2 데이터 분석 및 분산 처리** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **6.2 데이터 분석 및 분산 처리**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **하둡 (Hadoop):** 오픈소스 기반 분산 컴퓨팅 플랫폼. 대용량 데이터 전송에 **스쿱(Sqoop)** 사용.
 - **맵리듀스 (MapReduce):** 대용량 데이터를 분산 처리하기 위한 프로그래밍 모델.
 - **데이터 마이닝 (Data Mining):** 대량의 데이터에서 유용한 정보를 발견하는 기법.
 - **OLAP (Online Analytical Processing):** 다차원 데이터에서 통계적 요약 정보를 분석하여 의사결정에 활용. (연산: Roll-up, Drill-down, Pivoting, Slicing, Dicing 등).
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Hadoop: Nền tảng điện toán phân tán (dùng Sqoop kết nối RDB).
   - MapReduce: Mô hình lập trình xử lý phân tán.
   - Data Mining: Khai phá dữ liệu.
@@ -1169,11 +1877,11 @@ Các ý ngay dưới **6.2 데이터 분석 및 분산 처리** cung cấp dữ 
 Các bullet của **6.2 데이터 분석 및 분산 처리** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **6.2 데이터 분석 및 분산 처리**, đừng bắt đầu lại từ số không. **6.3 시스템 아키텍처 및 프로그래밍 요소** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **6.3 시스템 아키텍처 및 프로그래밍 요소**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **6.3 시스템 아키텍처 및 프로그래밍 요소**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 6.3 시스템 아키텍처 및 프로그래밍 요소
 
-Bây giờ ta đi vào nội dung của **6.3 시스템 아키텍처 및 프로그래밍 요소**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **6.3 시스템 아키텍처 및 프로그래밍 요소** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **SOA (Service Oriented Architecture) 기반 계층:** 표현(Presentation) → 업무 프로세스 → 서비스 중간 → 애플리케이션 → 데이터 저장.
 - **접근 지정자 (Access Modifiers):** 외부로부터의 접근을 제한 (Public, Protected, Default, Private).
@@ -1183,21 +1891,21 @@ Các bullet của **6.3 시스템 아키텍처 및 프로그래밍 요소** đan
 
 Như vậy, **6.3 시스템 아키텍처 및 프로그래밍 요소** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Ta có thể khép mục **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 11. 보충 및 심화 내용 (Bổ sung & Nâng cao)
 
-Từ **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**, ta đã có điểm tựa để bước vào **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/18 trước khi đi vào chi tiết.
+Ở bước 40/61, **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** xuất hiện như phần tiếp nối của **6. IT 신기술 및 소프트웨어 (Công nghệ IT mới & Phần mềm)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **11.1 소프트웨어 프레임워크 및 개발 심화** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **11.1 소프트웨어 프레임워크 및 개발 심화** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **11.1 소프트웨어 프레임워크 및 개발 심화** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 11.1 소프트웨어 프레임워크 및 개발 심화
 
-Các ý ngay dưới **11.1 소프트웨어 프레임워크 및 개발 심화** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **11.1 소프트웨어 프레임워크 및 개발 심화**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **프레임워크의 특성 (Framework Characteristics):**
   - **모듈화 (Modularity):** 캡슐화를 통해 변경의 영향을 최소화하고 품질 향상.
@@ -1213,15 +1921,15 @@ Các ý ngay dưới **11.1 소프트웨어 프레임워크 및 개발 심화** 
 Các bullet của **11.1 소프트웨어 프레임워크 및 개발 심화** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **11.1 소프트웨어 프레임워크 및 개발 심화** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **11.2 네트워크 구조 및 표준 심화** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **11.2 네트워크 구조 및 표준 심화**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **11.2 네트워크 구조 및 표준 심화**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 11.2 네트워크 구조 및 표준 심화
 
-Bây giờ ta đi vào nội dung của **11.2 네트워크 구조 및 표준 심화**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **11.2 네트워크 구조 및 표준 심화** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **네트워크 토폴로지 (Network Topology):**
   - **성형 (Star):** 중앙 컴퓨터를 중심으로 연결 (포인트 투 포인트).
-  - **링형 (Ring):** 이웃하는 단말끼리 원형으로 연결. 
+  - **링형 (Ring):** 이웃하는 단말끼리 원형으로 연결.
   - **버스형 (Bus):** 하나의 통신 회선에 여러 단말 연결 (신뢰성 높음).
   - **망형 (Mesh):** 모든 지점을 서로 연결. 회선 수 = `n(n-1)/2`.
 - **IEEE 802 표준 규격:**
@@ -1237,7 +1945,7 @@ Bây giờ ta đi vào nội dung của **11.2 네트워크 구조 및 표준 �
 - **흐름 제어 (Flow Control):**
   - **정지-대기 (Stop-and-Wait):** ACK를 받은 후 다음 패킷 전송.
   - **슬라이딩 윈도우 (Sliding Window):** ACK 없이도 미리 정해진 윈도우 크기(Window Size)만큼 연속 전송.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Topology mạng: Star, Ring, Bus, Mesh (Số đường truyền = n(n-1)/2).
   - IEEE 802.11: Tiêu chuẩn mạng không dây (Wi-Fi).
   - Flow Control: Sliding Window truyền liên tục dựa vào kích thước cửa sổ mà không cần chờ ACK cho từng gói.
@@ -1245,11 +1953,11 @@ Bây giờ ta đi vào nội dung của **11.2 네트워크 구조 및 표준 �
 Với **11.2 네트워크 구조 및 표준 심화**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **11.2 네트워크 구조 및 표준 심화**, đừng bắt đầu lại từ số không. **11.3 데이터베이스 동시성 및 교착상태 심화** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **11.3 데이터베이스 동시성 및 교착상태 심화**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **11.3 데이터베이스 동시성 및 교착상태 심화** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 11.3 데이터베이스 동시성 및 교착상태 심화
 
-Phần nguồn của **11.3 데이터베이스 동시성 및 교착상태 심화** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **11.3 데이터베이스 동시성 및 교착상태 심화** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **교착상태 해결 방법 (Deadlock Handling):**
   - **예방 (Prevention):** 발생 4조건(상호배제, 점유대기, 비선점, 환형대기) 중 하나를 부정 (자원 낭비 심함).
@@ -1266,11 +1974,11 @@ Phần nguồn của **11.3 데이터베이스 동시성 및 교착상태 심화
 Các bullet của **11.3 데이터베이스 동시성 및 교착상태 심화** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **11.3 데이터베이스 동시성 및 교착상태 심화** vừa cho ta cách đặt câu hỏi. Bây giờ **11.4 암호화 및 해시 알고리즘 심화** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Đoạn **11.4 암호화 및 해시 알고리즘 심화** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **11.4 암호화 및 해시 알고리즘 심화**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 11.4 암호화 및 해시 알고리즘 심화
 
-Các ý ngay dưới **11.4 암호화 및 해시 알고리즘 심화** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **11.4 암호화 및 해시 알고리즘 심화**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **암호화 키 개수 (Key Count):**
   - **개인키(대칭키):** `n(n-1)/2` 개
@@ -1289,11 +1997,11 @@ Các ý ngay dưới **11.4 암호화 및 해시 알고리즘 심화** cung cấ
 Với **11.4 암호화 및 해시 알고리즘 심화**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **11.4 암호화 및 해시 알고리즘 심화** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **11.5 기타 보안 및 공격 기법 심화** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **11.5 기타 보안 및 공격 기법 심화**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **11.5 기타 보안 및 공격 기법 심화**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 11.5 기타 보안 및 공격 기법 심화
 
-Bây giờ ta đi vào nội dung của **11.5 기타 보안 및 공격 기법 심화**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **11.5 기타 보안 및 공격 기법 심화** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **Secure SDLC 방법론:**
   - **CLASP:** 활동 중심, 역할 기반 (초기 단계 보안 강화).
@@ -1311,17 +2019,489 @@ Bây giờ ta đi vào nội dung của **11.5 기타 보안 및 공격 기법 �
   - **제로 데이 공격 (Zero Day Attack):** 보안 취약점이 공표되기도 전에 이루어지는 신속한 공격.
   - **스미싱 (Smishing):** SMS를 이용한 개인정보 탈취.
   - **Evil Twin Attack:** 실제와 동일한 이름의 가짜 Wi-Fi(AP)를 송출해 정보 탈취.
-- **Tiếng Việt:** 
+- **Tiếng Việt:**
   - Zero Day Attack: Tấn công khai thác lỗ hổng trước khi có bản vá.
   - Smishing: Phishing qua tin nhắn SMS.
   - Evil Twin: Tấn công bằng trạm Wi-Fi giả mạo tên (SSID) giống hệt trạm thật.
   - DDoS Tools: Trin00, TFN, Stacheldraht (ẩn danh và mã hóa liên lạc).
 
-EOF
-# 데이터 통신 및 통신 프로토콜 (Truyền thông Dữ liệu & Giao thức)
-
 Các bullet của **11.5 기타 보안 및 공격 기법 심화** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Điểm chốt của **11.5 기타 보안 및 공격 기법 심화** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Khép lại **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.
+Như vậy, **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **001. 소프트웨어 생명 주기 (Software Life Cycle)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 001. 소프트웨어 생명 주기 (Software Life Cycle)
+
+Sau khi đã đặt nền bằng **11. 보충 및 심화 내용 (Bổ sung & Nâng cao)**, ta chuyển sang **001. 소프트웨어 생명 주기 (Software Life Cycle)**. Đây là mắt xích 41/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **001. 소프트웨어 생명 주기 (Software Life Cycle)** như một bài học cho người mới, hãy giữ câu hỏi: **một dự án đi qua những giai đoạn nào, mỗi mô hình phân bổ công việc và rủi ro ra sao?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+* **개념**: 소프트웨어를 개발하기 위해 정의하고 운용, 유지보수 등의 과정을 각 단계별로 나눈 것. (소프트웨어 수명 주기)
+  * *Tiếng Việt*: Vòng đời phần mềm là việc chia quá trình từ định nghĩa, phát triển, vận hành đến bảo trì phần mềm thành các giai đoạn.
+  * *Ví dụ*: 앱을 기획하고, 만들고, 출시 후 업데이트하는 전체 과정. (Toàn bộ quá trình từ lên kế hoạch, tạo, đến cập nhật app sau khi ra mắt).
+
+---
+
+Ta có thể khép mục **001. 소프트웨어 생명 주기 (Software Life Cycle)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5과목 정보시스템 구축 관리 (Information System Construction Management)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 5과목 정보시스템 구축 관리 (Information System Construction Management)
+
+Từ **001. 소프트웨어 생명 주기 (Software Life Cycle)**, ta đã có điểm tựa để bước vào **5과목 정보시스템 구축 관리 (Information System Construction Management)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/61 trước khi đi vào chi tiết.
+
+Để đọc **5과목 정보시스템 구축 관리 (Information System Construction Management)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **구조적 방법론 (Structured)**, **정보공학 방법론 (Information Engineering)**, **컴포넌트 기반 방법론 (CBD)**, **소프트웨어 재사용 (Reuse)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **소프트웨어 개발 방법론 (Software Development Methodologies)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 소프트웨어 개발 방법론 (Software Development Methodologies)
+
+Các ý ngay dưới **소프트웨어 개발 방법론 (Software Development Methodologies)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **구조적 방법론 (Structured)**: 처리(Process) 중심. 분할과 정복(Divide and Conquer) 원리 적용.
+- **정보공학 방법론 (Information Engineering)**: 자료(Data) 중심. 대규모 정보 시스템 구축에 적합.
+- **컴포넌트 기반 방법론 (CBD)**: 기존 컴포넌트를 조합하여 새로운 애플리케이션 생성. 재사용성(Reusability)과 확장성이 높고 유지보수 비용 최소화.
+
+Các bullet của **소프트웨어 개발 방법론 (Software Development Methodologies)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **소프트웨어 개발 방법론 (Software Development Methodologies)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)
+
+Bây giờ ta đi vào nội dung của **소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **소프트웨어 재사용 (Reuse)**: 이미 검증된 소프트웨어를 새로운 개발에 사용하여 개발 시간 및 비용 단축, 품질 향상.
+- **소프트웨어 재공학 (Reengineering)**: 기존 시스템의 분석·재구성·역공학·이식 등을 통해 유지보수성과 수명을 개선하는 활동이다. 신규 기능 추가 자체와 동일한 개념은 아니다.
+
+> **Vietnamese Explanation**:
+> - **Methodologies**: Structured (Tập trung vào quá trình), Information Engineering (Tập trung vào dữ liệu), CBD (Lắp ráp từ các linh kiện có sẵn).
+> - **Reuse**: Dùng lại code/module cũ cho dự án mới để tiết kiệm chi phí.
+> - **Reengineering**: Tái cấu trúc, cải tiến hệ thống cũ để dễ bảo trì và đáp ứng nhu cầu mới.
+
+Các bullet của **소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **소프트웨어 재사용과 재공학 (Software Reuse & Reengineering)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Điểm chốt của **5과목 정보시스템 구축 관리 (Information System Construction Management)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)
+
+Ở bước 43/61, **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)** xuất hiện như phần tiếp nối của **5과목 정보시스템 구축 관리 (Information System Construction Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **합성 중심 (Composition-Based)**, **생성 중심 (Generation-Based)**, **분석 (Analysis)**, **재구성 (Restructuring)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Trước hết, ta đặt **1. 재사용 방법 (Reuse Methods)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. 재사용 방법 (Reuse Methods)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+
+### 1. 재사용 방법 (Reuse Methods)
+
+Bây giờ ta đi vào nội dung của **1. 재사용 방법 (Reuse Methods)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **합성 중심 (Composition-Based)**: 소프트웨어 부품(블록)을 만들어 끼워 맞추어 완성시키는 방법. (블록 구성 방법)
+- **생성 중심 (Generation-Based)**: 추상화 형태의 명세를 구체화하여 프로그램을 만드는 방법. (패턴 구성 방법)
+
+Các bullet của **1. 재사용 방법 (Reuse Methods)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 재사용 방법 (Reuse Methods)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 재공학 주요 활동 (Reengineering Activities)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **2. 재공학 주요 활동 (Reengineering Activities)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 2. 재공학 주요 활동 (Reengineering Activities)
+
+Phần nguồn của **2. 재공학 주요 활동 (Reengineering Activities)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+기존 시스템을 개선하고 유지보수성을 높이는 활동입니다.
+- **분석 (Analysis)**: 기존 명세서를 확인해 동작을 이해하고 대상을 선정.
+- **재구성 (Restructuring)**: 외적인 동작은 유지하면서 코드 구조를 향상.
+- **역공학 (Reverse Engineering)**: 기존 코드를 분석해 설계 정보나 구성 요소를 다시 추출(도출)해 내는 활동.
+- **이식 (Migration)**: 다른 운영체제나 하드웨어 환경에서 사용할 수 있도록 변환.
+
+Các bullet của **2. 재공학 주요 활동 (Reengineering Activities)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 재공학 주요 활동 (Reengineering Activities)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Như vậy, **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **CASE (Computer Aided Software Engineering)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## CASE (Computer Aided Software Engineering)
+
+Sau khi đã đặt nền bằng **소프트웨어 재사용 및 재공학 활동 (Software Reuse & Reengineering Activities)**, ta chuyển sang **CASE (Computer Aided Software Engineering)**. Đây là mắt xích 44/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **CASE (Computer Aided Software Engineering)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- 소프트웨어 개발 생명 주기(요구 분석, 설계, 구현, 검사 등) 전체 또는 일부를 **컴퓨터와 전용 도구를 사용해 자동화**하는 기법.
+- 개발의 표준화를 지향하며 생산성 및 품질을 향상시킵니다.
+
+Ta có thể khép mục **CASE (Computer Aided Software Engineering)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)
+
+Từ **CASE (Computer Aided Software Engineering)**, ta đã có điểm tựa để bước vào **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/61 trước khi đi vào chi tiết.
+
+Để đọc **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **연기 갱신 (Deferred Update)**, **즉각 갱신 (Immediate Update)**, **그림자 페이지 (Shadow Paging)**, **검사점 (Check Point)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **1. 회복 기법 (Recovery)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 1. 회복 기법 (Recovery)
+
+Các ý ngay dưới **1. 회복 기법 (Recovery)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+장애 발생 시 데이터베이스를 정상 상태로 복구합니다.
+- **연기 갱신 (Deferred Update)**: 트랜잭션이 완료될 때까지 DB 갱신을 연기하고 로그(Log)에 보관. 실패 시 무시하면 됨. (Redo만 가능).
+- **즉각 갱신 (Immediate Update)**: 즉시 DB에 갱신하고 로그에 보관. 실패 시 취소(Undo)와 재실행(Redo) 모두 사용.
+- **그림자 페이지 (Shadow Paging)**: 복사본(그림자) 페이지를 보관해두고, 실패 시 대체하는 방식 (로그 불필요).
+- **검사점 (Check Point)**: 특정 단계에 검사점을 찍어 장애 시 그 시점부터 회복(시간 절약).
+
+Các bullet của **1. 회복 기법 (Recovery)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 회복 기법 (Recovery)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 병행 제어 기법 (Concurrency Control)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **2. 병행 제어 기법 (Concurrency Control)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 2. 병행 제어 기법 (Concurrency Control)
+
+Bây giờ ta đi vào nội dung của **2. 병행 제어 기법 (Concurrency Control)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+다중 트랜잭션 실행 시 DB의 일관성이 파괴되지 않도록 제어합니다.
+- **로킹 (Locking)**: 데이터 엑세스 전에 Lock(잠금)을 요청하는 기법. (로킹 단위: DB, 파일, 레코드 등 한꺼번에 잠그는 크기).
+- **타임 스탬프 순서 (Time Stamp Ordering)**: 트랜잭션 실행 전 시간표(Time Stamp)를 부여해 그 순서대로 처리 (교착상태 미발생).
+- **다중 버전 기법**: 갱신될 때마다 새로운 버전(Version)을 부여해 관리.
+
+> **Vietnamese Explanation**:
+> **Recovery (Phục hồi DB)** có Deferred (chờ xong mới cập nhật - chỉ Redo), Immediate (cập nhật ngay - cần cả Undo và Redo).
+> **Concurrency Control (Kiểm soát đồng thời)** dùng Locking (khóa dữ liệu khi đang dùng) hoặc Time Stamp (cấp tem thời gian để xếp hàng trước sau) tránh việc 2 giao dịch cùng sửa 1 dữ liệu gây lỗi.
+
+Các bullet của **2. 병행 제어 기법 (Concurrency Control)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 병행 제어 기법 (Concurrency Control)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Điểm chốt của **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **교착상태 (Dead Lock)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 교착상태 (Dead Lock)
+
+Ở bước 46/61, **교착상태 (Dead Lock)** xuất hiện như phần tiếp nối của **DB 회복 및 병행 제어 (DB Recovery & Concurrency Control)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **교착상태 (Dead Lock)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **상호 배제 (Mutual Exclusion)**, **점유와 대기 (Hold and Wait)**, **비선점 (Non-preemption)**, **환형 대기 (Circular Wait)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+둘 이상의 프로세스가 자원을 점유한 상태에서 서로 다른 프로세스의 자원을 무한정 기다리는 현상.
+
+Trước hết, ta đặt **1. 교착상태 발생의 4가지 필요충분조건** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. 교착상태 발생의 4가지 필요충분조건** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+
+### 1. 교착상태 발생의 4가지 필요충분조건
+
+Bây giờ ta đi vào nội dung của **1. 교착상태 발생의 4가지 필요충분조건**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+모두 충족해야 교착상태가 발생합니다.
+- **상호 배제 (Mutual Exclusion)**: 한 번에 한 프로세스만 자원 사용.
+- **점유와 대기 (Hold and Wait)**: 자원을 점유한 채로 다른 자원을 대기.
+- **비선점 (Non-preemption)**: 할당된 자원을 강제로 빼앗을 수 없음.
+- **환형 대기 (Circular Wait)**: 대기하는 프로세스들이 원형(Cycle)을 이룸.
+
+Các bullet của **1. 교착상태 발생의 4가지 필요충분조건** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **1. 교착상태 발생의 4가지 필요충분조건** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 교착상태 해결 방법** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **2. 교착상태 해결 방법**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 2. 교착상태 해결 방법
+
+Phần nguồn của **2. 교착상태 해결 방법** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **예방 (Prevention)**: 4가지 조건 중 하나를 제거 (자원 낭비가 가장 심함).
+- **회피 (Avoidance)**: 발생 가능성을 인정하고 적절히 피해감 (**은행원 알고리즘 / Banker's Algorithm**).
+- **발견 (Detection)**: 발생 여부를 점검 (자원 할당 그래프 등).
+- **회복 (Recovery)**: 교착상태에 있는 프로세스를 종료하거나 자원을 선점하여 회복.
+
+> **Vietnamese Explanation**:
+> **Deadlock (Bế tắc)** giống như kẹt xe ở ngã tư, ai cũng chờ người kia nhường đường nên không ai đi được. Để giải quyết, phương pháp **Avoidance (Né tránh)** dùng thuật toán Banker (người giữ tiền) để đảm bảo luôn có đủ tài nguyên cấp phát một cách an toàn.
+
+Các bullet của **2. 교착상태 해결 방법** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Điểm chốt của **2. 교착상태 해결 방법** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Như vậy, **교착상태 (Dead Lock)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **침입 탐지 시스템 (IDS; Intrusion Detection System)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 침입 탐지 시스템 (IDS; Intrusion Detection System)
+
+Sau khi đã đặt nền bằng **교착상태 (Dead Lock)**, ta chuyển sang **침입 탐지 시스템 (IDS; Intrusion Detection System)**. Đây là mắt xích 47/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **침입 탐지 시스템 (IDS; Intrusion Detection System)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **오용 탐지 (Misuse Detection)**, **이상 탐지 (Anomaly Detection)**, **종류**, **HIDS (Host-Based)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+컴퓨터 시스템의 비정상적인 사용, 오용, 남용 등을 실시간으로 탐지하는 시스템.
+- **오용 탐지 (Misuse Detection)**: 미리 입력해 둔 공격 패턴 감지 (시그니처 기반).
+- **이상 탐지 (Anomaly Detection)**: 평균적인 상태를 기준으로 비정상 행위 감지 (행위 기반).
+- **종류**:
+  - **HIDS (Host-Based)**: 내부 시스템 감시 (OSSEC 등).
+  - **NIDS (Network-Based)**: 외부로부터의 네트워크 트래픽 감시 (Snort 등).
+
+Ta có thể khép mục **침입 탐지 시스템 (IDS; Intrusion Detection System)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **리눅스의 커널 로그 (Linux Kernel Logs)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 리눅스의 커널 로그 (Linux Kernel Logs)
+
+Từ **침입 탐지 시스템 (IDS; Intrusion Detection System)**, ta đã có điểm tựa để bước vào **리눅스의 커널 로그 (Linux Kernel Logs)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/61 trước khi đi vào chi tiết.
+
+Để đọc **리눅스의 커널 로그 (Linux Kernel Logs)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- `/var/log/wtmp`: 성공한 로그인/로그아웃 및 시스템 시작/종료 시간 기록.
+- `/var/run/utmp`: 현재 로그인한 사용자의 상태 기록.
+- `/var/log/btmp`: 실패한 로그인 기록.
+- `/var/log/lastlog`: 마지막으로 성공한 로그인 기록.
+
+Điểm chốt của **리눅스의 커널 로그 (Linux Kernel Logs)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **소프트웨어 생명주기 모델 (SDLC Models)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 소프트웨어 생명주기 모델 (SDLC Models)
+
+Ở bước 49/61, **소프트웨어 생명주기 모델 (SDLC Models)** xuất hiện như phần tiếp nối của **리눅스의 커널 로그 (Linux Kernel Logs)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **소프트웨어 생명주기 모델 (SDLC Models)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **폭포수 모델 (Waterfall)**, **프로토타입 모델 (Prototyping)**, **나선형 모델 (Spiral)**, **V 모델 (V Model)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **폭포수 모델 (Waterfall)**: 각 단계를 명확히 마무리한 후 다음 단계로 넘어가는 선형 순차적 모델 (요구사항 변경 어려움).
+- **프로토타입 모델 (Prototyping)**: 시제품(Prototype)을 만들어 최종 결과물을 예측.
+- **나선형 모델 (Spiral)**: 점진적으로 개발하며 **위험 분석(Risk Analysis)** 기능을 추가한 대형 프로젝트용 모델.
+- **V 모델 (V Model)**: 폭포수 모델에 테스트 단계를 세부적으로 추가하여 검증을 강화한 모델.
+
+> **Vietnamese Explanation**:
+> - **Waterfall (Thác nước)**: Làm xong bước này mới qua bước khác.
+> - **Prototyping (Mẫu thử)**: Làm một bản nháp cho khách hàng xem trước.
+> - **Spiral (Xoắn ốc)**: Làm từng phần và liên tục đánh giá rủi ro (Risk analysis).
+> - **V Model (Chữ V)**: Nhấn mạnh vào việc kiểm thử (Testing) ở mỗi giai đoạn tương ứng.
+
+Như vậy, **소프트웨어 생명주기 모델 (SDLC Models)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **스토리지 시스템 (Storage Systems)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 스토리지 시스템 (Storage Systems)
+
+Sau khi đã đặt nền bằng **소프트웨어 생명주기 모델 (SDLC Models)**, ta chuyển sang **스토리지 시스템 (Storage Systems)**. Đây là mắt xích 50/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **스토리지 시스템 (Storage Systems)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **DAS (Direct Attached Storage)**, **NAS (Network Attached Storage)**, **SAN (Storage Area Network)**, **DAS** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+대용량 데이터를 저장하기 위한 장치 구성 방식.
+- **DAS (Direct Attached Storage)**: 서버와 스토리지를 전용 케이블로 **직접 연결**.
+- **NAS (Network Attached Storage)**: 서버와 스토리지를 **네트워크(LAN)**로 연결.
+- **SAN (Storage Area Network)**: 스토리지 전용 **광 채널 네트워크(FC-SAN)**를 별도로 구성하여 고속 전송.
+
+💡 **Mẹo ghi nhớ (Mnemonics):**
+- **DAS**: Direct (Cắm trực tiếp).
+- **NAS**: Network (Qua mạng LAN).
+- **SAN**: Area Network (Mạng quang riêng tốc độ cao).
+
+Ta có thể khép mục **스토리지 시스템 (Storage Systems)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)
+
+Từ **스토리지 시스템 (Storage Systems)**, ta đã có điểm tựa để bước vào **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/61 trước khi đi vào chi tiết.
+
+Để đọc **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **개념**, **Tiếng Việt**, **예시 (Example)**, **대책** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 연속된 메모리 공간을 사용하는 프로그램에서 할당된 메모리의 범위를 넘어선 위치에서 자료를 읽거나 쓰려고 할 때 발생하는 취약점.
+- **Tiếng Việt**: Lỗ hổng xảy ra khi chương trình ghi hoặc đọc dữ liệu vượt quá giới hạn vùng nhớ đã được cấp phát.
+- **예시 (Example)**:
+  - (KR) 10바이트 공간에 20바이트의 데이터를 입력하면 다른 메모리 영역을 침범함.
+  - (VN) Nhập 20 byte dữ liệu vào mảng chỉ có kích thước 10 byte, làm ghi đè lên các vùng nhớ khác.
+- **대책**: 버퍼의 크기를 적절히 설정.
+- 💡 **Mẹo ghi nhớ**: Buffer Overflow = Bơm nước quá đầy làm tràn ly.
+
+Điểm chốt của **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)
+
+Ở bước 52/61, **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** xuất hiện như phần tiếp nối của **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념**, **Tiếng Việt**, **예시 (Example)**, **대책** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 외부 입력값을 통해 시스템 명령어의 실행을 유도함으로써 권한을 탈취하거나 장애를 유발하는 취약점.
+- **Tiếng Việt**: Chèn các lệnh hệ điều hành thông qua đầu vào của người dùng để thực thi trái phép trên server.
+- **예시 (Example)**:
+  - (KR) 웹 입력창에 `; rm -rf /` 와 같은 명령어를 삽입하여 서버 파일을 삭제.
+  - (VN) Chèn lệnh `; rm -rf /` vào ô input trên web để xoá file trên máy chủ.
+- **대책**: 외부 입력값을 검증 없이 내부 명령어로 사용하지 않음.
+
+Như vậy, **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)
+
+Sau khi đã đặt nền bằng **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)**, ta chuyển sang **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)**. Đây là mắt xích 53/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)** như một bài học cho người mới, hãy giữ câu hỏi: **một nhu cầu nghiệp vụ được chuyển thành yêu cầu có thể kiểm tra và bàn giao như thế nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **개념**, **Tiếng Việt**, **예시 (Example)**, **대책** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 로그인 세션이나 쿠키가 남아 있는 사용자의 브라우저가 공격자가 의도한 상태 변경 요청을 보내도록 유도하는 취약점.
+- **Tiếng Việt**: Lợi dụng phiên đăng nhập (session) hợp lệ của người dùng để thực hiện các yêu cầu không mong muốn.
+- **예시 (Example)**:
+  - (KR) 로그인된 상태에서 공격자가 보낸 링크를 클릭하면 내 계정에서 몰래 송금이 됨.
+  - (VN) Khi đang đăng nhập ngân hàng, lỡ click vào link của hacker thì bị tự động chuyển tiền.
+- **대책**: CSRF 토큰과 SameSite 쿠키를 사용하고, 서버에서 Origin/Referer와 인증 상태를 검증한다. POST만으로는 충분하지 않다.
+- 💡 **Mẹo ghi nhớ**: C-S-R-F = Cứ Sợ Rằng Fake (Sợ người dùng thật nhưng gửi request fake).
+
+Ta có thể khép mục **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)
+
+Từ **3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)**, ta đã có điểm tựa để bước vào **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/61 trước khi đi vào chi tiết.
+
+Để đọc **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념**, **Tiếng Việt**, **예시 (Example)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 널 포인터(값이 없는 메모리 주소)가 가리키는 메모리에 값을 저장하거나 읽을 때 발생하는 오류.
+- **Tiếng Việt**: Lỗi xảy ra khi cố gắng đọc/ghi dữ liệu thông qua con trỏ đang có giá trị Null.
+- **예시 (Example)**:
+  - (KR) 객체가 생성되지 않았는데 그 객체의 메서드를 호출하여 시스템이 다운됨.
+  - (VN) Gọi hàm của một đối tượng chưa được khởi tạo (bằng Null), làm app bị crash.
+
+Điểm chốt của **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)
+
+Ở bước 55/61, **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** xuất hiện như phần tiếp nối của **1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념**, **Tiếng Việt**, **예시 (Example)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 입력 길이·권한·오류 조건을 충분히 검증하지 않는 API를 사용하여 취약점을 만드는 것 (예: C언어의 `strcpy`, `strcat`).
+- **Tiếng Việt**: Sử dụng các hàm không an toàn, dễ gây lỗi tràn bộ đệm (như `strcpy`).
+- **예시 (Example)**:
+  - (KR) 길이 제한이 없는 `strcpy()` 대신 입력 길이와 널 종료를 명시적으로 검증한다. `strncpy()`도 널 종료가 보장되지 않을 수 있으므로 무조건 안전한 대체재로 보지 않는다.
+  - (VN) Dùng `strncpy()` (có giới hạn độ dài) thay cho `strcpy()` (copy không giới hạn).
+
+---
+
+Như vậy, **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)
+
+Sau khi đã đặt nền bằng **3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)**, ta chuyển sang **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)**. Đây là mắt xích 56/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta có thể khép mục **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)
+
+Từ **106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)**, ta đã có điểm tựa để bước vào **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 57/61 trước khi đi vào chi tiết.
+
+Để đọc **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **대칭 키 (Symmetric Key)**, **비대칭 키 (Asymmetric Key)**, **Backdoor (백도어)**, **Key Logger (키로거)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **대칭 키 (Symmetric Key)**: 암호화 키 = 복호화 키 (비밀 키).
+  - 속도가 빠름, 키 관리가 어려움 (Nhanh nhưng khó quản lý phân phối key).
+  - 종류 (Các loại): DES, AES, SEED, ARIA, IDEA (Block); RC4, LFSR (Stream).
+- **비대칭 키 (Asymmetric Key)**: 암호화 키(공개 키) ≠ 복호화 키(개인 키).
+  - 속도가 느림, 키 분배 및 관리가 쉬움 (Chậm nhưng dễ phân phối key, an toàn).
+  - 종류 (Các loại): RSA, ECC, Diffie-Hellman.
+- 💡 **Mẹo ghi nhớ**:
+  - 대칭 (Đại xưng) = 비밀 (Bí mật chung) -> AES, DES.
+  - 비대칭 (Bất đại xưng) = 공개 (Công khai 1 nửa) -> RSA.
+
+---
+
+# 107 서비스 공격 기법 (Service Attack Techniques / Kỹ thuật tấn công dịch vụ)
+
+Phần **107 서비스 공격 기법 (Service Attack Techniques / Kỹ thuật tấn công dịch vụ)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+
+- **Backdoor (백도어)**: 시스템 인증 절차를 우회하여 몰래 접속하는 경로 (Cửa sau, lách xác thực).
+- **Key Logger (키로거)**: 키보드 입력 움직임을 탐지하여 비밀번호 등을 탈취 (Ghi lại thao tác bàn phím).
+- **Rootkit (루트킷)**: 시스템 침입 사실을 숨기고 관리자 권한을 유지하는 도구 모음 (Bộ công cụ che giấu xâm nhập và giữ quyền admin).
+- **Phishing, Smishing, Qshing (피싱, 스미싱, 큐싱)**: 이메일(Phishing), 문자(Smishing), QR코드(Qshing)로 개인정보 탈취 (Lừa đảo lấy thông tin qua mail, SMS, mã QR).
+- **Zombie PC & Botnet (좀비 PC & 봇넷)**: 악성 봇에 감염되어 해커(C&C서버)의 명령에 따라 DDoS 공격 등을 수행하는 PC 무리 (Máy tính bị nhiễm bot, bị điều khiển hàng loạt).
+- **Ransomware (랜섬웨어)**: 파일을 암호화하고 돈을 요구하는 악성 프로그램 (Mã độc tống tiền).
+- **Zero Day Attack (제로데이 공격)**: 취약점이 공표되기도 전에 이루어지는 공격 (Tấn công ngay khi lỗ hổng vừa được phát hiện, chưa có bản vá).
+- **Sniffing (스니핑)**: 네트워크 패킷을 몰래 엿보며 정보 수집 (Nghe lén gói tin trên mạng).
+- **Spoofing (스푸핑 - IP, ARP)**: 위조된 IP나 MAC 주소로 속여 인증을 통과하거나 패킷을 가로챔 (Giả mạo địa chỉ IP hoặc MAC).
+- **Session Hijacking (세션 하이재킹)**: 이미 로그인된 세션 정보를 가로채어 권한 획득 (Cướp phiên đăng nhập).
+- 💡 **Mẹo ghi nhớ**: Spoof = 속이다 (Fake/Giả mạo), Sniff = 킁킁거리다 (Nghe lén/Trộm xem).
+
+---
+
+Điểm chốt của **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
+
+Ở bước 58/61, **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** xuất hiện như phần tiếp nối của **2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các đoạn prose và thuật ngữ bên dưới cần được đọc như các bước trả lời cho câu hỏi đó.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Như vậy, **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **1. 인증 기술 (Authentication Types)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 1. 인증 기술 (Authentication Types)
+
+Sau khi đã đặt nền bằng **108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)**, ta chuyển sang **1. 인증 기술 (Authentication Types)**. Đây là mắt xích 59/61 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **1. 인증 기술 (Authentication Types)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **지식 기반 (Knowledge)**, **소유 기반 (Possession)**, **생체 기반 (Biometric)**, **행위 기반 (Behavior)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **지식 기반 (Knowledge)**: 알고 있는 것 (Mật khẩu, mã PIN).
+- **소유 기반 (Possession)**: 가지고 있는 것 (Token, Smart Card, OTP).
+- **생체 기반 (Biometric)**: 고유한 신체 특징 (Vân tay, mống mắt).
+- **행위 기반 (Behavior)**: 행동 특징 (Chữ ký, dáng đi).
+
+Ta có thể khép mục **1. 인증 기술 (Authentication Types)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **2. 접근 제어 정책 (Access Control Policies)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## 2. 접근 제어 정책 (Access Control Policies)
+
+Từ **1. 인증 기술 (Authentication Types)**, ta đã có điểm tựa để bước vào **2. 접근 제어 정책 (Access Control Policies)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 60/61 trước khi đi vào chi tiết.
+
+Để đọc **2. 접근 제어 정책 (Access Control Policies)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **DAC (임의적 접근 통제 / Discretionary)**, **MAC (강제적 접근 통제 / Mandatory)**, **RBAC (역할 기반 접근 통제 / Role-Based)**, **방화벽 (Firewall)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **DAC (임의적 접근 통제 / Discretionary)**: 신분(Identity) 기반. 데이터 소유자가 권한 부여.
+- **MAC (강제적 접근 통제 / Mandatory)**: 보안등급(Label) 기반. 시스템 관리자가 강제로 권한 부여.
+- **RBAC (역할 기반 접근 통제 / Role-Based)**: 역할(Role) 기반. 변경이 용이.
+- 💡 **Mẹo ghi nhớ**: DAC = Danh tính, MAC = Mức độ bảo mật, RBAC = Role (Vai trò).
+
+---
+
+# 110 네트워크 보안 솔루션 (Network Security Solutions)
+
+Phần **110 네트워크 보안 솔루션 (Network Security Solutions)** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
+- **방화벽 (Firewall)**: 트래픽 접근 허용/차단 (Tường lửa cơ bản).
+- **WAF (웹 방화벽)**: SQL 인젝션, XSS 등 웹 특화 공격 방어 (Tường lửa chuyên cho Web).
+- **IDS (침입 탐지 시스템)**: 침입을 실시간으로 "탐지(Detect)" (Hệ thống phát hiện xâm nhập).
+- **IPS (침입 방지 시스템)**: 유해 트래픽을 실시간으로 "차단(Prevent)" (Hệ thống ngăn chặn xâm nhập).
+- **VPN (가상사설망)**: 공중망을 전용망처럼 안전하게 사용 (Mạng riêng ảo).
+
+---
+
+Điểm chốt của **2. 접근 제어 정책 (Access Control Policies)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## 318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)
+
+Ở bước 61/61, **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** xuất hiện như phần tiếp nối của **2. 접근 제어 정책 (Access Control Policies)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **개념**, **방법**, **합성 중심 (Composition-Based)**, **생성 중심 (Generation-Based)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+- **개념**: 검증된 소프트웨어의 일부를 다시 사용 (Sử dụng lại các phần mềm đã được kiểm chứng để giảm chi phí, tăng chất lượng).
+- **방법**:
+  - **합성 중심 (Composition-Based)**: 블록 조립 (Lắp ráp các block như Lego).
+  - **생성 중심 (Generation-Based)**: 추상적 명세로 코드 자동 생성 (Tự động sinh code từ bản đặc tả).
+
+Khép lại **318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)**, điều cần giữ lại là mối quan hệ giữa mục đích, cơ chế và điểm giới hạn của các khái niệm trong nguồn. Khi ôn lại, hãy tự giải thích chúng bằng một câu hoàn chỉnh rồi đối chiếu với các điểm dễ nhầm trước khi chuyển sang bài tổng hợp của môn.

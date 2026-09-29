@@ -1,5 +1,8 @@
 # Cổ phiếu, ETF và quỹ đầu tư
 
+> **Mạch đọc:** Đặt **Cổ phiếu, ETF và quỹ đầu tư** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Cổ phiếu phổ thông là quyền lợi còn lại** sang **2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này giải thích cổ phiếu và quỹ từ bản chất quyền sở hữu tới cách triển khai qua ETF. Mục tiêu là nhìn xuyên tên sản phẩm để hiểu tài sản cơ sở, quyền lợi của cổ đông, cơ chế chỉ số, thanh khoản, chi phí và rủi ro thực tế.
 
 > **Cách đọc dễ hơn:** trước mỗi khái niệm, hãy hỏi “nó thay đổi quyền lợi kinh tế hoặc rủi ro của cổ đông như thế nào?”. Nếu cần ví dụ số và lộ trình từ cơ bản đến nâng cao, đọc [Bắt đầu từ đây — Cổ phiếu và Forex](../START_HERE_STOCKS_AND_FOREX.md) trước.
@@ -45,7 +48,7 @@ Người sở hữu cổ phiếu phổ thông là chủ sở hữu phần còn l
 
 ## 2. Giá trị doanh nghiệp và giá trị vốn chủ sở hữu
 
-Giá trị doanh nghiệp (Enterprise Value, EV) phản ánh giá trị hoạt động dành cho tất cả nhà cung cấp vốn. Giá trị vốn chủ sở hữu (Equity Value) là phần thuộc cổ đông.
+Giá trị doanh nghiệp (Enterprise value, EV) phản ánh giá trị hoạt động dành cho tất cả nhà cung cấp vốn. Giá trị vốn chủ sở hữu (Equity value) là phần thuộc cổ đông.
 
 Một cầu nối đơn giản:
 
@@ -65,7 +68,7 @@ Market Cap = Share Price × Shares Outstanding
 
 Vốn hóa theo free float chỉ tính phần cổ phiếu thực sự có thể giao dịch công khai. Đây là thông tin quan trọng cho thanh khoản và trọng số chỉ số.
 
-Doanh nghiệp có market cap lớn nhưng phần lớn cổ phiếu do cổ đông kiểm soát nắm giữ có thể có free float nhỏ hơn nhiều.
+Doanh nghiệp có thị trường (market / 시장) cap lớn nhưng phần lớn cổ phiếu do cổ đông kiểm soát nắm giữ có thể có free float nhỏ hơn nhiều.
 
 ## 4. Basic và diluted shares
 
@@ -150,7 +153,7 @@ Tên “thị trường”, “AI”, “tăng trưởng” hay “giá trị”
 
 ## 14. Chỉ số theo vốn hóa
 
-Chỉ số theo vốn hóa thị trường đặt tỷ trọng lớn hơn vào doanh nghiệp có market cap lớn hơn. Ưu điểm là chi phí giao dịch thấp và tự điều chỉnh theo quy mô thị trường.
+Chỉ số theo vốn hóa thị trường đặt tỷ trọng lớn hơn vào doanh nghiệp có thị trường (market / 시장) cap lớn hơn. Ưu điểm là chi phí giao dịch thấp và tự điều chỉnh theo quy mô thị trường.
 
 Nhược điểm là có thể trở nên tập trung khi một số doanh nghiệp tăng giá rất mạnh.
 
@@ -213,7 +216,7 @@ Giá ETF có thể cao hơn NAV (premium) hoặc thấp hơn NAV (discount).
 
 Khi thị trường cơ sở đóng cửa, chênh lệch có thể phản ánh quá trình khám phá giá nhanh hơn NAV cũ thay vì cơ hội chênh lệch giá chắc chắn.
 
-## 22. Tracking Difference và Tracking Error
+## 22. Tracking Difference và Tracking lỗi (error / 오류)
 
 Khi đã hiểu NAV, premium/discount và cơ chế tạo–mua lại, ta cần đo xem quỹ bám mục tiêu tốt đến đâu. Tracking difference nói về độ lệch tích lũy; tracking error nói về mức dao động của độ lệch đó.
 
@@ -268,7 +271,7 @@ Quỹ chủ động chỉ đáng trả phí cao hơn nếu lợi thế sau phí 
 
 Active Share đo mức danh mục chủ động khác benchmark về tỷ trọng. Nó không đo trực tiếp chất lượng.
 
-Một quỹ có Active Share thấp nhưng phí cao có thể là “closet index”. Một quỹ Active Share cao có thể rất khác benchmark nhưng vẫn hoạt động kém.
+Một quỹ có Active Share thấp nhưng phí cao có thể là “closet chỉ mục (index / 인덱스)”. Một quỹ Active Share cao có thể rất khác benchmark nhưng vẫn hoạt động kém.
 
 ## 30. Direct Indexing
 

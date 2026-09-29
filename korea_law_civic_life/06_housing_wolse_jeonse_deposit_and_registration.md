@@ -1,5 +1,8 @@
 # 06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản
 
+> **Mạch đọc:** Đặt **06. Nhà ở: 월세, 전세, 보증금, bảo vệ người thuê và đăng ký bất động sản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ba khái niệm nền tảng** sang **월세**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## 1. Ba khái niệm nền tảng
 
 ### 월세
@@ -13,6 +16,9 @@
 ### 보증금
 
 `보증금` là khoản tiền có thể rất lớn và vì vậy rủi ro nhà ở ở Hàn Quốc thường là rủi ro **thu hồi tiền đặt cọc**, không chỉ là chất lượng căn nhà.
+
+
+> **Chuyển mạch:** Từ **1. Ba khái niệm nền tảng**, ta sang **2. Trước khi ký: kiểm tra chủ thể và bất động sản** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Trước khi ký: kiểm tra chủ thể và bất động sản
 
@@ -33,6 +39,9 @@ Một workflow cơ bản:
 
 Nguồn chính thức để tra cứu đăng ký bất động sản là **인터넷등기소 (iros.go.kr)**.
 
+
+> **Chuyển mạch:** Từ **2. Trước khi ký: kiểm tra chủ thể và bất động sản**, ta sang **3. 대항력, 확정일자, 우선변제권: ba từ phải phân biệt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 3. `대항력`, `확정일자`, `우선변제권`: ba từ phải phân biệt
 
 ### 대항력 — hiệu lực đối kháng với bên thứ ba
@@ -49,11 +58,17 @@ Theo `찾기쉬운 생활법령정보`, quyền ưu tiên này gắn với việ
 
 Đừng biến ba khái niệm trên thành một từ duy nhất “bảo vệ deposit”. Chúng giải quyết các tầng khác nhau.
 
+
+> **Chuyển mạch:** Từ **3. 대항력, 확정일자, 우선변제권: ba từ phải phân biệt**, ta sang **4. Xác nhận ngày (확정일자) ở đâu?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 4. Xác nhận ngày (확정일자) ở đâu?
 
 Luật hiện hành quy định các cơ quan có thể cấp `확정일자`, gồm `읍·면사무소`, `동 주민센터`, một số cơ quan địa phương, tòa/đăng ký và công chứng viên theo luật. Tài liệu Easy Law hiện hành cũng nêu người nộp có thể dùng giấy tờ định danh như hộ chiếu hoặc thẻ đăng ký người nước ngoài trong thủ tục phù hợp.
 
 Quy trình online/offline có thể thay đổi, nên trước khi đi hãy kiểm tra trang chính thức và yêu cầu hồ sơ hiện tại.
+
+
+> **Chuyển mạch:** Từ **4. Xác nhận ngày (확정일자) ở đâu?**, ta sang **5. Đừng chỉ hỏi “nhà này có nợ không?”** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. Đừng chỉ hỏi “nhà này có nợ không?”
 
@@ -75,6 +90,9 @@ Khi xem `등기부`, nên đặt câu hỏi có cấu trúc:
 
 Một căn nhà không có khoản vay lớn vẫn có thể có rủi ro khác. Ngược lại, có `근저당권` không tự động có nghĩa hợp đồng không thể ký. Mục tiêu là hiểu **thứ tự quyền và khả năng thu hồi tiền**.
 
+
+> **Chuyển mạch:** Từ **5. Đừng chỉ hỏi “nhà này có nợ không?”**, ta sang **6. Môi giới bất động sản (공인중개사)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 6. Môi giới bất động sản (공인중개사)
 
 Nếu giao dịch qua môi giới, lưu:
@@ -86,6 +104,9 @@ Nếu giao dịch qua môi giới, lưu:
 - tài liệu họ cung cấp về quyền trên bất động sản.
 
 Không ký vào bản trống hoặc bản có phần chưa điền. Điều khoản đặc biệt (`특약`) nên viết rõ, không dùng câu mơ hồ.
+
+
+> **Chuyển mạch:** Từ **6. Môi giới bất động sản (공인중개사)**, ta sang **7. Hợp đồng nên chứa gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. Hợp đồng nên chứa gì?
 
@@ -107,6 +128,9 @@ Tối thiểu cần đọc rõ:
 
 `관리비` cần được tách khỏi `월세`; hỏi rõ bao gồm điện, nước, gas, internet, vệ sinh, phí tòa nhà hay không.
 
+
+> **Chuyển mạch:** Từ **7. Hợp đồng nên chứa gì?**, ta sang **8. Khi chuyển vào và khi chuyển đi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 8. Khi chuyển vào và khi chuyển đi
 
 Các thủ tục như khai báo nơi cư trú, thay đổi địa chỉ người nước ngoài, xác nhận ngày, khai báo hợp đồng thuê hoặc các nghĩa vụ khác có thể có **deadline riêng**. Đừng gộp chúng thành một thao tác duy nhất “전입신고”.
@@ -123,6 +147,9 @@ Với người nước ngoài, nên kiểm tra đồng thời:
 
 Tư cách lưu trú và quy trình địa phương có thể làm cách nộp khác nhau.
 
+
+> **Chuyển mạch:** Từ **8. Khi chuyển vào và khi chuyển đi**, ta sang **9. Nếu chủ nhà không trả 보증금** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 9. Nếu chủ nhà không trả 보증금
 
 Không nên chỉ tiếp tục nhắn tin vô thời hạn. Một workflow học tập:
@@ -138,11 +165,17 @@ Không nên chỉ tiếp tục nhắn tin vô thời hạn. Một workflow học
 
 `임차권등기명령` là một cơ chế quan trọng trong một số tình huống khi người thuê phải chuyển đi mà chưa nhận lại tiền đặt cọc. Điều kiện và hiệu lực cần đọc từ luật và hướng dẫn tòa án hiện hành trước khi dùng.
 
+
+> **Chuyển mạch:** Từ **9. Nếu chủ nhà không trả 보증금**, ta sang **10. Rủi ro 전세 và bảo hiểm tiền đặt cọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 10. Rủi ro 전세 và bảo hiểm tiền đặt cọc
 
-Các sản phẩm như `전세보증금 반환보증` có thể giúp quản lý một số rủi ro, nhưng điều kiện tham gia, hạn mức, loại nhà, giá trị được công nhận và thời hạn đăng ký thay đổi theo sản phẩm và thời điểm. Không nên ghi cứng điều kiện vào note dài hạn.
+Các sản phẩm như `전세보증금 반환보증` có thể giúp quản lý một số rủi ro, nhưng điều kiện tham gia, hạn mức, loại nhà, giá trị được công nhận và thời hạn đăng ký thay đổi theo sản phẩm và thời điểm. Không nên ghi cứng điều kiện vào ghi chú (note / 노트) dài hạn.
 
 Nguồn nên kiểm tra: HUG, HF, SGI tùy sản phẩm.
+
+
+> **Chuyển mạch:** Từ **10. Rủi ro 전세 và bảo hiểm tiền đặt cọc**, ta sang **11. Nguồn chính thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 11. Nguồn chính thức
 
@@ -154,6 +187,9 @@ Nhà ở kết hợp hợp đồng, đăng ký, quyền ưu tiên và rủi ro t
 - 정부24: https://www.gov.kr/
 - 국토교통부: https://www.molit.go.kr/
 - HUG: https://www.khug.or.kr/
+
+
+> **Chuyển mạch:** Từ **11. Nguồn chính thức**, ta sang **12. Không phải tư vấn giao dịch cá nhân** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 12. Không phải tư vấn giao dịch cá nhân
 

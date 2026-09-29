@@ -1,20 +1,15 @@
 # Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ
 
-> Tài liệu này theo dõi **độ bao phủ khái niệm, quan hệ phụ thuộc, tính nhất quán ngôn ngữ, mức độ trùng lặp và chất lượng chiều sâu** của Chemistry Knowledge Library. Đây không phải bản tóm tắt để học nhanh. Mục tiêu là xác định những vấn đề còn phải xử lý trước khi branch Chemistry có thể được coi là sẵn sàng hợp nhất vào `main`.
+> **Mạch đọc:** Đặt **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Trạng thái chuẩn gốc (canonical / 정본)** sang **Thứ tự ưu tiên kiểm tra (audit / 감사)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Branch canonical
 
-Branch Chemistry canonical:
+> Tài liệu này theo dõi **độ bao phủ khái niệm, quan hệ phụ thuộc, tính nhất quán ngôn ngữ, mức độ trùng lặp và chất lượng chiều sâu** của Chemistry thư viện kiến thức (knowledge library / 지식 라이브러리). Đây không phải bản tóm tắt để học nhanh. Nội dung Chemistry hiện là chuẩn gốc (canonical / 정본) trên `main`; các tên branch cũ chỉ được giữ trong lịch sử Git.
 
-```text
-feat/chemistry-knowledge-library
-```
+## Trạng thái chuẩn gốc (canonical / 정본)
 
-`feat/chemistry-depth-pass` là ancestor cũ đã được gom đầy đủ vào canonical branch và đã được xóa sau pre-merge audit.
+Chemistry đã hoàn tất pre-merge kiểm tra (audit / 감사) và được quản lý trực tiếp trên `main`. Mọi kiểm tra (audit / 감사) mới phải cập nhật ngày rà soát (review / 검토), coverage, phụ thuộc (dependency / 의존성) luồng (flow / 흐름) và các link chuẩn gốc (canonical / 정본) tại đây.
 
-`main` đang thay đổi liên tục bởi nhiều workstream khác. Vì vậy **không merge, không rebase cưỡng bức và không force-update `main` trong khi Chemistry chưa vượt qua các gate cuối**.
-
-## Thứ tự ưu tiên audit
+## Thứ tự ưu tiên kiểm tra (audit / 감사)
 
 Audit bắt đầu từ những dependency có thể làm sai nhiều chapter phía sau. Đọc các bước theo thứ tự này để hiểu vì sao một gap về nguyên tử, năng lượng hoặc cân bằng được ưu tiên trước một chủ đề ứng dụng hẹp.
 
@@ -29,17 +24,17 @@ Audit bắt đầu từ những dependency có thể làm sai nhiều chapter ph
 8. README / coverage metadata
 ```
 
-Kích thước file chỉ là tín hiệu. Chapter ngắn nhưng phạm vi hẹp và reasoning đầy đủ không cần kéo dài chỉ để cân số dòng.
+Kích thước tệp (file / 파일) chỉ là tín hiệu. Chapter ngắn nhưng phạm vi hẹp và lập luận (reasoning / 추론) đầy đủ không cần kéo dài chỉ để cân số dòng.
 
 # Trạng thái cấu trúc
 
-Các domain từ `00` tới `17` đã được quét theo metadata kích thước và mở nội dung các ứng viên bất thường.
+Các lĩnh vực (domain / 도메인) từ `00` tới `17` đã được quét theo siêu dữ liệu (metadata / 메타데이터) kích thước và mở nội dung các ứng viên bất thường.
 
-Hiện **không phát hiện file canonical rỗng hoặc skeleton quan trọng**.
+Hiện **không phát hiện tệp (file / 파일) chuẩn gốc (canonical / 정본) rỗng hoặc skeleton quan trọng**.
 
-Các file `90_connections` ngắn hơn chapter textbook chính nhưng có scope khác: chúng là lớp kết nối kiến thức, không phải textbook độc lập. Không coi chúng là skeleton chỉ vì kích thước nhỏ hơn.
+Các tệp (file / 파일) `90_connections` ngắn hơn chapter textbook chính nhưng có phạm vi (scope / 범위) khác: chúng là lớp kết nối kiến thức, không phải textbook độc lập. Không coi chúng là skeleton chỉ vì kích thước nhỏ hơn.
 
-Dependency flow hiện tại:
+Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) hiện tại:
 
 ```text
 00 Foundations
@@ -56,11 +51,11 @@ Dependency flow hiện tại:
 → 90 Connections
 ```
 
-Flow này đủ để người gần như quên Hóa phổ thông đi từ vật chất/phép đo tới các domain chuyên sâu mà không cần một Chemistry library khác.
+Luồng (flow / 흐름) này đủ để người gần như quên Hóa phổ thông đi từ vật chất/phép đo tới các lĩnh vực (domain / 도메인) chuyên sâu mà không cần một Chemistry thư viện (library / 라이브러리) khác.
 
-# Core conceptual gaps đã xử lý
+# Cốt lõi (core / 핵심) conceptual gaps đã xử lý
 
-## 01 Atomic Structure / Periodic Trends
+## 01 Atomic cấu trúc (structure / 구조) / Periodic Trends
 
 `04_periodic_table_and_periodic_trends.md` nối:
 
@@ -73,11 +68,11 @@ electron configuration
 → inorganic chemistry / materials
 ```
 
-Đã có second-period anomaly, diagonal relationship, inert-pair effect, transition-metal trends, lanthanide contraction và relativistic effects.
+Đã có second-period anomaly, diagonal relationship, inert-pair tác động (effect / 효과), transition-metal trends, lanthanide contraction và relativistic effects.
 
 ## 02 Chemical Bonding
 
-Chuỗi canonical:
+Chuỗi chuẩn gốc (canonical / 정본):
 
 ```text
 electron bookkeeping
@@ -89,27 +84,27 @@ electron bookkeeping
 → bulk properties
 ```
 
-Lewis, VSEPR, VB, MO và IMF không còn ở mức note nhập môn mỏng.
+Lewis, VSEPR, VB, MO và IMF không còn ở mức ghi chú (note / 노트) nhập môn mỏng.
 
 ## 03 Matter and Phases
 
 `gases`, `liquids`, `solids` và `phase_changes_and_phase_diagrams` đã được cân độ sâu.
 
-Chất khí hiện có Maxwell–Boltzmann, collisions/mean free path, ideal-gas reasoning, diffusion/effusion, real-gas deviations, compressibility factor, virial expansion, fugacity và critical behavior.
+Chất khí hiện có Maxwell–Boltzmann, collisions/mean free đường dẫn (path / 경로), ideal-gas lập luận (reasoning / 추론), diffusion/effusion, real-gas deviations, compressibility factor, virial expansion, fugacity và trọng yếu (critical / 중요) hành vi (behavior / 동작).
 
-Chất lỏng, chất rắn và chuyển pha đã có diffusion, viscosity, surface tension, wetting, lattice/defects, phonons/bands, Clapeyron, nucleation và binary phase diagrams.
+Chất lỏng, chất rắn và chuyển pha đã có diffusion, viscosity, surface tension, wetting, lattice/defects, phonons/bands, Clapeyron, nucleation và nhị phân (binary / 이진) phase diagrams.
 
 ## 04 Chemical Quantities
 
 Mol được giải thích như cầu nối giữa hạt vi mô và phép đo vĩ mô.
 
-Stoichiometry đã đi xa hơn `gram → mol → gram`, gồm extent of reaction, conversion/yield/selectivity, elemental balance, stoichiometric matrix, null space, flow balance và uncertainty propagation.
+Stoichiometry đã đi xa hơn `gram → mol → gram`, gồm extent of reaction, conversion/yield/selectivity, elemental balance, stoichiometric ma trận (matrix / 행렬), null không gian (space / 공간), luồng (flow / 흐름) balance và bất định (uncertainty / 불확실성) propagation.
 
-`limiting_reagent_and_yield.md` và `solution_concentration.md` ngắn nhưng có ví dụ số, assumptions và mental model nên **không phải file yếu**.
+`limiting_reagent_and_yield.md` và `solution_concentration.md` ngắn nhưng có ví dụ số, các giả định (assumptions / 가정들) và mô hình tư duy (mental model / 사고 모델) nên **không phải tệp (file / 파일) yếu**.
 
 ## 05 Thermodynamics
 
-Flow:
+Luồng (flow / 흐름):
 
 ```text
 internal energy
@@ -123,7 +118,7 @@ internal energy
 → phase / reaction equilibrium
 ```
 
-`04_chemical_thermodynamics.md` vừa được language/scope pass lớn. File này hiện giữ đúng vai trò **định nghĩa và xây công cụ nhiệt động cho hệ nhiều thành phần**:
+`04_chemical_thermodynamics.md` vừa được ngôn ngữ (language / 언어)/phạm vi (scope / 범위) pass lớn. tệp (file / 파일) này hiện giữ đúng vai trò **định nghĩa và xây công cụ nhiệt động cho hệ nhiều thành phần**:
 
 - chemical potential;
 - partial molar quantities;
@@ -145,22 +140,22 @@ Prose đã chuyển về Việt-first và lỗi LaTeX trong phương trình Nern
 
 Cụm kinetics hiện bao phủ:
 
-- initial-rate method;
+- initial-rate phương thức (method / 메서드);
 - integrated laws;
-- nonlinear fitting và residual analysis;
-- pseudo-order / fractional / negative order;
-- coupled ODE và stiff systems;
+- nonlinear fitting và residual phân tích (analysis / 분석);
+- pseudo-order / fractional / negative thứ tự (order / 순서);
+- coupled ODE và stiff các hệ thống (systems / 시스템들);
 - parameter identifiability;
 - pre-equilibrium và steady-state approximation;
 - KIE/isotope labeling;
 - Hammett và Curtin–Hammett;
 - Eyring / activation entropy / tunneling;
-- diffusion control;
-- catalysis và degree of rate control.
+- diffusion điều khiển (control / 제어);
+- catalysis và degree of tỷ lệ (rate / 비율) điều khiển (control / 제어).
 
 ## 07 Equilibrium
 
-Flow:
+Luồng (flow / 흐름):
 
 ```text
 forward/reverse kinetics
@@ -173,7 +168,7 @@ forward/reverse kinetics
 → speciation / Gibbs minimization
 ```
 
-`04_thermodynamics_of_equilibrium.md` vừa được tách scope khỏi `05/04`:
+`04_thermodynamics_of_equilibrium.md` vừa được tách phạm vi (scope / 범위) khỏi `05/04`:
 
 ```text
 05/04 Chemical Thermodynamics
@@ -190,13 +185,13 @@ forward/reverse kinetics
 
 Nhờ đó hai chapter hiện bổ sung cho nhau thay vì định nghĩa lại cùng một nội dung.
 
-## 08 Acid–Base
+## 08 Acid–cơ sở (base / 기반)
 
-Core hiện có Arrhenius, Brønsted–Lowry, Lewis, activity-based pH, weak/polyprotic systems, buffer capacity, titration mechanisms, equivalence vs endpoint, `Ksp/Qsp`, conditional solubility và complexation/protonation effects.
+Cốt lõi (core / 핵심) hiện có Arrhenius, Brønsted–Lowry, Lewis, activity-based pH, weak/polyprotic các hệ thống (systems / 시스템들), buffer sức chứa (capacity / 용량), titration mechanisms, equivalence vs endpoint, `Ksp/Qsp`, conditional solubility và complexation/protonation effects.
 
 ## 09 Redox / Electrochemistry
 
-Flow:
+Luồng (flow / 흐름):
 
 ```text
 oxidation state
@@ -208,9 +203,9 @@ oxidation state
 → battery / corrosion / EIS
 ```
 
-`06_electrochemical_kinetics_and_impedance.md` đã được chuẩn hóa hierarchy và Việt-first, giữ Butler–Volmer, Tafel, RDE/Koutecký–Levich, double layer, Nyquist/Bode, Randles/CPE/Warburg, DRT và failure modes của EIS.
+`06_electrochemical_kinetics_and_impedance.md` đã được chuẩn hóa hierarchy và Việt-first, giữ Butler–Volmer, Tafel, RDE/Koutecký–Levich, double tầng (layer / 계층), Nyquist/Bode, Randles/CPE/Warburg, DRT và thất bại (failure / 실패) modes của EIS.
 
-# Language consistency pass
+# Ngôn ngữ (language / 언어) consistency pass
 
 ## Organic Chemistry
 
@@ -220,19 +215,19 @@ Các chapter đã pass trực tiếp:
 - `04_alkanes_alkenes_and_alkynes.md`;
 - `06_alcohols_ethers_and_amines.md`.
 
-English được giữ như keyword chuẩn thay vì trở thành ngôn ngữ chính của câu. Không mở thêm reaction catalog chỉ để tăng độ dài.
+English được giữ như từ khóa (keyword / 키워드) chuẩn thay vì trở thành ngôn ngữ chính của câu. Không mở thêm reaction danh mục (catalog / 카탈로그) chỉ để tăng độ dài.
 
 ## Analytical Chemistry
 
-Các chapter đã language/hierarchy pass:
+Các chapter đã ngôn ngữ (language / 언어)/hierarchy pass:
 
 ### `03_spectroscopy.md`
 
-Giữ Beer–Lambert, UV–Vis, IR, Raman, NMR, fluorescence, atomic spectroscopy và X-ray; thêm prerequisite links và reasoning examples.
+Giữ Beer–Lambert, UV–Vis, IR, Raman, NMR, fluorescence, atomic spectroscopy và X-ray; thêm prerequisite links và lập luận (reasoning / 추론) examples.
 
 ### `04_chromatography.md`
 
-Giữ partition, retention, resolution, plate theory, Van Deemter, GC/HPLC, ion exchange, SEC, affinity, chiral separation và LC–MS; prose Việt-first hơn.
+Giữ partition, retention, resolution, plate lý thuyết (theory / 이론), Van Deemter, GC/HPLC, ion exchange, SEC, affinity, chiral separation và LC–MS; prose Việt-first hơn.
 
 ### `05_mass_spectrometry.md`
 
@@ -240,16 +235,16 @@ Giữ EI/CI/ESI/MALDI, quadrupole/TOF/ion trap/Orbitrap/FT-ICR, isotope patterns
 
 ## Materials / Polymer Chemistry
 
-Các file đã pass:
+Các tệp (file / 파일) đã pass:
 
 - `02_polymers.md`;
 - `03_semiconductors.md`;
 - `04_nanomaterials.md`;
 - `05_surface_and_interface_chemistry.md`.
 
-Chúng đã được chuẩn hóa Việt-first nhưng giữ keyword quốc tế cần cho tra cứu. Scope surface chapter cũng được tách khỏi electrochemical kinetics/EIS.
+Chúng đã được chuẩn hóa Việt-first nhưng giữ từ khóa (keyword / 키워드) quốc tế cần cho tra cứu. phạm vi (scope / 범위) surface chapter cũng được tách khỏi electrochemical kinetics/EIS.
 
-# Prerequisite transition pass
+# Prerequisite chuyển tiếp (transition / 전이) pass
 
 ## Inorganic Chemistry
 
@@ -257,13 +252,13 @@ Các chapter `01`–`04` đã được pass trực tiếp gần nhất.
 
 ### `01_main_group_chemistry.md`
 
-Đã thêm bridge từ electron configuration, periodic trends, covalent/MO bonding và acid–base trước khi đi nhóm 1→18.
+Đã thêm cầu nối (bridge / 브리지) từ electron cấu hình (configuration / 구성), periodic trends, covalent/MO bonding và acid–cơ sở (base / 기반) trước khi đi nhóm 1→18.
 
-Giữ diagonal relationship, second-period anomaly, inert-pair effect, hypervalency, acid/base trends và industrial links. Language chuyển Việt-first hơn và thêm reasoning cho amphoteric `Al2O3`.
+Giữ diagonal relationship, second-period anomaly, inert-pair tác động (effect / 효과), hypervalency, acid/cơ sở (base / 기반) trends và industrial links. ngôn ngữ (language / 언어) chuyển Việt-first hơn và thêm lập luận (reasoning / 추론) cho amphoteric `Al2O3`.
 
 ### `02_transition_metals.md`
 
-Đã nối electron configuration, MO, redox và catalysis trước khi dùng d-electron count, spin, color, organometallic mechanisms và metal clusters.
+Đã nối electron cấu hình (configuration / 구성), MO, redox và catalysis trước khi dùng d-electron count, spin, color, organometallic mechanisms và metal clusters.
 
 Đã làm rõ:
 
@@ -276,23 +271,23 @@ redox potential depends on ligand environment
 
 ### `03_coordination_chemistry.md`
 
-Đã nối Lewis acid–base, Gibbs, equilibrium, MO và redox.
+Đã nối Lewis acid–cơ sở (base / 기반), Gibbs, equilibrium, MO và redox.
 
-Các điểm được làm rõ gồm chelate effect, conditional formation constants, coupled solubility/speciation, labile vs inert, substitution mechanisms và chelation trade-off trong y học.
+Các điểm được làm rõ gồm chelate tác động (effect / 효과), conditional formation constants, coupled solubility/speciation, labile vs inert, substitution mechanisms và chelation sự đánh đổi (trade-off / 트레이드오프) trong y học.
 
 ### `04_crystal_field_and_ligand_field.md`
 
-Đã nối electron configuration/MO/coordination với spectroscopy và solid-state chemistry.
+Đã nối electron cấu hình (configuration / 구성)/MO/coordination với spectroscopy và solid-state chemistry.
 
-Bổ sung rõ giới hạn của CFSE, reasoning cho Ni(II) tetrahedral vs square-planar và phân biệt CFT với LFT như hai mức mô hình khác nhau.
+Bổ sung rõ giới hạn của CFSE, lập luận (reasoning / 추론) cho Ni(II) tetrahedral vs square-planar và phân biệt CFT với LFT như hai mức mô hình khác nhau.
 
-`00_inorganic_compounds.md` đã được audit trước và giữ nguyên vì prose/prerequisite tốt. `05_solid_state_and_defect_chemistry.md` đã được depth pass lớn từ trước.
+`00_inorganic_compounds.md` đã được kiểm tra (audit / 감사) trước và giữ nguyên vì prose/prerequisite tốt. `05_solid_state_and_defect_chemistry.md` đã được độ sâu (depth / 깊이) pass lớn từ trước.
 
 ## Biochemistry
 
 ### `05_enzymes.md`
 
-Đã link trực tiếp tới Gibbs, kinetics/mechanism, acid–base, coordination chemistry và intermolecular forces.
+Đã link trực tiếp tới Gibbs, kinetics/cơ chế (mechanism / 메커니즘), acid–cơ sở (base / 기반), coordination chemistry và intermolecular forces.
 
 Đã làm rõ:
 
@@ -312,11 +307,11 @@ Nhấn mạnh `flux ≠ concentration` và ghép nhiệt động cần ghép hó
 
 ### `00_atomic_nucleus.md`
 
-Đã nối atoms/isotopes, quantum states và electromagnetic radiation tới binding, liquid-drop/shell models, magic numbers, gamma states và radioactivity.
+Đã nối atoms/isotopes, quantum states và electromagnetic radiation tới binding, liquid-drop/shell các mô hình (models / 모델들), magic numbers, gamma states và radioactivity.
 
 ### `02_nuclear_reactions.md`
 
-Đã nối binding energy, radioactivity, kinetics và reaction-network mathematics.
+Đã nối binding năng lượng (energy / 에너지), radioactivity, kinetics và reaction-network mathematics.
 
 Bổ sung:
 
@@ -329,7 +324,7 @@ Bổ sung:
 
 ### `03_fission_and_fusion.md`
 
-Đã nối binding energy, radioactive decay và nuclear-reaction kinetics trước khi đi vào chain reaction và fusion.
+Đã nối binding năng lượng (energy / 에너지), radioactive decay và nuclear-reaction kinetics trước khi đi vào chuỗi (chain / 사슬) reaction và fusion.
 
 Đã làm rõ:
 
@@ -340,20 +335,20 @@ fusion ≠ zero radiation/waste
 Lawson criterion = reaction-rate + confinement + materials trade-off
 ```
 
-`01_radioactivity.md` và `04_radiochemistry_and_applications.md` được mở audit lại và giữ nguyên vì đã có quantitative models, mechanism, trade-off và prose chủ yếu là tiếng Việt.
+`01_radioactivity.md` và `04_radiochemistry_and_applications.md` được mở kiểm tra (audit / 감사) lại và giữ nguyên vì đã có quantitative các mô hình (models / 모델들), cơ chế (mechanism / 메커니즘), sự đánh đổi (trade-off / 트레이드오프) và prose chủ yếu là tiếng Việt.
 
 ## Environmental Chemistry
 
-Các file `00`–`03` đã có prerequisite pass:
+Các tệp (file / 파일) `00`–`03` đã có prerequisite pass:
 
 - atmospheric chemistry nối gas/quantum/spectroscopy/kinetics/equilibrium/surface chemistry;
-- water chemistry nối acid–base, `Ksp`, Nernst/Eh, coordination, surface và sampling;
-- soil chemistry nối water/surface/CEC/redox/reactive transport;
-- pollutant/toxic chemistry tổ chức theo hazard → exposure → internal dose → mechanism → fate → risk.
+- water chemistry nối acid–cơ sở (base / 기반), `Ksp`, Nernst/Eh, coordination, surface và sampling;
+- soil chemistry nối water/surface/CEC/redox/reactive vận chuyển (transport / 전송);
+- pollutant/toxic chemistry tổ chức theo hazard → exposure → nội bộ (internal / 내부) dose → cơ chế (mechanism / 메커니즘) → fate → rủi ro (risk / 위험).
 
-`04_green_chemistry.md` được audit lại và giữ nguyên vì đã có metrics, catalysis/solvent/energy/feedstock trade-offs và lifecycle reasoning.
+`04_green_chemistry.md` được kiểm tra (audit / 감사) lại và giữ nguyên vì đã có metrics, catalysis/solvent/năng lượng (energy / 에너지)/feedstock trade-offs và vòng đời (lifecycle / 생명주기) lập luận (reasoning / 추론).
 
-# Duplicate scope review
+# Duplicate phạm vi (scope / 범위) rà soát (review / 검토)
 
 ## Electrochemistry ↔ Electroanalysis
 
@@ -383,9 +378,9 @@ Butler–Volmer, RDE và EIS không còn được giải thích hai lần với 
 → stability / K-Q / phases / speciation / minimization
 ```
 
-## Analytical Measurement ↔ Laboratory Design/Uncertainty
+## Analytical đo lường (measurement / 측정) ↔ Laboratory thiết kế (design / 설계)/bất định (uncertainty / 불확실성)
 
-Đã mở và so trực tiếp. Hiện **không coi là duplicate lớn** vì scope khác nhau:
+Đã mở và so trực tiếp. Hiện **không coi là duplicate lớn** vì phạm vi (scope / 범위) khác nhau:
 
 ```text
 12/00 measurement_and_sampling
@@ -399,7 +394,7 @@ Butler–Volmer, RDE và EIS không còn được giải thích hai lần với 
 → metrology / bias / statistics / uncertainty propagation
 ```
 
-Các khái niệm calibration/uncertainty xuất hiện ở nhiều nơi là cross-domain reuse có chủ ý, không phải ba chapter cạnh tranh cùng mục tiêu.
+Các khái niệm calibration/bất định (uncertainty / 불확실성) xuất hiện ở nhiều nơi là cross-domain reuse có chủ ý, không phải ba chapter cạnh tranh cùng mục tiêu.
 
 ## Các overlap có chủ ý khác
 
@@ -411,9 +406,9 @@ Những overlap dưới đây không phải nội dung trùng lặp cần xóa. 
 - phase equilibrium: matter giới thiệu; thermodynamics/equilibrium xây framework thế hóa học;
 - hydrogen bonding: bonding định nghĩa; biochemistry/materials áp dụng.
 
-# Internal links
+# Nội bộ (internal / 내부) links
 
-Global internal-link checker đã được chạy trên GitHub Actions sau khi build Study Shelf. Checker đã kiểm tra toàn bộ 119 file Chemistry và bỏ qua fenced code blocks khi phân tích link.
+Toàn cục (global / 전역) internal-link checker đã được chạy trên GitHub Actions sau khi bản dựng (build / 빌드) Study Shelf. Checker đã kiểm tra toàn bộ 119 tệp (file / 파일) Chemistry và bỏ qua fenced mã (code / 코드) blocks khi phân tích link.
 
 ```text
 Chemistry Markdown files: 119
@@ -425,27 +420,27 @@ broken internal links: 0
 Study Shelf build: pass
 ```
 
-Hai đường dẫn giả từng bị bắt trong `COVERAGE_AUDIT.md` chỉ là ví dụ cú pháp nằm trong fenced code block, không phải link render thật.
+Hai đường dẫn giả từng bị bắt trong `COVERAGE_AUDIT.md` chỉ là ví dụ cú pháp nằm trong fenced mã (code / 코드) khối (block / 블록), không phải link kết xuất (render / 렌더링) thật.
 
-# Examples / mechanism / trade-off
+# Examples / cơ chế (mechanism / 메커니즘) / sự đánh đổi (trade-off / 트레이드오프)
 
-Core chapter quan trọng hiện có ít nhất một hoặc nhiều dạng sau:
+Cốt lõi (core / 핵심) chapter quan trọng hiện có ít nhất một hoặc nhiều dạng sau:
 
 - ví dụ định lượng;
 - ví dụ suy luận cơ chế;
 - counterexample/misconception;
-- trade-off thực tế;
+- sự đánh đổi (trade-off / 트레이드오프) thực tế;
 - giới hạn của mô hình.
 
-Pass mới nhất bổ sung rõ ở main-group chemistry, coordination chemistry, ligand-field theory, transition metals, nuclear reactions, fission/fusion và equilibrium thermodynamics.
+Pass mới nhất bổ sung rõ ở main-group chemistry, coordination chemistry, ligand-field lý thuyết (theory / 이론), chuyển tiếp (transition / 전이) metals, nuclear reactions, fission/fusion và equilibrium thermodynamics.
 
-Không kéo dài file đã có reasoning đầy đủ chỉ để tăng số dòng.
+Không kéo dài tệp (file / 파일) đã có lập luận (reasoning / 추론) đầy đủ chỉ để tăng số dòng.
 
 # README
 
 `README.md` đã được kiểm tra sau các pass gần đây.
 
-Hiện cây canonical, dependency graph, learning path và liên kết tới `COVERAGE_AUDIT.md` vẫn phản ánh đúng cấu trúc. Không chỉnh README chỉ để tạo commit.
+Hiện cây chuẩn gốc (canonical / 정본), phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), lộ trình học (learning path / 학습 경로) và liên kết tới `COVERAGE_AUDIT.md` vẫn phản ánh đúng cấu trúc. Không chỉnh README chỉ để tạo lần ghi nhận (commit / 커밋).
 
 # Trạng thái pre-merge cuối
 
@@ -461,11 +456,11 @@ examples/mechanisms đủ cho chapter nền        ✓
 README phản ánh đúng cấu trúc                 ✓
 global internal links đã được kiểm tra        ✓
 Study Shelf build + Chemistry publication     ✓
-branch cũ đã gom/xóa                          ✓
+canonical content đã ở trên main             ✓
 ```
 
-Pre-merge audit xác nhận toàn bộ 119 tài liệu Chemistry được đưa vào Study Shelf khi prefix `chemistry` được allow-list.
+Pre-merge kiểm tra (audit / 감사) xác nhận toàn bộ 119 tài liệu Chemistry được đưa vào Study Shelf khi prefix `chemistry` được allow-list.
 
-Có một blocker tồn tại sẵn trên `main` không thuộc Chemistry: publication manifest còn hai `allowedDocuments` trỏ tới file Java/CSS đã không tồn tại. Trong pre-merge audit, hai entry stale này chỉ được bỏ qua trong runner; chúng không được đưa vào thay đổi Chemistry.
+Chemistry thư viện (library / 라이브러리) hiện **content/link/build-ready trên main**. Các thay đổi sau này chỉ cần cập nhật trực tiếp chuẩn gốc (canonical / 정본) content và kiểm tra (audit / 감사) bản ghi (record / 레코드), không cần duy trì một branch chuẩn gốc (canonical / 정본) riêng.
 
 Chemistry Library hiện **content/link/build-ready cho việc merge**. Blocker manifest nói trên có thể làm workflow Pages toàn repo thất bại độc lập với Chemistry cho tới khi workstream tương ứng sửa nó.

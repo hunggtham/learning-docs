@@ -1,5 +1,8 @@
 # Hóa học thơm — hệ π vòng phi định xứ
 
+> **Mạch đọc:** Đọc **Hóa học thơm — hệ π vòng phi định xứ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bài toán benzene** sang **Góc nhìn orbital — sáu orbital p tạo một hệ vòng duy nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Tính thơm (aromaticity / 방향족성)** là một kiểu ổn định đặc biệt xuất hiện trong một số hệ π vòng, phẳng và liên hợp. Nó không đồng nghĩa với “có vòng benzene” và về bản chất không liên quan đến mùi. Tính thơm xuất hiện từ **cấu trúc tô-pô orbital, số electron và sự phi định xứ vòng**.
 
 Benzene là ví dụ kinh điển vì nó buộc hóa học phải từ bỏ ý tưởng rằng hình vẽ có các liên kết đơn/đôi xen kẽ là bức tranh theo nghĩa đen của electron cục bộ.
@@ -156,7 +159,7 @@ Một điểm thú vị là trong SNAr đã được hoạt hóa, F có thể l�
 
 ### Con đường benzyne
 
-Dưới base rất mạnh, aryl halide có thể loại HX để tạo **benzyne**, một chất trung gian có liên kết dạng ba rất căng. Nucleophile cộng vào hệ này và thường tạo hỗn hợp đồng phân vị trí.
+Dưới cơ sở (base / 기반) rất mạnh, aryl halide có thể loại HX để tạo **benzyne**, một chất trung gian có liên kết dạng ba rất căng. Nucleophile cộng vào hệ này và thường tạo hỗn hợp đồng phân vị trí.
 
 Điều này một lần nữa cho thấy “quy tắc nhóm rời” phụ thuộc cơ chế.
 
@@ -166,11 +169,11 @@ Tính thơm không chỉ thuộc carbon.
 
 ### Pyridine
 
-Pyridine có sáu electron π từ ba liên kết π. Cặp electron tự do của nitrogen nằm trong orbital sp2 trong mặt phẳng vòng và **không tham gia bộ sáu electron thơm**. Vì vậy cặp electron vẫn có thể nhận proton; pyridine có tính base.
+Pyridine có sáu electron π từ ba liên kết π. Cặp electron tự do của nitrogen nằm trong orbital sp2 trong mặt phẳng vòng và **không tham gia bộ sáu electron thơm**. Vì vậy cặp electron vẫn có thể nhận proton; pyridine có tính cơ sở (base / 기반).
 
 ### Pyrrole
 
-Pyrrole có hai liên kết C=C, tương ứng bốn electron π. Cặp electron tự do trên nitrogen đóng góp thêm hai electron để hoàn thành hệ sáu electron thơm. Proton hóa cặp electron này làm gián đoạn tính thơm, nên pyrrole yếu base hơn nhiều.
+Pyrrole có hai liên kết C=C, tương ứng bốn electron π. Cặp electron tự do trên nitrogen đóng góp thêm hai electron để hoàn thành hệ sáu electron thơm. Proton hóa cặp electron này làm gián đoạn tính thơm, nên pyrrole yếu cơ sở (base / 기반) hơn nhiều.
 
 Cùng là nitrogen nhưng hành vi khác vì vai trò orbital khác nhau.
 
@@ -196,7 +199,7 @@ Hóa cơ kim sử dụng phối tử cyclopentadienyl rất rộng vì ổn đ�
 
 ## Tính thơm trong phân tử sinh học
 
-Các base của DNA/RNA là dị vòng thơm. Hệ π phẳng cho phép tương tác xếp chồng và điều chỉnh các vị trí cho/nhận liên kết hydrogen.
+Các cơ sở (base / 기반) của DNA/RNA là dị vòng thơm. Hệ π phẳng cho phép tương tác xếp chồng và điều chỉnh các vị trí cho/nhận liên kết hydrogen.
 
 Phenylalanine, tyrosine, tryptophan và histidine có mạch bên thơm tham gia tương tác π–π, cation–π và đóng gói protein.
 
@@ -231,3 +234,5 @@ Không. Halogen thường làm giảm hoạt tính nhưng định hướng ortho
 > Tính thơm là **phi định xứ vòng kín trong đó cách lấp đầy orbital tạo lợi thế năng lượng**. Phản ứng phá sự ổn định vòng kín phải trả chi phí năng lượng; phản ứng chỉ phá tạm thời rồi khôi phục tính thơm có thể vẫn thuận lợi.
 
 Xem tiếp: [Alcohol, ether và amine](./06_alcohols_ethers_and_amines.md), đồng thời giữ cách suy luận mật độ electron thơm để hiểu phenol/aniline thế cũng như dị vòng trong dược phẩm.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

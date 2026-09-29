@@ -1,8 +1,11 @@
-# NAVER Case Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI
+# NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI
+
+> **Mạch đọc:** Đặt **NAVER trường hợp (case / 사례) Lab — tìm kiếm, thương mại, fintech, nội dung, cloud và kinh tế AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Nền tảng không phải một mô hình kinh doanh duy nhất** sang **2. Quảng cáo tìm kiếm: lượng truy vấn chưa đủ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 NAVER là một trường hợp phù hợp để học cách phân tích doanh nghiệp nền tảng mà không bị mắc kẹt ở MAU, GMV hoặc một câu chuyện chung chung về “tăng trưởng AI”. Nền tảng số có mức độ phụ thuộc tài sản vật lý thấp hơn bán dẫn hay ô tô, nhưng điều đó không có nghĩa kinh tế của nó đơn giản. Tìm kiếm–quảng cáo, thương mại, thanh toán, nội dung và cloud có đơn vị kiếm tiền, cấu trúc chi phí và môi trường pháp lý khác nhau.
 
-Một điểm rất quan trọng khi dùng dữ liệu lịch sử là **định nghĩa phân khúc (segment definition)** có thể thay đổi. Trong năm tài chính 2025, NAVER còn công bố các nhóm Search Platform, Commerce, Fintech, Content và Cloud/Enterprise; từ quý I/2026 công ty sắp xếp lại thành NAVER Platform, Financial Platform và Global Initiatives. Vì vậy khi phân tích chuỗi thời gian phải điều chỉnh sự thay đổi phân loại trước khi so sánh.
+Một điểm rất quan trọng khi dùng dữ liệu lịch sử là **định nghĩa phân khúc (segment definition)** có thể thay đổi. Trong năm tài chính 2025, NAVER còn công bố các nhóm tìm kiếm (search / 검색) nền tảng (platform / 플랫폼), Commerce, Fintech, Content và Cloud/Enterprise; từ quý I/2026 công ty sắp xếp lại thành NAVER nền tảng (platform / 플랫폼), Financial nền tảng (platform / 플랫폼) và toàn cục (global / 전역) Initiatives. Vì vậy khi phân tích chuỗi thời gian phải điều chỉnh sự thay đổi phân loại trước khi so sánh.
 
 ## 1. Nền tảng không phải một mô hình kinh doanh duy nhất
 
@@ -27,7 +30,7 @@ Vì vậy tăng trưởng doanh thu hợp nhất cần được phân rã theo t
 Một mô hình đơn giản:
 
 \[
-Ad\ Revenue \approx Monetizable\ Queries/Impressions \times Fill\ Rate \times Price\ per\ Ad
+Ad\ Revenue \approx Monetizable\ Queries/Impressions \times Fill\ tỷ lệ (rate / 비율) \times Price\ per\ Ad
 \]
 
 Nhưng trải nghiệm người dùng tạo ra giới hạn. Nếu tăng mật độ quảng cáo quá mức, khả năng kiếm tiền ngắn hạn có thể tăng nhưng mức độ giữ chân người dùng hoặc chất lượng tìm kiếm lại giảm.
@@ -57,7 +60,7 @@ Vì vậy “ứng dụng AI” chỉ có ý nghĩa tài chính khi nó đi qua 
 Nếu GMV bằng 100 và tỷ lệ kiếm tiền hiệu quả bằng 5%, doanh thu liên quan có thể chỉ khoảng 5 tùy định nghĩa kinh doanh.
 
 \[
-Commerce\ Monetization \approx GMV \times Effective\ Take\ Rate + Ads + Membership + Logistics/Services
+Commerce\ Monetization \approx GMV \times Effective\ Take\ tỷ lệ (rate / 비율) + Ads + Membership + Logistics/Services
 \]
 
 Hai nền tảng có cùng GMV vẫn có kinh tế rất khác nếu tỷ lệ thu phí, mức thâm nhập quảng cáo, chi phí logistics và kinh tế thành viên khác nhau.
@@ -69,7 +72,7 @@ Khi thương mại tăng trưởng, cần hỏi GMV tăng bao nhiêu, tăng nh�
 **Tổng giá trị thanh toán (Total Payment Volume / TPV)** là dòng giá trị thanh toán đi qua mạng lưới. Doanh thu phụ thuộc vào tỷ lệ kiếm tiền, cơ cấu dịch vụ và sản phẩm tài chính.
 
 \[
-Payment\ Revenue \approx TPV \times Net\ Monetization\ Rate
+Payment\ Revenue \approx TPV \times Net\ Monetization\ tỷ lệ (rate / 비율)
 \]
 
 Nếu TPV tăng 20% nhưng phần thưởng và ưu đãi tăng mạnh, mức lợi nhuận đóng góp có thể không tăng tương ứng.
@@ -99,7 +102,7 @@ Cloud và AI doanh nghiệp có thể tạo doanh thu định kỳ, nhưng trung
 Một mô hình đơn giản:
 
 \[
-Cloud\ Gross\ Profit \approx Usage\ Revenue - Compute/Storage/Network\ Cost
+Cloud\ Gross\ Profit \approx Usage\ Revenue - Compute/lưu trữ (storage / 저장소)/mạng (network / 네트워크)\ chi phí (cost / 비용)
 \]
 
 Khối lượng công việc AI có thể làm doanh thu tăng nhưng đồng thời làm chi phí bộ tăng tốc tăng. Nếu công ty trợ giá dịch vụ AI để thu hút người dùng, tăng trưởng doanh thu chưa chắc tạo thêm biên lợi nhuận.
@@ -237,7 +240,7 @@ Doanh nghiệp số có thể dùng tiền cho trung tâm dữ liệu, tính to�
 Không nên mặc định mua lại doanh nghiệp đồng nghĩa với tăng trưởng. Cần hỏi:
 
 \[
-Post-acquisition\ ROIC > Cost\ of\ Capital?
+Post-acquisition\ ROIC > chi phí (cost / 비용)\ of\ Capital?
 \]
 
 và hiệp lực có thể đo bằng doanh thu, chi phí hoặc năng lực cụ thể nào. Nếu doanh nghiệp được mua vẫn cần liên tục bơm thêm vốn, giá mua chỉ là phần đầu của tổng khoản đầu tư.
@@ -268,7 +271,7 @@ Luôn lưu cả định nghĩa của chỉ số. “Users”, “GMV”, “TPV�
 
 Luận điểm tích cực có thể thất bại nếu mức tương tác giảm, tìm kiếm AI làm giảm số lần nhấp có thể kiếm tiền mà không tạo nguồn doanh thu mới, thương mại phải trợ giá ngày càng lớn, quy định fintech làm chi phí tăng hoặc cường độ tính toán AI kéo biên lợi nhuận xuống. Luận điểm tiêu cực có thể thất bại nếu AI tăng mạnh tỷ lệ chuyển đổi quảng cáo, bán chéo giữa các dịch vụ cải thiện khả năng giữ chân và cloud/AI doanh nghiệp mở rộng khả năng kiếm tiền nhanh hơn dự kiến.
 
-## 18. Bài tập cuối case
+## 18. Bài tập cuối trường hợp (case / 사례)
 
 Vẽ bản đồ hệ sinh thái chỉ dùng các mũi tên có ý nghĩa kinh tế:
 

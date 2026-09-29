@@ -1,10 +1,13 @@
-# Taylor series và local approximation: derivatives như local polynomial information
+# Taylor series và cục bộ (local / 로컬) approximation: derivatives như cục bộ (local / 로컬) polynomial thông tin (information / 정보)
 
-Derivative bậc một cho slope. Derivative bậc hai cho curvature. Higher derivatives mô tả các lớp local behavior ngày càng tinh hơn.
+> **Mạch đọc:** Đọc **Taylor series và cục bộ (local / 로컬) approximation: derivatives như cục bộ (local / 로컬) polynomial thông tin (information / 정보)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Bắt đầu từ linearization** sang **2. Vì sao quadratic term có hệ số 1/2?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Taylor approximation gom toàn bộ information này thành một polynomial quanh một expansion point `a`.
 
-Mental flow:
+Derivative bậc một cho slope. Derivative bậc hai cho curvature. Higher derivatives mô tả các lớp cục bộ (local / 로컬) hành vi (behavior / 동작) ngày càng tinh hơn.
+
+Taylor approximation gom toàn bộ thông tin (information / 정보) này thành một polynomial quanh một expansion điểm (point / 지점) `a`.
+
+Mental luồng (flow / 흐름):
 
 ```text
 function
@@ -16,13 +19,13 @@ function
 → remainder/error
 ```
 
-Taylor không phải chỉ là một công thức series. Nó là framework trả lời:
+Taylor không phải chỉ là một công thức series. Nó là khung phần mềm (framework / 프레임워크) trả lời:
 
-> Nếu chỉ biết local derivatives tại một point, ta có thể reconstruct hoặc approximate function quanh đó đến mức nào?
+> Nếu chỉ biết cục bộ (local / 로컬) derivatives tại một điểm (point / 지점), ta có thể reconstruct hoặc approximate hàm (function / 함수) quanh đó đến mức nào?
 
 ## 1. Bắt đầu từ linearization
 
-Với differentiable function:
+Với differentiable hàm (function / 함수):
 
 ```math
 f(a+h)
@@ -32,9 +35,9 @@ f(a)+f'(a)h.
 
 Đây là first-order Taylor approximation.
 
-Nó nói rằng sufficiently close to `a`, nonlinear function nhìn gần như affine.
+Nó nói rằng sufficiently close to `a`, nonlinear hàm (function / 함수) nhìn gần như affine.
 
-Error first-order thường nhỏ hơn order `h` dưới suitable smoothness; nếu có second derivative bounded, error thường scale như `O(h^2)`.
+Lỗi (error / 오류) first-order thường nhỏ hơn thứ tự (order / 순서) `h` dưới suitable smoothness; nếu có second derivative bounded, lỗi (error / 오류) thường quy mô (scale / 규모) như `O(h^2)`.
 
 ## 2. Vì sao quadratic term có hệ số 1/2?
 
@@ -44,7 +47,7 @@ Muốn polynomial
 P_2(x)=c_0+c_1(x-a)+c_2(x-a)^2
 ```
 
-match function value, slope và curvature tại `a`.
+match hàm (function / 함수) giá trị (value / 값), slope và curvature tại `a`.
 
 Conditions:
 
@@ -96,7 +99,7 @@ P_n(x)
 (x-a)^k.
 ```
 
-Nó là unique polynomial degree ≤ `n` có cùng derivatives tới order `n` với `f` tại `a`.
+Nó là unique polynomial degree ≤ `n` có cùng derivatives tới thứ tự (order / 순서) `n` với `f` tại `a`.
 
 Đây là characterization quan trọng hơn việc chỉ nhớ formula.
 
@@ -137,7 +140,7 @@ e^{-1/x^2},&x\ne0\\
 \end{cases}
 ```
 
-Function này infinitely differentiable tại 0 và mọi derivatives tại 0 đều bằng 0.
+Hàm (function / 함수) này infinitely differentiable tại 0 và mọi derivatives tại 0 đều bằng 0.
 
 Taylor series quanh 0 vì vậy là zero series:
 
@@ -145,7 +148,7 @@ Taylor series quanh 0 vì vậy là zero series:
 0+0x+0x^2+\cdots
 ```
 
-nhưng function không zero khi `x\ne0`.
+nhưng hàm (function / 함수) không zero khi `x\ne0`.
 
 Do đó:
 
@@ -153,9 +156,9 @@ Do đó:
 infinitely differentiable ≠ analytic
 ```
 
-Analytic nghĩa function locally equals its convergent power series.
+Analytic nghĩa hàm (function / 함수) locally equals its convergent power series.
 
-## 6. Lagrange remainder cho error estimate
+## 6. Lagrange remainder cho lỗi (error / 오류) estimate
 
 Dưới suitable conditions:
 
@@ -184,9 +187,9 @@ trên interval, thì
 \frac{M}{(n+1)!}|x-a|^{n+1}.
 ```
 
-Đây là bridge từ symbolic approximation sang certified error.
+Đây là cầu nối (bridge / 브리지) từ symbolic approximation sang certified lỗi (error / 오류).
 
-## 7. e^x là ideal Taylor function
+## 7. e^x là ideal Taylor hàm (function / 함수)
 
 Vì mọi derivatives của `e^x` đều là `e^x`, tại 0:
 
@@ -204,7 +207,7 @@ e^x
 
 Factorial denominator làm terms shrink rất nhanh cho fixed `x`, nên radius of convergence là infinite.
 
-## 8. sin và cos: derivative cycle tạo coefficient pattern
+## 8. sin và cos: derivative cycle tạo coefficient mẫu (pattern / 패턴)
 
 Derivatives cycle:
 
@@ -252,25 +255,25 @@ valid trong convergence region phù hợp.
 
 Singularity tại `x=-1` giới hạn radius quanh 0.
 
-Deep connection:
+Deep liên kết (connection / 연결):
 
 > Radius of convergence thường bị giới hạn bởi nearest singularity trong complex plane.
 
-Ngay cả khi đang học real calculus, complex analysis giải thích sâu hơn tại sao power series dừng ở đâu.
+Ngay cả khi đang học real calculus, complex phân tích (analysis / 분석) giải thích sâu hơn tại sao power series dừng ở đâu.
 
-## 10. Local approximation quality phụ thuộc distance tới center
+## 10. cục bộ (local / 로컬) approximation chất lượng (quality / 품질) phụ thuộc distance tới center
 
 Taylor polynomial quanh `a` thường tốt nhất gần `a`.
 
-Term error chứa factor:
+Term lỗi (error / 오류) chứa factor:
 
 ```math
 |x-a|^{n+1}.
 ```
 
-Đi xa center làm error grow nhanh nếu không tăng degree hoặc đổi center.
+Đi xa center làm lỗi (error / 오류) grow nhanh nếu không tăng degree hoặc đổi center.
 
-Numerical libraries thường dùng **range reduction**:
+Numerical libraries thường dùng **phạm vi (range / 범위) reduction**:
 
 ```text
 reduce input to small region
@@ -278,7 +281,7 @@ reduce input to small region
 → transform result back
 ```
 
-thay vì dùng một Taylor polynomial quanh 0 cho mọi input.
+thay vì dùng một Taylor polynomial quanh 0 cho mọi đầu vào (input / 입력).
 
 ## 11. Taylor theorem giải thích derivative meaning sâu hơn
 
@@ -300,9 +303,9 @@ f(a)+f'(a)h
 +O(h^3).
 ```
 
-Notation `O(h^k)` nói error scale no faster than constant times `|h|^k` near zero.
+Notation `O(h^k)` nói lỗi (error / 오류) quy mô (scale / 규모) no faster than constant times `|h|^k` near zero.
 
-Taylor vì vậy là formal language của “local behavior by orders of smallness”.
+Taylor vì vậy là formal ngôn ngữ (language / 언어) của “cục bộ (local / 로컬) hành vi (behavior / 동작) by orders of smallness”.
 
 ## 12. Why linearization works so often
 
@@ -318,14 +321,14 @@ Do đó first nonzero low-order terms dominate.
 
 Đây là lý do:
 
-- small perturbations thường gần linear;
-- error propagation dùng derivatives;
-- local stability dùng Jacobian;
+- small perturbations thường gần tuyến tính (linear / 선형);
+- lan truyền lỗi (error propagation / 오류 전파) dùng derivatives;
+- cục bộ (local / 로컬) stability dùng Jacobian;
 - small-angle physics dùng low-order expansions.
 
 ## 13. Multivariable Taylor expansion
 
-Cho scalar function `f:\mathbb R^n\to\mathbb R`:
+Cho scalar hàm (function / 함수) `f:\mathbb R^n\to\mathbb R`:
 
 ```math
 f(x+\Delta)
@@ -337,9 +340,9 @@ f(x)
 \frac12\Delta^TH(x)\Delta.
 ```
 
-Gradient là first-order sensitivity vector.
+Độ dốc (gradient / 기울기) là first-order sensitivity véc-tơ (vector / 벡터).
 
-Hessian là second-order curvature matrix.
+Hessian là second-order curvature ma trận (matrix / 행렬).
 
 Quadratic form
 
@@ -349,15 +352,15 @@ Quadratic form
 
 cho curvature theo direction `\Delta`.
 
-## 14. Optimization: stationary point + Hessian
+## 14. tối ưu hóa (optimization / 최적화): stationary điểm (point / 지점) + Hessian
 
-Tại critical point:
+Tại trọng yếu (critical / 중요) điểm (point / 지점):
 
 ```math
 \nabla f(x_*)=0.
 ```
 
-Taylor local model:
+Taylor cục bộ (local / 로컬) mô hình (model / 모델):
 
 ```math
 f(x_*+\Delta)
@@ -366,15 +369,15 @@ f(x_*)+
 \frac12\Delta^TH\Delta.
 ```
 
-Nếu Hessian positive definite → local bowl → strict local minimum.
+Nếu Hessian positive definite → cục bộ (local / 로컬) bowl → strict cục bộ (local / 로컬) minimum.
 
-Nếu negative definite → local maximum.
+Nếu negative definite → cục bộ (local / 로컬) maximum.
 
 Nếu indefinite → saddle.
 
-Second derivative test là consequence của quadratic Taylor geometry.
+Second derivative kiểm thử (test / 테스트) là consequence của quadratic Taylor hình học (geometry / 기하학).
 
-## 15. Newton's method đến từ quadratic/local linear model
+## 15. Newton's phương thức (method / 메서드) đến từ quadratic/cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)
 
 Để solve scalar equation
 
@@ -399,15 +402,15 @@ x_n-
 \frac{f(x_n)}{f'(x_n)}.
 ```
 
-Newton method không phải formula ngẫu nhiên; nó tìm zero của local tangent approximation.
+Newton phương thức (method / 메서드) không phải formula ngẫu nhiên; nó tìm zero của cục bộ (local / 로컬) tangent approximation.
 
-Trong optimization, Newton step từ quadratic model:
+Trong tối ưu hóa (optimization / 최적화), Newton step từ quadratic mô hình (model / 모델):
 
 ```math
 \Delta=-H^{-1}\nabla f.
 ```
 
-## 16. Error propagation là first-order Taylor
+## 16. lan truyền lỗi (error propagation / 오류 전파) là first-order Taylor
 
 Nếu
 
@@ -415,7 +418,7 @@ Nếu
 y=f(x)
 ```
 
-và measurement error `\Delta x` small:
+và sai số đo lường (measurement error / 측정 오차) `\Delta x` small:
 
 ```math
 \Delta y
@@ -431,7 +434,7 @@ Multivariable:
 \nabla f^T\Delta x.
 ```
 
-Nếu input uncertainty covariance `\Sigma_x`, linearized output variance:
+Nếu đầu vào (input / 입력) bất định (uncertainty / 불확실성) covariance `\Sigma_x`, linearized đầu ra (output / 출력) variance:
 
 ```math
 \operatorname{Var}(y)
@@ -439,7 +442,7 @@ Nếu input uncertainty covariance `\Sigma_x`, linearized output variance:
 \nabla f^T\Sigma_x\nabla f.
 ```
 
-Taylor approximation là foundation của uncertainty propagation.
+Taylor approximation là foundation của bất định (uncertainty / 불확실성) propagation.
 
 ## 17. Physics: small oscillation approximation
 
@@ -456,7 +459,7 @@ For small angle:
 \sin\theta\approx\theta.
 ```
 
-System becomes linear:
+Hệ thống (system / 시스템) becomes tuyến tính (linear / 선형):
 
 ```math
 \theta''+
@@ -465,9 +468,9 @@ System becomes linear:
 
 Nonlinear pendulum locally behaves like harmonic oscillator.
 
-Assumption is not “pendulum equation simplified magically”; it is a Taylor truncation valid for small `|\theta|`.
+Giả định (assumption / 가정) is not “pendulum equation simplified magically”; it is a Taylor truncation valid for small `|\theta|`.
 
-## 18. Relativity/engineering style perturbation intuition
+## 18. Relativity/kỹ thuật (engineering / 엔지니어링) style perturbation intuition
 
 Expressions như
 
@@ -487,9 +490,9 @@ for small `x`:
 
 This converts nonlinear multiplicative expressions into manageable polynomial corrections.
 
-Perturbation methods across physics/engineering build on this logic.
+Perturbation methods across physics/kỹ thuật (engineering / 엔지니어링) bản dựng (build / 빌드) on this lô-gic (logic / 논리).
 
-## 19. AI: local loss geometry
+## 19. AI: cục bộ (local / 로컬) mất mát (loss / 손실) hình học (geometry / 기하학)
 
 Near parameter `\theta`:
 
@@ -503,15 +506,15 @@ L(\theta)
 \frac12\Delta^TH\Delta.
 ```
 
-Gradient descent uses first-order local information.
+Độ dốc (gradient / 기울기) descent uses first-order cục bộ (local / 로컬) thông tin (information / 정보).
 
-Newton/quasi-Newton/preconditioning use curvature information more directly.
+Newton/quasi-Newton/preconditioning use curvature thông tin (information / 정보) more directly.
 
 Sharp/flat directions correspond roughly to large/small Hessian eigenvalues locally.
 
 ## 20. Finance: delta-gamma approximation
 
-For nonlinear portfolio value `V(S)`:
+For nonlinear portfolio giá trị (value / 값) `V(S)`:
 
 ```math
 \Delta V
@@ -532,13 +535,13 @@ Again, this is just second-order Taylor approximation.
 
 ## 21. Taylor vs polynomial interpolation
 
-Taylor polynomial chooses coefficients from derivatives at one point.
+Taylor polynomial chooses coefficients from derivatives at one điểm (point / 지점).
 
 Interpolation polynomial chooses coefficients to match values at several points.
 
-Both produce polynomials but encode different information.
+Both produce polynomials but encode different thông tin (information / 정보).
 
-Taylor is local derivative matching; interpolation is multi-point value matching.
+Taylor is cục bộ (local / 로컬) derivative matching; interpolation is multi-point giá trị (value / 값) matching.
 
 ## 22. Taylor vs Fourier
 
@@ -548,7 +551,7 @@ Taylor basis:
 1, (x-a), (x-a)², ...
 ```
 
-is local polynomial structure.
+is cục bộ (local / 로컬) polynomial cấu trúc (structure / 구조).
 
 Fourier basis:
 
@@ -556,11 +559,11 @@ Fourier basis:
 sin(kx), cos(kx)
 ```
 
-captures global frequency structure.
+captures toàn cục (global / 전역) frequency cấu trúc (structure / 구조).
 
-A periodic function may be represented much more naturally by Fourier series than Taylor series.
+A periodic hàm (function / 함수) may be represented much more naturally by Fourier series than Taylor series.
 
-Representation should match structure.
+Biểu diễn (representation / 표현) should match cấu trúc (structure / 구조).
 
 ## 23. Asymptotic expansion may be useful even if series diverges
 
@@ -574,18 +577,18 @@ first few terms improve approximation as parameter → limit
 
 while infinite series itself diverges.
 
-This matters in advanced physics/numerical analysis: usefulness of truncation does not always require convergence of infinite expansion.
+This matters in advanced physics/numerical phân tích (analysis / 분석): usefulness of truncation does not always require convergence of infinite expansion.
 
-## 24. Numerical danger: more terms can make result worse
+## 24. Numerical danger: more terms can make kết quả (result / 결과) worse
 
-In exact arithmetic, adding Taylor terms within convergence region tends toward function.
+In chính xác (exact / 정확한) arithmetic, adding Taylor terms within convergence region tends toward hàm (function / 함수).
 
-In floating point:
+In floating điểm (point / 지점):
 
 - large intermediate terms may cancel;
 - factorial/powers may overflow/underflow;
 - rounding accumulates;
-- evaluation order matters.
+- evaluation thứ tự (order / 순서) matters.
 
 Horner form often evaluates polynomial more stably/efficiently:
 
@@ -593,9 +596,9 @@ Horner form often evaluates polynomial more stably/efficiently:
 c_0+x(c_1+x(c_2+\cdots)).
 ```
 
-## 25. Range reduction example for e^x
+## 25. phạm vi (range / 범위) reduction example for e^x
 
-Instead of approximate huge `x` directly, write:
+Instead of approximate huge `x` directly, ghi (write / 쓰기):
 
 ```math
 x=k\ln2+r
@@ -611,7 +614,7 @@ e^x=2^ke^r.
 
 Approximate `e^r` where `r` small.
 
-This illustrates engineering principle:
+This illustrates kỹ thuật (engineering / 엔지니어링) principle:
 
 ```text
 mathematical identity
@@ -636,7 +639,7 @@ P_3(0.1)
 \approx1.1051667.
 ```
 
-True value roughly `1.105170...`, so error is only a few millionths.
+True giá trị (value / 값) roughly `1.105170...`, so lỗi (error / 오류) is only a few millionths.
 
 Reason approximation works well: `x` is small and factorial denominator suppresses higher terms.
 
@@ -658,18 +661,18 @@ At `x=2 rad`:
 
 far from `2`.
 
-Approximation is local. Same formula used outside its validity region becomes a modeling error.
+Approximation is cục bộ (local / 로컬). Same formula used outside its validity region becomes a modeling lỗi (error / 오류).
 
 ## 28. Proof idea behind Taylor theorem
 
-Full proof may use repeated Mean Value Theorem or integral remainder.
+Full proof may use repeated Mean giá trị (value / 값) Theorem or integral remainder.
 
-Core idea:
+Cốt lõi (core / 핵심) idea:
 
-1. build polynomial matching derivatives at `a`;
+1. bản dựng (build / 빌드) polynomial matching derivatives at `a`;
 2. subtract it from `f`;
-3. resulting error function has many derivatives vanishing at `a`;
-4. Mean Value-type arguments force error to contain high power `(x-a)^{n+1}`.
+3. resulting lỗi (error / 오류) hàm (function / 함수) has many derivatives vanishing at `a`;
+4. Mean Value-type arguments force lỗi (error / 오류) to contain high power `(x-a)^{n+1}`.
 
 Factorial and higher derivative emerge naturally from repeated differentiation.
 
@@ -683,7 +686,7 @@ Example:
 f(x)=\frac1{1+x^2}.
 ```
 
-As real function smooth everywhere, but complex singularities at
+As real hàm (function / 함수) smooth everywhere, but complex singularities at
 
 ```math
 z=\pm i.
@@ -691,9 +694,9 @@ z=\pm i.
 
 Distance from 0 is 1, so Maclaurin radius is 1.
 
-Complex analysis explains convergence limits that real graph alone does not reveal.
+Complex phân tích (analysis / 분석) explains convergence limits that real đồ thị (graph / 그래프) alone does not reveal.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Taylor series nối đạo hàm cục bộ với mô hình xấp xỉ và sai số toàn cục. Nó cho biết khi nào một biểu diễn đơn giản đủ tốt và khi nào remainder trở thành rủi ro.
 
@@ -711,10 +714,10 @@ derivatives
 → analytic functions / complex singularities
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Taylor expansion is a **local information compressor**. Derivatives at one point become polynomial coefficients. First order records slope, second order curvature, higher orders finer shape. The approximation is useful only together with its **center, order and error regime**.
+> Taylor expansion is a **cục bộ (local / 로컬) thông tin (information / 정보) compressor**. Derivatives at one điểm (point / 지점) become polynomial coefficients. First thứ tự (order / 순서) records slope, second thứ tự (order / 순서) curvature, higher orders finer shape. The approximation is useful only together with its **center, thứ tự (order / 순서) and lỗi (error / 오류) regime**.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 `C^\infty` does not imply analytic. More Taylor terms are not automatically numerically better. A Taylor approximation valid near one center need not work far away. `sin x\approx x` assumes radians and small `x`. Taylor polynomial and Taylor series are different objects. A convergent Taylor series must still be shown to converge to the original function, not merely converge to something.

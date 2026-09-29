@@ -1,5 +1,8 @@
 # Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn
 
+> **Mạch đọc:** Đọc **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ cấu trúc dải đến vận chuyển** sang **Mô hình Drude và ý nghĩa vật lý của thời gian hồi phục**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Tính chất điện, nhiệt và từ của chất rắn không thể hiểu chỉ bằng cách nhìn từng nguyên tử riêng lẻ. Chúng xuất hiện từ cách rất nhiều electron và dao động mạng tinh thể tổ chức thành các trạng thái tập thể, chịu ràng buộc bởi thống kê lượng tử, cấu trúc dải năng lượng, tán xạ và đối xứng.
 
 Chương này nối bốn lớp vật lý: vận chuyển điện, vận chuyển nhiệt, từ tính và siêu dẫn.
@@ -83,7 +86,7 @@ Nếu một vật liệu có carrier density cao nhưng scattering mạnh, condu
 
 ## Phương trình Boltzmann và phân bố ngoài cân bằng
 
-Ở mức sâu hơn, vận chuyển được mô tả bằng distribution function
+Ở mức sâu hơn, vận chuyển được mô tả bằng phân phối (distribution / 분포) hàm (function / 함수)
 
 ```math
 f(\mathbf r,\mathbf k,t).
@@ -161,13 +164,13 @@ G_0=\frac{2e^2}{h}
 
 là quantum of conductance có spin degeneracy 2.
 
-Landauer cho thấy resistance có thể xuất hiện từ contact và transmission probability ngay cả khi vùng giữa gần ballistic.
+Landauer cho thấy resistance có thể xuất hiện từ contact và transmission xác suất (probability / 확률) ngay cả khi vùng giữa gần ballistic.
 
 ## Tán xạ electron–phonon và Matthiessen
 
-Các nguồn tán xạ gồm phonon, impurity, defect, boundary và electron–electron processes.
+Các nguồn tán xạ gồm phonon, impurity, defect, ranh giới (boundary / 경계) và electron–electron processes.
 
-Trong một xấp xỉ đơn giản, các rate cộng gần như
+Trong một xấp xỉ đơn giản, các tỷ lệ (rate / 비율) cộng gần như
 
 ```math
 \frac{1}{\tau_{tot}}
@@ -178,7 +181,7 @@ Trong một xấp xỉ đơn giản, các rate cộng gần như
 +\cdots.
 ```
 
-Đây là dạng Matthiessen. Nó hữu ích nhưng không phải định luật tuyệt đối; nếu các cơ chế scattering không độc lập hoặc band structure phức tạp, phép cộng đơn giản có thể thất bại.
+Đây là dạng Matthiessen. Nó hữu ích nhưng không phải định luật tuyệt đối; nếu các cơ chế scattering không độc lập hoặc band cấu trúc (structure / 구조) phức tạp, phép cộng đơn giản có thể thất bại.
 
 ## Vận chuyển nhiệt và định luật Wiedemann–Franz
 
@@ -196,11 +199,11 @@ L_0\approx2.44\times10^{-8}\,W\Omega K^{-2}.
 
 Đây là định luật Wiedemann–Franz.
 
-Quan hệ này hoạt động tốt khi cùng quasiparticles và cùng scattering physics kiểm soát cả hai dòng. Gần phase transition hoặc trong strongly correlated materials, deviations có thể chứa thông tin vật lý quan trọng.
+Quan hệ này hoạt động tốt khi cùng quasiparticles và cùng scattering physics kiểm soát cả hai dòng. Gần phase chuyển tiếp (transition / 전이) hoặc trong strongly correlated materials, deviations có thể chứa thông tin vật lý quan trọng.
 
 ## Hiệu ứng nhiệt điện
 
-Gradient nhiệt có thể tạo điện áp:
+Độ dốc (gradient / 기울기) nhiệt có thể tạo điện áp:
 
 ```math
 \Delta V=-S\Delta T,
@@ -216,7 +219,7 @@ Chất lượng vật liệu nhiệt điện thường đánh giá bằng
 ZT=\frac{S^2\sigma T}{\kappa}.
 ```
 
-Muốn `ZT` lớn cần `S` lớn, `\sigma` cao và `\kappa` thấp. Nhưng các đại lượng này không độc lập, tạo trade-off vật liệu khó tối ưu.
+Muốn `ZT` lớn cần `S` lớn, `\sigma` cao và `\kappa` thấp. Nhưng các đại lượng này không độc lập, tạo sự đánh đổi (trade-off / 트레이드오프) vật liệu khó tối ưu.
 
 ## Hiệu ứng Hall cổ điển
 
@@ -265,11 +268,11 @@ Mômen từ có hai nguồn chính: orbital motion và spin.
 
 Nghịch từ (diamagnetism) phản ứng theo hướng chống lại trường áp dụng. Thuận từ (paramagnetism) có các moments có xu hướng căn theo trường nhưng bị thermal disorder cạnh tranh.
 
-Sắt từ (ferromagnetism) không chỉ là “nhiều dipole cùng hướng”. Exchange interaction lượng tử tạo xu hướng sắp xếp spin, còn anisotropy và domain structure quyết định trạng thái vĩ mô.
+Sắt từ (ferromagnetism) không chỉ là “nhiều dipole cùng hướng”. Exchange tương tác (interaction / 상호작용) lượng tử tạo xu hướng sắp xếp spin, còn anisotropy và lĩnh vực (domain / 도메인) cấu trúc (structure / 구조) quyết định trạng thái vĩ mô.
 
 ## Tương tác trao đổi
 
-Một mô hình tối giản là Heisenberg model:
+Một mô hình tối giản là Heisenberg mô hình (model / 모델):
 
 ```math
 H=-J\sum_{\langle ij\rangle}\mathbf S_i\cdot\mathbf S_j.
@@ -289,17 +292,17 @@ Nếu
 J<0,
 ```
 
-nó ưu tiên phản song song, dẫn đến antiferromagnetic order trong nhiều hệ.
+nó ưu tiên phản song song, dẫn đến antiferromagnetic thứ tự (order / 순서) trong nhiều hệ.
 
-`J` không phải lực từ cổ điển giữa hai nam châm nhỏ; nó phát sinh từ wavefunction overlap, Coulomb interaction và Pauli principle.
+`J` không phải lực từ cổ điển giữa hai nam châm nhỏ; nó phát sinh từ wavefunction overlap, Coulomb tương tác (interaction / 상호작용) và Pauli principle.
 
-## Domain và hysteresis
+## Lĩnh vực (domain / 도메인) và hysteresis
 
-Một ferromagnet lớn thường chia thành nhiều magnetic domains để giảm tổng free energy.
+Một ferromagnet lớn thường chia thành nhiều magnetic domains để giảm tổng free năng lượng (energy / 에너지).
 
-Khi áp từ trường ngoài, domain walls di chuyển và moments quay. Quá trình có thể không thuận nghịch hoàn toàn, tạo hysteresis loop.
+Khi áp từ trường ngoài, lĩnh vực (domain / 도메인) walls di chuyển và moments quay. Quá trình có thể không thuận nghịch hoàn toàn, tạo hysteresis vòng lặp (loop / 루프).
 
-Các đại lượng như coercive field và remanent magnetization quan trọng trong thiết kế vật liệu nhớ từ.
+Các đại lượng như coercive trường dữ liệu (field / 필드) và remanent magnetization quan trọng trong thiết kế vật liệu nhớ từ.
 
 ## Mức Landau
 
@@ -315,7 +318,7 @@ với cyclotron frequency
 \omega_c=\frac{|q|B}{m^*}.
 ```
 
-Trong hệ hai chiều ở nhiệt độ thấp, Landau levels tạo nền tảng cho quantum Hall effect.
+Trong hệ hai chiều ở nhiệt độ thấp, Landau levels tạo nền tảng cho quantum Hall tác động (effect / 효과).
 
 ## Hall lượng tử
 
@@ -327,20 +330,20 @@ Trong integer quantum Hall regime,
 
 với integer filling factor `\nu`.
 
-Giá trị lượng tử hóa có độ chính xác cao và bền với disorder yếu vì liên quan invariant tô pô của band trạng thái chiếm.
+Giá trị lượng tử hóa có độ chính xác cao và bền với disorder yếu vì liên quan bất biến (invariant / 불변식) tô pô của band trạng thái chiếm.
 
 Do đó Hall lượng tử là ví dụ mạnh cho việc một observable vĩ mô được bảo vệ bởi topology chứ không chỉ bởi chi tiết vật liệu cục bộ.
 
 ## Siêu dẫn: hơn cả điện trở bằng không
 
-Một superconductor dưới critical temperature có hai dấu hiệu cốt lõi:
+Một superconductor dưới trọng yếu (critical / 중요) temperature có hai dấu hiệu cốt lõi:
 
 1. DC resistance bằng không trong giới hạn thích hợp;
 2. hiệu ứng Meissner: từ trường bị đẩy khỏi bulk.
 
-Meissner effect phân biệt superconductor với một conductor lý tưởng chỉ có `\rho=0`.
+Meissner tác động (effect / 효과) phân biệt superconductor với một conductor lý tưởng chỉ có `\rho=0`.
 
-## London penetration depth
+## London penetration độ sâu (depth / 깊이)
 
 Trong mô hình London, từ trường bên trong superconductor suy giảm theo
 
@@ -348,19 +351,19 @@ Trong mô hình London, từ trường bên trong superconductor suy giảm theo
 B(x)\propto e^{-x/\lambda_L},
 ```
 
-trong đó `\lambda_L` là London penetration depth.
+trong đó `\lambda_L` là London penetration độ sâu (depth / 깊이).
 
 Do đó trường không biến mất ngay tại mặt; nó xuyên vào một lớp mỏng hữu hạn.
 
 ## Cooper pair và BCS
 
-Trong conventional superconductors, electron–phonon interaction có thể tạo attraction hiệu dụng giữa hai electron gần Fermi surface.
+Trong conventional superconductors, electron–phonon tương tác (interaction / 상호작용) có thể tạo attraction hiệu dụng giữa hai electron gần Fermi surface.
 
 Hai electron có thể tạo Cooper pair với correlation trên khoảng cách coherence length `\xi` lớn hơn lattice spacing nhiều lần.
 
-BCS ground state là condensate kết hợp của rất nhiều Cooper pairs, không phải khí các phân tử electron tách biệt.
+BCS ground trạng thái (state / 상태) là condensate kết hợp của rất nhiều Cooper pairs, không phải khí các phân tử electron tách biệt.
 
-Một energy gap `\Delta` mở quanh Fermi level. Ở weak coupling,
+Một năng lượng (energy / 에너지) gap `\Delta` mở quanh Fermi mức (level / 수준). Ở weak coupling,
 
 ```math
 2\Delta(0)\approx3.52k_BT_c.
@@ -370,7 +373,7 @@ Gap làm low-energy single-particle excitations bị suppress, góp phần tạo
 
 ## Flux quantization
 
-Order parameter siêu dẫn có pha lượng tử vĩ mô. Điều kiện single-valued phase quanh một vòng kín dẫn đến flux quantization:
+Thứ tự (order / 순서) parameter siêu dẫn có pha lượng tử vĩ mô. Điều kiện single-valued phase quanh một vòng kín dẫn đến flux quantization:
 
 ```math
 \Phi_0=\frac{h}{2e}.
@@ -380,7 +383,7 @@ Order parameter siêu dẫn có pha lượng tử vĩ mô. Điều kiện single
 
 ## Type-I và Type-II
 
-Type-I superconductor có một critical field đặc trưng.
+Type-I superconductor có một trọng yếu (critical / 중요) trường dữ liệu (field / 필드) đặc trưng.
 
 Type-II có hai trường
 
@@ -392,17 +395,17 @@ Giữa chúng, magnetic flux xuyên vào dưới dạng vortices lượng tử h
 
 Mỗi vortex mang gần một flux quantum. Nếu vortices chuyển động dưới tác dụng dòng điện, dissipation xuất hiện. Vì vậy vortex pinning quan trọng trong magnet công suất cao.
 
-## Josephson effect
+## Josephson tác động (effect / 효과)
 
 Hai superconductors ngăn cách bởi barrier mỏng có thể tạo Josephson junction.
 
-DC Josephson relation:
+DC Josephson quan hệ (relation / 관계):
 
 ```math
 I=I_c\sin\phi,
 ```
 
-trong đó `\phi` là phase difference của hai order parameters.
+trong đó `\phi` là phase difference của hai thứ tự (order / 순서) parameters.
 
 Khi có voltage `V`, phase tiến hóa theo
 
@@ -420,17 +423,17 @@ Quan hệ này tạo liên kết chính xác giữa voltage và frequency và đ
 
 ## SQUID
 
-SQUID dùng Josephson junctions trong loop siêu dẫn. Flux quantization và interference của phase làm critical current cực nhạy với magnetic flux.
+SQUID dùng Josephson junctions trong vòng lặp (loop / 루프) siêu dẫn. Flux quantization và interference của phase làm trọng yếu (critical / 중요) hiện tại (current / 현재) cực nhạy với magnetic flux.
 
-Đây là lý do SQUID có thể đo từ trường rất nhỏ trong vật lý vật chất ngưng tụ, biomagnetism và các thí nghiệm precision measurement.
+Đây là lý do SQUID có thể đo từ trường rất nhỏ trong vật lý vật chất ngưng tụ, biomagnetism và các thí nghiệm precision đo lường (measurement / 측정).
 
 ## Liên hệ với qubit siêu dẫn
 
 Một LC circuit cổ điển có phổ harmonic gần đều. Josephson junction cung cấp nonlinear inductance, làm các mức năng lượng không còn cách đều hoàn toàn.
 
-Nhờ anharmonicity này, hai mức thấp nhất có thể được điều khiển như qubit trong khi hạn chế transition sang mức cao hơn.
+Nhờ anharmonicity này, hai mức thấp nhất có thể được điều khiển như qubit trong khi hạn chế chuyển tiếp (transition / 전이) sang mức cao hơn.
 
-Đây là cầu nối từ condensed-matter superconductivity sang quantum information engineering.
+Đây là cầu nối từ condensed-matter superconductivity sang quantum thông tin (information / 정보) kỹ thuật (engineering / 엔지니어링).
 
 ## Nhiệt và giới hạn vật lý của điện toán
 
@@ -446,11 +449,11 @@ Công suất điện tiêu thụ cuối cùng phần lớn trở thành nhiệt.
 \mathbf q=-k\nabla T.
 ```
 
-Do đó performance computing bị ràng buộc bởi power density, thermal conductivity, packaging và cooling.
+Do đó hiệu năng (performance / 성능) computing bị ràng buộc bởi power density, thermal conductivity, packaging và cooling.
 
-Không thể tăng clock rate vô hạn chỉ bằng thiết kế logic nếu heat flux vượt khả năng loại nhiệt.
+Không thể tăng clock tỷ lệ (rate / 비율) vô hạn chỉ bằng thiết kế lô-gic (logic / 논리) nếu heat flux vượt khả năng loại nhiệt.
 
-## Ví dụ: mean free path
+## Ví dụ: mean free đường dẫn (path / 경로)
 
 Giả sử kim loại có
 
@@ -472,36 +475,38 @@ Khi đó
 \approx30\,nm.
 ```
 
-Một dây rộng hàng micromet ở regime diffusive rõ ràng hơn, nhưng channel vài chục nanomet bắt đầu cảm nhận boundary/ballistic effects.
+Một dây rộng hàng micromet ở regime diffusive rõ ràng hơn, nhưng channel vài chục nanomet bắt đầu cảm nhận ranh giới (boundary / 경계)/ballistic effects.
 
 ## Điều kiện áp dụng và giới hạn mô hình
 
-Drude bỏ qua chi tiết Fermi statistics và band anisotropy. Relaxation-time approximation gom collision physics vào một tham số `\tau`. Landauer phù hợp mesoscopic coherent/elastic transport hơn bulk macroscopic transport.
+Drude bỏ qua chi tiết Fermi statistics và band anisotropy. Relaxation-time approximation gom collision physics vào một tham số `\tau`. Landauer phù hợp mesoscopic coherent/elastic vận chuyển (transport / 전송) hơn bulk macroscopic vận chuyển (transport / 전송).
 
-BCS mô tả conventional superconductors rất thành công nhưng không tự giải thích mọi high-`T_c` material. Heisenberg model là effective model và không thay thế full electronic structure.
+BCS mô tả conventional superconductors rất thành công nhưng không tự giải thích mọi high-`T_c` material. Heisenberg mô hình (model / 모델) là effective mô hình (model / 모델) và không thay thế full electronic cấu trúc (structure / 구조).
 
 Vì vậy mỗi công thức nên được đọc kèm regime của nó.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Vận chuyển trong chất rắn là bài toán **trạng thái lượng tử + lực ngoài + tán xạ + geometry**. Từ tính là **cách spin/orbital moments tổ chức tập thể**. Siêu dẫn là **pha lượng tử vĩ mô có phase coherence**, không chỉ là vật liệu có điện trở nhỏ.
+Vận chuyển trong chất rắn là bài toán **trạng thái lượng tử + lực ngoài + tán xạ + hình học (geometry / 기하학)**. Từ tính là **cách spin/orbital moments tổ chức tập thể**. Siêu dẫn là **pha lượng tử vĩ mô có phase coherence**, không chỉ là vật liệu có điện trở nhỏ.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Điện trở chỉ do electron đập vào nguyên tử”
 
-Quá đơn giản. Carrier scattering có thể đến từ phonon, impurity, defect, boundary, electron–electron interaction và band structure.
+Quá đơn giản. Carrier scattering có thể đến từ phonon, impurity, defect, ranh giới (boundary / 경계), electron–electron tương tác (interaction / 상호작용) và band cấu trúc (structure / 구조).
 
 ### “Superconductor chỉ là conductor có `R=0`”
 
-Không. Meissner effect, flux quantization và phase coherence là phần cốt lõi của pha siêu dẫn.
+Không. Meissner tác động (effect / 효과), flux quantization và phase coherence là phần cốt lõi của pha siêu dẫn.
 
 ### “Hole hoặc quasiparticle là hạt cơ bản mới”
 
 Không. Chúng là effective excitations xuất hiện trong môi trường vật chất.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Tinh thể và dải năng lượng](00_crystals_bands.md), [Thống kê lượng tử](../08_quantum/05_identical_particles_quantum_statistics.md), [Từ trường và cảm ứng](../05_electromagnetism/03_magnetism_induction.md).
 
 **Liên hệ tiếp:** [Phonon, khuyết tật và vật chất tô pô](04_phonons_defects_topological_matter.md), [BEC và siêu lưu](05_bec_superfluid_quantum_fluids.md), [Pha Berry và Hall lượng tử](06_berry_phase_quantum_hall_topology.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 crystals bands](./00_crystals_bands.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

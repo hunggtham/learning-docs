@@ -1,5 +1,8 @@
 # Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng
 
+> **Mạch đọc:** Đặt **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tiền mặt, tiền gửi và dự trữ ngân hàng** sang **2. Khi ngân hàng cấp tín dụng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này giải thích “đường ống” của hệ thống tài chính bằng tiếng Việt. Các thuật ngữ tiếng Anh chỉ được giữ như từ khóa tra cứu ở lần xuất hiện cần thiết. Mục tiêu là phân biệt rõ tiền, tín dụng, thanh khoản, vốn, tài sản bảo đảm, nguồn vốn và khả năng thanh toán để hiểu vì sao một cú sốc nhỏ có thể bị khuếch đại thành khủng hoảng.
 
 # Phần I — Các lớp tiền khác nhau

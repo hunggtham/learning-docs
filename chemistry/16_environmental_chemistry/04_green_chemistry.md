@@ -1,5 +1,8 @@
 # Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế
 
+> **Mạch đọc:** Đọc **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phòng ngừa là nguyên tắc đầu tiên** sang **Hiệu suất phản ứng chưa đủ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa học xanh (green chemistry / 녹색화학)** là cách thiết kế phân tử và quy trình sao cho mối nguy, chất thải, tiêu thụ tài nguyên và nhu cầu năng lượng được giảm **ngay từ đầu**, thay vì tạo ô nhiễm rồi mới xử lý. Khác với khắc phục môi trường, vốn hỏi “làm sạch hậu quả thế nào?”, hóa học xanh hỏi “có thể thiết kế để hậu quả đó không được tạo ra ngay từ đầu hay không?”.
 
 ## Phòng ngừa là nguyên tắc đầu tiên
@@ -21,7 +24,7 @@ Thiết kế xanh cần hỏi đồng thời: bao nhiêu nguyên tử của ch�
 **Hiệu quả nguyên tử (atom economy)** được định nghĩa:
 
 \[
-\text{Atom economy}=\frac{M_r\text{ của sản phẩm mong muốn}}{\sum M_r\text{ của các chất phản ứng theo tỉ lượng}}\times100\%
+\văn bản (text / 텍스트){Atom economy}=\frac{M_r\văn bản (text / 텍스트){ của sản phẩm mong muốn}}{\sum M_r\văn bản (text / 텍스트){ của các chất phản ứng theo tỉ lượng}}\times100\%
 \]
 
 Đại lượng này đánh giá thiết kế phương trình phản ứng, độc lập với hiệu suất thực nghiệm.
@@ -47,7 +50,7 @@ Ngay cả khi cả hai cùng đạt 95% hiệu suất, con đường thứ hai v
 **Hệ số E (E-factor)**:
 
 \[
-E=\frac{\text{khối lượng chất thải}}{\text{khối lượng sản phẩm}}
+E=\frac{\văn bản (text / 텍스트){khối lượng chất thải}}{\văn bản (text / 텍스트){khối lượng sản phẩm}}
 \]
 
 Giá trị càng thấp nhìn chung càng tốt.
@@ -56,10 +59,10 @@ Tuy nhiên quy ước có thể có hoặc không tính nước, vì vậy chỉ
 
 ## Cường độ khối lượng quy trình
 
-**Cường độ khối lượng quy trình (Process Mass Intensity, PMI)**:
+**Cường độ khối lượng quy trình (process Mass Intensity, PMI)**:
 
 \[
-PMI=\frac{\text{tổng khối lượng đầu vào}}{\text{khối lượng sản phẩm}}
+PMI=\frac{\văn bản (text / 텍스트){tổng khối lượng đầu vào}}{\văn bản (text / 텍스트){khối lượng sản phẩm}}
 \]
 
 PMI có thể bao gồm chất phản ứng, dung môi, nước quy trình và các chất phụ trợ tùy phạm vi thống kê.
@@ -403,3 +406,5 @@ Không. Độ khan hiếm, quá trình tổng hợp và khả năng thu hồi ch
 Hóa học xanh là **kỹ thuật phân tử và quy trình nhiều mục tiêu**. Mục tiêu không phải tối đa hóa một chỉ số, mà thiết kế lại toàn bộ hệ phản ứng – phân tách – sử dụng – cuối vòng đời để cung cấp cùng chức năng hữu ích với ít mối nguy, chất thải, năng lượng và gánh nặng tài nguyên hơn.
 
 Xem tiếp: [An toàn phòng thí nghiệm](../17_laboratory/00_lab_safety.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atmospheric chemistry](./00_atmospheric_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

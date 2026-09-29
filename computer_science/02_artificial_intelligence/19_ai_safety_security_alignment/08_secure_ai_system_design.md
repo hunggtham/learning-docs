@@ -1,18 +1,21 @@
 # Thiết kế hệ thống AI an toàn
 
-**Thiết kế hệ thống AI an toàn (secure AI system design / 안전한 AI 시스템 설계)** đặt thành phần học máy hoặc LLM bên trong một kiến trúc bảo mật có authentication, authorization, isolation, validation, auditing và recovery rõ ràng. Nguyên tắc nền tảng là:
+> **Mạch đọc:** Đặt **Thiết kế hệ thống AI an toàn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kiến thức tiên quyết** sang **Bắt đầu bằng threat mô hình (model / 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> **Mô hình không phải security boundary.**
 
-LLM có thể đề xuất hành động, diễn giải ngữ nghĩa hoặc chọn tool, nhưng backend mới quyết định identity, permission, resource scope, budget và side effect nào thực sự được phép xảy ra.
+**Thiết kế hệ thống AI an toàn (secure AI system design / 안전한 AI 시스템 설계)** đặt thành phần học máy hoặc LLM bên trong một kiến trúc bảo mật có authentication, authorization, isolation, kiểm tra hợp lệ (validation / 검증), auditing và khôi phục (recovery / 복구) rõ ràng. Nguyên tắc nền tảng là:
+
+> **Mô hình không phải ranh giới bảo mật (security boundary / 보안 경계).**
+
+LLM có thể đề xuất hành động, diễn giải ngữ nghĩa hoặc chọn công cụ (tool / 도구), nhưng backend mới quyết định định danh (identity / 식별자), permission, tài nguyên (resource / 자원) phạm vi (scope / 범위), ngân sách (budget / 예산) và side tác động (effect / 효과) nào thực sự được phép xảy ra.
 
 ## Kiến thức tiên quyết
 
 Nên đọc trước [Prompt Injection](./03_prompt_injection_and_jailbreaks.md), [Reliable Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md), [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md), [Tool Calling](../10_agents_and_ai_systems/01_tools_and_function_calling.md), [Data Governance](../14_data_for_ai/08_data_governance.md) và [AI System Design](../15_ai_engineering/10_ai_system_design.md).
 
-## Bắt đầu bằng threat model
+## Bắt đầu bằng threat mô hình (model / 모델)
 
-Trước khi chọn control, cần lập **mô hình đe dọa (threat model)**:
+Trước khi chọn điều khiển (control / 제어), cần lập **mô hình đe dọa (threat model)**:
 
 ```text
 assets          → dữ liệu, credential, money, code, model, reputation
@@ -24,7 +27,7 @@ attack paths    → injection, exfiltration, poisoning, privilege escalation
 controls        → authz, sandbox, validation, approval, audit
 ```
 
-Threat model phải mô tả luồng data và control thực tế, không chỉ sơ đồ model.
+Threat mô hình (model / 모델) phải mô tả luồng dữ liệu (data / 데이터) và điều khiển (control / 제어) thực tế, không chỉ sơ đồ mô hình (model / 모델).
 
 ## Ranh giới tin cậy ngoài mô hình
 
@@ -39,19 +42,19 @@ user là ai?
 action nào cần approval?
 ```
 
-Natural-language instruction không thay IAM, ACL, RBAC/ABAC hoặc policy engine.
+Natural-language instruction không thay IAM, ACL, RBAC/ABAC hoặc chính sách (policy / 정책) engine.
 
 ## Authentication và Authorization
 
 **Xác thực (authentication)** trả lời “ai đang gọi?”.
 
-**Phân quyền (authorization)** trả lời “identity đó được làm gì trên resource nào?”.
+**Phân quyền (authorization)** trả lời “định danh (identity / 식별자) đó được làm gì trên tài nguyên (resource / 자원) nào?”.
 
-Một Agent biết `user_id` không có nghĩa nó được quyền thực hiện mọi action thay user. Authorization phải được kiểm ở mỗi boundary có side effect hoặc data access nhạy cảm.
+Một tác nhân (agent / 에이전트) biết `user_id` không có nghĩa nó được quyền thực hiện mọi hành động (action / 동작) thay người dùng (user / 사용자). Authorization phải được kiểm ở mỗi ranh giới (boundary / 경계) có side tác động (effect / 효과) hoặc dữ liệu (data / 데이터) truy cập (access / 접근) nhạy cảm.
 
 ## Principle of Least Privilege
 
-Mỗi model session, service account và tool chỉ nên có quyền tối thiểu cần thiết.
+Mỗi mô hình (model / 모델) session, dịch vụ (service / 서비스) account và công cụ (tool / 도구) chỉ nên có quyền tối thiểu cần thiết.
 
 Ví dụ:
 
@@ -67,11 +70,11 @@ không mặc định có:
 → production_shell
 ```
 
-Giảm quyền làm giảm **blast radius** nếu model bị prompt injection hoặc mắc lỗi.
+Giảm quyền làm giảm **blast radius** nếu mô hình (model / 모델) bị prompt injection hoặc mắc lỗi.
 
 ## Capability-based tooling
 
-Thay tool toàn quyền bằng capability hẹp và typed:
+Thay công cụ (tool / 도구) toàn quyền bằng năng lực (capability / 역량) hẹp và typed:
 
 ```text
 get_order_status(order_id)
@@ -87,11 +90,11 @@ execute_sql(...)
 shell(...)
 ```
 
-Tool hẹp dễ authorize, test, audit và áp business rule hơn.
+Công cụ (tool / 도구) hẹp dễ authorize, kiểm thử (test / 테스트), kiểm tra (audit / 감사) và áp nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) hơn.
 
-## Model đề xuất, backend quyết định
+## Mô hình (model / 모델) đề xuất, backend quyết định
 
-Một control flow production tốt:
+Một điều khiển (control / 제어) luồng (flow / 흐름) môi trường vận hành (production / 운영 환경) tốt:
 
 ```text
 LLM đề xuất action
@@ -105,23 +108,23 @@ LLM đề xuất action
 → audit
 ```
 
-Điều này tách **reasoning xác suất** khỏi **authority xác định**.
+Điều này tách **lập luận (reasoning / 추론) xác suất** khỏi **authority xác định**.
 
-## Schema validation không đủ
+## Lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증) không đủ
 
-JSON đúng type không đồng nghĩa action đúng.
+JSON đúng kiểu (type / 타입) không đồng nghĩa hành động (action / 동작) đúng.
 
 ```json
 {"amount":1000000000,"currency":"KRW"}
 ```
 
-có thể hoàn toàn đúng schema nhưng vượt transaction limit hoặc không thuộc account user.
+có thể hoàn toàn đúng lược đồ (schema / 스키마) nhưng vượt giao dịch (transaction / 트랜잭션) limit hoặc không thuộc account người dùng (user / 사용자).
 
-Do đó cần semantic/business validation sau schema validation.
+Do đó cần ngữ nghĩa (semantic / 의미적)/nghiệp vụ (business / 비즈니스) kiểm tra hợp lệ (validation / 검증) sau lược đồ (schema / 스키마) kiểm tra hợp lệ (validation / 검증).
 
-## Policy engine
+## Chính sách (policy / 정책) engine
 
-Policy engine nên kiểm các rule có thể xác định bằng code:
+Chính sách (policy / 정책) engine nên kiểm các quy tắc (rule / 규칙) có thể xác định bằng mã (code / 코드):
 
 ```text
 resource ownership
@@ -133,11 +136,11 @@ allowed destination
 working hours nếu domain yêu cầu
 ```
 
-Policy càng quan trọng thì càng không nên chỉ tồn tại dưới dạng câu văn trong prompt.
+Chính sách (policy / 정책) càng quan trọng thì càng không nên chỉ tồn tại dưới dạng câu văn trong prompt.
 
 ## Human approval đúng cách
 
-Với action high-impact hoặc irreversible:
+Với hành động (action / 동작) high-impact hoặc irreversible:
 
 ```text
 model proposal
@@ -152,7 +155,7 @@ Không nên dùng câu tóm tắt tự do do LLM viết làm giao diện approva
 
 ## Retrieval Authorization
 
-Với RAG đa tenant, authorization phải xảy ra **trước khi chunk vào context**.
+Với RAG đa tenant, authorization phải xảy ra **trước khi chunk vào ngữ cảnh (context / 맥락)**.
 
 ```text
 user identity
@@ -170,11 +173,11 @@ retrieve mọi document
 → prompt “đừng tiết lộ phần user không được xem”
 ```
 
-Cross-tenant vector search và cache key thiếu tenant ID là lỗi rất nguy hiểm.
+Cross-tenant véc-tơ (vector / 벡터) tìm kiếm (search / 검색) và bộ nhớ đệm (cache / 캐시) key thiếu tenant ID là lỗi rất nguy hiểm.
 
 ## Tenant Isolation
 
-Boundary tenant phải tồn tại xuyên suốt:
+Ranh giới (boundary / 경계) tenant phải tồn tại xuyên suốt:
 
 ```text
 relational query
@@ -186,15 +189,15 @@ logs
 artifact store
 ```
 
-Một lớp đúng không bù được lớp khác sai. Ví dụ database ACL đúng nhưng semantic cache dùng key chỉ theo query text vẫn có thể rò dữ liệu chéo tenant.
+Một lớp đúng không bù được lớp khác sai. Ví dụ cơ sở dữ liệu (database / 데이터베이스) ACL đúng nhưng ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) dùng key chỉ theo truy vấn (query / 쿼리) văn bản (text / 텍스트) vẫn có thể rò dữ liệu chéo tenant.
 
 ## Secret Management
 
-Credential nằm trong secret manager hoặc executor backend. Model chỉ nhận opaque capability.
+Credential nằm trong secret manager hoặc executor backend. mô hình (model / 모델) chỉ nhận opaque năng lực (capability / 역량).
 
-Không đưa API key, password hoặc long-lived token vào system prompt, context hoặc tool description.
+Không đưa API key, password hoặc long-lived đơn vị từ (token / 토큰) vào hệ thống (system / 시스템) prompt, ngữ cảnh (context / 맥락) hoặc công cụ (tool / 도구) description.
 
-Nếu tool cần credential:
+Nếu công cụ (tool / 도구) cần credential:
 
 ```text
 model chọn tool
@@ -205,26 +208,26 @@ model chọn tool
 
 ## Sandboxing
 
-Code/browser/file tool nên chạy trong sandbox có:
+Mã (code / 코드)/trình duyệt (browser / 브라우저)/tệp (file / 파일) công cụ (tool / 도구) nên chạy trong sandbox có:
 
-- filesystem scope nhỏ;
-- network allowlist;
-- CPU/memory/time quota;
-- process restriction;
+- filesystem phạm vi (scope / 범위) nhỏ;
+- mạng (network / 네트워크) allowlist;
+- CPU/bộ nhớ (memory / 메모리)/thời gian (time / 시간) quota;
+- tiến trình (process / 프로세스) restriction;
 - credential tối thiểu;
 - môi trường tạm thời khi phù hợp.
 
-Sandbox giảm rủi ro nhưng không phải guarantee tuyệt đối. Cấu hình sandbox, kernel/container boundary và network egress vẫn cần hardening.
+Sandbox giảm rủi ro nhưng không phải guarantee tuyệt đối. Cấu hình sandbox, kernel/bộ chứa (container / 컨테이너) ranh giới (boundary / 경계) và mạng (network / 네트워크) egress vẫn cần hardening.
 
-## Network Segmentation
+## Mạng (network / 네트워크) Segmentation
 
-Agent tool runner không nên mặc định truy cập toàn bộ internal network.
+Tác nhân (agent / 에이전트) công cụ (tool / 도구) runner không nên mặc định truy cập toàn bộ nội bộ (internal / 내부) mạng (network / 네트워크).
 
-Allowlist service cần thiết và chặn private/internal destination không thuộc task giúp giảm nguy cơ model bị biến thành pivot kiểu SSRF.
+Allowlist dịch vụ (service / 서비스) cần thiết và chặn private/nội bộ (internal / 내부) destination không thuộc tác vụ (task / 작업) giúp giảm nguy cơ mô hình (model / 모델) bị biến thành pivot kiểu SSRF.
 
-## File Upload và Parser Security
+## Tệp (file / 파일) Upload và Parser bảo mật (security / 보안)
 
-PDF, image, archive hoặc office document đều là input không đáng tin.
+PDF, ảnh (image / 이미지), archive hoặc office document đều là đầu vào (input / 입력) không đáng tin.
 
 Cần:
 
@@ -237,20 +240,20 @@ malware scanning khi phù hợp
 resource/time limit
 ```
 
-AI feature thường làm ứng dụng phải xử lý nhiều loại file hơn, từ đó mở rộng attack surface truyền thống.
+AI tính năng (feature / 기능) thường làm ứng dụng phải xử lý nhiều loại tệp (file / 파일) hơn, từ đó mở rộng attack surface truyền thống.
 
-## Model Output cũng là input không đáng tin
+## Mô hình (model / 모델) đầu ra (output / 출력) cũng là đầu vào (input / 입력) không đáng tin
 
-Không trực tiếp đưa model text vào:
+Không trực tiếp đưa mô hình (model / 모델) văn bản (text / 텍스트) vào:
 
 - shell;
 - SQL;
 - HTML;
 - URL fetcher;
-- code executor;
-- policy expression.
+- mã (code / 코드) executor;
+- chính sách (policy / 정책) expression.
 
-Pattern phù hợp:
+Mẫu (pattern / 패턴) phù hợp:
 
 ```text
 text generation
@@ -259,9 +262,9 @@ text generation
 → deterministic executor
 ```
 
-Đối với SQL, ưu tiên query template hoặc parameterized API thay vì raw SQL tự do nếu use case cho phép.
+Đối với SQL, ưu tiên truy vấn (query / 쿼리) template hoặc parameterized API thay vì raw SQL tự do nếu use trường hợp (case / 사례) cho phép.
 
-## Rate Limit, Quota và Cost Security
+## Tỷ lệ (rate / 비율) Limit, Quota và chi phí (cost / 비용) bảo mật (security / 보안)
 
 Abuse không nhất thiết đánh cắp dữ liệu; attacker có thể làm tăng chi phí.
 
@@ -277,11 +280,11 @@ file size
 external API spend
 ```
 
-Cost runaway là một dạng availability/economic attack.
+Chi phí (cost / 비용) runaway là một dạng availability/economic attack.
 
-## Idempotency và transaction safety
+## Idempotency và giao dịch (transaction / 트랜잭션) an toàn (safety / 안전)
 
-Retry hoặc Agent loop có thể gọi write tool nhiều lần. Side-effect operation cần idempotency key, transaction ID hoặc resource version.
+Thử lại (retry / 재시도) hoặc tác nhân (agent / 에이전트) vòng lặp (loop / 루프) có thể gọi ghi (write / 쓰기) công cụ (tool / 도구) nhiều lần. Side-effect thao tác (operation / 연산) cần idempotency key, giao dịch (transaction / 트랜잭션) ID hoặc tài nguyên (resource / 자원) phiên bản (version / 버전).
 
 Ví dụ:
 
@@ -289,11 +292,11 @@ Ví dụ:
 create_payment(request_id="task-42-step-7", ...)
 ```
 
-Lặp lại cùng logical request không được tạo payment mới.
+Lặp lại cùng logical yêu cầu (request / 요청) không được tạo payment mới.
 
-## Optimistic concurrency
+## Optimistic tính đồng thời (concurrency / 동시성)
 
-Mutable resource nên có version:
+Mutable tài nguyên (resource / 자원) nên có phiên bản (version / 버전):
 
 ```text
 đọc version 10
@@ -301,11 +304,11 @@ Mutable resource nên có version:
 → chỉ ghi nếu resource vẫn version 10
 ```
 
-Nếu resource thành version 11, runtime trả conflict để Agent refetch và replan. Điều này ngăn action dựa trên state stale.
+Nếu tài nguyên (resource / 자원) thành phiên bản (version / 버전) 11, thời gian chạy (runtime / 런타임) trả xung đột (conflict / 충돌) để tác nhân (agent / 에이전트) refetch và replan. Điều này ngăn hành động (action / 동작) dựa trên trạng thái (state / 상태) stale.
 
-## Supply-chain security
+## Supply-chain bảo mật (security / 보안)
 
-AI system phụ thuộc nhiều artifact:
+AI hệ thống (system / 시스템) phụ thuộc nhiều sản phẩm tạo ra (artifact / 산출물):
 
 ```text
 model weights
@@ -319,17 +322,17 @@ RAG corpus
 tool integration
 ```
 
-Cần provenance, hash/signature khi phù hợp, dependency scanning, artifact registry và kiểm soát nguồn tải model. Xem [Model and Supply Chain Security](./07_model_and_supply_chain_security.md).
+Cần provenance, băm (hash / 해시)/signature khi phù hợp, phụ thuộc (dependency / 의존성) scanning, sản phẩm tạo ra (artifact / 산출물) registry và kiểm soát nguồn tải mô hình (model / 모델). Xem [Model and Supply Chain Security](./07_model_and_supply_chain_security.md).
 
-## Model artifact là code-like asset
+## Mô hình (model / 모델) sản phẩm tạo ra (artifact / 산출물) là code-like asset
 
-Model file hoặc tokenizer không nên được tải từ nguồn không kiểm soát rồi đưa thẳng vào production runtime. Một số serialization format hoặc loader có thể có behavior nguy hiểm nếu thực thi object tùy ý.
+Mô hình (model / 모델) tệp (file / 파일) hoặc tokenizer không nên được tải từ nguồn không kiểm soát rồi đưa thẳng vào môi trường vận hành (production / 운영 환경) thời gian chạy (runtime / 런타임). Một số serialization format hoặc loader có thể có hành vi (behavior / 동작) nguy hiểm nếu thực thi đối tượng (object / 객체) tùy ý.
 
-Nguyên tắc là dùng format/load path an toàn, artifact provenance rõ và sandbox quá trình xử lý artifact lạ.
+Nguyên tắc là dùng format/tải (load / 로드) đường dẫn (path / 경로) an toàn, sản phẩm tạo ra (artifact / 산출물) provenance rõ và sandbox quá trình xử lý sản phẩm tạo ra (artifact / 산출물) lạ.
 
-## Logging và Audit
+## Logging và kiểm tra (audit / 감사)
 
-Audit log cần đủ để reconstruct:
+Nhật ký kiểm tra (audit log / 감사 로그) cần đủ để reconstruct:
 
 ```text
 ai yêu cầu
@@ -342,11 +345,11 @@ executor đã làm gì
 result/resource version sau cùng
 ```
 
-Audit log cũng là dữ liệu nhạy cảm và cần access control, retention và tamper resistance phù hợp.
+Nhật ký kiểm tra (audit log / 감사 로그) cũng là dữ liệu nhạy cảm và cần kiểm soát truy cập (access control / 접근 제어), retention và tamper resistance phù hợp.
 
-## Security Observability
+## Bảo mật (security / 보안) khả năng quan sát (observability / 관측 가능성)
 
-Các signal cần theo dõi:
+Các tín hiệu (signal / 신호) cần theo dõi:
 
 ```text
 permission denied rate
@@ -360,7 +363,7 @@ cost spike
 model/tool supply-chain change
 ```
 
-Security monitoring nên nối với trace của Agent/RAG để biết attack path đi qua component nào.
+Bảo mật (security / 보안) monitoring nên nối với dấu vết (trace / 추적) của tác nhân (agent / 에이전트)/RAG để biết attack đường dẫn (path / 경로) đi qua thành phần (component / 컴포넌트) nào.
 
 ## Kill Switch
 
@@ -378,7 +381,7 @@ Fine-grained kill switch giúp containment mà không cần tắt toàn bộ s�
 
 ## Secure-by-default và fail-safe defaults
 
-Khi authorization hoặc resource scope không rõ, privileged action nên bị từ chối.
+Khi authorization hoặc tài nguyên (resource / 자원) phạm vi (scope / 범위) không rõ, privileged hành động (action / 동작) nên bị từ chối.
 
 ```text
 unknown permission
@@ -387,7 +390,7 @@ unknown permission
 
 Đây là **fail-safe default**. Hệ thống không nên “đoán quyền” để tối ưu convenience.
 
-## Defense in Depth: ví dụ Agent gửi email
+## Defense in độ sâu (depth / 깊이): ví dụ tác nhân (agent / 에이전트) gửi email
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
@@ -407,7 +410,7 @@ User request
 
 Nếu LLM bị prompt injection, các lớp sau vẫn giới hạn impact.
 
-## Defense in Depth: ví dụ RAG doanh nghiệp
+## Defense in độ sâu (depth / 깊이): ví dụ RAG doanh nghiệp
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
@@ -423,41 +426,41 @@ User
 → audit
 ```
 
-Security không nằm ở một prompt mà nằm trong toàn bộ data path.
+Bảo mật (security / 보안) không nằm ở một prompt mà nằm trong toàn bộ dữ liệu (data / 데이터) đường dẫn (path / 경로).
 
-## Trade-off
+## Sự đánh đổi (trade-off / 트레이드오프)
 
-Security control có chi phí:
+Bảo mật (security / 보안) điều khiển (control / 제어) có chi phí:
 
-- approval tăng latency;
+- approval tăng độ trễ (latency / 지연 시간);
 - sandbox giảm flexibility;
-- tool hẹp tăng số API phải thiết kế;
-- ACL filter có thể giảm recall nếu metadata sai;
-- logging/redaction tăng engineering complexity;
-- fail closed có thể giảm availability.
+- công cụ (tool / 도구) hẹp tăng số API phải thiết kế;
+- ACL filter có thể giảm recall nếu siêu dữ liệu (metadata / 메타데이터) sai;
+- logging/redaction tăng kỹ thuật (engineering / 엔지니어링) độ phức tạp (complexity / 복잡도);
+- thất bại (fail / 실패) closed có thể giảm availability.
 
-Mục tiêu không phải “khóa mọi thứ”, mà đặt control tương xứng với impact của failure.
+Mục tiêu không phải “khóa mọi thứ”, mà đặt điều khiển (control / 제어) tương xứng với impact của thất bại (failure / 실패).
 
-## Failure mode của security architecture
+## Dạng thất bại (failure mode / 실패 모드) của bảo mật (security / 보안) kiến trúc (architecture / 아키텍처)
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 - authorization chỉ kiểm ở UI;
-- model được truyền credential raw;
-- vector search không có tenant filter;
-- cache không namespace theo user/tenant;
-- approval dùng summary do model tự viết;
-- sandbox vẫn có network/secret quá rộng;
-- tool generic hơn nhu cầu thực;
-- policy không re-check ngay trước execution;
+- mô hình (model / 모델) được truyền credential raw;
+- véc-tơ (vector / 벡터) tìm kiếm (search / 검색) không có tenant filter;
+- bộ nhớ đệm (cache / 캐시) không không gian tên (namespace / 네임스페이스) theo người dùng (user / 사용자)/tenant;
+- approval dùng summary do mô hình (model / 모델) tự viết;
+- sandbox vẫn có mạng (network / 네트워크)/secret quá rộng;
+- công cụ (tool / 도구) generic hơn nhu cầu thực;
+- chính sách (policy / 정책) không re-check ngay trước thực thi (execution / 실행);
 - log chứa PII/secret quá mức;
-- fallback path bỏ qua security gate của primary path.
+- fallback đường dẫn (path / 경로) bỏ qua bảo mật (security / 보안) gate của primary đường dẫn (path / 경로).
 
-Fallback và emergency mode phải giữ security invariants giống đường chính.
+Fallback và emergency chế độ (mode / 모드) phải giữ bảo mật (security / 보안) invariants giống đường chính.
 
-## Production release checklist
+## Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) checklist
 
-Trước khi mở capability mới, nên kiểm:
+Trước khi mở năng lực (capability / 역량) mới, nên kiểm:
 
 ```text
 threat model đã cập nhật?
@@ -476,13 +479,13 @@ audit trace có đủ để điều tra?
 
 ## Mô hình tư duy
 
-> **Dùng mô hình cho nhận định và sinh nội dung; dùng control xác định cho quyền hạn, containment và side effect.**
+> **Dùng mô hình cho nhận định và sinh nội dung; dùng điều khiển (control / 제어) xác định cho quyền hạn, containment và side tác động (effect / 효과).**
 
-Security tốt không giả định model luôn nghe lời. Nó giả định model có thể bị nhầm, bị thao túng hoặc trả output bất ngờ, rồi thiết kế sao cho lỗi đó không tự động biến thành quyền truy cập hoặc hành động nguy hiểm.
+Bảo mật (security / 보안) tốt không giả định mô hình (model / 모델) luôn nghe lời. Nó giả định mô hình (model / 모델) có thể bị nhầm, bị thao túng hoặc trả đầu ra (output / 출력) bất ngờ, rồi thiết kế sao cho lỗi đó không tự động biến thành quyền truy cập hoặc hành động nguy hiểm.
 
 ## Những nhầm lẫn thường gặp
 
-### “Model refusal là access control”
+### “mô hình (model / 모델) refusal là kiểm soát truy cập (access control / 접근 제어)”
 
 Không. Authorization phải được backend cưỡng chế.
 
@@ -492,11 +495,11 @@ Không. Nội dung có thể malicious, stale hoặc thuộc quyền của tenan
 
 ### “Có sandbox thì chạy gì cũng được”
 
-Không. Sandbox vẫn cần phạm vi quyền, network, resource limit và hardening.
+Không. Sandbox vẫn cần phạm vi quyền, mạng (network / 네트워크), tài nguyên (resource / 자원) limit và hardening.
 
-### “Security chỉ cần kiểm trước model”
+### “bảo mật (security / 보안) chỉ cần kiểm trước mô hình (model / 모델)”
 
-Không. Output model, tool call, retrieval result và side effect đều là trust boundary riêng.
+Không. đầu ra (output / 출력) mô hình (model / 모델), công cụ (tool / 도구) lời gọi (call / 호출), retrieval kết quả (result / 결과) và side tác động (effect / 효과) đều là trust ranh giới (boundary / 경계) riêng.
 
 ## Liên kết kiến thức
 

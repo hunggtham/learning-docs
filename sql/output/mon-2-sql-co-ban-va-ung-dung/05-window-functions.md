@@ -1,6 +1,6 @@
-# Window Functions
+# Cửa sổ (window / 윈도우) Functions
 
-> **Mục tiêu:** OVER, PARTITION BY, window frame, ranking và các hàm phân tích.
+> **Mục tiêu:** OVER, PARTITION BY, cửa sổ (window / 윈도우) frame, ranking và các hàm phân tích.
 
 ## Từ khóa cần nhớ (Keyword)
 
@@ -9,6 +9,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **cửa sổ (window / 윈도우) Functions** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
@@ -21,7 +25,7 @@ Ta bắt đầu **1. 윈도우 함수 — Window Function ⭐⭐⭐** bằng câ
 ## 1. 윈도우 함수 — Window Function ⭐⭐⭐
 
 **KR:** 집계 함수는 여러 행을 하나의 결과 행으로 집계하기 때문에 원본 데이터의 개별 행 정보가 사라질 수 있다.
-**VI:** Aggregate Function gom nhiều row thành một kết quả nên thông tin của từng row ban đầu có thể biến mất.
+**VI:** Aggregate hàm (function / 함수) gom nhiều row thành một kết quả nên thông tin của từng row ban đầu có thể biến mất.
 
 Ví dụ:
 
@@ -51,7 +55,7 @@ Ba row → một row.
 ---
 
 **KR:** 윈도우 함수는 원본 행을 유지하면서 여러 행을 대상으로 연산할 수 있다.
-**VI:** Window Function thì **giữ nguyên từng row**, nhưng vẫn có thể tính toán dựa trên nhiều row khác.
+**VI:** hàm cửa sổ (window function / 윈도우 함수) thì **giữ nguyên từng row**, nhưng vẫn có thể tính toán dựa trên nhiều row khác.
 
 ```sql
 SELECT ENAME,
@@ -75,7 +79,7 @@ MILLER     10    1300    8750
 > **GROUP BY → 행을 합친다.**
 > Gom các row.
 
-> **Window Function → 행을 유지한다.**
+> **hàm cửa sổ (window function / 윈도우 함수) → 행을 유지한다.**
 > Giữ nguyên các row.
 
 ---
@@ -126,7 +130,7 @@ FROM EMP;
 
 Có thể làm được.
 
-Nhưng Window Function đơn giản hơn:
+Nhưng hàm cửa sổ (window function / 윈도우 함수) đơn giản hơn:
 
 ```sql
 SELECT EMPNO,
@@ -138,7 +142,7 @@ FROM EMP;
 
 `OVER()` nghĩa là:
 
-> áp dụng Window Function lên một window.
+> áp dụng hàm cửa sổ (window function / 윈도우 함수) lên một cửa sổ (window / 윈도우).
 
 Không có `PARTITION BY` → toàn bộ tập row là một partition.
 
@@ -194,7 +198,7 @@ Ta bắt đầu **4. PARTITION BY** bằng câu hỏi: **khái niệm này giả
 ## 4. PARTITION BY
 
 **KR:** `PARTITION BY`는 윈도우 연산을 수행할 그룹을 나눈다.
-**VI:** `PARTITION BY` chia dữ liệu thành các nhóm độc lập để Window Function tính toán.
+**VI:** `PARTITION BY` chia dữ liệu thành các nhóm độc lập để hàm cửa sổ (window function / 윈도우 함수) tính toán.
 
 Có thể hình dung:
 
@@ -237,7 +241,7 @@ SCOTT   20  3000 → 4100
 ADAMS   20  1100 → 4100
 ```
 
-Mỗi department là một **window partition** riêng.
+Mỗi department là một **cửa sổ (window / 윈도우) partition** riêng.
 
 ---
 
@@ -249,7 +253,7 @@ Ta bắt đầu **5. ORDER BY bên trong OVER()** bằng câu hỏi: **khái ni�
 
 ## 5. ORDER BY bên trong OVER()
 
-Đây không phải `ORDER BY` cuối query.
+Đây không phải `ORDER BY` cuối truy vấn (query / 쿼리).
 
 Ví dụ:
 
@@ -262,7 +266,7 @@ SUM(SAL) OVER(
 
 `ORDER BY SAL` ở đây xác định:
 
-> **thứ tự tính toán bên trong window.**
+> **thứ tự tính toán bên trong cửa sổ (window / 윈도우).**
 
 Trong khi:
 
@@ -326,8 +330,8 @@ Ta bắt đầu **7. SUM() + ORDER BY = cumulative sum** bằng câu hỏi: **kh
 
 ## 7. SUM() + ORDER BY = cumulative sum
 
-**KR:** 집계 윈도우 함수에서 ORDER BY를 사용하면 누적 연산이 발생할 수 있다.
-**VI:** Khi Aggregate Window Function có `ORDER BY`, nó có thể trở thành phép tính **lũy kế**.
+**KR:** 집계 윈도우 함수에서 thứ tự (order / 순서) BY를 사용하면 누적 연산이 발생할 수 있다.
+**VI:** Khi Aggregate hàm cửa sổ (window function / 윈도우 함수) có `ORDER BY`, nó có thể trở thành phép tính **lũy kế**.
 
 Ví dụ publisher `문학동네`:
 
@@ -461,9 +465,9 @@ RANGE BETWEEN A AND B
 
 Nó trả lời câu hỏi:
 
-> **Từ row/value nào đến row/value nào được đưa vào phép tính hiện tại?**
+> **Từ row/giá trị (value / 값) nào đến row/giá trị (value / 값) nào được đưa vào phép tính hiện tại?**
 
-Các keyword cần biết:
+Các từ khóa (keyword / 키워드) cần biết:
 
 ```text
 UNBOUNDED PRECEDING
@@ -598,10 +602,10 @@ Ta bắt đầu **11. RANGE khác ROWS như thế nào? ⭐⭐⭐** bằng câu 
 Đây là phần cần hiểu thật chắc.
 
 **KR:** ROWS는 물리적인 행을 기준으로 범위를 결정한다.
-**VI:** `ROWS` xác định window dựa trên **từng row vật lý**.
+**VI:** `ROWS` xác định cửa sổ (window / 윈도우) dựa trên **từng row vật lý**.
 
-**KR:** RANGE는 ORDER BY 값의 범위를 기준으로 계산하며 같은 값을 가진 행을 같은 범위로 취급할 수 있다.
-**VI:** `RANGE` dựa trên **giá trị ORDER BY**, nên các row có cùng giá trị được coi như cùng một nhóm peer.
+**KR:** phạm vi (range / 범위)는 thứ tự (order / 순서) BY 값의 범위를 기준으로 계산하며 같은 값을 가진 행을 같은 범위로 취급할 수 있다.
+**VI:** `RANGE` dựa trên **giá trị thứ tự (order / 순서) BY**, nên các row có cùng giá trị được coi như cùng một nhóm peer.
 
 Ví dụ:
 
@@ -701,7 +705,7 @@ Ta bắt đầu **Câu nhớ** bằng câu hỏi: **khái niệm này giải quy
 
 > **ROWS = 행을 본다 — nhìn ROW.**
 
-> **RANGE = 값을 본다 — nhìn VALUE.**
+> **phạm vi (range / 범위) = 값을 본다 — nhìn giá trị (value / 값).**
 
 Đây là cách nhớ rất hiệu quả cho SQLD.
 
@@ -717,9 +721,9 @@ Ta bắt đầu **12. Default frame rất quan trọng** bằng câu hỏi: **kh
 
 Ảnh nhấn mạnh:
 
-> 디폴트 범위가 RANGE라 같은 값을 가진 행은 같이 연산한다.
+> 디폴트 범위가 phạm vi (range / 범위)라 같은 값을 가진 행은 같이 연산한다.
 
-Khi có window `ORDER BY`, đối với nhiều aggregate analytic cases, frame mặc định về logic là:
+Khi có cửa sổ (window / 윈도우) `ORDER BY`, đối với nhiều aggregate analytic cases, frame mặc định về lô-gic (logic / 논리) là:
 
 ```sql
 RANGE BETWEEN UNBOUNDED PRECEDING
@@ -837,7 +841,7 @@ nên:
 
 Cách đọc:
 
-> từ row đầu tiên → thêm tới **1 row phía sau current row**.
+> từ row đầu tiên → thêm tới **1 row phía sau hiện tại (current / 현재) row**.
 
 ---
 
@@ -849,7 +853,7 @@ Ta bắt đầu **15. LAG / LEAD ⭐⭐⭐** bằng câu hỏi: **khái niệm n
 
 ## 15. LAG / LEAD ⭐⭐⭐
 
-Hai hàm này dùng để lấy giá trị của row trước/sau mà không cần self join.
+Hai hàm này dùng để lấy giá trị của row trước/sau mà không cần self phép nối (join / 조인).
 
 Khi gom phần **15. LAG / LEAD ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1023,7 +1027,7 @@ Ta bắt đầu **Nhớ** bằng câu hỏi: **khái niệm này giải quyết 
 
 `ORDER BY` chỉ sắp thứ tự.
 
-`PARTITION BY` mới **chia nhóm/reset window**.
+`PARTITION BY` mới **chia nhóm/reset cửa sổ (window / 윈도우)**.
 
 ---
 
@@ -1036,7 +1040,7 @@ Ta bắt đầu **18. FIRST_VALUE ⭐⭐⭐** bằng câu hỏi: **khái niệm 
 ## 18. FIRST_VALUE ⭐⭐⭐
 
 **KR:** 정해진 윈도우 범위에서 정렬 순서상 첫 번째 값을 반환한다.
-**VI:** `FIRST_VALUE` trả về **giá trị đầu tiên theo thứ tự sắp xếp trong window**.
+**VI:** `FIRST_VALUE` trả về **giá trị đầu tiên theo thứ tự sắp xếp trong cửa sổ (window / 윈도우)**.
 
 Ví dụ:
 
@@ -1064,7 +1068,7 @@ thì:
 5000 → 1300
 ```
 
-Vì first value theo `SAL ASC` luôn là `1300`.
+Vì first giá trị (value / 값) theo `SAL ASC` luôn là `1300`.
 
 ---
 
@@ -1094,7 +1098,7 @@ DESC:
 1300
 ```
 
-First value = `5000`.
+First giá trị (value / 값) = `5000`.
 
 Vì vậy:
 
@@ -1160,7 +1164,7 @@ Ta bắt đầu **20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐** bằng câu h
 ## 20. LAST_VALUE — bẫy rất lớn ⭐⭐⭐
 
 **KR:** `LAST_VALUE`는 현재 윈도우 범위에서 마지막 값을 반환한다.
-**VI:** `LAST_VALUE` trả về **giá trị cuối cùng trong window hiện tại**.
+**VI:** `LAST_VALUE` trả về **giá trị cuối cùng trong cửa sổ (window / 윈도우) hiện tại**.
 
 Nhiều người nhìn:
 
@@ -1187,7 +1191,7 @@ Ta bắt đầu **Vì sao?** bằng câu hỏi: **khái niệm này giải quy�
 
 ### Vì sao?
 
-Window frame mặc định với ORDER BY thường kết thúc tại:
+Cửa sổ (window / 윈도우) frame mặc định với thứ tự (order / 순서) BY thường kết thúc tại:
 
 ```text
 CURRENT ROW
@@ -1202,7 +1206,7 @@ SAL
 5000
 ```
 
-Window của row 1300:
+Cửa sổ (window / 윈도우) của row 1300:
 
 ```text
 [1300]
@@ -1247,7 +1251,7 @@ Ta bắt đầu **21. Muốn LAST_VALUE thật sự lấy cuối partition** b�
 
 ## 21. Muốn LAST_VALUE thật sự lấy cuối partition
 
-Phải mở window đến cuối:
+Phải mở cửa sổ (window / 윈도우) đến cuối:
 
 ```sql
 LAST_VALUE(SAL) OVER(
@@ -1276,9 +1280,9 @@ Ta bắt đầu **Câu cực quan trọng** bằng câu hỏi: **khái niệm n�
 
 #### Câu cực quan trọng
 
-> **LAST_VALUE + ORDER BY → luôn kiểm tra window frame.**
+> **LAST_VALUE + thứ tự (order / 순서) BY → luôn kiểm tra cửa sổ (window / 윈도우) frame.**
 
-Đây là một trong những bẫy Window Function đáng nhớ nhất.
+Đây là một trong những bẫy hàm cửa sổ (window function / 윈도우 함수) đáng nhớ nhất.
 
 ---
 
@@ -1611,7 +1615,7 @@ Ta bắt đầu **27. CUME_DIST ⭐⭐⭐** bằng câu hỏi: **khái niệm n�
 ## 27. CUME_DIST ⭐⭐⭐
 
 **KR:** `CUME_DIST`는 현재 행까지 포함된 행의 누적 비율을 반환한다.
-**VI:** `CUME_DIST` trả về **tỷ lệ tích lũy của các row đến vị trí hiện tại theo ORDER BY**.
+**VI:** `CUME_DIST` trả về **tỷ lệ tích lũy của các row đến vị trí hiện tại theo thứ tự (order / 순서) BY**.
 
 Có thể hiểu:
 
@@ -1796,7 +1800,7 @@ Ta bắt đầu **31. Đừng nhầm RANGE và CUME_DIST** bằng câu hỏi: **
 
 Ảnh cuối nhắc lại:
 
-> `RANGE` coi các row có cùng ORDER BY value là peer và tính cùng phạm vi.
+> `RANGE` coi các row có cùng thứ tự (order / 순서) BY giá trị (value / 값) là peer và tính cùng phạm vi.
 
 Ví dụ:
 
@@ -1805,7 +1809,7 @@ Ví dụ:
 1250
 ```
 
-với cumulative `SUM` + RANGE có thể nhận cùng kết quả.
+với cumulative `SUM` + phạm vi (range / 범위) có thể nhận cùng kết quả.
 
 Nếu muốn tách từng row:
 
@@ -1888,7 +1892,7 @@ Ta bắt đầu **Bước 3 — ROWS** bằng câu hỏi: **khái niệm này gi
 
 #### Bước 3 — ROWS
 
-Ở mỗi current row:
+Ở mỗi hiện tại (current / 현재) row:
 
 ```text
 FIRST ROW ───────────── CURRENT ROW
@@ -1897,9 +1901,9 @@ FIRST ROW ───────────── CURRENT ROW
 
 Sau đó chuyển sang row tiếp theo.
 
-Đây là cách đọc Window Function dễ nhất:
+Đây là cách đọc hàm cửa sổ (window function / 윈도우 함수) dễ nhất:
 
-> **PARTITION → ORDER → FRAME → CALCULATE**
+> **PARTITION → thứ tự (order / 순서) → FRAME → CALCULATE**
 
 ---
 
@@ -1915,13 +1919,13 @@ Phần này nối mạch SQL với “33. Bảng phân loại các hàm trong �
 
 | Hàm               | Ý nghĩa dễ nhớ                               | ORDER BY               |
 | ----------------- | -------------------------------------------- | ---------------------- |
-| `SUM/AVG/MAX/MIN` | tính toán trên window                        | tùy mục đích           |
+| `SUM/AVG/MAX/MIN` | tính toán trên cửa sổ (window / 윈도우)                        | tùy mục đích           |
 | `LAG`             | nhìn về trước trong danh sách = previous row | cần để xác định thứ tự |
 | `LEAD`            | nhìn về sau = next row                       | cần                    |
-| `FIRST_VALUE`     | giá trị đầu window                           | thường cần             |
+| `FIRST_VALUE`     | giá trị đầu cửa sổ (window / 윈도우)                           | thường cần             |
 | `LAST_VALUE`      | giá trị cuối **frame hiện tại**              | thường cần             |
 | `NTILE(N)`        | chia N nhóm                                  | **bắt buộc**           |
-| `RATIO_TO_REPORT` | current / total                              | không ORDER BY         |
+| `RATIO_TO_REPORT` | hiện tại (current / 현재) / total                              | không thứ tự (order / 순서) BY         |
 | `PERCENT_RANK`    | vị trí rank tương đối                        | **bắt buộc**           |
 | `CUME_DIST`       | tỷ lệ row tích lũy                           | **bắt buộc**           |
 
@@ -2101,7 +2105,7 @@ LAST_VALUE
 → cuối frame
 ```
 
-⚠️ `LAST_VALUE` đặc biệt phải kiểm tra **window frame**.
+⚠️ `LAST_VALUE` đặc biệt phải kiểm tra **cửa sổ (window / 윈도우) frame**.
 
 Khi gom phần **⑧ FIRST_VALUE / LAST_VALUE** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -2139,7 +2143,7 @@ Phần này nối mạch SQL với “⑩ PERCENT_RANK”, giải thích dữ li
 (N - 1)
 ```
 
-Range:
+Phạm vi (range / 범위):
 
 ```text
 0 ≤ x ≤ 1

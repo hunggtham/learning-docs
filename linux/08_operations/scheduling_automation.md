@@ -1,6 +1,9 @@
 # Lập lịch, Cron và độ tin cậy của tự động hóa
 
-Tự động hóa (automation) không chỉ là "cho câu lệnh chạy tự động". Khi không còn người ngồi trước terminal, những giả định vốn được shell tương tác che giấu — `PATH`, thư mục làm việc, biến môi trường, nhiều lần chạy chồng lên nhau và cách báo lỗi — trở thành nguồn gây thất bại. Vì vậy một tác vụ được lập lịch cần được thiết kế như một hệ thống production nhỏ.
+> **Mạch đọc:** Đọc **Lập lịch, Cron và độ tin cậy của tự động hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình của Cron** sang **Môi trường của Cron khác shell tương tác**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Tự động hóa (automation) không chỉ là "cho câu lệnh chạy tự động". Khi không còn người ngồi trước terminal, những giả định vốn được shell tương tác che giấu — `PATH`, thư mục làm việc, biến môi trường, nhiều lần chạy chồng lên nhau và cách báo lỗi — trở thành nguồn gây thất bại. Vì vậy một tác vụ được lập lịch cần được thiết kế như một hệ thống môi trường vận hành (production / 운영 환경) nhỏ.
 
 ## Mô hình của Cron
 
@@ -37,7 +40,7 @@ Cron thường chạy với môi trường tối giản. Một script có thể 
 
 nhưng thất bại trong cron vì `java`, `python` hoặc `mysqldump` không nằm trong `PATH` của cron.
 
-Script production nên dùng đường dẫn tuyệt đối khi phù hợp hoặc tự khai báo môi trường rõ ràng:
+Script môi trường vận hành (production / 운영 환경) nên dùng đường dẫn tuyệt đối khi phù hợp hoặc tự khai báo môi trường rõ ràng:
 
 ```bash
 #!/usr/bin/env bash
@@ -70,15 +73,15 @@ Một tác vụ chạy mỗi 5 phút nhưng đôi lúc cần 8 phút sẽ bị c
 */5 * * * * flock -n /run/myjob.lock /opt/scripts/job.sh
 ```
 
-`-n` làm câu lệnh thất bại ngay nếu khóa đang được giữ. Tuy nhiên ý nghĩa của khóa phải phù hợp yêu cầu nghiệp vụ; nếu cùng tác vụ chạy trên nhiều máy, có thể cần hàng đợi hoặc khóa phân tán thay vì file lock cục bộ.
+`-n` làm câu lệnh thất bại ngay nếu khóa đang được giữ. Tuy nhiên ý nghĩa của khóa phải phù hợp yêu cầu nghiệp vụ; nếu cùng tác vụ chạy trên nhiều máy, có thể cần hàng đợi hoặc khóa phân tán thay vì tệp (file / 파일) khóa (lock / 잠금) cục bộ.
 
 ## Tính lặp an toàn (idempotency)
 
 Tự động hóa đáng tin cậy nên cố gắng có **tính lặp an toàn (idempotency)**: chạy lại cùng thao tác không tạo trạng thái sai hoặc tác dụng phụ trùng lặp ngoài ý muốn.
 
-`mkdir -p` là một ví dụ nhỏ: chạy nhiều lần vẫn đưa hệ thống tới cùng trạng thái mong muốn. Script triển khai có thể kiểm tra artifact hoặc phiên bản trước khi đổi symlink. Migration cơ sở dữ liệu cần cơ chế riêng để không áp dụng cùng thay đổi nhiều lần.
+`mkdir -p` là một ví dụ nhỏ: chạy nhiều lần vẫn đưa hệ thống tới cùng trạng thái mong muốn. Script triển khai có thể kiểm tra sản phẩm tạo ra (artifact / 산출물) hoặc phiên bản trước khi đổi symlink. di chuyển (migration / 마이그레이션) cơ sở dữ liệu cần cơ chế riêng để không áp dụng cùng thay đổi nhiều lần.
 
-Idempotency liên hệ trực tiếp với hệ thống phân tán và hạ tầng dưới dạng mã (Infrastructure as Code).
+Idempotency liên hệ trực tiếp với hệ thống phân tán và hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라).
 
 ## Mã thoát
 
@@ -88,17 +91,17 @@ Script phải trả mã khác 0 khi có thất bại thật sự mà trình lậ
 set -o pipefail
 ```
 
-có thể giúp pipeline phản ánh lỗi ở các bước trước, nhưng cần hiểu ngữ nghĩa lỗi của Bash. Không nên thêm `|| true` chỉ để "cron không báo lỗi" nếu nó che giấu một thất bại nghiệp vụ thật.
+có thể giúp chuỗi xử lý (pipeline / 파이프라인) phản ánh lỗi ở các bước trước, nhưng cần hiểu ngữ nghĩa lỗi của Bash. Không nên thêm `|| true` chỉ để "cron không báo lỗi" nếu nó che giấu một thất bại nghiệp vụ thật.
 
 ## Bộ hẹn giờ của systemd
 
-**Systemd timer** là một lựa chọn mạnh cho nhiều tác vụ mà trước đây thường dùng cron. Timer unit kích hoạt service unit, nhờ đó có thể tận dụng cơ chế nhật ký, danh tính, phụ thuộc và kiểm soát tài nguyên của systemd.
+**Systemd timer** là một lựa chọn mạnh cho nhiều tác vụ mà trước đây thường dùng cron. Timer đơn vị (unit / 단위) kích hoạt dịch vụ (service / 서비스) đơn vị (unit / 단위), nhờ đó có thể tận dụng cơ chế nhật ký, danh tính, phụ thuộc và kiểm soát tài nguyên của systemd.
 
 ```bash
 systemctl list-timers
 ```
 
-Một lợi ích là lần chạy được lập lịch trở thành unit có journal:
+Một lợi ích là lần chạy được lập lịch trở thành đơn vị (unit / 단위) có journal:
 
 ```bash
 journalctl -u myjob.service
@@ -122,11 +125,11 @@ timedatectl
 
 ## Tự động hóa và bí mật
 
-Không nên ghi cứng mật khẩu hoặc token trực tiếp trong dòng lệnh `crontab` nếu có thể tránh. Dòng lệnh có thể xuất hiện trong danh sách tiến trình hoặc lịch sử; tệp `crontab` và cấu hình cũng cần quyền thích hợp. Nên dùng cơ chế quản lý bí mật phù hợp với môi trường.
+Không nên ghi cứng mật khẩu hoặc đơn vị từ (token / 토큰) trực tiếp trong dòng lệnh `crontab` nếu có thể tránh. Dòng lệnh có thể xuất hiện trong danh sách tiến trình hoặc lịch sử; tệp `crontab` và cấu hình cũng cần quyền thích hợp. Nên dùng cơ chế quản lý bí mật phù hợp với môi trường.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Tác vụ được lập lịch là một **tiến trình chạy không có người giám sát trực tiếp**. Vì thiếu ngữ cảnh của con người, các phụ thuộc phải được khai báo rõ: đường dẫn chương trình, danh tính, biến môi trường, thư mục làm việc, khóa, nhật ký, timeout, retry và tiêu chí thành công.
+Tác vụ được lập lịch là một **tiến trình chạy không có người giám sát trực tiếp**. Vì thiếu ngữ cảnh của con người, các phụ thuộc phải được khai báo rõ: đường dẫn chương trình, danh tính, biến môi trường, thư mục làm việc, khóa, nhật ký, hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도) và tiêu chí thành công.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -136,10 +139,12 @@ Tác vụ được lập lịch là một **tiến trình chạy không có ngư
 
 **"Có log là đủ giám sát."** Một tác vụ đã ngừng chạy từ lâu vẫn có thể không bị phát hiện nếu không ai kiểm tra log hoặc độ mới của kết quả.
 
-**"Retry luôn an toàn."** Thao tác không có tính idempotent có thể tạo tác dụng phụ trùng lặp.
+**"thử lại (retry / 재시도) luôn an toàn."** Thao tác không có tính idempotent có thể tạo tác dụng phụ trùng lặp.
 
 **"Cron là lựa chọn duy nhất."** Systemd timer, bộ điều phối và trình lập lịch trong ứng dụng có ngữ nghĩa khác nhau.
 
 ## Kết nối kiến thức
 
 Tự động hóa dựa trên [Shell](../02_shell/shell_bash_pipes_redirection.md), danh tính của tiến trình và systemd. Những nguyên tắc về idempotency, phụ thuộc rõ ràng và khả năng quan sát cũng là nền tảng của DevOps và SRE.
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [backup restore disaster recovery](./backup_restore_disaster_recovery.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

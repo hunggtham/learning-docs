@@ -1,5 +1,8 @@
 # Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu
 
+> **Mạch đọc:** Đọc **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Khi nào xấp xỉ liên tục hợp lý?** sang **Lực trên một mặt cắt bên trong vật liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Trong cơ học chất điểm, ta thường thay cả vật bằng một điểm và chỉ quan tâm tổng lực. Nhưng khi vật có kích thước hữu hạn, câu hỏi “tổng lực là bao nhiêu?” không đủ. Một thanh bị kéo, một tấm kim loại bị uốn hay một dòng chất lỏng bị cắt đều phụ thuộc vào **lực được phân bố bên trong vật chất như thế nào**.
 
 Cơ học môi trường liên tục (continuum mechanics / 연속체역학) xây dựng mô hình trong đó vật chất được xem là liên tục ở thang quan sát. Thay vì theo dõi từng nguyên tử, ta dùng các trường như mật độ `\rho(\mathbf x,t)`, vận tốc `\mathbf v(\mathbf x,t)`, độ dịch chuyển `\mathbf u(\mathbf x,t)`, nhiệt độ và ứng suất.
@@ -177,7 +180,7 @@ Nhờ đó cơ học chất rắn và cơ học chất lưu có thể được n
 
 Vì tensor ứng suất đối xứng trong nhiều trường hợp, ta có thể chéo hóa nó. Các trị riêng là **ứng suất chính (principal stresses)** và các vectơ riêng cho các phương mà ứng suất cắt bằng không.
 
-Bài toán trị riêng ở đây có cùng cấu trúc toán học với mode chuẩn trong dao động hoặc trạng thái riêng trong lượng tử, nhưng ý nghĩa vật lý khác hoàn toàn.
+Bài toán trị riêng ở đây có cùng cấu trúc toán học với chế độ (mode / 모드) chuẩn trong dao động hoặc trạng thái riêng trong lượng tử, nhưng ý nghĩa vật lý khác hoàn toàn.
 
 ## Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất
 
@@ -197,7 +200,7 @@ Quan hệ `\sigma=E\varepsilon` chỉ tốt khi biến dạng nhỏ và vật li
 
 Cao su có thể chịu biến dạng lớn; polymer phụ thuộc thời gian; vật liệu sinh học có thể phi tuyến và dị hướng. Khi đó cần mô hình cấu thành phức tạp hơn.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Cơ học môi trường liên tục tách bài toán thành ba lớp:
 
@@ -223,8 +226,10 @@ Không. Một vật có thể tịnh tiến hoặc quay cứng rất xa mà khô
 
 Ma trận là biểu diễn của tensor trong một hệ tọa độ. Tensor bản thân là đối tượng hình học không phụ thuộc cách ta chọn trục.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cân bằng, đàn hồi và cơ học vật liệu](../01_mechanics/07_statics_elasticity_materials.md), [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md).
 
 **Liên hệ tiếp:** [Cơ học chất lưu](00_fluids.md), [Dòng rối, lưu biến và vật chất mềm](03_turbulence_rheology_soft_matter.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 fluids](./00_fluids.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

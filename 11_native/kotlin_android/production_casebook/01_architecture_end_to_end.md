@@ -1,12 +1,15 @@
-# Case 01 — Android Architecture End-to-End
+# Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End
 
-Một kiến trúc Android tốt không bắt đầu từ câu hỏi “dùng MVVM hay MVI?”, mà từ câu hỏi **dữ liệu nào tồn tại ở đâu, ai sở hữu nó, ai được thay đổi nó, và failure được xử lý ở boundary nào**. Khi trả lời đúng bốn câu này, tên pattern trở nên thứ yếu. Chương này xây một feature điển hình — danh sách bài viết có bookmark, refresh, offline cache và detail screen — để nối UI, ViewModel, repository, Room, network, coroutine/Flow, DI và module boundary thành một flow hoàn chỉnh.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Từ yêu cầu (requirement / 요구사항) sang trạng thái (state / 상태)** sang **2. Unidirectional luồng dữ liệu (data flow / 데이터 흐름) không đồng nghĩa một reducer khổng lồ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## 1. Từ requirement sang state
 
-Giả sử màn hình cần hiển thị danh sách article, cho phép refresh, bookmark, mở detail và vẫn đọc được dữ liệu cũ khi mất mạng. Trước khi viết class, ta phân loại state.
+Một kiến trúc Android tốt không bắt đầu từ câu hỏi “dùng MVVM hay MVI?”, mà từ câu hỏi **dữ liệu nào tồn tại ở đâu, ai sở hữu nó, ai được thay đổi nó, và thất bại (failure / 실패) được xử lý ở ranh giới (boundary / 경계) nào**. Khi trả lời đúng bốn câu này, tên mẫu (pattern / 패턴) trở nên thứ yếu. Chương này xây một tính năng (feature / 기능) điển hình — danh sách bài viết có bookmark, refresh, offline bộ nhớ đệm (cache / 캐시) và detail screen — để nối UI, ViewModel, repository, Room, mạng (network / 네트워크), coroutine/luồng (flow / 흐름), DI và ranh giới mô-đun (module boundary / 모듈 경계) thành một luồng (flow / 흐름) hoàn chỉnh.
 
-`Article` bản thân là application data. Trạng thái `isRefreshing`, filter đang chọn, search text và thông báo transient như snackbar là UI-related state. Article cache phải sống lâu hơn Activity và process, vì vậy không thể chỉ nằm trong ViewModel. Bookmark cũng là dữ liệu nghiệp vụ và cần được persist. Network response chỉ là một input để cập nhật source of truth, không nhất thiết là dữ liệu UI đọc trực tiếp.
+## 1. Từ yêu cầu (requirement / 요구사항) sang trạng thái (state / 상태)
+
+Giả sử màn hình cần hiển thị danh sách article, cho phép refresh, bookmark, mở detail và vẫn đọc được dữ liệu cũ khi mất mạng. Trước khi viết lớp (class / 클래스), ta phân loại trạng thái (state / 상태).
+
+`Article` bản thân là ứng dụng (application / 애플리케이션) dữ liệu (data / 데이터). Trạng thái `isRefreshing`, filter đang chọn, tìm kiếm (search / 검색) văn bản (text / 텍스트) và thông báo transient như snackbar là UI-related trạng thái (state / 상태). Article bộ nhớ đệm (cache / 캐시) phải sống lâu hơn Activity và tiến trình (process / 프로세스), vì vậy không thể chỉ nằm trong ViewModel. Bookmark cũng là dữ liệu nghiệp vụ và cần được persist. mạng (network / 네트워크) phản hồi (response / 응답) chỉ là một đầu vào (input / 입력) để cập nhật nguồn chuẩn (source of truth / 정본), không nhất thiết là dữ liệu UI đọc trực tiếp.
 
 Một `UiState` hợp lý có thể như sau:
 
@@ -21,11 +24,11 @@ data class ArticlesUiState(
 )
 ```
 
-Điểm quan trọng không phải data class, mà là ý nghĩa: UI chỉ render snapshot hiện tại. UI không sở hữu repository, không gọi Retrofit trực tiếp và không tự quyết định cache policy.
+Điểm quan trọng không phải dữ liệu (data / 데이터) lớp (class / 클래스), mà là ý nghĩa: UI chỉ kết xuất (render / 렌더링) snapshot hiện tại. UI không sở hữu repository, không gọi Retrofit trực tiếp và không tự quyết định bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책).
 
-## 2. Unidirectional Data Flow không đồng nghĩa một reducer khổng lồ
+## 2. Unidirectional luồng dữ liệu (data flow / 데이터 흐름) không đồng nghĩa một reducer khổng lồ
 
-**Unidirectional Data Flow (UDF)** nghĩa là state đi xuống UI, event đi lên owner của state. Nó không bắt buộc mọi ứng dụng phải dùng Redux-style reducer.
+**Unidirectional luồng dữ liệu (data flow / 데이터 흐름) (UDF)** nghĩa là trạng thái (state / 상태) đi xuống UI, sự kiện (event / 이벤트) đi lên đơn vị sở hữu (owner / 오너) của trạng thái (state / 상태). Nó không bắt buộc mọi ứng dụng phải dùng Redux-style reducer.
 
 ```text
 Data source -> Repository -> ViewModel -> UiState -> Compose UI
@@ -34,13 +37,13 @@ Data source -> Repository -> ViewModel -> UiState -> Compose UI
                                       user events <- UI
 ```
 
-Compose đọc `UiState`. User bấm bookmark, UI gửi event. ViewModel gọi operation tương ứng. Repository cập nhật local source of truth. Room phát Flow mới. ViewModel map nó thành UiState mới. Compose recomposition phần cần thiết.
+Compose đọc `UiState`. người dùng (user / 사용자) bấm bookmark, UI gửi sự kiện (event / 이벤트). ViewModel gọi thao tác (operation / 연산) tương ứng. Repository cập nhật cục bộ (local / 로컬) nguồn chuẩn (source of truth / 정본). Room phát luồng (flow / 흐름) mới. ViewModel map nó thành UiState mới. Compose recomposition phần cần thiết.
 
-Điều này tránh hai nguồn state cạnh tranh. Nếu UI tự toggle icon bookmark ngay trong local `remember`, còn database vẫn giữ giá trị cũ, sớm muộn hai trạng thái sẽ lệch nhau.
+Điều này tránh hai nguồn trạng thái (state / 상태) cạnh tranh. Nếu UI tự toggle icon bookmark ngay trong cục bộ (local / 로컬) `remember`, còn cơ sở dữ liệu (database / 데이터베이스) vẫn giữ giá trị cũ, sớm muộn hai trạng thái sẽ lệch nhau.
 
-## 3. ViewModel là screen-level state holder, không phải service locator
+## 3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator
 
-Một ViewModel production thường làm ba việc: kết hợp các stream cần cho screen, nhận event, và chuyển domain/app data thành UI state. Nó không nên tự mở SQLite, tự tạo Retrofit client, giữ Activity context hoặc chứa toàn bộ business logic của ứng dụng.
+Một ViewModel môi trường vận hành (production / 운영 환경) thường làm ba việc: kết hợp các stream cần cho screen, nhận sự kiện (event / 이벤트), và chuyển lĩnh vực (domain / 도메인)/app dữ liệu (data / 데이터) thành UI trạng thái (state / 상태). Nó không nên tự mở SQLite, tự tạo Retrofit máy khách (client / 클라이언트), giữ Activity ngữ cảnh (context / 맥락) hoặc chứa toàn bộ lô-gic nghiệp vụ (business logic / 비즈니스 로직) của ứng dụng.
 
 ```kotlin
 class ArticlesViewModel(
@@ -86,11 +89,11 @@ class ArticlesViewModel(
 }
 ```
 
-Ở đây `SavedStateHandle` được dùng cho state nhỏ cần phục hồi sau process recreation như filter/query. Không nên nhét một danh sách hàng nghìn object vào SavedStateHandle; dữ liệu lớn phải khôi phục lại từ source of truth.
+Ở đây `SavedStateHandle` được dùng cho trạng thái (state / 상태) nhỏ cần phục hồi sau tiến trình (process / 프로세스) recreation như filter/truy vấn (query / 쿼리). Không nên nhét một danh sách hàng nghìn đối tượng (object / 객체) vào SavedStateHandle; dữ liệu lớn phải khôi phục lại từ nguồn chuẩn (source of truth / 정본).
 
-## 4. Repository là data contract, không chỉ là wrapper của Retrofit
+## 4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit
 
-Repository tồn tại để cung cấp một abstraction về **application data**. Nếu repository chỉ có `return api.getX()`, nó chưa mua được nhiều giá trị. Khi app có local + remote, repository trở thành nơi giải quyết source of truth, refresh, conflict và mapping.
+Repository tồn tại để cung cấp một lớp trừu tượng (abstraction / 추상화) về **ứng dụng (application / 애플리케이션) dữ liệu (data / 데이터)**. Nếu repository chỉ có `return api.getX()`, nó chưa mua được nhiều giá trị. Khi app có cục bộ (local / 로컬) + remote, repository trở thành nơi giải quyết nguồn chuẩn (source of truth / 정본), refresh, xung đột (conflict / 충돌) và ánh xạ (mapping / 매핑).
 
 ```kotlin
 interface ArticlesRepository {
@@ -100,7 +103,7 @@ interface ArticlesRepository {
 }
 ```
 
-Implementation có thể dùng Room làm source of truth:
+Hiện thực (implementation / 구현) có thể dùng Room làm nguồn chuẩn (source of truth / 정본):
 
 ```kotlin
 class OfflineFirstArticlesRepository(
@@ -123,19 +126,19 @@ class OfflineFirstArticlesRepository(
 }
 ```
 
-UI không biết dữ liệu đang tới từ DB hay network. Repository đảm bảo sau refresh, database được cập nhật và Flow tự emit snapshot mới.
+UI không biết dữ liệu đang tới từ DB hay mạng (network / 네트워크). Repository đảm bảo sau refresh, cơ sở dữ liệu (database / 데이터베이스) được cập nhật và luồng (flow / 흐름) tự emit snapshot mới.
 
-## 5. DTO, Entity, Domain model và UI model không phải lúc nào cũng cần bốn class
+## 5. DTO, thực thể (entity / 엔터티), lĩnh vực (domain / 도메인) mô hình (model / 모델) và UI mô hình (model / 모델) không phải lúc nào cũng cần bốn lớp (class / 클래스)
 
-Tách model theo boundary giúp chống coupling nhưng over-modeling cũng có cost. Nguyên tắc hợp lý là tách khi hai layer có **lý do thay đổi khác nhau**.
+Tách mô hình (model / 모델) theo ranh giới (boundary / 경계) giúp chống coupling nhưng over-modeling cũng có chi phí (cost / 비용). Nguyên tắc hợp lý là tách khi hai tầng (layer / 계층) có **lý do thay đổi khác nhau**.
 
-`ArticleDto` phản ánh wire format của server. `ArticleEntity` phản ánh schema local. `Article` phản ánh language của app. `ArticleUiModel` phản ánh presentation. Nếu backend field đổi từ `published_at` sang object khác, domain/UI không nên bị kéo theo. Nếu database thêm metadata sync nội bộ, domain cũng không nhất thiết thấy metadata đó.
+`ArticleDto` phản ánh wire format của máy chủ (server / 서버). `ArticleEntity` phản ánh lược đồ (schema / 스키마) cục bộ (local / 로컬). `Article` phản ánh ngôn ngữ (language / 언어) của app. `ArticleUiModel` phản ánh presentation. Nếu backend trường dữ liệu (field / 필드) đổi từ `published_at` sang đối tượng (object / 객체) khác, lĩnh vực (domain / 도메인)/UI không nên bị kéo theo. Nếu cơ sở dữ liệu (database / 데이터베이스) thêm siêu dữ liệu (metadata / 메타데이터) sync nội bộ, lĩnh vực (domain / 도메인) cũng không nhất thiết thấy siêu dữ liệu (metadata / 메타데이터) đó.
 
-Trong app nhỏ, Entity và Domain có thể tạm dùng chung nếu contract thực sự đồng nhất. Senior engineering không phải tạo nhiều class nhất; nó là biết coupling nào đáng trả chi phí mapping.
+Trong app nhỏ, thực thể (entity / 엔터티) và lĩnh vực (domain / 도메인) có thể tạm dùng chung nếu đặc tả hợp đồng (contract / 계약) thực sự đồng nhất. cấp cao (senior / 시니어) kỹ thuật (engineering / 엔지니어링) không phải tạo nhiều lớp (class / 클래스) nhất; nó là biết coupling nào đáng trả chi phí ánh xạ (mapping / 매핑).
 
-## 6. Domain layer là optional, không phải nghi thức
+## 6. lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional, không phải nghi thức
 
-Use case hữu ích khi business operation được dùng ở nhiều state holder hoặc có logic đủ phức tạp để ViewModel không nên chứa.
+Use trường hợp (case / 사례) hữu ích khi nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) được dùng ở nhiều trạng thái (state / 상태) holder hoặc có lô-gic (logic / 논리) đủ phức tạp để ViewModel không nên chứa.
 
 ```kotlin
 class ToggleBookmarkUseCase(
@@ -149,11 +152,11 @@ class ToggleBookmarkUseCase(
 }
 ```
 
-Nếu `GetArticleUseCase` chỉ gọi `repository.getArticle(id)` và không tạo boundary, reuse hay policy nào, thêm class đó có thể chỉ tăng ceremony. Hãy dùng domain layer khi nó giảm complexity thật.
+Nếu `GetArticleUseCase` chỉ gọi `repository.getArticle(id)` và không tạo ranh giới (boundary / 경계), reuse hay chính sách (policy / 정책) nào, thêm lớp (class / 클래스) đó có thể chỉ tăng ceremony. Hãy dùng lĩnh vực (domain / 도메인) tầng (layer / 계층) khi nó giảm độ phức tạp (complexity / 복잡도) thật.
 
-## 7. Main-safe contract
+## 7. Main-safe đặc tả hợp đồng (contract / 계약)
 
-Public suspend function của repository/use case nên đủ an toàn để caller gọi từ main thread. Caller không nên phải nhớ “method này cần Dispatchers.IO”. Data layer chịu trách nhiệm chuyển dispatcher cho blocking work.
+Công khai (public / 공개) suspend hàm (function / 함수) của repository/use trường hợp (case / 사례) nên đủ an toàn để caller gọi từ main luồng thực thi (thread / 스레드). Caller không nên phải nhớ “phương thức (method / 메서드) này cần Dispatchers.IO”. dữ liệu (data / 데이터) tầng (layer / 계층) chịu trách nhiệm chuyển dispatcher cho blocking công việc (work / 작업).
 
 ```kotlin
 suspend fun parseLargePayload(bytes: ByteArray): Parsed =
@@ -162,11 +165,11 @@ suspend fun parseLargePayload(bytes: ByteArray): Parsed =
     }
 ```
 
-Điều này biến threading thành implementation detail và làm test dễ hơn vì dispatcher có thể inject.
+Điều này biến threading thành hiện thực (implementation / 구현) detail và làm kiểm thử (test / 테스트) dễ hơn vì dispatcher có thể inject.
 
-## 8. Error model phải có vocabulary
+## 8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary
 
-Một app production không nên ném mọi thứ thành string “Something went wrong”. Ta cần phân biệt ít nhất transport failure, protocol failure và domain failure.
+Một app môi trường vận hành (production / 운영 환경) không nên ném mọi thứ thành string “Something went wrong”. Ta cần phân biệt ít nhất vận chuyển (transport / 전송) thất bại (failure / 실패), giao thức (protocol / 프로토콜) thất bại (failure / 실패) và lĩnh vực (domain / 도메인) thất bại (failure / 실패).
 
 ```kotlin
 sealed interface DataError {
@@ -179,11 +182,11 @@ sealed interface DataError {
 }
 ```
 
-Tầng UI map error thành message/action phù hợp. `401` có thể trigger session recovery; validation error có thể focus field; offline có thể vẫn render cache cũ. Không nên để Retrofit exception type lan tới Composable.
+Tầng UI map lỗi (error / 오류) thành message/hành động (action / 동작) phù hợp. `401` có thể trigger session khôi phục (recovery / 복구); kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) có thể focus trường dữ liệu (field / 필드); offline có thể vẫn kết xuất (render / 렌더링) bộ nhớ đệm (cache / 캐시) cũ. Không nên để Retrofit exception kiểu (type / 타입) lan tới Composable.
 
 ## 9. Loading không phải boolean duy nhất
 
-Một screen có thể vừa có cached content vừa refresh. Nếu `isLoading=true` khiến UI thay toàn bộ list bằng spinner, UX sẽ nhấp nháy vô ích. Vì vậy thường nên phân biệt **initial load**, **refresh**, **pagination load** và **mutation in progress**.
+Một screen có thể vừa có cached content vừa refresh. Nếu `isLoading=true` khiến UI thay toàn bộ danh sách (list / 목록) bằng spinner, UX sẽ nhấp nháy vô ích. Vì vậy thường nên phân biệt **initial tải (load / 로드)**, **refresh**, **pagination tải (load / 로드)** và **mutation in progress**.
 
 ```kotlin
 data class LoadState(
@@ -193,15 +196,15 @@ data class LoadState(
 )
 ```
 
-State model tốt làm UI behavior chính xác hơn mà không cần nhiều `if` rải rác.
+Trạng thái (state / 상태) mô hình (model / 모델) tốt làm UI hành vi (behavior / 동작) chính xác hơn mà không cần nhiều `if` rải rác.
 
-## 10. One-off event và durable state
+## 10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)
 
-Navigation, snackbar và permission request thường được gọi là event, nhưng cần phân loại cẩn thận. Nếu event quan trọng mà bị mất khi collector tạm inactive thì design sai.
+Điều hướng (navigation / 내비게이션), snackbar và permission yêu cầu (request / 요청) thường được gọi là sự kiện (event / 이벤트), nhưng cần phân loại cẩn thận. Nếu sự kiện (event / 이벤트) quan trọng mà bị mất khi collector tạm inactive thì thiết kế (design / 설계) sai.
 
-State có ý nghĩa lâu dài nên nằm trong UiState. Ví dụ “payment completed” có thể là state của transaction, không phải chỉ là một Channel event. Snackbar “Đã copy” có thể transient. Navigation sau submit nên được thiết kế sao cho không navigate hai lần sau recreation; thường state machine hoặc consumed state rõ ràng an toàn hơn một event bus vô danh.
+Trạng thái (state / 상태) có ý nghĩa lâu dài nên nằm trong UiState. Ví dụ “payment completed” có thể là trạng thái (state / 상태) của giao dịch (transaction / 트랜잭션), không phải chỉ là một Channel sự kiện (event / 이벤트). Snackbar “Đã bản sao (copy / 복사)” có thể transient. điều hướng (navigation / 내비게이션) sau submit nên được thiết kế sao cho không navigate hai lần sau recreation; thường máy trạng thái (state machine / 상태 머신) hoặc consumed trạng thái (state / 상태) rõ ràng an toàn hơn một sự kiện (event / 이벤트) bus vô danh.
 
-## 11. Module boundary theo capability, không theo tên layer một cách máy móc
+## 11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc
 
 Một codebase lớn có thể có:
 
@@ -218,19 +221,19 @@ Một codebase lớn có thể có:
 :feature:profile:impl
 ```
 
-Không có cấu trúc duy nhất đúng. Điều quan trọng là graph dependency có hướng. `core:database` không phụ thuộc UI. Feature không import implementation nội bộ của feature khác. Public API nhỏ giúp build cache và ownership tốt hơn.
+Không có cấu trúc duy nhất đúng. Điều quan trọng là đồ thị (graph / 그래프) phụ thuộc (dependency / 의존성) có hướng. `core:database` không phụ thuộc UI. tính năng (feature / 기능) không import hiện thực (implementation / 구현) nội bộ của tính năng (feature / 기능) khác. API công khai (public API / 공개 API) nhỏ giúp bản dựng (build / 빌드) bộ nhớ đệm (cache / 캐시) và quyền sở hữu (ownership / 소유권) tốt hơn.
 
-Quá nhiều module trong app nhỏ làm Gradle/configuration và navigation phức tạp. Modularization chỉ đáng làm khi có mục tiêu như build isolation, ownership, optional delivery, reusable boundary hoặc giảm accidental coupling.
+Quá nhiều mô-đun (module / 모듈) trong app nhỏ làm Gradle/cấu hình (configuration / 구성) và điều hướng (navigation / 내비게이션) phức tạp. Modularization chỉ đáng làm khi có mục tiêu như bản dựng (build / 빌드) isolation, quyền sở hữu (ownership / 소유권), optional delivery, reusable ranh giới (boundary / 경계) hoặc giảm accidental coupling.
 
-## 12. DI graph phải phản ánh lifetime
+## 12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)
 
-Dependency injection không chỉ để tránh `new`. Scope phải khớp lifetime. Singleton repository có thể giữ connection/cache toàn app. Screen state holder không nên thành singleton. Object giữ Activity không thể sống application scope.
+Phụ thuộc (dependency / 의존성) injection không chỉ để tránh `new`. phạm vi (scope / 범위) phải khớp thời gian tồn tại (lifetime / 수명). Singleton repository có thể giữ liên kết (connection / 연결)/bộ nhớ đệm (cache / 캐시) toàn app. Screen trạng thái (state / 상태) holder không nên thành singleton. đối tượng (object / 객체) giữ Activity không thể sống ứng dụng (application / 애플리케이션) phạm vi (scope / 범위).
 
-Các câu hỏi cần hỏi với mỗi dependency là: ai tạo nó, sống bao lâu, có mutable state không, có thread-safety requirement không, và dispose ở đâu.
+Các câu hỏi cần hỏi với mỗi phụ thuộc (dependency / 의존성) là: ai tạo nó, sống bao lâu, có mutable trạng thái (state / 상태) không, có thread-safety yêu cầu (requirement / 요구사항) không, và dispose ở đâu.
 
-## 13. Compose screen boundary
+## 13. Compose screen ranh giới (boundary / 경계)
 
-Một pattern dễ test là tách route-level composable và pure content composable:
+Một mẫu (pattern / 패턴) dễ kiểm thử (test / 테스트) là tách route-level composable và pure content composable:
 
 ```kotlin
 @Composable
@@ -257,33 +260,35 @@ fun ArticlesScreen(
 }
 ```
 
-`ArticlesScreen` không cần biết Hilt, Navigation Controller hoặc repository. Vì vậy preview, screenshot test và Compose UI test đơn giản hơn.
+`ArticlesScreen` không cần biết Hilt, điều hướng (navigation / 내비게이션) Controller hoặc repository. Vì vậy preview, screenshot kiểm thử (test / 테스트) và Compose UI kiểm thử (test / 테스트) đơn giản hơn.
 
-## 14. Architecture test bằng failure scenario
+## 14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario
 
-Đừng chỉ review class diagram. Hãy mô phỏng failure:
+Đừng chỉ rà soát (review / 검토) lớp (class / 클래스) diagram. Hãy mô phỏng thất bại (failure / 실패):
 
 - xoay màn hình giữa lúc refresh;
-- process bị kill khi đang ở detail;
-- API trả 500 nhưng cache có dữ liệu;
-- user bấm bookmark liên tục;
-- network request finish sau khi screen đã rời back stack;
-- database migration chạy trên dữ liệu thật của version cũ;
-- server thêm field hoặc trả unknown enum value;
-- duplicate deep link mở cùng entity hai lần.
+- tiến trình (process / 프로세스) bị kill khi đang ở detail;
+- API trả 500 nhưng bộ nhớ đệm (cache / 캐시) có dữ liệu;
+- người dùng (user / 사용자) bấm bookmark liên tục;
+- mạng (network / 네트워크) yêu cầu (request / 요청) finish sau khi screen đã rời back ngăn xếp (stack / 스택);
+- cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) chạy trên dữ liệu thật của phiên bản (version / 버전) cũ;
+- máy chủ (server / 서버) thêm trường dữ liệu (field / 필드) hoặc trả unknown enum giá trị (value / 값);
+- duplicate deep link mở cùng thực thể (entity / 엔터티) hai lần.
 
-Nếu architecture không trả lời được behavior mong muốn trong các tình huống này, sơ đồ đẹp không có nhiều giá trị.
+Nếu kiến trúc (architecture / 아키텍처) không trả lời được hành vi (behavior / 동작) mong muốn trong các tình huống này, sơ đồ đẹp không có nhiều giá trị.
 
-## 15. Một end-to-end read path
+## 15. Một end-to-end read đường dẫn (path / 경로)
 
-Khi app khởi động, Room emit cached articles. Repository map Entity thành domain model. ViewModel combine data với filter/query. UI render ngay. Một refresh coroutine gọi network, validate DTO, transactionally update database. Database emit snapshot mới. UI update mà không cần imperative callback.
+Khi app khởi động, Room emit cached articles. Repository map thực thể (entity / 엔터티) thành lĩnh vực (domain / 도메인) mô hình (model / 모델). ViewModel combine dữ liệu (data / 데이터) với filter/truy vấn (query / 쿼리). UI kết xuất (render / 렌더링) ngay. Một refresh coroutine gọi mạng (network / 네트워크), validate DTO, transactionally cập nhật (update / 업데이트) cơ sở dữ liệu (database / 데이터베이스). cơ sở dữ liệu (database / 데이터베이스) emit snapshot mới. UI cập nhật (update / 업데이트) mà không cần imperative callback.
 
-Khi user bookmark, operation cập nhật local database trước nếu product muốn optimistic UX. Nếu bookmark phải sync server, operation tạo pending mutation hoặc gửi request. Nếu server fail, policy quyết định rollback, retry hoặc giữ pending state. Policy này thuộc data/domain logic, không nên nằm trong icon click handler.
+Khi người dùng (user / 사용자) bookmark, thao tác (operation / 연산) cập nhật cục bộ (local / 로컬) cơ sở dữ liệu (database / 데이터베이스) trước nếu sản phẩm (product / 제품) muốn optimistic UX. Nếu bookmark phải sync máy chủ (server / 서버), thao tác (operation / 연산) tạo pending mutation hoặc gửi yêu cầu (request / 요청). Nếu máy chủ (server / 서버) thất bại (fail / 실패), chính sách (policy / 정책) quyết định quay lui (rollback / 롤백), thử lại (retry / 재시도) hoặc giữ pending trạng thái (state / 상태). chính sách (policy / 정책) này thuộc dữ liệu (data / 데이터)/lĩnh vực (domain / 도메인) lô-gic (logic / 논리), không nên nằm trong icon click handler.
 
-## 16. Senior notes
+## 16. cấp cao (senior / 시니어) notes
 
-Architecture càng lớn càng cần **explicit contracts** hơn framework. Hãy document source of truth, state ownership, public module API, error vocabulary và sync semantics. Đừng để người mới phải đọc 30 class mới hiểu “bookmark có offline không”.
+Kiến trúc (architecture / 아키텍처) càng lớn càng cần **tường minh (explicit / 명시적) contracts** hơn khung phần mềm (framework / 프레임워크). Hãy document nguồn chuẩn (source of truth / 정본), quyền sở hữu trạng thái (state ownership / 상태 소유권), công khai (public / 공개) mô-đun (module / 모듈) API, lỗi (error / 오류) vocabulary và sync ngữ nghĩa (semantics / 의미론). Đừng để người mới phải đọc 30 lớp (class / 클래스) mới hiểu “bookmark có offline không”.
 
-Giữ ViewModel nhỏ bằng cách tách reusable business operation, nhưng không biến mọi method thành use case. Giữ repository giàu ý nghĩa data, không để nó thành một folder chứa Retrofit wrapper. Dùng Flow cho observable state, nhưng không biến tất cả function thành Flow nếu chỉ cần một one-shot result. Dùng Compose state đúng lifetime, không đưa persistent application data vào `remember`.
+Giữ ViewModel nhỏ bằng cách tách reusable nghiệp vụ (business / 비즈니스) thao tác (operation / 연산), nhưng không biến mọi phương thức (method / 메서드) thành use trường hợp (case / 사례). Giữ repository giàu ý nghĩa dữ liệu (data / 데이터), không để nó thành một folder chứa Retrofit wrapper. Dùng luồng (flow / 흐름) cho observable trạng thái (state / 상태), nhưng không biến tất cả hàm (function / 함수) thành luồng (flow / 흐름) nếu chỉ cần một one-shot kết quả (result / 결과). Dùng Compose trạng thái (state / 상태) đúng thời gian tồn tại (lifetime / 수명), không đưa persistent ứng dụng (application / 애플리케이션) dữ liệu (data / 데이터) vào `remember`.
 
-Một architecture tốt khiến path dữ liệu dễ kể bằng lời: **server/local source → repository → domain policy → state holder → immutable UI state → UI event quay lại owner**. Nếu phải dùng nhiều ngoại lệ để mô tả path đó, boundary đang có vấn đề.
+Một kiến trúc (architecture / 아키텍처) tốt khiến đường dẫn (path / 경로) dữ liệu dễ kể bằng lời: **máy chủ (server / 서버)/cục bộ (local / 로컬) nguồn (source / 소스) → repository → lĩnh vực (domain / 도메인) chính sách (policy / 정책) → trạng thái (state / 상태) holder → immutable UI trạng thái (state / 상태) → UI sự kiện (event / 이벤트) quay lại đơn vị sở hữu (owner / 오너)**. Nếu phải dùng nhiều ngoại lệ để mô tả đường dẫn (path / 경로) đó, ranh giới (boundary / 경계) đang có vấn đề.
+
+> **Bàn giao:** Sau **16. cấp cao (senior / 시니어) notes**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 auth session network security](./02_auth_session_network_security.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -12,7 +12,7 @@ Mạch giảng bắt buộc của từng section:
 Không được đạt contract bằng cách đặt cùng một câu mở và cùng một câu kết quanh mọi header. Hãy đọc cả khối nội dung dưới header: nếu khối là bullet, bảng, công thức hoặc ví dụ, phải có prose giải thích cách đọc khối đó, các ý liên hệ theo quan hệ nào và kết luận nào được rút ra. Người mới phải hiểu vì sao các ý nằm cùng một section trước khi ghi nhớ từng thuật ngữ.
 
 Quy tắc bắt buộc:
-- Chỉ dùng các facts có trong SOURCE và TRANSLATION. Có thể sửa lỗi diễn đạt/OCR rõ ràng, nhưng nếu không đủ căn cứ phải ghi `[CẦN KIỂM TRA]`.
+- Chỉ dùng các facts có trong nguồn (source / 소스) và TRANSLATION. Có thể sửa lỗi diễn đạt/OCR rõ ràng, nhưng nếu không đủ căn cứ phải ghi `[CẦN KIỂM TRA]`.
 - Được đổi thứ tự, gộp và nối các đoạn để mạch học đi từ nền tảng đến nâng cao.
 - Không chia mỗi topic thành format lặp lại kiểu “định nghĩa / bản dịch / ví dụ / điểm thi”. Chọn cách trình bày tự nhiên phù hợp nội dung.
 - Bảo toàn mã 핵심 001, 002... để truy vết, nhưng không biến từng mã thành một chương rời.
@@ -27,7 +27,7 @@ Quy tắc bắt buộc:
 
 Tên môn: {subject}
 Phần: {part_name}
-Đây là chunk {chunk_number}/{chunk_total} của phần này. Không viết lại nội dung ngoài SOURCE của chunk này.
+Đây là chunk {chunk_number}/{chunk_total} của phần này. Không viết lại nội dung ngoài nguồn (source / 소스) của chunk này.
 
 Quy tắc theo vị trí chunk:
 - Chunk 1 phải mở bằng định vị của cả phần; không nhảy thẳng vào một định nghĩa.

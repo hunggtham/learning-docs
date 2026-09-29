@@ -1,5 +1,7 @@
 # Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế
 
+> **Mạch đọc:** Đọc **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao phản ứng oxy hóa-khử tạo ra điện áp** sang **Điện thế chuẩn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Điện thế pin (cell potential / 전지 전위)** không phải một con số tách rời khỏi nhiệt động lực học. Nó biểu diễn mức công điện có thể thu được từ một phản ứng oxy hóa-khử. **Phương trình Nernst (Nernst equation / 네른스트 식)** mở rộng điện thế chuẩn sang điều kiện không chuẩn bằng cách đưa thương số phản ứng và hoạt độ vào mô hình.
 
 ## Vì sao phản ứng oxy hóa-khử tạo ra điện áp
@@ -138,7 +140,7 @@ Ví dụ đơn giản:
 Cu | Cu2+(hoạt độ thấp) || Cu2+(hoạt độ cao) | Cu
 ```
 
-Electron sẽ dịch chuyển theo chiều làm giảm chênh lệch nồng độ. Đây là ví dụ cho thấy **gradient thành phần (composition gradient)** cũng có thể tạo điện thế.
+Electron sẽ dịch chuyển theo chiều làm giảm chênh lệch nồng độ. Đây là ví dụ cho thấy **độ dốc (gradient / 기울기) thành phần (composition gradient)** cũng có thể tạo điện thế.
 
 ## Ảnh hưởng của pH và chuyển electron ghép proton
 
@@ -186,7 +188,7 @@ Phản ứng điện hóa tiêu thụ hoặc tạo chất ngay tại bề mặt 
 
 Ba cơ chế vận chuyển chính gồm:
 
-- khuếch tán do gradient nồng độ;
+- khuếch tán do độ dốc (gradient / 기울기) nồng độ;
 - di chuyển ion do điện trường;
 - đối lưu do chuyển động của chất lỏng.
 
@@ -239,3 +241,5 @@ Không. Phân cực, điện trở trong, vận chuyển khối, chuyển pha v�
 Hãy xem thế điện hóa như **độ dốc nhiệt động cho dòng electron**. Phương trình Nernst cho biết độ dốc ở thành phần hiện tại; quá thế và vận chuyển cho biết cần đẩy hệ thêm bao nhiêu để tạo được dòng hữu hạn.
 
 Xem tiếp: [Điện phân](./04_electrolysis.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 oxidation and reduction](./00_oxidation_and_reduction.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

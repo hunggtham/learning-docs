@@ -1,6 +1,6 @@
-# ERD, Entity, Attribute, Relationship và Identifier
+# ERD, thực thể (entity / 엔터티), Attribute, Relationship và Identifier
 
-> **Mục tiêu:** Xây dựng ERD; phân loại entity/attribute/relationship; chọn và sử dụng identifier.
+> **Mục tiêu:** Xây dựng ERD; phân loại thực thể (entity / 엔터티)/attribute/relationship; chọn và sử dụng identifier.
 
 ## Từ khóa cần nhớ (Keyword)
 
@@ -9,6 +9,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **ERD, thực thể (entity / 엔터티), Attribute, Relationship và Identifier** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
@@ -123,7 +127,7 @@ Ta bắt đầu **11.2. 중복배제 - Loại bỏ trùng lặp** bằng câu h�
 
 **중복배제란 하나의 데이터베이스 안에서 동일한 사실이 한 번만 기록되도록 설계하는 것이다.**
 
-Loại bỏ trùng lặp là thiết kế sao cho cùng một sự thật chỉ được ghi nhận một lần trong một database.
+Loại bỏ trùng lặp là thiết kế sao cho cùng một sự thật chỉ được ghi nhận một lần trong một cơ sở dữ liệu (database / 데이터베이스).
 
 **동일한 데이터를 여러 테이블에 반복해서 저장하면 데이터 수정 시 불일치가 발생할 수 있다.**
 
@@ -450,7 +454,7 @@ Ta bắt đầu **11.6. 의사소통 - Khả năng giao tiếp** bằng câu h�
 
 **의사소통이란 업무규칙을 엔터티, 서브타입, 속성, 관계 등의 형태로 자세히 표현하는 것이다.**
 
-Khả năng giao tiếp là biểu diễn quy tắc nghiệp vụ một cách chi tiết dưới dạng Entity, Subtype, Attribute và Relationship.
+Khả năng giao tiếp là biểu diễn quy tắc nghiệp vụ một cách chi tiết dưới dạng thực thể (entity / 엔터티), Subtype, Attribute và Relationship.
 
 **모델을 본 관련자들이 동일한 의미로 이해하고 활용할 수 있어야 한다.**
 
@@ -648,17 +652,17 @@ Ta bắt đầu **2. DBA** bằng câu hỏi: **khái niệm này giải quyết
 
 **DBA는 데이터베이스의 구축, 운영, 보안, 성능을 담당하는 전문가이다.**
 
-DBA là chuyên gia phụ trách xây dựng, vận hành, bảo mật và hiệu năng của database.
+DBA là chuyên gia phụ trách xây dựng, vận hành, bảo mật và hiệu năng của cơ sở dữ liệu (database / 데이터베이스).
 
 DBA cần hiểu:
 
-- Table.
-- Index.
-- Constraint.
-- Storage.
+- bảng (table / 테이블).
+- chỉ mục (index / 인덱스).
+- ràng buộc (constraint / 제약조건).
+- lưu trữ (storage / 저장소).
 - Backup.
-- Performance.
-- User và quyền truy cập.
+- hiệu năng (performance / 성능).
+- người dùng (user / 사용자) và quyền truy cập.
 
 Khi gom phần **2. DBA** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -727,7 +731,7 @@ Ta bắt đầu **13.1. Định nghĩa ERD** bằng câu hỏi: **khái niệm n
 
 **ERD는 업무 분석에서 도출된 엔터티와 엔터티 간의 관계를 이해하기 쉽게 도식화한 다이어그램이다.**
 
-ERD là sơ đồ biểu diễn các Entity được rút ra từ phân tích nghiệp vụ và mối quan hệ giữa các Entity một cách dễ hiểu.
+ERD là sơ đồ biểu diễn các thực thể (entity / 엔터티) được rút ra từ phân tích nghiệp vụ và mối quan hệ giữa các thực thể (entity / 엔터티) một cách dễ hiểu.
 
 **ERD는 데이터 흐름과 업무 프로세스 사이의 연관성을 표현하는 산출물이다.**
 
@@ -743,16 +747,16 @@ Ta bắt đầu **Keyword: ERD** bằng câu hỏi: **khái niệm này giải q
 
 **ERD(Entity Relationship Diagram)는 엔터티, 속성, 관계를 그림으로 표현한 데이터 모델이다.**
 
-ERD là mô hình dữ liệu biểu diễn Entity, Attribute và Relationship bằng hình ảnh.
+ERD là mô hình dữ liệu biểu diễn thực thể (entity / 엔터티), Attribute và Relationship bằng hình ảnh.
 
 ERD giúp trả lời:
 
-- Có những Entity nào?
-- Mỗi Entity có Attribute nào?
-- Các Entity liên hệ ra sao?
+- Có những thực thể (entity / 엔터티) nào?
+- Mỗi thực thể (entity / 엔터티) có Attribute nào?
+- Các thực thể (entity / 엔터티) liên hệ ra sao?
 - Quan hệ là 1:1, 1:N hay N:M?
 - Quan hệ bắt buộc hay tùy chọn?
-- Entity nào là cha, Entity nào là con?
+- thực thể (entity / 엔터티) nào là cha, thực thể (entity / 엔터티) nào là con?
 
 ---
 
@@ -764,9 +768,9 @@ Ta bắt đầu **13.2. Nguồn gốc ERD** bằng câu hỏi: **khái niệm n�
 
 ### 13.2. Nguồn gốc ERD
 
-**1976년 Peter Chen이 Entity-Relationship Model이라는 표기법을 만들었다.**
+**1976년 Peter Chen이 Entity-Relationship mô hình (model / 모델)이라는 표기법을 만들었다.**
 
-Năm 1976, Peter Chen đã tạo ra phương pháp ký hiệu gọi là Entity-Relationship Model.
+Năm 1976, Peter Chen đã tạo ra phương pháp ký hiệu gọi là Entity-Relationship mô hình (model / 모델).
 
 Khi gom phần **13.2. Nguồn gốc ERD** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -778,7 +782,7 @@ Ta bắt đầu **Keyword: Peter Chen** bằng câu hỏi: **khái niệm này g
 
 **Peter Chen은 엔터티와 관계를 이용하여 현실 세계를 데이터 모델로 표현하는 ER 모델을 제안한 인물이다.**
 
-Peter Chen là người đề xuất mô hình ER, dùng Entity và Relationship để biểu diễn thế giới thực thành mô hình dữ liệu.
+Peter Chen là người đề xuất mô hình ER, dùng thực thể (entity / 엔터티) và Relationship để biểu diễn thế giới thực thành mô hình dữ liệu.
 
 ---
 
@@ -800,7 +804,7 @@ Ta bắt đầu **14.1. Bước 1: Vẽ Entity** bằng câu hỏi: **khái ni�
 
 **첫 번째 단계는 업무에서 필요한 엔터티를 식별하고 그린다.**
 
-Bước đầu tiên là xác định và vẽ các Entity cần thiết trong nghiệp vụ.
+Bước đầu tiên là xác định và vẽ các thực thể (entity / 엔터티) cần thiết trong nghiệp vụ.
 
 Ví dụ hệ thống bán hàng:
 
@@ -835,11 +839,11 @@ Ta bắt đầu **14.2. Bước 2: Sắp xếp Entity** bằng câu hỏi: **kh�
 
 **두 번째 단계는 엔터티를 관계가 잘 보이도록 적절하게 배치하는 것이다.**
 
-Bước thứ hai là sắp xếp các Entity ở vị trí phù hợp để các mối quan hệ dễ quan sát.
+Bước thứ hai là sắp xếp các thực thể (entity / 엔터티) ở vị trí phù hợp để các mối quan hệ dễ quan sát.
 
 **선이 서로 꼬이지 않도록 하고 가장 중요한 엔터티는 왼쪽 상단에 배치하는 것이 좋다.**
 
-Nên tránh để các đường quan hệ bị chồng chéo và đặt Entity quan trọng nhất ở phía trên bên trái.
+Nên tránh để các đường quan hệ bị chồng chéo và đặt thực thể (entity / 엔터티) quan trọng nhất ở phía trên bên trái.
 
 Khi gom phần **14.2. Bước 2: Sắp xếp Entity** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -851,13 +855,13 @@ Ta bắt đầu **Keyword: 배치** bằng câu hỏi: **khái niệm này giả
 
 **배치는 ERD의 가독성을 높이기 위해 엔터티의 위치를 정하는 작업이다.**
 
-Sắp xếp là công việc quyết định vị trí của Entity để tăng khả năng đọc ERD.
+Sắp xếp là công việc quyết định vị trí của thực thể (entity / 엔터티) để tăng khả năng đọc ERD.
 
 Mục tiêu:
 
 - Đường quan hệ không bị rối.
 - Dễ theo dõi từ trái sang phải.
-- Entity trung tâm được nhìn thấy rõ.
+- thực thể (entity / 엔터티) trung tâm được nhìn thấy rõ.
 - Các nhóm nghiệp vụ được bố trí hợp lý.
 
 ---
@@ -872,7 +876,7 @@ Ta bắt đầu **14.3. Bước 3: Thiết lập quan hệ** bằng câu hỏi: 
 
 **세 번째 단계는 엔터티 간의 업무 관계를 설정하는 것이다.**
 
-Bước thứ ba là thiết lập quan hệ nghiệp vụ giữa các Entity.
+Bước thứ ba là thiết lập quan hệ nghiệp vụ giữa các thực thể (entity / 엔터티).
 
 **식별자 관계를 우선적으로 설정한다.**
 
@@ -888,7 +892,7 @@ Ta bắt đầu **Keyword: 관계** bằng câu hỏi: **khái niệm này giả
 
 **관계는 두 엔터티가 업무적으로 서로 어떻게 연결되어 있는지를 표현하는 것이다.**
 
-Relationship biểu diễn hai Entity liên kết với nhau về mặt nghiệp vụ như thế nào.
+Relationship biểu diễn hai thực thể (entity / 엔터티) liên kết với nhau về mặt nghiệp vụ như thế nào.
 
 Ví dụ:
 
@@ -910,7 +914,7 @@ Ta bắt đầu **14.4. 식별자 관계 - Quan hệ định danh** bằng câu 
 
 **식별자 관계는 부모 엔터티의 기본키가 자식 엔터티의 기본키 일부가 되는 관계이다.**
 
-Quan hệ định danh là quan hệ trong đó Primary Key của Entity cha trở thành một phần Primary Key của Entity con.
+Quan hệ định danh là quan hệ trong đó Primary Key của thực thể (entity / 엔터티) cha trở thành một phần Primary Key của thực thể (entity / 엔터티) con.
 
 Khi gom phần **14.4. 식별자 관계 - Quan hệ định danh** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -973,7 +977,7 @@ Ta bắt đầu **Keyword: 순환 관계** bằng câu hỏi: **khái niệm nà
 
 **순환 관계는 엔터티 간의 연결이 고리처럼 다시 원래 엔터티로 돌아오는 관계이다.**
 
-Quan hệ vòng lặp là quan hệ trong đó các Entity liên kết thành vòng và quay trở lại Entity ban đầu.
+Quan hệ vòng lặp là quan hệ trong đó các thực thể (entity / 엔터티) liên kết thành vòng và quay trở lại thực thể (entity / 엔터티) ban đầu.
 
 Ví dụ:
 
@@ -1000,7 +1004,7 @@ Ta bắt đầu **14.6. Bước 4: Đặt tên quan hệ** bằng câu hỏi: **
 
 **네 번째 단계는 엔터티 간의 관계를 현재형 동사로 기술하는 것이다.**
 
-Bước thứ tư là mô tả quan hệ giữa các Entity bằng động từ ở thì hiện tại.
+Bước thứ tư là mô tả quan hệ giữa các thực thể (entity / 엔터티) bằng động từ ở thì hiện tại.
 
 **지나치게 포괄적인 단어보다 업무 의미가 분명한 관계명을 사용해야 한다.**
 
@@ -1024,7 +1028,7 @@ Ta bắt đầu **Keyword: 관계명** bằng câu hỏi: **khái niệm này gi
 
 **관계명은 두 엔터티 사이에서 어떤 업무 행위가 발생하는지를 나타내는 이름이다.**
 
-Tên quan hệ là tên thể hiện hành động nghiệp vụ xảy ra giữa hai Entity.
+Tên quan hệ là tên thể hiện hành động nghiệp vụ xảy ra giữa hai thực thể (entity / 엔터티).
 
 Ví dụ:
 
@@ -1060,7 +1064,7 @@ Bước thứ năm là mô tả mức độ tham gia và số lượng trong qua
 
 **관계차수는 한 엔터티의 인스턴스가 다른 엔터티의 인스턴스와 몇 개까지 연결될 수 있는지를 의미한다.**
 
-Cardinality là số lượng Instance của một Entity có thể liên kết với Instance của Entity khác.
+Cardinality là số lượng Instance của một thực thể (entity / 엔터티) có thể liên kết với Instance của thực thể (entity / 엔터티) khác.
 
 Khi gom phần **14.7. Bước 5: Ghi mức độ tham gia và Cardinality** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1072,7 +1076,7 @@ Ta bắt đầu **Keyword: 관계차수 또는 Cardinality** bằng câu hỏi: 
 
 **Cardinality는 엔터티 간 관계의 수적 범위를 나타낸다.**
 
-Cardinality biểu thị phạm vi số lượng của mối quan hệ giữa các Entity.
+Cardinality biểu thị phạm vi số lượng của mối quan hệ giữa các thực thể (entity / 엔터티).
 
 Ví dụ:
 
@@ -1124,7 +1128,7 @@ Ta bắt đầu **Keyword: 필수 참여** bằng câu hỏi: **khái niệm nà
 
 **필수 참여는 해당 엔터티의 인스턴스가 관계에 반드시 참여해야 한다는 의미이다.**
 
-Tham gia bắt buộc nghĩa là Instance của Entity đó bắt buộc phải tham gia vào quan hệ.
+Tham gia bắt buộc nghĩa là Instance của thực thể (entity / 엔터티) đó bắt buộc phải tham gia vào quan hệ.
 
 Ví dụ:
 
@@ -1148,7 +1152,7 @@ Ta bắt đầu **Keyword: 선택 참여** bằng câu hỏi: **khái niệm nà
 
 **선택 참여는 해당 엔터티의 인스턴스가 관계에 참여하지 않아도 된다는 의미이다.**
 
-Tham gia tùy chọn nghĩa là Instance của Entity có thể không tham gia vào quan hệ.
+Tham gia tùy chọn nghĩa là Instance của thực thể (entity / 엔터티) có thể không tham gia vào quan hệ.
 
 Ví dụ:
 
@@ -1156,7 +1160,7 @@ Ví dụ:
 Một Customer có thể chưa từng tạo Order.
 ```
 
-Khi đó phía `CUSTOMER` có thể có số lượng Order bằng 0.
+Khi đó phía `CUSTOMER` có thể có số lượng thứ tự (order / 순서) bằng 0.
 
 ---
 
@@ -1178,7 +1182,7 @@ Ta bắt đầu **15.1. Chen notation** bằng câu hỏi: **khái niệm này g
 
 **Chen 표기법은 엔터티를 사각형, 관계를 마름모, 관계차수를 숫자로 표현한다.**
 
-Ký pháp Chen biểu diễn Entity bằng hình chữ nhật, Relationship bằng hình thoi và Cardinality bằng con số.
+Ký pháp Chen biểu diễn thực thể (entity / 엔터티) bằng hình chữ nhật, Relationship bằng hình thoi và Cardinality bằng con số.
 
 Trong hình:
 
@@ -1259,11 +1263,11 @@ Ta bắt đầu **16.1. Định nghĩa** bằng câu hỏi: **khái niệm này 
 
 **엔터티는 업무에 필요하고 유용한 정보를 저장하고 관리하기 위한 집합이다.**
 
-Entity là tập hợp dùng để lưu trữ và quản lý những thông tin cần thiết, hữu ích cho nghiệp vụ.
+Thực thể (entity / 엔터티) là tập hợp dùng để lưu trữ và quản lý những thông tin cần thiết, hữu ích cho nghiệp vụ.
 
 **엔터티는 인스턴스의 집합이다.**
 
-Entity là tập hợp các Instance.
+Thực thể (entity / 엔터티) là tập hợp các Instance.
 
 Khi gom phần **16.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1275,7 +1279,7 @@ Ta bắt đầu **Keyword: Entity** bằng câu hỏi: **khái niệm này giả
 
 **엔터티는 업무적으로 관리해야 할 대상이며 데이터베이스에서는 일반적으로 테이블로 구현된다.**
 
-Entity là đối tượng cần được quản lý về mặt nghiệp vụ và thường được triển khai thành Table trong database.
+Thực thể (entity / 엔터티) là đối tượng cần được quản lý về mặt nghiệp vụ và thường được triển khai thành bảng (table / 테이블) trong cơ sở dữ liệu (database / 데이터베이스).
 
 Ví dụ:
 
@@ -1291,7 +1295,7 @@ C002 - Trần Văn B
 C003 - Lê Văn C
 ```
 
-Entity là khái niệm tập hợp:
+Thực thể (entity / 엔터티) là khái niệm tập hợp:
 
 ```
 CUSTOMER = {C001, C002, C003}
@@ -1309,7 +1313,7 @@ Ta bắt đầu **16.2. Instance là gì?** bằng câu hỏi: **khái niệm n�
 
 **인스턴스는 엔터티에 실제로 존재하는 각각의 개별 데이터이다.**
 
-Instance là từng dữ liệu riêng lẻ thực sự tồn tại trong Entity.
+Instance là từng dữ liệu riêng lẻ thực sự tồn tại trong thực thể (entity / 엔터티).
 
 Khi gom phần **16.2. Instance là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1321,7 +1325,7 @@ Ta bắt đầu **Keyword: Instance** bằng câu hỏi: **khái niệm này gi�
 
 **인스턴스는 데이터베이스 테이블의 한 행 또는 레코드에 해당한다.**
 
-Instance tương ứng với một dòng hoặc một Record trong bảng database.
+Instance tương ứng với một dòng hoặc một bản ghi (record / 레코드) trong bảng cơ sở dữ liệu (database / 데이터베이스).
 
 Ví dụ:
 
@@ -1335,7 +1339,7 @@ C002        | Trần Văn B
 
 Ở đây:
 
-- `CUSTOMER` là Entity.
+- `CUSTOMER` là thực thể (entity / 엔터티).
 - `C001` là một Instance.
 - `C002` là một Instance.
 
@@ -1349,13 +1353,13 @@ Ta bắt đầu **17. Phân loại Entity theo hình thức tồn tại** bằng
 
 ## 17. Phân loại Entity theo hình thức tồn tại
 
-Hình chia Entity theo “유무형에 따른 분류”, nghĩa là phân loại theo việc có tồn tại dưới dạng vật chất hay không.
+Hình chia thực thể (entity / 엔터티) theo “유무형에 따른 분류”, nghĩa là phân loại theo việc có tồn tại dưới dạng vật chất hay không.
 
 Gồm:
 
-1. 유형 Entity - Tangible Entity.
-2. 개념 Entity - Conceptual Entity.
-3. 사건 Entity - Event Entity.
+1. 유형 thực thể (entity / 엔터티) - Tangible thực thể (entity / 엔터티).
+2. 개념 thực thể (entity / 엔터티) - Conceptual thực thể (entity / 엔터티).
+3. 사건 thực thể (entity / 엔터티) - sự kiện (event / 이벤트) thực thể (entity / 엔터티).
 
 ---
 
@@ -1369,7 +1373,7 @@ Ta bắt đầu **17.1. 유형 Entity - Entity hữu hình** bằng câu hỏi: 
 
 **유형 엔터티는 물리적인 형태가 존재하고 안정적이며 지속적으로 활용되는 엔터티이다.**
 
-Entity hữu hình là Entity có hình dạng vật lý, ổn định và được sử dụng lâu dài.
+Thực thể (entity / 엔터티) hữu hình là thực thể (entity / 엔터티) có hình dạng vật lý, ổn định và được sử dụng lâu dài.
 
 Ví dụ trong hình:
 
@@ -1390,7 +1394,7 @@ Ta bắt đầu **Keyword: 유형 Entity** bằng câu hỏi: **khái niệm nà
 
 **유형 엔터티는 실제 세계에서 눈으로 확인하거나 물리적으로 존재하는 대상을 관리하는 엔터티이다.**
 
-Entity hữu hình quản lý những đối tượng tồn tại vật lý trong thế giới thực, có thể quan sát hoặc nhận biết được.
+Thực thể (entity / 엔터티) hữu hình quản lý những đối tượng tồn tại vật lý trong thế giới thực, có thể quan sát hoặc nhận biết được.
 
 Ví dụ:
 
@@ -1406,7 +1410,7 @@ PROFESSOR
 - Thường tồn tại ổn định.
 - Có thể xác định bằng mã.
 - Có thể quản lý vòng đời.
-- Thường là Basic/Key Entity.
+- Thường là Basic/Key thực thể (entity / 엔터티).
 
 ---
 
@@ -1420,7 +1424,7 @@ Ta bắt đầu **17.2. 개념 Entity - Entity khái niệm** bằng câu hỏi:
 
 **개념 엔터티는 물리적인 형태는 없지만 업무에서 관리해야 하는 개념적인 정보이다.**
 
-Entity khái niệm không có hình dạng vật lý nhưng là thông tin khái niệm cần được quản lý trong nghiệp vụ.
+Thực thể (entity / 엔터티) khái niệm không có hình dạng vật lý nhưng là thông tin khái niệm cần được quản lý trong nghiệp vụ.
 
 Ví dụ trong hình:
 
@@ -1441,7 +1445,7 @@ Ta bắt đầu **Keyword: 개념 Entity** bằng câu hỏi: **khái niệm nà
 
 **개념 엔터티는 물리적으로 만질 수 없지만 업무 규칙과 관리 대상이 존재하는 엔터티이다.**
 
-Entity khái niệm không thể cầm nắm về mặt vật lý nhưng có quy tắc nghiệp vụ và đối tượng quản lý rõ ràng.
+Thực thể (entity / 엔터티) khái niệm không thể cầm nắm về mặt vật lý nhưng có quy tắc nghiệp vụ và đối tượng quản lý rõ ràng.
 
 Ví dụ:
 
@@ -1466,7 +1470,7 @@ Ta bắt đầu **17.3. 사건 Entity - Entity sự kiện** bằng câu hỏi: 
 
 **사건 엔터티는 업무 수행 과정에서 발생하며 발생량이 비교적 많은 엔터티이다.**
 
-Entity sự kiện phát sinh trong quá trình thực hiện nghiệp vụ và thường có số lượng phát sinh tương đối lớn.
+Thực thể (entity / 엔터티) sự kiện phát sinh trong quá trình thực hiện nghiệp vụ và thường có số lượng phát sinh tương đối lớn.
 
 Ví dụ trong hình:
 
@@ -1487,7 +1491,7 @@ Ta bắt đầu **Keyword: 사건 Entity** bằng câu hỏi: **khái niệm nà
 
 **사건 엔터티는 업무가 실행될 때마다 새롭게 발생하는 거래 또는 활동을 저장하는 엔터티이다.**
 
-Entity sự kiện lưu các giao dịch hoặc hoạt động phát sinh mới mỗi khi nghiệp vụ được thực hiện.
+Thực thể (entity / 엔터티) sự kiện lưu các giao dịch hoặc hoạt động phát sinh mới mỗi khi nghiệp vụ được thực hiện.
 
 Ví dụ:
 
@@ -1513,7 +1517,7 @@ Ta bắt đầu **17.4. Khi nào sự kiện là Relationship, khi nào là Enti
 
 **사건을 관계로 표현할지 엔터티로 표현할지는 그 사건이 관리해야 할 속성과 독립적인 데이터 집합을 가지는지에 따라 결정한다.**
 
-Việc biểu diễn một sự kiện dưới dạng Relationship hay Entity phụ thuộc vào việc sự kiện đó có Attribute cần quản lý và có trở thành một tập dữ liệu độc lập hay không.
+Việc biểu diễn một sự kiện dưới dạng Relationship hay thực thể (entity / 엔터티) phụ thuộc vào việc sự kiện đó có Attribute cần quản lý và có trở thành một tập dữ liệu độc lập hay không.
 
 Ví dụ đơn giản:
 
@@ -1532,7 +1536,7 @@ Nhưng nếu cần lưu:
 수강상태
 ```
 
-thì nên tạo Entity trung gian:
+thì nên tạo thực thể (entity / 엔터티) trung gian:
 
 ```
 ENROLLMENT
@@ -1555,7 +1559,7 @@ Ta bắt đầu **Cách hiểu** bằng câu hỏi: **khái niệm này giải q
 
 **관리해야 할 속성이 많으면 사건을 엔터티로 분리하는 것이 적절하다.**
 
-Nếu sự kiện có nhiều Attribute cần quản lý thì nên tách nó thành Entity.
+Nếu sự kiện có nhiều Attribute cần quản lý thì nên tách nó thành thực thể (entity / 엔터티).
 
 ---
 
@@ -1569,7 +1573,7 @@ Ta bắt đầu **17.5. Entity phụ thuộc** bằng câu hỏi: **khái niệm
 
 **사건 엔터티는 혼자 존재하기 어렵고 다른 엔터티에 의존하는 경우가 많다.**
 
-Entity sự kiện thường khó tồn tại độc lập và phụ thuộc vào các Entity khác.
+Thực thể (entity / 엔터티) sự kiện thường khó tồn tại độc lập và phụ thuộc vào các thực thể (entity / 엔터티) khác.
 
 Ví dụ trong hình:
 
@@ -1593,7 +1597,7 @@ Ta bắt đầu **Keyword: 의존** bằng câu hỏi: **khái niệm này giả
 
 **의존한다는 것은 다른 엔터티가 존재해야 해당 엔터티도 존재할 수 있다는 의미이다.**
 
-Phụ thuộc nghĩa là Entity đó chỉ có thể tồn tại khi Entity khác tồn tại.
+Phụ thuộc nghĩa là thực thể (entity / 엔터티) đó chỉ có thể tồn tại khi thực thể (entity / 엔터티) khác tồn tại.
 
 Ví dụ:
 
@@ -1631,11 +1635,11 @@ Ta bắt đầu **18.1. 기본/키 Entity - Basic hoặc Key Entity** bằng câ
 
 **기본 엔터티는 업무에 본래 존재하며 독립적으로 생성되는 엔터티이다.**
 
-Entity cơ bản là Entity vốn tồn tại trong nghiệp vụ và được tạo ra một cách độc lập.
+Thực thể (entity / 엔터티) cơ bản là thực thể (entity / 엔터티) vốn tồn tại trong nghiệp vụ và được tạo ra một cách độc lập.
 
 **기본 엔터티는 다른 엔터티의 부모 역할을 하며 자신의 고유한 식별자를 가진다.**
 
-Entity cơ bản đóng vai trò Entity cha của các Entity khác và có Identifier riêng.
+Thực thể (entity / 엔터티) cơ bản đóng vai trò thực thể (entity / 엔터티) cha của các thực thể (entity / 엔터티) khác và có Identifier riêng.
 
 Ví dụ trong hình:
 
@@ -1657,7 +1661,7 @@ Ta bắt đầu **Keyword: 기본 Entity** bằng câu hỏi: **khái niệm nà
 
 **기본 엔터티는 다른 엔터티가 발생하기 전에 먼저 존재할 수 있는 엔터티이다.**
 
-Entity cơ bản là Entity có thể tồn tại trước khi các Entity khác phát sinh.
+Thực thể (entity / 엔터티) cơ bản là thực thể (entity / 엔터티) có thể tồn tại trước khi các thực thể (entity / 엔터티) khác phát sinh.
 
 Ví dụ:
 
@@ -1685,7 +1689,7 @@ Ta bắt đầu **18.2. 중심 Entity - Entity trung tâm** bằng câu hỏi: *
 
 **중심 엔터티는 기본 엔터티로부터 발생하고 업무의 중심적인 역할을 하는 엔터티이다.**
 
-Entity trung tâm phát sinh từ Entity cơ bản và đóng vai trò trung tâm trong nghiệp vụ.
+Thực thể (entity / 엔터티) trung tâm phát sinh từ thực thể (entity / 엔터티) cơ bản và đóng vai trò trung tâm trong nghiệp vụ.
 
 Ví dụ trong hình:
 
@@ -1713,7 +1717,7 @@ Ta bắt đầu **Keyword: 중심 Entity** bằng câu hỏi: **khái niệm nà
 
 **중심 엔터티는 업무 흐름에서 핵심적인 거래나 처리 대상을 나타낸다.**
 
-Entity trung tâm biểu diễn giao dịch hoặc đối tượng xử lý cốt lõi trong luồng nghiệp vụ.
+Thực thể (entity / 엔터티) trung tâm biểu diễn giao dịch hoặc đối tượng xử lý cốt lõi trong luồng nghiệp vụ.
 
 ---
 
@@ -1727,7 +1731,7 @@ Ta bắt đầu **18.3. 행위 Entity - Entity hành vi** bằng câu hỏi: **k
 
 **행위 엔터티는 두 개 이상의 엔터티로부터 발생하고 업무 활동의 결과로 생성된다.**
 
-Entity hành vi phát sinh từ hai hoặc nhiều Entity và được tạo ra như kết quả của hoạt động nghiệp vụ.
+Thực thể (entity / 엔터티) hành vi phát sinh từ hai hoặc nhiều thực thể (entity / 엔터티) và được tạo ra như kết quả của hoạt động nghiệp vụ.
 
 Ví dụ trong hình:
 
@@ -1762,7 +1766,7 @@ Ta bắt đầu **Keyword: 행위 Entity** bằng câu hỏi: **khái niệm nà
 
 **행위 엔터티는 업무가 실행된 결과를 저장하며 일반적으로 발생 빈도가 높다.**
 
-Entity hành vi lưu kết quả của việc thực hiện nghiệp vụ và thường có tần suất phát sinh cao.
+Thực thể (entity / 엔터티) hành vi lưu kết quả của việc thực hiện nghiệp vụ và thường có tần suất phát sinh cao.
 
 Ví dụ:
 
@@ -1806,13 +1810,13 @@ CUSTOMER + PRODUCT
 
 Giải thích:
 
-- `CUSTOMER` và `PRODUCT` là Basic/Key Entity.
-- `ORDER` là Central Entity.
-- `ORDER_ITEM` là Action Entity.
+- `CUSTOMER` và `PRODUCT` là Basic/Key thực thể (entity / 엔터티).
+- `ORDER` là Central thực thể (entity / 엔터티).
+- `ORDER_ITEM` là hành động (action / 동작) thực thể (entity / 엔터티).
 
 **기본 엔터티는 먼저 존재하고 중심 엔터티를 발생시키며 행위 엔터티는 업무 처리 결과로 생성된다.**
 
-Basic Entity tồn tại trước, tạo ra Central Entity, còn Action Entity được tạo ra như kết quả xử lý nghiệp vụ.
+Basic thực thể (entity / 엔터티) tồn tại trước, tạo ra Central thực thể (entity / 엔터티), còn hành động (action / 동작) thực thể (entity / 엔터티) được tạo ra như kết quả xử lý nghiệp vụ.
 
 ---
 
@@ -1834,18 +1838,18 @@ Phần này nối mạch SQL với “20. Tổng hợp keyword của hai hình�
 | 데이터 재사용 | Tái sử dụng dữ liệu | Dữ liệu chung dùng ở nhiều nơi |
 | 의사소통 | Giao tiếp | Mọi bên hiểu mô hình cùng một nghĩa |
 | 통합성 | Tính tích hợp | Toàn tổ chức dùng cùng định nghĩa |
-| ERD | Sơ đồ quan hệ thực thể | Biểu diễn Entity và Relationship |
+| ERD | Sơ đồ quan hệ thực thể | Biểu diễn thực thể (entity / 엔터티) và Relationship |
 | 관계차수 | Cardinality | 1:1, 1:N, N:M |
 | 참여도 | Mức độ tham gia | Bắt buộc hay tùy chọn |
 | 식별자 관계 | Quan hệ định danh | PK của cha là một phần PK của con |
-| 엔터티 | Entity | Tập hợp thông tin cần quản lý |
+| 엔터티 | thực thể (entity / 엔터티) | Tập hợp thông tin cần quản lý |
 | 인스턴스 | Instance | Một dòng dữ liệu cụ thể |
-| 유형 Entity | Entity hữu hình | Nhân viên, sản phẩm, phòng học |
-| 개념 Entity | Entity khái niệm | Tổ chức, hệ thống, môn học |
-| 사건 Entity | Entity sự kiện | Đơn hàng, thanh toán, đăng ký |
-| 기본/키 Entity | Entity cơ bản | Khách hàng, sản phẩm, phòng ban |
-| 중심 Entity | Entity trung tâm | Hợp đồng, tiếp nhận |
-| 행위 Entity | Entity hành vi | Chi tiết đơn hàng, tiến hành hợp đồng |
+| 유형 thực thể (entity / 엔터티) | thực thể (entity / 엔터티) hữu hình | Nhân viên, sản phẩm, phòng học |
+| 개념 thực thể (entity / 엔터티) | thực thể (entity / 엔터티) khái niệm | Tổ chức, hệ thống, môn học |
+| 사건 thực thể (entity / 엔터티) | thực thể (entity / 엔터티) sự kiện | Đơn hàng, thanh toán, đăng ký |
+| 기본/키 thực thể (entity / 엔터티) | thực thể (entity / 엔터티) cơ bản | Khách hàng, sản phẩm, phòng ban |
+| 중심 thực thể (entity / 엔터티) | thực thể (entity / 엔터티) trung tâm | Hợp đồng, tiếp nhận |
+| 행위 thực thể (entity / 엔터티) | thực thể (entity / 엔터티) hành vi | Chi tiết đơn hàng, tiến hành hợp đồng |
 
 Khi gom phần **20. Tổng hợp keyword của hai hình** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1861,11 +1865,11 @@ Một mô hình dữ liệu tốt phải bao gồm đầy đủ dữ liệu cầ
 
 **ERD는 이러한 데이터 모델을 엔터티, 관계, 관계차수, 참여도 등의 기호로 시각화한 산출물이다.**
 
-ERD là sản phẩm trực quan hóa mô hình dữ liệu bằng các ký hiệu như Entity, Relationship, Cardinality và mức độ tham gia.
+ERD là sản phẩm trực quan hóa mô hình dữ liệu bằng các ký hiệu như thực thể (entity / 엔터티), Relationship, Cardinality và mức độ tham gia.
 
 **엔터티는 업무 대상이며, 인스턴스는 그 엔터티에 실제로 저장된 각각의 데이터이다.**
 
-Entity là đối tượng nghiệp vụ, còn Instance là từng dữ liệu thực tế được lưu trong Entity đó.
+Thực thể (entity / 엔터티) là đối tượng nghiệp vụ, còn Instance là từng dữ liệu thực tế được lưu trong thực thể (entity / 엔터티) đó.
 
 Khi gom phần **Câu ghi nhớ cuối cùng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -1909,9 +1913,9 @@ Ta bắt đầu **Keyword: 속성(Attribute)** bằng câu hỏi: **khái niệm
 
 **속성은 엔터티를 설명하고 구체화하는 데이터 항목이다.**
 
-Attribute là mục dữ liệu dùng để mô tả và cụ thể hóa một Entity.
+Attribute là mục dữ liệu dùng để mô tả và cụ thể hóa một thực thể (entity / 엔터티).
 
-Ví dụ Entity `학생`:
+Ví dụ thực thể (entity / 엔터티) `학생`:
 
 ```
 학생
@@ -1923,7 +1927,7 @@ Ví dụ Entity `학생`:
 
 Trong đó:
 
-- `학생` là Entity.
+- `학생` là thực thể (entity / 엔터티).
 - `학번`, `이름`, `전공`, `학점` là Attribute.
 - Mỗi sinh viên cụ thể là một Instance.
 
@@ -2066,7 +2070,7 @@ Ta bắt đầu **2.1. Một Entity phải có Instance** bằng câu hỏi: **k
 
 **하나의 엔터티는 두 개 이상의 인스턴스 집합이어야 한다.**
 
-Một Entity phải là tập hợp gồm từ hai Instance trở lên.
+Một thực thể (entity / 엔터티) phải là tập hợp gồm từ hai Instance trở lên.
 
 Khi gom phần **2.1. Một Entity phải có Instance** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -2078,7 +2082,7 @@ Ta bắt đầu **Keyword: Instance** bằng câu hỏi: **khái niệm này gi�
 
 **인스턴스는 엔터티에 실제로 저장된 각각의 개별 데이터이다.**
 
-Instance là từng dữ liệu cụ thể được lưu trong Entity.
+Instance là từng dữ liệu cụ thể được lưu trong thực thể (entity / 엔터티).
 
 Ví dụ:
 
@@ -2104,9 +2108,9 @@ Biểu diễn dưới dạng bảng:
 
 Ở đây:
 
-- Bảng `학생` là Entity.
+- Bảng `학생` là thực thể (entity / 엔터티).
 - Mỗi hàng là một Instance.
-- Toàn bộ các hàng tạo thành tập hợp Instance của Entity.
+- Toàn bộ các hàng tạo thành tập hợp Instance của thực thể (entity / 엔터티).
 
 Khi gom phần **Keyword: Instance** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -2116,19 +2120,19 @@ Ta bắt đầu **Lưu ý quan trọng** bằng câu hỏi: **khái niệm này 
 
 #### Lưu ý quan trọng
 
-Trong tài liệu thi, câu “một Entity phải có từ hai Instance trở lên” thường được dùng để phân biệt Entity với một đối tượng đơn lẻ.
+Trong tài liệu thi, câu “một thực thể (entity / 엔터티) phải có từ hai Instance trở lên” thường được dùng để phân biệt thực thể (entity / 엔터티) với một đối tượng đơn lẻ.
 
-Tuy nhiên, trong database thực tế, một bảng mới tạo có thể chưa có dữ liệu:
+Tuy nhiên, trong cơ sở dữ liệu (database / 데이터베이스) thực tế, một bảng mới tạo có thể chưa có dữ liệu:
 
 ```
 CREATE TABLE STUDENT (...);
 ```
 
-Lúc này bảng vẫn là Entity dù chưa có Instance. Vì vậy:
+Lúc này bảng vẫn là thực thể (entity / 엔터티) dù chưa có Instance. Vì vậy:
 
 **시험에서는 엔터티를 인스턴스의 집합으로 이해하되, 실제 테이블은 인스턴스가 0개인 상태에서도 존재할 수 있다.**
 
-Khi thi, hãy hiểu Entity là tập hợp các Instance, nhưng trong thực tế một Table vẫn có thể tồn tại khi chưa có Instance nào.
+Khi thi, hãy hiểu thực thể (entity / 엔터티) là tập hợp các Instance, nhưng trong thực tế một bảng (table / 테이블) vẫn có thể tồn tại khi chưa có Instance nào.
 
 ---
 
@@ -2142,7 +2146,7 @@ Ta bắt đầu **2.2. Một Entity có từ hai Attribute trở lên** bằng c
 
 **하나의 엔터티는 두 개 이상의 속성을 가져야 한다.**
 
-Một Entity phải có từ hai Attribute trở lên.
+Một thực thể (entity / 엔터티) phải có từ hai Attribute trở lên.
 
 Ví dụ:
 
@@ -2154,9 +2158,9 @@ Ví dụ:
 - 학점
 ```
 
-Entity `학생` có bốn Attribute.
+Thực thể (entity / 엔터티) `학생` có bốn Attribute.
 
-Nếu chỉ có một thuộc tính duy nhất thì thường chưa đủ để mô tả một Entity có ý nghĩa.
+Nếu chỉ có một thuộc tính duy nhất thì thường chưa đủ để mô tả một thực thể (entity / 엔터티) có ý nghĩa.
 
 Khi gom phần **2.2. Một Entity có từ hai Attribute trở lên** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -2168,7 +2172,7 @@ Ta bắt đầu **Keyword: Entity 구성** bằng câu hỏi: **khái niệm nà
 
 **엔터티의 구성은 엔터티, 속성, 인스턴스의 관계로 이해해야 한다.**
 
-Cấu thành của Entity phải được hiểu thông qua quan hệ giữa Entity, Attribute và Instance.
+Cấu thành của thực thể (entity / 엔터티) phải được hiểu thông qua quan hệ giữa thực thể (entity / 엔터티), Attribute và Instance.
 
 ```
 Entity
@@ -2194,7 +2198,7 @@ Ta bắt đầu **2.3. Một Attribute có một Attribute Value** bằng câu h
 
 **하나의 속성은 하나의 속성값을 가져야 한다.**
 
-Một Attribute phải có một Attribute Value.
+Một Attribute phải có một Attribute giá trị (value / 값).
 
 Trong bảng:
 
@@ -2230,7 +2234,7 @@ Một ô không được chứa đồng thời hai giá trị `25` và `370`.
 
 **한 속성값에 25와 370을 함께 저장하면 하나의 속성이 여러 값을 가지게 되므로 원자성이 깨진다.**
 
-Nếu lưu đồng thời `25` và `370` trong một Attribute Value thì một Attribute có nhiều giá trị và tính nguyên tử bị phá vỡ.
+Nếu lưu đồng thời `25` và `370` trong một Attribute giá trị (value / 값) thì một Attribute có nhiều giá trị và tính nguyên tử bị phá vỡ.
 
 Khi gom phần **Ví dụ sai trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -2242,7 +2246,7 @@ Ta bắt đầu **Keyword: 원자성(Atomicity)** bằng câu hỏi: **khái ni�
 
 **원자성은 하나의 속성값이 더 이상 분해할 수 없는 하나의 값이어야 한다는 의미이다.**
 
-Tính nguyên tử nghĩa là mỗi Attribute Value phải là một giá trị duy nhất, không thể tiếp tục chia nhỏ trong phạm vi đó.
+Tính nguyên tử nghĩa là mỗi Attribute giá trị (value / 값) phải là một giá trị duy nhất, không thể tiếp tục chia nhỏ trong phạm vi đó.
 
 Ví dụ sai:
 
@@ -2360,7 +2364,7 @@ Ta bắt đầu **Keyword: 주식별자** bằng câu hỏi: **khái niệm này
 
 **주식별자는 엔터티의 각 인스턴스를 유일하게 식별하는 속성 또는 속성 집합이다.**
 
-Khóa định danh chính là Attribute hoặc tập hợp Attribute dùng để xác định duy nhất mỗi Instance của Entity.
+Khóa định danh chính là Attribute hoặc tập hợp Attribute dùng để xác định duy nhất mỗi Instance của thực thể (entity / 엔터티).
 
 Ví dụ:
 
@@ -2715,7 +2719,7 @@ Tính duy nhất là đặc tính trong đó các Attribute khác nhau không s�
 
 Ví dụ trong hình:
 
-Không nên dùng Attribute `이름` cho tất cả Entity:
+Không nên dùng Attribute `이름` cho tất cả thực thể (entity / 엔터티):
 
 ```
 교수 Entity → 이름
@@ -2775,7 +2779,7 @@ Ta bắt đầu **5.1. IE notation** bằng câu hỏi: **khái niệm này gi�
 
 **IE 표기법에서는 엔터티를 사각형으로 표현하고 내부에 속성명을 표시한다.**
 
-Trong ký pháp IE, Entity được biểu diễn bằng hình chữ nhật và tên Attribute được ghi bên trong.
+Trong ký pháp IE, thực thể (entity / 엔터티) được biểu diễn bằng hình chữ nhật và tên Attribute được ghi bên trong.
 
 Ví dụ:
 
@@ -2791,7 +2795,7 @@ Ví dụ:
 
 Ở đây:
 
-- `과목` là Entity.
+- `과목` là thực thể (entity / 엔터티).
 - `과목이름`, `교재이름`, `생성일자` là Attribute.
 
 ---
@@ -2860,11 +2864,11 @@ Ta bắt đầu **6.1. Định nghĩa** bằng câu hỏi: **khái niệm này g
 
 **도메인은 각 속성이 가질 수 있는 값의 범위이다.**
 
-Domain là phạm vi các giá trị mà một Attribute có thể nhận.
+Lĩnh vực (domain / 도메인) là phạm vi các giá trị mà một Attribute có thể nhận.
 
 **도메인은 속성의 데이터 타입, 길이, 제약조건 등을 지정한다.**
 
-Domain xác định kiểu dữ liệu, độ dài và các ràng buộc của Attribute.
+Lĩnh vực (domain / 도메인) xác định kiểu dữ liệu, độ dài và các ràng buộc của Attribute.
 
 Khi gom phần **6.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -2876,7 +2880,7 @@ Ta bắt đầu **Keyword: 도메인(Domain)** bằng câu hỏi: **khái niệm
 
 **도메인은 특정 속성에 입력할 수 있는 값의 규칙과 범위를 정의한 것이다.**
 
-Domain là tập hợp các quy tắc và phạm vi định nghĩa những giá trị có thể nhập vào một Attribute cụ thể.
+Lĩnh vực (domain / 도메인) là tập hợp các quy tắc và phạm vi định nghĩa những giá trị có thể nhập vào một Attribute cụ thể.
 
 ---
 
@@ -2898,7 +2902,7 @@ Ta bắt đầu **Địa chỉ** bằng câu hỏi: **khái niệm này giải q
 
 **주소 속성의 도메인은 길이가 20자리 이내인 문자열로 정의할 수 있다.**
 
-Domain của Attribute địa chỉ có thể được định nghĩa là chuỗi ký tự có độ dài không quá 20 ký tự.
+Lĩnh vực (domain / 도메인) của Attribute địa chỉ có thể được định nghĩa là chuỗi ký tự có độ dài không quá 20 ký tự.
 
 Ví dụ Oracle:
 
@@ -2916,7 +2920,7 @@ Ta bắt đầu **Điểm số** bằng câu hỏi: **khái niệm này giải q
 
 **학점 속성의 도메인은 0.0 이상 4.5 이하의 실수로 정의할 수 있다.**
 
-Domain của Attribute điểm số có thể được định nghĩa là số thực từ 0.0 đến 4.5.
+Lĩnh vực (domain / 도메인) của Attribute điểm số có thể được định nghĩa là số thực từ 0.0 đến 4.5.
 
 Ví dụ:
 
@@ -2935,7 +2939,7 @@ Ta bắt đầu **Keyword: 제약조건** bằng câu hỏi: **khái niệm này
 
 **제약조건은 속성에 입력되는 값이 반드시 만족해야 하는 규칙이다.**
 
-Constraint là quy tắc mà giá trị nhập vào Attribute bắt buộc phải thỏa mãn.
+Ràng buộc (constraint / 제약조건) là quy tắc mà giá trị nhập vào Attribute bắt buộc phải thỏa mãn.
 
 Ví dụ:
 
@@ -3281,7 +3285,7 @@ Ta bắt đầu **8.1. PK Attribute** bằng câu hỏi: **khái niệm này gi�
 
 **기본키 속성은 엔터티의 인스턴스를 구별할 수 있는 속성이다.**
 
-Primary Key Attribute là Attribute có thể phân biệt các Instance của Entity.
+Primary Key Attribute là Attribute có thể phân biệt các Instance của thực thể (entity / 엔터티).
 
 Khi gom phần **8.1. PK Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -3328,11 +3332,11 @@ Ta bắt đầu **8.2. FK Attribute** bằng câu hỏi: **khái niệm này gi�
 
 **외래키 속성은 다른 엔터티와의 관계에서 포함된 속성이다.**
 
-Foreign Key Attribute là Attribute được chứa trong quan hệ với Entity khác.
+Foreign Key Attribute là Attribute được chứa trong quan hệ với thực thể (entity / 엔터티) khác.
 
 **외래키는 다른 테이블의 기본키를 참조하여 엔터티 간의 관계를 표현한다.**
 
-Foreign Key tham chiếu Primary Key của bảng khác để biểu diễn quan hệ giữa các Entity.
+Foreign Key tham chiếu Primary Key của bảng khác để biểu diễn quan hệ giữa các thực thể (entity / 엔터티).
 
 Khi gom phần **8.2. FK Attribute** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -3416,7 +3420,7 @@ Ta bắt đầu **9.1. Single Value Attribute** bằng câu hỏi: **khái niệ
 
 **단일값 속성은 하나의 속성이 하나의 값만 가지는 속성이다.**
 
-Single Value Attribute là Attribute chỉ có một giá trị.
+Single giá trị (value / 값) Attribute là Attribute chỉ có một giá trị.
 
 Ví dụ:
 
@@ -3435,7 +3439,7 @@ Ta bắt đầu **Keyword: 단일값 속성** bằng câu hỏi: **khái niệm 
 
 **단일값 속성은 하나의 인스턴스에 대해 하나의 값만 저장되는 속성이다.**
 
-Single Value Attribute là Attribute mà mỗi Instance chỉ lưu một giá trị.
+Single giá trị (value / 값) Attribute là Attribute mà mỗi Instance chỉ lưu một giá trị.
 
 Ví dụ:
 
@@ -3456,7 +3460,7 @@ Ta bắt đầu **9.2. Multi Value Attribute** bằng câu hỏi: **khái niệm
 
 **다중값 속성은 하나의 속성이 여러 개의 값을 가지는 속성이다.**
 
-Multi Value Attribute là Attribute có nhiều giá trị.
+Multi giá trị (value / 값) Attribute là Attribute có nhiều giá trị.
 
 Ví dụ trong hình:
 
@@ -3474,7 +3478,7 @@ Ta bắt đầu **Keyword: 다중값 속성** bằng câu hỏi: **khái niệm 
 
 **다중값 속성은 한 인스턴스에 대해 같은 종류의 값이 여러 개 존재하는 속성이다.**
 
-Multi Value Attribute là Attribute trong đó một Instance có nhiều giá trị cùng loại.
+Multi giá trị (value / 값) Attribute là Attribute trong đó một Instance có nhiều giá trị cùng loại.
 
 Ví dụ:
 
@@ -3497,7 +3501,7 @@ Ta bắt đầu **9.3. Vì sao Multi Value Attribute là vấn đề?** bằng c
 
 **다중값 속성은 하나의 속성이 하나의 속성값을 가져야 한다는 원칙을 위반한다.**
 
-Multi Value Attribute vi phạm nguyên tắc một Attribute phải có một Attribute Value.
+Multi giá trị (value / 값) Attribute vi phạm nguyên tắc một Attribute phải có một Attribute giá trị (value / 값).
 
 Ví dụ không nên:
 
@@ -3525,7 +3529,7 @@ Ta bắt đầu **Cách xử lý 1: Chuẩn hóa thành Entity riêng** bằng c
 
 **다중값 속성은 제1정규화를 적용하거나 별도의 엔터티로 분리해야 한다.**
 
-Multi Value Attribute phải được xử lý bằng chuẩn hóa lần thứ nhất hoặc tách thành Entity riêng.
+Multi giá trị (value / 값) Attribute phải được xử lý bằng chuẩn hóa lần thứ nhất hoặc tách thành thực thể (entity / 엔터티) riêng.
 
 ```
 STUDENT
@@ -3557,7 +3561,7 @@ Ta bắt đầu **Cách xử lý 2: Tạo Relationship** bằng câu hỏi: **kh
 
 **분리한 엔터티는 원래 엔터티와 관계를 통해 연결해야 한다.**
 
-Entity được tách ra phải được liên kết với Entity ban đầu thông qua Relationship.
+Thực thể (entity / 엔터티) được tách ra phải được liên kết với thực thể (entity / 엔터티) ban đầu thông qua Relationship.
 
 ```
 STUDENT 1 ─── N STUDENT_HOBBY
@@ -3700,7 +3704,7 @@ Ta bắt đầu **11. Tổng hợp toàn bộ nội dung trong hai hình** bằn
 
 **속성은 엔터티를 설명하는 최소 단위의 데이터이며 각 인스턴스에 대해 하나의 값을 가져야 한다.**
 
-Attribute là đơn vị dữ liệu nhỏ nhất mô tả Entity và mỗi Instance phải có một giá trị tương ứng.
+Attribute là đơn vị dữ liệu nhỏ nhất mô tả thực thể (entity / 엔터티) và mỗi Instance phải có một giá trị tương ứng.
 
 **속성은 주식별자에 함수적으로 종속되어야 하며 업무에 필요한 정보만 포함해야 한다.**
 
@@ -3712,7 +3716,7 @@ Tên Attribute phải được đặt bằng danh từ rõ ràng được sử d
 
 **도메인은 속성이 가질 수 있는 값의 범위와 데이터 타입, 길이, 제약조건을 정의한다.**
 
-Domain định nghĩa phạm vi giá trị, kiểu dữ liệu, độ dài và ràng buộc mà Attribute có thể nhận.
+Lĩnh vực (domain / 도메인) định nghĩa phạm vi giá trị, kiểu dữ liệu, độ dài và ràng buộc mà Attribute có thể nhận.
 
 **속성은 기본 속성, 설계 속성, 파생 속성으로 분류할 수 있다.**
 
@@ -3724,7 +3728,7 @@ Attribute cũng có thể được phân loại thành PK, FK và General Attrib
 
 **속성값의 개수에 따라 단일값 속성과 다중값 속성으로 나눌 수 있다.**
 
-Theo số lượng giá trị, Attribute được chia thành Single Value và Multi Value Attribute.
+Theo số lượng giá trị, Attribute được chia thành Single giá trị (value / 값) và Multi giá trị (value / 값) Attribute.
 
 **분해 가능성에 따라 단순 속성과 복합 속성으로 나눌 수 있다.**
 
@@ -3817,7 +3821,7 @@ Ta bắt đầu **1.1. Định nghĩa trong tài liệu** bằng câu hỏi: **k
 
 **관계는 엔터티의 인스턴스 사이에 논리적인 연관성이 존재하거나 행위로서 서로에게 연관성이 부여된 상태이다.**
 
-Relationship là trạng thái trong đó giữa các Instance của Entity tồn tại sự liên quan về mặt logic hoặc sự liên quan được tạo ra thông qua một hành động.
+Relationship là trạng thái trong đó giữa các Instance của thực thể (entity / 엔터티) tồn tại sự liên quan về mặt lô-gic (logic / 논리) hoặc sự liên quan được tạo ra thông qua một hành động.
 
 Khi gom phần **1.1. Định nghĩa trong tài liệu** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -3829,7 +3833,7 @@ Ta bắt đầu **Keyword: 관계(Relationship)** bằng câu hỏi: **khái ni�
 
 **관계는 두 개 이상의 엔터티가 업무적으로 어떻게 연결되는지를 나타내는 데이터 모델의 구성 요소이다.**
 
-Relationship là thành phần của mô hình dữ liệu biểu diễn từ hai Entity trở lên liên kết với nhau về mặt nghiệp vụ như thế nào.
+Relationship là thành phần của mô hình dữ liệu biểu diễn từ hai thực thể (entity / 엔터티) trở lên liên kết với nhau về mặt nghiệp vụ như thế nào.
 
 Ví dụ trong hình:
 
@@ -3845,8 +3849,8 @@ Giảng viên dạy học viên.
 
 Ở đây:
 
-- `강사` là Entity.
-- `수강생` là Entity.
+- `강사` là thực thể (entity / 엔터티).
+- `수강생` là thực thể (entity / 엔터티).
 - `강사1`, `강사2` là các Instance của `강사`.
 - `학생1`, `학생2` là các Instance của `수강생`.
 - `가르친다` là Relationship.
@@ -3863,7 +3867,7 @@ Ta bắt đầu **1.2. Relationship ở cấp Entity và Instance** bằng câu 
 
 **엔터티 간의 관계는 실제로는 각 엔터티에 속한 인스턴스 간의 관계로 구성된다.**
 
-Relationship giữa các Entity thực chất được cấu thành từ Relationship giữa các Instance thuộc những Entity đó.
+Relationship giữa các thực thể (entity / 엔터티) thực chất được cấu thành từ Relationship giữa các Instance thuộc những thực thể (entity / 엔터티) đó.
 
 Ví dụ:
 
@@ -3919,7 +3923,7 @@ Ta bắt đầu **2.1. Định nghĩa Pairing** bằng câu hỏi: **khái niệ
 
 **페어링은 하나의 엔터티 안에서 인스턴스가 개별적으로 관계를 가지는 것이다.**
 
-Pairing là việc mỗi Instance trong một Entity có Relationship riêng với Instance của Entity khác.
+Pairing là việc mỗi Instance trong một thực thể (entity / 엔터티) có Relationship riêng với Instance của thực thể (entity / 엔터티) khác.
 
 Ví dụ trong hình:
 
@@ -3965,7 +3969,7 @@ Ta bắt đầu **2.2. Quan hệ và tập hợp Pairing** bằng câu hỏi: **
 
 **관계는 여러 개의 페어링을 논리적으로 표현한 것이다.**
 
-Relationship là cách biểu diễn logic của nhiều Pairing.
+Relationship là cách biểu diễn lô-gic (logic / 논리) của nhiều Pairing.
 
 Ví dụ:
 
@@ -4004,7 +4008,7 @@ Tài liệu cũng so sánh:
 
 **엔터티가 인스턴스의 집합이라면 관계는 페어링의 집합이다.**
 
-Nếu Entity là tập hợp các Instance thì Relationship là tập hợp các Pairing.
+Nếu thực thể (entity / 엔터티) là tập hợp các Instance thì Relationship là tập hợp các Pairing.
 
 ---
 
@@ -4048,11 +4052,11 @@ Ta bắt đầu **4.1. Nội dung trong tài liệu** bằng câu hỏi: **khái
 
 **존재에 의한 관계는 하나의 엔터티가 다른 엔터티에 항상 속해 있는 관계이다.**
 
-Relationship do sự tồn tại là quan hệ trong đó một Entity luôn thuộc về Entity khác.
+Relationship do sự tồn tại là quan hệ trong đó một thực thể (entity / 엔터티) luôn thuộc về thực thể (entity / 엔터티) khác.
 
 **각 엔터티는 독립적으로 존재할 수 있다.**
 
-Mỗi Entity có thể tồn tại độc lập.
+Mỗi thực thể (entity / 엔터티) có thể tồn tại độc lập.
 
 Trong hình:
 
@@ -4072,7 +4076,7 @@ Ta bắt đầu **Keyword: 존재에 의한 관계** bằng câu hỏi: **khái 
 
 **존재 관계는 어떤 행위가 발생하지 않아도 엔터티의 존재 사실만으로 성립하는 관계이다.**
 
-Relationship tồn tại là quan hệ được hình thành chỉ bởi sự tồn tại của Entity, không cần có một hành động cụ thể xảy ra.
+Relationship tồn tại là quan hệ được hình thành chỉ bởi sự tồn tại của thực thể (entity / 엔터티), không cần có một hành động cụ thể xảy ra.
 
 Ví dụ:
 
@@ -4094,7 +4098,7 @@ Ta bắt đầu **4.2. Đặc điểm của Relationship do sự tồn tại** b
 
 **존재 관계에서는 관련된 엔터티들이 각각 독립적으로 존재할 수 있다.**
 
-Trong Relationship tồn tại, các Entity liên quan có thể tồn tại độc lập.
+Trong Relationship tồn tại, các thực thể (entity / 엔터티) liên quan có thể tồn tại độc lập.
 
 Ví dụ:
 
@@ -4140,7 +4144,7 @@ Ta bắt đầu **Keyword: 연관관계(Association)** bằng câu hỏi: **khá
 
 **연관관계는 두 클래스 또는 엔터티가 구조적으로 연결되어 있음을 표현하는 관계이다.**
 
-Association là quan hệ biểu diễn việc hai Class hoặc Entity được liên kết với nhau về mặt cấu trúc.
+Association là quan hệ biểu diễn việc hai lớp (class / 클래스) hoặc thực thể (entity / 엔터티) được liên kết với nhau về mặt cấu trúc.
 
 Ví dụ:
 
@@ -4197,7 +4201,7 @@ Ta bắt đầu **Keyword: 멤버변수(Member Variable)** bằng câu hỏi: **
 
 **멤버변수는 클래스 내부에 선언되어 객체의 상태나 다른 객체와의 연결을 저장하는 변수이다.**
 
-Member Variable là biến được khai báo bên trong Class để lưu trạng thái của đối tượng hoặc kết nối với đối tượng khác.
+Member Variable là biến được khai báo bên trong lớp (class / 클래스) để lưu trạng thái của đối tượng hoặc kết nối với đối tượng khác.
 
 ---
 
@@ -4219,11 +4223,11 @@ Ta bắt đầu **5.1. Nội dung trong tài liệu** bằng câu hỏi: **khái
 
 **행위에 의한 관계는 특정한 행위가 발생하여 엔터티 간의 관계가 만들어지는 것이다.**
 
-Relationship do hành động là quan hệ được tạo ra do một hành động cụ thể xảy ra giữa các Entity.
+Relationship do hành động là quan hệ được tạo ra do một hành động cụ thể xảy ra giữa các thực thể (entity / 엔터티).
 
 **혼자서는 존재할 수 없는 엔터티인 사건 엔터티와 관련되는 경우가 많다.**
 
-Nó thường liên quan đến Event Entity, là Entity không thể tồn tại độc lập.
+Nó thường liên quan đến sự kiện (event / 이벤트) thực thể (entity / 엔터티), là thực thể (entity / 엔터티) không thể tồn tại độc lập.
 
 Ví dụ trong hình:
 
@@ -4266,7 +4270,7 @@ Ta bắt đầu **5.2. Event Entity thường không tồn tại độc lập** 
 
 **사건 엔터티는 다른 엔터티가 존재하고 특정 행위가 발생해야 생성될 수 있다.**
 
-Event Entity chỉ có thể được tạo ra khi các Entity khác tồn tại và một hành động cụ thể xảy ra.
+Sự kiện (event / 이벤트) thực thể (entity / 엔터티) chỉ có thể được tạo ra khi các thực thể (entity / 엔터티) khác tồn tại và một hành động cụ thể xảy ra.
 
 Ví dụ:
 
@@ -4301,7 +4305,7 @@ Ta bắt đầu **Keyword: 사건 엔터티(Event Entity)** bằng câu hỏi: *
 
 **사건 엔터티는 업무가 수행될 때마다 발생하는 거래나 사건을 저장하는 엔터티이다.**
 
-Event Entity lưu giao dịch hoặc sự kiện phát sinh mỗi khi nghiệp vụ được thực hiện.
+Sự kiện (event / 이벤트) thực thể (entity / 엔터티) lưu giao dịch hoặc sự kiện phát sinh mỗi khi nghiệp vụ được thực hiện.
 
 Ví dụ:
 
@@ -4325,7 +4329,7 @@ Ta bắt đầu **5.3. Biểu diễn trong UML** bằng câu hỏi: **khái ni�
 
 **UML에서는 행위에 의한 관계를 의존관계로 표현하고 점선으로 표시한다.**
 
-Trong UML, Relationship do hành động được biểu diễn là Dependency và dùng đường nét đứt.
+Trong UML, Relationship do hành động được biểu diễn là phụ thuộc (dependency / 의존성) và dùng đường nét đứt.
 
 Khi gom phần **5.3. Biểu diễn trong UML** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -4337,7 +4341,7 @@ Ta bắt đầu **Keyword: 의존관계(Dependency)** bằng câu hỏi: **khái
 
 **의존관계는 한 객체의 변화나 행위가 다른 객체에 영향을 주는 관계이다.**
 
-Dependency là quan hệ trong đó sự thay đổi hoặc hành động của một đối tượng ảnh hưởng đến đối tượng khác.
+Phụ thuộc (dependency / 의존성) là quan hệ trong đó sự thay đổi hoặc hành động của một đối tượng ảnh hưởng đến đối tượng khác.
 
 Ví dụ:
 
@@ -4348,7 +4352,7 @@ Customer ─ ─ ─ ─ > Order
 Ý nghĩa:
 
 - `Order` phụ thuộc vào hành động của `Customer`.
-- Khi khách hàng thực hiện hành động đặt hàng thì Order được tạo ra.
+- Khi khách hàng thực hiện hành động đặt hàng thì thứ tự (order / 순서) được tạo ra.
 
 ---
 
@@ -4362,7 +4366,7 @@ Ta bắt đầu **5.4. Biểu diễn trong Operation** bằng câu hỏi: **khá
 
 **의존관계는 오퍼레이션에서 파라미터 등으로 이용할 수 있다.**
 
-Dependency có thể được sử dụng dưới dạng Parameter trong Operation.
+Phụ thuộc (dependency / 의존성) có thể được sử dụng dưới dạng Parameter trong thao tác (operation / 연산).
 
 Ví dụ:
 
@@ -4376,9 +4380,9 @@ class Customer {
 
 Ở đây:
 
-- Phương thức `order()` là một Operation.
+- Phương thức `order()` là một thao tác (operation / 연산).
 - `Product product` là Parameter.
-- Hành động của Customer có thể tạo ra hoặc tác động đến Order.
+- Hành động của Customer có thể tạo ra hoặc tác động đến thứ tự (order / 순서).
 
 Khi gom phần **5.4. Biểu diễn trong Operation** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -4390,7 +4394,7 @@ Ta bắt đầu **Keyword: 오퍼레이션(Operation)** bằng câu hỏi: **kh�
 
 **오퍼레이션은 객체가 수행할 수 있는 동작이나 기능이다.**
 
-Operation là hành động hoặc chức năng mà một đối tượng có thể thực hiện.
+Thao tác (operation / 연산) là hành động hoặc chức năng mà một đối tượng có thể thực hiện.
 
 ---
 
@@ -4456,7 +4460,7 @@ Ta bắt đầu **6.1. 관계명 - Tên Relationship** bằng câu hỏi: **khá
 
 **관계명은 엔터티 간의 관계를 설명하는 이름이다.**
 
-Relationship Name là tên mô tả quan hệ giữa các Entity.
+Relationship Name là tên mô tả quan hệ giữa các thực thể (entity / 엔터티).
 
 **관계명은 애매한 동사를 피하고 현재형으로 표현해야 한다.**
 
@@ -4498,7 +4502,7 @@ Ta bắt đầu **Keyword: 관계명** bằng câu hỏi: **khái niệm này gi
 
 **관계명은 두 엔터티 사이에서 어떤 업무가 진행되는지 명확히 보여주는 동사이다.**
 
-Relationship Name là động từ cho thấy rõ nghiệp vụ nào diễn ra giữa hai Entity.
+Relationship Name là động từ cho thấy rõ nghiệp vụ nào diễn ra giữa hai thực thể (entity / 엔터티).
 
 Ví dụ:
 
@@ -4520,7 +4524,7 @@ Ta bắt đầu **6.2. Quan hệ phải đọc được từ cả hai phía** b�
 
 **관계명은 기준 엔터티와 대상 엔터티 양쪽에서 자연스럽게 읽혀야 한다.**
 
-Relationship Name phải có thể đọc tự nhiên từ cả phía Entity nguồn và Entity đích.
+Relationship Name phải có thể đọc tự nhiên từ cả phía thực thể (entity / 엔터티) nguồn và thực thể (entity / 엔터티) đích.
 
 Ví dụ:
 
@@ -4534,7 +4538,7 @@ CUSTOMER ── 주문한다 ── ORDER
 Khách hàng đặt hàng.
 ```
 
-Đọc từ phía Order:
+Đọc từ phía thứ tự (order / 순서):
 
 ```
 Đơn hàng được đặt bởi khách hàng.
@@ -4572,7 +4576,7 @@ Ta bắt đầu **Keyword: 관계차수(Cardinality)** bằng câu hỏi: **khá
 
 **관계차수는 한 인스턴스가 상대 엔터티의 몇 개 인스턴스와 연결될 수 있는지를 나타낸다.**
 
-Cardinality cho biết một Instance có thể liên kết với bao nhiêu Instance của Entity đối diện.
+Cardinality cho biết một Instance có thể liên kết với bao nhiêu Instance của thực thể (entity / 엔터티) đối diện.
 
 Ví dụ:
 
@@ -4624,7 +4628,7 @@ STUDENT M ─── N COURSE
 
 Một sinh viên học nhiều môn và một môn có nhiều sinh viên.
 
-Trong database quan hệ, quan hệ M:N thường cần bảng trung gian:
+Trong cơ sở dữ liệu (database / 데이터베이스) quan hệ, quan hệ M:N thường cần bảng trung gian:
 
 ```
 ENROLLMENT
@@ -4664,7 +4668,7 @@ Ta bắt đầu **Keyword: 필수참여관계** bằng câu hỏi: **khái niệ
 
 **필수참여관계는 해당 엔터티의 인스턴스가 관계에 반드시 참여해야 하는 관계이다.**
 
-Relationship bắt buộc là quan hệ trong đó Instance của Entity bắt buộc phải tham gia.
+Relationship bắt buộc là quan hệ trong đó Instance của thực thể (entity / 엔터티) bắt buộc phải tham gia.
 
 Ví dụ:
 
@@ -4688,7 +4692,7 @@ Ta bắt đầu **Keyword: 선택참여관계** bằng câu hỏi: **khái niệ
 
 **선택참여관계는 해당 엔터티의 인스턴스가 관계에 참여하지 않아도 되는 관계이다.**
 
-Relationship tùy chọn là quan hệ trong đó Instance của Entity có thể không tham gia.
+Relationship tùy chọn là quan hệ trong đó Instance của thực thể (entity / 엔터티) có thể không tham gia.
 
 Ví dụ:
 
@@ -4719,7 +4723,7 @@ Ta bắt đầu **7.1. Có quy tắc liên quan giữa hai Entity không?** bằ
 
 **두 엔터티 사이에 업무적으로 관심 있는 연관 규칙이 존재하는지 확인해야 한다.**
 
-Phải kiểm tra xem giữa hai Entity có tồn tại quy tắc liên quan được quan tâm về mặt nghiệp vụ hay không.
+Phải kiểm tra xem giữa hai thực thể (entity / 엔터티) có tồn tại quy tắc liên quan được quan tâm về mặt nghiệp vụ hay không.
 
 Ví dụ:
 
@@ -4733,7 +4737,7 @@ Có quy tắc:
 Khách hàng tạo đơn hàng.
 ```
 
-Nếu hai Entity hoàn toàn không có liên hệ nghiệp vụ thì không nên tạo Relationship chỉ vì chúng cùng nằm trong một hệ thống.
+Nếu hai thực thể (entity / 엔터티) hoàn toàn không có liên hệ nghiệp vụ thì không nên tạo Relationship chỉ vì chúng cùng nằm trong một hệ thống.
 
 ---
 
@@ -4747,7 +4751,7 @@ Ta bắt đầu **7.2. Có phát sinh sự kết hợp thông tin giữa hai Ent
 
 **두 엔터티의 인스턴스가 결합되어 새로운 업무 정보를 만들어내는지 확인해야 한다.**
 
-Phải kiểm tra xem các Instance của hai Entity có kết hợp với nhau để tạo ra thông tin nghiệp vụ mới hay không.
+Phải kiểm tra xem các Instance của hai thực thể (entity / 엔터티) có kết hợp với nhau để tạo ra thông tin nghiệp vụ mới hay không.
 
 Ví dụ:
 
@@ -4776,7 +4780,7 @@ Ta bắt đầu **7.3. Quy tắc liên kết có được mô tả trong tài li
 
 **업무기술서나 장표에 엔터티 간의 관계 연결 규칙이 서술되어 있는지 확인해야 한다.**
 
-Phải kiểm tra xem quy tắc liên kết giữa các Entity có được mô tả trong tài liệu nghiệp vụ hay không.
+Phải kiểm tra xem quy tắc liên kết giữa các thực thể (entity / 엔터티) có được mô tả trong tài liệu nghiệp vụ hay không.
 
 Khi gom phần **7.3. Quy tắc liên kết có được mô tả trong tài liệu nghiệp vụ không?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -4844,7 +4848,7 @@ Ta bắt đầu **8. Quan hệ định danh và không định danh** bằng câ
 
 ## 8. Quan hệ định danh và không định danh
 
-Đây là phần quan trọng vì liên quan trực tiếp đến Primary Key, Foreign Key và Strong Entity/Weak Entity.
+Đây là phần quan trọng vì liên quan trực tiếp đến Primary Key, Foreign Key và Strong thực thể (entity / 엔터티)/Weak thực thể (entity / 엔터티).
 
 ---
 
@@ -4858,11 +4862,11 @@ Ta bắt đầu **8.1. 식별자 관계 - Identifying Relationship** bằng câu
 
 **식별자 관계에서는 자식 엔터티의 주식별자에 부모 엔터티의 주식별자가 포함된다.**
 
-Trong Identifying Relationship, Primary Key của Entity cha được bao gồm trong Primary Key của Entity con.
+Trong Identifying Relationship, Primary Key của thực thể (entity / 엔터티) cha được bao gồm trong Primary Key của thực thể (entity / 엔터티) con.
 
 **부모 엔터티가 반드시 먼저 생성되어야 자식 엔터티가 생성될 수 있다.**
 
-Entity cha bắt buộc phải được tạo trước thì Entity con mới có thể được tạo.
+Thực thể (entity / 엔터티) cha bắt buộc phải được tạo trước thì thực thể (entity / 엔터티) con mới có thể được tạo.
 
 Khi gom phần **8.1. 식별자 관계 - Identifying Relationship** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -4887,7 +4891,7 @@ Phần này nối mạch SQL với “Ví dụ trong hình”, giải thích d�
 평점
 ```
 
-Nếu `수강` là Entity con và `학번` được đưa vào Primary Key của nó:
+Nếu `수강` là thực thể (entity / 엔터티) con và `학번` được đưa vào Primary Key của nó:
 
 ```
 수강 PK = 학번 + 과목코드 + 수강년도
@@ -4919,7 +4923,7 @@ Ta bắt đầu **8.2. Đặc điểm của Identifying Relationship** bằng c�
 
 **식별자 관계에서는 부모 엔터티 없이는 자식 엔터티가 생성될 수 없다.**
 
-Trong Identifying Relationship, Entity con không thể được tạo nếu không có Entity cha.
+Trong Identifying Relationship, thực thể (entity / 엔터티) con không thể được tạo nếu không có thực thể (entity / 엔터티) cha.
 
 Ví dụ:
 
@@ -4963,13 +4967,13 @@ Ta bắt đầu **8.3. Strong Entity và Weak Entity** bằng câu hỏi: **khá
 
 ### 8.3. Strong Entity và Weak Entity
 
-**식별자 관계에서 부모 엔터티는 Strong Entity이고 자식 엔터티는 Weak Entity로 볼 수 있다.**
+**식별자 관계에서 부모 엔터티는 Strong thực thể (entity / 엔터티)이고 자식 엔터티는 Weak thực thể (entity / 엔터티)로 볼 수 있다.**
 
-Trong Identifying Relationship, Entity cha có thể được xem là Strong Entity và Entity con là Weak Entity.
+Trong Identifying Relationship, thực thể (entity / 엔터티) cha có thể được xem là Strong thực thể (entity / 엔터티) và thực thể (entity / 엔터티) con là Weak thực thể (entity / 엔터티).
 
-**Weak Entity는 부모 엔터티 없이는 독립적으로 존재하기 어렵다.**
+**Weak thực thể (entity / 엔터티)는 부모 엔터티 없이는 독립적으로 존재하기 어렵다.**
 
-Weak Entity khó có thể tồn tại độc lập nếu không có Entity cha.
+Weak thực thể (entity / 엔터티) khó có thể tồn tại độc lập nếu không có thực thể (entity / 엔터티) cha.
 
 Khi gom phần **8.3. Strong Entity và Weak Entity** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -4979,9 +4983,9 @@ Ta bắt đầu **Keyword: Strong Entity** bằng câu hỏi: **khái niệm nà
 
 #### Keyword: Strong Entity
 
-**Strong Entity는 독립적인 주식별자를 가지고 다른 엔터티에 의존하지 않고 존재할 수 있는 엔터티이다.**
+**Strong thực thể (entity / 엔터티)는 독립적인 주식별자를 가지고 다른 엔터티에 의존하지 않고 존재할 수 있는 엔터티이다.**
 
-Strong Entity là Entity có Primary Key độc lập và có thể tồn tại mà không phụ thuộc vào Entity khác.
+Strong thực thể (entity / 엔터티) là thực thể (entity / 엔터티) có Primary Key độc lập và có thể tồn tại mà không phụ thuộc vào thực thể (entity / 엔터티) khác.
 
 Ví dụ:
 
@@ -4999,9 +5003,9 @@ Ta bắt đầu **Keyword: Weak Entity** bằng câu hỏi: **khái niệm này 
 
 #### Keyword: Weak Entity
 
-**Weak Entity는 부모 엔터티의 식별자나 존재에 의존하여 생성되고 관리되는 엔터티이다.**
+**Weak thực thể (entity / 엔터티)는 부모 엔터티의 식별자나 존재에 의존하여 생성되고 관리되는 엔터티이다.**
 
-Weak Entity là Entity được tạo và quản lý phụ thuộc vào Identifier hoặc sự tồn tại của Entity cha.
+Weak thực thể (entity / 엔터티) là thực thể (entity / 엔터티) được tạo và quản lý phụ thuộc vào Identifier hoặc sự tồn tại của thực thể (entity / 엔터티) cha.
 
 Ví dụ:
 
@@ -5024,7 +5028,7 @@ Tài liệu ghi rằng có thể giảm thiểu Identifying Relationship trong m
 
 **SQL 문의 조인 관계를 최소화해야 하는 경우 식별자 관계를 줄일 수 있다.**
 
-Khi cần giảm thiểu quan hệ Join trong câu SQL, có thể giảm số lượng Identifying Relationship.
+Khi cần giảm thiểu quan hệ phép nối (join / 조인) trong câu SQL, có thể giảm số lượng Identifying Relationship.
 
 **부모와 자식이 식별자를 공유하면 부모의 PK가 자식의 PK 구성에 포함되어 구조가 복잡해질 수 있다.**
 
@@ -5057,11 +5061,11 @@ Ta bắt đầu **9.1. Định nghĩa** bằng câu hỏi: **khái niệm này g
 
 **비식별자 관계에서는 부모의 주식별자가 자식 엔터티의 일반 속성으로 상속된다.**
 
-Trong Non-identifying Relationship, Primary Key của cha được kế thừa thành General Attribute của Entity con.
+Trong Non-identifying Relationship, Primary Key của cha được kế thừa thành General Attribute của thực thể (entity / 엔터티) con.
 
 **비식별자 관계에서는 부모 엔터티 없이도 자식 엔터티가 생성될 수 있다.**
 
-Trong Non-identifying Relationship, Entity con có thể được tạo mà không cần Entity cha.
+Trong Non-identifying Relationship, thực thể (entity / 엔터티) con có thể được tạo mà không cần thực thể (entity / 엔터티) cha.
 
 Khi gom phần **9.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -5109,7 +5113,7 @@ Phần này nối mạch SQL với “9.2. So sánh hai loại Relationship”, 
 | Tên tiếng Việt | Identifying Relationship | Non-identifying Relationship |
 | PK của cha | Là một phần PK của con | Chỉ là Attribute/FK của con |
 | Quan hệ | Mạnh | Yếu hơn |
-| Entity con | Phụ thuộc vào cha | Có thể tồn tại độc lập hơn |
+| thực thể (entity / 엔터티) con | Phụ thuộc vào cha | Có thể tồn tại độc lập hơn |
 | UML | Thường là quan hệ phụ thuộc mạnh | Thường là quan hệ liên kết yếu hơn |
 | Ký pháp | Đường liền | Đường nét đứt |
 | Ví dụ | `ORDER_ITEM` | `EMPLOYEE - DEPARTMENT` |
@@ -5136,7 +5140,7 @@ Ta bắt đầu **1. Entity con cần khóa riêng** bằng câu hỏi: **khái 
 
 **자식 엔터티가 독립적인 주식별자를 설정해야 하는 경우 비식별자 관계를 사용할 수 있다.**
 
-Có thể dùng Non-identifying Relationship khi Entity con cần thiết lập Primary Key độc lập.
+Có thể dùng Non-identifying Relationship khi thực thể (entity / 엔터티) con cần thiết lập Primary Key độc lập.
 
 Ví dụ:
 
@@ -5171,7 +5175,7 @@ Ta bắt đầu **3. Cha bị xóa trước con** bằng câu hỏi: **khái ni�
 
 Có thể cân nhắc Non-identifying Relationship khi Instance của cha có thể bị xóa trước Instance của con.
 
-Lưu ý: trong database thực tế, việc xóa cha trước con còn phụ thuộc vào Foreign Key, `ON DELETE CASCADE`, `ON DELETE SET NULL` và quy tắc nghiệp vụ.
+Lưu ý: trong cơ sở dữ liệu (database / 데이터베이스) thực tế, việc xóa cha trước con còn phụ thuộc vào Foreign Key, `ON DELETE CASCADE`, `ON DELETE SET NULL` và quy tắc nghiệp vụ.
 
 Khi gom phần **3. Cha bị xóa trước con** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -5205,11 +5209,11 @@ Ta bắt đầu **10.1. Định nghĩa** bằng câu hỏi: **khái niệm này 
 
 **식별자는 하나의 엔터티에 구성되어 있는 여러 개의 속성 중 엔터티를 대표하고 각각의 인스턴스를 구분 가능하게 만들어 주는 대표 속성이다.**
 
-Identifier là Attribute đại diện cho Entity trong số nhiều Attribute của Entity và giúp phân biệt từng Instance.
+Identifier là Attribute đại diện cho thực thể (entity / 엔터티) trong số nhiều Attribute của thực thể (entity / 엔터티) và giúp phân biệt từng Instance.
 
 **하나의 엔터티에는 반드시 하나의 유일한 식별자가 존재해야 한다.**
 
-Một Entity nhất định phải có một Identifier duy nhất.
+Một thực thể (entity / 엔터티) nhất định phải có một Identifier duy nhất.
 
 Khi gom phần **10.1. Định nghĩa** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -5221,7 +5225,7 @@ Ta bắt đầu **Keyword: 식별자(Identifier)** bằng câu hỏi: **khái ni
 
 **식별자는 엔터티 내부의 각 인스턴스를 유일하게 구분하는 속성 또는 속성의 조합이다.**
 
-Identifier là một Attribute hoặc tổ hợp Attribute dùng để phân biệt duy nhất từng Instance bên trong Entity.
+Identifier là một Attribute hoặc tổ hợp Attribute dùng để phân biệt duy nhất từng Instance bên trong thực thể (entity / 엔터티).
 
 Ví dụ:
 
@@ -5250,11 +5254,11 @@ Tài liệu phân biệt:
 
 **식별자는 논리 데이터 모델링 단계에서 사용하는 용어이다.**
 
-Identifier là thuật ngữ được sử dụng ở giai đoạn mô hình hóa dữ liệu logic.
+Identifier là thuật ngữ được sử dụng ở giai đoạn mô hình hóa dữ liệu lô-gic (logic / 논리).
 
 **키는 데이터베이스 테이블에 접근하기 위한 매개체로서 물리 데이터 모델링 단계에서 사용하는 용어이다.**
 
-Key là phương tiện truy cập bảng database, được sử dụng ở giai đoạn mô hình hóa dữ liệu vật lý.
+Key là phương tiện truy cập bảng cơ sở dữ liệu (database / 데이터베이스), được sử dụng ở giai đoạn mô hình hóa dữ liệu vật lý.
 
 Khi gom phần **10.2. Identifier và Key khác nhau thế nào?** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -5266,7 +5270,7 @@ Ta bắt đầu **Keyword: Identifier** bằng câu hỏi: **khái niệm này g
 
 **식별자는 업무와 논리 모델의 관점에서 엔터티를 구분하는 개념이다.**
 
-Identifier là khái niệm phân biệt Entity dưới góc nhìn nghiệp vụ và mô hình logic.
+Identifier là khái niệm phân biệt thực thể (entity / 엔터티) dưới góc nhìn nghiệp vụ và mô hình lô-gic (logic / 논리).
 
 Khi gom phần **Keyword: Identifier** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -5278,7 +5282,7 @@ Ta bắt đầu **Keyword: Key** bằng câu hỏi: **khái niệm này giải q
 
 **키는 실제 데이터베이스 테이블에서 행을 식별하거나 테이블 간의 관계를 연결하는 구현 수단이다.**
 
-Key là phương tiện triển khai trong database thực tế để xác định dòng hoặc liên kết các bảng.
+Key là phương tiện triển khai trong cơ sở dữ liệu (database / 데이터베이스) thực tế để xác định dòng hoặc liên kết các bảng.
 
 Ví dụ:
 
@@ -5312,7 +5316,7 @@ Ta bắt đầu **11.1. 유일성 - Tính duy nhất** bằng câu hỏi: **khá
 
 **주식별자에 의해 엔터티 내의 모든 인스턴스를 유일하게 구분할 수 있어야 한다.**
 
-Dựa vào Primary Identifier phải có thể phân biệt duy nhất tất cả Instance trong Entity.
+Dựa vào Primary Identifier phải có thể phân biệt duy nhất tất cả Instance trong thực thể (entity / 엔터티).
 
 Khi gom phần **11.1. 유일성 - Tính duy nhất** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -5411,7 +5415,7 @@ Ta bắt đầu **11.3. 불변성 - Tính bất biến** bằng câu hỏi: **kh
 
 **주식별자가 한 번 특정 엔터티에 지정되면 그 식별자의 값은 변경되면 안 된다.**
 
-Khi một Primary Identifier đã được gán cho một Entity cụ thể thì giá trị Identifier đó không nên thay đổi.
+Khi một Primary Identifier đã được gán cho một thực thể (entity / 엔터티) cụ thể thì giá trị Identifier đó không nên thay đổi.
 
 Khi gom phần **11.3. 불변성 - Tính bất biến** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -5575,9 +5579,9 @@ Ta bắt đầu **13.1. 주식별자 - Primary Identifier** bằng câu hỏi: *
 
 **주식별자는 엔터티의 인스턴스를 유일하게 식별하기 위해 선택된 대표 식별자이다.**
 
-Primary Identifier là Identifier đại diện được chọn để xác định duy nhất các Instance của Entity.
+Primary Identifier là Identifier đại diện được chọn để xác định duy nhất các Instance của thực thể (entity / 엔터티).
 
-Trong database:
+Trong cơ sở dữ liệu (database / 데이터베이스):
 
 ```
 주식별자 → Primary Key
@@ -5595,7 +5599,7 @@ Ta bắt đầu **13.2. 보조식별자 - Candidate Identifier** bằng câu h�
 
 **보조식별자는 엔터티 내에서 각 인스턴스를 구분할 수 있지만 대표성을 갖지 못하여 참조관계 연결이 불가능한 식별자이다.**
 
-Candidate Identifier có thể phân biệt từng Instance trong Entity nhưng không được chọn làm đại diện nên không dùng để thiết lập quan hệ tham chiếu theo cách chính.
+Candidate Identifier có thể phân biệt từng Instance trong thực thể (entity / 엔터티) nhưng không được chọn làm đại diện nên không dùng để thiết lập quan hệ tham chiếu theo cách chính.
 
 Tài liệu gọi là:
 
@@ -5611,7 +5615,7 @@ Ta bắt đầu **Lưu ý thuật ngữ** bằng câu hỏi: **khái niệm này
 
 #### Lưu ý thuật ngữ
 
-Trong lý thuyết database:
+Trong lý thuyết cơ sở dữ liệu (database / 데이터베이스):
 
 - Candidate Key là khóa có tính duy nhất và tối thiểu.
 - Một Candidate Key được chọn làm Primary Key.
@@ -5676,7 +5680,7 @@ Ta bắt đầu **14.2. Primary Key** bằng câu hỏi: **khái niệm này gi�
 
 **기본키는 후보 키 중에서 엔터티를 대표하는 키로 선택된 키이다.**
 
-Primary Key là Candidate Key được chọn làm khóa đại diện cho Entity.
+Primary Key là Candidate Key được chọn làm khóa đại diện cho thực thể (entity / 엔터티).
 
 Ví dụ:
 
@@ -5884,7 +5888,7 @@ CLASSROOM_CODE
 Một khóa ghép quá dài sẽ:
 
 - Khó đọc.
-- Khó Join.
+- Khó phép nối (join / 조인).
 - Tăng độ phức tạp SQL.
 - Làm khóa ngoại ở bảng con dài theo.
 - Khó phát triển và bảo trì.
@@ -5905,7 +5909,7 @@ Phần này nối mạch SQL với “16. 식별자 관계 và 비식별자 관�
 | --- | --- | --- |
 | PK cha | Được kế thừa vào PK con | Không thuộc PK con |
 | FK cha | Vừa là FK vừa là một phần PK | Chỉ là FK |
-| Entity con | Phụ thuộc mạnh vào cha | Có thể độc lập hơn |
+| thực thể (entity / 엔터티) con | Phụ thuộc mạnh vào cha | Có thể độc lập hơn |
 | Strong/Weak | Cha Strong, con Weak | Quan hệ yếu hơn |
 | Ký pháp | Đường liền | Đường nét đứt |
 | Mục tiêu | Thể hiện phụ thuộc định danh | Giảm phức tạp khóa |
@@ -5970,7 +5974,7 @@ Ta bắt đầu **17.1. Department** bằng câu hỏi: **khái niệm này gi�
 
 **부서번호는 부서 엔터티의 주식별자이면서 내부식별자, 단일식별자, 원조식별자이다.**
 
-`DEPARTMENT_ID` là Primary Identifier, Internal Identifier, Single Identifier và Natural Identifier của Entity Department.
+`DEPARTMENT_ID` là Primary Identifier, nội bộ (internal / 내부) Identifier, Single Identifier và Natural Identifier của thực thể (entity / 엔터티) Department.
 
 Giải thích:
 
@@ -5993,7 +5997,7 @@ Ta bắt đầu **17.2. Employee** bằng câu hỏi: **khái niệm này giải
 
 **부서번호는 부서 엔터티에서 물려받은 외부식별자이다.**
 
-`DEPARTMENT_ID` là External Identifier được kế thừa từ Entity Department.
+`DEPARTMENT_ID` là bên ngoài (external / 외부) Identifier được kế thừa từ thực thể (entity / 엔터티) Department.
 
 Khi gom phần **17.2. Employee** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -6005,7 +6009,7 @@ Ta bắt đầu **17.3. Education History** bằng câu hỏi: **khái niệm n�
 
 **교육이력의 사번은 사원 엔터티를 참조하는 외래키이다.**
 
-`EMPLOYEE_ID` trong Education History là Foreign Key tham chiếu đến Employee.
+`EMPLOYEE_ID` trong Education lịch sử (history / 이력) là Foreign Key tham chiếu đến Employee.
 
 Nếu `교육이력` dùng:
 
@@ -6025,11 +6029,11 @@ Ta bắt đầu **17.4. Purchase Request** bằng câu hỏi: **khái niệm nà
 
 **구매신청의 주문번호는 인조식별자로 사용될 수 있다.**
 
-`ORDER_NUMBER` của Purchase Request có thể được sử dụng làm Artificial Identifier.
+`ORDER_NUMBER` của Purchase yêu cầu (request / 요청) có thể được sử dụng làm Artificial Identifier.
 
 **사번과 주문일자와 순번을 결합하여 주문번호를 만들 수도 있다.**
 
-Có thể kết hợp Employee ID, ngày đặt hàng và số thứ tự để tạo Order Number.
+Có thể kết hợp Employee ID, ngày đặt hàng và số thứ tự để tạo thứ tự (order / 순서) Number.
 
 Ví dụ:
 
@@ -6059,7 +6063,7 @@ Ta bắt đầu **1. Bản chất của Relationship** bằng câu hỏi: **khá
 
 **관계는 엔터티 인스턴스 사이의 논리적 연관성 또는 업무 행위로 만들어지는 연결이다.**
 
-Relationship là sự liên kết được tạo ra bởi mối liên quan logic hoặc hành động nghiệp vụ giữa các Instance của Entity.
+Relationship là sự liên kết được tạo ra bởi mối liên quan lô-gic (logic / 논리) hoặc hành động nghiệp vụ giữa các Instance của thực thể (entity / 엔터티).
 
 ```
 Entity = Tập hợp Instance
@@ -6080,7 +6084,7 @@ Phần này nối mạch SQL với “2. Hai loại Relationship chính”, gi�
 
 | 한국어 | Tiếng Việt | Đặc điểm |
 | --- | --- | --- |
-| 존재에 의한 관계 | Relationship do sự tồn tại | Các Entity có thể tồn tại độc lập |
+| 존재에 의한 관계 | Relationship do sự tồn tại | Các thực thể (entity / 엔터티) có thể tồn tại độc lập |
 | 행위에 의한 관계 | Relationship do hành động | Quan hệ phát sinh do một hành động nghiệp vụ |
 
 ```
@@ -6103,7 +6107,7 @@ Phần này nối mạch SQL với “3. Quan hệ trong UML”, giải thích d
 | Quan hệ | Ký pháp UML | Ý nghĩa |
 | --- | --- | --- |
 | 연관관계 | Đường liền | Association |
-| 의존관계 | Đường nét đứt | Dependency |
+| 의존관계 | Đường nét đứt | phụ thuộc (dependency / 의존성) |
 
 Lưu ý:
 

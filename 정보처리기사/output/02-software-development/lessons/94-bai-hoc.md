@@ -2,7 +2,7 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **120-1: 소프트웨어의 분류 (Software Classification)** khi chuyển sang phần tiếp theo.
 
@@ -20,7 +20,9 @@ Mục đích của bài này là hiểu **113 ~ 115: 버전 관리 도구 방식
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** và nối nó với **120-1: 소프트웨어의 분류 (Software Classification)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
@@ -37,9 +39,9 @@ Mục đích của bài này là hiểu **113 ~ 115: 버전 관리 도구 방식
 | **분산 저장소 (Distributed Repo)** | Mỗi máy cá nhân đều là 1 cái Kho thu nhỏ (Local Repo). Copy (Clone) từ Server (Remote Repo) về. Server chết vẫn làm việc bình thường ở máy cá nhân, lúc nào Server sống lại đẩy lên sau (Push). Rất an toàn. | **Git**, Mercurial, Bitkeeper |
 
 - **Vietnamese Explanation:** SVN là kiểu "Đi mượn sách thư viện", mất thư viện là khỏi đọc. Git là kiểu "Photo cuốn sách về nhà", thư viện cháy mình vẫn còn sách đọc, sửa sách thoải mái.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 
-  - 공유 폴더 (Share folder) = RCS, PVCS. 
-  - 클라이언트/서버 = CVS, SVN (Server tập trung). 
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
+  - 공유 폴더 (Share folder) = RCS, PVCS.
+  - 클라이언트/서버 = CVS, SVN (Server tập trung).
   - 분산 (Phân tán) = Git.
 
 Như vậy, **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **120-1: 소프트웨어의 분류 (Software Classification)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

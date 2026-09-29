@@ -1,12 +1,15 @@
-# Matrix calculus, Jacobian, Hessian và automatic differentiation
+# Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation
 
-Khi một function nhận scalar và trả scalar, đạo hàm quen thuộc là một số. Nhưng trong optimization, machine learning, robotics, graphics và scientific computing, input thường là vector hoặc matrix và output cũng có thể là vector. Lúc đó câu hỏi “đạo hàm là gì?” cần được mở rộng thành **matrix calculus (행렬 미적분)**.
+> **Mạch đọc:** Đọc **ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ derivative một biến đến differential nhiều biến** sang **độ dốc (gradient / 기울기)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mục tiêu của matrix calculus không phải tạo thêm ký hiệu phức tạp. Nó cung cấp ngôn ngữ để mô tả độ nhạy của một hệ nhiều biến: nếu từng input thay đổi rất nhỏ, output thay đổi theo hướng nào và mạnh đến mức nào?
+
+Khi một hàm (function / 함수) nhận scalar và trả scalar, đạo hàm quen thuộc là một số. Nhưng trong tối ưu hóa (optimization / 최적화), machine học tập (learning / 학습), robotics, graphics và scientific computing, đầu vào (input / 입력) thường là véc-tơ (vector / 벡터) hoặc ma trận (matrix / 행렬) và đầu ra (output / 출력) cũng có thể là véc-tơ (vector / 벡터). Lúc đó câu hỏi “đạo hàm là gì?” cần được mở rộng thành **ma trận (matrix / 행렬) calculus (행렬 미적분)**.
+
+Mục tiêu của ma trận (matrix / 행렬) calculus không phải tạo thêm ký hiệu phức tạp. Nó cung cấp ngôn ngữ để mô tả độ nhạy của một hệ nhiều biến: nếu từng đầu vào (input / 입력) thay đổi rất nhỏ, đầu ra (output / 출력) thay đổi theo hướng nào và mạnh đến mức nào?
 
 ## Từ derivative một biến đến differential nhiều biến
 
-Với function scalar
+Với hàm (function / 함수) scalar
 
 ```math
 f:\mathbb R\to\mathbb R,
@@ -20,23 +23,23 @@ f(x+\Delta x)\approx f(x)+f'(x)\Delta x
 
 khi `Δx` nhỏ.
 
-Tư tưởng này quan trọng hơn công thức derivative. Derivative là **linear approximation tốt nhất ở local neighborhood**.
+Tư tưởng này quan trọng hơn công thức derivative. Derivative là **tuyến tính (linear / 선형) approximation tốt nhất ở cục bộ (local / 로컬) neighborhood**.
 
-Với function nhiều biến
+Với hàm (function / 함수) nhiều biến
 
 ```math
 f:\mathbb R^n\to\mathbb R,
 ```
 
-ta muốn một linear map biến perturbation `Δx` thành perturbation của output:
+ta muốn một tuyến tính (linear / 선형) map biến perturbation `Δx` thành perturbation của đầu ra (output / 출력):
 
 ```math
 f(x+\Delta x)\approx f(x)+\nabla f(x)^T\Delta x.
 ```
 
-Gradient xuất hiện vì output là scalar còn input là vector.
+Độ dốc (gradient / 기울기) xuất hiện vì đầu ra (output / 출력) là scalar còn đầu vào (input / 입력) là véc-tơ (vector / 벡터).
 
-## Gradient
+## Độ dốc (gradient / 기울기)
 
 Với
 
@@ -44,7 +47,7 @@ Với
 x=(x_1,\dots,x_n)^T,
 ```
 
-gradient là
+Độ dốc (gradient / 기울기) là
 
 ```math
 \nabla f(x)=
@@ -55,7 +58,7 @@ gradient là
 \end{bmatrix}.
 ```
 
-Gradient không đơn thuần là list partial derivatives. Trong Euclidean space nó chỉ direction của mức tăng nhanh nhất của function, còn magnitude cho biết local sensitivity theo direction đó.
+Độ dốc (gradient / 기울기) không đơn thuần là danh sách (list / 목록) partial derivatives. Trong Euclidean không gian (space / 공간) nó chỉ direction của mức tăng nhanh nhất của hàm (function / 함수), còn magnitude cho biết cục bộ (local / 로컬) sensitivity theo direction đó.
 
 Ví dụ
 
@@ -75,7 +78,7 @@ nên
 \nabla f(x)=2x.
 ```
 
-Điều này giải thích vì sao L2 regularization tạo gradient kéo parameter về origin.
+Điều này giải thích vì sao L2 regularization tạo độ dốc (gradient / 기울기) kéo parameter về origin.
 
 ## Jacobian
 
@@ -85,7 +88,7 @@ Nếu
 f:\mathbb R^n\to\mathbb R^m,
 ```
 
-thì mỗi output component phụ thuộc vào nhiều input components. **Jacobian (야코비안)** gom tất cả first-order partial derivatives vào một matrix:
+thì mỗi đầu ra (output / 출력) thành phần (component / 컴포넌트) phụ thuộc vào nhiều đầu vào (input / 입력) components. **Jacobian (야코비안)** gom tất cả first-order partial derivatives vào một ma trận (matrix / 행렬):
 
 ```math
 J_f(x)=
@@ -96,15 +99,15 @@ J_f(x)=
 \end{bmatrix}.
 ```
 
-Kích thước của Jacobian là `m × n` nếu input dimension là `n` và output dimension là `m`.
+Kích thước của Jacobian là `m × n` nếu đầu vào (input / 입력) dimension là `n` và đầu ra (output / 출력) dimension là `m`.
 
-Local approximation trở thành
+Cục bộ (local / 로컬) approximation trở thành
 
 ```math
 f(x+\Delta x)\approx f(x)+J_f(x)\Delta x.
 ```
 
-Đây chính là linear transformation tốt nhất xấp xỉ function nonlinear gần `x`.
+Đây chính là tuyến tính (linear / 선형) transformation tốt nhất xấp xỉ hàm (function / 함수) nonlinear gần `x`.
 
 ## Ví dụ Jacobian
 
@@ -128,9 +131,9 @@ J_f(x,y)=
 \end{bmatrix}.
 ```
 
-Nếu input dịch một lượng nhỏ `(Δx,Δy)`, matrix này dự đoán first-order change của cả hai output.
+Nếu đầu vào (input / 입력) dịch một lượng nhỏ `(Δx,Δy)`, ma trận (matrix / 행렬) này dự đoán first-order thay đổi (change / 변경) của cả hai đầu ra (output / 출력).
 
-## Chain rule ở dạng matrix
+## Chuỗi (chain / 사슬) quy tắc (rule / 규칙) ở dạng ma trận (matrix / 행렬)
 
 Nếu
 
@@ -144,13 +147,13 @@ thì
 J_{f\circ g}(x)=J_f(g(x))J_g(x).
 ```
 
-Thứ tự nhân matrix phản ánh đúng flow của perturbation: perturbation ở `x` trước hết bị `J_g` biến đổi thành perturbation ở `y`, rồi `J_f` biến đổi tiếp thành perturbation ở `z`.
+Thứ tự nhân ma trận (matrix / 행렬) phản ánh đúng luồng (flow / 흐름) của perturbation: perturbation ở `x` trước hết bị `J_g` biến đổi thành perturbation ở `y`, rồi `J_f` biến đổi tiếp thành perturbation ở `z`.
 
 Đây chính là nền tảng toán học của backpropagation.
 
 ## Hessian
 
-Với scalar function `f:R^n→R`, đạo hàm bậc hai được gom vào **Hessian (헤시안)**:
+Với scalar hàm (function / 함수) `f:R^n→R`, đạo hàm bậc hai được gom vào **Hessian (헤시안)**:
 
 ```math
 H_f(x)=
@@ -161,7 +164,7 @@ H_f(x)=
 \end{bmatrix}.
 ```
 
-Gradient nói slope. Hessian nói slope đang thay đổi ra sao, tức local curvature.
+Độ dốc (gradient / 기울기) nói slope. Hessian nói slope đang thay đổi ra sao, tức cục bộ (local / 로컬) curvature.
 
 Taylor approximation bậc hai là
 
@@ -170,7 +173,7 @@ f(x+\Delta x)\approx f(x)+\nabla f(x)^T\Delta x+
 \frac12\Delta x^T H_f(x)\Delta x.
 ```
 
-Nếu Hessian positive definite tại stationary point, function local cong lên theo mọi direction và điểm đó là strict local minimum. Nếu Hessian có cả positive và negative eigenvalues, stationary point là saddle point.
+Nếu Hessian positive definite tại stationary điểm (point / 지점), hàm (function / 함수) cục bộ (local / 로컬) cong lên theo mọi direction và điểm đó là strict cục bộ (local / 로컬) minimum. Nếu Hessian có cả positive và negative eigenvalues, stationary điểm (point / 지점) là saddle điểm (point / 지점).
 
 ## Quadratic form
 
@@ -190,9 +193,9 @@ và `A` symmetric,
 H_f(x)=A.
 ```
 
-Quadratic functions đặc biệt quan trọng vì curvature là constant. Nhiều optimization algorithms local xem nonlinear objective như một quadratic approximation.
+Quadratic functions đặc biệt quan trọng vì curvature là constant. Nhiều tối ưu hóa (optimization / 최적화) algorithms cục bộ (local / 로컬) xem nonlinear mục tiêu (objective / 목표) như một quadratic approximation.
 
-## Đạo hàm theo matrix
+## Đạo hàm theo ma trận (matrix / 행렬)
 
 Giả sử
 
@@ -206,19 +209,19 @@ Nếu `A` symmetric,
 \nabla_X f=2AX.
 ```
 
-Matrix calculus thường dùng trace identities để biến expressions về dạng dễ differentiate. Một identity rất hữu ích là
+Ma trận (matrix / 행렬) calculus thường dùng dấu vết (trace / 추적) identities để biến expressions về dạng dễ differentiate. Một định danh (identity / 식별자) rất hữu ích là
 
 ```math
 \operatorname{tr}(ABC)=\operatorname{tr}(BCA)=\operatorname{tr}(CAB).
 ```
 
-Trace cho phép đưa differential về dạng
+Dấu vết (trace / 추적) cho phép đưa differential về dạng
 
 ```math
 df=\operatorname{tr}(G^T dX),
 ```
 
-sau đó đọc gradient `G`.
+sau đó đọc độ dốc (gradient / 기울기) `G`.
 
 ## Differential notation
 
@@ -260,21 +263,21 @@ nên
 \nabla f=(A+A^T)x.
 ```
 
-Nếu `A` symmetric thì gradient trở thành `2Ax`.
+Nếu `A` symmetric thì độ dốc (gradient / 기울기) trở thành `2Ax`.
 
 Differential notation thường giảm lỗi transpose khi expression phức tạp.
 
 ## Shape checking
 
-Trong matrix calculus, kiểm tra shape là phương pháp debugging rất mạnh. Nếu `x∈R^n`, gradient của scalar theo `x` phải có `n` components. Nếu `f:R^n→R^m`, Jacobian phải ánh xạ perturbation dimension `n` sang output perturbation dimension `m`.
+Trong ma trận (matrix / 행렬) calculus, kiểm tra shape là phương pháp debugging rất mạnh. Nếu `x∈R^n`, độ dốc (gradient / 기울기) của scalar theo `x` phải có `n` components. Nếu `f:R^n→R^m`, Jacobian phải ánh xạ perturbation dimension `n` sang đầu ra (output / 출력) perturbation dimension `m`.
 
-Nếu một expression derivative tạo shape không phù hợp với vai trò linear map của nó, nhiều khả năng notation hoặc transpose đang sai.
+Nếu một expression derivative tạo shape không phù hợp với vai trò tuyến tính (linear / 선형) map của nó, nhiều khả năng notation hoặc transpose đang sai.
 
 ## Forward-mode automatic differentiation
 
 **Automatic differentiation — AD (자동미분)** không phải symbolic differentiation và cũng không phải numerical finite difference.
 
-Ý tưởng là decomposed computation thành elementary operations và propagate derivative chính xác theo chain rule.
+Ý tưởng là decomposed computation thành elementary operations và propagate derivative chính xác theo chuỗi (chain / 사슬) quy tắc (rule / 규칙).
 
 Ví dụ
 
@@ -290,7 +293,7 @@ v=\sin u,
 y=3v.
 ```
 
-Forward mode propagate cùng lúc value và derivative:
+Forward chế độ (mode / 모드) propagate cùng lúc giá trị (value / 값) và derivative:
 
 ```math
 \dot u=2x\dot x,
@@ -304,19 +307,19 @@ Forward mode propagate cùng lúc value và derivative:
 \dot y=3\dot v.
 ```
 
-Nếu input dimension nhỏ và output dimension lớn, forward mode thường phù hợp.
+Nếu đầu vào (input / 입력) dimension nhỏ và đầu ra (output / 출력) dimension lớn, forward chế độ (mode / 모드) thường phù hợp.
 
 ## Reverse-mode automatic differentiation
 
-Reverse mode trước tiên chạy computation forward để lưu intermediate values, sau đó đi ngược graph để propagate sensitivities từ output về inputs.
+Reverse chế độ (mode / 모드) trước tiên chạy computation forward để lưu intermediate values, sau đó đi ngược đồ thị (graph / 그래프) để propagate sensitivities từ đầu ra (output / 출력) về inputs.
 
-Với scalar loss `L`, ta propagate các quantities dạng
+Với scalar mất mát (loss / 손실) `L`, ta propagate các quantities dạng
 
 ```math
 \bar x=\frac{\partial L}{\partial x}.
 ```
 
-Mỗi operation local biết cách nhận upstream gradient và tạo downstream gradients.
+Mỗi thao tác (operation / 연산) cục bộ (local / 로컬) biết cách nhận upstream độ dốc (gradient / 기울기) và tạo downstream gradients.
 
 Nếu
 
@@ -324,21 +327,21 @@ Nếu
 y=f(x),
 ```
 
-thì reverse mode thực hiện vector-Jacobian product thay vì materialize full Jacobian.
+thì reverse chế độ (mode / 모드) thực hiện vector-Jacobian sản phẩm (product / 제품) thay vì materialize full Jacobian.
 
-Đây là lý do reverse mode cực kỳ hiệu quả khi output là một scalar loss còn model có hàng triệu parameters.
+Đây là lý do reverse chế độ (mode / 모드) cực kỳ hiệu quả khi đầu ra (output / 출력) là một scalar mất mát (loss / 손실) còn mô hình (model / 모델) có hàng triệu parameters.
 
-## Backpropagation là reverse-mode AD trên computational graph
+## Backpropagation là reverse-mode AD trên computational đồ thị (graph / 그래프)
 
-Trong neural network, layers tạo một computational graph. Forward pass tính activations và loss. Backward pass áp dụng chain rule từ loss về từng parameter.
+Trong neural mạng (network / 네트워크), layers tạo một computational đồ thị (graph / 그래프). Forward pass tính activations và mất mát (loss / 손실). Backward pass áp dụng chuỗi (chain / 사슬) quy tắc (rule / 규칙) từ mất mát (loss / 손실) về từng parameter.
 
-Ví dụ linear layer
+Ví dụ tuyến tính (linear / 선형) tầng (layer / 계층)
 
 ```math
 y=Wx+b
 ```
 
-với upstream gradient `g=∂L/∂y` cho
+với upstream độ dốc (gradient / 기울기) `g=∂L/∂y` cho
 
 ```math
 \frac{\partial L}{\partial x}=W^Tg,
@@ -352,9 +355,9 @@ với upstream gradient `g=∂L/∂y` cho
 \frac{\partial L}{\partial b}=g.
 ```
 
-Ba công thức này không phải mẹo deep learning; chúng là matrix chain rule.
+Ba công thức này không phải mẹo deep học tập (learning / 학습); chúng là ma trận (matrix / 행렬) chuỗi (chain / 사슬) quy tắc (rule / 규칙).
 
-## Finite difference và vì sao không dùng để train network
+## Finite difference và vì sao không dùng để train mạng (network / 네트워크)
 
 Derivative có thể xấp xỉ bằng
 
@@ -362,35 +365,35 @@ Derivative có thể xấp xỉ bằng
 f'(x)\approx\frac{f(x+h)-f(x)}{h}.
 ```
 
-Nhưng `h` quá lớn tạo truncation error; `h` quá nhỏ tạo floating-point cancellation. Với hàng triệu parameters, finite difference còn yêu cầu số lần evaluate function rất lớn.
+Nhưng `h` quá lớn tạo truncation lỗi (error / 오류); `h` quá nhỏ tạo floating-point cancellation. Với hàng triệu parameters, finite difference còn yêu cầu số lần evaluate hàm (function / 함수) rất lớn.
 
-Automatic differentiation tránh hai vấn đề đó bằng cách tính derivative qua algebra của computation graph ở machine precision.
+Automatic differentiation tránh hai vấn đề đó bằng cách tính derivative qua algebra của computation đồ thị (graph / 그래프) ở machine precision.
 
-## Jacobian-vector product và vector-Jacobian product
+## Jacobian-vector sản phẩm (product / 제품) và vector-Jacobian sản phẩm (product / 제품)
 
-Trong systems lớn ta hiếm khi muốn materialize Jacobian đầy đủ.
+Trong các hệ thống (systems / 시스템들) lớn ta hiếm khi muốn materialize Jacobian đầy đủ.
 
-Forward mode thường tính
+Forward chế độ (mode / 모드) thường tính
 
 ```math
 Jv,
 ```
 
-nghĩa là effect của perturbation direction `v` lên output.
+nghĩa là tác động (effect / 효과) của perturbation direction `v` lên đầu ra (output / 출력).
 
-Reverse mode thường tính
+Reverse chế độ (mode / 모드) thường tính
 
 ```math
 v^TJ,
 ```
 
-nghĩa là propagate sensitivity từ output backward.
+nghĩa là propagate sensitivity từ đầu ra (output / 출력) backward.
 
-Cách nhìn này giải thích performance của modern autodiff frameworks tốt hơn việc tưởng rằng chúng xây một giant Jacobian matrix.
+Cách nhìn này giải thích hiệu năng (performance / 성능) của hiện đại (modern / 현대적) autodiff frameworks tốt hơn việc tưởng rằng chúng xây một giant Jacobian ma trận (matrix / 행렬).
 
-## Hessian-vector product
+## Hessian-vector sản phẩm (product / 제품)
 
-Second-order optimization đôi khi cần curvature nhưng Hessian `n×n` quá lớn để materialize. Có thể tính trực tiếp
+Second-order tối ưu hóa (optimization / 최적화) đôi khi cần curvature nhưng Hessian `n×n` quá lớn để materialize. Có thể tính trực tiếp
 
 ```math
 Hv
@@ -398,18 +401,20 @@ Hv
 
 bằng combinations của automatic differentiation mà không lưu toàn bộ Hessian.
 
-Điều này quan trọng trong Newton-CG, curvature analysis và một số meta-learning methods.
+Điều này quan trọng trong Newton-CG, curvature phân tích (analysis / 분석) và một số meta-learning methods.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-Derivative nhiều chiều nên được hiểu như một **linear map của perturbations**. Gradient, Jacobian và Hessian chỉ là các representations khác nhau của local sensitivity và curvature. Automatic differentiation là kỹ thuật thực thi chain rule trên computational graph mà không cần viết symbolic derivative bằng tay.
+Derivative nhiều chiều nên được hiểu như một **tuyến tính (linear / 선형) map của perturbations**. độ dốc (gradient / 기울기), Jacobian và Hessian chỉ là các representations khác nhau của cục bộ (local / 로컬) sensitivity và curvature. Automatic differentiation là kỹ thuật thực thi chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên computational đồ thị (graph / 그래프) mà không cần viết symbolic derivative bằng tay.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Gradient không phải lúc nào cũng là “derivative duy nhất” của vector function; vector-output function tự nhiên có Jacobian. Backpropagation cũng không phải một algorithm optimization riêng: nó là cách tính gradients. Gradient descent mới là algorithm dùng gradients đó để update parameters.
+Độ dốc (gradient / 기울기) không phải lúc nào cũng là “derivative duy nhất” của véc-tơ (vector / 벡터) hàm (function / 함수); vector-output hàm (function / 함수) tự nhiên có Jacobian. Backpropagation cũng không phải một thuật toán (algorithm / 알고리즘) tối ưu hóa (optimization / 최적화) riêng: nó là cách tính gradients. độ dốc (gradient / 기울기) descent mới là thuật toán (algorithm / 알고리즘) dùng gradients đó để cập nhật (update / 업데이트) parameters.
 
-Autodiff không phải finite difference. Nó không perturb input bằng một `h` nhỏ mà propagate derivatives qua các elementary operations.
+Autodiff không phải finite difference. Nó không perturb đầu vào (input / 입력) bằng một `h` nhỏ mà propagate derivatives qua các elementary operations.
 
 ## Liên kết kiến thức
 
-Nên đọc sau [Multivariable calculus](../05_calculus/04_multivariable_calculus.md), [Linear transformations](./02_linear_transformations.md) và [Tensor & multilinear algebra](./08_tensors_and_multilinear_algebra.md). Chapter này nối trực tiếp tới [Gradient descent và convexity](../08_optimization_numerical/01_gradient_descent_and_convexity.md), [Taylor approximation](../05_calculus/08_taylor_series_and_local_approximation.md) và toàn bộ machine learning optimization.
+Nên đọc sau [Multivariable calculus](../05_calculus/04_multivariable_calculus.md), [Linear transformations](./02_linear_transformations.md) và [Tensor & multilinear algebra](./08_tensors_and_multilinear_algebra.md). Chapter này nối trực tiếp tới [Gradient descent và convexity](../08_optimization_numerical/01_gradient_descent_and_convexity.md), [Taylor approximation](../05_calculus/08_taylor_series_and_local_approximation.md) và toàn bộ machine học tập (learning / 학습) tối ưu hóa (optimization / 최적화).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

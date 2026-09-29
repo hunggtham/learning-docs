@@ -1,22 +1,25 @@
-# Text Normalization và Tokenization
+# Văn bản (text / 텍스트) Normalization và Tokenization
 
-Text model không nhận trực tiếp “câu”. Nó nhận một sequence discrete IDs. **Normalization (정규화)** quyết định canonical form của raw text; **tokenization (토큰화)** quyết định cách chia text thành units và map chúng vào vocabulary.
+> **Mạch đọc:** Đặt **văn bản (text / 텍스트) Normalization và Tokenization** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Unicode trước khi nói tokenization** sang **trường hợp (case / 사례) Folding**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Đây là infrastructure layer cực quan trọng: tokenization ảnh hưởng sequence length, multilingual fairness, context cost, vocabulary size, OOV behavior, code handling và generation boundary.
+
+Văn bản (text / 텍스트) mô hình (model / 모델) không nhận trực tiếp “câu”. Nó nhận một chuỗi (sequence / 시퀀스) discrete IDs. **Normalization (정규화)** quyết định chuẩn gốc (canonical / 정본) form của raw văn bản (text / 텍스트); **tokenization (토큰화)** quyết định cách chia văn bản (text / 텍스트) thành units và map chúng vào vocabulary.
+
+Đây là hạ tầng (infrastructure / 인프라) tầng (layer / 계층) cực quan trọng: tokenization ảnh hưởng chuỗi (sequence / 시퀀스) length, multilingual fairness, ngữ cảnh (context / 맥락) chi phí (cost / 비용), vocabulary kích thước (size / 크기), OOV hành vi (behavior / 동작), mã (code / 코드) handling và generation ranh giới (boundary / 경계).
 
 ## Unicode trước khi nói tokenization
 
-Text là Unicode code points được encode thành bytes như UTF-8. Cùng visual character có thể có multiple Unicode compositions.
+Văn bản (text / 텍스트) là Unicode mã (code / 코드) points được encode thành bytes như UTF-8. Cùng visual character có thể có multiple Unicode compositions.
 
-Ví dụ accented character có thể precomposed hoặc base + combining mark. Unicode normalization forms:
+Ví dụ accented character có thể precomposed hoặc cơ sở (base / 기반) + combining mark. Unicode normalization forms:
 
-- NFC: canonical compose;
-- NFD: canonical decompose;
-- NFKC/NFKD: compatibility normalization, có thể merge distinctions.
+- NFC: chuẩn gốc (canonical / 정본) compose;
+- NFD: chuẩn gốc (canonical / 정본) decompose;
+- NFKC/NFKD: tính tương thích (compatibility / 호환성) normalization, có thể merge distinctions.
 
-Không nên blindly NFKC nếu distinctions matter, e.g. symbols/code/user identifiers.
+Không nên blindly NFKC nếu distinctions matter, e.g. symbols/mã (code / 코드)/người dùng (user / 사용자) identifiers.
 
-## Case Folding
+## Trường hợp (case / 사례) Folding
 
 Lowercasing reduces vocabulary sparsity:
 
@@ -31,21 +34,21 @@ US vs us
 Apple company vs apple fruit
 ```
 
-Modern foundation models often preserve case and let tokenizer/model learn pattern.
+Hiện đại (modern / 현대적) foundation các mô hình (models / 모델들) often preserve trường hợp (case / 사례) and let tokenizer/mô hình (model / 모델) learn mẫu (pattern / 패턴).
 
 ## Punctuation và whitespace
 
-Old pipelines often remove punctuation/stopwords. For LLMs this can destroy grammar, code, numbers and style information.
+Old pipelines often remove punctuation/stopwords. For LLMs this can destroy grammar, mã (code / 코드), numbers and style thông tin (information / 정보).
 
-Modern tokenizers generally preserve much surface form, sometimes encode leading-space behavior explicitly.
+Hiện đại (modern / 현대적) tokenizers generally preserve much surface form, sometimes encode leading-space hành vi (behavior / 동작) explicitly.
 
-Whitespace matters in Python/code and document structure.
+Whitespace matters in Python/mã (code / 코드) and document cấu trúc (structure / 구조).
 
 ## Word-level Tokenization
 
 Split words then assign IDs.
 
-Advantages: intuitive semantic units.
+Advantages: intuitive ngữ nghĩa (semantic / 의미적) units.
 
 Problems:
 
@@ -54,13 +57,13 @@ Problems:
 - morphology explosion;
 - multilingual scripts.
 
-Unknown words map `<UNK>`, losing internal structure.
+Unknown words map `<UNK>`, losing nội bộ (internal / 내부) cấu trúc (structure / 구조).
 
 ## Character-level Tokenization
 
-Vocabulary small and no word OOV, but sequences much longer. Model must learn morphology/word structure from many steps.
+Vocabulary small and no word OOV, but sequences much longer. mô hình (model / 모델) must learn morphology/word cấu trúc (structure / 구조) from many steps.
 
-Trade-off:
+Sự đánh đổi (trade-off / 트레이드오프):
 
 ```text
 smaller vocabulary ↔ longer sequences
@@ -71,11 +74,11 @@ Subword methods find middle ground.
 
 ## Byte-level Tokenization
 
-Represent UTF-8 bytes, vocabulary base ≤256 symbols plus merges/special tokens. Any string representable, no `<UNK>` needed.
+Represent UTF-8 bytes, vocabulary cơ sở (base / 기반) ≤256 symbols plus merges/special tokens. Any string representable, no `<UNK>` needed.
 
 But non-ASCII languages may use multiple bytes per character, increasing raw length before merges.
 
-Byte-level BPE-like tokenizers can still learn common multi-byte sequences into larger tokens.
+Byte-level BPE-like tokenizers can still learn dùng chung (common / 공통) multi-byte sequences into larger tokens.
 
 ## Byte Pair Encoding (BPE)
 
@@ -89,12 +92,12 @@ low lower newest widest
 
 Frequent pair merges create subwords.
 
-At inference, word decomposes into known subword units.
+At suy luận (inference / 추론), word decomposes into known subword units.
 
-BPE vocabulary size is design trade-off:
+BPE vocabulary kích thước (size / 크기) is thiết kế (design / 설계) sự đánh đổi (trade-off / 트레이드오프):
 
-- larger vocab → shorter sequence, bigger embedding/output matrices;
-- smaller vocab → longer sequence, finer reuse.
+- larger vocab → shorter chuỗi (sequence / 시퀀스), bigger embedding/đầu ra (output / 출력) matrices;
+- smaller vocab → longer chuỗi (sequence / 시퀀스), finer reuse.
 
 ## WordPiece
 
@@ -106,33 +109,33 @@ Typical visual convention:
 play ##ing
 ```
 
-`##` indicates continuation in one implementation, not universal concept.
+`##` indicates continuation in one hiện thực (implementation / 구현), not universal concept.
 
-## Unigram Language Model Tokenization
+## Unigram ngôn ngữ (language / 언어) mô hình (model / 모델) Tokenization
 
 SentencePiece Unigram starts large candidate vocabulary and removes pieces optimizing probabilistic segmentation likelihood.
 
-A string may have multiple possible segmentations; tokenizer chooses high-probability one, and subword regularization can sample alternatives during training.
+A string may have multiple possible segmentations; tokenizer chooses high-probability one, and subword regularization can mẫu (sample / 표본) alternatives during huấn luyện (training / 학습).
 
 ## SentencePiece
 
-SentencePiece operates raw text independent of whitespace-token preprocessor and supports BPE/Unigram variants. Whitespace can be encoded as special visible marker such as `▁`.
+SentencePiece operates raw văn bản (text / 텍스트) independent of whitespace-token preprocessor and supports BPE/Unigram variants. Whitespace can be encoded as special visible marker such as `▁`.
 
 Useful multilingual languages where word segmentation rules differ.
 
 ## Tokenization là learned compression scheme
 
-Common strings become longer token pieces; rare patterns decompose smaller. Thus tokenizer allocates vocabulary capacity according to corpus frequency.
+Dùng chung (common / 공통) strings become longer đơn vị từ (token / 토큰) pieces; rare patterns decompose smaller. Thus tokenizer allocates vocabulary sức chứa (capacity / 용량) according to corpus frequency.
 
-This creates distributional bias: languages underrepresented during tokenizer training may require more tokens per sentence, increasing cost/context usage.
+This creates distributional độ lệch (bias / 편향): languages underrepresented during tokenizer huấn luyện (training / 학습) may require more tokens per sentence, increasing chi phí (cost / 비용)/ngữ cảnh (context / 맥락) usage.
 
-## Multilingual Token Efficiency
+## Multilingual đơn vị từ (token / 토큰) Efficiency
 
-Nếu English phrase 10 tokens nhưng Vietnamese/Korean equivalent 18 tokens, same semantic content consumes more context and inference compute.
+Nếu English phrase 10 tokens nhưng Vietnamese/Korean equivalent 18 tokens, same ngữ nghĩa (semantic / 의미적) content consumes more ngữ cảnh (context / 맥락) and suy luận (inference / 추론) compute.
 
-Tokenizer quality can affect multilingual performance/cost, even before model architecture.
+Tokenizer chất lượng (quality / 품질) can affect multilingual hiệu năng (performance / 성능)/chi phí (cost / 비용), even before mô hình (model / 모델) kiến trúc (architecture / 아키텍처).
 
-Measure tokens per character/word/content across target languages when deploying multilingual systems.
+Measure tokens per character/word/content across mục tiêu (target / 대상) languages when deploying multilingual các hệ thống (systems / 시스템들).
 
 ## Korean Tokenization
 
@@ -140,7 +143,7 @@ Korean agglutinative forms make pure whitespace word vocabulary sparse. Subwords
 
 Morphological analyzer can explicitly segment morphemes, useful classical NLP, but large multilingual LMs often use general subword/byte tokenization to avoid language-specific pipelines.
 
-Choice depends model/data/task.
+Choice depends mô hình (model / 모델)/dữ liệu (data / 데이터)/tác vụ (task / 작업).
 
 ## Vietnamese Tokenization
 
@@ -151,7 +154,7 @@ trí_tuệ
 nhân_tạo
 ```
 
-Classical Vietnamese NLP may word-segment first. Subword LM can learn frequent multi-syllable patterns without explicit segmentation, but efficiency/quality depends corpus.
+Classical Vietnamese NLP may word-segment first. Subword LM can learn frequent multi-syllable patterns without tường minh (explicit / 명시적) segmentation, but efficiency/chất lượng (quality / 품질) depends corpus.
 
 ## Numbers
 
@@ -161,15 +164,15 @@ Tokenizer may split:
 20260920
 ```
 
-into arbitrary digit groups. Arithmetic semantics are not guaranteed from tokenization.
+into arbitrary digit groups. Arithmetic ngữ nghĩa (semantics / 의미론) are not guaranteed from tokenization.
 
-Different numbers sharing digit patterns may generalize poorly. Some models/tools use specialized numerical representations or external calculator/code execution.
+Different numbers sharing digit patterns may generalize poorly. Some các mô hình (models / 모델들)/tools use specialized numerical representations or bên ngoài (external / 외부) calculator/mã (code / 코드) thực thi (execution / 실행).
 
-## Code Tokenization
+## Mã (code / 코드) Tokenization
 
-Programming language needs punctuation, indentation, identifiers and whitespace. Tokenizer trained mostly natural language may fragment code identifiers inefficiently.
+Programming ngôn ngữ (language / 언어) needs punctuation, indentation, identifiers and whitespace. Tokenizer trained mostly natural ngôn ngữ (language / 언어) may fragment mã (code / 코드) identifiers inefficiently.
 
-Code-focused models benefit tokenizer/data distribution covering code syntax and common identifier substrings.
+Code-focused các mô hình (models / 모델들) benefit tokenizer/dữ liệu (data / 데이터) phân phối (distribution / 분포) covering mã (code / 코드) cú pháp (syntax / 문법) and dùng chung (common / 공통) identifier substrings.
 
 ## Special Tokens
 
@@ -183,37 +186,37 @@ Examples:
 <SEP> separator
 ```
 
-Chat models add role/control tokens delimiting system/user/assistant turns.
+Chat các mô hình (models / 모델들) add role/điều khiển (control / 제어) tokens delimiting hệ thống (system / 시스템)/người dùng (user / 사용자)/assistant turns.
 
-These tokens are part model protocol. Manually formatting prompt incorrectly can change behavior because model sees different token sequence than training format.
+These tokens are part mô hình (model / 모델) giao thức (protocol / 프로토콜). Manually formatting prompt incorrectly can thay đổi (change / 변경) hành vi (behavior / 동작) because mô hình (model / 모델) sees different đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스) than huấn luyện (training / 학습) format.
 
 ## Vocabulary IDs are arbitrary
 
-Token ID `50256` is not numerically “larger meaning” than token ID `42`. IDs index embedding rows.
+Đơn vị từ (token / 토큰) ID `50256` is not numerically “larger meaning” than đơn vị từ (token / 토큰) ID `42`. IDs chỉ mục (index / 인덱스) embedding rows.
 
-Never feed raw token IDs as continuous scalar features.
+Never feed raw đơn vị từ (token / 토큰) IDs as continuous scalar features.
 
-## Tokenization and Context Window
+## Tokenization and ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우)
 
-Context limit measured tokens, not characters/words.
+Ngữ cảnh (context / 맥락) limit measured tokens, not characters/words.
 
-Document chunking must inspect actual tokenizer. “500 words” may vary token count widely by language/content.
+Document chunking must inspect actual tokenizer. “500 words” may vary đơn vị từ (token / 토큰) count widely by ngôn ngữ (language / 언어)/content.
 
-Code/JSON tables often tokenize differently from prose.
+Mã (code / 코드)/JSON tables often tokenize differently from prose.
 
 ## Tokenization and Generation
 
-Model predicts token, not word/character directly.
+Mô hình (model / 모델) predicts đơn vị từ (token / 토큰), not word/character directly.
 
-A generated word may require multiple decoding steps. Probability of string is product over its tokenization sequence.
+A generated word may require multiple decoding steps. xác suất (probability / 확률) of string is sản phẩm (product / 제품) over its tokenization chuỗi (sequence / 시퀀스).
 
-Tokenizer boundaries affect sampling behavior and log-prob analysis.
+Tokenizer boundaries affect sampling hành vi (behavior / 동작) and log-prob phân tích (analysis / 분석).
 
 ## Unknown / Invalid Byte Handling
 
-Byte fallback guarantees arbitrary Unicode strings, but decoded partial byte sequences during intermediate token stream may temporarily be invalid UTF-8. Libraries should decode through tokenizer, not concatenate guessed token strings naïvely.
+Byte fallback guarantees arbitrary Unicode strings, but decoded partial byte sequences during intermediate đơn vị từ (token / 토큰) stream may temporarily be invalid UTF-8. Libraries should decode through tokenizer, not concatenate guessed đơn vị từ (token / 토큰) strings naïvely.
 
-## Normalization and Security
+## Normalization and bảo mật (security / 보안)
 
 Unicode confusables:
 
@@ -221,21 +224,21 @@ Unicode confusables:
 Latin a vs Cyrillic а
 ```
 
-look similar but different code points. Attackers can exploit homoglyphs, zero-width chars or normalization edge cases.
+look similar but different mã (code / 코드) points. Attackers can exploit homoglyphs, zero-width chars or normalization edge cases.
 
-Security-sensitive text pipelines need Unicode-aware canonicalization/detection policies without destroying legitimate multilingual text.
+Security-sensitive văn bản (text / 텍스트) pipelines need Unicode-aware canonicalization/detection policies without destroying legitimate multilingual văn bản (text / 텍스트).
 
-## Tokenizer Training Leakage
+## Tokenizer huấn luyện (training / 학습) Leakage
 
-Tokenizer vocabulary itself can reveal frequency patterns/corpus artifacts, though much less than model parameters. More importantly, tokenizer trained using future/test corpus can be a subtle data-processing dependency; evaluation reproducibility should version tokenizer.
+Tokenizer vocabulary itself can reveal frequency patterns/corpus artifacts, though much less than mô hình (model / 모델) parameters. More importantly, tokenizer trained using future/kiểm thử (test / 테스트) corpus can be a subtle data-processing phụ thuộc (dependency / 의존성); evaluation reproducibility should phiên bản (version / 버전) tokenizer.
 
-## Tokenizer Version = Model Compatibility
+## Tokenizer phiên bản (version / 버전) = mô hình (model / 모델) tính tương thích (compatibility / 호환성)
 
-Embedding/output matrices indexed vocabulary. Change token IDs/vocabulary without retraining breaks model semantics.
+Embedding/đầu ra (output / 출력) matrices indexed vocabulary. thay đổi (change / 변경) đơn vị từ (token / 토큰) IDs/vocabulary without retraining breaks mô hình (model / 모델) ngữ nghĩa (semantics / 의미론).
 
-Tokenizer is part of model artifact and must version/deploy together.
+Tokenizer is part of mô hình (model / 모델) sản phẩm tạo ra (artifact / 산출물) and must phiên bản (version / 버전)/deploy together.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -251,26 +254,26 @@ Embedding lookup
 Neural representations
 ```
 
-Tokenization is a lossy/structuring interface between human text and model computation, though modern byte-based schemes preserve raw content reversibly more often.
+Tokenization is a lossy/structuring giao diện (interface / 인터페이스) between human văn bản (text / 텍스트) and mô hình (model / 모델) computation, though hiện đại (modern / 현대적) byte-based schemes preserve raw content reversibly more often.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “1 token ≈ 1 word”
+### “1 đơn vị từ (token / 토큰) ≈ 1 word”
 
-Không. Subword/byte tokenization varies by language/string.
+Không. Subword/byte tokenization varies by ngôn ngữ (language / 언어)/string.
 
-### “Tokenizer only affects speed, not quality”
+### “Tokenizer only affects speed, not chất lượng (quality / 품질)”
 
-It affects sequence length, morphology sharing, multilingual efficiency and boundaries the model predicts.
+It affects chuỗi (sequence / 시퀀스) length, morphology sharing, multilingual efficiency and boundaries the mô hình (model / 모델) predicts.
 
-### “Lowercase/remove punctuation always cleans text”
+### “Lowercase/remove punctuation always cleans văn bản (text / 텍스트)”
 
-For modern LMs it can destroy meaningful syntax/context.
+For hiện đại (modern / 현대적) LMs it can destroy meaningful cú pháp (syntax / 문법)/ngữ cảnh (context / 맥락).
 
-### “Can swap tokenizer if vocabulary size same”
+### “Can swap tokenizer if vocabulary kích thước (size / 크기) same”
 
-No. Token IDs/segmentations must match trained embedding/output matrices exactly.
+No. đơn vị từ (token / 토큰) IDs/segmentations must match trained embedding/đầu ra (output / 출력) matrices exactly.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Tokenization prepares [Language Models](./02_language_models.md), [Word Embeddings](./03_word_embeddings.md) and later LLM tokenization/context engineering.

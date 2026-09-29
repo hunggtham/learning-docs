@@ -1,5 +1,8 @@
 # Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)
 
+> **Mạch đọc:** Đặt **Công bố thông tin, kế toán, DART và KIND: biến doanh nghiệp thành dữ liệu có thể kiểm chứng (기업공시·회계·DART·KIND)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Công bố thông tin tồn tại vì bất cân xứng thông tin** sang **DART và KIND giải quyết những câu hỏi khác nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Muốn đi từ “nghe nói công ty này tốt” sang một phân tích có thể kiểm chứng, phải biết **doanh nghiệp bắt buộc hoặc tự nguyện công bố điều gì, ở đâu, theo phạm vi kế toán nào và bằng ngôn ngữ pháp lý nào**.
 
 Tại Hàn Quốc, hai hạ tầng quan trọng là **DART (전자공시시스템)** của Cơ quan Giám sát Tài chính và **KIND (한국거래소 기업공시채널)** của Sở Giao dịch Chứng khoán Hàn Quốc. Đây không chỉ là website đọc báo cáo; chúng là hạ tầng thông tin công khai của thị trường vốn.
@@ -14,7 +17,7 @@ Công bố thông tin giúp giảm khoảng cách này bằng yêu cầu hồ s�
 
 Tuy nhiên công bố thông tin không loại bỏ hoàn toàn gian lận hay phán đoán chủ quan. Nó tạo ra **bằng chứng có cấu trúc** để người đọc có thể đối chiếu và chất vấn.
 
-> Mental model: hồ sơ công bố không phải “máy phát chân lý”; nó là một tuyên bố có cấu trúc được đặt dưới trách nhiệm pháp lý và kế toán.
+> mô hình tư duy (mental model / 사고 모델): hồ sơ công bố không phải “máy phát chân lý”; nó là một tuyên bố có cấu trúc được đặt dưới trách nhiệm pháp lý và kế toán.
 
 ## DART và KIND giải quyết những câu hỏi khác nhau
 
@@ -104,7 +107,7 @@ Tồn kho phải được đọc theo ngành.
 
 ### Tài sản cố định hữu hình
 
-**PP&E (Property, Plant and Equipment)** phản ánh năng lực vật chất tích lũy nhưng không đảm bảo tài sản tạo lợi nhuận tốt. Một fab mới làm tài sản và khấu hao tăng; nếu công suất sử dụng thấp, cùng khoản đầu tư đó có thể kéo ROIC xuống.
+**PP&E (property, Plant and Equipment)** phản ánh năng lực vật chất tích lũy nhưng không đảm bảo tài sản tạo lợi nhuận tốt. Một fab mới làm tài sản và khấu hao tăng; nếu công suất sử dụng thấp, cùng khoản đầu tư đó có thể kéo ROIC xuống.
 
 ### Tài sản vô hình và goodwill
 
@@ -126,7 +129,7 @@ Doanh thu
 = Lợi nhuận ròng
 ```
 
-Chi tiết trình bày khác nhau theo ngành nhưng logic cơ bản không đổi.
+Chi tiết trình bày khác nhau theo ngành nhưng lô-gic (logic / 논리) cơ bản không đổi.
 
 ## Phân rã tăng trưởng doanh thu
 
@@ -136,7 +139,7 @@ Doanh thu có thể tăng do sản lượng, giá hoặc cơ cấu sản phẩm:
 Doanh\ thu \approx Sản\ lượng \times Giá \times Hiệu\ ứng\ cơ\ cấu
 \]
 
-Với nền tảng, “sản lượng” có thể là giao dịch hoặc người dùng; với ngân hàng logic doanh thu khác; với xây dựng, ghi nhận phụ thuộc tiến độ dự án. Vì vậy phải tìm cơ chế đứng sau con số tăng trưởng.
+Với nền tảng, “sản lượng” có thể là giao dịch hoặc người dùng; với ngân hàng lô-gic (logic / 논리) doanh thu khác; với xây dựng, ghi nhận phụ thuộc tiến độ dự án. Vì vậy phải tìm cơ chế đứng sau con số tăng trưởng.
 
 ## Lợi nhuận hoạt động và lợi nhuận ròng
 
@@ -246,7 +249,7 @@ Ngân hàng, bảo hiểm và chứng khoán không nên bị ép vào cùng khu
 
 Với ngân hàng, khoản cho vay là tài sản sinh lãi và tiền gửi là nguồn vốn. Biên lãi, chi phí tín dụng và an toàn vốn quan trọng hơn tồn kho hoặc CAPEX. Với bảo hiểm, kỳ hạn nghĩa vụ và danh mục đầu tư lại đặc biệt quan trọng.
 
-Phải dùng logic kế toán theo ngành.
+Phải dùng lô-gic (logic / 논리) kế toán theo ngành.
 
 ## Ý kiến kiểm toán nói gì và không nói gì?
 
@@ -287,7 +290,7 @@ Tuy nhiên khả năng so sánh thẻ không hoàn hảo; doanh nghiệp có th�
 
 Bản tiếng Anh hữu ích để tiếp cận nhanh, nhưng khi cần độ chính xác pháp lý hoặc sắc thái kỹ thuật nên ưu tiên hồ sơ tiếng Hàn. Bản dịch có thể rút gọn hoặc chỉ được cung cấp tự nguyện.
 
-Vì vậy tài liệu này giữ keyword tiếng Hàn và tiếng Anh ở những khái niệm quan trọng nhưng phần giải thích chính bằng tiếng Việt.
+Vì vậy tài liệu này giữ từ khóa (keyword / 키워드) tiếng Hàn và tiếng Anh ở những khái niệm quan trọng nhưng phần giải thích chính bằng tiếng Việt.
 
 ## Dòng thời gian sự kiện và dòng thời gian báo cáo
 
@@ -324,9 +327,9 @@ Khoản phải thu tăng nhanh hơn doanh thu, CFO liên tục thấp hơn lợi
 
 Không dấu hiệu nào tự động chứng minh gian lận.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
-> Công bố thông tin là **API công khai của doanh nghiệp**. Báo cáo tài chính là đầu ra có cấu trúc; thuyết minh là metadata; công bố trọng yếu là nhật ký sự kiện; kiểm toán là một lớp xác nhận; DART/KIND là hạ tầng truy xuất. Phân tích tốt là quá trình đối chiếu dữ liệu giữa tất cả các lớp, không phải đọc một tỷ số tiêu đề.
+> Công bố thông tin là **API công khai của doanh nghiệp**. Báo cáo tài chính là đầu ra có cấu trúc; thuyết minh là siêu dữ liệu (metadata / 메타데이터); công bố trọng yếu là nhật ký sự kiện; kiểm toán là một lớp xác nhận; DART/KIND là hạ tầng truy xuất. Phân tích tốt là quá trình đối chiếu dữ liệu giữa tất cả các lớp, không phải đọc một tỷ số tiêu đề.
 
 ## Những nhầm lẫn thường gặp
 
@@ -349,3 +352,5 @@ DART là nguồn bằng chứng chính, nhưng kế toán vẫn chứa ước t�
 Đọc [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) cho câu hỏi sở hữu–quản trị, [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) cho cách thị trường phản ánh thông tin và [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho quy trình đầu cuối.
 
 Nguồn thực hành chính: DART, English DART và KIND.
+
+> **Bàn giao:** Sau **Liên kết và nguồn thực hành**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

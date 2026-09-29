@@ -1,8 +1,11 @@
 # Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)
 
+> **Mạch đọc:** Đặt **Bán dẫn, điện tử và màn hình Hàn Quốc (Semiconductors & Electronics / 반도체·전자·디스플레이)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ điện tử tiêu dùng tới năng lực bán dẫn** sang **Chuỗi giá trị bán dẫn**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Bán dẫn là một trong những ngành quan trọng nhất để hiểu kinh tế Hàn Quốc hiện đại vì nó kết hợp hầu hết các chủ đề lớn của thư viện: **cường độ vốn cao, R&D, học qua thực hành, phụ thuộc xuất khẩu, quy mô chaebol, hệ sinh thái nhà cung cấp, tính chu kỳ và địa chính trị**.
 
-Nhưng “ngành bán dẫn” không phải một mô hình kinh doanh duy nhất. Bộ nhớ, foundry, fabless, thiết bị, vật liệu, đóng gói và điện tử thành phẩm có cấu trúc kinh tế rất khác nhau. Nếu chỉ nhìn tiêu đề “nhu cầu chip tăng”, rất dễ áp sai logic cho từng công ty.
+Nhưng “ngành bán dẫn” không phải một mô hình kinh doanh duy nhất. Bộ nhớ, foundry, fabless, thiết bị, vật liệu, đóng gói và điện tử thành phẩm có cấu trúc kinh tế rất khác nhau. Nếu chỉ nhìn tiêu đề “nhu cầu chip tăng”, rất dễ áp sai lô-gic (logic / 논리) cho từng công ty.
 
 ## Từ điện tử tiêu dùng tới năng lực bán dẫn
 
@@ -52,7 +55,7 @@ Trước khi chọn chỉ số tài chính, phải xác định công ty đang �
 
 ## Bộ nhớ: sản phẩm chuẩn hóa và chu kỳ cung–cầu
 
-DRAM và NAND là hai nhóm bộ nhớ lớn. Bộ nhớ có mức chuẩn hóa cao hơn nhiều loại chip logic tùy biến, nên cân bằng cung–cầu toàn ngành ảnh hưởng mạnh tới **giá bán bình quân (Average Selling Price / ASP)**.
+DRAM và NAND là hai nhóm bộ nhớ lớn. Bộ nhớ có mức chuẩn hóa cao hơn nhiều loại chip lô-gic (logic / 논리) tùy biến, nên cân bằng cung–cầu toàn ngành ảnh hưởng mạnh tới **giá bán bình quân (Average Selling Price / ASP)**.
 
 Một chu kỳ bộ nhớ điển hình:
 
@@ -74,7 +77,7 @@ Tăng cung chậm lại
 Phục hồi
 ```
 
-Đây là chu kỳ điển hình của ngành thâm dụng vốn và có nét giống hàng hóa. Tuy nhiên “giống hàng hóa” không có nghĩa sản phẩm hoàn toàn đồng nhất; node công nghệ, hiệu quả điện năng, độ tin cậy và cơ cấu sản phẩm vẫn tạo khác biệt.
+Đây là chu kỳ điển hình của ngành thâm dụng vốn và có nét giống hàng hóa. Tuy nhiên “giống hàng hóa” không có nghĩa sản phẩm hoàn toàn đồng nhất; nút (node / 노드) công nghệ, hiệu quả điện năng, độ tin cậy và cơ cấu sản phẩm vẫn tạo khác biệt.
 
 ## HBM: kinh tế của bộ nhớ trở nên khác biệt hơn
 
@@ -82,7 +85,7 @@ Phục hồi
 
 HBM đòi hỏi die chất lượng cao, quy trình xếp chồng và TSV, đóng gói tiên tiến, kiểm soát nhiệt, chứng nhận của khách hàng và tỷ lệ đạt chất lượng cao trên nhiều lớp.
 
-Nếu một stack có nhiều die, lỗi tại một lớp có thể làm cả cụm không sử dụng được. Vì vậy bài toán **tỷ lệ đạt (yield / 수율)** phức tạp hơn DRAM đơn lẻ.
+Nếu một ngăn xếp (stack / 스택) có nhiều die, lỗi tại một lớp có thể làm cả cụm không sử dụng được. Vì vậy bài toán **tỷ lệ đạt (yield / 수율)** phức tạp hơn DRAM đơn lẻ.
 
 Sự bùng nổ AI không chỉ tăng lượng bit; nó còn làm tăng giá trị của **năng lực đóng gói + yield + chứng nhận khách hàng**.
 
@@ -156,13 +159,13 @@ Khấu hao ↑
 
 ## Kinh tế foundry: dịch vụ sản xuất nhưng hào cạnh tranh rất sâu
 
-Foundry sản xuất chip theo thiết kế của khách hàng. Các biến cốt lõi gồm khả năng cạnh tranh của node công nghệ, yield, utilization, lòng tin của khách hàng, hệ sinh thái thiết kế, đóng gói và tốc độ đưa sản phẩm vào sản lượng lớn.
+Foundry sản xuất chip theo thiết kế của khách hàng. Các biến cốt lõi gồm khả năng cạnh tranh của nút (node / 노드) công nghệ, yield, utilization, lòng tin của khách hàng, hệ sinh thái thiết kế, đóng gói và tốc độ đưa sản phẩm vào sản lượng lớn.
 
-Khách hàng không chỉ mua mật độ transistor. Họ cần **PDK (Process Design Kit)**, thư viện IP, khả năng tương thích EDA, quy trình tăng yield đáng tin cậy và hỗ trợ đóng gói.
+Khách hàng không chỉ mua mật độ transistor. Họ cần **PDK (process Design Kit)**, thư viện IP, khả năng tương thích EDA, quy trình tăng yield đáng tin cậy và hỗ trợ đóng gói.
 
 Chuyển foundry có chi phí lớn vì thiết kế phải được điều chỉnh và chứng nhận lại. Đây tạo **chi phí chuyển đổi (switching cost)**.
 
-Node nhỏ hơn không tự động tốt hơn; chi phí, điện năng, hiệu năng và yield phải phù hợp use case.
+Nút (node / 노드) nhỏ hơn không tự động tốt hơn; chi phí, điện năng, hiệu năng và yield phải phù hợp use trường hợp (case / 사례).
 
 ## Kinh tế fabless: nhẹ tài sản hơn nhưng phụ thuộc kiểu khác
 
@@ -170,7 +173,7 @@ Fabless tránh CAPEX fab khổng lồ nhưng chi rất mạnh cho R&D và thiế
 
 Rủi ro chính gồm quyền tiếp cận công suất foundry, chi phí tape-out, thất bại thiết kế, tập trung khách hàng và sản phẩm nhanh lỗi thời.
 
-Một design win lớn có thể tạo biên lợi nhuận cao; bỏ lỡ một thế hệ kiến trúc có thể làm tăng trưởng suy sụp.
+Một thiết kế (design / 설계) win lớn có thể tạo biên lợi nhuận cao; bỏ lỡ một thế hệ kiến trúc có thể làm tăng trưởng suy sụp.
 
 Vì vậy năng lực R&D và quan hệ hệ sinh thái quan trọng hơn utilization vật lý.
 
@@ -186,7 +189,7 @@ Khi nhiều die phải giao tiếp ở băng thông cao, interposer, substrate v
 
 Doanh thu thiết bị phụ thuộc lịch CAPEX của fab nhiều hơn ASP chip trực tiếp.
 
-Đơn hàng thiết bị có thể đi trước công suất chip thực tế. Doanh nghiệp thiết bị thường có R&D cao, rào cản chứng nhận lớn, doanh thu dịch vụ từ installed base, tập trung khách hàng và rủi ro kiểm soát xuất khẩu.
+Đơn hàng thiết bị có thể đi trước công suất chip thực tế. Doanh nghiệp thiết bị thường có R&D cao, rào cản chứng nhận lớn, doanh thu dịch vụ từ installed cơ sở (base / 기반), tập trung khách hàng và rủi ro kiểm soát xuất khẩu.
 
 Mô hình “picks-and-shovels” không có nghĩa miễn nhiễm chu kỳ. Nếu fab cắt CAPEX, đơn hàng thiết bị mới có thể giảm mạnh.
 
@@ -297,9 +300,9 @@ Xem [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_edu
 
 Với doanh nghiệp bộ nhớ/IDM, nên theo dõi ASP, tăng bit, cơ cấu HBM/cao cấp, tồn kho, utilization, bình luận yield, CAPEX, khấu hao, R&D và tiền ròng/nợ ròng.
 
-Với foundry, nên theo dõi cơ cấu node, utilization, yield/ramp, tập trung khách hàng, CAPEX và hệ sinh thái đóng gói tiên tiến.
+Với foundry, nên theo dõi cơ cấu nút (node / 노드), utilization, yield/ramp, tập trung khách hàng, CAPEX và hệ sinh thái đóng gói tiên tiến.
 
-Với doanh nghiệp thiết bị/vật liệu, nên theo dõi tập trung khách hàng, backlog, installed base, tỷ trọng dịch vụ–vật tư tiêu hao, các lần đạt chứng nhận và rủi ro kiểm soát xuất khẩu.
+Với doanh nghiệp thiết bị/vật liệu, nên theo dõi tập trung khách hàng, backlog, installed cơ sở (base / 기반), tỷ trọng dịch vụ–vật tư tiêu hao, các lần đạt chứng nhận và rủi ro kiểm soát xuất khẩu.
 
 Không chỉ số nào nên được đọc một mình.
 
@@ -313,13 +316,13 @@ Nên hỏi ASP giữa chu kỳ là bao nhiêu, utilization bền vững ở mứ
 
 Cách này hữu ích hơn so sánh cơ học P/E một năm.
 
-## Stress test
+## Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Các cú sốc hữu ích gồm ASP bộ nhớ -20%, chậm chứng nhận HBM, utilization -10 điểm phần trăm, fab mới bắt đầu khấu hao trước khi nhu cầu đến, hạn chế xuất khẩu, khách hàng lớn mất thị phần, biến động KRW và giá điện tăng.
 
 Sau đó theo dõi tác động tới biên lợi nhuận hoạt động, FCF và phản ứng CAPEX.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Bán dẫn là cuộc chơi của **công nghệ + yield + công suất + cơ cấu sản phẩm + chu kỳ + hệ sinh thái**. Lợi thế của Hàn Quốc không nằm ở một nhà máy đơn lẻ mà ở hệ thống sản xuất–kỹ thuật tích lũy qua nhiều thập niên.
 
@@ -345,7 +348,7 @@ Vòng học lặp lại
 
 **“CAPEX lớn là tích cực.”** Không nếu lợi suất tương lai thấp hoặc gây dư cung.
 
-**“Node nhỏ hơn luôn tốt hơn.”** Không; yield, chi phí, PPA và use case đều quan trọng.
+**“nút (node / 노드) nhỏ hơn luôn tốt hơn.”** Không; yield, chi phí, PPA và use trường hợp (case / 사례) đều quan trọng.
 
 **“Công ty bán dẫn nào cũng hưởng AI như nhau.”** Sai. Vị trí trong chuỗi giá trị khác nhau.
 
@@ -356,3 +359,5 @@ Vòng học lặp lại
 ## Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md) và [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

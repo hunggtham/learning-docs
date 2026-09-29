@@ -1,4 +1,6 @@
-# Glossary Việt–Hàn–Anh và Reference Map
+# Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map
+
+> **Mạch đọc:** Đặt **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Thuật ngữ lịch sử** sang **Nguồn nền khuyến nghị**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
 ## Thuật ngữ lịch sử
 
@@ -12,11 +14,11 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | 고려 | Goryeo | Cao Ly |
 | 조선 | Joseon | Triều Tiên |
 | 성리학 | Neo-Confucianism | Tân Nho giáo |
-| 과거 | civil service examination | khoa cử |
+| 과거 | civil dịch vụ (service / 서비스) examination | khoa cử |
 | 양반 | yangban | tầng lớp sĩ đại phu/elite |
 | 노비 | nobi | tầng lớp lệ thuộc/nô tỳ |
 | 임진왜란 | Imjin War | Chiến tranh Imjin |
-| 실학 | Silhak / Practical Learning | Thực học |
+| 실학 | Silhak / Practical học tập (learning / 학습) | Thực học |
 | 동학 | Donghak | Đông học |
 | 갑오개혁 | Gabo Reform | Cải cách Giáp Ngọ |
 | 대한제국 | Korean Empire | Đế quốc Đại Hàn |
@@ -27,7 +29,7 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | 분단 | division | chia cắt |
 | 한국전쟁 | Korean War | Chiến tranh Triều Tiên |
 | 정전협정 | Armistice Agreement | Hiệp định đình chiến |
-| 개발국가 | developmental state | nhà nước kiến tạo phát triển |
+| 개발국가 | developmental trạng thái (state / 상태) | nhà nước kiến tạo phát triển |
 | 산업화 | industrialization | công nghiệp hoá |
 | 민주화 | democratization | dân chủ hoá |
 | 한류 | Hallyu / Korean Wave | Làn sóng Hàn Quốc |
@@ -42,9 +44,12 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | 전세 | jeonse | hình thức thuê nhà đặt cọc lớn, không hoàn toàn tương đương tiền thuê tháng |
 | 월세 | wolse | hình thức thuê nhà trả tiền theo tháng |
 
+
+> **Chuyển mạch:** Từ **Thuật ngữ lịch sử**, ta sang **Nguồn nền khuyến nghị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Nguồn nền khuyến nghị
 
-### National Institute of Korean History — 국사편찬위원회
+### National Institute of Korean lịch sử (history / 이력) — 국사편찬위원회
 
 Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
@@ -52,9 +57,9 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://contents.history.go.kr/
 - *A History of Korea* — Korean History Database / NIKH.
 
-Đây là baseline tốt cho chronology, primary-source gateway và Korean historical terminology. Với contested modern history, vẫn cần comparative scholarship ngoài official institution.
+Đây là baseline tốt cho chronology, primary-source gateway và Korean historical terminology. Với contested hiện đại (modern / 현대적) lịch sử (history / 이력), vẫn cần comparative scholarship ngoài official institution.
 
-### Korean History Database — 한국사데이터베이스
+### Korean lịch sử (history / 이력) cơ sở dữ liệu (database / 데이터베이스) — 한국사데이터베이스
 
 Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
 
@@ -69,7 +74,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 - https://www.aks.ac.kr/
 - https://encykorea.aks.ac.kr/
 
-`한국민족문화대백과사전` đặc biệt hữu ích cho people, institution, place và cultural history. Các article học thuật vẫn có thể phản ánh interpretation của author; cần đọc bibliography khi vấn đề contested.
+`한국민족문화대백과사전` đặc biệt hữu ích cho people, institution, place và cultural lịch sử (history / 이력). Các article học thuật vẫn có thể phản ánh interpretation của author; cần đọc bibliography khi vấn đề contested.
 
 ### National Museum of Korea — 국립중앙박물관
 
@@ -77,7 +82,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 - https://www.museum.go.kr/
 
-Hữu ích để nối political chronology với artifact/material culture: stone tools, pottery, Buddhist art, metalwork, celadon, painting và documentary heritage.
+Hữu ích để nối political chronology với sản phẩm tạo ra (artifact / 산출물)/material culture: stone tools, pottery, Buddhist art, metalwork, celadon, painting và documentary heritage.
 
 ### National Archives of Korea — 국가기록원
 
@@ -85,15 +90,21 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 - https://www.archives.go.kr/
 
-Đặc biệt hữu ích cho modern/contemporary administration và documentary records.
+Đặc biệt hữu ích cho hiện đại (modern / 현대적)/contemporary administration và documentary records.
 
 ### UNESCO
 
-Dùng để kiểm tra heritage inscription và documentary heritage, không dùng như sole source cho toàn bộ interpretation lịch sử.
+Dùng để kiểm tra heritage inscription và documentary heritage, không dùng như sole nguồn (source / 소스) cho toàn bộ interpretation lịch sử.
+
+
+> **Chuyển mạch:** Từ **Nguồn nền khuyến nghị**, ta sang **Nguyên tắc đối chiếu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nguyên tắc đối chiếu
 
-Khi một vấn đề liên quan colonial responsibility, wartime violence, authoritarian repression, territorial dispute hoặc current political interpretation, không dùng một nguồn duy nhất. Tối thiểu cần tách: primary evidence, institutional archive, peer-reviewed scholarship và later public memory.
+Khi một vấn đề liên quan colonial responsibility, wartime violence, authoritarian repression, territorial dispute hoặc hiện tại (current / 현재) political interpretation, không dùng một nguồn duy nhất. Tối thiểu cần tách: primary bằng chứng (evidence / 증거), institutional archive, peer-reviewed scholarship và later công khai (public / 공개) bộ nhớ (memory / 메모리).
+
+
+> **Chuyển mạch:** Từ **Nguyên tắc đối chiếu**, ta sang **Bảng tên riêng lịch sử và địa danh chuẩn hoá** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ tra cứu theo câu hỏi
 
@@ -142,3 +153,5 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | đảo Jeju | Jeju Island | 제주도 | Địa danh hiện đại; thường giữ “Jeju” thay vì ép Hán–Việt |
 | Huấn Dân Chính Âm | Hunminjeongeum | 훈민정음 | Tên văn bản/hệ chữ được công bố năm 1446 |
 | Chiến tranh Nhâm Thìn | Imjin War | 임진왜란 | Cuộc xâm lược Nhật Bản 1592–1598 |
+
+> **Bàn giao:** Sau **Bảng tên riêng lịch sử và địa danh chuẩn hoá**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

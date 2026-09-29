@@ -1,81 +1,84 @@
-# Bias, Variance và Generalization
+# Độ lệch (bias / 편향), Variance và Generalization
 
-Machine Learning không được đánh giá bằng khả năng nhớ training data, mà bằng khả năng **generalize (일반화 / khái quát hóa)** sang những examples chưa thấy nhưng đến từ environment mục tiêu. Đây là điểm phân biệt learning với memorization.
+> **Mạch đọc:** Đặt **độ lệch (bias / 편향), Variance và Generalization** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **huấn luyện (training / 학습) lỗi (error / 오류) không phải mục tiêu cuối** sang **độ lệch (bias / 편향) trong độ lệch (bias / 편향)–variance decomposition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Ba concept giúp reasoning về vấn đề này là **bias**, **variance** và **irreducible noise**. Chúng không phải chỉ là vocabulary để giải thích overfitting; chúng là framework để hiểu model capacity, regularization, data size và ensemble methods.
 
-## Training error không phải mục tiêu cuối
+Machine học tập (learning / 학습) không được đánh giá bằng khả năng nhớ dữ liệu huấn luyện (training data / 학습 데이터), mà bằng khả năng **generalize (일반화 / khái quát hóa)** sang những examples chưa thấy nhưng đến từ môi trường (environment / 환경) mục tiêu. Đây là điểm phân biệt học tập (learning / 학습) với memorization.
 
-Một model có thể đạt gần zero training loss bằng cách memorize dataset. Nếu future input khác training examples, prediction có thể thất bại.
+Ba concept giúp lập luận (reasoning / 추론) về vấn đề này là **độ lệch (bias / 편향)**, **variance** và **irreducible noise**. Chúng không phải chỉ là vocabulary để giải thích overfitting; chúng là khung phần mềm (framework / 프레임워크) để hiểu mô hình (model / 모델) sức chứa (capacity / 용량), regularization, dữ liệu (data / 데이터) kích thước (size / 크기) và ensemble methods.
 
-Ta quan tâm expected risk:
+## Huấn luyện (training / 학습) lỗi (error / 오류) không phải mục tiêu cuối
+
+Một mô hình (model / 모델) có thể đạt gần zero huấn luyện (training / 학습) mất mát (loss / 손실) bằng cách memorize dataset. Nếu future đầu vào (input / 입력) khác huấn luyện (training / 학습) examples, prediction có thể thất bại.
+
+Ta quan tâm expected rủi ro (risk / 위험):
 
 \[
 R(f)=\mathbb E_{(X,Y)\sim P}[L(Y,f(X))]
 \]
 
-nhưng chỉ quan sát finite sample. Validation/test design cố estimate risk này dưới assumptions về future distribution.
+nhưng chỉ quan sát finite mẫu (sample / 표본). kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) thiết kế (design / 설계) cố estimate rủi ro (risk / 위험) này dưới các giả định (assumptions / 가정들) về future phân phối (distribution / 분포).
 
 Generalization gap:
 
 \[
-Gap=R_{test}-R_{train}
+Gap=R_{kiểm thử (test / 테스트)}-R_{train}
 \]
 
-là một signal, nhưng interpretation phụ thuộc split representativeness.
+là một tín hiệu (signal / 신호), nhưng interpretation phụ thuộc split representativeness.
 
-## Bias trong bias–variance decomposition
+## Độ lệch (bias / 편향) trong độ lệch (bias / 편향)–variance decomposition
 
-Ở đây **bias** không phải social bias. Nó là systematic error do model class/learning procedure không thể hoặc không có xu hướng capture true relationship.
+Ở đây **độ lệch (bias / 편향)** không phải xã hội (social / 사회적) độ lệch (bias / 편향). Nó là systematic lỗi (error / 오류) do mô hình (model / 모델) lớp (class / 클래스)/học tập (learning / 학습) procedure không thể hoặc không có xu hướng capture true relationship.
 
-Với squared error regression:
+Với squared lỗi (error / 오류) regression:
 
 \[
 \mathbb E[(Y-\hat f(x))^2]
-=Bias^2+Variance+Noise
+=độ lệch (bias / 편향)^2+Variance+Noise
 \]
 
-một decomposition simplified dưới assumptions phù hợp.
+một decomposition simplified dưới các giả định (assumptions / 가정들) phù hợp.
 
-Bias cao: model consistently miss structure, ví dụ fit straight line cho relationship rất cong.
+Độ lệch (bias / 편향) cao: mô hình (model / 모델) consistently miss cấu trúc (structure / 구조), ví dụ fit straight line cho relationship rất cong.
 
-Variance cao: model thay đổi mạnh nếu training sample thay đổi nhẹ.
+Variance cao: mô hình (model / 모델) thay đổi mạnh nếu huấn luyện (training / 학습) mẫu (sample / 표본) thay đổi nhẹ.
 
-Noise: uncertainty không thể loại hết chỉ bằng model tốt hơn với observed features.
+Noise: bất định (uncertainty / 불확실성) không thể loại hết chỉ bằng mô hình (model / 모델) tốt hơn với observed features.
 
 ## Underfitting và Overfitting
 
-**Underfitting** thường liên quan capacity quá thấp, feature representation nghèo hoặc optimization chưa đủ. Training error và validation error đều cao.
+**Underfitting** thường liên quan sức chứa (capacity / 용량) quá thấp, tính năng (feature / 기능) biểu diễn (representation / 표현) nghèo hoặc tối ưu hóa (optimization / 최적화) chưa đủ. huấn luyện (training / 학습) lỗi (error / 오류) và kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) đều cao.
 
-**Overfitting** xảy ra khi model học details/noise specific training sample khiến validation/generalization kém. Training error thấp nhưng validation error cao.
+**Overfitting** xảy ra khi mô hình (model / 모델) học details/noise specific huấn luyện (training / 학습) mẫu (sample / 표본) khiến kiểm tra hợp lệ (validation / 검증)/generalization kém. huấn luyện (training / 학습) lỗi (error / 오류) thấp nhưng kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) cao.
 
-Tuy nhiên modern Deep Learning làm simple textbook picture phức tạp hơn: overparameterized networks có thể interpolate training data vẫn generalize tốt nhờ implicit/explicit regularization, data scale và optimization bias.
+Tuy nhiên hiện đại (modern / 현대적) Deep học tập (learning / 학습) làm simple textbook picture phức tạp hơn: overparameterized networks có thể interpolate dữ liệu huấn luyện (training data / 학습 데이터) vẫn generalize tốt nhờ implicit/tường minh (explicit / 명시적) regularization, dữ liệu (data / 데이터) quy mô (scale / 규모) và tối ưu hóa (optimization / 최적화) độ lệch (bias / 편향).
 
-Vì vậy “parameters > samples ⇒ chắc chắn overfit” không phải rule universal.
+Vì vậy “parameters > samples ⇒ chắc chắn overfit” không phải quy tắc (rule / 규칙) universal.
 
-## Model Capacity
+## Mô hình (model / 모델) sức chứa (capacity / 용량)
 
-Capacity mô tả richness của function class model có thể represent.
+Sức chứa (capacity / 용량) mô tả richness của hàm (function / 함수) lớp (class / 클래스) mô hình (model / 모델) có thể represent.
 
 Examples:
 
-- linear regression với vài features: capacity thấp;
-- deep tree: capacity cao hơn;
-- large neural network: rất cao.
+- tuyến tính (linear / 선형) regression với vài features: sức chứa (capacity / 용량) thấp;
+- deep cây (tree / 트리): sức chứa (capacity / 용량) cao hơn;
+- large neural mạng (network / 네트워크): rất cao.
 
-Capacity cao giảm approximation bias nhưng mở nhiều solutions fit noise. Regularization và data constrain learning process để chọn solution có generalization tốt hơn.
+Sức chứa (capacity / 용량) cao giảm approximation độ lệch (bias / 편향) nhưng mở nhiều solutions fit noise. Regularization và dữ liệu (data / 데이터) constrain học tập (learning / 학습) tiến trình (process / 프로세스) để chọn solution có generalization tốt hơn.
 
-## Inductive Bias
+## Inductive độ lệch (bias / 편향)
 
-Không model nào học từ finite data mà hoàn toàn không assumption.
+Không mô hình (model / 모델) nào học từ finite dữ liệu (data / 데이터) mà hoàn toàn không giả định (assumption / 가정).
 
-Linear model assume useful relationship gần linear trong representation. CNN assume locality/translation structure. Tree assume recursive feature partitions. Transformer attention assume token interactions có thể học từ content-dependent weighted mixing.
+Mô hình tuyến tính (linear model / 선형 모델) assume useful relationship gần tuyến tính (linear / 선형) trong biểu diễn (representation / 표현). CNN assume locality/translation cấu trúc (structure / 구조). cây (tree / 트리) assume recursive tính năng (feature / 기능) partitions. Transformer attention assume đơn vị từ (token / 토큰) interactions có thể học từ content-dependent weighted mixing.
 
-Inductive bias tốt làm sample-efficient hơn nếu phù hợp domain.
+Inductive độ lệch (bias / 편향) tốt làm sample-efficient hơn nếu phù hợp lĩnh vực (domain / 도메인).
 
 ## Regularization
 
-### Explicit Regularization
+### Tường minh (explicit / 명시적) Regularization
 
 L2:
 
@@ -83,53 +86,53 @@ L2:
 J=\hat R+\lambda\|\theta\|_2^2
 \]
 
-L1, dropout, label smoothing, data augmentation và early stopping đều có regularization effects khác nhau.
+L1, dropout, label smoothing, dữ liệu (data / 데이터) augmentation và early stopping đều có regularization effects khác nhau.
 
 ### Early Stopping
 
-Trong iterative training, validation performance có thể tốt nhất trước khi training loss minimum. Stop sớm hạn chế model tiếp tục fit sample-specific details.
+Trong iterative huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) hiệu năng (performance / 성능) có thể tốt nhất trước khi huấn luyện (training / 학습) mất mát (loss / 손실) minimum. Stop sớm hạn chế mô hình (model / 모델) tiếp tục fit sample-specific details.
 
-### Data Augmentation
+### Dữ liệu (data / 데이터) Augmentation
 
-Image flips/crops, audio perturbations hoặc text transformations encode invariances: label nên không đổi dưới những transformations hợp lệ.
+Ảnh (image / 이미지) flips/crops, audio perturbations hoặc văn bản (text / 텍스트) transformations encode invariances: label nên không đổi dưới những transformations hợp lệ.
 
-Augmentation không chỉ “tạo thêm data”; nó inject inductive bias.
+Augmentation không chỉ “tạo thêm dữ liệu (data / 데이터)”; nó inject inductive độ lệch (bias / 편향).
 
-## More Data thay đổi trade-off thế nào?
+## More dữ liệu (data / 데이터) thay đổi sự đánh đổi (trade-off / 트레이드오프) thế nào?
 
-Với fixed useful model class, thêm representative data thường giảm variance và làm estimate stable hơn.
+Với fixed useful mô hình (model / 모델) lớp (class / 클래스), thêm representative dữ liệu (data / 데이터) thường giảm variance và làm estimate stable hơn.
 
-Nhưng thêm data từ wrong distribution có thể không giúp. Duplicate, low-quality hoặc biased data cũng không tương đương independent information mới.
+Nhưng thêm dữ liệu (data / 데이터) từ wrong phân phối (distribution / 분포) có thể không giúp. Duplicate, low-quality hoặc biased dữ liệu (data / 데이터) cũng không tương đương independent thông tin (information / 정보) mới.
 
-Dataset size nên nghĩ theo **effective diversity and coverage**, không chỉ row count.
+Dataset kích thước (size / 크기) nên nghĩ theo **effective diversity and coverage**, không chỉ row count.
 
-## Learning Curves
+## Học tập (learning / 학습) Curves
 
-Plot training/validation performance theo training-set size giúp diagnose:
+Plot huấn luyện (training / 학습)/kiểm tra hợp lệ (validation / 검증) hiệu năng (performance / 성능) theo training-set kích thước (size / 크기) giúp diagnose:
 
-- cả hai error cao và gần nhau → possible high bias;
-- training tốt, validation kém với gap lớn → high variance;
-- validation tiếp tục improve rõ khi thêm data → more data likely useful.
+- cả hai lỗi (error / 오류) cao và gần nhau → possible high độ lệch (bias / 편향);
+- huấn luyện (training / 학습) tốt, kiểm tra hợp lệ (validation / 검증) kém với gap lớn → high variance;
+- kiểm tra hợp lệ (validation / 검증) tiếp tục improve rõ khi thêm dữ liệu (data / 데이터) → more dữ liệu (data / 데이터) likely useful.
 
-Learning curve thực dụng hơn việc gắn label “overfit” chỉ từ một metric snapshot.
+Học tập (learning / 학습) curve thực dụng hơn việc gắn label “overfit” chỉ từ một chỉ số (metric / 지표) snapshot.
 
 ## Cross-Validation
 
-k-fold cross-validation chia data thành `k` folds; mỗi lần train trên `k-1`, validate fold còn lại.
+k-fold cross-validation chia dữ liệu (data / 데이터) thành `k` folds; mỗi lần train trên `k-1`, validate fold còn lại.
 
 Nó giảm dependence vào một random split và estimate variability.
 
-Nhưng random k-fold không hợp mọi problem:
+Nhưng random k-fold không hợp mọi bài toán (problem / 문제):
 
-- time series cần forward/time split;
-- multiple rows cùng user cần group split;
-- spatial data có autocorrelation cần spatial split.
+- thời gian (time / 시간) series cần forward/thời gian (time / 시간) split;
+- multiple rows cùng người dùng (user / 사용자) cần group split;
+- spatial dữ liệu (data / 데이터) có autocorrelation cần spatial split.
 
-Validation scheme phải mimic deployment boundary.
+Kiểm tra hợp lệ (validation / 검증) scheme phải mimic triển khai (deployment / 배포) ranh giới (boundary / 경계).
 
-## Distribution Shift
+## Phân phối (distribution / 분포) Shift
 
-Generalization theory thường assume train/test từ same hoặc related distribution. Production lại gặp shift.
+Generalization lý thuyết (theory / 이론) thường assume train/kiểm thử (test / 테스트) từ same hoặc related phân phối (distribution / 분포). môi trường vận hành (production / 운영 환경) lại gặp shift.
 
 Các dạng hữu ích:
 
@@ -137,47 +140,47 @@ Các dạng hữu ích:
 - **label/prior shift**: `P(Y)` đổi;
 - **concept shift**: relationship `P(Y|X)` đổi.
 
-Ví dụ fraud behavior thay vì attacker adapt là concept drift.
+Ví dụ fraud hành vi (behavior / 동작) thay vì attacker adapt là concept drift.
 
-Model có excellent IID test score vẫn có thể fail dưới shift.
+Mô hình (model / 모델) có excellent IID kiểm thử (test / 테스트) score vẫn có thể thất bại (fail / 실패) dưới shift.
 
-## Shortcut Learning
+## Shortcut học tập (learning / 학습)
 
-Model có thể exploit correlation dễ nhưng không robust.
+Mô hình (model / 모델) có thể exploit correlation dễ nhưng không robust.
 
-Ví dụ medical image classifier học hospital watermark thay vì pathology. Training/test random split cùng source có score cao, nhưng external hospital performance collapse.
+Ví dụ medical ảnh (image / 이미지) classifier học hospital watermark thay vì pathology. huấn luyện (training / 학습)/kiểm thử (test / 테스트) random split cùng nguồn (source / 소스) có score cao, nhưng bên ngoài (external / 외부) hospital hiệu năng (performance / 성능) collapse.
 
-Đây là generalization failure do representation/data design, không chỉ “overfitting” theo parameter count.
+Đây là generalization thất bại (failure / 실패) do biểu diễn (representation / 표현)/dữ liệu (data / 데이터) thiết kế (design / 설계), không chỉ “overfitting” theo parameter count.
 
 ## Spurious Correlation
 
-Nếu feature tương quan target vì historical accident, model có thể dùng nó. Khi deployment context thay, correlation mất.
+Nếu tính năng (feature / 기능) tương quan mục tiêu (target / 대상) vì historical accident, mô hình (model / 모델) có thể dùng nó. Khi triển khai (deployment / 배포) ngữ cảnh (context / 맥락) thay, correlation mất.
 
-Domain knowledge và stress tests cần để detect reliance vào brittle signals.
+Lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식) và stress tests cần để detect reliance vào brittle signals.
 
 ## Double Descent
 
-Classical intuition nói test error giảm rồi tăng khi complexity vượt optimum. Modern overparameterized models đôi khi cho **double descent**: error tăng gần interpolation threshold rồi giảm lại khi model cực overparameterized.
+Classical intuition nói kiểm thử (test / 테스트) lỗi (error / 오류) giảm rồi tăng khi độ phức tạp (complexity / 복잡도) vượt optimum. hiện đại (modern / 현대적) overparameterized các mô hình (models / 모델들) đôi khi cho **double descent**: lỗi (error / 오류) tăng gần interpolation threshold rồi giảm lại khi mô hình (model / 모델) cực overparameterized.
 
-Điều này nhắc rằng bias–variance vẫn là mental framework hữu ích nhưng simple U-shaped curve không mô tả đầy đủ Deep Learning.
+Điều này nhắc rằng độ lệch (bias / 편향)–variance vẫn là mental khung phần mềm (framework / 프레임워크) hữu ích nhưng simple U-shaped curve không mô tả đầy đủ Deep học tập (learning / 학습).
 
 ## Ensemble và Variance
 
-Bagging/Random Forest giảm variance bằng averaging partially independent models.
+Bagging/Random Forest giảm variance bằng averaging partially independent các mô hình (models / 모델들).
 
-Boosting thường giảm bias qua additive correction nhưng cũng có regularization mechanisms như shrinkage/tree depth/subsampling.
+Boosting thường giảm độ lệch (bias / 편향) qua additive correction nhưng cũng có regularization mechanisms như shrinkage/cây (tree / 트리) độ sâu (depth / 깊이)/subsampling.
 
 Xem: [Ensemble Learning](./09_ensemble_learning.md).
 
 ## Generalization trong LLM
 
-LLM pretraining không chỉ “memorize internet”; model học statistical patterns và representations cho phép generalize tới unseen combinations/tasks. Nhưng memorization vẫn tồn tại, đặc biệt rare sequences.
+LLM pretraining không chỉ “memorize internet”; mô hình (model / 모델) học statistical patterns và representations cho phép generalize tới unseen combinations/tasks. Nhưng memorization vẫn tồn tại, đặc biệt rare sequences.
 
-In-context learning, domain shift, contamination và benchmark leakage làm generalization evaluation phức tạp hơn supervised tabular ML.
+In-context học tập (learning / 학습), lĩnh vực (domain / 도메인) shift, contamination và benchmark leakage làm generalization evaluation phức tạp hơn supervised tabular ML.
 
 Các chapter LLM sau sẽ mở rộng distinction này.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -189,7 +192,7 @@ Chosen hypothesis
 Performance on new distribution
 ```
 
-Nếu fail, hãy hỏi bốn tầng:
+Nếu thất bại (fail / 실패), hãy hỏi bốn tầng:
 
 ```text
 Representation có đủ signal?
@@ -198,24 +201,24 @@ Learning/regularization chọn solution nào?
 Validation có giống deployment distribution?
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Overfitting = model quá nhiều parameters”
+### “Overfitting = mô hình (model / 모델) quá nhiều parameters”
 
-Parameter count chỉ là một factor; data, architecture, regularization, optimization và task matter.
+Parameter count chỉ là một factor; dữ liệu (data / 데이터), kiến trúc (architecture / 아키텍처), regularization, tối ưu hóa (optimization / 최적화) và tác vụ (task / 작업) matter.
 
-### “Train và test đều tốt thì model đã robust”
+### “Train và kiểm thử (test / 테스트) đều tốt thì mô hình (model / 모델) đã robust”
 
-Chỉ nếu test đại diện deployment. IID split có thể bỏ lỡ shift/shortcut.
+Chỉ nếu kiểm thử (test / 테스트) đại diện triển khai (deployment / 배포). IID split có thể bỏ lỡ shift/shortcut.
 
-### “Thêm data luôn giải quyết overfitting”
+### “Thêm dữ liệu (data / 데이터) luôn giải quyết overfitting”
 
-Chỉ khi data mới informative, diverse và relevant.
+Chỉ khi dữ liệu (data / 데이터) mới informative, diverse và relevant.
 
-### “Bias–variance bias là fairness bias”
+### “độ lệch (bias / 편향)–variance độ lệch (bias / 편향) là fairness độ lệch (bias / 편향)”
 
-Không. Đây là statistical estimation bias; fairness bias là concept khác.
+Không. Đây là statistical estimation độ lệch (bias / 편향); fairness độ lệch (bias / 편향) là concept khác.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Generalization nối [Statistics for AI](../01_mathematical_foundations/03_statistics_for_ai.md), [Learning Problem and Inductive Bias](./01_learning_problem_and_inductive_bias.md), [Training/Validation/Testing](./03_training_validation_and_testing.md), [Ensemble Learning](./09_ensemble_learning.md) và [Model Evaluation](./15_model_evaluation.md).

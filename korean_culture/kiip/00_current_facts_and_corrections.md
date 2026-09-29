@@ -1,8 +1,10 @@
-# 00. Source vs Current — dữ liệu cần kiểm tra trước khi học thuộc
+# 00. nguồn (source / 소스) vs hiện tại (current / 현재) — dữ liệu cần kiểm tra trước khi học thuộc
 
-Các PDF người học cung cấp rất hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. File này giữ tách biệt **“nội dung trong PDF”** và **“trạng thái được kiểm tra đến 2026-09-20”**. Nội dung mới không được dùng để âm thầm sửa lại nguồn gốc.
+> **Mạch đọc:** Đặt **00. nguồn (source / 소스) vs hiện tại (current / 현재) — dữ liệu cần kiểm tra trước khi học thuộc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. 예금자보호 한도 — hạn mức bảo vệ tiền gửi** sang **2. 법정 최고금리 — lãi suất tối đa theo luật**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> Khi thi, ưu tiên giáo trình/공지 chính thức áp dụng cho kỳ thi của bạn. File này nhằm tránh học nhầm những dữ liệu đã thay đổi rõ ràng.
+Các PDF người học cung cấp rất hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. tệp (file / 파일) này giữ tách biệt **“nội dung trong PDF”** và **“trạng thái được kiểm tra đến 2026-09-20”**. Nội dung mới không được dùng để âm thầm sửa lại nguồn gốc.
+
+> Khi thi, ưu tiên giáo trình/공지 chính thức áp dụng cho kỳ thi của bạn. tệp (file / 파일) này nhằm tránh học nhầm những dữ liệu đã thay đổi rõ ràng.
 
 ## 1. 예금자보호 한도 — hạn mức bảo vệ tiền gửi
 
@@ -12,9 +14,12 @@ Bản tóm tắt chương 경제 ghi `1인당 최고 5천만원`.
 
 - Cũ: `5천만원`
 - Hiện hành: `1억원`
-- Keyword: `예금보호한도`
+- từ khóa (keyword / 키워드): `예금보호한도`
 
 Nguồn: https://www.fsc.go.kr/no010101/85200
+
+
+> **Chuyển mạch:** Từ **1. 예금자보호 한도 — hạn mức bảo vệ tiền gửi**, ta sang **2. 법정 최고금리 — lãi suất tối đa theo luật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. 법정 최고금리 — lãi suất tối đa theo luật
 
@@ -24,9 +29,12 @@ Bản tóm tắt chương 법 ghi `연 24% 이내`.
 
 - Cũ trong PDF: `24%`
 - Hiện hành: `20%`
-- Keyword: `법정 최고금리`
+- từ khóa (keyword / 키워드): `법정 최고금리`
 
 Nguồn Bộ Tư pháp: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
+
+
+> **Chuyển mạch:** Từ **2. 법정 최고금리 — lãi suất tối đa theo luật**, ta sang **3. 1인 가구 비율** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. 1인 가구 비율
 
@@ -38,6 +46,9 @@ Theo 인구주택총조사 2024, **1인가구 chiếm 36.1%** số hộ gia đì
 - Không nên khóa trí nhớ vào `30%` nếu đề không nói rõ năm.
 
 Nguồn 국가데이터처/통계청: 2024 인구주택총조사, công bố 2025-07-29.
+
+
+> **Chuyển mạch:** Từ **3. 1인 가구 비율**, ta sang **4. 서울 인구** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 4. 서울 인구
 
@@ -51,6 +62,9 @@ Bản tóm tắt địa lý dùng con số gần `약 1,000만 명`. Đây là m
 
 Không nên biến con số 10 triệu thành fact bất biến.
 
+
+> **Chuyển mạch:** Từ **4. 서울 인구**, ta sang **5. 종교 통계** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 5. 종교 통계
 
 Biểu đồ trong chương 문화 dùng census **2015**. Hãy đọc nó như một ví dụ lịch sử về đa dạng tôn giáo, không như tỷ lệ 2026.
@@ -60,6 +74,9 @@ Biểu đồ trong chương 문화 dùng census **2015**. Hãy đọc nó như m
 - Hàn Quốc có `종교의 자유`.
 - Nhiều tôn giáo cùng tồn tại.
 - `부처님오신날`, `성탄절` đều là ngày nghỉ lễ công cộng.
+
+
+> **Chuyển mạch:** Từ **5. 종교 통계**, ta sang **6. 유학생 수, 대학 진학률 và các statistic khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 6. 유학생 수, 대학 진학률 và các statistic khác
 
@@ -71,6 +88,9 @@ Cách học:
 
 Nguồn thường dùng: `정부24`, `교육부`, `보건복지부`, `법무부`.
 
+
+> **Chuyển mạch:** Từ **6. 유학생 수, 대학 진학률 và các statistic khác**, ta sang **7. KIIP hiện tại: course hours của 한국사회 이해** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 7. KIIP hiện tại: course hours của 한국사회 이해
 
 Trang Bộ Tư pháp hiện ghi:
@@ -78,9 +98,12 @@ Trang Bộ Tư pháp hiện ghi:
 - mục tiêu `영주`: 한국사회 이해 **70시간**;
 - mục tiêu `국적`: 한국사회 이해 **100시간**.
 
-Điều này giải thích vì sao người học 국적 cần thêm nội dung sâu hơn, nhưng library này vẫn dùng **một cây note chung** và gắn `귀화용 심화` ngay trong domain thay vì tạo hai folder trùng lặp.
+Điều này giải thích vì sao người học 국적 cần thêm nội dung sâu hơn, nhưng thư viện (library / 라이브러리) này vẫn dùng **một cây ghi chú (note / 노트) chung** và gắn `귀화용 심화` ngay trong lĩnh vực (domain / 도메인) thay vì tạo hai folder trùng lặp.
 
 Nguồn: https://www.moj.go.kr/moj/369/subview.do
+
+
+> **Chuyển mạch:** Từ **7. KIIP hiện tại: course hours của 한국사회 이해**, ta sang **8. 종합평가 format — phải kiểm tra notice trước kỳ thi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. 종합평가 format — phải kiểm tra notice trước kỳ thi
 
@@ -91,7 +114,7 @@ Một hướng dẫn đánh giá chính thức của Bộ Tư pháp được cô
 - 작문형: 4문 trong phần written
 - 구술: 5문 / 10분
 
-Tài liệu sample công khai của Bộ Tư pháp cũng có dạng viết khoảng **200자** theo chủ đề và các gợi ý bắt buộc.
+Tài liệu mẫu (sample / 표본) công khai của Bộ Tư pháp cũng có dạng viết khoảng **200자** theo chủ đề và các gợi ý bắt buộc.
 
 Tuy nhiên, Bộ Tư pháp đã công bố trong tháng 7/2026 rằng đang chuẩn bị hướng cải tổ 사회통합프로그램. Vì vậy, **format ở trên là baseline từ tài liệu chính thức đã công bố, không phải lời hứa rằng mọi kỳ thi tương lai sẽ không thay đổi**. Trước khi đăng ký kỳ thi, kiểm tra `kiiptest.org` và notice của `socinet.go.kr`.
 
@@ -100,6 +123,9 @@ Nguồn:
 - 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
 - KIIP 평가: https://www.kiiptest.org/
 - 사회통합프로그램 개편방향 보도자료 (2026-07-12): trang Bộ Tư pháp/출입국·외국인정책본부.
+
+
+> **Chuyển mạch:** Từ **8. 종합평가 format — phải kiểm tra notice trước kỳ thi**, ta sang **9. 정치 facts có tính cấu trúc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 9. 정치 facts có tính cấu trúc
 
@@ -114,6 +140,9 @@ Các điểm sau vẫn là baseline high-yield trong tài liệu chính thức v
 
 Đây là kiến thức công dân cấu trúc; nếu một đề hỏi quy định chi tiết về bầu cử địa phương, tư cách cử tri người nước ngoài hoặc lịch bầu cử cụ thể, phải dùng thông báo của 중앙선거관리위원회 áp dụng tại thời điểm đó.
 
+
+> **Chuyển mạch:** Từ **9. 정치 facts có tính cấu trúc**, ta sang **10. Các fact tương đối ổn định khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## 10. Các fact tương đối ổn định khác
 
 Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
@@ -124,3 +153,5 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 - 국경일·국가상징 cơ bản
 - 역사 chronology lớn
 - 지역 association như `호남=전라`, `영남=경상`, `제주=한라산`
+
+> **Bàn giao:** Sau **10. Các fact tương đối ổn định khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 exam scope and strategy](./00_exam_scope_and_strategy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

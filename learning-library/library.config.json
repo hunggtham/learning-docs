@@ -9,8 +9,27 @@
   ],
   "allowedPrefixes": [
     {
+      "path": "정보처리기사/output",
+      "displayPrefix": "cert",
+      "category": "cert",
+      "language": "vi-ko-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_backend/python",
+      "category": "Python",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "10_backend",
       "category": "Backend",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "10_frontend/websquare",
+      "category": "WebSquare",
       "language": "vi-en",
       "rights": "author-confirmed"
     },
@@ -27,14 +46,14 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "ielts_docs/output",
-      "category": "English",
-      "language": "en-vi",
+      "path": "biology",
+      "category": "Biology",
+      "language": "vi-en",
       "rights": "author-confirmed"
     },
     {
-      "path": "biology",
-      "category": "Biology",
+      "path": "computer_science",
+      "category": "Computer Science",
       "language": "vi-en",
       "rights": "author-confirmed"
     },
@@ -57,15 +76,57 @@
       "rights": "author-confirmed"
     },
     {
-      "path": "kiip",
-      "category": "Korean culture",
+      "path": "korean_history",
+      "category": "Korean history",
       "language": "vi-ko-en",
       "rights": "author-confirmed"
     },
     {
-      "path": "korean_history",
-      "category": "Korean history",
-      "language": "vi-ko-en",
+      "path": "world_history",
+      "category": "World history",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "data_engineering",
+      "category": "Data Engineering",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "devops_platform_engineering",
+      "category": "DevOps / Platform Engineering",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "economics",
+      "category": "Economics",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "investing",
+      "category": "Investing",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "korea_business_economy_knowledge_library",
+      "category": "Korea business and economy",
+      "language": "vi-en-ko",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "research_methods",
+      "category": "Research Methods",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "sociology",
+      "category": "Sociology",
+      "language": "vi-en",
       "rights": "author-confirmed"
     },
     {
@@ -81,9 +142,27 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "philosophy",
+      "category": "Philosophy",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "pmp",
+      "category": "PMP / Project Management",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "physics",
       "category": "Physics",
       "language": "vi-en-ko",
+      "rights": "author-confirmed"
+    },
+    {
+      "path": "electrical_engineering",
+      "category": "Electrical Engineering",
+      "language": "vi-en",
       "rights": "author-confirmed"
     },
     {
@@ -100,6 +179,13 @@
     }
   ],
   "allowedDocuments": [
+    {
+      "path": "CATALOG.md",
+      "title": "Repository Catalog",
+      "category": "Repository",
+      "language": "vi-en",
+      "rights": "author-confirmed"
+    },
     {
       "path": "10_backend/java/java_part1_beginner_rewritten_detailed.md",
       "title": "Java Core — Part 1: Beginner",
@@ -203,83 +289,6 @@
       "title": "Tailwind CSS Master Supplement",
       "category": "Frontend",
       "language": "vi-en",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/english_structures_beginner.md",
-      "title": "English Structures — Beginner",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/english_structures_pre_intermediate.md",
-      "title": "English Structures — Pre-Intermediate",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/english_structures_intermediate.md",
-      "title": "English Structures — Intermediate",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_beginner_revised.md",
-      "title": "English Structures — Beginner (revised)",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_pre_intermediate_revised.md",
-      "title": "English Structures — Pre-Intermediate (revised)",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_intermediate_revised.md",
-      "title": "English Structures — Intermediate (revised)",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_pre_advanced_revised.md",
-      "title": "English Structures — Pre-Advanced",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_advanced_revised.md",
-      "title": "English Structures — Advanced",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/grammar/english_structures_advanced_plus_plus_revised.md",
-      "title": "English Structures — Advanced++",
-      "category": "English",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/cert/ielts_complete_exam_guide.md",
-      "title": "IELTS Complete Exam Guide",
-      "category": "English exams",
-      "language": "en-vi",
-      "rights": "author-confirmed"
-    },
-    {
-      "path": "ielts_docs/output/cert/toeic_complete_exam_guide.md",
-      "title": "TOEIC Complete Exam Guide",
-      "category": "English exams",
-      "language": "en-vi",
       "rights": "author-confirmed"
     }
   ]

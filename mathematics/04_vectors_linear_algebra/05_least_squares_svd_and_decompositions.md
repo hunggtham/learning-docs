@@ -1,4 +1,7 @@
-# Least squares, SVD và matrix decompositions: projection, approximation và structure
+# Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)
+
+> **Mạch đọc:** Đọc **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ chính xác (exact / 정확한) solving đến best approximation** sang **Vì sao residual phải orthogonal?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Trong nhiều bài toán thực tế, equation
 
@@ -6,13 +9,13 @@ Trong nhiều bài toán thực tế, equation
 Ax=b
 ```
 
-không có exact solution. Không phải vì algebra thất bại, mà vì model và data thường chứa noise, measurement error hoặc nhiều constraints hơn unknowns. Khi `b` nằm ngoài column space của `A`, câu hỏi đúng không còn là “giải chính xác”, mà là:
+không có chính xác (exact / 정확한) solution. Không phải vì algebra thất bại, mà vì mô hình (model / 모델) và dữ liệu (data / 데이터) thường chứa noise, sai số đo lường (measurement error / 측정 오차) hoặc nhiều các ràng buộc (constraints / 제약조건들) hơn unknowns. Khi `b` nằm ngoài column không gian (space / 공간) của `A`, câu hỏi đúng không còn là “giải chính xác”, mà là:
 
-> Trong tất cả outputs mà `A` có thể tạo ra, output nào gần `b` nhất?
+> Trong tất cả outputs mà `A` có thể tạo ra, đầu ra (output / 출력) nào gần `b` nhất?
 
-Câu hỏi đó dẫn tới least squares (phương pháp bình phương tối thiểu / 최소제곱법), projection geometry và cuối cùng là QR, SVD, PCA, low-rank approximation và inverse problems.
+Câu hỏi đó dẫn tới least squares (phương pháp bình phương tối thiểu / 최소제곱법), projection hình học (geometry / 기하학) và cuối cùng là QR, SVD, PCA, low-rank approximation và inverse problems.
 
-## Từ exact solving đến best approximation
+## Từ chính xác (exact / 정확한) solving đến best approximation
 
 Ta muốn chọn `x` minimize residual
 
@@ -20,15 +23,15 @@ Ta muốn chọn `x` minimize residual
 r=b-Ax.
 ```
 
-Nếu dùng Euclidean norm, objective là
+Nếu dùng Euclidean norm, mục tiêu (objective / 목표) là
 
 ```math
 \min_x \|Ax-b\|_2^2.
 ```
 
-Square không chỉ để “tránh dấu âm”. Nó tạo objective smooth, liên hệ trực tiếp với Euclidean geometry và Gaussian-noise likelihood.
+Square không chỉ để “tránh dấu âm”. Nó tạo mục tiêu (objective / 목표) smooth, liên hệ trực tiếp với Euclidean hình học (geometry / 기하학) và Gaussian-noise likelihood.
 
-`Ax` luôn nằm trong column space của `A`. Do đó least squares đang tìm point trong column space gần `b` nhất.
+`Ax` luôn nằm trong column không gian (space / 공간) của `A`. Do đó least squares đang tìm điểm (point / 지점) trong column không gian (space / 공간) gần `b` nhất.
 
 ## Vì sao residual phải orthogonal?
 
@@ -44,7 +47,7 @@ Nếu residual
 r=b-\hat b
 ```
 
-còn có component dọc theo column space, ta có thể move `\hat b` một chút theo direction đó và đến gần `b` hơn. Vì vậy tại nearest point, residual phải perpendicular với mọi column của `A`:
+còn có thành phần (component / 컴포넌트) dọc theo column không gian (space / 공간), ta có thể move `\hat b` một chút theo direction đó và đến gần `b` hơn. Vì vậy tại nearest điểm (point / 지점), residual phải perpendicular với mọi column của `A`:
 
 ```math
 A^Tr=0.
@@ -66,7 +69,7 @@ A^TA\hat x=A^Tb.
 
 ## Worked example — fit một đường thẳng
 
-Giả sử data:
+Giả sử dữ liệu (data / 데이터):
 
 ```text
 x: 0, 1, 2
@@ -79,7 +82,7 @@ Ta muốn fit
 y\approx \beta_0+\beta_1x.
 ```
 
-Design matrix:
+Thiết kế (design / 설계) ma trận (matrix / 행렬):
 
 ```math
 X=
@@ -95,7 +98,7 @@ y=
 \end{bmatrix}.
 ```
 
-Không có line nào đi qua cả ba points chính xác, nên solve `X\beta=y` impossible. Least squares tìm projection của `y` lên column space của `X`.
+Không có line nào đi qua cả ba points chính xác, nên solve `X\beta=y` impossible. Least squares tìm projection của `y` lên column không gian (space / 공간) của `X`.
 
 Normal equations:
 
@@ -130,25 +133,25 @@ Line fit là
 \hat y=\frac76+\frac12x.
 ```
 
-Điểm quan trọng là geometry: predicted vector `X\hat\beta` là closest vector trong model subspace.
+Điểm quan trọng là hình học (geometry / 기하학): predicted véc-tơ (vector / 벡터) `X\hat\beta` là closest véc-tơ (vector / 벡터) trong mô hình (model / 모델) subspace.
 
-## Least squares không đồng nghĩa “model đúng”
+## Least squares không đồng nghĩa “mô hình (model / 모델) đúng”
 
-Optimization chỉ trả lời: trong model family đã chọn, parameter nào minimize squared error? Nó không chứng minh relation thật sự linear, không chứng minh causality và không bảo vệ khỏi outliers.
+Tối ưu hóa (optimization / 최적화) chỉ trả lời: trong mô hình (model / 모델) family đã chọn, parameter nào minimize squared lỗi (error / 오류)? Nó không chứng minh quan hệ (relation / 관계) thật sự tuyến tính (linear / 선형), không chứng minh causality và không bảo vệ khỏi outliers.
 
-Nếu residual structure có pattern, model có thể misspecify. Nếu variance thay đổi theo input, ordinary least squares assumptions về uncertainty cần xem lại. Nếu features gần collinear, coefficients có thể unstable dù predictions vẫn tương đối ổn.
+Nếu residual cấu trúc (structure / 구조) có mẫu (pattern / 패턴), mô hình (model / 모델) có thể misspecify. Nếu variance thay đổi theo đầu vào (input / 입력), ordinary least squares các giả định (assumptions / 가정들) về bất định (uncertainty / 불확실성) cần xem lại. Nếu features gần collinear, coefficients có thể unstable dù predictions vẫn tương đối ổn.
 
-## Vì sao normal equations không phải default numerical method?
+## Vì sao normal equations không phải default numerical phương thức (method / 메서드)?
 
-Normal equations rất đẹp về theory nhưng có weakness numerical:
+Normal equations rất đẹp về lý thuyết (theory / 이론) nhưng có weakness numerical:
 
 ```math
 \kappa(A^TA)\approx \kappa(A)^2,
 ```
 
-trong common 2-norm setting.
+trong dùng chung (common / 공통) 2-norm setting.
 
-Nghĩa là conditioning có thể tệ lên đáng kể. Do đó production numerical code thường solve least squares bằng QR hoặc SVD thay vì explicitly forming `A^TA`.
+Nghĩa là conditioning có thể tệ lên đáng kể. Do đó môi trường vận hành (production / 운영 환경) numerical mã (code / 코드) thường solve least squares bằng QR hoặc SVD thay vì explicitly forming `A^TA`.
 
 Đây là ví dụ quan trọng của distinction:
 
@@ -156,7 +159,7 @@ Nghĩa là conditioning có thể tệ lên đáng kể. Do đó production nume
 mathematically equivalent ≠ numerically equally reliable.
 ```
 
-## QR decomposition: xây orthogonal coordinates cho column space
+## QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)
 
 Nếu
 
@@ -172,13 +175,13 @@ với columns của `Q` orthonormal và `R` upper triangular, thì
 \|QRx-b\|_2.
 ```
 
-Orthogonality của `Q` giúp tách problem thành projection plus triangular solve. QR tránh việc squaring condition number như normal equations và thường là workhorse cho dense least squares.
+Orthogonality của `Q` giúp tách bài toán (problem / 문제) thành projection plus triangular solve. QR tránh việc squaring điều kiện (condition / 조건) number như normal equations và thường là workhorse cho dense least squares.
 
-Householder reflections là implementation phổ biến vì stable hơn classical Gram–Schmidt trong finite precision.
+Householder reflections là hiện thực (implementation / 구현) phổ biến vì stable hơn classical Gram–Schmidt trong finite precision.
 
-## SVD: mọi linear map như rotate → scale → rotate
+## SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate
 
-Singular Value Decomposition viết
+Singular giá trị (value / 값) Decomposition viết
 
 ```math
 A=U\Sigma V^T.
@@ -186,11 +189,11 @@ A=U\Sigma V^T.
 
 Interpretation:
 
-1. `V^T` đổi input sang orthonormal directions đặc biệt;
-2. `\Sigma` scale mỗi direction bằng singular value;
-3. `U` đổi sang orthonormal output directions.
+1. `V^T` đổi đầu vào (input / 입력) sang orthonormal directions đặc biệt;
+2. `\Sigma` quy mô (scale / 규모) mỗi direction bằng singular giá trị (value / 값);
+3. `U` đổi sang orthonormal đầu ra (output / 출력) directions.
 
-SVD tồn tại cho mọi real matrix, kể cả rectangular và matrices không diagonalizable.
+SVD tồn tại cho mọi real ma trận (matrix / 행렬), kể cả rectangular và matrices không diagonalizable.
 
 Nếu singular values là
 
@@ -202,11 +205,11 @@ thì chúng cho biết transformation mạnh yếu thế nào theo các orthogon
 
 ## Rank, near-rank và numerical rank
 
-Exact algebra nói rank là số nonzero singular values. Nhưng measured data hiếm khi có exact zeros; noise biến zero thành tiny nonzero values.
+Chính xác (exact / 정확한) algebra nói rank là số nonzero singular values. Nhưng measured dữ liệu (data / 데이터) hiếm khi có chính xác (exact / 정확한) zeros; noise biến zero thành tiny nonzero values.
 
-Vì vậy numerical rank phụ thuộc tolerance và problem scale. Một singular value rất nhỏ nghĩa direction đó gần bị collapse. Inversion theo direction ấy sẽ divide by số rất nhỏ và amplify noise.
+Vì vậy numerical rank phụ thuộc tolerance và bài toán (problem / 문제) quy mô (scale / 규모). Một singular giá trị (value / 값) rất nhỏ nghĩa direction đó gần bị collapse. Inversion theo direction ấy sẽ divide by số rất nhỏ và amplify noise.
 
-Đây là core intuition của ill-conditioned inverse problems.
+Đây là cốt lõi (core / 핵심) intuition của ill-conditioned inverse problems.
 
 ## Pseudoinverse: inverse khi inverse thật không tồn tại
 
@@ -224,11 +227,11 @@ Least-squares solution minimum-norm có thể viết
 \hat x=A^+b.
 ```
 
-Nếu system underdetermined, có infinitely many exact solutions; pseudoinverse chọn solution có smallest Euclidean norm. Nếu system inconsistent, nó cho least-squares fit.
+Nếu hệ thống (system / 시스템) underdetermined, có infinitely many chính xác (exact / 정확한) solutions; pseudoinverse chọn solution có smallest Euclidean norm. Nếu hệ thống (system / 시스템) inconsistent, nó cho least-squares fit.
 
 Nhưng tiny singular values gây amplification, nên practical inverse problems thường cần regularization thay vì blindly using every reciprocal.
 
-## Regularization: chấp nhận bias để giảm variance
+## Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance
 
 Ridge regression solve
 
@@ -242,7 +245,7 @@ Normal equations trở thành
 (A^TA+\lambda I)x=A^Tb.
 ```
 
-Term `\lambda I` làm weak directions bớt nguy hiểm. Ta cố ý bias solution toward smaller norm để giảm sensitivity to noise.
+Term `\lambda I` làm weak directions bớt nguy hiểm. Ta cố ý độ lệch (bias / 편향) solution toward smaller norm để giảm sensitivity to noise.
 
 Trong SVD coordinates, ridge không invert tiny singular values một cách hung hăng; nó damp chúng. Đây là cách nhìn geometric/numerical rõ hơn việc chỉ gọi regularization là “chống overfitting”.
 
@@ -256,74 +259,76 @@ A_k=U_k\Sigma_kV_k^T.
 
 Eckart–Young theorem nói đây là best rank-`k` approximation theo Frobenius norm và spectral norm.
 
-Meaning: nếu matrix thật sự có dominant low-dimensional structure, ta có thể bỏ weak directions với minimum possible reconstruction error trong class rank-`k`.
+Meaning: nếu ma trận (matrix / 행렬) thật sự có dominant low-dimensional cấu trúc (structure / 구조), ta có thể bỏ weak directions với minimum possible reconstruction lỗi (error / 오류) trong lớp (class / 클래스) rank-`k`.
 
-## PCA relation
+## PCA quan hệ (relation / 관계)
 
-Với centered data matrix `X`, PCA directions là eigenvectors của covariance matrix, nhưng compute trực tiếp qua SVD thường tốt hơn:
+Với centered dữ liệu (data / 데이터) ma trận (matrix / 행렬) `X`, PCA directions là eigenvectors của covariance ma trận (matrix / 행렬), nhưng compute trực tiếp qua SVD thường tốt hơn:
 
 ```math
 X=U\Sigma V^T.
 ```
 
-Columns của `V` là principal directions trong feature space; squared singular values liên hệ với explained variance.
+Columns của `V` là principal directions trong tính năng (feature / 기능) không gian (space / 공간); squared singular values liên hệ với explained variance.
 
-PCA vì vậy là một change-of-basis problem: tìm orthogonal axes theo thứ tự variance decreasing.
+PCA vì vậy là một change-of-basis bài toán (problem / 문제): tìm orthogonal axes theo thứ tự variance decreasing.
 
-## Compression và recommender systems
+## Compression và recommender các hệ thống (systems / 시스템들)
 
-Image matrix thường có correlated structure, nên rank thấp có thể approximate tốt. Recommender systems cũng assume user-item interactions có latent factors nhỏ hơn observed dimension rất nhiều.
+Ảnh (image / 이미지) ma trận (matrix / 행렬) thường có correlated cấu trúc (structure / 구조), nên rank thấp có thể approximate tốt. Recommender các hệ thống (systems / 시스템들) cũng assume user-item interactions có latent factors nhỏ hơn observed dimension rất nhiều.
 
-Nhưng low-rank assumption là model assumption. Nếu data không có low-rank structure, compression hoặc latent-factor interpretation sẽ kém.
+Nhưng low-rank giả định (assumption / 가정) là mô hình (model / 모델) giả định (assumption / 가정). Nếu dữ liệu (data / 데이터) không có low-rank cấu trúc (structure / 구조), compression hoặc latent-factor interpretation sẽ kém.
 
-## Finance connection — factor models
+## Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)
 
-Return matrix có thể được approximate bằng vài common factors:
+Return ma trận (matrix / 행렬) có thể được approximate bằng vài dùng chung (common / 공통) factors:
 
 ```math
 R\approx FB^T.
 ```
 
-Đây là low-rank idea. PCA có thể tìm statistical factors, nhưng statistical principal directions không tự động có economic meaning. Một direction maximize variance chưa chắc là factor có interpretation causal.
+Đây là low-rank idea. PCA có thể tìm statistical factors, nhưng statistical principal directions không tự động có economic meaning. Một direction maximize variance chưa chắc là factor có interpretation nhân quả (causal / 인과적).
 
-## AI connection — embeddings và low-rank parameterization
+## AI liên kết (connection / 연결) — embeddings và low-rank parameterization
 
-Large matrices trong neural networks có thể được approximated hoặc adapted bằng low-rank factors. LoRA-style ideas khai thác giả định rằng useful update nằm trong subspace dimension nhỏ hơn full parameter space.
+Large matrices trong neural networks có thể được approximated hoặc adapted bằng low-rank factors. LoRA-style ideas khai thác giả định rằng useful cập nhật (update / 업데이트) nằm trong subspace dimension nhỏ hơn full parameter không gian (space / 공간).
 
-SVD cũng giúp hiểu why low-rank representations compress information, nhưng trained low-rank adapters không đơn giản là “SVD của model”. Structure và optimization path khác nhau.
+SVD cũng giúp hiểu why low-rank representations compress thông tin (information / 정보), nhưng trained low-rank adapters không đơn giản là “SVD của mô hình (model / 모델)”. cấu trúc (structure / 구조) và tối ưu hóa (optimization / 최적화) đường dẫn (path / 경로) khác nhau.
 
-## Matrix decompositions là strategy chung
+## Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung
 
-LU, QR, Cholesky, eigendecomposition và SVD không phải các tricks rời rạc. Ý tưởng chung là factor một operator khó thành product của operators có structure dễ xử lý.
+LU, QR, Cholesky, eigendecomposition và SVD không phải các tricks rời rạc. Ý tưởng chung là factor một operator khó thành sản phẩm (product / 제품) của operators có cấu trúc (structure / 구조) dễ xử lý.
 
-- LU: triangular systems, useful cho repeated solves;
+- LU: triangular các hệ thống (systems / 시스템들), useful cho repeated solves;
 - Cholesky: symmetric positive-definite matrices, nhanh và efficient;
 - QR: orthogonalization và least squares;
-- eigendecomposition: natural invariant directions khi possible;
-- SVD: universal orthogonal input/output directions.
+- eigendecomposition: natural bất biến (invariant / 불변식) directions khi possible;
+- SVD: universal orthogonal đầu vào (input / 입력)/đầu ra (output / 출력) directions.
 
-Chọn decomposition phụ thuộc matrix structure và task, không có một decomposition “tốt nhất” cho mọi problem.
+Chọn decomposition phụ thuộc ma trận (matrix / 행렬) cấu trúc (structure / 구조) và tác vụ (task / 작업), không có một decomposition “tốt nhất” cho mọi bài toán (problem / 문제).
 
-## Failure modes và assumptions
+## Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)
 
-Squared loss nhạy với outliers vì residual lớn bị square. Robust regression có thể dùng L1/Huber losses.
+Squared mất mát (loss / 손실) nhạy với outliers vì residual lớn bị square. Robust regression có thể dùng L1/Huber losses.
 
-SVD trên raw features bị ảnh hưởng mạnh bởi scale. Nếu một feature đo bằng thousands và feature khác bằng units, variance geometry có thể chủ yếu phản ánh units. Standardization cần dựa trên domain meaning, không áp dụng máy móc.
+SVD trên raw features bị ảnh hưởng mạnh bởi quy mô (scale / 규모). Nếu một tính năng (feature / 기능) đo bằng thousands và tính năng (feature / 기능) khác bằng units, variance hình học (geometry / 기하학) có thể chủ yếu phản ánh units. Standardization cần dựa trên lĩnh vực (domain / 도메인) meaning, không áp dụng máy móc.
 
-Low-rank truncation có thể xóa weak nhưng meaningful signal. “Small singular value” chỉ nói weak linear direction relative to chosen scaling, không nói business importance bằng zero.
+Low-rank truncation có thể xóa weak nhưng meaningful tín hiệu (signal / 신호). “Small singular giá trị (value / 값)” chỉ nói weak tuyến tính (linear / 선형) direction relative to chosen scaling, không nói nghiệp vụ (business / 비즈니스) importance bằng zero.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Least squares là projection: khi target nằm ngoài reachable subspace, chọn reachable point gần nhất. QR xây coordinates ổn định cho subspace đó. SVD bóc một linear map thành orthogonal input directions, independent scaling strengths và orthogonal output directions. Tiny singular values là directions gần mất thông tin; regularization quyết định không cố phục hồi chúng quá mức.
+> Least squares là projection: khi mục tiêu (target / 대상) nằm ngoài reachable subspace, chọn reachable điểm (point / 지점) gần nhất. QR xây coordinates ổn định cho subspace đó. SVD bóc một tuyến tính (linear / 선형) map thành orthogonal đầu vào (input / 입력) directions, independent scaling strengths và orthogonal đầu ra (output / 출력) directions. Tiny singular values là directions gần mất thông tin; regularization quyết định không cố phục hồi chúng quá mức.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Least squares fit tốt nghĩa model đúng.”** Không. Nó chỉ tối ưu trong model family và loss đã chọn.
+**“Least squares fit tốt nghĩa mô hình (model / 모델) đúng.”** Không. Nó chỉ tối ưu trong mô hình (model / 모델) family và mất mát (loss / 손실) đã chọn.
 
-**“Normal equations là cách chuẩn nhất để code regression.”** Chúng tốt để derive theory nhưng QR/SVD thường preferable numerically.
+**“Normal equations là cách chuẩn nhất để mã (code / 코드) regression.”** Chúng tốt để derive lý thuyết (theory / 이론) nhưng QR/SVD thường preferable numerically.
 
 **“SVD chỉ dùng cho square matrices.”** Sai. SVD tồn tại cho rectangular matrices và chính đó là một ưu điểm lớn.
 
-**“PCA tìm các features quan trọng nhất.”** PCA tìm directions có variance lớn nhất, không trực tiếp tìm causal hoặc predictive importance.
+**“PCA tìm các features quan trọng nhất.”** PCA tìm directions có variance lớn nhất, không trực tiếp tìm nhân quả (causal / 인과적) hoặc predictive importance.
 
-**“Tiny singular values nên luôn xóa.”** Không. Threshold là modeling/numerical decision dựa trên noise, scale và purpose.
+**“Tiny singular values nên luôn xóa.”** Không. Threshold là modeling/numerical quyết định (decision / 결정) dựa trên noise, quy mô (scale / 규모) và purpose.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

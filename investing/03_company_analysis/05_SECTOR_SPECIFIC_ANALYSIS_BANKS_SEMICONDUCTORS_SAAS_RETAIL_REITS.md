@@ -1,5 +1,7 @@
 # Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng
 
+> **Mạch đọc:** Đặt **Phân tích doanh nghiệp theo ngành: ngân hàng, bán dẫn, SaaS, bán lẻ, REIT và các ngành quan trọng** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vì sao phải phân tích theo ngành** sang **2. Khung chung trước khi đi vào từng ngành**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > Một lỗi phổ biến là dùng cùng một bộ chỉ số cho mọi doanh nghiệp. P/E, tỷ lệ nợ hay biên gộp có ý nghĩa rất khác giữa ngân hàng, bán dẫn, phần mềm, bán lẻ, hàng không hay REIT. Chương này tập trung vào **động cơ kinh tế của từng ngành (economic engine)** để chọn đúng KPI và đúng phương pháp định giá.
 
 ## 1. Vì sao phải phân tích theo ngành
@@ -92,11 +94,11 @@ NPL thường là chỉ báo trễ. Tín hiệu sớm hơn có thể gồm:
 
 Tỷ lệ bao phủ dự phòng (provision coverage) giúp đánh giá buffer nhưng còn phụ thuộc chất lượng tài sản thế chấp và chính sách ghi nhận.
 
-## 7. Credit cost
+## 7. Credit chi phí (cost / 비용)
 
 Chi phí tín dụng (credit cost) thường được nhìn bằng dự phòng trên dư nợ bình quân.
 
-Trong suy thoái, credit cost có thể tăng nhanh và xóa phần lợi ích từ NIM cao.
+Trong suy thoái, credit chi phí (cost / 비용) có thể tăng nhanh và xóa phần lợi ích từ NIM cao.
 
 Do đó lợi nhuận ngân hàng phải được chuẩn hóa theo chu kỳ.
 
@@ -173,7 +175,7 @@ Combined Ratio
 
 Dưới 100% thường nghĩa underwriting có lãi.
 
-Tuy nhiên cần kiểm tra reserve release, catastrophe exposure và lịch sử phát triển dự phòng.
+Tuy nhiên cần kiểm tra reserve bản phát hành (release / 릴리스), catastrophe exposure và lịch sử phát triển dự phòng.
 
 ## 14. Bảo hiểm nhân thọ
 
@@ -191,7 +193,7 @@ Mismatch kỳ hạn có thể tạo lỗ kinh tế khi lãi suất thay đổi m
 
 ## 15. Ngành thâm dụng vốn và có chu kỳ
 
-Nhu cầu chip đến từ server, smartphone, PC, ô tô, công nghiệp và AI.
+Nhu cầu chip đến từ máy chủ (server / 서버), smartphone, PC, ô tô, công nghiệp và AI.
 
 Nguồn cung phản ứng chậm vì fab cần vốn lớn và thời gian dài.
 
@@ -205,7 +207,7 @@ Margin ↑ mạnh
 
 Nhưng capex cao sau đó có thể tạo dư cung.
 
-## 16. Memory, foundry, fabless và equipment
+## 16. bộ nhớ (memory / 메모리), foundry, fabless và equipment
 
 Các mô hình này khác nhau:
 
@@ -227,7 +229,7 @@ Không nên dùng cùng bội số cho tất cả.
 
 ## 17. ASP, bit growth và cơ cấu sản phẩm
 
-Memory revenue gần đúng:
+Bộ nhớ (memory / 메모리) revenue gần đúng:
 
 ```text
 Revenue ≈ Bit Shipment × ASP
@@ -262,13 +264,13 @@ Capex toàn ngành ↑ mạnh
 → ASP chịu áp lực
 ```
 
-Kỷ luật nguồn cung là biến rất quan trọng trong memory cycle.
+Kỷ luật nguồn cung là biến rất quan trọng trong bộ nhớ (memory / 메모리) cycle.
 
 ## 21. Yield và năng lực công nghệ
 
 Yield thấp làm chi phí trên mỗi die tốt tăng mạnh.
 
-Không nên chỉ nhìn tên node. Cần nhìn:
+Không nên chỉ nhìn tên nút (node / 노드). Cần nhìn:
 
 - hiệu suất;
 - điện năng;
@@ -338,11 +340,11 @@ Có thể theo dõi:
 - CAC payback;
 - sales efficiency.
 
-Nếu tăng trưởng chậm nhưng sales & marketing tiếp tục tăng nhanh, unit economics có thể đang xấu đi.
+Nếu tăng trưởng chậm nhưng sales & marketing tiếp tục tăng nhanh, đơn vị (unit / 단위) economics có thể đang xấu đi.
 
-## 28. Rule of 40
+## 28. quy tắc (rule / 규칙) of 40
 
-Rule of 40 chỉ là heuristic giữa tăng trưởng và lợi nhuận.
+Quy tắc (rule / 규칙) of 40 chỉ là heuristic giữa tăng trưởng và lợi nhuận.
 
 Nó không thay thế việc đánh giá:
 
@@ -374,20 +376,20 @@ Reverse DCF thường hữu ích hơn peer multiple khi kỳ vọng thị trư�
 
 # Phần V — Nền tảng Internet và marketplace
 
-## 31. Platform economics
+## 31. nền tảng (platform / 플랫폼) economics
 
 Nền tảng có thể kiếm tiền từ:
 
-- take rate;
+- take tỷ lệ (rate / 비율);
 - quảng cáo;
 - subscription;
 - payments.
 
-Network effect có thể mạnh nhưng không phải mọi nền tảng đều winner-take-all.
+Mạng (network / 네트워크) tác động (effect / 효과) có thể mạnh nhưng không phải mọi nền tảng đều winner-take-all.
 
-## 32. Take rate
+## 32. Take tỷ lệ (rate / 비율)
 
-Take rate tăng giúp doanh thu tăng nhanh nhưng nếu quá cao có thể làm seller hoặc user chuyển sang đối thủ.
+Take tỷ lệ (rate / 비율) tăng giúp doanh thu tăng nhanh nhưng nếu quá cao có thể làm seller hoặc người dùng (user / 사용자) chuyển sang đối thủ.
 
 Khả năng tăng giá phải cân bằng với sức khỏe hệ sinh thái.
 
@@ -399,7 +401,7 @@ Doanh thu quảng cáo có thể tách:
 Impressions × Price per Impression
 ```
 
-Cần theo dõi attention, ad load, conversion, ROI cho advertiser và thay đổi quyền riêng tư.
+Cần theo dõi attention, ad tải (load / 로드), conversion, ROI cho advertiser và thay đổi quyền riêng tư.
 
 # Phần VI — Bán lẻ và tiêu dùng
 
@@ -426,7 +428,7 @@ Retail gross margin chịu ảnh hưởng:
 
 - promotion;
 - shrinkage;
-- sourcing cost;
+- sourcing chi phí (cost / 비용);
 - markdown;
 - mix.
 
@@ -458,9 +460,9 @@ Mở nhiều điểm bán không tự động tạo giá trị.
 
 ## 39. Staples và discretionary
 
-Consumer staples ổn định hơn nhưng vẫn chịu raw-material inflation và bargaining power của retailer.
+Bên tiêu thụ (consumer / 소비자) staples ổn định hơn nhưng vẫn chịu raw-material inflation và bargaining power của retailer.
 
-Consumer discretionary nhạy hơn với thu nhập khả dụng, tín dụng và niềm tin tiêu dùng.
+Bên tiêu thụ (consumer / 소비자) discretionary nhạy hơn với thu nhập khả dụng, tín dụng và niềm tin tiêu dùng.
 
 # Phần VII — REIT và bất động sản
 
@@ -479,7 +481,7 @@ Tỷ lệ lấp đầy cao chưa đủ. Cần xem:
 - chất lượng tenant;
 - tenant concentration.
 
-## 42. Cap rate
+## 42. Cap tỷ lệ (rate / 비율)
 
 Cap rate là cầu nối giữa NOI và giá trị tài sản. Hãy đọc nó cùng lãi suất tài trợ, tăng trưởng thuê và chất lượng tài sản; một cap rate thấp không tự động là tài sản tốt nếu dòng tiền không bền vững.
 
@@ -487,20 +489,20 @@ Cap rate là cầu nối giữa NOI và giá trị tài sản. Hãy đọc nó c
 Cap Rate ≈ NOI / Property Value
 ```
 
-Nếu NOI không đổi, cap rate tăng thường làm giá trị tài sản giảm.
+Nếu NOI không đổi, cap tỷ lệ (rate / 비율) tăng thường làm giá trị tài sản giảm.
 
-Spread giữa cap rate và lãi suất tài trợ là mốc quan trọng.
+Spread giữa cap tỷ lệ (rate / 비율) và lãi suất tài trợ là mốc quan trọng.
 
-## 43. Development pipeline
+## 43. Development chuỗi xử lý (pipeline / 파이프라인)
 
-Dự án mới tạo giá trị khi **yield on cost** cao hơn cap rate thị trường sau khi ổn định.
+Dự án mới tạo giá trị khi **yield on chi phí (cost / 비용)** cao hơn cap tỷ lệ (rate / 비율) thị trường sau khi ổn định.
 
 Nhưng cần tính:
 
 - chậm tiến độ;
 - vượt chi phí;
-- leasing risk;
-- funding cost.
+- leasing rủi ro (risk / 위험);
+- funding chi phí (cost / 비용).
 
 ## 44. Nợ và tái cấp vốn
 
@@ -519,9 +521,9 @@ NAV là giá trị thị trường ước tính của tài sản trừ nợ ròn
 
 Premium/discount to NAV cần đọc cùng:
 
-- management quality;
-- growth pipeline;
-- cost of capital;
+- management chất lượng (quality / 품질);
+- growth chuỗi xử lý (pipeline / 파이프라인);
+- chi phí (cost / 비용) of capital;
 - thanh khoản tài sản.
 
 # Phần VIII — Công nghiệp, xây dựng và capital goods
@@ -550,10 +552,10 @@ Trên 1 kéo dài có thể báo hiệu backlog tăng. Dưới 1 kéo dài có t
 
 ## 48. Biên lợi nhuận dự án
 
-Construction và engineering có rủi ro lớn từ:
+Construction và kỹ thuật (engineering / 엔지니어링) có rủi ro lớn từ:
 
-- fixed-price contract;
-- cost overrun;
+- fixed-price đặc tả hợp đồng (contract / 계약);
+- chi phí (cost / 비용) overrun;
 - delay;
 - claim;
 - liquidated damages.
@@ -565,7 +567,7 @@ Doanh thu tăng không có ý nghĩa nếu margin dự án xấu đi.
 Dự án lớn có thể hút tiền qua:
 
 - receivables;
-- contract assets;
+- đặc tả hợp đồng (contract / 계약) assets;
 - inventory;
 - retention money.
 
@@ -594,13 +596,13 @@ Các KPI quan trọng:
 
 - RASK;
 - CASK;
-- load factor;
+- tải (load / 로드) factor;
 - yield;
-- fuel cost;
+- fuel chi phí (cost / 비용);
 - fleet lease;
 - net debt.
 
-Doanh thu cao chưa chắc tạo tiền nếu fuel và lease cost tăng nhanh.
+Doanh thu cao chưa chắc tạo tiền nếu fuel và lease chi phí (cost / 비용) tăng nhanh.
 
 # Phần X — Dầu khí, refining và hóa dầu
 
@@ -610,8 +612,8 @@ Cần theo dõi:
 
 - sản lượng;
 - reserve life;
-- lifting cost;
-- decline rate;
+- lifting chi phí (cost / 비용);
+- decline tỷ lệ (rate / 비율);
 - capex;
 - realized price;
 - hedge book.
@@ -627,7 +629,7 @@ KPI quan trọng:
 - crack spread;
 - utilization;
 - turnaround;
-- product mix;
+- sản phẩm (product / 제품) mix;
 - inventory effects.
 
 ## 54. Petrochemicals
@@ -646,16 +648,16 @@ Lợi nhuận thường gắn với:
 Rate Base × Allowed Return
 ```
 
-Tăng capex có thể hỗ trợ tăng trưởng rate base nhưng cũng tăng nhu cầu tài trợ.
+Tăng capex có thể hỗ trợ tăng trưởng tỷ lệ (rate / 비율) cơ sở (base / 기반) nhưng cũng tăng nhu cầu tài trợ.
 
 ## 56. Power generation
 
 Cần xem:
 
 - giá điện;
-- fuel cost;
-- heat rate;
-- capacity factor;
+- fuel chi phí (cost / 비용);
+- heat tỷ lệ (rate / 비율);
+- sức chứa (capacity / 용량) factor;
 - PPA;
 - merchant exposure.
 
@@ -671,7 +673,7 @@ Các KPI quan trọng:
 - churn;
 - subscriber growth;
 - capex intensity;
-- spectrum cost;
+- spectrum chi phí (cost / 비용);
 - tower economics.
 
 Ngành có recurring revenue nhưng capex lớn và cạnh tranh giá có thể làm ROIC thấp.
@@ -683,11 +685,11 @@ Ngành có recurring revenue nhưng capex lớn và cạnh tranh giá có thể 
 Cần theo dõi:
 
 - patent life;
-- pipeline;
+- chuỗi xử lý (pipeline / 파이프라인);
 - clinical milestones;
 - pricing;
 - reimbursement;
-- generic/biosimilar risk.
+- generic/biosimilar rủi ro (risk / 위험).
 
 Một sản phẩm lớn sắp mất độc quyền có thể làm tăng trưởng hiện tại nhìn tốt nhưng giá trị tương lai giảm.
 
@@ -700,7 +702,7 @@ Biotech giai đoạn sớm cần tập trung:
 - thời gian tới milestone;
 - nhu cầu vốn;
 - dilution;
-- market size.
+- thị trường (market / 시장) kích thước (size / 크기).
 
 Định giá xác suất thường phù hợp hơn P/E.
 
@@ -723,7 +725,7 @@ Reserve Life
 
 Grade giảm có thể làm chi phí tăng ngay cả khi sản lượng ổn định.
 
-## 61. Cost curve
+## 61. chi phí (cost / 비용) curve
 
 Doanh nghiệp nằm thấp trên đường cong chi phí có khả năng sống tốt hơn qua chu kỳ giá thấp.
 
@@ -781,7 +783,7 @@ Ví dụ:
 - EPS thường trễ hơn inventory cycle;
 - ARR có thể đi trước revenue;
 - backlog có thể đi trước doanh thu;
-- cap rate có thể phản ứng nhanh hơn NOI.
+- cap tỷ lệ (rate / 비율) có thể phản ứng nhanh hơn NOI.
 
 ## 64. Mẫu phân tích ngành
 
@@ -817,3 +819,5 @@ Ngành
 ```
 
 và tránh lỗi dùng cùng một công thức cho mọi doanh nghiệp.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

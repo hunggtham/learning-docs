@@ -1,5 +1,8 @@
 # Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường
 
+> **Mạch đọc:** Đọc **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mối nguy không đồng nghĩa rủi ro** sang **“Liều tạo nên độc tính” — nhưng liều nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hóa học độc chất (toxic chemistry / 독성 화학)** không thể được suy ra chỉ từ tên một chất. Mức gây hại phụ thuộc **liều × đường phơi nhiễm × thời gian × dạng hóa học × chuyển hóa × độ nhạy của đối tượng**. Trong môi trường còn phải xét vận chuyển, độ bền và khả năng chất thật sự tới được sinh vật hay cơ quan đích.
 
 Chương này nối trực tiếp với [hóa học nước](./01_water_chemistry.md), [hóa học đất](./02_soil_chemistry.md), [động học phản ứng](../06_chemical_kinetics/00_reaction_rates.md), [hóa học phối trí](../10_inorganic_chemistry/03_coordination_chemistry.md), [redox](../09_redox_and_electrochemistry/00_oxidation_and_reduction.md), [hóa học hữu cơ](../11_organic_chemistry/03_organic_reaction_mechanisms.md) và [đo lường/lấy mẫu](../12_analytical_chemistry/00_measurement_and_sampling.md).
@@ -189,7 +192,7 @@ K_{ow}=\frac{C_{octanol}}{C_{water}}
 
 Nhưng với chất có thể ion hóa, **hệ số phân bố D ở pH xác định** thường hữu ích hơn vì phần ion hóa có hành vi khác dạng trung hòa.
 
-Đây là ứng dụng của phân bố pha và acid–base, không chỉ là một chỉ số độc học độc lập.
+Đây là ứng dụng của phân bố pha và acid–cơ sở (base / 기반), không chỉ là một chỉ số độc học độc lập.
 
 ## PFAS — một họ hóa chất, không phải một chất duy nhất
 
@@ -348,9 +351,9 @@ Cần biết:
 - hành vi;
 - nhóm nhạy cảm.
 
-Nếu dữ liệu lấy mẫu hoặc định lượng bị bias, ước lượng rủi ro phía sau cũng bị bias.
+Nếu dữ liệu lấy mẫu hoặc định lượng bị độ lệch (bias / 편향), ước lượng rủi ro phía sau cũng bị độ lệch (bias / 편향).
 
-Đây là lý do [thẩm định phương pháp](../12_analytical_chemistry/07_method_validation_and_chemometrics.md) là prerequisite thực tế của risk assessment.
+Đây là lý do [thẩm định phương pháp](../12_analytical_chemistry/07_method_validation_and_chemometrics.md) là prerequisite thực tế của rủi ro (risk / 위험) assessment.
 
 ## Liều tham chiếu và hệ số không đảm bảo
 
@@ -402,7 +405,7 @@ Nếu chất hấp phụ lên trầm tích, nồng độ nước giảm nhưng t
 
 Một thay đổi pH hoặc redox sau này có thể làm chất được giải phóng trở lại.
 
-Cần theo dõi **mass balance + phase distribution + transformation**, không chỉ một pha nước.
+Cần theo dõi **mass balance + phase phân phối (distribution / 분포) + transformation**, không chỉ một pha nước.
 
 ## Những hiểu lầm thường gặp
 
@@ -424,7 +427,7 @@ Không. Dạng tồn tại, khả năng sinh học và đường phơi nhiễm r
 
 ### “Phát hiện bằng thiết bị nghĩa có rủi ro sức khỏe”
 
-Không. Phát hiện chỉ nói tín hiệu vượt tiêu chí đo; risk cần thêm hazard và exposure.
+Không. Phát hiện chỉ nói tín hiệu vượt tiêu chí đo; rủi ro (risk / 위험) cần thêm hazard và exposure.
 
 ## Mô hình tư duy
 
@@ -444,3 +447,5 @@ nguồn
 Ở mỗi bước, hóa học có thể thay đổi dạng tồn tại và vì thế thay đổi tốc độ vận chuyển hoặc độc tính.
 
 Xem tiếp: [Hóa học xanh](./04_green_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atmospheric chemistry](./00_atmospheric_chemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

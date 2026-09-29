@@ -1,5 +1,8 @@
 # ADHD, chú ý, chức năng điều hành và phát triển
 
+> **Mạch đọc:** Đọc **ADHD, chú ý, chức năng điều hành và phát triển** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Chú ý không phải một “bình xăng tập trung”** sang **2. Chức năng điều hành**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ADHD là một **rối loạn phát triển thần kinh (neurodevelopmental disorder)** liên quan đến mẫu kéo dài của khó khăn trong điều chỉnh chú ý, tính bốc đồng và/hoặc tăng hoạt động, xuất hiện từ giai đoạn phát triển và gây suy giảm chức năng có ý nghĩa trong đời sống thực.
 
 > **Trạng thái bằng chứng:** ADHD có bằng chứng mạnh về tính phát triển thần kinh, đóng góp di truyền/gia đình và ảnh hưởng chức năng. Không có một ảnh chụp não, xét nghiệm gene hay bảng hỏi đơn lẻ đủ để chẩn đoán một cá nhân.
@@ -14,7 +17,7 @@ Vấn đề phù hợp hơn là **điều chỉnh chú ý (attention regulation)
 
 Khó khăn có thể xuất hiện ở việc giữ mục tiêu trong trí nhớ làm việc, bắt đầu nhiệm vụ, ức chế phản ứng, chuyển đổi giữa nhiệm vụ, lập kế hoạch, ước lượng thời gian, nhớ việc cần làm trong tương lai và phân bổ nỗ lực.
 
-Không phải mọi người ADHD đều có cùng hồ sơ nhận thức. Bài test chức năng điều hành trong phòng thí nghiệm cũng không phản ánh hoàn hảo suy giảm chức năng ngoài đời.
+Không phải mọi người ADHD đều có cùng hồ sơ nhận thức. Bài kiểm thử (test / 테스트) chức năng điều hành trong phòng thí nghiệm cũng không phản ánh hoàn hảo suy giảm chức năng ngoài đời.
 
 Xem [[../02_learning_and_cognition/01_memory]] và [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]].
 
@@ -43,7 +46,7 @@ Có nguyên nhân nào khác giải thích tốt hơn không?
 Và có tình trạng nào đang cùng tồn tại không?
 ```
 
-## 6. “Time blindness” nên hiểu thế nào?
+## 6. “thời gian (time / 시간) blindness” nên hiểu thế nào?
 
 `Time blindness` là cách nói phổ biến, không phải một cơ chế chẩn đoán chính thức duy nhất. Nó có thể phản ánh kết hợp của trí nhớ tương lai, ước lượng thời gian, chiết khấu trì hoãn và khó giữ mục tiêu tương lai ở trạng thái hoạt động.
 

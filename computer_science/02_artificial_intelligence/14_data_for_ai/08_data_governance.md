@@ -1,12 +1,15 @@
-# Data Governance for AI
+# Dữ liệu (data / 데이터) quản trị (governance / 거버넌스) for AI
 
-**Data governance (데이터 거버넌스 / quản trị dữ liệu)** là hệ thống policy, ownership, metadata, access control và lifecycle management giúp tổ chức biết data nào tồn tại, ai chịu trách nhiệm, được dùng cho mục đích gì và model nào phụ thuộc vào nó.
+> **Mạch đọc:** Đặt **dữ liệu (data / 데이터) quản trị (governance / 거버넌스) for AI** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **quyền sở hữu (ownership / 소유권)** sang **dữ liệu (data / 데이터) danh mục (catalog / 카탈로그)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Governance không phải paperwork tách rời engineering. Khi AI dùng data để train/deploy, governance trở thành part of reliability, security và compliance.
 
-## Ownership
+**dữ liệu (data / 데이터) quản trị (governance / 거버넌스)** là hệ thống chính sách (policy / 정책), quyền sở hữu (ownership / 소유권), siêu dữ liệu (metadata / 메타데이터), kiểm soát truy cập (access control / 접근 제어) và vòng đời (lifecycle / 생명주기) management giúp tổ chức biết dữ liệu (data / 데이터) nào tồn tại, ai chịu trách nhiệm, được dùng cho mục đích gì và mô hình (model / 모델) nào phụ thuộc vào nó.
 
-Mỗi critical dataset/source nên có owner rõ:
+Quản trị (governance / 거버넌스) không phải paperwork tách rời kỹ thuật (engineering / 엔지니어링). Khi AI dùng dữ liệu (data / 데이터) để train/deploy, quản trị (governance / 거버넌스) trở thành part of độ tin cậy (reliability / 신뢰성), bảo mật (security / 보안) và compliance.
+
+## Quyền sở hữu (ownership / 소유권)
+
+Mỗi trọng yếu (critical / 중요) dataset/nguồn (source / 소스) nên có đơn vị sở hữu (owner / 오너) rõ:
 
 ```text
 business/domain owner
@@ -15,28 +18,28 @@ steward / quality owner
 security/privacy contact
 ```
 
-Nếu không ai chịu trách nhiệm semantics, feature definition sẽ drift âm thầm.
+Nếu không ai chịu trách nhiệm ngữ nghĩa (semantics / 의미론), tính năng (feature / 기능) definition sẽ drift âm thầm.
 
-## Data Catalog
+## Dữ liệu (data / 데이터) danh mục (catalog / 카탈로그)
 
-Catalog lưu metadata:
+Danh mục (catalog / 카탈로그) lưu siêu dữ liệu (metadata / 메타데이터):
 
 - dataset name/description;
-- schema;
-- owner;
-- source;
+- lược đồ (schema / 스키마);
+- đơn vị sở hữu (owner / 오너);
+- nguồn (source / 소스);
 - freshness;
 - lineage;
 - privacy classification;
 - permitted uses;
-- quality status;
+- chất lượng (quality / 품질) status;
 - retention.
 
-Catalog chỉ hữu ích nếu metadata maintained và searchable.
+Danh mục (catalog / 카탈로그) chỉ hữu ích nếu siêu dữ liệu (metadata / 메타데이터) maintained và searchable.
 
 ## Lineage
 
-Lineage graph:
+Lineage đồ thị (graph / 그래프):
 
 ```text
 source tables/files
@@ -46,11 +49,11 @@ source tables/files
 → deployment
 ```
 
-Khi source field bị lỗi, lineage trả lời models nào bị ảnh hưởng.
+Khi nguồn (source / 소스) trường dữ liệu (field / 필드) bị lỗi, lineage trả lời các mô hình (models / 모델들) nào bị ảnh hưởng.
 
-## Access Control
+## Kiểm soát truy cập (access control / 접근 제어)
 
-Least privilege áp dụng data:
+Least privilege áp dụng dữ liệu (data / 데이터):
 
 ```text
 who can read raw PII?
@@ -59,17 +62,17 @@ who can train model?
 who can see labels?
 ```
 
-Role/attribute-based access nên enforcement ở storage/service layer, không qua social convention.
+Role/attribute-based truy cập (access / 접근) nên enforcement ở lưu trữ (storage / 저장소)/dịch vụ (service / 서비스) tầng (layer / 계층), không qua xã hội (social / 사회적) convention.
 
 ## Purpose Limitation
 
-Data collected for one purpose may not automatically be legitimate for another. Governance records allowed processing purposes và restrictions.
+Dữ liệu (data / 데이터) collected for one purpose may not automatically be legitimate for another. quản trị (governance / 거버넌스) records allowed processing purposes và restrictions.
 
-AI experimentation phải respect same constraints as production.
+AI experimentation phải respect same các ràng buộc (constraints / 제약조건들) as môi trường vận hành (production / 운영 환경).
 
-## Data Classification
+## Dữ liệu (data / 데이터) Classification
 
-Common classes:
+Dùng chung (common / 공통) classes:
 
 ```text
 public
@@ -85,36 +88,36 @@ Classification drives encryption, retention và sharing policies.
 
 ## Encryption
 
-Protect data:
+Protect dữ liệu (data / 데이터):
 
 - at rest;
 - in transit;
 - key management;
-- access logging.
+- truy cập (access / 접근) logging.
 
-Encryption does not solve misuse by authorized user; authorization/audit still needed.
+Encryption does not solve misuse by authorized người dùng (user / 사용자); authorization/kiểm tra (audit / 감사) still needed.
 
 ## Retention và Deletion
 
-Retention should be purposeful. Training snapshot immutability conflicts with deletion requests/compliance; model lifecycle needs strategy for data removal and retraining where required.
+Retention should be purposeful. huấn luyện (training / 학습) snapshot immutability conflicts with deletion requests/compliance; mô hình (model / 모델) vòng đời (lifecycle / 생명주기) needs chiến lược (strategy / 전략) for dữ liệu (data / 데이터) removal and retraining where required.
 
-Deleting raw record does not automatically remove influence from already-trained model.
+Deleting raw bản ghi (record / 레코드) does not automatically remove influence from already-trained mô hình (model / 모델).
 
 ## Provenance
 
-For external data, record:
+For bên ngoài (external / 외부) dữ liệu (data / 데이터), bản ghi (record / 레코드):
 
-- source URL/provider;
+- nguồn (source / 소스) URL/provider;
 - collection date;
 - license/terms;
 - transformations;
 - consent/legal basis where relevant.
 
-Foundation-model era makes provenance increasingly important for copyright, trust and contamination analysis.
+Foundation-model era makes provenance increasingly important for copyright, trust and contamination phân tích (analysis / 분석).
 
 ## Dataset Versioning
 
-A version should identify exact content + processing config. Semantic version labels alone insufficient without immutable manifest/hash.
+A phiên bản (version / 버전) should identify chính xác (exact / 정확한) content + processing cấu hình (config / 설정). ngữ nghĩa (semantic / 의미적) phiên bản (version / 버전) labels alone insufficient without immutable manifest/băm (hash / 해시).
 
 ```text
 dataset_v42
@@ -126,7 +129,7 @@ label schema version
 
 ## Reproducibility
 
-To reproduce model, need more than code:
+To reproduce mô hình (model / 모델), need more than mã (code / 코드):
 
 ```text
 training data version
@@ -137,24 +140,24 @@ model config
 software environment
 ```
 
-Governance provides data half of reproducibility chain.
+Quản trị (governance / 거버넌스) provides dữ liệu (data / 데이터) half of reproducibility chuỗi (chain / 사슬).
 
-## Data Contracts
+## Dữ liệu (data / 데이터) Contracts
 
-Producer and consumer agree on schema + semantics + SLA + change process. Breaking changes trigger explicit migration instead of silent downstream degradation.
+Producer and bên tiêu thụ (consumer / 소비자) agree on lược đồ (schema / 스키마) + ngữ nghĩa (semantics / 의미론) + SLA + thay đổi (change / 변경) tiến trình (process / 프로세스). Breaking changes trigger tường minh (explicit / 명시적) di chuyển (migration / 마이그레이션) instead of silent downstream degradation.
 
 ## Privacy Impact
 
-Before using sensitive data, ask:
+Before using sensitive dữ liệu (data / 데이터), ask:
 
-- is feature necessary?
-- can aggregate/pseudonymized form work?
+- is tính năng (feature / 기능) necessary?
+- can aggregate/pseudonymized form công việc (work / 작업)?
 - can computation occur locally?
 - retention duration?
 - cross-border transfer?
-- user expectations?
+- người dùng (user / 사용자) expectations?
 
-Data minimization reduces both risk and model shortcut opportunities.
+Dữ liệu (data / 데이터) minimization reduces both rủi ro (risk / 위험) and mô hình (model / 모델) shortcut opportunities.
 
 ## Pseudonymization vs Anonymization
 
@@ -164,7 +167,7 @@ High-dimensional datasets are difficult to anonymize while preserving utility.
 
 ## Differential Privacy
 
-Differential Privacy offers formal bound on effect of one record. Roughly, mechanism `M` is `(ε,δ)`-DP if neighboring datasets produce similar output distributions:
+Differential Privacy offers formal bound on tác động (effect / 효과) of one bản ghi (record / 레코드). Roughly, cơ chế (mechanism / 메커니즘) `M` is `(ε,δ)`-DP if neighboring datasets produce similar đầu ra (output / 출력) distributions:
 
 \[
 P(M(D)\in S)\le e^\epsilon P(M(D')\in S)+\delta
@@ -172,60 +175,60 @@ P(M(D)\in S)\le e^\epsilon P(M(D')\in S)+\delta
 
 Smaller `ε` stronger privacy but often lower utility/more noise.
 
-DP is mathematical privacy mechanism, not substitute for access/security controls.
+DP is mathematical privacy cơ chế (mechanism / 메커니즘), not substitute for truy cập (access / 접근)/bảo mật (security / 보안) controls.
 
-## Data Residency
+## Dữ liệu (data / 데이터) Residency
 
-Organizations may require data remain in specific country/region. Cloud/model provider selection and cross-region processing become architecture constraint.
+Organizations may require dữ liệu (data / 데이터) remain in specific country/region. Cloud/mô hình (model / 모델) provider selection and cross-region processing become kiến trúc (architecture / 아키텍처) ràng buộc (constraint / 제약조건).
 
-## Vendor Data
+## Vendor dữ liệu (data / 데이터)
 
 Third-party datasets/APIs need due diligence:
 
 - license rights;
-- collection method;
-- data quality;
+- collection phương thức (method / 메서드);
+- dữ liệu (data / 데이터) chất lượng (quality / 품질);
 - privacy commitments;
 - retention;
 - model-training permissions;
-- change/termination terms.
+- thay đổi (change / 변경)/termination terms.
 
-## Audit Logs
+## Kiểm tra (audit / 감사) Logs
 
-Record who accessed/exported/modified sensitive datasets. Logs themselves sensitive and should be immutable enough for audit use.
+Bản ghi (record / 레코드) who accessed/exported/modified sensitive datasets. Logs themselves sensitive and should be immutable enough for kiểm tra (audit / 감사) use.
 
-## Data Incident Response
+## Dữ liệu (data / 데이터) sự cố (incident / 인시던트) phản hồi (response / 응답)
 
 If dataset leaked/corrupted:
 
-1. contain access;
-2. identify affected data/models;
+1. contain truy cập (access / 접근);
+2. identify affected dữ liệu (data / 데이터)/các mô hình (models / 모델들);
 3. use lineage to find downstream artifacts;
 4. invalidate/retrain as needed;
-5. preserve evidence;
-6. update controls.
+5. preserve bằng chứng (evidence / 증거);
+6. cập nhật (update / 업데이트) controls.
 
-## Governance for RAG
+## Quản trị (governance / 거버넌스) for RAG
 
-RAG index may ingest documents with different ACLs. Retrieval must enforce document permissions **before** results enter model context.
+RAG chỉ mục (index / 인덱스) may ingest documents with different ACLs. Retrieval must enforce document permissions **before** results enter mô hình (model / 모델) ngữ cảnh (context / 맥락).
 
-Do not rely on model to hide unauthorized chunk after retrieval.
+Do not rely on mô hình (model / 모델) to hide unauthorized chunk after retrieval.
 
-## Governance for Agent Memory
+## Quản trị (governance / 거버넌스) for tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)
 
-Persistent memory can become a new data store. It needs retention, deletion, user scope and provenance just like databases.
+Persistent bộ nhớ (memory / 메모리) can become a new dữ liệu (data / 데이터) store. It needs retention, deletion, người dùng (user / 사용자) phạm vi (scope / 범위) and provenance just like databases.
 
-## Governance for Synthetic Data
+## Quản trị (governance / 거버넌스) for Synthetic dữ liệu (data / 데이터)
 
-Record generator/model/prompt/source dataset. Synthetic label does not erase original licensing/privacy obligations automatically.
+Bản ghi (record / 레코드) generator/mô hình (model / 모델)/prompt/nguồn (source / 소스) dataset. Synthetic label does not erase original licensing/privacy obligations automatically.
 
-## Governance vs Bureaucracy
+## Quản trị (governance / 거버넌스) vs Bureaucracy
 
-Bad governance creates manual gates without reducing risk. Good governance creates machine-readable metadata, automated policy checks and clear ownership.
+Bad quản trị (governance / 거버넌스) creates manual gates without reducing rủi ro (risk / 위험). Good quản trị (governance / 거버넌스) creates machine-readable siêu dữ liệu (metadata / 메타데이터), automated chính sách (policy / 정책) checks and clear quyền sở hữu (ownership / 소유권).
 
-## Data Documentation
+## Dữ liệu (data / 데이터) Documentation
 
-Useful artifact:
+Useful sản phẩm tạo ra (artifact / 산출물):
 
 ```text
 Dataset Card
@@ -239,24 +242,26 @@ Dataset Card
 - recommended / prohibited uses
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Governance turns data from anonymous files into accountable assets with ownership, provenance, permissions and lifecycle.**
+> **quản trị (governance / 거버넌스) turns dữ liệu (data / 데이터) from anonymous files into accountable assets with quyền sở hữu (ownership / 소유권), provenance, permissions and vòng đời (lifecycle / 생명주기).**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Governance only matters for regulated companies”
+### “quản trị (governance / 거버넌스) only matters for regulated companies”
 
-Even small systems need lineage/ownership to debug and reproduce.
+Even small các hệ thống (systems / 시스템들) need lineage/quyền sở hữu (ownership / 소유권) to gỡ lỗi (debug / 디버그) and reproduce.
 
 ### “Anonymized dataset is safe forever”
 
-Re-identification risk evolves with auxiliary data.
+Re-identification rủi ro (risk / 위험) evolves with auxiliary dữ liệu (data / 데이터).
 
-### “If RAG search engine can access document, model may access it”
+### “If RAG tìm kiếm (search / 검색) engine can truy cập (access / 접근) document, mô hình (model / 모델) may truy cập (access / 접근) it”
 
 User-level authorization still must be enforced.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Data governance connects Security, Privacy, MLOps, AI Safety and organizational process. It closes the Data layer and prepares for AI Engineering, where models/data become production services.
+Dữ liệu (data / 데이터) quản trị (governance / 거버넌스) connects bảo mật (security / 보안), Privacy, MLOps, AI an toàn (safety / 안전) and organizational tiến trình (process / 프로세스). It closes the dữ liệu (data / 데이터) tầng (layer / 계층) and prepares for AI kỹ thuật (engineering / 엔지니어링), where các mô hình (models / 모델들)/dữ liệu (data / 데이터) become môi trường vận hành (production / 운영 환경) services.
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 data as the foundation of ai](./00_data_as_the_foundation_of_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

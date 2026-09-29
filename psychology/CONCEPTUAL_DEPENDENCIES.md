@@ -1,6 +1,9 @@
-# Conceptual Dependencies — Psychology Knowledge Library
+# Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-File này mô tả **dependency về khái niệm**, không phải thứ tự học cứng. Mục tiêu là tránh đọc một concept downstream mà bỏ qua assumptions ở upstream.
+> **Mạch đọc:** Đặt **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trục khoa học nền** sang **2. Brain & Mind**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Tệp (file / 파일) này mô tả **phụ thuộc (dependency / 의존성) về khái niệm**, không phải thứ tự học cứng. Mục tiêu là tránh đọc một concept downstream mà bỏ qua các giả định (assumptions / 가정들) ở upstream.
 
 ## 1. Trục khoa học nền
 
@@ -21,7 +24,10 @@ graph TD
     H --> I
 ```
 
-Ý nghĩa của graph này: trước khi kết luận một effect “real”, cần biết construct được đo ra sao, analysis dựa assumptions nào, causal question có hợp lệ không và result có đứng vững qua replication/synthesis không.
+Ý nghĩa của đồ thị (graph / 그래프) này: trước khi kết luận một tác động (effect / 효과) “real”, cần biết construct được đo ra sao, phân tích (analysis / 분석) dựa các giả định (assumptions / 가정들) nào, nhân quả (causal / 인과적) question có hợp lệ không và kết quả (result / 결과) có đứng vững qua replication/synthesis không.
+
+
+> **Chuyển mạch:** Từ **1. Trục khoa học nền**, ta sang **2. Brain & Mind** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Brain & Mind
 
@@ -42,9 +48,12 @@ graph TD
     H --> J
 ```
 
-Neuroscience là một level of analysis, không phải “final explanation” cho mọi psychological construct.
+Neuroscience là một mức (level / 수준) of phân tích (analysis / 분석), không phải “final explanation” cho mọi psychological construct.
 
-## 3. Learning & Cognition
+
+> **Chuyển mạch:** Từ **2. Brain & Mind**, ta sang **3. học tập (learning / 학습) & Cognition** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 3. học tập (learning / 학습) & Cognition
 
 Nhóm này giải thích cách hệ thống tiếp nhận, lưu, biến đổi và sử dụng thông tin. Các chapter nối memory, language, decision và expertise với điều kiện môi trường và giới hạn tài nguyên.
 
@@ -65,7 +74,7 @@ graph TD
     B --> M[Cognitive Offloading]
 ```
 
-Important dependency:
+Important phụ thuộc (dependency / 의존성):
 
 ```text
 Learning performance hôm nay
@@ -73,9 +82,12 @@ Learning performance hôm nay
 Durable learning ngày mai
 ```
 
-Vì vậy applied education phải dựa vào memory/transfer evidence, không chỉ cảm giác học “trôi chảy”.
+Vì vậy applied education phải dựa vào bộ nhớ (memory / 메모리)/transfer bằng chứng (evidence / 증거), không chỉ cảm giác học “trôi chảy”.
 
-## 4. Development, self và social world
+
+> **Chuyển mạch:** Từ **3. học tập (learning / 학습) & Cognition**, ta sang **4. Development, self và xã hội (social / 사회적) world** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 4. Development, self và xã hội (social / 사회적) world
 
 Trục phát triển đặt cá nhân trong thời gian, quan hệ và bối cảnh xã hội. Hãy theo dõi feedback giữa biology, learning, attachment, identity và institution thay vì xem development như một đường thẳng cố định.
 
@@ -97,7 +109,10 @@ graph TD
     A --> O[Aging]
 ```
 
-Attachment không nên dùng như internet personality label. Identity, culture và family context có bidirectional influence; không có một causal arrow duy nhất giải thích development.
+Attachment không nên dùng như internet personality label. định danh (identity / 식별자), culture và family ngữ cảnh (context / 맥락) có bidirectional influence; không có một nhân quả (causal / 인과적) arrow duy nhất giải thích development.
+
+
+> **Chuyển mạch:** Từ **4. Development, self và xã hội (social / 사회적) world**, ta sang **5. Stress, emotion và regulation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. Stress, emotion và regulation
 
@@ -115,12 +130,15 @@ graph TD
     H[Social Support] --> E
 ```
 
-Applied regulation content phải giữ boundary giữa:
+Applied regulation content phải giữ ranh giới (boundary / 경계) giữa:
 
-- low-risk strategy;
+- low-risk chiến lược (strategy / 전략);
 - mechanism-based intervention;
 - clinical treatment;
-- self-help claim chưa có evidence.
+- self-help claim chưa có bằng chứng (evidence / 증거).
+
+
+> **Chuyển mạch:** Từ **5. Stress, emotion và regulation**, ta sang **6. Mental Health** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 6. Mental Health
 
@@ -141,7 +159,10 @@ graph TD
     A --> L[Personality Pathology]
 ```
 
-Diagnosis là classification/inference tool, không phải identity sentence. Treatment evidence phải được tách khỏi theoretical truth của trường phái.
+Diagnosis là classification/suy luận (inference / 추론) công cụ (tool / 도구), không phải định danh (identity / 식별자) sentence. Treatment bằng chứng (evidence / 증거) phải được tách khỏi theoretical truth của trường phái.
+
+
+> **Chuyển mạch:** Từ **6. Mental Health**, ta sang **7. Historical Schools** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. Historical Schools
 
@@ -159,7 +180,7 @@ graph TD
     E --> G[Personality / Identity / Memory / Motivation]
 ```
 
-Dependency bắt buộc:
+Phụ thuộc (dependency / 의존성) bắt buộc:
 
 ```text
 Historical influence
@@ -168,6 +189,9 @@ Modern scientific validation
 ```
 
 Freud, Adler và Jung phải được đọc qua [[EVIDENCE_STATUS_GUIDE]] và [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
+
+
+> **Chuyển mạch:** Từ **7. Historical Schools**, ta sang **8. Applied Psychology** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Applied Psychology
 
@@ -186,9 +210,12 @@ graph TD
     N[Stress + Regulation] --> O[Everyday Self-regulation]
 ```
 
-Ứng dụng chỉ nên mạnh bằng upstream evidence của nó. Một practical recommendation không được nâng status chỉ vì nghe hợp lý hoặc dễ nhớ.
+Ứng dụng chỉ nên mạnh bằng upstream bằng chứng (evidence / 증거) của nó. Một practical recommendation không được nâng status chỉ vì nghe hợp lý hoặc dễ nhớ.
 
-## 9. Five-level evidence dependency
+
+> **Chuyển mạch:** Từ **8. Applied Psychology**, ta sang **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)
 
 Khi đọc bất kỳ chapter nào, nên map claim vào một trong năm mức:
 
@@ -202,23 +229,27 @@ Historical theory
 
 Một chapter có thể chứa nhiều mức đồng thời. Status phải gắn vào **claim**, không gắn cứng vào toàn bộ topic.
 
-## 10. Core navigation
 
 Phần điều hướng này bàn giao dependency giữa các domain và chỉ ra các đường đọc thay thế. Chọn route theo câu hỏi hiện tại, rồi quay lại foundation khi một thuật ngữ hoặc bằng chứng chưa rõ.
 
 - Scientific reasoning: [[00_foundations/00_psychology_as_science]] → [[00_foundations/02_research_methods]] → [[00_foundations/03_measurement_statistics]] → [[00_foundations/05_psychometrics_and_test_interpretation]] → [[00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
 - Brain/mind: [[01_brain_and_mind/00_nervous_system_and_brain]] → [[01_brain_and_mind/01_sensation_and_perception]] → [[01_brain_and_mind/07_attention_consciousness_and_awareness]] → [[01_brain_and_mind/09_consciousness_theories_and_evidence]].
-- Learning/cognition: [[02_learning_and_cognition/00_learning_and_conditioning]] → [[02_learning_and_cognition/01_memory]] → [[02_learning_and_cognition/02_thinking_language_and_decision]] → [[02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
-- Historical context: [[00_foundations/01_history_and_major_perspectives]] → [[90_connections/05_adler_individual_psychology_in_context]] / [[90_connections/00_freud_jung_and_depth_psychology_in_context]] → [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
+- học tập (learning / 학습)/cognition: [[02_learning_and_cognition/00_learning_and_conditioning]] → [[02_learning_and_cognition/01_memory]] → [[02_learning_and_cognition/02_thinking_language_and_decision]] → [[02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
+- Historical ngữ cảnh (context / 맥락): [[00_foundations/01_history_and_major_perspectives]] → [[90_connections/05_adler_individual_psychology_in_context]] / [[90_connections/00_freud_jung_and_depth_psychology_in_context]] → [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-## 11. Rule khi tạo chapter mới
+
+> **Chuyển mạch:** Từ **10. cốt lõi (core / 핵심) điều hướng (navigation / 내비게이션)**, ta sang **11. quy tắc (rule / 규칙) khi tạo chapter mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 11. quy tắc (rule / 규칙) khi tạo chapter mới
 
 Chỉ tạo chapter mới khi ít nhất một điều đúng:
 
-1. concept có mechanism riêng đủ lớn;
-2. chapter cũ đang chứa nhiều conceptual boundary;
+1. concept có cơ chế (mechanism / 메커니즘) riêng đủ lớn;
+2. chapter cũ đang chứa nhiều conceptual ranh giới (boundary / 경계);
 3. topic cần evidence-status riêng để tránh overclaim;
-4. topic là prerequisite của nhiều domain khác;
+4. topic là prerequisite của nhiều lĩnh vực (domain / 도메인) khác;
 5. chapter riêng giúp giảm duplication thực sự.
 
-Không tách file chỉ vì muốn tăng số lượng chapter.
+Không tách tệp (file / 파일) chỉ vì muốn tăng số lượng chapter.
+
+> **Bàn giao:** Sau **11. quy tắc (rule / 규칙) khi tạo chapter mới**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

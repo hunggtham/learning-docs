@@ -1,8 +1,11 @@
-# Tỉ số, tỉ lệ, rate và phần trăm: ngôn ngữ của so sánh tương đối
+# Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối
+
+> **Mạch đọc:** Đọc **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ratio là quantity không phụ thuộc quy mô (scale / 규모) chung** sang **Ratio, tỷ lệ (rate / 비율) và fraction khác nhau thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Tỉ số (ratio / 비) là một trong những ideas arithmetic quan trọng nhất vì rất nhiều quantities trong đời sống không có ý nghĩa khi nhìn bằng absolute difference alone. “Hơn 10” và “gấp đôi” trả lời hai câu hỏi khác nhau.
 
-Nếu server A xử lý 200 requests/s và server B xử lý 100 requests/s, difference là 100 requests/s nhưng ratio là
+Nếu máy chủ (server / 서버) A xử lý 200 requests/s và máy chủ (server / 서버) B xử lý 100 requests/s, difference là 100 requests/s nhưng ratio là
 
 ```math
 \frac{200}{100}=2.
@@ -10,9 +13,9 @@ Nếu server A xử lý 200 requests/s và server B xử lý 100 requests/s, dif
 
 Difference là additive comparison; ratio là multiplicative comparison.
 
-## Ratio là quantity không phụ thuộc scale chung
+## Ratio là quantity không phụ thuộc quy mô (scale / 규모) chung
 
-Nếu `a:b=2:3`, scale cả hai bởi cùng positive factor `k`:
+Nếu `a:b=2:3`, quy mô (scale / 규모) cả hai bởi cùng positive factor `k`:
 
 ```math
 ka:kb=2:3.
@@ -20,27 +23,27 @@ ka:kb=2:3.
 
 Ratio không đổi. Đây là reason ratios phù hợp mô tả shape, composition và relative allocation.
 
-Recipe 2 parts water : 1 part concentrate vẫn giữ taste nếu scale từ cups sang liters, miễn cùng ratio.
+Recipe 2 parts water : 1 part concentrate vẫn giữ taste nếu quy mô (scale / 규모) từ cups sang liters, miễn cùng ratio.
 
-## Ratio, rate và fraction khác nhau thế nào?
+## Ratio, tỷ lệ (rate / 비율) và fraction khác nhau thế nào?
 
 Ratio có thể so quantities cùng loại hoặc khác loại.
 
-Nếu same unit, ratio thường dimensionless:
+Nếu same đơn vị (unit / 단위), ratio thường dimensionless:
 
 ```math
 \frac{10\text{ kg}}{5\text{ kg}}=2.
 ```
 
-Nếu khác units, ratio trở thành rate:
+Nếu khác units, ratio trở thành tỷ lệ (rate / 비율):
 
 ```math
 \frac{120\text{ km}}{2\text{ h}}=60\text{ km/h}.
 ```
 
-Rate có unit và thường mô tả “per one unit” của denominator quantity.
+Tỷ lệ (rate / 비율) có đơn vị (unit / 단위) và thường mô tả “per one đơn vị (unit / 단위)” của denominator quantity.
 
-Fraction như `3/5` có thể represent ratio, probability, operator “divide 3 by 5” hoặc part-whole relation tùy context. Không nên đồng nhất notation với meaning.
+Fraction như `3/5` có thể represent ratio, xác suất (probability / 확률), operator “divide 3 by 5” hoặc part-whole quan hệ (relation / 관계) tùy ngữ cảnh (context / 맥락). Không nên đồng nhất notation với meaning.
 
 ## Proportion: equality của ratios
 
@@ -58,7 +61,7 @@ Cross multiplication
 ad=bc
 ```
 
-không phải rule riêng cần học thuộc. Multiply both sides bởi `bd`:
+không phải quy tắc (rule / 규칙) riêng cần học thuộc. Multiply both sides bởi `bd`:
 
 ```math
 bd\frac ab=bd\frac cd,
@@ -84,25 +87,25 @@ Then
 
 constant khi `x\neq0`.
 
-Graph đi qua origin vì nếu input zero thì output zero trong model.
+Đồ thị (graph / 그래프) đi qua origin vì nếu đầu vào (input / 입력) zero thì đầu ra (output / 출력) zero trong mô hình (model / 모델).
 
-Ví dụ unit price fixed `p`:
+Ví dụ đơn vị (unit / 단위) price fixed `p`:
 
 ```math
 C=pq.
 ```
 
-Nếu quantity double, total cost double.
+Nếu quantity double, total chi phí (cost / 비용) double.
 
-Nếu graph linear nhưng có intercept:
+Nếu đồ thị (graph / 그래프) tuyến tính (linear / 선형) nhưng có intercept:
 
 ```math
 C=b+pq,
 ```
 
-thì cost không proportional với quantity dù vẫn affine/linear-looking. Fixed fee `b` phá constant ratio.
+thì chi phí (cost / 비용) không proportional với quantity dù vẫn affine/linear-looking. Fixed fee `b` phá constant ratio.
 
-## Inverse proportionality: constant product
+## Inverse proportionality: constant sản phẩm (product / 제품)
 
 Nếu
 
@@ -118,15 +121,15 @@ xy=k.
 
 Một variable tăng factor `c` thì other giảm factor `c`.
 
-Ideal work model: fixed workload `W`, identical workers `n`, no coordination overhead:
+Ideal công việc (work / 작업) mô hình (model / 모델): fixed tải công việc (workload / 워크로드) `W`, identical workers `n`, no coordination overhead:
 
 ```math
 T=\frac W{rn}.
 ```
 
-Time inverse-proportional với workers. Real teams violate assumptions vì communication, dependencies và uneven tasks. Đây là example quan trọng: proportionality is a model, not a law by notation alone.
+Thời gian (time / 시간) inverse-proportional với workers. Real teams violate các giả định (assumptions / 가정들) vì communication, dependencies và uneven tasks. Đây là example quan trọng: proportionality is a mô hình (model / 모델), not a law by notation alone.
 
-## Percentage chỉ là ratio trên base 100
+## Percentage chỉ là ratio trên cơ sở (base / 기반) 100
 
 Phần trăm là một ratio có mẫu chuẩn bằng 100. Đọc nó theo base giúp phân biệt phần trăm, percentage point và thay đổi tương đối trong các bài toán thực tế.
 
@@ -148,9 +151,9 @@ Ví dụ:
 =60.
 ```
 
-Điểm quan trọng là luôn xác định **base**. “20% increase” nghĩa 20% của old value, không phải new value.
+Điểm quan trọng là luôn xác định **cơ sở (base / 기반)**. “20% increase” nghĩa 20% của old giá trị (value / 값), không phải new giá trị (value / 값).
 
-## Percentage change: denominator là reference state
+## Percentage thay đổi (change / 변경): denominator là tham chiếu (reference / 참조) trạng thái (state / 상태)
 
 Từ old `x` sang new `y`:
 
@@ -160,7 +163,7 @@ Từ old `x` sang new `y`:
 \frac{y-x}{x}.
 ```
 
-Percentage change:
+Percentage thay đổi (change / 변경):
 
 ```math
 \frac{y-x}{x}\times100\%.
@@ -178,7 +181,7 @@ Từ 100 xuống 80:
 \frac{-20}{100}=-20\%.
 ```
 
-Hai percentages khác nhau vì denominator/base khác.
+Hai percentages khác nhau vì denominator/cơ sở (base / 기반) khác.
 
 ## Vì sao +10% rồi -10% không cancel?
 
@@ -204,11 +207,11 @@ Combined:
 
 Net -1%.
 
-Percentage operations live naturally in multiplicative space, không additive space.
+Percentage operations live naturally in multiplicative không gian (space / 공간), không additive không gian (space / 공간).
 
-## Percentage point khác percentage change
+## Percentage điểm (point / 지점) khác percentage thay đổi (change / 변경)
 
-Nếu interest rate tăng từ 3% lên 5%:
+Nếu interest tỷ lệ (rate / 비율) tăng từ 3% lên 5%:
 
 - increase là 2 **percentage points**;
 - relative percentage increase là
@@ -217,11 +220,11 @@ Nếu interest rate tăng từ 3% lên 5%:
 \frac{5-3}{3}\approx66.7\%.
 ```
 
-Hai statements khác nhau mạnh. Reports về polls, rates, margins và market share thường bị hiểu sai vì trộn hai concepts này.
+Hai statements khác nhau mạnh. Reports về polls, rates, margins và thị trường (market / 시장) share thường bị hiểu sai vì trộn hai concepts này.
 
 ## Repeated rates dẫn tới exponential growth
 
-Nếu quantity tăng fixed rate `r` mỗi period:
+Nếu quantity tăng fixed tỷ lệ (rate / 비율) `r` mỗi period:
 
 ```math
 x_{n+1}=x_n(1+r).
@@ -233,7 +236,7 @@ Repeated substitution:
 x_n=x_0(1+r)^n.
 ```
 
-Compound interest, population growth, inflation compounding và depreciation đều dùng same multiplicative structure.
+Compound interest, population growth, inflation compounding và depreciation đều dùng same multiplicative cấu trúc (structure / 구조).
 
 Arithmetic percentage vì vậy là prerequisite trực tiếp cho exponential functions và finance.
 
@@ -253,7 +256,7 @@ Average arithmetic return
 
 không reproduce final wealth generally.
 
-Geometric average growth rate `g` thỏa
+Geometric average growth tỷ lệ (rate / 비율) `g` thỏa
 
 ```math
 (1+g)^n
@@ -273,11 +276,11 @@ Year 1 +50%, year 2 -50%:
 
 Total wealth giảm 25%, dù arithmetic average return là 0%.
 
-Multiplicative process cần multiplicative aggregation.
+Multiplicative tiến trình (process / 프로세스) cần multiplicative aggregation.
 
 ## Weighted average: denominator tells what is being averaged
 
-Class A: 10 students average 80. Class B: 30 students average 90.
+Lớp (class / 클래스) A: 10 students average 80. lớp (class / 클래스) B: 30 students average 90.
 
 Overall average:
 
@@ -297,7 +300,7 @@ General:
 \frac{\sum_iw_ix_i}{\sum_iw_i}.
 ```
 
-Portfolio return, CPI baskets, grades, distributed metrics và expected values đều dùng weighted structure.
+Portfolio return, CPI baskets, grades, phân tán (distributed / 분산) metrics và expected values đều dùng weighted cấu trúc (structure / 구조).
 
 ## Simpson's paradox: aggregated ratios có thể đảo conclusion
 
@@ -305,9 +308,9 @@ Nếu success rates được aggregate across groups có different sizes/difficu
 
 Reason: weighted composition differs between groups. Ratio comparison without conditioning can hide confounding.
 
-Đây là bridge từ elementary percentages sang statistics và causal reasoning.
+Đây là cầu nối (bridge / 브리지) từ elementary percentages sang statistics và lập luận nhân quả (causal reasoning / 인과적 추론).
 
-## Rates và dimensional analysis
+## Rates và dimensional phân tích (analysis / 분석)
 
 Speed:
 
@@ -334,17 +337,17 @@ Currency exchange:
 =140000\text{ KRW}.
 ```
 
-Writing units makes multiply/divide direction explicit.
+Writing units makes multiply/divide direction tường minh (explicit / 명시적).
 
-## Scaling law và ratio reasoning
+## Scaling law và ratio lập luận (reasoning / 추론)
 
-Nếu similar shapes scale length by `k`, corresponding side ratios constant. Area scales `k^2`, volume `k^3`.
+Nếu similar shapes quy mô (scale / 규모) length by `k`, corresponding side ratios constant. Area scales `k^2`, volume `k^3`.
 
-Thus elementary proportion becomes geometric scaling and dimensional analysis.
+Thus elementary proportion becomes geometric scaling and dimensional phân tích (analysis / 분석).
 
-## AI and data connection — normalization and rates
+## AI and dữ liệu (data / 데이터) liên kết (connection / 연결) — normalization and rates
 
-Metrics like precision, recall, conversion rate, error rate đều ratios. Their denominator defines meaning.
+Metrics like precision, recall, conversion tỷ lệ (rate / 비율), lỗi (error / 오류) tỷ lệ (rate / 비율) đều ratios. Their denominator defines meaning.
 
 For example:
 
@@ -364,9 +367,9 @@ Same numerator `TP`, different denominators → different questions.
 
 Never compare percentages without checking denominator population.
 
-## Finance connection — nominal vs real change
+## Finance liên kết (connection / 연결) — nominal vs real thay đổi (change / 변경)
 
-If nominal wealth grows by `r_n` and prices by inflation `\pi`, exact real growth factor is
+If nominal wealth grows by `r_n` and prices by inflation `\pi`, chính xác (exact / 정확한) real growth factor is
 
 ```math
 \frac{1+r_n}{1+\pi}.
@@ -390,17 +393,17 @@ works only for small rates.
 
 This is another example where multiplicative ratios are fundamental and additive shortcuts are approximations.
 
-## Assumptions và failure modes
+## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
-Ratios become unstable when denominator near zero. Percentage changes from very small bases can look huge. A 100% increase from 1 to 2 may be operationally tiny; context and absolute magnitude still matter.
+Ratios become unstable when denominator near zero. Percentage changes from very small bases can look huge. A 100% increase from 1 to 2 may be operationally tiny; ngữ cảnh (context / 맥락) and absolute magnitude still matter.
 
 Average of ratios may differ from ratio of totals. Weighted aggregation must match desired denominator.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Ratio answers “how many times relative to a reference?” Rate adds units to that comparison. Percentage simply expresses a ratio on a base-100 scale. Repeated percentages multiply, weighted averages reconstruct numerator/denominator structure, and many statistical or financial errors come from forgetting which denominator defines the question.
+> Ratio answers “how many times relative to a tham chiếu (reference / 참조)?” tỷ lệ (rate / 비율) adds units to that comparison. Percentage simply expresses a ratio on a base-100 quy mô (scale / 규모). Repeated percentages multiply, weighted averages reconstruct numerator/denominator cấu trúc (structure / 구조), and many statistical or financial errors come from forgetting which denominator defines the question.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 **“+10% and -10% cancel.”** They apply to different bases and combine multiplicatively.
 
@@ -408,6 +411,6 @@ Average of ratios may differ from ratio of totals. Weighted aggregation must mat
 
 **“Average of averages is fine.”** Only when weights/groups are equal or specifically appropriate.
 
-**“A huge percentage change always means a huge practical change.”** Small denominators can create huge percentages.
+**“A huge percentage thay đổi (change / 변경) always means a huge practical thay đổi (change / 변경).”** Small denominators can create huge percentages.
 
 **“Any straight line means direct proportionality.”** `y=kx+b` is proportional only when `b=0`.

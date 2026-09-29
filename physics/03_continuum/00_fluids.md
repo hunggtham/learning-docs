@@ -1,5 +1,8 @@
 # Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes
 
+> **Mạch đọc:** Đọc **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ các hạt riêng lẻ đến mô hình liên tục** sang **Mật độ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Từ các hạt riêng lẻ đến mô hình liên tục
 
 Chất lưu (Fluid / 유체) gồm chất lỏng và chất khí, có khả năng biến dạng liên tục khi chịu ứng suất cắt. Ở cấp vi mô, chất lưu được cấu tạo từ các phân tử. Tuy nhiên theo dõi chuyển động của cỡ `10^23` hạt là bất khả thi và cũng không cần thiết cho phần lớn bài toán vĩ mô.
@@ -199,7 +202,7 @@ Một dạng của phương trình Navier–Stokes cho chất lưu Newton không
 =-\nabla P+\mu\nabla^2\vec v+\rho\vec g
 ```
 
-Có thể đọc đây là định luật II Newton cho môi trường liên tục: mật độ khối lượng nhân với gia tốc của trường vận tốc bằng tổng mật độ lực do gradient áp suất, độ nhớt và lực khối như trọng lực.
+Có thể đọc đây là định luật II Newton cho môi trường liên tục: mật độ khối lượng nhân với gia tốc của trường vận tốc bằng tổng mật độ lực do độ dốc (gradient / 기울기) áp suất, độ nhớt và lực khối như trọng lực.
 
 Hạng tử đối lưu phi tuyến:
 
@@ -211,7 +214,7 @@ là một nguồn quan trọng của độ phức tạp trong động lực họ
 
 Động lực học chất lưu tính toán (Computational Fluid Dynamics, CFD / 전산유체역학) rời rạc hóa các phương trình trên lưới hoặc mesh để mô phỏng dòng khí, làm mát, quá trình cháy, khí động học, thời tiết và nhiều hệ kỹ thuật khác.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Cơ học chất lưu có thể được xem như cơ học Newton sau khi ta thay mô tả “mỗi vật có một vị trí và vận tốc” bằng mô tả “mỗi điểm trong không gian có mật độ, áp suất và vận tốc”. Các định luật bảo toàn vẫn là cốt lõi; cách biểu diễn chuyển từ hạt riêng lẻ sang các trường liên tục.
 
@@ -225,8 +228,10 @@ Không. Áp suất là lực trên một đơn vị diện tích. Muốn tính l
 
 Không. Phương trình Bernoulli đơn giản dựa trên các giả định cụ thể. Tổn thất nhớt, bơm, tua-bin, dòng không ổn định hoặc tính nén được có thể yêu cầu phương trình năng lượng tổng quát hơn.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Định luật Newton](../01_mechanics/01_newton_laws_dynamics.md).
 
 **Liên hệ tiếp:** [Hiện tượng vận chuyển](02_transport_diffusion_heat.md), [Dòng rối và lưu biến](03_turbulence_rheology_soft_matter.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 surface tension capillarity](./01_surface_tension_capillarity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

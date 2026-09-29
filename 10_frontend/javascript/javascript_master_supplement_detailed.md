@@ -1,20 +1,23 @@
-# JavaScript Master Supplement — Hoàn thiện Knowledge Library từ runtime semantics đến modern ECMAScript
+# JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript
 
-> **Vai trò của file này:** đây là phần thứ tư sau `Beginner → Intermediate → Senior`. File không học lại cú pháp cơ bản mà nối toàn bộ kiến thức thành một mental model thống nhất: source code được khởi tạo và thực thi ra sao, scope/closure/prototype/module liên hệ với nhau thế nào, browser event loop phối hợp task/microtask/render ra sao, vì sao JavaScript tiến hóa từ ES5 sang ES2015 rồi sang yearly ECMAScript, và developer production phải đọc legacy/modern code như thế nào.
+> **Mạch đọc:** Đọc **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **ngăn xếp lời gọi (call stack / 호출 스택) và thực thi (execution / 실행) ngữ cảnh (context / 맥락)** sang **await nằm ở đâu?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> **Vai trò của tệp (file / 파일) này:** đây là phần thứ tư sau `Beginner → Intermediate → Senior`. tệp (file / 파일) không học lại cú pháp cơ bản mà nối toàn bộ kiến thức thành một mô hình tư duy (mental model / 사고 모델) thống nhất: mã nguồn (source code / 소스 코드) được khởi tạo và thực thi ra sao, phạm vi (scope / 범위)/closure/prototype/mô-đun (module / 모듈) liên hệ với nhau thế nào, trình duyệt (browser / 브라우저) vòng lặp sự kiện (event loop / 이벤트 루프) phối hợp tác vụ (task / 작업)/microtask/kết xuất (render / 렌더링) ra sao, vì sao JavaScript tiến hóa từ ES5 sang ES2015 rồi sang yearly ECMAScript, và nhà phát triển (developer / 개발자) môi trường vận hành (production / 운영 환경) phải đọc legacy/hiện đại (modern / 현대적) mã (code / 코드) như thế nào.
 >
-> **Version tham chiếu:** snapshot chính thức hiện hành là **ECMAScript 2026 — ECMA-262 17th edition**. Living specification trên TC39 có thể đã chứa các finished proposals hướng tới snapshot kế tiếp, vì vậy trong tài liệu này luôn tách bốn khái niệm: **standard snapshot**, **proposal/living spec**, **engine implementation** và **runtime target thực tế**.
+> **phiên bản (version / 버전) tham chiếu:** snapshot chính thức hiện hành là **ECMAScript 2026 — ECMA-262 17th edition**. Living specification trên TC39 có thể đã chứa các finished proposals hướng tới snapshot kế tiếp, vì vậy trong tài liệu này luôn tách bốn khái niệm: **tiêu chuẩn (standard / 표준) snapshot**, **proposal/living spec**, **engine hiện thực (implementation / 구현)** và **thời gian chạy (runtime / 런타임) mục tiêu (target / 대상) thực tế**.
 >
-> File này là **supplement**, không thay thế ba file trước. Khi một concept đã được dạy kỹ ở Beginner/Intermediate/Senior, phần Master chỉ nối nó với semantics sâu hơn hoặc production consequences.
+> tệp (file / 파일) này là **supplement**, không thay thế ba tệp (file / 파일) trước. Khi một concept đã được dạy kỹ ở Beginner/Intermediate/cấp cao (senior / 시니어), phần Master chỉ nối nó với ngữ nghĩa (semantics / 의미론) sâu hơn hoặc môi trường vận hành (production / 운영 환경) consequences.
 
 ---
 
-# 1. Audit toàn bộ JavaScript Knowledge Library
+# 1. kiểm tra (audit / 감사) toàn bộ JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-Sau khi audit canonical notes từ Beginner đến Senior, learning flow hiện tại đã bao phủ đầy đủ các nhóm kiến thức chính. Beginner sở hữu phần values/types, coercion cơ bản, function, array/object, DOM, events, fetch, storage, Promise và async/await nhập môn. Intermediate sở hữu execution context, lexical environment, closure, `this`, prototype chain, class internals, module system, Promise semantics, event loop, tasks/microtasks, iterator/generator và các programming patterns. Senior sở hữu engine/runtime thinking, memory/garbage collection, concurrency, streaming, performance, security, architecture, observability, testing và modern tooling.
+Sau khi kiểm tra (audit / 감사) chuẩn gốc (canonical / 정본) notes từ Beginner đến cấp cao (senior / 시니어), mạch học (learning flow / 학습 흐름) hiện tại đã bao phủ đầy đủ các nhóm kiến thức chính. Beginner sở hữu phần values/types, coercion cơ bản, hàm (function / 함수), array/đối tượng (object / 객체), DOM, events, fetch, lưu trữ (storage / 저장소), Promise và async/await nhập môn. Intermediate sở hữu thực thi (execution / 실행) ngữ cảnh (context / 맥락), lexical môi trường (environment / 환경), closure, `this`, prototype chuỗi (chain / 사슬), lớp (class / 클래스) internals, mô-đun (module / 모듈) hệ thống (system / 시스템), Promise ngữ nghĩa (semantics / 의미론), vòng lặp sự kiện (event loop / 이벤트 루프), tasks/microtasks, iterator/generator và các programming patterns. cấp cao (senior / 시니어) sở hữu engine/thời gian chạy (runtime / 런타임) thinking, bộ nhớ (memory / 메모리)/garbage collection, tính đồng thời (concurrency / 동시성), streaming, hiệu năng (performance / 성능), bảo mật (security / 보안), kiến trúc (architecture / 아키텍처), khả năng quan sát (observability / 관측 가능성), testing và hiện đại (modern / 현대적) tooling.
 
-Master vì vậy không nên trở thành “file thứ tư lặp lại ba file đầu”. Vai trò đúng của nó là xử lý những câu hỏi còn lại sau khi đã học ba level trước: **tại sao các cơ chế đó tồn tại, chúng nối với nhau thế nào, spec mô tả chúng ra sao, code legacy phản ánh thế hệ JavaScript nào, và feature mới nên được đưa vào production theo tiêu chí nào**.
+Master vì vậy không nên trở thành “tệp (file / 파일) thứ tư lặp lại ba tệp (file / 파일) đầu”. Vai trò đúng của nó là xử lý những câu hỏi còn lại sau khi đã học ba mức (level / 수준) trước: **tại sao các cơ chế đó tồn tại, chúng nối với nhau thế nào, spec mô tả chúng ra sao, mã (code / 코드) legacy phản ánh thế hệ JavaScript nào, và tính năng (feature / 기능) mới nên được đưa vào môi trường vận hành (production / 운영 환경) theo tiêu chí nào**.
 
-Một sơ đồ ownership ngắn:
+Một sơ đồ quyền sở hữu (ownership / 소유권) ngắn:
 
 ```text
 Beginner
@@ -54,9 +57,9 @@ Nếu một chương Master nhắc lại một khái niệm như closure hay Pro
 
 ---
 
-# 2. JavaScript execution model — ghép toàn bộ bức tranh lại với nhau
+# 2. JavaScript mô hình thực thi (execution model / 실행 모델) — ghép toàn bộ bức tranh lại với nhau
 
-Một trong những lỗi phổ biến khi học JavaScript là biết từng từ khóa riêng lẻ nhưng không có một mô hình thống nhất cho quá trình thực thi. Ta có thể bắt đầu từ một file module đơn giản:
+Một trong những lỗi phổ biến khi học JavaScript là biết từng từ khóa riêng lẻ nhưng không có một mô hình thống nhất cho quá trình thực thi. Ta có thể bắt đầu từ một tệp (file / 파일) mô-đun (module / 모듈) đơn giản:
 
 ```js
 const taxRate = 0.1;
@@ -69,9 +72,9 @@ export function calculateTotal(price) {
 console.log(calculateTotal(100));
 ```
 
-Khi runtime xử lý source, không nên hình dung rằng engine chỉ đọc dòng 1, chạy dòng 1, đọc dòng 2, chạy dòng 2. Trước khi evaluation thực sự đi qua statements, language runtime cần phân tích source và chuẩn bị những structures cần thiết để resolve identifiers, functions, imports, lexical bindings và control flow. Specification mô tả việc này bằng nhiều thuật ngữ formal như **Execution Context**, **Environment Record**, **Lexical Environment**, **Module Environment Record** và các declaration-instantiation algorithms.
+Khi thời gian chạy (runtime / 런타임) xử lý nguồn (source / 소스), không nên hình dung rằng engine chỉ đọc dòng 1, chạy dòng 1, đọc dòng 2, chạy dòng 2. Trước khi evaluation thực sự đi qua statements, ngôn ngữ (language / 언어) thời gian chạy (runtime / 런타임) cần phân tích nguồn (source / 소스) và chuẩn bị những structures cần thiết để resolve identifiers, functions, imports, lexical bindings và điều khiển (control / 제어) luồng (flow / 흐름). Specification mô tả việc này bằng nhiều thuật ngữ formal như **thực thi (execution / 실행) ngữ cảnh (context / 맥락)**, **môi trường (environment / 환경) bản ghi (record / 레코드)**, **Lexical môi trường (environment / 환경)**, **mô-đun (module / 모듈) môi trường (environment / 환경) bản ghi (record / 레코드)** và các declaration-instantiation algorithms.
 
-Ở mức practical mental model, có thể nghĩ thành hai pha lớn:
+Ở mức practical mô hình tư duy (mental model / 사고 모델), có thể nghĩ thành hai pha lớn:
 
 ```text
 Source text
@@ -87,9 +90,9 @@ Call functions → push execution contexts
 Return/throw → pop contexts
 ```
 
-Đây là nền tảng để hiểu hoisting. “Hoisting” không phải engine cắt dòng `function` hoặc `var` rồi kéo chúng lên đầu file. Đó chỉ là cách nói lịch sử dễ nhớ. Chính xác hơn, **bindings được tạo trong quá trình environment/declaration setup trước khi statement evaluation đi qua vị trí source tương ứng**, nhưng từng loại declaration được khởi tạo khác nhau.
+Đây là nền tảng để hiểu hoisting. “Hoisting” không phải engine cắt dòng `function` hoặc `var` rồi kéo chúng lên đầu tệp (file / 파일). Đó chỉ là cách nói lịch sử dễ nhớ. Chính xác hơn, **bindings được tạo trong quá trình môi trường (environment / 환경)/declaration setup trước khi statement evaluation đi qua vị trí nguồn (source / 소스) tương ứng**, nhưng từng loại declaration được khởi tạo khác nhau.
 
-Function declaration có function object sẵn sớm, vì vậy thường gọi trước textual declaration được:
+Hàm (function / 함수) declaration có hàm (function / 함수) đối tượng (object / 객체) sẵn sớm, vì vậy thường gọi trước textual declaration được:
 
 ```js
 run();
@@ -106,18 +109,18 @@ console.log(value); // undefined
 var value = 10;
 ```
 
-không giống lỗi “variable chưa tồn tại”. Ngược lại `let`, `const` và `class` có lexical bindings nhưng chưa được initialized cho đến khi execution đạt declaration. Khoảng thời gian binding đã tồn tại nhưng chưa thể access được gọi là **Temporal Dead Zone (TDZ)**.
+không giống lỗi “variable chưa tồn tại”. Ngược lại `let`, `const` và `class` có lexical bindings nhưng chưa được initialized cho đến khi thực thi (execution / 실행) đạt declaration. Khoảng thời gian binding đã tồn tại nhưng chưa thể truy cập (access / 접근) được gọi là **Temporal Dead Zone (TDZ)**.
 
 ```js
 console.log(value); // ReferenceError
 const value = 10;
 ```
 
-Mental model này tốt hơn câu “`let` không hoist”, vì lexical declarations thực sự tham gia environment creation; điều khác biệt là **trạng thái initialization**.
+Mô hình tư duy (mental model / 사고 모델) này tốt hơn câu “`let` không hoist”, vì lexical declarations thực sự tham gia môi trường (environment / 환경) creation; điều khác biệt là **trạng thái initialization**.
 
-### Call stack và execution context
+### Ngăn xếp lời gọi (call stack / 호출 스택) và thực thi (execution / 실행) ngữ cảnh (context / 맥락)
 
-Mỗi function call tạo một execution context mới và được đặt lên call stack:
+Mỗi hàm (function / 함수) lời gọi (call / 호출) tạo một thực thi (execution / 실행) ngữ cảnh (context / 맥락) mới và được đặt lên ngăn xếp lời gọi (call stack / 호출 스택):
 
 ```js
 function c() {
@@ -147,15 +150,15 @@ b()
 c()
 ```
 
-Khi `c()` return, context của `c` rời stack; execution quay lại `b`. JavaScript synchronous execution về cơ bản đi theo stack này. Infinite recursion làm stack tăng cho đến giới hạn runtime.
+Khi `c()` return, ngữ cảnh (context / 맥락) của `c` rời ngăn xếp (stack / 스택); thực thi (execution / 실행) quay lại `b`. JavaScript synchronous thực thi (execution / 실행) về cơ bản đi theo ngăn xếp (stack / 스택) này. Infinite recursion làm ngăn xếp (stack / 스택) tăng cho đến giới hạn thời gian chạy (runtime / 런타임).
 
-Điều cần nhớ là **call stack không phải event loop**. Call stack biểu diễn synchronous call chain đang chạy. Event loop là cơ chế host dùng để quyết định **khi nào một task hoặc continuation mới được phép đưa JavaScript quay lại chạy trên stack**.
+Điều cần nhớ là **ngăn xếp lời gọi (call stack / 호출 스택) không phải vòng lặp sự kiện (event loop / 이벤트 루프)**. ngăn xếp lời gọi (call stack / 호출 스택) biểu diễn synchronous lời gọi (call / 호출) chuỗi (chain / 사슬) đang chạy. vòng lặp sự kiện (event loop / 이벤트 루프) là cơ chế host dùng để quyết định **khi nào một tác vụ (task / 작업) hoặc continuation mới được phép đưa JavaScript quay lại chạy trên ngăn xếp (stack / 스택)**.
 
 ---
 
-# 3. Lexical Environment, Scope Chain và Closure thực chất là một hệ thống duy nhất
+# 3. Lexical môi trường (environment / 환경), phạm vi (scope / 범위) chuỗi (chain / 사슬) và Closure thực chất là một hệ thống duy nhất
 
-Scope, lexical environment và closure thường được học thành ba bài riêng, nhưng chúng mô tả cùng một cơ chế ở các góc nhìn khác nhau.
+Phạm vi (scope / 범위), lexical môi trường (environment / 환경) và closure thường được học thành ba bài riêng, nhưng chúng mô tả cùng một cơ chế ở các góc nhìn khác nhau.
 
 ```js
 function createCounter() {
@@ -170,11 +173,11 @@ function createCounter() {
 const counter = createCounter();
 ```
 
-Khi `createCounter()` chạy, environment của call đó chứa binding `count`. Function `increment` được tạo trong lexical context đó, nên function giữ khả năng resolve `count` qua outer lexical environment. Sau khi `createCounter()` return, execution context đã rời call stack, nhưng environment cần cho returned function vẫn còn reachable. Đó chính là closure.
+Khi `createCounter()` chạy, môi trường (environment / 환경) của lời gọi (call / 호출) đó chứa binding `count`. hàm (function / 함수) `increment` được tạo trong lexical ngữ cảnh (context / 맥락) đó, nên hàm (function / 함수) giữ khả năng resolve `count` qua outer lexical môi trường (environment / 환경). Sau khi `createCounter()` return, thực thi (execution / 실행) ngữ cảnh (context / 맥락) đã rời ngăn xếp lời gọi (call stack / 호출 스택), nhưng môi trường (environment / 환경) cần cho returned hàm (function / 함수) vẫn còn reachable. Đó chính là closure.
 
-Điểm này giúp sửa một hiểu nhầm quan trọng: **closure không có nghĩa “toàn bộ stack frame được đóng băng mãi mãi”**. Runtime chỉ phải giữ những environment/data còn reachable theo semantics. Implementation chi tiết có thể được engine tối ưu mạnh miễn behavior quan sát được vẫn đúng.
+Điểm này giúp sửa một hiểu nhầm quan trọng: **closure không có nghĩa “toàn bộ ngăn xếp (stack / 스택) frame được đóng băng mãi mãi”**. thời gian chạy (runtime / 런타임) chỉ phải giữ những môi trường (environment / 환경)/dữ liệu (data / 데이터) còn reachable theo ngữ nghĩa (semantics / 의미론). hiện thực (implementation / 구현) chi tiết có thể được engine tối ưu mạnh miễn hành vi (behavior / 동작) quan sát được vẫn đúng.
 
-Closure trở thành vấn đề memory khi lifecycle của function dài hơn dự kiến và nó giữ reference tới data/resource lớn:
+Closure trở thành vấn đề bộ nhớ (memory / 메모리) khi vòng đời (lifecycle / 생명주기) của hàm (function / 함수) dài hơn dự kiến và nó giữ tham chiếu (reference / 참조) tới dữ liệu (data / 데이터)/tài nguyên (resource / 자원) lớn:
 
 ```js
 function registerHandler(hugeData) {
@@ -190,11 +193,11 @@ function registerHandler(hugeData) {
 }
 ```
 
-Nếu cleanup không xảy ra, listener giữ `handler`, closure giữ `hugeData`, nên object vẫn reachable. Đây là điểm nối trực tiếp giữa **closure → reachability → garbage collection → resource lifecycle**.
+Nếu cleanup không xảy ra, listener giữ `handler`, closure giữ `hugeData`, nên đối tượng (object / 객체) vẫn reachable. Đây là điểm nối trực tiếp giữa **closure → reachability → garbage collection → tài nguyên (resource / 자원) vòng đời (lifecycle / 생명주기)**.
 
 ---
 
-# 4. `this`, Reference semantics và lý do detached method mất receiver
+# 4. `this`, tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) và lý do detached phương thức (method / 메서드) mất receiver
 
 Intermediate đã học quy tắc quan trọng: normal-function `this` chủ yếu phụ thuộc **call-site**. Master cần hiểu sâu hơn một bước.
 
@@ -210,7 +213,7 @@ const user = {
 user.greet();
 ```
 
-Expression `user.greet` trong một direct method call vẫn mang đủ thông tin để call operation biết receiver/base object là `user`. Vì vậy `this` được set thành `user`.
+Expression `user.greet` trong một direct phương thức (method / 메서드) lời gọi (call / 호출) vẫn mang đủ thông tin để lời gọi (call / 호출) thao tác (operation / 연산) biết receiver/cơ sở (base / 기반) đối tượng (object / 객체) là `user`. Vì vậy `this` được set thành `user`.
 
 Nhưng:
 
@@ -219,7 +222,7 @@ const greet = user.greet;
 greet();
 ```
 
-function value đã bị tách khỏi property-reference relationship ban đầu. Call mới là plain function call; receiver `user` không còn tự động được giữ.
+Hàm (function / 함수) giá trị (value / 값) đã bị tách khỏi property-reference relationship ban đầu. lời gọi (call / 호출) mới là plain hàm (function / 함수) lời gọi (call / 호출); receiver `user` không còn tự động được giữ.
 
 Đây là nguyên nhân sâu của nhiều bug callback legacy:
 
@@ -234,9 +237,9 @@ const onClick = user.greet.bind(user);
 button.addEventListener("click", onClick);
 ```
 
-Arrow functions giải quyết một problem khác: chúng **không tạo own dynamic `this`**, mà sử dụng lexical `this` từ surrounding context. ES2015 thêm arrow syntax không chỉ để code ngắn hơn; nó giải quyết một pain point rất phổ biến của callback-heavy JavaScript trước ES2015.
+Arrow functions giải quyết một bài toán (problem / 문제) khác: chúng **không tạo own động (dynamic / 동적) `this`**, mà sử dụng lexical `this` từ surrounding ngữ cảnh (context / 맥락). ES2015 thêm arrow cú pháp (syntax / 문법) không chỉ để mã (code / 코드) ngắn hơn; nó giải quyết một pain điểm (point / 지점) rất phổ biến của callback-heavy JavaScript trước ES2015.
 
-Legacy code thường thấy:
+Legacy mã (code / 코드) thường thấy:
 
 ```js
 var self = this;
@@ -246,7 +249,7 @@ setTimeout(function () {
 }, 1000);
 ```
 
-Modern equivalent khi semantics phù hợp:
+Hiện đại (modern / 현대적) equivalent khi ngữ nghĩa (semantics / 의미론) phù hợp:
 
 ```js
 setTimeout(() => {
@@ -254,19 +257,19 @@ setTimeout(() => {
 }, 1000);
 ```
 
-Đây là ví dụ quan trọng về **evolution có động cơ**, không chỉ là syntax mới.
+Đây là ví dụ quan trọng về **evolution có động cơ**, không chỉ là cú pháp (syntax / 문법) mới.
 
 ---
 
-# 5. Prototype chain và class syntax — JavaScript không biến thành Java ở ES2015
+# 5. Prototype chuỗi (chain / 사슬) và lớp (class / 클래스) cú pháp (syntax / 문법) — JavaScript không biến thành Java ở ES2015
 
-JavaScript là prototype-based language. Khi đọc:
+JavaScript là prototype-based ngôn ngữ (language / 언어). Khi đọc:
 
 ```js
 user.greet
 ```
 
-runtime trước hết tìm own property. Nếu không có, lookup đi lên internal prototype chain cho đến khi tìm thấy property hoặc gặp `null`.
+Thời gian chạy (runtime / 런타임) trước hết tìm own thuộc tính (property / 속성). Nếu không có, lookup đi lên nội bộ (internal / 내부) prototype chuỗi (chain / 사슬) cho đến khi tìm thấy thuộc tính (property / 속성) hoặc gặp `null`.
 
 Legacy constructor style:
 
@@ -282,7 +285,7 @@ User.prototype.greet = function () {
 const user = new User("Kim");
 ```
 
-Prototype chain:
+Prototype chuỗi (chain / 사슬):
 
 ```text
 user
@@ -294,7 +297,7 @@ Object.prototype
 null
 ```
 
-ES2015 class syntax:
+ES2015 lớp (class / 클래스) cú pháp (syntax / 문법):
 
 ```js
 class User {
@@ -308,15 +311,15 @@ class User {
 }
 ```
 
-làm syntax dễ đọc và gần abstraction class quen thuộc hơn, nhưng method vẫn nằm trên prototype và inheritance vẫn xây trên prototype machinery. Vì vậy câu “ES6 đưa OOP vào JavaScript” là không chính xác; JavaScript đã có object/prototype inheritance từ trước. ES2015 chủ yếu cung cấp **syntax chuẩn, rõ và dễ tooling hơn** cho pattern constructor/prototype đã phổ biến.
+làm cú pháp (syntax / 문법) dễ đọc và gần lớp trừu tượng (abstraction / 추상화) lớp (class / 클래스) quen thuộc hơn, nhưng phương thức (method / 메서드) vẫn nằm trên prototype và inheritance vẫn xây trên prototype machinery. Vì vậy câu “ES6 đưa OOP vào JavaScript” là không chính xác; JavaScript đã có đối tượng (object / 객체)/prototype inheritance từ trước. ES2015 chủ yếu cung cấp **cú pháp (syntax / 문법) chuẩn, rõ và dễ tooling hơn** cho mẫu (pattern / 패턴) constructor/prototype đã phổ biến.
 
-Modern class tiếp tục được mở rộng với public fields, `#private` fields/methods và static blocks ở ES2022. Chúng giải quyết những pain points thực tế như runtime privacy và initialization rõ ràng, chứ không thay nền prototype.
+Hiện đại (modern / 현대적) lớp (class / 클래스) tiếp tục được mở rộng với công khai (public / 공개) fields, `#private` fields/methods và static blocks ở ES2022. Chúng giải quyết những pain points thực tế như thời gian chạy (runtime / 런타임) privacy và initialization rõ ràng, chứ không thay nền prototype.
 
 ---
 
-# 6. Task, microtask và rendering — thứ tự async phải được hiểu như một timeline
+# 6. tác vụ (task / 작업), microtask và rendering — thứ tự async phải được hiểu như một timeline
 
-Browser JavaScript thường chạy UI logic trên main thread. Khi synchronous stack trống, browser/event loop có thể lấy work tiếp theo. Một mental model hữu ích cho một turn là:
+Trình duyệt (browser / 브라우저) JavaScript thường chạy UI lô-gic (logic / 논리) trên main luồng thực thi (thread / 스레드). Khi synchronous ngăn xếp (stack / 스택) trống, trình duyệt (browser / 브라우저)/vòng lặp sự kiện (event loop / 이벤트 루프) có thể lấy công việc (work / 작업) tiếp theo. Một mô hình tư duy (mental model / 사고 모델) hữu ích cho một turn là:
 
 ```text
 1. Run one task
@@ -356,9 +359,9 @@ microtask
 timer
 ```
 
-`Promise.then(...)` và `queueMicrotask(...)` schedule microtasks. Timer callback là một task ở một task source thích hợp. Sau current synchronous execution, microtask queue được drain trước khi timer task có cơ hội chạy.
+`Promise.then(...)` và `queueMicrotask(...)` schedule microtasks. Timer callback là một tác vụ (task / 작업) ở một tác vụ (task / 작업) nguồn (source / 소스) thích hợp. Sau hiện tại (current / 현재) synchronous thực thi (execution / 실행), microtask hàng đợi (queue / 큐) được drain trước khi timer tác vụ (task / 작업) có cơ hội chạy.
 
-Điều quan trọng không chỉ là thuộc output. Hãy hiểu hậu quả:
+Điều quan trọng không chỉ là thuộc đầu ra (output / 출력). Hãy hiểu hậu quả:
 
 ```js
 function loop() {
@@ -368,7 +371,7 @@ function loop() {
 loop();
 ```
 
-Một chain microtasks không kết thúc có thể **starve** browser khỏi cơ hội xử lý task khác hoặc render. Vì vậy “microtask chạy sớm hơn” không có nghĩa “microtask luôn tốt hơn”.
+Một chuỗi (chain / 사슬) microtasks không kết thúc có thể **starve** trình duyệt (browser / 브라우저) khỏi cơ hội xử lý tác vụ (task / 작업) khác hoặc kết xuất (render / 렌더링). Vì vậy “microtask chạy sớm hơn” không có nghĩa “microtask luôn tốt hơn”.
 
 ### `await` nằm ở đâu?
 Phần này nối mạch bài học với “`await` nằm ở đâu?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -382,17 +385,17 @@ async function run() {
 }
 ```
 
-`await` không block main thread kiểu sleep. Async function tạm dừng; continuation sau `await` được schedule theo Promise-job/microtask semantics. Đây là lý do synchronous code bên ngoài có thể chạy trước phần `after`.
+`await` không khối (block / 블록) main luồng thực thi (thread / 스레드) kiểu sleep. Async hàm (function / 함수) tạm dừng; continuation sau `await` được schedule theo Promise-job/microtask ngữ nghĩa (semantics / 의미론). Đây là lý do synchronous mã (code / 코드) bên ngoài có thể chạy trước phần `after`.
 
-### Rendering không phải ECMAScript semantics
+### Rendering không phải ECMAScript ngữ nghĩa (semantics / 의미론)
 
-ECMAScript định nghĩa Promise jobs và language behavior; browser HTML standard định nghĩa event loop/render integration. `requestAnimationFrame`, DOM event dispatch và rendering opportunities là host/browser concepts. Đây là ranh giới cần giữ rõ khi nói “JavaScript event loop”.
+ECMAScript định nghĩa Promise jobs và ngôn ngữ (language / 언어) hành vi (behavior / 동작); trình duyệt (browser / 브라우저) HTML tiêu chuẩn (standard / 표준) định nghĩa vòng lặp sự kiện (event loop / 이벤트 루프)/kết xuất (render / 렌더링) tích hợp (integration / 통합). `requestAnimationFrame`, DOM sự kiện (event / 이벤트) dispatch và rendering opportunities là host/trình duyệt (browser / 브라우저) concepts. Đây là ranh giới cần giữ rõ khi nói “JavaScript vòng lặp sự kiện (event loop / 이벤트 루프)”.
 
 ---
 
 # 7. Promise resolution sâu hơn — Promise không chỉ là callback có `.then()`
 
-Promise được thêm vào ES2015 để chuẩn hóa một abstraction async mà ecosystem trước đó đã tự xây bằng callbacks, Deferred objects và nhiều Promise libraries khác nhau.
+Promise được thêm vào ES2015 để chuẩn hóa một lớp trừu tượng (abstraction / 추상화) async mà ecosystem trước đó đã tự xây bằng callbacks, Deferred objects và nhiều Promise libraries khác nhau.
 
 Legacy callback pyramid:
 
@@ -414,7 +417,7 @@ loadUser(function (error, user) {
 });
 ```
 
-Promise chain biến dependency thành composition:
+Promise chuỗi (chain / 사슬) biến phụ thuộc (dependency / 의존성) thành composition:
 
 ```js
 loadUser()
@@ -423,7 +426,7 @@ loadUser()
   .catch(handleError);
 ```
 
-`async/await` ở ES2017 sau đó làm syntax sequential-looking hơn:
+`async/await` ở ES2017 sau đó làm cú pháp (syntax / 문법) sequential-looking hơn:
 
 ```js
 try {
@@ -435,7 +438,7 @@ try {
 }
 ```
 
-Nhưng `async/await` **không thay Promise model**. Async function trả Promise; `await` dùng Promise/thenable assimilation semantics; errors sau await vẫn trở thành rejected async result.
+Nhưng `async/await` **không thay Promise mô hình (model / 모델)**. Async hàm (function / 함수) trả Promise; `await` dùng Promise/thenable assimilation ngữ nghĩa (semantics / 의미론); errors sau await vẫn trở thành rejected async kết quả (result / 결과).
 
 Một detail Master quan trọng là thenable assimilation:
 
@@ -449,13 +452,13 @@ const thenable = {
 const value = await thenable;
 ```
 
-Không cần object phải là native Promise; Promise resolution có thể assimilate object có callable `then`. Đây là khả năng interoperability mạnh, nhưng cũng có nghĩa getter/`then` từ untrusted object có thể chạy code.
+Không cần đối tượng (object / 객체) phải là bản địa (native / 네이티브) Promise; Promise resolution có thể assimilate đối tượng (object / 객체) có callable `then`. Đây là khả năng interoperability mạnh, nhưng cũng có nghĩa getter/`then` từ untrusted đối tượng (object / 객체) có thể chạy mã (code / 코드).
 
 ---
 
-# 8. Module system — vì sao ES Modules xuất hiện và nó khác IIFE/CommonJS ở đâu
+# 8. mô-đun (module / 모듈) hệ thống (system / 시스템) — vì sao ES Modules xuất hiện và nó khác IIFE/CommonJS ở đâu
 
-Trước native modules, browser code thường dùng global scripts và IIFE:
+Trước bản địa (native / 네이티브) modules, trình duyệt (browser / 브라우저) mã (code / 코드) thường dùng toàn cục (global / 전역) scripts và IIFE:
 
 ```js
 (function () {
@@ -469,14 +472,14 @@ Trước native modules, browser code thường dùng global scripts và IIFE:
 })();
 ```
 
-Node ecosystem phổ biến CommonJS:
+Nút (node / 노드) ecosystem phổ biến CommonJS:
 
 ```js
 const userService = require("./user-service");
 module.exports = createController;
 ```
 
-Các patterns này giải quyết vấn đề thật, nhưng dependency graph không phải lúc nào cũng statically analyzable. ES2015 modules đưa `import`/`export` vào language:
+Các patterns này giải quyết vấn đề thật, nhưng phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) không phải lúc nào cũng statically analyzable. ES2015 modules đưa `import`/`export` vào ngôn ngữ (language / 언어):
 
 ```js
 import { loadUser } from "./user-service.js";
@@ -486,31 +489,31 @@ export function start() {
 }
 ```
 
-Static imports cho tooling/bundlers biết dependency graph trước khi chạy module, hỗ trợ analysis, tree shaking và tooling tốt hơn. Module scope cũng tránh việc declarations tự động trở thành globals và module code chạy theo strict-mode semantics.
+Static imports cho tooling/bundlers biết phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) trước khi chạy mô-đun (module / 모듈), hỗ trợ phân tích (analysis / 분석), cây (tree / 트리) shaking và tooling tốt hơn. mô-đun (module / 모듈) phạm vi (scope / 범위) cũng tránh việc declarations tự động trở thành globals và mô-đun (module / 모듈) mã (code / 코드) chạy theo strict-mode ngữ nghĩa (semantics / 의미론).
 
-Imports là **live bindings**, không phải copy snapshot đơn giản. Circular module graphs hợp lệ nhưng initialization order có thể gây temporal access problems. Vì vậy circular dependency nên được xem trước hết là một design signal.
+Imports là **live bindings**, không phải bản sao (copy / 복사) snapshot đơn giản. Circular mô-đun (module / 모듈) graphs hợp lệ nhưng initialization thứ tự (order / 순서) có thể gây temporal truy cập (access / 접근) problems. Vì vậy circular phụ thuộc (dependency / 의존성) nên được xem trước hết là một thiết kế (design / 설계) tín hiệu (signal / 신호).
 
-Dynamic `import()` ở ES2020 giải quyết nhu cầu dependency không cần load eagerly:
+Động (dynamic / 동적) `import()` ở ES2020 giải quyết nhu cầu phụ thuộc (dependency / 의존성) không cần tải (load / 로드) eagerly:
 
 ```js
 const editor = await import("./heavy-editor.js");
 ```
 
-Tuy nhiên “dynamic import tạo chunk riêng” là bundler behavior, không phải promise của ECMAScript specification.
+Tuy nhiên “động (dynamic / 동적) import tạo chunk riêng” là bundler hành vi (behavior / 동작), không phải promise của ECMAScript specification.
 
-Top-level `await` ở ES2022 làm module initialization có thể async, nhưng cũng có thể trì hoãn dependent module graph. Dùng khi module-level dependency thực sự cần, không phải thay mọi startup function bằng top-level await.
+Top-level `await` ở ES2022 làm mô-đun (module / 모듈) initialization có thể async, nhưng cũng có thể trì hoãn dependent mô-đun (module / 모듈) đồ thị (graph / 그래프). Dùng khi module-level phụ thuộc (dependency / 의존성) thực sự cần, không phải thay mọi startup hàm (function / 함수) bằng top-level await.
 
 ---
 
-# 9. ES5 → ES2015 → modern ECMAScript — học bằng vấn đề, không học release notes
+# 9. ES5 → ES2015 → hiện đại (modern / 현대적) ECMAScript — học bằng vấn đề, không học bản phát hành (release / 릴리스) notes
 
-Version evolution có ý nghĩa nhất khi hỏi: **developer lúc đó đang gặp vấn đề gì, và feature mới làm code rõ hơn hoặc an toàn hơn thế nào?**
+Phiên bản (version / 버전) evolution có ý nghĩa nhất khi hỏi: **nhà phát triển (developer / 개발자) lúc đó đang gặp vấn đề gì, và tính năng (feature / 기능) mới làm mã (code / 코드) rõ hơn hoặc an toàn hơn thế nào?**
 
-## ES5 — chuẩn hóa nền JavaScript web trước thời modern syntax
+## ES5 — chuẩn hóa nền JavaScript web trước thời hiện đại (modern / 현대적) cú pháp (syntax / 문법)
 
-ES5 (2009) là một mốc lớn vì nó củng cố JavaScript đã được dùng rộng rãi trên web: strict mode, JSON support, property descriptors/reflection và nhiều array helpers như `map`, `filter`, `reduce`, `forEach`, `some`, `every` trở thành nền tảng chuẩn.
+ES5 (2009) là một mốc lớn vì nó củng cố JavaScript đã được dùng rộng rãi trên web: strict chế độ (mode / 모드), JSON hỗ trợ (support / 지원), thuộc tính (property / 속성) descriptors/reflection và nhiều array helpers như `map`, `filter`, `reduce`, `forEach`, `some`, `every` trở thành nền tảng chuẩn.
 
-Legacy ES5-style code thường có:
+Legacy ES5-style mã (code / 코드) thường có:
 
 ```js
 var names = users
@@ -522,7 +525,7 @@ var names = users
   });
 ```
 
-Code này không “sai” chỉ vì cũ. Modern syntax có thể làm intent ngắn hơn:
+Mã (code / 코드) này không “sai” chỉ vì cũ. hiện đại (modern / 현대적) cú pháp (syntax / 문법) có thể làm intent ngắn hơn:
 
 ```js
 const names = users
@@ -530,13 +533,13 @@ const names = users
   .map((user) => user.name);
 ```
 
-Điểm thay đổi thật nằm ở lexical bindings và arrow semantics, không chỉ số ký tự.
+Điểm thay đổi thật nằm ở lexical bindings và arrow ngữ nghĩa (semantics / 의미론), không chỉ số ký tự.
 
-## ES2015/ES6 — bước chuyển sang JavaScript cho application lớn
+## ES2015/ES6 — bước chuyển sang JavaScript cho ứng dụng (application / 애플리케이션) lớn
 
-ES2015 là bước nhảy lớn nhất của modern JavaScript. Những feature như `let`/`const`, classes, modules, Promise, destructuring, rest/spread, Map/Set, Symbol, iterator/generator và arrow functions cùng xuất hiện vì ecosystem cần code dễ tổ chức hơn cho application/library lớn.
+ES2015 là bước nhảy lớn nhất của hiện đại (modern / 현대적) JavaScript. Những tính năng (feature / 기능) như `let`/`const`, classes, modules, Promise, destructuring, rest/spread, Map/Set, Symbol, iterator/generator và arrow functions cùng xuất hiện vì ecosystem cần mã (code / 코드) dễ tổ chức hơn cho ứng dụng (application / 애플리케이션)/thư viện (library / 라이브러리) lớn.
 
-Một số legacy → modern mappings nên hiểu theo động cơ:
+Một số legacy → hiện đại (modern / 현대적) mappings nên hiểu theo động cơ:
 
 ```text
 var
@@ -572,25 +575,25 @@ plain object used as arbitrary key map
 lý do: arbitrary keys + collection semantics rõ
 ```
 
-Không phải mọi legacy form đều phải rewrite. `function` vẫn cần khi dynamic `this` phù hợp; object vẫn tốt cho record-shaped data; ordinary loops vẫn rõ hơn functional chains trong nhiều algorithms.
+Không phải mọi legacy form đều phải rewrite. `function` vẫn cần khi động (dynamic / 동적) `this` phù hợp; đối tượng (object / 객체) vẫn tốt cho record-shaped dữ liệu (data / 데이터); ordinary loops vẫn rõ hơn functional chains trong nhiều algorithms.
 
 ## Sau ES2015 — yearly evolution nhỏ và đều hơn
 
-Từ ES2016, ECMAScript chuyển sang yearly cadence. Tư duy đúng không phải “mỗi năm là một JavaScript mới”, mà là **language được bổ sung incremental**. Những bổ sung đáng nhớ thường giảm boilerplate hoặc encode intent mà developer trước đó phải tự viết.
+Từ ES2016, ECMAScript chuyển sang yearly cadence. Tư duy đúng không phải “mỗi năm là một JavaScript mới”, mà là **ngôn ngữ (language / 언어) được bổ sung incremental**. Những bổ sung đáng nhớ thường giảm boilerplate hoặc encode intent mà nhà phát triển (developer / 개발자) trước đó phải tự viết.
 
-Ví dụ `async/await` (ES2017) làm Promise-based sequential flow dễ đọc. Object rest/spread (ES2018) làm immutable-style object transformations ergonomic hơn. Optional chaining và nullish coalescing (ES2020) làm optional access/default semantics rõ hơn. Class fields/private elements và top-level await (ES2022) mở rộng class/module model. Copying array methods như `toSorted()` (ES2023) giải quyết nhu cầu non-mutating collection updates. `Promise.withResolvers()`, `Object.groupBy()` và resizable ArrayBuffer facilities (ES2024) chuẩn hóa recurring patterns. Iterator Helpers, Set operations, `RegExp.escape()` và `Promise.try()` (ES2025) tiếp tục đưa common library patterns vào standard.
+Ví dụ `async/await` (ES2017) làm Promise-based sequential luồng (flow / 흐름) dễ đọc. đối tượng (object / 객체) rest/spread (ES2018) làm immutable-style đối tượng (object / 객체) transformations ergonomic hơn. Optional chaining và nullish coalescing (ES2020) làm optional truy cập (access / 접근)/default ngữ nghĩa (semantics / 의미론) rõ hơn. lớp (class / 클래스) fields/private elements và top-level await (ES2022) mở rộng lớp (class / 클래스)/mô-đun (module / 모듈) mô hình (model / 모델). Copying array methods như `toSorted()` (ES2023) giải quyết nhu cầu non-mutating collection updates. `Promise.withResolvers()`, `Object.groupBy()` và resizable ArrayBuffer facilities (ES2024) chuẩn hóa recurring patterns. Iterator Helpers, Set operations, `RegExp.escape()` và `Promise.try()` (ES2025) tiếp tục đưa dùng chung (common / 공통) thư viện (library / 라이브러리) patterns vào tiêu chuẩn (standard / 표준).
 
-Không cần thuộc danh sách này. Cần nhớ **problem → abstraction mới → compatibility**.
+Không cần thuộc danh sách này. Cần nhớ **bài toán (problem / 문제) → lớp trừu tượng (abstraction / 추상화) mới → tính tương thích (compatibility / 호환성)**.
 
 ---
 
 # 10. ECMAScript 2026 — những bổ sung nào đáng biết và tại sao chúng xuất hiện
 
-ECMAScript 2026 là 17th edition. Không nên biến learning notes thành changelog, nhưng một vài additions minh họa rất rõ cách modern ECMAScript tiếp tục chuẩn hóa recurring patterns.
+ECMAScript 2026 là 17th edition. Không nên biến học tập (learning / 학습) notes thành changelog, nhưng một vài additions minh họa rất rõ cách hiện đại (modern / 현대적) ECMAScript tiếp tục chuẩn hóa recurring patterns.
 
 ## `Array.fromAsync()`
 
-Trước đây để collect async iterable thành array, bạn thường phải tự loop:
+Trước đây để collect async iterable thành array, bạn thường phải tự vòng lặp (loop / 루프):
 
 ```js
 const result = [];
@@ -600,25 +603,25 @@ for await (const item of source) {
 }
 ```
 
-`Array.fromAsync()` cung cấp built-in abstraction cho async iterables và async sources:
+`Array.fromAsync()` cung cấp built-in lớp trừu tượng (abstraction / 추상화) cho async iterables và async sources:
 
 ```js
 const result = await Array.fromAsync(source);
 ```
 
-Điểm mới không phải async iteration — nó đã có từ trước — mà là **collection constructor có hiểu async source**.
+Điểm mới không phải async iteration — nó đã có từ trước — mà là **collection constructor có hiểu async nguồn (source / 소스)**.
 
 ## `Math.sumPrecise()`
 
-Cộng floating-point values có thể tích lũy precision error, đặc biệt khi magnitude khác nhau. ES2026 thêm một operation chuẩn để sum iterable Numbers theo cách giảm precision loss so với naive accumulation trong nhiều trường hợp.
+Cộng floating-point values có thể tích lũy precision lỗi (error / 오류), đặc biệt khi magnitude khác nhau. ES2026 thêm một thao tác (operation / 연산) chuẩn để sum iterable Numbers theo cách giảm precision mất mát (loss / 손실) so với naive accumulation trong nhiều trường hợp.
 
-Điều này không biến IEEE-754 thành decimal arithmetic; financial code vẫn cần domain strategy riêng.
+Điều này không biến IEEE-754 thành decimal arithmetic; financial mã (code / 코드) vẫn cần lĩnh vực (domain / 도메인) chiến lược (strategy / 전략) riêng.
 
 ## `Iterator.concat()`
 
 Sau Iterator Helpers ES2025, `Iterator.concat()` tiếp tục làm lazy iteration pipelines dễ compose hơn mà không phải tự viết generator chỉ để nối nhiều iterables.
 
-Legacy pattern:
+Legacy mẫu (pattern / 패턴):
 
 ```js
 function* concat(...iterables) {
@@ -628,21 +631,21 @@ function* concat(...iterables) {
 }
 ```
 
-Modern built-in giảm boilerplate khi runtime support.
+Hiện đại (modern / 현대적) built-in giảm boilerplate khi thời gian chạy (runtime / 런타임) hỗ trợ (support / 지원).
 
 ## `Error.isError()`
 
-Cross-realm error detection là một pain point vì:
+Cross-realm lỗi (error / 오류) detection là một pain điểm (point / 지점) vì:
 
 ```js
 errorFromIframe instanceof Error
 ```
 
-có thể fail khi constructors thuộc khác Realm. `Error.isError()` cung cấp standardized error-object detection tốt hơn cho các trường hợp này.
+có thể thất bại (fail / 실패) khi constructors thuộc khác Realm. `Error.isError()` cung cấp standardized error-object detection tốt hơn cho các trường hợp này.
 
 ## `Map`/`WeakMap` get-or-insert operations
 
-Một pattern cache/index quen thuộc:
+Một mẫu (pattern / 패턴) bộ nhớ đệm (cache / 캐시)/chỉ mục (index / 인덱스) quen thuộc:
 
 ```js
 let value = map.get(key);
@@ -653,25 +656,25 @@ if (value === undefined) {
 }
 ```
 
-có edge case nếu `undefined` là stored value hợp lệ và tạo boilerplate repeated. ES2026 chuẩn hóa get-or-insert style operations để express “lấy nếu có, nếu không tạo/default rồi lưu” rõ hơn.
+có trường hợp biên (edge case / 경계 사례) nếu `undefined` là stored giá trị (value / 값) hợp lệ và tạo boilerplate repeated. ES2026 chuẩn hóa get-or-insert style operations để express “lấy nếu có, nếu không tạo/default rồi lưu” rõ hơn.
 
 ## `Uint8Array` ↔ Base64/Hex
 
-Code web trước đây thường phải đi qua `btoa`/`atob`, manual byte loops hoặc utility library để chuyển binary bytes sang hex/base64. ES2026 bổ sung built-in conversion methods trực tiếp quanh `Uint8Array`, phù hợp hơn với binary data model hiện đại và tránh nhiều binary-string pitfalls của APIs lịch sử.
+Mã (code / 코드) web trước đây thường phải đi qua `btoa`/`atob`, manual byte loops hoặc utility thư viện (library / 라이브러리) để chuyển nhị phân (binary / 이진) bytes sang hex/base64. ES2026 bổ sung built-in conversion methods trực tiếp quanh `Uint8Array`, phù hợp hơn với nhị phân (binary / 이진) mô hình dữ liệu (data model / 데이터 모델) hiện đại và tránh nhiều binary-string pitfalls của APIs lịch sử.
 
-## JSON source/raw facilities
+## JSON nguồn (source / 소스)/raw facilities
 
-ES2026 bổ sung khả năng reviver của `JSON.parse()` tiếp cận source context và `JSON.rawJSON()` để kiểm soát primitive JSON output ở mức thấp hơn. Đây là advanced serialization feature, hữu ích khi exact numeric/source representation quan trọng; ordinary application JSON không cần đổi cách viết chỉ vì API mới tồn tại.
+ES2026 bổ sung khả năng reviver của `JSON.parse()` tiếp cận nguồn (source / 소스) ngữ cảnh (context / 맥락) và `JSON.rawJSON()` để kiểm soát thành phần nguyên thủy (primitive / 기본 요소) JSON đầu ra (output / 출력) ở mức thấp hơn. Đây là advanced serialization tính năng (feature / 기능), hữu ích khi chính xác (exact / 정확한) numeric/nguồn (source / 소스) biểu diễn (representation / 표현) quan trọng; ordinary ứng dụng (application / 애플리케이션) JSON không cần đổi cách viết chỉ vì API mới tồn tại.
 
-### Compatibility rule
+### Tính tương thích (compatibility / 호환성) quy tắc (rule / 규칙)
 
-“Thuộc ES2026” không có nghĩa WebView production của bạn đã có API. Với project hybrid/WebSquare, luôn kiểm tra Android System WebView và WKWebView versions thực tế trước khi dùng built-in mới mà không fallback.
+“Thuộc ES2026” không có nghĩa WebView môi trường vận hành (production / 운영 환경) của bạn đã có API. Với dự án (project / 프로젝트) hybrid/WebSquare, luôn kiểm tra Android hệ thống (system / 시스템) WebView và WKWebView versions thực tế trước khi dùng built-in mới mà không fallback.
 
 ---
 
-# 11. Object model sâu hơn — descriptors, exotic objects và Proxy invariants
+# 11. mô hình đối tượng (object model / 객체 모델) sâu hơn — descriptors, exotic objects và Proxy invariants
 
-Plain object property không chỉ là `key → value`. Data property còn có descriptor flags `writable`, `enumerable`, `configurable`; accessor property có `get`, `set`, `enumerable`, `configurable`.
+Plain đối tượng (object / 객체) thuộc tính (property / 속성) không chỉ là `key → value`. dữ liệu (data / 데이터) thuộc tính (property / 속성) còn có descriptor flags `writable`, `enumerable`, `configurable`; accessor thuộc tính (property / 속성) có `get`, `set`, `enumerable`, `configurable`.
 
 ```js
 const user = {};
@@ -684,9 +687,9 @@ Object.defineProperty(user, "id", {
 });
 ```
 
-Nhiều built-ins không có hoàn toàn ordinary object behavior. Specification dùng khái niệm **exotic objects** cho những objects có internal method behavior đặc biệt, ví dụ Arrays, TypedArrays, String objects, Module Namespace objects, some `arguments` objects và Proxies.
+Nhiều built-ins không có hoàn toàn ordinary đối tượng (object / 객체) hành vi (behavior / 동작). Specification dùng khái niệm **exotic objects** cho những objects có nội bộ (internal / 내부) phương thức (method / 메서드) hành vi (behavior / 동작) đặc biệt, ví dụ Arrays, TypedArrays, String objects, mô-đun (module / 모듈) không gian tên (namespace / 네임스페이스) objects, some `arguments` objects và Proxies.
 
-Array là ví dụ dễ thấy: `length` không phải property bình thường hoàn toàn.
+Array là ví dụ dễ thấy: `length` không phải thuộc tính (property / 속성) bình thường hoàn toàn.
 
 ```js
 const values = [10, 20, 30];
@@ -697,7 +700,7 @@ console.log(values); // [10]
 
 Setting smaller length có thể delete indexed elements.
 
-Sparse array hole cũng khác explicit `undefined`:
+Sparse array hole cũng khác tường minh (explicit / 명시적) `undefined`:
 
 ```js
 const sparse = [,];
@@ -707,7 +710,7 @@ const explicit = [undefined];
 0 in explicit; // true
 ```
 
-Proxy cho phép intercept object internal operations:
+Proxy cho phép intercept đối tượng (object / 객체) nội bộ (internal / 내부) operations:
 
 ```js
 const proxy = new Proxy(target, {
@@ -717,13 +720,13 @@ const proxy = new Proxy(target, {
 });
 ```
 
-Nhưng Proxy không được “nói dối tùy ý”. Specification có **invariants** quanh non-configurable properties, prototype/extensibility và descriptors. Vi phạm invariant có thể throw `TypeError`. Đây là lý do reactivity/metaprogramming library author phải hiểu descriptors và object internals chứ không chỉ thuộc trap names.
+Nhưng Proxy không được “nói dối tùy ý”. Specification có **invariants** quanh non-configurable properties, prototype/extensibility và descriptors. Vi phạm bất biến (invariant / 불변식) có thể throw `TypeError`. Đây là lý do reactivity/metaprogramming thư viện (library / 라이브러리) author phải hiểu descriptors và đối tượng (object / 객체) internals chứ không chỉ thuộc trap names.
 
 ---
 
-# 12. Equality algorithms và coercion ở level specification
+# 12. Equality algorithms và coercion ở mức (level / 수준) specification
 
-Beginner đã học `==`, `===`, `Object.is()`. Master cần biết JavaScript có nhiều equality algorithms vì các APIs cần semantics khác nhau.
+Beginner đã học `==`, `===`, `Object.is()`. Master cần biết JavaScript có nhiều equality algorithms vì các APIs cần ngữ nghĩa (semantics / 의미론) khác nhau.
 
 `===`:
 
@@ -746,9 +749,9 @@ Collections như Set và nhiều membership operations dùng **SameValueZero**, 
 new Set([NaN, NaN]).size; // 1
 ```
 
-Coercion cũng nên được hiểu qua internal conversion concepts như `ToPrimitive`, `ToNumber`, `ToString`, `ToBoolean`, `ToPropertyKey` thay vì học câu đố.
+Coercion cũng nên được hiểu qua nội bộ (internal / 내부) conversion concepts như `ToPrimitive`, `ToNumber`, `ToString`, `ToBoolean`, `ToPropertyKey` thay vì học câu đố.
 
-Object có thể customize primitive conversion:
+Đối tượng (object / 객체) có thể customize thành phần nguyên thủy (primitive / 기본 요소) conversion:
 
 ```js
 const money = {
@@ -764,15 +767,15 @@ const money = {
 };
 ```
 
-Mục tiêu của knowledge này là debug library/edge cases, không phải viết production code dựa trên clever implicit coercion.
+Mục tiêu của kiến thức (knowledge / 지식) này là gỡ lỗi (debug / 디버그) thư viện (library / 라이브러리)/edge cases, không phải viết môi trường vận hành (production / 운영 환경) mã (code / 코드) dựa trên clever implicit coercion.
 
 ---
 
-# 13. Binary data — ArrayBuffer, TypedArray và DataView
+# 13. nhị phân (binary / 이진) dữ liệu (data / 데이터) — ArrayBuffer, TypedArray và DataView
 
-JSON/string không phải representation phù hợp cho mọi data. Image bytes, crypto, compression, WebSocket binary protocol và file parsing thường dùng binary primitives.
+JSON/string không phải biểu diễn (representation / 표현) phù hợp cho mọi dữ liệu (data / 데이터). ảnh (image / 이미지) bytes, crypto, compression, WebSocket nhị phân (binary / 이진) giao thức (protocol / 프로토콜) và tệp (file / 파일) parsing thường dùng nhị phân (binary / 이진) primitives.
 
-`ArrayBuffer` là raw byte storage:
+`ArrayBuffer` là raw byte lưu trữ (storage / 저장소):
 
 ```js
 const buffer = new ArrayBuffer(16);
@@ -787,7 +790,7 @@ const numbers = new Int32Array(buffer);
 
 Hai views có thể nhìn cùng backing buffer nhưng interpret bytes khác nhau.
 
-`DataView` phù hợp khi binary protocol có fields khác nhau và cần kiểm soát endianness:
+`DataView` phù hợp khi nhị phân (binary / 이진) giao thức (protocol / 프로토콜) có fields khác nhau và cần kiểm soát endianness:
 
 ```js
 const view = new DataView(buffer);
@@ -796,7 +799,7 @@ view.setUint32(0, 123456, true);
 
 `true` ở đây yêu cầu little-endian.
 
-Một architecture tốt tách:
+Một kiến trúc (architecture / 아키텍처) tốt tách:
 
 ```text
 network/file bytes
@@ -808,19 +811,19 @@ validated transport object
 domain model
 ```
 
-Không để binary offsets/endianness tràn vào business logic.
+Không để nhị phân (binary / 이진) offsets/endianness tràn vào lô-gic nghiệp vụ (business logic / 비즈니스 로직).
 
 ---
 
 # 14. Unicode và internationalization — `string.length` không phải “số ký tự người dùng nhìn thấy”
 
-JavaScript string dựa trên UTF-16 code units. Một emoji có thể chiếm nhiều code units:
+JavaScript string dựa trên UTF-16 mã (code / 코드) units. Một emoji có thể chiếm nhiều mã (code / 코드) units:
 
 ```js
 "😀".length; // thường là 2
 ```
 
-Vì vậy cần phân biệt **code unit**, **code point** và **grapheme cluster**. `for...of` trên string xử lý code points tốt hơn loop theo UTF-16 index trong nhiều trường hợp, nhưng grapheme clusters phức tạp vẫn cần segmentation-aware logic.
+Vì vậy cần phân biệt **mã (code / 코드) đơn vị (unit / 단위)**, **mã (code / 코드) điểm (point / 지점)** và **grapheme cluster**. `for...of` trên string xử lý mã (code / 코드) points tốt hơn vòng lặp (loop / 루프) theo UTF-16 chỉ mục (index / 인덱스) trong nhiều trường hợp, nhưng grapheme clusters phức tạp vẫn cần segmentation-aware lô-gic (logic / 논리).
 
 `Intl` cung cấp locale-aware formatting/sorting/segmentation:
 
@@ -835,13 +838,13 @@ currency.format(1000000);
 
 `Intl.DateTimeFormat`, `Intl.Collator`, `Intl.PluralRules`, `Intl.RelativeTimeFormat` và `Intl.Segmenter` giải quyết những vấn đề mà manual formatting bằng string concatenation rất dễ sai.
 
-Rule production: **locale/date/currency semantics là domain concern**, không phải cosmetic detail.
+Quy tắc (rule / 규칙) môi trường vận hành (production / 운영 환경): **locale/date/currency ngữ nghĩa (semantics / 의미론) là lĩnh vực (domain / 도메인) concern**, không phải cosmetic detail.
 
 ---
 
-# 15. RegExp advanced — statefulness, Unicode và security
+# 15. RegExp advanced — statefulness, Unicode và bảo mật (security / 보안)
 
-RegExp có thể mang mutable state khi dùng flags như `g` hoặc `y` thông qua `lastIndex`.
+RegExp có thể mang mutable trạng thái (state / 상태) khi dùng flags như `g` hoặc `y` thông qua `lastIndex`.
 
 ```js
 const pattern = /a/g;
@@ -852,23 +855,23 @@ pattern.lastIndex;
 
 Reuse same RegExp instance mà không hiểu `lastIndex` có thể tạo bugs khó thấy.
 
-Dynamic regex từ user input là security concern. ES2025 thêm `RegExp.escape()` để biến arbitrary text thành literal-safe fragment cho RegExp:
+Động (dynamic / 동적) regex từ người dùng (user / 사용자) đầu vào (input / 입력) là bảo mật (security / 보안) concern. ES2025 thêm `RegExp.escape()` để biến arbitrary văn bản (text / 텍스트) thành literal-safe fragment cho RegExp:
 
 ```js
 const regex = new RegExp(RegExp.escape(keyword), "i");
 ```
 
-Trước đó codebase thường có custom escape helpers. Khi target runtime cũ chưa support, dùng maintained polyfill/helper phù hợp thay vì tự escape vài characters và tưởng đã an toàn.
+Trước đó codebase thường có custom escape helpers. Khi mục tiêu (target / 대상) thời gian chạy (runtime / 런타임) cũ chưa hỗ trợ (support / 지원), dùng maintained polyfill/helper phù hợp thay vì tự escape vài characters và tưởng đã an toàn.
 
-Một security class khác là **ReDoS**: pattern có catastrophic backtracking có thể tiêu tốn CPU với crafted input. Regex security không chỉ là escaping.
+Một bảo mật (security / 보안) lớp (class / 클래스) khác là **ReDoS**: mẫu (pattern / 패턴) có catastrophic backtracking có thể tiêu tốn CPU với crafted đầu vào (input / 입력). Regex bảo mật (security / 보안) không chỉ là escaping.
 
 ---
 
-# 16. Memory, garbage collection và reachability — nối với closure, DOM và cache
+# 16. bộ nhớ (memory / 메모리), garbage collection và reachability — nối với closure, DOM và bộ nhớ đệm (cache / 캐시)
 
-Garbage collector không biết business đã “xong với object”. Nó chỉ quan tâm object còn reachable từ roots hay không.
+Garbage collector không biết nghiệp vụ (business / 비즈니스) đã “xong với đối tượng (object / 객체)”. Nó chỉ quan tâm đối tượng (object / 객체) còn reachable từ roots hay không.
 
-Common accidental reachability paths:
+Dùng chung (common / 공통) accidental reachability paths:
 
 ```text
 global → cache → old data
@@ -878,7 +881,7 @@ interval → callback → service → page state
 pending async operation → continuation → captured data
 ```
 
-Đây là lý do cleanup phải theo ownership.
+Đây là lý do cleanup phải theo quyền sở hữu (ownership / 소유권).
 
 ```js
 function mount() {
@@ -893,15 +896,15 @@ function mount() {
 }
 ```
 
-WeakMap/WeakSet hữu ích khi metadata/cache lifetime nên phụ thuộc key reachability. WeakRef/FinalizationRegistry là niche tools; correctness không được phụ thuộc vào GC timing.
+WeakMap/WeakSet hữu ích khi siêu dữ liệu (metadata / 메타데이터)/bộ nhớ đệm (cache / 캐시) thời gian tồn tại (lifetime / 수명) nên phụ thuộc key reachability. WeakRef/FinalizationRegistry là niche tools; tính đúng đắn (correctness / 정확성) không được phụ thuộc vào GC timing.
 
-GC implementation có thể generational, incremental, concurrent và thay đổi theo engine version. Application developer nên học **reachability, allocation rate, lifetime và profiler evidence**, không optimize theo một GC blog cũ.
+GC hiện thực (implementation / 구현) có thể generational, incremental, concurrent và thay đổi theo engine phiên bản (version / 버전). ứng dụng (application / 애플리케이션) nhà phát triển (developer / 개발자) nên học **reachability, allocation tỷ lệ (rate / 비율), thời gian tồn tại (lifetime / 수명) và profiler bằng chứng (evidence / 증거)**, không optimize theo một GC blog cũ.
 
 ---
 
-# 17. Browser runtime không phải chỉ ECMAScript
+# 17. trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) không phải chỉ ECMAScript
 
-Browser application chạy trên nhiều lớp:
+Trình duyệt (browser / 브라우저) ứng dụng (application / 애플리케이션) chạy trên nhiều lớp:
 
 ```text
 ECMAScript language
@@ -917,9 +920,9 @@ DOM / network / storage / workers
 OS / native WebView container
 ```
 
-`fetch`, DOM, Web Storage, Web Workers, `AbortController`, `BroadcastChannel`, `requestAnimationFrame`, Trusted Types và Web Locks không phải ECMA-262 APIs. Chúng có specifications và compatibility timelines riêng.
+`fetch`, DOM, Web lưu trữ (storage / 저장소), Web Workers, `AbortController`, `BroadcastChannel`, `requestAnimationFrame`, Trusted Types và Web Locks không phải ECMA-262 APIs. Chúng có specifications và tính tương thích (compatibility / 호환성) timelines riêng.
 
-Điều này đặc biệt quan trọng với hybrid app. Chrome desktop mới nhất support một Web API không có nghĩa Android WebView mà app đang ship cũng support. Và iOS WKWebView version bị gắn với hệ điều hành/engine distribution khác Chrome.
+Điều này đặc biệt quan trọng với hybrid app. Chrome desktop mới nhất hỗ trợ (support / 지원) một Web API không có nghĩa Android WebView mà app đang ship cũng hỗ trợ (support / 지원). Và iOS WKWebView phiên bản (version / 버전) bị gắn với hệ điều hành/engine phân phối (distribution / 분포) khác Chrome.
 
 ### Compatibility matrix nên là project artifact
 Phần này nối mạch bài học với “Compatibility matrix nên là project artifact”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -936,13 +939,13 @@ polyfill/fallback
 real-device tests
 ```
 
-Không dùng `ES2026` như một proxy duy nhất cho browser capability.
+Không dùng `ES2026` như một proxy duy nhất cho trình duyệt (browser / 브라우저) năng lực (capability / 역량).
 
 ---
 
-# 18. Toolchain — transpile, polyfill, bundle và runtime là bốn câu chuyện khác nhau
+# 18. Toolchain — transpile, polyfill, bundle và thời gian chạy (runtime / 런타임) là bốn câu chuyện khác nhau
 
-Modern frontend source có thể đi qua:
+Hiện đại (modern / 현대적) frontend nguồn (source / 소스) có thể đi qua:
 
 ```text
 TypeScript / JavaScript source
@@ -956,25 +959,25 @@ Minifier
 Browser/WebView
 ```
 
-**Transpilation** đổi syntax. Optional chaining có thể được rewrite sang syntax cũ.
+**Transpilation** đổi cú pháp (syntax / 문법). Optional chaining có thể được rewrite sang cú pháp (syntax / 문법) cũ.
 
-**Polyfill** cung cấp runtime API còn thiếu như một built-in approximation.
+**Polyfill** cung cấp thời gian chạy (runtime / 런타임) API còn thiếu như một built-in approximation.
 
-**Bundler** resolve module graph, split chunks, process assets và perform tree shaking.
+**Bundler** resolve mô-đun (module / 모듈) đồ thị (graph / 그래프), split chunks, tiến trình (process / 프로세스) assets và perform cây (tree / 트리) shaking.
 
-**Runtime** cuối cùng quyết định platform APIs và engine behavior thực tế.
+**thời gian chạy (runtime / 런타임)** cuối cùng quyết định nền tảng (platform / 플랫폼) APIs và engine hành vi (behavior / 동작) thực tế.
 
-Vì vậy “Babel compile được” không chứng minh `structuredClone`, `RegExp.escape()` hoặc Web Worker feature nào đó tồn tại ở runtime.
+Vì vậy “Babel compile được” không chứng minh `structuredClone`, `RegExp.escape()` hoặc Web Worker tính năng (feature / 기능) nào đó tồn tại ở thời gian chạy (runtime / 런타임).
 
-Tree shaking cũng không phải guarantee chỉ vì code dùng ES modules. Top-level side effects, dynamic access và package metadata có thể ngăn dead-code elimination.
+Cây (tree / 트리) shaking cũng không phải guarantee chỉ vì mã (code / 코드) dùng ES modules. Top-level side effects, động (dynamic / 동적) truy cập (access / 접근) và gói (package / 패키지) siêu dữ liệu (metadata / 메타데이터) có thể ngăn dead-code elimination.
 
-Source maps là production observability tool: chúng map generated/minified stacks về source. Với sensitive source, upload private source maps cho error service thường tốt hơn public serving.
+Nguồn (source / 소스) maps là môi trường vận hành (production / 운영 환경) khả năng quan sát (observability / 관측 가능성) công cụ (tool / 도구): chúng map generated/minified stacks về nguồn (source / 소스). Với sensitive nguồn (source / 소스), upload private nguồn (source / 소스) maps cho lỗi (error / 오류) dịch vụ (service / 서비스) thường tốt hơn công khai (public / 공개) serving.
 
 ---
 
-# 19. Legacy JavaScript literacy — code cũ nên được đọc bằng lịch sử của ngôn ngữ
+# 19. Legacy JavaScript literacy — mã (code / 코드) cũ nên được đọc bằng lịch sử của ngôn ngữ
 
-Enterprise systems thường chứa nhiều thế hệ JavaScript cùng lúc. Senior developer không nên nhìn legacy syntax rồi kết luận “code xấu” trước khi hiểu runtime/tooling constraints lúc nó được viết.
+Enterprise các hệ thống (systems / 시스템들) thường chứa nhiều thế hệ JavaScript cùng lúc. cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) không nên nhìn legacy cú pháp (syntax / 문법) rồi kết luận “mã (code / 코드) xấu” trước khi hiểu thời gian chạy (runtime / 런타임)/tooling các ràng buộc (constraints / 제약조건들) lúc nó được viết.
 
 ## IIFE thay module scope
 Phần này nối mạch bài học với “IIFE thay module scope”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -990,7 +993,7 @@ Phần này nối mạch bài học với “IIFE thay module scope”, nêu m�
 })();
 ```
 
-Modern equivalent thường là ES module, nhưng IIFE từng là giải pháp đúng để tạo private scope trong browser script world.
+Hiện đại (modern / 현대적) equivalent thường là ES mô-đun (module / 모듈), nhưng IIFE từng là giải pháp đúng để tạo private phạm vi (scope / 범위) trong trình duyệt (browser / 브라우저) script world.
 
 ## `arguments` thay rest parameters
 
@@ -1008,7 +1011,7 @@ function sum() {
 }
 ```
 
-Modern:
+Hiện đại (modern / 현대적):
 
 ```js
 function sum(...values) {
@@ -1016,25 +1019,25 @@ function sum(...values) {
 }
 ```
 
-## Prototype constructor thay class syntax
+## Prototype constructor thay lớp (class / 클래스) cú pháp (syntax / 문법)
 
-Legacy constructor/prototype code không phải “fake class”; nó dùng prototype model trực tiếp. Class syntax chỉ cung cấp abstraction layer rõ hơn.
+Legacy constructor/prototype mã (code / 코드) không phải “fake lớp (class / 클래스)”; nó dùng prototype mô hình (model / 모델) trực tiếp. lớp (class / 클래스) cú pháp (syntax / 문법) chỉ cung cấp lớp trừu tượng (abstraction / 추상화) tầng (layer / 계층) rõ hơn.
 
 ## XMLHttpRequest / callback APIs thay fetch/Promise style
 
-Legacy browser code có thể dùng XHR/event callbacks. Modern fetch/Promise code composable hơn, nhưng migration phải bảo toàn timeout, cancellation, credentials, progress và error semantics; không chỉ đổi API names.
+Legacy trình duyệt (browser / 브라우저) mã (code / 코드) có thể dùng XHR/sự kiện (event / 이벤트) callbacks. hiện đại (modern / 현대적) fetch/Promise mã (code / 코드) composable hơn, nhưng di chuyển (migration / 마이그레이션) phải bảo toàn hết thời gian chờ (timeout / 타임아웃), cancellation, credentials, progress và lỗi (error / 오류) ngữ nghĩa (semantics / 의미론); không chỉ đổi API names.
 
 ## CommonJS / bundler-specific modules
 
-Node/legacy build systems có thể dùng `require`, AMD hoặc UMD. ESM migration cần hiểu package/runtime resolution, không chỉ search/replace `require` thành `import`.
+Nút (node / 노드)/legacy bản dựng (build / 빌드) các hệ thống (systems / 시스템들) có thể dùng `require`, AMD hoặc UMD. ESM di chuyển (migration / 마이그레이션) cần hiểu gói (package / 패키지)/thời gian chạy (runtime / 런타임) resolution, không chỉ tìm kiếm (search / 검색)/replace `require` thành `import`.
 
-Mastery gồm khả năng **đọc code cũ, hiểu lý do lịch sử, rồi modernize theo behavior chứ không theo syntax fashion**.
+Mastery gồm khả năng **đọc mã (code / 코드) cũ, hiểu lý do lịch sử, rồi modernize theo hành vi (behavior / 동작) chứ không theo cú pháp (syntax / 문법) fashion**.
 
 ---
 
-# 20. Security ở level Master — trace data flow và capability
+# 20. bảo mật (security / 보안) ở mức (level / 수준) Master — dấu vết (trace / 추적) luồng dữ liệu (data flow / 데이터 흐름) và năng lực (capability / 역량)
 
-Thay vì học attack names rời rạc, trace:
+Thay vì học attack names rời rạc, dấu vết (trace / 추적):
 
 ```text
 Source
@@ -1050,9 +1053,9 @@ Sink
 Privilege / Side Effect
 ```
 
-Sources có thể là URL, form, API response, localStorage, `postMessage`, native callback hoặc third-party SDK. Sinks có thể là `innerHTML`, navigation URL, dynamic object key, `eval`, native bridge command, network request hoặc logging system.
+Sources có thể là URL, form, API phản hồi (response / 응답), localStorage, `postMessage`, bản địa (native / 네이티브) callback hoặc third-party SDK. Sinks có thể là `innerHTML`, điều hướng (navigation / 내비게이션) URL, động (dynamic / 동적) đối tượng (object / 객체) key, `eval`, bản địa (native / 네이티브) cầu nối (bridge / 브리지) command, mạng (network / 네트워크) yêu cầu (request / 요청) hoặc logging hệ thống (system / 시스템).
 
-### URL validation
+### URL kiểm tra hợp lệ (validation / 검증)
 
 Bad:
 
@@ -1070,15 +1073,15 @@ if (parsed.origin === "https://trusted.com") {
 }
 ```
 
-Sau đó vẫn phải validate path/action nếu privilege phụ thuộc chúng.
+Sau đó vẫn phải validate đường dẫn (path / 경로)/hành động (action / 동작) nếu privilege phụ thuộc chúng.
 
 ### `postMessage`
 
-Receiver nên kiểm tra `origin`, expected `source`, schema, message type và authorization/capability. Check origin một mình không ngăn confused-deputy scenario nếu trusted sender bị lợi dụng để yêu cầu privileged action.
+Receiver nên kiểm tra `origin`, expected `source`, lược đồ (schema / 스키마), message kiểu (type / 타입) và authorization/năng lực (capability / 역량). Check origin một mình không ngăn confused-deputy scenario nếu trusted sender bị lợi dụng để yêu cầu privileged hành động (action / 동작).
 
-### Prototype/object injection
+### Prototype/đối tượng (object / 객체) injection
 
-Arbitrary external string không nên tự động trở thành method/property capability:
+Arbitrary bên ngoài (external / 외부) string không nên tự động trở thành phương thức (method / 메서드)/thuộc tính (property / 속성) năng lực (capability / 역량):
 
 ```js
 handlers[userInput]();
@@ -1086,17 +1089,17 @@ handlers[userInput]();
 
 Prefer allowlisted `Map`/validated discriminant.
 
-### Native bridge
+### Bản địa (native / 네이티브) cầu nối (bridge / 브리지)
 
-Bridge nên expose minimum capability surface. Một god-object kiểu `nativeBridge.execute(command, payload)` làm validation/authorization khó hơn explicit APIs như `startKyc`, `closeKyc`, `openSecureDocument`.
+Cầu nối (bridge / 브리지) nên expose minimum năng lực (capability / 역량) surface. Một god-object kiểu `nativeBridge.execute(command, payload)` làm kiểm tra hợp lệ (validation / 검증)/authorization khó hơn tường minh (explicit / 명시적) APIs như `startKyc`, `closeKyc`, `openSecureDocument`.
 
 ---
 
-# 21. Performance — engine knowledge chỉ có giá trị sau measurement
+# 21. hiệu năng (performance / 성능) — engine kiến thức (knowledge / 지식) chỉ có giá trị sau đo lường (measurement / 측정)
 
-Engine có parser, interpreter/baseline compilation, profiling và JIT optimization strategies. Concepts như shapes/hidden classes, inline caches và deoptimization giúp giải thích một số behavior, nhưng production optimization phải bắt đầu từ user-visible problem.
+Engine có parser, trình thông dịch (interpreter / 인터프리터)/baseline compilation, profiling và JIT tối ưu hóa (optimization / 최적화) strategies. Concepts như shapes/hidden classes, inline caches và deoptimization giúp giải thích một số hành vi (behavior / 동작), nhưng môi trường vận hành (production / 운영 환경) tối ưu hóa (optimization / 최적화) phải bắt đầu từ user-visible bài toán (problem / 문제).
 
-Correct process:
+Correct tiến trình (process / 프로세스):
 
 ```text
 problem / budget
@@ -1114,19 +1117,19 @@ change
 measure again
 ```
 
-Main-thread UI performance thường bị ảnh hưởng nhiều hơn bởi long synchronous tasks, DOM/layout work, serialization, network waterfalls, large bundles và allocation churn so với micro-optimizing arithmetic syntax.
+Main-thread UI hiệu năng (performance / 성능) thường bị ảnh hưởng nhiều hơn bởi long synchronous tasks, DOM/bố cục (layout / 레이아웃) công việc (work / 작업), serialization, mạng (network / 네트워크) waterfalls, large bundles và allocation churn so với micro-optimizing arithmetic cú pháp (syntax / 문법).
 
-Memory profiling nên tìm **retainer path**, không chỉ nhìn object count. CPU profiling nên tìm hot call paths/flame-chart widths, không chỉ function bạn nghi ngờ trước.
+Bộ nhớ (memory / 메모리) profiling nên tìm **retainer đường dẫn (path / 경로)**, không chỉ nhìn đối tượng (object / 객체) count. CPU profiling nên tìm hot lời gọi (call / 호출) paths/flame-chart widths, không chỉ hàm (function / 함수) bạn nghi ngờ trước.
 
-Cold-start và warm behavior cũng khác nhau: first load có parse/compile/network/cache costs mà repeated interaction không có.
+Cold-start và warm hành vi (behavior / 동작) cũng khác nhau: first tải (load / 로드) có parse/compile/mạng (network / 네트워크)/bộ nhớ đệm (cache / 캐시) costs mà repeated tương tác (interaction / 상호작용) không có.
 
 ---
 
-# 22. Streams, workers và concurrency — JavaScript không đồng nghĩa “chỉ làm một việc”
+# 22. Streams, workers và tính đồng thời (concurrency / 동시성) — JavaScript không đồng nghĩa “chỉ làm một việc”
 
-Browser main-thread JavaScript execution thường single-threaded theo một agent, nhưng application có concurrency qua async I/O, multiple contexts và workers.
+Trình duyệt (browser / 브라우저) main-thread JavaScript thực thi (execution / 실행) thường single-threaded theo một tác nhân (agent / 에이전트), nhưng ứng dụng (application / 애플리케이션) có tính đồng thời (concurrency / 동시성) qua async I/O, multiple contexts và workers.
 
-Web Workers cho CPU-heavy work rời main thread. Message passing mặc định dùng structured clone; Transferable objects có thể chuyển ownership của certain buffers để tránh copy cost.
+Web Workers cho CPU-heavy công việc (work / 작업) rời main luồng thực thi (thread / 스레드). Message passing mặc định dùng structured clone; Transferable objects có thể chuyển quyền sở hữu (ownership / 소유권) của certain buffers để tránh bản sao (copy / 복사) chi phí (cost / 비용).
 
 Streams giải quyết progressive processing và backpressure:
 
@@ -1140,17 +1143,17 @@ TransformStream
 WritableStream
 ```
 
-Backpressure nghĩa producer không nên tiếp tục tạo data vô hạn khi consumer xử lý chậm.
+Backpressure nghĩa producer không nên tiếp tục tạo dữ liệu (data / 데이터) vô hạn khi bên tiêu thụ (consumer / 소비자) xử lý chậm.
 
-SharedArrayBuffer/Atomics cho shared memory nhưng tăng reasoning complexity mạnh. Nếu team không thể mô tả synchronization protocol rõ ràng, message passing thường là architecture an toàn hơn.
+SharedArrayBuffer/Atomics cho dùng chung (shared / 공유) bộ nhớ (memory / 메모리) nhưng tăng lập luận (reasoning / 추론) độ phức tạp (complexity / 복잡도) mạnh. Nếu nhóm (team / 팀) không thể mô tả synchronization giao thức (protocol / 프로토콜) rõ ràng, message passing thường là kiến trúc (architecture / 아키텍처) an toàn hơn.
 
-Bounded concurrency cũng quan trọng. `Promise.all(items.map(request))` trên 10.000 items có thể tạo 10.000 operations gần như cùng lúc. Production system thường cần pool/semaphore/concurrency limit.
+Bounded tính đồng thời (concurrency / 동시성) cũng quan trọng. `Promise.all(items.map(request))` trên 10.000 items có thể tạo 10.000 operations gần như cùng lúc. môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) thường cần pool/semaphore/tính đồng thời (concurrency / 동시성) limit.
 
 ---
 
-# 23. Error handling — từ `try/catch` tới error taxonomy và causal chain
+# 23. lỗi (error / 오류) handling — từ `try/catch` tới lỗi (error / 오류) taxonomy và chuỗi nhân quả (causal chain / 인과 사슬)
 
-`try/catch` chỉ là syntax. Production error design cần phân biệt:
+`try/catch` chỉ là cú pháp (syntax / 문법). môi trường vận hành (production / 운영 환경) lỗi (error / 오류) thiết kế (design / 설계) cần phân biệt:
 
 ```text
 programmer/invariant error
@@ -1161,7 +1164,7 @@ timeout/cancellation
 external dependency failure
 ```
 
-`Error.cause` (ES2022) giúp preserve causal chain:
+`Error.cause` (ES2022) giúp preserve chuỗi nhân quả (causal chain / 인과 사슬):
 
 ```js
 try {
@@ -1175,31 +1178,31 @@ try {
 
 `AggregateError` biểu diễn multiple errors, ví dụ khi `Promise.any()` thất bại toàn bộ.
 
-Error serialization cần explicit vì `JSON.stringify(new Error(...))` thường không đưa `message`/`stack` như developer tưởng. Logging layer cũng phải redact secrets và PII.
+Lỗi (error / 오류) serialization cần tường minh (explicit / 명시적) vì `JSON.stringify(new Error(...))` thường không đưa `message`/`stack` như nhà phát triển (developer / 개발자) tưởng. Logging tầng (layer / 계층) cũng phải redact secrets và PII.
 
-Expected business failure đôi khi nên được model như result/state thay vì exception. Đây là architecture decision, không có rule “mọi failure đều throw”.
-
----
-
-# 24. Serialization — JSON không phải universal object cloning
-
-JSON phù hợp vì portable và backend-friendly, nhưng nó không preserve mọi JavaScript representation. `Date` trở thành string, BigInt không stringify trực tiếp theo ordinary behavior, functions/undefined/cycles không được represent như object graph gốc.
-
-`structuredClone()` phù hợp hơn khi clone/transfer structured data trong browser contexts và hỗ trợ nhiều built-ins/cycles hơn, nhưng nó không phải HTTP wire format.
-
-`FormData`, `URLSearchParams` và binary formats giải quyết những transport problems khác nhau. Chọn serialization dựa trên boundary contract, không dựa vào thói quen “mọi thứ stringify JSON”.
+Expected nghiệp vụ (business / 비즈니스) thất bại (failure / 실패) đôi khi nên được mô hình (model / 모델) như kết quả (result / 결과)/trạng thái (state / 상태) thay vì exception. Đây là kiến trúc (architecture / 아키텍처) quyết định (decision / 결정), không có quy tắc (rule / 규칙) “mọi thất bại (failure / 실패) đều throw”.
 
 ---
 
-# 25. Java/Spring interoperability — JavaScript type semantics gặp backend type semantics
+# 24. Serialization — JSON không phải universal đối tượng (object / 객체) cloning
 
-Một frontend JavaScript production thường không thể giả định Java types map 1:1 sang JavaScript.
+JSON phù hợp vì portable và backend-friendly, nhưng nó không preserve mọi JavaScript biểu diễn (representation / 표현). `Date` trở thành string, BigInt không stringify trực tiếp theo ordinary hành vi (behavior / 동작), functions/undefined/cycles không được represent như đối tượng (object / 객체) đồ thị (graph / 그래프) gốc.
 
-Java/database `long` hoặc BIGINT có thể vượt `Number.MAX_SAFE_INTEGER`. ID lớn thường nên serialize thành string nếu exact integer identity quan trọng.
+`structuredClone()` phù hợp hơn khi clone/transfer structured dữ liệu (data / 데이터) trong trình duyệt (browser / 브라우저) contexts và hỗ trợ nhiều built-ins/cycles hơn, nhưng nó không phải HTTP wire format.
 
-`BigDecimal` không nên đổi mù quáng sang `number` nếu domain cần decimal precision. Money có thể dùng decimal string hoặc minor-unit integer strategy.
+`FormData`, `URLSearchParams` và nhị phân (binary / 이진) formats giải quyết những vận chuyển (transport / 전송) problems khác nhau. Chọn serialization dựa trên ranh giới (boundary / 경계) đặc tả hợp đồng (contract / 계약), không dựa vào thói quen “mọi thứ stringify JSON”.
 
-Date/time cần phân biệt rõ:
+---
+
+# 25. Java/Spring interoperability — JavaScript kiểu (type / 타입) ngữ nghĩa (semantics / 의미론) gặp backend kiểu (type / 타입) ngữ nghĩa (semantics / 의미론)
+
+Một frontend JavaScript môi trường vận hành (production / 운영 환경) thường không thể giả định Java types map 1:1 sang JavaScript.
+
+Java/cơ sở dữ liệu (database / 데이터베이스) `long` hoặc BIGINT có thể vượt `Number.MAX_SAFE_INTEGER`. ID lớn thường nên serialize thành string nếu chính xác (exact / 정확한) integer định danh (identity / 식별자) quan trọng.
+
+`BigDecimal` không nên đổi mù quáng sang `number` nếu lĩnh vực (domain / 도메인) cần decimal precision. Money có thể dùng decimal string hoặc minor-unit integer chiến lược (strategy / 전략).
+
+Date/thời gian (time / 시간) cần phân biệt rõ:
 
 ```text
 LocalDate
@@ -1209,17 +1212,17 @@ OffsetDateTime
 ZonedDateTime
 ```
 
-`LocalDateTime` không mang timezone/offset; `Instant` là absolute point. Wire format phải explicit.
+`LocalDateTime` không mang timezone/offset; `Instant` là absolute điểm (point / 지점). Wire format phải tường minh (explicit / 명시적).
 
-Backend enum có thể thêm member mới. Frontend exhaustive logic chỉ an toàn nếu external payload được validated/versioned và có forward-compatibility strategy.
+Backend enum có thể thêm member mới. Frontend exhaustive lô-gic (logic / 논리) chỉ an toàn nếu bên ngoài (external / 외부) payload được validated/versioned và có forward-compatibility chiến lược (strategy / 전략).
 
-`null`, missing field và empty string không nên được dùng lẫn nhau tùy endpoint; chúng phải có contract rõ.
+`null`, missing trường dữ liệu (field / 필드) và empty string không nên được dùng lẫn nhau tùy endpoint; chúng phải có đặc tả hợp đồng (contract / 계약) rõ.
 
 ---
 
-# 26. WebSquare và Native WebView — framework boundary phải được cô lập
+# 26. WebSquare và bản địa (native / 네이티브) WebView — khung phần mềm (framework / 프레임워크) ranh giới (boundary / 경계) phải được cô lập
 
-Trong WebSquare codebase, một event handler lớn dễ trộn DataMap/DataList, submission, native bridge, UI state và business rule. Master architecture nên tách:
+Trong WebSquare codebase, một sự kiện (event / 이벤트) handler lớn dễ trộn DataMap/DataList, submission, bản địa (native / 네이티브) cầu nối (bridge / 브리지), UI trạng thái (state / 상태) và nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙). Master kiến trúc (architecture / 아키텍처) nên tách:
 
 ```text
 WebSquare event
@@ -1235,9 +1238,9 @@ DTO mapper
 domain logic
 ```
 
-DataList/DataMap là infrastructure representation, không nên trở thành domain model ở mọi layer.
+DataList/DataMap là hạ tầng (infrastructure / 인프라) biểu diễn (representation / 표현), không nên trở thành lĩnh vực (domain / 도메인) mô hình (model / 모델) ở mọi tầng (layer / 계층).
 
-Native WebView communication nên có versioned message contracts:
+Bản địa (native / 네이티브) WebView communication nên có versioned message contracts:
 
 ```js
 {
@@ -1248,13 +1251,13 @@ Native WebView communication nên có versioned message contracts:
 }
 ```
 
-Contract nên định nghĩa version, message type, correlation/request ID, payload schema, error schema, timeout/cancellation và backward compatibility. Deep-link scheme như `ekyc://...` cũng phải parse/validate structured fields, không chỉ prefix check.
+Đặc tả hợp đồng (contract / 계약) nên định nghĩa phiên bản (version / 버전), message kiểu (type / 타입), correlation/yêu cầu (request / 요청) ID, payload lược đồ (schema / 스키마), lỗi (error / 오류) lược đồ (schema / 스키마), hết thời gian chờ (timeout / 타임아웃)/cancellation và backward tính tương thích (compatibility / 호환성). Deep-link scheme như `ekyc://...` cũng phải parse/validate structured fields, không chỉ prefix check.
 
 ---
 
-# 27. React interoperability — framework behavior vẫn dựa trên JavaScript semantics
+# 27. React interoperability — khung phần mềm (framework / 프레임워크) hành vi (behavior / 동작) vẫn dựa trên JavaScript ngữ nghĩa (semantics / 의미론)
 
-React không thay thế JavaScript runtime model. Nhiều concept React map trực tiếp:
+React không thay thế JavaScript thời gian chạy (runtime / 런타임) mô hình (model / 모델). Nhiều concept React map trực tiếp:
 
 ```text
 stale closure
@@ -1276,13 +1279,13 @@ memoization
 → cache + dependency semantics
 ```
 
-TypeScript giúp static contracts nhưng không sửa runtime timing. Nếu developer không hiểu closure, identity và event loop, React-specific rules sẽ chỉ trở thành mẹo thuộc lòng.
+TypeScript giúp static contracts nhưng không sửa thời gian chạy (runtime / 런타임) timing. Nếu nhà phát triển (developer / 개발자) không hiểu closure, định danh (identity / 식별자) và vòng lặp sự kiện (event loop / 이벤트 루프), React-specific rules sẽ chỉ trở thành mẹo thuộc lòng.
 
 ---
 
-# 28. Cross-realm behavior — iframe/window làm `instanceof` không tuyệt đối
+# 28. Cross-realm hành vi (behavior / 동작) — iframe/cửa sổ (window / 윈도우) làm `instanceof` không tuyệt đối
 
-Mỗi Realm có own built-ins như `Array`, `Error`, `Promise` constructors. Object được tạo ở iframe Realm có prototype chain dựa constructors của iframe.
+Mỗi Realm có own built-ins như `Array`, `Error`, `Promise` constructors. đối tượng (object / 객체) được tạo ở iframe Realm có prototype chuỗi (chain / 사슬) dựa constructors của iframe.
 
 Vì vậy:
 
@@ -1298,51 +1301,51 @@ Array.isArray(value)
 
 được thiết kế để nhận array across realms.
 
-Đây cũng là lý do ES2026 `Error.isError()` có giá trị: error detection bằng `instanceof Error` có cross-realm limitation.
+Đây cũng là lý do ES2026 `Error.isError()` có giá trị: lỗi (error / 오류) detection bằng `instanceof Error` có cross-realm limitation.
 
-Library nhận values từ iframe/worker/plugin boundary nên hiểu Realm semantics thay vì dựa blind vào nominal-looking checks.
-
----
-
-# 29. API design ở mức Master — data, ownership, async, errors, security
-
-Khi review một API/module, hỏi theo thứ tự:
-
-**Data contract:** input/output là gì, external input được parse ở đâu, missing/null/empty khác nhau thế nào?
-
-**Ownership:** ai được mutate object, ai tạo resource, ai cleanup?
-
-**Async:** operation có timeout/cancellation không, race/stale result xử lý ở đâu, concurrency có bounded không?
-
-**Errors:** expected failure hay programmer bug, causal chain có giữ không, error code có stable cho consumer không?
-
-**Security:** caller được capability gì, trust boundary ở đâu, sink nào có privilege?
-
-**Versioning:** contract có chạy giữa web/native/plugin/backend qua nhiều release không?
-
-**Observability:** production fail thì có correlation ID, structured log, release version và source map không?
-
-**Compatibility:** feature mới có thật sự chạy trên target WebView/runtime không?
-
-**Testability:** network/storage/clock/random/native bridge có dependency seams không?
-
-Một API tốt phải **khó dùng sai**, không chỉ có tên method đẹp.
+Thư viện (library / 라이브러리) nhận values từ iframe/worker/plugin ranh giới (boundary / 경계) nên hiểu Realm ngữ nghĩa (semantics / 의미론) thay vì dựa blind vào nominal-looking checks.
 
 ---
 
-# 30. Testing ở level Master — kiểm thử invariant và timing chứ không chỉ examples
+# 29. API thiết kế (design / 설계) ở mức Master — dữ liệu (data / 데이터), quyền sở hữu (ownership / 소유권), async, errors, bảo mật (security / 보안)
 
-Unit/integration/E2E vẫn là nền, nhưng advanced testing thêm nhiều góc.
+Khi rà soát (review / 검토) một API/mô-đun (module / 모듈), hỏi theo thứ tự:
 
-**Property-based testing** kiểm tra invariant trên nhiều generated inputs, ví dụ `decode(encode(x))` phải round-trip đúng trong valid domain.
+**dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약):** đầu vào (input / 입력)/đầu ra (output / 출력) là gì, bên ngoài (external / 외부) đầu vào (input / 입력) được parse ở đâu, missing/null/empty khác nhau thế nào?
 
-**Fuzzing** đặc biệt hữu ích cho parsers, bridge payloads, URL handling, binary decoders và regex-sensitive inputs.
+**quyền sở hữu (ownership / 소유권):** ai được mutate đối tượng (object / 객체), ai tạo tài nguyên (resource / 자원), ai cleanup?
 
-**Mutation testing** cố thay đổi operators/branches để xem tests có thật sự phát hiện behavior change không.
+**Async:** thao tác (operation / 연산) có hết thời gian chờ (timeout / 타임아웃)/cancellation không, race/stale kết quả (result / 결과) xử lý ở đâu, tính đồng thời (concurrency / 동시성) có bounded không?
 
-**Deterministic async tests** tránh phụ thuộc real timer/network scheduling bằng fake clock, controlled promises hoặc scheduler seam.
+**Errors:** expected thất bại (failure / 실패) hay programmer bug, chuỗi nhân quả (causal chain / 인과 사슬) có giữ không, lỗi (error / 오류) mã (code / 코드) có stable cho bên tiêu thụ (consumer / 소비자) không?
 
-Clock nên inject khi business logic phụ thuộc time:
+**bảo mật (security / 보안):** caller được năng lực (capability / 역량) gì, trust ranh giới (boundary / 경계) ở đâu, sink nào có privilege?
+
+**Versioning:** đặc tả hợp đồng (contract / 계약) có chạy giữa web/bản địa (native / 네이티브)/plugin/backend qua nhiều bản phát hành (release / 릴리스) không?
+
+**khả năng quan sát (observability / 관측 가능성):** môi trường vận hành (production / 운영 환경) thất bại (fail / 실패) thì có correlation ID, structured log, bản phát hành (release / 릴리스) phiên bản (version / 버전) và bản đồ mã nguồn (source map / 소스 맵) không?
+
+**tính tương thích (compatibility / 호환성):** tính năng (feature / 기능) mới có thật sự chạy trên mục tiêu (target / 대상) WebView/thời gian chạy (runtime / 런타임) không?
+
+**Testability:** mạng (network / 네트워크)/lưu trữ (storage / 저장소)/clock/random/bản địa (native / 네이티브) cầu nối (bridge / 브리지) có phụ thuộc (dependency / 의존성) seams không?
+
+Một API tốt phải **khó dùng sai**, không chỉ có tên phương thức (method / 메서드) đẹp.
+
+---
+
+# 30. Testing ở mức (level / 수준) Master — kiểm thử bất biến (invariant / 불변식) và timing chứ không chỉ examples
+
+Đơn vị (unit / 단위)/tích hợp (integration / 통합)/E2E vẫn là nền, nhưng advanced testing thêm nhiều góc.
+
+**Property-based testing** kiểm tra bất biến (invariant / 불변식) trên nhiều generated inputs, ví dụ `decode(encode(x))` phải round-trip đúng trong valid lĩnh vực (domain / 도메인).
+
+**Fuzzing** đặc biệt hữu ích cho parsers, cầu nối (bridge / 브리지) payloads, URL handling, nhị phân (binary / 이진) decoders và regex-sensitive inputs.
+
+**Mutation testing** cố thay đổi operators/branches để xem tests có thật sự phát hiện hành vi (behavior / 동작) thay đổi (change / 변경) không.
+
+**Deterministic async tests** tránh phụ thuộc real timer/mạng (network / 네트워크) scheduling bằng fake clock, controlled promises hoặc scheduler seam.
+
+Clock nên inject khi lô-gic nghiệp vụ (business logic / 비즈니스 로직) phụ thuộc thời gian (time / 시간):
 
 ```js
 function createService({ now = Date.now } = {}) {
@@ -1354,13 +1357,13 @@ function createService({ now = Date.now } = {}) {
 }
 ```
 
-Test có thể inject deterministic `now`.
+Kiểm thử (test / 테스트) có thể inject deterministic `now`.
 
 ---
 
-# 31. Cách đọc modern JavaScript mà không chạy theo feature mới
+# 31. Cách đọc hiện đại (modern / 현대적) JavaScript mà không chạy theo tính năng (feature / 기능) mới
 
-Một feature mới chỉ nên vào codebase khi nó thỏa ba điều: **semantics tốt hơn hoặc code rõ hơn**, **target runtimes support hoặc có fallback đúng**, và **team/toolchain hiểu nó**.
+Một tính năng (feature / 기능) mới chỉ nên vào codebase khi nó thỏa ba điều: **ngữ nghĩa (semantics / 의미론) tốt hơn hoặc mã (code / 코드) rõ hơn**, **mục tiêu (target / 대상) runtimes hỗ trợ (support / 지원) hoặc có fallback đúng**, và **nhóm (team / 팀)/toolchain hiểu nó**.
 
 Không refactor:
 
@@ -1370,21 +1373,21 @@ for (const item of items) {
 }
 ```
 
-sang API mới chỉ vì API mới hơn nếu loop đang rõ và đúng.
+sang API mới chỉ vì API mới hơn nếu vòng lặp (loop / 루프) đang rõ và đúng.
 
-Ngược lại, nếu `toSorted()` diễn đạt chính xác “sorted copy, không mutate source”, nó có semantic value thực sự so với:
+Ngược lại, nếu `toSorted()` diễn đạt chính xác “sorted bản sao (copy / 복사), không mutate nguồn (source / 소스)”, nó có ngữ nghĩa (semantic / 의미적) giá trị (value / 값) thực sự so với:
 
 ```js
 [...items].sort(compare)
 ```
 
-khi target support.
+khi mục tiêu (target / 대상) hỗ trợ (support / 지원).
 
-Modern JavaScript mastery không phải dùng newest syntax nhiều nhất. Nó là khả năng chọn abstraction đúng với problem và compatibility matrix.
+Hiện đại (modern / 현대적) JavaScript mastery không phải dùng newest cú pháp (syntax / 문법) nhiều nhất. Nó là khả năng chọn lớp trừu tượng (abstraction / 추상화) đúng với bài toán (problem / 문제) và tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬).
 
 ---
 
-# 32. Compatibility workflow sau ES2026
+# 32. tính tương thích (compatibility / 호환성) workflow sau ES2026
 
 Khi ES2027, ES2028 hoặc các snapshot sau xuất hiện, không tạo một course JavaScript mới. Hãy dùng quy trình:
 
@@ -1399,15 +1402,15 @@ Khi ES2027, ES2028 hoặc các snapshot sau xuất hiện, không tạo một co
 8. Feature giải quyết problem gì trong code hiện tại?
 ```
 
-`ESNext` không phải version cố định. Một bài năm 2020 và một bài năm 2026 nói ESNext có thể nói về các feature hoàn toàn khác nhau.
+`ESNext` không phải phiên bản (version / 버전) cố định. Một bài năm 2020 và một bài năm 2026 nói ESNext có thể nói về các tính năng (feature / 기능) hoàn toàn khác nhau.
 
 Living spec tại `tc39.es/ecma262` có thể đi trước snapshot chính thức vì nó tích hợp finished proposals cho edition tiếp theo. Historical yearly snapshots mới là mốc edition ổn định.
 
 ---
 
-# 33. Master gotchas — hiểu bằng semantics, không học thuộc câu đố
+# 33. Master gotchas — hiểu bằng ngữ nghĩa (semantics / 의미론), không học thuộc câu đố
 
-Các behavior sau nên quen vì chúng nối nhiều phần của language model:
+Các hành vi (behavior / 동작) sau nên quen vì chúng nối nhiều phần của ngôn ngữ (language / 언어) mô hình (model / 모델):
 
 ```js
 typeof null === "object";
@@ -1416,9 +1419,9 @@ Object.is(NaN, NaN);
 Object.is(0, -0);
 ```
 
-Sparse hole khác `undefined`. `delete array[index]` tạo hole chứ không shift array. `sort()` mutate, `toSorted()` không mutate. Object spread và `Object.freeze()` đều shallow. `Map` object keys dùng object identity. Regex `g`/`y` có `lastIndex` state. `Promise.race()` không cancel losing work. `forEach(async () => ...)` không đợi callbacks. `JSON.stringify(new Error())` không serialize useful error fields mặc định. `JSON.stringify(BigInt(...))` cần explicit strategy. Dynamic import có thể fail vì deployment/chunk mismatch dù source compile đúng. `instanceof` có cross-realm limitation. Getter và Proxy trap có thể khiến ordinary-looking property access thực thi arbitrary logic.
+Sparse hole khác `undefined`. `delete array[index]` tạo hole chứ không shift array. `sort()` mutate, `toSorted()` không mutate. đối tượng (object / 객체) spread và `Object.freeze()` đều shallow. `Map` đối tượng (object / 객체) keys dùng đối tượng (object / 객체) định danh (identity / 식별자). Regex `g`/`y` có `lastIndex` trạng thái (state / 상태). `Promise.race()` không cancel losing công việc (work / 작업). `forEach(async () => ...)` không đợi callbacks. `JSON.stringify(new Error())` không serialize useful lỗi (error / 오류) fields mặc định. `JSON.stringify(BigInt(...))` cần tường minh (explicit / 명시적) chiến lược (strategy / 전략). động (dynamic / 동적) import có thể thất bại (fail / 실패) vì triển khai (deployment / 배포)/chunk mismatch dù nguồn (source / 소스) compile đúng. `instanceof` có cross-realm limitation. Getter và Proxy trap có thể khiến ordinary-looking thuộc tính (property / 속성) truy cập (access / 접근) thực thi arbitrary lô-gic (logic / 논리).
 
-Mục tiêu không phải ghi nhớ như trivia. Khi gặp một behavior lạ, hãy phân loại nó về **coercion/equality**, **object model**, **async scheduling**, **serialization**, **module/runtime**, hoặc **host boundary** rồi điều tra đúng tầng.
+Mục tiêu không phải ghi nhớ như trivia. Khi gặp một hành vi (behavior / 동작) lạ, hãy phân loại nó về **coercion/equality**, **mô hình đối tượng (object model / 객체 모델)**, **async scheduling**, **serialization**, **mô-đun (module / 모듈)/thời gian chạy (runtime / 런타임)**, hoặc **host ranh giới (boundary / 경계)** rồi điều tra đúng tầng.
 
 ---
 
@@ -1426,41 +1429,41 @@ Mục tiêu không phải ghi nhớ như trivia. Khi gặp một behavior lạ, 
 Phần này nối mạch bài học với “34. Coverage matrix sau audit”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
 
-| Nhóm kiến thức | Canonical level chính | Trạng thái sau audit |
+| Nhóm kiến thức | chuẩn gốc (canonical / 정본) mức (level / 수준) chính | Trạng thái sau kiểm tra (audit / 감사) |
 | --- | --- | --- |
-| Execution model / call stack | Intermediate + Master | Đã cover sâu và nối spec/runtime |
+| mô hình thực thi (execution model / 실행 모델) / ngăn xếp lời gọi (call stack / 호출 스택) | Intermediate + Master | Đã cover sâu và nối spec/thời gian chạy (runtime / 런타임) |
 | Values / types / coercion | Beginner + Master | Đã cover từ practical đến abstract operations |
-| Scope / lexical environment | Intermediate | Đã cover |
+| phạm vi (scope / 범위) / lexical môi trường (environment / 환경) | Intermediate | Đã cover |
 | Hoisting / TDZ | Beginner + Master | Đã làm rõ bằng binding initialization |
-| Function / closure | Beginner → Intermediate → Master | Đã cover sâu lifecycle/memory |
-| `this` | Intermediate + Master | Đã cover call-site + receiver semantics |
-| Prototype / class | Intermediate + Master | Đã cover legacy constructor ↔ class evolution |
-| Object / array | Beginner → Master | Đã cover ordinary/exotic/sparse/copying APIs |
-| Iteration | Intermediate/Senior/Master | Đã cover sync/async/lazy/modern helpers |
-| Modules | Beginner → Intermediate → Master | Đã cover ESM, legacy, cycles, dynamic import, tooling |
-| Error handling | Beginner/Senior/Master | Đã cover syntax → taxonomy → cause/serialization |
+| hàm (function / 함수) / closure | Beginner → Intermediate → Master | Đã cover sâu vòng đời (lifecycle / 생명주기)/bộ nhớ (memory / 메모리) |
+| `this` | Intermediate + Master | Đã cover call-site + receiver ngữ nghĩa (semantics / 의미론) |
+| Prototype / lớp (class / 클래스) | Intermediate + Master | Đã cover legacy constructor ↔ lớp (class / 클래스) evolution |
+| đối tượng (object / 객체) / array | Beginner → Master | Đã cover ordinary/exotic/sparse/copying APIs |
+| Iteration | Intermediate/cấp cao (senior / 시니어)/Master | Đã cover sync/async/lazy/hiện đại (modern / 현대적) helpers |
+| Modules | Beginner → Intermediate → Master | Đã cover ESM, legacy, cycles, động (dynamic / 동적) import, tooling |
+| lỗi (error / 오류) handling | Beginner/cấp cao (senior / 시니어)/Master | Đã cover cú pháp (syntax / 문법) → taxonomy → cause/serialization |
 | Promise / async-await | Beginner → Intermediate → Master | Đã cover resolution, scheduling và legacy callbacks |
-| Task / microtask / event loop | Intermediate + Master | Đã cover timeline + render/host boundary |
-| Browser runtime / DOM / events | Beginner/Intermediate/Senior | Đã cover |
-| Fetch / storage | Beginner + Senior security | Đã cover |
-| Memory / GC | Senior + Master | Đã cover reachability/lifecycle/profiling |
-| Performance | Senior + Master | Đã cover methodology/tooling |
-| Security | Senior + Master | Đã cover source-to-sink/capability boundaries |
-| Modules/tooling | Senior + Master | Đã cover transpile/polyfill/bundle/source maps |
-| Modern JavaScript | Tất cả levels | Đã cover evolution và compatibility mindset |
-| Legacy JavaScript | Beginner notes + Master | Đã cover mapping IIFE/var/callback/prototype/CommonJS |
-| ES5 → ES2015 → modern | Beginner + Master | Đã chuyển từ timeline sang giải thích động cơ |
+| tác vụ (task / 작업) / microtask / vòng lặp sự kiện (event loop / 이벤트 루프) | Intermediate + Master | Đã cover timeline + kết xuất (render / 렌더링)/host ranh giới (boundary / 경계) |
+| trình duyệt (browser / 브라우저) thời gian chạy (runtime / 런타임) / DOM / events | Beginner/Intermediate/cấp cao (senior / 시니어) | Đã cover |
+| Fetch / lưu trữ (storage / 저장소) | Beginner + cấp cao (senior / 시니어) bảo mật (security / 보안) | Đã cover |
+| bộ nhớ (memory / 메모리) / GC | cấp cao (senior / 시니어) + Master | Đã cover reachability/vòng đời (lifecycle / 생명주기)/profiling |
+| hiệu năng (performance / 성능) | cấp cao (senior / 시니어) + Master | Đã cover methodology/tooling |
+| bảo mật (security / 보안) | cấp cao (senior / 시니어) + Master | Đã cover source-to-sink/năng lực (capability / 역량) boundaries |
+| Modules/tooling | cấp cao (senior / 시니어) + Master | Đã cover transpile/polyfill/bundle/nguồn (source / 소스) maps |
+| hiện đại (modern / 현대적) JavaScript | Tất cả levels | Đã cover evolution và tính tương thích (compatibility / 호환성) mindset |
+| Legacy JavaScript | Beginner notes + Master | Đã cover ánh xạ (mapping / 매핑) IIFE/var/callback/prototype/CommonJS |
+| ES5 → ES2015 → hiện đại (modern / 현대적) | Beginner + Master | Đã chuyển từ timeline sang giải thích động cơ |
 | ECMAScript 2026 | Master | Đã bổ sung selected meaningful features |
 
-Audit này cố ý không tạo thêm canonical file. Learning Library tiếp tục dùng đúng bốn notes hiện có.
+Kiểm tra (audit / 감사) này cố ý không tạo thêm tệp chuẩn gốc (canonical file / 정본 파일). học tập (learning / 학습) thư viện (library / 라이브러리) tiếp tục dùng đúng bốn notes hiện có.
 
 ---
 
 # 35. Master exit criteria
 
-Bạn không cần thuộc ECMA-262. Nhưng sau toàn bộ library, bạn nên có thể giải thích bằng lời:
+Bạn không cần thuộc ECMA-262. Nhưng sau toàn bộ thư viện (library / 라이브러리), bạn nên có thể giải thích bằng lời:
 
-Một function call tạo context gì và call stack thay đổi thế nào. Lexical environment quyết định scope chain ra sao. Hoisting/TDZ phản ánh declaration initialization khác nhau thế nào. Closure giữ environment vì reachability chứ không phải vì “function nhớ magic”. `this` khác lexical scope vì receiver/call-site semantics. Prototype lookup diễn ra thế nào và class chỉ là abstraction trên prototype model. Promise/`await` continuation liên hệ microtask ra sao. Task/microtask/render sequencing ảnh hưởng UI thế nào. ES modules khác global/IIFE/CommonJS ở dependency model nào. Garbage collector nhìn reachability, không nhìn business intent. Browser APIs khác ECMAScript built-ins ở specification/compatibility layer nào. Transpilation khác polyfill thế nào. Và khi một feature mới xuất hiện, bạn biết đánh giá standard status, runtime support và problem solved thay vì chỉ hỏi “feature này mới không?”.
+Một hàm (function / 함수) lời gọi (call / 호출) tạo ngữ cảnh (context / 맥락) gì và ngăn xếp lời gọi (call stack / 호출 스택) thay đổi thế nào. Lexical môi trường (environment / 환경) quyết định phạm vi (scope / 범위) chuỗi (chain / 사슬) ra sao. Hoisting/TDZ phản ánh declaration initialization khác nhau thế nào. Closure giữ môi trường (environment / 환경) vì reachability chứ không phải vì “hàm (function / 함수) nhớ magic”. `this` khác lexical phạm vi (scope / 범위) vì receiver/call-site ngữ nghĩa (semantics / 의미론). Prototype lookup diễn ra thế nào và lớp (class / 클래스) chỉ là lớp trừu tượng (abstraction / 추상화) trên prototype mô hình (model / 모델). Promise/`await` continuation liên hệ microtask ra sao. tác vụ (task / 작업)/microtask/kết xuất (render / 렌더링) sequencing ảnh hưởng UI thế nào. ES modules khác toàn cục (global / 전역)/IIFE/CommonJS ở phụ thuộc (dependency / 의존성) mô hình (model / 모델) nào. Garbage collector nhìn reachability, không nhìn nghiệp vụ (business / 비즈니스) intent. trình duyệt (browser / 브라우저) APIs khác ECMAScript built-ins ở specification/tính tương thích (compatibility / 호환성) tầng (layer / 계층) nào. Transpilation khác polyfill thế nào. Và khi một tính năng (feature / 기능) mới xuất hiện, bạn biết đánh giá tiêu chuẩn (standard / 표준) status, thời gian chạy (runtime / 런타임) hỗ trợ (support / 지원) và bài toán (problem / 문제) solved thay vì chỉ hỏi “tính năng (feature / 기능) này mới không?”.
 
 Bạn cũng nên có thể đọc cả hai đoạn:
 
@@ -1480,13 +1483,13 @@ const value = await request();
 this.render(value);
 ```
 
-rồi giải thích chính xác **những abstraction nào đã thay đổi**, chứ không chỉ nói đoạn dưới “modern hơn”.
+rồi giải thích chính xác **những lớp trừu tượng (abstraction / 추상화) nào đã thay đổi**, chứ không chỉ nói đoạn dưới “hiện đại (modern / 현대적) hơn”.
 
 ---
 
-# Appendix A — Nguồn authoritative để cập nhật library
+# Appendix A — Nguồn authoritative để cập nhật thư viện (library / 라이브러리)
 
-Khi cần xác minh language semantics/version, ưu tiên:
+Khi cần xác minh ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론)/phiên bản (version / 버전), ưu tiên:
 
 ```text
 ECMA-262 living specification
@@ -1499,15 +1502,15 @@ TC39 proposals
 https://github.com/tc39/proposals
 ```
 
-Khi cần developer-facing browser compatibility, dùng MDN JavaScript/Web APIs và compatibility tables. Khi project là hybrid app, browser tables vẫn phải được đối chiếu với WebView versions thực tế mà ứng dụng ship.
+Khi cần developer-facing trình duyệt (browser / 브라우저) tính tương thích (compatibility / 호환성), dùng MDN JavaScript/Web APIs và tính tương thích (compatibility / 호환성) tables. Khi dự án (project / 프로젝트) là hybrid app, trình duyệt (browser / 브라우저) tables vẫn phải được đối chiếu với WebView versions thực tế mà ứng dụng ship.
 
-Không dùng một blog cũ hoặc một transpiler preset như nguồn duy nhất để kết luận feature đã standard hay runtime đã support.
+Không dùng một blog cũ hoặc một transpiler preset như nguồn duy nhất để kết luận tính năng (feature / 기능) đã tiêu chuẩn (standard / 표준) hay thời gian chạy (runtime / 런타임) đã hỗ trợ (support / 지원).
 
 ---
 
 # Kết luận
 
-JavaScript Knowledge Library hoàn chỉnh không nên kết thúc ở việc nhớ nhiều APIs. Mục tiêu cuối là nhìn một vấn đề và đặt nó vào đúng tầng:
+JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리) hoàn chỉnh không nên kết thúc ở việc nhớ nhiều APIs. Mục tiêu cuối là nhìn một vấn đề và đặt nó vào đúng tầng:
 
 ```text
 Language semantics
@@ -1527,6 +1530,6 @@ Security / architecture
 Compatibility / deployment
 ```
 
-ES5, ES2015 và modern ECMAScript không phải ba ngôn ngữ khác nhau. Chúng là ba giai đoạn trong quá trình cùng một language trưởng thành: ES5 chuẩn hóa nền web đã tồn tại, ES2015 cung cấp những abstractions cần cho applications/modules lớn, và yearly ECMAScript sau đó bổ sung dần các patterns đã chứng minh giá trị trong ecosystem.
+ES5, ES2015 và hiện đại (modern / 현대적) ECMAScript không phải ba ngôn ngữ khác nhau. Chúng là ba giai đoạn trong quá trình cùng một ngôn ngữ (language / 언어) trưởng thành: ES5 chuẩn hóa nền web đã tồn tại, ES2015 cung cấp những abstractions cần cho applications/modules lớn, và yearly ECMAScript sau đó bổ sung dần các patterns đã chứng minh giá trị trong ecosystem.
 
 Khi bạn hiểu **vì sao** một feature xuất hiện, bạn có thể đọc cả legacy và modern code mà không bị phụ thuộc vào thời điểm syntax được viết. Đó mới là mục tiêu của Master level.

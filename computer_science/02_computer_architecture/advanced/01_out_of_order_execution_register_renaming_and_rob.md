@@ -1,69 +1,230 @@
-# Out-of-order execution, register renaming và reorder buffer
+# Out-of-order thực thi (execution / 실행), register renaming và reorder buffer
 
-Một CPU hiện đại hiếm khi thực thi instruction đúng từng bước theo thứ tự source code. Nếu instruction thứ hai phải chờ dữ liệu từ RAM nhưng instruction thứ ba và thứ tư đã có đủ operand, việc để toàn bộ pipeline đứng yên sẽ lãng phí execution units. **Out-of-order execution (OoO / 비순차 실행)** giải quyết vấn đề đó bằng cách cho phép CPU thực thi các micro-operation đã sẵn sàng trước, nhưng vẫn cố gắng làm cho chương trình quan sát kết quả như thể instruction đã hoàn thành theo đúng thứ tự kiến trúc.
+> **Mạch đọc:** Đặt **Out-of-order thực thi (execution / 실행), register renaming và reorder buffer** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Program thứ tự (order / 순서), thực thi (execution / 실행) thứ tự (order / 순서) và retirement thứ tự (order / 순서) là ba thứ khác nhau** sang **2. Instruction được biến thành micro-operation như thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Điểm quan trọng là phân biệt **execution order** với **architectural order**. CPU có thể tính toán bên trong theo một thứ tự khác, nhưng trạng thái mà software nhìn thấy — register, exception, memory ordering theo ISA — phải tuân thủ contract của kiến trúc.
 
-## Từ instruction đến micro-operation
+Một CPU hiện đại không đơn giản lấy một instruction, chạy xong rồi mới lấy instruction tiếp theo. Nếu instruction đang chờ bộ nhớ đệm (cache / 캐시), phép nhân hoặc branch kết quả (result / 결과) mà các instruction độc lập phía sau đã sẵn sàng, việc để chuỗi xử lý (pipeline / 파이프라인) đứng yên sẽ lãng phí thực thi (execution / 실행) units. **Thực thi ngoài thứ tự (out-of-order execution, OoO / 비순차 실행)** giải quyết vấn đề đó bằng cách cho CPU thực thi micro-operations theo phụ thuộc (dependency / 의존성) và tài nguyên (resource / 자원) readiness, trong khi vẫn giữ một bất biến (invariant / 불변식) quan trọng: trạng thái kiến trúc mà software quan sát phải tương thích với đặc tả hợp đồng (contract / 계약) của ISA.
 
-Instruction trong ISA như x86 `ADD`, `LOAD` hay `CALL` là contract giữa software và processor. Bên trong CPU, instruction có thể được decode thành một hoặc nhiều **micro-operations (µops)** nhỏ hơn. Front-end fetch và decode tạo ra dòng µop; back-end quyết định µop nào có thể issue tới integer ALU, floating-point unit, load/store unit hoặc vector unit.
+Chương này cần được đọc như một bài toán giữ bất biến (invariant / 불변식) dưới hiệu năng (performance / 성능) pressure: **thực thi (execution / 실행) được phép reorder để che độ trễ (latency / 지연 시간); retirement, exception và quay lui (rollback / 롤백) phải khôi phục một architectural lịch sử (history / 이력) hợp lệ.**
 
-Nếu một µop cần kết quả chưa có, nó phải chờ. Nhưng dependency của một µop không nhất thiết ngăn các µop độc lập phía sau chạy. Đây là nguồn instruction-level parallelism mà OoO engine khai thác.
+## 1. Program thứ tự (order / 순서), thực thi (execution / 실행) thứ tự (order / 순서) và retirement thứ tự (order / 순서) là ba thứ khác nhau
 
-## Data dependency thật và dependency giả
-
-Giả sử chương trình có logic:
+Cần tách ba khái niệm:
 
 ```text
-R1 = R2 + R3
-R4 = R1 * R5
-R1 = R6 + R7
+program order
+= thứ tự instruction trong machine-code stream
+
+execution order
+= thứ tự µop thật sự sử dụng execution units
+
+retirement/commit order
+= thứ tự kết quả trở thành architectural state chính thức
 ```
 
-Instruction thứ hai có **RAW dependency — Read After Write** thật với instruction đầu vì nó cần giá trị mới của `R1`. Nhưng instruction thứ ba chỉ tái sử dụng tên architectural register `R1`; nó không phụ thuộc vào giá trị cũ. Nếu CPU coi tên register vật lý và architectural register là một, việc tái sử dụng tên này tạo **WAR/WAW dependency** giả.
+CPU có thể execute instruction trẻ hơn trước instruction già hơn nếu phụ thuộc (dependency / 의존성) cho phép, nhưng thường retire theo program thứ tự (order / 순서). bất biến (invariant / 불변식) này giúp giữ **precise exception**: nếu instruction 15 page fault, OS phải thấy trạng thái (state / 상태) như thể các instruction sau 15 chưa lần ghi nhận (commit / 커밋).
 
-**Register renaming (레지스터 리네이밍)** ánh xạ architectural registers sang một tập physical registers lớn hơn. Hai phiên bản khác nhau của `R1` có thể tồn tại đồng thời trong hai physical register khác nhau. Nhờ đó CPU loại bỏ false dependency và mở rộng cửa sổ instruction có thể chạy song song.
+## 2. Instruction được biến thành micro-operation như thế nào?
 
-## Reservation station và wakeup/select
+ISA instruction là đặc tả hợp đồng (contract / 계약) với software. Bên trong processor, một instruction có thể được decode thành một hoặc nhiều **micro-operation (µop)**. Front-end fetch/decode tạo stream; rename/scheduler/back-end quyết định µop nào có đủ operand và thực thi (execution / 실행) cổng (port / 포트) phù hợp để chạy.
 
-Sau rename, µop đi vào các cấu trúc chờ execution. Một entry thường giữ operation, source operands hoặc tag của physical register đang chờ, cùng destination tag. Khi producer hoàn thành, dependent µops được đánh thức. Scheduler chọn các µop đã ready và gửi chúng tới execution ports phù hợp.
+Mô hình tư duy (mental model / 사고 모델):
 
-Đây không phải một queue FIFO đơn giản. Scheduler phải giải bài toán wakeup/select rất nhanh trong mỗi cycle, nên kích thước scheduling window, số execution ports và wiring đều ảnh hưởng trực tiếp tới clock frequency, area và power.
+```text
+fetch → decode → rename → dispatch
+                         ↓
+                issue / scheduling window
+                    ↓       ↓       ↓
+                   ALU     load    vector ...
+                    \       |       /
+                     complete
+                        ↓
+                       ROB
+                        ↓
+                     retire
+```
 
-## Reorder Buffer giữ precise architectural state
+Đây gần như một data-flow machine speculative nằm bên trong vỏ architectural-order.
 
-Nếu execution được phép chạy lung tung, CPU vẫn phải xử lý exception chính xác. Giả sử instruction cũ hơn gây page fault nhưng vài instruction trẻ hơn đã tính xong. Software không được nhìn thấy một trạng thái nửa trước-nửa sau tùy tiện.
+## 3. True phụ thuộc (dependency / 의존성) mới là ràng buộc (constraint / 제약조건) dữ liệu thật
 
-**Reorder Buffer (ROB / 재정렬 버퍼)** theo dõi các instruction theo program order. Execution có thể hoàn thành out-of-order, nhưng **retirement/commit** thường diễn ra in-order. Chỉ khi instruction ở đầu ROB đã hoàn tất hợp lệ thì kết quả architectural của nó mới được commit.
+Ví dụ:
 
-Cơ chế này tạo **precise exception**: khi fault xảy ra, processor có thể bỏ các instruction trẻ hơn và trình bày trạng thái tương ứng với điểm chính xác trong instruction stream.
+```text
+1: r1 = load [A]
+2: r2 = r1 + 1
+3: r3 = r4 * r5
+4: r6 = r3 + 2
+```
 
-## Load/store làm OoO khó hơn register operation
+Instruction 2 có **RAW phụ thuộc (dependency / 의존성) (Read After Write)** với 1 nên phải chờ. Instruction 3 độc lập với tải (load / 로드) ở 1 và có thể chạy trong lúc trượt bộ nhớ đệm (cache miss / 캐시 미스) đang được xử lý. Instruction 4 chỉ cần chờ 3.
 
-Register dependency có thể nhận diện từ operand, nhưng hai memory operation có thể alias dù address chưa được tính xong. CPU vì thế cần **Load/Store Queue (LSQ)** và memory disambiguation.
+OoO engine tìm independent công việc (work / 작업) trong một instruction cửa sổ (window / 윈도우) để overlap độ trễ (latency / 지연 시간).
 
-Nếu một load trẻ hơn được cho chạy trước một store cũ hơn mà sau đó phát hiện cả hai trỏ cùng address, CPU phải replay hoặc squash phần computation phụ thuộc. Predictor tốt giúp tăng parallelism; predictor sai tạo penalty.
+## 4. Vì sao register renaming tồn tại?
 
-Store thường chưa được phép trở thành globally visible ngay khi execution unit tính xong. Store buffer giữ chúng cho đến khi ordering và retirement conditions cho phép. Điều này liên hệ trực tiếp với memory consistency model của chapter trước.
+Architectural register names có thể tạo phụ thuộc (dependency / 의존성) giả.
 
-## Speculation và rollback
+```text
+1: r1 = r2 + r3
+2: r4 = r1 + 1
+3: r1 = r5 + r6
+```
 
-OoO execution gần như luôn đi cùng speculation. CPU dự đoán branch, memory dependency hoặc target để tiếp tục giữ pipeline bận. Nếu dự đoán đúng, latency bị che giấu. Nếu sai, speculative work phải bị loại bỏ và pipeline khôi phục từ checkpoint phù hợp.
+Instruction 3 ghi lại tên `r1`, nhưng không phụ thuộc giá trị (value / 값) của instruction 1. Đây là **WAW (Write After Write)** về tên. Tương tự, WAR (Write After Read) có thể xuất hiện khi instruction trẻ ghi một tên mà instruction già còn cần đọc.
 
-Vì vậy performance không chỉ phụ thuộc IPC lý tưởng mà còn phụ thuộc kích thước ROB, scheduler window, branch accuracy, cache miss latency và khả năng tìm independent work trong cửa sổ hiện tại.
+**Đổi tên thanh ghi (register renaming / 레지스터 리네이밍)** ánh xạ architectural registers sang vật lý (physical / 물리적) registers lớn hơn:
 
-## Ví dụ reasoning về performance
+```text
+architectural r1 version A → physical P17
+architectural r1 version B → physical P42
+```
 
-Một backend service có hot loop thực hiện nhiều phép tính độc lập có thể tận dụng OoO tốt. Ngược lại, pointer chasing kiểu `node = node.next` tạo dependency chain: address của load tiếp theo chỉ biết sau khi load hiện tại hoàn thành. Dù CPU có nhiều ALU, nó không thể tạo parallelism từ một chuỗi dependency nối tiếp như vậy.
+Renaming loại false phụ thuộc (dependency / 의존성), để scheduler chỉ bị giới hạn bởi true dữ liệu (data / 데이터) phụ thuộc (dependency / 의존성) và tài nguyên (resource / 자원) các ràng buộc (constraints / 제약조건들).
 
-Đây là lý do hai thuật toán cùng Big-O có thể khác performance đáng kể. Data layout tốt không chỉ giúp cache locality mà còn có thể tạo nhiều independent memory operations hơn cho OoO engine.
+## 5. Rename bảng (table / 테이블), vật lý (physical / 물리적) registers và thời gian tồn tại (lifetime / 수명)
 
-## Trade-off kiến trúc
+Rename stage giữ ánh xạ (mapping / 매핑) từ architectural register tới vật lý (physical / 물리적) register chứa phiên bản (version / 버전) mới nhất. Khi instruction tạo giá trị (value / 값) mới, CPU cấp vật lý (physical / 물리적) register mới và cập nhật ánh xạ (mapping / 매핑) cho instruction sau.
 
-ROB lớn và scheduler rộng giúp che latency tốt hơn nhưng tốn transistor, năng lượng và wiring. Nhiều execution ports tăng throughput nhưng làm rename/scheduling/bypass network phức tạp hơn. Mobile CPU, server CPU và high-performance desktop CPU vì thế chọn điểm cân bằng khác nhau giữa power, area, latency và throughput.
+Vật lý (physical / 물리적) register cũ không thể tái sử dụng ngay vì instruction speculative hoặc instruction chưa retire có thể vẫn tham chiếu nó. Free-list/thời gian tồn tại (lifetime / 수명) management vì vậy gắn trực tiếp với retirement trạng thái (state / 상태).
 
-## Mental model
+Đây là một bất biến (invariant / 불변식) nội bộ: **vật lý (physical / 물리적) lưu trữ (storage / 저장소) không được tái sử dụng khi vẫn còn architectural/speculative phụ thuộc (dependency / 의존성) hợp lệ tới phiên bản (version / 버전) cũ**.
 
-> Out-of-order CPU là một hệ thống speculative data-flow nằm phía sau một contract in-order. Rename loại bỏ dependency giả, scheduler tìm work đã ready, ROB bảo toàn thứ tự architectural, còn rollback biến speculation sai thành trạng thái không được software quan sát.
+## 6. Reservation station / issue hàng đợi (queue / 큐) và wakeup-select
 
-Khi phân tích performance, đừng chỉ hỏi “CPU bao nhiêu GHz?”. Hãy hỏi dependency chain dài bao nhiêu, instruction window có đủ work độc lập không, cache miss có thể được overlap không, và speculation có thường xuyên bị phá bỏ hay không.
+Sau rename, µops đi vào scheduling structures. Entry giữ thao tác (operation / 연산), nguồn (source / 소스) tags/readiness và destination. Khi producer complete, dependent entries được wake up; scheduler chọn ready µops cho thực thi (execution / 실행) ports.
+
+Đây không phải FIFO. Wakeup/select phải chạy cực nhanh mỗi cycle, nên scheduler width, issue-window kích thước (size / 크기) và bypass mạng (network / 네트워크) tạo sự đánh đổi (trade-off / 트레이드오프) area/power/frequency.
+
+Cửa sổ (window / 윈도우) lớn hơn có thể tìm nhiều independent công việc (work / 작업) hơn, nhưng độ phức tạp (complexity / 복잡도) tăng nhanh. hiệu năng (performance / 성능) không tăng miễn phí chỉ bằng cách “cho nhiều instruction in-flight”.
+
+## 7. Reorder Buffer giữ architectural bất biến (invariant / 불변식)
+
+**Reorder Buffer (ROB / 재정렬 버퍼)** theo dõi instructions theo program thứ tự (order / 순서) sau khi chúng vào speculative back-end. thực thi (execution / 실행) có thể complete out of thứ tự (order / 순서), nhưng ROB cho phép retire theo thứ tự.
+
+ROB entry cần siêu dữ liệu (metadata / 메타데이터) đủ để biết instruction complete chưa, exception có xảy ra không, branch speculation có hợp lệ không và tài nguyên (resource / 자원) nào được bản phát hành (release / 릴리스) khi retire.
+
+Bất biến (invariant / 불변식) cốt lõi:
+
+> Speculative thực thi (execution / 실행) được phép tạo intermediate trạng thái (state / 상태), nhưng software chỉ được quan sát architectural trạng thái (state / 상태) tương ứng với một prefix hợp lệ của instruction stream.
+
+## 8. Precise exception giải thích vì sao retirement thứ tự (order / 순서) quan trọng
+
+Giả sử instruction 10 page fault nhưng 11–20 đã execute. Nếu side effects của 11–20 trở thành architectural trạng thái (state / 상태) không thể quay lui (rollback / 롤백), OS không thể xử lý exception như thể fault xảy ra chính xác tại instruction 10.
+
+ROB dừng retirement tại faulting instruction, squash công việc (work / 작업) trẻ hơn và chuyển điều khiển (control / 제어) sang handler với trạng thái (state / 상태) chính xác.
+
+Đây là liên kết (connection / 연결) trực tiếp giữa microarchitecture và OS lớp trừu tượng (abstraction / 추상화): page fault/tín hiệu (signal / 신호)/debugger chỉ hoạt động hợp lý vì processor giữ precise-state đặc tả hợp đồng (contract / 계약).
+
+## 9. bộ nhớ (memory / 메모리) thao tác (operation / 연산) khó hơn register phụ thuộc (dependency / 의존성)
+
+Register phụ thuộc (dependency / 의존성) biết từ operand names sau rename. bộ nhớ (memory / 메모리) phụ thuộc (dependency / 의존성) chỉ rõ khi addresses được tính.
+
+```text
+store [p] = 10
+load  [q]
+```
+
+Nếu chưa biết `p == q`, CPU phải quyết định có cho tải (load / 로드) chạy sớm không. **tải (load / 로드)/Store hàng đợi (queue / 큐) (LSQ)**, bộ nhớ (memory / 메모리) disambiguation và phụ thuộc (dependency / 의존성) prediction giúp khai thác parallelism.
+
+Nếu prediction sai và tải (load / 로드) đã đọc giá trị (value / 값) không hợp lệ, dependent công việc (work / 작업) phải replay hoặc squash. hiệu năng (performance / 성능) pressure vì thế tạo speculation thêm một tầng ngoài branch prediction.
+
+## 10. Store buffer nối OoO với bộ nhớ (memory / 메모리) thứ tự (ordering / 순서)
+
+Store có thể complete trong chuỗi xử lý (pipeline / 파이프라인) nhưng chưa globally visible. Store buffer giữ ghi (write / 쓰기) trong khi coherence/quyền sở hữu (ownership / 소유권) được xử lý. CPU có thể forward store cho tải (load / 로드) cùng cốt lõi (core / 핵심) trước khi cốt lõi (core / 핵심) khác thấy giá trị (value / 값).
+
+Điều này nối trực tiếp tới [memory consistency và ordering](./00_memory_consistency_cache_coherence_and_ordering.md). OoO thực thi (execution / 실행) và bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) liên quan nhưng không phải cùng khái niệm: retirement thứ tự (order / 순서) giữ architectural register/exception trạng thái (state / 상태), còn cross-core bộ nhớ (memory / 메모리) visibility tuân ISA bộ nhớ (memory / 메모리) mô hình (model / 모델).
+
+## 11. Branch speculation và quay lui (rollback / 롤백)
+
+OoO gần như luôn đi cùng branch prediction. Nếu processor chờ biết chắc mọi branch mới fetch tiếp, chuỗi xử lý (pipeline / 파이프라인) sẽ thường xuyên rỗng.
+
+Speculative đường dẫn (path / 경로) có thể decode/execute sâu phía sau unresolved branch. Khi prediction đúng, độ trễ (latency / 지연 시간) bị che. Khi sai, processor phải khôi phục rename/checkpoint trạng thái (state / 상태) và squash younger công việc (work / 작업).
+
+Mispredict chi phí (cost / 비용) tăng khi chuỗi xử lý (pipeline / 파이프라인) sâu và lượng in-flight công việc (work / 작업) lớn. Vì vậy prediction accuracy có tác động phi tuyến tới IPC trong nhiều tải công việc (workload / 워크로드).
+
+## 12. Pointer chasing: khi OoO không tìm được việc độc lập
+
+Ví dụ linked-list traversal:
+
+```text
+node = node.next
+node = node.next
+node = node.next
+```
+
+Address tải (load / 로드) tiếp theo chỉ biết sau khi tải (load / 로드) trước hoàn thành. Đây là phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬) dài. ROB lớn hay nhiều ALU không tạo parallelism nếu tải công việc (workload / 워크로드) không có independent công việc (work / 작업).
+
+Ngược lại, xử lý nhiều array elements độc lập có thể tạo memory-level parallelism và vectorization tốt hơn.
+
+Đây là liên kết (connection / 연결) quan trọng giữa cấu trúc dữ liệu (data structure / 자료구조)/bố cục (layout / 레이아웃) và microarchitecture: hai thuật toán cùng Big-O có thể khác đáng kể về bộ nhớ đệm (cache / 캐시) locality và available parallelism.
+
+## 13. hiệu năng (performance / 성능) pressure và giới hạn thực tế
+
+Các tài nguyên (resource / 자원) hữu hạn gồm:
+
+```text
+ROB entries
+issue/scheduling queue
+physical registers
+load/store queue
+execution ports
+memory-level parallelism slots
+branch checkpoints
+```
+
+Khi một tài nguyên (resource / 자원) đầy, front-end/back-end có thể stall dù tài nguyên (resource / 자원) khác còn rảnh. Vì vậy câu “CPU utilization 100%” chưa giải thích bottleneck microarchitecture.
+
+Power/thermal limits cũng quan trọng: cửa sổ (window / 윈도우) rộng và wakeup/select lớn tiêu tốn năng lượng; mobile/máy chủ (server / 서버) cores chọn điểm cân bằng khác nhau.
+
+## 14. bằng chứng vận hành (production evidence / 운영 증거)
+
+Khi nghi OoO/back-end bottleneck, bằng chứng (evidence / 증거) hữu ích gồm sampling profiler + hardware hiệu năng (performance / 성능) counters: retired instructions, cycles, IPC, branch miss, bộ nhớ đệm (cache / 캐시)/TLB miss, backend/frontend stalled cycles và memory-bandwidth pressure tùy CPU/công cụ (tool / 도구).
+
+Tên counter khác theo microarchitecture; mục tiêu không phải học thuộc sự kiện (event / 이벤트) name mà là phân biệt các hypothesis:
+
+```text
+ít instruction parallelism?
+branch speculation thất bại?
+cache miss/pointer chasing?
+execution-port pressure?
+front-end không cấp đủ µop?
+```
+
+Static assembly inspection hữu ích nhưng không thay thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) vì trượt bộ nhớ đệm (cache miss / 캐시 미스) và branch hành vi (behavior / 동작) phụ thuộc tải công việc (workload / 워크로드).
+
+## 15. dạng thất bại (failure mode / 실패 모드): tính đúng đắn (correctness / 정확성) và bảo mật (security / 보안) khác hiệu năng (performance / 성능)
+
+OoO engine bình thường phải giữ architectural tính đúng đắn (correctness / 정확성) qua ROB/quay lui (rollback / 롤백). Nhưng speculative microarchitectural trạng thái (state / 상태) như bộ nhớ đệm (cache / 캐시) có thể để lại side tác động (effect / 효과) dù speculative instruction không retire. Đây là nền tảng lập luận (reasoning / 추론) cho Spectre-class side channels.
+
+Điểm quan trọng là tách hai đặc tả hợp đồng (contract / 계약):
+
+```text
+architectural correctness:
+wrong-path result không được commit thành architectural state
+
+microarchitectural confidentiality:
+wrong-path execution không được làm lộ secret qua timing side channel
+```
+
+Đặc tả hợp đồng (contract / 계약) thứ nhất có thể đúng trong khi đặc tả hợp đồng (contract / 계약) thứ hai bị khai thác. Không cần tạo chapter công nghệ riêng để thấy mô hình tư duy (mental model / 사고 모델) này.
+
+## 16. dùng chung (common / 공통) Misconceptions
+
+**“Out-of-order nghĩa CPU thay đổi lô-gic (logic / 논리) chương trình.”** Không. CPU reorder nội bộ nhưng phải giữ architectural đặc tả hợp đồng (contract / 계약).
+
+**“Register renaming là trình biên dịch (compiler / 컴파일러) tối ưu hóa (optimization / 최적화).”** trình biên dịch (compiler / 컴파일러) cũng có register allocation/renaming, nhưng hardware renaming diễn ra động để loại false phụ thuộc (dependency / 의존성) giữa in-flight instructions.
+
+**“Instruction complete nghĩa đã lần ghi nhận (commit / 커밋).”** Không. Instruction có thể complete nhưng vẫn speculative và chưa retire.
+
+**“ROB càng lớn thì luôn càng nhanh.”** Không. Nếu tải công việc (workload / 워크로드) là phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬) hoặc bộ nhớ (memory / 메모리) bandwidth đã saturated, cửa sổ (window / 윈도우) lớn hơn có thể không tạo speedup tương xứng.
+
+## 17. Mô hình tư duy
+
+> OoO CPU là speculative data-flow engine nằm sau một architectural-order đặc tả hợp đồng (contract / 계약). **Renaming loại false phụ thuộc (dependency / 의존성); scheduler tìm ready công việc (work / 작업); LSQ suy luận bộ nhớ (memory / 메모리) phụ thuộc (dependency / 의존성); ROB giữ precise retirement; quay lui (rollback / 롤백) xóa speculative đường dẫn (path / 경로) sai.** hiệu năng (performance / 성능) phụ thuộc lượng independent công việc (work / 작업) thật sự và khả năng che độ trễ (latency / 지연 시간), không chỉ GHz hay số thực thi (execution / 실행) units.
+
+## Kết nối
+
+Đọc cùng [Memory consistency và ordering](./00_memory_consistency_cache_coherence_and_ordering.md), [Branch prediction và speculation](./02_branch_prediction_speculation_and_pipeline_recovery.md), [Cache hierarchy](./03_advanced_cache_hierarchy_prefetching_and_replacement.md) và OS advanced về page fault/syscall. Khi gỡ lỗi (debug / 디버그) hiệu năng (performance / 성능) xuyên tầng, nối tiếp [Debugging across abstraction layers](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 memory consistency cache coherence and ordering](./00_memory_consistency_cache_coherence_and_ordering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

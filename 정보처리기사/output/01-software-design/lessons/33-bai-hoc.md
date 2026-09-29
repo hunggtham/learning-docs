@@ -1,18 +1,18 @@
-# 7. 공통 모듈 (Common Module)
+# 3. 모듈 (Module)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. 공통 모듈 (Common Module)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **3. 모듈 (Module)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **7. 공통 모듈 (Common Module)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **9. 효과적인 모듈 설계 방안 (Effective Module Design)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **3. 모듈 (Module)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **2. 모듈 (Module) & 독립성 (Independence)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-공통, 모듈
+모듈
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **2. 모듈 (Module) & 독립성 (Independence)**에서 만든 기준을 이어받아 **7. 공통 모듈 (Common Module)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**에서 만든 기준을 이어받아 **3. 모듈 (Module)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,26 +20,26 @@ Mục đích của bài này là hiểu **7. 공통 모듈 (Common Module)** nh�
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 모듈 (Module)** và nối nó với **2. 모듈 (Module) & 독립성 (Independence)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 7. 공통 모듈 (Common Module)
+## 3. 모듈 (Module)
 
-Từ **2. 모듈 (Module) & 독립성 (Independence)**, ta đã có điểm tựa để bước vào **7. 공통 모듈 (Common Module)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/55 trước khi đi vào chi tiết.
+Từ **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**, ta đã có điểm tựa để bước vào **3. 모듈 (Module)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/57 trước khi đi vào chi tiết.
 
-Để đọc **7. 공통 모듈 (Common Module)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **3. 모듈 (Module)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **결합도 (Coupling - Độ kết dính giữa các module)**, **응집도 (Cohesion - Độ gắn kết trong 1 module)**, **팬인 (Fan-In) / 팬아웃 (Fan-Out)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-**개념 (Khái niệm):** 여러 프로그램에서 공통적으로 사용할 수 있는 모듈 (Module dùng chung cho nhiều chương trình, ví dụ: Đăng nhập, tính toán).
+- **결합도 (Coupling - Độ kết dính giữa các module)**: Càng thấp càng tốt.
+  - 자료 (Data - Tốt nhất) < 스탬프 (Stamp) < 제어 (Control) < 외부 (External) < 공통 (Common) < 내용 (Content - Tệ nhất).
+  - 💡 **Mẹo ghi nhớ**: T/S/C/N/C/N (Tốt -> Tệ) -> **Tính Sao Cho Nhẹ Cả Người**
+- **응집도 (Cohesion - Độ gắn kết trong 1 module)**: Càng cao càng tốt.
+  - 기능적 (Functional - Tốt nhất) > 순차적 (Sequential) > 통신적 (Communication) > 절차적 (Procedural) > 시간적 (Temporal) > 논리적 (Logical) > 우연적 (Coincidental - Tệ nhất).
+  - 💡 **Mẹo ghi nhớ**: K/T/T/T/T/L/N (Tốt -> Tệ) -> **Không Thể Tin Thằng Trẻ Làm Ngốc**
+- **팬인 (Fan-In) / 팬아웃 (Fan-Out)**:
+  - Fan-in (Số module gọi nó): Cao thì tốt (tái sử dụng nhiều).
+  - Fan-out (Số module nó gọi): Càng thấp càng tốt.
 
-*   **명세 기법 5가지 (5 nguyên tắc viết đặc tả module):**
-    1.  **정확성 (Correctness):** 정확히 작성 (Chính xác).
-    2.  **명확성 (Clarity):** 중의적이지 않게 (Rõ ràng, không mơ hồ).
-    3.  **완전성 (Completeness):** 모든 것을 빠짐없이 (Đầy đủ).
-    4.  **일관성 (Consistency):** 상호 충돌 없게 (Nhất quán).
-    5.  **추적성 (Traceability):** 출처, 관계 추적 가능 (Có thể truy xuất nguồn gốc).
-💡 **Mẹo ghi nhớ:** C-M-H-N-T (Chính-Rõ-Đủ-Nhất-Truy) -> **Chỉ Mong Học Nhất Trường**
-
----
-
-Điểm chốt của **7. 공통 모듈 (Common Module)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **9. 효과적인 모듈 설계 방안 (Effective Module Design)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Điểm chốt của **3. 모듈 (Module)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **2. 모듈 (Module) & 독립성 (Independence)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

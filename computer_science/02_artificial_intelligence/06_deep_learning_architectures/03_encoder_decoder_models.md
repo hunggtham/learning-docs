@@ -1,10 +1,13 @@
-# Encoder–Decoder Models: tách hiểu input và tạo output
+# Encoder–Decoder các mô hình (models / 모델들): tách hiểu đầu vào (input / 입력) và tạo đầu ra (output / 출력)
 
-Encoder–Decoder (인코더–디코더) là architectural pattern cho tasks nơi input và output có structures/lengths khác nhau. Encoder biến input thành internal representation; decoder dùng representation đó để tạo output.
+> **Mạch đọc:** Đặt **Encoder–Decoder các mô hình (models / 모델들): tách hiểu đầu vào (input / 입력) và tạo đầu ra (output / 출력)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Sequence-to-Sequence bài toán (problem / 문제)** sang **Early RNN Seq2Seq**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Pattern này xuất hiện trong translation, summarization, speech recognition, image captioning, autoencoders và Transformers. “Encoder” và “decoder” không phải một algorithm cụ thể; chúng là vai trò trong computation system.
 
-## Sequence-to-Sequence Problem
+Encoder–Decoder (인코더–디코더) là architectural mẫu (pattern / 패턴) cho tasks nơi đầu vào (input / 입력) và đầu ra (output / 출력) có structures/lengths khác nhau. Encoder biến đầu vào (input / 입력) thành nội bộ (internal / 내부) biểu diễn (representation / 표현); decoder dùng biểu diễn (representation / 표현) đó để tạo đầu ra (output / 출력).
+
+Mẫu (pattern / 패턴) này xuất hiện trong translation, summarization, speech recognition, ảnh (image / 이미지) captioning, autoencoders và Transformers. “Encoder” và “decoder” không phải một thuật toán (algorithm / 알고리즘) cụ thể; chúng là vai trò trong computation hệ thống (system / 시스템).
+
+## Sequence-to-Sequence bài toán (problem / 문제)
 
 Translation:
 
@@ -12,15 +15,15 @@ Translation:
 English sequence → Korean sequence
 ```
 
-Input length khác output length. Per-token aligned classifier không đủ.
+Đầu vào (input / 입력) length khác đầu ra (output / 출력) length. Per-token aligned classifier không đủ.
 
-Model factor output autoregressively:
+Mô hình (model / 모델) factor đầu ra (output / 출력) autoregressively:
 
 \[
 P(y_{1:T}\mid x)=\prod_{t=1}^{T}P(y_t\mid y_{<t},x)
 \]
 
-Encoder processes `x`; decoder models conditional next-token distribution.
+Encoder processes `x`; decoder các mô hình (models / 모델들) conditional next-token phân phối (distribution / 분포).
 
 ## Early RNN Seq2Seq
 
@@ -30,7 +33,7 @@ Encoder RNN:
 h_t^{enc}=f(x_t,h_{t-1}^{enc})
 \]
 
-Final state:
+Final trạng thái (state / 상태):
 
 \[
 c=h_T^{enc}
@@ -42,27 +45,27 @@ Decoder:
 h_t^{dec}=g(y_{t-1},h_{t-1}^{dec},c)
 \]
 
-All source information compressed into fixed vector `c`.
+All nguồn (source / 소스) thông tin (information / 정보) compressed into fixed véc-tơ (vector / 벡터) `c`.
 
-For long sentences, this becomes information bottleneck.
+For long sentences, this becomes thông tin (information / 정보) bottleneck.
 
-## Context Bottleneck
+## Ngữ cảnh (context / 맥락) Bottleneck
 
-Imagine source 100 tokens nhưng decoder only gets one vector. Even high-dimensional vector must preserve all details needed at every output step.
+Imagine nguồn (source / 소스) 100 tokens nhưng decoder only gets one véc-tơ (vector / 벡터). Even high-dimensional véc-tơ (vector / 벡터) must preserve all details needed at every đầu ra (output / 출력) step.
 
-As input grows, performance degrades. This motivated attention: decoder at each step constructs context from all encoder states dynamically.
+As đầu vào (input / 입력) grows, hiệu năng (performance / 성능) degrades. This motivated attention: decoder at each step constructs ngữ cảnh (context / 맥락) from all encoder states dynamically.
 
 ## Teacher Forcing in Decoder
 
-Training usually conditions on ground-truth previous target:
+Huấn luyện (training / 학습) usually conditions on ground-truth previous mục tiêu (target / 대상):
 
 \[
 P(y_t\mid y_{<t}^{true},x)
 \]
 
-Inference conditions on generated tokens.
+Suy luận (inference / 추론) conditions on generated tokens.
 
-Mismatch creates exposure bias, but teacher forcing remains computationally effective and standard.
+Mismatch creates exposure độ lệch (bias / 편향), but teacher forcing remains computationally effective and tiêu chuẩn (standard / 표준).
 
 ## Start / End Tokens
 
@@ -77,11 +80,11 @@ Special tokens:
 
 Generation stops when EOS emitted or max length reached.
 
-Modern LLM chat protocols use richer special/control tokens but same idea: sequence structure encoded by token conventions.
+Hiện đại (modern / 현대적) LLM chat protocols use richer special/điều khiển (control / 제어) tokens but same idea: chuỗi (sequence / 시퀀스) cấu trúc (structure / 구조) encoded by đơn vị từ (token / 토큰) conventions.
 
 ## Decoding Algorithms
 
-At each step model outputs distribution. Choosing final sequence requires search.
+At each step mô hình (model / 모델) outputs phân phối (distribution / 분포). Choosing final chuỗi (sequence / 시퀀스) requires tìm kiếm (search / 검색).
 
 ### Greedy Decoding
 
@@ -89,9 +92,9 @@ At each step model outputs distribution. Choosing final sequence requires search
 y_t=\arg\max_kP(y_t=k\mid context)
 \]
 
-Fast but locally best choice may cause poor global sequence.
+Fast but locally best choice may cause poor toàn cục (global / 전역) chuỗi (sequence / 시퀀스).
 
-### Beam Search
+### Beam tìm kiếm (search / 검색)
 
 Keep top `B` partial hypotheses according cumulative log-probability.
 
@@ -101,59 +104,59 @@ step 2: expand each → keep best B
 ...
 ```
 
-Beam search is heuristic search in sequence space.
+Beam tìm kiếm (search / 검색) is heuristic tìm kiếm (search / 검색) in chuỗi (sequence / 시퀀스) không gian (space / 공간).
 
 Length normalization often needed because log probabilities sum negative values and may favor short sequences.
 
 ### Sampling
 
-For open-ended generation, sample from distribution. Temperature/top-k/top-p later discussed in LLM generation.
+For open-ended generation, mẫu (sample / 표본) from phân phối (distribution / 분포). Temperature/top-k/top-p later discussed in LLM generation.
 
-Translation historically favors beam; creative text often sampling.
+Translation historically favors beam; creative văn bản (text / 텍스트) often sampling.
 
-## Encoder-only Architecture
+## Encoder-only kiến trúc (architecture / 아키텍처)
 
-If output is label/representation, decoder unnecessary.
+If đầu ra (output / 출력) is label/biểu diễn (representation / 표현), decoder unnecessary.
 
-BERT-like models are encoder-only: bidirectional self-attention creates contextual representations for classification/extraction.
+BERT-like các mô hình (models / 모델들) are encoder-only: bidirectional self-attention creates contextual representations for classification/extraction.
 
-## Decoder-only Architecture
+## Decoder-only kiến trúc (architecture / 아키텍처)
 
-If task is autoregressive continuation conditioned on prefix, decoder-only architecture sufficient.
+If tác vụ (task / 작업) is autoregressive continuation conditioned on prefix, decoder-only kiến trúc (architecture / 아키텍처) sufficient.
 
-GPT-family uses causal self-attention:
+GPT-family uses nhân quả (causal / 인과적) self-attention:
 
 \[
 P(x_t\mid x_{<t})
 \]
 
-Input prompt itself acts conditioning prefix; no separate encoder.
+Đầu vào (input / 입력) prompt itself acts conditioning prefix; no separate encoder.
 
 ## Encoder–Decoder Transformer
 
-Models like original Transformer/T5-style:
+Các mô hình (models / 모델들) like original Transformer/T5-style:
 
-- encoder: bidirectional self-attention over source;
-- decoder: causal self-attention over generated target;
+- encoder: bidirectional self-attention over nguồn (source / 소스);
+- decoder: nhân quả (causal / 인과적) self-attention over generated mục tiêu (target / 대상);
 - cross-attention: decoder queries encoder representations.
 
 This matches translation/conditional generation naturally.
 
 ## Cross-Attention
 
-Decoder hidden state provides queries; encoder outputs provide keys/values:
+Decoder hidden trạng thái (state / 상태) provides queries; encoder outputs provide keys/values:
 
 \[
 Attention(Q_{dec},K_{enc},V_{enc})
 \]
 
-At each target position, decoder retrieves relevant source information.
+At each mục tiêu (target / 대상) position, decoder retrieves relevant nguồn (source / 소스) thông tin (information / 정보).
 
-Cross-attention is learned differentiable retrieval across source positions.
+Cross-attention is learned differentiable retrieval across nguồn (source / 소스) positions.
 
-## Beyond Text
+## Beyond văn bản (text / 텍스트)
 
-Image captioning:
+Ảnh (image / 이미지) captioning:
 
 ```text
 Image encoder → visual tokens/features
@@ -168,7 +171,7 @@ audio encoder → acoustic representation
 text decoder → translated text
 ```
 
-Multimodal models often use encoder/projection + LLM decoder patterns.
+Multimodal các mô hình (models / 모델들) often use encoder/projection + LLM decoder patterns.
 
 ## Latent Bottleneck Autoencoders
 
@@ -178,11 +181,11 @@ Autoencoder also encoder-decoder:
 x\xrightarrow{encoder}z\xrightarrow{decoder}\hat x
 \]
 
-Nhưng goal là reconstruct input, not conditional sequence translation. Same architecture pattern, different objective/probabilistic semantics.
+Nhưng goal là reconstruct đầu vào (input / 입력), not conditional chuỗi (sequence / 시퀀스) translation. Same kiến trúc (architecture / 아키텍처) mẫu (pattern / 패턴), different mục tiêu (objective / 목표)/probabilistic ngữ nghĩa (semantics / 의미론).
 
-## Information Flow là cách phân loại hữu ích
+## Thông tin (information / 정보) luồng (flow / 흐름) là cách phân loại hữu ích
 
-Thay vì nhớ model names, hỏi:
+Thay vì nhớ mô hình (model / 모델) names, hỏi:
 
 ```text
 Which positions can encoder see?
@@ -192,17 +195,17 @@ Is generation causal?
 What representation bottleneck exists?
 ```
 
-Attention mask/connectivity defines information flow.
+Attention mask/connectivity defines thông tin (information / 정보) luồng (flow / 흐름).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Encoder answers “input nên được biểu diễn như thế nào?”; decoder answers “từ representation + outputs trước đó, tạo output tiếp theo thế nào?”.
+> Encoder answers “đầu vào (input / 입력) nên được biểu diễn như thế nào?”; decoder answers “từ biểu diễn (representation / 표현) + outputs trước đó, tạo đầu ra (output / 출력) tiếp theo thế nào?”.
 
-Cross-attention removes need to squeeze all source details into one fixed vector.
+Cross-attention removes need to squeeze all nguồn (source / 소스) details into one fixed véc-tơ (vector / 벡터).
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Encoder = embedding layer, decoder = output layer”
+### “Encoder = embedding tầng (layer / 계층), decoder = đầu ra (output / 출력) tầng (layer / 계층)”
 
 Không. Encoder/decoder thường là multi-layer networks with rich computation.
 
@@ -210,14 +213,16 @@ Không. Encoder/decoder thường là multi-layer networks with rich computation
 
 Có encoder-only, decoder-only và encoder-decoder families.
 
-### “Beam search guarantees highest-probability sequence”
+### “Beam tìm kiếm (search / 검색) guarantees highest-probability chuỗi (sequence / 시퀀스)”
 
-Finite beam is heuristic; exact search over huge sequence space infeasible.
+Finite beam is heuristic; chính xác (exact / 정확한) tìm kiếm (search / 검색) over huge chuỗi (sequence / 시퀀스) không gian (space / 공간) infeasible.
 
-### “Decoder-only LLM cannot process input because no encoder”
+### “Decoder-only LLM cannot tiến trình (process / 프로세스) đầu vào (input / 입력) because no encoder”
 
-Prompt tokens are encoded through same causal Transformer stack; no separate encoder module required.
+Prompt tokens are encoded through same nhân quả (causal / 인과적) Transformer ngăn xếp (stack / 스택); no separate encoder mô-đun (module / 모듈) required.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Encoder–Decoder nối [Search](../02_search_reasoning_and_planning/00_state_space_and_search.md), [Sequence Models](./01_sequence_models.md), [RNN/LSTM](./02_rnn_lstm_gru.md) và trực tiếp dẫn tới [Attention](./04_attention.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

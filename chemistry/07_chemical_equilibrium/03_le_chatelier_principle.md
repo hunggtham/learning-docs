@@ -1,10 +1,12 @@
 # Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential
 
+> **Mạch đọc:** Đọc **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Công thức tổng quát** sang **Giảm thể tích**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Nguyên lý Le Châtelier (Le Châtelier's principle / 르샤틀리에 원리)** nói rằng khi điều kiện của một hệ đang cân bằng bị thay đổi, thành phần thường dịch theo chiều làm giảm tác động của nhiễu loạn đó. Đây là một quy tắc trực giác hữu ích, nhưng không phải định luật nền tảng. Cách suy luận đáng tin cậy hơn là hỏi: perturbation làm **Q** thay đổi thế nào, **K** có đổi không, và chemical potential của các species thay đổi ra sao?
 
 Nếu chỉ nhớ “hệ chống lại thay đổi”, rất dễ áp dụng sai cho chất rắn tinh khiết, khí trơ, áp suất, pha loãng hoặc hệ không lý tưởng. Vì vậy chương này dùng Le Châtelier như lớp trực giác phía trên thermodynamics, không dùng nó thay cho thermodynamics.
 
-# Ba bước reasoning chuẩn
+# Ba bước lập luận (reasoning / 추론) chuẩn
 
 Khi một hệ đang ở equilibrium bị perturb:
 
@@ -84,7 +86,7 @@ Thêm nhiều \(CaCO_3(s)\) hơn khi pha rắn đó đã hiện diện không l�
 
 Lý do: activity của pure solid gần 1, không phụ thuộc lượng solid miễn pha vẫn tồn tại.
 
-Đây là ví dụ cho thấy khẩu hiệu “thêm reactant → shift product” không phải quy tắc tuyệt đối.
+Đây là ví dụ cho thấy khẩu hiệu “thêm reactant → shift sản phẩm (product / 제품)” không phải quy tắc tuyệt đối.
 
 # Thay đổi thể tích của khí
 
@@ -137,9 +139,15 @@ Nếu \(\Delta n_{gas}=0\), compression lý tưởng không làm Q thay đổi.
 
 Có nhiều cách làm total pressure tăng.
 
+
+> **Chuyển mạch:** Từ **Công thức tổng quát**, ta sang **Giảm thể tích** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Giảm thể tích
 
 Partial pressures của reactive gases tăng → Q thường thay đổi.
+
+
+> **Chuyển mạch:** Từ **Giảm thể tích**, ta sang **Thêm khí trơ ở thể tích không đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thêm khí trơ ở thể tích không đổi
 
@@ -153,6 +161,9 @@ của reactive species không đổi.
 
 Do đó Q không đổi và equilibrium không shift trong mô hình ideal gas.
 
+
+> **Chuyển mạch:** Từ **Thêm khí trơ ở thể tích không đổi**, ta sang **Thêm khí trơ ở áp suất tổng không đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Thêm khí trơ ở áp suất tổng không đổi
 
 Hệ phải nở thể tích, làm partial pressures reactive gases giảm. Khi đó Q có thể thay đổi và equilibrium có thể dịch tùy \(\Delta n_{gas}\).
@@ -163,7 +174,7 @@ Vì thế câu “tăng pressure làm shift về phía ít mol gas” thiếu th
 
 Concentration hoặc pressure perturbations ở fixed T làm **Q đổi trong khi K không đổi**.
 
-Temperature perturbation làm **K đổi** vì standard chemical potentials thay đổi.
+Temperature perturbation làm **K đổi** vì tiêu chuẩn (standard / 표준) chemical potentials thay đổi.
 
 Từ van ’t Hoff:
 
@@ -176,19 +187,19 @@ Nếu \(\Delta H^\circ>0\), tăng T thường làm K tăng.
 
 Nếu \(\Delta H^\circ<0\), tăng T thường làm K giảm.
 
-Đây là cách hiểu chính xác hơn câu “heat behaves like reactant/product”. Nhiệt không phải một species được thêm vào reaction quotient.
+Đây là cách hiểu chính xác hơn câu “heat behaves like reactant/sản phẩm (product / 제품)”. Nhiệt không phải một species được thêm vào reaction quotient.
 
 # Vì sao reaction tỏa nhiệt có K giảm khi T tăng?
 
-Với reaction tỏa nhiệt, product side được ổn định enthalpically so với reactants. Khi T tăng, entropy contribution \(-T\Delta S\) thay đổi trọng số và equilibrium free-energy difference biến đổi.
+Với reaction tỏa nhiệt, sản phẩm (product / 제품) side được ổn định enthalpically so với reactants. Khi T tăng, entropy contribution \(-T\Delta S\) thay đổi trọng số và equilibrium free-energy difference biến đổi.
 
 Quan hệ van ’t Hoff định lượng sự thay đổi đó; không cần tưởng tượng “heat molecule” xuất hiện trong phương trình.
 
 # Catalyst không thay equilibrium
 
-Catalyst mở pathway có lower activation barrier nhưng không đổi Gibbs free energy của reactants và products.
+Catalyst mở pathway có lower activation barrier nhưng không đổi Gibbs free năng lượng (energy / 에너지) của reactants và products.
 
-Do microscopic reversibility, catalyst tăng cả forward và reverse flux theo một network tương thích.
+Do microscopic reversibility, catalyst tăng cả forward và reverse flux theo một mạng (network / 네트워크) tương thích.
 
 Nếu hệ đang ngoài equilibrium, catalyst làm nó đạt equilibrium nhanh hơn.
 
@@ -214,7 +225,7 @@ Nếu tất cả concentrations giảm cùng factor \(f<1\): numerator giảm th
 
 Đây là origin của xu hướng dissociation tăng khi dilute trong một số hệ weak electrolyte.
 
-# Common-ion effect là một trường hợp Le Châtelier định lượng
+# Common-ion tác động (effect / 효과) là một trường hợp Le Châtelier định lượng
 
 Với:
 
@@ -230,9 +241,9 @@ Q=\frac{a_Ha_A}{a_{HA}}
 
 Nếu Q>K, reaction đi nghịch và fraction HA tăng.
 
-Hiệu ứng ion chung không cần học như một quy tắc riêng; nó là application của Q/K.
+Hiệu ứng ion chung không cần học như một quy tắc riêng; nó là ứng dụng (application / 애플리케이션) của Q/K.
 
-# Precipitation và common ion
+# Precipitation và dùng chung (common / 공통) ion
 
 Với:
 
@@ -246,7 +257,7 @@ Q_{sp}=a_Ma_X
 
 thêm X⁻ làm \(Q_{sp}\) tăng. Nếu vượt \(K_{sp}\), precipitation thermodynamically favored.
 
-Nhưng precipitation có thể chậm nếu nucleation barrier lớn. Đây là giới hạn quan trọng của reasoning equilibrium: nó cho direction, không cho timescale.
+Nhưng precipitation có thể chậm nếu nucleation barrier lớn. Đây là giới hạn quan trọng của lập luận (reasoning / 추론) equilibrium: nó cho direction, không cho timescale.
 
 # pH có thể điều khiển solubility gián tiếp
 
@@ -272,7 +283,7 @@ free \(M^{2+}\) giảm. Một precipitate chứa M có thể hòa tan thêm đ�
 
 Đây là lý do ammonia có thể hòa tan một số precipitates bạc thông qua complex formation.
 
-Le Châtelier ở đây là network effect, không chỉ một single equation.
+Le Châtelier ở đây là mạng (network / 네트워크) tác động (effect / 효과), không chỉ một single equation.
 
 # Hệ nhiều equilibrium: khẩu hiệu trở nên nguy hiểm
 
@@ -285,11 +296,11 @@ Ví dụ tăng pH có thể:
 
 Muốn biết species cuối cùng phải giải coupled balances, không thể dựa vào một khẩu hiệu đơn.
 
-# Phase rule và appearance/disappearance của pha
+# Phase quy tắc (rule / 규칙) và appearance/disappearance của pha
 
 Trong heterogeneous equilibrium, khi một pure phase xuất hiện hoặc biến mất, số degrees of freedom của hệ thay đổi.
 
-Ví dụ solange solid vẫn present, dissolved concentration có thể bị buffer bởi solubility equilibrium. Khi solid hết hoàn toàn, constraint đó biến mất và composition có thể thay đổi theo cách khác.
+Ví dụ solange solid vẫn present, dissolved concentration có thể bị buffer bởi solubility equilibrium. Khi solid hết hoàn toàn, ràng buộc (constraint / 제약조건) đó biến mất và composition có thể thay đổi theo cách khác.
 
 Do đó amount of solid “không ảnh hưởng K” nhưng việc solid **còn hay hết** vẫn rất quan trọng.
 
@@ -311,7 +322,7 @@ a_i=\frac{f_i}{f^\circ}
 
 Le Châtelier vẫn đúng ở tầng thermodynamic nếu dùng chemical potentials đúng, nhưng shortcut lý tưởng có thể sai.
 
-# Haber–Bosch — equilibrium tốt nhất không phải operating point tốt nhất
+# Haber–Bosch — equilibrium tốt nhất không phải operating điểm (point / 지점) tốt nhất
 
 \[
 N_2+3H_2\rightleftharpoons2NH_3
@@ -326,11 +337,11 @@ pressure cao → conversion equilibrium tốt hơn
 T thấp → K lớn hơn
 ```
 
-Nhưng T thấp làm kinetics chậm. Pressure cao làm compression cost và engineering burden tăng.
+Nhưng T thấp làm kinetics chậm. Pressure cao làm compression chi phí (cost / 비용) và kỹ thuật (engineering / 엔지니어링) burden tăng.
 
-Process thực dùng catalyst, moderate-high temperature, high pressure, product separation và recycle.
+Tiến trình (process / 프로세스) thực dùng catalyst, moderate-high temperature, high pressure, sản phẩm (product / 제품) separation và recycle.
 
-Đây là ví dụ điển hình rằng **engineering optimum là trade-off giữa thermodynamics, kinetics, transport, separation và economics**.
+Đây là ví dụ điển hình rằng **kỹ thuật (engineering / 엔지니어링) optimum là sự đánh đổi (trade-off / 트레이드오프) giữa thermodynamics, kinetics, vận chuyển (transport / 전송), separation và economics**.
 
 # Battery — Le Châtelier dưới dạng Nernst
 
@@ -342,7 +353,7 @@ Phương trình Nernst:
 E=E^\circ-\frac{RT}{nF}\ln Q
 \]
 
-cho thấy voltage thay đổi liên tục theo state of charge.
+cho thấy voltage thay đổi liên tục theo trạng thái (state / 상태) of charge.
 
 Thay vì nói “battery equilibrium shifts”, electrochemistry định lượng trực tiếp thay đổi chemical potential bằng voltage.
 
@@ -365,7 +376,7 @@ Tế bào liên tục:
 
 Không. Nó đi tới **equilibrium mới** dưới conditions mới.
 
-### “Thêm reactant luôn shift product”
+### “Thêm reactant luôn shift sản phẩm (product / 제품)”
 
 Không nếu reactant là pure solid/liquid có activity không đổi hoặc perturbation không làm Q đổi.
 
@@ -384,6 +395,9 @@ Không. Catalyst thay kinetics.
 ### “Le Châtelier dự đoán được tốc độ”
 
 Không. Nó chỉ là equilibrium direction heuristic.
+
+
+> **Chuyển mạch:** Từ **Thêm khí trơ ở áp suất tổng không đổi**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -406,3 +420,5 @@ K đổi theo thermodynamics
 Nguyên lý Le Châtelier khi đó trở thành một shortcut có nền tảng, không phải một câu thần chú.
 
 Xem tiếp: [Nhiệt động lực học của cân bằng](./04_thermodynamics_of_equilibrium.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dynamic equilibrium](./00_dynamic_equilibrium.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

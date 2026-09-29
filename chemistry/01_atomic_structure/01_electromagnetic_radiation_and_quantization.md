@@ -1,5 +1,8 @@
 # Bức xạ điện từ và lượng tử hóa
 
+> **Mạch đọc:** Đọc **Bức xạ điện từ và lượng tử hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bức xạ điện từ là gì?** sang **Vì sao bước sóng và tần số đều quan trọng?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Muốn hiểu electron trong nguyên tử, ta cần đi qua một vấn đề lịch sử quan trọng: **vật chất tương tác với ánh sáng như thế nào?** Chính các thí nghiệm về bức xạ và quang phổ đã cho thấy mô hình cổ điển không đủ để mô tả thế giới nguyên tử.
 
 ## Bức xạ điện từ là gì?
@@ -225,3 +228,5 @@ Không. **Orbit** là quỹ đạo cổ điển; **orbital** là trạng thái l
 Lượng tử hóa và tính chất sóng cho thấy ta cần một khuôn khổ mới để mô tả electron. Chương tiếp theo xây dựng mô hình lượng tử của nguyên tử: hàm sóng, obitan và các số lượng tử.
 
 Xem tiếp: [Mô hình lượng tử của nguyên tử](./02_quantum_model_of_atom.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atoms elements and isotopes](./00_atoms_elements_and_isotopes.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

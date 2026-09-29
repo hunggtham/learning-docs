@@ -1,5 +1,7 @@
 # Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử
 
+> **Mạch đọc:** Đọc **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Công thức không phải lúc nào cũng biểu diễn một phân tử** sang **Công thức phân tử**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Công thức hóa học (chemical formula / 화학식)** mã hóa loại nguyên tố và tỉ lệ số nguyên tử trong một tiểu phần hóa học hoặc vật liệu. Tuy nhiên, các loại công thức khác nhau trả lời những câu hỏi khác nhau về thành phần và cấu trúc.
 
 ## Công thức không phải lúc nào cũng biểu diễn một phân tử
@@ -11,6 +13,9 @@ Vì vậy cần hỏi công thức đang mô tả:
 - một phân tử;
 - một đơn vị công thức ion;
 - hay thành phần của một mạng mở rộng.
+
+
+> **Chuyển mạch:** Từ **Công thức không phải lúc nào cũng biểu diễn một phân tử**, ta sang **Công thức phân tử** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Công thức phân tử
 
@@ -24,6 +29,9 @@ Nhưng công thức phân tử không cho biết cách các nguyên tử nối v
 
 Đây là lý do hóa học hữu cơ cần công thức cấu tạo và ký hiệu đường gấp khúc.
 
+
+> **Chuyển mạch:** Từ **Công thức phân tử**, ta sang **Công thức thực nghiệm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Công thức thực nghiệm
 
 **Công thức thực nghiệm (empirical formula / 실험식)** cho tỉ lệ nguyên nhỏ nhất của các nguyên tố.
@@ -31,6 +39,9 @@ Nhưng công thức phân tử không cho biết cách các nguyên tử nối v
 Glucose `C6H12O6` có công thức thực nghiệm `CH2O`. Hydrogen peroxide `H2O2` có công thức thực nghiệm `HO`.
 
 Công thức thực nghiệm đặc biệt hữu ích khi phân tích thực nghiệm chỉ cho thành phần nguyên tố.
+
+
+> **Chuyển mạch:** Từ **Công thức thực nghiệm**, ta sang **Từ phần trăm thành phần tới công thức thực nghiệm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Từ phần trăm thành phần tới công thức thực nghiệm
 
@@ -60,15 +71,21 @@ Nếu khối lượng mol thực nghiệm khoảng `180 g/mol`, còn khối lư�
 (CH_2O)_6=C_6H_{12}O_6
 \]
 
+
+> **Chuyển mạch:** Từ **Từ phần trăm thành phần tới công thức thực nghiệm**, ta sang **Phần trăm thành phần theo khối lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Phần trăm thành phần theo khối lượng
 
 Phần trăm khối lượng của nguyên tố `X` trong hợp chất:
 
 \[
-\%X=\frac{\text{khối lượng X trong 1 mol hợp chất}}{\text{khối lượng mol hợp chất}}\times100\%
+\%X=\frac{\văn bản (text / 텍스트){khối lượng X trong 1 mol hợp chất}}{\văn bản (text / 텍스트){khối lượng mol hợp chất}}\times100\%
 \]
 
 Đây là cầu nối giữa công thức hóa học và thành phần khối lượng có thể đo được.
+
+
+> **Chuyển mạch:** Từ **Phần trăm thành phần theo khối lượng**, ta sang **Hydrate** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Hydrate
 
@@ -82,6 +99,9 @@ Dấu chấm không phải phép nhân đại số; nó biểu diễn sự kết
 
 Đun nóng hydrate có thể loại nước và cho phép xác định số phân tử nước kết tinh từ độ giảm khối lượng.
 
+
+> **Chuyển mạch:** Từ **Hydrate**, ta sang **Công thức cấu tạo và các mức biểu diễn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Công thức cấu tạo và các mức biểu diễn
 
 **Công thức cấu tạo (structural formula)** cho biết cách các nguyên tử nối với nhau.
@@ -91,6 +111,9 @@ Dấu chấm không phải phép nhân đại số; nó biểu diễn sự kết
 Trong hóa học hữu cơ, **công thức khung (skeletal formula)** ẩn phần lớn ký hiệu carbon và hydrogen để làm nổi bật khung carbon cùng nhóm chức.
 
 Mỗi cách biểu diễn là một mô hình. Cùng một phân tử có thể được biểu diễn bằng công thức phân tử, cấu trúc Lewis, hình nêm–gạch thể hiện lập thể, mô hình cầu–que hoặc bề mặt mật độ electron. Mỗi cách giữ lại một loại thông tin và bỏ đi những loại khác.
+
+
+> **Chuyển mạch:** Từ **Công thức cấu tạo và các mức biểu diễn**, ta sang **Khối lượng công thức và khối lượng mol** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Khối lượng công thức và khối lượng mol
 
@@ -103,6 +126,9 @@ M=2M_{Na}+M_S+4M_O
 \]
 
 Không cần học thuộc kết quả; cần hiểu công thức là hướng dẫn hạch toán thành phần.
+
+
+> **Chuyển mạch:** Từ **Khối lượng công thức và khối lượng mol**, ta sang **Các hiểu lầm thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Các hiểu lầm thường gặp
 
@@ -118,8 +144,13 @@ Không. Cùng công thức phân tử vẫn có thể tồn tại các đồng p
 
 Không. Chỉ số dưới thay đổi thành phần và bản sắc của tiểu phần; hệ số thay đổi số lượng tiểu phần trong phương trình.
 
+
+> **Chuyển mạch:** Từ **Các hiểu lầm thường gặp**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Hãy coi công thức như **cách nén dữ liệu về thành phần**. Trước khi suy luận, cần biết mức nén đang dùng để không cố đọc ra thông tin mà cách biểu diễn đó không chứa.
 
 Xem tiếp: [Phương trình hóa học](./02_chemical_equations.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mole and avogadro constant](./00_mole_and_avogadro_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

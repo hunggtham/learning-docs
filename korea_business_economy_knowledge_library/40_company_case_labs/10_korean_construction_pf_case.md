@@ -1,8 +1,11 @@
-# Xây dựng & Project Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn
+# Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn
 
-Case này không dùng một công ty duy nhất mà dựng một **tình huống mô phỏng xây dựng/PF tại Hàn Quốc** để học một cấu trúc rủi ro xuất hiện khá phổ biến. Công ty xây dựng có thể báo cáo backlog và lợi nhuận kế toán ổn định trong khi rủi ro tài chính dự án lại nằm ở bảo lãnh, khoản vay cầu nối, căn hộ chưa bán hoặc các SPV liên quan.
+> **Mạch đọc:** Đặt **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ai là ai trong một dự án phát triển bất động sản?** sang **2. dự án (project / 프로젝트) Finance khác khoản vay doanh nghiệp thông thường**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Vì vậy case tập trung vào sự khác biệt giữa **hoạt động xây dựng cốt lõi** và **rủi ro tài chính dự án có điều kiện (contingent PF risk)**.
+
+Trường hợp (case / 사례) này không dùng một công ty duy nhất mà dựng một **tình huống mô phỏng xây dựng/PF tại Hàn Quốc** để học một cấu trúc rủi ro xuất hiện khá phổ biến. Công ty xây dựng có thể báo cáo backlog và lợi nhuận kế toán ổn định trong khi rủi ro tài chính dự án lại nằm ở bảo lãnh, khoản vay cầu nối, căn hộ chưa bán hoặc các SPV liên quan.
+
+Vì vậy trường hợp (case / 사례) tập trung vào sự khác biệt giữa **hoạt động xây dựng cốt lõi** và **rủi ro tài chính dự án có điều kiện (contingent PF risk)**.
 
 Xem [18_construction_real_estate_and_project_finance](../18_construction_real_estate_and_project_finance.md), [36_credit_ratings_bonds_default_and_restructuring](../36_credit_ratings_bonds_default_and_restructuring.md) và [38_forensic_accounting_red_flags_and_earnings_quality](../38_forensic_accounting_red_flags_and_earnings_quality.md).
 
@@ -22,11 +25,11 @@ Công ty tín thác, công ty chứng khoán, ngân hàng tiết kiệm, công t
 
 Nếu không xác định đúng vai trò, rất dễ nhầm nợ của SPV với nợ của nhà thầu — hoặc ngược lại bỏ qua bảo lãnh khiến nghĩa vụ của SPV cuối cùng quay về nhà thầu.
 
-## 2. Project Finance khác khoản vay doanh nghiệp thông thường
+## 2. dự án (project / 프로젝트) Finance khác khoản vay doanh nghiệp thông thường
 
 Trong **tài chính doanh nghiệp (corporate finance)**, bên cho vay dựa nhiều vào dòng tiền và bảng cân đối của cả công ty.
 
-Trong **tài chính dự án (Project Finance / PF / 프로젝트 파이낸싱)**, logic trả nợ tập trung vào dòng tiền của chính dự án.
+Trong **tài chính dự án (Project Finance / PF / 프로젝트 파이낸싱)**, lô-gic (logic / 논리) trả nợ tập trung vào dòng tiền của chính dự án.
 
 ```text
 Đất / giấy phép

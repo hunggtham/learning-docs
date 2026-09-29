@@ -1,50 +1,84 @@
 # 1945–1950: giải phóng, chia cắt và hình thành hai nhà nước
 
+> **Mạch đọc:** Đặt **1945–1950: giải phóng, chia cắt và hình thành hai nhà nước** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Liberation không đồng nghĩa immediate sovereignty thống nhất** sang **cục bộ (local / 로컬) political organization**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Liberation không đồng nghĩa immediate sovereignty thống nhất
 
-Japan surrendered in August 1945, kết thúc colonial rule. Nhưng peninsula nhanh chóng bị chia thành Soviet occupation zone ở phía bắc và US occupation zone ở phía nam, với 38th parallel ban đầu là military administrative line.
+Japan surrendered in August 1945, kết thúc colonial quy tắc (rule / 규칙). Nhưng peninsula nhanh chóng bị chia thành Soviet occupation zone ở phía bắc và US occupation zone ở phía nam, với 38th parallel ban đầu là military administrative line.
 
-Đây là một critical point của **path dependence**: line được tạo trong wartime logistics sau đó trở thành political boundary vì Cold War rivalry, local conflict và failed negotiation.
+Đây là một trọng yếu (critical / 중요) điểm (point / 지점) của **đường dẫn (path / 경로) dependence**: line được tạo trong wartime logistics sau đó trở thành political ranh giới (boundary / 경계) vì Cold War rivalry, cục bộ (local / 로컬) xung đột (conflict / 충돌) và failed negotiation.
 
-## Local political organization
 
-People's committees và nhiều political groups xuất hiện sau liberation. Ở south, US Military Government xây administration trong môi trường shortage, refugee flows, ideological conflict và legacy personnel. Ở north, Soviet-backed structures và communist leadership consolidation tiến nhanh hơn.
+> **Chuyển mạch:** Từ **Liberation không đồng nghĩa immediate sovereignty thống nhất**, ta sang **cục bộ (local / 로컬) political organization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cục bộ (local / 로컬) political organization
+
+People's committees và nhiều political groups xuất hiện sau liberation. Ở south, US Military Government xây administration trong môi trường shortage, refugee flows, ideological xung đột (conflict / 충돌) và legacy personnel. Ở north, Soviet-backed structures và communist leadership consolidation tiến nhanh hơn.
+
+
+> **Chuyển mạch:** Từ **cục bộ (local / 로컬) political organization**, ta sang **Trusteeship debate và Cold War polarization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trusteeship debate và Cold War polarization
 
 International plans cho trusteeship tạo tranh cãi mạnh. Political labels “left/right” không thể hiểu chỉ bằng Western template; actors khác nhau về land reform, collaboration legacy, sovereignty timing và international alignment.
 
-## 1948: hai state structures
 
-Republic of Korea được thành lập ở south tháng 8/1948; Democratic People's Republic of Korea được thành lập ở north tháng 9/1948. Cả hai đều claim legitimacy trên toàn peninsula. Đây là lý do division không chỉ là geographic partition mà là competing state-building project.
+> **Chuyển mạch:** Từ **Trusteeship debate và Cold War polarization**, ta sang **1948: hai trạng thái (state / 상태) structures** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## 1948: hai trạng thái (state / 상태) structures
+
+Republic of Korea được thành lập ở south tháng 8/1948; Democratic People's Republic of Korea được thành lập ở north tháng 9/1948. Cả hai đều claim legitimacy trên toàn peninsula. Đây là lý do division không chỉ là geographic partition mà là competing state-building dự án (project / 프로젝트).
+
+
+> **Chuyển mạch:** Từ **1948: hai trạng thái (state / 상태) structures**, ta sang **Violence before the Chiến tranh Triều Tiên (한국전쟁 / Korean War)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Violence before the Chiến tranh Triều Tiên (한국전쟁 / Korean War)
 
-Period 1948–1950 có insurgency, repression và major episodes of civilian violence, bao gồm Jeju 4·3 và Yeosu–Suncheon events. Những sự kiện này cần được đọc với archival evidence và careful terminology vì memory và responsibility đã là chủ đề tranh luận lâu dài.
+Period 1948–1950 có insurgency, repression và major episodes of civilian violence, bao gồm Jeju 4·3 và Yeosu–Suncheon events. Những sự kiện này cần được đọc với archival bằng chứng (evidence / 증거) và careful terminology vì bộ nhớ (memory / 메모리) và responsibility đã là chủ đề tranh luận lâu dài.
 
-## Mental Model
 
-> 1945–1950 là một state-formation crisis. Colonial state biến mất, nhưng không có consensus về successor state; domestic actors và superpowers cùng tác động. Khi two rival institutions đã hình thành, cost của reunification bằng negotiation tăng rất nhanh.
+> **Chuyển mạch:** Từ **Violence before the Chiến tranh Triều Tiên (한국전쟁 / Korean War)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> 1945–1950 là một state-formation crisis. Colonial trạng thái (state / 상태) biến mất, nhưng không có consensus về successor trạng thái (state / 상태); domestic actors và superpowers cùng tác động. Khi two rival institutions đã hình thành, chi phí (cost / 비용) của reunification bằng negotiation tăng rất nhanh.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Administrative vacuum và continuity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Administrative vacuum và continuity
 
-Colonial bureaucracy biến mất về sovereignty nhưng many administrative practices/personnel/infrastructure không thể replace overnight. Occupation authorities phải chọn reuse, purge hay retrain. Mỗi option có cost: reuse tạo collaboration legitimacy problem; purge làm state capacity giảm nhanh.
+Colonial bureaucracy biến mất về sovereignty nhưng many administrative practices/personnel/hạ tầng (infrastructure / 인프라) không thể replace overnight. Occupation authorities phải chọn reuse, purge hay retrain. Mỗi option có chi phí (cost / 비용): reuse tạo collaboration legitimacy bài toán (problem / 문제); purge làm trạng thái (state / 상태) sức chứa (capacity / 용량) giảm nhanh.
+
+
+> **Chuyển mạch:** Từ **Administrative vacuum và continuity**, ta sang **Land reform divergence** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Land reform divergence
 
-North carried out radical land reform in 1946; South implemented reform later around 1949–1950. Different reform paths weakened old landlords in both zones but under different political systems. Land is central because it redistributes both economic asset và local political power.
+North carried out radical land reform in 1946; South implemented reform later around 1949–1950. Different reform paths weakened old landlords in both zones but under different political các hệ thống (systems / 시스템들). Land is central because it redistributes both economic asset và cục bộ (local / 로컬) political power.
+
+
+> **Chuyển mạch:** Từ **Land reform divergence**, ta sang **Refugee flows trước 1950** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Refugee flows trước 1950
 
 Movement north→south và south→north diễn ra trước war vì ideology, repression, employment và family. Population was already politically sorted to some degree, though never perfectly. War then magnified displacement massively.
 
-## Jeju 4·3 và state violence
 
-Jeju uprising and suppression emerged from local tensions, election conflict, ideological polarization and security policy. Modern official truth-finding in South Korea has documented extensive civilian victimization. Event illustrates why state formation can involve coercive boundary-making over who counts as loyal citizen.
+> **Chuyển mạch:** Từ **Refugee flows trước 1950**, ta sang **Jeju 4·3 và trạng thái (state / 상태) violence** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Jeju 4·3 và trạng thái (state / 상태) violence
+
+Jeju uprising and suppression emerged from cục bộ (local / 로컬) tensions, election xung đột (conflict / 충돌), ideological polarization and bảo mật (security / 보안) chính sách (policy / 정책). hiện đại (modern / 현대적) official truth-finding in South Korea has documented extensive civilian victimization. sự kiện (event / 이벤트) illustrates why trạng thái (state / 상태) formation can involve coercive boundary-making over who counts as loyal citizen.
+
+
+> **Chuyển mạch:** Từ **Jeju 4·3 và trạng thái (state / 상태) violence**, ta sang **Competing legitimacy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Competing legitimacy
 
-Both governments framed themselves not as two normal neighboring states but as sole legitimate government of Korea. This all-or-nothing claim reduced bargaining space. If each side treats the other as illegitimate temporary occupation, compromise over permanent coexistence becomes politically costly.
+Both governments framed themselves not as two normal neighboring states but as sole legitimate government of Korea. This all-or-nothing claim reduced bargaining không gian (space / 공간). If each side treats the other as illegitimate temporary occupation, compromise over permanent coexistence becomes politically costly.
+
+> **Bàn giao:** Sau **Competing legitimacy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
 
 ## Sự chuyển tiếp được cảm nhận qua đất, gạo và giấy tờ
 

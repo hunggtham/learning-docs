@@ -1,5 +1,8 @@
 # Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học
 
+> **Mạch đọc:** Đọc **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ nguyên tử đến phân tử** sang **Xấp xỉ Born–Oppenheimer**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Từ nguyên tử đến phân tử
 
 Một phân tử không chỉ là nhiều nguyên tử đứng gần nhau. Nó là một hệ lượng tử liên kết trong đó electron và hạt nhân cùng tạo ra trạng thái có năng lượng thấp hơn một số cấu hình nguyên tử tách rời.
@@ -21,7 +24,7 @@ H_{\mathrm{electronic}}(\{R_A\})\psi_e
 
 Năng lượng điện tử `E_e` cùng lực đẩy giữa các hạt nhân tạo thành một bề mặt thế năng (potential energy surface) cho chuyển động hạt nhân.
 
-Xấp xỉ này không luôn đúng. Gần các điểm suy biến điện tử hoặc trong chuyển mức không đoạn nhiệt (nonadiabatic transition), chuyển động electron và hạt nhân có thể liên kết mạnh. Tuy nhiên nó giải thích vì sao các khái niệm như độ dài liên kết, góc liên kết và mode dao động có ý nghĩa rõ ràng.
+Xấp xỉ này không luôn đúng. Gần các điểm suy biến điện tử hoặc trong chuyển mức không đoạn nhiệt (nonadiabatic transition), chuyển động electron và hạt nhân có thể liên kết mạnh. Tuy nhiên nó giải thích vì sao các khái niệm như độ dài liên kết, góc liên kết và chế độ (mode / 모드) dao động có ý nghĩa rõ ràng.
 
 ## Đường cong thế năng và liên kết
 
@@ -99,15 +102,15 @@ Ngay cả trạng thái cơ bản `v=0` vẫn có năng lượng điểm không 
 
 Thế phân tử thật không hoàn toàn điều hòa. Khi kích thích tăng, khoảng cách mức thường thay đổi và cuối cùng phân tử có thể phân ly.
 
-## Mode chuẩn của phân tử nhiều nguyên tử
+## Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử
 
 Một phân tử phi tuyến gồm `N` nguyên tử thường có `3N-6` bậc tự do dao động; phân tử tuyến tính có `3N-5`.
 
-Mỗi mode chuẩn (normal mode / 정상 모드) là một mẫu dao động tập thể của nhiều nguyên tử. Về mặt toán học, các mode được tìm bằng cách chéo hóa ma trận Hessian có trọng số khối lượng của thế năng. Vì vậy đại số tuyến tính và bài toán trị riêng xuất hiện trực tiếp trong quang phổ phân tử.
+Mỗi chế độ (mode / 모드) chuẩn (normal mode / 정상 모드) là một mẫu dao động tập thể của nhiều nguyên tử. Về mặt toán học, các chế độ (mode / 모드) được tìm bằng cách chéo hóa ma trận Hessian có trọng số khối lượng của thế năng. Vì vậy đại số tuyến tính và bài toán trị riêng xuất hiện trực tiếp trong quang phổ phân tử.
 
 ## Quang phổ hồng ngoại và Raman
 
-Một mode dao động hấp thụ hồng ngoại mạnh khi dao động làm thay đổi mômen lưỡng cực điện của phân tử. Tán xạ Raman nhạy với sự thay đổi độ phân cực hóa (polarizability).
+Một chế độ (mode / 모드) dao động hấp thụ hồng ngoại mạnh khi dao động làm thay đổi mômen lưỡng cực điện của phân tử. Tán xạ Raman nhạy với sự thay đổi độ phân cực hóa (polarizability).
 
 Vì hai cơ chế có quy tắc chọn khác nhau, phổ hồng ngoại và Raman bổ sung cho nhau khi xác định đối xứng, liên kết và cấu trúc phân tử.
 
@@ -141,7 +144,7 @@ Với phân tử nhiều electron, phương trình Schrödinger chính xác gầ
 
 Chi phí tính toán tăng rất nhanh theo kích thước hệ, nên lựa chọn mô hình vật lý và thuật toán luôn đi cùng nhau. Mô phỏng phân tử có thể dùng trường lực cổ điển, động lực học phân tử, phương pháp ab initio hoặc mô hình lai QM/MM tùy câu hỏi cần trả lời.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phân tử là một hệ lượng tử có cấu trúc phân tầng. Electron tạo bề mặt thế năng; hạt nhân chuyển động trên bề mặt đó; gần hình học bền, chuyển động quay và dao động được lượng tử hóa; bức xạ điện từ đọc các chênh lệch mức năng lượng thành phổ.
 
@@ -161,8 +164,10 @@ Không. Hạt nhân luôn có dao động điểm không và chuyển động nh
 
 Không. Tần số vạch cho chênh lệch năng lượng, còn mẫu vạch và cường độ có thể cho mômen quán tính, độ cứng liên kết, đối xứng và cấu trúc điện tử.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Vật lý nguyên tử](00_atomic_physics.md), [Các hệ lượng tử](../08_quantum/01_quantum_systems.md), [Mômen động lượng và spin](../08_quantum/02_angular_momentum_spin.md).
 
 **Liên hệ tiếp:** [Cơ học thống kê](../04_thermal_statistical/01_entropy_statistical_mechanics.md), [Quang học sóng](../06_optics/01_wave_optics.md), [Tinh thể và dải năng lượng](../10_condensed_matter_devices/00_crystals_bands.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic physics](./00_atomic_physics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

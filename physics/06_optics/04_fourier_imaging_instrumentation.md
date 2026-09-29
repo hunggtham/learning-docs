@@ -1,5 +1,8 @@
 # Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh
 
+> **Mạch đọc:** Đọc **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tần số không gian là gì?** sang **Nhiễu xạ Fraunhofer và biến đổi Fourier**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Quang hình học mô tả tia sáng và rất hữu ích khi bước sóng nhỏ hơn nhiều kích thước cấu trúc. Nhưng độ phân giải, nhiễu xạ, lọc không gian và chất lượng ảnh không thể hiểu đầy đủ chỉ bằng tia sáng. Ở đây ta cần nhìn trường quang học như một tổng của các thành phần tần số không gian.
 
 Quang học Fourier (Fourier optics / 푸리에 광학) là cầu nối giữa quang học sóng, xử lý tín hiệu và hệ tạo ảnh.
@@ -15,7 +18,7 @@ U(x)
 =\int \tilde U(k_x)e^{ik_xx}\,dk_x.
 ```
 
-Mỗi thành phần `k_x` tương ứng với một sóng phẳng có hướng truyền khác nhau. Nhờ đó một ảnh phức tạp được phân rã thành những “mode không gian” đơn giản.
+Mỗi thành phần `k_x` tương ứng với một sóng phẳng có hướng truyền khác nhau. Nhờ đó một ảnh phức tạp được phân rã thành những “chế độ (mode / 모드) không gian” đơn giản.
 
 ## Nhiễu xạ Fraunhofer và biến đổi Fourier
 
@@ -135,7 +138,7 @@ resolution = phân biệt được chi tiết gần nhau đến đâu
 
 ## Sampling của cảm biến ảnh
 
-Sau khi quang học tạo ảnh trên sensor, ảnh liên tục được lấy mẫu bởi pixel. Khoảng cách pixel `p` đặt ra tần số Nyquist không gian gần
+Sau khi quang học tạo ảnh trên sensor, ảnh liên tục được lấy mẫu bởi điểm ảnh (pixel / 픽셀). Khoảng cách điểm ảnh (pixel / 픽셀) `p` đặt ra tần số Nyquist không gian gần
 
 ```math
 f_N\sim\frac{1}{2p}.
@@ -143,7 +146,7 @@ f_N\sim\frac{1}{2p}.
 
 Nếu hệ quang truyền tần số cao hơn mức cảm biến có thể lấy mẫu, aliasing và moiré có thể xuất hiện.
 
-Do đó thiết kế camera phải ghép hợp lý MTF của thấu kính, kích thước pixel và bộ lọc chống aliasing nếu cần.
+Do đó thiết kế camera phải ghép hợp lý MTF của thấu kính, kích thước điểm ảnh (pixel / 픽셀) và bộ lọc chống aliasing nếu cần.
 
 ## Deconvolution
 
@@ -187,7 +190,7 @@ Thí nghiệm lọc không gian quang học cho thấy nhiều thao tác quen th
 
 Trong thị giác máy tính, convolution kernel phát hiện cạnh, làm mờ hoặc lọc tần số. Trong quang học, PSF của hệ cũng thực hiện phép convolution trước khi photon tới sensor.
 
-Do đó pipeline hình ảnh thực tế là
+Do đó chuỗi xử lý (pipeline / 파이프라인) hình ảnh thực tế là
 
 ```text
 cảnh thật
@@ -199,9 +202,9 @@ cảnh thật
 → xử lý ảnh số
 ```
 
-Mô hình AI chỉ nhìn thấy dữ liệu ở cuối chuỗi này; hiểu vật lý cảm biến giúp phân biệt đặc trưng của thế giới với artifact của hệ đo.
+Mô hình AI chỉ nhìn thấy dữ liệu ở cuối chuỗi này; hiểu vật lý cảm biến giúp phân biệt đặc trưng của thế giới với sản phẩm tạo ra (artifact / 산출물) của hệ đo.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Một hệ tạo ảnh là một **kênh truyền thông tin không gian**. Khẩu độ và bước sóng giới hạn băng thông; PSF mô tả ảnh của một điểm; OTF/MTF cho biết tần số không gian nào sống sót qua hệ; sensor tiếp tục lấy mẫu và thêm nhiễu.
 
@@ -213,7 +216,7 @@ Một hệ tạo ảnh là một **kênh truyền thông tin không gian**. Kh�
 
 Không. Nếu hệ đã bị giới hạn bởi nhiễu xạ hoặc lấy mẫu, phóng to chỉ làm chi tiết đã có lớn hơn.
 
-### “Ảnh của một điểm lý tưởng vẫn là một pixel”
+### “Ảnh của một điểm lý tưởng vẫn là một điểm ảnh (pixel / 픽셀)”
 
 Không. Trước khi tới sensor, khẩu độ đã biến nguồn điểm thành PSF có kích thước hữu hạn.
 
@@ -221,8 +224,10 @@ Không. Trước khi tới sensor, khẩu độ đã biến nguồn điểm thà
 
 Không. Nếu hàm truyền bằng gần không ở một dải tần số và dữ liệu bị chìm trong nhiễu, thông tin đó không thể được tái tạo duy nhất nếu không thêm giả định hoặc prior.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Quang học sóng](01_wave_optics.md), [Sóng và Fourier](../02_oscillations_waves/01_waves_fourier_sound.md).
 
 **Liên hệ tiếp:** [Tín hiệu, nhiễu và lấy mẫu](../12_experimental_computational/01_signals_sampling_noise.md), [Vật lý tính toán và bài toán ngược](../12_experimental_computational/02_computational_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geometric optics](./00_geometric_optics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp
 
+> **Mạch đọc:** Đọc **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Trạng thái chồng chập và phép đo** sang **Giá trị kỳ vọng và phương sai**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Cơ học lượng tử không chỉ khác cơ học cổ điển ở việc năng lượng bị lượng tử hóa. Khác biệt sâu hơn nằm ở cách trạng thái được biểu diễn, cách các hệ hợp thành với nhau và cách kết quả phép đo xuất hiện từ một trạng thái có thể chứa nhiều khả năng chồng chập.
 
 Chương này tập trung vào bốn cấu trúc liên hệ chặt chẽ: **phép đo (measurement / 측정)**, **rối lượng tử (entanglement / 양자 얽힘)**, **ma trận mật độ (density matrix / 밀도 행렬)** và **mất kết hợp lượng tử (decoherence / 결어긋남)**.
@@ -95,7 +98,7 @@ P(i)=\mathrm{Tr}(\rho E_i).
 
 Cấu trúc này gọi là phép đo POVM (positive operator-valued measure). Nó rất hữu ích khi detector có hiệu suất hữu hạn, kết quả không hoàn toàn phân biệt được hoặc phép đo chỉ trích xuất một phần thông tin.
 
-## Hệ hợp thành và tensor product
+## Hệ hợp thành và tensor sản phẩm (product / 제품)
 
 Nếu có hai hệ `A` và `B`, không gian trạng thái toàn hệ là tích tensor
 
@@ -166,7 +169,7 @@ Với hỗn hợp thực sự,
 
 Đại lượng `\mathrm{Tr}(\rho^2)` gọi là độ tinh khiết (purity). Nó cho biết trạng thái gần thuần hay bị trộn mạnh đến mức nào.
 
-## Partial trace và trạng thái của hệ con
+## Partial dấu vết (trace / 추적) và trạng thái của hệ con
 
 Nếu toàn hệ `AB` có ma trận mật độ `\rho_{AB}`, trạng thái hiệu dụng của riêng hệ `A` là
 
@@ -232,7 +235,7 @@ Nếu hai trạng thái môi trường trở nên gần trực giao,
 \langle E_0'|E_1'\rangle\approx0,
 ```
 
-thì khi lấy partial trace trên môi trường, các phần tử ngoài đường chéo của ma trận mật độ hệ giảm mạnh.
+thì khi lấy partial dấu vết (trace / 추적) trên môi trường, các phần tử ngoài đường chéo của ma trận mật độ hệ giảm mạnh.
 
 Đó là cơ chế cốt lõi của decoherence.
 
@@ -271,7 +274,7 @@ Ví dụ vị trí thường được môi trường “theo dõi” mạnh thô
 
 Đây là một lý do thế giới vĩ mô biểu hiện gần cổ điển trong các biến quen thuộc.
 
-## Decoherence không tự giải quyết toàn bộ measurement problem
+## Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)
 
 Decoherence giải thích vì sao interference giữa các nhánh trở nên không quan sát được thực tế và vì sao một cơ sở gần cổ điển xuất hiện.
 
@@ -279,7 +282,7 @@ Nhưng từ ma trận mật độ gần chéo không tự động suy ra tại s
 
 Do đó không nên nói “decoherence đã chứng minh Copenhagen” hay “decoherence tự động sinh collapse thật”.
 
-## Open quantum systems và phương trình Lindblad
+## Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad
 
 Khi không theo dõi chi tiết môi trường, tiến hóa của hệ con thường không còn unitary. Một mô hình Markov phổ biến là phương trình Lindblad
 
@@ -333,7 +336,7 @@ Rối lượng tử là tài nguyên quan trọng trong nhiều giao thức, nh�
 
 Formalism chuẩn không cần đưa ý thức thành một biến vật lý. Thiết bị và môi trường có thể tạo entanglement cùng decoherence trước khi con người đọc kết quả.
 
-### “Mixed state chỉ là do ta không biết đủ thông tin”
+### “Mixed trạng thái (state / 상태) chỉ là do ta không biết đủ thông tin”
 
 Không phải mọi trạng thái trộn chỉ là thiếu hiểu biết cổ điển. Trạng thái của một hệ con rối với phần còn lại có thể là mixed dù trạng thái toàn hệ đã biết chính xác.
 
@@ -343,9 +346,9 @@ Không. Nó tạo tương quan phi cổ điển nhưng vẫn tuân nguyên lý n
 
 ### “Decoherence biến một superposition thành một kết quả duy nhất”
 
-Decoherence làm mất khả năng quan sát coherence giữa các nhánh đối với hệ con, nhưng không tự chọn một outcome duy nhất trong mọi cách diễn giải.
+Decoherence làm mất khả năng quan sát coherence giữa các nhánh đối với hệ con, nhưng không tự chọn một kết quả (outcome / 결과) duy nhất trong mọi cách diễn giải.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phép đo lượng tử không nên được hình dung chỉ là “nhìn vào hạt”. Nó là một chuỗi:
 
@@ -360,8 +363,10 @@ hệ lượng tử
 
 Ma trận mật độ là ngôn ngữ giúp mô tả chuỗi này mà không cần giả vờ rằng hệ con luôn có một hàm sóng thuần độc lập.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Spin và mômen động lượng](02_angular_momentum_spin.md), [Hạt đồng nhất và thống kê lượng tử](05_identical_particles_quantum_statistics.md).
 
 **Liên hệ tiếp:** [Lượng tử phụ thuộc thời gian và tán xạ](06_time_dependent_scattering.md), [Entropy và thông tin](../13_connections/00_knowledge_connections.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

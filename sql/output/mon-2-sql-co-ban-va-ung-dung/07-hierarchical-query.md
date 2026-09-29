@@ -1,6 +1,6 @@
-# Hierarchical Query
+# Hierarchical truy vấn (query / 쿼리)
 
-> **Mục tiêu:** START WITH, CONNECT BY PRIOR, LEVEL, NOCYCLE và các pseudocolumn phân cấp.
+> **Mục tiêu:** START WITH, CONNECT BY PRIOR, mức (level / 수준), NOCYCLE và các pseudocolumn phân cấp.
 
 ## Từ khóa cần nhớ (Keyword)
 
@@ -9,6 +9,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **Hierarchical truy vấn (query / 쿼리)** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
@@ -141,7 +145,7 @@ Ta bắt đầu **1. 계층형 질의 — Hierarchical Query là gì?** bằng c
 ## 1. 계층형 질의 — Hierarchical Query là gì?
 
 **KR:** 계층형 질의는 상위-하위 관계를 가진 데이터를 계층 구조로 조회하기 위한 질의이다.
-**VI:** Hierarchical Query là truy vấn dùng để lấy dữ liệu có quan hệ **cha–con / trên–dưới** theo dạng cây.
+**VI:** Hierarchical truy vấn (query / 쿼리) là truy vấn dùng để lấy dữ liệu có quan hệ **cha–con / trên–dưới** theo dạng cây.
 
 Ví dụ trong ảnh:
 
@@ -172,7 +176,7 @@ C là quản lý của D
 C là quản lý của E
 ```
 
-Dù dữ liệu nằm trong **một table**, giữa các row lại có quan hệ với nhau.
+Dù dữ liệu nằm trong **một bảng (table / 테이블)**, giữa các row lại có quan hệ với nhau.
 
 ---
 
@@ -185,7 +189,7 @@ Ta bắt đầu **2. 순환관계 데이터 모델 — Recursive Relationship** 
 ## 2. 순환관계 데이터 모델 — Recursive Relationship
 
 **KR:** 하나의 엔터티 안에서 자기 자신과 관계를 맺는 것을 순환 관계라고 한다.
-**VI:** Khi một entity/table có quan hệ với chính các row khác trong cùng entity đó, ta gọi là **recursive relationship / self-referencing relationship**.
+**VI:** Khi một thực thể (entity / 엔터티)/bảng (table / 테이블) có quan hệ với chính các row khác trong cùng thực thể (entity / 엔터티) đó, ta gọi là **recursive relationship / self-referencing relationship**.
 
 Ví dụ:
 
@@ -256,7 +260,7 @@ Ta bắt đầu **4. START WITH** bằng câu hỏi: **khái niệm này giải 
 ## 4. START WITH
 
 **KR:** `START WITH`는 계층 탐색을 시작할 루트 노드를 지정한다.
-**VI:** `START WITH` xác định **node bắt đầu / root node**.
+**VI:** `START WITH` xác định **nút (node / 노드) bắt đầu / gốc (root / 루트) nút (node / 노드)**.
 
 Ví dụ:
 
@@ -289,7 +293,7 @@ chọn:
 0001 사장실
 ```
 
-làm root.
+làm gốc (root / 루트).
 
 ---
 
@@ -301,8 +305,8 @@ Ta bắt đầu **5. Root luôn có LEVEL = 1** bằng câu hỏi: **khái niệ
 
 ## 5. Root luôn có LEVEL = 1
 
-**KR:** 루트 노드는 LEVEL 값으로 1을 가진다.
-**VI:** Root node luôn có:
+**KR:** 루트 노드는 mức (level / 수준) 값으로 1을 가진다.
+**VI:** gốc (root / 루트) nút (node / 노드) luôn có:
 
 ```text
 LEVEL = 1
@@ -345,7 +349,7 @@ Ta bắt đầu **6. CONNECT BY PRIOR ⭐⭐⭐** bằng câu hỏi: **khái ni�
 Đây là phần khó nhất.
 
 **KR:** `CONNECT BY PRIOR`는 현재 행과 다음 계층 행을 어떻게 연결할지를 정의한다.
-**VI:** `CONNECT BY PRIOR` xác định cách **nối row hiện tại với row ở level kế tiếp**.
+**VI:** `CONNECT BY PRIOR` xác định cách **nối row hiện tại với row ở mức (level / 수준) kế tiếp**.
 
 Ví dụ trong ảnh:
 
@@ -378,7 +382,7 @@ Ta bắt đầu **7. PRIOR nghĩa chính xác là gì?** bằng câu hỏi: **kh
 
 Nó có nghĩa:
 
-> **giá trị của row ở level trước trong quá trình hierarchical traversal**.
+> **giá trị của row ở mức (level / 수준) trước trong quá trình hierarchical traversal**.
 
 Ví dụ:
 
@@ -386,7 +390,7 @@ Ví dụ:
 CONNECT BY PRIOR DCODE = PDEPT
 ```
 
-Nếu current parent là:
+Nếu hiện tại (current / 현재) parent là:
 
 ```text
 DCODE = 0001
@@ -567,7 +571,7 @@ không tồn tại.
 
 Vì vậy traversal dừng ngay.
 
-Chỉ còn root:
+Chỉ còn gốc (root / 루트):
 
 ```text
 0001 사장실 LEVEL 1
@@ -675,7 +679,7 @@ Ta bắt đầu **12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐** b�
 
 ## 12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐
 
-Ảnh đưa hai query.
+Ảnh đưa hai truy vấn (query / 쿼리).
 
 Khi gom phần **12. WHERE và CONNECT BY khác nhau thế nào? ⭐⭐⭐** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -701,9 +705,9 @@ CONNECT BY PRIOR DCODE = PDEPT
 AREA='서울지사'
 ```
 
-là **điều kiện dùng trong quá trình tìm node tiếp theo**.
+là **điều kiện dùng trong quá trình tìm nút (node / 노드) tiếp theo**.
 
-Root:
+Gốc (root / 루트):
 
 ```text
 사장실
@@ -722,7 +726,7 @@ sau đó CONNECT BY chỉ tìm các child thỏa:
 AREA = 서울지사
 ```
 
-Nên root vẫn xuất hiện.
+Nên gốc (root / 루트) vẫn xuất hiện.
 
 ---
 
@@ -753,7 +757,7 @@ CONNECT BY
 
 sau đó `WHERE` lọc kết quả row.
 
-Do root:
+Do gốc (root / 루트):
 
 ```text
 사장실
@@ -778,7 +782,7 @@ Ta bắt đầu **14. Thứ tự xử lý quan trọng ⭐⭐⭐** bằng câu h
 
 ## 14. Thứ tự xử lý quan trọng ⭐⭐⭐
 
-Trong ngữ cảnh Hierarchical Query, cần nhớ:
+Trong ngữ cảnh Hierarchical truy vấn (query / 쿼리), cần nhớ:
 
 ```text
 START WITH
@@ -830,7 +834,7 @@ B
 ...
 ```
 
-Nếu không xử lý, Oracle phát hiện loop và báo lỗi.
+Nếu không xử lý, Oracle phát hiện vòng lặp (loop / 루프) và báo lỗi.
 
 ---
 
@@ -871,7 +875,7 @@ Cycle:
 ...
 ```
 
-Query:
+Truy vấn (query / 쿼리):
 
 ```sql
 CONNECT BY PRIOR EMP_ID = MGR_ID
@@ -898,7 +902,7 @@ CONNECT BY NOCYCLE PRIOR EMP_ID = MGR_ID
 ```
 
 **KR:** `NOCYCLE`은 순환 구조가 존재하더라도 오류 없이 탐색을 종료하도록 한다.
-**VI:** `NOCYCLE` cho phép Oracle xử lý dữ liệu có cycle mà không tiếp tục loop vô hạn.
+**VI:** `NOCYCLE` cho phép Oracle xử lý dữ liệu có cycle mà không tiếp tục vòng lặp (loop / 루프) vô hạn.
 
 Nó không có nghĩa:
 
@@ -918,7 +922,7 @@ Ta bắt đầu **18. LEVEL ⭐⭐⭐** bằng câu hỏi: **khái niệm này g
 
 ## 18. LEVEL ⭐⭐⭐
 
-`LEVEL` là pseudocolumn của hierarchical query.
+`LEVEL` là pseudocolumn của hierarchical truy vấn (query / 쿼리).
 
 ```sql
 SELECT LEVEL, ...
@@ -961,7 +965,7 @@ Ta bắt đầu **19. CONNECT_BY_ISLEAF** bằng câu hỏi: **khái niệm này
 0 → không phải leaf
 ```
 
-**Leaf node** = node không còn child.
+**Leaf nút (node / 노드)** = nút (node / 노드) không còn child.
 
 Ví dụ:
 
@@ -994,7 +998,7 @@ Ta bắt đầu **20. CONNECT_BY_ROOT ⭐⭐⭐** bằng câu hỏi: **khái ni�
 ## 20. CONNECT_BY_ROOT ⭐⭐⭐
 
 **KR:** `CONNECT_BY_ROOT`는 현재 행이 속한 계층의 루트 값을 반환한다.
-**VI:** `CONNECT_BY_ROOT` trả giá trị của **root node** ứng với row hiện tại.
+**VI:** `CONNECT_BY_ROOT` trả giá trị của **gốc (root / 루트) nút (node / 노드)** ứng với row hiện tại.
 
 Ví dụ:
 
@@ -1006,7 +1010,7 @@ START WITH 관리자 IS NULL
 CONNECT BY PRIOR 사원 = 관리자;
 ```
 
-Tree:
+Cây (tree / 트리):
 
 ```text
 A
@@ -1042,7 +1046,7 @@ SYS_CONNECT_BY_PATH(column, delimiter)
 ```
 
 **KR:** 루트부터 현재 행까지의 경로를 문자열로 표시한다.
-**VI:** Hàm này tạo **đường dẫn từ root tới current row** thành string.
+**VI:** Hàm này tạo **đường dẫn từ gốc (root / 루트) tới hiện tại (current / 현재) row** thành string.
 
 Ví dụ:
 
@@ -1050,7 +1054,7 @@ Ví dụ:
 SYS_CONNECT_BY_PATH(사원, '/')
 ```
 
-Tree:
+Cây (tree / 트리):
 
 ```text
 A
@@ -1070,7 +1074,7 @@ D → /A/C/D
 
 Rất dễ nhớ:
 
-> giống path thư mục.
+> giống đường dẫn (path / 경로) thư mục.
 
 ```text
 /root/folder/file
@@ -1100,7 +1104,7 @@ CONNECT BY PRIOR 사원 = 관리자;
 
 Kết quả:
 
-| Root | Path     | Employee | Manager |
+| gốc (root / 루트) | đường dẫn (path / 경로)     | Employee | Manager |
 | ---- | -------- | -------- | ------- |
 | A    | `/A`     | A        | NULL    |
 | A    | `/A/B`   | B        | A       |
@@ -1128,7 +1132,7 @@ Ta bắt đầu **23. ORDER SIBLINGS BY** bằng câu hỏi: **khái niệm này
 ## 23. ORDER SIBLINGS BY
 
 **KR:** `ORDER SIBLINGS BY`는 같은 부모를 가진 형제 노드들 사이의 순서를 정렬한다.
-**VI:** `ORDER SIBLINGS BY` dùng để sort **các node cùng cha**, nhưng vẫn giữ cấu trúc hierarchy.
+**VI:** `ORDER SIBLINGS BY` dùng để sort **các nút (node / 노드) cùng cha**, nhưng vẫn giữ cấu trúc hierarchy.
 
 Ví dụ:
 
@@ -1171,11 +1175,11 @@ Ta bắt đầu **24. Vì sao không dùng ORDER BY bình thường?** bằng c�
 
 ## 24. Vì sao không dùng ORDER BY bình thường?
 
-`ORDER BY` thông thường có thể sort toàn bộ result set và làm hierarchy khó nhìn.
+`ORDER BY` thông thường có thể sort toàn bộ tập kết quả (result set / 결과 집합) và làm hierarchy khó nhìn.
 
-Trong hierarchical query, nếu mục tiêu là:
+Trong hierarchical truy vấn (query / 쿼리), nếu mục tiêu là:
 
-> sort các anh em cùng level/cùng parent
+> sort các anh em cùng mức (level / 수준)/cùng parent
 
 thì:
 
@@ -1185,7 +1189,7 @@ ORDER SIBLINGS BY ...
 
 phù hợp hơn.
 
-Keyword:
+Từ khóa (keyword / 키워드):
 
 ```text
 SIBLING = 형제 = anh em
@@ -1231,7 +1235,7 @@ EMP_ID  LEVEL  IS_CYCLE
 2000      2       1
 ```
 
-Nghĩa là khi từ row `2000` cố đi tiếp, traversal sẽ quay về ancestor đã nằm trên path.
+Nghĩa là khi từ row `2000` cố đi tiếp, traversal sẽ quay về ancestor đã nằm trên đường dẫn (path / 경로).
 
 ---
 
@@ -1276,11 +1280,11 @@ Phần này nối mạch SQL với “27. Tổng hợp các pseudocolumn/hàm hi
 | Thành phần            | Ý nghĩa                  |
 | --------------------- | ------------------------ |
 | `LEVEL`               | độ sâu hiện tại          |
-| `CONNECT_BY_ISLEAF`   | có phải node lá không    |
+| `CONNECT_BY_ISLEAF`   | có phải nút (node / 노드) lá không    |
 | `CONNECT_BY_ISCYCLE`  | có phát hiện cycle không |
-| `CONNECT_BY_ROOT col` | giá trị root             |
-| `SYS_CONNECT_BY_PATH` | path root → current      |
-| `ORDER SIBLINGS BY`   | sort node cùng cha       |
+| `CONNECT_BY_ROOT col` | giá trị gốc (root / 루트)             |
+| `SYS_CONNECT_BY_PATH` | đường dẫn (path / 경로) gốc (root / 루트) → hiện tại (current / 현재)      |
+| `ORDER SIBLINGS BY`   | sort nút (node / 노드) cùng cha       |
 | `NOCYCLE`             | tránh lỗi cycle          |
 
 ---
@@ -1336,7 +1340,7 @@ Phần này nối mạch SQL với “Bước 2: nhìn phần có PRIOR”, gi�
 PRIOR ID
 ```
 
-Giá trị từ current row:
+Giá trị từ hiện tại (current / 현재) row:
 
 ```text
 1
@@ -1364,7 +1368,7 @@ Ta bắt đầu **Bước 4** bằng câu hỏi: **khái niệm này giải quy�
 
 #### Bước 4
 
-Những row đó là next level.
+Những row đó là next mức (level / 수준).
 
 Rồi lặp lại.
 
@@ -1389,14 +1393,14 @@ ID   PARENT_ID
 5    2
 ```
 
-Query:
+Truy vấn (query / 쿼리):
 
 ```sql
 START WITH ID = 1
 CONNECT BY PRIOR ID = PARENT_ID
 ```
 
-Root:
+Gốc (root / 루트):
 
 ```text
 1
@@ -1426,7 +1430,7 @@ PARENT_ID = 2
 
 → `4`, `5`.
 
-Tree:
+Cây (tree / 트리):
 
 ```text
 1
@@ -1463,7 +1467,7 @@ START WITH ID = 5
 CONNECT BY PRIOR PARENT_ID = ID
 ```
 
-Root:
+Gốc (root / 루트):
 
 ```text
 ID=5
@@ -1525,7 +1529,7 @@ Tên chương là:
 Hierarchical Query & Self Join
 ```
 
-Vì cùng một bài toán cha-con cũng có thể nhìn bằng self join.
+Vì cùng một bài toán cha-con cũng có thể nhìn bằng self phép nối (join / 조인).
 
 Ví dụ bảng EMP:
 
@@ -1551,7 +1555,7 @@ LEFT JOIN EMP M
   ON E.MGR_ID = M.EMP_ID;
 ```
 
-Đây là **self join** vì:
+Đây là **self phép nối (join / 조인)** vì:
 
 ```text
 EMP E
@@ -1559,7 +1563,7 @@ JOIN
 EMP M
 ```
 
-đều là cùng một table `EMP`.
+đều là cùng một bảng (table / 테이블) `EMP`.
 
 ---
 
@@ -1571,15 +1575,15 @@ Ta bắt đầu **32. Self Join khác Hierarchical Query** bằng câu hỏi: **
 
 ## 32. Self Join khác Hierarchical Query
 
-Self Join phù hợp khi ta cần quan hệ cố định:
+Self phép nối (join / 조인) phù hợp khi ta cần quan hệ cố định:
 
 ```text
 employee → manager trực tiếp
 ```
 
-Ví dụ một level.
+Ví dụ một mức (level / 수준).
 
-Hierarchical Query phù hợp khi cần:
+Hierarchical truy vấn (query / 쿼리) phù hợp khi cần:
 
 ```text
 employee
@@ -1589,7 +1593,7 @@ employee
 → root
 ```
 
-tức là số level không cố định.
+tức là số mức (level / 수준) không cố định.
 
 Có thể nhớ:
 
@@ -1611,7 +1615,7 @@ Ta bắt đầu **33. START WITH có thể có nhiều root** bằng câu hỏi:
 
 ## 33. START WITH có thể có nhiều root
 
-Không nhất thiết chỉ một root.
+Không nhất thiết chỉ một gốc (root / 루트).
 
 Ví dụ:
 
@@ -1626,7 +1630,7 @@ ID 1 parent NULL
 ID 10 parent NULL
 ```
 
-thì có hai tree:
+thì có hai cây (tree / 트리):
 
 ```text
 1
@@ -1638,15 +1642,15 @@ thì có hai tree:
 └─ ...
 ```
 
-Mỗi tree có:
+Mỗi cây (tree / 트리) có:
 
 ```text
 LEVEL=1
 ```
 
-ở root của chính nó.
+ở gốc (root / 루트) của chính nó.
 
-`CONNECT_BY_ROOT` giúp biết row thuộc tree nào.
+`CONNECT_BY_ROOT` giúp biết row thuộc cây (tree / 트리) nào.
 
 ---
 
@@ -1660,7 +1664,7 @@ Ta bắt đầu **34. Một điểm dễ nhầm: LEVEL không phải depth tuy�
 
 `LEVEL` tính từ **START WITH hiện tại**.
 
-Giả sử tree thật:
+Giả sử cây (tree / 트리) thật:
 
 ```text
 A
@@ -1699,7 +1703,7 @@ D 2
 
 Nên:
 
-> `LEVEL` là depth từ root được chọn bởi query, không phải depth cố định được lưu trong DB.
+> `LEVEL` là độ sâu (depth / 깊이) từ gốc (root / 루트) được chọn bởi truy vấn (query / 쿼리), không phải độ sâu (depth / 깊이) cố định được lưu trong DB.
 
 ---
 
@@ -1727,7 +1731,7 @@ WHERE condition
 
 trả lời:
 
-> Sau khi hierarchy được xử lý, row nào tôi muốn giữ trong result?
+> Sau khi hierarchy được xử lý, row nào tôi muốn giữ trong kết quả (result / 결과)?
 
 Đừng nhầm.
 
@@ -1747,7 +1751,7 @@ Cũng cần tách rõ:
 CONNECT BY ... AND condition
 ```
 
-→ condition ảnh hưởng:
+→ điều kiện (condition / 조건) ảnh hưởng:
 
 ```text
 node nào được phép nối tiếp
@@ -1759,7 +1763,7 @@ Trong khi:
 WHERE condition
 ```
 
-→ condition ảnh hưởng:
+→ điều kiện (condition / 조건) ảnh hưởng:
 
 ```text
 node nào được hiển thị trong final result
@@ -1789,7 +1793,7 @@ CONNECT BY NOCYCLE PRIOR EMP_ID = MGR_ID
 ORDER SIBLINGS BY NAME;
 ```
 
-Hãy đọc thành 5 bước logic:
+Hãy đọc thành 5 bước lô-gic (logic / 논리):
 
 ```text
 1. START WITH
@@ -2154,7 +2158,7 @@ ISCYCLE
 
 Và với `PRIOR`, chỉ cần nhớ một nguyên tắc:
 
-> **Đừng học thuộc PRIOR = cha hay PRIOR = con. Hãy lấy giá trị của biểu thức có PRIOR ở current row, rồi dùng giá trị đó tìm row tiếp theo ở phía còn lại của dấu `=`.**
+> **Đừng học thuộc PRIOR = cha hay PRIOR = con. Hãy lấy giá trị của biểu thức có PRIOR ở hiện tại (current / 현재) row, rồi dùng giá trị đó tìm row tiếp theo ở phía còn lại của dấu `=`.**
 
 Nếu áp dụng cách này, kể cả đề SQLD đảo vị trí `PRIOR` hoặc đổi tên column, bạn vẫn tự suy ra được hướng đi đúng.
 

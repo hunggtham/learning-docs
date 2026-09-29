@@ -1,5 +1,8 @@
 # Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh
 
+> **Mạch đọc:** Đặt **Liên hệ kiến thức, mô hình tư duy và những hiểu lầm cần tránh** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Mục đích của chương này** sang **Liên hệ 1: Quan hệ ↔ ngôn ngữ ↔ quyền lực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Mục đích của chương này
 
 Các chương trước đã giải thích từng hệ thống con. Chương này không tóm tắt theo kiểu cheat sheet mà xây một **đồ thị kiến thức (knowledge graph)**: những ý tưởng nào thực chất là cùng một cơ chế nhưng xuất hiện trong gia đình, ngôn ngữ, công ty, ẩm thực và công nghệ.
@@ -8,7 +11,7 @@ Nếu sau khi đọc bạn chỉ nhớ danh sách `정`, `눈치`, `한`, `빨�
 
 ## Liên hệ 1: Quan hệ ↔ ngôn ngữ ↔ quyền lực
 
-Tuổi và chức vụ có ý nghĩa vì chúng giúp xác định vai trò. Vai trò được mã hoá vào `호칭` và cấp độ lời nói. Cách nói lại củng cố cách người ta cảm nhận vai trò. Đây là một **vòng phản hồi (feedback loop)**:
+Tuổi và chức vụ có ý nghĩa vì chúng giúp xác định vai trò. Vai trò được mã hoá vào `호칭` và cấp độ lời nói. Cách nói lại củng cố cách người ta cảm nhận vai trò. Đây là một **vòng phản hồi (feedback loop / 피드백 루프)**:
 
 ```mermaid
 graph LR
@@ -58,7 +61,7 @@ hạ tầng tốt hơn
 → đầu tư hạ tầng nhiều hơn
 ```
 
-Cùng logic xuất hiện trong tốc độ Internet, thanh toán di động và phản hồi khách hàng.
+Cùng lô-gic (logic / 논리) xuất hiện trong tốc độ Internet, thanh toán di động và phản hồi khách hàng.
 
 ## Liên hệ 6: 교육열 ↔ tín hiệu ↔ cuộc đua vị thế
 
@@ -94,7 +97,7 @@ Hallyu toàn cầu không chỉ nhờ chất lượng nội dung. Nền tảng g
 
 ## Liên hệ 11: Truyền thống ↔ hiện đại không phải hai cực
 
-Hanok có thể dùng bơm nhiệt; hanbok có thể dùng vải hiện đại; chùa có đặt chỗ trực tuyến; bói toán chạy trong ứng dụng; lễ tưởng niệm tổ tiên có thể có video call.
+Hanok có thể dùng bơm nhiệt; hanbok có thể dùng vải hiện đại; chùa có đặt chỗ trực tuyến; bói toán chạy trong ứng dụng; lễ tưởng niệm tổ tiên có thể có video lời gọi (call / 호출).
 
 Nếu định nghĩa truyền thống là “không công nghệ”, ta sẽ liên tục kết luận rằng truyền thống đang chết dù thực tế nó đang chuyển sang hạ tầng mới.
 
@@ -187,7 +190,7 @@ Khi nền khí hậu thay đổi, sự kiện văn hoá không biến mất ngay
 
 ## Liên hệ 23: Tiện lợi ↔ lao động ↔ chi phí ẩn
 
-Giao hàng, `산후조리원`, chuyển nhà trọn gói, tủ nhận bưu kiện, hoàn hàng nhanh và chăm sóc khách hàng đều có một logic chung: giảm ma sát cho người dùng bằng cách chuyển phần phối hợp sang tổ chức hoặc người lao động.
+Giao hàng, `산후조리원`, chuyển nhà trọn gói, tủ nhận bưu kiện, hoàn hàng nhanh và chăm sóc khách hàng đều có một lô-gic (logic / 논리) chung: giảm ma sát cho người dùng bằng cách chuyển phần phối hợp sang tổ chức hoặc người lao động.
 
 ```text
 ma sát phía người dùng giảm
@@ -319,7 +322,7 @@ Tài liệu hoá, bàn giao và phân chia trạng thái giúp cả tổ chức 
 
 ## Liên hệ 33: Độ tin cậy đô thị ↔ phục hồi dịch vụ ↔ đường thay thế
 
-Một thành phố và một dịch vụ khách hàng có chung logic: người dùng không chỉ cần đường chạy bình thường, họ cần hệ thống vẫn dùng được khi một phần bị lỗi.
+Một thành phố và một dịch vụ khách hàng có chung lô-gic (logic / 논리): người dùng không chỉ cần đường chạy bình thường, họ cần hệ thống vẫn dùng được khi một phần bị lỗi.
 
 ```text
 đường chính lỗi
@@ -516,3 +519,5 @@ Cách ghi này biến việc học văn hoá từ gán nhãn thành **kiểm đ�
 > Văn hoá không phải câu trả lời cho câu hỏi “người Hàn là người như thế nào?”. Văn hoá là một phần của câu trả lời cho câu hỏi “trong hoàn cảnh này, những ý nghĩa, ràng buộc và kỳ vọng nào đang làm một số hành vi trở nên dễ hiểu hơn những hành vi khác?”.
 
 Khi tư duy như vậy, người học không cần thuộc lòng một danh sách phép lịch sự. Họ xây một mô hình có thể cập nhật. Gặp dữ liệu mới thì sửa mô hình, giống cách khoa học và kỹ thuật hoạt động.
+
+> **Bàn giao:** Sau **Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

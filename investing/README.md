@@ -1,8 +1,16 @@
 # Thư viện Kiến thức Đầu tư (Investing Knowledge Library)
 
-Bộ tài liệu này được tổ chức theo từng lĩnh vực (domain) thay vì gom vào một cuốn tổng hợp quá lớn. Mỗi thư mục có mục tiêu học rõ ràng, tài liệu nền tảng và các chương chuyên sâu để chuyển từ kiến thức sang phân tích thực tế.
+Bộ tài liệu này được tổ chức theo từng lĩnh vực (domain / 도메인) thay vì gom vào một cuốn tổng hợp quá lớn. Mỗi thư mục có mục tiêu học rõ ràng, tài liệu nền tảng và các chương chuyên sâu để chuyển từ kiến thức sang phân tích thực tế.
 
-Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một file quy chuẩn chung về thuật ngữ, công thức và phương pháp nghiên cứu, cùng một phần bài tập tích hợp (capstone) để nối toàn bộ quá trình từ lý thuyết → phân tích → xây vị thế → thực thi → đánh giá lại.
+Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một tệp (file / 파일) quy chuẩn chung về thuật ngữ, công thức và phương pháp nghiên cứu, cùng một phần bài tập tích hợp (capstone) để nối toàn bộ quá trình từ lý thuyết → phân tích → xây vị thế → thực thi → đánh giá lại.
+
+Để kiểm tra phần nào đã đủ sâu, phần nào time-sensitive và phần nào **không nên tiếp tục mở rộng chỉ để tăng số tệp (file / 파일)**, xem [Coverage & Depth Audit](./COVERAGE_AUDIT.md). Sau cốt lõi (core / 핵심) tuyến (route / 경로), dùng [Advanced Depth Path](./ADVANCED_DEPTH_PATH.md) và [Advanced Practice Workbook](./ADVANCED_PRACTICE_WORKBOOK.md) để chuyển kiến thức sang sản phẩm tạo ra (artifact / 산출물) có thể rà soát (review / 검토).
+
+### Ranh giới với Economics thư viện (library / 라이브러리) độc lập
+
+Economics hiện là chuẩn gốc (canonical / 정본) thư viện (library / 라이브러리) độc lập tại [`../economics/README.md`](../economics/README.md), đã bao phủ general-purpose economic lập luận (reasoning / 추론), microeconomics, thị trường (market / 시장) cấu trúc (structure / 구조)/game lý thuyết (theory / 이론), macroeconomics, applied economics, econometrics và economic lịch sử (history / 이력)/institutions.
+
+`investing/04_economics/` giữ ứng dụng (application / 애플리케이션) tầng (layer / 계층) cho macro dữ liệu (data / 데이터), monetary/funding conditions, capital flows, crisis transmission, công khai (public / 공개) debt, demographics, productivity, chính sách (policy / 정책) regime và cách chúng truyền vào asset/company/portfolio. Hai nhánh cross-link theo quyền sở hữu (ownership / 소유권) này; không duplicate hàng loạt lý thuyết (theory / 이론) general-purpose.
 
 ## 00 — Thuật ngữ, công thức và quy chuẩn nghiên cứu
 
@@ -73,13 +81,15 @@ Học báo cáo tài chính, kế toán, chất lượng doanh nghiệp, lợi t
 
 [04_economics/README.md](./04_economics/README.md)
 
-Học kinh tế vi mô, kinh tế vĩ mô, kinh tế toàn cầu, dòng vốn, khủng hoảng ngân hàng và nợ chính phủ, dữ liệu vĩ mô, ngân hàng trung ương, cơ chế tiền tệ, repo, tài sản thế chấp, nguồn vốn USD và cách điều kiện tài chính truyền vào nền kinh tế. Phần nâng cao bổ sung tư duy theo chế độ kinh tế, các cuộc khủng hoảng lịch sử, tương tác tài khóa–tiền tệ, động lực nợ công, nguồn cung trái phiếu chính phủ, phần bù kỳ hạn, ưu thế tài khóa, nhân khẩu học, năng suất, TFP, thể chế và lãi suất trung tính.
+Học cách dữ liệu vĩ mô, ngân hàng trung ương, đường cong lợi suất, tiền tệ, repo/tài sản thế chấp, nguồn vốn USD, capital flows và chính sách (policy / 정책) regime truyền vào thị trường, ngành, doanh nghiệp và danh mục. General-purpose economic lý thuyết (theory / 이론) nằm ở [`../economics/`](../economics/README.md); nhánh này giữ investment ứng dụng (application / 애플리케이션), nowcasting, liquidity/funding và crisis transmission.
 
 ### 05 — Giao dịch và phái sinh (Trading & Derivatives)
 
 [05_trading_derivatives/README.md](./05_trading_derivatives/README.md)
 
-Học Forex, hợp đồng tương lai, quyền chọn, hoán đổi, CFD, đòn bẩy, ký quỹ, tài sản bảo đảm, quy mô vị thế, kỳ vọng toán học, kiểm thử chiến lược, thực thi lệnh, vi cấu trúc sổ lệnh và quản trị rủi ro ở cấp danh mục giao dịch. Phần nghiên cứu nâng cao bao gồm kiểm định ngoài mẫu, walk-forward, thiên lệch dữ liệu, độ ổn định tham số, chi phí giao dịch, tác động thị trường, Monte Carlo, suy giảm chiến lược, danh mục chiến lược, bề mặt biến động, tương tác các Greek, biến động quanh sự kiện, phòng vệ động và an toàn vận hành.
+Học Forex, hợp đồng tương lai, quyền chọn, hoán đổi, CFD, đòn bẩy, ký quỹ, tài sản bảo đảm, quy mô vị thế, kỳ vọng toán học, kiểm thử chiến lược, thực thi lệnh, vi cấu trúc và quản trị rủi ro ở cấp danh mục giao dịch. Phần nghiên cứu nâng cao bao gồm kiểm định ngoài mẫu, walk-forward, thiên lệch dữ liệu, độ ổn định tham số, chi phí giao dịch, tác động thị trường, Monte Carlo, suy giảm chiến lược, danh mục chiến lược, bề mặt biến động, Greek, phòng vệ động và môi trường vận hành (production / 운영 환경) controls.
+
+Forex có dedicated đường dẫn (path / 경로) tại [`05_trading_derivatives/forex/README.md`](./05_trading_derivatives/forex/README.md): cốt lõi (core / 핵심) `01–15`, institutional connections về NDF/basis/funding/intervention/REER, practice labs và historical stress cases.
 
 ### 06 — Thị trường Hàn Quốc và Việt Nam
 
@@ -97,16 +107,19 @@ Học Forex, hợp đồng tương lai, quyền chọn, hoán đổi, CFD, đòn
 - [Khủng hoảng tín dụng và thanh khoản](./07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md): lệch kỳ hạn → căng thẳng nguồn vốn → tài sản thế chấp và haircut → bán cưỡng bức → chênh lệch tín dụng → co hẹp tín dụng → phản ứng chính sách → thanh khoản danh mục.
 - [Chu kỳ bán dẫn Hàn Quốc](./07_integrated_case_studies/03_SEMICONDUCTOR_CYCLE_KOREA_CASE.md): chi tiêu AI → tồn kho, ASP và công suất sử dụng → cơ cấu HBM → capex và nhà cung cấp → điều chỉnh dự báo lợi nhuận → định giá chuẩn hóa → quy mô vị thế.
 - [Chu kỳ bất động sản–ngân hàng Việt Nam](./07_integrated_case_studies/04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md): pháp lý → bán trước và dòng tiền → tái cấp vốn → ngân hàng, NPL và dự phòng → thanh khoản trong nước và SBV → định giá → khả năng thoát vị thế khi căng thẳng.
+- [Full Investment Process](./07_integrated_case_studies/05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md): research question → mô hình (model / 모델)/valuation → expected-return phân phối (distribution / 분포) → sizing → thực thi (execution / 실행) → monitoring → attribution → post-mortem.
+- [Macro → Rates → Liquidity → Company → Valuation → Portfolio](./07_integrated_case_studies/06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md): buộc cùng một shock đi xuyên macro, funding, doanh nghiệp, valuation và portfolio exposure thay vì dừng ở thị trường (market / 시장) narrative.
+- [USD Funding / FX / Korea–Vietnam Cross-Border](./07_integrated_case_studies/07_USD_FUNDING_FX_KOREA_VIETNAM_CROSS_BORDER_CASE.md): toàn cục (global / 전역) USD funding → FX/basis → Korea/Vietnam balance-sheet/truy cập (access / 접근) channels → asset/company exposure → hedge/portfolio quyết định (decision / 결정).
 
 ## Lộ trình học khuyến nghị
 
-Nếu bắt đầu gần như từ số 0, dùng file `00` như tài liệu tham chiếu rồi học theo:
+Nếu bắt đầu gần như từ số 0, dùng tệp (file / 파일) `00` như tài liệu tham chiếu rồi học theo:
 
 ```text
 00 → 01 → 02 → 03 → 04 → 05 → 06 → 07
 ```
 
-Không cần học thuộc file `00`. Hãy quay lại khi gặp thuật ngữ, công thức hoặc cần kiểm tra quy chuẩn nghiên cứu.
+Không cần học thuộc tệp (file / 파일) `00`. Hãy quay lại khi gặp thuật ngữ, công thức hoặc cần kiểm tra quy chuẩn nghiên cứu.
 
 Nếu mục tiêu chính là đầu tư dài hạn:
 
@@ -132,7 +145,7 @@ Sau phần Phân tích doanh nghiệp, xây mô hình một doanh nghiệp với
 
 Sau phần Kinh tế, theo dõi một sự kiện CPI/FOMC/BOK từ kỳ vọng đồng thuận tới phản ứng của thị trường, xác định hàm phản ứng, kênh truyền dẫn qua đường cong lợi suất, tỷ giá và tín dụng, đồng thời phân biệt cú sốc chu kỳ với thay đổi cấu trúc.
 
-Sau phần Giao dịch, kiểm thử một chiến lược duy nhất, làm kiểm định ngoài mẫu và thử nghiệm tiến về phía trước, tính kỳ vọng và mức suy giảm, kiểm tra chi phí thực thi thực tế và kiểm thử vị thế phái sinh theo cả lãi/lỗ lẫn yêu cầu ký quỹ.
+Sau phần Giao dịch, kiểm thử một chiến lược duy nhất, làm kiểm định ngoài mẫu và thử nghiệm tiến về phía trước, tính kỳ vọng và mức suy giảm, kiểm tra chi phí thực thi thực tế và kiểm thử vị thế phái sinh theo cả lãi/lỗ lẫn yêu cầu ký quỹ. Nếu học Forex, đi tiếp qua institutional connections, labs và historical cases thay vì thêm indicator.
 
 Sau phần Hàn Quốc/Việt Nam, tạo sổ nghiên cứu cho một cổ phiếu Hàn Quốc và một cổ phiếu Việt Nam, ghi rõ chu kỳ ngành, tiền tệ, tiếp cận thị trường, rủi ro bảng cân đối, định giá, chất xúc tác và điều kiện vô hiệu hóa luận điểm.
 

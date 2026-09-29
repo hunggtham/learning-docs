@@ -1,5 +1,8 @@
 # Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc
 
+> **Mạch đọc:** Đọc **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mũi tên cong là quy tắc bảo toàn electron** sang **Cơ chế khác phương trình tổng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Cơ chế phản ứng hữu cơ (organic reaction mechanism / 유기 반응 메커니즘)** là mô hình từng bước mô tả cách liên kết bị phá, liên kết mới hình thành, mật độ electron di chuyển và những chất trung gian/trạng thái chuyển tiếp nào nối chất phản ứng với sản phẩm. Cơ chế không phải một đoạn phim được ghi trực tiếp; nó là mô hình bị ràng buộc bởi động học, hóa lập thể, hiệu ứng đồng vị, phổ học, phân bố sản phẩm và cấu trúc điện tử.
 
 Thói quen quan trọng nhất không phải học thuộc hàng trăm phản ứng có tên riêng, mà là học cách nhìn hóa hữu cơ như **nguồn giàu electron tương tác với vị trí nghèo electron trên một cảnh quan năng lượng tự do**.
@@ -46,9 +49,9 @@ Các vị trí ái nhân thường gặp gồm:
 - liên kết π;
 - tâm carbon trong hợp chất cơ kim.
 
-**Tính ái nhân (nucleophilicity)** là khái niệm động học: nó mô tả tốc độ một tiểu phân tấn công trong điều kiện cụ thể. Nó liên quan nhưng không đồng nhất với **độ base (basicity)**, vốn là đại lượng nhiệt động về ái lực với proton.
+**Tính ái nhân (nucleophilicity)** là khái niệm động học: nó mô tả tốc độ một tiểu phân tấn công trong điều kiện cụ thể. Nó liên quan nhưng không đồng nhất với **độ cơ sở (base / 기반) (basicity)**, vốn là đại lượng nhiệt động về ái lực với proton.
 
-Ví dụ \(I^-\) có thể là nucleophile tốt trong dung môi proton nhưng là base yếu hơn nhiều so với alkoxide.
+Ví dụ \(I^-\) có thể là nucleophile tốt trong dung môi proton nhưng là cơ sở (base / 기반) yếu hơn nhiều so với alkoxide.
 
 ## Electrophile — nơi năng lượng thấp có thể nhận mật độ electron
 
@@ -74,7 +77,7 @@ Phản ứng thuận lợi hơn khi hai orbital phù hợp về năng lượng, 
 
 **Nhóm rời (leaving group / 이탈기)** rời đi cùng cặp electron liên kết.
 
-Nhóm rời tốt thường tạo anion hoặc phân tử trung hòa tương đối bền. Base yếu thường là nhóm rời tốt vì không có xu hướng mạnh giữ lại cặp electron trong trạng thái năng lượng cao.
+Nhóm rời tốt thường tạo anion hoặc phân tử trung hòa tương đối bền. cơ sở (base / 기반) yếu thường là nhóm rời tốt vì không có xu hướng mạnh giữ lại cặp electron trong trạng thái năng lượng cao.
 
 \(I^-\) thường là nhóm rời tốt hơn \(F^-\) trong phản ứng thế alkyl vì liên kết C–I yếu hơn và iodide lớn, dễ phân cực. \(OH^-\) thường là nhóm rời kém, nhưng proton hóa biến –OH thành H2O, một nhóm rời trung hòa rất tốt.
 
@@ -119,7 +122,7 @@ Nu^- + R-LG \rightarrow R-Nu + LG^-
 Phương trình tốc độ điển hình:
 
 \[
-rate = k[Nu][R-LG]
+tỷ lệ (rate / 비율) = k[Nu][R-LG]
 \]
 
 Cả hai tiểu phân đều tham gia trạng thái chuyển tiếp quyết định tốc độ.
@@ -162,7 +165,7 @@ Các bước đơn giản hóa:
 Phương trình tốc độ điển hình:
 
 \[
-rate = k[R-LG]
+tỷ lệ (rate / 비율) = k[R-LG]
 \]
 
 Nồng độ nucleophile không xuất hiện nếu bước ion hóa là bước quyết định tốc độ.
@@ -185,12 +188,12 @@ Carbocation lý tưởng gần phẳng có thể bị tấn công từ hai mặt
 
 ## E2 — lấy proton và rời nhóm đồng thời
 
-Trong E2, base lấy hydrogen β đồng thời liên kết C–LG bị phá và C=C được tạo trong cùng một bước sơ cấp.
+Trong E2, cơ sở (base / 기반) lấy hydrogen β đồng thời liên kết C–LG bị phá và C=C được tạo trong cùng một bước sơ cấp.
 
 Phương trình tốc độ điển hình:
 
 \[
-rate=k[base][substrate]
+tỷ lệ (rate / 비율)=k[cơ sở (base / 기반)][substrate]
 \]
 
 ### Yêu cầu anti-periplanar
@@ -201,13 +204,13 @@ Yêu cầu hình học này làm E2 có tính **đặc hiệu lập thể (stere
 
 ### Sản phẩm Zaitsev và Hofmann
 
-Base nhỏ thường ưu tiên alkene thế nhiều hơn, bền nhiệt động hơn — xu hướng Zaitsev. Base cồng kềnh có thể lấy proton dễ tiếp cận hơn và tạo alkene ít thế hơn — sản phẩm Hofmann.
+Cơ sở (base / 기반) nhỏ thường ưu tiên alkene thế nhiều hơn, bền nhiệt động hơn — xu hướng Zaitsev. cơ sở (base / 기반) cồng kềnh có thể lấy proton dễ tiếp cận hơn và tạo alkene ít thế hơn — sản phẩm Hofmann.
 
 Đây không phải luật bất biến; hình học chất nền, nhóm rời và hiệu ứng điện tử có thể đảo xu hướng.
 
 ## E1 — carbocation rồi khử proton
 
-E1 chia sẻ chất trung gian carbocation với SN1. Sau bước ion hóa, một base lấy hydrogen β để tạo alkene.
+E1 chia sẻ chất trung gian carbocation với SN1. Sau bước ion hóa, một cơ sở (base / 기반) lấy hydrogen β để tạo alkene.
 
 Vì SN1 và E1 thường có điều kiện và chất trung gian chung, hỗn hợp sản phẩm là phổ biến. Nhiệt độ cao có thể làm phản ứng loại được ưu tiên hơn một phần do entropy và số con đường tạo alkene.
 
@@ -216,7 +219,7 @@ Vì SN1 và E1 thường có điều kiện và chất trung gian chung, hỗn h
 Một thứ tự suy luận hữu ích là:
 
 1. Chất nền có thể tạo carbocation bền không?
-2. Nucleophile/base mạnh hay yếu?
+2. Nucleophile/cơ sở (base / 기반) mạnh hay yếu?
 3. Carbon bị tấn công có dễ tiếp cận về lập thể không?
 4. Dung môi là proton hay không proton và có khả năng ion hóa tốt không?
 5. Có hydrogen β với hình học phù hợp không?
@@ -240,7 +243,7 @@ Cộng \(Br_2\) thường tạo ion bromonium cầu nối thay vì carbocation t
 
 Mô hình này giải thích cả hóa lập thể lẫn việc ít xuất hiện chuyển vị điển hình của carbocation tự do.
 
-# Logic phản ứng carbonyl
+# Lô-gic (logic / 논리) phản ứng carbonyl
 
 Liên kết C=O phân cực:
 
@@ -287,7 +290,7 @@ Không phải mọi cơ chế đều phân rã tự nhiên thành các bước i
 
 Đối xứng orbital quyết định con đường nào được phép về nhiệt. Tương tác orbital biên giữa HOMO của diene và LUMO của dienophile là điểm vào trực quan để hiểu cơ chế.
 
-Điều này nhắc rằng logic dòng electron rộng hơn việc chỉ theo dõi điện tích hình thức.
+Điều này nhắc rằng lô-gic (logic / 논리) dòng electron rộng hơn việc chỉ theo dõi điện tích hình thức.
 
 # Xúc tác
 
@@ -295,9 +298,9 @@ Không phải mọi cơ chế đều phân rã tự nhiên thành các bước i
 
 Acid có thể proton hóa chất nền, làm giảm năng lượng LUMO hoặc biến nhóm rời kém thành nhóm rời tốt. Chất xúc tác được tái sinh ở bước sau.
 
-## Xúc tác base
+## Xúc tác cơ sở (base / 기반)
 
-Base có thể tạo nucleophile hoặc enolate phản ứng mạnh hơn bằng cách khử proton.
+Cơ sở (base / 기반) có thể tạo nucleophile hoặc enolate phản ứng mạnh hơn bằng cách khử proton.
 
 ## Xúc tác kim loại
 
@@ -386,3 +389,5 @@ Nhiều phản ứng có tên riêng chỉ là tổ hợp của một số mô-t
 > Giải cơ chế hữu cơ là **định tuyến electron có ràng buộc trên một cảnh quan năng lượng**. Hãy tìm nơi electron có thể xuất phát, orbital nhận năng lượng thấp nằm ở đâu, hình học nào cho chồng phủ tốt, tiểu phân nào có thể rời đi và trạng thái chuyển tiếp cạnh tranh nào thấp nhất.
 
 Xem tiếp: [Alkane, alkene và alkyne](./04_alkanes_alkenes_and_alkynes.md), sau đó quay lại khung này khi học hóa học thơm và carbonyl.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 carbon and organic structures](./00_carbon_and_organic_structures.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

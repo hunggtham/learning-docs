@@ -1,5 +1,8 @@
 # Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD
 
+> **Mạch đọc:** Đặt **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Quyền sở hữu khác mức phơi nhiễm theo hợp đồng** sang **2. Thông số hợp đồng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Phái sinh (derivative) là hợp đồng có giá trị phụ thuộc vào tài sản, chỉ số hoặc biến tham chiếu. Khác với mua cổ phiếu thông thường, phái sinh có thể tạo nghĩa vụ hợp đồng, đòn bẩy, yêu cầu ký quỹ, tài sản bảo đảm và khoản chi trả phi tuyến. Vì vậy phải hiểu cấu trúc hợp đồng trước khi dự đoán hướng giá. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng tên chuẩn.
 
 # Phần I — Phái sinh là gì?
@@ -259,7 +262,7 @@ Protective put đổi một phần premium lấy giới hạn rủi ro giảm. C
 
 **Protective put** là nắm tài sản cơ sở và mua quyền chọn bán để giới hạn phần giảm dưới một vùng nhất định. Chi phí là phí quyền chọn lặp lại.
 
-## 27. Covered call
+## 27. Covered lời gọi (call / 호출)
 
 Covered call tạo thu nhập premium bằng cách bán một phần upside và convexity. Nó phù hợp với một số mục tiêu income nhưng không phải hedge giảm hoàn chỉnh.
 

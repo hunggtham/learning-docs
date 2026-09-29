@@ -1,8 +1,11 @@
-# Boolean algebra và logic số: từ mệnh đề đến circuit và computation
+# Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation
 
-Boolean algebra (불 대수 / Boolean algebra) là một algebra của hai trạng thái, thường biểu diễn bằng `false/true` hoặc `0/1`. Nó nằm ở giao điểm của logic, discrete mathematics, programming và digital hardware.
+> **Mạch đọc:** Đọc **Boolean algebra và lô-gic (logic / 논리) số: từ mệnh đề đến circuit và computation** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Boolean giá trị (value / 값) là một mô hình (model / 모델) của quyết định (decision / 결정) trạng thái (state / 상태)** sang **2. Basic operations**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Điều quan trọng không phải chỉ nhớ AND/OR/NOT, mà hiểu ba layer khác nhau:
+
+Boolean algebra (불 대수 / Boolean algebra) là một algebra của hai trạng thái, thường biểu diễn bằng `false/true` hoặc `0/1`. Nó nằm ở giao điểm của lô-gic (logic / 논리), discrete mathematics, programming và digital hardware.
+
+Điều quan trọng không phải chỉ nhớ AND/OR/NOT, mà hiểu ba tầng (layer / 계층) khác nhau:
 
 ```text
 logical meaning
@@ -10,9 +13,9 @@ logical meaning
 → computational / circuit implementation
 ```
 
-Một expression có thể truth-equivalent với expression khác nhưng runtime behavior vẫn khác nếu language có short-circuit, side effects hoặc nullable logic.
+Một expression có thể truth-equivalent với expression khác nhưng hành vi thời gian chạy (runtime behavior / 런타임 동작) vẫn khác nếu ngôn ngữ (language / 언어) có short-circuit, side effects hoặc nullable lô-gic (logic / 논리).
 
-## 1. Boolean value là một model của decision state
+## 1. Boolean giá trị (value / 값) là một mô hình (model / 모델) của quyết định (decision / 결정) trạng thái (state / 상태)
 
 Ta thường dùng
 
@@ -39,7 +42,7 @@ Phủ định (NOT / 부정):
 \neg P
 ```
 
-đảo truth value.
+đảo truth giá trị (value / 값).
 
 AND (논리곱 / conjunction):
 
@@ -55,7 +58,7 @@ OR (논리합 / disjunction):
 P\lor Q
 ```
 
-trong logic toán là inclusive OR: đúng nếu ít nhất một operand đúng.
+trong lô-gic (logic / 논리) toán là inclusive OR: đúng nếu ít nhất một operand đúng.
 
 XOR (배타적 논리합 / exclusive OR):
 
@@ -65,7 +68,7 @@ P\oplus Q
 
 đúng khi chính xác một trong hai đúng.
 
-## 3. Truth table là exhaustive finite proof
+## 3. Truth bảng (table / 테이블) là exhaustive finite proof
 
 Với `n` Boolean inputs có
 
@@ -75,11 +78,11 @@ Với `n` Boolean inputs có
 
 possible assignments.
 
-Truth table liệt kê output trên tất cả assignments. Vì state space hữu hạn, nếu hai expressions có cùng output trên mọi row, ta đã chứng minh chúng equivalent trong propositional Boolean logic.
+Truth bảng (table / 테이블) liệt kê đầu ra (output / 출력) trên tất cả assignments. Vì trạng thái (state / 상태) không gian (space / 공간) hữu hạn, nếu hai expressions có cùng đầu ra (output / 출력) trên mọi row, ta đã chứng minh chúng equivalent trong propositional Boolean lô-gic (logic / 논리).
 
 Đây là một dạng brute-force proof.
 
-Nhưng cost tăng exponential theo `n`, nên truth tables không scale cho logic lớn. Điều này dẫn tới symbolic simplification, SAT solving và formal methods.
+Nhưng chi phí (cost / 비용) tăng exponential theo `n`, nên truth tables không quy mô (scale / 규모) cho lô-gic (logic / 논리) lớn. Điều này dẫn tới symbolic simplification, SAT solving và formal methods.
 
 ## 4. De Morgan's laws từ viewpoint complement
 
@@ -102,7 +105,7 @@ Intuition:
 - “không phải cả hai đều đúng” nghĩa ít nhất một cái sai;
 - “không có cái nào đúng” nghĩa cả hai đều sai.
 
-Cùng structure xuất hiện trong set theory:
+Cùng cấu trúc (structure / 구조) xuất hiện trong set lý thuyết (theory / 이론):
 
 ```math
 (A\cap B)^c=A^c\cup B^c.
@@ -110,7 +113,7 @@ Cùng structure xuất hiện trong set theory:
 
 Đây không phải coincidence: set membership là Boolean predicate.
 
-## 5. Boolean algebra identities không phải list rời rạc
+## 5. Boolean algebra identities không phải danh sách (list / 목록) rời rạc
 
 Một số identities:
 
@@ -130,9 +133,9 @@ P\lor(P\land Q)=P
 P\land(P\lor Q)=P.
 ```
 
-Absorption có intuition rõ: nếu `P` đã true, thêm case “P và Q” không mở rộng truth set của `P`.
+Absorption có intuition rõ: nếu `P` đã true, thêm trường hợp (case / 사례) “P và Q” không mở rộng truth set của `P`.
 
-## 6. Algebraic representation với 0/1
+## 6. Algebraic biểu diễn (representation / 표현) với 0/1
 
 Nếu encode false/true bằng 0/1, một số operations có arithmetic-like forms:
 
@@ -146,7 +149,7 @@ và XOR tương ứng addition modulo 2:
 P\oplus Q=P+Q\pmod 2.
 ```
 
-Boolean OR không đơn giản là ordinary addition vì `1+1=2`, trong khi `1 OR 1=1`. Một polynomial representation là:
+Boolean OR không đơn giản là ordinary addition vì `1+1=2`, trong khi `1 OR 1=1`. Một polynomial biểu diễn (representation / 표현) là:
 
 ```math
 P\lor Q=P+Q-PQ
@@ -154,7 +157,7 @@ P\lor Q=P+Q-PQ
 
 trên values `0,1`.
 
-Điều này cho thấy Boolean logic có thể được study algebraically.
+Điều này cho thấy Boolean lô-gic (logic / 논리) có thể được study algebraically.
 
 ## 7. XOR và arithmetic modulo 2
 
@@ -178,9 +181,9 @@ Associativity cho phép:
 x\oplus y\oplus x=y.
 ```
 
-Đây chính là addition trong field `GF(2)` ở mức bit.
+Đây chính là addition trong trường dữ liệu (field / 필드) `GF(2)` ở mức bit.
 
-Connection này rất quan trọng trong coding theory, parity checks, linear feedback systems và binary linear algebra.
+Liên kết (connection / 연결) này rất quan trọng trong coding lý thuyết (theory / 이론), parity checks, tuyến tính (linear / 선형) phản hồi (feedback / 피드백) các hệ thống (systems / 시스템들) và nhị phân (binary / 이진) tuyến tính (linear / 선형) algebra.
 
 ## 8. Functionally complete gate sets
 
@@ -196,7 +199,7 @@ NOR:
 P\downarrow Q=\neg(P\lor Q).
 ```
 
-Mỗi loại gate riêng có thể build mọi Boolean function, tức functionally complete.
+Mỗi loại gate riêng có thể bản dựng (build / 빌드) mọi Boolean hàm (function / 함수), tức functionally complete.
 
 Ví dụ từ NAND:
 
@@ -206,17 +209,17 @@ Ví dụ từ NAND:
 
 Sau đó dùng NAND của các NAND để reconstruct AND/OR.
 
-Ý nghĩa engineering: hardware architecture có thể chuẩn hóa primitive gate rồi synthesize logic phức tạp.
+Ý nghĩa kỹ thuật (engineering / 엔지니어링): hardware kiến trúc (architecture / 아키텍처) có thể chuẩn hóa thành phần nguyên thủy (primitive / 기본 요소) gate rồi synthesize lô-gic (logic / 논리) phức tạp.
 
 ## 9. Sum-of-products và product-of-sums
 
-Mọi Boolean function hữu hạn có thể viết bằng canonical forms.
+Mọi Boolean hàm (function / 함수) hữu hạn có thể viết bằng chuẩn gốc (canonical / 정본) forms.
 
-Sum-of-products (SOP) lấy OR của các AND terms corresponding các truth-table rows output 1.
+Sum-of-products (SOP) lấy OR của các AND terms corresponding các truth-table rows đầu ra (output / 출력) 1.
 
-Product-of-sums (POS) dùng AND của OR clauses corresponding rows output 0.
+Product-of-sums (POS) dùng AND của OR clauses corresponding rows đầu ra (output / 출력) 0.
 
-Đây là bridge từ truth table sang circuit synthesis và SAT/CNF reasoning.
+Đây là cầu nối (bridge / 브리지) từ truth bảng (table / 테이블) sang circuit synthesis và SAT/CNF lập luận (reasoning / 추론).
 
 ## 10. CNF và SAT
 
@@ -228,13 +231,13 @@ Ví dụ:
 (P\lor\neg Q)\land(R\lor Q).
 ```
 
-SAT problem hỏi có assignment nào làm toàn formula true không.
+SAT bài toán (problem / 문제) hỏi có assignment nào làm toàn formula true không.
 
-SAT là một trong những central problems của theoretical CS. Dù worst-case exponential theo known complexity theory, modern SAT solvers cực mạnh trên nhiều practical instances nhờ propagation, conflict learning và heuristics.
+SAT là một trong những central problems của theoretical CS. Dù worst-case exponential theo known độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론), hiện đại (modern / 현대적) SAT solvers cực mạnh trên nhiều practical instances nhờ propagation, xung đột (conflict / 충돌) học tập (learning / 학습) và heuristics.
 
-Boolean algebra vì vậy nối trực tiếp sang complexity và verification.
+Boolean algebra vì vậy nối trực tiếp sang độ phức tạp (complexity / 복잡도) và xác minh (verification / 확인).
 
-## 11. Short-circuit semantics: logical equivalence không luôn là operational equivalence
+## 11. Short-circuit ngữ nghĩa (semantics / 의미론): logical equivalence không luôn là operational equivalence
 
 Trong nhiều languages:
 
@@ -250,7 +253,7 @@ Trong pure Boolean algebra:
 A\land B=B\land A.
 ```
 
-Nhưng nếu `A` hoặc `B` có side effects, exceptions hoặc expensive computation, đổi order có thể đổi runtime behavior.
+Nhưng nếu `A` hoặc `B` có side effects, exceptions hoặc expensive computation, đổi thứ tự (order / 순서) có thể đổi hành vi thời gian chạy (runtime behavior / 런타임 동작).
 
 Do đó cần tách:
 
@@ -260,9 +263,9 @@ vs
 execution semantics
 ```
 
-## 12. Three-valued logic và NULL
+## 12. Three-valued lô-gic (logic / 논리) và NULL
 
-SQL không dùng Boolean hai-valued đơn giản khi có `NULL`; nó dùng three-valued logic với `UNKNOWN`.
+SQL không dùng Boolean hai-valued đơn giản khi có `NULL`; nó dùng three-valued lô-gic (logic / 논리) với `UNKNOWN`.
 
 Ví dụ:
 
@@ -276,11 +279,11 @@ Vì vậy transformation Boolean textbook có thể cần caution trong SQL pred
 
 `NOT UNKNOWN` vẫn `UNKNOWN`.
 
-Đây là ví dụ domain semantics mở rộng Boolean model.
+Đây là ví dụ lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론) mở rộng Boolean mô hình (model / 모델).
 
 ## 13. Bitwise operations
 
-Bitwise AND/OR/XOR apply từng bit của integer representation.
+Bitwise AND/OR/XOR apply từng bit của integer biểu diễn (representation / 표현).
 
 Ví dụ permissions:
 
@@ -296,7 +299,7 @@ Combine:
 READ | WRITE = 011
 ```
 
-Check WRITE:
+Check ghi (write / 쓰기):
 
 ```text
 mask & WRITE != 0
@@ -318,9 +321,9 @@ là logical, thường short-circuit.
 & / |
 ```
 
-có thể là bitwise hoặc non-short-circuit Boolean tùy language/type.
+có thể là bitwise hoặc non-short-circuit Boolean tùy ngôn ngữ (language / 언어)/kiểu (type / 타입).
 
-Không được swap operators chỉ vì truth table trên pure booleans trông giống nhau.
+Không được swap operators chỉ vì truth bảng (table / 테이블) trên pure booleans trông giống nhau.
 
 ## 15. Boolean minimization
 
@@ -333,13 +336,13 @@ software → readability / maintainability / fewer branches
 
 Karnaugh maps giúp visualize adjacent minterms khác một bit để combine.
 
-Algorithmic synthesis dùng Quine–McCluskey hoặc modern logic synthesis methods.
+Algorithmic synthesis dùng Quine–McCluskey hoặc hiện đại (modern / 현대적) lô-gic (logic / 논리) synthesis methods.
 
-Nhưng minimal gate expression không nhất thiết là readable business rule.
+Nhưng minimal gate expression không nhất thiết là readable nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙).
 
-## 16. Worked Example: simplify business rule
+## 16. Worked Example: simplify nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙)
 
-Cho rule:
+Cho quy tắc (rule / 규칙):
 
 ```text
 allow = admin OR (active AND owner)
@@ -363,7 +366,7 @@ rồi:
 NOT admin AND (NOT active OR NOT owner)
 ```
 
-Logic đúng, nhưng production code còn phải xét role hierarchy, nullable state và side-effect permission checks.
+Lô-gic (logic / 논리) đúng, nhưng môi trường vận hành (production / 운영 환경) mã (code / 코드) còn phải xét role hierarchy, nullable trạng thái (state / 상태) và side-effect permission checks.
 
 ## 17. Worked Example: parity
 
@@ -375,51 +378,53 @@ p=b_1\oplus b_2\oplus\cdots\oplus b_n.
 
 `p=1` nếu số bit 1 là odd.
 
-Nếu một single bit flip xảy ra, parity đổi, nên detect được single-bit error.
+Nếu một single bit flip xảy ra, parity đổi, nên detect được single-bit lỗi (error / 오류).
 
-Nhưng hai bit flips có thể giữ parity, nên parity check không detect mọi error.
+Nhưng hai bit flips có thể giữ parity, nên parity check không detect mọi lỗi (error / 오류).
 
-Đây là lesson chung: algebraic invariant có detection power cụ thể, không phải guarantee universal.
+Đây là lesson chung: algebraic bất biến (invariant / 불변식) có detection power cụ thể, không phải guarantee universal.
 
-## 18. Boolean matrix và graph reachability
+## 18. Boolean ma trận (matrix / 행렬) và đồ thị (graph / 그래프) reachability
 
-Adjacency matrix `A` của graph có thể được interpreted trên Boolean semiring:
+Adjacency ma trận (matrix / 행렬) `A` của đồ thị (graph / 그래프) có thể được interpreted trên Boolean semiring:
 
 ```text
 addition → OR
 multiplication → AND
 ```
 
-Khi đó powers của adjacency matrix encode existence của paths theo Boolean composition.
+Khi đó powers của adjacency ma trận (matrix / 행렬) encode existence của paths theo Boolean composition.
 
-Điều này cho thấy cùng matrix syntax có thể chạy trên algebra khác nhau và meaning thay đổi theo operations nền.
+Điều này cho thấy cùng ma trận (matrix / 행렬) cú pháp (syntax / 문법) có thể chạy trên algebra khác nhau và meaning thay đổi theo operations nền.
 
-## 19. Connection với AI
+## 19. liên kết (connection / 연결) với AI
 
-Decision trees, binary masks, attention masks và thresholded predicates đều dùng Boolean structure.
+Quyết định (decision / 결정) trees, nhị phân (binary / 이진) masks, attention masks và thresholded predicates đều dùng Boolean cấu trúc (structure / 구조).
 
-Nhưng neural networks chủ yếu dùng continuous differentiable computation; Boolean decisions thường xuất hiện ở data preprocessing, masking hoặc discrete control layer.
+Nhưng neural networks chủ yếu dùng continuous differentiable computation; Boolean decisions thường xuất hiện ở dữ liệu (data / 데이터) preprocessing, masking hoặc discrete điều khiển (control / 제어) tầng (layer / 계층).
 
-Một hard Boolean threshold mất gradient, nên training differentiable systems thường dùng soft approximations như sigmoid/softmax trước khi discretize.
+Một hard Boolean threshold mất độ dốc (gradient / 기울기), nên huấn luyện (training / 학습) differentiable các hệ thống (systems / 시스템들) thường dùng soft approximations như sigmoid/softmax trước khi discretize.
 
-## 20. Connection với hardware
+## 20. liên kết (connection / 연결) với hardware
 
-Transistor networks implement switching behavior. Logic gates abstract physical voltage ranges thành discrete states.
+Transistor networks implement switching hành vi (behavior / 동작). lô-gic (logic / 논리) gates abstract vật lý (physical / 물리적) voltage ranges thành discrete states.
 
-Boolean model bỏ qua analog effects như propagation delay, noise margin và metastability. Digital logic correctness vẫn cần timing/electrical assumptions.
+Boolean mô hình (model / 모델) bỏ qua analog effects như propagation delay, noise margin và metastability. Digital lô-gic (logic / 논리) tính đúng đắn (correctness / 정확성) vẫn cần timing/electrical các giả định (assumptions / 가정들).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Boolean algebra là algebra của predicates và decisions. Truth table cho semantics; algebraic identities cho transformation; gates/bit operations cho implementation. Cùng expression có ba mặt: nó nghĩa gì, nó được simplify thế nào, và máy thực thi nó ra sao.
+> Boolean algebra là algebra của predicates và decisions. Truth bảng (table / 테이블) cho ngữ nghĩa (semantics / 의미론); algebraic identities cho transformation; gates/bit operations cho hiện thực (implementation / 구현). Cùng expression có ba mặt: nó nghĩa gì, nó được simplify thế nào, và máy thực thi nó ra sao.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 **“OR nghĩa exactly one true.”** Không; đó là XOR.
 
-**“Truth-equivalent code luôn runtime-equivalent.”** Không nếu có short-circuit/side effects.
+**“Truth-equivalent mã (code / 코드) luôn runtime-equivalent.”** Không nếu có short-circuit/side effects.
 
 **“Bitwise và logical operators interchangeable.”** Không.
 
-**“NULL trong SQL chỉ là false.”** Không; nó tạo unknown semantics.
+**“NULL trong SQL chỉ là false.”** Không; nó tạo unknown ngữ nghĩa (semantics / 의미론).
 
-**“Parity detect mọi corruption.”** Không; detection capability phụ thuộc error pattern.
+**“Parity detect mọi corruption.”** Không; detection năng lực (capability / 역량) phụ thuộc lỗi (error / 오류) mẫu (pattern / 패턴).
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph theory](./00_graph_theory.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

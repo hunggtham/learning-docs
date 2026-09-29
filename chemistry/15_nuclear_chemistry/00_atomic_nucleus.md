@@ -1,5 +1,8 @@
 # Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron
 
+> **Mạch đọc:** Đọc **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hạt nhân không phải một quả cầu rắn thu nhỏ** sang **Ký hiệu hạt nhân**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Hạt nhân nguyên tử (atomic nucleus / 원자핵)** chứa proton và neutron, gọi chung là **nucleon (핵자)**. Hóa học hạt nhân bắt đầu khi thang năng lượng chuyển từ các trạng thái electron cỡ eV sang các quá trình hạt nhân cỡ keV–MeV. Ở thang này, tương tác hạt nhân mạnh, lực Coulomb và cấu trúc lượng tử của nucleon cùng quyết định độ bền của nuclide.
 
 Trước khi đi sâu, nên nối lại ba prerequisite:
@@ -278,7 +281,7 @@ Các nucleon ban đầu ở hạt nhân rất nhẹ có năng lượng liên k�
 
 Nếu sản phẩm có tổng năng lượng thấp hơn, phần chênh lệch xuất hiện dưới dạng động năng/bức xạ.
 
-Không phải “do tạo hạt nhân lớn hơn” nói chung; động lực đến từ **đi về vùng binding energy per nucleon cao hơn**.
+Không phải “do tạo hạt nhân lớn hơn” nói chung; động lực đến từ **đi về vùng binding năng lượng (energy / 에너지) per nucleon cao hơn**.
 
 ## Ví dụ suy luận: vì sao uranium có thể phân hạch còn iron thì không giải phóng năng lượng theo cùng cách?
 
@@ -286,7 +289,7 @@ Uranium nằm phía hạt nhân nặng của đường cong liên kết. Tách n
 
 Iron/Ni đã gần đỉnh đường cong. Tách chúng thành hạt nhân nhỏ hơn thường không cho cùng lợi ích năng lượng.
 
-Đây là lý do đường cong `Eb/A`, chứ không phải nhãn “nặng/nhẹ”, mới là mental model nền.
+Đây là lý do đường cong `Eb/A`, chứ không phải nhãn “nặng/nhẹ”, mới là mô hình tư duy (mental model / 사고 모델) nền.
 
 ## Những hiểu lầm thường gặp
 
@@ -325,3 +328,5 @@ Z + N
 Năng lượng liên kết và cấu trúc lớp quyết định nuclide nào tồn tại lâu; động học phân rã quyết định chúng tồn tại lâu đến mức nào.
 
 Xem tiếp: [Phóng xạ](./01_radioactivity.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 radioactivity](./01_radioactivity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

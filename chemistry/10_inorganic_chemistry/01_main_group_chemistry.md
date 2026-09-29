@@ -1,5 +1,8 @@
 # Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng
 
+> **Mạch đọc:** Đọc **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Một khung suy luận chung trước khi đi từng nhóm** sang **Nhóm 1 — kim loại kiềm: một electron dễ rời khỏi hệ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Nguyên tố nhóm chính (main-group elements / 주족 원소)** gồm các nguyên tố khối s và khối p. Hóa học của chúng cho thấy rất rõ cách **cấu hình electron hóa trị, kích thước nguyên tử, độ âm điện và năng lượng orbital** tạo nên xu hướng tuần hoàn, đồng thời cũng cho thấy vì sao các xu hướng đó luôn có những ngoại lệ có thể giải thích được.
 
 Nếu chỉ học rằng “nhóm 1 tạo +1, nhóm 17 tạo −1”, ta mới nhìn thấy lớp ngoài cùng của vấn đề. Hóa học nhóm chính trở nên hữu ích khi ta hỏi vì sao một xu hướng tồn tại, vì sao các nguyên tố chu kỳ 2 khác bất thường so với các nguyên tố nằm dưới chúng, và vì sao trạng thái oxy hóa thay đổi khi nguyên tử trở nên nặng hơn.
@@ -60,7 +63,7 @@ BF_3 + :NH_3 \rightarrow F_3B\leftarrow NH_3
 
 Hóa học boron còn vượt khỏi cách ghi bát tử đơn giản. Borane như \(B_2H_6\) có **liên kết đa tâm thiếu electron (electron-deficient multicenter bonding)**, trong đó mô hình “mỗi liên kết = một cặp electron nằm giữa đúng hai nguyên tử” không còn đủ.
 
-Nhôm (Al) lớn hơn và điện dương hơn. \(Al^{3+}\) có mật độ điện tích cao nên hóa học của Al trong nước rất nhạy với acid–base. \(Al_2O_3/Al(OH)_3\) lưỡng tính vì nhôm có thể phản ứng trong cả môi trường acid lẫn base.
+Nhôm (Al) lớn hơn và điện dương hơn. \(Al^{3+}\) có mật độ điện tích cao nên hóa học của Al trong nước rất nhạy với acid–cơ sở (base / 기반). \(Al_2O_3/Al(OH)_3\) lưỡng tính vì nhôm có thể phản ứng trong cả môi trường acid lẫn cơ sở (base / 기반).
 
 Khi đi xuống nhóm, trạng thái oxy hóa +1 được ổn định hơn do hiệu ứng cặp electron trơ, đặc biệt rõ với Tl(I).
 
@@ -80,7 +83,7 @@ Xuống Sn và Pb, trạng thái +2 dần ổn định hơn so với +4. Vì v�
 
 Orbital 3p của phospho tạo liên kết π kém hiệu quả hơn, nên P thường ưu tiên khung liên kết đơn P–P/P–O và môi trường phối trí cao hơn.
 
-\(NH_3\) và \(PH_3\) đều có dạng \(EH_3\), nhưng tính base khác nhau đáng kể. Cặp electron tự do trên \(NH_3\) có năng lượng và vị trí thuận lợi hơn cho proton hóa, trong khi cặp electron của \(PH_3\) có đặc tính orbital khác và kém sẵn sàng hơn. Đây là ví dụ cho thấy tương đồng công thức phân tử không đủ để suy khả năng phản ứng.
+\(NH_3\) và \(PH_3\) đều có dạng \(EH_3\), nhưng tính cơ sở (base / 기반) khác nhau đáng kể. Cặp electron tự do trên \(NH_3\) có năng lượng và vị trí thuận lợi hơn cho proton hóa, trong khi cặp electron của \(PH_3\) có đặc tính orbital khác và kém sẵn sàng hơn. Đây là ví dụ cho thấy tương đồng công thức phân tử không đủ để suy khả năng phản ứng.
 
 Nitơ có trạng thái oxy hóa từ −3 tới +5 và giữ vai trò trung tâm trong phân bón, thuốc nổ, hóa học NOx khí quyển và chu trình nitơ sinh học.
 
@@ -128,17 +131,17 @@ Liên kết đa tâm, đóng góp cộng hưởng ion và sự phi định xứ 
 
 Điều cần giữ lại là: **quy tắc bát tử là công cụ ghi sổ cục bộ**, đặc biệt hữu ích cho nguyên tố chu kỳ 2, chứ không phải định luật lượng tử nền tảng.
 
-## Xu hướng acid–base của hydride và oxide
+## Xu hướng acid–cơ sở (base / 기반) của hydride và oxide
 
 Hóa học tuần hoàn dễ nhớ hơn nếu suy luận từ độ phân cực liên kết và độ bền của tiểu phân liên hợp.
 
 Độ acid của hydride \(EH\) thường tăng khi đi xuống một nhóm vì liên kết E–H yếu dần và anion liên hợp lớn hơn, dễ phân cực hơn. Qua một chu kỳ, tính acid thường tăng khi độ âm điện của nguyên tử trung tâm tăng.
 
-Oxide chuyển dần từ base → lưỡng tính → acid khi đi từ kim loại điện dương sang phi kim có độ âm điện cao. Hai xu hướng này là hai biểu hiện khác nhau của sự phân bố electron.
+Oxide chuyển dần từ cơ sở (base / 기반) → lưỡng tính → acid khi đi từ kim loại điện dương sang phi kim có độ âm điện cao. Hai xu hướng này là hai biểu hiện khác nhau của sự phân bố electron.
 
 ### Ví dụ suy luận: vì sao \(Al_2O_3\) lưỡng tính?
 
-Nhôm nằm giữa vùng kim loại điện dương mạnh và vùng phi kim. Liên kết Al–O đủ phân cực để oxide phản ứng với acid, nhưng Al(III) cũng là acid Lewis mạnh nên trong môi trường base, các tiểu phân hydroxo hòa tan có thể được ổn định. Vì vậy tính lưỡng tính không phải một ngoại lệ phải học thuộc; nó phản ánh vị trí trung gian của Al trong phổ ion–cộng hóa trị.
+Nhôm nằm giữa vùng kim loại điện dương mạnh và vùng phi kim. Liên kết Al–O đủ phân cực để oxide phản ứng với acid, nhưng Al(III) cũng là acid Lewis mạnh nên trong môi trường cơ sở (base / 기반), các tiểu phân hydroxo hòa tan có thể được ổn định. Vì vậy tính lưỡng tính không phải một ngoại lệ phải học thuộc; nó phản ánh vị trí trung gian của Al trong phổ ion–cộng hóa trị.
 
 ## Liên hệ công nghiệp
 
@@ -169,3 +172,5 @@ Không. Ở nguyên tố nặng, hiệu ứng cặp electron trơ, tương tác 
 > Hóa học nhóm chính là **cuộc thương lượng giữa số electron hóa trị và vật lý orbital**. Số electron tạo khung hành vi; kích thước nguyên tử, độ âm điện, độ chồng phủ orbital, solvat hóa và hiệu ứng tương đối tính quyết định chi tiết cũng như ngoại lệ.
 
 Xem tiếp: [Kim loại chuyển tiếp](./02_transition_metals.md), nơi các trạng thái d gần nhau về năng lượng làm không gian hóa học phong phú hơn nhiều so với khuôn mẫu của nhóm chính.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 inorganic compounds](./00_inorganic_compounds.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

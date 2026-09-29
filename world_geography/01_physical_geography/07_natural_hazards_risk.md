@@ -1,11 +1,14 @@
 # Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro
 
+> **Mạch đọc:** Đọc **Thiên tai, hiểm họa, mức độ phơi lộ và rủi ro** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hiểm họa tự nhiên không tự động trở thành thảm họa** sang **Từ hiểm họa đơn đến chuỗi rủi ro**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Hiểm họa tự nhiên không tự động trở thành thảm họa
 
 Một trận động đất lớn giữa vùng không người có thể là **hiểm họa (hazard)** nhưng gây ít tổn thất. Một trận động đất nhỏ hơn xảy ra dưới thành phố đông dân có thể tạo hậu quả nghiêm trọng hơn. Vì vậy **rủi ro (risk / 위험)** thường được phân tích từ ít nhất ba thành phần: hiểm họa, mức độ phơi lộ và tính dễ tổn thương.
 
 \[
-Risk \approx f(Hazard, Exposure, Vulnerability)
+rủi ro (risk / 위험) \approx f(Hazard, Exposure, Vulnerability)
 \]
 
 Đây không phải công thức số học phổ quát. **Hiểm họa (hazard)** mô tả hiện tượng vật lý có khả năng gây thiệt hại. **Mức độ phơi lộ (exposure)** cho biết người, tài sản và hạ tầng nào nằm trong vùng ảnh hưởng. **Tính dễ tổn thương (vulnerability)** mô tả mức chúng dễ bị tổn thất. Nhiều khung còn bổ sung **năng lực ứng phó (capacity)**, tức khả năng phòng ngừa, ứng cứu và phục hồi.
@@ -32,9 +35,9 @@ P(\ge1)=1-(1-0.01)^{30}\approx 26\%
 
 ## Tổn thất kỳ vọng và phần đuôi của phân bố
 
-Quản lý rủi ro không chỉ hỏi “sự kiện thường xảy ra nhất là gì?”. Một sự kiện hiếm nhưng tổn thất cực lớn có thể chi phối **tổn thất kỳ vọng (expected loss)** và yêu cầu vốn dự phòng. Vì vậy engineering, insurance và disaster planning thường quan tâm cả **đường cong vượt tổn thất (loss exceedance curve)**: xác suất tổn thất vượt một mức nhất định.
+Quản lý rủi ro không chỉ hỏi “sự kiện thường xảy ra nhất là gì?”. Một sự kiện hiếm nhưng tổn thất cực lớn có thể chi phối **tổn thất kỳ vọng (expected loss)** và yêu cầu vốn dự phòng. Vì vậy kỹ thuật (engineering / 엔지니어링), insurance và disaster planning thường quan tâm cả **đường cong vượt tổn thất (loss exceedance curve)**: xác suất tổn thất vượt một mức nhất định.
 
-Đây là bridge quan trọng giữa physical geography và finance. Hazard model mô tả physical intensity; exposure model mô tả tài sản/người; vulnerability curve chuyển intensity thành damage; financial layer chuyển damage thành loss.
+Đây là cầu nối (bridge / 브리지) quan trọng giữa vật lý (physical / 물리적) geography và finance. Hazard mô hình (model / 모델) mô tả vật lý (physical / 물리적) intensity; exposure mô hình (model / 모델) mô tả tài sản/người; vulnerability curve chuyển intensity thành damage; financial tầng (layer / 계층) chuyển damage thành mất mát (loss / 손실).
 
 ## Động đất: từ nguồn phát đến thiệt hại
 
@@ -88,17 +91,17 @@ Rủi ro cháy vùng giáp ranh đô thị–rừng phụ thuộc cả vật li�
 
 ## Vulnerability là biến động, không phải thuộc tính cố định của “nhóm yếu thế”
 
-Tính dễ tổn thương thay đổi theo income, housing quality, mobility, health, insurance, social network, language access và timing. Cùng một hộ có thể ít vulnerable trước earthquake nhưng rất vulnerable trước heat wave nếu nhà ở nóng và không có cooling.
+Tính dễ tổn thương thay đổi theo income, housing chất lượng (quality / 품질), mobility, health, insurance, xã hội (social / 사회적) mạng (network / 네트워크), ngôn ngữ (language / 언어) truy cập (access / 접근) và timing. Cùng một hộ có thể ít vulnerable trước earthquake nhưng rất vulnerable trước heat wave nếu nhà ở nóng và không có cooling.
 
-Vulnerability cũng có tính địa lý. Một cộng đồng thu nhập thấp ở gần job nhưng nằm trong floodplain có trade-off khác cộng đồng ở xa hazard nhưng thiếu transport. Vì vậy risk reduction cần tránh đơn giản hóa vulnerability thành một chỉ số duy nhất.
+Vulnerability cũng có tính địa lý. Một cộng đồng thu nhập thấp ở gần job nhưng nằm trong floodplain có sự đánh đổi (trade-off / 트레이드오프) khác cộng đồng ở xa hazard nhưng thiếu vận chuyển (transport / 전송). Vì vậy rủi ro (risk / 위험) reduction cần tránh đơn giản hóa vulnerability thành một chỉ số duy nhất.
 
-## Hạ tầng quan trọng và dependency graph
+## Hạ tầng quan trọng và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
-Điện, nước, viễn thông, metro, hospital và data center phụ thuộc lẫn nhau. Mất điện có thể dừng pump nước; mất telecom làm response chậm; flood ở một substation có thể làm nhiều district mất dịch vụ dù bản thân chúng không ngập.
+Điện, nước, viễn thông, metro, hospital và dữ liệu (data / 데이터) center phụ thuộc lẫn nhau. Mất điện có thể dừng pump nước; mất telecom làm phản hồi (response / 응답) chậm; flood ở một substation có thể làm nhiều district mất dịch vụ dù bản thân chúng không ngập.
 
-Có thể mô hình hóa hạ tầng như **đồ thị phụ thuộc (dependency graph)**. Rủi ro hệ thống phụ thuộc không chỉ node nào nằm trong hazard zone mà node nào có betweenness cao, có backup hay single point of failure.
+Có thể mô hình hóa hạ tầng như **đồ thị phụ thuộc (dependency graph)**. Rủi ro hệ thống phụ thuộc không chỉ nút (node / 노드) nào nằm trong hazard zone mà nút (node / 노드) nào có betweenness cao, có backup hay single điểm (point / 지점) of thất bại (failure / 실패).
 
-Đây là nơi physical geography nối trực tiếp với urban planning, logistics và IT resilience.
+Đây là nơi vật lý (physical / 물리적) geography nối trực tiếp với urban planning, logistics và IT resilience.
 
 ## Cảnh báo sớm: từ dự báo đến hành động
 
@@ -114,9 +117,9 @@ Công trình bảo vệ có thể tạo **nghịch lý đê (levee effect)**: kh
 
 ## Tránh rủi ro, bảo vệ tại chỗ và managed retreat
 
-Có ba logic lớn trong adaptation không gian. **Avoidance** hạn chế xây mới ở nơi rủi ro cao. **Protection** giữ settlement tại chỗ bằng levee, seawall, slope stabilization hay cooling infrastructure. **Accommodation** chấp nhận hazard nhưng giảm damage bằng elevated building, floodable space hoặc operating rule.
+Có ba lô-gic (logic / 논리) lớn trong adaptation không gian. **Avoidance** hạn chế xây mới ở nơi rủi ro cao. **Protection** giữ settlement tại chỗ bằng levee, seawall, slope stabilization hay cooling hạ tầng (infrastructure / 인프라). **Accommodation** chấp nhận hazard nhưng giảm damage bằng elevated building, floodable không gian (space / 공간) hoặc operating quy tắc (rule / 규칙).
 
-Khi long-term protection quá đắt hoặc failure consequence quá lớn, một số nơi còn cân nhắc **rút lui có quản lý (managed retreat)**. Đây không phải giải pháp kỹ thuật thuần túy vì liên quan property rights, compensation, livelihood, heritage và political legitimacy.
+Khi long-term protection quá đắt hoặc thất bại (failure / 실패) consequence quá lớn, một số nơi còn cân nhắc **rút lui có quản lý (managed retreat)**. Đây không phải giải pháp kỹ thuật thuần túy vì liên quan thuộc tính (property / 속성) rights, compensation, livelihood, heritage và political legitimacy.
 
 ## Bảo hiểm và truyền giá rủi ro
 
@@ -138,13 +141,13 @@ Bản đồ rủi ro thường chồng lớp hiểm họa với dân số, tài 
 
 Đặc biệt, việc tổng hợp dữ liệu theo quận có thể che các điểm nóng ở cấp khu phố. Vì vậy quy mô phân tích phải phù hợp quyết định cần hỗ trợ.
 
-## Korea và Vietnam như hai cấu hình risk khác nhau
+## Korea và Vietnam như hai cấu hình rủi ro (risk / 위험) khác nhau
 
-Korea có urban concentration và infrastructure density cao, nên một event tại metropolitan/industrial node có thể tạo cascading economic loss dù hazard footprint không lớn. Heavy rain, heat, typhoon và landslide cần được đọc cùng underground transport, hillside settlement và critical infrastructure.
+Korea có urban concentration và hạ tầng (infrastructure / 인프라) density cao, nên một sự kiện (event / 이벤트) tại metropolitan/industrial nút (node / 노드) có thể tạo cascading economic mất mát (loss / 손실) dù hazard footprint không lớn. Heavy rain, heat, typhoon và landslide cần được đọc cùng underground vận chuyển (transport / 전송), hillside settlement và trọng yếu (critical / 중요) hạ tầng (infrastructure / 인프라).
 
-Vietnam có exposure lớn ở delta, long coastline và monsoon/typhoon system; flood, storm surge, river sediment, subsidence và urbanization tương tác mạnh. Đồng bằng tạo agriculture–industry–settlement advantage nhưng cùng lúc tạo concentration of exposure.
+Vietnam có exposure lớn ở delta, long coastline và monsoon/typhoon hệ thống (system / 시스템); flood, storm surge, river sediment, subsidence và urbanization tương tác mạnh. Đồng bằng tạo agriculture–industry–settlement advantage nhưng cùng lúc tạo concentration of exposure.
 
-Hai case cho thấy không có “hazard ranking” đơn giản. Risk đến từ **physical process × settlement pattern × infrastructure network × adaptive capacity**.
+Hai trường hợp (case / 사례) cho thấy không có “hazard ranking” đơn giản. rủi ro (risk / 위험) đến từ **vật lý (physical / 물리적) tiến trình (process / 프로세스) × settlement mẫu (pattern / 패턴) × hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) × adaptive sức chứa (capacity / 용량)**.
 
 ## Những hiểu lầm phổ biến
 
@@ -154,10 +157,12 @@ Hai case cho thấy không có “hazard ranking” đơn giản. Risk đến t�
 
 **“Bản đồ nguy hiểm càng chi tiết càng chính xác.”** Không nhất thiết; độ phân giải cao không loại bỏ sai số mô hình và dữ liệu đầu vào.
 
-**“Xây công trình bảo vệ là đã giải quyết risk.”** Sai; protection có thể đổi behavior, tạo residual risk và làm consequence lớn hơn nếu protection fail.
+**“Xây công trình bảo vệ là đã giải quyết rủi ro (risk / 위험).”** Sai; protection có thể đổi hành vi (behavior / 동작), tạo residual rủi ro (risk / 위험) và làm consequence lớn hơn nếu protection thất bại (fail / 실패).
 
 ## Mô hình tư duy
 
-> Thảm họa xuất hiện khi **quá trình vật lý gặp hệ thống xã hội có phơi lộ, dễ tổn thương và dependency**. Hãy lần theo chuỗi: nguồn hiểm họa → đường truyền → nơi phơi lộ → điểm yếu → critical network → khả năng ứng phó → phục hồi. Quản lý rủi ro tốt là phá chuỗi ở nhiều mắt xích, không chỉ cố ngăn hiện tượng tự nhiên.
+> Thảm họa xuất hiện khi **quá trình vật lý gặp hệ thống xã hội có phơi lộ, dễ tổn thương và phụ thuộc (dependency / 의존성)**. Hãy lần theo chuỗi: nguồn hiểm họa → đường truyền → nơi phơi lộ → điểm yếu → trọng yếu (critical / 중요) mạng (network / 네트워크) → khả năng ứng phó → phục hồi. Quản lý rủi ro tốt là phá chuỗi ở nhiều mắt xích, không chỉ cố ngăn hiện tượng tự nhiên.
 
 Xem tiếp: [Earth system](../00_foundations/01_earth_as_system.md), [Urbanization](../02_human_geography/02_settlement_urbanization.md), [Địa lý chính trị](../02_human_geography/04_political_geography_borders.md), [Biến đổi khí hậu](../04_global_systems/00_climate_change.md), [GIS](../00_foundations/04_geospatial_data_gis_remote_sensing.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 plate tectonics geologic time](./00_plate_tectonics_geologic_time.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

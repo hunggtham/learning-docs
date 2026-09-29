@@ -1,6 +1,9 @@
 # Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기
 
-Giấc ngủ không phải trạng thái “tắt hệ thống”. Não và cơ thể vẫn hoạt động theo các pattern có tổ chức, liên quan memory consolidation, metabolic regulation, immune function, emotion và attention.
+> **Mạch đọc:** Đọc **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hai hệ điều khiển giấc ngủ** sang **Homeostatic sleep pressure**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Giấc ngủ không phải trạng thái “tắt hệ thống”. Não và cơ thể vẫn hoạt động theo các mẫu (pattern / 패턴) có tổ chức, liên quan bộ nhớ (memory / 메모리) consolidation, metabolic regulation, immune hàm (function / 함수), emotion và attention.
 
 Khi nói về vấn đề ngủ, cần phân biệt ít nhất ba lớp:
 
@@ -12,17 +15,17 @@ Ba lớp này dễ bị trộn lẫn.
 
 ## Hai hệ điều khiển giấc ngủ
 
-Một mental model cơ bản gồm:
+Một mô hình tư duy (mental model / 사고 모델) cơ bản gồm:
 
 ### Homeostatic sleep pressure
 
 Càng thức lâu, áp lực ngủ càng tăng. Sleep làm pressure giảm.
 
-### Circadian system
+### Circadian hệ thống (system / 시스템)
 
-Nhịp sinh học khoảng 24 giờ điều chỉnh timing của alertness, melatonin, temperature và nhiều process khác.
+Nhịp sinh học khoảng 24 giờ điều chỉnh timing của alertness, melatonin, temperature và nhiều tiến trình (process / 프로세스) khác.
 
-Vì vậy một người có thể rất mệt nhưng vẫn khó ngủ nếu circadian system đang thúc đẩy wakefulness.
+Vì vậy một người có thể rất mệt nhưng vẫn khó ngủ nếu circadian hệ thống (system / 시스템) đang thúc đẩy wakefulness.
 
 ```text
 sleep pressure + circadian timing + arousal
@@ -59,15 +62,15 @@ Vì vậy paradox của insomnia là **càng cố kiểm soát sleep trực ti�
 
 Nếu một người nằm trên giường hàng giờ để lo lắng, lướt điện thoại hoặc cố ngủ, bed có thể dần trở thành cue cho wakefulness và frustration.
 
-Đây là lý do **stimulus control** trong CBT-I thường nhắm tái liên kết bed với sleep.
+Đây là lý do **stimulus điều khiển (control / 제어)** trong CBT-I thường nhắm tái liên kết bed với sleep.
 
 ## CBT-I
 
 **Cognitive Behavioral Therapy for Insomnia (CBT-I)** là intervention có cấu trúc, thường gồm:
 
-- stimulus control;
+- stimulus điều khiển (control / 제어);
 - sleep restriction hoặc sleep compression có giám sát;
-- cognitive work về catastrophic belief;
+- cognitive công việc (work / 작업) về catastrophic belief;
 - sleep scheduling;
 - relaxation khi phù hợp;
 - sleep-hygiene education như phần hỗ trợ.
@@ -78,18 +81,18 @@ Nếu một người nằm trên giường hàng giờ để lo lắng, lướt 
 
 Trong CBT-I, sleep restriction therapy giới hạn time-in-bed theo sleep ability để tăng sleep drive và consolidation, sau đó mở rộng dần.
 
-Đây là clinical technique, cần thận trọng ở một số condition như bipolar disorder, epilepsy hoặc high fall risk. Không nên tự áp dụng cực đoan.
+Đây là clinical technique, cần thận trọng ở một số điều kiện (condition / 조건) như bipolar disorder, epilepsy hoặc high fall rủi ro (risk / 위험). Không nên tự áp dụng cực đoan.
 
 ## Circadian rhythm sleep-wake disorders
 
 Một số người ngủ tốt nếu được ngủ theo giờ riêng nhưng rất khó theo schedule xã hội.
 
-Ví dụ **Delayed Sleep-Wake Phase Disorder**: sleep onset và wake time bị trễ đáng kể. Vấn đề không nhất thiết là sleep quality, mà là timing conflict với school/work.
+Ví dụ **Delayed Sleep-Wake Phase Disorder**: sleep onset và wake thời gian (time / 시간) bị trễ đáng kể. Vấn đề không nhất thiết là sleep chất lượng (quality / 품질), mà là timing xung đột (conflict / 충돌) với school/công việc (work / 작업).
 
 Treatment có thể dùng:
 
 - light timing;
-- consistent wake time;
+- consistent wake thời gian (time / 시간);
 - melatonin timing trong một số trường hợp;
 - gradual schedule adjustment.
 
@@ -99,11 +102,11 @@ Timing rất quan trọng; “uống melatonin lúc nào cũng được” là h
 
 **Zeitgeber** là tín hiệu môi trường đồng bộ circadian rhythm. Light là tín hiệu mạnh nhất.
 
-Morning light thường giúp kéo rhythm sớm hơn; bright light vào tối có thể delay rhythm. Nhưng effect phụ thuộc phase hiện tại, nên không nên áp dụng như một rule đơn giản cho mọi người.
+Morning light thường giúp kéo rhythm sớm hơn; bright light vào tối có thể delay rhythm. Nhưng tác động (effect / 효과) phụ thuộc phase hiện tại, nên không nên áp dụng như một quy tắc (rule / 규칙) đơn giản cho mọi người.
 
-## Social jetlag
+## Xã hội (social / 사회적) jetlag
 
-Nếu weekday ngủ theo một schedule nhưng weekend lệch vài giờ, cơ thể liên tục phải chuyển phase nhẹ. Hiện tượng này thường được gọi là **social jetlag**.
+Nếu weekday ngủ theo một schedule nhưng weekend lệch vài giờ, cơ thể liên tục phải chuyển phase nhẹ. Hiện tượng này thường được gọi là **xã hội (social / 사회적) jetlag**.
 
 Ví dụ:
 
@@ -124,19 +127,19 @@ Nó giải thích vì sao “đã ngủ đủ 8 tiếng” không đảm bảo t
 
 Nap có thể cải thiện alertness nhưng timing và duration quan trọng.
 
-Nap dài hoặc quá muộn có thể giảm homeostatic sleep pressure buổi tối. Với người insomnia, nap đôi khi duy trì loop ngủ đêm kém.
+Nap dài hoặc quá muộn có thể giảm homeostatic sleep pressure buổi tối. Với người insomnia, nap đôi khi duy trì vòng lặp (loop / 루프) ngủ đêm kém.
 
-Nhưng với sleep deprivation cấp tính, shift work hoặc một số schedule đặc biệt, nap có thể rất hữu ích.
+Nhưng với sleep deprivation cấp tính, shift công việc (work / 작업) hoặc một số schedule đặc biệt, nap có thể rất hữu ích.
 
 ## Caffeine
 
 Caffeine chủ yếu chặn adenosine receptor, giảm cảm giác sleep pressure. Half-life có individual difference đáng kể.
 
-Một người uống coffee chiều có thể vẫn ngủ được nhưng sleep depth hoặc latency bị ảnh hưởng. Vì vậy “tôi ngủ được nên caffeine không ảnh hưởng” chưa chắc đúng.
+Một người uống coffee chiều có thể vẫn ngủ được nhưng sleep độ sâu (depth / 깊이) hoặc độ trễ (latency / 지연 시간) bị ảnh hưởng. Vì vậy “tôi ngủ được nên caffeine không ảnh hưởng” chưa chắc đúng.
 
 ## Alcohol
 
-Alcohol có thể làm sleep onset nhanh hơn nhưng thường fragment sleep về sau và ảnh hưởng architecture. Dùng alcohol như sleep aid có thể tạo vòng dependence nguy hiểm.
+Alcohol có thể làm sleep onset nhanh hơn nhưng thường fragment sleep về sau và ảnh hưởng kiến trúc (architecture / 아키텍처). Dùng alcohol như sleep aid có thể tạo vòng dependence nguy hiểm.
 
 ## Sleep apnea
 
@@ -144,17 +147,17 @@ Alcohol có thể làm sleep onset nhanh hơn nhưng thường fragment sleep v�
 
 Dấu hiệu có thể gồm snoring, witnessed apnea, morning headache hoặc daytime sleepiness, nhưng không phải ai cũng có đủ dấu hiệu.
 
-OSA là medical condition cần assessment; sleep-hygiene advice không giải quyết airway obstruction.
+OSA là medical điều kiện (condition / 조건) cần assessment; sleep-hygiene advice không giải quyết airway obstruction.
 
 ## Restless legs và movement disorders
 
 Restless Legs Syndrome gây urge khó chịu muốn cử động chân, thường tăng khi nghỉ và về tối. Nó khác anxiety restlessness.
 
-Một lần nữa, “khó ngủ” là symptom chung của nhiều mechanism khác nhau.
+Một lần nữa, “khó ngủ” là symptom chung của nhiều cơ chế (mechanism / 메커니즘) khác nhau.
 
 ## Sleep và depression
 
-Sleep disturbance vừa là symptom vừa có thể là risk factor trong mood disorder.
+Sleep disturbance vừa là symptom vừa có thể là rủi ro (risk / 위험) factor trong mood disorder.
 
 Insomnia kéo dài có thể làm emotion regulation kém hơn, còn depression có thể làm sleep onset, maintenance hoặc early awakening thay đổi.
 
@@ -164,31 +167,31 @@ Xem [[03_depression_bipolar_and_suicidality]].
 
 Giảm nhu cầu ngủ có thể là dấu hiệu mania/hypomania, khác với insomnia thông thường nơi người ta muốn ngủ nhưng không ngủ được.
 
-Sleep loss cũng có thể destabilize mood ở người vulnerable. Vì vậy extreme sleep-restriction technique cần đặc biệt cẩn thận.
+Sleep mất mát (loss / 손실) cũng có thể destabilize mood ở người vulnerable. Vì vậy extreme sleep-restriction technique cần đặc biệt cẩn thận.
 
 ## Sleep và anxiety
 
-Anxiety tăng physiological arousal và threat monitoring. Ngược lại sleep loss làm threat sensitivity và emotion control kém hơn.
+Anxiety tăng physiological arousal và threat monitoring. Ngược lại sleep mất mát (loss / 손실) làm threat sensitivity và emotion điều khiển (control / 제어) kém hơn.
 
-Hai hệ có thể tạo feedback loop.
+Hai hệ có thể tạo vòng phản hồi (feedback loop / 피드백 루프).
 
-## Sleep và cognitive performance
+## Sleep và cognitive hiệu năng (performance / 성능)
 
-Thiếu ngủ ảnh hưởng attention, working memory, reaction time và error monitoring. Điểm nguy hiểm là subjective confidence không luôn giảm tương ứng.
+Thiếu ngủ ảnh hưởng attention, working bộ nhớ (memory / 메모리), reaction thời gian (time / 시간) và lỗi (error / 오류) monitoring. Điểm nguy hiểm là subjective confidence không luôn giảm tương ứng.
 
 Người thiếu ngủ có thể **không nhận ra mình đang kém đến mức nào**.
 
-Điều này quan trọng trong driving, on-call work, coding production và medical decision-making.
+Điều này quan trọng trong driving, on-call công việc (work / 작업), coding môi trường vận hành (production / 운영 환경) và medical decision-making.
 
-## Shift work
+## Shift công việc (work / 작업)
 
-Shift work tạo conflict giữa circadian biology và work demand. Không có một solution hoàn hảo, nhưng environment design có thể giảm harm:
+Shift công việc (work / 작업) tạo xung đột (conflict / 충돌) giữa circadian biology và công việc (work / 작업) demand. Không có một solution hoàn hảo, nhưng môi trường (environment / 환경) thiết kế (design / 설계) có thể giảm harm:
 
 - strategic light;
 - predictable rotation;
-- nap policy;
+- nap chính sách (policy / 정책);
 - caffeine timing;
-- protected recovery sleep.
+- protected khôi phục (recovery / 복구) sleep.
 
 Đổ toàn bộ responsibility lên cá nhân là không đủ nếu schedule tổ chức gây chronic circadian disruption.
 
@@ -198,16 +201,18 @@ Shift work tạo conflict giữa circadian biology và work demand. Không có m
 
 **“Nằm trên giường lâu hơn sẽ bù mất ngủ.”** Với insomnia, time-in-bed quá dài đôi khi làm sleep efficiency thấp hơn.
 
-**“Melatonin là thuốc ngủ mạnh.”** Nó chủ yếu là circadian signal và effect phụ thuộc timing.
+**“Melatonin là thuốc ngủ mạnh.”** Nó chủ yếu là circadian tín hiệu (signal / 신호) và tác động (effect / 효과) phụ thuộc timing.
 
-**“Ngủ bù cuối tuần xóa hoàn toàn thiếu ngủ trong tuần.”** Recovery có thể giúp nhưng không phải mọi effect đều reset ngay.
+**“Ngủ bù cuối tuần xóa hoàn toàn thiếu ngủ trong tuần.”** khôi phục (recovery / 복구) có thể giúp nhưng không phải mọi tác động (effect / 효과) đều reset ngay.
 
 **“Sleep hygiene chữa được mọi insomnia.”** Insomnia chronic thường cần intervention sâu hơn.
 
-## Mental model
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Sleep tốt xuất hiện khi **sleep pressure đủ cao, circadian timing phù hợp và arousal đủ thấp**. Đừng chỉ hỏi “làm sao ngủ nhanh hơn”; hãy hỏi hệ nào đang cản sleep.
 
 ## Kết nối kiến thức
 
 Xem [[../01_brain_and_mind/08_sleep_circadian_and_recovery]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]], [[03_depression_bipolar_and_suicidality]], [[02_anxiety_ocd_and_trauma]], [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]], [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
+
+> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

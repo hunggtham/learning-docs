@@ -1,5 +1,8 @@
 # Nghiên cứu hệ thống, kiểm thử quá khứ, rủi ro và triển khai thực tế
 
+> **Mạch đọc:** Đặt **Nghiên cứu hệ thống, kiểm thử quá khứ, rủi ro và triển khai thực tế** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Ý tưởng không phải chiến lược** sang **2. Giả thuyết nhân quả**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Một ý tưởng giao dịch chỉ trở thành chiến lược khi được chuyển thành quy tắc rõ ràng, kiểm thử bằng dữ liệu đúng thời điểm, tính đủ chi phí giao dịch và vẫn hoạt động ngoài mẫu. Chương này dùng tiếng Việt làm ngôn ngữ giải thích; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn để tiện tra cứu.
 
 # Phần I — Bắt đầu từ giả thuyết
@@ -233,7 +236,7 @@ Nên xem cả vùng tham số thay vì một điểm tối ưu. Một vùng rộ
 
 ## 22. Độ ổn định qua nhiều thị trường
 
-Nếu cùng logic hoạt động ở nhiều thị trường liên quan, bằng chứng thường mạnh hơn trường hợp chỉ hoạt động ở một mã rất cụ thể.
+Nếu cùng lô-gic (logic / 논리) hoạt động ở nhiều thị trường liên quan, bằng chứng thường mạnh hơn trường hợp chỉ hoạt động ở một mã rất cụ thể.
 
 Tuy nhiên không nên đòi hỏi lợi thế phải phổ quát nếu giả thuyết vốn chỉ phù hợp với một cấu trúc thị trường riêng.
 
@@ -445,7 +448,7 @@ Sau kiểm thử tiến tới tương lai, quy mô thật rất nhỏ giúp thu 
 
 Mã nghiên cứu có thể chấp nhận thao tác thủ công. Hệ thống vận hành cần:
 
-- logic xác định;
+- lô-gic (logic / 논리) xác định;
 - nhật ký;
 - cơ chế thử lại;
 - giám sát;

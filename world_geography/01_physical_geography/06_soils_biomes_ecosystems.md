@@ -1,10 +1,13 @@
 # Đất, quần xã sinh vật và hệ sinh thái theo không gian
 
+> **Mạch đọc:** Đọc **Đất, quần xã sinh vật và hệ sinh thái theo không gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đất là một hệ động ở ranh giới giữa đá, nước, khí quyển và sự sống** sang **Phẫu diện đất là dấu vết của các dòng vật chất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Đất là một hệ động ở ranh giới giữa đá, nước, khí quyển và sự sống
 
 **Thổ nhưỡng (soil / 토양)** không đơn giản là đá vụn. Đất hình thành nơi vật liệu khoáng tương tác với nước, không khí, sinh vật và thời gian. Nó vừa là sản phẩm của địa chất–khí hậu, vừa là môi trường sống và kho chứa carbon, nước, chất dinh dưỡng.
 
-Một cách kinh điển để nghĩ về quá trình hình thành đất là mô hình các yếu tố: **khí hậu, sinh vật, địa hình, vật liệu mẹ và thời gian**. Trong tài liệu quốc tế thường gặp khung CLORPT: climate, organisms, relief, parent material, time. Đây không phải công thức dự đoán chính xác mà là danh sách các nhóm nguyên nhân chính.
+Một cách kinh điển để nghĩ về quá trình hình thành đất là mô hình các yếu tố: **khí hậu, sinh vật, địa hình, vật liệu mẹ và thời gian**. Trong tài liệu quốc tế thường gặp khung CLORPT: climate, organisms, relief, parent material, thời gian (time / 시간). Đây không phải công thức dự đoán chính xác mà là danh sách các nhóm nguyên nhân chính.
 
 Cùng một loại đá có thể tạo đất rất khác nếu khí hậu và sinh vật khác nhau. Ngược lại, hai vật liệu mẹ khác nhau có thể dần tạo đất có một số tính chất giống nhau nếu trải qua thời gian dài dưới môi trường tương tự.
 
@@ -123,3 +126,5 @@ Một hiểu lầm khác là phục hồi sinh thái chỉ cần trồng thật 
 > Hãy đọc đất và hệ sinh thái như **mạng dòng vật chất–năng lượng có trí nhớ**. Khí hậu cung cấp nước và nhiệt; đất điều tiết nước và dinh dưỡng; sinh vật thay đổi đất; nhiễu động tái cấu trúc hệ. Một trạng thái quan sát hôm nay là kết quả tích lũy của các dòng và nhiễu động trong quá khứ.
 
 Xem tiếp: [Nông nghiệp và hệ thống lương thực](../02_human_geography/06_agriculture_food_systems.md), [Hệ khí hậu](./03_global_climate_system.md), [Thủy văn](./04_hydrology_rivers_groundwater.md), [Phát triển bền vững](../04_global_systems/04_environment_sustainability.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 plate tectonics geologic time](./00_plate_tectonics_geologic_time.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

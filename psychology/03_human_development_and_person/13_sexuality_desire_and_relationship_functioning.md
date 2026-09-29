@@ -1,14 +1,17 @@
 # Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능
 
-Tính dục (sexuality) là một hệ thống gồm attraction, desire, arousal, behavior, meaning, identity, health và relationship context. Một lỗi phổ biến là coi ham muốn như một “mức pin cố định” của cá nhân. Trong thực tế, desire thay đổi theo stress, sleep, medication, health, novelty, safety, relationship quality và cách một người học về sexuality.
+> **Mạch đọc:** Đọc **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Desire không phải một thứ duy nhất** sang **Desire discrepancy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Tính dục (sexuality) là một hệ thống gồm attraction, desire, arousal, hành vi (behavior / 동작), meaning, định danh (identity / 식별자), health và relationship ngữ cảnh (context / 맥락). Một lỗi phổ biến là coi ham muốn như một “mức pin cố định” của cá nhân. Trong thực tế, desire thay đổi theo stress, sleep, medication, health, novelty, an toàn (safety / 안전), relationship chất lượng (quality / 품질) và cách một người học về sexuality.
 
 ## Desire không phải một thứ duy nhất
 
-**Ham muốn tự phát (spontaneous desire)** xuất hiện trước interaction sexual rõ ràng.
+**Ham muốn tự phát (spontaneous desire)** xuất hiện trước tương tác (interaction / 상호작용) sexual rõ ràng.
 
-**Ham muốn đáp ứng (responsive desire)** tăng sau khi có closeness, stimulation hoặc erotic context phù hợp.
+**Ham muốn đáp ứng (responsive desire)** tăng sau khi có closeness, stimulation hoặc erotic ngữ cảnh (context / 맥락) phù hợp.
 
-Cả hai pattern đều có thể bình thường. Nếu một người chỉ chờ “tự nhiên có mood” nhưng thường thuộc responsive pattern, họ có thể tưởng mình có vấn đề dù system vẫn hoạt động khi context thích hợp.
+Cả hai mẫu (pattern / 패턴) đều có thể bình thường. Nếu một người chỉ chờ “tự nhiên có mood” nhưng thường thuộc responsive mẫu (pattern / 패턴), họ có thể tưởng mình có vấn đề dù hệ thống (system / 시스템) vẫn hoạt động khi ngữ cảnh (context / 맥락) thích hợp.
 
 ## Desire discrepancy
 
@@ -19,7 +22,7 @@ Cách xử lý tốt cần tách:
 - frequency preference;
 - timing;
 - initiation style;
-- type of intimacy;
+- kiểu (type / 타입) of intimacy;
 - stress/health factor;
 - meaning mỗi người gán cho sex.
 
@@ -27,21 +30,21 @@ Goal không phải ép hai mức desire bằng nhau mà xây cách negotiation k
 
 ## Sexual arousal
 
-Arousal gồm subjective experience và physiological response. Hai component có thể không luôn khớp hoàn toàn.
+Arousal gồm subjective experience và physiological phản hồi (response / 응답). Hai thành phần (component / 컴포넌트) có thể không luôn khớp hoàn toàn.
 
-Physiological response không tự động chứng minh consent, desire hoặc enjoyment. Đây là distinction quan trọng trong education và forensic context.
+Physiological phản hồi (response / 응답) không tự động chứng minh consent, desire hoặc enjoyment. Đây là distinction quan trọng trong education và forensic ngữ cảnh (context / 맥락).
 
 ## Consent
 
-**Consent** cần được hiểu như process giao tiếp, không chỉ một lần nói “yes”.
+**Consent** cần được hiểu như tiến trình (process / 프로세스) giao tiếp, không chỉ một lần nói “yes”.
 
-Một consent có ý nghĩa cần đủ capacity, freedom khỏi coercion và khả năng thay đổi quyết định.
+Một consent có ý nghĩa cần đủ sức chứa (capacity / 용량), freedom khỏi coercion và khả năng thay đổi quyết định.
 
 Silence, freezing hoặc physiological arousal không tự động là consent.
 
-## Dual Control Model
+## Dual điều khiển (control / 제어) mô hình (model / 모델)
 
-Một mental model hữu ích là hệ **kích thích (excitation)** và **ức chế (inhibition)** hoạt động đồng thời.
+Một mô hình tư duy (mental model / 사고 모델) hữu ích là hệ **kích thích (excitation)** và **ức chế (inhibition)** hoạt động đồng thời.
 
 ```text
 erotic cue / attraction / novelty
@@ -57,9 +60,9 @@ Low desire có thể do excitation thấp, inhibition cao hoặc cả hai. Vì v
 
 ## Stress
 
-Stress làm attention chuyển sang threat và problem solving. Nếu nervous system liên tục trong state vigilance, erotic cue khó được ưu tiên.
+Stress làm attention chuyển sang threat và bài toán (problem / 문제) solving. Nếu nervous hệ thống (system / 시스템) liên tục trong trạng thái (state / 상태) vigilance, erotic cue khó được ưu tiên.
 
-Nói `hãy relax` không đủ nếu workload, conflict hoặc sleep deprivation còn nguyên.
+Nói `hãy relax` không đủ nếu tải công việc (workload / 워크로드), xung đột (conflict / 충돌) hoặc sleep deprivation còn nguyên.
 
 Xem [[06_stress_coping_and_emotion_regulation]].
 
@@ -71,23 +74,23 @@ Nếu một couple chỉ có thời gian intimacy lúc cả hai đã kiệt sứ
 
 ## Medication và health
 
-Một số medication, endocrine condition, pain disorder và chronic illness có thể ảnh hưởng desire, arousal hoặc orgasm.
+Một số medication, endocrine điều kiện (condition / 조건), pain disorder và chronic illness có thể ảnh hưởng desire, arousal hoặc orgasm.
 
-Không nên tự ngừng medication. Khi change rõ sau treatment, cần discuss với clinician.
+Không nên tự ngừng medication. Khi thay đổi (change / 변경) rõ sau treatment, cần discuss với clinician.
 
-## Body image
+## Body ảnh (image / 이미지)
 
-Body image ảnh hưởng attention trong intimacy. Nếu một người liên tục monitor `mình trông thế nào`, attention bị kéo khỏi sensation.
+Body ảnh (image / 이미지) ảnh hưởng attention trong intimacy. Nếu một người liên tục monitor `mình trông thế nào`, attention bị kéo khỏi sensation.
 
 **Spectatoring** mô tả việc quan sát và đánh giá bản thân từ bên ngoài trong lúc sexual activity, làm arousal hoặc enjoyment giảm.
 
-Intervention thường tập trung chuyển attention về sensation, communication và giảm performance demand.
+Intervention thường tập trung chuyển attention về sensation, communication và giảm hiệu năng (performance / 성능) demand.
 
-## Performance anxiety
+## Hiệu năng (performance / 성능) anxiety
 
-Nếu sex trở thành test về masculinity, attractiveness hoặc relationship quality, pressure tăng.
+Nếu sex trở thành kiểm thử (test / 테스트) về masculinity, attractiveness hoặc relationship chất lượng (quality / 품질), pressure tăng.
 
-Loop có thể là:
+Vòng lặp (loop / 루프) có thể là:
 
 ```text
 lo performance
@@ -101,43 +104,43 @@ negative interpretation
 lo mạnh hơn lần sau
 ```
 
-Giảm goal “phải đạt outcome X” có thể giúp system trở lại exploratory mode.
+Giảm goal “phải đạt kết quả (outcome / 결과) X” có thể giúp hệ thống (system / 시스템) trở lại exploratory chế độ (mode / 모드).
 
 ## Sexual script
 
-**Kịch bản tình dục (sexual script)** là expectation học được về ai initiate, trình tự nào “đúng”, behavior nào được phép và success nghĩa là gì.
+**Kịch bản tình dục (sexual script)** là expectation học được về ai initiate, trình tự nào “đúng”, hành vi (behavior / 동작) nào được phép và success nghĩa là gì.
 
 Script đến từ culture, peer, family, religion, media và pornography.
 
-Script hữu ích để coordinate nhưng có thể trở nên restrictive nếu được coi là rule duy nhất.
+Script hữu ích để coordinate nhưng có thể trở nên restrictive nếu được coi là quy tắc (rule / 규칙) duy nhất.
 
 ## Pornography
 
-Pornography có effect khác nhau tùy frequency, content, motivation và relationship context.
+Pornography có tác động (effect / 효과) khác nhau tùy frequency, content, motivation và relationship ngữ cảnh (context / 맥락).
 
-Không nên kết luận `porn luôn gây dysfunction` hoặc `không bao giờ ảnh hưởng`. Một câu hỏi tốt hơn là nó đang function như:
+Không nên kết luận `porn luôn gây dysfunction` hoặc `không bao giờ ảnh hưởng`. Một câu hỏi tốt hơn là nó đang hàm (function / 함수) như:
 
 - entertainment;
-- sexual learning;
+- sexual học tập (learning / 학습);
 - coping;
 - avoidance;
-- compulsive behavior.
+- compulsive hành vi (behavior / 동작).
 
-Nếu expectation về body hoặc performance bị định hình bởi content không thực tế, comparison có thể ảnh hưởng relationship.
+Nếu expectation về body hoặc hiệu năng (performance / 성능) bị định hình bởi content không thực tế, comparison có thể ảnh hưởng relationship.
 
 ## Novelty và habituation
 
 Novelty có thể tăng attention và arousal, trong khi repeated stimulus tạo habituation.
 
-Điều này không đồng nghĩa long-term relationship phải mất desire. Novelty có thể đến từ context, shared exploration, emotional closeness và changing routine, không chỉ new partner.
+Điều này không đồng nghĩa long-term relationship phải mất desire. Novelty có thể đến từ ngữ cảnh (context / 맥락), dùng chung (shared / 공유) exploration, emotional closeness và changing routine, không chỉ new partner.
 
 ## Intimacy và desire
 
 Với một số người, emotional closeness tăng desire. Với người khác, quá nhiều fusion làm erotic autonomy giảm.
 
-Không có universal rule `closeness càng nhiều desire càng cao`.
+Không có universal quy tắc (rule / 규칙) `closeness càng nhiều desire càng cao`.
 
-Relationship cần balance security và individuality.
+Relationship cần balance bảo mật (security / 보안) và individuality.
 
 ## Attachment
 
@@ -179,55 +182,55 @@ Clinical concern nên tập trung distress, impairment, consent và mismatch hơ
 
 ## Sexual dysfunction
 
-Các difficulty về desire, arousal, erection, lubrication, orgasm hoặc pain cần được hiểu theo biopsychosocial model.
+Các difficulty về desire, arousal, erection, lubrication, orgasm hoặc pain cần được hiểu theo biopsychosocial mô hình (model / 모델).
 
-Không nên assume “do tâm lý” chỉ vì medical test bình thường. Functional problem vẫn là thật và có thể gồm nervous system, learning, medication, pelvic health và relationship factor.
+Không nên assume “do tâm lý” chỉ vì medical kiểm thử (test / 테스트) bình thường. Functional bài toán (problem / 문제) vẫn là thật và có thể gồm nervous hệ thống (system / 시스템), học tập (learning / 학습), medication, pelvic health và relationship factor.
 
 ## Pain
 
 Pain trong sexual activity không nên normalize thành “phải chịu”.
 
-Pain tạo learning loop: anticipate pain → muscle tension/threat → pain tăng → avoidance.
+Pain tạo học tập (learning / 학습) vòng lặp (loop / 루프): anticipate pain → muscle tension/threat → pain tăng → avoidance.
 
 Assessment cần medical evaluation và đôi khi multidisciplinary treatment.
 
 ## Orientation
 
-**Xu hướng tính dục (sexual orientation)** liên quan pattern attraction và relationship. Nó khác gender identity và gender expression.
+**Xu hướng tính dục (sexual orientation)** liên quan mẫu (pattern / 패턴) attraction và relationship. Nó khác gender định danh (identity / 식별자) và gender expression.
 
-Không nên suy orientation từ behavior đơn lẻ hoặc stereotype.
+Không nên suy orientation từ hành vi (behavior / 동작) đơn lẻ hoặc stereotype.
 
 ## Aging
 
-Sexuality không biến mất ở tuổi già. Health, medication, hormonal change và relationship context có thể thay đổi functioning, nhưng intimacy vẫn có thể quan trọng.
+Sexuality không biến mất ở tuổi già. Health, medication, hormonal thay đổi (change / 변경) và relationship ngữ cảnh (context / 맥락) có thể thay đổi functioning, nhưng intimacy vẫn có thể quan trọng.
 
 Age stereotype đôi khi làm provider hoặc family bỏ qua sexual health need.
 
 ## Fertility và reproductive stress
 
-Trying to conceive có thể biến sex thành task theo lịch, làm spontaneity và desire giảm. Fertility treatment còn tạo stress, grief và body monitoring.
+Trying to conceive có thể biến sex thành tác vụ (task / 작업) theo lịch, làm spontaneity và desire giảm. Fertility treatment còn tạo stress, grief và body monitoring.
 
-Relationship support cần recognize burden thay vì chỉ tập trung outcome.
+Relationship hỗ trợ (support / 지원) cần recognize burden thay vì chỉ tập trung kết quả (outcome / 결과).
 
 ## Trauma
 
-Trauma có thể ảnh hưởng safety, body awareness, trust và sexual response, nhưng trajectory rất khác nhau.
+Trauma có thể ảnh hưởng an toàn (safety / 안전), body awareness, trust và sexual phản hồi (response / 응답), nhưng trajectory rất khác nhau.
 
 Không nên assume mọi survivor có dysfunction hoặc mọi sexual difficulty là trauma.
 
-Trauma-informed approach ưu tiên control, choice và pacing.
+Trauma-informed approach ưu tiên điều khiển (control / 제어), choice và pacing.
 
 ## Những hiểu lầm phổ biến
 
-**“Low desire nghĩa là hết yêu.”** Desire phụ thuộc nhiều system.
+**“Low desire nghĩa là hết yêu.”** Desire phụ thuộc nhiều hệ thống (system / 시스템).
 
-**“Arousal nghĩa là consent.”** Physiological response và consent khác nhau.
+**“Arousal nghĩa là consent.”** Physiological phản hồi (response / 응답) và consent khác nhau.
 
 **“Sex tốt phải spontaneous.”** Responsive desire rất phổ biến.
 
 **“Mọi couple khỏe đều có frequency giống nhau.”** Không có benchmark universal.
 
-**“Nếu problem là psychological thì không phải thật.”** Psychological mechanism vẫn là biological/behavioral process có consequence thật.
+**“Nếu bài toán (problem / 문제) là psychological thì không phải thật.”** Psychological cơ chế (mechanism / 메커니즘) vẫn là biological/behavioral tiến trình (process / 프로세스) có consequence thật.
 
 ## Mô hình tư duy
 

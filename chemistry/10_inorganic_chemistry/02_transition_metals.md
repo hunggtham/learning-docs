@@ -1,5 +1,8 @@
 # Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác
 
+> **Mạch đọc:** Đọc **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao hóa học khối d phong phú** sang **Trạng thái oxy hóa — vì sao đa dạng hơn nhóm chính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Kim loại chuyển tiếp (transition metals / 전이 금속)** là các nguyên tố có nguyên tử hoặc ion phổ biến chứa phân lớp d chưa được lấp đầy hoàn toàn. Hóa học phong phú của chúng xuất phát từ việc nhiều orbital d có năng lượng gần nhau, khiến một tâm kim loại có thể thay đổi trạng thái oxy hóa, trạng thái spin, hình học và kiểu liên kết mà không phải trả một chi phí năng lượng quá lớn.
 
 Nếu hóa học nhóm chính thường tạo các khuôn mẫu hóa trị tương đối rõ, hóa học kim loại chuyển tiếp giống một cảnh quan có nhiều trạng thái nằm gần nhau về năng lượng. Chính **mật độ cao của các trạng thái điện tử khả dụng** này tạo ra màu sắc, từ tính, hóa học phối trí và tính linh hoạt xúc tác.
@@ -29,7 +32,7 @@ Mn(VII) ổn định trong permanganate nhờ tương tác Mn–O mạnh, nhưng
 Một quy tắc nhanh:
 
 \[
-d^n \approx \text{số nhóm} - \text{số oxy hóa}
+d^n \approx \văn bản (text / 텍스트){số nhóm} - \văn bản (text / 텍스트){số oxy hóa}
 \]
 
 Ví dụ Fe thuộc nhóm 8. \(Fe^{2+}\) thường được xem là \(d^6\), còn \(Fe^{3+}\) là \(d^5\). \(Co^{3+}\) cũng là \(d^6\) dù thuộc nguyên tố khác.
@@ -159,3 +162,5 @@ Không. Nó hữu ích cho nhiều phức cơ kim nhưng có nhiều ngoại l�
 > Hóa học kim loại chuyển tiếp là hóa học của một **tâm điện tử có thể lập trình**. Orbital d tạo nhiều trạng thái dễ tiếp cận gần nhau; phối tử và môi trường chọn trạng thái nào được ổn định; hóa học xuất hiện khi hệ di chuyển giữa các trạng thái đó.
 
 Xem tiếp: [Hóa học phối trí](./03_coordination_chemistry.md) để biến ý tưởng “kim loại + phối tử” thành khung định lượng hơn về hình học, độ bền và khả năng phản ứng.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 inorganic compounds](./00_inorganic_compounds.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

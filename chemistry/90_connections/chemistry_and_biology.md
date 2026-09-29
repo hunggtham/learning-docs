@@ -1,5 +1,8 @@
 # Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống
 
+> **Mạch đọc:** Đọc **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Cấu trúc phân tử → nhận diện sinh học** sang **Hóa học acid-base → chức năng enzyme**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Sinh học có thể được đọc như **hóa học được tổ chức bởi màng, chất xúc tác, polymer thông tin và dòng năng lượng liên tục**. Các định luật hóa học không thay đổi khi đi vào tế bào; điều thay đổi là mức độ tổ chức, phân ngăn và kiểm soát.
 
 ## Cấu trúc phân tử → nhận diện sinh học
@@ -10,6 +13,9 @@ Lập thể đặc biệt quan trọng vì phần lớn đại phân tử sinh h
 
 Vì vậy trong sinh học, “cùng thành phần” chưa đủ; cách nguyên tử được sắp xếp trong không gian có thể quyết định hoàn toàn chức năng.
 
+
+> **Chuyển mạch:** Từ **Cấu trúc phân tử → nhận diện sinh học**, ta sang **Hóa học acid-base → chức năng enzyme** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Hóa học acid-base → chức năng enzyme
 
 Các nhóm có thể ion hóa trong protein liên tục chuyển giữa trạng thái proton hóa và khử proton. Histidine, aspartate, glutamate, lysine, cysteine và tyrosine có thể tham gia chuyển proton tùy pH và môi trường cục bộ.
@@ -17,6 +23,9 @@ Các nhóm có thể ion hóa trong protein liên tục chuyển giữa trạng 
 Giá trị `pKa` của một nhóm trong protein có thể lệch đáng kể so với giá trị trong dung dịch tự do vì điện trường, liên kết hydrogen và mức tiếp xúc với dung môi thay đổi.
 
 Các hệ đệm của tế bào giúp giữ pH trong vùng mà điện tích, cấu trúc và hoạt tính của protein vẫn phù hợp.
+
+
+> **Chuyển mạch:** Từ **Hóa học acid-base → chức năng enzyme**, ta sang **Hóa học oxy hóa-khử → chuyển hóa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Hóa học oxy hóa-khử → chuyển hóa
 
@@ -26,9 +35,12 @@ Hô hấp tế bào không oxy hóa chất dinh dưỡng trực tiếp với oxy
 
 Đây là ví dụ rõ về cách hóa học oxy hóa-khử được tổ chức thành một hệ năng lượng có kiểm soát.
 
+
+> **Chuyển mạch:** Từ **Hóa học oxy hóa-khử → chuyển hóa**, ta sang **Nhiệt động lực học → ghép năng lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Nhiệt động lực học → ghép năng lượng
 
-Phản ứng đồng hóa có thể có \(\Delta G>0\) nhưng vẫn diễn ra nếu được ghép cơ chế với một quá trình có \(\Delta G\) âm hơn, chẳng hạn thủy phân ATP, tiêu tán gradient ion hoặc phản ứng oxy hóa-khử thuận lợi.
+Phản ứng đồng hóa có thể có \(\Delta G>0\) nhưng vẫn diễn ra nếu được ghép cơ chế với một quá trình có \(\Delta G\) âm hơn, chẳng hạn thủy phân ATP, tiêu tán độ dốc (gradient / 기울기) ion hoặc phản ứng oxy hóa-khử thuận lợi.
 
 Tổng năng lượng tự do của quá trình ghép là:
 
@@ -40,6 +52,9 @@ Nếu tổng âm, toàn bộ quá trình có thể thuận lợi về mặt nhi�
 
 Sự sống vì vậy không chống lại nhiệt động lực học. Nó duy trì cấu trúc cục bộ bằng cách liên tục tiêu thụ năng lượng tự do và thải entropy ra môi trường.
 
+
+> **Chuyển mạch:** Từ **Nhiệt động lực học → ghép năng lượng**, ta sang **Động học → điều hòa dòng chuyển hóa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Động học → điều hòa dòng chuyển hóa
 
 Nhiệt động lực học cho biết phản ứng nào có thể thuận lợi, nhưng enzyme quyết định phản ứng nào thực sự xảy ra đủ nhanh để có ý nghĩa sinh học.
@@ -48,22 +63,33 @@ Nhiệt động lực học cho biết phản ứng nào có thể thuận lợi
 
 Vì vậy một phản ứng “có thể xảy ra” về nhiệt động không nhất thiết đóng vai trò thực tế nếu không có con đường động học phù hợp.
 
+
+> **Chuyển mạch:** Từ **Động học → điều hòa dòng chuyển hóa**, ta sang **Hóa học màng → sinh lý học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Hóa học màng → sinh lý học
 
 Lipid lưỡng tính tự lắp ghép thành lớp kép nhờ hiệu ứng kỵ nước. Màng tạo biên giới cho phép tế bào duy trì chênh lệch nồng độ và điện thế.
 
-Các gradient điện hóa này được dùng trong dẫn truyền thần kinh, co cơ, hấp thu chất dinh dưỡng và tổng hợp ATP.
+Các độ dốc (gradient / 기울기) điện hóa này được dùng trong dẫn truyền thần kinh, co cơ, hấp thu chất dinh dưỡng và tổng hợp ATP.
 
 Có thể nói màng biến hình học và phân ngăn thành một tài nguyên nhiệt động.
 
+
+> **Chuyển mạch:** Từ **Hóa học màng → sinh lý học**, ta sang **Hóa học polymer → di truyền** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Hóa học polymer → di truyền
 
-DNA và RNA là các **polymer có trình tự xác định (sequence-defined polymers)**. Thông tin nằm trong thứ tự nucleotide, còn ghép cặp base cung cấp cơ chế nhận diện phân tử cần cho sao chép và phiên mã.
+DNA và RNA là các **polymer có trình tự xác định (sequence-defined polymers)**. Thông tin nằm trong thứ tự nucleotide, còn ghép cặp cơ sở (base / 기반) cung cấp cơ chế nhận diện phân tử cần cho sao chép và phiên mã.
 
 Protein cũng là polymer có trình tự xác định. Trình tự amino acid định hình cảnh quan gấp cuộn và từ đó tạo chức năng xúc tác, cấu trúc hoặc tín hiệu.
 
 Sự sống vì vậy liên kết hóa học polymer với thông tin: cấu trúc phân tử không chỉ mang năng lượng hay vật chất mà còn mang hướng dẫn.
 
+
+> **Chuyển mạch:** Từ **Hóa học polymer → di truyền**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Sinh học là **hóa học ngoài cân bằng có trí nhớ**. Mạng phản ứng được cấp năng lượng liên tục, được phân ngăn bởi màng và được hướng dẫn bởi thông tin trình tự trong các polymer sinh học.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [chemistry and ai](./chemistry_and_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # RAG Evaluation
 
-RAG là multi-stage system nên một final-answer score không đủ để biết failure nằm ở đâu. Evaluation tốt phải tách **ingestion → retrieval → reranking → context selection → generation → citation**.
+> **Mạch đọc:** Đặt **RAG Evaluation** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Evaluation Layers** sang **bản dựng (build / 빌드) a truy vấn (query / 쿼리)–bằng chứng (evidence / 증거) kiểm thử (test / 테스트) Set**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+RAG là multi-stage hệ thống (system / 시스템) nên một final-answer score không đủ để biết thất bại (failure / 실패) nằm ở đâu. Evaluation tốt phải tách **ingestion → retrieval → reranking → ngữ cảnh (context / 맥락) selection → generation → citation**.
 
 ## Evaluation Layers
 
@@ -15,9 +18,9 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 6. latency/cost/reliability
 ```
 
-Nếu final answer sai, trace qua từng layer để tìm root cause.
+Nếu final answer sai, dấu vết (trace / 추적) qua từng tầng (layer / 계층) để tìm nguyên nhân gốc (root cause / 근본 원인).
 
-## Build a Query–Evidence Test Set
+## Bản dựng (build / 빌드) a truy vấn (query / 쿼리)–bằng chứng (evidence / 증거) kiểm thử (test / 테스트) Set
 
 Mỗi eval item nên chứa:
 
@@ -29,33 +32,33 @@ metadata constraints
 optional forbidden/stale sources
 ```
 
-Gold evidence rất valuable vì cho phép evaluate retrieval independent generator.
+Gold bằng chứng (evidence / 증거) rất valuable vì cho phép evaluate retrieval independent generator.
 
 ## Retrieval Recall@k
 
-Quan trọng nhất: correct evidence có trong top-k không?
+Quan trọng nhất: correct bằng chứng (evidence / 증거) có trong top-k không?
 
 \[
-Recall@k=\frac{queries\ with\ relevant\ evidence\ in\ top\ k}{all\ queries}
+Recall@k=\frac{queries\ with\ relevant\ bằng chứng (evidence / 증거)\ in\ top\ k}{all\ queries}
 \]
 
 Nếu Recall@10 thấp, improve retriever/chunking before prompt tuning.
 
 ## Precision@k
 
-Đo noise trong candidates/context. High recall với quá nhiều distractors có thể hurt generator.
+Đo noise trong candidates/ngữ cảnh (context / 맥락). High recall với quá nhiều distractors có thể hurt generator.
 
 ## MRR và nDCG
 
-MRR reward first relevant result rank cao. nDCG supports graded relevance và multiple relevant docs.
+MRR reward first relevant kết quả (result / 결과) rank cao. nDCG supports graded relevance và multiple relevant docs.
 
-Use metric phù hợp query: multi-source question needs more than first-hit metric.
+Use chỉ số (metric / 지표) phù hợp truy vấn (query / 쿼리): multi-source question needs more than first-hit chỉ số (metric / 지표).
 
 ## Chunk-Level vs Document-Level Recall
 
-Document relevant nhưng retrieved chunk không chứa answer vẫn có thể fail generation.
+Document relevant nhưng retrieved chunk không chứa answer vẫn có thể thất bại (fail / 실패) generation.
 
-Track both:
+Nhánh học (track / 트랙) both:
 
 ```text
 document recall
@@ -71,19 +74,19 @@ MRR_before → MRR_after
 nDCG_before → nDCG_after
 ```
 
-Nếu reranker không lift, cost may not be justified.
+Nếu reranker không lift, chi phí (cost / 비용) may not be justified.
 
-## Context Recall
+## Ngữ cảnh (context / 맥락) Recall
 
-Even if candidate set contains evidence, context selector may drop it. Evaluate selected final context separately.
+Even if candidate set contains bằng chứng (evidence / 증거), ngữ cảnh (context / 맥락) selector may drop it. Evaluate selected final ngữ cảnh (context / 맥락) separately.
 
 This catches token-budget/dedup bugs.
 
-## Answer Correctness
+## Answer tính đúng đắn (correctness / 정확성)
 
-Final answer can be exact-match, rubric-scored, human-judged or LLM-judged depending task.
+Final answer can be exact-match, rubric-scored, human-judged or LLM-judged depending tác vụ (task / 작업).
 
-For policy QA, rubric can check required clauses individually rather than one holistic score.
+For chính sách (policy / 정책) QA, rubric can check required clauses individually rather than one holistic score.
 
 ## Faithfulness / Groundedness
 
@@ -95,11 +98,11 @@ Conceptually:
 Groundedness=\frac{supported\ claims}{all\ factual\ claims}
 \]
 
-This is different from correctness relative to external world.
+This is different from tính đúng đắn (correctness / 정확성) relative to bên ngoài (external / 외부) world.
 
 ## Citation Precision
 
-For cited claims, citation should actually support claim.
+For cited claims, citation should actually hỗ trợ (support / 지원) claim.
 
 ```text
 citation precision = supported cited claims / cited claims
@@ -107,19 +110,19 @@ citation precision = supported cited claims / cited claims
 
 ## Citation Recall
 
-How many factual claims that need support actually have citation?
+How many factual claims that need hỗ trợ (support / 지원) actually have citation?
 
 Useful in research/legal applications.
 
 ## Answer Relevance
 
-Grounded answer can still fail user intent. Measure whether answer addresses query and follows requested format.
+Grounded answer can still thất bại (fail / 실패) người dùng (user / 사용자) intent. Measure whether answer addresses truy vấn (query / 쿼리) and follows requested format.
 
 ## Answerability
 
-Dataset should include questions **not answerable from corpus**. Good RAG should abstain or state insufficient evidence rather than hallucinate.
+Dataset should include questions **not answerable from corpus**. Good RAG should abstain or trạng thái (state / 상태) insufficient bằng chứng (evidence / 증거) rather than hallucinate.
 
-Track:
+Nhánh học (track / 트랙):
 
 ```text
 correct abstention rate
@@ -129,25 +132,25 @@ unsupported answer rate
 
 ## Staleness Evaluation
 
-Include old/new document versions. Verify retriever selects current/effective source and excludes archived docs when appropriate.
+Include old/new document versions. Verify retriever selects hiện tại (current / 현재)/effective nguồn (source / 소스) and excludes archived docs when appropriate.
 
 This catches version-filter bugs.
 
 ## Permission Evaluation
 
-Security tests should confirm users cannot retrieve documents outside ACL/tenant.
+Bảo mật (security / 보안) tests should confirm users cannot retrieve documents outside ACL/tenant.
 
-This is pass/fail security property, not soft relevance metric.
+This is pass/thất bại (fail / 실패) bảo mật (security / 보안) thuộc tính (property / 속성), not soft relevance chỉ số (metric / 지표).
 
 ## Multilingual Evaluation
 
-If users query Korean/Vietnamese/English, create slices per language and cross-language retrieval.
+If users truy vấn (query / 쿼리) Korean/Vietnamese/English, create slices per ngôn ngữ (language / 언어) and cross-language retrieval.
 
-Average score can hide one weak language.
+Average score can hide one weak ngôn ngữ (language / 언어).
 
-## Table/Numeric Evaluation
+## Bảng (table / 테이블)/Numeric Evaluation
 
-Test exact numeric values, units and table row relationships. OCR/parser errors often surface here.
+Kiểm thử (test / 테스트) chính xác (exact / 정확한) numeric values, units and bảng (table / 테이블) row relationships. OCR/parser errors often surface here.
 
 ## Robustness
 
@@ -164,11 +167,11 @@ wrong country
 similar policy title
 ```
 
-Easy benchmark inflates retrieval quality.
+Easy benchmark inflates retrieval chất lượng (quality / 품질).
 
-## End-to-End Latency
+## End-to-End độ trễ (latency / 지연 시간)
 
-Break latency:
+Break độ trễ (latency / 지연 시간):
 
 ```text
 query rewrite
@@ -180,9 +183,9 @@ LLM generation
 
 p95/p99 matter more than average for UX.
 
-## Cost Evaluation
+## Chi phí (cost / 비용) Evaluation
 
-Measure per request:
+Measure per yêu cầu (request / 요청):
 
 ```text
 embedding tokens
@@ -191,11 +194,11 @@ LLM input/output tokens
 search infrastructure
 ```
 
-Advanced pipeline may improve quality 1% but double cost; decide based value.
+Advanced chuỗi xử lý (pipeline / 파이프라인) may improve chất lượng (quality / 품질) 1% but double chi phí (cost / 비용); decide based giá trị (value / 값).
 
 ## Online Metrics
 
-After deployment:
+After triển khai (deployment / 배포):
 
 ```text
 user correction rate
@@ -209,7 +212,7 @@ feedback
 
 Online metrics are noisy and influenced by UX, but reveal real traffic shift.
 
-## Failure Attribution
+## Thất bại (failure / 실패) Attribution
 
 A useful taxonomy:
 
@@ -225,9 +228,9 @@ STALE_SOURCE
 ACL_ERROR
 ```
 
-Every production incident should map to layer where possible.
+Every môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트) should map to tầng (layer / 계층) where possible.
 
-## Eval-Driven Improvement Loop
+## Eval-Driven Improvement vòng lặp (loop / 루프)
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
@@ -245,34 +248,34 @@ This avoids random prompt tweaking.
 
 ## Human Evaluation
 
-Experts are needed when domain nuance matters. Use clear rubric và sample representative cases. Inter-annotator disagreement can reveal ambiguous policy or insufficient source data.
+Experts are needed when lĩnh vực (domain / 도메인) nuance matters. Use clear rubric và mẫu (sample / 표본) representative cases. Inter-annotator disagreement can reveal ambiguous chính sách (policy / 정책) or insufficient nguồn (source / 소스) dữ liệu (data / 데이터).
 
 ## LLM-as-Judge
 
-LLM judges scale evaluation, especially relevance/faithfulness, but require calibration against humans. Provide source evidence to judge and randomize response order to reduce bias.
+LLM judges quy mô (scale / 규모) evaluation, especially relevance/faithfulness, but require calibration against humans. Provide nguồn (source / 소스) bằng chứng (evidence / 증거) to judge and randomize phản hồi (response / 응답) thứ tự (order / 순서) to reduce độ lệch (bias / 편향).
 
 ## Golden Set Leakage
 
 If engineers repeatedly tune on same golden set, it becomes development set. Maintain hidden holdout/fresh evals.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> RAG evaluation phải trả lời hai câu độc lập: **Did we retrieve the right evidence? Did we use it correctly?**
+> RAG evaluation phải trả lời hai câu độc lập: **Did we retrieve the right bằng chứng (evidence / 증거)? Did we use it correctly?**
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “Final answer đúng nên retrieval cũng tốt”
 
-Model may answer from parametric memory by chance.
+Mô hình (model / 모델) may answer from parametric bộ nhớ (memory / 메모리) by chance.
 
 ### “Retrieval recall cao là đủ”
 
-Context noise/generation faithfulness still matter.
+Ngữ cảnh (context / 맥락) noise/generation faithfulness still matter.
 
 ### “LLM judge score là ground truth”
 
 Không. Judge itself needs evaluation.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 RAG evaluation extends [LLM Evaluation](../08_large_language_models/14_llm_evaluation.md) and becomes prerequisite for Agent/AI Engineering observability.

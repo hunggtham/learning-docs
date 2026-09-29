@@ -1,10 +1,13 @@
 # Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)
 
-Hàn Quốc phát triển băng rộng, hạ tầng di động và chính phủ điện tử tương đối sớm, đồng thời có khu vực doanh nghiệp lớn với nhu cầu rất cao về ERP, core banking, CNTT sản xuất và hệ thống dùng chung toàn tập đoàn. Vì vậy kinh tế số Hàn Quốc có hai thế giới cùng tồn tại: **nền tảng số/fintech cho người tiêu dùng** và **CNTT doanh nghiệp/SI/SM**.
+> **Mạch đọc:** Đặt **Kinh tế số, fintech, cloud và dịch vụ CNTT tại Hàn Quốc (Digital Economy & IT Services / 디지털경제·핀테크·클라우드·IT서비스)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hạ tầng số là công nghệ có mục đích sử dụng chung** sang **Kinh tế nền tảng: nhiều phía thị trường cùng tồn tại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Hàn Quốc phát triển băng rộng, hạ tầng di động và chính phủ điện tử tương đối sớm, đồng thời có khu vực doanh nghiệp lớn với nhu cầu rất cao về ERP, cốt lõi (core / 핵심) banking, CNTT sản xuất và hệ thống dùng chung toàn tập đoàn. Vì vậy kinh tế số Hàn Quốc có hai thế giới cùng tồn tại: **nền tảng số/fintech cho người tiêu dùng** và **CNTT doanh nghiệp/SI/SM**.
 
 Hai thế giới có mô hình kinh doanh khác nhau nhưng dùng chung hạ tầng dữ liệu, cloud, an ninh mạng, nhân lực phần mềm và quy định.
 
-Nếu chỉ nhìn Naver, Kakao, Toss hoặc ngân hàng Internet, ta sẽ bỏ qua hàng nghìn hệ thống doanh nghiệp đang vận hành ngân hàng, bảo hiểm, sản xuất, logistics và cơ quan công. Ngược lại, nếu chỉ nhìn SI/SM truyền thống, ta sẽ bỏ qua chuyển đổi từ dự án phần mềm sang platform, SaaS, cloud và AI.
+Nếu chỉ nhìn Naver, Kakao, Toss hoặc ngân hàng Internet, ta sẽ bỏ qua hàng nghìn hệ thống doanh nghiệp đang vận hành ngân hàng, bảo hiểm, sản xuất, logistics và cơ quan công. Ngược lại, nếu chỉ nhìn SI/SM truyền thống, ta sẽ bỏ qua chuyển đổi từ dự án phần mềm sang nền tảng (platform / 플랫폼), SaaS, cloud và AI.
 
 ## Hạ tầng số là công nghệ có mục đích sử dụng chung
 
@@ -22,7 +25,7 @@ Công nghệ × Quy trình × Tổ chức
 
 ## Kinh tế nền tảng: nhiều phía thị trường cùng tồn tại
 
-**Nền tảng (platform / 플랫폼)** thường là **thị trường nhiều phía (multi-sided market / 다면시장)** như người mua–người bán, nhà quảng cáo–người dùng, tài xế–hành khách hoặc người bán–người tiêu dùng.
+**nền tảng (platform / 플랫폼)** thường là **thị trường nhiều phía (multi-sided market / 다면시장)** như người mua–người bán, nhà quảng cáo–người dùng, tài xế–hành khách hoặc người bán–người tiêu dùng.
 
 Nền tảng có thể trợ giá một phía để tăng giá trị cho phía khác.
 
@@ -183,7 +186,7 @@ Vì vậy chất lượng yêu cầu là một **biến kinh tế**. Yêu cầu 
 
 Phát triển offshore hoặc tại Việt Nam có thể giảm chi phí, nhưng tiết kiệm chỉ có thật nếu giao tiếp, đặc tả và QA đủ tốt. Nếu lỗi và làm lại tăng, lợi thế chênh lệch chi phí lao động có thể biến mất.
 
-## Change Request và nghiệm thu là cơ chế dòng tiền
+## Thay đổi (change / 변경) yêu cầu (request / 요청) và nghiệm thu là cơ chế dòng tiền
 
 Trong SI, **yêu cầu thay đổi (Change Request / CR / 변경요청)** quyết định phạm vi mới có được trả thêm hay không.
 
@@ -217,7 +220,7 @@ Kiến trúc doanh nghiệp luôn có đánh đổi giữa phù hợp nghiệp v
 
 Ngân hàng, bảo hiểm và doanh nghiệp lớn thường có hệ thống trọng yếu tồn tại hàng chục năm. Hệ thống cũ chứa nhiều quy tắc nghiệp vụ ngầm chưa được tài liệu hóa đầy đủ.
 
-Viết lại toàn bộ một lần có rủi ro rất cao. Hiện đại hóa thường dùng di chuyển theo giai đoạn, strangler pattern, lớp API hoặc thay từng domain.
+Viết lại toàn bộ một lần có rủi ro rất cao. Hiện đại hóa thường dùng di chuyển theo giai đoạn, strangler mẫu (pattern / 패턴), lớp API hoặc thay từng lĩnh vực (domain / 도메인).
 
 Đây là bài toán phân bổ vốn:
 
@@ -245,9 +248,9 @@ Ngoài ra phải xem tỷ lệ rời bỏ (churn), doanh thu mở rộng từ kh
 
 Chuyển từ SI sang SaaS không đơn giản là “đưa phần mềm lên cloud”. Sản phẩm phải được tiêu chuẩn hóa đủ để nhiều khách hàng dùng chung phần lõi của mã nguồn.
 
-## AI agent: từ bản demo tới hệ thống sản xuất
+## AI tác nhân (agent / 에이전트): từ bản demo tới hệ thống sản xuất
 
-AI tạo sinh và **AI agent** có thể giảm chi phí viết mã, xử lý tài liệu, chăm sóc khách hàng, nghiên cứu và phân tích.
+AI tạo sinh và **AI tác nhân (agent / 에이전트)** có thể giảm chi phí viết mã, xử lý tài liệu, chăm sóc khách hàng, nghiên cứu và phân tích.
 
 Nhưng một POC trả lời đúng câu hỏi rất khác hệ thống sản xuất được phép thực hiện hành động.
 
@@ -259,7 +262,7 @@ AI doanh nghiệp cần:
 - nhật ký kiểm toán;
 - giám sát;
 - cơ chế chuyển cho con người;
-- rollback và xử lý lỗi.
+- quay lui (rollback / 롤백) và xử lý lỗi.
 
 Có thể phân rã giá trị:
 
@@ -273,9 +276,9 @@ Nếu số tác vụ thấp hoặc chi phí sai lỗi cao, demo rất ấn tư�
 
 AI làm phần triển khai lặp lại nhanh hơn nhưng không có nghĩa giá trị của lập trình viên giảm đồng đều.
 
-Khi tạo mã rẻ hơn, nút thắt chuyển sang chất lượng yêu cầu, kiến trúc, review, bảo mật và tích hợp.
+Khi tạo mã rẻ hơn, nút thắt chuyển sang chất lượng yêu cầu, kiến trúc, rà soát (review / 검토), bảo mật và tích hợp.
 
-Kỹ sư có hiểu biết domain tốt có thể tận dụng AI nhiều hơn người chỉ biết cú pháp.
+Kỹ sư có hiểu biết lĩnh vực (domain / 도메인) tốt có thể tận dụng AI nhiều hơn người chỉ biết cú pháp.
 
 Vì vậy AI có thể tăng **tính bổ trợ kỹ năng (skill complementarity)** chứ không chỉ thay thế lao động.
 
@@ -303,7 +306,7 @@ Một thay đổi quy định có thể mở thị trường cho nhà cung cấp
 
 ## Thị trường lao động CNTT: khả năng chuyển ngữ cảnh là vốn con người
 
-Giá trị của lập trình viên không chỉ nằm ở stack kỹ thuật. Trong doanh nghiệp Hàn Quốc, người có thể chuyển đổi giữa yêu cầu nghiệp vụ, giao tiếp tiếng Hàn, kiến trúc và triển khai thường có giá trị cao.
+Giá trị của lập trình viên không chỉ nằm ở ngăn xếp (stack / 스택) kỹ thuật. Trong doanh nghiệp Hàn Quốc, người có thể chuyển đổi giữa yêu cầu nghiệp vụ, giao tiếp tiếng Hàn, kiến trúc và triển khai thường có giá trị cao.
 
 Đặc biệt trong mô hình Hàn Quốc–Việt Nam, kỹ sư song ngữ có thể là **cầu nối ngữ cảnh (context bridge)** chứ không chỉ là người phiên dịch. Họ giảm chi phí phối hợp, hiểu nhầm và làm lại.
 
@@ -315,7 +318,7 @@ Với SI/SM, cần hỏi tỷ lệ doanh thu nội bộ so với bên ngoài, h�
 
 Với SaaS/cloud, cần xem doanh thu định kỳ, churn, biên lợi nhuận gộp, chi phí tính toán, CAC/LTV và mức tập trung khách hàng.
 
-Với fintech, cần thêm nguồn vốn, tổn thất tín dụng, take rate, tuân thủ và vốn/thanh khoản.
+Với fintech, cần thêm nguồn vốn, tổn thất tín dụng, take tỷ lệ (rate / 비율), tuân thủ và vốn/thanh khoản.
 
 Với nền tảng số, cần lập bản đồ hiệu ứng mạng, khả năng dùng nhiều nền tảng, tỷ lệ thu phí, tải quảng cáo, quy định và kinh tế đơn vị ở từng phía.
 
@@ -353,7 +356,7 @@ Năng suất
 
 **“SaaS = phần mềm cũ đưa lên trình duyệt.”** Sai. SaaS cần sản phẩm tiêu chuẩn hóa, vận hành định kỳ và kinh tế thuê bao.
 
-**“AI agent chạy được bản demo nghĩa có thể đưa vào production.”** Sai. Quyền hạn, kiểm toán, xử lý lỗi và tích hợp mới quyết định mức sẵn sàng vận hành.
+**“AI tác nhân (agent / 에이전트) chạy được bản demo nghĩa có thể đưa vào môi trường vận hành (production / 운영 환경).”** Sai. Quyền hạn, kiểm toán, xử lý lỗi và tích hợp mới quyết định mức sẵn sàng vận hành.
 
 **“Số hóa tự động làm năng suất tăng.”** Sai. Số hóa một quy trình tệ có thể chỉ làm quy trình tệ chạy nhanh hơn.
 

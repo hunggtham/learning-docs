@@ -1,5 +1,8 @@
 # Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs
 
+> **Mạch đọc:** Đọc **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cần khái niệm cân bằng?** sang **Tốc độ ròng bằng 0**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Cân bằng hóa học (chemical equilibrium / 화학 평형)** là trạng thái trong đó thành phần vĩ mô của hệ không còn thay đổi theo thời gian, dù các quá trình thuận và nghịch vẫn tiếp tục ở cấp phân tử. Vì vậy cân bằng là **động**, không phải trạng thái mọi chuyển động đã dừng.
 
 Cân bằng là điểm gặp của ba cách nhìn:
@@ -92,7 +95,7 @@ Trong mô hình lý tưởng đơn giản này:
 K_c=\frac{k_f}{k_r}
 \]
 
-Quan hệ này rất hữu ích để nối động học với cân bằng, nhưng không nên áp dụng máy móc cho mọi phản ứng tổng. Nếu cơ chế có nhiều bước, rate law phức tạp hoặc hệ không lý tưởng, mối liên hệ giữa các hằng số tốc độ vi mô và `K` cần được xây dựng từ toàn cơ chế.
+Quan hệ này rất hữu ích để nối động học với cân bằng, nhưng không nên áp dụng máy móc cho mọi phản ứng tổng. Nếu cơ chế có nhiều bước, tỷ lệ (rate / 비율) law phức tạp hoặc hệ không lý tưởng, mối liên hệ giữa các hằng số tốc độ vi mô và `K` cần được xây dựng từ toàn cơ chế.
 
 ## Cân bằng từ góc nhìn năng lượng tự do Gibbs
 
@@ -205,11 +208,11 @@ Tế bào liên tục:
 
 - nhận chất dinh dưỡng;
 - thải sản phẩm;
-- duy trì gradient ion;
+- duy trì độ dốc (gradient / 기울기) ion;
 - thủy phân ATP;
 - truyền electron qua chuỗi hô hấp.
 
-Nếu tế bào đạt cân bằng nhiệt động hoàn toàn với môi trường, phần lớn gradient và dòng chuyển hóa cần cho chức năng sống sẽ biến mất.
+Nếu tế bào đạt cân bằng nhiệt động hoàn toàn với môi trường, phần lớn độ dốc (gradient / 기울기) và dòng chuyển hóa cần cho chức năng sống sẽ biến mất.
 
 Sinh học vì vậy hoạt động nhờ **duy trì trạng thái ngoài cân bằng** bằng dòng năng lượng tự do liên tục.
 
@@ -246,7 +249,7 @@ Nếu quan sát thấy “nhiều sản phẩm hơn” sau khi thêm xúc tác v
 
 ## Cân bằng vật lý
 
-Cùng logic áp dụng cho chuyển pha.
+Cùng lô-gic (logic / 논리) áp dụng cho chuyển pha.
 
 Lỏng–hơi:
 
@@ -266,7 +269,7 @@ NaCl(s)\rightleftharpoons Na^+(aq)+Cl^-(aq)
 
 Do đó “bão hòa” không nghĩa các hạt ngừng chuyển động.
 
-## Cân bằng acid–base
+## Cân bằng acid–cơ sở (base / 기반)
 
 Trong nước:
 
@@ -276,7 +279,7 @@ HA+H_2O\rightleftharpoons H_3O^++A^-
 
 proton liên tục được chuyển giữa các tiểu phần. Giá trị `Ka` mô tả thành phần cân bằng, không phải thời gian proton “ở yên” trên một phân tử.
 
-Đây là cầu nối giữa cân bằng động và phần acid–base.
+Đây là cầu nối giữa cân bằng động và phần acid–cơ sở (base / 기반).
 
 ## Cân bằng điện hóa
 
@@ -286,7 +289,7 @@ Thế điện cực cân bằng được xác định bởi Nernst và hoạt đ
 
 Khi ta kéo dòng qua điện cực, hệ bị đẩy ra khỏi cân bằng và xuất hiện quá thế.
 
-Vì vậy electrochemistry là một ví dụ rất rõ của sự chuyển từ equilibrium sang nonequilibrium operation.
+Vì vậy electrochemistry là một ví dụ rất rõ của sự chuyển từ equilibrium sang nonequilibrium thao tác (operation / 연산).
 
 ## Dao động cân bằng
 
@@ -306,7 +309,7 @@ Các kỹ thuật relaxation kinetics từng đóng vai trò quan trọng trong 
 
 ## Cân bằng cục bộ
 
-Trong một hệ lớn có gradient nhiệt độ hoặc nồng độ, toàn hệ có thể chưa cân bằng. Tuy nhiên một vùng rất nhỏ đôi khi vẫn có thể được xấp xỉ gần cân bằng nội bộ.
+Trong một hệ lớn có độ dốc (gradient / 기울기) nhiệt độ hoặc nồng độ, toàn hệ có thể chưa cân bằng. Tuy nhiên một vùng rất nhỏ đôi khi vẫn có thể được xấp xỉ gần cân bằng nội bộ.
 
 Đó là ý tưởng **cân bằng cục bộ (local equilibrium)** trong nhiệt động lực học không cân bằng.
 
@@ -349,7 +352,7 @@ Nếu phản ứng quá chậm, hệ có thể chưa đạt cân bằng dù tr�
 
 Ví dụ diamond có thể tồn tại lâu ở điều kiện mà graphite bền hơn nhiệt động vì hàng rào chuyển pha lớn.
 
-Trong hóa phân tích, nhiều phép tính acid–base giả định cân bằng proton nhanh. Với hệ tạo phức chậm hoặc kết tủa chậm, giả định này cần được kiểm tra.
+Trong hóa phân tích, nhiều phép tính acid–cơ sở (base / 기반) giả định cân bằng proton nhanh. Với hệ tạo phức chậm hoặc kết tủa chậm, giả định này cần được kiểm tra.
 
 ## Các hiểu lầm thường gặp
 
@@ -363,7 +366,7 @@ Sai. Hai chiều tiếp tục nhưng tốc độ ròng bằng 0.
 
 ### “Nồng độ không đổi luôn nghĩa cân bằng”
 
-Sai. Một hệ mở ở steady state có thể duy trì nồng độ cố định với dòng ròng liên tục.
+Sai. Một hệ mở ở steady trạng thái (state / 상태) có thể duy trì nồng độ cố định với dòng ròng liên tục.
 
 ### “Chất xúc tác làm K lớn hơn”
 
@@ -392,3 +395,5 @@ phản ứng thuận + phản ứng nghịch
 Nhưng các chuyển đổi vi mô vẫn tiếp tục.
 
 Xem tiếp: [Hằng số cân bằng](./01_equilibrium_constant.md), [Thương số phản ứng](./02_reaction_quotient.md) và [Nhiệt động lực học của cân bằng](./04_thermodynamics_of_equilibrium.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 equilibrium constant](./01_equilibrium_constant.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

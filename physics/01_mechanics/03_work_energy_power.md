@@ -1,10 +1,13 @@
 # Công, năng lượng, thế năng và công suất
 
+> **Mạch đọc:** Đọc **Công, năng lượng, thế năng và công suất** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tại sao cần năng lượng nếu đã có lực và gia tốc?** sang **Công: lực truyền năng lượng qua độ dời**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Tại sao cần năng lượng nếu đã có lực và gia tốc?
 
 Newton II cho phép ta mô tả chuyển động bằng lực và gia tốc. Nhưng với nhiều hệ, theo dõi mọi vectơ (vector) lực theo từng thời điểm là cách giải dài và che mất cấu trúc. Năng lượng (Energy / 에너지) cung cấp một cách nhìn khác: thay vì theo dõi “chuyển động thay đổi từng giây thế nào”, ta theo dõi khả năng hệ chuyển đổi trạng thái và một đại lượng có thể được truyền, tích trữ hoặc chuyển dạng.
 
-Năng lượng không phải một “chất lỏng vô hình”. Nó là một đại lượng trạng thái hoặc đại lượng gắn với hệ, được định nghĩa sao cho các định luật bảo toàn tạo ra ràng buộc (constraint) rất mạnh cho quá trình vật lý.
+Năng lượng không phải một “chất lỏng vô hình”. Nó là một đại lượng trạng thái hoặc đại lượng gắn với hệ, được định nghĩa sao cho các định luật bảo toàn tạo ra ràng buộc (constraint / 제약조건) rất mạnh cho quá trình vật lý.
 
 Đơn vị năng lượng là joule:
 
@@ -23,13 +26,13 @@ W=\vec F\cdot\Delta\vec r
 
 Tích vô hướng xuất hiện vì chỉ thành phần lực song song độ dịch chuyển (displacement) mới làm công theo định nghĩa cơ học này.
 
-Nếu ta xách một vali đi ngang với tốc độ không đổi, tay tạo lực chủ yếu hướng lên còn độ dịch chuyển hướng ngang. Trong idealized mô hình (model):
+Nếu ta xách một vali đi ngang với tốc độ không đổi, tay tạo lực chủ yếu hướng lên còn độ dịch chuyển hướng ngang. Trong idealized mô hình (model / 모델):
 
 ```math
 W_{hand}=0
 ```
 
-Điều này không có nghĩa cơ bắp không tiêu hao năng lượng sinh học; nó chỉ nói mechanical work của lực ngoài tác dụng lên tâm khối (center of mass) của vali theo hướng dịch chuyển bằng không (zero). Sinh học cơ bắp có quá trình hóa học và nội lực phức tạp hơn.
+Điều này không có nghĩa cơ bắp không tiêu hao năng lượng sinh học; nó chỉ nói mechanical công việc (work / 작업) của lực ngoài tác dụng lên tâm khối (center of mass) của vali theo hướng dịch chuyển bằng không (zero). Sinh học cơ bắp có quá trình hóa học và nội lực phức tạp hơn.
 
 ### Lực thay đổi theo vị trí
 
@@ -139,7 +142,7 @@ Trong nhiều chiều:
 \vec F=-\nabla U
 ```
 
-Gradient (Gradient / 그래디언트) chỉ hướng tăng nhanh nhất của vô hướng (scalar) trường (field) `U`; dấu âm khiến lực (force) hướng về giảm nhanh nhất. Đây là liên hệ (connection) trực tiếp sang học máy (Machine Learning): gradient descent cũng đi theo `-\nabla L` để giảm tổn hao (loss) function, dù “tổn hao” không phải vật lý (physical) năng lượng (energy).
+Độ dốc (gradient / 기울기) chỉ hướng tăng nhanh nhất của vô hướng (scalar) trường (field) `U`; dấu âm khiến lực (force) hướng về giảm nhanh nhất. Đây là liên hệ (connection) trực tiếp sang học máy (Machine Learning): độ dốc (gradient / 기울기) descent cũng đi theo `-\nabla L` để giảm tổn hao (loss) hàm (function / 함수), dù “tổn hao” không phải vật lý (physical / 물리적) năng lượng (energy / 에너지).
 
 ## Thế năng hấp dẫn gần mặt đất
 
@@ -223,7 +226,7 @@ Khối lượng triệt tiêu:
 v=\sqrt{2gh}
 ```
 
-Kết quả trùng với kinematics, nhưng năng lượng method không cần tính thời gian.
+Kết quả trùng với kinematics, nhưng năng lượng phương thức (method / 메서드) không cần tính thời gian.
 
 ## Lực không bảo toàn và “mất năng lượng”
 
@@ -259,7 +262,7 @@ P=\vec F\cdot\vec v
 
 Một động cơ 100 kW không nhất thiết có tổng năng lượng nhiều hơn một động cơ 50 kW; nó có khả năng chuyển năng lượng nhanh hơn.
 
-Trong điện toán (computing), công suất (power) consumption cũng là năng lượng per time. Một CPU dùng 100 W tiêu thụ 100 J mỗi giây ở mức công suất đó. Nhiệt sinh ra, thời lượng pin (battery life) và giảm xung do nhiệt (thermal throttling) đều liên quan tới tốc độ chuyển đổi năng lượng (energy conversion rate).
+Trong điện toán (computing), công suất (power) consumption cũng là năng lượng per thời gian (time / 시간). Một CPU dùng 100 W tiêu thụ 100 J mỗi giây ở mức công suất đó. Nhiệt sinh ra, thời lượng pin (battery life) và giảm xung do nhiệt (thermal throttling) đều liên quan tới tốc độ chuyển đổi năng lượng (energy conversion rate).
 
 ## Efficiency
 
@@ -269,7 +272,7 @@ Hiệu suất (Efficiency / 효율):
 \eta=\frac{E_{useful}}{E_{input}}
 ```
 
-hoặc với steady process:
+hoặc với steady tiến trình (process / 프로세스):
 
 ```math
 \eta=\frac{P_{useful}}{P_{input}}
@@ -297,7 +300,7 @@ và lực bằng không. Nếu độ cong (curvature) dương:
 U(x)\approx U(x_0)+\frac12k(x-x_0)^2
 ```
 
-Đây là lý do họa âm (harmonic) bộ dao động (oscillator) xuất hiện ở rất nhiều hệ vật lý: bất kỳ cân bằng ổn định (stable equilibrium) trơn nào, khi nhiễu loạn (perturbation) nhỏ, thường có hành vi (behavior) gần lò xo.
+Đây là lý do họa âm (harmonic) bộ dao động (oscillator) xuất hiện ở rất nhiều hệ vật lý: bất kỳ cân bằng ổn định (stable equilibrium) trơn nào, khi nhiễu loạn (perturbation) nhỏ, thường có hành vi (behavior / 동작) gần lò xo.
 
 ## Bài toán mẫu: tàu lượn
 
@@ -317,9 +320,9 @@ mg(15)=\frac12mv^2
 v=\sqrt{2g(15)}\approx17.1\,m/s
 ```
 
-Không cần biết hình dạng đường ray. Đây là sức mạnh của lực bảo toàn (conservative force): đường đi (path) thông tin (information) được nén vào thế độ chênh (difference).
+Không cần biết hình dạng đường ray. Đây là sức mạnh của lực bảo toàn (conservative force): đường đi (path) thông tin (information / 정보) được nén vào thế độ chênh (difference).
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > lực view hỏi “tại mỗi khoảnh khắc, tương tác đang bẻ quỹ đạo (trajectory) thế nào?”. năng lượng view hỏi “hệ có thể chuyển từ trạng thái này sang trạng thái kia hay không, và lượng khả năng chuyển đổi được phân phối giữa những dạng nào?”. Hai view không cạnh tranh; chúng là hai phép chiếu của cùng động lực học (dynamics).
 
@@ -327,14 +330,16 @@ Không cần biết hình dạng đường ray. Đây là sức mạnh của l�
 
 ### “Năng lượng là lực”
 
-Không. lực có đơn vị N và là vectơ; năng lượng có đơn vị J và thường là vô hướng. lực liên hệ với gradient của thế năng (potential energy).
+Không. lực có đơn vị N và là vectơ; năng lượng có đơn vị J và thường là vô hướng. lực liên hệ với độ dốc (gradient / 기울기) của thế năng (potential energy).
 
 ### “Công bằng lực nhân quãng đường trong mọi trường hợp”
 
-Chỉ khi lực cùng hướng độ dịch chuyển và hằng số (constant). Dạng tổng quát là dot product và tích phân đường.
+Chỉ khi lực cùng hướng độ dịch chuyển và hằng số (constant). Dạng tổng quát là dot sản phẩm (product / 제품) và tích phân đường.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Định luật Newton](01_newton_laws_dynamics.md).
 
 **Liên hệ tiếp:** [Nhiệt động lực học](../04_thermal_statistical/00_thermodynamics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

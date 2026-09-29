@@ -1,5 +1,8 @@
 # Bảng tuần hoàn và các xu hướng tuần hoàn
 
+> **Mạch đọc:** Đọc **Bảng tuần hoàn và các xu hướng tuần hoàn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao tính chất hóa học lặp lại theo chu kỳ?** sang **Chu kỳ, nhóm và các khối s, p, d, f**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Bảng tuần hoàn (periodic table / 주기율표)** không chỉ là bảng tra cứu nguyên tố. Hình dạng của nó là hệ quả trực tiếp của cấu trúc electron, còn các **xu hướng tuần hoàn (periodic trends / 주기적 성질)** xuất hiện vì điện tích hạt nhân hiệu dụng, che chắn electron, khả năng xuyên thấu của obitan, kích thước lớp electron và cấu hình electron thay đổi có quy luật.
 
 Nếu chỉ học các mũi tên “bán kính tăng/giảm” hoặc “độ âm điện tăng/giảm”, ta rất dễ quên và khó xử lý ngoại lệ. Cách học bền hơn là luôn hỏi: electron đang ở lớp nào, bị hạt nhân hút mạnh tới đâu, bị electron khác che chắn thế nào, và trạng thái electron mới tạo ra có ổn định hay không.
@@ -307,9 +310,9 @@ Phi kim thường giữ hoặc nhận electron mạnh hơn và có xu hướng t
 
 Tính kim loại là biểu hiện tổng hợp của năng lượng ion hóa, độ âm điện, cấu trúc vùng và kiểu liên kết.
 
-## Tính acid–base của oxide thay đổi theo bảng tuần hoàn
+## Tính acid–cơ sở (base / 기반) của oxide thay đổi theo bảng tuần hoàn
 
-Một trong những ứng dụng rất hữu ích của periodic trends là dự đoán tính acid–base của oxide.
+Một trong những ứng dụng rất hữu ích của periodic trends là dự đoán tính acid–cơ sở (base / 기반) của oxide.
 
 Trong cùng một chu kỳ, khi đi từ kim loại mạnh sang phi kim:
 
@@ -490,7 +493,7 @@ Xu hướng tuần hoàn không phải chương kết thúc ở bảng nguyên t
 
 - phân cực liên kết;
 - năng lượng mạng ion;
-- độ bền acid/base;
+- độ bền acid/cơ sở (base / 기반);
 - trạng thái oxy hóa;
 - hình học phối trí;
 - độ tan;
@@ -508,7 +511,7 @@ polarizing power tăng
 
 Đây là nền cho quy tắc Fajans, HSAB và coordination chemistry.
 
-## Periodic trends và acid–base
+## Periodic trends và acid–cơ sở (base / 기반)
 
 Độ acid của hydride trong cùng một chu kỳ thường tăng khi nguyên tử trung tâm âm điện hơn.
 
@@ -522,7 +525,7 @@ HF < HCl < HBr < HI
 
 về độ acid.
 
-Trend này cho thấy acid strength phải được suy từ **độ bền liên kết + độ ổn định base liên hợp + solvation**, không chỉ từ độ âm điện.
+Trend này cho thấy acid strength phải được suy từ **độ bền liên kết + độ ổn định cơ sở (base / 기반) liên hợp + solvation**, không chỉ từ độ âm điện.
 
 ## Periodic trends và redox
 
@@ -560,7 +563,7 @@ MgO  → base
 Al2O3 → lưỡng tính
 ```
 
-Chỉ trong ba nguyên tố đã thấy cấu hình electron, năng lượng ion hóa và acid–base của oxide nối với nhau thành một câu chuyện thống nhất.
+Chỉ trong ba nguyên tố đã thấy cấu hình electron, năng lượng ion hóa và acid–cơ sở (base / 기반) của oxide nối với nhau thành một câu chuyện thống nhất.
 
 ## Ví dụ suy luận: C và Si
 
@@ -584,7 +587,7 @@ Không. Ái lực electron liên quan biến đổi năng lượng của nguyên
 
 ### “Nguyên tố cùng nhóm có hóa học gần như giống hệt nhau”
 
-Không. Chu kỳ 2, inert-pair effect, lanthanide contraction và relativistic effects tạo nhiều khác biệt lớn.
+Không. Chu kỳ 2, inert-pair tác động (effect / 효과), lanthanide contraction và relativistic effects tạo nhiều khác biệt lớn.
 
 ### “Bán kính nguyên tử là kích thước thật với biên rõ”
 
@@ -594,15 +597,15 @@ Không. Nó là một đại lượng mô hình/thực nghiệm dựa trên kho�
 
 Không. Reactivity phụ thuộc phản ứng cụ thể, sản phẩm, pha, dung môi, nhiệt động và động học.
 
-### “Mọi trend nhóm chính áp dụng được cho transition metals”
+### “Mọi trend nhóm chính áp dụng được cho chuyển tiếp (transition / 전이) metals”
 
-Không. Orbital d gần nhau về năng lượng và nhiều trạng thái oxy hóa làm hóa học transition metals phức tạp hơn.
+Không. Orbital d gần nhau về năng lượng và nhiều trạng thái oxy hóa làm hóa học chuyển tiếp (transition / 전이) metals phức tạp hơn.
 
 ## Mô hình tư duy
 
 Hãy đọc bảng tuần hoàn như một **bản đồ của lực hút electron và kiến trúc lớp electron**.
 
-Chuỗi reasoning nền là:
+Chuỗi lập luận (reasoning / 추론) nền là:
 
 ```text
 Z + cấu hình electron
@@ -616,3 +619,5 @@ Z + cấu hình electron
 Các ngoại lệ không phá quy luật; chúng cho biết một hiệu ứng khác đang trở nên đủ mạnh để cạnh tranh với xu hướng chính.
 
 Từ đây có thể chuyển sang [Vì sao nguyên tử liên kết?](../02_chemical_bonding/00_why_atoms_bond.md) và [Hóa học nhóm chính](../10_inorganic_chemistry/01_main_group_chemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atoms elements and isotopes](./00_atoms_elements_and_isotopes.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

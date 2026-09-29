@@ -1,5 +1,8 @@
 # Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển
 
+> **Mạch đọc:** Đọc **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phân tách luôn có chi phí** sang **“Tinh khiết” phụ thuộc mục đích**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Phân tách hoạt động khi các thành phần khác nhau ở ít nhất một tính chất có thể khai thác: độ bay hơi, độ tan, phân bố giữa pha, điện tích, kích thước, hấp phụ, xu hướng kết tinh hoặc độ thấm qua màng. Không có kỹ thuật nào tốt nhất cho mọi trường hợp. Tinh sạch tốt nghĩa là chọn **độ tương phản vật lý–hóa học lớn nhất có thể khai thác**, rồi khuếch đại nó qua nhiều giai đoạn với mức mất sản phẩm tối thiểu.
 
 ## Phân tách luôn có chi phí
@@ -150,13 +153,13 @@ q^2=\frac19\approx0.111
 
 chỉ còn khoảng 11,1%.
 
-## Chiết acid–base
+## Chiết acid–cơ sở (base / 기반)
 
 Ion hóa làm thay đổi rất mạnh khả năng phân bố.
 
 Một carboxylic acid trung hòa có thể ưu tiên pha hữu cơ; khi bị khử proton thành carboxylate ion, nó thường chuyển mạnh sang pha nước.
 
-Điều này cho phép tách chọn lọc acid, base và chất trung hòa bằng cách điều khiển pH.
+Điều này cho phép tách chọn lọc acid, cơ sở (base / 기반) và chất trung hòa bằng cách điều khiển pH.
 
 ## Hệ số phân bố và tỉ số phân bố
 
@@ -164,7 +167,7 @@ Với chất có thể ion hóa, tổng nồng độ ở mọi dạng hóa học
 
 **Tỉ số phân bố (distribution ratio, D)** phụ thuộc pH, khác với hệ số phân bố nội tại của một dạng trung hòa duy nhất.
 
-Vì vậy hiệu quả chiết có thể được điều chỉnh bằng hóa học acid–base.
+Vì vậy hiệu quả chiết có thể được điều chỉnh bằng hóa học acid–cơ sở (base / 기반).
 
 ## Nhũ tương
 
@@ -260,7 +263,7 @@ Sắc ký pha thường dùng pha tĩnh phân cực và pha động kém phân c
 
 Pha đảo dùng pha tĩnh không phân cực và pha động phân cực hơn.
 
-Vì vậy logic lưu giữ bị đảo giữa hai hệ.
+Vì vậy lô-gic (logic / 논리) lưu giữ bị đảo giữa hai hệ.
 
 ## TLC như công cụ tối ưu nhanh
 
@@ -269,7 +272,7 @@ Sắc ký lớp mỏng có thể sàng lọc hệ dung môi trước khi chạy 
 Hệ số lưu giữ:
 
 \[
-R_f=\frac{\text{khoảng cách chất phân tích đi được}}{\text{khoảng cách mặt dung môi đi được}}
+R_f=\frac{\văn bản (text / 텍스트){khoảng cách chất phân tích đi được}}{\văn bản (text / 텍스트){khoảng cách mặt dung môi đi được}}
 \]
 
 Dung môi tốt cho cột không nhất thiết làm sản phẩm có `Rf` lớn nhất; điều quan trọng hơn là tạo khoảng cách đủ rõ giữa sản phẩm và tạp chất.
@@ -338,7 +341,7 @@ Nếu hai muối có \(K_{sp}\) khác nhau đáng kể, thêm thuốc thử có 
 
 Tuy nhiên tạo phức, hoạt độ và động học tạo mầm đều ảnh hưởng khả năng tách thực tế.
 
-## Logic tinh sạch protein
+## Lô-gic (logic / 논리) tinh sạch protein
 
 Một quy trình điển hình có thể khai thác các tính chất trực giao:
 
@@ -455,3 +458,5 @@ Không. Ngoại quan hầu như không phải bằng chứng hóa học đủ m�
 Phân tách là **quá trình khuếch đại lặp lại một khác biệt vật lý–hóa học**. Hãy xác định tính chất nào khác biệt nhất giữa sản phẩm và tạp, chọn quy trình chuyển khác biệt đó thành sự tách pha hoặc khác biệt vận chuyển, rồi theo dõi đồng thời độ tinh khiết và hiệu suất thu hồi qua từng bước.
 
 Xem tiếp: [Thiết kế thí nghiệm](./04_experimental_design.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lab safety](./00_lab_safety.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

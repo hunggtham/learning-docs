@@ -1,8 +1,11 @@
-# Xác suất có điều kiện và Bayes: cập nhật uncertainty khi information thay đổi
+# Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi
 
-Xác suất có điều kiện (conditional probability / 조건부 확률) formalize một việc rất tự nhiên: **probability phụ thuộc vào information đang có**.
+> **Mạch đọc:** Đọc **Xác suất có điều kiện và Bayes: cập nhật bất định (uncertainty / 불확실성) khi thông tin (information / 정보) thay đổi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Conditional xác suất (probability / 확률) là renormalization của mẫu (sample / 표본) không gian (space / 공간)** sang **2. sản phẩm (product / 제품) quy tắc (rule / 규칙) đến trực tiếp từ definition**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Cùng một event có thể có probability khác nhau khi context thay đổi. Vì vậy dấu `|` trong
+
+Xác suất có điều kiện (conditional probability / 조건부 확률) formalize một việc rất tự nhiên: **xác suất (probability / 확률) phụ thuộc vào thông tin (information / 정보) đang có**.
+
+Cùng một sự kiện (event / 이벤트) có thể có xác suất (probability / 확률) khác nhau khi ngữ cảnh (context / 맥락) thay đổi. Vì vậy dấu `|` trong
 
 ```math
 P(A\mid B)
@@ -10,13 +13,13 @@ P(A\mid B)
 
 không phải decoration. Nó nói:
 
-> Hãy tính probability của `A` trong một universe đã được thu hẹp bởi information `B`.
+> Hãy tính xác suất (probability / 확률) của `A` trong một universe đã được thu hẹp bởi thông tin (information / 정보) `B`.
 
 Bayes theorem sau đó giải một bài toán sâu hơn:
 
-> Nếu ta biết evidence có khả năng xuất hiện thế nào dưới từng hypothesis, làm sao cập nhật probability của hypothesis sau khi evidence xuất hiện?
+> Nếu ta biết bằng chứng (evidence / 증거) có khả năng xuất hiện thế nào dưới từng hypothesis, làm sao cập nhật xác suất (probability / 확률) của hypothesis sau khi bằng chứng (evidence / 증거) xuất hiện?
 
-## 1. Conditional probability là renormalization của sample space
+## 1. Conditional xác suất (probability / 확률) là renormalization của mẫu (sample / 표본) không gian (space / 공간)
 
 Nếu `P(B)>0`:
 
@@ -26,7 +29,7 @@ P(A\mid B)
 \frac{P(A\cap B)}{P(B)}.
 ```
 
-Khi biết `B` xảy ra, tất cả outcomes ngoài `B` bị loại khỏi consideration. Probability phải được renormalize để total mass trên `B` trở lại 1.
+Khi biết `B` xảy ra, tất cả outcomes ngoài `B` bị loại khỏi consideration. xác suất (probability / 확률) phải được renormalize để total mass trên `B` trở lại 1.
 
 Geometric intuition:
 
@@ -36,9 +39,9 @@ condition on B: chỉ giữ B
 A|B: phần của B cũng nằm trong A
 ```
 
-Do đó denominator `P(B)` không phải trick; nó rescale probability mass trên restricted universe.
+Do đó denominator `P(B)` không phải trick; nó rescale xác suất (probability / 확률) mass trên restricted universe.
 
-## 2. Product rule đến trực tiếp từ definition
+## 2. sản phẩm (product / 제품) quy tắc (rule / 규칙) đến trực tiếp từ definition
 
 Từ definition:
 
@@ -64,14 +67,14 @@ P(A\cap B)
 P(B\mid A)P(A).
 ```
 
-Product rule nói joint probability có thể factor thành:
+Sản phẩm (product / 제품) quy tắc (rule / 규칙) nói joint xác suất (probability / 확률) có thể factor thành:
 
 ```text
 probability của context
 × probability của event bên trong context
 ```
 
-## 3. Chain rule cho nhiều events
+## 3. chuỗi (chain / 사슬) quy tắc (rule / 규칙) cho nhiều events
 
 Với `A_1,\ldots,A_n`:
 
@@ -84,9 +87,9 @@ P(A_3\mid A_1,A_2)
 \cdots.
 ```
 
-Đây là foundation của probabilistic sequence models.
+Đây là foundation của probabilistic chuỗi (sequence / 시퀀스) các mô hình (models / 모델들).
 
-Ví dụ language model factorization:
+Ví dụ ngôn ngữ (language / 언어) mô hình (model / 모델) factorization:
 
 ```math
 P(w_1,\ldots,w_n)
@@ -95,9 +98,9 @@ P(w_1,\ldots,w_n)
 P(w_i\mid w_{<i}).
 ```
 
-Modern autoregressive AI dùng đúng probability chain rule ở scale lớn.
+Hiện đại (modern / 현대적) autoregressive AI dùng đúng xác suất (probability / 확률) chuỗi (chain / 사슬) quy tắc (rule / 규칙) ở quy mô (scale / 규모) lớn.
 
-## 4. Independence là statement về information
+## 4. Independence là statement về thông tin (information / 정보)
 
 Events `A` và `B` independent nếu
 
@@ -113,9 +116,9 @@ P(A\mid B)=P(A).
 
 Meaning:
 
-> Biết `B` không thay đổi probability của `A` trong model.
+> Biết `B` không thay đổi xác suất (probability / 확률) của `A` trong mô hình (model / 모델).
 
-Independence không nghĩa events “không liên quan về mặt câu chuyện”; nó là mathematical property của joint distribution.
+Independence không nghĩa events “không liên quan về mặt câu chuyện”; nó là mathematical thuộc tính (property / 속성) của joint phân phối (distribution / 분포).
 
 ## 5. Mutual exclusivity khác independence
 
@@ -125,7 +128,7 @@ Nếu `A` và `B` mutually exclusive:
 P(A\cap B)=0.
 ```
 
-Nếu cả hai có positive probability, chúng **không independent**, vì occurrence của `B` làm probability của `A` thành 0.
+Nếu cả hai có positive xác suất (probability / 확률), chúng **không independent**, vì occurrence của `B` làm xác suất (probability / 확률) của `A` thành 0.
 
 Đây là misconception rất phổ biến:
 
@@ -133,7 +136,7 @@ Nếu cả hai có positive probability, chúng **không independent**, vì occu
 cannot happen together ≠ independent
 ```
 
-## 6. Conditional independence: concept quan trọng hơn ordinary independence trong models
+## 6. Conditional independence: concept quan trọng hơn ordinary independence trong các mô hình (models / 모델들)
 
 `A` và `B` conditionally independent given `C` nếu:
 
@@ -143,7 +146,7 @@ P(A,B\mid C)
 P(A\mid C)P(B\mid C).
 ```
 
-Hai variables có thể dependent overall nhưng independent sau khi biết hidden/common cause.
+Hai variables có thể dependent overall nhưng independent sau khi biết hidden/dùng chung (common / 공통) cause.
 
 Ví dụ:
 
@@ -151,13 +154,13 @@ Ví dụ:
 umbrella use ← rain → wet streets
 ```
 
-Umbrella use và wet streets correlate. Nhưng nếu condition on actual rain state, remaining dependence có thể giảm mạnh trong simplified model.
+Umbrella use và wet streets correlate. Nhưng nếu điều kiện (condition / 조건) on actual rain trạng thái (state / 상태), remaining dependence có thể giảm mạnh trong simplified mô hình (model / 모델).
 
-Graphical models, Naive Bayes và causal reasoning dùng conditional independence liên tục.
+Graphical các mô hình (models / 모델들), Naive Bayes và lập luận nhân quả (causal reasoning / 인과적 추론) dùng conditional independence liên tục.
 
-## 7. Law of total probability: average qua hidden cases
+## 7. Law of total xác suất (probability / 확률): average qua hidden cases
 
-Nếu `B_1,\ldots,B_k` partition sample space:
+Nếu `B_1,\ldots,B_k` partition mẫu (sample / 표본) không gian (space / 공간):
 
 ```math
 P(A)
@@ -173,11 +176,11 @@ overall probability
 = weighted average của case-specific probabilities
 ```
 
-Weights chính là base rates `P(B_i)`.
+Weights chính là cơ sở (base / 기반) rates `P(B_i)`.
 
 Đây thường là denominator trong Bayes theorem.
 
-## 8. Bayes theorem derive bằng symmetry của joint probability
+## 8. Bayes theorem derive bằng symmetry của joint xác suất (probability / 확률)
 
 Ta có:
 
@@ -201,9 +204,9 @@ P(A\mid B)
 \frac{P(B\mid A)P(A)}{P(B)}.
 ```
 
-Bayes không tạo probability từ nothing. Nó reorganize joint probability để reverse conditioning direction.
+Bayes không tạo xác suất (probability / 확률) từ nothing. Nó reorganize joint xác suất (probability / 확률) để reverse conditioning direction.
 
-## 9. Prior, likelihood, evidence, posterior
+## 9. Prior, likelihood, bằng chứng (evidence / 증거), posterior
 
 Trong Bayesian notation:
 
@@ -222,13 +225,13 @@ p(D)       evidence / marginal likelihood
 p(θ|D)     posterior
 ```
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 posterior ∝ likelihood × prior
 ```
 
-Posterior là prior sau khi reweight bởi mức độ mỗi hypothesis giải thích evidence.
+Posterior là prior sau khi reweight bởi mức độ mỗi hypothesis giải thích bằng chứng (evidence / 증거).
 
 ## 10. Likelihood không phải posterior
 
@@ -238,15 +241,15 @@ Likelihood:
 L(\theta;D)=p(D\mid\theta)
 ```
 
-được xem như function của `\theta` khi data fixed.
+được xem như hàm (function / 함수) của `\theta` khi dữ liệu (data / 데이터) fixed.
 
 Nó không cần integrate/sum thành 1 over `\theta`.
 
-Posterior mới là probability distribution trên parameter/hypothesis khi prior được đưa vào và normalize.
+Posterior mới là xác suất (probability / 확률) phân phối (distribution / 분포) trên parameter/hypothesis khi prior được đưa vào và normalize.
 
 Confusing likelihood with posterior dẫn tới nhiều lỗi khi đọc statistics/ML.
 
-## 11. Medical-test example: base rate controls posterior
+## 11. Medical-test example: cơ sở (base / 기반) tỷ lệ (rate / 비율) controls posterior
 
 Giả sử:
 
@@ -260,7 +263,7 @@ sensitivity:
 P(+\mid D)=0.99
 ```
 
-false-positive rate:
+false-positive tỷ lệ (rate / 비율):
 
 ```math
 P(+\mid D^c)=0.05.
@@ -283,7 +286,7 @@ P(D\mid+)
 \approx0.167.
 ```
 
-Positive result chỉ đưa probability disease lên khoảng 16.7%, không phải 99%.
+Positive kết quả (result / 결과) chỉ đưa xác suất (probability / 확률) disease lên khoảng 16.7%, không phải 99%.
 
 Sensitivity trả lời:
 
@@ -299,7 +302,7 @@ P(disease | test+)
 
 Hai quantities đảo conditioning direction.
 
-## 12. Natural-frequency representation thường dễ hiểu hơn percentages
+## 12. Natural-frequency biểu diễn (representation / 표현) thường dễ hiểu hơn percentages
 
 Giả sử 10,000 people.
 
@@ -328,9 +331,9 @@ Among positives:
 99 / (99+495) ≈ 16.7%
 ```
 
-Frequency tree làm denominator trực quan hơn và giảm base-rate neglect.
+Frequency cây (tree / 트리) làm denominator trực quan hơn và giảm base-rate neglect.
 
-## 13. Likelihood ratio là evidence multiplier
+## 13. Likelihood ratio là bằng chứng (evidence / 증거) multiplier
 
 Positive likelihood ratio:
 
@@ -340,7 +343,7 @@ LR^+
 \frac{P(+\mid D)}{P(+\mid D^c)}.
 ```
 
-Nó đo evidence `+` favor disease hypothesis bao nhiêu lần so với non-disease.
+Nó đo bằng chứng (evidence / 증거) `+` favor disease hypothesis bao nhiêu lần so với non-disease.
 
 Bayes odds form:
 
@@ -351,9 +354,9 @@ Bayes odds form:
 \times LR.
 ```
 
-Evidence update trở thành multiplication.
+Bằng chứng (evidence / 증거) cập nhật (update / 업데이트) trở thành multiplication.
 
-## 14. Log-odds biến multiplicative evidence thành additive evidence
+## 14. Log-odds biến multiplicative bằng chứng (evidence / 증거) thành additive bằng chứng (evidence / 증거)
 
 Odds:
 
@@ -371,11 +374,11 @@ Take log:
 \log LR(E).
 ```
 
-Đây là lý do log-odds/log-likelihood xuất hiện rộng trong statistics, logistic regression và evidence accumulation.
+Đây là lý do log-odds/log-likelihood xuất hiện rộng trong statistics, logistic regression và bằng chứng (evidence / 증거) accumulation.
 
 ## 15. Sequential Bayesian updating
 
-Với evidence `E_1,E_2,...`, posterior sau step trước trở thành prior cho step sau:
+Với bằng chứng (evidence / 증거) `E_1,E_2,...`, posterior sau step trước trở thành prior cho step sau:
 
 ```text
 prior
@@ -396,11 +399,11 @@ p(E_1,\ldots,E_n\mid H)
 
 Log-likelihoods add.
 
-Nhưng nếu evidence correlated, multiplying as independent **double-counts information**.
+Nhưng nếu bằng chứng (evidence / 증거) correlated, multiplying as independent **double-counts thông tin (information / 정보)**.
 
-## 16. Naive Bayes: intentionally strong conditional independence assumption
+## 16. Naive Bayes: intentionally strong conditional independence giả định (assumption / 가정)
 
-Naive Bayes assumes features conditionally independent given class:
+Naive Bayes assumes features conditionally independent given lớp (class / 클래스):
 
 ```math
 P(x_1,\ldots,x_d\mid y)
@@ -408,7 +411,7 @@ P(x_1,\ldots,x_d\mid y)
 \prod_j P(x_j\mid y).
 ```
 
-Assumption thường không literally true, nhưng classifier vẫn có thể work well if decision boundaries robust.
+Giả định (assumption / 가정) thường không literally true, nhưng classifier vẫn có thể công việc (work / 작업) well if quyết định (decision / 결정) boundaries robust.
 
 Important lesson:
 
@@ -416,9 +419,9 @@ Important lesson:
 useful model ≠ literally true model
 ```
 
-Performance và calibration cần empirical validation.
+Hiệu năng (performance / 성능) và calibration cần empirical kiểm tra hợp lệ (validation / 검증).
 
-## 17. Bayes denominator là model evidence
+## 17. Bayes denominator là mô hình (model / 모델) bằng chứng (evidence / 증거)
 
 For hypotheses `H_i`:
 
@@ -430,7 +433,7 @@ P(E)
 
 Denominator đảm bảo posterior probabilities sum to 1.
 
-Trong model comparison, marginal likelihood còn penalize parameter space regions dự đoán data kém, tạo Occam-like effect under priors.
+Trong mô hình (model / 모델) comparison, marginal likelihood còn penalize parameter không gian (space / 공간) regions dự đoán dữ liệu (data / 데이터) kém, tạo Occam-like tác động (effect / 효과) under priors.
 
 ## 18. Continuous Bayes
 
@@ -443,13 +446,13 @@ p(\theta\mid D)
 {\int p(D\mid\vartheta)p(\vartheta)d\vartheta}.
 ```
 
-Denominator có thể khó compute, dẫn tới MCMC, variational inference và other approximate methods.
+Denominator có thể khó compute, dẫn tới MCMC, variational suy luận (inference / 추론) và other approximate methods.
 
 Concept Bayes simple; computation có thể hard.
 
 ## 19. Conjugate example: Beta–Bernoulli intuition
 
-Suppose Bernoulli probability `p` unknown.
+Suppose Bernoulli xác suất (probability / 확률) `p` unknown.
 
 Prior:
 
@@ -469,7 +472,7 @@ Beta(\alpha+s,\beta+f).
 
 Prior parameters behave like pseudo-counts.
 
-This is a clean example of updating uncertainty, not just point estimate.
+This is a clean example of updating bất định (uncertainty / 불확실성), not just điểm (point / 지점) estimate.
 
 ## 20. Posterior predictive asks about future observations
 
@@ -484,7 +487,7 @@ p(\theta\mid D)
 d\theta.
 ```
 
-Posterior predictive averages future prediction over parameter uncertainty.
+Posterior predictive averages future prediction over parameter bất định (uncertainty / 불확실성).
 
 This distinction matters:
 
@@ -493,21 +496,21 @@ parameter uncertainty
 ≠ observation noise
 ```
 
-Predictive distribution combines both.
+Predictive phân phối (distribution / 분포) combines both.
 
 ## 21. Calibration vs discrimination
 
-A model can rank high-risk cases well but output probabilities that are miscalibrated.
+A mô hình (model / 모델) can rank high-risk cases well but đầu ra (output / 출력) probabilities that are miscalibrated.
 
-If among all cases predicted `0.8`, roughly 80% actually occur over repeated comparable cases, model is calibrated at that level.
+If among all cases predicted `0.8`, roughly 80% actually occur over repeated comparable cases, mô hình (model / 모델) is calibrated at that mức (level / 수준).
 
-Bayesian/probabilistic reasoning cares about probability quality, not only classification accuracy.
+Bayesian/probabilistic lập luận (reasoning / 추론) cares about xác suất (probability / 확률) chất lượng (quality / 품질), not only classification accuracy.
 
-## 22. Selection effects change conditional probabilities
+## 22. Selection effects thay đổi (change / 변경) conditional probabilities
 
-Conditioning can introduce dependency.
+Conditioning can introduce phụ thuộc (dependency / 의존성).
 
-Classic collider pattern:
+Classic collider mẫu (pattern / 패턴):
 
 ```text
 A → C ← B
@@ -531,13 +534,13 @@ P(A|B) across subgroups
 
 cannot always be understood from aggregate `P(A|B)` alone.
 
-Conditional probability is not just computational; it changes which population question is being asked.
+Conditional xác suất (probability / 확률) is not just computational; it changes which population question is being asked.
 
-## 24. Causal interpretation requires more than Bayes theorem
+## 24. nhân quả (causal / 인과적) interpretation requires more than Bayes theorem
 
-Bayes updates beliefs about hypotheses under a probability model.
+Bayes updates beliefs about hypotheses under a xác suất (probability / 확률) mô hình (model / 모델).
 
-Causal question asks:
+Nhân quả (causal / 인과적) question asks:
 
 ```text
 What happens if we intervene?
@@ -549,7 +552,7 @@ Conditioning:
 P(Y\mid X=x)
 ```
 
-is not generally same as intervention distribution:
+is not generally same as intervention phân phối (distribution / 분포):
 
 ```math
 P(Y\mid do(X=x)).
@@ -557,11 +560,11 @@ P(Y\mid do(X=x)).
 
 Confounding can make them differ.
 
-Bayesian inference and causal inference can combine, but Bayes theorem alone does not establish causality.
+Bayesian suy luận (inference / 추론) and nhân quả (causal / 인과적) suy luận (inference / 추론) can combine, but Bayes theorem alone does not establish causality.
 
 ## 25. Fraud detection example
 
-Suppose fraud rate:
+Suppose fraud tỷ lệ (rate / 비율):
 
 ```math
 P(F)=0.001.
@@ -585,7 +588,7 @@ P(+)
 =0.01094.
 ```
 
-Posterior fraud probability:
+Posterior fraud xác suất (probability / 확률):
 
 ```math
 P(F\mid+)
@@ -593,20 +596,20 @@ P(F\mid+)
 0.0868.
 ```
 
-Even a strong detector yields many false alerts under extreme class imbalance.
+Even a strong detector yields many false alerts under extreme lớp (class / 클래스) imbalance.
 
 Operations teams need posterior precision, not only sensitivity.
 
-## 26. Finance connection: evidence updates, regime probabilities
+## 26. Finance liên kết (connection / 연결): bằng chứng (evidence / 증거) updates, regime probabilities
 
-Suppose hypotheses represent market regimes:
+Suppose hypotheses represent thị trường (market / 시장) regimes:
 
 ```text
 H1 = expansion
 H2 = slowdown
 ```
 
-Macro data `E` reweights regime probabilities:
+Macro dữ liệu (data / 데이터) `E` reweights regime probabilities:
 
 ```math
 P(H_i\mid E)
@@ -614,11 +617,11 @@ P(H_i\mid E)
 P(E\mid H_i)P(H_i).
 ```
 
-Real models require continuous variables, time dependence and model uncertainty, but conceptual structure is Bayesian updating.
+Real các mô hình (models / 모델들) require continuous variables, thời gian (time / 시간) dependence and mô hình (model / 모델) bất định (uncertainty / 불확실성), but conceptual cấu trúc (structure / 구조) is Bayesian updating.
 
-Do not confuse posterior probability with guaranteed forecast.
+Do not confuse posterior xác suất (probability / 확률) with guaranteed forecast.
 
-## 27. AI connection: softmax and posterior-like normalization
+## 27. AI liên kết (connection / 연결): softmax and posterior-like normalization
 
 Classifier logits `z_k` often converted:
 
@@ -628,15 +631,15 @@ p_k=
 {\sum_j e^{z_j}}.
 ```
 
-This creates normalized class probabilities under model interpretation.
+This creates normalized lớp (class / 클래스) probabilities under mô hình (model / 모델) interpretation.
 
-But softmax output is not automatically calibrated posterior probability; training objective/data shift/model misspecification matter.
+But softmax đầu ra (output / 출력) is not automatically calibrated posterior xác suất (probability / 확률); huấn luyện (training / 학습) mục tiêu (objective / 목표)/dữ liệu (data / 데이터) shift/mô hình (model / 모델) misspecification matter.
 
-Probabilistic notation does not guarantee probabilistic reliability.
+Probabilistic notation does not guarantee probabilistic độ tin cậy (reliability / 신뢰성).
 
-## 28. Information theory connection
+## 28. thông tin (information / 정보) lý thuyết (theory / 이론) liên kết (connection / 연결)
 
-Bayesian evidence update in log space:
+Bayesian bằng chứng (evidence / 증거) cập nhật (update / 업데이트) in log không gian (space / 공간):
 
 ```math
 \log p(H\mid E)
@@ -654,24 +657,24 @@ Surprisal:
 -\log p(E)
 ```
 
-and log-likelihood ratios measure evidence on additive information scale.
+and log-likelihood ratios measure bằng chứng (evidence / 증거) on additive thông tin (information / 정보) quy mô (scale / 규모).
 
-Bayes, log-loss and information theory share log-probability structure.
+Bayes, log-loss and thông tin (information / 정보) lý thuyết (theory / 이론) share log-probability cấu trúc (structure / 구조).
 
 ## 29. Worked example: two tests are not automatically independent
 
 Suppose two medical tests use similar biomarkers.
 
-It is tempting to write:
+It is tempting to ghi (write / 쓰기):
 
 ```math
 P(T_1,T_2\mid D)
 =P(T_1\mid D)P(T_2\mid D).
 ```
 
-But shared measurement mechanism can make errors correlated.
+But dùng chung (shared / 공유) đo lường (measurement / 측정) cơ chế (mechanism / 메커니즘) can make errors correlated.
 
-If both false-positive for same biological reason, independence assumption exaggerates combined evidence.
+If both false-positive for same biological reason, independence giả định (assumption / 가정) exaggerates combined bằng chứng (evidence / 증거).
 
 Always ask:
 
@@ -683,7 +686,7 @@ or not independent at all?
 
 ## 30. Practical Bayes checklist
 
-When reading a probability update, identify:
+When reading a xác suất (probability / 확률) cập nhật (update / 업데이트), identify:
 
 ```text
 Hypothesis/event of interest?
@@ -698,7 +701,7 @@ Calibration evidence?
 Causal or only associational claim?
 ```
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Phần kết nối đưa Bayes vào diagnostic testing, causal reasoning và machine learning. Luôn ghi rõ prior, evidence và posterior để không đảo sai denominator.
 
@@ -718,10 +721,10 @@ conditional probability
 → causal-conditioning distinction
 ```
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Conditional probability changes the universe you are reasoning inside. Bayes theorem then **reweights competing hypotheses by how well they predict the evidence**, while preserving base rates. Evidence is strong only relative to alternatives, and multiple pieces of evidence can be multiplied safely only when the dependency assumptions justify it.
+> Conditional xác suất (probability / 확률) changes the universe you are lập luận (reasoning / 추론) inside. Bayes theorem then **reweights competing hypotheses by how well they predict the bằng chứng (evidence / 증거)**, while preserving cơ sở (base / 기반) rates. bằng chứng (evidence / 증거) is strong only relative to alternatives, and multiple pieces of bằng chứng (evidence / 증거) can be multiplied safely only when the phụ thuộc (dependency / 의존성) các giả định (assumptions / 가정들) justify it.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 `P(A|B)` is not `P(B|A)`. Sensitivity is not positive predictive value. High classifier accuracy under class imbalance may say little about posterior precision. Likelihood is not posterior. Bayesian updating cannot rescue a bad likelihood model or unjustified prior. Conditional independence must be modeled, not assumed because features “look different”. Conditioning can create correlations through selection. Bayes theorem updates association under a model; it does not by itself prove causal effects.

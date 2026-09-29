@@ -1,5 +1,8 @@
 # Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)
 
+> **Mạch đọc:** Đặt **Kế toán điều tra, chất lượng lợi nhuận và dấu hiệu cảnh báo khi đọc doanh nghiệp Hàn Quốc (Forensic Accounting / 포렌식 회계·이익의 질·회계 경고신호)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Lợi nhuận không bằng tiền mặt** sang **2. Chất lượng lợi nhuận là gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Báo cáo tài chính không phải lời nói dối mặc định, nhưng cũng không phải “sự thật kinh tế” hoàn hảo. Kế toán là hệ thống đo lường dựa trên quy tắc, ước tính và giả định về thời điểm. Vì vậy cùng một mức lợi nhuận báo cáo có thể có chất lượng rất khác nhau.
 
 **Chất lượng lợi nhuận (earnings quality / 이익의 질)** hỏi một câu rất thực tế: lợi nhuận đang thấy có phản ánh hoạt động lặp lại không, có chuyển thành tiền mặt không, có phụ thuộc quá nhiều vào ước tính hay khoản một lần không và có bền vững qua chu kỳ hay không?

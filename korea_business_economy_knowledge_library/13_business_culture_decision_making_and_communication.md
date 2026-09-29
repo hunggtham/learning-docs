@@ -1,10 +1,13 @@
 # Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)
 
+> **Mạch đọc:** Đặt **Văn hóa doanh nghiệp, ra quyết định và giao tiếp tại công ty Hàn Quốc (Business Culture / 조직문화와 의사결정)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Văn hóa không phải “tính cách dân tộc”** sang **Thứ bậc: cơ chế giải quyết vấn đề phối hợp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 “Văn hóa công ty Hàn Quốc” không phải một bộ quy tắc đồng nhất. Một bộ phận sản xuất trong chaebol, startup 30 người, tổ chức công, ngân hàng, công ty SI và studio game có thể rất khác nhau. Cách hữu ích hơn là coi văn hóa là **trạng thái cân bằng của động cơ, thứ bậc, trách nhiệm, luồng thông tin và lịch sử tổ chức**.
 
-Văn hóa không chỉ nằm ở cách xưng hô. Nó lộ rõ nhất khi deadline gấp, hệ thống production gặp lỗi, hai nhóm bất đồng, khách hàng escalation hoặc quyết định thăng tiến gây xung đột.
+Văn hóa không chỉ nằm ở cách xưng hô. Nó lộ rõ nhất khi deadline gấp, hệ thống môi trường vận hành (production / 운영 환경) gặp lỗi, hai nhóm bất đồng, khách hàng escalation hoặc quyết định thăng tiến gây xung đột.
 
-> Mental model: văn hóa là **hành vi mặc định khi quy trình chính thức chưa nói đủ rõ phải làm gì**.
+> mô hình tư duy (mental model / 사고 모델): văn hóa là **hành vi mặc định khi quy trình chính thức chưa nói đủ rõ phải làm gì**.
 
 ## Văn hóa không phải “tính cách dân tộc”
 
@@ -48,7 +51,7 @@ Một khung hữu ích là RACI:
 - **Consulted** — người phải được hỏi ý kiến;
 - **Informed** — người cần được cập nhật.
 
-Tổ chức Hàn Quốc có thể dùng thuật ngữ khác nhưng logic tương tự `담당`, `책임자`, `결재자`, `참조`.
+Tổ chức Hàn Quốc có thể dùng thuật ngữ khác nhưng lô-gic (logic / 논리) tương tự `담당`, `책임자`, `결재자`, `참조`.
 
 Khi ai cũng “tham gia” nhưng không ai chịu trách nhiệm cuối, số cuộc họp tăng còn tốc độ thực thi giảm.
 
@@ -80,7 +83,7 @@ Phê duyệt tạo dấu vết trách nhiệm, phân tách nhiệm vụ, kiểm 
 
 Nhưng mỗi tầng phê duyệt làm tăng độ trễ. Số tầng tối ưu phải phụ thuộc **chi phí của sai sót**.
 
-Một khoản thanh toán rủi ro cao có thể cần nhiều lớp kiểm tra; đổi màu trong A/B test thì không.
+Một khoản thanh toán rủi ro cao có thể cần nhiều lớp kiểm tra; đổi màu trong A/B kiểm thử (test / 테스트) thì không.
 
 ## Độ trễ phê duyệt là một chi phí tổ chức
 
@@ -187,7 +190,7 @@ Văn hóa tốt phải phân biệt lỗi trung thực, hành vi cẩu thả và
 
 Chức danh chính thức là một nguồn quyền lực. Các nguồn khác gồm chuyên môn, quan hệ khách hàng, quyền sở hữu hệ thống quan trọng, khả năng tiếp cận thông tin, quyền ngân sách và mạng lưới xã hội.
 
-Một kỹ sư trẻ là người duy nhất hiểu hệ thống production có thể có ảnh hưởng thực tế rất lớn.
+Một kỹ sư trẻ là người duy nhất hiểu hệ thống môi trường vận hành (production / 운영 환경) có thể có ảnh hưởng thực tế rất lớn.
 
 Vì vậy **sơ đồ tổ chức không bằng bản đồ ảnh hưởng thực tế**.
 
@@ -209,7 +212,7 @@ Tổ chức tốt phân biệt quyết định dễ đảo ngược và khó đ�
 
 Tài liệu viết giúp giảm phụ thuộc vào trí nhớ và quan hệ phi chính thức.
 
-Các đầu ra hữu ích gồm nhật ký quyết định cuộc họp, đặc tả yêu cầu, change request, postmortem sự cố, Architecture Decision Record, issue tracker và ma trận người phụ trách–deadline.
+Các đầu ra hữu ích gồm nhật ký quyết định cuộc họp, đặc tả yêu cầu, thay đổi (change / 변경) yêu cầu (request / 요청), postmortem sự cố, kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드), issue tracker và ma trận người phụ trách–deadline.
 
 Tài liệu cũng có chi phí. Viết quá nhiều làm công việc chậm. Nguyên tắc là chỉ tài liệu hóa những thông tin có giá trị phối hợp tương lai lớn hơn chi phí viết.
 
@@ -272,7 +275,7 @@ Mục tiêu không phải “nói thẳng bằng mọi giá”, mà là **làm b
 
 ## Vai trò cầu nối Hàn Quốc–Việt Nam
 
-Nhân viên song ngữ tạo giá trị lớn hơn dịch từ vựng. Họ thường chuyển tải ý định yêu cầu, mức khẩn cấp, thứ bậc stakeholder, giả định domain, bằng chứng kiểm thử, kỳ vọng escalation và định nghĩa thực tế của “done”.
+Nhân viên song ngữ tạo giá trị lớn hơn dịch từ vựng. Họ thường chuyển tải ý định yêu cầu, mức khẩn cấp, thứ bậc stakeholder, giả định lĩnh vực (domain / 도메인), bằng chứng kiểm thử, kỳ vọng escalation và định nghĩa thực tế của “done”.
 
 Đây là **dịch bối cảnh tổ chức (context translation)**.
 
@@ -300,7 +303,7 @@ Cách này giảm tình trạng “tôi tưởng chúng ta đã thống nhất �
 Đừng chỉ hỏi “văn hóa có tốt không?”. Hãy hỏi cơ chế hành vi cụ thể.
 
 - **Quyết định:** ai có quyền duyệt, có bao nhiêu tầng, kỹ sư có quyền quyết định kỹ thuật tại chỗ không?
-- **Sai sót:** sau sự cố production, công ty đổ lỗi hay làm postmortem?
+- **Sai sót:** sau sự cố môi trường vận hành (production / 운영 환경), công ty đổ lỗi hay làm postmortem?
 - **Thông tin:** người trẻ có thể báo tin xấu không, số liệu có minh bạch không?
 - **Hiệu suất:** đánh giá theo cá nhân, nhóm hay xếp hạng tương đối?
 - **Khối lượng:** cao điểm làm thêm có dự đoán được không, có kỳ vọng trả lời ngoài giờ không?
@@ -317,7 +320,7 @@ Vì vậy văn hóa không “mềm” theo nghĩa kinh tế. Nó là một tài
 
 Tỷ lệ nghỉ việc cao làm mất kiến thức ngầm; phê duyệt chậm trì hoãn doanh thu; escalation yếu biến sự cố nhỏ thành tổn thất lớn.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Văn hóa doanh nghiệp là **lớp hành vi của thiết kế tổ chức**. Thứ bậc phân bổ quyền; báo cáo chuyển thông tin; phê duyệt kiểm soát rủi ro; động cơ định hình hành vi; quan hệ phi chính thức lấp khoảng trống. Hãy đánh giá văn hóa qua cách các cơ chế này hoạt động dưới áp lực, không qua khẩu hiệu hay nội thất văn phòng.
 
@@ -340,3 +343,5 @@ Tỷ lệ nghỉ việc cao làm mất kiến thức ngầm; phê duyệt chậm
 ## Liên kết
 
 Đọc [`12_labor_titles_compensation_and_workplace.md`](./12_labor_titles_compensation_and_workplace.md) cho cấu trúc HR chính thức, [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md) cho thẩm định doanh nghiệp và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md) cho bối cảnh SI/SM và quy trình doanh nghiệp.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

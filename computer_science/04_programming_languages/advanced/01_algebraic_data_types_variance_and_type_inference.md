@@ -1,22 +1,25 @@
-# Algebraic data types, variance và type inference
+# Algebraic dữ liệu (data / 데이터) types, variance và kiểu (type / 타입) suy luận (inference / 추론)
 
-Type system không chỉ gắn nhãn `int`, `String` hay `User`. Ở mức advanced, type trở thành một ngôn ngữ mô tả **shape của state hợp lệ**, cách các shape kết hợp và quan hệ substitutability giữa chúng. Algebraic Data Types, variance và inference là ba mảnh giúp xây API vừa biểu đạt mạnh vừa giảm invalid states.
+> **Mạch đọc:** Đặt **Algebraic dữ liệu (data / 데이터) types, variance và kiểu (type / 타입) suy luận (inference / 추론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **sản phẩm (product / 제품) kiểu (type / 타입): nhiều phần cùng tồn tại** sang **Sum kiểu (type / 타입): một trong nhiều trường hợp (case / 사례)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Product type: nhiều phần cùng tồn tại
 
-Một record/object đơn giản có thể được nhìn như product type:
+Hệ kiểu (type system / 타입 시스템) không chỉ gắn nhãn `int`, `String` hay `User`. Ở mức advanced, kiểu (type / 타입) trở thành một ngôn ngữ mô tả **shape của trạng thái (state / 상태) hợp lệ**, cách các shape kết hợp và quan hệ substitutability giữa chúng. Algebraic dữ liệu (data / 데이터) Types, variance và suy luận (inference / 추론) là ba mảnh giúp xây API vừa biểu đạt mạnh vừa giảm invalid states.
+
+## Sản phẩm (product / 제품) kiểu (type / 타입): nhiều phần cùng tồn tại
+
+Một bản ghi (record / 레코드)/đối tượng (object / 객체) đơn giản có thể được nhìn như sản phẩm (product / 제품) kiểu (type / 타입):
 
 ```text
 User = Name × Email × Age
 ```
 
-Một value `User` chứa đồng thời một value của mỗi component. Nếu `Name` có `a` khả năng và `Age` có `b` khả năng hữu hạn, product có khoảng `a*b` combinations.
+Một giá trị (value / 값) `User` chứa đồng thời một giá trị (value / 값) của mỗi thành phần (component / 컴포넌트). Nếu `Name` có `a` khả năng và `Age` có `b` khả năng hữu hạn, sản phẩm (product / 제품) có khoảng `a*b` combinations.
 
-Struct, tuple, record và class data-holder thường mang intuition này.
+Struct, tuple, bản ghi (record / 레코드) và lớp (class / 클래스) data-holder thường mang intuition này.
 
-## Sum type: một trong nhiều case
+## Sum kiểu (type / 타입): một trong nhiều trường hợp (case / 사례)
 
-Sum type biểu diễn value thuộc **một trong các alternatives**:
+Sum kiểu (type / 타입) biểu diễn giá trị (value / 값) thuộc **một trong các alternatives**:
 
 ```text
 PaymentResult = Success(Receipt)
@@ -24,11 +27,11 @@ PaymentResult = Success(Receipt)
               | Retryable(Error)
 ```
 
-Thay vì object có nhiều nullable fields và flag khó đồng bộ, sum type encode trực tiếp state machine hợp lệ.
+Thay vì đối tượng (object / 객체) có nhiều nullable fields và flag khó đồng bộ, sum kiểu (type / 타입) encode trực tiếp máy trạng thái (state machine / 상태 머신) hợp lệ.
 
-Trong Rust có `enum`, Kotlin có sealed hierarchy, TypeScript có discriminated union, functional languages có ADT native. Java sealed types + records giúp gần hơn mô hình này.
+Trong Rust có `enum`, Kotlin có sealed hierarchy, TypeScript có discriminated union, functional languages có ADT bản địa (native / 네이티브). Java sealed types + records giúp gần hơn mô hình này.
 
-## Invalid state explosion
+## Invalid trạng thái (state / 상태) explosion
 
 Giả sử API dùng:
 
@@ -38,33 +41,33 @@ receipt: Receipt?
 error: Error?
 ```
 
-Ta có thể tạo trạng thái vô nghĩa như `status=SUCCESS` nhưng `receipt=null`, hoặc vừa có receipt vừa error.
+Ta có thể tạo trạng thái vô nghĩa như `status=SUCCESS` nhưng `receipt=null`, hoặc vừa có receipt vừa lỗi (error / 오류).
 
-ADT chuyển nhiều rule runtime thành rule construction/type checking. Đây là ví dụ principle: **make invalid states unrepresentable** khi chi phí phù hợp.
+ADT chuyển nhiều quy tắc (rule / 규칙) thời gian chạy (runtime / 런타임) thành quy tắc (rule / 규칙) construction/kiểu (type / 타입) checking. Đây là ví dụ principle: **make invalid states unrepresentable** khi chi phí phù hợp.
 
-## Pattern matching và exhaustiveness
+## Mẫu (pattern / 패턴) matching và exhaustiveness
 
-Nếu sum type có tập cases đóng, compiler có thể kiểm tra pattern matching đã xử lý đủ case chưa.
+Nếu sum kiểu (type / 타입) có tập cases đóng, trình biên dịch (compiler / 컴파일러) có thể kiểm tra mẫu (pattern / 패턴) matching đã xử lý đủ trường hợp (case / 사례) chưa.
 
-Khi thêm case mới, compile error ở các match site trở thành một dạng impact analysis tự động.
+Khi thêm trường hợp (case / 사례) mới, compile lỗi (error / 오류) ở các match site trở thành một dạng impact phân tích (analysis / 분석) tự động.
 
-Điều này mạnh hơn chuỗi `if(status == "...")` phân tán vì relationship giữa variants và consumers được type system theo dõi.
+Điều này mạnh hơn chuỗi `if(status == "...")` phân tán vì relationship giữa variants và consumers được hệ kiểu (type system / 타입 시스템) theo dõi.
 
 ## Parametric polymorphism
 
-Generic type như `List<T>` cho phép viết algorithm độc lập type cụ thể. Nhưng câu hỏi khó xuất hiện khi có subtype relation.
+Generic kiểu (type / 타입) như `List<T>` cho phép viết thuật toán (algorithm / 알고리즘) độc lập kiểu (type / 타입) cụ thể. Nhưng câu hỏi khó xuất hiện khi có subtype quan hệ (relation / 관계).
 
-Nếu `Dog <: Animal`, liệu `List<Dog> <: List<Animal>`? Không tự động. Nếu cho phép và `List<Animal>` có method add, ta có thể add `Cat` vào list thực chất là `List<Dog>`, phá type safety.
+Nếu `Dog <: Animal`, liệu `List<Dog> <: List<Animal>`? Không tự động. Nếu cho phép và `List<Animal>` có phương thức (method / 메서드) add, ta có thể add `Cat` vào danh sách (list / 목록) thực chất là `List<Dog>`, phá kiểu (type / 타입) an toàn (safety / 안전).
 
 ## Variance
 
-**Covariance** cho phép quan hệ đi cùng chiều: `Producer<Dog>` có thể dùng nơi cần `Producer<Animal>` nếu interface chỉ produce `T`.
+**Covariance** cho phép quan hệ đi cùng chiều: `Producer<Dog>` có thể dùng nơi cần `Producer<Animal>` nếu giao diện (interface / 인터페이스) chỉ produce `T`.
 
-**Contravariance** đi ngược chiều: consumer có thể nhận broader type. Một `Consumer<Animal>` dùng được nơi cần consumer của `Dog` vì nó biết xử lý mọi Animal.
+**Contravariance** đi ngược chiều: bên tiêu thụ (consumer / 소비자) có thể nhận broader kiểu (type / 타입). Một `Consumer<Animal>` dùng được nơi cần bên tiêu thụ (consumer / 소비자) của `Dog` vì nó biết xử lý mọi Animal.
 
-**Invariance** không cho subtype relation giữa parameterized types.
+**Invariance** không cho subtype quan hệ (relation / 관계) giữa parameterized types.
 
-Mental model hữu ích:
+Mô hình tư duy (mental model / 사고 모델) hữu ích:
 
 ```text
 output position  -> covariance thường hợp lý
@@ -72,19 +75,19 @@ input position   -> contravariance thường hợp lý
 both directions  -> invariance thường cần thiết
 ```
 
-Đây là intuition, không thay formal rules của từng language.
+Đây là intuition, không thay formal rules của từng ngôn ngữ (language / 언어).
 
 ## Java/Kotlin examples
 
 Java dùng wildcard-site variance như `? extends T` và `? super T`.
 
-PECS mnemonic — Producer Extends, Consumer Super — hữu ích nhưng nên hiểu qua direction dữ liệu chứ không học thuộc khẩu hiệu.
+PECS mnemonic — Producer Extends, bên tiêu thụ (consumer / 소비자) Super — hữu ích nhưng nên hiểu qua direction dữ liệu chứ không học thuộc khẩu hiệu.
 
-Kotlin hỗ trợ declaration-site variance `out`/`in`, giúp contract variance nằm ở type declaration khi phù hợp.
+Kotlin hỗ trợ declaration-site variance `out`/`in`, giúp đặc tả hợp đồng (contract / 계약) variance nằm ở kiểu (type / 타입) declaration khi phù hợp.
 
-## Type inference là constraint solving
+## Kiểu (type / 타입) suy luận (inference / 추론) là ràng buộc (constraint / 제약조건) solving
 
-Khi compiler suy ra type, nó không “đoán” bằng AI. Nó thu thập constraints từ literals, function applications, assignments và generic parameters rồi tìm substitution thỏa rules.
+Khi trình biên dịch (compiler / 컴파일러) suy ra kiểu (type / 타입), nó không “đoán” bằng AI. Nó thu thập các ràng buộc (constraints / 제약조건들) từ literals, hàm (function / 함수) applications, assignments và generic parameters rồi tìm substitution thỏa rules.
 
 Ví dụ conceptual:
 
@@ -92,34 +95,36 @@ Ví dụ conceptual:
 identity(x) = x
 ```
 
-Nếu không có operation nào yêu cầu type cụ thể, compiler có thể suy ra polymorphic form tương tự `T -> T` trong hệ thống phù hợp.
+Nếu không có thao tác (operation / 연산) nào yêu cầu kiểu (type / 타입) cụ thể, trình biên dịch (compiler / 컴파일러) có thể suy ra polymorphic form tương tự `T -> T` trong hệ thống phù hợp.
 
-Type inference phức tạp hơn khi có subtyping, overload, higher-rank polymorphism hoặc effects. Language thường giới hạn inference để compile time/diagnostics còn kiểm soát được.
+Kiểu (type / 타입) suy luận (inference / 추론) phức tạp hơn khi có subtyping, overload, higher-rank polymorphism hoặc effects. ngôn ngữ (language / 언어) thường giới hạn suy luận (inference / 추론) để compile thời gian (time / 시간)/diagnostics còn kiểm soát được.
 
-## Local inference vs global inference
+## Cục bộ (local / 로컬) suy luận (inference / 추론) vs toàn cục (global / 전역) suy luận (inference / 추론)
 
-Một số language suy type mạnh trong function body nhưng yêu cầu public API annotation. Đây là design trade-off tốt cho maintainability: implementation có ergonomics, boundary vẫn explicit.
+Một số ngôn ngữ (language / 언어) suy kiểu (type / 타입) mạnh trong hàm (function / 함수) body nhưng yêu cầu API công khai (public API / 공개 API) annotation. Đây là thiết kế (design / 설계) sự đánh đổi (trade-off / 트레이드오프) tốt cho maintainability: hiện thực (implementation / 구현) có ergonomics, ranh giới (boundary / 경계) vẫn tường minh (explicit / 명시적).
 
-Nếu inference lan quá xa, error message có thể xuất hiện cách xa nguyên nhân và refactor thay type ngoài ý muốn.
+Nếu suy luận (inference / 추론) lan quá xa, lỗi (error / 오류) message có thể xuất hiện cách xa nguyên nhân và refactor thay kiểu (type / 타입) ngoài ý muốn.
 
-## Higher-kinded abstraction intuition
+## Higher-kinded lớp trừu tượng (abstraction / 추상화) intuition
 
-Type parameter thường đại diện một concrete type `T`. Higher-kinded abstraction cho phép parameter hóa trên **type constructor** như `F<_>` — ví dụ “một context/container bất kỳ”.
+Kiểu (type / 타입) parameter thường đại diện một concrete kiểu (type / 타입) `T`. Higher-kinded lớp trừu tượng (abstraction / 추상화) cho phép parameter hóa trên **kiểu (type / 타입) constructor** như `F<_>` — ví dụ “một ngữ cảnh (context / 맥락)/bộ chứa (container / 컨테이너) bất kỳ”.
 
-Nó hữu ích để biểu đạt patterns như mapping/traversal chung, nhưng tăng complexity type system đáng kể. Java không có higher-kinded types trực tiếp; ecosystems mô phỏng bằng interface patterns với ergonomic cost.
+Nó hữu ích để biểu đạt patterns như ánh xạ (mapping / 매핑)/traversal chung, nhưng tăng độ phức tạp (complexity / 복잡도) hệ kiểu (type system / 타입 시스템) đáng kể. Java không có higher-kinded types trực tiếp; ecosystems mô phỏng bằng giao diện (interface / 인터페이스) patterns với ergonomic chi phí (cost / 비용).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Product type mô tả “A và B”; sum type mô tả “A hoặc B”; generics mô tả structure độc lập element type; variance kiểm soát direction substitutability; inference giải constraints để giảm annotation mà vẫn giữ static guarantees.
+> sản phẩm (product / 제품) kiểu (type / 타입) mô tả “A và B”; sum kiểu (type / 타입) mô tả “A hoặc B”; generics mô tả cấu trúc (structure / 구조) độc lập element kiểu (type / 타입); variance kiểm soát direction substitutability; suy luận (inference / 추론) giải các ràng buộc (constraints / 제약조건들) để giảm annotation mà vẫn giữ static guarantees.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 **“Generic collection của subtype luôn là subtype collection.”** Mutable collection làm điều này unsafe nếu vừa đọc vừa ghi.
 
-**“Type inference nghĩa compiler biết business meaning.”** Nó chỉ giải constraints trong type rules.
+**“kiểu (type / 타입) suy luận (inference / 추론) nghĩa trình biên dịch (compiler / 컴파일러) biết nghiệp vụ (business / 비즈니스) meaning.”** Nó chỉ giải các ràng buộc (constraints / 제약조건들) trong kiểu (type / 타입) rules.
 
-**“ADT chỉ dành cho functional programming.”** Sealed classes, enums có payload và discriminated unions mang cùng mental model trong OOP/TypeScript ecosystems.
+**“ADT chỉ dành cho functional programming.”** Sealed classes, enums có payload và discriminated unions mang cùng mô hình tư duy (mental model / 사고 모델) trong OOP/TypeScript ecosystems.
 
 ## Kết nối
 
-Chapter tiếp theo về ownership cho thấy type system còn có thể encode resource lifetime. Với Java backend, variance xuất hiện trực tiếp trong generic APIs; với TypeScript/React, discriminated unions rất hữu ích cho UI/request state machines.
+Chapter tiếp theo về quyền sở hữu (ownership / 소유권) cho thấy hệ kiểu (type system / 타입 시스템) còn có thể encode tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명). Với Java backend, variance xuất hiện trực tiếp trong generic APIs; với TypeScript/React, discriminated unions rất hữu ích cho UI/yêu cầu (request / 요청) trạng thái (state / 상태) machines.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 type systems effects and runtime contracts](./00_type_systems_effects_and_runtime_contracts.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -5,12 +5,12 @@ Generated files:
 - `study_plan_2026_06_23_to_2026_12_31_supabase.sql`: Supabase SQL insert script.
 - `study_plan_2026_06_23_to_2026_12_31.xlsx`: readable Excel workbook.
 
-## Date range
+## Date phạm vi (range / 범위)
 2026-06-23 to 2026-12-31
 
 ## SQL import steps
 1. Open Supabase Dashboard.
-2. Go to **Authentication > Users** and copy your `user_id`.
+2. Go to **Authentication > Users** and bản sao (copy / 복사) your `user_id`.
 3. Open `study_plan_2026_06_23_to_2026_12_31_supabase.sql`.
 4. Replace `PUT-YOUR-USER-ID-HERE` with your UUID.
 5. Run the script in **SQL Editor**.
@@ -22,17 +22,17 @@ The script deletes previous rows from the same batch before inserting:
 ## Important assumptions
 Các giả định này giải thích cách dữ liệu kế hoạch được diễn giải; hãy kiểm tra chúng trước khi import để tránh biến một lựa chọn tạm thời thành lịch cố định.
 - SQLD exam fixed: 2026-08-22.
-- 정보처리기사 필기: registration around 2026-07-20, exact exam date must be updated after registration.
+- 정보처리기사 필기: registration around 2026-07-20, chính xác (exact / 정확한) exam date must be updated after registration.
 - 정보처리기사 실기: registration around 2026-09-21 only if 필기 is passed.
 - TOPIK exam fixed: 2026-07-05.
-- KIIP 심화: planned in August, no exact date provided.
-- IELTS class: Tue and Fri late evening.
+- KIIP 심화: planned in August, no chính xác (exact / 정확한) date provided.
+- IELTS lớp (class / 클래스): Tue and Fri late evening.
 - Mon/Wed/Thu available 21:00-00:00.
 - Weekend available from 11:00/12:00 onward.
 
 ## Recommended workflow
 Quy trình dưới đây nối việc đọc dữ liệu với thao tác import và kiểm tra kết quả, để mỗi bước đều có điểm xác nhận rõ ràng.
 - Import the SQL once.
-- In the app, update task `status` daily.
-- After 2026-07-20, update actual 정보처리기사 필기 exam date.
+- In the app, cập nhật (update / 업데이트) tác vụ (task / 작업) `status` daily.
+- After 2026-07-20, cập nhật (update / 업데이트) actual 정보처리기사 필기 exam date.
 - After SQLD/정보처리기사 results, convert conditional tasks if needed.

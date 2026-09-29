@@ -1,5 +1,8 @@
 # Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu
 
+> **Mạch đọc:** Đọc **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thành phần → liên kết** sang **Liên kết → vi cấu trúc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Khoa học vật liệu mở rộng Hóa học qua nhiều thang chiều dài. Liên kết hóa học xác định những cấu trúc nào có thể tồn tại, còn quá trình chế tạo, khuyết tật và lịch sử xử lý quyết định cấu trúc nào thực sự xuất hiện trong vật liệu thật.
 
 ## Thành phần → liên kết
@@ -10,6 +13,9 @@ Carbon là ví dụ kinh điển: kim cương và graphite đều chỉ gồm ca
 
 Vì vậy câu hỏi đúng không chỉ là “vật liệu gồm nguyên tố gì?” mà còn là “các nguyên tử đang liên kết và sắp xếp như thế nào?”.
 
+
+> **Chuyển mạch:** Từ **Thành phần → liên kết**, ta sang **Liên kết → vi cấu trúc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Liên kết → vi cấu trúc
 
 Tinh thể hóa, tách pha, đóng gói polymer và hình thành hạt tinh thể tạo nên **vi cấu trúc (microstructure)** lớn hơn nhiều so với kích thước phân tử.
@@ -17,6 +23,9 @@ Tinh thể hóa, tách pha, đóng gói polymer và hình thành hạt tinh th�
 Nhiệt động lực học cho biết pha nào ổn định, nhưng động học và điều kiện gia công quyết định kích thước hạt, mức độ siêu bền, mật độ khuyết tật và cấu trúc bề mặt phân cách.
 
 Hai mẫu có cùng thành phần và cùng pha danh nghĩa vẫn có thể có tính chất khác nhau nếu lịch sử gia công khác nhau.
+
+
+> **Chuyển mạch:** Từ **Liên kết → vi cấu trúc**, ta sang **Khuyết tật có thể tạo chức năng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Khuyết tật có thể tạo chức năng
 
@@ -26,6 +35,9 @@ Lệch mạng (**dislocation**) cho phép kim loại biến dạng dẻo. Chất
 
 Vì vậy kỹ thuật vật liệu thường là nghệ thuật **thiết kế mật độ và loại khuyết tật**, không phải cố tạo tinh thể hoàn hảo tuyệt đối.
 
+
+> **Chuyển mạch:** Từ **Khuyết tật có thể tạo chức năng**, ta sang **Bề mặt phân cách** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Bề mặt phân cách
 
 Biên hạt, bề mặt điện cực–chất điện ly và bề mặt giữa các pha trong composite có thể chi phối vận chuyển, ăn mòn và cơ chế hỏng.
@@ -34,11 +46,17 @@ Trong pin, phản ứng phụ thường bắt đầu ở bề mặt phân cách.
 
 Do đó hóa học bề mặt và bề mặt phân cách là phần trung tâm của khoa học vật liệu.
 
+
+> **Chuyển mạch:** Từ **Bề mặt phân cách**, ta sang **Tính chất cơ học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Tính chất cơ học
 
 Độ bền liên kết ảnh hưởng môđun đàn hồi, nhưng độ bền kéo, độ dai và khả năng chống nứt còn phụ thuộc hình học vết nứt, chuyển động lệch mạng, kích thước hạt và các cơ chế tiêu tán năng lượng.
 
 Một vật liệu có liên kết rất mạnh vẫn có thể giòn. Vì vậy “liên kết mạnh” không đồng nghĩa “vật liệu dai”.
+
+
+> **Chuyển mạch:** Từ **Tính chất cơ học**, ta sang **Vật liệu năng lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Vật liệu năng lượng
 
@@ -48,11 +66,17 @@ Pin nhiên liệu cần chất dẫn ion, điện cực xúc tác và bề mặt
 
 Các yêu cầu này đều bắt đầu từ hóa học của liên kết và cấu trúc điện tử nhưng chỉ trở thành hiệu năng thiết bị khi được tổ chức ở nhiều thang cấu trúc.
 
+
+> **Chuyển mạch:** Từ **Vật liệu năng lượng**, ta sang **Quy trình chế tạo là một phần của vật liệu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Quy trình chế tạo là một phần của vật liệu
 
 Nung, tôi, ủ, cán, ép, kéo sợi, trùng hợp, kết tinh hoặc lắng đọng màng đều có thể thay đổi vi cấu trúc mà không nhất thiết thay đổi thành phần hóa học tổng.
 
 Vì vậy trong khoa học vật liệu, “vật liệu là gì?” không thể tách khỏi “vật liệu đã được tạo ra như thế nào?”.
+
+
+> **Chuyển mạch:** Từ **Quy trình chế tạo là một phần của vật liệu**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 
@@ -68,3 +92,5 @@ thành phần hóa học
 ```
 
 Hóa học tạo tầng nền; khoa học vật liệu theo dõi cách tầng nền đó lan lên cấu trúc lớn hơn và trở thành hành vi kỹ thuật.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [chemistry and ai](./chemistry_and_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

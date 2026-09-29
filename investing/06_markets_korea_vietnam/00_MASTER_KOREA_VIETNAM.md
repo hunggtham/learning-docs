@@ -1,10 +1,12 @@
 # Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam
 
-> File này là bản đồ kiến thức cho domain `06_markets_korea_vietnam/`. Mục tiêu là giúp người đọc định vị **cấu trúc thị trường, biến vĩ mô, ngành trọng yếu, dòng vốn và rủi ro triển khai** trước khi đi vào các playbook chuyên sâu.
+> **Mạch đọc:** Đặt **Bản đồ tổng quan thị trường Hàn Quốc và Việt Nam** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Không phân tích thị trường chỉ bằng chỉ số** sang **2. Hàn Quốc và Việt Nam khác nhau ở đâu?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> **Lưu ý về dữ liệu động:** lãi suất chính sách, thuế, chu kỳ thanh toán, quy định short-selling, foreign room, điều kiện market access, thành phần chỉ số và quy định sản phẩm có thể thay đổi. Các thông tin này phải được kiểm tra lại theo nguồn chính thức tại thời điểm sử dụng; không coi snapshot lịch sử là quy tắc vĩnh viễn.
+> tệp (file / 파일) này là bản đồ kiến thức cho lĩnh vực (domain / 도메인) `06_markets_korea_vietnam/`. Mục tiêu là giúp người đọc định vị **cấu trúc thị trường, biến vĩ mô, ngành trọng yếu, dòng vốn và rủi ro triển khai** trước khi đi vào các playbook chuyên sâu.
 
-# Phần I — Mental model chung
+> **Lưu ý về dữ liệu động:** lãi suất chính sách, thuế, chu kỳ thanh toán, quy định short-selling, foreign room, điều kiện thị trường (market / 시장) truy cập (access / 접근), thành phần chỉ số và quy định sản phẩm có thể thay đổi. Các thông tin này phải được kiểm tra lại theo nguồn chính thức tại thời điểm sử dụng; không coi snapshot lịch sử là quy tắc vĩnh viễn.
+
+# Phần I — mô hình tư duy (mental model / 사고 모델) chung
 
 ## 1. Không phân tích thị trường chỉ bằng chỉ số
 
@@ -47,7 +49,7 @@ Các tên quan trọng cần nhận diện gồm:
 - KSD — Korea Securities Depository;
 - FSC/FSS trong hệ thống giám sát tài chính.
 
-Mỗi thị trường và sản phẩm có quy tắc giao dịch, settlement và access riêng; phải kiểm tra specification hiện hành khi giao dịch thật.
+Mỗi thị trường và sản phẩm có quy tắc giao dịch, settlement và truy cập (access / 접근) riêng; phải kiểm tra specification hiện hành khi giao dịch thật.
 
 ## 4. Đặc điểm kinh tế Hàn Quốc
 
@@ -79,7 +81,7 @@ Không nên dùng một biến đơn lẻ để dự đoán USD/KRW.
 
 ## 6. BOK
 
-Bank of Korea (BOK) điều hành policy rate trong bối cảnh phải cân bằng:
+Bank of Korea (BOK) điều hành chính sách (policy / 정책) tỷ lệ (rate / 비율) trong bối cảnh phải cân bằng:
 
 - inflation;
 - growth;
@@ -87,11 +89,11 @@ Bank of Korea (BOK) điều hành policy rate trong bối cảnh phải cân b�
 - household debt;
 - FX conditions.
 
-Mức policy rate hiện tại luôn phải kiểm tra từ BOK khi cần dữ liệu mới nhất.
+Mức chính sách (policy / 정책) tỷ lệ (rate / 비율) hiện tại luôn phải kiểm tra từ BOK khi cần dữ liệu mới nhất.
 
 ## 7. Semiconductor
 
-Bán dẫn là một trong những kênh quan trọng nhất nối Korea với global technology cycle.
+Bán dẫn là một trong những kênh quan trọng nhất nối Korea với toàn cục (global / 전역) technology cycle.
 
 Chuỗi cơ bản:
 
@@ -121,7 +123,7 @@ Ngoài semiconductor:
 - construction;
 - refining/petrochemicals;
 - utilities;
-- retail/consumer brands.
+- retail/bên tiêu thụ (consumer / 소비자) brands.
 
 # Phần III — Việt Nam
 
@@ -138,23 +140,23 @@ Các tên chính:
 - VN30;
 - VN30 futures.
 
-Chu kỳ thanh toán, biên độ giá, foreign access và product rules có thể thay đổi nên phải kiểm tra theo HOSE/HNX/VSDC/SSC hoặc nguồn chính thức tương ứng.
+Chu kỳ thanh toán, biên độ giá, foreign truy cập (access / 접근) và sản phẩm (product / 제품) rules có thể thay đổi nên phải kiểm tra theo HOSE/HNX/VSDC/SSC hoặc nguồn chính thức tương ứng.
 
 ## 10. Đặc điểm kinh tế Việt Nam
 
 Các động lực lớn gồm:
 
 - domestic credit;
-- property cycle;
+- thuộc tính (property / 속성) cycle;
 - FDI;
 - manufacturing exports;
-- public investment;
+- công khai (public / 공개) investment;
 - household savings;
 - VND stability.
 
 ## 11. SBV và VND
 
-State Bank of Vietnam (SBV) phải cân bằng:
+Trạng thái (state / 상태) Bank of Vietnam (SBV) phải cân bằng:
 
 ```text
 Growth
@@ -164,7 +166,7 @@ Credit
 USD/VND Stability
 ```
 
-Vì vậy room nới lỏng trong nước không hoàn toàn độc lập với global USD conditions.
+Vì vậy room nới lỏng trong nước không hoàn toàn độc lập với toàn cục (global / 전역) USD conditions.
 
 ## 12. Ngân hàng
 
@@ -176,9 +178,9 @@ Các KPI quan trọng:
 - NPL;
 - Group-2;
 - provision coverage;
-- credit cost;
+- credit chi phí (cost / 비용);
 - capital adequacy;
-- property exposure.
+- thuộc tính (property / 속성) exposure.
 
 ## 13. Bất động sản
 
@@ -199,15 +201,15 @@ Land bank lớn không tự động nghĩa giá trị có thể hiện thực h�
 
 ## 14. Các ngành Việt Nam quan trọng
 
-Ngoài bank/property:
+Ngoài bank/thuộc tính (property / 속성):
 
 - securities companies;
 - industrial parks;
-- retail/consumer;
+- retail/bên tiêu thụ (consumer / 소비자);
 - public-investment beneficiaries;
 - ports/logistics;
 - aviation;
-- energy/utilities;
+- năng lượng (energy / 에너지)/utilities;
 - steel/cement;
 - technology services;
 - telecom;
@@ -215,13 +217,13 @@ Ngoài bank/property:
 
 # Phần IV — So sánh Hàn Quốc và Việt Nam
 
-## 15. Global sensitivity
+## 15. toàn cục (global / 전역) sensitivity
 
 Hàn Quốc thường phản ứng nhanh hơn với:
 
-- global tech cycle;
+- toàn cục (global / 전역) tech cycle;
 - foreign institutional flows;
-- global rates;
+- toàn cục (global / 전역) rates;
 - KRW.
 
 Việt Nam thường có thêm lớp rất quan trọng từ:
@@ -230,11 +232,11 @@ Việt Nam thường có thêm lớp rất quan trọng từ:
 - deposit rates;
 - retail margin;
 - property-bank cycle;
-- local regulation.
+- cục bộ (local / 로컬) regulation.
 
 ## 16. Fed shock
 
-Một chain tổng quát:
+Một chuỗi (chain / 사슬) tổng quát:
 
 ```text
 US Yields ↑
@@ -249,17 +251,17 @@ Cường độ khác nhau tùy từng thị trường.
 
 ## 17. China shock
 
-China slowdown có thể ảnh hưởng Korea qua exports/semiconductors/industrials và ảnh hưởng Vietnam qua trade, manufacturing supply chain, commodities và FDI dynamics.
+China slowdown có thể ảnh hưởng Korea qua exports/semiconductors/industrials và ảnh hưởng Vietnam qua trade, manufacturing supply chuỗi (chain / 사슬), commodities và FDI dynamics.
 
 ## 18. Oil shock
 
-Hàn Quốc là energy importer lớn nên oil shock có thể tác động terms of trade mạnh.
+Hàn Quốc là năng lượng (energy / 에너지) importer lớn nên oil shock có thể tác động terms of trade mạnh.
 
 Việt Nam có cấu trúc năng lượng khác và tác động cần tách theo upstream/downstream, fiscal pricing và inflation.
 
 # Phần V — Dòng vốn và breadth
 
-## 19. Index move không bằng market breadth
+## 19. chỉ mục (index / 인덱스) move không bằng thị trường (market / 시장) breadth
 
 Chỉ số tăng nhờ vài large caps khác hoàn toàn một rally có nhiều cổ phiếu cùng tham gia.
 
@@ -270,7 +272,7 @@ Theo dõi:
 - sector breadth;
 - equal-weight vs cap-weight nếu có dữ liệu.
 
-## 20. Foreign flow
+## 20. Foreign luồng (flow / 흐름)
 
 Foreign buying/selling có thể ảnh hưởng price mạnh ở một số giai đoạn nhưng không nên được xem là “smart money” mặc định.
 
@@ -278,13 +280,13 @@ Dòng vốn có thể đến từ:
 
 - passive rebalance;
 - FX hedge;
-- global risk reduction;
+- toàn cục (global / 전역) rủi ro (risk / 위험) reduction;
 - country allocation;
 - company view.
 
 ## 21. Domestic liquidity
 
-Ở Việt Nam, domestic deposit rate, margin balance và retail turnover có thể ảnh hưởng mạnh đến market multiple.
+Ở Việt Nam, domestic deposit tỷ lệ (rate / 비율), margin balance và retail turnover có thể ảnh hưởng mạnh đến thị trường (market / 시장) multiple.
 
 Ở Hàn Quốc, household flows, pension/institutional flows và ETF/futures mechanics cũng đáng chú ý.
 
@@ -305,7 +307,7 @@ Hedge Policy
 
 ## 23. Futures
 
-Futures giúp hedge beta hoặc trade index nhưng phải hiểu:
+Futures giúp hedge beta hoặc trade chỉ mục (index / 인덱스) nhưng phải hiểu:
 
 - multiplier;
 - margin;
@@ -316,7 +318,7 @@ Futures giúp hedge beta hoặc trade index nhưng phải hiểu:
 
 ## 24. Leveraged/inverse products
 
-Daily-reset product có path dependency.
+Daily-reset sản phẩm (product / 제품) có đường dẫn (path / 경로) phụ thuộc (dependency / 의존성).
 
 Không nên ngoại suy `2× daily` thành `2× long-term`.
 
@@ -337,17 +339,17 @@ Liability Currency
 
 Cùng một exposure có thể mua qua:
 
-- local ETF;
-- direct foreign security;
+- cục bộ (local / 로컬) ETF;
+- direct foreign bảo mật (security / 보안);
 - depositary receipt;
 - fund;
 - derivative.
 
 Mỗi wrapper có tax, custody, settlement, liquidity và legal claim khác nhau.
 
-## 27. Thuế và access
+## 27. Thuế và truy cập (access / 접근)
 
-Không hard-code mức thuế, ISA limit, withholding rate hay foreign-access rule trong knowledge base dài hạn.
+Không hard-code mức thuế, ISA limit, withholding tỷ lệ (rate / 비율) hay foreign-access quy tắc (rule / 규칙) trong kiến thức (knowledge / 지식) cơ sở (base / 기반) dài hạn.
 
 Khi ra quyết định thật phải kiểm tra:
 
@@ -355,8 +357,8 @@ Khi ra quyết định thật phải kiểm tra:
 - treaty;
 - withholding;
 - account wrapper;
-- broker legal entity;
-- market access hiện hành.
+- broker legal thực thể (entity / 엔터티);
+- thị trường (market / 시장) truy cập (access / 접근) hiện hành.
 
 # Phần VIII — Quy trình research
 
@@ -374,7 +376,7 @@ Business Model
 → Catalyst / Invalidation
 ```
 
-## 29. Market research
+## 29. thị trường (market / 시장) research
 
 Market research nối dữ liệu vĩ mô, flow, breadth, valuation và access rules thành một thesis có thể review. Hãy dùng sơ đồ để biết câu hỏi nào cần trả lời trước khi chọn cổ phiếu hoặc vị thế xuyên biên giới.
 
@@ -388,7 +390,7 @@ Macro
 → Valuation
 ```
 
-## 30. Source hierarchy
+## 30. nguồn (source / 소스) hierarchy
 
 Ưu tiên:
 
@@ -415,7 +417,7 @@ Official Regulator / Exchange / Central Bank
 
 ## Kết luận
 
-Không nên học Korea/Vietnam market như hai danh sách ticker hoặc chỉ số.
+Không nên học Korea/Vietnam thị trường (market / 시장) như hai danh sách ticker hoặc chỉ số.
 
 Mục tiêu là có thể nối:
 
@@ -431,3 +433,5 @@ Global Shock
 ```
 
 và luôn phân biệt **kiến thức cơ chế lâu dài** với **quy định/dữ liệu động cần kiểm tra lại tại thời điểm sử dụng**.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 KOREA MARKET PLAYBOOK](./01_KOREA_MARKET_PLAYBOOK.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

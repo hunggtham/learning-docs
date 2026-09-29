@@ -1,13 +1,16 @@
-# Case Study: Scheduler, Queue và Backpressure
-**Scheduling & Backpressure Case Study / 스케줄링과 백프레셔 사례**
+# Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure
 
-Scheduler xuất hiện ở CPU, job queue, thread pool, message processing, network packet scheduling và background worker. Bài toán tưởng như chỉ là “chọn công việc tiếp theo”, nhưng thực tế phải cân bằng nhiều mục tiêu: độ trễ, throughput, fairness, deadline, priority, memory và khả năng hấp thụ burst.
+> **Mạch đọc:** Đọc **trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. FIFO là baseline** sang **2. Priority hàng đợi (queue / 큐)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Case study này nối Queue, Deque, Priority Queue, Heap, Hash Table, Fair Scheduling và Backpressure thành một mô hình hệ thống thống nhất.
+**Scheduling & Backpressure trường hợp (case / 사례) Study / 스케줄링과 백프레셔 사례**
+
+Scheduler xuất hiện ở CPU, job hàng đợi (queue / 큐), luồng thực thi (thread / 스레드) pool, message processing, mạng (network / 네트워크) packet scheduling và background worker. Bài toán tưởng như chỉ là “chọn công việc tiếp theo”, nhưng thực tế phải cân bằng nhiều mục tiêu: độ trễ, thông lượng (throughput / 처리량), fairness, deadline, priority, bộ nhớ (memory / 메모리) và khả năng hấp thụ burst.
+
+Trường hợp (case / 사례) study này nối hàng đợi (queue / 큐), Deque, Priority hàng đợi (queue / 큐), vùng nhớ động (heap / 힙), bảng băm (hash table / 해시 테이블), Fair Scheduling và Backpressure thành một mô hình hệ thống thống nhất.
 
 ## 1. FIFO là baseline
 
-Queue FIFO xử lý theo thứ tự đến:
+Hàng đợi (queue / 큐) FIFO xử lý theo thứ tự đến:
 
 ```text
 job1 -> job2 -> job3 -> ...
@@ -23,9 +26,9 @@ chi phí thấp
 
 Nhưng FIFO không biết job nào quan trọng hơn hoặc job nào có deadline gần hơn.
 
-## 2. Priority Queue
+## 2. Priority hàng đợi (queue / 큐)
 
-Nếu mỗi job có priority, min/max heap là lựa chọn tự nhiên:
+Nếu mỗi job có priority, min/max vùng nhớ động (heap / 힙) là lựa chọn tự nhiên:
 
 ```text
 (priority, arrivalOrder, jobId)
@@ -39,7 +42,7 @@ Nếu không có tie-break ổn định, scheduler có thể cho hành vi khó d
 
 Priority có thể thay đổi theo thời gian: job chờ lâu được tăng độ ưu tiên để tránh starvation.
 
-Heap chuẩn không tự sắp xếp lại khi field của object thay đổi. Có ba hướng:
+Vùng nhớ vùng nhớ động (heap / 힙) chuẩn không tự sắp xếp lại khi trường dữ liệu (field / 필드) của đối tượng (object / 객체) thay đổi. Có ba hướng:
 
 ```text
 indexed heap + decrease/increase-key
@@ -47,7 +50,7 @@ chèn entry mới và bỏ entry cũ khi pop
 rebuild heap theo chu kỳ
 ```
 
-Lazy stale-entry thường đơn giản và robust nếu memory overhead chấp nhận được.
+Lazy stale-entry thường đơn giản và robust nếu bộ nhớ (memory / 메모리) overhead chấp nhận được.
 
 ## 4. Starvation và Aging
 
@@ -59,29 +62,29 @@ Nếu luôn chọn priority cao nhất, job priority thấp có thể chờ vô 
 effectivePriority = basePriority + f(waitTime)
 \]
 
-Scheduler không còn tối ưu một scalar cố định; priority trở thành hàm của state động.
+Scheduler không còn tối ưu một scalar cố định; priority trở thành hàm của trạng thái (state / 상태) động.
 
 ## 5. Deadline Scheduling
 
-Nếu job có deadline, một strategy cổ điển là **Earliest Deadline First (EDF)**: luôn chọn job có deadline sớm nhất.
+Nếu job có deadline, một chiến lược (strategy / 전략) cổ điển là **Earliest Deadline First (EDF)**: luôn chọn job có deadline sớm nhất.
 
-Priority Queue có key là deadline.
+Priority hàng đợi (queue / 큐) có key là deadline.
 
-Nhưng EDF chỉ có guarantee mạnh dưới những giả định cụ thể về mô hình task và utilization. Không nên áp dụng theorem real-time vào workload tùy ý mà không kiểm tra giả định.
+Nhưng EDF chỉ có guarantee mạnh dưới những giả định cụ thể về mô hình tác vụ (task / 작업) và utilization. Không nên áp dụng theorem real-time vào tải công việc (workload / 워크로드) tùy ý mà không kiểm tra giả định.
 
 ## 6. Shortest Job First
 
-Nếu biết service time, xử lý job ngắn trước có thể giảm average waiting time trong một số mô hình.
+Nếu biết dịch vụ (service / 서비스) thời gian (time / 시간), xử lý job ngắn trước có thể giảm average waiting thời gian (time / 시간) trong một số mô hình.
 
 Nhưng long job có thể starvation nếu short job đến liên tục.
 
-Một mục tiêu tối ưu average latency có thể xung đột fairness.
+Một mục tiêu tối ưu average độ trễ (latency / 지연 시간) có thể xung đột fairness.
 
-Đây là bài học quan trọng: scheduler cần **objective rõ ràng**, không chỉ data structure nhanh.
+Đây là bài học quan trọng: scheduler cần **mục tiêu (objective / 목표) rõ ràng**, không chỉ cấu trúc dữ liệu (data structure / 자료구조) nhanh.
 
-## 7. Multi-Level Queue
+## 7. Multi-Level hàng đợi (queue / 큐)
 
-Có thể chia job thành nhiều queue:
+Có thể chia job thành nhiều hàng đợi (queue / 큐):
 
 ```text
 critical
@@ -90,9 +93,9 @@ batch
 background
 ```
 
-Scheduler chọn giữa các queue theo policy rồi FIFO/priority bên trong mỗi queue.
+Scheduler chọn giữa các hàng đợi (queue / 큐) theo chính sách (policy / 정책) rồi FIFO/priority bên trong mỗi hàng đợi (queue / 큐).
 
-Composition này thường dễ kiểm soát hơn một global priority formula cực phức tạp.
+Composition này thường dễ kiểm soát hơn một toàn cục (global / 전역) priority formula cực phức tạp.
 
 ## 8. Weighted Fairness
 
@@ -104,9 +107,9 @@ B: 3
 C: 2
 ```
 
-Ta muốn chia capacity tương đối 50% / 30% / 20% trong dài hạn.
+Ta muốn chia sức chứa (capacity / 용량) tương đối 50% / 30% / 20% trong dài hạn.
 
-Weighted Round Robin là một cách đơn giản. Các thuật toán công bằng hơn có thể mô hình hóa **virtual finish time** và dùng priority queue.
+Weighted Round Robin là một cách đơn giản. Các thuật toán công bằng hơn có thể mô hình hóa **virtual finish thời gian (time / 시간)** và dùng priority hàng đợi (queue / 큐).
 
 Một scheduler tốt phải phân biệt:
 
@@ -117,19 +120,19 @@ fairness -> ai nhận bao nhiêu tài nguyên theo thời gian
 
 Hai khái niệm không giống nhau.
 
-## 9. Queue có giới hạn
+## 9. hàng đợi (queue / 큐) có giới hạn
 
-Queue vô hạn về logic là nguy hiểm trong hệ thống thật.
+Hàng đợi (queue / 큐) vô hạn về lô-gic (logic / 논리) là nguy hiểm trong hệ thống thật.
 
-Nếu producer tạo 100k job/s nhưng consumer chỉ xử lý 80k/s, queue tăng 20k/s. Sau đủ lâu, memory hoặc disk sẽ cạn.
+Nếu producer tạo 100k job/s nhưng bên tiêu thụ (consumer / 소비자) chỉ xử lý 80k/s, hàng đợi (queue / 큐) tăng 20k/s. Sau đủ lâu, bộ nhớ (memory / 메모리) hoặc disk sẽ cạn.
 
-Queue có giới hạn biến tài nguyên hữu hạn thành một invariant:
+Hàng đợi (queue / 큐) có giới hạn biến tài nguyên hữu hạn thành một bất biến (invariant / 불변식):
 
 ```text
 0 <= size <= capacity
 ```
 
-Khi đầy, hệ thống buộc phải có policy.
+Khi đầy, hệ thống buộc phải có chính sách (policy / 정책).
 
 ## 10. Backpressure
 
@@ -147,7 +150,7 @@ spill to disk
 scale consumer
 ```
 
-Không có policy chung đúng cho mọi hệ thống. Log telemetry có thể drop một phần; payment request thường không thể âm thầm drop.
+Không có chính sách (policy / 정책) chung đúng cho mọi hệ thống. Log telemetry có thể drop một phần; payment yêu cầu (request / 요청) thường không thể âm thầm drop.
 
 ## 11. Little’s Law
 
@@ -165,9 +168,9 @@ lambda = throughput trung bình
 W      = thời gian trung bình một item ở trong hệ thống
 ```
 
-Nếu arrival rate tiến sát service capacity, queueing latency có thể tăng mạnh.
+Nếu arrival tỷ lệ (rate / 비율) tiến sát dịch vụ (service / 서비스) sức chứa (capacity / 용량), queueing độ trễ (latency / 지연 시간) có thể tăng mạnh.
 
-Little’s Law không thiết kế scheduler thay ta, nhưng giúp liên hệ queue length, throughput và latency.
+Little’s Law không thiết kế scheduler thay ta, nhưng giúp liên hệ hàng đợi (queue / 큐) length, thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간).
 
 ## 12. Batching
 
@@ -183,15 +186,15 @@ có thể lấy một batch:
 pop 100 -> xử lý chung
 ```
 
-Batching giảm overhead khóa, syscall, network round-trip hoặc vectorization cost trên mỗi item.
+Batching giảm overhead khóa, syscall, mạng (network / 네트워크) round-trip hoặc vectorization chi phí (cost / 비용) trên mỗi item.
 
-Nhưng batch quá lớn làm tăng waiting latency cho item đầu tiên.
+Nhưng batch quá lớn làm tăng waiting độ trễ (latency / 지연 시간) cho item đầu tiên.
 
-Đây là trade-off throughput–latency.
+Đây là sự đánh đổi (trade-off / 트레이드오프) thông lượng (throughput / 처리량)–độ trễ (latency / 지연 시간).
 
-## 13. Work Stealing
+## 13. công việc (work / 작업) Stealing
 
-Trong thread pool, mỗi worker có deque riêng.
+Trong luồng thực thi (thread / 스레드) pool, mỗi worker có deque riêng.
 
 Worker thường:
 
@@ -201,17 +204,17 @@ push/pop task của mình ở một đầu
 
 Worker rảnh có thể **steal** từ đầu còn lại của worker khác.
 
-Deque giúp giảm contention vì owner và thief thường thao tác ở hai đầu khác nhau.
+Deque giúp giảm contention vì đơn vị sở hữu (owner / 오너) và thief thường thao tác ở hai đầu khác nhau.
 
-Work stealing đặc biệt phù hợp task recursive/fork-join vì các task mới sinh thường có locality với worker hiện tại.
+Công việc (work / 작업) stealing đặc biệt phù hợp tác vụ (task / 작업) recursive/fork-join vì các tác vụ (task / 작업) mới sinh thường có locality với worker hiện tại.
 
-## 14. Global Queue vs Local Queues
+## 14. toàn cục (global / 전역) hàng đợi (queue / 큐) vs cục bộ (local / 로컬) Queues
 
-Global queue đơn giản nhưng nhiều worker cùng tranh chấp một lock/cache line.
+Toàn cục (global / 전역) hàng đợi (queue / 큐) đơn giản nhưng nhiều worker cùng tranh chấp một khóa (lock / 잠금)/bộ nhớ đệm (cache / 캐시) line.
 
-Per-worker queue giảm contention nhưng tạo imbalance.
+Per-worker hàng đợi (queue / 큐) giảm contention nhưng tạo imbalance.
 
-Work stealing là một cách kết hợp:
+Công việc (work / 작업) stealing là một cách kết hợp:
 
 ```text
 local fast path
@@ -219,11 +222,11 @@ local fast path
 steal khi thiếu việc
 ```
 
-Đây là ví dụ system design sinh ra từ việc ghép nhiều queue thay vì chỉ tối ưu một queue duy nhất.
+Đây là ví dụ hệ thống (system / 시스템) thiết kế (design / 설계) sinh ra từ việc ghép nhiều hàng đợi (queue / 큐) thay vì chỉ tối ưu một hàng đợi (queue / 큐) duy nhất.
 
 ## 15. SPSC, MPSC, MPMC
 
-Queue đồng thời cần xác định mô hình producer/consumer:
+Hàng đợi (queue / 큐) đồng thời cần xác định mô hình producer/bên tiêu thụ (consumer / 소비자):
 
 ```text
 SPSC -> single producer, single consumer
@@ -231,13 +234,13 @@ MPSC -> multiple producer, single consumer
 MPMC -> multiple producer, multiple consumer
 ```
 
-SPSC có thể đơn giản hơn rất nhiều vì ownership của head/tail rõ ràng. MPMC cần protocol atomic/memory-order phức tạp hơn.
+SPSC có thể đơn giản hơn rất nhiều vì quyền sở hữu (ownership / 소유권) của head/tail rõ ràng. MPMC cần giao thức (protocol / 프로토콜) atomic/memory-order phức tạp hơn.
 
 Không nên dùng cấu trúc concurrent tổng quát nếu mô hình thực tế đơn giản hơn.
 
 ## 16. Ring Buffer
 
-Bounded queue thường dùng ring buffer:
+Bounded hàng đợi (queue / 큐) thường dùng ring buffer:
 
 ```text
 buffer[capacity]
@@ -245,19 +248,19 @@ head
 tail
 ```
 
-Nếu capacity là lũy thừa hai, modulo có thể thay bằng bitmask trong một số implementation:
+Nếu sức chứa (capacity / 용량) là lũy thừa hai, modulo có thể thay bằng bitmask trong một số hiện thực (implementation / 구현):
 
 ```text
 index & (capacity - 1)
 ```
 
-Nhưng optimization này chỉ đúng nếu invariant capacity được giữ.
+Nhưng tối ưu hóa (optimization / 최적화) này chỉ đúng nếu bất biến (invariant / 불변식) sức chứa (capacity / 용량) được giữ.
 
-## 17. Queue Depth không chỉ là metric vận hành
+## 17. hàng đợi (queue / 큐) độ sâu (depth / 깊이) không chỉ là chỉ số (metric / 지표) vận hành
 
-Queue depth phản ánh chênh lệch giữa arrival và service rate.
+Hàng đợi (queue / 큐) độ sâu (depth / 깊이) phản ánh chênh lệch giữa arrival và dịch vụ (service / 서비스) tỷ lệ (rate / 비율).
 
-Một spike ngắn có thể được queue hấp thụ. Queue tăng liên tục cho thấy hệ thống không đạt trạng thái ổn định.
+Một spike ngắn có thể được hàng đợi (queue / 큐) hấp thụ. hàng đợi (queue / 큐) tăng liên tục cho thấy hệ thống không đạt trạng thái ổn định.
 
 Các alert nên nhìn:
 
@@ -272,11 +275,11 @@ processing latency
 
 Chỉ nhìn CPU usage có thể bỏ sót backlog.
 
-## 18. Retry Storm
+## 18. thử lại (retry / 재시도) Storm
 
-Khi downstream lỗi, upstream có thể retry. Nếu mọi client retry ngay, arrival rate tăng đúng lúc capacity giảm.
+Khi downstream lỗi, upstream có thể thử lại (retry / 재시도). Nếu mọi máy khách (client / 클라이언트) thử lại (retry / 재시도) ngay, arrival tỷ lệ (rate / 비율) tăng đúng lúc sức chứa (capacity / 용량) giảm.
 
-Queue/backpressure cần phối hợp với:
+Hàng đợi (queue / 큐)/backpressure cần phối hợp với:
 
 ```text
 exponential backoff
@@ -285,9 +288,9 @@ retry budget
 circuit breaker
 ```
 
-DSA queue đúng nhưng policy retry sai vẫn làm hệ thống sụp.
+DSA hàng đợi (queue / 큐) đúng nhưng chính sách (policy / 정책) thử lại (retry / 재시도) sai vẫn làm hệ thống sụp.
 
-## 19. Delay Queue và Timer Heap
+## 19. Delay hàng đợi (queue / 큐) và Timer vùng nhớ động (heap / 힙)
 
 Nếu job chỉ được chạy sau `readyAt`, scheduler cần cấu trúc theo thời gian.
 
@@ -299,13 +302,13 @@ peek -> job sớm nhất
 
 phù hợp khi số timer vừa phải.
 
-Nếu có hàng triệu timer với độ phân giải giới hạn, **timer wheel** có thể hiệu quả hơn heap vì bucket hóa thời gian.
+Nếu có hàng triệu timer với độ phân giải giới hạn, **timer wheel** có thể hiệu quả hơn vùng nhớ động (heap / 힙) vì bucket hóa thời gian.
 
-Lựa chọn phụ thuộc độ phân giải và scale.
+Lựa chọn phụ thuộc độ phân giải và quy mô (scale / 규모).
 
 ## 20. Dedup và Idempotency
 
-Job có thể được gửi lại sau retry. Nếu side effect không idempotent, xử lý hai lần có thể gây lỗi.
+Job có thể được gửi lại sau thử lại (retry / 재시도). Nếu side tác động (effect / 효과) không idempotent, xử lý hai lần có thể gây lỗi.
 
 Có thể dùng:
 
@@ -313,15 +316,15 @@ Có thể dùng:
 job_id -> processed state
 ```
 
-trong Hash Map/database với TTL.
+trong băm (hash / 해시) Map/cơ sở dữ liệu (database / 데이터베이스) với TTL.
 
-Nhưng dedup state cũng tăng theo số job và cần cleanup.
+Nhưng dedup trạng thái (state / 상태) cũng tăng theo số job và cần cleanup.
 
 ## 21. Cancellation
 
-Nếu job đang trong heap/queue bị cancel, xóa tùy ý có thể đắt.
+Nếu job đang trong vùng nhớ động (heap / 힙)/hàng đợi (queue / 큐) bị cancel, xóa tùy ý có thể đắt.
 
-Một strategy đơn giản:
+Một chiến lược (strategy / 전략) đơn giản:
 
 ```text
 cancelled[jobId] = true
@@ -329,13 +332,13 @@ cancelled[jobId] = true
 
 khi pop thì bỏ qua job đã cancel.
 
-Đây là lazy deletion, tương tự stale entries trong Dijkstra/Priority Queue.
+Đây là lazy deletion, tương tự stale entries trong Dijkstra/Priority hàng đợi (queue / 큐).
 
-## 22. Admission Control
+## 22. Admission điều khiển (control / 제어)
 
-Tốt hơn việc nhận mọi job rồi để queue nổ là quyết định ngay từ đầu hệ thống có đủ capacity hay không.
+Tốt hơn việc nhận mọi job rồi để hàng đợi (queue / 큐) nổ là quyết định ngay từ đầu hệ thống có đủ sức chứa (capacity / 용량) hay không.
 
-Admission control có thể dựa trên:
+Admission điều khiển (control / 제어) có thể dựa trên:
 
 ```text
 queue depth
@@ -345,13 +348,13 @@ tenant quota
 memory budget
 ```
 
-Một request bị từ chối sớm đôi khi tốt hơn request timeout sau 30 giây.
+Một yêu cầu (request / 요청) bị từ chối sớm đôi khi tốt hơn yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) sau 30 giây.
 
 ## 23. Cost-aware Scheduling
 
-Không phải mọi job có cost giống nhau. Nếu một job cần 10 GB RAM còn job khác cần 100 MB, chỉ priority theo thời gian có thể làm resource fragmentation.
+Không phải mọi job có chi phí (cost / 비용) giống nhau. Nếu một job cần 10 GB RAM còn job khác cần 100 MB, chỉ priority theo thời gian có thể làm tài nguyên (resource / 자원) fragmentation.
 
-Scheduler có thể model nhiều tài nguyên:
+Scheduler có thể mô hình (model / 모델) nhiều tài nguyên:
 
 ```text
 CPU
@@ -362,33 +365,33 @@ network
 
 Bài toán trở thành multidimensional packing/scheduling và có thể khó về mặt tổ hợp.
 
-Đây là ranh giới nơi heap đơn giản không còn đủ.
+Đây là ranh giới nơi vùng nhớ động (heap / 힙) đơn giản không còn đủ.
 
 ## 24. Priority Inversion
 
-Một task priority cao có thể phải chờ lock đang được task priority thấp giữ, trong khi task trung bình tiếp tục chạy. Đây là **priority inversion**.
+Một tác vụ (task / 작업) priority cao có thể phải chờ khóa (lock / 잠금) đang được tác vụ (task / 작업) priority thấp giữ, trong khi tác vụ (task / 작업) trung bình tiếp tục chạy. Đây là **priority inversion**.
 
-Các cơ chế như priority inheritance xử lý ở tầng synchronization, cho thấy scheduler và lock/resource graph có liên hệ với nhau.
+Các cơ chế như priority inheritance xử lý ở tầng synchronization, cho thấy scheduler và khóa (lock / 잠금)/tài nguyên (resource / 자원) đồ thị (graph / 그래프) có liên hệ với nhau.
 
 ## 25. Fairness theo tenant
 
-Nếu một tenant gửi 90% traffic, global FIFO có thể làm tenant khác chờ lâu.
+Nếu một tenant gửi 90% traffic, toàn cục (global / 전역) FIFO có thể làm tenant khác chờ lâu.
 
-Per-tenant queue + weighted scheduler cho phép isolation tốt hơn.
+Per-tenant hàng đợi (queue / 큐) + weighted scheduler cho phép isolation tốt hơn.
 
-Hash Map có thể ánh xạ:
+Băm (hash / 해시) Map có thể ánh xạ:
 
 ```text
 tenant_id -> queue state
 ```
 
-và heap/round-robin chọn tenant tiếp theo.
+và vùng nhớ động (heap / 힙)/round-robin chọn tenant tiếp theo.
 
-## 26. Failure Recovery
+## 26. thất bại (failure / 실패) khôi phục (recovery / 복구)
 
-Queue in-memory mất job khi process crash nếu không có persistence.
+Hàng đợi (queue / 큐) in-memory mất job khi tiến trình (process / 프로세스) crash nếu không có persistence.
 
-Persistent queue phải thêm:
+Persistent hàng đợi (queue / 큐) phải thêm:
 
 ```text
 log
@@ -397,11 +400,11 @@ replay
 visibility timeout
 ```
 
-Một cấu trúc FIFO đúng trong RAM chưa đủ cho delivery semantics.
+Một cấu trúc FIFO đúng trong RAM chưa đủ cho delivery ngữ nghĩa (semantics / 의미론).
 
 ## 27. Testing
 
-Kiểm tra không chỉ thứ tự output mà còn invariant:
+Kiểm tra không chỉ thứ tự đầu ra (output / 출력) mà còn bất biến (invariant / 불변식):
 
 ```text
 không vượt capacity
@@ -412,7 +415,7 @@ aging không làm starvation
 retry không double-apply side effect theo contract
 ```
 
-Property-based test có thể sinh chuỗi enqueue/dequeue/cancel/reprioritize ngẫu nhiên và so với mô hình tham chiếu.
+Property-based kiểm thử (test / 테스트) có thể sinh chuỗi enqueue/dequeue/cancel/reprioritize ngẫu nhiên và so với mô hình tham chiếu.
 
 ## 28. Benchmark
 
@@ -429,9 +432,9 @@ burst traffic
 hot tenant
 ```
 
-Average throughput tốt nhưng p99 rất xấu có thể không đáp ứng SLA.
+Average thông lượng (throughput / 처리량) tốt nhưng p99 rất xấu có thể không đáp ứng SLA.
 
-## 29. Pipeline khái niệm
+## 29. chuỗi xử lý (pipeline / 파이프라인) khái niệm
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
@@ -449,7 +452,7 @@ Workers
 Ack / Retry / DLQ
 ```
 
-Feedback loop:
+Vòng phản hồi (feedback loop / 피드백 루프):
 
 ```text
 queue depth + latency
@@ -459,6 +462,6 @@ backpressure / autoscaling / rejection
 
 ## Mô hình tư duy
 
-> Scheduler là bài toán **chọn item tiếp theo dưới mục tiêu và ràng buộc tài nguyên**. Queue lưu backlog, Priority Queue mã hóa thứ tự ưu tiên, Deque hỗ trợ work stealing, Hash Map giữ state theo job/tenant, còn backpressure bảo đảm backlog không biến thành sự cố tài nguyên. Data structure chỉ là một nửa; policy và objective mới quyết định hệ thống có công bằng, ổn định và chịu tải tốt hay không.
+> Scheduler là bài toán **chọn item tiếp theo dưới mục tiêu và ràng buộc tài nguyên**. hàng đợi (queue / 큐) lưu backlog, Priority hàng đợi (queue / 큐) mã hóa thứ tự ưu tiên, Deque hỗ trợ công việc (work / 작업) stealing, băm (hash / 해시) Map giữ trạng thái (state / 상태) theo job/tenant, còn backpressure bảo đảm backlog không biến thành sự cố tài nguyên. cấu trúc dữ liệu (data structure / 자료구조) chỉ là một nửa; chính sách (policy / 정책) và mục tiêu (objective / 목표) mới quyết định hệ thống có công bằng, ổn định và chịu tải tốt hay không.
 
 Xem thêm: [Queue, Deque & Priority Queue](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [Problem-Solving Workflow](./02_problem_solving_workflow.md).

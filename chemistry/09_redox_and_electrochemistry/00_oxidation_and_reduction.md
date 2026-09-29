@@ -1,5 +1,8 @@
 # Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa
 
+> **Mạch đọc:** Đọc **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Oxy hóa và khử luôn đi cùng nhau** sang **Chất oxy hóa và chất khử**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phản ứng oxy hóa–khử (oxidation–reduction, redox / 산화·환원)** là những biến đổi trong đó sự phân bố electron giữa các nguyên tử, ion hoặc phân tử thay đổi. Ở mức hạch toán, **oxy hóa** tương ứng với tăng số oxy hóa hoặc mất electron; **khử** tương ứng với giảm số oxy hóa hoặc nhận electron. Ở mức sâu hơn, redox là sự dịch chuyển electron giữa các trạng thái có thế hóa học khác nhau, và chính chênh lệch đó có thể được chuyển thành công điện trong pin.
 
 Redox không chỉ là một chương riêng về “số oxy hóa”. Nó là nền cho cháy, ăn mòn, hô hấp tế bào, quang hợp, pin, điện phân, luyện kim và nhiều quá trình môi trường.
@@ -117,9 +120,9 @@ Một công thức có thể cho số oxy hóa trung bình không nguyên mà kh
 
 Trong một số oxide kim loại chuyển tiếp, các tâm kim loại có thể tồn tại ở nhiều trạng thái oxy hóa hoặc electron được phi định xứ trên mạng tinh thể.
 
-Khi đó formal oxidation state vẫn hữu ích cho hạch toán thành phần, nhưng electronic structure thật có thể phức tạp hơn.
+Khi đó formal oxidation trạng thái (state / 상태) vẫn hữu ích cho hạch toán thành phần, nhưng electronic cấu trúc (structure / 구조) thật có thể phức tạp hơn.
 
-Điều này quan trọng trong vật liệu pin như các oxide kim loại chuyển tiếp, nơi state of charge gắn với thay đổi trạng thái oxy hóa trung bình và đôi khi cả redox trên oxygen.
+Điều này quan trọng trong vật liệu pin như các oxide kim loại chuyển tiếp, nơi trạng thái (state / 상태) of charge gắn với thay đổi trạng thái oxy hóa trung bình và đôi khi cả redox trên oxygen.
 
 ## Redox không cần có oxygen
 
@@ -174,7 +177,7 @@ Ví dụ alcohol → aldehyde → carboxylic acid là chuỗi carbon ngày càng
 
 Ngược lại carbonyl → alcohol là quá trình khử.
 
-Đây là cầu nối giữa oxidation state và ngôn ngữ cơ chế hữu cơ.
+Đây là cầu nối giữa oxidation trạng thái (state / 상태) và ngôn ngữ cơ chế hữu cơ.
 
 ## Hydride transfer trong sinh hóa
 
@@ -190,7 +193,7 @@ nhưng cơ chế phân tử thường không có hai electron tự do bơi trong
 
 Điều này nhắc rằng bán phản ứng là công cụ hạch toán rất mạnh, không nhất thiết là mô tả cơ chế literal.
 
-## Oxy hóa–khử và acid–base có thể ghép với nhau
+## Oxy hóa–khử và acid–cơ sở (base / 기반) có thể ghép với nhau
 
 Nhiều bán phản ứng redox chứa \(H^+\), \(OH^-\) hoặc \(H_2O\), nên thế redox phụ thuộc pH.
 
@@ -202,11 +205,11 @@ O_2+4H^++4e^-\rightarrow2H_2O
 
 Thay đổi pH làm reaction quotient đổi và thế cân bằng dịch theo phương trình Nernst.
 
-Vì vậy redox chemistry trong nước thường không thể tách hoàn toàn khỏi acid–base chemistry.
+Vì vậy redox chemistry trong nước thường không thể tách hoàn toàn khỏi acid–cơ sở (base / 기반) chemistry.
 
 ## Disproportionation
 
-Một species ở oxidation state trung gian có thể đồng thời bị oxy hóa và khử.
+Một species ở oxidation trạng thái (state / 상태) trung gian có thể đồng thời bị oxy hóa và khử.
 
 Ví dụ:
 
@@ -214,7 +217,7 @@ Ví dụ:
 2H_2O_2\rightarrow2H_2O+O_2
 \]
 
-O trong peroxide có oxidation state −1.
+O trong peroxide có oxidation trạng thái (state / 상태) −1.
 
 Một phần đi xuống −2 trong nước; phần khác đi lên 0 trong oxygen.
 
@@ -222,7 +225,7 @@ Một phần đi xuống −2 trong nước; phần khác đi lên 0 trong oxyge
 
 ## Comproportionation
 
-Quá trình ngược lại xảy ra khi hai oxidation states khác nhau tạo state trung gian.
+Quá trình ngược lại xảy ra khi hai oxidation states khác nhau tạo trạng thái (state / 상태) trung gian.
 
 Ví dụ tổng quát:
 
@@ -236,25 +239,25 @@ Xu hướng disproportionation/comproportionation có thể được phân tích
 
 ## Giản đồ Latimer
 
-**Giản đồ Latimer (Latimer diagram)** sắp các oxidation states của một nguyên tố và ghi standard reduction potentials giữa các state liên tiếp.
+**Giản đồ Latimer (Latimer diagram)** sắp các oxidation states của một nguyên tố và ghi tiêu chuẩn (standard / 표준) reduction potentials giữa các trạng thái (state / 상태) liên tiếp.
 
 Nó giúp suy:
 
-- state nào dễ bị khử;
-- state trung gian có xu hướng disproportionate hay không;
+- trạng thái (state / 상태) nào dễ bị khử;
+- trạng thái (state / 상태) trung gian có xu hướng disproportionate hay không;
 - potential của phản ứng ghép.
 
 Không được cộng trực tiếp điện thế như enthalpy. Nếu ghép bước, phải chuyển qua \(\Delta G=-nFE\), cộng \(\Delta G\), rồi đổi lại E nếu cần.
 
 ## Giản đồ Frost
 
-**Giản đồ Frost (Frost diagram)** biểu diễn một đại lượng liên quan \(-nE^\circ\) hoặc free-energy level theo oxidation state.
+**Giản đồ Frost (Frost diagram)** biểu diễn một đại lượng liên quan \(-nE^\circ\) hoặc free-energy mức (level / 수준) theo oxidation trạng thái (state / 상태).
 
-Điểm thấp hơn tương ứng oxidation state ổn định hơn về nhiệt động trong điều kiện đã chọn.
+Điểm thấp hơn tương ứng oxidation trạng thái (state / 상태) ổn định hơn về nhiệt động trong điều kiện đã chọn.
 
 Độ cong của các điểm giúp trực quan hóa disproportionation/comproportionation tendencies.
 
-Đây là ví dụ cách redox bookkeeping được chuyển thành energy landscape.
+Đây là ví dụ cách redox bookkeeping được chuyển thành năng lượng (energy / 에너지) landscape.
 
 ## Thế redox là thước đo khuynh hướng nhận electron
 
@@ -268,7 +271,7 @@ có **thế khử (reduction potential)** phản ánh free-energy tendency của
 
 Thế càng dương trong cùng điều kiện chuẩn, dạng Ox thường có khuynh hướng nhận electron mạnh hơn theo thang quy ước đó.
 
-Nhưng potential không phải “lực hút electron tuyệt đối”; nó phụ thuộc solvent, pH, concentration/activity và reference convention.
+Nhưng potential không phải “lực hút electron tuyệt đối”; nó phụ thuộc solvent, pH, concentration/activity và tham chiếu (reference / 참조) convention.
 
 ## Chất oxy hóa mạnh và chất khử mạnh là khái niệm tương đối
 
@@ -299,50 +302,50 @@ PCET quan trọng trong:
 - enzyme redox;
 - fuel-cell catalysis.
 
-Nó cho thấy acid–base và redox là hai mặt liên kết của cùng electron/proton energetics.
+Nó cho thấy acid–cơ sở (base / 기반) và redox là hai mặt liên kết của cùng electron/proton energetics.
 
 ## Outer-sphere và inner-sphere electron transfer
 
 Trong **chuyển electron ngoài cầu (outer-sphere electron transfer)**, coordination shells của hai redox centers phần lớn giữ nguyên; electron transfer xảy ra mà không cần ligand cầu nối trực tiếp.
 
-Trong **chuyển electron nội cầu (inner-sphere electron transfer)**, một ligand có thể bridge hai metal centers và tạo pathway chuyển electron.
+Trong **chuyển electron nội cầu (inner-sphere electron transfer)**, một ligand có thể cầu nối (bridge / 브리지) hai metal centers và tạo pathway chuyển electron.
 
 Cơ chế electron transfer ảnh hưởng tốc độ dù thermodynamic potential giống nhau.
 
 Đây là cầu nối từ redox thermodynamics sang chemical kinetics.
 
-## Marcus theory — vì sao electron transfer vẫn có barrier
+## Marcus lý thuyết (theory / 이론) — vì sao electron transfer vẫn có barrier
 
 Một electron transfer thuận lợi về \(\Delta G\) vẫn cần nuclei/solvent reorganize tới cấu hình nơi donor và acceptor states phù hợp năng lượng.
 
-**Lý thuyết Marcus (Marcus theory)** mô tả activation free energy bằng reorganization energy \(\lambda\):
+**Lý thuyết Marcus (Marcus theory)** mô tả activation free năng lượng (energy / 에너지) bằng reorganization năng lượng (energy / 에너지) \(\lambda\):
 
 \[
 \Delta G^\ddagger
 =\frac{(\lambda+\Delta G^\circ)^2}{4\lambda}
 \]
 
-Trong vùng thông thường, driving force mạnh hơn làm barrier giảm. Theory thậm chí dự đoán **vùng Marcus đảo (Marcus inverted region)** trong một số hệ molecular electron transfer.
+Trong vùng thông thường, driving force mạnh hơn làm barrier giảm. lý thuyết (theory / 이론) thậm chí dự đoán **vùng Marcus đảo (Marcus inverted region)** trong một số hệ molecular electron transfer.
 
-Đây là ví dụ sâu cho việc “electron transfer” cũng là kinetics problem, không phải chỉ potential comparison.
+Đây là ví dụ sâu cho việc “electron transfer” cũng là kinetics bài toán (problem / 문제), không phải chỉ potential comparison.
 
 ## Hô hấp tế bào là chuỗi redox được chia nhỏ
 
-Nếu glucose bị oxy hóa trực tiếp bằng oxygen như cháy, phần lớn free energy giải phóng nhanh thành nhiệt.
+Nếu glucose bị oxy hóa trực tiếp bằng oxygen như cháy, phần lớn free năng lượng (energy / 에너지) giải phóng nhanh thành nhiệt.
 
 Tế bào chia quá trình thành nhiều bước, chuyển electron qua NADH, flavin, Fe–S centers, quinone và cytochromes.
 
-Chuỗi truyền electron dùng free-energy drop để bơm proton và tạo **động lực proton (proton-motive force)**, sau đó ATP synthase chuyển gradient thành chemical work.
+Chuỗi truyền electron dùng free-energy drop để bơm proton và tạo **động lực proton (proton-motive force)**, sau đó ATP synthase chuyển độ dốc (gradient / 기울기) thành chemical công việc (work / 작업).
 
-Đây là engineering ở cấp phân tử: redox energy được thu từng bước thay vì giải phóng ồ ạt.
+Đây là kỹ thuật (engineering / 엔지니어링) ở cấp phân tử: redox năng lượng (energy / 에너지) được thu từng bước thay vì giải phóng ồ ạt.
 
 ## Quang hợp dùng photon để “nâng” electron
 
-Trong photosynthesis, photon tạo excited states có reducing/oxidizing power khác ground state.
+Trong photosynthesis, photon tạo excited states có reducing/oxidizing power khác ground trạng thái (state / 상태).
 
 Electron được lấy từ water và cuối cùng dùng để tạo reducing equivalents cho carbon fixation.
 
-Vì vậy quang hóa có thể thúc đẩy redox process không thuận lợi ở ground-state conditions.
+Vì vậy quang hóa có thể thúc đẩy redox tiến trình (process / 프로세스) không thuận lợi ở ground-state conditions.
 
 ## Ăn mòn là redox được tách không gian
 
@@ -360,25 +363,25 @@ Electron đi qua kim loại; ions đi qua electrolyte film.
 
 ## Pin — tách hai bán phản ứng để thu công
 
-Nếu oxidant và reductant phản ứng trực tiếp, electron transfer diễn ra cục bộ và energy chủ yếu thành heat.
+Nếu oxidant và reductant phản ứng trực tiếp, electron transfer diễn ra cục bộ và năng lượng (energy / 에너지) chủ yếu thành heat.
 
-Nếu tách chúng vào hai điện cực và buộc electron qua external circuit, có thể thu electrical work.
+Nếu tách chúng vào hai điện cực và buộc electron qua bên ngoài (external / 외부) circuit, có thể thu electrical công việc (work / 작업).
 
 Đây là bước chuyển từ redox chemistry sang electrochemistry.
 
 ## Redox trong vật liệu pin
 
-Khi lithium-ion battery hoạt động, insertion/extraction của Li thường đi cùng thay đổi oxidation state của transition-metal centers hoặc phân bố electron trong electrode host.
+Khi lithium-ion battery hoạt động, insertion/extraction của Li thường đi cùng thay đổi oxidation trạng thái (state / 상태) của transition-metal centers hoặc phân bố electron trong electrode host.
 
-Ví dụ cathode oxide có thể thay average oxidation state khi Li content thay đổi.
+Ví dụ cathode oxide có thể thay average oxidation trạng thái (state / 상태) khi Li content thay đổi.
 
 Nhưng ở một số vật liệu, oxygen redox hoặc delocalized band states cũng tham gia; simple integer oxidation-state picture có giới hạn.
 
-Đây là lý do modern battery chemistry cần cả redox bookkeeping lẫn electronic-structure theory.
+Đây là lý do hiện đại (modern / 현대적) battery chemistry cần cả redox bookkeeping lẫn electronic-structure lý thuyết (theory / 이론).
 
 ## Redox buffering trong môi trường
 
-Trong soil/sediment, electron acceptors thường được sử dụng theo energy hierarchy gần:
+Trong soil/sediment, electron acceptors thường được sử dụng theo năng lượng (energy / 에너지) hierarchy gần:
 
 ```text
 O2
@@ -391,9 +394,9 @@ O2
 
 khi môi trường ngày càng khử.
 
-Trình tự thực phụ thuộc kinetics, microbes và transport, nhưng redox potential giúp mô tả chemical regime.
+Trình tự thực phụ thuộc kinetics, microbes và vận chuyển (transport / 전송), nhưng redox potential giúp mô tả chemical regime.
 
-Speciation của Fe, Mn, S và contaminants có thể thay mạnh theo redox state.
+Speciation của Fe, Mn, S và contaminants có thể thay mạnh theo redox trạng thái (state / 상태).
 
 ## Eh và pH
 
@@ -415,13 +418,13 @@ Không. Nó là formal bookkeeping convention.
 
 ### “Electron transfer luôn xảy ra bằng electron tự do trong dung dịch”
 
-Không. Electron có thể được chuyển qua orbital overlap, bridge ligand, bond rearrangement hoặc cofactor.
+Không. Electron có thể được chuyển qua orbital overlap, cầu nối (bridge / 브리지) ligand, bond rearrangement hoặc cofactor.
 
 ### “Thế khử càng dương thì phản ứng chắc chắn nhanh hơn”
 
-Không. Potential là thermodynamic; tốc độ còn phụ thuộc activation/reorganization/transport.
+Không. Potential là thermodynamic; tốc độ còn phụ thuộc activation/reorganization/vận chuyển (transport / 전송).
 
-### “Redox và acid–base độc lập”
+### “Redox và acid–cơ sở (base / 기반) độc lập”
 
 Không. Nhiều redox couples phụ thuộc pH và có proton-coupled electron transfer.
 
@@ -436,6 +439,8 @@ Redox có thể được nhìn qua bốn tầng:
 4. cơ chế electron transfer → tốc độ và pathway
 ```
 
-Từ nền này, pin Galvani, điện phân, ăn mòn và sinh năng lượng trong tế bào trở thành các biến thể của cùng một logic electron-flow.
+Từ nền này, pin Galvani, điện phân, ăn mòn và sinh năng lượng trong tế bào trở thành các biến thể của cùng một lô-gic (logic / 논리) electron-flow.
 
 Xem tiếp: [Cân bằng phản ứng oxy hóa–khử](./01_balancing_redox_reactions.md) và [Pin Galvani](./02_galvanic_cells.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 balancing redox reactions](./01_balancing_redox_reactions.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

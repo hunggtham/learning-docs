@@ -2,7 +2,7 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** khi chuyển sang phần tiếp theo.
 
@@ -12,7 +12,7 @@ Mục đích của bài này là hiểu **027: 알고리즘 설계 기법과 시
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**에서 만든 기준을 이어받아 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**에서 만든 기준을 이어받아 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,13 +20,15 @@ Mục đích của bài này là hiểu **027: 알고리즘 설계 기법과 시
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** và nối nó với **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
 
-Từ **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**, ta đã có điểm tựa để bước vào **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 87/95 trước khi đi vào chi tiết.
+Từ **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**, ta đã có điểm tựa để bước vào **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 87/95 trước khi đi vào chi tiết.
 
 Để đọc **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -51,7 +53,7 @@ Ta vừa chốt **알고리즘 설계 기법 (Kỹ thuật thiết kế thuật 
 Bây giờ ta đi vào nội dung của **시간 복잡도 (Time Complexity - Độ phức tạp thời gian)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
-- Biểu diễn: Big-O (최악 - Tệ nhất), Theta (평균 - Trung bình), Omega (최상 - Tốt nhất).
+- Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với lần lượt 최악/평균/최상. Khi đề bài nói rõ worst/best case thì mới gắn với trường hợp đó.
 - **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
 - O(1) nghĩa là: Dữ liệu lớn đến đâu thời gian vẫn không đổi.
 

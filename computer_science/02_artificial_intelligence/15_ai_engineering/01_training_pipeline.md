@@ -1,6 +1,9 @@
-# Training Pipeline
+# Huấn luyện (training / 학습) chuỗi xử lý (pipeline / 파이프라인)
 
-Để huấn luyện mô hình có khả năng tái lập, chỉ gọi `model.fit()` là chưa đủ. **Pipeline huấn luyện (training pipeline / 학습 파이프라인)** điều phối snapshot dữ liệu, tiền xử lý, cấu hình, distributed job, checkpoint, đánh giá và đăng ký artifact.
+> **Mạch đọc:** Đặt **huấn luyện (training / 학습) chuỗi xử lý (pipeline / 파이프라인)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **đầu vào (input / 입력) phải bất biến** sang **Cấu hình**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Để huấn luyện mô hình có khả năng tái lập, chỉ gọi `model.fit()` là chưa đủ. **chuỗi xử lý (pipeline / 파이프라인) huấn luyện (training pipeline / 학습 파이프라인)** điều phối snapshot dữ liệu, tiền xử lý, cấu hình, phân tán (distributed / 분산) job, checkpoint, đánh giá và đăng ký sản phẩm tạo ra (artifact / 산출물).
 
 ```text
 dữ liệu đã version hóa
@@ -13,9 +16,9 @@ dữ liệu đã version hóa
 → đăng ký
 ```
 
-## Input phải bất biến
+## Đầu vào (input / 입력) phải bất biến
 
-Một training run nên trỏ tới dataset/version chính xác, không nên dùng một file mutable kiểu `latest.csv`. Input thay đổi làm mất khả năng tái lập.
+Một huấn luyện (training / 학습) run nên trỏ tới dataset/phiên bản (version / 버전) chính xác, không nên dùng một tệp (file / 파일) mutable kiểu `latest.csv`. đầu vào (input / 입력) thay đổi làm mất khả năng tái lập.
 
 Cần ghi lại:
 
@@ -30,7 +33,7 @@ runtime image
 
 ## Cấu hình
 
-Nên tách cấu hình khỏi code:
+Nên tách cấu hình khỏi mã (code / 코드):
 
 ```text
 learning_rate
@@ -43,15 +46,15 @@ precision
 checkpoint interval
 ```
 
-Bản thân config cũng phải được version hóa và lưu cùng training run.
+Bản thân cấu hình (config / 설정) cũng phải được phiên bản (version / 버전) hóa và lưu cùng huấn luyện (training / 학습) run.
 
 ## Kiểm tra dữ liệu trước khi dùng compute đắt tiền
 
-Trước khi cấp GPU, cần kiểm tra schema, số lượng mẫu, null, phân phối class, các leakage gate và tính toàn vẹn của file. Phát hiện lỗi sớm giúp tiết kiệm chi phí lớn.
+Trước khi cấp GPU, cần kiểm tra lược đồ (schema / 스키마), số lượng mẫu, null, phân phối lớp (class / 클래스), các leakage gate và tính toàn vẹn của tệp (file / 파일). Phát hiện lỗi sớm giúp tiết kiệm chi phí lớn.
 
 ## Shuffling và Sampling
 
-Distributed training cần chia shard và lấy mẫu đúng cách, đồng thời đủ ổn định để có thể tái lập ở mức hợp lý. Class-balanced sampler thay đổi phân phối training thực tế nên phải được ghi lại rõ ràng.
+Phân tán (distributed / 분산) huấn luyện (training / 학습) cần chia shard và lấy mẫu đúng cách, đồng thời đủ ổn định để có thể tái lập ở mức hợp lý. Class-balanced sampler thay đổi phân phối huấn luyện (training / 학습) thực tế nên phải được ghi lại rõ ràng.
 
 ## Tính xác định
 
@@ -61,7 +64,7 @@ Khả năng tái lập hoàn toàn trên GPU có thể khó do kernel không xá
 - tái lập được kết quả theo nghĩa thống kê;
 - kết quả bitwise giống hệt.
 
-Không nên hứa bitwise equality nếu toàn bộ stack không hỗ trợ.
+Không nên hứa bitwise equality nếu toàn bộ ngăn xếp (stack / 스택) không hỗ trợ.
 
 ## Checkpoint
 
@@ -76,33 +79,33 @@ random states khi cần
 mixed-precision scaler
 ```
 
-Chỉ lưu weights là không đủ để resume training giống trước, vì momentum và state của optimizer đã mất.
+Chỉ lưu weights là không đủ để resume huấn luyện (training / 학습) giống trước, vì momentum và trạng thái (state / 상태) của optimizer đã mất.
 
 ## Tần suất Checkpoint
 
-Checkpoint quá thưa làm mất nhiều công sức khi job lỗi. Checkpoint quá dày làm tăng overhead về storage và I/O.
+Checkpoint quá thưa làm mất nhiều công sức khi job lỗi. Checkpoint quá dày làm tăng overhead về lưu trữ (storage / 저장소) và I/O.
 
-Chu kỳ checkpoint nên dựa trên chi phí của job và xác suất failure.
+Chu kỳ checkpoint nên dựa trên chi phí của job và xác suất thất bại (failure / 실패).
 
-## Validation trong quá trình Training
+## Kiểm tra hợp lệ (validation / 검증) trong quá trình huấn luyện (training / 학습)
 
-Validation định kỳ giúp phát hiện overfitting hoặc divergence. Nhưng validation set lớn cũng có thể trở thành chi phí đáng kể; có thể dùng subset đại diện cho kiểm tra thường xuyên và chạy full evaluation tại các milestone.
+Kiểm tra hợp lệ (validation / 검증) định kỳ giúp phát hiện overfitting hoặc divergence. Nhưng kiểm tra hợp lệ (validation / 검증) set lớn cũng có thể trở thành chi phí đáng kể; có thể dùng subset đại diện cho kiểm tra thường xuyên và chạy full evaluation tại các milestone.
 
 ## Early Stopping
 
-Dừng huấn luyện nếu validation metric không cải thiện sau một khoảng đủ dài. Cần có `patience` để tránh phản ứng quá mức với nhiễu.
+Dừng huấn luyện nếu kiểm tra hợp lệ (validation / 검증) chỉ số (metric / 지표) không cải thiện sau một khoảng đủ dài. Cần có `patience` để tránh phản ứng quá mức với nhiễu.
 
-Với foundation model, pretraining thường được lập kế hoạch theo compute/token budget thay vì validation theo epoch kiểu truyền thống.
+Với foundation mô hình (model / 모델), pretraining thường được lập kế hoạch theo compute/đơn vị từ (token / 토큰) ngân sách (budget / 예산) thay vì kiểm tra hợp lệ (validation / 검증) theo epoch kiểu truyền thống.
 
 ## Mixed Precision
 
-FP16/BF16 giúp giảm memory và tăng throughput trên accelerator. Một số phép toán nhạy số vẫn có thể cần precision cao hơn.
+FP16/BF16 giúp giảm bộ nhớ (memory / 메모리) và tăng thông lượng (throughput / 처리량) trên accelerator. Một số phép toán nhạy số vẫn có thể cần precision cao hơn.
 
-FP16 thường dùng **loss scaling** để tránh gradient underflow; BF16 có exponent range lớn hơn nên giảm nhu cầu này.
+FP16 thường dùng **mất mát (loss / 손실) scaling** để tránh độ dốc (gradient / 기울기) underflow; BF16 có exponent phạm vi (range / 범위) lớn hơn nên giảm nhu cầu này.
 
-## Gradient Accumulation
+## Độ dốc (gradient / 기울기) Accumulation
 
-Nếu batch mong muốn không vừa memory, có thể cộng dồn gradient qua nhiều microbatch:
+Nếu batch mong muốn không vừa bộ nhớ (memory / 메모리), có thể cộng dồn độ dốc (gradient / 기울기) qua nhiều microbatch:
 
 ```text
 zero grad
@@ -111,23 +114,23 @@ for k microbatches:
 optimizer step
 ```
 
-Effective batch tăng mà không cần giữ toàn bộ activation cùng lúc, nhưng latency cho mỗi optimizer step cũng tăng.
+Effective batch tăng mà không cần giữ toàn bộ activation cùng lúc, nhưng độ trễ (latency / 지연 시간) cho mỗi optimizer step cũng tăng.
 
-## Distributed Data Parallel
+## Phân tán (distributed / 분산) dữ liệu (data / 데이터) Parallel
 
-Với **Distributed Data Parallel (DDP)**, mô hình được replicate trên nhiều device, mỗi device xử lý một shard khác nhau rồi đồng bộ gradient bằng all-reduce.
+Với **phân tán (distributed / 분산) dữ liệu (data / 데이터) Parallel (DDP)**, mô hình được replicate trên nhiều thiết bị (device / 장치), mỗi thiết bị (device / 장치) xử lý một shard khác nhau rồi đồng bộ độ dốc (gradient / 기울기) bằng all-reduce.
 
-Communication overhead tăng theo số parameter. Các phần sharding và model parallelism được giải thích sâu hơn ở layer hạ tầng.
+Communication overhead tăng theo số parameter. Các phần sharding và mô hình (model / 모델) parallelism được giải thích sâu hơn ở tầng (layer / 계층) hạ tầng.
 
-## Hyperparameter Search
+## Hyperparameter tìm kiếm (search / 검색)
 
-Grid search, random search hoặc Bayesian optimization có thể tạo rất nhiều training run. Vì vậy cần experiment tracking và budget control.
+Grid tìm kiếm (search / 검색), random tìm kiếm (search / 검색) hoặc Bayesian tối ưu hóa (optimization / 최적화) có thể tạo rất nhiều huấn luyện (training / 학습) run. Vì vậy cần experiment tracking và ngân sách (budget / 예산) điều khiển (control / 제어).
 
-Test set không được biến thành objective của hyperparameter search.
+Kiểm thử (test / 테스트) set không được biến thành mục tiêu (objective / 목표) của hyperparameter tìm kiếm (search / 검색).
 
-## Đóng gói Artifact
+## Đóng gói sản phẩm tạo ra (artifact / 산출물)
 
-Training thành công nên tạo ra bundle có thể triển khai:
+Huấn luyện (training / 학습) thành công nên tạo ra bundle có thể triển khai:
 
 ```text
 weights
@@ -139,52 +142,52 @@ metrics
 provenance
 ```
 
-## Bàn giao sang Model Registry
+## Bàn giao sang mô hình (model / 모델) Registry
 
-Chỉ những mô hình vượt qua evaluation và quality gate mới nên được đưa vào model registry để xem xét deployment. “Training đã chạy xong” không đồng nghĩa “được phép chạy production”.
+Chỉ những mô hình vượt qua evaluation và cổng chất lượng (quality gate / 품질 게이트) mới nên được đưa vào mô hình (model / 모델) registry để xem xét triển khai (deployment / 배포). “huấn luyện (training / 학습) đã chạy xong” không đồng nghĩa “được phép chạy môi trường vận hành (production / 운영 환경)”.
 
 ## Phục hồi khi lỗi
 
-Pipeline nên có khả năng resume từ checkpoint nhất quán gần nhất. Điều này đặc biệt quan trọng khi dùng spot hoặc preemptible instance.
+Chuỗi xử lý (pipeline / 파이프라인) nên có khả năng resume từ checkpoint nhất quán gần nhất. Điều này đặc biệt quan trọng khi dùng spot hoặc preemptible instance.
 
-## Bottleneck ở Data Loader
+## Bottleneck ở dữ liệu (data / 데이터) Loader
 
-GPU có thể bị idle nếu CPU decoding, augmentation hoặc storage quá chậm. Cần theo dõi accelerator utilization và thời gian chờ dữ liệu.
+GPU có thể bị idle nếu CPU decoding, augmentation hoặc lưu trữ (storage / 저장소) quá chậm. Cần theo dõi accelerator utilization và thời gian chờ dữ liệu.
 
 Các cách cải thiện gồm:
 
 - prefetch;
 - nhiều worker song song;
 - định dạng dữ liệu hiệu quả;
-- local/cache storage;
+- cục bộ (local / 로컬)/bộ nhớ đệm (cache / 캐시) lưu trữ (storage / 저장소);
 - GPU augmentation khi phù hợp.
 
-## Training Throughput
+## Huấn luyện (training / 학습) thông lượng (throughput / 처리량)
 
-Các metric phổ biến:
+Các chỉ số (metric / 지표) phổ biến:
 
 ```text
 samples / sec
 tokens / sec
 ```
 
-Tuy nhiên throughput cao nhất chưa chắc giúp hội tụ nhanh nhất nếu batch size hoặc optimizer làm giảm sample efficiency.
+Tuy nhiên thông lượng (throughput / 처리량) cao nhất chưa chắc giúp hội tụ nhanh nhất nếu batch kích thước (size / 크기) hoặc optimizer làm giảm mẫu (sample / 표본) efficiency.
 
 **Time-to-quality** thường có ý nghĩa hơn raw hardware utilization.
 
-## Metadata của Experiment
+## Siêu dữ liệu (metadata / 메타데이터) của Experiment
 
 Mỗi run nên trả lời được:
 
 - thay đổi gì?
-- data version nào?
-- code/config nào?
-- metric nào?
-- artifact nào?
-- base model hoặc parent nào?
+- dữ liệu (data / 데이터) phiên bản (version / 버전) nào?
+- mã (code / 코드)/cấu hình (config / 설정) nào?
+- chỉ số (metric / 지표) nào?
+- sản phẩm tạo ra (artifact / 산출물) nào?
+- cơ sở (base / 기반) mô hình (model / 모델) hoặc parent nào?
 - tốn bao nhiêu compute và chi phí?
 
-## Pretraining Pipeline
+## Pretraining chuỗi xử lý (pipeline / 파이프라인)
 
 Foundation-model pretraining thường bổ sung:
 
@@ -198,36 +201,38 @@ fault recovery
 đánh giá dài hạn
 ```
 
-Ở quy mô này, một shard bị lỗi hoặc một node chết không được phép làm dừng toàn bộ job.
+Ở quy mô này, một shard bị lỗi hoặc một nút (node / 노드) chết không được phép làm dừng toàn bộ job.
 
-## Fine-Tuning Pipeline
+## Fine-Tuning chuỗi xử lý (pipeline / 파이프라인)
 
-Pipeline SFT/LoRA cần ghi rõ base-model version, adapter config, prompt/template và tokenizer. Chat template không tương thích có thể gây regression lớn khi serving.
+Chuỗi xử lý (pipeline / 파이프라인) SFT/LoRA cần ghi rõ base-model phiên bản (version / 버전), adapter cấu hình (config / 설정), prompt/template và tokenizer. Chat template không tương thích có thể gây regression lớn khi serving.
 
 ## Bảo mật
 
-Training job thường truy cập dataset lớn và cloud storage nhạy cảm. Nên dùng credential có scope tối thiểu, worker cô lập và tránh đưa secret trực tiếp vào config hoặc checkpoint.
+Huấn luyện (training / 학습) job thường truy cập dataset lớn và cloud lưu trữ (storage / 저장소) nhạy cảm. Nên dùng credential có phạm vi (scope / 범위) tối thiểu, worker cô lập và tránh đưa secret trực tiếp vào cấu hình (config / 설정) hoặc checkpoint.
 
 ## Mô hình tư duy
 
-> **Training pipeline biến một thí nghiệm tối ưu hóa mang tính nghiên cứu thành quy trình sản xuất artifact mô hình có thể tái lập.**
+> **huấn luyện (training / 학습) chuỗi xử lý (pipeline / 파이프라인) biến một thí nghiệm tối ưu hóa mang tính nghiên cứu thành quy trình sản xuất sản phẩm tạo ra (artifact / 산출물) mô hình có thể tái lập.**
 
 ## Những nhầm lẫn thường gặp
 
 ### “Checkpoint chỉ là weights”
 
-Không. Để resume chính xác còn cần state của optimizer, scheduler và các state liên quan khác.
+Không. Để resume chính xác còn cần trạng thái (state / 상태) của optimizer, scheduler và các trạng thái (state / 상태) liên quan khác.
 
 ### “Cùng seed thì kết quả chắc chắn giống hệt”
 
-Không. Distributed GPU operation vẫn có thể không xác định.
+Không. phân tán (distributed / 분산) GPU thao tác (operation / 연산) vẫn có thể không xác định.
 
-### “GPU utilization cao nghĩa là pipeline tối ưu”
+### “GPU utilization cao nghĩa là chuỗi xử lý (pipeline / 파이프라인) tối ưu”
 
 Không. Time-to-quality và cost-to-quality quan trọng hơn.
 
 ## Liên kết kiến thức
 
-Training pipeline là cầu nối giữa [Data Governance](../14_data_for_ai/08_data_governance.md) và vòng đời experiment/model trong MLOps.
+Huấn luyện (training / 학습) chuỗi xử lý (pipeline / 파이프라인) là cầu nối giữa [Data Governance](../14_data_for_ai/08_data_governance.md) và vòng đời experiment/mô hình (model / 모델) trong MLOps.
 
 Xem tiếp: [Inference Pipeline](./02_inference_pipeline.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

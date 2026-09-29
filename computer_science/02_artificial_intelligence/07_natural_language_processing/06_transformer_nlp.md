@@ -1,40 +1,43 @@
-# Transformer NLP: Encoder, Decoder và Task Adaptation
+# Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation
 
-Transformer architecture là general mechanism; NLP biến mechanism đó thành các model families khác nhau bằng **masking, pretraining objective, pooling/head và fine-tuning strategy**. BERT, GPT và T5 không chỉ khác tên — chúng encode information flow khác nhau.
+> **Mạch đọc:** Đặt **Transformer NLP: Encoder, Decoder và tác vụ (task / 작업) Adaptation** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Encoder-Only NLP** sang **Decoder-Only NLP**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Transformer kiến trúc (architecture / 아키텍처) là general cơ chế (mechanism / 메커니즘); NLP biến cơ chế (mechanism / 메커니즘) đó thành các mô hình (model / 모델) families khác nhau bằng **masking, pretraining mục tiêu (objective / 목표), pooling/head và fine-tuning chiến lược (strategy / 전략)**. BERT, GPT và T5 không chỉ khác tên — chúng encode thông tin (information / 정보) luồng (flow / 흐름) khác nhau.
 
 ## Encoder-Only NLP
 
-Encoder self-attention thường bidirectional. Mỗi token có thể attend left/right context.
+Encoder self-attention thường bidirectional. Mỗi đơn vị từ (token / 토큰) có thể attend left/right ngữ cảnh (context / 맥락).
 
-BERT-style pretraining dùng Masked Language Modeling (MLM): chọn một số tokens, corrupt/mask, predict originals.
+BERT-style pretraining dùng Masked ngôn ngữ (language / 언어) Modeling (MLM): chọn một số tokens, corrupt/mask, predict originals.
 
-Representation tốt cho:
+Biểu diễn (representation / 표현) tốt cho:
 
-- text classification;
-- token classification/NER;
+- văn bản (text / 텍스트) classification;
+- đơn vị từ (token / 토큰) classification/NER;
 - extractive QA;
 - sentence-pair scoring;
-- embeddings sau task-specific training.
+- embeddings sau task-specific huấn luyện (training / 학습).
 
-Encoder-only không naturally generate long autoregressive text, vì training/information flow không causal.
+Encoder-only không naturally generate long autoregressive văn bản (text / 텍스트), vì huấn luyện (training / 학습)/thông tin (information / 정보) luồng (flow / 흐름) không nhân quả (causal / 인과적).
 
 ## Decoder-Only NLP
 
-Causal mask:
+Nhân quả (causal / 인과적) mask:
 
 \[
 P(x_t\mid x_{<t})
 \]
 
-Một architecture có thể handle many tasks by expressing input/task as prefix and generating output continuation.
+Một kiến trúc (architecture / 아키텍처) có thể handle many tasks by expressing đầu vào (input / 입력)/tác vụ (task / 작업) as prefix and generating đầu ra (output / 출력) continuation.
 
 This flexibility scales naturally into LLM/instruction following.
 
-For pure classification, decoder model may be compute-inefficient compared with smaller encoder but unified deployment can justify it.
+For pure classification, decoder mô hình (model / 모델) may be compute-inefficient compared with smaller encoder but unified triển khai (deployment / 배포) can justify it.
 
 ## Encoder–Decoder NLP
 
-Encoder reads full source bidirectionally; decoder generates target causally with cross-attention.
+Encoder reads full nguồn (source / 소스) bidirectionally; decoder generates mục tiêu (target / 대상) causally with cross-attention.
 
 Natural for:
 
@@ -45,23 +48,23 @@ Natural for:
 
 T5/BART families show strong text-to-text paradigm.
 
-## Pretraining Objective Shapes Capability
+## Pretraining mục tiêu (objective / 목표) Shapes năng lực (capability / 역량)
 
-Same architecture under different objectives learns different behavior.
+Same kiến trúc (architecture / 아키텍처) under different objectives learns different hành vi (behavior / 동작).
 
-Causal LM rewards continuation.
+Nhân quả (causal / 인과적) LM rewards continuation.
 
 Masked LM rewards reconstruct hidden tokens using both sides.
 
-Denoising seq2seq rewards reconstruct entire text from corrupted input.
+Denoising seq2seq rewards reconstruct entire văn bản (text / 텍스트) from corrupted đầu vào (input / 입력).
 
-Contrastive objectives reward similarity geometry.
+Contrastive objectives reward similarity hình học (geometry / 기하학).
 
-Do not infer capability solely from architecture.
+Do not infer năng lực (capability / 역량) solely from kiến trúc (architecture / 아키텍처).
 
 ## Fine-Tuning for Classification
 
-Encoder output can pool `[CLS]` or mean hidden states:
+Encoder đầu ra (output / 출력) can pool `[CLS]` or mean hidden states:
 
 \[
 h_{pool}=Pool(H)
@@ -77,33 +80,33 @@ Fine-tuning updates all/partial encoder + head.
 
 Small dataset risks overfit/catastrophic forgetting; lower LR, regularization, adapters can help.
 
-## Token Classification
+## Đơn vị từ (token / 토큰) Classification
 
-NER/POS tagging uses per-token hidden state:
+NER/POS tagging uses per-token hidden trạng thái (state / 상태):
 
 \[
 p(y_i\mid x)=softmax(Wh_i+b)
 \]
 
-Subword complication: one word may split multiple pieces. Labeling strategy must decide first-piece/all-piece aggregation.
+Subword complication: one word may split multiple pieces. Labeling chiến lược (strategy / 전략) must decide first-piece/all-piece aggregation.
 
-Metrics should reconstruct word/entity spans correctly.
+Metrics should reconstruct word/thực thể (entity / 엔터티) spans correctly.
 
 ## Extractive Question Answering
 
-Given `[question ; context]`, encoder outputs token states. Two heads predict start/end positions:
+Given `[question ; context]`, encoder outputs đơn vị từ (token / 토큰) states. Two heads predict start/end positions:
 
 \[
 P(start=i),\qquad P(end=j)
 \]
 
-Answer constrained to span in context, reducing free-form hallucination but cannot answer if answer absent unless no-answer modeled.
+Answer constrained to span in ngữ cảnh (context / 맥락), reducing free-form hallucination but cannot answer if answer absent unless no-answer modeled.
 
-## Natural Language Inference
+## Natural ngôn ngữ (language / 언어) suy luận (inference / 추론)
 
-Input premise+hypothesis, classify entailment/contradiction/neutral.
+Đầu vào (input / 입력) premise+hypothesis, classify entailment/contradiction/neutral.
 
-NLI datasets useful for semantic reasoning but models may exploit annotation artifacts. High benchmark score does not prove robust logical inference.
+NLI datasets useful for ngữ nghĩa (semantic / 의미적) lập luận (reasoning / 추론) but các mô hình (models / 모델들) may exploit annotation artifacts. High benchmark score does not prove robust logical suy luận (inference / 추론).
 
 ## Sentence Pair Cross-Encoding
 
@@ -113,13 +116,13 @@ For relevance/paraphrase:
 [CLS] query [SEP] document
 ```
 
-joint self-attention lets every token pair interact, giving accurate scoring but O(number of candidate pairs) inference cost.
+joint self-attention lets every đơn vị từ (token / 토큰) pair interact, giving accurate scoring but O(number of candidate pairs) suy luận (inference / 추론) chi phí (cost / 비용).
 
-Bi-encoder vs cross-encoder trade-off becomes central retrieval architecture.
+Bi-encoder vs cross-encoder sự đánh đổi (trade-off / 트레이드오프) becomes central retrieval kiến trúc (architecture / 아키텍처).
 
 ## Prompt-Based Fine-Tuning
 
-Instead of classification head, reformulate task as language prediction:
+Instead of classification head, reformulate tác vụ (task / 작업) as ngôn ngữ (language / 언어) prediction:
 
 ```text
 Review: ... Sentiment: [MASK]
@@ -127,22 +130,22 @@ Review: ... Sentiment: [MASK]
 
 or generation.
 
-Prompting aligns downstream task with pretraining objective, useful few-shot regimes. Verbalizer choice can bias results.
+Prompting aligns downstream tác vụ (task / 작업) with pretraining mục tiêu (objective / 목표), useful few-shot regimes. Verbalizer choice can độ lệch (bias / 편향) results.
 
 ## Parameter-Efficient Fine-Tuning
 
-Rather than update all weights:
+Rather than cập nhật (update / 업데이트) all weights:
 
 - adapters insert small trainable modules;
 - LoRA learns low-rank updates;
 - prefix/prompt tuning learns virtual token-like vectors;
-- bias-only methods update subset.
+- bias-only methods cập nhật (update / 업데이트) subset.
 
-Benefits: memory/storage, multi-tenant specialization and reduced forgetting. Trade-off can be lower ceiling/task-specific quirks.
+Benefits: bộ nhớ (memory / 메모리)/lưu trữ (storage / 저장소), multi-tenant specialization and reduced forgetting. sự đánh đổi (trade-off / 트레이드오프) can be lower ceiling/task-specific quirks.
 
 ## Long Documents
 
-Vanilla Transformer context finite/quadratic. Strategies:
+Vanilla Transformer ngữ cảnh (context / 맥락) finite/quadratic. Strategies:
 
 - truncate;
 - sliding windows;
@@ -150,35 +153,35 @@ Vanilla Transformer context finite/quadratic. Strategies:
 - sparse/long attention;
 - retrieval before encoding.
 
-Task determines whether local chunking loses discourse relation.
+Tác vụ (task / 작업) determines whether cục bộ (local / 로컬) chunking loses discourse quan hệ (relation / 관계).
 
-## Domain-Specific NLP Models
+## Domain-Specific NLP các mô hình (models / 모델들)
 
-Biomedical/legal/financial corpora contain vocabulary/style/entities not well represented general models. Continued pretraining on domain corpus then task fine-tuning can improve.
+Biomedical/legal/financial corpora contain vocabulary/style/entities not well represented general các mô hình (models / 모델들). Continued pretraining on lĩnh vực (domain / 도메인) corpus then tác vụ (task / 작업) fine-tuning can improve.
 
-But domain pretraining needs quality/copyright/privacy controls and can shift general capability.
+But lĩnh vực (domain / 도메인) pretraining needs chất lượng (quality / 품질)/copyright/privacy controls and can shift general năng lực (capability / 역량).
 
 ## Multilingual Transformer
 
-Shared tokenizer + parameters across languages enables transfer. High-resource languages may dominate capacity; scripts/token efficiency and corpus balance matter.
+Dùng chung (shared / 공유) tokenizer + parameters across languages enables transfer. High-resource languages may dominate sức chứa (capacity / 용량); scripts/đơn vị từ (token / 토큰) efficiency and corpus balance matter.
 
-Cross-lingual transfer works because shared representations align statistical structures, but performance uneven. Evaluate each language, especially Korean/Vietnamese target use.
+Cross-lingual transfer works because dùng chung (shared / 공유) representations align statistical structures, but hiệu năng (performance / 성능) uneven. Evaluate each ngôn ngữ (language / 언어), especially Korean/Vietnamese mục tiêu (target / 대상) use.
 
 ## Distillation
 
-Teacher Transformer transfers behavior to smaller student using soft targets/hidden-state losses.
+Teacher Transformer transfers hành vi (behavior / 동작) to smaller student using soft targets/hidden-state losses.
 
-Goal reduce latency/memory while retain performance. Student architecture can be fewer layers/smaller hidden dimension.
+Goal reduce độ trễ (latency / 지연 시간)/bộ nhớ (memory / 메모리) while retain hiệu năng (performance / 성능). Student kiến trúc (architecture / 아키텍처) can be fewer layers/smaller hidden dimension.
 
-Distillation will reappear in deployment/inference layer.
+Distillation will reappear in triển khai (deployment / 배포)/suy luận (inference / 추론) tầng (layer / 계층).
 
 ## Quantization-aware NLP Preview
 
-Inference can quantize weights/activations. Some NLP models tolerate INT8/4-bit well; sensitive layers/outliers may require mixed precision/calibration.
+Suy luận (inference / 추론) can quantize weights/activations. Some NLP các mô hình (models / 모델들) tolerate INT8/4-bit well; sensitive layers/outliers may require mixed precision/calibration.
 
-Model compression is system constraint, not separate from NLP deployment.
+Mô hình (model / 모델) compression is hệ thống (system / 시스템) ràng buộc (constraint / 제약조건), not separate from NLP triển khai (deployment / 배포).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -191,24 +194,24 @@ Transformer mechanism
 = NLP model behavior
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “BERT và GPT chỉ khác training data”
+### “BERT và GPT chỉ khác dữ liệu huấn luyện (training data / 학습 데이터)”
 
-Architecture direction/mask and objective differ fundamentally.
+Kiến trúc (architecture / 아키텍처) direction/mask and mục tiêu (objective / 목표) differ fundamentally.
 
-### “Encoder model không generate nên kém hơn”
+### “Encoder mô hình (model / 모델) không generate nên kém hơn”
 
 For classification/retrieval/reranking, encoder can be much more efficient and accurate per compute.
 
 ### “Fine-tuning all weights always best”
 
-Small data/multi-task/serving constraints may favor PEFT.
+Small dữ liệu (data / 데이터)/multi-task/serving các ràng buộc (constraints / 제약조건들) may favor PEFT.
 
-### “Multilingual model means language-independent representation hoàn hảo”
+### “Multilingual mô hình (model / 모델) means language-independent biểu diễn (representation / 표현) hoàn hảo”
 
 Cross-lingual alignment is imperfect and data-dependent.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Transformer architecture](../06_deep_learning_architectures/05_transformer.md), [Seq2Seq NLP](./05_sequence_to_sequence_nlp.md), and next [Information Extraction](./07_information_extraction.md).

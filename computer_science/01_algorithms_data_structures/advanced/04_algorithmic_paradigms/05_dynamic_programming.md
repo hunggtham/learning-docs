@@ -1,17 +1,20 @@
 # quy hoạch động (dynamic programming)
+
+> **Mạch đọc:** Đọc **quy hoạch động (dynamic programming)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ recursion tới DP** sang **Optimal substructure và overlapping subproblems**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Quy hoạch động (Dynamic Programming, DP / 동적 계획법)**
 
-quy hoạch động không phải một bộ công thức `dp[i][j]`. Bản chất của DP là **trạng thái (state) compression + reuse**: nếu nhiều histories khác nhau dẫn đến cùng một trạng thái mà từ trạng thái đó tương lai hành vi giống nhau, ta chỉ cần giải trạng thái một lần rồi tái sử dụng kết quả.
+quy hoạch động không phải một bộ công thức `dp[i][j]`. Bản chất của DP là **trạng thái (state / 상태) compression + reuse**: nếu nhiều histories khác nhau dẫn đến cùng một trạng thái mà từ trạng thái đó tương lai hành vi giống nhau, ta chỉ cần giải trạng thái một lần rồi tái sử dụng kết quả.
 
 Một cách nói chặt hơn:
 
-> trạng thái DP đại diện cho một **equivalence class của histories**. Những quá khứ khác nhau được gom thành cùng trạng thái vì mọi quyết định tương lai chỉ cần một dữ liệu tóm lược nhỏ của quá khứ.
+> trạng thái DP đại diện cho một **equivalence lớp (class / 클래스) của histories**. Những quá khứ khác nhau được gom thành cùng trạng thái vì mọi quyết định tương lai chỉ cần một dữ liệu tóm lược nhỏ của quá khứ.
 
 Đây là mental mô hình quan trọng hơn việc học thuộc công thức truy hồi.
 
 ## Từ recursion tới DP
 
-Hãy bắt đầu bằng recursive problem definition tự nhiên.
+Hãy bắt đầu bằng recursive bài toán (problem / 문제) definition tự nhiên.
 
 Fibonacci naive:
 
@@ -39,7 +42,7 @@ state cần lưu information gì để future được xác định?
 
 Hai concepts thường xuất hiện cùng nhau nhưng không giống nhau.
 
-**Optimal substructure**: lời giải tối ưu của problem lớn có thể xây từ optimal các lời giải của subproblems phù hợp.
+**Optimal substructure**: lời giải tối ưu của bài toán (problem / 문제) lớn có thể xây từ optimal các lời giải của subproblems phù hợp.
 
 **Overlapping subproblems**: cùng subproblem/trạng thái xuất hiện lặp lại từ nhiều histories.
 
@@ -47,7 +50,7 @@ DP đặc biệt hữu ích khi cả hai cùng có mặt.
 
 Nếu subproblems độc lập không overlap nhiều, divide-and-conquer có thể phù hợp hơn.
 
-## trạng thái design: tương lai cần biết gì?
+## trạng thái thiết kế (design / 설계): tương lai cần biết gì?
 
 0/1 Knapsack có trạng thái phổ biến:
 
@@ -70,7 +73,7 @@ Hai histories khác nhau nhưng có cùng `(i,w)` là future-equivalent.
 
 trạng thái quá nhỏ → merge những histories thực ra có tương lai khác nhau → answer sai.
 
-trạng thái quá lớn → đúng nhưng không gian trạng thái explosion, bộ nhớ/time lãng phí.
+trạng thái quá lớn → đúng nhưng không gian trạng thái explosion, bộ nhớ/thời gian (time / 시간) lãng phí.
 
 Ví dụ grid có các khóa/doors:
 
@@ -82,11 +85,11 @@ có thể quá nhỏ; cần `(row,col,keysMask)`.
 
 Ngược lại lưu toàn bộ đường đi tới cell là quá lớn nếu tương lai chỉ cần khóa set.
 
-trạng thái design của DP và visited-trạng thái design của đồ thị search là cùng một problem.
+trạng thái thiết kế (design / 설계) của DP và visited-trạng thái thiết kế (design / 설계) của đồ thị tìm kiếm (search / 검색) là cùng một bài toán (problem / 문제).
 
-## Transition từ “hành động cuối”
+## Chuyển tiếp (transition / 전이) từ “hành động cuối”
 
-Một technique rất mạnh là phân loại lời giải tối ưu theo **last action**.
+Một technique rất mạnh là phân loại lời giải tối ưu theo **last hành động (action / 동작)**.
 
 Edit khoảng cách:
 
@@ -138,11 +141,11 @@ không cần recursion stack
 
 Không có phương án nào luôn tốt hơn.
 
-Sparse có thể tới không gian trạng thái có thể hợp top-down. Dense regular table thường hợp bottom-up và tính cục bộ bộ nhớ đệm tốt hơn.
+Sparse có thể tới không gian trạng thái có thể hợp top-down. Dense regular bảng (table / 테이블) thường hợp bottom-up và tính cục bộ bộ nhớ đệm tốt hơn.
 
 ## DP như DAG
 
-Xem mỗi trạng thái là đỉnh, mỗi dependency là directed cạnh.
+Xem mỗi trạng thái là đỉnh, mỗi phụ thuộc (dependency / 의존성) là directed cạnh.
 
 Nếu trạng thái `A` phụ thuộc trạng thái `B`, có cạnh:
 
@@ -150,9 +153,9 @@ Nếu trạng thái `A` phụ thuộc trạng thái `B`, có cạnh:
 B -> A
 ```
 
-DP computation đồ thị phải acyclic theo dimension/order phù hợp. Bottom-up chỉ đơn giản là evaluate các trạng thái theo một thứ tự tô-pô.
+DP computation đồ thị phải acyclic theo dimension/thứ tự (order / 순서) phù hợp. Bottom-up chỉ đơn giản là evaluate các trạng thái theo một thứ tự tô-pô.
 
-Mental connection:
+Mental liên kết (connection / 연결):
 
 ```text
 DP table
@@ -162,9 +165,9 @@ DP table
 
 Điều này giúp chuyển đổi giữa đồ thị đường đi ngắn nhất (shortest path) và DP.
 
-## Fibonacci space optimization
+## Fibonacci không gian (space / 공간) tối ưu hóa (optimization / 최적화)
 
-Nếu transition chỉ cần hai các trạng thái trước:
+Nếu chuyển tiếp (transition / 전이) chỉ cần hai các trạng thái trước:
 
 ```text
 F(i) depends on F(i-1), F(i-2)
@@ -172,9 +175,9 @@ F(i) depends on F(i-1), F(i-2)
 
 không cần mảng `O(n)`; chỉ giữ rolling variables `O(1)`.
 
-Space optimization xuất phát từ dependency width, không phải trick riêng.
+Không gian (space / 공간) tối ưu hóa (optimization / 최적화) xuất phát từ phụ thuộc (dependency / 의존성) width, không phải trick riêng.
 
-## 0/1 Knapsack và loop direction
+## 0/1 Knapsack và vòng lặp (loop / 루프) direction
 
 2D công thức truy hồi:
 
@@ -192,13 +195,13 @@ for (Item item : items) {
 }
 ```
 
-Capacity phải iterate giảm. Nếu đi tăng, `dp[w-item.weight]` có thể đã dùng chính item hiện tại và ta vô tình đổi bài thành unbounded knapsack.
+Sức chứa (capacity / 용량) phải iterate giảm. Nếu đi tăng, `dp[w-item.weight]` có thể đã dùng chính item hiện tại và ta vô tình đổi bài thành unbounded knapsack.
 
-Loop direction là part của mathematical ngữ nghĩa (semantics).
+Vòng lặp (loop / 루프) direction là part của mathematical ngữ nghĩa (semantics / 의미론).
 
 ## Unbounded knapsack
 
-Nếu mỗi item được dùng unlimited times, capacity loop tăng là đúng:
+Nếu mỗi item được dùng unlimited times, sức chứa (capacity / 용량) vòng lặp (loop / 루프) tăng là đúng:
 
 ```text
 for item:
@@ -206,11 +209,11 @@ for item:
         dp[w] = max(dp[w], dp[w-weight] + value)
 ```
 
-Hai problems khác nhau chỉ bởi reuse chính sách, nhưng cách triển khai order phản ánh difference đó.
+Hai problems khác nhau chỉ bởi reuse chính sách, nhưng cách triển khai thứ tự (order / 순서) phản ánh difference đó.
 
-## Coin Change và ngữ nghĩa của “cách”
+## Coin thay đổi (change / 변경) và ngữ nghĩa của “cách”
 
-Có nhiều bài coin change:
+Có nhiều bài coin thay đổi (change / 변경):
 
 ```text
 có tạo được amount không?
@@ -231,7 +234,7 @@ for coin:
 
 Nếu amount outer, coin inner, ta có thể đếm ordered sequences.
 
-Loop order chính là cách ta định nghĩa combinatorial đối tượng được đếm.
+Vòng lặp (loop / 루프) thứ tự (order / 순서) chính là cách ta định nghĩa combinatorial đối tượng được đếm.
 
 ## Longest Phổ biến Subsequence
 
@@ -264,7 +267,7 @@ nếu chars equal -> take char, move diagonal
 else move về neighbor có dp lớn hơn
 ```
 
-Nếu đã compress bộ nhớ xuống hai rows, reconstruction khó hơn vì lịch sử bị bỏ. Đây là sự đánh đổi (trade-off) giữa bộ nhớ và thông tin retention.
+Nếu đã compress bộ nhớ xuống hai rows, reconstruction khó hơn vì lịch sử bị bỏ. Đây là sự đánh đổi (trade-off / 트레이드오프) giữa bộ nhớ và thông tin retention.
 
 ## Longest Increasing Subsequence
 
@@ -274,7 +277,7 @@ Kinh điển DP:
 dp[i]=1+\max(dp[j]) \quad j<i, a[j]<a[i]
 \]
 
-Time `O(n^2)`.
+Thời gian (time / 시간) `O(n^2)`.
 
 thuật toán `O(n log n)` giữ:
 
@@ -284,17 +287,17 @@ tails[len] = smallest possible tail của increasing subsequence length len+1
 
 Mỗi giá trị binary-search vị trí trong `tails`.
 
-`tails` không nhất thiết là actual LIS ở mọi thời điểm; nó là **compressed frontier** của possibilities. Đây là một ví dụ sâu về trạng thái compression vượt khỏi table DP truyền thống.
+`tails` không nhất thiết là actual LIS ở mọi thời điểm; nó là **compressed frontier** của possibilities. Đây là một ví dụ sâu về trạng thái compression vượt khỏi bảng (table / 테이블) DP truyền thống.
 
 ## Grid DP
 
-Grid đường đi problems thường có natural dependency:
+Grid đường đi problems thường có natural phụ thuộc (dependency / 의존성):
 
 ```text
 dp[r][c] depends on top/left/diagonal
 ```
 
-Nếu movement chỉ đi xuống/phải, đồ thị trạng thái là DAG theo row+column order.
+Nếu movement chỉ đi xuống/phải, đồ thị trạng thái là DAG theo row+column thứ tự (order / 순서).
 
 Nếu movement cho phép chu trình, naive grid DP không còn trực tiếp; có thể cần đồ thị đường đi ngắn nhất hoặc detect another monotonic dimension.
 
@@ -327,7 +330,7 @@ for len = 1..n:
 
 Vì smaller intervals phải có trước larger intervals.
 
-## Matrix Chain Multiplication
+## Ma trận (matrix / 행렬) chuỗi (chain / 사슬) Multiplication
 
 Dimensions `p0,p1,...,pn`. trạng thái:
 
@@ -341,7 +344,7 @@ Try last split `k`:
 dp[i][j] = \min_k dp[i][k] + dp[k+1][j] + p_{i-1}p_kp_j
 \]
 
-Đây là classic “choose partition point” interval DP.
+Đây là classic “choose partition điểm (point / 지점)” interval DP.
 
 ## cây DP
 
@@ -358,7 +361,7 @@ Nếu chọn `u`, các nút con không được chọn.
 
 Nếu không chọn `u`, mỗi nút con chọn tốt nhất giữa two các trạng thái.
 
-cây DP mạnh vì cây itself cung cấp acyclic dependency structure.
+cây DP mạnh vì cây itself cung cấp acyclic phụ thuộc (dependency / 의존성) cấu trúc (structure / 구조).
 
 ## Rerooting DP
 
@@ -385,7 +388,7 @@ Travelling Salesman DP:
 dp[mask][u] = minimum cost visit set mask và kết thúc tại u
 ```
 
-Transition add new đỉnh.
+Chuyển tiếp (transition / 전이) add new đỉnh.
 
 Số trạng thái có thể là `O(2^n n)`. Bitmask không làm biến mất độ phức tạp hàm mũ; nó tổ chức không gian tìm kiếm hàm mũ để tái sử dụng các trạng thái chồng lặp.
 
@@ -397,7 +400,7 @@ Nếu cần tổng hợp trên mọi mặt nạ con hoặc mặt nạ bao, Sum O
 
 ## Digit DP
 
-Digit DP đếm numbers thỏa ràng buộc trong range bằng trạng thái như:
+Digit DP đếm numbers thỏa ràng buộc trong phạm vi (range / 범위) bằng trạng thái như:
 
 ```text
 position
@@ -426,11 +429,11 @@ trạng thái:
 dp[v] = best value tới v
 ```
 
-Relax outgoing các cạnh một lần theo topo order.
+Relax outgoing các cạnh một lần theo topo thứ tự (order / 순서).
 
 Negative cạnh vẫn okay vì không có chu trình.
 
-Đây là bridge trực tiếp giữa các thuật toán đồ thị và DP.
+Đây là cầu nối (bridge / 브리지) trực tiếp giữa các thuật toán đồ thị và DP.
 
 ## đường đi ngắn nhất và DP khác nhau ở đâu?
 
@@ -440,25 +443,25 @@ Bellman-Ford có thể được nhìn như lặp lại relaxation DP theo số c
 dp[k][v] = shortest path tới v dùng <= k edges
 ```
 
-Nhưng các thuật toán đồ thị thường khai thác structure/frontier để tránh explicit dimension.
+Nhưng các thuật toán đồ thị thường khai thác cấu trúc (structure / 구조)/frontier để tránh tường minh (explicit / 명시적) dimension.
 
-Nhiều distinctions giữa “DP” và “thuật toán đồ thị” là cách triển khai/structure emphasis hơn là mathematical wall.
+Nhiều distinctions giữa “DP” và “thuật toán đồ thị” là cách triển khai/cấu trúc (structure / 구조) emphasis hơn là mathematical wall.
 
-## DP với monotone queue
+## DP với monotone hàng đợi (queue / 큐)
 
-Một transition dạng:
+Một chuyển tiếp (transition / 전이) dạng:
 
 \[
-dp[i]=\min_{j \in window(i)}(dp[j]+cost)
+dp[i]=\min_{j \in cửa sổ (window / 윈도우)(i)}(dp[j]+cost)
 \]
 
-có thể được optimize bằng deque nếu ứng viên giá trị có monotonic structure.
+có thể được optimize bằng deque nếu ứng viên giá trị có monotonic cấu trúc (structure / 구조).
 
-DP optimization thường là tìm cách tăng tốc transition, không chỉ giảm number các trạng thái.
+DP tối ưu hóa (optimization / 최적화) thường là tìm cách tăng tốc chuyển tiếp (transition / 전이), không chỉ giảm number các trạng thái.
 
-## Prefix minima/maxima optimization
+## Prefix minima/maxima tối ưu hóa (optimization / 최적화)
 
-Nếu transition cần:
+Nếu chuyển tiếp (transition / 전이) cần:
 
 ```text
 min(dp[0..i-1])
@@ -466,9 +469,9 @@ min(dp[0..i-1])
 
 đừng quét lại mỗi trạng thái; giữ prefix minimum.
 
-Đây là reuse ở tầng transition computation.
+Đây là reuse ở tầng chuyển tiếp (transition / 전이) computation.
 
-## Divide-and-conquer optimization
+## Divide-and-conquer tối ưu hóa (optimization / 최적화)
 
 Một số DP dạng partition:
 
@@ -476,21 +479,21 @@ Một số DP dạng partition:
 dp[k][i] = \min_{j<i}(dp[k-1][j]+C(j,i))
 \]
 
-có monotonic optimal split các tính chất cho phép divide-and-conquer optimization.
+có monotonic optimal split các tính chất cho phép divide-and-conquer tối ưu hóa (optimization / 최적화).
 
-Điều kiện chứng minh không trivial; không áp dụng chỉ vì công thức truy hồi “trông giống”. Nhưng nó cho thấy advanced DP thường dựa vào structure của argmin/transition matrix.
+Điều kiện chứng minh không trivial; không áp dụng chỉ vì công thức truy hồi “trông giống”. Nhưng nó cho thấy advanced DP thường dựa vào cấu trúc (structure / 구조) của argmin/chuyển tiếp (transition / 전이) ma trận (matrix / 행렬).
 
-## Knuth optimization
+## Knuth tối ưu hóa (optimization / 최적화)
 
 Một số interval DP thỏa quadrangle inequality/monotonicity có thể giảm cubic xuống quadratic.
 
 Không cần học thuộc mọi theorem ngay, nhưng mental mô hình là:
 
-> Sau khi thiết kế đúng trạng thái/transition, bước tiếp theo là khai thác additional structure để giảm transition search.
+> Sau khi thiết kế đúng trạng thái/chuyển tiếp (transition / 전이), bước tiếp theo là khai thác additional cấu trúc (structure / 구조) để giảm chuyển tiếp (transition / 전이) tìm kiếm (search / 검색).
 
 ## Convex Hull Trick
 
-DP transition dạng tuyến tính:
+DP chuyển tiếp (transition / 전이) dạng tuyến tính:
 
 \[
 dp[i] = \min_j(m_j x_i + b_j)
@@ -498,9 +501,9 @@ dp[i] = \min_j(m_j x_i + b_j)
 
 có thể được tối ưu bằng cấu trúc dữ liệu giữ lines và truy vấn min/max.
 
-Li Chao Tree hoặc Convex Hull Trick biến bước “duyệt mọi j” thành một truy vấn hình học.
+Li Chao cây (tree / 트리) hoặc Convex Hull Trick biến bước “duyệt mọi j” thành một truy vấn hình học.
 
-Đây là nơi DP kết nối với computational geometry/các cấu trúc dữ liệu.
+Đây là nơi DP kết nối với computational hình học (geometry / 기하학)/các cấu trúc dữ liệu.
 
 ## xác suất DP
 
@@ -512,15 +515,15 @@ kỳ vọng steps thường dùng law of total expectation:
 E[s] = 1 + \sum_t P(s\to t)E[t]
 \]
 
-Nhưng nếu transitions chu trình, equations có thể không có đơn giản topological DP; đôi khi cần solve linear các hệ thống hoặc transform các trạng thái.
+Nhưng nếu transitions chu trình, equations có thể không có đơn giản topological DP; đôi khi cần solve tuyến tính (linear / 선형) các hệ thống hoặc transform các trạng thái.
 
 ## DP modulo arithmetic
 
 Combinatorial count có thể rất lớn. Problems thường yêu cầu mod `M`.
 
-Cần chú ý tràn số trước modulo trong C/Java, và Number an toàn range trong JavaScript.
+Cần chú ý tràn số trước modulo trong C/Java, và Number an toàn phạm vi (range / 범위) trong JavaScript.
 
-Modulo changes numeric cách biểu diễn (representation), không thay combinatorial công thức truy hồi.
+Modulo changes numeric cách biểu diễn (representation / 표현), không thay combinatorial công thức truy hồi.
 
 ## Infinity giá trị canh gác (sentinel) và tràn số
 
@@ -540,15 +543,15 @@ if (dp[prev] < INF) {
 }
 ```
 
-## Memo khóa design
+## Memo khóa thiết kế (design / 설계)
 
-Top-down DP với compound trạng thái cần canonical khóa.
+Top-down DP với compound trạng thái cần chuẩn gốc (canonical / 정본) khóa.
 
-Java có thể dùng các mảng indexed dimensions hoặc bất biến sau khi tạo record.
+Java có thể dùng các mảng indexed dimensions hoặc bất biến sau khi tạo bản ghi (record / 레코드).
 
-JavaScript `Map` đối tượng các khóa dùng identity, nên `{i:1,j:2}` mới mỗi lần không match trước đó đối tượng. Cần encode khóa string/int hoặc nested maps.
+JavaScript `Map` đối tượng các khóa dùng định danh (identity / 식별자), nên `{i:1,j:2}` mới mỗi lần không match trước đó đối tượng. Cần encode khóa string/int hoặc nested maps.
 
-C phải quản bảng băm (Hash Table)/mảng quyền sở hữu (ownership) rõ.
+C phải quản bảng băm (hash table / 해시 테이블)/mảng quyền sở hữu (ownership / 소유권) rõ.
 
 ## Sparse trạng thái DP
 
@@ -562,13 +565,13 @@ state machine với many impossible combinations
 search + memo hybrid
 ```
 
-sự đánh đổi: hash overhead vs skipping unreachable các trạng thái.
+sự đánh đổi: băm (hash / 해시) overhead vs skipping unreachable các trạng thái.
 
 ## DP và bộ nhớ tính cục bộ (locality)
 
 2D `dp[i][j]` theo thứ tự hàng traversal thường thân thiện với bộ nhớ đệm nếu vòng lặp bên trong đi contiguous.
 
-Changing loop order có thể ảnh hưởng môi trường chạy (runtime) rất mạnh dù Big-O giống nhau.
+Changing vòng lặp (loop / 루프) thứ tự (order / 순서) có thể ảnh hưởng môi trường chạy (runtime) rất mạnh dù Big-O giống nhau.
 
 Rolling mảng vừa giảm bộ nhớ vừa cải thiện bộ nhớ đệm, nhưng có thể làm reconstruction khó hơn.
 
@@ -586,7 +589,7 @@ Store choices tăng bộ nhớ nhưng đơn giản.
 
 Recomputation tiết kiệm bộ nhớ nhưng tăng CPU.
 
-Design phụ thuộc đầu ra yêu cầu.
+Thiết kế (design / 설계) phụ thuộc đầu ra yêu cầu.
 
 ## Counting vs optimizing
 
@@ -610,9 +613,9 @@ Nếu trạng thái dimensions:
 n * capacity * mask * last * flag
 ```
 
-product có thể quá lớn.
+Sản phẩm (product / 제품) có thể quá lớn.
 
-Trước khi code, estimate:
+Trước khi mã (code / 코드), estimate:
 
 ```text
 #states * transition cost * bytes/state
@@ -620,7 +623,7 @@ Trước khi code, estimate:
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 ```
 
-DP feasibility là engineering calculation, không chỉ asymptotic label.
+DP feasibility là kỹ thuật (engineering / 엔지니어링) calculation, không chỉ asymptotic label.
 
 ## Meet-in-the-middle vs DP
 
@@ -630,13 +633,13 @@ Nếu numeric sum dimension nhỏ, giả đa thức DP có thể tốt hơn.
 
 thuật toán choice phụ thuộc both `n` và giá trị ranges.
 
-## giả đa thức complexity
+## giả đa thức độ phức tạp (complexity / 복잡도)
 
 Knapsack `O(nW)` là đa thức theo giá trị số `W`, nhưng không phải đa thức theo độ dài biểu diễn đầu vào `log W`.
 
 Đây gọi là giả đa thức.
 
-Hiểu distinction này quan trọng khi nối DSA với computational complexity.
+Hiểu distinction này quan trọng khi nối DSA với computational độ phức tạp (complexity / 복잡도).
 
 ## DP vs Greedy
 
@@ -654,7 +657,7 @@ Trong một số bài quy hoạch động hoặc tìm kiếm, trạng thái A l�
 
 Ta có thể discard dominated các trạng thái.
 
-Ví dụ resource-constrained đường đi giữ Pareto frontier giữa chi phí/time. Đây là trạng thái pruning thay vì chính xác khóa equality reuse.
+Ví dụ resource-constrained đường đi giữ Pareto frontier giữa chi phí/thời gian (time / 시간). Đây là trạng thái pruning thay vì chính xác khóa equality reuse.
 
 ## DP tính đúng đắn chứng minh template
 
@@ -668,7 +671,7 @@ Một chứng minh tốt thường gồm:
 5. chứng minh evaluation order thỏa dependencies
 ```
 
-Nếu optimization space, còn phải chứng minh overwrite order không làm dùng trạng thái mới sai ngữ nghĩa.
+Nếu tối ưu hóa (optimization / 최적화) không gian (space / 공간), còn phải chứng minh overwrite thứ tự (order / 순서) không làm dùng trạng thái mới sai ngữ nghĩa.
 
 ## kiểm thử DP
 
@@ -693,15 +696,15 @@ compare
 
 “Bottom-up luôn nhanh hơn” — sparse các trạng thái có thể hợp memoization.
 
-“Space optimization luôn tốt” — có thể mất reconstruction/debuggability.
+“không gian (space / 공간) tối ưu hóa (optimization / 최적화) luôn tốt” — có thể mất reconstruction/debuggability.
 
-“DP complexity = số các trạng thái” — còn phải nhân transition chi phí.
+“DP độ phức tạp (complexity / 복잡도) = số các trạng thái” — còn phải nhân chuyển tiếp (transition / 전이) chi phí.
 
 “Thứ tự vòng lặp chỉ là chi tiết triển khai” — sai; trong nhiều bài quy hoạch động, thứ tự vòng lặp quyết định ngữ nghĩa tái sử dụng trạng thái và cả tính đúng đắn.
 
 ## Một workflow thiết kế DP có thể tái sử dụng
 
-Khi gặp problem:
+Khi gặp bài toán (problem / 문제):
 
 ```text
 1. Viết brute-force recursion tự nhiên.
@@ -716,11 +719,11 @@ Khi gặp problem:
 10. Thiết kế reconstruction và test với brute force.
 ```
 
-Nếu bước 4 không thể nói bằng một câu rõ ràng, code DP thường rất dễ sai.
+Nếu bước 4 không thể nói bằng một câu rõ ràng, mã (code / 코드) DP thường rất dễ sai.
 
 ## Mô hình tư duy
 
-> DP là nghệ thuật tìm **dữ liệu tóm lược nhỏ nhất của quá khứ mà tương lai cần biết**. Khi dữ liệu tóm lược đúng, nhiều histories collapse thành một trạng thái; khi trạng thái được reuse, exponential search có thể biến thành polynomial hoặc giả đa thức computation. Sau đó optimization nâng cao tập trung vào giảm số các trạng thái, giảm transition chi phí hoặc giảm bộ nhớ.
+> DP là nghệ thuật tìm **dữ liệu tóm lược nhỏ nhất của quá khứ mà tương lai cần biết**. Khi dữ liệu tóm lược đúng, nhiều histories collapse thành một trạng thái; khi trạng thái được reuse, exponential tìm kiếm (search / 검색) có thể biến thành polynomial hoặc giả đa thức computation. Sau đó tối ưu hóa (optimization / 최적화) nâng cao tập trung vào giảm số các trạng thái, giảm chuyển tiếp (transition / 전이) chi phí hoặc giảm bộ nhớ.
 
 Câu hỏi cốt lõi luôn là:
 

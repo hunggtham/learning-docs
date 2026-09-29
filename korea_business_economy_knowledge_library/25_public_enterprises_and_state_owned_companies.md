@@ -1,10 +1,13 @@
 # Doanh nghiệp công, cơ quan công và vai trò của nhà nước trong nền kinh tế Hàn Quốc (Public Enterprises / 공기업·공공기관)
 
+> **Mạch đọc:** Đặt **Doanh nghiệp công, cơ quan công và vai trò của nhà nước trong nền kinh tế Hàn Quốc (Public Enterprises / 공기업·공공기관)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **공공기관 không phải một nhóm đồng nhất** sang **Lợi nhuận tài chính không bằng lợi ích xã hội**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Không phải mọi doanh nghiệp quan trọng ở Hàn Quốc đều là chaebol hoặc công ty tư nhân niêm yết. Điện, khí đốt, đường sắt, hạ tầng, nhà ở, tài chính phát triển và nhiều dịch vụ công liên quan trực tiếp tới **doanh nghiệp công (public enterprise / 공기업)** và rộng hơn là **cơ quan công (public institution / 공공기관)**.
 
 Các tổ chức này cần một mô hình tư duy khác doanh nghiệp tư nhân vì hàm mục tiêu không chỉ là tối đa hóa lợi nhuận cho cổ đông. Một doanh nghiệp công có thể đồng thời phải bảo đảm tính liên tục của dịch vụ, khả năng chi trả, an toàn, chính sách công nghiệp, phát triển vùng và sức khỏe tài chính.
 
-> Mental Model — mô hình tư duy: doanh nghiệp tư nhân hoạt động dưới **ràng buộc thị trường**; doanh nghiệp công hoạt động dưới **ràng buộc thị trường + chính sách + nghĩa vụ dịch vụ công**.
+> mô hình tư duy (mental model / 사고 모델) — mô hình tư duy: doanh nghiệp tư nhân hoạt động dưới **ràng buộc thị trường**; doanh nghiệp công hoạt động dưới **ràng buộc thị trường + chính sách + nghĩa vụ dịch vụ công**.
 
 ## `공공기관` không phải một nhóm đồng nhất
 
@@ -62,7 +65,7 @@ Ví dụ: nhà nước muốn giữ giá điện ổn định, chi phí đầu v
 
 Vì vậy khi đọc doanh nghiệp công phải hỏi **cuối cùng ai hấp thụ chi phí**: người tiêu dùng tương lai, người nộp thuế, chủ nợ hay chính doanh nghiệp.
 
-## Logic của doanh nghiệp điện lực
+## Lô-gic (logic / 논리) của doanh nghiệp điện lực
 
 Chi phí phát điện và mua nhiên liệu có thể thay đổi nhanh theo LNG, than, dầu và tỷ giá, trong khi giá bán lẻ điện thường điều chỉnh chậm hơn vì yếu tố chính sách.
 
@@ -220,7 +223,7 @@ Hãy xác định loại pháp lý, chủ thể kiểm soát, nhiệm vụ công
 
 Không nên nhìn một tỷ số ROE hoặc debt ratio riêng lẻ mà bỏ qua cơ chế giá và nhiệm vụ công.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Doanh nghiệp công có hai “bảng cân đối”: **bảng cân đối tài chính** và **bảng cân đối nhiệm vụ chính sách**. Phân tích tốt phải hỏi mục tiêu công có đáng với chi phí kinh tế hay không và chi phí đó được phân bổ minh bạch qua thời gian như thế nào.
 
@@ -231,3 +234,5 @@ Sở hữu nhà nước không có nghĩa mọi khoản nợ được bảo lãn
 ## Liên kết
 
 Đọc [`26_economic_institutions_and_policy_making.md`](./26_economic_institutions_and_policy_making.md) cho kiến trúc chính sách, [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) cho utility, [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) cho rủi ro tín dụng và [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md) cho đầu tư công theo vùng.
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

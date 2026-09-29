@@ -4,6 +4,8 @@ node_modules/
 **/node_modules/
 dist/
 build/
+.env
+supabase/.temp/
 *.pdf
 *.zip
 *.mp3
@@ -14,3 +16,6 @@ build/
 *.webloc
 # Large IELTS archive (4+ GB); keep outside Git history.
 ielts/
+
+# English study Markdown is maintained in the separate language-docs repository.
+ielts_docs/

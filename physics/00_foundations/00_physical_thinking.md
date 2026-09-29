@@ -1,5 +1,8 @@
 # Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)
 
+> **Mạch đọc:** Đọc **Tư duy Vật lý và tư duy từ nguyên lý đầu tiên (First-Principles Thinking)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vật lý thực sự nghiên cứu điều gì?** sang **Mô hình không phải hiện thực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Vật lý không bắt đầu từ việc nhớ công thức. Nó bắt đầu bằng việc quyết định **điều gì trong hiện tượng cần được giữ lại để tạo thành một mô hình có thể đo, tính và kiểm chứng**.
 
 Một người học có thể biết rất nhiều công thức nhưng vẫn gặp khó khi bài toán thay đổi hình thức. Ngược lại, nếu hiểu cách chọn hệ, chọn biến, nhận ra thang chi phối, kiểm tra giới hạn và đánh giá giả định, ta có thể xây lại nhiều công thức từ những nguyên lý đơn giản hơn.
@@ -257,7 +260,7 @@ thì sai lệch không còn là vấn đề làm tròn số. Hoặc mô hình, h
 
 Ước lượng kiểu Fermi chia một câu hỏi khó thành các yếu tố dễ ước lượng hơn. Trong khoa học và kỹ thuật, khả năng nhận ra “kết quả này không thể đúng về mặt quy mô” rất quan trọng.
 
-## Phân tích thứ nguyên như một bộ kiểm tra logic
+## Phân tích thứ nguyên như một bộ kiểm tra lô-gic (logic / 논리)
 
 Một phương trình vật lý phải nhất quán về thứ nguyên.
 
@@ -371,9 +374,9 @@ dữ liệu đo
 
 Ví dụ, từ quang phổ của sao ta suy ra nhiệt độ, thành phần hóa học và vận tốc. Từ tín hiệu detector ta suy ra thuộc tính của hệ đã tạo tín hiệu.
 
-Bài toán ngược thường khó hơn vì nhiều mô hình khác nhau có thể tạo dữ liệu gần giống nhau. Vì vậy **identifiability**, uncertainty và prior assumptions trở nên quan trọng.
+Bài toán ngược thường khó hơn vì nhiều mô hình khác nhau có thể tạo dữ liệu gần giống nhau. Vì vậy **identifiability**, bất định (uncertainty / 불확실성) và prior các giả định (assumptions / 가정들) trở nên quan trọng.
 
-Đây là cầu nối trực tiếp giữa Vật lý, thống kê, khoa học dữ liệu và Machine Learning.
+Đây là cầu nối trực tiếp giữa Vật lý, thống kê, khoa học dữ liệu và Machine học tập (learning / 학습).
 
 ## Mô hình phải tạo được dự đoán có thể kiểm tra
 
@@ -391,7 +394,7 @@ model
 
 Nếu ta thay đổi mô hình mỗi lần có dữ liệu mới mà không để lại khả năng bị bác bỏ, mô hình sẽ mất sức mạnh kiểm chứng.
 
-Điều này liên quan tới tính khả kiểm (falsifiability), nhưng trong thực hành khoa học hiện đại cần tinh tế hơn: dữ liệu không bao giờ hoàn hảo, mô hình thường gần đúng và phép đo có uncertainty. Vì vậy ta đánh giá mức phù hợp định lượng, không chỉ hỏi “đúng hay sai tuyệt đối”.
+Điều này liên quan tới tính khả kiểm (falsifiability), nhưng trong thực hành khoa học hiện đại cần tinh tế hơn: dữ liệu không bao giờ hoàn hảo, mô hình thường gần đúng và phép đo có bất định (uncertainty / 불확실성). Vì vậy ta đánh giá mức phù hợp định lượng, không chỉ hỏi “đúng hay sai tuyệt đối”.
 
 ## Sai số mô hình khác sai số đo
 
@@ -425,7 +428,7 @@ Nhiệt độ không phải thuộc tính đầy đủ của một phân tử đ
 
 Việc chuyển từ chi tiết vi mô sang các biến tập thể được gọi là **coarse-graining**. Các quy luật hiệu dụng xuất hiện ở thang lớn hơn được gọi là hiện tượng nổi lên (emergence / 창발).
 
-Điều này liên hệ mạnh với Chemistry, Materials Science và Computer Science: cùng một hệ có thể cần các abstraction khác nhau ở các thang khác nhau.
+Điều này liên hệ mạnh với Chemistry, Materials Science và Khoa học máy tính (computer science / 컴퓨터 과학): cùng một hệ có thể cần các lớp trừu tượng (abstraction / 추상화) khác nhau ở các thang khác nhau.
 
 ## Liên hệ với Toán học
 
@@ -460,9 +463,9 @@ hằng số điện môi
 
 Vì vậy một tham số xuất hiện trong phương trình vĩ mô thường là kết quả nén của rất nhiều physics ở cấp thấp hơn.
 
-## Liên hệ với Engineering
+## Liên hệ với kỹ thuật (engineering / 엔지니어링)
 
-Engineering không chỉ dùng phương trình vật lý; nó còn đặt thêm ràng buộc:
+Kỹ thuật (engineering / 엔지니어링) không chỉ dùng phương trình vật lý; nó còn đặt thêm ràng buộc:
 
 ```text
 an toàn
@@ -476,11 +479,11 @@ reliability
 
 Một mô hình đủ tốt cho nghiên cứu định tính có thể chưa đủ tốt cho thiết kế kỹ thuật nếu sai số nhỏ gây hậu quả lớn.
 
-Do đó kỹ thuật thường yêu cầu thêm safety factor, tolerance analysis, uncertainty propagation và validation với dữ liệu thực.
+Do đó kỹ thuật thường yêu cầu thêm an toàn (safety / 안전) factor, tolerance phân tích (analysis / 분석), bất định (uncertainty / 불확실성) propagation và kiểm tra hợp lệ (validation / 검증) với dữ liệu thực.
 
-## Liên hệ với Computer Science
+## Liên hệ với Khoa học máy tính (computer science / 컴퓨터 과학)
 
-Mô phỏng vật lý có chuỗi abstraction:
+Mô phỏng vật lý có chuỗi lớp trừu tượng (abstraction / 추상화):
 
 ```text
 hệ thật
@@ -496,7 +499,7 @@ Mỗi lớp có thể sinh lỗi riêng.
 
 Một chương trình chạy thành công chỉ chứng minh rằng máy tính đã thực thi thuật toán; nó không tự chứng minh rằng thuật toán giải đúng phương trình hay phương trình mô tả đúng hệ thật.
 
-Đây là lý do version control, testing, reproducibility và numerical validation cũng là một phần của vật lý tính toán hiện đại.
+Đây là lý do phiên bản (version / 버전) điều khiển (control / 제어), testing, reproducibility và numerical kiểm tra hợp lệ (validation / 검증) cũng là một phần của vật lý tính toán hiện đại.
 
 ## Quy trình first-principles có thể tái sử dụng
 
@@ -514,11 +517,11 @@ Khi gặp một hiện tượng mới, có thể đi theo chuỗi câu hỏi sau
 10. Kết quả có đúng đơn vị và bậc độ lớn không?
 11. Khi đưa tham số về giới hạn đơn giản, nghiệm có hợp lý không?
 12. Đại lượng nào có thể đo để kiểm tra dự đoán?
-13. Nếu dữ liệu không khớp, lỗi nằm ở measurement, numerics hay model?
+13. Nếu dữ liệu không khớp, lỗi nằm ở đo lường (measurement / 측정), numerics hay mô hình (model / 모델)?
 
 Đây không phải checklist phải thực hiện máy móc cho mọi bài đơn giản. Nó là khung tư duy để tránh nhảy trực tiếp từ đề bài sang công thức.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Một cách cô đọng để nhìn toàn bộ Vật lý là
 
@@ -552,14 +555,16 @@ Không nhất thiết. Mô tả một cây cầu bằng QCD là không thực t�
 
 ### “Dữ liệu khớp tốt thì mô hình chắc chắn đúng”
 
-Không. Nhiều mô hình có thể khớp cùng một tập dữ liệu hữu hạn. Cần kiểm tra dự đoán mới, residual, uncertainty và khả năng phân biệt mô hình.
+Không. Nhiều mô hình có thể khớp cùng một tập dữ liệu hữu hạn. Cần kiểm tra dự đoán mới, residual, bất định (uncertainty / 불확실성) và khả năng phân biệt mô hình.
 
 ### “Máy tính cho nhiều chữ số nghĩa là kết quả chính xác”
 
 Không. Precision số học khác với accuracy vật lý. Một mô hình sai có thể được tính với mười lăm chữ số.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Liên hệ tiếp:** [Phép đo, đơn vị và độ bất định](01_measurement_units_uncertainty.md), [Ngôn ngữ Toán học](03_mathematical_language.md), [Đối xứng, bảo toàn và thang đo](04_symmetry_conservation_scale.md).
 
 **Đi sâu hơn:** [PDE, điều kiện biên, Green function và tensor](05_pde_boundary_green_tensors.md), [Vật lý thực nghiệm](../12_experimental_computational/00_measurement_experiment.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Suy luận dữ liệu và bài toán ngược](../12_experimental_computational/03_data_inference_inverse_problems.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 measurement units uncertainty](./01_measurement_units_uncertainty.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

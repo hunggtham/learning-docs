@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Study Shelf Learning OS",
   "short_name": "Study Shelf",
-  "description": "Personal learning library with global search, reading progress, review queue, offline reading and knowledge links.",
+  "description": "Personal learning library with global search, read-later queue, read-aloud mode, reading progress and offline reading.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

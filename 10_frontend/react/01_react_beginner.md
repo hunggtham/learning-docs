@@ -1,10 +1,13 @@
-# React Master Note — Beginner
+# React Master ghi chú (note / 노트) — Beginner
 
-> React 19.3 là mốc stable hiện hành để đối chiếu API mới, nhưng file này dạy mental model xuyên version. Mục tiêu là hiểu rendering và state trước khi học Hooks như một danh sách API.
+> **Mạch đọc:** Đọc **React Master ghi chú (note / 노트) — Beginner** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. React là gì?** sang **2. JavaScript nền tảng cần biết**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> React 19.3 là mốc stable hiện hành để đối chiếu API mới, nhưng tệp (file / 파일) này dạy mô hình tư duy (mental model / 사고 모델) xuyên phiên bản (version / 버전). Mục tiêu là hiểu rendering và trạng thái (state / 상태) trước khi học Hooks như một danh sách API.
 
 ## 1. React là gì?
 
-React là thư viện JavaScript dùng để xây dựng giao diện người dùng theo mô hình khai báo và component. Điểm quan trọng nhất của React không phải JSX hay Hook, mà là tư duy “dữ liệu hiện tại quyết định giao diện hiện tại”. Thay vì trực tiếp tìm DOM node rồi ra lệnh sửa từng phần tử khi dữ liệu thay đổi, bạn mô tả UI cần trông như thế nào đối với props và state hiện tại. React chạy lại logic render, so sánh kết quả mới với cây hiện tại và commit những thay đổi cần thiết xuống DOM.
+React là thư viện JavaScript dùng để xây dựng giao diện người dùng theo mô hình khai báo và thành phần (component / 컴포넌트). Điểm quan trọng nhất của React không phải JSX hay Hook, mà là tư duy “dữ liệu hiện tại quyết định giao diện hiện tại”. Thay vì trực tiếp tìm DOM nút (node / 노드) rồi ra lệnh sửa từng phần tử khi dữ liệu thay đổi, bạn mô tả UI cần trông như thế nào đối với props và trạng thái (state / 상태) hiện tại. React chạy lại lô-gic (logic / 논리) kết xuất (render / 렌더링), so sánh kết quả mới với cây hiện tại và lần ghi nhận (commit / 커밋) những thay đổi cần thiết xuống DOM.
 
 JavaScript DOM thuần thường mang tính imperative:
 
@@ -19,7 +22,7 @@ button.addEventListener("click", () => {
 });
 ```
 
-React cho phép mô tả UI từ state:
+React cho phép mô tả UI từ trạng thái (state / 상태):
 
 ```jsx
 import { useState } from "react";
@@ -35,24 +38,24 @@ function Counter() {
 }
 ```
 
-React là thư viện UI chứ không phải một full-stack framework. Routing, data cache, authentication, server runtime, database và deployment thường đến từ thư viện hoặc framework khác. Vì vậy cần phân biệt React core với ecosystem.
+React là thư viện UI chứ không phải một full-stack khung phần mềm (framework / 프레임워크). Routing, dữ liệu (data / 데이터) bộ nhớ đệm (cache / 캐시), authentication, máy chủ (server / 서버) thời gian chạy (runtime / 런타임), cơ sở dữ liệu (database / 데이터베이스) và triển khai (deployment / 배포) thường đến từ thư viện hoặc khung phần mềm (framework / 프레임워크) khác. Vì vậy cần phân biệt React cốt lõi (core / 핵심) với ecosystem.
 
-> ### Version Note — nên học version nào trước?
+> ### phiên bản (version / 버전) ghi chú (note / 노트) — nên học phiên bản (version / 버전) nào trước?
 >
-> Nếu bắt đầu mới, hãy học theo cú pháp và mental model React 19.3 trong tài liệu này. Phần lớn kiến thức nền như component, props, state, event, list và form vẫn áp dụng cho React 18 và cả nhiều code React 16.8/17. Sự khác nhau lớn nhất khi đọc code cũ thường nằm ở entry API, Class Component, JSX transform và một số API mới của React 19; vì vậy không cần học từng version theo thứ tự lịch sử trước khi học React.
+> Nếu bắt đầu mới, hãy học theo cú pháp và mô hình tư duy (mental model / 사고 모델) React 19.3 trong tài liệu này. Phần lớn kiến thức nền như thành phần (component / 컴포넌트), props, trạng thái (state / 상태), sự kiện (event / 이벤트), danh sách (list / 목록) và form vẫn áp dụng cho React 18 và cả nhiều mã (code / 코드) React 16.8/17. Sự khác nhau lớn nhất khi đọc mã (code / 코드) cũ thường nằm ở entry API, lớp (class / 클래스) thành phần (component / 컴포넌트), JSX transform và một số API mới của React 19; vì vậy không cần học từng phiên bản (version / 버전) theo thứ tự lịch sử trước khi học React.
 
 ## 2. JavaScript nền tảng cần biết
 
-React sử dụng JavaScript thật. Nếu không hiểu JavaScript, người học rất dễ thuộc cú pháp React nhưng không biết vì sao code chạy hoặc hỏng.
+React sử dụng JavaScript thật. Nếu không hiểu JavaScript, người học rất dễ thuộc cú pháp React nhưng không biết vì sao mã (code / 코드) chạy hoặc hỏng.
 
-`const` nên là lựa chọn mặc định cho binding không cần gán lại; `let` dùng khi biến thực sự phải đổi trong cùng execution scope. `const` không làm object bất biến:
+`const` nên là lựa chọn mặc định cho binding không cần gán lại; `let` dùng khi biến thực sự phải đổi trong cùng thực thi (execution / 실행) phạm vi (scope / 범위). `const` không làm đối tượng (object / 객체) bất biến:
 
 ```js
 const user = { name: "An" };
 user.name = "Bình"; // hợp lệ
 ```
 
-Function và arrow function xuất hiện liên tục:
+Hàm (function / 함수) và arrow hàm (function / 함수) xuất hiện liên tục:
 
 ```js
 function add(a, b) {
@@ -71,16 +74,16 @@ const { id, name } = user;
 const [first, second] = ["red", "blue"];
 ```
 
-Spread syntax rất quan trọng vì state React thường được cập nhật theo kiểu tạo object/array mới:
+Spread cú pháp (syntax / 문법) rất quan trọng vì trạng thái (state / 상태) React thường được cập nhật theo kiểu tạo đối tượng (object / 객체)/array mới:
 
 ```js
 const nextUser = { ...user, name: "Bình" };
 const nextItems = [...items, newItem];
 ```
 
-Các array method phải quen gồm `map`, `filter`, `find`, `some`, `every`, `reduce`. Trong React, `map` dùng rất nhiều để render list.
+Các array phương thức (method / 메서드) phải quen gồm `map`, `filter`, `find`, `some`, `every`, `reduce`. Trong React, `map` dùng rất nhiều để kết xuất (render / 렌더링) danh sách (list / 목록).
 
-Module ES:
+Mô-đun (module / 모듈) ES:
 
 ```js
 // Button.jsx
@@ -119,7 +122,7 @@ async function loadUsers() {
 
 ## 3. React app hoạt động như thế nào?
 
-Ứng dụng web React thường dùng `react` cho model component/Hooks và `react-dom` để kết nối với DOM.
+Ứng dụng web React thường dùng `react` cho mô hình (model / 모델) thành phần (component / 컴포넌트)/Hooks và `react-dom` để kết nối với DOM.
 
 ```jsx
 import { StrictMode } from "react";
@@ -133,31 +136,31 @@ createRoot(document.getElementById("root")).render(
 );
 ```
 
-Có thể hiểu một update qua ba bước lớn: một event hoặc nguồn dữ liệu làm props/state thay đổi; React render để tính cây UI mới; React commit thay đổi cần thiết xuống DOM. Browser sau đó layout và paint. “Component render lại” không đồng nghĩa toàn bộ DOM bị dựng lại.
+Có thể hiểu một cập nhật (update / 업데이트) qua ba bước lớn: một sự kiện (event / 이벤트) hoặc nguồn dữ liệu làm props/trạng thái (state / 상태) thay đổi; React kết xuất (render / 렌더링) để tính cây UI mới; React lần ghi nhận (commit / 커밋) thay đổi cần thiết xuống DOM. trình duyệt (browser / 브라우저) sau đó bố cục (layout / 레이아웃) và paint. “thành phần (component / 컴포넌트) kết xuất (render / 렌더링) lại” không đồng nghĩa toàn bộ DOM bị dựng lại.
 
-> ### Version Note — `createRoot`
+> ### phiên bản (version / 버전) ghi chú (note / 노트) — `createRoot`
 >
-> `createRoot` là API client root hiện đại từ **React 18**. Tutorial React 17 trở xuống thường dùng `ReactDOM.render(<App />, container)`. React 18 đã deprecate cách cũ và nếu vẫn dùng nó, app không nhận đầy đủ behavior mới của root React 18; tới React 19, API render/hydrate legacy đã bị loại bỏ. Vì vậy code mới nên luôn nghĩ theo `createRoot` hoặc `hydrateRoot` nếu đang hydrate HTML từ server.
+> `createRoot` là API máy khách (client / 클라이언트) gốc (root / 루트) hiện đại từ **React 18**. Tutorial React 17 trở xuống thường dùng `ReactDOM.render(<App />, container)`. React 18 đã deprecate cách cũ và nếu vẫn dùng nó, app không nhận đầy đủ hành vi (behavior / 동작) mới của gốc (root / 루트) React 18; tới React 19, API kết xuất (render / 렌더링)/hydrate legacy đã bị loại bỏ. Vì vậy mã (code / 코드) mới nên luôn nghĩ theo `createRoot` hoặc `hydrateRoot` nếu đang hydrate HTML từ máy chủ (server / 서버).
 
-## 3A. Mental model cốt lõi trước Hooks
+## 3A. mô hình tư duy (mental model / 사고 모델) cốt lõi trước Hooks
 
-Có thể tạm nghĩ `UI = render(props, state, context)`. Render đọc snapshot hiện tại và mô tả UI; event handler hoặc Effect mới là nơi yêu cầu state mới hay đồng bộ hệ thống ngoài React.
+Có thể tạm nghĩ `UI = render(props, state, context)`. kết xuất (render / 렌더링) đọc snapshot hiện tại và mô tả UI; sự kiện (event / 이벤트) handler hoặc tác động (effect / 효과) mới là nơi yêu cầu trạng thái (state / 상태) mới hay đồng bộ hệ thống ngoài React.
 
-Một update đi qua `trigger → render → reconciliation → commit → browser layout/paint`. Render tạo tree mới. Reconciliation dùng type, vị trí và `key` để quyết định identity nào được giữ hay thay. Commit mới áp host mutation xuống DOM, refs và Effect. Vì vậy component render lại không đồng nghĩa DOM bị tạo lại.
+Một cập nhật (update / 업데이트) đi qua `trigger → render → reconciliation → commit → browser layout/paint`. kết xuất (render / 렌더링) tạo cây (tree / 트리) mới. Reconciliation dùng kiểu (type / 타입), vị trí và `key` để quyết định định danh (identity / 식별자) nào được giữ hay thay. lần ghi nhận (commit / 커밋) mới áp host mutation xuống DOM, refs và tác động (effect / 효과). Vì vậy thành phần (component / 컴포넌트) kết xuất (render / 렌더링) lại không đồng nghĩa DOM bị tạo lại.
 
-State cũng không nằm trong biến local. `count` từ `useState` là snapshot của render hiện tại; React giữ state gắn với identity trong tree. Setter queue update chứ không mutate biến JavaScript. Class `this.state`/`this.setState` và Hooks khác API nhưng cùng invariant này. Mental model này giải thích immutable update, stale closure, preserve/reset state, batching và `key`.
+Trạng thái (state / 상태) cũng không nằm trong biến cục bộ (local / 로컬). `count` từ `useState` là snapshot của kết xuất (render / 렌더링) hiện tại; React giữ trạng thái (state / 상태) gắn với định danh (identity / 식별자) trong cây (tree / 트리). Setter hàng đợi (queue / 큐) cập nhật (update / 업데이트) chứ không mutate biến JavaScript. lớp (class / 클래스) `this.state`/`this.setState` và Hooks khác API nhưng cùng bất biến (invariant / 불변식) này. mô hình tư duy (mental model / 사고 모델) này giải thích immutable cập nhật (update / 업데이트), stale closure, preserve/reset trạng thái (state / 상태), batching và `key`.
 
-## 3B. Render tree, component call và DOM update là ba chuyện khác nhau
+## 3B. kết xuất (render / 렌더링) cây (tree / 트리), thành phần (component / 컴포넌트) lời gọi (call / 호출) và DOM cập nhật (update / 업데이트) là ba chuyện khác nhau
 
-Khi React render một component, React đang gọi component để lấy mô tả UI cho snapshot props/state hiện tại. Kết quả này tạo **render tree** gồm React elements và component boundaries; nó chưa đồng nghĩa browser DOM đã đổi. Parent render thường khiến React đi xuống render children để tính tree mới, nhưng sau reconciliation React chỉ commit host changes thực sự cần thiết. Vì vậy `console.log` trong component có thể chạy dù DOM cuối cùng không đổi.
+Khi React kết xuất (render / 렌더링) một thành phần (component / 컴포넌트), React đang gọi thành phần (component / 컴포넌트) để lấy mô tả UI cho snapshot props/trạng thái (state / 상태) hiện tại. Kết quả này tạo **kết xuất (render / 렌더링) cây (tree / 트리)** gồm React elements và thành phần (component / 컴포넌트) boundaries; nó chưa đồng nghĩa trình duyệt (browser / 브라우저) DOM đã đổi. Parent kết xuất (render / 렌더링) thường khiến React đi xuống kết xuất (render / 렌더링) children để tính cây (tree / 트리) mới, nhưng sau reconciliation React chỉ lần ghi nhận (commit / 커밋) host changes thực sự cần thiết. Vì vậy `console.log` trong thành phần (component / 컴포넌트) có thể chạy dù DOM cuối cùng không đổi.
 
-Điều này dẫn đến ba câu hỏi khác nhau khi debug: **vì sao component được render?**, **kết quả render mới khác tree cũ ở đâu?**, và **commit có thay DOM hay chạy Effect/ref nào không?**. Gộp ba câu hỏi thành “React render lại quá nhiều” thường dẫn tới tối ưu sai chỗ.
+Điều này dẫn đến ba câu hỏi khác nhau khi gỡ lỗi (debug / 디버그): **vì sao thành phần (component / 컴포넌트) được kết xuất (render / 렌더링)?**, **kết quả kết xuất (render / 렌더링) mới khác cây (tree / 트리) cũ ở đâu?**, và **lần ghi nhận (commit / 커밋) có thay DOM hay chạy tác động (effect / 효과)/ref nào không?**. Gộp ba câu hỏi thành “React kết xuất (render / 렌더링) lại quá nhiều” thường dẫn tới tối ưu sai chỗ.
 
-Render cũng không phải lifecycle event để làm side effect. React hiện đại có thể gọi render nhiều lần để kiểm tra purity, hoặc chuẩn bị work rồi bỏ kết quả trước commit. Code trong render vì vậy phải có tính chất tính toán: cùng input phải cho output tương thích và không để lại mutation bên ngoài.
+Kết xuất (render / 렌더링) cũng không phải vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) để làm side tác động (effect / 효과). React hiện đại có thể gọi kết xuất (render / 렌더링) nhiều lần để kiểm tra purity, hoặc chuẩn bị công việc (work / 작업) rồi bỏ kết quả trước lần ghi nhận (commit / 커밋). mã (code / 코드) trong kết xuất (render / 렌더링) vì vậy phải có tính chất tính toán: cùng đầu vào (input / 입력) phải cho đầu ra (output / 출력) tương thích và không để lại mutation bên ngoài.
 
-## 4. Tạo project React hiện đại
+## 4. Tạo dự án (project / 프로젝트) React hiện đại
 
-Create React App không còn là lựa chọn khuyến nghị cho project mới. Với học React core hoặc SPA client-side, Vite là lựa chọn phổ biến:
+Create React App không còn là lựa chọn khuyến nghị cho dự án (project / 프로젝트) mới. Với học React cốt lõi (core / 핵심) hoặc SPA client-side, Vite là lựa chọn phổ biến:
 
 ```bash
 npm create vite@latest my-react-app -- --template react
@@ -188,11 +191,11 @@ my-react-app/
 
 `.jsx` là JavaScript có JSX; `.tsx` là TypeScript có JSX.
 
-> ### Version Note — Create React App không phải “React cũ”
+> ### phiên bản (version / 버전) ghi chú (note / 노트) — Create React App không phải “React cũ”
 >
-> Create React App là toolchain, không phải React core. React team đã deprecate Create React App cho project mới vào năm 2025 và khuyến nghị framework hoặc build tool hiện đại như Vite/Parcel/RSBuild tùy nhu cầu. Một codebase CRA vẫn có thể chạy React 18 hoặc 19, nên hãy tách hai khái niệm: “version React” và “công cụ tạo/build project”.
+> Create React App là toolchain, không phải React cốt lõi (core / 핵심). React nhóm (team / 팀) đã deprecate Create React App cho dự án (project / 프로젝트) mới vào năm 2025 và khuyến nghị khung phần mềm (framework / 프레임워크) hoặc bản dựng (build / 빌드) công cụ (tool / 도구) hiện đại như Vite/Parcel/RSBuild tùy nhu cầu. Một codebase CRA vẫn có thể chạy React 18 hoặc 19, nên hãy tách hai khái niệm: “phiên bản (version / 버전) React” và “công cụ tạo/bản dựng (build / 빌드) dự án (project / 프로젝트)”.
 
-### Root API cũ: `ReactDOM.render`, `hydrate`, `unmountComponentAtNode`
+### Gốc (root / 루트) API cũ: `ReactDOM.render`, `hydrate`, `unmountComponentAtNode`
 
 React 17 trở xuống thường khởi động app bằng:
 
@@ -205,7 +208,7 @@ ReactDOM.render(
 );
 ```
 
-React 18 giới thiệu root API mới:
+React 18 giới thiệu gốc (root / 루트) API mới:
 
 ```jsx
 import { createRoot } from "react-dom/client";
@@ -217,7 +220,7 @@ const root = createRoot(
 root.render(<App />);
 ```
 
-`ReactDOM.render` bị deprecate từ React 18 và bị remove ở React 19. Nếu dùng API cũ trong React 18, app chạy theo compatibility behavior gần React 17 và không có đầy đủ modern root semantics.
+`ReactDOM.render` bị deprecate từ React 18 và bị remove ở React 19. Nếu dùng API cũ trong React 18, app chạy theo tính tương thích (compatibility / 호환성) hành vi (behavior / 동작) gần React 17 và không có đầy đủ hiện đại (modern / 현대적) gốc (root / 루트) ngữ nghĩa (semantics / 의미론).
 
 SSR hydration cũ:
 
@@ -251,17 +254,17 @@ ReactDOM.unmountComponentAtNode(container);
 root.unmount();
 ```
 
-Ba API legacy trên rất thường gặp trong project React 16/17 và tài liệu cũ, nên cần đọc được dù không dùng cho code mới.
+Ba API legacy trên rất thường gặp trong dự án (project / 프로젝트) React 16/17 và tài liệu cũ, nên cần đọc được dù không dùng cho mã (code / 코드) mới.
 
 ## 5. JSX
 
-JSX là cú pháp mở rộng của JavaScript cho phép viết cấu trúc gần giống HTML. Browser không hiểu JSX trực tiếp; build tool chuyển JSX thành mã JavaScript/runtime React.
+JSX là cú pháp mở rộng của JavaScript cho phép viết cấu trúc gần giống HTML. trình duyệt (browser / 브라우저) không hiểu JSX trực tiếp; bản dựng (build / 빌드) công cụ (tool / 도구) chuyển JSX thành mã JavaScript/thời gian chạy (runtime / 런타임) React.
 
 ```jsx
 const element = <h1>Xin chào React</h1>;
 ```
 
-JSX phải có một root hợp lệ. Nếu không muốn thêm DOM wrapper, dùng Fragment:
+JSX phải có một gốc (root / 루트) hợp lệ. Nếu không muốn thêm DOM wrapper, dùng Fragment:
 
 ```jsx
 return (
@@ -290,7 +293,7 @@ Một số attribute khác HTML:
 </div>
 ```
 
-Event dùng camelCase như `onClick`, `onChange`, `onSubmit`.
+Sự kiện (event / 이벤트) dùng camelCase như `onClick`, `onChange`, `onSubmit`.
 
 Boolean prop:
 
@@ -298,13 +301,13 @@ Boolean prop:
 <input disabled />
 ```
 
-Inline style nhận object JavaScript và property camelCase:
+Inline style nhận đối tượng (object / 객체) JavaScript và thuộc tính (property / 속성) camelCase:
 
 ```jsx
 <div style={{ backgroundColor: "black", fontSize: 18 }} />
 ```
 
-React escape giá trị text mặc định, giúp giảm nhiều XSS case:
+React escape giá trị văn bản (text / 텍스트) mặc định, giúp giảm nhiều XSS trường hợp (case / 사례):
 
 ```jsx
 <p>{userInput}</p>
@@ -316,13 +319,13 @@ React escape giá trị text mặc định, giúp giảm nhiều XSS case:
 <div dangerouslySetInnerHTML={{ __html: trustedHtml }} />
 ```
 
-> ### Version Note — JSX transform
+> ### phiên bản (version / 버전) ghi chú (note / 노트) — JSX transform
 >
-> Tutorial rất cũ thường bắt đầu file bằng `import React from "react";` dù biến `React` không được dùng trực tiếp. Lý do là JSX transform cũ biên dịch JSX thành lời gọi như `React.createElement(...)`. Modern JSX transform, được phổ biến từ giai đoạn React 17 và đã được backport cho một số version cũ hơn, cho phép JSX hoạt động mà không cần import React chỉ vì JSX. **React 19 yêu cầu modern JSX transform**, nên code mới không nên học thói quen import React chỉ để “JSX chạy”.
+> Tutorial rất cũ thường bắt đầu tệp (file / 파일) bằng `import React from "react";` dù biến `React` không được dùng trực tiếp. Lý do là JSX transform cũ biên dịch JSX thành lời gọi như `React.createElement(...)`. hiện đại (modern / 현대적) JSX transform, được phổ biến từ giai đoạn React 17 và đã được backport cho một số phiên bản (version / 버전) cũ hơn, cho phép JSX hoạt động mà không cần import React chỉ vì JSX. **React 19 yêu cầu hiện đại (modern / 현대적) JSX transform**, nên mã (code / 코드) mới không nên học thói quen import React chỉ để “JSX chạy”.
 
 ## 5A. JSX thực chất tạo React element: `createElement`, `cloneElement` và API cũ
 
-JSX không phải requirement bắt buộc. JSX:
+JSX không phải yêu cầu (requirement / 요구사항) bắt buộc. JSX:
 
 ```jsx
 <button className="primary">
@@ -340,7 +343,7 @@ React.createElement(
 );
 ```
 
-`React.createElement(type, props, ...children)` là API nền tảng tồn tại lâu đời và vẫn hữu ích để hiểu JSX transform, code generated hoặc trường hợp không dùng JSX.
+`React.createElement(type, props, ...children)` là API nền tảng tồn tại lâu đời và vẫn hữu ích để hiểu JSX transform, mã (code / 코드) generated hoặc trường hợp không dùng JSX.
 
 Bạn cũng có thể gặp `React.cloneElement(element, props, ...children)`:
 
@@ -352,7 +355,7 @@ const enhanced = React.cloneElement(original, {
 });
 ```
 
-`cloneElement` tạo element mới dựa trên element cũ và merge props. API vẫn tồn tại nhưng thường làm data flow khó theo dõi hơn composition/context/render prop, nên code mới chỉ dùng khi có lý do rõ.
+`cloneElement` tạo element mới dựa trên element cũ và merge props. API vẫn tồn tại nhưng thường làm luồng dữ liệu (data flow / 데이터 흐름) khó theo dõi hơn composition/ngữ cảnh (context / 맥락)/kết xuất (render / 렌더링) prop, nên mã (code / 코드) mới chỉ dùng khi có lý do rõ.
 
 ### `React.createFactory` — legacy trước khi JSX phổ biến
 Phần này nối mạch bài học với “`React.createFactory` — legacy trước khi JSX phổ biến”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -367,11 +370,11 @@ const element = Button(
 );
 ```
 
-`createFactory` là helper tạo function chuyên gọi `createElement` cho một type. Khi JSX trở thành chuẩn, API gần như không còn cần; nó bị deprecate ở React 16.13 và bị loại bỏ trong React 19.
+`createFactory` là helper tạo hàm (function / 함수) chuyên gọi `createElement` cho một kiểu (type / 타입). Khi JSX trở thành chuẩn, API gần như không còn cần; nó bị deprecate ở React 16.13 và bị loại bỏ trong React 19.
 
 ### `React.DOM.*`
 
-Trong code React rất cũ còn có thể thấy:
+Trong mã (code / 코드) React rất cũ còn có thể thấy:
 
 ```jsx
 React.DOM.div(
@@ -380,11 +383,11 @@ React.DOM.div(
 );
 ```
 
-Hãy hiểu nó như tiền thân của JSX `<div className="card">Hello</div>`, không phải API nên dùng trong code mới.
+Hãy hiểu nó như tiền thân của JSX `<div className="card">Hello</div>`, không phải API nên dùng trong mã (code / 코드) mới.
 
-## 6. Component
+## 6. thành phần (component / 컴포넌트)
 
-Function Component là function JavaScript trả JSX:
+Hàm (function / 함수) thành phần (component / 컴포넌트) là hàm (function / 함수) JavaScript trả JSX:
 
 ```jsx
 function Avatar() {
@@ -392,9 +395,9 @@ function Avatar() {
 }
 ```
 
-Tên component phải bắt đầu bằng chữ hoa. `<Avatar />` được React hiểu là component, còn `<avatar />` được hiểu như host/custom element.
+Tên thành phần (component / 컴포넌트) phải bắt đầu bằng chữ hoa. `<Avatar />` được React hiểu là thành phần (component / 컴포넌트), còn `<avatar />` được hiểu như host/custom element.
 
-Không cần tách mỗi `<div>` thành component. Nên tách khi phần UI có responsibility, tên nghiệp vụ, logic riêng hoặc được tái sử dụng.
+Không cần tách mỗi `<div>` thành thành phần (component / 컴포넌트). Nên tách khi phần UI có responsibility, tên nghiệp vụ, lô-gic (logic / 논리) riêng hoặc được tái sử dụng.
 
 ```jsx
 function UserCard({ user }) {
@@ -407,13 +410,13 @@ function UserCard({ user }) {
 }
 ```
 
-Render logic phải pure. Không gửi request, mutate global state hoặc điều khiển DOM bên ngoài trong lúc render.
+Kết xuất (render / 렌더링) lô-gic (logic / 논리) phải pure. Không gửi yêu cầu (request / 요청), mutate toàn cục (global / 전역) trạng thái (state / 상태) hoặc điều khiển DOM bên ngoài trong lúc kết xuất (render / 렌더링).
 
-## 6A. Function Component và Class Component qua các thế hệ React
+## 6A. hàm (function / 함수) thành phần (component / 컴포넌트) và lớp (class / 클래스) thành phần (component / 컴포넌트) qua các thế hệ React
 
-React hiện đại ưu tiên Function Component, nhưng để đọc codebase cũ bạn phải hiểu Class Component vì trước React 16.8 đây là cách chính để component có state và lifecycle.
+React hiện đại ưu tiên hàm (function / 함수) thành phần (component / 컴포넌트), nhưng để đọc codebase cũ bạn phải hiểu lớp (class / 클래스) thành phần (component / 컴포넌트) vì trước React 16.8 đây là cách chính để thành phần (component / 컴포넌트) có trạng thái (state / 상태) và vòng đời (lifecycle / 생명주기).
 
-Function Component hiện đại:
+Hàm (function / 함수) thành phần (component / 컴포넌트) hiện đại:
 
 ```jsx
 function Counter() {
@@ -427,7 +430,7 @@ function Counter() {
 }
 ```
 
-Class Component tương đương về mặt ý tưởng:
+Lớp (class / 클래스) thành phần (component / 컴포넌트) tương đương về mặt ý tưởng:
 
 ```jsx
 class Counter extends React.Component {
@@ -454,11 +457,11 @@ class Counter extends React.Component {
 }
 ```
 
-Class Component nhận input qua `this.props`, giữ local state trong `this.state` và thay đổi state bằng `this.setState`. `render()` trả về React node giống vai trò return của Function Component. Điểm khác lớn là lifecycle và việc method thường liên quan tới `this`.
+Lớp (class / 클래스) thành phần (component / 컴포넌트) nhận đầu vào (input / 입력) qua `this.props`, giữ cục bộ (local / 로컬) trạng thái (state / 상태) trong `this.state` và thay đổi trạng thái (state / 상태) bằng `this.setState`. `render()` trả về React nút (node / 노드) giống vai trò return của hàm (function / 함수) thành phần (component / 컴포넌트). Điểm khác lớn là vòng đời (lifecycle / 생명주기) và việc phương thức (method / 메서드) thường liên quan tới `this`.
 
 ### `constructor`, `super(props)` và binding
 
-Trong class đời cũ, constructor thường được dùng để tạo state và bind method:
+Trong lớp (class / 클래스) đời cũ, constructor thường được dùng để tạo trạng thái (state / 상태) và bind phương thức (method / 메서드):
 
 ```jsx
 class Form extends React.Component {
@@ -490,11 +493,11 @@ class Form extends React.Component {
 }
 ```
 
-JavaScript class method không tự bind `this`. Vì vậy code React cũ rất hay có `.bind(this)`. Khi class fields trở nên phổ biến, code thường chuyển sang arrow field.
+JavaScript lớp (class / 클래스) phương thức (method / 메서드) không tự bind `this`. Vì vậy mã (code / 코드) React cũ rất hay có `.bind(this)`. Khi lớp (class / 클래스) fields trở nên phổ biến, mã (code / 코드) thường chuyển sang arrow trường dữ liệu (field / 필드).
 
-### `setState` của class khác setter của `useState`
+### `setState` của lớp (class / 클래스) khác setter của `useState`
 
-Class `this.setState` với object sẽ **shallow merge**:
+Lớp (class / 클래스) `this.setState` với đối tượng (object / 객체) sẽ **shallow merge**:
 
 ```jsx
 this.state = {
@@ -507,7 +510,7 @@ this.setState({
 });
 ```
 
-Sau update, `name` vẫn còn. Ngược lại, setter từ `useState` thay thế value được lưu:
+Sau cập nhật (update / 업데이트), `name` vẫn còn. Ngược lại, setter từ `useState` thay thế giá trị (value / 값) được lưu:
 
 ```jsx
 setUser({
@@ -515,7 +518,7 @@ setUser({
 });
 ```
 
-Nếu state cũ có `name`, nó sẽ mất. Với Hook phải tự merge khi đó là điều bạn muốn:
+Nếu trạng thái (state / 상태) cũ có `name`, nó sẽ mất. Với Hook phải tự merge khi đó là điều bạn muốn:
 
 ```jsx
 setUser(user => ({
@@ -536,13 +539,13 @@ class UserCard extends React.PureComponent {
 }
 ```
 
-`PureComponent` shallow-compare props và state để có thể bỏ qua render. Với Function Component, khái niệm gần là `memo`; tuy nhiên React Compiler hiện đại có thể tự động hóa nhiều memoization.
+`PureComponent` shallow-compare props và trạng thái (state / 상태) để có thể bỏ qua kết xuất (render / 렌더링). Với hàm (function / 함수) thành phần (component / 컴포넌트), khái niệm gần là `memo`; tuy nhiên React trình biên dịch (compiler / 컴파일러) hiện đại có thể tự động hóa nhiều memoization.
 
-> **Version status:** Class Component vẫn được hỗ trợ để bảo trì code cũ. React hiện tại không khuyến nghị dùng class cho code mới, nhưng class không phải syntax “đã bị remove”.
+> **phiên bản (version / 버전) status:** lớp (class / 클래스) thành phần (component / 컴포넌트) vẫn được hỗ trợ để bảo trì mã (code / 코드) cũ. React hiện tại không khuyến nghị dùng lớp (class / 클래스) cho mã (code / 코드) mới, nhưng lớp (class / 클래스) không phải cú pháp (syntax / 문법) “đã bị remove”.
 
-## 6B. `React.createClass`: component trước ES6 class
+## 6B. `React.createClass`: thành phần (component / 컴포넌트) trước ES6 lớp (class / 클래스)
 
-Trong React rất cũ, trước khi ES6 class trở thành chuẩn, component có state thường được tạo bằng `React.createClass`:
+Trong React rất cũ, trước khi ES6 lớp (class / 클래스) trở thành chuẩn, thành phần (component / 컴포넌트) có trạng thái (state / 상태) thường được tạo bằng `React.createClass`:
 
 ```jsx
 var Counter = React.createClass({
@@ -568,7 +571,7 @@ var Counter = React.createClass({
 });
 ```
 
-`getInitialState()` trả state ban đầu. Khác ES6 class, methods của `createClass` được autobind nên thường không cần `.bind(this)`.
+`getInitialState()` trả trạng thái (state / 상태) ban đầu. Khác ES6 lớp (class / 클래스), methods của `createClass` được autobind nên thường không cần `.bind(this)`.
 
 `createClass` còn hỗ trợ **mixins**:
 
@@ -605,9 +608,9 @@ var Clock = React.createClass({
 });
 ```
 
-Mixins cho phép chia sẻ logic nhưng tạo dependency ẩn và conflict tên. HOC, render props và sau này Custom Hooks lần lượt trở thành các cách composition rõ ràng hơn.
+Mixins cho phép chia sẻ lô-gic (logic / 논리) nhưng tạo phụ thuộc (dependency / 의존성) ẩn và xung đột (conflict / 충돌) tên. HOC, kết xuất (render / 렌더링) props và sau này Custom Hooks lần lượt trở thành các cách composition rõ ràng hơn.
 
-Từ React 15.5, `React.createClass` bị deprecate khỏi core và được tách sang package `create-react-class` cho code legacy.
+Từ React 15.5, `React.createClass` bị deprecate khỏi cốt lõi (core / 핵심) và được tách sang gói (package / 패키지) `create-react-class` cho mã (code / 코드) legacy.
 
 ```text
 React.createClass + mixins
@@ -619,7 +622,7 @@ Function Component + Custom Hooks
 
 ## 7. Props
 
-Props là dữ liệu cha truyền xuống con. Component nhận props phải coi chúng read-only.
+Props là dữ liệu cha truyền xuống con. thành phần (component / 컴포넌트) nhận props phải coi chúng read-only.
 
 ```jsx
 function Greeting({ name, age }) {
@@ -631,7 +634,7 @@ function App() {
 }
 ```
 
-Default value:
+Default giá trị (value / 값):
 
 ```jsx
 function Button({ type = "button", children }) {
@@ -641,7 +644,7 @@ function Button({ type = "button", children }) {
 
 Default chỉ áp dụng khi prop là `undefined`, không phải `null`.
 
-Spread props hữu ích cho wrapper primitive:
+Spread props hữu ích cho wrapper thành phần nguyên thủy (primitive / 기본 요소):
 
 ```jsx
 function Input(props) {
@@ -649,11 +652,11 @@ function Input(props) {
 }
 ```
 
-Nhưng component nghiệp vụ nên có API rõ ràng thay vì truyền mọi props không kiểm soát.
+Nhưng thành phần (component / 컴포넌트) nghiệp vụ nên có API rõ ràng thay vì truyền mọi props không kiểm soát.
 
 ### Props legacy: `propTypes` và `defaultProps`
 
-Code React 15–18 thường dùng runtime validation với `prop-types`:
+Mã (code / 코드) React 15–18 thường dùng thời gian chạy (runtime / 런타임) kiểm tra hợp lệ (validation / 검증) với `prop-types`:
 
 ```jsx
 import PropTypes from "prop-types";
@@ -680,13 +683,13 @@ MyComponent.propTypes = {
 };
 ```
 
-React 15.5 deprecate `React.PropTypes` và chuyển validator sang package `prop-types`. React 19 bỏ việc xử lý `propTypes` cho Function Component và bỏ `defaultProps` cho Function Component. Code hiện đại thường dùng TypeScript và default parameter.
+React 15.5 deprecate `React.PropTypes` và chuyển validator sang gói (package / 패키지) `prop-types`. React 19 bỏ việc xử lý `propTypes` cho hàm (function / 함수) thành phần (component / 컴포넌트) và bỏ `defaultProps` cho hàm (function / 함수) thành phần (component / 컴포넌트). mã (code / 코드) hiện đại thường dùng TypeScript và default parameter.
 
-Class Component vẫn có thể có `defaultProps`.
+Lớp (class / 클래스) thành phần (component / 컴포넌트) vẫn có thể có `defaultProps`.
 
-## 8. Event
+## 8. sự kiện (event / 이벤트)
 
-Event handler phải là function:
+Sự kiện (event / 이벤트) handler phải là hàm (function / 함수):
 
 ```jsx
 function Button() {
@@ -710,7 +713,7 @@ Thông thường sai:
 <button onClick={() => handleDelete(user.id)}>Xóa</button>
 ```
 
-Event object:
+Sự kiện (event / 이벤트) đối tượng (object / 객체):
 
 ```jsx
 function handleChange(event) {
@@ -732,11 +735,11 @@ Dừng propagation:
 event.stopPropagation();
 ```
 
-Không lạm dụng `stopPropagation`; event flow rõ ràng thường tốt hơn.
+Không lạm dụng `stopPropagation`; sự kiện (event / 이벤트) luồng (flow / 흐름) rõ ràng thường tốt hơn.
 
-### Event cũ: SyntheticEvent pooling và `event.persist()`
+### Sự kiện (event / 이벤트) cũ: SyntheticEvent pooling và `event.persist()`
 
-Ở React web trước React 17, `SyntheticEvent` từng được pool để tái sử dụng object event. Vì vậy code async đôi khi phải gọi:
+Ở React web trước React 17, `SyntheticEvent` từng được pool để tái sử dụng đối tượng (object / 객체) sự kiện (event / 이벤트). Vì vậy mã (code / 코드) async đôi khi phải gọi:
 
 ```jsx
 function handleChange(event) {
@@ -748,9 +751,9 @@ function handleChange(event) {
 }
 ```
 
-Từ React 17 trên web, event pooling kiểu này đã bị bỏ nên `event.persist()` không còn cần cho use case đó. Khi thấy `persist()` trong code cũ, đừng copy nó như best practice hiện đại.
+Từ React 17 trên web, sự kiện (event / 이벤트) pooling kiểu này đã bị bỏ nên `event.persist()` không còn cần cho use trường hợp (case / 사례) đó. Khi thấy `persist()` trong mã (code / 코드) cũ, đừng bản sao (copy / 복사) nó như best practice hiện đại.
 
-Một pattern dễ hiểu ở mọi version là lấy dữ liệu cần dùng ra ngay:
+Một mẫu (pattern / 패턴) dễ hiểu ở mọi phiên bản (version / 버전) là lấy dữ liệu cần dùng ra ngay:
 
 ```jsx
 function handleChange(event) {
@@ -762,15 +765,15 @@ function handleChange(event) {
 }
 ```
 
-## 9. State với `useState`
+## 9. trạng thái (state / 상태) với `useState`
 
-State là dữ liệu riêng của component có thể thay đổi theo thời gian và ảnh hưởng đến render.
+Trạng thái (state / 상태) là dữ liệu riêng của thành phần (component / 컴포넌트) có thể thay đổi theo thời gian và ảnh hưởng đến kết xuất (render / 렌더링).
 
 ```jsx
 const [count, setCount] = useState(0);
 ```
 
-`useState(initialState)` trả `[state, setter]`. Gọi setter không biến đổi biến state hiện tại ngay lập tức; nó yêu cầu React render với state mới.
+`useState(initialState)` trả `[state, setter]`. Gọi setter không biến đổi biến trạng thái (state / 상태) hiện tại ngay lập tức; nó yêu cầu React kết xuất (render / 렌더링) với trạng thái (state / 상태) mới.
 
 ### State là snapshot
 Phần này nối mạch bài học với “State là snapshot”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -783,15 +786,15 @@ function handleClick() {
 }
 ```
 
-`console.log` vẫn nhìn thấy snapshot của render hiện tại.
+`console.log` vẫn nhìn thấy snapshot của kết xuất (render / 렌더링) hiện tại.
 
-Khi state mới phụ thuộc state trước, dùng updater function:
+Khi trạng thái (state / 상태) mới phụ thuộc trạng thái (state / 상태) trước, dùng updater hàm (function / 함수):
 
 ```jsx
 setCount(c => c + 1);
 ```
 
-Ba update nối tiếp:
+Ba cập nhật (update / 업데이트) nối tiếp:
 
 ```jsx
 setCount(c => c + 1);
@@ -801,7 +804,7 @@ setCount(c => c + 1);
 
 sẽ tăng 3.
 
-### Object state
+### Đối tượng (object / 객체) trạng thái (state / 상태)
 
 Sai:
 
@@ -816,7 +819,7 @@ setUser(user);
 setUser(prev => ({ ...prev, age: 26 }));
 ```
 
-### Array state
+### Array trạng thái (state / 상태)
 
 Thêm:
 
@@ -846,29 +849,29 @@ Lazy initializer:
 const [items, setItems] = useState(() => createInitialItems());
 ```
 
-> ### Version Note — Hooks bắt đầu từ React 16.8
+> ### phiên bản (version / 버전) ghi chú (note / 노트) — Hooks bắt đầu từ React 16.8
 >
-> `useState` và các Hooks nền tảng xuất hiện từ **React 16.8**. Nếu bạn gặp tutorial React 15/16 đời đầu, state thường nằm trong Class Component và được cập nhật bằng `this.setState`. Không cần học Class Component trước để hiểu React hiện đại; hãy học Function Component + Hooks trước, rồi đọc class ở level Master để bảo trì code legacy.
+> `useState` và các Hooks nền tảng xuất hiện từ **React 16.8**. Nếu bạn gặp tutorial React 15/16 đời đầu, trạng thái (state / 상태) thường nằm trong lớp (class / 클래스) thành phần (component / 컴포넌트) và được cập nhật bằng `this.setState`. Không cần học lớp (class / 클래스) thành phần (component / 컴포넌트) trước để hiểu React hiện đại; hãy học hàm (function / 함수) thành phần (component / 컴포넌트) + Hooks trước, rồi đọc lớp (class / 클래스) ở mức (level / 수준) Master để bảo trì mã (code / 코드) legacy.
 
-## 9A. Update queue và updater function
+## 9A. cập nhật (update / 업데이트) hàng đợi (queue / 큐) và updater hàm (function / 함수)
 
-Setter thêm update vào hàng đợi. Nhiều `setCount(count + 1)` trong cùng handler đều đọc cùng snapshot; `setCount(c => c + 1)` nhận kết quả queued trước nên đúng khi state mới phụ thuộc state cũ. Class `setState(state => ...)` có cùng mục đích, nhưng object `setState` của class shallow-merge còn Hook setter replace value. React 18 với modern root mở rộng automatic batching sang nhiều async sources; correctness không nên dựa vào giả định mỗi setter render ngay một lần.
+Setter thêm cập nhật (update / 업데이트) vào hàng đợi. Nhiều `setCount(count + 1)` trong cùng handler đều đọc cùng snapshot; `setCount(c => c + 1)` nhận kết quả queued trước nên đúng khi trạng thái (state / 상태) mới phụ thuộc trạng thái (state / 상태) cũ. lớp (class / 클래스) `setState(state => ...)` có cùng mục đích, nhưng đối tượng (object / 객체) `setState` của lớp (class / 클래스) shallow-merge còn Hook setter replace giá trị (value / 값). React 18 với hiện đại (modern / 현대적) gốc (root / 루트) mở rộng automatic batching sang nhiều async sources; tính đúng đắn (correctness / 정확성) không nên dựa vào giả định mỗi setter kết xuất (render / 렌더링) ngay một lần.
 
-## 9B. State ownership, minimal state và source of truth
+## 9B. quyền sở hữu trạng thái (state ownership / 상태 소유권), minimal trạng thái (state / 상태) và nguồn chuẩn (source of truth / 정본)
 
-Một state tốt phải có **owner** rõ: component nào chịu trách nhiệm thay đổi nó và subtree nào cần đọc nó. Nếu hai sibling cần cùng một giá trị, thường nâng state lên nearest common owner thay vì tạo hai bản sao rồi dùng Effect để đồng bộ. Nếu giá trị có thể tính từ props/state hiện có, hãy derive trong render thay vì lưu thêm một source of truth.
+Một trạng thái (state / 상태) tốt phải có **đơn vị sở hữu (owner / 오너)** rõ: thành phần (component / 컴포넌트) nào chịu trách nhiệm thay đổi nó và subtree nào cần đọc nó. Nếu hai sibling cần cùng một giá trị, thường nâng trạng thái (state / 상태) lên nearest dùng chung (common / 공통) đơn vị sở hữu (owner / 오너) thay vì tạo hai bản sao rồi dùng tác động (effect / 효과) để đồng bộ. Nếu giá trị có thể tính từ props/trạng thái (state / 상태) hiện có, hãy derive trong kết xuất (render / 렌더링) thay vì lưu thêm một nguồn chuẩn (source of truth / 정본).
 
-Ví dụ không nên lưu cả `items` lẫn `visibleItems` nếu `visibleItems` chỉ là `items.filter(...)`. Duplicate state tạo bài toán đồng bộ, còn derived value tự cập nhật theo render. Tương tự, state nên mô tả dữ liệu nghiệp vụ tối thiểu chứ không mô tả mọi biến trung gian của UI.
+Ví dụ không nên lưu cả `items` lẫn `visibleItems` nếu `visibleItems` chỉ là `items.filter(...)`. Duplicate trạng thái (state / 상태) tạo bài toán đồng bộ, còn derived giá trị (value / 값) tự cập nhật theo kết xuất (render / 렌더링). Tương tự, trạng thái (state / 상태) nên mô tả dữ liệu nghiệp vụ tối thiểu chứ không mô tả mọi biến trung gian của UI.
 
-State update phải được hiểu theo snapshot. Event handler của một render nhìn thấy snapshot của render đó; setter queue state cho render tiếp theo. Khi state mới phụ thuộc state cũ, updater function như `setCount(c => c + 1)` mô tả transition chính xác hơn việc đọc snapshot cũ nhiều lần. Đây là invariant chung dù syntax là class `setState` hay Hook setter.
+Trạng thái (state / 상태) cập nhật (update / 업데이트) phải được hiểu theo snapshot. sự kiện (event / 이벤트) handler của một kết xuất (render / 렌더링) nhìn thấy snapshot của kết xuất (render / 렌더링) đó; setter hàng đợi (queue / 큐) trạng thái (state / 상태) cho kết xuất (render / 렌더링) tiếp theo. Khi trạng thái (state / 상태) mới phụ thuộc trạng thái (state / 상태) cũ, updater hàm (function / 함수) như `setCount(c => c + 1)` mô tả chuyển tiếp (transition / 전이) chính xác hơn việc đọc snapshot cũ nhiều lần. Đây là bất biến (invariant / 불변식) chung dù cú pháp (syntax / 문법) là lớp (class / 클래스) `setState` hay Hook setter.
 
-## 10. Render, re-render và batching
+## 10. kết xuất (render / 렌더링), re-render và batching
 
-Component render lần đầu khi mount. Sau đó nó có thể render lại khi state thay đổi, parent render, context đọc được thay đổi hoặc các cơ chế liên quan khác kích hoạt update.
+Thành phần (component / 컴포넌트) kết xuất (render / 렌더링) lần đầu khi mount. Sau đó nó có thể kết xuất (render / 렌더링) lại khi trạng thái (state / 상태) thay đổi, parent kết xuất (render / 렌더링), ngữ cảnh (context / 맥락) đọc được thay đổi hoặc các cơ chế liên quan khác kích hoạt cập nhật (update / 업데이트).
 
-Re-render không tự động là performance problem. Đây là cơ chế bình thường. Chỉ tối ưu khi có bằng chứng bottleneck.
+Re-render không tự động là hiệu năng (performance / 성능) bài toán (problem / 문제). Đây là cơ chế bình thường. Chỉ tối ưu khi có bằng chứng bottleneck.
 
-React có thể batch nhiều update để giảm commit không cần thiết:
+React có thể batch nhiều cập nhật (update / 업데이트) để giảm lần ghi nhận (commit / 커밋) không cần thiết:
 
 ```jsx
 function handleClick() {
@@ -878,23 +881,23 @@ function handleClick() {
 }
 ```
 
-Không nên giả định mỗi setter tạo một render ngay lập tức.
+Không nên giả định mỗi setter tạo một kết xuất (render / 렌더링) ngay lập tức.
 
-> ### Version Note — automatic batching từ React 18
+> ### phiên bản (version / 버전) ghi chú (note / 노트) — automatic batching từ React 18
 >
-> Trước React 18, batching mặc định hẹp hơn và thường gắn với React event handler. Từ **React 18 khi dùng `createRoot`**, updates trong Promise, `setTimeout`, native event handler và nhiều nguồn khác cũng được automatic batch. Vì vậy đừng dùng số lần render quan sát được trong tutorial React 17 làm “quy luật” cho React hiện đại. Nếu thật sự cần ép DOM commit đồng bộ, React DOM có `flushSync`, nhưng đây là escape hatch và không phải API nên dùng thường xuyên.
+> Trước React 18, batching mặc định hẹp hơn và thường gắn với React sự kiện (event / 이벤트) handler. Từ **React 18 khi dùng `createRoot`**, updates trong Promise, `setTimeout`, bản địa (native / 네이티브) sự kiện (event / 이벤트) handler và nhiều nguồn khác cũng được automatic batch. Vì vậy đừng dùng số lần kết xuất (render / 렌더링) quan sát được trong tutorial React 17 làm “quy luật” cho React hiện đại. Nếu thật sự cần ép DOM lần ghi nhận (commit / 커밋) đồng bộ, React DOM có `flushSync`, nhưng đây là escape hatch và không phải API nên dùng thường xuyên.
 
-## 10A. Reconciliation, identity và preserve/reset state
+## 10A. Reconciliation, định danh (identity / 식별자) và preserve/reset trạng thái (state / 상태)
 
-Reconciliation so tree mới với tree trước. Mental model dành cho application code là **type + position + key**. Cùng type ở cùng vị trí thường giữ local state khi props đổi; đổi type thường thay subtree và reset state. `key` thêm identity nghiệp vụ ngoài vị trí, nên `<Editor key={document.id} />` có thể chủ động reset draft khi đổi document mà không cần Effect chỉ để `setDraft('')`.
+Reconciliation so cây (tree / 트리) mới với cây (tree / 트리) trước. mô hình tư duy (mental model / 사고 모델) dành cho ứng dụng (application / 애플리케이션) mã (code / 코드) là **kiểu (type / 타입) + position + key**. Cùng kiểu (type / 타입) ở cùng vị trí thường giữ cục bộ (local / 로컬) trạng thái (state / 상태) khi props đổi; đổi kiểu (type / 타입) thường thay subtree và reset trạng thái (state / 상태). `key` thêm định danh (identity / 식별자) nghiệp vụ ngoài vị trí, nên `<Editor key={document.id} />` có thể chủ động reset draft khi đổi document mà không cần tác động (effect / 효과) chỉ để `setDraft('')`.
 
-React 16 đưa Fiber để render work có thể được chia và schedule linh hoạt hơn; application code không truy cập Fiber internals. Invariant xuyên React cũ và mới vẫn là render purity và identity qua type/position/key.
+React 16 đưa Fiber để kết xuất (render / 렌더링) công việc (work / 작업) có thể được chia và schedule linh hoạt hơn; ứng dụng (application / 애플리케이션) mã (code / 코드) không truy cập Fiber internals. bất biến (invariant / 불변식) xuyên React cũ và mới vẫn là kết xuất (render / 렌더링) purity và định danh (identity / 식별자) qua kiểu (type / 타입)/position/key.
 
-## 10B. Reconciliation bằng ví dụ: type, position và key
+## 10B. Reconciliation bằng ví dụ: kiểu (type / 타입), position và key
 
-Reconciliation không phải “deep compare toàn bộ DOM”. Ở mức mental model, React dùng cấu trúc tree để quyết định identity. Nếu cùng component type tiếp tục xuất hiện ở cùng vị trí logic, React thường preserve local state. Nếu type đổi, subtree tương ứng thường được thay và state bên trong reset. `key` cho phép bạn nói rõ identity khi vị trí không đủ.
+Reconciliation không phải “deep compare toàn bộ DOM”. Ở mức mô hình tư duy (mental model / 사고 모델), React dùng cấu trúc cây (tree / 트리) để quyết định định danh (identity / 식별자). Nếu cùng thành phần (component / 컴포넌트) kiểu (type / 타입) tiếp tục xuất hiện ở cùng vị trí lô-gic (logic / 논리), React thường preserve cục bộ (local / 로컬) trạng thái (state / 상태). Nếu kiểu (type / 타입) đổi, subtree tương ứng thường được thay và trạng thái (state / 상태) bên trong reset. `key` cho phép bạn nói rõ định danh (identity / 식별자) khi vị trí không đủ.
 
-Một lỗi khó thấy là khai báo component bên trong component khác:
+Một lỗi khó thấy là khai báo thành phần (component / 컴포넌트) bên trong thành phần (component / 컴포넌트) khác:
 
 ```jsx
 function Page() {
@@ -907,9 +910,9 @@ function Page() {
 }
 ```
 
-Mỗi render của `Page` tạo một function component type mới, nên React có thể coi `Editor` là type khác và reset state. Hãy khai báo component ở module scope trừ khi bạn thật sự cần một function helper không phải component.
+Mỗi kết xuất (render / 렌더링) của `Page` tạo một hàm (function / 함수) thành phần (component / 컴포넌트) kiểu (type / 타입) mới, nên React có thể coi `Editor` là kiểu (type / 타입) khác và reset trạng thái (state / 상태). Hãy khai báo thành phần (component / 컴포넌트) ở mô-đun (module / 모듈) phạm vi (scope / 범위) trừ khi bạn thật sự cần một hàm (function / 함수) helper không phải thành phần (component / 컴포넌트).
 
-`key` cũng không chỉ dành cho list. Nếu `documentId` đổi và draft phải bắt đầu như một editor instance mới, `<Editor key={documentId} />` biểu đạt reset identity trực tiếp. Ngược lại, dùng key ngẫu nhiên khiến subtree remount mỗi render, làm mất state, focus và có thể tăng chi phí DOM.
+`key` cũng không chỉ dành cho danh sách (list / 목록). Nếu `documentId` đổi và draft phải bắt đầu như một editor instance mới, `<Editor key={documentId} />` biểu đạt reset định danh (identity / 식별자) trực tiếp. Ngược lại, dùng key ngẫu nhiên khiến subtree remount mỗi kết xuất (render / 렌더링), làm mất trạng thái (state / 상태), focus và có thể tăng chi phí DOM.
 
 ## 11. Conditional rendering
 
@@ -940,13 +943,13 @@ Cẩn thận:
 {items.length && <List items={items} />}
 ```
 
-Khi length bằng `0`, React có thể render `0`. Viết rõ:
+Khi length bằng `0`, React có thể kết xuất (render / 렌더링) `0`. Viết rõ:
 
 ```jsx
 {items.length > 0 && <List items={items} />}
 ```
 
-Component có thể return `null` nếu không muốn render DOM output.
+Thành phần (component / 컴포넌트) có thể return `null` nếu không muốn kết xuất (render / 렌더링) DOM đầu ra (output / 출력).
 
 ## 12. List và `key`
 Phần này nối mạch bài học với “12. List và `key`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -960,23 +963,23 @@ Phần này nối mạch bài học với “12. List và `key`”, nêu mục �
 </ul>
 ```
 
-`key` giúp React xác định identity của sibling giữa các lần render. Key phải ổn định và unique trong cùng list sibling.
+`key` giúp React xác định định danh (identity / 식별자) của sibling giữa các lần kết xuất (render / 렌더링). Key phải ổn định và unique trong cùng danh sách (list / 목록) sibling.
 
-Không dùng `Math.random()` làm key vì identity đổi mỗi render. Index chỉ an toàn khi list thực sự tĩnh, không reorder/insert/delete và row không có state/DOM identity cần giữ.
+Không dùng `Math.random()` làm key vì định danh (identity / 식별자) đổi mỗi kết xuất (render / 렌더링). chỉ mục (index / 인덱스) chỉ an toàn khi danh sách (list / 목록) thực sự tĩnh, không reorder/insert/delete và row không có trạng thái (state / 상태)/DOM định danh (identity / 식별자) cần giữ.
 
-`key` không được truyền xuống như prop bình thường. Nếu component cần ID, truyền riêng:
+`key` không được truyền xuống như prop bình thường. Nếu thành phần (component / 컴포넌트) cần ID, truyền riêng:
 
 ```jsx
 <Item key={item.id} id={item.id} />
 ```
 
-## 12A. `key` là identity, không chỉ để xóa warning
+## 12A. `key` là định danh (identity / 식별자), không chỉ để xóa warning
 
-Index key có thể làm local state, uncontrolled input, focus hoặc animation đi theo vị trí sai khi list reorder/insert/delete. ID ổn định từ dữ liệu là mặc định tốt hơn. Index chỉ hợp lý khi list thật sự tĩnh. `key` cũng dùng ngoài list để reset subtree có chủ đích, ví dụ `<Chat key={contact.id} />`.
+Chỉ mục (index / 인덱스) key có thể làm cục bộ (local / 로컬) trạng thái (state / 상태), uncontrolled đầu vào (input / 입력), focus hoặc animation đi theo vị trí sai khi danh sách (list / 목록) reorder/insert/delete. ID ổn định từ dữ liệu là mặc định tốt hơn. chỉ mục (index / 인덱스) chỉ hợp lý khi danh sách (list / 목록) thật sự tĩnh. `key` cũng dùng ngoài danh sách (list / 목록) để reset subtree có chủ đích, ví dụ `<Chat key={contact.id} />`.
 
 ## 13. Form cơ bản
 
-Controlled input:
+Controlled đầu vào (input / 입력):
 
 ```jsx
 const [email, setEmail] = useState("");
@@ -1017,13 +1020,13 @@ function handleSubmit(event) {
 <form onSubmit={handleSubmit}>...</form>
 ```
 
-Button trong form thường mặc định là submit. Nếu chỉ là action phụ, ghi `type="button"`.
+Button trong form thường mặc định là submit. Nếu chỉ là hành động (action / 동작) phụ, ghi `type="button"`.
 
-Controlled input dùng React state làm source of truth. Uncontrolled input để DOM giữ value và đọc qua ref/FormData. Cả hai đều hợp lệ; beginner nên nắm controlled trước.
+Controlled đầu vào (input / 입력) dùng React trạng thái (state / 상태) làm nguồn chuẩn (source of truth / 정본). Uncontrolled đầu vào (input / 입력) để DOM giữ giá trị (value / 값) và đọc qua ref/FormData. Cả hai đều hợp lệ; beginner nên nắm controlled trước.
 
-## 14. Lifting state up và single source of truth
+## 14. Lifting trạng thái (state / 상태) up và single nguồn chuẩn (source of truth / 정본)
 
-Khi hai component cần đồng bộ cùng dữ liệu, đưa state lên ancestor chung gần nhất.
+Khi hai thành phần (component / 컴포넌트) cần đồng bộ cùng dữ liệu, đưa trạng thái (state / 상태) lên ancestor chung gần nhất.
 
 ```jsx
 function TemperatureInput({ value, onChange }) {
@@ -1042,7 +1045,7 @@ function Calculator() {
 }
 ```
 
-Mỗi mẩu state quan trọng nên có một owner rõ ràng.
+Mỗi mẩu trạng thái (state / 상태) quan trọng nên có một đơn vị sở hữu (owner / 오너) rõ ràng.
 
 ## 15. Composition và `children`
 Phần này nối mạch bài học với “15. Composition và `children`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1063,7 +1066,7 @@ function App() {
 }
 ```
 
-`children` là prop chứa nội dung giữa opening/closing tag. Có thể truyền JSX qua prop tên riêng khi semantic rõ hơn.
+`children` là prop chứa nội dung giữa opening/closing tag. Có thể truyền JSX qua prop tên riêng khi ngữ nghĩa (semantic / 의미적) rõ hơn.
 
 React ưu tiên composition hơn inheritance cho UI.
 
@@ -1090,23 +1093,23 @@ Inline style thích hợp cho giá trị động nhỏ:
 <div style={{ width: `${progress}%` }} />
 ```
 
-Ứng dụng lớn có thể dùng utility CSS hoặc component library; đó là ecosystem, không phải React core.
+Ứng dụng lớn có thể dùng utility CSS hoặc thành phần (component / 컴포넌트) thư viện (library / 라이브러리); đó là ecosystem, không phải React cốt lõi (core / 핵심).
 
-## 17. Strict Mode
+## 17. Strict chế độ (mode / 모드)
 
-`<StrictMode>` bật các kiểm tra development. React có thể chạy lại một số logic để phát hiện render không pure hoặc cleanup sai. Vì vậy beginner có thể thấy log/Effect nhiều hơn mong đợi trong development.
+`<StrictMode>` bật các kiểm tra development. React có thể chạy lại một số lô-gic (logic / 논리) để phát hiện kết xuất (render / 렌더링) không pure hoặc cleanup sai. Vì vậy beginner có thể thấy log/tác động (effect / 효과) nhiều hơn mong đợi trong development.
 
-Không tắt Strict Mode chỉ để “hết chạy hai lần”. Hãy sửa purity và cleanup. Production không chạy các development checks theo cùng cách.
+Không tắt Strict chế độ (mode / 모드) chỉ để “hết chạy hai lần”. Hãy sửa purity và cleanup. môi trường vận hành (production / 운영 환경) không chạy các development checks theo cùng cách.
 
-> ### Version Note — Strict Mode từ React 18 dễ làm người mới hiểu nhầm
+> ### phiên bản (version / 버전) ghi chú (note / 노트) — Strict chế độ (mode / 모드) từ React 18 dễ làm người mới hiểu nhầm
 >
-> React 18 thêm development-only check mô phỏng việc setup/cleanup rồi setup lại một số Effect khi component mount lần đầu trong Strict Mode. Mục tiêu là phát hiện Effect không cleanup đúng và chuẩn bị code cho kiến trúc có thể preserve/reuse state. Vì vậy khi development thấy Effect hoặc log xuất hiện nhiều lần, đừng vội kết luận React bị lỗi hoặc tắt Strict Mode; trước tiên kiểm tra purity và cleanup. Production không chạy cùng kiểu kiểm tra development này.
+> React 18 thêm development-only check mô phỏng việc setup/cleanup rồi setup lại một số tác động (effect / 효과) khi thành phần (component / 컴포넌트) mount lần đầu trong Strict chế độ (mode / 모드). Mục tiêu là phát hiện tác động (effect / 효과) không cleanup đúng và chuẩn bị mã (code / 코드) cho kiến trúc có thể preserve/reuse trạng thái (state / 상태). Vì vậy khi development thấy tác động (effect / 효과) hoặc log xuất hiện nhiều lần, đừng vội kết luận React bị lỗi hoặc tắt Strict chế độ (mode / 모드); trước tiên kiểm tra purity và cleanup. môi trường vận hành (production / 운영 환경) không chạy cùng kiểu kiểm tra development này.
 
-## 18. Debug
+## 18. gỡ lỗi (debug / 디버그)
 
-Phân biệt bốn lớp lỗi: JavaScript runtime, React state/render, DOM/CSS và network/API. Browser DevTools dùng Console, Network, Elements, Performance; React DevTools cho component tree, props/state và profiler.
+Phân biệt bốn lớp lỗi: JavaScript thời gian chạy (runtime / 런타임), React trạng thái (state / 상태)/kết xuất (render / 렌더링), DOM/CSS và mạng (network / 네트워크)/API. trình duyệt (browser / 브라우저) DevTools dùng Console, mạng (network / 네트워크), Elements, hiệu năng (performance / 성능); React DevTools cho thành phần (component / 컴포넌트) cây (tree / 트리), props/trạng thái (state / 상태) và profiler.
 
-Khi debug state, log input và transition thay vì chỉ log state ngay sau setter.
+Khi gỡ lỗi (debug / 디버그) trạng thái (state / 상태), log đầu vào (input / 입력) và chuyển tiếp (transition / 전이) thay vì chỉ log trạng thái (state / 상태) ngay sau setter.
 
 ## 19. Mini project Todo hoàn chỉnh
 Phần này nối mạch bài học với “19. Mini project Todo hoàn chỉnh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1183,11 +1186,11 @@ export default function TodoApp() {
 }
 ```
 
-`nextId` ngoài component chỉ phù hợp demo local. Production thường dùng ID server/database hoặc chiến lược định danh phù hợp.
+`nextId` ngoài thành phần (component / 컴포넌트) chỉ phù hợp demo cục bộ (local / 로컬). môi trường vận hành (production / 운영 환경) thường dùng ID máy chủ (server / 서버)/cơ sở dữ liệu (database / 데이터베이스) hoặc chiến lược định danh phù hợp.
 
 ## 20. Các lỗi beginner thường gặp
 
-### Gọi handler trong render
+### Gọi handler trong kết xuất (render / 렌더링)
 
 Sai:
 
@@ -1201,7 +1204,7 @@ Sai:
 <button onClick={save}>Save</button>
 ```
 
-### Mutate state
+### Mutate trạng thái (state / 상태)
 
 Sai:
 
@@ -1216,7 +1219,7 @@ setItems(items);
 setItems(prev => [...prev, newItem]);
 ```
 
-### State dư thừa
+### Trạng thái (state / 상태) dư thừa
 
 Không nên lưu `fullName` nếu có thể tính từ `firstName` và `lastName`:
 
@@ -1237,23 +1240,23 @@ function App() {
 }
 ```
 
-Mỗi render có thể tạo component identity mới và gây reset state. Component thường nên được định nghĩa top-level.
+Mỗi kết xuất (render / 렌더링) có thể tạo thành phần (component / 컴포넌트) định danh (identity / 식별자) mới và gây reset trạng thái (state / 상태). thành phần (component / 컴포넌트) thường nên được định nghĩa top-level.
 
 ### Hiểu sai setter là assignment đồng bộ
 
 `setCount(count + 1)` không làm biến `count` trong closure hiện tại thay đổi ngay.
 
-## 21. Kết thúc level Beginner
+## 21. Kết thúc mức (level / 수준) Beginner
 
-Bạn nên tự giải thích được: React khác DOM imperative ở đâu; JSX là gì; component, props và state khác nhau thế nào; vì sao state update phải immutable; vì sao state là snapshot; `key` ảnh hưởng identity thế nào; controlled form hoạt động ra sao; khi nào nên derive giá trị thay vì lưu state.
+Bạn nên tự giải thích được: React khác DOM imperative ở đâu; JSX là gì; thành phần (component / 컴포넌트), props và trạng thái (state / 상태) khác nhau thế nào; vì sao trạng thái (state / 상태) cập nhật (update / 업데이트) phải immutable; vì sao trạng thái (state / 상태) là snapshot; `key` ảnh hưởng định danh (identity / 식별자) thế nào; controlled form hoạt động ra sao; khi nào nên derive giá trị thay vì lưu trạng thái (state / 상태).
 
-Bạn cũng nên tự xây được CRUD nhỏ client-side mà không copy architecture, và chỉ ra rõ owner của từng state.
+Bạn cũng nên tự xây được CRUD nhỏ client-side mà không bản sao (copy / 복사) kiến trúc (architecture / 아키텍처), và chỉ ra rõ đơn vị sở hữu (owner / 오너) của từng trạng thái (state / 상태).
 
-## Version Map cho level Beginner
+## Phiên bản (version / 버전) Map cho mức (level / 수준) Beginner
 
-Ở level Beginner, chỉ cần ghi nhớ bốn mốc để không bị rối khi đọc tài liệu trên Internet. **React 16.8** là lúc Hooks xuất hiện; **React 18** là lúc `createRoot`, automatic batching và concurrent foundations trở thành chuẩn hiện đại; **React 18.3** là bước đệm cảnh báo trước khi nâng lên 19; **React 19.x** mở rộng Actions/server APIs và đơn giản hóa một số syntax như ref-as-prop. Baseline của bộ note là **React 19.3**.
+Ở mức (level / 수준) Beginner, chỉ cần ghi nhớ bốn mốc để không bị rối khi đọc tài liệu trên Internet. **React 16.8** là lúc Hooks xuất hiện; **React 18** là lúc `createRoot`, automatic batching và concurrent foundations trở thành chuẩn hiện đại; **React 18.3** là bước đệm cảnh báo trước khi nâng lên 19; **React 19.x** mở rộng Actions/máy chủ (server / 서버) APIs và đơn giản hóa một số cú pháp (syntax / 문법) như ref-as-prop. Baseline của bộ ghi chú (note / 노트) là **React 19.3**.
 
-Nếu một đoạn code khác tài liệu này, hãy kiểm tra `package.json` trước khi cho rằng cú pháp nào “đúng” hay “sai”:
+Nếu một đoạn mã (code / 코드) khác tài liệu này, hãy kiểm tra `package.json` trước khi cho rằng cú pháp nào “đúng” hay “sai”:
 
 ```json
 {
@@ -1264,4 +1267,6 @@ Nếu một đoạn code khác tài liệu này, hãy kiểm tra `package.json` 
 }
 ```
 
-React và React DOM nên được xem như một cặp version tương thích. Với framework như Next.js, còn phải kiểm tra framework đang hỗ trợ/pin React version nào; không tự nâng React độc lập chỉ vì thấy API mới trên react.dev.
+React và React DOM nên được xem như một cặp phiên bản (version / 버전) tương thích. Với khung phần mềm (framework / 프레임워크) như Next.js, còn phải kiểm tra khung phần mềm (framework / 프레임워크) đang hỗ trợ/pin React phiên bản (version / 버전) nào; không tự nâng React độc lập chỉ vì thấy API mới trên react.dev.
+
+> **Bàn giao:** Sau **phiên bản (version / 버전) Map cho mức (level / 수준) Beginner**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index](./00_index.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

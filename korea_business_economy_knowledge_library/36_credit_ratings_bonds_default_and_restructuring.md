@@ -1,5 +1,8 @@
 # Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)
 
+> **Mạch đọc:** Đặt **Xếp hạng tín nhiệm, trái phiếu, vỡ nợ và tái cấu trúc tại doanh nghiệp Hàn Quốc (Credit Risk / 신용위험·회사채·구조조정)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Rủi ro tín dụng là gì?** sang **2. Cổ đông và chủ nợ nhìn cùng một doanh nghiệp khác nhau thế nào?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một doanh nghiệp có thể vẫn báo lợi nhuận hoạt động nhưng rơi vào khủng hoảng nếu nợ đáo hạn trước khi tiền mặt về. Vì vậy khi phân tích doanh nghiệp, đặc biệt là xây dựng, công nghiệp nặng, hàng không, bán lẻ, công ty mẹ có đòn bẩy cao hoặc doanh nghiệp dự án, phải tách **rủi ro lợi nhuận** khỏi **rủi ro tín dụng (credit risk / 신용위험)**.
 
 Phân tích tín dụng không hỏi đầu tiên “doanh nghiệp có tăng trưởng không?”. Nó hỏi: **doanh nghiệp có đủ tiền để trả đúng nghĩa vụ, đúng thời điểm, trong một phạm vi kịch bản hợp lý hay không?**

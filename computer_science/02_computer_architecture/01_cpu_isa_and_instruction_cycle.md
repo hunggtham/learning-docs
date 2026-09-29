@@ -1,20 +1,29 @@
 # CPU, ISA và instruction cycle
 
-CPU (Central Processing Unit / 중앙 처리 장치) là engine thực thi instructions. Để hiểu nó, cần tách hai tầng: **ISA** là contract software-visible; **microarchitecture** là cách chip cụ thể hiện thực contract đó.
+> **Mạch đọc:** Đặt **CPU, ISA và instruction cycle** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **ISA như ranh giới (boundary / 경계) giữa software và hardware** sang **Registers**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## ISA như boundary giữa software và hardware
 
-Instruction Set Architecture (명령어 집합 구조) định nghĩa instructions, registers, data types ở machine level, addressing modes, privilege behavior và memory model relevant cho software. x86-64 và ARM64 là hai ISA families phổ biến.
+CPU (Central Processing Unit / 중앙 처리 장치) là engine thực thi instructions. Để hiểu nó, cần tách hai tầng: **ISA** là đặc tả hợp đồng (contract / 계약) software-visible; **microarchitecture** là cách chip cụ thể hiện thực đặc tả hợp đồng (contract / 계약) đó.
 
-Một executable được compile cho ARM64 không trực tiếp chạy trên x86-64 vì machine instruction encoding và semantics khác. OS ABI còn thêm calling convention, syscall convention và binary format.
+## ISA như ranh giới (boundary / 경계) giữa software và hardware
 
-Microarchitecture có thể thay đổi mạnh giữa CPU generations nhưng vẫn chạy cùng ISA, giống hai database engines cùng expose SQL subset nhưng internal execution khác.
+Instruction Set kiến trúc (architecture / 아키텍처) định nghĩa instructions, registers, dữ liệu (data / 데이터) types ở machine mức (level / 수준), addressing modes, privilege hành vi (behavior / 동작) và bộ nhớ (memory / 메모리) mô hình (model / 모델) relevant cho software. x86-64 và ARM64 là hai ISA families phổ biến.
+
+Một executable được compile cho ARM64 không trực tiếp chạy trên x86-64 vì lệnh máy (machine instruction / 기계 명령어) encoding và ngữ nghĩa (semantics / 의미론) khác. OS ABI còn thêm calling convention, syscall convention và nhị phân (binary / 이진) format.
+
+Microarchitecture có thể thay đổi mạnh giữa CPU generations nhưng vẫn chạy cùng ISA, giống hai cơ sở dữ liệu (database / 데이터베이스) engines cùng expose SQL subset nhưng nội bộ (internal / 내부) thực thi (execution / 실행) khác.
+
+
+> **Chuyển mạch:** Từ **ISA như ranh giới (boundary / 경계) giữa software và hardware**, ta sang **Registers** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Registers
 
-Registers là storage cực nhanh trong CPU. General-purpose registers giữ operands, addresses hoặc intermediate values. Program Counter (PC / 명령어 포인터) chỉ instruction kế tiếp. Stack pointer theo dõi call stack convention. Status/flags registers giữ condition bits trên một số architectures.
+Registers là lưu trữ (storage / 저장소) cực nhanh trong CPU. General-purpose registers giữ operands, addresses hoặc intermediate values. Program Counter (PC / 명령어 포인터) chỉ instruction kế tiếp. ngăn xếp (stack / 스택) pointer theo dõi ngăn xếp lời gọi (call stack / 호출 스택) convention. Status/flags registers giữ điều kiện (condition / 조건) bits trên một số architectures.
 
-Compiler register allocation cố giữ hot values trong registers thay vì spill ra memory.
+Trình biên dịch (compiler / 컴파일러) register allocation cố giữ hot values trong registers thay vì spill ra bộ nhớ (memory / 메모리).
+
+
+> **Chuyển mạch:** Từ **Registers**, ta sang **Fetch, decode, execute** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Fetch, decode, execute
 
@@ -24,54 +33,80 @@ Textbook mô tả instruction cycle:
 2. decode opcode/operands;
 3. read operands;
 4. execute;
-5. memory access nếu cần;
-6. write result;
-7. update PC.
+5. bộ nhớ (memory / 메모리) truy cập (access / 접근) nếu cần;
+6. ghi (write / 쓰기) kết quả (result / 결과);
+7. cập nhật (update / 업데이트) PC.
 
-Đây là conceptual model. CPU hiện đại pipeline và overlap nhiều instructions, thậm chí execute out-of-order trong khi giữ architectural result tương đương allowed semantics.
+Đây là conceptual mô hình (model / 모델). CPU hiện đại chuỗi xử lý (pipeline / 파이프라인) và overlap nhiều instructions, thậm chí execute out-of-order trong khi giữ architectural kết quả (result / 결과) tương đương allowed ngữ nghĩa (semantics / 의미론).
 
-## Load/store và computation
 
-CPU không thường arithmetic trực tiếp trên arbitrary disk/file/object. Data phải nằm trong registers/cache/memory hierarchy. Load đọc memory vào register; store ghi register ra memory. ALU/FPU/vector units xử lý register operands.
+> **Chuyển mạch:** Từ **Fetch, decode, execute**, ta sang **tải (load / 로드)/store và computation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Load/store distinction giải thích vì sao memory latency quan trọng: arithmetic có thể rất nhanh nhưng waiting data stall dependency chain.
+## Tải (load / 로드)/store và computation
 
-## Branch và control flow
+CPU không thường arithmetic trực tiếp trên arbitrary disk/tệp (file / 파일)/đối tượng (object / 객체). dữ liệu (data / 데이터) phải nằm trong registers/bộ nhớ đệm (cache / 캐시)/bộ nhớ (memory / 메모리) hierarchy. tải (load / 로드) đọc bộ nhớ (memory / 메모리) vào register; store ghi register ra bộ nhớ (memory / 메모리). ALU/FPU/véc-tơ (vector / 벡터) units xử lý register operands.
 
-Conditional branch thay PC theo condition. High-level `if`, loops, function calls cuối cùng tạo control-flow edges. Pipeline cần đoán branch direction/target trước khi biết chắc để giữ units bận. Branch misprediction phải discard speculative work, tạo penalty.
+Tải (load / 로드)/store distinction giải thích vì sao bộ nhớ (memory / 메모리) độ trễ (latency / 지연 시간) quan trọng: arithmetic có thể rất nhanh nhưng waiting dữ liệu (data / 데이터) stall phụ thuộc (dependency / 의존성) chuỗi (chain / 사슬).
 
-Vì vậy data-dependent unpredictable branches đôi khi chậm hơn branchless vectorizable code, dù source operations count tương tự.
+
+> **Chuyển mạch:** Từ **tải (load / 로드)/store và computation**, ta sang **Branch và điều khiển (control / 제어) luồng (flow / 흐름)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Branch và điều khiển (control / 제어) luồng (flow / 흐름)
+
+Conditional branch thay PC theo điều kiện (condition / 조건). High-level `if`, loops, hàm (function / 함수) calls cuối cùng tạo control-flow edges. chuỗi xử lý (pipeline / 파이프라인) cần đoán branch direction/mục tiêu (target / 대상) trước khi biết chắc để giữ units bận. Branch misprediction phải discard speculative công việc (work / 작업), tạo penalty.
+
+Vì vậy data-dependent unpredictable branches đôi khi chậm hơn branchless vectorizable mã (code / 코드), dù nguồn (source / 소스) operations count tương tự.
+
+
+> **Chuyển mạch:** Từ **Branch và điều khiển (control / 제어) luồng (flow / 흐름)**, ta sang **Privilege levels** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Privilege levels
 
-CPU hỗ trợ privilege modes để OS kernel chạy quyền cao hơn user applications. User mode không được trực tiếp thao tác page tables hay device registers tùy ý. System call dùng controlled transition vào kernel mode.
+CPU hỗ trợ privilege modes để OS kernel chạy quyền cao hơn người dùng (user / 사용자) applications. chế độ người dùng (user mode / 사용자 모드) không được trực tiếp thao tác page tables hay thiết bị (device / 장치) registers tùy ý. lời gọi hệ thống (system call / 시스템 호출) dùng controlled chuyển tiếp (transition / 전이) vào kernel chế độ (mode / 모드).
 
-Hardware privilege là nền của process isolation và security boundaries; OS không thể chỉ “nhờ program ngoan”.
+Hardware privilege là nền của tiến trình (process / 프로세스) isolation và bảo mật (security / 보안) boundaries; OS không thể chỉ “nhờ program ngoan”.
+
+
+> **Chuyển mạch:** Từ **Privilege levels**, ta sang **Exceptions và interrupts** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Exceptions và interrupts
 
-Synchronous exception phát sinh do current instruction, như divide-by-zero, page fault, invalid opcode. Interrupt thường asynchronous từ device/timer. CPU chuyển control tới handler theo architecture/OS convention, lưu đủ context để resume hoặc xử lý failure.
+Synchronous exception phát sinh do hiện tại (current / 현재) instruction, như divide-by-zero, page fault, invalid opcode. Interrupt thường asynchronous từ thiết bị (device / 장치)/timer. CPU chuyển điều khiển (control / 제어) tới handler theo kiến trúc (architecture / 아키텍처)/OS convention, lưu đủ ngữ cảnh (context / 맥락) để resume hoặc xử lý thất bại (failure / 실패).
 
-Page fault nghe như error nhưng có thể là normal mechanism để demand-load virtual memory page.
+Page fault nghe như lỗi (error / 오류) nhưng có thể là normal cơ chế (mechanism / 메커니즘) để demand-load virtual bộ nhớ (memory / 메모리) page.
 
-## Out-of-order và speculative execution
 
-Modern CPU có thể decode instructions thành micro-operations, rename registers, issue operations khi operands ready, execute out-of-order và retire in architectural order. Mục tiêu là khai thác instruction-level parallelism.
+> **Chuyển mạch:** Từ **Exceptions và interrupts**, ta sang **Out-of-order và speculative thực thi (execution / 실행)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Speculation tăng performance nhưng tạo side channels nếu microarchitectural traces như cache state lộ thông tin, điển hình Spectre-class attacks. Đây là connection sâu giữa performance optimization và security model.
+## Out-of-order và speculative thực thi (execution / 실행)
 
-## Mental Model
+Hiện đại (modern / 현대적) CPU có thể decode instructions thành micro-operations, rename registers, issue operations khi operands ready, execute out-of-order và retire in architectural thứ tự (order / 순서). Mục tiêu là khai thác instruction-level parallelism.
 
-> ISA là **hợp đồng**: software thấy registers/instructions/memory semantics. Microarchitecture là **implementation** có pipeline, cache, speculation và execution units để thực hiện hợp đồng đó nhanh nhất có thể.
+Speculation tăng hiệu năng (performance / 성능) nhưng tạo side channels nếu microarchitectural traces như bộ nhớ đệm (cache / 캐시) trạng thái (state / 상태) lộ thông tin, điển hình Spectre-class attacks. Đây là liên kết (connection / 연결) sâu giữa hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) và bảo mật (security / 보안) mô hình (model / 모델).
 
-## Common Misconceptions
 
-**“CPU chạy từng instruction tuần tự đúng thứ tự source.”** Architectural effects phải tuân semantics, nhưng internal execution có thể overlap/out-of-order.
+> **Chuyển mạch:** Từ **Out-of-order và speculative thực thi (execution / 실행)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**“Page fault luôn là lỗi nghiêm trọng.”** Nhiều page faults là demand paging bình thường; invalid access mới dẫn tới signal/exception.
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“x86/ARM chỉ khác cú pháp assembly.”** Chúng khác ISA encoding, registers, memory ordering và ecosystem ABI, dù compilers che nhiều chi tiết.
+> ISA là **hợp đồng**: software thấy registers/instructions/bộ nhớ (memory / 메모리) ngữ nghĩa (semantics / 의미론). Microarchitecture là **hiện thực (implementation / 구현)** có chuỗi xử lý (pipeline / 파이프라인), bộ nhớ đệm (cache / 캐시), speculation và thực thi (execution / 실행) units để thực hiện hợp đồng đó nhanh nhất có thể.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“CPU chạy từng instruction tuần tự đúng thứ tự nguồn (source / 소스).”** Architectural effects phải tuân ngữ nghĩa (semantics / 의미론), nhưng nội bộ (internal / 내부) thực thi (execution / 실행) có thể overlap/out-of-order.
+
+**“Page fault luôn là lỗi nghiêm trọng.”** Nhiều page faults là demand paging bình thường; invalid truy cập (access / 접근) mới dẫn tới tín hiệu (signal / 신호)/exception.
+
+**“x86/ARM chỉ khác cú pháp assembly.”** Chúng khác ISA encoding, registers, bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và ecosystem ABI, dù compilers che nhiều chi tiết.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-[Machine representation](../00_computation_information/02_numbers_and_machine_representation.md) giải thích operands; [cache](./02_memory_hierarchy_and_cache.md) giải thích data arrival; [assembly/ABI](./04_machine_code_assembly_and_abi.md) nối instructions với compiled programs; [kernel/syscall](../03_operating_systems/00_kernel_syscalls_and_os_abstractions.md) dùng privilege transition của CPU.
+[Machine representation](../00_computation_information/02_numbers_and_machine_representation.md) giải thích operands; [cache](./02_memory_hierarchy_and_cache.md) giải thích dữ liệu (data / 데이터) arrival; [assembly/ABI](./04_machine_code_assembly_and_abi.md) nối instructions với compiled programs; [kernel/syscall](../03_operating_systems/00_kernel_syscalls_and_os_abstractions.md) dùng privilege chuyển tiếp (transition / 전이) của CPU.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 digital logic and circuits](./00_digital_logic_and_circuits.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
 # Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi
 
-> File này nối phần phái sinh, backtest, độ bền chiến lược và vi cấu trúc thị trường thành một quy trình vận hành hoàn chỉnh. Mục tiêu là biến một ý tưởng thành **một hệ thống có quy tắc, có mô hình chi phí, có ngân sách rủi ro, có kiểm soát vận hành và có tiêu chí dừng**.
+> **Mạch đọc:** Đặt **Phòng thí nghiệm nâng cao: thiết kế hệ thống giao dịch, rủi ro và thực thi** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Tách ý tưởng, tín hiệu và chiến lược** sang **2. Viết giả thuyết trước khi nhìn kết quả**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này nối phần phái sinh, backtest, độ bền chiến lược và vi cấu trúc thị trường thành một quy trình vận hành hoàn chỉnh. Mục tiêu là biến một ý tưởng thành **một hệ thống có quy tắc, có mô hình chi phí, có ngân sách rủi ro, có kiểm soát vận hành và có tiêu chí dừng**.
 
 ## 1. Tách ý tưởng, tín hiệu và chiến lược
 
@@ -49,7 +52,7 @@ Ví dụ:
 
 Sau đó mọi giao dịch được chuẩn hóa theo R-multiple. Điều này cho phép so sánh nhiều thị trường và nhiều khoảng biến động khác nhau.
 
-## 4. Expectancy phải tách win rate và payoff
+## 4. Expectancy phải tách win tỷ lệ (rate / 비율) và payoff
 
 Sau khi đặc tả signal và rule vào/ra, ta cần kiểm tra phân phối kết quả chứ không chỉ tỷ lệ thắng. Expectancy phải tách win rate, average win/loss, cost và tail để biết edge có thực sự dương hay không.
 
@@ -61,9 +64,9 @@ Expectancy
 
 Một chiến lược thắng 70% vẫn có thể âm nếu khoản lỗ lớn. Một chiến lược thắng 35% vẫn có thể tốt nếu payoff cao.
 
-Không tối ưu win rate tách khỏi phân phối P/L.
+Không tối ưu win tỷ lệ (rate / 비율) tách khỏi phân phối P/L.
 
-## 5. Backtest phải bắt đầu bằng audit thời gian
+## 5. Backtest phải bắt đầu bằng kiểm tra (audit / 감사) thời gian
 
 Với mọi biến dữ liệu, ghi:
 
@@ -100,7 +103,7 @@ Test
 → đánh giá cuối cùng ngoài mẫu
 ```
 
-Nếu nhìn test set rồi sửa chiến lược nhiều lần, test set đã trở thành train set.
+Nếu nhìn kiểm thử (test / 테스트) set rồi sửa chiến lược nhiều lần, kiểm thử (test / 테스트) set đã trở thành train set.
 
 ## 8. Walk-forward mô phỏng tốt hơn thực tế cập nhật
 
@@ -117,12 +120,12 @@ Nó không loại overfit nhưng buộc hệ thống chứng minh khả năng th
 
 ## 9. Purging và embargo khi dữ liệu chồng lấn
 
-Nếu nhãn hoặc giao dịch kéo dài qua ranh giới train/test, thông tin có thể rò rỉ.
+Nếu nhãn hoặc giao dịch kéo dài qua ranh giới train/kiểm thử (test / 테스트), thông tin có thể rò rỉ.
 
 - **Purging:** loại quan sát chồng lấn;
 - **Embargo:** tạo khoảng trống thời gian giữa hai tập.
 
-Điều này đặc biệt quan trọng với machine learning và chiến lược có thời gian giữ vị thế dài.
+Điều này đặc biệt quan trọng với machine học tập (learning / 학습) và chiến lược có thời gian giữ vị thế dài.
 
 ## 10. Parameter surface quan trọng hơn điểm tối ưu
 
@@ -132,7 +135,7 @@ Nên tìm **vùng ổn định** thay vì đỉnh tối ưu hẹp.
 
 Một plateau rộng thường đáng tin hơn một magic number.
 
-## 11. Placebo test để cố phá chiến lược
+## 11. Placebo kiểm thử (test / 테스트) để cố phá chiến lược
 
 Có thể thử:
 
@@ -166,11 +169,11 @@ spread rộng
 + impact tăng
 ```
 
-Cost model dùng một con số cố định thường đánh giá quá cao chiến lược event-driven hoặc turnover cao.
+Chi phí (cost / 비용) mô hình (model / 모델) dùng một con số cố định thường đánh giá quá cao chiến lược event-driven hoặc turnover cao.
 
-## 13. Capacity là giới hạn kinh tế
+## 13. sức chứa (capacity / 용량) là giới hạn kinh tế
 
-Một chiến lược lời với 10.000 USD chưa chắc scale tới 10 triệu USD.
+Một chiến lược lời với 10.000 USD chưa chắc quy mô (scale / 규모) tới 10 triệu USD.
 
 Theo dõi:
 
@@ -194,13 +197,13 @@ Position Size
 ≈ Risk Budget / Distance to Invalidation
 ```
 
-Nhưng với gap risk hoặc option short, stop không giới hạn được lỗ tối đa. Khi đó cần dùng stress loss thay vì khoảng stop.
+Nhưng với gap rủi ro (risk / 위험) hoặc option short, stop không giới hạn được lỗ tối đa. Khi đó cần dùng stress mất mát (loss / 손실) thay vì khoảng stop.
 
 ## 15. Volatility scaling có lợi và có rủi ro
 
 Giảm vị thế khi biến động tăng giúp giữ rủi ro gần ổn định.
 
-Nhưng volatility thường tăng **sau khi giá đã giảm**. Nếu giảm size máy móc, hệ thống có thể bán thấp và mua lại cao.
+Nhưng volatility thường tăng **sau khi giá đã giảm**. Nếu giảm kích thước (size / 크기) máy móc, hệ thống có thể bán thấp và mua lại cao.
 
 Vì vậy cần giới hạn tốc độ điều chỉnh và hiểu mục tiêu của volatility targeting.
 
@@ -210,7 +213,7 @@ Kelly criterion tối đa hóa tăng trưởng log dài hạn khi biết chính 
 
 Trong thực tế edge không chắc chắn, nên full Kelly thường quá hung hăng. Fractional Kelly an toàn hơn vì phản ánh sai số ước lượng.
 
-## 17. Risk of ruin quan trọng hơn lợi suất trung bình
+## 17. rủi ro (risk / 위험) of ruin quan trọng hơn lợi suất trung bình
 
 Một hệ thống expectancy dương vẫn có thể phá sản nếu:
 
@@ -284,9 +287,9 @@ Slippage stress
 Parameter uncertainty
 ```
 
-Nhưng nếu distribution đầu vào sai, mô phỏng đẹp vẫn sai.
+Nhưng nếu phân phối (distribution / 분포) đầu vào sai, mô phỏng đẹp vẫn sai.
 
-## 22. Backtest và thực thi phải dùng cùng logic vị thế
+## 22. Backtest và thực thi phải dùng cùng lô-gic (logic / 논리) vị thế
 
 Một lỗi phổ biến:
 
@@ -297,9 +300,9 @@ Live dùng limit order và partial fill
 
 Khi đó hệ thống thật khác hệ thống được nghiên cứu.
 
-Cần mô hình hóa order type, thời gian chờ và partial fill từ đầu nếu chúng ảnh hưởng lớn.
+Cần mô hình hóa thứ tự (order / 순서) kiểu (type / 타입), thời gian chờ và partial fill từ đầu nếu chúng ảnh hưởng lớn.
 
-## 23. Decision price và execution price
+## 23. quyết định (decision / 결정) price và thực thi (execution / 실행) price
 
 Ghi hai mức:
 
@@ -326,19 +329,19 @@ Nếu slippage tăng, cần biết do thị trường xấu hơn hay thuật to�
 
 ## 25. Maker không tự động tốt hơn taker
 
-Lệnh chờ tiết kiệm spread nhưng chịu adverse selection và non-fill risk.
+Lệnh chờ tiết kiệm spread nhưng chịu adverse selection và non-fill rủi ro (risk / 위험).
 
 Lệnh chủ động trả spread nhưng giảm rủi ro bỏ lỡ.
 
 Lựa chọn phụ thuộc decay của tín hiệu và thanh khoản.
 
-## 26. Signal decay quyết định mức khẩn cấp
+## 26. tín hiệu (signal / 신호) decay quyết định mức khẩn cấp
 
 Nếu edge biến mất trong 30 giây, thực thi chậm để tiết kiệm 1 bp có thể vô nghĩa.
 
 Nếu edge tồn tại nhiều ngày, có thể ưu tiên giảm impact.
 
-Do đó execution phải gắn với **half-life của alpha**.
+Do đó thực thi (execution / 실행) phải gắn với **half-life của alpha**.
 
 ## 27. Derivatives phải quản trị notional và margin riêng
 
@@ -382,9 +385,9 @@ Nếu margin requirement tăng 50%?
 Nếu gap qua stop?
 ```
 
-## 30. Forward test là giai đoạn kiểm tra hệ thống
+## 30. Forward kiểm thử (test / 테스트) là giai đoạn kiểm tra hệ thống
 
-Paper/forward test giúp phát hiện:
+Paper/forward kiểm thử (test / 테스트) giúp phát hiện:
 
 ```text
 Data delay
@@ -399,7 +402,7 @@ Slippage thực
 
 ## 31. Small live để đo ma sát thật
 
-Sau forward test, dùng quy mô nhỏ để kiểm tra:
+Sau forward kiểm thử (test / 테스트), dùng quy mô nhỏ để kiểm tra:
 
 ```text
 fill quality
@@ -409,9 +412,9 @@ roll
 funding cost
 ```
 
-Không nên nhảy từ backtest trực tiếp sang full size.
+Không nên nhảy từ backtest trực tiếp sang full kích thước (size / 크기).
 
-## 32. Production monitoring cần tách edge và vận hành
+## 32. môi trường vận hành (production / 운영 환경) monitoring cần tách edge và vận hành
 
 Theo dõi hai bảng:
 
@@ -467,7 +470,7 @@ Slippage bất thường
 
 Không được chờ tới lúc có sự cố mới quyết định cách dừng.
 
-## 35. Strategy retirement
+## 35. chiến lược (strategy / 전략) retirement
 
 Một chiến lược nên được dừng khi bằng chứng đủ mạnh rằng:
 
@@ -486,16 +489,16 @@ Không giữ chiến lược chỉ vì đã bỏ nhiều thời gian nghiên c�
 Chọn một ý tưởng và hoàn thành:
 
 1. giả thuyết nhân quả;
-2. rule chính xác;
-3. data audit;
-4. cost model;
-5. train/validation/test;
+2. quy tắc (rule / 규칙) chính xác;
+3. dữ liệu (data / 데이터) kiểm tra (audit / 감사);
+4. chi phí (cost / 비용) mô hình (model / 모델);
+5. train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트);
 6. walk-forward;
 7. placebo tests;
 8. Monte Carlo;
-9. risk/trade và portfolio heat;
-10. execution model;
-11. forward test;
+9. rủi ro (risk / 위험)/trade và portfolio heat;
+10. mô hình thực thi (execution model / 실행 모델);
+11. forward kiểm thử (test / 테스트);
 12. small live checklist;
 13. kill switch;
 14. retirement criteria.

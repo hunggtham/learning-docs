@@ -1,5 +1,8 @@
 # Y tế, chăm sóc cơ thể và văn hoá sức khoẻ
 
+> **Mạch đọc:** Đặt **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **병원: khả năng tiếp cận làm thay đổi ngưỡng đi khám** sang **의원·병원·종합병원: các cấp cơ sở không giống nhau**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Y tế là nơi khoa học, thiết chế và văn hoá va vào nhau rất rõ. Cùng một triệu chứng có thể được diễn giải qua mô hình y sinh, lời khuyên gia đình, `한의학`, đánh giá trực tuyến, quảng cáo thực phẩm bổ sung và kinh nghiệm cá nhân. Vì vậy hiểu văn hoá sức khoẻ cần tách **sinh học**, **hệ thống tiếp cận**, **ý nghĩa xã hội** và **thị trường tiêu dùng**.
 
 ## 병원: khả năng tiếp cận làm thay đổi ngưỡng đi khám
@@ -42,7 +45,7 @@ Người nước ngoài dễ nhầm thương hiệu với hoạt chất vì bao 
 
 ## 건강보험: chia sẻ rủi ro biến y tế thành thiết chế xã hội
 
-`건강보험` — bảo hiểm y tế quốc gia — dựa trên logic **chia sẻ rủi ro (risk pooling)**. Không ai biết chính xác mình sẽ cần bao nhiêu dịch vụ y tế trong tương lai.
+`건강보험` — bảo hiểm y tế quốc gia — dựa trên lô-gic (logic / 논리) **chia sẻ rủi ro (risk pooling)**. Không ai biết chính xác mình sẽ cần bao nhiêu dịch vụ y tế trong tương lai.
 
 Chi phí kỳ vọng đơn giản:
 
@@ -562,7 +565,7 @@ Văn hoá: triệu chứng, chăm sóc và quyết định được hiểu/giao 
 
 Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khác, ví dụ dùng “truyền thống lâu đời” để chứng minh hiệu quả, hoặc dùng “nghiên cứu cho thấy có tác dụng” để suy rằng mọi người bắt buộc phải thích can thiệp đó.
 
-## Mô hình tư duy (mental model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Văn hoá sức khoẻ Hàn Quốc là đầu ra của **cơ thể + bảo hiểm/khả năng tiếp cận + mạng cơ sở y tế + môi trường vật lý/số + tính liên tục thông tin + kỳ vọng gia đình + thị trường tiêu dùng + thông tin số**. Đừng chỉ hỏi “đi đâu chữa bệnh?”. Hãy hỏi thông tin có đi cùng người bệnh không, ai đang giữ kế hoạch dài hạn, người bệnh có hiểu lựa chọn và rủi ro không, và điểm chuyển giao nào dễ làm trạng thái bị mất.
 
@@ -592,4 +595,6 @@ Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khá
 
 ## Nguồn tham khảo định hướng
 
-Với thiết chế: National Health Insurance Service, Ministry of Health and Welfare và hướng dẫn chính thức về hệ thống y tế. Với điều trị/chẩn đoán: hướng dẫn lâm sàng, hội chuyên môn, tổng quan hệ thống và nghiên cứu gốc phù hợp. Với sản phẩm sức khoẻ tiêu dùng: đọc nhãn, tuyên bố được phê duyệt và bằng chứng thay vì chỉ dựa vào người ảnh hưởng/quảng cáo. Với chăm sóc giảm nhẹ, điều trị duy trì sự sống và quyền người bệnh, cần kiểm tra quy định và hướng dẫn hiện hành của cơ quan y tế Hàn Quốc trước khi áp dụng thực tế.
+Với thiết chế: National Health Insurance dịch vụ (service / 서비스), Ministry of Health and Welfare và hướng dẫn chính thức về hệ thống y tế. Với điều trị/chẩn đoán: hướng dẫn lâm sàng, hội chuyên môn, tổng quan hệ thống và nghiên cứu gốc phù hợp. Với sản phẩm sức khoẻ tiêu dùng: đọc nhãn, tuyên bố được phê duyệt và bằng chứng thay vì chỉ dựa vào người ảnh hưởng/quảng cáo. Với chăm sóc giảm nhẹ, điều trị duy trì sự sống và quyền người bệnh, cần kiểm tra quy định và hướng dẫn hiện hành của cơ quan y tế Hàn Quốc trước khi áp dụng thực tế.
+
+> **Bàn giao:** Sau **Nguồn tham khảo định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

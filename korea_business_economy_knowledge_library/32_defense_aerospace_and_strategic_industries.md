@@ -1,5 +1,8 @@
 # Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)
 
+> **Mạch đọc:** Đặt **Quốc phòng, hàng không vũ trụ và các ngành chiến lược Hàn Quốc (Defense, Aerospace & Strategic Industries / 방산·우주항공·전략산업)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hệ sinh thái quốc phòng: nhà thầu chính không tự làm mọi thứ** sang **DAPA và thể chế mua sắm quốc phòng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Ngành quốc phòng khác sản xuất thương mại thông thường vì khách hàng chủ yếu là chính phủ, chu kỳ mua sắm dài, sản phẩm phải đáp ứng tiêu chuẩn độ tin cậy và an ninh rất cao, còn xuất khẩu thường gắn với ngoại giao, tài trợ, đào tạo và nội địa hóa.
 
 Khi doanh nghiệp quốc phòng Hàn Quốc mở rộng xuất khẩu, đó không chỉ là câu chuyện “vũ khí bán chạy”. Nó phản ánh nhiều thập niên tích lũy năng lực từ công nghiệp nặng, điện tử, đóng tàu, cơ khí chính xác, phần mềm và mua sắm công.
@@ -275,7 +278,7 @@ Cơ hội xuất khẩu này đi cùng rủi ro tập trung khách hàng.
 
 Bán động cơ ban đầu có thể biên thấp hơn trong khi dịch vụ vòng đời tạo lợi nhuận cao hơn.
 
-Logic “nền thiết bị đã lắp đặt” này tương tự bảo trì quốc phòng và thiết bị y tế.
+Lô-gic (logic / 논리) “nền thiết bị đã lắp đặt” này tương tự bảo trì quốc phòng và thiết bị y tế.
 
 ## Chu kỳ hàng không dân dụng và quân sự khác nhau
 

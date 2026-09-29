@@ -1,14 +1,17 @@
-# Initialization và Normalization: giữ Signal và Gradient ở Scale Trainable
+# Initialization và Normalization: giữ tín hiệu (signal / 신호) và độ dốc (gradient / 기울기) ở quy mô (scale / 규모) Trainable
 
-Deep network có thể có architecture đúng nhưng training fail ngay từ đầu nếu activations hoặc gradients explode/vanish qua layers. **Initialization (초기화 / khởi tạo)** chọn starting distribution của parameters; **Normalization (정규화 / chuẩn hóa)** kiểm soát statistics của intermediate representations trong training.
+> **Mạch đọc:** Đặt **Initialization và Normalization: giữ tín hiệu (signal / 신호) và độ dốc (gradient / 기울기) ở quy mô (scale / 규모) Trainable** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao không initialize mọi weight bằng zero?** sang **Variance propagation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Hai concept này giải quyết một core systems problem: làm sao signal đi qua nhiều transformations mà vẫn ở numerical/optimization scale hợp lý?
+
+Deep mạng (network / 네트워크) có thể có kiến trúc (architecture / 아키텍처) đúng nhưng huấn luyện (training / 학습) thất bại (fail / 실패) ngay từ đầu nếu activations hoặc gradients explode/vanish qua layers. **Initialization (초기화 / khởi tạo)** chọn starting phân phối (distribution / 분포) của parameters; **Normalization (정규화 / chuẩn hóa)** kiểm soát statistics của intermediate representations trong huấn luyện (training / 학습).
+
+Hai concept này giải quyết một cốt lõi (core / 핵심) các hệ thống (systems / 시스템들) bài toán (problem / 문제): làm sao tín hiệu (signal / 신호) đi qua nhiều transformations mà vẫn ở numerical/tối ưu hóa (optimization / 최적화) quy mô (scale / 규모) hợp lý?
 
 ## Vì sao không initialize mọi weight bằng zero?
 
-Nếu neurons cùng layer có identical weights zero, chúng nhận cùng gradient và tiếp tục giống nhau. **Symmetry breaking** cần random initialization để units học functions khác nhau.
+Nếu neurons cùng tầng (layer / 계층) có identical weights zero, chúng nhận cùng độ dốc (gradient / 기울기) và tiếp tục giống nhau. **Symmetry breaking** cần random initialization để units học functions khác nhau.
 
-Bias có thể initialize zero vì weights đã break symmetry.
+Độ lệch (bias / 편향) có thể initialize zero vì weights đã break symmetry.
 
 ## Variance propagation
 
@@ -24,9 +27,9 @@ Nếu independent, zero-mean:
 Var(z)\approx nVar(w)Var(x)
 \]
 
-Nếu `Var(w)` không scale theo fan-in `n`, activation variance tăng/giảm theo depth.
+Nếu `Var(w)` không quy mô (scale / 규모) theo fan-in `n`, activation variance tăng/giảm theo độ sâu (depth / 깊이).
 
-Initialization tốt cố giữ forward activation variance và backward gradient variance roughly stable.
+Initialization tốt cố giữ forward activation variance và backward độ dốc (gradient / 기울기) variance roughly stable.
 
 ## Xavier / Glorot Initialization
 
@@ -36,24 +39,24 @@ Phù hợp tanh/sigmoid-like symmetric activations:
 Var(w)\approx\frac{2}{fan_{in}+fan_{out}}
 \]
 
-Một common form uniform:
+Một dùng chung (common / 공통) form uniform:
 
 \[
 w\sim U\left(-\sqrt{\frac{6}{fan_{in}+fan_{out}}},
 \sqrt{\frac{6}{fan_{in}+fan_{out}}}\right)
 \]
 
-Mục tiêu balance signal forward/backward.
+Mục tiêu balance tín hiệu (signal / 신호) forward/backward.
 
 ## He / Kaiming Initialization
 
-ReLU zero roughly half activations under symmetric assumption, nên use larger variance:
+ReLU zero roughly half activations under symmetric giả định (assumption / 가정), nên use larger variance:
 
 \[
 Var(w)\approx\frac{2}{fan_{in}}
 \]
 
-Common normal initialization:
+Dùng chung (common / 공통) normal initialization:
 
 \[
 w\sim\mathcal N(0,2/fan_{in})
@@ -61,15 +64,15 @@ w\sim\mathcal N(0,2/fan_{in})
 
 Activation-specific gain matters.
 
-## Initialization không độc lập architecture
+## Initialization không độc lập kiến trúc (architecture / 아키텍처)
 
-Residual networks, Transformers, gated blocks và normalization layers thay signal dynamics. Large-model recipes có custom scaling, residual branch initialization hoặc μ-parameterization variants.
+Residual networks, Transformers, gated blocks và normalization layers thay tín hiệu (signal / 신호) dynamics. Large-model recipes có custom scaling, residual branch initialization hoặc μ-parameterization variants.
 
-Không có một initialization formula universal cho mọi architecture.
+Không có một initialization formula universal cho mọi kiến trúc (architecture / 아키텍처).
 
 ## Batch Normalization
 
-BatchNorm normalize activation per feature/channel dùng mini-batch statistics:
+BatchNorm normalize activation per tính năng (feature / 기능)/channel dùng mini-batch statistics:
 
 \[
 \mu_B=\frac1m\sum_i x_i
@@ -83,20 +86,20 @@ BatchNorm normalize activation per feature/channel dùng mini-batch statistics:
 \hat x_i=\frac{x_i-\mu_B}{\sqrt{\sigma_B^2+\epsilon}}
 \]
 
-rồi learn affine scale/shift:
+rồi learn affine quy mô (scale / 규모)/shift:
 
 \[
 y_i=\gamma\hat x_i+\beta
 \]
 
-`γ,β` cho model restore useful scale/offset.
+`γ,β` cho mô hình (model / 모델) restore useful quy mô (scale / 규모)/offset.
 
 ## BatchNorm giúp gì?
 
-Lịch sử thường giải thích bằng “reduce internal covariate shift”, nhưng modern understanding rộng hơn. BatchNorm:
+Lịch sử thường giải thích bằng “reduce nội bộ (internal / 내부) covariate shift”, nhưng hiện đại (modern / 현대적) understanding rộng hơn. BatchNorm:
 
-- stabilizes activation scale;
-- smooths optimization landscape in useful ways;
+- stabilizes activation quy mô (scale / 규모);
+- smooths tối ưu hóa (optimization / 최적화) landscape in useful ways;
 - permits larger LR;
 - adds batch-dependent noise/regularization;
 - reduces sensitivity to initialization.
@@ -105,15 +108,15 @@ Không nên coi một single explanation là complete.
 
 ## Train vs Eval trong BatchNorm
 
-Training dùng current batch stats và update running estimates. Evaluation dùng running mean/variance.
+Huấn luyện (training / 학습) dùng hiện tại (current / 현재) batch stats và cập nhật (update / 업데이트) running estimates. Evaluation dùng running mean/variance.
 
-Small batch làm estimates noisy. Distributed training có SyncBatchNorm để aggregate stats across devices, nhưng communication cost tăng.
+Small batch làm estimates noisy. phân tán (distributed / 분산) huấn luyện (training / 학습) có SyncBatchNorm để aggregate stats across devices, nhưng communication chi phí (cost / 비용) tăng.
 
-Nếu deployment distribution shift, stale running stats cũng có thể gây degradation.
+Nếu triển khai (deployment / 배포) phân phối (distribution / 분포) shift, stale running stats cũng có thể gây degradation.
 
-## Layer Normalization
+## Tầng (layer / 계층) Normalization
 
-LayerNorm normalize across feature dimensions của từng sample/token:
+LayerNorm normalize across tính năng (feature / 기능) dimensions của từng mẫu (sample / 표본)/đơn vị từ (token / 토큰):
 
 \[
 \mu=\frac1D\sum_{j=1}^{D}x_j
@@ -123,13 +126,13 @@ LayerNorm normalize across feature dimensions của từng sample/token:
 \sigma^2=\frac1D\sum_j(x_j-\mu)^2
 \]
 
-Không phụ thuộc batch size, nên phù hợp sequence models/Transformers.
+Không phụ thuộc batch kích thước (size / 크기), nên phù hợp chuỗi (sequence / 시퀀스) các mô hình (models / 모델들)/Transformers.
 
-Transformer hidden state `x∈R^D` được normalize per token.
+Transformer hidden trạng thái (state / 상태) `x∈R^D` được normalize per đơn vị từ (token / 토큰).
 
 ## RMSNorm
 
-RMSNorm bỏ mean-centering, scale bằng root mean square:
+RMSNorm bỏ mean-centering, quy mô (scale / 규모) bằng gốc (root / 루트) mean square:
 
 \[
 RMS(x)=\sqrt{\frac1D\sum_jx_j^2+\epsilon}
@@ -139,13 +142,13 @@ RMS(x)=\sqrt{\frac1D\sum_jx_j^2+\epsilon}
 y=\gamma\odot\frac{x}{RMS(x)}
 \]
 
-Đơn giản/efficient và phổ biến trong modern LLMs.
+Đơn giản/efficient và phổ biến trong hiện đại (modern / 현대적) LLMs.
 
 ## GroupNorm và InstanceNorm
 
 **GroupNorm** chia channels thành groups rồi normalize trong group, không phụ thuộc batch statistics mạnh; useful khi vision batch small.
 
-**InstanceNorm** normalize per sample/channel và phổ biến trong style/image generation contexts.
+**InstanceNorm** normalize per mẫu (sample / 표본)/channel và phổ biến trong style/ảnh (image / 이미지) generation contexts.
 
 Normalization axes là modeling choice.
 
@@ -163,15 +166,15 @@ Pre-Norm:
 y=x+F(LN(x))
 \]
 
-Pre-Norm tạo cleaner identity residual gradient path và thường train deep Transformers stable hơn, nên được dùng rộng rãi.
+Pre-Norm tạo cleaner định danh (identity / 식별자) residual độ dốc (gradient / 기울기) đường dẫn (path / 경로) và thường train deep Transformers stable hơn, nên được dùng rộng rãi.
 
-Architecture details như norm placement ảnh hưởng optimization lớn.
+Kiến trúc (architecture / 아키텍처) details như norm placement ảnh hưởng tối ưu hóa (optimization / 최적화) lớn.
 
-## Normalization không chỉ standardize input
+## Normalization không chỉ standardize đầu vào (input / 입력)
 
-Input standardization là preprocessing trên dataset. BatchNorm/LayerNorm là internal differentiable modules với learned scale/shift, applied repeatedly inside network.
+Đầu vào (input / 입력) standardization là preprocessing trên dataset. BatchNorm/LayerNorm là nội bộ (internal / 내부) differentiable modules với learned quy mô (scale / 규모)/shift, applied repeatedly inside mạng (network / 네트워크).
 
-Hai concept related nhưng khác scope và behavior.
+Hai concept related nhưng khác phạm vi (scope / 범위) và hành vi (behavior / 동작).
 
 ## Epsilon và Numerical Stability
 
@@ -189,17 +192,17 @@ Có normalization tác động parameters thay activations.
 
 WeightNorm reparameterize weight thành direction + magnitude.
 
-Spectral Normalization constrain largest singular value, giúp control Lipschitz behavior và từng được dùng mạnh trong GAN discriminators.
+Spectral Normalization constrain largest singular giá trị (value / 값), giúp điều khiển (control / 제어) Lipschitz hành vi (behavior / 동작) và từng được dùng mạnh trong GAN discriminators.
 
 Normalization là family rộng, không chỉ BatchNorm.
 
-## Interaction với Regularization
+## Tương tác (interaction / 상호작용) với Regularization
 
-BatchNorm noise có implicit regularization; Dropout + BatchNorm interaction đôi khi complex. Weight decay trên norm scale/bias thường excluded trong modern optimizer configs.
+BatchNorm noise có implicit regularization; Dropout + BatchNorm tương tác (interaction / 상호작용) đôi khi complex. Weight decay trên norm quy mô (scale / 규모)/độ lệch (bias / 편향) thường excluded trong hiện đại (modern / 현대적) optimizer configs.
 
-Recipes phải xem whole system, không tune từng trick isolated.
+Recipes phải xem whole hệ thống (system / 시스템), không tune từng trick isolated.
 
-## Debugging signal statistics
+## Debugging tín hiệu (signal / 신호) statistics
 
 Theo dõi per-layer:
 
@@ -212,9 +215,9 @@ parameter norm
 update/parameter ratio
 ```
 
-Nếu std tăng exponential qua depth → exploding signal. Nếu collapse gần zero → vanishing/dead units.
+Nếu std tăng exponential qua độ sâu (depth / 깊이) → exploding tín hiệu (signal / 신호). Nếu collapse gần zero → vanishing/dead units.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -224,24 +227,24 @@ Normalization  = liên tục giữ intermediate scale/statistics trong vùng d�
 Residual paths = tạo đường truyền signal/gradient ổn định
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
 ### “Random small weights là đủ”
 
-Scale phải depend fan-in/activation/architecture; quá nhỏ cũng gây vanishing.
+Quy mô (scale / 규모) phải depend fan-in/activation/kiến trúc (architecture / 아키텍처); quá nhỏ cũng gây vanishing.
 
 ### “BatchNorm và LayerNorm giống nhau, chỉ tên khác”
 
-Axes/statistics và train/eval behavior khác fundamentally.
+Axes/statistics và train/eval hành vi (behavior / 동작) khác fundamentally.
 
 ### “Normalization loại bỏ need for good initialization”
 
-Nó giảm sensitivity nhưng initialization vẫn ảnh hưởng early dynamics và large/deep architecture stability.
+Nó giảm sensitivity nhưng initialization vẫn ảnh hưởng early dynamics và large/deep kiến trúc (architecture / 아키텍처) stability.
 
-### “LayerNorm làm token vector mất information vì mean=0 variance=1”
+### “LayerNorm làm đơn vị từ (token / 토큰) véc-tơ (vector / 벡터) mất thông tin (information / 정보) vì mean=0 variance=1”
 
-Learned affine parameters và direction/relative pattern vẫn carry information; residual stream architecture cũng giữ pathways khác.
+Learned affine parameters và direction/relative mẫu (pattern / 패턴) vẫn carry thông tin (information / 정보); residual stream kiến trúc (architecture / 아키텍처) cũng giữ pathways khác.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Activation Functions](./02_activation_functions.md), [Backpropagation](./04_backpropagation.md), [Optimizers](./05_gradient_descent_and_optimizers.md) và sau này [Transformer](../06_deep_learning_architectures/05_transformer.md).

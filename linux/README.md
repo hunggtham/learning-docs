@@ -1,10 +1,13 @@
 # Thư viện kiến thức Linux
 
-Linux không chỉ là một tập hợp câu lệnh (command) để điều khiển máy chủ (server). Muốn sử dụng Linux vững trong phát triển phần mềm và môi trường vận hành thực tế (production), cần hiểu mô hình mà các câu lệnh đang tác động lên: hạt nhân (kernel) quản lý tài nguyên; tiến trình (process) làm việc với hệ thống thông qua bộ mô tả tệp (file descriptor); hệ thống tệp (filesystem) ánh xạ tên đường dẫn tới `inode`; bộ nhớ ảo (virtual memory) tách không gian địa chỉ của tiến trình khỏi RAM vật lý; ổ cắm mạng (socket) cung cấp giao diện vào/ra cho truyền thông mạng; còn trình vỏ lệnh (shell) ghép các chương trình nhỏ thành chuỗi xử lý (pipeline).
+> **Mạch đọc:** Đọc **Thư viện kiến thức Linux** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bản đồ đọc và quan hệ phụ thuộc** sang **Cấu trúc thư viện**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Thư viện này được tổ chức theo **khái niệm (concept), quan hệ phụ thuộc (dependency) và cấu trúc của hệ thống**, không theo mức Beginner → Advanced. Các chương chính được viết như tài liệu học lâu dài: giải thích vì sao cơ chế tồn tại, nó hoạt động ở lớp nào, có thể quan sát bằng công cụ nào và liên hệ tới backend/production ra sao. Tài liệu tham chiếu câu lệnh chỉ dùng để tra cứu sau khi đã hiểu cơ chế bên dưới.
 
-Một số miền có hai lớp tài liệu: **chapter nền tảng** cung cấp mô hình tư duy (mental model) và thuật ngữ trước, sau đó **deep dive** đi vào cơ chế triển khai, accounting, failure mode và công cụ quan sát. Cách tách này giúp nội dung đủ sâu mà không biến một file thành cuốn sách khổng lồ.
+Linux không chỉ là một tập hợp câu lệnh (command) để điều khiển máy chủ (server / 서버). Muốn sử dụng Linux vững trong phát triển phần mềm và môi trường vận hành thực tế (production), cần hiểu mô hình mà các câu lệnh đang tác động lên: hạt nhân (kernel) quản lý tài nguyên; tiến trình (process / 프로세스) làm việc với hệ thống thông qua bộ mô tả tệp (file descriptor); hệ thống tệp (filesystem) ánh xạ tên đường dẫn tới `inode`; bộ nhớ ảo (virtual memory) tách không gian địa chỉ của tiến trình khỏi RAM vật lý; ổ cắm mạng (socket) cung cấp giao diện vào/ra cho truyền thông mạng; còn trình vỏ lệnh (shell) ghép các chương trình nhỏ thành chuỗi xử lý (pipeline / 파이프라인).
+
+Thư viện này được tổ chức theo **khái niệm (concept), quan hệ phụ thuộc (dependency / 의존성) và cấu trúc của hệ thống**, không theo mức Beginner → Advanced. Các chương chính được viết như tài liệu học lâu dài: giải thích vì sao cơ chế tồn tại, nó hoạt động ở lớp nào, có thể quan sát bằng công cụ nào và liên hệ tới backend/môi trường vận hành (production / 운영 환경) ra sao. Tài liệu tham chiếu câu lệnh chỉ dùng để tra cứu sau khi đã hiểu cơ chế bên dưới.
+
+Một số miền có hai lớp tài liệu: **chapter nền tảng** cung cấp mô hình tư duy (mental model / 사고 모델) và thuật ngữ trước, sau đó **deep dive** đi vào cơ chế triển khai, accounting, dạng thất bại (failure mode / 실패 모드) và công cụ quan sát. Cách tách này giúp nội dung đủ sâu mà không biến một tệp (file / 파일) thành cuốn sách khổng lồ.
 
 ## Bản đồ đọc và quan hệ phụ thuộc
 
@@ -107,6 +110,9 @@ graph TD
 
 Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật ngữ người đọc sẽ thường xuyên gặp trong tài liệu Linux. Phần giải thích trong từng chương ưu tiên tiếng Việt và chỉ giữ thuật ngữ gốc trong ngoặc khi nó giúp nhận diện khái niệm.
 
+
+> **Chuyển mạch:** Từ **Bản đồ đọc và quan hệ phụ thuộc**, ta sang **Cấu trúc thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cấu trúc thư viện
 
 ### Nền tảng hệ điều hành
@@ -124,8 +130,8 @@ Sau kernel model, ta theo dữ liệu từ tên đường dẫn tới descriptor
 
 - [`01_filesystem/filesystem_paths_inodes_links.md`](./01_filesystem/filesystem_paths_inodes_links.md) — đường dẫn, thư mục, `inode`, liên kết cứng (hard link), liên kết tượng trưng (symbolic link) và cấu trúc phân cấp của hệ thống tệp.
 - [`01_filesystem/files_streams_descriptors.md`](./01_filesystem/files_streams_descriptors.md) — bộ mô tả tệp (file descriptor), `stdin`/`stdout`/`stderr` và mô hình vào/ra (I/O).
-- [`01_filesystem/journaling_consistency_mounts.md`](./01_filesystem/journaling_consistency_mounts.md) — journaling, crash consistency, `fsync`, atomic rename, mount namespace, bind mount, read-only/noexec và mối liên hệ với database durability.
-- [`01_filesystem/vfs_page_cache_writeback.md`](./01_filesystem/vfs_page_cache_writeback.md) — VFS, dentry/inode/file object, page cache, buffered/direct I/O, dirty page, writeback, read-ahead, `fsync` và mối liên hệ giữa filesystem với memory pressure.
+- [`01_filesystem/journaling_consistency_mounts.md`](./01_filesystem/journaling_consistency_mounts.md) — journaling, crash consistency, `fsync`, atomic rename, mount không gian tên (namespace / 네임스페이스), bind mount, read-only/noexec và mối liên hệ với cơ sở dữ liệu (database / 데이터베이스) durability.
+- [`01_filesystem/vfs_page_cache_writeback.md`](./01_filesystem/vfs_page_cache_writeback.md) — VFS, dentry/inode/tệp (file / 파일) đối tượng (object / 객체), page bộ nhớ đệm (cache / 캐시), buffered/direct I/O, dirty page, writeback, read-ahead, `fsync` và mối liên hệ giữa filesystem với bộ nhớ (memory / 메모리) pressure.
 
 ### Shell và tự động hóa cấp lệnh
 
@@ -133,16 +139,16 @@ Shell biến các primitive của hệ điều hành thành pipeline có thể l
 
 - [`02_shell/shell_bash_pipes_redirection.md`](./02_shell/shell_bash_pipes_redirection.md) — cách shell phân tích lệnh, mở rộng biểu thức (expansion), pipe, chuyển hướng (redirection), mã thoát (exit status) và cách ghép câu lệnh.
 - [`02_shell/text_processing.md`](./02_shell/text_processing.md) — `grep`, `find`, `sed`, `awk` và tư duy xử lý luồng văn bản.
-- [`02_shell/bash_scripting_reliability.md`](./02_shell/bash_scripting_reliability.md) — viết Bash script đáng tin cậy với validation, quoting, exit status, `trap`, temporary file, idempotency, locking và atomic update.
+- [`02_shell/bash_scripting_reliability.md`](./02_shell/bash_scripting_reliability.md) — viết Bash script đáng tin cậy với kiểm tra hợp lệ (validation / 검증), quoting, exit status, `trap`, temporary tệp (file / 파일), idempotency, locking và atomic cập nhật (update / 업데이트).
 
 ### Danh tính, quyền, tiến trình và IPC
 
 Nhóm này giải thích ai được phép làm gì, process giao tiếp ra sao và kernel kiểm soát identity thế nào. Đây là nền cho debugging permission, signal và service.
 
 - [`03_identity/users_groups_permissions.md`](./03_identity/users_groups_permissions.md) — `UID`/`GID`, quyền truy cập (permission), `sudo`, ACL và đặc quyền.
-- [`03_identity/credentials_capabilities_acl_mac.md`](./03_identity/credentials_capabilities_acl_mac.md) — real/effective UID, supplementary groups, ACL mask/default ACL, setuid/setgid, Linux capabilities, user namespace, SELinux/AppArmor, seccomp và cách kernel đưa ra quyết định allow/deny.
-- [`04_process/processes_threads_signals_jobs.md`](./04_process/processes_threads_signals_jobs.md) — vòng đời tiến trình (process lifecycle), `PID`, luồng (thread), tín hiệu (signal) và điều khiển tác vụ (job control).
-- [`04_process/interprocess_communication.md`](./04_process/interprocess_communication.md) — pipe, FIFO, Unix socket, TCP socket, signal, shared memory, semaphore, `mmap`, `epoll`, non-blocking I/O và backpressure.
+- [`03_identity/credentials_capabilities_acl_mac.md`](./03_identity/credentials_capabilities_acl_mac.md) — real/effective UID, supplementary groups, ACL mask/default ACL, setuid/setgid, Linux capabilities, người dùng (user / 사용자) không gian tên (namespace / 네임스페이스), SELinux/AppArmor, seccomp và cách kernel đưa ra quyết định allow/deny.
+- [`04_process/processes_threads_signals_jobs.md`](./04_process/processes_threads_signals_jobs.md) — vòng đời tiến trình (process lifecycle), `PID`, luồng (thread), tín hiệu (signal / 신호) và điều khiển tác vụ (job control).
+- [`04_process/interprocess_communication.md`](./04_process/interprocess_communication.md) — pipe, FIFO, Unix socket, TCP socket, tín hiệu (signal / 신호), dùng chung (shared / 공유) bộ nhớ (memory / 메모리), semaphore, `mmap`, `epoll`, non-blocking I/O và backpressure.
 
 ### Khởi động, dịch vụ, log và thời gian
 
@@ -150,22 +156,22 @@ Các chapter nối boot chain, systemd, log và clock thành một đường v�
 
 - [`05_system/boot_kernel_initramfs.md`](./05_system/boot_kernel_initramfs.md) — firmware → bootloader → kernel → initramfs → root filesystem → PID 1, kernel command line, recovery và boot failure reasoning.
 - [`05_system/systemd_boot_services.md`](./05_system/systemd_boot_services.md) — `PID 1`, đơn vị systemd (unit), quan hệ phụ thuộc và vòng đời dịch vụ.
-- [`05_system/systemd_units_dependencies_resources.md`](./05_system/systemd_units_dependencies_resources.md) — dependency graph, `Requires/Wants/After`, service `Type`, socket/timer activation, cgroup resource controls, restart/timeout semantics, drop-in override và systemd sandboxing.
+- [`05_system/systemd_units_dependencies_resources.md`](./05_system/systemd_units_dependencies_resources.md) — phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), `Requires/Wants/After`, dịch vụ (service / 서비스) `Type`, socket/timer activation, cgroup tài nguyên (resource / 자원) controls, restart/hết thời gian chờ (timeout / 타임아웃) ngữ nghĩa (semantics / 의미론), drop-in override và systemd sandboxing.
 - [`05_system/logging_journal_observability.md`](./05_system/logging_journal_observability.md) — nhật ký (log), `journald`, xoay vòng nhật ký (log rotation) và gỡ lỗi dựa trên bằng chứng.
-- [`05_system/journald_rsyslog_log_pipeline.md`](./05_system/journald_rsyslog_log_pipeline.md) — stdout/stderr → journald → rsyslog/collector, journal metadata, persistent/volatile storage, retention/rate limit, rotation, deleted-open log, centralized shipping, buffering và backpressure.
-- [`05_system/time_clock_ntp.md`](./05_system/time_clock_ntp.md) — UTC, timezone, wall clock, monotonic clock, NTP/Chrony, clock drift và tác động tới TLS, token, cron và log correlation.
+- [`05_system/journald_rsyslog_log_pipeline.md`](./05_system/journald_rsyslog_log_pipeline.md) — stdout/stderr → journald → rsyslog/collector, journal siêu dữ liệu (metadata / 메타데이터), persistent/volatile lưu trữ (storage / 저장소), retention/tỷ lệ (rate / 비율) limit, rotation, deleted-open log, centralized shipping, buffering và backpressure.
+- [`05_system/time_clock_ntp.md`](./05_system/time_clock_ntp.md) — UTC, timezone, wall clock, monotonic clock, NTP/Chrony, clock drift và tác động tới TLS, đơn vị từ (token / 토큰), cron và log correlation.
 
-### CPU, memory, storage và hiệu năng
+### CPU, bộ nhớ (memory / 메모리), lưu trữ (storage / 저장소) và hiệu năng
 
 Nhóm này biến triệu chứng “chậm” thành các câu hỏi về scheduling, memory pressure, I/O và capacity. Mỗi công cụ quan sát phải gắn với một giả thuyết cụ thể.
 
 - [`06_resources/storage_filesystems.md`](./06_resources/storage_filesystems.md) — thiết bị khối (block device), phân vùng, hệ thống tệp, điểm gắn kết (mount), `inode` và dung lượng.
-- [`06_resources/memory_virtual_memory.md`](./06_resources/memory_virtual_memory.md) — bộ nhớ ảo, trang nhớ (page), bộ nhớ đệm (cache), swap và OOM.
-- [`06_resources/virtual_memory_page_fault_reclaim_allocator.md`](./06_resources/virtual_memory_page_fault_reclaim_allocator.md) — VMA/page table/TLB, minor/major page fault, COW, anonymous/file-backed memory, buddy/SLUB allocator, reclaim, PSI, swap/thrashing, global/cgroup OOM, NUMA và JVM native memory.
+- [`06_resources/memory_virtual_memory.md`](./06_resources/memory_virtual_memory.md) — bộ nhớ ảo, trang nhớ (page), bộ nhớ đệm (cache / 캐시), swap và OOM.
+- [`06_resources/virtual_memory_page_fault_reclaim_allocator.md`](./06_resources/virtual_memory_page_fault_reclaim_allocator.md) — VMA/bảng trang (page table / 페이지 테이블)/TLB, minor/major page fault, COW, anonymous/file-backed bộ nhớ (memory / 메모리), buddy/SLUB allocator, reclaim, PSI, swap/thrashing, toàn cục (global / 전역)/cgroup OOM, NUMA và JVM bản địa (native / 네이티브) bộ nhớ (memory / 메모리).
 - [`06_resources/cpu_scheduling_performance.md`](./06_resources/cpu_scheduling_performance.md) — lập lịch CPU (CPU scheduling), tải trung bình (load average), mức sử dụng (utilization) và tư duy phân tích hiệu năng.
-- [`06_resources/kernel_scheduler_deep_dive.md`](./06_resources/kernel_scheduler_deep_dive.md) — run queue, scheduling class, nice/priority, context switch, CPU affinity, SMT, NUMA, steal time, cgroup throttling và mối liên hệ với Java thread pool.
-- [`06_resources/io_performance.md`](./06_resources/io_performance.md) — latency, throughput, IOPS, queueing, page cache, `iostat`, `pidstat`, `vmstat`, durability và cách suy luận khi storage chậm.
-- [`06_resources/block_layer_io_scheduler.md`](./06_resources/block_layer_io_scheduler.md) — block layer, blk-mq, queue depth, I/O scheduler, `iostat`, dirty throttling, direct/async I/O, `io_uring`, NVMe và cgroup I/O.
+- [`06_resources/kernel_scheduler_deep_dive.md`](./06_resources/kernel_scheduler_deep_dive.md) — run hàng đợi (queue / 큐), scheduling lớp (class / 클래스), nice/priority, ngữ cảnh (context / 맥락) switch, CPU affinity, SMT, NUMA, steal thời gian (time / 시간), cgroup throttling và mối liên hệ với Java luồng thực thi (thread / 스레드) pool.
+- [`06_resources/io_performance.md`](./06_resources/io_performance.md) — độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량), IOPS, queueing, page bộ nhớ đệm (cache / 캐시), `iostat`, `pidstat`, `vmstat`, durability và cách suy luận khi lưu trữ (storage / 저장소) chậm.
+- [`06_resources/block_layer_io_scheduler.md`](./06_resources/block_layer_io_scheduler.md) — khối (block / 블록) tầng (layer / 계층), blk-mq, hàng đợi (queue / 큐) độ sâu (depth / 깊이), I/O scheduler, `iostat`, dirty throttling, direct/async I/O, `io_uring`, NVMe và cgroup I/O.
 
 ### Networking và truy cập từ xa
 
@@ -189,10 +195,10 @@ Phần này nối package lifecycle, deployment, backup, linking và recovery. M
 - [`08_operations/elf_dynamic_linking.md`](./08_operations/elf_dynamic_linking.md) — ELF, `execve`, shebang, dynamic linker, shared library resolution, symbol/ABI, PIE/ASLR và cách chẩn đoán binary tồn tại nhưng không chạy.
 - [`08_operations/scheduling_automation.md`](./08_operations/scheduling_automation.md) — `cron`, bộ hẹn giờ systemd (systemd timer) và độ tin cậy của tự động hóa.
 - [`08_operations/security_hardening.md`](./08_operations/security_hardening.md) — đặc quyền tối thiểu (least privilege), bề mặt tấn công (attack surface), cập nhật bản vá và gia cố máy chủ (host hardening).
-- [`08_operations/deployment_release_rollback.md`](./08_operations/deployment_release_rollback.md) — desired state/runtime state, release directory, atomic symlink switch, health/smoke test, database migration compatibility, canary, blue–green và rollback.
-- [`08_operations/backup_restore_disaster_recovery.md`](./08_operations/backup_restore_disaster_recovery.md) — RPO/RTO, file/database backup, snapshot, PITR, integrity, retention, restore test và disaster recovery runbook.
+- [`08_operations/deployment_release_rollback.md`](./08_operations/deployment_release_rollback.md) — desired trạng thái (state / 상태)/thời gian chạy (runtime / 런타임) trạng thái (state / 상태), bản phát hành (release / 릴리스) directory, atomic symlink switch, health/smoke kiểm thử (test / 테스트), cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) tính tương thích (compatibility / 호환성), canary, blue–green và quay lui (rollback / 롤백).
+- [`08_operations/backup_restore_disaster_recovery.md`](./08_operations/backup_restore_disaster_recovery.md) — RPO/RTO, tệp (file / 파일)/cơ sở dữ liệu (database / 데이터베이스) backup, snapshot, PITR, integrity, retention, restore kiểm thử (test / 테스트) và disaster khôi phục (recovery / 복구) runbook.
 
-### Production, container và xử lý sự cố
+### Môi trường vận hành (production / 운영 환경), bộ chứa (container / 컨테이너) và xử lý sự cố
 
 Production deep dive dùng các mô hình trước để xử lý incident, capacity và rollback. Hãy bắt đầu từ symptom, thu thập evidence, khoanh boundary rồi mới thay đổi hệ thống.
 
@@ -211,19 +217,25 @@ Các tài liệu cuối cùng dùng để nối Linux với backend, database, n
 - [`90_connections/linux_system_mental_models.md`](./90_connections/linux_system_mental_models.md) — kết nối các lớp trừu tượng thành mô hình tư duy (mental model) thống nhất về Linux.
 - [`reference/putty_ssh_linux_server_commands.md`](./reference/putty_ssh_linux_server_commands.md) — bảng câu lệnh, tùy chọn, ví dụ và ghi chú thực tế để tra cứu nhanh.
 
+
+> **Chuyển mạch:** Từ **Cấu trúc thư viện**, ta sang **Gợi ý đường đọc theo nhu cầu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Gợi ý đường đọc theo nhu cầu
 
-Nếu mục tiêu là **dùng PuTTY/SSH để vận hành server**, hãy đọc theo thứ tự: Linux/Unix model → filesystem → file descriptor → shell → permissions → credentials/capabilities → process → systemd → journal/log pipeline → networking → routing/DNS → SSH → production troubleshooting → command reference.
+Nếu mục tiêu là **dùng PuTTY/SSH để vận hành máy chủ (server / 서버)**, hãy đọc theo thứ tự: Linux/Unix mô hình (model / 모델) → filesystem → tệp (file / 파일) descriptor → shell → permissions → credentials/capabilities → tiến trình (process / 프로세스) → systemd → journal/log chuỗi xử lý (pipeline / 파이프라인) → networking → routing/DNS → SSH → môi trường vận hành (production / 운영 환경) troubleshooting → command tham chiếu (reference / 참조).
 
-Nếu mục tiêu là **backend Java/Spring**, hãy đọc process/thread → IPC → memory overview → page fault/reclaim → CPU → kernel scheduler → file descriptor → VFS/page cache → block I/O → networking → routing/DNS → TCP/HTTP/TLS → TCP congestion → TLS/PKI → reverse proxy/load balancing → systemd/logging → tracing → Java backend incident playbook → capacity planning → SLO/incident engineering. Đường đọc này giúp nối trực tiếp JVM với Linux thay vì xem JVM như một hộp đen.
+Nếu mục tiêu là **backend Java/Spring**, hãy đọc tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) → IPC → bộ nhớ (memory / 메모리) overview → page fault/reclaim → CPU → kernel scheduler → tệp (file / 파일) descriptor → VFS/page bộ nhớ đệm (cache / 캐시) → khối (block / 블록) I/O → networking → routing/DNS → TCP/HTTP/TLS → TCP congestion → TLS/PKI → reverse proxy/tải (load / 로드) balancing → systemd/logging → tracing → Java backend sự cố (incident / 인시던트) playbook → sức chứa (capacity / 용량) planning → SLO/sự cố (incident / 인시던트) kỹ thuật (engineering / 엔지니어링). Đường đọc này giúp nối trực tiếp JVM với Linux thay vì xem JVM như một hộp đen.
 
-Nếu mục tiêu là **DevOps/production operations**, hãy bổ sung boot/initramfs → `/proc`/`/sys` → interrupt/device model → ELF/dynamic linking → package lifecycle/supply chain → Bash scripting → scheduling → deployment/rollback → backup/restore → security/credentials → routing/NAT → TCP/TLS → reverse proxy → namespace/cgroup → container → log pipeline/tracing → capacity planning → SLO/error budget → production troubleshooting. Đây là nhóm kiến thức giúp chuyển từ “biết câu lệnh” sang quản lý lifecycle, isolation, traffic path, capacity và reliability objective của hệ thống.
+Nếu mục tiêu là **DevOps/môi trường vận hành (production / 운영 환경) operations**, hãy bổ sung boot/initramfs → `/proc`/`/sys` → interrupt/thiết bị (device / 장치) mô hình (model / 모델) → ELF/động (dynamic / 동적) linking → gói (package / 패키지) vòng đời (lifecycle / 생명주기)/supply chuỗi (chain / 사슬) → Bash scripting → scheduling → triển khai (deployment / 배포)/quay lui (rollback / 롤백) → backup/restore → bảo mật (security / 보안)/credentials → routing/NAT → TCP/TLS → reverse proxy → không gian tên (namespace / 네임스페이스)/cgroup → bộ chứa (container / 컨테이너) → log chuỗi xử lý (pipeline / 파이프라인)/tracing → sức chứa (capacity / 용량) planning → SLO/lỗi (error / 오류) ngân sách (budget / 예산) → môi trường vận hành (production / 운영 환경) troubleshooting. Đây là nhóm kiến thức giúp chuyển từ “biết câu lệnh” sang quản lý vòng đời (lifecycle / 생명주기), isolation, traffic đường dẫn (path / 경로), sức chứa (capacity / 용량) và độ tin cậy (reliability / 신뢰성) mục tiêu (objective / 목표) của hệ thống.
 
-Nếu mục tiêu là **hiểu Linux từ bản chất hệ điều hành**, hãy đi theo: Unix model → kernel/user space/system call → `/proc`/`/sys` → interrupt/softirq/device model → process/thread/IPC → virtual memory → page fault/reclaim → filesystem/inode/VFS/page cache/journaling → block layer → scheduler/CPU → ELF/runtime → network/socket → routing/NAT → TCP congestion → credentials/capabilities → namespace/cgroup. Đây là đường đọc gần với cách một hệ điều hành thực sự được cấu tạo hơn là cách một khóa học command-line thường trình bày.
+Nếu mục tiêu là **hiểu Linux từ bản chất hệ điều hành**, hãy đi theo: Unix mô hình (model / 모델) → kernel/người dùng (user / 사용자) không gian (space / 공간)/lời gọi hệ thống (system call / 시스템 호출) → `/proc`/`/sys` → interrupt/softirq/thiết bị (device / 장치) mô hình (model / 모델) → tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드)/IPC → virtual bộ nhớ (memory / 메모리) → page fault/reclaim → filesystem/inode/VFS/page bộ nhớ đệm (cache / 캐시)/journaling → khối (block / 블록) tầng (layer / 계층) → scheduler/CPU → ELF/thời gian chạy (runtime / 런타임) → mạng (network / 네트워크)/socket → routing/NAT → TCP congestion → credentials/capabilities → không gian tên (namespace / 네임스페이스)/cgroup. Đây là đường đọc gần với cách một hệ điều hành thực sự được cấu tạo hơn là cách một khóa học command-line thường trình bày.
 
-Nếu mục tiêu là **hiểu một HTTP request production từ đầu đến cuối**, hãy đi theo: DNS resolution → IP routing/NAT → TCP handshake → TCP congestion/flow control → TLS/PKI → HTTP → reverse proxy/load balancer → Java process/thread → memory/scheduler/I/O → database/downstream dependency → logging/tracing → SLI/SLO. Đây là đường đọc giúp biến các lỗi `UnknownHostException`, `Connection refused`, TLS handshake failure, `502`, `504`, OOM và application timeout thành những failure mode thuộc từng lớp cụ thể.
+Nếu mục tiêu là **hiểu một HTTP yêu cầu (request / 요청) môi trường vận hành (production / 운영 환경) từ đầu đến cuối**, hãy đi theo: DNS resolution → IP routing/NAT → TCP handshake → TCP congestion/luồng (flow / 흐름) điều khiển (control / 제어) → TLS/PKI → HTTP → reverse proxy/bộ cân bằng tải (load balancer / 로드 밸런서) → Java tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) → bộ nhớ (memory / 메모리)/scheduler/I/O → cơ sở dữ liệu (database / 데이터베이스)/downstream phụ thuộc (dependency / 의존성) → logging/tracing → SLI/SLO. Đây là đường đọc giúp biến các lỗi `UnknownHostException`, `Connection refused`, TLS handshake thất bại (failure / 실패), `502`, `504`, OOM và ứng dụng (application / 애플리케이션) hết thời gian chờ (timeout / 타임아웃) thành những dạng thất bại (failure mode / 실패 모드) thuộc từng lớp cụ thể.
 
-Nếu mục tiêu là **hiểu reliability từ metric Linux tới trải nghiệm người dùng**, hãy đi theo: RED/USE metrics → tracing → capacity planning → deployment/rollback → backup/DR → SLI/SLO/error budget → incident engineering. Đường đọc này giải thích tại sao một server “còn tài nguyên” vẫn có thể vi phạm SLO, và ngược lại tại sao utilization cao không tự động là incident.
+Nếu mục tiêu là **hiểu độ tin cậy (reliability / 신뢰성) từ chỉ số (metric / 지표) Linux tới trải nghiệm người dùng**, hãy đi theo: RED/USE metrics → tracing → sức chứa (capacity / 용량) planning → triển khai (deployment / 배포)/quay lui (rollback / 롤백) → backup/DR → SLI/SLO/lỗi (error / 오류) ngân sách (budget / 예산) → sự cố (incident / 인시던트) kỹ thuật (engineering / 엔지니어링). Đường đọc này giải thích tại sao một máy chủ (server / 서버) “còn tài nguyên” vẫn có thể vi phạm SLO, và ngược lại tại sao utilization cao không tự động là sự cố (incident / 인시던트).
+
+
+> **Chuyển mạch:** Từ **Gợi ý đường đọc theo nhu cầu**, ta sang **Cách dùng chapter nền tảng và deep dive** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cách dùng chapter nền tảng và deep dive
 
@@ -266,10 +278,13 @@ production_troubleshooting / capacity_planning
 → sre_slo_error_budget_incident_engineering
 ```
 
-Mục tiêu không phải học thuộc mọi chi tiết kernel ngay từ đầu. Mục tiêu là có một đường đi rõ từ **mô hình tổng quan → cơ chế bên dưới → công cụ quan sát → failure mode production → reliability objective**.
+Mục tiêu không phải học thuộc mọi chi tiết kernel ngay từ đầu. Mục tiêu là có một đường đi rõ từ **mô hình tổng quan → cơ chế bên dưới → công cụ quan sát → dạng thất bại (failure mode / 실패 모드) môi trường vận hành (production / 운영 환경) → độ tin cậy (reliability / 신뢰성) mục tiêu (objective / 목표)**.
+
+
+> **Chuyển mạch:** Từ **Cách dùng chapter nền tảng và deep dive**, ta sang **Quy ước ngôn ngữ và liên kết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Quy ước ngôn ngữ và liên kết
 
-Các liên kết chéo dùng đường dẫn Markdown tương đối để hoạt động nhất quán trên GitHub, GitHub Pages và phần lớn trình đọc Markdown. Phần giải thích chính dùng tiếng Việt. Khi một thuật ngữ kỹ thuật quan trọng xuất hiện lần đầu, tài liệu có thể giữ thuật ngữ tiếng Anh trong ngoặc, ví dụ **tiến trình (process)** hoặc **bộ mô tả tệp (file descriptor)**. Thuật ngữ tiếng Hàn (한국어 용어) chỉ được thêm khi nó thực sự hữu ích trong môi trường học tập hoặc làm việc tại Hàn Quốc.
+Các liên kết chéo dùng đường dẫn Markdown tương đối để hoạt động nhất quán trên GitHub, GitHub Pages và phần lớn trình đọc Markdown. Phần giải thích chính dùng tiếng Việt. Khi một thuật ngữ kỹ thuật quan trọng xuất hiện lần đầu, tài liệu có thể giữ thuật ngữ tiếng Anh trong ngoặc, ví dụ **tiến trình (process / 프로세스)** hoặc **bộ mô tả tệp (file descriptor)**. Thuật ngữ tiếng Hàn (한국어 용어) chỉ được thêm khi nó thực sự hữu ích trong môi trường học tập hoặc làm việc tại Hàn Quốc.
 
 > **Mô hình tư duy trung tâm:** Linux có thể được xem như một hệ thống quản lý **tên, tiến trình, bộ nhớ, I/O, CPU time, quyền truy cập, thời gian, network path, runtime dependency, isolation và các điểm cuối giao tiếp**. Câu lệnh chỉ là giao diện để quan sát hoặc thay đổi những đối tượng đó; kỹ năng Linux thực sự nằm ở khả năng hiểu state, dependency, lifecycle, capacity, evidence và ảnh hưởng cuối cùng tới người dùng.

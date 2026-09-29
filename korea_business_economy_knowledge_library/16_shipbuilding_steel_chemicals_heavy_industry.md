@@ -1,5 +1,8 @@
 # Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)
 
+> **Mạch đọc:** Đặt **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao Hàn Quốc xây được các cụm công nghiệp nặng?** sang **Đóng tàu là kinh doanh dự án, không phải kinh doanh tồn kho thông thường**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Công nghiệp nặng là nơi nhìn thấy rõ nhất di sản của chương trình **công nghiệp nặng–hóa chất (Heavy and Chemical Industry / 중화학공업화)** thập niên 1970. Thép, đóng tàu, hóa dầu và máy móc nặng cần vốn lớn, đất–cảng–điện quy mô lớn, kỹ thuật sâu và mạng lưới nhà cung cấp dày. Vì vậy kinh tế của các ngành này khác xa ứng dụng tiêu dùng hoặc bán lẻ: **chu kỳ đơn hàng dài, chi phí cố định lớn, vốn lưu động nặng và mức tiếp xúc hàng hóa/nguyên liệu cao**.
 
 Điểm quan trọng nhất là **độ trễ thời gian**. Doanh thu quý này có thể phản ánh đơn hàng ký nhiều năm trước; CAPEX hôm nay chỉ tạo công suất sau vài năm. Khi phân tích phải luôn hỏi: “dòng nào xảy ra ở thời điểm nào?”.
@@ -58,7 +61,7 @@ Vì vậy cần đọc backlog cùng giá hợp đồng, loại tàu, năm giao,
 
 ## Mỗi loại tàu có kinh tế khác nhau
 
-Tàu container, tanker, LNG carrier, công trình ngoài khơi và tàu quân sự không phải cùng một sản phẩm.
+Tàu bộ chứa (container / 컨테이너), tanker, LNG carrier, công trình ngoài khơi và tàu quân sự không phải cùng một sản phẩm.
 
 LNG carrier yêu cầu hệ chứa lạnh, kỹ thuật phức tạp và chứng nhận nhà cung cấp cao hơn tàu hàng khối lượng lớn. Các xưởng Hàn Quốc thường cạnh tranh tốt ở tàu giá trị cao, nơi **độ phức tạp kỹ thuật + độ tin cậy giao hàng** tạo rào cản lớn hơn chi phí lao động đơn thuần.
 
@@ -136,7 +139,7 @@ ASP\ thép
 - Chi\ phí\ chuyển\ đổi
 \]
 
-Thực tế còn có cơ cấu sản phẩm, vận chuyển, phế liệu, hợp kim và gia công hạ nguồn, nhưng logic chênh lệch giúp tránh lỗi phổ biến: **giá thép tăng không tự động nghĩa lợi nhuận tăng**.
+Thực tế còn có cơ cấu sản phẩm, vận chuyển, phế liệu, hợp kim và gia công hạ nguồn, nhưng lô-gic (logic / 논리) chênh lệch giúp tránh lỗi phổ biến: **giá thép tăng không tự động nghĩa lợi nhuận tăng**.
 
 Nếu quặng, than hoặc năng lượng tăng nhanh hơn, biên có thể bị nén.
 
@@ -162,7 +165,7 @@ Thép cường độ cao cho ô tô, thép điện hoặc sản phẩm chuyên d
 
 Nâng cơ cấu sản phẩm lên phân khúc cao cấp là một cách thoát cạnh tranh giá thuần túy, nhưng cần đồng phát triển với khách hàng và duy trì chất lượng ổn định.
 
-Đây là logic rộng hơn của chiến lược Hàn Quốc: **chuyển từ cạnh tranh sản lượng sang năng lực khác biệt hóa**.
+Đây là lô-gic (logic / 논리) rộng hơn của chiến lược Hàn Quốc: **chuyển từ cạnh tranh sản lượng sang năng lực khác biệt hóa**.
 
 ## Công suất Trung Quốc và giá khu vực
 
@@ -234,11 +237,11 @@ Máy móc nặng, robot công nghiệp, turbine, máy xây dựng và thiết b�
 
 Tuy nhiên, chất lượng backlog, dịch vụ hậu mãi và tập trung khách hàng vẫn quyết định chất lượng lợi nhuận.
 
-## Installed base tạo kinh tế dịch vụ
+## Installed cơ sở (base / 기반) tạo kinh tế dịch vụ
 
-Khi thiết bị đã lắp đặt, bảo trì, linh kiện và nâng cấp tạo doanh thu lặp lại. Nhà sản xuất có **installed base** lớn thường có biên dịch vụ ổn định hơn doanh thu bán máy mới.
+Khi thiết bị đã lắp đặt, bảo trì, linh kiện và nâng cấp tạo doanh thu lặp lại. Nhà sản xuất có **installed cơ sở (base / 기반)** lớn thường có biên dịch vụ ổn định hơn doanh thu bán máy mới.
 
-Logic này tương tự thiết bị bán dẫn.
+Lô-gic (logic / 논리) này tương tự thiết bị bán dẫn.
 
 # Vốn lưu động và lạm phát hàng hóa
 
@@ -274,7 +277,7 @@ Khi định giá cần **chuẩn hóa lợi nhuận (normalize earnings)** thay 
 
 Thép và hóa chất là các ngành khó giảm phát thải. Chuyển đổi có thể đòi hỏi khử bằng hydro, lò điện, CCUS, điện hóa quy trình, nguyên liệu tái chế và điện carbon thấp.
 
-Những đầu tư này tạo gánh nặng CAPEX trước khi mức “green premium” chắc chắn xuất hiện. Nhưng doanh nghiệp phát triển quy trình carbon thấp có thể tiếp cận khách hàng chịu yêu cầu Scope 3 hoặc quy định carbon biên giới.
+Những đầu tư này tạo gánh nặng CAPEX trước khi mức “green premium” chắc chắn xuất hiện. Nhưng doanh nghiệp phát triển quy trình carbon thấp có thể tiếp cận khách hàng chịu yêu cầu phạm vi (scope / 범위) 3 hoặc quy định carbon biên giới.
 
 Kinh tế chuyển đổi là:
 
@@ -314,7 +317,7 @@ Theo dõi sản lượng giao bán, ASP/cơ cấu sản phẩm, quặng sắt–
 
 Theo dõi chênh lệch sản phẩm–nguyên liệu, utilization, lịch turnaround, công suất mới ở khu vực và Trung Quốc, cơ cấu nguyên liệu, tồn kho, tỷ trọng specialty so với hàng hóa, CAPEX và nợ.
 
-# Stress test
+# Kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Với đóng tàu, có thể kiểm tra thép tấm +20%, KRW mạnh, giao hàng chậm hoặc backlog cũ biên thấp kéo dài.
 
@@ -324,7 +327,7 @@ Với hóa chất, kiểm tra naphtha tăng, công suất Trung Quốc mới đi
 
 Luôn kiểm tra tiền mặt và vốn lưu động chứ không chỉ EBIT.
 
-# Mental Model — mô hình tư duy
+# Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Công nghiệp nặng là mô hình **độ trễ thời gian + chi phí cố định + chênh lệch giá + vốn lưu động**. Lợi nhuận báo cáo hôm nay thường phản ánh đơn hàng và giá đã được quyết định từ rất lâu trước quý hiện tại.
 
@@ -357,3 +360,5 @@ CAPEX chu kỳ tiếp theo
 # Liên kết
 
 Đọc cùng [`00_history/03_1970s_hci_and_chaebol_expansion.md`](./00_history/03_1970s_hci_and_chaebol_expansion.md), [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md), [`21_economy_to_company_transmission.md`](./21_economy_to_company_transmission.md), [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_and_industrial_geography.md), [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`32_defense_aerospace_and_strategic_industries.md`](./32_defense_aerospace_and_strategic_industries.md).
+
+> **Bàn giao:** Sau **Rủi ro tài sản mắc kẹt**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

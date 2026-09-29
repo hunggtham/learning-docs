@@ -1,6 +1,9 @@
 # Đo lường rủi ro, phân tích danh mục và quy tắc quyết định
 
-> Chương này xây lớp định lượng cho quản trị danh mục. Mục tiêu không phải biến nhà đầu tư thành nhà thống kê, mà giúp hiểu các con số như CAGR, volatility, beta, Sharpe, VaR hay risk contribution đang đo điều gì, bỏ sót điều gì và nên được dùng thế nào trong quyết định thực tế.
+> **Mạch đọc:** Đặt **Đo lường rủi ro, phân tích danh mục và quy tắc quyết định** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Lợi suất đơn giản, lợi suất log và lợi suất hình học** sang **2. CAGR và lợi suất thực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> Chương này xây lớp định lượng cho quản trị danh mục. Mục tiêu không phải biến nhà đầu tư thành nhà thống kê, mà giúp hiểu các con số như CAGR, volatility, beta, Sharpe, VaR hay rủi ro (risk / 위험) contribution đang đo điều gì, bỏ sót điều gì và nên được dùng thế nào trong quyết định thực tế.
 
 ## 1. Lợi suất đơn giản, lợi suất log và lợi suất hình học
 
@@ -105,15 +108,15 @@ Alpha là phần lợi suất không được giải thích bởi benchmark ho�
 
 Nếu benchmark không phù hợp, alpha mất ý nghĩa. Ví dụ một danh mục cổ phiếu vốn hóa nhỏ không nên được đánh giá như thể toàn bộ phần vượt trội so với chỉ số vốn hóa lớn là kỹ năng lựa chọn cổ phiếu.
 
-## 12. Sai lệch bám chỉ số và Information Ratio
+## 12. Sai lệch bám chỉ số và thông tin (information / 정보) Ratio
 
-Sai lệch bám chỉ số (Tracking Error) đo biến động của lợi suất chủ động so với benchmark.
+Sai lệch bám chỉ số (Tracking error) đo biến động của lợi suất chủ động so với benchmark.
 
 ```text
 Information Ratio = Active Return / Tracking Error
 ```
 
-Một chiến lược có lợi suất vượt trội cao nhưng tracking error cực lớn có thể có chất lượng kém hơn một chiến lược vượt trội vừa phải nhưng ổn định.
+Một chiến lược có lợi suất vượt trội cao nhưng tracking lỗi (error / 오류) cực lớn có thể có chất lượng kém hơn một chiến lược vượt trội vừa phải nhưng ổn định.
 
 ## 13. Active Share
 
@@ -147,7 +150,7 @@ Một chiến lược bán quyền chọn có thể có skew âm: nhiều khoả
 
 ## 17. VaR
 
-Giá trị chịu rủi ro (Value at Risk, VaR) trả lời câu hỏi dạng: “với mức tin cậy 95% trong một ngày, ngưỡng lỗ ước tính là bao nhiêu?”.
+Giá trị chịu rủi ro (value at risk, VaR) trả lời câu hỏi dạng: “với mức tin cậy 95% trong một ngày, ngưỡng lỗ ước tính là bao nhiêu?”.
 
 VaR không phải mức lỗ tối đa. 5% trường hợp ngoài ngưỡng có thể rất xấu.
 
@@ -171,11 +174,11 @@ Rủi ro nhảy giá (gap risk) xuất hiện khi giá vượt qua mức stop m�
 
 Nó quan trọng với earnings, dữ liệu vĩ mô, sự kiện địa chính trị, cổ phiếu ít thanh khoản và sản phẩm có giới hạn giá.
 
-Stop-loss không loại bỏ gap risk.
+Stop-loss không loại bỏ gap rủi ro (risk / 위험).
 
 ## 21. Rủi ro đòn bẩy
 
-Đòn bẩy làm tổn thất thị trường trở thành rủi ro tồn tại của tài khoản thông qua margin call và thanh lý.
+Đòn bẩy làm tổn thất thị trường trở thành rủi ro tồn tại của tài khoản thông qua margin lời gọi (call / 호출) và thanh lý.
 
 Nên kiểm thử đồng thời:
 
@@ -208,9 +211,9 @@ Danh mục có 20 mã nhưng một mã chiếm 50% sẽ có số vị thế hi�
 
 ## 24. Đóng góp rủi ro cận biên
 
-Đóng góp rủi ro cận biên (Marginal Contribution to Risk, MCTR) hỏi tổng rủi ro danh mục thay đổi bao nhiêu nếu tăng nhẹ tỷ trọng một tài sản.
+Đóng góp rủi ro cận biên (Marginal Contribution to risk, MCTR) hỏi tổng rủi ro danh mục thay đổi bao nhiêu nếu tăng nhẹ tỷ trọng một tài sản.
 
-Đóng góp rủi ro thành phần (Component Risk Contribution) kết hợp MCTR với tỷ trọng để phân rã tổng rủi ro thành từng vị thế.
+Đóng góp rủi ro thành phần (component risk Contribution) kết hợp MCTR với tỷ trọng để phân rã tổng rủi ro thành từng vị thế.
 
 Đây là cách phát hiện một vị thế vốn nhỏ nhưng đang chi phối rủi ro.
 
@@ -311,7 +314,7 @@ Kịch bản stress
 
 Mục tiêu là nhìn thấy rủi ro chung giữa các vị thế.
 
-## 34. Mental model cuối cùng
+## 34. mô hình tư duy (mental model / 사고 모델) cuối cùng
 
 Sơ đồ này nối đo lường với quyết định: lợi suất tạo ra phân phối, phân phối tương tác qua correlation/factor, rồi thanh khoản, leverage và stress quyết định ngưỡng hành động. Hãy đọc nó như chuỗi review chứ không như danh sách thuật ngữ.
 

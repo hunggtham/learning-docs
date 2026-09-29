@@ -1,5 +1,8 @@
 # Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic
 
+> **Mạch đọc:** Đặt **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Lợi nhuận kế toán không đồng nghĩa tiền mặt** sang **2. Chất lượng lợi nhuận là gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này giúp chuyển từ việc “đọc báo cáo” sang đánh giá xem lợi nhuận có phản ánh đúng sức khỏe kinh tế của doanh nghiệp hay không. Mục tiêu không phải kết luận gian lận từ vài chỉ số lạ, mà phát hiện những điểm cần kiểm tra sâu hơn, nối lợi nhuận với dòng tiền và xây mô hình dự báo dựa trên động lực thật.
 
 ## 1. Lợi nhuận kế toán không đồng nghĩa tiền mặt
@@ -251,7 +254,7 @@ B: 700 triệu đáo hạn trong 12 tháng
 
 Cần xem:
 
-- fixed vs floating rate;
+- fixed vs floating tỷ lệ (rate / 비율);
 - lịch đáo hạn;
 - khoản vay bảo đảm;
 - khả năng tái cấp vốn;
@@ -333,17 +336,17 @@ Incremental ROIC
 
 Nếu doanh nghiệp cần ngày càng nhiều vốn để tạo cùng mức tăng NOPAT, hiệu quả kinh tế đang xấu đi.
 
-## 26. Unit economics
+## 26. đơn vị (unit / 단위) economics
 
-Unit economics đưa phân tích về một đơn vị kinh tế cơ bản.
+Đơn vị (unit / 단위) economics đưa phân tích về một đơn vị kinh tế cơ bản.
 
 Ví dụ:
 
 - SaaS: CAC, LTV, churn, NRR;
 - bán lẻ: doanh thu/cửa hàng, same-store sales;
 - airline: RASK và CASK;
-- ngân hàng: NIM và credit cost;
-- marketplace: GMV, take rate, contribution margin.
+- ngân hàng: NIM và credit chi phí (cost / 비용);
+- marketplace: GMV, take tỷ lệ (rate / 비율), contribution margin.
 
 Mô hình tài chính tốt nên bắt đầu từ những động lực phù hợp với ngành.
 
@@ -386,7 +389,7 @@ Income Statement
 → Income Statement
 ```
 
-Nếu tiền mặt âm nhưng thu nhập lãi vẫn tăng, hoặc nợ tăng mà chi phí lãi không đổi, mô hình đang sai logic.
+Nếu tiền mặt âm nhưng thu nhập lãi vẫn tăng, hoặc nợ tăng mà chi phí lãi không đổi, mô hình đang sai lô-gic (logic / 논리).
 
 ## 30. Kiểm soát lỗi mô hình
 
@@ -402,7 +405,7 @@ Share count khớp SBC / issuance / buyback
 
 Các kiểm tra đơn giản này ngăn rất nhiều lỗi mô hình.
 
-## 31. Base / Bull / Bear
+## 31. cơ sở (base / 기반) / Bull / Bear
 
 Một dự báo duy nhất tạo cảm giác chính xác giả.
 
@@ -563,7 +566,7 @@ Ngày ra quyết định
 
 Dữ liệu đã được restate sau này không được đưa ngược vào quá khứ như thể nhà đầu tư đã biết.
 
-Mô hình cũng nên có version để biết giả định thay đổi khi nào và vì sao.
+Mô hình cũng nên có phiên bản (version / 버전) để biết giả định thay đổi khi nào và vì sao.
 
 ## 43. Kiểm tra forensic theo ngành
 
@@ -606,7 +609,7 @@ Phát hiện bất thường
 
 Không nên nhảy thẳng từ “DSO tăng” sang “doanh nghiệp gian lận”.
 
-## 45. Mẫu review hàng quý
+## 45. Mẫu rà soát (review / 검토) hàng quý
 
 Sau mỗi kỳ báo cáo, có thể dùng chuỗi:
 
@@ -642,3 +645,5 @@ Một doanh nghiệp có chất lượng cao thường cho phép bạn nối đ�
 ```
 
 Khi chuỗi này bị đứt, đó là nơi cần nghiên cứu sâu hơn.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

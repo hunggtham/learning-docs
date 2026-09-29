@@ -1,5 +1,8 @@
 # Lễ Tết, nghi lễ, trò chơi và ký ức tập thể
 
+> **Mạch đọc:** Đặt **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Lịch biến thời gian thành văn hoá** sang **Mô hình tư duy**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Lịch biến thời gian thành văn hoá
 
 Con người trải nghiệm thời gian liên tục, nhưng xã hội chia thời gian thành ngày làm việc, cuối tuần, ngày lễ, ngày kỷ niệm và mùa. **Lịch văn hoá (cultural calendar / 문화 달력)** là một hệ thống đồng bộ hoá (synchronization). Khi hàng triệu người cùng nghỉ, di chuyển và thực hiện nghi lễ, lịch trở thành một dạng hạ tầng xã hội.
@@ -47,7 +50,7 @@ Lời chúc có chức năng xã hội mạnh vì nó tạo một khuôn mẫu �
 
 `세뱃돈` thường được hiểu là tiền may mắn dành cho trẻ em, nhưng ở mức khái quát hơn nó là một dạng **chuyển giao nguồn lực giữa các thế hệ (intergenerational resource transfer)** đi kèm nghi lễ.
 
-Một phong bao tiền không chỉ có giá trị tiền tệ. Thời điểm, người trao, lời chúc và nghi thức lạy khiến nó khác với một lần chuyển khoản ngân hàng thông thường. Có thể nói nghi lễ đã “gắn siêu dữ liệu (metadata)” vào tiền.
+Một phong bao tiền không chỉ có giá trị tiền tệ. Thời điểm, người trao, lời chúc và nghi thức lạy khiến nó khác với một lần chuyển khoản ngân hàng thông thường. Có thể nói nghi lễ đã “gắn siêu dữ liệu (metadata / 메타데이터)” vào tiền.
 
 ## 귀성·귀경: hai làn di chuyển ngược nhau trong dịp lễ
 
@@ -283,7 +286,7 @@ Một gia đình đa văn hoá có thể thêm món ăn của quê hương khác
 
 ## Gia đình phân tán và tham gia từ xa
 
-Khi con cái học hoặc làm việc ở nước ngoài, video call, tin nhắn nhóm và gửi quà trực tuyến có thể tham gia vào ngày lễ. Người ở xa không thể chia sẻ toàn bộ không gian vật lý, nhưng vẫn có thể đồng bộ thời gian và lời chúc.
+Khi con cái học hoặc làm việc ở nước ngoài, video lời gọi (call / 호출), tin nhắn nhóm và gửi quà trực tuyến có thể tham gia vào ngày lễ. Người ở xa không thể chia sẻ toàn bộ không gian vật lý, nhưng vẫn có thể đồng bộ thời gian và lời chúc.
 
 Điều này tạo hai lớp hiện diện:
 

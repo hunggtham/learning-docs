@@ -1,5 +1,8 @@
 # Cẩm nang phân tích thị trường Việt Nam
 
+> **Mạch đọc:** Đặt **Cẩm nang phân tích thị trường Việt Nam** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. HOSE, HNX và UPCoM** sang **2. VN-Index và VN30**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Thị trường Việt Nam chịu ảnh hưởng đồng thời của tăng trưởng kinh tế, tín dụng ngân hàng, bất động sản, thanh khoản nhà đầu tư nội địa, FDI, đầu tư công và điều kiện USD/VND. Mục tiêu của tài liệu này là nối các yếu tố đó thành một hệ thống thay vì chỉ nhìn VN-Index như một biến duy nhất. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn.
 
 > **Dữ liệu động:** quy định về biên độ giá, chu kỳ thanh toán, giới hạn sở hữu nước ngoài, thuế, sản phẩm phái sinh, khả năng tiếp cận thị trường và phân loại chỉ số có thể thay đổi. Khi giao dịch thật phải kiểm tra SSC, HOSE, HNX, VSDC, SBV và nguồn chính thức hiện hành.

@@ -1,0 +1,103 @@
+# TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)
+
+> **Mạch đọc:** Đọc **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Conceptual ranh giới (boundary / 경계)** sang **Thứ tự học chuẩn gốc (canonical / 정본)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+TypeScript trong repository này **không phải một thư viện (library / 라이브러리) độc lập tách khỏi JavaScript**. Nó là nhánh học (track / 트랙) chuẩn gốc (canonical / 정본) nằm ngay trong `10_frontend/javascript/` vì mọi TypeScript program cuối cùng vẫn phải sống trên ngữ nghĩa (semantics / 의미론) và thời gian chạy (runtime / 런타임) của JavaScript. Cách tổ chức này cố ý giữ ranh giới rõ: JavaScript giải thích thời gian chạy (runtime / 런타임), mô hình thực thi (execution model / 실행 모델), mô hình đối tượng (object model / 객체 모델), async/vòng lặp sự kiện (event loop / 이벤트 루프) và trình duyệt (browser / 브라우저)/nút (node / 노드) hành vi (behavior / 동작); TypeScript giải thích lớp kiểm tra kiểu tĩnh, trình biên dịch (compiler / 컴파일러)/tooling và cách mô hình hóa đặc tả hợp đồng (contract / 계약) trước khi mã (code / 코드) chạy.
+
+Baseline hiện hành của nhánh học (track / 트랙) này là **TypeScript 7.0**, stable từ ngày 08/07/2026. TypeScript 7 chuyển trình biên dịch (compiler / 컴파일러) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스) sang bản địa (native / 네이티브) hiện thực (implementation / 구현) bằng Go, dùng shared-memory multithreading và tập trung mạnh vào bản dựng (build / 빌드)/editor hiệu năng (performance / 성능). Về ngữ nghĩa (semantics / 의미론) kiểm tra kiểu, 7.0 chủ đích tương thích rất sát với 6.0; vì vậy cần hiểu TypeScript 6.0 như bản phát hành (release / 릴리스) cầu nối, rồi mới hiểu tại sao 7.0 thay đổi toolchain nhưng không làm những mô hình tư duy (mental model / 사고 모델) nền tảng như structural typing, narrowing hay generic trở nên lỗi thời.
+
+## Conceptual ranh giới (boundary / 경계)
+
+TypeScript không “thay JavaScript bằng một ngôn ngữ khác”. Nó thêm một static phân tích (analysis / 분석) tầng (layer / 계층) lên cú pháp (syntax / 문법) và ngữ nghĩa (semantics / 의미론) JavaScript, sau đó phần lớn thông tin kiểu (type / 타입) bị xóa trước thời gian chạy (runtime / 런타임). Vì vậy một lỗi có thể thuộc bốn lớp khác nhau: JavaScript ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론), TypeScript kiểu (type / 타입) mô hình (model / 모델), mô-đun (module / 모듈)/bản dựng (build / 빌드) tooling, hoặc khung phần mềm (framework / 프레임워크)/thư viện (library / 라이브러리) declarations. nhánh học (track / 트랙) này luôn cố tách bốn lớp đó thay vì gom mọi lỗi `.ts` thành “lỗi TypeScript”.
+
+Nếu chưa chắc về JavaScript thời gian chạy (runtime / 런타임), hãy quay lại [JavaScript Beginner](javascript_beginner_rebuilt.md) và [JavaScript Intermediate](javascript_intermediate.md). Khi cần internals, hiệu năng (performance / 성능), trình duyệt (browser / 브라우저)/thời gian chạy (runtime / 런타임) môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작), đọc tiếp [JavaScript Senior](javascript_senior.md) và [JavaScript Master](javascript_master_supplement_detailed.md). Sau TypeScript, nhánh học (track / 트랙) React nằm tại [React Index](../react/00_index.md).
+
+
+> **Chuyển mạch:** Từ **Conceptual ranh giới (boundary / 경계)**, ta sang **Thứ tự học chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Thứ tự học chuẩn gốc (canonical / 정본)
+
+1. [01 — Foundations & Runtime Boundary](typescript_01_foundations.md) giải thích TypeScript là gì, kiểu (type / 타입) erasure, suy luận (inference / 추론), annotation, `unknown`/`any`/`never`, union/intersection, đối tượng (object / 객체)/hàm (function / 함수) types, narrowing, discriminated union, `satisfies`, assertion và các dạng thất bại (failure mode / 실패 모드) cơ bản.
+2. [02 — Type System Internals & Generic Modeling](typescript_02_type_system.md) đào sâu structural typing, assignability, variance, generic các ràng buộc (constraints / 제약조건들)/suy luận (inference / 추론), `keyof`, indexed truy cập (access / 접근), mapped/conditional types, `infer`, template literal types, recursive types, control-flow phân tích (analysis / 분석), kiểu (type / 타입) predicate/assertion hàm (function / 함수), tuple/lớp (class / 클래스)/`this` typing, `const` kiểu (type / 타입) parameters, `NoInfer` và type-system hiệu năng (performance / 성능).
+3. [03 — Compiler, Modules & Tooling](typescript_03_tooling_modules_runtime.md) giải thích trình biên dịch (compiler / 컴파일러) chuỗi xử lý (pipeline / 파이프라인), dự án (project / 프로젝트) đồ thị (graph / 그래프)/ngôn ngữ (language / 언어) dịch vụ (service / 서비스), `tsconfig`, `target`/`lib`, mô-đun (module / 모듈) resolution, ESM/CJS, `verbatimModuleSyntax`, declaration files, `isolatedDeclarations`, gói (package / 패키지) `exports`/`typesVersions`, direct `.ts` thời gian chạy (runtime / 런타임), `erasableSyntaxOnly`, dự án (project / 프로젝트) references, TypeScript 6 → 7 di chuyển (migration / 마이그레이션), TS7 parallelism/watch chế độ (mode / 모드) và debugging trình biên dịch (compiler / 컴파일러)/tooling.
+4. [04 — Senior Production Engineering](typescript_04_senior_production.md) đưa kiểu (type / 타입) mô hình (model / 모델) vào ranh giới (boundary / 경계) thật: API payload, thời gian chạy (runtime / 런타임)/ngữ nghĩa (semantic / 의미적) kiểm tra hợp lệ (validation / 검증), lược đồ (schema / 스키마) evolution, serialization, generated types, lĩnh vực (domain / 도메인) modeling, React/nút (node / 노드), monorepo/thư viện (library / 라이브러리) authoring, bảo mật (security / 보안) năng lực (capability / 역량), hiệu năng (performance / 성능), khả năng quan sát (observability / 관측 가능성), di chuyển (migration / 마이그레이션) legacy JavaScript và môi trường vận hành (production / 운영 환경) diagnostics.
+5. [05 — Version Evolution & Migration](typescript_05_version_evolution_migration.md) theo dõi các thay đổi có ý nghĩa từ TypeScript 1.x–7.0, tập trung đặc biệt vào 4.x/5.x, default/deprecation của 6.0, bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러) 7.0, minimum bên tiêu thụ (consumer / 소비자) phiên bản (version / 버전), declaration tính tương thích (compatibility / 호환성), compiler-API chuyển tiếp (transition / 전이) và di chuyển (migration / 마이그레이션) playbook thay vì biến tài liệu thành changelog.
+
+Luồng lập luận (reasoning / 추론) xuyên suốt là **JavaScript giá trị (value / 값)/thời gian chạy (runtime / 런타임) → TypeScript mô hình (model / 모델) → trình biên dịch (compiler / 컴파일러) proof/diagnostic → emitted/thời gian chạy (runtime / 런타임) mã (code / 코드) → bằng chứng vận hành (production evidence / 운영 증거)**. Nếu một kiểu (type / 타입) trick làm mã (code / 코드) “thông minh hơn” nhưng che khuất hành vi thời gian chạy (runtime behavior / 런타임 동작) hoặc tạo trình biên dịch (compiler / 컴파일러) chi phí (cost / 비용) không đáng có, nhánh học (track / 트랙) này ưu tiên mã (code / 코드) dễ lập luận (reasoning / 추론) hơn.
+
+
+> **Chuyển mạch:** Từ **Thứ tự học chuẩn gốc (canonical / 정본)**, ta sang **mô hình tư duy (mental model / 사고 모델) cốt lõi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델) cốt lõi
+
+TypeScript cố chứng minh một số thuộc tính của chương trình **trước thời gian chạy (runtime / 런타임)** dựa trên mã nguồn (source code / 소스 코드) và declaration thông tin (information / 정보) mà trình biên dịch (compiler / 컴파일러) nhìn thấy. Nó không quan sát cơ sở dữ liệu (database / 데이터베이스) thật, HTTP phản hồi (response / 응답) thật hay người dùng (user / 사용자) đầu vào (input / 입력) thật. Do đó kiểu (type / 타입) an toàn (safety / 안전) chỉ mạnh bằng đặc tả hợp đồng (contract / 계약) và bằng chứng (evidence / 증거) bạn cung cấp. `fetch(...).json()` đến từ bên ngoài trust ranh giới (boundary / 경계); cast dữ liệu thành `User` không làm dữ liệu trở thành `User`. kiểm tra hợp lệ (validation / 검증) thời gian chạy (runtime / 런타임) và TypeScript phục vụ hai tầng khác nhau nhưng bổ trợ nhau.
+
+TypeScript cũng không hướng tới một hệ kiểu sound tuyệt đối theo nghĩa học thuật. Nó cố cân bằng tính đúng đắn (correctness / 정확성), tính tương thích (compatibility / 호환성) với JavaScript và nhà phát triển (developer / 개발자) ergonomics. Vì JavaScript cho phép nhiều mẫu (pattern / 패턴) động, TypeScript có những escape hatch như `any`, assertion, non-null assertion, declaration merging và một số assignment rules mang tính thực dụng. cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) cần biết trình biên dịch (compiler / 컴파일러) đang bảo đảm điều gì, không bảo đảm điều gì và chỗ nào chính mình đã “tắt bằng chứng”.
+
+Sau độ sâu (depth / 깊이) kiểm tra (audit / 감사), một mô hình tư duy (mental model / 사고 모델) thứ hai được thêm rõ hơn: **kiểu (type / 타입) là proof, nhưng proof có nguồn gốc**. Proof có thể do checker suy ra từ điều khiển (control / 제어) luồng (flow / 흐름), do thời gian chạy (runtime / 런타임) validator tạo ra, hoặc do nhà phát triển (developer / 개발자) tự tuyên bố bằng assertion/declaration. Ba nguồn này có trust khác nhau. TypeScript môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링) chủ yếu là quản lý nguồn proof và blast radius khi proof sai.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델) cốt lõi**, ta sang **phiên bản (version / 버전) evolution nên hiểu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Phiên bản (version / 버전) evolution nên hiểu
+
+TypeScript 1.x đặt nền với annotation, giao diện (interface / 인터페이스), lớp (class / 클래스) và generic. TypeScript 2.x làm hệ kiểu trưởng thành hơn với control-flow based phân tích (analysis / 분석), `strictNullChecks`, mapped types và conditional types ở các mốc khác nhau trong nhánh 2.x. TypeScript 3.x bổ sung `unknown`, dự án (project / 프로젝트) references và optional chaining/nullish coalescing ở giai đoạn cuối 3.x. TypeScript 4.x phát triển mạnh type-level programming với variadic tuple, template literal types, nhiều cải tiến suy luận (inference / 추론) và `satisfies` ở 4.9. TypeScript 5.x hiện đại hóa decorator ngữ nghĩa (semantics / 의미론), mô-đun (module / 모듈) options, const kiểu (type / 타입) parameters, `NoInfer`, inferred predicates, isolated declaration workflows, side-effect import checking và hỗ trợ (support / 지원) cho direct-TypeScript runtimes. TypeScript 6.0 thay đổi nhiều default/deprecation để chuẩn bị cho bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러). TypeScript 7.0 là bước chuyển kiến trúc trình biên dịch (compiler / 컴파일러) lớn nhất: bản địa (native / 네이티브) Go hiện thực (implementation / 구현), LSP-oriented editor tích hợp (integration / 통합), parallel parser/checker/emitter/dự án (project / 프로젝트) builder và bản dựng (build / 빌드) hiệu năng (performance / 성능) cao hơn đáng kể, trong khi cố giữ type-checking hành vi (behavior / 동작) tương thích với 6.0.
+
+Một consequence thực tế là khi đọc bài cũ, phải tách **ngôn ngữ (language / 언어) tính năng (feature / 기능)** khỏi **trình biên dịch (compiler / 컴파일러)/toolchain generation**. `satisfies`, conditional kiểu (type / 타입) hay discriminated union vẫn là kiến thức type-system; bản địa (native / 네이티브) trình biên dịch (compiler / 컴파일러) 7.0 chủ yếu thay đổi cách công cụ (tool / 도구) chạy và quy mô (scale / 규모) chứ không làm những concept đó thành legacy. Chi tiết version-by-version và di chuyển (migration / 마이그레이션) consequences nằm ở [05 — Version Evolution & Migration](typescript_05_version_evolution_migration.md).
+
+
+> **Chuyển mạch:** Từ **phiên bản (version / 버전) evolution nên hiểu**, ta sang **Thuật ngữ chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Thuật ngữ chính
+Phần “Thuật ngữ chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
+
+| Tiếng Việt | English term | 한국어 용어 | Ý nghĩa ngắn |
+|---|---|---|---|
+| kiểm tra kiểu tĩnh | static kiểu (type / 타입) checking | 정적 타입 검사 | Phân tích kiểu (type / 타입) trước thời gian chạy (runtime / 런타임). |
+| suy luận kiểu | kiểu (type / 타입) suy luận (inference / 추론) | 타입 추론 | trình biên dịch (compiler / 컴파일러) suy ra kiểu (type / 타입) từ expression/ngữ cảnh (context / 맥락) thay vì buộc viết annotation. |
+| thu hẹp kiểu | kiểu (type / 타입) narrowing | 타입 좁히기 | Dùng điều khiển (control / 제어) luồng (flow / 흐름)/bằng chứng (evidence / 증거) để giảm tập kiểu (type / 타입) khả dĩ. |
+| kiểu cấu trúc | structural typing | 구조적 타이핑 | tính tương thích (compatibility / 호환성) dựa chủ yếu trên shape/capabilities thay vì tên lớp (class / 클래스)/kiểu (type / 타입). |
+| khả năng gán | assignability | 할당 가능성 | Quy tắc quyết định giá trị (value / 값)/kiểu (type / 타입) A có thể dùng ở vị trí cần B hay không. |
+| kiểu hợp | union kiểu (type / 타입) | 유니온 타입 | giá trị (value / 값) có thể thuộc một trong nhiều kiểu (type / 타입). |
+| kiểu giao | intersection kiểu (type / 타입) | 인터섹션 타입 | Kết hợp yêu cầu của nhiều kiểu (type / 타입) vào cùng giá trị (value / 값). |
+| tham số kiểu | kiểu (type / 타입) parameter | 타입 매개변수 | “Biến” ở tầng kiểu (type / 타입) dùng cho generic lớp trừu tượng (abstraction / 추상화). |
+| phương sai | variance | 변성 | Quan hệ giữa `Container<A>` và `Container<B>` khi `A`/`B` có quan hệ subtype/assignability. |
+| vị từ kiểu | kiểu (type / 타입) predicate | 타입 술어 | Signature biến kết quả thời gian chạy (runtime / 런타임) check thành bằng chứng (evidence / 증거) cho narrowing. |
+| hàm khẳng định | assertion hàm (function / 함수) | 단언 함수 | hàm (function / 함수) mà khi return bình thường sẽ thiết lập bất biến (invariant / 불변식) cho checker. |
+| đồ thị dự án | dự án (project / 프로젝트) đồ thị (graph / 그래프) | 프로젝트 그래프 | Quan hệ tệp (file / 파일)/gói (package / 패키지)/cấu hình (config / 설정) mà trình biên dịch (compiler / 컴파일러) và ngôn ngữ (language / 언어) dịch vụ (service / 서비스) phải duy trì. |
+| tệp (file / 파일) khai báo | declaration tệp (file / 파일) | 선언 파일 | `.d.ts` mô tả công khai (public / 공개) kiểu (type / 타입) surface mà không cung cấp thời gian chạy (runtime / 런타임) hiện thực (implementation / 구현). |
+| xóa kiểu | kiểu (type / 타입) erasure | 타입 소거 | kiểu (type / 타입) cú pháp (syntax / 문법)/info không còn tồn tại như thời gian chạy (runtime / 런타임) check sau emit trong đa số trường hợp. |
+| biên tin cậy | trust ranh giới (boundary / 경계) | 신뢰 경계 | Điểm dữ liệu bên ngoài phải được parse/validate trước khi vào typed lĩnh vực (domain / 도메인). |
+
+
+> **Chuyển mạch:** Từ **Thuật ngữ chính**, ta sang **Coverage kiểm tra (audit / 감사)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Coverage kiểm tra (audit / 감사)
+
+Nhánh học (track / 트랙) này coi coverage nền đủ khi người đọc có thể giải thích được: tại sao TypeScript không validate dữ liệu thời gian chạy (runtime / 런타임); vì sao structural typing vừa mạnh vừa có trường hợp biên (edge case / 경계 사례); trình biên dịch (compiler / 컴파일러) narrow union bằng bằng chứng (evidence / 증거) nào; predicate/assertion hàm (function / 함수) có thể tạo proof sai ra sao; generic suy luận (inference / 추론) lấy ràng buộc (constraint / 제약조건) từ đâu; `NoInfer` thay đổi nguồn suy luận (inference / 추론) như thế nào; conditional kiểu (type / 타입) phân phối khi nào; `infer` đang capture cấu trúc gì; lớp (class / 클래스) instance side khác constructor side ở đâu; và type-level độ phức tạp (complexity / 복잡도) ảnh hưởng editor/checker thế nào.
+
+Coverage trình biên dịch (compiler / 컴파일러)/tooling được coi là đủ khi người đọc giải thích được: parser/binder/checker khác nhau ở đâu; dự án (project / 프로젝트) đồ thị (graph / 그래프) vì sao invalidate rộng; `tsconfig` nào thay type-checking và option nào chỉ thay emit/mô-đun (module / 모듈) hành vi (behavior / 동작); vì sao `paths` không tự rewrite thời gian chạy (runtime / 런타임) imports; gói (package / 패키지) `exports` chặn deep import thế nào; `typesVersions`/versioned `types` conditions tồn tại để giải quyết gì; `.d.ts` vì sao có thể thất bại (fail / 실패) ở bên tiêu thụ (consumer / 소비자) dù JavaScript bundle chạy; direct `.ts` thời gian chạy (runtime / 런타임) yêu cầu `erasableSyntaxOnly` trong tình huống nào; và TypeScript 7 phân bổ checker/builder workers ra sao.
+
+Coverage môi trường vận hành (production / 운영 환경) được coi là đủ khi người đọc có thể dấu vết (trace / 추적) một thời gian chạy (runtime / 런타임) mismatch từ sản phẩm tạo ra (artifact / 산출물) → bên ngoài (external / 외부) giá trị (value / 값) → validator/adapter → proof nguồn (source / 소스) → static mô hình (model / 모델); phân biệt structural kiểm tra hợp lệ (validation / 검증) với ngữ nghĩa (semantic / 의미적) kiểm tra hợp lệ (validation / 검증); hiểu lược đồ (schema / 스키마) evolution/serialization/generation không được TypeScript tự bảo đảm; biết TypeScript hỗ trợ bảo mật (security / 보안) kiến trúc (architecture / 아키텍처) nhưng không thay authorization/sanitization; và biết thiết kế bên tiêu thụ (consumer / 소비자) fixture/khả năng quan sát (observability / 관측 가능성) để kiểm tra công khai (public / 공개) đặc tả hợp đồng (contract / 계약) ngoài nguồn (source / 소스) cây (tree / 트리).
+
+Coverage phiên bản (version / 버전)/di chuyển (migration / 마이그레이션) được coi là đủ khi người đọc có thể phân biệt feature-level thay đổi (change / 변경) với checker tính đúng đắn (correctness / 정확성) thay đổi (change / 변경), emit/module-host thay đổi (change / 변경) và compiler-architecture thay đổi (change / 변경); giải thích vì sao TypeScript 6.0 là checkpoint bắt buộc hữu ích trước 7.0; kiểm tra (audit / 감사) các default như `strict`, `module`, `target`, `types`, `rootDir`; nhận diện cấu hình (config / 설정) legacy như `node10`, `baseUrl`, `outFile`; hiểu vì sao TS7 có thể chạy song song với TS6 cho tooling cần trình biên dịch (compiler / 컴파일러) API; và xây di chuyển (migration / 마이그레이션) ma trận (matrix / 행렬) gồm typecheck, JavaScript sản phẩm tạo ra (artifact / 산출물), `.d.ts`, thời gian chạy (runtime / 런타임) bên tiêu thụ (consumer / 소비자) fixture và bằng chứng hiệu năng (performance evidence / 성능 증거).
+
+Không tạo chapter riêng chỉ để liệt kê cú pháp (syntax / 문법) mới. tính năng (feature / 기능) mới chỉ được thêm khi nó thay đổi mô hình tư duy (mental model / 사고 모델), di chuyển (migration / 마이그레이션) hành vi (behavior / 동작) hoặc môi trường vận hành (production / 운영 환경) practice.
+
+
+> **Chuyển mạch:** Từ **Coverage kiểm tra (audit / 감사)**, ta sang **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Nguồn chuẩn để đối chiếu phiên bản (version / 버전)
+Phần “Nguồn chuẩn để đối chiếu phiên bản (version / 버전)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
+
+- TypeScript Handbook, TSConfig tham chiếu (reference / 참조) và bản phát hành (release / 릴리스) notes trên `typescriptlang.org`.
+- TypeScript nhóm (team / 팀) blog trên `devblogs.microsoft.com/typescript/`, đặc biệt bản phát hành (release / 릴리스) notes 6.0 và 7.0.
+- ECMAScript/JavaScript ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) được giữ ở JavaScript chuẩn gốc (canonical / 정본) docs của repository này.
+- mô-đun (module / 모듈)/gói (package / 패키지) hành vi (behavior / 동작) phải được đối chiếu thêm với thời gian chạy (runtime / 런타임)/bundler thật; TypeScript chỉ cố mô hình (model / 모델) host đó chứ không định nghĩa host ngữ nghĩa (semantics / 의미론).
+
+Nhánh học (track / 트랙) được kiểm tra (audit / 감사) lại theo trạng thái TypeScript 7.0, tháng 09/2026. độ sâu (depth / 깊이) kiểm tra (audit / 감사) hiện tại tập trung vào proof origin, trình biên dịch (compiler / 컴파일러)/dự án (project / 프로젝트) đồ thị (graph / 그래프), hiện đại (modern / 현대적) mô-đun (module / 모듈)/gói (package / 패키지) ranh giới (boundary / 경계), phiên bản (version / 버전) di chuyển (migration / 마이그레이션) và bằng chứng vận hành (production evidence / 운영 증거) thay vì tăng số chapter.
+
+> **Bàn giao:** Sau **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

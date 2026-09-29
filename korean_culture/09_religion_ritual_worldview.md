@@ -1,5 +1,8 @@
 # Tôn giáo, nghi lễ và thế giới quan
 
+> **Mạch đọc:** Đặt **Tôn giáo, nghi lễ và thế giới quan** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hàn Quốc không có một “tôn giáo quốc dân” duy nhất** sang **무속 và shaman giáo: xử lý bất định bằng nghi lễ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Hàn Quốc không có một “tôn giáo quốc dân” duy nhất
 
 Bức tranh tôn giáo Hàn Quốc đặc biệt vì nhiều truyền thống cùng tồn tại và chồng lấn: tín ngưỡng dân gian, shaman giáo, Phật giáo, Nho giáo nghi lễ, Kitô giáo và thế giới quan thế tục. Một người có thể tự nhận “không tôn giáo” nhưng vẫn tham gia `제사`; một gia đình Phật giáo vẫn dùng ngôn ngữ Nho giáo về hiếu; một người theo Kitô giáo vẫn sống trong xã hội nơi thứ bậc tuổi tác và ngôn ngữ tổ tiên có ảnh hưởng.
@@ -157,7 +160,7 @@ Ngay cả người không chia sẻ toàn bộ niềm tin vẫn có thể tiếp
 
 Về xã hội học, đây là **vốn xã hội tổ chức (organizational social capital)**: cộng đồng gặp đều, có lãnh đạo, có địa điểm, có kênh quyên góp và mạng tình nguyện nên có khả năng huy động nhanh khi có nhu cầu.
 
-## 봉사, 기부, 헌금, 보시: cho đi nhưng không cùng một logic
+## 봉사, 기부, 헌금, 보시: cho đi nhưng không cùng một lô-gic (logic / 논리)
 
 `봉사` thường chỉ hoạt động tình nguyện; `기부` là quyên góp; `헌금` gắn mạnh với đóng góp trong bối cảnh Kitô giáo; `보시` là khái niệm bố thí/cúng dường trong Phật giáo.
 
@@ -292,7 +295,7 @@ lớp hỗ trợ xã hội
 
 Hai người cùng làm một nghi lễ có thể giống nhau ở hành vi nhưng khác hoàn toàn ở niềm tin. Đây là lý do khảo sát chỉ hỏi “có tôn giáo không?” không nắm hết văn hoá tôn giáo.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Đừng hỏi “người Hàn tin tôn giáo nào?” như thể có một biến duy nhất. Hãy tách niềm tin, nghi lễ, thiết chế, danh tính, mạng hỗ trợ và thực hành gia đình. Một cộng đồng tôn giáo vừa có thể là hệ ý nghĩa, nơi thực hiện nghi lễ, mạng quan hệ và nhà cung cấp dịch vụ xã hội. Hiểu sâu cần nhìn cả chức năng lẫn giới hạn quyền lực của thiết chế.
 
@@ -311,3 +314,5 @@ Hai người cùng làm một nghi lễ có thể giống nhau ở hành vi như
 “Cộng đồng tôn giáo chỉ cung cấp niềm tin” bỏ qua mạng hỗ trợ, hoạt động thiện nguyện và khả năng huy động nguồn lực.
 
 “Người có uy tín tôn giáo chắc chắn có chuyên môn ở mọi lĩnh vực” là sai; uy tín tinh thần và chuyên môn y khoa, pháp lý hoặc tài chính là các loại năng lực khác nhau.
+
+> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

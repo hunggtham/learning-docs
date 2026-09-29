@@ -1,4 +1,7 @@
-# 07 — Bài tập tích hợp (Integrated Case Studies)
+# 07 — Bài tập tích hợp (Integrated case Studies)
+
+> **Mạch đọc:** Đọc **07 — Bài tập tích hợp (Integrated case Studies)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Coverage map của trường hợp (case / 사례) study**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Đây là phần tổng hợp cuối (capstone) của toàn bộ thư viện đầu tư. Các phần trước dạy từng lớp riêng như hệ thống tài chính, nhóm tài sản, phân tích doanh nghiệp, kinh tế học, giao dịch và thị trường Hàn Quốc/Việt Nam. Ở đây, mục tiêu là nối tất cả thành một quy trình nghiên cứu hoàn chỉnh.
 
@@ -19,7 +22,7 @@ Cú sốc / Câu hỏi
 → Attribution / Review
 ```
 
-Một case dừng ở “macro tốt/xấu cho ngành” chưa được xem là hoàn chỉnh. Case phải chỉ ra **data → interpretation → risk → failure mode** ở từng tầng.
+Một trường hợp (case / 사례) dừng ở “macro tốt/xấu cho ngành” chưa được xem là hoàn chỉnh. trường hợp (case / 사례) phải chỉ ra **dữ liệu (data / 데이터) → interpretation → rủi ro (risk / 위험) → dạng thất bại (failure mode / 실패 모드)** ở từng tầng.
 
 ## Thứ tự đọc
 
@@ -31,15 +34,14 @@ Một case dừng ở “macro tốt/xấu cho ngành” chưa được xem là 
 
 [04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md](./04_VIETNAM_PROPERTY_BANK_CREDIT_CASE.md) dùng chuỗi bất động sản–ngân hàng–chứng khoán–thanh khoản tại Việt Nam để học cách lập bản đồ tiến độ pháp lý, bán trước, trái phiếu doanh nghiệp, mức phơi nhiễm của ngân hàng, NPL/dự phòng, thanh khoản margin, dư địa chính sách của SBV, định giá và khả năng sống sót của bảng cân đối.
 
-[06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md](./06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md) là worked case có số liệu giả định đi trọn `macro → rates → liquidity/credit → semiconductor equipment industry → company revenue/EBIT/FCF → WACC/valuation → portfolio stress`. Case buộc người học tính duration, refinancing cost, operating leverage, terminal-value sensitivity và stress loss của danh mục, đồng thời kiểm tra failure mode của hedge.
+[06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md](./06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md) là worked trường hợp (case / 사례) có số liệu giả định đi trọn `macro → rates → liquidity/credit → semiconductor equipment industry → company revenue/EBIT/FCF → WACC/valuation → portfolio stress`. trường hợp (case / 사례) buộc người học tính duration, refinancing chi phí (cost / 비용), operating leverage, terminal-value sensitivity và stress mất mát (loss / 손실) của danh mục, đồng thời kiểm tra dạng thất bại (failure mode / 실패 모드) của hedge.
 
 [07_USD_FUNDING_FX_KOREA_VIETNAM_CROSS_BORDER_CASE.md](./07_USD_FUNDING_FX_KOREA_VIETNAM_CROSS_BORDER_CASE.md) dùng cú sốc USD funding để so Hàn Quốc và Việt Nam trên cùng một khung: Fed/US rates → KRW/VND → BOK/SBV → domestic liquidity/credit → ngành → hai doanh nghiệp giả định → valuation → base-currency return → FX hedge → cross-border portfolio attribution.
 
-Trước khi làm capstone cuối, hoàn thành ít nhất một vòng trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Workbook buộc người học tạo IPS, ma trận tài sản, mô hình doanh nghiệp, bảng nowcast, báo cáo backtest và dashboard Korea/Vietnam thay vì chỉ đọc case study.
+Trước khi làm capstone cuối, hoàn thành ít nhất một vòng trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Workbook buộc người học tạo IPS, ma trận tài sản, mô hình doanh nghiệp, bảng nowcast, báo cáo backtest và dashboard Korea/Vietnam thay vì chỉ đọc trường hợp (case / 사례) study.
 
-[05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md](./05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md) là capstone cuối cùng. File này nối câu hỏi nghiên cứu → nguồn dữ liệu → giả định → macro/sector/company model → định giá → phân phối lợi suất kỳ vọng → quy mô vị thế → thực thi → theo dõi → phân rã kết quả → post-mortem. Đây là bài kiểm tra xem người đọc đã có thể vận hành toàn bộ thư viện như một hệ thống nghiên cứu hay chưa.
+[05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md](./05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md) là capstone cuối cùng. tệp (file / 파일) này nối câu hỏi nghiên cứu → nguồn dữ liệu → giả định → macro/sector/company mô hình (model / 모델) → định giá → phân phối lợi suất kỳ vọng → quy mô vị thế → thực thi → theo dõi → phân rã kết quả → post-mortem. Đây là bài kiểm tra xem người đọc đã có thể vận hành toàn bộ thư viện như một hệ thống nghiên cứu hay chưa.
 
-## Coverage map của case study
 
 Bảng coverage dưới đây cho biết mỗi case đã đi qua những tầng nào của hệ thống nghiên cứu. Hãy đọc nó như bản đồ điều hướng: dấu ✓ chỉ có giá trị khi bên trong case có cơ chế, dữ liệu, cách diễn giải và failure mode tương ứng.
 
@@ -48,12 +50,15 @@ Bảng coverage dưới đây cho biết mỗi case đã đi qua những tầng 
 | 01 CPI Shock | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | 02 Credit/Liquidity Crisis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | một phần |
 | 03 Korea Semiconductor | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Korea |
-| 04 Vietnam Property/Bank | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Vietnam |
-| 06 Macro→Portfolio Worked Case | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Korea example |
+| 04 Vietnam thuộc tính (property / 속성)/Bank | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Vietnam |
+| 06 Macro→Portfolio Worked trường hợp (case / 사례) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Korea example |
 | 07 USD Funding/FX Cross-Border | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Korea + Vietnam |
-| 05 Full Process Capstone | tùy case | tùy case | tùy case | ✓ | ✓ | ✓ | ✓ | tùy case |
+| 05 Full tiến trình (process / 프로세스) Capstone | tùy trường hợp (case / 사례) | tùy trường hợp (case / 사례) | tùy trường hợp (case / 사례) | ✓ | ✓ | ✓ | ✓ | tùy trường hợp (case / 사례) |
 
-Bảng này dùng để audit coverage, không phải checklist hình thức. Mỗi dấu ✓ phải có **cơ chế, dữ liệu, interpretation và failure mode** tương ứng trong case.
+Bảng này dùng để kiểm tra (audit / 감사) coverage, không phải checklist hình thức. Mỗi dấu ✓ phải có **cơ chế, dữ liệu, interpretation và dạng thất bại (failure mode / 실패 모드)** tương ứng trong trường hợp (case / 사례).
+
+
+> **Chuyển mạch:** Từ **Coverage map của trường hợp (case / 사례) study**, ta sang **Cách sử dụng tình huống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cách sử dụng tình huống
 
@@ -62,10 +67,13 @@ Không đọc như một câu chuyện để ghi nhớ hướng giá. Hãy dừn
 1. Nếu chỉ biết thông tin tới đây, những kênh truyền dẫn nào có thể xảy ra?
 2. Dữ liệu nào có thể xác nhận hoặc bác bỏ giả thuyết?
 3. Thị trường đã phản ánh bao nhiêu kỳ vọng vào giá trước sự kiện?
-4. Failure mode nào khiến quan hệ lịch sử không còn đúng?
+4. dạng thất bại (failure mode / 실패 모드) nào khiến quan hệ lịch sử không còn đúng?
 5. Nếu thesis đúng nhưng giá đi ngược, biến nào khác có thể đang chi phối?
 
 Sau đó mới đọc phần tiếp theo.
+
+
+> **Chuyển mạch:** Từ **Cách sử dụng tình huống**, ta sang **Ghi chú nên tạo sau mỗi tình huống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ghi chú nên tạo sau mỗi tình huống
 
@@ -87,7 +95,10 @@ Phân rã kết quả sau sự kiện
 Bài học rút ra
 ```
 
-Với capstone cuối, mở rộng thành một hồ sơ đầu tư hoàn chỉnh gồm cả nguồn dữ liệu, mô hình, định giá, sizing, execution, monitoring và post-mortem template.
+Với capstone cuối, mở rộng thành một hồ sơ đầu tư hoàn chỉnh gồm cả nguồn dữ liệu, mô hình, định giá, sizing, thực thi (execution / 실행), monitoring và post-mortem template.
+
+
+> **Chuyển mạch:** Từ **Ghi chú nên tạo sau mỗi tình huống**, ta sang **Liên kết với các lĩnh vực trước** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Liên kết với các lĩnh vực trước
 
@@ -100,11 +111,14 @@ Các bài tập giả định bạn đã đọc ít nhất:
 
 Nếu tình huống có giao dịch hoặc phòng vệ, xem thêm [05 — Giao dịch và phái sinh](../05_trading_derivatives/README.md). Nếu liên quan Hàn Quốc/Việt Nam, xem [06 — Thị trường Hàn Quốc và Việt Nam](../06_markets_korea_vietnam/README.md).
 
-Nếu muốn học theo lớp nâng cao thay vì theo domain, sử dụng [Advanced Depth Path](../ADVANCED_DEPTH_PATH.md).
+Nếu muốn học theo lớp nâng cao thay vì theo lĩnh vực (domain / 도메인), sử dụng [Advanced Depth Path](../ADVANCED_DEPTH_PATH.md).
+
+
+> **Chuyển mạch:** Từ **Liên kết với các lĩnh vực trước**, ta sang **Tiêu chuẩn hoàn thành** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Tiêu chuẩn hoàn thành
 
-Không coi một case là “đã học” nếu chỉ đọc hết file. Tối thiểu phải tự tạo:
+Không coi một trường hợp (case / 사례) là “đã học” nếu chỉ đọc hết tệp (file / 파일). Tối thiểu phải tự tạo:
 
 ```text
 Một giả thuyết có thể bị bác bỏ
@@ -120,7 +134,10 @@ Một kế hoạch theo dõi
 Một attribution / post-mortem template
 ```
 
-Với worked case 06 và 07, phải tự thay ít nhất ba giả định và tính lại kết quả. Nếu chỉ đọc số có sẵn, bài chưa đạt.
+Với worked trường hợp (case / 사례) 06 và 07, phải tự thay ít nhất ba giả định và tính lại kết quả. Nếu chỉ đọc số có sẵn, bài chưa đạt.
+
+
+> **Chuyển mạch:** Từ **Tiêu chuẩn hoàn thành**, ta sang **Mục tiêu cuối cùng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mục tiêu cuối cùng
 

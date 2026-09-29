@@ -1,5 +1,8 @@
 # Nhiệt động lực học hóa học — thế hóa học, hoạt độ và hệ nhiều thành phần
 
+> **Mạch đọc:** Đọc **Nhiệt động lực học hóa học — thế hóa học, hoạt độ và hệ nhiều thành phần** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phương trình vi phân của Gibbs** sang **Thế hóa học là Gibbs mol riêng phần**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Nhiệt động lực học hóa học (chemical thermodynamics / 화학 열역학)** mở rộng các khái niệm về năng lượng, entropy và Gibbs sang hỗn hợp nhiều thành phần. Khái niệm trung tâm là **thế hóa học (chemical potential, \(\mu_i\) / 화학 퍼텐셜)**: mức thay đổi cận biên của năng lượng tự do Gibbs khi thêm một lượng nhỏ tiểu phần vào hệ trong điều kiện xác định.
 
 Thế hóa học là ngôn ngữ chung giúp nối nhiều hiện tượng tưởng như tách biệt: khuếch tán, hòa tan, cân bằng pha, phản ứng hóa học, thẩm thấu, điện hóa và vận chuyển qua màng.
@@ -47,7 +50,7 @@ Trong hỗn hợp, môi trường xung quanh tiểu phần rất quan trọng. M
 
 ## Đại lượng mol riêng phần
 
-Cùng logic áp dụng cho bất kỳ đại lượng mở rộng \(X\):
+Cùng lô-gic (logic / 논리) áp dụng cho bất kỳ đại lượng mở rộng \(X\):
 
 \[
 \bar X_i=
@@ -109,7 +112,7 @@ Nhiệt động lực học dùng:
 
 **Hoạt độ (activity, \(a_i\))** là biến thành phần hiệu dụng không thứ nguyên được định nghĩa sao cho quan hệ thế hóa học có dạng trên.
 
-Về logic, hoạt độ không chỉ là “nồng độ đã sửa”. Nó được định nghĩa qua thế hóa học; hệ số hoạt độ là cách nối hoạt độ với một thang nồng độ cụ thể.
+Về lô-gic (logic / 논리), hoạt độ không chỉ là “nồng độ đã sửa”. Nó được định nghĩa qua thế hóa học; hệ số hoạt độ là cách nối hoạt độ với một thang nồng độ cụ thể.
 
 ## Hệ số hoạt độ
 
@@ -342,7 +345,7 @@ K_D=\frac{c_{org}}{c_{aq}}
 
 Nhưng nếu chất tan ion hóa hoặc tạo phức, tỉ số phân bố phụ thuộc pH và toàn bộ bài toán dạng tồn tại.
 
-Chiết lỏng–lỏng vì vậy là ứng dụng của **nhiệt động lực học hóa học + acid–base + cân bằng dạng tồn tại**.
+Chiết lỏng–lỏng vì vậy là ứng dụng của **nhiệt động lực học hóa học + acid–cơ sở (base / 기반) + cân bằng dạng tồn tại**.
 
 ## Thẩm thấu — thế hóa học của dung môi
 
@@ -376,7 +379,7 @@ Với ion có điện tích \(z_i\) trong điện thế \(\phi\):
 \tilde\mu_i=\mu_i+z_iF\phi
 \]
 
-Chuyển động của ion phụ thuộc gradient của **thế điện hóa (electrochemical potential)**, không chỉ gradient nồng độ.
+Chuyển động của ion phụ thuộc độ dốc (gradient / 기울기) của **thế điện hóa (electrochemical potential)**, không chỉ độ dốc (gradient / 기울기) nồng độ.
 
 Đây là nền cho:
 
@@ -400,17 +403,17 @@ E=E^\circ-\frac{RT}{nF}\ln Q
 
 Điều này nối nhiệt động lực học hóa học trực tiếp với [điện hóa học](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md), điện tử và lưu trữ năng lượng.
 
-## Khuếch tán từ gradient thế hóa học
+## Khuếch tán từ độ dốc (gradient / 기울기) thế hóa học
 
-Định luật Fick đơn giản dùng gradient nồng độ:
+Định luật Fick đơn giản dùng độ dốc (gradient / 기울기) nồng độ:
 
 \[
 J=-D\nabla c
 \]
 
-nhưng mô tả nhiệt động sâu hơn cho rằng thông lượng được thúc đẩy bởi gradient thế hóa học.
+nhưng mô tả nhiệt động sâu hơn cho rằng thông lượng được thúc đẩy bởi độ dốc (gradient / 기울기) thế hóa học.
 
-Trong hỗn hợp không lý tưởng, chỉ nhìn gradient nồng độ có thể không dự đoán đúng hướng và mức truyền vật chất nếu các tương tác thành phần đủ mạnh.
+Trong hỗn hợp không lý tưởng, chỉ nhìn độ dốc (gradient / 기울기) nồng độ có thể không dự đoán đúng hướng và mức truyền vật chất nếu các tương tác thành phần đủ mạnh.
 
 Nhiệt động lực học không cân bằng phát triển quan hệ giữa thông lượng và lực nhiệt động.
 
@@ -493,9 +496,9 @@ Không. Nó là đặc trưng của cân bằng hơi–lỏng trong hỗn hợp 
 
 Không. Nó cho lực dẫn động và trạng thái cân bằng; cơ chế thuộc động học và cấu trúc điện tử.
 
-### “Gradient nồng độ luôn đủ để dự đoán hướng vận chuyển”
+### “độ dốc (gradient / 기울기) nồng độ luôn đủ để dự đoán hướng vận chuyển”
 
-Không trong mọi hệ. Lực dẫn động tổng quát là gradient thế hóa học hoặc thế điện hóa; tính không lý tưởng có thể làm mô tả chỉ dựa trên nồng độ thiếu thông tin.
+Không trong mọi hệ. Lực dẫn động tổng quát là độ dốc (gradient / 기울기) thế hóa học hoặc thế điện hóa; tính không lý tưởng có thể làm mô tả chỉ dựa trên nồng độ thiếu thông tin.
 
 ## Mô hình tư duy
 
@@ -509,6 +512,8 @@ thành phần / áp suất / tương tác / điện trường
 → các thế thích hợp bằng nhau tại cân bằng
 ```
 
-Từ cùng framework này có thể hiểu tính không lý tưởng của dung dịch, cân bằng pha, thẩm thấu, điện hóa, khuếch tán và cân bằng phản ứng mà không cần học chúng như các định luật hoàn toàn tách biệt.
+Từ cùng khung phần mềm (framework / 프레임워크) này có thể hiểu tính không lý tưởng của dung dịch, cân bằng pha, thẩm thấu, điện hóa, khuếch tán và cân bằng phản ứng mà không cần học chúng như các định luật hoàn toàn tách biệt.
 
 Xem tiếp: [Tốc độ phản ứng](../06_chemical_kinetics/00_reaction_rates.md) để chuyển từ “hướng có lợi về nhiệt động” sang “nhanh tới đâu”, và [Nhiệt động lực học của cân bằng](../07_chemical_equilibrium/04_thermodynamics_of_equilibrium.md) để dùng thế hóa học trong bài toán cân bằng phản ứng/pha.
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 energy heat and work](./00_energy_heat_and_work.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

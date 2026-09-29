@@ -1,5 +1,7 @@
 # Cẩm nang đọc dữ liệu vĩ mô: từ số liệu tới phản ứng tài sản
 
+> **Mạch đọc:** Đặt **Cẩm nang đọc dữ liệu vĩ mô: từ số liệu tới phản ứng tài sản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Không đọc headline một cách cơ học** sang **2. Baseline, consensus và thị trường (market / 시장) pricing**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > Dữ liệu vĩ mô chỉ hữu ích khi nó làm thay đổi xác suất về tăng trưởng, lạm phát, chính sách, thanh khoản hoặc tín dụng. Mục tiêu của chương này là biến lịch kinh tế từ một danh sách headline thành một quy trình đọc dữ liệu có hệ thống.
 
 Khung tổng quát:
@@ -16,7 +18,7 @@ Mốc nền
 → Equities / Commodities
 ```
 
-# Phần I — Cách đọc một release
+# Phần I — Cách đọc một bản phát hành (release / 릴리스)
 
 ## 1. Không đọc headline một cách cơ học
 
@@ -30,7 +32,7 @@ Thị trường không phản ứng đơn giản với “CPI cao”, “NFP t�
 
 Một dữ liệu tốt có thể khiến thị trường giảm nếu nó vẫn thấp hơn điều đã được price trước.
 
-## 2. Baseline, consensus và market pricing
+## 2. Baseline, consensus và thị trường (market / 시장) pricing
 
 Ba khái niệm này khác nhau.
 
@@ -38,7 +40,7 @@ Ba khái niệm này khác nhau.
 
 **Consensus:** dự báo đồng thuận của economist hoặc analyst.
 
-**Market pricing:** kỳ vọng được phản ánh trong futures, yield curve, options hoặc giá tài sản.
+**thị trường (market / 시장) pricing:** kỳ vọng được phản ánh trong futures, yield curve, options hoặc giá tài sản.
 
 Ví dụ consensus dự báo cut 25bp nhưng futures đã phản ánh xác suất đáng kể của 50bp. Nếu ngân hàng trung ương chỉ cut 25bp, quyết định “đúng consensus” vẫn có thể bị xem là hawkish so với giá thị trường.
 
@@ -54,7 +56,7 @@ nhưng
 
 khác hoàn toàn một bản +200k không có revision xấu.
 
-Một release nên được đọc như chuỗi thời gian, không phải một điểm đơn lẻ.
+Một bản phát hành (release / 릴리스) nên được đọc như chuỗi thời gian, không phải một điểm đơn lẻ.
 
 # Phần II — Lạm phát
 
@@ -74,9 +76,9 @@ Food
 Energy
 ```
 
-Core loại food và energy vì biến động cao nhưng không đồng nghĩa “lạm phát thật”.
+Cốt lõi (core / 핵심) loại food và năng lượng (energy / 에너지) vì biến động cao nhưng không đồng nghĩa “lạm phát thật”.
 
-## 5. MoM, YoY và base effect
+## 5. MoM, YoY và cơ sở (base / 기반) tác động (effect / 효과)
 
 YoY dễ bị ảnh hưởng bởi mức so sánh năm trước.
 
@@ -124,7 +126,7 @@ Nhưng pass-through tới CPI không 1:1 vì doanh nghiệp có thể:
 
 ## 10. Kỳ vọng lạm phát
 
-Kỳ vọng có thể đến từ survey hoặc market breakeven.
+Kỳ vọng có thể đến từ survey hoặc thị trường (market / 시장) breakeven.
 
 Breakeven gần đúng:
 
@@ -132,7 +134,7 @@ Breakeven gần đúng:
 Nominal Yield - Real Yield
 ```
 
-nhưng nó chứa cả inflation risk premium và liquidity premium, nên không phải “dự báo lạm phát thuần”.
+nhưng nó chứa cả inflation rủi ro (risk / 위험) premium và liquidity premium, nên không phải “dự báo lạm phát thuần”.
 
 # Phần III — Thị trường lao động
 
@@ -140,11 +142,11 @@ nhưng nó chứa cả inflation risk premium và liquidity premium, nên không
 
 Báo cáo việc làm Mỹ thường có establishment survey và household survey.
 
-Nonfarm payrolls đến từ establishment side; unemployment rate chủ yếu từ household side.
+Nonfarm payrolls đến từ establishment side; unemployment tỷ lệ (rate / 비율) chủ yếu từ household side.
 
 Hai survey có thể phân kỳ trong một thời gian vì phương pháp khác nhau.
 
-## 12. Unemployment rate
+## 12. Unemployment tỷ lệ (rate / 비율)
 
 Tỷ lệ thất nghiệp tăng có thể do:
 
@@ -157,12 +159,12 @@ Hai trường hợp có ý nghĩa khác nhau.
 
 Nên xem thêm:
 
-- participation rate;
+- participation tỷ lệ (rate / 비율);
 - employment-population ratio;
 - underemployment;
 - hours worked.
 
-Một tỷ lệ unemployment duy nhất không mô tả đầy đủ labor market.
+Một tỷ lệ unemployment duy nhất không mô tả đầy đủ labor thị trường (market / 시장).
 
 ## 14. Wage và productivity
 
@@ -196,14 +198,14 @@ Openings-to-unemployed cho biết nhu cầu lao động so với nguồn cung. Q
 
 # Phần IV — PMI và chu kỳ sản xuất
 
-## 17. PMI/ISM là diffusion index
+## 17. PMI/ISM là diffusion chỉ mục (index / 인덱스)
 
 PMI trên 50 thường nghĩa hoạt động tăng so với kỳ trước; dưới 50 thường nghĩa giảm.
 
 Nhưng cần đọc components:
 
 - new orders;
-- production;
+- môi trường vận hành (production / 운영 환경);
 - employment;
 - prices paid;
 - inventories;
@@ -269,7 +271,7 @@ Các dữ liệu quan trọng:
 
 Permits thường đi trước hoạt động xây dựng; starts cho biết activity hiện tại; completions ảnh hưởng nguồn cung.
 
-## 22. Housing truyền policy sang nền kinh tế
+## 22. Housing truyền chính sách (policy / 정책) sang nền kinh tế
 
 Lãi suất mortgage ảnh hưởng:
 
@@ -301,13 +303,13 @@ Cần phân rã headline tăng trưởng thành:
 
 ## 24. Inventory có thể làm GDP nhiễu
 
-Inventory build có thể đẩy GDP lên dù final demand yếu.
+Inventory bản dựng (build / 빌드) có thể đẩy GDP lên dù final demand yếu.
 
 Imports trừ trong công thức GDP nhưng nhập khẩu mạnh đôi khi phản ánh domestic demand mạnh, nên không thể kết luận “imports cao là xấu”.
 
 ## 25. GDP và GDI
 
-GDP đo từ phía sản lượng; GDI đo từ phía thu nhập. Về lý thuyết chúng phản ánh cùng nền kinh tế nhưng thực tế có measurement error.
+GDP đo từ phía sản lượng; GDI đo từ phía thu nhập. Về lý thuyết chúng phản ánh cùng nền kinh tế nhưng thực tế có sai số đo lường (measurement error / 측정 오차).
 
 Cần nhìn xu hướng và revisions.
 
@@ -334,19 +336,19 @@ Một lần cut có thể hawkish nếu guidance cho thấy ít cut hơn về sa
 
 Một lần hike có thể dovish nếu ngân hàng trung ương ám chỉ chu kỳ tăng đã gần kết thúc.
 
-## 28. Current rate và expected path
+## 28. hiện tại (current / 현재) tỷ lệ (rate / 비율) và expected đường dẫn (path / 경로)
 
-Tài sản chiết khấu lãi suất tương lai, không chỉ policy rate hôm nay.
+Tài sản chiết khấu lãi suất tương lai, không chỉ chính sách (policy / 정책) tỷ lệ (rate / 비율) hôm nay.
 
 2Y yield và OIS/futures thường giúp đọc repricing ở đầu đường cong.
 
-# Phần IX — Bond market
+# Phần IX — Bond thị trường (market / 시장)
 
 ## 29. Nominal yield, real yield và breakeven
 
 Nominal yield có thể thay đổi do:
 
-- expected policy;
+- expected chính sách (policy / 정책);
 - expected inflation;
 - real growth;
 - term premium.
@@ -355,7 +357,7 @@ Real yield đặc biệt quan trọng với định giá tài sản duration dà
 
 ## 30. 2Y và 10Y
 
-2Y nhạy với expected policy gần hạn.
+2Y nhạy với expected chính sách (policy / 정책) gần hạn.
 
 10Y phản ánh nhiều hơn:
 
@@ -386,7 +388,7 @@ Phần bù kỳ hạn (term premium) là phần bù cho việc nắm duration d�
 Nó có thể tăng do:
 
 - fiscal issuance;
-- inflation uncertainty;
+- inflation bất định (uncertainty / 불확실성);
 - QT;
 - giảm nhu cầu từ người mua lớn.
 
@@ -398,9 +400,9 @@ Long-end yield tăng vì term premium có thể thắt financial conditions dù 
 
 Spread tăng có thể phản ánh:
 
-- default risk;
-- liquidity risk;
-- risk aversion;
+- default rủi ro (risk / 위험);
+- liquidity rủi ro (risk / 위험);
+- rủi ro (risk / 위험) aversion;
 - technical selling.
 
 Government yield giảm nhưng high-yield spread tăng mạnh thường là tín hiệu tăng trưởng/tín dụng xấu đi.
@@ -409,17 +411,17 @@ Government yield giảm nhưng high-yield spread tăng mạnh thường là tín
 
 Tác động lãi suất thường có độ trễ vì nợ cố định chỉ repricing khi đáo hạn.
 
-Cần xem maturity wall chứ không chỉ policy rate.
+Cần xem maturity wall chứ không chỉ chính sách (policy / 정책) tỷ lệ (rate / 비율).
 
 ## 35. Bank lending standards
 
-Khảo sát lending standards giúp nối policy tới real economy.
+Khảo sát lending standards giúp nối chính sách (policy / 정책) tới real economy.
 
 Nếu bank tightening và loan demand cùng giảm, credit impulse có thể yếu ngay cả khi central bank đã dừng hike.
 
 # Phần XI — Financial conditions
 
-## 36. Financial conditions rộng hơn policy rate
+## 36. Financial conditions rộng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)
 
 Điều kiện tài chính gồm:
 
@@ -428,9 +430,9 @@ Nếu bank tightening và loan demand cùng giảm, credit impulse có thể y�
 - equity prices;
 - FX;
 - lending standards;
-- property prices.
+- thuộc tính (property / 속성) prices.
 
-Hai nền kinh tế cùng policy rate vẫn có thể có financial conditions rất khác.
+Hai nền kinh tế cùng chính sách (policy / 정책) tỷ lệ (rate / 비율) vẫn có thể có financial conditions rất khác.
 
 # Phần XII — FX
 
@@ -480,7 +482,7 @@ Copper và metals chịu ảnh hưởng của:
 - mine supply;
 - positioning.
 
-Giá hàng hóa vừa là chỉ báo kinh tế vừa là input cost.
+Giá hàng hóa vừa là chỉ báo kinh tế vừa là đầu vào (input / 입력) chi phí (cost / 비용).
 
 ## 41. Gold
 
@@ -490,7 +492,7 @@ Các biến chính:
 - USD;
 - central-bank demand;
 - geopolitics;
-- confidence in policy regime.
+- confidence in chính sách (policy / 정책) regime.
 
 Không dùng quy tắc cơ học “inflation ↑ → gold ↑”.
 
@@ -506,11 +508,11 @@ Không nên xây thesis lớn trên một print đầu tiên nếu series vốn 
 
 Seasonal adjustment không hoàn hảo. Các kỳ nghỉ, thời tiết hoặc lịch Tết có thể làm dữ liệu méo.
 
-## 44. Base effect
+## 44. cơ sở (base / 기반) tác động (effect / 효과)
 
 Khi YoY thay đổi mạnh, luôn kiểm tra mốc so sánh năm trước và momentum gần đây.
 
-## 45. Measurement error
+## 45. sai số đo lường (measurement error / 측정 오차)
 
 Dữ liệu survey là ước tính, không phải đo toàn bộ nền kinh tế với độ chính xác tuyệt đối.
 
@@ -520,7 +522,7 @@ Nên tìm xác nhận từ nhiều series độc lập.
 
 ## 46. Positioning
 
-Tin xấu có thể làm thị trường tăng nếu nhà đầu tư đã còn bi quan hơn trước release.
+Tin xấu có thể làm thị trường tăng nếu nhà đầu tư đã còn bi quan hơn trước bản phát hành (release / 릴리스).
 
 Tin tốt có thể làm thị trường giảm nếu positioning quá crowded long.
 
@@ -536,7 +538,7 @@ Equity / Property ↑
 
 và chiều ngược lại.
 
-# Phần XVI — Regime matrix
+# Phần XVI — Regime ma trận (matrix / 행렬)
 
 ## 48. Growth và inflation surprise
 
@@ -560,7 +562,7 @@ Credit và liquidity có thể làm ma trận này mất tác dụng nếu hệ 
 
 # Phần XVII — Quy trình đọc một sự kiện
 
-## 49. Trước release
+## 49. Trước bản phát hành (release / 릴리스)
 
 Ghi lại:
 
@@ -575,7 +577,7 @@ Option Implied Move
 Your Baseline
 ```
 
-## 50. Ngay sau release
+## 50. Ngay sau bản phát hành (release / 릴리스)
 
 Đừng chỉ nhìn headline. Kiểm tra:
 
@@ -607,12 +609,12 @@ Theo dõi xem phản ứng ban đầu có được xác nhận bởi nhiều tà
 Kiểm tra:
 
 - analyst revisions;
-- policy communication;
+- chính sách (policy / 정책) communication;
 - credit conditions;
-- sector performance;
+- sector hiệu năng (performance / 성능);
 - whether positioning reversed.
 
-## 53. Event note chuẩn
+## 53. sự kiện (event / 이벤트) ghi chú (note / 노트) chuẩn
 
 Event note là mẫu ghi chép biến một release thành quy trình có thể review: kỳ vọng trước sự kiện, số thực tế, mức bất ngờ, cấu phần, phản ứng chính sách và phản ứng tài sản. Hãy điền nó trước khi câu chuyện sau sự kiện làm lệch trí nhớ.
 
@@ -635,7 +637,7 @@ What would invalidate it:
 
 # Phần XVIII — Chuỗi nhân quả cốt lõi
 
-## 54. Inflation event
+## 54. Inflation sự kiện (event / 이벤트)
 
 Với một sự kiện lạm phát, mục tiêu không phải chỉ ghi CPI tăng/giảm mà là xác định thành phần nào tạo surprise và điều đó thay đổi đường đi chính sách ra sao. Mẫu dưới đây giúp nối dữ liệu với yield, FX, credit và equities.
 
@@ -649,7 +651,7 @@ CPI Surprise
 → Equity Multiple / Credit
 ```
 
-## 55. Growth event
+## 55. Growth sự kiện (event / 이벤트)
 
 Với dữ liệu tăng trưởng, cần tách tốc độ headline khỏi chất lượng cầu cuối, tồn kho và đóng góp chính phủ. Câu hỏi dẫn đường là nền kinh tế đang mở rộng bền vững hay chỉ được nâng bởi một thành phần tạm thời.
 
@@ -661,7 +663,7 @@ Growth Surprise
 → Cyclicals vs Defensives
 ```
 
-## 56. Credit event
+## 56. Credit sự kiện (event / 이벤트)
 
 Credit event cần được đọc qua spread, điều kiện tái cấp vốn, tài sản thế chấp và khả năng truyền dẫn sang doanh nghiệp/ngân hàng. Đừng dừng ở việc ghi spread mở rộng; hãy xác định lớp thanh khoản hoặc solvency nào đang thay đổi.
 
@@ -675,7 +677,7 @@ Funding Stress
 
 ## Kết luận
 
-Đọc macro data tốt không phải đoán headline. Mục tiêu là hiểu **thông tin mới đã thay đổi phân phối xác suất như thế nào** và thị trường đang phản ánh sự thay đổi đó qua bond, FX, credit và equity ra sao.
+Đọc macro dữ liệu (data / 데이터) tốt không phải đoán headline. Mục tiêu là hiểu **thông tin mới đã thay đổi phân phối xác suất như thế nào** và thị trường đang phản ánh sự thay đổi đó qua bond, FX, credit và equity ra sao.
 
 Chuỗi quan trọng nhất cần ghi nhớ là:
 
@@ -688,3 +690,5 @@ Actual
 → Earnings / Valuation
 → Asset Reaction
 ```
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

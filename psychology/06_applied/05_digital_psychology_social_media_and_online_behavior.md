@@ -1,14 +1,17 @@
 # Tâm lý học số, mạng xã hội và hành vi trực tuyến
 
+> **Mạch đọc:** Đọc **Tâm lý học số, mạng xã hội và hành vi trực tuyến** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Screen thời gian (time / 시간) là phép đo quá thô** sang **2. Active và passive use không phải hai hộp tuyệt đối**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Môi trường số không chỉ là “nội dung trên màn hình”. Nó là một hệ thống gồm giao diện, thuật toán, phản hồi xã hội, thông báo, tín hiệu bản sắc, cạnh tranh chú ý và động cơ kinh tế. Vì vậy câu hỏi “mạng xã hội tốt hay xấu?” quá thô; câu hỏi khoa học tốt hơn là **kiểu sử dụng nào, trên nền tảng nào, với ai, trong bối cảnh nào, qua cơ chế nào, dẫn tới kết quả nào?**
 
-> **Trạng thái bằng chứng:** tổng quan hệ thống gần đây cho thấy **mức sử dụng mạng xã hội nói chung** có liên hệ nhỏ và không nhất quán với wellbeing/ill-being, trong khi **sử dụng có vấn đề (problematic social-media use)** liên hệ ổn định hơn với ill-being. Điều này không chứng minh một causal pathway duy nhất và không cho phép suy luận “dùng nhiều = bị hại”.
+> **Trạng thái bằng chứng:** tổng quan hệ thống gần đây cho thấy **mức sử dụng mạng xã hội nói chung** có liên hệ nhỏ và không nhất quán với wellbeing/ill-being, trong khi **sử dụng có vấn đề (problematic social-media use)** liên hệ ổn định hơn với ill-being. Điều này không chứng minh một nhân quả (causal / 인과적) pathway duy nhất và không cho phép suy luận “dùng nhiều = bị hại”.
 
-## 1. Screen time là phép đo quá thô
+## 1. Screen thời gian (time / 시간) là phép đo quá thô
 
 Hai người cùng dùng ba giờ có thể đang gọi video cho gia đình, học online, doomscroll, bị cyberbullying hoặc làm việc. Tổng thời gian không cho biết nội dung, mục đích, quan hệ xã hội hay trạng thái trước khi sử dụng.
 
-Vì vậy measurement tốt cần tách ít nhất:
+Vì vậy đo lường (measurement / 측정) tốt cần tách ít nhất:
 
 ```text
 thời lượng
@@ -24,17 +27,17 @@ Xem [[../00_foundations/07_ecological_momentary_assessment_and_real_world_measur
 
 ## 2. Active và passive use không phải hai hộp tuyệt đối
 
-Nhắn tin, sáng tạo nội dung, tham gia group và scrolling thụ động có chức năng tâm lý khác nhau. Giao tiếp trực tiếp với người quen có thể hỗ trợ connection, trong khi consumption nặng comparison có thể liên hệ với affect xấu hơn ở một số người.
+Nhắn tin, sáng tạo nội dung, tham gia group và scrolling thụ động có chức năng tâm lý khác nhau. Giao tiếp trực tiếp với người quen có thể hỗ trợ liên kết (connection / 연결), trong khi consumption nặng comparison có thể liên hệ với affect xấu hơn ở một số người.
 
 > **Giới hạn bằng chứng:** active/passive là một heuristic hữu ích, không phải taxonomy hoàn hảo. Cùng một hành vi “xem feed” có thể giải trí, học tập hoặc tăng comparison tùy content và person.
 
-## 3. Social comparison
+## 3. xã hội (social / 사회적) comparison
 
-Nền tảng cho người dùng tiếp xúc với phiên bản đã chọn lọc của cuộc sống người khác. **So sánh xã hội (social comparison)** có thể ảnh hưởng tự đánh giá, đặc biệt khi target được xem là liên quan và “hơn mình”.
+Nền tảng cho người dùng tiếp xúc với phiên bản đã chọn lọc của cuộc sống người khác. **So sánh xã hội (social comparison)** có thể ảnh hưởng tự đánh giá, đặc biệt khi mục tiêu (target / 대상) được xem là liên quan và “hơn mình”.
 
 Upward comparison có thể tạo động lực hoặc làm giảm self-evaluation tùy cách diễn giải. Vì vậy “so sánh luôn xấu” là overclaim.
 
-## 4. Selection effect và reverse causality
+## 4. Selection tác động (effect / 효과) và reverse causality
 
 Người dùng không vào nền tảng một cách ngẫu nhiên. Người cô đơn, lo âu, thiếu ngủ hoặc buồn chán có thể dùng mạng xã hội khác người đang ổn định.
 
@@ -42,17 +45,17 @@ Người dùng không vào nền tảng một cách ngẫu nhiên. Người cô 
 social-media use ↔ mood / sleep / loneliness
 ```
 
-Mũi tên hai chiều nhắc rằng association có thể đến từ causal effect của platform, self-selection, third variable hoặc feedback loop giữa cả hai.
+Mũi tên hai chiều nhắc rằng association có thể đến từ nhân quả (causal / 인과적) tác động (effect / 효과) của nền tảng (platform / 플랫폼), self-selection, third variable hoặc vòng phản hồi (feedback loop / 피드백 루프) giữa cả hai.
 
 ## 5. Problematic use khác high use
 
 Sử dụng nhiều không tự động là pathology. **Sử dụng có vấn đề (problematic use)** quan tâm hơn tới mất kiểm soát, xung đột với trách nhiệm, distress, persistence dù gây hại và suy giảm chức năng.
 
-Umbrella review 2026 cho thấy problematic use có association với ill-being ổn định hơn general use. Đây là lý do library không dùng tổng số giờ như proxy cho disorder.
+Umbrella rà soát (review / 검토) 2026 cho thấy problematic use có association với ill-being ổn định hơn general use. Đây là lý do thư viện (library / 라이브러리) không dùng tổng số giờ như proxy cho disorder.
 
 ## 6. Thuật toán và vòng phản hồi người–hệ thống
 
-Recommendation system có thể tối ưu engagement, watch time hoặc predicted preference.
+Recommendation hệ thống (system / 시스템) có thể tối ưu engagement, watch thời gian (time / 시간) hoặc predicted preference.
 
 ```text
 hành vi người dùng
@@ -62,35 +65,35 @@ hành vi người dùng
 → dữ liệu mới
 ```
 
-Đây là vòng feedback. Tuy nhiên không nên nói “algorithm kiểm soát tâm trí”; effect phụ thuộc mục tiêu hệ thống, content supply, user choice và social context.
+Đây là vòng phản hồi (feedback / 피드백). Tuy nhiên không nên nói “thuật toán (algorithm / 알고리즘) kiểm soát tâm trí”; tác động (effect / 효과) phụ thuộc mục tiêu hệ thống, content supply, người dùng (user / 사용자) choice và xã hội (social / 사회적) ngữ cảnh (context / 맥락).
 
 ## 7. Variable reinforcement và checking habit
 
-Reward xã hội không dự đoán trước — tin nhắn, like, content mới — có thể duy trì checking qua learning principles. Nhưng gọi mọi checking lặp lại là “dopamine addiction” là sai.
+Reward xã hội không dự đoán trước — tin nhắn, like, content mới — có thể duy trì checking qua học tập (learning / 학습) principles. Nhưng gọi mọi checking lặp lại là “dopamine addiction” là sai.
 
 Dopamine tham gia học tập và động lực rộng hơn nhiều. Xem [[../02_learning_and_cognition/00_learning_and_conditioning]] và [[../04_mental_health/08_substance_use_and_addictive_behavior]].
 
 ## 8. Notification và attentional capture
 
-Notification là cue nổi bật. Ngay cả khi không mở ngay, nó có thể làm gián đoạn task set hoặc tạo prospective-memory load: “mình cần kiểm tra sau”.
+Notification là cue nổi bật. Ngay cả khi không mở ngay, nó có thể làm gián đoạn tác vụ (task / 작업) set hoặc tạo prospective-memory tải (load / 로드): “mình cần kiểm tra sau”.
 
 Tắt notification không thiết yếu là một **environment-design heuristic** có rủi ro thấp, nhưng benefit phụ thuộc nghề nghiệp, urgency và người dùng.
 
 ## 9. FOMO và belonging
 
-**Nỗi sợ bỏ lỡ (fear of missing out — FOMO)** kết hợp uncertainty xã hội, nhu cầu belonging và opportunity cost. FOMO có thể thúc đẩy checking; checking lại làm người dùng thấy thêm sự kiện mình không tham gia.
+**Nỗi sợ bỏ lỡ (fear of missing out — FOMO)** kết hợp bất định (uncertainty / 불확실성) xã hội, nhu cầu belonging và opportunity chi phí (cost / 비용). FOMO có thể thúc đẩy checking; checking lại làm người dùng thấy thêm sự kiện mình không tham gia.
 
-> **Lý thuyết/association hiện đại:** FOMO liên hệ với problematic use nhưng causal direction có thể hai chiều.
+> **Lý thuyết/association hiện đại:** FOMO liên hệ với problematic use nhưng nhân quả (causal / 인과적) direction có thể hai chiều.
 
 ## 10. Sleep
 
-Sử dụng ban đêm có thể làm trễ ngủ qua time displacement, arousal, notification, vòng “xem thêm một chút” và light exposure. Meta-analysis 2024 cho thấy social-media use, đặc biệt problematic use, liên hệ với sleep problems ở người trẻ, nhưng insomnia cũng có thể làm tăng night-time use.
+Sử dụng ban đêm có thể làm trễ ngủ qua thời gian (time / 시간) displacement, arousal, notification, vòng “xem thêm một chút” và light exposure. Meta-analysis 2024 cho thấy social-media use, đặc biệt problematic use, liên hệ với sleep problems ở người trẻ, nhưng insomnia cũng có thể làm tăng night-time use.
 
 Xem [[../01_brain_and_mind/08_sleep_circadian_and_recovery]].
 
-## 11. Body image
+## 11. Body ảnh (image / 이미지)
 
-Image-centric feeds có thể tăng appearance comparison ở một số người. Effect thay đổi theo content, giới, tuổi, vulnerability và cách sử dụng.
+Image-centric feeds có thể tăng appearance comparison ở một số người. tác động (effect / 효과) thay đổi theo content, giới, tuổi, vulnerability và cách sử dụng.
 
 Không nên nói “Instagram/TikTok gây eating disorder”. Tốt hơn là xem appearance-focused exposure như một yếu tố môi trường có thể tương tác với pre-existing vulnerability.
 
@@ -98,37 +101,37 @@ Xem [[../04_mental_health/07_eating_disorders_and_body_image]].
 
 ## 12. Short-form video và attention span
 
-Claim “short-form video phá hủy attention span” hiện vượt quá bằng chứng nếu phát biểu như causal law.
+Claim “short-form video phá hủy attention span” hiện vượt quá bằng chứng nếu phát biểu như nhân quả (causal / 인과적) law.
 
-Reward-dense, rapid-switching media có thể củng cố habit tìm novelty hoặc làm sustained task kém hấp dẫn trong một số context, nhưng long-term change của general attentional capacity cần longitudinal/experimental evidence mạnh hơn.
+Reward-dense, rapid-switching media có thể củng cố habit tìm novelty hoặc làm sustained tác vụ (task / 작업) kém hấp dẫn trong một số ngữ cảnh (context / 맥락), nhưng long-term thay đổi (change / 변경) của general attentional sức chứa (capacity / 용량) cần longitudinal/experimental bằng chứng (evidence / 증거) mạnh hơn.
 
 > **Trạng thái:** hypothesis / debated issue, không phải established fact.
 
 ## 13. Online disinhibition và anonymity
 
-Ẩn danh, giảm nonverbal cue, asynchronous interaction và khoảng cách vật lý có thể thay đổi hành vi. Một số người disclosure dễ hơn; một số người hostile hơn.
+Ẩn danh, giảm nonverbal cue, asynchronous tương tác (interaction / 상호작용) và khoảng cách vật lý có thể thay đổi hành vi. Một số người disclosure dễ hơn; một số người hostile hơn.
 
-“Internet làm con người toxic” là quá đơn giản. Affordance tương tác với norm, identity và accountability.
+“Internet làm con người toxic” là quá đơn giản. Affordance tương tác với norm, định danh (identity / 식별자) và accountability.
 
-## 14. Cyberbullying, harassment và platform-level risk
+## 14. Cyberbullying, harassment và platform-level rủi ro (risk / 위험)
 
-Harassment online có thể persistent, searchable, replicable và scale tới audience lớn. Đây không chỉ là vấn đề self-control của nạn nhân; platform governance, moderation và social norm cũng là causal layer.
+Harassment online có thể persistent, searchable, replicable và quy mô (scale / 규모) tới audience lớn. Đây không chỉ là vấn đề self-control của nạn nhân; nền tảng (platform / 플랫폼) quản trị (governance / 거버넌스), moderation và xã hội (social / 사회적) norm cũng là nhân quả (causal / 인과적) tầng (layer / 계층).
 
 ## 15. Misinformation và familiarity
 
-Repeated exposure có thể tăng familiarity và perceived truth, trong khi source memory suy giảm. Virality còn tạo social proof giả: “nhiều share” dễ bị hiểu nhầm thành “evidence mạnh”.
+Repeated exposure có thể tăng familiarity và perceived truth, trong khi nguồn (source / 소스) bộ nhớ (memory / 메모리) suy giảm. Virality còn tạo xã hội (social / 사회적) proof giả: “nhiều share” dễ bị hiểu nhầm thành “bằng chứng (evidence / 증거) mạnh”.
 
 Xem [[17_misinformation_belief_revision_and_inoculation]].
 
 ## 16. Parasocial relationship và online community
 
-**Quan hệ cận xã hội (parasocial relationship)** là cảm giác gắn kết một chiều với creator/public figure/fictional character. Nó không tự động pathological; có thể tạo comfort, learning và identity support.
+**Quan hệ cận xã hội (parasocial relationship)** là cảm giác gắn kết một chiều với creator/công khai (public / 공개) figure/fictional character. Nó không tự động pathological; có thể tạo comfort, học tập (learning / 학습) và định danh (identity / 식별자) hỗ trợ (support / 지원).
 
-Online community cũng có thể cung cấp belonging quan trọng cho migrant, minority hoặc nhóm sở thích hiếm. Medium online không làm connection “giả”; reciprocity, quality và function mới quan trọng.
+Online community cũng có thể cung cấp belonging quan trọng cho migrant, minority hoặc nhóm sở thích hiếm. Medium online không làm liên kết (connection / 연결) “giả”; reciprocity, chất lượng (quality / 품질) và hàm (function / 함수) mới quan trọng.
 
 Xem [[../03_human_development_and_person/12_loneliness_social_connection_and_belonging]].
 
-## 17. Doomscrolling như threat-monitoring loop
+## 17. Doomscrolling như threat-monitoring vòng lặp (loop / 루프)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
 
@@ -141,43 +144,43 @@ uncertainty / threat
 → tìm tiếp
 ```
 
-Mục tiêu ngắn hạn là giảm uncertainty nhưng feed có thể không bao giờ tạo closure.
+Mục tiêu ngắn hạn là giảm bất định (uncertainty / 불확실성) nhưng feed có thể không bao giờ tạo closure.
 
 ## 18. “Digital detox” và dopamine-reset claims
 
-Các nghiên cứu tạm ngừng platform cho kết quả mixed tùy baseline use, duration và outcome.
+Các nghiên cứu tạm ngừng nền tảng (platform / 플랫폼) cho kết quả mixed tùy baseline use, duration và kết quả (outcome / 결과).
 
 > **Không phải established neuroscience:** “7 ngày detox sẽ reset dopamine”.
 
-Câu hỏi tốt hơn là behavior nào được giảm, function nào bị mất và activity nào thay thế.
+Câu hỏi tốt hơn là hành vi (behavior / 동작) nào được giảm, hàm (function / 함수) nào bị mất và activity nào thay thế.
 
 ## 19. Trẻ vị thành niên và heterogeneity
 
-Tuổi trẻ có peer sensitivity, identity development và self-regulation đang thay đổi, nhưng effect của social media khác rất lớn giữa người dùng.
+Tuổi trẻ có peer sensitivity, định danh (identity / 식별자) development và self-regulation đang thay đổi, nhưng tác động (effect / 효과) của xã hội (social / 사회적) media khác rất lớn giữa người dùng.
 
-Umbrella review 2026 tổng hợp 72 reviews cho thấy general use có association yếu/không nhất quán, còn problematic use liên hệ với ill-being ổn định hơn. Vì vậy blanket claim “social media hại tất cả teen” không phù hợp evidence hiện tại.
+Umbrella rà soát (review / 검토) 2026 tổng hợp 72 reviews cho thấy general use có association yếu/không nhất quán, còn problematic use liên hệ với ill-being ổn định hơn. Vì vậy blanket claim “xã hội (social / 사회적) media hại tất cả teen” không phù hợp bằng chứng (evidence / 증거) hiện tại.
 
 ## 20. Between-person và within-person
 
 Một người dùng mạng xã hội nhiều hơn người khác là câu hỏi khác với việc **cùng một người** có mood thay đổi thế nào trong ngày họ dùng nhiều hơn bình thường.
 
-Trộn hai level dễ tạo causal story sai. Experience sampling và within-person design đặc biệt hữu ích ở đây.
+Trộn hai mức (level / 수준) dễ tạo nhân quả (causal / 인과적) story sai. Experience sampling và within-person thiết kế (design / 설계) đặc biệt hữu ích ở đây.
 
-## 21. Tự điều chỉnh số: từ moralizing sang environment design
+## 21. Tự điều chỉnh số: từ moralizing sang môi trường (environment / 환경) thiết kế (design / 설계)
 
-Các strategy rủi ro thấp có thể gồm tắt notification không cần thiết, bảo vệ sleep window, đặt friction cho app gây checking tự động, xác định mục đích trước khi mở và dùng scheduled checking cho channel không khẩn cấp.
+Các chiến lược (strategy / 전략) rủi ro thấp có thể gồm tắt notification không cần thiết, bảo vệ sleep cửa sổ (window / 윈도우), đặt friction cho app gây checking tự động, xác định mục đích trước khi mở và dùng scheduled checking cho channel không khẩn cấp.
 
-Đây là **heuristic thiết kế môi trường**, không phải treatment và không đảm bảo universal effect.
+Đây là **heuristic thiết kế môi trường**, không phải treatment và không đảm bảo universal tác động (effect / 효과).
 
 ## 22. Ranh giới bằng chứng
 
-**Bằng chứng tương đối vững:** problematic social-media use liên hệ ổn định hơn với ill-being so với general use; sleep displacement, cyberbullying, social comparison và checking habit là mechanism đáng chú ý.
+**Bằng chứng tương đối vững:** problematic social-media use liên hệ ổn định hơn với ill-being so với general use; sleep displacement, cyberbullying, xã hội (social / 사회적) comparison và checking habit là cơ chế (mechanism / 메커니즘) đáng chú ý.
 
-**Lý thuyết/association hiện đại:** FOMO loop, algorithmic amplification, active/passive differences và identity feedback.
+**Lý thuyết/association hiện đại:** FOMO vòng lặp (loop / 루프), algorithmic amplification, active/passive differences và định danh (identity / 식별자) phản hồi (feedback / 피드백).
 
-**Còn tranh luận:** causal effect trung bình của general use, long-term attention changes, lợi ích của “detox” và heterogeneity giữa cá nhân.
+**Còn tranh luận:** nhân quả (causal / 인과적) tác động (effect / 효과) trung bình của general use, long-term attention changes, lợi ích của “detox” và heterogeneity giữa cá nhân.
 
-**Không được nói:** screen time một mình đo được harm, dopamine = addiction, social media gây depression theo một đường đơn, hoặc online relationship không thật.
+**Không được nói:** screen thời gian (time / 시간) một mình đo được harm, dopamine = addiction, xã hội (social / 사회적) media gây depression theo một đường đơn, hoặc online relationship không thật.
 
 ## Mô hình tư duy
 

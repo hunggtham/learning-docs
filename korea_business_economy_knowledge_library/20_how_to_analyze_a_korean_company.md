@@ -1,5 +1,8 @@
 # Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)
 
+> **Mạch đọc:** Đặt **Cách phân tích một công ty Hàn Quốc từ đầu đến cuối (Company Analysis Framework / 한국 기업 분석 프레임워크)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bước 0 — Đặt doanh nghiệp vào lịch sử và hệ sinh thái** sang **Bước 1 — Xác định đúng pháp nhân**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Đây là chương thực hành trung tâm của toàn bộ thư viện. Khi gặp một doanh nghiệp mới—dù là nơi định ứng tuyển, nhà cung cấp, đối tác dự án hay một công ty niêm yết—không nên bắt đầu từ biểu đồ giá cổ phiếu hoặc danh tiếng thương hiệu. Hãy đi theo chuỗi **pháp nhân → mô hình kinh doanh → ngành và chuỗi giá trị → bộ máy tài chính → quản trị → phân bổ vốn → rủi ro và định giá**.
 
 Mục tiêu không phải tạo một danh sách kiểm tra máy móc. Mục tiêu là xây dựng một **mô hình nhân quả (causal model)** đủ rõ để trả lời ba câu hỏi: doanh nghiệp kiếm tiền bằng cách nào, điều gì làm cơ chế kinh tế của nó tốt hoặc xấu đi, và bằng chứng nào sẽ khiến giả thuyết ban đầu không còn đúng.
@@ -169,7 +172,7 @@ Một ghi chú nghiên cứu nên phân biệt rõ:
 
 **Tuyên bố của quản lý (management claim):** CAPEX này sẽ tạo vị thế dẫn đầu.
 
-**Suy luận (inference):** tỷ lệ sử dụng công suất phải đạt một mức nhất định để lợi nhuận dự án vượt tỷ suất yêu cầu.
+**suy luận (inference / 추론):** tỷ lệ sử dụng công suất phải đạt một mức nhất định để lợi nhuận dự án vượt tỷ suất yêu cầu.
 
 Trộn ba tầng này là một nguồn lớn của thiên kiến xác nhận (confirmation bias).
 
@@ -277,7 +280,7 @@ Mẫu này gom business, ngành, tài chính, định giá, quản trị và fai
 Các nguồn cuối bài là điểm bắt đầu để kiểm tra lại số liệu và sự kiện trong hồ sơ công ty. Hãy ghi ngày truy cập và phân biệt nguồn pháp lý, nguồn doanh nghiệp và nguồn diễn giải.
 ```
 
-## Mental Model — Mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 
 > Phân tích doanh nghiệp là quá trình chuyển từ **thương hiệu → pháp nhân → cỗ máy kinh tế → cỗ máy tài chính → quản trị → kỳ vọng thị trường**.
 
@@ -297,3 +300,5 @@ Ai kiểm soát doanh nghiệp?
 ```
 
 Khi trả lời được chuỗi này bằng bằng chứng thay vì cảm giác, ta đã chuyển từ “biết tên công ty” sang thực sự hiểu doanh nghiệp.
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

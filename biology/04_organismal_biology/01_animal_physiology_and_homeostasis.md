@@ -1,10 +1,12 @@
 # Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)
 
+> **Mạch đọc:** Đọc **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Vì sao khuếch tán không đủ khi cơ thể lớn?** sang **2. Cân bằng nội môi không phải giữ một con số bất biến**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 Động vật lớn không thể để từng tế bào tự lấy oxy và chất dinh dưỡng trực tiếp từ môi trường như sinh vật đơn bào. Khi cơ thể lớn lên, khoảng cách khuếch tán tăng theo, trong khi nhu cầu chuyển hóa thay đổi nhanh theo vận động, nhiệt độ và trạng thái sinh lý. Vì vậy cơ thể cần **hệ vận chuyển khối**, các bề mặt trao đổi chuyên hóa và mạng điều hòa giữ môi trường bên trong trong vùng tế bào có thể hoạt động.
 
-Chapter này không phải atlas cơ quan. Ta sẽ xem mỗi hệ như lời giải cho một constraint vật lý–hóa học: tuần hoàn vận chuyển vật chất đường dài; phổi trao đổi O₂/CO₂; ruột đưa phân tử dinh dưỡng vào cơ thể; gan phân phối và biến đổi cơ chất; thận kiểm soát nước, ion, chất thải và acid–base; cơ biến ATP thành lực; hệ thần kinh và nội tiết phối hợp trạng thái toàn thân.
+Chapter này không phải atlas cơ quan. Ta sẽ xem mỗi hệ như lời giải cho một ràng buộc (constraint / 제약조건) vật lý–hóa học: tuần hoàn vận chuyển vật chất đường dài; phổi trao đổi O₂/CO₂; ruột đưa phân tử dinh dưỡng vào cơ thể; gan phân phối và biến đổi cơ chất; thận kiểm soát nước, ion, chất thải và acid–cơ sở (base / 기반); cơ biến ATP thành lực; hệ thần kinh và nội tiết phối hợp trạng thái toàn thân.
 
-> **Mô hình tư duy:** cơ thể động vật là một hệ `dòng chảy → trao đổi → cảm nhận → điều hòa`. Máu là môi trường bên trong đang lưu thông; cơ quan là các interface chuyên hóa; cân bằng nội môi giữ biến sinh lý trong phạm vi chức năng; dự trữ sinh lý cho phép cơ thể tăng output khi demand tăng mà chưa mất ổn định.
+> **Mô hình tư duy:** cơ thể động vật là một hệ `dòng chảy → trao đổi → cảm nhận → điều hòa`. Máu là môi trường bên trong đang lưu thông; cơ quan là các giao diện (interface / 인터페이스) chuyên hóa; cân bằng nội môi giữ biến sinh lý trong phạm vi chức năng; dự trữ sinh lý cho phép cơ thể tăng đầu ra (output / 출력) khi demand tăng mà chưa mất ổn định.
 
 ---
 
@@ -20,7 +22,7 @@ dòng chảy khối ở khoảng cách dài
 → khuếch tán qua khoảng cách ngắn
 ```
 
-Tuần hoàn không thay thế diffusion; nó làm khoảng cách diffusion còn lại đủ ngắn. Cùng nguyên lý xuất hiện ở phổi, ruột, thận và nhau thai: dòng chảy duy trì gradient, còn hàng rào mỏng hoàn thành trao đổi.
+Tuần hoàn không thay thế diffusion; nó làm khoảng cách diffusion còn lại đủ ngắn. Cùng nguyên lý xuất hiện ở phổi, ruột, thận và nhau thai: dòng chảy duy trì độ dốc (gradient / 기울기), còn hàng rào mỏng hoàn thành trao đổi.
 
 ---
 
@@ -68,7 +70,7 @@ Q=\frac{\Delta P}{R}
 
 Trong đó \(Q\) là lưu lượng, \(\Delta P\) là chênh lệch áp lực và \(R\) là sức cản.
 
-Với dòng chảy tầng trong ống lý tưởng, logic Poiseuille cho thấy:
+Với dòng chảy tầng trong ống lý tưởng, lô-gic (logic / 논리) Poiseuille cho thấy:
 
 \[
 R\propto \frac{1}{r^4}
@@ -88,7 +90,7 @@ Tim động vật có vú có nửa phải bơm máu qua tuần hoàn phổi và
 CO=HR\times SV
 \]
 
-Trong đó \(HR\) là nhịp tim và \(SV\) là thể tích nhát bóp. Khi demand tăng, cơ thể có thể tăng một hoặc cả hai biến này. Điều hòa thần kinh tự chủ, venous return, lực co bóp và cấu trúc cơ tim cùng quyết định output thực tế.
+Trong đó \(HR\) là nhịp tim và \(SV\) là thể tích nhát bóp. Khi demand tăng, cơ thể có thể tăng một hoặc cả hai biến này. Điều hòa thần kinh tự chủ, venous return, lực co bóp và cấu trúc cơ tim cùng quyết định đầu ra (output / 출력) thực tế.
 
 ---
 
@@ -96,7 +98,7 @@ Trong đó \(HR\) là nhịp tim và \(SV\) là thể tích nhát bóp. Khi dema
 
 Trong phạm vi sinh lý, thất được đổ đầy nhiều hơn làm sợi cơ tim căng tới vị trí tạo lực thuận lợi hơn, từ đó tăng thể tích nhát bóp. Cơ chế Frank–Starling giúp lượng máu bơm ra thích nghi beat-to-beat với lượng máu trở về mà không cần một bộ điều khiển trung tâm tính toán từng nhịp.
 
-Đây là ví dụ quan trọng của **điều hòa được nhúng vào chính cơ học của mô**: structure và material property có thể tạo feedback trước cả khi hormone hay gene expression thay đổi.
+Đây là ví dụ quan trọng của **điều hòa được nhúng vào chính cơ học của mô**: cấu trúc (structure / 구조) và material thuộc tính (property / 속성) có thể tạo phản hồi (feedback / 피드백) trước cả khi hormone hay gene expression thay đổi.
 
 ## 8. Cây mạch máu: cấu trúc khác nhau vì chức năng vật lý khác nhau
 
@@ -141,13 +143,13 @@ Hemoglobin có tính hiệp đồng (cooperativity), tạo đường cong gắn 
 
 CO₂, H⁺ và nhiệt độ tăng trong mô hoạt động có thể làm hemoglobin giảm ái lực với O₂, thuận lợi cho việc nhả oxy tại nơi nhu cầu cao. Đây là ví dụ phân tử về điều hòa phù hợp bối cảnh: cùng protein nhưng trạng thái hóa học địa phương đổi chức năng của nó.
 
-## 13. Trao đổi khí: dòng khối duy trì gradient, khuếch tán hoàn thành trao đổi
+## 13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi
 
-Theo logic Fick, tốc độ khuếch tán khí tăng khi diện tích bề mặt và gradient áp suất riêng phần lớn, và giảm khi hàng rào dày hơn. Phế nang giải bài toán này bằng diện tích rất lớn, hàng rào khí–máu mỏng và dòng khí/dòng máu liên tục duy trì gradient.
+Theo lô-gic (logic / 논리) Fick, tốc độ khuếch tán khí tăng khi diện tích bề mặt và độ dốc (gradient / 기울기) áp suất riêng phần lớn, và giảm khi hàng rào dày hơn. Phế nang giải bài toán này bằng diện tích rất lớn, hàng rào khí–máu mỏng và dòng khí/dòng máu liên tục duy trì độ dốc (gradient / 기울기).
 
-Thông khí chỉ đưa không khí vào phổi; tưới máu đưa máu tới mao mạch phổi; khuếch tán mới đưa khí qua hàng rào. Có thông khí nhưng không tưới máu tạo vùng giống khoảng chết; có tưới máu nhưng không thông khí tạo dòng máu ít được oxy hóa. Vì vậy chức năng hô hấp là property của **sự ghép thông khí–tưới máu (ventilation–perfusion matching)**, không phải của phổi riêng lẻ.
+Thông khí chỉ đưa không khí vào phổi; tưới máu đưa máu tới mao mạch phổi; khuếch tán mới đưa khí qua hàng rào. Có thông khí nhưng không tưới máu tạo vùng giống khoảng chết; có tưới máu nhưng không thông khí tạo dòng máu ít được oxy hóa. Vì vậy chức năng hô hấp là thuộc tính (property / 속성) của **sự ghép thông khí–tưới máu (ventilation–perfusion matching)**, không phải của phổi riêng lẻ.
 
-## 14. CO₂ nối hô hấp với cân bằng acid–base
+## 14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)
 
 CO₂ không chỉ là chất thải. Trong nước:
 
@@ -157,15 +159,15 @@ CO_2+H_2O\rightleftharpoons H_2CO_3\rightleftharpoons H^++HCO_3^-
 
 Phổi thay CO₂ trong vài phút thông qua ventilation; thận điều chỉnh H⁺ và bicarbonate chậm hơn nhưng bền hơn. Vì hai hệ hoạt động ở hai thang thời gian, rối loạn hô hấp có thể được thận bù một phần và rối loạn chuyển hóa có thể kích hoạt thay đổi ventilation.
 
-“Bù” không có nghĩa nguyên nhân đã được sửa. Nó chỉ cho thấy feedback của cơ thể đang kéo pH trở lại vùng ít nguy hiểm hơn.
+“Bù” không có nghĩa nguyên nhân đã được sửa. Nó chỉ cho thấy phản hồi (feedback / 피드백) của cơ thể đang kéo pH trở lại vùng ít nguy hiểm hơn.
 
 ## 15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu
 
 Nhai và co bóp làm nhỏ thức ăn, tăng diện tích tiếp xúc. Enzyme thủy phân carbohydrate thành đường đơn, protein thành peptide/amino acid và lipid thành các thành phần có thể được hấp thu rồi đóng gói lại.
 
-Ruột non tăng diện tích bằng nếp gấp, nhung mao và vi nhung mao. Transporter màng đưa nutrient qua tế bào biểu mô; mao mạch nhận nhiều chất tan trong nước, còn mạch bạch huyết ở nhung mao tham gia vận chuyển lipid. Dòng máu và bạch huyết tiếp tục kéo chất đã hấp thu đi, giúp giữ gradient cho quá trình tiếp tục.
+Ruột non tăng diện tích bằng nếp gấp, nhung mao và vi nhung mao. Transporter màng đưa nutrient qua tế bào biểu mô; mao mạch nhận nhiều chất tan trong nước, còn mạch bạch huyết ở nhung mao tham gia vận chuyển lipid. Dòng máu và bạch huyết tiếp tục kéo chất đã hấp thu đi, giúp giữ độ dốc (gradient / 기울기) cho quá trình tiếp tục.
 
-Vì vậy hấp thu ở ruột chính là các nguyên lý membrane transport, diffusion và bulk flow được phóng lớn lên cấp cơ quan.
+Vì vậy hấp thu ở ruột chính là các nguyên lý membrane vận chuyển (transport / 전송), diffusion và bulk luồng (flow / 흐름) được phóng lớn lên cấp cơ quan.
 
 ## 16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng
 
@@ -179,7 +181,7 @@ Khái niệm “detox” trong sinh lý nên hiểu là enzyme biến đổi ch�
 
 Sau ăn, insulin và tín hiệu dinh dưỡng làm nhiều mô tăng sử dụng hoặc lưu trữ glucose, lipid và amino acid. Khi nhịn ăn, glucagon và các tín hiệu đối kháng hỗ trợ gan duy trì glucose máu, tăng huy động lipid và thay nguồn nhiên liệu theo thời gian.
 
-Một metabolism khỏe không phải luôn giữ một pathway ở mức cao, mà là **khả năng chuyển trạng thái đúng lúc**. Mất khả năng chuyển trạng thái là một dạng failure của regulation, không chỉ failure của một enzyme đơn lẻ.
+Một metabolism khỏe không phải luôn giữ một pathway ở mức cao, mà là **khả năng chuyển trạng thái đúng lúc**. Mất khả năng chuyển trạng thái là một dạng thất bại (failure / 실패) của regulation, không chỉ thất bại (failure / 실패) của một enzyme đơn lẻ.
 
 ## 18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ
 
@@ -198,7 +200,7 @@ lọc
 
 **Mức lọc cầu thận (glomerular filtration rate, GFR)** phụ thuộc diện tích lọc, tính thấm của hàng rào và các lực áp suất qua cầu thận. Thận có cơ chế tự điều hòa tại chỗ giúp GFR tương đối ổn định trong một khoảng huyết áp.
 
-Khi tưới máu giảm quá mạnh, autoregulation không còn đủ. Đây là ví dụ của mọi hệ homeostasis: feedback chỉ hoạt động tốt trong một **phạm vi năng lực (operating range)**; vượt khỏi phạm vi đó, output có thể suy nhanh.
+Khi tưới máu giảm quá mạnh, autoregulation không còn đủ. Đây là ví dụ của mọi hệ homeostasis: phản hồi (feedback / 피드백) chỉ hoạt động tốt trong một **phạm vi năng lực (operating range)**; vượt khỏi phạm vi đó, đầu ra (output / 출력) có thể suy nhanh.
 
 ## 20. Tái hấp thu có tính chọn lọc và có giới hạn công suất
 
@@ -206,17 +208,17 @@ Khi tưới máu giảm quá mạnh, autoregulation không còn đủ. Đây là
 
 Đây là cùng nguyên lý bão hòa từng gặp ở enzyme và transporter màng, giờ xuất hiện ở cấp cơ quan.
 
-## 21. Hệ đối dòng tạo gradient để cô đặc nước tiểu
+## 21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu
 
-Các đoạn của quai Henle có tính thấm khác nhau với nước và muối. Dòng dịch đi ngược chiều cùng với vận chuyển ion tạo gradient thẩm thấu dọc tủy thận. Ống góp sau đó sử dụng gradient này để điều chỉnh lượng nước được giữ lại.
+Các đoạn của quai Henle có tính thấm khác nhau với nước và muối. Dòng dịch đi ngược chiều cùng với vận chuyển ion tạo độ dốc (gradient / 기울기) thẩm thấu dọc tủy thận. Ống góp sau đó sử dụng độ dốc (gradient / 기울기) này để điều chỉnh lượng nước được giữ lại.
 
-ADH làm tăng số aquaporin ở màng tế bào ống góp. Nhưng ADH không thể cô đặc nước tiểu nếu gradient tủy đã mất. Hormone điều chỉnh **khả năng khai thác một cấu trúc vật lý có sẵn**, không tự tạo toàn bộ chức năng từ đầu.
+ADH làm tăng số aquaporin ở màng tế bào ống góp. Nhưng ADH không thể cô đặc nước tiểu nếu độ dốc (gradient / 기울기) tủy đã mất. Hormone điều chỉnh **khả năng khai thác một cấu trúc vật lý có sẵn**, không tự tạo toàn bộ chức năng từ đầu.
 
 ## 22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp
 
 ADH chủ yếu đáp ứng osmolarity và giúp giữ nước. Hệ renin–angiotensin–aldosterone (RAAS) được kích hoạt khi tưới máu thận/Na⁺ tới nephron giảm và hỗ trợ co mạch, giữ Na⁺, khát và giữ nước. Peptide lợi niệu từ tim tạo lực đối kháng khi thể tích/độ căng thành tim tăng.
 
-Cơ thể vì vậy dùng nhiều loop chồng lấp thay vì một “hormone huyết áp”. Điều này tăng robustness nhưng cũng làm failure phức tạp: kích hoạt kéo dài một hệ bù có thể trở thành gánh nặng cho hệ khác.
+Cơ thể vì vậy dùng nhiều vòng lặp (loop / 루프) chồng lấp thay vì một “hormone huyết áp”. Điều này tăng robustness nhưng cũng làm thất bại (failure / 실패) phức tạp: kích hoạt kéo dài một hệ bù có thể trở thành gánh nặng cho hệ khác.
 
 ## 23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau
 
@@ -253,7 +255,7 @@ Lực còn phụ thuộc chiều dài sarcomere và vận tốc co. Hệ thần 
 
 Xương liên tục được tái cấu trúc bởi osteoclast và osteoblast. Tải cơ học, hormone, calcium/phosphate, vitamin D và tuổi đều ảnh hưởng cân bằng giữa tạo và hủy xương.
 
-Xương phải vừa đủ mạnh để chịu lực vừa đủ nhẹ để vận động hiệu quả. Hình dạng và mật độ vì vậy phản ánh trade-off giữa cơ học, vật liệu và chi phí chuyển hóa.
+Xương phải vừa đủ mạnh để chịu lực vừa đủ nhẹ để vận động hiệu quả. Hình dạng và mật độ vì vậy phản ánh sự đánh đổi (trade-off / 트레이드오프) giữa cơ học, vật liệu và chi phí chuyển hóa.
 
 ## 27. Exercise là phép thử tích hợp của toàn hệ
 
@@ -275,35 +277,35 @@ Theo nguyên lý Fick:
 \dot V O_2=CO(C_{aO_2}-C_{vO_2})
 \]
 
-Tức là cơ thể có thể tăng sử dụng O₂ bằng cách tăng dòng máu và/hoặc tăng mức mô rút O₂ khỏi máu. Năng lực aerobic do đó là property của cả hệ phổi–máu–tim–mạch–cơ–ty thể.
+Tức là cơ thể có thể tăng sử dụng O₂ bằng cách tăng dòng máu và/hoặc tăng mức mô rút O₂ khỏi máu. Năng lực aerobic do đó là thuộc tính (property / 속성) của cả hệ phổi–máu–tim–mạch–cơ–ty thể.
 
-Tập luyện sức bền lâu dài có thể tăng thể tích nhát bóp, mật độ mao mạch, số lượng/chức năng ty thể và điều chỉnh control thần kinh tự chủ. Đây là **thích nghi sinh lý trong đời**, khác với thích nghi tiến hóa qua nhiều thế hệ.
+Tập luyện sức bền lâu dài có thể tăng thể tích nhát bóp, mật độ mao mạch, số lượng/chức năng ty thể và điều chỉnh điều khiển (control / 제어) thần kinh tự chủ. Đây là **thích nghi sinh lý trong đời**, khác với thích nghi tiến hóa qua nhiều thế hệ.
 
 ## 28. Glucose và calcium minh họa homeostasis nhiều cơ quan
 
-Glucose máu được điều khiển bởi pancreas, gan, cơ, mô mỡ, ruột và hệ thần kinh–nội tiết. Insulin không làm mọi mô phản ứng giống nhau; effect phụ thuộc receptor, transporter và trạng thái chuyển hóa của từng mô.
+Glucose máu được điều khiển bởi pancreas, gan, cơ, mô mỡ, ruột và hệ thần kinh–nội tiết. Insulin không làm mọi mô phản ứng giống nhau; tác động (effect / 효과) phụ thuộc receptor, transporter và trạng thái chuyển hóa của từng mô.
 
-Ca²⁺ ngoại bào cần cho neuron, cơ, đông máu và signaling. PTH, vitamin D, thận, ruột và xương phối hợp giữ calcium/phosphate trong vùng hoạt động. Xương vì vậy vừa là cấu trúc cơ học vừa là khoáng dự trữ trong một network nội tiết.
+Ca²⁺ ngoại bào cần cho neuron, cơ, đông máu và signaling. PTH, vitamin D, thận, ruột và xương phối hợp giữ calcium/phosphate trong vùng hoạt động. Xương vì vậy vừa là cấu trúc cơ học vừa là khoáng dự trữ trong một mạng (network / 네트워크) nội tiết.
 
-## 29. Compensation giữ output nhưng không xóa nguyên nhân
+## 29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân
 
-Cơ thể có reserve và redundancy. Khi một thành phần suy, thành phần khác có thể tăng hoạt động để giữ output tạm thời: thiếu máu có thể làm tim đập nhanh hơn; mất thể tích kích hoạt sympathetic/RAAS; rối loạn hô hấp có thể được thận bù một phần.
+Cơ thể có reserve và redundancy. Khi một thành phần suy, thành phần khác có thể tăng hoạt động để giữ đầu ra (output / 출력) tạm thời: thiếu máu có thể làm tim đập nhanh hơn; mất thể tích kích hoạt sympathetic/RAAS; rối loạn hô hấp có thể được thận bù một phần.
 
 Nhưng bù trừ kéo dài có chi phí. Co mạch và giữ dịch có thể hỗ trợ pressure ngắn hạn nhưng tăng tải cho tim nếu duy trì quá lâu. **Decompensation** xảy ra khi demand vượt reserve hoặc chính cơ chế bù tạo gánh nặng lớn hơn lợi ích.
 
-## 30. Ba case tích hợp: mất nước, mất máu và độ cao
+## 30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao
 
 **Mất nước:** osmolarity tăng và/hoặc thể tích tuần hoàn giảm → khát, ADH và RAAS tăng → thận giữ nước và hệ mạch điều chỉnh. Nếu mất tiếp tục vượt reserve, tưới máu và khả năng vận động giảm.
 
 **Mất máu cấp:** venous return giảm → stroke volume giảm → baroreflex tăng sympathetic activity, nhịp tim và co mạch. Kidney/endocrine giữ muối nước ở thang thời gian chậm hơn. Nếu bleeding không dừng, compensation cuối cùng thất bại.
 
-**Độ cao:** áp suất riêng phần O₂ hít vào giảm → ventilation tăng sớm; trong ngày–tuần, thận điều chỉnh acid–base và erythropoietin tăng tạo hồng cầu. Đây là acclimatization trong đời. Quần thể sống lâu dài ở cao nguyên có thể có adaptation di truyền khác — một cầu nối trực tiếp từ physiology sang evolution.
+**Độ cao:** áp suất riêng phần O₂ hít vào giảm → ventilation tăng sớm; trong ngày–tuần, thận điều chỉnh acid–cơ sở (base / 기반) và erythropoietin tăng tạo hồng cầu. Đây là acclimatization trong đời. Quần thể sống lâu dài ở cao nguyên có thể có adaptation di truyền khác — một cầu nối trực tiếp từ physiology sang evolution.
 
 ## 31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể
 
-Nutrient đi vào ruột → hormone/neural signal thay đổi → insulin/glucagon đổi → gan, cơ và mô mỡ đổi dòng chuyển hóa. Dòng máu tới ruột tăng; gan nhận nutrient qua hệ cửa và làm giảm bớt dao động trước khi chất đi vào tuần hoàn chung.
+Nutrient đi vào ruột → hormone/neural tín hiệu (signal / 신호) thay đổi → insulin/glucagon đổi → gan, cơ và mô mỡ đổi dòng chuyển hóa. Dòng máu tới ruột tăng; gan nhận nutrient qua hệ cửa và làm giảm bớt dao động trước khi chất đi vào tuần hoàn chung.
 
-Vì vậy “ăn” không phải sự kiện riêng của dạ dày mà là perturbation của một network toàn thân.
+Vì vậy “ăn” không phải sự kiện riêng của dạ dày mà là perturbation của một mạng (network / 네트워크) toàn thân.
 
 ## 32. Các hiểu lầm cần tránh
 
@@ -311,7 +313,7 @@ Vì vậy “ăn” không phải sự kiện riêng của dạ dày mà là per
 
 “Thận chỉ lọc chất độc” sai; vai trò lớn của thận là giữ composition dịch cơ thể bằng lọc, tái hấp thu và bài tiết.
 
-“SpO₂ bình thường nghĩa cung cấp oxy chắc chắn bình thường” sai; còn phụ thuộc hemoglobin và cardiac output.
+“SpO₂ bình thường nghĩa cung cấp oxy chắc chắn bình thường” sai; còn phụ thuộc hemoglobin và cardiac đầu ra (output / 출력).
 
 “Cân bằng nội môi giữ mọi giá trị không đổi” sai; hệ điều hòa giữ biến trong vùng phù hợp với trạng thái và thời gian.
 
@@ -332,10 +334,10 @@ môi trường ngoài
 → phổi / thận / gan / da
 ```
 
-Chồng lên flow vật chất này là các lớp thông tin thần kinh, nội tiết và miễn dịch. Homeostasis vì vậy không nằm trong một cơ quan; nó là property nổi lên từ network nhiều cơ quan có feedback và reserve.
+Chồng lên luồng (flow / 흐름) vật chất này là các lớp thông tin thần kinh, nội tiết và miễn dịch. Homeostasis vì vậy không nằm trong một cơ quan; nó là thuộc tính (property / 속성) nổi lên từ mạng (network / 네트워크) nhiều cơ quan có phản hồi (feedback / 피드백) và reserve.
 
 <!-- depth-audit-2026:oxygen-delivery-control -->
-## Human Biology theo flow: oxygen delivery là ví dụ tích hợp nhiều cơ quan
+## Human Biology theo luồng (flow / 흐름): oxygen delivery là ví dụ tích hợp nhiều cơ quan
 
 Cơ thể không cần “phổi tốt”, “tim tốt” và “máu tốt” như ba mục tiêu rời. Tissue cần **dòng cung cấp oxy (oxygen delivery)**. Một mô hình tích hợp là:
 
@@ -349,25 +351,25 @@ trong đó \(CO\) là cung lượng tim và \(C_{aO_2}\) là hàm lượng oxy �
 \dot V_{O_2}=CO(C_{aO_2}-C_{vO_2})
 \]
 
-Vì vậy cùng một oxygen consumption có thể đạt bằng tăng flow hoặc tăng extraction ở mô. Một failure ở phổi làm giảm arterial oxygen; anemia làm giảm oxygen content dù saturation có thể không quá thấp; cardiac failure làm giảm flow. Cùng symptom cuối có thể xuất phát từ mechanism khác nhau — đây là lý do Human Biology phải học theo causal chain thay vì danh sách cơ quan.
+Vì vậy cùng một oxygen consumption có thể đạt bằng tăng luồng (flow / 흐름) hoặc tăng extraction ở mô. Một thất bại (failure / 실패) ở phổi làm giảm arterial oxygen; anemia làm giảm oxygen content dù saturation có thể không quá thấp; cardiac thất bại (failure / 실패) làm giảm luồng (flow / 흐름). Cùng symptom cuối có thể xuất phát từ cơ chế (mechanism / 메커니즘) khác nhau — đây là lý do Human Biology phải học theo chuỗi nhân quả (causal chain / 인과 사슬) thay vì danh sách cơ quan.
 
-## Compensation khác recovery
+## Compensation khác khôi phục (recovery / 복구)
 
-Homeostasis thường che giấu failure sớm bằng compensation. Khi thể tích tuần hoàn giảm, sympathetic tone và RAAS có thể giữ pressure dù reserve giảm. Khi lên cao, ventilation tăng nhanh; trong thời gian dài hơn, erythropoietin và thay đổi hồng cầu hỗ trợ oxygen transport. Giá trị đo “gần bình thường” vì vậy không luôn có nghĩa system không chịu tải.
+Homeostasis thường che giấu thất bại (failure / 실패) sớm bằng compensation. Khi thể tích tuần hoàn giảm, sympathetic tone và RAAS có thể giữ pressure dù reserve giảm. Khi lên cao, ventilation tăng nhanh; trong thời gian dài hơn, erythropoietin và thay đổi hồng cầu hỗ trợ oxygen vận chuyển (transport / 전송). Giá trị đo “gần bình thường” vì vậy không luôn có nghĩa hệ thống (system / 시스템) không chịu tải.
 
-**Decompensation** xảy ra khi demand vượt reserve hoặc compensation tự tạo cost lớn. Đây là pattern dùng chung cho tim mạch, hô hấp, thận, nhiệt và chuyển hóa: structure tạo capacity; regulation phân phối capacity; failure xuất hiện khi constraint vượt khả năng điều chỉnh.
+**Decompensation** xảy ra khi demand vượt reserve hoặc compensation tự tạo chi phí (cost / 비용) lớn. Đây là mẫu (pattern / 패턴) dùng chung cho tim mạch, hô hấp, thận, nhiệt và chuyển hóa: cấu trúc (structure / 구조) tạo sức chứa (capacity / 용량); regulation phân phối sức chứa (capacity / 용량); thất bại (failure / 실패) xuất hiện khi ràng buộc (constraint / 제약조건) vượt khả năng điều chỉnh.
 
 <!-- continuity-2026:starling-edema -->
 ## Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?
 
-Nước qua thành mao mạch chịu tác động của áp lực thủy tĩnh, lực keo do protein huyết tương và tính thấm của thành mạch. Hệ bạch huyết thu hồi phần dịch/protein không quay trực tiếp về mao mạch. Vì vậy **phù (edema)** không phải một disease duy nhất mà là output chung khi một trong các cơ chế này lệch đủ mạnh: áp lực tĩnh mạch tăng, albumin giảm, tính thấm vi mạch tăng hoặc dẫn lưu lymph giảm.
+Nước qua thành mao mạch chịu tác động của áp lực thủy tĩnh, lực keo do protein huyết tương và tính thấm của thành mạch. Hệ bạch huyết thu hồi phần dịch/protein không quay trực tiếp về mao mạch. Vì vậy **phù (edema)** không phải một disease duy nhất mà là đầu ra (output / 출력) chung khi một trong các cơ chế này lệch đủ mạnh: áp lực tĩnh mạch tăng, albumin giảm, tính thấm vi mạch tăng hoặc dẫn lưu lymph giảm.
 
-Đây là ví dụ tốt của cấu trúc → cơ chế → failure. Capillary mỏng giúp exchange nhưng chính độ thấm đó tạo nguy cơ mất dịch ra mô; lymphatic network là lớp điều hòa bổ sung. Cơ thể không loại bỏ trade-off, mà quản lý nó bằng nhiều hệ phối hợp.
+Đây là ví dụ tốt của cấu trúc → cơ chế → thất bại (failure / 실패). Capillary mỏng giúp exchange nhưng chính độ thấm đó tạo nguy cơ mất dịch ra mô; lymphatic mạng (network / 네트워크) là lớp điều hòa bổ sung. Cơ thể không loại bỏ sự đánh đổi (trade-off / 트레이드오프), mà quản lý nó bằng nhiều hệ phối hợp.
 
 <!-- continuity-2026:integrated-exercise -->
-## Case tích hợp: exercise làm nhiều hệ thay state cùng lúc
+## Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc
 
-Khi cơ bắt đầu làm việc, ATP turnover tăng gần như ngay lập tức. Local metabolite và neural command làm blood flow tới cơ tăng; sympathetic activity tăng nhịp tim và co bóp; ventilation tăng để giữ trao đổi O₂/CO₂; liver tăng cung cấp glucose theo state; adipose tăng giải phóng fatty acid khi demand kéo dài hơn. Không có một “organ trung tâm” tính toán toàn bộ response — control phân tán nhưng được nối bằng neural, endocrine và local signal.
+Khi cơ bắt đầu làm việc, ATP turnover tăng gần như ngay lập tức. cục bộ (local / 로컬) metabolite và neural command làm blood luồng (flow / 흐름) tới cơ tăng; sympathetic activity tăng nhịp tim và co bóp; ventilation tăng để giữ trao đổi O₂/CO₂; liver tăng cung cấp glucose theo trạng thái (state / 상태); adipose tăng giải phóng fatty acid khi demand kéo dài hơn. Không có một “organ trung tâm” tính toán toàn bộ phản hồi (response / 응답) — điều khiển (control / 제어) phân tán nhưng được nối bằng neural, endocrine và cục bộ (local / 로컬) tín hiệu (signal / 신호).
 
 Theo nguyên lý Fick:
 
@@ -375,30 +377,32 @@ Theo nguyên lý Fick:
 \dot V O_2 = Q(C_{aO_2}-C_{vO_2})
 \]
 
-Oxygen consumption tăng bằng cách tăng cả cung lượng tim \(Q\) và mức tissue lấy O₂ khỏi máu. Training có thể làm tăng stroke volume, capillary/mitochondrial capacity và điều chỉnh autonomic response; đó là **thích nghi sinh lý (physiological adaptation)** trong đời, không phải evolution.
+Oxygen consumption tăng bằng cách tăng cả cung lượng tim \(Q\) và mức tissue lấy O₂ khỏi máu. huấn luyện (training / 학습) có thể làm tăng stroke volume, capillary/mitochondrial sức chứa (capacity / 용량) và điều chỉnh autonomic phản hồi (response / 응답); đó là **thích nghi sinh lý (physiological adaptation)** trong đời, không phải evolution.
 
-Failure xảy ra khi một mắt xích trở thành bottleneck: oxygen content thấp, cardiac output không tăng đủ, gas exchange hạn chế hoặc muscle oxidative capacity thấp. Cùng symptom “mệt” vì vậy có thể xuất hiện từ nhiều mechanism khác nhau; physiology không cho phép suy ngược một triệu chứng thành một nguyên nhân duy nhất.
+Thất bại (failure / 실패) xảy ra khi một mắt xích trở thành bottleneck: oxygen content thấp, cardiac đầu ra (output / 출력) không tăng đủ, gas exchange hạn chế hoặc muscle oxidative sức chứa (capacity / 용량) thấp. Cùng symptom “mệt” vì vậy có thể xuất hiện từ nhiều cơ chế (mechanism / 메커니즘) khác nhau; physiology không cho phép suy ngược một triệu chứng thành một nguyên nhân duy nhất.
 
 <!-- continuity-2026:dehydration-heat -->
-## Case tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation
+## Trường hợp (case / 사례) tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation
 
-Tản nhiệt qua da cần tăng skin blood flow và thường cần tiết mồ hôi. Nhưng mồ hôi làm giảm water và salt của extracellular fluid; nếu không được bù trong thời gian đủ dài, plasma volume giảm và venous return có thể giảm. Cơ thể phải đồng thời giữ blood pressure, tưới máu cơ quan và tản nhiệt — ba mục tiêu có thể cạnh tranh nhau.
+Tản nhiệt qua da cần tăng skin blood luồng (flow / 흐름) và thường cần tiết mồ hôi. Nhưng mồ hôi làm giảm water và salt của extracellular fluid; nếu không được bù trong thời gian đủ dài, plasma volume giảm và venous return có thể giảm. Cơ thể phải đồng thời giữ blood pressure, tưới máu cơ quan và tản nhiệt — ba mục tiêu có thể cạnh tranh nhau.
 
-ADH và hệ renin–angiotensin–aldosterone giúp giữ nước/natri theo bối cảnh; sympathetic vasoconstriction bảo vệ pressure ở một số vascular bed; cảm giác khát thay hành vi. Đây là homeostasis nhiều tầng: kidney, vessel, brain, hormone và behavior cùng tham gia.
+ADH và hệ renin–angiotensin–aldosterone giúp giữ nước/natri theo bối cảnh; sympathetic vasoconstriction bảo vệ pressure ở một số vascular bed; cảm giác khát thay hành vi. Đây là homeostasis nhiều tầng: kidney, vessel, brain, hormone và hành vi (behavior / 동작) cùng tham gia.
 
-Nếu heat load vượt khả năng tản nhiệt hoặc circulation không còn đủ reserve, compensation có thể chuyển sang decompensation. Điểm quan trọng cho học biology là hiểu **boundary của feedback**: vòng điều hòa chỉ hoạt động khi effector còn đủ capacity và nguồn lực vật chất chưa cạn.
+Nếu heat tải (load / 로드) vượt khả năng tản nhiệt hoặc circulation không còn đủ reserve, compensation có thể chuyển sang decompensation. Điểm quan trọng cho học biology là hiểu **ranh giới (boundary / 경계) của phản hồi (feedback / 피드백)**: vòng điều hòa chỉ hoạt động khi effector còn đủ sức chứa (capacity / 용량) và nguồn lực vật chất chưa cạn.
 
-## 50. Bridge sang Nervous–Endocrine–Immune Systems
+## 50. cầu nối (bridge / 브리지) sang Nervous–Endocrine–Immune các hệ thống (systems / 시스템들)
 
-Circulation vận chuyển matter, nhưng organism còn phải vận chuyển **thông tin (information)**.
+Circulation vận chuyển matter, nhưng organism còn phải vận chuyển **thông tin (information / 정보)**.
 
-Khi chạm vật nóng, response cần milliseconds. Khi fasting/sinh trưởng (growth), signal kéo dài minutes–days. Khi pathogen xâm nhập, system cần recognition, amplification và memory.
+Khi chạm vật nóng, phản hồi (response / 응답) cần milliseconds. Khi fasting/sinh trưởng (growth), tín hiệu (signal / 신호) kéo dài minutes–days. Khi pathogen xâm nhập, hệ thống (system / 시스템) cần recognition, amplification và bộ nhớ (memory / 메모리).
 
-[Hệ thần kinh, Nội tiết và Miễn dịch](02_nervous_endocrine_and_immune_systems.md) sẽ so sánh ba kiến trúc (architecture) control lớn giải các problem đó.
+[Hệ thần kinh, Nội tiết và Miễn dịch](02_nervous_endocrine_and_immune_systems.md) sẽ so sánh ba kiến trúc (architecture / 아키텍처) điều khiển (control / 제어) lớn giải các bài toán (problem / 문제) đó.
 
-> **Mô hình tư duy cuối chapter:** sinh lý động vật là bài toán giữ một môi trường bên trong cơ thể usable trong khi demand thay đổi. Lung, heart, kidney, gut, liver, muscle và bone không phải module độc lập; chúng là nodes của một flow-and-phản hồi (feedback) network chịu constraint của diffusion, áp suất, membrane transport, chemistry và năng lượng.
+> **Mô hình tư duy cuối chapter:** sinh lý động vật là bài toán giữ một môi trường bên trong cơ thể usable trong khi demand thay đổi. Lung, heart, kidney, gut, liver, muscle và bone không phải mô-đun (module / 모듈) độc lập; chúng là nodes của một flow-and-feedback mạng (network / 네트워크) chịu ràng buộc (constraint / 제약조건) của diffusion, áp suất, membrane vận chuyển (transport / 전송), chemistry và năng lượng.
 
 ---
 
 <!-- biology-learning-navigation -->
 **Điều hướng học:** [← Sinh học thực vật](00_plant_biology.md) · [Mục lục Biology](../README.md) · [Hệ thần kinh, Nội tiết và Miễn dịch →](02_nervous_endocrine_and_immune_systems.md)
+
+> **Bàn giao:** Sau **50. cầu nối (bridge / 브리지) sang Nervous–Endocrine–Immune các hệ thống (systems / 시스템들)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 plant biology](./00_plant_biology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

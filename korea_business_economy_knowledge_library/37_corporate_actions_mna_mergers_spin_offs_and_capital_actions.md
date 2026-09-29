@@ -1,5 +1,8 @@
 # Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)
 
+> **Mạch đọc:** Đặt **Hành động doanh nghiệp, M&A, sáp nhập, chia tách và thay đổi vốn tại doanh nghiệp Hàn Quốc (기업행위·M&A·합병·분할)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Hành động doanh nghiệp là gì?** sang **2. M&A: vì sao doanh nghiệp mua doanh nghiệp khác?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Khi đọc một doanh nghiệp, nhiều thay đổi lớn không đến từ hoạt động kinh doanh thường ngày mà từ **hành động doanh nghiệp (corporate actions / 기업행위)** như sáp nhập, mua lại, chia tách, tăng vốn, giao dịch cổ phiếu quỹ, chào mua công khai, bán tài sản, hoán đổi cổ phiếu hoặc tái cấu trúc.
 
 Những sự kiện này có thể thay đổi quyền sở hữu, phạm vi hợp nhất lợi nhuận, nợ, số lượng cổ phiếu và cách giá trị được phân phối giữa các bên liên quan chỉ trong một thời gian ngắn.
@@ -20,7 +23,7 @@ Sau giao dịch
 Phạm vi mới + quyền đòi mới + cấu trúc kiểm soát mới
 ```
 
-Điểm khó là kết quả kế toán, hình thức pháp lý và bản chất kinh tế có thể khác nhau. Một giao dịch được gọi là “sáp nhập” chưa chắc có logic kinh tế giống mua lại. Một chia tách có thể giúp tập trung chiến lược nhưng cũng có thể chuyển tài sản chất lượng giữa các pháp nhân.
+Điểm khó là kết quả kế toán, hình thức pháp lý và bản chất kinh tế có thể khác nhau. Một giao dịch được gọi là “sáp nhập” chưa chắc có lô-gic (logic / 논리) kinh tế giống mua lại. Một chia tách có thể giúp tập trung chiến lược nhưng cũng có thể chuyển tài sản chất lượng giữa các pháp nhân.
 
 ## 2. M&A: vì sao doanh nghiệp mua doanh nghiệp khác?
 
@@ -129,7 +132,7 @@ Cần theo dõi quyền sở hữu sau giao dịch và cách đối xử với c
 
 ## 11. Chia tách công ty (회사분할)
 
-Tái cấu trúc doanh nghiệp Hàn Quốc sử dụng nhiều dạng **chia tách công ty (company split / 회사분할)**. Quan trọng hơn việc học tên pháp lý là hiểu logic kinh tế.
+Tái cấu trúc doanh nghiệp Hàn Quốc sử dụng nhiều dạng **chia tách công ty (company split / 회사분할)**. Quan trọng hơn việc học tên pháp lý là hiểu lô-gic (logic / 논리) kinh tế.
 
 ### Chia tách theo tỷ lệ — 인적분할
 

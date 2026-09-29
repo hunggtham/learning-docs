@@ -1,5 +1,7 @@
 # 01 — Nền tảng đầu tư (Foundations)
 
+> **Mạch đọc:** Đọc **01 — Nền tảng đầu tư (Foundations)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài sản hoặc chọn cổ phiếu. Mục tiêu là hiểu hệ thống tài chính, cách giá được hình thành, rủi ro danh mục, cách vận hành một kế hoạch đầu tư nhiều năm và cách đánh giá kết quả mà không nhầm may mắn hoặc beta thị trường với kỹ năng.
 
 ## Thứ tự đọc
@@ -18,14 +20,22 @@ Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài
 
 [06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md](./06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md) là lớp học sâu: chuyển mục tiêu và nghĩa vụ thành bảng cân đối kinh tế, ngân sách rủi ro, MCTR, tương quan theo trạng thái, tầng thanh khoản, kiểm thử cú sốc kết hợp, kiểm thử ngược, quy tắc tái cân bằng và nhật ký quyết định.
 
+
+> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng giải thích tiền của mình đi qua hệ thống nào khi mua chứng khoán, phân biệt rủi ro thị trường, thanh khoản, đối tác và vận hành; xây phân bổ theo mục tiêu thay vì theo mã chứng khoán; đo mức tập trung và đóng góp rủi ro; viết IPS; kiểm thử danh mục và phân tích vì sao danh mục lời hoặc lỗ thay vì chỉ nhìn tổng lợi suất.
+
+
+> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tích hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện kiểm thử căng thẳng, lập bản đồ nhân tố, phòng vệ và phân rã kết quả. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để thấy bộ đệm thanh khoản, đòn bẩy, ký quỹ, tài sản thế chấp và rủi ro sống sót tương tác như thế nào.
 
-Để chuyển từ đọc sang tự làm, hoàn thành **Module 1 — Foundations** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải có `portfolio_ips.md`, ma trận căng thẳng và một kiểm thử ngược chỉ ra điều kiện làm kế hoạch thất bại.
+Để chuyển từ đọc sang tự làm, hoàn thành **mô-đun (module / 모듈) 1 — Foundations** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải có `portfolio_ips.md`, ma trận căng thẳng và một kiểm thử ngược chỉ ra điều kiện làm kế hoạch thất bại.
 
 Sau khi hoàn thành, chuyển sang [02 — Các nhóm tài sản](../02_asset_classes/README.md).
+
+> **Bàn giao:** Sau **Bài tập tích hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

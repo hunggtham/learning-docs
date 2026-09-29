@@ -1,5 +1,7 @@
 # Phân tích sâu các ngành tại Hàn Quốc và Việt Nam
 
+> **Mạch đọc:** Đặt **Phân tích sâu các ngành tại Hàn Quốc và Việt Nam** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bán dẫn bộ nhớ và HBM** sang **2. Foundry**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > Mục tiêu của chương này là giúp người đọc hiểu **động cơ kinh tế (economic engine)** của từng ngành thay vì chỉ nhớ mã cổ phiếu. Với mỗi ngành, hãy đi theo chuỗi: **nhu cầu → nguồn cung → giá → công suất → chi phí → vốn lưu động → chi tiêu vốn → bảng cân đối → định giá → độ nhạy vĩ mô**. Phần giải thích dùng tiếng Việt; tên KPI và thuật ngữ ngành quốc tế được giữ khi chúng là chuẩn thực tế.
 
 # Phần I — Hàn Quốc
@@ -34,7 +36,7 @@ Mảng foundry phụ thuộc:
 - chi tiêu vốn;
 - đóng gói tiên tiến.
 
-Tên node tiên tiến không đủ để chứng minh lợi thế kinh tế; giá trị còn phụ thuộc hiệu suất, sản lượng đạt chuẩn và mức sử dụng thật.
+Tên nút (node / 노드) tiên tiến không đủ để chứng minh lợi thế kinh tế; giá trị còn phụ thuộc hiệu suất, sản lượng đạt chuẩn và mức sử dụng thật.
 
 ## 3. Thiết bị bán dẫn
 
@@ -405,7 +407,7 @@ Các động lực gồm:
 
 Theo dõi:
 
-- sản lượng container;
+- sản lượng bộ chứa (container / 컨테이너);
 - thương mại khu vực;
 - công suất;
 - tỷ lệ sử dụng;

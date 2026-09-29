@@ -1,5 +1,8 @@
 # Cộng đồng Internet, nhắn tin, tiếng lóng và văn hoá meme
 
+> **Mạch đọc:** Đặt **Cộng đồng Internet, nhắn tin, tiếng lóng và văn hoá meme** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ PC통신 tới điện thoại thông minh: mỗi thế hệ Internet có “ngữ pháp” riêng** sang **포털: cổng thông tin như cửa vào Internet**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Hàn Quốc là ví dụ rõ cho việc **công nghệ giao tiếp (communication technology)** có thể trở thành hạ tầng văn hoá. Từ PC통신, cổng thông tin, Cyworld đến KakaoTalk, YouTube và video ngắn, mỗi nền tảng không chỉ thêm một công cụ; nó thay **cấu trúc mạng quan hệ**, tốc độ lan thông tin, loại tín hiệu xã hội có thể quan sát và cách ngôn ngữ tiến hoá.
 
 ## Từ PC통신 tới điện thoại thông minh: mỗi thế hệ Internet có “ngữ pháp” riêng
@@ -133,7 +136,7 @@ Tin nhắn văn bản thiếu nét mặt/giọng nói; emoticon khôi phục m�
 
 `ㅋㅋ`, `ㅎㅎ`, `ㅠㅠ`, `ㅜㅜ` hoạt động gần tiếng cười, sự mềm mại và tín hiệu khóc. Số ký tự thay đổi cường độ; một `ㅋ` đơn có thể mang sắc thái khác `ㅋㅋㅋㅋ`.
 
-Ý nghĩa phụ thuộc thế hệ và bối cảnh. Token không có nghĩa từ điển cố định; nó là **dấu hiệu ngữ điệu (prosodic marker)**.
+Ý nghĩa phụ thuộc thế hệ và bối cảnh. đơn vị từ (token / 토큰) không có nghĩa từ điển cố định; nó là **dấu hiệu ngữ điệu (prosodic marker)**.
 
 ## ㅇㅇ, ㄴㄴ, ㄱㄱ và 초성체
 
@@ -415,7 +418,7 @@ Trong môi trường AI tạo sinh, kỹ năng này quan trọng hơn vì văn b
 
 ## 합성미디어: vấn đề mới không chỉ là “giả hay thật” mà là chuỗi bằng chứng
 
-Khi ảnh, âm thanh và video có thể được chỉnh hoặc sinh với chất lượng cao, câu hỏi nhị phân “file này nhìn thật không?” kém hữu ích. Cần hỏi:
+Khi ảnh, âm thanh và video có thể được chỉnh hoặc sinh với chất lượng cao, câu hỏi nhị phân “tệp (file / 파일) này nhìn thật không?” kém hữu ích. Cần hỏi:
 
 ```text
 ai công bố đầu tiên?
@@ -552,3 +555,5 @@ Thay một đòn bẩy có thể thay chuẩn mực mà không cần người d�
 ## Nguồn tham khảo định hướng
 
 Với mức sử dụng truyền thông: Korea Press Foundation, thống kê ICT/truyền thông chính thức và tài liệu nền tảng. Với tiếng lóng/meme: luôn ghi mốc thời gian nguồn. Với hành vi trực tuyến gây hại, ưu tiên hướng dẫn pháp lý/an toàn và nghiên cứu thay vì giai thoại cộng đồng. Khi đánh giá thông tin, ưu tiên nguồn gốc, tài liệu sơ cấp, phương pháp thu thập dữ liệu và xác nhận độc lập thay vì chỉ số tương tác.
+
+> **Bàn giao:** Sau **Nguồn tham khảo định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,12 +1,15 @@
 # Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa
 
-Sine và cosine nên được hiểu trước hết như **coordinates của rotation**, không phải hai functions rời rạc cần nhớ bảng công thức. Khi một point quay trên unit circle, `cos` là projection lên trục x và `sin` là projection lên trục y.
+> **Mạch đọc:** Đọc **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. đơn vị (unit / 단위) circle là nguồn của identities cơ bản** sang **2. Angle addition là composition của rotations**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Từ viewpoint đó, identities, periodic equations, phasor, harmonics và Fourier analysis đều là các cách khác nhau để mô tả cùng một structure: **rotation lặp lại theo thời gian hoặc angle**.
 
-## 1. Unit circle là nguồn của identities cơ bản
+Sine và cosine nên được hiểu trước hết như **coordinates của rotation**, không phải hai functions rời rạc cần nhớ bảng công thức. Khi một điểm (point / 지점) quay trên đơn vị (unit / 단위) circle, `cos` là projection lên trục x và `sin` là projection lên trục y.
 
-Point ở angle `\theta` trên unit circle:
+Từ viewpoint đó, identities, periodic equations, phasor, harmonics và Fourier phân tích (analysis / 분석) đều là các cách khác nhau để mô tả cùng một cấu trúc (structure / 구조): **rotation lặp lại theo thời gian hoặc angle**.
+
+## 1. đơn vị (unit / 단위) circle là nguồn của identities cơ bản
+
+Điểm (point / 지점) ở angle `\theta` trên đơn vị (unit / 단위) circle:
 
 ```math
 (\cos\theta,\sin\theta).
@@ -32,11 +35,11 @@ Chia cho `\sin^2\theta` khi `\sin\theta\ne0`:
 \csc^2\theta=1+\cot^2\theta.
 ```
 
-Vì vậy các identities này không phải formulas độc lập; chúng cùng xuất phát từ geometry của unit circle.
+Vì vậy các identities này không phải formulas độc lập; chúng cùng xuất phát từ hình học (geometry / 기하학) của đơn vị (unit / 단위) circle.
 
 ## 2. Angle addition là composition của rotations
 
-Rotation matrix:
+Rotation ma trận (matrix / 행렬):
 
 ```math
 R(\theta)=
@@ -102,7 +105,7 @@ và
 \cos 2\alpha=2\cos^2\alpha-1.
 ```
 
-Từ đây suy ra half-angle identities. Lesson quan trọng là không cần nhớ mọi identity như một item riêng; chỉ cần biết một vài generators và derive khi cần.
+Từ đây suy ra half-angle identities. Lesson quan trọng là không cần nhớ mọi định danh (identity / 식별자) như một item riêng; chỉ cần biết một vài generators và derive khi cần.
 
 ## 4. Product-to-sum: vì sao multiplication tạo frequencies mới?
 
@@ -122,19 +125,19 @@ Tương tự:
 \frac12[\cos(A-B)-\cos(A+B)].
 ```
 
-Một product của hai oscillations tạo components ở **sum frequency** và **difference frequency**.
+Một sản phẩm (product / 제품) của hai oscillations tạo components ở **sum frequency** và **difference frequency**.
 
-Đây không chỉ là algebra. Nó là nền của mixing, modulation, heterodyning trong communications và signal processing.
+Đây không chỉ là algebra. Nó là nền của mixing, modulation, heterodyning trong communications và tín hiệu (signal / 신호) processing.
 
-## 5. Identity khác equation
+## 5. định danh (identity / 식별자) khác equation
 
-Identity:
+Định danh (identity / 식별자):
 
 ```math
 \sin^2x+\cos^2x=1
 ```
 
-đúng cho mọi `x` trong domain.
+đúng cho mọi `x` trong lĩnh vực (domain / 도메인).
 
 Equation:
 
@@ -144,7 +147,7 @@ Equation:
 
 chỉ đúng tại một tập values cụ thể.
 
-Phân biệt này quan trọng vì strategy khác nhau: với identity ta transform hai expressions để chứng minh equivalence; với equation ta tìm solution set.
+Phân biệt này quan trọng vì chiến lược (strategy / 전략) khác nhau: với định danh (identity / 식별자) ta transform hai expressions để chứng minh equivalence; với equation ta tìm solution set.
 
 ## 6. Giải phương trình lượng giác cần tính periodicity
 
@@ -175,11 +178,11 @@ x=\frac{5\pi}{6}+2k\pi,
 \qquad k\in\mathbb Z.
 ```
 
-Inverse trig function như `arcsin` chỉ trả principal branch. Nó không tự trả mọi nghiệm của periodic equation.
+Inverse trig hàm (function / 함수) như `arcsin` chỉ trả principal branch. Nó không tự trả mọi nghiệm của periodic equation.
 
 ## 7. Symmetry giúp tìm solution set
 
-Trên unit circle:
+Trên đơn vị (unit / 단위) circle:
 
 ```math
 \sin(\pi-x)=\sin x,
@@ -193,7 +196,7 @@ Trên unit circle:
 \sin(-x)=-\sin x.
 ```
 
-Các symmetry này giải thích vì sao một value thường xuất hiện tại nhiều angles. Việc hiểu graph/unit circle tốt hơn memorizing case tables.
+Các symmetry này giải thích vì sao một giá trị (value / 값) thường xuất hiện tại nhiều angles. Việc hiểu đồ thị (graph / 그래프)/đơn vị (unit / 단위) circle tốt hơn memorizing trường hợp (case / 사례) tables.
 
 ## 8. Sinusoid tổng quát
 
@@ -224,9 +227,9 @@ Ordinary frequency `f`:
 \omega=2\pi f.
 ```
 
-Units matter: nếu `t` là seconds thì `\omega` có unit rad/s và `f` có Hz.
+Units matter: nếu `t` là seconds thì `\omega` có đơn vị (unit / 단위) rad/s và `f` có Hz.
 
-## 9. Phase không phải time delay, nhưng có relation
+## 9. Phase không phải thời gian (time / 시간) delay, nhưng có quan hệ (relation / 관계)
 
 Với
 
@@ -240,9 +243,9 @@ viết:
 A\sin\bigl(\omega(t+\phi/\omega)\bigr).
 ```
 
-Do đó phase shift `\phi` tương ứng time shift `\phi/\omega` cho fixed frequency.
+Do đó phase shift `\phi` tương ứng thời gian (time / 시간) shift `\phi/\omega` cho fixed frequency.
 
-Cùng một phase angle ở hai frequencies khác nhau không tạo cùng time delay. Đây là detail quan trọng trong signal/system analysis.
+Cùng một phase angle ở hai frequencies khác nhau không tạo cùng thời gian (time / 시간) delay. Đây là detail quan trọng trong tín hiệu (signal / 신호)/hệ thống (system / 시스템) phân tích (analysis / 분석).
 
 ## 10. Simple harmonic motion từ differential equation
 
@@ -271,23 +274,23 @@ Equivalent amplitude-phase form:
 x(t)=R\cos(\omega t-\delta).
 ```
 
-Hai representations cùng mô tả một oscillator; lựa chọn representation phụ thuộc task.
+Hai representations cùng mô tả một oscillator; lựa chọn biểu diễn (representation / 표현) phụ thuộc tác vụ (task / 작업).
 
 ## 11. State-space interpretation
 
-Đặt state:
+Đặt trạng thái (state / 상태):
 
 ```math
 \begin{bmatrix}x\\v\end{bmatrix}.
 ```
 
-Với harmonic oscillator, state trajectory là ellipse/circle sau normalization. Oscillation trong time-domain có thể được hiểu như rotation trong phase space.
+Với harmonic oscillator, trạng thái (state / 상태) trajectory là ellipse/circle sau normalization. Oscillation trong time-domain có thể được hiểu như rotation trong phase không gian (space / 공간).
 
-Đây là bridge giữa trigonometry, differential equations, matrices và control.
+Đây là cầu nối (bridge / 브리지) giữa trigonometry, differential equations, matrices và điều khiển (control / 제어).
 
 ## 12. Damped và forced oscillation
 
-Ideal SHM chỉ là model cơ bản. Real systems thường có damping và forcing:
+Ideal SHM chỉ là mô hình (model / 모델) cơ bản. Real các hệ thống (systems / 시스템들) thường có damping và forcing:
 
 ```math
 x''+2\zeta\omega_nx'+\omega_n^2x=F(t).
@@ -295,7 +298,7 @@ x''+2\zeta\omega_nx'+\omega_n^2x=F(t).
 
 Khi forcing frequency gần natural frequency, resonance có thể làm amplitude lớn.
 
-Trigonometric input/output analysis vì vậy là một phần cốt lõi của control systems và electrical engineering.
+Trigonometric đầu vào (input / 입력)/đầu ra (output / 출력) phân tích (analysis / 분석) vì vậy là một phần cốt lõi của điều khiển (control / 제어) các hệ thống (systems / 시스템들) và electrical kỹ thuật (engineering / 엔지니어링).
 
 ## 13. Complex exponential thống nhất sine và cosine
 
@@ -334,13 +337,13 @@ Trên interval phù hợp, sine/cosine ở different integer frequencies trực 
 
 Tương tự cho sine và mixed terms.
 
-Điều này cho phép tách signal thành frequency components giống như vector được tách theo orthogonal basis.
+Điều này cho phép tách tín hiệu (signal / 신호) thành frequency components giống như véc-tơ (vector / 벡터) được tách theo orthogonal basis.
 
-Fourier analysis thực chất là linear algebra trong function space.
+Fourier phân tích (analysis / 분석) thực chất là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간).
 
 ## 15. Harmonics và Fourier viewpoint
 
-Một periodic signal có thể được represent conceptually như:
+Một periodic tín hiệu (signal / 신호) có thể được represent conceptually như:
 
 ```math
 f(t)
@@ -352,15 +355,15 @@ a_0+
 
 `\omega_0` là fundamental frequency; multiples `n\omega_0` là harmonics.
 
-Complex signal không “chứa sine waves vật lý nhỏ” theo literal sense; Fourier representation là một basis decomposition giúp analysis.
+Complex tín hiệu (signal / 신호) không “chứa sine waves vật lý nhỏ” theo literal sense; Fourier biểu diễn (representation / 표현) là một basis decomposition giúp phân tích (analysis / 분석).
 
-## 16. Aliasing và sampling connection
+## 16. Aliasing và sampling liên kết (connection / 연결)
 
-Continuous sinusoid khi sampled không luôn có unique discrete-frequency representation. Frequencies khác nhau có thể tạo cùng sampled values nếu sampling rate không đủ.
+Continuous sinusoid khi sampled không luôn có unique discrete-frequency biểu diễn (representation / 표현). Frequencies khác nhau có thể tạo cùng sampled values nếu sampling tỷ lệ (rate / 비율) không đủ.
 
 Nyquist criterion trong ideal band-limited setting yêu cầu sampling frequency lớn hơn hai lần highest frequency để avoid ambiguity.
 
-Đây là nơi trig, information, numerical sampling và signal processing gặp nhau.
+Đây là nơi trig, thông tin (information / 정보), numerical sampling và tín hiệu (signal / 신호) processing gặp nhau.
 
 ## Worked example: beat frequency
 
@@ -377,9 +380,9 @@ sum-to-product cho:
 \cos\left(\frac{\omega_1+\omega_2}{2}t\right).
 ```
 
-Ta thấy fast carrier được modulate bởi slow envelope. Beat phenomenon không cần thêm physics phức tạp để hiểu first-order; nó nằm ngay trong trig identity.
+Ta thấy fast carrier được modulate bởi slow envelope. Beat phenomenon không cần thêm physics phức tạp để hiểu first-order; nó nằm ngay trong trig định danh (identity / 식별자).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Phần này nối lượng giác với rotation, complex numbers, Fourier và dao động. Hãy giữ identity như biểu hiện của cấu trúc chu kỳ thay vì học thuộc từng công thức.
 
@@ -395,12 +398,14 @@ unit circle
 → signal processing / control
 ```
 
-Trong AI, positional encodings và spectral methods cũng dùng sinusoidal/frequency representations. Trong Physics, wave equations và quantum states thường decomposition theo modes. Trong Finance, periodic/seasonal components có thể được modeled bằng Fourier features, nhưng phải cẩn thận không nhầm periodic fit với causal mechanism.
+Trong AI, positional encodings và spectral methods cũng dùng sinusoidal/frequency representations. Trong Physics, wave equations và quantum states thường decomposition theo modes. Trong Finance, periodic/seasonal components có thể được modeled bằng Fourier features, nhưng phải cẩn thận không nhầm periodic fit với nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Sine và cosine là coordinates của rotation. Identities là algebra của rotations; harmonics là repeated rotations ở different frequencies; Fourier analysis là decomposition theo orthogonal rotating modes.
+> Sine và cosine là coordinates của rotation. Identities là algebra của rotations; harmonics là repeated rotations ở different frequencies; Fourier phân tích (analysis / 분석) là decomposition theo orthogonal rotating modes.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-Degrees và radians không interchangeable trong calculus. `arcsin(sin x)` không luôn bằng `x` vì inverse chỉ dùng principal branch. Identity không phải equation. Phase shift không đổi frequency. Một Fourier decomposition không tự chứng minh signal thật sự được tạo bởi independent sinusoidal causes.
+Degrees và radians không interchangeable trong calculus. `arcsin(sin x)` không luôn bằng `x` vì inverse chỉ dùng principal branch. định danh (identity / 식별자) không phải equation. Phase shift không đổi frequency. Một Fourier decomposition không tự chứng minh tín hiệu (signal / 신호) thật sự được tạo bởi independent sinusoidal causes.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 euclidean geometry](./00_euclidean_geometry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

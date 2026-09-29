@@ -1,5 +1,8 @@
 # Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển
 
+> **Mạch đọc:** Đọc **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hàm phân bố một hạt** sang **Phương trình Boltzmann**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Nhiệt động lực học mô tả trạng thái vĩ mô. Cơ học thống kê cân bằng cho biết xác suất các trạng thái vi mô khi hệ đã cân bằng. Nhưng nhiều hiện tượng quan trọng xảy ra **trong quá trình hệ đang tiến tới cân bằng**: khí khuếch tán, nhiệt lan truyền, độ nhớt xuất hiện hay plasma thư giãn sau một nhiễu loạn.
 
 Lý thuyết động học (kinetic theory / 운동론) xây cầu nối giữa chuyển động vi mô của hạt và các phương trình vận chuyển vĩ mô.
@@ -157,7 +160,7 @@ Như vậy Navier–Stokes có thể được nhìn như mô tả thấp bậc c
 
 Tưởng tượng hai lớp khí có vận tốc trung bình khác nhau. Các phân tử từ lớp nhanh bay sang lớp chậm mang theo động lượng lớn hơn trung bình; phân tử từ lớp chậm đi ngược lại mang động lượng nhỏ hơn.
 
-Sự trao đổi động lượng vi mô này làm giảm gradient vận tốc và tạo ứng suất nhớt.
+Sự trao đổi động lượng vi mô này làm giảm độ dốc (gradient / 기울기) vận tốc và tạo ứng suất nhớt.
 
 Bậc độ lớn của độ nhớt động học có thể hiểu qua
 
@@ -171,7 +174,7 @@ Hệ số chính xác phụ thuộc mô hình va chạm, nhưng cấu trúc cho 
 
 Trong vùng nóng, phân tử có năng lượng động học trung bình lớn hơn. Các hạt chuyển động sang vùng lạnh mang năng lượng theo; hạt từ vùng lạnh mang ít năng lượng hơn quay lại.
 
-Dòng năng lượng ròng hướng xuống gradient nhiệt độ dẫn tới định luật Fourier ở mức vĩ mô:
+Dòng năng lượng ròng hướng xuống độ dốc (gradient / 기울기) nhiệt độ dẫn tới định luật Fourier ở mức vĩ mô:
 
 ```math
 \mathbf q=-k\nabla T.
@@ -231,7 +234,7 @@ Một mô hình đơn giản cho hạng va chạm là
 
 Nó nói phân bố có xu hướng thư giãn về cân bằng `f_{eq}` với thời gian đặc trưng `\tau`.
 
-Mặc dù đơn giản, xấp xỉ này rất hữu ích trong vật lý bán dẫn, transport điện tử và plasma khi cần trực giác về cạnh tranh giữa lực ngoài và va chạm.
+Mặc dù đơn giản, xấp xỉ này rất hữu ích trong vật lý bán dẫn, vận chuyển (transport / 전송) điện tử và plasma khi cần trực giác về cạnh tranh giữa lực ngoài và va chạm.
 
 ## Liên hệ với mô hình Drude
 
@@ -253,7 +256,7 @@ Trong hệ tương tác mạnh, tương quan nhiều hạt có thể quan trọn
 
 Ở thang nano, mô tả sóng lượng tử hoặc vận chuyển Landauer có thể phù hợp hơn mô hình khuếch tán cổ điển.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Lý thuyết động học nằm giữa cơ học hạt và cơ học chất lưu:
 
@@ -265,7 +268,7 @@ quỹ đạo từng hạt
 → phương trình vận chuyển vĩ mô
 ```
 
-Nó giải thích **vì sao** các định luật khuếch tán, độ nhớt và dẫn nhiệt có dạng gradient: hạt mang các đại lượng vi mô qua những khoảng tự do hữu hạn giữa các vùng có trạng thái khác nhau.
+Nó giải thích **vì sao** các định luật khuếch tán, độ nhớt và dẫn nhiệt có dạng độ dốc (gradient / 기울기): hạt mang các đại lượng vi mô qua những khoảng tự do hữu hạn giữa các vùng có trạng thái khác nhau.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -281,8 +284,10 @@ Không. Va chạm tái phân bố năng lượng và động lượng giữa cá
 
 Không. Trong miền thích hợp, phương trình chất lưu có thể được suy ra như các moment gần cân bằng của mô tả động học.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Ensemble và hàm phân hoạch](03_ensembles_partition_functions.md), [Hiện tượng vận chuyển](../03_continuum/02_transport_diffusion_heat.md).
 
 **Liên hệ tiếp:** [Cơ học chất lưu](../03_continuum/00_fluids.md), [Vận chuyển trong chất rắn](../10_condensed_matter_devices/02_transport_magnetism_superconductivity.md), [Vật lý plasma](../10_condensed_matter_devices/03_plasma_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 thermodynamics](./00_thermodynamics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

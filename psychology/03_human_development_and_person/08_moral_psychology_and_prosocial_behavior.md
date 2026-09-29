@@ -1,68 +1,71 @@
 # Tâm lý học đạo đức và hành vi vì xã hội
 
-**Tâm lý học đạo đức (moral psychology)** nghiên cứu cách con người hình thành phán đoán về đúng–sai, công bằng, trách nhiệm, tổn hại, nghĩa vụ và phẩm chất đạo đức. Nó không quyết định điều gì *nên* đúng theo nghĩa triết học chuẩn tắc; nhiệm vụ của nó là mô tả và giải thích các cơ chế tâm lý đứng sau judgment, emotion và behavior đạo đức.
+> **Mạch đọc:** Đọc **Tâm lý học đạo đức và hành vi vì xã hội** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Moral judgment không phải lô-gic (logic / 논리) thuần túy** sang **2. Kohlberg và phát triển lập luận (reasoning / 추론) đạo đức**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-> **Trạng thái bằng chứng tổng quát:** việc moral judgment chịu ảnh hưởng đồng thời bởi trực giác, reasoning, emotion, social norm, identity và incentive là nền tảng tương đối vững. Các mô hình cụ thể như Social Intuitionist Model, Moral Foundations Theory hay dual-process accounts là **current/debated theories**, không phải bản đồ cuối cùng của moral mind.
+
+**Tâm lý học đạo đức (moral psychology)** nghiên cứu cách con người hình thành phán đoán về đúng–sai, công bằng, trách nhiệm, tổn hại, nghĩa vụ và phẩm chất đạo đức. Nó không quyết định điều gì *nên* đúng theo nghĩa triết học chuẩn tắc; nhiệm vụ của nó là mô tả và giải thích các cơ chế tâm lý đứng sau judgment, emotion và hành vi (behavior / 동작) đạo đức.
+
+> **Trạng thái bằng chứng tổng quát:** việc moral judgment chịu ảnh hưởng đồng thời bởi trực giác, lập luận (reasoning / 추론), emotion, xã hội (social / 사회적) norm, định danh (identity / 식별자) và incentive là nền tảng tương đối vững. Các mô hình cụ thể như xã hội (social / 사회적) Intuitionist mô hình (model / 모델), Moral Foundations lý thuyết (theory / 이론) hay dual-process accounts là **hiện tại (current / 현재)/debated theories**, không phải bản đồ cuối cùng của moral mind.
 
 Xem [[../EVIDENCE_STATUS_GUIDE]], [[04_social_and_cultural_psychology]] và [[10_group_dynamics_collective_behavior_and_cooperation]].
 
-## 1. Moral judgment không phải logic thuần túy
+## 1. Moral judgment không phải lô-gic (logic / 논리) thuần túy
 
-Con người có thể phản ứng đạo đức rất nhanh trước khi diễn đạt được lý do. Sau đó reasoning có thể kiểm tra, biện minh hoặc sửa phản ứng ban đầu.
+Con người có thể phản ứng đạo đức rất nhanh trước khi diễn đạt được lý do. Sau đó lập luận (reasoning / 추론) có thể kiểm tra, biện minh hoặc sửa phản ứng ban đầu.
 
-Điều này tạo tranh luận lâu dài giữa các model nhấn mạnh reasoning có chủ ý và các model nhấn mạnh intuition. Evidence hiện đại phù hợp hơn với cách nhìn tương tác: intuition, emotion và reasoning đều có vai trò, với trọng số thay đổi theo task và context.
+Điều này tạo tranh luận lâu dài giữa các mô hình (model / 모델) nhấn mạnh lập luận (reasoning / 추론) có chủ ý và các mô hình (model / 모델) nhấn mạnh intuition. bằng chứng (evidence / 증거) hiện đại phù hợp hơn với cách nhìn tương tác: intuition, emotion và lập luận (reasoning / 추론) đều có vai trò, với trọng số thay đổi theo tác vụ (task / 작업) và ngữ cảnh (context / 맥락).
 
-## 2. Kohlberg và phát triển reasoning đạo đức
+## 2. Kohlberg và phát triển lập luận (reasoning / 추론) đạo đức
 
-Lawrence Kohlberg đề xuất các giai đoạn dựa trên **cấu trúc reasoning**, không chỉ answer cụ thể. Contribution lịch sử quan trọng của model là cho thấy người ta có thể lý giải cùng một choice bằng mức abstraction và principle khác nhau.
+Lawrence Kohlberg đề xuất các giai đoạn dựa trên **cấu trúc lập luận (reasoning / 추론)**, không chỉ answer cụ thể. Contribution lịch sử quan trọng của mô hình (model / 모델) là cho thấy người ta có thể lý giải cùng một choice bằng mức lớp trừu tượng (abstraction / 추상화) và principle khác nhau.
 
-> **Historical/current boundary:** stage model có ảnh hưởng lớn nhưng không nên được coi là universal developmental law. Nó bị phê bình vì emphasis mạnh vào justice reasoning, sample hạn chế và khả năng bỏ sót care, relationship và cultural variation.
+> **Historical/hiện tại (current / 현재) ranh giới (boundary / 경계):** stage mô hình (model / 모델) có ảnh hưởng lớn nhưng không nên được coi là universal developmental law. Nó bị phê bình vì emphasis mạnh vào justice lập luận (reasoning / 추론), mẫu (sample / 표본) hạn chế và khả năng bỏ sót care, relationship và cultural variation.
 
 Carol Gilligan mở rộng thảo luận bằng việc nhấn mạnh **care và responsibility trong relationship**. Đây là một critique lịch sử quan trọng, không phải bằng chứng rằng morality chia thành hai “kiểu nam/nữ” cứng.
 
-## 3. Social Intuitionist Model
+## 3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)
 
-Social Intuitionist Model đề xuất rằng nhiều moral judgment bắt đầu từ intuition nhanh, còn reasoning thường đến sau và có vai trò social justification.
+Xã hội (social / 사회적) Intuitionist mô hình (model / 모델) đề xuất rằng nhiều moral judgment bắt đầu từ intuition nhanh, còn lập luận (reasoning / 추론) thường đến sau và có vai trò xã hội (social / 사회적) justification.
 
-> **Trạng thái:** influential current theory, không phải established fact cho mọi moral decision. Có tình huống reasoning có chủ ý thay đổi judgment thực sự, đặc biệt khi người ta có thời gian, motivation và exposure với counterargument.
+> **Trạng thái:** influential hiện tại (current / 현재) lý thuyết (theory / 이론), không phải established fact cho mọi moral quyết định (decision / 결정). Có tình huống lập luận (reasoning / 추론) có chủ ý thay đổi judgment thực sự, đặc biệt khi người ta có thời gian, motivation và exposure với counterargument.
 
-Vì vậy không nên chuyển model thành slogan “con người luôn quyết định bằng cảm xúc rồi bịa lý do”.
+Vì vậy không nên chuyển mô hình (model / 모델) thành slogan “con người luôn quyết định bằng cảm xúc rồi bịa lý do”.
 
 ## 4. Dual-process accounts
 
-Một số model phân biệt processing nhanh/tự động và processing chậm/có kiểm soát. Trong moral dilemmas, cách này từng được dùng để giải thích deontological và consequentialist response.
+Một số mô hình (model / 모델) phân biệt processing nhanh/tự động và processing chậm/có kiểm soát. Trong moral dilemmas, cách này từng được dùng để giải thích deontological và consequentialist phản hồi (response / 응답).
 
-> **Evidence boundary:** distinction giữa fast và controlled processing hữu ích, nhưng mapping `intuition = deontology` và `reasoning = utilitarianism` quá đơn giản nếu dùng như universal law. Task wording, familiarity, emotion và cognitive demand đều ảnh hưởng outcome.
+> **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** distinction giữa fast và controlled processing hữu ích, nhưng ánh xạ (mapping / 매핑) `intuition = deontology` và `reasoning = utilitarianism` quá đơn giản nếu dùng như universal law. tác vụ (task / 작업) wording, familiarity, emotion và cognitive demand đều ảnh hưởng kết quả (outcome / 결과).
 
-## 5. Moral Foundations Theory
+## 5. Moral Foundations lý thuyết (theory / 이론)
 
-**Moral Foundations Theory (MFT)** đề xuất nhiều miền moral concern như care/harm, fairness, loyalty, authority, sanctity và các revision sau đó.
+**Moral Foundations lý thuyết (theory / 이론) (MFT)** đề xuất nhiều miền moral concern như care/harm, fairness, loyalty, authority, sanctity và các revision sau đó.
 
-Framework này hữu ích để nghiên cứu variation giữa cá nhân và culture, nhưng không nên được trình bày như “gene đạo đức” cố định.
+Khung phần mềm (framework / 프레임워크) này hữu ích để nghiên cứu variation giữa cá nhân và culture, nhưng không nên được trình bày như “gene đạo đức” cố định.
 
-> **Current/debated theory:** các thang đo mới như MFQ-2 cải thiện một số vấn đề psychometric, nhưng cấu trúc factor, measurement invariance và mức generalization qua culture vẫn là active research. Các model cạnh tranh cũng tồn tại.
+> **hiện tại (current / 현재)/debated lý thuyết (theory / 이론):** các thang đo mới như MFQ-2 cải thiện một số vấn đề psychometric, nhưng cấu trúc factor, đo lường (measurement / 측정) invariance và mức generalization qua culture vẫn là active research. Các mô hình (model / 모델) cạnh tranh cũng tồn tại.
 
-Đặc biệt, group difference trong moral-foundation score không đồng nghĩa một group “đạo đức hơn”. Nó chỉ mô tả pattern endorsement dưới một measurement framework cụ thể.
+Đặc biệt, group difference trong moral-foundation score không đồng nghĩa một group “đạo đức hơn”. Nó chỉ mô tả mẫu (pattern / 패턴) endorsement dưới một đo lường (measurement / 측정) khung phần mềm (framework / 프레임워크) cụ thể.
 
-## 6. Culture không chỉ thay content mà có thể thay structure
+## 6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)
 
 Moral norm được học trong family, religion, institution và peer group. Một hành vi bị xem là serious moral violation ở culture này có thể được frame khác ở culture khác.
 
 Điều đó không có nghĩa “mọi morality hoàn toàn tương đối”. Psychology ở đây chỉ phân biệt descriptive fact về variation với normative conclusion về điều gì nên đúng.
 
-## 7. Empathy, compassion và prosocial behavior
+## 7. Empathy, compassion và prosocial hành vi (behavior / 동작)
 
-**Đồng cảm nhận thức (cognitive empathy)** là hiểu perspective hoặc mental state. **Đồng cảm cảm xúc (affective empathy)** là cùng cộng hưởng phần nào với cảm xúc người khác. **Lòng trắc ẩn (compassion)** thêm motivation quan tâm hoặc giúp đỡ.
+**Đồng cảm nhận thức (cognitive empathy)** là hiểu perspective hoặc mental trạng thái (state / 상태). **Đồng cảm cảm xúc (affective empathy)** là cùng cộng hưởng phần nào với cảm xúc người khác. **Lòng trắc ẩn (compassion)** thêm motivation quan tâm hoặc giúp đỡ.
 
-Ba construct liên quan nhưng không đồng nhất. Một người có thể hiểu rất tốt người khác nhưng dùng hiểu biết đó để thao túng. Affective empathy quá mạnh cũng có thể tạo personal distress hoặc bias toward identifiable victim.
+Ba construct liên quan nhưng không đồng nhất. Một người có thể hiểu rất tốt người khác nhưng dùng hiểu biết đó để thao túng. Affective empathy quá mạnh cũng có thể tạo personal distress hoặc độ lệch (bias / 편향) toward identifiable victim.
 
-> **Established evidence:** empathy liên quan prosocial behavior trong nhiều context, nhưng relation không deterministic và phụ thuộc group membership, emotion regulation và incentive.
+> **Established bằng chứng (evidence / 증거):** empathy liên quan prosocial hành vi (behavior / 동작) trong nhiều ngữ cảnh (context / 맥락), nhưng quan hệ (relation / 관계) không deterministic và phụ thuộc group membership, emotion regulation và incentive.
 
-## 8. Prosocial behavior có nhiều động cơ
+## 8. Prosocial hành vi (behavior / 동작) có nhiều động cơ
 
-**Hành vi vì xã hội (prosocial behavior)** gồm giúp đỡ, chia sẻ, cooperation, donation và support. Một hành vi có lợi cho người khác không cho phép suy ra động cơ “hoàn toàn vị tha”.
+**Hành vi vì xã hội (prosocial behavior)** gồm giúp đỡ, chia sẻ, cooperation, donation và hỗ trợ (support / 지원). Một hành vi có lợi cho người khác không cho phép suy ra động cơ “hoàn toàn vị tha”.
 
-Reciprocity, reputation, kinship, identity, norm, empathy và long-term cooperation có thể cùng đóng góp.
+Reciprocity, reputation, kinship, định danh (identity / 식별자), norm, empathy và long-term cooperation có thể cùng đóng góp.
 
 Moral psychology vì vậy nên tách:
 
@@ -76,35 +79,35 @@ phẩm chất đạo đức toàn diện của người đó
 
 ## 9. Reciprocity và cooperation
 
-**Có đi có lại (reciprocity)** giúp cooperation bền hơn trong repeated interaction. Game theory minh họa cách payoff, information và future interaction thay incentive.
+**Có đi có lại (reciprocity)** giúp cooperation bền hơn trong repeated tương tác (interaction / 상호작용). Game lý thuyết (theory / 이론) minh họa cách payoff, thông tin (information / 정보) và future tương tác (interaction / 상호작용) thay incentive.
 
-Psychology bổ sung rằng con người không tối ưu tiền đơn thuần. Fairness, reputation, identity và norm cũng có giá trị chủ quan.
+Psychology bổ sung rằng con người không tối ưu tiền đơn thuần. Fairness, reputation, định danh (identity / 식별자) và norm cũng có giá trị chủ quan.
 
 ## 10. Ultimatum Game và fairness
 
 Trong Ultimatum Game, nhiều responder từ chối offer họ cho là bất công dù mất tiền. Điều này cho thấy fairness concern hoặc punishment of norm violation có thể cạnh tranh với monetary gain.
 
-> **Limitation:** stake size, culture, anonymity, framing và procedure ảnh hưởng result. Không nên dùng một laboratory game như proof của một universal moral motive.
+> **Limitation:** stake kích thước (size / 크기), culture, anonymity, framing và procedure ảnh hưởng kết quả (result / 결과). Không nên dùng một laboratory game như proof của một universal moral motive.
 
-## 11. Bystander effect
+## 11. Bystander tác động (effect / 효과)
 
-**Phân tán trách nhiệm (diffusion of responsibility)** là một mechanism giải thích tại sao người ta có thể ít hành động hơn khi trách nhiệm không rõ.
+**Phân tán trách nhiệm (diffusion of responsibility)** là một cơ chế (mechanism / 메커니즘) giải thích tại sao người ta có thể ít hành động hơn khi trách nhiệm không rõ.
 
-Nhưng slogan “càng đông người càng không ai giúp” quá mạnh. Group identity, danger, competence, ambiguity và social norm đều ảnh hưởng behavior.
+Nhưng slogan “càng đông người càng không ai giúp” quá mạnh. Group định danh (identity / 식별자), danger, competence, ambiguity và xã hội (social / 사회적) norm đều ảnh hưởng hành vi (behavior / 동작).
 
 Trong emergency, giao nhiệm vụ cụ thể thường làm responsibility rõ hơn: gọi đúng một người thay vì kêu “ai đó giúp”.
 
 ## 12. Reputation và signaling
 
-Con người thường thay behavior khi biết hành động có thể được quan sát. Reputation có thể hỗ trợ cooperation, nhưng cũng tạo **moral signaling**: tối ưu hình ảnh thay vì impact thực.
+Con người thường thay hành vi (behavior / 동작) khi biết hành động có thể được quan sát. Reputation có thể hỗ trợ cooperation, nhưng cũng tạo **moral signaling**: tối ưu hình ảnh thay vì impact thực.
 
-Một organization vì vậy không nên chỉ thưởng metric thể hiện “đạo đức” nếu metric có thể gaming.
+Một organization vì vậy không nên chỉ thưởng chỉ số (metric / 지표) thể hiện “đạo đức” nếu chỉ số (metric / 지표) có thể gaming.
 
 ## 13. Moral disengagement
 
-Bandura mô tả **moral disengagement** như nhóm process giúp tách hành vi khỏi self-sanction: moral justification, euphemistic labeling, displacement/diffusion of responsibility, dehumanization và victim blaming.
+Bandura mô tả **moral disengagement** như nhóm tiến trình (process / 프로세스) giúp tách hành vi khỏi self-sanction: moral justification, euphemistic labeling, displacement/diffusion of responsibility, dehumanization và victim blaming.
 
-Đây là framework có giá trị mô tả và có research support, nhưng không nên dùng như công cụ “đọc tâm trí” người khác sau một hành vi đơn lẻ.
+Đây là khung phần mềm (framework / 프레임워크) có giá trị mô tả và có research hỗ trợ (support / 지원), nhưng không nên dùng như công cụ “đọc tâm trí” người khác sau một hành vi đơn lẻ.
 
 ## 14. Dehumanization
 
@@ -116,7 +119,7 @@ Tuy nhiên dehumanization không phải explanation duy nhất của intergroup 
 
 **Tội lỗi (guilt)** thường tập trung vào hành vi: “mình đã làm điều sai”. **Xấu hổ (shame)** thường lan sang self: “mình là người tệ”.
 
-Guilt phù hợp có thể thúc đẩy repair. Shame mạnh có thể dẫn đến hiding, withdrawal hoặc attack, nhưng effect không deterministic.
+Guilt phù hợp có thể thúc đẩy repair. Shame mạnh có thể dẫn đến hiding, withdrawal hoặc attack, nhưng tác động (effect / 효과) không deterministic.
 
 Xem [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
 
@@ -124,21 +127,21 @@ Xem [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
 
 **Moral injury** mô tả distress sâu sau khi thực hiện, chứng kiến hoặc không thể ngăn hành vi vi phạm giá trị đạo đức quan trọng, hoặc khi cảm thấy bị authority phản bội.
 
-> **Evidence boundary:** moral injury là construct nghiên cứu/clinical hữu ích nhưng không nên tự động coi là một diagnosis độc lập. Nó overlap với PTSD, depression, guilt, shame và value conflict nhưng không đồng nhất.
+> **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** moral injury là construct nghiên cứu/clinical hữu ích nhưng không nên tự động coi là một diagnosis độc lập. Nó overlap với PTSD, depression, guilt, shame và giá trị (value / 값) xung đột (conflict / 충돌) nhưng không đồng nhất.
 
 ## 17. Ethical fading trong organization
 
-**Mờ hóa khía cạnh đạo đức (ethical fading)** xảy ra khi một decision có moral consequence được frame hoàn toàn như business/technical problem.
+**Mờ hóa khía cạnh đạo đức (ethical fading)** xảy ra khi một quyết định (decision / 결정) có moral consequence được frame hoàn toàn như nghiệp vụ (business / 비즈니스)/technical bài toán (problem / 문제).
 
-Ví dụ, team tối ưu conversion có thể nhìn thấy chỉ metric mà không hỏi dark pattern có làm user mất autonomy hay không.
+Ví dụ, nhóm (team / 팀) tối ưu conversion có thể nhìn thấy chỉ chỉ số (metric / 지표) mà không hỏi dark mẫu (pattern / 패턴) có làm người dùng (user / 사용자) mất autonomy hay không.
 
-Mechanism này nối moral psychology với incentive design và organizational culture, không chỉ “character” cá nhân.
+Cơ chế (mechanism / 메커니즘) này nối moral psychology với incentive thiết kế (design / 설계) và organizational culture, không chỉ “character” cá nhân.
 
-## 18. Psychological safety và accountability
+## 18. Psychological an toàn (safety / 안전) và accountability
 
-Một team cần psychological safety để người ta nói về error hoặc ethical concern mà không sợ humiliating punishment. Nhưng safety không thay accountability.
+Một nhóm (team / 팀) cần psychological an toàn (safety / 안전) để người ta nói về lỗi (error / 오류) hoặc ethical concern mà không sợ humiliating punishment. Nhưng an toàn (safety / 안전) không thay accountability.
 
-Good system cần cả hai:
+Good hệ thống (system / 시스템) cần cả hai:
 
 ```text
 psychological safety → nói ra vấn đề
@@ -149,23 +152,23 @@ Xem [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
 
 ## 19. AI và moral responsibility
 
-AI có thể tạo **khoảng cách trách nhiệm**: người dùng nói “model đề xuất vậy”. Nhưng responsibility vẫn phải được thiết kế ở organizational level: ai review, ai có quyền override, threshold nào cần human judgment và ai chịu trách nhiệm khi hệ thống fail.
+AI có thể tạo **khoảng cách trách nhiệm**: người dùng nói “mô hình (model / 모델) đề xuất vậy”. Nhưng responsibility vẫn phải được thiết kế ở organizational mức (level / 수준): ai rà soát (review / 검토), ai có quyền override, threshold nào cần human judgment và ai chịu trách nhiệm khi hệ thống thất bại (fail / 실패).
 
-Không nên suy từ language fluency của AI sang moral agency hay moral understanding tương đương con người.
+Không nên suy từ ngôn ngữ (language / 언어) fluency của AI sang moral agency hay moral understanding tương đương con người.
 
 Xem [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
 ## 20. Những hiểu lầm phổ biến
 
-**“Moral Foundations Theory là bản đồ universal đã chứng minh.”** Không. Đây là một current theory có giá trị nghiên cứu nhưng vẫn có tranh luận measurement và cross-cultural structure.
+**“Moral Foundations lý thuyết (theory / 이론) là bản đồ universal đã chứng minh.”** Không. Đây là một hiện tại (current / 현재) lý thuyết (theory / 이론) có giá trị nghiên cứu nhưng vẫn có tranh luận đo lường (measurement / 측정) và cross-cultural cấu trúc (structure / 구조).
 
-**“Moral intuition nghĩa reasoning chỉ là ngụy biện.”** Quá mạnh. Reasoning có thể kiểm tra, sửa và social-transmit moral judgment.
+**“Moral intuition nghĩa lập luận (reasoning / 추론) chỉ là ngụy biện.”** Quá mạnh. lập luận (reasoning / 추론) có thể kiểm tra, sửa và social-transmit moral judgment.
 
 **“Empathy luôn dẫn tới hành vi tốt.”** Không. Empathy có thể biased và không đồng nhất compassion.
 
-**“Người reasoning đạo đức tốt sẽ luôn hành động tốt.”** Behavior còn phụ thuộc incentive, pressure, opportunity, self-control và institution.
+**“Người lập luận (reasoning / 추론) đạo đức tốt sẽ luôn hành động tốt.”** hành vi (behavior / 동작) còn phụ thuộc incentive, pressure, opportunity, self-control và institution.
 
-**“Một hành vi xấu cho biết toàn bộ character.”** Không. Trait inference từ một event rất dễ overattribute disposition.
+**“Một hành vi xấu cho biết toàn bộ character.”** Không. Trait suy luận (inference / 추론) từ một sự kiện (event / 이벤트) rất dễ overattribute disposition.
 
 ## 21. Mô hình tư duy
 
@@ -183,7 +186,7 @@ identity + norm + incentive + culture
  social feedback / reputation / learning
 ```
 
-Moral behavior là outcome của hệ thống người–nhóm–institution, không chỉ là “mức tốt bụng” bên trong cá nhân.
+Moral hành vi (behavior / 동작) là kết quả (outcome / 결과) của hệ thống người–nhóm–institution, không chỉ là “mức tốt bụng” bên trong cá nhân.
 
 ## Kết nối kiến thức
 

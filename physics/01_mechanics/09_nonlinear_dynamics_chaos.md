@@ -1,5 +1,8 @@
 # Động lực học phi tuyến, độ ổn định và hỗn loạn
 
+> **Mạch đọc:** Đọc **Động lực học phi tuyến, độ ổn định và hỗn loạn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tuyến tính là xấp xỉ hữu ích, không phải luật phổ quát** sang **Hệ động lực và không gian trạng thái**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Tuyến tính là xấp xỉ hữu ích, không phải luật phổ quát
 
 Nhiều bài vật lý ban đầu dẫn tới phương trình tuyến tính vì ta xét nhiễu nhỏ quanh cân bằng. Ví dụ con lắc thật thỏa
@@ -22,7 +25,7 @@ Hệ tuyến tính có nguyên lý chồng chập. Hệ phi tuyến nói chung k
 - phân nhánh;
 - dao động tự duy trì;
 - khóa pha;
-- pattern formation;
+- mẫu (pattern / 패턴) formation;
 - hỗn loạn tất định.
 
 ## Hệ động lực và không gian trạng thái
@@ -33,13 +36,13 @@ Một hệ autonomous có thể viết
 \dot{\mathbf x}=\mathbf f(\mathbf x;\mu),
 ```
 
-trong đó `\mathbf x` là vector trạng thái và `\mu` là tham số điều khiển.
+trong đó `\mathbf x` là véc-tơ (vector / 벡터) trạng thái và `\mu` là tham số điều khiển.
 
 Mỗi điều kiện ban đầu xác định một quỹ đạo trong không gian trạng thái. Thay vì chỉ hỏi `x(t)` bằng bao nhiêu, động lực học phi tuyến thường hỏi cấu trúc toàn cục của các quỹ đạo:
 
 - chúng tiến tới đâu;
 - trạng thái nào ổn định;
-- boundary giữa các basin ở đâu;
+- ranh giới (boundary / 경계) giữa các basin ở đâu;
 - cấu trúc thay đổi thế nào khi `\mu` đổi.
 
 ## Điểm cố định và tuyến tính hóa
@@ -72,8 +75,8 @@ J_{ij}
 
 Các trị riêng `\lambda_i` của `J` quyết định độ ổn định cục bộ:
 
-- `Re(\lambda_i)<0` cho mọi mode: nhiễu tắt dần;
-- có `Re(\lambda_i)>0`: ít nhất một mode tăng;
+- `Re(\lambda_i)<0` cho mọi chế độ (mode / 모드): nhiễu tắt dần;
+- có `Re(\lambda_i)>0`: ít nhất một chế độ (mode / 모드) tăng;
 - trị riêng có phần ảo: xuất hiện quay hoặc dao động cục bộ.
 
 Đây là cầu nối trực tiếp giữa đại số tuyến tính và ổn định động lực học.
@@ -152,7 +155,7 @@ Một normal form khác là
 \dot x=\mu-x^2.
 ```
 
-Với `\mu>0`, có hai fixed point
+Với `\mu>0`, có hai fixed điểm (point / 지점)
 
 ```math
 x=\pm\sqrt\mu.
@@ -179,11 +182,11 @@ Các ví dụ bao gồm:
 
 ## Không gian pha và attractor
 
-Với dao động tử một chiều, phase space có thể dùng `(x,v)`.
+Với dao động tử một chiều, phase không gian (space / 공간) có thể dùng `(x,v)`.
 
 Quỹ đạo có thể tiến tới:
 
-- fixed point;
+- fixed điểm (point / 지점);
 - limit cycle;
 - torus;
 - strange attractor.
@@ -192,7 +195,7 @@ Attractor không phải một lực hút vật lý. Nó là tập trạng thái 
 
 Basin of attraction là tập các điều kiện ban đầu dẫn tới cùng attractor.
 
-Trong hệ đa ổn định, boundary giữa các basin quyết định hệ cuối cùng rơi vào trạng thái nào.
+Trong hệ đa ổn định, ranh giới (boundary / 경계) giữa các basin quyết định hệ cuối cùng rơi vào trạng thái nào.
 
 ## Lyapunov exponent và độ nhạy điều kiện ban đầu
 
@@ -205,7 +208,7 @@ Hai quỹ đạo bắt đầu cách nhau `\delta_0` có thể tách nhau gần
 
 Nếu số mũ Lyapunov lớn nhất `\lambda>0`, sai lệch nhỏ tăng theo hàm mũ trong miền phù hợp.
 
-Vì điều kiện ban đầu luôn được đo với uncertainty hữu hạn, thời gian dự báo chi tiết bị giới hạn gần bởi
+Vì điều kiện ban đầu luôn được đo với bất định (uncertainty / 불확실성) hữu hạn, thời gian dự báo chi tiết bị giới hạn gần bởi
 
 ```math
 T_{pred}
@@ -223,12 +226,12 @@ Hệ hỗn loạn có thể tuân phương trình deterministic không chứa no
 
 Ngẫu nhiên thống kê và chaos là hai khái niệm khác nhau:
 
-- stochastic system có biến ngẫu nhiên trong mô hình;
-- chaotic deterministic system có luật xác định nhưng nhạy điều kiện đầu.
+- stochastic hệ thống (system / 시스템) có biến ngẫu nhiên trong mô hình;
+- chaotic deterministic hệ thống (system / 시스템) có luật xác định nhưng nhạy điều kiện đầu.
 
 Trong hệ thực, cả hai có thể cùng tồn tại.
 
-Dự báo thời tiết là ví dụ: phương trình khí quyển gần deterministic trong mô hình continuum, nhưng uncertainty ban đầu, model error và chaos giới hạn forecast horizon.
+Dự báo thời tiết là ví dụ: phương trình khí quyển gần deterministic trong mô hình continuum, nhưng bất định (uncertainty / 불확실성) ban đầu, mô hình (model / 모델) lỗi (error / 오류) và chaos giới hạn forecast horizon.
 
 ## Logistic map
 
@@ -251,7 +254,7 @@ fixed point
 
 Đây là chuỗi period-doubling.
 
-Logistic map cho thấy độ phức tạp không nhất thiết cần hàng triệu thành phần; feedback phi tuyến đơn giản đã đủ tạo bifurcation và chaos.
+Logistic map cho thấy độ phức tạp không nhất thiết cần hàng triệu thành phần; phản hồi (feedback / 피드백) phi tuyến đơn giản đã đủ tạo bifurcation và chaos.
 
 ## Poincaré section
 
@@ -290,7 +293,7 @@ Nếu thay `\sin\theta` bằng `\theta`, ta mất nhiều hành vi phi tuyến q
 
 Một hệ Hamilton kín vẫn có thể chaotic dù không có attractor tiêu tán.
 
-Trong phase space, quỹ đạo có thể chứa vùng regular xen kẽ vùng chaotic. KAM theory mô tả cách một số torus của hệ tích phân được sống sót dưới nhiễu loạn nhỏ, còn các resonance có thể tạo transport phức tạp.
+Trong phase không gian (space / 공간), quỹ đạo có thể chứa vùng regular xen kẽ vùng chaotic. KAM lý thuyết (theory / 이론) mô tả cách một số torus của hệ tích phân được sống sót dưới nhiễu loạn nhỏ, còn các resonance có thể tạo vận chuyển (transport / 전송) phức tạp.
 
 Vì vậy chaos không đồng nghĩa với tiêu tán hoặc strange attractor; đó chỉ là một trường hợp phổ biến trong hệ dissipative.
 
@@ -300,40 +303,40 @@ Sai số rounding và sai số bước thời gian cũng bị động lực chao
 
 Hai trajectory từ hai solver có thể tách nhau sau thời gian dài dù cả hai solver đều đúng trong sense numerical convergence ngắn hạn.
 
-Do đó validation cho chaos không nên chỉ hỏi “trajectory có trùng từng điểm mãi không?”. Cần kiểm tra:
+Do đó kiểm tra hợp lệ (validation / 검증) cho chaos không nên chỉ hỏi “trajectory có trùng từng điểm mãi không?”. Cần kiểm tra:
 
 - convergence theo timestep ở horizon hữu hạn;
 - phân bố thống kê;
 - Lyapunov exponent;
-- attractor geometry;
-- invariant hoặc conservation law khi phù hợp.
+- attractor hình học (geometry / 기하학);
+- bất biến (invariant / 불변식) hoặc conservation law khi phù hợp.
 
-## Liên hệ với Control và Engineering
+## Liên hệ với điều khiển (control / 제어) và kỹ thuật (engineering / 엔지니어링)
 
-Hệ điều khiển thường được thiết kế quanh operating point bằng linearization.
+Hệ điều khiển thường được thiết kế quanh operating điểm (point / 지점) bằng linearization.
 
-Nhưng nếu gain, tải hoặc state đi xa operating point, nonlinear effect có thể gây:
+Nhưng nếu gain, tải hoặc trạng thái (state / 상태) đi xa operating điểm (point / 지점), nonlinear tác động (effect / 효과) có thể gây:
 
 - saturation;
 - limit cycle;
 - bifurcation;
-- loss of stability.
+- mất mát (loss / 손실) of stability.
 
-Vì vậy linear controller tốt trong một vùng không đảm bảo global stability.
+Vì vậy tuyến tính (linear / 선형) controller tốt trong một vùng không đảm bảo toàn cục (global / 전역) stability.
 
-Trong robotics, power electronics và flight dynamics, phase portrait, Lyapunov function và bifurcation analysis giúp đánh giá điều mà eigenvalue cục bộ không nói hết.
+Trong robotics, power electronics và flight dynamics, phase portrait, Lyapunov hàm (function / 함수) và bifurcation phân tích (analysis / 분석) giúp đánh giá điều mà eigenvalue cục bộ không nói hết.
 
 ## Miền áp dụng và giới hạn
 
-Linear stability chỉ cho thông tin gần fixed point. Nó không quyết định đầy đủ global behavior.
+Tuyến tính (linear / 선형) stability chỉ cho thông tin gần fixed điểm (point / 지점). Nó không quyết định đầy đủ toàn cục (global / 전역) hành vi (behavior / 동작).
 
 Một Lyapunov exponent dương là dấu hiệu mạnh của chaos nhưng việc ước lượng từ dữ liệu hữu hạn cần cẩn thận với noise và sampling.
 
 Fractal-looking plot cũng không tự chứng minh chaos; cần kiểm tra động lực và sensitivity có định lượng.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Tuyến tính hóa hỏi “gần trạng thái này, nhiễu nhỏ tăng hay giảm?”. Bifurcation hỏi “khi tham số thay đổi, cấu trúc trạng thái đổi ra sao?”. Chaos hỏi “luật deterministic có thể khuếch đại uncertainty nhanh đến mức nào?”.
+Tuyến tính hóa hỏi “gần trạng thái này, nhiễu nhỏ tăng hay giảm?”. Bifurcation hỏi “khi tham số thay đổi, cấu trúc trạng thái đổi ra sao?”. Chaos hỏi “luật deterministic có thể khuếch đại bất định (uncertainty / 불확실성) nhanh đến mức nào?”.
 
 ```text
 nonlinear equations
@@ -357,14 +360,16 @@ Không. Chaos có thể sinh từ phương trình xác định rất đơn giả
 
 ### “Tuyến tính hóa ổn định nghĩa hệ ổn định cho mọi điều kiện đầu”
 
-Không. Linearization chỉ là kết luận cục bộ quanh operating point.
+Không. Linearization chỉ là kết luận cục bộ quanh operating điểm (point / 지점).
 
 ### “Hai mô phỏng chaotic tách nhau nghĩa một solver chắc chắn sai”
 
 Không. Cần đánh giá convergence hữu hạn thời gian và đại lượng thống kê thay vì đòi trajectory dài hạn trùng tuyệt đối.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Cơ học giải tích](08_analytical_mechanics.md), [Ngôn ngữ Toán học](../00_foundations/03_mathematical_language.md), [Dao động](../02_oscillations_waves/00_oscillations_resonance.md).
 
 **Liên hệ tiếp:** [Hamilton nâng cao](10_canonical_transformations_hamilton_jacobi.md), [Vật lý tính toán](../12_experimental_computational/02_computational_physics.md), [Dòng rối](../03_continuum/03_turbulence_rheology_soft_matter.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

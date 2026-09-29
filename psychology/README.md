@@ -1,14 +1,17 @@
-# Psychology Knowledge Library
+# Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-Thư viện này tổ chức Psychology theo **concept → dependency → mechanism → evidence → limitation → connection**, không chia Beginner/Intermediate/Advanced và không coi số lượng file là mục tiêu.
+> **Mạch đọc:** Đọc **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Quy ước bắt buộc** sang **Ngôn ngữ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Canonical branch hiện tại: `feat/psychology-knowledge-library`.
+
+Thư viện này tổ chức Psychology theo **concept → phụ thuộc (dependency / 의존성) → cơ chế (mechanism / 메커니즘) → bằng chứng (evidence / 증거) → limitation → liên kết (connection / 연결)**, không chia Beginner/Intermediate/Advanced và không coi số lượng tệp (file / 파일) là mục tiêu.
+
+Chuẩn gốc (canonical / 정본) nguồn chuẩn (source of truth / 정본) hiện tại: `main`.
 
 ## Quy ước bắt buộc
 
 ### Ngôn ngữ
 
-Phần giải thích chính dùng **tiếng Việt**. English chỉ giữ như keyword khi cần nhận diện thuật ngữ chuyên ngành:
+Phần giải thích chính dùng **tiếng Việt**. English chỉ giữ như từ khóa (keyword / 키워드) khi cần nhận diện thuật ngữ chuyên ngành:
 
 - câu hỏi (question);
 - thiên kiến nhận thức (cognitive bias);
@@ -16,7 +19,7 @@ Phần giải thích chính dùng **tiếng Việt**. English chỉ giữ như k
 - suy luận nhân quả (causal inference);
 - an toàn tâm lý (psychological safety).
 
-Không giữ nguyên một câu tiếng Anh nếu có thể diễn đạt tự nhiên bằng tiếng Việt. Tên riêng, acronym, code, công thức, tên bài báo và thuật ngữ chuẩn có thể giữ nguyên khi cần.
+Không giữ nguyên một câu tiếng Anh nếu có thể diễn đạt tự nhiên bằng tiếng Việt. Tên riêng, acronym, mã (code / 코드), công thức, tên bài báo và thuật ngữ chuẩn có thể giữ nguyên khi cần.
 
 ### Năm mức trạng thái bằng chứng
 
@@ -68,7 +71,7 @@ psychology/
 └── README.md
 ```
 
-## Ba file điều phối library
+## Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)
 
 Ba file này giữ cho việc học không bị tách thành các chapter rời: dependency cho biết học gì trước, coverage audit cho biết còn gap nào, còn evidence guide cho biết nên tin claim ở mức nào. Hãy dùng chúng để điều hướng và kiểm tra sau mỗi reading path.
 
@@ -76,7 +79,7 @@ Ba file này giữ cho việc học không bị tách thành các chapter rời:
 - [[COVERAGE_AUDIT]]: coverage, depth, language, evidence-status và conceptual gap.
 - [[EVIDENCE_STATUS_GUIDE]]: rule phân loại claim theo mức bằng chứng.
 
-## Reading path 1 — Scientific foundations
+## Reading đường dẫn (path / 경로) 1 — Scientific foundations
 
 1. [[00_foundations/00_psychology_as_science]]
 2. [[00_foundations/02_research_methods]]
@@ -86,9 +89,9 @@ Ba file này giữ cho việc học không bị tách thành các chapter rời:
 6. [[00_foundations/08_causal_inference_and_psychological_evidence]]
 7. [[00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]]
 
-Mục tiêu: phân biệt construct với score, association với causation, statistical significance với effect magnitude, và một paper với cumulative evidence.
+Mục tiêu: phân biệt construct với score, association với causation, statistical significance với tác động (effect / 효과) magnitude, và một paper với cumulative bằng chứng (evidence / 증거).
 
-## Reading path 2 — Brain, perception, attention và consciousness
+## Reading đường dẫn (path / 경로) 2 — Brain, perception, attention và consciousness
 
 1. [[01_brain_and_mind/00_nervous_system_and_brain]]
 2. [[01_brain_and_mind/01_sensation_and_perception]]
@@ -99,9 +102,9 @@ Mục tiêu: phân biệt construct với score, association với causation, st
 7. [[01_brain_and_mind/08_sleep_circadian_and_recovery]]
 8. [[01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]]
 
-Không dùng neural correlate như causal proof. Các theory consciousness được giữ ở mức current/debated theory nếu evidence chưa phân biệt rõ.
+Không dùng neural correlate như nhân quả (causal / 인과적) proof. Các lý thuyết (theory / 이론) consciousness được giữ ở mức hiện tại (current / 현재)/debated lý thuyết (theory / 이론) nếu bằng chứng (evidence / 증거) chưa phân biệt rõ.
 
-## Reading path 3 — Learning, memory và cognition
+## Reading đường dẫn (path / 경로) 3 — học tập (learning / 학습), bộ nhớ (memory / 메모리) và cognition
 
 1. [[02_learning_and_cognition/00_learning_and_conditioning]]
 2. [[02_learning_and_cognition/01_memory]]
@@ -117,7 +120,7 @@ Không dùng neural correlate như causal proof. Các theory consciousness đư�
 12. [[02_learning_and_cognition/11_emotion_memory_and_affective_cognition]]
 13. [[02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]]
 
-## Reading path 4 — Development, personality và identity
+## Reading đường dẫn (path / 경로) 4 — Development, personality và định danh (identity / 식별자)
 
 1. [[03_human_development_and_person/00_lifespan_development]]
 2. [[03_human_development_and_person/01_attachment_and_relationships]]
@@ -127,7 +130,7 @@ Không dùng neural correlate như causal proof. Các theory consciousness đư�
 6. [[03_human_development_and_person/14_parenting_caregiving_and_family_development]]
 7. [[03_human_development_and_person/11_aging_cognitive_health_and_late_life]]
 
-## Reading path 5 — Social, culture và migration
+## Reading đường dẫn (path / 경로) 5 — xã hội (social / 사회적), culture và di chuyển (migration / 마이그레이션)
 
 1. [[03_human_development_and_person/04_social_and_cultural_psychology]]
 2. [[03_human_development_and_person/10_group_dynamics_collective_behavior_and_cooperation]]
@@ -136,7 +139,7 @@ Không dùng neural correlate như causal proof. Các theory consciousness đư�
 5. [[03_human_development_and_person/12_loneliness_social_connection_and_belonging]]
 6. [[03_human_development_and_person/08_moral_psychology_and_prosocial_behavior]]
 
-## Reading path 6 — Relationships và family
+## Reading đường dẫn (path / 경로) 6 — Relationships và family
 
 1. [[03_human_development_and_person/01_attachment_and_relationships]]
 2. [[03_human_development_and_person/07_close_relationships_intimacy_and_family]]
@@ -145,7 +148,7 @@ Không dùng neural correlate như causal proof. Các theory consciousness đư�
 5. [[06_applied/03_interpersonal_communication_and_conflict]]
 6. [[06_applied/20_negotiation_conflict_and_joint_decision_making]]
 
-## Reading path 7 — Stress, coping và everyday self-regulation
+## Reading đường dẫn (path / 경로) 7 — Stress, coping và everyday self-regulation
 
 1. [[01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]]
 2. [[03_human_development_and_person/06_stress_coping_and_emotion_regulation]]
@@ -154,9 +157,9 @@ Không dùng neural correlate như causal proof. Các theory consciousness đư�
 5. [[06_applied/12_psychology_in_daily_life_and_self_regulation]]
 6. [[06_applied/14_work_stress_burnout_and_recovery]]
 
-Applied content ở path này phải giải thích mechanism và evidence strength; không dùng motivational slogan như psychological law.
+Applied content ở đường dẫn (path / 경로) này phải giải thích cơ chế (mechanism / 메커니즘) và bằng chứng (evidence / 증거) strength; không dùng motivational slogan như psychological law.
 
-## Reading path 8 — Mental health, psychopathology và intervention
+## Reading đường dẫn (path / 경로) 8 — Mental health, psychopathology và intervention
 
 1. [[04_mental_health/00_mental_health_and_psychopathology]]
 2. [[04_mental_health/01_assessment_and_diagnosis]]
@@ -180,9 +183,9 @@ Applied content ở path này phải giải thích mechanism và evidence streng
 20. [[05_intervention/03_psychodynamic_humanistic_and_systemic_therapy]]
 21. [[05_intervention/02_biological_and_community_treatment]]
 
-Các file `02_anxiety_ocd_and_trauma.md`, `03_depression_bipolar_and_suicidality.md` và `05_neurodevelopmental_adhd_autism.md` được giữ làm compatibility bridge; learning path mới đi thẳng vào canonical chapter. Đây là learning path, không phải công cụ tự chẩn đoán.
+Các tệp (file / 파일) `02_anxiety_ocd_and_trauma.md`, `03_depression_bipolar_and_suicidality.md` và `05_neurodevelopmental_adhd_autism.md` được giữ làm tính tương thích (compatibility / 호환성) cầu nối (bridge / 브리지); lộ trình học (learning path / 학습 경로) mới đi thẳng vào chuẩn gốc (canonical / 정본) chapter. Đây là lộ trình học (learning path / 학습 경로), không phải công cụ tự chẩn đoán.
 
-## Reading path 9 — Freud, Adler, Jung và historical schools
+## Reading đường dẫn (path / 경로) 9 — Freud, Adler, Jung và historical schools
 
 1. [[00_foundations/01_history_and_major_perspectives]]
 2. [[90_connections/00_freud_jung_and_depth_psychology_in_context]]
@@ -193,9 +196,9 @@ Các file `02_anxiety_ocd_and_trauma.md`, `03_depression_bipolar_and_suicidality
 7. [[03_human_development_and_person/03_personality]]
 8. [[03_human_development_and_person/09_self_concept_identity_and_self_regulation]]
 
-Mục tiêu là hiểu **historical influence**, không “chứng minh” historical systems bằng construct hiện đại có tên tương tự.
+Mục tiêu là hiểu **historical influence**, không “chứng minh” historical các hệ thống (systems / 시스템들) bằng construct hiện đại có tên tương tự.
 
-## Reading path 10 — Work, leadership và team
+## Reading đường dẫn (path / 경로) 10 — công việc (work / 작업), leadership và nhóm (team / 팀)
 
 1. [[06_applied/00_work_organization_and_leadership]]
 2. [[03_human_development_and_person/10_group_dynamics_collective_behavior_and_cooperation]]
@@ -205,7 +208,7 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 6. [[06_applied/14_work_stress_burnout_and_recovery]]
 7. [[06_applied/22_career_vocational_psychology_and_person_environment_fit]]
 
-## Reading path 11 — Decision, finance và negotiation
+## Reading đường dẫn (path / 경로) 11 — quyết định (decision / 결정), finance và negotiation
 
 1. [[02_learning_and_cognition/02_thinking_language_and_decision]]
 2. [[02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]]
@@ -213,7 +216,7 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 4. [[06_applied/18_financial_psychology_and_personal_decision_making]]
 5. [[06_applied/20_negotiation_conflict_and_joint_decision_making]]
 
-## Reading path 12 — HCI, digital psychology và AI
+## Reading đường dẫn (path / 경로) 12 — HCI, digital psychology và AI
 
 1. [[02_learning_and_cognition/01_memory]]
 2. [[02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]]
@@ -223,7 +226,7 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 6. [[90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]]
 7. [[90_connections/03_risk_uncertainty_and_science_communication]]
 
-## Reading path 13 — Health, body và context
+## Reading đường dẫn (path / 경로) 13 — Health, body và ngữ cảnh (context / 맥락)
 
 1. [[01_brain_and_mind/04_interoception_pain_and_embodied_mind]]
 2. [[01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]]
@@ -231,25 +234,27 @@ Mục tiêu là hiểu **historical influence**, không “chứng minh” histo
 4. [[04_mental_health/10_dissociation_somatic_and_functional_symptoms]]
 5. [[06_applied/13_placebo_nocebo_expectation_and_context]]
 
-Path này tránh false dichotomy “biological hoặc psychological”.
+Đường dẫn (path / 경로) này tránh false dichotomy “biological hoặc psychological”.
 
 ## Nguyên tắc viết chapter
 
 Một chapter tốt cần trả lời tự nhiên:
 
-- phenomenon/problem là gì;
+- phenomenon/bài toán (problem / 문제) là gì;
 - construct được định nghĩa và đo thế nào;
-- mechanism hoặc model hoạt động ra sao;
-- evidence status là gì;
+- cơ chế (mechanism / 메커니즘) hoặc mô hình (model / 모델) hoạt động ra sao;
+- bằng chứng (evidence / 증거) status là gì;
 - alternative explanation nào còn tồn tại;
-- boundary condition là gì;
-- ứng dụng thực tế có evidence tới đâu;
-- chapter nối với domain nào khác.
+- ranh giới (boundary / 경계) điều kiện (condition / 조건) là gì;
+- ứng dụng thực tế có bằng chứng (evidence / 증거) tới đâu;
+- chapter nối với lĩnh vực (domain / 도메인) nào khác.
 
-Không dùng bullet thay reasoning nếu phần đó cần explanatory prose.
+Không dùng bullet thay lập luận (reasoning / 추론) nếu phần đó cần explanatory prose.
 
-## Canonical branch và merge policy
+## Chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)
 
-`feat/psychology-knowledge-library` là canonical Psychology branch hiện tại. Các branch `feat/psychology-*` khác là snapshot cũ nếu không có commit riêng vượt branch này.
+Psychology đã được hợp nhất vào `main`. Các branch `feat/psychology-*` chỉ là snapshot lịch sử và không còn là nguồn chuẩn (source of truth / 정본).
 
-Không merge `main` cho tới khi [[COVERAGE_AUDIT]] cho thấy không còn quality gap lớn giữa các domain cốt lõi.
+Mọi thay đổi mới phải cập nhật trực tiếp chuẩn gốc (canonical / 정본) content trên `main` và ghi nhận chất lượng (quality / 품질) gap, bằng chứng (evidence / 증거) refresh hoặc điều hướng (navigation / 내비게이션) thay đổi (change / 변경) trong [[COVERAGE_AUDIT]].
+
+> **Bàn giao:** Sau **chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CONCEPTUAL DEPENDENCIES](./CONCEPTUAL_DEPENDENCIES.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,6 +1,9 @@
-# Reverse Proxy, Load Balancing và đường đi của HTTP Request
+# Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)
 
-Một backend production hiếm khi để client kết nối trực tiếp tới Java process. Request thường đi qua nhiều lớp:
+> **Mạch đọc:** Đọc **Reverse Proxy, tải (load / 로드) Balancing và đường đi của HTTP yêu cầu (request / 요청)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Proxy là gì?** sang **Vì sao cần reverse proxy?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Một backend môi trường vận hành (production / 운영 환경) hiếm khi để máy khách (client / 클라이언트) kết nối trực tiếp tới Java tiến trình (process / 프로세스). yêu cầu (request / 요청) thường đi qua nhiều lớp:
 
 ```text
 client
@@ -18,7 +21,7 @@ application server
 database / downstream service
 ```
 
-Mỗi lớp thêm khả năng kiểm soát, nhưng cũng thêm state, timeout và failure mode. Khi user nhận `502`, `504` hoặc request timeout, muốn chẩn đoán đúng cần hiểu từng lớp đang làm gì.
+Mỗi lớp thêm khả năng kiểm soát, nhưng cũng thêm trạng thái (state / 상태), hết thời gian chờ (timeout / 타임아웃) và dạng thất bại (failure mode / 실패 모드). Khi người dùng (user / 사용자) nhận `502`, `504` hoặc yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃), muốn chẩn đoán đúng cần hiểu từng lớp đang làm gì.
 
 ## Proxy là gì?
 
@@ -26,33 +29,33 @@ Mỗi lớp thêm khả năng kiểm soát, nhưng cũng thêm state, timeout v�
 
 Có hai khái niệm thường gặp:
 
-- **forward proxy** đại diện cho client khi đi ra ngoài;
-- **reverse proxy** đại diện cho server/application khi nhận traffic từ client.
+- **forward proxy** đại diện cho máy khách (client / 클라이언트) khi đi ra ngoài;
+- **reverse proxy** đại diện cho máy chủ (server / 서버)/ứng dụng (application / 애플리케이션) khi nhận traffic từ máy khách (client / 클라이언트).
 
-Reverse proxy như Nginx, HAProxy, Envoy hoặc cloud load balancer thường nhận request trước backend.
+Reverse proxy như Nginx, HAProxy, Envoy hoặc cloud bộ cân bằng tải (load balancer / 로드 밸런서) thường nhận yêu cầu (request / 요청) trước backend.
 
-Client nhìn thấy proxy như endpoint chính, còn proxy biết backend thật.
+Máy khách (client / 클라이언트) nhìn thấy proxy như endpoint chính, còn proxy biết backend thật.
 
 ## Vì sao cần reverse proxy?
 
-Một Java application có thể tự terminate TLS và serve HTTP trực tiếp. Nhưng reverse proxy cho phép tách nhiều trách nhiệm:
+Một Java ứng dụng (application / 애플리케이션) có thể tự terminate TLS và serve HTTP trực tiếp. Nhưng reverse proxy cho phép tách nhiều trách nhiệm:
 
 - TLS termination;
-- routing theo hostname/path;
-- load balancing;
-- connection management;
+- routing theo hostname/đường dẫn (path / 경로);
+- tải (load / 로드) balancing;
+- liên kết (connection / 연결) management;
 - compression;
-- rate limiting;
-- access logging;
+- tỷ lệ (rate / 비율) limiting;
+- truy cập (access / 접근) logging;
 - health checks;
-- static file serving;
-- request/response header normalization.
+- static tệp (file / 파일) serving;
+- yêu cầu (request / 요청)/phản hồi (response / 응답) header normalization.
 
-Việc tách này giúp application tập trung business logic, nhưng architecture trở thành multi-hop.
+Việc tách này giúp ứng dụng (application / 애플리케이션) tập trung lô-gic nghiệp vụ (business logic / 비즈니스 로직), nhưng kiến trúc (architecture / 아키텍처) trở thành multi-hop.
 
 ## Reverse proxy không phải “chỉ forward packet”
 
-Ở layer 7, proxy có thể terminate TCP/TLS, parse HTTP rồi tạo một connection khác tới backend.
+Ở tầng (layer / 계층) 7, proxy có thể terminate TCP/TLS, parse HTTP rồi tạo một liên kết (connection / 연결) khác tới backend.
 
 Ví dụ:
 
@@ -64,28 +67,28 @@ Nginx
 backend TCP connection
 ```
 
-Hai connection này độc lập về timeout, keep-alive và socket state.
+Hai liên kết (connection / 연결) này độc lập về hết thời gian chờ (timeout / 타임아웃), keep-alive và socket trạng thái (state / 상태).
 
-Do đó client timeout 30 giây không nhất thiết bằng backend timeout 30 giây.
+Do đó máy khách (client / 클라이언트) hết thời gian chờ (timeout / 타임아웃) 30 giây không nhất thiết bằng backend hết thời gian chờ (timeout / 타임아웃) 30 giây.
 
-## Layer 4 và Layer 7 load balancing
+## Tầng (layer / 계층) 4 và tầng (layer / 계층) 7 tải (load / 로드) balancing
 
-**Layer 4 load balancer** thường cân bằng theo TCP/UDP connection mà không cần hiểu HTTP semantics sâu.
+**tầng (layer / 계층) 4 bộ cân bằng tải (load balancer / 로드 밸런서)** thường cân bằng theo TCP/UDP liên kết (connection / 연결) mà không cần hiểu HTTP ngữ nghĩa (semantics / 의미론) sâu.
 
-**Layer 7 load balancer** hiểu HTTP hostname, path, headers và có thể route:
+**tầng (layer / 계층) 7 bộ cân bằng tải (load balancer / 로드 밸런서)** hiểu HTTP hostname, đường dẫn (path / 경로), headers và có thể tuyến (route / 경로):
 
 ```text
 /api/users  → user-service
 /api/orders → order-service
 ```
 
-Layer 7 cho flexibility cao hơn nhưng cần nhiều processing và protocol awareness hơn.
+Tầng (layer / 계층) 7 cho flexibility cao hơn nhưng cần nhiều processing và giao thức (protocol / 프로토콜) awareness hơn.
 
-## Load balancing giải quyết vấn đề gì?
+## Tải (load / 로드) balancing giải quyết vấn đề gì?
 
-Một backend instance có capacity hữu hạn. Nếu toàn bộ traffic vào một process, nó có thể trở thành single point of failure và bottleneck.
+Một backend instance có sức chứa (capacity / 용량) hữu hạn. Nếu toàn bộ traffic vào một tiến trình (process / 프로세스), nó có thể trở thành single điểm (point / 지점) of thất bại (failure / 실패) và bottleneck.
 
-Load balancer phân phối request/connections tới nhiều upstreams:
+Bộ cân bằng tải (load balancer / 로드 밸런서) phân phối yêu cầu (request / 요청)/connections tới nhiều upstreams:
 
 ```text
              ┌─ app-1
@@ -93,7 +96,7 @@ client → LB ─┼─ app-2
              └─ app-3
 ```
 
-Nhưng “chia đều” không phải lúc nào cũng tối ưu. Request cost có thể khác nhau, connection có thể sống lâu và instance capacity có thể không đồng nhất.
+Nhưng “chia đều” không phải lúc nào cũng tối ưu. yêu cầu (request / 요청) chi phí (cost / 비용) có thể khác nhau, liên kết (connection / 연결) có thể sống lâu và instance sức chứa (capacity / 용량) có thể không đồng nhất.
 
 ## Round robin
 
@@ -106,19 +109,19 @@ request 3 → C
 request 4 → A
 ```
 
-Round robin hoạt động tốt khi request cost tương đối tương đồng và backend có capacity gần nhau.
+Round robin hoạt động tốt khi yêu cầu (request / 요청) chi phí (cost / 비용) tương đối tương đồng và backend có sức chứa (capacity / 용량) gần nhau.
 
-Nhưng nếu một request chạy 30 giây còn request khác 10 ms, số request không phản ánh current load.
+Nhưng nếu một yêu cầu (request / 요청) chạy 30 giây còn yêu cầu (request / 요청) khác 10 ms, số yêu cầu (request / 요청) không phản ánh hiện tại (current / 현재) tải (load / 로드).
 
 ## Least connections
 
 **Least connections** chọn backend đang có ít active connections hơn.
 
-Cách này có thể phù hợp với long-lived connections hơn round robin, nhưng connection count vẫn không nói đầy đủ CPU/memory/business cost.
+Cách này có thể phù hợp với long-lived connections hơn round robin, nhưng liên kết (connection / 연결) count vẫn không nói đầy đủ CPU/bộ nhớ (memory / 메모리)/nghiệp vụ (business / 비즈니스) chi phí (cost / 비용).
 
 ## Weighted balancing
 
-Nếu server A mạnh gấp đôi server B, có thể dùng weight:
+Nếu máy chủ (server / 서버) A mạnh gấp đôi máy chủ (server / 서버) B, có thể dùng weight:
 
 ```text
 A weight 2
@@ -127,32 +130,32 @@ B weight 1
 
 A nhận tỷ lệ traffic cao hơn.
 
-Weight là model capacity gần đúng, không phải guarantee performance.
+Weight là mô hình (model / 모델) sức chứa (capacity / 용량) gần đúng, không phải guarantee hiệu năng (performance / 성능).
 
 ## Consistent hashing
 
-Một số hệ thống muốn cùng key/client thường đi tới cùng backend để tăng cache locality hoặc session affinity.
+Một số hệ thống muốn cùng key/máy khách (client / 클라이언트) thường đi tới cùng backend để tăng bộ nhớ đệm (cache / 캐시) locality hoặc session affinity.
 
 Consistent hashing giảm số keys bị remap khi backend thay đổi so với modulo hashing đơn giản.
 
-Nhưng sticky routing tạo trade-off: distribution có thể kém đều và failure recovery phức tạp hơn.
+Nhưng sticky routing tạo sự đánh đổi (trade-off / 트레이드오프): phân phối (distribution / 분포) có thể kém đều và thất bại (failure / 실패) khôi phục (recovery / 복구) phức tạp hơn.
 
-## Session affinity và vấn đề stateful application
+## Session affinity và vấn đề stateful ứng dụng (application / 애플리케이션)
 
-Nếu user session chỉ tồn tại trong memory của một application instance:
+Nếu người dùng (user / 사용자) session chỉ tồn tại trong bộ nhớ (memory / 메모리) của một ứng dụng (application / 애플리케이션) instance:
 
 ```text
 request 1 → app-A → session exists
 request 2 → app-B → session missing
 ```
 
-Load balancer có thể dùng sticky session, nhưng solution tốt hơn trong nhiều hệ thống là đưa session/state ra shared store hoặc dùng stateless token khi phù hợp.
+Bộ cân bằng tải (load balancer / 로드 밸런서) có thể dùng sticky session, nhưng solution tốt hơn trong nhiều hệ thống là đưa session/trạng thái (state / 상태) ra dùng chung (shared / 공유) store hoặc dùng stateless đơn vị từ (token / 토큰) khi phù hợp.
 
-Load balancing hoạt động tốt nhất khi application instance có thể thay thế lẫn nhau.
+Tải (load / 로드) balancing hoạt động tốt nhất khi ứng dụng (application / 애플리케이션) instance có thể thay thế lẫn nhau.
 
 ## Health check
 
-Load balancer không nên gửi traffic tới instance chết.
+Bộ cân bằng tải (load balancer / 로드 밸런서) không nên gửi traffic tới instance chết.
 
 Health check có thể kiểm tra:
 
@@ -162,55 +165,55 @@ GET /health
 
 Nhưng thiết kế health endpoint cần cẩn thận.
 
-Nếu health check phụ thuộc database/downstream và dependency tạm chậm, mọi app instances có thể đồng loạt bị đánh dấu unhealthy, làm outage nặng hơn.
+Nếu health check phụ thuộc cơ sở dữ liệu (database / 데이터베이스)/downstream và phụ thuộc (dependency / 의존성) tạm chậm, mọi app instances có thể đồng loạt bị đánh dấu unhealthy, làm outage nặng hơn.
 
 Cần phân biệt:
 
-- **liveness**: process còn sống hay không;
+- **liveness**: tiến trình (process / 프로세스) còn sống hay không;
 - **readiness**: instance có sẵn sàng nhận traffic hay không;
-- **dependency health**: downstream có khỏe không.
+- **phụ thuộc (dependency / 의존성) health**: downstream có khỏe không.
 
 Không nên gộp tất cả vào một boolean đơn giản.
 
 ## Passive health và active health
 
-**Active health check** gửi request định kỳ tới backend.
+**Active health check** gửi yêu cầu (request / 요청) định kỳ tới backend.
 
-**Passive health check** quan sát failure từ traffic thật, ví dụ consecutive connection errors.
+**Passive health check** quan sát thất bại (failure / 실패) từ traffic thật, ví dụ consecutive liên kết (connection / 연결) errors.
 
-Kết hợp hai cách có thể phản ánh state tốt hơn, nhưng cần tránh flap khi backend chỉ có transient latency.
+Kết hợp hai cách có thể phản ánh trạng thái (state / 상태) tốt hơn, nhưng cần tránh flap khi backend chỉ có transient độ trễ (latency / 지연 시간).
 
 ## 502 Bad Gateway
 
-HTTP `502 Bad Gateway` thường nghĩa proxy nhận response không hợp lệ hoặc không thể thiết lập/duy trì communication đúng với upstream.
+HTTP `502 Bad Gateway` thường nghĩa proxy nhận phản hồi (response / 응답) không hợp lệ hoặc không thể thiết lập/duy trì communication đúng với upstream.
 
 Các nguyên nhân có thể gồm:
 
-- backend process không listen;
-- connection refused;
-- backend reset connection;
+- backend tiến trình (process / 프로세스) không listen;
+- liên kết (connection / 연결) refused;
+- backend reset liên kết (connection / 연결);
 - TLS upstream mismatch;
-- protocol mismatch;
-- malformed response.
+- giao thức (protocol / 프로토콜) mismatch;
+- malformed phản hồi (response / 응답).
 
-`502` chỉ là symptom ở proxy layer. Cần xem proxy log và backend state.
+`502` chỉ là symptom ở proxy tầng (layer / 계층). Cần xem proxy log và backend trạng thái (state / 상태).
 
-## 504 Gateway Timeout
+## 504 Gateway hết thời gian chờ (timeout / 타임아웃)
 
-`504 Gateway Timeout` thường nghĩa proxy đã chờ upstream vượt timeout.
+`504 Gateway Timeout` thường nghĩa proxy đã chờ upstream vượt hết thời gian chờ (timeout / 타임아웃).
 
 Backend có thể:
 
 - xử lý quá lâu;
-- chờ database lock;
+- chờ cơ sở dữ liệu (database / 데이터베이스) khóa (lock / 잠금);
 - chờ downstream API;
-- thread pool exhausted;
-- network packet loss;
-- timeout chain cấu hình không hợp lý.
+- luồng thực thi (thread / 스레드) pool exhausted;
+- mạng (network / 네트워크) packet mất mát (loss / 손실);
+- hết thời gian chờ (timeout / 타임아웃) chuỗi (chain / 사슬) cấu hình không hợp lý.
 
-Không nên chỉ tăng proxy timeout. Nếu root cause là dependency latency, tăng timeout có thể làm connections tích tụ lâu hơn và tạo resource exhaustion.
+Không nên chỉ tăng proxy hết thời gian chờ (timeout / 타임아웃). Nếu nguyên nhân gốc (root cause / 근본 원인) là phụ thuộc (dependency / 의존성) độ trễ (latency / 지연 시간), tăng hết thời gian chờ (timeout / 타임아웃) có thể làm connections tích tụ lâu hơn và tạo tài nguyên (resource / 자원) exhaustion.
 
-## Timeout phải được thiết kế theo chuỗi
+## Hết thời gian chờ (timeout / 타임아웃) phải được thiết kế theo chuỗi
 
 Giả sử:
 
@@ -221,11 +224,11 @@ Nginx proxy timeout= 90s
 Java DB timeout    = 120s
 ```
 
-Client đã bỏ cuộc ở giây 30 nhưng backend có thể tiếp tục giữ thread/DB connection thêm nhiều chục giây.
+Máy khách (client / 클라이언트) đã bỏ cuộc ở giây 30 nhưng backend có thể tiếp tục giữ luồng thực thi (thread / 스레드)/DB liên kết (connection / 연결) thêm nhiều chục giây.
 
-Một design thường hợp lý hơn là timeout phía trong nhỏ hơn hoặc aligned với request budget tổng, tùy architecture.
+Một thiết kế (design / 설계) thường hợp lý hơn là hết thời gian chờ (timeout / 타임아웃) phía trong nhỏ hơn hoặc aligned với yêu cầu (request / 요청) ngân sách (budget / 예산) tổng, tùy kiến trúc (architecture / 아키텍처).
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 request deadline
@@ -237,13 +240,13 @@ application budget
 dependency budget
 ```
 
-Timeout nên phản ánh end-to-end latency objective, không phải các con số độc lập.
+Hết thời gian chờ (timeout / 타임아웃) nên phản ánh end-to-end độ trễ (latency / 지연 시간) mục tiêu (objective / 목표), không phải các con số độc lập.
 
-## Retry có thể khuếch đại sự cố
+## Thử lại (retry / 재시도) có thể khuếch đại sự cố
 
-Nếu proxy retry request fail sang backend khác, reliability có thể tăng với transient failure.
+Nếu proxy thử lại (retry / 재시도) yêu cầu (request / 요청) thất bại (fail / 실패) sang backend khác, độ tin cậy (reliability / 신뢰성) có thể tăng với transient thất bại (failure / 실패).
 
-Nhưng khi upstream chậm, retry tạo thêm traffic:
+Nhưng khi upstream chậm, thử lại (retry / 재시도) tạo thêm traffic:
 
 ```text
 100 requests
@@ -251,29 +254,29 @@ Nhưng khi upstream chậm, retry tạo thêm traffic:
 = tối đa 300 attempts
 ```
 
-Đây là **retry amplification**.
+Đây là **thử lại (retry / 재시도) amplification**.
 
-Nếu nhiều layers đều retry, amplification có thể nhân lên mạnh.
+Nếu nhiều layers đều thử lại (retry / 재시도), amplification có thể nhân lên mạnh.
 
-Retry cần:
+Thử lại (retry / 재시도) cần:
 
 - giới hạn attempts;
-- timeout nhỏ;
+- hết thời gian chờ (timeout / 타임아웃) nhỏ;
 - exponential backoff khi phù hợp;
 - jitter;
-- chỉ retry idempotent operations nếu không có deduplication semantics.
+- chỉ thử lại (retry / 재시도) idempotent operations nếu không có deduplication ngữ nghĩa (semantics / 의미론).
 
-## Idempotency và retry POST
+## Idempotency và thử lại (retry / 재시도) POST
 
-Retry `GET` thường ít nguy hiểm hơn retry một operation tạo payment/order.
+Thử lại (retry / 재시도) `GET` thường ít nguy hiểm hơn thử lại (retry / 재시도) một thao tác (operation / 연산) tạo payment/thứ tự (order / 순서).
 
-Nếu client gửi:
+Nếu máy khách (client / 클라이언트) gửi:
 
 ```http
 POST /payments
 ```
 
-rồi timeout nhưng server đã xử lý thành công, retry có thể tạo duplicate payment.
+rồi hết thời gian chờ (timeout / 타임아웃) nhưng máy chủ (server / 서버) đã xử lý thành công, thử lại (retry / 재시도) có thể tạo duplicate payment.
 
 Giải pháp có thể dùng **idempotency key**:
 
@@ -281,51 +284,51 @@ Giải pháp có thể dùng **idempotency key**:
 Idempotency-Key: abc123
 ```
 
-Backend lưu kết quả và nhận diện retry cùng operation.
+Backend lưu kết quả và nhận diện thử lại (retry / 재시도) cùng thao tác (operation / 연산).
 
-Đây là connection giữa networking reliability và business correctness.
+Đây là liên kết (connection / 연결) giữa networking độ tin cậy (reliability / 신뢰성) và nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성).
 
-## Keep-alive và connection pooling
+## Keep-alive và liên kết (connection / 연결) pooling
 
-Proxy thường giữ persistent connection tới backend để giảm TCP/TLS handshake overhead.
+Proxy thường giữ persistent liên kết (connection / 연결) tới backend để giảm TCP/TLS handshake overhead.
 
-Nếu keep-alive pool quá nhỏ, connection churn tăng. Nếu quá lớn, backend có thể bị giữ quá nhiều sockets.
+Nếu keep-alive pool quá nhỏ, liên kết (connection / 연결) churn tăng. Nếu quá lớn, backend có thể bị giữ quá nhiều sockets.
 
 Các metrics cần nhìn:
 
 - active connections;
 - idle keep-alive connections;
-- connection creation rate;
+- liên kết (connection / 연결) creation tỷ lệ (rate / 비율);
 - TIME_WAIT;
-- upstream latency.
+- upstream độ trễ (latency / 지연 시간).
 
-## Queue tại proxy
+## Hàng đợi (queue / 큐) tại proxy
 
-Khi upstream capacity đầy, proxy có thể có pending requests/connections.
+Khi upstream sức chứa (capacity / 용량) đầy, proxy có thể có pending requests/connections.
 
-Queue không tự động xấu. Một queue nhỏ hấp thụ burst. Nhưng khi arrival rate > service rate kéo dài, queue tăng liên tục và latency tăng.
+Hàng đợi (queue / 큐) không tự động xấu. Một hàng đợi (queue / 큐) nhỏ hấp thụ burst. Nhưng khi arrival tỷ lệ (rate / 비율) > dịch vụ (service / 서비스) tỷ lệ (rate / 비율) kéo dài, hàng đợi (queue / 큐) tăng liên tục và độ trễ (latency / 지연 시간) tăng.
 
-Đây là application của queueing theory.
+Đây là ứng dụng (application / 애플리케이션) của queueing lý thuyết (theory / 이론).
 
 Xem thêm: [Capacity planning](../09_production/capacity_planning_server_sizing.md).
 
 ## Backpressure
 
-**Backpressure** là cơ chế để hệ thống phía sau báo rằng nó không thể nhận work vô hạn.
+**Backpressure** là cơ chế để hệ thống phía sau báo rằng nó không thể nhận công việc (work / 작업) vô hạn.
 
-Nếu load balancer/proxy cứ tiếp tục nhận mọi request và xếp queue vô hạn, memory/latency cuối cùng collapse.
+Nếu bộ cân bằng tải (load balancer / 로드 밸런서)/proxy cứ tiếp tục nhận mọi yêu cầu (request / 요청) và xếp hàng đợi (queue / 큐) vô hạn, bộ nhớ (memory / 메모리)/độ trễ (latency / 지연 시간) cuối cùng collapse.
 
-Better behavior có thể là reject sớm bằng `429`/`503` khi capacity đã đạt threshold phù hợp.
+Better hành vi (behavior / 동작) có thể là reject sớm bằng `429`/`503` khi sức chứa (capacity / 용량) đã đạt threshold phù hợp.
 
-Fail fast đôi khi bảo vệ system tốt hơn “cố xử lý tất cả”.
+Thất bại (fail / 실패) fast đôi khi bảo vệ hệ thống (system / 시스템) tốt hơn “cố xử lý tất cả”.
 
-## Rate limiting
+## Tỷ lệ (rate / 비율) limiting
 
-Proxy có thể giới hạn request rate theo IP, user/token hoặc endpoint.
+Proxy có thể giới hạn yêu cầu (request / 요청) tỷ lệ (rate / 비율) theo IP, người dùng (user / 사용자)/đơn vị từ (token / 토큰) hoặc endpoint.
 
-Rate limiting giúp chống abuse và bảo vệ backend, nhưng threshold phải dựa traffic model.
+Tỷ lệ (rate / 비율) limiting giúp chống abuse và bảo vệ backend, nhưng threshold phải dựa traffic mô hình (model / 모델).
 
-Một endpoint login và một endpoint file download có cost khác nhau; chỉ dùng requests/second không phản ánh mọi resource cost.
+Một endpoint login và một endpoint tệp (file / 파일) download có chi phí (cost / 비용) khác nhau; chỉ dùng requests/second không phản ánh mọi tài nguyên (resource / 자원) chi phí (cost / 비용).
 
 ## TLS termination
 
@@ -339,13 +342,13 @@ proxy terminates TLS
 HTTP hoặc HTTPS tới backend
 ```
 
-Nếu proxy→backend dùng HTTP, traffic nội bộ không được TLS bảo vệ. Có phù hợp hay không phụ thuộc trust boundary.
+Nếu proxy→backend dùng HTTP, traffic nội bộ không được TLS bảo vệ. Có phù hợp hay không phụ thuộc trust ranh giới (boundary / 경계).
 
-Một số environment dùng TLS ở cả hai đoạn hoặc mTLS.
+Một số môi trường (environment / 환경) dùng TLS ở cả hai đoạn hoặc mTLS.
 
 ## X-Forwarded-* headers
 
-Khi proxy tạo connection mới tới backend, backend nhìn source IP của proxy thay vì client thật.
+Khi proxy tạo liên kết (connection / 연결) mới tới backend, backend nhìn nguồn (source / 소스) IP của proxy thay vì máy khách (client / 클라이언트) thật.
 
 Proxy có thể thêm:
 
@@ -355,37 +358,37 @@ X-Forwarded-Proto
 X-Forwarded-Host
 ```
 
-hoặc standard `Forwarded` header.
+hoặc tiêu chuẩn (standard / 표준) `Forwarded` header.
 
-Application chỉ nên tin các headers này từ proxy đáng tin cậy. Nếu client internet có thể tự set header và app tin vô điều kiện, audit/security logic có thể bị giả mạo.
+Ứng dụng (application / 애플리케이션) chỉ nên tin các headers này từ proxy đáng tin cậy. Nếu máy khách (client / 클라이언트) internet có thể tự set header và app tin vô điều kiện, kiểm tra (audit / 감사)/bảo mật (security / 보안) lô-gic (logic / 논리) có thể bị giả mạo.
 
-## Client IP và nhiều proxy hops
+## Máy khách (client / 클라이언트) IP và nhiều proxy hops
 
-`X-Forwarded-For` có thể là list:
+`X-Forwarded-For` có thể là danh sách (list / 목록):
 
 ```text
 client, proxy1, proxy2
 ```
 
-Muốn lấy client IP đúng cần biết số trusted proxy hops và framework configuration.
+Muốn lấy máy khách (client / 클라이언트) IP đúng cần biết số trusted proxy hops và khung phần mềm (framework / 프레임워크) cấu hình (configuration / 구성).
 
 Không nên đơn giản chọn giá trị đầu/cuối mà không hiểu topology.
 
 ## Reverse proxy và WebSocket
 
-WebSocket bắt đầu bằng HTTP upgrade rồi chuyển sang long-lived bidirectional connection.
+WebSocket bắt đầu bằng HTTP upgrade rồi chuyển sang long-lived bidirectional liên kết (connection / 연결).
 
-Proxy phải hỗ trợ upgrade headers và timeout phù hợp.
+Proxy phải hỗ trợ upgrade headers và hết thời gian chờ (timeout / 타임아웃) phù hợp.
 
-Long-lived connections cũng làm load balancing theo request count kém meaningful hơn.
+Long-lived connections cũng làm tải (load / 로드) balancing theo yêu cầu (request / 요청) count kém meaningful hơn.
 
 ## HTTP/2 multiplexing
 
-Một HTTP/2 connection có thể mang nhiều concurrent streams.
+Một HTTP/2 liên kết (connection / 연결) có thể mang nhiều concurrent streams.
 
-Do đó connection count client→proxy không trực tiếp tương đương request concurrency.
+Do đó liên kết (connection / 연결) count máy khách (client / 클라이언트)→proxy không trực tiếp tương đương yêu cầu (request / 요청) tính đồng thời (concurrency / 동시성).
 
-Nếu proxy dùng HTTP/1.1 tới backend, một HTTP/2 client connection có thể fan out thành nhiều upstream connections/requests.
+Nếu proxy dùng HTTP/1.1 tới backend, một HTTP/2 máy khách (client / 클라이언트) liên kết (connection / 연결) có thể fan out thành nhiều upstream connections/requests.
 
 ## Nginx upstream example
 
@@ -409,35 +412,35 @@ server {
 }
 ```
 
-Đây chỉ là skeleton. Production cần timeout, TLS, health behavior, logging, buffering và security settings phù hợp.
+Đây chỉ là skeleton. môi trường vận hành (production / 운영 환경) cần hết thời gian chờ (timeout / 타임아웃), TLS, health hành vi (behavior / 동작), logging, buffering và bảo mật (security / 보안) settings phù hợp.
 
 ## Proxy buffering
 
-Một reverse proxy có thể buffer request/response thay vì stream ngay.
+Một reverse proxy có thể buffer yêu cầu (request / 요청)/phản hồi (response / 응답) thay vì stream ngay.
 
-Buffering có lợi vì backend có thể trả nhanh rồi proxy gửi chậm cho client. Nhưng với streaming/SSE/large upload, buffering có thể gây latency hoặc memory/disk use không mong muốn.
+Buffering có lợi vì backend có thể trả nhanh rồi proxy gửi chậm cho máy khách (client / 클라이언트). Nhưng với streaming/SSE/large upload, buffering có thể gây độ trễ (latency / 지연 시간) hoặc bộ nhớ (memory / 메모리)/disk use không mong muốn.
 
-Behavior cần align workload.
+Hành vi (behavior / 동작) cần align tải công việc (workload / 워크로드).
 
-## Load balancer ở cloud
+## Bộ cân bằng tải (load balancer / 로드 밸런서) ở cloud
 
-AWS ALB/NLB, GCP Load Balancer, Azure Load Balancer hay Kubernetes Ingress đều cung cấp abstraction khác nhau nhưng các nguyên lý vẫn giống:
+AWS ALB/NLB, GCP bộ cân bằng tải (load balancer / 로드 밸런서), Azure bộ cân bằng tải (load balancer / 로드 밸런서) hay Kubernetes Ingress đều cung cấp lớp trừu tượng (abstraction / 추상화) khác nhau nhưng các nguyên lý vẫn giống:
 
 - listener;
-- target/backend pool;
+- mục tiêu (target / 대상)/backend pool;
 - health check;
 - routing;
-- connection timeout;
+- liên kết (connection / 연결) hết thời gian chờ (timeout / 타임아웃);
 - TLS;
-- observability.
+- khả năng quan sát (observability / 관측 가능성).
 
-Không nên học từng vendor như hệ thống hoàn toàn riêng. Hãy map chúng về network/proxy mental model.
+Không nên học từng vendor như hệ thống hoàn toàn riêng. Hãy map chúng về mạng (network / 네트워크)/proxy mô hình tư duy (mental model / 사고 모델).
 
-## Kubernetes Service và Ingress
+## Kubernetes dịch vụ (service / 서비스) và Ingress
 
-Kubernetes `Service` cung cấp stable virtual endpoint cho pods. Ingress/Gateway xử lý layer 7 routing tùy implementation.
+Kubernetes `Service` cung cấp stable virtual endpoint cho pods. Ingress/Gateway xử lý tầng (layer / 계층) 7 routing tùy hiện thực (implementation / 구현).
 
-Request path có thể là:
+Đường đi của yêu cầu (request path / 요청 경로) có thể là:
 
 ```text
 external LB
@@ -446,9 +449,9 @@ external LB
  → Pod
 ```
 
-Mỗi layer có logs/metrics/state riêng. `curl podIP` thành công không chứng minh external ingress path đúng.
+Mỗi tầng (layer / 계층) có logs/metrics/trạng thái (state / 상태) riêng. `curl podIP` thành công không chứng minh bên ngoài (external / 외부) ingress đường dẫn (path / 경로) đúng.
 
-## Debug 502/504 theo layer
+## Gỡ lỗi (debug / 디버그) 502/504 theo tầng (layer / 계층)
 
 Bắt đầu từ proxy host:
 
@@ -456,7 +459,7 @@ Bắt đầu từ proxy host:
 curl -v http://backend-ip:8080/health
 ```
 
-Nếu fail, vấn đề nằm backend/network giữa proxy và backend.
+Nếu thất bại (fail / 실패), vấn đề nằm backend/mạng (network / 네트워크) giữa proxy và backend.
 
 Kiểm tra listener backend:
 
@@ -470,30 +473,30 @@ Xem proxy log:
 journalctl -u nginx
 ```
 
-hoặc access/error logs.
+hoặc truy cập (access / 접근)/lỗi (error / 오류) logs.
 
 Sau đó correlate timestamp với backend logs.
 
-## Access log như structured evidence
+## Truy cập (access / 접근) log như structured bằng chứng (evidence / 증거)
 
-Một proxy access log tốt nên có:
+Một proxy truy cập (access / 접근) log tốt nên có:
 
-- request timestamp;
-- method/path;
+- yêu cầu (request / 요청) timestamp;
+- phương thức (method / 메서드)/đường dẫn (path / 경로);
 - status;
-- total request time;
+- total yêu cầu (request / 요청) thời gian (time / 시간);
 - upstream address;
-- upstream connect time;
-- upstream response time;
-- request ID.
+- upstream connect thời gian (time / 시간);
+- upstream phản hồi (response / 응답) thời gian (time / 시간);
+- yêu cầu (request / 요청) ID.
 
-Ví dụ nếu total time 10s nhưng upstream time 9.9s, proxy overhead ít khả năng là bottleneck chính.
+Ví dụ nếu total thời gian (time / 시간) 10s nhưng upstream thời gian (time / 시간) 9.9s, proxy overhead ít khả năng là bottleneck chính.
 
-Nếu connect time cao, connection establishment/network/upstream accept path đáng điều tra.
+Nếu connect thời gian (time / 시간) cao, liên kết (connection / 연결) establishment/mạng (network / 네트워크)/upstream accept đường dẫn (path / 경로) đáng điều tra.
 
-## Request ID propagation
+## Yêu cầu (request / 요청) ID propagation
 
-Proxy có thể tạo hoặc forward request ID:
+Proxy có thể tạo hoặc forward yêu cầu (request / 요청) ID:
 
 ```text
 X-Request-ID: 7f8a...
@@ -507,13 +510,13 @@ proxy access log
  ↔ downstream log
 ```
 
-Đây là nền tảng distributed tracing đơn giản.
+Đây là nền tảng phân tán (distributed / 분산) tracing đơn giản.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Reverse proxy/load balancer là **một application mạng có state và resource riêng**, không phải “đường ống trong suốt”.
+Reverse proxy/bộ cân bằng tải (load balancer / 로드 밸런서) là **một ứng dụng (application / 애플리케이션) mạng có trạng thái (state / 상태) và tài nguyên (resource / 자원) riêng**, không phải “đường ống trong suốt”.
 
-Khi request đi qua proxy, hãy theo dõi:
+Khi yêu cầu (request / 요청) đi qua proxy, hãy theo dõi:
 
 ```text
 DNS
@@ -531,21 +534,21 @@ backend processing
 response path
 ```
 
-Mỗi mũi tên có timeout, queue và failure mode riêng.
+Mỗi mũi tên có hết thời gian chờ (timeout / 타임아웃), hàng đợi (queue / 큐) và dạng thất bại (failure mode / 실패 모드) riêng.
 
 ## Những hiểu lầm phổ biến
 
-**“502 nghĩa backend code trả 502.”** Thường 502 được proxy tạo vì upstream communication failure.
+**“502 nghĩa backend mã (code / 코드) trả 502.”** Thường 502 được proxy tạo vì upstream communication thất bại (failure / 실패).
 
-**“504 chỉ cần tăng timeout.”** Nếu backend thực sự saturated, tăng timeout có thể làm tình hình tệ hơn.
+**“504 chỉ cần tăng hết thời gian chờ (timeout / 타임아웃).”** Nếu backend thực sự saturated, tăng hết thời gian chờ (timeout / 타임아웃) có thể làm tình hình tệ hơn.
 
-**“Round robin luôn chia tải đều.”** Request cost và connection lifetime khác nhau.
+**“Round robin luôn chia tải đều.”** yêu cầu (request / 요청) chi phí (cost / 비용) và liên kết (connection / 연결) thời gian tồn tại (lifetime / 수명) khác nhau.
 
-**“Health endpoint càng kiểm tra nhiều dependency càng tốt.”** Health check quá coupled có thể tạo cascading failure.
+**“Health endpoint càng kiểm tra nhiều phụ thuộc (dependency / 의존성) càng tốt.”** Health check quá coupled có thể tạo cascading thất bại (failure / 실패).
 
-**“Retry luôn tăng reliability.”** Retry không kiểm soát có thể tạo amplification và duplicate side effects.
+**“thử lại (retry / 재시도) luôn tăng độ tin cậy (reliability / 신뢰성).”** thử lại (retry / 재시도) không kiểm soát có thể tạo amplification và duplicate side effects.
 
-**“Proxy không ảnh hưởng performance.”** Proxy có connection pools, buffers, TLS cost, queues và resource limits riêng.
+**“Proxy không ảnh hưởng hiệu năng (performance / 성능).”** Proxy có liên kết (connection / 연결) pools, buffers, TLS chi phí (cost / 비용), queues và tài nguyên (resource / 자원) limits riêng.
 
 ## Xem thêm
 
@@ -556,3 +559,5 @@ Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở
 - [TCP, HTTP và TLS](./tcp_http_tls.md)
 - [Java backend incident playbook](../09_production/java_backend_incident_playbook.md)
 - [Capacity planning và server sizing](../09_production/capacity_planning_server_sizing.md)
+
+> **Bàn giao:** Sau **Xem thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [dns resolution internals](./dns_resolution_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

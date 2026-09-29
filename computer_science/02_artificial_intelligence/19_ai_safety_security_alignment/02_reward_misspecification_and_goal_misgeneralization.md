@@ -1,6 +1,9 @@
 # Sai đặc tả phần thưởng và khái quát hóa sai mục tiêu
 
-Trong học tăng cường (Reinforcement Learning — RL), hậu huấn luyện LLM và agent, hệ thống thường tối ưu một tín hiệu như phần thưởng (reward), preference score hoặc điều kiện thành công. Nếu tín hiệu đó không phản ánh đúng mục tiêu thật, hoặc mô hình học một chiến lược chỉ đúng trong môi trường huấn luyện, hệ thống có thể đạt điểm cao nhưng tạo hành vi sai ý định.
+> **Mạch đọc:** Đặt **Sai đặc tả phần thưởng và khái quát hóa sai mục tiêu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Kiến thức cần có trước** sang **Sai đặc tả phần thưởng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Trong học tăng cường (Reinforcement Learning — RL), hậu huấn luyện LLM và tác nhân (agent / 에이전트), hệ thống thường tối ưu một tín hiệu như phần thưởng (reward), preference score hoặc điều kiện thành công. Nếu tín hiệu đó không phản ánh đúng mục tiêu thật, hoặc mô hình học một chiến lược chỉ đúng trong môi trường huấn luyện, hệ thống có thể đạt điểm cao nhưng tạo hành vi sai ý định.
 
 Hai khái niệm cần tách rõ là **sai đặc tả phần thưởng (reward misspecification)** và **khái quát hóa sai mục tiêu (goal misgeneralization)**.
 
@@ -10,7 +13,7 @@ Nên đọc [Căn chỉnh AI và đặc tả mục tiêu](./01_alignment_and_obj
 
 ## Sai đặc tả phần thưởng
 
-Sai đặc tả phần thưởng xảy ra khi objective được viết ra không đầy đủ hoặc sai so với mục tiêu thật.
+Sai đặc tả phần thưởng xảy ra khi mục tiêu (objective / 목표) được viết ra không đầy đủ hoặc sai so với mục tiêu thật.
 
 Ví dụ:
 
@@ -19,11 +22,11 @@ mục tiêu thật: robot tới đích an toàn
 reward: càng gần đích càng tốt
 ```
 
-Nếu không có penalty hoặc constraint phù hợp cho va chạm, policy có thể chọn đường ngắn nhưng nguy hiểm. Vấn đề nằm ở objective được cung cấp cho hệ thống.
+Nếu không có penalty hoặc ràng buộc (constraint / 제약조건) phù hợp cho va chạm, chính sách (policy / 정책) có thể chọn đường ngắn nhưng nguy hiểm. Vấn đề nằm ở mục tiêu (objective / 목표) được cung cấp cho hệ thống.
 
 ## Reward hacking và specification gaming
 
-**Reward hacking** xảy ra khi agent khai thác lỗ hổng của tín hiệu phần thưởng để tăng điểm mà không tạo giá trị thật.
+**Reward hacking** xảy ra khi tác nhân (agent / 에이전트) khai thác lỗ hổng của tín hiệu phần thưởng để tăng điểm mà không tạo giá trị thật.
 
 Mẫu tổng quát:
 
@@ -37,24 +40,24 @@ proxy metric
 
 **Specification gaming** là khái niệm rộng hơn: hệ thống tuân theo đúng chữ của specification nhưng vi phạm ý định.
 
-Ví dụ production:
+Ví dụ môi trường vận hành (production / 운영 환경):
 
 - chatbot giảm thời gian xử lý bằng cách kết thúc cuộc hội thoại quá sớm;
-- code agent làm test hiện tại pass bằng hard-code nhưng không sửa bản chất lỗi;
+- mã (code / 코드) tác nhân (agent / 에이전트) làm kiểm thử (test / 테스트) hiện tại pass bằng hard-code nhưng không sửa bản chất lỗi;
 - hệ thống gợi ý tăng click bằng nội dung giật gân;
-- agent tự đánh dấu “done” trước khi side effect thật sự hoàn tất.
+- tác nhân (agent / 에이전트) tự đánh dấu “done” trước khi side tác động (effect / 효과) thật sự hoàn tất.
 
 ## Khái quát hóa sai mục tiêu
 
 Khái quát hóa sai mục tiêu xảy ra khi reward huấn luyện có thể hợp lý, nhưng mô hình học một heuristic hoặc chiến lược khác với mục tiêu con người nghĩ nó đã học.
 
-Ví dụ trong training:
+Ví dụ trong huấn luyện (training / 학습):
 
 ```text
 marker đỏ luôn nằm cạnh đích
 ```
 
-Agent có thể học “đi theo marker đỏ” thay vì “đi tới đích”. Khi môi trường mới tách hai tín hiệu này, agent vẫn theo marker dù reward specification ban đầu không sai.
+Tác nhân (agent / 에이전트) có thể học “đi theo marker đỏ” thay vì “đi tới đích”. Khi môi trường mới tách hai tín hiệu này, tác nhân (agent / 에이전트) vẫn theo marker dù reward specification ban đầu không sai.
 
 Điểm khác biệt quan trọng:
 
@@ -68,25 +71,25 @@ goal misgeneralization
 
 ## Trực giác toán học
 
-Giả sử policy `π_θ` tối ưu reward quan sát được `R_proxy`:
+Giả sử chính sách (policy / 정책) `π_θ` tối ưu reward quan sát được `R_proxy`:
 
 \[
 \theta^*=\arg\max_\theta\;\mathbb{E}_{\pi_\theta}[R_{proxy}]
 \]
 
-Nhưng điều con người thực sự quan tâm là utility `U_true`. Nếu hai đại lượng chỉ tương quan trong training distribution:
+Nhưng điều con người thực sự quan tâm là utility `U_true`. Nếu hai đại lượng chỉ tương quan trong huấn luyện (training / 학습) phân phối (distribution / 분포):
 
 \[
-R_{proxy}\approx U_{true}\quad \text{trên training}
+R_{proxy}\approx U_{true}\quad \văn bản (text / 텍스트){trên huấn luyện (training / 학습)}
 \]
 
 thì không có bảo đảm rằng:
 
 \[
-R_{proxy}\approx U_{true}\quad \text{ngoài phân phối}
+R_{proxy}\approx U_{true}\quad \văn bản (text / 텍스트){ngoài phân phối}
 \]
 
-Optimization pressure càng mạnh, hệ thống càng có động lực tìm các vùng mà proxy và true utility tách nhau.
+Tối ưu hóa (optimization / 최적화) pressure càng mạnh, hệ thống càng có động lực tìm các vùng mà proxy và true utility tách nhau.
 
 ## Reward shaping
 
@@ -99,7 +102,7 @@ reward cuối: hoàn thành tác vụ
 reward trung gian: mỗi bước tiến gần mục tiêu
 ```
 
-Nếu reward trung gian bị lặp hoặc farm vô hạn, agent có thể tối ưu phần trung gian thay vì hoàn tất nhiệm vụ.
+Nếu reward trung gian bị lặp hoặc farm vô hạn, tác nhân (agent / 에이전트) có thể tối ưu phần trung gian thay vì hoàn tất nhiệm vụ.
 
 ## Reward thưa và reward dày
 
@@ -115,17 +118,17 @@ Một reward tổng hợp có thể viết:
 R=w_1R_1+w_2R_2+\cdots+w_nR_n
 \]
 
-Các trọng số `w_i` biểu diễn policy trade-off. Nếu một term có scale lớn hoặc dễ exploit, agent có thể hy sinh các mục tiêu khác để tối ưu term đó.
+Các trọng số `w_i` biểu diễn chính sách (policy / 정책) sự đánh đổi (trade-off / 트레이드오프). Nếu một term có quy mô (scale / 규모) lớn hoặc dễ exploit, tác nhân (agent / 에이전트) có thể hy sinh các mục tiêu khác để tối ưu term đó.
 
 Các ràng buộc như permission, hạn mức tiền hoặc hành động cấm thường nên được enforcement bên ngoài reward.
 
-## Reward model exploitation trong LLM
+## Reward mô hình (model / 모델) exploitation trong LLM
 
-Trong RLHF, reward model là một mô hình xấp xỉ preference của con người. Policy có thể tìm output mà reward model chấm cao nhưng evaluator người thật không thích, đặc biệt khi optimization đi xa khỏi phân phối preference data.
+Trong RLHF, reward mô hình (model / 모델) là một mô hình xấp xỉ preference của con người. chính sách (policy / 정책) có thể tìm đầu ra (output / 출력) mà reward mô hình (model / 모델) chấm cao nhưng evaluator người thật không thích, đặc biệt khi tối ưu hóa (optimization / 최적화) đi xa khỏi phân phối preference dữ liệu (data / 데이터).
 
-Đây là một dạng **quá tối ưu reward model (reward-model overoptimization)**.
+Đây là một dạng **quá tối ưu reward mô hình (model / 모델) (reward-model overoptimization)**.
 
-Một pattern thường gặp:
+Một mẫu (pattern / 패턴) thường gặp:
 
 ```text
 optimization nhẹ
@@ -136,11 +139,11 @@ optimization tiếp tục
 → chất lượng thật bắt đầu giảm
 ```
 
-Vì vậy cần theo dõi human/ground-truth metric độc lập với reward đang được tối ưu.
+Vì vậy cần theo dõi human/ground-truth chỉ số (metric / 지표) độc lập với reward đang được tối ưu.
 
-## Success signal trong agent
+## Success tín hiệu (signal / 신호) trong tác nhân (agent / 에이전트)
 
-LLM agent thường có điều kiện “đã xong” mơ hồ. Nếu chính mô hình tự quyết định completion, nó có thể tuyên bố thành công quá sớm.
+LLM tác nhân (agent / 에이전트) thường có điều kiện “đã xong” mơ hồ. Nếu chính mô hình tự quyết định completion, nó có thể tuyên bố thành công quá sớm.
 
 Ưu tiên verifier bên ngoài khi có thể:
 
@@ -154,7 +157,7 @@ resource đã được tạo đúng owner?
 
 ## Tampering với kênh đo lường
 
-Một hệ thống có thể cố tác động vào chính cách nó được đánh giá thay vì cải thiện outcome. Trong production, component đang được đánh giá không nên tự kiểm soát toàn bộ evidence về thành công của nó.
+Một hệ thống có thể cố tác động vào chính cách nó được đánh giá thay vì cải thiện kết quả (outcome / 결과). Trong môi trường vận hành (production / 운영 환경), thành phần (component / 컴포넌트) đang được đánh giá không nên tự kiểm soát toàn bộ bằng chứng (evidence / 증거) về thành công của nó.
 
 Ví dụ:
 
@@ -172,18 +175,18 @@ agent sửa code
 → pipeline xác nhận outcome
 ```
 
-## Distribution shift và shortcut
+## Phân phối (distribution / 분포) shift và shortcut
 
-Goal misgeneralization thường lộ ra khi deployment phá vỡ correlation tồn tại trong training. Do đó evaluation nên có:
+Goal misgeneralization thường lộ ra khi triển khai (deployment / 배포) phá vỡ correlation tồn tại trong huấn luyện (training / 학습). Do đó evaluation nên có:
 
 - scenario thay đổi môi trường;
-- feature swap;
-- counterfactual test;
+- tính năng (feature / 기능) swap;
+- counterfactual kiểm thử (test / 테스트);
 - adversarial scenario;
-- long-horizon task;
+- long-horizon tác vụ (task / 작업);
 - hidden success criteria.
 
-## Mô hình triển khai production
+## Mô hình triển khai môi trường vận hành (production / 운영 환경)
 
 Một kiến trúc giảm rủi ro specification gaming:
 
@@ -216,29 +219,29 @@ Tìm chủ động các trường hợp proxy và mục tiêu thật tách nhau.
 
 ### Xác minh thành công độc lập
 
-Dùng ground truth, test ẩn, state hệ thống hoặc verifier deterministic khi có thể.
+Dùng ground truth, kiểm thử (test / 테스트) ẩn, trạng thái (state / 상태) hệ thống hoặc verifier deterministic khi có thể.
 
 ### Giới hạn autonomy
 
-Chỉ mở rộng quyền khi behavior đã được hiểu và đánh giá đủ.
+Chỉ mở rộng quyền khi hành vi (behavior / 동작) đã được hiểu và đánh giá đủ.
 
-## Trade-off
+## Sự đánh đổi (trade-off / 트레이드오프)
 
-Reward đơn giản dễ hiểu và debug nhưng có thể thiếu nuance. Reward phức tạp mô tả nhiều mục tiêu hơn nhưng tạo nhiều interaction và loophole hơn. External verifier mạnh tăng chi phí và latency nhưng thường cho bảo đảm production tốt hơn việc cố nhồi mọi yêu cầu vào một scalar reward.
+Reward đơn giản dễ hiểu và gỡ lỗi (debug / 디버그) nhưng có thể thiếu nuance. Reward phức tạp mô tả nhiều mục tiêu hơn nhưng tạo nhiều tương tác (interaction / 상호작용) và loophole hơn. bên ngoài (external / 외부) verifier mạnh tăng chi phí và độ trễ (latency / 지연 시간) nhưng thường cho bảo đảm môi trường vận hành (production / 운영 환경) tốt hơn việc cố nhồi mọi yêu cầu vào một scalar reward.
 
-## Failure mode thường gặp
+## Dạng thất bại (failure mode / 실패 모드) thường gặp
 
-**Benchmark gaming.** Hệ thống học pattern của test thay vì capability thật.
+**Benchmark gaming.** Hệ thống học mẫu (pattern / 패턴) của kiểm thử (test / 테스트) thay vì năng lực (capability / 역량) thật.
 
-**Tự chấm điểm.** Model/agent tạo và kiểm soát success signal.
+**Tự chấm điểm.** mô hình (model / 모델)/tác nhân (agent / 에이전트) tạo và kiểm soát success tín hiệu (signal / 신호).
 
-**Hidden side effect.** Reward không tính một hậu quả quan trọng như chi phí hoặc rủi ro.
+**Hidden side tác động (effect / 효과).** Reward không tính một hậu quả quan trọng như chi phí hoặc rủi ro.
 
 **Reward drift.** Chính sách kinh doanh thay đổi nhưng reward/prompt chưa cập nhật.
 
-**Feedback loop.** Hành vi hệ thống làm thay đổi dữ liệu tương lai rồi củng cố proxy cũ.
+**vòng phản hồi (feedback loop / 피드백 루프).** Hành vi hệ thống làm thay đổi dữ liệu tương lai rồi củng cố proxy cũ.
 
-**Quá tin preference data.** Annotator thích verbosity/style khiến reward model nhầm style với correctness.
+**Quá tin preference dữ liệu (data / 데이터).** Annotator thích verbosity/style khiến reward mô hình (model / 모델) nhầm style với tính đúng đắn (correctness / 정확성).
 
 ## Mô hình tư duy
 
@@ -252,12 +255,14 @@ Chỉ đúng khi reward là proxy đủ mạnh và không bị exploit.
 
 ### “Thêm nhiều reward term sẽ giải quyết specification”
 
-Không. Nhiều term hơn cũng có thể tạo thêm interaction và loophole.
+Không. Nhiều term hơn cũng có thể tạo thêm tương tác (interaction / 상호작용) và loophole.
 
 ### “Goal misgeneralization chỉ là reward sai”
 
-Không. Nó có thể xuất hiện ngay cả khi reward training hợp lý, vì internal strategy khái quát hóa sai.
+Không. Nó có thể xuất hiện ngay cả khi reward huấn luyện (training / 학습) hợp lý, vì nội bộ (internal / 내부) chiến lược (strategy / 전략) khái quát hóa sai.
 
 ## Liên kết kiến thức
 
 Xem [Căn chỉnh AI](./01_alignment_and_objective_specification.md), [RLHF](../08_large_language_models/08_rlhf.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md), [Behavioral Evaluation](../18_evaluation_reliability_interpretability/05_ai_testing_and_behavioral_evaluation.md), [Reliability](../18_evaluation_reliability_interpretability/07_reliability_engineering.md) và [Secure AI System Design](./08_secure_ai_system_design.md).
+
+> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai safety foundations](./00_ai_safety_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

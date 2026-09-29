@@ -10,6 +10,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
 
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **Mô hình dữ liệu hướng hiệu năng và chuẩn hóa** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
+
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
 ---
@@ -55,9 +59,9 @@ Ta bắt đầu **1. Khái quát về mô hình hóa dữ liệu hướng hiệu
 - 정규화 — Normalization — Chuẩn hóa.
 - 반정규화 — Denormalization — Phi chuẩn hóa.
 - 테이블 통합 및 분할 — Gộp và tách bảng.
-- 조인 구조 — Cấu trúc JOIN.
+- 조인 구조 — Cấu trúc phép nối (join / 조인).
 - PK/FK 설정 — Thiết lập PK/FK.
-- 인덱스 — Index — Chỉ mục.
+- 인덱스 — chỉ mục (index / 인덱스) — Chỉ mục.
 
 Khi gom phần **1. Khái quát về mô hình hóa dữ liệu hướng hiệu năng** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -82,7 +86,7 @@ Phân tích/thiết kế → Triển khai → Kiểm thử → Vận hành
 
 **Càng phát hiện vấn đề của mô hình dữ liệu muộn thì chi phí sửa càng tăng.**
 
-Nếu sửa ở giai đoạn `분석/설계`, chỉ cần sửa mô hình và thiết kế liên quan. Nếu sửa ở giai đoạn `운영`, có thể phải sửa dữ liệu, SQL, chương trình, Index và quy trình vận hành.
+Nếu sửa ở giai đoạn `분석/설계`, chỉ cần sửa mô hình và thiết kế liên quan. Nếu sửa ở giai đoạn `운영`, có thể phải sửa dữ liệu, SQL, chương trình, chỉ mục (index / 인덱스) và quy trình vận hành.
 
 ---
 
@@ -124,7 +128,7 @@ Ta bắt đầu **2) DB 용량을 산정한다** bằng câu hỏi: **khái ni�
 
 **각 엔터티에 어느 정도의 데이터와 트랜잭션이 들어오는지 파악하기 위해 DB 용량을 산정한다.**
 
-**Cần ước tính dung lượng DB để biết mỗi Entity sẽ chứa bao nhiêu dữ liệu và tiếp nhận bao nhiêu giao dịch.**
+**Cần ước tính dung lượng DB để biết mỗi thực thể (entity / 엔터티) sẽ chứa bao nhiêu dữ liệu và tiếp nhận bao nhiêu giao dịch.**
 
 `용량 산정` có nghĩa là dự đoán:
 
@@ -150,7 +154,7 @@ Ta bắt đầu **3) 트랜잭션 유형을 파악한다** bằng câu hỏi: **
 | --- | --- | --- |
 | C | Create | Tạo mới |
 | R | Read | Đọc, truy vấn |
-| U | Update | Cập nhật |
+| U | cập nhật (update / 업데이트) | Cập nhật |
 | D | Delete | Xóa |
 
 Ví dụ, nghiệp vụ `수강신청` có thể:
@@ -170,7 +174,7 @@ Ta bắt đầu **4) 반정규화를 수행한다** bằng câu hỏi: **khái n
 
 **Sau khi phân tích dung lượng và loại giao dịch, nếu cần thì thực hiện phi chuẩn hóa.**
 
-Chuẩn hóa làm giảm trùng lặp nhưng có thể làm tăng số bảng và số lần JOIN. Nếu việc đó làm truy vấn chậm, có thể cân nhắc phi chuẩn hóa.
+Chuẩn hóa làm giảm trùng lặp nhưng có thể làm tăng số bảng và số lần phép nối (join / 조인). Nếu việc đó làm truy vấn chậm, có thể cân nhắc phi chuẩn hóa.
 
 Khi gom phần **4) 반정규화를 수행한다** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -182,12 +186,12 @@ Ta bắt đầu **5) 이력 모델과 인덱스를 조정한다** bằng câu h�
 
 **이력 모델, 인덱스, PK/FK 순서, 슈퍼타입·서브타입 구조를 성능 관점에서 조정한다.**
 
-**Điều chỉnh mô hình lịch sử, Index, thứ tự PK/FK và cấu trúc Supertype/Subtype theo góc nhìn hiệu năng.**
+**Điều chỉnh mô hình lịch sử, chỉ mục (index / 인덱스), thứ tự PK/FK và cấu trúc Supertype/Subtype theo góc nhìn hiệu năng.**
 
 - `이력 모델`: Mô hình lưu lại lịch sử thay đổi.
 - `인덱스`: Cấu trúc giúp tìm kiếm nhanh.
-- `슈퍼타입`: Entity cha chứa thuộc tính chung.
-- `서브타입`: Entity con chứa thuộc tính riêng.
+- `슈퍼타입`: thực thể (entity / 엔터티) cha chứa thuộc tính chung.
+- `서브타입`: thực thể (entity / 엔터티) con chứa thuộc tính riêng.
 
 Khi gom phần **5) 이력 모델과 인덱스를 조정한다** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -201,7 +205,7 @@ Ta bắt đầu **6) 성능을 검증한다** bằng câu hỏi: **khái niệm 
 
 **Cuối cùng phải kiểm tra mô hình dữ liệu từ góc nhìn hiệu năng.**
 
-Cần kiểm tra thời gian chạy SQL, số lần JOIN, dung lượng dữ liệu và hiệu quả của Index.
+Cần kiểm tra thời gian chạy SQL, số lần phép nối (join / 조인), dung lượng dữ liệu và hiệu quả của chỉ mục (index / 인덱스).
 
 ---
 
@@ -418,7 +422,7 @@ Cách nhớ:
 | 이 | 이행 함수 종속 제거 — Loại bỏ phụ thuộc bắc cầu |
 | 결 | 결정자는 후보키 — Determinant phải là Candidate Key |
 | 다 | 다치 종속 제거 — Loại bỏ phụ thuộc đa trị |
-| 조 | 조인 종속 제거 — Loại bỏ phụ thuộc JOIN |
+| 조 | 조인 종속 제거 — Loại bỏ phụ thuộc phép nối (join / 조인) |
 
 **이전 정규형을 만족해야 다음 정규형으로 진행할 수 있다.**
 
@@ -591,9 +595,9 @@ Ta bắt đầu **9. Hiệu năng của chuẩn hóa** bằng câu hỏi: **khá
 
 Tuy nhiên:
 
-**조회에서는 여러 테이블을 JOIN해야 하므로 성능이 저하될 수 있다.**
+**조회에서는 여러 테이블을 phép nối (join / 조인)해야 하므로 성능이 저하될 수 있다.**
 
-**Khi truy vấn, hiệu năng có thể giảm vì phải JOIN nhiều bảng.**
+**Khi truy vấn, hiệu năng có thể giảm vì phải phép nối (join / 조인) nhiều bảng.**
 
 Ảnh đưa ra ví dụ:
 
@@ -608,7 +612,7 @@ Khi đổi năm học của một sinh viên:
 Khi truy vấn `학번, 학생명, 과목명, 평점`:
 
 - Trước chuẩn hóa: truy vấn trong một bảng.
-- Sau chuẩn hóa: cần JOIN, có thể giảm hiệu năng một phần.
+- Sau chuẩn hóa: cần phép nối (join / 조인), có thể giảm hiệu năng một phần.
 
 ---
 
@@ -746,11 +750,11 @@ Ta bắt đầu **12. Dạng chuẩn 5 — 5NF** bằng câu hỏi: **khái ni�
 
 **제5정규형은 4NF를 만족하고 조인 종속을 제거한 상태이다.**
 
-**5NF là trạng thái đạt 4NF và loại bỏ phụ thuộc JOIN.**
+**5NF là trạng thái đạt 4NF và loại bỏ phụ thuộc phép nối (join / 조인).**
 
-**5NF는 Project Join Normal Form 또는 PJ/NF라고 한다.**
+**5NF는 dự án (project / 프로젝트) phép nối (join / 조인) Normal Form 또는 PJ/NF라고 한다.**
 
-**5NF còn được gọi là Project Join Normal Form hoặc PJ/NF.**
+**5NF còn được gọi là dự án (project / 프로젝트) phép nối (join / 조인) Normal Form hoặc PJ/NF.**
 
 Ảnh mô tả:
 
@@ -768,9 +772,9 @@ B JOIN với C
 Khôi phục lại A
 ```
 
-**분해한 테이블을 다시 JOIN했을 때 원래 관계가 정확하게 복원되어야 한다.**
+**분해한 테이블을 다시 phép nối (join / 조인)했을 때 원래 관계가 정확하게 복원되어야 한다.**
 
-**Khi JOIN lại các bảng đã tách, quan hệ ban đầu phải được khôi phục chính xác.**
+**Khi phép nối (join / 조인) lại các bảng đã tách, quan hệ ban đầu phải được khôi phục chính xác.**
 
 5NF hiếm khi được áp dụng trong thiết kế DB thông thường.
 
@@ -792,9 +796,9 @@ Ta bắt đầu **13. Phi chuẩn hóa** bằng câu hỏi: **khái niệm này 
 
 ## 13. Phi chuẩn hóa
 
-**반정규화는 성능 향상을 위해 데이터 중복을 허용하고 JOIN을 줄이는 방법이다.**
+**반정규화는 성능 향상을 위해 데이터 중복을 허용하고 phép nối (join / 조인)을 줄이는 방법이다.**
 
-**Phi chuẩn hóa là phương pháp cho phép trùng lặp dữ liệu và giảm JOIN để cải thiện hiệu năng.**
+**Phi chuẩn hóa là phương pháp cho phép trùng lặp dữ liệu và giảm phép nối (join / 조인) để cải thiện hiệu năng.**
 
 **반정규화는 비정규화와 같지 않고 정규화된 모델을 성능 목적에 맞게 조정하는 것이다.**
 
@@ -808,9 +812,9 @@ Ta bắt đầu **Khi thực hiện** bằng câu hỏi: **khái niệm này gi�
 
 ### Khi thực hiện
 
-**정규화로 엔터티와 관계가 많아져 JOIN 성능 저하가 예상될 때 반정규화를 수행할 수 있다.**
+**정규화로 엔터티와 관계가 많아져 phép nối (join / 조인) 성능 저하가 예상될 때 반정규화를 수행할 수 있다.**
 
-**Có thể phi chuẩn hóa khi việc chuẩn hóa làm tăng Entity và quan hệ, dẫn đến dự đoán hiệu năng JOIN giảm.**
+**Có thể phi chuẩn hóa khi việc chuẩn hóa làm tăng thực thể (entity / 엔터티) và quan hệ, dẫn đến dự đoán hiệu năng phép nối (join / 조인) giảm.**
 
 **대량의 범위를 자주 처리하거나 특정 범위의 데이터만 자주 처리할 때 반정규화를 고려할 수 있다.**
 
@@ -862,7 +866,7 @@ Phần này nối mạch SQL với “Chuỗi ghi nhớ”, giải thích dữ l
 
 **원자값 → 부분 함수 종속 제거 → 이행 함수 종속 제거 → 결정자는 후보키 → 다치 종속 제거 → 조인 종속 제거**
 
-**Giá trị nguyên tử → loại bỏ phụ thuộc bộ phận → loại bỏ phụ thuộc bắc cầu → Determinant là Candidate Key → loại bỏ phụ thuộc đa trị → loại bỏ phụ thuộc JOIN.**
+**Giá trị nguyên tử → loại bỏ phụ thuộc bộ phận → loại bỏ phụ thuộc bắc cầu → Determinant là Candidate Key → loại bỏ phụ thuộc đa trị → loại bỏ phụ thuộc phép nối (join / 조인).**
 
 Khi gom phần **Chuỗi ghi nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
@@ -891,9 +895,9 @@ Ta bắt đầu **Câu tổng kết tiếng Hàn** bằng câu hỏi: **khái ni
 
 ### Câu tổng kết tiếng Hàn
 
-**정규화는 데이터 중복과 입력·수정·삭제 이상을 줄이기 위해 함수적 종속성을 기준으로 테이블을 분리하는 과정이며, 반정규화는 정규화 이후 JOIN 증가로 성능 문제가 발생할 때 제한적으로 수행한다.**
+**정규화는 데이터 중복과 입력·수정·삭제 이상을 줄이기 위해 함수적 종속성을 기준으로 테이블을 분리하는 과정이며, 반정규화는 정규화 이후 phép nối (join / 조인) 증가로 성능 문제가 발생할 때 제한적으로 수행한다.**
 
-**Chuẩn hóa là quá trình tách bảng dựa trên phụ thuộc hàm để giảm trùng lặp và các lỗi chèn, cập nhật, xóa; phi chuẩn hóa chỉ được thực hiện có giới hạn khi JOIN tăng sau chuẩn hóa gây ra vấn đề hiệu năng.**
+**Chuẩn hóa là quá trình tách bảng dựa trên phụ thuộc hàm để giảm trùng lặp và các lỗi chèn, cập nhật, xóa; phi chuẩn hóa chỉ được thực hiện có giới hạn khi phép nối (join / 조인) tăng sau chuẩn hóa gây ra vấn đề hiệu năng.**
 
 Khi gom phần **Câu tổng kết tiếng Hàn** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 

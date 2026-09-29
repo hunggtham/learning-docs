@@ -1,11 +1,14 @@
 # thao tác bit và Bitsets
+
+> **Mạch đọc:** Đọc **thao tác bit và Bitsets** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Mô hình tư duy** sang **Các phép cơ bản**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Thao tác bit và tập bit (Bit Manipulation & Bitsets / 비트 연산과 비트셋)**
 
-thao tác bit khai thác cách biểu diễn (representation) nhị phân của integer để biểu diễn flags, subsets, masks và trạng thái gọn. Nó thường được dạy như một danh sách tricks (`x & -x`, `x & (x-1)`, XOR...), nhưng cách học đó dễ quên và dễ dùng sai.
+thao tác bit khai thác cách biểu diễn (representation / 표현) nhị phân của integer để biểu diễn flags, subsets, masks và trạng thái gọn. Nó thường được dạy như một danh sách tricks (`x & -x`, `x & (x-1)`, XOR...), nhưng cách học đó dễ quên và dễ dùng sai.
 
 Cách hiểu bền hơn là:
 
-> Bitwise thao tác là các phép toán trên **nhiều boolean positions cùng lúc**. Mỗi bit là một biến nhị phân; integer chỉ là container đóng gói chúng.
+> Bitwise thao tác là các phép toán trên **nhiều boolean positions cùng lúc**. Mỗi bit là một biến nhị phân; integer chỉ là bộ chứa (container / 컨테이너) đóng gói chúng.
 
 ## Mô hình tư duy
 
@@ -74,7 +77,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 x ^= (1u << k);
 ```
 
-Điểm quan trọng là type/width. `1 << k` dùng type của literal `1`; nếu cần shift tới bit cao của 64-bit giá trị trong C/Java, dùng literal phù hợp như `1ULL << k` hoặc `1L << k`.
+Điểm quan trọng là kiểu (type / 타입)/width. `1 << k` dùng kiểu (type / 타입) của literal `1`; nếu cần shift tới bit cao của 64-bit giá trị trong C/Java, dùng literal phù hợp như `1ULL << k` hoặc `1L << k`.
 
 ## AND, OR, XOR như set các thao tác
 
@@ -115,7 +118,7 @@ x ^ x = 0
 
 làm các pairs triệt tiêu, để lại unique giá trị.
 
-Điều này không phải magic trick; các ràng buộc của problem khớp chính xác algebra của XOR.
+Điều này không phải magic trick; các ràng buộc của bài toán (problem / 문제) khớp chính xác algebra của XOR.
 
 Nếu có ba lần, hoặc nhiều unique các giá trị, cùng trick không còn đủ thông tin.
 
@@ -129,7 +132,7 @@ Trong fixed width:
 -x = \sim x + 1
 \]
 
-Đây là cơ sở của nhiều bit identities, nhưng language ngữ nghĩa (semantics) vẫn phải được tôn trọng.
+Đây là cơ sở của nhiều bit identities, nhưng ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) vẫn phải được tôn trọng.
 
 ## Least Significant Set Bit
 
@@ -149,7 +152,7 @@ x    = 1011000₂
 AND  = 0001000₂
 ```
 
-cây Fenwick (Fenwick Tree) dùng giá trị này làm block size.
+cây Fenwick (Fenwick Tree) dùng giá trị này làm khối (block / 블록) kích thước (size / 크기).
 
 Mental reason: `-x` giữ bit 1 thấp nhất của `x` và đảo mẫu phía trên theo two's-complement carry, nên AND chỉ còn bit đó.
 
@@ -177,7 +180,7 @@ while (x) {
 
 Số iterations bằng số set bits, không phải độ rộng bit.
 
-Trong hệ thống thực tế, ưu tiên trình biên dịch/library intrinsic như `Integer.bitCount`, `Long.bitCount`, `std::popcount` nếu available vì có thể map tới hardware POPCNT.
+Trong hệ thống thực tế, ưu tiên trình biên dịch/thư viện (library / 라이브러리) intrinsic như `Integer.bitCount`, `Long.bitCount`, `std::popcount` nếu available vì có thể map tới hardware POPCNT.
 
 ## Kiểm tra lũy thừa của hai
 
@@ -207,7 +210,7 @@ for (unsigned mask = 0; mask < (1u << n); ++mask) {
 }
 ```
 
-Bitmask không biến exponential problem thành polynomial. Nó chỉ encode trạng thái (state) gọn và làm membership thao tác rẻ.
+Bitmask không biến exponential bài toán (problem / 문제) thành polynomial. Nó chỉ encode trạng thái (state / 상태) gọn và làm membership thao tác rẻ.
 
 Nếu cần enumerate `2^n` subsets, đầu ra/không gian tìm kiếm vẫn exponential.
 
@@ -223,9 +226,9 @@ for (unsigned sub = mask; sub; sub = (sub - 1) & mask) {
 
 `sub - 1` thay đổi suffix bits; AND với original `mask` ép kết quả chỉ chứa các bit được phép.
 
-mẫu này đi qua submasks theo descending numeric order.
+mẫu này đi qua submasks theo descending numeric thứ tự (order / 순서).
 
-Muốn include rỗng submask, xử lý `0` riêng hoặc dùng loop có break rõ ràng để tránh unsigned tràn dưới loop.
+Muốn include rỗng submask, xử lý `0` riêng hoặc dùng vòng lặp (loop / 루프) có break rõ ràng để tránh unsigned tràn dưới vòng lặp (loop / 루프).
 
 ## Vì sao tổng `(mask, submask)` pairs là `3^n`?
 
@@ -243,19 +246,19 @@ Vậy tổng combinations:
 3^n
 \]
 
-Đây là lý do vòng lặp lồng nhau over masks and submasks thường `O(3^n)`, không phải `O(4^n)` nếu structure đúng.
+Đây là lý do vòng lặp lồng nhau over masks and submasks thường `O(3^n)`, không phải `O(4^n)` nếu cấu trúc (structure / 구조) đúng.
 
 ## Superset enumeration
 
 Nếu mặt nạ toàn miền có `n` bit và cần liệt kê các siêu tập của `mask`, có thể liệt kê các mặt nạ con của phần bù rồi OR trở lại, hoặc dùng vòng lặp biến đổi phù hợp với bài toán.
 
-Mô hình tư duy tốt hơn memorizing syntax là: tách **các bit bắt buộc cố định** và **các bit tự do**.
+Mô hình tư duy tốt hơn memorizing cú pháp (syntax / 문법) là: tách **các bit bắt buộc cố định** và **các bit tự do**.
 
-## Gray Code
+## Gray mã (code / 코드)
 
-**Gray code (그레이 코드)** sắp `2^n` bit các mẫu sao cho hai consecutive các giá trị khác đúng một bit.
+**Gray mã (code / 코드)** sắp `2^n` bit các mẫu sao cho hai consecutive các giá trị khác đúng một bit.
 
-Binary-reflected Gray code:
+Binary-reflected Gray mã (code / 코드):
 
 \[
 g(i)=i\oplus(i>>1)
@@ -285,7 +288,7 @@ O(2^n n)
 
 Transitions có thể đưa total tới `O(2^n n^2)`.
 
-Bitmask làm trạng thái identity gọn; nó không loại exponential dependence vào `n`.
+Bitmask làm trạng thái định danh (identity / 식별자) gọn; nó không loại exponential dependence vào `n`.
 
 ## SOS DP / Subset DP
 
@@ -303,7 +306,7 @@ O(n2^n)
 
 bằng cách lần lượt cho phép từng bit đóng góp.
 
-Đây là một example mạnh nơi binary cách biểu diễn định nghĩa dimensions của DP trạng thái.
+Đây là một example mạnh nơi nhị phân (binary / 이진) cách biểu diễn định nghĩa dimensions của DP trạng thái.
 
 ## tập bit là gì?
 
@@ -415,7 +418,7 @@ và constants nên có unsigned/wide suffix phù hợp.
 
 Bit các thao tác trên integer giá trị thường độc lập với bộ nhớ endianness. `x & 1` kiểm least significant bit của numeric giá trị dù byte được lưu little-endian hay big-endian.
 
-Endianness trở nên quan trọng khi serialize/interpret multi-byte bộ nhớ cách biểu diễn, mạng protocol hoặc cast byte các mảng.
+Endianness trở nên quan trọng khi serialize/interpret multi-byte bộ nhớ cách biểu diễn, mạng giao thức (protocol / 프로토콜) hoặc cast byte các mảng.
 
 Đừng trộn “bit thấp” với “byte nằm ở address thấp”.
 
@@ -471,13 +474,13 @@ bits |= bits << w
 
 Một shift+OR xử lý nhiều các trạng thái cùng lúc.
 
-Trong languages/libraries support efficient arbitrary tập bit shift, điều này có thể tăng tốc rất lớn so với các vòng lặp lồng nhau.
+Trong languages/libraries hỗ trợ (support / 지원) efficient arbitrary tập bit shift, điều này có thể tăng tốc rất lớn so với các vòng lặp lồng nhau.
 
-## bộ lọc Bloom connection
+## bộ lọc Bloom liên kết (connection / 연결)
 
 bộ lọc Bloom cũng là bit mảng, nhưng ngữ nghĩa khác chính xác tập bit membership. Multiple các hàm băm map các khóa vào bit positions; truy vấn có các dương tính giả.
 
-tập bit ở đây là lưu trữ primitive, còn bộ lọc Bloom là cấu trúc dữ liệu xác suất xây trên nó.
+tập bit ở đây là lưu trữ thành phần nguyên thủy (primitive / 기본 요소), còn bộ lọc Bloom là cấu trúc dữ liệu xác suất xây trên nó.
 
 Xem [Probabilistic Data Structures](./06_probabilistic_data_structures.md).
 
@@ -503,7 +506,7 @@ Check:
 (mask & WRITE) != 0
 ```
 
-Nếu trường là enum flags trong protocol/cơ sở dữ liệu, cần document bit assignments ổn định để compatibility không bị phá.
+Nếu trường là enum flags trong giao thức (protocol / 프로토콜)/cơ sở dữ liệu, cần document bit assignments ổn định để tính tương thích (compatibility / 호환성) không bị phá.
 
 ## Bit packing
 
@@ -521,7 +524,7 @@ Extract green:
 (g >> 8) & 0xFF
 ```
 
-Packing giảm bộ nhớ/bandwidth nhưng tăng complexity và coupling vào bit bố trí. Trong hệ thống thực tế, serialization còn phải định nghĩa endianness/versioning.
+Packing giảm bộ nhớ/bandwidth nhưng tăng độ phức tạp (complexity / 복잡도) và coupling vào bit bố trí. Trong hệ thống thực tế, serialization còn phải định nghĩa endianness/versioning.
 
 ## Mask tạo từ `k` các bit thấp
 
@@ -533,13 +536,13 @@ Nếu muốn mask có `k` bits thấp bằng 1:
 
 Tuy nhiên cần cẩn thận khi `k` bằng đúng độ rộng từ máy, vì dịch bit một lượng bằng độ rộng kiểu dữ liệu có ngữ nghĩa nguy hiểm hoặc khác nhau giữa các ngôn ngữ.
 
-Với độ rộng cố định types, special-case full width hoặc dùng library helper.
+Với độ rộng cố định types, special-case full width hoặc dùng thư viện (library / 라이브러리) helper.
 
 ## Rotate vs Shift
 
 Phép dịch đẩy các bit ra ngoài và điền bit 0 hoặc bit dấu; phép xoay đưa các bit bị đẩy ra quay lại đầu bên kia.
 
-Cryptographic/hash các thuật toán thường dùng rotate (`rotl`, `rotr`) vì muốn mix bits mà không mất thông tin.
+Cryptographic/băm (hash / 해시) các thuật toán thường dùng rotate (`rotl`, `rotr`) vì muốn mix bits mà không mất thông tin.
 
 C++20 có `std::rotl`/`std::rotr`; Java có `Integer.rotateLeft/Right` và `Long.rotateLeft/Right`.
 
@@ -571,7 +574,7 @@ Nếu thư viện có intrinsic phù hợp, nên dùng nó thay cho vòng lặp 
 
 ## Next lũy thừa của hai
 
-động các bộ đệm, hash tables hoặc segment các cây đôi khi round capacity lên lũy thừa của hai.
+động các bộ đệm, băm (hash / 해시) tables hoặc segment các cây đôi khi round sức chứa (capacity / 용량) lên lũy thừa của hai.
 
 Một approach conceptually:
 
@@ -580,21 +583,21 @@ n > 0
 next = 1 << ceil(log2(n))
 ```
 
-Bit-smearing tricks tồn tại, nhưng library bit-length các hàm thường rõ và an toàn hơn.
+Bit-smearing tricks tồn tại, nhưng thư viện (library / 라이브러리) bit-length các hàm thường rõ và an toàn hơn.
 
-Power-of-two capacity cho phép chỉ số modulo bằng mask:
+Power-of-two sức chứa (capacity / 용량) cho phép chỉ số modulo bằng mask:
 
 ```text
 index & (capacity - 1)
 ```
 
-chỉ khi capacity thực sự là lũy thừa của hai.
+chỉ khi sức chứa (capacity / 용량) thực sự là lũy thừa của hai.
 
 ## Bit Hacks không nên thay clarity vô điều kiện
 
-Hiện đại compilers tối ưu nhiều các mẫu. Một obscure trick không tự động nhanh hơn clear code/library intrinsic.
+Hiện đại compilers tối ưu nhiều các mẫu. Một obscure trick không tự động nhanh hơn clear mã (code / 코드)/thư viện (library / 라이브러리) intrinsic.
 
-Ví dụ manual popcount hack có thể chậm hơn hardware intrinsic và khó review.
+Ví dụ manual popcount hack có thể chậm hơn hardware intrinsic và khó rà soát (review / 검토).
 
 Use bit trick khi nó:
 
@@ -604,15 +607,15 @@ reduce asymptotic/state complexity
 map tốt tới library/hardware
 ```
 
-không phải để code trông “low-level”.
+không phải để mã (code / 코드) trông “low-level”.
 
-## Security considerations
+## Bảo mật (security / 보안) considerations
 
-Mã thao tác bit xuất hiện nhiều trong mật mã, bộ phân tích cú pháp và giao thức. Tuy nhiên các mẹo bit tự viết cho mật mã rất dễ tạo kênh rò rỉ phụ hoặc lỗi logic.
+Mã thao tác bit xuất hiện nhiều trong mật mã, bộ phân tích cú pháp và giao thức. Tuy nhiên các mẹo bit tự viết cho mật mã rất dễ tạo kênh rò rỉ phụ hoặc lỗi lô-gic (logic / 논리).
 
-Constant-time programming là chuyên biệt security discipline; branchless bit các thao tác không tự động làm code constant-time vì trình biên dịch/môi trường chạy (runtime)/bộ nhớ hành vi còn ảnh hưởng.
+Constant-time programming là chuyên biệt bảo mật (security / 보안) discipline; branchless bit các thao tác không tự động làm mã (code / 코드) constant-time vì trình biên dịch/môi trường chạy (runtime)/bộ nhớ hành vi còn ảnh hưởng.
 
-Không nên tự thiết kế cryptographic primitive chỉ vì hiểu bitwise operators.
+Không nên tự thiết kế cryptographic thành phần nguyên thủy (primitive / 기본 요소) chỉ vì hiểu bitwise operators.
 
 ## Những hiểu lầm phổ biến
 
@@ -620,15 +623,15 @@ Không nên tự thiết kế cryptographic primitive chỉ vì hiểu bitwise o
 
 **“Bitwise trong JavaScript dùng toàn bộ 53-bit integer precision.”** Không; Number bitwise operators dùng 32-bit coercion.
 
-**“`x & -x` luôn an toàn cho mọi type.”** Cần hiểu signed width và language tràn số ngữ nghĩa.
+**“`x & -x` luôn an toàn cho mọi kiểu (type / 타입).”** Cần hiểu signed width và ngôn ngữ (language / 언어) tràn số ngữ nghĩa.
 
-**“Bit DP làm exponential problem thành fast polynomial.”** trạng thái count vẫn `2^n`; bitmask chỉ làm cách biểu diễn gọn.
+**“Bit DP làm exponential bài toán (problem / 문제) thành fast polynomial.”** trạng thái count vẫn `2^n`; bitmask chỉ làm cách biểu diễn gọn.
 
 **“Shift giống multiply/divide cho mọi signed giá trị.”** Rounding, tràn số và sign-fill có thể khác arithmetic expectation.
 
 **“tập bit = bộ lọc Bloom.”** tập bit thường chính xác flags; bộ lọc Bloom thêm hashing và probabilistic các dương tính giả.
 
-## kiểm thử Bit Code
+## kiểm thử Bit mã (code / 코드)
 
 Bit bugs thường nằm ở các ranh giới:
 
@@ -667,12 +670,12 @@ word-level batch operations hữu ích
 memory bandwidth quan trọng
 ```
 
-Nếu domain các khóa sparse, huge hoặc động labels, `HashSet`, sorted set hoặc bitmap nén có thể phù hợp hơn.
+Nếu lĩnh vực (domain / 도메인) các khóa sparse, huge hoặc động labels, `HashSet`, sorted set hoặc bitmap nén có thể phù hợp hơn.
 
 Roaring Bitmap, chẳng hạn, chia miền giá trị thành các khối và chọn cách biểu diễn dày hoặc thưa theo lực lượng cục bộ. Đây là một ví dụ thực tế vượt khỏi lựa chọn đơn giản “bitset hay set” bằng một cấu trúc lai.
 
 ## Mô hình tư duy mở rộng
 
-> thao tác bit không phải collection của mẹo nhị phân. Nó là **data cách biểu diễn design**: khi trạng thái thật sự là boolean vector, binary integer/tập bit cho phép bộ nhớ gọn, algebra rõ và hardware xử lý nhiều flags cùng lúc.
+> thao tác bit không phải collection của mẹo nhị phân. Nó là **dữ liệu (data / 데이터) cách biểu diễn thiết kế (design / 설계)**: khi trạng thái thật sự là boolean véc-tơ (vector / 벡터), nhị phân (binary / 이진) integer/tập bit cho phép bộ nhớ gọn, algebra rõ và hardware xử lý nhiều flags cùng lúc.
 
 Khi dùng bit trick, luôn hỏi ba điều: chứng minh identity đến từ đâu, integer width/signedness của language là gì, và trạng thái có thực sự fit mô hình dense boolean vector không. Nếu ba câu này rõ, bitwise code trở thành công cụ có hệ thống thay vì magic.

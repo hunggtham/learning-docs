@@ -1,8 +1,11 @@
 # Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi
 
+> **Mạch đọc:** Đọc **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cần một thế nhiệt động mới?** sang **Vi phân cơ bản của G**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Năng lượng tự do Gibbs (Gibbs free energy, \(G\) / Gibbs 자유 에너지)** kết hợp enthalpy và entropy theo \(G=H-TS\). Ở nhiệt độ và áp suất không đổi, dấu của \(\Delta G\) cho tiêu chuẩn nhiệt động về chiều biến đổi tự diễn ra.
 
-Một cách nhìn sâu hơn là: Gibbs free energy là **thế nhiệt động phù hợp với hóa học trong điều kiện nhiệt độ và áp suất được giữ gần cố định**, vì nó gói các đóng góp năng lượng và entropy vào một đại lượng duy nhất có thể tối thiểu hóa.
+Một cách nhìn sâu hơn là: Gibbs free năng lượng (energy / 에너지) là **thế nhiệt động phù hợp với hóa học trong điều kiện nhiệt độ và áp suất được giữ gần cố định**, vì nó gói các đóng góp năng lượng và entropy vào một đại lượng duy nhất có thể tối thiểu hóa.
 
 ## Vì sao cần một thế nhiệt động mới?
 
@@ -32,7 +35,7 @@ Nhân với `-T`:
 \Delta G<0
 \]
 
-Vì vậy Gibbs free energy cho phép dùng **chỉ các đại lượng của hệ** để kiểm tra chiều tự phát trong điều kiện hóa học phổ biến.
+Vì vậy Gibbs free năng lượng (energy / 에너지) cho phép dùng **chỉ các đại lượng của hệ** để kiểm tra chiều tự phát trong điều kiện hóa học phổ biến.
 
 ## Vi phân cơ bản của G
 
@@ -62,7 +65,7 @@ dG=VdP-SdT+\sum_i\mu_i dn_i
 
 Trong đó \(\mu_i\) là **thế hóa học (chemical potential)** của cấu tử \(i\).
 
-Phương trình này rất quan trọng vì nó cho thấy Gibbs free energy thay đổi theo ba loại biến:
+Phương trình này rất quan trọng vì nó cho thấy Gibbs free năng lượng (energy / 에너지) thay đổi theo ba loại biến:
 
 - nhiệt độ;
 - áp suất;
@@ -98,7 +101,7 @@ hệ ở trạng thái cân bằng dưới các ràng buộc đang xét.
 
 ## G là tiêu chuẩn tối thiểu ở T và P không đổi
 
-Với hệ kín ở nhiệt độ và áp suất không đổi, trạng thái cân bằng ổn định tương ứng với **cực tiểu Gibbs free energy** dưới các ràng buộc bảo toàn.
+Với hệ kín ở nhiệt độ và áp suất không đổi, trạng thái cân bằng ổn định tương ứng với **cực tiểu Gibbs free năng lượng (energy / 에너지)** dưới các ràng buộc bảo toàn.
 
 Điều này giải thích tại sao:
 
@@ -196,7 +199,7 @@ nên:
 
 Nhưng `K` không cho biết tốc độ phản ứng.
 
-## Thế hóa học — Gibbs free energy trên mỗi lượng chất vi phân
+## Thế hóa học — Gibbs free năng lượng (energy / 에너지) trên mỗi lượng chất vi phân
 
 Trong hỗn hợp:
 
@@ -204,7 +207,7 @@ Trong hỗn hợp:
 \mu_i=\left(\frac{\partial G}{\partial n_i}\right)_{T,P,n_{j\ne i}}
 \]
 
-Chemical potential cho biết Gibbs free energy thay đổi bao nhiêu khi thêm một lượng rất nhỏ cấu tử \(i\) trong điều kiện các biến khác phù hợp được giữ cố định.
+Chemical potential cho biết Gibbs free năng lượng (energy / 에너지) thay đổi bao nhiêu khi thêm một lượng rất nhỏ cấu tử \(i\) trong điều kiện các biến khác phù hợp được giữ cố định.
 
 Với khí/dung dịch lý tưởng:
 
@@ -226,7 +229,7 @@ Trong đó \(a_i\) là hoạt độ.
 
 Nói “chất đi từ nơi nồng độ cao tới thấp” chỉ đúng trong trường hợp đơn giản.
 
-Động lực sâu hơn là gradient của **thế hóa học**.
+Động lực sâu hơn là độ dốc (gradient / 기울기) của **thế hóa học**.
 
 Một species có thể di chuyển từ vùng nồng độ thấp sang cao nếu các tương tác hoặc điện trường làm chemical potential ở vùng nồng độ thấp cao hơn.
 
@@ -251,9 +254,9 @@ Khái niệm này đứng sau:
 - pin điện hóa;
 - vận chuyển ion qua màng.
 
-## Gibbs free energy và công hữu ích cực đại
+## Gibbs free năng lượng (energy / 에너지) và công hữu ích cực đại
 
-Ở nhiệt độ và áp suất không đổi, độ giảm Gibbs free energy đặt giới hạn trên cho **công không phải công giãn nở (non-PV work)** thu được trong quá trình thuận nghịch:
+Ở nhiệt độ và áp suất không đổi, độ giảm Gibbs free năng lượng (energy / 에너지) đặt giới hạn trên cho **công không phải công giãn nở (non-PV work)** thu được trong quá trình thuận nghịch:
 
 \[
 w_{nonPV,max}=-\Delta G
@@ -265,7 +268,7 @@ Trong pin điện hóa:
 \Delta G=-nFE
 \]
 
-Điện áp pin vì vậy là một biểu hiện trực tiếp của chênh lệch Gibbs free energy trên mỗi mol electron chuyển.
+Điện áp pin vì vậy là một biểu hiện trực tiếp của chênh lệch Gibbs free năng lượng (energy / 에너지) trên mỗi mol electron chuyển.
 
 ## Gibbs và cân bằng pha
 
@@ -287,7 +290,7 @@ Nếu nhiệt độ thấp hơn điểm nóng chảy, pha rắn có chemical pot
 
 ## G theo thành phần và tính ổn định của hỗn hợp
 
-Với hỗn hợp hai thành phần, có thể vẽ Gibbs free energy mol theo composition.
+Với hỗn hợp hai thành phần, có thể vẽ Gibbs free năng lượng (energy / 에너지) mol theo composition.
 
 Nếu đường cong `G(x)` lồi phù hợp, hỗn hợp đồng nhất có thể ổn định.
 
@@ -314,7 +317,7 @@ Trong vùng spinodal, độ cong của G theo composition có thể âm:
 
 khi đó dao động composition nhỏ có thể tự lớn lên mà không cần vượt nucleation barrier thông thường.
 
-Khái niệm này nối Gibbs free energy với materials science và phase transformation kinetics.
+Khái niệm này nối Gibbs free năng lượng (energy / 에너지) với materials science và phase transformation kinetics.
 
 ## Gibbs–Duhem
 
@@ -326,7 +329,7 @@ Quan hệ Gibbs–Duhem ở T, P cố định:
 \sum_i n_i d\mu_i=0
 \]
 
-Điều này phản ánh rằng nếu composition thay đổi làm chemical potential của một cấu tử tăng, các cấu tử khác phải thay đổi liên quan để Gibbs energy toàn hệ vẫn nhất quán.
+Điều này phản ánh rằng nếu composition thay đổi làm chemical potential của một cấu tử tăng, các cấu tử khác phải thay đổi liên quan để Gibbs năng lượng (energy / 에너지) toàn hệ vẫn nhất quán.
 
 Nó là nền tảng của nhiều mô hình hoạt độ và thermodynamic consistency.
 
@@ -375,7 +378,7 @@ Với dung dịch loãng lý tưởng:
 
 Tế bào thúc đẩy những quá trình không thuận lợi bằng **ghép cặp phản ứng (reaction coupling)** với phản ứng thuận lợi mạnh như thủy phân ATP.
 
-Điều kiện là tổng Gibbs free energy:
+Điều kiện là tổng Gibbs free năng lượng (energy / 에너지):
 
 \[
 \Delta G_{total}=\sum_i\Delta G_i
@@ -400,11 +403,11 @@ Nhưng trong tế bào:
 \Delta G=\Delta G^{\circ'}+RT\ln Q
 \]
 
-Do ATP/ADP/Pi không ở nồng độ chuẩn, Gibbs free energy thủy phân ATP trong tế bào có thể âm hơn đáng kể so với giá trị chuẩn.
+Do ATP/ADP/Pi không ở nồng độ chuẩn, Gibbs free năng lượng (energy / 에너지) thủy phân ATP trong tế bào có thể âm hơn đáng kể so với giá trị chuẩn.
 
 Điều này cho thấy **nồng độ thật là một phần của năng lượng khả dụng**.
 
-## Gibbs free energy và reaction coordinate
+## Gibbs free năng lượng (energy / 에너지) và reaction coordinate
 
 Nếu mô tả phản ứng bằng tọa độ tiến triển \(\xi\):
 
@@ -436,16 +439,16 @@ Tại cân bằng:
 
 Đây là cách hình học rất trực quan để nối reaction quotient với minimization của G.
 
-## Gibbs free energy khác hàng rào hoạt hóa
+## Gibbs free năng lượng (energy / 에너지) khác hàng rào hoạt hóa
 
 Trên sơ đồ phản ứng có hai loại độ cao:
 
 - chênh lệch giữa đầu và cuối → \(\Delta G\);
-- chênh lệch từ trạng thái đầu tới transition state → \(\Delta G^\ddagger\).
+- chênh lệch từ trạng thái đầu tới chuyển tiếp (transition / 전이) trạng thái (state / 상태) → \(\Delta G^\ddagger\).
 
 `ΔG` quyết định hướng thermodynamic.
 
-`ΔG‡` quyết định tốc độ theo transition-state theory.
+`ΔG‡` quyết định tốc độ theo transition-state lý thuyết (theory / 이론).
 
 Một phản ứng có thể:
 
@@ -497,7 +500,7 @@ Với vaporization và giả định khí lý tưởng, nó dẫn tới phương
 
 ## Năng lượng tự do và khả năng sinh công
 
-Gibbs free energy không phải “năng lượng tự do nằm sẵn trong phân tử”.
+Gibbs free năng lượng (energy / 에너지) không phải “năng lượng tự do nằm sẵn trong phân tử”.
 
 Nó là một thế nhiệt động cho biết mức công không-PV tối đa có thể trích ra **nếu quá trình diễn ra thuận nghịch ở T, P xác định**.
 
@@ -507,7 +510,7 @@ Trong quá trình thật không thuận nghịch, công thực tế luôn nhỏ 
 
 **Khả năng sinh công (exergy)** mở rộng ý tưởng này bằng cách so trạng thái hệ với môi trường tham chiếu.
 
-Gibbs free energy đặc biệt liên quan tới chemical exergy trong hệ ở T/P môi trường cố định.
+Gibbs free năng lượng (energy / 에너지) đặc biệt liên quan tới chemical exergy trong hệ ở T/P môi trường cố định.
 
 Trong kỹ thuật, mất exergy gắn với entropy generation và irreversibility.
 
@@ -539,6 +542,8 @@ Không nhất thiết. Ở nhiệt độ hữu hạn, entropy đóng góp qua `-
 
 ## Mô hình tư duy
 
-Năng lượng tự do Gibbs giống **địa hình nhiệt động của hệ ở nhiệt độ và áp suất không đổi**. Reaction, diffusion và phase transition đều có thể hiểu như quá trình hệ tìm đường giảm G. Chemical potential là độ dốc cục bộ của địa hình đối với từng species; equilibrium là trạng thái không còn hướng nào làm G giảm dưới các ràng buộc hiện có. Kinetics quyết định hệ có đi được xuống địa hình đó nhanh hay bị mắc sau một hàng rào cao.
+Năng lượng tự do Gibbs giống **địa hình nhiệt động của hệ ở nhiệt độ và áp suất không đổi**. Reaction, diffusion và phase chuyển tiếp (transition / 전이) đều có thể hiểu như quá trình hệ tìm đường giảm G. Chemical potential là độ dốc cục bộ của địa hình đối với từng species; equilibrium là trạng thái không còn hướng nào làm G giảm dưới các ràng buộc hiện có. Kinetics quyết định hệ có đi được xuống địa hình đó nhanh hay bị mắc sau một hàng rào cao.
 
 Xem tiếp: [Nhiệt động lực học hóa học](./04_chemical_thermodynamics.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 energy heat and work](./00_energy_heat_and_work.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

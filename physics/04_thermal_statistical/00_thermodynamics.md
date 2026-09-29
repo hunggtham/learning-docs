@@ -1,5 +1,8 @@
 # Nhiệt động lực học: nhiệt, công, nội năng và các quá trình
 
+> **Mạch đọc:** Đọc **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Nhiệt động lực học bắt đầu từ một nghịch lý về mô tả** sang **Hệ, môi trường và trạng thái**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Nhiệt động lực học bắt đầu từ một nghịch lý về mô tả
 
 Một cốc nước chứa cỡ `10^25` phân tử. Mỗi phân tử có vị trí và vận tốc riêng, tương tác với các phân tử khác và liên tục va chạm. Về nguyên tắc, nếu biết toàn bộ trạng thái vi mô cùng các định luật động lực học, ta có thể cố mô tả từng phân tử. Trong thực tế, cách làm đó không chỉ quá lớn về tính toán mà còn không phù hợp với những câu hỏi vĩ mô mà ta muốn trả lời.
@@ -140,7 +143,7 @@ vào năng lượng.
 
 Một khí lý tưởng đơn nguyên tử có ba bậc tự do tịnh tiến nên nhận đóng góp trung bình `3k_BT/2` cho mỗi hạt.
 
-Phân tử còn có thể có các mode quay và dao động. Tuy nhiên hiệu ứng lượng tử có thể làm một số mode gần như không được kích thích nếu khoảng cách mức năng lượng lớn so với `k_BT`. Vì vậy nhiệt dung thực không phải lúc nào cũng tuân giá trị dự đoán bởi phân bố đều năng lượng cổ điển.
+Phân tử còn có thể có các chế độ (mode / 모드) quay và dao động. Tuy nhiên hiệu ứng lượng tử có thể làm một số chế độ (mode / 모드) gần như không được kích thích nếu khoảng cách mức năng lượng lớn so với `k_BT`. Vì vậy nhiệt dung thực không phải lúc nào cũng tuân giá trị dự đoán bởi phân bố đều năng lượng cổ điển.
 
 ## Nhiệt dung
 
@@ -248,7 +251,7 @@ trong đó:
 \gamma=\frac{C_P}{C_V}
 ```
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 > Nhiệt động lực học không cố mô tả từng phân tử đang làm gì. Nó tìm một số biến trạng thái và định luật bảo toàn đủ mạnh để dự đoán sự thay đổi ở cấp vĩ mô. Nhiệt và công mô tả **cách năng lượng đi qua ranh giới hệ**; nội năng mô tả một phần năng lượng thuộc trạng thái của hệ.
 
@@ -266,8 +269,10 @@ Không. Nhiệt độ liên hệ với phân bố thống kê của năng lượ
 
 Không. Đoạn nhiệt nghĩa `Q=0`; nhiệt độ vẫn có thể thay đổi do công làm thay đổi nội năng. Đẳng nhiệt và đoạn nhiệt là hai điều kiện khác nhau.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Năng lượng](../01_mechanics/03_work_energy_power.md).
 
 **Liên hệ tiếp:** [Entropy và cơ học thống kê](01_entropy_statistical_mechanics.md), [Ensemble và hàm phân hoạch](03_ensembles_partition_functions.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 entropy statistical mechanics](./01_entropy_statistical_mechanics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

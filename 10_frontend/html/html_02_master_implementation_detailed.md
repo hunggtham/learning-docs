@@ -1,9 +1,12 @@
-# HTML — Master Implementation
-## Browser parsing, form internals, accessibility API, security, legacy migration và modern declarative HTML
+# HTML — Master hiện thực (implementation / 구현)
 
-Tài liệu này tiếp nối `html_01_beginner_to_senior_detailed.md`. File đầu xây nền tảng từ document structure, semantics, forms, media, accessibility, SEO và performance. File Master này đi sâu vào phần khiến HTML trở thành một **browser platform** chứ không chỉ là tập hợp tag: parser có thể sửa markup như thế nào, DOM live state khác source ra sao, form owner và submitter hoạt động thế nào, accessibility tree nhận semantics từ đâu, custom elements kết nối với Shadow DOM ra sao, và vì sao những feature mới như Popover hoặc Declarative Shadow DOM có thể thay thế một phần JavaScript thủ công.
+> **Mạch đọc:** Đọc **HTML — Master hiện thực (implementation / 구현)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **trình duyệt (browser / 브라우저) parsing, form internals, khả năng tiếp cận (accessibility / 접근성) API, bảo mật (security / 보안), legacy di chuyển (migration / 마이그레이션) và hiện đại (modern / 현대적) declarative HTML** sang **1. <tìm kiếm (search / 검색)>**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mục tiêu không phải thuộc mọi production trong HTML Living Standard. Mục tiêu là khi gặp một bug hoặc một đoạn markup lạ, bạn biết browser sẽ xử lý ở layer nào và biết câu hỏi cần đặt ra: source có valid không, parser có repair tree không, element có native semantics gì, DOM property hiện tại khác attribute ban đầu ra sao, control có tham gia form submission không, assistive technology nhận accessible name nào, và resource/security policy bị ảnh hưởng thế nào.
+## Trình duyệt (browser / 브라우저) parsing, form internals, khả năng tiếp cận (accessibility / 접근성) API, bảo mật (security / 보안), legacy di chuyển (migration / 마이그레이션) và hiện đại (modern / 현대적) declarative HTML
+
+Tài liệu này tiếp nối `html_01_beginner_to_senior_detailed.md`. tệp (file / 파일) đầu xây nền tảng từ document cấu trúc (structure / 구조), ngữ nghĩa (semantics / 의미론), forms, media, khả năng tiếp cận (accessibility / 접근성), SEO và hiệu năng (performance / 성능). tệp (file / 파일) Master này đi sâu vào phần khiến HTML trở thành một **nền tảng trình duyệt (browser platform / 브라우저 플랫폼)** chứ không chỉ là tập hợp tag: parser có thể sửa markup như thế nào, DOM live trạng thái (state / 상태) khác nguồn (source / 소스) ra sao, form đơn vị sở hữu (owner / 오너) và submitter hoạt động thế nào, cây khả năng tiếp cận (accessibility tree / 접근성 트리) nhận ngữ nghĩa (semantics / 의미론) từ đâu, custom elements kết nối với Shadow DOM ra sao, và vì sao những tính năng (feature / 기능) mới như Popover hoặc Declarative Shadow DOM có thể thay thế một phần JavaScript thủ công.
+
+Mục tiêu không phải thuộc mọi môi trường vận hành (production / 운영 환경) trong HTML Living tiêu chuẩn (standard / 표준). Mục tiêu là khi gặp một bug hoặc một đoạn markup lạ, bạn biết trình duyệt (browser / 브라우저) sẽ xử lý ở tầng (layer / 계층) nào và biết câu hỏi cần đặt ra: nguồn (source / 소스) có valid không, parser có repair cây (tree / 트리) không, element có bản địa (native / 네이티브) ngữ nghĩa (semantics / 의미론) gì, DOM thuộc tính (property / 속성) hiện tại khác attribute ban đầu ra sao, điều khiển (control / 제어) có tham gia form submission không, assistive technology nhận accessible name nào, và tài nguyên (resource / 자원)/bảo mật (security / 보안) chính sách (policy / 정책) bị ảnh hưởng thế nào.
 
 ---
 
@@ -11,7 +14,7 @@ Mục tiêu không phải thuộc mọi production trong HTML Living Standard. M
 
 ## 1. `<search>`
 
-`search` biểu diễn một vùng của document dành cho chức năng tìm kiếm hoặc lọc. Nó không thực hiện search và cũng không thay thế `form`; semantic của nó chỉ giúp browser và accessibility layer biết subtree này có purpose là search.
+`search` biểu diễn một vùng của document dành cho chức năng tìm kiếm hoặc lọc. Nó không thực hiện tìm kiếm (search / 검색) và cũng không thay thế `form`; ngữ nghĩa (semantic / 의미적) của nó chỉ giúp trình duyệt (browser / 브라우저) và khả năng tiếp cận (accessibility / 접근성) tầng (layer / 계층) biết subtree này có purpose là tìm kiếm (search / 검색).
 
 ```html
 <search>
@@ -23,13 +26,13 @@ Mục tiêu không phải thuộc mọi production trong HTML Living Standard. M
 </search>
 ```
 
-Khi dùng, hãy nghĩ theo meaning thay vì visual layout. Một filter panel thực sự dùng để query một product list có thể phù hợp với `search`; một toolbar chứa random buttons thì không.
+Khi dùng, hãy nghĩ theo meaning thay vì visual bố cục (layout / 레이아웃). Một filter panel thực sự dùng để truy vấn (query / 쿼리) một sản phẩm (product / 제품) danh sách (list / 목록) có thể phù hợp với `search`; một toolbar chứa random buttons thì không.
 
 ---
 
 ## 2. `<hgroup>`
 
-`hgroup` group một heading với supporting text như subtitle hoặc tagline.
+`hgroup` group một heading với supporting văn bản (text / 텍스트) như subtitle hoặc tagline.
 
 ```html
 <hgroup>
@@ -38,13 +41,13 @@ Khi dùng, hãy nghĩ theo meaning thay vì visual layout. Một filter panel th
 </hgroup>
 ```
 
-Nó không phải shortcut để gộp `h1`, `h2`, `h3` thành một hierarchy. Heading hierarchy vẫn đến từ headings và document structure. Accessibility implication ở đây là supporting text không trở thành một heading chỉ vì đứng gần heading về mặt visual.
+Nó không phải shortcut để gộp `h1`, `h2`, `h3` thành một hierarchy. Heading hierarchy vẫn đến từ headings và document cấu trúc (structure / 구조). khả năng tiếp cận (accessibility / 접근성) implication ở đây là supporting văn bản (text / 텍스트) không trở thành một heading chỉ vì đứng gần heading về mặt visual.
 
 ---
 
 ## 3. `<menu>`
 
-`menu` hiện đại có thể biểu diễn một list các commands/actions.
+`menu` hiện đại có thể biểu diễn một danh sách (list / 목록) các commands/actions.
 
 ```html
 <menu>
@@ -53,13 +56,13 @@ Nó không phải shortcut để gộp `h1`, `h2`, `h3` thành một hierarchy. 
 </menu>
 ```
 
-Trong application thông thường `ul` vẫn phổ biến hơn. Điều quan trọng là không nhầm element hiện tại với các context-menu APIs legacy từng tồn tại trong HTML cũ.
+Trong ứng dụng (application / 애플리케이션) thông thường `ul` vẫn phổ biến hơn. Điều quan trọng là không nhầm element hiện tại với các context-menu APIs legacy từng tồn tại trong HTML cũ.
 
 ---
 
 ## 4. `<wbr>`
 
-`wbr` tạo **word break opportunity**. Browser chỉ xuống dòng tại đó khi layout cần, khác với `br` là line break bắt buộc.
+`wbr` tạo **word break opportunity**. trình duyệt (browser / 브라우저) chỉ xuống dòng tại đó khi bố cục (layout / 레이아웃) cần, khác với `br` là line break bắt buộc.
 
 ```html
 <p>
@@ -67,7 +70,7 @@ Trong application thông thường `ul` vẫn phổ biến hơn. Điều quan tr
 </p>
 ```
 
-Nó hữu ích với URL, hash, identifier hoặc technical token dài. Về accessibility, `wbr` không nên được dùng để thay đổi meaning của text; nó chỉ giúp layout break line ở vị trí hợp lý.
+Nó hữu ích với URL, băm (hash / 해시), identifier hoặc technical đơn vị từ (token / 토큰) dài. Về khả năng tiếp cận (accessibility / 접근성), `wbr` không nên được dùng để thay đổi meaning của văn bản (text / 텍스트); nó chỉ giúp bố cục (layout / 레이아웃) break line ở vị trí hợp lý.
 
 ---
 
@@ -90,13 +93,13 @@ Nó hữu ích với URL, hash, identifier hoặc technical token dài. Về acc
 </p>
 ```
 
-Nếu mục tiêu chỉ là presentation, CSS phù hợp hơn. Underline còn có UX implication vì user thường liên tưởng underline với link.
+Nếu mục tiêu chỉ là presentation, CSS phù hợp hơn. Underline còn có UX implication vì người dùng (user / 사용자) thường liên tưởng underline với link.
 
 ---
 
 ## 6. `<map>` và `<area>`
 
-Image map cho phép một image có nhiều vùng clickable:
+Ảnh (image / 이미지) map cho phép một ảnh (image / 이미지) có nhiều vùng clickable:
 
 ```html
 <img
@@ -113,7 +116,7 @@ Image map cho phép một image có nhiều vùng clickable:
 </map>
 ```
 
-Browser dùng `shape` và `coords` để hit-test vùng trên image. Feature này hiện khá niche vì responsive scaling và accessibility phức tạp. Nếu dùng, `area` cần alternative text phù hợp và interaction phải vẫn hiểu được khi người dùng không nhìn image.
+Trình duyệt (browser / 브라우저) dùng `shape` và `coords` để hit-test vùng trên ảnh (image / 이미지). tính năng (feature / 기능) này hiện khá niche vì responsive scaling và khả năng tiếp cận (accessibility / 접근성) phức tạp. Nếu dùng, `area` cần alternative văn bản (text / 텍스트) phù hợp và tương tác (interaction / 상호작용) phải vẫn hiểu được khi người dùng không nhìn ảnh (image / 이미지).
 
 ---
 
@@ -127,9 +130,9 @@ Browser dùng `shape` và `coords` để hit-test vùng trên image. Feature nà
 </canvas>
 ```
 
-`width` và `height` attributes định nghĩa drawing buffer, không chỉ kích thước CSS. Nếu buffer nhỏ nhưng CSS phóng lớn, output dễ blur.
+`width` và `height` attributes định nghĩa drawing buffer, không chỉ kích thước CSS. Nếu buffer nhỏ nhưng CSS phóng lớn, đầu ra (output / 출력) dễ blur.
 
-Canvas pixels không tự tạo semantic tree. Một chart quan trọng nên có alternative representation như table, text summary hoặc DOM controls. Senior cần nhớ rằng canvas rendering và accessibility tree là hai hệ thống khác nhau.
+Canvas pixels không tự tạo ngữ nghĩa (semantic / 의미적) cây (tree / 트리). Một chart quan trọng nên có alternative biểu diễn (representation / 표현) như bảng (table / 테이블), văn bản (text / 텍스트) summary hoặc DOM controls. cấp cao (senior / 시니어) cần nhớ rằng canvas rendering và cây khả năng tiếp cận (accessibility tree / 접근성 트리) là hai hệ thống khác nhau.
 
 ---
 
@@ -155,11 +158,11 @@ và MathML:
 </math>
 ```
 
-Khi parser đi vào SVG hoặc MathML, namespace và parsing rules thay đổi. Đây là lý do một node trong SVG không nên được coi như `div` có shape. Với icon decorative, `aria-hidden="true"` thường phù hợp; với graphic có meaning, cần accessible naming/alternative phù hợp.
+Khi parser đi vào SVG hoặc MathML, không gian tên (namespace / 네임스페이스) và parsing rules thay đổi. Đây là lý do một nút (node / 노드) trong SVG không nên được coi như `div` có shape. Với icon decorative, `aria-hidden="true"` thường phù hợp; với graphic có meaning, cần accessible naming/alternative phù hợp.
 
 ---
 
-# PHẦN 2 — HTML PARSER VÀ TREE CONSTRUCTION
+# PHẦN 2 — HTML PARSER VÀ cây (tree / 트리) CONSTRUCTION
 
 ## 9. HTML không phải XML
 
@@ -175,7 +178,7 @@ Viết:
 <img src="/a.png" alt="" />
 ```
 
-không biến document thành XML. Parsing mode đến từ media type/context và HTML parser, không đến từ dấu slash. Đây là điểm quan trọng khi bạn học HTML và XML song song.
+không biến document thành XML. Parsing chế độ (mode / 모드) đến từ media kiểu (type / 타입)/ngữ cảnh (context / 맥락) và HTML parser, không đến từ dấu slash. Đây là điểm quan trọng khi bạn học HTML và XML song song.
 
 ---
 
@@ -190,15 +193,15 @@ HTML cho phép omit một số end tags trong những conditions cụ thể:
 </ul>
 ```
 
-Browser vẫn có thể tạo hai `li`. Tuy nhiên source code production nên ưu tiên closing tags rõ ràng để formatter, reviewer và framework dễ reason hơn.
+Trình duyệt (browser / 브라우저) vẫn có thể tạo hai `li`. Tuy nhiên mã nguồn (source code / 소스 코드) môi trường vận hành (production / 운영 환경) nên ưu tiên closing tags rõ ràng để formatter, reviewer và khung phần mềm (framework / 프레임워크) dễ reason hơn.
 
-HTML parser còn có error recovery mạnh. Việc browser render được markup không chứng minh markup author-conforming hoặc semantic đúng.
+HTML parser còn có lỗi (error / 오류) khôi phục (recovery / 복구) mạnh. Việc trình duyệt (browser / 브라우저) kết xuất (render / 렌더링) được markup không chứng minh markup author-conforming hoặc ngữ nghĩa (semantic / 의미적) đúng.
 
 ---
 
 ## 11. `<p>` auto-closing
 
-Source:
+Nguồn (source / 소스):
 
 ```html
 <p>
@@ -207,43 +210,43 @@ Source:
 </p>
 ```
 
-không tạo tree “div nằm trong p” như indentation gợi ý. Khi parser gặp content không được phép trong `p`, nó có thể đóng `p` trước. Resulting DOM vì vậy khác source.
+không tạo cây (tree / 트리) “div nằm trong p” như indentation gợi ý. Khi parser gặp content không được phép trong `p`, nó có thể đóng `p` trước. Resulting DOM vì vậy khác nguồn (source / 소스).
 
-Đây là một nguyên nhân rất thực tế của SSR hydration mismatch: server/template nghĩ một tree, browser repair thành tree thứ hai, framework hydrate dựa trên expectation thứ ba.
-
----
-
-## 12. Insertion modes, foster parenting và adoption agency algorithm
-
-HTML parser là context-sensitive. Nó có các insertion modes như `in head`, `in body`, `in table`, `in row`, `in cell`. Một token xuất hiện trong table context có thể được xử lý khác khi nó xuất hiện trong ordinary body flow.
-
-Với malformed table content, browser có thể di chuyển node ra khỏi table theo rules thường được gọi là **foster parenting**. Với một số formatting elements bị nest sai, parser có algorithm đặc biệt thường được gọi là **adoption agency algorithm**.
-
-Bạn không cần thuộc từng bước thuật toán. Điều cần hiểu là DOM được quyết định bởi parser algorithm, không phải indentation và cũng không phải “browser đoán ngẫu nhiên”.
+Đây là một nguyên nhân rất thực tế của SSR hydration mismatch: máy chủ (server / 서버)/template nghĩ một cây (tree / 트리), trình duyệt (browser / 브라우저) repair thành cây (tree / 트리) thứ hai, khung phần mềm (framework / 프레임워크) hydrate dựa trên expectation thứ ba.
 
 ---
 
-## 13. View Source, parsed DOM và framework tree
+## 12. Insertion modes, foster parenting và adoption agency thuật toán (algorithm / 알고리즘)
 
-Ba layer phải được phân biệt. View Source gần với original response. DOM là kết quả sau tokenizer/tree construction và sau các runtime mutations. React/Vue/Svelte lại có internal component/tree model riêng.
+HTML parser là context-sensitive. Nó có các insertion modes như `in head`, `in body`, `in table`, `in row`, `in cell`. Một đơn vị từ (token / 토큰) xuất hiện trong bảng (table / 테이블) ngữ cảnh (context / 맥락) có thể được xử lý khác khi nó xuất hiện trong ordinary body luồng (flow / 흐름).
 
-Khi debug hydration, table structure hoặc invalid nesting, hãy so sánh original HTML với Elements panel thay vì chỉ nhìn JSX/template.
+Với malformed bảng (table / 테이블) content, trình duyệt (browser / 브라우저) có thể di chuyển nút (node / 노드) ra khỏi bảng (table / 테이블) theo rules thường được gọi là **foster parenting**. Với một số formatting elements bị nest sai, parser có thuật toán (algorithm / 알고리즘) đặc biệt thường được gọi là **adoption agency thuật toán (algorithm / 알고리즘)**.
 
----
-
-## 14. Raw text, RCDATA và character references
-
-`script` và `style` có parsing contexts khác ordinary text. `title` và `textarea` cũng có RCDATA-like parsing behavior. Vì vậy một escaping strategy đúng cho text node bình thường không tự động đúng cho JavaScript/CSS/script contexts.
-
-Character references như `&amp;`, `&lt;`, `&gt;` và `&quot;` dùng khi cần biểu diễn special characters. `&nbsp;` là non-breaking space, không phải công cụ để tạo layout spacing; layout thuộc CSS.
+Bạn không cần thuộc từng bước thuật toán. Điều cần hiểu là DOM được quyết định bởi parser thuật toán (algorithm / 알고리즘), không phải indentation và cũng không phải “trình duyệt (browser / 브라우저) đoán ngẫu nhiên”.
 
 ---
 
-# PHẦN 3 — FORM INTERNALS VÀ LIVE STATE
+## 13. View nguồn (source / 소스), parsed DOM và khung phần mềm (framework / 프레임워크) cây (tree / 트리)
 
-## 15. Form owner
+Ba tầng (layer / 계층) phải được phân biệt. View nguồn (source / 소스) gần với original phản hồi (response / 응답). DOM là kết quả sau tokenizer/cây (tree / 트리) construction và sau các thời gian chạy (runtime / 런타임) mutations. React/Vue/Svelte lại có nội bộ (internal / 내부) thành phần (component / 컴포넌트)/cây (tree / 트리) mô hình (model / 모델) riêng.
 
-Form-associated control có một **form owner**. Bình thường owner là ancestor form:
+Khi gỡ lỗi (debug / 디버그) hydration, bảng (table / 테이블) cấu trúc (structure / 구조) hoặc invalid nesting, hãy so sánh original HTML với Elements panel thay vì chỉ nhìn JSX/template.
+
+---
+
+## 14. Raw văn bản (text / 텍스트), RCDATA và character references
+
+`script` và `style` có parsing contexts khác ordinary văn bản (text / 텍스트). `title` và `textarea` cũng có RCDATA-like parsing hành vi (behavior / 동작). Vì vậy một escaping chiến lược (strategy / 전략) đúng cho văn bản (text / 텍스트) nút (node / 노드) bình thường không tự động đúng cho JavaScript/CSS/script contexts.
+
+Character references như `&amp;`, `&lt;`, `&gt;` và `&quot;` dùng khi cần biểu diễn special characters. `&nbsp;` là non-breaking không gian (space / 공간), không phải công cụ để tạo bố cục (layout / 레이아웃) spacing; bố cục (layout / 레이아웃) thuộc CSS.
+
+---
+
+# PHẦN 3 — FORM INTERNALS VÀ LIVE trạng thái (state / 상태)
+
+## 15. Form đơn vị sở hữu (owner / 오너)
+
+Form-associated điều khiển (control / 제어) có một **form đơn vị sở hữu (owner / 오너)**. Bình thường đơn vị sở hữu (owner / 오너) là ancestor form:
 
 ```html
 <form id="profile">
@@ -251,7 +254,7 @@ Form-associated control có một **form owner**. Bình thường owner là ance
 </form>
 ```
 
-Nhưng control có thể associate từ bên ngoài:
+Nhưng điều khiển (control / 제어) có thể associate từ bên ngoài:
 
 ```html
 <form id="profile">
@@ -263,9 +266,9 @@ Nhưng control có thể associate từ bên ngoài:
 </button>
 ```
 
-Browser dùng `form="profile"` để liên kết control với form ID. Điều này hữu ích với sticky action bars hoặc component layouts nơi visual position không trùng DOM nesting.
+Trình duyệt (browser / 브라우저) dùng `form="profile"` để liên kết điều khiển (control / 제어) với form ID. Điều này hữu ích với sticky hành động (action / 동작) bars hoặc thành phần (component / 컴포넌트) layouts nơi visual position không trùng DOM nesting.
 
-Nested `form` không phải cách tạo form con. Hãy dùng sibling forms hoặc explicit `form` association.
+Nested `form` không phải cách tạo form con. Hãy dùng sibling forms hoặc tường minh (explicit / 명시적) `form` association.
 
 ---
 
@@ -282,53 +285,53 @@ Button trigger form submission được gọi là submitter:
 </button>
 ```
 
-Submitter có thể thêm `action=publish` vào form data và có thể override `formaction`, `formmethod`, `formenctype`, `formtarget`, `formnovalidate`.
+Submitter có thể thêm `action=publish` vào form dữ liệu (data / 데이터) và có thể override `formaction`, `formmethod`, `formenctype`, `formtarget`, `formnovalidate`.
 
-Pressing Enter trong text control có thể trigger implicit submission tùy form structure. Vì vậy button không phải submit nên ghi `type="button"` rõ ràng.
+Pressing Enter trong văn bản (text / 텍스트) điều khiển (control / 제어) có thể trigger implicit submission tùy form cấu trúc (structure / 구조). Vì vậy button không phải submit nên ghi `type="button"` rõ ràng.
 
 ---
 
 ## 17. Successful controls
 
-Khi form submit, browser không đơn giản serialize mọi input nằm trong DOM. Control phải đáp ứng submission rules. `name` thường cần thiết; disabled controls thường không đóng góp entry; unchecked checkbox/radio thường không tạo entry; readonly value vẫn có thể submit; submit button chỉ đóng góp khi nó là submitter.
+Khi form submit, trình duyệt (browser / 브라우저) không đơn giản serialize mọi đầu vào (input / 입력) nằm trong DOM. điều khiển (control / 제어) phải đáp ứng submission rules. `name` thường cần thiết; disabled controls thường không đóng góp entry; unchecked checkbox/radio thường không tạo entry; readonly giá trị (value / 값) vẫn có thể submit; submit button chỉ đóng góp khi nó là submitter.
 
-Đây là reason backend đôi khi “không nhận được field” dù field hiển thị trên UI. Debug bằng form-data semantics trước khi đổ lỗi network library.
+Đây là reason backend đôi khi “không nhận được trường dữ liệu (field / 필드)” dù trường dữ liệu (field / 필드) hiển thị trên UI. gỡ lỗi (debug / 디버그) bằng form-data ngữ nghĩa (semantics / 의미론) trước khi đổ lỗi mạng (network / 네트워크) thư viện (library / 라이브러리).
 
 ---
 
 ## 18. Disabled, readonly và disabled fieldset
 
-`disabled` thường khiến control không focus/edit và không submit. `readonly` ngăn sửa ở các supported control types nhưng value vẫn có thể được submit.
+`disabled` thường khiến điều khiển (control / 제어) không focus/edit và không submit. `readonly` ngăn sửa ở các supported điều khiển (control / 제어) types nhưng giá trị (value / 값) vẫn có thể được submit.
 
 ```html
 <input name="accountId" value="A123" readonly>
 ```
 
-Không được coi readonly value là trusted; client vẫn có thể sửa request.
+Không được coi readonly giá trị (value / 값) là trusted; máy khách (client / 클라이언트) vẫn có thể sửa yêu cầu (request / 요청).
 
-`fieldset disabled` disable phần lớn descendants nhưng first `legend` có special behavior. Đây là edge case hữu ích khi đọc native form algorithms, dù application bình thường không cần dựa vào nó như một trick.
+`fieldset disabled` disable phần lớn descendants nhưng first `legend` có special hành vi (behavior / 동작). Đây là trường hợp biên (edge case / 경계 사례) hữu ích khi đọc bản địa (native / 네이티브) form algorithms, dù ứng dụng (application / 애플리케이션) bình thường không cần dựa vào nó như một trick.
 
 ---
 
-## 19. Reset, current state và default state
+## 19. Reset, trạng thái hiện tại (current state / 현재 상태) và default trạng thái (state / 상태)
 
-`type="reset"` không “xóa trắng form”; nó restore default state.
+`type="reset"` không “xóa trắng form”; nó restore default trạng thái (state / 상태).
 
 ```html
 <input value="Alice">
 ```
 
-sau khi user sửa thành `Bob`, `input.value` là current state còn `input.defaultValue` liên quan reset/default state. Checkbox có `checked` và `defaultChecked`; option có `selected` và `defaultSelected`.
+sau khi người dùng (user / 사용자) sửa thành `Bob`, `input.value` là trạng thái hiện tại (current state / 현재 상태) còn `input.defaultValue` liên quan reset/default trạng thái (state / 상태). Checkbox có `checked` và `defaultChecked`; option có `selected` và `defaultSelected`.
 
-Đây là một ví dụ quan trọng cho relationship giữa markup attribute và DOM property.
+Đây là một ví dụ quan trọng cho relationship giữa markup attribute và DOM thuộc tính (property / 속성).
 
 ---
 
 ## 20. `dirname` và `capture`
 
-`dirname` cho phép browser submit text direction metadata cùng field, hữu ích với international user-generated content.
+`dirname` cho phép trình duyệt (browser / 브라우저) submit văn bản (text / 텍스트) direction siêu dữ liệu (metadata / 메타데이터) cùng trường dữ liệu (field / 필드), hữu ích với international user-generated content.
 
-`capture` trên file input là hint cho mobile capture source:
+`capture` trên tệp (file / 파일) đầu vào (input / 입력) là hint cho mobile capture nguồn (source / 소스):
 
 ```html
 <input
@@ -337,25 +340,25 @@ sau khi user sửa thành `Bob`, `input.value` là current state còn `input.def
   capture="environment">
 ```
 
-Nó không phải security/permission guarantee và UX có thể khác theo browser/device.
+Nó không phải bảo mật (security / 보안)/permission guarantee và UX có thể khác theo trình duyệt (browser / 브라우저)/thiết bị (device / 장치).
 
 ---
 
-# PHẦN 4 — DOM RELATION VÀ DOM CLOBBERING
+# PHẦN 4 — DOM quan hệ (relation / 관계) VÀ DOM CLOBBERING
 
-## 21. Attribute không đồng nghĩa live property
+## 21. Attribute không đồng nghĩa live thuộc tính (property / 속성)
 
-Markup là initial declarative state; DOM object có live properties. Ví dụ user có thể thay đổi `input.value` mà `getAttribute("value")` vẫn phản ánh initial/default markup.
+Markup là initial declarative trạng thái (state / 상태); DOM đối tượng (object / 객체) có live properties. Ví dụ người dùng (user / 사용자) có thể thay đổi `input.value` mà `getAttribute("value")` vẫn phản ánh initial/default markup.
 
 Tương tự, `a.getAttribute("href")` có thể là relative URL `/users`, còn `a.href` thường là URL đã được resolve thành absolute URL.
 
-Senior cần biết attribute reflection rules khác nhau theo từng API thay vì assume attribute/property luôn sync hai chiều.
+Cấp cao (senior / 시니어) cần biết attribute reflection rules khác nhau theo từng API thay vì assume attribute/thuộc tính (property / 속성) luôn sync hai chiều.
 
 ---
 
 ## 22. DOM clobbering
 
-HTML có historical named-access behavior. Một form control có `name="method"` hoặc `name="submit"` có thể collide với property mà code tưởng là built-in member.
+HTML có historical named-access hành vi (behavior / 동작). Một form điều khiển (control / 제어) có `name="method"` hoặc `name="submit"` có thể collide với thuộc tính (property / 속성) mà mã (code / 코드) tưởng là built-in member.
 
 ```html
 <form id="user-form">
@@ -363,9 +366,9 @@ HTML có historical named-access behavior. Một form control có `name="method"
 </form>
 ```
 
-Với untrusted markup, named access có thể góp phần tạo security bugs. Tránh relying vào magic globals hoặc properties do `id`/`name` tự expose. Dùng explicit selectors, `form.elements.namedItem()` và APIs như `requestSubmit()`.
+Với untrusted markup, named truy cập (access / 접근) có thể góp phần tạo bảo mật (security / 보안) bugs. Tránh relying vào magic globals hoặc properties do `id`/`name` tự expose. Dùng tường minh (explicit / 명시적) selectors, `form.elements.namedItem()` và APIs như `requestSubmit()`.
 
-DOM không nên được dùng như trusted configuration store.
+DOM không nên được dùng như trusted cấu hình (configuration / 구성) store.
 
 ---
 
@@ -373,7 +376,7 @@ DOM không nên được dùng như trusted configuration store.
 
 ## 23. Microdata
 
-Microdata là structured-data mechanism native của HTML với `itemscope`, `itemtype`, `itemprop`, `itemid`, `itemref`.
+Microdata là structured-data cơ chế (mechanism / 메커니즘) bản địa (native / 네이티브) của HTML với `itemscope`, `itemtype`, `itemprop`, `itemid`, `itemref`.
 
 ```html
 <article
@@ -385,7 +388,7 @@ Microdata là structured-data mechanism native của HTML với `itemscope`, `it
 </article>
 ```
 
-JSON-LD thường dễ quản lý hơn trong SEO architecture hiện đại, nhưng Microdata vẫn quan trọng khi audit CMS hoặc legacy structured markup. Browser không biến Microdata thành visual behavior; nó bổ sung machine-readable relationships trên document.
+JSON-LD thường dễ quản lý hơn trong SEO kiến trúc (architecture / 아키텍처) hiện đại, nhưng Microdata vẫn quan trọng khi kiểm tra (audit / 감사) CMS hoặc legacy structured markup. trình duyệt (browser / 브라우저) không biến Microdata thành visual hành vi (behavior / 동작); nó bổ sung machine-readable relationships trên document.
 
 ---
 
@@ -407,7 +410,7 @@ Content không participate như ordinary rendered content cho tới khi được
 
 ## 25. Declarative Shadow DOM
 
-Server có thể gửi:
+Máy chủ (server / 서버) có thể gửi:
 
 ```html
 <user-card>
@@ -421,13 +424,13 @@ Server có thể gửi:
 </user-card>
 ```
 
-Browser có thể attach shadow root ngay trong parse stage. Điều này đặc biệt hữu ích cho SSR Web Components vì encapsulated DOM/style có thể tồn tại trước JavaScript boot.
+Trình duyệt (browser / 브라우저) có thể attach shadow gốc (root / 루트) ngay trong parse stage. Điều này đặc biệt hữu ích cho SSR Web Components vì encapsulated DOM/style có thể tồn tại trước JavaScript boot.
 
-`shadowrootmode="open"` cho phép normal `host.shadowRoot` access; `closed` không expose root qua getter thông thường nhưng không phải security sandbox. `shadowrootdelegatesfocus` ảnh hưởng focus delegation; advanced options như clonable behavior cần check compatibility khi infrastructure phụ thuộc chúng.
+`shadowrootmode="open"` cho phép normal `host.shadowRoot` truy cập (access / 접근); `closed` không expose gốc (root / 루트) qua getter thông thường nhưng không phải bảo mật (security / 보안) sandbox. `shadowrootdelegatesfocus` ảnh hưởng focus delegation; advanced options như clonable hành vi (behavior / 동작) cần check tính tương thích (compatibility / 호환성) khi hạ tầng (infrastructure / 인프라) phụ thuộc chúng.
 
 ---
 
-## 26. Slots và composed tree
+## 26. Slots và composed cây (tree / 트리)
 
 Shadow DOM dùng `slot` để phân phối light-DOM content:
 
@@ -441,7 +444,7 @@ Shadow DOM dùng `slot` để phân phối light-DOM content:
 </user-card>
 ```
 
-Đây là lý do source/light DOM, shadow DOM, rendered flat/composed tree và accessibility tree không phải lúc nào giống nhau. Khi debug focus hoặc accessible name trong Web Components, phải biết node đang tồn tại ở tree nào.
+Đây là lý do nguồn (source / 소스)/light DOM, shadow DOM, rendered flat/composed cây (tree / 트리) và cây khả năng tiếp cận (accessibility tree / 접근성 트리) không phải lúc nào giống nhau. Khi gỡ lỗi (debug / 디버그) focus hoặc accessible name trong Web Components, phải biết nút (node / 노드) đang tồn tại ở cây (tree / 트리) nào.
 
 ---
 
@@ -453,17 +456,17 @@ Autonomous custom element phải có dấu `-`:
 <user-card></user-card>
 ```
 
-JavaScript register qua `customElements.define()`. Customized built-in model còn có `is`, nhưng architecture/support cần được kiểm tra kỹ.
+JavaScript register qua `customElements.define()`. Customized built-in mô hình (model / 모델) còn có `is`, nhưng kiến trúc (architecture / 아키텍처)/hỗ trợ (support / 지원) cần được kiểm tra kỹ.
 
-Advanced components có thể tham gia form model thông qua `ElementInternals`. Điều này powerful cho design systems nhưng không miễn bạn khỏi việc implement labels, validity, form value và accessibility semantics. Nếu native control đáp ứng requirement thì native element thường là lựa chọn ít lỗi hơn.
+Advanced components có thể tham gia form mô hình (model / 모델) thông qua `ElementInternals`. Điều này powerful cho thiết kế (design / 설계) các hệ thống (systems / 시스템들) nhưng không miễn bạn khỏi việc implement labels, validity, form giá trị (value / 값) và khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론). Nếu bản địa (native / 네이티브) điều khiển (control / 제어) đáp ứng yêu cầu (requirement / 요구사항) thì bản địa (native / 네이티브) element thường là lựa chọn ít lỗi hơn.
 
 ---
 
-# PHẦN 7 — HIDDEN, POPOVER VÀ TOP LAYER
+# PHẦN 7 — HIDDEN, POPOVER VÀ TOP tầng (layer / 계층)
 
 ## 28. `hidden="until-found"`
 
-Ordinary `hidden` nói content hiện tại không relevant/presented. `hidden="until-found"` cho phép content vẫn có thể được browser reveal khi find-in-page hoặc fragment navigation tìm thấy target trong supporting behavior.
+Ordinary `hidden` nói content hiện tại không relevant/presented. `hidden="until-found"` cho phép content vẫn có thể được trình duyệt (browser / 브라우저) reveal khi find-in-page hoặc fragment điều hướng (navigation / 내비게이션) tìm thấy mục tiêu (target / 대상) trong supporting hành vi (behavior / 동작).
 
 ```html
 <section id="advanced" hidden="until-found">
@@ -471,30 +474,30 @@ Ordinary `hidden` nói content hiện tại không relevant/presented. `hidden="
 </section>
 ```
 
-`beforematch` có thể được dispatch trước reveal để application prepare surrounding UI. Đây là ví dụ browser-native Find/navigation tích hợp với application state.
+`beforematch` có thể được dispatch trước reveal để ứng dụng (application / 애플리케이션) prepare surrounding UI. Đây là ví dụ browser-native Find/điều hướng (navigation / 내비게이션) tích hợp với ứng dụng (application / 애플리케이션) trạng thái (state / 상태).
 
 ---
 
 ## 29. Popover modes
 
-Popover API tạo floating UI mà browser quản lý show/hide/top-layer behavior.
+Popover API tạo floating UI mà trình duyệt (browser / 브라우저) quản lý show/hide/top-layer hành vi (behavior / 동작).
 
 ```html
 <button popovertarget="help">Help</button>
 <div id="help" popover>...</div>
 ```
 
-`auto` phù hợp với popovers có light dismiss; `manual` cho application control persistence; `hint` hướng tới transient hint/tooltip-like interactions trong supporting browsers. `popovertargetaction` có thể yêu cầu `show`, `hide` hoặc `toggle`.
+`auto` phù hợp với popovers có light dismiss; `manual` cho ứng dụng (application / 애플리케이션) điều khiển (control / 제어) persistence; `hint` hướng tới transient hint/tooltip-like interactions trong supporting browsers. `popovertargetaction` có thể yêu cầu `show`, `hide` hoặc `toggle`.
 
-Popover không tự quyết định business semantics của content. Một menu vẫn cần đúng menu/navigation/control semantics; Popover chỉ giải quyết overlay lifecycle/top-layer primitive.
+Popover không tự quyết định nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론) của content. Một menu vẫn cần đúng menu/điều hướng (navigation / 내비게이션)/điều khiển (control / 제어) ngữ nghĩa (semantics / 의미론); Popover chỉ giải quyết overlay vòng đời (lifecycle / 생명주기)/top-layer thành phần nguyên thủy (primitive / 기본 요소).
 
 ---
 
-## 30. Top layer
+## 30. Top tầng (layer / 계층)
 
-Top layer không phải `z-index` cực lớn. Nó là browser-managed layer dành cho một số UI như modal dialog và popover. Vì vậy nó tránh nhiều vấn đề ancestor stacking context hoặc overflow clipping mà custom overlay gặp.
+Top tầng (layer / 계층) không phải `z-index` cực lớn. Nó là browser-managed tầng (layer / 계층) dành cho một số UI như modal dialog và popover. Vì vậy nó tránh nhiều vấn đề ancestor ngữ cảnh xếp chồng (stacking context / 쌓임 맥락) hoặc overflow clipping mà custom overlay gặp.
 
-Khi native top-layer primitive phù hợp, thường tốt hơn việc bắt đầu bằng `position: fixed; z-index: 999999`.
+Khi bản địa (native / 네이티브) top-layer thành phần nguyên thủy (primitive / 기본 요소) phù hợp, thường tốt hơn việc bắt đầu bằng `position: fixed; z-index: 999999`.
 
 ---
 
@@ -502,17 +505,17 @@ Khi native top-layer primitive phù hợp, thường tốt hơn việc bắt đ�
 
 ## 31. Modal và non-modal dialog
 
-`dialog.show()` mở non-modal; `dialog.showModal()` mở modal. Modal dialog tham gia top layer và browser quản lý surrounding interaction theo modal model.
+`dialog.show()` mở non-modal; `dialog.showModal()` mở modal. Modal dialog tham gia top tầng (layer / 계층) và trình duyệt (browser / 브라우저) quản lý surrounding tương tác (interaction / 상호작용) theo modal mô hình (model / 모델).
 
-`cancel` liên quan platform close request như Escape; `close` xảy ra sau khi dialog đóng. `form method="dialog"` cho phép button submit đóng dialog mà không gửi network request.
+`cancel` liên quan nền tảng (platform / 플랫폼) close yêu cầu (request / 요청) như Escape; `close` xảy ra sau khi dialog đóng. `form method="dialog"` cho phép button submit đóng dialog mà không gửi mạng (network / 네트워크) yêu cầu (request / 요청).
 
-Modern `closedby` cho phép mô tả close behavior như `any`, `closerequest` hoặc `none` trong supporting browsers. Vì đây là feature mới hơn, production cần check target-browser compatibility.
+Hiện đại (modern / 현대적) `closedby` cho phép mô tả close hành vi (behavior / 동작) như `any`, `closerequest` hoặc `none` trong supporting browsers. Vì đây là tính năng (feature / 기능) mới hơn, môi trường vận hành (production / 운영 환경) cần check target-browser tính tương thích (compatibility / 호환성).
 
 ---
 
 ## 32. `command` và `commandfor`
 
-Modern HTML đang mở rộng declarative interaction:
+Hiện đại (modern / 현대적) HTML đang mở rộng declarative tương tác (interaction / 상호작용):
 
 ```html
 <button
@@ -531,7 +534,7 @@ Modern HTML đang mở rộng declarative interaction:
 </dialog>
 ```
 
-Các commands như `show-modal`, `close`, `request-close` có thể giảm JavaScript boilerplate. Ý nghĩa senior ở đây là luôn kiểm tra native platform trước khi tự xây một state machine custom, nhưng feature mới phải được progressive-enhance thay vì assume support universal.
+Các commands như `show-modal`, `close`, `request-close` có thể giảm JavaScript boilerplate. Ý nghĩa cấp cao (senior / 시니어) ở đây là luôn kiểm tra bản địa (native / 네이티브) nền tảng (platform / 플랫폼) trước khi tự xây một máy trạng thái (state machine / 상태 머신) custom, nhưng tính năng (feature / 기능) mới phải được progressive-enhance thay vì assume hỗ trợ (support / 지원) universal.
 
 ---
 
@@ -539,7 +542,7 @@ Các commands như `show-modal`, `close`, `request-close` có thể giảm JavaS
 
 ## 33. `<selectedcontent>` và rich options
 
-Classic select rất mạnh về keyboard/mobile/accessibility nhưng khó style. Customizable select model cho browser hỗ trợ richer markup trong select trong những môi trường phù hợp.
+Classic select rất mạnh về keyboard/mobile/khả năng tiếp cận (accessibility / 접근성) nhưng khó style. Customizable select mô hình (model / 모델) cho trình duyệt (browser / 브라우저) hỗ trợ richer markup trong select trong những môi trường phù hợp.
 
 Concept:
 
@@ -556,15 +559,15 @@ Concept:
 </select>
 ```
 
-`selectedcontent` hiển thị content tương ứng với selected option theo platform model. Đây là feature hiện đại nên phải test browser/framework/SSR compatibility. Progressive enhancement là strategy đúng: browser mới được richer styling, browser cũ vẫn dùng usable native select.
+`selectedcontent` hiển thị content tương ứng với selected option theo nền tảng (platform / 플랫폼) mô hình (model / 모델). Đây là tính năng (feature / 기능) hiện đại nên phải kiểm thử (test / 테스트) trình duyệt (browser / 브라우저)/khung phần mềm (framework / 프레임워크)/SSR tính tương thích (compatibility / 호환성). Progressive enhancement là chiến lược (strategy / 전략) đúng: trình duyệt (browser / 브라우저) mới được richer styling, trình duyệt (browser / 브라우저) cũ vẫn dùng usable bản địa (native / 네이티브) select.
 
 ---
 
-# PHẦN 10 — ADVANCED RESOURCE, LINK VÀ REQUEST ATTRIBUTES
+# PHẦN 10 — ADVANCED tài nguyên (resource / 자원), LINK VÀ yêu cầu (request / 요청) ATTRIBUTES
 
 ## 34. `referrerpolicy`
 
-`referrerpolicy` có thể xuất hiện trên link, anchor, image, script, iframe và một số resource elements. Nó kiểm soát lượng referrer information browser gửi cùng request.
+`referrerpolicy` có thể xuất hiện trên link, anchor, ảnh (image / 이미지), script, iframe và một số tài nguyên (resource / 자원) elements. Nó kiểm soát lượng referrer thông tin (information / 정보) trình duyệt (browser / 브라우저) gửi cùng yêu cầu (request / 요청).
 
 ```html
 <a
@@ -574,13 +577,13 @@ Concept:
 </a>
 ```
 
-Policies như `no-referrer`, `origin`, `same-origin`, `strict-origin`, `strict-origin-when-cross-origin` thuộc privacy/security request behavior. Chúng không thay authorization.
+Policies như `no-referrer`, `origin`, `same-origin`, `strict-origin`, `strict-origin-when-cross-origin` thuộc privacy/bảo mật (security / 보안) yêu cầu (request / 요청) hành vi (behavior / 동작). Chúng không thay authorization.
 
 ---
 
-## 35. `crossorigin` và CORS mode
+## 35. `crossorigin` và CORS chế độ (mode / 모드)
 
-`crossorigin` không chỉ là một string decoration. Trên các resource elements phù hợp, nó thay đổi CORS request/response handling.
+`crossorigin` không chỉ là một string decoration. Trên các tài nguyên (resource / 자원) elements phù hợp, nó thay đổi CORS yêu cầu (request / 요청)/phản hồi (response / 응답) handling.
 
 Ví dụ:
 
@@ -591,9 +594,9 @@ Ví dụ:
   alt="Product">
 ```
 
-Nếu cross-origin image được draw vào canvas mà CORS không cho phép, canvas có thể trở thành **tainted**, khiến browser block pixel-reading/export APIs. Vì vậy `crossorigin` có browser-processing consequence rõ ràng.
+Nếu cross-origin ảnh (image / 이미지) được draw vào canvas mà CORS không cho phép, canvas có thể trở thành **tainted**, khiến trình duyệt (browser / 브라우저) khối (block / 블록) pixel-reading/export APIs. Vì vậy `crossorigin` có browser-processing consequence rõ ràng.
 
-Trên script/link/font/SRI scenarios, CORS mode cũng có thể ảnh hưởng việc resource được chấp nhận. Hãy cấu hình cùng server response headers; attribute một mình không magically cấp quyền cross-origin.
+Trên script/link/font/SRI scenarios, CORS chế độ (mode / 모드) cũng có thể ảnh hưởng việc tài nguyên (resource / 자원) được chấp nhận. Hãy cấu hình cùng máy chủ (server / 서버) phản hồi (response / 응답) headers; attribute một mình không magically cấp quyền cross-origin.
 
 ---
 
@@ -607,7 +610,7 @@ Anchor có thể có `ping`:
 </a>
 ```
 
-Browser có thể gửi auditing requests khi navigation xảy ra. Vì có privacy implication và analytics ecosystem còn nhiều cách khác, senior chủ yếu cần biết để audit network behavior thay vì coi đây là default tracking solution.
+Trình duyệt (browser / 브라우저) có thể gửi auditing requests khi điều hướng (navigation / 내비게이션) xảy ra. Vì có privacy implication và analytics ecosystem còn nhiều cách khác, cấp cao (senior / 시니어) chủ yếu cần biết để kiểm tra (audit / 감사) mạng (network / 네트워크) hành vi (behavior / 동작) thay vì coi đây là default tracking solution.
 
 ---
 
@@ -622,29 +625,29 @@ Phần này nối mạch bài học với “37. `hreflang`, alternate resources
   href="https://example.com/ko/page">
 ```
 
-`hreflang` mô tả language relationship cho alternate page/resource. Browser/search systems có thể dùng metadata này; nó không tự dịch content và không thay `lang` trên document.
+`hreflang` mô tả ngôn ngữ (language / 언어) relationship cho alternate page/tài nguyên (resource / 자원). trình duyệt (browser / 브라우저)/tìm kiếm (search / 검색) các hệ thống (systems / 시스템들) có thể dùng siêu dữ liệu (metadata / 메타데이터) này; nó không tự dịch content và không thay `lang` trên document.
 
 ---
 
 ## 38. Responsive preload và priority hints
 
-Nếu LCP image có `srcset`, preload một hard-coded candidate có thể khiến browser fetch resource không phù hợp. Responsive image preload có thể cần `imagesrcset`/`imagesizes` tương ứng.
+Nếu LCP ảnh (image / 이미지) có `srcset`, preload một hard-coded candidate có thể khiến trình duyệt (browser / 브라우저) fetch tài nguyên (resource / 자원) không phù hợp. Responsive ảnh (image / 이미지) preload có thể cần `imagesrcset`/`imagesizes` tương ứng.
 
-`fetchpriority` là hint, không phải scheduler command tuyệt đối. Nếu mọi resource đều `high`, priority signal mất ý nghĩa.
+`fetchpriority` là hint, không phải scheduler command tuyệt đối. Nếu mọi tài nguyên (resource / 자원) đều `high`, priority tín hiệu (signal / 신호) mất ý nghĩa.
 
-Performance decisions nên đo bằng Network panel, Core Web Vitals/RUM hoặc profiler thay vì thêm preload/preconnect theo cảm giác.
+Hiệu năng (performance / 성능) decisions nên đo bằng mạng (network / 네트워크) panel, cốt lõi (core / 핵심) Web Vitals/RUM hoặc profiler thay vì thêm preload/preconnect theo cảm giác.
 
 ---
 
 ## 39. Parser-blocking, render-blocking và preload scanner
 
-Parser-blocking nghĩa main HTML parser phải dừng/coordinate với script/resource. Render-blocking nghĩa browser trì hoãn paint vì resource cần thiết. Hai concepts không phải synonym.
+Parser-blocking nghĩa main HTML parser phải dừng/coordinate với script/tài nguyên (resource / 자원). Render-blocking nghĩa trình duyệt (browser / 브라우저) trì hoãn paint vì tài nguyên (resource / 자원) cần thiết. Hai concepts không phải synonym.
 
-Browser còn có speculative/preload scanner để discover resource URLs sớm. Vì vậy source order và việc URL có xuất hiện trực tiếp trong HTML hay chỉ được JavaScript tạo sau đó có thể ảnh hưởng thời điểm fetch.
+Trình duyệt (browser / 브라우저) còn có speculative/preload scanner để discover tài nguyên (resource / 자원) URLs sớm. Vì vậy nguồn (source / 소스) thứ tự (order / 순서) và việc URL có xuất hiện trực tiếp trong HTML hay chỉ được JavaScript tạo sau đó có thể ảnh hưởng thời điểm fetch.
 
 ---
 
-# PHẦN 11 — METADATA ADVANCED
+# PHẦN 11 — siêu dữ liệu (metadata / 메타데이터) ADVANCED
 
 ## 40. `meta http-equiv` không phải replacement hoàn chỉnh cho HTTP headers
 
@@ -656,7 +659,7 @@ Browser còn có speculative/preload scanner để discover resource URLs sớm.
   content="default-src 'self'">
 ```
 
-hoặc legacy refresh behavior:
+hoặc legacy refresh hành vi (behavior / 동작):
 
 ```html
 <meta
@@ -664,7 +667,7 @@ hoặc legacy refresh behavior:
   content="5;url=/next">
 ```
 
-Browser chỉ hỗ trợ những directives cụ thể. Khi bạn kiểm soát server, real HTTP response headers thường là layer rõ và mạnh hơn cho security/network policy, đặc biệt với CSP. Đừng nhìn `http-equiv` rồi nghĩ bất kỳ HTTP header nào cũng có thể được mô phỏng trong HTML.
+Trình duyệt (browser / 브라우저) chỉ hỗ trợ những directives cụ thể. Khi bạn kiểm soát máy chủ (server / 서버), real HTTP phản hồi (response / 응답) headers thường là tầng (layer / 계층) rõ và mạnh hơn cho bảo mật (security / 보안)/chính sách mạng (network policy / 네트워크 정책), đặc biệt với CSP. Đừng nhìn `http-equiv` rồi nghĩ bất kỳ HTTP header nào cũng có thể được mô phỏng trong HTML.
 
 ---
 
@@ -678,25 +681,25 @@ Phần này nối mạch bài học với “41. `meta name="color-scheme"`”, 
   content="light dark">
 ```
 
-Metadata này nói document hỗ trợ những color schemes nào, giúp browser chọn default rendering cho form controls, scrollbars hoặc canvas/background-related browser UI trong applicable contexts. Nó không thay CSS theme system; CSS vẫn chịu trách nhiệm presentation cụ thể.
+Siêu dữ liệu (metadata / 메타데이터) này nói document hỗ trợ những color schemes nào, giúp trình duyệt (browser / 브라우저) chọn default rendering cho form controls, scrollbars hoặc canvas/background-related trình duyệt (browser / 브라우저) UI trong applicable contexts. Nó không thay CSS theme hệ thống (system / 시스템); CSS vẫn chịu trách nhiệm presentation cụ thể.
 
-Accessibility implication là UA controls có thể hòa hợp tốt hơn với light/dark environment và tránh contrast mismatch do browser default khác theme app.
-
----
-
-## 42. Document-level referrer policy
-
-Ngoài element-level `referrerpolicy`, document có thể dùng metadata phù hợp để đặt referrer policy chung. Senior nên hiểu policy có thể đến từ HTTP header, document metadata hoặc element-level override tùy mechanism.
-
-Nguyên tắc thiết kế là policy toàn site/document nên được đặt ở boundary dễ audit; element-level override chỉ dùng khi resource/link có requirement riêng.
+Khả năng tiếp cận (accessibility / 접근성) implication là UA controls có thể hòa hợp tốt hơn với light/dark môi trường (environment / 환경) và tránh contrast mismatch do trình duyệt (browser / 브라우저) default khác theme app.
 
 ---
 
-# PHẦN 12 — ACCESSIBILITY VÀ ARIA NHƯ MỘT API LAYER
+## 42. Document-level referrer chính sách (policy / 정책)
 
-## 43. Native HTML trước ARIA
+Ngoài element-level `referrerpolicy`, document có thể dùng siêu dữ liệu (metadata / 메타데이터) phù hợp để đặt referrer chính sách (policy / 정책) chung. cấp cao (senior / 시니어) nên hiểu chính sách (policy / 정책) có thể đến từ HTTP header, document siêu dữ liệu (metadata / 메타데이터) hoặc element-level override tùy cơ chế (mechanism / 메커니즘).
 
-Nguyên tắc quan trọng nhất là: nếu native HTML element đã có semantics và behavior cần thiết, hãy dùng nó trước khi tạo custom element bằng role.
+Nguyên tắc thiết kế là chính sách (policy / 정책) toàn site/document nên được đặt ở ranh giới (boundary / 경계) dễ kiểm tra (audit / 감사); element-level override chỉ dùng khi tài nguyên (resource / 자원)/link có yêu cầu (requirement / 요구사항) riêng.
+
+---
+
+# PHẦN 12 — khả năng tiếp cận (accessibility / 접근성) VÀ ARIA NHƯ MỘT API tầng (layer / 계층)
+
+## 43. bản địa (native / 네이티브) HTML trước ARIA
+
+Nguyên tắc quan trọng nhất là: nếu bản địa (native / 네이티브) HTML element đã có ngữ nghĩa (semantics / 의미론) và hành vi (behavior / 동작) cần thiết, hãy dùng nó trước khi tạo custom element bằng role.
 
 ```html
 <button type="button">Save</button>
@@ -708,13 +711,13 @@ thường tốt hơn:
 <div role="button" tabindex="0">Save</div>
 ```
 
-`role="button"` có thể làm accessibility API expose node như button, nhưng nó không tự thêm Space/Enter activation, disabled semantics, form behavior hoặc keyboard handling. ARIA thay đổi semantic exposure; nó không tự tạo browser behavior tương ứng.
+`role="button"` có thể làm khả năng tiếp cận (accessibility / 접근성) API expose nút (node / 노드) như button, nhưng nó không tự thêm không gian (space / 공간)/Enter activation, disabled ngữ nghĩa (semantics / 의미론), form hành vi (behavior / 동작) hoặc keyboard handling. ARIA thay đổi ngữ nghĩa (semantic / 의미적) exposure; nó không tự tạo trình duyệt (browser / 브라우저) hành vi (behavior / 동작) tương ứng.
 
 ---
 
 ## 44. Accessible name và description
 
-Native `<label>` hoặc element text thường là nguồn accessible name tốt nhất. `aria-labelledby` cho phép name đến từ node khác; `aria-label` cung cấp explicit string khi visible label không phù hợp, ví dụ icon-only button.
+Bản địa (native / 네이티브) `<label>` hoặc element văn bản (text / 텍스트) thường là nguồn accessible name tốt nhất. `aria-labelledby` cho phép name đến từ nút (node / 노드) khác; `aria-label` cung cấp tường minh (explicit / 명시적) string khi visible label không phù hợp, ví dụ icon-only button.
 
 Sai:
 
@@ -722,7 +725,7 @@ Sai:
 <button aria-label="Delete">Save</button>
 ```
 
-Visual user thấy `Save` còn assistive technology có thể announce `Delete`, tạo severe mismatch.
+Visual người dùng (user / 사용자) thấy `Save` còn assistive technology có thể announce `Delete`, tạo severe mismatch.
 
 Description là channel khác name:
 
@@ -734,7 +737,7 @@ Description là channel khác name:
 <p id="password-help">At least 12 characters.</p>
 ```
 
-Name trả lời “control là gì”; description cung cấp hướng dẫn bổ sung.
+Name trả lời “điều khiển (control / 제어) là gì”; description cung cấp hướng dẫn bổ sung.
 
 ---
 
@@ -750,15 +753,15 @@ Phần này nối mạch bài học với “45. `aria-expanded` và `aria-contr
 </button>
 ```
 
-`aria-expanded` expose state cho accessibility API nhưng JavaScript hoặc native behavior phải cập nhật nó khi state thay đổi. `aria-controls` mô tả relationship với element được control; nó không tự open/close target.
+`aria-expanded` expose trạng thái (state / 상태) cho khả năng tiếp cận (accessibility / 접근성) API nhưng JavaScript hoặc bản địa (native / 네이티브) hành vi (behavior / 동작) phải cập nhật nó khi trạng thái (state / 상태) thay đổi. `aria-controls` mô tả relationship với element được điều khiển (control / 제어); nó không tự open/close mục tiêu (target / 대상).
 
-Nếu native `details/summary` hoặc Popover đáp ứng use case, chúng thường giảm nguy cơ state visual và ARIA state bị lệch nhau.
+Nếu bản địa (native / 네이티브) `details/summary` hoặc Popover đáp ứng use trường hợp (case / 사례), chúng thường giảm nguy cơ trạng thái (state / 상태) visual và ARIA trạng thái (state / 상태) bị lệch nhau.
 
 ---
 
 ## 46. `aria-invalid` và `aria-errormessage`
 
-Khi validation error xuất hiện, control có thể expose invalid state và reference error text:
+Khi kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) xuất hiện, điều khiển (control / 제어) có thể expose invalid trạng thái (state / 상태) và tham chiếu (reference / 참조) lỗi (error / 오류) văn bản (text / 텍스트):
 
 ```html
 <label for="email">Email</label>
@@ -773,51 +776,51 @@ Khi validation error xuất hiện, control có thể expose invalid state và r
 </p>
 ```
 
-`aria-invalid` nói current value invalid; `aria-errormessage` identifies error message. Hai attributes không validate value và không automatically show text. Application/native validation vẫn phải quyết định lỗi và manage lifecycle của message.
+`aria-invalid` nói hiện tại (current / 현재) giá trị (value / 값) invalid; `aria-errormessage` identifies lỗi (error / 오류) message. Hai attributes không validate giá trị (value / 값) và không automatically show văn bản (text / 텍스트). ứng dụng (application / 애플리케이션)/bản địa (native / 네이티브) kiểm tra hợp lệ (validation / 검증) vẫn phải quyết định lỗi và manage vòng đời (lifecycle / 생명주기) của message.
 
-Nếu input đang valid, đừng để stale `aria-invalid="true"` chỉ vì UI đã từng có error.
+Nếu đầu vào (input / 입력) đang valid, đừng để stale `aria-invalid="true"` chỉ vì UI đã từng có lỗi (error / 오류).
 
 ---
 
-## 47. `aria-busy`, live regions và dynamic updates
+## 47. `aria-busy`, live regions và động (dynamic / 동적) updates
 
-`aria-busy="true"` có thể báo rằng một region đang được cập nhật và assistive technology có thể trì hoãn xử lý announcements phù hợp. `aria-live` dùng cho dynamic messages cần announce mà focus không chuyển tới đó.
+`aria-busy="true"` có thể báo rằng một region đang được cập nhật và assistive technology có thể trì hoãn xử lý announcements phù hợp. `aria-live` dùng cho động (dynamic / 동적) messages cần announce mà focus không chuyển tới đó.
 
-Không biến toàn app thành `aria-live`. Live region quá rộng hoặc `assertive` quá nhiều sẽ gây noise/interruptions. Accessibility tốt là chọn đúng event cần announce, không phải thêm nhiều ARIA nhất có thể.
+Không biến toàn app thành `aria-live`. Live region quá rộng hoặc `assertive` quá nhiều sẽ gây noise/interruptions. khả năng tiếp cận (accessibility / 접근성) tốt là chọn đúng sự kiện (event / 이벤트) cần announce, không phải thêm nhiều ARIA nhất có thể.
 
 ---
 
 ## 48. `aria-hidden`, `hidden`, `inert` và `disabled` khác nhau
 
-`aria-hidden="true"` chủ yếu ảnh hưởng accessibility tree; element vẫn có thể visible. `hidden` nói content không được present/relevant theo HTML state. `inert` làm subtree non-interactive/focusable theo platform behavior. `disabled` áp cho supported controls và còn ảnh hưởng form submission.
+`aria-hidden="true"` chủ yếu ảnh hưởng cây khả năng tiếp cận (accessibility tree / 접근성 트리); element vẫn có thể visible. `hidden` nói content không được present/relevant theo HTML trạng thái (state / 상태). `inert` làm subtree non-interactive/focusable theo nền tảng (platform / 플랫폼) hành vi (behavior / 동작). `disabled` áp cho supported controls và còn ảnh hưởng form submission.
 
-Đặc biệt không đặt `aria-hidden="true"` trên ancestor chứa focusable controls; bạn có thể tạo UI mà keyboard focus tới được nhưng screen reader không thấy semantic tương ứng.
+Đặc biệt không đặt `aria-hidden="true"` trên ancestor chứa focusable controls; bạn có thể tạo UI mà keyboard focus tới được nhưng screen reader không thấy ngữ nghĩa (semantic / 의미적) tương ứng.
 
 ---
 
-# PHẦN 13 — SECURITY DEEPER
+# PHẦN 13 — bảo mật (security / 보안) DEEPER
 
 ## 49. Sanitization không phải remove `<script>`
 
 Untrusted HTML attack surface gồm event-handler attributes, dangerous URL schemes, SVG/foreign content, `srcdoc`, DOM clobbering và nhiều parser contexts khác. Regex remove `<script>` không phải sanitizer.
 
-Nếu application thực sự cho phép rich HTML input, dùng sanitizer được thiết kế cho HTML parser model và áp CSP/Trusted Types hoặc các defense phù hợp architecture. Nếu chỉ cần text, dùng text APIs thay vì HTML parsing APIs.
+Nếu ứng dụng (application / 애플리케이션) thực sự cho phép rich HTML đầu vào (input / 입력), dùng sanitizer được thiết kế cho HTML parser mô hình (model / 모델) và áp CSP/Trusted Types hoặc các defense phù hợp kiến trúc (architecture / 아키텍처). Nếu chỉ cần văn bản (text / 텍스트), dùng văn bản (text / 텍스트) APIs thay vì HTML parsing APIs.
 
 ---
 
 ## 50. URL-valued attributes
 
-Escaping HTML characters không tự làm URL safe. Nếu user-controlled value đi vào `href`, `src`, `action` hoặc tương tự, application còn phải validate allowed schemes/origins theo use case.
+Escaping HTML characters không tự làm URL safe. Nếu user-controlled giá trị (value / 값) đi vào `href`, `src`, `action` hoặc tương tự, ứng dụng (application / 애플리케이션) còn phải validate allowed schemes/origins theo use trường hợp (case / 사례).
 
-Ví dụ nếu feature chỉ cho external web links, allowlist `https:`/`http:` phù hợp hơn việc chấp nhận bất kỳ scheme nào. `javascript:` URL là lý do URL validation và HTML escaping là hai defense khác nhau.
+Ví dụ nếu tính năng (feature / 기능) chỉ cho bên ngoài (external / 외부) web links, allowlist `https:`/`http:` phù hợp hơn việc chấp nhận bất kỳ scheme nào. `javascript:` URL là lý do URL kiểm tra hợp lệ (validation / 검증) và HTML escaping là hai defense khác nhau.
 
 ---
 
 ## 51. `iframe srcdoc`, sandbox và permissions
 
-`srcdoc` là một HTML document execution context, không phải text container. Untrusted content cần sanitization và sandbox strategy.
+`srcdoc` là một HTML document thực thi (execution / 실행) ngữ cảnh (context / 맥락), không phải văn bản (text / 텍스트) bộ chứa (container / 컨테이너). Untrusted content cần sanitization và sandbox chiến lược (strategy / 전략).
 
-`sandbox` nên theo least privilege. `allow`/Permissions Policy chỉ cấp capabilities cần thiết. `referrerpolicy` kiểm soát referrer leakage. Một third-party iframe là browsing/security boundary chứ không chỉ là visual box.
+`sandbox` nên theo least privilege. `allow`/Permissions chính sách (policy / 정책) chỉ cấp capabilities cần thiết. `referrerpolicy` kiểm soát referrer leakage. Một third-party iframe là browsing/ranh giới bảo mật (security boundary / 보안 경계) chứ không chỉ là visual box.
 
 ---
 
@@ -825,33 +828,33 @@ Ví dụ nếu feature chỉ cho external web links, allowlist `https:`/`http:` 
 
 ## 52. Valid HTML quan trọng đặc biệt với SSR
 
-JSX có thể viết structure mà browser HTML parser sẽ repair. Nếu server output và browser DOM khác nhau trước khi React/Vue hydrate, framework có thể báo hydration mismatch hoặc replace nodes.
+JSX có thể viết cấu trúc (structure / 구조) mà trình duyệt (browser / 브라우저) HTML parser sẽ repair. Nếu máy chủ (server / 서버) đầu ra (output / 출력) và trình duyệt (browser / 브라우저) DOM khác nhau trước khi React/Vue hydrate, khung phần mềm (framework / 프레임워크) có thể báo hydration mismatch hoặc replace nodes.
 
-Browser không parse JSX; browser parse generated HTML. Vì vậy framework developer vẫn phải hiểu HTML content models, optional tags, table parsing và interactive-content restrictions.
+Trình duyệt (browser / 브라우저) không parse JSX; trình duyệt (browser / 브라우저) parse generated HTML. Vì vậy khung phần mềm (framework / 프레임워크) nhà phát triển (developer / 개발자) vẫn phải hiểu HTML content các mô hình (models / 모델들), optional tags, bảng (table / 테이블) parsing và interactive-content restrictions.
 
 ---
 
 ## 53. Declarative Shadow DOM và SSR
 
-Server-rendered custom component có thể gửi declarative shadow template để browser tạo shadow root trong parse stage. Điều này làm encapsulation/styles tồn tại trước JavaScript upgrade và giảm flash/mismatch trong một số Web Component architectures.
+Server-rendered custom thành phần (component / 컴포넌트) có thể gửi declarative shadow template để trình duyệt (browser / 브라우저) tạo shadow gốc (root / 루트) trong parse stage. Điều này làm encapsulation/styles tồn tại trước JavaScript upgrade và giảm flash/mismatch trong một số Web thành phần (component / 컴포넌트) architectures.
 
-Khi dùng, test parser behavior, framework support và serialization pipeline; tooling cũ có thể chưa hiểu content model/attributes mới.
+Khi dùng, kiểm thử (test / 테스트) parser hành vi (behavior / 동작), khung phần mềm (framework / 프레임워크) hỗ trợ (support / 지원) và serialization chuỗi xử lý (pipeline / 파이프라인); tooling cũ có thể chưa hiểu content mô hình (model / 모델)/attributes mới.
 
 ---
 
 # PHẦN 15 — LEGACY, DEPRECATED VÀ OBSOLETE HTML
 
-## 54. “Browser vẫn render” không có nghĩa markup còn hợp chuẩn để author
+## 54. “trình duyệt (browser / 브라우저) vẫn kết xuất (render / 렌더링)” không có nghĩa markup còn hợp chuẩn để author
 
-Web phải giữ backward compatibility với hàng chục năm nội dung cũ. Vì vậy browser engines vẫn có thể parse/render nhiều obsolete elements. Điều này không biến chúng thành lựa chọn đúng cho code mới.
+Web phải giữ backward tính tương thích (compatibility / 호환성) với hàng chục năm nội dung cũ. Vì vậy trình duyệt (browser / 브라우저) engines vẫn có thể parse/kết xuất (render / 렌더링) nhiều obsolete elements. Điều này không biến chúng thành lựa chọn đúng cho mã (code / 코드) mới.
 
-Khi maintain legacy system, hãy phân biệt hai câu hỏi: browser có compatibility behavior cho markup này không, và developer hiện đại có nên author markup này không. Câu trả lời có thể là “có render nhưng không nên viết mới”.
+Khi maintain legacy hệ thống (system / 시스템), hãy phân biệt hai câu hỏi: trình duyệt (browser / 브라우저) có tính tương thích (compatibility / 호환성) hành vi (behavior / 동작) cho markup này không, và nhà phát triển (developer / 개발자) hiện đại có nên author markup này không. Câu trả lời có thể là “có kết xuất (render / 렌더링) nhưng không nên viết mới”.
 
 ---
 
 ## 55. Presentational elements: `<font>`, `<center>`, `<big>` và `<tt>`
 
-Legacy HTML thường trộn structure với presentation:
+Legacy HTML thường trộn cấu trúc (structure / 구조) với presentation:
 
 ```html
 <center>
@@ -861,17 +864,17 @@ Legacy HTML thường trộn structure với presentation:
 </center>
 ```
 
-Modern HTML chuyển responsibility về đúng layer:
+Hiện đại (modern / 현대적) HTML chuyển responsibility về đúng tầng (layer / 계층):
 
 ```html
 <p class="important">Important</p>
 ```
 
-và CSS chịu font, color, alignment, size.
+và CSS chịu font, color, alignment, kích thước (size / 크기).
 
-`tt` từng tạo teletype/monospace presentation. Khi migrate, hãy chọn semantic replacement theo meaning: `code` cho source code, `kbd` cho user input, `samp` cho program output, `var` cho variable; nếu chỉ muốn monospace visual thì dùng CSS.
+`tt` từng tạo teletype/monospace presentation. Khi migrate, hãy chọn ngữ nghĩa (semantic / 의미적) replacement theo meaning: `code` cho mã nguồn (source code / 소스 코드), `kbd` cho người dùng (user / 사용자) đầu vào (input / 입력), `samp` cho program đầu ra (output / 출력), `var` cho variable; nếu chỉ muốn monospace visual thì dùng CSS.
 
-`big` không có semantic “quan trọng”; nếu nội dung quan trọng dùng `strong`, nếu chỉ cần cỡ chữ dùng CSS.
+`big` không có ngữ nghĩa (semantic / 의미적) “quan trọng”; nếu nội dung quan trọng dùng `strong`, nếu chỉ cần cỡ chữ dùng CSS.
 
 ---
 
@@ -883,7 +886,7 @@ và CSS chịu font, color, alignment, size.
 <s>$100</s> $70
 ```
 
-Nếu bạn đang biểu diễn một edit/deletion trong document history, dùng `del`:
+Nếu bạn đang biểu diễn một edit/deletion trong document lịch sử (history / 이력), dùng `del`:
 
 ```html
 <del>$100</del>
@@ -896,45 +899,45 @@ Nếu bạn đang biểu diễn một edit/deletion trong document history, dùn
 <abbr title="Application Programming Interface">API</abbr>
 ```
 
-Migration tốt không chỉ đổi tên tag; phải xác định meaning ban đầu rồi chọn semantic element mới.
+Di chuyển (migration / 마이그레이션) tốt không chỉ đổi tên tag; phải xác định meaning ban đầu rồi chọn ngữ nghĩa (semantic / 의미적) element mới.
 
 ---
 
 ## 57. `<marquee>`, `<blink>`, `<bgsound>` và motion/audio legacy
 
-Các elements kiểu `marquee`, `blink`, `bgsound` xuất phát từ era browser-specific/presentational HTML. Không dùng chúng trong application mới.
+Các elements kiểu `marquee`, `blink`, `bgsound` xuất phát từ era browser-specific/presentational HTML. Không dùng chúng trong ứng dụng (application / 애플리케이션) mới.
 
-Nếu animation thực sự cần thiết, CSS/Web Animations/JavaScript cung cấp control tốt hơn và có thể tôn trọng user preference như reduced motion. Auto-playing background audio thường là UX/accessibility anti-pattern và browser autoplay policies cũng hạn chế behavior này.
+Nếu animation thực sự cần thiết, CSS/Web Animations/JavaScript cung cấp điều khiển (control / 제어) tốt hơn và có thể tôn trọng người dùng (user / 사용자) preference như reduced motion. Auto-playing background audio thường là UX/khả năng tiếp cận (accessibility / 접근성) anti-pattern và trình duyệt (browser / 브라우저) autoplay policies cũng hạn chế hành vi (behavior / 동작) này.
 
 ---
 
 ## 58. `<frameset>`, `<frame>` và `<noframes>`
 
-Legacy frames chia một browser window thành nhiều browsing contexts bằng document structure đặc biệt. Chúng gây vấn đề với URLs/history, accessibility, navigation, printing và application architecture.
+Legacy frames chia một trình duyệt (browser / 브라우저) cửa sổ (window / 윈도우) thành nhiều browsing contexts bằng document cấu trúc (structure / 구조) đặc biệt. Chúng gây vấn đề với URLs/lịch sử (history / 이력), khả năng tiếp cận (accessibility / 접근성), điều hướng (navigation / 내비게이션), printing và ứng dụng (application / 애플리케이션) kiến trúc (architecture / 아키텍처).
 
-Modern page layout dùng CSS. Nếu thực sự cần embed một independent browsing context, `iframe` là element tương ứng nhưng phải dùng với `title`, sandbox/permissions và security review. `iframe` không phải replacement cho layout frameset; nó là embedding primitive.
+Hiện đại (modern / 현대적) page bố cục (layout / 레이아웃) dùng CSS. Nếu thực sự cần embed một independent browsing ngữ cảnh (context / 맥락), `iframe` là element tương ứng nhưng phải dùng với `title`, sandbox/permissions và bảo mật (security / 보안) rà soát (review / 검토). `iframe` không phải replacement cho bố cục (layout / 레이아웃) frameset; nó là embedding thành phần nguyên thủy (primitive / 기본 요소).
 
 ---
 
 ## 59. `<applet>`, `<param>`, `<object>` và plugin-era content
 
-`applet` thuộc era Java browser plugins và không còn là nền tảng web hiện đại. Migration thường là rewrite functionality bằng HTML/CSS/JavaScript/Web APIs hoặc chuyển sang application architecture khác.
+`applet` thuộc era Java trình duyệt (browser / 브라우저) plugins và không còn là nền tảng web hiện đại. di chuyển (migration / 마이그레이션) thường là rewrite functionality bằng HTML/CSS/JavaScript/Web APIs hoặc chuyển sang ứng dụng (application / 애플리케이션) kiến trúc (architecture / 아키텍처) khác.
 
-`param` gắn với old plugin/object parameter mechanisms và không phải lựa chọn authoring hiện đại. `object` vẫn có những embedding semantics riêng nhưng không nên được dùng để hồi sinh plugin architecture cũ.
+`param` gắn với old plugin/đối tượng (object / 객체) parameter mechanisms và không phải lựa chọn authoring hiện đại. `object` vẫn có những embedding ngữ nghĩa (semantics / 의미론) riêng nhưng không nên được dùng để hồi sinh plugin kiến trúc (architecture / 아키텍처) cũ.
 
 ---
 
 ## 60. `<isindex>`, `<keygen>`, `<listing>`, `<xmp>`, `<plaintext>` và các parser-era relics
 
-Một số obsolete elements tồn tại vì lịch sử HTML rất dài. `isindex` từng đại diện input/search primitive cũ; `keygen` từng liên quan key-generation UI; `listing`, `xmp`, `plaintext` gắn với những cách xử lý text/parser rất cũ.
+Một số obsolete elements tồn tại vì lịch sử HTML rất dài. `isindex` từng đại diện đầu vào (input / 입력)/tìm kiếm (search / 검색) thành phần nguyên thủy (primitive / 기본 요소) cũ; `keygen` từng liên quan key-generation UI; `listing`, `xmp`, `plaintext` gắn với những cách xử lý văn bản (text / 텍스트)/parser rất cũ.
 
-Khi gặp chúng trong code legacy, mục tiêu không phải học cách author lại mà là hiểu intent rồi migrate sang modern form controls hoặc `pre`/`code`/text escaping đúng context.
+Khi gặp chúng trong mã (code / 코드) legacy, mục tiêu không phải học cách author lại mà là hiểu intent rồi migrate sang hiện đại (modern / 현대적) form controls hoặc `pre`/`code`/văn bản (text / 텍스트) escaping đúng ngữ cảnh (context / 맥락).
 
 ---
 
-## 61. `<dir>` element khác `dir` global attribute
+## 61. `<dir>` element khác `dir` toàn cục (global / 전역) attribute
 
-Legacy `<dir>` element từng đại diện directory list và không nên dùng mới. Nhưng global attribute `dir="rtl"`, `dir="ltr"`, `dir="auto"` vẫn là modern, quan trọng cho bidirectional text.
+Legacy `<dir>` element từng đại diện directory danh sách (list / 목록) và không nên dùng mới. Nhưng toàn cục (global / 전역) attribute `dir="rtl"`, `dir="ltr"`, `dir="auto"` vẫn là hiện đại (modern / 현대적), quan trọng cho bidirectional văn bản (text / 텍스트).
 
 Đây là ví dụ điển hình cho việc cùng spelling có thể xuất hiện ở hai khái niệm lịch sử khác nhau. Đừng xóa `dir` attribute chỉ vì thấy `<dir>` element obsolete.
 
@@ -942,7 +945,7 @@ Legacy `<dir>` element từng đại diện directory list và không nên dùng
 
 ## 62. Presentational/legacy attributes
 
-Old HTML thường có attributes như `align`, `bgcolor`, `cellpadding`, `cellspacing`, `frameborder` hoặc presentational `border`. Modern authoring nên chuyển presentation sang CSS.
+Old HTML thường có attributes như `align`, `bgcolor`, `cellpadding`, `cellspacing`, `frameborder` hoặc presentational `border`. hiện đại (modern / 현대적) authoring nên chuyển presentation sang CSS.
 
 Ví dụ legacy:
 
@@ -953,9 +956,9 @@ Ví dụ legacy:
   cellspacing="0">
 ```
 
-Modern markup giữ table semantics còn CSS quản lý border/padding/spacing.
+Hiện đại (modern / 현대적) markup giữ bảng (table / 테이블) ngữ nghĩa (semantics / 의미론) còn CSS quản lý border/padding/spacing.
 
-Một số legacy attributes vẫn có parser compatibility hoặc special obsolete-but-conforming exceptions vì web compatibility. Đừng dựa vào việc validator/browser “vẫn nhận” để quyết định authoring style.
+Một số legacy attributes vẫn có parser tính tương thích (compatibility / 호환성) hoặc special obsolete-but-conforming exceptions vì web tính tương thích (compatibility / 호환성). Đừng dựa vào việc validator/trình duyệt (browser / 브라우저) “vẫn nhận” để quyết định authoring style.
 
 ---
 
@@ -969,7 +972,7 @@ HTML cũ thường có:
   type="text/javascript">
 ```
 
-Trong modern HTML, classic JavaScript không cần `language` và thường không cần `type="text/javascript"`:
+Trong hiện đại (modern / 현대적) HTML, classic JavaScript không cần `language` và thường không cần `type="text/javascript"`:
 
 ```html
 <script src="/app.js"></script>
@@ -981,7 +984,7 @@ ES modules dùng:
 <script type="module" src="/main.js"></script>
 ```
 
-Khi migrate, phân biệt “legacy syntax bỏ được” với “module semantics khác classic script”; không xóa `type="module"` vì tưởng mọi `type` đều obsolete.
+Khi migrate, phân biệt “legacy cú pháp (syntax / 문법) bỏ được” với “mô-đun (module / 모듈) ngữ nghĩa (semantics / 의미론) khác classic script”; không xóa `type="module"` vì tưởng mọi `type` đều obsolete.
 
 ---
 
@@ -993,7 +996,7 @@ Legacy markup có thể dùng:
 <a name="chapter-1"></a>
 ```
 
-Modern fragment target nên dùng `id` trên element có meaning:
+Hiện đại (modern / 현대적) fragment mục tiêu (target / 대상) nên dùng `id` trên element có meaning:
 
 ```html
 <section id="chapter-1">
@@ -1001,33 +1004,33 @@ Modern fragment target nên dùng `id` trên element có meaning:
 </section>
 ```
 
-Điều này tạo URL fragment target mà không cần empty anchor, đồng thời document semantics rõ hơn.
+Điều này tạo URL fragment mục tiêu (target / 대상) mà không cần empty anchor, đồng thời document ngữ nghĩa (semantics / 의미론) rõ hơn.
 
 ---
 
-## 65. Legacy migration strategy
+## 65. Legacy di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략)
 
-Đừng chạy search-replace theo tag name mà không hiểu meaning. Quy trình tốt là xác định intent cũ, tìm native modern semantic, chuyển presentation sang CSS, thay plugin/frames architecture nếu cần, sau đó test DOM, keyboard, screen reader và browser compatibility.
+Đừng chạy search-replace theo tag name mà không hiểu meaning. Quy trình tốt là xác định intent cũ, tìm bản địa (native / 네이티브) hiện đại (modern / 현대적) ngữ nghĩa (semantic / 의미적), chuyển presentation sang CSS, thay plugin/frames kiến trúc (architecture / 아키텍처) nếu cần, sau đó kiểm thử (test / 테스트) DOM, keyboard, screen reader và trình duyệt (browser / 브라우저) tính tương thích (compatibility / 호환성).
 
-Legacy markup thường có hidden coupling với JavaScript selectors hoặc server templates. Vì vậy migration phải có regression tests chứ không chỉ làm validator hết warning.
+Legacy markup thường có hidden coupling với JavaScript selectors hoặc máy chủ (server / 서버) templates. Vì vậy di chuyển (migration / 마이그레이션) phải có regression tests chứ không chỉ làm validator hết warning.
 
 ---
 
-# PHẦN 16 — NATIVE HTML TRƯỚC CUSTOM JAVASCRIPT
+# PHẦN 16 — bản địa (native / 네이티브) HTML TRƯỚC CUSTOM JAVASCRIPT
 
 ## 66. Disclosure, dialog, popover và forms
 
-Nếu requirement chỉ là disclosure, `details/summary` có thể đủ. Nếu là modal, `dialog` thường tốt hơn generic div. Nếu là floating transient UI, Popover có thể cung cấp top-layer/light-dismiss primitive. Nếu là validation, hãy bắt đầu với `required`, type constraints, min/max/pattern trước khi replace toàn bộ bằng JavaScript.
+Nếu yêu cầu (requirement / 요구사항) chỉ là disclosure, `details/summary` có thể đủ. Nếu là modal, `dialog` thường tốt hơn generic div. Nếu là floating transient UI, Popover có thể cung cấp top-layer/light-dismiss thành phần nguyên thủy (primitive / 기본 요소). Nếu là kiểm tra hợp lệ (validation / 검증), hãy bắt đầu với `required`, kiểu (type / 타입) các ràng buộc (constraints / 제약조건들), min/max/mẫu (pattern / 패턴) trước khi replace toàn bộ bằng JavaScript.
 
-Native-first không có nghĩa “không được custom”. Nó nghĩa bạn tận dụng behavior/accessibility browser đã implement, rồi enhance nơi business requirement thật sự vượt quá native primitive.
+Native-first không có nghĩa “không được custom”. Nó nghĩa bạn tận dụng hành vi (behavior / 동작)/khả năng tiếp cận (accessibility / 접근성) trình duyệt (browser / 브라우저) đã implement, rồi enhance nơi nghiệp vụ (business / 비즈니스) yêu cầu (requirement / 요구사항) thật sự vượt quá bản địa (native / 네이티브) thành phần nguyên thủy (primitive / 기본 요소).
 
 ---
 
-# PHẦN 17 — DEBUG EXERCISES
+# PHẦN 17 — gỡ lỗi (debug / 디버그) EXERCISES
 
 ## 67. Parser repair
 
-Đưa source sau vào browser rồi so sánh View Source với Elements:
+Đưa nguồn (source / 소스) sau vào trình duyệt (browser / 브라우저) rồi so sánh View nguồn (source / 소스) với Elements:
 
 ```html
 <p>
@@ -1036,7 +1039,7 @@ Native-first không có nghĩa “không được custom”. Nó nghĩa bạn t�
 </p>
 ```
 
-Mục tiêu là thấy source indentation không quyết định DOM.
+Mục tiêu là thấy nguồn (source / 소스) indentation không quyết định DOM.
 
 ---
 
@@ -1050,11 +1053,11 @@ Phần này nối mạch bài học với “68. Attribute/property state”, n�
 </form>
 ```
 
-Trong console, sửa `el.value = "Bob"`, rồi so sánh `el.value`, `el.defaultValue`, `el.getAttribute("value")`; cuối cùng chạy `f.reset()`. Bài này giúp hiểu current state, default state và content attribute bằng trải nghiệm trực tiếp.
+Trong console, sửa `el.value = "Bob"`, rồi so sánh `el.value`, `el.defaultValue`, `el.getAttribute("value")`; cuối cùng chạy `f.reset()`. Bài này giúp hiểu trạng thái hiện tại (current state / 현재 상태), default trạng thái (state / 상태) và content attribute bằng trải nghiệm trực tiếp.
 
 ---
 
-## 69. Checkbox state
+## 69. Checkbox trạng thái (state / 상태)
 
 Với:
 
@@ -1062,43 +1065,43 @@ Với:
 <input id="agree" type="checkbox" checked>
 ```
 
-user uncheck rồi so sánh `checked`, `defaultChecked`, `getAttribute("checked")`. Đây là một trong những ví dụ rõ nhất cho DOM relation.
+Người dùng (user / 사용자) uncheck rồi so sánh `checked`, `defaultChecked`, `getAttribute("checked")`. Đây là một trong những ví dụ rõ nhất cho DOM quan hệ (relation / 관계).
 
 ---
 
-## 70. Form owner
+## 70. Form đơn vị sở hữu (owner / 오너)
 
-Đặt submit button ngoài form nhưng dùng `form="profile"`, rồi quan sát browser vẫn submit đúng owner. Sau đó thử disabled/readonly/unchecked controls và inspect `FormData` để thấy successful-controls rules.
+Đặt submit button ngoài form nhưng dùng `form="profile"`, rồi quan sát trình duyệt (browser / 브라우저) vẫn submit đúng đơn vị sở hữu (owner / 오너). Sau đó thử disabled/readonly/unchecked controls và inspect `FormData` để thấy successful-controls rules.
 
 ---
 
 ## 71. DOM clobbering
 
-Tạo form có `<input name="method">` và inspect `form.method`. Mục tiêu không phải exploit, mà là thấy tại sao named access không nên được dùng như trusted object property model.
+Tạo form có `<input name="method">` và inspect `form.method`. Mục tiêu không phải exploit, mà là thấy tại sao named truy cập (access / 접근) không nên được dùng như trusted đối tượng (object / 객체) thuộc tính (property / 속성) mô hình (model / 모델).
 
 ---
 
 ## 72. Popover và until-found
 
-Tạo một native popover rồi so sánh lượng JavaScript cần thiết với custom overlay. Sau đó tạo section `hidden="until-found"`, dùng Find in page hoặc fragment navigation trên browser hỗ trợ và quan sát browser reveal content.
+Tạo một bản địa (native / 네이티브) popover rồi so sánh lượng JavaScript cần thiết với custom overlay. Sau đó tạo section `hidden="until-found"`, dùng Find in page hoặc fragment điều hướng (navigation / 내비게이션) trên trình duyệt (browser / 브라우저) hỗ trợ và quan sát trình duyệt (browser / 브라우저) reveal content.
 
 ---
 
-# PHẦN 18 — MASTER REVIEW MENTAL MODEL
+# PHẦN 18 — MASTER rà soát (review / 검토) mô hình tư duy (mental model / 사고 모델)
 
-Khi review production HTML, hãy đi theo một flow ổn định. Trước hết kiểm tra parser/content model: source sẽ tạo DOM gì, browser có repair không, SSR có hydration risk không. Sau đó kiểm tra semantics: element có biểu diễn đúng meaning không, link và button có đúng role native không, headings và landmarks có structure hợp lý không.
+Khi rà soát (review / 검토) môi trường vận hành (production / 운영 환경) HTML, hãy đi theo một luồng (flow / 흐름) ổn định. Trước hết kiểm tra parser/content mô hình (model / 모델): nguồn (source / 소스) sẽ tạo DOM gì, trình duyệt (browser / 브라우저) có repair không, SSR có hydration rủi ro (risk / 위험) không. Sau đó kiểm tra ngữ nghĩa (semantics / 의미론): element có biểu diễn đúng meaning không, link và button có đúng role bản địa (native / 네이티브) không, headings và landmarks có cấu trúc (structure / 구조) hợp lý không.
 
-Tiếp theo kiểm tra accessibility: accessible name đến từ đâu, description có đúng không, keyboard order có tự nhiên không, ARIA state có sync visual state không, custom role có đang thay native element vô lý không. Với form, xác định form owner, submitter và control nào thực sự được submit.
+Tiếp theo kiểm tra khả năng tiếp cận (accessibility / 접근성): accessible name đến từ đâu, description có đúng không, keyboard thứ tự (order / 순서) có tự nhiên không, ARIA trạng thái (state / 상태) có sync visual trạng thái (state / 상태) không, custom role có đang thay bản địa (native / 네이티브) element vô lý không. Với form, xác định form đơn vị sở hữu (owner / 오너), submitter và điều khiển (control / 제어) nào thực sự được submit.
 
-Với security, xác định user-controlled data đi vào text, URL, raw HTML, iframe hay script context; kiểm tra sandbox, referrer/CORS, sanitization/CSP strategy. Với performance, xem critical resources được discover khi nào, LCP image có intrinsic dimensions không, script có parser-blocking không và resource hints có được đo thực tế không.
+Với bảo mật (security / 보안), xác định user-controlled dữ liệu (data / 데이터) đi vào văn bản (text / 텍스트), URL, raw HTML, iframe hay script ngữ cảnh (context / 맥락); kiểm tra sandbox, referrer/CORS, sanitization/CSP chiến lược (strategy / 전략). Với hiệu năng (performance / 성능), xem trọng yếu (critical / 중요) resources được discover khi nào, LCP ảnh (image / 이미지) có intrinsic dimensions không, script có parser-blocking không và gợi ý tài nguyên (resource hints / 리소스 힌트) có được đo thực tế không.
 
-Cuối cùng, nếu gặp markup legacy, đừng hỏi “Chrome còn render không?” mà hỏi “meaning cũ là gì và modern semantic/CSS/API nào thay thế đúng?”.
+Cuối cùng, nếu gặp markup legacy, đừng hỏi “Chrome còn kết xuất (render / 렌더링) không?” mà hỏi “meaning cũ là gì và hiện đại (modern / 현대적) ngữ nghĩa (semantic / 의미적)/CSS/API nào thay thế đúng?”.
 
 ---
 
-# PHẦN 19 — FULL HTML PLATFORM MENTAL MODEL
+# PHẦN 19 — FULL HTML nền tảng (platform / 플랫폼) mô hình tư duy (mental model / 사고 모델)
 
-HTML source chỉ là điểm bắt đầu:
+HTML nguồn (source / 소스) chỉ là điểm bắt đầu:
 
 ```text
 HTTP response / bytes
@@ -1124,17 +1127,17 @@ framework hydration/mutation
 user interaction
 ```
 
-Một tag quan trọng vì nó tham gia một hoặc nhiều layers trong flow này. `button` không chỉ là rectangle: nó có activation, focus, accessibility và form semantics. `img` không chỉ hiển thị pixels: nó có alternative text, intrinsic dimensions, resource selection và network priority implications. `script` không chỉ load JavaScript: nó tương tác parser, module graph, CSP/SRI và rendering path.
+Một tag quan trọng vì nó tham gia một hoặc nhiều layers trong luồng (flow / 흐름) này. `button` không chỉ là rectangle: nó có activation, focus, khả năng tiếp cận (accessibility / 접근성) và form ngữ nghĩa (semantics / 의미론). `img` không chỉ hiển thị pixels: nó có alternative văn bản (text / 텍스트), intrinsic dimensions, tài nguyên (resource / 자원) selection và mạng (network / 네트워크) priority implications. `script` không chỉ tải (load / 로드) JavaScript: nó tương tác parser, mô-đun (module / 모듈) đồ thị (graph / 그래프), CSP/SRI và rendering đường dẫn (path / 경로).
 
 ---
 
-# PHẦN 20 — AUDIT HOÀN THIỆN COVERAGE CÒN THIẾU
+# PHẦN 20 — kiểm tra (audit / 감사) HOÀN THIỆN COVERAGE CÒN THIẾU
 
-Phần này khép những khoảng nhỏ còn lại sau khi audit toàn bộ canonical HTML notes theo document structure, semantics, metadata, tables, forms, validation, DOM, accessibility, performance, security, modern HTML và legacy HTML. Các mục dưới đây không phải danh sách thuộc lòng; mục tiêu vẫn là hiểu **meaning → browser processing → lúc dùng → semantic/accessibility implication**.
+Phần này khép những khoảng nhỏ còn lại sau khi kiểm tra (audit / 감사) toàn bộ chuẩn gốc (canonical / 정본) HTML notes theo document cấu trúc (structure / 구조), ngữ nghĩa (semantics / 의미론), siêu dữ liệu (metadata / 메타데이터), tables, forms, kiểm tra hợp lệ (validation / 검증), DOM, khả năng tiếp cận (accessibility / 접근성), hiệu năng (performance / 성능), bảo mật (security / 보안), hiện đại (modern / 현대적) HTML và legacy HTML. Các mục dưới đây không phải danh sách thuộc lòng; mục tiêu vẫn là hiểu **meaning → trình duyệt (browser / 브라우저) processing → lúc dùng → ngữ nghĩa (semantic / 의미적)/khả năng tiếp cận (accessibility / 접근성) implication**.
 
 ## 73. `<colgroup>` và `<col>`: mô tả nhóm cột, không phải header thay thế
 
-Trong table, `colgroup` và `col` cho phép author mô tả hoặc style một nhóm cột mà không cần lặp class trên từng cell:
+Trong bảng (table / 테이블), `colgroup` và `col` cho phép author mô tả hoặc style một nhóm cột mà không cần lặp lớp (class / 클래스) trên từng cell:
 
 ```html
 <table>
@@ -1161,15 +1164,15 @@ Trong table, `colgroup` và `col` cho phép author mô tả hoặc style một n
 </table>
 ```
 
-Browser dùng column model của table để áp dụng một số presentation/column properties phù hợp. Nhưng `col` không thay `th`: nó không tạo accessible header relationship cho data cells. Nếu column có meaning cần screen reader hiểu, vẫn dùng `th`, `scope`, và với table phức tạp có thể cần `headers`/`id` association. Senior review vì vậy phải tách **column structural grouping** khỏi **header semantics**.
+Trình duyệt (browser / 브라우저) dùng column mô hình (model / 모델) của bảng (table / 테이블) để áp dụng một số presentation/column properties phù hợp. Nhưng `col` không thay `th`: nó không tạo accessible header relationship cho dữ liệu (data / 데이터) cells. Nếu column có meaning cần screen reader hiểu, vẫn dùng `th`, `scope`, và với bảng (table / 테이블) phức tạp có thể cần `headers`/`id` association. cấp cao (senior / 시니어) rà soát (review / 검토) vì vậy phải tách **column structural grouping** khỏi **header ngữ nghĩa (semantics / 의미론)**.
 
 ---
 
 ## 74. Những `input type` dễ bị bỏ sót: `submit`, `reset`, `button`, `image`
 
-`<input type="submit">` tạo submit control tương tự submit button nhưng label đến từ `value`. `<input type="button">` tạo generic push button nhưng không có rich child content như `<button>`. `<input type="reset">` restore default form state, không phải “xóa tất cả về rỗng”. Với application UI hiện đại, `<button>` thường expressive hơn vì chứa được markup và text linh hoạt.
+`<input type="submit">` tạo submit điều khiển (control / 제어) tương tự submit button nhưng label đến từ `value`. `<input type="button">` tạo generic push button nhưng không có rich child content như `<button>`. `<input type="reset">` restore default form trạng thái (state / 상태), không phải “xóa tất cả về rỗng”. Với ứng dụng (application / 애플리케이션) UI hiện đại, `<button>` thường expressive hơn vì chứa được markup và văn bản (text / 텍스트) linh hoạt.
 
-`<input type="image">` là submit control dùng image. Nếu phải dùng, `alt` có accessibility meaning rất quan trọng vì image là label của control:
+`<input type="image">` là submit điều khiển (control / 제어) dùng ảnh (image / 이미지). Nếu phải dùng, `alt` có khả năng tiếp cận (accessibility / 접근성) meaning rất quan trọng vì ảnh (image / 이미지) là label của điều khiển (control / 제어):
 
 ```html
 <input
@@ -1178,36 +1181,36 @@ Browser dùng column model của table để áp dụng một số presentation/
   alt="Pay now">
 ```
 
-Browser còn có thể submit click coordinates theo form semantics. Vì behavior khá đặc thù, đừng dùng `type="image"` chỉ để có một button đẹp; ordinary `<button>` + CSS thường rõ ràng hơn.
+Trình duyệt (browser / 브라우저) còn có thể submit click coordinates theo form ngữ nghĩa (semantics / 의미론). Vì hành vi (behavior / 동작) khá đặc thù, đừng dùng `type="image"` chỉ để có một button đẹp; ordinary `<button>` + CSS thường rõ ràng hơn.
 
 ---
 
 ## 75. `form`, `novalidate`, `formnovalidate` và `accept-charset`
 
-`form="id"` cho phép một form-associated control thuộc form ngay cả khi nó không nằm trong subtree form đó. Browser resolve ID tới form owner, vì vậy visual layout và form ownership không nhất thiết trùng nhau.
+`form="id"` cho phép một form-associated điều khiển (control / 제어) thuộc form ngay cả khi nó không nằm trong subtree form đó. trình duyệt (browser / 브라우저) resolve ID tới form đơn vị sở hữu (owner / 오너), vì vậy visual bố cục (layout / 레이아웃) và form quyền sở hữu (ownership / 소유권) không nhất thiết trùng nhau.
 
-`novalidate` trên `<form>` tắt interactive constraint validation của browser cho submission đó:
+`novalidate` trên `<form>` tắt interactive ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) của trình duyệt (browser / 브라우저) cho submission đó:
 
 ```html
 <form action="/save" method="post" novalidate>
 ```
 
-`formnovalidate` trên submitter cho phép bỏ validation chỉ với một action, ví dụ “Save draft” trong khi “Publish” vẫn validate:
+`formnovalidate` trên submitter cho phép bỏ kiểm tra hợp lệ (validation / 검증) chỉ với một hành động (action / 동작), ví dụ “Save draft” trong khi “Publish” vẫn validate:
 
 ```html
 <button type="submit">Publish</button>
 <button type="submit" formnovalidate>Save draft</button>
 ```
 
-Hai attributes này không có nghĩa server được bỏ validation. Chúng chỉ thay đổi browser-side constraint-validation step.
+Hai attributes này không có nghĩa máy chủ (server / 서버) được bỏ kiểm tra hợp lệ (validation / 검증). Chúng chỉ thay đổi browser-side constraint-validation step.
 
-`accept-charset` mô tả encoding dùng cho form submission. Trong modern HTML, UTF-8 là encoding cần nghĩ tới; đừng xây architecture phụ thuộc legacy encodings nếu không có contract bắt buộc.
+`accept-charset` mô tả encoding dùng cho form submission. Trong hiện đại (modern / 현대적) HTML, UTF-8 là encoding cần nghĩ tới; đừng xây kiến trúc (architecture / 아키텍처) phụ thuộc legacy encodings nếu không có đặc tả hợp đồng (contract / 계약) bắt buộc.
 
 ---
 
-## 76. Native constraint validation thực sự hoạt động thế nào?
+## 76. bản địa (native / 네이티브) ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) thực sự hoạt động thế nào?
 
-Các attributes như `required`, `type="email"`, `min`, `max`, `step`, `pattern`, `minlength` và `maxlength` tham gia **constraint validation model**. Browser không chỉ “đọc attribute rồi đổi viền đỏ”; control có live validity state trong DOM.
+Các attributes như `required`, `type="email"`, `min`, `max`, `step`, `pattern`, `minlength` và `maxlength` tham gia **ràng buộc (constraint / 제약조건) kiểm tra hợp lệ (validation / 검증) mô hình (model / 모델)**. trình duyệt (browser / 브라우저) không chỉ “đọc attribute rồi đổi viền đỏ”; điều khiển (control / 제어) có live validity trạng thái (state / 상태) trong DOM.
 
 Ví dụ:
 
@@ -1220,21 +1223,21 @@ console.log(email.validity);
 console.log(email.validationMessage);
 ```
 
-`checkValidity()` kiểm tra và trả boolean; `reportValidity()` còn có thể yêu cầu browser present validation UI. `ValidityState` cho biết lý do như `valueMissing`, `typeMismatch`, `patternMismatch`, `tooLong`, `rangeUnderflow` hoặc `stepMismatch` tùy control.
+`checkValidity()` kiểm tra và trả boolean; `reportValidity()` còn có thể yêu cầu trình duyệt (browser / 브라우저) present kiểm tra hợp lệ (validation / 검증) UI. `ValidityState` cho biết lý do như `valueMissing`, `typeMismatch`, `patternMismatch`, `tooLong`, `rangeUnderflow` hoặc `stepMismatch` tùy điều khiển (control / 제어).
 
-Custom rule có thể dùng:
+Custom quy tắc (rule / 규칙) có thể dùng:
 
 ```js
 email.setCustomValidity('Email is already registered');
 ```
 
-Nhưng khi lỗi đã hết phải reset bằng empty string, nếu không control sẽ tiếp tục invalid. Accessibility-wise, native validation message không thay thế requirement làm error state rõ, associate helper/error text phù hợp và bảo đảm keyboard/screen-reader user hiểu lỗi. Server-side validation vẫn là authority cuối cùng.
+Nhưng khi lỗi đã hết phải reset bằng empty string, nếu không điều khiển (control / 제어) sẽ tiếp tục invalid. Accessibility-wise, bản địa (native / 네이티브) kiểm tra hợp lệ (validation / 검증) message không thay thế yêu cầu (requirement / 요구사항) làm lỗi (error / 오류) trạng thái (state / 상태) rõ, associate helper/lỗi (error / 오류) văn bản (text / 텍스트) phù hợp và bảo đảm keyboard/screen-reader người dùng (user / 사용자) hiểu lỗi. Server-side kiểm tra hợp lệ (validation / 검증) vẫn là authority cuối cùng.
 
 ---
 
 ## 77. `accept`, `list`, `size`, `placeholder`: hint, association và presentation khác nhau
 
-`accept` trên file input là hint cho file picker về MIME type/extension mong muốn:
+`accept` trên tệp (file / 파일) đầu vào (input / 입력) là hint cho tệp (file / 파일) picker về MIME kiểu (type / 타입)/extension mong muốn:
 
 ```html
 <input
@@ -1242,25 +1245,25 @@ Nhưng khi lỗi đã hết phải reset bằng empty string, nếu không contr
   accept="image/png,image/jpeg">
 ```
 
-Browser có thể lọc picker UI, nhưng attacker vẫn có thể gửi file khác bằng request thủ công, nên server phải inspect content/type/size độc lập.
+Trình duyệt (browser / 브라우저) có thể lọc picker UI, nhưng attacker vẫn có thể gửi tệp (file / 파일) khác bằng yêu cầu (request / 요청) thủ công, nên máy chủ (server / 서버) phải inspect content/kiểu (type / 타입)/kích thước (size / 크기) độc lập.
 
-`list="id"` nối input với `datalist` để browser cung cấp suggestions. Nó không biến input thành closed enum; user vẫn có thể nhập value khác nếu validation không cấm.
+`list="id"` nối đầu vào (input / 입력) với `datalist` để trình duyệt (browser / 브라우저) cung cấp suggestions. Nó không biến đầu vào (input / 입력) thành closed enum; người dùng (user / 사용자) vẫn có thể nhập giá trị (value / 값) khác nếu kiểm tra hợp lệ (validation / 검증) không cấm.
 
-`size` ảnh hưởng kích thước hiển thị ở một số text/select controls nhưng không giới hạn độ dài dữ liệu; `maxlength` mới liên quan length constraint. `placeholder` là hint ngắn, không phải label. Các attributes trông giống “UI config”, nhưng mỗi cái tác động một layer khác nên không được dùng thay thế lẫn nhau.
+`size` ảnh hưởng kích thước hiển thị ở một số văn bản (text / 텍스트)/select controls nhưng không giới hạn độ dài dữ liệu; `maxlength` mới liên quan length ràng buộc (constraint / 제약조건). `placeholder` là hint ngắn, không phải label. Các attributes trông giống “UI cấu hình (config / 설정)”, nhưng mỗi cái tác động một tầng (layer / 계층) khác nên không được dùng thay thế lẫn nhau.
 
 ---
 
 ## 78. `accesskey`, `autocapitalize` và `autocorrect`
 
-`accesskey` có thể gán shortcut activation/focus, nhưng actual key combination phụ thuộc browser và operating system. Shortcut tự chọn còn có thể conflict với browser, assistive technology hoặc user conventions. Vì vậy đây không phải attribute nên rải khắp application chỉ để “hỗ trợ keyboard”. Natural tab order và native controls quan trọng hơn.
+`accesskey` có thể gán shortcut activation/focus, nhưng actual key combination phụ thuộc trình duyệt (browser / 브라우저) và operating hệ thống (system / 시스템). Shortcut tự chọn còn có thể xung đột (conflict / 충돌) với trình duyệt (browser / 브라우저), assistive technology hoặc người dùng (user / 사용자) conventions. Vì vậy đây không phải attribute nên rải khắp ứng dụng (application / 애플리케이션) chỉ để “hỗ trợ keyboard”. Natural tab thứ tự (order / 순서) và bản địa (native / 네이티브) controls quan trọng hơn.
 
-`autocapitalize` và `autocorrect` là hints cho supported input methods, đặc biệt mobile keyboards. Ví dụ username hoặc code field có thể không muốn automatic capitalization/correction, trong khi prose field có thể hưởng lợi. Chúng không validate content và không thay business normalization.
+`autocapitalize` và `autocorrect` là hints cho supported đầu vào (input / 입력) methods, đặc biệt mobile keyboards. Ví dụ username hoặc mã (code / 코드) trường dữ liệu (field / 필드) có thể không muốn automatic capitalization/correction, trong khi prose trường dữ liệu (field / 필드) có thể hưởng lợi. Chúng không validate content và không thay nghiệp vụ (business / 비즈니스) normalization.
 
 ---
 
-## 79. `loading="lazy"` trên iframe và trách nhiệm accessibility vẫn còn nguyên
+## 79. `loading="lazy"` trên iframe và trách nhiệm khả năng tiếp cận (accessibility / 접근성) vẫn còn nguyên
 
-Không chỉ image, iframe phù hợp cũng có thể dùng lazy loading để trì hoãn fetch khi nó còn xa viewport:
+Không chỉ ảnh (image / 이미지), iframe phù hợp cũng có thể dùng lazy loading để trì hoãn fetch khi nó còn xa viewport:
 
 ```html
 <iframe
@@ -1270,15 +1273,15 @@ Không chỉ image, iframe phù hợp cũng có thể dùng lazy loading để t
 </iframe>
 ```
 
-Browser quyết định scheduling dựa trên heuristics. `loading="lazy"` là performance hint, không phải guarantee chính xác thời điểm request.
+Trình duyệt (browser / 브라우저) quyết định scheduling dựa trên heuristics. `loading="lazy"` là hiệu năng (performance / 성능) hint, không phải guarantee chính xác thời điểm yêu cầu (request / 요청).
 
-Lazy loading không thay semantic requirement. Iframe vẫn cần `title` hữu ích; nếu third-party content critical cho task, phải test keyboard/focus/loading states và fallback UX. Đừng lazy-load content ngay đầu viewport nếu điều đó làm user chờ phần chính của page.
+Lazy loading không thay ngữ nghĩa (semantic / 의미적) yêu cầu (requirement / 요구사항). Iframe vẫn cần `title` hữu ích; nếu third-party content trọng yếu (critical / 중요) cho tác vụ (task / 작업), phải kiểm thử (test / 테스트) keyboard/focus/loading states và fallback UX. Đừng lazy-load content ngay đầu viewport nếu điều đó làm người dùng (user / 사용자) chờ phần chính của page.
 
 ---
 
 ## 80. `meta name="theme-color"` và `link rel="manifest"`
 
-`theme-color` cho phép page gợi ý màu browser UI trong supporting environments:
+`theme-color` cho phép page gợi ý màu trình duyệt (browser / 브라우저) UI trong supporting environments:
 
 ```html
 <meta
@@ -1286,21 +1289,21 @@ Lazy loading không thay semantic requirement. Iframe vẫn cần `title` hữu 
   content="#ffffff">
 ```
 
-Có thể dùng `media` trong relevant metadata scenarios để có value phù hợp light/dark preferences. Đây là browser-chrome metadata, không phải substitute cho CSS background hay accessible contrast trong page content.
+Có thể dùng `media` trong relevant siêu dữ liệu (metadata / 메타데이터) scenarios để có giá trị (value / 값) phù hợp light/dark preferences. Đây là browser-chrome siêu dữ liệu (metadata / 메타데이터), không phải substitute cho CSS background hay accessible contrast trong page content.
 
-PWA/web-app metadata còn có thể liên kết manifest:
+PWA/web-app siêu dữ liệu (metadata / 메타데이터) còn có thể liên kết manifest:
 
 ```html
 <link rel="manifest" href="/site.webmanifest">
 ```
 
-Browser fetch manifest như một external resource khi feature/platform cần. Manifest chứa app-level metadata như name, icons, display behavior; HTML `link` chỉ khai báo relationship. SEO không tự tốt hơn vì có manifest, và accessibility của page vẫn phụ thuộc markup/content thực tế.
+Trình duyệt (browser / 브라우저) fetch manifest như một bên ngoài (external / 외부) tài nguyên (resource / 자원) khi tính năng (feature / 기능)/nền tảng (platform / 플랫폼) cần. Manifest chứa app-level siêu dữ liệu (metadata / 메타데이터) như name, icons, display hành vi (behavior / 동작); HTML `link` chỉ khai báo relationship. SEO không tự tốt hơn vì có manifest, và khả năng tiếp cận (accessibility / 접근성) của page vẫn phụ thuộc markup/content thực tế.
 
 ---
 
 ## 81. `blocking="render"`: khi author chủ động đánh dấu render-blocking
 
-HTML hiện đại có `blocking` trên các element resource phù hợp như `link`, `script`, `style`; token hiện tại đáng quan tâm là `render`.
+HTML hiện đại có `blocking` trên các element tài nguyên (resource / 자원) phù hợp như `link`, `script`, `style`; đơn vị từ (token / 토큰) hiện tại đáng quan tâm là `render`.
 
 Concept:
 
@@ -1311,15 +1314,15 @@ Concept:
   blocking="render">
 ```
 
-Attribute này tham gia browser rendering pipeline, không phải network priority flag chung. `blocking="render"` và `fetchpriority="high"` giải quyết hai concerns khác nhau: một cái liên quan việc operation nào có thể bị block chờ resource, cái kia là scheduling hint cho fetch.
+Attribute này tham gia trình duyệt (browser / 브라우저) rendering chuỗi xử lý (pipeline / 파이프라인), không phải mạng (network / 네트워크) priority flag chung. `blocking="render"` và `fetchpriority="high"` giải quyết hai concerns khác nhau: một cái liên quan việc thao tác (operation / 연산) nào có thể bị khối (block / 블록) chờ tài nguyên (resource / 자원), cái kia là scheduling hint cho fetch.
 
-Không thêm `blocking="render"` bừa. Render-blocking resource kéo dài critical path nếu resource chậm. Chỉ dùng khi bạn hiểu chính xác vì sao page phải đợi resource đó trước rendering và đã đo performance.
+Không thêm `blocking="render"` bừa. Render-blocking tài nguyên (resource / 자원) kéo dài đường găng (critical path / 임계 경로) nếu tài nguyên (resource / 자원) chậm. Chỉ dùng khi bạn hiểu chính xác vì sao page phải đợi tài nguyên (resource / 자원) đó trước rendering và đã đo hiệu năng (performance / 성능).
 
 ---
 
 ## 82. Declarative Shadow DOM 2026: không chỉ có `shadowrootmode`
 
-Ngoài `shadowrootmode`, platform hiện còn định nghĩa thêm các attributes cho declarative shadow-root configuration. `shadowrootdelegatesfocus` liên quan focus delegation; `shadowrootclonable` cho biết shadow root có thể tham gia cloning behavior; `shadowrootserializable` liên quan việc shadow root có thể được serialize bởi các HTML serialization APIs phù hợp; `shadowrootslotassignment` chọn named hay manual slot assignment; `shadowrootcustomelementregistry` phục vụ architecture dùng custom-element registry gắn với shadow root.
+Ngoài `shadowrootmode`, nền tảng (platform / 플랫폼) hiện còn định nghĩa thêm các attributes cho declarative shadow-root cấu hình (configuration / 구성). `shadowrootdelegatesfocus` liên quan focus delegation; `shadowrootclonable` cho biết shadow gốc (root / 루트) có thể tham gia cloning hành vi (behavior / 동작); `shadowrootserializable` liên quan việc shadow gốc (root / 루트) có thể được serialize bởi các HTML serialization APIs phù hợp; `shadowrootslotassignment` chọn named hay manual slot assignment; `shadowrootcustomelementregistry` phục vụ kiến trúc (architecture / 아키텍처) dùng custom-element registry gắn với shadow gốc (root / 루트).
 
 Ví dụ concept:
 
@@ -1333,13 +1336,13 @@ Ví dụ concept:
 </template>
 ```
 
-Đây là infrastructure-level HTML. Beginner không cần dùng, nhưng senior làm Web Components/SSR phải biết chúng tác động **browser-created ShadowRoot**, không phải chỉ là arbitrary data attributes. Browser/tooling support vẫn phải được kiểm tra theo target environment, đặc biệt với options mới hơn.
+Đây là infrastructure-level HTML. Beginner không cần dùng, nhưng cấp cao (senior / 시니어) làm Web Components/SSR phải biết chúng tác động **browser-created ShadowRoot**, không phải chỉ là arbitrary dữ liệu (data / 데이터) attributes. trình duyệt (browser / 브라우저)/tooling hỗ trợ (support / 지원) vẫn phải được kiểm tra theo mục tiêu (target / 대상) môi trường (environment / 환경), đặc biệt với options mới hơn.
 
 ---
 
-## 83. `interestfor`: hiểu hướng phát triển nhưng chưa coi là baseline production
+## 83. `interestfor`: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)
 
-Interest invoker là một hướng mới cho phép control biểu diễn “interest” như hover/focus để target có thể phản ứng, thường kết hợp với `popover="hint"`. Một concept markup có thể trông như:
+Interest invoker là một hướng mới cho phép điều khiển (control / 제어) biểu diễn “interest” như hover/focus để mục tiêu (target / 대상) có thể phản ứng, thường kết hợp với `popover="hint"`. Một concept markup có thể trông như:
 
 ```html
 <button interestfor="user-preview">
@@ -1351,14 +1354,16 @@ Interest invoker là một hướng mới cho phép control biểu diễn “int
 </div>
 ```
 
-Ý tưởng platform là browser có thể giúp chuẩn hóa hover/focus-interest relationship thay vì mỗi framework tự viết timers, pointer/focus coordination và tooltip state machine.
+Ý tưởng nền tảng (platform / 플랫폼) là trình duyệt (browser / 브라우저) có thể giúp chuẩn hóa hover/focus-interest relationship thay vì mỗi khung phần mềm (framework / 프레임워크) tự viết timers, pointer/focus coordination và tooltip máy trạng thái (state machine / 상태 머신).
 
-Tuy nhiên ở thời điểm audit tháng 9/2026, `interestfor`/related DOM APIs vẫn cần được xem là **experimental/limited-availability** chứ không phải capability mà production code có thể assume cross-browser. Hãy dùng nó như kiến thức về hướng phát triển của platform; nếu triển khai thực tế, feature-detect/progressive-enhance và giữ fallback semantics hoạt động được.
+Tuy nhiên ở thời điểm kiểm tra (audit / 감사) tháng 9/2026, `interestfor`/related DOM APIs vẫn cần được xem là **experimental/limited-availability** chứ không phải năng lực (capability / 역량) mà môi trường vận hành (production / 운영 환경) mã (code / 코드) có thể assume cross-browser. Hãy dùng nó như kiến thức về hướng phát triển của nền tảng (platform / 플랫폼); nếu triển khai thực tế, feature-detect/progressive-enhance và giữ fallback ngữ nghĩa (semantics / 의미론) hoạt động được.
 
 ---
 
 # KẾT LUẬN
 
-HTML mastery không phải khả năng thuộc một danh sách 150 tags. Nó là khả năng giải thích **meaning → browser processing → use case → semantic consequence → accessibility/security/performance implication** của markup quan trọng.
+HTML mastery không phải khả năng thuộc một danh sách 150 tags. Nó là khả năng giải thích **meaning → trình duyệt (browser / 브라우저) processing → use trường hợp (case / 사례) → ngữ nghĩa (semantic / 의미적) consequence → khả năng tiếp cận (accessibility / 접근성)/bảo mật (security / 보안)/hiệu năng (performance / 성능) implication** của markup quan trọng.
 
-Khi bạn hiểu vì sao browser tự đóng `p`, vì sao invalid table markup có thể đổi DOM, vì sao `input.value` khác `getAttribute("value")`, vì sao disabled controls không submit, vì sao `role="button"` không tự tạo keyboard behavior, vì sao Popover/Dialog nằm trong top layer, vì sao DOM clobbering tồn tại, và vì sao `<font>` vẫn có thể render nhưng không còn là authoring practice đúng, bạn đã chuyển từ “biết HTML syntax” sang **hiểu HTML platform**.
+Khi bạn hiểu vì sao trình duyệt (browser / 브라우저) tự đóng `p`, vì sao invalid bảng (table / 테이블) markup có thể đổi DOM, vì sao `input.value` khác `getAttribute("value")`, vì sao disabled controls không submit, vì sao `role="button"` không tự tạo keyboard hành vi (behavior / 동작), vì sao Popover/Dialog nằm trong top tầng (layer / 계층), vì sao DOM clobbering tồn tại, và vì sao `<font>` vẫn có thể kết xuất (render / 렌더링) nhưng không còn là authoring practice đúng, bạn đã chuyển từ “biết HTML cú pháp (syntax / 문법)” sang **hiểu HTML nền tảng (platform / 플랫폼)**.
+
+> **Bàn giao:** Sau **83. interestfor: hiểu hướng phát triển nhưng chưa coi là baseline môi trường vận hành (production / 운영 환경)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [html 01 beginner to senior detailed](./html_01_beginner_to_senior_detailed.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

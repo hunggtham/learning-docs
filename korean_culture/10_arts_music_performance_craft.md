@@ -1,5 +1,8 @@
 # Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản
 
+> **Mạch đọc:** Đặt **Nghệ thuật biểu diễn, âm nhạc, thủ công và di sản** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Di sản không phải một bảo tàng đóng băng** sang **국악: “âm nhạc truyền thống Hàn” là một hệ sinh thái, không phải một thể loại duy nhất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Di sản không phải một bảo tàng đóng băng
 
 **Di sản văn hoá (문화유산 / cultural heritage)** thường bị hình dung như “thứ cổ cần giữ nguyên”. Nhưng di sản sống tồn tại nhờ **truyền thừa (transmission)** và **tái diễn giải (reinterpretation)**. Một bài dân ca được hát khác đi, một nghề thủ công dùng vật liệu mới hoặc múa mặt nạ được diễn cho khán giả hiện đại không nhất thiết mất tính xác thực. Câu hỏi sâu hơn là: **thực hành cốt lõi nào được cộng đồng xem là phần liên tục cần giữ?**
@@ -198,7 +201,7 @@ Vì vậy triển lãm là một dạng **thiết kế thông tin (information d
 
 Điều này không có nghĩa giám tuyển “quyết định ý nghĩa duy nhất”; nó cho thấy trải nghiệm nghệ thuật được trung gian bởi thiết chế và giao diện trưng bày.
 
-## 비엔날레와 아트페어: hai logic khác nhau của thế giới nghệ thuật
+## 비엔날레와 아트페어: hai lô-gic (logic / 논리) khác nhau của thế giới nghệ thuật
 
 **Biennale (비엔날레)** thường nhấn mạnh triển lãm quy mô lớn, giám tuyển, chủ đề và trao đổi quốc tế. **Hội chợ nghệ thuật (아트페어 / art fair)** gần thị trường hơn, nơi phòng trưng bày giới thiệu tác phẩm với nhà sưu tập và công chúng.
 
@@ -227,9 +230,9 @@ Nhưng tính độc lập không đồng nghĩa không có ràng buộc. Tiền 
 
 ## 디지털 전시 và nghệ thuật trong môi trường số
 
-Triển lãm trực tuyến, tác phẩm video, nghệ thuật tương tác và lưu trữ số làm ranh giới giữa “tác phẩm”, “bản sao” và “giao diện xem” phức tạp hơn. Một file có thể được sao chép gần như không tốn chi phí, nhưng trải nghiệm trong không gian, thiết bị hoặc phiên bản được chứng thực vẫn tạo khác biệt.
+Triển lãm trực tuyến, tác phẩm video, nghệ thuật tương tác và lưu trữ số làm ranh giới giữa “tác phẩm”, “bản sao” và “giao diện xem” phức tạp hơn. Một tệp (file / 파일) có thể được sao chép gần như không tốn chi phí, nhưng trải nghiệm trong không gian, thiết bị hoặc phiên bản được chứng thực vẫn tạo khác biệt.
 
-Khi nghệ thuật đi vào nền tảng số, khả năng tiếp cận tăng nhưng cũng xuất hiện vấn đề bảo quản định dạng, quyền tác giả và phụ thuộc nền tảng. Một tác phẩm dùng phần mềm cũ có thể khó chạy sau nhiều năm dù file vẫn tồn tại.
+Khi nghệ thuật đi vào nền tảng số, khả năng tiếp cận tăng nhưng cũng xuất hiện vấn đề bảo quản định dạng, quyền tác giả và phụ thuộc nền tảng. Một tác phẩm dùng phần mềm cũ có thể khó chạy sau nhiều năm dù tệp (file / 파일) vẫn tồn tại.
 
 Bảo tồn nghệ thuật số vì vậy không chỉ lưu tệp; có khi phải lưu môi trường chạy, phần cứng, tài liệu và hướng dẫn tái tạo.
 
@@ -310,9 +313,9 @@ Ví dụ vật liệu cũ có thể khan hiếm hoặc gây hại môi trường
 
 Đây là lý do tính xác thực không chỉ là “cũ hơn = thật hơn”. Nó là câu hỏi về tính liên tục của tri thức và ý nghĩa.
 
-## Bảo tồn số: lưu file không đủ
+## Bảo tồn số: lưu tệp (file / 파일) không đủ
 
-Đối với tác phẩm số, nguy cơ không chỉ là mất file. Định dạng có thể lỗi thời, phần mềm hết hỗ trợ, hệ điều hành thay đổi, máy chủ đóng hoặc thiết bị tương tác không còn sản xuất.
+Đối với tác phẩm số, nguy cơ không chỉ là mất tệp (file / 파일). Định dạng có thể lỗi thời, phần mềm hết hỗ trợ, hệ điều hành thay đổi, máy chủ đóng hoặc thiết bị tương tác không còn sản xuất.
 
 Một chiến lược bảo tồn có thể gồm:
 
@@ -325,7 +328,7 @@ lưu file gốc
 + ghi lại cách nghệ sĩ muốn tác phẩm vận hành
 ```
 
-**Checksum** giúp biết file có thay đổi ngoài ý muốn. **Di chuyển định dạng (format migration)** đổi sang định dạng mới nhưng có nguy cơ thay hành vi. **Mô phỏng (emulation)** cố chạy môi trường cũ trên hệ mới. Mỗi cách có đánh đổi giữa độ trung thực và khả năng duy trì.
+**Checksum** giúp biết tệp (file / 파일) có thay đổi ngoài ý muốn. **Di chuyển định dạng (format migration)** đổi sang định dạng mới nhưng có nguy cơ thay hành vi. **Mô phỏng (emulation)** cố chạy môi trường cũ trên hệ mới. Mỗi cách có đánh đổi giữa độ trung thực và khả năng duy trì.
 
 ## Bản gốc trong môi trường số: khi sao chép hoàn hảo trở nên dễ dàng
 
@@ -401,7 +404,7 @@ Kỹ năng thủ công không phải “bí quyết cảm tính” đối lập 
 
 “Mua tác phẩm nghĩa là sở hữu mọi quyền đối với tác phẩm” là sai về cấu trúc quyền.
 
-“File số còn mở được hôm nay thì đã được bảo tồn” là quá đơn giản; phần mềm, định dạng và môi trường chạy cũng có vòng đời.
+“tệp (file / 파일) số còn mở được hôm nay thì đã được bảo tồn” là quá đơn giản; phần mềm, định dạng và môi trường chạy cũng có vòng đời.
 
 “Nhiều khách hơn luôn nghĩa là chương trình văn hoá tốt hơn” bỏ qua chất lượng học tập, truyền nghề, đại diện cộng đồng và tác động dài hạn.
 

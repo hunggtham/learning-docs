@@ -1,11 +1,14 @@
-# Heap nâng cao và kỹ thuật hàng đợi ưu tiên
-**Advanced Heaps & Priority Queue Engineering / 고급 힙과 우선순위 큐 설계**
+# Vùng nhớ vùng nhớ động (heap / 힙) nâng cao và kỹ thuật hàng đợi ưu tiên
 
-Heap nhị phân là lựa chọn mặc định rất mạnh khi cần liên tục lấy phần tử nhỏ nhất hoặc lớn nhất. Tuy nhiên, khi tải công việc thay đổi, đặc biệt khi có nhiều thao tác `decrease-key`, `merge`, hàng triệu phần tử, dữ liệu gần đơn điệu hoặc yêu cầu đồng thời, “một heap nhị phân cho mọi bài” không còn là mô hình đủ sâu.
+> **Mạch đọc:** Đọc **vùng nhớ động (heap / 힙) nâng cao và kỹ thuật hàng đợi ưu tiên** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Hàng đợi ưu tiên là ADT, vùng nhớ động (heap / 힙) chỉ là một họ triển khai** sang **2. Indexed vùng nhớ động (heap / 힙): khi phần tử có định danh ổn định**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+**Advanced Heaps & Priority hàng đợi (queue / 큐) kỹ thuật (engineering / 엔지니어링) / 고급 힙과 우선순위 큐 설계**
+
+Vùng nhớ vùng nhớ động (heap / 힙) nhị phân là lựa chọn mặc định rất mạnh khi cần liên tục lấy phần tử nhỏ nhất hoặc lớn nhất. Tuy nhiên, khi tải công việc thay đổi, đặc biệt khi có nhiều thao tác `decrease-key`, `merge`, hàng triệu phần tử, dữ liệu gần đơn điệu hoặc yêu cầu đồng thời, “một vùng nhớ động (heap / 힙) nhị phân cho mọi bài” không còn là mô hình đủ sâu.
 
 Chương này tập trung vào câu hỏi thiết kế: **hàng đợi ưu tiên cần hỗ trợ chính xác thao tác nào, với tần suất nào, và cách biểu diễn nào phù hợp nhất với mô hình bộ nhớ cũng như môi trường chạy?**
 
-## 1. Hàng đợi ưu tiên là ADT, heap chỉ là một họ triển khai
+## 1. Hàng đợi ưu tiên là ADT, vùng nhớ động (heap / 힙) chỉ là một họ triển khai
 
 Một hàng đợi ưu tiên có thể cần các thao tác:
 
@@ -20,13 +23,13 @@ meld(otherQueue)
 bulkBuild(items)
 ```
 
-Không phải mọi tải công việc đều cần tất cả. Heap nhị phân đặc biệt cân bằng cho `insert` và `extract-min`, nhưng nếu `meld` hoặc `decrease-key` xuất hiện dày đặc, các cấu trúc khác có thể đáng cân nhắc.
+Không phải mọi tải công việc đều cần tất cả. vùng nhớ động (heap / 힙) nhị phân đặc biệt cân bằng cho `insert` và `extract-min`, nhưng nếu `meld` hoặc `decrease-key` xuất hiện dày đặc, các cấu trúc khác có thể đáng cân nhắc.
 
-Điểm quan trọng là **đừng chọn cấu trúc từ tên bài toán; hãy chọn từ vector thao tác**.
+Điểm quan trọng là **đừng chọn cấu trúc từ tên bài toán; hãy chọn từ véc-tơ (vector / 벡터) thao tác**.
 
-## 2. Indexed Heap: khi phần tử có định danh ổn định
+## 2. Indexed vùng nhớ động (heap / 힙): khi phần tử có định danh ổn định
 
-Heap chuẩn chỉ biết phần tử nằm ở vị trí nào trong mảng tại thời điểm hiện tại. Nếu muốn cập nhật độ ưu tiên của phần tử đã biết theo ID, cần ánh xạ:
+Vùng nhớ vùng nhớ động (heap / 힙) chuẩn chỉ biết phần tử nằm ở vị trí nào trong mảng tại thời điểm hiện tại. Nếu muốn cập nhật độ ưu tiên của phần tử đã biết theo ID, cần ánh xạ:
 
 ```text
 position[id] -> heapIndex
@@ -34,7 +37,7 @@ heap[heapIndex] -> itemId
 priority[id]
 ```
 
-Mỗi lần đổi chỗ hai phần tử trong heap phải cập nhật `position` tương ứng. Khi đó `decrease-key` có thể tìm đúng vị trí trong `O(1)` rồi `sift-up` trong `O(log n)`.
+Mỗi lần đổi chỗ hai phần tử trong vùng nhớ động (heap / 힙) phải cập nhật `position` tương ứng. Khi đó `decrease-key` có thể tìm đúng vị trí trong `O(1)` rồi `sift-up` trong `O(log n)`.
 
 Đây là một **bất biến liên cấu trúc**:
 
@@ -43,17 +46,17 @@ heap[position[id]] == id
 position[heap[i]] == i
 ```
 
-Một lỗi nhỏ khi swap mà quên cập nhật `position` có thể làm heap vẫn trông đúng theo thứ tự nhưng mọi cập nhật sau đó tác động nhầm phần tử.
+Một lỗi nhỏ khi swap mà quên cập nhật `position` có thể làm vùng nhớ động (heap / 힙) vẫn trông đúng theo thứ tự nhưng mọi cập nhật sau đó tác động nhầm phần tử.
 
-### Khi nào Indexed Heap đáng dùng?
+### Khi nào Indexed vùng nhớ động (heap / 힙) đáng dùng?
 
-Dijkstra theo kiểu không tạo phần tử cũ, A*, bộ lập lịch nơi task thay đổi độ ưu tiên thường xuyên, hoặc mô phỏng sự kiện cần hủy/cập nhật sự kiện đã tồn tại là các ví dụ điển hình.
+Dijkstra theo kiểu không tạo phần tử cũ, A*, bộ lập lịch nơi tác vụ (task / 작업) thay đổi độ ưu tiên thường xuyên, hoặc mô phỏng sự kiện cần hủy/cập nhật sự kiện đã tồn tại là các ví dụ điển hình.
 
-Nếu update hiếm và việc giữ phần tử cũ trong heap rẻ hơn, mẫu “push phiên bản mới rồi bỏ stale entry khi pop” thường đơn giản hơn.
+Nếu cập nhật (update / 업데이트) hiếm và việc giữ phần tử cũ trong vùng nhớ động (heap / 힙) rẻ hơn, mẫu “push phiên bản mới rồi bỏ stale entry khi pop” thường đơn giản hơn.
 
-## 3. D-ary Heap: giảm chiều cao, tăng chi phí chọn con
+## 3. D-ary vùng nhớ động (heap / 힙): giảm chiều cao, tăng chi phí chọn con
 
-Heap nhị phân có 2 con mỗi nút. **D-ary heap** cho mỗi nút `d` con. Khi `d` tăng, chiều cao giảm:
+Vùng nhớ vùng nhớ động (heap / 힙) nhị phân có 2 con mỗi nút. **D-ary vùng nhớ động (heap / 힙)** cho mỗi nút `d` con. Khi `d` tăng, chiều cao giảm:
 
 \[
 h = O(\log_d n)
@@ -68,21 +71,21 @@ insert/decrease-key -> O(log_d n)
 extract-min         -> O(d log_d n)
 ```
 
-Với Dijkstra trên đồ thị có rất nhiều phép giảm khóa so với số lần lấy min, `d > 2` đôi khi cải thiện hiệu năng thực tế. Tuy nhiên, lựa chọn tối ưu phụ thuộc cache, comparator và tỷ lệ thao tác; không có một giá trị `d` phổ quát.
+Với Dijkstra trên đồ thị có rất nhiều phép giảm khóa so với số lần lấy min, `d > 2` đôi khi cải thiện hiệu năng thực tế. Tuy nhiên, lựa chọn tối ưu phụ thuộc bộ nhớ đệm (cache / 캐시), comparator và tỷ lệ thao tác; không có một giá trị `d` phổ quát.
 
-## 4. Binomial Heap: thiết kế hướng tới meld
+## 4. Binomial vùng nhớ động (heap / 힙): thiết kế hướng tới meld
 
-**Binomial Heap** là một rừng các cây nhị thức. Mỗi cây có kích thước là lũy thừa của hai, và trong một heap không có hai cây cùng bậc sau khi chuẩn hóa.
+**Binomial vùng nhớ động (heap / 힙)** là một rừng các cây nhị thức. Mỗi cây có kích thước là lũy thừa của hai, và trong một vùng nhớ động (heap / 힙) không có hai cây cùng bậc sau khi chuẩn hóa.
 
-Ý tưởng này giống phép cộng nhị phân. Khi hai cây cùng bậc xuất hiện, ta liên kết cây có root lớn hơn dưới root nhỏ hơn, tạo một cây bậc cao hơn.
+Ý tưởng này giống phép cộng nhị phân. Khi hai cây cùng bậc xuất hiện, ta liên kết cây có gốc (root / 루트) lớn hơn dưới gốc (root / 루트) nhỏ hơn, tạo một cây bậc cao hơn.
 
-Nhờ đó, phép **meld** hai heap trở thành việc gộp hai danh sách cây theo bậc rồi xử lý các “carry”.
+Nhờ đó, phép **meld** hai vùng nhớ động (heap / 힙) trở thành việc gộp hai danh sách cây theo bậc rồi xử lý các “carry”.
 
-Đây là ví dụ cấu trúc dữ liệu được thiết kế từ một thao tác chủ đạo: nếu hợp nhất hai hàng đợi ưu tiên là first-class operation, cấu trúc rừng có thể tự nhiên hơn mảng heap đơn.
+Đây là ví dụ cấu trúc dữ liệu được thiết kế từ một thao tác chủ đạo: nếu hợp nhất hai hàng đợi ưu tiên là first-class thao tác (operation / 연산), cấu trúc rừng có thể tự nhiên hơn mảng vùng nhớ động (heap / 힙) đơn.
 
-## 5. Fibonacci Heap: lý thuyết đẹp và bài học về amortized design
+## 5. Fibonacci vùng nhớ động (heap / 힙): lý thuyết đẹp và bài học về amortized thiết kế (design / 설계)
 
-Fibonacci Heap nổi tiếng vì các cận khấu hao:
+Fibonacci vùng nhớ động (heap / 힙) nổi tiếng vì các cận khấu hao:
 
 ```text
 insert       O(1) amortized
@@ -93,29 +96,29 @@ extract-min  O(log n) amortized
 
 Ý tưởng là trì hoãn phần lớn việc hợp nhất cây cho tới `extract-min`. `decrease-key` dùng cắt nút và **cascading cut** để bảo vệ một bất biến mềm về cấu trúc.
 
-Fibonacci Heap quan trọng về lý thuyết vì giúp đạt cận đẹp cho một số thuật toán đồ thị. Nhưng trong production hoặc competitive programming, nó thường thua heap nhị phân/pairing heap về constant factor, locality và độ phức tạp triển khai.
+Fibonacci vùng nhớ động (heap / 힙) quan trọng về lý thuyết vì giúp đạt cận đẹp cho một số thuật toán đồ thị. Nhưng trong môi trường vận hành (production / 운영 환경) hoặc competitive programming, nó thường thua vùng nhớ động (heap / 힙) nhị phân/pairing vùng nhớ động (heap / 힙) về constant factor, locality và độ phức tạp triển khai.
 
 Bài học lớn hơn:
 
-> Cận tiệm cận tốt hơn không tự động tạo implementation nhanh hơn nếu cấu trúc có nhiều con trỏ, cấp phát nhỏ và đường truy cập bộ nhớ kém cục bộ.
+> Cận tiệm cận tốt hơn không tự động tạo hiện thực (implementation / 구현) nhanh hơn nếu cấu trúc có nhiều con trỏ, cấp phát nhỏ và đường truy cập bộ nhớ kém cục bộ.
 
-## 6. Pairing Heap: đơn giản hơn nhưng rất thực dụng
+## 6. Pairing vùng nhớ động (heap / 힙): đơn giản hơn nhưng rất thực dụng
 
-**Pairing Heap** là heap dạng cây với thao tác meld cực đơn giản: so sánh hai root, gắn root lớn hơn làm con của root nhỏ hơn.
+**Pairing vùng nhớ động (heap / 힙)** là vùng nhớ động (heap / 힙) dạng cây với thao tác meld cực đơn giản: so sánh hai gốc (root / 루트), gắn gốc (root / 루트) lớn hơn làm con của gốc (root / 루트) nhỏ hơn.
 
-`extract-min` thường gom các cây con của root và ghép chúng theo cặp rồi hợp nhất lại.
+`extract-min` thường gom các cây con của gốc (root / 루트) và ghép chúng theo cặp rồi hợp nhất lại.
 
-Pairing Heap có phân tích lý thuyết tinh tế hơn heap nhị phân, nhưng thực tế thường hấp dẫn khi cần `meld` hoặc `decrease-key` và muốn implementation đơn giản hơn Fibonacci Heap.
+Pairing vùng nhớ động (heap / 힙) có phân tích lý thuyết tinh tế hơn vùng nhớ động (heap / 힙) nhị phân, nhưng thực tế thường hấp dẫn khi cần `meld` hoặc `decrease-key` và muốn hiện thực (implementation / 구현) đơn giản hơn Fibonacci vùng nhớ động (heap / 힙).
 
 Nó là ví dụ điển hình cho khoảng cách giữa **cận lý thuyết chính xác** và **lựa chọn kỹ thuật thực tế**.
 
-## 7. Leftist Heap và Skew Heap
+## 7. Leftist vùng nhớ động (heap / 힙) và Skew vùng nhớ động (heap / 힙)
 
 Hai cấu trúc này cũng tối ưu quanh phép meld.
 
-**Leftist Heap** lưu thêm thông tin đường null ngắn nhất và duy trì bất biến khiến nhánh phải ngắn. Khi meld, ta đi dọc nhánh phải rồi đổi con nếu cần để khôi phục bất biến.
+**Leftist vùng nhớ động (heap / 힙)** lưu thêm thông tin đường null ngắn nhất và duy trì bất biến khiến nhánh phải ngắn. Khi meld, ta đi dọc nhánh phải rồi đổi con nếu cần để khôi phục bất biến.
 
-**Skew Heap** bỏ metadata đó và đơn giản hoá bằng cách đổi hai cây con sau meld. Bảo đảm đến từ phân tích khấu hao chứ không phải một ràng buộc chiều cao chặt sau từng thao tác.
+**Skew vùng nhớ động (heap / 힙)** bỏ siêu dữ liệu (metadata / 메타데이터) đó và đơn giản hoá bằng cách đổi hai cây con sau meld. Bảo đảm đến từ phân tích khấu hao chứ không phải một ràng buộc chiều cao chặt sau từng thao tác.
 
 Đây là ví dụ hay cho hai triết lý:
 
@@ -125,51 +128,51 @@ vs
 bỏ metadata và dựa vào amortized behavior
 ```
 
-## 8. Monotone Priority Queue
+## 8. Monotone Priority hàng đợi (queue / 큐)
 
-Một số thuật toán có property rằng khóa được lấy ra không giảm theo thời gian. Dijkstra với trọng số không âm là ví dụ: khoảng cách đã chốt tiếp theo không nhỏ hơn khoảng cách đã chốt trước đó.
+Một số thuật toán có thuộc tính (property / 속성) rằng khóa được lấy ra không giảm theo thời gian. Dijkstra với trọng số không âm là ví dụ: khoảng cách đã chốt tiếp theo không nhỏ hơn khoảng cách đã chốt trước đó.
 
-Nếu key còn là số nguyên trong miền phù hợp, ta có thể dùng cấu trúc chuyên biệt thay vì heap so sánh tổng quát.
+Nếu key còn là số nguyên trong miền phù hợp, ta có thể dùng cấu trúc chuyên biệt thay vì vùng nhớ động (heap / 힙) so sánh tổng quát.
 
-### Dial's Algorithm
+### Dial's thuật toán (algorithm / 알고리즘)
 
 Nếu trọng số cạnh là số nguyên không âm bị chặn bởi `C`, có thể dùng các bucket theo khoảng cách modulo một cửa sổ phù hợp. Khi `C` nhỏ, điều này thay `log n` bằng thao tác gần hằng số.
 
-### Radix Heap
+### Radix vùng nhớ động (heap / 힙)
 
-Radix Heap khai thác điều kiện khóa trích xuất không giảm. Các bucket được tổ chức theo bit khác biệt cao nhất so với `lastExtracted`. Khi bucket gần nhất được mở, phần tử được phân phối lại theo mốc mới.
+Radix vùng nhớ động (heap / 힙) khai thác điều kiện khóa trích xuất không giảm. Các bucket được tổ chức theo bit khác biệt cao nhất so với `lastExtracted`. Khi bucket gần nhất được mở, phần tử được phân phối lại theo mốc mới.
 
-Cấu trúc này đặc biệt hữu ích cho shortest path với trọng số nguyên lớn hơn phạm vi Dial nhưng vẫn cần hiệu năng tốt.
+Cấu trúc này đặc biệt hữu ích cho shortest đường dẫn (path / 경로) với trọng số nguyên lớn hơn phạm vi Dial nhưng vẫn cần hiệu năng tốt.
 
 Bài học: **monotonicity là thông tin thêm có thể đổi hoàn toàn cấu trúc hàng đợi ưu tiên**.
 
-## 9. Calendar Queue và bộ mô phỏng sự kiện
+## 9. Calendar hàng đợi (queue / 큐) và bộ mô phỏng sự kiện
 
-Trong mô phỏng sự kiện rời rạc, timestamp thường tăng dần và phân phối có thể tương đối đều. **Calendar Queue** chia thời gian thành các bucket tương tự lịch, cố gắng làm insert/extract gần hằng số trung bình.
+Trong mô phỏng sự kiện rời rạc, timestamp thường tăng dần và phân phối có thể tương đối đều. **Calendar hàng đợi (queue / 큐)** chia thời gian thành các bucket tương tự lịch, cố gắng làm insert/extract gần hằng số trung bình.
 
 Nhưng hiệu quả rất nhạy với phân phối timestamp và cách chọn độ rộng bucket. Khi dữ liệu lệch hoặc bursty, cấu trúc có thể suy giảm.
 
-Đây là một ví dụ quan trọng: một cấu trúc có average-case tốt dựa trên mô hình dữ liệu phải được đo với phân phối thật, không chỉ với input ngẫu nhiên đẹp.
+Đây là một ví dụ quan trọng: một cấu trúc có average-case tốt dựa trên mô hình dữ liệu phải được đo với phân phối thật, không chỉ với đầu vào (input / 입력) ngẫu nhiên đẹp.
 
-## 10. Heap và cache locality
+## 10. vùng nhớ động (heap / 힙) và bộ nhớ đệm (cache / 캐시) locality
 
-Heap nhị phân bằng mảng có locality tương đối tốt, nhưng `sift-down` nhảy theo chỉ số tăng gần gấp đôi mỗi tầng. Với heap rất lớn, đường đi có thể chạm nhiều dòng cache khác nhau.
+Vùng nhớ vùng nhớ động (heap / 힙) nhị phân bằng mảng có locality tương đối tốt, nhưng `sift-down` nhảy theo chỉ số tăng gần gấp đôi mỗi tầng. Với vùng nhớ động (heap / 힙) rất lớn, đường đi có thể chạm nhiều dòng bộ nhớ đệm (cache / 캐시) khác nhau.
 
-D-ary heap giảm số tầng và tăng số con nằm gần nhau hơn trong mảng. Vì vậy, dù phải so nhiều con mỗi tầng, cache behavior đôi khi tốt hơn heap nhị phân.
+D-ary vùng nhớ động (heap / 힙) giảm số tầng và tăng số con nằm gần nhau hơn trong mảng. Vì vậy, dù phải so nhiều con mỗi tầng, bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작) đôi khi tốt hơn vùng nhớ động (heap / 힙) nhị phân.
 
-Đây là lý do benchmarking theo workload thật quan trọng hơn việc chỉ đọc công thức Big-O.
+Đây là lý do benchmarking theo tải công việc (workload / 워크로드) thật quan trọng hơn việc chỉ đọc công thức Big-O.
 
 ## 11. So sánh comparator và khóa tốn kém
 
-Nếu comparator chỉ so hai `int`, chi phí heap chủ yếu là di chuyển dữ liệu. Nhưng nếu comparator phải so chuỗi dài, nhiều trường object hoặc gọi logic phức tạp, số lần so sánh trở thành yếu tố chính.
+Nếu comparator chỉ so hai `int`, chi phí vùng nhớ động (heap / 힙) chủ yếu là di chuyển dữ liệu. Nhưng nếu comparator phải so chuỗi dài, nhiều trường đối tượng (object / 객체) hoặc gọi lô-gic (logic / 논리) phức tạp, số lần so sánh trở thành yếu tố chính.
 
 Có thể lưu **khóa đã chuẩn hóa (normalized key)** hoặc score đã tính sẵn bên cạnh item để tránh tính lại trong mỗi phép so sánh.
 
-Tuy nhiên, nếu score có thể thay đổi, metadata phải được cập nhật nhất quán; nếu không heap property sẽ dựa trên giá trị cũ.
+Tuy nhiên, nếu score có thể thay đổi, siêu dữ liệu (metadata / 메타데이터) phải được cập nhật nhất quán; nếu không vùng nhớ động (heap / 힙) thuộc tính (property / 속성) sẽ dựa trên giá trị cũ.
 
-## 12. Stable Priority Queue
+## 12. Stable Priority hàng đợi (queue / 큐)
 
-Heap chuẩn không bảo đảm thứ tự giữa hai phần tử có cùng priority. Nếu hệ thống cần FIFO trong cùng mức ưu tiên, có thể dùng khóa tổng hợp:
+Vùng nhớ vùng nhớ động (heap / 힙) chuẩn không bảo đảm thứ tự giữa hai phần tử có cùng priority. Nếu hệ thống cần FIFO trong cùng mức ưu tiên, có thể dùng khóa tổng hợp:
 
 ```text
 (priority, sequenceNumber)
@@ -181,15 +184,15 @@ Trong đó `sequenceNumber` tăng dần theo thời điểm enqueue.
 
 ## 13. Deadline, priority và starvation
 
-Một scheduler chỉ dùng max-heap theo priority có thể làm task priority thấp chờ mãi nếu task priority cao liên tục xuất hiện. Đây là **starvation**.
+Một scheduler chỉ dùng max-heap theo priority có thể làm tác vụ (task / 작업) priority thấp chờ mãi nếu tác vụ (task / 작업) priority cao liên tục xuất hiện. Đây là **starvation**.
 
 Một kỹ thuật là **aging**: tăng priority hiệu dụng theo thời gian chờ. Khi đó priority không còn tĩnh; cập nhật key trở thành thao tác thường xuyên và có thể ảnh hưởng lựa chọn cấu trúc.
 
-Earliest Deadline First lại dùng deadline thay priority tĩnh. Các mô hình scheduling khác nhau tạo các order khác nhau; không nên gọi chung mọi thứ là “priority queue” rồi bỏ qua semantics.
+Earliest Deadline First lại dùng deadline thay priority tĩnh. Các mô hình scheduling khác nhau tạo các thứ tự (order / 순서) khác nhau; không nên gọi chung mọi thứ là “priority hàng đợi (queue / 큐)” rồi bỏ qua ngữ nghĩa (semantics / 의미론).
 
-## 14. Bounded Priority Queue và Top-K streaming
+## 14. Bounded Priority hàng đợi (queue / 큐) và Top-K streaming
 
-Nếu chỉ quan tâm `k` phần tử tốt nhất, heap không nên tăng đến `n`.
+Nếu chỉ quan tâm `k` phần tử tốt nhất, vùng nhớ động (heap / 힙) không nên tăng đến `n`.
 
 Một min-heap kích thước `k` giữ top-k lớn nhất:
 
@@ -201,22 +204,22 @@ x > min(heap)        -> thay min bằng x
 
 Tổng thời gian `O(n log k)`, bộ nhớ `O(k)`.
 
-Trong hệ thống phân tán, mỗi shard có thể tạo local top-k rồi coordinator gộp các ứng viên. Tuy nhiên, local top-k kích thước đúng `k` không phải lúc nào cũng đủ nếu scoring toàn cục phụ thuộc dữ liệu từ nhiều shard; phải chứng minh reduction giữ đúng candidate set.
+Trong hệ thống phân tán, mỗi shard có thể tạo cục bộ (local / 로컬) top-k rồi coordinator gộp các ứng viên. Tuy nhiên, cục bộ (local / 로컬) top-k kích thước đúng `k` không phải lúc nào cũng đủ nếu scoring toàn cục phụ thuộc dữ liệu từ nhiều shard; phải chứng minh reduction giữ đúng candidate set.
 
 ## 15. Lazy Deletion
 
-Nhiều heap API không hỗ trợ xóa arbitrary element. Một pattern phổ biến là **lazy deletion**:
+Nhiều vùng nhớ động (heap / 힙) API không hỗ trợ xóa arbitrary element. Một mẫu (pattern / 패턴) phổ biến là **lazy deletion**:
 
 ```text
 đánh dấu item là invalid
 khi item lên root thì bỏ qua và pop tiếp
 ```
 
-Cách này đơn giản nhưng làm heap chứa rác. Nếu invalid item tích lũy nhanh hơn tốc độ bị pop, bộ nhớ và latency có thể tăng.
+Cách này đơn giản nhưng làm vùng nhớ động (heap / 힙) chứa rác. Nếu invalid item tích lũy nhanh hơn tốc độ bị pop, bộ nhớ và độ trễ (latency / 지연 시간) có thể tăng.
 
-Do đó lazy deletion thường cần policy rebuild hoặc cơ chế epoch/version để giới hạn rác.
+Do đó lazy deletion thường cần chính sách (policy / 정책) rebuild hoặc cơ chế epoch/phiên bản (version / 버전) để giới hạn rác.
 
-## 16. Hai heap cho median động
+## 16. Hai vùng nhớ động (heap / 힙) cho median động
 
 Để duy trì median của luồng:
 
@@ -232,35 +235,35 @@ mọi phần tử lower <= mọi phần tử upper
 |size(lower) - size(upper)| <= 1
 ```
 
-Median lấy từ một hoặc hai root. Insert cần đặt vào nửa phù hợp rồi rebalance.
+Median lấy từ một hoặc hai gốc (root / 루트). Insert cần đặt vào nửa phù hợp rồi rebalance.
 
-Nếu thêm thao tác xóa phần tử khỏi cửa sổ trượt, hai heap thường kết hợp với lazy deletion và bảng đếm phiên bản. Khi đó correctness không chỉ nằm ở heap property mà còn ở bất biến giữa **kích thước logic** và **kích thước vật lý** của heap.
+Nếu thêm thao tác xóa phần tử khỏi cửa sổ trượt, hai vùng nhớ động (heap / 힙) thường kết hợp với lazy deletion và bảng đếm phiên bản. Khi đó tính đúng đắn (correctness / 정확성) không chỉ nằm ở vùng nhớ động (heap / 힙) thuộc tính (property / 속성) mà còn ở bất biến giữa **kích thước lô-gic (logic / 논리)** và **kích thước vật lý** của vùng nhớ động (heap / 힙).
 
 ## 17. Hàng đợi ưu tiên đồng thời
 
-Một heap có một root nóng; nhiều luồng cùng insert/extract có thể tranh chấp khóa mạnh. Vì vậy concurrent priority queue khó mở rộng hơn queue FIFO phân vùng tốt.
+Một vùng nhớ động (heap / 힙) có một gốc (root / 루트) nóng; nhiều luồng cùng insert/extract có thể tranh chấp khóa mạnh. Vì vậy concurrent priority hàng đợi (queue / 큐) khó mở rộng hơn hàng đợi (queue / 큐) FIFO phân vùng tốt.
 
-Các thiết kế có thể dùng nhiều heap con, skip-list có thứ tự, relaxed priority queue hoặc multi-queue: mỗi thao tác chọn ngẫu nhiên vài queue và thao tác trên một queue phù hợp.
+Các thiết kế có thể dùng nhiều vùng nhớ động (heap / 힙) con, skip-list có thứ tự, relaxed priority hàng đợi (queue / 큐) hoặc multi-queue: mỗi thao tác chọn ngẫu nhiên vài hàng đợi (queue / 큐) và thao tác trên một hàng đợi (queue / 큐) phù hợp.
 
-Đổi lại, một số thiết kế chấp nhận **relaxed ordering**: phần tử lấy ra gần nhỏ nhất chứ không tuyệt đối nhỏ nhất. Nếu ứng dụng cho phép, relaxation có thể cải thiện scalability đáng kể.
+Đổi lại, một số thiết kế chấp nhận **relaxed thứ tự (ordering / 순서)**: phần tử lấy ra gần nhỏ nhất chứ không tuyệt đối nhỏ nhất. Nếu ứng dụng cho phép, relaxation có thể cải thiện scalability đáng kể.
 
-## 18. External-memory Priority Queue
+## 18. External-memory Priority hàng đợi (queue / 큐)
 
-Khi hàng đợi ưu tiên vượt RAM, số I/O theo khối trở thành mô hình chi phí quan trọng. Heap nhị phân đơn giản có thể gây nhiều truy cập ngẫu nhiên.
+Khi hàng đợi ưu tiên vượt RAM, số I/O theo khối trở thành mô hình chi phí quan trọng. vùng nhớ động (heap / 힙) nhị phân đơn giản có thể gây nhiều truy cập ngẫu nhiên.
 
-Các cấu trúc ưu tiên cho external memory cố batch insert, buffer update và hợp nhất các run để giảm số block transfer. Đây là cùng tư duy với B-Tree và external merge sort: tối ưu **di chuyển dữ liệu**, không chỉ số phép so sánh.
+Các cấu trúc ưu tiên cho bên ngoài (external / 외부) bộ nhớ (memory / 메모리) cố batch insert, buffer cập nhật (update / 업데이트) và hợp nhất các run để giảm số khối (block / 블록) transfer. Đây là cùng tư duy với B-Tree và bên ngoài (external / 외부) merge sort: tối ưu **di chuyển dữ liệu**, không chỉ số phép so sánh.
 
-## 19. Kiểm thử heap nâng cao
+## 19. Kiểm thử vùng nhớ động (heap / 힙) nâng cao
 
-Ngoài test `extract` ra thứ tự tăng dần, cần kiểm tra bất biến sau chuỗi thao tác ngẫu nhiên.
+Ngoài kiểm thử (test / 테스트) `extract` ra thứ tự tăng dần, cần kiểm tra bất biến sau chuỗi thao tác ngẫu nhiên.
 
-Với indexed heap:
+Với indexed vùng nhớ động (heap / 힙):
 
 ```text
 heap[position[id]] == id
 ```
 
-Với hai heap median:
+Với hai vùng nhớ động (heap / 힙) median:
 
 ```text
 max(lower) <= min(upper)
@@ -268,31 +271,31 @@ kích thước logic cân bằng
 median khớp với mảng tham chiếu đã sắp xếp
 ```
 
-Với meldable heap, có thể tạo nhiều heap nhỏ, meld theo thứ tự ngẫu nhiên rồi so toàn bộ chuỗi extract với một multiset tham chiếu.
+Với meldable vùng nhớ động (heap / 힙), có thể tạo nhiều vùng nhớ động (heap / 힙) nhỏ, meld theo thứ tự ngẫu nhiên rồi so toàn bộ chuỗi extract với một multiset tham chiếu.
 
-Property-based testing rất phù hợp vì lỗi heap thường chỉ xuất hiện sau một chuỗi update đặc biệt.
+Property-based testing rất phù hợp vì lỗi vùng nhớ động (heap / 힙) thường chỉ xuất hiện sau một chuỗi cập nhật (update / 업데이트) đặc biệt.
 
-## 20. Chọn heap theo tải công việc
+## 20. Chọn vùng nhớ động (heap / 힙) theo tải công việc
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 | Tải công việc | Ứng viên thường hợp lý |
 |---|---|
-| General insert/extract | Binary Heap |
-| Nhiều decrease-key | Indexed Heap, D-ary Heap, Pairing Heap |
-| Meld thường xuyên | Binomial/Pairing/Leftist/Skew Heap |
-| Lý thuyết decrease-key tối ưu | Fibonacci Heap |
-| Khóa nguyên đơn điệu | Dial / Radix Heap |
-| Top-K streaming | Bounded Binary Heap |
+| General insert/extract | nhị phân (binary / 이진) vùng nhớ động (heap / 힙) |
+| Nhiều decrease-key | Indexed vùng nhớ động (heap / 힙), D-ary vùng nhớ động (heap / 힙), Pairing vùng nhớ động (heap / 힙) |
+| Meld thường xuyên | Binomial/Pairing/Leftist/Skew vùng nhớ động (heap / 힙) |
+| Lý thuyết decrease-key tối ưu | Fibonacci vùng nhớ động (heap / 힙) |
+| Khóa nguyên đơn điệu | Dial / Radix vùng nhớ động (heap / 힙) |
+| Top-K streaming | Bounded nhị phân (binary / 이진) vùng nhớ động (heap / 힙) |
 | Median động | Two Heaps |
 | Concurrent, chấp nhận gần đúng | Multi-queue / relaxed PQ |
 | Dữ liệu vượt RAM | External-memory PQ |
 
-Bảng này là điểm xuất phát, không phải luật tuyệt đối. Constant factor, cache, độ phức tạp implementation và semantics của API vẫn phải được đo.
+Bảng này là điểm xuất phát, không phải luật tuyệt đối. Constant factor, bộ nhớ đệm (cache / 캐시), độ phức tạp hiện thực (implementation / 구현) và ngữ nghĩa (semantics / 의미론) của API vẫn phải được đo.
 
 ## Mô hình tư duy
 
-> Heap không phải một cấu trúc duy nhất mà là **một họ cách biểu diễn thứ tự bộ phận**. Chọn đúng biến thể nghĩa là hiểu thao tác nào thật sự đắt trong tải công việc của mình.
+> vùng nhớ động (heap / 힙) không phải một cấu trúc duy nhất mà là **một họ cách biểu diễn thứ tự bộ phận**. Chọn đúng biến thể nghĩa là hiểu thao tác nào thật sự đắt trong tải công việc của mình.
 
 Khi gặp một bài toán hàng đợi ưu tiên, hãy hỏi:
 

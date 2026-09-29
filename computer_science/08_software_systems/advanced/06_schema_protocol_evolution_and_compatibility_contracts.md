@@ -1,12 +1,15 @@
-# Tiến hóa schema, protocol và hợp đồng tương thích
+# Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích
 
-Hệ thống production hiếm khi nâng cấp toàn bộ thành phần cùng lúc. Trong vài phút, vài giờ hoặc nhiều tuần, client cũ có thể nói chuyện với server mới; producer mới gửi dữ liệu cho consumer cũ; database schema mới phục vụ application instance chưa restart. Vì vậy **compatibility (tính tương thích)** không phải vấn đề phụ của deployment mà là thuộc tính correctness của hệ thống đang tiến hóa.
+> **Mạch đọc:** Đặt **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) chứ không chỉ cấu trúc (structure / 구조)** sang **2. Backward và forward tính tương thích (compatibility / 호환성)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này nối data modeling, API design, event streaming và distributed deployment. Câu hỏi trung tâm là: **làm thế nào thay đổi representation mà các thành phần đang chạy ở nhiều version vẫn hiểu nhau đủ đúng?**
 
-## 1. Schema là contract chứ không chỉ structure
+Hệ thống môi trường vận hành (production / 운영 환경) hiếm khi nâng cấp toàn bộ thành phần cùng lúc. Trong vài phút, vài giờ hoặc nhiều tuần, máy khách (client / 클라이언트) cũ có thể nói chuyện với máy chủ (server / 서버) mới; producer mới gửi dữ liệu cho bên tiêu thụ (consumer / 소비자) cũ; cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) mới phục vụ ứng dụng (application / 애플리케이션) instance chưa restart. Vì vậy **tính tương thích (compatibility / 호환성)** không phải vấn đề phụ của triển khai (deployment / 배포) mà là thuộc tính tính đúng đắn (correctness / 정확성) của hệ thống đang tiến hóa.
 
-Một field `status` trong JSON không chỉ là chuỗi. Consumer có thể giả định tập giá trị, nullability, ý nghĩa thời gian hoặc quan hệ với field khác.
+Chapter này nối dữ liệu (data / 데이터) modeling, API thiết kế (design / 설계), sự kiện (event / 이벤트) streaming và phân tán (distributed / 분산) triển khai (deployment / 배포). Câu hỏi trung tâm là: **làm thế nào thay đổi biểu diễn (representation / 표현) mà các thành phần đang chạy ở nhiều phiên bản (version / 버전) vẫn hiểu nhau đủ đúng?**
+
+## 1. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) chứ không chỉ cấu trúc (structure / 구조)
+
+Một trường dữ liệu (field / 필드) `status` trong JSON không chỉ là chuỗi. bên tiêu thụ (consumer / 소비자) có thể giả định tập giá trị, nullability, ý nghĩa thời gian hoặc quan hệ với trường dữ liệu (field / 필드) khác.
 
 ```json
 {
@@ -15,21 +18,21 @@ Một field `status` trong JSON không chỉ là chuỗi. Consumer có thể gi�
 }
 ```
 
-Nếu producer thêm `PARTIALLY_REFUNDED`, syntax vẫn hợp lệ nhưng consumer dùng exhaustive switch cũ có thể crash hoặc xử lý sai.
+Nếu producer thêm `PARTIALLY_REFUNDED`, cú pháp (syntax / 문법) vẫn hợp lệ nhưng bên tiêu thụ (consumer / 소비자) dùng exhaustive switch cũ có thể crash hoặc xử lý sai.
 
-Do đó schema có hai lớp: representation contract và semantic contract.
+Do đó lược đồ (schema / 스키마) có hai lớp: biểu diễn (representation / 표현) đặc tả hợp đồng (contract / 계약) và ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
 
-## 2. Backward và forward compatibility
+## 2. Backward và forward tính tương thích (compatibility / 호환성)
 
 **Tương thích ngược (backward compatibility)** thường nghĩa reader mới đọc được dữ liệu do writer cũ tạo. **Tương thích xuôi (forward compatibility)** nghĩa reader cũ vẫn xử lý được dữ liệu writer mới trong phạm vi thiết kế.
 
-Trong rolling deployment, thường cần cả hai theo một khoảng thời gian vì version cũ và mới cùng tồn tại.
+Trong rolling triển khai (deployment / 배포), thường cần cả hai theo một khoảng thời gian vì phiên bản (version / 버전) cũ và mới cùng tồn tại.
 
 Không nên dùng hai thuật ngữ này mà không nói rõ ai là reader, ai là writer; documentation giữa các hệ sinh thái đôi khi dùng góc nhìn khác nhau.
 
-## 3. Additive change thường an toàn hơn destructive change
+## 3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)
 
-Thêm optional field thường dễ tương thích nếu reader cũ bỏ qua field lạ:
+Thêm optional trường dữ liệu (field / 필드) thường dễ tương thích nếu reader cũ bỏ qua trường dữ liệu (field / 필드) lạ:
 
 ```json
 {
@@ -39,39 +42,39 @@ Thêm optional field thường dễ tương thích nếu reader cũ bỏ qua fie
 }
 ```
 
-Nhưng “thêm field” không tự động an toàn. Nếu field mới thay đổi interpretation của field cũ, semantic compatibility vẫn có thể vỡ.
+Nhưng “thêm trường dữ liệu (field / 필드)” không tự động an toàn. Nếu trường dữ liệu (field / 필드) mới thay đổi interpretation của trường dữ liệu (field / 필드) cũ, ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성) vẫn có thể vỡ.
 
 Rename thường thực chất là `add new → dual support → migrate → remove old`, không phải đổi tên nguyên tử.
 
 ## 4. Tolerant reader và giới hạn của nó
 
-Tolerant reader bỏ qua thông tin không hiểu, giúp evolution. Nhưng quá tolerant có thể che lỗi. Nếu security-sensitive field bị bỏ qua, hệ thống có thể chấp nhận message mà đáng ra phải reject.
+Tolerant reader bỏ qua thông tin không hiểu, giúp evolution. Nhưng quá tolerant có thể che lỗi. Nếu security-sensitive trường dữ liệu (field / 필드) bị bỏ qua, hệ thống có thể chấp nhận message mà đáng ra phải reject.
 
-Vì vậy tolerance phải có boundary: unknown metadata có thể bỏ qua, nhưng unknown authorization mode có thể phải fail closed.
+Vì vậy tolerance phải có ranh giới (boundary / 경계): unknown siêu dữ liệu (metadata / 메타데이터) có thể bỏ qua, nhưng unknown authorization chế độ (mode / 모드) có thể phải thất bại (fail / 실패) closed.
 
-## 5. Enum là điểm compatibility dễ vỡ
+## 5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ
 
-Developer thường xem enum là closed set:
+Nhà phát triển (developer / 개발자) thường xem enum là closed set:
 
 ```text
 PENDING | PAID | CANCELLED
 ```
 
-Distributed protocol nên cân nhắc khả năng writer mới thêm giá trị. Consumer cũ cần chiến lược như `UNKNOWN`, fallback an toàn hoặc explicit rejection.
+Phân tán (distributed / 분산) giao thức (protocol / 프로토콜) nên cân nhắc khả năng writer mới thêm giá trị. bên tiêu thụ (consumer / 소비자) cũ cần chiến lược như `UNKNOWN`, fallback an toàn hoặc tường minh (explicit / 명시적) rejection.
 
-Đây là trade-off giữa evolvability và khả năng phát hiện dữ liệu bất thường.
+Đây là sự đánh đổi (trade-off / 트레이드오프) giữa evolvability và khả năng phát hiện dữ liệu bất thường.
 
-## 6. Binary protocols và field identity
+## 6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)
 
-Các serialization system như Protocol Buffers không chỉ dựa vào tên field mà dùng numeric field identifier trên wire. Nếu tái sử dụng identifier đã xóa cho nghĩa mới, dữ liệu cũ có thể bị giải mã thành ý nghĩa sai.
+Các serialization hệ thống (system / 시스템) như giao thức (protocol / 프로토콜) Buffers không chỉ dựa vào tên trường dữ liệu (field / 필드) mà dùng numeric trường dữ liệu (field / 필드) identifier trên wire. Nếu tái sử dụng identifier đã xóa cho nghĩa mới, dữ liệu cũ có thể bị giải mã thành ý nghĩa sai.
 
-Điểm sâu ở đây là **wire identity phải ổn định lâu hơn source-code name**. Rename source field có thể an toàn trong khi reuse wire tag có thể nguy hiểm.
+Điểm sâu ở đây là **wire định danh (identity / 식별자) phải ổn định lâu hơn source-code name**. Rename nguồn (source / 소스) trường dữ liệu (field / 필드) có thể an toàn trong khi reuse wire tag có thể nguy hiểm.
 
-## 7. Database schema trong rolling deployment
+## 7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)
 
-Giả sử cần đổi `full_name` thành `display_name`. Nếu migration rename column trước khi application cũ dừng, instance cũ có thể lỗi.
+Giả sử cần đổi `full_name` thành `display_name`. Nếu di chuyển (migration / 마이그레이션) rename column trước khi ứng dụng (application / 애플리케이션) cũ dừng, instance cũ có thể lỗi.
 
-Pattern **expand–migrate–contract** giải quyết bằng các giai đoạn:
+Mẫu (pattern / 패턴) **expand–migrate–đặc tả hợp đồng (contract / 계약)** giải quyết bằng các giai đoạn:
 
 ```text
 expand: thêm representation mới nhưng giữ cũ
@@ -79,43 +82,43 @@ migrate: code/data chuyển dần
 contract: xóa representation cũ khi không còn reader/writer phụ thuộc
 ```
 
-Điều này biến migration từ một mutation lớn thành protocol giữa các version.
+Điều này biến di chuyển (migration / 마이그레이션) từ một mutation lớn thành giao thức (protocol / 프로토콜) giữa các phiên bản (version / 버전).
 
-## 8. Dual write và consistency risk
+## 8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)
 
-Trong giai đoạn chuyển tiếp, application đôi khi ghi cả column cũ và mới. Hai write có thể lệch nếu không nằm trong cùng transaction hoặc logic mapping thay đổi.
+Trong giai đoạn chuyển tiếp, ứng dụng (application / 애플리케이션) đôi khi ghi cả column cũ và mới. Hai ghi (write / 쓰기) có thể lệch nếu không nằm trong cùng giao dịch (transaction / 트랜잭션) hoặc lô-gic (logic / 논리) ánh xạ (mapping / 매핑) thay đổi.
 
-Nếu dual write sang hai service/database độc lập, ta quay lại distributed dual-write problem. Khi đó outbox/event-driven migration có thể phù hợp hơn.
+Nếu dual ghi (write / 쓰기) sang hai dịch vụ (service / 서비스)/cơ sở dữ liệu (database / 데이터베이스) độc lập, ta quay lại phân tán (distributed / 분산) dual-write bài toán (problem / 문제). Khi đó outbox/event-driven di chuyển (migration / 마이그레이션) có thể phù hợp hơn.
 
 Xem [distributed transactions](../../05_data_databases/advanced/07_distributed_transactions_2pc_consensus_sagas_and_outbox.md).
 
-## 9. Backfill là workload production
+## 9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)
 
-Backfill hàng triệu row không chỉ là data script. Nó cạnh tranh I/O, buffer pool, WAL bandwidth, replica lag và lock với traffic thật.
+Backfill hàng triệu row không chỉ là dữ liệu (data / 데이터) script. Nó cạnh tranh I/O, buffer pool, WAL bandwidth, replica lag và khóa (lock / 잠금) với traffic thật.
 
-Một migration logically correct vẫn có thể gây outage vì resource saturation. Vì vậy cần batch, rate limit, checkpoint, retry và observability.
+Một di chuyển (migration / 마이그레이션) logically correct vẫn có thể gây outage vì tài nguyên (resource / 자원) saturation. Vì vậy cần batch, tỷ lệ (rate / 비율) limit, checkpoint, thử lại (retry / 재시도) và khả năng quan sát (observability / 관측 가능성).
 
-Đây là connection trực tiếp giữa schema evolution và capacity planning.
+Đây là liên kết (connection / 연결) trực tiếp giữa lược đồ (schema / 스키마) evolution và sức chứa (capacity / 용량) planning.
 
-## 10. Event schema khó xóa hơn database column
+## 10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column
 
-Database row có thể được migration tại chỗ. Event log có thể giữ message nhiều năm và được replay. Consumer mới phải đối mặt historical schema.
+Cơ sở dữ liệu (database / 데이터베이스) row có thể được di chuyển (migration / 마이그레이션) tại chỗ. sự kiện (event / 이벤트) log có thể giữ message nhiều năm và được replay. bên tiêu thụ (consumer / 소비자) mới phải đối mặt historical lược đồ (schema / 스키마).
 
-Nếu stream được dùng cho replay, compatibility horizon gần bằng retention horizon, không chỉ deployment window.
+Nếu stream được dùng cho replay, tính tương thích (compatibility / 호환성) horizon gần bằng retention horizon, không chỉ triển khai (deployment / 배포) cửa sổ (window / 윈도우).
 
-Schema registry giúp kiểm tra structural compatibility, nhưng không chứng minh semantic compatibility.
+Lược đồ (schema / 스키마) registry giúp kiểm tra structural tính tương thích (compatibility / 호환성), nhưng không chứng minh ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성).
 
 ## 11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi
 
-Tạo `/v2` cho mỗi thay đổi nhỏ tạo nhiều version phải duy trì. Additive evolution thường tốt hơn khi semantics cốt lõi không đổi.
+Tạo `/v2` cho mỗi thay đổi nhỏ tạo nhiều phiên bản (version / 버전) phải duy trì. Additive evolution thường tốt hơn khi ngữ nghĩa (semantics / 의미론) cốt lõi không đổi.
 
-Version mới hợp lý khi contract thực sự thay đổi theo cách không thể diễn đạt tương thích, ví dụ meaning của resource hoặc workflow thay đổi lớn.
+Phiên bản (version / 버전) mới hợp lý khi đặc tả hợp đồng (contract / 계약) thực sự thay đổi theo cách không thể diễn đạt tương thích, ví dụ meaning của tài nguyên (resource / 자원) hoặc workflow thay đổi lớn.
 
-Versioning không xóa migration; nó chuyển migration sang client ecosystem.
+Versioning không xóa di chuyển (migration / 마이그레이션); nó chuyển di chuyển (migration / 마이그레이션) sang máy khách (client / 클라이언트) ecosystem.
 
-## 12. Capability negotiation
+## 12. năng lực (capability / 역량) negotiation
 
-Một số protocol cho phép hai phía thương lượng capability thay vì suy luận từ version number:
+Một số giao thức (protocol / 프로토콜) cho phép hai phía thương lượng năng lực (capability / 역량) thay vì suy luận từ phiên bản (version / 버전) number:
 
 ```text
 client supports: compression=A,B; feature=X
@@ -123,29 +126,29 @@ server supports: compression=B,C; feature=X,Y
 intersection: compression=B; feature=X
 ```
 
-Capability negotiation hữu ích khi feature evolution không tuyến tính. Nhưng protocol handshake và fallback trở nên phức tạp hơn.
+Năng lực (capability / 역량) negotiation hữu ích khi tính năng (feature / 기능) evolution không tuyến tính. Nhưng giao thức (protocol / 프로토콜) handshake và fallback trở nên phức tạp hơn.
 
-## 13. Semantic versioning và distributed reality
+## 13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality
 
-`major.minor.patch` là communication convention, không phải proof về compatibility. Một “minor” release vẫn có thể phá consumer nếu behavior undocumented đã trở thành dependency thực tế.
+`major.minor.patch` là communication convention, không phải proof về tính tương thích (compatibility / 호환성). Một “minor” bản phát hành (release / 릴리스) vẫn có thể phá bên tiêu thụ (consumer / 소비자) nếu hành vi (behavior / 동작) undocumented đã trở thành phụ thuộc (dependency / 의존성) thực tế.
 
-Contract tests và traffic evidence quan trọng hơn label version.
+Đặc tả hợp đồng (contract / 계약) tests và traffic bằng chứng (evidence / 증거) quan trọng hơn label phiên bản (version / 버전).
 
-## 14. Consumer-driven contract
+## 14. Consumer-driven đặc tả hợp đồng (contract / 계약)
 
-Provider không luôn biết consumer đang dựa vào field nào. Consumer-driven contract ghi lại expectation của consumer và kiểm tra provider change trước deployment.
+Provider không luôn biết bên tiêu thụ (consumer / 소비자) đang dựa vào trường dữ liệu (field / 필드) nào. Consumer-driven đặc tả hợp đồng (contract / 계약) ghi lại expectation của bên tiêu thụ (consumer / 소비자) và kiểm tra provider thay đổi (change / 변경) trước triển khai (deployment / 배포).
 
-Nhưng test chỉ phản ánh consumer đã đăng ký. Shadow consumer, ad-hoc analytics hoặc external integration vẫn có thể tồn tại. Governance và observability vẫn cần thiết.
+Nhưng kiểm thử (test / 테스트) chỉ phản ánh bên tiêu thụ (consumer / 소비자) đã đăng ký. Shadow bên tiêu thụ (consumer / 소비자), ad-hoc analytics hoặc bên ngoài (external / 외부) tích hợp (integration / 통합) vẫn có thể tồn tại. quản trị (governance / 거버넌스) và khả năng quan sát (observability / 관측 가능성) vẫn cần thiết.
 
 ## 15. Unknown fields, defaults và dữ liệu bị mất
 
-Một proxy đọc message mới bằng schema cũ rồi serialize lại có thể làm mất unknown field nếu serialization library không preserve chúng. Đây là failure mode tinh vi: proxy “không thay đổi gì” về logic nhưng làm hỏng forward compatibility.
+Một proxy đọc message mới bằng lược đồ (schema / 스키마) cũ rồi serialize lại có thể làm mất unknown trường dữ liệu (field / 필드) nếu serialization thư viện (library / 라이브러리) không preserve chúng. Đây là dạng thất bại (failure mode / 실패 모드) tinh vi: proxy “không thay đổi gì” về lô-gic (logic / 논리) nhưng làm hỏng forward tính tương thích (compatibility / 호환성).
 
-Default value cũng nguy hiểm. Missing field có thể có nghĩa “writer cũ không biết field này”, khác với writer mới chủ động gửi `false` hoặc `0`.
+Default giá trị (value / 값) cũng nguy hiểm. Missing trường dữ liệu (field / 필드) có thể có nghĩa “writer cũ không biết trường dữ liệu (field / 필드) này”, khác với writer mới chủ động gửi `false` hoặc `0`.
 
-## 16. Compatibility matrix
+## 16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
-Thay vì hỏi “API có backward compatible không?”, hãy lập matrix:
+Thay vì hỏi “API có backward compatible không?”, hãy lập ma trận (matrix / 행렬):
 
 ```text
 writer old -> reader old
@@ -155,28 +158,30 @@ writer new -> reader new
 historical replay -> reader current
 ```
 
-Sau đó kiểm tra structural parsing, semantic interpretation và side effect của từng ô.
+Sau đó kiểm tra structural parsing, ngữ nghĩa (semantic / 의미적) interpretation và side tác động (effect / 효과) của từng ô.
 
 ## 17. Failure-safe rollout
 
-Một rollout tốt cần khả năng dừng và rollback. Nhưng rollback binary không luôn rollback data. Nếu version mới đã ghi representation mà version cũ không hiểu, quay application về version cũ có thể thất bại.
+Một rollout tốt cần khả năng dừng và quay lui (rollback / 롤백). Nhưng quay lui (rollback / 롤백) nhị phân (binary / 이진) không luôn quay lui (rollback / 롤백) dữ liệu (data / 데이터). Nếu phiên bản (version / 버전) mới đã ghi biểu diễn (representation / 표현) mà phiên bản (version / 버전) cũ không hiểu, quay ứng dụng (application / 애플리케이션) về phiên bản (version / 버전) cũ có thể thất bại.
 
-Do đó migration cần **rollback compatibility** trong khoảng quan trọng, hoặc forward-fix strategy rõ ràng.
+Do đó di chuyển (migration / 마이그레이션) cần **quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** trong khoảng quan trọng, hoặc forward-fix chiến lược (strategy / 전략) rõ ràng.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-**“Thêm field luôn backward compatible.”** Chỉ đúng nếu parser và semantics của consumer cho phép.
+**“Thêm trường dữ liệu (field / 필드) luôn backward compatible.”** Chỉ đúng nếu parser và ngữ nghĩa (semantics / 의미론) của bên tiêu thụ (consumer / 소비자) cho phép.
 
-**“Schema registry đảm bảo hệ thống tương thích.”** Registry thường kiểm structural rules, không hiểu business semantics.
+**“lược đồ (schema / 스키마) registry đảm bảo hệ thống tương thích.”** Registry thường kiểm structural rules, không hiểu nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론).
 
-**“Database migration chạy một lần nên performance không quan trọng.”** Migration có thể là workload lớn nhất hệ thống trong thời gian chạy.
+**“cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) chạy một lần nên hiệu năng (performance / 성능) không quan trọng.”** di chuyển (migration / 마이그레이션) có thể là tải công việc (workload / 워크로드) lớn nhất hệ thống trong thời gian chạy.
 
-**“Rollback application là đủ.”** Data được ghi bởi version mới có thể làm version cũ không chạy được.
+**“quay lui (rollback / 롤백) ứng dụng (application / 애플리케이션) là đủ.”** dữ liệu (data / 데이터) được ghi bởi phiên bản (version / 버전) mới có thể làm phiên bản (version / 버전) cũ không chạy được.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> Schema evolution là một **distributed protocol theo thời gian** giữa các writer và reader không đổi version đồng thời.
+> lược đồ (schema / 스키마) evolution là một **phân tán (distributed / 분산) giao thức (protocol / 프로토콜) theo thời gian** giữa các writer và reader không đổi phiên bản (version / 버전) đồng thời.
 
-Thiết kế change bằng cách xác định ai đang đọc/ghi representation nào, overlap window dài bao lâu, historical data có replay không, rollback cần hiểu dữ liệu mới đến mức nào và migration tiêu thụ tài nguyên gì.
+Thiết kế thay đổi (change / 변경) bằng cách xác định ai đang đọc/ghi biểu diễn (representation / 표현) nào, overlap cửa sổ (window / 윈도우) dài bao lâu, historical dữ liệu (data / 데이터) có replay không, quay lui (rollback / 롤백) cần hiểu dữ liệu mới đến mức nào và di chuyển (migration / 마이그레이션) tiêu thụ tài nguyên gì.
 
 Xem thêm: [Event streams](./04_event_streams_partitions_watermarks_replay_and_state.md), [Capacity planning](./01_capacity_planning_utilization_knee_and_admission_control.md), [Idempotency](./05_idempotency_and_deduplication_at_scale.md).
+
+> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 queueing tail latency and backpressure](./00_queueing_tail_latency_and_backpressure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

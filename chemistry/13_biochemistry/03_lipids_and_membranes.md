@@ -1,4 +1,7 @@
-# Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và gradient điện hóa
+# Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa
+
+> **Mạch đọc:** Đọc **Lipid và màng — phân tử lưỡng ưa, chuyển pha, vận chuyển và độ dốc (gradient / 기울기) điện hóa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Acid béo — đuôi hydrocarbon + đầu có thể ion hóa** sang **Chuỗi bão hòa và không bão hòa**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 > **Lipid (지질)** là một họ rất rộng của các phân tử kỵ nước hoặc lưỡng ưa. Điểm quan trọng nhất không phải một nhóm chức chung duy nhất, mà là cách các cấu trúc giàu hydrocarbon tương tác với nước và tự tổ chức thành giọt, lớp đơn, micelle và lớp kép. Từ đó, hóa học lipid trở thành nền tảng của **màng, dự trữ năng lượng, tín hiệu và phân ngăn**.
 
@@ -50,10 +53,10 @@ Chuỗi hydrocarbon bị khử mạnh hơn carbohydrate, nên oxy hóa giải ph
 
 ## Xà phòng hóa
 
-Thủy phân triacylglycerol bằng base:
+Thủy phân triacylglycerol bằng cơ sở (base / 기반):
 
 \[
-\text{triacylglycerol}+OH^-\rightarrow glycerol+\text{muối acid béo}
+\văn bản (text / 텍스트){triacylglycerol}+OH^-\rightarrow glycerol+\văn bản (text / 텍스트){muối acid béo}
 \]
 
 Muối acid béo là xà phòng. Cấu trúc lưỡng ưa của chúng tạo micelle giúp phân tán dầu.
@@ -184,7 +187,7 @@ Vì vậy vận chuyển phụ thuộc cả **độ tan trong màng** và **đ�
 
 ### Kênh
 
-Tạo đường ưa nước xuyên qua màng. Dòng chất đi theo gradient điện hóa và có thể rất nhanh.
+Tạo đường ưa nước xuyên qua màng. Dòng chất đi theo độ dốc (gradient / 기울기) điện hóa và có thể rất nhanh.
 
 ### Chất tải
 
@@ -192,7 +195,7 @@ Liên kết chất tan rồi thay đổi cấu dạng để đưa nó sang phía
 
 ### Bơm
 
-Dùng năng lượng tự do từ ATP, ánh sáng hoặc gradient khác để vận chuyển chất ngược chiều thuận lợi.
+Dùng năng lượng tự do từ ATP, ánh sáng hoặc độ dốc (gradient / 기울기) khác để vận chuyển chất ngược chiều thuận lợi.
 
 Ba cơ chế này khác nhau về bản chất.
 
@@ -204,7 +207,7 @@ Khi một ion đi qua màng:
 \Delta G=RT\ln\frac{a_2}{a_1}+zF\Delta\psi
 \]
 
-Gradient hóa học và điện thế có thể cùng chiều hoặc ngược chiều nhau.
+Độ dốc (gradient / 기울기) hóa học và điện thế có thể cùng chiều hoặc ngược chiều nhau.
 
 Với một ion thấm qua màng ở cân bằng, đặt \(\Delta G=0\) dẫn tới quan hệ Nernst.
 
@@ -228,23 +231,23 @@ Các mô hình kiểu Goldman–Hodgkin–Katz mở rộng vượt khỏi cân b
 
 Màng tế bào vì vậy là một mạng điện hóa chọn lọc, không chỉ là một tụ điện đơn giản.
 
-## Gradient proton và tổng hợp ATP
+## Độ dốc (gradient / 기울기) proton và tổng hợp ATP
 
 Ty thể và lục lạp dùng màng để duy trì **động lực proton (proton-motive force)**.
 
-Năng lượng tự do từ truyền electron được dùng để bơm \(H^+\), tạo cả gradient hóa học và điện.
+Năng lượng tự do từ truyền electron được dùng để bơm \(H^+\), tạo cả độ dốc (gradient / 기울기) hóa học và điện.
 
-ATP synthase ghép dòng proton đi xuống gradient với việc tạo ATP.
+ATP synthase ghép dòng proton đi xuống độ dốc (gradient / 기울기) với việc tạo ATP.
 
 Kiến trúc màng biến hóa học oxy hóa-khử thành công hóa học có thể sử dụng.
 
 ## Vận chuyển tích cực thứ cấp
 
-Một chất đi xuống gradient có thể kéo chất khác đi lên gradient.
+Một chất đi xuống độ dốc (gradient / 기울기) có thể kéo chất khác đi lên độ dốc (gradient / 기울기).
 
 **Symport** đưa hai chất cùng chiều; **antiport** đưa hai chất ngược chiều.
 
-Transporter không nhất thiết trực tiếp tiêu thụ ATP nếu gradient được một bơm khác tạo ra trước đó.
+Transporter không nhất thiết trực tiếp tiêu thụ ATP nếu độ dốc (gradient / 기울기) được một bơm khác tạo ra trước đó.
 
 ## Protein màng
 
@@ -272,7 +275,7 @@ Biến đổi hóa học của lipid màng vì vậy có thể mã hóa tín hi�
 
 Nhóm đầu phosphatidylinositol có thể được phosphoryl hóa ở nhiều vị trí khác nhau.
 
-Các mẫu phosphoryl hóa khác nhau tuyển mộ protein có domain liên kết đặc hiệu.
+Các mẫu phosphoryl hóa khác nhau tuyển mộ protein có lĩnh vực (domain / 도메인) liên kết đặc hiệu.
 
 Một khác biệt nhỏ trong tô-pô phosphate tạo các “địa chỉ” tế bào khác nhau.
 
@@ -356,6 +359,8 @@ Không. Hàng rào chính là chi phí mất hydrat hóa và tĩnh điện rất
 
 ## Mô hình tư duy
 
-Màng là **một cỗ máy điện hóa tự lắp ghép từ phân tử lưỡng ưa**. Hóa học lipid tạo ranh giới pha chọn lọc; protein khai thác ranh giới đó để điều khiển thông lượng; gradient hai phía lưu trữ năng lượng tự do và thông tin.
+Màng là **một cỗ máy điện hóa tự lắp ghép từ phân tử lưỡng ưa**. Hóa học lipid tạo ranh giới pha chọn lọc; protein khai thác ranh giới đó để điều khiển thông lượng; độ dốc (gradient / 기울기) hai phía lưu trữ năng lượng tự do và thông tin.
 
 Xem tiếp: [Acid nucleic](./04_nucleic_acids.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 chemistry of life](./00_chemistry_of_life.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

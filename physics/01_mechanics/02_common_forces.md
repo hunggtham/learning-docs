@@ -1,5 +1,8 @@
 # Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản
 
+> **Mạch đọc:** Đọc **Các lực thường gặp: trọng lực, pháp tuyến, ma sát, dây, lò xo và lực cản** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ sơ đồ lực** sang **Trọng lực gần mặt đất**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một trong những lỗi lớn nhất khi học cơ học là xem mỗi bài như một bộ công thức riêng. Cách tốt hơn là xem mọi bài Newton như một bài **mô hình hóa tương tác**: chọn hệ, xác định những vật nào đang tương tác với hệ, biểu diễn mỗi tương tác bằng một lực, rồi chiếu tổng lực lên các trục thích hợp.
 
 ## Bắt đầu từ sơ đồ lực
@@ -343,7 +346,7 @@ Sau khi vẽ sơ đồ, hãy hỏi:
 
 Nếu trả lời được các câu này, phần lớn lỗi cơ học cơ bản sẽ giảm đáng kể.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Tên lực cho biết **cơ chế tương tác hoặc ràng buộc**, còn phương trình Newton cho biết tổng tác dụng của các tương tác đó lên chuyển động. Đừng tìm một công thức cho “tình huống”; hãy xác định hệ, tương tác, ràng buộc và trục tọa độ.
 
@@ -365,8 +368,10 @@ Chính xác hơn, ma sát chống chuyển động tương đối hoặc xu hư�
 
 Không. Đó là hợp lực theo phương bán kính.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Định luật Newton](01_newton_laws_dynamics.md), [Vectơ và hệ quy chiếu](../00_foundations/02_space_time_vectors_frames.md).
 
 **Liên hệ tiếp:** [Chuyển động quay](05_rotation_rigid_body.md), [Đàn hồi và cơ học vật liệu](07_statics_elasticity_materials.md), [Cơ học chất lưu](../03_continuum/00_fluids.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 kinematics](./00_kinematics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

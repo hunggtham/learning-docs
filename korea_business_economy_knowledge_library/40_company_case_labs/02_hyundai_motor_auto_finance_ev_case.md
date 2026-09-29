@@ -1,8 +1,11 @@
-# Hyundai Motor Case Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV
+# Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV
+
+> **Mạch đọc:** Đặt **Hyundai Motor trường hợp (case / 사례) Lab — sản lượng, cơ cấu sản phẩm, tài chính captive và kinh tế chuyển đổi EV** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Doanh thu không chỉ phụ thuộc số xe bán** sang **2. Kinh tế sản xuất và đòn bẩy hoạt động**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 
 Hyundai Motor là một trường hợp phù hợp để học rằng doanh nghiệp ô tô không thể được mô hình hóa chỉ bằng “số xe bán ra”. Lợi nhuận hình thành từ **sản lượng × giá/cơ cấu sản phẩm**, sau đó còn bị chi phối bởi khuyến mại, tỷ lệ sử dụng công suất, nguyên vật liệu, tỷ giá, bảo hành, logistics và tài chính captive. Quá trình chuyển đổi sang EV và phần mềm làm bài toán khó hơn vì công ty phải tài trợ cho kiến trúc tương lai trong khi vẫn tối ưu cỗ máy tạo tiền hiện tại từ xe động cơ đốt trong và hybrid.
 
-Năm tài chính 2025 là một ảnh chụp hữu ích: Hyundai Motor công bố khoảng 4,1 triệu xe bán toàn cầu, doanh thu khoảng 186,3 nghìn tỷ KRW và lợi nhuận hoạt động khoảng 11,47 nghìn tỷ KRW. Những số liệu này chỉ dùng để định vị quy mô; case tập trung vào cơ chế kinh tế, không kéo dài năm 2025 như một trạng thái vĩnh viễn.
+Năm tài chính 2025 là một ảnh chụp hữu ích: Hyundai Motor công bố khoảng 4,1 triệu xe bán toàn cầu, doanh thu khoảng 186,3 nghìn tỷ KRW và lợi nhuận hoạt động khoảng 11,47 nghìn tỷ KRW. Những số liệu này chỉ dùng để định vị quy mô; trường hợp (case / 사례) tập trung vào cơ chế kinh tế, không kéo dài năm 2025 như một trạng thái vĩnh viễn.
 
 ## 1. Doanh thu không chỉ phụ thuộc số xe bán
 
@@ -98,7 +101,7 @@ Tập đoàn ô tô thường có công ty tài chính hoặc cho thuê để h�
 Một mô hình đơn giản:
 
 \[
-Finance\ Income \approx Earning\ Assets \times Spread - Credit\ Loss - Operating\ Cost
+Finance\ Income \approx Earning\ Assets \times Spread - Credit\ mất mát (loss / 손실) - Operating\ chi phí (cost / 비용)
 \]
 
 Khi lãi suất tăng, khoản thanh toán hàng tháng của khách hàng tăng và nhu cầu mua xe có thể yếu đi. Đồng thời chi phí huy động của công ty tài chính tăng. Nếu giá xe cũ giảm, giá trị còn lại của xe cho thuê cũng có thể thấp hơn giả định.
@@ -142,7 +145,7 @@ Rủi ro đi theo hai hướng. Đầu tư quá chậm có thể làm mất vị
 Câu hỏi đúng không phải “EV tốt hay xấu”, mà là:
 
 \[
-Incremental\ ROIC_{EV/software} > Cost\ of\ Capital?
+Incremental\ ROIC_{EV/software} > chi phí (cost / 비용)\ of\ Capital?
 \]
 
 và công ty có đủ dòng tiền và sức khỏe bảng cân đối để chịu giai đoạn tăng công suất ban đầu hay không.
@@ -243,7 +246,7 @@ Trường hợp này cho thấy sản lượng không cần tăng mạnh để l
 
 P/E đơn thuần có thể bỏ qua chu kỳ ô tô và bảng cân đối của mảng tài chính. Chuyển đổi EV cũng khiến lợi nhuận hiện tại và CAPEX tương lai lệch nhau.
 
-Có thể phân tách giá trị theo logic:
+Có thể phân tách giá trị theo lô-gic (logic / 논리):
 
 ```text
 sức tạo lợi nhuận ô tô chuẩn hóa
@@ -265,7 +268,7 @@ Khi nghiên cứu thực tế, hãy tìm số xe bán theo khu vực, doanh thu 
 
 Luận điểm tích cực có thể thất bại nếu khuyến mại tăng nhanh, có cú sốc chất lượng–bảo hành, công suất EV bị sử dụng thấp kéo dài, tổn thất tín dụng tài chính tăng hoặc chính sách làm cấu trúc chi phí xấu hơn. Luận điểm tiêu cực có thể thất bại nếu cơ cấu xe cao cấp–hybrid mạnh, nội địa hóa giảm gánh nặng thuế quan, kỷ luật chi phí tốt và đầu tư phần mềm–EV tạo lợi suất nhanh hơn dự kiến.
 
-## 15. Bài tập cuối case
+## 15. Bài tập cuối trường hợp (case / 사례)
 
 Hãy viết một **cầu nối lợi nhuận (margin bridge)**:
 

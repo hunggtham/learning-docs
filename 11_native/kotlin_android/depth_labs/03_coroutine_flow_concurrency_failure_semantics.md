@@ -1,14 +1,16 @@
-# Depth Lab 03 — Coroutine, Flow, Concurrency và Failure Semantics
+# Độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)
 
-Coroutine giúp code bất đồng bộ dễ đọc hơn, nhưng việc code trông giống synchronous code không có nghĩa concurrency trở nên đơn giản. Senior Android developer cần hiểu **lifetime, cancellation, structured concurrency, context, race condition, backpressure và failure propagation** đủ sâu để giải thích được behavior thay vì chỉ thuộc `launch`, `async`, `flowOn` hay `stateIn`.
+> **Mạch đọc:** Đặt **độ sâu (depth / 깊이) Lab 03 — Coroutine, luồng (flow / 흐름), tính đồng thời (concurrency / 동시성) và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Coroutine không phải luồng thực thi (thread / 스레드)** sang **2. Structured tính đồng thời (concurrency / 동시성) là quyền sở hữu (ownership / 소유권) mô hình (model / 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Depth Lab này tập trung vào semantic phía sau API.
+Coroutine giúp mã (code / 코드) bất đồng bộ dễ đọc hơn, nhưng việc mã (code / 코드) trông giống synchronous mã (code / 코드) không có nghĩa tính đồng thời (concurrency / 동시성) trở nên đơn giản. cấp cao (senior / 시니어) Android nhà phát triển (developer / 개발자) cần hiểu **thời gian tồn tại (lifetime / 수명), cancellation, structured tính đồng thời (concurrency / 동시성), ngữ cảnh (context / 맥락), race điều kiện (condition / 조건), backpressure và thất bại (failure / 실패) propagation** đủ sâu để giải thích được hành vi (behavior / 동작) thay vì chỉ thuộc `launch`, `async`, `flowOn` hay `stateIn`.
+
+Độ sâu (depth / 깊이) Lab này tập trung vào ngữ nghĩa (semantic / 의미적) phía sau API.
 
 ---
 
-## 1. Coroutine không phải thread
+## 1. Coroutine không phải luồng thực thi (thread / 스레드)
 
-Coroutine là một computation có thể suspend và resume. Thread là execution resource của runtime/OS.
+Coroutine là một computation có thể suspend và resume. luồng thực thi (thread / 스레드) là thực thi (execution / 실행) tài nguyên (resource / 자원) của thời gian chạy (runtime / 런타임)/OS.
 
 Một coroutine có thể:
 
@@ -32,9 +34,9 @@ suspend fun parseJson(input: String): Model {
 }
 ```
 
-Nếu caller gọi hàm này trên Main và `heavyParser.parse()` CPU-bound, UI vẫn bị block.
+Nếu caller gọi hàm này trên Main và `heavyParser.parse()` CPU-bound, UI vẫn bị khối (block / 블록).
 
-Main-safe contract cần explicit:
+Main-safe đặc tả hợp đồng (contract / 계약) cần tường minh (explicit / 명시적):
 
 ```kotlin
 suspend fun parseJson(input: String): Model =
@@ -45,9 +47,9 @@ suspend fun parseJson(input: String): Model =
 
 ---
 
-## 2. Structured concurrency là ownership model
+## 2. Structured tính đồng thời (concurrency / 동시성) là quyền sở hữu (ownership / 소유권) mô hình (model / 모델)
 
-Một coroutine không nên “trôi tự do”. Nó cần owner.
+Một coroutine không nên “trôi tự do”. Nó cần đơn vị sở hữu (owner / 오너).
 
 ```text
 viewModelScope -> screen/application state work
@@ -57,7 +59,7 @@ supervisorScope {} -> child failures isolated theo policy
 WorkManager -> durable scheduled work
 ```
 
-Nếu code dùng:
+Nếu mã (code / 코드) dùng:
 
 ```kotlin
 GlobalScope.launch { ... }
@@ -71,11 +73,11 @@ ai quan sát failure?
 operation có còn hợp lệ khi screen/app state thay đổi không?
 ```
 
-GlobalScope thường phá ownership chain.
+GlobalScope thường phá quyền sở hữu (ownership / 소유권) chuỗi (chain / 사슬).
 
 ---
 
-## 3. Job tree là failure tree
+## 3. Job cây (tree / 트리) là thất bại (failure / 실패) cây (tree / 트리)
 
 Ví dụ:
 
@@ -86,7 +88,7 @@ viewModelScope.launch {
 }
 ```
 
-Nếu parent dùng regular `Job`, child failure có thể cancel sibling và parent tùy scope hierarchy.
+Nếu parent dùng regular `Job`, child thất bại (failure / 실패) có thể cancel sibling và parent tùy phạm vi (scope / 범위) hierarchy.
 
 Hãy hình dung:
 
@@ -96,17 +98,17 @@ Parent Job
 └── Child B
 ```
 
-Failure propagation không phải detail nhỏ; nó chính là policy “các task này sống/chết cùng nhau hay độc lập?”.
+Thất bại (failure / 실패) propagation không phải detail nhỏ; nó chính là chính sách (policy / 정책) “các tác vụ (task / 작업) này sống/chết cùng nhau hay độc lập?”.
 
 ---
 
-## 4. `coroutineScope` và `supervisorScope` encode hai business semantics khác nhau
+## 4. `coroutineScope` và `supervisorScope` encode hai nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론) khác nhau
 
 ### `coroutineScope`
 
-Dùng khi các child cùng tạo thành **một operation nguyên khối**.
+Dùng khi các child cùng tạo thành **một thao tác (operation / 연산) nguyên khối**.
 
-Ví dụ generate report cần cả user + transactions:
+Ví dụ generate report cần cả người dùng (user / 사용자) + transactions:
 
 ```kotlin
 suspend fun buildReport(): Report = coroutineScope {
@@ -116,11 +118,11 @@ suspend fun buildReport(): Report = coroutineScope {
 }
 ```
 
-Nếu một phần fail, report không hoàn chỉnh; cancel sibling là hợp lý.
+Nếu một phần thất bại (fail / 실패), report không hoàn chỉnh; cancel sibling là hợp lý.
 
 ### `supervisorScope`
 
-Dùng khi child độc lập và failure một child không nên hủy child khác.
+Dùng khi child độc lập và thất bại (failure / 실패) một child không nên hủy child khác.
 
 Ví dụ home dashboard có weather card + recommendation + promo:
 
@@ -132,15 +134,15 @@ supervisorScope {
 }
 ```
 
-Chọn scope phải xuất phát từ business relationship, không phải “cái nào ít crash hơn”.
+Chọn phạm vi (scope / 범위) phải xuất phát từ nghiệp vụ (business / 비즈니스) relationship, không phải “cái nào ít crash hơn”.
 
 ---
 
-## 5. Cancellation là control flow, không phải error bình thường
+## 5. Cancellation là điều khiển (control / 제어) luồng (flow / 흐름), không phải lỗi (error / 오류) bình thường
 
 Coroutine cancellation thường được biểu diễn bởi `CancellationException`.
 
-Code nguy hiểm:
+Mã (code / 코드) nguy hiểm:
 
 ```kotlin
 try {
@@ -151,7 +153,7 @@ try {
 }
 ```
 
-`Throwable` bắt luôn cancellation. Coroutine có thể tiếp tục chạy logic không mong muốn.
+`Throwable` bắt luôn cancellation. Coroutine có thể tiếp tục chạy lô-gic (logic / 논리) không mong muốn.
 
 Tốt hơn:
 
@@ -165,11 +167,11 @@ try {
 }
 ```
 
-Hoặc bắt type error hẹp hơn.
+Hoặc bắt kiểu (type / 타입) lỗi (error / 오류) hẹp hơn.
 
-Mental rule:
+Mental quy tắc (rule / 규칙):
 
-> cancellation không phải “request failed”; cancellation nghĩa operation không còn được yêu cầu tiếp tục.
+> cancellation không phải “yêu cầu (request / 요청) failed”; cancellation nghĩa thao tác (operation / 연산) không còn được yêu cầu tiếp tục.
 
 ---
 
@@ -185,7 +187,7 @@ try {
 }
 ```
 
-Nếu cleanup cần gọi suspend function:
+Nếu cleanup cần gọi suspend hàm (function / 함수):
 
 ```kotlin
 finally {
@@ -195,13 +197,13 @@ finally {
 }
 ```
 
-Nhưng `NonCancellable` phải dùng hẹp. Nếu bọc một network operation dài, cancellation mất ý nghĩa và app có thể giữ work sống quá lâu.
+Nhưng `NonCancellable` phải dùng hẹp. Nếu bọc một mạng (network / 네트워크) thao tác (operation / 연산) dài, cancellation mất ý nghĩa và app có thể giữ công việc (work / 작업) sống quá lâu.
 
 ---
 
 ## 7. `async` không phải cách chung để “chạy background”
 
-`async` tạo `Deferred<T>` và dành cho concurrent computation có result.
+`async` tạo `Deferred<T>` và dành cho concurrent computation có kết quả (result / 결과).
 
 Bad smell:
 
@@ -211,9 +213,9 @@ viewModelScope.async {
 }
 ```
 
-nếu không bao giờ `await`, failure có thể bị xử lý khó đoán và intent code không rõ.
+nếu không bao giờ `await`, thất bại (failure / 실패) có thể bị xử lý khó đoán và intent mã (code / 코드) không rõ.
 
-Nếu chỉ fire child operation dưới scope:
+Nếu chỉ fire child thao tác (operation / 연산) dưới phạm vi (scope / 범위):
 
 ```kotlin
 viewModelScope.launch {
@@ -221,7 +223,7 @@ viewModelScope.launch {
 }
 ```
 
-Nếu cần hai result concurrent:
+Nếu cần hai kết quả (result / 결과) concurrent:
 
 ```kotlin
 coroutineScope {
@@ -233,19 +235,19 @@ coroutineScope {
 
 ---
 
-## 8. Concurrency không tự động tăng performance
+## 8. tính đồng thời (concurrency / 동시성) không tự động tăng hiệu năng (performance / 성능)
 
-Hai task CPU-bound chạy concurrent trên limited cores có thể cạnh tranh cache/CPU.
+Hai tác vụ (task / 작업) CPU-bound chạy concurrent trên limited cores có thể cạnh tranh bộ nhớ đệm (cache / 캐시)/CPU.
 
-Hai database writes concurrent có thể serialize ở database lock.
+Hai cơ sở dữ liệu (database / 데이터베이스) writes concurrent có thể serialize ở cơ sở dữ liệu (database / 데이터베이스) khóa (lock / 잠금).
 
-Hai HTTP requests concurrent có thể tốt, nhưng nếu server rate-limit hoặc radio wake-up cost cao thì không phải lúc nào càng nhiều càng nhanh.
+Hai HTTP requests concurrent có thể tốt, nhưng nếu máy chủ (server / 서버) rate-limit hoặc radio wake-up chi phí (cost / 비용) cao thì không phải lúc nào càng nhiều càng nhanh.
 
-Concurrency là tool để overlap work có thể overlap, không phải optimization mặc định.
+Tính đồng thời (concurrency / 동시성) là công cụ (tool / 도구) để overlap công việc (work / 작업) có thể overlap, không phải tối ưu hóa (optimization / 최적화) mặc định.
 
 ---
 
-## 9. Dispatcher injection là testability + policy boundary
+## 9. Dispatcher injection là testability + chính sách (policy / 정책) ranh giới (boundary / 경계)
 
 Đừng hard-code:
 
@@ -253,7 +255,7 @@ Concurrency là tool để overlap work có thể overlap, không phải optimiz
 withContext(Dispatchers.IO) { ... }
 ```
 
-khắp code nếu cần deterministic test.
+khắp mã (code / 코드) nếu cần deterministic kiểm thử (test / 테스트).
 
 Có thể inject:
 
@@ -263,25 +265,25 @@ class ArticleRepository(
 )
 ```
 
-Test dùng `StandardTestDispatcher` hoặc dispatcher phù hợp.
+Kiểm thử (test / 테스트) dùng `StandardTestDispatcher` hoặc dispatcher phù hợp.
 
-Dispatcher injection cũng làm execution policy explicit.
+Dispatcher injection cũng làm thực thi (execution / 실행) chính sách (policy / 정책) tường minh (explicit / 명시적).
 
 ---
 
-## 10. `Dispatchers.IO` không phải “thread pool vô hạn”
+## 10. `Dispatchers.IO` không phải “luồng thực thi (thread / 스레드) pool vô hạn”
 
-IO dispatcher được tối ưu cho blocking I/O, nhưng app vẫn nên tránh tạo unbounded blocking work.
+IO dispatcher được tối ưu cho blocking I/O, nhưng app vẫn nên tránh tạo unbounded blocking công việc (work / 작업).
 
-Nếu import 50.000 file và mỗi file launch một coroutine blocking:
+Nếu import 50.000 tệp (file / 파일) và mỗi tệp (file / 파일) launch một coroutine blocking:
 
 ```kotlin
 files.map { file -> async(ioDispatcher) { parse(file) } }
 ```
 
-có thể gây memory pressure, file descriptor pressure và contention.
+có thể gây bộ nhớ (memory / 메모리) pressure, tệp (file / 파일) descriptor pressure và contention.
 
-Bound concurrency:
+Bound tính đồng thời (concurrency / 동시성):
 
 ```kotlin
 val semaphore = Semaphore(8)
@@ -295,21 +297,21 @@ files.map { file ->
 }.awaitAll()
 ```
 
-Concurrency limit là capacity planning.
+Tính đồng thời (concurrency / 동시성) limit là sức chứa (capacity / 용량) planning.
 
 ---
 
-## 11. Mutex bảo vệ critical section trong coroutine world
+## 11. Mutex bảo vệ trọng yếu (critical / 중요) section trong coroutine world
 
-Giả sử token refresh:
+Giả sử đơn vị từ (token / 토큰) refresh:
 
 ```text
 20 request cùng nhận 401
 ```
 
-Nếu mỗi request refresh token riêng, server nhận 20 refresh calls.
+Nếu mỗi yêu cầu (request / 요청) refresh đơn vị từ (token / 토큰) riêng, máy chủ (server / 서버) nhận 20 refresh calls.
 
-Single-flight pattern:
+Single-flight mẫu (pattern / 패턴):
 
 ```kotlin
 private val refreshMutex = Mutex()
@@ -324,29 +326,29 @@ suspend fun getValidToken(): Token = refreshMutex.withLock {
 }
 ```
 
-Nhưng critical section phải ngắn và semantic rõ. Mutex không biến shared mutable state thành design tốt tự động.
+Nhưng trọng yếu (critical / 중요) section phải ngắn và ngữ nghĩa (semantic / 의미적) rõ. Mutex không biến dùng chung (shared / 공유) mutable trạng thái (state / 상태) thành thiết kế (design / 설계) tốt tự động.
 
 ---
 
-## 12. Atomic operation khác Mutex
+## 12. Atomic thao tác (operation / 연산) khác Mutex
 
-Nếu chỉ cần compare-and-set một primitive state, atomic có thể phù hợp.
+Nếu chỉ cần compare-and-set một thành phần nguyên thủy (primitive / 기본 요소) trạng thái (state / 상태), atomic có thể phù hợp.
 
-Nếu invariant liên quan nhiều field hoặc suspend operation, Mutex/transaction có thể cần thiết.
+Nếu bất biến (invariant / 불변식) liên quan nhiều trường dữ liệu (field / 필드) hoặc suspend thao tác (operation / 연산), Mutex/giao dịch (transaction / 트랜잭션) có thể cần thiết.
 
-Ví dụ invariant:
+Ví dụ bất biến (invariant / 불변식):
 
 ```text
 currentToken và tokenExpiry phải thay đổi cùng nhau
 ```
 
-Hai atomic riêng không nhất thiết bảo vệ pair invariant.
+Hai atomic riêng không nhất thiết bảo vệ pair bất biến (invariant / 불변식).
 
 ---
 
-## 13. Actor/Channel giúp serialize command khi ordering quan trọng
+## 13. Actor/Channel giúp serialize command khi thứ tự (ordering / 순서) quan trọng
 
-Một state machine có thể nhận command:
+Một máy trạng thái (state machine / 상태 머신) có thể nhận command:
 
 ```text
 Connect
@@ -355,7 +357,7 @@ Send
 Retry
 ```
 
-Thay vì nhiều coroutine mutate shared state, một event loop serialize command:
+Thay vì nhiều coroutine mutate trạng thái dùng chung (shared state / 공유 상태), một vòng lặp sự kiện (event loop / 이벤트 루프) serialize command:
 
 ```kotlin
 for (command in commands) {
@@ -363,9 +365,9 @@ for (command in commands) {
 }
 ```
 
-Đây là actor-like model. Nó giảm race vì có single writer.
+Đây là actor-like mô hình (model / 모델). Nó giảm race vì có single writer.
 
-Trade-off là cần xử lý queue/backpressure/shutdown rõ ràng.
+Sự đánh đổi (trade-off / 트레이드오프) là cần xử lý hàng đợi (queue / 큐)/backpressure/shutdown rõ ràng.
 
 ---
 
@@ -383,7 +385,7 @@ Chưa chạy gì cho tới khi collect.
 
 Mỗi collector có thể chạy upstream riêng.
 
-Nếu 5 collector collect một cold flow gọi network, có thể tạo 5 request.
+Nếu 5 collector collect một cold luồng (flow / 흐름) gọi mạng (network / 네트워크), có thể tạo 5 yêu cầu (request / 요청).
 
 Hãy hỏi:
 
@@ -393,7 +395,7 @@ upstream nên chạy per collector hay shared?
 
 ---
 
-## 15. Hot Flow cần lifetime owner
+## 15. Hot luồng (flow / 흐름) cần thời gian tồn tại (lifetime / 수명) đơn vị sở hữu (owner / 오너)
 
 `StateFlow` và `SharedFlow` có thể sống lâu hơn collector.
 
@@ -420,21 +422,21 @@ initial/replay semantics gì?
 
 ---
 
-## 16. `SharingStarted.WhileSubscribed` là resource policy
+## 16. `SharingStarted.WhileSubscribed` là tài nguyên (resource / 자원) chính sách (policy / 정책)
 
-Nếu upstream là Room Flow, giữ một khoảng stop timeout có thể tránh stop/start liên tục khi configuration change ngắn.
+Nếu upstream là Room luồng (flow / 흐름), giữ một khoảng stop hết thời gian chờ (timeout / 타임아웃) có thể tránh stop/start liên tục khi cấu hình (configuration / 구성) thay đổi (change / 변경) ngắn.
 
 Nếu upstream là GPS sensor, giữ thêm 5 giây có thể tốn pin không cần thiết.
 
-Cùng một operator nhưng resource cost khác.
+Cùng một operator nhưng tài nguyên (resource / 자원) chi phí (cost / 비용) khác.
 
-Started policy phải dựa vào upstream semantics.
+Started chính sách (policy / 정책) phải dựa vào upstream ngữ nghĩa (semantics / 의미론).
 
 ---
 
-## 17. `flowOn` đổi context phía upstream
+## 17. `flowOn` đổi ngữ cảnh (context / 맥락) phía upstream
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```kotlin
 flow {
@@ -449,11 +451,11 @@ flow {
 
 `flowOn` tác động phần upstream trước nó, không ép collector chạy IO.
 
-Việc hiểu context preservation giúp tránh đặt heavy mapping ở sai phía.
+Việc hiểu ngữ cảnh (context / 맥락) preservation giúp tránh đặt heavy ánh xạ (mapping / 매핑) ở sai phía.
 
 ---
 
-## 18. `collectLatest` encode cancellation policy
+## 18. `collectLatest` encode cancellation chính sách (policy / 정책)
 
 Search-as-you-type:
 
@@ -463,11 +465,11 @@ queryFlow.collectLatest { query ->
 }
 ```
 
-Khi query mới tới, block cũ bị cancel.
+Khi truy vấn (query / 쿼리) mới tới, khối (block / 블록) cũ bị cancel.
 
-Điều này chỉ đúng nếu result cũ không còn giá trị.
+Điều này chỉ đúng nếu kết quả (result / 결과) cũ không còn giá trị.
 
-Không dùng `collectLatest` cho operation không được phép cancel giữa chừng như commit local transaction phức tạp nếu cancellation safety chưa rõ.
+Không dùng `collectLatest` cho thao tác (operation / 연산) không được phép cancel giữa chừng như lần ghi nhận (commit / 커밋) cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) phức tạp nếu cancellation an toàn (safety / 안전) chưa rõ.
 
 ---
 
@@ -481,15 +483,15 @@ query
     .flatMapLatest { repository.search(it) }
 ```
 
-Query mới cancel upstream search cũ.
+Truy vấn (query / 쿼리) mới cancel upstream tìm kiếm (search / 검색) cũ.
 
-Invariant được bảo vệ:
+Bất biến (invariant / 불변식) được bảo vệ:
 
 ```text
 result của query cũ không được trở thành state hiện tại sau query mới
 ```
 
-Operator là implementation của invariant.
+Operator là hiện thực (implementation / 구현) của bất biến (invariant / 불변식).
 
 ---
 
@@ -507,27 +509,27 @@ Có buffer:
 producer có thể chạy trước consumer một khoảng
 ```
 
-Điều này tăng throughput khi producer và consumer có thể overlap, nhưng cũng tăng memory và stale work.
+Điều này tăng thông lượng (throughput / 처리량) khi producer và bên tiêu thụ (consumer / 소비자) có thể overlap, nhưng cũng tăng bộ nhớ (memory / 메모리) và stale công việc (work / 작업).
 
-Đừng thêm `buffer()` chỉ vì “performance”. Hãy biết queue size và drop semantics.
-
----
-
-## 21. `conflate` bỏ intermediate value
-
-Dùng khi chỉ state mới nhất quan trọng.
-
-Ví dụ progress 1%, 2%, 3%, ... 90% mà UI render chậm, có thể không cần render mọi bước.
-
-Nhưng không dùng cho event stream mà mỗi item đều quan trọng như transaction event.
-
-State stream và event stream có loss tolerance khác nhau.
+Đừng thêm `buffer()` chỉ vì “hiệu năng (performance / 성능)”. Hãy biết hàng đợi (queue / 큐) kích thước (size / 크기) và drop ngữ nghĩa (semantics / 의미론).
 
 ---
 
-## 22. `SharedFlow` không tự động là event bus tốt
+## 21. `conflate` bỏ intermediate giá trị (value / 값)
 
-Một global shared flow cho mọi one-off event dễ tạo hidden dependency.
+Dùng khi chỉ trạng thái (state / 상태) mới nhất quan trọng.
+
+Ví dụ progress 1%, 2%, 3%, ... 90% mà UI kết xuất (render / 렌더링) chậm, có thể không cần kết xuất (render / 렌더링) mọi bước.
+
+Nhưng không dùng cho sự kiện (event / 이벤트) stream mà mỗi item đều quan trọng như giao dịch (transaction / 트랜잭션) sự kiện (event / 이벤트).
+
+Trạng thái (state / 상태) stream và sự kiện (event / 이벤트) stream có mất mát (loss / 손실) tolerance khác nhau.
+
+---
+
+## 22. `SharedFlow` không tự động là sự kiện (event / 이벤트) bus tốt
+
+Một toàn cục (global / 전역) dùng chung (shared / 공유) luồng (flow / 흐름) cho mọi one-off sự kiện (event / 이벤트) dễ tạo hidden phụ thuộc (dependency / 의존성).
 
 Các câu hỏi cần trả lời:
 
@@ -539,17 +541,17 @@ collector inactive thì event mất được không?
 multiple collector có cùng nhận không?
 ```
 
-Nếu event không được phép mất, có thể nó nên là durable state hoặc queue chứ không phải ephemeral SharedFlow.
+Nếu sự kiện (event / 이벤트) không được phép mất, có thể nó nên là durable trạng thái (state / 상태) hoặc hàng đợi (queue / 큐) chứ không phải ephemeral SharedFlow.
 
 ---
 
-## 23. `Channel` có queue semantics rõ hơn cho point-to-point event
+## 23. `Channel` có hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론) rõ hơn cho point-to-point sự kiện (event / 이벤트)
 
-Channel phù hợp khi event cần được consume bởi một consumer theo queue semantics.
+Channel phù hợp khi sự kiện (event / 이벤트) cần được consume bởi một bên tiêu thụ (consumer / 소비자) theo hàng đợi (queue / 큐) ngữ nghĩa (semantics / 의미론).
 
-Nhưng channel nằm in-memory; process death vẫn làm event mất.
+Nhưng channel nằm in-memory; tiến trình (process / 프로세스) death vẫn làm sự kiện (event / 이벤트) mất.
 
-Vì vậy notification “payment succeeded” quan trọng có thể nên reconstruct từ persisted transaction state thay vì chờ một Channel event.
+Vì vậy notification “payment succeeded” quan trọng có thể nên reconstruct từ persisted giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) thay vì chờ một Channel sự kiện (event / 이벤트).
 
 ---
 
@@ -573,13 +575,13 @@ fun observeLocation(): Flow<Location> = callbackFlow {
 
 Nếu quên `awaitClose`, listener leak sau collector cancel.
 
-Callback lifetime phải map đúng vào Flow collection lifetime.
+Callback thời gian tồn tại (lifetime / 수명) phải map đúng vào luồng (flow / 흐름) collection thời gian tồn tại (lifetime / 수명).
 
 ---
 
-## 25. Backpressure ở callbackFlow cần policy
+## 25. Backpressure ở callbackFlow cần chính sách (policy / 정책)
 
-Sensor có thể emit 100Hz nhưng consumer xử lý 10Hz.
+Sensor có thể emit 100Hz nhưng bên tiêu thụ (consumer / 소비자) xử lý 10Hz.
 
 Cần quyết định:
 
@@ -594,9 +596,9 @@ Nếu telemetry cho UI, latest có thể đủ. Nếu dữ liệu scientific cap
 
 ---
 
-## 26. `repeatOnLifecycle` bảo vệ collection lifetime
+## 26. `repeatOnLifecycle` bảo vệ collection thời gian tồn tại (lifetime / 수명)
 
-UI không nên collect flow vô điều kiện khi lifecycle không active.
+UI không nên collect luồng (flow / 흐름) vô điều kiện khi vòng đời (lifecycle / 생명주기) không active.
 
 Compose thường dùng:
 
@@ -604,7 +606,7 @@ Compose thường dùng:
 collectAsStateWithLifecycle()
 ```
 
-View system có thể dùng `repeatOnLifecycle`.
+View hệ thống (system / 시스템) có thể dùng `repeatOnLifecycle`.
 
 Mục tiêu không phải thuộc API mà là tránh:
 
@@ -616,7 +618,7 @@ và tránh manual start/stop dễ leak.
 
 ---
 
-## 27. Race giữa refresh và local mutation
+## 27. Race giữa refresh và cục bộ (local / 로컬) mutation
 
 Timeline:
 
@@ -627,16 +629,16 @@ T2 server response của refresh chứa bookmark=false từ snapshot cũ
 T3 refresh ghi toàn row -> bookmark local bị mất
 ```
 
-Đây không phải coroutine bug; đây là merge semantics bug.
+Đây không phải coroutine bug; đây là merge ngữ nghĩa (semantics / 의미론) bug.
 
 Fix có thể là:
 
-- remote refresh không overwrite local-only field,
-- field versioning,
-- separate table,
+- remote refresh không overwrite local-only trường dữ liệu (field / 필드),
+- trường dữ liệu (field / 필드) versioning,
+- separate bảng (table / 테이블),
 - pending mutation overlay.
 
-Concurrency operator không thay thế data merge policy.
+Tính đồng thời (concurrency / 동시성) operator không thay thế dữ liệu (data / 데이터) merge chính sách (policy / 정책).
 
 ---
 
@@ -652,19 +654,19 @@ T3 response A về
 T4 repository ghi DB dùng current account B
 ```
 
-Cần session/account identity capture và verify trước commit.
+Cần session/account định danh (identity / 식별자) capture và verify trước lần ghi nhận (commit / 커밋).
 
-Cancellation request cũ giúp nhưng không đủ vì remote response có thể vẫn race. Business guard phải tồn tại.
+Cancellation yêu cầu (request / 요청) cũ giúp nhưng không đủ vì remote phản hồi (response / 응답) có thể vẫn race. nghiệp vụ (business / 비즈니스) guard phải tồn tại.
 
 ---
 
-## 29. Race giữa process lifecycle và callback
+## 29. Race giữa tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) và callback
 
 Một callback có thể về sau Activity destroyed.
 
-Nếu callback giữ Activity reference hoặc trực tiếp mutate View, leak/crash dễ xảy ra.
+Nếu callback giữ Activity tham chiếu (reference / 참조) hoặc trực tiếp mutate View, leak/crash dễ xảy ra.
 
-State nên đi qua lifecycle-aware owner; callback registration cleanup theo lifecycle/resource owner.
+Trạng thái (state / 상태) nên đi qua lifecycle-aware đơn vị sở hữu (owner / 오너); callback registration cleanup theo vòng đời (lifecycle / 생명주기)/tài nguyên (resource / 자원) đơn vị sở hữu (owner / 오너).
 
 ---
 
@@ -680,7 +682,7 @@ withTimeout(5_000) {
 
 có thể sai nếu checkout gồm nhiều step hợp lệ lâu hơn 5s.
 
-Timeout nên reflect SLA của boundary cụ thể:
+Hết thời gian chờ (timeout / 타임아웃) nên reflect SLA của ranh giới (boundary / 경계) cụ thể:
 
 ```text
 DNS/connect timeout
@@ -689,7 +691,7 @@ BLE operation timeout
 user interaction không nên dùng network timeout
 ```
 
-Một timeout global dễ cancel operation ở điểm không an toàn.
+Một hết thời gian chờ (timeout / 타임아웃) toàn cục (global / 전역) dễ cancel thao tác (operation / 연산) ở điểm không an toàn.
 
 ---
 
@@ -701,7 +703,7 @@ Phần này nối mạch Android vừa học với “31. Retry trong Flow cần
 flow.retry(3)
 ```
 
-quá thô nếu mọi error đều retry.
+quá thô nếu mọi lỗi (error / 오류) đều thử lại (retry / 재시도).
 
 Tốt hơn:
 
@@ -711,17 +713,17 @@ Tốt hơn:
 }
 ```
 
-HTTP validation error không nên retry như connectivity error.
+HTTP kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) không nên thử lại (retry / 재시도) như connectivity lỗi (error / 오류).
 
 ---
 
-## 32. Flow exception transparency
+## 32. luồng (flow / 흐름) exception transparency
 
-Flow convention yêu cầu upstream exception không bị nuốt hoặc emit tùy tiện từ nơi không phù hợp.
+Luồng (flow / 흐름) convention yêu cầu upstream exception không bị nuốt hoặc emit tùy tiện từ nơi không phù hợp.
 
 `catch` chỉ catch upstream trước nó.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```kotlin
 source
@@ -730,13 +732,13 @@ source
     .collect { ... } // collector error không bị catch ở trên
 ```
 
-Hiểu boundary của operator giúp debug exception propagation.
+Hiểu ranh giới (boundary / 경계) của operator giúp gỡ lỗi (debug / 디버그) exception propagation.
 
 ---
 
 ## 33. CPU cancellation cooperative
 
-Một loop CPU dài không suspend có thể không phản ứng cancellation nhanh:
+Một vòng lặp (loop / 루프) CPU dài không suspend có thể không phản ứng cancellation nhanh:
 
 ```kotlin
 for (item in hugeList) {
@@ -755,11 +757,11 @@ for (item in hugeList) {
 
 hoặc chunk/yield hợp lý.
 
-Cancellation responsiveness là phần của UX/resource correctness.
+Cancellation responsiveness là phần của UX/tài nguyên (resource / 자원) tính đúng đắn (correctness / 정확성).
 
 ---
 
-## 34. Blocking library trong coroutine vẫn block thread
+## 34. Blocking thư viện (library / 라이브러리) trong coroutine vẫn khối (block / 블록) luồng thực thi (thread / 스레드)
 
 Nếu SDK Java cũ có:
 
@@ -771,13 +773,13 @@ bọc trong `suspend fun` không biến nó non-blocking.
 
 Phải chuyển dispatcher hoặc dùng async API nếu có.
 
-Suspending abstraction không thay đổi bản chất underlying I/O.
+Suspending lớp trừu tượng (abstraction / 추상화) không thay đổi bản chất underlying I/O.
 
 ---
 
-## 35. Test coroutine phải kiểm soát scheduler
+## 35. kiểm thử (test / 테스트) coroutine phải kiểm soát scheduler
 
-Dùng test dispatcher cho phép:
+Dùng kiểm thử (test / 테스트) dispatcher cho phép:
 
 ```text
 advance time
@@ -799,15 +801,15 @@ runTest {
 }
 ```
 
-Không dùng `Thread.sleep()` trong deterministic coroutine test.
+Không dùng `Thread.sleep()` trong deterministic coroutine kiểm thử (test / 테스트).
 
 ---
 
-## 36. Test cancellation, không chỉ success
+## 36. kiểm thử (test / 테스트) cancellation, không chỉ success
 
-Một repository có thể pass happy path nhưng leak resource khi cancel.
+Một repository có thể pass happy đường dẫn (path / 경로) nhưng leak tài nguyên (resource / 자원) khi cancel.
 
-Test:
+Kiểm thử (test / 테스트):
 
 ```text
 collector start
@@ -825,13 +827,13 @@ job cancel
 assert stale result không commit
 ```
 
-Cancellation path là first-class behavior.
+Cancellation đường dẫn (path / 경로) là first-class hành vi (behavior / 동작).
 
 ---
 
-## 37. Debug coroutine bằng ownership graph
+## 37. gỡ lỗi (debug / 디버그) coroutine bằng quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프)
 
-Khi gặp “coroutine vẫn chạy”, đừng chỉ log thread name.
+Khi gặp “coroutine vẫn chạy”, đừng chỉ log luồng thực thi (thread / 스레드) name.
 
 Hỏi:
 
@@ -844,7 +846,7 @@ Có callback external giữ reference không?
 Flow upstream shared ở scope nào?
 ```
 
-Ownership graph thường giải thích bug nhanh hơn thread dump đơn thuần.
+Quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프) thường giải thích bug nhanh hơn luồng thực thi (thread / 스레드) dump đơn thuần.
 
 ---
 
@@ -854,24 +856,24 @@ Phần này nối mạch Android vừa học với “38. Concurrency design che
 
 | Câu hỏi | Ý nghĩa |
 |---|---|
-| Operation owner là ai? | scope/lifetime |
+| thao tác (operation / 연산) đơn vị sở hữu (owner / 오너) là ai? | phạm vi (scope / 범위)/thời gian tồn tại (lifetime / 수명) |
 | Child sống chết cùng nhau không? | coroutineScope/supervision |
-| Cancellation có được propagate không? | structured concurrency |
-| Shared state có single writer không? | race control |
-| Retry có idempotent không? | duplicate effect |
-| Upstream cold hay hot? | duplicate work/resource |
+| Cancellation có được propagate không? | structured tính đồng thời (concurrency / 동시성) |
+| trạng thái dùng chung (shared state / 공유 상태) có single writer không? | race điều khiển (control / 제어) |
+| thử lại (retry / 재시도) có idempotent không? | duplicate tác động (effect / 효과) |
+| Upstream cold hay hot? | duplicate công việc (work / 작업)/tài nguyên (resource / 자원) |
 | Collector chậm thì sao? | backpressure |
-| Event có được phép mất không? | state vs queue |
-| External callback cleanup ở đâu? | leak prevention |
-| Test scheduler kiểm soát được không? | determinism |
+| sự kiện (event / 이벤트) có được phép mất không? | trạng thái (state / 상태) vs hàng đợi (queue / 큐) |
+| bên ngoài (external / 외부) callback cleanup ở đâu? | leak prevention |
+| kiểm thử (test / 테스트) scheduler kiểm soát được không? | determinism |
 
 ---
 
 ## 39. Kết luận
 
-Coroutine và Flow mạnh vì chúng cho phép biểu diễn lifetime và data stream bằng cấu trúc rõ hơn callback truyền thống. Nhưng correctness chỉ có khi developer hiểu semantic phía sau API.
+Coroutine và luồng (flow / 흐름) mạnh vì chúng cho phép biểu diễn thời gian tồn tại (lifetime / 수명) và dữ liệu (data / 데이터) stream bằng cấu trúc rõ hơn callback truyền thống. Nhưng tính đúng đắn (correctness / 정확성) chỉ có khi nhà phát triển (developer / 개발자) hiểu ngữ nghĩa (semantic / 의미적) phía sau API.
 
-Mental model nên giữ:
+Mô hình tư duy (mental model / 사고 모델) nên giữ:
 
 ```text
 owner

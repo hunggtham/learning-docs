@@ -1,10 +1,13 @@
-# Korean SME Supplier Case Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt
+# Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt
 
-Case này dùng một **doanh nghiệp giả lập** để mô phỏng cấu trúc thường gặp trong chuỗi cung ứng sản xuất tại Hàn Quốc. Dùng công ty giả lập giúp ta tập trung vào cơ chế kinh tế mà không biến bài học thành nhận xét về một SME cụ thể.
+> **Mạch đọc:** Đặt **Korean SME Supplier trường hợp (case / 사례) Lab — tập trung khách hàng, quyền thương lượng và chuyển đổi tiền mặt** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vị trí kinh tế trong chuỗi giá trị** sang **2. Động lực doanh thu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Giả sử `Hanbit Precision (한빛정밀)` sản xuất các module kim loại và nhựa chính xác cho hai khách hàng lớn trong ngành ô tô và điện tử. Công ty có một phần bí quyết quy trình riêng, nhưng bản vẽ và thông số kỹ thuật chủ yếu do khách hàng quyết định. Doanh thu tăng khá nhanh vì sản lượng của khách hàng tăng, trong khi thời hạn thanh toán dài và yêu cầu giảm giá hàng năm gây áp lực lên biên lợi nhuận.
 
-Đây là case để hiểu một nghịch lý: **nhà cung cấp có thể tăng doanh thu và lợi nhuận kế toán nhưng dòng tiền vẫn xấu đi**.
+Trường hợp (case / 사례) này dùng một **doanh nghiệp giả lập** để mô phỏng cấu trúc thường gặp trong chuỗi cung ứng sản xuất tại Hàn Quốc. Dùng công ty giả lập giúp ta tập trung vào cơ chế kinh tế mà không biến bài học thành nhận xét về một SME cụ thể.
+
+Giả sử `Hanbit Precision (한빛정밀)` sản xuất các mô-đun (module / 모듈) kim loại và nhựa chính xác cho hai khách hàng lớn trong ngành ô tô và điện tử. Công ty có một phần bí quyết quy trình riêng, nhưng bản vẽ và thông số kỹ thuật chủ yếu do khách hàng quyết định. Doanh thu tăng khá nhanh vì sản lượng của khách hàng tăng, trong khi thời hạn thanh toán dài và yêu cầu giảm giá hàng năm gây áp lực lên biên lợi nhuận.
+
+Đây là trường hợp (case / 사례) để hiểu một nghịch lý: **nhà cung cấp có thể tăng doanh thu và lợi nhuận kế toán nhưng dòng tiền vẫn xấu đi**.
 
 ## 1. Vị trí kinh tế trong chuỗi giá trị
 
@@ -26,7 +29,7 @@ Nhà cung cấp còn chịu bất cân xứng quyền thương lượng: khách 
 Một mô hình đơn giản:
 
 \[
-Revenue = Customer\ Production\ Volume \times Content\ per\ Unit \times Unit\ Price
+Revenue = Customer\ môi trường vận hành (production / 운영 환경)\ Volume \times Content\ per\ đơn vị (unit / 단위) \times đơn vị (unit / 단위)\ Price
 \]
 
 Tăng trưởng có thể đến từ ba nguồn:
@@ -313,7 +316,7 @@ khách hàng trả trước giảm trong khi backlog được mô tả là mạn
 
 Một dấu hiệu cảnh báo không chứng minh gian lận. Nó chỉ cho biết khu vực cần điều tra kỹ hơn.
 
-## 17. Logic định giá
+## 17. lô-gic (logic / 논리) định giá
 
 SME supplier không nên được định giá chỉ bằng tốc độ tăng trưởng. **Chất lượng doanh thu** quan trọng hơn:
 
@@ -328,7 +331,7 @@ sức chịu đựng bảng cân đối
 
 Doanh thu tăng 30% nhưng FCF âm và mức tập trung khách hàng tăng có thể kém chất lượng hơn doanh thu tăng 8% với dòng tiền mạnh và khách hàng đa dạng.
 
-## 18. Bài tập cuối case
+## 18. Bài tập cuối trường hợp (case / 사례)
 
 Tạo một bảng đánh giá nhà cung cấp nhưng không cần tổng hợp thành một điểm số duy nhất. Chỉ ghi bằng chứng theo sáu chiều:
 
@@ -346,3 +349,5 @@ Mục tiêu không phải xếp hạng nhà cung cấp mà là biết **rủi ro
 ## Liên kết
 
 Đọc cùng [06_sme_mid_sized_and_subcontracting_ecosystem](../06_sme_mid_sized_and_subcontracting_ecosystem.md), [02_trade_export_and_global_value_chains](../02_trade_export_and_global_value_chains.md), [23_foreign_invested_companies_and_korea_entry](../23_foreign_invested_companies_and_korea_entry.md) và [36_credit_ratings_bonds_default_and_restructuring](../36_credit_ratings_bonds_default_and_restructuring.md).
+
+> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành
 
+> **Mạch đọc:** Đặt **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu từ mô hình kinh doanh** sang **2. Chuỗi giá trị**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Một doanh nghiệp tốt không chỉ là doanh nghiệp tăng doanh thu nhanh. Cần hiểu nó kiếm tiền ở đâu trong chuỗi giá trị, vì sao khách hàng chọn nó, phần lợi nhuận thuộc về ai, vốn mới tạo ROIC bao nhiêu và lợi thế đó có thể kéo dài bao lâu. Chương này nối mô hình kinh doanh, kinh tế đơn vị, lợi thế cạnh tranh, cấu trúc ngành và tái đầu tư thành một hệ thống.
 
 ## 1. Bắt đầu từ mô hình kinh doanh
@@ -78,7 +81,7 @@ Chỉ số phải phù hợp với động cơ kinh tế của ngành.
 
 ## 7. CAC và LTV
 
-Chi phí thu hút khách hàng (Customer Acquisition Cost, CAC) phải được so với giá trị vòng đời khách hàng (Lifetime Value, LTV).
+Chi phí thu hút khách hàng (Customer Acquisition Cost, CAC) phải được so với giá trị vòng đời khách hàng (Lifetime value, LTV).
 
 LTV cao trên mô hình nhưng churn tăng hoặc thời gian hoàn vốn quá dài vẫn có thể làm doanh nghiệp thiếu tiền.
 
@@ -151,13 +154,13 @@ Hệ sinh thái
 
 Hiệu ứng mạng lưới (network effect) xuất hiện khi sản phẩm trở nên có giá trị hơn khi có thêm người dùng.
 
-Nhưng không phải mọi mạng lưới đều mạnh. Nếu người dùng dễ dùng nhiều nền tảng cùng lúc hoặc chi phí chuyển đổi thấp, network effect yếu hơn.
+Nhưng không phải mọi mạng lưới đều mạnh. Nếu người dùng dễ dùng nhiều nền tảng cùng lúc hoặc chi phí chuyển đổi thấp, mạng (network / 네트워크) tác động (effect / 효과) yếu hơn.
 
 ## 15. Chi phí chuyển đổi
 
 Chi phí chuyển đổi (switching cost) có thể là tiền, thời gian, dữ liệu, đào tạo, rủi ro vận hành hoặc thói quen.
 
-Phần mềm doanh nghiệp tích hợp sâu vào quy trình có thể có switching cost cao hơn ứng dụng tiêu dùng dễ thay thế.
+Phần mềm doanh nghiệp tích hợp sâu vào quy trình có thể có switching chi phí (cost / 비용) cao hơn ứng dụng tiêu dùng dễ thay thế.
 
 ## 16. Lợi thế chi phí
 
@@ -179,7 +182,7 @@ Kinh tế theo quy mô (economies of scale) xuất hiện khi chi phí đơn v�
 
 Nhưng quy mô có thể tạo quan liêu hoặc phức tạp. Do đó cần bằng chứng ở biên lợi nhuận, chi phí đơn vị và tốc độ vận hành.
 
-## 19. Economies of Scope
+## 19. Economies of phạm vi (scope / 범위)
 
 Kinh tế theo phạm vi (economies of scope) xảy ra khi cùng nền tảng, dữ liệu, thương hiệu hoặc phân phối có thể bán nhiều sản phẩm với chi phí thấp hơn việc xây riêng từng hệ thống.
 
@@ -219,7 +222,7 @@ Giấy phép, tiêu chuẩn an toàn hoặc hạn ngạch có thể tạo rào c
 
 IP có thể bảo vệ sản phẩm trong thời gian nhất định, nhưng giá trị phụ thuộc khả năng thực thi pháp lý, sản phẩm thay thế và thời gian hết bảo hộ.
 
-Biotech/pharma cần lập bản đồ patent cliff và pipeline thay thế.
+Biotech/pharma cần lập bản đồ patent cliff và chuỗi xử lý (pipeline / 파이프라인) thay thế.
 
 ## 25. Five Forces
 

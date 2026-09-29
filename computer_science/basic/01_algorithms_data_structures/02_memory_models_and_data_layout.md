@@ -1,83 +1,121 @@
-# Memory model, locality và data layout
+# Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)
 
-Data structure không tồn tại trong khoảng không trừu tượng. Nó cuối cùng phải chiếm bytes trong memory. Cùng complexity class, hai representations có thể khác performance rất lớn vì cách CPU cache, allocator và pointer chasing hoạt động.
+> **Mạch đọc:** Đọc **bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address** sang **Spatial và temporal locality**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Random-access memory model và address
 
-Memory có thể hình dung như một dãy bytes, mỗi byte có address. CPU load/store dữ liệu qua addresses. “Random access” trong model lý tưởng nghĩa access address bất kỳ có cost gần constant, nhưng hardware thật có hierarchy: register → cache → DRAM → storage, với latency khác nhau nhiều bậc.
+Cấu trúc dữ liệu (data structure / 자료구조) không tồn tại trong khoảng không trừu tượng. Nó cuối cùng phải chiếm bytes trong bộ nhớ (memory / 메모리). Cùng độ phức tạp (complexity / 복잡도) lớp (class / 클래스), hai representations có thể khác hiệu năng (performance / 성능) rất lớn vì cách CPU bộ nhớ đệm (cache / 캐시), allocator và pointer chasing hoạt động.
 
-Một array của 1 triệu integers contiguous tạo pattern địa chỉ đều. CPU prefetcher và cache line có thể lấy nhiều neighboring values cùng lúc. Linked list đặt nodes rải rác, mỗi pointer dereference có thể dẫn tới cache miss.
+## Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address
+
+Bộ nhớ (memory / 메모리) có thể hình dung như một dãy bytes, mỗi byte có address. CPU tải (load / 로드)/store dữ liệu qua addresses. “Random truy cập (access / 접근)” trong mô hình (model / 모델) lý tưởng nghĩa truy cập (access / 접근) address bất kỳ có chi phí (cost / 비용) gần constant, nhưng hardware thật có hierarchy: register → bộ nhớ đệm (cache / 캐시) → DRAM → lưu trữ (storage / 저장소), với độ trễ (latency / 지연 시간) khác nhau nhiều bậc.
+
+Một array của 1 triệu integers contiguous tạo mẫu (pattern / 패턴) địa chỉ đều. CPU prefetcher và bộ nhớ đệm (cache / 캐시) line có thể lấy nhiều neighboring values cùng lúc. Linked danh sách (list / 목록) đặt nodes rải rác, mỗi pointer dereference có thể dẫn tới trượt bộ nhớ đệm (cache miss / 캐시 미스).
+
+
+> **Chuyển mạch:** Từ **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address**, ta sang **Spatial và temporal locality** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Spatial và temporal locality
 
-Spatial locality (공간 지역성 / tính cục bộ không gian): nếu vừa access address x, có khả năng sắp access addresses gần x. Temporal locality (시간 지역성): dữ liệu vừa dùng có khả năng được dùng lại sớm.
+Spatial locality (공간 지역성 / tính cục bộ không gian): nếu vừa truy cập (access / 접근) address x, có khả năng sắp truy cập (access / 접근) addresses gần x. Temporal locality (시간 지역성): dữ liệu vừa dùng có khả năng được dùng lại sớm.
 
-Cache hoạt động tốt vì programs thường có locality. Array iteration có spatial locality. Loop dùng đi dùng lại small lookup table có temporal locality.
+Bộ nhớ đệm (cache / 캐시) hoạt động tốt vì programs thường có locality. Array iteration có spatial locality. vòng lặp (loop / 루프) dùng đi dùng lại small lookup bảng (table / 테이블) có temporal locality.
 
-Algorithm design và data layout có thể tăng locality mà không đổi Big O.
+Thuật toán (algorithm / 알고리즘) thiết kế (design / 설계) và dữ liệu (data / 데이터) bố cục (layout / 레이아웃) có thể tăng locality mà không đổi Big O.
 
-## Contiguous representation và linked representation
 
-Contiguous structures như array cho `O(1)` indexing vì address element `i` có thể tính từ base + i×element_size. Đổi lại, insert giữa array cần shift và growth có thể realloc/copy.
+> **Chuyển mạch:** Từ **Spatial và temporal locality**, ta sang **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Linked structures dùng pointers để nối nodes. Insert/delete tại known node có thể `O(1)`, nhưng tìm node vẫn cần traversal. Mỗi node còn tốn pointer overhead và allocator metadata, đồng thời locality kém.
+## Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)
 
-Vì vậy câu “linked list insert nhanh hơn array” thiếu context. Nếu workload chủ yếu scan, dynamic array thường tốt hơn đáng kể.
+Contiguous structures như array cho `O(1)` indexing vì address element `i` có thể tính từ cơ sở (base / 기반) + i×element_size. Đổi lại, insert giữa array cần shift và growth có thể realloc/bản sao (copy / 복사).
 
-## Array of Structures và Structure of Arrays
+Linked structures dùng pointers để nối nodes. Insert/delete tại known nút (node / 노드) có thể `O(1)`, nhưng tìm nút (node / 노드) vẫn cần traversal. Mỗi nút (node / 노드) còn tốn pointer overhead và allocator siêu dữ liệu (metadata / 메타데이터), đồng thời locality kém.
 
-Giả sử có points `{x,y,z,type}`. Array of Structures (AoS) lưu toàn bộ record liên tiếp. Structure of Arrays (SoA) lưu riêng arrays x[], y[], z[], type[].
+Vì vậy câu “linked danh sách (list / 목록) insert nhanh hơn array” thiếu ngữ cảnh (context / 맥락). Nếu tải công việc (workload / 워크로드) chủ yếu scan, động (dynamic / 동적) array thường tốt hơn đáng kể.
 
-Nếu computation cần tất cả fields của từng point, AoS tự nhiên. Nếu vectorized loop chỉ cần x và y cho hàng triệu points, SoA giảm bytes không cần thiết vào cache và phù hợp SIMD hơn.
 
-Data-oriented design bắt đầu từ access pattern chứ không chỉ object modeling.
+> **Chuyển mạch:** Từ **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)**, ta sang **Array of Structures và cấu trúc (structure / 구조) of Arrays** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Alignment, padding và object overhead
+## Array of Structures và cấu trúc (structure / 구조) of Arrays
 
-Hardware thích aligned accesses. Compiler/runtime có thể chèn padding trong structs/objects. Managed runtime còn có object header, class pointer, GC metadata hoặc compressed references. Một object chứa hai ints có thể tốn nhiều hơn 8 bytes.
+Giả sử có points `{x,y,z,type}`. Array of Structures (AoS) lưu toàn bộ bản ghi (record / 레코드) liên tiếp. cấu trúc (structure / 구조) of Arrays (SoA) lưu riêng arrays x[], y[], z[], kiểu (type / 타입)[].
 
-Hàng triệu tiny objects vì vậy có memory footprint và GC pressure lớn hơn intuition ở source code.
+Nếu computation cần tất cả fields của từng điểm (point / 지점), AoS tự nhiên. Nếu vectorized vòng lặp (loop / 루프) chỉ cần x và y cho hàng triệu points, SoA giảm bytes không cần thiết vào bộ nhớ đệm (cache / 캐시) và phù hợp SIMD hơn.
 
-Xem representation chi tiết tại [Numbers & machine representation](../00_computation_information/02_numbers_and_machine_representation.md).
+Data-oriented thiết kế (design / 설계) bắt đầu từ truy cập (access / 접근) mẫu (pattern / 패턴) chứ không chỉ đối tượng (object / 객체) modeling.
 
-## Stack, heap và lifetime như một mental model
 
-Ở runtime, call stack thường giữ activation records: return address, local data, saved registers. Heap phục vụ allocations có lifetime linh hoạt. Nhưng language semantics không nên đồng nhất tuyệt đối với physical stack/heap: compiler có thể scalar-replace object, allocate closure differently hoặc escape-analyze.
+> **Chuyển mạch:** Từ **Array of Structures và cấu trúc (structure / 구조) of Arrays**, ta sang **Alignment, padding và đối tượng (object / 객체) overhead** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Điểm quan trọng là **lifetime và ownership** quyết định khi memory có thể reclaim. Manual memory management yêu cầu programmer; GC tracing tìm objects reachable; reference counting dựa counts nhưng khó với cycles.
+## Alignment, padding và đối tượng (object / 객체) overhead
 
-Phần language-level memory được giải thích ở [Types, values, references and memory](../04_programming_languages/01_types_values_references_and_memory.md).
+Hardware thích aligned accesses. trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) có thể chèn padding trong structs/objects. Managed thời gian chạy (runtime / 런타임) còn có đối tượng (object / 객체) header, lớp (class / 클래스) pointer, GC siêu dữ liệu (metadata / 메타데이터) hoặc compressed references. Một đối tượng (object / 객체) chứa hai ints có thể tốn nhiều hơn 8 bytes.
+
+Hàng triệu tiny objects vì vậy có bộ nhớ (memory / 메모리) footprint và GC pressure lớn hơn intuition ở mã nguồn (source code / 소스 코드).
+
+Xem biểu diễn (representation / 표현) chi tiết tại [Numbers & machine representation](../00_computation_information/02_numbers_and_machine_representation.md).
+
+
+> **Chuyển mạch:** Từ **Alignment, padding và đối tượng (object / 객체) overhead**, ta sang **ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)
+
+Ở thời gian chạy (runtime / 런타임), ngăn xếp lời gọi (call stack / 호출 스택) thường giữ activation records: return address, cục bộ (local / 로컬) dữ liệu (data / 데이터), saved registers. vùng nhớ động (heap / 힙) phục vụ allocations có thời gian tồn tại (lifetime / 수명) linh hoạt. Nhưng ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) không nên đồng nhất tuyệt đối với vật lý (physical / 물리적) ngăn xếp (stack / 스택)/vùng nhớ động (heap / 힙): trình biên dịch (compiler / 컴파일러) có thể scalar-replace đối tượng (object / 객체), allocate closure differently hoặc escape-analyze.
+
+Điểm quan trọng là **thời gian tồn tại (lifetime / 수명) và quyền sở hữu (ownership / 소유권)** quyết định khi bộ nhớ (memory / 메모리) có thể reclaim. Manual bộ nhớ (memory / 메모리) management yêu cầu programmer; GC tracing tìm objects reachable; tham chiếu (reference / 참조) counting dựa counts nhưng khó với cycles.
+
+Phần language-level bộ nhớ (memory / 메모리) được giải thích ở [Types, values, references and memory](../04_programming_languages/01_types_values_references_and_memory.md).
+
+
+> **Chuyển mạch:** Từ **ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)**, ta sang **Pointer chasing và indirection** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Pointer chasing và indirection
 
-Abstraction thường thêm indirection: pointer → object → child pointer → value. Mỗi indirection có thể là dependent memory load; CPU khó song song hóa nếu address tiếp theo chỉ biết sau load trước. Tree có theoretical `O(log n)` nhưng B-tree thường outperform binary tree trên storage/cache vì mỗi node chứa nhiều keys, giảm depth và tăng locality.
+Lớp trừu tượng (abstraction / 추상화) thường thêm indirection: pointer → đối tượng (object / 객체) → child pointer → giá trị (value / 값). Mỗi indirection có thể là dependent bộ nhớ (memory / 메모리) tải (load / 로드); CPU khó song song hóa nếu address tiếp theo chỉ biết sau tải (load / 로드) trước. cây (tree / 트리) có theoretical `O(log n)` nhưng B-tree thường outperform nhị phân (binary / 이진) cây (tree / 트리) trên lưu trữ (storage / 저장소)/bộ nhớ đệm (cache / 캐시) vì mỗi nút (node / 노드) chứa nhiều keys, giảm độ sâu (depth / 깊이) và tăng locality.
 
-Đây chính là lý do database indexes thích B/B+ trees.
+Đây chính là lý do cơ sở dữ liệu (database / 데이터베이스) indexes thích B/B+ trees.
+
+
+> **Chuyển mạch:** Từ **Pointer chasing và indirection**, ta sang **Compactness và encoded representations** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Compactness và encoded representations
 
-Bitsets pack booleans thành bits thay vì bytes/objects. Integer compression, dictionary encoding và columnar storage giảm footprint; footprint nhỏ có thể làm data fit cache và tăng speed ngoài lợi ích storage.
+Bitsets pack booleans thành bits thay vì bytes/objects. Integer compression, dictionary encoding và columnar lưu trữ (storage / 저장소) giảm footprint; footprint nhỏ có thể làm dữ liệu (data / 데이터) fit bộ nhớ đệm (cache / 캐시) và tăng speed ngoài lợi ích lưu trữ (storage / 저장소).
 
-Tuy nhiên compression cần CPU decode. Đây là time-space-bandwidth trade-off.
+Tuy nhiên compression cần CPU decode. Đây là time-space-bandwidth sự đánh đổi (trade-off / 트레이드오프).
+
+
+> **Chuyển mạch:** Từ **Compactness và encoded representations**, ta sang **Mutability và sharing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mutability và sharing
 
-Immutable persistent data structures có thể share structure giữa versions thay vì copy toàn bộ. Điều này giúp concurrency reasoning nhưng thêm indirection/allocation. Copy-on-write cũng delay duplication cho tới khi mutate.
+Immutable persistent dữ liệu (data / 데이터) structures có thể share cấu trúc (structure / 구조) giữa versions thay vì bản sao (copy / 복사) toàn bộ. Điều này giúp tính đồng thời (concurrency / 동시성) lập luận (reasoning / 추론) nhưng thêm indirection/allocation. sao chép khi ghi (copy-on-write / 쓰기 시 복사) cũng delay duplication cho tới khi mutate.
 
-Data layout vì vậy chịu ảnh hưởng không chỉ bởi performance mà cả semantic requirements như immutability, snapshot và isolation.
+Dữ liệu (data / 데이터) bố cục (layout / 레이아웃) vì vậy chịu ảnh hưởng không chỉ bởi hiệu năng (performance / 성능) mà cả ngữ nghĩa (semantic / 의미적) requirements như immutability, snapshot và isolation.
 
-## Mental Model
 
-> Data structure có hai mặt: **abstract operations** và **physical representation/access pattern**. Big O mô tả mặt thứ nhất; cache line, pointer, allocation và layout quyết định rất nhiều ở mặt thứ hai.
+> **Chuyển mạch:** Từ **Mutability và sharing**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Common Misconceptions
+## Mô hình tư duy (mental model / 사고 모델)
 
-**“RAM access luôn O(1), vậy locality không quan trọng.”** `O(1)` là model asymptotic; latency L1 và DRAM khác nhau lớn.
+> cấu trúc dữ liệu (data structure / 자료구조) có hai mặt: **abstract operations** và **vật lý (physical / 물리적) biểu diễn (representation / 표현)/truy cập (access / 접근) mẫu (pattern / 패턴)**. Big O mô tả mặt thứ nhất; bộ nhớ đệm (cache / 캐시) line, pointer, allocation và bố cục (layout / 레이아웃) quyết định rất nhiều ở mặt thứ hai.
 
-**“Object nhỏ thì memory nhỏ.”** Header, alignment, references và allocator overhead có thể lớn hơn fields.
 
-**“Linked list luôn phù hợp insert/delete nhiều.”** Chỉ khi đã có vị trí/node phù hợp và locality/traversal không chi phối.
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+**“RAM truy cập (access / 접근) luôn O(1), vậy locality không quan trọng.”** `O(1)` là mô hình (model / 모델) asymptotic; độ trễ (latency / 지연 시간) L1 và DRAM khác nhau lớn.
+
+**“đối tượng (object / 객체) nhỏ thì bộ nhớ (memory / 메모리) nhỏ.”** Header, alignment, references và allocator overhead có thể lớn hơn fields.
+
+**“Linked danh sách (list / 목록) luôn phù hợp insert/delete nhiều.”** Chỉ khi đã có vị trí/nút (node / 노드) phù hợp và locality/traversal không chi phối.
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
-Chapter này là cầu nối từ algorithms sang [memory hierarchy/cache](../02_computer_architecture/02_memory_hierarchy_and_cache.md), đồng thời giải thích vì sao [linear structures](./03_linear_data_structures.md), [hash tables](./04_hashing_and_hash_tables.md), [trees](./05_trees_heaps_and_search_structures.md) có performance thực tế khác với notation đơn giản.
+Chapter này là cầu nối từ algorithms sang [memory hierarchy/cache](../02_computer_architecture/02_memory_hierarchy_and_cache.md), đồng thời giải thích vì sao [linear structures](./03_linear_data_structures.md), [hash tables](./04_hashing_and_hash_tables.md), [trees](./05_trees_heaps_and_search_structures.md) có hiệu năng (performance / 성능) thực tế khác với notation đơn giản.
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algorithmic thinking and correctness](./00_algorithmic_thinking_and_correctness.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

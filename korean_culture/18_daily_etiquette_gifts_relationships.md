@@ -1,5 +1,8 @@
 # Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật
 
+> **Mạch đọc:** Đặt **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Phép lịch sự không phải một bộ luật để học thuộc** sang **Hai tay: một cử chỉ của sự chú ý và tôn trọng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Phép lịch sự không phải một bộ luật để học thuộc
 
 Người mới sống ở Hàn Quốc thường tìm các danh sách kiểu “phải dùng hai tay”, “không cắm đũa vào cơm”, “người lớn ăn trước”. Những danh sách này có thể giúp tránh lỗi cơ bản nhưng dễ tạo một mô hình sai: tưởng rằng văn hoá chỉ là tập hợp các quy tắc đúng/sai.
@@ -22,7 +25,7 @@ Khi một trong bốn biến thay đổi, cùng một hành vi có thể đổi 
 
 Khi đưa hoặc nhận danh thiếp, quà, tiền hay ly rượu trong bối cảnh trang trọng, dùng hai tay hoặc một tay được tay kia đỡ thường biểu thị sự chú ý và tôn trọng. Trong tương tác thân mật, quy tắc mềm hơn.
 
-Về ký hiệu học, việc chuyển một vật có hai kênh: vật thật và tín hiệu xã hội. Một tay hay hai tay không làm vật đổi giá trị vật lý, nhưng làm ý nghĩa của hành động chuyển giao thay đổi. Có thể xem nó như siêu dữ liệu (metadata) đi kèm một gói tin.
+Về ký hiệu học, việc chuyển một vật có hai kênh: vật thật và tín hiệu xã hội. Một tay hay hai tay không làm vật đổi giá trị vật lý, nhưng làm ý nghĩa của hành động chuyển giao thay đổi. Có thể xem nó như siêu dữ liệu (metadata / 메타데이터) đi kèm một gói tin.
 
 Điểm quan trọng là không cần cố biểu diễn quá mức. Nếu dùng hai tay cực kỳ cứng nhắc trong tình huống rất thân mật, hành vi có thể tạo khoảng cách không cần thiết.
 
@@ -173,7 +176,7 @@ Trong nhóm định kỳ như câu lạc bộ hoặc đội thể thao, `회비`
 
 Trạng thái đã đọc của KakaoTalk, nhắn tin nhanh và điện thoại luôn kết nối tạo kỳ vọng về thời gian phản hồi. Trong quan hệ gần, trả lời chậm có thể được diễn giải về mặt xã hội mạnh hơn email.
 
-Công nghệ tạo **khả năng quan sát (observability)**: khi biết tin đã được đọc, bất định về việc “đã nhận chưa?” chuyển thành bất định về ý định “tại sao chưa trả lời?”. Đây là hiệu ứng trực tiếp của tính năng thông báo đã đọc.
+Công nghệ tạo **khả năng quan sát (observability / 관측 가능성)**: khi biết tin đã được đọc, bất định về việc “đã nhận chưa?” chuyển thành bất định về ý định “tại sao chưa trả lời?”. Đây là hiệu ứng trực tiếp của tính năng thông báo đã đọc.
 
 ## 읽씹, 안읽씹 và lo âu về thời gian phản hồi
 
@@ -392,3 +395,5 @@ Không nên xếp một kênh là “thật” còn kênh kia là “ảo”; c�
 ## Đọc tiếp
 
 Đọc cùng [`03_language_honorifics_nunchi_jeong_face.md`](03_language_honorifics_nunchi_jeong_face.md), [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md), [`22_names_age_identity_social_metadata.md`](22_names_age_identity_social_metadata.md), [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) và [`33_service_customer_review_quick_response_culture.md`](33_service_customer_review_quick_response_culture.md).
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

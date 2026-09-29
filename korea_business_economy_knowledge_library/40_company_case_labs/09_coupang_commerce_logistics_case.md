@@ -1,6 +1,8 @@
 # Coupang — thương mại điện tử, mật độ hoàn tất đơn hàng, hội viên và kinh tế logistics
 
-Case này dùng Coupang như một bài thực hành để hiểu một loại doanh nghiệp Hàn Quốc rất khác chaebol truyền thống. Công ty hình thành trong thời kỳ số và vốn mạo hiểm, nhưng mô hình kinh doanh cuối cùng lại **thâm dụng hạ tầng vật lý (physical-infrastructure intensive)**: trung tâm hoàn tất đơn hàng, tồn kho, mạng lưới giao hàng, công nghệ, chăm sóc khách hàng và vận hành chặng cuối cùng cùng hoạt động như một hệ thống.
+> **Mạch đọc:** Đặt **Coupang — thương mại điện tử, mật độ hoàn tất đơn hàng, hội viên và kinh tế logistics** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Doanh thu thương mại điện tử không đến từ một động cơ duy nhất** sang **2. Giá trị cho khách hàng và vòng quay tăng trưởng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+Trường hợp (case / 사례) này dùng Coupang như một bài thực hành để hiểu một loại doanh nghiệp Hàn Quốc rất khác chaebol truyền thống. Công ty hình thành trong thời kỳ số và vốn mạo hiểm, nhưng mô hình kinh doanh cuối cùng lại **thâm dụng hạ tầng vật lý (physical-infrastructure intensive)**: trung tâm hoàn tất đơn hàng, tồn kho, mạng lưới giao hàng, công nghệ, chăm sóc khách hàng và vận hành chặng cuối cùng cùng hoạt động như một hệ thống.
 
 Điểm quan trọng là: gọi một doanh nghiệp là “công nghệ” không cho biết kinh tế thực sự của nó. Cần tìm đúng **hàm sản xuất (production function)**.
 
@@ -154,7 +156,7 @@ Nếu tăng trưởng phụ thuộc liên tục vào chi phí thu hút đắt đ
 
 Sàn 3P có tính ít thâm dụng tài sản hơn bán lẻ 1P, nhưng chất lượng người bán, tỷ lệ thu phí (take rate), quảng cáo, dịch vụ logistics và cạnh tranh quyết định giá trị.
 
-Tăng take rate giúp doanh thu trên GMV tăng nhưng có thể khiến người bán đa nền tảng hoặc tăng giá bán.
+Tăng take tỷ lệ (rate / 비율) giúp doanh thu trên GMV tăng nhưng có thể khiến người bán đa nền tảng hoặc tăng giá bán.
 
 Có thể hình dung thặng dư của người bán:
 
@@ -301,7 +303,7 @@ Không nhất thiết. Mô hình tự vận hành fulfillment có thể rất th
 
 ### “GMV tăng = doanh thu tăng = lợi nhuận tăng”
 
-Sai vì còn phụ thuộc cách ghi nhận chính/bên đại lý, take rate, cơ cấu và chi phí logistics.
+Sai vì còn phụ thuộc cách ghi nhận chính/bên đại lý, take tỷ lệ (rate / 비율), cơ cấu và chi phí logistics.
 
 ### “Giao càng nhanh càng tốt”
 

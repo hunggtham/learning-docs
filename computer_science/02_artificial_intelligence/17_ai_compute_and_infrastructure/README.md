@@ -1,6 +1,9 @@
 # Tính toán và Hạ tầng AI
 
-Folder này giải thích **nền tảng vật lý (physical substrate)** của AI: bộ tăng tốc (accelerator), kiến trúc GPU, phân cấp bộ nhớ, tính toán song song, huấn luyện/suy luận phân tán, topology của cụm máy và kinh tế học tài nguyên tính toán. Mục tiêu không phải học phần cứng như một domain tách rời mà hiểu **vì sao hành vi của mô hình và runtime bị giới hạn bởi năng lực tính toán, bộ nhớ và giao tiếp**.
+> **Mạch đọc:** Đọc **Tính toán và Hạ tầng AI** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Bản đồ phụ thuộc**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Folder này giải thích **nền tảng vật lý (physical substrate)** của AI: bộ tăng tốc (accelerator), kiến trúc GPU, phân cấp bộ nhớ, tính toán song song, huấn luyện/suy luận phân tán, topology của cụm máy và kinh tế học tài nguyên tính toán. Mục tiêu không phải học phần cứng như một lĩnh vực (domain / 도메인) tách rời mà hiểu **vì sao hành vi của mô hình và thời gian chạy (runtime / 런타임) bị giới hạn bởi năng lực tính toán, bộ nhớ và giao tiếp**.
 
 ## Thứ tự đọc
 
@@ -17,6 +20,9 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 07_cluster_scheduling_and_interconnect.md
 08_compute_economics_capacity_and_energy.md
 ```
+
+
+> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Bản đồ phụ thuộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ phụ thuộc
 
@@ -35,6 +41,9 @@ flowchart TD
     S --> E[Kinh tế học tài nguyên tính toán]
 ```
 
+
+> **Chuyển mạch:** Từ **Bản đồ phụ thuộc**, ta sang **Mô hình tư duy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Mô hình tư duy
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -49,6 +58,9 @@ Toán học của mô hình
 → điều phối cụm máy
 → độ trễ / throughput / chi phí
 ```
+
+
+> **Chuyển mạch:** Từ **Mô hình tư duy**, ta sang **Những phân biệt cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những phân biệt cần giữ
 
@@ -66,6 +78,9 @@ Mô hình vừa VRAM                  ≠ đủ bộ nhớ cho serving concurren
 Unified memory                   ≠ mọi vùng bộ nhớ có cùng tốc độ
 Accelerator rẻ hơn               ≠ chi phí trên mỗi tác vụ thành công thấp hơn
 ```
+
+
+> **Chuyển mạch:** Từ **Những phân biệt cần giữ**, ta sang **Liên kết kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Liên kết kiến thức
 

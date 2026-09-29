@@ -1,8 +1,11 @@
-# Agents and AI Systems — Reading Map
+# Agents and AI các hệ thống (systems / 시스템들) — Reading Map
 
-Folder này giải thích cách từ một Large Language Model chuyển thành một **agent system** có goal, state, tools, memory, planning, orchestration, evaluation và reliability controls.
+> **Mạch đọc:** Đọc **Agents and AI các hệ thống (systems / 시스템들) — Reading Map** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Chapters** sang **cốt lõi (core / 핵심) distinctions**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Không coi “agent” là framework hay prompt pattern. Reading path:
+
+Folder này giải thích cách từ một Large ngôn ngữ (language / 언어) mô hình (model / 모델) chuyển thành một **hệ tác nhân (agent system / 에이전트 시스템)** có goal, trạng thái (state / 상태), tools, bộ nhớ (memory / 메모리), planning, orchestration, evaluation và độ tin cậy (reliability / 신뢰성) controls.
+
+Không coi “tác nhân (agent / 에이전트)” là khung phần mềm (framework / 프레임워크) hay prompt mẫu (pattern / 패턴). Reading đường dẫn (path / 경로):
 
 ```mermaid
 flowchart TD
@@ -34,7 +37,10 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [09 — Agent Evaluation](./09_agent_evaluation.md)
 - [10 — Reliable Agent Design](./10_reliable_agent_design.md)
 
-## Core distinctions
+
+> **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Cốt lõi (core / 핵심) distinctions
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
@@ -50,7 +56,10 @@ Prompt Guardrail ≠ Security Boundary
 Model says “done” ≠ Verified completion
 ```
 
-## Mental model
+
+> **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -67,7 +76,10 @@ Observations and verification
         ↺
 ```
 
-Agent engineering vì vậy nằm ở intersection của AI, Software Engineering, Distributed Systems, Databases, Security và HCI.
+Tác nhân (agent / 에이전트) kỹ thuật (engineering / 엔지니어링) vì vậy nằm ở intersection của AI, Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학), phân tán (distributed / 분산) các hệ thống (systems / 시스템들), Databases, bảo mật (security / 보안) và HCI.
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Prerequisites** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Prerequisites
 

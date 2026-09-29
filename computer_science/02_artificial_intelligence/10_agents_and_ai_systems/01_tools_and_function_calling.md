@@ -1,8 +1,11 @@
-# Tools và Function Calling
+# Tools và hàm (function / 함수) Calling
 
-LLM sinh token; tool tạo side effect. **Function calling / tool calling (도구 호출)** là protocol biến intent của model thành structured request mà runtime có thể validate rồi thực thi.
+> **Mạch đọc:** Đặt **Tools và hàm (function / 함수) Calling** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Vì sao structured tools cần tồn tại?** sang **công cụ (tool / 도구) lược đồ (schema / 스키마) là một Đặc tả API (API contract / API 계약)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model:
+
+LLM sinh đơn vị từ (token / 토큰); công cụ (tool / 도구) tạo side tác động (effect / 효과). **hàm (function / 함수) calling / công cụ (tool / 도구) calling (도구 호출)** là giao thức (protocol / 프로토콜) biến intent của mô hình (model / 모델) thành structured yêu cầu (request / 요청) mà thời gian chạy (runtime / 런타임) có thể validate rồi thực thi.
+
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 Natural-language goal
@@ -13,11 +16,11 @@ Natural-language goal
 → model continues reasoning
 ```
 
-Model không trực tiếp “gọi API” theo nghĩa networking. Nó thường sinh object conform schema; orchestration layer mới thực thi.
+Mô hình (model / 모델) không trực tiếp “gọi API” theo nghĩa networking. Nó thường sinh đối tượng (object / 객체) conform lược đồ (schema / 스키마); orchestration tầng (layer / 계층) mới thực thi.
 
 ## Vì sao structured tools cần tồn tại?
 
-Nếu yêu cầu model trả prose như `hãy gọi weather API với Seoul`, application phải parse text brittle. Structured schema làm boundary rõ:
+Nếu yêu cầu mô hình (model / 모델) trả prose như `hãy gọi weather API với Seoul`, ứng dụng (application / 애플리케이션) phải parse văn bản (text / 텍스트) brittle. Structured lược đồ (schema / 스키마) làm ranh giới (boundary / 경계) rõ:
 
 ```json
 {
@@ -26,32 +29,32 @@ Nếu yêu cầu model trả prose như `hãy gọi weather API với Seoul`, ap
 }
 ```
 
-Runtime có thể kiểm type, permission và required fields trước execution.
+Thời gian chạy (runtime / 런타임) có thể kiểm kiểu (type / 타입), permission và required fields trước thực thi (execution / 실행).
 
-## Tool schema là một API contract
+## Công cụ (tool / 도구) lược đồ (schema / 스키마) là một Đặc tả API (API contract / API 계약)
 
-Một tool tốt cần:
+Một công cụ (tool / 도구) tốt cần:
 
-- tên phản ánh action;
-- description nói rõ semantics;
+- tên phản ánh hành động (action / 동작);
+- description nói rõ ngữ nghĩa (semantics / 의미론);
 - arguments typed;
 - required/optional rõ;
-- enum khi domain hữu hạn;
-- result structure ổn định;
-- error taxonomy rõ.
+- enum khi lĩnh vực (domain / 도메인) hữu hạn;
+- kết quả (result / 결과) cấu trúc (structure / 구조) ổn định;
+- lỗi (error / 오류) taxonomy rõ.
 
-Schema mơ hồ gây model error dù model mạnh.
+Lược đồ (schema / 스키마) mơ hồ gây mô hình (model / 모델) lỗi (error / 오류) dù mô hình (model / 모델) mạnh.
 
-Ví dụ `update_user(data)` quá rộng. Tốt hơn có các action hẹp:
+Ví dụ `update_user(data)` quá rộng. Tốt hơn có các hành động (action / 동작) hẹp:
 
 ```text
 update_shipping_address(user_id, address)
 set_notification_preference(user_id, channel, enabled)
 ```
 
-Action hẹp dễ authorize, test và audit hơn.
+Hành động (action / 동작) hẹp dễ authorize, kiểm thử (test / 테스트) và kiểm tra (audit / 감사) hơn.
 
-## Read tools và Write tools
+## Read tools và ghi (write / 쓰기) tools
 
 Tách read-only và side-effecting tools.
 
@@ -60,13 +63,13 @@ READ: search, fetch, inspect, query
 WRITE: create, update, delete, send, deploy
 ```
 
-Write tools cần stricter approval, idempotency và audit.
+Ghi (write / 쓰기) tools cần stricter approval, idempotency và kiểm tra (audit / 감사).
 
-## Validation trước execution
+## Kiểm tra hợp lệ (validation / 검증) trước thực thi (execution / 실행)
 
 Không tin arguments chỉ vì chúng parse được.
 
-Validation layers:
+Kiểm tra hợp lệ (validation / 검증) layers:
 
 ```text
 schema validation
@@ -77,21 +80,21 @@ schema validation
 → execution
 ```
 
-`amount: -1000` có thể đúng type number nhưng sai business semantics.
+`amount: -1000` có thể đúng kiểu (type / 타입) number nhưng sai nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론).
 
 ## Idempotency
 
-Agent retry là bình thường. Với side effects, retry có thể tạo duplicate email/payment/job.
+Tác nhân (agent / 에이전트) thử lại (retry / 재시도) là bình thường. Với side effects, thử lại (retry / 재시도) có thể tạo duplicate email/payment/job.
 
-Tool write nên hỗ trợ idempotency key khi khả thi:
+Công cụ (tool / 도구) ghi (write / 쓰기) nên hỗ trợ idempotency key khi khả thi:
 
 ```text
 create_payment(request_id="task-123-step-4", ...)
 ```
 
-Nếu same request lặp lại, service trả same result thay vì tạo action mới.
+Nếu same yêu cầu (request / 요청) lặp lại, dịch vụ (service / 서비스) trả same kết quả (result / 결과) thay vì tạo hành động (action / 동작) mới.
 
-## Tool Result nên machine-readable
+## Công cụ (tool / 도구) kết quả (result / 결과) nên machine-readable
 
 Tránh chỉ trả:
 
@@ -110,11 +113,11 @@ Tốt hơn:
 }
 ```
 
-Agent cần concrete observation để update state.
+Tác nhân (agent / 에이전트) cần concrete observation để cập nhật (update / 업데이트) trạng thái (state / 상태).
 
-## Error taxonomy
+## Lỗi (error / 오류) taxonomy
 
-Tool error không nên là một string chung.
+Công cụ (tool / 도구) lỗi (error / 오류) không nên là một string chung.
 
 Phân biệt:
 
@@ -128,43 +131,43 @@ TRANSIENT_FAILURE
 TIMEOUT
 ```
 
-Mỗi loại dẫn tới recovery khác nhau. `TRANSIENT_FAILURE` có thể retry; `PERMISSION_DENIED` không nên loop retry.
+Mỗi loại dẫn tới khôi phục (recovery / 복구) khác nhau. `TRANSIENT_FAILURE` có thể thử lại (retry / 재시도); `PERMISSION_DENIED` không nên vòng lặp (loop / 루프) thử lại (retry / 재시도).
 
-## Timeout và cancellation
+## Hết thời gian chờ (timeout / 타임아웃) và cancellation
 
-Tool lâu cần timeout rõ. Agent runtime cũng cần khả năng cancel để không để action orphaned.
+Công cụ (tool / 도구) lâu cần hết thời gian chờ (timeout / 타임아웃) rõ. tác nhân (agent / 에이전트) thời gian chạy (runtime / 런타임) cũng cần khả năng cancel để không để hành động (action / 동작) orphaned.
 
-Tool result có thể ở trạng thái:
+Công cụ (tool / 도구) kết quả (result / 결과) có thể ở trạng thái:
 
 ```text
 PENDING → SUCCEEDED / FAILED / CANCELLED
 ```
 
-Long-running tools nên trả operation ID rồi poll/event-driven update.
+Long-running tools nên trả thao tác (operation / 연산) ID rồi poll/event-driven cập nhật (update / 업데이트).
 
 ## Least Privilege
 
-Agent chỉ nên thấy tool cần cho task. Tool credential cũng phải scope tối thiểu.
+Tác nhân (agent / 에이전트) chỉ nên thấy công cụ (tool / 도구) cần cho tác vụ (task / 작업). công cụ (tool / 도구) credential cũng phải phạm vi (scope / 범위) tối thiểu.
 
-Một agent chỉ cần đọc invoice không nên có `delete_invoice`.
+Một tác nhân (agent / 에이전트) chỉ cần đọc invoice không nên có `delete_invoice`.
 
-Security boundary nên nằm ngoài prompt. “Đừng xóa dữ liệu” trong system prompt không mạnh bằng không expose delete permission.
+Ranh giới bảo mật (security boundary / 보안 경계) nên nằm ngoài prompt. “Đừng xóa dữ liệu” trong hệ thống (system / 시스템) prompt không mạnh bằng không expose delete permission.
 
-## Tool selection
+## Công cụ (tool / 도구) selection
 
-Model phải quyết định không chỉ arguments mà cả **có cần tool không**.
+Mô hình (model / 모델) phải quyết định không chỉ arguments mà cả **có cần công cụ (tool / 도구) không**.
 
-Failure modes:
+Thất bại (failure / 실패) modes:
 
-- hallucinate tool không tồn tại;
-- dùng tool không cần thiết;
-- chọn tool gần nghĩa nhưng sai semantics;
-- gọi nhiều tool redundant;
-- không gọi tool khi factual grounding cần thiết.
+- hallucinate công cụ (tool / 도구) không tồn tại;
+- dùng công cụ (tool / 도구) không cần thiết;
+- chọn công cụ (tool / 도구) gần nghĩa nhưng sai ngữ nghĩa (semantics / 의미론);
+- gọi nhiều công cụ (tool / 도구) redundant;
+- không gọi công cụ (tool / 도구) khi factual grounding cần thiết.
 
-Tool descriptions và examples ảnh hưởng routing behavior.
+Công cụ (tool / 도구) descriptions và examples ảnh hưởng routing hành vi (behavior / 동작).
 
-## Parallel tool calls
+## Parallel công cụ (tool / 도구) calls
 
 Independent read operations có thể chạy song song:
 
@@ -174,15 +177,15 @@ search docs ├─→ combine
 search logs ─┘
 ```
 
-Nhưng write actions có dependency cần serialize.
+Nhưng ghi (write / 쓰기) actions có phụ thuộc (dependency / 의존성) cần serialize.
 
-Parallelism giảm latency nhưng tăng complexity về ordering, errors và context aggregation.
+Parallelism giảm độ trễ (latency / 지연 시간) nhưng tăng độ phức tạp (complexity / 복잡도) về thứ tự (ordering / 순서), errors và ngữ cảnh (context / 맥락) aggregation.
 
-## Tool output là untrusted input
+## Công cụ (tool / 도구) đầu ra (output / 출력) là untrusted đầu vào (input / 입력)
 
-Web page, email hoặc document tool có thể chứa malicious instruction. Đây là **indirect prompt injection**.
+Web page, email hoặc document công cụ (tool / 도구) có thể chứa malicious instruction. Đây là **indirect prompt injection**.
 
-Runtime không nên coi tool content là authority ngang system policy.
+Thời gian chạy (runtime / 런타임) không nên coi công cụ (tool / 도구) content là authority ngang hệ thống (system / 시스템) chính sách (policy / 정책).
 
 Mental separation:
 
@@ -194,7 +197,7 @@ data returned by tool
 
 ## Transactions
 
-Multi-step write task có consistency problem:
+Multi-step ghi (write / 쓰기) tác vụ (task / 작업) có consistency bài toán (problem / 문제):
 
 ```text
 reserve inventory
@@ -202,9 +205,9 @@ charge payment
 create shipment
 ```
 
-Nếu bước 2 fail sau bước 1, cần rollback/compensating action. Agent reasoning không thay thế transactional design.
+Nếu bước 2 thất bại (fail / 실패) sau bước 1, cần quay lui (rollback / 롤백)/compensating hành động (action / 동작). tác nhân (agent / 에이전트) lập luận (reasoning / 추론) không thay thế transactional thiết kế (design / 설계).
 
-## Tool abstraction level
+## Công cụ (tool / 도구) lớp trừu tượng (abstraction / 추상화) mức (level / 수준)
 
 Too low-level:
 
@@ -222,11 +225,11 @@ run_company()
 
 mơ hồ, khó inspect.
 
-Tốt nhất tool phản ánh meaningful business operation với contract rõ.
+Tốt nhất công cụ (tool / 도구) phản ánh meaningful nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) với đặc tả hợp đồng (contract / 계약) rõ.
 
-## Example: database assistant
+## Example: cơ sở dữ liệu (database / 데이터베이스) assistant
 
-Không nên cho model raw production SQL write toàn quyền. Có thể expose:
+Không nên cho mô hình (model / 모델) raw môi trường vận hành (production / 운영 환경) SQL ghi (write / 쓰기) toàn quyền. Có thể expose:
 
 ```text
 find_customer(customer_id)
@@ -234,11 +237,11 @@ list_open_cases(customer_id)
 create_case_note(case_id, text)
 ```
 
-với authorization ở service layer.
+với authorization ở dịch vụ (service / 서비스) tầng (layer / 계층).
 
-## Observability
+## Khả năng quan sát (observability / 관측 가능성)
 
-Mỗi tool call nên log:
+Mỗi công cụ (tool / 도구) lời gọi (call / 호출) nên log:
 
 ```text
 trace_id
@@ -254,28 +257,30 @@ side-effect resource/version
 
 Không log secret/PII tùy tiện.
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
-> **Tool calling là typed boundary giữa probabilistic decision và deterministic capability.**
+> **công cụ (tool / 도구) calling là typed ranh giới (boundary / 경계) giữa probabilistic quyết định (decision / 결정) và deterministic năng lực (capability / 역량).**
 
-LLM đề xuất; runtime kiểm soát; tool thực thi; result trở thành observation.
+LLM đề xuất; thời gian chạy (runtime / 런타임) kiểm soát; công cụ (tool / 도구) thực thi; kết quả (result / 결과) trở thành observation.
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “JSON đúng schema nghĩa là action đúng”
+### “JSON đúng lược đồ (schema / 스키마) nghĩa là hành động (action / 동작) đúng”
 
-Schema chỉ kiểm shape. Semantic correctness và authorization vẫn phải validate.
+Lược đồ (schema / 스키마) chỉ kiểm shape. ngữ nghĩa (semantic / 의미적) tính đúng đắn (correctness / 정확성) và authorization vẫn phải validate.
 
 ### “Prompt đủ để bảo vệ dangerous tools”
 
-Không. Security cần permission boundary, sandbox, approval và server-side policy.
+Không. bảo mật (security / 보안) cần permission ranh giới (boundary / 경계), sandbox, approval và server-side chính sách (policy / 정책).
 
-### “Tool càng generic càng tốt”
+### “công cụ (tool / 도구) càng generic càng tốt”
 
-Generic tool tăng flexibility nhưng giảm verifiability và safety.
+Generic công cụ (tool / 도구) tăng flexibility nhưng giảm verifiability và an toàn (safety / 안전).
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Tool calling nối [AI System Architecture](../00_foundations/04_ai_system_architecture.md) với agent runtime. Chapter tiếp theo mô tả loop điều phối nhiều tool calls qua time.
+Công cụ (tool / 도구) calling nối [AI System Architecture](../00_foundations/04_ai_system_architecture.md) với tác nhân (agent / 에이전트) thời gian chạy (runtime / 런타임). Chapter tiếp theo mô tả vòng lặp (loop / 루프) điều phối nhiều công cụ (tool / 도구) calls qua thời gian (time / 시간).
 
 Xem tiếp: [Agent Loop](./02_agent_loop.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

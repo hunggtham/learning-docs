@@ -1,12 +1,15 @@
 # Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing
 
-> Workbook này dùng sau khi đã đọc các chapter chính và Advanced Lab. Mục tiêu không phải kiểm tra trí nhớ, mà buộc người học **xây mô hình, lượng hóa giả định, kiểm thử phản ví dụ, viết điều kiện vô hiệu hóa và tạo đầu ra có thể review**.
+> **Mạch đọc:** Đặt **Advanced Practice Workbook — Bài tập thực hành chuyên sâu Investing** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Bối cảnh** sang **Nhiệm vụ 1 — Kiểm tra bảng cân đối kinh tế**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mỗi module đều có bốn lớp: **bối cảnh → dữ liệu giả định → nhiệm vụ → tiêu chí tự chấm**. Không cần dùng đúng con số dưới đây trong thực tế; chúng được thiết kế để luyện cơ chế.
+
+> Workbook này dùng sau khi đã đọc các chapter chính và Advanced Lab. Mục tiêu không phải kiểm tra trí nhớ, mà buộc người học **xây mô hình, lượng hóa giả định, kiểm thử phản ví dụ, viết điều kiện vô hiệu hóa và tạo đầu ra có thể rà soát (review / 검토)**.
+
+Mỗi mô-đun (module / 모듈) đều có bốn lớp: **bối cảnh → dữ liệu giả định → nhiệm vụ → tiêu chí tự chấm**. Không cần dùng đúng con số dưới đây trong thực tế; chúng được thiết kế để luyện cơ chế.
 
 ---
 
-# Module 1 — Foundations: từ mục tiêu tới danh mục có thể sống sót
+# Mô-đun (module / 모듈) 1 — Foundations: từ mục tiêu tới danh mục có thể sống sót
 
 ## Bối cảnh
 
@@ -84,7 +87,7 @@ Tài sản nào thực sự đa dạng hóa?
 Quy tắc hành động nào được kích hoạt?
 ```
 
-## Nhiệm vụ 4 — Reverse stress test
+## Nhiệm vụ 4 — Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
 Không hỏi “nếu cổ phiếu giảm 30% thì sao?”. Hãy hỏi:
 
@@ -101,7 +104,7 @@ Mất việc 8 tháng
 
 ## Đầu ra bắt buộc
 
-Tạo một file `portfolio_ips.md` gồm:
+Tạo một tệp (file / 파일) `portfolio_ips.md` gồm:
 
 ```text
 Mục tiêu
@@ -122,7 +125,7 @@ Một bài đạt yêu cầu khi quyết định phân bổ có thể giải th�
 
 ---
 
-# Module 2 — Asset Classes: so tài sản bằng cùng một ngôn ngữ
+# Mô-đun (module / 모듈) 2 — Asset Classes: so tài sản bằng cùng một ngôn ngữ
 
 ## Bối cảnh
 
@@ -199,7 +202,7 @@ Sau đó cộng carry một năm để xem tổng lợi suất gần đúng. M�
 
 ## Nhiệm vụ 4 — REIT
 
-Giả sử cap rate thị trường tăng từ 5,5% lên 6,5% trong khi NOI không đổi.
+Giả sử cap tỷ lệ (rate / 비율) thị trường tăng từ 5,5% lên 6,5% trong khi NOI không đổi.
 
 Hãy ước lượng tác động tới giá trị tài sản:
 
@@ -247,7 +250,7 @@ Nếu bảng chỉ mô tả đặc điểm sản phẩm mà chưa chỉ ra **cơ
 
 ---
 
-# Module 3 — Company Analysis: từ doanh thu tới giá trị trên mỗi cổ phiếu
+# Mô-đun (module / 모듈) 3 — Company phân tích (analysis / 분석): từ doanh thu tới giá trị trên mỗi cổ phiếu
 
 ## Bối cảnh
 
@@ -268,7 +271,7 @@ Tiền mặt: 100
 Số cổ phiếu pha loãng: 100
 ```
 
-## Nhiệm vụ 1 — Driver tree
+## Nhiệm vụ 1 — Driver cây (tree / 트리)
 
 Không dự báo doanh thu bằng “+10%”. Hãy xây:
 
@@ -367,7 +370,7 @@ Một mô hình đạt yêu cầu khi **thay driver vận hành thì ba báo cá
 
 ---
 
-# Module 4 — Economics: từ dữ liệu tới tái định giá tài sản
+# Mô-đun (module / 모듈) 4 — Economics: từ dữ liệu tới tái định giá tài sản
 
 ## Bối cảnh
 
@@ -499,7 +502,7 @@ Nếu phân tích chỉ nói “tin tốt/tin xấu cho chứng khoán” mà ch
 
 ---
 
-# Module 5 — Trading & Derivatives: từ giả thuyết tới hệ thống có thể triển khai
+# Mô-đun (module / 모듈) 5 — Trading & Derivatives: từ giả thuyết tới hệ thống có thể triển khai
 
 ## Bối cảnh
 
@@ -528,7 +531,7 @@ Cost model
 
 Nếu hai lập trình viên đọc đặc tả mà triển khai khác nhau, đặc tả chưa đạt.
 
-## Nhiệm vụ 2 — Bias audit
+## Nhiệm vụ 2 — độ lệch (bias / 편향) kiểm tra (audit / 감사)
 
 Kiểm tra:
 
@@ -541,7 +544,7 @@ Selection bias
 Multiple testing
 ```
 
-Viết một câu giải thích cho cách mỗi bias có thể làm kết quả đẹp giả.
+Viết một câu giải thích cho cách mỗi độ lệch (bias / 편향) có thể làm kết quả đẹp giả.
 
 ## Nhiệm vụ 3 — Expectancy
 
@@ -573,9 +576,9 @@ Chia theo regime
 Tăng chi phí 50%
 ```
 
-Mục tiêu không phải giữ Sharpe đẹp, mà xem logic có sụp hoàn toàn khi điều kiện thay đổi nhẹ không.
+Mục tiêu không phải giữ Sharpe đẹp, mà xem lô-gic (logic / 논리) có sụp hoàn toàn khi điều kiện thay đổi nhẹ không.
 
-## Nhiệm vụ 5 — Sizing và risk of ruin
+## Nhiệm vụ 5 — Sizing và rủi ro (risk / 위험) of ruin
 
 So ba mức rủi ro mỗi lệnh:
 
@@ -587,9 +590,9 @@ So ba mức rủi ro mỗi lệnh:
 
 Mô phỏng chuỗi 10 lệnh lỗ liên tiếp và tính drawdown. Sau đó giải thích tại sao cùng một edge nhưng sizing khác có thể tạo xác suất sống sót hoàn toàn khác.
 
-## Nhiệm vụ 6 — Execution
+## Nhiệm vụ 6 — thực thi (execution / 실행)
 
-Giả sử backtest dùng close, nhưng live phải dùng limit order.
+Giả sử backtest dùng close, nhưng live phải dùng limit thứ tự (order / 순서).
 
 Hãy ghi:
 
@@ -603,7 +606,7 @@ Slippage
 Missed fill
 ```
 
-Sau 50 giao dịch, tính thiếu hụt thực thi (implementation shortfall) để xem lợi thế đang mất ở tín hiệu hay ở execution.
+Sau 50 giao dịch, tính thiếu hụt thực thi (implementation shortfall) để xem lợi thế đang mất ở tín hiệu hay ở thực thi (execution / 실행).
 
 ## Nhiệm vụ 7 — Kill switch
 
@@ -634,11 +637,11 @@ retirement_rule.md
 
 ## Tự chấm
 
-Nếu chiến lược chỉ được mô tả bằng entry/stop/take-profit mà chưa có dữ liệu, chi phí, capacity, operational risk và tiêu chí dừng, bài chưa đạt.
+Nếu chiến lược chỉ được mô tả bằng entry/stop/take-profit mà chưa có dữ liệu, chi phí, sức chứa (capacity / 용량), operational rủi ro (risk / 위험) và tiêu chí dừng, bài chưa đạt.
 
 ---
 
-# Module 6 — Korea & Vietnam: từ country view tới vị thế cụ thể
+# Mô-đun (module / 모듈) 6 — Korea & Vietnam: từ country view tới vị thế cụ thể
 
 ## Bối cảnh
 
@@ -716,7 +719,7 @@ Invalidation
 
 Mục tiêu là phân biệt “câu chuyện tốt” với “kỳ vọng đang được nâng lên thực sự”.
 
-## Nhiệm vụ 5 — Cross-border implementation
+## Nhiệm vụ 5 — Cross-border hiện thực (implementation / 구현)
 
 Nếu mua sản phẩm từ Hàn Quốc nhưng tài sản cơ sở ở Mỹ hoặc Việt Nam, phải ghi:
 
@@ -766,9 +769,9 @@ Nếu luận điểm thị trường chỉ dựa vào một headline như “Fed
 
 ---
 
-# Module 7 — Final Review: kiểm tra xem bạn đang học hay chỉ đang đọc
+# Mô-đun (module / 모듈) 7 — Final rà soát (review / 검토): kiểm tra xem bạn đang học hay chỉ đang đọc
 
-Sau khi hoàn thành sáu module, chọn **một quyết định đầu tư duy nhất** và tạo hồ sơ hoàn chỉnh:
+Sau khi hoàn thành sáu mô-đun (module / 모듈), chọn **một quyết định đầu tư duy nhất** và tạo hồ sơ hoàn chỉnh:
 
 ```text
 Câu hỏi nghiên cứu
@@ -812,6 +815,8 @@ Rubric này là thang tiến bộ từ biết tên đến vận hành được q
 
 **Mức 4 — Phản biện:** chủ động tìm phản ví dụ, điều kiện vô hiệu hóa và sai số mô hình.
 
-**Mức 5 — Vận hành:** có quy trình lặp lại, dữ liệu đúng thời điểm, sizing, execution, monitoring và post-mortem.
+**Mức 5 — Vận hành:** có quy trình lặp lại, dữ liệu đúng thời điểm, sizing, thực thi (execution / 실행), monitoring và post-mortem.
 
 Mục tiêu của toàn bộ thư viện không phải đạt “Mức 5” ở mọi lĩnh vực ngay lập tức. Mục tiêu là biết rõ mình đang ở mức nào và phần còn thiếu là kiến thức, mô hình, dữ liệu, kỹ năng thực thi hay kỷ luật quyết định.
+
+> **Bàn giao:** Sau **Rubric tự chấm 5 mức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 GLOSSARY FORMULAS AND RESEARCH CONVENTIONS](./00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,7 @@
 # Nhà ở, không gian, trang phục và thẩm mỹ
 
+> **Mạch đọc:** Đặt **Nhà ở, không gian, trang phục và thẩm mỹ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Không gian sống định hình cơ thể và thói quen** sang **온돌: từ kênh dẫn khí nóng tới hệ thống 보일러 hiện đại**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 ## Không gian sống định hình cơ thể và thói quen
 
 Văn hoá không chỉ nằm trong đầu. Sàn nhà, nhiệt độ, đồ nội thất và kiến trúc làm một số hành vi dễ hơn hành vi khác. Hàn Quốc là ví dụ rõ qua **ondol (온돌)**, hệ thống sưởi sàn truyền thống.
@@ -60,7 +62,7 @@ Khi nhà ở chuyển sang căn hộ, nhiều hoạt động này được chuy�
 
 `처마` — mái hiên — không chỉ để trang trí. Độ vươn của mái giúp che nắng/mưa và điều chỉnh lượng ánh sáng vào nhà. Khi góc mặt trời thay đổi theo mùa, cùng một hình học mái có thể chặn nắng mùa hè tốt hơn nhưng vẫn cho nắng mùa đông vào sâu.
 
-Đây là nguyên lý thiết kế thụ động rất hiện đại về logic: thay vì dùng năng lượng để sửa khí hậu sau khi nó vào công trình, kiến trúc giảm tải ngay từ ranh giới.
+Đây là nguyên lý thiết kế thụ động rất hiện đại về lô-gic (logic / 논리): thay vì dùng năng lượng để sửa khí hậu sau khi nó vào công trình, kiến trúc giảm tải ngay từ ranh giới.
 
 ## Căn hộ như hạ tầng của hiện đại hoá
 
@@ -88,7 +90,7 @@ Sống trong căn hộ vì vậy là bài toán **quản trị tài nguyên chun
 
 ## 빌라, 오피스텔, 원룸: loại nhà và giai đoạn đời sống
 
-Ngoài căn hộ, nhà ở đô thị Hàn có nhiều nhóm. `원룸` thường là phòng một không gian kiểu studio; `오피스텔` là toà nhà có logic văn phòng–nhà ở tuỳ cách dùng; `빌라` trong tiếng Hàn đời thường thường chỉ nhà nhiều hộ thấp tầng chứ không giống “villa” sang trọng trong tiếng Anh.
+Ngoài căn hộ, nhà ở đô thị Hàn có nhiều nhóm. `원룸` thường là phòng một không gian kiểu studio; `오피스텔` là toà nhà có lô-gic (logic / 논리) văn phòng–nhà ở tuỳ cách dùng; `빌라` trong tiếng Hàn đời thường thường chỉ nhà nhiều hộ thấp tầng chứ không giống “villa” sang trọng trong tiếng Anh.
 
 Đây là bẫy dịch thuật quan trọng. Một từ vay từ tiếng Anh có thể đổi nghĩa sau khi được nội địa hoá.
 
@@ -102,7 +104,7 @@ Trong kinh tế đô thị, cư dân có thể chấp nhận diện tích nhỏ 
 
 ## 전세 và văn hoá nhà ở
 
-**Jeonse (전세)** là cơ chế thuê trong đó người thuê đặt khoản tiền lớn thay vì trả tiền thuê hàng tháng theo mô hình truyền thống. Logic kinh tế liên quan lãi suất, tín dụng, kỳ vọng giá nhà và tài chính của chủ nhà.
+**Jeonse (전세)** là cơ chế thuê trong đó người thuê đặt khoản tiền lớn thay vì trả tiền thuê hàng tháng theo mô hình truyền thống. lô-gic (logic / 논리) kinh tế liên quan lãi suất, tín dụng, kỳ vọng giá nhà và tài chính của chủ nhà.
 
 Jeonse không phải “phong tục” theo nghĩa lễ nghi, nhưng ảnh hưởng sâu đến kế hoạch đời sống: tiết kiệm, hôn nhân, chuyển chỗ ở và nợ. Đây là lý do một sách văn hoá cần bao gồm thiết chế kinh tế; chúng định hình trải nghiệm hằng ngày mạnh hơn nhiều biểu tượng truyền thống.
 
@@ -454,3 +456,5 @@ Một căn `원룸` nhỏ tạo hành vi khác căn hộ lớn dù cư dân có 
 ## Đọc tiếp
 
 Đọc cùng [`31_apartment_neighborhood_moving_recycling_everyday_life.md`](31_apartment_neighborhood_moving_recycling_everyday_life.md), [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) và [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md).
+
+> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

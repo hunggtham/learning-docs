@@ -1,5 +1,8 @@
 # Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)
 
+> **Mạch đọc:** Đọc **Thập niên 1960: xuất khẩu, kế hoạch phát triển và sự hình thành doanh nghiệp công nghiệp (Export Industrialization / 수출주도 산업화)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hạn chế ràng buộc: thiếu ngoại tệ** sang **Kỷ luật xuất khẩu: thị trường thế giới trở thành người chấm điểm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Thập niên 1960 là điểm chuyển khi Hàn Quốc đi từ nền kinh tế hậu chiến phụ thuộc nhiều vào viện trợ sang một hệ thống đặt **sản xuất công nghiệp + xuất khẩu + đầu tư** làm động cơ tăng trưởng. Điều quan trọng không chỉ là xuất khẩu tăng. Quan hệ giữa nhà nước, ngân hàng, doanh nghiệp, ngoại tệ và nhu cầu thế giới được tổ chức lại để biến nguồn lực trong nước còn khan hiếm thành năng lực sản xuất có thể bán trên thị trường quốc tế.
 
 Muốn hiểu chaebol, sản xuất xuất khẩu hoặc chính sách công nghiệp Hàn Quốc hiện đại, đây là chương nền tảng bắt buộc.
@@ -26,7 +29,7 @@ Một thị trường nội địa được bảo hộ có thể cho phép doanh
 
 Cơ chế này giải thích vì sao chính sách công nghiệp Hàn Quốc không thể hiểu đơn giản là trợ cấp. Kết quả trên thị trường quốc tế tạo một tín hiệu tương đối khách quan về việc năng lực sản xuất có thật sự cạnh tranh hay không.
 
-> **Mental Model:** nhà nước có thể giúp doanh nghiệp chạy nhanh hơn, nhưng khách hàng xuất khẩu quyết định doanh nghiệp có đang chạy đúng hướng hay không.
+> **mô hình tư duy (mental model / 사고 모델):** nhà nước có thể giúp doanh nghiệp chạy nhanh hơn, nhưng khách hàng xuất khẩu quyết định doanh nghiệp có đang chạy đúng hướng hay không.
 
 ## Bùng nổ xuất khẩu không bắt đầu từ một quyết định duy nhất
 
@@ -162,10 +165,12 @@ Cơ chế tăng trưởng nhanh cũng gieo hạt cho các vấn đề sau này. 
 
 Vì vậy không nên đọc thập niên 1960 như câu chuyện thành công không có chi phí. Chính những cơ chế giúp tăng trưởng nhanh sau này cũng trở thành đối tượng cải cách.
 
-## Connection — Tại sao thập niên 1970 khác thập niên 1960
+## Liên kết (connection / 연결) — Tại sao thập niên 1970 khác thập niên 1960
 
 Thập niên 1960 chứng minh Hàn Quốc có thể bán hàng công nghiệp ra thế giới và dùng xuất khẩu để tạo ngoại tệ. Nhưng mô hình này vẫn phụ thuộc nhiều vào đầu vào và công nghệ nhập khẩu.
 
 Chương tiếp theo, [thập niên 1970: HCI và mở rộng chaebol](./03_1970s_hci_and_chaebol_expansion.md), giải thích bước chuyển từ hàng công nghiệp nhẹ sang thép, hóa chất, máy móc, đóng tàu và các ngành có vốn cố định rất lớn.
 
-> **Mental Model cuối:** thập niên 1960 không chỉ là “xuất khẩu tăng”. Đó là quá trình xây một vòng phản hồi giữa ngoại tệ, tín dụng, đầu tư, học công nghệ và kỷ luật thị trường quốc tế. Vòng phản hồi này tạo ra năng lực sản xuất và đồng thời làm một số doanh nghiệp tích lũy quy mô nhanh hơn, đặt nền cho cấu trúc tập đoàn của Hàn Quốc sau này.
+> **mô hình tư duy (mental model / 사고 모델) cuối:** thập niên 1960 không chỉ là “xuất khẩu tăng”. Đó là quá trình xây một vòng phản hồi giữa ngoại tệ, tín dụng, đầu tư, học công nghệ và kỷ luật thị trường quốc tế. Vòng phản hồi này tạo ra năng lực sản xuất và đồng thời làm một số doanh nghiệp tích lũy quy mô nhanh hơn, đặt nền cho cấu trúc tập đoàn của Hàn Quốc sau này.
+
+> **Bàn giao:** Sau **liên kết (connection / 연결) — Tại sao thập niên 1970 khác thập niên 1960**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 legacy before 1945](./00_legacy_before_1945.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Chaebol và nhóm doanh nghiệp lớn (Chaebol & Large Business Groups / 재벌과 대규모기업집단)
 
+> **Mạch đọc:** Đặt **Chaebol và nhóm doanh nghiệp lớn (Chaebol & Large Business Groups / 재벌과 대규모기업집단)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ quyền sở hữu tới quyền kiểm soát** sang **Chaebol không đồng nghĩa với khái niệm pháp lý 기업집단**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Chaebol (`재벌`) là một trong những khái niệm nổi tiếng nhất khi nói về kinh tế Hàn Quốc, nhưng nếu chỉ hiểu nó là “một tập đoàn rất lớn do một gia đình sở hữu” thì vẫn chưa đủ. Chaebol không phải một **loại hình pháp nhân (legal form / 법적 형태)** như `주식회사`, cũng không phải một công ty duy nhất. Nó là một **mạng lưới kiểm soát (control network / 지배 네트워크)** gồm nhiều pháp nhân độc lập về mặt pháp lý nhưng liên kết với nhau bằng sở hữu, quyền biểu quyết, nhân sự cấp cao, giao dịch nội bộ, thương hiệu và chiến lược cấp tập đoàn.
 
 Điểm quan trọng nhất khi học về chaebol là chuyển cách nhìn từ “một công ty rất lớn” sang “một hệ thống nhiều pháp nhân”. Khi báo chí viết “Samsung đầu tư”, “Hyundai mua công ty” hay “SK vay vốn”, câu hỏi đầu tiên phải là: **pháp nhân nào đang đầu tư, mua, vay, bảo lãnh hoặc tạo lợi nhuận?** Samsung Electronics, Samsung C&T, Samsung Life và Samsung Biologics cùng nằm trong Samsung Group nhưng có cơ sở cổ đông, bảng cân đối kế toán, nợ, dòng tiền và nghĩa vụ pháp lý riêng.
@@ -54,7 +57,7 @@ Một tập đoàn cũng có thể thực hiện **đa dạng hóa liên quan (r
 
 Ngược lại, **đa dạng hóa không liên quan (unrelated diversification / 비관련다각화)** có thể xảy ra chủ yếu vì tập đoàn có lợi thế tiếp cận vốn hoặc muốn mở rộng phạm vi kiểm soát. Nếu một công ty thành viên chỉ tồn tại lâu nhờ trợ cấp chéo mà không tạo mức sinh lời tương xứng, sự phức tạp sẽ trở thành chi phí.
 
-Câu hỏi quan trọng không phải “tập đoàn có quá nhiều ngành hay không?”, mà là: **vốn và năng lực có được chuyển sang ngành mới với logic kinh tế rõ ràng hay không?**
+Câu hỏi quan trọng không phải “tập đoàn có quá nhiều ngành hay không?”, mà là: **vốn và năng lực có được chuyển sang ngành mới với lô-gic (logic / 논리) kinh tế rõ ràng hay không?**
 
 ## Thị trường vốn nội bộ: lợi thế và rủi ro đại diện cùng tồn tại
 
@@ -90,7 +93,7 @@ Chaebol và **doanh nghiệp vừa và nhỏ (SME / 중소기업)** cùng tạo 
 
 Nhưng nếu nhà cung cấp phụ thuộc quá mạnh vào một khách hàng, **quyền thương lượng (bargaining power)** sẽ lệch đáng kể. Áp lực giảm giá, kỳ hạn thanh toán, yêu cầu đầu tư khuôn mẫu hoặc thay đổi tiêu chuẩn có thể chuyển một phần rủi ro xuống nhà cung cấp.
 
-Vì vậy cùng một quan hệ có thể tạo cả **lan tỏa công nghệ (technology spillover)** lẫn **phụ thuộc (dependency)**.
+Vì vậy cùng một quan hệ có thể tạo cả **lan tỏa công nghệ (technology spillover)** lẫn **phụ thuộc (dependency / 의존성)**.
 
 Đọc tiếp [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
@@ -106,7 +109,7 @@ Tính liên tục nằm ở mạng lưới kiểm soát và bản sắc tập đ
 
 ## Kế nhiệm và tái cấu trúc: vì sao sơ đồ sở hữu có thể thay đổi nhanh?
 
-Khi quyền kiểm soát chuyển từ thế hệ sáng lập sang thế hệ tiếp theo, cấu trúc sở hữu thường trở thành vấn đề chiến lược. **Sáp nhập (merger)**, **chia tách (spin-off)**, chào mua công khai, bán cổ phần, hoán đổi cổ phiếu hoặc chuyển đổi sang công ty nắm giữ có thể đồng thời phục vụ logic công nghiệp và logic kiểm soát.
+Khi quyền kiểm soát chuyển từ thế hệ sáng lập sang thế hệ tiếp theo, cấu trúc sở hữu thường trở thành vấn đề chiến lược. **Sáp nhập (merger)**, **chia tách (spin-off)**, chào mua công khai, bán cổ phần, hoán đổi cổ phiếu hoặc chuyển đổi sang công ty nắm giữ có thể đồng thời phục vụ lô-gic (logic / 논리) công nghiệp và lô-gic (logic / 논리) kiểm soát.
 
 Người phân tích không nên chỉ đọc thông cáo báo chí nói về “hiệu ứng hiệp lực”. Cần vẽ **sơ đồ sở hữu trước và sau giao dịch**, tính quyền lợi kinh tế và quyền biểu quyết, rồi kiểm tra tỷ lệ hoán đổi, cơ sở định giá và tác động tới cổ đông thiểu số.
 
@@ -136,7 +139,7 @@ Khi nghiên cứu một tập đoàn, không nên bắt đầu bằng thương h
 
 Đây là nơi [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) và [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md) kết nối thành một quy trình hoàn chỉnh.
 
-## Mental Model — mô hình tư duy
+## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Chaebol là một **hệ thống phân bổ vốn và quyền kiểm soát (capital-allocation and control system)** trải qua nhiều pháp nhân. Sức mạnh đến từ khả năng phối hợp vốn, công nghệ, con người và khả năng tiếp cận thị trường ở quy mô lớn; rủi ro cũng đến từ chính mạng lưới đó khi quyền kiểm soát, động cơ và lợi ích của cổ đông thiểu số không trùng nhau.
 
@@ -175,3 +178,5 @@ Các nguồn này giúp kiểm tra sở hữu, công bố, quy định cạnh tr
 - OECD, nghiên cứu cải cách các tập đoàn lớn nhằm nâng năng suất và tính bao trùm tại Hàn Quốc.
 
 Đọc tiếp [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md), [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md), [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md) và [`19_major_groups_case_studies.md`](./19_major_groups_case_studies.md).
+
+> **Bàn giao:** Sau **Nguồn và liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

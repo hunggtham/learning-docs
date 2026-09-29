@@ -1,12 +1,15 @@
-# Case 20 — Android Library và SDK Authoring: AAR, Public API, Binary Compatibility và Publishing
+# Trường hợp (case / 사례) 20 — Android thư viện (library / 라이브러리) và SDK Authoring: AAR, API công khai (public API / 공개 API), nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) và Publishing
 
-Viết code bên trong một app và viết một Android library/SDK cho app khác sử dụng là hai bài toán khác nhau. Trong app, team có thể refactor đồng thời mọi call site. Trong library, public class, resource, manifest component, ProGuard rule, initialization behavior và transitive dependency đều trở thành contract với consumer mà bạn không kiểm soát.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 20 — Android thư viện (library / 라이브러리) và SDK Authoring: AAR, API công khai (public API / 공개 API), nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) và Publishing** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Android thư viện (library / 라이브러리) khác pure Kotlin/JVM thư viện (library / 라이브러리)** sang **2. API công khai (public API / 공개 API) surface là sản phẩm**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này xây mental model để thiết kế reusable Android library/SDK ổn định, nhỏ, test được và không ép consumer hiểu implementation detail.
 
-## 1. Android Library khác pure Kotlin/JVM library
+Viết mã (code / 코드) bên trong một app và viết một Android thư viện (library / 라이브러리)/SDK cho app khác sử dụng là hai bài toán khác nhau. Trong app, nhóm (team / 팀) có thể refactor đồng thời mọi lời gọi (call / 호출) site. Trong thư viện (library / 라이브러리), công khai (public / 공개) lớp (class / 클래스), tài nguyên (resource / 자원), manifest thành phần (component / 컴포넌트), ProGuard quy tắc (rule / 규칙), initialization hành vi (behavior / 동작) và transitive phụ thuộc (dependency / 의존성) đều trở thành đặc tả hợp đồng (contract / 계약) với bên tiêu thụ (consumer / 소비자) mà bạn không kiểm soát.
 
-Pure Kotlin/JVM library chủ yếu publish bytecode/JAR và metadata. Android library có thể cần Android resources, manifest, native library, consumer ProGuard rules, lint checks và Android-specific APIs, nên thường được build thành **AAR — Android Archive**.
+Chapter này xây mô hình tư duy (mental model / 사고 모델) để thiết kế reusable Android thư viện (library / 라이브러리)/SDK ổn định, nhỏ, kiểm thử (test / 테스트) được và không ép bên tiêu thụ (consumer / 소비자) hiểu hiện thực (implementation / 구현) detail.
+
+## 1. Android thư viện (library / 라이브러리) khác pure Kotlin/JVM thư viện (library / 라이브러리)
+
+Pure Kotlin/JVM thư viện (library / 라이브러리) chủ yếu publish bytecode/JAR và siêu dữ liệu (metadata / 메타데이터). Android thư viện (library / 라이브러리) có thể cần Android resources, manifest, bản địa (native / 네이티브) thư viện (library / 라이브러리), bên tiêu thụ (consumer / 소비자) ProGuard rules, lint checks và Android-specific APIs, nên thường được bản dựng (build / 빌드) thành **AAR — Android Archive**.
 
 AAR có thể chứa:
 
@@ -22,13 +25,13 @@ R.txt/public resources metadata
 
 Không phải AAR nào cũng có mọi thành phần.
 
-Nếu library không cần Android framework/resource, pure Kotlin/JVM module thường đơn giản và reusable hơn.
+Nếu thư viện (library / 라이브러리) không cần Android khung phần mềm (framework / 프레임워크)/tài nguyên (resource / 자원), pure Kotlin/JVM mô-đun (module / 모듈) thường đơn giản và reusable hơn.
 
-## 2. Public API surface là sản phẩm
+## 2. API công khai (public API / 공개 API) surface là sản phẩm
 
-Mọi `public` declaration có thể trở thành compatibility obligation. Đừng để implementation class public chỉ vì default visibility tiện.
+Mọi `public` declaration có thể trở thành tính tương thích (compatibility / 호환성) obligation. Đừng để hiện thực (implementation / 구현) lớp (class / 클래스) công khai (public / 공개) chỉ vì default visibility tiện.
 
-Kotlin default là `public`, nên library author phải chủ động dùng `internal`/`private`.
+Kotlin default là `public`, nên thư viện (library / 라이브러리) author phải chủ động dùng `internal`/`private`.
 
 ```kotlin
 public interface PaymentClient {
@@ -38,21 +41,21 @@ public interface PaymentClient {
 internal class DefaultPaymentClient(...) : PaymentClient { ... }
 ```
 
-Public API nhỏ giúp evolve implementation mà không phá consumer.
+API công khai (public API / 공개 API) nhỏ giúp evolve hiện thực (implementation / 구현) mà không phá bên tiêu thụ (consumer / 소비자).
 
-## 3. Source compatibility và binary compatibility
+## 3. nguồn (source / 소스) tính tương thích (compatibility / 호환성) và nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)
 
-**Source compatibility**: consumer source cũ recompile với library mới vẫn compile.
+**nguồn (source / 소스) tính tương thích (compatibility / 호환성)**: bên tiêu thụ (consumer / 소비자) nguồn (source / 소스) cũ recompile với thư viện (library / 라이브러리) mới vẫn compile.
 
-**Binary compatibility**: app/library consumer đã compile trước đó vẫn link/run với binary mới mà không cần recompile.
+**nhị phân (binary / 이진) tính tương thích (compatibility / 호환성)**: app/thư viện (library / 라이브러리) bên tiêu thụ (consumer / 소비자) đã compile trước đó vẫn link/run với nhị phân (binary / 이진) mới mà không cần recompile.
 
-Một change có thể source-compatible nhưng binary-incompatible hoặc ngược lại.
+Một thay đổi (change / 변경) có thể source-compatible nhưng binary-incompatible hoặc ngược lại.
 
-Ví dụ đổi method signature/default parameter/inline implementation/interface shape có thể có ABI implication khác trực giác source code.
+Ví dụ đổi phương thức (method / 메서드) signature/default parameter/inline hiện thực (implementation / 구현)/giao diện (interface / 인터페이스) shape có thể có ABI implication khác trực giác mã nguồn (source code / 소스 코드).
 
-Library production cần API/ABI validation, không chỉ compile sample app.
+Thư viện (library / 라이브러리) môi trường vận hành (production / 운영 환경) cần API/ABI kiểm tra hợp lệ (validation / 검증), không chỉ compile mẫu (sample / 표본) app.
 
-## 4. Kotlin default parameters và Java consumer
+## 4. Kotlin default parameters và Java bên tiêu thụ (consumer / 소비자)
 
 Kotlin:
 
@@ -60,20 +63,20 @@ Kotlin:
 fun connect(timeoutMs: Long = 5_000)
 ```
 
-Kotlin caller dùng default parameter tự nhiên. Java caller không thấy overload giống Kotlin trừ khi dùng `@JvmOverloads` hoặc explicit overload.
+Kotlin caller dùng default parameter tự nhiên. Java caller không thấy overload giống Kotlin trừ khi dùng `@JvmOverloads` hoặc tường minh (explicit / 명시적) overload.
 
-Library cho mixed Java/Kotlin ecosystem phải review Java ergonomics:
+Thư viện (library / 라이브러리) cho mixed Java/Kotlin ecosystem phải rà soát (review / 검토) Java ergonomics:
 
 ```kotlin
 @JvmOverloads
 fun connect(timeoutMs: Long = 5_000, retry: Int = 1)
 ```
 
-Không thêm `@JvmOverloads` máy móc; nó tăng public methods/ABI surface.
+Không thêm `@JvmOverloads` máy móc; nó tăng công khai (public / 공개) methods/ABI surface.
 
 ## 5. `@JvmStatic`, `@JvmField`, `@JvmName` là interoperability tools
 
-Companion/object API có thể awkward từ Java. Annotation JVM giúp shape bytecode/API:
+Companion/đối tượng (object / 객체) API có thể awkward từ Java. Annotation JVM giúp shape bytecode/API:
 
 ```kotlin
 class Sdk private constructor() {
@@ -84,11 +87,11 @@ class Sdk private constructor() {
 }
 ```
 
-`@JvmName` giúp tránh signature clash hoặc cung cấp Java-friendly name. Mọi annotation này nên được xem là ABI decision.
+`@JvmName` giúp tránh signature clash hoặc cung cấp Java-friendly name. Mọi annotation này nên được xem là ABI quyết định (decision / 결정).
 
-## 6. Avoid exposing implementation dependency types
+## 6. Avoid exposing hiện thực (implementation / 구현) phụ thuộc (dependency / 의존성) types
 
-Nếu public API trả Retrofit `Response`, OkHttp type, Room entity hay coroutine internal type không cần thiết, consumer bị coupled vào dependency/version của SDK.
+Nếu API công khai (public API / 공개 API) trả Retrofit `Response`, OkHttp kiểu (type / 타입), Room thực thể (entity / 엔터티) hay coroutine nội bộ (internal / 내부) kiểu (type / 타입) không cần thiết, bên tiêu thụ (consumer / 소비자) bị coupled vào phụ thuộc (dependency / 의존성)/phiên bản (version / 버전) của SDK.
 
 Bad:
 
@@ -102,19 +105,19 @@ Better:
 suspend fun fetchUser(): UserResult
 ```
 
-Expose standard/library-owned domain types. Điều này giảm transitive dependency conflict và cho phép đổi implementation.
+Expose tiêu chuẩn (standard / 표준)/library-owned lĩnh vực (domain / 도메인) types. Điều này giảm transitive phụ thuộc (dependency / 의존성) xung đột (conflict / 충돌) và cho phép đổi hiện thực (implementation / 구현).
 
-## 7. `api` vs `implementation` trong library
+## 7. `api` vs `implementation` trong thư viện (library / 라이브러리)
 
-Nếu public API expose type từ dependency, Gradle có thể cần `api`. Nếu dependency chỉ implementation detail, dùng `implementation`.
+Nếu API công khai (public API / 공개 API) expose kiểu (type / 타입) từ phụ thuộc (dependency / 의존성), Gradle có thể cần `api`. Nếu phụ thuộc (dependency / 의존성) chỉ hiện thực (implementation / 구현) detail, dùng `implementation`.
 
-Overuse `api` làm dependency graph consumer phình và tăng ABI coupling.
+Overuse `api` làm phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) bên tiêu thụ (consumer / 소비자) phình và tăng ABI coupling.
 
-Goal không phải “không có transitive dependency”, mà là public contract deliberate.
+Goal không phải “không có transitive phụ thuộc (dependency / 의존성)”, mà là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) deliberate.
 
-## 8. AAR resource là global-ish namespace concern
+## 8. AAR tài nguyên (resource / 자원) là global-ish không gian tên (namespace / 네임스페이스) concern
 
-Resource name trong dependencies được merge vào app resource graph. Library nên prefix resource để giảm collision:
+Tài nguyên (resource / 자원) name trong dependencies được merge vào app tài nguyên (resource / 자원) đồ thị (graph / 그래프). thư viện (library / 라이브러리) nên prefix tài nguyên (resource / 자원) để giảm collision:
 
 ```text
 sdk_payment_button
@@ -122,31 +125,31 @@ sdk_payment_error_title
 sdk_payment_theme_overlay
 ```
 
-Không đặt generic `button_primary` trong public library.
+Không đặt generic `button_primary` trong công khai (public / 공개) thư viện (library / 라이브러리).
 
-Nếu resource không intended for consumer override/use, giảm public exposure theo capability build tools/version hỗ trợ.
+Nếu tài nguyên (resource / 자원) không intended for bên tiêu thụ (consumer / 소비자) override/use, giảm công khai (public / 공개) exposure theo năng lực (capability / 역량) bản dựng (build / 빌드) tools/phiên bản (version / 버전) hỗ trợ.
 
-## 9. Theme/style contract
+## 9. Theme/style đặc tả hợp đồng (contract / 계약)
 
-Custom View/Compose component library cần document theme expectation. Không assume consumer dùng cùng Material theme/version.
+Custom View/Compose thành phần (component / 컴포넌트) thư viện (library / 라이브러리) cần document theme expectation. Không assume bên tiêu thụ (consumer / 소비자) dùng cùng Material theme/phiên bản (version / 버전).
 
-Nếu SDK render UI, cân nhắc:
+Nếu SDK kết xuất (render / 렌더링) UI, cân nhắc:
 
 - theme overlay;
 - colors/typography configurable;
-- dark mode;
-- dynamic color behavior;
-- accessibility/font scale;
+- dark chế độ (mode / 모드);
+- động (dynamic / 동적) color hành vi (behavior / 동작);
+- khả năng tiếp cận (accessibility / 접근성)/font quy mô (scale / 규모);
 - localization;
 - edge-to-edge/insets.
 
-UI SDK là public visual contract, không chỉ code API.
+UI SDK là công khai (public / 공개) visual đặc tả hợp đồng (contract / 계약), không chỉ mã (code / 코드) API.
 
-## 10. Compose library compatibility
+## 10. Compose thư viện (library / 라이브러리) tính tương thích (compatibility / 호환성)
 
-Compose library public API có thêm concern compiler/runtime/library version. Avoid exposing unstable/experimental API không có policy rõ.
+Compose thư viện (library / 라이브러리) API công khai (public API / 공개 API) có thêm concern trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임)/thư viện (library / 라이브러리) phiên bản (version / 버전). Avoid exposing unstable/experimental API không có chính sách (policy / 정책) rõ.
 
-Public composable nên follow state hoisting:
+Công khai (public / 공개) composable nên follow trạng thái (state / 상태) hoisting:
 
 ```kotlin
 @Composable
@@ -157,43 +160,43 @@ fun PaymentButton(
 )
 ```
 
-`Modifier` thường để cuối/default giúp composition idiom. Không hardcode navigation/ViewModel/global singleton bên trong reusable UI component.
+`Modifier` thường để cuối/default giúp composition idiom. Không hardcode điều hướng (navigation / 내비게이션)/ViewModel/toàn cục (global / 전역) singleton bên trong reusable UI thành phần (component / 컴포넌트).
 
-## 11. Manifest của library được merge vào consumer app
+## 11. Manifest của thư viện (library / 라이브러리) được merge vào bên tiêu thụ (consumer / 소비자) app
 
-Library có thể khai báo provider/service/receiver/permission. Đây là powerful side effect.
+Thư viện (library / 라이브러리) có thể khai báo provider/dịch vụ (service / 서비스)/receiver/permission. Đây là powerful side tác động (effect / 효과).
 
 SDK author phải:
 
 - minimal manifest footprint;
-- `android:exported` explicit/correct;
+- `android:exported` tường minh (explicit / 명시적)/correct;
 - unique authorities bằng `${applicationId}` placeholder khi phù hợp;
-- avoid broad permission nếu feature optional;
-- document component behavior.
+- avoid broad permission nếu tính năng (feature / 기능) optional;
+- document thành phần (component / 컴포넌트) hành vi (behavior / 동작).
 
-Consumer phải có khả năng override/remove component khi architecture cho phép.
+Bên tiêu thụ (consumer / 소비자) phải có khả năng override/remove thành phần (component / 컴포넌트) khi kiến trúc (architecture / 아키텍처) cho phép.
 
-## 12. Auto-initialization là convenience có startup cost
+## 12. Auto-initialization là convenience có startup chi phí (cost / 비용)
 
-SDK thường dùng ContentProvider/AndroidX Startup để auto-init. Điều này giảm setup nhưng thêm work vào cold start của mọi app consumer.
+SDK thường dùng ContentProvider/AndroidX Startup để auto-init. Điều này giảm setup nhưng thêm công việc (work / 작업) vào cold start của mọi app bên tiêu thụ (consumer / 소비자).
 
-Chỉ auto-init phần thật sự cần và rất nhẹ. Heavy SDK nên explicit initialize hoặc lazy feature init.
+Chỉ auto-init phần thật sự cần và rất nhẹ. Heavy SDK nên tường minh (explicit / 명시적) initialize hoặc lazy tính năng (feature / 기능) init.
 
-Cung cấp opt-out nếu auto-init có meaningful cost.
+Cung cấp opt-out nếu auto-init có meaningful chi phí (cost / 비용).
 
-## 13. `Context` ownership trong SDK
+## 13. `Context` quyền sở hữu (ownership / 소유권) trong SDK
 
-Long-lived SDK object không giữ Activity context nếu không cần. Dùng application context cho process-lifetime service.
+Long-lived SDK đối tượng (object / 객체) không giữ Activity ngữ cảnh (context / 맥락) nếu không cần. Dùng ứng dụng (application / 애플리케이션) ngữ cảnh (context / 맥락) cho process-lifetime dịch vụ (service / 서비스).
 
-Nếu API cần Activity để launch UI/permission, chỉ giữ reference trong operation scope hoặc weak/lifecycle-aware contract.
+Nếu API cần Activity để launch UI/permission, chỉ giữ tham chiếu (reference / 참조) trong thao tác (operation / 연산) phạm vi (scope / 범위) hoặc weak/lifecycle-aware đặc tả hợp đồng (contract / 계약).
 
-Memory leak trong SDK ảnh hưởng mọi app consumer và khó debug vì stack crossing library boundary.
+Bộ nhớ (memory / 메모리) leak trong SDK ảnh hưởng mọi app bên tiêu thụ (consumer / 소비자) và khó gỡ lỗi (debug / 디버그) vì ngăn xếp (stack / 스택) crossing thư viện (library / 라이브러리) ranh giới (boundary / 경계).
 
-## 14. Threading contract phải được document
+## 14. Threading đặc tả hợp đồng (contract / 계약) phải được document
 
-API callback có chạy main thread không? Method có thread-safe không? Có thể call concurrent không?
+API callback có chạy main luồng thực thi (thread / 스레드) không? phương thức (method / 메서드) có thread-safe không? Có thể lời gọi (call / 호출) concurrent không?
 
-Kotlin coroutine API thường rõ hơn callback, nhưng vẫn cần main-safety contract.
+Kotlin coroutine API thường rõ hơn callback, nhưng vẫn cần main-safety đặc tả hợp đồng (contract / 계약).
 
 ```kotlin
 interface AnalyticsSdk {
@@ -202,19 +205,19 @@ interface AnalyticsSdk {
 }
 ```
 
-Nếu consumer phải tự biết “method này không được main thread” mà docs không nói, SDK contract chưa đủ.
+Nếu bên tiêu thụ (consumer / 소비자) phải tự biết “phương thức (method / 메서드) này không được main luồng thực thi (thread / 스레드)” mà docs không nói, SDK đặc tả hợp đồng (contract / 계약) chưa đủ.
 
-## 15. Coroutine API và scope ownership
+## 15. Coroutine API và phạm vi (scope / 범위) quyền sở hữu (ownership / 소유권)
 
-Library `suspend` function nên caller-owned: work bị cancel khi caller scope cancel, trừ khi operation semantics thật sự durable.
+Thư viện (library / 라이브러리) `suspend` hàm (function / 함수) nên caller-owned: công việc (work / 작업) bị cancel khi caller phạm vi (scope / 범위) cancel, trừ khi thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론) thật sự durable.
 
 Không launch `GlobalScope` để thoát cancellation.
 
-Nếu SDK cần process-long work, expose explicit lifecycle or use appropriate durable Android primitive; document behavior.
+Nếu SDK cần process-long công việc (work / 작업), expose tường minh (explicit / 명시적) vòng đời (lifecycle / 생명주기) or use appropriate durable Android thành phần nguyên thủy (primitive / 기본 요소); document hành vi (behavior / 동작).
 
-## 16. Flow public API
+## 16. luồng (flow / 흐름) API công khai (public API / 공개 API)
 
-`Flow<T>` hợp lý cho stream. Cần document hot/cold behavior và replay semantics.
+`Flow<T>` hợp lý cho stream. Cần document hot/cold hành vi (behavior / 동작) và replay ngữ nghĩa (semantics / 의미론).
 
 Expose mutable stream ra ngoài là nguy hiểm:
 
@@ -223,13 +226,13 @@ private val _state = MutableStateFlow(...)
 val state: StateFlow<State> = _state.asStateFlow()
 ```
 
-Consumer quan sát, SDK sở hữu mutation.
+Bên tiêu thụ (consumer / 소비자) quan sát, SDK sở hữu mutation.
 
-## 17. Error model public API
+## 17. lỗi (error / 오류) mô hình (model / 모델) API công khai (public API / 공개 API)
 
-Không để mọi failure thành raw `Exception` implementation-specific.
+Không để mọi thất bại (failure / 실패) thành raw `Exception` implementation-specific.
 
-Library có thể dùng sealed result/error:
+Thư viện (library / 라이브러리) có thể dùng sealed kết quả (result / 결과)/lỗi (error / 오류):
 
 ```kotlin
 sealed interface PaymentError {
@@ -240,11 +243,11 @@ sealed interface PaymentError {
 }
 ```
 
-Nhưng public error taxonomy phải stable. Đừng expose internal server code như permanent enum nếu backend có thể thêm value.
+Nhưng công khai (public / 공개) lỗi (error / 오류) taxonomy phải stable. Đừng expose nội bộ (internal / 내부) máy chủ (server / 서버) mã (code / 코드) như permanent enum nếu backend có thể thêm giá trị (value / 값).
 
-## 18. Cancellation không phải error bình thường
+## 18. Cancellation không phải lỗi (error / 오류) bình thường
 
-Coroutine library không nên catch `Throwable` rồi biến `CancellationException` thành SDK error. Propagate cancellation đúng structured concurrency.
+Coroutine thư viện (library / 라이브러리) không nên catch `Throwable` rồi biến `CancellationException` thành SDK lỗi (error / 오류). Propagate cancellation đúng structured tính đồng thời (concurrency / 동시성).
 
 ```kotlin
 catch (e: CancellationException) {
@@ -252,13 +255,13 @@ catch (e: CancellationException) {
 }
 ```
 
-Nếu API có explicit user cancellation result khác coroutine cancellation, document distinction.
+Nếu API có tường minh (explicit / 명시적) người dùng (user / 사용자) cancellation kết quả (result / 결과) khác coroutine cancellation, document distinction.
 
-## 19. Consumer ProGuard/R8 rules
+## 19. bên tiêu thụ (consumer / 소비자) ProGuard/R8 rules
 
-Library dùng reflection/JNI/serialization có thể cần keep rules khi consumer app minify.
+Thư viện (library / 라이브러리) dùng reflection/JNI/serialization có thể cần keep rules khi bên tiêu thụ (consumer / 소비자) app minify.
 
-Đưa rule bắt buộc vào `consumerProguardFiles`, không yêu cầu mọi consumer copy docs thủ công.
+Đưa quy tắc (rule / 규칙) bắt buộc vào `consumerProguardFiles`, không yêu cầu mọi bên tiêu thụ (consumer / 소비자) bản sao (copy / 복사) docs thủ công.
 
 ```kotlin
 android {
@@ -268,38 +271,38 @@ android {
 }
 ```
 
-Rule phải minimal. `-keep class com.sdk.** { *; }` có thể vô hiệu hóa optimization lớn của consumer.
+Quy tắc (rule / 규칙) phải minimal. `-keep class com.sdk.** { *; }` có thể vô hiệu hóa tối ưu hóa (optimization / 최적화) lớn của bên tiêu thụ (consumer / 소비자).
 
-## 20. Test minified consumer app
+## 20. kiểm thử (test / 테스트) minified bên tiêu thụ (consumer / 소비자) app
 
-Library debug unit tests không phát hiện R8 issue. Tạo sample/fixture app build `release` minified để test SDK packaged như consumer thật.
+Thư viện (library / 라이브러리) gỡ lỗi (debug / 디버그) đơn vị (unit / 단위) tests không phát hiện R8 issue. Tạo mẫu (sample / 표본)/fixture app bản dựng (build / 빌드) `release` minified để kiểm thử (test / 테스트) SDK packaged như bên tiêu thụ (consumer / 소비자) thật.
 
-CI nên ít nhất build/install smoke test minified artifact cho library có reflection/JNI.
+CI nên ít nhất bản dựng (build / 빌드)/install smoke kiểm thử (test / 테스트) minified sản phẩm tạo ra (artifact / 산출물) cho thư viện (library / 라이브러리) có reflection/JNI.
 
-## 21. Native library trong AAR
+## 21. bản địa (native / 네이티브) thư viện (library / 라이브러리) trong AAR
 
-Nếu AAR chứa `.so`, SDK author chịu thêm ABI/page-size/symbol concern của Case 17.
+Nếu AAR chứa `.so`, SDK author chịu thêm ABI/page-size/symbol concern của trường hợp (case / 사례) 17.
 
-Consumer không nên bất ngờ với 30 MB native binaries. Document size và ABI support.
+Bên tiêu thụ (consumer / 소비자) không nên bất ngờ với 30 MB bản địa (native / 네이티브) binaries. Document kích thước (size / 크기) và ABI hỗ trợ (support / 지원).
 
-Native symbols/debug package cần release management tương ứng nếu SDK support crash analysis.
+Bản địa (native / 네이티브) symbols/gỡ lỗi (debug / 디버그) gói (package / 패키지) cần bản phát hành (release / 릴리스) management tương ứng nếu SDK hỗ trợ (support / 지원) crash phân tích (analysis / 분석).
 
 ## 22. Lint checks như executable documentation
 
-Nếu SDK có usage rule mà compiler không encode được, custom Android Lint có thể bắt sai usage ở consumer build.
+Nếu SDK có usage quy tắc (rule / 규칙) mà trình biên dịch (compiler / 컴파일러) không encode được, custom Android Lint có thể bắt sai usage ở bên tiêu thụ (consumer / 소비자) bản dựng (build / 빌드).
 
 Ví dụ:
 
 - API cần manifest declaration;
-- method không được gọi trong main thread;
+- phương thức (method / 메서드) không được gọi trong main luồng thực thi (thread / 스레드);
 - annotation pair phải dùng cùng nhau;
-- deprecated migration path.
+- deprecated di chuyển (migration / 마이그레이션) đường dẫn (path / 경로).
 
-Lint tốt giúp chuyển docs thành early feedback. Nhưng custom lint cũng là artifact/versioned API phải test với toolchain consumer.
+Lint tốt giúp chuyển docs thành early phản hồi (feedback / 피드백). Nhưng custom lint cũng là sản phẩm tạo ra (artifact / 산출물)/versioned API phải kiểm thử (test / 테스트) với toolchain bên tiêu thụ (consumer / 소비자).
 
 ## 23. Annotations và opt-in
 
-`@RequiresApi`, `@IntDef` legacy Java interop, Kotlin `@RequiresOptIn`, nullability annotations và threading annotations có thể tăng contract clarity.
+`@RequiresApi`, `@IntDef` legacy Java interop, Kotlin `@RequiresOptIn`, nullability annotations và threading annotations có thể tăng đặc tả hợp đồng (contract / 계약) clarity.
 
 Experimental API nên rõ:
 
@@ -308,29 +311,29 @@ Experimental API nên rõ:
 annotation class ExperimentalSdkApi
 ```
 
-Không gọi API “experimental” nhưng vẫn hứa binary compatibility như stable API.
+Không gọi API “experimental” nhưng vẫn hứa nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) như stable API.
 
-## 24. SemVer chỉ hữu ích khi compatibility policy rõ
+## 24. SemVer chỉ hữu ích khi tính tương thích (compatibility / 호환성) chính sách (policy / 정책) rõ
 
-Semantic Versioning thường hiểu:
+Ngữ nghĩa (semantic / 의미적) Versioning thường hiểu:
 
-- major: breaking change;
-- minor: backward-compatible feature;
+- major: breaking thay đổi (change / 변경);
+- minor: backward-compatible tính năng (feature / 기능);
 - patch: backward-compatible fix.
 
-Nhưng “breaking” phải định nghĩa source, binary, behavior, resource và data compatibility.
+Nhưng “breaking” phải định nghĩa nguồn (source / 소스), nhị phân (binary / 이진), hành vi (behavior / 동작), tài nguyên (resource / 자원) và dữ liệu (data / 데이터) tính tương thích (compatibility / 호환성).
 
-Android SDK có thể giữ binary API nhưng đổi manifest behavior làm app consumer break. Đó vẫn là breaking change về product contract.
+Android SDK có thể giữ nhị phân (binary / 이진) API nhưng đổi manifest hành vi (behavior / 동작) làm app bên tiêu thụ (consumer / 소비자) break. Đó vẫn là breaking thay đổi (change / 변경) về sản phẩm (product / 제품) đặc tả hợp đồng (contract / 계약).
 
-## 25. Behavioral compatibility
+## 25. Behavioral tính tương thích (compatibility / 호환성)
 
-Method signature không đổi nhưng semantics đổi từ “retry 1 lần” sang “retry vô hạn” có thể phá app.
+Phương thức (method / 메서드) signature không đổi nhưng ngữ nghĩa (semantics / 의미론) đổi từ “thử lại (retry / 재시도) 1 lần” sang “thử lại (retry / 재시도) vô hạn” có thể phá app.
 
-SDK release notes phải ghi behavior changes, thread changes, permission changes, startup changes và dependency changes—không chỉ API diff.
+SDK bản phát hành (release / 릴리스) notes phải ghi hành vi (behavior / 동작) changes, luồng thực thi (thread / 스레드) changes, permission changes, startup changes và phụ thuộc (dependency / 의존성) changes—không chỉ API diff.
 
-## 26. Binary compatibility validation
+## 26. nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) kiểm tra hợp lệ (validation / 검증)
 
-Kotlin/Java ecosystem có tools để dump/check public ABI. Team nên integrate API dump/check vào CI cho published libraries.
+Kotlin/Java ecosystem có tools để dump/check công khai (public / 공개) ABI. nhóm (team / 팀) nên integrate API dump/check vào CI cho published libraries.
 
 Workflow:
 
@@ -341,108 +344,108 @@ change library
 → deliberate approve breaking/additive change
 ```
 
-Không review public ABI bằng mắt trong 500-file PR.
+Không rà soát (review / 검토) công khai (public / 공개) ABI bằng mắt trong 500-file PR.
 
-## 27. Inline function compatibility
+## 27. Inline hàm (function / 함수) tính tương thích (compatibility / 호환성)
 
-Public `inline` function đưa implementation vào caller bytecode khi compile. Thay implementation/library version có semantics khác non-inline method.
+Công khai (public / 공개) `inline` hàm (function / 함수) đưa hiện thực (implementation / 구현) vào caller bytecode khi compile. Thay hiện thực (implementation / 구현)/thư viện (library / 라이브러리) phiên bản (version / 버전) có ngữ nghĩa (semantics / 의미론) khác non-inline phương thức (method / 메서드).
 
-Public inline API cần đặc biệt cẩn thận với references tới internal implementation; Kotlin có `@PublishedApi` cho specific use case nhưng nó cũng mở compatibility commitment.
+Công khai (public / 공개) inline API cần đặc biệt cẩn thận với references tới nội bộ (internal / 내부) hiện thực (implementation / 구현); Kotlin có `@PublishedApi` cho specific use trường hợp (case / 사례) nhưng nó cũng mở tính tương thích (compatibility / 호환성) commitment.
 
-Đừng inline public API chỉ vì micro performance nếu không cần.
+Đừng inline API công khai (public API / 공개 API) chỉ vì micro hiệu năng (performance / 성능) nếu không cần.
 
-## 28. Data class trong public API
+## 28. dữ liệu (data / 데이터) lớp (class / 클래스) trong API công khai (public API / 공개 API)
 
-Public `data class` tiện nhưng auto-generated `copy/componentN` và constructor shape trở thành API. Thêm property vào primary constructor có thể source/binary implications.
+Công khai (public / 공개) `data class` tiện nhưng auto-generated `copy/componentN` và constructor shape trở thành API. Thêm thuộc tính (property / 속성) vào primary constructor có thể nguồn (source / 소스)/nhị phân (binary / 이진) implications.
 
-Đối với long-lived SDK model cần evolve, builder/interface/regular class hoặc optional extension fields có thể linh hoạt hơn tùy use case.
+Đối với long-lived SDK mô hình (model / 모델) cần evolve, builder/giao diện (interface / 인터페이스)/regular lớp (class / 클래스) hoặc optional extension fields có thể linh hoạt hơn tùy use trường hợp (case / 사례).
 
 ## 29. Enum evolution
 
-Consumer `when` exhaustive trên enum có thể break assumptions khi library thêm enum constant. Network/server-open domain càng không nên expose closed enum nếu future values có thể xuất hiện.
+Bên tiêu thụ (consumer / 소비자) `when` exhaustive trên enum có thể break các giả định (assumptions / 가정들) khi thư viện (library / 라이브러리) thêm enum constant. mạng (network / 네트워크)/server-open lĩnh vực (domain / 도메인) càng không nên expose closed enum nếu future values có thể xuất hiện.
 
-Sealed hierarchy cũng là closed-world contract. Chọn closed/open model có chủ ý.
+Sealed hierarchy cũng là closed-world đặc tả hợp đồng (contract / 계약). Chọn closed/open mô hình (model / 모델) có chủ ý.
 
-## 30. Parcelable/Serializable public model
+## 30. Parcelable/Serializable công khai (public / 공개) mô hình (model / 모델)
 
-Nếu SDK model đi qua Bundle/Intent/process recreation, serialized shape trở thành compatibility concern.
+Nếu SDK mô hình (model / 모델) đi qua Bundle/Intent/tiến trình (process / 프로세스) recreation, serialized shape trở thành tính tương thích (compatibility / 호환성) concern.
 
-Không dùng Java Serializable mặc định cho durable storage/versioned protocol. Parcelable phù hợp Android IPC/state ngắn hạn nhưng không phải stable persistence format.
+Không dùng Java Serializable mặc định cho durable lưu trữ (storage / 저장소)/versioned giao thức (protocol / 프로토콜). Parcelable phù hợp Android IPC/trạng thái (state / 상태) ngắn hạn nhưng không phải stable persistence format.
 
-Durable data cần explicit schema/versioning.
+Durable dữ liệu (data / 데이터) cần tường minh (explicit / 명시적) lược đồ (schema / 스키마)/versioning.
 
-## 31. Resource ID không phải stable external protocol
+## 31. tài nguyên (resource / 자원) ID không phải stable bên ngoài (external / 외부) giao thức (protocol / 프로토콜)
 
-Không persist raw `R.id`/resource integer qua app versions/server. IDs có thể thay khi rebuild/resource graph thay đổi.
+Không persist raw `R.id`/tài nguyên (resource / 자원) integer qua app versions/máy chủ (server / 서버). IDs có thể thay khi rebuild/tài nguyên (resource / 자원) đồ thị (graph / 그래프) thay đổi.
 
-Public SDK API nên dùng semantic identifiers/string/domain type.
+Công khai (public / 공개) SDK API nên dùng ngữ nghĩa (semantic / 의미적) identifiers/string/lĩnh vực (domain / 도메인) kiểu (type / 타입).
 
-## 32. Dependency conflict và BOM
+## 32. phụ thuộc (dependency / 의존성) xung đột (conflict / 충돌) và BOM
 
-SDK kéo nhiều libraries có thể conflict consumer versions. Giảm dependency footprint và tránh pin constraints quá chặt nếu không cần.
+SDK kéo nhiều libraries có thể xung đột (conflict / 충돌) bên tiêu thụ (consumer / 소비자) versions. Giảm phụ thuộc (dependency / 의존성) footprint và tránh pin các ràng buộc (constraints / 제약조건들) quá chặt nếu không cần.
 
-Nếu publish family nhiều artifacts, BOM/platform có thể giúp align versions. Nhưng BOM không giải runtime incompatibility nếu modules thật sự không compatible.
+Nếu publish family nhiều artifacts, BOM/nền tảng (platform / 플랫폼) có thể giúp align versions. Nhưng BOM không giải thời gian chạy (runtime / 런타임) incompatibility nếu modules thật sự không compatible.
 
 ## 33. Shading/relocation
 
-Một số JVM libraries shade dependency để tránh conflict, nhưng Android/R8/resource/native environment làm technique phức tạp. Chỉ dùng khi hiểu license/size/reflection consequences.
+Một số JVM libraries shade phụ thuộc (dependency / 의존성) để tránh xung đột (conflict / 충돌), nhưng Android/R8/tài nguyên (resource / 자원)/bản địa (native / 네이티브) môi trường (environment / 환경) làm technique phức tạp. Chỉ dùng khi hiểu license/kích thước (size / 크기)/reflection consequences.
 
-Tốt hơn thường là giảm dependency hoặc expose compatibility range hợp lý.
+Tốt hơn thường là giảm phụ thuộc (dependency / 의존성) hoặc expose tính tương thích (compatibility / 호환성) phạm vi (range / 범위) hợp lý.
 
 ## 34. Publishing repository
 
-Library có thể publish Maven artifact gồm group/artifact/version, POM/module metadata và AAR/JAR.
+Thư viện (library / 라이브러리) có thể publish Maven sản phẩm tạo ra (artifact / 산출물) gồm group/sản phẩm tạo ra (artifact / 산출물)/phiên bản (version / 버전), POM/mô-đun (module / 모듈) siêu dữ liệu (metadata / 메타데이터) và AAR/JAR.
 
-Internal SDK có thể dùng private Maven repository. Public SDK có thể publish central repository phù hợp.
+Nội bộ (internal / 내부) SDK có thể dùng private Maven repository. công khai (public / 공개) SDK có thể publish central repository phù hợp.
 
-Publishing pipeline phải immutable: không overwrite binary của cùng version. Nếu `1.2.3` hôm nay khác `1.2.3` ngày mai, reproducibility consumer vỡ.
+Publishing chuỗi xử lý (pipeline / 파이프라인) phải immutable: không overwrite nhị phân (binary / 이진) của cùng phiên bản (version / 버전). Nếu `1.2.3` hôm nay khác `1.2.3` ngày mai, reproducibility bên tiêu thụ (consumer / 소비자) vỡ.
 
 ## 35. Sources và documentation artifacts
 
-Publish source/Javadoc/Dokka artifacts giúp debugging/IDE navigation. Public API docs phải đi cùng release version.
+Publish nguồn (source / 소스)/Javadoc/Dokka artifacts giúp debugging/IDE điều hướng (navigation / 내비게이션). API công khai (public API / 공개 API) docs phải đi cùng bản phát hành (release / 릴리스) phiên bản (version / 버전).
 
-Docs website “latest” không đủ khi consumer đang pin old version. Giữ versioned migration/release notes.
+Docs website “latest” không đủ khi bên tiêu thụ (consumer / 소비자) đang pin old phiên bản (version / 버전). Giữ versioned di chuyển (migration / 마이그레이션)/bản phát hành (release / 릴리스) notes.
 
-## 36. Sample app là integration test và documentation
+## 36. mẫu (sample / 표본) app là kiểm thử tích hợp (integration test / 통합 테스트) và documentation
 
-Một sample app tốt chứng minh:
+Một mẫu (sample / 표본) app tốt chứng minh:
 
 - install SDK;
-- manifest/config setup;
-- common flow;
-- error/cancel;
-- process recreation;
-- release minification;
-- Java consumer nếu support.
+- manifest/cấu hình (config / 설정) setup;
+- dùng chung (common / 공통) luồng (flow / 흐름);
+- lỗi (error / 오류)/cancel;
+- tiến trình (process / 프로세스) recreation;
+- bản phát hành (release / 릴리스) minification;
+- Java bên tiêu thụ (consumer / 소비자) nếu hỗ trợ (support / 지원).
 
-Sample phải build trong CI để tránh docs drift.
+Mẫu (sample / 표본) phải bản dựng (build / 빌드) trong CI để tránh docs drift.
 
-## 37. Test matrix cho SDK
+## 37. kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho SDK
 
-SDK test không chỉ unit test internal code. Cần:
+SDK kiểm thử (test / 테스트) không chỉ đơn vị (unit / 단위) kiểm thử (test / 테스트) nội bộ (internal / 내부) mã (code / 코드). Cần:
 
-1. pure unit tests;
-2. Android instrumentation nếu framework interaction;
+1. pure đơn vị (unit / 단위) tests;
+2. Android instrumentation nếu khung phần mềm (framework / 프레임워크) tương tác (interaction / 상호작용);
 3. minSdk + latest representative;
-4. Java/Kotlin consumer compile;
-5. minified release consumer;
-6. process/lifecycle tests nếu SDK UI/system component;
-7. network failure/cancellation;
-8. upgrade from previous SDK version in sample app khi state durable;
-9. ABI/native matrix nếu `.so`;
-10. compile against supported AGP/Kotlin range nếu officially promised.
+4. Java/Kotlin bên tiêu thụ (consumer / 소비자) compile;
+5. minified bản phát hành (release / 릴리스) bên tiêu thụ (consumer / 소비자);
+6. tiến trình (process / 프로세스)/vòng đời (lifecycle / 생명주기) tests nếu SDK UI/hệ thống (system / 시스템) thành phần (component / 컴포넌트);
+7. mạng (network / 네트워크) thất bại (failure / 실패)/cancellation;
+8. upgrade from previous SDK phiên bản (version / 버전) in mẫu (sample / 표본) app khi trạng thái (state / 상태) durable;
+9. ABI/bản địa (native / 네이티브) ma trận (matrix / 행렬) nếu `.so`;
+10. compile against supported AGP/Kotlin phạm vi (range / 범위) nếu officially promised.
 
-## 38. Backward compatibility window của SDK
+## 38. Backward tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우) của SDK
 
-Không nên hứa support “mọi Kotlin/AGP version”. Define tested support range.
+Không nên hứa hỗ trợ (support / 지원) “mọi Kotlin/AGP phiên bản (version / 버전)”. Define tested hỗ trợ (support / 지원) phạm vi (range / 범위).
 
-Kotlin metadata/compiler plugin changes có thể ảnh hưởng consumer compile. Android library resource/manifest behavior cũng phụ thuộc AGP.
+Kotlin siêu dữ liệu (metadata / 메타데이터)/trình biên dịch (compiler / 컴파일러) plugin changes có thể ảnh hưởng bên tiêu thụ (consumer / 소비자) compile. Android thư viện (library / 라이브러리) tài nguyên (resource / 자원)/manifest hành vi (behavior / 동작) cũng phụ thuộc AGP.
 
-Release notes phải nêu minimum compileSdk/minSdk/JDK/AGP nếu thay đổi.
+Bản phát hành (release / 릴리스) notes phải nêu minimum compileSdk/minSdk/JDK/AGP nếu thay đổi.
 
-## 39. SDK initialization API design
+## 39. SDK initialization API thiết kế (design / 설계)
 
-Nếu cần explicit init:
+Nếu cần tường minh (explicit / 명시적) init:
 
 ```kotlin
 Sdk.initialize(
@@ -454,45 +457,45 @@ Sdk.initialize(
 Define:
 
 - gọi nhiều lần idempotent không;
-- thread nào được gọi;
+- luồng thực thi (thread / 스레드) nào được gọi;
 - init async hay sync;
-- lỗi config trả thế nào;
-- process nào init;
-- init trước use API nếu quên thì behavior gì.
+- lỗi cấu hình (config / 설정) trả thế nào;
+- tiến trình (process / 프로세스) nào init;
+- init trước use API nếu quên thì hành vi (behavior / 동작) gì.
 
-Không để `lateinit global` crash ngẫu nhiên mà không contract.
+Không để `lateinit global` crash ngẫu nhiên mà không đặc tả hợp đồng (contract / 계약).
 
 ## 40. Multi-process SDK
 
-Nếu SDK có provider/service process riêng, state không shared như singleton memory. DataStore/Room/shared file access cần multi-process correctness riêng.
+Nếu SDK có provider/dịch vụ (service / 서비스) tiến trình (process / 프로세스) riêng, trạng thái (state / 상태) không dùng chung (shared / 공유) như singleton bộ nhớ (memory / 메모리). DataStore/Room/dùng chung (shared / 공유) truy cập tệp (file access / 파일 접근) cần multi-process tính đúng đắn (correctness / 정확성) riêng.
 
-Tránh multi-process nếu không required. SDK consumer thường không muốn thêm process chỉ để library tiện.
+Tránh multi-process nếu không required. SDK bên tiêu thụ (consumer / 소비자) thường không muốn thêm tiến trình (process / 프로세스) chỉ để thư viện (library / 라이브러리) tiện.
 
-## 41. Privacy và data collection contract
+## 41. Privacy và dữ liệu (data / 데이터) collection đặc tả hợp đồng (contract / 계약)
 
-SDK analytics/ads/auth có thể thu data thay app. Consumer cần biết để khai Data Safety/privacy policy.
+SDK analytics/ads/auth có thể thu dữ liệu (data / 데이터) thay app. bên tiêu thụ (consumer / 소비자) cần biết để khai dữ liệu (data / 데이터) an toàn (safety / 안전)/privacy chính sách (policy / 정책).
 
 SDK nên document:
 
-- data fields collected;
+- dữ liệu (data / 데이터) fields collected;
 - purpose;
 - retention/upload;
-- opt-out/config;
+- opt-out/cấu hình (config / 설정);
 - permissions;
-- network domains;
+- mạng (network / 네트워크) domains;
 - identifiers.
 
-Privacy side effect là public contract ngang API signature.
+Privacy side tác động (effect / 효과) là công khai (public / 공개) đặc tả hợp đồng (contract / 계약) ngang API signature.
 
-## 42. Security surface của SDK
+## 42. bảo mật (security / 보안) surface của SDK
 
-Review exported components, WebView bridge, PendingIntent mutability, file URI/provider, certificate/TLS, token storage và native parser.
+Rà soát (review / 검토) exported components, WebView cầu nối (bridge / 브리지), PendingIntent mutability, tệp (file / 파일) URI/provider, certificate/TLS, đơn vị từ (token / 토큰) lưu trữ (storage / 저장소) và bản địa (native / 네이티브) parser.
 
-Consumer app inherit attack surface library. Vì vậy security patch cadence và vulnerability disclosure process quan trọng với SDK public.
+Bên tiêu thụ (consumer / 소비자) app inherit attack surface thư viện (library / 라이브러리). Vì vậy bảo mật (security / 보안) patch cadence và vulnerability disclosure tiến trình (process / 프로세스) quan trọng với SDK công khai (public / 공개).
 
-## 43. Deprecation và migration
+## 43. Deprecation và di chuyển (migration / 마이그레이션)
 
-Không xóa public API ngay. Deprecate với replacement/migration message:
+Không xóa API công khai (public API / 공개 API) ngay. Deprecate với replacement/di chuyển (migration / 마이그레이션) message:
 
 ```kotlin
 @Deprecated(
@@ -502,40 +505,40 @@ Không xóa public API ngay. Deprecate với replacement/migration message:
 fun login(...)
 ```
 
-Nếu replacement không mechanical, link migration guide.
+Nếu replacement không mechanical, link di chuyển (migration / 마이그레이션) guide.
 
-Deprecation window tùy policy; quan trọng là consumer có thời gian và clear path.
+Deprecation cửa sổ (window / 윈도우) tùy chính sách (policy / 정책); quan trọng là bên tiêu thụ (consumer / 소비자) có thời gian và clear đường dẫn (path / 경로).
 
-## 44. Feature flag trong SDK
+## 44. cờ tính năng (feature flag / 기능 플래그) trong SDK
 
-Remote flag nội bộ SDK có thể thay behavior consumer ngoài version upgrade, gây khó reproduce. Nếu dùng, flag cần observability/versioning và không được silently break contract.
+Remote flag nội bộ SDK có thể thay hành vi (behavior / 동작) bên tiêu thụ (consumer / 소비자) ngoài phiên bản (version / 버전) upgrade, gây khó reproduce. Nếu dùng, flag cần khả năng quan sát (observability / 관측 가능성)/versioning và không được silently break đặc tả hợp đồng (contract / 계약).
 
-Critical behavior nên consumer-configurable hoặc release-versioned thay vì hidden server switch không document.
+Trọng yếu (critical / 중요) hành vi (behavior / 동작) nên consumer-configurable hoặc release-versioned thay vì hidden máy chủ (server / 서버) switch không document.
 
-## 45. Senior review checklist cho library release
+## 45. cấp cao (senior / 시니어) rà soát (review / 검토) checklist cho thư viện (library / 라이브러리) bản phát hành (release / 릴리스)
 
 Trước publish:
 
-- public API diff đã review chưa;
-- binary compatibility check pass;
-- minSdk/compile/toolchain requirement đổi không;
+- API công khai (public API / 공개 API) diff đã rà soát (review / 검토) chưa;
+- nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) check pass;
+- minSdk/compile/toolchain yêu cầu (requirement / 요구사항) đổi không;
 - transitive dependencies đổi gì;
-- manifest/resource/permission footprint đổi không;
-- consumer R8 rules tested chưa;
-- release minified sample chạy chưa;
+- manifest/tài nguyên (resource / 자원)/permission footprint đổi không;
+- bên tiêu thụ (consumer / 소비자) R8 rules tested chưa;
+- bản phát hành (release / 릴리스) minified mẫu (sample / 표본) chạy chưa;
 - Java interoperability ổn chưa;
-- privacy/security behavior đổi không;
-- migration/release note đủ chưa;
-- artifact immutable/provenance trace được không.
+- privacy/bảo mật (security / 보안) hành vi (behavior / 동작) đổi không;
+- di chuyển (migration / 마이그레이션)/bản phát hành (release / 릴리스) ghi chú (note / 노트) đủ chưa;
+- sản phẩm tạo ra (artifact / 산출물) immutable/provenance dấu vết (trace / 추적) được không.
 
 ## 46. Official references
 Phần này nối mạch Android vừa học với “46. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
 
-- Android library modules: https://developer.android.com/studio/projects/android-library
-- Publish your library: https://developer.android.com/build/publish-library
-- Build variants: https://developer.android.com/build/build-variants
-- R8: https://developer.android.com/topic/performance/app-optimization
-- Android Lint: https://developer.android.com/studio/write/lint
+- Android thư viện (library / 라이브러리) modules: https://nhà phát triển (developer / 개발자).android.com/studio/projects/android-library
+- Publish your thư viện (library / 라이브러리): https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)/publish-library
+- bản dựng (build / 빌드) variants: https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)/build-variants
+- R8: https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/app-optimization
+- Android Lint: https://nhà phát triển (developer / 개발자).android.com/studio/ghi (write / 쓰기)/lint
 
 Library authoring là compatibility engineering dài hạn. API đẹp ở version 1.0 nhưng không có evolution strategy sẽ trở thành technical debt cho cả SDK team và mọi consumer.

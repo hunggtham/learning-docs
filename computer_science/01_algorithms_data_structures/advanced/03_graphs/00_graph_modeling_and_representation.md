@@ -1,7 +1,10 @@
 # đồ thị: mô hình hóa và biểu diễn
+
+> **Mạch đọc:** Đọc **đồ thị: mô hình hóa và biểu diễn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Directed, undirected và weighted** sang **đơn giản đồ thị, multigraph và self-loop**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 **Đồ thị (Graph / 그래프)**
 
-đồ thị là sự trừu tượng (abstraction) cho tình huống mà **mối quan hệ quan trọng ngang entity**. Người dùng và quan hệ bạn bè, thành phố và đường đi, gói phần mềm và quan hệ phụ thuộc, dịch vụ và lời gọi mạng, tài khoản ngân hàng và giao dịch, trang web và siêu liên kết, hay hàm và quan hệ lời gọi đều có thể được mô hình hóa bằng:
+đồ thị là sự trừu tượng (abstraction) cho tình huống mà **mối quan hệ quan trọng ngang thực thể (entity / 엔터티)**. Người dùng và quan hệ bạn bè, thành phố và đường đi, gói phần mềm và quan hệ phụ thuộc, dịch vụ và lời gọi mạng, tài khoản ngân hàng và giao dịch, trang web và siêu liên kết, hay hàm và quan hệ lời gọi đều có thể được mô hình hóa bằng:
 
 \[
 G=(V,E)
@@ -9,7 +12,7 @@ G=(V,E)
 
 trong đó `V` là tập các đỉnh/các nút và `E` là tập các cạnh.
 
-Điểm khó nhất của đồ thị problem thường không phải BFS hay Dijkstra. Phần khó là quyết định:
+Điểm khó nhất của đồ thị bài toán (problem / 문제) thường không phải BFS hay Dijkstra. Phần khó là quyết định:
 
 ```text
 một vertex đại diện cho cái gì?
@@ -19,17 +22,17 @@ weight/capacity/time có nằm trên edge hay node?
 graph là directed, undirected, multigraph hay state graph?
 ```
 
-Một thuật toán hoàn toàn đúng trên **mô hình sai** vẫn cho answer sai cho problem thật.
+Một thuật toán hoàn toàn đúng trên **mô hình sai** vẫn cho answer sai cho bài toán (problem / 문제) thật.
 
 ## Directed, undirected và weighted
 
-**đồ thị vô hướng (undirected graph) / 무방향 그래프** dùng cạnh `u -- v` khi mối quan hệ đối xứng: road hai chiều, friendship, cable connection.
+**đồ thị vô hướng (undirected graph) / 무방향 그래프** dùng cạnh `u -- v` khi mối quan hệ đối xứng: road hai chiều, friendship, cable liên kết (connection / 연결).
 
-**đồ thị có hướng / 방향 그래프** dùng cạnh `u -> v` khi mối quan hệ có hướng: dependency, hyperlink, money transfer, call đồ thị.
+**đồ thị có hướng / 방향 그래프** dùng cạnh `u -> v` khi mối quan hệ có hướng: phụ thuộc (dependency / 의존성), hyperlink, money transfer, lời gọi (call / 호출) đồ thị.
 
-**đồ thị có trọng số / 가중 그래프** gắn chi phí lên cạnh hoặc nút. trọng số có thể là khoảng cách, độ trễ (latency), price, risk, time, energy, xác suất transform hoặc capacity.
+**đồ thị có trọng số / 가중 그래프** gắn chi phí lên cạnh hoặc nút. trọng số có thể là khoảng cách, độ trễ (latency / 지연 시간), price, rủi ro (risk / 위험), thời gian (time / 시간), năng lượng (energy / 에너지), xác suất transform hoặc sức chứa (capacity / 용량).
 
-Không phải mọi trọng số đều dùng đường đi ngắn nhất (shortest path). Capacity dẫn tới flow; xác suất có thể cần log transform; exchange rate có thể dẫn tới negative-cycle/arbitrage reasoning.
+Không phải mọi trọng số đều dùng đường đi ngắn nhất (shortest path). sức chứa (capacity / 용량) dẫn tới luồng (flow / 흐름); xác suất có thể cần log transform; exchange tỷ lệ (rate / 비율) có thể dẫn tới negative-cycle/arbitrage lập luận (reasoning / 추론).
 
 ## đơn giản đồ thị, multigraph và self-loop
 
@@ -37,17 +40,17 @@ Một **đơn giản đồ thị** không có các cạnh song song và thườn
 
 các cạnh song song xuất hiện khi hai cities có nhiều flights khác nhau, hai services có nhiều channels hoặc đồ thị giữ các liên kết lịch sử.
 
-Self-loop xuất hiện khi một trạng thái (state) có transition về chính nó hoặc data chứa explicit relation `(u,u)`.
+Self-loop xuất hiện khi một trạng thái (state / 상태) có chuyển tiếp (transition / 전이) về chính nó hoặc dữ liệu (data / 데이터) chứa tường minh (explicit / 명시적) quan hệ (relation / 관계) `(u,u)`.
 
-Nếu thuật toán vô thức giả định đơn giản đồ thị, kết quả có thể sai. Bridge detection là ví dụ: hai các cạnh song song giữa cùng cặp các nút nghĩa là xóa một cạnh chưa chắc disconnect đồ thị. Vì vậy cạnh identity phải được giữ rõ.
+Nếu thuật toán vô thức giả định đơn giản đồ thị, kết quả có thể sai. cầu nối (bridge / 브리지) detection là ví dụ: hai các cạnh song song giữa cùng cặp các nút nghĩa là xóa một cạnh chưa chắc disconnect đồ thị. Vì vậy cạnh định danh (identity / 식별자) phải được giữ rõ.
 
 ## đường đi, walk, trail và chu trình
 
 Một **walk** cho phép lặp các đỉnh/các cạnh. **Trail** thường không lặp cạnh. **đường đi** thường không lặp đỉnh trong định nghĩa graph-theory chuẩn. **chu trình** quay lại điểm bắt đầu.
 
-Trong programming problems, từ “đường đi” đôi khi được dùng lỏng hơn. Khi chứng minh quan trọng, hãy xác định ngữ nghĩa (semantics) chính xác thay vì dựa vào wording.
+Trong programming problems, từ “đường đi” đôi khi được dùng lỏng hơn. Khi chứng minh quan trọng, hãy xác định ngữ nghĩa (semantics / 의미론) chính xác thay vì dựa vào wording.
 
-đường đi ngắn nhất với non-negative các trọng số luôn có thể chọn một đơn giản đường đi optimal vì chu trình không giúp giảm chi phí. Nhưng với negative chu trình, objective có thể không còn finite minimum.
+đường đi ngắn nhất với non-negative các trọng số luôn có thể chọn một đơn giản đường đi optimal vì chu trình không giúp giảm chi phí. Nhưng với negative chu trình, mục tiêu (objective / 목표) có thể không còn finite minimum.
 
 ## Connectivity và reachability
 
@@ -59,7 +62,7 @@ Trong đồ thị có hướng, reachability có hướng. thành phần liên t
 
 ## Degree
 
-Undirected đỉnh có degree bằng số incident các cạnh, với self-loop convention cần chú ý.
+Undirected đỉnh có degree bằng số sự cố (incident / 인시던트) các cạnh, với self-loop convention cần chú ý.
 
 đồ thị có hướng có:
 
@@ -94,7 +97,7 @@ iterate neighbors của u tốn O(V)
 không phù hợp sparse graph lớn
 ```
 
-Nếu đồ thị có 1 triệu các đỉnh nhưng mỗi đỉnh chỉ vài các đỉnh kề, matrix là bất khả thi.
+Nếu đồ thị có 1 triệu các đỉnh nhưng mỗi đỉnh chỉ vài các đỉnh kề, ma trận (matrix / 행렬) là bất khả thi.
 
 ## danh sách kề
 
@@ -141,7 +144,7 @@ scan edges
 DSU quyết định edge có nối hai component khác nhau không
 ```
 
-Không có cách biểu diễn (representation) “tốt nhất”; thao tác chính quyết định cách biểu diễn.
+Không có cách biểu diễn (representation / 표현) “tốt nhất”; thao tác chính quyết định cách biểu diễn.
 
 ## CSR — Compressed Sparse Row
 
@@ -176,13 +179,13 @@ external id -> compact integer id
 
 sau đó lưu đồ thị bằng các mảng trên gọn IDs.
 
-Điều này thường tốt hơn `Map<String,List<String>>` ở đồ thị rất lớn vì các phép so sánh, hash, đối tượng cấp phát và bộ nhớ tính cục bộ đều cải thiện.
+Điều này thường tốt hơn `Map<String,List<String>>` ở đồ thị rất lớn vì các phép so sánh, băm (hash / 해시), đối tượng cấp phát và bộ nhớ tính cục bộ đều cải thiện.
 
-Đây là một mẫu hệ thống thực tế quan trọng: **normalize identity trước, optimize cách biểu diễn sau**.
+Đây là một mẫu hệ thống thực tế quan trọng: **normalize định danh (identity / 식별자) trước, optimize cách biểu diễn sau**.
 
 ## mô hình hóa đồ thị không gian trạng thái
 
-Trong nhiều bài, nút không phải entity domain mà là **trạng thái / 상태**.
+Trong nhiều bài, nút không phải thực thể (entity / 엔터티) lĩnh vực (domain / 도메인) mà là **trạng thái / 상태**.
 
 Ví dụ grid có khóa và door. trạng thái không thể chỉ là `(row,col)`; hai lần đứng cùng cell nhưng giữ key-mask khác nhau có tương lai khác nhau.
 
@@ -198,9 +201,9 @@ Ngược lại, trạng thái chứa quá nhiều lịch sử không ảnh hư�
 
 Một trạng thái tốt giữ đúng **future-relevant thông tin** — mental mô hình này giống quy hoạch động (dynamic programming).
 
-## Product đồ thị
+## Sản phẩm (product / 제품) đồ thị
 
-Khi problem có nhiều dimensions các ràng buộc, ta có thể tạo **product đồ thị**.
+Khi bài toán (problem / 문제) có nhiều dimensions các ràng buộc, ta có thể tạo **sản phẩm (product / 제품) đồ thị**.
 
 Ví dụ đường đi ngắn nhất với tối đa `K` coupons:
 
@@ -208,7 +211,7 @@ Ví dụ đường đi ngắn nhất với tối đa `K` coupons:
 state = (vertex, couponsUsed)
 ```
 
-cạnh transition có thể:
+cạnh chuyển tiếp (transition / 전이) có thể:
 
 ```text
 đi bình thường: (u,k) -> (v,k)
@@ -221,7 +224,7 @@ dùng coupon:     (u,k) -> (v,k+1)
 
 ## đồ thị mở rộng theo thời gian
 
-Scheduling, transport và temporal mạng có thể cần time trong trạng thái:
+Scheduling, vận chuyển (transport / 전송) và temporal mạng có thể cần thời gian (time / 시간) trong trạng thái:
 
 ```text
 (vertex, time)
@@ -244,25 +247,25 @@ edge = đổi đúng một ký tự
 
 Thay vì tạo mọi pair các cạnh `O(n^2)`, ta có thể generate các đỉnh kề qua wildcard các ngăn băm hoặc dictionary tra cứu khi BFS cần.
 
-Puzzle, game trạng thái và combinatorial search thường dùng implicit các đồ thị.
+Puzzle, game trạng thái và combinatorial tìm kiếm (search / 검색) thường dùng implicit các đồ thị.
 
 Mô hình tư duy:
 
-> đồ thị là **relation**, không phải bắt buộc là `List<List<Integer>>`.
+> đồ thị là **quan hệ (relation / 관계)**, không phải bắt buộc là `List<List<Integer>>`.
 
-## Hypergraph và relation nhiều hơn hai endpoints
+## Hypergraph và quan hệ (relation / 관계) nhiều hơn hai endpoints
 
-Chuẩn đồ thị cạnh nối hai các đỉnh. Nhưng một relation có thể liên quan nhiều entities cùng lúc, ví dụ một cơ sở dữ liệu transaction chạm nhiều accounts hoặc một ràng buộc chứa nhiều variables.
+Chuẩn đồ thị cạnh nối hai các đỉnh. Nhưng một quan hệ (relation / 관계) có thể liên quan nhiều entities cùng lúc, ví dụ một cơ sở dữ liệu giao dịch (transaction / 트랜잭션) chạm nhiều accounts hoặc một ràng buộc chứa nhiều variables.
 
 **Hypergraph** cho phép hyperedge nối nhiều các đỉnh. Trong cách triển khai, hyperedge thường được biến đổi thành bipartite incidence đồ thị hoặc phụ trợ nút để dùng các thuật toán chuẩn.
 
-Biết mô hình này giúp tránh ép mọi problem về pairwise cạnh một cách sai nghĩa.
+Biết mô hình này giúp tránh ép mọi bài toán (problem / 문제) về pairwise cạnh một cách sai nghĩa.
 
 ## Bipartite mô hình hóa
 
 Nếu miền bài toán có hai loại thực thể rõ ràng — chẳng hạn công việc/người lao động, sinh viên/dự án hoặc người dùng/mục dữ liệu — đồ thị thường là đồ thị hai phía (bipartite graph).
 
-Tách hai phía giúp nhận ra matching/flow structure thay vì tổng quát đồ thị search.
+Tách hai phía giúp nhận ra matching/luồng (flow / 흐름) cấu trúc (structure / 구조) thay vì tổng quát đồ thị tìm kiếm (search / 검색).
 
 Ví dụ:
 
@@ -270,15 +273,15 @@ Ví dụ:
 Worker -> Job nếu worker có thể làm job
 ```
 
-Maximum matching trả assignment tối đa không conflict.
+Maximum matching trả assignment tối đa không xung đột (conflict / 충돌).
 
-## đồ thị và sparse matrix
+## đồ thị và sparse ma trận (matrix / 행렬)
 
-ma trận kề chính là matrix cách biểu diễn của relation. Nhiều các thuật toán đồ thị có linear algebra interpretation.
+ma trận kề chính là ma trận (matrix / 행렬) cách biểu diễn của quan hệ (relation / 관계). Nhiều các thuật toán đồ thị có tuyến tính (linear / 선형) algebra interpretation.
 
-lặp lại matrix multiplication liên quan đường đi counts/reachability. PageRank dùng transition matrix. đồ thị Neural mạng các tầng thường aggregate đỉnh kề features, tương đương sparse-matrix-like các thao tác.
+lặp lại phép nhân ma trận (matrix multiplication / 행렬 곱셈) liên quan đường đi counts/reachability. PageRank dùng chuyển tiếp (transition / 전이) ma trận (matrix / 행렬). đồ thị Neural mạng các tầng thường aggregate đỉnh kề features, tương đương sparse-matrix-like các thao tác.
 
-CSR thực chất cũng là cách biểu diễn kinh điển của sparse matrix. đồ thị theory và linear algebra vì thế là hai góc nhìn của cùng structure.
+CSR thực chất cũng là cách biểu diễn kinh điển của sparse ma trận (matrix / 행렬). đồ thị lý thuyết (theory / 이론) và tuyến tính (linear / 선형) algebra vì thế là hai góc nhìn của cùng cấu trúc (structure / 구조).
 
 ## bộ nhớ chi phí không chỉ là O(V+E)
 
@@ -292,7 +295,7 @@ ArrayList<ArrayList<EdgeObject>>
 
 có phần đầu các đối tượng, các tham chiếu và đóng hộp nếu dùng wrapper types.
 
-C các mảng có thể gọn hơn nhưng quyền sở hữu (ownership)/reallocation phức tạp hơn.
+C các mảng có thể gọn hơn nhưng quyền sở hữu (ownership / 소유권)/reallocation phức tạp hơn.
 
 JavaScript các mảng/các đối tượng có động môi trường chạy (runtime) overhead.
 
@@ -309,9 +312,9 @@ u -> v
 v -> u
 ```
 
-Nhưng các thuật toán như Euler/bridge cần tránh coi hai các mục là hai vật lý các cạnh khác nhau. Unique cạnh id hoặc paired reverse-index là mẫu tốt.
+Nhưng các thuật toán như Euler/cầu nối (bridge / 브리지) cần tránh coi hai các mục là hai vật lý các cạnh khác nhau. Unique cạnh id hoặc paired reverse-index là mẫu tốt.
 
-Flow các thuật toán cũng thường tạo explicit reverse residual cạnh, nhưng reverse cạnh ở đó có ngữ nghĩa khác: nó đại diện khả năng undo flow chứ không phải original undirected relation.
+Luồng (flow / 흐름) các thuật toán cũng thường tạo tường minh (explicit / 명시적) reverse residual cạnh, nhưng reverse cạnh ở đó có ngữ nghĩa khác: nó đại diện khả năng undo luồng (flow / 흐름) chứ không phải original undirected quan hệ (relation / 관계).
 
 ## đồ thị sự thay đổi dữ liệu
 
@@ -334,7 +337,7 @@ Một đồ thị có thể gọi là sparse khi `E` gần tuyến tính theo `V
 
 cách biểu diễn và thuật toán thường thay đổi theo density.
 
-Dijkstra ma trận kề có thể `O(V^2)` và đủ tốt cho đồ thị dày nhỏ. Heap + danh sách kề tốt hơn với đồ thị thưa lớn.
+Dijkstra ma trận kề có thể `O(V^2)` và đủ tốt cho đồ thị dày nhỏ. vùng nhớ động (heap / 힙) + danh sách kề tốt hơn với đồ thị thưa lớn.
 
 Floyd-Warshall `O(V^3)` đôi khi hợp đồ thị nhỏ cần all-pairs, dù asymptotic nhìn rất lớn.
 
@@ -350,13 +353,13 @@ Lưu full đường đi trong trạng thái khi tương lai chỉ cần hiện t
 
 ### Direction sai
 
-Dependency `A depends on B` có thể encode `A->B` hoặc `B->A`; thuật toán topological scheduling phụ thuộc convention. Hãy định nghĩa rõ cạnh nghĩa gì.
+Phụ thuộc (dependency / 의존성) `A depends on B` có thể encode `A->B` hoặc `B->A`; thuật toán topological scheduling phụ thuộc convention. Hãy định nghĩa rõ cạnh nghĩa gì.
 
 ### trọng số sai meaning
 
-độ trễ đường đi có thể cộng; bandwidth đường đi bottleneck có thể dùng min; reliability có thể nhân probabilities. Không phải metric nào cũng là additive đường đi ngắn nhất.
+độ trễ đường đi có thể cộng; bandwidth đường đi bottleneck có thể dùng min; độ tin cậy (reliability / 신뢰성) có thể nhân probabilities. Không phải chỉ số (metric / 지표) nào cũng là additive đường đi ngắn nhất.
 
-### Không xác định đồ thị class
+### Không xác định đồ thị lớp (class / 클래스)
 
 Parallel cạnh, self-loop, disconnected các thành phần, negative các trọng số, directed/undirected đều có thể làm các giả định của thuật toán sai.
 
@@ -376,13 +379,13 @@ Sparse hay dense?
 Có cần actual path hay chỉ value/reachability?
 ```
 
-Chỉ sau đó mới hỏi BFS, DFS, Dijkstra, DSU hay flow.
+Chỉ sau đó mới hỏi BFS, DFS, Dijkstra, DSU hay luồng (flow / 흐름).
 
 ## Mô hình tư duy
 
-> thuật toán đồ thị bắt đầu từ **trạng thái mô hình hóa**, không phải từ việc nhận diện tên thuật toán. đỉnh là một equivalence class của situations có cùng tương lai possibilities; cạnh là một allowed transition/relation. cách biểu diễn phải tối ưu cho thao tác chính: đỉnh kề traversal, cạnh tra cứu, toàn cục cạnh sort hay gọn quét.
+> thuật toán đồ thị bắt đầu từ **trạng thái mô hình hóa**, không phải từ việc nhận diện tên thuật toán. đỉnh là một equivalence lớp (class / 클래스) của situations có cùng tương lai possibilities; cạnh là một allowed chuyển tiếp (transition / 전이)/quan hệ (relation / 관계). cách biểu diễn phải tối ưu cho thao tác chính: đỉnh kề traversal, cạnh tra cứu, toàn cục cạnh sort hay gọn quét.
 
-Một đồ thị problem tốt thường được giải theo chuỗi xử lý:
+Một đồ thị bài toán (problem / 문제) tốt thường được giải theo chuỗi xử lý:
 
 ```text
 Story/domain
@@ -395,3 +398,5 @@ Story/domain
 ```
 
 Xem tiếp: [BFS & DFS](./01_graph_traversal_bfs_dfs.md), [Shortest Paths](./02_shortest_paths.md), [DAG/SCC](./04_dag_topological_sort_and_scc.md), [Network Flow](./08_network_flow_and_matching.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 graph traversal bfs dfs](./01_graph_traversal_bfs_dfs.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

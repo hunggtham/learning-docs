@@ -1,10 +1,12 @@
 # Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng
 
+> **Mạch đọc:** Đọc **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hấp phụ bề mặt** sang **Bao giữ (occlusion)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
 > **Phân tích khối lượng (gravimetric analysis / 중량 분석)** xác định lượng chất phân tích bằng cách chuyển nó thành một dạng có thành phần hóa học xác định rồi cân chính xác. Sức mạnh của phương pháp nằm ở chỗ khối lượng có thể được đo rất tốt và phép tính thường dựa trực tiếp vào hóa lượng, không cần một đường hiệu chuẩn tín hiệu phức tạp.
 
 Tuy nhiên “tạo kết tủa rồi cân” chỉ là bề ngoài. Muốn có kết quả đáng tin phải kiểm soát tạo mầm, phát triển tinh thể, độ tan, đồng kết tủa, rửa, sấy/nung và trạng thái hóa học thật của chất đem cân.
 
-# Logic cốt lõi
+# Lô-gic (logic / 논리) cốt lõi
 
 Nếu analyte \(A\) được chuyển hoàn toàn thành chất cân \(P\):
 
@@ -142,13 +144,22 @@ Các cơ chế gồm nhiều loại.
 
 Ion tạp bám lên bề mặt hạt. Hiện tượng mạnh hơn với kết tủa keo có diện tích bề mặt lớn.
 
+
+> **Chuyển mạch:** Từ **Hấp phụ bề mặt**, ta sang **Bao giữ (occlusion)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Bao giữ (occlusion)
 
 Một vùng dung dịch chứa tạp bị giữ lại khi tinh thể phát triển quá nhanh quanh nó.
 
+
+> **Chuyển mạch:** Từ **Bao giữ (occlusion)**, ta sang **Kẹt cơ học** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Kẹt cơ học
 
 Tinh thể hoặc khối kết tủa giữ lại dung dịch mẹ trong các khe/hốc.
+
+
+> **Chuyển mạch:** Từ **Kẹt cơ học**, ta sang **Thế vào mạng tinh thể** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thế vào mạng tinh thể
 
@@ -336,6 +347,9 @@ Nếu blank lớn hoặc biến thiên, độ tin cậy giảm dù cân rất ch
 
 # Điểm mạnh và giới hạn
 
+
+> **Chuyển mạch:** Từ **Thế vào mạng tinh thể**, ta sang **Điểm mạnh** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Điểm mạnh
 
 Trước khi chọn gravimetry, hãy cân bằng lợi ích về traceability và độ đúng với thời gian, lượng mẫu và độ chọn lọc cần thiết. Các điểm mạnh sau giải thích vì sao phương pháp vẫn hữu ích dù chậm.
@@ -344,6 +358,9 @@ Trước khi chọn gravimetry, hãy cân bằng lợi ích về traceability v�
 - ít phụ thuộc đường hiệu chuẩn thiết bị;
 - có thể đạt độ đúng cao;
 - quy trình hóa học minh bạch, dễ kiểm tra mass balance.
+
+
+> **Chuyển mạch:** Từ **Điểm mạnh**, ta sang **Giới hạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Giới hạn
 

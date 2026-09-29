@@ -1,6 +1,9 @@
 # Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án
 
-Case này dùng Hanwha Aerospace như một bài thực hành để hiểu **kinh tế quốc phòng và hàng không vũ trụ (defense/aerospace economics / 방산·항공우주 산업경제)**. Doanh nghiệp quốc phòng khác doanh nghiệp tiêu dùng ở chỗ khách hàng thường là chính phủ hoặc hệ thống mua sắm liên quan đến chính phủ, chu kỳ bán hàng dài, yêu cầu chứng nhận cao, giá trị hợp đồng lớn và các ràng buộc chính trị–địa chính trị ảnh hưởng trực tiếp tới khả năng tiếp cận thị trường.
+> **Mạch đọc:** Đặt **Hanwha Aerospace — backlog quốc phòng, mua sắm công, hợp đồng xuất khẩu và dòng tiền dự án** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Backlog không phải doanh thu** sang **2. Tỷ lệ đơn hàng mới trên doanh thu và chất lượng backlog**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Trường hợp (case / 사례) này dùng Hanwha Aerospace như một bài thực hành để hiểu **kinh tế quốc phòng và hàng không vũ trụ (defense/aerospace economics / 방산·항공우주 산업경제)**. Doanh nghiệp quốc phòng khác doanh nghiệp tiêu dùng ở chỗ khách hàng thường là chính phủ hoặc hệ thống mua sắm liên quan đến chính phủ, chu kỳ bán hàng dài, yêu cầu chứng nhận cao, giá trị hợp đồng lớn và các ràng buộc chính trị–địa chính trị ảnh hưởng trực tiếp tới khả năng tiếp cận thị trường.
 
 Tiêu đề “nhận đơn hàng X nghìn tỷ won” chưa đủ để hiểu giá trị kinh tế. Cần biến đơn hàng thành lịch giao hàng, doanh thu ghi nhận, biên lợi nhuận, vốn lưu động, dòng tiền thu về và giá trị trong toàn vòng đời sản phẩm.
 
@@ -32,7 +35,7 @@ Một hợp đồng có thể rất lớn nhưng lịch giao kéo dài nhiều n
 **Tỷ lệ đơn hàng mới trên doanh thu (book-to-bill)** có thể viết đơn giản:
 
 \[
-Book\text{-}to\text{-}Bill = \frac{Đơn\ hàng\ mới}{Doanh\ thu}
+Book\văn bản (text / 텍스트){-}to\văn bản (text / 텍스트){-}Bill = \frac{Đơn\ hàng\ mới}{Doanh\ thu}
 \]
 
 Nếu lớn hơn 1 trong thời gian dài, backlog có xu hướng tăng. Tuy nhiên tỷ lệ cao không tự động tốt nếu đơn hàng có biên lợi nhuận thấp, tài trợ yếu hoặc rủi ro thực thi lớn.

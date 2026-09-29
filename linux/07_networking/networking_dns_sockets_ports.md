@@ -1,5 +1,8 @@
 # Mạng, DNS, socket và cổng
 
+> **Mạch đọc:** Đọc **Mạng, DNS, socket và cổng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ tên dịch vụ tới gói tin** sang **Giao diện mạng và địa chỉ IP**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Khi một ứng dụng không kết nối được tới máy chủ khác, câu "mạng lỗi" quá rộng để có thể hành động chính xác. Mạng trên Linux có nhiều lớp: phân giải tên, chọn đường đi, giao diện mạng, khả năng tiếp cận IP, kết nối tầng vận chuyển, socket lắng nghe, TLS và giao thức ứng dụng. Xử lý sự cố hiệu quả là xác định **lớp đầu tiên mà trạng thái quan sát được khác với điều ta kỳ vọng**.
 
 ## Từ tên dịch vụ tới gói tin
@@ -20,7 +23,7 @@ Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng c
 ip addr
 ```
 
-hiển thị các **giao diện mạng (network interface)** và địa chỉ tương ứng. Một máy có thể có nhiều giao diện: NIC vật lý, loopback, bridge của container, VPN hoặc tunnel.
+hiển thị các **giao diện mạng (network interface)** và địa chỉ tương ứng. Một máy có thể có nhiều giao diện: NIC vật lý, loopback, cầu nối (bridge / 브리지) của bộ chứa (container / 컨테이너), VPN hoặc tunnel.
 
 `127.0.0.1` thuộc loopback và chỉ dùng cho giao tiếp nội bộ trong cùng host. Nếu dịch vụ chỉ gắn vào `127.0.0.1:8080`, máy từ xa không thể kết nối qua giao diện bên ngoài dù `curl` chạy cục bộ vẫn thành công.
 
@@ -50,7 +53,7 @@ DNS còn có bộ nhớ đệm và TTL. Thay đổi bản ghi không có nghĩa 
 
 ## Cổng và socket
 
-Cổng (port) không phải là tiến trình. Số cổng là một phần của điểm cuối ở tầng vận chuyển. Tiến trình máy chủ tạo **socket**, gắn địa chỉ/cổng bằng `bind` rồi bắt đầu `listen`.
+Cổng (port / 포트) không phải là tiến trình. Số cổng là một phần của điểm cuối ở tầng vận chuyển. Tiến trình máy chủ tạo **socket**, gắn địa chỉ/cổng bằng `bind` rồi bắt đầu `listen`.
 
 ```bash
 sudo ss -lntp
@@ -100,9 +103,9 @@ Một số trạng thái quan trọng:
 
 Nhiều `CLOSE-WAIT` kéo dài có thể gợi ý vấn đề vòng đời tài nguyên trong ứng dụng. Ngược lại, nhiều `TIME-WAIT` không tự động là lỗi; TCP cần trạng thái này để xử lý các gói đến muộn và đảm bảo ngữ nghĩa của việc tái sử dụng kết nối.
 
-## `Connection refused` khác timeout như thế nào?
+## `Connection refused` khác hết thời gian chờ (timeout / 타임아웃) như thế nào?
 
-`Connection refused` thường có nghĩa đường mạng tới host đủ để nhận phản hồi nhưng không có tiến trình lắng nghe ở điểm cuối, hoặc một thiết bị/chính sách chủ động từ chối. Timeout thường gợi ý gói tin hoặc phản hồi bị loại bỏ, tuyến/firewall có vấn đề hoặc phía đích không phản hồi.
+`Connection refused` thường có nghĩa đường mạng tới host đủ để nhận phản hồi nhưng không có tiến trình lắng nghe ở điểm cuối, hoặc một thiết bị/chính sách chủ động từ chối. hết thời gian chờ (timeout / 타임아웃) thường gợi ý gói tin hoặc phản hồi bị loại bỏ, tuyến/firewall có vấn đề hoặc phía đích không phản hồi.
 
 Đây chỉ là **quy tắc kinh nghiệm (heuristic)** chứ không phải định luật. Tuy nhiên hai triệu chứng cung cấp loại bằng chứng khác nhau và không nên gộp chung thành "mạng lỗi".
 
@@ -142,7 +145,7 @@ Nếu kiểm tra cục bộ thất bại, chưa cần bắt đầu ở bộ cân
 
 ## Firewall
 
-Máy Linux có thể dùng nftables, iptables, firewalld hoặc các chính sách ở tầng cloud/network. Việc `ss` cho thấy socket đang lắng nghe chỉ chứng minh trạng thái cục bộ; nó không chứng minh lưu lượng từ xa được phép đi tới.
+Máy Linux có thể dùng nftables, iptables, firewalld hoặc các chính sách ở tầng cloud/mạng (network / 네트워크). Việc `ss` cho thấy socket đang lắng nghe chỉ chứng minh trạng thái cục bộ; nó không chứng minh lưu lượng từ xa được phép đi tới.
 
 Tùy bản phân phối có thể dùng:
 
@@ -151,7 +154,7 @@ sudo nft list ruleset
 sudo firewall-cmd --list-all
 ```
 
-Không nên thay luật firewall trên production khi chưa hiểu chính sách được quản lý ở đâu. Nhóm bảo mật cloud (security group) hoặc thiết bị mạng bên ngoài có thể là một lớp hoàn toàn khác với firewall trên host.
+Không nên thay luật firewall trên môi trường vận hành (production / 운영 환경) khi chưa hiểu chính sách được quản lý ở đâu. Nhóm bảo mật cloud (security group) hoặc thiết bị mạng bên ngoài có thể là một lớp hoàn toàn khác với firewall trên host.
 
 ## Bắt gói tin
 
@@ -169,9 +172,9 @@ Có thể ghi ra tệp để phân tích bằng Wireshark:
 sudo tcpdump -ni any port 8080 -w /tmp/8080.pcap
 ```
 
-Tệp bắt gói có thể chứa dữ liệu hoặc metadata nhạy cảm, vì vậy cần quản lý cẩn thận.
+Tệp bắt gói có thể chứa dữ liệu hoặc siêu dữ liệu (metadata / 메타데이터) nhạy cảm, vì vậy cần quản lý cẩn thận.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Khi xử lý sự cố, có thể đi từ lớp thấp cần thiết lên lớp cao hơn:
 
@@ -183,13 +186,13 @@ Không phải lúc nào cũng cần kiểm tra mọi lớp. Thông báo lỗi v�
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
-**"Ping thất bại nghĩa là server chết."** ICMP có thể bị chặn trong khi TCP vẫn hoạt động bình thường.
+**"Ping thất bại nghĩa là máy chủ (server / 서버) chết."** ICMP có thể bị chặn trong khi TCP vẫn hoạt động bình thường.
 
-**"Port mở nghĩa là ứng dụng khỏe."** Socket có thể nhận kết nối nhưng endpoint nghiệp vụ vẫn thất bại.
+**"cổng (port / 포트) mở nghĩa là ứng dụng khỏe."** Socket có thể nhận kết nối nhưng endpoint nghiệp vụ vẫn thất bại.
 
 **"Tiến trình chạy nghĩa là cổng đang lắng nghe."** Trạng thái tiến trình và trạng thái socket là hai quan sát khác nhau.
 
-**"localhost thành công nghĩa là truy cập từ xa chắc chắn thành công."** Bind, firewall, routing và load balancer vẫn nằm ngoài đường đi cục bộ.
+**"localhost thành công nghĩa là truy cập từ xa chắc chắn thành công."** Bind, firewall, routing và bộ cân bằng tải (load balancer / 로드 밸런서) vẫn nằm ngoài đường đi cục bộ.
 
 **"DNS chỉ đổi hostname thành một IP."** DNS còn có nhiều loại bản ghi, bộ nhớ đệm, phân phối tải và hành vi của resolver.
 

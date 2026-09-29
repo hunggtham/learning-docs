@@ -1,5 +1,8 @@
 # Phân hạch và nhiệt hạch — đưa hạt nhân về trạng thái liên kết bền hơn
 
+> **Mạch đọc:** Đọc **Phân hạch và nhiệt hạch — đưa hạt nhân về trạng thái liên kết bền hơn** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Đường cong năng lượng liên kết là bức tranh thống nhất** sang **Cơ chế phân hạch — từ biến dạng tới tách đôi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Phân hạch (fission / 핵분열)** chia một hạt nhân rất nặng thành các mảnh khối lượng trung bình; **nhiệt hạch (fusion / 핵융합)** kết hợp các hạt nhân nhẹ thành hạt nhân nặng hơn. Cả hai có thể giải phóng năng lượng vì sản phẩm dịch về vùng có năng lượng liên kết trên mỗi nucleon cao hơn. Nguyên lý nền không phải “tách thì sinh năng lượng” hay “ghép thì sinh năng lượng”, mà là **hệ chuyển tới trạng thái hạt nhân liên kết chặt hơn**.
 
 Chapter này dựa trực tiếp trên [năng lượng liên kết hạt nhân](./00_atomic_nucleus.md), [động học phân rã](./01_radioactivity.md) và [giá trị Q, tiết diện, neutron moderation](./02_nuclear_reactions.md). Khi đi tới chuyển nhiệt thành điện, có thể liên hệ lại [nhiệt động lực học](../05_thermodynamics/00_energy_heat_and_work.md); khi đi tới hư hại do neutron, các ý tưởng về [khuyết tật vật liệu](../14_materials_and_polymer_chemistry/01_metals_ceramics_and_glasses.md) trở nên quan trọng.
@@ -142,7 +145,7 @@ Theo cơ học cổ điển điều này cần động năng rất cao; xuyên h
 Các sao giống Mặt Trời chủ yếu sử dụng chuỗi proton–proton, có phản ứng tổng quát gần:
 
 \[
-4p\rightarrow{}^4He+\text{năng lượng}+\text{neutrino}+...
+4p\rightarrow{}^4He+\văn bản (text / 텍스트){năng lượng}+\văn bản (text / 텍스트){neutrino}+...
 \]
 
 Khối lượng sản phẩm helium nhỏ hơn tổng khối lượng bốn proton ban đầu; chênh lệch xuất hiện dưới dạng năng lượng giải phóng.
@@ -183,9 +186,9 @@ nT\tau_E
 
 Hệ phải đạt một mức đủ lớn, tùy phản ứng và cấu hình, để hướng tới điều kiện tạo năng lượng ròng.
 
-### Trade-off của Lawson
+### Sự đánh đổi (trade-off / 트레이드오프) của Lawson
 
-Không thể chỉ tăng một biến mà bỏ qua các biến còn lại. Tăng mật độ có thể làm va chạm hữu ích nhiều hơn nhưng cũng làm các bất ổn và tải vật liệu thay đổi; tăng nhiệt độ giúp tốc độ nhiệt hạch nhưng làm yêu cầu giam giữ khó hơn; tăng thời gian giam giữ đòi hỏi kiểm soát mất mát và ổn định plasma tốt hơn. Nhiệt hạch là bài toán **đồng thời về reaction rate, confinement và materials**, không phải chỉ đạt một “nhiệt độ đủ cao”.
+Không thể chỉ tăng một biến mà bỏ qua các biến còn lại. Tăng mật độ có thể làm va chạm hữu ích nhiều hơn nhưng cũng làm các bất ổn và tải vật liệu thay đổi; tăng nhiệt độ giúp tốc độ nhiệt hạch nhưng làm yêu cầu giam giữ khó hơn; tăng thời gian giam giữ đòi hỏi kiểm soát mất mát và ổn định plasma tốt hơn. Nhiệt hạch là bài toán **đồng thời về reaction tỷ lệ (rate / 비율), confinement và materials**, không phải chỉ đạt một “nhiệt độ đủ cao”.
 
 ## Giam giữ từ
 
@@ -272,3 +275,5 @@ Không. Hiệu suất chuyển đổi, kiểm soát nhiệt, vật liệu, chu t
 Phân hạch và nhiệt hạch là **hai con đường khác nhau đi xuống cảnh quan năng lượng liên kết hạt nhân**. Phân hạch quản lý một chuỗi nhân neutron trong hạt nhân nặng; nhiệt hạch cố giữ hạt nhân nhẹ đủ gần, đủ lâu để xuyên hầm qua hàng rào Coulomb và tạo sản phẩm liên kết chặt hơn.
 
 Xem tiếp: [Hóa phóng xạ và ứng dụng](./04_radiochemistry_and_applications.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 atomic nucleus](./00_atomic_nucleus.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

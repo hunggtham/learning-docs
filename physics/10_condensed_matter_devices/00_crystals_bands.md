@@ -1,5 +1,8 @@
 # Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon
 
+> **Mạch đọc:** Đọc **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Tinh thể và mạng Bravais** sang **Basis và crystal cấu trúc (structure / 구조)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một cục silicon có thể trở thành transistor không phải vì từng nguyên tử silicon riêng lẻ “biết” cách đóng cắt dòng điện. Tính chất điện tử của vật liệu xuất hiện từ **cấu trúc tập thể của rất nhiều nguyên tử và electron** trong một thế tuần hoàn.
 
 Đây là một trong những ví dụ rõ nhất của hiện tượng nổi lên (emergence):
@@ -40,9 +43,9 @@ Một **ô nguyên thủy (primitive cell)** chứa đúng một điểm mạng 
 
 Tinh thể thật luôn có defect, thermal vibration và bề mặt. Periodic lattice là mô hình nền để tách phần cấu trúc lý tưởng khỏi các hiệu ứng đó.
 
-## Basis và crystal structure
+## Basis và crystal cấu trúc (structure / 구조)
 
-Mạng không đồng nghĩa với vị trí nguyên tử thực tế. Ta có thể gắn một nhóm nguyên tử, gọi là basis, vào mỗi lattice point.
+Mạng không đồng nghĩa với vị trí nguyên tử thực tế. Ta có thể gắn một nhóm nguyên tử, gọi là basis, vào mỗi lattice điểm (point / 지점).
 
 ```text
 crystal structure = Bravais lattice + basis
@@ -54,15 +57,15 @@ Phân biệt lattice và basis giúp tránh nhầm rằng mọi điểm lặp tr
 
 ## Mạng đảo (reciprocal lattice)
 
-Nhiều hiện tượng trong tinh thể được mô tả tự nhiên hơn trong không gian vector sóng `\mathbf k`.
+Nhiều hiện tượng trong tinh thể được mô tả tự nhiên hơn trong không gian véc-tơ (vector / 벡터) sóng `\mathbf k`.
 
-Các vectơ reciprocal primitive `\mathbf b_i` được chọn sao cho
+Các vectơ reciprocal thành phần nguyên thủy (primitive / 기본 요소) `\mathbf b_i` được chọn sao cho
 
 ```math
 \mathbf a_i\cdot\mathbf b_j=2\pi\delta_{ij}.
 ```
 
-Một reciprocal lattice vector có dạng
+Một reciprocal lattice véc-tơ (vector / 벡터) có dạng
 
 ```math
 \mathbf G=h\mathbf b_1+k\mathbf b_2+l\mathbf b_3.
@@ -82,9 +85,9 @@ Dạng Bragg quen thuộc là
 2d\sin\theta=n\lambda.
 ```
 
-Trong reciprocal-space language, điều kiện scattering đàn hồi có thể liên hệ với một reciprocal vector `\mathbf G`.
+Trong reciprocal-space ngôn ngữ (language / 언어), điều kiện scattering đàn hồi có thể liên hệ với một reciprocal véc-tơ (vector / 벡터) `\mathbf G`.
 
-Nhờ diffraction, ta có thể suy ra lattice spacing, symmetry và atomic structure từ dữ liệu intensity trong reciprocal space.
+Nhờ diffraction, ta có thể suy ra lattice spacing, symmetry và atomic cấu trúc (structure / 구조) từ dữ liệu intensity trong reciprocal không gian (space / 공간).
 
 Đây là cầu nối trực tiếp giữa wave physics, Fourier transform và crystallography.
 
@@ -134,7 +137,7 @@ có thể mô tả trạng thái tương đương theo symmetry của lattice.
 
 Brillouin zone thứ nhất là Wigner–Seitz cell của reciprocal lattice.
 
-Ta có thể giới hạn `\mathbf k` về vùng này mà không mất thông tin độc lập về band structure.
+Ta có thể giới hạn `\mathbf k` về vùng này mà không mất thông tin độc lập về band cấu trúc (structure / 구조).
 
 Biên Brillouin zone quan trọng vì tại đó Bragg reflection của electron wave có thể ghép các trạng thái và mở band gap.
 
@@ -159,23 +162,23 @@ Một mức nguyên tử có thể tách thành khoảng `N` trạng thái rất
 
 Với `N` vĩ mô, các mức trở thành một dải gần liên tục.
 
-Cách nhìn tight-binding phù hợp khi trạng thái còn mang tính atomic-localized mạnh. Ở phía ngược lại, nearly-free-electron model bắt đầu từ electron gần tự do rồi xét perturbation tuần hoàn của lattice.
+Cách nhìn tight-binding phù hợp khi trạng thái còn mang tính atomic-localized mạnh. Ở phía ngược lại, nearly-free-electron mô hình (model / 모델) bắt đầu từ electron gần tự do rồi xét perturbation tuần hoàn của lattice.
 
-Hai mô hình đi từ hai giới hạn khác nhau nhưng cùng dẫn tới band structure.
+Hai mô hình đi từ hai giới hạn khác nhau nhưng cùng dẫn tới band cấu trúc (structure / 구조).
 
 ## Vì sao band gap xuất hiện?
 
-Gần boundary của Brillouin zone, hai plane-wave state có thể bị ghép mạnh bởi periodic potential.
+Gần ranh giới (boundary / 경계) của Brillouin zone, hai plane-wave trạng thái (state / 상태) có thể bị ghép mạnh bởi periodic potential.
 
 Sự ghép này tách degeneracy thành hai tổ hợp có năng lượng khác nhau, tạo khoảng năng lượng không có eigenstate cho một số `k`.
 
 Đây là nguồn gốc band gap trong picture nearly-free electron.
 
-Vì vậy vùng cấm năng lượng không phải khoảng trống vật lý giữa các nguyên tử. Nó là khoảng trong **phổ năng lượng** không có trạng thái một hạt được phép trong ideal band model.
+Vì vậy vùng cấm năng lượng không phải khoảng trống vật lý giữa các nguyên tử. Nó là khoảng trong **phổ năng lượng** không có trạng thái một hạt được phép trong ideal band mô hình (model / 모델).
 
-## Band structure `E_n(k)`
+## Band cấu trúc (structure / 구조) `E_n(k)`
 
-Band structure cho quan hệ
+Band cấu trúc (structure / 구조) cho quan hệ
 
 ```math
 E_n(\mathbf k).
@@ -190,7 +193,7 @@ Từ độ dốc của band, vận tốc nhóm của wavepacket electron là
 
 Do đó carrier velocity không đơn giản là `p/m` với electron tự do; nó phụ thuộc hình dạng band.
 
-Đây là lý do crystal structure có thể thay đổi carrier dynamics mạnh dù electron vẫn có cùng điện tích cơ bản.
+Đây là lý do crystal cấu trúc (structure / 구조) có thể thay đổi carrier dynamics mạnh dù electron vẫn có cùng điện tích cơ bản.
 
 ## Khối lượng hiệu dụng
 
@@ -227,7 +230,7 @@ g(E)\propto\sqrt{E-E_c}
 
 cho conduction band.
 
-DOS cùng Fermi–Dirac distribution quyết định carrier concentration:
+DOS cùng Fermi–Dirac phân phối (distribution / 분포) quyết định carrier concentration:
 
 ```math
 n=\int g_c(E)f(E)\,dE.
@@ -237,19 +240,19 @@ Do đó chỉ biết band gap chưa đủ để tính carrier density; còn cầ
 
 ## Mức Fermi và chemical potential
 
-Fermi–Dirac distribution là
+Fermi–Dirac phân phối (distribution / 분포) là
 
 ```math
 f(E)=\frac{1}{e^{(E-\mu)/(k_BT)}+1}.
 ```
 
-Trong nhiều solid-state context, `\mu` được gọi gần như Fermi level `E_F`.
+Trong nhiều solid-state ngữ cảnh (context / 맥락), `\mu` được gọi gần như Fermi mức (level / 수준) `E_F`.
 
 Ở `T=0`, các trạng thái dưới chemical potential được lấp đầy và các trạng thái trên nó trống cho ideal noninteracting fermions.
 
-Ở nhiệt độ hữu hạn, biên occupancy được làm mờ trên scale khoảng `k_BT`.
+Ở nhiệt độ hữu hạn, biên occupancy được làm mờ trên quy mô (scale / 규모) khoảng `k_BT`.
 
-Fermi level không nhất thiết phải trùng với một trạng thái energy thực. Trong semiconductor, nó có thể nằm trong band gap.
+Fermi mức (level / 수준) không nhất thiết phải trùng với một trạng thái năng lượng (energy / 에너지) thực. Trong semiconductor, nó có thể nằm trong band gap.
 
 ## Kim loại, bán dẫn và chất cách điện
 
@@ -257,7 +260,7 @@ Cách phân loại sâu hơn dựa trên band filling và band gap.
 
 ### Kim loại
 
-Có trạng thái trống khả dụng rất gần Fermi level, nên electric field có thể thay đổi occupancy quanh Fermi surface và tạo current.
+Có trạng thái trống khả dụng rất gần Fermi mức (level / 수준), nên electric trường dữ liệu (field / 필드) có thể thay đổi occupancy quanh Fermi surface và tạo hiện tại (current / 현재).
 
 ### Chất cách điện
 
@@ -267,15 +270,15 @@ Valence band đầy và conduction band cách bởi gap lớn, nên thermal exci
 
 Cũng có band gap, nhưng gap và doping cho phép carrier concentration được điều khiển mạnh bằng nhiệt độ, ánh sáng và impurity.
 
-Sự khác biệt giữa semiconductor và insulator không phải một boundary tuyệt đối chỉ dựa vào một con số gap; material context và operating condition cũng quan trọng.
+Sự khác biệt giữa semiconductor và insulator không phải một ranh giới (boundary / 경계) tuyệt đối chỉ dựa vào một con số gap; material ngữ cảnh (context / 맥락) và operating điều kiện (condition / 조건) cũng quan trọng.
 
 ## Fermi surface
 
-Trong kim loại ở nhiệt độ thấp, các trạng thái occupied trong `k`-space tạo một Fermi sea; boundary của vùng occupied là Fermi surface.
+Trong kim loại ở nhiệt độ thấp, các trạng thái occupied trong `k`-space tạo một Fermi sea; ranh giới (boundary / 경계) của vùng occupied là Fermi surface.
 
 Nhiều tính chất low-energy của kim loại được quyết định bởi states gần Fermi surface hơn là toàn bộ electron sâu bên dưới.
 
-Đây là ví dụ của effective-theory thinking: low-temperature transport thường chỉ cần degrees of freedom gần chemical potential.
+Đây là ví dụ của effective-theory thinking: low-temperature vận chuyển (transport / 전송) thường chỉ cần degrees of freedom gần chemical potential.
 
 ## Lỗ trống
 
@@ -283,7 +286,7 @@ Trong một band gần đầy, theo dõi mọi electron có thể rất bất ti
 
 Một trạng thái thiếu electron có thể được mô tả như một quasiparticle mang điện tích hiệu dụng dương: lỗ trống (hole / 정공).
 
-Hole không phải proton di chuyển trong lattice. Nó là cách biểu diễn collective response của nhiều electron trong band gần đầy.
+Hole không phải proton di chuyển trong lattice. Nó là cách biểu diễn collective phản hồi (response / 응답) của nhiều electron trong band gần đầy.
 
 ## Phonon từ dao động mạng
 
@@ -291,9 +294,9 @@ Nguyên tử trong crystal không đứng yên tại lattice site. Chúng dao đ
 
 Với displacement nhỏ, potential có thể tuyến tính hóa đến bậc hai, dẫn tới một hệ nhiều oscillator ghép.
 
-Ta diagonalize dynamical matrix để tìm normal modes.
+Ta diagonalize dynamical ma trận (matrix / 행렬) để tìm normal modes.
 
-Khi lượng tử hóa mode có frequency `\omega`, năng lượng là
+Khi lượng tử hóa chế độ (mode / 모드) có frequency `\omega`, năng lượng là
 
 ```math
 E_n=\hbar\omega\left(n+\frac12\right).
@@ -305,19 +308,19 @@ Phonon là quasiparticle, không phải elementary particle trong vacuum.
 
 ## Acoustic và optical phonon
 
-Nếu unit cell có nhiều hơn một atom, lattice có thể có nhiều branch phonon.
+Nếu đơn vị (unit / 단위) cell có nhiều hơn một atom, lattice có thể có nhiều branch phonon.
 
 Acoustic branch có frequency tiến tới zero khi wavelength rất dài và liên hệ với sound wave trong solid.
 
 Optical branch có thể có frequency khác zero gần `k=0` do các atom trong basis dao động tương đối với nhau.
 
-Tên “optical” đến từ khả năng một số mode tương tác mạnh với electromagnetic radiation trong ionic crystals.
+Tên “optical” đến từ khả năng một số chế độ (mode / 모드) tương tác mạnh với electromagnetic radiation trong ionic crystals.
 
 ## Phonon và nhiệt dung
 
 Mô hình Einstein xem các oscillator có cùng frequency; mô hình Debye xem continuum acoustic modes với cutoff.
 
-Ở nhiệt độ thấp, Debye model dự đoán
+Ở nhiệt độ thấp, Debye mô hình (model / 모델) dự đoán
 
 ```math
 C_V\propto T^3.
@@ -325,17 +328,17 @@ C_V\propto T^3.
 
 Kết quả này là một thành công quan trọng của quantum statistical physics trong solids.
 
-Classical equipartition chỉ được khôi phục ở nhiệt độ đủ cao so với characteristic phonon energy scales.
+Classical equipartition chỉ được khôi phục ở nhiệt độ đủ cao so với characteristic phonon năng lượng (energy / 에너지) scales.
 
 ## Electron–phonon scattering
 
 Lattice vibration làm potential mà electron cảm nhận thay đổi theo thời gian.
 
-Điều này tạo electron–phonon scattering, ảnh hưởng electrical resistance và thermal transport.
+Điều này tạo electron–phonon scattering, ảnh hưởng electrical resistance và thermal vận chuyển (transport / 전송).
 
 Ở một số vật liệu, electron–phonon coupling còn đóng vai trò trung tâm trong conventional superconductivity.
 
-Vì vậy phonon là cầu nối giữa mechanical vibration, thermodynamics và electronic transport.
+Vì vậy phonon là cầu nối giữa mechanical vibration, thermodynamics và electronic vận chuyển (transport / 전송).
 
 ## Defect và vì sao crystal thật không hoàn hảo
 
@@ -352,9 +355,9 @@ surface/interface
 
 Defect có thể scattering electron/phonon, pin dislocation, thay đổi diffusion và tạo localized electronic states.
 
-Trong semiconductor, impurity được dùng có chủ đích để doping. Trong structural material, defect lại có thể quyết định strength và failure.
+Trong semiconductor, impurity được dùng có chủ đích để doping. Trong structural material, defect lại có thể quyết định strength và thất bại (failure / 실패).
 
-Do đó “không hoàn hảo” không phải chỉ là nuisance; nhiều device function tồn tại nhờ defect được kiểm soát.
+Do đó “không hoàn hảo” không phải chỉ là nuisance; nhiều thiết bị (device / 장치) hàm (function / 함수) tồn tại nhờ defect được kiểm soát.
 
 ## Direct và indirect band gap
 
@@ -362,23 +365,23 @@ Band gap còn phụ thuộc vị trí trong `k`-space.
 
 Nếu valence-band maximum và conduction-band minimum ở cùng `k`, ta có direct band gap.
 
-Nếu chúng nằm ở `k` khác nhau, optical transition thường cần thêm phonon để bảo toàn crystal momentum.
+Nếu chúng nằm ở `k` khác nhau, optical chuyển tiếp (transition / 전이) thường cần thêm phonon để bảo toàn crystal momentum.
 
 Đây là lý do material như GaAs phát sáng hiệu quả hơn silicon trong nhiều LED applications.
 
-## Assumptions và giới hạn của band picture
+## Các giả định (assumptions / 가정들) và giới hạn của band picture
 
-Basic band theory thường bắt đầu từ effective one-electron picture.
+Basic band lý thuyết (theory / 이론) thường bắt đầu từ effective one-electron picture.
 
-Nó hoạt động rất tốt cho nhiều semiconductor và weakly correlated materials, nhưng có thể thất bại khi electron–electron interaction mạnh.
+Nó hoạt động rất tốt cho nhiều semiconductor và weakly correlated materials, nhưng có thể thất bại khi electron–electron tương tác (interaction / 상호작용) mạnh.
 
-Các hệ strongly correlated có thể cần Hubbard model, many-body methods hoặc các quasiparticle description sâu hơn.
+Các hệ strongly correlated có thể cần Hubbard mô hình (model / 모델), many-body methods hoặc các quasiparticle description sâu hơn.
 
-Crystal periodicity cũng bị phá tại surface, interface, defect và disorder.
+Crystal periodicity cũng bị phá tại surface, giao diện (interface / 인터페이스), defect và disorder.
 
-Vì vậy band structure là baseline mạnh, không phải lời giải hoàn chỉnh cho mọi solid.
+Vì vậy band cấu trúc (structure / 구조) là baseline mạnh, không phải lời giải hoàn chỉnh cho mọi solid.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Solid-state physics có thể nhìn theo chuỗi:
 
@@ -401,21 +404,21 @@ coupled atomic oscillations
 → heat capacity + thermal transport + scattering
 ```
 
-Hai chuỗi gặp nhau qua electron–phonon interaction và tạo phần lớn physics của material thật.
+Hai chuỗi gặp nhau qua electron–phonon tương tác (interaction / 상호작용) và tạo phần lớn physics của material thật.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Band gap là khoảng trống giữa các nguyên tử”
 
-Sai. Nó là khoảng năng lượng không có single-particle state được phép trong ideal band description.
+Sai. Nó là khoảng năng lượng không có single-particle trạng thái (state / 상태) được phép trong ideal band description.
 
 ### “Electron trong kim loại là hoàn toàn tự do”
 
-Không. Free-electron model là xấp xỉ; lattice periodicity và interaction thay đổi dispersion thành band structure.
+Không. Free-electron mô hình (model / 모델) là xấp xỉ; lattice periodicity và tương tác (interaction / 상호작용) thay đổi dispersion thành band cấu trúc (structure / 구조).
 
 ### “Effective mass nghĩa electron thật nặng hoặc nhẹ đi”
 
-Không. Nó mô tả curvature của band và dynamic response của quasiparticle.
+Không. Nó mô tả curvature của band và động (dynamic / 동적) phản hồi (response / 응답) của quasiparticle.
 
 ### “Phonon là atom bay qua crystal”
 
@@ -423,10 +426,12 @@ Không. Phonon là lượng tử của collective lattice vibration.
 
 ### “Crystal hoàn hảo mới hữu ích cho electronics”
 
-Không. Doping, interface và defect được kiểm soát là nền tảng của semiconductor technology.
+Không. Doping, giao diện (interface / 인터페이스) và defect được kiểm soát là nền tảng của semiconductor technology.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Normal modes](../02_oscillations_waves/02_coupled_oscillators_normal_modes.md), [Hạt đồng nhất và thống kê lượng tử](../08_quantum/05_identical_particles_quantum_statistics.md), [Vật lý nguyên tử](../09_atomic_nuclear_particle/00_atomic_physics.md).
 
 **Liên hệ tiếp:** [Bán dẫn và thiết bị](01_semiconductors_devices.md), [Vận chuyển, từ tính và siêu dẫn](02_transport_magnetism_superconductivity.md), [Phonon, defect và vật chất tô pô](04_phonons_defects_topological_matter.md), [Berry phase và Quantum Hall](06_berry_phase_quantum_hall_topology.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 semiconductors devices](./01_semiconductors_devices.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

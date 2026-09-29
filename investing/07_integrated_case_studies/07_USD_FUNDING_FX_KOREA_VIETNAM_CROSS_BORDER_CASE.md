@@ -1,6 +1,9 @@
 # Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới
 
-> Case này dùng một cú sốc USD funding giả định để nối `Fed / USD → KRW/VND → BOK/SBV → thanh khoản / tín dụng → ngành → doanh nghiệp → định giá → lợi suất theo đồng tiền cơ sở → rủi ro danh mục`. Mục tiêu là hiểu vì sao cùng một USD shock có thể truyền rất khác qua Hàn Quốc và Việt Nam.
+> **Mạch đọc:** Đặt **Tình huống tích hợp 07 — Cú sốc USD funding và tỷ giá: so sánh Hàn Quốc, Việt Nam và danh mục xuyên biên giới** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bối cảnh giả định** sang **2. Concept — USD funding không chỉ là tỷ giá**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> trường hợp (case / 사례) này dùng một cú sốc USD funding giả định để nối `Fed / USD → KRW/VND → BOK/SBV → thanh khoản / tín dụng → ngành → doanh nghiệp → định giá → lợi suất theo đồng tiền cơ sở → rủi ro danh mục`. Mục tiêu là hiểu vì sao cùng một USD shock có thể truyền rất khác qua Hàn Quốc và Việt Nam.
 
 ## 1. Bối cảnh giả định
 
@@ -39,7 +42,7 @@ Khả năng tiếp cận USD trong stress
 
 Một doanh nghiệp có thể không có nợ USD nhưng vẫn chịu tác động qua giá hàng hóa, nhà cung cấp, khách hàng, ngân hàng hoặc dòng vốn nước ngoài.
 
-## 3. Mechanism — từ Fed tới điều kiện tài chính toàn cầu
+## 3. cơ chế (mechanism / 메커니즘) — từ Fed tới điều kiện tài chính toàn cầu
 
 Một chuỗi đơn giản:
 
@@ -103,7 +106,7 @@ Deposit rates
 Domestic margin liquidity
 ```
 
-## 6. Data — bảng theo dõi chung
+## 6. dữ liệu (data / 데이터) — bảng theo dõi chung
 
 ### Toàn cầu
 
@@ -149,7 +152,7 @@ Market turnover / margin
 Corporate bond maturity
 ```
 
-## 7. Interpretation — không dùng cùng một rule cho KRW và VND
+## 7. Interpretation — không dùng cùng một quy tắc (rule / 규칙) cho KRW và VND
 
 Nếu USD/KRW tăng 9%, không thể tự động kết luận “Korea xấu”. Cần hỏi:
 
@@ -160,13 +163,13 @@ Foreign flow giảm bao nhiêu?
 Valuation multiple bị co bao nhiêu?
 ```
 
-Nếu USD/VND tăng 4%, không thể chỉ nhìn biên độ thấp hơn rồi kết luận stress nhỏ hơn. Cần hỏi **policy response và domestic liquidity** thay đổi thế nào.
+Nếu USD/VND tăng 4%, không thể chỉ nhìn biên độ thấp hơn rồi kết luận stress nhỏ hơn. Cần hỏi **chính sách (policy / 정책) phản hồi (response / 응답) và domestic liquidity** thay đổi thế nào.
 
 ## 8. Industry map — Hàn Quốc
 
 ### Bán dẫn / exporter
 
-Có thể hưởng lợi từ KRW yếu ở doanh thu quy đổi, nhưng chịu tác động từ global capex và valuation.
+Có thể hưởng lợi từ KRW yếu ở doanh thu quy đổi, nhưng chịu tác động từ toàn cục (global / 전역) capex và valuation.
 
 ### Hãng hàng không / nhập khẩu năng lượng
 
@@ -174,21 +177,21 @@ USD mạnh + dầu tăng làm chi phí tăng mạnh hơn.
 
 ### Ngân hàng
 
-Tác động qua funding, credit quality và household/business stress.
+Tác động qua funding, credit chất lượng (quality / 품질) và household/nghiệp vụ (business / 비즈니스) stress.
 
 ### REIT / construction / PF-sensitive
 
-Rates cao lâu hơn làm refinancing và cap rate khó hơn.
+Rates cao lâu hơn làm refinancing và cap tỷ lệ (rate / 비율) khó hơn.
 
 ## 9. Industry map — Việt Nam
 
 ### Ngân hàng
 
-Theo dõi deposit cost, NIM, credit growth, FX liquidity, NPL sớm và exposure bất động sản.
+Theo dõi deposit chi phí (cost / 비용), NIM, credit growth, FX liquidity, NPL sớm và exposure bất động sản.
 
 ### Bất động sản
 
-USD shock truyền gián tiếp qua policy room, deposit rate, refinancing và thanh khoản thị trường.
+USD shock truyền gián tiếp qua chính sách (policy / 정책) room, deposit tỷ lệ (rate / 비율), refinancing và thanh khoản thị trường.
 
 ### Xuất khẩu
 
@@ -200,7 +203,7 @@ Nhạy với turnover, margin lending và domestic liquidity.
 
 ### Khu công nghiệp / FDI
 
-Dài hạn có thể hưởng lợi từ FDI, nhưng ngắn hạn valuation vẫn chịu discount rate và market liquidity.
+Dài hạn có thể hưởng lợi từ FDI, nhưng ngắn hạn valuation vẫn chịu discount tỷ lệ (rate / 비율) và thị trường (market / 시장) liquidity.
 
 ## 10. Worked company A — exporter Hàn Quốc
 
@@ -215,9 +218,9 @@ Debt: 250
 20% debt bằng USD
 ```
 
-KRW yếu 9% không có nghĩa revenue tăng 6,3% một cách cơ học. Giả định sau hedge và cost offset, tác động ròng lên revenue chỉ +3%.
+KRW yếu 9% không có nghĩa revenue tăng 6,3% một cách cơ học. Giả định sau hedge và chi phí (cost / 비용) offset, tác động ròng lên revenue chỉ +3%.
 
-Nhưng global demand giảm làm volume -7%.
+Nhưng toàn cục (global / 전역) demand giảm làm volume -7%.
 
 Revenue mới:
 
@@ -262,11 +265,11 @@ EBIT mới = 950 × 17% = 161,5
 
 EBIT giảm từ 200 xuống 161,5, gần 19%.
 
-Direct interest cost cũng tăng, nhưng vấn đề lớn hơn có thể là refinancing và tốc độ thu tiền.
+Direct interest chi phí (cost / 비용) cũng tăng, nhưng vấn đề lớn hơn có thể là refinancing và tốc độ thu tiền.
 
-## 12. Liquidity — tại sao cùng FX shock tạo outcome khác
+## 12. Liquidity — tại sao cùng FX shock tạo kết quả (outcome / 결과) khác
 
-Company A có thể chịu earnings translation tốt hơn nhưng equity multiple giảm vì foreign flow và real yield.
+Company A có thể chịu earnings translation tốt hơn nhưng equity multiple giảm vì foreign luồng (flow / 흐름) và real yield.
 
 Company B có thể ít exposure USD trực tiếp nhưng chịu domestic liquidity mạnh hơn qua:
 
@@ -280,7 +283,7 @@ Property collateral
 
 Đây là ví dụ của **indirect FX transmission**.
 
-## 13. Valuation — tách local earnings và discount rate
+## 13. Valuation — tách cục bộ (local / 로컬) earnings và discount tỷ lệ (rate / 비율)
 
 ### Company A
 
@@ -330,7 +333,7 @@ Công thức chính xác hơn:
 (1 + Local Return) × (1 + FX Return) - 1
 ```
 
-Ví dụ tài sản VND giảm 10% nhưng VND giảm thêm 4% so với KRW-equivalent currency path:
+Ví dụ tài sản VND giảm 10% nhưng VND giảm thêm 4% so với KRW-equivalent currency đường dẫn (path / 경로):
 
 ```text
 (1 - 10%) × (1 - 4%) - 1
@@ -353,17 +356,17 @@ Natural hedge
 Correlation với asset return
 ```
 
-Hedge 100% có thể giảm currency noise nhưng tạo cost/basis. Không hedge có thể phù hợp với một số liability profile nhưng tăng drawdown.
+Hedge 100% có thể giảm currency noise nhưng tạo chi phí (cost / 비용)/basis. Không hedge có thể phù hợp với một số liability profile nhưng tăng drawdown.
 
 Mục tiêu là quản trị exposure, không dự báo FX chắc chắn.
 
-## 16. Failure mode — hedge currency nhưng không hedge economic exposure
+## 16. dạng thất bại (failure mode / 실패 모드) — hedge currency nhưng không hedge economic exposure
 
-Một doanh nghiệp Việt Nam có revenue VND nhưng input USD vẫn có economic USD exposure.
+Một doanh nghiệp Việt Nam có revenue VND nhưng đầu vào (input / 입력) USD vẫn có economic USD exposure.
 
 Một exporter Hàn Quốc có revenue USD nhưng chi phí và capex cũng USD có natural hedge.
 
-Hedge ticker currency không đồng nghĩa hedge business economics.
+Hedge ticker currency không đồng nghĩa hedge nghiệp vụ (business / 비즈니스) economics.
 
 ## 17. Portfolio example
 
@@ -391,9 +394,9 @@ Gold: +5%
 Cash: 0%
 ```
 
-Trước khi tính tổng, phải quy đổi Vietnam return về KRW base.
+Trước khi tính tổng, phải quy đổi Vietnam return về KRW cơ sở (base / 기반).
 
-Nếu FX effect làm -18% local thành -21% base-currency return:
+Nếu FX tác động (effect / 효과) làm -18% cục bộ (local / 로컬) thành -21% base-currency return:
 
 ```text
 30% × -15% = -4,50%
@@ -404,7 +407,7 @@ Nếu FX effect làm -18% local thành -21% base-currency return:
 5% × +5%   = +0,25%
 ```
 
-Stress loss gần đúng:
+Stress mất mát (loss / 손실) gần đúng:
 
 ```text
 -13,10%
@@ -446,7 +449,7 @@ Domestic growth
 Policy transmission
 ```
 
-## 20. Policy offset
+## 20. chính sách (policy / 정책) offset
 
 Một country shock không chỉ có central bank.
 
@@ -461,11 +464,11 @@ Regulatory change
 Public investment
 ```
 
-Policy offset có thể giảm hoặc chuyển vị trí của stress thay vì xóa stress hoàn toàn.
+Chính sách (policy / 정책) offset có thể giảm hoặc chuyển vị trí của stress thay vì xóa stress hoàn toàn.
 
-## 21. Failure mode — liquidity rally bị nhầm thành earnings recovery
+## 21. dạng thất bại (failure mode / 실패 모드) — liquidity rally bị nhầm thành earnings khôi phục (recovery / 복구)
 
-Nếu policy hỗ trợ thanh khoản:
+Nếu chính sách (policy / 정책) hỗ trợ thanh khoản:
 
 ```text
 Turnover ↑
@@ -480,9 +483,9 @@ Revenue / EPS revisions chưa tăng
 Credit quality chưa cải thiện
 ```
 
-thì đợt tăng có thể chủ yếu là liquidity/valuation, chưa phải fundamental recovery.
+thì đợt tăng có thể chủ yếu là liquidity/valuation, chưa phải fundamental khôi phục (recovery / 복구).
 
-## 22. Failure mode — exporter rally bị nhầm với structural improvement
+## 22. dạng thất bại (failure mode / 실패 모드) — exporter rally bị nhầm với structural improvement
 
 KRW yếu có thể hỗ trợ exporter earnings ngắn hạn, nhưng không chữa được:
 
@@ -496,7 +499,7 @@ Customer concentration
 
 FX tailwind không thay moat.
 
-## 23. Data freshness và source discipline
+## 23. dữ liệu (data / 데이터) freshness và nguồn (source / 소스) discipline
 
 Các biến sau có thể thay đổi nhanh và phải kiểm tra nguồn chính thức trước quyết định thực:
 
@@ -511,9 +514,9 @@ Index classification
 Product specification
 ```
 
-Case này dùng số giả định, không thay thế dữ liệu hiện tại.
+Trường hợp (case / 사례) này dùng số giả định, không thay thế dữ liệu hiện tại.
 
-## 24. Scenario matrix
+## 24. Scenario ma trận (matrix / 행렬)
 
 Tạo ít nhất bốn trạng thái:
 
@@ -538,11 +541,11 @@ Local liquidity
 Valuation multiple
 ```
 
-Không dùng một rule cố định cho “USD up/down”.
+Không dùng một quy tắc (rule / 규칙) cố định cho “USD up/down”.
 
-## 25. Invalidation map
+## 25. vô hiệu hóa (invalidation / 무효화) map
 
-### Global
+### Toàn cục (global / 전역)
 
 Bản đồ vô hiệu hóa toàn cầu xác định những bằng chứng cho thấy cú sốc funding đang đảo chiều. Chỉ khi các biến nền tảng cùng đổi hướng mới nên hạ mức tin cậy của luận điểm chung.
 
@@ -575,7 +578,7 @@ Domestic turnover phục hồi cùng earnings revisions
 
 ### Company
 
-Luôn có invalidation riêng theo business driver.
+Luôn có vô hiệu hóa (invalidation / 무효화) riêng theo nghiệp vụ (business / 비즈니스) driver.
 
 ## 26. Post-mortem
 
@@ -594,7 +597,7 @@ Nếu không tách các phần này, rất dễ kết luận sai rằng country 
 
 ## 27. Bài tập bắt buộc
 
-Tính lại case với:
+Tính lại trường hợp (case / 사례) với:
 
 ```text
 Scenario 1: DXY chỉ +2%
@@ -636,7 +639,7 @@ Các tài liệu liên kết giúp mở rộng cú sốc USD funding sang bản 
 
 ## Kết luận
 
-Cùng một USD shock không tạo cùng một outcome ở mọi thị trường. Phân tích cần đi qua:
+Cùng một USD shock không tạo cùng một kết quả (outcome / 결과) ở mọi thị trường. Phân tích cần đi qua:
 
 ```text
 Global USD / rates

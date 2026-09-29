@@ -1,18 +1,18 @@
-# 234. C언어의 구조체 (struct in C)
+# 232. 배치 프로그램 (Batch Program)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **234. C언어의 구조체 (struct in C)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **232. 배치 프로그램 (Batch Program)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **234. C언어의 구조체 (struct in C)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **238. 가비지 콜렉터 (Garbage Collector)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **232. 배치 프로그램 (Batch Program)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **234. C언어의 구조체 (struct in C)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-언어의, 구조체
+배치, 프로그램
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **232. 배치 프로그램 (Batch Program)**에서 만든 기준을 이어받아 **234. C언어의 구조체 (struct in C)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**에서 만든 기준을 이어받아 **232. 배치 프로그램 (Batch Program)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,22 +20,29 @@ Mục đích của bài này là hiểu **234. C언어의 구조체 (struct in C
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **232. 배치 프로그램 (Batch Program)** và nối nó với **234. C언어의 구조체 (struct in C)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 234. C언어의 구조체 (struct in C)
+## 232. 배치 프로그램 (Batch Program)
 
-Từ **232. 배치 프로그램 (Batch Program)**, ta đã có điểm tựa để bước vào **234. C언어의 구조체 (struct in C)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 63/77 trước khi đi vào chi tiết.
+Từ **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**, ta đã có điểm tựa để bước vào **232. 배치 프로그램 (Batch Program)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 63/78 trước khi đi vào chi tiết.
 
-Để đọc **234. C언어의 구조체 (struct in C)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **232. 배치 프로그램 (Batch Program)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- 서로 다른 데이터 유형을 가진 변수들을 하나로 묶어 관리하는 사용자 정의 자료형.
-- 배열(Array)은 **동일한 자료형**만 모으지만, 구조체(Struct)는 **상이한 자료형**을 모을 수 있음.
+- 대량의 데이터를 사용자 개입 없이 정해진 순서에 따라 **일괄적으로 처리**하는 방식.
+- 야간 시간대 등 자원 소모가 적은 시간에 실행됨.
+- **필수 요소 5가지**: 대용량, 자동화, 견고성(오류 시에도 중단 없이 기록/지속), 안정성, 성능.
 
 **Giải thích (Vietnamese):**
-Struct (Cấu trúc) dùng để gom nhóm nhiều biến khác kiểu lại với nhau. Ví dụ tạo kiểu `SinhVien` gồm tên (chuỗi) và tuổi (số). Trong khi Mảng (Array) chỉ được lưu cùng một kiểu (hoặc toàn chuỗi, hoặc toàn số).
+Chương trình Batch (xử lý hàng loạt) tự động chạy ngầm để xử lý lượng lớn dữ liệu mà không cần con người can thiệp.
+- Tính kiên cố (견고성): Lỡ có 1 dòng dữ liệu bị lỗi, chương trình không bị sập mà sẽ ghi log lại và chạy tiếp dòng khác.
+
+**💡 Mẹo ghi nhớ (Mnemonics):**
+**대자견안성** (Đại - Tự - Kiên - An - Tính): 대용량, 자동화, 견고성, 안정성, 성능.
 
 ---
 
-Điểm chốt của **234. C언어의 구조체 (struct in C)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **238. 가비지 콜렉터 (Garbage Collector)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Điểm chốt của **232. 배치 프로그램 (Batch Program)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **234. C언어의 구조체 (struct in C)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

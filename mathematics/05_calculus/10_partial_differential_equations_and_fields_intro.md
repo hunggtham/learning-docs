@@ -1,26 +1,32 @@
-# Nhập môn phương trình vi phân riêng phần: khi state phụ thuộc vào không gian và thời gian
+# Nhập môn phương trình vi phân riêng phần: khi trạng thái (state / 상태) phụ thuộc vào không gian và thời gian
 
-Ordinary Differential Equation (ODE / 상미분방정식) thường mô tả một state thay đổi theo một biến độc lập, thường là time. Nhưng nhiệt độ trong một căn phòng, áp suất trong chất lỏng, độ cao của sóng hay electric potential không chỉ phụ thuộc time; chúng thay đổi theo vị trí. Khi unknown là một **field / 장** như `u(x,t)` hoặc `u(x,y,z,t)`, laws of change dẫn tự nhiên đến **phương trình vi phân riêng phần (Partial Differential Equation, PDE / 편미분방정식)**.
+> **Mạch đọc:** Đọc **Nhập môn phương trình vi phân riêng phần: khi trạng thái (state / 상태) phụ thuộc vào không gian và thời gian** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **trường dữ liệu (field / 필드): từ một number sang một giá trị (value / 값) tại mỗi điểm (point / 지점)** sang **Heat equation: diffusion từ cục bộ (local / 로컬) imbalance**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-PDE là một lĩnh vực lớn. Chương này không cố giải toàn bộ PDE theory; mục tiêu là hiểu vì sao PDE xuất hiện, three canonical types, vai trò của boundary/initial conditions và liên hệ với numerical simulation.
 
-## Field: từ một number sang một value tại mỗi point
+Ordinary Differential Equation (ODE / 상미분방정식) thường mô tả một trạng thái (state / 상태) thay đổi theo một biến độc lập, thường là thời gian (time / 시간). Nhưng nhiệt độ trong một căn phòng, áp suất trong chất lỏng, độ cao của sóng hay electric potential không chỉ phụ thuộc thời gian (time / 시간); chúng thay đổi theo vị trí. Khi unknown là một **trường dữ liệu (field / 필드) / 장** như `u(x,t)` hoặc `u(x,y,z,t)`, laws of thay đổi (change / 변경) dẫn tự nhiên đến **phương trình vi phân riêng phần (Partial Differential Equation, PDE / 편미분방정식)**.
 
-Một scalar field gán một scalar cho mỗi point. Temperature có thể viết
+PDE là một lĩnh vực lớn. Chương này không cố giải toàn bộ PDE lý thuyết (theory / 이론); mục tiêu là hiểu vì sao PDE xuất hiện, three chuẩn gốc (canonical / 정본) types, vai trò của ranh giới (boundary / 경계)/initial conditions và liên hệ với numerical simulation.
+
+## Trường dữ liệu (field / 필드): từ một number sang một giá trị (value / 값) tại mỗi điểm (point / 지점)
+
+Một scalar trường dữ liệu (field / 필드) gán một scalar cho mỗi điểm (point / 지점). Temperature có thể viết
 
 ```math
 T=T(x,y,z,t).
 ```
 
-Một vector field gán vector cho mỗi point, như velocity field của fluid:
+Một véc-tơ (vector / 벡터) trường dữ liệu (field / 필드) gán véc-tơ (vector / 벡터) cho mỗi điểm (point / 지점), như velocity trường dữ liệu (field / 필드) của fluid:
 
 ```math
 \mathbf v=\mathbf v(x,y,z,t).
 ```
 
-Khi field thay đổi, partial derivatives đo rate theo từng coordinate. `\partial T/\partial t` đo local time change tại fixed position; gradient `\nabla T` mô tả spatial direction mà temperature tăng nhanh nhất.
+Khi trường dữ liệu (field / 필드) thay đổi, partial derivatives đo tỷ lệ (rate / 비율) theo từng coordinate. `\partial T/\partial t` đo cục bộ (local / 로컬) thời gian (time / 시간) thay đổi (change / 변경) tại fixed position; độ dốc (gradient / 기울기) `\nabla T` mô tả spatial direction mà temperature tăng nhanh nhất.
 
-## Heat equation: diffusion từ local imbalance
+
+> **Chuyển mạch:** Từ **trường dữ liệu (field / 필드): từ một number sang một giá trị (value / 값) tại mỗi điểm (point / 지점)**, ta sang **Heat equation: diffusion từ cục bộ (local / 로컬) imbalance** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Heat equation: diffusion từ cục bộ (local / 로컬) imbalance
 
 Trong một thanh 1D, heat equation điển hình là
 
@@ -32,9 +38,12 @@ Trong một thanh 1D, heat equation điển hình là
 
 trong đó `u(x,t)` là temperature và `\alpha` là thermal diffusivity.
 
-Second derivative `u_{xx}` đo curvature của temperature profile. Nếu một point nóng hơn neighbors, profile có curvature theo hướng khiến heat flow làm point đó giảm nhiệt; nếu lạnh hơn neighbors, nó nhận heat. PDE nói local time change proportional với local spatial imbalance.
+Second derivative `u_{xx}` đo curvature của temperature profile. Nếu một điểm (point / 지점) nóng hơn neighbors, profile có curvature theo hướng khiến heat luồng (flow / 흐름) làm điểm (point / 지점) đó giảm nhiệt; nếu lạnh hơn neighbors, nó nhận heat. PDE nói cục bộ (local / 로컬) thời gian (time / 시간) thay đổi (change / 변경) proportional với cục bộ (local / 로컬) spatial imbalance.
 
-Đây là **diffusion equation / 확산방정식**. Same mathematical structure mô tả diffusion của particles, smoothing của concentration và một số algorithms làm mờ image.
+Đây là **diffusion equation / 확산방정식**. Same mathematical cấu trúc (structure / 구조) mô tả diffusion của particles, smoothing của concentration và một số algorithms làm mờ ảnh (image / 이미지).
+
+
+> **Chuyển mạch:** Từ **Heat equation: diffusion từ cục bộ (local / 로컬) imbalance**, ta sang **Wave equation: propagation thay vì smoothing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Wave equation: propagation thay vì smoothing
 
@@ -46,13 +55,16 @@ Một ideal vibrating string có wave equation
 c^2\frac{\partial^2u}{\partial x^2}.
 ```
 
-Khác heat equation, time derivative là second order. Nó liên hệ acceleration của displacement với spatial curvature. Kết quả là disturbance có xu hướng propagate như waves thay vì chỉ diffuse away.
+Khác heat equation, thời gian (time / 시간) derivative là second thứ tự (order / 순서). Nó liên hệ acceleration của displacement với spatial curvature. Kết quả là disturbance có xu hướng propagate như waves thay vì chỉ diffuse away.
 
-Speed `c` xác định propagation speed. Đây là nơi trigonometric functions, complex exponentials và Fourier analysis trở nên tự nhiên: sinusoidal waves là eigenmodes của nhiều linear PDE systems.
+Speed `c` xác định propagation speed. Đây là nơi trigonometric functions, complex exponentials và Fourier phân tích (analysis / 분석) trở nên tự nhiên: sinusoidal waves là eigenmodes của nhiều tuyến tính (linear / 선형) PDE các hệ thống (systems / 시스템들).
+
+
+> **Chuyển mạch:** Từ **Wave equation: propagation thay vì smoothing**, ta sang **Laplace và Poisson equations: equilibrium fields** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Laplace và Poisson equations: equilibrium fields
 
-Khi system đạt steady state, time derivative có thể biến mất. Heat equation ở equilibrium dẫn đến
+Khi hệ thống (system / 시스템) đạt steady trạng thái (state / 상태), thời gian (time / 시간) derivative có thể biến mất. Heat equation ở equilibrium dẫn đến
 
 ```math
 \nabla^2u=0,
@@ -66,7 +78,7 @@ Khi system đạt steady state, time derivative có thể biến mất. Heat equ
 
 ta có **Poisson equation / 푸아송 방정식**.
 
-Các equations này xuất hiện trong electrostatics, gravitation, steady heat flow và potential theory. Operator
+Các equations này xuất hiện trong electrostatics, gravitation, steady heat luồng (flow / 흐름) và potential lý thuyết (theory / 이론). Operator
 
 ```math
 \nabla^2
@@ -74,17 +86,20 @@ Các equations này xuất hiện trong electrostatics, gravitation, steady heat
 
 là **Laplacian / 라플라시안**, tổng các second partial derivatives theo spatial coordinates.
 
-## Initial conditions và boundary conditions
 
-PDE không được xác định chỉ bởi equation. Ta cần biết state ban đầu và cách domain tương tác với boundary.
+> **Chuyển mạch:** Từ **Laplace và Poisson equations: equilibrium fields**, ta sang **Initial conditions và ranh giới (boundary / 경계) conditions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Với heat equation, **initial condition / 초기조건** có thể là
+## Initial conditions và ranh giới (boundary / 경계) conditions
+
+PDE không được xác định chỉ bởi equation. Ta cần biết trạng thái (state / 상태) ban đầu và cách lĩnh vực (domain / 도메인) tương tác với ranh giới (boundary / 경계).
+
+Với heat equation, **initial điều kiện (condition / 조건) / 초기조건** có thể là
 
 ```math
 u(x,0)=f(x).
 ```
 
-Một **Dirichlet boundary condition / 디리클레 경계조건** đặt value ở boundary:
+Một **Dirichlet ranh giới (boundary / 경계) điều kiện (condition / 조건) / 디리클레 경계조건** đặt giá trị (value / 값) ở ranh giới (boundary / 경계):
 
 ```math
 u(0,t)=0,
@@ -92,33 +107,39 @@ u(0,t)=0,
 u(L,t)=0.
 ```
 
-Một **Neumann boundary condition / 노이만 경계조건** đặt derivative normal, thường tương ứng với flux:
+Một **Neumann ranh giới (boundary / 경계) điều kiện (condition / 조건) / 노이만 경계조건** đặt derivative normal, thường tương ứng với flux:
 
 ```math
 \frac{\partial u}{\partial n}=0.
 ```
 
-Điều này có thể biểu diễn insulated boundary — không có heat flow xuyên qua.
+Điều này có thể biểu diễn insulated ranh giới (boundary / 경계) — không có heat luồng (flow / 흐름) xuyên qua.
 
-Same PDE với boundary conditions khác có thể cho behavior hoàn toàn khác. Vì vậy boundary conditions là một phần của mathematical model, không phải chi tiết phụ sau khi đã “có phương trình”.
+Same PDE với ranh giới (boundary / 경계) conditions khác có thể cho hành vi (behavior / 동작) hoàn toàn khác. Vì vậy ranh giới (boundary / 경계) conditions là một phần của mathematical mô hình (model / 모델), không phải chi tiết phụ sau khi đã “có phương trình”.
+
+
+> **Chuyển mạch:** Từ **Initial conditions và ranh giới (boundary / 경계) conditions**, ta sang **Classification: elliptic, parabolic, hyperbolic** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Classification: elliptic, parabolic, hyperbolic
 
-Linear second-order PDE thường được phân loại thành elliptic, parabolic và hyperbolic. Không cần học classification như taxonomy rời rạc; nó phản ánh qualitative behavior.
+Tuyến tính (linear / 선형) second-order PDE thường được phân loại thành elliptic, parabolic và hyperbolic. Không cần học classification như taxonomy rời rạc; nó phản ánh qualitative hành vi (behavior / 동작).
 
-**Elliptic** equations như Laplace thường mô tả equilibrium; influence có tính global. **Parabolic** equations như heat mô tả diffusion và smoothing theo time. **Hyperbolic** equations như wave mô tả propagation với finite-speed characteristics.
+**Elliptic** equations như Laplace thường mô tả equilibrium; influence có tính toàn cục (global / 전역). **Parabolic** equations như heat mô tả diffusion và smoothing theo thời gian (time / 시간). **Hyperbolic** equations như wave mô tả propagation với finite-speed characteristics.
 
-Classification ảnh hưởng cả mathematical theory lẫn numerical method thích hợp.
+Classification ảnh hưởng cả mathematical lý thuyết (theory / 이론) lẫn numerical phương thức (method / 메서드) thích hợp.
+
+
+> **Chuyển mạch:** Từ **Classification: elliptic, parabolic, hyperbolic**, ta sang **Separation of variables và eigenfunctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Separation of variables và eigenfunctions
 
-Một classical technique là giả sử solution có product form
+Một classical technique là giả sử solution có sản phẩm (product / 제품) form
 
 ```math
 u(x,t)=X(x)T(t).
 ```
 
-Thay vào PDE có thể tách problem thành ODEs. Với heat equation,
+Thay vào PDE có thể tách bài toán (problem / 문제) thành ODEs. Với heat equation,
 
 ```math
 X(x)T'(t)=\alpha X''(x)T(t).
@@ -132,11 +153,14 @@ Chia cho `\alpha XT`:
 
 Vế trái chỉ phụ thuộc `t`, vế phải chỉ phụ thuộc `x`; để equality giữ cho mọi `x,t`, cả hai phải bằng cùng constant. Ta thu được hai ODEs.
 
-Boundary conditions thường chỉ cho phép một discrete set các spatial modes `X_n`. Đây chính là bridge tới eigenvalues/eigenvectors và Fourier series: arbitrary initial profile được phân rã thành eigenmodes, mỗi mode tiến hóa theo law riêng.
+Ranh giới (boundary / 경계) conditions thường chỉ cho phép một discrete set các spatial modes `X_n`. Đây chính là cầu nối (bridge / 브리지) tới eigenvalues/eigenvectors và Fourier series: arbitrary initial profile được phân rã thành eigenmodes, mỗi chế độ (mode / 모드) tiến hóa theo law riêng.
+
+
+> **Chuyển mạch:** Từ **Separation of variables và eigenfunctions**, ta sang **Numerical PDE: grid hóa không gian và thời gian** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Numerical PDE: grid hóa không gian và thời gian
 
-Đa số realistic PDE không có closed-form solution dễ dùng. Ta discretize domain thành grid hoặc mesh. Với finite difference, second derivative có approximation
+Đa số realistic PDE không có closed-form solution dễ dùng. Ta discretize lĩnh vực (domain / 도메인) thành grid hoặc mesh. Với finite difference, second derivative có approximation
 
 ```math
 \frac{\partial^2u}{\partial x^2}(x_i)
@@ -144,30 +168,44 @@ Boundary conditions thường chỉ cho phép một discrete set các spatial mo
 \frac{u_{i+1}-2u_i+u_{i-1}}{\Delta x^2}.
 ```
 
-Heat equation trở thành update rule trên array values. Đây là điểm PDE gặp numerical linear algebra, sparse matrices, parallel computing và GPU.
+Heat equation trở thành cập nhật (update / 업데이트) quy tắc (rule / 규칙) trên array values. Đây là điểm PDE gặp numerical tuyến tính (linear / 선형) algebra, sparse matrices, parallel computing và GPU.
 
-Nhưng discretization tạo thêm questions về **stability / 안정성**, **consistency / 일관성** và **convergence / 수렴성**. Một scheme nhìn hợp lý về algebra có thể explode numerically nếu timestep quá lớn. Ví dụ explicit heat scheme thường có stability restriction liên hệ `\Delta t` với `\Delta x^2`.
+Nhưng discretization tạo thêm questions về **stability / 안정성**, **consistency / 일관성** và **convergence / 수렴성**. Một scheme nhìn hợp lý về algebra có thể explode numerically nếu timestep quá lớn. Ví dụ tường minh (explicit / 명시적) heat scheme thường có stability restriction liên hệ `\Delta t` với `\Delta x^2`.
 
-## PDE trong graphics, ML và engineering
 
-Computer graphics dùng PDE trong fluid simulation, cloth, diffusion và image processing. Computational fluid dynamics giải Navier–Stokes equations trên meshes. Finance dùng PDE như Black–Scholes dưới certain assumptions. Physics-informed neural networks đưa PDE residual vào loss function, biến differential law thành training constraint.
+> **Chuyển mạch:** Từ **Numerical PDE: grid hóa không gian và thời gian**, ta sang **PDE trong graphics, ML và kỹ thuật (engineering / 엔지니어링)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Trong image processing, diffusion-like PDE có thể smooth noise. Nhưng isotropic diffusion cũng làm mờ edges; nonlinear diffusion cố preserve important boundaries. Đây là ví dụ rõ rằng mathematical model quyết định loại information bị giữ hay mất.
+## PDE trong graphics, ML và kỹ thuật (engineering / 엔지니어링)
 
-## Knowledge Connection
+Computer graphics dùng PDE trong fluid simulation, cloth, diffusion và xử lý ảnh (image processing / 이미지 처리). Computational fluid dynamics giải Navier–Stokes equations trên meshes. Finance dùng PDE như Black–Scholes dưới certain các giả định (assumptions / 가정들). Physics-informed neural networks đưa PDE residual vào hàm mất mát (loss function / 손실 함수), biến differential law thành huấn luyện (training / 학습) ràng buộc (constraint / 제약조건).
 
-PDE ngồi ở intersection của multivariable calculus, vector calculus, linear algebra, Fourier analysis, differential equations và numerical methods. Gradient/divergence/curl mô tả fields; eigenfunctions cung cấp natural modes; Fourier đổi representation; sparse matrices xuất hiện sau discretization; optimization xuất hiện trong variational formulations.
+Trong xử lý ảnh (image processing / 이미지 처리), diffusion-like PDE có thể smooth noise. Nhưng isotropic diffusion cũng làm mờ edges; nonlinear diffusion cố preserve important boundaries. Đây là ví dụ rõ rằng mathematical mô hình (model / 모델) quyết định loại thông tin (information / 정보) bị giữ hay mất.
 
-Một powerful viewpoint là xem PDE như “local law applied everywhere”. ODE nói state tại một point in state-space thay đổi theo law; PDE nói field tại mọi spatial point thay đổi theo local differential relationships và bị coupled qua neighbors.
 
-## Mental Model
+> **Chuyển mạch:** Từ **PDE trong graphics, ML và kỹ thuật (engineering / 엔지니어링)**, ta sang **liên kết kiến thức (knowledge connection / 지식 연결)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-> PDE là cách viết một luật local cho một field trải trên không gian. Differential operator đo local shape hoặc flux; boundary/initial conditions xác định environment; solution là global behavior xuất hiện khi cùng local law được thỏa ở mọi point.
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-## Common Misconceptions
+PDE ngồi ở intersection của multivariable calculus, véc-tơ (vector / 벡터) calculus, tuyến tính (linear / 선형) algebra, Fourier phân tích (analysis / 분석), differential equations và numerical methods. độ dốc (gradient / 기울기)/divergence/curl mô tả fields; eigenfunctions cung cấp natural modes; Fourier đổi biểu diễn (representation / 표현); sparse matrices xuất hiện sau discretization; tối ưu hóa (optimization / 최적화) xuất hiện trong variational formulations.
 
-PDE không đơn giản là ODE “có nhiều biến hơn”. Spatial coupling, boundaries và function spaces làm problem qualitatively khác.
+Một powerful viewpoint là xem PDE như “cục bộ (local / 로컬) law applied everywhere”. ODE nói trạng thái (state / 상태) tại một điểm (point / 지점) in state-space thay đổi theo law; PDE nói trường dữ liệu (field / 필드) tại mọi spatial điểm (point / 지점) thay đổi theo cục bộ (local / 로컬) differential relationships và bị coupled qua neighbors.
 
-Có PDE và boundary conditions chưa chắc luôn có unique smooth solution; existence, uniqueness và regularity là questions riêng. Numerical solution cũng không tự động là solution thật: cần analyze discretization error và stability.
 
-Cuối cùng, Fourier methods không “giải mọi PDE”. Chúng đặc biệt mạnh với linear systems và regular domains/boundaries; nonlinearities, irregular geometry hoặc changing boundaries có thể yêu cầu methods khác.
+> **Chuyển mạch:** Từ **liên kết kiến thức (knowledge connection / 지식 연결)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> PDE là cách viết một luật cục bộ (local / 로컬) cho một trường dữ liệu (field / 필드) trải trên không gian. Differential operator đo cục bộ (local / 로컬) shape hoặc flux; ranh giới (boundary / 경계)/initial conditions xác định môi trường (environment / 환경); solution là toàn cục (global / 전역) hành vi (behavior / 동작) xuất hiện khi cùng cục bộ (local / 로컬) law được thỏa ở mọi điểm (point / 지점).
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Dùng chung (common / 공통) Misconceptions
+
+PDE không đơn giản là ODE “có nhiều biến hơn”. Spatial coupling, boundaries và hàm (function / 함수) spaces làm bài toán (problem / 문제) qualitatively khác.
+
+Có PDE và ranh giới (boundary / 경계) conditions chưa chắc luôn có unique smooth solution; existence, uniqueness và regularity là questions riêng. Numerical solution cũng không tự động là solution thật: cần analyze discretization lỗi (error / 오류) và stability.
+
+Cuối cùng, Fourier methods không “giải mọi PDE”. Chúng đặc biệt mạnh với tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) và regular domains/boundaries; nonlinearities, irregular hình học (geometry / 기하학) hoặc changing boundaries có thể yêu cầu methods khác.
+
+> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 limits and continuity](./00_limits_and_continuity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

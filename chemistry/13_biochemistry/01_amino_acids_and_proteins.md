@@ -1,5 +1,8 @@
 # Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử
 
+> **Mạch đọc:** Đọc **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Amino acid — phân tử nhỏ nhưng có nhiều trạng thái** sang **Hóa học acid-base của amino acid**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Protein (단백질)** là polymer của amino acid, nhưng mô tả đó mới chỉ nói thành phần. Điều làm protein đặc biệt là trình tự tạo ra một **cảnh quan năng lượng (energy landscape)** trong đó một số cấu dạng được ưu tiên, từ đó hình thành vị trí liên kết, trung tâm xúc tác, phần tử cơ học và công tắc phân tử.
 
 ## Amino acid — phân tử nhỏ nhưng có nhiều trạng thái
@@ -64,7 +67,7 @@ Ví dụ:
 
 Giá trị \(pK_a\) trong sách là giá trị của một môi trường mô hình. Trong protein đã gấp cuộn, điện tích bị chôn, residue lân cận, liên kết hydrogen và khả năng tiếp xúc dung môi có thể làm \(pK_a\) dịch nhiều đơn vị.
 
-Điều này cho phép enzyme **điều chỉnh (tune)** một residue để nó làm acid hoặc base đúng tại vị trí hoạt động.
+Điều này cho phép enzyme **điều chỉnh (tune)** một residue để nó làm acid hoặc cơ sở (base / 기반) đúng tại vị trí hoạt động.
 
 Histidine chẳng hạn có thể luân phiên làm chất cho và nhận proton vì \(pK_a\) của imidazole gần pH sinh học và dễ bị môi trường cục bộ điều chỉnh.
 
@@ -141,9 +144,9 @@ Mạch bên xen kẽ hướng lên và xuống khỏi mặt sheet.
 
 β-sheet có thể tạo lõi cấu trúc mở rộng, thùng β trong màng hoặc tập hợp dạng amyloid tùy bối cảnh.
 
-## Turn và loop
+## Turn và vòng lặp (loop / 루프)
 
-Loop không phải “phần dư ngẫu nhiên”. Chúng thường tạo vị trí hoạt động, hốc liên kết ligand và bản lề linh động.
+Vòng lặp (loop / 루프) không phải “phần dư ngẫu nhiên”. Chúng thường tạo vị trí hoạt động, hốc liên kết ligand và bản lề linh động.
 
 β-turn cho phép chuỗi đổi hướng nhanh; glycine và proline thường xuất hiện vì hình học phù hợp.
 
@@ -261,7 +264,7 @@ Enzyme bố trí mạch bên, cofactor và cơ chất để ổn định trạng
 
 Các chiến lược xúc tác gồm:
 
-- xúc tác acid/base tổng quát;
+- xúc tác acid/cơ sở (base / 기반) tổng quát;
 - xúc tác cộng hóa trị;
 - xúc tác ion kim loại;
 - ổn định tĩnh điện;
@@ -375,3 +378,5 @@ Không. Chỉ cần thay đổi phân bố trạng thái hoặc động lực h�
 Protein là **một cảnh quan năng lượng do trình tự lập trình và được dung môi ghép nối**. Trình tự quyết định các tương tác có thể có; dung môi và môi trường định hình năng lượng tự do; động lực của ensemble quyết định cấu dạng nào được chiếm; chức năng xuất hiện khi các cấu dạng đó bố trí hóa học đúng vị trí.
 
 Xem tiếp: [Carbohydrate](./02_carbohydrates.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 chemistry of life](./00_chemistry_of_life.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

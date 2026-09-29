@@ -2,7 +2,7 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **운영체제 (Operating Systems)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **운영체제 (Operating Systems)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
 Mục đích của bài này là hiểu **운영체제 (Operating Systems)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **082. 운영체제 기능 및 종류 (Operating System OS)** khi chuyển sang phần tiếp theo.
 
@@ -20,13 +20,15 @@ Mục đích của bài này là hiểu **운영체제 (Operating Systems)** nh�
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **운영체제 (Operating Systems)** và nối nó với **082. 운영체제 기능 및 종류 (Operating System OS)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 운영체제 (Operating Systems)
 
-Ở bước 34/77, **운영체제 (Operating Systems)** xuất hiện như phần tiếp nối của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 34/78, **운영체제 (Operating Systems)** xuất hiện như phần tiếp nối của **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **운영체제 (Operating Systems)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **평가 기준 (Tiêu chí đánh giá)**, **제어 프로그램 (Control Program - Chương trình điều khiển)**, **처리 프로그램 (Processing Program - Chương trình xử lý)**, **선점형 멀티태스킹 (Preemptive Multi-Tasking)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -99,7 +101,7 @@ Với **286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)**,
 Phần nguồn của **286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **시분할 시스템 (Time Sharing System)**: 시간을 분할하여 대화식으로 운영.
-- **개방형 시스템 (Open System)**: 소스 공개. (Hệ thống mở, mã nguồn mở).
+- **개방형 시스템 (Open System)**: 표준 인터페이스와 이식성을 중시하며, 개방형이라는 사실이 곧 소스 코드 공개나 오픈 소스 라이선스를 뜻하지는 않는다.
 - **네트워킹 (Networking)**: 통신망 관리용으로 적합.
 
 Các bullet của **286. UNIX의 특징 (UNIX Overview / Đặc điểm UNIX - Bổ sung)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
@@ -117,18 +119,18 @@ Các ý ngay dưới **287. UNIX 시스템의 구성 (UNIX System Structure / C�
 
 Các bullet của **287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-**287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)** vừa cho ta cách đặt câu hỏi. Bây giờ **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+**287. UNIX 시스템의 구성 (UNIX System Structure / Cấu trúc hệ thống UNIX)** vừa cho ta cách đặt câu hỏi. Bây giờ **288. 파일 디스크립터 (File Descriptor)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Ở đoạn **288. 파일 디스크립터 (File Descriptor)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
-### 288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)
+### 288. 파일 디스크립터 (File Descriptor)
 
-Bây giờ ta đi vào nội dung của **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Bây giờ ta đi vào nội dung của **288. 파일 디스크립터 (File Descriptor)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
-- 파일을 관리하기 위한 시스템 제어 블록 (Khối dữ liệu chứa thông tin quản lý tập tin).
-- 사용자가 직접 참조할 수 없다. (Người dùng không thể truy cập trực tiếp).
+- 프로세스가 열린 파일을 참조할 때 사용하는 정수 핸들이다. 파일 상태를 담는 FCB(또는 inode 등 커널 자료구조)와 동일한 개념이 아니다.
+- 응용 프로그램은 디스크립터 값을 통해 읽기·쓰기·닫기 연산을 요청한다.
 
-Các bullet của **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+Các bullet của **288. 파일 디스크립터 (File Descriptor)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Với **288. 파일 디스크립터 (File Descriptor / FCB - Khối điều khiển tập tin)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+Với **288. 파일 디스크립터 (File Descriptor)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
 Như vậy, **운영체제 (Operating Systems)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **082. 운영체제 기능 및 종류 (Operating System OS)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

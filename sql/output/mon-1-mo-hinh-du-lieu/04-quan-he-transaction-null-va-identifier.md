@@ -1,4 +1,4 @@
-# Quan hệ, Transaction, NULL và Identifier
+# Quan hệ, giao dịch (transaction / 트랜잭션), NULL và Identifier
 
 > **Mục tiêu:** Quan hệ trong mô hình, ACID, NULL trong SQL và natural/surrogate key.
 
@@ -9,6 +9,10 @@ Các thuật ngữ SQLD được giữ nguyên tiếng Hàn/English trong phần
 ## Mạch tư duy (Logic học)
 
 Hãy xác định **đối tượng dữ liệu** trước, sau đó đọc **điều kiện**, **phạm vi dòng**, **thứ tự xử lý** và cuối cùng kiểm tra **kết quả mong đợi**. Với SQL, luôn phân biệt điều kiện lọc trước nhóm (`WHERE`) với điều kiện lọc sau nhóm (`HAVING`).
+
+## Mạch nối của bài học
+
+Bài này không đứng riêng: hãy nối **Quan hệ, giao dịch (transaction / 트랜잭션), NULL và Identifier** với bài trước bằng đối tượng (object / 객체)/điều kiện mà nó tái sử dụng, rồi dùng kết quả ở phần cuối để chọn bài kế tiếp trong cùng môn. Khi gặp một truy vấn mới, nói rõ nó đang mở rộng mô hình dữ liệu, thứ tự xử lý hay cách kiểm tra kết quả nào trước khi nhớ cú pháp.
 
 > **Cách học:** Đọc phần khái niệm → tự chạy lại các ví dụ SQL → chốt lại các mục `Keyword`, bảng so sánh và phần ghi nhớ cuối bài.
 
@@ -38,7 +42,7 @@ Ta bắt đầu **Phần 2: Quan hệ và JOIN** bằng câu hỏi: **ta đang k
 
 ## Phần 2: Quan hệ và JOIN
 
-Ba hình này nối tiếp phần **반정규화 — Denormalization — Phi chuẩn hóa**, sau đó chuyển sang **관계 — Relationship — Quan hệ** và **조인 — JOIN — Kết nối bảng**.
+Ba hình này nối tiếp phần **반정규화 — Denormalization — Phi chuẩn hóa**, sau đó chuyển sang **관계 — Relationship — Quan hệ** và **조인 — phép nối (join / 조인) — Kết nối bảng**.
 
 ---
 
@@ -75,7 +79,7 @@ Ta bắt đầu **1.1 반정규화의 khái niệm** bằng câu hỏi: **khái 
 
 **반정규화는 데이터베이스 성능 향상을 위해 데이터 중복을 허용하고 조인을 줄이는 방법이다.**
 
-**Phi chuẩn hóa là phương pháp cho phép trùng lặp dữ liệu và giảm JOIN nhằm cải thiện hiệu năng cơ sở dữ liệu.**
+**Phi chuẩn hóa là phương pháp cho phép trùng lặp dữ liệu và giảm phép nối (join / 조인) nhằm cải thiện hiệu năng cơ sở dữ liệu.**
 
 **반정규화는 정규화된 데이터 모델을 중복·통합·분리하여 시스템의 개발과 운영을 단순화하는 모델링 기법이다.**
 
@@ -115,7 +119,7 @@ Ta bắt đầu **1.3 Khi nào thực hiện 반정규화?** bằng câu hỏi: 
 
 **정규화로 엔터티와 관계의 수가 많아져 조인으로 인한 성능 저하가 예상될 때 반정규화를 수행할 수 있다.**
 
-**Có thể thực hiện phi chuẩn hóa khi việc chuẩn hóa làm tăng số Entity và quan hệ, khiến hiệu năng JOIN được dự đoán sẽ giảm.**
+**Có thể thực hiện phi chuẩn hóa khi việc chuẩn hóa làm tăng số thực thể (entity / 엔터티) và quan hệ, khiến hiệu năng phép nối (join / 조인) được dự đoán sẽ giảm.**
 
 **정규화에 충실할수록 데이터의 종속성과 활용성은 향상되지만 수행 속도가 느려지는 경우 반정규화를 고려할 수 있다.**
 
@@ -144,7 +148,7 @@ Ví dụ:
 
 **Phi chuẩn hóa không phải lúc nào cũng bảo đảm cải thiện hiệu năng truy vấn.**
 
-Phải kiểm tra SQL thực tế, dữ liệu thực tế và Execution Plan trước khi quyết định.
+Phải kiểm tra SQL thực tế, dữ liệu thực tế và thực thi (execution / 실행) Plan trước khi quyết định.
 
 ---
 
@@ -202,9 +206,9 @@ Phần này nối mạch SQL với “부서 테이블 — Bảng phòng ban”,
 
 **Vì `부서번호` trong bảng nhân viên và `부서번호` trong bảng phòng ban có cùng giá trị nên có thể kết nối hai bảng.**
 
-**부서번호가 두 테이블을 연결하는 JOIN KEY가 된다.**
+**부서번호가 두 테이블을 연결하는 phép nối (join / 조인) KEY가 된다.**
 
-**`부서번호` trở thành JOIN KEY kết nối hai bảng.**
+**`부서번호` trở thành phép nối (join / 조인) KEY kết nối hai bảng.**
 
 Câu SQL tương ứng:
 
@@ -219,7 +223,7 @@ JOIN 부서 d
   ON s.부서번호 = d.부서번호;
 ```
 
-Khi thực hiện truy vấn này, thông tin phòng ban được lấy bằng JOIN thay vì lưu lặp lại trong bảng nhân viên.
+Khi thực hiện truy vấn này, thông tin phòng ban được lấy bằng phép nối (join / 조인) thay vì lưu lặp lại trong bảng nhân viên.
 
 Nếu phi chuẩn hóa, có thể thêm `부서명` và `부서 위치` vào bảng `사원`.
 
@@ -257,12 +261,12 @@ Ta bắt đầu **3.1 관계의 정의** bằng câu hỏi: **khái niệm này 
 
 **관계는 엔터티의 인스턴스 사이에 존재하는 논리적인 연관성이다.**
 
-**Quan hệ là sự liên kết logic tồn tại giữa các Instance của các Entity.**
+**Quan hệ là sự liên kết lô-gic (logic / 논리) tồn tại giữa các Instance của các thực thể (entity / 엔터티).**
 
 Nói đơn giản:
 
-- Entity là đối tượng hoặc chủ đề.
-- Instance là một bản ghi cụ thể của Entity.
+- thực thể (entity / 엔터티) là đối tượng hoặc chủ đề.
+- Instance là một bản ghi cụ thể của thực thể (entity / 엔터티).
 - Relationship là mối liên hệ giữa các bản ghi đó.
 
 Ví dụ:
@@ -300,7 +304,7 @@ Ta bắt đầu **존재 관계** bằng câu hỏi: **khái niệm này giải 
 
 **존재 관계는 한 엔터티가 다른 엔터티에 소속되는 관계이다.**
 
-**Quan hệ tồn tại là quan hệ trong đó một Entity thuộc về một Entity khác.**
+**Quan hệ tồn tại là quan hệ trong đó một thực thể (entity / 엔터티) thuộc về một thực thể (entity / 엔터티) khác.**
 
 Ví dụ:
 
@@ -325,7 +329,7 @@ Ta bắt đầu **행위 관계** bằng câu hỏi: **khái niệm này giải 
 
 **행위 관계는 어떤 행위를 통해 엔터티 사이에 발생하는 관계이다.**
 
-**Quan hệ hành vi là quan hệ phát sinh giữa các Entity thông qua một hành động.**
+**Quan hệ hành vi là quan hệ phát sinh giữa các thực thể (entity / 엔터티) thông qua một hành động.**
 
 Ví dụ:
 
@@ -434,11 +438,11 @@ Ta bắt đầu **5.1 Khái niệm JOIN** bằng câu hỏi: **ta đang kết h�
 
 **조인은 두 테이블의 공통 속성을 이용하여 데이터를 결합하는 것이다.**
 
-**JOIN là việc kết hợp dữ liệu của hai bảng bằng thuộc tính chung.**
+**phép nối (join / 조인) là việc kết hợp dữ liệu của hai bảng bằng thuộc tính chung.**
 
-**조인에 사용되는 공통 속성을 조인 키 또는 JOIN KEY라고 한다.**
+**조인에 사용되는 공통 속성을 조인 키 또는 phép nối (join / 조인) KEY라고 한다.**
 
-**Thuộc tính chung được sử dụng để JOIN gọi là Join Key hoặc JOIN KEY.**
+**Thuộc tính chung được sử dụng để phép nối (join / 조인) gọi là phép nối (join / 조인) Key hoặc phép nối (join / 조인) KEY.**
 
 Trong ví dụ:
 
@@ -446,7 +450,7 @@ Trong ví dụ:
 사원.부서번호 = 부서.부서번호
 ```
 
-`부서번호` là JOIN KEY.
+`부서번호` là phép nối (join / 조인) KEY.
 
 ---
 
@@ -484,7 +488,7 @@ Bảng `부서` chứa:
 부서번호, 부서명, 부서위치
 ```
 
-Muốn lấy thông tin đầy đủ phải JOIN:
+Muốn lấy thông tin đầy đủ phải phép nối (join / 조인):
 
 ```sql
 SELECT a.사번,
@@ -496,7 +500,7 @@ WHERE a.부서번호 = b.부서번호
   AND a.사번 = '2401';
 ```
 
-Hoặc viết theo ANSI JOIN:
+Hoặc viết theo ANSI phép nối (join / 조인):
 
 ```sql
 SELECT a.사번,
@@ -510,7 +514,7 @@ WHERE a.사번 = '2401';
 
 **정규화 후에는 데이터의 독립성이 높아지지만 필요한 정보를 함께 조회하려면 조인이 필요하다.**
 
-**Sau chuẩn hóa, tính độc lập của dữ liệu tăng lên nhưng cần JOIN khi muốn truy vấn các thông tin liên quan cùng lúc.**
+**Sau chuẩn hóa, tính độc lập của dữ liệu tăng lên nhưng cần phép nối (join / 조인) khi muốn truy vấn các thông tin liên quan cùng lúc.**
 
 ---
 
@@ -540,9 +544,9 @@ Ta bắt đầu **6.1 관계형 데이터 모델** bằng câu hỏi: **khái ni
 
 **관계형 데이터 모델에서 자기 자신끼리의 관계를 자기 자신과의 관계라고 한다.**
 
-**Trong mô hình dữ liệu quan hệ, quan hệ giữa các bản ghi trong cùng một Entity gọi là quan hệ với chính nó.**
+**Trong mô hình dữ liệu quan hệ, quan hệ giữa các bản ghi trong cùng một thực thể (entity / 엔터티) gọi là quan hệ với chính nó.**
 
-Một Entity có thể chứa quan hệ phân cấp giữa các Instance của chính Entity đó.
+Một thực thể (entity / 엔터티) có thể chứa quan hệ phân cấp giữa các Instance của chính thực thể (entity / 엔터티) đó.
 
 Ví dụ:
 
@@ -627,7 +631,7 @@ Kết quả:
 
 **자기 자신을 두 개의 별칭으로 나누어 사용하는 조인을 셀프 조인이라고 한다.**
 
-**JOIN một bảng với chính nó bằng hai bí danh khác nhau gọi là Self JOIN.**
+**phép nối (join / 조인) một bảng với chính nó bằng hai bí danh khác nhau gọi là Self phép nối (join / 조인).**
 
 ---
 
@@ -758,9 +762,9 @@ Ta bắt đầu **1. 반정규화** bằng câu hỏi: **khái niệm này giả
 
 ### 1. 반정규화
 
-**반정규화는 조회 성능을 위해 중복을 허용하고 JOIN을 줄이는 방법이다.**
+**반정규화는 조회 성능을 위해 중복을 허용하고 phép nối (join / 조인)을 줄이는 방법이다.**
 
-**Phi chuẩn hóa là cách cho phép trùng lặp và giảm JOIN để cải thiện hiệu năng truy vấn.**
+**Phi chuẩn hóa là cách cho phép trùng lặp và giảm phép nối (join / 조인) để cải thiện hiệu năng truy vấn.**
 
 Nhưng phải nhớ:
 
@@ -785,7 +789,7 @@ Phần này nối mạch SQL với “2. 관계”, giải thích dữ liệu đ
 | 한국어 | English | Nghĩa |
 | --- | --- | --- |
 | 존재 관계 | Existence Relationship | Quan hệ tồn tại |
-| 행위 관계 | Action Relationship | Quan hệ hành vi |
+| 행위 관계 | hành động (action / 동작) Relationship | Quan hệ hành vi |
 | 식별관계 | Identifying Relationship | Quan hệ định danh |
 | 비식별관계 | Non-identifying Relationship | Quan hệ không định danh |
 | 상호 배타적 관계 | Exclusive-OR Relationship | Quan hệ loại trừ lẫn nhau |
@@ -800,9 +804,9 @@ Ta bắt đầu **3. JOIN** bằng câu hỏi: **ta đang kết hợp những t�
 
 ### 3. JOIN
 
-**조인은 공통 속성인 JOIN KEY를 이용해 여러 테이블의 데이터를 결합하는 것이다.**
+**조인은 공통 속성인 phép nối (join / 조인) KEY를 이용해 여러 테이블의 데이터를 결합하는 것이다.**
 
-**JOIN là kết hợp dữ liệu của nhiều bảng bằng thuộc tính chung gọi là JOIN KEY.**
+**phép nối (join / 조인) là kết hợp dữ liệu của nhiều bảng bằng thuộc tính chung gọi là phép nối (join / 조인) KEY.**
 
 Ví dụ:
 
@@ -820,9 +824,9 @@ Ta bắt đầu **4. Self JOIN** bằng câu hỏi: **ta đang kết hợp nhữ
 
 ### 4. Self JOIN
 
-**셀프 조인은 하나의 테이블을 서로 다른 별칭으로 두 번 사용하여 자기 자신과 JOIN하는 것이다.**
+**셀프 조인은 하나의 테이블을 서로 다른 별칭으로 두 번 사용하여 자기 자신과 phép nối (join / 조인)하는 것이다.**
 
-**Self JOIN là JOIN một bảng với chính nó bằng hai bí danh khác nhau.**
+**Self phép nối (join / 조인) là phép nối (join / 조인) một bảng với chính nó bằng hai bí danh khác nhau.**
 
 Ví dụ thường gặp:
 
@@ -850,7 +854,7 @@ Phần này nối mạch SQL với “5. Câu ghi nhớ cuối bài”, giải t
 → 여러 자식 중 하나만 연결하면 EXCLUSIVE-OR
 ```
 
-**Chuẩn hóa làm tăng JOIN; các bảng được kết nối bằng JOIN KEY; cùng một bảng JOIN với chính nó là Self JOIN; chỉ được kết nối với một trong nhiều loại con là Exclusive-OR.**
+**Chuẩn hóa làm tăng phép nối (join / 조인); các bảng được kết nối bằng phép nối (join / 조인) KEY; cùng một bảng phép nối (join / 조인) với chính nó là Self phép nối (join / 조인); chỉ được kết nối với một trong nhiều loại con là Exclusive-OR.**
 ---
 
 Khi gom phần **5. Câu ghi nhớ cuối bài** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
@@ -887,11 +891,11 @@ Vậy ta đã có tiêu chí để đọc **1. 트랜잭션(Transaction)이란?*
 
 Ta bắt đầu **Keyword: 트랜잭션 — Transaction — Giao dịch** bằng câu hỏi: **thay đổi nào tác động lên hàng dữ liệu, phạm vi nào bị ảnh hưởng và khi nào thay đổi được xác nhận?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
-#### Keyword: 트랜잭션 — Transaction — Giao dịch
+#### Từ khóa (keyword / 키워드): 트랜잭션 — giao dịch (transaction / 트랜잭션) — Giao dịch
 
 Điểm quan trọng nhất là đừng hiểu `Transaction = một câu SQL`.
 
-Một transaction có thể chứa:
+Một giao dịch (transaction / 트랜잭션) có thể chứa:
 
 ```sql
 SELECT ...
@@ -900,7 +904,7 @@ INSERT ...
 DELETE ...
 ```
 
-Nhiều câu SQL có thể cùng phục vụ **một nghiệp vụ duy nhất**, nên chúng được gom lại thành **một transaction**.
+Nhiều câu SQL có thể cùng phục vụ **một nghiệp vụ duy nhất**, nên chúng được gom lại thành **một giao dịch (transaction / 트랜잭션)**.
 
 Ví dụ nghiệp vụ:
 
@@ -1045,7 +1049,7 @@ Vậy ta đã có tiêu chí để đọc **COMMIT**. Bây giờ chuyển sang *
 
 **ROLLBACK** là dữ liệu đầu vào của phép suy luận, không phải một khái niệm cần học tách khỏi truy vấn. Hãy đọc các cột và hàng để trả lời: **bảng này đang cung cấp những cột và hàng nào, khóa nào sẽ làm cầu nối, và dữ liệu thiếu sẽ ảnh hưởng kết quả ra sao?**
 
-#### ROLLBACK
+#### Quay lui (rollback / 롤백)
 
 > **ROLLBACK은 트랜잭션에서 발생한 변경사항을 취소한다.**
 ROLLBACK hủy các thay đổi xảy ra trong transaction.
@@ -1388,7 +1392,7 @@ Ví dụ:
 CHECK (balance >= 0)
 ```
 
-Nếu transaction khiến:
+Nếu giao dịch (transaction / 트랜잭션) khiến:
 
 ```
 balance = -1,000,000
@@ -1437,7 +1441,7 @@ UPDATE balance - 1M
 chưa COMMIT
 ```
 
-Transaction B không nên dựa vào trạng thái chưa hoàn tất đó như thể nó đã được xác nhận.
+Giao dịch (transaction / 트랜잭션) B không nên dựa vào trạng thái chưa hoàn tất đó như thể nó đã được xác nhận.
 
 Có thể hình dung:
 
@@ -1449,7 +1453,7 @@ T1: A -1M ---------------- COMMIT
 T2: không nên nhìn nó như dữ liệu đã hoàn tất
 ```
 
-Đây là lý do xuất hiện các vấn đề concurrency như:
+Đây là lý do xuất hiện các vấn đề tính đồng thời (concurrency / 동시성) như:
 
 ```
 Dirty Read
@@ -1531,8 +1535,8 @@ Phần này nối mạch SQL với “⭐ Tổng hợp ACID cực dễ nhớ”,
 | --- | --- | --- |
 | 원자성 | Atomicity | All or Nothing |
 | 일관성 | Consistency | Trước/sau đều hợp lệ |
-| 격리성 | Isolation | Transaction không can thiệp trạng thái trung gian của nhau |
-| 영속성 | Durability | COMMIT rồi thì phải được giữ |
+| 격리성 | Isolation | giao dịch (transaction / 트랜잭션) không can thiệp trạng thái trung gian của nhau |
+| 영속성 | Durability | lần ghi nhận (commit / 커밋) rồi thì phải được giữ |
 
 Nhớ chuỗi:
 
@@ -1720,7 +1724,7 @@ Lưu ý SQLD thường xoay quanh Oracle, vì vậy hãy nhớ mạnh:
 NVL()
 ```
 
-`ISNULL()` phổ biến ở SQL Server.
+`ISNULL()` phổ biến ở SQL máy chủ (server / 서버).
 
 ---
 
@@ -1810,7 +1814,7 @@ NULL = NULL
 
 không trả về `TRUE`.
 
-Trong logic SQL:
+Trong lô-gic (logic / 논리) SQL:
 
 ```
 TRUE
@@ -1818,7 +1822,7 @@ FALSE
 UNKNOWN
 ```
 
-được gọi là **Three-Valued Logic — 3VL**.
+được gọi là **Three-Valued lô-gic (logic / 논리) — 3VL**.
 
 ---
 
@@ -2362,7 +2366,7 @@ Hai row được phân biệt.
 
 Đây chính là **인조식별자**.
 
-Có thể sinh bằng Oracle Sequence:
+Có thể sinh bằng Oracle chuỗi (sequence / 시퀀스):
 
 ```sql
 주문상세번호_SEQ.NEXTVAL
@@ -2375,7 +2379,7 @@ INSERT INTO 주문이력
 VALUES (주문상세번호_SEQ.NEXTVAL, '101', 'c03', 3, ...);
 ```
 
-Sequence tự sinh:
+Chuỗi (sequence / 시퀀스) tự sinh:
 
 ```
 1
@@ -2433,7 +2437,7 @@ Về PK:
 
 Cho nên DB chấp nhận.
 
-Nhưng nếu nghiệp vụ **không cho phép cùng một `(주문번호, 상품번호)` xuất hiện lặp lại**, thì surrogate PK đã che mất business uniqueness đó.
+Nhưng nếu nghiệp vụ **không cho phép cùng một `(주문번호, 상품번호)` xuất hiện lặp lại**, thì surrogate PK đã che mất nghiệp vụ (business / 비즈니스) uniqueness đó.
 
 Đây là ý:
 
@@ -2487,7 +2491,7 @@ Vậy cần thêm:
 UNIQUE (ORDER_ID, PRODUCT_ID)
 ```
 
-nếu business rule yêu cầu uniqueness.
+nếu nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) yêu cầu uniqueness.
 
 ---
 
@@ -2512,16 +2516,16 @@ PK:
 ORDER_DETAIL_ID
 ```
 
-DB thường cần index phục vụ PK/unique constraint.
+DB thường cần chỉ mục (index / 인덱스) phục vụ PK/unique ràng buộc (constraint / 제약조건).
 
-Nhưng thực tế query thường:
+Nhưng thực tế truy vấn (query / 쿼리) thường:
 
 ```sql
 WHERE ORDER_ID = ?
 AND PRODUCT_ID = ?
 ```
 
-thì có thể lại cần index:
+thì có thể lại cần chỉ mục (index / 인덱스):
 
 ```
 (ORDER_ID, PRODUCT_ID)
@@ -2534,9 +2538,9 @@ Index 1 → ORDER_DETAIL_ID
 Index 2 → ORDER_ID + PRODUCT_ID
 ```
 
-Trong khi nếu thiết kế phù hợp khác đi, có trường hợp có thể giảm một phần index.
+Trong khi nếu thiết kế phù hợp khác đi, có trường hợp có thể giảm một phần chỉ mục (index / 인덱스).
 
-Mỗi index bổ sung làm DML như:
+Mỗi chỉ mục (index / 인덱스) bổ sung làm DML như:
 
 ```sql
 INSERT
@@ -2544,7 +2548,7 @@ UPDATE
 DELETE
 ```
 
-tốn thêm chi phí vì DB không chỉ sửa table mà còn phải duy trì index.
+tốn thêm chi phí vì DB không chỉ sửa bảng (table / 테이블) mà còn phải duy trì chỉ mục (index / 인덱스).
 
 ---
 
@@ -2575,7 +2579,7 @@ Order = 101
 Product = C03
 ```
 
-Vì vậy ứng dụng lại query:
+Vì vậy ứng dụng lại truy vấn (query / 쿼리):
 
 ```sql
 SELECT *
@@ -2590,7 +2594,7 @@ Chứ không phải lúc nào cũng:
 WHERE 주문상세번호 = 473928;
 ```
 
-Đây là lý do surrogate key **không tự động thay thế business key về mặt nghiệp vụ**.
+Đây là lý do surrogate key **không tự động thay thế nghiệp vụ (business / 비즈니스) key về mặt nghiệp vụ**.
 
 ---
 
@@ -2629,7 +2633,7 @@ ID
 
 Foreign key cũng đơn giản.
 
-Thay vì child table phải giữ:
+Thay vì child bảng (table / 테이블) phải giữ:
 
 ```
 customer_id
@@ -2644,10 +2648,10 @@ có thể chỉ giữ:
 parent_id
 ```
 
-→ code dễ hơn
-→ JOIN đơn giản hơn
+→ mã (code / 코드) dễ hơn
+→ phép nối (join / 조인) đơn giản hơn
 → FK nhỏ hơn
-→ developer dễ quản lý hơn.
+→ nhà phát triển (developer / 개발자) dễ quản lý hơn.
 
 Ảnh tóm lại:
 
@@ -2678,7 +2682,7 @@ Surrogate identifier giúp phát triển thuận tiện nhưng cũng có nhượ
 본질식별자 = luôn tốt ❌
 ```
 
-Phải xem **business rule + uniqueness + query pattern + integrity + performance**.
+Phải xem **nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) + uniqueness + truy vấn (query / 쿼리) mẫu (pattern / 패턴) + integrity + hiệu năng (performance / 성능)**.
 
 ---
 
@@ -2751,7 +2755,7 @@ Ta bắt đầu **30. Bức tranh tổng thể của 5 ảnh** bằng câu hỏi
 
 ## 30. Bức tranh tổng thể của 5 ảnh
 
-Bây giờ hãy nối chúng thành một logic duy nhất.
+Bây giờ hãy nối chúng thành một lô-gic (logic / 논리) duy nhất.
 
 ```
                 DATABASE MODEL

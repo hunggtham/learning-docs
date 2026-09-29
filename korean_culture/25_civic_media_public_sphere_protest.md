@@ -1,5 +1,8 @@
 # Đời sống công dân, truyền thông, biểu tình và không gian công luận
 
+> **Mạch đọc:** Đặt **Đời sống công dân, truyền thông, biểu tình và không gian công luận** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **시민: từ thần dân sang công dân** sang **광장: quảng trường như một công nghệ giao tiếp**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một nền văn hoá không chỉ thể hiện trong bữa ăn hoặc gia đình. Nó còn thể hiện ở cách xã hội bất đồng, tạo dư luận và yêu cầu thiết chế phản hồi. Trong Hàn Quốc hiện đại, **xã hội dân sự (civil society / 시민사회)**, truyền thông, biểu tình và không gian công luận số là những lớp quan trọng của đời sống công cộng.
 
 Chương này không đánh giá một đảng, phong trào hay lựa chọn chính trị cụ thể. Mục tiêu là hiểu cơ chế của sự tham gia công cộng.
@@ -40,7 +43,7 @@ Một lỗi nhận thức phổ biến là thiên lệch sẵn có: hình ảnh 
 
 **Công đoàn (labour union / 노동조합)** là thiết chế giúp người lao động phối hợp khi thương lượng với người sử dụng lao động. Nếu một lao động đơn lẻ có chi phí rời việc cao, quyền thương lượng của họ có thể thấp; tổ chức tập thể làm thay đổi tương quan quyền lực.
 
-Đây là logic cơ bản của lý thuyết trò chơi. Công đoàn không tự động “tốt” hoặc “xấu”; tác động phụ thuộc ngành, cách quản trị, quy tắc thương lượng và điều kiện kinh tế. Điểm văn hoá cần hiểu là phong trào lao động có vị trí quan trọng trong lịch sử hiện đại hoá và dân chủ hoá Hàn Quốc.
+Đây là lô-gic (logic / 논리) cơ bản của lý thuyết trò chơi. Công đoàn không tự động “tốt” hoặc “xấu”; tác động phụ thuộc ngành, cách quản trị, quy tắc thương lượng và điều kiện kinh tế. Điểm văn hoá cần hiểu là phong trào lao động có vị trí quan trọng trong lịch sử hiện đại hoá và dân chủ hoá Hàn Quốc.
 
 ## 언론 và portal: đường đi của tin tức thay đổi
 
@@ -55,7 +58,7 @@ người dùng → nhấp / chia sẻ / bình luận
 phản hồi → hệ sinh thái xếp hạng
 ```
 
-Nền tảng vì vậy không chỉ là đường ống trung tính; logic xếp hạng ảnh hưởng mức độ hiển thị.
+Nền tảng vì vậy không chỉ là đường ống trung tính; lô-gic (logic / 논리) xếp hạng ảnh hưởng mức độ hiển thị.
 
 ## 댓글 và dư luận trực tuyến
 
@@ -132,4 +135,6 @@ Truyền thông còn lựa chọn câu chuyện, cách đóng khung, tiêu đề
 
 ## Nguồn tham khảo định hướng
 
-Với hành vi sử dụng truyền thông, tham khảo Korea Press Foundation và luôn ghi năm khảo sát. Với tư liệu về dân chủ hoá và hồ sơ công cộng, dùng National Institute of Korean History, National Archives of Korea và các cơ sở lưu trữ hoặc nghiên cứu liên quan. Với sự kiện chính trị cụ thể, cần nguồn có ngày tháng rõ và đối chiếu các góc nhìn có chứng cứ thay vì dùng chương này như một kết luận chính trị.
+Với hành vi sử dụng truyền thông, tham khảo Korea Press Foundation và luôn ghi năm khảo sát. Với tư liệu về dân chủ hoá và hồ sơ công cộng, dùng National Institute of Korean lịch sử (history / 이력), National Archives of Korea và các cơ sở lưu trữ hoặc nghiên cứu liên quan. Với sự kiện chính trị cụ thể, cần nguồn có ngày tháng rõ và đối chiếu các góc nhìn có chứng cứ thay vì dùng chương này như một kết luận chính trị.
+
+> **Bàn giao:** Sau **Nguồn tham khảo định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

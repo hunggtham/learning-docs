@@ -1,6 +1,9 @@
 # Bản đồ nền tảng đầu tư và quản trị danh mục
 
-> File này là **bản đồ tổng quan**, không thay thế các chương chuyên sâu trong `01_foundations/`. Mục tiêu là giúp người đọc thấy toàn bộ hệ thống trước khi đi sâu. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc ở những điểm cần tra cứu.
+> **Mạch đọc:** Đặt **Bản đồ nền tảng đầu tư và quản trị danh mục** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Đầu tư thực chất là phân bổ sức mua theo thời gian** sang **2. Lợi suất danh nghĩa và lợi suất thực**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+> tệp (file / 파일) này là **bản đồ tổng quan**, không thay thế các chương chuyên sâu trong `01_foundations/`. Mục tiêu là giúp người đọc thấy toàn bộ hệ thống trước khi đi sâu. Phần giải thích dùng tiếng Việt; thuật ngữ tiếng Anh chỉ giữ trong ngoặc ở những điểm cần tra cứu.
 
 ## 1. Đầu tư thực chất là phân bổ sức mua theo thời gian
 
@@ -166,7 +169,7 @@ Bất động sản tạo lợi suất từ thu nhập thuê, tăng trưởng NO
 
 REIT là cổ phiếu của một cấu trúc sở hữu bất động sản; nó vẫn chịu rủi ro thị trường, lãi suất, tái cấp vốn và thanh khoản.
 
-Cap rate không nên được đọc tách khỏi tăng trưởng NOI và chi phí vốn.
+Cap tỷ lệ (rate / 비율) không nên được đọc tách khỏi tăng trưởng NOI và chi phí vốn.
 
 Vàng không có dòng tiền hợp đồng, nên là đối chiếu tốt để học cách đọc giá theo real yield, USD và nhu cầu dự trữ.
 
@@ -260,7 +263,7 @@ Các loại lệnh trả lời hai câu hỏi khác nhau: ưu tiên khớp hay �
 
 Lệnh thị trường ưu tiên khớp; lệnh giới hạn ưu tiên giá; stop là cơ chế kích hoạt chứ không phải bảo đảm giá thoát.
 
-Spread, slippage và market impact là các chi phí thực tế quan trọng, đặc biệt khi quy mô vị thế lớn so thanh khoản.
+Spread, slippage và thị trường (market / 시장) impact là các chi phí thực tế quan trọng, đặc biệt khi quy mô vị thế lớn so thanh khoản.
 
 Bán khống tiếp tục bài học về quyền và nghĩa vụ, nhưng với rủi ro giá tăng không có giới hạn lý thuyết.
 

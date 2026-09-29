@@ -1,18 +1,18 @@
-# 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
+# 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
 
-Mục đích của bài này là hiểu **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** khi chuyển sang phần tiếp theo.
+Mục đích của bài này là hiểu **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-집합연산자, 조인
+DDL, DML, DCL, 상세
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**에서 만든 기준을 이어받아 **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
+이 단원은 **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**에서 만든 기준을 이어받아 **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -20,46 +20,82 @@ Mục đích của bài này là hiểu **7. 집합연산자 및 조인 (Toán t
 2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
+
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** và nối nó với **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
+## 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
 
-Ở bước 52/55, **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** xuất hiện như phần tiếp nối của **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 52/56, **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** xuất hiện như phần tiếp nối của **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-Để đọc **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **INNER JOIN**, **OUTER JOIN (LEFT, RIGHT, FULL)**, **SELF JOIN**, **CROSS JOIN** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **집합 연산자 (Toán tử tập hợp)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **집합 연산자 (Toán tử tập hợp)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Trước hết, ta đặt **6.1 DDL 문법 (Cú pháp DDL)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **6.1 DDL 문법 (Cú pháp DDL)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
-### 집합 연산자 (Toán tử tập hợp)
+### 6.1 DDL 문법 (Cú pháp DDL)
 
-Bây giờ ta đi vào nội dung của **집합 연산자 (Toán tử tập hợp)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Bây giờ ta đi vào nội dung của **6.1 DDL 문법 (Cú pháp DDL)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
-- `UNION`: Hợp (Loại bỏ trùng lặp).
-- `UNION ALL`: Hợp tất cả (Giữ nguyên trùng lặp).
-- `INTERSECT`: Giao (Chỉ lấy phần chung).
-- `MINUS` / `EXCEPT`: Hiệu (Lấy bảng 1 trừ đi các dòng có trong bảng 2).
+- `CREATE TABLE`: Tạo bảng. Các ràng buộc: `PRIMARY KEY` (Khóa chính), `FOREIGN KEY` (Khóa ngoại), `UNIQUE` (Duy nhất), `CONSTRAINT` (Điều kiện), `CHECK` (Kiểm tra), `DEFAULT` (Mặc định), `NOT NULL` (Không được rỗng).
+- `ALTER TABLE`:
+  - `ADD` (Thêm cột): `ALTER TABLE table_name ADD col_name datatype;`
+  - `MODIFY` (Sửa kiểu/ràng buộc cột): `ALTER TABLE table_name MODIFY col_name datatype;`
+  - `DROP` (Xóa cột): `ALTER TABLE table_name DROP col_name;`
+  - `RENAME COLUMN`: Đổi tên cột.
+- `DROP TABLE` [CASCADE | RESTRICT]: Xóa bảng. CASCADE (xóa luôn đối tượng phụ thuộc), RESTRICT (không xóa nếu đang bị tham chiếu).
+- `TRUNCATE TABLE`: Xóa nhanh toàn bộ dữ liệu, giữ lại cấu trúc, **không thể ROLLBACK**.
 
-Các bullet của **집합 연산자 (Toán tử tập hợp)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+Các bullet của **6.1 DDL 문법 (Cú pháp DDL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Ta vừa chốt **집합 연산자 (Toán tử tập hợp)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **조인 (JOIN)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **조인 (JOIN)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Ta vừa chốt **6.1 DDL 문법 (Cú pháp DDL)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **6.2 DCL 문법 (Cú pháp DCL)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **6.2 DCL 문법 (Cú pháp DCL)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
-### 조인 (JOIN)
+### 6.2 DCL 문법 (Cú pháp DCL)
 
-Phần nguồn của **조인 (JOIN)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Phần nguồn của **6.2 DCL 문법 (Cú pháp DCL)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
-- **INNER JOIN**: Lấy các dòng có dữ liệu khớp nhau (Giao). `SELECT * FROM A INNER JOIN B ON A.id = B.id;`
-- **OUTER JOIN (LEFT, RIGHT, FULL)**: Lấy cả dữ liệu không khớp. Bên thiếu dữ liệu sẽ điền NULL.
-  - Cú pháp Oracle (+): `WHERE A.id = B.id(+)` (Đây là LEFT OUTER JOIN vì dấu (+) nằm ở bảng B, tức là bảng B thiếu cũng không sao).
-- **SELF JOIN**: Bảng tự JOIN với chính nó. (Dùng `AS` để tạo bí danh).
-- **CROSS JOIN**: Tích Đề-các (Cartesian product), bắt cặp tất cả các dòng của 2 bảng.
+- `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
+- `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
+
+Các bullet của **6.2 DCL 문법 (Cú pháp DCL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **6.2 DCL 문법 (Cú pháp DCL)**, đừng bắt đầu lại từ số không. **6.3 TCL 문법 (Cú pháp TCL)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Đoạn **6.3 TCL 문법 (Cú pháp TCL)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 6.3 TCL 문법 (Cú pháp TCL)
+
+Các ý ngay dưới **6.3 TCL 문법 (Cú pháp TCL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
+- `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
+- `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.
+
+Các bullet của **6.3 TCL 문법 (Cú pháp TCL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+**6.3 TCL 문법 (Cú pháp TCL)** vừa cho ta cách đặt câu hỏi. Bây giờ **6.3 DML 문법 (Cú pháp DML)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Ở đoạn **6.3 DML 문법 (Cú pháp DML)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 6.3 DML 문법 (Cú pháp DML)
+
+Bây giờ ta đi vào nội dung của **6.3 DML 문법 (Cú pháp DML)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- `SELECT [DISTINCT] 속성명 FROM 테이블 WHERE 조건 GROUP BY 속성명 HAVING 조건 ORDER BY 속성명 [ASC|DESC];`
+  - `DISTINCT`: Loại bỏ dòng trùng lặp.
+  - `GROUP BY`: Nhóm dữ liệu (ROLLUP, CUBE để tính tổng phụ).
+  - `HAVING`: Điều kiện cho nhóm (GROUP BY).
+- **집계 함수 (Hàm tập hợp):** `COUNT`, `SUM`, `AVG`, `MAX`, `MIN`, `STDDEV` (độ lệch chuẩn), `VARIANCE` (phương sai).
+- **순위 함수 (Hàm xếp hạng):** `RANK` (bỏ qua số hạng: 1, 1, 3), `DENSE_RANK` (không bỏ qua: 1, 1, 2), `ROW_NUMBER` (đánh số thứ tự: 1, 2, 3).
+- **WHERE 연산자 (Toán tử điều kiện):** `LIKE '%'` (Nhiều ký tự), `LIKE '_'` (1 ký tự), `BETWEEN A AND B`, `IN()`, `IS NULL`.
+- `UPDATE 테이블 SET 속성 = 데이터 WHERE 조건;` (Sửa dữ liệu).
+- `DELETE FROM 테이블 WHERE 조건;` (Xóa dữ liệu, có thể ROLLBACK).
+- `INSERT INTO 테이블 (속성) VALUES (데이터);` (Thêm dữ liệu).
 
 ---
 
-Với **조인 (JOIN)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+Với **6.3 DML 문법 (Cú pháp DML)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
-Điểm chốt của **조인 (JOIN)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+Với **6.3 DML 문법 (Cú pháp DML)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Như vậy, **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

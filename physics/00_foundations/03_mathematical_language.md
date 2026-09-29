@@ -1,5 +1,8 @@
 # Ngôn ngữ Toán học tối thiểu để đọc Vật lý
 
+> **Mạch đọc:** Đọc **Ngôn ngữ Toán học tối thiểu để đọc Vật lý** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hàm số: một đại lượng phụ thuộc vào cái gì?** sang **Đạo hàm: đo tốc độ biến thiên cục bộ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Toán học trong Vật lý không chỉ là công cụ tính số. Nó là ngôn ngữ dùng để nói chính xác một đại lượng phụ thuộc vào đâu, thay đổi như thế nào, tích lũy ra sao và các bậc tự do tương tác với nhau theo cấu trúc nào.
 
 ## Hàm số: một đại lượng phụ thuộc vào cái gì?
@@ -52,9 +55,9 @@ không trực tiếp cho ta `x(t)`. Nó đặt một quy luật lên độ cong 
 
 Điểm này rất quan trọng: **định luật tiến hóa không đồng nghĩa với trạng thái hiện tại**. Cùng một phương trình chuyển động có thể tạo vô số nghiệm khác nhau tùy trạng thái ban đầu.
 
-## Gradient: hướng tăng nhanh nhất
+## Độ dốc (gradient / 기울기): hướng tăng nhanh nhất
 
-Với trường vô hướng `f(x,y,z)`, gradient (gradient / 그래디언트) là
+Với trường vô hướng `f(x,y,z)`, độ dốc (gradient / 기울기) là
 
 ```math
 \nabla f=
@@ -65,7 +68,7 @@ Với trường vô hướng `f(x,y,z)`, gradient (gradient / 그래디언트) l
 \right).
 ```
 
-Gradient là một vectơ chỉ hướng mà `f` tăng nhanh nhất tại điểm đang xét; độ lớn của nó cho biết mức độ dốc cục bộ.
+Độ dốc (gradient / 기울기) là một vectơ chỉ hướng mà `f` tăng nhanh nhất tại điểm đang xét; độ lớn của nó cho biết mức độ dốc cục bộ.
 
 Trong hệ bảo toàn,
 
@@ -81,7 +84,7 @@ nên lực hướng về phía thế năng giảm nhanh nhất. Tương tự, qu
 
 nối điện trường với độ biến thiên không gian của điện thế.
 
-Gradient không chỉ xuất hiện trong Vật lý. Trong tối ưu hóa, hạ gradient (gradient descent) di chuyển trong không gian tham số theo hướng giảm nhanh hàm mất mát. Đây là cùng cấu trúc toán học nhưng có cách diễn giải khác.
+Độ dốc (gradient / 기울기) không chỉ xuất hiện trong Vật lý. Trong tối ưu hóa, hạ độ dốc (gradient / 기울기) (gradient descent) di chuyển trong không gian tham số theo hướng giảm nhanh hàm mất mát. Đây là cùng cấu trúc toán học nhưng có cách diễn giải khác.
 
 ## Divergence: nguồn và dòng ra cục bộ
 
@@ -127,7 +130,7 @@ Curl (curl / 회전) của trường vectơ
 
 cho biết từ trường biến thiên theo thời gian tạo ra một điện trường có cấu trúc tuần hoàn.
 
-Gradient, divergence và curl không phải ba phép toán rời rạc được đặt tên tùy ý. Chúng mô tả ba loại cấu trúc cục bộ khác nhau: độ dốc của trường vô hướng, nguồn của trường vectơ và xu hướng quay của trường vectơ.
+Độ dốc (gradient / 기울기), divergence và curl không phải ba phép toán rời rạc được đặt tên tùy ý. Chúng mô tả ba loại cấu trúc cục bộ khác nhau: độ dốc của trường vô hướng, nguồn của trường vectơ và xu hướng quay của trường vectơ.
 
 ## Từ cục bộ đến toàn cục
 
@@ -217,7 +220,7 @@ A\vec v=\lambda\vec v,
 
 thì `\vec v` là vectơ riêng (eigenvector), còn `\lambda` là trị riêng (eigenvalue). Dưới phép biến đổi `A`, hướng của `\vec v` được giữ nguyên và chỉ độ lớn thay đổi theo hệ số `\lambda`.
 
-Trong dao động cơ học, các vectơ riêng thường biểu diễn mode chuẩn (normal modes), còn trị riêng liên hệ với tần số riêng. Trong cơ học lượng tử, trạng thái riêng (eigenstate) của một toán tử quan sát tương ứng với một giá trị xác định có thể thu được khi đo đại lượng đó.
+Trong dao động cơ học, các vectơ riêng thường biểu diễn chế độ (mode / 모드) chuẩn (normal modes), còn trị riêng liên hệ với tần số riêng. Trong cơ học lượng tử, trạng thái riêng (eigenstate) của một toán tử quan sát tương ứng với một giá trị xác định có thể thu được khi đo đại lượng đó.
 
 Cùng một đại số tuyến tính được tái sử dụng, nhưng ý nghĩa vật lý của vectơ và trị riêng phụ thuộc vào bài toán.
 
@@ -258,9 +261,9 @@ Khi `\Delta t` hữu hạn, sai số rời rạc hóa (discretization error) xu�
 
 Do đó trong vật lý tính toán luôn có hai câu hỏi riêng: mô hình vật lý có phù hợp với hệ thật không, và phương pháp số có giải mô hình đó đủ chính xác không. Máy tính có thể giải rất chính xác một mô hình sai, hoặc giải sai một mô hình đúng.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Đạo hàm mô tả biến thiên cục bộ; tích phân cộng dồn các đóng góp cục bộ; phương trình vi phân mã hóa quy luật tiến hóa; gradient, divergence và curl mô tả cấu trúc không gian của trường; đại số tuyến tính tổ chức nhiều bậc tự do; khai triển Taylor cho phép xây dựng các mô hình gần đúng có kiểm soát.
+Đạo hàm mô tả biến thiên cục bộ; tích phân cộng dồn các đóng góp cục bộ; phương trình vi phân mã hóa quy luật tiến hóa; độ dốc (gradient / 기울기), divergence và curl mô tả cấu trúc không gian của trường; đại số tuyến tính tổ chức nhiều bậc tự do; khai triển Taylor cho phép xây dựng các mô hình gần đúng có kiểm soát.
 
 Khi gặp một biểu thức toán học trong Vật lý, đừng chỉ hỏi “tính thế nào?”. Hãy hỏi thêm: biến này đại diện cho đại lượng gì, nó sống trong không gian nào, đạo hàm đang giữ biến nào cố định, tích phân đang cộng trên miền nào và phép xấp xỉ đang bỏ qua bậc nào.
 
@@ -268,8 +271,10 @@ Khi gặp một biểu thức toán học trong Vật lý, đừng chỉ hỏi �
 
 Biết thao tác ký hiệu không đồng nghĩa với hiểu mô hình. Một đạo hàm không có ý nghĩa nếu không biết biến độc lập; một tích phân không đầy đủ nếu không biết miền; một vectơ không đầy đủ nếu không biết hệ tọa độ hoặc không gian của nó; một phương trình vi phân không chọn được nghiệm vật lý duy nhất nếu thiếu điều kiện đầu hoặc điều kiện biên.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Tư duy Vật lý](00_physical_thinking.md).
 
 **Liên hệ tiếp:** [Đối xứng, bảo toàn và thang đo](04_symmetry_conservation_scale.md), [Các cấu trúc lặp lại trong Vật lý](../13_connections/00_knowledge_connections.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 physical thinking](./00_physical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

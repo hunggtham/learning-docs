@@ -1,23 +1,26 @@
-# State Space và Search trong Artificial Intelligence
+# Trạng thái (state / 상태) không gian (space / 공간) và tìm kiếm (search / 검색) trong Artificial Intelligence
 
-Search (탐색 / tìm kiếm) là một trong những idea lâu đời và bền vững nhất của Artificial Intelligence. Trước khi Machine Learning thống trị AI hiện đại, rất nhiều bài toán intelligence đã được nhìn như: **ta đang ở một state, có một tập actions, mỗi action dẫn sang state khác; làm thế nào tìm được sequence actions đưa ta tới goal?**
+> **Mạch đọc:** Đặt **trạng thái (state / 상태) không gian (space / 공간) và tìm kiếm (search / 검색) trong Artificial Intelligence** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Từ thế giới thật tới trạng thái (state / 상태) không gian (space / 공간)** sang **trạng thái (state / 상태) không nhất thiết là observation**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Mental model này vẫn sống trong path finding, puzzle solving, game playing, planning, constraint solving, theorem proving, decoding, retrieval và agent systems. Search không đối lập với Machine Learning; learned model có thể cung cấp heuristic, value estimate hoặc proposal để search hiệu quả hơn.
 
-Xem nền tảng representation: [Problem Representation](../00_foundations/03_problem_representation.md).
+Tìm kiếm (search / 검색) là một trong những idea lâu đời và bền vững nhất của Artificial Intelligence. Trước khi Machine học tập (learning / 학습) thống trị AI hiện đại, rất nhiều bài toán intelligence đã được nhìn như: **ta đang ở một trạng thái (state / 상태), có một tập actions, mỗi hành động (action / 동작) dẫn sang trạng thái (state / 상태) khác; làm thế nào tìm được chuỗi (sequence / 시퀀스) actions đưa ta tới goal?**
 
-## Từ thế giới thật tới state space
+Mô hình tư duy (mental model / 사고 모델) này vẫn sống trong đường dẫn (path / 경로) finding, puzzle solving, game playing, planning, ràng buộc (constraint / 제약조건) solving, theorem proving, decoding, retrieval và tác nhân (agent / 에이전트) các hệ thống (systems / 시스템들). tìm kiếm (search / 검색) không đối lập với Machine học tập (learning / 학습); learned mô hình (model / 모델) có thể cung cấp heuristic, giá trị (value / 값) estimate hoặc proposal để tìm kiếm (search / 검색) hiệu quả hơn.
 
-Giả sử cần robot đi từ phòng A tới phòng D. Real world có vô số details: nhiệt độ, màu tường, tiếng ồn, battery, furniture. Search algorithm không thể xử lý toàn reality. Ta cần abstraction.
+Xem nền tảng biểu diễn (representation / 표현): [Problem Representation](../00_foundations/03_problem_representation.md).
 
-Một problem formulation thường gồm:
+## Từ thế giới thật tới trạng thái (state / 상태) không gian (space / 공간)
 
-- **initial state (초기 상태)**;
-- **state space (상태 공간)**;
+Giả sử cần robot đi từ phòng A tới phòng D. Real world có vô số details: nhiệt độ, màu tường, tiếng ồn, battery, furniture. tìm kiếm (search / 검색) thuật toán (algorithm / 알고리즘) không thể xử lý toàn reality. Ta cần lớp trừu tượng (abstraction / 추상화).
+
+Một bài toán (problem / 문제) formulation thường gồm:
+
+- **initial trạng thái (state / 상태)**;
+- **trạng thái (state / 상태) không gian (space / 공간)**;
 - **actions/operators (행동/연산자)**;
-- **transition model (상태 전이 모델)**;
-- **goal test (목표 검사)**;
-- **path cost (경로 비용)** khi action cost khác nhau.
+- **chuyển tiếp (transition / 전이) mô hình (model / 모델)**;
+- **goal kiểm thử (test / 테스트)**;
+- **đường dẫn (path / 경로) chi phí (cost / 비용)** khi hành động (action / 동작) chi phí (cost / 비용) khác nhau.
 
 Ví dụ map:
 
@@ -30,21 +33,21 @@ goal         = Gangnam Station
 cost         = travel time
 ```
 
-Ngay lập tức ta thấy representation quyết định problem. Nếu cost là distance, solution khác khi cost là expected travel time.
+Ngay lập tức ta thấy biểu diễn (representation / 표현) quyết định bài toán (problem / 문제). Nếu chi phí (cost / 비용) là distance, solution khác khi chi phí (cost / 비용) là expected travel thời gian (time / 시간).
 
-## State không nhất thiết là observation
+## Trạng thái (state / 상태) không nhất thiết là observation
 
-Trong fully observable environment, current observation có thể đủ xác định state.
+Trong fully observable môi trường (environment / 환경), hiện tại (current / 현재) observation có thể đủ xác định trạng thái (state / 상태).
 
-Trong partially observable environment, observation chỉ cung cấp partial information. Agent có thể duy trì **belief state**: distribution hoặc set của possible world states.
+Trong partially observable môi trường (environment / 환경), observation chỉ cung cấp partial thông tin (information / 정보). tác nhân (agent / 에이전트) có thể duy trì **belief trạng thái (state / 상태)**: phân phối (distribution / 분포) hoặc set của possible world states.
 
-Ví dụ robot không biết chính xác location do noisy sensor. Search/planning lúc này không chỉ trên physical state mà có thể trên belief states.
+Ví dụ robot không biết chính xác location do noisy sensor. tìm kiếm (search / 검색)/planning lúc này không chỉ trên vật lý (physical / 물리적) trạng thái (state / 상태) mà có thể trên belief states.
 
-Điều này nối Search với Probability và POMDP sau này.
+Điều này nối tìm kiếm (search / 검색) với xác suất (probability / 확률) và POMDP sau này.
 
-## Graph và tree
+## Đồ thị (graph / 그래프) và cây (tree / 트리)
 
-State-space problem thường represented như graph:
+State-space bài toán (problem / 문제) thường represented như đồ thị (graph / 그래프):
 
 \[
 G=(V,E)
@@ -52,7 +55,7 @@ G=(V,E)
 
 `V` là states, `E` là transitions/actions.
 
-Search algorithm thường xây một **search tree** từ initial state. Một state trong underlying graph có thể xuất hiện nhiều lần trong tree qua paths khác nhau.
+Tìm kiếm (search / 검색) thuật toán (algorithm / 알고리즘) thường xây một **tìm kiếm (search / 검색) cây (tree / 트리)** từ initial trạng thái (state / 상태). Một trạng thái (state / 상태) trong underlying đồ thị (graph / 그래프) có thể xuất hiện nhiều lần trong cây (tree / 트리) qua paths khác nhau.
 
 Phân biệt này quan trọng:
 
@@ -62,13 +65,13 @@ world/state graph
 search tree generated by algorithm
 ```
 
-Nếu không detect repeated states, search có thể loop vô hạn trong cyclic graph.
+Nếu không detect repeated states, tìm kiếm (search / 검색) có thể vòng lặp (loop / 루프) vô hạn trong cyclic đồ thị (graph / 그래프).
 
-## Node khác state
+## Nút (node / 노드) khác trạng thái (state / 상태)
 
-Một **state** mô tả configuration của problem.
+Một **trạng thái (state / 상태)** mô tả cấu hình (configuration / 구성) của bài toán (problem / 문제).
 
-Một **search node** thường chứa thêm:
+Một **tìm kiếm (search / 검색) nút (node / 노드)** thường chứa thêm:
 
 ```text
 state
@@ -79,13 +82,13 @@ depth
 metadata
 ```
 
-Hai nodes có thể represent cùng state nhưng đi tới bằng paths khác nhau. Graph-search algorithm thường giữ `explored/closed` information để tránh redundant expansion hoặc để compare best cost.
+Hai nodes có thể represent cùng trạng thái (state / 상태) nhưng đi tới bằng paths khác nhau. Graph-search thuật toán (algorithm / 알고리즘) thường giữ `explored/closed` thông tin (information / 정보) để tránh redundant expansion hoặc để compare best chi phí (cost / 비용).
 
 ## Frontier
 
 **Frontier (프런티어 / biên tìm kiếm)** là tập nodes đã discovered nhưng chưa expanded.
 
-Search algorithms khác nhau chủ yếu ở rule chọn node tiếp theo từ frontier.
+Tìm kiếm (search / 검색) algorithms khác nhau chủ yếu ở quy tắc (rule / 규칙) chọn nút (node / 노드) tiếp theo từ frontier.
 
 ```text
 BFS  → shallowest first
@@ -95,7 +98,7 @@ Greedy → lowest heuristic h(n)
 A*   → lowest g(n)+h(n)
 ```
 
-Một abstraction chung:
+Một lớp trừu tượng (abstraction / 추상화) chung:
 
 ```pseudo
 frontier ← {initial node}
@@ -107,13 +110,13 @@ while frontier not empty:
 return failure
 ```
 
-`choose` và duplicate-handling tạo behavior của từng algorithm.
+`choose` và duplicate-handling tạo hành vi (behavior / 동작) của từng thuật toán (algorithm / 알고리즘).
 
 ## Expansion
 
-Expanding node nghĩa apply available actions để generate successor states.
+Expanding nút (node / 노드) nghĩa apply available actions để generate successor states.
 
-Nếu branching factor trung bình là `b`, depth solution là `d`, number nodes có thể grow khoảng:
+Nếu branching factor trung bình là `b`, độ sâu (depth / 깊이) solution là `d`, number nodes có thể grow khoảng:
 
 \[
 1+b+b^2+\cdots+b^d
@@ -127,11 +130,11 @@ O(b^d)
 
 Đây là **combinatorial explosion**.
 
-Search problems trở nên khó không phải vì mỗi action phức tạp, mà vì số possible sequences tăng exponential.
+Tìm kiếm (search / 검색) problems trở nên khó không phải vì mỗi hành động (action / 동작) phức tạp, mà vì số possible sequences tăng exponential.
 
 ## Branching factor
 
-Branching factor `b` là số successors trung bình trên mỗi state.
+Branching factor `b` là số successors trung bình trên mỗi trạng thái (state / 상태).
 
 Nếu `b=10`:
 
@@ -142,72 +145,72 @@ depth 3:   1,000
 depth 6: 1,000,000
 ```
 
-Chỉ tăng vài steps đã làm search space khổng lồ.
+Chỉ tăng vài steps đã làm tìm kiếm (search / 검색) không gian (space / 공간) khổng lồ.
 
-AI vì vậy cần heuristic, pruning, abstraction và learning để tránh explore mọi possibility.
+AI vì vậy cần heuristic, pruning, lớp trừu tượng (abstraction / 추상화) và học tập (learning / 학습) để tránh explore mọi possibility.
 
-## Goal test
+## Goal kiểm thử (test / 테스트)
 
-Goal test xác định state có thỏa objective không.
+Goal kiểm thử (test / 테스트) xác định trạng thái (state / 상태) có thỏa mục tiêu (objective / 목표) không.
 
-Một mistake common là encode goal quá cụ thể. Ví dụ scheduling goal có thể chỉ cần “mọi task assigned hợp lệ”, không cần một exact schedule duy nhất.
+Một mistake dùng chung (common / 공통) là encode goal quá cụ thể. Ví dụ scheduling goal có thể chỉ cần “mọi tác vụ (task / 작업) assigned hợp lệ”, không cần một chính xác (exact / 정확한) schedule duy nhất.
 
-Goal set rộng hơn có thể làm search dễ hơn.
+Goal set rộng hơn có thể làm tìm kiếm (search / 검색) dễ hơn.
 
-## Path cost
+## Đường dẫn (path / 경로) chi phí (cost / 비용)
 
-Path cost thường additive:
+Đường dẫn (path / 경로) chi phí (cost / 비용) thường additive:
 
 \[
-g(n)=\sum_{e\in path}c(e)
+g(n)=\sum_{e\in đường dẫn (path / 경로)}c(e)
 \]
 
-Nhưng real objectives không phải lúc nào additive. Risk, maximum latency, resource constraints hoặc multi-objective cost có thể cần richer state hoặc algorithm.
+Nhưng real objectives không phải lúc nào additive. rủi ro (risk / 위험), maximum độ trễ (latency / 지연 시간), tài nguyên (resource / 자원) các ràng buộc (constraints / 제약조건들) hoặc multi-objective chi phí (cost / 비용) có thể cần richer trạng thái (state / 상태) hoặc thuật toán (algorithm / 알고리즘).
 
-Nếu action costs negative, nhiều standard shortest-path assumptions break.
+Nếu hành động (action / 동작) costs negative, nhiều tiêu chuẩn (standard / 표준) shortest-path các giả định (assumptions / 가정들) break.
 
 ## Solution và optimal solution
 
-Một **solution** là path/action sequence từ initial state tới goal.
+Một **solution** là đường dẫn (path / 경로)/hành động (action / 동작) chuỗi (sequence / 시퀀스) từ initial trạng thái (state / 상태) tới goal.
 
-Một **optimal solution** minimize path cost theo chosen objective.
+Một **optimal solution** minimize đường dẫn (path / 경로) chi phí (cost / 비용) theo chosen mục tiêu (objective / 목표).
 
-Optimality luôn relative to representation và cost function. “Đường tốt nhất” theo distance có thể không tốt nhất theo time, toll, safety hoặc energy.
+Optimality luôn relative to biểu diễn (representation / 표현) và chi phí (cost / 비용) hàm (function / 함수). “Đường tốt nhất” theo distance có thể không tốt nhất theo thời gian (time / 시간), toll, an toàn (safety / 안전) hoặc năng lượng (energy / 에너지).
 
 ## Completeness
 
-Search algorithm **complete (완전성)** nếu guaranteed tìm solution khi solution tồn tại dưới specified assumptions.
+Tìm kiếm (search / 검색) thuật toán (algorithm / 알고리즘) **complete (완전성)** nếu guaranteed tìm solution khi solution tồn tại dưới specified các giả định (assumptions / 가정들).
 
-Completeness không có nghĩa practical. Algorithm có thể theoretically complete nhưng cần astronomical time/memory.
+Completeness không có nghĩa practical. thuật toán (algorithm / 알고리즘) có thể theoretically complete nhưng cần astronomical thời gian (time / 시간)/bộ nhớ (memory / 메모리).
 
 ## Optimality
 
-Algorithm **optimal (최적성)** nếu returned solution có minimum cost dưới assumptions.
+Thuật toán (algorithm / 알고리즘) **optimal (최적성)** nếu returned solution có minimum chi phí (cost / 비용) dưới các giả định (assumptions / 가정들).
 
-BFS optimal chỉ khi step costs equal/uniform. Uniform-Cost Search optimal với nonnegative costs under suitable conditions.
+BFS optimal chỉ khi step costs equal/uniform. Uniform-Cost tìm kiếm (search / 검색) optimal với nonnegative costs under suitable conditions.
 
-## Time và space complexity
+## Thời gian (time / 시간) và không gian (space / 공간) độ phức tạp (complexity / 복잡도)
 
-Search evaluation thường quan tâm:
+Tìm kiếm (search / 검색) evaluation thường quan tâm:
 
 - completeness;
 - optimality;
-- time complexity;
-- space complexity.
+- thời gian (time / 시간) độ phức tạp (complexity / 복잡도);
+- không gian (space / 공간) độ phức tạp (complexity / 복잡도).
 
-Memory thường là bottleneck. BFS có thể expand manageable number nodes nhưng store huge frontier.
+Bộ nhớ (memory / 메모리) thường là bottleneck. BFS có thể expand manageable number nodes nhưng store huge frontier.
 
-DFS tiết kiệm memory hơn nhưng có thể đi sâu sai hướng.
+DFS tiết kiệm bộ nhớ (memory / 메모리) hơn nhưng có thể đi sâu sai hướng.
 
-Trade-off này xuất hiện lại trong beam search, planning và tree search.
+Sự đánh đổi (trade-off / 트레이드오프) này xuất hiện lại trong beam tìm kiếm (search / 검색), planning và cây (tree / 트리) tìm kiếm (search / 검색).
 
-## Tree search vs graph search
+## Cây (tree / 트리) tìm kiếm (search / 검색) vs đồ thị (graph / 그래프) tìm kiếm (search / 검색)
 
-Tree search không nhớ visited states, nên có thể generate same state repeatedly.
+Cây (tree / 트리) tìm kiếm (search / 검색) không nhớ visited states, nên có thể generate same trạng thái (state / 상태) repeatedly.
 
-Graph search giữ explored/best-cost map.
+Đồ thị (graph / 그래프) tìm kiếm (search / 검색) giữ explored/best-cost map.
 
-Simplified pattern:
+Simplified mẫu (pattern / 패턴):
 
 ```pseudo
 frontier ← priority queue(initial)
@@ -224,23 +227,23 @@ while frontier:
             push/update successor
 ```
 
-Chi tiết stale nodes/decrease-key phụ thuộc implementation.
+Chi tiết stale nodes/decrease-key phụ thuộc hiện thực (implementation / 구현).
 
 ## Duplicate detection
 
-State hashing/equality là core engineering issue.
+Trạng thái (state / 상태) hashing/equality là cốt lõi (core / 핵심) kỹ thuật (engineering / 엔지니어링) issue.
 
-Nếu state mutable hoặc equality sai, explored-set behavior sai.
+Nếu trạng thái (state / 상태) mutable hoặc equality sai, explored-set hành vi (behavior / 동작) sai.
 
-Trong puzzles, canonical representation giúp detect duplicates. Trong symbolic planning, state có thể là set propositions. Trong games, Zobrist hashing là technique phổ biến cho board-state hashing.
+Trong puzzles, chuẩn gốc (canonical / 정본) biểu diễn (representation / 표현) giúp detect duplicates. Trong symbolic planning, trạng thái (state / 상태) có thể là set propositions. Trong games, Zobrist hashing là technique phổ biến cho board-state hashing.
 
-## Search direction
+## Tìm kiếm (search / 검색) direction
 
-Không phải lúc nào search forward từ start.
+Không phải lúc nào tìm kiếm (search / 검색) forward từ start.
 
-**Backward search** bắt đầu từ goal và tìm predecessors. Nếu goal compact nhưng initial branching lớn, backward có thể tốt hơn.
+**Backward tìm kiếm (search / 검색)** bắt đầu từ goal và tìm predecessors. Nếu goal compact nhưng initial branching lớn, backward có thể tốt hơn.
 
-**Bidirectional search** search từ both ends và meet in middle. Với branching `b` và depth `d`, idealized complexity có thể từ `b^d` xuống khoảng:
+**Bidirectional tìm kiếm (search / 검색)** tìm kiếm (search / 검색) từ both ends và meet in middle. Với branching `b` và độ sâu (depth / 깊이) `d`, idealized độ phức tạp (complexity / 복잡도) có thể từ `b^d` xuống khoảng:
 
 \[
 2b^{d/2}
@@ -248,57 +251,57 @@ Không phải lúc nào search forward từ start.
 
 nhưng cần efficient reverse transitions và meet detection.
 
-## Abstraction
+## Lớp trừu tượng (abstraction / 추상화)
 
-Search trên raw state space có thể quá lớn. Ta có thể build abstract state space bỏ details irrelevant.
+Tìm kiếm (search / 검색) trên raw trạng thái (state / 상태) không gian (space / 공간) có thể quá lớn. Ta có thể bản dựng (build / 빌드) abstract trạng thái (state / 상태) không gian (space / 공간) bỏ details irrelevant.
 
-Ví dụ route planning:
+Ví dụ tuyến (route / 경로) planning:
 
 ```text
 street-level search        → rất nhiều nodes
 city-level highway graph   → ít nodes hơn
 ```
 
-Hierarchical planning search coarse solution trước rồi refine.
+Hierarchical planning tìm kiếm (search / 검색) coarse solution trước rồi refine.
 
-Abstraction là một form representation design.
+Lớp trừu tượng (abstraction / 추상화) là một form biểu diễn (representation / 표현) thiết kế (design / 설계).
 
-## Search và dynamic programming
+## Tìm kiếm (search / 검색) và động (dynamic / 동적) programming
 
-Search explores states on demand. Dynamic Programming thường solve overlapping subproblems bằng caching/value recurrence.
+Tìm kiếm (search / 검색) explores states on demand. động (dynamic / 동적) Programming thường solve overlapping subproblems bằng caching/giá trị (value / 값) recurrence.
 
-Memoization biến tree recursion thành graph-like computation khi subproblems repeat.
+Memoization biến cây (tree / 트리) recursion thành graph-like computation khi subproblems repeat.
 
-A* với best-cost map, shortest-path algorithms và Bellman equations đều nằm gần border Search ↔ Dynamic Programming.
+A* với best-cost map, shortest-path algorithms và Bellman equations đều nằm gần border tìm kiếm (search / 검색) ↔ động (dynamic / 동적) Programming.
 
-## Search và optimization
+## Tìm kiếm (search / 검색) và tối ưu hóa (optimization / 최적화)
 
-Continuous optimization search parameter space bằng gradients/other methods. Classical search thường trên discrete combinatorial space.
+Continuous tối ưu hóa (optimization / 최적화) tìm kiếm (search / 검색) parameter không gian (space / 공간) bằng gradients/other methods. Classical tìm kiếm (search / 검색) thường trên discrete combinatorial không gian (space / 공간).
 
-Mental connection:
+Mental liên kết (connection / 연결):
 
 ```text
 Discrete search      → candidate states/actions
 Continuous optimization → parameter values
 ```
 
-Hybrid AI có thể dùng cả hai: neural network optimized bằng gradient cung cấp heuristic cho tree search.
+Hybrid AI có thể dùng cả hai: neural mạng (network / 네트워크) optimized bằng độ dốc (gradient / 기울기) cung cấp heuristic cho cây (tree / 트리) tìm kiếm (search / 검색).
 
-AlphaGo-like systems là example nổi tiếng của learned policy/value + tree search.
+AlphaGo-like các hệ thống (systems / 시스템들) là example nổi tiếng của learned chính sách (policy / 정책)/giá trị (value / 값) + cây (tree / 트리) tìm kiếm (search / 검색).
 
-## Search và inference
+## Tìm kiếm (search / 검색) và suy luận (inference / 추론)
 
-Probabilistic inference cũng có thể được nhìn như sum/max over hidden configurations.
+Probabilistic suy luận (inference / 추론) cũng có thể được nhìn như sum/max over hidden configurations.
 
-Viterbi decoding tìm most likely sequence bằng dynamic programming.
+Viterbi decoding tìm most likely chuỗi (sequence / 시퀀스) bằng động (dynamic / 동적) programming.
 
-Beam search approximates sequence search trong large branching spaces.
+Beam tìm kiếm (search / 검색) approximates chuỗi (sequence / 시퀀스) tìm kiếm (search / 검색) trong large branching spaces.
 
-LLM decoding là một search/sampling problem trên token sequences, dù greedy/top-p thường không được gọi là classical state-space search trong same formalism.
+LLM decoding là một tìm kiếm (search / 검색)/sampling bài toán (problem / 문제) trên đơn vị từ (token / 토큰) sequences, dù greedy/top-p thường không được gọi là classical state-space tìm kiếm (search / 검색) trong same formalism.
 
-## Search và LLM reasoning
+## Tìm kiếm (search / 검색) và LLM lập luận (reasoning / 추론)
 
-Modern systems có thể generate candidate reasoning/actions rồi evaluate/select. Tree-of-thought-like approaches, tool planning và agent search reuse old idea:
+Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) có thể generate candidate lập luận (reasoning / 추론)/actions rồi evaluate/select. Tree-of-thought-like approaches, công cụ (tool / 도구) planning và tác nhân (agent / 에이전트) tìm kiếm (search / 검색) reuse old idea:
 
 ```text
 state/context
@@ -310,27 +313,27 @@ evaluate candidates
 expand promising branches
 ```
 
-LLM thay handcrafted successor/heuristic bằng learned proposal/evaluation ở một số components, nhưng combinatorial search problem vẫn còn.
+LLM thay handcrafted successor/heuristic bằng learned proposal/evaluation ở một số components, nhưng combinatorial tìm kiếm (search / 검색) bài toán (problem / 문제) vẫn còn.
 
-## Search horizon
+## Tìm kiếm (search / 검색) horizon
 
-Long-horizon task có branching factor và depth lớn. Even strong local model can fail because errors compound.
+Long-horizon tác vụ (task / 작업) có branching factor và độ sâu (depth / 깊이) lớn. Even strong cục bộ (local / 로컬) mô hình (model / 모델) can thất bại (fail / 실패) because errors compound.
 
-If each step has success probability `p`, simplistic independent approximation for `d` steps:
+If each step has success xác suất (probability / 확률) `p`, simplistic independent approximation for `d` steps:
 
 \[
 p^d
 \]
 
-shows reliability collapses with horizon.
+shows độ tin cậy (reliability / 신뢰성) collapses with horizon.
 
-Real dependencies phức tạp hơn, nhưng intuition explains why planning, verification, replanning và tool feedback matter in agents.
+Real dependencies phức tạp hơn, nhưng intuition explains why planning, xác minh (verification / 확인), replanning và công cụ (tool / 도구) phản hồi (feedback / 피드백) matter in agents.
 
-## Online search
+## Online tìm kiếm (search / 검색)
 
-Classical search often assumes transition model known before acting.
+Classical tìm kiếm (search / 검색) often assumes chuyển tiếp (transition / 전이) mô hình (model / 모델) known before acting.
 
-In unknown/large environment, agent may interleave search and action:
+In unknown/large môi trường (environment / 환경), tác nhân (agent / 에이전트) may interleave tìm kiếm (search / 검색) and hành động (action / 동작):
 
 ```text
 observe → plan a bit → act → observe new state → replan
@@ -338,17 +341,17 @@ observe → plan a bit → act → observe new state → replan
 
 Robotics, games and LLM agents often behave this way.
 
-This introduces exploration cost and environment uncertainty.
+This introduces exploration chi phí (cost / 비용) and môi trường (environment / 환경) bất định (uncertainty / 불확실성).
 
-## Search space vs solution space
+## Tìm kiếm (search / 검색) không gian (space / 공간) vs solution không gian (space / 공간)
 
-Search algorithm quality không chỉ phụ thuộc speed. Representation can radically shrink search space.
+Tìm kiếm (search / 검색) thuật toán (algorithm / 알고리즘) chất lượng (quality / 품질) không chỉ phụ thuộc speed. biểu diễn (representation / 표현) can radically shrink tìm kiếm (search / 검색) không gian (space / 공간).
 
-Ví dụ Sudoku raw assignment of 81 cells each 1–9 suggests `9^81` combinations. Constraint propagation reduces possibilities massively before branching.
+Ví dụ Sudoku raw assignment of 81 cells each 1–9 suggests `9^81` combinations. ràng buộc (constraint / 제약조건) propagation reduces possibilities massively before branching.
 
-The best “search optimization” may be a better representation or inference rule, not a faster queue.
+The best “tìm kiếm (search / 검색) tối ưu hóa (optimization / 최적화)” may be a better biểu diễn (representation / 표현) or suy luận (inference / 추론) quy tắc (rule / 규칙), not a faster hàng đợi (queue / 큐).
 
-## Mental Model
+## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
@@ -363,26 +366,26 @@ Search       = policy chọn possibility nào explore tiếp
 Heuristic    = knowledge giúp ưu tiên promising possibilities
 ```
 
-## Common Misconceptions
+## Dùng chung (common / 공통) Misconceptions
 
-### “Search chỉ là tìm kiếm text/database”
+### “tìm kiếm (search / 검색) chỉ là tìm kiếm văn bản (text / 텍스트)/cơ sở dữ liệu (database / 데이터베이스)”
 
-Trong AI, search rộng hơn: tìm path, sequence actions, assignment, proof hoặc strategy trong space possibilities.
+Trong AI, tìm kiếm (search / 검색) rộng hơn: tìm đường dẫn (path / 경로), chuỗi (sequence / 시퀀스) actions, assignment, proof hoặc chiến lược (strategy / 전략) trong không gian (space / 공간) possibilities.
 
-### “State càng chi tiết càng tốt”
+### “trạng thái (state / 상태) càng chi tiết càng tốt”
 
-Too much irrelevant detail enlarges state space. State phải sufficient nhưng không redundant quá mức.
+Too much irrelevant detail enlarges trạng thái (state / 상태) không gian (space / 공간). trạng thái (state / 상태) phải sufficient nhưng không redundant quá mức.
 
-### “Complete algorithm luôn tốt hơn incomplete”
+### “Complete thuật toán (algorithm / 알고리즘) luôn tốt hơn incomplete”
 
-Practical systems có time/memory budget. Beam search intentionally incomplete nhưng useful ở huge spaces.
+Practical các hệ thống (systems / 시스템들) có thời gian (time / 시간)/bộ nhớ (memory / 메모리) ngân sách (budget / 예산). Beam tìm kiếm (search / 검색) intentionally incomplete nhưng useful ở huge spaces.
 
-### “Machine Learning thay thế Search”
+### “Machine học tập (learning / 학습) thay thế tìm kiếm (search / 검색)”
 
-Learned models thường guide search, approximate value, generate candidates hoặc prune branches. Search và learning complement nhau.
+Learned các mô hình (models / 모델들) thường guide tìm kiếm (search / 검색), approximate giá trị (value / 값), generate candidates hoặc prune branches. tìm kiếm (search / 검색) và học tập (learning / 학습) complement nhau.
 
-## Knowledge Connection
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-State-space search nối trực tiếp từ [Agents and Environments](../00_foundations/02_intelligence_agents_and_environments.md) và [Problem Representation](../00_foundations/03_problem_representation.md) sang BFS/DFS/UCS, heuristic search, planning và games.
+State-space tìm kiếm (search / 검색) nối trực tiếp từ [Agents and Environments](../00_foundations/02_intelligence_agents_and_environments.md) và [Problem Representation](../00_foundations/03_problem_representation.md) sang BFS/DFS/UCS, heuristic tìm kiếm (search / 검색), planning và games.
 
 Xem tiếp: [Uninformed Search](./01_uninformed_search.md) và [Heuristic Search](./02_heuristic_search.md).

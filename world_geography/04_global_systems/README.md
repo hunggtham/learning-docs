@@ -1,30 +1,41 @@
-# Global Systems — các hệ vượt biên giới
+# Toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới
 
-Folder này dùng kiến thức physical + human geography để phân tích system mà national boundary không đủ làm đơn vị giải thích.
+> **Mạch đọc:** Đọc **toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **học tập (learning / 학습) thứ tự (order / 순서)** sang **dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Learning order
 
-1. [Climate Change](./00_climate_change.md): forcing, feedback, inertia, regional impacts và adaptation.
-2. [Water–Food–Energy Nexus](./01_water_food_energy_nexus.md): stock/flow và trade-off giữa ba resource systems.
-3. [Chokepoints & Resources](./02_geopolitics_chokepoints_resources.md): dependency, substitution, corridors và processing bottlenecks.
+Folder này dùng kiến thức vật lý (physical / 물리적) + human geography để phân tích hệ thống (system / 시스템) mà national ranh giới (boundary / 경계) không đủ làm đơn vị giải thích.
+
+## Học tập (learning / 학습) thứ tự (order / 순서)
+
+1. [Climate Change](./00_climate_change.md): forcing, phản hồi (feedback / 피드백), inertia, regional impacts và adaptation.
+2. [Water–Food–Energy Nexus](./01_water_food_energy_nexus.md): stock/luồng (flow / 흐름) và sự đánh đổi (trade-off / 트레이드오프) giữa ba tài nguyên (resource / 자원) các hệ thống (systems / 시스템들).
+3. [Chokepoints & Resources](./02_geopolitics_chokepoints_resources.md): phụ thuộc (dependency / 의존성), substitution, corridors và processing bottlenecks.
 4. [Global Cities & Networks](./03_global_cities_networks.md): command nodes, connectivity, megaregions và urban concentration.
-5. [Environment & Sustainability](./04_environment_sustainability.md): system boundary, externality, LCA, circularity và resilience.
-6. [Global Trade Networks](./05_global_trade_networks.md): synthesis của production, resources, transport, finance, inventory, cities và systemic shocks.
+5. [Environment & Sustainability](./04_environment_sustainability.md): hệ thống (system / 시스템) ranh giới (boundary / 경계), externality, LCA, circularity và resilience.
+6. [Global Trade Networks](./05_global_trade_networks.md): synthesis của môi trường vận hành (production / 운영 환경), resources, vận chuyển (transport / 전송), finance, inventory, cities và systemic shocks.
 
-## Shared mental model
 
-Mỗi global system nên được đọc như:
+> **Chuyển mạch:** Từ **học tập (learning / 학습) thứ tự (order / 순서)**, ta sang **dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-**stock → flow → node → corridor → boundary → dependency → feedback → shock transmission → adaptation/resilience**.
+## Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)
 
-Một climate shock có thể giảm water; water shortage ảnh hưởng food/energy; energy shortage ảnh hưởng production; production disruption đi qua port/trade network; price và employment shock truyền tới city/household.
+Mỗi toàn cục (global / 전역) hệ thống (system / 시스템) nên được đọc như:
+
+**stock → luồng (flow / 흐름) → nút (node / 노드) → corridor → ranh giới (boundary / 경계) → phụ thuộc (dependency / 의존성) → phản hồi (feedback / 피드백) → shock transmission → adaptation/resilience**.
+
+Một climate shock có thể giảm water; water shortage ảnh hưởng food/năng lượng (energy / 에너지); năng lượng (energy / 에너지) shortage ảnh hưởng môi trường vận hành (production / 운영 환경); môi trường vận hành (production / 운영 환경) disruption đi qua cổng (port / 포트)/trade mạng (network / 네트워크); price và employment shock truyền tới city/household.
 
 Đó là lý do các chapter này không nên đọc như chủ đề rời.
 
+
+> **Chuyển mạch:** Từ **dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)**, ta sang **Cross-links quan trọng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
 ## Cross-links quan trọng
 
-Physical prerequisites: [Earth System](../00_foundations/01_earth_as_system.md), [Climate](../01_physical_geography/03_global_climate_system.md), [Hydrology](../01_physical_geography/04_hydrology_rivers_groundwater.md), [Oceans](../01_physical_geography/05_oceans_coasts.md), [Hazards](../01_physical_geography/07_natural_hazards_risk.md).
+Vật lý (physical / 물리적) prerequisites: [Earth System](../00_foundations/01_earth_as_system.md), [Climate](../01_physical_geography/03_global_climate_system.md), [Hydrology](../01_physical_geography/04_hydrology_rivers_groundwater.md), [Oceans](../01_physical_geography/05_oceans_coasts.md), [Hazards](../01_physical_geography/07_natural_hazards_risk.md).
 
 Human prerequisites: [Economic Geography](../02_human_geography/05_economic_geography.md), [Industry/Energy/Resources](../02_human_geography/07_industry_energy_resources.md), [Transport/Trade](../02_human_geography/08_transport_trade_globalization.md), [Development](../02_human_geography/09_development_inequality.md).
 
 Applications: [Regional Geography](../03_regions/00_how_to_read_regions.md) và [World Atlas](../06_world_atlas/README.md).
+
+> **Bàn giao:** Sau **Cross-links quan trọng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 climate change](./00_climate_change.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

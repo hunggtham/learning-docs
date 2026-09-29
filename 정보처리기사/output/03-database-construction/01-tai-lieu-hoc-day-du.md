@@ -20,7 +20,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 > **Nguồn:** tổng hợp từ các Markdown đã generate trong `raw_md/final`, được đối chiếu với các nguồn `raw` và `raw_md` cùng môn. Nội dung gốc được giữ lại; chỉ chuẩn hoá cấu trúc bài học.
 
-> **Quy ước đọc:** thuật ngữ được ưu tiên theo mẫu `한국어 (English) (Tiếng Việt)`. Mỗi ý tiếng Hàn có phần giải thích Việt ngữ liền kề hoặc ngay sau đó; khi gặp từ kỹ thuật trong ngoặc, hãy xem đó là nghĩa cần nhớ khi làm đề.
+> **Quy ước ngôn ngữ:** phần giải thích ưu tiên tiếng Việt; ở mọi lần xuất hiện, thuật ngữ đề thi dùng dạng `nghĩa Việt (English / 한국어)` để không phải quay lại tìm nghĩa.
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
@@ -30,7 +30,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 ## 101. 개념적 설계 (Conceptual Design)
 
-Chúng ta bắt đầu mạch học bằng **101. 개념적 설계 (Conceptual Design)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/55 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
+Chúng ta bắt đầu mạch học bằng **101. 개념적 설계 (Conceptual Design)**. Trước khi đi vào từng thuật ngữ, hãy giữ câu hỏi trung tâm: phần kiến thức này giải quyết vấn đề gì và vì sao các khái niệm sau phải được đọc trong cùng một bối cảnh? Mục đích của mục 1/56 là tạo điểm tựa để những phần tiếp theo được hiểu theo quan hệ, không chỉ được ghi nhớ như danh sách.
 
 Để đọc **101. 개념적 설계 (Conceptual Design)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -46,7 +46,7 @@ Như vậy, **101. 개념적 설계 (Conceptual Design)** không chỉ cung cấ
 
 ## 102. 논리적 설계 (Logical Design / Data Modeling)
 
-Sau khi đã đặt nền bằng **101. 개념적 설계 (Conceptual Design)**, ta chuyển sang **102. 논리적 설계 (Logical Design / Data Modeling)**. Đây là mắt xích 2/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **101. 개념적 설계 (Conceptual Design)**, ta chuyển sang **102. 논리적 설계 (Logical Design / Data Modeling)**. Đây là mắt xích 2/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **102. 논리적 설계 (Logical Design / Data Modeling)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -61,7 +61,7 @@ Ta có thể khép mục **102. 논리적 설계 (Logical Design / Data Modeling
 
 ## 103. 물리적 설계 (Physical Design)
 
-Từ **102. 논리적 설계 (Logical Design / Data Modeling)**, ta đã có điểm tựa để bước vào **103. 물리적 설계 (Physical Design)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/55 trước khi đi vào chi tiết.
+Từ **102. 논리적 설계 (Logical Design / Data Modeling)**, ta đã có điểm tựa để bước vào **103. 물리적 설계 (Physical Design)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/56 trước khi đi vào chi tiết.
 
 Để đọc **103. 물리적 설계 (Physical Design)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -77,7 +77,7 @@ Từ **102. 논리적 설계 (Logical Design / Data Modeling)**, ta đã có đi
 
 ## 163-167. 데이터베이스 설계 순서 (Database Design Process)
 
-Ở bước 4/55, **163-167. 데이터베이스 설계 순서 (Database Design Process)** xuất hiện như phần tiếp nối của **103. 물리적 설계 (Physical Design)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 4/56, **163-167. 데이터베이스 설계 순서 (Database Design Process)** xuất hiện như phần tiếp nối của **103. 물리적 설계 (Physical Design)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **163-167. 데이터베이스 설계 순서 (Database Design Process)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -96,7 +96,7 @@ Như vậy, **163-167. 데이터베이스 설계 순서 (Database Design Process
 
 ## 11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)
 
-Sau khi đã đặt nền bằng **163-167. 데이터베이스 설계 순서 (Database Design Process)**, ta chuyển sang **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**. Đây là mắt xích 5/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **163-167. 데이터베이스 설계 순서 (Database Design Process)**, ta chuyển sang **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**. Đây là mắt xích 5/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -118,7 +118,7 @@ Ta có thể khép mục **11. 데이터베이스 설계 (Thiết kế cơ sở 
 
 ## 104. 데이터 모델에 표시할 요소 (Elements of Data Model)
 
-Từ **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**, ta đã có điểm tựa để bước vào **104. 데이터 모델에 표시할 요소 (Elements of Data Model)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/55 trước khi đi vào chi tiết.
+Từ **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**, ta đã có điểm tựa để bước vào **104. 데이터 모델에 표시할 요소 (Elements of Data Model)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/56 trước khi đi vào chi tiết.
 
 Để đọc **104. 데이터 모델에 표시할 요소 (Elements of Data Model)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -138,7 +138,7 @@ Từ **11. 데이터베이스 설계 (Thiết kế cơ sở dữ liệu)**, ta �
 
 ## 168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)
 
-Ở bước 7/55, **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** xuất hiện như phần tiếp nối của **104. 데이터 모델에 표시할 요소 (Elements of Data Model)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 7/56, **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** xuất hiện như phần tiếp nối của **104. 데이터 모델에 표시할 요소 (Elements of Data Model)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -159,7 +159,7 @@ Như vậy, **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relatio
 
 ## 12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)
 
-Sau khi đã đặt nền bằng **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**, ta chuyển sang **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**. Đây là mắt xích 8/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **168-172. 관계형 데이터 모델 및 E-R 모델 심화 (Relational & E-R Model Deep Dive)**, ta chuyển sang **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**. Đây là mắt xích 8/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -204,7 +204,7 @@ Ta có thể khép mục **12. 관계형 데이터 모델과 릴레이션 (Mô h
 
 ## 13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)
 
-Từ **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**, ta đã có điểm tựa để bước vào **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/55 trước khi đi vào chi tiết.
+Từ **12. 관계형 데이터 모델과 릴레이션 (Mô hình dữ liệu quan hệ & Relation)**, ta đã có điểm tựa để bước vào **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/56 trước khi đi vào chi tiết.
 
 Để đọc **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -249,7 +249,7 @@ Bảng trong **E-R 다이어그램 기호 (Ký hiệu biểu đồ E-R - Peter C
 
 ## 105. E-R 다이어그램 (E-R Diagram)
 
-Ở bước 10/55, **105. E-R 다이어그램 (E-R Diagram)** xuất hiện như phần tiếp nối của **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 10/56, **105. E-R 다이어그램 (E-R Diagram)** xuất hiện như phần tiếp nối của **13. 데이터 모델과 E-R 다이어그램 (Mô hình dữ liệu & Biểu đồ E-R)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **105. E-R 다이어그램 (E-R Diagram)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -267,7 +267,7 @@ Như vậy, **105. E-R 다이어그램 (E-R Diagram)** không chỉ cung cấp c
 
 ## 110-114. 키 (Keys)
 
-Sau khi đã đặt nền bằng **105. E-R 다이어그램 (E-R Diagram)**, ta chuyển sang **110-114. 키 (Keys)**. Đây là mắt xích 11/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **105. E-R 다이어그램 (E-R Diagram)**, ta chuyển sang **110-114. 키 (Keys)**. Đây là mắt xích 11/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **110-114. 키 (Keys)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -289,7 +289,7 @@ Ta có thể khép mục **110-114. 키 (Keys)** bằng một câu hỏi bàn gi
 
 ## 173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)
 
-Từ **110-114. 키 (Keys)**, ta đã có điểm tựa để bước vào **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/55 trước khi đi vào chi tiết.
+Từ **110-114. 키 (Keys)**, ta đã có điểm tựa để bước vào **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/56 trước khi đi vào chi tiết.
 
 Để đọc **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -313,7 +313,7 @@ Từ **110-114. 키 (Keys)**, ta đã có điểm tựa để bước vào **173
 
 ## 5. 스키마 (Schema - Lược đồ)
 
-Ở bước 13/55, **5. 스키마 (Schema - Lược đồ)** xuất hiện như phần tiếp nối của **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 13/56, **5. 스키마 (Schema - Lược đồ)** xuất hiện như phần tiếp nối của **173-177. 키와 무결성, 관계대수 요약 (Keys, Integrity, Relational Algebra)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **5. 스키마 (Schema - Lược đồ)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -331,7 +331,7 @@ Như vậy, **5. 스키마 (Schema - Lược đồ)** không chỉ cung cấp c�
 
 ## 14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)
 
-Sau khi đã đặt nền bằng **5. 스키마 (Schema - Lược đồ)**, ta chuyển sang **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)**. Đây là mắt xích 14/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **5. 스키마 (Schema - Lược đồ)**, ta chuyển sang **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)**. Đây là mắt xích 14/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -375,7 +375,7 @@ Ta có thể khép mục **14. 키(Key)의 종류와 데이터베이스 무결�
 
 ## 115. 무결성 (Integrity)
 
-Từ **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)**, ta đã có điểm tựa để bước vào **115. 무결성 (Integrity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/55 trước khi đi vào chi tiết.
+Từ **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa & Tính Toàn vẹn)**, ta đã có điểm tựa để bước vào **115. 무결성 (Integrity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/56 trước khi đi vào chi tiết.
 
 Để đọc **115. 무결성 (Integrity)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -391,7 +391,7 @@ Từ **14. 키(Key)의 종류와 데이터베이스 무결성 (Các loại Khóa
 
 ## 116-121. 관계대수 (Relational Algebra)
 
-Ở bước 16/55, **116-121. 관계대수 (Relational Algebra)** xuất hiện như phần tiếp nối của **115. 무결성 (Integrity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 16/56, **116-121. 관계대수 (Relational Algebra)** xuất hiện như phần tiếp nối của **115. 무결성 (Integrity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **116-121. 관계대수 (Relational Algebra)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -413,7 +413,7 @@ Như vậy, **116-121. 관계대수 (Relational Algebra)** không chỉ cung c�
 
 ## 123-125. 정규화 (Normalization)
 
-Sau khi đã đặt nền bằng **116-121. 관계대수 (Relational Algebra)**, ta chuyển sang **123-125. 정규화 (Normalization)**. Đây là mắt xích 17/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **116-121. 관계대수 (Relational Algebra)**, ta chuyển sang **123-125. 정규화 (Normalization)**. Đây là mắt xích 17/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **123-125. 정규화 (Normalization)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -433,7 +433,7 @@ Ta có thể khép mục **123-125. 정규화 (Normalization)** bằng một câ
 
 ## 179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)
 
-Từ **123-125. 정규화 (Normalization)**, ta đã có điểm tựa để bước vào **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/55 trước khi đi vào chi tiết.
+Từ **123-125. 정규화 (Normalization)**, ta đã có điểm tựa để bước vào **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/56 trước khi đi vào chi tiết.
 
 Để đọc **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -454,7 +454,7 @@ Từ **123-125. 정규화 (Normalization)**, ta đã có điểm tựa để bư
 
 ## 184-185. 반정규화 (Denormalization)
 
-Ở bước 19/55, **184-185. 반정규화 (Denormalization)** xuất hiện như phần tiếp nối của **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 19/56, **184-185. 반정규화 (Denormalization)** xuất hiện như phần tiếp nối của **179-182. 정규화와 이상 심화 (Normalization & Anomaly - Deep Dive)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **184-185. 반정규화 (Denormalization)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -471,7 +471,7 @@ Như vậy, **184-185. 반정규화 (Denormalization)** không chỉ cung cấp 
 
 ## 16. 정규화(Normalization)와 이상 현상(Anomaly)
 
-Sau khi đã đặt nền bằng **184-185. 반정규화 (Denormalization)**, ta chuyển sang **16. 정규화(Normalization)와 이상 현상(Anomaly)**. Đây là mắt xích 20/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **184-185. 반정규화 (Denormalization)**, ta chuyển sang **16. 정규화(Normalization)와 이상 현상(Anomaly)**. Đây là mắt xích 20/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **16. 정규화(Normalization)와 이상 현상(Anomaly)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -519,7 +519,7 @@ Ta có thể khép mục **16. 정규화(Normalization)와 이상 현상(Anomaly
 
 ## 20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)
 
-Từ **16. 정규화(Normalization)와 이상 현상(Anomaly)**, ta đã có điểm tựa để bước vào **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/55 trước khi đi vào chi tiết.
+Từ **16. 정규화(Normalization)와 이상 현상(Anomaly)**, ta đã có điểm tựa để bước vào **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/56 trước khi đi vào chi tiết.
 
 Để đọc **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -559,7 +559,7 @@ Các bullet của **반정규화 (Denormalization - Phi chuẩn hóa)** đang n�
 
 ## 130-132. 트랜잭션 (Transaction)
 
-Ở bước 22/55, **130-132. 트랜잭션 (Transaction)** xuất hiện như phần tiếp nối của **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 22/56, **130-132. 트랜잭션 (Transaction)** xuất hiện như phần tiếp nối của **20. 쿼리 성능 최적화와 반정규화 (Tối ưu hóa Truy vấn và Phi chuẩn hóa)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **130-132. 트랜잭션 (Transaction)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -581,7 +581,7 @@ Như vậy, **130-132. 트랜잭션 (Transaction)** không chỉ cung cấp các
 
 ## 187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)
 
-Sau khi đã đặt nền bằng **130-132. 트랜잭션 (Transaction)**, ta chuyển sang **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**. Đây là mắt xích 23/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **130-132. 트랜잭션 (Transaction)**, ta chuyển sang **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**. Đây là mắt xích 23/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -596,7 +596,7 @@ Ta có thể khép mục **187-189. 트랜잭션의 상태와 특성 (Transactio
 
 ## 9. 인덱스와 트랜잭션 (Index và Giao dịch)
 
-Từ **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**, ta đã có điểm tựa để bước vào **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/55 trước khi đi vào chi tiết.
+Từ **187-189. 트랜잭션의 상태와 특성 (Transaction State & ACID)**, ta đã có điểm tựa để bước vào **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 24/56 trước khi đi vào chi tiết.
 
 Để đọc **9. 인덱스와 트랜잭션 (Index và Giao dịch)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -642,7 +642,7 @@ Bảng trong **트랜잭션 (Transaction - Giao dịch) - ACID** không phải d
 
 ## 10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)
 
-Ở bước 25/55, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** xuất hiện như phần tiếp nối của **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 25/56, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** xuất hiện như phần tiếp nối của **9. 인덱스와 트랜잭션 (Index và Giao dịch)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -697,17 +697,19 @@ Như vậy, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều 
 
 ## 143-145. SQL 분류 (SQL Categories)
 
-Sau khi đã đặt nền bằng **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, ta chuyển sang **143-145. SQL 분류 (SQL Categories)**. Đây là mắt xích 26/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, ta chuyển sang **143-145. SQL 분류 (SQL Categories)**. Đây là mắt xích 26/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **143-145. SQL 분류 (SQL Categories)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - **DDL (데이터 정의어):** CREATE, ALTER, DROP (스키마, 테이블 등 정의/변경/삭제).
 - **DML (데이터 조작어):** SELECT, INSERT, DELETE, UPDATE (데이터 조회 및 변경).
-- **DCL (데이터 제어어):** COMMIT, ROLLBACK, GRANT, REVOKE (보안, 무결성, 권한 제어).
+- **DCL (데이터 제어어):** GRANT, REVOKE (권한 제어).
+- **TCL (트랜잭션 제어어):** COMMIT, ROLLBACK, SAVEPOINT (트랜잭션 제어).
 - **VI (Vietnamese) (Tiếng Việt):** Phân loại SQL.
   - DDL (Định nghĩa dữ liệu): CREATE, ALTER, DROP.
   - DML (Thao tác dữ liệu): SELECT, INSERT, DELETE, UPDATE.
-  - DCL (Điều khiển dữ liệu): COMMIT, ROLLBACK, GRANT, REVOKE.
+  - DCL (Điều khiển dữ liệu): GRANT, REVOKE (điều khiển quyền).
+  - TCL (Điều khiển giao dịch): COMMIT, ROLLBACK, SAVEPOINT (điều khiển giao dịch).
 
 Ta có thể khép mục **143-145. SQL 분류 (SQL Categories)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **204-219. SQL 명령어 심화 (SQL Commands Detail)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
@@ -715,24 +717,23 @@ Ta có thể khép mục **143-145. SQL 분류 (SQL Categories)** bằng một c
 
 ## 204-219. SQL 명령어 심화 (SQL Commands Detail)
 
-Từ **143-145. SQL 분류 (SQL Categories)**, ta đã có điểm tựa để bước vào **204-219. SQL 명령어 심화 (SQL Commands Detail)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/55 trước khi đi vào chi tiết.
+Từ **143-145. SQL 분류 (SQL Categories)**, ta đã có điểm tựa để bước vào **204-219. SQL 명령어 심화 (SQL Commands Detail)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 27/56 trước khi đi vào chi tiết.
 
 Để đọc **204-219. SQL 명령어 심화 (SQL Commands Detail)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- **DDL (204, 207-209):** , , .
-  -  옵션:  (참조하는 모든 개체 연쇄 제거),  (참조 중이면 제거 취소).
-- **DML (205, 214-218):** , , , .
-  - : 중복 튜플 제거.
-  - : 정렬 (오름차순/내림차순).
-- **DCL (206, 210-213):** , , , .
-  - : 권한 부여. (옵션: 남에게 권한 부여 가능).
-  - : 권한 회수.
-  - : 변경 내용을 DB에 영구 반영.
-  - : 변경 취소, 이전 상태로 복구.
+- **DDL (204, 207-209):** `CREATE`, `ALTER`, `DROP`, `TRUNCATE`.
+  - `CASCADE`: 참조하는 모든 개체를 연쇄 처리; `RESTRICT`: 참조 중이면 처리 취소.
+- **DML (205, 214-218):** `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+  - `DISTINCT`: 중복 튜플 제거; `ORDER BY`: 오름차순/내림차순 정렬.
+- **DCL (206, 210-213):** `GRANT`, `REVOKE`.
+  - `GRANT`: 권한 부여 (`WITH GRANT OPTION`으로 재부여 허용).
+  - `REVOKE`: 권한 회수.
+- **TCL:** `COMMIT`, `ROLLBACK`, `SAVEPOINT`.
+  - `COMMIT`: 변경 내용을 DB에 영구 반영; `ROLLBACK`: 변경 취소; `SAVEPOINT`: 부분 복귀 지점 설정.
 - **VI (Vietnamese) (Tiếng Việt):** Chi tiết các lệnh SQL.
-  - : Xóa dây chuyền các phần phụ thuộc. : Không cho xóa nếu đang bị phụ thuộc.
-  - : Cấp quyền và cho phép người đó cấp quyền tiếp cho người khác.
-  - : Xác nhận lưu thay đổi. : Hoàn tác.
+  - `CASCADE`: Xử lý dây chuyền các đối tượng phụ thuộc. `RESTRICT`: Không xử lý nếu đang bị tham chiếu.
+  - `GRANT`/`REVOKE`: Cấp và thu hồi quyền.
+  - `COMMIT`/`ROLLBACK`/`SAVEPOINT`: Xác nhận, hoàn tác hoặc đánh dấu điểm khôi phục giao dịch.
 
 Điểm chốt của **204-219. SQL 명령어 심화 (SQL Commands Detail)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
@@ -740,7 +741,7 @@ Từ **143-145. SQL 분류 (SQL Categories)**, ta đã có điểm tựa để b
 
 ## 3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)
 
-Ở bước 28/55, **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** xuất hiện như phần tiếp nối của **204-219. SQL 명령어 심화 (SQL Commands Detail)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Ở bước 28/56, **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** xuất hiện như phần tiếp nối của **204-219. SQL 명령어 심화 (SQL Commands Detail)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -758,7 +759,7 @@ Như vậy, **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và S
 
 ## 4. SQL 문법의 종류 (Các loại cú pháp SQL)
 
-Sau khi đã đặt nền bằng **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**, ta chuyển sang **4. SQL 문법의 종류 (Các loại cú pháp SQL)**. Đây là mắt xích 29/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**, ta chuyển sang **4. SQL 문법의 종류 (Các loại cú pháp SQL)**. Đây là mắt xích 29/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **4. SQL 문법의 종류 (Các loại cú pháp SQL)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -766,29 +767,99 @@ Sau khi đã đặt nền bằng **3. 데이터베이스와 절차형 SQL (Cơ s
 |---|---|---|---|
 | **DDL** (Data Definition Language) | CREATE, ALTER, DROP, TRUNCATE | 데이터베이스를 **정의**하는 언어, 구조 결정. (Ngôn ngữ định nghĩa dữ liệu - Cấu trúc). | Dùng để Tạo (CREATE), Sửa (ALTER), Xóa hoàn toàn (DROP), hoặc Xóa trắng (TRUNCATE) bảng. Giống như việc xây/đập một ngôi nhà. |
 | **DML** (Data Manipulation Language) | SELECT, INSERT, UPDATE, DELETE | 저장된 자료를 조회, 삽입, 수정, 삭제. (Ngôn ngữ thao tác dữ liệu - Nội dung). | Dùng để Thêm, Sửa, Xóa, Lấy dữ liệu bên trong bảng. Giống như việc sắp xếp đồ đạc trong nhà. |
-| **DCL** (Data Control Language) | GRANT, REVOKE, COMMIT, ROLLBACK | 데이터 보안, 무결성, 권한, 병행 수행제어. (Ngôn ngữ điều khiển dữ liệu - Quyền & Giao dịch). | Dùng để Cấp quyền (GRANT), Thu hồi quyền (REVOKE), hoặc kiểm soát giao dịch (COMMIT/ROLLBACK). |
+| **DCL** (Data Control Language) | GRANT, REVOKE | 데이터 보안과 권한 제어. (Ngôn ngữ điều khiển dữ liệu - Quyền). | Dùng để cấp quyền hoặc thu hồi quyền. |
+| **TCL** (Transaction Control Language) | COMMIT, ROLLBACK, SAVEPOINT | 트랜잭션의 확정, 취소, 부분 복귀. (Ngôn ngữ điều khiển giao dịch). | Dùng để xác nhận, hoàn tác hoặc đặt điểm khôi phục giao dịch. |
 
 > 💡 **Mẹo ghi nhớ:**
 > DDL: **CADT** (Create, Alter, Drop, Truncate - "Cắt" cấu trúc).
 > DML: **SUDI** (Select, Update, Delete, Insert - "Sửa đi" dữ liệu).
-> DCL: **GRCR** (Grant, Revoke, Commit, Rollback - "Gác cổng" bảo vệ).
+> DCL: **GR** (Grant, Revoke - "Gác quyền"). TCL: **CRS** (Commit, Rollback, Savepoint - "Chốt/Rút/Save").
 
 ---
 
-Ta có thể khép mục **4. SQL 문법의 종류 (Các loại cú pháp SQL)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **4. SQL 문법의 종류 (Các loại cú pháp SQL)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+
+---
+
+## A+ Deep Dive: SQL 결과를 행 단위로 추적하기
+
+Từ **4. SQL 문법의 종류 (Các loại cú pháp SQL)**, ta đã có điểm tựa để bước vào **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/56 trước khi đi vào chi tiết.
+
+Để đọc **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Để không đọc **1. 샘플 스키마와 데이터** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 1. 샘플 스키마와 데이터
+
+Các ý ngay dưới **1. 샘플 스키마와 데이터** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+```sql
+CREATE TABLE sales (
+  dept CHAR(1), amount INT
+);
+INSERT INTO sales VALUES ('A', 120), ('A', 80), ('B', 90), ('B', 40);
+```
+
+Phần **1. 샘플 스키마와 데이터** không có nhiều dữ liệu rời để tách nhỏ, vì vậy hãy giữ câu hỏi mục đích và tự chốt bằng một câu giải thích trước khi đi tiếp.
+
+Ta vừa chốt **1. 샘플 스키마와 데이터** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. WHERE와 HAVING의 순서** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **2. WHERE와 HAVING의 순서**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 2. WHERE와 HAVING의 순서
+
+Bây giờ ta đi vào nội dung của **2. WHERE와 HAVING의 순서**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+```sql
+SELECT dept, SUM(amount) AS total
+FROM sales
+WHERE amount >= 80
+GROUP BY dept
+HAVING SUM(amount) >= 150
+ORDER BY total DESC;
+```
+
+행 필터를 먼저 적용하면 `(A,120)`, `(A,80)`, `(B,90)`만 남는다. 그룹별 합계는
+`A=200`, `B=90`이므로 `HAVING`을 통과하는 최종 결과는 `A | 200` 한 행이다.
+
+- `WHERE`: 그룹화 **전** 개별 행을 제거.
+- `GROUP BY`: 같은 키를 그룹으로 묶고 집계.
+- `HAVING`: 그룹화 **후** 집계 결과를 제거.
+- `ORDER BY`: 최종 결과의 표시 순서를 정함. 명시하지 않으면 순서를 가정하지 않는다.
+
+> **시험 함정:** 집계 함수 조건을 `WHERE`에 넣지 않고 `HAVING`에 둔다. 별칭(alias)은 구현/문맥에 따라 `WHERE`에서 바로 사용할 수 없으므로 원래 표현식을 확인한다.
+
+Các bullet của **2. WHERE와 HAVING의 순서** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. WHERE와 HAVING의 순서**, đừng bắt đầu lại từ số không. **자주 혼동하는 판별 포인트** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Với **자주 혼동하는 판별 포인트**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 자주 혼동하는 판별 포인트
+
+Phần nguồn của **자주 혼동하는 판별 포인트** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- `GRANT`/`REVOKE`는 권한을 다루는 **DCL**, `COMMIT`/`ROLLBACK`/`SAVEPOINT`는 트랜잭션을 다루는 **TCL**이다.
+- 로킹 단위를 작게 하면 동시성·공유도는 커지지만 잠금 관리 오버헤드도 증가한다. 작은 단위가 교착상태를 자동으로 제거하지는 않는다.
+- 2NF는 부분 함수 종속, 3NF는 이행 함수 종속, BCNF는 모든 결정자가 후보키여야 한다는 조건으로 구별한다.
+- 뷰는 보안·논리적 독립성에 활용할 수 있지만, 갱신 가능 여부는 정의 방식과 제약에 따라 달라지고 일반적으로 독립 인덱스를 갖지 않는다.
+
+Các bullet của **자주 혼동하는 판별 포인트** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **자주 혼동하는 판별 포인트** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Điểm chốt của **A+ Deep Dive: SQL 결과를 행 단위로 추적하기** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 150-155. 데이터 조작어 (DML) 확장 및 조건 연산자
 
-Từ **4. SQL 문법의 종류 (Các loại cú pháp SQL)**, ta đã có điểm tựa để bước vào **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 30/55 trước khi đi vào chi tiết.
+Ở bước 31/56, **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** xuất hiện như phần tiếp nối của **A+ Deep Dive: SQL 결과를 행 단위로 추적하기**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - **DELETE (150):** 튜플을 삭제. `DELETE FROM 테이블명 [WHERE 조건];`
 - **UPDATE (151):** 튜플 내용 변경. `UPDATE 테이블명 SET 속성명 = 데이터 [WHERE 조건];`
 - **SELECT (152, 153):** 데이터 검색. `SELECT [DISTINCT] 속성명 FROM 테이블명 [WHERE] [GROUP BY] [HAVING] [ORDER BY ASC|DESC];`
-- **LIKE (154):** 문자 패턴 일치 검색. 
+- **LIKE (154):** 문자 패턴 일치 검색.
   - `%`: 모든 문자
   - `_`: 문자 하나
   - `#`: 숫자 하나
@@ -801,35 +872,35 @@ Từ **4. SQL 문법의 종류 (Các loại cú pháp SQL)**, ta đã có điể
   - BETWEEN: Trong khoảng giá trị.
 - **Example:** `SELECT * FROM 학생 WHERE 이름 LIKE '김%';` / Tìm tất cả sinh viên có tên bắt đầu bằng họ 'Kim' (김).
 
-Điểm chốt của **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **193. 뷰 (View)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **193. 뷰 (View)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 193. 뷰 (View)
 
-Ở bước 31/55, **193. 뷰 (View)** xuất hiện như phần tiếp nối của **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **150-155. 데이터 조작어 (DML) 확장 및 조건 연산자**, ta chuyển sang **193. 뷰 (View)**. Đây là mắt xích 32/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **193. 뷰 (View)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-- 기본 테이블로부터 유도된 가상 테이블 (물리적 구현 X). 
+- 기본 테이블로부터 유도된 가상 테이블 (물리적 구현 X).
 - 장점: 논리적 데이터 독립성, 보안 강화. 단점: 인덱스 불가, 뷰 정의 변경 불가, 갱신 제약.
 - **VI (Vietnamese) (Tiếng Việt):** Khung nhìn (View). Bảng ảo. Ưu điểm: Độc lập dữ liệu, bảo mật. Nhược điểm: Không có index độc lập, khó cập nhật.
 
-Như vậy, **193. 뷰 (View)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **8. 서브쿼리와 뷰 (Truy vấn con và View)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **193. 뷰 (View)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **8. 서브쿼리와 뷰 (Truy vấn con và View)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 8. 서브쿼리와 뷰 (Truy vấn con và View)
 
-Sau khi đã đặt nền bằng **193. 뷰 (View)**, ta chuyển sang **8. 서브쿼리와 뷰 (Truy vấn con và View)**. Đây là mắt xích 32/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **193. 뷰 (View)**, ta đã có điểm tựa để bước vào **8. 서브쿼리와 뷰 (Truy vấn con và View)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/56 trước khi đi vào chi tiết.
 
 Để đọc **8. 서브쿼리와 뷰 (Truy vấn con và View)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **서브쿼리 (Subquery)**. Hãy xác định **서브쿼리 (Subquery)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **서브쿼리 (Subquery)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 서브쿼리 (Subquery)
 
-Phần nguồn của **서브쿼리 (Subquery)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **서브쿼리 (Subquery)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **단일 행 서브쿼리 (Single-row Subquery):** Trả về 1 dòng. Dùng toán tử `=`, `>`, `<`.
 - **다중 행 서브쿼리 (Multi-row Subquery):** Trả về nhiều dòng. Dùng `IN`, `ANY`, `ALL`.
@@ -838,11 +909,11 @@ Phần nguồn của **서브쿼리 (Subquery)** sẽ lấp đầy khung giải 
 Các bullet của **서브쿼리 (Subquery)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **서브쿼리 (Subquery)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **뷰 (VIEW - Bảng ảo)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **뷰 (VIEW - Bảng ảo)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **뷰 (VIEW - Bảng ảo)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 뷰 (VIEW - Bảng ảo)
 
-Các ý ngay dưới **뷰 (VIEW - Bảng ảo)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **뷰 (VIEW - Bảng ảo)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - `CREATE VIEW 뷰명 AS (SELECT문);`
 - `DROP VIEW 뷰명;`
@@ -855,26 +926,26 @@ Các bullet của **뷰 (VIEW - Bảng ảo)** đang nén nhiều ý thành các
 
 Điểm chốt của **뷰 (VIEW - Bảng ảo)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **8. 서브쿼리와 뷰 (Truy vấn con và View)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **191-192. 인덱스 (Index)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **8. 서브쿼리와 뷰 (Truy vấn con và View)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **191-192. 인덱스 (Index)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 191-192. 인덱스 (Index)
 
-Từ **8. 서브쿼리와 뷰 (Truy vấn con và View)**, ta đã có điểm tựa để bước vào **191-192. 인덱스 (Index)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 33/55 trước khi đi vào chi tiết.
+Ở bước 34/56, **191-192. 인덱스 (Index)** xuất hiện như phần tiếp nối của **8. 서브쿼리와 뷰 (Truy vấn con và View)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **191-192. 인덱스 (Index)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - 데이터 접근을 빠르게 하기 위한 <키 값, 포인터> 구조. DDL로 제어. 트리 기반(B+ 트리), 비트맵, 함수 기반, 도메인 인덱스 등.
 - **VI (Vietnamese) (Tiếng Việt):** Chỉ mục (Index). Cấu trúc <Khóa, Con trỏ> giúp truy cập nhanh. Sử dụng B+ Tree, Bitmap...
 
-Điểm chốt của **191-192. 인덱스 (Index)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **136-137. 분산 데이터베이스 (Distributed DB)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **191-192. 인덱스 (Index)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **136-137. 분산 데이터베이스 (Distributed DB)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 136-137. 분산 데이터베이스 (Distributed DB)
 
-Ở bước 34/55, **136-137. 분산 데이터베이스 (Distributed DB)** xuất hiện như phần tiếp nối của **191-192. 인덱스 (Index)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **191-192. 인덱스 (Index)**, ta chuyển sang **136-137. 분산 데이터베이스 (Distributed DB)**. Đây là mắt xích 35/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **136-137. 분산 데이터베이스 (Distributed DB)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -882,26 +953,26 @@ Từ **8. 서브쿼리와 뷰 (Truy vấn con và View)**, ta đã có điểm t
 - **목표 (Goals):** 위치 투명성 (Location), 중복 투명성 (Replication), 병행 투명성 (Concurrency), 장애 투명성 (Failure).
 - **VI (Vietnamese) (Tiếng Việt):** Cơ sở dữ liệu phân tán. Tính trong suốt về: Vị trí, Nhân bản, Đồng thời, Lỗi.
 
-Như vậy, **136-137. 분산 데이터베이스 (Distributed DB)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **136-137. 분산 데이터베이스 (Distributed DB)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 195-196. 분산 데이터베이스 목표 (Distributed DB Goals)
 
-Sau khi đã đặt nền bằng **136-137. 분산 데이터베이스 (Distributed DB)**, ta chuyển sang **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**. Đây là mắt xích 35/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **136-137. 분산 데이터베이스 (Distributed DB)**, ta đã có điểm tựa để bước vào **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/56 trước khi đi vào chi tiết.
 
 Để đọc **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - 위치 투명성(Location), 중복 투명성(Replication), 병행 투명성(Concurrency), 장애 투명성(Failure).
 - **VI (Vietnamese) (Tiếng Việt):** Mục tiêu CSDL phân tán (Tính trong suốt về: vị trí, nhân bản, đồng thời, sự cố).
 
-Ta có thể khép mục **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)
 
-Từ **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**, ta đã có điểm tựa để bước vào **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 36/55 trước khi đi vào chi tiết.
+Ở bước 37/56, **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** xuất hiện như phần tiếp nối của **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -911,21 +982,21 @@ Từ **195-196. 분산 데이터베이스 목표 (Distributed DB Goals)**, ta đ
   - Ưu điểm: Độc lập cục bộ, tăng chia sẻ, tin cậy cao, dễ mở rộng.
   - Nhược điểm: Phức tạp, khó thiết kế, tăng chi phí và lỗi tiềm ẩn.
 
-Điểm chốt của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)
 
-Ở bước 37/55, **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** xuất hiện như phần tiếp nối của **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)**, ta chuyển sang **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**. Đây là mắt xích 38/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **스토리지 (Storage - Thiết bị lưu trữ)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **스토리지 (Storage - Thiết bị lưu trữ)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **스토리지 (Storage - Thiết bị lưu trữ)**. Hãy xác định **스토리지 (Storage - Thiết bị lưu trữ)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 스토리지 (Storage - Thiết bị lưu trữ)
 
-Bây giờ ta đi vào nội dung của **스토리지 (Storage - Thiết bị lưu trữ)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **스토리지 (Storage - Thiết bị lưu trữ)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **DAS (Direct Attached Storage):** Kết nối trực tiếp bằng cáp. Nhanh, an toàn nhưng khó mở rộng.
 - **NAS (Network Attached Storage):** Kết nối qua mạng (Network-based, File-level). Mềm dẻo nhưng có thể nghẽn mạng.
@@ -935,11 +1006,11 @@ Bây giờ ta đi vào nội dung của **스토리지 (Storage - Thiết bị l
 Các bullet của **스토리지 (Storage - Thiết bị lưu trữ)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **스토리지 (Storage - Thiết bị lưu trữ)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **분산 데이터베이스 (Distributed Database - CSDL Phân tán)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **분산 데이터베이스 (Distributed Database - CSDL Phân tán)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **분산 데이터베이스 (Distributed Database - CSDL Phân tán)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 분산 데이터베이스 (Distributed Database - CSDL Phân tán)
 
-Phần nguồn của **분산 데이터베이스 (Distributed Database - CSDL Phân tán)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **분산 데이터베이스 (Distributed Database - CSDL Phân tán)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 Dữ liệu phân bố ở nhiều nơi (máy chủ khác nhau) nhưng người dùng cảm giác như đang dùng 1 CSDL duy nhất.
 - **장점 (Ưu điểm):** Đáng tin cậy, dễ mở rộng, tính tự trị khu vực cao.
@@ -957,13 +1028,13 @@ Các bullet của **분산 데이터베이스 (Distributed Database - CSDL Phân
 
 Điểm chốt của **분산 데이터베이스 (Distributed Database - CSDL Phân tán)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Như vậy, **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **201-203. 스토리지 시스템 (Storage Systems)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **201-203. 스토리지 시스템 (Storage Systems)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 201-203. 스토리지 시스템 (Storage Systems)
 
-Sau khi đã đặt nền bằng **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**, ta chuyển sang **201-203. 스토리지 시스템 (Storage Systems)**. Đây là mắt xích 38/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**, ta đã có điểm tựa để bước vào **201-203. 스토리지 시스템 (Storage Systems)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/56 trước khi đi vào chi tiết.
 
 Để đọc **201-203. 스토리지 시스템 (Storage Systems)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -975,13 +1046,13 @@ Sau khi đã đặt nền bằng **17. 스토리지와 분산 데이터베이스
   - NAS: Kết nối qua mạng LAN (chia sẻ file).
   - SAN: Mạng lưu trữ chuyên dụng (tốc độ cao + chia sẻ).
 
-Ta có thể khép mục **201-203. 스토리지 시스템 (Storage Systems)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **198. 암호화 심화 (Encryption Deep Dive)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **201-203. 스토리지 시스템 (Storage Systems)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **198. 암호화 심화 (Encryption Deep Dive)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 198. 암호화 심화 (Encryption Deep Dive)
 
-Từ **201-203. 스토리지 시스템 (Storage Systems)**, ta đã có điểm tựa để bước vào **198. 암호화 심화 (Encryption Deep Dive)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 39/55 trước khi đi vào chi tiết.
+Ở bước 40/56, **198. 암호화 심화 (Encryption Deep Dive)** xuất hiện như phần tiếp nối của **201-203. 스토리지 시스템 (Storage Systems)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **198. 암호화 심화 (Encryption Deep Dive)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -991,21 +1062,21 @@ Từ **201-203. 스토리지 시스템 (Storage Systems)**, ta đã có điểm 
   - Khóa cá nhân (Đối xứng): Khóa mã hóa và giải mã giống nhau (DES).
   - Khóa công khai (Bất đối xứng): Khóa mã hóa công khai, khóa giải mã bí mật (RSA).
 
-Điểm chốt của **198. 암호화 심화 (Encryption Deep Dive)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **198. 암호화 심화 (Encryption Deep Dive)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)
 
-Ở bước 40/55, **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** xuất hiện như phần tiếp nối của **198. 암호화 심화 (Encryption Deep Dive)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **198. 암호화 심화 (Encryption Deep Dive)**, ta chuyển sang **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**. Đây là mắt xích 41/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **파티셔닝 (Partitioning)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **파티셔닝 (Partitioning)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **파티셔닝 (Partitioning)**. Hãy xác định **파티셔닝 (Partitioning)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 파티셔닝 (Partitioning)
 
-Bây giờ ta đi vào nội dung của **파티셔닝 (Partitioning)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **파티셔닝 (Partitioning)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản lý và tăng hiệu suất.
 - **범위 분할 (Range):** Phân chia theo khoảng (VD: Tháng 1, Tháng 2).
@@ -1017,11 +1088,11 @@ Chia các bảng lớn thành các phần nhỏ (Partition) để dễ quản l�
 Các bullet của **파티셔닝 (Partitioning)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **파티셔닝 (Partitioning)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **데이터베이스 암호화 (Mã hóa CSDL)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **데이터베이스 암호화 (Mã hóa CSDL)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **데이터베이스 암호화 (Mã hóa CSDL)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 데이터베이스 암호화 (Mã hóa CSDL)
 
-Phần nguồn của **데이터베이스 암호화 (Mã hóa CSDL)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **데이터베이스 암호화 (Mã hóa CSDL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **암호화 (Encryption):** Biến 평문 (Plaintext - Văn bản gốc) thành 암호문 (Ciphertext - Bản mã).
 - **복호화 (Decryption):** Giải mã từ Ciphertext về Plaintext.
@@ -1032,21 +1103,21 @@ Các bullet của **데이터베이스 암호화 (Mã hóa CSDL)** đang nén nh
 
 Điểm chốt của **데이터베이스 암호화 (Mã hóa CSDL)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Như vậy, **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)
 
-Sau khi đã đặt nền bằng **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, ta chuyển sang **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**. Đây là mắt xích 41/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, ta đã có điểm tựa để bước vào **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/56 trước khi đi vào chi tiết.
 
 Để đọc **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)**. Hãy xác định **개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)
 
-Phần nguồn của **개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **개념 (Khái niệm):** Dùng **CÙNG MỘT KHÓA** để mã hóa và giải mã (단일키 - Khóa đơn).
 - **장점 (Ưu điểm):** Tốc độ xử lý cực kỳ nhanh.
@@ -1058,11 +1129,11 @@ Phần nguồn của **개인키 암호 방식 (Private Key / Symmetric Key - M�
 Với **개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Ta vừa chốt **개인키 암호 방식 (Private Key / Symmetric Key - Mã hóa Khóa đối xứng)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)
 
-Các ý ngay dưới **접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 | 종류 (Loại) | 기준 (Tiêu chí) | 특징 (Đặc điểm VN) |
 |---|---|---|
@@ -1073,11 +1144,11 @@ Các ý ngay dưới **접근통제 기술 (Access Control - Kỹ thuật kiểm
 Khi đọc **접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)**, hãy tách hai lớp: bảng giúp đối chiếu các loại hoặc tiêu chí, còn công thức cần được đọc theo biến, đơn vị và quan hệ giữa các đại lượng. Cách tách này giúp ta hiểu cơ chế trước khi ghi nhớ ký hiệu.
 
 Sau khi đọc **접근통제 기술 (Access Control - Kỹ thuật kiểm soát truy cập)**, đừng bắt đầu lại từ số không. **MAC 보안 모델 (Các mô hình bảo mật của MAC)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **MAC 보안 모델 (Các mô hình bảo mật của MAC)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **MAC 보안 모델 (Các mô hình bảo mật của MAC)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### MAC 보안 모델 (Các mô hình bảo mật của MAC)
 
-Bây giờ ta đi vào nội dung của **MAC 보안 모델 (Các mô hình bảo mật của MAC)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **MAC 보안 모델 (Các mô hình bảo mật của MAC)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **벨-라파듈라 (Bell-LaPadula):** Tập trung vào **기밀성 (Tính Bảo mật / Kín đáo)** (Quân đội). Không đọc lên trên, Không ghi xuống dưới.
 - **비바 (Biba):** Tập trung vào **무결성 (Tính Toàn vẹn)**. Ngăn chặn việc sửa đổi trái phép.
@@ -1090,13 +1161,13 @@ Các bullet của **MAC 보안 모델 (Các mô hình bảo mật của MAC)** �
 
 Như vậy, **MAC 보안 모델 (Các mô hình bảo mật của MAC)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Ta có thể khép mục **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **106-107. 튜플(Tuple)과 속성(Attribute)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **106-107. 튜플(Tuple)과 속성(Attribute)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 106-107. 튜플(Tuple)과 속성(Attribute)
 
-Từ **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**, ta đã có điểm tựa để bước vào **106-107. 튜플(Tuple)과 속성(Attribute)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 42/55 trước khi đi vào chi tiết.
+Ở bước 43/56, **106-107. 튜플(Tuple)과 속성(Attribute)** xuất hiện như phần tiếp nối của **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **106-107. 튜플(Tuple)과 속성(Attribute)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1108,13 +1179,13 @@ Từ **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm s
 - **Example:** 학생 테이블의 '홍길동' 데이터 한 줄이 튜플, '이름', '학번' 열이 속성. / Một dòng dữ liệu 'Hong Gil-dong' là Tuple, các cột 'Tên', 'Mã SV' là Attribute.
 - 💡 **Mẹo ghi nhớ:** Tu-Car (Tuple = Cardinality), At-De (Attribute = Degree).
 
-Điểm chốt của **106-107. 튜플(Tuple)과 속성(Attribute)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **108. 도메인 (Domain)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **106-107. 튜플(Tuple)과 속성(Attribute)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **108. 도메인 (Domain)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 108. 도메인 (Domain)
 
-Ở bước 43/55, **108. 도메인 (Domain)** xuất hiện như phần tiếp nối của **106-107. 튜플(Tuple)과 속성(Attribute)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **106-107. 튜플(Tuple)과 속성(Attribute)**, ta chuyển sang **108. 도메인 (Domain)**. Đây là mắt xích 44/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **108. 도메인 (Domain)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1122,13 +1193,13 @@ Từ **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm s
 - **VI (Vietnamese) (Tiếng Việt):** Miền giá trị. Tập hợp các giá trị nguyên tử (không thể chia nhỏ) cùng kiểu mà một thuộc tính có thể nhận.
 - **Example:** '성별' 속성의 도메인은 {남, 여}. / Miền giá trị của thuộc tính 'Giới tính' là {Nam, Nữ}.
 
-Như vậy, **108. 도메인 (Domain)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **178. 관계해석 (Relational Calculus)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **108. 도메인 (Domain)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **178. 관계해석 (Relational Calculus)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 178. 관계해석 (Relational Calculus)
 
-Sau khi đã đặt nền bằng **108. 도메인 (Domain)**, ta chuyển sang **178. 관계해석 (Relational Calculus)**. Đây là mắt xích 44/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **108. 도메인 (Domain)**, ta đã có điểm tựa để bước vào **178. 관계해석 (Relational Calculus)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/56 trước khi đi vào chi tiết.
 
 Để đọc **178. 관계해석 (Relational Calculus)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1138,13 +1209,13 @@ Sau khi đã đặt nền bằng **108. 도메인 (Domain)**, ta chuyển sang *
   - Do E.F. Codd đề xuất. Tính phi thủ tục (chỉ cần biết 'là gì' thay vì 'làm thế nào').
   - Có sức mạnh tính toán tương đương đại số quan hệ.
 
-Ta có thể khép mục **178. 관계해석 (Relational Calculus)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **178. 관계해석 (Relational Calculus)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)
 
-Từ **178. 관계해석 (Relational Calculus)**, ta đã có điểm tựa để bước vào **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/55 trước khi đi vào chi tiết.
+Ở bước 46/56, **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** xuất hiện như phần tiếp nối của **178. 관계해석 (Relational Calculus)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1152,13 +1223,13 @@ Từ **178. 관계해석 (Relational Calculus)**, ta đã có điểm tựa đ�
 - **이행적 종속 (Transitive Dependency):** A -> B, B -> C 일 때 A -> C 인 관계.
 - **VI (Vietnamese) (Tiếng Việt):** Phụ thuộc hàm và Phụ thuộc bắc cầu.
 
-Điểm chốt của **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **186. 시스템 카탈로그 (System Catalog)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **186. 시스템 카탈로그 (System Catalog)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 186. 시스템 카탈로그 (System Catalog)
 
-Ở bước 46/55, **186. 시스템 카탈로그 (System Catalog)** xuất hiện như phần tiếp nối của **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)**, ta chuyển sang **186. 시스템 카탈로그 (System Catalog)**. Đây là mắt xích 47/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **186. 시스템 카탈로그 (System Catalog)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1168,26 +1239,26 @@ Từ **178. 관계해석 (Relational Calculus)**, ta đã có điểm tựa đ�
   - Chứa thông tin (metadata) về các đối tượng trong DB.
   - Người dùng có thể xem (SELECT) nhưng KHÔNG thể sửa đổi trực tiếp.
 
-Như vậy, **186. 시스템 카탈로그 (System Catalog)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **190. CRUD 분석**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **186. 시스템 카탈로그 (System Catalog)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **190. CRUD 분석**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 190. CRUD 분석
 
-Sau khi đã đặt nền bằng **186. 시스템 카탈로그 (System Catalog)**, ta chuyển sang **190. CRUD 분석**. Đây là mắt xích 47/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **186. 시스템 카탈로그 (System Catalog)**, ta đã có điểm tựa để bước vào **190. CRUD 분석**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/56 trước khi đi vào chi tiết.
 
 Để đọc **190. CRUD 분석** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - Create, Read, Update, Delete 연산의 매트릭스 분석으로 데이터 양 유추.
 - **VI (Vietnamese) (Tiếng Việt):** Phân tích ma trận CRUD (Tạo, Đọc, Sửa, Xóa).
 
-Ta có thể khép mục **190. CRUD 분석** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **194. 파티션 (Partition)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **190. CRUD 분석** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **194. 파티션 (Partition)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 194. 파티션 (Partition)
 
-Từ **190. CRUD 분석**, ta đã có điểm tựa để bước vào **194. 파티션 (Partition)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 48/55 trước khi đi vào chi tiết.
+Ở bước 49/56, **194. 파티션 (Partition)** xuất hiện như phần tiếp nối của **190. CRUD 분석**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **194. 파티션 (Partition)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1195,13 +1266,13 @@ Từ **190. CRUD 분석**, ta đã có điểm tựa để bước vào **194. �
 - 종류: 범위(Range - 예: 월별), 해시(Hash), 조합(Composite), 목록(List), 라운드 로빈(Round Robin).
 - **VI (Vietnamese) (Tiếng Việt):** Phân vùng dữ liệu (Partition). Chia bảng lớn thành phần nhỏ: theo Khoảng (Range), Băm (Hash), Danh sách (List)...
 
-Điểm chốt của **194. 파티션 (Partition)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **194. 파티션 (Partition)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)
 
-Ở bước 49/55, **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)** xuất hiện như phần tiếp nối của **194. 파티션 (Partition)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **194. 파티션 (Partition)**, ta chuyển sang **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**. Đây là mắt xích 50/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)** như một bài học cho người mới, hãy giữ câu hỏi: **ta dùng mô hình nào để biểu diễn đối tượng, quan hệ hoặc hành vi, và giới hạn của mỗi cách là gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1217,13 +1288,13 @@ Từ **190. CRUD 분석**, ta đã có điểm tựa để bước vào **194. �
   - MAC: Dựa trên cấp độ bảo mật (Hệ thống cấp quyền). Các mô hình: Bell-LaPadula (Bảo mật), Biba (Toàn vẹn)...
   - RBAC: Dựa trên vai trò (Role).
 
-Như vậy, **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환
 
-Sau khi đã đặt nền bằng **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**, ta chuyển sang **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**. Đây là mắt xích 50/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)**, ta đã có điểm tựa để bước vào **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/56 trước khi đi vào chi tiết.
 
 Để đọc **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -1245,21 +1316,21 @@ Phần **3과목 운영체제 (Operating System - 추가 포함된 내용)** c�
 
 ---
 
-Ta có thể khép mục **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)
 
-Từ **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**, ta đã có điểm tựa để bước vào **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/55 trước khi đi vào chi tiết.
+Ở bước 52/56, **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** xuất hiện như phần tiếp nối của **220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **6.1 DDL 문법 (Cú pháp DDL)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **6.1 DDL 문법 (Cú pháp DDL)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **6.1 DDL 문법 (Cú pháp DDL)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 6.1 DDL 문법 (Cú pháp DDL)
 
-Các ý ngay dưới **6.1 DDL 문법 (Cú pháp DDL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **6.1 DDL 문법 (Cú pháp DDL)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - `CREATE TABLE`: Tạo bảng. Các ràng buộc: `PRIMARY KEY` (Khóa chính), `FOREIGN KEY` (Khóa ngoại), `UNIQUE` (Duy nhất), `CONSTRAINT` (Điều kiện), `CHECK` (Kiểm tra), `DEFAULT` (Mặc định), `NOT NULL` (Không được rỗng).
 - `ALTER TABLE`:
@@ -1273,26 +1344,36 @@ Các ý ngay dưới **6.1 DDL 문법 (Cú pháp DDL)** cung cấp dữ liệu v
 Các bullet của **6.1 DDL 문법 (Cú pháp DDL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **6.1 DDL 문법 (Cú pháp DDL)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **6.2 DCL 문법 (Cú pháp DCL)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **6.2 DCL 문법 (Cú pháp DCL)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **6.2 DCL 문법 (Cú pháp DCL)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 6.2 DCL 문법 (Cú pháp DCL)
 
-Bây giờ ta đi vào nội dung của **6.2 DCL 문법 (Cú pháp DCL)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **6.2 DCL 문법 (Cú pháp DCL)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - `GRANT 권한 ON 테이블 TO 사용자 [WITH GRANT OPTION];` (Cấp quyền. WITH GRANT OPTION: cho phép người đó cấp quyền tiếp cho người khác).
 - `REVOKE 권한 ON 테이블 FROM 사용자 [CASCADE CONSTRAINTS];` (Thu hồi quyền. CASCADE: thu hồi luôn quyền mà người này đã cấp cho người khác).
+
+Các bullet của **6.2 DCL 문법 (Cú pháp DCL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **6.2 DCL 문법 (Cú pháp DCL)**, đừng bắt đầu lại từ số không. **6.3 TCL 문법 (Cú pháp TCL)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Đoạn **6.3 TCL 문법 (Cú pháp TCL)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 6.3 TCL 문법 (Cú pháp TCL)
+
+Các ý ngay dưới **6.3 TCL 문법 (Cú pháp TCL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
 - `COMMIT`: Lưu vĩnh viễn giao dịch (Transaction) thành công.
 - `ROLLBACK`: Hủy bỏ giao dịch bị lỗi, quay về trạng thái cũ.
 - `SAVEPOINT`: Đặt điểm lưu để Rollback về điểm đó thay vì toàn bộ.
 
-Các bullet của **6.2 DCL 문법 (Cú pháp DCL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+Các bullet của **6.3 TCL 문법 (Cú pháp TCL)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
-Sau khi đọc **6.2 DCL 문법 (Cú pháp DCL)**, đừng bắt đầu lại từ số không. **6.3 DML 문법 (Cú pháp DML)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **6.3 DML 문법 (Cú pháp DML)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+**6.3 TCL 문법 (Cú pháp TCL)** vừa cho ta cách đặt câu hỏi. Bây giờ **6.3 DML 문법 (Cú pháp DML)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Ở đoạn **6.3 DML 문법 (Cú pháp DML)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 6.3 DML 문법 (Cú pháp DML)
 
-Phần nguồn của **6.3 DML 문법 (Cú pháp DML)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Bây giờ ta đi vào nội dung của **6.3 DML 문법 (Cú pháp DML)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - `SELECT [DISTINCT] 속성명 FROM 테이블 WHERE 조건 GROUP BY 속성명 HAVING 조건 ORDER BY 속성명 [ASC|DESC];`
   - `DISTINCT`: Loại bỏ dòng trùng lặp.
@@ -1309,23 +1390,23 @@ Phần nguồn của **6.3 DML 문법 (Cú pháp DML)** sẽ lấp đầy khung 
 
 Với **6.3 DML 문법 (Cú pháp DML)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
-Như vậy, **6.3 DML 문법 (Cú pháp DML)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+Với **6.3 DML 문법 (Cú pháp DML)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Điểm chốt của **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)
 
-Ở bước 52/55, **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** xuất hiện như phần tiếp nối của **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)**, ta chuyển sang **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**. Đây là mắt xích 53/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **INNER JOIN**, **OUTER JOIN (LEFT, RIGHT, FULL)**, **SELF JOIN**, **CROSS JOIN** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **집합 연산자 (Toán tử tập hợp)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **집합 연산자 (Toán tử tập hợp)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **집합 연산자 (Toán tử tập hợp)**. Hãy xác định **집합 연산자 (Toán tử tập hợp)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 집합 연산자 (Toán tử tập hợp)
 
-Bây giờ ta đi vào nội dung của **집합 연산자 (Toán tử tập hợp)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **집합 연산자 (Toán tử tập hợp)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - `UNION`: Hợp (Loại bỏ trùng lặp).
 - `UNION ALL`: Hợp tất cả (Giữ nguyên trùng lặp).
@@ -1335,11 +1416,11 @@ Bây giờ ta đi vào nội dung của **집합 연산자 (Toán tử tập h�
 Các bullet của **집합 연산자 (Toán tử tập hợp)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **집합 연산자 (Toán tử tập hợp)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **조인 (JOIN)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **조인 (JOIN)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **조인 (JOIN)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 조인 (JOIN)
 
-Phần nguồn của **조인 (JOIN)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **조인 (JOIN)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **INNER JOIN**: Lấy các dòng có dữ liệu khớp nhau (Giao). `SELECT * FROM A INNER JOIN B ON A.id = B.id;`
 - **OUTER JOIN (LEFT, RIGHT, FULL)**: Lấy cả dữ liệu không khớp. Bên thiếu dữ liệu sẽ điền NULL.
@@ -1353,21 +1434,21 @@ Với **조인 (JOIN)**, hãy đọc các công thức như một chuỗi lập 
 
 Điểm chốt của **조인 (JOIN)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Như vậy, **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)
 
-Sau khi đã đặt nền bằng **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**, ta chuyển sang **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**. Đây là mắt xích 53/55 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)**, ta đã có điểm tựa để bước vào **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/56 trước khi đi vào chi tiết.
 
 Để đọc **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **일반 집합 연산자 (Toán tử tập hợp cơ bản)**. Hãy xác định **일반 집합 연산자 (Toán tử tập hợp cơ bản)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **일반 집합 연산자 (Toán tử tập hợp cơ bản)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 일반 집합 연산자 (Toán tử tập hợp cơ bản)
 
-Phần nguồn của **일반 집합 연산자 (Toán tử tập hợp cơ bản)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **일반 집합 연산자 (Toán tử tập hợp cơ bản)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **합집합 (UNION, ∪):** Hợp (lấy tất cả, bỏ trùng lặp).
 - **교집합 (INTERSECTION, ∩):** Giao (lấy phần chung).
@@ -1377,11 +1458,11 @@ Phần nguồn của **일반 집합 연산자 (Toán tử tập hợp cơ bản
 Các bullet của **일반 집합 연산자 (Toán tử tập hợp cơ bản)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **일반 집합 연산자 (Toán tử tập hợp cơ bản)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **순수 관계 연산자 (Toán tử quan hệ thuần túy)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **순수 관계 연산자 (Toán tử quan hệ thuần túy)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **순수 관계 연산자 (Toán tử quan hệ thuần túy)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 순수 관계 연산자 (Toán tử quan hệ thuần túy)
 
-Các ý ngay dưới **순수 관계 연산자 (Toán tử quan hệ thuần túy)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **순수 관계 연산자 (Toán tử quan hệ thuần túy)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 | 연산자 (Toán tử) | 기호 (Ký hiệu) | 설명 (Mô tả) |
 |---|---|---|
@@ -1398,24 +1479,24 @@ Khi đọc **순수 관계 연산자 (Toán tử quan hệ thuần túy)**, hãy
 
 Điểm chốt của **순수 관계 연산자 (Toán tử quan hệ thuần túy)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Ta có thể khép mục **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)
 
-Từ **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**, ta đã có điểm tựa để bước vào **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/55 trước khi đi vào chi tiết.
+Ở bước 55/56, **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** xuất hiện như phần tiếp nối của **15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **데이터 전환 (Data Migration - Di chuyển dữ liệu)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **데이터 전환 (Data Migration - Di chuyển dữ liệu)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **데이터 전환 (Data Migration - Di chuyển dữ liệu)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 데이터 전환 (Data Migration - Di chuyển dữ liệu)
 
-Các ý ngay dưới **데이터 전환 (Data Migration - Di chuyển dữ liệu)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **데이터 전환 (Data Migration - Di chuyển dữ liệu)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 Là quá trình chuyển dữ liệu từ hệ thống cũ sang hệ thống mới.
-- **ETL 3 bước:** 
+- **ETL 3 bước:**
   1. **E**xtraction (추출): Trích xuất từ nguồn.
   2. **T**ransformation (변환): Biến đổi cho phù hợp chuẩn mới.
   3. **L**oad (적재): Nạp vào hệ thống đích.
@@ -1423,11 +1504,11 @@ Là quá trình chuyển dữ liệu từ hệ thống cũ sang hệ thống m�
 Các bullet của **데이터 전환 (Data Migration - Di chuyển dữ liệu)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **데이터 전환 (Data Migration - Di chuyển dữ liệu)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **오류 데이터 정제 (Error Data Cleansing)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **오류 데이터 정제 (Error Data Cleansing)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **오류 데이터 정제 (Error Data Cleansing)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 오류 데이터 정제 (Error Data Cleansing)
 
-Bây giờ ta đi vào nội dung của **오류 데이터 정제 (Error Data Cleansing)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **오류 데이터 정제 (Error Data Cleansing)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 Quản lý trạng thái lỗi trong quá trình chuyển đổi:
 - **Open (Mở):** Phát hiện lỗi, chưa phân tích.
@@ -1442,21 +1523,21 @@ Các bullet của **오류 데이터 정제 (Error Data Cleansing)** đang nén 
 
 Điểm chốt của **오류 데이터 정제 (Error Data Cleansing)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
 
-Điểm chốt của **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 22. 기타 주요 개념 (Các khái niệm quan trọng khác)
 
-Ở bước 55/55, **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** xuất hiện như phần tiếp nối của **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)**, ta chuyển sang **22. 기타 주요 개념 (Các khái niệm quan trọng khác)**. Đây là mắt xích 56/56 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **22. 기타 주요 개념 (Các khái niệm quan trọng khác)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Trước hết, ta đặt **CRUD 분석 (Phân tích CRUD)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **CRUD 분석 (Phân tích CRUD)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **CRUD 분석 (Phân tích CRUD)**. Hãy xác định **CRUD 분석 (Phân tích CRUD)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### CRUD 분석 (Phân tích CRUD)
 
-Bây giờ ta đi vào nội dung của **CRUD 분석 (Phân tích CRUD)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **CRUD 분석 (Phân tích CRUD)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - Tạo ma trận (Matrix) giữa **Process (Tiến trình)** và **Table (Bảng)**.
 - Đánh dấu **C**reate, **R**ead, **U**pdate, **D**elete để xem bảng nào bị thao tác nhiều/ít, phát hiện bảng bị bỏ sót (ít nhất mỗi bảng phải có 1 thao tác).
@@ -1464,11 +1545,11 @@ Bây giờ ta đi vào nội dung của **CRUD 분석 (Phân tích CRUD)**. Mỗ
 Các bullet của **CRUD 분석 (Phân tích CRUD)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **CRUD 분석 (Phân tích CRUD)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **MyBatis (프레임워크)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **MyBatis (프레임워크)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **MyBatis (프레임워크)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### MyBatis (프레임워크)
 
-Phần nguồn của **MyBatis (프레임워크)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **MyBatis (프레임워크)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - Khung làm việc (Framework) giúp đơn giản hóa JDBC trong Java.
 - **Đặc điểm:** Tách mã SQL ra khỏi mã Java (lưu trong file XML hoặc Annotation), thân thiện với lập trình viên SQL.
@@ -1476,11 +1557,11 @@ Phần nguồn của **MyBatis (프레임워크)** sẽ lấp đầy khung giả
 Các bullet của **MyBatis (프레임워크)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **MyBatis (프레임워크)**, đừng bắt đầu lại từ số không. **시스템 카탈로그 (System Catalog)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **시스템 카탈로그 (System Catalog)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **시스템 카탈로그 (System Catalog)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 시스템 카탈로그 (System Catalog)
 
-Các ý ngay dưới **시스템 카탈로그 (System Catalog)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **시스템 카탈로그 (System Catalog)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **Định nghĩa:** CSDL đặc biệt chứa "dữ liệu về dữ liệu" (Metadata / Data Dictionary).
 - **Đặc điểm:** Chỉ có hệ thống (DBMS) mới được quyền cập nhật (Tự động cập nhật). Người dùng chỉ có quyền **SELECT (Đọc)**.
@@ -1488,17 +1569,15 @@ Các ý ngay dưới **시스템 카탈로그 (System Catalog)** cung cấp dữ
 Các bullet của **시스템 카탈로그 (System Catalog)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 **시스템 카탈로그 (System Catalog)** vừa cho ta cách đặt câu hỏi. Bây giờ **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
-Ở đoạn **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)
 
-Bây giờ ta đi vào nội dung của **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - 산술 연산자 (Toán học: `* / + -`) **>** 관계 연산자 (So sánh: `< > = !=`) **>** 논리 연산자 (Logic: `NOT > AND > OR`).
 
 > 💡 **Mẹo ghi nhớ:** **Toán - Quan - Lo** (Toán học - Quan hệ - Logic). Nhân chia trước, cộng trừ sau, rồi đến so sánh, cuối cùng là AND/OR.
-
-EOF
 
 Với **연산자 우선순위 (Thứ tự ưu tiên toán tử trong SQL)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 

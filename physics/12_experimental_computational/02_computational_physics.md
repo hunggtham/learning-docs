@@ -1,5 +1,8 @@
 # Vật lý tính toán: rời rạc hóa, độ ổn định, Monte Carlo và bài toán ngược
 
+> **Mạch đọc:** Đọc **Vật lý tính toán: rời rạc hóa, độ ổn định, Monte Carlo và bài toán ngược** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Vì sao cần vật lý tính toán?** sang **Tích phân số theo thời gian**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Vì sao cần vật lý tính toán?
 
 Nhiều mô hình vật lý có phương trình chính xác nhưng không có nghiệm giải tích thuận tiện. Khi hình học phức tạp, hệ có nhiều bậc tự do, phương trình phi tuyến hoặc dữ liệu thực nghiệm lớn, ta phải chuyển bài toán liên tục thành một bài toán số mà máy tính có thể xử lý. Quá trình đó gọi là rời rạc hóa (discretization).
@@ -100,9 +103,9 @@ Không phải mọi sai lệch số đều được giải quyết bằng cách 
 
 ## Khả năng tái lập và nguồn gốc kết quả
 
-Một kết quả tính toán khoa học nên cho phép người khác xác định nó được tạo ra như thế nào. Cần lưu phiên bản dữ liệu, mã nguồn và commit, tham số cấu hình, môi trường chạy, thư viện phụ thuộc, hạt giống ngẫu nhiên khi cần, đơn vị và các bước tiền xử lý.
+Một kết quả tính toán khoa học nên cho phép người khác xác định nó được tạo ra như thế nào. Cần lưu phiên bản dữ liệu, mã nguồn và lần ghi nhận (commit / 커밋), tham số cấu hình, môi trường chạy, thư viện phụ thuộc, hạt giống ngẫu nhiên khi cần, đơn vị và các bước tiền xử lý.
 
-Đây là điểm vật lý tính toán gặp trực tiếp kỹ nghệ phần mềm (software engineering). Git, kiểm thử, container và tích hợp liên tục không chỉ là tiện ích phát triển; chúng giúp bảo vệ khả năng truy vết và tái lập kết quả khoa học.
+Đây là điểm vật lý tính toán gặp trực tiếp kỹ nghệ phần mềm (software engineering / 소프트웨어 공학). Git, kiểm thử, bộ chứa (container / 컨테이너) và tích hợp liên tục không chỉ là tiện ích phát triển; chúng giúp bảo vệ khả năng truy vết và tái lập kết quả khoa học.
 
 ## Đơn vị trong mã nguồn
 
@@ -110,7 +113,7 @@ Sai đơn vị có thể phá hỏng một mô hình dù mọi phép tính số 
 
 Sự cố Mars Climate Orbiter thường được nhắc như một ví dụ lịch sử về hậu quả của việc dùng không nhất quán hệ đơn vị trong giao diện dữ liệu. Bài học tổng quát là: một giá trị số không có ý nghĩa vật lý đầy đủ nếu thiếu đơn vị và quy ước.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Một mô phỏng đi qua hai lần trừu tượng hóa:
 
@@ -134,8 +137,10 @@ Giảm bước thời gian chỉ giảm một thành phần sai số nếu phư�
 
 Không nhất thiết. Bài toán cứng (stiff), hệ Hamilton, phương trình bảo toàn hoặc bài toán có sốc có thể cần phương pháp được thiết kế cho cấu trúc riêng của chúng.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Ngôn ngữ toán học](../00_foundations/03_mathematical_language.md), [Vật lý thực nghiệm](00_measurement_experiment.md).
 
 **Liên hệ tiếp:** [Động lực học phi tuyến và hỗn loạn](../01_mechanics/09_nonlinear_dynamics_chaos.md), [Vật lý plasma](../10_condensed_matter_devices/03_plasma_physics.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement experiment](./00_measurement_experiment.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

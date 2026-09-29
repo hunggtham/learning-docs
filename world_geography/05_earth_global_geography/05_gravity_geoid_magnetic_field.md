@@ -1,5 +1,8 @@
 # Trọng lực, geoid, từ trường và các trường vật lý của Trái Đất
 
+> **Mạch đọc:** Đặt **Trọng lực, geoid, từ trường và các trường vật lý của Trái Đất** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Hành tinh không chỉ có hình dạng; nó còn có trường** sang **Trọng lực khác gia tốc trọng trường hiệu dụng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 ## Hành tinh không chỉ có hình dạng; nó còn có trường
 
 Một bản đồ hình học cho biết vật nằm ở đâu, nhưng nhiều quá trình địa lý phụ thuộc các **trường vật lý (physical fields)**. Trọng lực tạo khái niệm “xuống” và kiểm soát dòng vật chất. Từ trường ảnh hưởng la bàn, môi trường không gian và một phần lịch sử địa chất. Cả hai đều biến đổi theo không gian và thời gian.
@@ -22,7 +25,7 @@ Geoid không phải địa hình. Một nơi geoid cao hơn ellipsoid không có
 
 ## Plumb line và vertical deflection
 
-Một dây dọi định hướng theo vector trọng lực địa phương. Hướng này có thể lệch nhẹ so với pháp tuyến của ellipsoid, tạo **độ lệch phương thẳng đứng (deflection of the vertical)**.
+Một dây dọi định hướng theo véc-tơ (vector / 벡터) trọng lực địa phương. Hướng này có thể lệch nhẹ so với pháp tuyến của ellipsoid, tạo **độ lệch phương thẳng đứng (deflection of the vertical)**.
 
 Hiệu ứng nhỏ nhưng cho thấy “thẳng đứng” là khái niệm vật lý, còn trục tọa độ ellipsoid là khái niệm hình học.
 
@@ -30,13 +33,13 @@ Hiệu ứng nhỏ nhưng cho thấy “thẳng đứng” là khái niệm vậ
 
 Nếu một vùng mất băng hoặc nước ngầm, phân bố khối lượng thay đổi và trường trọng lực thay đổi rất nhỏ. Vệ tinh trọng lực có thể đo những thay đổi này ở quy mô lớn.
 
-Đây là kiểu suy luận **inverse problem**: ta không quan sát trực tiếp toàn bộ khối lượng bên trong mà đo phản ứng của trường rồi suy phân bố nguồn. Inverse problem thường không có nghiệm duy nhất nếu thiếu ràng buộc, vì vậy cần mô hình và dữ liệu bổ sung.
+Đây là kiểu suy luận **inverse bài toán (problem / 문제)**: ta không quan sát trực tiếp toàn bộ khối lượng bên trong mà đo phản ứng của trường rồi suy phân bố nguồn. Inverse bài toán (problem / 문제) thường không có nghiệm duy nhất nếu thiếu ràng buộc, vì vậy cần mô hình và dữ liệu bổ sung.
 
 ## Gravity anomaly và cấu trúc địa chất
 
 Trong thăm dò, gravity anomaly có thể gợi ý bồn trầm tích, intrusive body hoặc khác biệt mật độ. Tuy nhiên một anomaly không tự động xác định loại đá; nhiều cấu hình khối lượng có thể tạo tín hiệu tương tự.
 
-Đây là bài học chung cho remote sensing và geophysics: sensor đo tín hiệu, còn “đối tượng” là kết quả diễn giải dựa trên model.
+Đây là bài học chung cho remote sensing và geophysics: sensor đo tín hiệu, còn “đối tượng” là kết quả diễn giải dựa trên mô hình (model / 모델).
 
 ## Từ trường Trái Đất và geodynamo
 
@@ -48,13 +51,13 @@ Trường ở bề mặt gần giống dipole ở quy mô lớn nhưng có nhi�
 
 La bàn chỉ hướng theo thành phần ngang của từ trường. Góc giữa bắc từ và bắc thật gọi là **độ lệch từ (magnetic declination)**. **Magnetic inclination** mô tả góc trường nghiêng xuống hoặc lên so với mặt phẳng ngang. Cường độ từ trường cũng thay đổi theo vị trí.
 
-Vì declination thay đổi theo thời gian, bản đồ hàng hải hoặc khảo sát từ cần model theo epoch. “Bắc từ” không phải một hướng cố định vĩnh viễn.
+Vì declination thay đổi theo thời gian, bản đồ hàng hải hoặc khảo sát từ cần mô hình (model / 모델) theo epoch. “Bắc từ” không phải một hướng cố định vĩnh viễn.
 
 ## True north, grid north và magnetic north
 
 **Bắc thật (true north)** hướng về cực địa lý theo kinh tuyến. **Bắc lưới (grid north)** là hướng của trục y trên bản đồ chiếu. **Bắc từ (magnetic north)** là hướng la bàn.
 
-Ba hướng có thể khác nhau. Trong bản đồ địa hình và navigation chính xác, cần biết convergence của grid và magnetic declination trước khi chuyển bearing.
+Ba hướng có thể khác nhau. Trong bản đồ địa hình và điều hướng (navigation / 내비게이션) chính xác, cần biết convergence của grid và magnetic declination trước khi chuyển bearing.
 
 ## Paleomagnetism và bằng chứng kiến tạo mảng
 
@@ -62,13 +65,13 @@ Khi dung nham nguội hoặc trầm tích hình thành, khoáng vật từ có t
 
 Các dải anomaly từ đối xứng hai bên sống núi giữa đại dương từng là bằng chứng mạnh cho sea-floor spreading: vỏ mới hình thành ghi polarity theo thời gian rồi dịch sang hai phía.
 
-Như vậy từ trường không chỉ giúp định hướng hiện tại mà còn là archive của geological time.
+Như vậy từ trường không chỉ giúp định hướng hiện tại mà còn là archive của geological thời gian (time / 시간).
 
 ## Magnetosphere và môi trường không gian
 
 Từ trường làm lệch nhiều hạt tích điện từ gió Mặt Trời, tạo **magnetosphere**. Một số hạt đi theo đường sức vào vùng cực và tạo aurora.
 
-Bão địa từ có thể ảnh hưởng truyền thông vô tuyến, GNSS, vệ tinh và lưới điện ở vĩ độ cao. Đây là ví dụ Earth system mở rộng lên tương tác Sun–Earth, nơi geography của hạ tầng quyết định mức phơi lộ.
+Bão địa từ có thể ảnh hưởng truyền thông vô tuyến, GNSS, vệ tinh và lưới điện ở vĩ độ cao. Đây là ví dụ Earth hệ thống (system / 시스템) mở rộng lên tương tác Sun–Earth, nơi geography của hạ tầng quyết định mức phơi lộ.
 
 ## GNSS không dùng từ trường để tính vị trí
 
@@ -78,6 +81,8 @@ Phân biệt sensor nào đo gì giúp tránh cách hiểu “GPS biết hướn
 
 ## Mô hình tư duy
 
-Ellipsoid mô tả hình học; geoid mô tả bề mặt thế hấp dẫn; gravimetry suy phân bố khối lượng; magnetic field cung cấp một trường định hướng và archive địa chất. Các lớp này khác nhau nhưng cùng giúp biến hành tinh vật lý thành dữ liệu đo được.
+Ellipsoid mô tả hình học; geoid mô tả bề mặt thế hấp dẫn; gravimetry suy phân bố khối lượng; magnetic trường dữ liệu (field / 필드) cung cấp một trường định hướng và archive địa chất. Các lớp này khác nhau nhưng cùng giúp biến hành tinh vật lý thành dữ liệu đo được.
 
 Xem tiếp: [Trắc địa](./00_earth_shape_size_geodesy.md), [Hệ quy chiếu](./06_global_reference_systems.md), [Kiến tạo mảng](../01_physical_geography/00_plate_tectonics_geologic_time.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 earth shape size geodesy](./00_earth_shape_size_geodesy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

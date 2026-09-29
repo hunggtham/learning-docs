@@ -1,5 +1,8 @@
 # Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định
 
+> **Mạch đọc:** Đặt **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bắt đầu từ câu hỏi, không bắt đầu từ ticker** sang **2. Tách dữ kiện, ước tính, giả định và diễn giải**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Đây là capstone nối toàn bộ thư viện. Mục tiêu là đi từ một ý tưởng đầu tư đến một quyết định có thể kiểm chứng và sau đó quay lại cải thiện quy trình. Không tập trung vào một mã cụ thể, mà dùng một **doanh nghiệp xuất khẩu chu kỳ niêm yết tại Hàn Quốc hoặc Việt Nam** làm mẫu tư duy. Đây không phải khuyến nghị mua/bán.
 
 ## 1. Bắt đầu từ câu hỏi, không bắt đầu từ ticker
@@ -20,7 +23,7 @@ Nếu câu hỏi không thể bị bác bỏ bằng dữ liệu, nó chưa phả
 
 ## 2. Tách dữ kiện, ước tính, giả định và diễn giải
 
-Mọi research note phải phân biệt:
+Mọi research ghi chú (note / 노트) phải phân biệt:
 
 ```text
 Dữ kiện (fact)
@@ -124,7 +127,7 @@ Hai lần 10Y tăng 50 bp có thể mang ý nghĩa hoàn toàn khác nếu một
 
 ## 7. Thêm lớp liquidity / credit / funding
 
-Không đủ khi chỉ biết risk-free rate.
+Không đủ khi chỉ biết risk-free tỷ lệ (rate / 비율).
 
 Theo dõi:
 
@@ -157,7 +160,7 @@ Demand
 
 Với từng ngành, thay các biến phù hợp. Điều quan trọng là xác định biến **dẫn dắt** và biến **trễ**.
 
-Không dùng một headline ngành thay cho driver tree.
+Không dùng một headline ngành thay cho driver cây (tree / 트리).
 
 ## 9. Xây cây doanh nghiệp
 
@@ -183,7 +186,7 @@ Operating Profit
 
 Chuỗi này tạo cầu nối từ dữ liệu vận hành tới dòng tiền.
 
-Nếu không thể giải thích revenue/margin bằng driver, valuation phía sau chỉ là spreadsheet assumption.
+Nếu không thể giải thích revenue/margin bằng driver, valuation phía sau chỉ là spreadsheet giả định (assumption / 가정).
 
 ## 10. Xây FX map riêng
 
@@ -199,7 +202,7 @@ Reporting currency
 Investor base currency
 ```
 
-Không dùng rule `nội tệ yếu = exporter tốt` nếu chưa biết net FX exposure.
+Không dùng quy tắc (rule / 규칙) `nội tệ yếu = exporter tốt` nếu chưa biết net FX exposure.
 
 ## 11. Kiểm tra bảng cân đối trước định giá
 
@@ -221,9 +224,9 @@ Revolver / unused facilities
 
 Phải tạo **liquidity runway** và **refinancing map**, không chỉ Debt/EBITDA.
 
-## 12. Reverse stress test bảng cân đối
+## 12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối
 
-Không chỉ hỏi “bear case lỗ bao nhiêu”. Hãy hỏi:
+Không chỉ hỏi “bear trường hợp (case / 사례) lỗ bao nhiêu”. Hãy hỏi:
 
 > Tổ hợp điều kiện nào khiến doanh nghiệp phải pha loãng vốn, bán tài sản hoặc vi phạm covenant?
 
@@ -316,7 +319,7 @@ Residual income
 
 Tùy ngành. Mục tiêu là xem nhiều phương pháp có cùng kể một câu chuyện hay không.
 
-## 17. Tách cash-flow effect và discount-rate effect
+## 17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)
 
 Nếu giá trị giảm, phải biết do:
 
@@ -336,13 +339,13 @@ Hỏi:
 
 > Giá hiện tại yêu cầu tăng trưởng, biên lợi nhuận và ROIC như thế nào?
 
-Nếu giá hiện tại đã giả định gần bull case, upside thực có thể thấp dù doanh nghiệp tốt.
+Nếu giá hiện tại đã giả định gần bull trường hợp (case / 사례), upside thực có thể thấp dù doanh nghiệp tốt.
 
-Reverse DCF cũng giúp phát hiện khi thị trường đã pricing một bear case rất sâu.
+Reverse DCF cũng giúp phát hiện khi thị trường đã pricing một bear trường hợp (case / 사례) rất sâu.
 
 ## 19. Chuyển định giá thành phân phối lợi suất
 
-Không chỉ ghi target price.
+Không chỉ ghi mục tiêu (target / 대상) price.
 
 Ví dụ:
 
@@ -352,9 +355,9 @@ Base: +18%, xác suất 50%
 Bear: -30%, xác suất 25%
 ```
 
-Sau đó tính expectancy gần đúng nhưng không quên tail risk và sai số xác suất.
+Sau đó tính expectancy gần đúng nhưng không quên tail rủi ro (risk / 위험) và sai số xác suất.
 
-Nếu đầu tư xuyên biên giới, chuyển từng scenario sang **đồng tiền cơ sở** bằng FX assumption và chi phí.
+Nếu đầu tư xuyên biên giới, chuyển từng scenario sang **đồng tiền cơ sở** bằng FX giả định (assumption / 가정) và chi phí.
 
 ## 20. Phân tích rủi ro ngoài mô hình
 
@@ -372,7 +375,7 @@ Supply-chain disruption
 Cyber / operational
 ```
 
-Danh sách này phải ảnh hưởng tới uncertainty và quy mô vị thế.
+Danh sách này phải ảnh hưởng tới bất định (uncertainty / 불확실성) và quy mô vị thế.
 
 ## 21. Kiểm tra tương quan với danh mục hiện có
 
@@ -400,7 +403,7 @@ Liquidity
 China / global demand
 ```
 
-## 22. Từ conviction tới position size
+## 22. Từ conviction tới position kích thước (size / 크기)
 
 Không dùng conviction một mình.
 
@@ -419,7 +422,7 @@ Gap / tail risk
 
 Một thesis tốt nhưng thanh khoản kém vẫn có thể cần vị thế nhỏ.
 
-## 23. Sizing bằng stress loss
+## 23. Sizing bằng stress mất mát (loss / 손실)
 
 Một cách thực hành:
 
@@ -434,9 +437,9 @@ Nếu vị thế 8% có stress return -40%:
 Loss contribution ≈ -3,2% danh mục
 ```
 
-Sau đó hỏi liệu 3,2% có phù hợp risk budget hay không.
+Sau đó hỏi liệu 3,2% có phù hợp rủi ro (risk / 위험) ngân sách (budget / 예산) hay không.
 
-## 24. Viết invalidation theo từng tầng trước khi mở vị thế
+## 24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế
 
 Ví dụ:
 
@@ -449,7 +452,7 @@ Valuation: price đã phản ánh upside
 Portfolio: correlation / concentration vượt ngưỡng
 ```
 
-Giá giảm không tự động là invalidation; cơ chế sai mới là invalidation.
+Giá giảm không tự động là vô hiệu hóa (invalidation / 무효화); cơ chế sai mới là vô hiệu hóa (invalidation / 무효화).
 
 ## 25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst
 
@@ -472,7 +475,7 @@ Trước thực thi, viết:
 
 > Sáu tháng sau vị thế lỗ lớn. Nguyên nhân hợp lý nhất là gì?
 
-Liệt kê ít nhất năm failure mode:
+Liệt kê ít nhất năm dạng thất bại (failure mode / 실패 모드):
 
 ```text
 Macro thesis đúng nhưng company mất share
@@ -500,9 +503,9 @@ Event calendar
 Settlement / FX need
 ```
 
-Với mã thanh khoản thấp, execution có thể ảnh hưởng đáng kể tới return.
+Với mã thanh khoản thấp, thực thi (execution / 실행) có thể ảnh hưởng đáng kể tới return.
 
-## 28. Tách decision price và execution price
+## 28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price
 
 Ghi:
 
@@ -516,7 +519,7 @@ Slippage
 Opportunity cost
 ```
 
-Sau này có thể phân biệt thesis tốt nhưng execution tệ.
+Sau này có thể phân biệt thesis tốt nhưng thực thi (execution / 실행) tệ.
 
 ## 29. Nếu dùng phái sinh, theo dõi notional và margin
 
@@ -533,7 +536,7 @@ Liquidity buffer
 Basis risk
 ```
 
-## 30. Hedge phải có failure mode
+## 30. Hedge phải có dạng thất bại (failure mode / 실패 모드)
 
 Không chỉ ghi “hedge bằng futures/options/FX forward”. Phải ghi:
 
@@ -582,7 +585,7 @@ Không cần chuyển ngay từ “bear” sang “bull” tuyệt đối.
 
 Tư duy xác suất giảm phản ứng cảm xúc.
 
-## 33. Earnings review
+## 33. Earnings rà soát (review / 검토)
 
 Sau mỗi quý:
 
@@ -596,7 +599,7 @@ Consensus revision
 Valuation
 ```
 
-Cập nhật model trước khi đọc quá nhiều bình luận thị trường để giảm anchoring.
+Cập nhật mô hình (model / 모델) trước khi đọc quá nhiều bình luận thị trường để giảm anchoring.
 
 ## 34. Attribution sau một giai đoạn
 
@@ -616,7 +619,7 @@ Position sizing
 
 Nếu lời nhờ multiple expansion nhưng thesis earnings sai, không nên tự đánh giá quyết định là hoàn toàn tốt.
 
-## 35. Decision quality khác outcome
+## 35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)
 
 Bốn trường hợp:
 
@@ -644,7 +647,7 @@ Execution / hedge có tốt?
 Tôi có phá rule?
 ```
 
-Không chỉ ghi profit/loss.
+Không chỉ ghi profit/mất mát (loss / 손실).
 
 ## 37. Cập nhật playbook
 
@@ -657,9 +660,9 @@ Thường bỏ qua debt maturity
 → thêm debt maturity checklist vào mọi company model
 ```
 
-Đây là cách knowledge library trở thành hệ thống học sống.
+Đây là cách thư viện kiến thức (knowledge library / 지식 라이브러리) trở thành hệ thống học sống.
 
-## 38. Quality gate cuối
+## 38. cổng chất lượng (quality gate / 품질 게이트) cuối
 
 Capstone chỉ được xem là hoàn thành khi trả lời được cả bảy câu:
 
@@ -694,7 +697,7 @@ Chọn một doanh nghiệp hoặc tài sản thực tế và tạo bộ hồ s�
 11_attribution_postmortem.md
 ```
 
-Mỗi file phải liên kết với dữ liệu và giả định cụ thể.
+Mỗi tệp (file / 파일) phải liên kết với dữ liệu và giả định cụ thể.
 
 ## 40. Liên kết tới Advanced Labs và worked cases
 

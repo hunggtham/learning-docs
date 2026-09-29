@@ -1,17 +1,20 @@
 # Hóa học của sự sống — nhìn sự sống từ hóa học phân tử
 
+> **Mạch đọc:** Đọc **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Câu hỏi nền tảng: điều gì biến hóa học thành hóa học của sự sống?** sang **Nước không chỉ là nền dung môi**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Sinh hóa (biochemistry / 생화학)** nghiên cứu cách hóa học thông thường được tổ chức thành một hệ thống có khả năng duy trì cấu trúc, chuyển hóa năng lượng, sao chép thông tin và tự điều chỉnh. Sự sống không sử dụng một bộ định luật vật lý khác; điều đặc biệt nằm ở **tổ chức, phân ngăn, xúc tác và kiểm soát ngoài cân bằng**.
 
 ## Câu hỏi nền tảng: điều gì biến hóa học thành hóa học của sự sống?
 
 Nếu đặt amino acid, đường, lipid và nucleotide vào cùng một cốc, ta chưa có một tế bào. Một hệ sống cần ít nhất bốn tầng tổ chức hoạt động đồng thời:
 
-1. **ranh giới (boundary)** để tách bên trong và bên ngoài;
+1. **ranh giới (boundary / 경계)** để tách bên trong và bên ngoài;
 2. **mạng phản ứng (reaction network)** để biến đổi vật chất và năng lượng;
 3. **polymer thông tin (information polymer)** để lưu và truyền mẫu thông tin;
 4. **phản hồi/điều khiển (feedback/control)** để giữ hệ trong vùng hoạt động ổn định.
 
-Các tầng này phụ thuộc lẫn nhau. Màng tạo gradient; gradient cung cấp năng lượng; enzyme điều khiển phản ứng; genome mã hóa enzyme; chuyển hóa tạo nguyên liệu để tái tạo màng và genome.
+Các tầng này phụ thuộc lẫn nhau. Màng tạo độ dốc (gradient / 기울기); độ dốc (gradient / 기울기) cung cấp năng lượng; enzyme điều khiển phản ứng; genome mã hóa enzyme; chuyển hóa tạo nguyên liệu để tái tạo màng và genome.
 
 Vì vậy sinh hóa nên được đọc như một **hệ ghép nối (coupled system)**, không phải tập hợp rời rạc của protein, lipid, DNA và ATP.
 
@@ -75,7 +78,7 @@ Enzyme khai thác chính khả năng điều chỉnh này để chuyển proton 
 
 ## Dung dịch đệm không “giữ pH cố định”
 
-Dung dịch đệm chỉ **chống lại sự thay đổi pH** trong một khả năng hữu hạn. Khi acid hoặc base thêm vào vượt khả năng đệm, pH vẫn thay đổi mạnh.
+Dung dịch đệm chỉ **chống lại sự thay đổi pH** trong một khả năng hữu hạn. Khi acid hoặc cơ sở (base / 기반) thêm vào vượt khả năng đệm, pH vẫn thay đổi mạnh.
 
 Kiểm soát pH sinh học kết hợp hệ đệm hóa học với vận chuyển ion, hô hấp, chức năng thận, trao đổi ion và điều hòa chuyển hóa.
 
@@ -199,16 +202,16 @@ Một ion đi qua màng có thay đổi năng lượng tự do:
 \Delta G=RT\ln\frac{a_2}{a_1}+zF\Delta\psi
 \]
 
-Hạng đầu là gradient hóa học; hạng sau là thế điện.
+Hạng đầu là độ dốc (gradient / 기울기) hóa học; hạng sau là thế điện.
 
-Gradient có thể thúc đẩy:
+Độ dốc (gradient / 기울기) có thể thúc đẩy:
 
 - tổng hợp ATP;
 - hấp thu chất dinh dưỡng;
 - cân bằng ion;
 - tín hiệu điện.
 
-Nếu không có ranh giới bán thấm, gradient sẽ tiêu tán và khả năng lưu trữ năng lượng tự do bị mất.
+Nếu không có ranh giới bán thấm, độ dốc (gradient / 기울기) sẽ tiêu tán và khả năng lưu trữ năng lượng tự do bị mất.
 
 ## Xúc tác — kiểm soát hàng rào, không thay cân bằng
 
@@ -255,7 +258,7 @@ Vì vậy sinh hóa giao trực tiếp với lý thuyết điều khiển.
 
 ## Polymer thông tin
 
-Trình tự DNA/RNA lưu một mẫu ký hiệu trong thứ tự cộng hóa trị của monomer. Trình tự có thể được sao chép nhờ tính bổ sung của cặp base.
+Trình tự DNA/RNA lưu một mẫu ký hiệu trong thứ tự cộng hóa trị của monomer. Trình tự có thể được sao chép nhờ tính bổ sung của cặp cơ sở (base / 기반).
 
 Nhưng “thông tin” không tồn tại trong phân tử như một khái niệm trừu tượng độc lập. Nó trở thành thông tin sinh học vì bộ máy tế bào diễn giải trình tự thông qua phiên mã, dịch mã và mạng điều hòa.
 
@@ -303,7 +306,7 @@ Mức kim loại phải được kiểm soát vì chính hoạt tính oxy hóa-k
 
 ## Sự sống tồn tại xa cân bằng
 
-Tế bào sống liên tục trao đổi vật chất và năng lượng với môi trường. Nếu bị cô lập hoàn toàn đủ lâu, gradient giảm, tỉ lệ ATP giảm, đại phân tử phân hủy và hệ tiến dần về cân bằng.
+Tế bào sống liên tục trao đổi vật chất và năng lượng với môi trường. Nếu bị cô lập hoàn toàn đủ lâu, độ dốc (gradient / 기울기) giảm, tỉ lệ ATP giảm, đại phân tử phân hủy và hệ tiến dần về cân bằng.
 
 Trật tự trong tế bào không vi phạm định luật hai vì tổng entropy của tế bào + môi trường vẫn tăng.
 
@@ -341,3 +344,5 @@ Không cần giả định một lực riêng như vậy. Sự kết hợp xuấ
 Hãy xem tế bào như một **lò phản ứng hóa học mở, ngoài cân bằng, có màng, chất xúc tác, polymer thông tin và điều khiển phản hồi**. Sự sống xuất hiện khi các thành phần này được ghép đủ chặt để vật chất, năng lượng và thông tin liên tục hỗ trợ lẫn nhau.
 
 Xem tiếp: [Amino acid và protein](./01_amino_acids_and_proteins.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 amino acids and proteins](./01_amino_acids_and_proteins.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

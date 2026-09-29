@@ -1,5 +1,8 @@
 # Tương tác tài khóa – tiền tệ, nợ công, nhân khẩu học và năng suất
 
+> **Mạch đọc:** Đặt **Tương tác tài khóa – tiền tệ, nợ công, nhân khẩu học và năng suất** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Không nên nhìn ngân sách và central bank hoàn toàn tách rời** sang **2. Fiscal deficit**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Chương này tập trung vào các lực **cấu trúc dài hạn** của nền kinh tế. Nếu các chương trước chủ yếu giải thích chu kỳ, dữ liệu và khủng hoảng, chương này trả lời những câu hỏi như: nợ công tăng tới đâu thì đáng lo, dân số già ảnh hưởng lãi suất thế nào, năng suất quyết định tăng trưởng dài hạn ra sao và khi nào chính sách tài khóa bắt đầu ràng buộc chính sách tiền tệ.
 
 # Phần I — Bảng cân đối khu vực công
@@ -19,7 +22,7 @@ Thâm hụt ngân sách (fiscal deficit) xuất hiện khi chi tiêu vượt thu
 Không phải mọi deficit đều giống nhau. Cần hỏi tiền được dùng cho:
 
 - transfer tiêu dùng;
-- infrastructure;
+- hạ tầng (infrastructure / 인프라);
 - defense;
 - healthcare;
 - interest expense;
@@ -57,12 +60,12 @@ Debt/GDP là chỉ số phổ biến nhưng không đủ.
 
 Cần xem thêm:
 
-- interest rate;
+- interest tỷ lệ (rate / 비율);
 - nominal growth;
 - primary balance;
 - maturity;
 - currency;
-- investor base.
+- investor cơ sở (base / 기반).
 
 ## 6. Quan hệ r và g
 
@@ -89,19 +92,19 @@ Một dạng trực giác:
 
 Mục tiêu không phải dùng như dự báo chính xác, mà hiểu ba lực quyết định hướng của debt ratio.
 
-## 8. Effective funding rate
+## 8. Effective funding tỷ lệ (rate / 비율)
 
-Chi phí lãi thực tế của chính phủ không tăng ngay bằng market yield nếu phần lớn nợ đã khóa lãi cố định dài hạn.
+Chi phí lãi thực tế của chính phủ không tăng ngay bằng thị trường (market / 시장) yield nếu phần lớn nợ đã khóa lãi cố định dài hạn.
 
 Áp lực truyền vào theo lịch đáo hạn.
 
-## 9. Maturity structure
+## 9. Maturity cấu trúc (structure / 구조)
 
 Nợ kỳ hạn dài làm chi phí funding repricing chậm hơn.
 
 Nợ ngắn làm pressure truyền nhanh.
 
-Do đó hai quốc gia cùng debt/GDP có thể có sensitivity với rate shock hoàn toàn khác nhau.
+Do đó hai quốc gia cùng debt/GDP có thể có sensitivity với tỷ lệ (rate / 비율) shock hoàn toàn khác nhau.
 
 ## 10. Gross financing need
 
@@ -116,13 +119,13 @@ Fiscal Deficit
 
 Một quốc gia có deficit nhỏ nhưng lượng nợ đáo hạn rất lớn vẫn có refinancing need cao.
 
-# Phần III — Currency và investor base
+# Phần III — Currency và investor cơ sở (base / 기반)
 
 ## 11. Nợ bằng nội tệ
 
 Quốc gia phát hành nợ chủ yếu bằng đồng tiền mình kiểm soát có flexibility khác quốc gia vay ngoại tệ.
 
-Nhưng điều này không loại bỏ inflation risk hoặc confidence risk.
+Nhưng điều này không loại bỏ inflation rủi ro (risk / 위험) hoặc confidence rủi ro (risk / 위험).
 
 ## 12. Nợ ngoại tệ
 
@@ -134,7 +137,7 @@ Khi nội tệ giảm:
 Debt Burden in Local Currency ↑
 ```
 
-## 13. Investor base
+## 13. Investor cơ sở (base / 기반)
 
 Cần biết ai đang nắm government bonds:
 
@@ -144,7 +147,7 @@ Cần biết ai đang nắm government bonds:
 - foreign investors;
 - central bank.
 
-Investor base ổn định có thể giảm rollover risk nhưng đôi khi tạo vòng liên kết sovereign–bank.
+Investor cơ sở (base / 기반) ổn định có thể giảm rollover rủi ro (risk / 위험) nhưng đôi khi tạo vòng liên kết sovereign–bank.
 
 # Phần IV — Fiscal impulse
 
@@ -152,19 +155,19 @@ Investor base ổn định có thể giảm rollover risk nhưng đôi khi tạo
 
 Không chỉ mức deficit quan trọng mà cả **thay đổi của stance tài khóa**.
 
-Nếu deficit từ 8% GDP giảm còn 4%, fiscal policy có thể đang tạo drag dù ngân sách vẫn thâm hụt.
+Nếu deficit từ 8% GDP giảm còn 4%, fiscal chính sách (policy / 정책) có thể đang tạo drag dù ngân sách vẫn thâm hụt.
 
 ## 15. Fiscal multiplier
 
 Hệ số nhân tài khóa phụ thuộc:
 
 - nền kinh tế còn slack không;
-- monetary policy phản ứng thế nào;
+- monetary chính sách (policy / 정책) phản ứng thế nào;
 - household propensity to spend;
 - openness;
 - loại chi tiêu.
 
-Infrastructure ở recession có hiệu ứng khác tax rebate khi economy đã quá nóng.
+Hạ tầng (infrastructure / 인프라) ở recession có hiệu ứng khác tax rebate khi economy đã quá nóng.
 
 ## 16. Automatic stabilizers
 
@@ -172,16 +175,16 @@ Thuế và trợ cấp thất nghiệp tự động làm fiscal stance nới hơ
 
 Đây là **bộ ổn định tự động (automatic stabilizer)**.
 
-# Phần V — Treasury issuance và bond market
+# Phần V — Treasury issuance và bond thị trường (market / 시장)
 
 ## 17. Cung trái phiếu chính phủ
 
 Deficit lớn hơn thường cần issuance lớn hơn.
 
-Nhưng market impact phụ thuộc:
+Nhưng thị trường (market / 시장) impact phụ thuộc:
 
 - bills vs long bonds;
-- dealer capacity;
+- dealer sức chứa (capacity / 용량);
 - foreign demand;
 - pension demand;
 - central-bank balance sheet.
@@ -192,7 +195,7 @@ Phát hành bills tăng supply ngắn hạn khác phát hành long bonds tăng d
 
 Do đó composition issuance có thể ảnh hưởng term premium.
 
-## 19. Term premium và fiscal risk
+## 19. Term premium và fiscal rủi ro (risk / 위험)
 
 Nếu investor yêu cầu compensation lớn hơn để giữ long-duration government debt:
 
@@ -202,13 +205,13 @@ Term Premium ↑
 → Mortgage / Corporate Discount Rate ↑
 ```
 
-Fiscal condition có thể truyền sang private-sector financing qua kênh này.
+Fiscal điều kiện (condition / 조건) có thể truyền sang private-sector financing qua kênh này.
 
-# Phần VI — Fiscal và monetary interaction
+# Phần VI — Fiscal và monetary tương tác (interaction / 상호작용)
 
 ## 20. Tight monetary + loose fiscal
 
-Nếu central bank cố giảm demand bằng lãi suất cao nhưng fiscal policy đồng thời kích cầu mạnh, hai chính sách có thể kéo ngược nhau.
+Nếu central bank cố giảm demand bằng lãi suất cao nhưng fiscal chính sách (policy / 정책) đồng thời kích cầu mạnh, hai chính sách có thể kéo ngược nhau.
 
 Kết quả có thể là rates phải duy trì cao lâu hơn.
 
@@ -249,11 +252,11 @@ Debt Service ↑
 → Inflation Credibility Risk ↑
 ```
 
-Nhưng institutional structure quyết định liệu vòng này có thực sự xảy ra hay không.
+Nhưng institutional cấu trúc (structure / 구조) quyết định liệu vòng này có thực sự xảy ra hay không.
 
 ## 26. Monetary dominance
 
-Trong monetary dominance, central bank ưu tiên price stability và fiscal authority phải điều chỉnh budget để thích nghi với điều kiện funding.
+Trong monetary dominance, central bank ưu tiên price stability và fiscal authority phải điều chỉnh ngân sách (budget / 예산) để thích nghi với điều kiện funding.
 
 # Phần VIII — Rủi ro lạm phát tài khóa
 
@@ -261,13 +264,13 @@ Trong monetary dominance, central bank ưu tiên price stability và fiscal auth
 
 Transfer trực tiếp tới household có thể làm demand tăng nhanh hơn nếu propensity to spend cao.
 
-Tác động inflation phụ thuộc economy còn capacity trống hay không.
+Tác động inflation phụ thuộc economy còn sức chứa (capacity / 용량) trống hay không.
 
 ## 28. Investment spending
 
-Infrastructure có thể tăng demand ngắn hạn nhưng đồng thời tăng supply capacity dài hạn nếu dự án có năng suất cao.
+Hạ tầng (infrastructure / 인프라) có thể tăng demand ngắn hạn nhưng đồng thời tăng supply sức chứa (capacity / 용량) dài hạn nếu dự án có năng suất cao.
 
-Không nên xem mọi government spending có cùng inflation effect.
+Không nên xem mọi government spending có cùng inflation tác động (effect / 효과).
 
 # Phần IX — Demographics
 
@@ -285,7 +288,7 @@ Dân số già và lực lượng lao động giảm tạo áp lực lên growth
 
 ## 30. Fertility
 
-Birth rate thấp ảnh hưởng labor supply với độ trễ nhiều thập kỷ.
+Birth tỷ lệ (rate / 비율) thấp ảnh hưởng labor supply với độ trễ nhiều thập kỷ.
 
 Do đó demographic trend thường rất chậm nhưng khó đảo nhanh.
 
@@ -300,7 +303,7 @@ Dân số già ảnh hưởng:
 - housing demand;
 - fiscal balance.
 
-## 32. Dependency ratio
+## 32. phụ thuộc (dependency / 의존성) ratio
 
 Tỷ lệ người phụ thuộc so với lực lượng lao động tăng có thể tạo áp lực thuế và ngân sách.
 
@@ -308,7 +311,7 @@ Tỷ lệ người phụ thuộc so với lực lượng lao động tăng có t
 
 Immigration có thể tăng labor supply và demand cùng lúc.
 
-Tác động ròng phụ thuộc skills, housing capacity, integration và labor-market structure.
+Tác động ròng phụ thuộc skills, housing sức chứa (capacity / 용량), tích hợp (integration / 통합) và labor-market cấu trúc (structure / 구조).
 
 # Phần X — Labor participation và human capital
 
@@ -316,7 +319,7 @@ Tác động ròng phụ thuộc skills, housing capacity, integration và labor
 
 Population không phải labor force.
 
-Participation rate quyết định phần dân số trong độ tuổi thực sự tham gia thị trường lao động.
+Participation tỷ lệ (rate / 비율) quyết định phần dân số trong độ tuổi thực sự tham gia thị trường lao động.
 
 ## 35. Human capital
 
@@ -333,7 +336,7 @@ Một quốc gia có dân số không tăng nhưng human capital tăng vẫn có
 
 ## 36. Vốn vật chất
 
-Factory, infrastructure, software và equipment giúp worker tạo nhiều output hơn.
+Factory, hạ tầng (infrastructure / 인프라), software và equipment giúp worker tạo nhiều đầu ra (output / 출력) hơn.
 
 Nhưng lợi suất vốn có xu hướng giảm nếu chỉ tăng quantity mà không cải thiện technology hoặc allocation.
 
@@ -341,13 +344,13 @@ Nhưng lợi suất vốn có xu hướng giảm nếu chỉ tăng quantity mà 
 
 Không phải mọi capex đều tăng productivity.
 
-Đầu tư vào project có return thấp có thể làm debt tăng mà potential growth không tăng tương ứng.
+Đầu tư vào dự án (project / 프로젝트) có return thấp có thể làm debt tăng mà potential growth không tăng tương ứng.
 
 # Phần XII — TFP
 
 ## 38. Total Factor Productivity
 
-TFP đo phần tăng output không giải thích chỉ bằng tăng labor và capital.
+TFP đo phần tăng đầu ra (output / 출력) không giải thích chỉ bằng tăng labor và capital.
 
 Nó phản ánh:
 
@@ -365,15 +368,15 @@ Nếu vốn và lao động bị giữ trong doanh nghiệp năng suất thấp 
 
 Doanh nghiệp kém hiệu quả rời thị trường để nguồn lực chuyển sang doanh nghiệp tốt hơn là một phần của productivity growth.
 
-Policy bảo vệ mọi doanh nghiệp yếu vô hạn có thể cản quá trình này.
+Chính sách (policy / 정책) bảo vệ mọi doanh nghiệp yếu vô hạn có thể cản quá trình này.
 
 # Phần XIII — Institutions
 
 ## 41. Thể chế và growth
 
-Property rights, contract enforcement, regulation, education và competition policy ảnh hưởng incentive đầu tư dài hạn.
+Thuộc tính (property / 속성) rights, đặc tả hợp đồng (contract / 계약) enforcement, regulation, education và competition chính sách (policy / 정책) ảnh hưởng incentive đầu tư dài hạn.
 
-## 42. Rule of law
+## 42. quy tắc (rule / 규칙) of law
 
 Nhà đầu tư cần tin rằng hợp đồng và quyền sở hữu có thể được bảo vệ.
 
@@ -385,11 +388,11 @@ Không chắc chắn pháp lý làm required return tăng và đầu tư giảm.
 
 AI có thể:
 
-- tự động hóa task;
-- nâng output/worker;
-- giảm search cost;
+- tự động hóa tác vụ (task / 작업);
+- nâng đầu ra (output / 출력)/worker;
+- giảm tìm kiếm (search / 검색) chi phí (cost / 비용);
 - tăng tốc R&D;
-- cải thiện decision support.
+- cải thiện quyết định (decision / 결정) hỗ trợ (support / 지원).
 
 Nhưng productivity aggregate chỉ tăng khi technology được triển khai rộng và quy trình doanh nghiệp thay đổi.
 
@@ -405,11 +408,11 @@ và
 Realized Economy-Wide Productivity
 ```
 
-## 45. Distribution effect
+## 45. phân phối (distribution / 분포) tác động (effect / 효과)
 
-AI có thể nâng tổng productivity nhưng lợi ích phân phối không đều giữa worker, capital owner và ngành.
+AI có thể nâng tổng productivity nhưng lợi ích phân phối không đều giữa worker, capital đơn vị sở hữu (owner / 오너) và ngành.
 
-# Phần XV — Neutral rate và cấu trúc dài hạn
+# Phần XV — Neutral tỷ lệ (rate / 비율) và cấu trúc dài hạn
 
 ## 46. R-star
 
@@ -419,20 +422,20 @@ Lãi suất trung tính thực (r-star) chịu ảnh hưởng của:
 - demographics;
 - desired saving;
 - desired investment;
-- fiscal policy;
-- global capital flows.
+- fiscal chính sách (policy / 정책);
+- toàn cục (global / 전역) capital flows.
 
-## 47. Aging và neutral rate
+## 47. Aging và neutral tỷ lệ (rate / 비율)
 
 Dân số già có thể làm saving tăng hoặc giảm tùy giai đoạn vòng đời, nên tác động lên r-star không đơn giản một chiều.
 
 ## 48. Productivity và r-star
 
-Productivity cao hơn có thể tăng expected return on capital và investment demand, từ đó đẩy neutral rate cao hơn.
+Productivity cao hơn có thể tăng expected return on capital và investment demand, từ đó đẩy neutral tỷ lệ (rate / 비율) cao hơn.
 
-# Phần XVI — External balance và fiscal space
+# Phần XVI — bên ngoài (external / 외부) balance và fiscal không gian (space / 공간)
 
-## 49. Current account và public debt
+## 49. hiện tại (current / 현재) account và công khai (public / 공개) debt
 
 Một nước có government deficit nhưng private sector tiết kiệm cao có cấu trúc funding khác nước phụ thuộc foreign capital.
 
@@ -440,9 +443,9 @@ Một nước có government deficit nhưng private sector tiết kiệm cao có
 
 Fiscal deficit và current-account deficit cùng tồn tại đôi khi được gọi là **twin deficits**, nhưng quan hệ không cơ học.
 
-Exchange rate, private saving và investment quyết định mức liên kết.
+Exchange tỷ lệ (rate / 비율), private saving và investment quyết định mức liên kết.
 
-# Phần XVII — Country risk dashboard
+# Phần XVII — Country rủi ro (risk / 위험) dashboard
 
 ## 51. Fiscal
 
@@ -468,7 +471,7 @@ Central-Bank Credibility
 FX Regime
 ```
 
-## 53. External
+## 53. bên ngoài (external / 외부)
 
 External balance nối nợ, dòng vốn, tỷ giá và khả năng tài trợ từ bên ngoài. Phần này giúp kiểm tra nền kinh tế có phụ thuộc funding ngoại tệ hoặc thặng dư xuất khẩu để duy trì ổn định hay không.
 
@@ -496,11 +499,11 @@ Investment Quality
 
 ## 55. Cyclical
 
-Các biến như PMI, inventory, unemployment và policy rate có thể đảo chiều trong vài quý hoặc vài năm.
+Các biến như PMI, inventory, unemployment và chính sách (policy / 정책) tỷ lệ (rate / 비율) có thể đảo chiều trong vài quý hoặc vài năm.
 
 ## 56. Structural
 
-Demographics, TFP, institutions và debt maturity structure thay đổi chậm hơn.
+Demographics, TFP, institutions và debt maturity cấu trúc (structure / 구조) thay đổi chậm hơn.
 
 Không nên dùng một dữ liệu tháng để tuyên bố structural regime đã đổi.
 
@@ -535,9 +538,9 @@ Capital Flows
 Structural growth ảnh hưởng:
 
 - TAM;
-- wage cost;
+- wage chi phí (cost / 비용);
 - tax burden;
-- discount rate;
+- discount tỷ lệ (rate / 비율);
 - sector composition.
 
 ## 60. Với quốc gia già hóa
@@ -583,7 +586,7 @@ TFP
 Institutions
 ```
 
-## 63. Khi phân tích policy mix
+## 63. Khi phân tích chính sách (policy / 정책) mix
 
 Policy mix là kết quả tương tác giữa fiscal và monetary, không phải phép cộng hai chính sách độc lập. Hãy ghi rõ chính sách nào đang dẫn dắt tổng cầu, chính sách nào bị ràng buộc và phản ứng của tỷ giá/lạm phát có thể là gì.
 
@@ -597,7 +600,7 @@ Inflation Expectations
 
 ## Kết luận
 
-Tăng trưởng dài hạn không được quyết định chỉ bởi policy rate hay deficit của một năm.
+Tăng trưởng dài hạn không được quyết định chỉ bởi chính sách (policy / 정책) tỷ lệ (rate / 비율) hay deficit của một năm.
 
 Nó là kết quả của:
 
@@ -620,3 +623,5 @@ Debt Stock
 ```
 
 Nhà đầu tư cần tách **chu kỳ ngắn hạn** khỏi **lực cấu trúc dài hạn** để tránh định giá một biến tạm thời như thể nó tồn tại vĩnh viễn.
+
+> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,5 +1,8 @@
 # Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam
 
+> **Mạch đọc:** Đặt **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Vì sao bất động sản và ngân hàng liên kết chặt** sang **2. Bắt đầu từ tình trạng pháp lý**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Tình huống này dùng chuỗi bất động sản–ngân hàng–công ty chứng khoán–thanh khoản để nối tiến độ pháp lý, bán trước, trái phiếu doanh nghiệp, chất lượng tài sản ngân hàng, thanh khoản trong nước, chu kỳ margin, dư địa chính sách của SBV và định giá cổ phiếu. Mục tiêu không phải kết luận một ngành luôn tốt hoặc xấu, mà học cách phân biệt **khả năng thanh toán, thanh khoản, nút thắt pháp lý và phục hồi chu kỳ**.
 
 ## 1. Vì sao bất động sản và ngân hàng liên kết chặt
@@ -299,7 +302,7 @@ Nếu khả năng sống sót chưa rõ, P/E hay NAV mục tiêu chỉ là bư�
 
 ## 22. NAV cho doanh nghiệp bất động sản
 
-Giá trị tài sản ròng (Net Asset Value, NAV) hữu ích nhưng cần chiết khấu cho:
+Giá trị tài sản ròng (Net Asset value, NAV) hữu ích nhưng cần chiết khấu cho:
 
 ```text
 Rủi ro pháp lý

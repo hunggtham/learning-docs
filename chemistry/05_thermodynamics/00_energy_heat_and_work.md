@@ -1,5 +1,8 @@
 # Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học
 
+> **Mạch đọc:** Đọc **Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **“Nhiệt là chất được chứa trong vật”** sang **“Temperature cao nghĩa total năng lượng (energy / 에너지) cao hơn mọi vật lạnh hơn”**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Nhiệt động lực học (thermodynamics / 열역학)** nghiên cứu trạng thái năng lượng của hệ, cách năng lượng truyền qua ranh giới và những ràng buộc quyết định chiều biến đổi. Trong Hóa học, nhiệt động lực học trả lời “trạng thái nào thuận lợi?” và “năng lượng được phân bố ra sao?”, nhưng không tự cho biết quá trình xảy ra nhanh đến mức nào.
 
 Chương này xây nền cho toàn bộ phần sau. Nếu các khái niệm **hệ, trạng thái, nội năng, nhiệt, công và định luật thứ nhất** chưa rõ, entropy và Gibbs sẽ rất dễ trở thành các công thức phải học thuộc.
@@ -51,7 +54,7 @@ Các đại lượng như:
 - nội năng \(U\);
 - enthalpy \(H\);
 - entropy \(S\);
-- Gibbs free energy \(G\);
+- Gibbs free năng lượng (energy / 에너지) \(G\);
 
 là **hàm trạng thái (state functions)**.
 
@@ -64,7 +67,7 @@ Nó có thể bao gồm:
 - chuyển động tịnh tiến;
 - quay;
 - dao động;
-- electronic energy;
+- electronic năng lượng (energy / 에너지);
 - intermolecular interactions;
 - chemical bonding;
 - trong phạm vi rộng hơn, nuclear contributions.
@@ -79,11 +82,11 @@ Nhiệt động lực học được xây chủ yếu trên **chênh lệch tr�
 
 # Nhiệt không phải năng lượng “nằm trong vật”
 
-**Nhiệt (heat, \(q\) / 열)** là năng lượng truyền qua boundary **do chênh lệch nhiệt độ**.
+**Nhiệt (heat, \(q\) / 열)** là năng lượng truyền qua ranh giới (boundary / 경계) **do chênh lệch nhiệt độ**.
 
-Khi hai vật có temperature khác nhau tiếp xúc, energy transfer từ hot tới cold được gọi là heat transfer cho tới khi thermal equilibrium thiết lập.
+Khi hai vật có temperature khác nhau tiếp xúc, năng lượng (energy / 에너지) transfer từ hot tới cold được gọi là heat transfer cho tới khi thermal equilibrium thiết lập.
 
-Sau khi energy đã vào hệ, ta không thể chỉ vào một subset molecules và nói “đây là nhiệt”. Energy đã trở thành phần của internal energy distribution.
+Sau khi năng lượng (energy / 에너지) đã vào hệ, ta không thể chỉ vào một subset molecules và nói “đây là nhiệt”. năng lượng (energy / 에너지) đã trở thành phần của nội bộ (internal / 내부) năng lượng (energy / 에너지) phân phối (distribution / 분포).
 
 Vì vậy câu:
 
@@ -95,7 +98,7 @@ không chính xác bằng:
 
 # Công là năng lượng truyền có tổ chức
 
-**Công (work, \(w\) / 일)** là energy transfer liên quan một generalized force tác dụng qua displacement/generalized coordinate.
+**Công (work, \(w\) / 일)** là năng lượng (energy / 에너지) transfer liên quan một generalized force tác dụng qua displacement/generalized coordinate.
 
 Trong Hóa học thường gặp:
 
@@ -103,9 +106,9 @@ Trong Hóa học thường gặp:
 - công điện;
 - công bề mặt;
 - công kéo/đàn hồi;
-- công từ trường trong specialized systems.
+- công từ trường trong specialized các hệ thống (systems / 시스템들).
 
-Nhiệt và công đều là **cách energy đi qua boundary**, không phải state properties.
+Nhiệt và công đều là **cách năng lượng (energy / 에너지) đi qua ranh giới (boundary / 경계)**, không phải trạng thái (state / 상태) properties.
 
 # Định luật thứ nhất
 
@@ -124,7 +127,7 @@ w > 0 → môi trường làm công lên hệ
 w < 0 → hệ làm công lên môi trường
 ```
 
-Đây chỉ là conservation of energy viết cho hệ.
+Đây chỉ là conservation of năng lượng (energy / 에너지) viết cho hệ.
 
 Nếu hệ mất 100 J nhiệt nhưng môi trường làm 40 J công lên hệ:
 
@@ -132,11 +135,11 @@ Nếu hệ mất 100 J nhiệt nhưng môi trường làm 40 J công lên hệ:
 \Delta U=-100+40=-60\;J
 \]
 
-Internal energy giảm 60 J.
+Nội bộ (internal / 내부) năng lượng (energy / 에너지) giảm 60 J.
 
 # Công giãn nở PV
 
-Khi hệ giãn nở chống external pressure:
+Khi hệ giãn nở chống bên ngoài (external / 외부) pressure:
 
 \[
 w=-\int P_{ext}\,dV
@@ -148,17 +151,17 @@ Nếu \(P_{ext}\) constant:
 w=-P_{ext}\Delta V
 \]
 
-Gas expansion có \(\Delta V>0\), nên \(w<0\): hệ truyền energy ra surroundings dưới dạng work.
+Gas expansion có \(\Delta V>0\), nên \(w<0\): hệ truyền năng lượng (energy / 에너지) ra surroundings dưới dạng công việc (work / 작업).
 
-Compression có \(\Delta V<0\), nên \(w>0\): surroundings làm work lên system.
+Compression có \(\Delta V<0\), nên \(w>0\): surroundings làm công việc (work / 작업) lên hệ thống (system / 시스템).
 
-# Vì sao dùng external pressure?
+# Vì sao dùng bên ngoài (external / 외부) pressure?
 
-Mechanical work ở boundary phụ thuộc lực bên ngoài mà hệ thực sự đẩy chống lại.
+Mechanical công việc (work / 작업) ở ranh giới (boundary / 경계) phụ thuộc lực bên ngoài mà hệ thực sự đẩy chống lại.
 
-Trong irreversible expansion, system pressure có thể không uniform hoặc không equal \(P_{ext}\). Vì vậy work path được tính từ boundary condition thực tế, không phải chỉ từ initial/final pressures.
+Trong irreversible expansion, hệ thống (system / 시스템) pressure có thể không uniform hoặc không equal \(P_{ext}\). Vì vậy công việc (work / 작업) đường dẫn (path / 경로) được tính từ ranh giới (boundary / 경계) điều kiện (condition / 조건) thực tế, không phải chỉ từ initial/final pressures.
 
-Đây là ví dụ đầu tiên cho việc work là **path-dependent**.
+Đây là ví dụ đầu tiên cho việc công việc (work / 작업) là **path-dependent**.
 
 # Free expansion
 
@@ -176,11 +179,11 @@ w=0
 
 mặc dù volume tăng mạnh.
 
-Nếu cùng initial/final states nhưng gas giãn reversible chống pressure gần bằng system pressure ở từng bước, magnitude work có thể lớn hơn.
+Nếu cùng initial/final states nhưng gas giãn reversible chống pressure gần bằng hệ thống (system / 시스템) pressure ở từng bước, magnitude công việc (work / 작업) có thể lớn hơn.
 
-Cùng \(\Delta U\), nhưng q và w khác theo path.
+Cùng \(\Delta U\), nhưng q và w khác theo đường dẫn (path / 경로).
 
-# Hàm trạng thái và path functions
+# Hàm trạng thái và đường dẫn (path / 경로) functions
 
 Nếu đi từ A tới B:
 
@@ -188,7 +191,7 @@ Nếu đi từ A tới B:
 \Delta U_{A\to B}
 \]
 
-luôn giống nhau cho mọi path.
+luôn giống nhau cho mọi đường dẫn (path / 경로).
 
 Nhưng:
 
@@ -202,7 +205,7 @@ và:
 w_{path1}\ne w_{path2}
 \]
 
-trong general case.
+trong general trường hợp (case / 사례).
 
 Vì:
 
@@ -210,7 +213,7 @@ Vì:
 q+w=\Delta U
 \]
 
-thay đổi work path buộc heat exchange thay đổi tương ứng.
+thay đổi công việc (work / 작업) đường dẫn (path / 경로) buộc heat exchange thay đổi tương ứng.
 
 Đây là lý do ký hiệu vi phân thường viết:
 
@@ -218,7 +221,7 @@ thay đổi work path buộc heat exchange thay đổi tương ứng.
 dU
 \]
 
-cho state function, nhưng:
+cho trạng thái (state / 상태) hàm (function / 함수), nhưng:
 
 \[
 \delta q,\;\delta w
@@ -228,11 +231,11 @@ cho path-dependent transfers trong notation chặt chẽ.
 
 # Quá trình thuận nghịch và không thuận nghịch
 
-Một **quá trình thuận nghịch (reversible process)** là ideal limiting path đi qua chuỗi trạng thái infinitesimally close to equilibrium, có thể đảo chiều bằng perturbation vô cùng nhỏ mà không để lại net change cho universe.
+Một **quá trình thuận nghịch (reversible process)** là ideal limiting đường dẫn (path / 경로) đi qua chuỗi trạng thái infinitesimally close to equilibrium, có thể đảo chiều bằng perturbation vô cùng nhỏ mà không để lại net thay đổi (change / 변경) cho universe.
 
-Không có process thực hoàn toàn reversible; đây là reference path.
+Không có tiến trình (process / 프로세스) thực hoàn toàn reversible; đây là tham chiếu (reference / 참조) đường dẫn (path / 경로).
 
-Reversible expansion cho maximum work output giữa hai equilibrium states dưới điều kiện phù hợp.
+Reversible expansion cho maximum công việc (work / 작업) đầu ra (output / 출력) giữa hai equilibrium states dưới điều kiện phù hợp.
 
 Irreversibility xuất hiện từ:
 
@@ -243,13 +246,13 @@ Irreversibility xuất hiện từ:
 - diffusion;
 - chemical reaction with finite affinity.
 
-Entropy production ở chương sau định lượng hướng này.
+Entropy môi trường vận hành (production / 운영 환경) ở chương sau định lượng hướng này.
 
 # Nhiệt độ khác tổng năng lượng
 
-Một cốc nước 90 °C có temperature cao hơn bồn nước 40 °C, nhưng bồn lớn có thể có total internal energy lớn hơn rất nhiều.
+Một cốc nước 90 °C có temperature cao hơn bồn nước 40 °C, nhưng bồn lớn có thể có total nội bộ (internal / 내부) năng lượng (energy / 에너지) lớn hơn rất nhiều.
 
-Temperature là intensive variable phản ánh statistical energy distribution và equilibrium condition, không phải “lượng nhiệt chứa trong vật”.
+Temperature là intensive variable phản ánh statistical năng lượng (energy / 에너지) phân phối (distribution / 분포) và equilibrium điều kiện (condition / 조건), không phải “lượng nhiệt chứa trong vật”.
 
 # Định luật thứ không
 
@@ -257,11 +260,11 @@ Nếu A cân bằng nhiệt với B, và B cân bằng nhiệt với C, thì A c
 
 **Định luật thứ không (zeroth law)** làm temperature trở thành đại lượng có thể so sánh transitive và tạo nền cho thermometer.
 
-Thermometer hoạt động vì nó tiến tới thermal equilibrium với vật đo và có một property calibrated theo T.
+Thermometer hoạt động vì nó tiến tới thermal equilibrium với vật đo và có một thuộc tính (property / 속성) calibrated theo T.
 
 # Nhiệt dung
 
-**Nhiệt dung (heat capacity)** ở constraint cụ thể:
+**Nhiệt dung (heat capacity)** ở ràng buộc (constraint / 제약조건) cụ thể:
 
 \[
 C=\frac{\delta q}{dT}
@@ -287,13 +290,13 @@ Với một mẫu đơn giản trong interval nhỏ:
 q=mc\Delta T
 \]
 
-với \(c\) là specific heat capacity.
+với \(c\) là specific heat sức chứa (capacity / 용량).
 
 # Vì sao Cp và Cv khác nhau?
 
-Khi heating ở constant volume, system không làm PV expansion work.
+Khi heating ở constant volume, hệ thống (system / 시스템) không làm PV expansion công việc (work / 작업).
 
-Ở constant pressure, heating thường làm volume tăng và một phần energy input liên quan expansion. Với ideal gas:
+Ở constant pressure, heating thường làm volume tăng và một phần năng lượng (energy / 에너지) đầu vào (input / 입력) liên quan expansion. Với ideal gas:
 
 \[
 C_P-C_V=R
@@ -301,11 +304,11 @@ C_P-C_V=R
 
 trên mol basis.
 
-Đây là connection giữa microscopic energy storage và macroscopic work.
+Đây là liên kết (connection / 연결) giữa microscopic năng lượng (energy / 에너지) lưu trữ (storage / 저장소) và macroscopic công việc (work / 작업).
 
 # Equipartition — một trực giác thống kê
 
-Trong classical limit, mỗi quadratic degree of freedom đóng góp average energy khoảng:
+Trong classical limit, mỗi quadratic degree of freedom đóng góp average năng lượng (energy / 에너지) khoảng:
 
 \[
 \frac12k_BT
@@ -313,13 +316,13 @@ Trong classical limit, mỗi quadratic degree of freedom đóng góp average ene
 
 per molecule.
 
-Translational, rotational và vibrational modes vì thế ảnh hưởng heat capacity.
+Translational, rotational và vibrational modes vì thế ảnh hưởng heat sức chứa (capacity / 용량).
 
-Nhưng quantum energy spacing làm một số modes “đóng băng” ở low temperature. Do đó heat capacity thay đổi theo T và classical equipartition không đúng universal.
+Nhưng quantum năng lượng (energy / 에너지) spacing làm một số modes “đóng băng” ở low temperature. Do đó heat sức chứa (capacity / 용량) thay đổi theo T và classical equipartition không đúng universal.
 
 # Calorimetry
 
-**Nhiệt lượng kế (calorimetry / 열량 측정법)** suy energy transfer từ temperature change của một calibrated thermal mass.
+**Nhiệt lượng kế (calorimetry / 열량 측정법)** suy năng lượng (energy / 에너지) transfer từ temperature thay đổi (change / 변경) của một calibrated thermal mass.
 
 Nếu calorimeter gần isolated:
 
@@ -339,19 +342,19 @@ nên:
 q_{reaction}=-C_{cal}\Delta T
 \]
 
-Trong real experiment, cần tính cả vessel, solution, thermometer và heat loss nếu độ chính xác yêu cầu cao.
+Trong real experiment, cần tính cả vessel, solution, thermometer và heat mất mát (loss / 손실) nếu độ chính xác yêu cầu cao.
 
 # Bomb calorimeter
 
 Bomb calorimeter hoạt động gần constant volume.
 
-Nếu only PV work relevant:
+Nếu only PV công việc (work / 작업) relevant:
 
 \[
 q_V=\Delta U
 \]
 
-Reaction xảy ra trong sealed rigid vessel, nên volume work gần zero.
+Reaction xảy ra trong sealed rigid vessel, nên volume công việc (work / 작업) gần zero.
 
 Đây là cách đo combustion internal-energy changes chính xác.
 
@@ -359,7 +362,7 @@ Reaction xảy ra trong sealed rigid vessel, nên volume work gần zero.
 
 Calorimeter mở ở atmospheric pressure gần constant P.
 
-Khi only PV work relevant:
+Khi only PV công việc (work / 작업) relevant:
 
 \[
 q_P=\Delta H
@@ -369,15 +372,15 @@ Do đó chemistry thường thích enthalpy vì lab reactions hay diễn ra gầ
 
 # Nhiệt lượng kế không đo “nhiệt của phân tử” trực tiếp
 
-Ta đo temperature change và dùng model heat capacity để suy q.
+Ta đo temperature thay đổi (change / 변경) và dùng mô hình (model / 모델) heat sức chứa (capacity / 용량) để suy q.
 
-Nếu heat capacity thay đổi với temperature hoặc reaction không hoàn toàn, interpretation phải điều chỉnh.
+Nếu heat sức chứa (capacity / 용량) thay đổi với temperature hoặc reaction không hoàn toàn, interpretation phải điều chỉnh.
 
-Calorimetry luôn là một **inverse problem** từ observable \(\Delta T\) tới energy transfer.
+Calorimetry luôn là một **inverse bài toán (problem / 문제)** từ observable \(\Delta T\) tới năng lượng (energy / 에너지) transfer.
 
-# Open systems và enthalpy flow
+# Open các hệ thống (systems / 시스템들) và enthalpy luồng (flow / 흐름)
 
-Trong system có mass flow, vật chất mang theo internal energy và PV flow work. Điều này làm **enthalpy** xuất hiện tự nhiên trong steady-flow energy balances.
+Trong hệ thống (system / 시스템) có mass luồng (flow / 흐름), vật chất mang theo nội bộ (internal / 내부) năng lượng (energy / 에너지) và PV luồng (flow / 흐름) công việc (work / 작업). Điều này làm **enthalpy** xuất hiện tự nhiên trong steady-flow năng lượng (energy / 에너지) balances.
 
 Một simplified steady-flow balance:
 
@@ -389,9 +392,9 @@ Một simplified steady-flow balance:
 
 khi bỏ kinetic/potential changes.
 
-Đây là cầu nối từ basic thermodynamics sang chemical engineering.
+Đây là cầu nối từ basic thermodynamics sang chemical kỹ thuật (engineering / 엔지니어링).
 
-# Energy conservation không cho direction
+# Năng lượng (energy / 에너지) conservation không cho direction
 
 First law cho phép cả:
 
@@ -405,21 +408,21 @@ và hypothetical:
 cold → hot
 ```
 
-nếu chỉ yêu cầu total energy conserved.
+nếu chỉ yêu cầu total năng lượng (energy / 에너지) conserved.
 
-Nhưng tự nhiên chỉ tự xảy ra theo một direction nếu không có external work.
+Nhưng tự nhiên chỉ tự xảy ra theo một direction nếu không có bên ngoài (external / 외부) công việc (work / 작업).
 
 Direction cần **second law và entropy**.
 
 Vì vậy first law là necessary nhưng không sufficient để dự đoán spontaneity.
 
-# Energy trong chemical bonds — tránh câu “bond chứa năng lượng” quá đơn giản
+# Năng lượng (energy / 에너지) trong chemical bonds — tránh câu “bond chứa năng lượng” quá đơn giản
 
-Một bond bền là một trạng thái có energy thấp hơn separated fragments theo reference phù hợp.
+Một bond bền là một trạng thái có năng lượng (energy / 에너지) thấp hơn separated fragments theo tham chiếu (reference / 참조) phù hợp.
 
-Phá bond cần energy.
+Phá bond cần năng lượng (energy / 에너지).
 
-Reaction tỏa nhiệt khi energy giải phóng từ forming new interactions lớn hơn energy cần để phá old interactions và reorganize system.
+Reaction tỏa nhiệt khi năng lượng (energy / 에너지) giải phóng từ forming new interactions lớn hơn năng lượng (energy / 에너지) cần để phá old interactions và reorganize hệ thống (system / 시스템).
 
 Do đó câu:
 
@@ -427,9 +430,9 @@ Do đó câu:
 
 thường sai nếu nói về isolated bond cleavage.
 
-# Biology — ATP và energy transfer
+# Biology — ATP và năng lượng (energy / 에너지) transfer
 
-ATP hydrolysis thuận lợi không phải vì “phá phosphate bond giải phóng energy”. Breaking bond itself requires energy.
+ATP hydrolysis thuận lợi không phải vì “phá phosphate bond giải phóng năng lượng (energy / 에너지)”. Breaking bond itself requires năng lượng (energy / 에너지).
 
 Net reaction favorable do combination của:
 
@@ -441,11 +444,11 @@ Net reaction favorable do combination của:
 
 Biochemistry vẫn tuân cùng first-law bookkeeping như combustion hoặc electrochemistry.
 
-# Battery — chemical energy thành electrical work
+# Battery — chemical năng lượng (energy / 에너지) thành electrical công việc (work / 작업)
 
-Trong electrochemical cell, energy có thể qua boundary dưới dạng electrical work thay vì chỉ heat/PV work.
+Trong electrochemical cell, năng lượng (energy / 에너지) có thể qua ranh giới (boundary / 경계) dưới dạng electrical công việc (work / 작업) thay vì chỉ heat/PV công việc (work / 작업).
 
-Ở reversible conditions, maximum non-PV work liên hệ Gibbs free energy:
+Ở reversible conditions, maximum non-PV công việc (work / 작업) liên hệ Gibbs free năng lượng (energy / 에너지):
 
 \[
 w_{elec,max}=-\Delta G
@@ -457,27 +460,27 @@ w_{elec,max}=-\Delta G
 
 ### “Nhiệt là chất được chứa trong vật”
 
-Không. Nhiệt là mode of energy transfer do temperature difference.
+Không. Nhiệt là chế độ (mode / 모드) of năng lượng (energy / 에너지) transfer do temperature difference.
 
-### “Temperature cao nghĩa total energy cao hơn mọi vật lạnh hơn”
+### “Temperature cao nghĩa total năng lượng (energy / 에너지) cao hơn mọi vật lạnh hơn”
 
-Không. Total energy còn phụ thuộc amount và degrees of freedom.
+Không. Total năng lượng (energy / 에너지) còn phụ thuộc amount và degrees of freedom.
 
-### “q và w là state functions”
+### “q và w là trạng thái (state / 상태) functions”
 
-Không. Chúng phụ thuộc path.
+Không. Chúng phụ thuộc đường dẫn (path / 경로).
 
-### “Expansion luôn làm work như nhau nếu ΔV giống nhau”
+### “Expansion luôn làm công việc (work / 작업) như nhau nếu ΔV giống nhau”
 
-Không. Work phụ thuộc external-pressure path.
+Không. công việc (work / 작업) phụ thuộc external-pressure đường dẫn (path / 경로).
 
-### “Conservation of energy cho biết process tự xảy ra chiều nào”
+### “Conservation of năng lượng (energy / 에너지) cho biết tiến trình (process / 프로세스) tự xảy ra chiều nào”
 
 Không. Cần second law.
 
 ## Mô hình tư duy
 
-Hãy xem thermodynamics đầu tiên như một **ledger có boundary rõ ràng**:
+Hãy xem thermodynamics đầu tiên như một **ledger có ranh giới (boundary / 경계) rõ ràng**:
 
 ```text
 trạng thái hệ → U
@@ -486,6 +489,8 @@ energy qua boundary do generalized force → w
 conservation → ΔU = q + w
 ```
 
-Sau đó enthalpy, entropy và Gibbs không thay ledger này; chúng xây thêm các state functions phù hợp với những constraints khác nhau để trả lời những câu hỏi khó hơn.
+Sau đó enthalpy, entropy và Gibbs không thay ledger này; chúng xây thêm các trạng thái (state / 상태) functions phù hợp với những các ràng buộc (constraints / 제약조건들) khác nhau để trả lời những câu hỏi khó hơn.
 
 Xem tiếp: [Enthalpy và nhiệt hóa học](./01_enthalpy_and_thermochemistry.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 enthalpy and thermochemistry](./01_enthalpy_and_thermochemistry.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

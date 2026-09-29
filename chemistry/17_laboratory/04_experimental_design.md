@@ -1,5 +1,8 @@
 # Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải
 
+> **Mạch đọc:** Đọc **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Bắt đầu từ câu hỏi nhân quả hoặc mô tả** sang **Định nghĩa biến theo cách có thể đo**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Một thí nghiệm hóa học không chỉ là “làm theo quy trình rồi ghi con số”. Nó là một **hệ thống suy luận được thiết kế có chủ ý**: thay đổi hoặc quan sát các biến đã định nghĩa, kiểm soát những giải thích thay thế, đo bằng phương pháp có giới hạn đã biết và thu đủ bằng chứng độc lập để phân biệt hiệu ứng hóa học thật với nhiễu, sai lệch hoặc yếu tố gây nhiễu.
 
 Tăng số phép đo không thể cứu một câu hỏi được đặt sai. Việc đầu tiên là xác định **so sánh nào thực sự trả lời câu hỏi**.
@@ -81,11 +84,11 @@ Ngẫu nhiên hóa không làm drift biến mất; nó chỉ ngăn drift luôn �
 
 ## Chặn theo yếu tố gây nhiễu đã biết
 
-Nếu một yếu tố phi mục tiêu đã biết rõ, có thể nhóm các đơn vị tương tự thành **khối (block)**.
+Nếu một yếu tố phi mục tiêu đã biết rõ, có thể nhóm các đơn vị tương tự thành **khối (block / 블록)**.
 
-Ví dụ block có thể là ngày đo, thiết bị, lô thuốc thử, lô wafer hoặc nguồn mẫu.
+Ví dụ khối (block / 블록) có thể là ngày đo, thiết bị, lô thuốc thử, lô wafer hoặc nguồn mẫu.
 
-So sánh xử lý bên trong mỗi block cho phép mô hình thống kê tách biến thiên do block khỏi hiệu ứng cần nghiên cứu.
+So sánh xử lý bên trong mỗi khối (block / 블록) cho phép mô hình thống kê tách biến thiên do khối (block / 블록) khỏi hiệu ứng cần nghiên cứu.
 
 ## Làm mù
 
@@ -93,7 +96,7 @@ Khi phép đo chứa quyết định chủ quan như đọc điểm cuối, ch�
 
 **Làm mù (blinding)** danh tính mẫu giúp giảm sai lệch quan sát.
 
-Phân tích tự động cũng có thể bị bias nếu tham số được chỉnh sau khi người phân tích đã nhìn nhãn nhóm, vì vậy tự động hóa không tự động loại bỏ thiên lệch.
+Phân tích tự động cũng có thể bị độ lệch (bias / 편향) nếu tham số được chỉnh sau khi người phân tích đã nhìn nhãn nhóm, vì vậy tự động hóa không tự động loại bỏ thiên lệch.
 
 ## Hiệu chuẩn là một phần của thiết kế
 
@@ -115,7 +118,7 @@ Cách này hiệu chỉnh một số ảnh hưởng nền vì chuẩn và mẫu 
 
 Giả sử hiệu suất phụ thuộc nhiệt độ \(T\) và lượng chất xúc tác \(C\).
 
-Nếu tác động của nhiệt độ khác nhau khi lượng xúc tác thấp so với khi cao, hai yếu tố có **tương tác (interaction)**.
+Nếu tác động của nhiệt độ khác nhau khi lượng xúc tác thấp so với khi cao, hai yếu tố có **tương tác (interaction / 상호작용)**.
 
 Thiết kế nhân tố 2×2 có thể ước lượng hiệu ứng chính của \(T\), hiệu ứng chính của \(C\) và tương tác \(T\times C\).
 
@@ -125,7 +128,7 @@ Trong tối ưu quy trình hóa học, tương tác rất phổ biến vì nhi�
 
 ## Phương pháp bề mặt đáp ứng
 
-Sau khi sàng lọc xác định yếu tố quan trọng, **phương pháp bề mặt đáp ứng (Response Surface Methodology, RSM)** khảo sát độ cong và tìm vùng tối ưu.
+Sau khi sàng lọc xác định yếu tố quan trọng, **phương pháp bề mặt đáp ứng (response Surface Methodology, RSM)** khảo sát độ cong và tìm vùng tối ưu.
 
 Một mô hình bậc hai cục bộ có thể là:
 
@@ -199,9 +202,9 @@ Một phương pháp chỉ hoạt động tại đúng một thiết lập rất
 
 Khả năng tái lập cần nhiều hơn con số cuối.
 
-Cần lưu danh tính, cấp và lô thuốc thử; nồng độ thật; ngày chuẩn bị; mã mẫu; thiết bị và cài đặt; file hiệu chuẩn; điều kiện môi trường; sai lệch quy trình; dữ liệu thô; script và phiên bản phần mềm.
+Cần lưu danh tính, cấp và lô thuốc thử; nồng độ thật; ngày chuẩn bị; mã mẫu; thiết bị và cài đặt; tệp (file / 파일) hiệu chuẩn; điều kiện môi trường; sai lệch quy trình; dữ liệu thô; script và phiên bản phần mềm.
 
-Theo ngôn ngữ phần mềm, thí nghiệm cần đủ metadata để tái tạo “trạng thái hệ thống” của lần đo.
+Theo ngôn ngữ phần mềm, thí nghiệm cần đủ siêu dữ liệu (metadata / 메타데이터) để tái tạo “trạng thái hệ thống” của lần đo.
 
 ## Toàn vẹn dữ liệu
 
@@ -260,6 +263,8 @@ Không. Dự đoán phải được xác nhận bằng thí nghiệm.
 
 ## Mô hình tư duy
 
-Thiết kế thí nghiệm là **kiến trúc nhân quả bao quanh một phép đo**. Mỗi biến không được kiểm soát là một lời giải thích thay thế; mỗi đối chứng, ngẫu nhiên hóa hoặc block loại bớt một phần mơ hồ; mỗi loại lặp lại ước lượng một tầng biến thiên khác nhau.
+Thiết kế thí nghiệm là **kiến trúc nhân quả bao quanh một phép đo**. Mỗi biến không được kiểm soát là một lời giải thích thay thế; mỗi đối chứng, ngẫu nhiên hóa hoặc khối (block / 블록) loại bớt một phần mơ hồ; mỗi loại lặp lại ước lượng một tầng biến thiên khác nhau.
 
 Xem tiếp: [Sai số, độ không đảm bảo và phân tích dữ liệu](./05_error_uncertainty_and_data_analysis.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lab safety](./00_lab_safety.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

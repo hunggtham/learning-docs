@@ -1,6 +1,9 @@
 # Cẩm nang giải bài Vật lý: từ mô hình đến kiểm chứng
 
-Một bài Vật lý tốt hiếm khi được giải chỉ bằng cách nhớ đúng công thức. Kỹ năng quan trọng hơn là biến một tình huống thực thành **mô hình vật lý (physical model)** đủ đơn giản để tính toán nhưng vẫn giữ được cơ chế chi phối. Quy trình dưới đây có thể dùng từ cơ học cơ bản tới nhiệt, điện từ, lượng tử và mô phỏng số.
+> **Mạch đọc:** Đọc **Cẩm nang giải bài Vật lý: từ mô hình đến kiểm chứng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **1. Bắt đầu bằng hệ vật lý, không bắt đầu bằng công thức** sang **2. Vẽ hình và chọn hệ tọa độ theo đối xứng**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
+Một bài Vật lý tốt hiếm khi được giải chỉ bằng cách nhớ đúng công thức. Kỹ năng quan trọng hơn là biến một tình huống thực thành **mô hình vật lý (physical model / 물리 모델)** đủ đơn giản để tính toán nhưng vẫn giữ được cơ chế chi phối. Quy trình dưới đây có thể dùng từ cơ học cơ bản tới nhiệt, điện từ, lượng tử và mô phỏng số.
 
 ## 1. Bắt đầu bằng hệ vật lý, không bắt đầu bằng công thức
 
@@ -133,9 +136,9 @@ Ví dụ nhỏ này cho thấy lời giải không kết thúc ở phép biến 
 
 ## 13. Kết nối giữa các lĩnh vực
 
-Cùng một cấu trúc xuất hiện nhiều lần. Thế năng trong cơ học nối với điện thế và thế trong phương trình Schrödinger. Mode chuẩn của hệ dao động nối với phonon trong chất rắn và mode của trường điện từ. Phương trình khuếch tán xuất hiện trong truyền nhiệt, chuyển khối và nhiều quá trình ngẫu nhiên. Bài toán trị riêng xuất hiện trong dao động, lượng tử, quang học và phân tích ổn định.
+Cùng một cấu trúc xuất hiện nhiều lần. Thế năng trong cơ học nối với điện thế và thế trong phương trình Schrödinger. chế độ (mode / 모드) chuẩn của hệ dao động nối với phonon trong chất rắn và chế độ (mode / 모드) của trường điện từ. Phương trình khuếch tán xuất hiện trong truyền nhiệt, chuyển khối và nhiều quá trình ngẫu nhiên. Bài toán trị riêng xuất hiện trong dao động, lượng tử, quang học và phân tích ổn định.
 
-Mục tiêu khi học không phải sở hữu hàng nghìn công thức độc lập. Mục tiêu là nhận ra những cấu trúc lặp lại như trạng thái, đối xứng, bảo toàn, trường, thế, mode, cân bằng, thăng giáng, vận chuyển, thang đo và xấp xỉ.
+Mục tiêu khi học không phải sở hữu hàng nghìn công thức độc lập. Mục tiêu là nhận ra những cấu trúc lặp lại như trạng thái, đối xứng, bảo toàn, trường, thế, chế độ (mode / 모드), cân bằng, thăng giáng, vận chuyển, thang đo và xấp xỉ.
 
 ## 14. Tự kiểm tra sau khi giải
 
@@ -143,6 +146,8 @@ Trước khi chấp nhận kết quả, hãy hỏi: đơn vị có đúng không
 
 Một lời giải hoàn chỉnh không kết thúc ở con số. Nó kết thúc khi ta giải thích được **vì sao kết quả có dạng đó, điều kiện nào làm nó đúng và điều gì sẽ thay đổi khi mô hình thay đổi**.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Đọc cùng:** [Các cấu trúc lặp lại trong Vật lý](00_knowledge_connections.md), [Các ngộ nhận và giới hạn mô hình](04_common_misconceptions_and_model_limits.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge connections](./00_knowledge_connections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

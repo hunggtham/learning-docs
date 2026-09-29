@@ -1,14 +1,17 @@
-# Case 09 — Android Runtime: Process, Thread, Looper, Binder, ART và Memory
+# Trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)
 
-Ở các chapter trước, ta nhìn Android từ phía application architecture: UI, ViewModel, repository, database, network và release. Nhưng đến một mức độ nhất định, nhiều bug không thể giải thích chỉ bằng kiến trúc tầng cao. Vì sao một callback chạy trên main thread? Vì sao một app có thể ANR dù không crash? Vì sao truyền một object lớn qua `Bundle` đôi khi làm app chết ở nơi rất khó đoán? Vì sao process có thể biến mất nhưng task/back stack vẫn được hệ thống phục hồi? Vì sao một `suspend` function không đồng nghĩa với background thread? Vì sao một singleton không phải “sống suốt đời app”? Những câu hỏi này nằm ở tầng **Android runtime**.
+> **Mạch đọc:** Đặt **trường hợp (case / 사례) 09 — Android thời gian chạy (runtime / 런타임): tiến trình (process / 프로세스), luồng thực thi (thread / 스레드), Looper, Binder, ART và bộ nhớ (memory / 메모리)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Một Android app không phải là một tiến trình (process / 프로세스) sống vĩnh viễn** sang **2. Linux tiến trình (process / 프로세스) và Android sandbox**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-Chapter này xây mental model từ dưới lên: Linux process → Android process lifecycle → main thread → `Looper` / `MessageQueue` / `Handler` → Binder IPC → ART/runtime/memory → process death. Mục tiêu không phải biến Android developer thành OS engineer, mà giúp bạn debug đúng khi abstraction phía trên bị rò rỉ.
 
-## 1. Một Android app không phải là một process sống vĩnh viễn
+Ở các chapter trước, ta nhìn Android từ phía ứng dụng (application / 애플리케이션) kiến trúc (architecture / 아키텍처): UI, ViewModel, repository, cơ sở dữ liệu (database / 데이터베이스), mạng (network / 네트워크) và bản phát hành (release / 릴리스). Nhưng đến một mức độ nhất định, nhiều bug không thể giải thích chỉ bằng kiến trúc tầng cao. Vì sao một callback chạy trên main luồng thực thi (thread / 스레드)? Vì sao một app có thể ANR dù không crash? Vì sao truyền một đối tượng (object / 객체) lớn qua `Bundle` đôi khi làm app chết ở nơi rất khó đoán? Vì sao tiến trình (process / 프로세스) có thể biến mất nhưng tác vụ (task / 작업)/back ngăn xếp (stack / 스택) vẫn được hệ thống phục hồi? Vì sao một `suspend` hàm (function / 함수) không đồng nghĩa với background luồng thực thi (thread / 스레드)? Vì sao một singleton không phải “sống suốt đời app”? Những câu hỏi này nằm ở tầng **Android thời gian chạy (runtime / 런타임)**.
 
-Khi người dùng cài app, Android không tạo một process thường trực cho app. Process chỉ được tạo khi hệ thống cần chạy một component của app, chẳng hạn khi user mở Activity, một BroadcastReceiver được kích hoạt, một Service cần chạy hoặc ContentProvider được truy cập. Sau đó, Android có thể giữ process trong memory để tái sử dụng, nhưng không có lời hứa rằng process sẽ tồn tại cho tới khi user “đóng app”.
+Chapter này xây mô hình tư duy (mental model / 사고 모델) từ dưới lên: Linux tiến trình (process / 프로세스) → Android tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) → main luồng thực thi (thread / 스레드) → `Looper` / `MessageQueue` / `Handler` → Binder IPC → ART/thời gian chạy (runtime / 런타임)/bộ nhớ (memory / 메모리) → tiến trình (process / 프로세스) death. Mục tiêu không phải biến Android nhà phát triển (developer / 개발자) thành OS engineer, mà giúp bạn gỡ lỗi (debug / 디버그) đúng khi lớp trừu tượng (abstraction / 추상화) phía trên bị rò rỉ.
 
-Điều này dẫn tới một nguyên tắc rất quan trọng: **process lifetime không phải application lifetime theo góc nhìn business**. User có thể nghĩ rằng họ “đang ở màn hình chi tiết sản phẩm”, nhưng process chứa ViewModel, singleton và object heap của bạn có thể đã bị kill khi app ở background. Khi user quay lại, Android có thể tạo process mới rồi reconstruct Activity/task state dựa trên thông tin hệ thống lưu được.
+## 1. Một Android app không phải là một tiến trình (process / 프로세스) sống vĩnh viễn
+
+Khi người dùng cài app, Android không tạo một tiến trình (process / 프로세스) thường trực cho app. tiến trình (process / 프로세스) chỉ được tạo khi hệ thống cần chạy một thành phần (component / 컴포넌트) của app, chẳng hạn khi người dùng (user / 사용자) mở Activity, một BroadcastReceiver được kích hoạt, một dịch vụ (service / 서비스) cần chạy hoặc ContentProvider được truy cập. Sau đó, Android có thể giữ tiến trình (process / 프로세스) trong bộ nhớ (memory / 메모리) để tái sử dụng, nhưng không có lời hứa rằng tiến trình (process / 프로세스) sẽ tồn tại cho tới khi người dùng (user / 사용자) “đóng app”.
+
+Điều này dẫn tới một nguyên tắc rất quan trọng: **tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) không phải ứng dụng (application / 애플리케이션) thời gian tồn tại (lifetime / 수명) theo góc nhìn nghiệp vụ (business / 비즈니스)**. người dùng (user / 사용자) có thể nghĩ rằng họ “đang ở màn hình chi tiết sản phẩm”, nhưng tiến trình (process / 프로세스) chứa ViewModel, singleton và đối tượng (object / 객체) vùng nhớ động (heap / 힙) của bạn có thể đã bị kill khi app ở background. Khi người dùng (user / 사용자) quay lại, Android có thể tạo tiến trình (process / 프로세스) mới rồi reconstruct Activity/tác vụ (task / 작업) trạng thái (state / 상태) dựa trên thông tin hệ thống lưu được.
 
 Vì vậy một singleton Kotlin như:
 
@@ -18,19 +21,19 @@ object SessionCache {
 }
 ```
 
-chỉ singleton **trong một process cụ thể**. Nó không phải persistence. Nếu process chết, object chết. Nếu app dùng nhiều process, mỗi process thậm chí có singleton riêng.
+chỉ singleton **trong một tiến trình (process / 프로세스) cụ thể**. Nó không phải persistence. Nếu tiến trình (process / 프로세스) chết, đối tượng (object / 객체) chết. Nếu app dùng nhiều tiến trình (process / 프로세스), mỗi tiến trình (process / 프로세스) thậm chí có singleton riêng.
 
-## 2. Linux process và Android sandbox
+## 2. Linux tiến trình (process / 프로세스) và Android sandbox
 
-Mỗi Android app thông thường chạy dưới một Linux UID riêng. UID này là nền tảng của application sandbox: file private của app, process permission và nhiều security boundary được kernel thực thi dựa trên identity này. Android framework bổ sung thêm permission model, SELinux policy, Binder identity và package-level policy bên trên.
+Mỗi Android app thông thường chạy dưới một Linux UID riêng. UID này là nền tảng của ứng dụng (application / 애플리케이션) sandbox: tệp (file / 파일) private của app, tiến trình (process / 프로세스) permission và nhiều ranh giới bảo mật (security boundary / 보안 경계) được kernel thực thi dựa trên định danh (identity / 식별자) này. Android khung phần mềm (framework / 프레임워크) bổ sung thêm permission mô hình (model / 모델), SELinux chính sách (policy / 정책), Binder định danh (identity / 식별자) và package-level chính sách (policy / 정책) bên trên.
 
-Một process app thường chứa Android Runtime (ART), heap managed cho Kotlin/Java object, native heap cho C/C++ hoặc native allocation, thread stack, mapped libraries, graphics resource và các vùng memory khác. Khi nói “app dùng 300 MB RAM”, đừng tự động nghĩ toàn bộ là Kotlin object trong heap. Bitmap, graphics buffer, native codec, database page cache và memory-mapped file có thể chiếm phần đáng kể.
+Một tiến trình (process / 프로세스) app thường chứa Android thời gian chạy (runtime / 런타임) (ART), vùng nhớ động (heap / 힙) managed cho Kotlin/Java đối tượng (object / 객체), bản địa (native / 네이티브) vùng nhớ động (heap / 힙) cho C/C++ hoặc bản địa (native / 네이티브) allocation, luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택), mapped libraries, graphics tài nguyên (resource / 자원) và các vùng bộ nhớ (memory / 메모리) khác. Khi nói “app dùng 300 MB RAM”, đừng tự động nghĩ toàn bộ là Kotlin đối tượng (object / 객체) trong vùng nhớ động (heap / 힙). Bitmap, graphics buffer, bản địa (native / 네이티브) codec, cơ sở dữ liệu (database / 데이터베이스) page bộ nhớ đệm (cache / 캐시) và memory-mapped tệp (file / 파일) có thể chiếm phần đáng kể.
 
 ## 3. `Application` không phải nơi đảm bảo dữ liệu sống lâu
 
-`Application.onCreate()` chạy khi process được tạo, trước phần lớn component app. Vì thế nó phù hợp để thiết lập dependency graph, logging infrastructure hoặc library cần process-wide initialization. Nhưng `Application` object chỉ tồn tại cùng process.
+`Application.onCreate()` chạy khi tiến trình (process / 프로세스) được tạo, trước phần lớn thành phần (component / 컴포넌트) app. Vì thế nó phù hợp để thiết lập phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), logging hạ tầng (infrastructure / 인프라) hoặc thư viện (library / 라이브러리) cần process-wide initialization. Nhưng `Application` đối tượng (object / 객체) chỉ tồn tại cùng tiến trình (process / 프로세스).
 
-Một anti-pattern phổ biến là dùng `Application` như database tạm:
+Một anti-pattern phổ biến là dùng `Application` như cơ sở dữ liệu (database / 데이터베이스) tạm:
 
 ```kotlin
 class MyApp : Application() {
@@ -38,13 +41,13 @@ class MyApp : Application() {
 }
 ```
 
-Nếu process chết rồi screen được restore, `selectedOrder` trở lại `null`. Nếu dữ liệu cần khôi phục, hãy lưu identifier nhỏ trong saved state và reconstruct từ Room/backend, hoặc persist dữ liệu thực sự vào storage phù hợp.
+Nếu tiến trình (process / 프로세스) chết rồi screen được restore, `selectedOrder` trở lại `null`. Nếu dữ liệu cần khôi phục, hãy lưu identifier nhỏ trong saved trạng thái (state / 상태) và reconstruct từ Room/backend, hoặc persist dữ liệu thực sự vào lưu trữ (storage / 저장소) phù hợp.
 
-## 4. Main thread là event loop, không phải “thread dành riêng cho UI code” theo nghĩa đơn giản
+## 4. Main luồng thực thi (thread / 스레드) là vòng lặp sự kiện (event loop / 이벤트 루프), không phải “luồng thực thi (thread / 스레드) dành riêng cho UI mã (code / 코드)” theo nghĩa đơn giản
 
-Khi Android tạo process application thông thường, framework thiết lập một main thread. Thread này chạy event loop xử lý input, lifecycle callback, message framework, rendering coordination và phần lớn callback UI.
+Khi Android tạo tiến trình (process / 프로세스) ứng dụng (application / 애플리케이션) thông thường, khung phần mềm (framework / 프레임워크) thiết lập một main luồng thực thi (thread / 스레드). luồng thực thi (thread / 스레드) này chạy vòng lặp sự kiện (event loop / 이벤트 루프) xử lý đầu vào (input / 입력), vòng đời (lifecycle / 생명주기) callback, message khung phần mềm (framework / 프레임워크), rendering coordination và phần lớn callback UI.
 
-Mental model quan trọng là:
+Mô hình tư duy (mental model / 사고 모델) quan trọng là:
 
 ```text
 Message / Runnable / framework event
@@ -58,11 +61,11 @@ Message / Runnable / framework event
     xử lý callback từng lượt
 ```
 
-Main thread không “chạy UI liên tục”. Nó nhận công việc từ queue rồi xử lý tuần tự. Nếu một callback chiếm thread quá lâu, các input/render/lifecycle message phía sau không được xử lý đúng thời điểm. Đây là nền tảng của jank và ANR.
+Main luồng thực thi (thread / 스레드) không “chạy UI liên tục”. Nó nhận công việc từ hàng đợi (queue / 큐) rồi xử lý tuần tự. Nếu một callback chiếm luồng thực thi (thread / 스레드) quá lâu, các đầu vào (input / 입력)/kết xuất (render / 렌더링)/vòng đời (lifecycle / 생명주기) message phía sau không được xử lý đúng thời điểm. Đây là nền tảng của jank và ANR.
 
 ## 5. `Looper`, `MessageQueue`, `Handler`
 
-`Looper` là abstraction chạy vòng lặp lấy message từ `MessageQueue` và dispatch chúng. Main thread có main `Looper`. `Handler` là API truyền thống để post `Runnable` hoặc message vào queue gắn với một Looper.
+`Looper` là lớp trừu tượng (abstraction / 추상화) chạy vòng lặp lấy message từ `MessageQueue` và dispatch chúng. Main luồng thực thi (thread / 스레드) có main `Looper`. `Handler` là API truyền thống để post `Runnable` hoặc message vào hàng đợi (queue / 큐) gắn với một Looper.
 
 Ví dụ:
 
@@ -74,13 +77,13 @@ mainHandler.post {
 }
 ```
 
-Code hiện đại thường không dùng `Handler` trực tiếp cho application concurrency vì coroutine cung cấp abstraction tốt hơn, nhưng hiểu Handler/Looper vẫn quan trọng vì nhiều Android API, View system và library cũ dựa trên cơ chế này.
+Mã (code / 코드) hiện đại thường không dùng `Handler` trực tiếp cho ứng dụng (application / 애플리케이션) tính đồng thời (concurrency / 동시성) vì coroutine cung cấp lớp trừu tượng (abstraction / 추상화) tốt hơn, nhưng hiểu Handler/Looper vẫn quan trọng vì nhiều Android API, View hệ thống (system / 시스템) và thư viện (library / 라이브러리) cũ dựa trên cơ chế này.
 
-Android 17 thay đổi implementation của `MessageQueue` cho app target API 37+, theo hướng lock-free. Application bình thường không nên phụ thuộc private field của `MessageQueue`; thay đổi này là ví dụ điển hình cho lý do không reflection vào implementation detail của framework.
+Android 17 thay đổi hiện thực (implementation / 구현) của `MessageQueue` cho app mục tiêu (target / 대상) API 37+, theo hướng lock-free. ứng dụng (application / 애플리케이션) bình thường không nên phụ thuộc private trường dữ liệu (field / 필드) của `MessageQueue`; thay đổi này là ví dụ điển hình cho lý do không reflection vào hiện thực (implementation / 구현) detail của khung phần mềm (framework / 프레임워크).
 
-## 6. Coroutine không thay thế event loop; nó chạy bên trên scheduler/thread
+## 6. Coroutine không thay thế vòng lặp sự kiện (event loop / 이벤트 루프); nó chạy bên trên scheduler/luồng thực thi (thread / 스레드)
 
-Một `suspend` function không tự động chạy background:
+Một `suspend` hàm (function / 함수) không tự động chạy background:
 
 ```kotlin
 suspend fun loadUser() {
@@ -88,7 +91,7 @@ suspend fun loadUser() {
 }
 ```
 
-Nếu `repository.getUser()` thực hiện CPU-heavy work trực tiếp và coroutine đang ở `Dispatchers.Main`, CPU work vẫn chiếm main thread. `suspend` chỉ có nghĩa function có thể **suspend và resume** mà không giữ nguyên call stack kiểu blocking truyền thống.
+Nếu `repository.getUser()` thực hiện CPU-heavy công việc (work / 작업) trực tiếp và coroutine đang ở `Dispatchers.Main`, CPU công việc (work / 작업) vẫn chiếm main luồng thực thi (thread / 스레드). `suspend` chỉ có nghĩa hàm (function / 함수) có thể **suspend và resume** mà không giữ nguyên ngăn xếp lời gọi (call stack / 호출 스택) kiểu blocking truyền thống.
 
 Khi dùng:
 
@@ -98,13 +101,13 @@ withContext(Dispatchers.IO) {
 }
 ```
 
-coroutine được chuyển sang dispatcher khác cho block đó. Khi dùng API suspend-native như Room suspend DAO hoặc Retrofit coroutine adapter, library thường đã quản lý thread phù hợp theo contract của nó; đừng thêm `withContext(IO)` theo thói quen nếu không cần.
+coroutine được chuyển sang dispatcher khác cho khối (block / 블록) đó. Khi dùng API suspend-native như Room suspend DAO hoặc Retrofit coroutine adapter, thư viện (library / 라이브러리) thường đã quản lý luồng thực thi (thread / 스레드) phù hợp theo đặc tả hợp đồng (contract / 계약) của nó; đừng thêm `withContext(IO)` theo thói quen nếu không cần.
 
-Senior rule là hỏi: **operation này blocking hay non-blocking, CPU-bound hay IO-bound, và API contract nói gì về execution context?** chứ không phải “mọi suspend đều background”.
+Cấp cao (senior / 시니어) quy tắc (rule / 규칙) là hỏi: **thao tác (operation / 연산) này blocking hay non-blocking, CPU-bound hay IO-bound, và Đặc tả API (API contract / API 계약) nói gì về thực thi (execution / 실행) ngữ cảnh (context / 맥락)?** chứ không phải “mọi suspend đều background”.
 
 ## 7. Main-safety
 
-Một function được gọi từ main thread nên “main-safe”: nó không làm blocking IO hoặc CPU work đủ lớn để gây lag. Một design tốt thường để layer sở hữu operation tự đảm bảo main-safety.
+Một hàm (function / 함수) được gọi từ main luồng thực thi (thread / 스레드) nên “main-safe”: nó không làm blocking IO hoặc CPU công việc (work / 작업) đủ lớn để gây lag. Một thiết kế (design / 설계) tốt thường để tầng (layer / 계층) sở hữu thao tác (operation / 연산) tự đảm bảo main-safety.
 
 Ví dụ:
 
@@ -119,27 +122,27 @@ class ImageHasher(
 }
 ```
 
-Caller không cần biết implementation dùng CPU nhiều. Điều này giảm việc dispatcher logic bị rải khắp UI/ViewModel.
+Caller không cần biết hiện thực (implementation / 구현) dùng CPU nhiều. Điều này giảm việc dispatcher lô-gic (logic / 논리) bị rải khắp UI/ViewModel.
 
-## 8. Frame budget và jank
+## 8. Frame ngân sách (budget / 예산) và jank
 
-UI 60 Hz có khoảng 16.67 ms cho mỗi frame; màn hình refresh cao hơn có budget nhỏ hơn. Không phải toàn bộ budget thuộc application code, vì rendering pipeline còn có measure/layout/draw, GPU work và system overhead.
+UI 60 Hz có khoảng 16.67 ms cho mỗi frame; màn hình refresh cao hơn có ngân sách (budget / 예산) nhỏ hơn. Không phải toàn bộ ngân sách (budget / 예산) thuộc ứng dụng (application / 애플리케이션) mã (code / 코드), vì rendering chuỗi xử lý (pipeline / 파이프라인) còn có measure/bố cục (layout / 레이아웃)/draw, GPU công việc (work / 작업) và hệ thống (system / 시스템) overhead.
 
-Nếu main thread bị block 50 ms, user có thể thấy dropped frames. Nếu bị block lâu hơn nhiều trong những context nhất định, hệ thống có thể coi app không phản hồi và tạo ANR.
+Nếu main luồng thực thi (thread / 스레드) bị khối (block / 블록) 50 ms, người dùng (user / 사용자) có thể thấy dropped frames. Nếu bị khối (block / 블록) lâu hơn nhiều trong những ngữ cảnh (context / 맥락) nhất định, hệ thống có thể coi app không phản hồi và tạo ANR.
 
-Performance work vì vậy bắt đầu bằng đo trace/frame/jank, không bằng nhìn code rồi đoán rằng một function “có vẻ chậm”.
+Hiệu năng (performance / 성능) công việc (work / 작업) vì vậy bắt đầu bằng đo dấu vết (trace / 추적)/frame/jank, không bằng nhìn mã (code / 코드) rồi đoán rằng một hàm (function / 함수) “có vẻ chậm”.
 
 ## 9. ANR khác crash
 
-Crash xảy ra khi process gặp exception/fatal signal không được xử lý và kết thúc. ANR xảy ra khi app vẫn tồn tại nhưng không đáp ứng đúng thời hạn mà framework yêu cầu cho một operation quan trọng, phổ biến nhất là main thread không xử lý event đủ nhanh.
+Crash xảy ra khi tiến trình (process / 프로세스) gặp exception/fatal tín hiệu (signal / 신호) không được xử lý và kết thúc. ANR xảy ra khi app vẫn tồn tại nhưng không đáp ứng đúng thời hạn mà khung phần mềm (framework / 프레임워크) yêu cầu cho một thao tác (operation / 연산) quan trọng, phổ biến nhất là main luồng thực thi (thread / 스레드) không xử lý sự kiện (event / 이벤트) đủ nhanh.
 
-Nguồn ANR thường gồm blocking IO trên main, lock contention/deadlock, synchronous Binder call quá lâu, BroadcastReceiver làm việc quá nhiều, startup quá nặng hoặc thread pool starvation gián tiếp làm main chờ.
+Nguồn ANR thường gồm blocking IO trên main, tranh chấp khóa (lock contention / 잠금 경합)/deadlock, synchronous Binder lời gọi (call / 호출) quá lâu, BroadcastReceiver làm việc quá nhiều, startup quá nặng hoặc luồng thực thi (thread / 스레드) pool starvation gián tiếp làm main chờ.
 
-Một bug có thể không xuất hiện trong local testing vì network/dev machine nhanh, nhưng xuất hiện production trên device chậm. Vì vậy StrictMode, tracing và representative hardware quan trọng.
+Một bug có thể không xuất hiện trong cục bộ (local / 로컬) testing vì mạng (network / 네트워크)/dev machine nhanh, nhưng xuất hiện môi trường vận hành (production / 운영 환경) trên thiết bị (device / 장치) chậm. Vì vậy StrictMode, tracing và representative hardware quan trọng.
 
 ## 10. `StrictMode` như development guardrail
 
-`StrictMode` có thể phát hiện một số hành vi không mong muốn như disk/network access trên main thread trong development. Nó không thay profiling, nhưng rất hữu ích để biến “performance smell” thành tín hiệu sớm.
+`StrictMode` có thể phát hiện một số hành vi không mong muốn như disk/truy cập mạng (network access / 네트워크 접근) trên main luồng thực thi (thread / 스레드) trong development. Nó không thay profiling, nhưng rất hữu ích để biến “hiệu năng (performance / 성능) smell” thành tín hiệu sớm.
 
 Ví dụ conceptual:
 
@@ -154,17 +157,17 @@ if (BuildConfig.DEBUG) {
 }
 ```
 
-Không nên bật penalty phá app một cách mù quáng trong production. Mục tiêu là dùng StrictMode để phát hiện boundary violation trong dev/test.
+Không nên bật penalty phá app một cách mù quáng trong môi trường vận hành (production / 운영 환경). Mục tiêu là dùng StrictMode để phát hiện ranh giới (boundary / 경계) violation trong dev/kiểm thử (test / 테스트).
 
 # Binder — xương sống IPC của Android
 
 ## 11. Tại sao Android cần IPC
 
-Nhiều thứ application gọi thực tế sống ở process khác: ActivityManager, PackageManager service, system service, media service và các component hệ thống khác. Android dùng **Binder** làm cơ chế IPC chủ đạo để process gọi qua boundary an toàn hơn so với chia sẻ memory tùy ý.
+Nhiều thứ ứng dụng (application / 애플리케이션) gọi thực tế sống ở tiến trình (process / 프로세스) khác: ActivityManager, PackageManager dịch vụ (service / 서비스), hệ thống (system / 시스템) dịch vụ (service / 서비스), media dịch vụ (service / 서비스) và các thành phần (component / 컴포넌트) hệ thống khác. Android dùng **Binder** làm cơ chế IPC chủ đạo để tiến trình (process / 프로세스) gọi qua ranh giới (boundary / 경계) an toàn hơn so với chia sẻ bộ nhớ (memory / 메모리) tùy ý.
 
-Khi bạn gọi một method trông như local Java/Kotlin call, object phía sau có thể là Binder proxy gửi transaction sang process khác.
+Khi bạn gọi một phương thức (method / 메서드) trông như cục bộ (local / 로컬) Java/Kotlin lời gọi (call / 호출), đối tượng (object / 객체) phía sau có thể là Binder proxy gửi giao dịch (transaction / 트랜잭션) sang tiến trình (process / 프로세스) khác.
 
-Mental model:
+Mô hình tư duy (mental model / 사고 모델):
 
 ```text
 App process
@@ -180,13 +183,13 @@ System/server process
 
 ## 12. IPC không miễn phí
 
-Binder call có serialization/marshalling, context switching, scheduling và giới hạn transaction. Vì vậy tránh thiết kế chatty IPC ở hot path.
+Binder lời gọi (call / 호출) có serialization/marshalling, ngữ cảnh (context / 맥락) switching, scheduling và giới hạn giao dịch (transaction / 트랜잭션). Vì vậy tránh thiết kế chatty IPC ở đường xử lý nóng (hot path / 핫 패스).
 
-Ví dụ, gọi system service hàng nghìn lần trong loop có thể tốn hơn việc batch/caching hợp lý. Nhưng cũng không nên cache dữ liệu hệ thống vô hạn nếu contract yêu cầu freshness.
+Ví dụ, gọi hệ thống (system / 시스템) dịch vụ (service / 서비스) hàng nghìn lần trong vòng lặp (loop / 루프) có thể tốn hơn việc batch/caching hợp lý. Nhưng cũng không nên bộ nhớ đệm (cache / 캐시) dữ liệu hệ thống vô hạn nếu đặc tả hợp đồng (contract / 계약) yêu cầu freshness.
 
-## 13. `Bundle`, `Intent` và transaction size
+## 13. `Bundle`, `Intent` và giao dịch (transaction / 트랜잭션) kích thước (size / 크기)
 
-`Bundle`, Intent extras và saved state thường đi qua Binder hoặc infrastructure có giới hạn kích thước. Truyền object graph lớn là lỗi thiết kế.
+`Bundle`, Intent extras và saved trạng thái (state / 상태) thường đi qua Binder hoặc hạ tầng (infrastructure / 인프라) có giới hạn kích thước. Truyền đối tượng (object / 객체) đồ thị (graph / 그래프) lớn là lỗi thiết kế.
 
 Đừng làm:
 
@@ -200,35 +203,35 @@ Nên truyền ID nhỏ:
 intent.putExtra("order_id", orderId)
 ```
 
-rồi reconstruct data từ repository/source of truth ở destination.
+rồi reconstruct dữ liệu (data / 데이터) từ repository/nguồn chuẩn (source of truth / 정본) ở destination.
 
-Điều này không chỉ tránh `TransactionTooLargeException`, mà còn làm state restoration ổn định hơn.
+Điều này không chỉ tránh `TransactionTooLargeException`, mà còn làm trạng thái (state / 상태) restoration ổn định hơn.
 
 ## 14. Parcelable không phải persistence format
 
-`Parcelable` tối ưu cho IPC/in-process Android boundary, không phải schema lưu trữ dài hạn. Không lưu raw Parcel vào database/file rồi kỳ vọng version sau đọc ổn định.
+`Parcelable` tối ưu cho IPC/in-process Android ranh giới (boundary / 경계), không phải lược đồ (schema / 스키마) lưu trữ dài hạn. Không lưu raw Parcel vào cơ sở dữ liệu (database / 데이터베이스)/tệp (file / 파일) rồi kỳ vọng phiên bản (version / 버전) sau đọc ổn định.
 
-Cho persistence, dùng schema rõ ràng: Room, Proto/DataStore, JSON/CBOR/protobuf tùy use case.
+Cho persistence, dùng lược đồ (schema / 스키마) rõ ràng: Room, Proto/DataStore, JSON/CBOR/protobuf tùy use trường hợp (case / 사례).
 
-## 15. Binder thread pool và callback threading
+## 15. Binder luồng thực thi (thread / 스레드) pool và callback threading
 
-Không phải Binder callback nào cũng chạy main thread. Một Binder service có thread pool xử lý incoming transaction. Nếu bạn tự viết Service/AIDL hoặc tương tác low-level IPC, phải đọc contract threading rõ ràng.
+Không phải Binder callback nào cũng chạy main luồng thực thi (thread / 스레드). Một Binder dịch vụ (service / 서비스) có luồng thực thi (thread / 스레드) pool xử lý incoming giao dịch (transaction / 트랜잭션). Nếu bạn tự viết dịch vụ (service / 서비스)/AIDL hoặc tương tác low-level IPC, phải đọc đặc tả hợp đồng (contract / 계약) threading rõ ràng.
 
-Nếu callback từ background/Binder thread cần mutate UI state, chuyển sang lifecycle-aware/main-safe path phù hợp. Ngược lại, đừng ép mọi callback sang main nếu processing nặng không cần UI.
+Nếu callback từ background/Binder luồng thực thi (thread / 스레드) cần mutate UI trạng thái (state / 상태), chuyển sang lifecycle-aware/main-safe đường dẫn (path / 경로) phù hợp. Ngược lại, đừng ép mọi callback sang main nếu processing nặng không cần UI.
 
-## 16. Binder identity và security boundary
+## 16. Binder định danh (identity / 식별자) và ranh giới bảo mật (security boundary / 보안 경계)
 
-Khi system/service xử lý Binder call, caller identity có ý nghĩa security. Custom exported component/service phải validate caller/permission nếu nhận dữ liệu nhạy cảm. Không nên nghĩ rằng “đây là app nội bộ nên Intent/Binder input chắc chắn hợp lệ”.
+Khi hệ thống (system / 시스템)/dịch vụ (service / 서비스) xử lý Binder lời gọi (call / 호출), caller định danh (identity / 식별자) có ý nghĩa bảo mật (security / 보안). Custom exported thành phần (component / 컴포넌트)/dịch vụ (service / 서비스) phải validate caller/permission nếu nhận dữ liệu nhạy cảm. Không nên nghĩ rằng “đây là app nội bộ nên Intent/Binder đầu vào (input / 입력) chắc chắn hợp lệ”.
 
-Mọi external input nên được xem là untrusted boundary.
+Mọi bên ngoài (external / 외부) đầu vào (input / 입력) nên được xem là untrusted ranh giới (boundary / 경계).
 
-# ART, bytecode và runtime
+# ART, bytecode và thời gian chạy (runtime / 런타임)
 
-## 17. Kotlin không chạy trực tiếp như source code
+## 17. Kotlin không chạy trực tiếp như mã nguồn (source code / 소스 코드)
 
-Kotlin/JVM source được compile thành JVM bytecode/class representation, Android build pipeline tiếp tục chuyển đổi thành DEX để ART thực thi. D8 xử lý dexing/desugaring; R8 có thể shrink, optimize và obfuscate.
+Kotlin/JVM nguồn (source / 소스) được compile thành JVM bytecode/lớp (class / 클래스) biểu diễn (representation / 표현), Android bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인) tiếp tục chuyển đổi thành DEX để ART thực thi. D8 xử lý dexing/desugaring; R8 có thể shrink, optimize và obfuscate.
 
-Pipeline giản lược:
+Chuỗi xử lý (pipeline / 파이프라인) giản lược:
 
 ```text
 Kotlin source
@@ -239,40 +242,40 @@ Kotlin source
 → ART
 ```
 
-Điều này giải thích vì sao Java interoperability, generic erasure, synthetic method, bridge method, boxing và reflection đều có thể ảnh hưởng Android app dù code viết bằng Kotlin.
+Điều này giải thích vì sao Java interoperability, generic erasure, synthetic phương thức (method / 메서드), cầu nối (bridge / 브리지) phương thức (method / 메서드), boxing và reflection đều có thể ảnh hưởng Android app dù mã (code / 코드) viết bằng Kotlin.
 
-## 18. AOT, JIT và profile-guided optimization
+## 18. AOT, JIT và profile-guided tối ưu hóa (optimization / 최적화)
 
-ART có thể dùng nhiều cơ chế compile/runtime optimization tùy Android version và trạng thái app. Developer không nên cố “điều khiển JIT” như JVM server app. Thứ có thể kiểm soát tốt hơn ở app layer là startup path, code size, class loading, Baseline Profile và hot path design.
+ART có thể dùng nhiều cơ chế compile/thời gian chạy (runtime / 런타임) tối ưu hóa (optimization / 최적화) tùy Android phiên bản (version / 버전) và trạng thái app. nhà phát triển (developer / 개발자) không nên cố “điều khiển JIT” như JVM máy chủ (server / 서버) app. Thứ có thể kiểm soát tốt hơn ở app tầng (layer / 계층) là startup đường dẫn (path / 경로), mã (code / 코드) kích thước (size / 크기), nạp lớp (class loading / 클래스 로딩), Baseline Profile và đường xử lý nóng (hot path / 핫 패스) thiết kế (design / 설계).
 
-Baseline Profile giúp runtime biết những code path quan trọng nên được tối ưu sớm, giảm cold-start/jank cho path điển hình.
+Baseline Profile giúp thời gian chạy (runtime / 런타임) biết những đường đi mã (code path / 코드 경로) quan trọng nên được tối ưu sớm, giảm cold-start/jank cho đường dẫn (path / 경로) điển hình.
 
-## 19. Class loading và startup
+## 19. nạp lớp (class loading / 클래스 로딩) và startup
 
-Nếu app có quá nhiều initialization eager ở `Application.onCreate()`, cold startup tăng. Mỗi SDK analytics, DI graph lớn, reflection scan, database open hoặc synchronous disk read đều có thể cộng dồn.
+Nếu app có quá nhiều initialization eager ở `Application.onCreate()`, cold startup tăng. Mỗi SDK analytics, DI đồ thị (graph / 그래프) lớn, reflection scan, cơ sở dữ liệu (database / 데이터베이스) open hoặc synchronous disk read đều có thể cộng dồn.
 
-Senior approach là phân loại initialization:
+Cấp cao (senior / 시니어) approach là phân loại initialization:
 
 | Nhóm | Cách nghĩ |
 |---|---|
 | bắt buộc trước first frame | giữ tối thiểu |
 | cần sớm nhưng không trước first frame | defer |
-| chỉ cần khi feature dùng | lazy/on-demand |
+| chỉ cần khi tính năng (feature / 기능) dùng | lazy/on-demand |
 | background durable | cân nhắc WorkManager |
 
-Không tối ưu startup bằng cách chuyển tất cả sang thread nền mà không xét dependency; race condition có thể thay performance bug bằng correctness bug.
+Không tối ưu startup bằng cách chuyển tất cả sang luồng thực thi (thread / 스레드) nền mà không xét phụ thuộc (dependency / 의존성); race điều kiện (condition / 조건) có thể thay hiệu năng (performance / 성능) bug bằng tính đúng đắn (correctness / 정확성) bug.
 
-# Memory
+# Bộ nhớ (memory / 메모리)
 
-## 20. Managed heap không phải toàn bộ memory
+## 20. Managed vùng nhớ động (heap / 힙) không phải toàn bộ bộ nhớ (memory / 메모리)
 
-Kotlin/Java object sống trong managed heap do GC quản lý, nhưng app còn dùng native memory, graphics buffer, bitmap, SQLite/native library memory và mapped file.
+Kotlin/Java đối tượng (object / 객체) sống trong managed vùng nhớ động (heap / 힙) do GC quản lý, nhưng app còn dùng bản địa (native / 네이티브) bộ nhớ (memory / 메모리), graphics buffer, bitmap, SQLite/bản địa (native / 네이티브) thư viện (library / 라이브러리) bộ nhớ (memory / 메모리) và mapped tệp (file / 파일).
 
-Một profiler chỉ nhìn Java heap có thể không thấy toàn bộ vấn đề.
+Một profiler chỉ nhìn Java vùng nhớ động (heap / 힙) có thể không thấy toàn bộ vấn đề.
 
 ## 21. Garbage Collection không phải leak detector
 
-GC thu object không còn reachable. Nếu object vẫn reachable vì reference chain không mong muốn, GC không thể giải phóng nó.
+GC thu đối tượng (object / 객체) không còn reachable. Nếu đối tượng (object / 객체) vẫn reachable vì tham chiếu (reference / 참조) chuỗi (chain / 사슬) không mong muốn, GC không thể giải phóng nó.
 
 Ví dụ leak Android kinh điển:
 
@@ -284,23 +287,23 @@ process singleton
 → large bitmap/resources
 ```
 
-Nếu singleton giữ listener của Activity sau destroy, toàn graph còn reachable.
+Nếu singleton giữ listener của Activity sau destroy, toàn đồ thị (graph / 그래프) còn reachable.
 
 ## 22. `Context` leak
 
-`Activity` Context giữ nhiều state gắn với window/UI. Không giữ Activity trong singleton/static object lâu hơn lifecycle.
+`Activity` ngữ cảnh (context / 맥락) giữ nhiều trạng thái (state / 상태) gắn với cửa sổ (window / 윈도우)/UI. Không giữ Activity trong singleton/static đối tượng (object / 객체) lâu hơn vòng đời (lifecycle / 생명주기).
 
-Nếu dependency chỉ cần process-level context, inject `ApplicationContext`. Nhưng cũng không biến `ApplicationContext` thành giải pháp mặc định cho mọi thứ; một số API cần themed/activity context.
+Nếu phụ thuộc (dependency / 의존성) chỉ cần process-level ngữ cảnh (context / 맥락), inject `ApplicationContext`. Nhưng cũng không biến `ApplicationContext` thành giải pháp mặc định cho mọi thứ; một số API cần themed/activity ngữ cảnh (context / 맥락).
 
-Câu hỏi đúng là **dependency cần lifetime/context capability nào?**
+Câu hỏi đúng là **phụ thuộc (dependency / 의존성) cần thời gian tồn tại (lifetime / 수명)/ngữ cảnh (context / 맥락) năng lực (capability / 역량) nào?**
 
 ## 23. Listener và coroutine leak
 
-Coroutine có structured concurrency tốt hơn thread/callback tự do, nhưng vẫn leak work nếu scope ownership sai.
+Coroutine có structured tính đồng thời (concurrency / 동시성) tốt hơn luồng thực thi (thread / 스레드)/callback tự do, nhưng vẫn leak công việc (work / 작업) nếu phạm vi (scope / 범위) quyền sở hữu (ownership / 소유권) sai.
 
-Ví dụ `GlobalScope.launch` trong ViewModel khiến work không bị cancel cùng ViewModel. Tương tự, callback/listener đăng ký mà không unregister sẽ giữ owner sống.
+Ví dụ `GlobalScope.launch` trong ViewModel khiến công việc (work / 작업) không bị cancel cùng ViewModel. Tương tự, callback/listener đăng ký mà không unregister sẽ giữ đơn vị sở hữu (owner / 오너) sống.
 
-Ownership map nên rõ:
+Quyền sở hữu (ownership / 소유권) map nên rõ:
 
 ```text
 Composable effect → Composition
@@ -310,46 +313,46 @@ durable background work → WorkManager
 process-level work → application-owned scope nếu thật sự cần
 ```
 
-## 24. Bitmap và image memory
+## 24. Bitmap và ảnh (image / 이미지) bộ nhớ (memory / 메모리)
 
-Image decoding có thể dùng memory lớn. Không load ảnh full-resolution chỉ để hiển thị thumbnail. Dùng image loading library có decode/downsample/cache policy đúng. Với app widget/RemoteViews, Android 17 target 37+ còn áp memory limit rõ hơn cho combined Bitmap/Icon trong parcel, cho thấy platform ngày càng siết resource misuse.
+Ảnh (image / 이미지) decoding có thể dùng bộ nhớ (memory / 메모리) lớn. Không tải (load / 로드) ảnh full-resolution chỉ để hiển thị thumbnail. Dùng ảnh (image / 이미지) loading thư viện (library / 라이브러리) có decode/downsample/bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책) đúng. Với app widget/RemoteViews, Android 17 mục tiêu (target / 대상) 37+ còn áp giới hạn bộ nhớ (memory limit / 메모리 제한) rõ hơn cho combined Bitmap/Icon trong parcel, cho thấy nền tảng (platform / 플랫폼) ngày càng siết tài nguyên (resource / 자원) misuse.
 
-## 25. Low-memory và process reclaim
+## 25. Low-memory và tiến trình (process / 프로세스) reclaim
 
-Android có thể reclaim background process để giải phóng memory. Developer không được dựa vào callback kiểu “sẽ luôn được báo trước khi process bị kill”. Hãy thiết kế như process có thể mất mà không có cơ hội cleanup business state.
+Android có thể reclaim background tiến trình (process / 프로세스) để giải phóng bộ nhớ (memory / 메모리). nhà phát triển (developer / 개발자) không được dựa vào callback kiểu “sẽ luôn được báo trước khi tiến trình (process / 프로세스) bị kill”. Hãy thiết kế như tiến trình (process / 프로세스) có thể mất mà không có cơ hội cleanup nghiệp vụ (business / 비즈니스) trạng thái (state / 상태).
 
 Nếu dữ liệu quan trọng chỉ tồn tại trong RAM, đó là data-loss bug chờ xảy ra.
 
-# Process death và state restoration
+# Tiến trình (process / 프로세스) death và trạng thái (state / 상태) restoration
 
-## 26. Configuration change khác process death
+## 26. cấu hình (configuration / 구성) thay đổi (change / 변경) khác tiến trình (process / 프로세스) death
 
-Rotation/window resize có thể recreate Activity nhưng process vẫn sống. ViewModel thường survive configuration change.
+Rotation/cửa sổ (window / 윈도우) resize có thể recreate Activity nhưng tiến trình (process / 프로세스) vẫn sống. ViewModel thường survive cấu hình (configuration / 구성) thay đổi (change / 변경).
 
-Process death thì ViewModel, singleton và heap biến mất. Android có thể restore navigation/task/activity state đủ để đưa user về màn hình gần trước đó, nhưng application memory không được phục hồi tự động.
+Tiến trình (process / 프로세스) death thì ViewModel, singleton và vùng nhớ động (heap / 힙) biến mất. Android có thể restore điều hướng (navigation / 내비게이션)/tác vụ (task / 작업)/activity trạng thái (state / 상태) đủ để đưa người dùng (user / 사용자) về màn hình gần trước đó, nhưng ứng dụng (application / 애플리케이션) bộ nhớ (memory / 메모리) không được phục hồi tự động.
 
-Bởi vậy test rotation thôi chưa đủ; cần test **Don't keep activities** chỉ giúp một phần và không hoàn toàn tương đương process kill thật. Với flow quan trọng, cần test restore từ saved state + persistent source of truth.
+Bởi vậy kiểm thử (test / 테스트) rotation thôi chưa đủ; cần kiểm thử (test / 테스트) **Don't keep activities** chỉ giúp một phần và không hoàn toàn tương đương tiến trình (process / 프로세스) kill thật. Với luồng (flow / 흐름) quan trọng, cần kiểm thử (test / 테스트) restore từ saved trạng thái (state / 상태) + persistent nguồn chuẩn (source of truth / 정본).
 
-## 27. State classification
+## 27. trạng thái (state / 상태) classification
 
 Một cách phân loại thực dụng:
 
-| State | Ví dụ | Owner/persistence |
+| trạng thái (state / 상태) | Ví dụ | đơn vị sở hữu (owner / 오너)/persistence |
 |---|---|---|
-| ephemeral UI | pressed state, animation progress | `remember` |
+| ephemeral UI | pressed trạng thái (state / 상태), animation progress | `remember` |
 | restorable UI | tab/page nhỏ | `rememberSaveable` |
-| screen business state | loading/filter/result | ViewModel |
-| restore key | query/orderId/draftId | `SavedStateHandle` |
-| durable local data | entity, pending sync | Room/DataStore |
-| authoritative remote | account/order server state | backend |
+| screen nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) | loading/filter/kết quả (result / 결과) | ViewModel |
+| restore key | truy vấn (query / 쿼리)/orderId/draftId | `SavedStateHandle` |
+| durable cục bộ (local / 로컬) dữ liệu (data / 데이터) | thực thể (entity / 엔터티), pending sync | Room/DataStore |
+| authoritative remote | account/thứ tự (order / 순서) máy chủ (server / 서버) trạng thái (state / 상태) | backend |
 
-Không cố lưu mọi thứ vào `SavedStateHandle`; saved state phải nhỏ và reconstructive.
+Không cố lưu mọi thứ vào `SavedStateHandle`; saved trạng thái (state / 상태) phải nhỏ và reconstructive.
 
-# Thread safety
+# Luồng thực thi (thread / 스레드) an toàn (safety / 안전)
 
 ## 28. “Chỉ dùng coroutine” không tự động thread-safe
 
-Nếu nhiều coroutine cùng mutate shared state trên dispatcher đa thread, race condition vẫn tồn tại.
+Nếu nhiều coroutine cùng mutate trạng thái dùng chung (shared state / 공유 상태) trên dispatcher đa luồng thực thi (thread / 스레드), race điều kiện (condition / 조건) vẫn tồn tại.
 
 Ví dụ:
 
@@ -365,11 +368,11 @@ coroutineScope {
 }
 ```
 
-`counter++` không atomic. Giải pháp có thể là confinement, immutable state reducer, `Mutex`, atomic primitive hoặc database transaction tùy loại state.
+`counter++` không atomic. Giải pháp có thể là confinement, immutable trạng thái (state / 상태) reducer, `Mutex`, atomic thành phần nguyên thủy (primitive / 기본 요소) hoặc cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) tùy loại trạng thái (state / 상태).
 
-## 29. Confinement thường đơn giản hơn lock
+## 29. Confinement thường đơn giản hơn khóa (lock / 잠금)
 
-UI state thường tốt khi mutation được serialize trong một owner (ViewModel/reducer). Thay vì nhiều layer cùng mutate `MutableStateFlow`, expose immutable state và funnel event qua một mutation path.
+UI trạng thái (state / 상태) thường tốt khi mutation được serialize trong một đơn vị sở hữu (owner / 오너). Thay vì nhiều tầng (layer / 계층) cùng mutate `MutableStateFlow`, expose immutable trạng thái (state / 상태) và funnel sự kiện (event / 이벤트) qua một mutation đường dẫn (path / 경로).
 
 ```kotlin
 private val _uiState = MutableStateFlow(UiState())
@@ -378,23 +381,23 @@ val uiState: StateFlow<UiState> = _uiState
 
 Không đưa `_uiState` ra ngoài.
 
-## 30. Deadlock và lock inversion
+## 30. Deadlock và khóa (lock / 잠금) inversion
 
-Nếu nhiều lock được acquire theo thứ tự khác nhau, deadlock có thể xảy ra. Trong Android, synchronous Binder call trong khi giữ app lock còn có thể tạo dependency khó thấy giữa process/thread.
+Nếu nhiều khóa (lock / 잠금) được acquire theo thứ tự khác nhau, deadlock có thể xảy ra. Trong Android, synchronous Binder lời gọi (call / 호출) trong khi giữ app khóa (lock / 잠금) còn có thể tạo phụ thuộc (dependency / 의존성) khó thấy giữa tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드).
 
-Senior guideline: giữ critical section nhỏ, tránh blocking IO/Binder call khi đang giữ lock nếu không thật sự cần, và ưu tiên architecture giảm shared mutable state.
+Cấp cao (senior / 시니어) guideline: giữ trọng yếu (critical / 중요) section nhỏ, tránh blocking IO/Binder lời gọi (call / 호출) khi đang giữ khóa (lock / 잠금) nếu không thật sự cần, và ưu tiên kiến trúc (architecture / 아키텍처) giảm dùng chung (shared / 공유) mutable trạng thái (state / 상태).
 
-# Debugging runtime
+# Debugging thời gian chạy (runtime / 런타임)
 
-## 31. Khi nào dùng tool nào
+## 31. Khi nào dùng công cụ (tool / 도구) nào
 
-Logcat tốt cho sequence/event. Android Studio Profiler tốt cho CPU/memory/network overview. Perfetto/System Trace tốt cho thread scheduling, frame, Binder, lock và end-to-end timing. Heap dump tốt cho retained object. Macrobenchmark đo startup/frame interaction ở gần production. StrictMode bắt một số policy violation dev-time.
+Logcat tốt cho chuỗi (sequence / 시퀀스)/sự kiện (event / 이벤트). Android Studio Profiler tốt cho CPU/bộ nhớ (memory / 메모리)/mạng (network / 네트워크) overview. Perfetto/hệ thống (system / 시스템) dấu vết (trace / 추적) tốt cho luồng thực thi (thread / 스레드) scheduling, frame, Binder, khóa (lock / 잠금) và end-to-end timing. vùng nhớ động (heap / 힙) dump tốt cho retained đối tượng (object / 객체). Macrobenchmark đo startup/frame tương tác (interaction / 상호작용) ở gần môi trường vận hành (production / 운영 환경). StrictMode bắt một số chính sách (policy / 정책) violation dev-time.
 
-Không chọn tool theo thói quen; chọn theo hypothesis.
+Không chọn công cụ (tool / 도구) theo thói quen; chọn theo hypothesis.
 
 ## 32. Ví dụ suy luận một ANR
 
-Giả sử stack main thread cho thấy:
+Giả sử ngăn xếp (stack / 스택) main luồng thực thi (thread / 스레드) cho thấy:
 
 ```text
 Main thread
@@ -403,36 +406,38 @@ Main thread
 → OkHttp execute()
 ```
 
-Không cần tối ưu Compose trước. Root cause là synchronous network trên lifecycle callback/main thread.
+Không cần tối ưu Compose trước. nguyên nhân gốc (root cause / 근본 원인) là synchronous mạng (network / 네트워크) trên vòng đời (lifecycle / 생명주기) callback/main luồng thực thi (thread / 스레드).
 
-Nếu trace lại cho thấy main thread đang chờ `CountDownLatch`, trong khi worker cần callback trên main để count down, đây có thể là deadlock/liveness bug chứ không phải network chậm.
+Nếu dấu vết (trace / 추적) lại cho thấy main luồng thực thi (thread / 스레드) đang chờ `CountDownLatch`, trong khi worker cần callback trên main để count down, đây có thể là deadlock/liveness bug chứ không phải mạng (network / 네트워크) chậm.
 
-## 33. Ví dụ suy luận memory leak
+## 33. Ví dụ suy luận bộ nhớ (memory / 메모리) leak
 
-Nếu heap dump cho thấy destroyed Activity retained bởi `SomeManager.listener`, sửa manager/listener lifetime. Không “gọi System.gc()” để chữa leak. GC không thể thu object vẫn reachable.
+Nếu vùng nhớ động (heap / 힙) dump cho thấy destroyed Activity retained bởi `SomeManager.listener`, sửa manager/listener thời gian tồn tại (lifetime / 수명). Không “gọi hệ thống (system / 시스템).gc()” để chữa leak. GC không thể thu đối tượng (object / 객체) vẫn reachable.
 
-# Senior Notes
+# Cấp cao (senior / 시니어) Notes
 
-## 34. Runtime knowledge dùng để phá vỡ ảo tưởng abstraction
+## 34. thời gian chạy (runtime / 런타임) kiến thức (knowledge / 지식) dùng để phá vỡ ảo tưởng lớp trừu tượng (abstraction / 추상화)
 
-Ở code bình thường, hãy làm việc ở abstraction cao: coroutine, Flow, Compose, Room, Navigation. Chỉ hạ xuống Handler/Binder/ART khi evidence chỉ tới đó. Senior không phải người luôn viết low-level code; Senior là người biết abstraction nào đang giữ và khi nào nó đã rò rỉ.
+Ở mã (code / 코드) bình thường, hãy làm việc ở lớp trừu tượng (abstraction / 추상화) cao: coroutine, luồng (flow / 흐름), Compose, Room, điều hướng (navigation / 내비게이션). Chỉ hạ xuống Handler/Binder/ART khi bằng chứng (evidence / 증거) chỉ tới đó. cấp cao (senior / 시니어) không phải người luôn viết low-level mã (code / 코드); cấp cao (senior / 시니어) là người biết lớp trừu tượng (abstraction / 추상화) nào đang giữ và khi nào nó đã rò rỉ.
 
-## 35. Process death là design input, không phải edge case kỳ lạ
+## 35. tiến trình (process / 프로세스) death là thiết kế (design / 설계) đầu vào (input / 입력), không phải trường hợp biên (edge case / 경계 사례) kỳ lạ
 
-Nếu app mobile chạy đủ lâu ngoài production, process death sẽ xảy ra. Vì vậy persistence/state restoration nên là một phần architecture, không phải patch sau bug report.
+Nếu app mobile chạy đủ lâu ngoài môi trường vận hành (production / 운영 환경), tiến trình (process / 프로세스) death sẽ xảy ra. Vì vậy persistence/trạng thái (state / 상태) restoration nên là một phần kiến trúc (architecture / 아키텍처), không phải patch sau bug report.
 
-## 36. Thread là resource, không phải unit business logic
+## 36. luồng thực thi (thread / 스레드) là tài nguyên (resource / 자원), không phải đơn vị (unit / 단위) lô-gic nghiệp vụ (business logic / 비즈니스 로직)
 
-Business code nên nói “load profile”, “sync pending mutation”, “render state”, không nói “spawn thread 4”. Thread/dispatcher là execution mechanism. Tách hai thứ giúp code testable và portable hơn.
+Nghiệp vụ (business / 비즈니스) mã (code / 코드) nên nói “tải (load / 로드) profile”, “sync pending mutation”, “kết xuất (render / 렌더링) trạng thái (state / 상태)”, không nói “spawn luồng thực thi (thread / 스레드) 4”. luồng thực thi (thread / 스레드)/dispatcher là thực thi (execution / 실행) cơ chế (mechanism / 메커니즘). Tách hai thứ giúp mã (code / 코드) testable và portable hơn.
 
-## 37. IPC boundary là serialization + trust boundary
+## 37. IPC ranh giới (boundary / 경계) là serialization + trust ranh giới (boundary / 경계)
 
-Qua Binder/Intent/URI, hãy nghĩ cùng lúc ba vấn đề: payload có nhỏ không, version/serialization có đúng không, input có đáng tin không.
+Qua Binder/Intent/URI, hãy nghĩ cùng lúc ba vấn đề: payload có nhỏ không, phiên bản (version / 버전)/serialization có đúng không, đầu vào (input / 입력) có đáng tin không.
 
-## 38. Memory optimization phải dựa trên retained graph và allocation pattern
+## 38. bộ nhớ (memory / 메모리) tối ưu hóa (optimization / 최적화) phải dựa trên retained đồ thị (graph / 그래프) và allocation mẫu (pattern / 패턴)
 
-Đừng thấy memory cao rồi xóa cache ngẫu nhiên. Hãy phân biệt cache hợp lệ, retained leak, bitmap/native allocation và working set cần thiết.
+Đừng thấy bộ nhớ (memory / 메모리) cao rồi xóa bộ nhớ đệm (cache / 캐시) ngẫu nhiên. Hãy phân biệt bộ nhớ đệm (cache / 캐시) hợp lệ, retained leak, bitmap/bản địa (native / 네이티브) allocation và working set cần thiết.
 
 # Checklist kết thúc chapter
 
-Sau chapter này, bạn nên tự giải thích được vì sao `suspend` không đồng nghĩa background; vì sao main thread thực chất là event loop; vì sao `Handler` vẫn xuất hiện trong code Android; vì sao Intent/Bundle không nên mang object graph lớn; Binder là gì và vì sao IPC không miễn phí; process death khác configuration change thế nào; singleton/Application không phải persistence; managed heap khác total process memory thế nào; và khi gặp ANR/leak nên dùng trace/heap evidence thay vì đoán.
+Sau chapter này, bạn nên tự giải thích được vì sao `suspend` không đồng nghĩa background; vì sao main luồng thực thi (thread / 스레드) thực chất là vòng lặp sự kiện (event loop / 이벤트 루프); vì sao `Handler` vẫn xuất hiện trong mã (code / 코드) Android; vì sao Intent/Bundle không nên mang đối tượng (object / 객체) đồ thị (graph / 그래프) lớn; Binder là gì và vì sao IPC không miễn phí; tiến trình (process / 프로세스) death khác cấu hình (configuration / 구성) thay đổi (change / 변경) thế nào; singleton/ứng dụng (application / 애플리케이션) không phải persistence; managed vùng nhớ động (heap / 힙) khác total tiến trình (process / 프로세스) bộ nhớ (memory / 메모리) thế nào; và khi gặp ANR/leak nên dùng dấu vết (trace / 추적)/vùng nhớ động (heap / 힙) bằng chứng (evidence / 증거) thay vì đoán.
+
+> **Bàn giao:** Sau **38. bộ nhớ (memory / 메모리) tối ưu hóa (optimization / 최적화) phải dựa trên retained đồ thị (graph / 그래프) và allocation mẫu (pattern / 패턴)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

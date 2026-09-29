@@ -1,5 +1,8 @@
 # Quá trình khởi động, systemd và dịch vụ
 
+> **Mạch đọc:** Đọc **Quá trình khởi động, systemd và dịch vụ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Từ firmware tới không gian người dùng** sang **Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Một máy chủ cần chuyển từ trạng thái "máy vừa bật" sang trạng thái mà mạng đã sẵn sàng, hệ thống tệp đã được gắn, ứng dụng chạy đúng danh tính, nhật ký có nơi thu thập và các phụ thuộc được quản lý. Nếu chỉ dùng một chuỗi script shell không có mô hình phụ thuộc, việc khởi động và phục hồi dịch vụ sẽ nhanh chóng trở nên khó kiểm soát. Trên nhiều bản phân phối Linux hiện đại, **systemd** đảm nhiệm vai trò trình quản lý hệ thống và dịch vụ.
 
 ## Từ firmware tới không gian người dùng
@@ -20,17 +23,17 @@ ps -p 1 -o pid,comm,args
 
 ## Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?
 
-Cơ sở dữ liệu có thể cần hệ thống tệp và mạng trước khi khởi động. Ứng dụng có thể cần cơ sở dữ liệu nhưng không nên giải quyết bằng cách cố định `sleep 30`. Systemd mô tả các **đơn vị (unit)** và quan hệ giữa chúng theo thứ tự và phụ thuộc thay vì chỉ dựa vào thời gian chờ giả định.
+Cơ sở dữ liệu có thể cần hệ thống tệp và mạng trước khi khởi động. Ứng dụng có thể cần cơ sở dữ liệu nhưng không nên giải quyết bằng cách cố định `sleep 30`. Systemd mô tả các **đơn vị (unit / 단위)** và quan hệ giữa chúng theo thứ tự và phụ thuộc thay vì chỉ dựa vào thời gian chờ giả định.
 
-Điểm quan trọng là **thứ tự (ordering)** và **yêu cầu phụ thuộc (requirement)** là hai khái niệm khác nhau. `After=` chỉ định thứ tự khi các unit cùng được đưa vào quá trình khởi động; nó không tự động kéo unit kia vào. `Requires=` và `Wants=` mô tả các mức quan hệ phụ thuộc khác nhau.
+Điểm quan trọng là **thứ tự (ordering / 순서)** và **yêu cầu phụ thuộc (requirement)** là hai khái niệm khác nhau. `After=` chỉ định thứ tự khi các đơn vị (unit / 단위) cùng được đưa vào quá trình khởi động; nó không tự động kéo đơn vị (unit / 단위) kia vào. `Requires=` và `Wants=` mô tả các mức quan hệ phụ thuộc khác nhau.
 
-Vì vậy sao chép một unit file mà không hiểu các chỉ thị có thể tạo ra lỗi tranh chấp trong quá trình khởi động (boot race).
+Vì vậy sao chép một đơn vị (unit / 단위) tệp (file / 파일) mà không hiểu các chỉ thị có thể tạo ra lỗi tranh chấp trong quá trình khởi động (boot race).
 
-## Unit là gì?
+## Đơn vị (unit / 단위) là gì?
 
-Systemd quản lý nhiều loại unit như `.service`, `.socket`, `.timer`, `.mount`, `.target`... Dịch vụ chỉ là một loại trong số đó.
+Systemd quản lý nhiều loại đơn vị (unit / 단위) như `.service`, `.socket`, `.timer`, `.mount`, `.target`... Dịch vụ chỉ là một loại trong số đó.
 
-Xem nội dung unit:
+Xem nội dung đơn vị (unit / 단위):
 
 ```bash
 systemctl cat app.service
@@ -42,7 +45,7 @@ Xem các thuộc tính đã được systemd phân giải:
 systemctl show app.service -p MainPID -p User -p Group -p ExecStart
 ```
 
-`systemctl cat` đặc biệt hữu ích vì nó hiển thị unit cùng các cấu hình bổ sung (drop-in) thực tế, tốt hơn việc đoán tệp nằm trong `/etc/systemd/system` hay `/usr/lib/systemd/system`.
+`systemctl cat` đặc biệt hữu ích vì nó hiển thị đơn vị (unit / 단위) cùng các cấu hình bổ sung (drop-in) thực tế, tốt hơn việc đoán tệp nằm trong `/etc/systemd/system` hay `/usr/lib/systemd/system`.
 
 ## Vòng đời dịch vụ
 
@@ -86,7 +89,7 @@ systemctl is-active app
 systemctl is-enabled app
 ```
 
-`active` nói về trạng thái khi đang chạy hiện tại. `enabled` nói về quan hệ kích hoạt để unit có thể được khởi động theo mục tiêu boot. Một dịch vụ có thể đang hoạt động nhưng vẫn `disabled` nếu quản trị viên khởi động thủ công.
+`active` nói về trạng thái khi đang chạy hiện tại. `enabled` nói về quan hệ kích hoạt để đơn vị (unit / 단위) có thể được khởi động theo mục tiêu boot. Một dịch vụ có thể đang hoạt động nhưng vẫn `disabled` nếu quản trị viên khởi động thủ công.
 
 ```bash
 sudo systemctl enable --now app
@@ -94,7 +97,7 @@ sudo systemctl enable --now app
 
 thường vừa bật tự khởi động vừa khởi động ngay dịch vụ.
 
-## Unit file và môi trường thực thi
+## Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi
 
 Ví dụ đơn giản:
 
@@ -115,19 +118,19 @@ Environment=SPRING_PROFILES_ACTIVE=prod
 WantedBy=multi-user.target
 ```
 
-Điểm cần hiểu là dịch vụ không chạy bên trong phiên SSH tương tác của bạn. `PATH`, `JAVA_HOME`, thư mục làm việc hiện tại, `umask` và giới hạn tài nguyên có thể khác. Vì vậy tình huống "chạy tay được nhưng service không chạy" thường liên quan môi trường, danh tính hoặc đường dẫn.
+Điểm cần hiểu là dịch vụ không chạy bên trong phiên SSH tương tác của bạn. `PATH`, `JAVA_HOME`, thư mục làm việc hiện tại, `umask` và giới hạn tài nguyên có thể khác. Vì vậy tình huống "chạy tay được nhưng dịch vụ (service / 서비스) không chạy" thường liên quan môi trường, danh tính hoặc đường dẫn.
 
 Nên dùng đường dẫn tuyệt đối và khai báo rõ các biến môi trường thật sự cần thiết.
 
 ## `daemon-reload`
 
-Sau khi thay đổi unit file hoặc cấu hình drop-in:
+Sau khi thay đổi đơn vị (unit / 단위) tệp (file / 파일) hoặc cấu hình drop-in:
 
 ```bash
 sudo systemctl daemon-reload
 ```
 
-systemd sẽ nạp lại định nghĩa các unit. Lệnh này **không tự khởi động lại ứng dụng**. Nếu tiến trình đang chạy cần dùng cấu hình mới, hành động tiếp theo phụ thuộc vào loại thay đổi.
+systemd sẽ nạp lại định nghĩa các đơn vị (unit / 단위). Lệnh này **không tự khởi động lại ứng dụng**. Nếu tiến trình đang chạy cần dùng cấu hình mới, hành động tiếp theo phụ thuộc vào loại thay đổi.
 
 ## Chính sách khởi động lại
 
@@ -141,13 +144,13 @@ Không nên coi `reset-failed` là cách sửa lỗi; nó chỉ đặt lại tr�
 
 ## Dừng dịch vụ có kiểm soát
 
-Khi dừng dịch vụ, systemd gửi signal theo cấu hình, thường bắt đầu bằng `SIGTERM`. Ứng dụng cần xử lý quá trình dừng đúng cách để ngừng nhận lưu lượng mới, hoàn tất hoặc hủy công việc an toàn, ghi nốt trạng thái cần thiết và đóng tài nguyên.
+Khi dừng dịch vụ, systemd gửi tín hiệu (signal / 신호) theo cấu hình, thường bắt đầu bằng `SIGTERM`. Ứng dụng cần xử lý quá trình dừng đúng cách để ngừng nhận lưu lượng mới, hoàn tất hoặc hủy công việc an toàn, ghi nốt trạng thái cần thiết và đóng tài nguyên.
 
 Nếu ứng dụng không dừng trong khoảng thời gian cho phép, trình quản lý có thể chuyển sang biện pháp mạnh hơn. Xem thêm [Tiến trình, luồng, tín hiệu và tác vụ](../04_process/processes_threads_signals_jobs.md).
 
-## Target
+## Mục tiêu (target / 대상)
 
-**Target unit** dùng để nhóm và đồng bộ trạng thái hệ thống, có vai trò gần với khái niệm runlevel cũ nhưng dựa trên đồ thị phụ thuộc. `multi-user.target` thường đại diện trạng thái nhiều người dùng không có giao diện đồ họa; `graphical.target` kéo thêm môi trường đồ họa khi có.
+**mục tiêu (target / 대상) đơn vị (unit / 단위)** dùng để nhóm và đồng bộ trạng thái hệ thống, có vai trò gần với khái niệm runlevel cũ nhưng dựa trên đồ thị phụ thuộc. `multi-user.target` thường đại diện trạng thái nhiều người dùng không có giao diện đồ họa; `graphical.target` kéo thêm môi trường đồ họa khi có.
 
 ```bash
 systemctl get-default
@@ -156,7 +159,7 @@ systemctl list-dependencies multi-user.target
 
 ## Kích hoạt bằng socket và bộ hẹn giờ
 
-Systemd có thể quản lý socket unit và chỉ khởi động dịch vụ khi lưu lượng tới, hoặc dùng timer unit thay cho `cron` trong nhiều tình huống. Điều này cho thấy systemd không chỉ là công cụ để "restart service", mà là trình quản lý vòng đời và quan hệ phụ thuộc của hệ thống.
+Systemd có thể quản lý socket đơn vị (unit / 단위) và chỉ khởi động dịch vụ khi lưu lượng tới, hoặc dùng timer đơn vị (unit / 단위) thay cho `cron` trong nhiều tình huống. Điều này cho thấy systemd không chỉ là công cụ để "restart dịch vụ (service / 서비스)", mà là trình quản lý vòng đời và quan hệ phụ thuộc của hệ thống.
 
 Bộ hẹn giờ được trình bày thêm tại [Lập lịch và tự động hóa](../08_operations/scheduling_automation.md).
 
@@ -175,9 +178,9 @@ Sau đó kiểm tra đường dẫn, quyền, môi trường, chương trình th
 
 Nếu Java không được tìm thấy khi chạy dưới systemd nhưng lại chạy được trong SSH shell, hãy kiểm tra `ExecStart` và đường dẫn tuyệt đối thay vì thêm `PATH` ngẫu nhiên.
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
-Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc và trình quản lý trạng thái hệ thống**. Unit file là mô tả khai báo về cách tài nguyên hoặc dịch vụ tham gia vào đồ thị hệ thống; `systemctl` là công cụ khách để yêu cầu systemd thay đổi hoặc báo cáo trạng thái.
+Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc và trình quản lý trạng thái hệ thống**. đơn vị (unit / 단위) tệp (file / 파일) là mô tả khai báo về cách tài nguyên hoặc dịch vụ tham gia vào đồ thị hệ thống; `systemctl` là công cụ khách để yêu cầu systemd thay đổi hoặc báo cáo trạng thái.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -187,7 +190,7 @@ Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc
 
 **"Dịch vụ có môi trường giống SSH shell."** Không. Trình quản lý dịch vụ tạo ngữ cảnh thực thi riêng.
 
-**"`After=network.target` nghĩa là Internet hoặc DNS chắc chắn đã sẵn sàng."** Quan hệ thứ tự của target không chứng minh phụ thuộc mạng ở mức ứng dụng đã khỏe mạnh.
+**"`After=network.target` nghĩa là Internet hoặc DNS chắc chắn đã sẵn sàng."** Quan hệ thứ tự của mục tiêu (target / 대상) không chứng minh phụ thuộc mạng ở mức ứng dụng đã khỏe mạnh.
 
 **"`systemctl status` chứa toàn bộ nhật ký."** Nó chỉ hiển thị một phần ngữ cảnh gần đây; dùng `journalctl` để truy vấn sâu hơn.
 

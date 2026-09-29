@@ -1,5 +1,8 @@
 # Động lực học lượng tử phụ thuộc thời gian và tán xạ
 
+> **Mạch đọc:** Đọc **Động lực học lượng tử phụ thuộc thời gian và tán xạ** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Phương trình Schrödinger phụ thuộc thời gian** sang **Toán tử tiến hóa thời gian**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 Các chương lượng tử cơ bản thường bắt đầu bằng trạng thái dừng và phương trình Schrödinger không phụ thuộc thời gian. Cách đó rất hữu ích để hiểu phổ năng lượng, giếng thế và dao động tử. Nhưng nhiều thí nghiệm thật sự là bài toán **động lực học**: bật một trường ngoài, chiếu laser vào nguyên tử, chuẩn bị một gói sóng rồi quan sát nó lan truyền, hoặc bắn hạt vào mục tiêu và đo xác suất tán xạ.
 
 Chương này nối trạng thái dừng với các quá trình lượng tử thay đổi theo thời gian.
@@ -163,7 +166,7 @@ chuyển trạng thái mạnh khi
 
 Đây là nguồn gốc của phổ hấp thụ và nhiều kỹ thuật cộng hưởng.
 
-Cấu trúc này rất giống dao động cưỡng bức cổ điển: hệ phản ứng mạnh khi kích thích có tần số phù hợp với một chênh lệch tần số tự nhiên. Nhưng trong lượng tử, “mode” tương ứng là các trạng thái năng lượng và quá trình chuyển giữa chúng.
+Cấu trúc này rất giống dao động cưỡng bức cổ điển: hệ phản ứng mạnh khi kích thích có tần số phù hợp với một chênh lệch tần số tự nhiên. Nhưng trong lượng tử, “chế độ (mode / 모드)” tương ứng là các trạng thái năng lượng và quá trình chuyển giữa chúng.
 
 ## Quy tắc chọn lọc
 
@@ -261,7 +264,7 @@ Với thế đối xứng cầu, ta có thể phân rã sóng tán xạ theo mô
 
 Mỗi `\ell` là một kênh tán xạ riêng với độ dịch pha (phase shift) `\delta_\ell`.
 
-Ở năng lượng thấp, chỉ một vài `\ell` nhỏ đóng góp đáng kể; thường mode `s` với `\ell=0` chi phối.
+Ở năng lượng thấp, chỉ một vài `\ell` nhỏ đóng góp đáng kể; thường chế độ (mode / 모드) `s` với `\ell=0` chi phối.
 
 Đây là một ví dụ khác của nguyên lý theo thang: khi bước sóng lớn hơn kích thước nguồn, hệ không “nhìn thấy” các chi tiết góc bậc cao.
 
@@ -305,7 +308,7 @@ hệ kín → tiến hóa unitary
 hệ mở → unitary toàn cục nhưng hệ con có decoherence và dissipation
 ```
 
-## Mô hình tư duy (Mental Model)
+## Mô hình tư duy (mental model / 사고 모델)
 
 Lượng tử phụ thuộc thời gian không chỉ là “cho `t` vào hàm sóng”. Nó là bài toán về cách **biên độ xác suất và pha** dịch chuyển giữa các trạng thái khi Hamiltonian tiến hóa.
 
@@ -325,8 +328,10 @@ Không. Nó là đại lượng xác suất hiệu dụng của quá trình tán
 
 Không. Còn phụ thuộc phần tử ma trận, đối xứng, thời gian tương tác, độ rộng phổ và các cơ chế cạnh tranh.
 
-## Liên kết kiến thức (Knowledge Connection)
+## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 **Nên hiểu trước:** [Nền tảng lượng tử](00_quantum_foundations.md), [Các hệ lượng tử mẫu](01_quantum_systems.md), [Lý thuyết nhiễu loạn](04_approximation_perturbation.md).
 
 **Liên hệ tiếp:** [Vật lý nguyên tử](../09_atomic_nuclear_particle/00_atomic_physics.md), [Bức xạ và detector](../09_atomic_nuclear_particle/02_radiation_detection.md), [Mô hình Chuẩn](../09_atomic_nuclear_particle/03_particle_standard_model.md).
+
+> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 quantum foundations](./00_quantum_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

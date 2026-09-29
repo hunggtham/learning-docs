@@ -1,5 +1,8 @@
 # Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành
 
+> **Mạch đọc:** Đặt **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Cây câu hỏi** sang **2. Câu hỏi phải dẫn tới dữ liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > Mục tiêu của chương này là biến kiến thức thành một **quy trình nghiên cứu có thể lặp lại**. Thay vì đọc tin rồi phản ứng cảm tính, người đọc bắt đầu từ câu hỏi, chọn nguồn dữ liệu phù hợp, phân biệt dữ kiện, ước tính và ý kiến, xây cây động lực rồi cập nhật luận điểm theo lịch rõ ràng. Thuật ngữ tiếng Anh chỉ được giữ trong ngoặc hoặc dưới dạng viết tắt chuẩn khi cần tra cứu.
 
 # Phần I — Bắt đầu bằng câu hỏi
@@ -558,7 +561,7 @@ Khi nghiên cứu đã đủ sâu, cần lưu nó theo cấu trúc để lần c
 06_thesis_log.md
 ```
 
-Tên file có thể giữ tiếng Anh để tương thích hệ thống, nhưng nội dung giải thích nên dùng tiếng Việt.
+Tên tệp (file / 파일) có thể giữ tiếng Anh để tương thích hệ thống, nhưng nội dung giải thích nên dùng tiếng Việt.
 
 ## 52. Bảng theo dõi quốc gia
 

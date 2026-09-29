@@ -1,73 +1,111 @@
-# Software supply chain và secure software lifecycle
+# Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)
 
-Modern application hiếm khi chỉ chứa code team tự viết. Nó phụ thuộc package registries, build tools, container images, CI runners, deployment credentials và transitive dependencies. Vì vậy attack surface kéo dài từ source commit đến artifact chạy production.
+> **Mạch đọc:** Đặt **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust** sang **phụ thuộc (dependency / 의존성) risks**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
-## Supply chain là graph trust
 
-Một dependency package phụ thuộc tiếp nhiều packages khác. Build tool tải plugins. CI workflow chạy third-party actions. Base image chứa OS packages. Mỗi node/edge là một trust decision.
+Hiện đại (modern / 현대적) ứng dụng (application / 애플리케이션) hiếm khi chỉ chứa mã (code / 코드) nhóm (team / 팀) tự viết. Nó phụ thuộc gói (package / 패키지) registries, bản dựng (build / 빌드) tools, bộ chứa (container / 컨테이너) images, CI runners, triển khai (deployment / 배포) credentials và transitive dependencies. Vì vậy attack surface kéo dài từ nguồn (source / 소스) lần ghi nhận (commit / 커밋) đến sản phẩm tạo ra (artifact / 산출물) chạy môi trường vận hành (production / 운영 환경).
 
-“Code của chúng ta an toàn” không đủ nếu attacker compromise dependency publisher hoặc build pipeline.
+## Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust
 
-## Dependency risks
+Một phụ thuộc (dependency / 의존성) gói (package / 패키지) phụ thuộc tiếp nhiều packages khác. bản dựng (build / 빌드) công cụ (tool / 도구) tải plugins. CI workflow chạy third-party actions. cơ sở (base / 기반) ảnh (image / 이미지) chứa OS packages. Mỗi nút (node / 노드)/edge là một trust quyết định (decision / 결정).
 
-Typosquatting đặt package tên gần package phổ biến; dependency confusion lợi dụng resolver chọn package public/internal sai; compromised maintainer có thể phát hành malicious version.
+“mã (code / 코드) của chúng ta an toàn” không đủ nếu attacker compromise phụ thuộc (dependency / 의존성) publisher hoặc bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인).
 
-Defense gồm lockfiles, private registry policy, provenance verification, review dependency changes và giảm unnecessary dependencies.
 
-Version pinning tăng reproducibility nhưng pin mãi một vulnerable version cũng nguy hiểm. Update strategy phải cân bằng reproducibility với patching.
+> **Chuyển mạch:** Từ **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust**, ta sang **phụ thuộc (dependency / 의존성) risks** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Phụ thuộc (dependency / 의존성) risks
+
+Typosquatting đặt gói (package / 패키지) tên gần gói (package / 패키지) phổ biến; phụ thuộc (dependency / 의존성) confusion lợi dụng resolver chọn gói (package / 패키지) công khai (public / 공개)/nội bộ (internal / 내부) sai; compromised maintainer có thể phát hành malicious phiên bản (version / 버전).
+
+Defense gồm lockfiles, private registry chính sách (policy / 정책), provenance xác minh (verification / 확인), rà soát (review / 검토) phụ thuộc (dependency / 의존성) changes và giảm unnecessary dependencies.
+
+Phiên bản (version / 버전) pinning tăng reproducibility nhưng pin mãi một vulnerable phiên bản (version / 버전) cũng nguy hiểm. cập nhật (update / 업데이트) chiến lược (strategy / 전략) phải cân bằng reproducibility với patching.
+
+
+> **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) risks**, ta sang **SBOM** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## SBOM
 
-Software Bill of Materials (SBOM) liệt kê components/versions trong artifact. Nó giúp trả lời nhanh “chúng ta có dùng vulnerable library X không?”.
+Software Bill of Materials (SBOM) liệt kê components/versions trong sản phẩm tạo ra (artifact / 산출물). Nó giúp trả lời nhanh “chúng ta có dùng vulnerable thư viện (library / 라이브러리) X không?”.
 
 SBOM không tự làm software secure; inventory chỉ là prerequisite cho vulnerability management.
 
-## Build provenance và artifact integrity
 
-Secure pipeline cần biết artifact production được build từ source/commit nào, bởi workflow nào, với inputs nào và có bị tamper không.
+> **Chuyển mạch:** Từ **SBOM**, ta sang **bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Signing/provenance frameworks giúp verify artifact origin. Reproducible builds đi xa hơn: cùng source+environment spec tạo identical output, tăng khả năng detect build tampering.
+## Bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity
+
+Secure chuỗi xử lý (pipeline / 파이프라인) cần biết sản phẩm tạo ra (artifact / 산출물) môi trường vận hành (production / 운영 환경) được bản dựng (build / 빌드) từ nguồn (source / 소스)/lần ghi nhận (commit / 커밋) nào, bởi workflow nào, với inputs nào và có bị tamper không.
+
+Signing/provenance frameworks giúp verify sản phẩm tạo ra (artifact / 산출물) origin. Reproducible builds đi xa hơn: cùng nguồn (source / 소스)+môi trường (environment / 환경) spec tạo identical đầu ra (output / 출력), tăng khả năng detect bản dựng (build / 빌드) tampering.
+
+
+> **Chuyển mạch:** Từ **bản dựng (build / 빌드) provenance và sản phẩm tạo ra (artifact / 산출물) integrity**, ta sang **CI/CD permissions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## CI/CD permissions
 
-CI token thường có quyền đọc source, publish package hoặc deploy. Workflow pull request không đáng tin chạy với privileged secrets có thể trở thành remote code execution trên pipeline.
+CI đơn vị từ (token / 토큰) thường có quyền đọc nguồn (source / 소스), publish gói (package / 패키지) hoặc deploy. Workflow pull yêu cầu (request / 요청) không đáng tin chạy với privileged secrets có thể trở thành remote mã (code / 코드) thực thi (execution / 실행) trên chuỗi xử lý (pipeline / 파이프라인).
 
-Principle là least privilege per job, isolate untrusted code, short-lived credentials và protected deployment environments.
+Principle là least privilege per job, isolate untrusted mã (code / 코드), short-lived credentials và protected triển khai (deployment / 배포) environments.
 
-## Secure Development Lifecycle
 
-Security cần xuất hiện từ requirements/threat modeling, design review, coding, testing, dependency scanning, release, monitoring đến incident response.
+> **Chuyển mạch:** Từ **CI/CD permissions**, ta sang **Secure Development vòng đời (lifecycle / 생명주기)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-Shift-left không có nghĩa đẩy toàn trách nhiệm cho developer. Một số controls tốt nhất là platform guardrails, secure defaults và centralized tooling.
+## Secure Development vòng đời (lifecycle / 생명주기)
+
+Bảo mật (security / 보안) cần xuất hiện từ requirements/threat modeling, thiết kế (design / 설계) rà soát (review / 검토), coding, testing, phụ thuộc (dependency / 의존성) scanning, bản phát hành (release / 릴리스), monitoring đến sự cố (incident / 인시던트) phản hồi (response / 응답).
+
+Shift-left không có nghĩa đẩy toàn trách nhiệm cho nhà phát triển (developer / 개발자). Một số controls tốt nhất là nền tảng (platform / 플랫폼) guardrails, secure defaults và centralized tooling.
+
+
+> **Chuyển mạch:** Từ **Secure Development vòng đời (lifecycle / 생명주기)**, ta sang **SAST, DAST, SCA và fuzzing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## SAST, DAST, SCA và fuzzing
 
-Static Application Security Testing phân tích code/IR; Dynamic Testing chạy system; Software Composition Analysis kiểm dependencies; fuzzing tạo inputs để tìm crashes/edge cases.
+Static ứng dụng (application / 애플리케이션) bảo mật (security / 보안) Testing phân tích mã (code / 코드)/IR; động (dynamic / 동적) Testing chạy hệ thống (system / 시스템); Software Composition phân tích (analysis / 분석) kiểm dependencies; fuzzing tạo inputs để tìm crashes/edge cases.
 
-Mỗi technique có blind spots. Scanner findings cần triage theo reachability/context thay vì chỉ count CVEs.
+Mỗi technique có blind spots. Scanner findings cần triage theo reachability/ngữ cảnh (context / 맥락) thay vì chỉ count CVEs.
+
+
+> **Chuyển mạch:** Từ **SAST, DAST, SCA và fuzzing**, ta sang **Vulnerability management** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Vulnerability management
 
-Severity score như CVSS mô tả generic technical severity, nhưng organizational risk còn phụ thuộc exposure, exploitability, asset value và compensating controls.
+Severity score như CVSS mô tả generic technical severity, nhưng organizational rủi ro (risk / 위험) còn phụ thuộc exposure, exploitability, asset giá trị (value / 값) và compensating controls.
 
-Prioritization cần context: một library vulnerable path không reachable khác internet-facing auth bypass.
+Prioritization cần ngữ cảnh (context / 맥락): một thư viện (library / 라이브러리) vulnerable đường dẫn (path / 경로) không reachable khác internet-facing auth bypass.
 
-## Incident response feedback loop
 
-Sau incident, mục tiêu không chỉ patch symptom mà cập nhật threat model, detections, runbooks và preventive controls. Blameless analysis không có nghĩa không có accountability; nó nhằm hiểu system conditions thay vì dừng ở “human error”.
+> **Chuyển mạch:** Từ **Vulnerability management**, ta sang **sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Common Misconceptions
+## Sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)
 
-**“Không có CVE nghĩa là dependency an toàn.”** Unknown vulnerabilities và malicious behavior vẫn có thể tồn tại.
+Sau sự cố (incident / 인시던트), mục tiêu không chỉ patch symptom mà cập nhật threat mô hình (model / 모델), detections, runbooks và preventive controls. Blameless phân tích (analysis / 분석) không có nghĩa không có accountability; nó nhằm hiểu hệ thống (system / 시스템) conditions thay vì dừng ở “human lỗi (error / 오류)”.
 
-**“Scanner càng nhiều alerts càng tốt.”** Noise làm triage tệ; signal/actionability quan trọng.
 
-**“CI là internal nên trusted.”** CI xử lý untrusted commits/dependencies và có credentials mạnh; nó là high-value target.
+> **Chuyển mạch:** Từ **sự cố (incident / 인시던트) phản hồi (response / 응답) vòng phản hồi (feedback loop / 피드백 루프)**, ta sang **dùng chung (common / 공통) Misconceptions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
-## Mental Model
+## Dùng chung (common / 공통) Misconceptions
 
-> Software artifact là kết quả của một chain of custody. Security phải chứng minh/kiểm soát từng bước từ source identity tới build, dependency, signing và deployment.
+**“Không có CVE nghĩa là phụ thuộc (dependency / 의존성) an toàn.”** Unknown vulnerabilities và malicious hành vi (behavior / 동작) vẫn có thể tồn tại.
+
+**“Scanner càng nhiều alerts càng tốt.”** Noise làm triage tệ; tín hiệu (signal / 신호)/actionability quan trọng.
+
+**“CI là nội bộ (internal / 내부) nên trusted.”** CI xử lý untrusted commits/dependencies và có credentials mạnh; nó là high-value mục tiêu (target / 대상).
+
+
+> **Chuyển mạch:** Từ **dùng chung (common / 공통) Misconceptions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Mô hình tư duy (mental model / 사고 모델)
+
+> Software sản phẩm tạo ra (artifact / 산출물) là kết quả của một chuỗi (chain / 사슬) of custody. bảo mật (security / 보안) phải chứng minh/kiểm soát từng bước từ nguồn (source / 소스) định danh (identity / 식별자) tới bản dựng (build / 빌드), phụ thuộc (dependency / 의존성), signing và triển khai (deployment / 배포).
+
+
+> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Kết nối** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Kết nối
 
 Đọc [version control/build/packages](../08_software_systems/01_version_control_build_link_and_packages.md), [keys/secrets](./07_keys_secrets_certificates_and_secure_operations.md), [testing/debugging](./04_testing_verification_and_debugging.md) và [software engineering lifecycle](../09_software_engineering/00_requirements_specification_and_engineering_process.md).
+
+> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 threat models and security principles](./00_threat_models_and_security_principles.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

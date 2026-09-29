@@ -1,5 +1,8 @@
 # Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng
 
+> **Mạch đọc:** Đọc **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Hòa tan thực chất là tái tổ chức các tương tác** sang **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+
+
 > **Dung dịch (solution / 용액)** là hỗn hợp đồng nhất ở thang phân tử hoặc ion. **Độ tan (solubility / 용해도)** là lượng chất tan có thể tồn tại ở trạng thái hòa tan khi hệ đạt cân bằng dưới những điều kiện xác định. Muốn hiểu sâu hóa học dung dịch, không nên dừng ở câu “chất giống nhau thì hòa tan nhau”; cần nhìn đồng thời enthalpy, entropy, tương tác phân tử, hoạt độ và thế hóa học.
 
 ## Hòa tan thực chất là tái tổ chức các tương tác
@@ -159,7 +162,7 @@ Với chất điện ly thực, sự ghép cặp ion và tương tác tĩnh đi�
 
 **Thẩm thấu (osmosis / 삼투)** là sự vận chuyển dung môi qua màng bán thấm do chênh lệch thế hóa học của dung môi.
 
-Gradient nồng độ là một biểu hiện trực quan, nhưng mô tả sâu hơn nằm ở thế hóa học.
+Độ dốc (gradient / 기울기) nồng độ là một biểu hiện trực quan, nhưng mô tả sâu hơn nằm ở thế hóa học.
 
 Tế bào sinh học rất nhạy với thẩm thấu. Môi trường ưu trương kéo nước ra khỏi tế bào; môi trường nhược trương làm nước đi vào. Tuy nhiên hành vi thực còn phụ thuộc độ thấm màng và vận chuyển chủ động.
 
@@ -232,3 +235,5 @@ Sai. Khi tương tác ion mạnh, hiệu chỉnh hoạt độ trở nên cần t
 Hãy nhìn dung dịch như **một mạng năng lượng–entropy của các hạt tương tác trong dung môi**. Mô hình lý tưởng cho trực giác ban đầu; hoạt độ và thế hóa học cung cấp mô tả nhiệt động sâu hơn; động học và quá trình tạo mầm quyết định hệ đạt cân bằng nhanh đến mức nào.
 
 Xem tiếp: [Mol và hằng số Avogadro](../04_chemical_quantities/00_mole_and_avogadro_constant.md).
+
+> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 gases](./00_gases.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

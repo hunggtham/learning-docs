@@ -20,7 +20,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 > **Nguồn:** tổng hợp từ các Markdown đã generate trong `raw_md/final`, được đối chiếu với các nguồn `raw` và `raw_md` cùng môn. Nội dung gốc được giữ lại; chỉ chuẩn hoá cấu trúc bài học.
 
-> **Quy ước đọc:** thuật ngữ được ưu tiên theo mẫu `한국어 (English) (Tiếng Việt)`. Mỗi ý tiếng Hàn có phần giải thích Việt ngữ liền kề hoặc ngay sau đó; khi gặp từ kỹ thuật trong ngoặc, hãy xem đó là nghĩa cần nhớ khi làm đề.
+> **Quy ước ngôn ngữ:** phần giải thích ưu tiên tiếng Việt; ở mọi lần xuất hiện, thuật ngữ đề thi dùng dạng `nghĩa Việt (English / 한국어)` để không phải quay lại tìm nghĩa.
 
 > **Cách học:** học theo thứ tự các mục; với mỗi mục, xác định khái niệm → cơ chế/quy tắc → ví dụ → mẹo nhớ. Các mục lặp lại ở phần “심화” (nâng cao) dùng để nối kiến thức trước đó với dạng câu hỏi sâu hơn.
 
@@ -46,13 +46,64 @@ Chúng ta bắt đầu mạch học bằng **1. 자료 구조의 분류 (Classif
 * **Example**: 노드가 4개인 무방향 그래프의 최대 간선 수는 4(4-1)/2 = 6개입니다. (Với đồ thị vô hướng có 4 đỉnh, số cạnh tối đa là 6).
 * 💡 **Mẹo ghi nhớ**: Tuyến tính (Linear) là một đường thẳng (Mảng, Stack, Queue). Phi tuyến là rẽ nhánh (Cây, Đồ thị).
 
-Như vậy, **1. 자료 구조의 분류 (Classification of Data Structures)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **2. 스택 (Stack) 및 응용 (Applications)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **1. 자료 구조의 분류 (Classification of Data Structures)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+
+---
+
+## 073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)
+
+Sau khi đã đặt nền bằng **1. 자료 구조의 분류 (Classification of Data Structures)**, ta chuyển sang **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)**. Đây là mắt xích 2/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **자료 구조의 분류 (Phân loại)**. Hãy xác định **자료 구조의 분류 (Phân loại)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 자료 구조의 분류 (Phân loại)
+
+Phần nguồn của **자료 구조의 분류 (Phân loại)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **선형 구조 (Linear - Tuyến tính):** 배열 (Array), 리스트 (List), 스택 (Stack), 큐 (Queue), 데크 (Deque).
+- **비선형 구조 (Non-Linear - Phi tuyến):** 트리 (Tree), 그래프 (Graph).
+
+Các bullet của **자료 구조의 분류 (Phân loại)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **자료 구조의 분류 (Phân loại)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **배열 (Array - Mảng)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **배열 (Array - Mảng)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 배열 (Array - Mảng)
+
+Các ý ngay dưới **배열 (Array - Mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+---
+
+- **구조화 (Structuring):** 대형 시스템을 분해하여 단위 기능별로 구분, 계층적으로 구성. (Cấu trúc hóa - chia nhỏ thành sơ đồ hình cây).
+- **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
+
+Các bullet của **배열 (Array - Mảng)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **배열 (Array - Mảng)**, đừng bắt đầu lại từ số không. **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
+
+Bây giờ ta đi vào nội dung của **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
+- **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
+
+---
+
+Các bullet của **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Ta có thể khép mục **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **2. 스택 (Stack) 및 응용 (Applications)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 2. 스택 (Stack) 및 응용 (Applications)
 
-Sau khi đã đặt nền bằng **1. 자료 구조의 분류 (Classification of Data Structures)**, ta chuyển sang **2. 스택 (Stack) 및 응용 (Applications)**. Đây là mắt xích 2/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)**, ta đã có điểm tựa để bước vào **2. 스택 (Stack) 및 응용 (Applications)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/95 trước khi đi vào chi tiết.
 
 Để đọc **2. 스택 (Stack) 및 응용 (Applications)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **응용 분야 (Applications)**, **삽입/삭제 (Push/Pop)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -66,13 +117,13 @@ Sau khi đã đặt nền bằng **1. 자료 구조의 분류 (Classification of
 * **Example**: 브라우저의 '뒤로 가기' 버튼은 스택 구조를 사용합니다. (Nút "Back" trên trình duyệt sử dụng cấu trúc stack).
 * 💡 **Mẹo ghi nhớ**: LIFO - Vào sau ra trước, giống như xếp đĩa, lấy đĩa trên cùng ra trước.
 
-Ta có thể khép mục **2. 스택 (Stack) 및 응용 (Applications)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **29. 큐 (Queue)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **2. 스택 (Stack) 및 응용 (Applications)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **29. 큐 (Queue)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 29. 큐 (Queue)
 
-Từ **2. 스택 (Stack) 및 응용 (Applications)**, ta đã có điểm tựa để bước vào **29. 큐 (Queue)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 3/95 trước khi đi vào chi tiết.
+Ở bước 4/95, **29. 큐 (Queue)** xuất hiện như phần tiếp nối của **2. 스택 (Stack) 및 응용 (Applications)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **29. 큐 (Queue)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -83,13 +134,13 @@ Từ **2. 스택 (Stack) 및 응용 (Applications)**, ta đã có điểm tựa 
 * **Example**: 프린터의 인쇄 대기열이나 매표소 줄서기와 같습니다.
 * 💡 **Mẹo ghi nhớ**: Queue = Xếp hàng.
 
-Điểm chốt của **29. 큐 (Queue)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **3. 트리 (Tree)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **29. 큐 (Queue)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **3. 트리 (Tree)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 3. 트리 (Tree)
 
-Ở bước 4/95, **3. 트리 (Tree)** xuất hiện như phần tiếp nối của **29. 큐 (Queue)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **29. 큐 (Queue)**, ta chuyển sang **3. 트리 (Tree)**. Đây là mắt xích 5/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **3. 트리 (Tree)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **디그리 (Degree, 차수)**, **단말 노드 (Terminal Node) = 잎 노드 (Leaf Node)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -103,13 +154,13 @@ Từ **2. 스택 (Stack) 및 응용 (Applications)**, ta đã có điểm tựa 
 * **Example**: 폴더 구조에서 하위 폴더가 없는 폴더가 단말 노드입니다. (Trong cấu trúc thư mục, thư mục không chứa thư mục con là nút lá).
 * 💡 **Mẹo ghi nhớ**: Degree là số con trực tiếp. Leaf là chiếc lá ở cuối cành không mọc thêm được nữa.
 
-Như vậy, **3. 트리 (Tree)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **4. 이진 트리의 운행법 (Binary Tree Traversal)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **3. 트리 (Tree)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **4. 이진 트리의 운행법 (Binary Tree Traversal)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 4. 이진 트리의 운행법 (Binary Tree Traversal)
 
-Sau khi đã đặt nền bằng **3. 트리 (Tree)**, ta chuyển sang **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Đây là mắt xích 5/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **3. 트리 (Tree)**, ta đã có điểm tựa để bước vào **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/95 trước khi đi vào chi tiết.
 
 Để đọc **4. 이진 트리의 운행법 (Binary Tree Traversal)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **Preorder (전위)**, **Inorder (중위)**, **Postorder (후위)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -123,13 +174,13 @@ Sau khi đã đặt nền bằng **3. 트리 (Tree)**, ta chuyển sang **4. 이
 * **Example**: 수식 `A + B`를 전위 표기하면 `+ A B`, 중위 표기하면 `A + B`, 후위 표기하면 `A B +`가 됩니다.
 * 💡 **Mẹo ghi nhớ**: Tiền/Trung/Hậu tố chỉ vị trí của Root (Gốc) so với Trái/Phải.
 
-Ta có thể khép mục **4. 이진 트리의 운행법 (Binary Tree Traversal)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **30. 트리 구조 추가 용어 (Tree Terminology Additional)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **4. 이진 트리의 운행법 (Binary Tree Traversal)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **30. 트리 구조 추가 용어 (Tree Terminology Additional)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 30. 트리 구조 추가 용어 (Tree Terminology Additional)
 
-Từ **4. 이진 트리의 운행법 (Binary Tree Traversal)**, ta đã có điểm tựa để bước vào **30. 트리 구조 추가 용어 (Tree Terminology Additional)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 6/95 trước khi đi vào chi tiết.
+Ở bước 7/95, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** xuất hiện như phần tiếp nối của **4. 이진 트리의 운행법 (Binary Tree Traversal)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **30. 트리 구조 추가 용어 (Tree Terminology Additional)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **자식 노드 (Son Node)**, **부모 노드 (Parent Node)**, **형제 노드 (Sibling / Brother Node)**, **트리의 디그리 (Degree of a Tree)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -143,13 +194,13 @@ Từ **4. 이진 트리의 운행법 (Binary Tree Traversal)**, ta đã có đi�
   * Sibling: Nút anh em (cùng cha).
   * Degree of Tree: Bậc lớn nhất trong tất cả các nút của cây.
 
-Điểm chốt của **30. 트리 구조 추가 용어 (Tree Terminology Additional)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **025: 트리 (Tree / Cây)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **30. 트리 구조 추가 용어 (Tree Terminology Additional)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **025: 트리 (Tree / Cây)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 025: 트리 (Tree / Cây)
 
-Ở bước 7/95, **025: 트리 (Tree / Cây)** xuất hiện như phần tiếp nối của **30. 트리 구조 추가 용어 (Tree Terminology Additional)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **30. 트리 구조 추가 용어 (Tree Terminology Additional)**, ta chuyển sang **025: 트리 (Tree / Cây)**. Đây là mắt xích 8/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **025: 트리 (Tree / Cây)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -162,11 +213,11 @@ Từ **4. 이진 트리의 운행법 (Binary Tree Traversal)**, ta đã có đi�
 | 차수 (Degree of Node) | Bậc của một nút: Số lượng con của nút đó. | B có 3 con => Degree = 3. |
 | 트리의 차수 (Degree of Tree) | Bậc của cây: Bậc lớn nhất trong tất cả các nút. | Cả cây có nút max là 3 => Degree của cây = 3. |
 
-Trước hết, ta đặt **트리 순회 (Tree Traversal - Duyệt cây)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **트리 순회 (Tree Traversal - Duyệt cây)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+Ta bắt đầu phần nội dung bằng **트리 순회 (Tree Traversal - Duyệt cây)**. Hãy xác định **트리 순회 (Tree Traversal - Duyệt cây)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
 
 ### 트리 순회 (Tree Traversal - Duyệt cây)
 
-Bây giờ ta đi vào nội dung của **트리 순회 (Tree Traversal - Duyệt cây)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **트리 순회 (Tree Traversal - Duyệt cây)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **전위 순회 (Preorder):** Root -> Left -> Right.
 - **중위 순회 (Inorder):** Left -> Root -> Right.
@@ -181,24 +232,24 @@ Với **트리 순회 (Tree Traversal - Duyệt cây)**, hãy đọc các công 
 
 Với **트리 순회 (Tree Traversal - Duyệt cây)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Như vậy, **025: 트리 (Tree / Cây)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **026: 그래프 (Graph / Đồ thị)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **025: 트리 (Tree / Cây)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **026: 그래프 (Graph / Đồ thị)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 026: 그래프 (Graph / Đồ thị)
 
-Sau khi đã đặt nền bằng **025: 트리 (Tree / Cây)**, ta chuyển sang **026: 그래프 (Graph / Đồ thị)**. Đây là mắt xích 8/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **025: 트리 (Tree / Cây)**, ta đã có điểm tựa để bước vào **026: 그래프 (Graph / Đồ thị)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/95 trước khi đi vào chi tiết.
 
 Để đọc **026: 그래프 (Graph / Đồ thị)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - **방향 그래프 (Directed Graph):** Có hướng. Tối đa `n(n-1)` cạnh (n là số đỉnh).
 - **무방향 그래프 (Undirected Graph):** Vô hướng. Tối đa `n(n-1)/2` cạnh.
 
-Ta bắt đầu phần nội dung bằng **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)**. Hãy xác định **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)
 
-Phần nguồn của **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **DFS (Depth-First Search - Tìm kiếm theo chiều sâu):** Đi sâu nhất có thể, hết đường mới lui lại (Dùng Stack).
 - **BFS (Breadth-First Search - Tìm kiếm theo chiều rộng):** Loang ra xung quanh, tầng nào xong mới xuống tầng sau (Dùng Queue).
@@ -211,13 +262,13 @@ Với **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)**, hãy đ�
 
 Với **탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
 
-Ta có thể khép mục **026: 그래프 (Graph / Đồ thị)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 수식의 표기법 변환 (Expression Notation Conversion)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **026: 그래프 (Graph / Đồ thị)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **5. 수식의 표기법 변환 (Expression Notation Conversion)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 5. 수식의 표기법 변환 (Expression Notation Conversion)
 
-Từ **026: 그래프 (Graph / Đồ thị)**, ta đã có điểm tựa để bước vào **5. 수식의 표기법 변환 (Expression Notation Conversion)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 9/95 trước khi đi vào chi tiết.
+Ở bước 10/95, **5. 수식의 표기법 변환 (Expression Notation Conversion)** xuất hiện như phần tiếp nối của **026: 그래프 (Graph / Đồ thị)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **5. 수식의 표기법 변환 (Expression Notation Conversion)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **Infix → Prefix**, **Infix → Postfix**, **Postfix → Infix**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -228,13 +279,13 @@ Từ **026: 그래프 (Graph / Đồ thị)**, ta đã có điểm tựa để b
 * **Example**: Infix `A/B` -> Postfix `A B /` -> Prefix `/ A B`.
 * 💡 **Mẹo ghi nhớ**: Prefix (Pre = trước), Postfix (Post = sau).
 
-Điểm chốt của **5. 수식의 표기법 변환 (Expression Notation Conversion)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **6. 정렬 알고리즘 (Sorting Algorithms)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **5. 수식의 표기법 변환 (Expression Notation Conversion)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **6. 정렬 알고리즘 (Sorting Algorithms)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 6. 정렬 알고리즘 (Sorting Algorithms)
 
-Ở bước 10/95, **6. 정렬 알고리즘 (Sorting Algorithms)** xuất hiện như phần tiếp nối của **5. 수식의 표기법 변환 (Expression Notation Conversion)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **5. 수식의 표기법 변환 (Expression Notation Conversion)**, ta chuyển sang **6. 정렬 알고리즘 (Sorting Algorithms)**. Đây là mắt xích 11/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **6. 정렬 알고리즘 (Sorting Algorithms)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **삽입 정렬 (Insertion Sort)**, **선택 정렬 (Selection Sort)**, **버블 정렬 (Bubble Sort)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -248,17 +299,17 @@ Từ **026: 그래프 (Graph / Đồ thị)**, ta đã có điểm tựa để b
 * **Example**: `8, 5, 6` 버블 정렬 1회전: 5, 8, 6 -> 5, 6, 8. (Bubble sort đổi chỗ 8 và 5, rồi 8 và 6).
 * 💡 **Mẹo ghi nhớ**: Insertion: bốc bài và chèn. Selection: tìm người lùn nhất xếp hàng. Bubble: bong bóng lớn nổi lên cuối cùng.
 
-Như vậy, **6. 정렬 알고리즘 (Sorting Algorithms)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **6. 정렬 알고리즘 (Sorting Algorithms)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)
 
-Sau khi đã đặt nền bằng **6. 정렬 알고리즘 (Sorting Algorithms)**, ta chuyển sang **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**. Đây là mắt xích 11/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **6. 정렬 알고리즘 (Sorting Algorithms)**, ta đã có điểm tựa để bước vào **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/95 trước khi đi vào chi tiết.
 
 Để đọc **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **퀵 정렬 (Quick Sort)**, **2-Way 합병 정렬 (Merge Sort)**, **힙 정렬 (Heap Sort)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-* **퀵 정렬 (Quick Sort)**: 키를 기준으로 작은 값은 왼쪽, 큰 값은 오른쪽 서브파일로 분해시키는 방식. 분할(Divide)과 정복(Conquer)을 통해 자료를 정렬. 
+* **퀵 정렬 (Quick Sort)**: 키를 기준으로 작은 값은 왼쪽, 큰 값은 오른쪽 서브파일로 분해시키는 방식. 분할(Divide)과 정복(Conquer)을 통해 자료를 정렬.
   * 평균 시간 복잡도: O(n log n), 최악: O(n^2).
 * **2-Way 합병 정렬 (Merge Sort)**: 정렬되어 있는 두 개의 파일을 한 개의 파일로 합병하는 방식. 평균/최악 모두 O(n log n).
 * **힙 정렬 (Heap Sort)**: 전이진 트리(Complete Binary Tree)를 이용한 정렬 방식. 평균/최악 모두 O(n log n).
@@ -269,13 +320,13 @@ Sau khi đã đặt nền bằng **6. 정렬 알고리즘 (Sorting Algorithms)**
 * **Example**: 퀵 정렬은 반장(기준)을 뽑아서 키 작은 사람은 왼쪽, 큰 사람은 오른쪽으로 세우는 방식입니다.
 * 💡 **Mẹo ghi nhớ**: Quick = Nhanh nhưng rủi ro (worst case O(n^2)). Merge/Heap = Luôn ổn định O(n log n).
 
-Ta có thể khép mục **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **028: 정렬 (Sorting / Thuật toán sắp xếp)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **028: 정렬 (Sorting / Thuật toán sắp xếp)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 028: 정렬 (Sorting / Thuật toán sắp xếp)
 
-Từ **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, ta đã có điểm tựa để bước vào **028: 정렬 (Sorting / Thuật toán sắp xếp)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 12/95 trước khi đi vào chi tiết.
+Ở bước 13/95, **028: 정렬 (Sorting / Thuật toán sắp xếp)** xuất hiện như phần tiếp nối của **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **028: 정렬 (Sorting / Thuật toán sắp xếp)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng là bằng chứng để so sánh các lựa chọn theo cùng tiêu chí, không phải danh sách cần học thuộc từng ô.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -293,13 +344,13 @@ Từ **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, ta đã
 
 ---
 
-Điểm chốt của **028: 정렬 (Sorting / Thuật toán sắp xếp)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **7. 이분 검색 (Binary Search)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **028: 정렬 (Sorting / Thuật toán sắp xếp)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **7. 이분 검색 (Binary Search)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 7. 이분 검색 (Binary Search)
 
-Ở bước 13/95, **7. 이분 검색 (Binary Search)** xuất hiện như phần tiếp nối của **028: 정렬 (Sorting / Thuật toán sắp xếp)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **028: 정렬 (Sorting / Thuật toán sắp xếp)**, ta chuyển sang **7. 이분 검색 (Binary Search)**. Đây là mắt xích 14/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **7. 이분 검색 (Binary Search)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -310,21 +361,21 @@ Từ **31. 추가 정렬 알고리즘 (Additional Sorting Algorithms)**, ta đã
 * **Example**: 사전에서 단어를 찾을 때 책을 반으로 계속 쪼개며 찾는 방식입니다.
 * 💡 **Mẹo ghi nhớ**: Binary = chia đôi (phải sắp xếp trước!).
 
-Như vậy, **7. 이분 검색 (Binary Search)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **7. 이분 검색 (Binary Search)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)
 
-Sau khi đã đặt nền bằng **7. 이분 검색 (Binary Search)**, ta chuyển sang **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**. Đây là mắt xích 14/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **7. 이분 검색 (Binary Search)**, ta đã có điểm tựa để bước vào **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/95 trước khi đi vào chi tiết.
 
 Để đọc **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Ta bắt đầu phần nội dung bằng **검색 (Search - Tìm kiếm)**. Hãy xác định **검색 (Search - Tìm kiếm)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+Để không đọc **검색 (Search - Tìm kiếm)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
 
 ### 검색 (Search - Tìm kiếm)
 
-Phần nguồn của **검색 (Search - Tìm kiếm)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **검색 (Search - Tìm kiếm)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **순차 검색 (Sequential/Linear Search):** Tìm tuần tự từ đầu đến cuối. Dùng cho mảng *chưa sắp xếp*. O(n).
 - **이진 검색 (Binary Search):** Tìm nhị phân. Chia đôi mảng liên tục. **Bắt buộc mảng phải ĐÃ SẮP XẾP.** O(log n). Rất nhanh.
@@ -332,11 +383,11 @@ Phần nguồn của **검색 (Search - Tìm kiếm)** sẽ lấp đầy khung g
 Các bullet của **검색 (Search - Tìm kiếm)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **검색 (Search - Tìm kiếm)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **해싱 (Hashing - Băm dữ liệu)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **해싱 (Hashing - Băm dữ liệu)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+Ở đoạn **해싱 (Hashing - Băm dữ liệu)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
 
 ### 해싱 (Hashing - Băm dữ liệu)
 
-Các ý ngay dưới **해싱 (Hashing - Băm dữ liệu)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **해싱 (Hashing - Băm dữ liệu)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - Dùng hàm băm (Hash Function) tính ra trực tiếp địa chỉ bộ nhớ để lưu hoặc tìm kiếm dữ liệu. Nhanh nhất (O(1)).
 
@@ -346,11 +397,11 @@ Các ý ngay dưới **해싱 (Hashing - Băm dữ liệu)** cung cấp dữ li�
 Với **해싱 (Hashing - Băm dữ liệu)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Sau khi đọc **해싱 (Hashing - Băm dữ liệu)**, đừng bắt đầu lại từ số không. **해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Ở đoạn **해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)
 
-Bây giờ ta đi vào nội dung của **해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 | 방법 (Phương pháp) | 설명 (Giải thích) |
 |---|---|
@@ -360,24 +411,22 @@ Bây giờ ta đi vào nội dung của **해시 충돌 해결 방법 (Hash Coll
 | 제곱 탐색 (Quadratic Probing) | 해시충돌 시 제곱만큼 건너뛴 버킷에 삽입 (1, 4, 9, 16...). (Thử bậc hai: Nhảy xa dần theo bình phương để tránh tụ tập.) |
 | 이중 해시 (Double Hashing) | 해시충돌 시 다른 해싱함수를 한 번 더 적용. (Băm kép: Dùng thêm một hàm băm phụ để tìm khoảng nhảy.) |
 
-- **Vietnamese Explanation:** Khi hai dữ liệu băm ra cùng một địa chỉ (Collision), ta phải giải quyết. Chaining là cho chúng ở chung một nhà nhưng nối đuôi nhau (như xâu chuỗi). Open Addressing là "nhà này có người rồi, mời anh đi tìm nhà khác". 
+- **Vietnamese Explanation:** Khi hai dữ liệu băm ra cùng một địa chỉ (Collision), ta phải giải quyết. Chaining là cho chúng ở chung một nhà nhưng nối đuôi nhau (như xâu chuỗi). Open Addressing là "nhà này có người rồi, mời anh đi tìm nhà khác".
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Chaining = Dây xích (Linked List). Open Addressing = Mở cửa đi tìm nhà khác (Linear, Quadratic, Double).
 
 ---
-
-# Chapter 2. 통합 구현 (Integration Implementation)
 
 Khi đọc **해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)**, hãy tách hai lớp: bảng giúp đối chiếu các loại hoặc tiêu chí, còn công thức cần được đọc theo biến, đơn vị và quan hệ giữa các đại lượng. Cách tách này giúp ta hiểu cơ chế trước khi ghi nhớ ký hiệu.
 
 Như vậy, **해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Ta có thể khép mục **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **8. 주요 해싱 함수 (Hashing Functions)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **8. 주요 해싱 함수 (Hashing Functions)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 8. 주요 해싱 함수 (Hashing Functions)
 
-Từ **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, ta đã có điểm tựa để bước vào **8. 주요 해싱 함수 (Hashing Functions)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 15/95 trước khi đi vào chi tiết.
+Ở bước 16/95, **8. 주요 해싱 함수 (Hashing Functions)** xuất hiện như phần tiếp nối của **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **8. 주요 해싱 함수 (Hashing Functions)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **제산법 (Division)**, **제곱법 (Mid-Square)**, **폴딩법 (Folding)**, **숫자 분석법 (Digit Analysis)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -389,13 +438,13 @@ Từ **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**
 * **Example**: 제산법으로 키 10을 해시 테이블 크기 7(소수)로 나누면 나머지 3이 주소가 됩니다.
 * 💡 **Mẹo ghi nhớ**: Division = Chia lấy dư, Square = Bình phương, Fold = Gấp lại.
 
-Điểm chốt của **8. 주요 해싱 함수 (Hashing Functions)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **32. 추가 해싱 함수 (Additional Hashing Functions)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **8. 주요 해싱 함수 (Hashing Functions)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **32. 추가 해싱 함수 (Additional Hashing Functions)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 32. 추가 해싱 함수 (Additional Hashing Functions)
 
-Ở bước 16/95, **32. 추가 해싱 함수 (Additional Hashing Functions)** xuất hiện như phần tiếp nối của **8. 주요 해싱 함수 (Hashing Functions)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **8. 주요 해싱 함수 (Hashing Functions)**, ta chuyển sang **32. 추가 해싱 함수 (Additional Hashing Functions)**. Đây là mắt xích 17/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **32. 추가 해싱 함수 (Additional Hashing Functions)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **기수 변환법 (Radix)**, **대수적 코딩법 (Algebraic Coding)**, **무작위법 (Random)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -404,13 +453,13 @@ Từ **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**
 * **무작위법 (Random)**: 난수를 발생시켜 홈 주소로 사용.
 * **VI (Vietnamese) (Tiếng Việt):** Các hàm băm khác: Cơ số (Radix), Đại số (Algebraic), Ngẫu nhiên (Random).
 
-Như vậy, **32. 추가 해싱 함수 (Additional Hashing Functions)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **32. 추가 해싱 함수 (Additional Hashing Functions)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)
 
-Sau khi đã đặt nền bằng **32. 추가 해싱 함수 (Additional Hashing Functions)**, ta chuyển sang **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**. Đây là mắt xích 17/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **32. 추가 해싱 함수 (Additional Hashing Functions)**, ta đã có điểm tựa để bước vào **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/95 trước khi đi vào chi tiết.
 
 Để đọc **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **단위 모듈 (Unit Module)**, **IPC (프로세스 간 통신)**, **IPC 대표 메소드**, **Shared Memory** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -426,13 +475,13 @@ Sau khi đã đặt nền bằng **32. 추가 해싱 함수 (Additional Hashing 
 * **Example**: 두 개의 프로그램이 채팅을 주고받을 때 Socket이나 Message Queue를 사용합니다.
 * 💡 **Mẹo ghi nhớ**: S-S-S-P-M (Shared memory, Socket, Semaphore, Pipe, Message Queue).
 
-Ta có thể khép mục **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **핵심 031: 모듈 구현 (Module Implementation)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **핵심 031: 모듈 구현 (Module Implementation)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 핵심 031: 모듈 구현 (Module Implementation)
 
-Từ **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**, ta đã có điểm tựa để bước vào **핵심 031: 모듈 구현 (Module Implementation)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 18/95 trước khi đi vào chi tiết.
+Ở bước 19/95, **핵심 031: 모듈 구현 (Module Implementation)** xuất hiện như phần tiếp nối của **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **핵심 031: 모듈 구현 (Module Implementation)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -446,62 +495,13 @@ Từ **34. 단위 모듈과 IPC (Unit Module & Inter-Process Communication)**, t
 
 ---
 
-Điểm chốt của **핵심 031: 모듈 구현 (Module Implementation)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
-
----
-
-## 093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)
-
-Ở bước 19/95, **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)** xuất hiện như phần tiếp nối của **핵심 031: 모듈 구현 (Module Implementation)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
-
-Để đọc **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-Trước hết, ta đặt **단위 모듈 (Unit Module)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **단위 모듈 (Unit Module)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
-
-### 단위 모듈 (Unit Module)
-
-Bây giờ ta đi vào nội dung của **단위 모듈 (Unit Module)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
-
-- 프로그램의 단위 기능을 구현하는 독립적인 최소 소프트웨어 단위. (Đơn vị phần mềm nhỏ nhất, độc lập, thực hiện 1 chức năng duy nhất).
-
-Các bullet của **단위 모듈 (Unit Module)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **단위 모듈 (Unit Module)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Với **단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
-
-### 단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)
-
-Phần nguồn của **단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- **추상화 (Abstraction):** 복잡한 시스템을 단순하게 구현. (Trừu tượng hóa - ẩn đi sự phức tạp).
-- **구조화 (Structuring):** 대형 시스템을 분해하여 단위 기능별로 구분, 계층적으로 구성. (Cấu trúc hóa - chia nhỏ thành sơ đồ hình cây).
-- **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
-
-Các bullet của **단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Sau khi đọc **단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)**, đừng bắt đầu lại từ số không. **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Đoạn **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
-### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
-
-Các ý ngay dưới **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
-- **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
-- **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
-
----
-
-Các bullet của **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Như vậy, **입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
-
-Như vậy, **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Như vậy, **핵심 031: 모듈 구현 (Module Implementation)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)
 
-Sau khi đã đặt nền bằng **093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)**, ta chuyển sang **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)**. Đây là mắt xích 20/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Sau khi đã đặt nền bằng **핵심 031: 모듈 구현 (Module Implementation)**, ta chuyển sang **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)**. Đây là mắt xích 20/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -618,7 +618,7 @@ Sau khi đã đặt nền bằng **13. 형상 관리 (SCM - Software Configurati
   * **기능**: 형상 식별, 버전 제어, 형상 통제(변경 관리), 형상 감사, 형상 기록.
 * **버전 관리 방식 3가지**:
   1. **공유 폴더 방식 (Shared Folder)**: 로컬 공유 폴더에 저장. (SCCS, RCS 등).
-  2. **클라이언트/서버 방식 (C/S)**: 중앙 서버에 저장하여 관리. (CVS, SVN 등). 
+  2. **클라이언트/서버 방식 (C/S)**: 중앙 서버에 저장하여 관리. (CVS, SVN 등).
      * **SVN (Subversion)**: `trunk`에서 주로 개발, `branches`에서 추가 작업 후 병합(merge). 커밋 시 리비전(Revision) 1씩 증가.
   3. **분산 저장소 방식 (Distributed)**: 로컬 저장소와 원격 저장소에 함께 저장. (Git 등).
      * **Git**: 로컬에서 버전 관리가 가능해 빠르고 네트워크 문제 시에도 작업 가능. 스냅샷(Snapshot)으로 파일 변화를 저장.
@@ -887,7 +887,7 @@ Với **DRM (Digital Rights Management - Quản lý bản quyền kỹ thuật s
 Để đọc **099: 소프트웨어 패키징 (Software Packaging)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - 실행 파일들을 묶어 배포용 설치 파일을 만드는 과정. (Gom tất cả file thực thi, file hình, file cấu hình thành 1 file cài đặt (Setup.exe) để tung ra thị trường).
-- **Nguyên tắc:** 
+- **Nguyên tắc:**
   - **사용자 중심 (Hướng tới người dùng):** Người dùng cài đặt dễ dàng, không cần biết code.
   - Cần phải 모듈화 (Module hóa) để dễ bảo trì, và tích hợp 보안 (Bảo mật / DRM).
 
@@ -1210,7 +1210,7 @@ Sau khi đã đặt nền bằng **20. 하향식 통합 테스트와 테스트 �
 Để đọc **35. 테스트 케이스 (Test Case)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **구성 요소 (ISO/IEC/IEEE 29119-3)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 * 사용자의 요구사항을 정확하게 준수했는지 확인하기 위해 설계된 테스트 항목에 대한 명세서.
-* **구성 요소 (ISO/IEC/IEEE 29119-3)**: 
+* **구성 요소 (ISO/IEC/IEEE 29119-3)**:
   * 식별자, 테스트 항목, 입력 명세(Input), 출력 명세(Output/예상 결과), 환경 설정, 특수 절차 요구, 의존성 기술.
 * **VI (Vietnamese) (Tiếng Việt):** Kịch bản kiểm thử (Test Case). Bao gồm: ID, Môi trường, Đầu vào, Đầu ra mong đợi.
 * **Example**: 로그인 기능을 위해 "ID: admin, PW: 1234를 넣었을 때 관리자 페이지로 넘어가는가?"를 문서화한 것입니다.
@@ -1477,7 +1477,7 @@ Phần nguồn của **화이트박스 테스트 (White-box / Hộp trắng / D�
   - **루프 검사 (Loop Testing):** Test các vòng lặp for, while.
 
 - **Vietnamese Explanation:** Black-box giống như lái xe ô tô: đạp ga là chạy, không cần biết động cơ nổ ra sao. White-box giống như thợ máy: tháo tung động cơ ra kiểm tra từng con ốc, từng pít-tông.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
   - Black-box (Chức năng): Vùng (Partition), Biên (Boundary), Nhờ kinh nghiệm (Guessing).
   - White-box (Cấu trúc code): Dòng lệnh (Statement), Nhánh (Branch), Điều kiện (Condition), Vòng lặp (Loop).
 
@@ -1712,7 +1712,7 @@ Phần **136-1. 통합 테스트 (Integration Test - Kiểm thử tích hợp)**
   - *Big Bang:* Lắp ráp toàn bộ rồi mới khởi động. Xe không nổ máy $\rightarrow$ Không biết do động cơ, bình ắc quy hay bugi.
   - *Incremental:* Lắp động cơ vào hộp số rồi test (OK). Lắp thêm bánh xe rồi test (OK) $\rightarrow$ Nếu có lỗi sẽ biết ngay tại bộ phận vừa lắp thêm.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Big Bang** = "Bùm" một phát gom hết lại, nếu hỏng thì không biết sửa từ đâu.
 > - **Incremental** = "Từng bước", thêm một phần tử vào nếu sai thì do phần tử đó.
 
@@ -1731,7 +1731,7 @@ Phần **137 & 138. 하향식 / 상향식 통합 테스트 (Top Down & Bottom Up
 - **상향식:** 클러스터(Cluster), **테스트 드라이버(Driver)**.
 
 **[3] 차이점 비교 (So sánh chi tiết):**
-- **하향식 (Top-Down):** 
+- **하향식 (Top-Down):**
   - 하위 모듈이 아직 없으므로, 이를 thay thế bằng **Stub** (모듈의 흉내를 내는 가짜 하위 모듈 - module giả lập cấp dưới).
   - 테스트 초기부터 시스템의 전체 구조를 보여주기 유리.
 - **상향식 (Bottom-Up):**
@@ -1742,7 +1742,7 @@ Phần **137 & 138. 하향식 / 상향식 통합 테스트 (Top Down & Bottom Up
 - **Top-Down:** Kiểm tra màn hình Đăng nhập (Main). Vì chưa có database, ta tạo một `Stub` (hàm giả) cứ nhận id/pass là trả về "Thành công".
 - **Bottom-Up:** Đã viết xong hàm mã hóa mật khẩu (phụ), nhưng chưa có màn hình Đăng nhập. Ta viết một đoạn code ngắn (`Driver`) để gọi hàm mã hóa đó với các chuỗi khác nhau xem nó mã hóa đúng không.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Top-Down = Stub** (Từ trên xuống gặp tảng đá - S).
 > - **Bottom-Up = Driver** (Từ dưới lên cần tài xế lái lên - D).
 
@@ -1770,7 +1770,7 @@ Phần **140. 회귀 테스팅 (Regression Testing - Kiểm thử hồi quy)** c
 **[1] 개념 (Khái niệm):** 수정된 모듈이나 컴포넌트가 다른 부분에 영향을 미치는지 확인하기 위해 테스트를 반복하는 것.
 *(Kiểm tra lại toàn bộ hoặc một phần hệ thống sau khi đã sửa lỗi hoặc thêm tính năng mới, để đảm bảo việc sửa chữa này không làm hỏng các tính năng cũ đang hoạt động tốt.)*
 
-**[2] 핵심 키워드 (Từ khóa chính):** 
+**[2] 핵심 키워드 (Từ khóa chính):**
 - 새로운 오류 확인 (Xác nhận không có lỗi mới)
 - 기존 기능 보장 (Đảm bảo chức năng cũ)
 - 테스트 케이스 선정 (Lựa chọn test case hiệu quả)
@@ -1778,7 +1778,7 @@ Phần **140. 회귀 테스팅 (Regression Testing - Kiểm thử hồi quy)** c
 **[3] 예시 (Ví dụ thực tế):**
 - Trang web có tính năng Đăng nhập và Thanh toán đang dùng tốt. Bạn vừa sửa tính năng Đăng nhập. Bạn phải chạy lại *Regression Test* để chắc chắn rằng sửa xong Đăng nhập thì nút Thanh toán không tự nhiên bị liệt.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Regression (Hồi quy)** = Quay trở lại (Hồi) quy trình cũ để test xem có hỏng không.
 
 ---
@@ -1800,7 +1800,7 @@ Phần **140-1 ~ 143-1. 테스트 계획, 프로세스, 케이스 및 시나리�
 - **유의사항:** 시스템/모듈별로 분리 작성, 유스케이스 간 업무 흐름(Workflow) 검증.
 - **예시:** Kịch bản mua hàng: "Đăng nhập (Test Case 1) $\rightarrow$ Tìm kiếm sản phẩm (Test Case 2) $\rightarrow$ Thêm vào giỏ (Test Case 3) $\rightarrow$ Thanh toán (Test Case 4)."
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Test Case** = Từng bước đi độc lập (Kiểm tra 1 hành động).
 > - **Test Scenario** = Chuyến hành trình (Nhiều bước nối tiếp nhau tạo thành kịch bản).
 
@@ -1820,12 +1820,12 @@ Phần **144 & 145. 테스트 오라클과 그 종류 (Test Oracle & Types)** c�
 4. **일관성 오라클 (Consistent Oracle):** 애플리케이션 변경 시 테스트 전후 결과값이 같은지 확인 (Dùng trong Regression test).
 
 **[3] 예시 (Ví dụ thực tế):**
-- Máy tính bỏ túi: 
+- Máy tính bỏ túi:
   - *True Oracle:* Tính thử mọi phép tính có thể (Không tưởng).
   - *Sampling Oracle:* Chỉ tính thử $1+1$, $2*3$, $10/2$.
   - *Consistent Oracle:* Bản update mới của app máy tính, lấy kết quả của bản cũ so sánh với bản mới.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Oracle** = Nhà tiên tri (đưa ra đáp án chuẩn). 4 loại: **T**rue - **S**ampling - **H**euristic - **C**onsistent.
 
 ---
@@ -1852,7 +1852,7 @@ Phần **146 & 146-1. 테스트 자동화 도구 (Test Automation Tools)** cần
 **[5] 예시 (Ví dụ thực tế):**
 - Sử dụng *Selenium* (Công cụ tự động hóa) để code một kịch bản: Tự động mở trình duyệt $\rightarrow$ Điền form $\rightarrow$ Bấm nút "Submit" hàng ngàn lần để test sức chịu đựng (Stress test). Việc này nếu dùng người bấm tay sẽ mất rất nhiều thời gian (손설거지 vs 식기세척기 - Rửa bát bằng tay vs Máy rửa bát).
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Tự động hóa = "Máy rửa bát". Đắt tiền mua (초기 비용) nhưng rửa 1000 cái bát rất nhanh (반복 작업 최적화).
 
 ---
@@ -1879,7 +1879,7 @@ Phần **148. 결함 (Fault / Defect)** cần được đọc như một bước
 **[1] 개념 (Khái niệm):** 소프트웨어가 개발자의 설계와 다르게 동작하거나 잘못된 결과를 발생시키는 현상 (Bug).
 *(Bất kỳ lỗi, thiếu sót nào khiến phần mềm chạy không đúng với tài liệu đặc tả yêu cầu).*
 
-**[2] 예시 (Ví dụ thực tế):** 
+**[2] 예시 (Ví dụ thực tế):**
 - Thiết kế: Nút "Hủy" phải có màu Đỏ. Thực tế: Lập trình viên làm nút "Hủy" màu Xanh $\rightarrow$ Đây cũng được tính là một 결함 (Fault) dù không gây crash app.
 
 ---
@@ -1896,19 +1896,18 @@ Phần **149 ~ 151. 성능 분석, 빅오 표기법, 순환 복잡도 (Performan
 
 **[2] 빅오 표기법 (Big-O Notation - Ký hiệu Big-O):**
 - 최악일 때(Worst Case)를 기준으로 알고리즘의 복잡도(실행 시간)를 표기.
-- **성능 순서 (Tốc độ từ nhanh $\rightarrow$ chậm):** 
+- **성능 순서 (Tốc độ từ nhanh $\rightarrow$ chậm):**
   $O(1)$ (Hằng số) $\rightarrow$ $O(log n)$ (Tìm kiếm nhị phân) $\rightarrow$ $O(n)$ (Tuyến tính) $\rightarrow$ $O(n log n)$ (Sắp xếp trộn) $\rightarrow$ $O(n^2)$ (Sắp xếp nổi bọt).
 
 **[3] 순환 복잡도 (Cyclomatic Complexity - Độ phức tạp theo chu trình McCabe):**
 - 프로그램의 논리적인 복잡도를 독립적인 경로의 수로 수치화. (Số lượng đường dẫn độc lập trong code).
-- **공식 (Công thức):** $V(G) = E - N + 2$ 
-  *(E: Edge - số mũi tên, N: Node - số nút).*
+- **공식 (Công thức):** với một đồ thị luồng liên thông, $V(G) = E - N + 2$ (E: Edge, N: Node); tổng quát là $V(G)=E-N+2P$ với P là số thành phần liên thông. Có thể dùng số vùng kín + 1.
 
 **[4] 예시 (Ví dụ thực tế):**
 - **Throughput vs Response Time:** Một quán phở có thể bán 100 bát/giờ (Throughput = 100). Nhưng khách vào gọi món phải chờ 15 phút mới bê ra (Response time = 15m).
 - **McCabe $V(G)$:** Nếu vẽ sơ đồ luồng (Flowchart) của hàm If-Else có 4 Node và 4 Edge $\rightarrow$ $V(G) = 4 - 4 + 2 = 2$ (Có 2 đường đi độc lập).
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - Công thức McCabe: **E**m **N**hớ **+ 2** ($E - N + 2$).
 
 ---
@@ -1947,7 +1946,7 @@ Phần **154 & 155. 시스템 연계: EAI와 ESB (System Integration: EAI & ESB)
 - 애플리케이션 간 **약한 결합 (Loosely Coupled)**을 유지하여 유연성을 극대화.
 *(Cũng giống EAI nhưng ESB dựa trên các dịch vụ web tiêu chuẩn, các hệ thống kết nối lỏng lẻo (ít phụ thuộc nhau), phù hợp hệ thống cực lớn).*
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **EAI** = Tích hợp hệ thống ứng dụng cục bộ.
 > - **ESB** = Tích hợp "Dịch vụ" (Service) theo SOA.
 
@@ -2118,16 +2117,77 @@ Phần **115. 분산 저장소 방식 (Distributed Repository System)** cần đ
 **[4] 예시 (Ví dụ thực tế):**
 - Bạn dùng **Git**. Khi cúp mạng internet, bạn vẫn có thể `git commit` để lưu lại phiên bản code trên máy mình. Khi có mạng lại, bạn mới `git push` để đẩy lên Server.
 
-> 💡 **Mẹo ghi nhớ (Mnemonics):** 
+> 💡 **Mẹo ghi nhớ (Mnemonics):**
 > - **Phân tán (Distributed) = Git:** Không có mạng vẫn lưu code được. Trái ngược với SVN (Tập trung) rớt mạng là khỏi lưu.
 
-Điểm chốt của **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Điểm chốt của **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **A+ Deep Dive: 알고리즘 trace와 테스트 판정**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+
+---
+
+## A+ Deep Dive: 알고리즘 trace와 테스트 판정
+
+Ở bước 64/95, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** xuất hiện như phần tiếp nối của **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **A+ Deep Dive: 알고리즘 trace와 테스트 판정** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận. Trong khối này, **테스트 케이스**, **테스트 오라클**, **회귀 테스트**, **스텁/드라이버** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Trước hết, ta đặt **1. 이분 검색 trace** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **1. 이분 검색 trace** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
+
+### 1. 이분 검색 trace
+
+Bây giờ ta đi vào nội dung của **1. 이분 검색 trace**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+정렬된 배열 `A = [2, 5, 8, 12, 16]`에서 `target = 12`를 찾는다.
+
+| 단계 | 탐색 구간 | 중간값 | 판정 |
+|---|---|---:|---|
+| 1 | 0..4 | `A[2]=8` | 12가 더 크므로 오른쪽 구간 |
+| 2 | 3..4 | `A[3]=12` | 발견 |
+
+- 반복마다 탐색 범위가 절반으로 줄어 `O(log n)`이다.
+- 배열이 정렬되지 않았다면 이 알고리즘의 전제조건이 깨진다.
+- `O(log n)`은 실행 시간의 증가율이며, 실제 초 단위 시간이 항상 빠르다는 보장은 아니다.
+
+Khi đọc **1. 이분 검색 trace**, hãy tách hai lớp: bảng giúp đối chiếu các loại hoặc tiêu chí, còn công thức cần được đọc theo biến, đơn vị và quan hệ giữa các đại lượng. Cách tách này giúp ta hiểu cơ chế trước khi ghi nhớ ký hiệu.
+
+Ta vừa chốt **1. 이분 검색 trace** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **2. 테스트 용어를 답으로 연결하기** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Với **2. 테스트 용어를 답으로 연결하기**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 2. 테스트 용어를 답으로 연결하기
+
+Phần nguồn của **2. 테스트 용어를 답으로 연결하기** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+- **테스트 케이스**: 입력·실행 조건·기대 결과의 묶음.
+- **테스트 오라클**: 결과가 옳은지 판정하는 기준 또는 메커니즘.
+- **회귀 테스트**: 수정 후 기존 기능이 깨지지 않았는지 재확인.
+- **스텁/드라이버**: 하향식 통합에서는 스텁, 상향식 통합에서는 드라이버를 사용한다.
+
+> **시험 함정:** 테스트 케이스는 입력 시나리오이고, 오라클은 정답 판정 기준이다. 둘을 같은 뜻으로 쓰지 않는다.
+
+Các bullet của **2. 테스트 용어를 답으로 연결하기** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **2. 테스트 용어를 답으로 연결하기**, đừng bắt đầu lại từ số không. **자주 혼동하는 판별 포인트** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Đoạn **자주 혼동하는 판별 포인트** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 자주 혼동하는 판별 포인트
+
+Các ý ngay dưới **자주 혼동하는 판별 포인트** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **정적 분석**은 프로그램을 실행하지 않고 규칙·복잡도·잠재 오류를 분석한다. 실행 중 메모리 상태를 관찰하는 도구는 동적 분석으로 분류한다.
+- 선택 정렬은 매 회전마다 남은 구간의 최솟값을 앞에 둔다. 정렬 trace에서는 “한 번의 비교”가 아니라 “한 회전의 교환 결과”를 기록한다.
+- **Jenkins**는 CI/CD 자동화 서버이고, Gradle은 task 기반 빌드 자동화 도구다. 둘은 대체 관계가 아니라 연동할 수 있다.
+- 함수 호출 복귀·수식 계산·괄호 검사처럼 후입선출이 필요한 문제는 **스택**, 도착 순서대로 처리하는 작업은 **큐**를 우선 떠올린다.
+
+Các bullet của **자주 혼동하는 판별 포인트** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Như vậy, **자주 혼동하는 판별 포인트** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
+
+Như vậy, **A+ Deep Dive: 알고리즘 trace와 테스트 판정** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 50. 애플리케이션 성능 측정 지표 (Performance Metrics)
 
-Ở bước 64/95, **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** xuất hiện như phần tiếp nối của **132 ~ 136: 개발 단계에 따른 애플리케이션 테스트 (V-Model Test Levels)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **A+ Deep Dive: 알고리즘 trace와 테스트 판정**, ta chuyển sang **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**. Đây là mắt xích 65/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **처리량 (Throughput)**, **응답 시간 (Response Time)**, **경과 시간 (Turn Around Time)**, **자원 사용률 (Resource Usage)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2139,15 +2199,15 @@ Phần **115. 분산 저장소 방식 (Distributed Repository System)** cần đ
 * **Example**: 식당에서 주문하고 물이 나오는 시간(응답 시간), 음식을 다 먹고 나오는 시간(경과 시간).
 * 💡 **Mẹo ghi nhớ**: Response = Phản hồi đầu tiên. Turn Around = Hoàn thành toàn bộ.
 
-Như vậy, **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **55. APM (애플리케이션 성능 관리/모니터링)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **50. 애플리케이션 성능 측정 지표 (Performance Metrics)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **55. APM (애플리케이션 성능 관리/모니터링)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 55. APM (애플리케이션 성능 관리/모니터링)
 
-Sau khi đã đặt nền bằng **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**, ta chuyển sang **55. APM (애플리케이션 성능 관리/모니터링)**. Đây là mắt xích 65/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **50. 애플리케이션 성능 측정 지표 (Performance Metrics)**, ta đã có điểm tựa để bước vào **55. APM (애플리케이션 성능 관리/모니터링)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 66/95 trước khi đi vào chi tiết.
 
-Để đọc **55. APM (애플리케이션 성능 관리/모니터링)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **리소스 방식**, **엔드투엔드(End-to-End) 방식** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+Để đọc **55. APM (애플리케이션 성능 관리/모니터링)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **리소스 방식**, **엔드투엔드(End-to-End) 방식** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 * 애플리케이션의 성능 관리를 위해 자원 현황, 트랜잭션 등을 모니터링.
 * **리소스 방식**: Nagios, Zabbix, Cacti.
@@ -2159,13 +2219,52 @@ Sau khi đã đặt nền bằng **50. 애플리케이션 성능 측정 지표 (
 
 ---
 
-Ta có thể khép mục **55. APM (애플리케이션 성능 관리/모니터링)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
+
+Để không đọc **선형 구조 (Linear - Nối tiếp nhau)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+
+### 선형 구조 (Linear - Nối tiếp nhau)
+
+Các ý ngay dưới **선형 구조 (Linear - Nối tiếp nhau)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+- **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
+  - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
+  - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
+- **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
+- **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
+- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
+
+Các bullet của **선형 구조 (Linear - Nối tiếp nhau)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Ta vừa chốt **선형 구조 (Linear - Nối tiếp nhau)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **비선형 구조 (Non-linear - Không nối tiếp)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Ở đoạn **비선형 구조 (Non-linear - Không nối tiếp)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 비선형 구조 (Non-linear - Không nối tiếp)
+
+Bây giờ ta đi vào nội dung của **비선형 구조 (Non-linear - Không nối tiếp)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
+- **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
+
+- **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin.
+  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra).
+  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
+  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
+
+---
+
+Với **비선형 구조 (Non-linear - Không nối tiếp)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Điểm chốt của **비선형 구조 (Non-linear - Không nối tiếp)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
+
+Điểm chốt của **55. APM (애플리케이션 성능 관리/모니터링)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)
 
-Từ **55. APM (애플리케이션 성능 관리/모니터링)**, ta đã có điểm tựa để bước vào **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 66/95 trước khi đi vào chi tiết.
+Ở bước 67/95, **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** xuất hiện như phần tiếp nối của **55. APM (애플리케이션 성능 관리/모니터링)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **방식**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2174,13 +2273,13 @@ Từ **55. APM (애플리케이션 성능 관리/모니터링)**, ta đã có đ
 * **VI (Vietnamese) (Tiếng Việt):** Bảo mật giao diện vùng mạng (mã hóa lưu lượng). Dùng IPSec, SSL, S-HTTP.
 * **Example**: 웹사이트 주소가 `https://`로 시작하면 SSL이 적용된 것입니다.
 
-Điểm chốt của **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 26. 인터페이스 구현 검증 도구 (Interface Verification Tools)
 
-Ở bước 67/95, **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** xuất hiện như phần tiếp nối của **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **24. 인터페이스 보안 - 네트워크 영역 (Interface Security - Network Area)**, ta chuyển sang **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**. Đây là mắt xích 68/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **xUnit**, **STAF**, **FitNesse**, **NTAF** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2192,13 +2291,13 @@ Từ **55. APM (애플리케이션 성능 관리/모니터링)**, ta đã có đ
 * **VI (Vietnamese) (Tiếng Việt):** Các công cụ kiểm thử giao diện. xUnit (kiểm thử đơn vị), STAF, FitNesse (Web), NTAF (Naver), watir (Ruby).
 * 💡 **Mẹo ghi nhớ**: xUnit là phổ biến nhất cho Unit Test. NTAF có chữ N (Naver).
 
-Như vậy, **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)
 
-Sau khi đã đặt nền bằng **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, ta chuyển sang **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**. Đây là mắt xích 68/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **26. 인터페이스 구현 검증 도구 (Interface Verification Tools)**, ta đã có điểm tựa để bước vào **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 69/95 trước khi đi vào chi tiết.
 
 Để đọc **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Bảng cho ta tiêu chí đối chiếu, còn công thức cho ta quan hệ giữa các đại lượng; hãy dùng cả hai để kiểm tra cùng một kết luận.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2215,21 +2314,21 @@ Sau khi đã đặt nền bằng **26. 인터페이스 구현 검증 도구 (Int
 
 ---
 
-Ta có thể khép mục **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)
 
-Từ **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**, ta đã có điểm tựa để bước vào **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 69/95 trước khi đi vào chi tiết.
+Ở bước 70/95, **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)** xuất hiện như phần tiếp nối của **핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-Để không đọc **네트워크 보안 기술 (Kỹ thuật bảo mật mạng)** như một mẩu ghi chú rời, trước hết hãy đặt nó vào mục đích của toàn mục. Các ý tiếp theo sẽ lần lượt cho thấy khái niệm được nhận diện và sử dụng theo tiêu chí nào.
+Trước hết, ta đặt **네트워크 보안 기술 (Kỹ thuật bảo mật mạng)** vào câu hỏi chung của mục này rồi mới đọc các ý chi tiết bên dưới. Mục đích của đoạn **네트워크 보안 기술 (Kỹ thuật bảo mật mạng)** là xác định phạm vi, vai trò và tiêu chí nhận diện trước khi so sánh nó với các phần kế tiếp.
 
 ### 네트워크 보안 기술 (Kỹ thuật bảo mật mạng)
 
-Các ý ngay dưới **네트워크 보안 기술 (Kỹ thuật bảo mật mạng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Bây giờ ta đi vào nội dung của **네트워크 보안 기술 (Kỹ thuật bảo mật mạng)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - **IPSec (IP Security):** 네트워크 계층 (Network Layer). Chống giả mạo, ẩn giấu gói tin IP.
 - **SSL (Secure Socket Layer):** TCP/IP ~ 애플리케이션 계층 사이. Chứng thực, mã hóa (thường dùng cho HTTPS).
@@ -2238,11 +2337,11 @@ Các ý ngay dưới **네트워크 보안 기술 (Kỹ thuật bảo mật mạ
 Các bullet của **네트워크 보안 기술 (Kỹ thuật bảo mật mạng)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Ta vừa chốt **네트워크 보안 기술 (Kỹ thuật bảo mật mạng)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Ở đoạn **인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+Với **인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
 
 ### 인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)
 
-Bây giờ ta đi vào nội dung của **인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+Phần nguồn của **인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
 
 - **AJAX:** Bất đồng bộ (Asynchronous), dùng JS và XML để cập nhật một phần trang web mà không cần tải lại toàn bộ trang.
 - **JSON:** Cặp "Key-Value", định dạng nhẹ, dễ đọc (Thay thế cho XML rất nhiều).
@@ -2252,11 +2351,11 @@ Bây giờ ta đi vào nội dung của **인터페이스 데이터 포맷 (Đ�
 Các bullet của **인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
 
 Sau khi đọc **인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)**, đừng bắt đầu lại từ số không. **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
-Với **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+Đoạn **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
 
 ### 인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)
 
-Phần nguồn của **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+Các ý ngay dưới **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
 
 - **xUnit:** Test từng "Đơn vị" (Unit) - jUnit, cppUnit.
 - **STAF:** Test trong "Môi trường phân tán" (Distributed environment).
@@ -2268,23 +2367,17 @@ Phần nguồn của **인터페이스 구현 검증 도구 (Công cụ kiểm c
 
 ---
 
-# [복습 / 심화 노트 - Revision & Deep Dive Notes]
-
-Phần **[복습 / 심화 노트 - Revision & Deep Dive Notes]** cần được đọc như một bước trong bài giảng: trước hết xác định mục đích, sau đó nối các ý bên dưới với điều kiện và hệ quả trước khi ghi nhớ từng dòng.
-
----
-
 Với **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
 
 Như vậy, **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)** đã hoàn thành vai trò của mình trong mục này: nó cho ta một khung giải thích để nối các chi tiết nguồn với câu hỏi thực tế. Giữ khung đó khi bước sang phần tiếp theo.
 
-Điểm chốt của **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **9. 스키마 3계층 (Three-Schema Architecture)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **9. 스키마 3계층 (Three-Schema Architecture)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 9. 스키마 3계층 (Three-Schema Architecture)
 
-Ở bước 70/95, **9. 스키마 3계층 (Three-Schema Architecture)** xuất hiện như phần tiếp nối của **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)**, ta chuyển sang **9. 스키마 3계층 (Three-Schema Architecture)**. Đây là mắt xích 71/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **9. 스키마 3계층 (Three-Schema Architecture)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **외부 스키마 (External Schema)**, **개념 스키마 (Conceptual Schema)**, **내부 스키마 (Internal Schema)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2298,13 +2391,13 @@ Như vậy, **인터페이스 구현 검증 도구 (Công cụ kiểm chứng Te
 * **Example**: DB의 전체 테이블 구조는 개념 스키마, 사용자가 보는 뷰(View)는 외부 스키마, 파일 저장 방식은 내부 스키마.
 * 💡 **Mẹo ghi nhớ**: Ngoài (Người dùng) - Giữa/Khái niệm (Tổng thể logic) - Trong (Lưu trữ vật lý).
 
-Như vậy, **9. 스키마 3계층 (Three-Schema Architecture)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **14. 파레토 법칙 (Pareto Principle)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **9. 스키마 3계층 (Three-Schema Architecture)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **14. 파레토 법칙 (Pareto Principle)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 14. 파레토 법칙 (Pareto Principle)
 
-Sau khi đã đặt nền bằng **9. 스키마 3계층 (Three-Schema Architecture)**, ta chuyển sang **14. 파레토 법칙 (Pareto Principle)**. Đây là mắt xích 71/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **9. 스키마 3계층 (Three-Schema Architecture)**, ta đã có điểm tựa để bước vào **14. 파레토 법칙 (Pareto Principle)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/95 trước khi đi vào chi tiết.
 
 Để đọc **14. 파레토 법칙 (Pareto Principle)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2313,13 +2406,13 @@ Sau khi đã đặt nền bằng **9. 스키마 3계층 (Three-Schema Architectu
 * **Example**: 시스템에 10개의 모듈이 있다면, 대부분의 버그는 핵심 모듈 2개에 몰려있습니다.
 * 💡 **Mẹo ghi nhớ**: Pareto = 80/20.
 
-Ta có thể khép mục **14. 파레토 법칙 (Pareto Principle)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **14. 파레토 법칙 (Pareto Principle)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 18. 최악의 시간 복잡도 (Worst-case Time Complexity)
 
-Từ **14. 파레토 법칙 (Pareto Principle)**, ta đã có điểm tựa để bước vào **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 72/95 trước khi đi vào chi tiết.
+Ở bước 73/95, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** xuất hiện như phần tiếp nối của **14. 파레토 법칙 (Pareto Principle)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **O(1)**, **O(n log n)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2328,13 +2421,13 @@ Từ **14. 파레토 법칙 (Pareto Principle)**, ta đã có điểm tựa đ�
 * **VI (Vietnamese) (Tiếng Việt):** Độ phức tạp thời gian. O(1) là hằng số, O(n log n) cho Heap/Merge sort.
 * **Example**: 데이터가 아무리 많아도 스택의 최상단에 값을 넣는 것은 1번의 연산만 필요하므로 O(1)입니다.
 
-Điểm chốt của **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **19. 클린 코드 작성 원칙 (Clean Code Principles)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **18. 최악의 시간 복잡도 (Worst-case Time Complexity)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **19. 클린 코드 작성 원칙 (Clean Code Principles)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 19. 클린 코드 작성 원칙 (Clean Code Principles)
 
-Ở bước 73/95, **19. 클린 코드 작성 원칙 (Clean Code Principles)** xuất hiện như phần tiếp nối của **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **18. 최악의 시간 복잡도 (Worst-case Time Complexity)**, ta chuyển sang **19. 클린 코드 작성 원칙 (Clean Code Principles)**. Đây là mắt xích 74/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **19. 클린 코드 작성 원칙 (Clean Code Principles)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **가독성 (Readability)**, **단순성 (Simplicity)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2343,13 +2436,13 @@ Từ **14. 파레토 법칙 (Pareto Principle)**, ta đã có điểm tựa đ�
 * **VI (Vietnamese) (Tiếng Việt):** Nguyên tắc viết code sạch. Dễ đọc, đơn giản.
 * **Example**: 변수 이름을 `a` 대신 `userCount`로 짓는 것이 가독성을 높이는 것입니다.
 
-Như vậy, **19. 클린 코드 작성 원칙 (Clean Code Principles)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **21. 외계인 코드 (Alien Code)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **19. 클린 코드 작성 원칙 (Clean Code Principles)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **21. 외계인 코드 (Alien Code)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 21. 외계인 코드 (Alien Code)
 
-Sau khi đã đặt nền bằng **19. 클린 코드 작성 원칙 (Clean Code Principles)**, ta chuyển sang **21. 외계인 코드 (Alien Code)**. Đây là mắt xích 74/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **19. 클린 코드 작성 원칙 (Clean Code Principles)**, ta đã có điểm tựa để bước vào **21. 외계인 코드 (Alien Code)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 75/95 trước khi đi vào chi tiết.
 
 Để đọc **21. 외계인 코드 (Alien Code)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2358,13 +2451,13 @@ Sau khi đã đặt nền bằng **19. 클린 코드 작성 원칙 (Clean Code P
 * **Example**: 20년 전에 퇴사한 직원이 주석 없이 짠 코드가 외계인 코드입니다.
 * 💡 **Mẹo ghi nhớ**: Alien = Người ngoài hành tinh, đọc không hiểu gì cả.
 
-Ta có thể khép mục **21. 외계인 코드 (Alien Code)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **22. 정적 분석 도구 (Static Analysis Tools)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **21. 외계인 코드 (Alien Code)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **22. 정적 분석 도구 (Static Analysis Tools)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 22. 정적 분석 도구 (Static Analysis Tools)
 
-Từ **21. 외계인 코드 (Alien Code)**, ta đã có điểm tựa để bước vào **22. 정적 분석 도구 (Static Analysis Tools)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 75/95 trước khi đi vào chi tiết.
+Ở bước 76/95, **22. 정적 분석 도구 (Static Analysis Tools)** xuất hiện như phần tiếp nối của **21. 외계인 코드 (Alien Code)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **22. 정적 분석 도구 (Static Analysis Tools)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **종류**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2373,13 +2466,13 @@ Từ **21. 외계인 코드 (Alien Code)**, ta đã có điểm tựa để bư�
 * **VI (Vietnamese) (Tiếng Việt):** Công cụ phân tích tĩnh, phân tích source code mà không cần chạy chương trình.
 * **Example**: 코딩 표준을 잘 지켰는지 검사하는 Checkstyle.
 
-Điểm chốt của **22. 정적 분석 도구 (Static Analysis Tools)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **23. EAI 구축 유형 (Enterprise Application Integration Types)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **22. 정적 분석 도구 (Static Analysis Tools)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **23. EAI 구축 유형 (Enterprise Application Integration Types)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 23. EAI 구축 유형 (Enterprise Application Integration Types)
 
-Ở bước 76/95, **23. EAI 구축 유형 (Enterprise Application Integration Types)** xuất hiện như phần tiếp nối của **22. 정적 분석 도구 (Static Analysis Tools)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **22. 정적 분석 도구 (Static Analysis Tools)**, ta chuyển sang **23. EAI 구축 유형 (Enterprise Application Integration Types)**. Đây là mắt xích 77/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **23. EAI 구축 유형 (Enterprise Application Integration Types)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **Point-to-Point**, **Hub & Spoke**, **Message Bus (ESB 방식)**, **Hybrid** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2395,13 +2488,13 @@ Từ **21. 외계인 코드 (Alien Code)**, ta đã có điểm tựa để bư�
 * **Example**: 여러 부서의 시스템을 가운데 중앙 서버 하나(Hub)를 통해 연결하는 방식이 Hub & Spoke입니다.
 * 💡 **Mẹo ghi nhớ**: Hub là cái trục xe đạp (trung tâm), Spoke là nan hoa (tỏa ra xung quanh).
 
-Như vậy, **23. EAI 구축 유형 (Enterprise Application Integration Types)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **25. 트립와이어 (tripwire)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **23. EAI 구축 유형 (Enterprise Application Integration Types)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **25. 트립와이어 (tripwire)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 25. 트립와이어 (tripwire)
 
-Sau khi đã đặt nền bằng **23. EAI 구축 유형 (Enterprise Application Integration Types)**, ta chuyển sang **25. 트립와이어 (tripwire)**. Đây là mắt xích 77/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **23. EAI 구축 유형 (Enterprise Application Integration Types)**, ta đã có điểm tựa để bước vào **25. 트립와이어 (tripwire)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 78/95 trước khi đi vào chi tiết.
 
 Để đọc **25. 트립와이어 (tripwire)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2409,13 +2502,13 @@ Sau khi đã đặt nền bằng **23. EAI 구축 유형 (Enterprise Application
 * **VI (Vietnamese) (Tiếng Việt):** Công cụ kiểm tra tính toàn vẹn dữ liệu, phát hiện backdoor hoặc thay đổi file cấu hình.
 * 💡 **Mẹo ghi nhớ**: Tripwire = Dây bẫy, chạm vào là báo động.
 
-Ta có thể khép mục **25. 트립와이어 (tripwire)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **27. JSON 및 AJAX (JSON & AJAX)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **25. 트립와이어 (tripwire)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **27. JSON 및 AJAX (JSON & AJAX)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 27. JSON 및 AJAX (JSON & AJAX)
 
-Từ **25. 트립와이어 (tripwire)**, ta đã có điểm tựa để bước vào **27. JSON 및 AJAX (JSON & AJAX)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 78/95 trước khi đi vào chi tiết.
+Ở bước 79/95, **27. JSON 및 AJAX (JSON & AJAX)** xuất hiện như phần tiếp nối của **25. 트립와이어 (tripwire)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **27. JSON 및 AJAX (JSON & AJAX)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **JSON (JavaScript Object Notation)**, **AJAX (Asynchronous JavaScript and XML)**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2426,13 +2519,13 @@ Từ **25. 트립와이어 (tripwire)**, ta đã có điểm tựa để bước
   * AJAX: Công nghệ giao tiếp bất đồng bộ, tải dữ liệu mà không cần tải lại toàn bộ trang.
 * **Example**: 좋아요 버튼을 눌렀을 때 페이지 이동 없이 하트가 채워지는 것이 AJAX 기술입니다.
 
-Điểm chốt của **27. JSON 및 AJAX (JSON & AJAX)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **27. JSON 및 AJAX (JSON & AJAX)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)
 
-Ở bước 79/95, **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** xuất hiện như phần tiếp nối của **27. JSON 및 AJAX (JSON & AJAX)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **27. JSON 및 AJAX (JSON & AJAX)**, ta chuyển sang **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**. Đây là mắt xích 80/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **연속 리스트 (Contiguous List - 예: 배열)**, **연결 리스트 (Linked List)**, **오버플로/언더플로 (Overflow/Underflow)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2450,13 +2543,13 @@ Từ **25. 트립와이어 (tripwire)**, ta đã có điểm tựa để bước
   * Linked List (Danh sách liên kết): Dữ liệu lưu rải rác, nối bằng pointer. Chèn/Xóa nhanh, nhưng truy cập chậm.
 * 💡 **Mẹo ghi nhớ**: Array = Nhà chung cư sát vách. Linked List = Các nhà rải rác nhưng có bản đồ chỉ đường đến nhà tiếp theo.
 
-Như vậy, **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **33. DBMS (데이터베이스 관리 시스템)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **33. DBMS (데이터베이스 관리 시스템)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 33. DBMS (데이터베이스 관리 시스템)
 
-Sau khi đã đặt nền bằng **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**, ta chuyển sang **33. DBMS (데이터베이스 관리 시스템)**. Đây là mắt xích 80/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **28. 선형 리스트 심화: 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)**, ta đã có điểm tựa để bước vào **33. DBMS (데이터베이스 관리 시스템)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 81/95 trước khi đi vào chi tiết.
 
 Để đọc **33. DBMS (데이터베이스 관리 시스템)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **필수 기능 3가지**, **정의 기능 (Definition)**, **조작 기능 (Manipulation)**, **제어 기능 (Control)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2473,13 +2566,13 @@ Sau khi đã đặt nền bằng **28. 선형 리스트 심화: 연속 리스트
 * **Example**: Oracle, MySQL 등이 대표적인 DBMS입니다.
 * 💡 **Mẹo ghi nhớ**: Đ-T-Đ (Định nghĩa, Thao tác, Điều khiển) = D-M-C (Define, Manipulate, Control).
 
-Ta có thể khép mục **33. DBMS (데이터베이스 관리 시스템)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **38. 릴리즈 노트 (Release Note)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **33. DBMS (데이터베이스 관리 시스템)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **38. 릴리즈 노트 (Release Note)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 38. 릴리즈 노트 (Release Note)
 
-Từ **33. DBMS (데이터베이스 관리 시스템)**, ta đã có điểm tựa để bước vào **38. 릴리즈 노트 (Release Note)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 81/95 trước khi đi vào chi tiết.
+Ở bước 82/95, **38. 릴리즈 노트 (Release Note)** xuất hiện như phần tiếp nối của **33. DBMS (데이터베이스 관리 시스템)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **38. 릴리즈 노트 (Release Note)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **항목**, **Example** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2490,13 +2583,13 @@ Từ **33. DBMS (데이터베이스 관리 시스템)**, ta đã có điểm t�
 * **Example**: 앱스토어에서 앱 업데이트 시 적혀있는 "새로운 기능 및 버그 수정" 목록이 릴리즈 노트입니다.
 * 💡 **Mẹo ghi nhớ**: Release Note = Nhật ký cập nhật phần mềm.
 
-Điểm chốt của **38. 릴리즈 노트 (Release Note)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **51. 빅오 표기법 (Big-O Notation) 심화**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **38. 릴리즈 노트 (Release Note)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **51. 빅오 표기법 (Big-O Notation) 심화**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 51. 빅오 표기법 (Big-O Notation) 심화
 
-Ở bước 82/95, **51. 빅오 표기법 (Big-O Notation) 심화** xuất hiện như phần tiếp nối của **38. 릴리즈 노트 (Release Note)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **38. 릴리즈 노트 (Release Note)**, ta chuyển sang **51. 빅오 표기법 (Big-O Notation) 심화**. Đây là mắt xích 83/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **51. 빅오 표기법 (Big-O Notation) 심화** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **O(1)**, **O(log_2 n)**, **O(n)**, **O(n log_2 n)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2508,13 +2601,13 @@ Từ **33. DBMS (데이터베이스 관리 시스템)**, ta đã có điểm t�
 * **O(2^n)**: 피보나치 수열.
 * **VI (Vietnamese) (Tiếng Việt):** Độ phức tạp thuật toán Big-O. O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(2^n).
 
-Như vậy, **51. 빅오 표기법 (Big-O Notation) 심화** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
+Ta có thể khép mục **51. 빅오 표기법 (Big-O Notation) 심화** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)
 
-Sau khi đã đặt nền bằng **51. 빅오 표기법 (Big-O Notation) 심화**, ta chuyển sang **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**. Đây là mắt xích 83/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+Từ **51. 빅오 표기법 (Big-O Notation) 심화**, ta đã có điểm tựa để bước vào **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 84/95 trước khi đi vào chi tiết.
 
 Để đọc **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu. Trong khối này, **소스 코드 최적화**, **순환 복잡도 (McCabe's Cyclomatic Complexity)**, **소스 코드 품질 분석 도구 심화**, **정적 분석 도구** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2524,18 +2617,18 @@ Sau khi đã đặt nền bằng **51. 빅오 표기법 (Big-O Notation) 심화*
 * **소스 코드 품질 분석 도구 심화**:
   * **정적 분석 도구**: pmd, cppcheck, SonarQube, checkstyle, ccm.
   * **동적 분석 도구**: Avalanche, Valgrind (메모리 누수, 스레드 결함 발견).
-* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe). 
+* **VI (Vietnamese) (Tiếng Việt):** Tối ưu mã nguồn & Độ phức tạp Cyclomatic (McCabe).
   * Clean code > Bad code (Spaghetti/Alien).
   * V(G) = Cạnh(E) - Đỉnh(N) + 2. Số V(G) chính là số lượng test case cơ bản cần thiết.
   * Công cụ tĩnh (không chạy code): SonarQube. Động (chạy code tìm rò rỉ bộ nhớ): Valgrind.
 
-Ta có thể khép mục **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **53. EAI와 ESB 심화 (EAI vs ESB)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Điểm chốt của **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **53. EAI와 ESB 심화 (EAI vs ESB)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
 ---
 
 ## 53. EAI와 ESB 심화 (EAI vs ESB)
 
-Từ **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**, ta đã có điểm tựa để bước vào **53. EAI와 ESB 심화 (EAI vs ESB)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 84/95 trước khi đi vào chi tiết.
+Ở bước 85/95, **53. EAI와 ESB 심화 (EAI vs ESB)** xuất hiện như phần tiếp nối của **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization & Cyclomatic Complexity)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
 Để đọc **53. EAI와 ESB 심화 (EAI vs ESB)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **EAI**, **ESB (Enterprise Service Bus)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2543,13 +2636,13 @@ Từ **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization
 * **ESB (Enterprise Service Bus)**: 애플리케이션 간 표준 기반 인터페이스 제공. 애플리케이션 통합보다는 **서비스 중심 통합** 지향. 결합도(Coupling)를 **약하게(Loosely)** 유지.
 * **VI (Vietnamese) (Tiếng Việt):** So sánh EAI và ESB. EAI tập trung tích hợp ứng dụng, ESB tập trung tích hợp dịch vụ (Service-oriented) với độ kết dính lỏng lẻo (Loosely coupled) dùng tiêu chuẩn chung.
 
-Điểm chốt của **53. EAI와 ESB 심화 (EAI vs ESB)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
+Như vậy, **53. EAI와 ESB 심화 (EAI vs ESB)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
 
 ## 54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)
 
-Ở bước 85/95, **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)** xuất hiện như phần tiếp nối của **53. EAI와 ESB 심화 (EAI vs ESB)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+Sau khi đã đặt nền bằng **53. EAI와 ESB 심화 (EAI vs ESB)**, ta chuyển sang **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**. Đây là mắt xích 86/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
 
 Để đọc **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **XML (eXtensible Markup Language)**, **인터페이스 보안 - 네트워크 영역 (IPSec)**, **데이터 무결성 검사 도구**, **종류** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2559,62 +2652,13 @@ Từ **52. 소스 코드 최적화와 순환 복잡도 (Source Code Optimization
   * **종류**: Tripwire, AIDE, Samhain, Claymore, Slipwire, Fcheck.
 * **VI (Vietnamese) (Tiếng Việt):** XML khắc phục nhược điểm của HTML/SGML. Công cụ kiểm tra tính toàn vẹn dữ liệu (phát hiện backdoor/thay đổi file) dùng hàm Hash: Tripwire, AIDE.
 
-Như vậy, **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
-
----
-
-## 023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)
-
-Sau khi đã đặt nền bằng **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**, ta chuyển sang **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**. Đây là mắt xích 86/95 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
-
-Để đọc **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
-
-자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
-
-Ta bắt đầu phần nội dung bằng **선형 구조 (Linear - Nối tiếp nhau)**. Hãy xác định **선형 구조 (Linear - Nối tiếp nhau)** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
-
-### 선형 구조 (Linear - Nối tiếp nhau)
-
-Phần nguồn của **선형 구조 (Linear - Nối tiếp nhau)** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
-
-- **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
-  - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
-  - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
-- **스택 (Stack):** LIFO (Last-In-First-Out). Vào/Ra ở một đầu. Dùng cho: Gọi hàm (Subroutine), Lưu địa chỉ trở về, Đệ quy (Recursion), Tính biểu thức toán học, DFS (Duyệt sâu).
-- **큐 (Queue):** FIFO (First-In-First-Out). Vào một đầu, ra một đầu. Dùng cho: Lập lịch hệ điều hành (Job Scheduling), Hàng đợi in.
-- **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
-
-Các bullet của **선형 구조 (Linear - Nối tiếp nhau)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
-
-Ta vừa chốt **선형 구조 (Linear - Nối tiếp nhau)** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **비선형 구조 (Non-linear - Không nối tiếp)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
-Đoạn **비선형 구조 (Non-linear - Không nối tiếp)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
-
-### 비선형 구조 (Non-linear - Không nối tiếp)
-
-Các ý ngay dưới **비선형 구조 (Non-linear - Không nối tiếp)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
-
-- **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
-- **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
-
-- **Vietnamese Explanation:** Cấu trúc dữ liệu là cách sắp xếp thông tin. 
-  - Linear List như dãy ghế đá (tìm số ghế thì nhanh, nhưng muốn chen vào giữa phải bắt mọi người xích ra). 
-  - Linked List như trò chơi nắm tay nhau (muốn chen vào giữa chỉ cần thả tay và nắm người mới, rất dễ, nhưng tìm người thứ 10 thì phải đếm từ đầu).
-  - Stack như hộp bóng bàn (LIFO - vứt vào sau thì lấy ra trước). Queue như xếp hàng mua vé (FIFO - ai đến trước mua trước).
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Stack = LIFO (Gọi Hàm, Đệ quy). Queue = FIFO (Lập lịch). Liên kết (Linked) = Nhanh chèn/xóa, Chậm tìm kiếm.
-
----
-
-Với **비선형 구조 (Non-linear - Không nối tiếp)**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
-
-Điểm chốt của **비선형 구조 (Non-linear - Không nối tiếp)** không nằm ở việc thuộc lòng từng bullet, mà ở việc biết khi nào tiêu chí của nó được áp dụng và khi nào cần đối chiếu với khái niệm khác. Đây là phần bàn giao để đọc tiếp.
-
-Ta có thể khép mục **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
+Ta có thể khép mục **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
 
 ## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
 
-Từ **023 & 024: 자료구조 (Data Structures / Cấu trúc dữ liệu)**, ta đã có điểm tựa để bước vào **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 87/95 trước khi đi vào chi tiết.
+Từ **54. XML 및 데이터 무결성 검사 도구 (XML & Integrity Check Tools)**, ta đã có điểm tựa để bước vào **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 87/95 trước khi đi vào chi tiết.
 
 Để đọc **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
@@ -2639,7 +2683,7 @@ Ta vừa chốt **알고리즘 설계 기법 (Kỹ thuật thiết kế thuật 
 Bây giờ ta đi vào nội dung của **시간 복잡도 (Time Complexity - Độ phức tạp thời gian)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
 
 - Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
-- Biểu diễn: Big-O (최악 - Tệ nhất), Theta (평균 - Trung bình), Omega (최상 - Tốt nhất).
+- Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với lần lượt 최악/평균/최상. Khi đề bài nói rõ worst/best case thì mới gắn với trường hợp đó.
 - **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
 - O(1) nghĩa là: Dữ liệu lớn đến đâu thời gian vẫn không đổi.
 
@@ -2676,8 +2720,6 @@ Với **시간 복잡도 (Time Complexity - Độ phức tạp thời gian)**, h
 
 ---
 
-# Chapter 3. 제품 소프트웨어 패키징 (Product Software Packaging)
-
 Như vậy, **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
 
 ---
@@ -2704,8 +2746,6 @@ Sau khi đã đặt nền bằng **핵심 034: 재사용 기법 (Reuse Technique
 
 ---
 
-# Chapter 4. 애플리케이션 테스트 관리 (Application Test Management)
-
 Ta có thể khép mục **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **핵심 클린 코드 작성 원칙 (Clean Code Principles)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.
 
 ---
@@ -2728,12 +2768,10 @@ Từ **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality
 | **중복성 최소화 (Minimizing Duplication)** | 코드의 중복을 최소화, 공통된 코드 사용. (DRY - Don't Repeat Yourself: Không copy-paste code.) |
 | **추상화 (Abstraction)** | 상위 수준에선 간략하게, 상세 내용은 하위에서 구현. (Trừu tượng hóa: Cái chung ở trên, cái chi tiết ở dưới.) |
 
-- **Vietnamese Explanation:** Clean Code là "đạo đức" của lập trình viên. Đừng viết Alien Code (code không ai hiểu nổi trừ người viết ban đầu). 
+- **Vietnamese Explanation:** Clean Code là "đạo đức" của lập trình viên. Đừng viết Alien Code (code không ai hiểu nổi trừ người viết ban đầu).
 - 💡 **Mẹo ghi nhớ (Mnemonics):** 5 nguyên tắc: Đọc - Đơn - Độc - Lặp - Trừu. (Đọc Đơn Độc Lặp Trừu (Đọc hiểu - Đơn giản - Độc lập - Không lặp - Trừu tượng)).
 
 ---
-
-# Chapter 5. 인터페이스 구현 (Interface Implementation)
 
 Điểm chốt của **핵심 클린 코드 작성 원칙 (Clean Code Principles)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.
 
@@ -2746,7 +2784,7 @@ Từ **핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality
 Để đọc **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
 - 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리. (Phần mềm tất-cả-trong-một).
-- **4대 기능 (4 Chức năng chính):** 
+- **4대 기능 (4 Chức năng chính):**
   - 코딩 (Coding): Gõ code.
   - 컴파일 (Compile): Dịch ra mã máy.
   - 디버깅 (Debugging): Tìm và sửa lỗi (Bug).
@@ -2823,7 +2861,7 @@ Các ý ngay dưới **설치 매뉴얼 (Installation Manual - Hướng dẫn c�
 - **순서대로 (Theo trình tự):** Từ lúc bấm Next đến lúc Finish.
 - **예외 상황 / 오류 메시지:** Phải có cách xử lý khi cài đặt bị lỗi.
 - **Uninstall (Xóa cài đặt):** Bắt buộc phải hướng dẫn cách gỡ cài đặt sạch sẽ.
-- **서문 (Lời nói đầu) bao gồm:** 
+- **서문 (Lời nói đầu) bao gồm:**
   - 문서 이력 (Lịch sử chỉnh sửa v1.0, v1.1).
   - 주석 (Chú ý/Tham khảo).
   - 설치 환경 체크 (Kiểm tra OS, tắt app khác trước khi cài).
@@ -2864,9 +2902,9 @@ Các ý về **사용자 매뉴얼 (User Manual - Hướng dẫn sử dụng)** 
 | **분산 저장소 (Distributed Repo)** | Mỗi máy cá nhân đều là 1 cái Kho thu nhỏ (Local Repo). Copy (Clone) từ Server (Remote Repo) về. Server chết vẫn làm việc bình thường ở máy cá nhân, lúc nào Server sống lại đẩy lên sau (Push). Rất an toàn. | **Git**, Mercurial, Bitkeeper |
 
 - **Vietnamese Explanation:** SVN là kiểu "Đi mượn sách thư viện", mất thư viện là khỏi đọc. Git là kiểu "Photo cuốn sách về nhà", thư viện cháy mình vẫn còn sách đọc, sửa sách thoải mái.
-- 💡 **Mẹo ghi nhớ (Mnemonics):** 
-  - 공유 폴더 (Share folder) = RCS, PVCS. 
-  - 클라이언트/서버 = CVS, SVN (Server tập trung). 
+- 💡 **Mẹo ghi nhớ (Mnemonics):**
+  - 공유 폴더 (Share folder) = RCS, PVCS.
+  - 클라이언트/서버 = CVS, SVN (Server tập trung).
   - 분산 (Phân tán) = Git.
 
 Như vậy, **113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **120-1: 소프트웨어의 분류 (Software Classification)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.
