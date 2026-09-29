@@ -1,849 +1,480 @@
-# Practical-life decision route: tài chính → sức khỏe → giao tiếp → nghề nghiệp
+# Tuyến ra quyết định đời sống: tài chính → sức khỏe → giao tiếp → nghề nghiệp
 
-> **Mạch đọc:** Đây là tuyến tích hợp cho các quyết định đời sống có nhiều loại constraint cùng lúc. Nó không tạo domain “life advice” mới và không thay thế owner hiện có. Personal finance mechanics nằm ở Investing; healthcare literacy nằm ở Biology Connections; communication, negotiation và career psychology nằm ở Applied Psychology; xác suất và evidence nằm ở Mathematics/Research Methods. Chapter này chỉ nối chúng thành một **quy trình ra quyết định (decision process / 의사결정 과정)** có thể tái sử dụng.
+> **Mạch đọc:** Chapter này là tuyến tích hợp cho các quyết định đời sống có nhiều ràng buộc cùng lúc. Nó không tạo một domain “life advice” mới và không thay thế owner hiện có. Cơ chế tài chính cá nhân nằm ở [Personal Finance](../../investing/01_foundations/07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md); hiểu biết y tế nằm ở [Healthcare Literacy](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md); giao tiếp, đàm phán và tâm lý nghề nghiệp nằm trong Applied Psychology; xác suất và bằng chứng nằm ở Mathematics/Research Methods. Chapter này chỉ ghép các owner đó thành một **quy trình ra quyết định (decision process / 의사결정 과정)** có thể tái sử dụng.
 
-Các quyết định đời sống khó thường không thuộc một môn duy nhất. Một job offer có thể đồng thời thay income, visa, commute, health, learning opportunity và relationship. Một health event có thể thay cash flow, career capacity và family responsibility. Một quyết định mua nhà có thể thay liquidity, mobility và bargaining power trong career.
+Các quyết định đời sống khó hiếm khi thuộc một môn duy nhất. Một lời mời việc làm có thể đồng thời thay đổi thu nhập, visa, thời gian đi lại, sức khỏe, cơ hội học, quan hệ gia đình và khả năng tiết kiệm. Một biến cố sức khỏe có thể làm thay đổi dòng tiền, năng lực nghề nghiệp và trách nhiệm chăm sóc. Một quyết định mua nhà có thể làm thay đổi thanh khoản, khả năng di chuyển và sức mạnh đàm phán trong nghề nghiệp.
 
-Vì vậy mental model cần đi qua nhiều balance sheet:
+Vì vậy cần nhìn nhiều “bảng cân đối” cùng lúc:
 
 ```text
-financial resources
-+ time / attention
-+ health capacity
-+ skills / career capital
-+ social support
-+ legal / location constraints
-= practical option set
+nguồn lực tài chính
++ thời gian / sự chú ý
++ năng lực sức khỏe
++ kỹ năng / vốn nghề nghiệp
++ hỗ trợ xã hội
++ ràng buộc pháp lý / địa lý
+= tập hợp lựa chọn thực tế
 ```
 
-Mục tiêu không phải tối ưu một metric duy nhất. Mục tiêu là tránh một local optimum phá hỏng toàn hệ thống.
+Mục tiêu không phải tối đa một chỉ số. Mục tiêu là tránh một **tối ưu cục bộ (local optimum / 국소 최적)** làm hỏng toàn hệ thống.
 
-## 1. Bắt đầu từ decision object, không bắt đầu từ cảm xúc “nên hay không”
+## 1. Bắt đầu từ đối tượng quyết định, không bắt đầu từ “nên hay không”
 
-Một câu như “có nên đổi việc không?” quá rộng để reason. Hãy biến nó thành decision object:
+Một câu như “có nên đổi việc không?” quá rộng để suy luận tốt. Trước hết phải biến nó thành một **đối tượng quyết định (decision object / 의사결정 대상)**:
 
 ```text
-current state
-available options
-decision deadline
-reversible hay irreversible?
-what happens by default if no action?
-which constraints are hard constraints?
-which outcomes matter?
-what uncertainty remains?
+trạng thái hiện tại là gì?
+có những lựa chọn nào?
+deadline quyết định?
+quyết định có thể đảo ngược không?
+nếu không làm gì thì mặc định chuyện gì xảy ra?
+ràng buộc cứng nào tồn tại?
+kết quả nào thật sự quan trọng?
+bất định nào còn lại?
 ```
 
 Ví dụ:
 
 ```text
-Option A: ở lại role hiện tại thêm 12 tháng
-Option B: nhận offer mới
-Option C: tiếp tục tìm offer khác trong 3 tháng
+A — ở lại vị trí hiện tại 12 tháng
+B — nhận offer mới ngay
+C — tiếp tục tìm thêm 3 tháng
 ```
 
-Khi option set rõ, discussion chuyển từ “cảm giác thích/không thích” sang trade-off có cấu trúc.
+Khi tập lựa chọn rõ, thảo luận chuyển từ cảm xúc mơ hồ sang trade-off có cấu trúc.
 
-## 2. Tách fact, estimate, assumption và preference
+> **Chuyển mạch:** Sau khi biết mình đang chọn giữa những gì, bước tiếp theo là tách loại thông tin. Nếu fact, dự báo và sở thích bị trộn, người ra quyết định rất khó biết mình đang bất đồng ở bằng chứng hay ở giá trị.
 
-Nhiều conflict trong decision đến từ việc bốn loại statement bị trộn với nhau.
+## 2. Tách fact, ước lượng, giả định và sở thích
+
+Một quyết định thường chứa bốn loại phát biểu:
 
 ```text
-Fact: offer base salary là 80.
-Estimate: expected bonus khoảng 10–15.
-Assumption: công ty mới sẽ tăng headcount.
-Preference: tôi coi remote flexibility quan trọng hơn title.
+Fact — có thể kiểm chứng trực tiếp
+Estimate — ước lượng có bất định
+Assumption — giả định về cơ chế hoặc tương lai
+Preference — điều người quyết định coi trọng
 ```
 
-Fact có thể verify. Estimate cần uncertainty. Assumption cần test hoặc scenario. Preference không phải “đúng/sai” theo empirical evidence nhưng cần được nói rõ.
-
-Khi một quyết định thất bại, decomposition này giúp biết mình sai ở evidence, forecast hay value trade-off.
-
-## 3. Hard constraint phải được xử lý trước weighted score
-
-Một weighted matrix có thể hữu ích nhưng dễ che constraint không thể trade.
-
-Ví dụ một job có score tổng cao nhưng không đáp ứng visa requirement hoặc medical accommodation bắt buộc thì score tổng không còn ý nghĩa.
-
-Process tốt:
+Ví dụ:
 
 ```text
-Step 1: eliminate options vi phạm hard constraint
-Step 2: compare remaining options theo trade-off mềm
+Fact: lương cơ bản trong offer là X.
+Estimate: bonus có thể khoảng Y–Z.
+Assumption: công ty sẽ tiếp tục tăng headcount.
+Preference: độ linh hoạt quan trọng hơn title.
 ```
 
-Hard constraint có thể là:
+Fact cần verification. Estimate cần range hoặc distribution. Assumption cần test bằng evidence hoặc scenario. Preference không phải đúng/sai theo empirical evidence nhưng phải được nói rõ.
+
+Khi quyết định cho kết quả xấu, decomposition này giúp phân biệt: dữ kiện ban đầu sai, forecast sai hay value trade-off đã thay đổi.
+
+## 3. Ràng buộc cứng phải xử lý trước điểm số có trọng số
+
+Một ma trận chấm điểm có trọng số có thể hữu ích, nhưng nó dễ che mất **ràng buộc cứng (hard constraint / 절대 제약조건)**.
+
+Ví dụ một công việc có tổng điểm rất cao nhưng không đáp ứng điều kiện visa bắt buộc hoặc không phù hợp với giới hạn sức khỏe thì tổng điểm không còn ý nghĩa.
+
+Quy trình tốt hơn:
 
 ```text
-minimum cash runway
-legal/visa requirement
-caregiving responsibility
-health limitation
-non-negotiable location
-minimum income for debt obligation
+Bước 1 — loại lựa chọn vi phạm hard constraint
+Bước 2 — so sánh các lựa chọn còn lại theo trade-off mềm
 ```
 
-## 4. Opportunity cost luôn gắn với option bị bỏ
+Ràng buộc cứng có thể là:
 
-**Chi phí cơ hội (opportunity cost / 기회비용)** không phải một con số abstract. Nó là value của alternative tốt nhất bị bỏ khi chọn option.
+- mức thu nhập tối thiểu để trả nghĩa vụ;
+- yêu cầu visa/pháp lý;
+- trách nhiệm chăm sóc;
+- giới hạn sức khỏe;
+- địa điểm không thể thay đổi;
+- mức thanh khoản tối thiểu;
+- deadline thực sự không thể lùi.
 
-Nếu học full-time một năm, cost không chỉ là tuition mà có thể gồm:
+Điểm quan trọng là một constraint cứng không nên bị “bù” bằng nhiều ưu điểm nhỏ ở nơi khác.
+
+## 4. Chi phí cơ hội luôn gắn với lựa chọn bị bỏ
+
+**Chi phí cơ hội (opportunity cost / 기회비용)** là giá trị của lựa chọn tốt nhất bị bỏ khi chọn một phương án khác.
+
+Nếu học toàn thời gian một năm, chi phí không chỉ là học phí mà còn có thể gồm:
 
 ```text
-foregone income
-career experience
-lost employer benefits
-reduced savings
-network opportunities elsewhere
+thu nhập bị mất
+kinh nghiệm nghề nghiệp bị bỏ
+phúc lợi từ công ty
+khả năng tiết kiệm
+cơ hội network khác
 ```
 
-Ngược lại benefit không chỉ là credential; nó có thể gồm skill, signaling, network và access tới role mới.
+Ngược lại, lợi ích không chỉ là bằng cấp; nó có thể gồm kỹ năng, tín hiệu năng lực, network và access tới một nhóm công việc mới.
 
-## 5. Reversible decision cần threshold evidence thấp hơn irreversible decision
+Chi phí cơ hội làm rõ một nguyên tắc: **mọi lựa chọn đều tiêu tốn một phần khả năng chọn lựa khác**.
 
-Một experiment có thể đảo ngược với chi phí nhỏ không cần certainty cao bằng quyết định khó đảo ngược.
+## 5. Quyết định có thể đảo ngược cần ít bằng chứng hơn quyết định khó đảo ngược
+
+Không phải mọi quyết định đều cần cùng mức chắc chắn.
 
 ```text
-low-cost reversible → act, observe, update
-high-cost irreversible → gather more evidence, stress-test, preserve margin
+chi phí thử thấp + dễ đảo ngược
+→ hành động nhỏ
+→ quan sát
+→ cập nhật
+
+chi phí cao + khó đảo ngược
+→ thu thêm bằng chứng
+→ stress-test
+→ giữ biên an toàn
 ```
 
-Đây là lý do trial project, informational interview, short course hoặc internal rotation thường có value trong career uncertainty: chúng mua information mà không khóa toàn bộ option set.
+Ví dụ thử một dự án ngắn, informational interview, khóa học nhỏ hoặc internal rotation có thể mua thông tin về nghề nghiệp với chi phí thấp hơn nghỉ việc ngay.
 
-## 6. Option value là tài sản thật dù khó nhìn trên bảng lương
+Đây là cách biến bất định thành quá trình học thay vì cố ép ra certainty trước khi hành động.
 
-**Giá trị quyền chọn (option value / 옵션 가치)** là giá trị của việc giữ khả năng chọn sau khi có thêm information.
+## 6. Giá trị quyền chọn là một tài sản dù không nằm trên bảng lương
 
-Ví dụ một role trả thấp hơn một chút nhưng tạo skill, network và visa flexibility rộng hơn có thể tăng future option set. Điều đó không tự làm role đó “tốt hơn”; nó chỉ là một dimension cần đo.
+**Giá trị quyền chọn (option value / 옵션 가치)** là giá trị của việc giữ khả năng chọn trong tương lai sau khi có thêm thông tin.
 
-Tương tự, emergency fund trong personal finance tạo option value vì cho phép từ chối job xấu, chịu thời gian tìm việc dài hơn hoặc xử lý health shock mà không bán asset bắt buộc.
+Một vị trí có lương thấp hơn một chút nhưng mở rộng skill, network, visa flexibility hoặc access tới ngành mới có thể tạo option value lớn hơn. Điều đó không tự làm vị trí đó “tốt hơn”; nó chỉ là một dimension cần đưa vào reasoning.
 
-Đọc [Tài chính cá nhân trước khi đầu tư](../../investing/01_foundations/07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md).
+Tương tự, quỹ dự phòng tài chính tạo option value vì nó cho phép từ chối offer tệ, chịu thời gian tìm việc dài hơn hoặc xử lý health shock mà không bị ép bán tài sản.
 
-## 7. Financial runway thay đổi bargaining power
+## 7. Thanh khoản thay đổi sức mạnh đàm phán
 
-Một người chỉ đủ tiền cho hai tuần có BATNA khác người có sáu tháng liquidity.
+**Đường băng tài chính (financial runway / 재무 런웨이)** là số thời gian một người có thể duy trì các nghĩa vụ cốt lõi nếu thu nhập giảm mạnh.
 
-Financial runway tác động negotiation gián tiếp:
+Runway thấp tạo urgency cao. Urgency cao làm **phương án thay thế tốt nhất nếu đàm phán thất bại (best alternative to a negotiated agreement, BATNA / 협상 결렬 시 최선 대안)** yếu đi.
+
+Chuỗi thường là:
 
 ```text
 runway thấp
-→ urgency cao
-→ option set hẹp
-→ willingness to walk away thấp
+→ áp lực thời gian cao
+→ ít khả năng từ chối
+→ BATNA yếu
+→ bargaining power thấp
 ```
 
-Điều này không có nghĩa phải trì hoãn mọi decision cho tới khi có nhiều tiền. Nó giải thích vì sao cash buffer là cả risk management lẫn bargaining resource.
+Runway không đảm bảo đàm phán thành công, nhưng nó thay đổi constraint của người đàm phán. Vì vậy personal finance và negotiation không phải hai chủ đề tách rời.
 
-## 8. Salary không phải total economic value
+## 8. BATNA quan trọng hơn kỹ thuật nói chuyện
 
-Khi so job, cần tách:
+Trong đàm phán, BATNA là điều sẽ làm nếu không đạt thỏa thuận.
+
+Một người có câu nói hay nhưng không có alternative thường yếu hơn người nói đơn giản nhưng có nhiều option thật.
+
+Để cải thiện BATNA có thể:
+
+- tìm thêm offer;
+- tăng savings/runway;
+- phát triển skill có tính di động;
+- giữ quan hệ nghề nghiệp;
+- giảm nghĩa vụ cố định;
+- biết rõ legal right và deadline;
+- tạo lựa chọn “không quyết định ngay”.
+
+Do đó đàm phán tốt bắt đầu trước cuộc nói chuyện rất lâu.
+
+## 9. Sức khỏe là constraint năng lực, không chỉ là một chi phí
+
+Một health event không chỉ tạo medical bill. Nó có thể làm giảm năng lực làm việc, học, đi lại, chăm sóc người khác và xử lý stress.
+
+Vì vậy sức khỏe nên được nhìn như **năng lực chức năng (functional capacity / 기능적 역량)** trong hệ thống quyết định:
 
 ```text
-base salary
-variable compensation
-pension / retirement contribution
-insurance / health benefits
-paid leave
-commute cost
-relocation cost
-training budget
-job security
-working hours
-currency / tax context
+health state
+→ năng lượng / đau / tập trung
+→ khả năng làm việc
+→ thu nhập
+→ thời gian hồi phục
+→ trách nhiệm gia đình
+→ tập lựa chọn nghề nghiệp
 ```
 
-Một package cao nominal nhưng có commute dài, housing cost cao và variable pay lớn có thể tạo after-cost economics khác hoàn toàn.
+Một quyết định nghề nghiệp có vẻ tối ưu về lương nhưng phá sleep, treatment adherence hoặc recovery có thể tạo chi phí bậc hai lớn hơn lợi ích ban đầu.
 
-Các con số tax/benefit cụ thể phải kiểm tra theo jurisdiction hiện hành; route này chỉ cung cấp structure.
+Khi vấn đề cần clinical detail, bàn giao sang [Healthcare Literacy](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md) và chuyên môn y tế phù hợp.
 
-## 9. Time là một budget có opportunity cost
+## 10. Thời gian và sự chú ý cũng là nguồn lực hữu hạn
 
-Một tuần có 168 giờ. Work decision thay không chỉ income mà còn:
+Nhiều kế hoạch thất bại không phải vì tiền thiếu mà vì **băng thông nhận thức (cognitive bandwidth / 인지 여유)** và thời gian thiếu.
+
+Một người có thể đồng thời:
 
 ```text
-sleep
-commute
-exercise
-family time
-learning time
-recovery
-administrative burden
+làm full-time
+học thêm
+chăm sóc gia đình
+điều trị sức khỏe
+quản lý tài chính
+duy trì quan hệ
 ```
 
-Nếu tăng salary 20% nhưng tăng total work+commute time 40%, hourly economics và health burden có thể đi hướng khác salary headline.
+Nếu mỗi kế hoạch riêng lẻ đều “khả thi” nhưng tổng tải vượt capacity, hệ thống vẫn thất bại.
 
-Không phải mọi giờ đều equivalent; một giờ fragmented sau work stress có quality khác một giờ tập trung buổi sáng. Vì vậy time budget cần đọc cùng energy.
+Vì vậy cần nhìn **tải tổng hợp (total load / 총부하)**, không đánh giá từng mục tiêu tách rời.
 
-## 10. Health capacity là constraint sản xuất, không phải side note
+## 11. Vốn nghề nghiệp không đồng nghĩa với chức danh
 
-Sức khỏe ảnh hưởng:
+**Vốn nghề nghiệp (career capital / 경력 자본)** gồm kỹ năng, kinh nghiệm, reputation, network, khả năng tạo output và quyền tiếp cận cơ hội.
+
+Một title cao hơn nhưng công việc ít học, ít ownership và ít output có thể không tăng career capital nhiều. Ngược lại một role title thấp hơn nhưng cho phép học system quan trọng, lead project hoặc làm việc với mentor tốt có thể tăng option set về sau.
+
+Khi so sánh công việc, hỏi:
 
 ```text
-ability to work
-learning rate
-decision quality
-income continuity
-care dependency
-medical cost
+skill nào tăng?
+output nào có thể chứng minh?
+network nào hình thành?
+quyền quyết định nào có thêm?
+thị trường nào công nhận kinh nghiệm này?
 ```
 
-Một plan career hoặc financial chỉ bền nếu assumptions về health capacity đủ thực tế.
+## 12. Thu nhập kỳ vọng phải đi cùng phân phối rủi ro
 
-Khi health decision phụ thuộc diagnosis/test/treatment cụ thể, quay về [Health literacy](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md) và professional phù hợp; route này không tự chẩn đoán.
-
-## 11. Health event tạo shock qua nhiều channel
-
-Một health event có thể truyền qua:
+Không nên so sánh hai nghề chỉ bằng “lương trung bình”. Cần phân biệt:
 
 ```text
-symptoms / treatment burden
-→ work capacity
-→ income
-→ insurance / out-of-pocket cost
-→ household workload
-→ stress
-→ decision quality
+lương cơ bản
+bonus/commission không chắc chắn
+stock/equity có biến động
+khả năng mất việc
+khả năng tăng trưởng
+chi phí đi lại/nhà ở
+thuế/phúc lợi
 ```
 
-Do đó financial resilience và communication support là health-related resources, dù chúng không phải treatment.
+Một offer có expected income cao hơn nhưng variance lớn và runway thấp có thể làm hệ thống dễ gãy hơn.
 
-Một practical review sau health event nên hỏi:
+Đây là ứng dụng trực tiếp của [Xác suất → hiệu chuẩn → quyết định và rủi ro](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md).
+
+## 13. Scenario tốt hơn một dự báo điểm duy nhất
+
+Với tương lai nghề nghiệp, sức khỏe hoặc tài chính, một con số duy nhất thường tạo certainty giả.
+
+Có thể dùng ba kịch bản:
 
 ```text
-cash flow thay đổi thế nào?
-leave / benefit nào tồn tại?
-workload có cần điều chỉnh?
-caregiver burden?
-follow-up timeline?
-which decisions can wait?
+base case — điều gì hợp lý nhất theo evidence hiện tại
+upside case — điều gì xảy ra nếu một số yếu tố thuận lợi
+stress case — điều gì xảy ra nếu các rủi ro chính cùng xuất hiện
 ```
 
-## 12. Stress làm decision horizon ngắn lại
+Kịch bản không phải fantasy. Mỗi kịch bản cần trigger hoặc assumption cụ thể.
 
-Dưới acute stress, attention có xu hướng bị hút vào immediate problem. Điều này đôi khi adaptive nhưng có thể làm bỏ qua long-term consequences.
+Điểm cần quan sát không chỉ là outcome trung bình mà là: **trong stress case, hệ thống có sống sót không?**
 
-Khi decision không urgent, một guardrail đơn giản là tách:
+## 14. Biên an toàn dành cho sai số của chính mình
 
-```text
-must decide today
-vs
-can decide after sleep / more evidence / one conversation
-```
+**Biên an toàn (margin of safety / 안전마진)** là khoảng dư được giữ vì estimate có thể sai.
 
-Không phải mọi uncomfortable uncertainty cần được giải ngay bằng action.
+Ví dụ:
 
-## 13. Communication là truyền state, không chỉ “nói hay”
+- không dùng hết mức vay tối đa chỉ vì ngân hàng cho phép;
+- không lập lịch học/làm tới 100% thời gian có sẵn;
+- không dùng toàn bộ emergency fund cho một kế hoạch mới;
+- không giả định bonus chắc chắn để trả nghĩa vụ cố định;
+- không đặt deadline recovery bằng đúng dự báo lạc quan nhất.
 
-Giao tiếp thực dụng cần làm cho hai bên chia sẻ cùng model:
+Biên an toàn không phải bi quan; nó là cách mua khả năng chịu sai số mô hình.
 
-```text
-what happened?
-what does each side need?
-what constraint exists?
-what decision is pending?
-what is uncertain?
-what next action and deadline?
-```
+## 15. Pre-mortem tìm failure trước khi nó xảy ra
 
-Nhiều conflict kéo dài vì các bên tranh luận position nhưng chưa đồng ý problem statement.
+**Tiền kiểm thất bại (pre-mortem / 사전 실패 분석)** giả định quyết định đã thất bại rồi hỏi: “những nguyên nhân hợp lý nào có thể dẫn tới thất bại này?”.
 
-Đọc sâu [Interpersonal Communication and Conflict](../06_applied/03_interpersonal_communication_and_conflict.md).
-
-## 14. Observation khác interpretation
-
-Trong conversation khó:
+Ví dụ với đổi việc:
 
 ```text
-Observation: deadline đã thay đổi ba lần.
-Interpretation: team không tôn trọng tôi.
-```
-
-Interpretation có thể đúng hoặc sai nhưng không nên được trình bày như observation.
-
-Tách hai tầng giúp giảm defensive response và tạo chỗ cho alternative explanation.
-
-## 15. Interest khác position
-
-Trong negotiation:
-
-```text
-Position: “Tôi cần remote 3 ngày.”
-Interest: commute dài, caregiving và cần deep-work time.
-```
-
-Khi chỉ trao đổi position, option set hẹp. Khi hiểu interest, có thể xuất hiện alternative:
-
-```text
-flex hours
-compressed week
-remote 2 days + commute support
-team schedule change
-```
-
-Đọc sâu [Negotiation, Conflict and Joint Decision-Making](../06_applied/20_negotiation_conflict_and_joint_decision_making.md).
-
-## 16. BATNA quyết định sức mạnh của “không”
-
-**BATNA — Best Alternative to a Negotiated Agreement** là alternative tốt nhất nếu không đạt agreement.
-
-BATNA không phải bluff. Nó phải là option thật.
-
-Trong salary negotiation, BATNA có thể là:
-
-```text
-stay current job
-another offer
-continue search
-short break funded by runway
-```
-
-Improving BATNA thường tạo leverage bền hơn học một câu “negotiation script”.
-
-## 17. Reservation point phải tính total constraint
-
-**Reservation point** là ranh giới dưới/trên đó agreement không còn tốt hơn BATNA.
-
-Với job offer, reservation point không chỉ là salary. Nó có thể là combination:
-
-```text
-minimum compensation
-maximum commute
-required visa support
-acceptable hours
-required start date
-health accommodation
-```
-
-Một deal vượt salary threshold nhưng vi phạm hard constraint vẫn có thể dưới reservation point tổng thể.
-
-## 18. Negotiation không phải zero-sum mặc định
-
-Một số variable zero-sum hơn, như chia một fixed cash pool. Nhưng nhiều negotiation có nhiều dimensions:
-
-```text
-salary
-bonus
-start date
-remote days
-scope/title
-training budget
-review date
-leave
-```
-
-Nếu hai bên value các dimensions khác nhau, package design có thể tạo gain cho cả hai.
-
-## 19. Power không chỉ là personality
-
-Power trong negotiation đến từ:
-
-```text
-alternatives
-information
-scarcity of skill/resource
-time pressure
-formal authority
-network
-financial runway
-reputation
-```
-
-Một người nói rất tự tin nhưng không có alternative có thể có structural power thấp hơn người nói bình tĩnh nhưng có strong BATNA.
-
-## 20. Career decision là sequence, không phải một “đúng nghề” duy nhất
-
-Career được xây bằng chuỗi move, mỗi move thay:
-
-```text
-skill
-reputation
-network
-income
-identity
-future options
-```
-
-Đọc [Career & Vocational Psychology](../06_applied/22_career_vocational_psychology_and_person_environment_fit.md) để hiểu person–environment fit, career capital và adaptability.
-
-## 21. Career capital nên được theo dõi như asset
-
-**Vốn nghề nghiệp (career capital / 경력 자본)** gồm:
-
-```text
-rare/useful skill
-domain knowledge
-proof of work
-reputation
-network
-ability to learn
-```
-
-Income hiện tại là flow; career capital ảnh hưởng future flow.
-
-Một decision tăng salary nhưng làm skill stagnate có trade-off khác decision giữ salary nhưng tăng portable skill nhanh. Không có answer universal; cần horizon và priorities.
-
-## 22. Skill portfolio có concentration risk
-
-Giống financial portfolio, skill portfolio có thể tập trung quá mức vào:
-
-```text
-one vendor
-one internal system
-one company-specific process
-one market cycle
-```
-
-Depth quan trọng, nhưng cần biết phần nào transferable. Một career resilient thường có cả deep specialization và một số meta-skill như communication, system thinking, problem decomposition và learning.
-
-## 23. Labor-market signal khác true skill
-
-Credential, title và brand company là signal. Chúng có thể correlate với capability nhưng không hoàn hảo.
-
-Career planning cần cả:
-
-```text
-actual capability
-+
-credible evidence of capability
-```
-
-Portfolio, shipped work, measurable impact, recommendation hoặc recognized credential có thể là evidence tùy field.
-
-## 24. Market salary data phải đọc distribution, không chỉ average
-
-Average salary không đủ nếu role, location, seniority, industry, company size và compensation structure khác nhau.
-
-Khi dùng market data cho negotiation:
-
-```text
-define comparable population
-look at range/percentiles
-check total compensation definition
-check data date
-separate base vs variable
-```
-
-Một percentile từ population khác có thể tạo false anchor.
-
-## 25. Anchor có thể ảnh hưởng cả người biết mình đang bị anchor
-
-Initial number trong negotiation có thể kéo range thảo luận. Nhưng anchor tốt cần grounded in evidence và context.
-
-Một number cực đoan không có justification có thể làm giảm credibility hoặc đóng conversation.
-
-Do đó process tốt hơn là:
-
-```text
-market evidence
-+ contribution evidence
-+ role scope
-+ BATNA
-→ negotiation range
-```
-
-## 26. Major life decision cần scenario, không cần prediction duy nhất
-
-Một decision model có thể dùng ba scenario:
-
-```text
-base
-adverse
-upside
-```
-
-Ví dụ khi đổi job:
-
-```text
-Base: role ổn định, học tốt, bonus trung bình.
-Adverse: probation fail / layoffs / health burden tăng.
-Upside: promotion nhanh, skill compounding mạnh.
-```
-
-Sau đó hỏi từng scenario ảnh hưởng:
-
-```text
-cash runway
-health/time
-career capital
-relationship/location
-future options
-```
-
-Scenario không nhằm dự đoán chính xác; nó kiểm tra fragility.
-
-## 27. Pre-mortem tìm failure trước khi commitment
-
-**Pre-mortem** giả định decision đã thất bại sau một khoảng thời gian rồi hỏi “vì sao?”.
-
-Ví dụ với relocation:
-
-```text
-housing cost cao hơn dự kiến
+job scope khác mô tả
+manager không phù hợp
 visa delay
-commute làm health xấu
-partner/family adjustment khó
-job role khác mô tả
-emergency fund quá thấp
+commute làm kiệt sức
+bonus thấp hơn estimate
+probation không qua
+skill học được ít hơn kỳ vọng
 ```
 
 Sau đó phân loại:
 
 ```text
-preventable
-mitigatable
-insurable
-acceptable residual risk
+rủi ro có thể kiểm tra trước
+rủi ro có thể giảm bằng contract/negotiation
+rủi ro cần buffer
+rủi ro phải chấp nhận
 ```
 
-## 28. Margin of safety tạo không gian cho model error
+Pre-mortem có giá trị vì nó buộc người quyết định thoát khỏi confirmation bias sau khi đã thích một phương án.
 
-Nếu plan chỉ hoạt động khi:
+## 16. Đừng biến mọi thứ thành một điểm số duy nhất
+
+Một weighted score có thể hỗ trợ so sánh nhưng dễ tạo **ảo giác chính xác (false precision / 거짓 정밀성)**.
+
+Nếu chấm “sức khỏe 8/10”, “lương 7/10”, “network 6/10”, tổng điểm chỉ hữu ích khi scale có nghĩa và weight phản ánh preference thật.
+
+Nên dùng score như summary sau khi reasoning, không dùng score để thay reasoning.
+
+Đặc biệt không cộng một lợi ích nhỏ với một constraint cứng như thể chúng cùng đơn vị.
+
+## 17. Giao tiếp là cơ chế giảm sai lệch mô hình giữa người với người
+
+Nhiều conflict không phải do mục tiêu đối nghịch mà do hai bên đang giữ model khác nhau về facts, expectation hoặc role.
+
+Một conversation tốt nên tách:
 
 ```text
-bonus đạt 100%
-không có health event
-không mất việc
-rent không tăng
-market return đúng forecast
+observation — điều gì đã xảy ra?
+interpretation — tôi hiểu nó thế nào?
+impact — hậu quả với công việc/quan hệ là gì?
+need/constraint — điều gì cần được bảo vệ?
+request — bước tiếp theo cụ thể là gì?
 ```
 
-thì plan rất fragile.
+Cách này tốt hơn gắn nhãn con người (“thiếu trách nhiệm”, “không tôn trọng”) vì label khó kiểm chứng và thường làm defense tăng.
 
-**Biên an toàn (margin of safety / 안전 마진)** có thể tồn tại dưới nhiều dạng:
+## 18. Một quyết định tốt có thể cho kết quả xấu
 
-```text
-cash buffer
-time buffer
-lower fixed obligations
-backup childcare
-second skill / income option
-insurance
-flexible deadline
-```
+Không được đánh giá chất lượng quyết định chỉ bằng outcome.
 
-## 29. Sunk cost không nên khóa future choice
+Một quyết định có thể tốt nếu:
 
-Tiền, thời gian hoặc prestige đã bỏ vào một career path không tự làm future continuation hợp lý.
+- evidence hợp lý;
+- uncertainty được thừa nhận;
+- alternatives được xem xét;
+- constraint được tôn trọng;
+- expected trade-off hợp lý;
+- process không bị bias lớn;
 
-Câu hỏi đúng:
+nhưng outcome vẫn xấu vì randomness.
 
-> Từ state hôm nay, future cost/benefit của tiếp tục so với alternative là gì?
+Ngược lại, một quyết định tệ có thể may mắn cho outcome tốt.
 
-Nhưng sunk cost cũng không có nghĩa past experience vô giá trị; transferable skill và network có thể chuyển sang option mới.
+Tách **chất lượng quyết định (decision quality / 의사결정 품질)** khỏi **kết quả (outcome / 결과)** giúp người học cập nhật process thay vì học sai từ may rủi.
 
-## 30. Identity cost là thật nhưng khác economic cost
+## 19. Nhật ký quyết định tạo feedback cho calibration cá nhân
 
-Leaving a prestigious title hoặc nghề gắn với self-concept có thể tạo identity loss. Nếu không tách dimension này, người ta có thể rationalize rằng economics xấu là “không còn lựa chọn”.
-
-Decision tốt không phủ nhận identity; nó đưa identity vào model như một factor thay vì để nó ẩn.
-
-## 31. Family decision là multi-agent system
-
-Một household không có một utility function duy nhất. Hai người có thể khác:
-
-```text
-risk tolerance
-time preference
-career priority
-caregiving expectation
-location preference
-money meaning
-```
-
-Do đó joint decision cần explicit trade-off và quyền lợi của từng bên, không chỉ tối ưu household income tổng.
-
-Communication chapter giúp xử lý difference; negotiation chapter giúp thiết kế agreement khi interests không hoàn toàn giống nhau.
-
-## 32. Financial decision cần phân biệt risk tolerance và risk capacity
-
-Người thích risk không đồng nghĩa có khả năng chịu loss tài chính lớn.
-
-**Risk tolerance** nghiêng về psychological comfort.
-
-**Risk capacity** phụ thuộc:
-
-```text
-income stability
-debt
-liquidity
-time horizon
-dependents
-health/career exposure
-```
-
-Đây là cầu nối trực tiếp giữa Psychology và Personal Finance.
-
-## 33. Health decision cần phân biệt fear với probability
-
-Một outcome đáng sợ có thể được overweight vì vividness. Ngược lại familiar risk có thể bị underweight.
-
-Route healthcare giúp đưa decision về:
-
-```text
-baseline probability
-quality of evidence
-absolute benefit/harm
-uncertainty
-personal values
-```
-
-Emotion vẫn là information về preference và lived experience, nhưng không thay denominator.
-
-## 34. Information search cần stopping rule
-
-Nhiều decision có thể bị trì hoãn vô hạn vì “cần thêm data”.
-
-Một stopping rule hữu ích:
-
-```text
-information mới có realistic chance đổi option ranking/threshold không?
-chi phí lấy information là bao nhiêu?
-deadline là gì?
-can we act reversibly and learn instead?
-```
-
-Đây là value-of-information reasoning.
-
-## 35. Decision quality khác outcome quality
-
-Một process tốt vẫn có thể gặp bad outcome vì uncertainty. Một process tệ vẫn có thể lucky.
-
-Do đó review phải hỏi:
-
-```text
-information available lúc decision là gì?
-probabilities có hợp lý không?
-constraints có được nhận diện không?
-assumption nào sai?
-process có bias gì?
-```
-
-Không đánh giá decision chỉ bằng hindsight.
-
-## 36. Decision journal chống hindsight bias
-
-Trước major decision, ghi ngắn:
+**Nhật ký quyết định (decision journal / 의사결정 기록)** không cần dài. Trước quyết định, ghi:
 
 ```text
 options
 facts
-estimates
 assumptions
-probabilities/scenarios
+probabilities / scenarios
 hard constraints
-key values
 expected upside/downside
 what would change my mind
 review date
 ```
 
-Sau outcome, compare với record gốc. Điều này làm learning loop tốt hơn memory reconstruction.
-
-## 37. Worked case: một job offer xuyên bốn domain
-
-Giả sử một người có current role và một offer mới.
-
-Dữ liệu giả định:
+Khi có outcome, quay lại xem:
 
 ```text
-current total compensation: 70
-new base: 82
-new expected bonus: 8
-commute: +8 hours/week
-probation: 6 months
-new role learning potential: higher
-current liquid runway: 3 months
-high-rate debt: moderate
-health: commute/sleep sensitivity is a concern
-visa/location: new employer support required
+forecast sai ở đâu?
+assumption nào sai?
+value có thay đổi không?
+process có bias gì?
+điều gì là randomness?
 ```
 
-Không kết luận ngay “90 > 70 nên chuyển”.
+Qua nhiều lần, người quyết định có thể hiệu chuẩn forecast và nhận ra pattern sai lặp lại.
 
-### Financial layer
+## 20. Một workflow chung cho quyết định đời sống
 
-Tính after-cost change:
+Khi gặp một quyết định lớn, có thể đi theo thứ tự:
 
 ```text
-net compensation gain
-- commute/relocation cost
-- benefit difference
-- tax difference
+1. Xác định đối tượng quyết định và deadline.
+2. Liệt kê options, kể cả “không làm gì”.
+3. Tách fact / estimate / assumption / preference.
+4. Loại option vi phạm hard constraint.
+5. Xác định opportunity cost và BATNA.
+6. Đánh giá tính đảo ngược và option value.
+7. Kiểm tra tài chính: cash flow, runway, debt, insurance.
+8. Kiểm tra sức khỏe và time/attention capacity.
+9. Kiểm tra career capital và future option set.
+10. Dựng base/upside/stress scenario.
+11. Chạy pre-mortem và thêm margin of safety.
+12. Quyết định communication/negotiation plan.
+13. Ghi decision journal + trigger cập nhật.
+14. Review outcome mà không nhầm outcome với decision quality.
 ```
 
-Sau đó stress-test probation failure với runway 3 tháng. Nếu adverse scenario tạo liquidity crisis, cần xem mitigation như start-date buffer, debt reduction, extra savings hoặc negotiation terms.
+Workflow không biến đời sống thành spreadsheet. Nó chỉ bảo đảm các constraint quan trọng không biến mất vì một lợi ích quá nổi bật.
 
-### Health/time layer
+## 21. Ví dụ tích hợp: đổi việc
 
-Tám giờ commute mỗi tuần là hơn 400 giờ/năm trước vacation adjustment. Câu hỏi không phải “commute có xấu không?” mà là nó lấy từ sleep, exercise, family hay learning time nào.
+Giả sử một offer mới tăng lương 20% nhưng commute dài hơn và probation sáu tháng.
 
-Nếu health concern cụ thể cần clinical assessment, route decision dừng tại boundary đó.
-
-### Career layer
-
-So:
+Không chỉ so 20% với thời gian đi lại. Đi qua các lớp:
 
 ```text
-skill growth
-scope
-manager/team quality
-portable experience
-brand/network
-future option value
+financial
+→ after-tax cash flow tăng bao nhiêu?
+→ bonus có chắc không?
+→ runway nếu probation fail?
+
+health/time
+→ commute ảnh hưởng sleep/exercise/treatment?
+→ total weekly load?
+
+career
+→ skill / ownership / mentor / marketability?
+
+legal/location
+→ visa hoặc relocation constraint?
+
+negotiation
+→ BATNA?
+→ điều gì có thể negotiate?
+
+risk
+→ stress case nếu probation fail + hiring market xấu?
 ```
 
-Salary gain có thể đi cùng career gain hoặc trade-off.
+Khi nhìn toàn hệ thống, mức lương chỉ là một biến trong nhiều biến.
 
-### Negotiation layer
+## 22. Ví dụ tích hợp: học thêm một năm
 
-Identify interests:
+Một chương trình học có thể tăng credential và network nhưng làm giảm thu nhập hiện tại.
+
+Cần tách:
 
 ```text
-company needs availability/team overlap
-candidate needs lower commute + visa certainty
+chi phí trực tiếp
++ thu nhập mất đi
++ cơ hội nghề nghiệp bị trì hoãn
++ debt nếu có
+
+so với
+
+skill mới
++ access ngành mới
++ network
++ signaling
++ option value
 ```
 
-Possible variables:
+Sau đó stress-test: nếu outcome nghề nghiệp chỉ bằng 50% kỳ vọng, hệ thống tài chính có chịu được không? Nếu câu trả lời là không, cần thay đổi funding, duration hoặc format trước khi kết luận “học là tốt/xấu”.
+
+## 23. Ví dụ tích hợp: health shock
+
+Một health event có thể đồng thời tạo:
 
 ```text
-remote days
-start date
-sign-on bonus
-probation terms if negotiable
-visa documentation timing
-review milestone
+medical uncertainty
++ treatment burden
++ giảm working capacity
++ lost income
++ caregiver need
++ insurance/admin complexity
 ```
 
-### Decision layer
+Workflow đúng là hiểu evidence y tế trước, sau đó cập nhật cash flow/runway, rồi mới điều chỉnh career plan và communication với employer/family. Không nên tối ưu financial cost bằng cách bỏ qua clinical need; cũng không nên lập health plan mà giả định time/money không có constraint.
 
-Cuối cùng không cần một score “objective tuyệt đối”. Cần biết:
+## 24. Ranh giới và bàn giao
 
-```text
-hard constraints satisfied?
-base case acceptable?
-adverse case survivable?
-upside meaningful?
-which assumption dominates?
-what can be negotiated?
-what can be tested before commitment?
-```
+Chapter này không đưa ra lựa chọn thay người đọc. Nó chỉ cung cấp cấu trúc để người đọc tự thấy trade-off, uncertainty và constraint.
 
-Đây là cách four-domain route tạo decision có cấu trúc mà không thay người đọc chọn option.
+Khi câu hỏi chính là thanh khoản, nợ, bảo hiểm hoặc thặng dư có thể đầu tư, quay sang [Personal Finance](../../investing/01_foundations/07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md). Khi câu hỏi là test/treatment/evidence, quay sang [Healthcare Literacy](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md). Khi câu hỏi là giao tiếp/xung đột, đọc [Interpersonal Communication and Conflict](../06_applied/03_interpersonal_communication_and_conflict.md). Khi câu hỏi là nghề nghiệp, đọc các chapter career/vocational psychology trong Applied Psychology.
 
-## 38. Worked case: health event và career pause
-
-Giả sử một health issue làm work capacity giảm tạm thời nhưng duration chưa chắc chắn.
-
-Sai lầm có thể là quyết định irreversible quá nhanh dựa trên worst-case fear hoặc ngược lại giả định recovery chắc chắn.
-
-Route tốt:
-
-```text
-medical evidence / follow-up horizon
-→ expected capacity scenarios
-→ leave/benefit/legal options
-→ household cash runway
-→ workload accommodation communication
-→ reversible career choices first
-→ review after new evidence
-```
-
-Medical component thuộc clinician; employment law/benefit cụ thể thuộc jurisdiction hiện hành; route này chỉ nối decision structure.
-
-## 39. Failure mode: dùng spreadsheet để che value conflict
-
-Hai option có thể gần nhau về economics nhưng khác mạnh về family time hoặc identity. Thêm decimal vào score không giải quyết value conflict.
-
-Khi disagreement là preference, cần negotiation/communication, không cần giả scientific precision.
-
-## 40. Failure mode: dùng “follow your passion” bỏ qua constraint
-
-Interest quan trọng nhưng career sustainability còn phụ thuộc skill, market opportunity, health và finance runway. Passion không trả debt tự động và cũng không thay person–environment fit.
-
-## 41. Failure mode: tối ưu salary nhưng tăng correlated risk
-
-Ví dụ chuyển sang company cùng sector với portfolio và spouse income cùng phụ thuộc sector đó có thể tăng household concentration. Total risk không nằm trong job contract riêng lẻ.
-
-## 42. Failure mode: health anxiety biến mọi incidental finding thành action
-
-Một test flag không tự động justify intervention. Route healthcare nhắc phải đi qua prior probability, measurement context và benefit/harm.
-
-## 43. Failure mode: negotiation như performance đối đầu
-
-Nếu mục tiêu là “thắng người kia”, parties có thể bỏ lỡ joint gains hoặc làm hỏng relationship cần dùng sau agreement. Good negotiation tối ưu agreement so với BATNA, không tối đa cảm giác dominance.
-
-## 44. Failure mode: không có review date
-
-Một decision đúng tại thời điểm T có thể trở nên sai khi state thay đổi. Job, insurance, asset allocation, caregiving và health plan đều cần trigger để re-open decision.
-
-## 45. Practical decision canvas
-
-Trước major decision, có thể dùng canvas ngắn:
-
-```text
-Decision:
-Deadline:
-Default if no action:
-
-Options:
-A.
-B.
-C.
-
-Facts:
-Estimates:
-Assumptions:
-Unknowns:
-
-Hard constraints:
-Financial runway:
-Health/time constraints:
-Career/skill effect:
-Relationship/communication effect:
-
-Base scenario:
-Adverse scenario:
-Upside scenario:
-
-BATNA:
-Negotiable variables:
-Reversible experiment:
-
-What evidence would change the decision?
-Review date:
-```
-
-Canvas không tạo answer; nó làm reasoning inspectable.
-
-## 46. Owner map
-
-Nếu câu hỏi nằm ở **cash flow, liquidity, debt, insurance, future liabilities**, đọc [Personal Finance before Investing](../../investing/01_foundations/07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md).
-
-Nếu câu hỏi nằm ở **screening, test, diagnosis evidence, treatment benefit/harm**, đọc [Health Literacy](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md).
-
-Nếu câu hỏi nằm ở **conflict và mutual understanding**, đọc [Interpersonal Communication](../06_applied/03_interpersonal_communication_and_conflict.md).
-
-Nếu câu hỏi nằm ở **BATNA, interest, reservation point và package design**, đọc [Negotiation](../06_applied/20_negotiation_conflict_and_joint_decision_making.md).
-
-Nếu câu hỏi nằm ở **career fit, career capital, transitions và adaptability**, đọc [Career & Vocational Psychology](../06_applied/22_career_vocational_psychology_and_person_environment_fit.md).
-
-Nếu câu hỏi nằm ở **uncertainty và thresholds**, đọc [Probability → Calibration → Decision and Risk](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md).
-
-## 47. Mô hình tư duy cuối
-
-```text
-state
-→ options
-→ constraints
-→ evidence + uncertainty
-→ values
-→ scenario / downside survivability
-→ communication / negotiation
-→ action
-→ feedback
-→ review
-```
-
-Practical-life reasoning tốt không loại bỏ uncertainty. Nó đảm bảo uncertainty không bị che bởi confidence, emotion, spreadsheet hoặc một domain duy nhất.
-
-> **Bàn giao:** Sau route này, người đọc nên có thể lấy một quyết định lớn và chỉ ra owner của từng phần: finance, health, evidence, communication, negotiation, career. Nếu một phần cần chuyên môn pháp lý/y tế/tax hiện hành, route phải dừng ở boundary đó và chuyển sang nguồn/professional phù hợp thay vì tự kéo dài suy luận.
+> **Bàn giao:** Insight cần giữ là **quyết định đời sống tốt không tối đa một metric; nó bảo toàn option set và khả năng sống sót qua stress case trong khi vẫn tiến về mục tiêu**. Sau khi quyết định, dùng decision journal để cập nhật mô hình thay vì chỉ nhìn outcome.
