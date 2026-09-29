@@ -1,683 +1,602 @@
-# Hiểu thông tin y tế: triệu chứng → xác suất trước xét nghiệm → kiểm tra → bằng chứng → quyết định chung
+# Hiểu thông tin y tế: triệu chứng → xác suất → xét nghiệm → bằng chứng → quyết định chung
 
-> **Mạch đọc:** Chapter này là tuyến **hiểu biết y tế (health literacy / 건강 문해력)** nối Biology, Mathematics, Research Methods và Psychology. Nó không dạy tự chẩn đoán và không thay thế bác sĩ, dược sĩ hoặc hướng dẫn y tế tại nơi người đọc đang sống. Câu hỏi trung tâm là: **khi nhận một triệu chứng, kết quả xét nghiệm, lời khuyên điều trị hoặc một headline về sức khỏe, làm thế nào hiểu đúng bằng chứng và hỏi đúng câu hỏi trước khi ra quyết định?**
+> **Mạch đọc:** Chapter này là tuyến **hiểu biết y tế (health literacy / 건강 문해력)** nối Biology, Mathematics, Research Methods và Psychology. Nó không dạy tự chẩn đoán và không thay thế bác sĩ, dược sĩ hoặc hướng dẫn y tế tại nơi người đọc đang sống. Câu hỏi trung tâm là: **khi gặp một triệu chứng, kết quả xét nghiệm, lời khuyên điều trị hoặc tin tức sức khỏe, làm thế nào hiểu đúng mức độ chắc chắn của bằng chứng và hỏi đúng câu hỏi trước khi ra quyết định?**
 
-Biology sở hữu mechanism của cơ thể; [Research Methods](../../research_methods/README.md) sở hữu cách thiết kế và đánh giá bằng chứng; [Probability → Calibration → Decision and Risk](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md) sở hữu xác suất và quyết định dưới bất định; Psychology giải thích risk perception, placebo/nocebo và communication. Chapter này nối các owner đó thành một workflow đời sống.
+Biology sở hữu cơ chế cơ thể; [Research Methods](../../research_methods/README.md) sở hữu cách đánh giá bằng chứng; [Xác suất → hiệu chuẩn → quyết định và rủi ro](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md) sở hữu xác suất và quyết định dưới bất định; Psychology giải thích nhận thức rủi ro, placebo/nocebo và giao tiếp. Chapter này ghép các owner đó thành một workflow đời sống.
 
-Một mental model ngắn:
-
-```text
-observation / symptom
-→ context + prior probability
-→ measurement / test
-→ update probability
-→ benefit–harm trade-off
-→ values + constraints
-→ decision
-→ follow-up / re-evaluation
-```
-
-Điểm quan trọng nhất là: **một test result không tự nói phải làm gì**. Nó chỉ là một mảnh evidence được diễn giải trong context.
-
-## 1. Health literacy không phải memorization tên bệnh
-
-Một người có thể nhớ hàng trăm disease names nhưng vẫn đọc sai risk, test và treatment claim. Health literacy thực dụng cần khả năng:
+Mô hình tổng quát là:
 
 ```text
-phân biệt symptom, sign, screening và diagnosis
-đọc probability và uncertainty
-kiểm tra nguồn evidence
-hiểu benefit và harm theo absolute terms
-nhận biết giới hạn của một test
-biết câu hỏi nào phải hỏi clinician
-biết khi nào thông tin online không đủ để tự xử lý
+quan sát / triệu chứng
+→ bối cảnh + xác suất ban đầu
+→ đo lường / xét nghiệm
+→ cập nhật xác suất
+→ đánh giá chất lượng bằng chứng
+→ lợi ích và tác hại tuyệt đối
+→ giá trị + ràng buộc của người bệnh
+→ quyết định
+→ theo dõi / đánh giá lại
 ```
 
-Mục tiêu không phải biến người đọc thành clinician. Mục tiêu là giúp người đọc không biến một con số hoặc headline thành certainty.
+Điểm cần giữ ngay từ đầu: **một kết quả xét nghiệm không tự nói phải làm gì**. Nó chỉ là một mảnh bằng chứng được diễn giải trong bối cảnh.
 
-## 2. Symptom, sign và diagnosis là ba tầng khác nhau
+## 1. Hiểu biết y tế không phải học thuộc tên bệnh
 
-**Triệu chứng (symptom / 증상)** là experience do người bệnh cảm nhận hoặc mô tả, như đau, chóng mặt hoặc mệt.
+Một người có thể nhớ rất nhiều tên bệnh nhưng vẫn đọc sai nguy cơ, xét nghiệm và tuyên bố điều trị. Hiểu biết y tế thực dụng cần khả năng:
 
-**Dấu hiệu (sign / 징후)** là finding có thể quan sát/đo được trong examination hoặc measurement.
+- phân biệt triệu chứng, dấu hiệu, sàng lọc và chẩn đoán;
+- đọc xác suất và bất định;
+- hiểu chất lượng phép đo;
+- phân biệt lợi ích tương đối với lợi ích tuyệt đối;
+- đánh giá loại nghiên cứu và mức độ bằng chứng;
+- biết một kết quả xét nghiệm thay đổi xác suất tới đâu;
+- biết câu hỏi nào cần hỏi bác sĩ;
+- nhận ra khi thông tin online không đủ để tự xử lý.
 
-**Chẩn đoán (diagnosis / 진단)** là một model giải thích pattern của symptoms, signs, tests và context.
+Mục tiêu không phải biến người đọc thành bác sĩ lâm sàng. Mục tiêu là tránh biến một con số, một kết quả “dương tính” hoặc một headline thành sự chắc chắn giả.
 
-Một symptom có thể có nhiều cause. Một disease có thể biểu hiện bằng nhiều symptom. Vì vậy mapping:
+## 2. Triệu chứng, dấu hiệu và chẩn đoán là ba lớp khác nhau
+
+**Triệu chứng (symptom / 증상)** là trải nghiệm do người bệnh cảm nhận hoặc mô tả, như đau, chóng mặt, khó thở hoặc mệt.
+
+**Dấu hiệu (sign / 징후)** là phát hiện có thể quan sát hoặc đo được khi khám hay theo dõi.
+
+**Chẩn đoán (diagnosis / 진단)** là mô hình giải thích pattern của triệu chứng, dấu hiệu, kết quả xét nghiệm và bối cảnh.
+
+Một triệu chứng có thể có nhiều nguyên nhân; một bệnh có thể tạo nhiều triệu chứng. Vì vậy ánh xạ:
 
 ```text
-one symptom → one diagnosis
+một triệu chứng → một chẩn đoán
 ```
 
-thường là reasoning quá mạnh.
+thường là suy luận quá mạnh.
 
-## 3. Differential diagnosis là quản lý hypothesis
+> **Chuyển mạch:** Nếu nhiều nguyên nhân cùng có thể giải thích một triệu chứng, bước tiếp theo không phải chọn ngay một bệnh mà là quản lý các giả thuyết theo xác suất và mức nguy hiểm.
 
-Trong clinical reasoning, nhiều hypothesis có thể tồn tại cùng lúc. Chúng khác nhau về probability và consequence.
+## 3. Chẩn đoán phân biệt là quản lý giả thuyết
 
-Một clinician không chỉ hỏi “bệnh nào giống nhất?” mà còn cân nhắc:
+**Chẩn đoán phân biệt (differential diagnosis / 감별진단)** là quá trình giữ nhiều giả thuyết cùng lúc và cập nhật chúng theo bằng chứng mới.
+
+Một bác sĩ không chỉ hỏi “bệnh nào giống nhất?” mà còn cân nhắc:
 
 ```text
-common things
-serious things that must not be missed
-patient-specific risk factors
-how much new evidence would change management
+nguyên nhân thường gặp
+nguyên nhân nguy hiểm không được bỏ sót
+risk factor riêng của người bệnh
+bằng chứng nào có thể thay đổi xử trí
 ```
 
-Người đọc không cần tự dựng differential đầy đủ. Nhưng hiểu concept này giúp tránh search một symptom rồi khóa vào disease đầu tiên nhìn thấy.
+Người đọc không nên tự xây một danh sách chẩn đoán đầy đủ rồi tự điều trị. Nhưng hiểu cơ chế này giúp tránh lỗi phổ biến khi tìm một triệu chứng trên mạng rồi khóa vào bệnh đầu tiên có vẻ khớp.
 
-## 4. Base rate đứng trước test result
+## 4. Tỷ lệ nền đứng trước kết quả xét nghiệm
 
-Giả sử một test có sensitivity và specificity khá tốt. Nếu condition rất hiếm trong population/context đang xét, positive result vẫn có thể chứa tỷ lệ false positive đáng kể.
+Trước khi có xét nghiệm, ta đã có một mức xác suất dựa trên prevalence, triệu chứng, tuổi, phơi nhiễm, tiền sử và các risk factor khác. Đây là **xác suất trước xét nghiệm (pre-test probability / 검사 전 확률)**.
 
-Đây là **base-rate problem**. Cùng một test có thể mang ý nghĩa khác nhau ở:
+Cùng một xét nghiệm có thể mang ý nghĩa rất khác ở:
 
 ```text
-người asymptomatic low-risk
-người có symptom điển hình
-người có exposure cụ thể
-population high-risk
+người không triệu chứng và nguy cơ thấp
+người có triệu chứng điển hình
+người vừa có phơi nhiễm cụ thể
+nhóm dân số nguy cơ cao
 ```
 
-Vì vậy câu hỏi đúng trước test là:
+Nếu bệnh hiếm trong bối cảnh đang xét, ngay cả xét nghiệm khá tốt vẫn có thể tạo nhiều dương tính giả. Đây là **bài toán tỷ lệ nền (base-rate problem / 기저율 문제)**.
 
-> Xác suất condition này hợp lý đến đâu **trước** khi biết kết quả?
+Vì vậy câu hỏi đúng không phải chỉ là “test chính xác bao nhiêu?”, mà là “trước test, xác suất hợp lý là bao nhiêu và test này sẽ thay đổi xác suất đó tới đâu?”.
 
-Đó là **xác suất trước xét nghiệm (pre-test probability / 검사 전 확률)**.
+## 5. Độ nhạy và độ đặc hiệu không phải xác suất bạn mắc bệnh
 
-## 5. Sensitivity và specificity không phải xác suất bạn mắc bệnh
-
-**Độ nhạy (sensitivity / 민감도)** hỏi: trong những người thật sự có condition, test bắt được bao nhiêu?
+**Độ nhạy (sensitivity / 민감도)** hỏi: trong những người thật sự có bệnh/tình trạng, xét nghiệm phát hiện được bao nhiêu?
 
 ```text
 sensitivity = true positive / all condition-positive cases
 ```
 
-**Độ đặc hiệu (specificity / 특이도)** hỏi: trong những người thật sự không có condition, test trả negative đúng bao nhiêu?
+**Độ đặc hiệu (specificity / 특이도)** hỏi: trong những người thật sự không có bệnh/tình trạng, xét nghiệm cho kết quả âm tính đúng bao nhiêu?
 
 ```text
 specificity = true negative / all condition-negative cases
 ```
 
-Hai metric này mô tả behavior của test dưới reference standard. Chúng không trực tiếp trả lời:
+Hai chỉ số này mô tả hành vi của xét nghiệm dưới một chuẩn tham chiếu. Chúng không trực tiếp trả lời câu:
 
-> Tôi vừa positive; xác suất tôi thật sự có condition là bao nhiêu?
+> Tôi vừa có kết quả dương tính; xác suất tôi thật sự có tình trạng này là bao nhiêu?
 
-Câu đó liên quan tới **positive predictive value (PPV / 양성 예측도)** và prior prevalence/context.
+Câu đó liên quan tới **giá trị dự đoán dương (positive predictive value, PPV / 양성 예측도)**, **giá trị dự đoán âm (negative predictive value, NPV / 음성 예측도)** và prevalence trong population đang xét.
 
-## 6. Predictive value phụ thuộc population
+## 6. Giá trị dự đoán phụ thuộc prevalence
 
-**PPV** và **NPV** thay đổi khi prevalence thay đổi.
-
-Ví dụ giả định có 10,000 người, prevalence 1%, test sensitivity 90%, specificity 95%.
+Giả sử 10.000 người có prevalence 1%, xét nghiệm có độ nhạy 90% và độ đặc hiệu 95%.
 
 ```text
-condition present: 100
-true positive: 90
-false negative: 10
+có bệnh: 100
+→ dương tính thật: 90
+→ âm tính giả: 10
 
-condition absent: 9,900
-false positive: 495
-true negative: 9,405
+không bệnh: 9.900
+→ dương tính giả: 495
+→ âm tính thật: 9.405
 ```
 
-Trong 585 positive results:
+Trong tổng số 585 kết quả dương tính, chỉ 90 là dương tính thật. PPV xấp xỉ:
 
 ```text
-PPV = 90 / 585 ≈ 15.4%
+90 / 585 ≈ 15,4%
 ```
 
-Dù sensitivity 90% và specificity 95%, positive result trong low-prevalence population không đồng nghĩa “95% chắc chắn mắc bệnh”.
+Điều này không có nghĩa xét nghiệm “tệ”. Nó cho thấy khi tình trạng hiếm, số người không bệnh rất lớn nên một tỷ lệ dương tính giả nhỏ vẫn tạo nhiều false positive tuyệt đối.
 
-Ví dụ này không mô tả bất kỳ test cụ thể nào; nó chỉ minh họa vì sao base rate quan trọng.
+> **Chuyển mạch:** Sensitivity/specificity cho biết đặc tính test; PPV/NPV cho biết ý nghĩa của result trong một population. Để cập nhật xác suất cá nhân tốt hơn, cần tư duy Bayes.
 
-## 7. Screening khác diagnostic testing
+## 7. Bayes là cách cập nhật niềm tin khi có bằng chứng mới
 
-**Sàng lọc (screening / 선별검사)** thường áp dụng cho người chưa có symptom rõ để tìm disease/risk sớm hơn.
-
-**Xét nghiệm chẩn đoán (diagnostic testing / 진단 검사)** thường được dùng khi symptom, sign hoặc risk đã làm condition trở thành hypothesis cần kiểm tra.
-
-Screening cần tiêu chuẩn cao hơn câu “test có phát hiện disease không?”. Một screening program còn phải hỏi:
+**Định lý Bayes (Bayes' theorem / 베이즈 정리)** không phải mẹo toán riêng cho y học. Nó mô tả cách xác suất thay đổi khi có evidence mới.
 
 ```text
-phát hiện sớm có thay outcome có ý nghĩa không?
-false positive tạo harm gì?
-overdiagnosis bao nhiêu?
-follow-up procedure có risk gì?
-chi phí và burden ra sao?
+xác suất sau xét nghiệm
+∝
+xác suất trước xét nghiệm
+×
+mức độ kết quả phù hợp với từng giả thuyết
 ```
 
-## 8. Phát hiện sớm không luôn đồng nghĩa sống lâu hơn
+Trong lâm sàng, bác sĩ thường không tính công thức đầy đủ mỗi lần, nhưng mental model vẫn quan trọng: test mạnh nhất khi nó thay đổi xác suất đủ lớn để làm thay đổi hành động.
 
-Một chương trình screening có thể làm thời gian từ diagnosis tới death trông dài hơn chỉ vì diagnosis xảy ra sớm hơn, dù death không đổi. Đây là **lead-time bias**.
+Một xét nghiệm có thể chính xác về kỹ thuật nhưng ít giá trị quyết định nếu cả kết quả dương lẫn âm đều không thay đổi kế hoạch xử trí.
 
-Ví dụ đơn giản:
+## 8. Tỷ số khả dĩ nối test với xác suất
+
+**Tỷ số khả dĩ (likelihood ratio / 우도비)** cho biết một kết quả thường gặp hơn bao nhiêu lần ở người có bệnh so với người không bệnh.
+
+Với test nhị phân:
 
 ```text
-without screening: diagnosis year 8 → death year 10 = survival after diagnosis 2 years
-with screening: diagnosis year 4 → death year 10 = survival after diagnosis 6 years
+LR+ = sensitivity / (1 - specificity)
+LR- = (1 - sensitivity) / specificity
 ```
 
-Survival-after-diagnosis tăng nhưng lifespan không đổi.
+Tỷ số khả dĩ giúp chuyển từ pre-test odds sang post-test odds. Người học không cần dùng odds hàng ngày, nhưng khái niệm này giải thích vì sao một test chỉ hữu ích khi result thật sự tách được hai trạng thái.
 
-Vì vậy outcome quan trọng thường là mortality, morbidity hoặc quality of life phù hợp với disease/context, không chỉ “5-year survival after diagnosis”.
+## 9. Sàng lọc và chẩn đoán giải quyết hai câu hỏi khác nhau
 
-## 9. Length bias và overdiagnosis
+**Sàng lọc (screening / 선별검사)** thường áp dụng cho người chưa có triệu chứng rõ để phát hiện nguy cơ hoặc bệnh ở giai đoạn sớm.
 
-Screening theo interval có xu hướng dễ bắt những disease phát triển chậm hơn vì chúng tồn tại lâu hơn trong detectable phase. Đây là **length bias**.
+**Xét nghiệm chẩn đoán (diagnostic testing / 진단검사)** thường được dùng khi đã có triệu chứng, dấu hiệu hoặc nghi ngờ cụ thể.
 
-**Chẩn đoán quá mức (overdiagnosis / 과잉진단)** xảy ra khi phát hiện một abnormality thật nhưng nó sẽ không gây symptom hoặc harm đáng kể trong lifetime của người đó.
+Một screening positive thường không đồng nghĩa với chẩn đoán cuối cùng. Nó có thể dẫn tới test xác nhận, theo dõi hoặc đánh giá thêm.
 
-Overdiagnosis không phải false positive. Condition/pathology có thể “thật”, nhưng việc biết và điều trị nó có thể không tạo net benefit.
+Nhầm screening với diagnosis tạo hai lỗi: người có kết quả positive nghĩ rằng “đã mắc bệnh chắc chắn”, còn người có kết quả negative nghĩ rằng “không thể có bệnh”. Cả hai đều bỏ qua prior probability và giới hạn test.
 
-## 10. Reference range không phải ranh giới giữa khỏe và bệnh
+## 10. Sàng lọc có thể gây lợi ích và tác hại cùng lúc
 
-Laboratory **reference range** thường được xây từ distribution của một reference population và method cụ thể. Một value hơi ngoài range không tự động có nghĩa disease; một value trong range cũng không đảm bảo không có disease.
+Sàng lọc nghe có vẻ luôn tốt vì “phát hiện sớm”. Nhưng chương trình sàng lọc cần cân bằng:
 
-Cần đọc cùng:
+- phát hiện bệnh có thể điều trị sớm;
+- dương tính giả và lo lắng;
+- xét nghiệm xâm lấn tiếp theo;
+- chẩn đoán quá mức (overdiagnosis / 과잉진단);
+- điều trị quá mức (overtreatment / 과잉치료);
+- chi phí và thời gian;
+- lead-time bias và length-time bias.
+
+**Chẩn đoán quá mức (overdiagnosis / 과잉진단)** xảy ra khi phát hiện một bất thường đáp ứng tiêu chí chẩn đoán nhưng nếu không tìm thấy, nó có thể không bao giờ gây triệu chứng hoặc giảm tuổi thọ trong đời người đó.
+
+Overdiagnosis khác false positive: false positive là test báo bệnh khi thật ra không có; overdiagnosis là phát hiện một tình trạng “có thật” nhưng việc phát hiện đó không nhất thiết mang lại lợi ích ròng.
+
+## 11. Phát hiện sớm không tự chứng minh giảm tử vong
+
+**Thiên lệch thời gian dẫn (lead-time bias / 선행시간 편향)** xảy ra khi phát hiện bệnh sớm hơn làm “thời gian sống sau chẩn đoán” dài hơn dù thời điểm tử vong không đổi.
+
+Ví dụ:
 
 ```text
-unit
-measurement method
-reference interval của lab đó
-age / sex / physiological context nếu relevant
-fasting/time-of-day condition nếu relevant
-trend theo thời gian
-clinical context
+không screening: chẩn đoán năm 68 tuổi → tử vong 70 tuổi → sống sau chẩn đoán 2 năm
+có screening: chẩn đoán năm 64 tuổi → tử vong 70 tuổi → sống sau chẩn đoán 6 năm
 ```
 
-Đặc biệt, unit mismatch có thể tạo hiểu lầm lớn. Không so hai con số từ hai lab nếu chưa xác nhận unit và method tương thích.
+Nếu chỉ nhìn “survival after diagnosis”, screening có vẻ cải thiện mạnh dù không kéo dài cuộc sống.
 
-## 11. Một lần đo có thể chứa biological + measurement variation
+Do đó outcome cần ưu tiên phải là outcome người bệnh thật sự quan tâm, như mortality, morbidity, quality of life hoặc functional capacity, không chỉ surrogate hoặc survival-from-diagnosis.
 
-Measurement quan sát được có thể viết conceptually:
+## 12. Reference range không phải đường biên bệnh/không bệnh tuyệt đối
+
+Một **khoảng tham chiếu (reference range / 참고범위)** thường mô tả phân bố giá trị trong một population tham chiếu. Nếu khoảng bao phủ 95% người khỏe mạnh, tự nhiên khoảng 5% người khỏe vẫn nằm ngoài range.
+
+Vì vậy ký hiệu `H` hoặc `L` trên lab result là **tín hiệu cần diễn giải**, không phải diagnosis label.
+
+Ý nghĩa còn phụ thuộc:
+
+- tuổi/giới hoặc nhóm tham chiếu;
+- đơn vị đo;
+- điều kiện lấy mẫu;
+- thuốc/ăn uống/vận động;
+- variation sinh học;
+- measurement error;
+- pattern giữa nhiều chỉ số;
+- triệu chứng và pre-test probability.
+
+## 13. Một phép đo luôn có sai số và biến thiên
+
+Kết quả y tế không phải số “thật” tuyệt đối. Nó chứa ít nhất:
 
 ```text
-observed value
-= underlying biological state
-+ short-term biological variation
-+ pre-analytic variation
-+ analytic measurement error
+biến thiên sinh học
++ sai số lấy mẫu
++ sai số đo
++ điều kiện trước test
++ sai số diễn giải
 ```
 
-Pre-analytic variation có thể đến từ timing, sample handling, hydration, meal, exercise hoặc medication context tùy test.
+Nếu một giá trị ở sát ngưỡng, lặp lại trong điều kiện chuẩn có thể quan trọng hơn tranh luận xem 0,1 đơn vị trên/below threshold “có bệnh hay không”.
 
-Vì vậy trend đôi khi informative hơn một single measurement, nhưng việc repeat test hay không vẫn phụ thuộc medical context.
+Đây là nơi hiểu biết về measurement từ Biology và Research Methods trở nên thiết yếu.
 
-## 12. Correlation không tự tạo causal treatment
+## 14. Nguy cơ tương đối và nguy cơ tuyệt đối trả lời hai câu khác nhau
 
-Một observational study có thể thấy nhóm có biomarker X cao có outcome xấu hơn. Điều đó không tự chứng minh rằng giảm biomarker X bằng bất kỳ cách nào cũng cải thiện outcome.
+Giả sử một treatment giảm biến cố từ 10% xuống 5%.
 
-Có thể tồn tại:
+**Giảm nguy cơ tương đối (relative risk reduction / 상대위험감소)** là 50%.
+
+**Giảm nguy cơ tuyệt đối (absolute risk reduction / 절대위험감소)** là 5 điểm phần trăm.
+
+Cùng effect nhưng cảm nhận khác nhau. Relative number thường nghe ấn tượng hơn, còn absolute number giúp hiểu số người thật sự được lợi trong population đang xét.
+
+**Số người cần điều trị (number needed to treat, NNT / 치료필요수)** trong ví dụ này là:
 
 ```text
-confounding
-reverse causation
-selection bias
-measurement bias
-shared cause
+NNT = 1 / 0,05 = 20
 ```
 
-Đây là lý do causal evidence và randomized trials quan trọng khi câu hỏi là effect của intervention.
+Khoảng 20 người cần được điều trị trong thời gian nghiên cứu để ngăn 1 biến cố bổ sung, nếu assumptions của nghiên cứu áp dụng được.
 
-Đọc sâu về evidence design ở [Research Questions, Theory and Design](../../research_methods/00_research_questions_theory_and_design.md) và [Systematic Reviews and Evidence Synthesis](../../research_methods/03_systematic_reviews_and_evidence_synthesis.md).
+## 15. Tác hại cũng phải được diễn giải theo giá trị tuyệt đối
 
-## 13. Randomized trial giải quyết câu hỏi cụ thể, không phải mọi câu hỏi
+Không nên chỉ hỏi “treatment giảm risk bao nhiêu?” mà phải hỏi thêm “treatment làm tăng harm nào, ở mức tuyệt đối bao nhiêu?”.
 
-**Thử nghiệm ngẫu nhiên có đối chứng (randomized controlled trial — RCT / 무작위 대조시험)** giúp cân bằng confounder giữa treatment groups theo expectation khi thiết kế và thực hiện tốt.
+Một can thiệp có thể giảm một outcome nhưng tăng bleeding, infection, side effect hoặc burden khác. Vì vậy decision cần đặt benefit và harm trên cùng thang thời gian và population nếu có thể.
 
-Nhưng một RCT vẫn cần đọc:
+## 16. Kết quả thay thế và kết quả người bệnh quan tâm
+
+**Kết quả thay thế (surrogate outcome / 대리지표)** là chỉ số trung gian như biomarker hoặc lab value được dùng thay cho outcome cuối cùng.
+
+Surrogate có thể hữu ích và đôi khi cần thiết, nhưng cải thiện surrogate không luôn đảm bảo cải thiện mortality, symptoms, function hoặc quality of life.
+
+Khi đọc nghiên cứu, hỏi:
 
 ```text
-population là ai?
-intervention chính xác là gì?
-comparator là gì?
-follow-up bao lâu?
-primary outcome là gì?
-loss to follow-up?
-adherence / crossover?
-absolute effect size?
-harms?
+outcome này có phải điều người bệnh thật sự cảm nhận/quan tâm không?
+nếu là surrogate, mối liên hệ với clinical outcome mạnh tới đâu?
 ```
 
-Một RCT rất tốt ở population A không tự động externalize sang population B khác tuổi, comorbidity hoặc baseline risk.
+## 17. Loại nghiên cứu quyết định loại kết luận có thể rút ra
 
-## 14. Surrogate endpoint có thể hữu ích nhưng không đồng nghĩa patient outcome
+Không thể gộp mọi câu “nghiên cứu cho thấy” thành cùng mức bằng chứng.
 
-Một **surrogate endpoint** là measurement trung gian được kỳ vọng liên quan tới outcome thực sự quan trọng, ví dụ biomarker.
-
-Surrogate giúp trial nhanh hoặc khả thi hơn, nhưng intervention có thể cải thiện surrogate mà không cải thiện survival, symptom hoặc quality of life tương ứng.
-
-Do đó luôn hỏi:
-
-> Outcome này là thứ bệnh nhân trực tiếp cảm nhận/sống lâu hơn, hay là marker trung gian?
-
-## 15. Relative risk có thể làm effect trông lớn hơn
-
-Giả sử risk giảm từ 2% xuống 1%.
-
-**Relative risk reduction:**
+Các lớp thường gặp:
 
 ```text
-(2% - 1%) / 2% = 50%
+nghiên cứu tế bào / cơ chế
+→ nghiên cứu động vật
+→ nghiên cứu quan sát
+→ thử nghiệm lâm sàng ngẫu nhiên có đối chứng
+→ tổng quan hệ thống / meta-analysis
+→ guideline tổng hợp evidence + values + feasibility
 ```
 
-**Absolute risk reduction:**
+Mỗi loại trả lời câu hỏi khác nhau. Nghiên cứu quan sát mạnh ở pattern ngoài đời thật nhưng dễ có confounding; thử nghiệm ngẫu nhiên mạnh hơn cho causal effect trong population được chọn nhưng có thể không phản ánh mọi bệnh nhân ngoài thực tế.
+
+> **Chuyển mạch:** Sau khi biết study type, vẫn chưa đủ. Cần xem cách nghiên cứu được thiết kế và đo lường.
+
+## 18. Randomization, blinding và control group giải quyết các bias khác nhau
+
+**Ngẫu nhiên hóa (randomization / 무작위배정)** cố làm các nhóm cân bằng về cả yếu tố đã biết và chưa biết.
+
+**Làm mù (blinding / 눈가림)** giảm ảnh hưởng của kỳ vọng lên treatment, measurement hoặc reporting khi áp dụng được.
+
+**Nhóm đối chứng (control group / 대조군)** cho biết điều gì xảy ra nếu không nhận intervention đang xét hoặc nhận standard care/placebo/alternative.
+
+Không có yếu tố nào tự đảm bảo nghiên cứu hoàn hảo. Loss to follow-up, protocol deviation, selective reporting và measurement bias vẫn có thể làm kết luận yếu đi.
+
+## 19. Kích thước hiệu quả và khoảng tin cậy quan trọng hơn chỉ p-value
+
+**Kích thước hiệu quả (effect size / 효과크기)** cho biết can thiệp thay đổi outcome nhiều tới đâu.
+
+**Khoảng tin cậy (confidence interval / 신뢰구간)** cho biết mức bất định quanh ước lượng.
+
+Một p-value nhỏ không tự nói effect lớn hay có ý nghĩa lâm sàng. Một effect nhỏ có thể “statistically significant” trong sample rất lớn nhưng không đáng kể cho người bệnh.
+
+Khi đọc nghiên cứu, ưu tiên câu hỏi:
 
 ```text
-2% - 1% = 1 percentage point
+effect lớn tới đâu?
+uncertainty rộng thế nào?
+range nào còn phù hợp với dữ liệu?
+range đó có thay đổi decision không?
 ```
 
-Hai cách đều đúng nhưng trả lời câu khác nhau.
+## 20. Association không tự trở thành causation
 
-Một headline “giảm risk 50%” có thể rất khác về practical significance tùy baseline risk.
+Nếu người dùng thuốc A có outcome tốt hơn, có thể vì thuốc giúp, nhưng cũng có thể vì nhóm đó khác về tuổi, bệnh nền, access to care, adherence hoặc socioeconomic status.
 
-## 16. Number Needed to Treat phụ thuộc baseline và horizon
+**Yếu tố gây nhiễu (confounding / 교란)** là một trong các lý do association không đủ để kết luận causal effect.
 
-Từ absolute risk reduction có thể tính gần đúng:
+Research Methods sở hữu phần causal inference sâu hơn; health literacy chỉ cần biết khi nào headline đã đi xa hơn evidence.
+
+## 21. External validity: kết quả nghiên cứu có áp dụng cho người khác không?
+
+Một nghiên cứu có thể đúng trong sample nhưng không áp dụng hoàn toàn cho population khác.
+
+Cần đối chiếu:
+
+- tuổi;
+- giới;
+- mức độ bệnh;
+- bệnh nền;
+- treatment setting;
+- duration;
+- healthcare system;
+- concurrent medication;
+- baseline risk.
+
+Effect thường thay đổi theo baseline risk. Vì vậy “treatment giảm 40%” ở một population không thể tự động copy sang mọi người.
+
+## 22. Guideline không phải mệnh lệnh tuyệt đối
+
+**Hướng dẫn lâm sàng (clinical guideline / 임상진료지침)** tổng hợp evidence, cân benefit–harm, feasibility và đôi khi resource considerations.
+
+Guideline hữu ích vì nó gom nhiều nghiên cứu và chuyên môn, nhưng vẫn có:
+
+- phạm vi áp dụng;
+- ngày cập nhật;
+- mức độ mạnh của recommendation;
+- exception;
+- khác biệt giữa organization/country.
+
+Một recommendation “strong” và “conditional” không có cùng mức chắc chắn hay cùng độ linh hoạt.
+
+## 23. Shared decision-making nối evidence với giá trị cá nhân
+
+**Ra quyết định chung (shared decision-making / 공유의사결정)** xuất hiện khi có nhiều lựa chọn hợp lý hoặc trade-off phụ thuộc vào điều người bệnh coi trọng.
+
+Mô hình là:
 
 ```text
-NNT = 1 / absolute risk reduction
+evidence
++ expected benefit/harm
++ uncertainty
++ patient values
++ practical constraints
+→ quyết định chung
 ```
 
-Nếu ARR = 0.01 thì NNT ≈ 100 trong time horizon của study.
+Evidence không thể tự sinh ra value. Hai người có cùng probability và cùng treatment effect vẫn có thể chọn khác nếu ưu tiên quality of life, fertility, pain tolerance, work schedule hoặc risk tolerance khác nhau.
 
-NNT không phải constant vĩnh viễn của một treatment. Nó phụ thuộc baseline risk, follow-up time, endpoint và population.
+## 24. Hiệu ứng placebo và nocebo thay đổi trải nghiệm nhưng không chứng minh cơ chế bệnh
 
-Tương tự, harm có thể mô tả bằng absolute increase và **Number Needed to Harm (NNH)** khi phù hợp.
+**Hiệu ứng placebo (placebo effect / 플라세보 효과)** và **hiệu ứng nocebo (nocebo effect / 노시보 효과)** cho thấy kỳ vọng, bối cảnh và cách giao tiếp có thể thay đổi triệu chứng hoặc trải nghiệm side effect.
 
-## 17. Benefit và harm phải dùng cùng denominator/time horizon
+Điều này không có nghĩa “mọi bệnh chỉ do tâm lý”. Nó có nghĩa treatment context là một phần của outcome, đặc biệt với pain, nausea, anxiety và subjective symptoms.
 
-Không nên so:
+Psychology sở hữu phần sâu hơn tại [Placebo/Nocebo](../../psychology/06_applied/13_placebo_nocebo_expectation_and_context.md).
+
+## 25. Thuốc cần được hiểu như một hệ thống lợi ích–tác hại–tương tác
+
+Khi đọc nhãn hoặc hướng dẫn thuốc, ít nhất phải tách:
 
 ```text
-benefit relative risk over 10 years
-với
-harm absolute risk over 3 months
+indication — dùng để làm gì
+contraindication — khi nào không nên dùng
+common adverse effects — tác dụng phụ thường gặp
+serious warning — nguy cơ nghiêm trọng
+interaction — tương tác thuốc/thực phẩm
+schedule — liều và thời điểm
+adherence — dùng đúng kế hoạch
+monitoring — cần theo dõi gì
 ```
 
-mà không làm rõ denominator và horizon.
+Không nên tự tăng/giảm/ngừng thuốc kê đơn chỉ dựa vào chapter này. Mục tiêu là biết cách đọc và đặt câu hỏi với bác sĩ/dược sĩ.
 
-Một decision aid tốt nên trình bày benefit/harm trên cùng population scale nếu có thể, ví dụ “trên 1,000 người trong 5 năm”.
+## 26. “Tự nhiên” không đồng nghĩa “an toàn”
 
-## 18. Statistical significance không bằng clinical importance
+Thực phẩm bổ sung, thảo dược và sản phẩm “natural” vẫn có dose, interaction, contamination, quality-control và evidence problem.
 
-Một effect nhỏ có thể đạt statistical significance với sample rất lớn nhưng ít ý nghĩa clinical. Ngược lại study nhỏ có thể không đạt threshold dù effect estimate có thể quan trọng nhưng uncertainty rộng.
-
-Cần nhìn:
+Cần tách:
 
 ```text
-effect size
-confidence interval
-baseline risk
-patient-relevant outcome
-study quality
-consistency
+có cơ chế sinh học hợp lý?
+→ có clinical evidence không?
+→ liều dùng có tương đương nghiên cứu không?
+→ purity/standardization ra sao?
+→ interaction với thuốc khác?
 ```
 
-p-value không thay toàn bộ evaluation.
+Cơ chế hợp lý là điểm bắt đầu của nghiên cứu, không phải bằng chứng đủ cho efficacy.
 
-## 19. Confidence interval là vùng uncertainty, không phải tem chất lượng
+## 27. Medical imaging và incidental finding tạo bài toán riêng
 
-Một interval rộng báo estimate còn không chắc. Một interval hẹp có thể precise nhưng vẫn biased nếu study design sai.
+CT, MRI, ultrasound và các kỹ thuật hình ảnh có thể phát hiện **phát hiện tình cờ (incidental finding / 우연발견)** không liên quan lý do chụp.
 
-Precision và validity là hai vấn đề khác nhau.
+Phát hiện thêm thông tin không luôn đồng nghĩa tăng lợi ích. Nó có thể dẫn tới follow-up imaging, biopsy, anxiety và overdiagnosis.
 
-Một measurement rất precise của wrong construct vẫn cho answer rất chắc nhưng sai câu hỏi.
+Cần hỏi: finding này có khả năng thay management không, guideline khuyến nghị gì, và risk của follow-up là gì?
 
-## 20. Systematic review mạnh khi input studies và synthesis phù hợp
+## 28. Screening theo dõi người khỏe khác surveillance ở người đã có nguy cơ
 
-**Tổng quan hệ thống (systematic review / 체계적 문헌고찰)** không tự động là evidence hoàn hảo chỉ vì nằm trên “đỉnh evidence pyramid”. Chất lượng còn phụ thuộc:
+Một người từng có bệnh hoặc có genetic/high-risk status có thể cần **theo dõi chủ động (surveillance / 추적감시)** khác với chương trình screening cho population nguy cơ trung bình.
+
+Nhầm hai nhóm dễ dẫn tới dùng guideline sai population.
+
+## 29. Khi nào repeated testing làm tăng noise hơn signal
+
+Xét nghiệm nhiều lần không luôn làm chắc chắn hơn. Nếu mỗi lần đo có variation và test được thực hiện khi pre-test probability rất thấp, repeated testing có thể tạo false positive tích lũy.
+
+Thông tin chỉ hữu ích khi nó có khả năng thay đổi decision. Đây là ứng dụng của **giá trị thông tin (value of information / 정보가치)** từ decision theory.
+
+## 30. Một “second opinion” có giá trị khi câu hỏi rõ
+
+Ý kiến thứ hai hữu ích khi diagnosis uncertain, treatment irreversible/high-risk, nhiều option hợp lý hoặc expertise rất chuyên biệt.
+
+Nhưng second opinion không nên trở thành việc hỏi vô hạn cho tới khi gặp câu trả lời mong muốn. Cần biết đang muốn kiểm điều gì: diagnosis, pathology interpretation, treatment option hay risk estimate.
+
+## 31. Thông tin online cần một hierarchy nguồn
+
+Một hierarchy thực dụng:
 
 ```text
-search completeness
-study eligibility
-risk of bias
-heterogeneity
-publication bias
-outcome definition
-meta-analysis model
-certainty assessment
+cơ quan y tế / guideline chuyên môn hiện hành
+→ systematic review / high-quality synthesis
+→ peer-reviewed primary study
+→ hospital/medical center educational material
+→ journalism có trích nguồn
+→ blog / forum / social media
 ```
 
-Garbage in, pooled garbage out vẫn có thể xảy ra.
+Nguồn thấp hơn có thể hữu ích cho trải nghiệm hoặc từ khóa nhưng không nên tự thay nguồn cao hơn cho clinical claim.
 
-## 21. Guideline là evidence + value judgment + feasibility
+## 32. Headline thường làm mất denominator và uncertainty
 
-Clinical guideline thường không chỉ copy effect size. Recommendation còn cân nhắc:
+Một headline như “thuốc giảm nguy cơ 40%” thiếu ít nhất:
 
-```text
-benefit
-harm
-evidence certainty
-patient values
-resource use
-feasibility
-equity
-```
+- baseline risk;
+- absolute risk reduction;
+- follow-up duration;
+- outcome definition;
+- study design;
+- confidence interval;
+- harms;
+- population;
+- comparator.
 
-Vì vậy hai guideline có thể khác recommendation dù đọc overlapping evidence, đặc biệt khi trade-off gần nhau hoặc healthcare systems khác nhau.
+Đọc headline nên là bước mở câu hỏi, không phải điểm kết thúc.
 
-Khi guideline liên quan quyết định thật, cần dùng phiên bản hiện hành của tổ chức có thẩm quyền tại jurisdiction phù hợp thay vì dựa vào một note tĩnh.
+## 33. Anecdote có salience cao nhưng denominator thấp
 
-## 22. Shared decision-making bắt đầu khi có nhiều option hợp lý
+Một người gặp side effect nặng là thông tin thật về khả năng có thể xảy ra, nhưng không cho biết incidence. Ngược lại, một người dùng thuốc tốt không chứng minh thuốc an toàn cho mọi population.
 
-**Ra quyết định chung (shared decision-making / 공유 의사결정)** không có nghĩa clinician và patient mỗi bên “50% kiến thức”. Clinician mang expertise về evidence, diagnosis và treatment; patient mang values, goals, lived experience và constraints.
+Anecdote hữu ích để phát hiện loại outcome cần quan tâm; muốn biết mức nguy cơ phải quay về denominator và evidence tổng hợp.
 
-Một cấu trúc hữu ích:
+## 34. Search có thể trở thành vòng lặp xác nhận
 
-```text
-what are my options?
-what are the likely benefits?
-what are the likely harms/burdens?
-how certain is the evidence?
-what happens if we wait/watch?
-which outcome matters most to me?
-what follow-up changes the plan?
-```
+Khi lo lắng cao, tìm kiếm lặp lại dễ biến thành **vòng lặp xác nhận (confirmation loop / 확증 반복)**: tiếp tục search cho tới khi gặp kết quả phù hợp với điều mình sợ hoặc muốn tin.
 
-## 23. Watchful waiting cũng là một action có monitoring
-
-“Chưa điều trị ngay” không đồng nghĩa “không làm gì”. Một **watchful waiting / active surveillance** plan tốt phải nói:
-
-```text
-what is being monitored?
-when re-check?
-what threshold changes management?
-what symptom/change requires earlier review?
-```
-
-Không có follow-up condition thì “đợi” dễ biến thành loss to follow-up.
-
-## 24. Medication literacy: đọc active ingredient trước brand
-
-Một medicine label cần ít nhất:
-
-```text
-active ingredient
-dose per unit
-route
-frequency
-maximum dose nếu có
-duration
-indication
-contraindication / caution
-major interaction
-```
-
-Brand name có thể khác giữa countries; nhiều combination products có thể chứa cùng active ingredient.
-
-Do đó một risk đời thường là **duplicate ingredient** khi dùng nhiều OTC/cold/pain products cùng lúc mà chỉ nhìn brand.
-
-Khi không chắc, pharmacist là nguồn phù hợp để kiểm tra active ingredient, duplication và interaction.
-
-## 25. Dose khác concentration và amount
-
-Ví dụ liquid medicine có thể ghi `mg/mL`. Cần phân biệt:
-
-```text
-dose = amount of active ingredient intended
-concentration = active ingredient per volume
-volume administered = mL actually taken
-```
-
-Sai unit hoặc nhầm mg với mL là category error, không chỉ arithmetic error.
-
-Không tự chuyển liều từ người lớn sang trẻ em bằng phép chia đơn giản; pediatric dosing phụ thuộc product, indication, weight/age và guidance cụ thể.
-
-## 26. “Natural” không đồng nghĩa risk-free
-
-Supplement, herb hoặc traditional product vẫn có thể có pharmacological effect, contamination, dose variability hoặc interaction.
-
-Risk evaluation nên hỏi cùng câu hỏi như thuốc khác:
-
-```text
-active component là gì?
-evidence cho indication?
-dose?
-interaction?
-quality control?
-who should avoid it?
-```
-
-Label “natural” là source category, không phải safety proof.
-
-## 27. Adherence failure có thể trông như treatment failure
-
-Nếu medication không được dùng theo regimen thực tế, outcome không phản ánh đầy đủ efficacy của regimen đó.
-
-Lý do non-adherence có thể là:
-
-```text
-side effect
-cost
-complex schedule
-forgetfulness
-belief/fear
-symptom improved
-instructions unclear
-```
-
-Vì vậy câu hỏi “thuốc không hiệu quả?” đôi khi phải tách khỏi “regimen có được thực hiện không và vì sao?”.
-
-## 28. Placebo và nocebo không có nghĩa symptom là tưởng tượng
-
-Expectation, learning và context có thể thay perception của symptom và một số physiological response. [Placebo, nocebo, expectation and context](../../psychology/06_applied/13_placebo_nocebo_expectation_and_context.md) giải thích mechanism sâu hơn.
-
-Điểm practical là cách risk được communicated có thể thay experience và adherence. Nhưng placebo/nocebo không được dùng để phủ nhận disease mechanism hoặc thay evidence-based treatment khi treatment cần thiết.
-
-## 29. Online symptom checker là triage aid, không phải oracle
-
-Search engine hoặc AI có thể giúp tạo câu hỏi, giải thích terminology và chuẩn bị cho appointment. Nhưng chúng thiếu hoặc không verify đầy đủ:
-
-```text
-physical examination
-complete history
-vital signs
-full medication list
-reliable test context
-local epidemiology
-longitudinal record
-```
-
-Do đó confidence của generated text không nên được nhầm với clinical certainty.
-
-## 30. Triage không nên học bằng một danh sách red flags bất biến
-
-Urgency phụ thuộc symptom, severity, onset, age, pregnancy, comorbidity, medication và context. Một static note không thể bao phủ mọi emergency.
-
-Mental model an toàn hơn là:
-
-```text
-rapid/severe deterioration
-possible threat to breathing/circulation/neurologic function
-major injury/poisoning
-high-risk context
-→ use local urgent/emergency pathway rather than continue self-research
-```
-
-Khi nghi ngờ tình huống khẩn cấp, dùng dịch vụ y tế khẩn cấp tại nơi đang sống. Chapter này không cung cấp protocol triage cá nhân.
-
-## 31. Hãy chuẩn bị appointment như một data handoff
-
-Một clinician có thể reason tốt hơn khi input rõ. Một note ngắn hữu ích thường gồm:
-
-```text
-main concern
-onset + timeline
-what makes it better/worse
-severity/function impact
-relevant measurements
-medications/supplements
-allergies
-important past history
-what you are worried about
-questions you want answered
-```
-
-Không cần viết essay; timeline và medication list chính xác thường có giá trị hơn nhiều screenshot rời.
-
-## 32. Hỏi “điều gì sẽ thay đổi quyết định?”
-
-Một test có giá trị khi result có thể thay management.
-
-Nếu cả positive lẫn negative result đều không thay action, cần hỏi test đang phục vụ mục đích gì: reassurance, documentation, prognosis, eligibility hay curiosity?
-
-Đây là **giá trị thông tin (value of information / 정보 가치)** trong decision science.
-
-## 33. Repeat testing có thể tạo false alarms
-
-Nếu test nhiều independent measurements với reference range 95%, ngay cả người khỏe hoàn toàn cũng có xác suất ít nhất một value ngoài range tăng khi số test tăng.
-
-Conceptually:
-
-```text
-P(at least one outside range)
-= 1 - P(all inside range)
-```
-
-Điều này không có nghĩa ignore abnormal results. Nó giải thích vì sao large panels tạo incidental findings và cần interpretation thay vì panic theo từng flag.
-
-## 34. Family history là risk information, không phải destiny
-
-Family history có thể phản ánh genetics, shared environment hoặc cả hai. Nó thay prior probability cho một số condition nhưng không xác định chắc outcome cá nhân.
-
-Genetic result cũng cần context về penetrance, variant classification và population evidence. Một “gene for X” headline thường oversimplify nhiều tầng uncertainty.
-
-## 35. Health information thay đổi theo thời gian
-
-Guideline, drug safety information và screening recommendation có thể thay khi evidence mới xuất hiện. Vì vậy repository nên lưu **mental models evergreen**, còn con số tuổi, interval, dose, contraindication hoặc jurisdiction-specific rule cần kiểm tra nguồn hiện hành trước quyết định.
-
-Đây là boundary quan trọng giữa knowledge library và clinical reference.
-
-## 36. Financial dimension của healthcare
-
-Healthcare decision có thể tạo:
-
-```text
-out-of-pocket cost
-lost work time
-insurance claim complexity
-future premium / coverage implications tùy system
-travel/caregiver cost
-```
-
-Nhưng cost không nên được tách khỏi expected benefit/harm. Personal finance route tại [Tài chính cá nhân trước khi đầu tư](../../investing/01_foundations/07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md) giúp xem medical shock như một balance-sheet/liquidity risk mà không biến health decision thành pure financial optimization.
-
-## 37. Communication failure là một clinical risk
-
-Một plan tốt có thể fail nếu patient hiểu khác clinician. Trước khi rời appointment, cần rõ:
-
-```text
-working diagnosis / uncertainty là gì?
-plan hiện tại là gì?
-medicine/test dùng để làm gì?
-expected timeline?
-what changes the plan?
-when/how follow up?
-```
-
-**Teach-back** là kỹ thuật người nhận nhắc lại plan bằng lời của mình để kiểm tra shared understanding, không phải test trí nhớ.
-
-Psychology về communication/conflict nằm tại [Interpersonal Communication and Conflict](../../psychology/06_applied/03_interpersonal_communication_and_conflict.md).
-
-## 38. Worked example: đọc một headline treatment claim
-
-Giả sử headline nói:
-
-> “Treatment A giảm risk của outcome X 40%.”
-
-Không vội kết luận. Đi theo route:
-
-```text
-1. population nào?
-2. baseline risk bao nhiêu?
-3. 40% là relative hay absolute?
-4. follow-up bao lâu?
-5. outcome patient-important hay surrogate?
-6. comparator là placebo, usual care hay treatment khác?
-7. harm/side effect bao nhiêu?
-8. confidence interval?
-9. study design?
-10. result đã được replicate/synthesized chưa?
-```
-
-Nếu baseline risk giảm từ 5% xuống 3%, relative reduction là 40% nhưng absolute reduction là 2 percentage points. Hai con số mô tả cùng effect nhưng practical interpretation khác.
-
-## 39. Worked example: đọc một positive screening result
-
-Một positive result không nên được dịch thẳng thành diagnosis. Route reasoning là:
-
-```text
-screening population risk
-→ test characteristics
-→ result
-→ post-test probability
-→ confirmatory pathway nếu guideline yêu cầu
-→ benefit/harm of next action
-```
-
-Câu hỏi cần hỏi clinician có thể là:
-
-```text
-Kết quả này thay xác suất condition lên khoảng mức nào?
-Có cần confirmatory test không?
-False positive/common benign explanation là gì?
-Nếu chờ và repeat thì trade-off gì?
-```
-
-## 40. Failure mode: dùng reference range như binary diagnosis
-
-Flag `H` hoặc `L` là signal để interpret, không phải diagnosis label.
-
-## 41. Failure mode: dùng anecdote thay denominator
-
-Một người quen có side effect nặng là information thật nhưng không cho biết incidence. Ngược lại một người dùng tốt không chứng minh treatment an toàn cho mọi population.
-
-Anecdote mạnh về salience, yếu về denominator.
-
-## 42. Failure mode: “study says” nhưng không xác định study type
-
-Cell study, animal study, observational association, small trial, large randomized trial và systematic review trả lời các tầng câu hỏi khác nhau. Không được collapse tất cả thành “scientists proved”.
-
-## 43. Failure mode: search cho tới khi gặp answer mong muốn
-
-Khi anxiety cao, repeated searching dễ biến thành confirmation loop. Một process tốt đặt stopping rule:
+Một stopping rule hữu ích là:
 
 ```text
 source hierarchy đã đủ chưa?
-question cần clinician/data mới không?
-search thêm có thay decision không?
+question này cần clinician hay data mới không?
+search thêm có khả năng thay decision không?
 ```
 
-Nếu không, information acquisition có diminishing return và có thể tăng distress.
+Nếu không, thông tin mới có lợi ích biên giảm và có thể tăng distress.
 
-## 44. Mô hình tư duy tổng hợp
+## 35. Giao tiếp là một phần của an toàn lâm sàng
+
+Một kế hoạch tốt vẫn có thể thất bại nếu người bệnh và bác sĩ hiểu khác nhau.
+
+Trước khi kết thúc buổi khám, nên rõ:
+
+- chẩn đoán làm việc (working diagnosis / 잠정 진단) và mức bất định;
+- kế hoạch hiện tại;
+- thuốc/xét nghiệm dùng để làm gì;
+- thời gian kỳ vọng;
+- dấu hiệu nào làm thay đổi kế hoạch;
+- khi nào và bằng cách nào follow-up.
+
+**Nhắc lại để kiểm tra hiểu (teach-back / 재설명 확인)** là kỹ thuật người nhận diễn đạt lại kế hoạch bằng lời của mình để phát hiện hiểu sai, không phải kiểm tra trí nhớ.
+
+## 36. Chi phí y tế phải được đặt trong benefit–harm, không tách riêng
+
+Quyết định y tế có thể tạo direct cost, time cost, caregiver cost, travel cost, lost income và insurance implications. Nhưng tài chính không được thay thế clinical benefit/harm.
+
+Personal finance route tại [Tài chính cá nhân trước khi đầu tư](../../investing/01_foundations/07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md) giúp nhìn medical shock như liquidity/balance-sheet risk, không biến health decision thành bài tối ưu tiền thuần túy.
+
+## 37. Ví dụ: đọc tuyên bố “giảm nguy cơ 40%”
+
+Giả sử headline nói treatment A giảm risk outcome X 40%. Không vội kết luận. Đi theo route:
 
 ```text
-symptom / observation
-      ↓
-context + baseline risk
-      ↓
-measurement quality
-      ↓
-Bayesian update
-      ↓
-evidence quality + effect size
-      ↓
-absolute benefit / harm
-      ↓
-patient values + constraints
-      ↓
-decision + follow-up trigger
+population nào?
+baseline risk bao nhiêu?
+40% là relative hay absolute?
+follow-up bao lâu?
+outcome là patient-important hay surrogate?
+comparator là gì?
+harm/side effect bao nhiêu?
+confidence interval?
+study design?
+đã có replication/synthesis chưa?
 ```
 
-Health literacy tốt không tạo certainty giả. Nó giúp biết **uncertainty đang nằm ở đâu** và evidence nào có thể giảm uncertainty đủ để thay action.
+Nếu baseline risk giảm từ 5% xuống 3%, relative reduction là 40% nhưng absolute reduction là 2 điểm phần trăm. Hai con số đều đúng nhưng practical meaning khác nhau.
 
-## 45. Kết nối
+## 38. Ví dụ: đọc một kết quả sàng lọc dương tính
 
-Để hiểu physiology và disease mechanism, quay về các chapter Biology liên quan. Để hiểu sensitivity, Bayes và decision threshold, đọc [Probability → Calibration → Decision and Risk](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md). Để đánh giá causal claim và synthesis, đọc [Research Methods](../../research_methods/README.md). Để hiểu risk perception và nocebo, đọc [Risk, Uncertainty and Science Communication](../../psychology/90_connections/03_risk_uncertainty_and_science_communication.md) cùng [Placebo/Nocebo](../../psychology/06_applied/13_placebo_nocebo_expectation_and_context.md).
+Một kết quả dương tính không được dịch thẳng thành diagnosis. Workflow là:
 
-Từ đây, practical-life route nối healthcare với finance, communication và career tại [Practical-life decision route](../../psychology/90_connections/07_practical_life_decisions_finance_health_communication_and_career.md).
+```text
+nguy cơ của population
+→ đặc tính test
+→ result
+→ xác suất sau test
+→ confirmatory pathway nếu guideline yêu cầu
+→ benefit/harm của bước tiếp theo
+```
 
-> **Bàn giao:** Sau chapter này, người đọc nên có thể nhìn một test, screening claim hoặc treatment headline và tách được prior probability, measurement quality, effect size, uncertainty, benefit/harm và follow-up. Khi quyết định phụ thuộc medical details cá nhân, bước tiếp theo là trao đổi với professional phù hợp chứ không kéo dài suy luận từ tài liệu tĩnh.
+Câu hỏi nên hỏi bác sĩ:
+
+- kết quả này thay xác suất lên khoảng mức nào?
+- có cần test xác nhận không?
+- nguyên nhân lành tính hoặc dương tính giả thường gặp là gì?
+- nếu chờ và lặp lại test thì trade-off là gì?
+
+## 39. Ví dụ: một lab result ngoài reference range
+
+Không đọc `H` hoặc `L` như chẩn đoán. Cần hỏi:
+
+```text
+mức lệch lớn hay nhỏ?
+result có lặp lại không?
+điều kiện lấy mẫu có ảnh hưởng không?
+có symptom/context phù hợp không?
+chỉ số liên quan khác ra sao?
+việc biết result này có thay management không?
+```
+
+Cách này biến con số thành một phần của reasoning thay vì nhãn bệnh.
+
+## 40. Dấu hiệu cần chuyển sang chuyên môn thay vì tiếp tục tự suy luận
+
+Tài liệu tĩnh không thể xác định mức độ khẩn cấp cho từng người. Nếu có triệu chứng nặng, tiến triển nhanh, mất ý thức, khó thở nghiêm trọng, đau ngực, dấu hiệu thần kinh cấp, chảy máu lớn hoặc bất kỳ tình trạng nào có thể đe dọa tính mạng, cần dùng dịch vụ y tế khẩn cấp phù hợp tại nơi đang sống.
+
+Với vấn đề không khẩn cấp nhưng diagnosis/treatment phụ thuộc history, physical examination, prescription hoặc test interpretation, bước tiếp theo là bác sĩ/dược sĩ phù hợp chứ không kéo dài suy luận từ tài liệu chung.
+
+## 41. Mô hình tổng hợp
+
+```text
+triệu chứng / quan sát
+      ↓
+bối cảnh + nguy cơ nền
+      ↓
+chất lượng đo lường
+      ↓
+cập nhật xác suất
+      ↓
+chất lượng bằng chứng + effect size
+      ↓
+lợi ích / tác hại tuyệt đối
+      ↓
+giá trị + ràng buộc của người bệnh
+      ↓
+quyết định + trigger theo dõi
+```
+
+Hiểu biết y tế tốt không tạo certainty giả. Nó giúp biết **bất định đang nằm ở đâu** và evidence nào có thể giảm bất định đủ để làm thay đổi hành động.
+
+## 42. Kết nối và bàn giao
+
+Để hiểu physiology và disease mechanism, quay về các chapter Biology liên quan. Để hiểu Bayes, sensitivity, calibration và decision threshold, đọc [Xác suất → hiệu chuẩn → quyết định và rủi ro](../../mathematics/09_connections/07_probability_calibration_decision_and_risk.md). Để đánh giá causal claim và evidence synthesis, đọc [Research Methods](../../research_methods/README.md). Để hiểu risk perception, communication và nocebo, đọc [Risk, Uncertainty and Science Communication](../../psychology/90_connections/03_risk_uncertainty_and_science_communication.md) cùng [Placebo/Nocebo](../../psychology/06_applied/13_placebo_nocebo_expectation_and_context.md).
+
+Sau khi hiểu quyết định y tế như một bài toán evidence + values + constraints, có thể nối sang [Practical-life decision route](../../psychology/90_connections/07_practical_life_decisions_finance_health_communication_and_career.md) để xem sức khỏe tương tác với tài chính, giao tiếp và nghề nghiệp ra sao.
+
+> **Bàn giao:** Sau chapter này, người đọc nên có thể nhìn một xét nghiệm, tuyên bố sàng lọc hoặc headline điều trị và tách được **xác suất ban đầu → chất lượng phép đo → cập nhật xác suất → chất lượng bằng chứng → lợi ích/tác hại tuyệt đối → quyết định và follow-up**. Khi quyết định phụ thuộc chi tiết y khoa cá nhân, bước tiếp theo là trao đổi với chuyên môn phù hợp.
