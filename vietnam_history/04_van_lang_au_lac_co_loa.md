@@ -8,7 +8,7 @@
 
 Với Âu Lạc, bốn lớp đọc phải đi cùng nhau: **mốc** cuối thiên niên kỷ I TCN, **kinh tế** lúa nước–luyện kim và lao động công trình, **bối cảnh** Nam Việt cùng các mạng phía nam Trung Hoa, và **địa điểm** Cổ Loa–Đền Hùng. Nếu bỏ một lớp, ta hoặc biến truyền thuyết thành niên đại chắc chắn, hoặc biến thành lũy thành một vật thể quân sự không có xã hội đứng sau.
 
-## Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn
+## Văn Lang: rất quan trọng trong ký ức lịch sử, nhưng niên đại truyền thống không phải mốc khảo cổ chắc chắn
 
 Trong truyền thống sử Việt, **Văn Lang** gắn với các vua Hùng và vùng Phong Châu. Con số “18 đời Hùng Vương” và niên đại rất sớm thường xuất hiện trong narrative phổ thông. Nhưng nguồn thành văn ghi lại những tradition này muộn hơn rất nhiều so với thời kỳ chúng mô tả, còn archaeology không cho phép xác nhận một danh sách 18 vị vua hay mốc 2879 TCN như một chronology chính xác.
 
@@ -22,7 +22,7 @@ Trong truyền thống sử Việt, **Văn Lang** gắn với các vua Hùng và
 
 Ba câu trả lời có thể cùng tồn tại mà không cần giả vờ chúng có cùng độ chắc chắn.
 
-## Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology
+## Đền Hùng: nơi tốt để học ký ức lịch sử hơn là dùng như máy đo niên đại
 
 **Khu di tích lịch sử Đền Hùng (Phú Thọ)** gắn mạnh với tín ngưỡng thờ Hùng Vương. Khi đến đây, người học nên quan sát hai timeline đồng thời. Timeline thứ nhất là tradition kể về thời Hùng. Timeline thứ hai là lịch sử của chính việc thờ cúng, xây dựng, tu sửa và institutionalization ký ức qua các thời sau.
 

@@ -68,7 +68,7 @@ Tây Sơn nhanh chóng mở rộng và tấn công Nguyễn authority. Đến cu
 
 Không nên biến xung đột (conflict / 충돌) thành duel cá nhân Nguyễn Huệ vs Nguyễn Ánh quá sớm. Ở giai đoạn này, movement Tây Sơn có nhiều centre và nội bộ (internal / 내부) division; Nguyễn resistance cũng dựa vào regional allies, merchant tài nguyên (resource / 자원) và bên ngoài (external / 외부) hỗ trợ (support / 지원).
 
-## 1785 Rạch Gầm–Xoài Mút: river warfare và Siam intervention
+## 1785 Rạch Gầm–Xoài Mút: chiến tranh sông nước và can thiệp của Xiêm
 
 Nguyễn Ánh tìm hỗ trợ từ Xiêm; quân Xiêm tiến vào Nam Bộ. Nguyễn Huệ đánh bại lực lượng này tại **Rạch Gầm–Xoài Mút năm 1785**.
 

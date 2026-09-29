@@ -66,7 +66,7 @@ Không nên ghép mọi uprising vào một master story identical. Mỗi rebell
 
 Bộ nhớ (memory / 메모리) về Bà Triệu cũng trở thành một long-term cultural symbol. Như với Hai Bà Trưng, later temples cho ta bằng chứng (evidence / 증거) mạnh về remembrance nhưng không tự động là bằng chứng (evidence / 증거) trực tiếp của battlefield detail.
 
-## Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment
+## Lý Bí và Vạn Xuân: bước chuyển từ nổi dậy sang thử nghiệm xây dựng nhà nước
 
 Thế kỷ VI xuất hiện một bước qualitatively different. **Lý Bí (Lý Nam Đế)** nổi dậy chống nhà Lương và năm **544** tuyên lập **Vạn Xuân**. Đây không chỉ là protest chống một official. Movement cố xây một alternative political thứ tự (order / 순서).
 

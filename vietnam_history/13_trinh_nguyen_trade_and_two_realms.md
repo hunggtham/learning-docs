@@ -56,7 +56,7 @@ defender can survive without conquering north
 
 Kết quả là chiến tranh kéo dài nhưng không tạo decisive unification. Khi active warfare giảm sau 1672, hai political hệ thống (system / 시스템) tiếp tục phát triển theo quỹ đạo khác nhau.
 
-## Đàng Ngoài: court, military government và Red River agrarian cốt lõi (core / 핵심)
+## Đàng Ngoài: triều đình, chính quyền quân sự và nền nông nghiệp sông Hồng
 
 Ở Đàng Ngoài, vua Lê tiếp tục giữ vị trí biểu tượng, trong khi chúa Trịnh xây dựng một apparatus song song đủ mạnh để điều hành military, finance và appointments. Nghiên cứu về institutional cấu trúc (structure / 구조) cho thấy chính quyền Trịnh không đơn giản là một household quân phiệt; nó hấp thụ literati và phát triển administrative routines để duy trì quy tắc (rule / 규칙).
 
@@ -64,7 +64,7 @@ Red River delta vẫn là agrarian cốt lõi (core / 핵심) với population d
 
 Đọc Đàng Ngoài vì vậy cần giữ hai hình ảnh cùng lúc: một cultural-political centre lâu đời quanh Thăng Long và một fiscal-military cấu trúc (structure / 구조) phải liên tục lấy resources từ countryside để duy trì army và elite.
 
-## Đàng Trong: một maritime political economy
+## Đàng Trong: một nền kinh tế chính trị hàng hải
 
 Đàng Trong nổi bật vì mức độ gắn với thương mại quốc tế. Các chúa Nguyễn khuyến khích tiếp xúc thương mại vì buôn bán đem lại nguồn thu, kim loại, vũ khí, hàng xa xỉ, tiền tệ và liên kết ngoại giao.
 

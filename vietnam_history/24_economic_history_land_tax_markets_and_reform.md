@@ -22,7 +22,7 @@ state capacity   specialization
 
 Khi land right, vận chuyển (transport / 전송) hoặc tax hệ thống (system / 시스템) đổi, whole tài nguyên (resource / 자원) luồng (flow / 흐름) đổi theo.
 
-## Từ subsistence tới surplus: Đông Sơn và early trạng thái (state / 상태)
+## Từ tự cung tự cấp tới phần dư: Đông Sơn và nhà nước sơ kỳ
 
 Trong Đông Sơn và Cổ Loa, wet-rice agriculture, metallurgy và craft specialization cho thấy economy vượt khỏi household subsistence đơn giản. Massive earthwork và bronze môi trường vận hành (production / 운영 환경) ngụ ý polity có khả năng mobilize labor/material trên quy mô (scale / 규모) lớn.
 
@@ -68,7 +68,7 @@ Hạ tầng (infrastructure / 인프라) creates collective-action bài toán (p
 
 Trạng thái (state / 상태)/village institution xuất hiện không chỉ để tax mà còn để solve coordination bài toán (problem / 문제).
 
-## Thương mại thời Lý–Trần: thị trường (market / 시장) không phải foreign import
+## Thương mại thời Lý–Trần: thị trường không phải hàng nhập ngoại
 
 Thị trường tồn tại từ rất lâu trước chủ nghĩa tư bản thuộc địa. Cảng sông, buôn bán ven biển, tiền lưu thông, đồ gốm và cộng đồng thương nhân cho thấy Đại Việt nằm trong mạng lưới trao đổi khu vực.
 
@@ -76,7 +76,7 @@ Vân Đồn là good checkpoint: island/coastal geography connected domestic pro
 
 Thị trường (market / 시장) độ sâu (depth / 깊이) vẫn limited by vận chuyển (transport / 전송), thông tin (information / 정보) và monetization. Household có thể produce mainly for subsistence while still participating periodically in thị trường (market / 시장).
 
-## Hội An và early-modern commercial expansion
+## Hội An và mở rộng thương mại cận đại
 
 Thế kỷ XVI–XVII, Hội An trở thành cảng lớn trong mạng lưới nối thương nhân Nhật Bản, Trung Hoa, Đông Nam Á và châu Âu. Chính quyền Nguyễn hưởng lợi từ thuế cảng, vũ khí–vật liệu nhập khẩu và dòng thương mại.
 
@@ -91,7 +91,7 @@ port trade
 
 Trade and warfare therefore reinforce each other.
 
-## Frontier economy: land expansion không phải empty-land story
+## Kinh tế vùng biên: mở đất không phải câu chuyện “đất trống”
 
 Expansion toward central/southern regions often converted land-use regime, settlement mẫu (pattern / 패턴) và tax jurisdiction. Chăm, Khmer, Việt, Hoa và cục bộ (local / 로컬) communities interacted through trade, xung đột (conflict / 충돌), di chuyển (migration / 마이그레이션) and administration.
 
@@ -99,13 +99,13 @@ Lịch sử kinh tế phải hỏi **mô hình sử dụng đất của ai bị 
 
 Mekong Delta development depends on canal, water điều khiển (control / 제어), thị trường (market / 시장) town and migrant mạng (network / 네트워크); ecology imposes acid soil, flood and salinity các ràng buộc (constraints / 제약조건들).
 
-## Tây Sơn: fiscal-military crisis
+## Tây Sơn: khủng hoảng tài chính–quân sự
 
 Late eighteenth century crisis shows how tax pressure, trade disruption and military competition can destabilize regime. Rebellion is not reducible to “people poor therefore revolt”, but fiscal stress changes coalition incentives.
 
 Army needs grain/money; court increases extraction; commerce disruption reduces taxable cơ sở (base / 기반); cục bộ (local / 로컬) groups shift alliance. Đây là **fiscal-military vòng phản hồi (feedback loop / 피드백 루프)**.
 
-## Nguyễn: tích hợp (integration / 통합) chi phí (cost / 비용) of a long territory
+## Nhà Nguyễn: chi phí hội nhập một lãnh thổ dài
 
 After 1802, trạng thái (state / 상태) controls unusually long north–south territory. Road, station, canal, provincial administration and registers become economic hạ tầng (infrastructure / 인프라) because thông tin (information / 정보) and tax must move.
 

@@ -36,7 +36,7 @@ Under Lê sơ and Nguyễn, Neo-Confucian trạng thái (state / 상태) ideolog
 
 Again normative văn bản (text / 텍스트) ≠ complete everyday hành vi (behavior / 동작).
 
-## Daoist and folk practice
+## Thực hành Đạo giáo và dân gian
 
 Vũ trụ quan Đạo giáo, thầy nghi lễ, thuật phong thủy, thực hành với thần linh và tín ngưỡng dân gian địa phương thường đan xen.
 
@@ -44,7 +44,7 @@ Trying to classify every ritual as purely “Buddhist/Daoist/folk” can distort
 
 Historical actors did not always use hiện đại (modern / 현대적) taxonomy.
 
-## Trạng thái (state / 상태) ritual and legitimacy
+## Nghi lễ nhà nước và tính chính danh
 
 Tế lễ triều đình, việc công nhận đền miếu, gia phả hoàng gia và lịch pháp là những công cụ tạo chính danh. Nhà nước quyết định tín ngưỡng nào được công nhận chính thức và đôi khi kiểm soát các thực hành bị xem là dị giáo.
 
@@ -56,7 +56,7 @@ Hùng Vương worship illustrates transformation of origin tradition into nation
 
 UNESCO recognition of worship practices in hiện đại (modern / 현대적) period is bằng chứng (evidence / 증거) of living heritage, not archaeological proof of every legendary detail.
 
-## Champa and Hindu–Buddhist landscapes
+## Champa và cảnh quan Hindu giáo–Phật giáo
 
 Lịch sử Champa bao gồm các truyền thống Hindu giáo và Phật giáo, với tháp đền, bia ký Sanskrit/Chăm và liên kết hàng hải.
 
@@ -84,7 +84,7 @@ Under different regimes, Christian communities experience periods of protection,
 
 Religious lịch sử (history / 이력) should distinguish doctrine from colonial politics: Christianity cannot be reduced to French conquest, even though missionary/imperial relations became historically entangled.
 
-## Colonial modernity and religious reform
+## Hiện đại thuộc địa và cải cách tôn giáo
 
 Urban print and new education stimulate Buddhist reform, Catholic organization and religious debate. Religion responds to modernity rather than simply declining before “science”.
 
@@ -98,13 +98,13 @@ They become not only religious communities but important xã hội (social / 사
 
 Their rise shows new religion can emerge from existing symbolic vocabulary while responding to colonial/hiện đại (modern / 현대적) conditions.
 
-## Religion during war
+## Tôn giáo trong chiến tranh
 
 Chiến tranh có thể biến thiết chế tôn giáo thành nơi trú ẩn, mạng lưới hỗ trợ, tác nhân chính trị hoặc mục tiêu. Lập trường của giáo sĩ và cộng đồng khác nhau; không tôn giáo nào chỉ có một thái độ chính trị.
 
 Use specific organization/person/thời gian (time / 시간) rather than generalizing “Buddhists supported X” or “Catholics supported Y”.
 
-## Post-1975 and contemporary religious life
+## Sau 1975 và đời sống tôn giáo đương đại
 
 Religious institutions operate within hiện đại (modern / 현대적) trạng thái (state / 상태) legal khung phần mềm (framework / 프레임워크) and have expanded/reorganized in different ways since late twentieth century.
 

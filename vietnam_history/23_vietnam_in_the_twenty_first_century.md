@@ -38,7 +38,7 @@ Key distinction:
 
 **export upgrading** không tự động bằng **technological upgrading**.
 
-## Hạ tầng: từ national road tới bộ chứa (container / 컨테이너) timetable
+## Hạ tầng: từ đường quốc lộ tới lịch vận chuyển container
 
 Industrial economy cần reliable hạ tầng (infrastructure / 인프라) ở quy mô (scale / 규모) khác agricultural economy. Highway, deep-water cổng (port / 포트), airport, electricity grid, telecom và logistics nền tảng (platform / 플랫폼) trở thành part của môi trường vận hành (production / 운영 환경) hàm (function / 함수).
 

@@ -29,7 +29,7 @@ Good lịch sử (history / 이력) distinguishes:
 
 **observation → suy luận (inference / 추론) → interpretation**.
 
-## Đại Việt sử ký and dynastic chronicles
+## Đại Việt sử ký và sử biên niên triều đại
 
 Premodern Vietnamese chronicles preserve indispensable thông tin (information / 정보) on court, war, diplomacy and disaster. Yet they were compiled by officials within particular political/moral frameworks.
 
@@ -59,7 +59,7 @@ Administrative abundance creates temptation to over-trust colonial categories. A
 
 Archive is powerful because trạng thái (state / 상태) observed extensively, not because observation was neutral.
 
-## Newspaper and công khai (public / 공개) sphere
+## Báo chí và không gian công luận
 
 Twentieth-century newspapers let historians study debate, advertisement, ngôn ngữ (language / 언어) thay đổi (change / 변경) and urban life.
 
@@ -67,13 +67,13 @@ But censorship, quyền sở hữu (ownership / 소유권) and audience shape co
 
 A newspaper silence is not proof sự kiện (event / 이벤트) absent; perhaps reporting was prohibited or rural sự kiện (event / 이벤트) never reached editor.
 
-## Oral lịch sử (history / 이력)
+## Lịch sử truyền miệng
 
 Lời kể truyền miệng rất quan trọng khi nghiên cứu chiến tranh, di cư và đời sống thường ngày. Ký ức có thể sai niên đại nhưng vẫn bảo tồn chính xác cảm xúc, quan hệ xã hội và cách người kể cảm nhận nguyên nhân.
 
 Do not use “bộ nhớ (memory / 메모리) is imperfect” to discard testimony. Instead ask what kiểu (type / 타입) of claim it can hỗ trợ (support / 지원).
 
-## National lịch sử (history / 이력) and nation-building
+## Lịch sử quốc gia và xây dựng quốc gia
 
 Các nhà nước hiện đại dùng sách giáo khoa, bảo tàng, tượng đài và ngày kỷ niệm để dựng nên tường thuật chung. Việt Nam cũng vậy; Hàn Quốc, Pháp, Trung Quốc và Hoa Kỳ cũng không ngoại lệ.
 
@@ -81,7 +81,7 @@ National narrative selects origin, hero, sacrifice and turning điểm (point / 
 
 Historical scholarship may overlap with national narrative but has different obligation: bằng chứng (evidence / 증거), bất định (uncertainty / 불확실성) and competing interpretation must remain visible.
 
-## Heroic bộ nhớ (memory / 메모리) versus structural lịch sử (history / 이력)
+## Ký ức anh hùng và lịch sử cấu trúc
 
 Một trận đánh dễ được nhớ qua tên người anh hùng hơn là qua hậu cần và hệ thống tài chính. Vì vậy ký ức công cộng thường nhân cách hóa các tiến trình cấu trúc.
 
@@ -94,7 +94,7 @@ The thư viện (library / 라이브러리) keeps hero story but adds cơ chế 
 
 This does not diminish individuals; it prevents explanation from becoming magic-person lý thuyết (theory / 이론).
 
-## Hùng Vương: myth, bộ nhớ (memory / 메모리) and archaeology
+## Hùng Vương: huyền thoại, ký ức và khảo cổ học
 
 Hùng traditions are central định danh (identity / 식별자) bộ nhớ (memory / 메모리). Archaeology demonstrates complex societies in relevant broad region/period but does not verify literal 18-kings chronology.
 
@@ -110,7 +110,7 @@ Rather than select one label as complete explanation, scholarship should specify
 
 Terminology must not silently replace argument.
 
-## 1975 and different memories
+## 1975 và những ký ức khác nhau
 
 1975 can be remembered as reunification/liberation by some communities and as defeat/displacement/exile by others, especially across diaspora histories.
 

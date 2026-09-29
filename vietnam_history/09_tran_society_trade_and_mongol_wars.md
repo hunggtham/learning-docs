@@ -8,7 +8,7 @@ Câu hỏi trung tâm của chương là: **nhà Trần đã kế thừa gì t�
 
 Để trả lời, phải đặt chiến tranh cạnh economy, logistics và xã hội (social / 사회적) organization. Nếu chỉ học “ba lần chống Nguyên–Mông”, ta thấy kết quả nhưng không thấy cơ chế (mechanism / 메커니즘).
 
-## Từ Lý sang Trần: đổi dynasty nhưng không reset hệ thống (system / 시스템)
+## Từ Lý sang Trần: đổi triều đại nhưng không xóa lại hệ thống
 
 Nhà Trần lên ngôi năm **1225**, sau một giai đoạn court instability cuối Lý. Gia tộc Trần có nền tảng mạnh ở vùng ven biển và lower Red River mạng (network / 네트워크); scholarship cũng nhấn mạnh rằng thế kỷ XII–XIII là lúc coastal trade ngày càng quan trọng.
 
@@ -22,7 +22,7 @@ Trong trạng thái (state / 상태) chưa có professional bureaucracy đủ d�
 
 Nhưng kinship quản trị (governance / 거버넌스) có sự đánh đổi (trade-off / 트레이드오프). Nó tăng trust trong short term nhưng dễ sinh rivalry nếu succession hoặc tài nguyên (resource / 자원) allocation không rõ. Vì vậy Trần vừa dùng family mạng (network / 네트워크) vừa cần rituals, offices và law để giữ mạng (network / 네트워크) đó coherent.
 
-## Agriculture vẫn là nền, nhưng coast và trade ngày càng quan trọng
+## Nông nghiệp vẫn là nền tảng, nhưng duyên hải và thương mại ngày càng quan trọng
 
 Rice agriculture của Red River Delta tiếp tục nuôi capital và army. Tuy nhiên Đại Việt thế kỷ XIII không phải economy đóng kín. Coastal mạng (network / 네트워크) kết nối với southern China và maritime Southeast Asia; ports, river mouths và craft môi trường vận hành (production / 운영 환경) tạo thêm tài nguyên (resource / 자원) luồng (flow / 흐름).
 
@@ -72,7 +72,7 @@ Sau Yuan conquest of Southern Song, pressure tăng mạnh. Campaign **1285** l�
 
 Các chiến thắng như Hàm Tử, Chương Dương thường được nhớ như heroic events; nhân quả (causal / 인과적) view cần đặt chúng vào broader collapse của attacker logistics. Tactical victory có giá trị nhất khi nó phá cầu nối (bridge / 브리지), fleet, food depot hoặc tuyến (route / 경로) mà opponent cần để sustain campaign.
 
-## 1287–1288: supply chuỗi (chain / 사슬) trở thành center của war
+## 1287–1288: chuỗi tiếp tế trở thành trung tâm của chiến tranh
 
 Trong campaign cuối, Yuan chuẩn bị cả land force và maritime supply. Trần forces đánh vào supply fleet, khiến invading army ở Thăng Long không nhận được đủ food. Khi Yuan retreat, naval force của Ô Mã Nhi đi qua Bạch Đằng và bị Trần Hưng Đạo phục kích.
 
@@ -106,7 +106,7 @@ Một narrative quá heroic dễ quên rằng multiple invasions gây displaceme
 
 Để mobilize repeatedly, trạng thái (state / 상태) cần food reserve, boats, horses, cục bộ (local / 로컬) militia và communication. Military resilience vì vậy là đầu ra (output / 출력) của economic sức chứa (capacity / 용량) + xã hội (social / 사회적) coordination, không chỉ generalship.
 
-## Điền trang, thái ấp và elite economy
+## Điền trang, thái ấp và kinh tế tinh hoa
 
 Thời Trần thường gắn với growth của **điền trang / thái ấp** và landholding của royal–elite families, temples và institutions. Đây là tài nguyên (resource / 자원) cơ sở (base / 기반) cho elite nhưng cũng có thể giảm direct fiscal reach của center nếu cục bộ (local / 로컬) estates quá autonomous.
 
@@ -118,7 +118,7 @@ Không nên translate đơn giản thành European feudalism. Rights over land, 
 
 Ba site này đặt cạnh nhau cho ta một picture đầy đủ hơn: dynasty không tồn tại chỉ trong palace. Nó là mạng (network / 네트워크) của sacred landscape, family homeland, agricultural region và strategic corridor.
 
-## Sau war: victory không giải quyết structural problems cuối Trần
+## Sau chiến tranh: thắng lợi không giải quyết các vấn đề cấu trúc cuối Trần
 
 Thành công trước Yuan không làm dynasty immune với long-term stress. Thế kỷ XIV chứng kiến succession problems, elite competition, fiscal pressure, natural disaster và bên ngoài (external / 외부) xung đột (conflict / 충돌), đặc biệt với Champa dưới Chế Bồng Nga.
 

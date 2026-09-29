@@ -34,7 +34,7 @@ Liên quân Pháp–Tây Ban Nha tấn công Đà Nẵng năm **1858**, nhưng k
 
 Pháp chuyển trọng tâm xuống **Gia Định/Sài Gòn**, nơi river truy cập (access / 접근) và southern rice economy tạo strategic lô-gic (logic / 논리) khác.
 
-## Vì sao Nam Bộ trở thành first colonial cơ sở (base / 기반)?
+## Vì sao Nam Bộ trở thành căn cứ thuộc địa đầu tiên?
 
 Vùng Sài Gòn–Mekong có phần dư nông nghiệp, vận chuyển đường nước và lối ra biển. Nếu kiểm soát nút này, lực lượng viễn chinh dễ tiếp tế hơn và có nền nguồn thu–tài nguyên.
 
@@ -154,7 +154,7 @@ new political/public sphere
 
 Nhưng literacy vẫn unequal theo region, lớp (class / 클래스) và gender.
 
-## Di tích: đọc colonial city bằng logistics và segregation
+## Di tích: đọc đô thị thuộc địa qua hậu cần và phân tách không gian
 
 Ở **Hà Nội**, hãy nhìn quan hệ (relation / 관계) giữa old quarter, citadel, French administrative quarter, Long Biên cầu nối (bridge / 브리지) và rail station. Ở **Hải Phòng**, nhìn cổng (port / 포트)–rail liên kết (connection / 연결). Ở **Sài Gòn–Chợ Lớn**, nhìn administrative cốt lõi (core / 핵심), Chinese commercial district, river/cổng (port / 포트) và plantation hinterland.
 

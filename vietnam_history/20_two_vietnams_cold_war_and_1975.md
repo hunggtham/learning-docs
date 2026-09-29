@@ -8,7 +8,7 @@ Câu hỏi trung tâm của chương là: **vì sao việc tập kết tạm th�
 
 Nghiên cứu hiện đại nhấn mạnh rằng xung đột này có nhiều tầng cùng lúc: tranh chấp thống nhất quốc gia, nội chiến, chiến tranh cách mạng, xây dựng nhà nước chống cộng và can thiệp toàn cầu trong Chiến tranh Lạnh. Không tầng nào một mình giải thích toàn bộ.
 
-## Hai state-building dự án (project / 프로젝트) sau Geneva
+## Hai dự án xây dựng nhà nước sau Geneva
 
 Ở miền Bắc, **nước Việt Nam Dân chủ Cộng hòa (Democratic Republic of Vietnam, DRV)** củng cố một nhà nước cách mạng xã hội chủ nghĩa đặt thủ đô tại Hà Nội.
 
@@ -74,7 +74,7 @@ Cold War doctrine, fear of communist expansion, alliance credibility and South V
 
 Escalation was gradual and path-dependent: each commitment changed chi phí (cost / 비용) of withdrawing and expectation of partners/opponents.
 
-## 1963 crisis: trạng thái (state / 상태) legitimacy matters as much as military hardware
+## Khủng hoảng 1963: tính chính danh quan trọng ngang khí tài quân sự
 
 Tensions between Diệm government and Buddhist activists escalated in 1963. Political crisis, repression and military dissatisfaction culminated in a coup in November 1963 in which Diệm and Ngô Đình Nhu were killed.
 
@@ -90,7 +90,7 @@ War now operated at multiple scales: village-level insurgency, conventional batt
 
 The theater cannot be understood inside hiện đại (modern / 현대적) Vietnam borders alone.
 
-## Ho Chi Minh trail: logistics hệ thống (system / 시스템), not one road
+## Đường mòn Hồ Chí Minh: một hệ thống hậu cần, không phải một con đường duy nhất
 
 The so-called **Ho Chi Minh trail** was a mạng (network / 네트워크) of roads, paths, pipelines and supply nodes through Laos and Cambodia as well as Vietnam.
 
@@ -106,7 +106,7 @@ forces in south remain connected to north
 
 Again, logistics converts political intention into military năng lực (capability / 역량).
 
-## War economy and destruction
+## Kinh tế chiến tranh và sự tàn phá
 
 War transformed both economies. South Vietnam received massive foreign aid and military spending, accelerating urbanization and dịch vụ (service / 서비스) sectors while also creating phụ thuộc (dependency / 의존성) and inflationary/distortion risks.
 
@@ -128,7 +128,7 @@ battlefield outcome ≠ strategic political effect
 
 A campaign can lose tactically while changing negotiation/công khai (public / 공개) opinion môi trường (environment / 환경)—or vice versa.
 
-## The war was internationalized far beyond US–Vietnam
+## Chiến tranh được quốc tế hóa vượt xa quan hệ Mỹ–Việt
 
 China and Soviet Union supplied major aid to North Vietnam while managing their own Sino-Soviet rivalry. South Korea, Australia, New Zealand, Thailand, Philippines and others contributed forces/hỗ trợ (support / 지원) on US/RVN side in different forms. Laos and Cambodia were deeply affected by cross-border war.
 

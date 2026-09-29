@@ -16,7 +16,7 @@ This is why land right and marriage mẫu (pattern / 패턴) are economic instit
 
 A household losing adult labor to war/corvée can face môi trường vận hành (production / 운영 환경) shock immediately.
 
-## Làng: neither fully autonomous nor merely trạng thái (state / 상태) cell
+## Làng: không hoàn toàn tự trị cũng không chỉ là tế bào nhà nước
 
 Vietnamese village is often romanticized as “phép vua thua lệ làng”. Useful insight is that cục bộ (local / 로컬) community has norms and institutions, but quan hệ (relation / 관계) with trạng thái (state / 상태) varies by thời gian (time / 시간).
 
@@ -74,7 +74,7 @@ Trade connects salt, metal, forest sản phẩm (product / 제품), livestock an
 
 Therefore mountain lịch sử (history / 이력) is central to diplomacy and economy, not a cultural appendix.
 
-## Chăm and Khmer communities after territorial thay đổi (change / 변경)
+## Cộng đồng Chăm và Khmer sau biến đổi lãnh thổ
 
 Khi biên giới chính trị thay đổi, dân cư không biến mất. Các cộng đồng Chăm và Khmer tiếp tục đời sống tôn giáo, ngôn ngữ và kinh tế trong những đơn vị cai trị khác nhau.
 
@@ -94,7 +94,7 @@ Thăng Long, Phố Hiến, Hội An, Huế and Gia Định show urban life exist
 
 City creates occupational diversity beyond agriculture and court bureaucracy.
 
-## Colonial middle lớp (class / 클래스) and công khai (public / 공개) sphere
+## Tầng lớp trung gian thuộc địa và không gian công luận
 
 Teachers, clerks, journalists, lawyers, students and civil servants form new xã hội (social / 사회적) groups linked to schooling and print.
 
@@ -118,13 +118,13 @@ Di chuyển (migration / 마이그레이션) lịch sử (history / 이력) shou
 
 A migrant can simultaneously seek bảo mật (security / 보안), religious community, economic opportunity and family reunion.
 
-## Post-1975 di chuyển (migration / 마이그레이션) and diaspora
+## Sau 1975: di cư và cộng đồng hải ngoại
 
 After reunification, nội bộ (internal / 내부) resettlement and international emigration reshape xã hội (social / 사회적) mạng (network / 네트워크). Vietnamese diaspora becomes important transnational community, later contributing remittance, investment and kiến thức (knowledge / 지식) links in complex ways.
 
 Diaspora định danh (identity / 식별자) is itself historically layered by departure wave and destination society.
 
-## Đổi Mới and rural–urban household
+## Đổi Mới và hộ gia đình nông thôn–đô thị
 
 Thị trường (market / 시장) reform turns di chuyển (migration / 마이그레이션) into cốt lõi (core / 핵심) household chiến lược (strategy / 전략). A rural family may diversify income by sending member to factory/city while keeping agricultural land.
 
@@ -138,13 +138,13 @@ Street vendor, small repair, household shop, motorcycle dịch vụ (service / �
 
 Informal economy offers low entry barrier but often less xã hội (social / 사회적) insurance/bảo mật (security / 보안).
 
-## Education and status mobility
+## Giáo dục và dịch chuyển địa vị
 
 Exam prestige has deep lịch sử (history / 이력), but hiện đại (modern / 현대적) mass schooling expands educational mobility far beyond scholar elite.
 
 Still, truy cập (access / 접근) chất lượng (quality / 품질) varies by geography and household resources. Education can reduce inherited ràng buộc (constraint / 제약조건) while also creating new credential hierarchy.
 
-## Housing as xã hội (social / 사회적) lịch sử (history / 이력)
+## Nhà ở như một phần của lịch sử xã hội
 
 House form reveals economy and family. Village compound, tube house, colonial villa, collective apartment, post-Đổi Mới subdivision and high-rise apartment correspond to different land price, household kích thước (size / 크기) and urban planning.
 
