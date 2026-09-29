@@ -1,32 +1,32 @@
-# Physics — Root Coverage Audit
+# Vật lý — điểm vào kiểm toán phạm vi
 
-**Audit date:** 2026-09-29  
-**Canonical root:** `physics/`
+**Ngày rà soát:** 2026-09-29  
+**Root chuẩn gốc:** `physics/`
 
-The detailed Physics coverage/depth/quality audit already exists at:
+Bản kiểm toán chi tiết về phạm vi, độ sâu và chất lượng đã nằm tại:
 
 - [`13_connections/02_coverage_audit.md`](./13_connections/02_coverage_audit.md)
 
-This root file is the canonical governance entrypoint expected by repository-level tooling. Do not duplicate the full domain audit here.
+Tệp root này chỉ đóng vai trò **điểm vào governance ổn định** để tooling cấp repository luôn tìm được `COVERAGE_AUDIT.md`; không lặp lại toàn bộ audit chi tiết ở đây.
 
-## Root contract
+## Hợp đồng cấp root
 
-Physics is organized by conceptual dependency and should keep the durable chain:
+Physics được tổ chức theo phụ thuộc khái niệm và cần giữ chuỗi bền vững:
 
 ```text
-phenomenon
-→ measurable quantity
-→ model
-→ mathematics/derivation
-→ assumptions
-→ domain of validity
-→ limiting cases/failure
-→ evidence/experiment
-→ knowledge connection
+hiện tượng
+→ đại lượng đo được
+→ mô hình
+→ toán học/suy dẫn
+→ giả định
+→ miền áp dụng
+→ trường hợp giới hạn/thất bại
+→ bằng chứng/thực nghiệm
+→ liên kết kiến thức
 ```
 
-The domain owns physical laws, models, measurement and selected advanced bridges. Engineering design choices belong to the relevant engineering domain, especially [`../electrical_engineering/`](../electrical_engineering/README.md).
+Domain này sở hữu định luật vật lý, mô hình, đo lường và các cầu nối nâng cao có chọn lọc. Khi câu hỏi chuyển từ “tự nhiên hoạt động thế nào?” sang “thiết kế topology, timing, power, control hay hardware–software interface ra sao?”, bàn giao sang domain kỹ thuật phù hợp, đặc biệt [Electrical Engineering](../electrical_engineering/README.md).
 
-## Review rule
+## Quy tắc review và bàn giao
 
-For substantive Physics changes, update the detailed audit when coverage/depth status changes. This root file should remain a stable pointer unless canonical ownership or audit location changes.
+Khi coverage hoặc depth thực sự thay đổi, cập nhật [`13_connections/02_coverage_audit.md`](./13_connections/02_coverage_audit.md). Chỉ sửa tệp root này khi owner hoặc vị trí audit chi tiết thay đổi.
