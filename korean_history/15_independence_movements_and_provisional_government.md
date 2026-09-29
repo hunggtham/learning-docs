@@ -70,3 +70,21 @@ Ngôn ngữ (language / 언어) study, lịch sử (history / 이력) writing, e
 Sau 1945, different groups competed over who had legitimate anti-colonial credentials. Historical bộ nhớ (memory / 메모리) of resistance trở thành political capital. Đây là recurring quy tắc (rule / 규칙): past sacrifice can be converted into present legitimacy, nên bộ nhớ (memory / 메모리) politics intensifies around independence lịch sử (history / 이력).
 
 > **Bàn giao:** Sau **Liberation và credit bài toán (problem / 문제)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+
+## Độc lập được trả giá bằng nguồn lực hằng ngày
+
+Một phong trào ở hải ngoại không sống bằng khẩu hiệu. Các nhóm cần tiền quyên góp, nhà in, trường học, tuyến vận chuyển, nơi trú ẩn và người phiên dịch. Vì vậy cộng đồng di dân ở Thượng Hải, Mãn Châu, Hawaii và vùng Viễn Đông Nga là **hạ tầng xã hội (social infrastructure / 사회 기반시설)** của chính trị độc lập: họ cung cấp lao động, thông tin và logistics, nhưng cũng phải chịu kiểm soát của cảnh sát thuộc địa, nghèo đói và cạnh tranh giữa các tổ chức.
+
+Trong bán đảo, đình công, tẩy chay, lớp học lịch sử và việc bảo tồn tiếng Hàn đều có chi phí. Một gia đình tham gia biểu tình có thể mất việc, bị bắt hoặc bị theo dõi; một người gửi tiền cho tổ chức ở hải ngoại phải cân bằng giữa nghĩa vụ chính trị và sinh kế. Đặt phong trào vào **kinh tế hộ gia đình (household economy / 가계 경제)** giúp thấy vì sao mức độ tham gia thay đổi theo địa phương và thời điểm.
+
+## Việt Nam cùng thời: độc lập, giáo dục và mạng lưới hải ngoại
+
+Trong thập niên 1920–1940, Việt Nam cũng có các hội kín, báo chí, trường học, tổ chức thanh niên và hoạt động ở Trung Quốc, Pháp hoặc Xiêm. Hai phong trào đều dùng in ấn và cộng đồng hải ngoại để vượt qua kiểm duyệt, nhưng mục tiêu tổ chức, hệ tư tưởng và quan hệ với các cường quốc khác nhau. So sánh nên tập trung vào một cơ chế cụ thể — chẳng hạn cách gây quỹ hoặc truyền tin — thay vì gom mọi phong trào chống thuộc địa vào một khuôn.
+
+## Địa điểm để đọc mạng lưới, không chỉ đọc anh hùng
+
+Khu **Tô giới Pháp ở Thượng Hải (Shanghai French Concession / 上海法租界)** và dấu tích trụ sở lâm thời ở Thượng Hải giúp hình dung chính trị lưu vong hoạt động trong một đô thị quốc tế; **Đài Tưởng niệm Độc lập Hàn Quốc (독립기념관 / Independence Hall of Korea)** ở Cheonan cho thấy cách nhà nước hiện nay sắp xếp nhiều dòng kháng chiến vào một câu chuyện lịch sử (narrative / 역사 서사) chung. Khi xem hiện vật, hãy hỏi ai tạo ra nó, được lưu giữ sau thời điểm nào và ký ức nào vẫn bị bỏ trống.
+
+## Cầu nối sang 1945–1950
+
+Phong trào độc lập duy trì yêu sách về quyền tự quyết (claim / 자결 요구), nhưng không thể tự quyết định ai sẽ quản lý cảnh sát, đất đai, đường sắt và lương thực ngay sau khi đế quốc sụp đổ. Vì vậy chương [`16_liberation_division_state_formation_1945_1950.md`](16_liberation_division_state_formation_1945_1950.md) cần được đọc như câu hỏi **ai thừa kế năng lực hành chính và bằng tính chính danh nào**, không chỉ như đoạn kết chiến thắng.

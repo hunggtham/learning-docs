@@ -58,6 +58,23 @@ Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn 
 | Làn sóng Hàn Quốc | 한류 | Hallyu / Korean Wave |
 
 
+## Tên địa điểm và thiết chế trong các companion mới
+
+| Cách ghi ưu tiên | 한국어 | English / ghi chú |
+|---|---|---|
+| Khu phi quân sự | 비무장지대 | Demilitarized Zone / DMZ |
+| Khu công nghiệp Khai Thành | 개성공업지구 | Kaesong Industrial Complex |
+| Ga Dorasan | 도라산역 | Dorasan Station |
+| Đài Quan sát Thống nhất Odusan | 오두산 통일전망대 | Odusan Unification Observatory |
+| Biến động Jeju 4·3 | 제주 4·3 | Jeju 4·3; giữ số hiệu vì đây là tên sự kiện và ký ức công chúng |
+| Phong trào Dân chủ 18 tháng 5 | 5·18 민주화운동 | May 18 Democratization Movement; dùng “Gwangju” khi cần định vị địa lý |
+| Cụm mộ đá Gochang–Hwasun–Ganghwa | 고창·화순·강화 고인돌 유적 | Gochang, Hwasun and Ganghwa Dolmen Sites |
+| Mộ cổ Già Da | 가야고분군 | Gaya Tumuli; không dịch thành “lăng mộ vương quốc” vì Gaya gồm nhiều trung tâm |
+| Trại tù binh Geoje | 거제도 포로수용소 | Geoje POW Camp Historic Park |
+| Khu công nghiệp Ulsan | 울산 산업단지 | Ulsan Industrial Complex; giữ tên thành phố khi nói về không gian công nghiệp |
+
+Với thuật ngữ nhà ở hiện đại, giữ **jeonse (전세)** và **wolse (월세)** sau bản dịch giải thích ở lần đầu; không dùng “thuê nhà Hàn Quốc” như một nhãn chung vì hai cơ chế tiền đặt cọc và trả tháng khác nhau. Với tên sự kiện gây tranh luận, giữ số hiệu hoặc tên gốc trong ngoặc để tránh làm mất lịch sử của cách gọi.
+
 > **Chuyển mạch:** Từ **Bảng tra nhanh**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)

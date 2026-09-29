@@ -31,6 +31,16 @@
 | 산업화 | industrialization | công nghiệp hoá |
 | 민주화 | democratization | dân chủ hoá |
 | 한류 | Hallyu / Korean Wave | Làn sóng Hàn Quốc |
+| 무신정권 | military rule | chính quyền quân nhân Cao Ly |
+| 팔만대장경 | Tripitaka Koreana | Đại Tạng Kinh Cao Ly / bộ ván khắc Cao Ly |
+| 장마당 | jangmadang | chợ dân sinh ngoài hệ thống phân phối chính thức ở Bắc Triều Tiên |
+| 성분 | songbun | hệ thống phân loại nền tảng chính trị–xã hội ở Bắc Triều Tiên |
+| 비무장지대 | Demilitarized Zone / DMZ | khu phi quân sự |
+| 개성공업지구 | Kaesong Industrial Complex | Khu công nghiệp Khai Thành |
+| 제주 4·3 | Jeju 4·3 | biến động và bạo lực nhà nước ở Jeju, 1948–1954 |
+| 5·18 민주화운동 | May 18 Democratization Movement | Phong trào Dân chủ 18 tháng 5 ở Gwangju |
+| 전세 | jeonse | hình thức thuê nhà đặt cọc lớn, không hoàn toàn tương đương tiền thuê tháng |
+| 월세 | wolse | hình thức thuê nhà trả tiền theo tháng |
 
 
 > **Chuyển mạch:** Từ **Thuật ngữ lịch sử**, ta sang **Nguồn nền khuyến nghị** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
@@ -83,6 +93,19 @@ Khi một vấn đề liên quan colonial responsibility, wartime violence, auth
 
 
 > **Chuyển mạch:** Từ **Nguyên tắc đối chiếu**, ta sang **Bảng tên riêng lịch sử và địa danh chuẩn hoá** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+## Bản đồ tra cứu theo câu hỏi
+
+| Nếu câu hỏi bắt đầu bằng… | Đọc trước | Sau đó nối sang |
+|---|---|---|
+| “Một nhà nước lấy lương thực và lao động ở đâu?” | `35_economy_society_everyday_life_by_period.md` | `27_economic_history_land_industry_chaebol.md`, chapter giai đoạn tương ứng |
+| “Vì sao thủ đô, thành lũy hoặc cảng nằm ở đó?” | `36_geography_routes_and_historical_space.md` | `34_historical_places_field_guide.md`, `37_historical_case_labs.md` |
+| “Việt Nam lúc ấy đang ở đâu?” | `33_korea_vietnam_parallel_timeline_and_context.md` | `30_timeline_key_dates.md`, chapter chính |
+| “Người bình thường cảm nhận sự kiện thế nào?” | `26_social_history_everyday_life.md` | `35_economy_society_everyday_life_by_period.md`, tình huống tương ứng trong `37` |
+| “Một ký ức hoặc bảo tàng đang kể quá khứ ra sao?” | `29_collective_memory_historiography_public_history.md` | `34_historical_places_field_guide.md`, nguồn lưu trữ |
+| “Thuật ngữ Hàn này nghĩa gì và viết thế nào?” | `32_naming_translation_conventions.md` | glossary này, rồi quay lại chapter sở hữu khái niệm |
+
+Bảng này là đường quay lại kiến thức giải thích, không phải danh sách link độc lập. Mỗi thuật ngữ chỉ nên được tra ở đây sau khi người học đã biết nó xuất hiện trong câu hỏi lịch sử nào.
 
 ## Bảng tên riêng lịch sử và địa danh chuẩn hoá
 
