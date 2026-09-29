@@ -1,42 +1,26 @@
-# Automation — Coverage Audit
+# Automation — kiểm toán phạm vi và độ tin cậy
 
-> **Mạch đọc:** Đặt audit này cạnh [README](./README.md). `automation/` là domain sở hữu các workflow và tooling phục vụ repository; nó không phải canonical owner của kiến thức Information Processing Engineer, AI, DevOps hay GitHub. Audit tập trung vào câu hỏi: workflow có đầu vào/đầu ra rõ, có invariant, có failure boundary, có evidence và có đường rollback hay không?
+> **Mạch đọc:** Đọc audit này cạnh [README](./README.md). `automation/` sở hữu workflow và tooling phục vụ repository; nó không sở hữu kiến thức của 정보처리기사, AI, DevOps hay GitHub. Câu hỏi trung tâm là: **một automation có đầu vào/đầu ra rõ, giữ được bất biến nào, thất bại ở đâu, để lại bằng chứng gì và khôi phục thế nào?**
 
-Cập nhật: 2026-09-29. `main` vẫn là nguồn chuẩn (source of truth / 정본); feature branch chỉ là nơi triển khai thay đổi trước merge.
+**Ngày rà soát:** 2026-09-29. `main` là nguồn chuẩn (source of truth / 정본); feature branch chỉ là nơi chuẩn bị thay đổi trước merge.
 
-## Phạm vi hiện tại
+## 1. Phạm vi hiện tại
 
-`automation/` hiện có bốn nhóm chức năng chính:
+`automation/` hiện có bốn nhóm chức năng: worker sinh giáo trình 정보처리기사; Repository QA cho `CATALOG.md` và internal Markdown links; utility chuyển đổi hàng loạt như bilingualization/learning-connection retrofit; và cấu hình vận hành như environment variables, cost/run limit, push toggle và deployment assumptions.
 
-1. **Textbook generation worker** — `app.py`, `pipeline.py`, `Dockerfile`, `.env.example`, `prompts/` và workflow n8n cho pipeline 정보처리기사.
-2. **Repository QA** — `repo_audit.py`, `test_repo_audit.py` và GitHub Actions tương ứng để kiểm `CATALOG.md` cùng Markdown links.
-3. **Content transformation utilities** — các script như `bilingualize_learning_docs.mjs` và `retrofit_learning_connections.mjs` để sửa hàng loạt tài liệu theo contract của repository.
-4. **Operational configuration** — environment variables, cost/run limits, push toggle và deployment assumptions.
+Một script tồn tại không đồng nghĩa workflow đã đáng tin cậy ở production. Audit phải nhìn vào **hợp đồng (contract / 계약)**, **tính lũy đẳng (idempotency / 멱등성)**, **ranh giới thay đổi trạng thái (mutation boundary / 변경 경계)**, **bằng chứng chạy (run evidence / 실행 증거)** và **ngữ nghĩa thất bại (failure semantics / 실패 의미론)**.
 
-Sự tồn tại của script không tự động có nghĩa workflow đã production-ready. Coverage được đánh giá theo contract và failure semantics, không theo số lượng file.
+## 2. Phần hiện đã mạnh
 
-## Trạng thái coverage
+Repository auditor đã có kiểm tra catalog structure, canonical path/entrypoint/date/scope và local Markdown links; unit tests cũng bao phủ parsing, fenced-code exclusion, missing links và reference links. Textbook pipeline đã có input SHA-256, manifest, giới hạn API/cost, QA/revision path và khả năng tắt push.
 
-| Boundary | Evidence hiện có | Trạng thái |
-|---|---|---|
-| Repository structural audit | catalog parsing, canonical path/entrypoint/date/scope validation, local Markdown link audit | Strong |
-| Repository-audit unit tests | catalog parsing, fenced-code exclusion, local/external link behavior, missing-link failure, reference links | Strong |
-| Textbook transformation core | five-subject split, OCR cleanup, core-ID alignment, output extraction | Moderate–Strong |
-| Idempotency / duplicate-run prevention | input SHA-256 + manifest short-circuit | Moderate |
-| Cost/run guardrails | API-call ceiling, per-run estimated cost ceiling, chunk/part limits | Moderate |
-| Secret handling | secret values expected through environment; Git auth header kept out of remote URL | Moderate |
-| Concurrency | worker-level in-process lock rejects simultaneous `/run` | Narrow |
-| Output QA | draft → QA/revision path + quality report | Moderate |
-| Recovery / rollback | reset to remote branch before run; push can be disabled | Moderate |
-| Observability | `/health`, HTTP status, manifest/quality report and basic usage accounting | Basic |
-| Multi-workflow orchestration | one n8n textbook workflow is present | Narrow |
-| Generic automation platform | no stable generic workflow contract/registry yet | Gap |
+Các cơ chế này tạo nền tốt, nhưng cần hiểu giới hạn của chúng. Ví dụ SHA-256 input giúp tránh xử lý lại cùng input trong một pipeline cụ thể, nhưng không tự giải quyết concurrent run giữa hai process; `PUSH_CHANGES=false` giúp chặn mutation nhưng không thay thế review/branch protection; process exit code không chứng minh content đúng.
 
-## Bất biến cần giữ
+## 3. Các bất biến cần giữ
 
-### 1. Source-of-truth invariant
+### Nguồn chuẩn và provenance
 
-Automation không được tự biến generated output thành sự thật chỉ vì job chạy thành công.
+Automation phải giữ chuỗi:
 
 ```text
 source/provenance
@@ -47,28 +31,19 @@ source/provenance
 → canonical merge
 ```
 
-`process exit = success` không đồng nghĩa `content = correct`, và `push = success` không đồng nghĩa `canonical = approved`.
+`job success` không đồng nghĩa `content correct`, và `push success` không đồng nghĩa `canonical approved`.
 
-### 2. Reproducibility invariant
+### Khả năng tái tạo (reproducibility / 재현성)
 
-Một run có ý nghĩa phải xác định được tối thiểu:
+Một run có ý nghĩa cần truy được ít nhất input revision/hash, code revision, prompt/config quan trọng, model/tool configuration nếu có external service, output identity và validation result. Nếu không dựng lại được `output ← inputs + transform + config`, artifact rất khó audit.
 
-- input identity/hash;
-- code/version hoặc commit chạy transformation;
-- prompt/config quan trọng;
-- model/tool configuration khi workflow phụ thuộc external service;
-- output identity;
-- validation result.
+### Tính lũy đẳng (idempotency / 멱등성)
 
-Nếu không truy ngược được `output ← inputs + transform + config`, output chỉ là artifact khó kiểm chứng.
+Retry hoặc schedule lặp lại không được tạo duplicate logical work. Mỗi workflow phải xác định idempotency key hoặc state transition tương đương, thay vì mặc định “chạy lại chắc không sao”.
 
-### 3. Idempotency invariant
+### Ranh giới mutation
 
-Retry hoặc schedule lặp lại không được âm thầm tạo duplicate logical work. Manifest hash hiện giải quyết một trường hợp cụ thể cho textbook pipeline, nhưng các workflow mới phải tự định nghĩa idempotency key hoặc equivalent state transition.
-
-### 4. Mutation boundary
-
-Mọi automation có khả năng ghi repository phải tách rõ:
+Automation có quyền ghi repository phải tách rõ:
 
 ```text
 read/plan
@@ -78,36 +53,27 @@ read/plan
 → mutate
 ```
 
-Default an toàn nên là không ghi khi chưa vượt validation gate. `PUSH_CHANGES=false` là một guardrail hữu ích nhưng không thay thế branch protection/review workflow.
+Mặc định an toàn là chưa mutate khi validation chưa pass.
 
-### 5. Secret boundary
+### Secret boundary
 
-Token/API key không được xuất hiện trong committed config, generated Markdown, log hoặc command argument có thể bị lưu lại. `.env.example` chỉ được chứa placeholder và contract tên biến.
+Token/API key không được đi vào committed config, generated Markdown, log hoặc command argument dễ bị lưu lại. `.env.example` chỉ giữ placeholder và tên biến.
 
-### 6. Failure atomicity
+### Failure atomicity
 
-Nếu external API, Git operation, parser hoặc validation thất bại giữa run, workflow không được để lại trạng thái mà người đọc nhầm là output hoàn chỉnh. Temporary/intermediate state phải phân biệt được với reviewed output.
+Nếu API, Git operation, parser hoặc validation chết giữa run, output trung gian phải phân biệt rõ với output đã review. Workflow nhiều file không nên coi “đã ghi được vài file” là success.
 
-## Failure modes cần kiểm khi mở rộng
+## 4. Failure mode phải nghĩ trước khi mở rộng
 
-Một workflow mới nên trả lời được các tình huống sau trước khi được coi là ổn định:
+Cần xem xét input đổi giữa run; retry sau timeout khi side effect lần đầu đã thành công; process chết sau partial output; QA response đúng schema nhưng sai nghĩa; cost/rate limit dừng giữa batch; branch tiến lên khi worker đang dùng snapshot cũ; hai worker ở hai process/container; prompt/model/config drift dù input hash không đổi; hoặc external service đổi behavior.
 
-- input thay đổi giữa lúc run đang chạy;
-- job bị retry sau timeout dù lần đầu đã side-effect thành công;
-- process chết sau khi ghi một phần output nhưng trước manifest/commit;
-- API trả response hợp lệ về schema nhưng sai về nội dung;
-- rate limit hoặc cost guard dừng run giữa nhiều chunk;
-- branch đã tiến lên trong lúc worker đang xử lý snapshot cũ;
-- hai worker chạy ở hai process/container khác nhau nên in-process lock không còn đủ;
-- generated file làm hỏng internal link hoặc canonical metadata;
-- prompt/model/config thay đổi nhưng input hash không đổi;
-- external service version thay đổi làm behavior drift.
+Các tình huống này quan trọng vì chúng tạo lỗi **không nhìn thấy bằng happy-path test**.
 
-## Gaps ưu tiên
+## 5. Khoảng trống ưu tiên
 
-### P1 — Run manifest chung
+### P1 — Run manifest dùng chung
 
-Tách manifest từ textbook-specific thành contract dùng được cho mọi automation:
+Cần một contract thống nhất:
 
 ```text
 run_id
@@ -120,46 +86,36 @@ validation status
 mutation/commit SHA
 ```
 
-Điều này giúp phân biệt content drift với code/config drift.
+Nhờ đó có thể phân biệt input drift, code drift và config drift.
 
-### P1 — Transaction-like publish boundary
+### P1 — Publish giống transaction
 
-Generated files nên được tạo trong staging/worktree riêng, chạy validation toàn bộ, sau đó mới promote thành commit. Với workflow nhiều file, không nên coi việc từng file ghi thành công là một run thành công.
+Generated files nên đi vào staging/worktree, validate toàn bộ rồi mới promote thành commit. Với multi-file workflow, publish nên là một logical unit thay vì chuỗi ghi file độc lập.
 
-### P1 — Cross-process concurrency/fencing
+### P1 — Concurrency xuyên process
 
-`asyncio.Lock()` bảo vệ một process FastAPI nhưng không bảo vệ nhiều replica hoặc hai deployment cùng chạy. Nếu worker được scale hoặc có nhiều scheduler, cần lease/fencing hoặc Git-based compare-and-swap trước mutation.
+`asyncio.Lock()` chỉ bảo vệ một FastAPI process. Nếu có nhiều replica/scheduler, cần lease/fencing hoặc Git compare-and-swap trước mutation để ngăn hai run cùng publish từ snapshot cũ.
 
 ### P2 — Observability contract
 
-Chuẩn hóa run log/summary quanh các field như stage, input revision, duration, API calls, estimated/actual usage, validation findings, output commit và failure class. Không cần monitoring stack lớn; trước hết cần semantics ổn định.
+Run summary nên có stage, input revision, duration, API calls/usage, validation findings, output commit và failure class. Không cần monitoring stack phức tạp trước; cần semantics ổn định trước.
 
 ### P2 — Automation registry
 
-Khi số workflow tăng, thêm một index/registry ngắn mô tả owner, trigger, inputs, outputs, mutation quyền, secrets, idempotency strategy và rollback path. Không biến README thành danh sách script rời rạc.
+Khi workflow tăng, thêm registry ngắn: owner, trigger, inputs, outputs, mutation permission, secrets, idempotency strategy và rollback path. Mục tiêu là biết “workflow này chịu trách nhiệm gì”, không phải tạo danh sách script.
 
-### P2 — Tests theo failure semantics
+### P2 — Test theo failure semantics
 
-Unit tests hiện xác nhận nhiều pure transformation/audit behavior. Các test tiếp theo có giá trị cao hơn khi cover partial failure, stale branch, duplicate run, invalid QA payload, cost-stop giữa run và publish gate.
+Ưu tiên test stale branch, partial failure, duplicate run, invalid QA payload, cost-stop giữa run và publish failure. Đây là những test có giá trị hơn việc chỉ tăng happy-path coverage.
 
-## Ranh giới canonical
+## 6. Ranh giới canonical
 
-- Kiến thức **정보처리기사** thuộc [`../정보처리기사/`](../정보처리기사/README.md); Automation chỉ sở hữu pipeline tạo/chuyển đổi artifact.
-- Git/GitHub, CI/CD, container runtime và production platform mechanisms thuộc [`../devops_platform_engineering/`](../devops_platform_engineering/README.md).
-- Software design, concurrency, files, parsing, network/API fundamentals thuộc [`../computer_science/`](../computer_science/README.md) hoặc Backend khi phù hợp.
-- Prompt/output quality của một domain không được chuyển quyền sở hữu kiến thức domain sang `automation/`.
+Nội dung 정보처리기사 thuộc [`../정보처리기사/`](../정보처리기사/README.md). Git/GitHub, CI/CD, container runtime và platform mechanisms thuộc [`../devops_platform_engineering/`](../devops_platform_engineering/README.md). Software design, concurrency, parsing và network/API fundamentals thuộc [`../computer_science/`](../computer_science/README.md) hoặc Backend khi phù hợp.
 
-## Review protocol
+Automation chỉ sở hữu **quá trình biến đổi và kiểm soát**, không được giành ownership của kiến thức domain chỉ vì nó sinh ra file của domain đó.
 
-Khi thêm hoặc sửa automation:
+## 7. Quy trình review và bàn giao
 
-1. xác định input/output và source of truth;
-2. ghi invariant + side effects + mutation boundary;
-3. xác định idempotency/retry semantics;
-4. bảo đảm secret không đi vào repository/log/output;
-5. thêm test cho ít nhất một failure mode quan trọng;
-6. chạy unit tests liên quan và `Repository audit`;
-7. nếu workflow ghi nhiều canonical files, review diff trước merge;
-8. cập nhật audit này chỉ khi xuất hiện capability/failure class mới, không cập nhật chỉ vì thêm một script tương tự.
+Khi thêm automation, xác định input/output và source of truth; ghi invariant, side effect và mutation boundary; xác định idempotency/retry semantics; kiểm secret; thêm ít nhất một failure-mode test có giá trị; chạy unit tests + Repository audit; review diff trước merge nếu ghi canonical files.
 
-> **Bàn giao:** Đọc [README](./README.md) để xem workflow hiện tại. Khi cần reasoning sâu về delivery/recovery/observability, chuyển sang [DevOps / Platform Engineering](../devops_platform_engineering/README.md); khi cần nội dung chứng chỉ, quay về [정보처리기사](../정보처리기사/README.md).
+Khi cần reasoning sâu về delivery/recovery/observability, bàn giao sang [DevOps / Platform Engineering](../devops_platform_engineering/README.md). Khi cần nội dung chứng chỉ, quay về [정보처리기사](../정보처리기사/README.md).
