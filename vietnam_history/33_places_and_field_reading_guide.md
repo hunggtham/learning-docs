@@ -117,7 +117,7 @@ A canal is simultaneously vận chuyển (transport / 전송), settlement and st
 
 Connect 14, 16, 24, 28 and 29.
 
-## Thành phố Hồ Chí Minh — colonial/hiện đại (modern / 현대적) urban layers
+## Thành phố Hồ Chí Minh — các lớp đô thị thuộc địa và hiện đại
 
 **Use for:** colonial city, trade, hạ tầng (infrastructure / 인프라), war bộ nhớ (memory / 메모리) and Đổi Mới metropolis.
 
@@ -183,7 +183,7 @@ Connect 22–25.
 
 ## Suggested field-learning routes
 
-### Tuyến (route / 경로) A — Trạng thái (state / 상태) formation North
+### Tuyến A — hình thành nhà nước ở miền Bắc
 
 Đền Hùng → Cổ Loa → Hoa Lư → Thăng Long → Văn Miếu.
 

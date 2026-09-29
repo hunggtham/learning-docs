@@ -54,7 +54,7 @@ Một điểm cần phân biệt là **land quyền sở hữu (ownership / 소�
 
 Đây là example tốt cho institutional economics: effective economic right không chỉ nằm ở label “private/công khai (public / 공개) quyền sở hữu (ownership / 소유권)”, mà ở bundle of rights thực tế.
 
-## Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)
+## Giá cả: giá là hệ thống thông tin
 
 Trong planned hệ thống (system / 시스템), administrative price cố định có thể tách xa scarcity. Reform price làm thị trường (market / 시장) tín hiệu (signal / 신호) đóng vai trò lớn hơn.
 
@@ -72,7 +72,7 @@ Key concept là **soft ngân sách (budget / 예산) ràng buộc (constraint / 
 
 SOE reform vì thế là long tiến trình (process / 프로세스), không phải privatization wholesale.
 
-## Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)
+## Đầu tư trực tiếp nước ngoài: vốn đi kèm công nghệ và mạng lưới
 
 Luật Đầu tư nước ngoài năm **1987** mở khung phần mềm (framework / 프레임워크) mới cho foreign direct investment (FDI). FDI quan trọng không chỉ vì “mang tiền vào”. Một foreign factory có thể mang môi trường vận hành (production / 운영 환경) tiêu chuẩn (standard / 표준), machinery, supplier yêu cầu (requirement / 요구사항), management practice và export mạng (network / 네트워크).
 
@@ -193,7 +193,7 @@ Factory zone, bộ chứa (container / 컨테이너) tuyến (route / 경로), w
 
 Một smartphone thành phần (component / 컴포넌트) xuất khẩu không bắt đầu ở cổng (port / 포트); nó bắt đầu từ industrial land, electricity, worker commute, supplier, customs dữ liệu (data / 데이터) và shipping schedule.
 
-## Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy
+## Ranh giới: Đổi Mới không đồng nghĩa nhà nước rút khỏi nền kinh tế
 
 Một misconception phổ biến là Đổi Mới = “chuyển sang capitalism” theo nghĩa trạng thái (state / 상태) biến mất. Thực tế Việt Nam phát triển một **socialist-oriented thị trường (market / 시장) economy**, trong đó thị trường (market / 시장) cơ chế (mechanism / 메커니즘) mở rộng nhưng trạng thái (state / 상태) vẫn giữ regulatory, planning và quyền sở hữu (ownership / 소유권) roles đáng kể.
 

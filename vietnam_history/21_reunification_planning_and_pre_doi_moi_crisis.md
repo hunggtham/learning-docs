@@ -81,7 +81,7 @@ Nếu settlement thiếu road, irrigation, health dịch vụ (service / 서비�
 
 Điều này nối trực tiếp historical geography với development economics: population relocation chỉ bền khi hạ tầng (infrastructure / 인프라) và ecological ràng buộc (constraint / 제약조건) được tính đúng.
 
-## War chưa thật sự biến mất khỏi economy
+## Chiến tranh chưa thật sự biến mất khỏi nền kinh tế
 
 Cuối thập niên 1970, Việt Nam tiếp tục đối mặt serious bảo mật (security / 보안) xung đột (conflict / 충돌), bao gồm chiến tranh với Khmer Rouge/Campuchia và chiến tranh biên giới Việt–Trung năm **1979**.
 
@@ -99,7 +99,7 @@ Nhưng dependence trên một bên ngoài (external / 외부) bloc cũng tạo r
 
 Khi chapter sau đi tới 1990s, collapse của Soviet bloc sẽ cho thấy vì sao diversification of bên ngoài (external / 외부) relations trở thành strategic economic necessity.
 
-## Inflation và shortage như tín hiệu (signal / 신호) của hệ thống (system / 시스템) stress
+## Lạm phát và thiếu hụt như tín hiệu căng thẳng của hệ thống
 
 Đến đầu–giữa thập niên 1980, economy chịu shortage, fiscal imbalance và inflation rất cao. Attempts cải cách price–wage–money không giải quyết được ngay structural mismatch.
 
@@ -117,7 +117,7 @@ more informal adaptation
 
 Khi price hệ thống (system / 시스템) mất thông tin (information / 정보) chất lượng (quality / 품질), economy càng khó coordinate bằng administrative instruction.
 
-## Reform trước Đổi Mới: hệ thống (system / 시스템) đã tự tìm workaround
+## Cải cách trước Đổi Mới: hệ thống đã tự tìm cách tháo gỡ
 
 Từ cuối 1970s và đầu 1980s, nhiều cục bộ (local / 로컬) experiment tăng autonomy cho môi trường vận hành (production / 운영 환경) đơn vị (unit / 단위) và gắn reward gần hơn với đầu ra (output / 출력). Agricultural contracting là ví dụ quan trọng.
 

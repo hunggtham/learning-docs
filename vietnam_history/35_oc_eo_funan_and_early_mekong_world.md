@@ -8,7 +8,7 @@ Chương này hỏi: **vì sao một vùng châu thổ ngập nước lại có 
 
 Điều quan trọng nhất là không dùng bản đồ quốc gia hiện đại để sở hữu quá khứ. Óc Eo hiện nằm trong Việt Nam; Angkor Borei hiện nằm trong Campuchia; nhưng hạ lưu Mekong thời sớm là một hệ thống khu vực có trước cả hai quốc gia hiện đại.
 
-## “Phù Nam” là tên từ textual archive, còn Óc Eo là archaeological category/site
+## “Phù Nam” là tên từ kho văn bản, còn Óc Eo là phạm trù/địa điểm khảo cổ
 
 **Funan / Phù Nam** được biết nhiều qua Chinese dynastic accounts mô tả một polity ở mainland Southeast Asia trong những thế kỷ đầu Công nguyên. **Óc Eo** là archaeological site/cultural complex ở Mekong Delta, nổi bật tại vùng Óc Eo–Ba Thê, An Giang.
 
@@ -168,7 +168,7 @@ Vì vậy end of a named polity nên được hỏi bằng cơ chế (mechanism 
 
 “Dynasty B replaces A” hiếm khi đủ.
 
-## Óc Eo và later Khmer lịch sử (history / 이력)
+## Óc Eo và lịch sử Khmer về sau
 
 Không nên coi Óc Eo/Funan đơn giản là “Cambodia early” hoặc “Vietnam early”. Tuy nhiên Lower Mekong archaeology là crucial background cho later Khmer civilization và regional trạng thái (state / 상태) formation.
 
@@ -176,7 +176,7 @@ Continuity có thể qua settlement, religious concepts, agrarian-water kiến t
 
 Lịch sử (history / 이력) không cần force exclusive quyền sở hữu (ownership / 소유권) để acknowledge liên kết (connection / 연결).
 
-## Óc Eo và later Vietnamese southern lịch sử (history / 이력)
+## Óc Eo và lịch sử Nam Bộ Việt Nam về sau
 
 Tương tự, việc region sau này nằm trong Nguyễn/Vietnamese trạng thái (state / 상태) không biến Óc Eo thành early “Vietnamese national city”. Giá trị của site chính là nó buộc national lịch sử (history / 이력) mở rộng đơn vị (unit / 단위) of phân tích (analysis / 분석).
 

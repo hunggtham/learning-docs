@@ -24,7 +24,7 @@ Nhưng bên ngoài (external / 외부) hỗ trợ (support / 지원) luôn có r
 
 Đây là recurring theme sẽ quay lại nhiều lần trong twentieth century: Vietnamese actors có agency, nhưng operate trong international hệ thống (system / 시스템).
 
-## Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force
+## Phan Châu Trinh: cải cách nhà nước và xã hội trước khi giành độc lập bằng quân sự
 
 **Phan Châu Trinh** đại diện một lô-gic (logic / 논리) khác: criticise monarchy and backward institutions, emphasize education, civic sức chứa (capacity / 용량) và reform.
 
@@ -52,7 +52,7 @@ political organization at larger scale
 
 Colonial censorship giới hạn công khai (public / 공개) sphere, nhưng suppression cũng không thể đưa thông tin (information / 정보) chi phí (cost / 비용) trở lại pre-print mức (level / 수준).
 
-## World War I và xã hội (social / 사회적) thay đổi (change / 변경)
+## Thế chiến I và biến đổi xã hội
 
 World War I làm French empire huy động manpower và resources từ colonies. Vietnamese soldiers/workers sang Europe và other theatres; commodity demand và price patterns thay đổi.
 
@@ -72,7 +72,7 @@ Communist strength về sau đến không chỉ từ ideology mà từ organizat
 
 So sánh VNQDĐ và communists giúp thấy survival under repression phụ thuộc organization kiến trúc (architecture / 아키텍처), recruitment cơ sở (base / 기반), bảo mật (security / 보안) và bên ngoài (external / 외부) mạng (network / 네트워크)—not only popularity of ideas.
 
-## Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge
+## Nghệ-Tĩnh 1930–1931: phản kháng, đàn áp và thách thức nhà nước địa phương
 
 Các mass movements ở Nghệ An–Hà Tĩnh 1930–1931, thường gọi Xô viết Nghệ-Tĩnh, diễn ra trong ngữ cảnh (context / 맥락) toàn cục (global / 전역) Great Depression, rural hardship và communist organizing.
 
@@ -80,7 +80,7 @@ Economic shock có thể lower legitimacy of colonial hệ thống (system / 시
 
 French repression rất mạnh. Movement defeat không xóa organizational học tập (learning / 학습); cadres và narratives survive into later periods.
 
-## Great Depression: toàn cục (global / 전역) economy đi vào village
+## Đại Khủng hoảng: kinh tế toàn cầu đi vào làng quê
 
 Commodity prices collapse trong Great Depression làm export-oriented agriculture và indebted households chịu pressure. Khi rice/rubber prices fall, producer income có thể giảm dù tax/debt obligation không adjust tương ứng.
 
@@ -104,7 +104,7 @@ Vietnamese political actors adapted quickly: petition, journalism, association v
 
 Lesson: political movement không cố định chiến lược (strategy / 전략); nó shifts theo opportunity cấu trúc (structure / 구조).
 
-## World War II: colonial sovereignty bị split
+## Thế chiến II: chủ quyền thuộc địa bị phân mảnh
 
 Sau France thất bại trước Germany năm 1940, French colonial administration ở Indochina tiếp tục nhưng phải accommodate Japanese military presence. Vietnam vì vậy nằm dưới một unusual dual cấu trúc (structure / 구조): French colonial apparatus vẫn administer nhiều lĩnh vực trong khi Japan có decisive military power.
 
@@ -128,7 +128,7 @@ Scholarship estimates death toll very high, though chính xác (exact / 정확�
 
 Famine had enormous political consequence because it transformed abstract regime thất bại (failure / 실패) into direct household catastrophe.
 
-## March 1945: Japan removes French colonial administration
+## Tháng 3/1945: Nhật loại bỏ chính quyền thuộc địa Pháp
 
 Ngày **9 March 1945**, Japanese forces overthrew French colonial authorities in Indochina. Emperor Bảo Đại's government proclaimed independence under Japanese auspices shortly afterward.
 
@@ -136,7 +136,7 @@ This matters because French trạng thái (state / 상태) apparatus suddenly fr
 
 No actor controlled the whole country automatically. Multiple nationalist groups, cục bộ (local / 로컬) administrations, Japanese forces and Viet Minh networks competed in a rapidly changing môi trường (environment / 환경).
 
-## August 1945: collapse of empire + organizational readiness
+## Tháng 8/1945: đế quốc sụp đổ và năng lực tổ chức đã sẵn sàng
 
 Japan announced surrender in August 1945. The speed of imperial collapse created a narrow cửa sổ (window / 윈도우).
 

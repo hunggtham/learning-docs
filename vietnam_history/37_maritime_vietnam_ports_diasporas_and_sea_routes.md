@@ -91,7 +91,7 @@ commercial concentration
 
 No single thành phần (component / 컴포넌트) explains the cổng (port / 포트).
 
-## Merchant diasporas: foreign does not mean temporary
+## Cộng đồng thương nhân hải ngoại: người nước ngoài không có nghĩa là tạm thời
 
 Chinese and Japanese merchant communities in Hội An demonstrate how diaspora can become cục bộ (local / 로컬) institution. Traders need translators, credit, lưu trữ (storage / 저장소), dispute resolution, religious/community hỗ trợ (support / 지원) and quan hệ (relation / 관계) with authorities.
 
@@ -158,7 +158,7 @@ Mạc Cửu’s rise shows merchant-military brokerage can create semi-autonomou
 
 This is another example where sea-centred map changes “periphery” into strategic intersection.
 
-## Gia Định–Sài Gòn: river cổng (port / 포트) to colonial entrepôt
+## Gia Định–Sài Gòn: từ cảng sông đến trung tâm trung chuyển thuộc địa
 
 Southern expansion and rice economy make Saigon/Gia Định increasingly important as a river-commercial nút (node / 노드). Under French colonial quy tắc (rule / 규칙), cổng (port / 포트) hạ tầng (infrastructure / 인프라) links Mekong rice and colonial commodity flows to overseas markets.
 
@@ -206,7 +206,7 @@ factory → truck/rail → container terminal → vessel → foreign hub
 
 Thông tin (information / 정보) hệ thống (system / 시스템) becomes as important as quay wall.
 
-## Sea is also ecological hệ thống (system / 시스템)
+## Biển cũng là một hệ sinh thái
 
 Maritime lịch sử (history / 이력) must include storm, sediment, mangrove, fisheries and coastline thay đổi (change / 변경). A cổng (port / 포트) may decline from environmental shift as much as chính sách (policy / 정책).
 
@@ -222,13 +222,13 @@ Historical map must use period-appropriate concept rather than color today’s r
 
 This is especially important for politically sensitive maritime lịch sử (history / 이력): bằng chứng (evidence / 증거) should specify what kind of điều khiển (control / 제어), presence or claim existed at a given thời gian (time / 시간) instead of using hiện đại (modern / 현대적) legal vocabulary loosely.
 
-## Places to read maritime lịch sử (history / 이력)
+## Địa điểm để đọc lịch sử hàng hải
 
 **Vân Đồn**: medieval northern trade and island geography. **Thu Bồn–Hội An–Cửa Đại**: river-port-international trade hệ thống (system / 시스템). **Thi Nại**: Champa/Bình Định political-maritime liên kết (connection / 연결). **Đà Nẵng**: deep-water cổng (port / 포트), colonial/military modernization. **Hà Tiên**: Gulf of Thailand frontier brokerage. **Sài Gòn/Ho Chi Minh City cổng (port / 포트) zone**: Mekong export/colonial-modern logistics. **Hải Phòng**: cổng (port / 포트)–railway–industrial northern mạng (network / 네트워크).
 
 At each place, ask where old shoreline was, where river channel moved, how goods reached hinterland and which vận chuyển (transport / 전송) technology defined the cổng (port / 포트)’s peak.
 
-## Recap: Việt Nam vừa continental vừa maritime
+## Tổng kết: Việt Nam vừa lục địa vừa hàng hải
 
 Vietnamese lịch sử (history / 이력) cannot be explained only by rice delta and land empires. Ports connect upland products, agricultural surplus, migrant communities, religion, warfare technology and toàn cục (global / 전역) markets. Maritime orientation varies by region and period, but sea repeatedly changes trạng thái (state / 상태) sức chứa (capacity / 용량) and xã hội (social / 사회적) life.
 

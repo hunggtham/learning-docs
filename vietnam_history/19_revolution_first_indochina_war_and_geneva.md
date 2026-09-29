@@ -144,7 +144,7 @@ The line was explicitly a military arrangement, not intended in the agreement as
 
 Large population movements followed during the regrouping period, including many Catholics and other northerners moving south and Viet Minh personnel/supporters regrouping north, while some movement also occurred in other directions.
 
-## Elections and the Geneva political settlement: distinguish documents and signatories
+## Bầu cử và dàn xếp chính trị Geneva: phân biệt văn kiện và bên ký kết
 
 The conference's Final Declaration envisaged nationwide elections in **1956** as part of peaceful reunification. However, the Trạng thái (state / 상태) of Vietnam did not accept the settlement in the same way as the signatories to the military agreement, and the United States did not sign the Final Declaration.
 
@@ -152,7 +152,7 @@ This distinction matters. Saying simply “all sides signed an agreement to hold
 
 The better historical question is why the provisional military division hardened into two rival state-building projects amid Cold War escalation.
 
-## 1954 ends one war but creates a new hệ thống (system / 시스템) trạng thái (state / 상태)
+## 1954 kết thúc một cuộc chiến nhưng tạo ra hệ thống nhà nước mới
 
 French colonial military dominance was broken, but Vietnam was not politically reunified. Two zones now had different governments, armies, international supporters and institutional trajectories.
 

@@ -90,7 +90,7 @@ Urban print and new education stimulate Buddhist reform, Catholic organization a
 
 New association and print mạng (network / 네트워크) allow doctrine/organization to quy mô (scale / 규모).
 
-## Cao Đài and Hòa Hảo
+## Cao Đài và Hòa Hảo
 
 Twentieth-century southern Vietnam sees emergence of **Cao Đài** and **Hòa Hảo**, rooted in cục bộ (local / 로컬) religious môi trường (environment / 환경) and hiện đại (modern / 현대적) xã hội (social / 사회적) crisis.
 
@@ -112,7 +112,7 @@ Urbanization creates new mẫu (pattern / 패턴): large pilgrimage site, online
 
 Modernity often **reformats** ritual rather than eliminating it.
 
-## Festival economy
+## Kinh tế lễ hội
 
 Pilgrimage/festival generates vận chuyển (transport / 전송), food, accommodation and donation flows. Heritage and religion thus intersect economic lịch sử (history / 이력).
 

@@ -118,7 +118,7 @@ Historical fact of trạng thái (state / 상태)/military kết quả (outcome 
 
 A mature công khai (public / 공개) lịch sử (history / 이력) can document multiple lived memories without claiming all factual interpretations have equal bằng chứng (evidence / 증거).
 
-## Museum as narrative technology
+## Bảo tàng như công nghệ kể chuyện
 
 Museum does not merely store objects. Selection, label, room thứ tự (order / 순서) and lighting bản dựng (build / 빌드) nhân quả (causal / 인과적) story.
 
@@ -132,7 +132,7 @@ When visiting museum, ask:
 
 This makes museum visit active historical reading.
 
-## Monument and site layers
+## Các lớp của tượng đài và di tích
 
 A temple commemorating ancient figure may be rebuilt in Nguyễn/hiện đại (modern / 현대적) period. A war monument may be erected decades after sự kiện (event / 이벤트).
 
@@ -154,7 +154,7 @@ UNESCO status usually recognizes cultural/historical giá trị (value / 값) an
 
 For Cổ Loa, archaeology supports ancient political centre; later temples preserve bộ nhớ (memory / 메모리) tầng (layer / 계층). For Hội An/Huế/Mỹ Sơn, hiện tại (current / 현재) heritage landscape includes restoration and later use.
 
-## Digital lịch sử (history / 이력)
+## Lịch sử số
 
 Digitized archive, GIS, satellite ảnh (image / 이미지) and searchable văn bản (text / 텍스트) thay đổi (change / 변경) research năng lực (capability / 역량). Historians can compare place/thời gian (time / 시간) at new quy mô (scale / 규모).
 

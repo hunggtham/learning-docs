@@ -66,7 +66,7 @@ community compliance / bargaining
 
 Nếu intermediary strong, centre gets stability at low administrative chi phí (cost / 비용); nếu quan hệ (relation / 관계) break, same frontier can become rebellion/border-conflict zone.
 
-## Thổ ty và indirect quy tắc (rule / 규칙) như technology of quản trị (governance / 거버넌스)
+## Thổ ty và cai trị gián tiếp như một công nghệ quản trị
 
 Trong Sinosphere frontier quản trị (governance / 거버넌스), các hệ thống (systems / 시스템들) tương tự **bản địa (native / 네이티브) chieftain / thổ ty** cho phép trạng thái (state / 상태) recognize cục bộ (local / 로컬) hereditary authority while incorporating it nominally into broader hierarchy.
 
@@ -118,7 +118,7 @@ pressure on customary land/use systems
 
 When land previously managed through village/community/customary rights enters titled/concession hệ thống (system / 시스템), xung đột (conflict / 충돌) is not only “ethnic”; it is also collision between thuộc tính (property / 속성) regimes.
 
-## War in the Central Highlands: geography turns into chiến lược (strategy / 전략)
+## Chiến tranh ở Tây Nguyên: địa lý biến thành chiến lược
 
 During twentieth-century conflicts, Central Highlands became strategically important because routes, plateau airfields/roads and liên kết (connection / 연결) between coastal lowlands, Laos/Cambodia and southern regions mattered militarily.
 
@@ -150,7 +150,7 @@ Coffee expansion in Central Highlands later connected smallholder/enterprise mô
 
 Historical continuity nằm ở same cốt lõi (core / 핵심) bài toán (problem / 문제): centre seeks tài nguyên (resource / 자원)/tích hợp (integration / 통합); cục bộ (local / 로컬) communities negotiate costs and benefits under changing thuộc tính (property / 속성) and administrative các hệ thống (systems / 시스템들).
 
-## Ethnicity: category, lived định danh (identity / 식별자) và trạng thái (state / 상태) classification
+## Tộc người: phạm trù, căn tính sống và phân loại của nhà nước
 
 Hiện đại (modern / 현대적) official ethnic categories are useful for administration/statistics but historian must not dự án (project / 프로젝트) them unchanged backward for centuries.
 
@@ -158,7 +158,7 @@ Ngôn ngữ (language / 언어), clan, locality, religion, marriage mạng (netw
 
 Vì vậy sentence “dân tộc X đã sống ở đúng territory này từ thời Y” cần bằng chứng (evidence / 증거) cụ thể, không chỉ hiện đại (modern / 현대적) map.
 
-## Thị trường (market / 시장) tích hợp (integration / 통합) không xóa cultural difference ngay lập tức
+## Thị trường hội nhập không xóa khác biệt văn hóa ngay lập tức
 
 Road, school, mobile phone và thị trường (market / 시장) increase tương tác (interaction / 상호작용) nhưng do not mechanically produce assimilation. A community can participate in national thị trường (market / 시장) while preserving ritual, ngôn ngữ (language / 언어) or kinship form.
 
@@ -166,13 +166,13 @@ Conversely, cultural thay đổi (change / 변경) can occur without formal tr�
 
 Assimilation/tích hợp (integration / 통합) therefore are multi-dimensional processes similar to chapter 14’s frontier discussion.
 
-## Places để đọc upland lịch sử (history / 이력)
+## Địa điểm để đọc lịch sử vùng cao
 
 **Tây Bắc** giúp đọc river valley, pass và frontier quan hệ (relation / 관계) với Laos/China. **Hà Giang/Cao Bằng/Lạng Sơn mountain corridors** cho thấy border trade + military geography. **Kon Tum–Pleiku** giúp đọc plateau, mission/colonial and wartime layers. **Buôn Ma Thuột/Đắk Lắk** nối indigenous highland societies, colonial plantation lô-gic (logic / 논리), war và later coffee economy.
 
 Trường dữ liệu (field / 필드) reading phải hỏi: settlement ở valley hay plateau? road được mở khi nào? crop landscape có ancient hay recent? sacred/community không gian (space / 공간) nằm đâu so với administrative centre?
 
-## Compare lowland and upland trạng thái (state / 상태) sức chứa (capacity / 용량)
+## So sánh năng lực nhà nước ở đồng bằng và vùng cao
 
 Lowland delta tends to make population easier to census/tax because settlement dense and agriculture fixed. Upland mobility/dispersal can raise thông tin (information / 정보) chi phí (cost / 비용).
 

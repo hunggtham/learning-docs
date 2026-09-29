@@ -110,7 +110,7 @@ Nationalism, reform, literature and political ideology spread through this công
 
 Press censorship also shows colonial trạng thái (state / 상태) understood thông tin (information / 정보) as power.
 
-## Hiện đại (modern / 현대적) science and translation
+## Khoa học hiện đại và dịch thuật
 
 New vocabulary must be built for politics, chemistry, physics, economics and law. Vietnamese hiện đại (modern / 현대적) terminology often enters through Chinese/Japanese/French/English-mediated concepts.
 
@@ -122,13 +122,13 @@ After 1945, mass literacy becomes state-building priority. Literacy allows citiz
 
 Education thus becomes both xã hội (social / 사회적) dịch vụ (service / 서비스) and capacity-building hạ tầng (infrastructure / 인프라).
 
-## Two education các hệ thống (systems / 시스템들) 1954–1975
+## Hai hệ thống giáo dục 1954–1975
 
 North and South develop different curricula/institutional connections under Cold War contexts. Universities, foreign ngôn ngữ (language / 언어) and huấn luyện (training / 학습) networks link to different international partners.
 
 Do not treat “Vietnamese education” as one uniform hệ thống (system / 시스템) during division.
 
-## Post-1975 unification and expansion
+## Thống nhất và mở rộng sau 1975
 
 Education hệ thống (system / 시스템) is integrated under national khung phần mềm (framework / 프레임워크). Shortage, reconstruction and population growth constrain chất lượng (quality / 품질), but schooling expands over thời gian (time / 시간).
 
@@ -140,7 +140,7 @@ As trade/FDI/toàn cục (global / 전역) technology expand, English becomes hi
 
 Comparison is functional, not claiming languages play identical political roles.
 
-## University and research hệ thống (system / 시스템)
+## Đại học và hệ thống nghiên cứu
 
 Moving from assembly economy toward higher giá trị (value / 값) requires research, kỹ thuật (engineering / 엔지니어링) and professional kiến thức (knowledge / 지식). University is therefore not just degree factory; it is part of national innovation hệ thống (system / 시스템).
 

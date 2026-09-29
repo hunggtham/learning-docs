@@ -141,7 +141,7 @@ Relationship có thể gồm trade, alliance, tribute, raid, intermarriage và r
 
 Chính vì vậy chapter [`36_uplands_highlands_and_lowland_state_relations.md`](36_uplands_highlands_and_lowland_state_relations.md) phải được đọc song song với Champa.
 
-## Champa trong maritime Southeast Asia
+## Champa trong Đông Nam Á hàng hải
 
 Coastal orientation đặt Champa vào South China Sea mạng (network / 네트워크) nối southern China, island Southeast Asia và Indian Ocean routes. Maritime liên kết (connection / 연결) giúp giải thích vì sao foreign religious ideas, ceramics, luxury goods và merchant communities có thể xuất hiện trong một coast nhìn trên hiện đại (modern / 현대적) map tưởng như “peripheral”.
 
@@ -149,7 +149,7 @@ Thực tế peripheral so với Hanoi không nghĩa peripheral so với sea.
 
 Đây là một reversal quan trọng của map perspective: **nếu lấy South China Sea làm centre, duyên hải miền Trung trở thành một corridor, không phải edge.**
 
-## Địa điểm để đọc Champa như hệ thống (system / 시스템)
+## Địa điểm để đọc Champa như một hệ thống
 
 **Mỹ Sơn** dùng để đọc sacred centre + Thu Bồn mạng (network / 네트워크). **Trà Kiệu** giúp đặt political settlement gần river tuyến (route / 경로). **Vijaya/Đồ Bàn** ở Bình Định dùng để đọc military-political centre. **Po Nagar** ở Nha Trang giúp nhìn Kauthara và long ritual continuity. **Po Klong Garai** ở Phan Rang giúp đọc Panduranga và living Cham heritage.
 

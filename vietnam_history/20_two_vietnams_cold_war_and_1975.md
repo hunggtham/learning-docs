@@ -136,13 +136,13 @@ Thus “Vietnam War” is geographically convenient but analytically incomplete.
 
 Recent Cambridge scholarship explicitly treats it as toàn cục (global / 전역) Cold War, civil war and national liberation xung đột (conflict / 충돌) simultaneously.
 
-## Vietnamization and changing force cấu trúc (structure / 구조)
+## Việt Nam hóa chiến tranh và thay đổi cơ cấu lực lượng
 
 Under US President Richard Nixon, chính sách (policy / 정책) shifted toward **Vietnamization**: expanding responsibility of Republic of Vietnam Armed Forces while reducing US ground troop presence, alongside continued air power and aid.
 
 This changed burden phân phối (distribution / 분포) but did not end fighting. Xung đột (conflict / 충돌) expanded dramatically in Cambodia/Laos contexts and remained connected to US–China–Soviet diplomacy.
 
-## 1973 Paris Peace Accords: US withdrawal does not equal war termination
+## Hiệp định Paris 1973: Hoa Kỳ rút quân không đồng nghĩa chiến tranh kết thúc
 
 Paris Peace Accords in **January 1973** produced a ceasefire khung phần mềm (framework / 프레임워크) and withdrawal of US combat forces, while leaving Vietnamese armed actors in place and unresolved political competition in the South.
 
@@ -156,13 +156,13 @@ Saigon fell to communist-led forces on **30 April 1975**.
 
 The date is a clear military-political endpoint for the war, but naming varies by bộ nhớ (memory / 메모리) community: “Liberation of the South/Reunification” in official Vietnamese trạng thái (state / 상태) narrative; “Fall of Saigon” in much international and overseas Vietnamese usage. The sự kiện (event / 이벤트) is the same; labels encode different historical bộ nhớ (memory / 메모리) and political experience.
 
-## 1975 vs 1976: military end và formal trạng thái (state / 상태) reunification
+## 1975 và 1976: kết thúc quân sự và thống nhất nhà nước trên danh nghĩa pháp lý
 
 1975 ended the Republic of Vietnam and major war. Formal institutional reunification followed in **1976** with establishment of the Socialist Republic of Vietnam.
 
 Keeping these dates separate avoids a dùng chung (common / 공통) compression lỗi (error / 오류).
 
-## Human chi phí (cost / 비용) and displacement
+## Chi phí con người và sự ly tán dân cư
 
 The war killed very large numbers of Vietnamese civilians and combatants, as well as foreign soldiers, and caused massive nội bộ (internal / 내부) displacement. Bombing, artillery, mines, massacres, imprisonment and postwar reprisals affected communities differently.
 

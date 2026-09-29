@@ -113,7 +113,7 @@ Gia Long/Minh Mạng trạng thái (state / 상태) therefore invests in adminis
 
 A road is not only vận chuyển (transport / 전송); it is tax, troop, document and thị trường (market / 시장) mạng (network / 네트워크).
 
-## Colonial capitalism: môi trường vận hành (production / 운영 환경) for distant thị trường (market / 시장)
+## Chủ nghĩa tư bản thuộc địa: sản xuất cho thị trường xa
 
 French colonial quy tắc (rule / 규칙) restructures land, tax, plantation, mining, vận chuyển (transport / 전송) and export. Rice from Cochinchina, rubber plantation and mining connect cục bộ (local / 로컬) labor to toàn cục (global / 전역) capital and commodity price.
 
@@ -121,7 +121,7 @@ Railway/cổng (port / 포트) may increase connectivity but thiết kế (desig
 
 Trọng yếu (critical / 중요) distinction: hạ tầng (infrastructure / 인프라) can raise aggregate sức chứa (capacity / 용량) while phân phối (distribution / 분포) of benefit remains unequal.
 
-## Wage labor and new lớp (class / 클래스) relations
+## Lao động làm thuê và quan hệ giai tầng mới
 
 Plantation, mine, factory, cổng (port / 포트) and administration expand wage labor. Worker sells labor thời gian (time / 시간) rather than primarily relying on household land.
 
@@ -129,7 +129,7 @@ This alters rủi ro (risk / 위험): harvest thất bại (failure / 실패) ma
 
 Urban bên tiêu thụ (consumer / 소비자) thị trường (market / 시장) grows together with print, school and dịch vụ (service / 서비스) jobs.
 
-## War economy 1945–1975
+## Kinh tế chiến tranh 1945–1975
 
 Long wars redirect huge tài nguyên (resource / 자원) toward military logistics. Territory fragmentation creates multiple currency, tax, aid and trade regimes.
 
@@ -137,7 +137,7 @@ Foreign aid becomes key tài nguyên (resource / 자원) luồng (flow / 흐름)
 
 Economic lịch sử (history / 이력) of war therefore asks who finances imports, how food reaches army/city, how hạ tầng (infrastructure / 인프라) is destroyed/repaired, and how households survive disruption.
 
-## 1975–1986: planning and scarcity
+## 1975–1986: kế hoạch hóa và khan hiếm
 
 Postwar central planning tries to administratively allocate scarce tài nguyên (resource / 자원). Price, ration, trạng thái (state / 상태) enterprise and cooperative become primary coordination tools.
 
@@ -145,7 +145,7 @@ When official allocation mismatches cục bộ (local / 로컬) scarcity, inform
 
 This period is covered in detail in chapter 21.
 
-## Đổi Mới: thay đổi (change / 변경) of coordination cơ chế (mechanism / 메커니즘)
+## Đổi Mới: thay đổi cơ chế phối hợp
 
 From 1986 onward, household incentives, price tín hiệu (signal / 신호), enterprise autonomy, FDI and trade reshape allocation.
 
@@ -179,7 +179,7 @@ Three long continuities recur:
 
 **Third**, household adapts across regime. Farmer, merchant, worker and migrant combine formal quy tắc (rule / 규칙) with cục bộ (local / 로컬) chiến lược (strategy / 전략).
 
-## Reading places as economic bằng chứng (evidence / 증거)
+## Đọc địa điểm như chứng cứ kinh tế
 
 Cổ Loa → labor mobilization. Thăng Long → administrative/thị trường (market / 시장) concentration. Vân Đồn → medieval maritime trade. Hội An → early-modern cổng (port / 포트) economy. Gia Định/Mekong canals → frontier commercialization. Colonial railway/plantation → export capitalism. Industrial parks around Bắc Ninh/Bình Dương → GVC economy.
 
