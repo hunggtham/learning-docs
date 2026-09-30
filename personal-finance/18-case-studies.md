@@ -4,7 +4,7 @@
 
 Các chapter 01–17 xây mental model và boundary. Chapter 18 không thêm một khái niệm tài chính mới; nó là **application layer** để luyện cách kết hợp nhiều concept cùng lúc.
 
-Trong đời thực, một quyết định hiếm khi chỉ thuộc một chapter. Mất việc liên quan cash flow, emergency fund, debt, insurance và liquidity. Mua xe liên quan financing, depreciation, fixed-cost load và opportunity cost. Sống ở Hàn nhưng có nghĩa vụ ở Việt Nam liên quan FX, remittance, tax boundary và multi-country liquidity.
+Trong đời thực, một quyết định hiếm khi chỉ thuộc một chapter. Mất việc liên quan cash flow, emergency fund, debt, insurance và liquidity. Mua nhà liên quan leverage, debt service, liquidity lock-up và exit friction. Có con liên quan income interruption, insurance, housing và household governance. Sống ở Hàn nhưng có nghĩa vụ ở Việt Nam liên quan FX, remittance, pension, tax boundary và multi-country liquidity.
 
 Vì vậy case study được dùng để luyện một invariant:
 
@@ -46,7 +46,21 @@ Case 05 — Mua xe sau khi tăng lương
 
 Case 06 — Đã chuyển tiền cho scammer
 → containment / evidence / account security / liquidity recovery
+
+Case 07 — Mua nhà bằng leverage
+→ lender approval / affordability / concentration / exit friction
+
+Case 08 — Lập gia đình và có con
+→ one-income stress / caregiving / insurance / household governance
+
+Case 09 — Cross-border retirement
+→ pension portability / spending currency / healthcare / transferability
+
+Case 10 — Death or incapacity continuity
+→ operational access / beneficiary / obligations / single-point-of-failure risk
 ```
+
+Sau khi hoàn thành case route, dùng [19 — Annual Financial Review](./19-annual-financial-review.md) để biến các mental model thành một review loop dùng lại mỗi năm.
 
 ## Case 01 — shock về income
 
@@ -124,6 +138,51 @@ contain
 
 Điểm quan trọng là scam không kết thúc khi transfer xong. Identity exposure, account takeover và recovery scam có thể tạo second incident.
 
+## Case 07 — leverage biến housing thành obligation system
+
+[Mua nhà bằng leverage](./case-studies/07-home-purchase-leverage.md) phân biệt lender approval với personal affordability.
+
+```text
+bank approval
+≠
+household resilience
+```
+
+Case buộc household kiểm tra post-closing liquidity, payment stress, asset concentration, expected holding period và exit friction.
+
+## Case 08 — family finance là governance + resilience
+
+[Lập gia đình và có con](./case-studies/08-family-finance-childcare.md) cho thấy child-related cost không chỉ là direct spending. Income interruption, caregiving, housing/transport upgrade, insurance và account governance có thể thay đổi toàn bộ household state.
+
+```text
+new dependent
+→ new obligations
+→ new failure modes
+```
+
+## Case 09 — retirement không dừng ở net-worth target
+
+[Cross-border retirement](./case-studies/09-cross-border-retirement.md) nối retirement resources với spending currency, transferability, pension portability, healthcare và family obligations.
+
+```text
+retirement readiness
+≠
+just portfolio size
+```
+
+Nó đặc biệt quan trọng với người có work history, asset hoặc future spending ở nhiều quốc gia.
+
+## Case 10 — operational continuity
+
+[Death/Incapacity Continuity](./case-studies/10-death-incapacity-continuity.md) đặt câu hỏi khác với accumulation:
+
+```text
+Money exists
+→ can the household still find, access and operate it?
+```
+
+Case này làm lộ single point of failure khi chỉ một người hiểu accounts, obligations, recovery methods và important documents.
+
 ## Cách tự tạo case mới
 
 Khi thêm một case sau này, không viết kiểu story rồi đưa moral lesson. Hãy cấu trúc:
@@ -174,4 +233,4 @@ What remains reversible?
 Only then: what should capital do next?
 ```
 
-Sau khi đi qua application route này, người học có thể chuyển sang [Economics](../economics/README.md) để hiểu external environment và [Investing](../investing/README.md) khi thực sự có investable surplus.
+Sau application route, [19 — Annual Financial Review](./19-annual-financial-review.md) biến reasoning này thành operating loop. Chỉ khi household đã xác định được investable surplus mới handoff sang [Investing](../investing/README.md); khi cần external economic mechanism thì chuyển sang [Economics](../economics/README.md).

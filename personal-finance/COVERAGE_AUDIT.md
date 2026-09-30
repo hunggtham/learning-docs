@@ -1,7 +1,7 @@
 # Personal Finance — Coverage & Depth Audit
 
-**Last reviewed:** 2026-09-29  
-**Scope:** `personal-finance/` canonical learning route 01–17
+**Last reviewed:** 2026-09-30  
+**Scope:** `personal-finance/` canonical learning route 01–19 plus `case-studies/`
 
 ## Mục đích
 
@@ -37,19 +37,19 @@ Không nên biến `08-taxes.md` thành Korean/Vietnamese tax handbook. Rate, de
 
 ### 09–10 — Housing & Car Finance
 
-**Trạng thái: core strong.**
+**Trạng thái: core strong + application depth added.**
 
 Đã bao phủ total cost of ownership, financing, leverage, depreciation, maintenance, transaction cost, liquidity lock-up và buy/rent reasoning. Korea-specific `월세/전세/보증금` legal mechanics được chuyển sang Korea Law/Civic Life thay vì duplicate.
 
-Potential expansion chỉ nên tập trung vào decision models/case studies, không mở catalog xe hoặc bất động sản theo thị trường.
+Application layer hiện có cả [Korea housing structure](./case-studies/02-korea-housing-choice.md), [home leverage](./case-studies/07-home-purchase-leverage.md) và [car affordability](./case-studies/05-car-purchase-income-rise.md). Vì vậy không cần mở thêm catalog xe hoặc bất động sản theo thị trường.
 
 ### 11–12 — Retirement & Emergency Fund
 
-**Trạng thái: core strong.**
+**Trạng thái: core strong + cross-border application added.**
 
 Retirement đã có pension layers, compounding, longevity, sequence risk và contribution/withdrawal boundaries. Emergency fund đã có self-insurance logic, sizing range, tiering, sinking fund distinction, debt interaction, refill rule và currency/location risk.
 
-Country-specific pension eligibility/refund/portability là time-sensitive. Korea/Vietnam source routing nằm ở chapter 16–17.
+Country-specific pension eligibility/refund/portability là time-sensitive. Korea/Vietnam source routing nằm ở chapter 16–17; [cross-border retirement case](./case-studies/09-cross-border-retirement.md) dùng portability/accessibility như application mà không hard-code entitlement rule.
 
 ### 13 — Financial Scams
 
@@ -57,7 +57,7 @@ Country-specific pension eligibility/refund/portability là time-sensitive. Kore
 
 Chapter ưu tiên social-engineering mechanism, payment irreversibility, phishing, remote access, impersonation, investment/recovery scam, account takeover, response workflow và data minimization thay vì catalog scam trend.
 
-Đây là hướng đúng vì kịch bản lừa đảo thay đổi nhanh. Chỉ thêm incident-specific alert nếu có mục đích học rõ và ngày/source chính thức; không biến canonical chapter thành news feed.
+[Scam incident case](./case-studies/06-financial-scam-incident.md) đã bổ sung containment/recovery layer. Đây là hướng đúng vì kịch bản lừa đảo thay đổi nhanh; không biến canonical chapter thành news feed.
 
 ### 14 — Personal Balance Sheet
 
@@ -91,6 +91,42 @@ Khi mở rộng về Việt Nam sau này, nên ưu tiên tạo một domain civi
 
 Forex trading/hedging instrument mechanics vẫn thuộc [`investing/05_trading_derivatives/forex/`](../investing/05_trading_derivatives/forex/README.md).
 
+### 18 — Case Studies
+
+**Trạng thái: application layer strong.**
+
+Case route hiện bao phủ hai lớp.
+
+Operational/near-term:
+
+```text
+01 job loss
+02 Korea housing structure
+03 KRW income / VND obligations
+04 debt vs investing
+05 car affordability
+06 scam incident
+```
+
+Life-cycle/advanced:
+
+```text
+07 home purchase leverage
+08 family + child
+09 cross-border retirement
+10 death/incapacity continuity
+```
+
+Các case không tạo universal rule. Chúng dùng explicit assumptions, adverse scenarios, trade-off và decision boundary để buộc người đọc nối nhiều canonical concepts trong cùng một tình huống.
+
+### 19 — Annual Financial Review
+
+**Trạng thái: operating loop complete.**
+
+Chapter 19 biến library từ syllabus thành system có cadence. Nó reconcile cash flow, liquidity, debt, insurance, housing/car, retirement, balance sheet, resilience, fraud/account security, cross-border assumptions, continuity và investable-surplus gate.
+
+Annual review còn định nghĩa off-cycle triggers như job loss/change, marriage/divorce, birth/death, country move, major housing/debt transaction hoặc fraud incident. Vì vậy knowledge route hiện có cả learning loop lẫn operational maintenance loop.
+
 ## Canonical ownership boundaries
 
 Library này chỉ bền nếu giữ ownership rõ:
@@ -98,7 +134,8 @@ Library này chỉ bền nếu giữ ownership rõ:
 ```text
 Personal Finance
 → household cash flow, debt, insurance, major purchases,
-  retirement planning, liquidity, resilience, cross-border household exposure
+  retirement planning, liquidity, resilience, cross-border household exposure,
+  life-cycle financial decisions and household operating review
 
 Economics
 → general micro/macro mechanism, monetary policy,
@@ -155,23 +192,23 @@ Không tạo broken link tới branch-only domain khác cho đến khi path đó
 
 ## Expansion candidates sau core
 
-Các chủ đề dưới đây có giá trị nhưng chưa phải bắt buộc để core hoàn chỉnh:
+Core và application loop hiện đã khá hoàn chỉnh. Chỉ mở thêm domain/chapter nếu có demand rõ.
 
-### Household & family finance
+### Household governance sâu hơn
 
-Joint/separate accounts, household governance, financial responsibilities, dependents và communication/contracts giữa các thành viên. Mở khi cần một route gia đình rõ thay vì trộn vào Money.
+Case 08 đã có joint/separate/hybrid account logic, one-income stress và dependent risk. Một chapter riêng chỉ đáng tạo nếu cần đi sâu financial communication, shared responsibility, household contracts hoặc multi-generational support.
 
 ### Career and income risk
 
-Income diversification, unemployment transition, compensation/benefit reading, self-employment cash-flow volatility. Nên cross-link labor economics/career docs nếu repo có owner phù hợp.
+Job-loss case đã cover acute shock. Một chapter riêng có thể có giá trị nếu cần compensation/benefit reading, income diversification, career breaks, self-employment volatility và human-capital risk. Nên cross-link labor economics/career docs nếu repo có owner phù hợp.
 
 ### Estate / inheritance / incapacity planning
 
-Beneficiary, will, power of attorney, inheritance và incapacity có giá trị lớn nhưng rất jurisdiction-dependent. Nếu mở, cần legal boundary cực rõ; không viết thành legal advice.
+Case 10 đã cover operational continuity và single-person dependency. Will, inheritance, power of attorney, probate và beneficiary law vẫn rất jurisdiction-dependent; chỉ mở legal-depth content khi có canonical legal owner rõ.
 
 ### Education and caregiving finance
 
-Tuition, childcare, eldercare và family support có thể được viết như life-cycle case studies sau khi có nhu cầu thực tế.
+Case 08 mới cover child-related household transition ở mức system. Tuition, long-term education funding, eldercare và extended-family support có thể được bổ sung khi có use case thực tế.
 
 ### Self-employment / small-business boundary
 
@@ -194,18 +231,20 @@ Các nội dung đó thuộc owner khác hoặc thay đổi quá nhanh để là
 
 ## Completion gate hiện tại
 
-Core route có thể coi là structurally complete khi:
+Library có thể coi là structurally complete khi:
 
 ```text
-README chứa 01–17 và practical extensions
-→ 14 handoff sang 15, 15 → 16 → 17
+README chứa 01–19
+→ 14 handoff sang 15, 15 → 16 → 17 → 18 → 19
+→ case-studies/ có index và canonical back-links
 → mọi internal link trong personal-finance resolve
 → jurisdiction-specific rule có boundary/source rõ
 → không duplicate Economics/Investing/Korea Law
+→ annual review xác định investable-surplus handoff
 → coverage audit được cập nhật khi thêm major chapter
 ```
 
-Sau gate này, ưu tiên **review chất lượng, case study và cross-domain links** hơn tiếp tục tăng số file.
+Sau gate này, ưu tiên **link validation, prose/terminology consistency, reverse cross-links và merge readiness** hơn tiếp tục tăng số file.
 
 ## Nguồn định hướng coverage
 

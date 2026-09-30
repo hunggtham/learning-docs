@@ -1,6 +1,6 @@
 # Thư viện Kiến thức Tài chính Cá nhân (Personal Finance Knowledge Library)
 
-`personal-finance/` là thư viện chuẩn gốc (canonical / 정본) cho các quyết định tài chính ở cấp cá nhân và hộ gia đình: kiếm tiền, giữ tiền, thanh toán, vay nợ, bảo vệ trước rủi ro, thuế, nhà ở, phương tiện, quỹ dự phòng, chuẩn bị cho tuổi nghỉ hưu, khả năng chống chịu tài chính và các vấn đề xuyên biên giới. Nó được tách khỏi [Investing](../investing/README.md) vì **quản lý tài chính cá nhân (personal finance / 개인 재무) không đồng nghĩa đầu tư (investing / 투자)**.
+`personal-finance/` là thư viện chuẩn gốc (canonical / 정본) cho các quyết định tài chính ở cấp cá nhân và hộ gia đình: kiếm tiền, giữ tiền, thanh toán, vay nợ, bảo vệ trước rủi ro, thuế, nhà ở, phương tiện, quỹ dự phòng, chuẩn bị cho tuổi nghỉ hưu, khả năng chống chịu tài chính, các vấn đề xuyên biên giới và cách vận hành household financial system qua các life event lớn. Nó được tách khỏi [Investing](../investing/README.md) vì **quản lý tài chính cá nhân (personal finance / 개인 재무) không đồng nghĩa đầu tư (investing / 투자)**.
 
 Theo OECD, hiểu biết tài chính (financial literacy / 금융 이해력) không chỉ là biết một sản phẩm đầu tư mà còn gồm kiến thức, kỹ năng, thái độ và hành vi giúp cá nhân ra quyết định tài chính, duy trì khả năng chống chịu tài chính (financial resilience / 금융 회복탄력성) và cải thiện well-being. Vì vậy library này không được viết như một danh sách “mua gì để sinh lời”; câu hỏi trung tâm là: **một người biến thu nhập, nghĩa vụ, rủi ro và mục tiêu qua thời gian thành một hệ thống tài chính có khả năng hoạt động cả khi điều kiện bình thường bị phá vỡ như thế nào?**
 
@@ -27,7 +27,7 @@ Stocks      Forex
 
 Nếu câu hỏi là “lạm phát hình thành và truyền qua nền kinh tế thế nào?”, owner là [Economics](../economics/README.md). Nếu câu hỏi là “lạm phát làm sức mua của tiền tiết kiệm và khoản vay thay đổi thế nào?”, owner là chapter [04 — Inflation](./04-inflation.md). Nếu câu hỏi là “môi trường lạm phát ảnh hưởng định giá cổ phiếu, trái phiếu hay vị thế ngoại hối thế nào?”, owner là [Investing](../investing/README.md).
 
-Tương tự, library này giải thích quỹ dự phòng (emergency fund / 비상자금), cấu trúc nợ (debt structure / 부채 구조), bảo hiểm (insurance / 보험), bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표), khả năng chống chịu tài chính (financial resilience / 금융 회복탄력성) và household FX exposure. Khi tiền đã thực sự trở thành investable surplus và người học cần asset allocation, valuation, portfolio risk hay trading, hãy chuyển sang Investing thay vì lặp lại nội dung ở đây.
+Tương tự, library này giải thích quỹ dự phòng (emergency fund / 비상자금), cấu trúc nợ (debt structure / 부채 구조), bảo hiểm (insurance / 보험), bảng cân đối cá nhân (personal balance sheet / 개인 대차대조표), khả năng chống chịu tài chính (financial resilience / 금융 회복탄력성), household FX exposure, life-cycle decisions và review loop. Khi tiền đã thực sự trở thành investable surplus và người học cần asset allocation, valuation, portfolio risk hay trading, hãy chuyển sang Investing thay vì lặp lại nội dung ở đây.
 
 ## Ranh giới với Korea Law, Civic & Everyday Life
 
@@ -67,15 +67,17 @@ Các chapter có thể đọc riêng, nhưng dependency quan trọng vẫn nên 
 
 ### Practical extensions
 
-Nếu cần áp dụng vào đời sống Hàn Quốc/Việt Nam hoặc có asset/obligation ở nhiều nước:
+Sau core, chuyển sang application và operating loop:
 
 ```text
 15 Financial Resilience
 → 16 Korea–Vietnam Practical Map
 → 17 Cross-Border Personal Finance
+→ 18 Case Studies
+→ 19 Annual Financial Review
 ```
 
-Chapter 16 không phải legal handbook; nó định tuyến sang owner/source. Chapter 17 không phải Forex course; nó xử lý household currency mismatch, remittance friction, transferability và cross-border liquidity.
+Chapter 16 không phải legal handbook; nó định tuyến sang owner/source. Chapter 17 không phải Forex course; nó xử lý household currency mismatch, remittance friction, transferability và cross-border liquidity. Chapter 18 dùng case để kết hợp nhiều concept trong một decision. Chapter 19 biến toàn bộ library thành review loop thay vì một syllabus đọc xong rồi bỏ.
 
 ## Mục lục
 
@@ -96,6 +98,8 @@ Chapter 16 không phải legal handbook; nó định tuyến sang owner/source. 
 15. [Financial Resilience](./15-financial-resilience.md) — income/expense/rate/FX/operational shocks, cash-flow margin, liquidity runway, stress test và resilience gate trước Investing.
 16. [Korea–Vietnam Practical Map](./16-korea-vietnam-practical-map.md) — concept-to-jurisdiction routing cho banking, credit, housing, tax, pension, insurance và scam; giữ luật/procedure ở canonical owner.
 17. [Cross-Border Personal Finance](./17-cross-border-personal-finance.md) — functional currency, household FX exposure, remittance total cost, transferability, tax-residency boundary, pension portability và multi-country emergency planning.
+18. [Case Studies](./18-case-studies.md) — integrated application qua job loss, housing, KRW↔VND obligations, debt-vs-investing, car, scam, home leverage, family finance, cross-border retirement và death/incapacity continuity.
+19. [Annual Financial Review](./19-annual-financial-review.md) — yearly operating loop để reconcile cash flow, liquidity, debt, insurance, balance sheet, resilience, security, cross-border assumptions và investable surplus.
 
 ## Mô hình tư duy xuyên suốt
 
@@ -115,6 +119,22 @@ Quyết định này thay đổi monthly cash flow thế nào?
 ```
 
 Khi chuỗi này đã được trả lời, quyết định mới sẵn sàng được nối sang Economics để hiểu external environment hoặc sang Investing để đánh giá allocation/risk-return.
+
+## Từ syllabus sang operating system
+
+Library được thiết kế thành hai vòng:
+
+```text
+Learning loop
+01 → 15
+concept → mechanism → household system
+
+Operating loop
+16 → 19
+jurisdiction → cross-border → case application → annual review
+```
+
+Annual review không phải điểm cuối cố định. Khi có job change, marriage/divorce, birth/death, move country, housing transaction, major debt hoặc fraud incident, household quay lại chapter/case tương ứng rồi chạy lại review.
 
 ## Bản đồ ownership ngắn
 
