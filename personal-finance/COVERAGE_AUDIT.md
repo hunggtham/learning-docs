@@ -1,141 +1,168 @@
-# Personal Finance — Coverage & Depth Audit
+# Personal Finance — Coverage, Depth & Merge-Readiness Audit
 
 **Last reviewed:** 2026-09-30  
-**Scope:** `personal-finance/` canonical learning route 01–19 plus `case-studies/`
+**Scope:** `personal-finance/` canonical learning route 01–19 + `case-studies/` application layer
 
 ## Mục đích
 
-Audit này trả lời ba câu hỏi: core financial literacy đã được bao phủ tới đâu, phần nào cần giữ ở mức concept vì phụ thuộc jurisdiction/time, và expansion tiếp theo có thật sự lấp khoảng trống hay chỉ làm library phình ra.
+Audit này trả lời bốn câu hỏi:
 
-Tiêu chí không phải số lượng file. Một topic được coi là đủ core khi người đọc hiểu được **problem → mechanism → trade-off → failure mode → decision connection**, đồng thời biết khi nào phải chuyển sang canonical owner khác.
+1. core financial literacy đã được bao phủ tới đâu;
+2. phần nào phải giữ ở mức concept vì phụ thuộc jurisdiction/time;
+3. phần mở rộng nào thực sự tăng decision skill thay vì chỉ tăng số file;
+4. library đã sẵn sàng để xuất hiện trong Study Library và merge vào `main` về mặt cấu trúc hay chưa.
 
-## Trạng thái coverage
+Tiêu chí không phải số lượng chapter. Một topic được coi là đủ core khi người đọc hiểu được:
+
+```text
+problem
+→ mechanism
+→ trade-off
+→ failure mode
+→ decision connection
+→ canonical handoff khi vượt phạm vi
+```
+
+## 1. Coverage hiện tại
 
 ### 01–04 — Money, Banking, Interest, Inflation
 
 **Trạng thái: core strong.**
 
-Các chapter đã tạo mental model về flow/stock, liquidity, payment/deposit layer, time value of money, nominal/real value và household inflation. General monetary/macro theory không tiếp tục mở rộng ở đây vì owner là [Economics](../economics/README.md).
+Các chapter đã tạo mental model về flow/stock, liquidity, payment/deposit layer, time value of money, nominal/real value và household inflation. General monetary/macroeconomic theory không mở rộng tiếp ở đây vì canonical owner là [Economics](../economics/README.md).
 
-Depth gate hiện tại đã đủ cho việc đọc tiếp credit/debt và các quyết định lớn. Chỉ nên thêm mathematical appendix nếu sau này có nhu cầu tính annuity, effective rate hoặc inflation-adjusted cash flow sâu hơn; không cần tách thêm file chỉ vì công thức.
+Depth hiện tại đủ để đi tiếp credit/debt và major-life decisions. Mathematical appendix chỉ nên thêm khi có use case rõ như annuity, effective rate hoặc inflation-adjusted cash flow; không cần tách thêm file chỉ vì có thêm công thức.
 
 ### 05–06 — Credit, Loans & Debt
 
 **Trạng thái: core strong.**
 
-Đã bao phủ credit as borrowing capacity, pricing, score/reporting concept, revolving/installment debt, amortization, secured/unsecured debt, DTI, payoff trade-off và debt structure.
+Đã bao phủ credit as borrowing capacity, pricing, credit-report/score concept, revolving/installment debt, amortization, secured/unsecured debt, DTI, payoff trade-off và debt structure.
 
-Jurisdiction-specific credit bureau rules, legal interest cap, collections, insolvency hoặc consumer procedure không thuộc core universal. Hàn Quốc cross-link sang [`korea_law_civic_life/08_banking_credit_and_financial_consumer.md`](../korea_law_civic_life/08_banking_credit_and_financial_consumer.md); Việt Nam cần official/legal source hiện hành khi có use case cụ thể.
+Jurisdiction-specific credit-bureau rules, legal interest caps, collections, insolvency hoặc consumer procedure không thuộc core universal. Hàn Quốc được route sang [Korea Law, Civic & Everyday Life — Banking & Credit](../korea_law_civic_life/08_banking_credit_and_financial_consumer.md); Việt Nam phải kiểm tra official/legal source hiện hành khi có use case cụ thể.
 
 ### 07–08 — Insurance & Taxes
 
 **Trạng thái: conceptual strong; implementation intentionally external/time-sensitive.**
 
-Insurance đã có pooling, premium, deductible, coverage, exclusion, liability và risk-transfer logic. Taxes đã có gross/net, marginal/effective rate, withholding, tax-advantaged/deferred concept và jurisdiction boundary.
+Insurance đã có pooling, premium, deductible, coverage, exclusion, liability và risk-transfer logic. Taxes đã có gross/net, marginal/effective rate, withholding, tax-deferred/tax-advantaged concept và jurisdiction boundary.
 
-Không nên biến `08-taxes.md` thành Korean/Vietnamese tax handbook. Rate, deduction, residency tests, filing deadline và product tax treatment thay đổi theo thời gian; chỉ thêm khi có effective date, official source và review owner rõ.
+Không biến `08-taxes.md` thành Korean/Vietnamese tax handbook. Tax rate, deduction, residency test, filing deadline và product tax treatment thay đổi theo thời gian; chỉ đưa số hiện hành khi có official source, effective date, scope và review date.
 
 ### 09–10 — Housing & Car Finance
 
-**Trạng thái: core strong + application depth added.**
+**Trạng thái: core strong + application cases.**
 
-Đã bao phủ total cost of ownership, financing, leverage, depreciation, maintenance, transaction cost, liquidity lock-up và buy/rent reasoning. Korea-specific `월세/전세/보증금` legal mechanics được chuyển sang Korea Law/Civic Life thay vì duplicate.
+Đã bao phủ total cost of ownership, financing, leverage, depreciation, maintenance, transaction cost, liquidity lock-up và buy/rent reasoning.
 
-Application layer hiện có cả [Korea housing structure](./case-studies/02-korea-housing-choice.md), [home leverage](./case-studies/07-home-purchase-leverage.md) và [car affordability](./case-studies/05-car-purchase-income-rise.md). Vì vậy không cần mở thêm catalog xe hoặc bất động sản theo thị trường.
+Korea-specific `월세/전세/보증금` legal mechanics vẫn thuộc [Korea Law, Civic & Everyday Life — Housing](../korea_law_civic_life/06_housing_wolse_jeonse_deposit_and_registration.md). Personal Finance giữ decision layer và đã bổ sung case về Korea housing, home-purchase leverage và car affordability.
 
 ### 11–12 — Retirement & Emergency Fund
 
-**Trạng thái: core strong + cross-border application added.**
+**Trạng thái: core strong + cross-border application.**
 
-Retirement đã có pension layers, compounding, longevity, sequence risk và contribution/withdrawal boundaries. Emergency fund đã có self-insurance logic, sizing range, tiering, sinking fund distinction, debt interaction, refill rule và currency/location risk.
+Retirement đã có pension layers, compounding, longevity, sequence risk và contribution/withdrawal boundaries. Emergency fund đã có self-insurance logic, sizing heuristic, tiering, sinking-fund distinction, debt interaction, refill rule và currency/location risk.
 
-Country-specific pension eligibility/refund/portability là time-sensitive. Korea/Vietnam source routing nằm ở chapter 16–17; [cross-border retirement case](./case-studies/09-cross-border-retirement.md) dùng portability/accessibility như application mà không hard-code entitlement rule.
+Country-specific pension eligibility/refund/portability là time-sensitive. Chapter 16–17 và case 09 chỉ cung cấp routing/reasoning framework; rule hiện hành phải xác minh bằng nguồn chính thức.
 
 ### 13 — Financial Scams
 
-**Trạng thái: strong and current-mechanism oriented.**
+**Trạng thái: strong and mechanism-oriented.**
 
 Chapter ưu tiên social-engineering mechanism, payment irreversibility, phishing, remote access, impersonation, investment/recovery scam, account takeover, response workflow và data minimization thay vì catalog scam trend.
 
-[Scam incident case](./case-studies/06-financial-scam-incident.md) đã bổ sung containment/recovery layer. Đây là hướng đúng vì kịch bản lừa đảo thay đổi nhanh; không biến canonical chapter thành news feed.
+Case 06 chuyển từ prevention sang incident response: contain → secure root accounts → preserve evidence → recover liquidity → review controls.
 
 ### 14 — Personal Balance Sheet
 
 **Trạng thái: integration strong.**
 
-Đây là system accounting layer: assets, liabilities, net worth, liquid net worth, cash-flow bridge, savings/debt-service/emergency coverage/leverage ratios, dashboard và decision journal.
+Đây là household accounting layer: assets, liabilities, net worth, liquid net worth, cash-flow bridge, savings/debt-service/emergency-coverage/leverage ratios, dashboard và decision journal.
 
-Chapter không nên tiến sâu thành accounting course. Financial statements doanh nghiệp thuộc [Investing — Company Analysis](../investing/03_company_analysis/README.md).
+Chapter không tiến sâu thành company accounting course. Financial statements doanh nghiệp thuộc [Investing — Company Analysis](../investing/03_company_analysis/README.md).
 
 ### 15 — Financial Resilience
 
 **Trạng thái: advanced integration complete for core.**
 
-Chapter thêm missing system property: household có sống sót qua income/expense/rate/FX/operational shock không. Nó nối cash-flow margin, liquidity, insurance, debt structure và redundancy bằng stress test.
+Chapter thêm system property quan trọng: household có sống sót qua income/expense/rate/FX/operational shock không. Nó nối cash-flow margin, liquidity, insurance, debt structure và redundancy bằng stress test.
 
-Đây là layer cần thiết trước Investing vì net worth cao không tự đồng nghĩa household có risk capacity cao.
+Đây là resilience gate trước Investing vì net worth cao không tự đồng nghĩa household có risk capacity cao.
 
 ### 16 — Korea–Vietnam Practical Map
 
-**Trạng thái: routing/compare layer complete.**
+**Trạng thái: routing/comparison layer complete.**
 
-Chapter không duplicate luật mà định tuyến concept → jurisdiction → official owner/source → contract. Nó nêu rõ Korea-specific canonical owners trong repo và framework tương ứng cho Việt Nam.
+Chapter không duplicate luật mà định tuyến:
 
-Khi mở rộng về Việt Nam sau này, nên ưu tiên tạo một domain civic/legal Vietnam riêng nếu scope đủ lớn, thay vì dồn legal procedure vào Personal Finance.
+```text
+concept
+→ jurisdiction
+→ official owner/source
+→ contract/individual facts
+```
+
+Korea-specific implementation được cross-link sang `korea_law_civic_life/`. Nếu Việt Nam sau này có legal/civic domain đủ lớn, legal procedure nên có canonical owner riêng thay vì dồn vào Personal Finance.
 
 ### 17 — Cross-Border Personal Finance
 
 **Trạng thái: advanced practical core complete.**
 
-Đã bao phủ functional currency mental model, household FX exposure, currency buckets, remittance total cost, transferability, banking/KYC friction, tax-residency boundary, pension portability, emergency access, family support obligation và cross-border balance-sheet review.
+Đã bao phủ functional currency mental model, household FX exposure, currency buckets, remittance total cost, transferability, banking/KYC friction, tax-residency boundary, pension portability, emergency access, family-support obligation và cross-border balance-sheet review.
 
-Forex trading/hedging instrument mechanics vẫn thuộc [`investing/05_trading_derivatives/forex/`](../investing/05_trading_derivatives/forex/README.md).
+Forex trading/hedging instruments vẫn thuộc [Investing — Forex](../investing/05_trading_derivatives/forex/README.md).
 
 ### 18 — Case Studies
 
-**Trạng thái: application layer strong.**
+**Trạng thái: application layer complete for current scope.**
 
-Case route hiện bao phủ hai lớp.
-
-Operational/near-term:
+Case studies hiện bao phủ mười tình huống:
 
 ```text
-01 job loss
-02 Korea housing structure
+01 six-month job loss
+02 Korea housing choice
 03 KRW income / VND obligations
 04 debt vs investing
-05 car affordability
-06 scam incident
-```
-
-Life-cycle/advanced:
-
-```text
-07 home purchase leverage
-08 family + child
+05 car purchase after income rise
+06 financial scam incident
+07 home purchase with leverage
+08 family finance and childcare
 09 cross-border retirement
 10 death/incapacity continuity
 ```
 
-Các case không tạo universal rule. Chúng dùng explicit assumptions, adverse scenarios, trade-off và decision boundary để buộc người đọc nối nhiều canonical concepts trong cùng một tình huống.
+Các case không tạo universal rule. Chúng luyện cùng một invariant:
+
+```text
+state
+→ constraints
+→ cash flow
+→ balance sheet
+→ liquidity
+→ stress scenarios
+→ options
+→ second-order effects
+→ decision boundary
+→ review trigger
+```
 
 ### 19 — Annual Financial Review
 
 **Trạng thái: operating loop complete.**
 
-Chapter 19 biến library từ syllabus thành system có cadence. Nó reconcile cash flow, liquidity, debt, insurance, housing/car, retirement, balance sheet, resilience, fraud/account security, cross-border assumptions, continuity và investable-surplus gate.
+Chapter 19 biến library từ syllabus thành system có cadence review. Nó nối cash flow, liquidity, debt, insurance, housing/car, retirement, balance sheet, resilience, fraud/security, cross-border assumptions, continuity và goals thành một annual operating loop.
 
-Annual review còn định nghĩa off-cycle triggers như job loss/change, marriage/divorce, birth/death, country move, major housing/debt transaction hoặc fraud incident. Vì vậy knowledge route hiện có cả learning loop lẫn operational maintenance loop.
+Annual review kết thúc bằng **investable-surplus gate**, sau đó mới handoff sang [Investing](../investing/README.md).
 
-## Canonical ownership boundaries
+## 2. Canonical ownership boundaries
 
 Library này chỉ bền nếu giữ ownership rõ:
 
 ```text
 Personal Finance
 → household cash flow, debt, insurance, major purchases,
-  retirement planning, liquidity, resilience, cross-border household exposure,
-  life-cycle financial decisions and household operating review
+  retirement planning, liquidity, resilience,
+  cross-border household exposure, life-cycle decisions and review loop
 
 Economics
 → general micro/macro mechanism, monetary policy,
@@ -150,11 +177,11 @@ Korea Law, Civic & Everyday Life
   tax/social insurance, banking/credit and consumer rights
 ```
 
-Nếu một file mới không có owner rõ hoặc lặp hơn nửa nội dung từ owner khác, ưu tiên cross-link thay vì tạo file.
+Nếu một file mới không có owner rõ hoặc lặp phần lớn nội dung từ owner khác, ưu tiên cross-link thay vì tạo file.
 
-## Time-sensitive content policy
+## 3. Time-sensitive content policy
 
-Các dữ liệu sau không nên hard-code như “kiến thức vĩnh viễn” nếu không có effective date và source:
+Các dữ liệu sau không được hard-code như “kiến thức vĩnh viễn” nếu không có metadata thời điểm:
 
 - tax rates, deductions, brackets và filing deadlines;
 - deposit-insurance limits;
@@ -164,9 +191,9 @@ Các dữ liệu sau không nên hard-code như “kiến thức vĩnh viễn”
 - social-insurance eligibility theo nationality/visa;
 - mortgage/consumer-loan regulatory ratios;
 - government subsidies và housing programs;
-- scam hotline/procedure nếu cơ quan đã thay đổi.
+- scam hotline/procedure khi cơ quan hoặc workflow có thể thay đổi.
 
-Khi buộc phải đưa số hiện hành vào learning doc:
+Khi cần ghi số/rule hiện hành:
 
 ```text
 official source
@@ -176,45 +203,95 @@ official source
 + last-reviewed date
 ```
 
-Nếu thiếu một trong các field này, ưu tiên giải thích mechanism và link owner thay vì ghi con số.
+Nếu thiếu metadata này, ưu tiên mechanism + routing thay vì biến một snapshot thành canonical rule.
 
-## Repo-wide connections còn cần giữ
+## 4. Publication / Study Library audit
 
-Personal Finance nên có internal links theo mechanism, không chỉ ở README:
+Study Library không publish mọi root folder tự động. Canonical publication manifest là [`../learning-library/library.config.json`](../learning-library/library.config.json).
 
-- opportunity cost, inflation, interest → [Economics](../economics/README.md);
-- investable surplus, asset allocation, securities, Forex → [Investing](../investing/README.md);
-- Korean housing/tax/banking procedure → [Korea Law, Civic & Everyday Life](../korea_law_civic_life/README.md);
-- scam/social engineering → có thể cross-link [Psychology](../psychology/README.md) khi cần behavioral mechanism sâu hơn;
-- probability/risk/expected value → nên nối sang `thinking/` khi domain này trở thành canonical trên `main`.
+`personal-finance/` hiện đã có prefix publication riêng:
 
-Không tạo broken link tới branch-only domain khác cho đến khi path đó tồn tại trong cùng merge set hoặc trên main.
+```text
+path: personal-finance
+category: Personal Finance
+language: vi-en-ko
+rights: author-confirmed
+```
 
-## Expansion candidates sau core
+Điều này quan trọng vì build script chỉ discover Markdown khi file nằm trong `allowedPrefixes` hoặc `allowedDocuments`. PDF vẫn cần explicit per-file permission entry theo publishing policy.
 
-Core và application loop hiện đã khá hoàn chỉnh. Chỉ mở thêm domain/chapter nếu có demand rõ.
+Route được đối chiếu với branch tree hiện tại:
 
-### Household governance sâu hơn
+```text
+README.md
+01–19
+COVERAGE_AUDIT.md
+case-studies/README.md
+case-studies/01–10
+```
 
-Case 08 đã có joint/separate/hybrid account logic, one-income stress và dependent risk. Một chapter riêng chỉ đáng tạo nếu cần đi sâu financial communication, shared responsibility, household contracts hoặc multi-generational support.
+Tất cả các target chính trong learning route hiện có file tương ứng trên branch.
+
+## 5. Internal-link audit
+
+Các nhóm link quan trọng đã được đối chiếu theo canonical path:
+
+```text
+01–19 → personal-finance/*
+18 → case-studies/README.md + case 01–10
+Personal Finance → economics/README.md
+Personal Finance → investing/README.md
+Personal Finance → korea_law_civic_life/*
+17 → investing/05_trading_derivatives/forex/README.md
+14 → investing/03_company_analysis/README.md
+```
+
+Các owner target trên đều nằm trong prefix đã được Study Library publish. Build script tạo graph bằng cách resolve relative Markdown path trên tập document đã publish; việc thêm `personal-finance` vào manifest vì thế cũng cần thiết để các node/edge của domain xuất hiện trong graph.
+
+## 6. Repo-wide reverse connections
+
+`CATALOG.md` hiện khai báo reciprocal `related` metadata giữa `personal_finance` và ba owner chính:
+
+```text
+personal_finance ↔ economics
+personal_finance ↔ investing
+personal_finance ↔ korea_law_civic_life
+```
+
+Ở document level, Personal Finance đã có outbound links trực tiếp sang cả ba domain. Không cần duplicate theory chỉ để tạo thêm reverse prose; khi sửa README của owner khác trong một batch tương lai, có thể thêm contextual back-link nếu nó cải thiện learning route thực tế.
+
+## 7. External-source verification
+
+Các nguồn OECD 2026 dùng trong library đã được kiểm tra lại ngày 2026-09-30 theo trang xuất bản chính thức.
+
+Tên chuẩn cần dùng là:
+
+- OECD, *OECD/INFE Toolkit for Measuring Financial Literacy, Inclusion and Well-Being 2026*.
+- OECD, *Consumer Finance Risk Monitor 2026*.
+
+Không dùng biến thể thiếu `Well-Being` trong title của Toolkit.
+
+## 8. Expansion candidates sau core
+
+Core hiện không cần thêm chapter chỉ để tăng breadth. Chỉ mở thêm khi có use case rõ, ví dụ:
 
 ### Career and income risk
 
-Job-loss case đã cover acute shock. Một chapter riêng có thể có giá trị nếu cần compensation/benefit reading, income diversification, career breaks, self-employment volatility và human-capital risk. Nên cross-link labor economics/career docs nếu repo có owner phù hợp.
+Income diversification, unemployment transition, compensation/benefit reading hoặc self-employment cash-flow volatility. Nên cross-link labor economics/career docs nếu repo có owner phù hợp.
 
 ### Estate / inheritance / incapacity planning
 
-Case 10 đã cover operational continuity và single-person dependency. Will, inheritance, power of attorney, probate và beneficiary law vẫn rất jurisdiction-dependent; chỉ mở legal-depth content khi có canonical legal owner rõ.
+Case 10 đã bao phủ continuity framework. Will, power of attorney, inheritance, beneficiary law và probate vẫn rất jurisdiction-dependent; nếu mở sâu phải có legal owner/boundary rõ.
 
 ### Education and caregiving finance
 
-Case 08 mới cover child-related household transition ở mức system. Tuition, long-term education funding, eldercare và extended-family support có thể được bổ sung khi có use case thực tế.
+Case 08 đã bao phủ household-capacity logic. Tuition, childcare subsidy, eldercare benefit hoặc country-specific program chỉ nên thêm khi có official/time-sensitive source.
 
 ### Self-employment / small-business boundary
 
-Cần tách personal cash flow với business cash flow, tax reserve, liability và working capital. Chỉ mở nếu repo chưa có business-finance owner phù hợp.
+Nếu mở, cần tách personal cash flow với business cash flow, tax reserve, liability và working capital; không để Personal Finance biến thành small-business accounting.
 
-## Những thứ không nên thêm vào `personal-finance/`
+## 9. Những thứ không nên thêm vào `personal-finance/`
 
 Không mở rộng library bằng:
 
@@ -229,27 +306,28 @@ Không mở rộng library bằng:
 
 Các nội dung đó thuộc owner khác hoặc thay đổi quá nhanh để làm canonical foundation.
 
-## Completion gate hiện tại
+## 10. Completion gate
 
-Library có thể coi là structurally complete khi:
+Về cấu trúc, library đạt gate khi:
 
 ```text
 README chứa 01–19
 → 14 handoff sang 15, 15 → 16 → 17 → 18 → 19
 → case-studies/ có index và canonical back-links
-→ mọi internal link trong personal-finance resolve
+→ publication manifest chứa personal-finance prefix
+→ target chính của internal links tồn tại
 → jurisdiction-specific rule có boundary/source rõ
-→ không duplicate Economics/Investing/Korea Law
+→ Economics/Investing/Korea Law ownership không bị duplicate
 → annual review xác định investable-surplus handoff
-→ coverage audit được cập nhật khi thêm major chapter
+→ coverage audit phản ánh route hiện tại
 ```
 
-Sau gate này, ưu tiên **link validation, prose/terminology consistency, reverse cross-links và merge readiness** hơn tiếp tục tăng số file.
+Sau gate này, ưu tiên **prose/terminology polish, build verification và merge review** hơn tiếp tục tăng số file.
 
 ## Nguồn định hướng coverage
 
 - OECD Financial Education: https://www.oecd.org/en/topics/financial-education.html
-- OECD/INFE Toolkit for Measuring Financial Literacy and Financial Inclusion 2026.
-- OECD Consumer Finance Risk Monitor 2026.
+- OECD, *OECD/INFE Toolkit for Measuring Financial Literacy, Inclusion and Well-Being 2026*: https://www.oecd.org/en/publications/oecd-infe-toolkit-for-measuring-financial-literacy-inclusion-and-well-being-2026_92f2d439-en.html
+- OECD, *Consumer Finance Risk Monitor 2026*: https://www.oecd.org/en/publications/consumer-finance-risk-monitor-2026_61f7dbe0-en.html
 - Khan Academy Financial Literacy: https://www.khanacademy.org/college-careers-more/financial-literacy
 - CFPB Consumer Tools: https://www.consumerfinance.gov/consumer-tools/

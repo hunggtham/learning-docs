@@ -172,9 +172,9 @@ Nếu chưa có đủ metadata, ưu tiên giải thích mechanism và chỉ đư
 
 - OECD, *PISA 2022 Financial Literacy Framework*: https://www.oecd.org/en/publications/pisa-2022-assessment-and-analytical-framework_dfe0bf9c-en/full-report/component-4.html
 - OECD, Financial Education: https://www.oecd.org/en/topics/financial-education.html
-- OECD, *OECD/INFE Toolkit for Measuring Financial Literacy and Financial Inclusion 2026*.
-- OECD, *Consumer Finance Risk Monitor 2026*.
+- OECD, *OECD/INFE Toolkit for Measuring Financial Literacy, Inclusion and Well-Being 2026*: https://www.oecd.org/en/publications/oecd-infe-toolkit-for-measuring-financial-literacy-inclusion-and-well-being-2026_92f2d439-en.html
+- OECD, *Consumer Finance Risk Monitor 2026*: https://www.oecd.org/en/publications/consumer-finance-risk-monitor-2026_61f7dbe0-en.html
 - Khan Academy, *Financial Literacy*: https://www.khanacademy.org/college-careers-more/financial-literacy
 - Consumer Financial Protection Bureau, consumer tools: https://www.consumerfinance.gov/consumer-tools/
 
-Các nguồn theo quốc gia được dùng để minh họa cơ chế hoặc định tuyến kiểm tra, không mặc định áp dụng pháp lý toàn cầu. Chapter nào đụng tới thuế, bảo hiểm tiền gửi, credit reporting, housing law, social insurance hay hưu trí phải nói rõ jurisdiction boundary thay vì biến quy định của một nước thành “quy tắc chung”.
+Các nguồn theo quốc gia được dùng để minh họạ cơ chế hoặc định tuyến kiểm tra, không mặc định áp dụng pháp lý toàn cầu. Chapter nào đụng tới thuế, bảo hiểm tiền gửi, credit reporting, housing law, social insurance hay hưu trí phải nói rõ jurisdiction boundary thay vì biến quy định của một nước thành “quy tắc chung”.
