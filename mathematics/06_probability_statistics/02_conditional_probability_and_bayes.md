@@ -703,6 +703,10 @@ Causal or only associational claim?
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối đưa Bayes vào diagnostic testing, causal reasoning và machine learning. Luôn ghi rõ prior, evidence và posterior để không đảo sai denominator.
+
+Phần kết nối đặt conditional probability và Bayes vào inference, diagnostic testing và causal reasoning. Hãy kiểm tra rõ information nào đã biết trước khi đổi denominator.
+
 ```text
 conditional probability
 → product/chain rule
@@ -723,6 +727,4 @@ conditional probability
 
 ## Dùng chung (common / 공통) Misconceptions
 
-`P(A|B)` is not `P(B|A)`. Sensitivity is not positive predictive giá trị (value / 값). High classifier accuracy under lớp (class / 클래스) imbalance may say little about posterior precision. Likelihood is not posterior. Bayesian updating cannot rescue a bad likelihood mô hình (model / 모델) or unjustified prior. Conditional independence must be modeled, not assumed because features “look different”. Conditioning can create correlations through selection. Bayes theorem updates association under a mô hình (model / 모델); it does not by itself prove nhân quả (causal / 인과적) effects.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 counting and combinatorics](./00_counting_and_combinatorics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+`P(A|B)` is not `P(B|A)`. Sensitivity is not positive predictive value. High classifier accuracy under class imbalance may say little about posterior precision. Likelihood is not posterior. Bayesian updating cannot rescue a bad likelihood model or unjustified prior. Conditional independence must be modeled, not assumed because features “look different”. Conditioning can create correlations through selection. Bayes theorem updates association under a model; it does not by itself prove causal effects.

@@ -225,6 +225,8 @@ Nhiều relationship suy yếu không phải vì xung đột (conflict / 충돌)
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 nhu cầu xã hội
  + cơ hội
@@ -242,5 +244,3 @@ nhu cầu xã hội
 ## Kết nối kiến thức
 
 Xem [[01_attachment_and_relationships]], [[07_close_relationships_intimacy_and_family]], [[16_acculturation_migration_and_bicultural_identity]], [[../04_mental_health/03_depression_bipolar_and_suicidality]], [[../04_mental_health/09_grief_loss_and_bereavement]], [[../06_applied/05_digital_psychology_social_media_and_online_behavior]], [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

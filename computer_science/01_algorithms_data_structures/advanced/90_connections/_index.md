@@ -7,14 +7,24 @@ Nhóm này nối các khái niệm DSA riêng lẻ thành quyết định thiế
 
 ## Các chương tổng hợp
 
-- [Chọn cấu trúc dữ liệu phù hợp](./00_choose_the_right_data_structure.md) — chuyển tải công việc (workload / 워크로드) thành tiêu chí lựa chọn biểu diễn (representation / 표현), bất biến (invariant / 불변식) và chi phí (cost / 비용) mô hình (model / 모델).
-- [DSA trong cơ sở dữ liệu, mạng và hệ thống](./01_dsa_in_databases_networks_and_systems.md) — cách B+cây (tree / 트리), bảng băm (hash table / 해시 테이블), vùng nhớ động (heap / 힙), đồ thị (graph / 그래프), Trie và sketch xuất hiện trong hệ thống thực tế.
-- [Workflow giải bài và thiết kế thuật toán](./02_problem_solving_workflow.md) — specification → modeling → bất biến (invariant / 불변식) → baseline → tối ưu hóa (optimization / 최적화) → proof → testing → môi trường vận hành (production / 운영 환경) hardening.
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- [Chọn cấu trúc dữ liệu phù hợp](./00_choose_the_right_data_structure.md) — chuyển workload thành tiêu chí lựa chọn representation, invariant và cost model.
+- [DSA trong cơ sở dữ liệu, mạng và hệ thống](./01_dsa_in_databases_networks_and_systems.md) — cách B+Tree, Hash Table, Heap, Graph, Trie và sketch xuất hiện trong hệ thống thực tế.
+- [Workflow giải bài và thiết kế thuật toán](./02_problem_solving_workflow.md) — specification → modeling → invariant → baseline → optimization → proof → testing → production hardening.
 
 
-> **Chuyển mạch:** Từ **Các chương tổng hợp**, ta sang **trường hợp (case / 사례) study xuyên nhiều chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- [Database Indexing](./03_case_study_database_indexing.md) — Hash Index, B+Tree, Buffer Pool, Bloom Filter, LSM, Join và crash consistency.
+- [Autocomplete & Search Suggestions](./04_case_study_autocomplete_search.md) — Trie/FST, Top-K Heap, ranking, Unicode, fuzzy search, cache và distributed merge.
+- [Routing System](./05_case_study_routing_graph_system.md) — Graph representation, Dijkstra, Priority Queue, dynamic topology, longest-prefix match, ECMP và failover.
+- [Streaming Analytics](./06_case_study_streaming_analytics.md) — Hash Map, Count-Min Sketch, HyperLogLog, heavy hitters, quantile sketch, windows và distributed state.
+- [Scheduler & Backpressure](./07_case_study_scheduler_backpressure.md) — Queue/Deque/Priority Queue, fairness, aging, work stealing, bounded queue, retry và admission control.
 
 ## Trường hợp (case / 사례) study xuyên nhiều chapter
+Phần “Trường hợp (case / 사례) study xuyên nhiều chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Database Indexing](./03_case_study_database_indexing.md) — băm (hash / 해시) chỉ mục (index / 인덱스), B+cây (tree / 트리), Buffer Pool, Bloom Filter, LSM, phép nối (join / 조인) và crash consistency.
 - [Autocomplete & Search Suggestions](./04_case_study_autocomplete_search.md) — Trie/FST, Top-K vùng nhớ động (heap / 힙), ranking, Unicode, fuzzy tìm kiếm (search / 검색), bộ nhớ đệm (cache / 캐시) và phân tán (distributed / 분산) merge.

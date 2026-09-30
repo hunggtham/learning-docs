@@ -136,6 +136,8 @@ ultranationalism
 The final [Comparative synthesis](09_comparative_synthesis.md) puts fascism next to liberalism, conservatism, socialism, anarchism, libertarianism, republicanism and nationalism using the same institutional axes rather than a one-dimensional left–right score.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - United States Holocaust Memorial Museum, “Fascism”: https://encyclopedia.ushmm.org/content/en/article/fascism-1
 - Encyclopaedia Britannica, “Fascism”: https://www.britannica.com/topic/fascism

@@ -141,6 +141,8 @@ Nếu tải công việc (workload / 워크로드) nhạy độ trễ (latency /
 
 ## Đọc `iostat` đúng hơn
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 iostat -x 1
 ```
@@ -370,6 +372,4 @@ Bottleneck xuất hiện khi tốc độ đưa việc vào vượt khả năng p
 
 ## Kết nối kiến thức
 
-Đọc cùng [VFS, page cache và writeback](../01_filesystem/vfs_page_cache_writeback.md), [I/O performance](./io_performance.md) và [journaling/consistency](../01_filesystem/journaling_consistency_mounts.md). Với cơ sở dữ liệu (database / 데이터베이스), các cơ chế này quyết định trực tiếp độ trễ (latency / 지연 시간) của WAL, checkpoint và giao dịch (transaction / 트랜잭션) lần ghi nhận (commit / 커밋).
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [cpu scheduling performance](./cpu_scheduling_performance.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đọc cùng [VFS, page cache và writeback](../01_filesystem/vfs_page_cache_writeback.md), [I/O performance](./io_performance.md) và [journaling/consistency](../01_filesystem/journaling_consistency_mounts.md). Với database, các cơ chế này quyết định trực tiếp latency của WAL, checkpoint và transaction commit.

@@ -145,6 +145,8 @@ Khi population rất lớn relative to mẫu (sample / 표본), binomial có th�
 
 ## 7. Geometric: waiting tới success đầu tiên
 
+Geometric distribution mô tả số lần thử cho tới success đầu tiên dưới giả định trial độc lập và xác suất success cố định. Nếu các điều kiện này không giữ, cần chọn mô hình khác hoặc ghi rõ giới hạn.
+
 ```math
 P(X=k)=(1-p)^{k-1}p,
 \qquad k=1,2,\ldots

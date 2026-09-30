@@ -11,6 +11,8 @@ Một câu hỏi triết học tốt thường hỏi về **điều kiện**, **
 > **Chuyển mạch:** Từ **Câu hỏi trước khi trả lời**, ta sang **Giải phẫu một lập luận** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Giải phẫu một lập luận
+Phần “Giải phẫu một lập luận” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 premise 1 + premise 2 + hidden premise
@@ -24,6 +26,8 @@ Khi đọc một argument, hãy viết lại bằng câu ngắn, tìm premise �
 > **Chuyển mạch:** Từ **Giải phẫu một lập luận**, ta sang **Các loại bất đồng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Các loại bất đồng
+Phần “Các loại bất đồng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **fact dispute**: bất đồng về dữ liệu hoặc trạng thái thế giới;
 - **concept dispute**: dùng cùng một từ cho hai khái niệm khác nhau;

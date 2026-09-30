@@ -76,6 +76,8 @@ Giải pháp thường là instrumentation amplifier hoặc hai tầng gain, l�
 > **Chuyển mạch:** Từ **6. Worked lập luận (reasoning / 추론): sensor cầu nối (bridge / 브리지) vào ADC**, ta sang **7. Đo kiểm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. Đo kiểm
+Phần “7. Đo kiểm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Đo DC độ lệch (bias / 편향) trước khi đưa tín hiệu (signal / 신호).
 - Dùng tín hiệu (signal / 신호) nhỏ để kiểm tra gain tuyến tính.
@@ -87,6 +89,8 @@ Giải pháp thường là instrumentation amplifier hoặc hai tầng gain, l�
 > **Chuyển mạch:** Từ **7. Đo kiểm**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - độ lệch (bias / 편향) sai làm transistor saturation/cutoff, khiến small-signal equation vô hiệu.
 - phản hồi (feedback / 피드백) polarity nhầm biến negative phản hồi (feedback / 피드백) thành positive phản hồi (feedback / 피드백).

@@ -8,6 +8,8 @@ Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 �
 Baseline hiện tại là Python 3.14.7, bản stable phát hành ngày 2026-08-05. Ngày kiểm chứng: 2026-09-22. Những phần nói riêng về CPython luôn được phân biệt với ngữ nghĩa (semantics / 의미론) của ngôn ngữ Python, vì CPython là hiện thực (implementation / 구현) phổ biến nhất chứ không phải toàn bộ định nghĩa của Python.
 
 ## Mạch học (learning flow / 학습 흐름) và phụ thuộc (dependency / 의존성)
+Phần “Mạch học (learning flow / 학습 흐름) và phụ thuộc (dependency / 의존성)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Part 1 — execution / name binding / object / data / function
@@ -86,6 +88,8 @@ Nếu đã viết Python nhưng mô hình tư duy (mental model / 사고 모델)
 > **Chuyển mạch:** Từ **Cách dùng thư viện (library / 라이브러리)**, ta sang **Nguồn chuẩn gốc (canonical / 정본)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nguồn chuẩn gốc (canonical / 정본)
+Phần “Nguồn chuẩn gốc (canonical / 정본)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Python documentation by phiên bản (version / 버전): https://www.python.org/doc/versions/
 - Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조): https://docs.python.org/3.14/tham chiếu (reference / 참조)/

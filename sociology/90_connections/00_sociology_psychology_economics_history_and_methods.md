@@ -352,6 +352,8 @@ When reading a bài toán (problem / 문제), ask in this thứ tự (order / �
 Then cross-link rather than re-explain the đơn vị sở hữu (owner / 오너) lĩnh vực (domain / 도메인).
 
 ## 23. Routing map
+Phần “23. Routing map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Cognition / emotion / personality

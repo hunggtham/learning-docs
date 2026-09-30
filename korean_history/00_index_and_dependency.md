@@ -10,6 +10,8 @@ Các tên có thể mang nhiều convention khác nhau trong tiếng Việt sẽ
 
 ## Bản đồ toàn bộ thư viện
 
+Bản đồ này đặt chronology, social/economic history, geography và memory studies trong cùng một hệ. Hãy đọc các nhánh như những câu hỏi bổ sung cho cùng một giai đoạn, không như các danh sách sự kiện độc lập.
+
 ```text
 01 Cách đọc lịch sử
    ↓
@@ -77,6 +79,7 @@ Các trục xuyên thời gian:
 34 → Historical places / field guide
 35 → Economy / society / everyday life
 36 → Geography / routes / historical space
+37 → Historical case labs: sáu tình huống nối chronology, economy, Việt Nam và địa điểm
 ```
 
 ## Lớp đọc mới: timeline + kinh tế + Việt Nam + địa điểm + geography
@@ -104,6 +107,8 @@ chapter chronology 02–23
         ↓
 34: dấu vết vật chất hôm nay nằm ở đâu
         ↓
+37: luyện đọc bằng tình huống và câu hỏi nhân quả
+        ↓
 26–29: thematic deep dive khi cần
 ```
 
@@ -116,6 +121,8 @@ Ta cần biết Tam Quốc trước khi hiểu vì sao Goryeo tự đặt mình 
 Đây là phụ thuộc (dependency / 의존성) về **nhân quả (causal / 인과적) ngữ cảnh (context / 맥락)**, không phải difficulty mức (level / 수준).
 
 ## Mermaid kiến thức (knowledge / 지식) đồ thị (graph / 그래프)
+
+Sau bản đồ tuyến tính, sơ đồ mạng cho thấy một chapter có thể nối tới nhiều giai đoạn và nhiều loại bằng chứng. Đây là điểm chuyển từ học theo thời gian sang suy luận theo dependency và cơ chế.
 
 ```mermaid
 graph TD

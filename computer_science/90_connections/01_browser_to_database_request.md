@@ -79,6 +79,8 @@ TLS protects channel, WAF may filter patterns, app authenticates/authorizes, par
 
 ## Mermaid chuỗi (sequence / 시퀀스)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 sequenceDiagram
     participant B as Browser
@@ -103,6 +105,8 @@ sequenceDiagram
 > A web yêu cầu (request / 요청) is a **chuỗi xử lý (pipeline / 파이프라인) of queues, trạng thái (state / 상태) machines and trust boundaries**. “Backend độ trễ (latency / 지연 시간)” là tổng của nhiều mechanisms; debugging tốt xác định stage và bất biến (invariant / 불변식) bị phá.
 
 ## Cross-references
+
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
 
 - [DNS/HTTP/TLS](../06_networks_distributed_systems/03_dns_http_tls_and_web_request.md)
 - [Processes/threads/scheduling](../03_operating_systems/01_processes_threads_and_scheduling.md)

@@ -5,6 +5,8 @@
 Metaphysics hỏi cái gì tồn tại, tồn tại theo cách nào và một vật/hệ vẫn là “cùng một” vật/hệ qua thay đổi ra sao. Đây không phải giấy phép suy đoán không kiểm tra; các claim metaphysical cần phân biệt với claim thực nghiệm mà Physics, Biology hoặc Psychology có thể kiểm tra trực tiếp.
 
 ## Một số phân biệt nền tảng
+Phần “Một số phân biệt nền tảng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **substance và thuộc tính (property / 속성)**: vật thể độc lập với thuộc tính hay chỉ được nhận diện qua profile thuộc tính?
 - **định danh (identity / 식별자) và similarity**: hai trạng thái giống nhau đến đâu vẫn là một cá thể?
@@ -24,6 +26,8 @@ Một người thay đổi tế bào, ký ức và vai trò xã hội nhưng v�
 > **Chuyển mạch:** Từ **Cầu nối**, ta sang **định danh (identity / 식별자) qua các trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Định danh (identity / 식별자) qua các trường hợp (case / 사례)
+Phần “Định danh (identity / 식별자) qua các trường hợp (case / 사례)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | trường hợp (case / 사례) | Tiêu chí được giữ | Tiêu chí bị phá vỡ | Câu hỏi còn lại |
 |---|---|---|---|

@@ -18,6 +18,8 @@ Trạng thái dùng ở đây:
 
 ## Foundations
 
+Bảng Foundations trả lời câu hỏi: người học đã có đủ công cụ để đọc vị trí, quy mô, dữ liệu và hệ thống Trái Đất chưa? Các dòng dưới đây là bản đồ kiểm tra prerequisite trước khi chuyển sang process vật lý và ứng dụng vùng.
+
 | Nhóm | Trạng thái | Ghi chú |
 |---|---|---|
 | Geographic thinking / quy mô (scale / 규모) / location | **Deep** | mẫu (pattern / 패턴)→tiến trình (process / 프로세스), relational location, khả năng tiếp cận (accessibility / 접근성), quy mô (scale / 규모)–extent–resolution, mạng (network / 네트워크)/luồng (flow / 흐름), đường dẫn (path / 경로) dependence, bất định (uncertainty / 불확실성). |
@@ -30,6 +32,8 @@ Trạng thái dùng ở đây:
 > **Chuyển mạch:** Từ **Foundations**, ta sang **vật lý (physical / 물리적) Geography** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Vật lý (physical / 물리적) Geography
+
+Sau nền tảng, audit chuyển sang các process vật lý tạo relief, khí hậu, nước, sinh thái và hazard. Đọc bảng theo chuỗi nguyên nhân này để thấy trạng thái của từng nhóm không phải những nhãn độc lập.
 
 | Nhóm | Trạng thái | Ghi chú |
 |---|---|---|
@@ -59,6 +63,8 @@ Mục tiêu của pass sau không phải tăng độ dài từng tệp (file / �
 
 ## Human Geography
 
+Phần Human Geography kiểm tra cách các process tự nhiên đi vào dân cư, di chuyển, đô thị, sản xuất và bất bình đẳng. Mục tiêu của bảng là phát hiện những cầu nối còn thiếu giữa physical constraint và kết quả xã hội.
+
 | Nhóm | Trạng thái | Ghi chú |
 |---|---|---|
 | Population | **Deep** | Stock–luồng (flow / 흐름), fertility/mortality, cohort/period, momentum, density, census/registry, projections. |
@@ -85,6 +91,8 @@ Pass tiếp theo nên kiểm tra trùng lặp, thêm quantitative examples khi t
 
 ## Regional Geography
 
+Các region chapter là nơi những khái niệm trước được đặt vào cùng một không gian. Bảng này cho biết region nào đã nối được physical base, settlement, economy, transport và role thay vì chỉ liệt kê quốc gia.
+
 | Region | Trạng thái | Ghi chú |
 |---|---|---|
 | East Asia | **Deep** | High interior–monsoon rivers–dense eastern lowlands–industrial maritime networks; Korea tuyến (route / 경로) mạnh. |
@@ -106,11 +114,9 @@ Regional chapters hiện đều phải dùng cùng chuỗi (chain / 사슬):
 Không dùng regional chapter như country encyclopedia.
 
 
-> **Chuyển mạch:** Từ **Regional Geography**, ta sang **toàn cục (global / 전역) các hệ thống (systems / 시스템들)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Global Systems vượt qua biên giới từng quốc gia để theo dõi dòng vật chất, năng lượng, vốn, khí hậu và mạng lưới đô thị. Vì vậy trạng thái ở đây được đánh giá theo khả năng giải thích quan hệ liên vùng và feedback hệ thống.
 
-## Toàn cục (global / 전역) các hệ thống (systems / 시스템들)
-
-| hệ thống (system / 시스템) | Trạng thái | Ghi chú |
+| System | Trạng thái | Ghi chú |
 |---|---|---|
 | Climate thay đổi (change / 변경) | **Deep** | Forcing–phản hồi (feedback / 피드백)–ocean inertia–carbon stock/luồng (flow / 흐름)–extremes–attribution–adaptation. |
 | Water–Food–năng lượng (energy / 에너지) Nexus | **Deep** | Multi-objective trade-offs, groundwater, desalination, virtual water, urban nexus, resilience. |
@@ -151,11 +157,9 @@ Thailand và Philippines vẫn là **Planned/tham chiếu (reference / 참조)**
 
 ## Khoảng trống tiếp theo
 
-1. **vật lý (physical / 물리적) cross-link QA**: tectonics/geomorphology ↔ hydrology/sediment ↔ coasts/hazards.
-2. **Population–urban–development cầu nối (bridge / 브리지)**: thêm nhân quả (causal / 인과적) examples và quantitative lập luận (reasoning / 추론) có chọn lọc, tránh lặp định nghĩa.
-3. **Regional cross-link QA**: mỗi region nên trỏ tới cốt lõi (core / 핵심) prerequisites và 1–3 Atlas học tập (learning / 학습) cases có giá trị thật.
-4. **Selective Atlas**: Thailand/Philippines chỉ promote nếu đạt full profile; long tail giữ tham chiếu (reference / 참조)/Inventory.
-5. **Atlas cleanup**: classify legacy short files thành `reference / merge / remove`; không dùng tệp (file / 파일) count làm chỉ số (metric / 지표).
-6. **Internal-link kiểm tra hợp lệ (validation / 검증)** sau độ sâu (depth / 깊이) passes lớn, ưu tiên broken relative links và duplicate concept.
-
-> **Bàn giao:** Sau **Khoảng trống tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [LEARNING ROUTE](./LEARNING_ROUTE.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+1. **Physical cross-link QA**: tectonics/geomorphology ↔ hydrology/sediment ↔ coasts/hazards.
+2. **Population–urban–development bridge**: thêm causal examples và quantitative reasoning có chọn lọc, tránh lặp định nghĩa.
+3. **Regional cross-link QA**: mỗi region nên trỏ tới core prerequisites và 1–3 Atlas learning cases có giá trị thật.
+4. **Selective Atlas**: Thailand/Philippines chỉ promote nếu đạt full profile; long tail giữ Reference/Inventory.
+5. **Atlas cleanup**: classify legacy short files thành `reference / merge / remove`; không dùng file count làm metric.
+6. **Internal-link validation** sau depth passes lớn, ưu tiên broken relative links và duplicate concept.

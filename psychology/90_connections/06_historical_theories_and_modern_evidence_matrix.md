@@ -9,6 +9,8 @@ Xem quy ước chung tại [[../EVIDENCE_STATUS_GUIDE]].
 
 ## Ma trận tổng quan
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 | Claim hoặc concept | Trạng thái phù hợp | Cách đọc hiện đại |
 |---|---|---|
 | Tâm trí có quá trình ngoài awareness | **Established bằng chứng (evidence / 증거)** | Automatic processing, implicit học tập (learning / 학습), habit, priming, attention ngoài báo cáo có ý thức |
@@ -217,5 +219,3 @@ Khi một chapter nhắc Freud, Adler hoặc Jung, ưu tiên format:
 ## Kết nối
 
 Xem [[00_freud_jung_and_depth_psychology_in_context]], [[05_adler_individual_psychology_in_context]], [[../EVIDENCE_STATUS_GUIDE]], [[../00_foundations/06_open_science_and_evidence_evaluation]], [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]], [[../03_human_development_and_person/03_personality]] và [[../05_intervention/00_psychotherapy_and_change]].
-
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 freud jung and depth psychology in context](./00_freud_jung_and_depth_psychology_in_context.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

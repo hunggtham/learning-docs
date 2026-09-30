@@ -30,6 +30,8 @@ Một API tốt phải trả lời: ai tạo/hủy bộ chứa (container / 컨�
 
 ## Mảng động
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef struct {
     int *data;
@@ -57,6 +59,8 @@ if (new_capacity > SIZE_MAX / sizeof *v->data) return false;
 
 ## realloc và mất hiệu lực của con trỏ
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 int *new_data = realloc(v->data, new_cap * sizeof *v->data);
 if (!new_data) return false;
@@ -83,6 +87,8 @@ sau đó giải phóng trạng thái cũ
 Ví dụ resize bảng băm (hash table / 해시 테이블): cấp phát bảng mới, rehash thành công, đổi con trỏ/sức chứa (capacity / 용량) rồi mới giải phóng bảng cũ. Nếu cập nhật nửa chừng rồi cấp phát thất bại, cấu trúc có thể bị hỏng.
 
 ## Danh sách liên kết
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 typedef struct Node {
@@ -134,6 +140,8 @@ Có nhiều quy ước ring buffer như `head + size`, `head/tail + one-empty-sl
 
 ## Bộ chứa (container / 컨테이너) tổng quát với void*
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef int (*compare_fn)(const void *, const void *);
 ```
@@ -161,6 +169,8 @@ thường an toàn hơn.
 `qsort` tiện dụng nhưng gọi comparator qua hàm (function / 함수) pointer và API `void *`. Trong đường chạy số học rất nóng, sort chuyên biệt có thể nhanh hơn, nhưng chỉ nên thay thế sau khi đo.
 
 ## Padding, alignment và bố trí dữ liệu
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 typedef struct {
@@ -221,6 +231,8 @@ Ngăn xếp (stack / 스택) tường minh trên vùng nhớ động (heap / 힙
 
 ## const, restrict và aliasing
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 const Node *tree_find(const Tree *tree, int key);
 ```
@@ -255,6 +267,8 @@ Hàm khởi tạo nhiều tài nguyên phải cleanup đúng khi một bước g
 Destructor có thể đặt con trỏ về `NULL` và reset siêu dữ liệu (metadata / 메타데이터) sau `free`, nhưng điều đó không làm các alias khác tự biến mất. Dùng đối tượng (object / 객체) sau khi destroy vẫn là lỗi ngữ nghĩa.
 
 ## Sao chép, clone và chuyển quyền sở hữu
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 Tree b = a;
@@ -291,6 +305,8 @@ int edges[m];
 
 ## Flexible Array Member
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef struct {
     size_t len;
@@ -307,6 +323,8 @@ malloc(sizeof(Block) + n * sizeof(int));
 Cách này giảm một lần gián tiếp qua con trỏ và giảm số cấp phát, nhưng phép tính kích thước phải chống overflow.
 
 ## Intrusive dữ liệu (data / 데이터) structures
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```c
 typedef struct Task {
@@ -398,6 +416,8 @@ Thêm `_Atomic` vào con trỏ cũng không tự biến danh sách thành lock-f
 
 ## Checklist triển khai
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 ```text
 Bất biến biểu diễn là gì?
 Ai sở hữu từng con trỏ và vòng đời của nó?
@@ -418,5 +438,3 @@ Benchmark có phản ánh tải công việc thật không?
 Một triển khai DSA hoàn chỉnh không chỉ có `push`, `pop`, `find`; nó còn cần `init/destroy`, xử lý lỗi, hợp đồng quyền sở hữu (ownership / 소유권), validator, kiểm thử đối chiếu ngẫu nhiên và kiểm tra an toàn bộ nhớ.
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 java collections and dsa](./01_java_collections_and_dsa.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

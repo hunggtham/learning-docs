@@ -1,58 +1,39 @@
-# 3. 결합도 (Coupling - Độ phụ thuộc)
+# 9. 트리 (Tree) 용어
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **3. 결합도 (Coupling - Độ phụ thuộc)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **9. 트리 (Tree) 용어**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **9. 트리 (Tree) 용어** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **10. 이진 트리의 운행법 (Binary Tree Traversal)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-결합도
+트리
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **10. 소프트웨어 설계 원리 (Software Design Principles)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **4. 응집도 (Cohesion - Độ gắn kết)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**에서 만든 기준을 이어받아 **9. 트리 (Tree) 용어**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **3. 결합도 (Coupling - Độ phụ thuộc)** và nối nó với **4. 응집도 (Cohesion - Độ gắn kết)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
----
-
-## 3. 결합도 (Coupling - Độ phụ thuộc)
-**개념 (Khái niệm):** 모듈 간의 의존성 정도 (Mức độ phụ thuộc giữa các module với nhau). **낮을수록 좋음 (Càng thấp càng tốt).**
-
-순서 (Từ Tốt nhất đến Xấu nhất): **자료(Data) -> 스탬프(Stamp) -> 제어(Control) -> 외부(External) -> 공통(Common) -> 내용(Content)**
-💡 **Mẹo ghi nhớ:** T-S-C-N-C-N (Data-Stamp-Control-External-Common-Content) -> **Tính Sao Cho Nhẹ Cả Người**
-
-1.  **자료 결합도 (Data Coupling) - TỐT NHẤT:**
-    *   **Korean:** 파라미터(자료 요소)만 전달.
-    *   **VI (Vietnamese) (Tiếng Việt):** Chỉ truyền tham số dữ liệu cần thiết.
-    *   **Example:** `sum(a, b)` truyền đúng 2 số a, b.
-2.  **스탬프 결합도 (Stamp Coupling):**
-    *   **Korean:** 배열/레코드 등 자료구조가 전달됨.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truyền toàn bộ cấu trúc dữ liệu (mảng, đối tượng) nhưng chỉ dùng 1 phần.
-    *   **Example:** Truyền đối tượng `User` nhưng chỉ dùng `User.name`.
-3.  **제어 결합도 (Control Coupling):**
-    *   **Korean:** 제어 신호(Flag)를 전달하여 모듈 흐름 제어.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truyền cờ điều khiển (flag, boolean) can thiệp vào lô-gic (logic / 논리) của mô-đun (module / 모듈) khác.
-    *   **Example:** Truyền `isExpress=true` để quyết định cách xử lý.
-4.  **외부 결합도 (External Coupling):**
-    *   **Korean:** 외부 변수/데이터 참조.
-    *   **VI (Vietnamese) (Tiếng Việt):** Cùng phụ thuộc vào dữ liệu / tệp (file / 파일) / thiết bị bên ngoài.
-    *   **Example:** Hai mô-đun (module / 모듈) dùng chung một tệp (file / 파일) `config.txt`.
-5.  **공통 결합도 (Common Coupling):**
-    *   **Korean:** 공통 데이터 영역(전역 변수) 공유.
-    *   **VI (Vietnamese) (Tiếng Việt):** Nhiều mô-đun (module / 모듈) dùng chung biến toàn cục (global variables).
-    *   **Example:** Sử dụng `public static int totalCount` chung.
-6.  **내용 결합도 (Content Coupling) - XẤU NHẤT:**
-    *   **Korean:** 내부 기능/자료 직접 참조. 스파게티 코드.
-    *   **VI (Vietnamese) (Tiếng Việt):** Truy cập, sửa đổi trực tiếp dữ liệu/lô-gic (logic / 논리) nội bộ của mô-đun (module / 모듈) khác.
-    *   **Example:** `moduleB.internalValue = 10` từ mô-đun (module / 모듈) A.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **9. 트리 (Tree) 용어** và nối nó với **10. 이진 트리의 운행법 (Binary Tree Traversal)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
+
+## 9. 트리 (Tree) 용어
+
+Ở bước 52/69, **9. 트리 (Tree) 용어** xuất hiện như phần tiếp nối của **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **9. 트리 (Tree) 용어** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “9. 트리 (Tree) 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- Node, Root, Degree (차수), Terminal Node (Leaf), Parent, Child, Sibling, Depth/Height.
+
+Như vậy, **9. 트리 (Tree) 용어** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **10. 이진 트리의 운행법 (Binary Tree Traversal)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

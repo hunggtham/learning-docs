@@ -5,6 +5,8 @@
 Dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) biến expectation về lược đồ (schema / 스키마) và ngữ nghĩa (semantics / 의미론) thành sản phẩm tạo ra (artifact / 산출물) có thể kiểm tra trong CI/CD và thời gian chạy (runtime / 런타임). Nó không chỉ là một JSON lược đồ (schema / 스키마); grain, định danh (identity / 식별자), freshness, chất lượng (quality / 품질) và quyền sở hữu (ownership / 소유권) cũng là đặc tả hợp đồng (contract / 계약).
 
 ## 1. đặc tả hợp đồng (contract / 계약) layers
+Phần “1. đặc tả hợp đồng (contract / 계약) layers” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 syntax → schema/type/nullability/enum

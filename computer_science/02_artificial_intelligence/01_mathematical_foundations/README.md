@@ -22,6 +22,8 @@ Bắt đầu bằng [Mathematics for AI](./00_mathematics_for_ai.md) để có b
 
 ## Phụ thuộc (dependency / 의존성) map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     M[00 Mathematics Map] --> LA[01 Linear Algebra]
@@ -46,6 +48,8 @@ Không cần đọc theo một đường duy nhất. Nếu đang học Transform
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Linear Algebra      → biểu diễn và biến đổi
 Probability         → uncertainty và distributions
@@ -56,6 +60,4 @@ Optimization        → tìm parameters/actions theo objective
 Numerical Computing → làm toán chạy ổn định trên hardware thật
 ```
 
-Các chapter sau trong thư viện (library / 라이브러리) sẽ cross-reference lại folder này khi mathematical cơ chế (mechanism / 메커니즘) thực sự cần thiết.
-
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematics for ai](./00_mathematics_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Các chapter sau trong library sẽ cross-reference lại folder này khi mathematical mechanism thực sự cần thiết.

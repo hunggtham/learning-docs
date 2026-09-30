@@ -49,6 +49,8 @@ lớn.
 > **Chuyển mạch:** Từ **tính tương thích (compatibility / 호환성)**, ta sang **Checklist rà soát (review / 검토)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Checklist rà soát (review / 검토)
+Phần “Checklist rà soát (review / 검토)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - máy khách (client / 클라이언트) có biết success, kiểm tra hợp lệ (validation / 검증) thất bại (failure / 실패), auth thất bại (failure / 실패) và xung đột (conflict / 충돌) khác nhau?
 - yêu cầu (request / 요청) hết thời gian chờ (timeout / 타임아웃) và tỷ lệ (rate / 비율) limit có được phản ánh bằng header/đặc tả hợp đồng (contract / 계약) không?

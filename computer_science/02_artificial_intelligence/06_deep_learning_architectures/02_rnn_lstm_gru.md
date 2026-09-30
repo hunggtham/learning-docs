@@ -124,9 +124,11 @@ LSTM không “giải quyết hoàn toàn” long phụ thuộc (dependency / �
 
 ## Gate interpretation
 
-- forget gate: bao nhiêu old bộ nhớ (memory / 메모리) giữ lại;
-- đầu vào (input / 입력) gate: bao nhiêu new candidate viết vào bộ nhớ (memory / 메모리);
-- đầu ra (output / 출력) gate: bao nhiêu cell trạng thái (state / 상태) expose ra hidden.
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- forget gate: bao nhiêu old memory giữ lại;
+- input gate: bao nhiêu new candidate viết vào memory;
+- output gate: bao nhiêu cell state expose ra hidden.
 
 Gates learned, không hand-coded ngữ nghĩa (semantic / 의미적).
 
@@ -227,6 +229,8 @@ Xem [Encoder–Decoder Models](./03_encoder_decoder_models.md) và [Attention](.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 RNN  = continuously update compressed state
 LSTM = state + learned gates controlling write/keep/read
@@ -253,6 +257,4 @@ It is phân tán (distributed / 분산) learned véc-tơ (vector / 벡터) trạ
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-RNN applies [Backpropagation](../05_neural_networks/04_backpropagation.md), [Gradient Clipping](../05_neural_networks/05_gradient_descent_and_optimizers.md) and chuỗi (sequence / 시퀀스) trạng thái (state / 상태) ideas. Attention emerges specifically because fixed recurrent trạng thái (state / 상태) becomes bottleneck.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+RNN applies [Backpropagation](../05_neural_networks/04_backpropagation.md), [Gradient Clipping](../05_neural_networks/05_gradient_descent_and_optimizers.md) and sequence state ideas. Attention emerges specifically because fixed recurrent state becomes bottleneck.

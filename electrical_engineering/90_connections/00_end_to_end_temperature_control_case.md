@@ -74,6 +74,8 @@ Independent thermal cutoff đặt ngoài MCU để xử lý MOSFET stuck-on ho�
 > **Chuyển mạch:** Từ **5. Power stage**, ta sang **6. Firmware máy trạng thái (state machine / 상태 머신)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 6. Firmware máy trạng thái (state machine / 상태 머신)
+Phần “6. Firmware máy trạng thái (state machine / 상태 머신)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 BOOT → SELF_TEST → IDLE → HEATING → HOLD
@@ -117,6 +119,8 @@ Mỗi bản ghi (record / 레코드) nên có timestamp, raw ADC, filtered tempe
 > **Chuyển mạch:** Từ **8. Telemetry và diagnostics**, ta sang **9. xác minh (verification / 확인) ma trận (matrix / 행렬)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 9. xác minh (verification / 확인) ma trận (matrix / 행렬)
+Phần “9. xác minh (verification / 확인) ma trận (matrix / 행렬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Scenario | Expected bằng chứng (evidence / 증거) |
 |---|---|
@@ -140,6 +144,8 @@ Trường hợp (case / 사례) cho thấy cầu nối (bridge / 브리지) khô
 > **Chuyển mạch:** Từ **10. Kết luận thiết kế**, ta sang **Liên kết** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Liên kết
+Phần “Liên kết” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Circuit analysis](../circuits/00_circuit_analysis_and_measurement.md)
 - [Analog biasing and feedback](../analog_electronics/00_device_biasing_feedback.md)

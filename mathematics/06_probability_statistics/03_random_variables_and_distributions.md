@@ -247,6 +247,8 @@ không cần independence.
 
 ## Variance: spread quanh expectation
 
+Variance đo độ phân tán quanh expectation bằng bình phương độ lệch. Nó nhấn mạnh các giá trị xa trung tâm và là nền cho standard deviation, risk và uncertainty propagation.
+
 ```math
 Var(X)=E[(X-E[X])^2].
 ```
@@ -332,6 +334,8 @@ Joint → marginal → conditional là cốt lõi (core / 핵심) phụ thuộc 
 
 ## Covariance và correlation chỉ tóm tắt một phần dependence
 
+Covariance và correlation nén quan hệ hai biến thành một con số, nhưng không mô tả hết phi tuyến, tail dependence hay causality. Hãy đọc chúng cùng scatterplot và mô hình sinh dữ liệu.
+
 ```math
 Cov(X,Y)
 =
@@ -403,8 +407,10 @@ Hàm mất mát (loss function / 손실 함수) và xác suất (probability / �
 
 ## Phân phối (distribution / 분포) choice là giả định (assumption / 가정) gói (package / 패키지)
 
-- Binomial: fixed trials, nhị phân (binary / 이진) kết quả (outcome / 결과), often independence/constant `p`.
-- Poisson: event-count cơ chế (mechanism / 메커니즘) with approximately stable independent increments.
+Chọn distribution đồng nghĩa chọn một gói giả định về support, tail, symmetry và dependence. Vì vậy cần kiểm tra dữ liệu và mục đích suy luận trước khi chọn tên phân phối quen thuộc.
+
+- Binomial: fixed trials, binary outcome, often independence/constant `p`.
+- Poisson: event-count mechanism with approximately stable independent increments.
 - Normal: symmetric light-tailed continuous variation.
 - Exponential: memoryless waiting times.
 - Heavy-tailed các mô hình (models / 모델들): larger extreme-event probabilities.
@@ -425,6 +431,4 @@ Tên phân phối (distribution / 분포) không chỉ chọn formula; nó chọ
 
 **“Zero correlation nghĩa independent.”** Sai trong general trường hợp (case / 사례).
 
-**“Chọn Poisson/binomial chỉ là chọn formula.”** Mỗi phân phối (distribution / 분포) kéo theo các giả định (assumptions / 가정들) về data-generating tiến trình (process / 프로세스).
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 counting and combinatorics](./00_counting_and_combinatorics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+**“Chọn Poisson/binomial chỉ là chọn formula.”** Mỗi distribution kéo theo assumptions về data-generating process.

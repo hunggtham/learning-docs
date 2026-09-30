@@ -22,6 +22,8 @@ Các ideas ở đây không bị Machine học tập (learning / 학습) thay th
 
 ## Phụ thuộc (dependency / 의존성) map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     F[Problem Representation] --> S[00 State Space & Search]
@@ -42,6 +44,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) map**, ta sang **Một mô hình tư duy (mental model / 사고 모델) chung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Một mô hình tư duy (mental model / 사고 모델) chung
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Representation
@@ -99,6 +103,4 @@ Belief state / POMDP       ↔ agents with incomplete observations
 Bandit exploration         ↔ recommendation / online learning
 ```
 
-Đặc biệt, khi tới `10_agents_and_ai_systems/`, thư viện (library / 라이브러리) sẽ không định nghĩa tác nhân (agent / 에이전트) từ đầu bằng buzzwords. Nó sẽ reuse trạng thái (state / 상태), hành động (action / 동작), môi trường (environment / 환경), planning, bất định (uncertainty / 불확실성) và thực thi (execution / 실행) concepts đã xây tại đây.
-
-> **Bàn giao:** Sau **liên kết (connection / 연결) với hiện đại (modern / 현대적) AI**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đặc biệt, khi tới `10_agents_and_ai_systems/`, library sẽ không định nghĩa Agent từ đầu bằng buzzwords. Nó sẽ reuse state, action, environment, planning, uncertainty và execution concepts đã xây tại đây.

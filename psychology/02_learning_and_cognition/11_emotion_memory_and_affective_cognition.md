@@ -101,6 +101,8 @@ Nostalgia có thể tăng cảm giác continuity, belonging và meaning trong m�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 emotion state
    ↕
@@ -118,6 +120,8 @@ body state      autobiographical narrative
 Xem [[01_memory]], [[07_memory_distortion_eyewitness_and_false_memory]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]], [[../04_mental_health/02_anxiety_ocd_and_trauma]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 ## Nguồn đọc nền
+
+Nguồn đọc nền giúp đối chiếu cơ chế emotion–memory và các giới hạn của nghiên cứu hiện có. Hãy ghi rõ nguồn đang hỗ trợ phần mô tả, mechanism hay ứng dụng.
 
 - Wardell V, Palombo DJ. *Stability and malleability of emotional autobiographical memories*. Nature Reviews Psychology, 2024. DOI: 10.1038/s44159-024-00312-1.
 

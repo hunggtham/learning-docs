@@ -12,6 +12,8 @@ Các chapter 01–17 cung cấp period frame. tệp (file / 파일) này là **�
 Vì sao cùng dựa vào sông nhưng hình thái nhà nước, đô thị và bằng chứng quyền lực khác nhau?
 
 ### Nhân quả (causal / 인과적) comparison
+Phần “Nhân quả (causal / 인과적) comparison” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Basin | ràng buộc (constraint / 제약조건) chính | Hệ thống phối hợp | Rủi ro/giới hạn |
 | --- | --- | --- | --- |

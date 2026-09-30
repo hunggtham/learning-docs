@@ -24,6 +24,8 @@ Mobilization plans giả định chiến thắng nhanh, nhưng trench, machine g
 Total war kéo phụ nữ vào factory, farm, nursing và administration; nó mở quyền thương lượng nhưng cũng tăng surveillance và rationing. Blockade và requisition biến civilian food thành strategic mục tiêu (target / 대상). Colonial troops và labor cho thấy “European war” thực ra là toàn cục (global / 전역) war, dù quyền chính trị và ký ức sau chiến tranh bị phân phối bất bình đẳng.
 
 ### Stock/luồng (flow / 흐름) và hậu quả
+Phần “Stock/luồng (flow / 흐름) và hậu quả” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: shells, rail, ships, debt capacity, trained officers, food reserves

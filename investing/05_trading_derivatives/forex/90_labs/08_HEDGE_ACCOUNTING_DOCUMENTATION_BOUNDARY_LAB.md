@@ -171,6 +171,8 @@ Nếu một gate chưa đủ bằng chứng (evidence / 증거), ghi `unresolved
 Đánh giá ba lớp riêng:
 
 ### Economic relationship
+Phần “Economic relationship” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 same USD/KRW underlying?
@@ -181,6 +183,8 @@ same quantity layer?
 ```
 
 ### Credit-risk dominance
+Phần “Credit-risk dominance” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 counterparty credit condition
@@ -190,6 +194,8 @@ replacement availability
 ```
 
 ### Hedge ratio
+Phần “Hedge ratio” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 actual quantity hedged
@@ -357,6 +363,8 @@ credit valuation effects
 Không kết luận relationship kiểu (type / 타입) chỉ từ tên instrument. Ghi `specialist review required` cho classification, designation và đo lường (measurement / 측정) questions phụ thuộc facts.
 
 ## 15. Close-control checklist
+Phần “15. Close-control checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 [ ] Exposure register reconciled to source systems
@@ -391,6 +399,8 @@ Internal audit
 Người execute trade không nên là người duy nhất phê duyệt forecast, valuation và accounting conclusion.
 
 ## 17. Scoring rubric
+Phần “17. Scoring rubric” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Criterion | Weight | thất bại (failure / 실패) example |
 |---|---:|---|
@@ -404,6 +414,8 @@ Người execute trade không nên là người duy nhất phê duyệt forecast
 Điểm đạt tối thiểu `80/100`; point-in-time documentation hoặc qualifying-gate lập luận (reasoning / 추론) không được thất bại (fail / 실패).
 
 ## 18. Đọc tiếp
+Phần “18. Đọc tiếp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Economic Hedge vs Hedge Accounting](../90_connections/02_ECONOMIC_HEDGE_VS_HEDGE_ACCOUNTING.md)
 - [Institutional FX Hedging Case Studies](../60_institutional_hedging_cases/README.md)

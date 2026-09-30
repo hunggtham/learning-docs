@@ -55,6 +55,8 @@ Không ghi một số estimate vào cột `count` như thể chính xác (exact 
 > **Chuyển mạch:** Từ **5. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약)**, ta sang **6. thất bại (failure / 실패) và bằng chứng (evidence / 증거)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 6. thất bại (failure / 실패) và bằng chứng (evidence / 증거)
+Phần “6. thất bại (failure / 실패) và bằng chứng (evidence / 증거)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - băm (hash / 해시) collision hoặc đầu vào (input / 입력) phân phối (distribution / 분포) bất thường;
 - sketch phiên bản (version / 버전) đổi làm số liệu nhảy;

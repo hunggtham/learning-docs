@@ -10,6 +10,8 @@ Thị trường (market / 시장) cấu trúc (structure / 구조) mô tả ràn
 4. [Auctions & Mechanism Design](./03_auctions_and_mechanism_design.md) — private/dùng chung (common / 공통) values, first/second-price, winner’s curse, revenue equivalence, incentive tính tương thích (compatibility / 호환성), participation, revelation principle, VCG và matching.
 
 ## Trục học (learning spine / 학습 축)
+Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Competitive benchmark

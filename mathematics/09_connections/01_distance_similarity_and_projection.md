@@ -132,6 +132,8 @@ Inner sản phẩm (product / 제품) không chỉ là multiplication trick. Nó
 
 ## 6. Cosine similarity bỏ magnitude
 
+Cosine similarity so sánh hướng của hai vector và bỏ qua độ lớn. Nó phù hợp khi pattern tương đối quan trọng hơn scale, nhưng cần thận trọng khi magnitude mang ý nghĩa thực.
+
 ```math
 \operatorname{cosSim}(x,y)
 =\frac{x^Ty}{\|x\|\|y\|}.
@@ -407,6 +409,8 @@ Projection discard components ngoài subspace.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối đưa distance, similarity và projection vào geometry, embeddings, nearest neighbors và anomaly detection. Hãy chọn metric theo invariance mà bài toán thực sự cần.
+
 ```text
 Pythagoras → L2 norm
 inner product → angle / cosine
@@ -422,6 +426,4 @@ Finance → quadratic risk geometry
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
-> Chọn biểu diễn (representation / 표현) và chỉ số (metric / 지표) là chọn hình học (geometry / 기하학) của bài toán (problem / 문제). Distance nói “khác nhau bao nhiêu” theo hình học (geometry / 기하학) đó; similarity nói “align bao nhiêu”; projection giữ thành phần (component / 컴포넌트) phù hợp với chosen subspace/mất mát (loss / 손실). Không có chỉ số (metric / 지표) nào trung lập cho mọi lĩnh vực (domain / 도메인).
-
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 rate change and accumulation](./00_rate_change_and_accumulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> Chọn representation và metric là chọn geometry của problem. Distance nói “khác nhau bao nhiêu” theo geometry đó; similarity nói “align bao nhiêu”; projection giữ component phù hợp với chosen subspace/loss. Không có metric nào trung lập cho mọi domain.

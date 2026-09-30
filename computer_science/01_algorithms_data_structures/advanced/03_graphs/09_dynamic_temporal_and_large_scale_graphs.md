@@ -348,6 +348,8 @@ Nếu 99.99% thời gian đồ thị (graph / 그래프) không thay đổi, m�
 
 ## 24. quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Tình huống | Hướng tiếp cận |
 |---|---|
 | Chỉ thêm cạnh, hỏi connectivity | DSU |
@@ -374,5 +376,3 @@ Query cần dữ liệu mới đến mức nào?
 Nếu trả lời được ba câu đó, không gian thiết kế thường thu hẹp mạnh.
 
 Xem thêm: [Graph Modeling](./00_graph_modeling_and_representation.md), [Union-Find](./05_union_find.md), [Shortest Paths](./02_shortest_paths.md), [MST](./03_minimum_spanning_trees.md), [Rollback/Amortized Thinking](../05_specialized/03_amortized_randomized_and_probabilistic_thinking.md), [Routing Case Study](../90_connections/05_case_study_routing_graph_system.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

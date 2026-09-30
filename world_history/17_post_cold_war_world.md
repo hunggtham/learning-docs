@@ -19,6 +19,8 @@ Soviet collapse + US primacy
 Quyền lực hiện đại không chỉ là số quân hoặc GDP. Một actor có thể mạnh trong reserve currency, another trong manufacturing sức chứa (capacity / 용량), nền tảng (platform / 플랫폼)/dữ liệu (data / 데이터), năng lượng (energy / 에너지), demographic quy mô (scale / 규모) hoặc norm-setting. Institutional power nằm ở khả năng đặt tiêu chuẩn (standard / 표준), sanction, payment quy tắc (rule / 규칙), giao thức (protocol / 프로토콜) và truy cập (access / 접근) điều kiện (condition / 조건).
 
 ### Các vòng lặp (loop / 루프) sau 1991
+Phần “Các vòng lặp (loop / 루프) sau 1991” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 market integration → growth/urbanization → inequality/exposure

@@ -6,6 +6,8 @@
 Tệp (file / 파일) này có hai vai trò. Phần đầu là glossary để nhận diện thuật ngữ Việt–Anh–Hàn và tên API thường xuất hiện trong codebase. Phần sau là coverage kiểm tra (audit / 감사) để kiểm tra bạn đã hiểu thư viện (library / 라이브러리) theo mô hình tư duy (mental model / 사고 모델) hay chỉ mới nhớ cú pháp (syntax / 문법).
 
 ## 1. Glossary cốt lõi
+Phần “1. Glossary cốt lõi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Tiếng Việt | English term | 한국어 용어 | Ý nghĩa trong WebSquare |
 |---|---|---|---|
@@ -411,6 +413,8 @@ Cấu hình (config / 설정) diff nào cần lấy khi nguồn (source / 소스
 Quay lui (rollback / 롤백) cần xử lý sản phẩm tạo ra (artifact / 산출물), cấu hình (config / 설정), bộ nhớ đệm (cache / 캐시) và backend tính tương thích (compatibility / 호환성) ra sao?
 
 ## 14. Failure-mode ma trận (matrix / 행렬)
+Phần “14. Failure-mode ma trận (matrix / 행렬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Triệu chứng | Hypothesis ưu tiên | bằng chứng (evidence / 증거) đầu tiên |
 |---|---|---|

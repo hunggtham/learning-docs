@@ -83,6 +83,8 @@ Overflow may happen at tầng số học của ngôn ngữ (language arithmetic 
 
 ## Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     A[Java source semantics] --> B[javac parser/type checker]
@@ -116,6 +118,8 @@ Tối ưu hóa (optimization / 최적화) becomes evidence-driven instead of “
 > **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Cross-references** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cross-references
+
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
 
 - [Language semantics](../04_programming_languages/00_language_semantics_and_execution_models.md)
 - [Compiler, VM và JIT](../04_programming_languages/03_compilers_interpreters_vm_and_jit.md)

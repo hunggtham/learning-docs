@@ -454,6 +454,8 @@ Bạn cần tự giải thích được:
 → [14 — FX options, volatility and hedging](./14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [01 — Market structure and instruments](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md)
 - [05 — Execution, brokers, costs and risk](./05_EXECUTION_BROKERS_COSTS_AND_RISK.md)

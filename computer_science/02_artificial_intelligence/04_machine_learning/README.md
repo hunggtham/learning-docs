@@ -6,6 +6,8 @@ Folder này xây Machine học tập (learning / 학습) từ học tập (learn
 
 ## Phụ thuộc (dependency / 의존성) map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     A[00 What is Machine Learning] --> B[01 Learning Problem & Inductive Bias]
@@ -84,6 +86,8 @@ flowchart TD
 
 ## Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Problem & deployment environment
         ↓
@@ -119,6 +123,4 @@ Sau folder này, [Neural Networks](../05_neural_networks/) sẽ không bắt đ�
 f_\theta(x),\quad L(f_\theta(x),y),\quad \theta\leftarrow\theta-\eta\nabla_\theta L
 \]
 
-Điểm mới là biểu diễn (representation / 표현) và hàm (function / 함수) composition được học qua nhiều layers. tuyến tính (linear / 선형)/Logistic Regression trở thành building khối (block / 블록); tối ưu hóa (optimization / 최적화)/Calculus trở thành backpropagation/huấn luyện (training / 학습) dynamics; generalization/evaluation vẫn giữ nguyên vai trò.
-
-> **Bàn giao:** Sau **Chuyển tiếp sang Neural Networks**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Điểm mới là representation và function composition được học qua nhiều layers. Linear/Logistic Regression trở thành building block; Optimization/Calculus trở thành backpropagation/training dynamics; generalization/evaluation vẫn giữ nguyên vai trò.

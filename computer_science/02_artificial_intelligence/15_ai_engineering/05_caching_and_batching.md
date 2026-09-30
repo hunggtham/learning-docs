@@ -145,6 +145,8 @@ Hit tỷ lệ (rate / 비율) cao nhưng stale kết quả (result / 결과) nhi
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Caching  = tránh lặp lại công việc đã làm
 Batching = làm công việc bắt buộc phải làm hiệu quả hơn
@@ -167,5 +169,3 @@ Không. ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) t
 ## Liên kết kiến thức
 
 Xem [Model Serving](./03_model_serving.md), [Latency, Throughput and Cost](./09_latency_throughput_and_cost.md), [RAG](../09_retrieval_and_rag/README.md) và [Transformer trong LLM](../08_large_language_models/03_transformer_inside_llms.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

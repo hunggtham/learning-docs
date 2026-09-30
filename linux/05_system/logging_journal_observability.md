@@ -58,6 +58,8 @@ journalctl -u app -n 200 --no-pager
 
 ## `journalctl -xeu` thực sự làm gì?
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 journalctl -xeu nginx
 ```
@@ -194,6 +196,4 @@ Hãy coi một sự cố như sự kiện đã xảy ra trong hệ thống nhi�
 
 ## Kết nối kiến thức
 
-Chương [Xử lý sự cố production](../09_production/production_troubleshooting.md) dùng khả năng quan sát (observability / 관측 가능성) như một lớp bằng chứng. Các chương về CPU, bộ nhớ, lưu trữ và mạng cung cấp những nguồn quan sát ngoài nhật ký ứng dụng để tránh nhìn sự cố qua một kênh duy nhất.
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [boot kernel initramfs](./boot_kernel_initramfs.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Chương [Xử lý sự cố production](../09_production/production_troubleshooting.md) dùng observability như một lớp bằng chứng. Các chương về CPU, bộ nhớ, lưu trữ và mạng cung cấp những nguồn quan sát ngoài nhật ký ứng dụng để tránh nhìn sự cố qua một kênh duy nhất.

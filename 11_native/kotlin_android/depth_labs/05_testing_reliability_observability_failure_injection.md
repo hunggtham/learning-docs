@@ -872,7 +872,9 @@ Chaos không thay specification.
 
 ---
 
-## 45. độ tin cậy (reliability / 신뢰성) rà soát (review / 검토) checklist
+## 45. Reliability review checklist
+Phần này nối mạch Android vừa học với “45. Reliability review checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | bằng chứng (evidence / 증거) |
 |---|---|
@@ -905,6 +907,4 @@ invariant
 -> incident feedback
 ```
 
-Bộ kiểm thử (test suite / 테스트 스위트) chứng minh những gì ta biết trước. khả năng quan sát (observability / 관측 가능성) giúp phát hiện những gì ta chưa biết. độ tin cậy (reliability / 신뢰성) cần cả hai.
-
-> **Bàn giao:** Sau **46. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Test suite chứng minh những gì ta biết trước. Observability giúp phát hiện những gì ta chưa biết. Reliability cần cả hai.

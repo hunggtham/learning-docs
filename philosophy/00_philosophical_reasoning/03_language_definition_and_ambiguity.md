@@ -5,6 +5,8 @@
 Nhiều tranh luận tưởng là bất đồng về thế giới nhưng thực ra bắt đầu từ cách dùng từ. Philosophy of ngôn ngữ (language / 언어) hỏi meaning đến từ tham chiếu (reference / 참조), usage, intention, inferential role hay xã hội (social / 사회적) practice nào; câu trả lời khác nhau sẽ thay đổi cách ta xử lý definition và disagreement.
 
 ## Bốn kiểu định nghĩa
+Phần “Bốn kiểu định nghĩa” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **lexical**: mô tả cách một cộng đồng đang dùng từ;
 - **stipulative**: quy ước nghĩa cho một argument cụ thể;

@@ -171,11 +171,13 @@ Xem [[09_replication_meta_analysis_and_bayesian_reasoning]].
 
 ### Established bằng chứng (evidence / 증거)
 
-- observed score luôn cần được hiểu qua sai số đo lường (measurement error / 측정 오차);
-- độ tin cậy (reliability / 신뢰성) không đồng nghĩa validity;
-- validity hỗ trợ (support / 지원) phải gắn interpretation/use;
-- cơ sở (base / 기반) tỷ lệ (rate / 비율) ảnh hưởng predictive giá trị (value / 값);
-- group comparison cần bằng chứng (evidence / 증거) về comparability của đo lường (measurement / 측정).
+Phần này gom các nguyên tắc đo lường đã có nền tảng tương đối chắc: reliability, validity, norms và measurement error. Hãy đọc chúng như điều kiện để diễn giải score, không như bảo đảm test luôn đúng.
+
+- observed score luôn cần được hiểu qua measurement error;
+- reliability không đồng nghĩa validity;
+- validity support phải gắn interpretation/use;
+- base rate ảnh hưởng predictive value;
+- group comparison cần evidence về comparability của measurement.
 
 ### Hiện tại (current / 현재) các mô hình (models / 모델들)
 
@@ -196,6 +198,8 @@ Cutoff “độ tin cậy (reliability / 신뢰성) đủ tốt”, fit-index th
 **“Một kiểm thử (test / 테스트) đã được publish thì dùng ở population nào cũng được.”** Không đúng. Interpretation cần bằng chứng (evidence / 증거) ở ngữ cảnh (context / 맥락) liên quan.
 
 ## 18. mô hình tư duy (mental model / 사고 모델)
+
+Mental model này đi từ construct tới item, score, uncertainty và quyết định. Nó giúp người đọc hỏi đúng: test đang đo gì, sai số ở đâu và kết luận nào vượt quá dữ liệu.
 
 ```text
 Construct definition
@@ -222,6 +226,8 @@ Một score chỉ mạnh bằng weakest link trong suy luận (inference / 추�
 Đọc cùng [[03_measurement_statistics]], [[06_open_science_and_evidence_evaluation]], [[09_replication_meta_analysis_and_bayesian_reasoning]], [[../02_learning_and_cognition/03_intelligence_and_cognitive_differences]], [[../03_human_development_and_person/03_personality]] và [[../04_mental_health/01_assessment_and_diagnosis]].
 
 ### Nguồn định hướng
+
+Các nguồn định hướng giúp đối chiếu psychometric claim, fairness và cách diễn giải test. Hãy ưu tiên tài liệu nêu rõ population, reliability và validity evidence.
 
 - *Standards for Educational and Psychological Testing* — AERA, APA, NCME.
 - Best-practice guidelines hiện đại về quy mô (scale / 규모) development/kiểm tra hợp lệ (validation / 검증) trong psychological và behavioral sciences.

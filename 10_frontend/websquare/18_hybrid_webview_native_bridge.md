@@ -437,6 +437,8 @@ Read thao tác (operation / 연산) có thể thử lại (retry / 재시도) v�
 Bản địa (native / 네이티브) thao tác (operation / 연산) success nhưng máy chủ (server / 서버) submit thất bại (fail / 실패) là một trạng thái (state / 상태) riêng; đừng bắt người dùng (user / 사용자) chụp lại ảnh nếu sản phẩm tạo ra (artifact / 산출물)/session vẫn còn hợp lệ.
 
 ## 27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)
+Phần “27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 GET status → thường retry được

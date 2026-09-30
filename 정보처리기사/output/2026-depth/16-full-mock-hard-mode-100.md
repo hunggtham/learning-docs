@@ -834,6 +834,8 @@ D. Bỏ root-cause phân tích (analysis / 분석)
 ---
 
 # Answer Key
+Phần “Answer Key” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1 B   2 B   3 B   4 B   5 B
@@ -947,6 +949,8 @@ Least privilege hỏi “bao nhiêu quyền”; SoD hỏi “một người có 
 ---
 
 # Score interpretation
+Phần “Score interpretation” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Môn | Correct / 20 | hành động (action / 동작) |
 |---|---:|---|

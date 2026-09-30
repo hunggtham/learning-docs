@@ -456,6 +456,8 @@ Option prices encode risk-neutral valuation plus rủi ro (risk / 위험) premia
 This distinction matters when using options thị trường (market / 시장) as macro expectation indicator.
 
 ## 49. Minimal option position sheet
+Phần “49. Minimal option position sheet” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Pair
@@ -496,6 +498,8 @@ Bạn cần tự giải thích được:
 → [15 — Korea / Vietnam FX market context and regulations](./15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md)
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Options, Volatility Surface, Greeks and Hedging](../05_OPTIONS_VOLATILITY_SURFACE_GREEKS_AND_HEDGING.md)
 - [04 — Macro drivers](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)

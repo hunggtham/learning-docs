@@ -23,6 +23,8 @@ Việc dịch địa chỉ qua bảng trang có chi phí, vì vậy CPU có **TL
 
 ## `free -h` và `available`
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 free -h
 ```
@@ -95,6 +97,8 @@ Với JVM, có thể cần vùng nhớ động (heap / 힙) dump, histogram đ�
 
 ## `vmstat`
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 vmstat 1 10
 ```
@@ -125,6 +129,4 @@ Trên máy chủ lớn, độ trễ truy cập RAM có thể khác nhau giữa c
 
 ## Kết nối kiến thức
 
-Bộ nhớ nối với hệ thống tệp thông qua page bộ nhớ đệm (cache / 캐시), với CPU thông qua page fault và TLB, và với bộ chứa (container / 컨테이너) thông qua giới hạn cgroup. [CPU, lập lịch và hiệu năng](./cpu_scheduling_performance.md) tiếp tục cách đọc các chỉ số tài nguyên như một hệ thống thống nhất thay vì những con số rời rạc.
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [block layer io scheduler](./block_layer_io_scheduler.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Bộ nhớ nối với hệ thống tệp thông qua page cache, với CPU thông qua page fault và TLB, và với container thông qua giới hạn cgroup. [CPU, lập lịch và hiệu năng](./cpu_scheduling_performance.md) tiếp tục cách đọc các chỉ số tài nguyên như một hệ thống thống nhất thay vì những con số rời rạc.

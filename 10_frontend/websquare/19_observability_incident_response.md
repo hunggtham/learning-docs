@@ -469,6 +469,8 @@ Ví dụ “Grid trống sau tìm kiếm (search / 검색)”:
 Runbook encode kiến thức (knowledge / 지식) để on-call không cần nhớ mọi API.
 
 ## 29. Runbook: Save quay mãi
+Phần “29. Runbook: Save quay mãi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 button/loading state hiện gì?
@@ -484,6 +486,8 @@ loading reset ở finally-equivalent path không?
 Nếu mạng (network / 네트워크) không có yêu cầu (request / 요청), đừng điều tra DB.
 
 ## 30. Runbook: chỉ lỗi sau deploy
+Phần “30. Runbook: chỉ lỗi sau deploy” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 build ID user đang chạy?
@@ -498,6 +502,8 @@ API contract deploy order?
 Triển khai (deployment / 배포) sự cố (incident / 인시던트) thường là sản phẩm tạo ra (artifact / 산출물) đồ thị (graph / 그래프) bài toán (problem / 문제), không chỉ mã nguồn (source code / 소스 코드) bài toán (problem / 문제).
 
 ## 31. Runbook: hybrid callback không về
+Phần “31. Runbook: hybrid callback không về” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 JS requestId được tạo?

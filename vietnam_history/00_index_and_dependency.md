@@ -25,6 +25,8 @@ continuity + rupture in everyday life
 Geography không “quyết định” kết quả (outcome / 결과). Nó tạo ràng buộc (constraint / 제약조건)/opportunity; technology, institution và human choice quyết định cách ràng buộc (constraint / 제약조건) được xử lý.
 
 ## Tuyến (route / 경로) 1 — Timeline chính: 01 → 23
+Phần “Tuyến (route / 경로) 1 — Timeline chính: 01 → 23” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 01 Cách đọc lịch sử: evidence, myth, chronology, causal reasoning
@@ -142,6 +144,8 @@ Recommended phụ thuộc (dependency / 의존성):
 ```
 
 ## Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33
+Phần “Tuyến (route / 경로) 4 — Tham chiếu (reference / 참조) tầng (layer / 계층): 31 → 33” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md): coordinate map để tra nhanh mốc.
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): analytical vocabulary, bằng chứng (evidence / 증거) mức (level / 수준) và nguồn (source / 소스) đơn vị sở hữu (owner / 오너).

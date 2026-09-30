@@ -17,6 +17,8 @@ Ví dụ, nếu doanh nghiệp dùng 1 tỷ USD để xây nhà máy, chi phí k
 
 ## 2. Tư duy cận biên
 
+Sau khi đặt câu hỏi kinh tế, ta cần xem điều gì thay đổi khi thêm một đơn vị sản lượng, chi phí hoặc hành động. Phân tích cận biên giúp người mới tránh suy luận từ mức trung bình sang quyết định tăng/giảm mà không kiểm tra phần thay đổi.
+
 **Phân tích cận biên (marginal analysis)** hỏi điều gì xảy ra khi tăng thêm một đơn vị.
 
 Quyết định hợp lý thường dựa trên:
@@ -76,6 +78,8 @@ Trong thực tế, giá liên tục điều chỉnh vì thông tin, tồn kho, h
 
 ## 7. Độ co giãn
 
+Khi đã hiểu quyết định cận biên, ta cần đo mức phản ứng của lượng cầu/cung trước một thay đổi về giá hoặc thu nhập. Độ co giãn nối lý thuyết với doanh thu, pricing power và tác động chính sách.
+
 **Độ co giãn (elasticity)** đo mức phản ứng của lượng cầu hoặc cung khi giá hay thu nhập thay đổi.
 
 Cầu ít co giãn thường xuất hiện khi:
@@ -120,7 +124,9 @@ Năng suất tăng khi có thể tạo nhiều đầu ra (output / 출력) hơn 
 
 ## 12. Chi phí cố định và biến đổi
 
-**Chi phí cố định (fixed cost)** không thay đổi nhiều trong ngắn hạn theo sản lượng. **Chi phí biến đổi (variable cost)** thay đổi theo đầu ra (output / 출력).
+Để hiểu lợi nhuận thay đổi theo sản lượng, cần tách phần chi phí không đổi trong ngắn hạn khỏi phần biến đổi theo output. Ranh giới này giải thích operating leverage và vì sao doanh thu giảm có thể làm lợi nhuận giảm nhanh hơn.
+
+**Chi phí cố định (fixed cost)** không thay đổi nhiều trong ngắn hạn theo sản lượng. **Chi phí biến đổi (variable cost)** thay đổi theo output.
 
 Ngành có fixed chi phí (cost / 비용) cao thường có **đòn bẩy hoạt động (operating leverage)** lớn.
 
@@ -139,7 +145,9 @@ Trong cạnh tranh mạnh, giá dài hạn thường có xu hướng bị kéo g
 
 ## 14. Kinh tế theo quy mô
 
-**Economies of quy mô (scale / 규모)** xuất hiện khi chi phí bình quân giảm khi quy mô tăng.
+Sau khi tách fixed/variable cost, ta có thể hỏi quy mô lớn hơn có làm chi phí bình quân giảm hay không. Economies of scale là cơ chế, không phải bằng chứng mặc định rằng doanh nghiệp lớn luôn có moat.
+
+**Economies of scale** xuất hiện khi chi phí bình quân giảm khi quy mô tăng.
 
 Nguồn có thể đến từ:
 
@@ -171,6 +179,8 @@ Trong thị trường ít đối thủ, quyết định của một công ty ph�
 Đây là nơi **lý thuyết trò chơi (game theory)** trở nên quan trọng.
 
 ## 18. Nash equilibrium
+
+Khi nhiều bên cùng ra quyết định, kết quả không thể phân tích từ một người chơi riêng lẻ. Nash equilibrium giúp mô tả trạng thái mà không bên nào muốn đổi chiến lược đơn phương, từ đó nối hành vi chiến lược với cạnh tranh và chính sách.
 
 **Cân bằng Nash (Nash equilibrium)** là trạng thái mỗi bên không muốn đơn phương thay chiến lược khi chiến lược của bên khác giữ nguyên.
 
@@ -212,19 +222,27 @@ Mức tổn thất phụ thuộc độ co giãn của cung và cầu.
 
 ## 23. Thông tin bất cân xứng
 
+Thị trường có thể thất bại khi một bên biết nhiều hơn bên kia. Phần này là nền để hiểu vì sao hợp đồng, disclosure, bảo hiểm và cơ chế giám sát tồn tại.
+
 **Thông tin bất cân xứng (information asymmetry)** xảy ra khi hai bên giao dịch biết thông tin khác nhau.
 
 Ví dụ ngân hàng không biết chính xác chất lượng người vay bằng chính người vay.
 
 ## 24. Adverse selection
 
+Adverse selection xảy ra trước giao dịch: cấu trúc giá hoặc thông tin khiến nhóm rủi ro cao tham gia nhiều hơn. Hãy đọc nó như vấn đề thiết kế thị trường, không chỉ như một nhãn bảo hiểm.
+
 **Lựa chọn bất lợi (adverse selection)** xảy ra trước giao dịch khi bên rủi ro cao có xu hướng tham gia nhiều hơn.
 
 ## 25. Moral hazard
 
+Moral hazard xảy ra sau giao dịch, khi người được bảo vệ hoặc người nhận vốn thay đổi hành vi vì không chịu toàn bộ hậu quả. Cơ chế giám sát, collateral và incentive được dùng để hạn chế kênh này.
+
 **Rủi ro đạo đức (moral hazard)** xảy ra sau giao dịch khi một bên thay đổi hành vi vì không chịu toàn bộ hậu quả.
 
 ## 26. Principal–tác nhân (agent / 에이전트) bài toán (problem / 문제)
+
+Principal–agent nối thông tin bất cân xứng với quản trị doanh nghiệp: người sở hữu muốn tối đa hóa giá trị dài hạn, còn người đại diện có thể tối ưu mục tiêu ngắn hạn hoặc lợi ích riêng. Đây là cầu nối trực tiếp sang compensation và capital allocation.
 
 **Vấn đề người ủy quyền – người đại diện (principal–agent problem)** xuất hiện khi người quản lý không hoàn toàn có cùng lợi ích với chủ sở hữu.
 
@@ -294,6 +312,8 @@ Growth ↓ + Inflation ↑
 
 ## 32. đầu ra (output / 출력) gap
 
+Sau khi đọc chu kỳ và tổng cầu, output gap đặt nền kinh tế thực cạnh mức tiềm năng ước tính. Nó giúp giải thích áp lực lạm phát và phản ứng chính sách, nhưng bản thân mức tiềm năng cũng chứa bất định.
+
 **Khoảng sản lượng (output gap)** là chênh lệch giữa sản lượng thực và mức tiềm năng.
 
 Đầu ra (output / 출력) trên tiềm năng có thể tạo áp lực giá và lương. đầu ra (output / 출력) dưới tiềm năng thường đi cùng tài nguyên nhàn rỗi hơn.
@@ -327,6 +347,8 @@ Tỷ lệ thất nghiệp không phản ánh toàn bộ thị trường lao đ�
 - wage growth.
 
 ## 35. Okun's law
+
+Okun’s law nối tăng trưởng với thất nghiệp bằng một quan hệ thực nghiệm, không phải luật cơ học. Hãy dùng nó như khung kiểm tra độ lớn, rồi đối chiếu với năng suất, participation và cấu trúc thị trường lao động.
 
 **Định luật Okun (Okun's law)** mô tả quan hệ thực nghiệm giữa tăng trưởng và thất nghiệp.
 
@@ -371,6 +393,8 @@ Nếu doanh nghiệp và người lao động tin lạm phát cao sẽ kéo dài
 
 ## 39. Cơ chế truyền dẫn
 
+Phần này gom các kênh từ chính sách hoặc cú sốc tới nền kinh tế và tài sản. Sơ đồ dưới đây nên được đọc theo chuỗi nguyên nhân–điều kiện–hệ quả, không như danh sách các biến vĩ mô đứng riêng.
+
 ```text
 Policy Rate
 → Money-Market Rates
@@ -403,6 +427,8 @@ Nó hữu ích như benchmark, không phải công thức buộc ngân hàng tru
 
 ## 42. Neutral tỷ lệ (rate / 비율) và r-star
 
+Sau khi hiểu policy rate truyền dẫn ra sao, ta cần một mốc để hỏi chính sách đang nới lỏng hay thắt chặt tương đối. Neutral rate là khái niệm ước tính, nên phải đọc cùng tăng trưởng tiềm năng, lạm phát và điều kiện tài chính.
+
 **Lãi suất trung tính (neutral rate, r-star)** là mức lãi suất thực phù hợp với nền kinh tế ở gần toàn dụng và lạm phát ổn định.
 
 R-star không quan sát trực tiếp và có thể thay đổi theo:
@@ -427,7 +453,9 @@ Hiệu quả phụ thuộc:
 
 ## 44. Fiscal multiplier
 
-**Hệ số nhân tài khóa (fiscal multiplier)** đo đầu ra (output / 출력) thay đổi bao nhiêu so với một thay đổi chi tiêu hoặc thuế.
+Fiscal multiplier hỏi một thay đổi chi tiêu hoặc thuế làm output thay đổi bao nhiêu trong một bối cảnh cụ thể. Độ lớn phụ thuộc slack, chính sách tiền tệ, tỷ giá, nhập khẩu và cách tài trợ.
+
+**Hệ số nhân tài khóa (fiscal multiplier)** đo output thay đổi bao nhiêu so với một thay đổi chi tiêu hoặc thuế.
 
 Multiplier không cố định. Nó có thể cao hơn trong suy thoái sâu và thấp hơn khi nền kinh tế đã quá nóng.
 
@@ -515,6 +543,8 @@ Nó chịu ảnh hưởng của:
 - chính sách (policy / 정책) intervention.
 
 ## 53. Impossible trinity
+
+Khi phân tích nền kinh tế mở, cần đặt ba mục tiêu chính sách cạnh nhau: tỷ giá cố định, dòng vốn tự do và chính sách tiền tệ độc lập. Impossible trinity giải thích vì sao một quốc gia phải đánh đổi ít nhất một mục tiêu.
 
 **Bộ ba bất khả thi (impossible trinity)** nói một quốc gia không thể đồng thời có hoàn toàn:
 

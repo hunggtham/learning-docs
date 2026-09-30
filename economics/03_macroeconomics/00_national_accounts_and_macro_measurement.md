@@ -29,6 +29,8 @@ Value Added = Output Value − Intermediate Input Cost
 Không cộng raw sales của mọi stage vì sẽ double-count intermediate goods.
 
 ### Expenditure approach
+Phần “Expenditure approach” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Y = C + I + G + NX

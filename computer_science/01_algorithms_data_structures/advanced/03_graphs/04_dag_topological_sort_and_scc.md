@@ -49,6 +49,8 @@ Kahn's thuật toán:
 
 ### JavaScript cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```js
 function topoSort(n, g) {
   const indeg = Array(n).fill(0);
@@ -297,6 +299,8 @@ Không nên bản sao (copy / 복사) công thức giữa hai các thuật toán
 
 ## Java skeleton cho Tarjan SCC
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 int timer = 0;
 int[] index, low, comp;
@@ -430,6 +434,4 @@ Property-based tests đặc biệt hữu ích với Tarjan vì bug `onStack` và
 
 > sắp xếp tô-pô là cách **tháo một phụ thuộc (dependency / 의존성) đồ thị từ ngoài vào**. SCC là cách **nén các vùng không thể áp một thứ tự một chiều bên trong**. Sau khi nén mọi mutual-reachability region, phần còn lại bắt buộc trở thành DAG.
 
-Khi gặp đồ thị có hướng có các chu trình, thay vì cố áp dụng DAG thuật toán trực tiếp, hãy hỏi liệu chu trình có ý nghĩa (semantic meaning / 의미적 뜻) gì và liệu SCC condensation có biến bài toán (problem / 문제) thành DAG bài toán (problem / 문제) dễ hơn không.
-
-> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi gặp đồ thị có hướng có các chu trình, thay vì cố áp dụng DAG thuật toán trực tiếp, hãy hỏi liệu chu trình có semantic meaning gì và liệu SCC condensation có biến problem thành DAG problem dễ hơn không.

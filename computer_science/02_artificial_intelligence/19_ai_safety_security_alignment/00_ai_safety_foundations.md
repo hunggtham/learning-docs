@@ -11,6 +11,8 @@ Nên đọc [Agent Systems](../10_agents_and_ai_systems/README.md), [AI System D
 
 ## Phân biệt an toàn (safety / 안전), bảo mật (security / 보안), Alignment và quản trị (governance / 거버넌스)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 An toàn (safety)
 → hệ thống có thể gây hậu quả nguy hiểm bằng cách nào?
@@ -296,5 +298,3 @@ Không. an toàn (safety / 안전) phụ thuộc ngữ cảnh (context / 맥락)
 ## Liên kết kiến thức
 
 Xem [Căn chỉnh AI](./01_alignment_and_objective_specification.md), [Prompt Injection](./03_prompt_injection_and_jailbreaks.md), [Adversarial ML](./04_adversarial_machine_learning.md), [Reliability](../18_evaluation_reliability_interpretability/07_reliability_engineering.md), [Reliable Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md) và [Incident Response](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 alignment and objective specification](./01_alignment_and_objective_specification.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

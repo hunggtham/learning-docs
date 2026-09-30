@@ -209,7 +209,9 @@ This separates ngữ nghĩa (semantic / 의미적) văn bản (text / 텍스트)
 
 ## Diffusion vs VAE vs GAN
 
-| Family | huấn luyện (training / 학습) tín hiệu (signal / 신호) | Sampling | Typical sự đánh đổi (trade-off / 트레이드오프) |
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+| Family | Training signal | Sampling | Typical trade-off |
 |---|---|---|---|
 | VAE | ELBO / reconstruction + KL | one decoder pass | smooth latent, likelihood khung phần mềm (framework / 프레임워크), sometimes softer samples |
 | GAN | adversarial critic | one generator pass | sharp/fast, unstable/chế độ (mode / 모드) collapse rủi ro (risk / 위험) |
@@ -230,6 +232,8 @@ Generative mô hình (model / 모델) hành vi (behavior / 동작) reflects hu�
 An toàn (safety / 안전) filters can operate dữ liệu huấn luyện (training data / 학습 데이터), prompt, latent/generation and đầu ra (output / 출력) — hệ thống (system / 시스템) bài toán (problem / 문제) beyond diffusion math.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Training:
@@ -267,6 +271,4 @@ Latent diffusion operates in VAE-compressed latent không gian (space / 공간),
 
 Diffusion synthesizes [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [Numerical Methods](../01_mathematical_foundations/07_numerical_computation.md), [Autoencoder/VAE](./06_autoencoders.md), [Attention](./04_attention.md) and multimodal văn bản (text / 텍스트) conditioning.
 
-Later `13_speech_audio_and_multimodal/` will connect diffusion with văn bản (text / 텍스트)/ảnh (image / 이미지)/audio/video foundation các hệ thống (systems / 시스템들).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Later `13_speech_audio_and_multimodal/` will connect diffusion with text/image/audio/video foundation systems.

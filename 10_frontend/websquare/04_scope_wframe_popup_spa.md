@@ -385,6 +385,8 @@ Lifetime: create → ready stages → dispose
 Một page đặc tả hợp đồng (contract / 계약) tốt giúp screen reuse được ở tab, popup hoặc WFrame khác mà không phụ thuộc parent cấu trúc (structure / 구조) cụ thể.
 
 ## 32. Ví dụ: tìm kiếm (search / 검색) → Detail popup → Refresh
+Phần “32. Ví dụ: tìm kiếm (search / 검색) → Detail popup → Refresh” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 List page

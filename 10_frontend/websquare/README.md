@@ -66,6 +66,8 @@ Khi lỗi xảy ra, câu hỏi đầu tiên không phải “API nào sai?” m�
 > **Chuyển mạch:** Từ **Thứ tự học chuẩn gốc (canonical / 정본)**, ta sang **phụ thuộc (dependency / 의존성) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Phụ thuộc (dependency / 의존성) map
+Phần “Phụ thuộc (dependency / 의존성) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 JavaScript/browser

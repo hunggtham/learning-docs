@@ -352,12 +352,12 @@ Khi rà soát (review / 검토) thay đổi bản dựng (build / 빌드), hãy 
 Hệ thống dựng (build system / 빌드 시스템) là môi trường vận hành (production / 운영 환경) mã (code / 코드). Một lỗi bản dựng (build / 빌드) cấu hình (configuration / 구성) có thể không xuất hiện trong đơn vị (unit / 단위) kiểm thử (test / 테스트) nhưng vẫn thay permission, signing, tài nguyên (resource / 자원), shrinker hoặc sản phẩm tạo ra (artifact / 산출물) được ship tới hàng triệu thiết bị (device / 장치).
 
 ## 23. Official references
+Phần này nối mạch Android vừa học với “23. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android bản dựng (build / 빌드) overview: https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)
 - bản dựng (build / 빌드) variants and nguồn (source / 소스) sets: https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)/build-variants
 - Gradle tips: https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)/gradle-tips
 - Android Gradle Plugin APIs: https://nhà phát triển (developer / 개발자).android.com/tham chiếu (reference / 참조)/tools/gradle-api
 
-Đọc tham chiếu (reference / 참조) theo phiên bản (version / 버전) AGP đang dùng; không giả định DSL/nội bộ (internal / 내부) hành vi (behavior / 동작) của một phiên bản (version / 버전) cũ vẫn đúng với phiên bản (version / 버전) mới.
-
-> **Bàn giao:** Sau **23. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đọc reference theo version AGP đang dùng; không giả định DSL/internal behavior của một version cũ vẫn đúng với version mới.

@@ -125,6 +125,8 @@ Do thị trường vốn chưa thay thế hoàn toàn tín dụng ngân hàng, n
 
 ## 11. NIM
 
+NIM nối lãi suất tài sản và chi phí funding của ngân hàng. Cần đọc cùng CASA, asset quality, repricing và competition thay vì coi NIM là chỉ số độc lập.
+
 **Biên lãi ròng (Net Interest Margin, NIM)** phụ thuộc gần đúng vào:
 
 ```text
@@ -177,6 +179,8 @@ Quyền sử dụng đất
 Quỹ đất lớn không tự động là tài sản có thể chuyển thành tiền ngay.
 
 ## 18. Bán trước
+
+Presales tạo dòng tiền và tín hiệu nhu cầu cho bất động sản, nhưng phải kiểm tra pháp lý, tiến độ, khả năng giao nhà và chất lượng người mua.
 
 **Bán trước (presales)** là chỉ báo sớm nhưng phải xem:
 
@@ -241,6 +245,8 @@ Do đó tỷ lệ “cho vay bất động sản” được báo cáo chưa ch�
 
 ## 23. Vòng phản hồi tài sản bảo đảm
 
+Collateral nối giá bất động sản với khả năng vay, margin và chất lượng tài sản ngân hàng. Khi giá giảm, vòng phản hồi có thể làm credit co lại nhanh hơn thay đổi ban đầu.
+
 ```text
 Giá bất động sản ↓
 → giá trị tài sản bảo đảm ↓
@@ -265,6 +271,8 @@ Công ty chứng khoán có thể kiếm từ:
 - phân phối trái phiếu.
 
 ## 25. Nhạy với thanh khoản thị trường
+
+Các tài sản có thanh khoản mỏng phản ứng mạnh với foreign flow, margin và khả năng thoát vị thế. Phần này đặt market depth cạnh valuation để tránh dùng giá niêm yết như giá có thể giao dịch.
 
 ```text
 Giá trị giao dịch ↑
@@ -343,6 +351,8 @@ Theo dõi:
 - niềm tin.
 
 ## 33. Chỉ số bán lẻ
+
+Retail indicators cần tách doanh thu danh nghĩa, volume, ticket size, same-store sales, inventory và credit. Một headline tăng không đủ để kết luận sức mua hộ gia đình đang khỏe.
 
 - tăng trưởng cửa hàng hiện hữu;
 - lượng khách;
@@ -502,6 +512,8 @@ P/E hoặc EV/EBITDA chỉ có ý nghĩa khi lợi nhuận được chuẩn hóa
 
 ## 54. Hằng ngày
 
+Theo dõi hàng ngày tập trung vào tỷ giá, thanh khoản, flow, tin chính sách và biến động nhóm dẫn dắt; không dùng nhiễu trong ngày để thay đổi thesis dài hạn.
+
 ```text
 VN-Index / VN30
 Độ rộng thị trường
@@ -513,6 +525,8 @@ Dòng vốn nước ngoài
 
 ## 55. Hằng tuần
 
+Nhịp hàng tuần phù hợp để rà breadth, tín dụng, margin, sector rotation và dữ liệu mới công bố. Mục tiêu là phát hiện thay đổi regime sớm nhưng vẫn giữ kỷ luật timestamp.
+
 ```text
 Lãi suất tiền gửi
 Thanh khoản ký quỹ
@@ -521,6 +535,8 @@ Thay đổi quy định lớn
 ```
 
 ## 56. Hằng tháng / hằng quý
+
+Nhịp tháng/quý dùng để cập nhật earnings, chất lượng tài sản, capex, pháp lý và policy. Đây là lớp bằng chứng chính cho company thesis và valuation.
 
 ```text
 Tăng trưởng tín dụng
@@ -538,6 +554,8 @@ Phát hành trái phiếu doanh nghiệp
 
 ## 57. Một cổ phiếu Việt Nam
 
+Mẫu nghiên cứu cổ phiếu Việt Nam cần nối ngành, regulatory access, FX, balance sheet, liquidity và valuation trước khi lập position plan.
+
 ```text
 Mô hình kinh doanh
 → chu kỳ ngành
@@ -552,6 +570,8 @@ Mô hình kinh doanh
 ```
 
 ## 58. Luận điểm toàn thị trường
+
+Luận điểm thị trường Việt Nam phải tách domestic demand, credit, property, external flow, policy và market breadth. Kết luận chỉ có giá trị khi nêu rõ kịch bản thuận lợi, bất lợi và dữ liệu bác bỏ.
 
 ```text
 USD / lãi suất toàn cầu
@@ -586,5 +606,3 @@ USD toàn cầu
 ```
 
 Khi hai chuỗi này được nối với lợi nhuận và định giá từng ngành, phân tích thị trường mới đủ chiều sâu để dùng cho quyết định đầu tư.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -19,6 +19,8 @@ Physics
 Physics hiện đã có Maxwell, circuits, transmission line, semiconductor, MOSFET và tín hiệu (signal / 신호)/noise. Thư viện này không lặp lại các chapter đó; nó dùng chúng làm prerequisite rồi đi tiếp vào kỹ thuật (engineering / 엔지니어링) abstractions, sự đánh đổi (trade-off / 트레이드오프) và giao diện (interface / 인터페이스).
 
 ## Phạm vi chuẩn gốc (canonical / 정본)
+Phần “Phạm vi chuẩn gốc (canonical / 정본)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 electrical_engineering/
@@ -40,6 +42,8 @@ electrical_engineering/
 > **Chuyển mạch:** Từ **Phạm vi chuẩn gốc (canonical / 정본)**, ta sang **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
+Phần “Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```mermaid
 flowchart TD
@@ -81,6 +85,8 @@ Phụ thuộc (dependency / 의존성) này là học tập (learning / 학습) 
 > **Chuyển mạch:** Từ **Lộ trình đọc mặc định**, ta sang **Ranh giới giữa các thư viện (library / 라이브러리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ranh giới giữa các thư viện (library / 라이브러리)
+Phần “Ranh giới giữa các thư viện (library / 라이브러리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Câu hỏi | Nơi đặt chính |
 |---|---|
@@ -122,6 +128,8 @@ Không coi một datasheet, waveform hoặc schematic là bằng chứng tự đ
 > **Chuyển mạch:** Từ **Trạng thái**, ta sang **điều hướng (navigation / 내비게이션)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Điều hướng (navigation / 내비게이션)
+Phần “Điều hướng (navigation / 내비게이션)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Circuits](circuits/README.md)
 - [Analog electronics](analog_electronics/README.md)

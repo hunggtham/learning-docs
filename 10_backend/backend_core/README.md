@@ -8,6 +8,8 @@ backend như một hệ thống nhận yêu cầu (request / 요청), đọc/ghi
 quyết định backend không thuộc riêng một ngôn ngữ hay khung phần mềm (framework / 프레임워크).
 
 ## Mạch học (learning flow / 학습 흐름)
+Phần “Mạch học (learning flow / 학습 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 request lifecycle

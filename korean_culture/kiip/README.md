@@ -59,6 +59,8 @@ Phần cơ bản được dựng từ 8 PDF người học cung cấp. Nội dun
 
 ## Workflow học đề xuất
 
+Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → tự kiểm tra thay vì học thuộc danh sách rời.
+
 ```text
 01~08 읽기
    ↓

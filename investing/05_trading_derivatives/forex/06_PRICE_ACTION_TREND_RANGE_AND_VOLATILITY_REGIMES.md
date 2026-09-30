@@ -527,6 +527,8 @@ Bạn cần phân biệt được:
 → [07 — Technical indicators as data transformations](./07_TECHNICAL_INDICATORS_AS_DATA_TRANSFORMATIONS.md)
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [02 — Quotes, pips, lots and P/L](./02_QUOTES_PIPS_LOTS_AND_PNL.md)
 - [03 — Leverage, margin and position sizing](./03_LEVERAGE_MARGIN_POSITION_SIZING.md)

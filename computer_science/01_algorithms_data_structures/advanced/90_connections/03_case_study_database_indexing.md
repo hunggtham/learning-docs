@@ -414,6 +414,8 @@ concurrency
 
 ## 18. Chuỗi suy luận hoàn chỉnh
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Yêu cầu nghiệp vụ
     ↓
@@ -437,5 +439,3 @@ Benchmark workload thật
 > **chỉ mục (index / 인덱스) là một cấu trúc dữ liệu được duy trì trước để mua lại tốc độ truy vấn trong tương lai.** Cái giá phải trả là bộ nhớ, I/O, ghi (write / 쓰기) amplification và độ phức tạp (complexity / 복잡도) khi cập nhật. Không có chỉ mục (index / 인덱스) tốt tuyệt đối; chỉ có chỉ mục (index / 인덱스) phù hợp với tập thao tác và tầng lưu trữ cụ thể.
 
 Xem thêm: [Hash Tables](../01_linear_structures/04_hash_tables.md), [B/B+Tree & External Memory](../02_trees/05_b_trees_and_external_memory.md), [Probabilistic Data Structures](../05_specialized/06_probabilistic_data_structures.md), [Choose the Right Data Structure](./00_choose_the_right_data_structure.md), [DSA in Systems](./01_dsa_in_databases_networks_and_systems.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 choose the right data structure](./00_choose_the_right_data_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -69,6 +69,8 @@ Xóa một đường dẫn là thay đổi mục thư mục. Vì vậy khả nă
 
 ## Chủ sở hữu
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 chown app:app application.yml
 ```
@@ -223,6 +225,4 @@ Quyền truy cập là một quyết định đối với **một thao tác cụ
 
 ## Kết nối kiến thức
 
-Quyền truy cập chỉ có ý nghĩa khi gắn với danh tính của tiến trình. [Tiến trình, luồng, tín hiệu và tác vụ](../04_process/processes_threads_signals_jobs.md) giải thích vòng đời tiến trình và quyền gửi tín hiệu (signal / 신호); [Bảo mật và gia cố hệ thống](../08_operations/security_hardening.md) mở rộng từ quyền tệp sang bề mặt tấn công và chính sách máy chủ.
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [credentials capabilities acl mac](./credentials_capabilities_acl_mac.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Quyền truy cập chỉ có ý nghĩa khi gắn với danh tính của tiến trình. [Tiến trình, luồng, tín hiệu và tác vụ](../04_process/processes_threads_signals_jobs.md) giải thích vòng đời tiến trình và quyền gửi signal; [Bảo mật và gia cố hệ thống](../08_operations/security_hardening.md) mở rộng từ quyền tệp sang bề mặt tấn công và chính sách máy chủ.

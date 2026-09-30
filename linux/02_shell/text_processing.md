@@ -209,6 +209,8 @@ Cách này giảm thao tác không cần thiết và giữ thư mục làm việ
 
 ## `tee`: vừa quan sát vừa lưu bằng chứng
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 curl -v https://service.example 2>&1 | tee curl-debug.txt
 ```
@@ -262,5 +264,3 @@ Có thể xem xử lý văn bản trên dòng lệnh như một **bộ máy truy
 ## Kết nối kiến thức
 
 Xử lý văn bản là cầu nối giữa shell và khả năng quan sát hệ thống (observability). Khi chuyển sang [Nhật ký và khả năng quan sát](../05_system/logging_journal_observability.md), các mẫu lọc và tổng hợp này sẽ được dùng để xây dựng giả thuyết từ dữ liệu thay vì chỉ "tail rồi nhìn".
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [bash scripting reliability](./bash_scripting_reliability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

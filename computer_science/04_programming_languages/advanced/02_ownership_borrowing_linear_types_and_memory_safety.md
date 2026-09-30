@@ -59,6 +59,8 @@ Hệ thống thực tế có thể không tuân một calculus thuần túy, nh�
 Một integer có thể bản sao (copy / 복사) tự do; một unique tệp (file / 파일) handle, khóa (lock / 잠금) guard hay signing năng lực (capability / 역량) có thể cần ngữ nghĩa (semantics / 의미론) khác.
 
 ## 6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang **typestate**. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:
+Phần “6. Typestate: kiểu (type / 타입) có thể biểu diễn giao thức (protocol / 프로토콜) quyền sở hữu trạng thái (state ownership / 상태 소유권) thinking mở rộng tự nhiên sang **typestate**. Một giao dịch (transaction / 트랜잭션) đối tượng (object / 객체) có thể chuyển trạng thái:” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 OpenTransaction

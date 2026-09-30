@@ -393,6 +393,8 @@ calendar error
 Do not close a thất bại (fail / 실패) ticket merely because payment arrived later. bản ghi (record / 레코드) duration, liquidity chi phí (cost / 비용), replacement chi phí (cost / 비용), operational cause and recurrence rủi ro (risk / 위험).
 
 ## 22. Failed receipt can create downstream thất bại (failure / 실패)
+Phần “22. Failed receipt can create downstream thất bại (failure / 실패)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Expected USD receipt fails
@@ -518,6 +520,8 @@ Stress expected receipts separately from committed outgoing payments.
 ## 29. Stress scenarios
 
 ### Counterparty default after outgoing payment
+Phần “Counterparty default after outgoing payment” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Gross bilateral trade
@@ -527,6 +531,8 @@ Gross bilateral trade
 ```
 
 ### PvP participant misses pay-in
+Phần “PvP participant misses pay-in” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 principal protected
@@ -535,6 +541,8 @@ principal protected
 ```
 
 ### Cut-off miss
+Phần “Cut-off miss” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 eligible trade misses instruction deadline
@@ -543,6 +551,8 @@ eligible trade misses instruction deadline
 ```
 
 ### Local-currency payment outage
+Phần “Local-currency payment outage” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 onshore leg unavailable
@@ -575,6 +585,8 @@ counterparty default timing
 At least one reverse stress must occur without a large spot move.
 
 ## 31. điều khiển (control / 제어) khung phần mềm (framework / 프레임워크)
+Phần “31. điều khiển (control / 제어) khung phần mềm (framework / 프레임워크)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Pre-trade
@@ -596,6 +608,8 @@ Post-settlement
 Controls need đơn vị sở hữu (owner / 오너), timestamp, bằng chứng (evidence / 증거) and escalation đường dẫn (path / 경로).
 
 ## 32. Dashboard
+Phần “32. Dashboard” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 gross obligations by currency
@@ -613,6 +627,8 @@ recurring root cause
 Dashboard should preserve denominator and amount. A low thất bại (fail / 실패) percentage can still hide a material principal amount.
 
 ## 33. What not to learn
+Phần “33. What not to learn” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 PvP eliminates all FX risk
@@ -638,6 +654,8 @@ settlement is only a back-office concern
 10. Which operational chỉ số (metric / 지표) would reveal a deteriorating tiến trình (process / 프로세스) before a mất mát (loss / 손실)?
 
 ## 35. Sources and cập nhật (update / 업데이트) watch
+Phần “35. Sources and cập nhật (update / 업데이트) watch” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [BIS — Uncovering FX settlement risk: new measures from the 2025 Triennial Survey](https://www.bis.org/publications/qr-202606/uncovering-fx-settlement-risk-new-measures-2025-bis-triennial-survey)
 - [BIS — FX settlement risk: an unsettled issue](https://www.bis.org/publications/qr-202212/fx-settlement-risk-unsettled-issue)

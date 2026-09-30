@@ -29,6 +29,8 @@ Technology và resources gồm sắt, thủy lợi, ngựa, tàu, đường và 
 “Công dân” thường là quyền có điều kiện, không phải bình đẳng phổ quát. Slavery, debt bondage, caste/status, gender và ethnicity phân phối truy cập (access / 접근) vào đất, luật, quân đội và giáo dục. Một đế chế ổn định không nhất thiết công bằng; nó có thể bền nhờ phân biệt được luật cho các nhóm.
 
 ### Stock/luồng (flow / 흐름)
+Phần “Stock/luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: roads, canals, coins, archives, forts, cultivated land

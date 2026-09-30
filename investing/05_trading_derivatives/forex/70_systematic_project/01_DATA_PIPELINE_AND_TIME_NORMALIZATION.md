@@ -645,6 +645,8 @@ Used by which strategy
 ```
 
 ## 37. Example relational lược đồ (schema / 스키마)
+Phần “37. Example relational lược đồ (schema / 스키마)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 instrument_master

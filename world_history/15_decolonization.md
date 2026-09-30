@@ -19,6 +19,8 @@ Theo dõi agency của phụ nữ, nông dân, workers, intellectuals và ethnic
 Di sản colonial trạng thái (state / 상태) thường mạnh ở census, police, customs và export corridor nhưng yếu ở universal welfare, nội địa taxation và đại diện địa phương. Chính phủ mới phải biến một population subject thành citizen, giữ salaries và biên giới, đồng thời thương lượng với chiefs, parties, military, ethnic/religious organizations và foreign creditors.
 
 ### Commodity và fiscal trap
+Phần “Commodity và fiscal trap” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 single export + volatile price

@@ -321,6 +321,8 @@ Vì vậy “ăn” không phải sự kiện riêng của dạ dày mà là per
 
 ## 33. Mô hình tổng hợp từ môi trường tới tế bào rồi quay trở lại
 
+Phần cuối nối các hệ cơ quan thành một vòng trao đổi với môi trường. Hãy đọc mũi tên như đường đi của vật chất, năng lượng và tín hiệu; mỗi điểm trung gian giải thích vì sao một thay đổi bên ngoài có thể trở thành đáp ứng tế bào.
+
 ```text
 môi trường ngoài
 → phổi / ruột / da

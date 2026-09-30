@@ -89,6 +89,8 @@ strategic goal
 Từ đây hãy chuyển sang [China after 1978](13_case_china_reform_opening_and_dual_track_transition.md). China là comparative trường hợp (case / 사례) đặc biệt hữu ích vì political continuity coexist với một economic coordination hệ thống (system / 시스템) được cải tổ từng bước theo hướng thị trường (market / 시장) mechanisms, tạo natural experiment cho câu hỏi institution nào thay đổi và kết quả (outcome / 결과) nào thay đổi cùng nó.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - NBER, G. Warren Nutter, Israel Borenstein & Adam Kaufman, *Growth of Industrial Môi trường vận hành (production / 운영 환경) in the Soviet Union* (1962): https://www.nber.org/books-and-chapters/growth-industrial-production-soviet-union
 - NBER, Anton Cheremukhin, Mikhail Golosov, Sergei Guriev & Aleh Tsyvinski, “Was Stalin Necessary for Russia's Economic Development?” (2013): https://www.nber.org/papers/w19425

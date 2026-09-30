@@ -30,6 +30,8 @@ Hardware có thể AND/OR/XOR cả machine word trong một instruction, nên t�
 
 ## Các phép cơ bản
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 &   AND
 |   OR
@@ -43,6 +45,8 @@ Với mặt nạ bit `1 << k`:
 
 ### Kiểm tra bit
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 if (x & (1u << k)) {
     // bit k đang bật
@@ -51,17 +55,23 @@ if (x & (1u << k)) {
 
 ### Set bit
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 x |= (1u << k);
 ```
 
 ### Clear bit
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 x &= ~(1u << k);
 ```
 
 ### Toggle bit
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 x ^= (1u << k);
@@ -147,6 +157,8 @@ cây Fenwick (Fenwick Tree) dùng giá trị này làm khối (block / 블록) k
 Mental reason: `-x` giữ bit 1 thấp nhất của `x` và đảo mẫu phía trên theo two's-complement carry, nên AND chỉ còn bit đó.
 
 ## Xóa bit 1 thấp nhất
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 x & (x - 1)
@@ -666,6 +678,4 @@ Roaring Bitmap, chẳng hạn, chia miền giá trị thành các khối và ch�
 
 > thao tác bit không phải collection của mẹo nhị phân. Nó là **dữ liệu (data / 데이터) cách biểu diễn thiết kế (design / 설계)**: khi trạng thái thật sự là boolean véc-tơ (vector / 벡터), nhị phân (binary / 이진) integer/tập bit cho phép bộ nhớ gọn, algebra rõ và hardware xử lý nhiều flags cùng lúc.
 
-Khi dùng bit trick, luôn hỏi ba điều: chứng minh định danh (identity / 식별자) đến từ đâu, integer width/signedness của ngôn ngữ (language / 언어) là gì, và trạng thái có thực sự fit mô hình dense boolean véc-tơ (vector / 벡터) không. Nếu ba câu này rõ, bitwise mã (code / 코드) trở thành công cụ có hệ thống thay vì magic.
-
-> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi dùng bit trick, luôn hỏi ba điều: chứng minh identity đến từ đâu, integer width/signedness của language là gì, và trạng thái có thực sự fit mô hình dense boolean vector không. Nếu ba câu này rõ, bitwise code trở thành công cụ có hệ thống thay vì magic.

@@ -1,52 +1,43 @@
-# 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
+# 252. 다중 if문 (Multiple if Statement)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **252. 다중 if문 (Multiple if Statement)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **252. 다중 if문 (Multiple if Statement)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-서브네팅, IPv4, IPv6
+다중
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **252. 다중 if문 (Multiple if Statement)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**에서 만든 기준을 이어받아 **252. 다중 if문 (Multiple if Statement)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** và nối nó với **252. 다중 if문 (Multiple if Statement)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **252. 다중 if문 (Multiple if Statement)** và nối nó với **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
+---
+
+## 252. 다중 if문 (Multiple if Statement)
+
+Sau khi đã đặt nền bằng **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**, ta chuyển sang **252. 다중 if문 (Multiple if Statement)**. Đây là mắt xích 50/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **252. 다중 if문 (Multiple if Statement)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “252. 다중 if문 (Multiple if Statement)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 처리할 조건이 여러 개일 때 `else if`를 사용해 순차적으로 판단.
+- 위에서 조건이 참이면 해당 블록을 실행하고 빠져나옴 (아래 조건은 검사하지 않음).
+- 모든 조건이 거짓일 때 마지막 `else`가 실행됨.
 
 ---
 
-## 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
-- **IPv4 헤더 필드**: phiên bản (version / 버전), Header Length, TOS, Total Length, TTL (수명), nguồn (source / 소스)/Destination Address 등.
-- **IPv4 클래스**:
-  - lớp (class / 클래스) A: `0.~` (거대 망)
-  - lớp (class / 클래스) B: `128.~` (중형 망)
-  - lớp (class / 클래스) C: `192.~` (소형 망)
-- **IPv4 vs IPv6**:
-  - 주소 길이: IPv4(32비트) -> **IPv6(128비트)** 확장.
-  - IPv6 특징: 호스트 주소 자동 설정 지원, 기본 헤더 단순화, 플로 레이블링(QoS) 필드, 이동성 지원. 패킷 크기는 IPv6의 최대 패킷 크기와 경로 MTU 규칙을 따르며, IPsec 지원이 정의되어도 사용 여부는 별도 설정이다.
-- **데이터 전송 방법**:
-  - **유니캐스트 (Unicast)**: 1:1 통신.
-  - **멀티캐스트 (Multicast)**: 1:N (특정 그룹).
-  - **브로드캐스트 (Broadcast)**: 1:전체 (IPv4에서만 사용, 과부하 원인).
-  - **애니캐스트 (Anycast)**: 1:가장 가까운 1개 노드 (IPv6에서 도입).
-
-**Giải thích (Vietnamese):**
-IPv4 sắp hết số (vì chỉ có 32 bit = khoảng 4 tỷ địa chỉ). Nên người ta sinh ra IPv6 (128 bit = số lượng vô hạn). IPv6 bảo mật tốt hơn, không cần cấu hình DHCP phức tạp (tự gán địa chỉ) và loại bỏ Broadcast để tránh nghẽn mạng.
-
-**💡 Mẹo ghi nhớ (Mnemonics):**
-Các kiểu truyền:
-- Unicast = Nói chuyện riêng.
-- Multicast = Nhắn tin vào group chat Zalo.
-- Broadcast = Cầm loa hét cho cả trường nghe (Chỉ IPv4).
-- Anycast = Gọi tổng đài, ai rảnh thì nhấc máy nghe trước (Chỉ IPv6).
-
----
+Ta có thể khép mục **252. 다중 if문 (Multiple if Statement)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

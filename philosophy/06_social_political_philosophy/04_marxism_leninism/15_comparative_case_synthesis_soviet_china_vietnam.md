@@ -197,6 +197,8 @@ Nếu muốn quay về conceptual debate, đọc [Major critiques and open quest
 Nếu muốn kiểm tra claims bằng quantitative phương thức (method / 메서드), handoff sang [Economics](../../../economics/README.md), [Econometrics](../../../economics/05_econometrics/) và [Research Methods](../../../research_methods/README.md). Political philosophy cho biết câu hỏi và giá trị (value / 값) xung đột (conflict / 충돌); empirical domains cho biết bằng chứng (evidence / 증거) hỗ trợ nhân quả (causal / 인과적) story đến đâu.
 
 ## Sources và trường hợp (case / 사례) anchors
+Phần “Sources và trường hợp (case / 사례) anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Soviet: NBER, *Growth of Industrial Môi trường vận hành (production / 운영 환경) in the Soviet Union*; Cheremukhin et al., “Was Stalin Necessary for Russia's Economic Development?”
 - China: World Bank, China country overview và retrospective on forty years of reforms; IMF historical reform analyses.

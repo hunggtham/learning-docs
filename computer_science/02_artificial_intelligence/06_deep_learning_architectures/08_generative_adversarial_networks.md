@@ -190,6 +190,8 @@ Technology shifts do not make GAN conceptual kiến thức (knowledge / 지식) 
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Generator: propose synthetic reality
 Discriminator/Critic: learn what distinguishes proposal from data
@@ -221,5 +223,3 @@ It changes divergence/distance khung phần mềm (framework / 프레임워크) 
 GAN connects [Game/Adversarial Search intuition](../02_search_reasoning_and_planning/03_adversarial_search_and_games.md), [Optimization](../01_mathematical_foundations/06_optimization.md), [Probability/Distribution Learning](../01_mathematical_foundations/02_probability_for_ai.md) and [Representation Learning](../05_neural_networks/08_representation_learning.md).
 
 Xem tiếp: [Diffusion Models](./09_diffusion_models.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

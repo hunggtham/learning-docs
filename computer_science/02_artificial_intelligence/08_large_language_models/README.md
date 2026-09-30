@@ -7,6 +7,8 @@ Folder này xây Large ngôn ngữ (language / 언어) các mô hình (models / 
 
 ## Phụ thuộc (dependency / 의존성) Map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     LM[Language Modeling] --> TOK[Tokenization]
@@ -32,6 +34,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) Map**, ta sang **Chapters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chapters
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```text
 00_from_language_models_to_llms.md
@@ -63,6 +67,8 @@ Bốn chapter đầu giải thích đầu vào (input / 입력) biểu diễn (r
 > **Chuyển mạch:** Từ **Reading lô-gic (logic / 논리)**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Raw text
@@ -101,6 +107,4 @@ LLM                          ≠ complete AI system
 
 ## Next
 
-Tiếp theo: [Retrieval & RAG](../09_retrieval_and_rag/README.md), nơi parameterized mô hình (model / 모델) được kết nối với bên ngoài (external / 외부) bằng chứng (evidence / 증거) và searchable kiến thức (knowledge / 지식).
-
-> **Bàn giao:** Sau **Next**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Tiếp theo: [Retrieval & RAG](../09_retrieval_and_rag/README.md), nơi parameterized model được kết nối với external evidence và searchable knowledge.

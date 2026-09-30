@@ -1,43 +1,44 @@
-# 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
+# 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **088-2: 데이터베이스 (Database) & 089: DBMS** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-기타, 협업, 도구
+핵심, 재사용, 기법
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**에서 만든 기준을 이어받아 **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **098 & 기타 협업 도구 (Build Tools & Collaboration Tools)** và nối nó với **104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** và nối nó với **088-2: 데이터베이스 (Database) & 089: DBMS**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
+---
+
+## 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
+
+Sau khi đã đặt nền bằng **027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)**, ta chuyển sang **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)**. Đây là mắt xích 92/101 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **재사용 (Reuse):** 이미 개발되어 인정받았던 소프트웨어의 전체 또는 일부분을 다시 사용하는 기법. (Sử dụng lại code/phần mềm cũ đã được kiểm chứng để tiết kiệm thời gian, chi phí và giảm lỗi.)
+- **Phân loại theo kỹ thuật:**
+  - **분석 (Analysis):** Hiểu code cũ để chọn cái cần tái sử dụng.
+  - **재구조 (Restructuring):** Đổi cấu trúc, không đổi chức năng.
 
 ---
 
-## 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
-
-### 빌드 도구 (Build Tool)
-- 소스 코드를 실행할 수 있는 제품으로 변환(빌드)하는 과정을 자동화. (Công cụ tự động biên dịch và gom file code lại thành file chạy `.exe`, `.apk`...).
-- **Ant:** Cổ điển, dùng cho Java, của Apache.
-- **Maven:** Nâng cấp của Ant, quản lý thư viện (Dependencies) tự động.
-- **Gradle:** Hiện đại nhất, lai giữa Ant và Maven, dùng nhiều cho Android.
-
-### 기타 협업 도구 (Groupware / Collaboration Tools)
-- **프로젝트 및 일정 관리 (Quản lý dự án):** Jira (지라), Trello, Google Calendar.
-- **메신저 (Giao tiếp):** Slack, Jandi.
-- **디자인 (Thiết kế UI -> Code):** Zeplin, Sketch.
-- **기타:** Evernote (Ghi chú), Swagger (Tài liệu API tự động), GitHub (Lưu source code).
-
-- 💡 **Mẹo ghi nhớ (Mnemonics):** Jira = Quản lý công việc (Ticket). Slack = Chat. Zeplin = Thiết kế. Swagger = Viết Document cho API. Gradle = bản dựng (build / 빌드) Android.
-
----
+Ta có thể khép mục **핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **088-2: 데이터베이스 (Database) & 089: DBMS**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

@@ -83,6 +83,8 @@ Sau bốn foundation chapters, đi theo các ranh giới (boundary / 경계) sau
 14. [90 — Case studies](90_case_studies/README.md): CDC duplicate, late sự kiện (event / 이벤트), backfill race, compaction race và ngữ nghĩa (semantic / 의미적) fan-out.
 
 ### Phụ thuộc (dependency / 의존성) map
+Phần “Phụ thuộc (dependency / 의존성) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 01 foundations

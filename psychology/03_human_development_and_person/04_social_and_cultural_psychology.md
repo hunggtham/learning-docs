@@ -171,6 +171,8 @@ Xem [[15_power_status_hierarchy_and_inequality]].
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 cá nhân + tình huống + nhóm + chuẩn mực + quyền lực + văn hóa
                               ↓
@@ -194,5 +196,3 @@ Xã hội (social / 사회적) môi trường (environment / 환경) không ch�
 ## Kết nối kiến thức
 
 Xem [[03_personality]], [[08_moral_psychology_and_prosocial_behavior]], [[10_group_dynamics_collective_behavior_and_cooperation]], [[15_power_status_hierarchy_and_inequality]], [[16_acculturation_migration_and_bicultural_identity]], [[../06_applied/05_digital_psychology_social_media_and_online_behavior]] và [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

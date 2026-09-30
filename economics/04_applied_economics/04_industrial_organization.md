@@ -49,6 +49,8 @@ Under differentiated Bertrand, estimated demand + first-order pricing conditions
 Observed accounting margin is not the same as economic markup.
 
 ## 7. Lerner chỉ mục (index / 인덱스)
+Phần “7. Lerner chỉ mục (index / 인덱스)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 L = (P − MC) / P
@@ -239,6 +241,8 @@ Structural các mô hình (models / 모델들) estimate primitives to simulate c
 Structural approach gains extrapolation at chi phí (cost / 비용) of stronger các giả định (assumptions / 가정들).
 
 ## 38. Dùng chung (common / 공통) empirical designs
+Phần “38. Dùng chung (common / 공통) empirical designs” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - demand IV using chi phí (cost / 비용) shifters;
 - merger DiD/sự kiện (event / 이벤트) studies;

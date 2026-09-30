@@ -283,6 +283,8 @@ Không có một mẹo duy nhất; mục tiêu là tìm **thông tin nào giúp 
 
 ## 17. Khi recursion exponential, thử gì?
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 có overlapping states không?        -> memoization / DP
 có branch vô ích nhận ra sớm không? -> pruning
@@ -376,6 +378,8 @@ Numeric ngữ nghĩa (semantics / 의미론) là một phần của specificatio
 
 ### C
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 bounds
 ownership
@@ -387,6 +391,8 @@ pointer invalidation
 
 ### Java
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```text
 boxing
 equals/hashCode
@@ -397,6 +403,8 @@ GC/allocation
 ```
 
 ### JavaScript
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```text
 Number safe integer
@@ -592,6 +600,8 @@ Phân loại đúng giúp tránh lặp lại cùng kiểu lỗi ở bài khác.
 
 ## 37. Một quy trình 12 bước
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 1. Viết lại specification.
 2. Xác định mọi constraint và parameter.
@@ -608,6 +618,8 @@ Phân loại đúng giúp tránh lặp lại cùng kiểu lỗi ở bài khác.
 ```
 
 ## 38. Checklist trước khi nộp hoặc merge
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Output semantics có đúng mọi case không?
@@ -629,5 +641,3 @@ Có cách oracle nhỏ để đối chiếu không?
 Khi bí, đừng hỏi “mẫu này dùng thuật toán gì?”. Hãy quay lại hỏi: **baseline đang làm thừa công việc nào, trạng thái (state / 상태) nào thực sự ảnh hưởng tương lai, bất biến (invariant / 불변식) nào cho phép bỏ candidate, và cấu trúc (structure / 구조) nào materialize thông tin đó rẻ nhất?**
 
 Xem thêm: [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md), [Correctness & Invariants](../00_foundations/01_algorithm_correctness_and_invariants.md), [Complexity](../00_foundations/02_complexity_analysis.md), [Choose the Right Data Structure](./00_choose_the_right_data_structure.md), [Cross-Language Testing](../80_language_implementations/03_cross_language_testing_and_benchmarking.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 choose the right data structure](./00_choose_the_right_data_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

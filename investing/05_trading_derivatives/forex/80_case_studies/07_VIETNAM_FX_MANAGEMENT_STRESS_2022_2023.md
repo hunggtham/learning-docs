@@ -147,6 +147,8 @@ stable spot ≠ no latent funding risk
 Thị trường (market / 시장) có thể bình tĩnh hơn nhờ bên ngoài (external / 외부) conditions cải thiện, capital confidence và chính sách (policy / 정책) flexibility; đó là trạng thái (state / 상태) thay đổi (change / 변경) chứ không phải bằng chứng rằng cùng một phản hồi (response / 응답) luôn hiệu quả.
 
 ## 8. nhân quả (causal / 인과적) map
+Phần “8. nhân quả (causal / 인과적) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Fed tightening / broad USD strength
@@ -232,6 +234,8 @@ reserve rebuilding
 Không dùng end-of-year reserve number để reconstruct intraday intervention. Ghi rõ publication lag và dữ liệu (data / 데이터) vintage.
 
 ## 11. So sánh USD/VND với USD/KRW và EUR/USD
+Phần “11. So sánh USD/VND với USD/KRW và EUR/USD” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Dimension | EUR/USD | USD/KRW | USD/VND |
 |---|---|---|---|
@@ -244,6 +248,8 @@ Không dùng end-of-year reserve number để reconstruct intraday intervention.
 Một USD shock giống nhau không tạo ra cùng một USD move hay cùng một hedge kết quả (outcome / 결과).
 
 ## 12. rủi ro (risk / 위험) checklist
+Phần “12. rủi ro (risk / 위험) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 [ ] Đã xác định regime là managed flexibility hay free float chưa?
@@ -259,6 +265,8 @@ Một USD shock giống nhau không tạo ra cùng một USD move hay cùng mộ
 ```
 
 ## 13. Sources
+Phần “13. Sources” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [IMF — Vietnam 2023 Article IV Consultation](https://www.imf.org/-/media/Files/Publications/CR/2023/English/1VNMEA2023003.ashx)
 - [IMF — Vietnam 2024 Article IV Consultation](https://www.imf.org/-/media/Files/Publications/CR/2024/English/1vnmea2024001-print-pdf.ashx)

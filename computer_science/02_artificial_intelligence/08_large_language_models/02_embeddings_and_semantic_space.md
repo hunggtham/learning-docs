@@ -101,6 +101,8 @@ Quantization of embeddings/chỉ mục (index / 인덱스) is separate from LLM 
 
 ## Ngữ nghĩa (semantic / 의미적) tìm kiếm (search / 검색) chuỗi xử lý (pipeline / 파이프라인)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Document
 → chunk
@@ -183,6 +185,8 @@ Tường minh (explicit / 명시적) quan hệ (relation / 관계) and dense sim
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Token embedding      = initial learned code for token identity
 Contextual hidden    = token representation after context computation
@@ -212,5 +216,3 @@ Chất lượng (quality / 품질)/lưu trữ (storage / 저장소)/ANN sự đ�
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Contextual Embeddings](../07_natural_language_processing/04_contextual_embeddings.md), [Information Retrieval](../07_natural_language_processing/08_search_and_information_retrieval.md), and later `09_retrieval_and_rag/`.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

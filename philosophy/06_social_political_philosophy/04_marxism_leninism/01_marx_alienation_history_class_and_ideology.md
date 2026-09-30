@@ -173,6 +173,8 @@ Sau chapter này, skeleton đã đầy đủ hơn: people reproduce life through
 Nhưng vẫn thiếu cơ chế (mechanism / 메커니즘) trung tâm của *Capital*: **vì sao capital có thể tự mở rộng trong một hệ thống (system / 시스템) nơi exchange được mô tả như exchange giữa legal commodity owners?** Nếu bỏ qua câu này, Marx chỉ còn là moral critic. Chapter tiếp theo chuyển sang commodity, value-form, money, labor power, surplus giá trị (value / 값), accumulation và reproduction của capital.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Karl Marx, *Economic and Philosophic Manuscripts of 1844* — primary anchor cho alienation.

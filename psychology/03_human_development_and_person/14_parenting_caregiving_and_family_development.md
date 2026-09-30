@@ -214,6 +214,8 @@ Khung này được phát triển tại [[../04_mental_health/12_developmental_p
 
 ## 25. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 child biology / temperament
           ↕
@@ -233,5 +235,3 @@ Parenting là một transactional hệ thống (system / 시스템) phát triể
 ## Kết nối kiến thức
 
 Đọc cùng [[00_lifespan_development]], [[01_attachment_and_relationships]], [[06_stress_coping_and_emotion_regulation]], [[07_close_relationships_intimacy_and_family]], [[../04_mental_health/12_developmental_psychopathology_risk_and_resilience]], [[../02_learning_and_cognition/00_learning_and_conditioning]] và [[../06_applied/01_education_learning_and_habit_design]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

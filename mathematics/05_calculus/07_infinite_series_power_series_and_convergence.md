@@ -634,6 +634,8 @@ Series convergence biến thành kỹ thuật (engineering / 엔지니어링) qu
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối đặt hội tụ và power series cạnh approximation, probability, differential equations và numerical computation. Hãy xem điều kiện hội tụ như ranh giới an toàn của phép biến đổi.
+
 ```text
 sequence limits
 → partial sums
@@ -654,6 +656,4 @@ sequence limits
 
 ## Dùng chung (common / 공통) Misconceptions
 
-`a_n\to0` không đủ cho series convergence. “Convergent” không nghĩa fast enough for computation. Absolute và conditional convergence không interchangeable. Power series không automatically valid cho mọi `x`. Endpoints phải được check riêng. Rearrangement của conditionally convergent series có thể đổi kết quả (result / 결과). Một theorem cho convergence mà không có useful lỗi (error / 오류) bound đôi khi chưa đủ cho numerical use.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 limits and continuity](./00_limits_and_continuity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+`a_n\to0` không đủ cho series convergence. “Convergent” không nghĩa fast enough for computation. Absolute và conditional convergence không interchangeable. Power series không automatically valid cho mọi `x`. Endpoints phải được check riêng. Rearrangement của conditionally convergent series có thể đổi result. Một theorem cho convergence mà không có useful error bound đôi khi chưa đủ cho numerical use.

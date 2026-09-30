@@ -219,6 +219,8 @@ Nếu std tăng exponential qua độ sâu (depth / 깊이) → exploding tín h
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Initialization = chọn starting scale để network bắt đầu ở vùng trainable
 Normalization  = liên tục giữ intermediate scale/statistics trong vùng dễ optimize
@@ -246,5 +248,3 @@ Learned affine parameters và direction/relative mẫu (pattern / 패턴) vẫn 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Activation Functions](./02_activation_functions.md), [Backpropagation](./04_backpropagation.md), [Optimizers](./05_gradient_descent_and_optimizers.md) và sau này [Transformer](../06_deep_learning_architectures/05_transformer.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from linear models to neural networks](./00_from_linear_models_to_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

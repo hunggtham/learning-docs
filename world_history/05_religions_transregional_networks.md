@@ -30,6 +30,8 @@ Một doctrine hiếm khi đi nguyên gói. Merchant, monk, scholar, soldier, ma
 Monastery, mosque, church, temple, shrine, school và guild có thể giữ đất, cho vay, cứu trợ, đào tạo thư lại và bảo vệ người đi đường. Những chức năng này tạo mạng (network / 네트워크) effects: càng nhiều nút (node / 노드) cùng dùng lịch, script hoặc luật, chi phí giao dịch càng thấp. Nhưng mạng (network / 네트워크) cũng có ranh giới (boundary / 경계): heresy, caste, gender, ethnicity hoặc quyền công dân có thể loại trừ người khác.
 
 ### Stock/luồng (flow / 흐름)
+Phần “Stock/luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: canonical text, endowment land, trained specialists, ritual calendars

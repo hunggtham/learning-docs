@@ -240,6 +240,8 @@ Tokenizer is part of mô hình (model / 모델) sản phẩm tạo ra (artifact 
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Raw bytes / Unicode
    ↓ normalization policy
@@ -274,6 +276,4 @@ No. đơn vị từ (token / 토큰) IDs/segmentations must match trained embedd
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Tokenization prepares [Language Models](./02_language_models.md), [Word Embeddings](./03_word_embeddings.md) and later LLM tokenization/ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language as data](./00_language_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Tokenization prepares [Language Models](./02_language_models.md), [Word Embeddings](./03_word_embeddings.md) and later LLM tokenization/context engineering.

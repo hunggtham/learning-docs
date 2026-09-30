@@ -44,6 +44,8 @@ Một điều khoản viết trong hợp đồng không tự động hợp pháp
 
 ## 3. Từ khóa hợp đồng tiếng Hàn
 
+Trước khi đọc điều khoản, hãy xây một từ điển tối thiểu để nhận ra ai có nghĩa vụ gì, thời điểm nào phát sinh quyền và điều kiện nào giới hạn trách nhiệm. Các từ khóa sau là cầu nối từ câu chữ tiếng Hàn sang cấu trúc hợp đồng.
+
 - `계약당사자`: các bên hợp đồng;
 - `계약기간`: thời hạn;
 - `계약금`: tiền đặt trước/khoản ký kết tùy giao dịch;
@@ -173,6 +175,8 @@ Không phải mọi vụ đều cần đi tòa. Đồng thời, cơ chế hòa g
 
 ## 10. Nguồn chính thức
 
+Nguồn chính thức giúp đối chiếu điều khoản với luật hiện hành và cơ chế khiếu nại phù hợp. Không nên dùng mẫu hợp đồng cũ hoặc bài tư vấn không ghi rõ ngày cập nhật để kết luận quyền của mình.
+
 - 민법 và luật liên quan: https://www.law.go.kr/
 - 찾기쉬운 생활법령정보: https://www.easylaw.go.kr/
 - 소비자24: https://www.bên tiêu thụ (consumer / 소비자).go.kr/
@@ -194,5 +198,3 @@ Khi đọc một hợp đồng, bạn có thể trả lời chính xác năm câ
 5. Luật bắt buộc nào có thể mạnh hơn điều khoản hợp đồng?
 
 Nếu chưa trả lời được, hợp đồng chưa được đọc xong.
-
-> **Bàn giao:** Sau **11. Câu hỏi tự kiểm tra**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

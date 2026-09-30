@@ -127,6 +127,8 @@ freedom as non-domination
 Chapter tiếp theo, [Nationalism](07_nationalism.md), chuyển từ “citizen có quan hệ (relation / 관계) gì với công khai (public / 공개) power?” sang “nation là loại community nào, vì sao national belonging có thể tạo duties và self-determination claims, và ranh giới (boundary / 경계)/exclusion được kiểm soát ra sao?”.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Republicanism”: https://plato.stanford.edu/entries/republicanism/
 - Stanford Encyclopedia of Philosophy, “Political Legitimacy”: https://plato.stanford.edu/entries/legitimacy/

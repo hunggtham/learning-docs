@@ -9,6 +9,8 @@ question → concept → argument → premise → objection → implication → 
 Mục tiêu là giúp người đọc nhận ra một claim đang nói về **mô tả**, **giải thích**, **chuẩn tắc** hay **khái niệm**, sau đó đánh giá claim bằng lập luận và bằng chứng thích hợp. Triết học không thay thế khoa học thực nghiệm, nhưng làm rõ câu hỏi, tiêu chuẩn biện minh, giới hạn mô hình và hệ quả giá trị mà khoa học không tự quyết định được.
 
 ## Những câu hỏi trung tâm
+Phần “Những câu hỏi trung tâm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Ta biết một điều bằng cách nào? Bằng chứng (evidence / 증거) là gì? Một claim được justified ra sao?
 - Causality khác correlation ở đâu? Scientific mô hình (model / 모델) nói gì về reality?
@@ -18,6 +20,8 @@ Mục tiêu là giúp người đọc nhận ra một claim đang nói về **m�
 - Technology chỉ là công cụ hay còn định hình agency, kiến thức (knowledge / 지식), công việc (work / 작업) và xã hội (social / 사회적) thứ tự (order / 순서)?
 
 ## Cấu trúc
+Phần “Cấu trúc” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 philosophy/
@@ -54,6 +58,8 @@ Hai file điều phối nằm ở root: [Conceptual Dependencies](CONCEPTUAL_DEP
 10. [Bản đồ lịch sử các truyền thống triết học](08_history_of_philosophy/00_map_of_philosophical_traditions.md)
 
 ### Reading đường dẫn (path / 경로) nâng cao
+Phần “Reading đường dẫn (path / 경로) nâng cao” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Logic và argument forms](00_philosophical_reasoning/01_logic_validity_and_argument_forms.md) → [Thought experiments](00_philosophical_reasoning/02_thought_experiments_and_conceptual_analysis.md) → [Social epistemology](01_epistemology/02_social_epistemology_testimony_and_disagreement.md).
 - [Modality, time và free will](02_metaphysics/01_modality_time_and_free_will.md) → [Reduction và emergence](02_metaphysics/02_reduction_emergence_and_naturalism.md) → [Scientific realism](03_philosophy_of_science/01_scientific_realism_laws_and_underdetermination.md).
@@ -67,6 +73,8 @@ Các tuyến (route / 경로) nâng cao không phải thứ tự bắt buộc. C
 Độ sâu (depth / 깊이) pass hiện tại không mở thêm top-level không gian tên (namespace / 네임스페이스). Xã hội (social / 사회적)/political philosophy giờ có hai focused routes bổ sung nhau: Marxism–Leninism đi sâu genealogy → doctrine → hiện thực (implementation / 구현) → bằng chứng (evidence / 증거); Political Ideologies mở breadth có kiểm soát giữa liberalism, conservatism, socialism, anarchism, libertarianism, republicanism, nationalism và fascism. Cả hai tuyến (route / 경로) đều dùng đặc tả hợp đồng (contract / 계약) `problem → definition → mechanism → institution → objection → evidence boundary → handoff`, không biến lịch sử (history / 이력) of ideas thành glossary hoặc bảng xếp hạng ideology.
 
 ## Kiến thức (knowledge / 지식) connections
+Phần “Kiến thức (knowledge / 지식) connections” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Thinking Toolkit](../thinking/README.md) chuyển logic, epistemology, uncertainty/calibration và model critique thành workflow thực hành cho claim evaluation, causal questions, forecasting và decision-making; Philosophy vẫn là canonical owner của các nền tảng conceptual.
 - [Philosophy, science, mathematics và AI](90_connections/00_philosophy_science_mathematics_and_ai.md) nối epistemology, mô hình (model / 모델), xác suất (probability / 확률), computation và AI.

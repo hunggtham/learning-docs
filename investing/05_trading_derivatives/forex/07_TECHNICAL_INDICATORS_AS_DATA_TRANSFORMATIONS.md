@@ -207,6 +207,8 @@ Một ADX cao có thể xảy ra trong downtrend lẫn uptrend.
 Nếu dùng ADX như “buy indicator” mà bỏ qua construction, interpretation đã sai từ đầu.
 
 ## 14. Donchian channel
+Phần “14. Donchian channel” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Upper = highest high over N periods
@@ -473,6 +475,8 @@ What invalidates it?
 ```
 
 ## 31. Minimal indicator research template
+Phần “31. Minimal indicator research template” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Question:
@@ -521,6 +525,8 @@ Bạn cần tự giải thích được:
 → [08 — Fundamental and event-driven FX analysis](./08_FUNDAMENTAL_AND_EVENT_DRIVEN_FX_ANALYSIS.md)
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [06 — Price action and regimes](./06_PRICE_ACTION_TREND_RANGE_AND_VOLATILITY_REGIMES.md)
 - [04 — Macro drivers, rates, carry and sessions](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)

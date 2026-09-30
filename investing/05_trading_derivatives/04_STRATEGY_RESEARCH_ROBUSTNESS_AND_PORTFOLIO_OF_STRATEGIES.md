@@ -55,15 +55,21 @@ hoặc không tồn tại ngoài mẫu
 
 ## 4. Dữ liệu trong mẫu
 
+In-sample là nơi hình thành rule và ước lượng tham số, nhưng cũng là nơi overfit dễ nhất. Hãy xem kết quả trong mẫu như bằng chứng để xây giả thuyết, không phải xác nhận cuối cùng.
+
 **Trong mẫu (in-sample)** là dữ liệu dùng để xây hoặc điều chỉnh chiến lược. Kết quả đẹp ở đây dễ bị khớp quá mức nhất.
 
 ## 5. Dữ liệu ngoài mẫu
+
+OOS giữ lại một đoạn dữ liệu chưa từng dùng để thiết kế chiến lược. Nó kiểm tra khả năng tổng quát hóa sau khi quy tắc đã khóa, nên không được dùng để tiếp tục “sửa cho đẹp”.
 
 **Ngoài mẫu (out-of-sample, OOS)** là dữ liệu chưa dùng để thiết kế quy tắc.
 
 Nếu lợi thế giữ được ngoài mẫu, bằng chứng mạnh hơn nhưng vẫn không bảo đảm tương lai.
 
 ## 6. Kiểm thử cuốn chiếu
+
+Walk-forward nối train/test theo thời gian và mô phỏng việc cập nhật hệ thống khi thông tin mới xuất hiện. Mục tiêu là xem edge có sống qua các cửa sổ khác nhau hay chỉ tồn tại ở một đoạn lịch sử.
 
 **Walk-forward** mô phỏng quá trình cập nhật chiến lược theo thời gian:
 
@@ -80,13 +86,19 @@ Nó giúp kiểm tra khả năng thích nghi khi chế độ thị trường tha
 
 ## 7. Thiên lệch nhìn trước
 
+Look-ahead bias làm chiến lược dùng thông tin mà tại thời điểm giao dịch chưa tồn tại. Hãy kiểm tra timestamp của observation, publication, revision và execution trước khi tin vào kết quả backtest.
+
 **Thiên lệch nhìn trước (look-ahead bias)** xuất hiện khi dùng dữ liệu chưa tồn tại tại thời điểm quyết định.
 
 ## 8. Thiên lệch sống sót
 
+Survivorship bias loại bỏ những tài sản thất bại khỏi mẫu, khiến distribution lịch sử quá lạc quan. Universe phải được xây theo trạng thái có thể biết tại từng thời điểm, không theo danh sách còn tồn tại hôm nay.
+
 **Thiên lệch sống sót (survivorship bias)** xuất hiện khi chỉ giữ các tài sản còn tồn tại hôm nay và bỏ những tài sản đã hủy niêm yết hoặc phá sản.
 
 ## 9. Đào bới dữ liệu
+
+Data snooping biến số lần thử thành nguồn bias. Mỗi rule, feature và timeframe được thử đều làm tăng xác suất tìm thấy pattern ngẫu nhiên, nên cần log thử nghiệm và kiểm tra độc lập.
 
 **Đào bới dữ liệu (data snooping)** là thử rất nhiều quy tắc rồi chỉ giữ kết quả đẹp nhất.
 
@@ -130,6 +142,8 @@ Lợi thế gộp
 Khi vốn tăng, chính lệnh của chiến lược có thể làm giá di chuyển bất lợi. Kiểm thử bỏ qua yếu tố này thường đánh giá quá cao khả năng mở rộng.
 
 ## 16. Công suất chiến lược
+
+Capacity hỏi chiến lược còn giữ expectancy bao lâu khi vốn tăng. Spread, impact, borrow, liquidity và market depth có thể làm edge biến mất trước khi giới hạn vốn danh nghĩa đạt tới.
 
 **Công suất (capacity)** là lượng vốn có thể triển khai trước khi chi phí thực thi làm lợi thế biến mất.
 
@@ -185,6 +199,8 @@ Tỷ lệ thắng 90% không đồng nghĩa an toàn.
 
 ## 22. Độ lồi
 
+Convexity mô tả payoff thay đổi phi tuyến khi giá cơ sở dịch chuyển. Nó có thể bảo vệ danh mục trong tail nhưng cũng tạo chi phí carry hoặc rủi ro margin, nên phải đọc cùng scenario chứ không chỉ direction.
+
 **Độ lồi (convexity)** mô tả mức kết quả thay đổi phi tuyến khi giá cơ sở biến động.
 
 Mua độ lồi thường phải trả chi phí nhỏ thường xuyên để đổi lấy khoản chi trả lớn trong cú sốc. Bán độ lồi thường ngược lại.
@@ -194,6 +210,8 @@ Danh mục cần biết mình đang nghiêng về phía nào.
 # Phần VIII — Kỳ vọng và bất định
 
 ## 23. Kỳ vọng
+
+Expectancy là điểm nối giữa signal và khả năng sống sót: sau win rate, average win/loss, cost và sizing, hệ thống còn tạo phân phối dương hay không? Công thức chỉ có ý nghĩa khi sample và execution được mô tả rõ.
 
 ```text
 Kỳ vọng
@@ -214,6 +232,8 @@ Lợi suất trung bình dương nhưng khoảng tin cậy rất rộng có th�
 # Phần IX — Bootstrap và Monte Carlo
 
 ## 26. Lấy mẫu lại
+
+Bootstrap giúp nhìn độ bất định của kết quả khi thứ tự và mẫu quan sát thay đổi. Nó không tạo dữ liệu mới và không thể sửa bias hoặc regime chưa xuất hiện trong lịch sử.
 
 **Bootstrap** lấy mẫu lại các quan sát lịch sử để tạo nhiều đường kết quả khả dĩ.
 
@@ -316,6 +336,8 @@ Nếu chiến lược được sửa sau một chuỗi lỗ, phải giữ phiên
 
 ## 37. Kiểm thử tiến tới tương lai
 
+Forward test đưa chiến lược vào dữ liệu mới với rule đã khóa, giúp phát hiện chênh lệch giữa backtest và vận hành. Giai đoạn này cần ghi phiên bản, cost, latency và mọi can thiệp thủ công.
+
 **Kiểm thử tiến tới tương lai (forward test)** chạy trên dữ liệu mới theo thời gian thật giúp phát hiện:
 
 - trễ dữ liệu;
@@ -394,6 +416,8 @@ Các chiến lược tưởng khác nhau như bán quyền chọn, kiếm carry,
 
 ## 48. Phòng vệ đuôi
 
+Tail hedge cần được đánh giá ở cấp portfolio và theo nhiều năm: chi phí thường xuyên đổi lấy khả năng giảm loss cực đoan, forced selling và margin stress. P/L riêng của hedge không phải tiêu chí duy nhất.
+
 **Phòng vệ đuôi (tail hedge)** có thể giảm tổn thất cực đoan nhưng tạo chi phí mang vị thế. Phải đánh giá ở cấp toàn danh mục và qua nhiều năm.
 
 ## 49. Ngân sách phòng vệ
@@ -445,6 +469,8 @@ Một quyết định đúng quy trình vẫn có thể lỗ do bất định. M
 
 ## 55. Đánh giá theo chiến lược
 
+Đánh giá từng chiến lược cần tách signal edge, cost, capacity, drawdown và regime dependence. Một chiến lược tốt riêng lẻ vẫn có thể làm danh mục xấu hơn nếu trùng factor với các chiến lược khác.
+
 ```text
 Lợi suất
 Mức suy giảm
@@ -458,6 +484,8 @@ Phơi nhiễm nhân tố
 ```
 
 ## 56. Đánh giá toàn danh mục
+
+Portfolio review tổng hợp beta, carry, volatility, liquidity, correlation và tail exposure của toàn bộ chiến lược. Mục tiêu là biết hệ thống cùng thất bại ở trạng thái nào và có cần giảm trùng lặp hay không.
 
 ```text
 Phơi nhiễm tổng / ròng
@@ -493,6 +521,8 @@ Thời gian đã bỏ vào nghiên cứu không phải lý do tiếp tục một
 
 ## 60. Chuỗi nghiên cứu
 
+Chuỗi cuối cùng biến nghiên cứu thành quy trình lặp: giả thuyết, dữ liệu, test, robustness, sizing, execution, monitoring và retirement. Mỗi bước phải có đầu ra và điều kiện dừng để hệ thống không tiếp tục vì quán tính.
+
 ```text
 Giả thuyết
 → quy tắc chính thức
@@ -520,5 +550,3 @@ Lợi thế có đóng góp đa dạng hóa thật cho danh mục không?
 ```
 
 Chỉ khi cả ba câu trả lời đều đủ thuyết phục, chiến lược mới đáng được tăng vốn.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER TRADING FOREX RISK](./00_MASTER_TRADING_FOREX_RISK.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

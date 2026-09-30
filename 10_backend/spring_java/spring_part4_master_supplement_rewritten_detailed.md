@@ -10,7 +10,9 @@
 
 # 1. phiên bản (version / 버전) ma trận (matrix / 행렬) dành cho Master
 
-| Generation | Spring Boot | Spring khung phần mềm (framework / 프레임워크) | Java baseline | Web/Jakarta generation | Vai trò |
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
+
+| Generation | Spring Boot | Spring Framework | Java baseline | Web/Jakarta generation | Vai trò |
 |---|---|---|---|---|---|
 | Legacy | 2.7.x | 5.3.x | Java 8+ | `javax.*` | maintain mã (code / 코드) cũ |
 | hiện đại (modern / 현대적) 3.x | 3.5.16 | 6.2.19+ | Java 17+ | Jakarta / Servlet 6.0 | di chuyển (migration / 마이그레이션) cầu nối (bridge / 브리지) |
@@ -358,6 +360,8 @@ Tại thời điểm cập nhật này, baseline stable của bộ ghi chú (not
 
 # 45. Source-reading roadmap
 
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
+
 ```text
 1. DefaultListableBeanFactory / AbstractBeanFactory
 2. AbstractAutowireCapableBeanFactory
@@ -398,6 +402,8 @@ Dùng `@NullMarked` ở gói (package / 패키지), `@Nullable` cho generic elem
 Mẫu (sample / 표본) phải có MVC, JPA, bảo mật (security / 보안), Flyway và tests. Upgrade, ghi lại starter names, Jackson custom mã (code / 코드), kiểm thử (test / 테스트) dependencies, bảo mật (security / 보안) changes, nullability warnings và third-party tính tương thích (compatibility / 호환성). Đây là bài tập versioning thực tế hơn việc học changelog.
 
 # 51. phiên bản (version / 버전) snapshot — 2026-09-21
+
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
 
 ```text
 Stable current:

@@ -450,6 +450,8 @@ bao nhiêu tăng trưởng, biên lợi nhuận và ROIC?
 
 ## 34. Channel stuffing và ghi nhận doanh thu sớm
 
+Khi doanh thu tăng nhanh, cần kiểm tra liệu nhu cầu cuối cùng có tăng thật hay hàng chỉ bị đẩy vào kênh phân phối để ghi nhận sớm. Các dấu hiệu dưới đây là bằng chứng cần điều tra, không phải kết luận đơn lẻ.
+
 **Channel stuffing** là việc đẩy hàng vào kênh phân phối mạnh hơn nhu cầu cuối nhằm ghi nhận doanh số sớm.
 
 Dấu hiệu cần kiểm tra có thể gồm:
@@ -470,6 +472,8 @@ Doanh nghiệp có thể phải ước tính hàng trả lại, rebate, warranty
 Nếu các tỷ lệ này giảm bất thường đúng lúc lợi nhuận cần đạt mục tiêu, cần kiểm tra footnote và xu hướng nhiều kỳ.
 
 ## 36. Supplier finance và factoring
+
+Supplier finance và factoring có thể làm thời điểm tiền vào/ra khác đi mà không thay đổi economics của hoạt động. Phần này giúp tách cải thiện dòng tiền thật khỏi việc chuyển nghĩa vụ sang cấu trúc tài trợ khác.
 
 **Supplier finance** có thể kéo dài thời gian trả nhà cung cấp thông qua bên tài chính. **Factoring** có thể chuyển phải thu thành tiền sớm.
 

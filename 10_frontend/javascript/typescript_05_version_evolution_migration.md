@@ -26,6 +26,8 @@ Nếu không tách năm lớp này, nhóm (team / 팀) rất dễ gọi một th
 Một phiên bản (version / 버전) ghi chú (note / 노트) tốt vì thế không chỉ ghi “tính năng (feature / 기능) X xuất hiện ở 5.4”. Nó phải cho biết tính năng (feature / 기능) X thay đổi nguồn proof nào, có làm công khai (public / 공개) `.d.ts` đổi không, có phụ thuộc thời gian chạy (runtime / 런타임) không và có tạo di chuyển (migration / 마이그레이션) rủi ro (risk / 위험) ở đâu.
 
 ## 2. Timeline tổng quát
+Phần “2. Timeline tổng quát” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Giai đoạn | Chuyển dịch chính | Tác động mô hình tư duy (mental model / 사고 모델) |
 |---|---|---|

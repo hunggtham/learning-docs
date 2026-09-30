@@ -6,6 +6,8 @@ Các trường hợp (case / 사례) dưới đây luyện đường suy luận 
 Chúng không thay thế chapter trước và không gắn với một khung phần mềm (framework / 프레임워크) duy nhất.
 
 ## Trường hợp (case / 사례) 1 — Double charge sau hết thời gian chờ (timeout / 타임아웃)
+Phần “Trường hợp (case / 사례) 1 — Double charge sau hết thời gian chờ (timeout / 타임아웃)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** máy khách (client / 클라이언트) nhận hết thời gian chờ (timeout / 타임아웃) và bấm lại; có hai charge.
 - **bất biến (invariant / 불변식):** một nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) của cùng subject/thứ tự (order / 순서) chỉ được charge
@@ -19,6 +21,8 @@ Chúng không thay thế chapter trước và không gắn với một khung ph�
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) 1 — Double charge sau hết thời gian chờ (timeout / 타임아웃)**, ta sang **trường hợp (case / 사례) 2 — người dùng (user / 사용자) thấy dữ liệu tenant khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trường hợp (case / 사례) 2 — người dùng (user / 사용자) thấy dữ liệu tenant khác
+Phần “Trường hợp (case / 사례) 2 — người dùng (user / 사용자) thấy dữ liệu tenant khác” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** detail đúng ở bộ nhớ đệm (cache / 캐시) nhưng thuộc tenant khác.
 - **bất biến (invariant / 불변식):** mọi read/ghi (write / 쓰기) phải bị giới hạn bởi verified tenant định danh (identity / 식별자).
@@ -31,6 +35,8 @@ Chúng không thay thế chapter trước và không gắn với một khung ph�
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) 2 — người dùng (user / 사용자) thấy dữ liệu tenant khác**, ta sang **trường hợp (case / 사례) 3 — hàng đợi (queue / 큐) backlog tăng sau deploy** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trường hợp (case / 사례) 3 — hàng đợi (queue / 큐) backlog tăng sau deploy
+Phần “Trường hợp (case / 사례) 3 — hàng đợi (queue / 큐) backlog tăng sau deploy” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** hàng đợi (queue / 큐) age tăng, worker CPU thấp, thử lại (retry / 재시도) count cao.
 - **bất biến (invariant / 불변식):** bên tiêu thụ (consumer / 소비자) phải xử lý message trong deadline và không tự nhân tải.
@@ -43,6 +49,8 @@ Chúng không thay thế chapter trước và không gắn với một khung ph�
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) 3 — hàng đợi (queue / 큐) backlog tăng sau deploy**, ta sang **trường hợp (case / 사례) 4 — Lost cập nhật (update / 업데이트) khi hai tab cùng sửa** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trường hợp (case / 사례) 4 — Lost cập nhật (update / 업데이트) khi hai tab cùng sửa
+Phần “Trường hợp (case / 사례) 4 — Lost cập nhật (update / 업데이트) khi hai tab cùng sửa” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** thay đổi của tab sau ghi đè tab trước.
 - **bất biến (invariant / 불변식):** ghi (write / 쓰기) chỉ áp dụng trên phiên bản (version / 버전) mà máy khách (client / 클라이언트) đã đọc.
@@ -54,6 +62,8 @@ Chúng không thay thế chapter trước và không gắn với một khung ph�
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) 4 — Lost cập nhật (update / 업데이트) khi hai tab cùng sửa**, ta sang **trường hợp (case / 사례) 5 — Deploy làm API lỗi ngẫu nhiên** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trường hợp (case / 사례) 5 — Deploy làm API lỗi ngẫu nhiên
+Phần “Trường hợp (case / 사례) 5 — Deploy làm API lỗi ngẫu nhiên” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** rolling deploy có 5xx khi lược đồ (schema / 스키마) mới/chưa mới cùng chạy.
 - **bất biến (invariant / 불변식):** mọi mã (code / 코드) phiên bản (version / 버전) đang active phải đọc/ghi lược đồ (schema / 스키마) tương thích.
@@ -75,6 +85,8 @@ kiểm thử (test / 테스트) hoặc chỉ số (metric / 지표) đủ để 
 > **Chuyển mạch:** Từ **Cách dùng trường hợp (case / 사례)**, ta sang **trường hợp (case / 사례) 6 — bộ nhớ đệm (cache / 캐시) stampede sau vô hiệu hóa (invalidation / 무효화)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trường hợp (case / 사례) 6 — bộ nhớ đệm (cache / 캐시) stampede sau vô hiệu hóa (invalidation / 무효화)
+Phần “Trường hợp (case / 사례) 6 — bộ nhớ đệm (cache / 캐시) stampede sau vô hiệu hóa (invalidation / 무효화)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** một key hết hạn, origin CPU tăng vọt dù traffic không đổi.
 - **bất biến (invariant / 불변식):** hot key không được tạo nhiều rebuild đồng thời vượt ngân sách (budget / 예산).
@@ -87,6 +99,8 @@ kiểm thử (test / 테스트) hoặc chỉ số (metric / 지표) đủ để 
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) 6 — bộ nhớ đệm (cache / 캐시) stampede sau vô hiệu hóa (invalidation / 무효화)**, ta sang **trường hợp (case / 사례) 7 — thử lại (retry / 재시도) storm làm phụ thuộc (dependency / 의존성) sập** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trường hợp (case / 사례) 7 — thử lại (retry / 재시도) storm làm phụ thuộc (dependency / 의존성) sập
+Phần “Trường hợp (case / 사례) 7 — thử lại (retry / 재시도) storm làm phụ thuộc (dependency / 의존성) sập” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** provider chậm, số yêu cầu (request / 요청) tăng dù traffic vào ổn định.
 - **bất biến (invariant / 불변식):** thử lại (retry / 재시도) không được làm tải lỗi lớn hơn tải gốc ngoài multiplier đã
@@ -99,6 +113,8 @@ kiểm thử (test / 테스트) hoặc chỉ số (metric / 지표) đủ để 
 > **Chuyển mạch:** Từ **trường hợp (case / 사례) 7 — thử lại (retry / 재시도) storm làm phụ thuộc (dependency / 의존성) sập**, ta sang **trường hợp (case / 사례) 8 — Authorization đúng ở HTTP nhưng sai ở worker** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Trường hợp (case / 사례) 8 — Authorization đúng ở HTTP nhưng sai ở worker
+Phần “Trường hợp (case / 사례) 8 — Authorization đúng ở HTTP nhưng sai ở worker” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Symptom:** người dùng (user / 사용자) bị revoke nhưng export job vẫn đọc dữ liệu nhạy cảm.
 - **bất biến (invariant / 불변식):** chính sách (policy / 정책) của async đường dẫn (path / 경로) phải được định nghĩa như sync đường dẫn (path / 경로).

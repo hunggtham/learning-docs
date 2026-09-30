@@ -1,61 +1,46 @@
-# 17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)
+# 1. 회복 (Recovery)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **1. 회복 (Recovery)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **1. 회복 (Recovery)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **2. Commit & Rollback 연산** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-시스템, 연계, 미들웨어
+회복
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **14. 미들웨어 (Middleware)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**에서 만든 기준을 이어받아 **1. 회복 (Recovery)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)** và nối nó với **14. 미들웨어 (Middleware)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
----
-
-## 17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)
-
-### 요구사항 검증 방법 추가 (Các phương pháp kiểm chứng yêu cầu bổ sung)
-- **요구사항 검토 (Requirements Review):** 동료검토, 워크스루, 인스펙션. (Review thủ công bởi người).
-- **프로토타이핑 (Prototyping):** 견본품을 만들어 최종 결과물을 예측. (Làm bản nháp/prototype để dự đoán kết quả).
-- **테스트 설계 (Test Design):** 요구사항이 현실적으로 테스트 가능한지 검토 (Test Case 생성). (Tạo Test Case để xem yêu cầu có khả thi không).
-- **trường hợp (case / 사례) 도구 활용 (CASE Tools):** 일관성 분석(Consistency Analysis)을 통해 요구사항 변경사항 추적 및 분석. (Dùng tool để phân tích tính nhất quán).
-
-### 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
-- **DB Link:** DB에서 제공하는 DB Link 객체를 이용. (Dùng trực tiếp link kết nối của DB).
-- **API / Open API:** 송신 시스템의 DB에서 데이터를 읽어와 제공하는 프로그램. (Giao diện lập trình ứng dụng mở).
-- **연계 솔루션:** EAI 서버와 송·수신 시스템에 설치되는 클라이언트(Client)를 이용. (Giải pháp dùng EAI Server).
-- **Socket:** 통신을 위한 소켓을 생성하여 포트를 할당하고 클라이언트와 연결. (Tạo socket và cấp phát port để giao tiếp mạng).
-- **Web dịch vụ (service / 서비스):** WSDL, UDDI, SOAP 프로토콜을 이용. (Dịch vụ web dùng chuẩn SOAP/WSDL).
-
-### 연계 매커니즘 구성요소 (Thành phần cơ chế liên kết)
-- **송신 시스템 (Sender System):** 데이터를 전송 형식에 맞게 변환하여 송신. (Hệ thống gửi, chuyển đổi dữ liệu ra định dạng chuẩn).
-- **수신 시스템 (Receiver System):** 수신한 데이터를 시스템에 맞게 변환하여 반영. (Hệ thống nhận, chuyển đổi dữ liệu chuẩn vào DB).
-- **연계 서버 (Integration Server):** 송수신 현황을 모니터링. (Server trung gian giám sát quá trình truyền dữ liệu).
-
-### 미들웨어(Middleware) 상세 (Chi tiết Middleware)
-- 운영체제와 응용 프로그램 사이에서 다양한 서비스를 제공.
-- **DB (DataBase):** 2-Tier 아키텍처에 주로 사용, 클라이언트와 원격 DB를 연결. (Kết nối Client-DB).
-- **RPC (Remote Procedure Call):** 원격 프로시저를 로컬 프로시저처럼 호출. (Gọi hàm từ xa như gọi hàm cục bộ).
-- **MOM (Message Oriented Middleware):** 비동기형 메시지 전달 (이기종 분산 데이터 시스템). (Truyền tin nhắn bất đồng bộ).
-- **TP-Monitor (Transaction Processing Monitor):** 온라인 트랜잭션 처리 및 감시 (항공기/철도 예약). (Quản lý giao dịch online tốc độ cao).
-- **ORB (Object Request Broker):** CORBA 표준 스펙을 구현한 객체 지향 미들웨어. (Middleware hướng đối tượng chuẩn CORBA).
-- **WAS (Web Application Server):** 동적인 콘텐츠를 처리하는 미들웨어. (Xử lý web động).
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **1. 회복 (Recovery)** và nối nó với **2. Commit & Rollback 연산**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-# 3과목: 데이터베이스 (Phần 3: Cơ sở dữ liệu)
-*(Lưu ý: Tùy theo chương trình, Database có thể thuộc Subject 1 hoặc 3. Dưới đây là kiến thức cốt lõi về DB)*
+## 1. 회복 (Recovery)
 
----
+Sau khi đã đặt nền bằng **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**, ta chuyển sang **1. 회복 (Recovery)**. Đây là mắt xích 44/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **1. 회복 (Recovery)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Ví dụ là bước kiểm tra xem quy tắc vừa nêu tạo ra hệ quả gì trong một tình huống cụ thể. Trong khối này, **개념 (Concept)**, **장애의 유형 (Types of Failures)**, **트랜잭션 장애 (Transaction Failure)**, **시스템 장애 (System Failure)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “1. 회복 (Recovery)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **개념 (Concept)**: 트랜잭션 도중 장애 발생 시 정상 상태로 복구 (Phục hồi về trạng thái bình thường khi có lỗi).
+- **장애의 유형 (Types of Failures)**:
+  - **트랜잭션 장애 (Transaction Failure)**: Lỗi nội bộ của giao dịch (ví dụ: dữ liệu sai).
+  - **시스템 장애 (System Failure)**: Lỗi phần cứng/phần mềm ảnh hưởng đến tất cả giao dịch.
+  - **미디어 장애 (Media Failure)**: Lỗi vật lý của thiết bị lưu trữ (ví dụ: hỏng đĩa).
+- **회복 기법 (Recovery Techniques)**: 연기 갱신 (Deferred Update), 즉각 갱신 (Immediate Update), 그림자 페이지 (Shadow Paging), 검사점 (Check Point).
+- **Ví dụ**: Hệ thống ngân hàng bị sập khi đang chuyển tiền (hệ thống lỗi), cần hoàn tác (Undo) hoặc chạy lại để khôi phục.
+- 💡 **Mẹo ghi nhớ**: 장애 유형: T/S/M (Transaction, System, Media) -> **Tưởng Sợ Ma**
+
+Ta có thể khép mục **1. 회복 (Recovery)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **2. Commit & Rollback 연산**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

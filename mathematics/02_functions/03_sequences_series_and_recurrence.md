@@ -524,6 +524,8 @@ Ta không cần chính xác (exact / 정확한) sum; chỉ cần compare accumul
 
 ## 20. Ratio kiểm thử (test / 테스트) nhìn multiplicative shrink
 
+Ratio test so sánh độ lớn các số hạng liên tiếp để đo tốc độ co theo cấp số nhân. Điều kiện hội tụ đến từ việc chuỗi bị chi phối bởi một geometric decay đủ nhanh.
+
 ```math
 L=
 \lim_{n\to\infty}
@@ -662,6 +664,4 @@ functions on integers
 
 ## Dùng chung (common / 공통) Misconceptions
 
-Recursive definition không đồng nghĩa recursive hiện thực (implementation / 구현) là tốt nhất. `a_n\to0` không đủ để `\sum a_n` converge. Bounded chuỗi (sequence / 시퀀스) chưa chắc converge. Infinite series là limit của partial sums, không phải hành động “thực hiện vô hạn phép cộng”. Closed form không phải lúc nào cũng computationally superior; numerical stability và chi phí (cost / 비용) vẫn matter.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 function concept](./00_function_concept.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Recursive definition không đồng nghĩa recursive implementation là tốt nhất. `a_n\to0` không đủ để `\sum a_n` converge. Bounded sequence chưa chắc converge. Infinite series là limit của partial sums, không phải hành động “thực hiện vô hạn phép cộng”. Closed form không phải lúc nào cũng computationally superior; numerical stability và cost vẫn matter.

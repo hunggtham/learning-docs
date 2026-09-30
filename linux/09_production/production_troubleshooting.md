@@ -81,6 +81,8 @@ Không nên sửa `chmod` trước khi biết chính xác thao tác nào đang b
 
 ## Tiến trình tồn tại nhưng API không hoạt động
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 pgrep -af 'java.*app'
 sudo ss -lntp | grep ':8080'
@@ -90,6 +92,8 @@ curl -fsS -v http://127.0.0.1:8080/health
 Nếu không có listener, hãy kiểm tra nhật ký khởi động, cấu hình và địa chỉ bind. Nếu listener tồn tại nhưng `curl` bị treo, các giả thuyết có thể là cạn luồng thực thi (thread / 스레드) pool, deadlock, phụ thuộc bên ngoài hoặc trạng thái ứng dụng. Nếu `curl` cục bộ thành công, chuyển sang định tuyến, firewall, bộ cân bằng tải (load balancer / 로드 밸런서) và DNS.
 
 ## CPU cao
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 uptime
@@ -105,6 +109,8 @@ Không nên tăng CPU ngay nếu CPU cao chỉ là hệ quả của một cơn b
 
 ## Bộ nhớ tăng hoặc tiến trình bị kết thúc
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 free -h
 ps -p <PID> -o pid,%mem,rss,vsz,etime,cmd
@@ -116,6 +122,8 @@ Nếu ứng dụng chạy trong bộ chứa (container / 컨테이너), cần ki
 Rò rỉ bộ nhớ cần xu hướng theo thời gian và bằng chứng ở thời gian chạy (runtime / 런타임); một ảnh chụp RSS không thể chỉ ra đối tượng Java nào đang bị giữ lại.
 
 ## Hệ thống tệp hết dung lượng
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 df -h
@@ -191,6 +199,8 @@ Một phân tích sau sự cố tốt nên hỏi: yếu tố kích hoạt là g�
 
 ## Chọn công cụ theo câu hỏi
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 | Câu hỏi | Công cụ quan sát phù hợp |
 |---|---|
 | Systemd đang nhìn dịch vụ như thế nào? | `systemctl status/show` |
@@ -245,5 +255,3 @@ uptime
 ```
 
 Sau đó **không tiếp tục một cách máy móc**. Hãy chọn nhánh điều tra tiếp theo dựa trên kết quả vừa quan sát.
-
-> **Bàn giao:** Sau **Checklist môi trường vận hành (production / 운영 환경) ngắn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [capacity planning server sizing](./capacity_planning_server_sizing.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

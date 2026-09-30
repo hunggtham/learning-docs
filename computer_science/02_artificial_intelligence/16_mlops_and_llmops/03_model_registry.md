@@ -129,6 +129,8 @@ Metadata registry → URI / hash của artifact bất biến
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Thí nghiệm tạo artifact
 Registry gán danh tính + bằng chứng + trạng thái vòng đời
@@ -152,5 +154,3 @@ Không. Hành vi của ứng dụng vẫn phụ thuộc mô hình, prompt và bu
 ## Liên kết kiến thức
 
 Xem [Experiment Tracking](./01_experiment_tracking_and_reproducibility.md), [Data & Model Versioning](./02_data_and_model_versioning.md), [CI/CD/CT](./04_ci_cd_ct_for_ai.md) và [AI System Design](../15_ai_engineering/10_ai_system_design.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

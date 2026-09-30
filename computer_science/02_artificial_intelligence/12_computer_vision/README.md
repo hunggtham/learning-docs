@@ -22,6 +22,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 - [00 — Images as Data](./00_images_as_data.md)
 - [01 — Image Processing Foundations](./01_image_processing_foundations.md)
 - [02 — Feature Representation](./02_feature_representation.md)
@@ -36,6 +38,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Image ≠ world itself
@@ -54,6 +58,8 @@ Foundation Model ≠ Domain Validation No Longer Needed
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Physical scene
@@ -79,6 +85,4 @@ Nên liên hệ với:
 - [Transformer](../06_deep_learning_architectures/05_transformer.md)
 - [Representation Learning](../05_neural_networks/08_representation_learning.md)
 
-Tầng (layer / 계층) tiếp theo `13_speech_audio_and_multimodal/` sẽ mở rộng perception sang time-frequency audio và cách vision/audio representations kết nối với ngôn ngữ (language / 언어) các mô hình (models / 모델들).
-
-> **Bàn giao:** Sau **Connections**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 images as data](./00_images_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Layer tiếp theo `13_speech_audio_and_multimodal/` sẽ mở rộng perception sang time-frequency audio và cách vision/audio representations kết nối với language models.

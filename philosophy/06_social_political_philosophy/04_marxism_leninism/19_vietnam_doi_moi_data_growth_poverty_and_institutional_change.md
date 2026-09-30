@@ -302,6 +302,8 @@ mà không cần collapse chúng thành ideological winner/loser.
 Bước tiếp theo nếu muốn deepen thêm là tạo **dữ liệu (data / 데이터) appendix** bằng consistent World Bank/PWT/Maddison-style series hoặc một trường hợp (case / 사례) riêng về land rights, SOEs, FDI hay trade tích hợp (integration / 통합). Những phần đó nên đơn vị sở hữu (owner / 오너) ở Economics nếu trọng tâm chuyển từ political philosophy sang quantitative economics.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - World Bank historical report on Đổi Mới and stabilization: https://documents1.worldbank.org/curated/en/917141468762930107/pdf/multi-page.pdf
 - World Bank retrospective on Vietnam chuyển tiếp (transition / 전이) and agricultural/private-sector reforms: https://documents1.worldbank.org/curated/en/432701468155378282/pdf/560800NWP0VN0v1IC10Vietnam103081rev.pdf

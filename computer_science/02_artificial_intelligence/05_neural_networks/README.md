@@ -6,6 +6,8 @@ Folder này giải thích Neural Networks (신경망 / mạng nơ-ron) như mộ
 
 ## Phụ thuộc (dependency / 의존성) map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     A[00 From Linear Models to Neural Networks] --> B[01 Neuron, Perceptron & MLP]
@@ -54,6 +56,8 @@ flowchart TD
 
 ## Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Input representation
       ↓
@@ -77,6 +81,4 @@ Kiến trúc (architecture / 아키텍처) quyết định đồ thị (graph / 
 
 `06_deep_learning_architectures/` sẽ trả lời câu hỏi: nếu MLP general-purpose như vậy, vì sao cần CNN, RNN, attention, Transformer, Autoencoder, VAE, GAN và Diffusion?
 
-Câu trả lời là **cấu trúc (structure / 구조) và inductive độ lệch (bias / 편향)**. ảnh (image / 이미지) có cục bộ (local / 로컬) spatial cấu trúc (structure / 구조); chuỗi (sequence / 시퀀스) có temporal/thứ tự (order / 순서) phụ thuộc (dependency / 의존성); generative modeling cần probabilistic/data-generation objectives khác nhau. Các kiến trúc (architecture / 아키텍처) mới không bỏ cốt lõi (core / 핵심) neural-network mechanics ở folder này; chúng tổ chức computation đồ thị (graph / 그래프) theo những các giả định (assumptions / 가정들) hiệu quả hơn.
-
-> **Bàn giao:** Sau **Chuyển tiếp sang Deep học tập (learning / 학습) Architectures**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from linear models to neural networks](./00_from_linear_models_to_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Câu trả lời là **structure và inductive bias**. Image có local spatial structure; sequence có temporal/order dependency; generative modeling cần probabilistic/data-generation objectives khác nhau. Các architecture mới không bỏ core neural-network mechanics ở folder này; chúng tổ chức computation graph theo những assumptions hiệu quả hơn.

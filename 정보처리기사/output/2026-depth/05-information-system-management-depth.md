@@ -321,6 +321,8 @@ Bảo mật (security / 보안) log cần timestamp đồng bộ, định danh (
 Sự cố (incident / 인시던트) phản hồi (response / 응답) luồng (flow / 흐름) thường gồm preparation, detection/phân tích (analysis / 분석), containment, eradication, khôi phục (recovery / 복구), lessons learned theo khung phần mềm (framework / 프레임워크) cụ thể. Thứ tự tên có thể khác giữa khung phần mềm (framework / 프레임워크) nhưng lô-gic (logic / 논리) là chuẩn bị → phát hiện → khống chế → loại bỏ → phục hồi → cải tiến.
 
 ## 7. Cặp dễ nhầm
+Phần “7. Cặp dễ nhầm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Cặp | Điểm tách |
 |---|---|

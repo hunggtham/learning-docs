@@ -1,47 +1,40 @@
-# 082. 운영체제 기능 및 종류 (Operating System OS)
+# 282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **082. 운영체제 기능 및 종류 (Operating System OS)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-운영체제, 기능, 종류
+운영체제의, 정의, 목적
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **운영체제 (Operating Systems)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **082. 운영체제 기능 및 종류 (Operating System OS)**에서 만든 기준을 이어받아 **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **082. 운영체제 기능 및 종류 (Operating System OS)** và nối nó với **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
----
-
-## 082. 운영체제 기능 및 종류 (Operating System OS)
-- **운영체제의 주요 프로그램**:
-  - **제어 프로그램 (Control Program)**: 감시(Kernel), 작업 제어, 데이터 관리.
-  - **처리 프로그램 (Processing Program)**: 언어 번역(컴파일러), 서비스, 문제 프로그램.
-- **쉘(Shell)과 커널(Kernel)**:
-  - **쉘 (Shell)**: 사용자의 명령어를 해석하여 커널로 전달 (사용자 인터페이스).
-  - **커널 (Kernel)**: 핵심 모듈. 하드웨어/메모리/프로세스를 직접 제어 및 관리.
-- **운영체제 종류**:
-  - **Windows**: GUI, 선점형 멀티태스킹, PnP(자동 감지) 기능.
-  - **Linux / Unix**: 오픈소스 (Linux), 트리 구조 파일 시스템. 시분할 시스템.
-  - **Unix 파일 시스템 구조**: 부트 블록 -> 슈퍼 블록 (전체 정보) -> 아이노드(i-node) 블록 (파일 메타데이터) -> 데이터 블록 (실제 파일 내용).
-
-**Giải thích (Vietnamese):**
-OS giống như quản gia của máy tính.
-- Kernel (Hạt nhân) là bộ não xử lý phần cứng. Shell (Vỏ) là cái dòng lệnh hoặc giao diện để con người nói chuyện với bộ não đó.
-- Hệ thống tệp của UNIX chia làm 4 phần: Boot (chứa code khởi động) -> Super (Thông tin tổng quan) -> i-node (Lưu tên file, quyền truy cập...) -> dữ liệu (data / 데이터) (Nội dung file thực tế).
-
-**💡 Mẹo ghi nhớ (Mnemonics):**
-**제어 프로그램**: 감작데 (감시, 작업, 데이터). / **처리 프로그램**: 언서문 (언어, 서비스, 문제).
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** và nối nó với **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
+
+## 282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)
+
+Sau khi đã đặt nền bằng **082. 운영체제 기능 및 종류 (Operating System OS)**, ta chuyển sang **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)**. Đây là mắt xích 35/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **운영체제(OS)**: 컴퓨터 자원(CPU, 메모리 등)을 효율적으로 관리하고 사용자에게 편리한 환경을 제공하는 소프트웨어 (Windows, Linux 등).
+- 목적: 자원 관리, 편리한 인터페이스 제공, 가용성 극대화, 신뢰도 향상.
+
+Ta có thể khép mục **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

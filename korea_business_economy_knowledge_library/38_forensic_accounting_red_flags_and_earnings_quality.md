@@ -570,10 +570,10 @@ Nếu một mắt xích lệch nhau, đừng kết luận vội; hãy tìm lời
 
 ## Liên kết tiếp theo
 
+Những liên kết sau mở rộng việc đọc disclosure, chất lượng lợi nhuận và governance. Hãy dùng chúng để biến red flag thành câu hỏi kiểm chứng thay vì kết luận gian lận ngay lập tức.
+
 - [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md)
 - [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md)
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md)
 - [`36_credit_ratings_bonds_default_and_restructuring.md`](./36_credit_ratings_bonds_default_and_restructuring.md)
 - [`37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md`](./37_corporate_actions_mna_mergers_spin_offs_and_capital_actions.md)
-
-> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

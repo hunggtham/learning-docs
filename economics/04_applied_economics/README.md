@@ -11,6 +11,8 @@ Applied Economics dùng lý thuyết (theory / 이론) từ Microeconomics, Th�
 5. [Industrial Organization](./04_industrial_organization.md) — demand estimation, substitution, markups, entry, vertical/nền tảng (platform / 플랫폼) markets, mergers, procurement, innovation và structural/reduced-form IO.
 
 ## Applied spine
+Phần “Applied spine” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Economic mechanism
@@ -62,6 +64,8 @@ Ngoài ra, tác động (effect / 효과) cục bộ (local / 로컬)/pilot có 
 Economics có thể estimate consequences, trade-offs và welfare under tường minh (explicit / 명시적) xã hội (social / 사회적) các giả định (assumptions / 가정들). Một estimate không tự chuyển thành chính sách (policy / 정책) recommendation. Chính sách (policy / 정책) còn phụ thuộc distributional weights, legal các ràng buộc (constraints / 제약조건들), hiện thực (implementation / 구현) sức chứa (capacity / 용량), rights, political institutions và bất định (uncertainty / 불확실성).
 
 ## Connections
+Phần “Connections” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Korea Business & Economy](../../korea_business_economy_knowledge_library/README.md) là trường hợp (case / 사례) tầng (layer / 계층) để áp dụng labor, trade, industrial chính sách (policy / 정책), firm cấu trúc (structure / 구조) và finance trong bối cảnh Hàn Quốc.
 - [Investing](../../investing/README.md) dùng firm/industry/macro results để phân tích assets và companies; không thay thế applied economics.

@@ -26,6 +26,8 @@ KOREA BANKING INSTITUTE
 KOREA BANKING INSTITUTE
 
 ## Page 3
+Phần “Page 3” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | 금융시장과 증권시장 I
 강병욱
@@ -4974,4 +4976,3 @@ A펀드의 SR=
 한국금융연수원
 KOREA BANKING INSTITUTE
 고객센터 02-3700-1500
-

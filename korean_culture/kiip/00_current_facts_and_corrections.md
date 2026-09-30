@@ -145,6 +145,8 @@ Các điểm sau vẫn là baseline high-yield trong tài liệu chính thức v
 
 ## 10. Các fact tương đối ổn định khác
 
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+
 - 4대 사회보험
 - 112 / 119 / 117 / 1345
 - 학교 학제 `6-3-3`

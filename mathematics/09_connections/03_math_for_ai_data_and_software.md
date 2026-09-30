@@ -514,6 +514,8 @@ correct mathematics
 
 ## 28. Một forward pass nhìn bằng nhiều branches của math
 
+Forward pass là ví dụ tốt để gom nhiều nhánh toán: linear algebra tạo biến đổi, calculus mô tả gradient, probability diễn giải output và optimization cập nhật tham số. Đọc theo chuỗi này giúp hiểu model như một hệ tính toán chứ không phải hộp đen.
+
 ```math
 z=Wx+b,
 \qquad
@@ -560,6 +562,4 @@ Prediction và intervention là different questions.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
-> AI/dữ liệu (data / 데이터)/Software là nơi nhiều mathematical structures gặp nhau. biểu diễn (representation / 표현) quyết định hình học (geometry / 기하학); calculus mô tả sensitivity; xác suất (probability / 확률) mô tả bất định (uncertainty / 불확실성); statistics kiểm tra bằng chứng (evidence / 증거); tối ưu hóa (optimization / 최적화) chọn decisions; discrete math mô tả cấu trúc (structure / 구조); numerical phân tích (analysis / 분석) quyết định những công thức đó có chạy đáng tin trên machine hay không.
-
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 rate change and accumulation](./00_rate_change_and_accumulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> AI/Data/Software là nơi nhiều mathematical structures gặp nhau. Representation quyết định geometry; calculus mô tả sensitivity; probability mô tả uncertainty; statistics kiểm tra evidence; optimization chọn decisions; discrete math mô tả structure; numerical analysis quyết định những công thức đó có chạy đáng tin trên machine hay không.

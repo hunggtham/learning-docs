@@ -570,6 +570,8 @@ Máy chủ (server / 서버) đổi phản hồi (response / 응답) trường d
 Nguyên nhân gốc (root cause / 근본 원인) là lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) không hỗ trợ phiên bản (version / 버전) overlap. Fix bằng backward-compatible đặc tả hợp đồng (contract / 계약) hoặc coordinated versioning; không chỉ “clear bộ nhớ đệm (cache / 캐시) người dùng (user / 사용자)”.
 
 ## 40. Master checklist
+Phần “40. Master checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Topology thực tế có những hop nào?

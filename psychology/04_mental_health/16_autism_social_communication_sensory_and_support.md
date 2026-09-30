@@ -132,6 +132,8 @@ Gia đình có thể rất quan trọng nhưng quyền tự chủ của người
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 hồ sơ phát triển
  + phong cách giao tiếp xã hội
@@ -147,5 +149,3 @@ chức năng + nhu cầu hỗ trợ
 ## Kết nối kiến thức
 
 Đọc cùng [[01_assessment_and_diagnosis]], [[05_neurodevelopmental_adhd_autism]], [[15_adhd_attention_executive_function_and_development]], [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]], [[../03_human_development_and_person/04_social_and_cultural_psychology]], [[../06_applied/00_work_organization_and_leadership]] và [[../06_applied/03_interpersonal_communication_and_conflict]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

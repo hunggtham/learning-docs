@@ -169,6 +169,8 @@ Không nên đoán bottleneck. Cần profile end-to-end và ở cấp kernel tr�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Tính toán AI = số học bị ràng buộc bởi di chuyển dữ liệu, dung lượng bộ nhớ và giao tiếp
 ```
@@ -190,5 +192,3 @@ Không. Overhead phân tán làm hiệu quả mở rộng giảm.
 ## Liên kết kiến thức
 
 Xem [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [Numerical Computation](../01_mathematical_foundations/07_numerical_computation.md), [AI Engineering](../15_ai_engineering/README.md) và các chapter tiếp theo về accelerator, bộ nhớ, tính toán song song và hệ thống phân tán.
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 cpu gpu tpu and accelerators](./01_cpu_gpu_tpu_and_accelerators.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

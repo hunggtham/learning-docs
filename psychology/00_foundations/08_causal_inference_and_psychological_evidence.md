@@ -80,6 +80,8 @@ Ba loại variable này thường bị trộn lẫn vì đều có thể liên q
 
 ### yếu tố gây nhiễu
 
+Confounder ảnh hưởng cả biến giải thích và kết quả, khiến association bị lệch khỏi tác động cần biết. Hãy vẽ đường nhân quả trước khi chọn biến kiểm soát.
+
 ```text
 C → X
 C → Y
@@ -89,6 +91,8 @@ C → Y
 
 ### biến trung gian
 
+Mediator nằm trên đường truyền từ nguyên nhân tới kết quả. Kiểm soát nó có thể giải thích cơ chế nhưng cũng có thể che mất một phần total effect.
+
 ```text
 X → M → Y
 ```
@@ -96,6 +100,8 @@ X → M → Y
 `M` là một phần của cơ chế (mechanism / 메커니즘). Nếu mục tiêu là **total tác động (effect / 효과)** của X lên Y, điều khiển (control / 제어) M có thể loại bỏ chính phần tác động (effect / 효과) ta muốn đo. Nếu mục tiêu là direct tác động (effect / 효과), câu hỏi lại khác và cần các giả định (assumptions / 가정들) bổ sung.
 
 ### biến va chạm
+
+Collider là biến chịu ảnh hưởng từ hai biến khác; conditioning vào nó có thể tạo association giả. Đây là lý do không nên chọn covariate chỉ vì nó tương quan với outcome.
 
 ```text
 X → C ← Y
@@ -237,9 +243,11 @@ Hãy coi correlation như một **dấu vết** cho thấy hai phần của hệ
 
 ## Research anchors
 
-- Bulbulia, J. A. (2024). *Methods in suy luận nhân quả. Part 1: nhân quả (causal / 인과적) diagrams and confounding*. Evolutionary Human Sciences, 6, e40. DOI: `10.1017/ehs.2024.35`.
-- Hernán, M. A., & Robins, J. M. suy luận nhân quả khung phần mềm (framework / 프레임워크) và target-trial thinking.
-- Pearl, J. nhân quả (causal / 인과적) diagrams, d-separation và structural nhân quả (causal / 인과적) các mô hình (models / 모델들).
+Các research anchors dưới đây giúp kiểm tra cách dựng DAG, thiết kế nghiên cứu và diễn giải effect. Hãy dùng chúng để nối causal claim với giả định và evidence cụ thể.
+
+- Bulbulia, J. A. (2024). *Methods in suy luận nhân quả. Part 1: causal diagrams and confounding*. Evolutionary Human Sciences, 6, e40. DOI: `10.1017/ehs.2024.35`.
+- Hernán, M. A., & Robins, J. M. suy luận nhân quả framework và target-trial thinking.
+- Pearl, J. Causal diagrams, d-separation và structural causal models.
 - Potential-outcomes tradition từ Neyman–Rubin, cùng các extensions cho longitudinal treatments.
 
 Các khung phần mềm (framework / 프레임워크) này không thay lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식). Chúng buộc researcher nói rõ giả định (assumption / 가정) nào đang biến association thành nhân quả (causal / 인과적) interpretation.

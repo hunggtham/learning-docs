@@ -205,6 +205,8 @@ Khung phần mềm (framework / 프레임워크) có thể provide abstractions,
 
 ## Example: Enterprise document tác nhân (agent / 에이전트)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 upload event
 → parse worker
@@ -241,5 +243,3 @@ Hàng đợi (queue / 큐) còn là isolation, buffering và thử lại (retry 
 Orchestration nối agents với phân tán (distributed / 분산) các hệ thống (systems / 시스템들), backend kiến trúc (architecture / 아키텍처), queues, sự kiện (event / 이벤트) sourcing và khả năng quan sát (observability / 관측 가능성).
 
 Xem tiếp: [Agent Evaluation](./09_agent_evaluation.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

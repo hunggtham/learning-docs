@@ -241,6 +241,8 @@ Vì vậy Logistic Regression không phải “thuật toán (algorithm / 알고
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Features
    ↓
@@ -278,5 +280,3 @@ Softmax chỉ normalize logits. Neural mạng (network / 네트워크) có thể
 Xem lại [Loss, Objective and Risk](./04_loss_objective_and_risk.md), [Probability for AI](../01_mathematical_foundations/02_probability_for_ai.md) và [Information Theory](../01_mathematical_foundations/05_information_theory.md).
 
 Xem tiếp: [Model Evaluation](./15_model_evaluation.md) để hiểu ROC, PR curve, calibration và threshold selection.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

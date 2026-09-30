@@ -30,6 +30,8 @@ Timestamp rất quan trọng vì log, metrics và triển khai (deployment / 배
 
 ## Bước 1: systemd nghĩ dịch vụ (service / 서비스) đang ở trạng thái nào?
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 systemctl status app --no-pager
 systemctl show app -p MainPID -p User -p Group -p ExecStart -p ActiveEnterTimestamp
@@ -41,6 +43,8 @@ Ba command này cho biết dịch vụ (service / 서비스) manager nhìn thấ
 Nếu dịch vụ (service / 서비스) `failed`, đừng restart ngay nếu có thể lấy thêm bằng chứng (evidence / 증거) trước.
 
 ## Bước 2: xác định đúng JVM
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 pgrep -af 'java.*app'
@@ -211,6 +215,8 @@ sudo lsof -p "$PID" | head -100
 Nếu count tăng liên tục, có thể là tệp (file / 파일)/socket/tài nguyên (resource / 자원) leak. Tăng limit chỉ kéo dài thời gian trước thất bại (failure / 실패) nếu vòng đời (lifecycle / 생명주기) bug vẫn còn.
 
 ## Luồng thực thi (thread / 스레드) count tăng
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 ps -p "$PID" -o pid,nlwp,cmd
@@ -391,6 +397,8 @@ Không phải sự cố (incident / 인시던트) nào cũng cần tất cả. C
 
 ## Sau restart phải verify gì?
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 systemctl status app --no-pager
 sudo ss -lntp | grep ':8080'
@@ -448,5 +456,3 @@ Sự cố (incident / 인시던트) investigation là tìm tầng (layer / 계�
 ## Kết nối kiến thức
 
 Playbook này kết hợp [Processes và Signals](../04_process/processes_threads_signals_jobs.md), [Memory](../06_resources/memory_virtual_memory.md), [CPU](../06_resources/cpu_scheduling_performance.md), [I/O Performance](../06_resources/io_performance.md), [TCP/HTTP/TLS](../07_networking/tcp_http_tls.md), [systemd](../05_system/systemd_boot_services.md) và [Production Troubleshooting](./production_troubleshooting.md).
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [capacity planning server sizing](./capacity_planning_server_sizing.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

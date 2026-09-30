@@ -332,6 +332,8 @@ release version
 Crash symbolication và R8 deobfuscation cần ánh xạ (mapping / 매핑) tệp (file / 파일) đúng phiên bản (version / 버전). bản địa (native / 네이티브) crash cần symbols tương ứng nhị phân (binary / 이진). Nếu sản phẩm tạo ra (artifact / 산출물) siêu dữ liệu (metadata / 메타데이터) bị mất, sự cố (incident / 인시던트) phản hồi (response / 응답) khó hơn nhiều.
 
 ## 27. Official references
+Phần này nối mạch Android vừa học với “27. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android App Bundle: https://nhà phát triển (developer / 개발자).android.com/guide/app-bundle
 - Play tính năng (feature / 기능) Delivery: https://nhà phát triển (developer / 개발자).android.com/guide/playcore/feature-delivery
@@ -339,6 +341,4 @@ Crash symbolication và R8 deobfuscation cần ánh xạ (mapping / 매핑) tệ
 - `bundletool`: https://nhà phát triển (developer / 개발자).android.com/tools/bundletool
 - mục tiêu (target / 대상) API requirements: https://nhà phát triển (developer / 개발자).android.com/google/play/requirements/target-sdk
 
-Store chính sách (policy / 정책) và delivery API thay đổi theo thời gian. Khi bản phát hành (release / 릴리스) thật, luôn kiểm tra documentation/chính sách (policy / 정책) mới nhất thay vì dùng snapshot trong ghi chú (note / 노트) như nguồn (source / 소스) duy nhất.
-
-> **Bàn giao:** Sau **27. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Store policy và delivery API thay đổi theo thời gian. Khi release thật, luôn kiểm tra documentation/policy mới nhất thay vì dùng snapshot trong note như source duy nhất.

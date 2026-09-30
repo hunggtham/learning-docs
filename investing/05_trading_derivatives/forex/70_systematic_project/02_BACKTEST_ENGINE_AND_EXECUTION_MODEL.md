@@ -236,18 +236,24 @@ Engine nên bản ghi (record / 레코드) rejection as sự kiện (event / 이
 Một hierarchy đơn giản:
 
 ### Mức (level / 수준) 1 — fixed
+Phần “Mức (level / 수준) 1 — fixed” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 slippage = constant pips
 ```
 
 ### Mức (level / 수준) 2 — volatility/session-aware
+Phần “Mức (level / 수준) 2 — volatility/session-aware” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 slippage = f(pair, session, volatility)
 ```
 
 ### Mức (level / 수준) 3 — sự kiện (event / 이벤트)/liquidity-aware
+Phần “Mức (level / 수준) 3 — sự kiện (event / 이벤트)/liquidity-aware” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 slippage = f(spread, volatility, event flag, size, depth proxy)
@@ -574,6 +580,8 @@ Chiến lược (strategy / 전략) should not directly mutate broker/account le
 Separation reduces accidental cheating.
 
 ## 35. Mô hình thực thi (execution model / 실행 모델) giao diện (interface / 인터페이스)
+Phần “35. Mô hình thực thi (execution model / 실행 모델) giao diện (interface / 인터페이스)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 execute(order, market_state) -> fills/rejection
@@ -582,6 +590,8 @@ execute(order, market_state) -> fills/rejection
 Mô hình thực thi (execution model / 실행 모델) must not truy cập (access / 접근) future thị trường (market / 시장) trạng thái (state / 상태).
 
 ## 36. Financing mô hình (model / 모델) giao diện (interface / 인터페이스)
+Phần “36. Financing mô hình (model / 모델) giao diện (interface / 인터페이스)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 accrue(position, timestamp, calendar) -> cashflow

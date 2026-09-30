@@ -251,6 +251,8 @@ Những laws này giải thích tại sao symbolic transformations hợp lệ. A
 
 ## 7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition
 
+Distributive law giải thích vì sao có thể mở ngoặc và phân phối một phép nhân qua phép cộng. Đây không chỉ là mẹo biến đổi; nó bảo toàn cùng một quantity khi đổi cách biểu diễn.
+
 ```math
 a(b+c)=ab+ac.
 ```
@@ -575,6 +577,4 @@ Việc ghi lĩnh vực (domain / 도메인) trước làm lập luận (reasonin
 
 ## Dùng chung (common / 공통) Misconceptions
 
-Variable không luôn là unknown. `=` không phải nút “tính kết quả”. “Chuyển vế đổi dấu” chỉ là shorthand cho reversible operations. Chia/bình phương/lấy căn hai vế có thể thay solution set. Hai expressions mathematically equivalent không nhất thiết có cùng numerical stability. Simplification chỉ có nghĩa khi lĩnh vực (domain / 도메인) và ngữ nghĩa (semantic / 의미적) units vẫn được tôn trọng.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 equations and inequalities](./01_equations_and_inequalities.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Variable không luôn là unknown. `=` không phải nút “tính kết quả”. “Chuyển vế đổi dấu” chỉ là shorthand cho reversible operations. Chia/bình phương/lấy căn hai vế có thể thay solution set. Hai expressions mathematically equivalent không nhất thiết có cùng numerical stability. Simplification chỉ có nghĩa khi domain và semantic units vẫn được tôn trọng.

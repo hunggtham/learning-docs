@@ -11,6 +11,8 @@ AI môi trường vận hành (production / 운영 환경) cần quan sát đồ
 
 ## Bốn nhóm tín hiệu chính
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 1. Hạ tầng / Hệ thống
 2. Dữ liệu / Đầu vào
@@ -20,7 +22,9 @@ AI môi trường vận hành (production / 운영 환경) cần quan sát đồ
 
 ### Chỉ số hệ thống
 
-- tốc độ yêu cầu (request / 요청);
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- tốc độ request;
 - tỷ lệ lỗi;
 - độ trễ p50/p95/p99;
 - thời gian chờ hàng đợi (queue / 큐);
@@ -31,7 +35,9 @@ AI môi trường vận hành (production / 운영 환경) cần quan sát đồ
 
 ### Chỉ số dữ liệu
 
-- vi phạm lược đồ (schema / 스키마);
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- vi phạm schema;
 - tỷ lệ null/thiếu;
 - tần suất category;
 - phân phối đặc trưng;
@@ -41,6 +47,8 @@ AI môi trường vận hành (production / 운영 환경) cần quan sát đồ
 
 ### Chỉ số mô hình
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - phân phối score hoặc prediction;
 - confidence/calibration;
 - cân bằng lớp (class / 클래스);
@@ -49,6 +57,8 @@ AI môi trường vận hành (production / 운영 환경) cần quan sát đồ
 - tính hợp lệ của đầu ra (output / 출력) có cấu trúc.
 
 ### Chỉ số kết quả
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 - thiệt hại gian lận thực tế;
 - conversion;
@@ -190,6 +200,8 @@ Khả năng quan sát cho phép lần theo chuỗi nguyên nhân thay vì đoán
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Giám sát cho biết có gì đó đang sai.
 Khả năng quan sát giúp giải thích sai ở đâu và vì sao.
@@ -212,5 +224,3 @@ Không. Drift cần được diễn giải cùng kết quả và hiệu năng.
 ## Liên kết kiến thức
 
 Xem [Drift and Retraining](./07_drift_and_retraining.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md), [Latency/Cost](../15_ai_engineering/09_latency_throughput_and_cost.md) và [Evaluation Layer](../18_evaluation_reliability_interpretability/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

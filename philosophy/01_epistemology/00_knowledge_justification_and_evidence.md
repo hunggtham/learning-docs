@@ -13,6 +13,8 @@ Justification không phải một nhãn tuyệt đối. Nó phụ thuộc vào l
 > **Chuyển mạch:** Từ **Ba thành phần cần tách**, ta sang **Claim–bằng chứng (evidence / 증거) matching** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Claim–bằng chứng (evidence / 증거) matching
+Phần “Claim–bằng chứng (evidence / 증거) matching” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Claim | bằng chứng (evidence / 증거) thích hợp | Rủi ro nhầm lẫn |
 |---|---|---|
@@ -41,6 +43,8 @@ Giả sử một người nhìn thấy đồng hồ chạy đúng vào 10:00 và
 > **Chuyển mạch:** Từ **Gettier và sự may mắn nhận thức**, ta sang **bằng chứng (evidence / 증거) ladder** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bằng chứng (evidence / 증거) ladder
+Phần “Bằng chứng (evidence / 증거) ladder” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 assertion → anecdote → uncontrolled observation

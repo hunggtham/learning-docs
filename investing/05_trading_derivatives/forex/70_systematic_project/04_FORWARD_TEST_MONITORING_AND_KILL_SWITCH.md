@@ -589,6 +589,8 @@ Prevents runaway loops.
 ## 42. Kill switch trigger categories
 
 ### Market-risk
+Phần “Market-risk” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 daily loss
@@ -599,6 +601,8 @@ stress loss
 ```
 
 ### Thực thi (execution / 실행)
+Phần “Thực thi (execution / 실행)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 slippage spike
@@ -607,6 +611,8 @@ fill anomaly
 ```
 
 ### Dữ liệu (data / 데이터)
+Phần “Dữ liệu (data / 데이터)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stale feed
@@ -615,6 +621,8 @@ cross-source inconsistency
 ```
 
 ### Operational
+Phần “Operational” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 API outage

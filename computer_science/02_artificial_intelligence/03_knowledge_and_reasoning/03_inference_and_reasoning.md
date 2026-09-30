@@ -575,6 +575,8 @@ Provenance should reflect actual tiến trình (process / 프로세스), not fab
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Deduction  = premises guarantee conclusion
 Induction  = examples suggest general pattern
@@ -609,5 +611,3 @@ More rules can create conflicts, cycles and explosion. kiến thức (knowledge 
 Suy luận (inference / 추론) is where KR becomes active. It connects lô-gic (logic / 논리) to tìm kiếm (search / 검색), xác suất (probability / 확률), lập luận nhân quả (causal reasoning / 인과적 추론) and hiện đại (modern / 현대적) tool-backed LLM các hệ thống (systems / 시스템들). Later the tác nhân (agent / 에이전트) section will reuse the same kiến trúc (architecture / 아키텍처): proposal → môi trường (environment / 환경)/công cụ (tool / 도구) xác minh (verification / 확인) → trạng thái (state / 상태) cập nhật (update / 업데이트) → replanning.
 
 Xem tiếp: [Probabilistic Reasoning](./04_probabilistic_reasoning.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

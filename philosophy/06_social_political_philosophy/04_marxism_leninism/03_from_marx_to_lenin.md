@@ -66,6 +66,8 @@ Mô hình tư duy (mental model / 사고 모델) của chapter là: **Lenin tran
 Chapter tiếp theo sẽ phân tích bốn nút (node / 노드) đó trực tiếp: party, trạng thái (state / 상태), revolution và imperialism.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Lenin, *What Is To Be Done?* (1902): https://www.marxists.org/archive/lenin/works/1901/witbd/
 - Lenin, *Imperialism, the Highest Stage of Capitalism* (1916): https://www.marxists.org/archive/lenin/works/1916/imp-hsc/

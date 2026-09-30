@@ -453,6 +453,8 @@ Only after this decomposition should ideological traditions be used as lenses.
 Political philosophy clarifies liberty, justice, power and legitimacy. Economics tests prices, productivity, growth and incentives. Lịch sử (history / 이력) identifies đường dẫn (path / 경로) dependence and hiện thực (implementation / 구현). The mô-đun (module / 모듈) needs all three because no ideology label contains enough thông tin (information / 정보) to predict institutional hiệu năng (performance / 성능) by itself.
 
 ## Nguồn định hướng
+Phần “Nguồn định hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Markets”: https://plato.stanford.edu/entries/markets/
 - Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/

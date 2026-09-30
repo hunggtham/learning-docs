@@ -344,6 +344,8 @@ supporting:
 `main` là source of truth hiện tại. Các branch feature chỉ là lịch sử phát triển; không dùng tên branch để mô tả trạng thái canonical của library.
 
 ## Cây domain
+Phần “Cây domain” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Science

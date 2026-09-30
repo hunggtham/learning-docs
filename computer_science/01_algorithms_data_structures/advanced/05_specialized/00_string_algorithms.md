@@ -91,6 +91,8 @@ Ta reuse hierarchy của borders.
 
 ### Java cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 static int[] prefixFunction(String s) {
     int n = s.length();
@@ -146,6 +148,8 @@ O(m)
 \]
 
 ### JavaScript cách triển khai
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```js
 function prefixFunction(s) {
@@ -450,7 +454,9 @@ có thể tạo nhiều các lần cấp phát/copies. `StringBuilder` phù hợ
 
 ## Choosing the right string technique
 
-| Nhu cầu | cấu trúc (structure / 구조)/thuật toán tự nhiên |
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+| Nhu cầu | Structure/thuật toán tự nhiên |
 |---|---|
 | một mẫu trong một văn bản (text / 텍스트) | KMP / Z / thư viện (library / 라이브러리) tìm kiếm (search / 검색) |
 | nhiều chính xác các mẫu trong stream | Aho-Corasick |
@@ -503,5 +509,3 @@ Aho-Corasick cần kiểm thử (test / 테스트) một mẫu là suffix của 
 > String các thuật toán là nghệ thuật **không quên cấu trúc (structure / 구조) đã khám phá**. Prefix-function nhớ borders, Z nhớ prefix-match intervals, băm trượt nhớ algebraic dữ liệu tóm lược, Trie nhớ các tiền tố dùng chung, Aho-Corasick nhớ fallback giữa prefixes, suffix structures nhớ thứ tự (order / 순서)/share của suffixes.
 
 Khi gặp bài toán chuỗi, đừng bắt đầu bằng tên thuật toán. Hãy hỏi: truy vấn dựa trên tiền tố, hậu tố, chuỗi con, tính lặp, thứ tự hay việc chia sẻ giữa nhiều mẫu? Dữ liệu tĩnh hay được xử lý theo luồng? Cần kết quả chính xác tuyệt đối hay chấp nhận băm xác suất? Và “ký tự” trong miền bài toán thực sự là byte, điểm mã hay cụm tự vị (grapheme)?
-
-> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 range queries fenwick segment tree](./01_range_queries_fenwick_segment_tree.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

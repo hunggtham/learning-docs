@@ -414,6 +414,8 @@ Khi feasible, report multiple runs, variation và experimental giao thức (prot
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Probability  → mô hình hóa uncertainty
 Statistics   → học điều đáng tin về population từ finite sample
@@ -447,6 +449,4 @@ Không. Với time-dependent hoặc grouped dữ liệu (data / 데이터), naiv
 
 Statistics là cầu nối (bridge / 브리지) giữa [Probability](./02_probability_for_ai.md) và Machine học tập (learning / 학습). Sau này các chapter về generalization, mô hình (model / 모델) evaluation, calibration, dataset độ lệch (bias / 편향) và drift sẽ reuse các ideas ở đây.
 
-Khi nhìn một mô hình (model / 모델) score, đừng chỉ hỏi “bao nhiêu phần trăm?”. Hãy hỏi: trên population nào, mẫu (sample / 표본) được lấy thế nào, bất định (uncertainty / 불확실성) của estimate bao nhiêu, selection đã xảy ra ở đâu, và triển khai (deployment / 배포) phân phối (distribution / 분포) có giống evaluation phân phối (distribution / 분포) không.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematics for ai](./00_mathematics_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi nhìn một model score, đừng chỉ hỏi “bao nhiêu phần trăm?”. Hãy hỏi: trên population nào, sample được lấy thế nào, uncertainty của estimate bao nhiêu, selection đã xảy ra ở đâu, và deployment distribution có giống evaluation distribution không.

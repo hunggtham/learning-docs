@@ -118,6 +118,8 @@ Các thuật ngữ được giữ bằng tiếng Anh vì chúng có đời sốn
 Không nên ghi nhớ các từ này như glossary rời. Mỗi thuật ngữ chỉ có nghĩa đầy đủ khi thấy nó đang giải quyết mắt xích nào trong mô hình (model / 모델).
 
 ## Nguồn định hướng
+Phần “Nguồn định hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/

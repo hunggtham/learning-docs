@@ -18,7 +18,61 @@ Bài này không đứng riêng: hãy nối **Subquery** với bài trước b�
 
 ---
 
+Để học **Subquery** như một mạch suy luận, trước hết hãy giữ câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Mục đích của bài là biến **Single/multi-row, correlated, scalar, inline view, EXISTS và các bẫy thường gặp** thành cách đọc có thể áp dụng.
+
+→ NULL 제외
+
+AVG(col)
+= SUM(col) / COUNT(col)
+
+전체 행을 기준으로 나누려면
+= SUM(col) / COUNT(*)
+```
+
+```
+[IDENTIFIER]
+
+본질식별자
+= 업무에서 자연스럽게 존재
+= Natural / Business Identifier
+
+인조식별자
+= 시스템에서 인위적으로 생성
+= Surrogate Identifier
+= Sequence / Auto-generated ID 등
+```
+
+Và **một câu để nhớ toàn bộ phần 인조식별자**:
+
+> **인조식별자는 PK를 단순하게 만들어 개발은 편리하지만, 업무적으로 유일해야 하는 값의 중복까지 자동으로 막아주는 것은 아니다.**
+Surrogate key làm PK đơn giản và giúp phát triển thuận tiện, nhưng **không tự động bảo vệ tính duy nhất của business key**.
+>
+
+Ví dụ điển hình:
+
+```
+PK = ORDER_DETAIL_ID
+
+nhưng business rule:
+(ORDER_ID, PRODUCT_ID) phải unique
+
+→ cần UNIQUE(ORDER_ID, PRODUCT_ID)
+  nếu nghiệp vụ thực sự yêu cầu không trùng.
+```
+
+Đây chính là mối liên hệ quan trọng nhất giữa **PK – 본질식별자 – 인조식별자 – UNIQUE – 데이터 무결성** mà đề SQLD có thể biến thành câu hỏi đánh lừa.
+
+Mình sẽ tiếp tục đúng format học SQLD đã thống nhất: **bám sát nội dung ảnh → 1 ý tiếng Hàn + 1 ý tiếng Việt → giải thích keyword ngay tại chỗ → sau đó mở rộng phần dễ nhầm/dễ ra thi → cuối bài có `📌 NOTE 시험` để ôn nhanh.**
+
+Ta bắt đầu **제1절 서브쿼리 — Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 제1절 서브쿼리 — Subquery
+
+Khi gom phần **제1절 서브쿼리 — Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **제1절 서브쿼리 — Subquery**. Bây giờ chuyển sang **1. 서브쿼리란 무엇인가? — Subquery là gì?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **1. 서브쿼리란 무엇인가? — Subquery là gì?** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 1. 서브쿼리란 무엇인가? — Subquery là gì?
 
@@ -73,7 +127,19 @@ a.id
 
 ---
 
+Khi gom phần **1. 서브쿼리란 무엇인가? — Subquery là gì?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **1. 서브쿼리란 무엇인가? — Subquery là gì?**. Bây giờ chuyển sang **2. 서브쿼리 사용 시 주의사항 — Quy tắc khi dùng Subquery**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2. 서브쿼리 사용 시 주의사항 — Quy tắc khi dùng Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 2. 서브쿼리 사용 시 주의사항 — Quy tắc khi dùng Subquery
+
+Khi gom phần **2. 서브쿼리 사용 시 주의사항 — Quy tắc khi dùng Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2. 서브쿼리 사용 시 주의사항 — Quy tắc khi dùng Subquery**. Bây giờ chuyển sang **2.1 괄호로 감싸서 사용한다**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2.1 괄호로 감싸서 사용한다** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.1 괄호로 감싸서 사용한다
 
@@ -96,6 +162,12 @@ WHERE SAL > SELECT AVG(SAL) FROM EMP
 ```
 
 ---
+
+Khi gom phần **2.1 괄호로 감싸서 사용한다** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2.1 괄호로 감싸서 사용한다**. Bây giờ chuyển sang **2.2 단일행 연산자와 다중행 연산자를 구분한다**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2.2 단일행 연산자와 다중행 연산자를 구분한다** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 2.2 단일행 연산자와 다중행 연산자를 구분한다
 
@@ -135,6 +207,12 @@ EXISTS
 
 ---
 
+Khi gom phần **2.2 단일행 연산자와 다중행 연산자를 구분한다** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2.2 단일행 연산자와 다중행 연산자를 구분한다**. Bây giờ chuyển sang **3. 서브쿼리가 위치할 수 있는 곳 — Subquery có thể nằm ở đâu?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **3. 서브쿼리가 위치할 수 있는 곳 — Subquery có thể nằm ở đâu?** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 3. 서브쿼리가 위치할 수 있는 곳 — Subquery có thể nằm ở đâu?
 
 Theo ảnh:
@@ -167,9 +245,21 @@ WHERE  → Nested
 
 ---
 
+Khi gom phần **3. 서브쿼리가 위치할 수 있는 곳 — Subquery có thể nằm ở đâu?** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **3. 서브쿼리가 위치할 수 있는 곳 — Subquery có thể nằm ở đâu?**. Bây giờ chuyển sang **4. 연관 서브쿼리 vs 비연관 서브쿼리**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **4. 연관 서브쿼리 vs 비연관 서브쿼리** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 4. 연관 서브쿼리 vs 비연관 서브쿼리
 
 Đây là một cách phân loại **theo quan hệ với main truy vấn (query / 쿼리)**.
+
+Khi gom phần **4. 연관 서브쿼리 vs 비연관 서브쿼리** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **4. 연관 서브쿼리 vs 비연관 서브쿼리**. Bây giờ chuyển sang **4.1 연관 서브쿼리 — Correlated Subquery**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **4.1 연관 서브쿼리 — Correlated Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ### 4.1 연관 서브쿼리 — Correlated Subquery
 
@@ -228,6 +318,12 @@ trả artist_name
 
 ---
 
+Khi gom phần **4.1 연관 서브쿼리 — Correlated Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **4.1 연관 서브쿼리 — Correlated Subquery**. Bây giờ chuyển sang **4.2 비연관 서브쿼리 — Uncorrelated Subquery**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **4.2 비연관 서브쿼리 — Uncorrelated Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ### 4.2 비연관 서브쿼리 — Uncorrelated Subquery
 
 **비연관 서브쿼리는 메인쿼리의 컬럼을 참조하지 않는다.**
@@ -267,7 +363,15 @@ FROM EMP
 WHERE SAL > 3500;
 ```
 
+Khi gom phần **4.2 비연관 서브쿼리 — Uncorrelated Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **4.2 비연관 서브쿼리 — Uncorrelated Subquery**. Bây giờ chuyển sang **📌 Điểm nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **📌 Điểm nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### 📌 Điểm nhớ
+
+Phần này nối mạch SQL với “📌 Điểm nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 Correlated
@@ -278,6 +382,12 @@ Uncorrelated
 ```
 
 ---
+
+Khi gom phần **📌 Điểm nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **📌 Điểm nhớ**. Bây giờ chuyển sang **5. 반환 데이터에 따른 분류 — Phân loại theo dữ liệu trả về**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **5. 반환 데이터에 따른 분류 — Phân loại theo dữ liệu trả về** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 5. 반환 데이터에 따른 분류 — Phân loại theo dữ liệu trả về
 
@@ -291,6 +401,12 @@ Subquery
 ```
 
 ---
+
+Khi gom phần **5. 반환 데이터에 따른 분류 — Phân loại theo dữ liệu trả về** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **5. 반환 데이터에 따른 분류 — Phân loại theo dữ liệu trả về**. Bây giờ chuyển sang **6. 단일행 서브쿼리 — Single-row Subquery**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **6. 단일행 서브쿼리 — Single-row Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 6. 단일행 서브쿼리 — Single-row Subquery
 
@@ -340,6 +456,12 @@ Có thể dùng:
 
 ---
 
+Khi gom phần **6. 단일행 서브쿼리 — Single-row Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **6. 단일행 서브쿼리 — Single-row Subquery**. Bây giờ chuyển sang **7. 다중행 서브쿼리 — Multi-row Subquery**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **7. 다중행 서브쿼리 — Multi-row Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 7. 다중행 서브쿼리 — Multi-row Subquery
 
 **서브쿼리의 실행 결과가 여러 행인 서브쿼리이다.**
@@ -383,6 +505,12 @@ EXISTS
 
 ---
 
+Khi gom phần **7. 다중행 서브쿼리 — Multi-row Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **7. 다중행 서브쿼리 — Multi-row Subquery**. Bây giờ chuyển sang **8. IN — Có nằm trong tập kết quả không?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **8. IN — Có nằm trong tập kết quả không?** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 8. IN — Có nằm trong tập kết quả không?
 
 **IN은 서브쿼리 결과 중 일치하는 값이 있는지 확인한다.**
@@ -420,6 +548,12 @@ Hiểu đơn giản:
 
 ---
 
+Khi gom phần **8. IN — Có nằm trong tập kết quả không?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **8. IN — Có nằm trong tập kết quả không?**. Bây giờ chuyển sang **9. ANY — Chỉ cần đúng với ít nhất một giá trị**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **9. ANY — Chỉ cần đúng với ít nhất một giá trị** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 9. ANY — Chỉ cần đúng với ít nhất một giá trị
 
 **ANY는 서브쿼리 결과 중 하나라도 조건을 만족하면 TRUE이다.**
@@ -453,13 +587,27 @@ Tương tự:
 → < MAX
 ```
 
+Khi gom phần **9. ANY — Chỉ cần đúng với ít nhất một giá trị** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **9. ANY — Chỉ cần đúng với ít nhất một giá trị**. Bây giờ chuyển sang **Mẹo nhớ**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Mẹo nhớ** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Mẹo nhớ
+
+Phần này nối mạch SQL với “Mẹo nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 ANY = ít nhất MỘT đứa
 ```
 
 ---
+
+Khi gom phần **Mẹo nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Mẹo nhớ**. Bây giờ chuyển sang **10. ALL — Phải đúng với tất cả**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **10. ALL — Phải đúng với tất cả** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 10. ALL — Phải đúng với tất cả
 
@@ -492,7 +640,15 @@ Ngược lại:
 → < MIN
 ```
 
+Khi gom phần **10. ALL — Phải đúng với tất cả** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **10. ALL — Phải đúng với tất cả**. Bây giờ chuyển sang **Bảng phải thuộc lòng**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Bảng phải thuộc lòng** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Bảng phải thuộc lòng
+
+Phần này nối mạch SQL với “Bảng phải thuộc lòng”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 | Điều kiện | Tương đương trực giác |
 | --------- | --------------------- |
@@ -534,6 +690,12 @@ chỉ cần:
 ```
 
 ---
+
+Khi gom phần **Bảng phải thuộc lòng** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Bảng phải thuộc lòng**. Bây giờ chuyển sang **11. 다중컬럼 서브쿼리 — Multi-column Subquery**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **11. 다중컬럼 서브쿼리 — Multi-column Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 11. 다중컬럼 서브쿼리 — Multi-column Subquery
 
@@ -582,6 +744,12 @@ Mục tiêu của câu SQL:
 
 ---
 
+Khi gom phần **11. 다중컬럼 서브쿼리 — Multi-column Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **11. 다중컬럼 서브쿼리 — Multi-column Subquery**. Bây giờ chuyển sang **12. 스칼라 서브쿼리 — Scalar Subquery**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **12. 스칼라 서브쿼리 — Scalar Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 12. 스칼라 서브쿼리 — Scalar Subquery
 
 Đây là phần trọng tâm của ảnh.
@@ -624,6 +792,12 @@ id   name       price      artist_name
 
 ---
 
+Khi gom phần **12. 스칼라 서브쿼리 — Scalar Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **12. 스칼라 서브쿼리 — Scalar Subquery**. Bây giờ chuyển sang **13. Tại sao Scalar Subquery phải trả về 1 giá trị?**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **13. Tại sao Scalar Subquery phải trả về 1 giá trị?** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 13. Tại sao Scalar Subquery phải trả về 1 giá trị?
 
 **스칼라 서브쿼리는 하나의 컬럼 위치에서 사용되므로 단일 값을 반환해야 한다.**
@@ -649,7 +823,13 @@ vào cùng một cell.
 
 ---
 
-## 14. Scalar Subquery và LEFT OUTER phép nối (join / 조인)
+Khi gom phần **13. Tại sao Scalar Subquery phải trả về 1 giá trị?** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **13. Tại sao Scalar Subquery phải trả về 1 giá trị?**. Bây giờ chuyển sang **14. Scalar Subquery và LEFT OUTER JOIN**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **14. Scalar Subquery và LEFT OUTER JOIN** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+## 14. Scalar Subquery và LEFT OUTER JOIN
 
 Ảnh chỉ ra một liên hệ rất đáng nhớ.
 
@@ -732,6 +912,12 @@ vì LEFT phép nối (join / 조인) vẫn giữ row bên trái.
 
 ---
 
+Khi gom phần **14. Scalar Subquery và LEFT OUTER JOIN** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **14. Scalar Subquery và LEFT OUTER JOIN**. Bây giờ chuyển sang **15. Một ví dụ Scalar Subquery rất quan trọng**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **15. Một ví dụ Scalar Subquery rất quan trọng** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 15. Một ví dụ Scalar Subquery rất quan trọng
 
 Ảnh có:
@@ -780,6 +966,12 @@ EMPNO | ENAME | DEPTNO | DNAME
 ```
 
 ---
+
+Khi gom phần **15. Một ví dụ Scalar Subquery rất quan trọng** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **15. Một ví dụ Scalar Subquery rất quan trọng**. Bây giờ chuyển sang **16. Scalar Subquery với SUM()**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **16. Scalar Subquery với SUM()** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 16. Scalar Subquery với SUM()
 
@@ -835,6 +1027,12 @@ COUNT()
 vì chúng thường gom kết quả thành **một giá trị**.
 
 ---
+
+Khi gom phần **16. Scalar Subquery với SUM()** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **16. Scalar Subquery với SUM()**. Bây giờ chuyển sang **17. 인라인 뷰 — Inline View**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **17. 인라인 뷰 — Inline View** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 17. 인라인 뷰 — Inline View
 
@@ -923,7 +1121,13 @@ p.price > p2.avg_price
 
 ---
 
-## 18. Tại sao Inline View được gọi là động (dynamic / 동적) View?
+Khi gom phần **17. 인라인 뷰 — Inline View** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **17. 인라인 뷰 — Inline View**. Bây giờ chuyển sang **18. Tại sao Inline View được gọi là Dynamic View?**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **18. Tại sao Inline View được gọi là Dynamic View?** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+## 18. Tại sao Inline View được gọi là Dynamic View?
 
 **인라인 뷰는 동적 뷰(Dynamic View)라고도 한다.**
 → Inline View còn được gọi là động (dynamic / 동적) View.
@@ -956,7 +1160,13 @@ kết thúc query
 
 ---
 
-## 19. Inline View và phép nối (join / 조인) — phần rất dễ nhầm
+Khi gom phần **18. Tại sao Inline View được gọi là Dynamic View?** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **18. Tại sao Inline View được gọi là Dynamic View?**. Bây giờ chuyển sang **19. Inline View và JOIN — phần rất dễ nhầm**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **19. Inline View và JOIN — phần rất dễ nhầm** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+## 19. Inline View và JOIN — phần rất dễ nhầm
 
 Ảnh viết phiên bản:
 
@@ -1006,7 +1216,13 @@ WHERE p.price > p2.avg_price
 
 ---
 
-## 20. Cartesian sản phẩm (product / 제품) khi quên điều kiện nối (join condition / 조인 조건)
+Khi gom phần **19. Inline View và JOIN — phần rất dễ nhầm** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **19. Inline View và JOIN — phần rất dễ nhầm**. Bây giờ chuyển sang **20. Cartesian Product khi quên JOIN condition**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **20. Cartesian Product khi quên JOIN condition** bằng câu hỏi: **ta đang kết hợp những tập hàng nào, cột nào làm cầu nối và điều kiện nối làm thay đổi kết quả ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+## 20. Cartesian Product khi quên JOIN condition
 
 Ảnh nhấn mạnh:
 
@@ -1035,11 +1251,25 @@ Cartesian Product
 
 ---
 
+Khi gom phần **20. Cartesian Product khi quên JOIN condition** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **20. Cartesian Product khi quên JOIN condition**. Bây giờ chuyển sang **21. Scalar Subquery vs Inline View**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **21. Scalar Subquery vs Inline View** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 21. Scalar Subquery vs Inline View
 
 Đây là phần ảnh so sánh trực tiếp.
 
+Khi gom phần **21. Scalar Subquery vs Inline View** lại, ta không cần nhớ các dòng như những mảnh rời: các định nghĩa và điều kiện làm rõ phạm vi áp dụng. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **21. Scalar Subquery vs Inline View**. Bây giờ chuyển sang **Scalar**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Scalar** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Scalar
+
+Phần này nối mạch SQL với “Scalar”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT p.id,
@@ -1065,7 +1295,15 @@ và trở thành:
 1 column/cell
 ```
 
+Khi gom phần **Scalar** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Scalar**. Bây giờ chuyển sang **Inline View**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **Inline View** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 #### Inline View
+
+Phần này nối mạch SQL với “Inline View”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```sql
 SELECT p.artist_id,
@@ -1094,7 +1332,15 @@ gồm nhiều:
 rows × columns
 ```
 
+Khi gom phần **Inline View** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Inline View**. Bây giờ chuyển sang **Cách nhớ**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Đoạn **Cách nhớ** đổi quy tắc thành hình ảnh hoặc câu nhớ. Hãy trả lời: **hình ảnh hoặc câu nhớ này đang nén quan hệ nào để ta có thể tự dựng lại kết quả mà không học thuộc cú pháp?** Sau đó quay lại điều kiện SQL để chắc rằng cách nhớ không làm mất trường hợp biên.
+
 #### Cách nhớ
+
+Phần này nối mạch SQL với “Cách nhớ”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
 
 ```text
 Scalar Subquery
@@ -1105,6 +1351,12 @@ Inline View
 ```
 
 ---
+
+Khi gom phần **Cách nhớ** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **Cách nhớ**. Bây giờ chuyển sang **22. 중첩 서브쿼리 — Nested Subquery**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **22. 중첩 서브쿼리 — Nested Subquery** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 22. 중첩 서브쿼리 — Nested Subquery
 
@@ -1138,6 +1390,12 @@ SAL > giá_trị_đó
 ```
 
 ---
+
+Khi gom phần **22. 중첩 서브쿼리 — Nested Subquery** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **22. 중첩 서브쿼리 — Nested Subquery**. Bây giờ chuyển sang **23. 상호연관 서브쿼리 — Correlated Subquery sâu hơn**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **23. 상호연관 서브쿼리 — Correlated Subquery sâu hơn** bằng câu hỏi: **truy vấn con đang tạo ra một giá trị, một tập hàng hay một bảng trung gian, và truy vấn ngoài dùng nó như thế nào?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 23. 상호연관 서브쿼리 — Correlated Subquery sâu hơn
 
@@ -1198,6 +1456,12 @@ Vì thế correlated subquery phụ thuộc **row hiện tại của main truy v
 
 ---
 
+Khi gom phần **23. 상호연관 서브쿼리 — Correlated Subquery sâu hơn** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **23. 상호연관 서브쿼리 — Correlated Subquery sâu hơn**. Bây giờ chuyển sang **24. 상호 연관 서브쿼리의 논리적 순서**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **24. 상호 연관 서브쿼리의 논리적 순서** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 24. 상호 연관 서브쿼리의 논리적 순서
 
 Ảnh mô tả lô-gic (logic / 논리):
@@ -1228,6 +1492,12 @@ WHERE E1.DEPTNO = E2.DEPTNO
 
 ---
 
+Khi gom phần **24. 상호 연관 서브쿼리의 논리적 순서** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **24. 상호 연관 서브쿼리의 논리적 순서**. Bây giờ chuyển sang **25. HAVING절에서 서브쿼리**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **25. HAVING절에서 서브쿼리** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
 ## 25. HAVING절에서 서브쿼리
 
 **HAVING 절에서도 서브쿼리를 사용할 수 있다.**
@@ -1254,7 +1524,13 @@ thì subquery có thể xuất hiện ở `HAVING`.
 
 ---
 
-## 26. cập nhật (update / 업데이트) SET에서 서브쿼리
+Khi gom phần **25. HAVING절에서 서브쿼리** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **25. HAVING절에서 서브쿼리**. Bây giờ chuyển sang **26. UPDATE SET에서 서브쿼리**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **26. UPDATE SET에서 서브쿼리** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+## 26. UPDATE SET에서 서브쿼리
 
 Ảnh nhắc một lỗi quan trọng.
 
@@ -1290,6 +1566,12 @@ UPDATE ... SET
 ```
 
 ---
+
+Khi gom phần **26. UPDATE SET에서 서브쿼리** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **26. UPDATE SET에서 서브쿼리**. Bây giờ chuyển sang **27. EXISTS**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **27. EXISTS** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 27. EXISTS
 
@@ -1332,6 +1614,12 @@ Không phải vì số `1` có ý nghĩa đặc biệt; ý nghĩa là:
 > Tôi chỉ quan tâm row có tồn tại hay không.
 
 ---
+
+Khi gom phần **27. EXISTS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **27. EXISTS**. Bây giờ chuyển sang **28. NOT EXISTS**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **28. NOT EXISTS** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
 
 ## 28. NOT EXISTS
 
@@ -1377,60 +1665,7 @@ NOT EXISTS
 giữ:
 
 ```text
-B
-D
-```
 
-Nó rất hữu ích cho bài toán:
+Khi gom phần **28. NOT EXISTS** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
 
-> "Tìm những đối tượng **không có** quan hệ/dữ liệu tương ứng."
-
----
-
-## 29. Một lỗi dễ ra thi: Composite Key trong correlated subquery
-
-Ảnh cho bảng:
-
-```sql
-CREATE TABLE order_items (
-    order_id   INT,
-    product_id INT,
-    quantity   INT,
-    price      DECIMAL(10,2),
-    PRIMARY KEY(order_id, product_id)
-);
-```
-
-Primary Key gồm:
-
-```text
-(order_id, product_id)
-```
-
-Nếu correlated subquery muốn xác định đúng một `order_item`, phải liên kết đủ:
-
-```sql
-WHERE b.order_id = a.order_id
-AND   b.product_id = a.product_id
-```
-
-Nếu chỉ:
-
-```sql
-WHERE b.order_id = a.order_id
-```
-
-thì một thứ tự (order / 순서) có thể có nhiều sản phẩm (product / 제품).
-
-→ Không xác định đúng row.
-
-#### 📌 Quy tắc
-
-```text
-Khóa ghép gồm N cột
-→ khi cần xác định chính xác row, thường phải xét đủ các cột cần thiết của khóa/quan hệ.
-```
-
----
-
-> **Bàn giao:** Sau khi đọc, chốt đối tượng (object / 객체), điều kiện và thứ tự xử lý của bài này; nếu còn mơ hồ, quay lại ví dụ SQL rồi nối sang bài kế tiếp thay vì ghi nhớ câu lệnh như một mảnh rời.
+Như vậy, **28. NOT EXISTS** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.

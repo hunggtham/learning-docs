@@ -33,6 +33,8 @@ NOI là nền để định giá tài sản bất động sản tạo thu nhập
 
 ## 4. Cap tỷ lệ (rate / 비율)
 
+Sau khi xác định NOI, ta cần một cầu nối từ dòng tiền sang giá trị tài sản. Cap rate đóng vai trò như tỷ lệ vốn hóa; đọc nó cùng lãi suất, tăng trưởng thuê và rủi ro giúp tránh kết luận đơn giản rằng lạm phát luôn tốt cho bất động sản.
+
 ```text
 Cap Rate ≈ NOI / Property Value
 ```
@@ -314,6 +316,8 @@ Nếu nhà đầu tư trả giá quá cao cho tài sản tư nhân, phần bù n
 
 ## 40. Checklist tài sản thay thế
 
+Checklist này gom các câu hỏi cần trả lời trước khi thêm tài sản thay thế vào danh mục. Hãy đi từ quyền pháp lý và dòng tiền tới thanh khoản, định giá, phí và nghĩa vụ vốn để biết phần bù kém thanh khoản có thực sự xứng đáng hay không.
+
 ```text
 Quyền lợi pháp lý
 Nguồn dòng tiền
@@ -331,5 +335,3 @@ Kịch bản xấu
 ## Kết luận
 
 Tài sản thực và tài sản thay thế hữu ích khi chúng thêm **nguồn lợi suất thực sự khác** và phù hợp với thanh khoản của nhà đầu tư. Nhãn “private”, “real asset” hay “alternative” không làm rủi ro biến mất; nhiều rủi ro chỉ được che bởi định giá chậm, đòn bẩy hoặc hợp đồng phức tạp. Luôn nhìn xuyên cấu trúc về dòng tiền, quyền lợi pháp lý và thời điểm cần tiền.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

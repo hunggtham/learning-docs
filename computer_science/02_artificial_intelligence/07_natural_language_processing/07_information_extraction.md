@@ -91,6 +91,8 @@ Sự kiện (event / 이벤트) extraction needs role assignment and sometimes c
 
 ## Coreference Resolution
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Alice joined Acme. She became CTO.
 ```
@@ -251,6 +253,4 @@ Need thực thể (entity / 엔터티) resolution, temporal/provenance/confidenc
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-IE connects [Knowledge Graphs](../03_knowledge_and_reasoning/06_knowledge_graphs.md), [Transformer NLP](./06_transformer_nlp.md), cơ sở dữ liệu (database / 데이터베이스)/kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) and later LLM công cụ (tool / 도구)/RAG workflows.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language as data](./00_language_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+IE connects [Knowledge Graphs](../03_knowledge_and_reasoning/06_knowledge_graphs.md), [Transformer NLP](./06_transformer_nlp.md), Database/Data Engineering and later LLM tool/RAG workflows.

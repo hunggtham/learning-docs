@@ -2,6 +2,8 @@
 
 Lĩnh vực này xem giao dịch như một hệ thống xác suất có chi phí thực thi, rủi ro vận hành, yêu cầu tài sản bảo đảm/ký quỹ và mức phơi nhiễm ở cấp danh mục; không xem giao dịch chỉ là tập hợp các mẫu hình vào lệnh. Lộ trình đi từ Forex và quản trị rủi ro tới hợp đồng phái sinh, nghiên cứu có hệ thống, vi cấu trúc thị trường, danh mục chiến lược và quyền chọn/biến động chuyên sâu.
 
+Nếu mục tiêu chính là Forex, hãy bắt đầu với [lộ trình Cổ phiếu và Forex](../START_HERE_STOCKS_AND_FOREX.md), đặc biệt phần ví dụ pip, margin và position sizing, trước khi đi vào backtest và vi cấu trúc.
+
 ## Thứ tự đọc
 
 [00_MASTER_TRADING_FOREX_RISK.md](./00_MASTER_TRADING_FOREX_RISK.md) là bản tổng quan dài về biểu đồ, cấu trúc thị trường, Forex, đòn bẩy, ký quỹ, quy mô vị thế, kỳ vọng toán học, XAUUSD, kiểm thử chiến lược, nhật ký và tâm lý giao dịch.

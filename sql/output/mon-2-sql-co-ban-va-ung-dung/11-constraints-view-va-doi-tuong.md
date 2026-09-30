@@ -1,10 +1,25 @@
-# Các ràng buộc (constraints / 제약조건들), View và các đối tượng hỗ trợ
+<!-- lecture-contract: v2 -->
+# Constraints, View và các đối tượng hỗ trợ
+
+> **Mục tiêu:** PK/FK/UNIQUE/CHECK, VIEW, SEQUENCE và SYNONYM.
+
+Để học **Constraints, View và các đối tượng hỗ trợ** như một mạch suy luận, trước hết hãy giữ câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Mục đích của bài là biến pk/fk/unique/check, view, sequence và synonym. thành cách đọc có thể áp dụng.
+
+> **Mục tiêu:** PK/FK/UNIQUE/CHECK, VIEW, SEQUENCE và SYNONYM.
+
+Để học **Constraints, View và các đối tượng hỗ trợ** như một mạch suy luận, trước hết hãy giữ câu hỏi: dữ liệu hoặc truy vấn đang giải quyết vấn đề gì, điều kiện nào làm thay đổi kết quả, và phần này nối với bài SQLD nào? Mục đích của bài là biến phần nguồn dưới đây thành cách đọc có thể áp dụng, không chỉ là danh sách cú pháp.
 
 > **Nguồn bám sát:** PDF *2024 개정판 SQLD 개념정리*, trang 95–100.
 >
 > **Liên kết bài trước:** DDL tạo cấu trúc; ràng buộc (constraint / 제약조건) bảo đảm dữ liệu đi vào cấu trúc đó vẫn đúng quy tắc nghiệp vụ. Điều này hiện thực hóa consistency (Consistency) (tính nhất quán) trong ACID đã học.
 
-## 1. 제약 조건 (Constraint) (ràng buộc)
+Ta bắt đầu với **1. 제약 조건 (Constraint) (ràng buộc)**. Hãy xác định mục đích của khái niệm này trước, rồi mới đọc định nghĩa, ví dụ SQL hoặc bảng so sánh bên dưới.
+
+Ta bắt đầu **1. 제약 조건 (Constraint) (ràng buộc)** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### 1. 제약 조건 (Constraint) (ràng buộc)
+
+Nội dung dưới **1. 제약 조건 (Constraint) (ràng buộc)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
 > **KR:** 제약 조건은 데이터의 무결성을 유지하기 위해 특정 컬럼에 설정하는 제약이며 테이블에 데이터가 올바르게 들어오도록 거는 장치이다.
 
@@ -24,7 +39,17 @@ ALTER TABLE table_name
 DROP CONSTRAINT constraint_name;
 ```
 
-## 2. PRIMARY KEY (Primary Key) (khóa chính)
+Vừa rồi ta đã khép **1. 제약 조건 (Constraint) (ràng buộc)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **2. PRIMARY KEY (Primary Key) (khóa chính)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+
+Khi gom phần **1. 제약 조건 (Constraint) (ràng buộc)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **1. 제약 조건 (Constraint) (ràng buộc)**. Bây giờ chuyển sang **2. PRIMARY KEY (Primary Key) (khóa chính)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **2. PRIMARY KEY (Primary Key) (khóa chính)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### 2. PRIMARY KEY (Primary Key) (khóa chính)
+
+Nội dung dưới **2. PRIMARY KEY (Primary Key) (khóa chính)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
 > **KR:** PRIMARY KEY는 행 데이터를 고유하게 구분하는 식별자이고 중복과 NULL을 허용하지 않는다.
 
@@ -34,7 +59,17 @@ DROP CONSTRAINT constraint_name;
 CONSTRAINT pk_name PRIMARY KEY (column1, column2)
 ```
 
-## 3. UNIQUE, NOT NULL và CHECK
+Vừa rồi ta đã khép **2. PRIMARY KEY (Primary Key) (khóa chính)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **3. UNIQUE, NOT NULL và CHECK** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+
+Khi gom phần **2. PRIMARY KEY (Primary Key) (khóa chính)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **2. PRIMARY KEY (Primary Key) (khóa chính)**. Bây giờ chuyển sang **3. UNIQUE, NOT NULL và CHECK**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **3. UNIQUE, NOT NULL và CHECK** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### 3. UNIQUE, NOT NULL và CHECK
+
+Nội dung dưới **3. UNIQUE, NOT NULL và CHECK** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
 > **KR:** UNIQUE는 중복을 허용하지 않고 NULL은 허용하며, NOT NULL은 NULL 값을 허용하지 않는다.
 
@@ -50,7 +85,17 @@ ALTER TABLE emp1
 ADD CONSTRAINT emp_sal_ck CHECK (sal > 0);
 ```
 
-## 4. FOREIGN KEY (Foreign Key) (khóa ngoại)
+Vừa rồi ta đã khép **3. UNIQUE, NOT NULL và CHECK** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+
+Khi gom phần **3. UNIQUE, NOT NULL và CHECK** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **3. UNIQUE, NOT NULL và CHECK**. Bây giờ chuyển sang **4. FOREIGN KEY (Foreign Key) (khóa ngoại)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### 4. FOREIGN KEY (Foreign Key) (khóa ngoại)
+
+Nội dung dưới **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
 > **KR:** FOREIGN KEY는 자식 테이블에 생성하며 부모 테이블의 참조 컬럼은 PK 또는 UNIQUE KEY를 가져야 한다.
 
@@ -78,7 +123,17 @@ CREATE TABLE emp1 (
 
 PDF còn nêu insert hành động (action / 동작) (Insert Action) (hành động khi chèn): `Automatic` (tự động tạo cha rồi chèn con), `Set Null` (đặt FK con NULL), `Set Default` (đặt default), `Dependent` (chỉ chèn con khi cha đã có), `No Action` (không chấp nhận thao tác vi phạm). Khi làm bài SQLD, trước hết đọc xem đề nói đến xóa/sửa cha hay chèn/sửa con, vì hướng tác động khác nhau.
 
-## 5. VIEW (View) (khung nhìn)
+Vừa rồi ta đã khép **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **5. VIEW (View) (khung nhìn)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+
+Khi gom phần **4. FOREIGN KEY (Foreign Key) (khóa ngoại)** lại, ta không cần nhớ các dòng như những mảnh rời: bảng đang đặt các lựa chọn cạnh nhau theo cùng tiêu chí và cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **4. FOREIGN KEY (Foreign Key) (khóa ngoại)**. Bây giờ chuyển sang **5. VIEW (View) (khung nhìn)**: phần mới sẽ **mở rộng** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **5. VIEW (View) (khung nhìn)** bằng câu hỏi: **cấu trúc hoặc ràng buộc nào đang bảo vệ dữ liệu, và thay đổi đó ảnh hưởng đến các câu lệnh sau ra sao?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### 5. VIEW (View) (khung nhìn)
+
+Nội dung dưới **5. VIEW (View) (khung nhìn)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
 > **KR:** VIEW는 저장공간을 가지지 않지만 테이블처럼 조회 및 수정 가능한 객체이며 가상 테이블이라고도 한다.
 
@@ -102,7 +157,17 @@ FROM emp e, dept d
 WHERE e.deptno = d.deptno;
 ```
 
-## 6. chuỗi (sequence / 시퀀스) (Sequence) (bộ sinh số tuần tự)
+Vừa rồi ta đã khép **5. VIEW (View) (khung nhìn)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+
+Khi gom phần **5. VIEW (View) (khung nhìn)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **5. VIEW (View) (khung nhìn)**. Bây giờ chuyển sang **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)**: phần mới sẽ **đối chiếu** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### 6. SEQUENCE (Sequence) (bộ sinh số tuần tự)
+
+Nội dung dưới **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
 > **KR:** chuỗi (sequence / 시퀀스)는 자동으로 연속적인 숫자를 부여해주는 객체이다.
 
@@ -117,7 +182,17 @@ CREATE SEQUENCE seq_name
   CACHE 20;
 ```
 
-## 7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)
+Vừa rồi ta đã khép **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** bằng đối tượng, điều kiện và kết quả cần theo dõi. Từ đó, ta chuyển sang **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** để xem phần mới dùng lại, mở rộng hay đối chiếu quy tắc nào.
+
+Khi gom phần **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Vậy ta đã có tiêu chí để đọc **6. SEQUENCE (Sequence) (bộ sinh số tuần tự)**. Bây giờ chuyển sang **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)**: phần mới sẽ **dùng lại** điểm tựa vừa có, nên hãy giữ lại câu hỏi và kiểm tra xem đối tượng hoặc điều kiện nào đã thay đổi.
+
+Ta bắt đầu **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** bằng câu hỏi: **khái niệm này giải quyết vấn đề nào, dựa trên điều kiện nào và tạo ra hệ quả gì trong truy vấn?** Hãy đọc phần dưới để tìm cơ chế, điều kiện và hệ quả trả lời cho câu hỏi đó.
+
+#### 7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)
+
+Nội dung dưới **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** cung cấp phần giải thích và bằng chứng cho mục đích vừa nêu; khi đọc SQL, hãy theo dõi đối tượng, điều kiện lọc, thứ tự xử lý và kết quả thay đổi như thế nào.
 
 > **KR:** SYNONYM은 테이블 별칭을 생성하는 객체이다.
 
@@ -127,3 +202,9 @@ Synonym là bí danh cho đối tượng (object / 객체), giúp không phải 
 CREATE [OR REPLACE] [PUBLIC] SYNONYM emp
 FOR scott.emp;
 ```
+
+Như vậy, **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** cần được nhớ bằng quan hệ giữa dữ liệu đầu vào, quy tắc xử lý và kết quả đầu ra. Khi ôn lại, hãy tự diễn đạt quan hệ đó rồi dùng nó làm điểm tựa cho section kế tiếp.
+
+Khi gom phần **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** lại, ta không cần nhớ các dòng như những mảnh rời: cú pháp cho thấy quy tắc được thực hiện trong truy vấn và ví dụ cho thấy quy tắc biến thành kết quả cụ thể. Hãy tự trả lời câu hỏi của section bằng một chuỗi **đối tượng → điều kiện → kết quả**; nếu thiếu một mắt xích, đó chính là điểm cần đọc lại trước khi chuyển phần.
+
+Như vậy, **7. SYNONYM (Synonym) (từ đồng nghĩa/bí danh đối tượng)** đã được đặt trong quan hệ giữa đầu vào, quy tắc xử lý và kết quả. Khi ôn lại, hãy tự diễn đạt ranh giới của nó rồi dùng ranh giới đó làm điểm nối sang bài tiếp theo.

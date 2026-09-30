@@ -195,6 +195,8 @@ minutes/hours/days
 Hiệu năng (performance / 성능) có thể degrade khi holding longer than hypothesis horizon.
 
 ## 14. Entry slippage
+Phần “14. Entry slippage” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Entry Slippage = Actual Fill - Decision/Reference Price
@@ -439,6 +441,8 @@ Nhánh học (track / 트랙) legitimate tín hiệu (signal / 신호) missed du
 Nếu exclude missed losers nhưng nhớ missed winners, bộ nhớ (memory / 메모리) độ lệch (bias / 편향) lớn.
 
 ## 37. Dữ liệu (data / 데이터) lược đồ (schema / 스키마) example
+Phần “37. Dữ liệu (data / 데이터) lược đồ (schema / 스키마) example” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 trade_id
@@ -473,6 +477,8 @@ Nếu mỗi tháng thay threshold theo recent winners, tiến trình (process / 
 Research changes cần versioned experiment riêng.
 
 ## 39. Hiệu năng (performance / 성능) attribution hierarchy
+Phần “39. Hiệu năng (performance / 성능) attribution hierarchy” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Portfolio P/L
@@ -519,6 +525,8 @@ Bạn cần có thể:
 → [13 — Advanced FX microstructure and order flow](./13_ADVANCED_FX_MICROSTRUCTURE_AND_ORDER_FLOW.md)
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [05 — Execution, brokers, costs and risk](./05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
 - [10 — Backtesting and point-in-time data](./10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)

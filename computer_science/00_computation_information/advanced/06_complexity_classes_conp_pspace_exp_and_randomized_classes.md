@@ -386,6 +386,8 @@ P ?= NP      chưa biết
 Randomized classes tạo trục khác về lỗi (error / 오류)/randomness. Không nên ép chúng vào một line duy nhất nếu chưa nói rõ known containment và giả định (assumption / 가정).
 
 ## 25. Checklist lập luận (reasoning / 추론)
+Phần “25. Checklist lập luận (reasoning / 추론)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Problem là decision, search hay optimization?

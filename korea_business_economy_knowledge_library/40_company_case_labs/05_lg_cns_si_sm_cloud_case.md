@@ -254,6 +254,8 @@ chi phí/giờ ↑
 
 ### Kịch bản cơ cấu tích cực
 
+Kịch bản này xem xét khi mix dịch vụ có giá trị cao và cloud/AI delivery cải thiện. Cần nối backlog với tỷ lệ chuyển thành doanh thu, margin và nhu cầu vốn lưu động.
+
 ```text
 nền SM định kỳ ổn định
 tỷ trọng cloud managed service ↑
@@ -309,5 +311,3 @@ Sau đó ánh xạ doanh thu của công ty vào ma trận. Nếu thông tin cô
 ## Liên kết
 
 Đọc cùng [34_digital_fintech_cloud_and_it_services](../34_digital_fintech_cloud_and_it_services.md), [12_labor_titles_compensation_and_workplace](../12_labor_titles_compensation_and_workplace.md), [13_business_culture_decision_making_and_communication](../13_business_culture_decision_making_and_communication.md), [09_disclosure_accounting_dart_kind](../09_disclosure_accounting_dart_kind.md) và [38_forensic_accounting_red_flags_and_earnings_quality](../38_forensic_accounting_red_flags_and_earnings_quality.md).
-
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

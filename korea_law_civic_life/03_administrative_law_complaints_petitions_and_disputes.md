@@ -74,6 +74,8 @@ Không phải mọi quyết định đều yêu cầu phải qua hành정심판 
 
 ## 5. Một mô hình tư duy (mental model / 사고 모델) về “đường đi của vấn đề”
 
+Sau khi phân biệt dịch vụ, 민원 và tranh chấp, ta cần một đường đi để chọn đúng kênh. Sơ đồ này giúp người mới bắt đầu từ loại vấn đề rồi mới quyết định hỏi, nộp hồ sơ hay dùng cơ chế phản đối có thời hạn.
+
 ```text
 thắc mắc thủ tục
 → hỏi cơ quan / 정부24 / FAQ
@@ -145,6 +147,8 @@ Sau đó mở luật trên `law.go.kr` và trang chính thức của cơ quan ba
 
 ## 9. Nguồn chính thức
 
+Các nguồn dưới đây dùng để kiểm tra thủ tục, thời hạn và căn cứ hiện hành. Hãy mở nguồn tương ứng với loại vấn đề trước khi viết 민원 hoặc đánh giá một 처분 cụ thể.
+
 - 정부24: https://www.gov.kr/
 - 국민신문고: https://www.epeople.go.kr/
 - 국민권익위원회: https://www.acrc.go.kr/
@@ -157,6 +161,4 @@ Sau đó mở luật trên `law.go.kr` và trang chính thức của cơ quan ba
 
 ## 10. Ranh giới của tài liệu
 
-Một quyết định hành chính cá nhân có thể liên quan thời hạn ngắn và hậu quả lớn. tệp (file / 파일) này cung cấp mô hình đọc và kênh tra cứu, không quyết định thay người đọc rằng một 처분 cụ thể có hợp pháp hay không.
-
-> **Bàn giao:** Sau **10. Ranh giới của tài liệu**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Một quyết định hành chính cá nhân có thể liên quan thời hạn ngắn và hậu quả lớn. File này cung cấp mô hình đọc và kênh tra cứu, không quyết định thay người đọc rằng một 처분 cụ thể có hợp pháp hay không.

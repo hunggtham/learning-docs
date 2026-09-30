@@ -552,6 +552,8 @@ Mỗi mũi tên có hết thời gian chờ (timeout / 타임아웃), hàng đ�
 
 ## Xem thêm
 
+Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
+
 - [DNS resolution internals](./dns_resolution_internals.md)
 - [IP routing, NAT và conntrack](./ip_routing_nat_conntrack.md)
 - [TCP, HTTP và TLS](./tcp_http_tls.md)

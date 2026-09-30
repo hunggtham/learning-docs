@@ -307,6 +307,8 @@ thì phạm vi (scope / 범위) chuyển sang DNS, TLS, proxy, firewall hoặc t
 
 ## Packet capture như bằng chứng cuối cùng
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 sudo tcpdump -ni any port 8080
 ```
@@ -354,5 +356,3 @@ Không cần kiểm tra từng bước nếu đã có bằng chứng (evidence /
 ## Kết nối kiến thức
 
 Chương này mở rộng [Networking, DNS, Sockets và Ports](./networking_dns_sockets_ports.md), liên hệ [File Descriptors](../01_filesystem/files_streams_descriptors.md), [Time/NTP](../05_system/time_clock_ntp.md), [Java Backend Incident Playbook](../09_production/java_backend_incident_playbook.md) và [Production Troubleshooting](../09_production/production_troubleshooting.md).
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [dns resolution internals](./dns_resolution_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

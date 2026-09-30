@@ -47,6 +47,8 @@ Vì vậy quản lý khóa thực chất là một phần của **quản lý dan
 
 ## Gỡ lỗi quá trình xác thực
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 ssh -vvv user@host
 ```
@@ -203,5 +205,3 @@ DNS / kết nối TCP
 ## Kết nối kiến thức
 
 SSH phụ thuộc trực tiếp vào [mạng](./networking_dns_sockets_ports.md), [người dùng và quyền truy cập](../03_identity/users_groups_permissions.md) cùng mô hình danh tính mật mã. Bảng câu lệnh thực hành nằm tại [Tham chiếu câu lệnh PuTTY/SSH Linux](../reference/putty_ssh_linux_server_commands.md).
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [dns resolution internals](./dns_resolution_internals.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

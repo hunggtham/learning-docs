@@ -79,6 +79,8 @@ Trong mối quan hệ, hai người có thể thật sự nhớ cùng một cu�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 sự kiện ban đầu
    ↓ encoding
@@ -99,6 +101,6 @@ Xem [[01_memory]], [[04_cognitive_biases_and_metacognition]], [[11_emotion_memor
 
 ## Nguồn đọc nền
 
-- Brassil M, O'Mahony C, Greene CM. *Do cognitive abilities reduce eyewitness susceptibility to the misinformation tác động (effect / 효과)? A systematic rà soát (review / 검토)*. Psychonomic Bulletin & rà soát (review / 검토), 2024. PMID: 38696106.
+Các nguồn này giúp kiểm tra claim về eyewitness, misinformation và false memory theo thiết kế nghiên cứu. Hãy phân biệt kết quả trong lab với khả năng khái quát sang bối cảnh pháp lý thực tế.
 
-> **Bàn giao:** Sau **Nguồn đọc nền**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 learning and conditioning](./00_learning_and_conditioning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- Brassil M, O'Mahony C, Greene CM. *Do cognitive abilities reduce eyewitness susceptibility to the misinformation effect? A systematic review*. Psychonomic Bulletin & Review, 2024. PMID: 38696106.

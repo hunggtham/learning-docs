@@ -339,6 +339,8 @@ Only subset experts active each đơn vị từ (token / 토큰), though bộ nh
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Residual stream = evolving token state
 Attention       = context routing/mixing
@@ -354,5 +356,3 @@ KV cache        = reuse current-context attention states during decode
 This chapter ties [Transformer](../06_deep_learning_architectures/05_transformer.md), [Attention](../06_deep_learning_architectures/04_attention.md), [Numerical Computation](../01_mathematical_foundations/07_numerical_computation.md) and later [AI Compute & Infrastructure](../17_ai_compute_and_infrastructure/).
 
 Xem tiếp: [Pretraining](./04_pretraining.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

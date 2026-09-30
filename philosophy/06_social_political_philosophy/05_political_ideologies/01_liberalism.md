@@ -61,6 +61,8 @@ Libertarianism thường được xem là một family có historical roots tron
 Liberalism cung cấp baseline tốt cho các chapter sau vì nó đặt burden of justification lên authority. [Conservatism](02_conservatism.md) sẽ challenge giả định (assumption / 가정) rằng abstract reason và universal principles đủ để redesign political thứ tự (order / 순서); [Socialism](03_socialism_and_social_democracy.md) sẽ challenge việc tập trung chủ yếu vào trạng thái (state / 상태) coercion mà không phân tích đầy đủ quyền sở hữu (ownership / 소유권) và workplace power.
 
 ## Sources
+Phần “Sources” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Liberalism”: https://plato.stanford.edu/entries/liberalism/
 - Stanford Encyclopedia of Philosophy, “Political Legitimacy”: https://plato.stanford.edu/entries/legitimacy/

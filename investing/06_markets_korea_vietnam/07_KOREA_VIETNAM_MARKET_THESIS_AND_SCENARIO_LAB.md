@@ -246,6 +246,8 @@ Một nhà phát triển (developer / 개발자) có NAV lớn vẫn có thể g
 
 ## 16. Bank–thuộc tính (property / 속성) vòng phản hồi (feedback loop / 피드백 루프)
 
+Vòng lặp ngân hàng–bất động sản nối collateral, credit, refinancing, sales và NPL. Hãy đọc sơ đồ theo chiều phản hồi để xác định cú sốc ban đầu đang được khuếch đại ở balance sheet hay ở demand.
+
 ```text
 Property sales ↓
 → developer cash ↓
@@ -511,6 +513,8 @@ Research phải nối tới cách sở hữu tài sản thực tế.
 
 ## 34. Dashboard theo nhịp thời gian
 
+Dashboard cần chia theo tốc độ cập nhật để không trộn tín hiệu tần suất cao với dữ liệu chậm. Phần dưới đây là lịch quan sát từ daily tới quarterly, mỗi nhịp phục vụ một loại quyết định khác nhau.
+
 **Hàng ngày:**
 
 ```text
@@ -596,6 +600,8 @@ Mục tiêu là xác định rally đến từ liquidity hay fundamentals.
 
 ## 38. Liên kết đọc tiếp
 
+Đây là điểm bàn giao từ market thesis lab sang playbook Korea/Vietnam, market research workflow, cross-border access và integrated cases. Chọn tài liệu theo lỗ hổng trong country → sector → company → valuation → liquidity chain rồi quay lại lab để cập nhật thesis.
+
 - [Korea Market Playbook](./01_KOREA_MARKET_PLAYBOOK.md)
 - [Vietnam Market Playbook](./02_VIETNAM_MARKET_PLAYBOOK.md)
 - [Cú sốc toàn cầu](./03_CROSS_MARKET_GLOBAL_SHOCKS.md)
@@ -621,5 +627,3 @@ Global shock / regime
 ```
 
 Nếu bỏ qua một mắt xích, rất dễ đúng câu chuyện lớn nhưng sai tài sản, sai thời điểm hoặc sai quy mô.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

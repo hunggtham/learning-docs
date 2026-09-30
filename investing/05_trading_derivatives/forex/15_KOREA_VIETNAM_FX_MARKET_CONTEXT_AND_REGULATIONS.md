@@ -26,6 +26,8 @@ Jurisdiction
 ## Part I — Korea
 
 ## 1. USD/KRW quote
+Phần “1. USD/KRW quote” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD/KRW = KRW per 1 USD
@@ -279,6 +281,8 @@ A chiến lược (strategy / 전략)'s session tác động (effect / 효과) m
 # Part II — Vietnam
 
 ## 18. USD/VND quote
+Phần “18. USD/VND quote” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD/VND = VND per 1 USD
@@ -556,6 +560,8 @@ whether amended/repealed/consolidated
 This is especially important because FX controls evolve.
 
 ## 40. Broker/sản phẩm (product / 제품) checklist for a Korea resident
+Phần “40. Broker/sản phẩm (product / 제품) checklist for a Korea resident” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Is this FX-margin, futures, CFD, or currency conversion?
@@ -568,6 +574,8 @@ What is the exact foreign counterparty?
 ```
 
 ## 41. Sản phẩm (product / 제품) checklist for a Vietnam resident
+Phần “41. Sản phẩm (product / 제품) checklist for a Vietnam resident” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 What is the lawful FX purpose?
@@ -624,6 +632,8 @@ After the full Forex đường dẫn (path / 경로), you should be able to expl
 14. Why Korea and Vietnam require jurisdiction-specific thị trường (market / 시장)/regulatory các mô hình (models / 모델들).
 
 ## Sources — Korea
+Phần “Sources — Korea” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Bank of Korea — FX Thị trường (market / 시장) Cấu trúc (structure / 구조) Improvement Portal: https://www.bok.or.kr/portal/main/contents.do?menuNo=201250
 - Bank of Korea — Improvement Measure of FX Thị trường (market / 시장) Cấu trúc (structure / 구조): https://www.bok.or.kr/eng/main/contents.do?menuNo=400416
@@ -635,6 +645,8 @@ After the full Forex đường dẫn (path / 경로), you should be able to expl
 - Bank of Korea — Foreign Exchange Giao dịch (transaction / 트랜잭션) Regulations / hiện tại (current / 현재) rules portal: https://www.bok.or.kr/portal/bbs/P0002014/view.do?menuNo=200402
 
 ## Sources — Vietnam
+Phần “Sources — Vietnam” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Trạng thái (state / 상태) Bank of Vietnam / National Legal Cơ sở dữ liệu (database / 데이터베이스) — Circular 02/2021/TT-NHNN and hiện tại (current / 현재) related legal texts: https://vbpl.moj.gov.vn/nganhangnhanuoc/Pages/vbpq-toanvan.aspx?ItemID=147142
 - Ordinance / legal khung phần mềm (framework / 프레임워크) on foreign exchange and implementing regulations via official national legal cơ sở dữ liệu (database / 데이터베이스): https://vbpl.moj.gov.vn/
@@ -642,6 +654,8 @@ After the full Forex đường dẫn (path / 경로), you should be able to expl
 - SBV Circular 72/2025/TT-NHNN — accounts for FX activities in Vietnam International Financial Center: https://vbpl.vn/TW/Pages/vbpq-toanvan.aspx?ItemID=185798
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [04 — Macro drivers, rates, carry and sessions](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 - [05 — Execution, brokers, costs and risk](./05_EXECUTION_BROKERS_COSTS_AND_RISK.md)

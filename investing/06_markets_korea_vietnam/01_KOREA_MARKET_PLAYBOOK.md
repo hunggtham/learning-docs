@@ -207,6 +207,8 @@ Theo dõi:
 
 ## 17. Tài trợ dự án
 
+Project finance cần được đọc qua presales, collateral, refinancing, completion risk và cash flow thay vì chỉ qua tổng vốn đầu tư. Phần này nối bất động sản với ngân hàng và thị trường vốn.
+
 **Tài trợ dự án bất động sản (project finance, PF)** có thể tạo rủi ro cho nhà phát triển, công ty chứng khoán, ngân hàng tiết kiệm và bên cho vay khác.
 
 Cần xem:
@@ -221,6 +223,8 @@ Rủi ro hoàn thành
 ```
 
 ## 18. Cơ chế truyền dẫn tín dụng
+
+Tín dụng truyền từ policy và funding cost tới ngân hàng, doanh nghiệp, hộ gia đình và asset prices. Hãy dùng sơ đồ để xác định nút thắt nằm ở supply of credit, demand hay collateral.
 
 ```text
 Chi phí nguồn vốn ↑
@@ -253,6 +257,8 @@ Xe điện không chỉ là tăng sản lượng. Cần xem chi phí pin, trợ 
 # Phần VIII — Pin
 
 ## 21. Chuỗi giá trị pin
+
+Chuỗi pin nối khoáng sản, vật liệu, cell, pack, EV demand và policy. Mục tiêu là xác định phần value capture của từng doanh nghiệp và rủi ro chu kỳ/giá hàng hóa.
 
 ```text
 Lithium / Nickel
@@ -346,6 +352,8 @@ Cần phân tích theo xác suất, thời gian tiền mặt còn đủ sử d�
 
 ## 31. Lọc dầu
 
+Refining economics phụ thuộc crack spread, utilization, crude slate, inventory và demand sản phẩm. Đọc phần này như một bài về margin chu kỳ thay vì giả định giá dầu tăng luôn tốt cho nhà máy lọc dầu.
+
 **Chênh lệch lọc dầu (crack spread)**, tỷ lệ sử dụng, tồn kho dầu và nhu cầu sản phẩm là các biến chính.
 
 ## 32. Hóa dầu
@@ -400,6 +408,8 @@ P/B đặc biệt hữu ích với doanh nghiệp tài chính nhưng phải đ�
 
 ## 41. Chiết khấu quản trị
 
+Governance discount phản ánh rủi ro quyền lợi cổ đông thiểu số, capital allocation và related-party transactions. Nó cần được nối với bằng chứng hành vi chứ không chỉ với đánh giá cảm tính về lãnh đạo.
+
 **Chiết khấu quản trị (governance discount)** có thể xuất hiện khi sở hữu chéo, cổ đông kiểm soát hoặc lịch sử phân bổ vốn làm nhà đầu tư yêu cầu mức định giá thấp hơn.
 
 # Phần XVI — Phân tích sự kiện
@@ -450,6 +460,8 @@ Lợi suất Mỹ
 
 ## 45. Hằng ngày
 
+Theo dõi hàng ngày nên tập trung vào price, flow, breadth, FX và event risk; không cố cập nhật những biến chậm như earnings thesis bằng nhiễu trong ngày.
+
 ```text
 KOSPI / KOSDAQ
 Độ rộng thị trường
@@ -462,6 +474,8 @@ Bối cảnh công nghệ Mỹ / SOX
 ```
 
 ## 46. Hằng tuần / hằng tháng
+
+Nhịp tuần/tháng phù hợp để cập nhật earnings revisions, credit, macro, sector breadth và liquidity. Đây là nhịp nối giữa tín hiệu nhanh và thesis dài hạn.
 
 ```text
 Xuất khẩu
@@ -477,6 +491,8 @@ Tin tín dụng / PF
 
 ## 47. Một cổ phiếu Hàn Quốc
 
+Mẫu nghiên cứu một cổ phiếu Hàn Quốc phải đi từ exposure ngành và tiền tệ tới driver doanh thu, bảng cân đối, valuation, foreign flow và market access.
+
 ```text
 Mô hình kinh doanh
 → xuất khẩu / nội địa
@@ -491,6 +507,8 @@ Mô hình kinh doanh
 ```
 
 ## 48. Luận điểm toàn thị trường
+
+Luận điểm toàn thị trường cần tổng hợp regime, policy, valuation, breadth, currency và liquidity trước khi kết luận bullish/bearish. Mỗi kết luận phải có điều kiện xác nhận và vô hiệu hóa.
 
 ```text
 Chế độ toàn cầu
@@ -517,5 +535,3 @@ Thương mại toàn cầu
 ```
 
 Không nên dùng một tiêu đề tin tức về Fed, Trung Quốc hay bán dẫn để kết luận toàn bộ thị trường. Luôn theo dõi cơ chế truyền dẫn tới từng ngành và từng bảng cân đối doanh nghiệp.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

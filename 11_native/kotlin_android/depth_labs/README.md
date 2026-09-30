@@ -73,10 +73,9 @@ artifact hoặc metadata nào thật sự khác trước?
 
 Nếu chỉ biết tên API nhưng không trả lời được các câu trên, kiến thức vẫn đang ở mức hiện thực (implementation / 구현) chứ chưa tới mức kỹ thuật (engineering / 엔지니어링) lập luận (reasoning / 추론).
 
+## Mental model chung
+Phần này nối mạch Android vừa học với “Mental model chung”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
-> **Chuyển mạch:** Từ **Quy tắc học**, ta sang **mô hình tư duy (mental model / 사고 모델) chung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Mô hình tư duy (mental model / 사고 모델) chung
 
 ```text
 Requirement
@@ -93,6 +92,4 @@ Requirement
 -> Release / Recovery
 ```
 
-Đây là lớp kiến thức cuối cùng trước khi chuyển từ “biết Android” sang “có thể giải thích và vận hành một hệ thống Android môi trường vận hành (production / 운영 환경)”.
-
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델) chung**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đây là lớp kiến thức cuối cùng trước khi chuyển từ “biết Android” sang “có thể giải thích và vận hành một hệ thống Android production”.

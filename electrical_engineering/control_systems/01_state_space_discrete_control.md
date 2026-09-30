@@ -33,6 +33,8 @@ Nếu vòng điều khiển (control loop / 제어 루프) chạy mỗi 1 ms nh�
 > **Chuyển mạch:** Từ **4. Worked lập luận (reasoning / 추론): actuator deadline**, ta sang **5. xác minh (verification / 확인)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. xác minh (verification / 확인)
+Phần “5. xác minh (verification / 확인)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - pole placement ở nominal và parameter corners;
 - disturbance/noise injection;

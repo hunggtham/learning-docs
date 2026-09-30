@@ -5,6 +5,8 @@ Mô-đun (module / 모듈) đến đây đã xây mô hình tư duy (mental mode
 Prerequisite nên là [Marx: alienation, history, class and ideology](01_marx_alienation_history_class_and_ideology.md), [Marxian political economy](02_marxian_political_economy.md) và [Lenin](04_lenin_party_state_revolution_and_imperialism.md). Khi primary văn bản (text / 텍스트) khó, quay lại chapter giải thích cơ chế (mechanism / 메커니즘) thay vì tra một quotation rời khỏi ngữ cảnh (context / 맥락).
 
 ## 1. Đừng bắt đầu bằng *Capital* từ trang đầu rồi cố đi thẳng đến cuối
+Phần “1. Đừng bắt đầu bằng *Capital* từ trang đầu rồi cố đi thẳng đến cuối” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 *Capital, Volume I* là văn bản (text / 텍스트) trung tâm nhưng không phải entry điểm (point / 지점) tối ưu nếu chưa biết Marx đang hỏi gì. Chapter đầu về commodity rất dense vì Marx đi từ commodity form sang giá trị (value / 값) form, money và fetishism bằng vocabulary vừa economic vừa philosophical. Người đọc dễ memorise `use-value / exchange-value` mà không hiểu tại sao ông bắt đầu từ commodity.
 
@@ -31,6 +33,8 @@ Ranh giới (boundary / 경계): *The German Ideology* có publication lịch s�
 Primary văn bản (text / 텍스트) entry: https://www.marxists.org/archive/marx/works/1845/german-ideology/
 
 ## 4. Entry 3 — *The Communist Manifesto*
+Phần “4. Entry 3 — *The Communist Manifesto*” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 *Manifesto* rất dễ đọc nhưng cũng rất dễ bị dùng sai. Đây là một **political manifesto**, không phải full exposition của Marxian economics. Nó hữu ích để thấy historical narrative về bourgeois transformation, lớp (class / 클래스) xung đột (conflict / 충돌), world thị trường (market / 시장) và revolutionary politics, nhưng không thể thay *Capital* cho lý thuyết (theory / 이론) of giá trị (value / 값).
 
@@ -146,6 +150,8 @@ Nếu ba tầng bị nhập lại, việc học Marxism–Leninism rất nhanh t
 Từ đây có hai hướng đi hợp lý. Muốn mở rộng conceptual comparison, quay lại [Comparative political economy](10_comparative_political_economy.md). Muốn đi sang Việt Nam, đọc lại [Vietnam context](07_vietnam_context.md) rồi nối với chuẩn gốc (canonical / 정본) Vietnam lịch sử (history / 이력) khi lĩnh vực (domain / 도메인) đó có chapter twentieth-century political-intellectual lịch sử (history / 이력).
 
 ## Scholarly companion
+Phần “Scholarly companion” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Analytical Marxism”: https://plato.stanford.edu/entries/marxism-analytical/

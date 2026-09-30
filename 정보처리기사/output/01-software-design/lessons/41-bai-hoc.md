@@ -1,67 +1,103 @@
-# 11. 디자인 패턴 (Design Pattern)
+# 4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **11. 디자인 패턴 (Design Pattern)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-디자인, 패턴
+관계형, 데이터베이스, 구조
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **4. 디자인 패턴 (Design Patterns - GoF)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **14. 미들웨어 (Middleware)**에서 만든 기준을 이어받아 **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **11. 디자인 패턴 (Design Pattern)** và nối nó với **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
----
-
-## 11. 디자인 패턴 (Design Pattern)
-**개념 (Khái niệm):** 설계 시 참조할 수 있는 전형적인 해결 방식 (Các mẫu giải pháp tiêu chuẩn dùng tham khảo khi thiết kế phần mềm). GoF (Gang of Four)가 23개로 체계화.
-💡 **Mẹo ghi nhớ:** "바퀴를 다시 발명하지 마라 (Don't reinvent the wheel)" - Đừng phát minh lại bánh xe, hãy dùng các mẫu đã được kiểm chứng.
-
-*   **장단점 (Ưu & Nhược điểm):**
-    *   장점: 구조 파악 용이, 의사소통 원활, 생산성 향상 (Dễ nắm cấu trúc, giao tiếp tốt, tăng năng suất).
-    *   단점: **초기 투자 비용 부담**, 객체지향 전용 (Tốn chi phí/thời gian học ban đầu, chỉ hợp với Hướng đối tượng).
-
-### 11.1 생성 패턴 (Creational - 5개)
-객체 생성 캡슐화 (Đóng gói quá trình tạo đối tượng).
-1.  **추상 팩토리 (Abstract Factory):** 연관된 객체 그룹 생성 (Tạo nhóm đối tượng liên quan).
-2.  **빌더 (Builder):** 생성 과정과 표현 방법 분리 (Tách quá trình xây dựng và biểu diễn).
-3.  **팩토리 메소드 (Factory Method):** 객체 생성을 서브 클래스에 위임, 가상 생성자 (Giao việc tạo đối tượng cho lớp con).
-4.  **프로토타입 (Prototype):** 원본 객체 복제 (Nhân bản đối tượng nguyên mẫu Clone).
-5.  **싱글톤 (Singleton):** 인스턴스가 하나뿐임을 보장 (Đảm bảo chỉ có 1 instance duy nhất).
-
-### 11.2 구조 패턴 (Structural - 7개)
-객체 조합으로 더 큰 구조 생성 (Kết hợp đối tượng thành cấu trúc lớn hơn).
-1.  **어댑터 (Adapter):** 호환 안 되는 인터페이스 변환 (Chuyển đổi interface không tương thích).
-2.  **브리지 (Bridge):** 구현과 추상층 분리 (Tách biệt phần triển khai và phần trừu tượng).
-3.  **컴포지트 (Composite):** 트리 구조, 단일/복합 객체 동일하게 다룸 (Cấu trúc cây, xử lý đối tượng đơn và phức như nhau).
-4.  **데코레이터 (Decorator):** 동적으로 기능 덧붙임 (Thêm chức năng linh hoạt bằng cách bọc đối tượng).
-5.  **퍼싸드 (Facade):** 복잡한 서브 시스템 위에 통합 인터페이스(Wrapper) 제공 (Tạo mặt tiền/giao diện chung đơn giản cho hệ thống phức tạp).
-6.  **플라이웨이트 (Flyweight):** 인스턴스 공유로 메모리 절약 (Chia sẻ đối tượng để tiết kiệm bộ nhớ).
-7.  **프록시 (Proxy):** 접근 어려운 객체를 대리 수행 (Đại diện/ủy quyền truy cập cho đối tượng khác).
-
-### 11.3 행위 패턴 (Behavioral - 11개)
-객체 간 상호작용 및 책임 분배 (Tương tác và phân chia trách nhiệm giữa các đối tượng).
-1.  **책임 연쇄 (Chain of Responsibility):** 고리를 따라 책임 넘김 (Truyền yêu cầu theo chuỗi xử lý).
-2.  **커맨드 (Command):** 요청을 객체로 캡슐화 (로그, Undo) (Đóng gói yêu cầu thành đối tượng, tiện cho Undo/Log).
-3.  **인터프리터 (Interpreter):** 언어 문법 정의 (Định nghĩa cú pháp ngôn ngữ).
-4.  **반복자 (Iterator):** 내부 노출 없이 순차 접근 (Truy cập tuần tự không lộ cấu trúc).
-5.  **중재자 (Mediator):** 복잡한 상호작용을 통제/지시 (Điều phối viên trung gian để giảm phụ thuộc chéo).
-6.  **메멘토 (Memento):** 상태 스냅샷 저장/복원 (Lưu trạng thái để Undo/Khôi phục).
-7.  **옵서버 (Observer):** 상태 변화를 구독자에게 전파 (Publish/Subscribe, thông báo khi có thay đổi).
-8.  **상태 (State):** 상태에 따라 다른 동작 (Hành vi thay đổi theo trạng thái).
-9.  **전략 (Strategy):** 알고리즘 캡슐화하여 교체 가능 (Đóng gói thuật toán, dễ dàng hoán đổi).
-10. **템플릿 메소드 (Template Method):** 상위가 골격, 하위가 세부 구현 (Lớp cha tạo khung, lớp con điền chi tiết).
-11. **방문자 (Visitor):** 처리 기능을 분리하여 방문 수행 (Tách logic xử lý ra khỏi cấu trúc dữ liệu, đi "thăm" từng phần tử).
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** và nối nó với **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
+
+## 4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)
+
+Sau khi đã đặt nền bằng **14. 미들웨어 (Middleware)**, ta chuyển sang **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)**. Đây là mắt xích 41/69 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Ta bắt đầu phần nội dung bằng **릴레이션 (Relation / Table) 구성 요소**. Hãy xác định **릴레이션 (Relation / Table) 구성 요소** đang giải quyết câu hỏi nào, thành phần nào cần chú ý và giới hạn nào phải giữ trước khi chuyển sang các chi tiết nguồn.
+
+### 릴레이션 (Relation / Table) 구성 요소
+
+Phần nguồn của **릴레이션 (Relation / Table) 구성 요소** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “릴레이션 (Relation / Table) 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **튜플 (Tuple):** 행(Row), 레코드(Record).
+  - 튜플의 수 = **카디널리티 (Cardinality)** = 기수. (Số lượng dòng).
+- **속성 (Attribute):** 열(Column), 필드(Field).
+  - 속성의 수 = **디그리 (Degree)** = 차수. (Số lượng cột).
+- **도메인 (Domain):** 하나의 속성이 취할 수 있는 같은 타입의 원자값들의 집합. (Tập hợp các giá trị hợp lệ của 1 cột. VD: Cột 'Giới tính' có Domain là 'Nam' và 'Nữ').
+- 💡 **Mẹo ghi nhớ (Mnemonic):** **TCTD** (Tuple-Card, Thuộc-Deg): **Tính Cẩn Thận Đi** -> Tuple đi với Cardinality, Cột(속성) đi với Degree.
+
+Với **릴레이션 (Relation / Table) 구성 요소**, hãy đọc các công thức như một chuỗi lập luận: đại lượng nào được đưa vào, phép biến đổi nói lên điều gì và kết quả dùng để quyết định ở đâu. Sau đó mới quay lại các dòng ghi nhớ hoặc ví dụ.
+
+Ta vừa chốt **릴레이션 (Relation / Table) 구성 요소** bằng các điều kiện và điểm phân biệt của nó. Từ tiêu chí đó, ta chuyển sang **릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)** để xem câu hỏi được tiếp tục, mở rộng hay đối chiếu ra sao.
+Đoạn **릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)** trả lời một phần cụ thể của vấn đề đang học. Hãy dùng các ý sau để kiểm tra cách khái niệm này vận hành, thay vì chỉ ghi nhớ tên gọi.
+
+### 릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)
+
+Các ý ngay dưới **릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+
+Phần “릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 튜플의 유일성: 한 릴레이션에 포함된 튜플들은 모두 상이하다. (Không có 2 dòng nào hoàn toàn giống nhau).
+- 튜플의 무순서: 튜플 사이에는 순서가 없다. (Thứ tự các dòng không quan trọng).
+- 속성의 무순서: 속성들 간의 순서는 중요하지 않다. (Thứ tự các cột không quan trọng).
+- 속성값의 원자성: 속성은 더 이상 쪼갤 수 없는 원자값만 저장한다. (Giá trị mỗi ô phải là nguyên tử, không chứa mảng hay list).
+
+Các bullet của **릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Sau khi đọc **릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)**, đừng bắt đầu lại từ số không. **키(Key)의 종류 (Các loại Khóa)** dựa trên điểm vừa chốt để làm rõ trường hợp hoặc cơ chế tiếp theo; hãy đối chiếu hai phần trước khi ghi nhớ riêng từng ý.
+Ở đoạn **키(Key)의 종류 (Các loại Khóa)**, ta tập trung vào vai trò và giới hạn riêng của nó trong câu hỏi chung; các ý bên dưới sẽ giải thích vì sao nó cần xuất hiện ở bước này.
+
+### 키(Key)의 종류 (Các loại Khóa)
+
+Bây giờ ta đi vào nội dung của **키(Key)의 종류 (Các loại Khóa)**. Mỗi bullet hoặc bảng bên dưới nên được đọc như bằng chứng cho phạm vi và cách dùng vừa định vị, không phải như danh sách tách rời.
+
+Phần “키(Key)의 종류 (Các loại Khóa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **후보키 (Candidate Key):** 튜플을 유일하게 식별하기 위해 사용하는 속성. **유일성**과 **최소성**을 모두 만족해야 함. (Khóa ứng viên: Duy nhất và Ít thuộc tính nhất).
+- **기본키 (Primary Key - PK):** 후보키 중에서 선택한 주키. NULL 값을 가질 수 없고 중복 불가. (Khóa chính: Chọn từ Candidate Key, cấm NULL).
+- **대체키 (Alternate Key):** 후보키가 둘 이상일 때 기본키를 제외한 나머지 후보키. (Khóa thay thế: Khóa ứng viên không được chọn làm PK).
+- **슈퍼키 (Super Key):** 튜플을 구별할 수 있는 속성들의 집합. 유일성은 만족하지만, 최소성은 만족하지 않음. (Siêu khóa: Gom nhiều cột lại để phân biệt, dư thừa cột cũng không sao).
+- **외래키 (Foreign Key - FK):** 참조되는 릴레이션의 기본키와 대응되는 속성. (Khóa ngoại: Dùng để liên kết 2 bảng).
+
+Các bullet của **키(Key)의 종류 (Các loại Khóa)** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+**키(Key)의 종류 (Các loại Khóa)** vừa cho ta cách đặt câu hỏi. Bây giờ **무결성 (Integrity / Tính toàn vẹn) 제약조건** cung cấp bước tiếp theo trong việc trả lời, vì vậy mối nối giữa hai đoạn quan trọng hơn việc học chúng như hai danh sách rời.
+Với **무결성 (Integrity / Tính toàn vẹn) 제약조건**, mục tiêu đọc là nhận ra đối tượng, điều kiện và phạm vi áp dụng trước khi đi tiếp; phần nguồn dưới đây cung cấp các chi tiết cho mục tiêu đó.
+
+### 무결성 (Integrity / Tính toàn vẹn) 제약조건
+
+Phần nguồn của **무결성 (Integrity / Tính toàn vẹn) 제약조건** sẽ lấp đầy khung giải thích vừa mở. Khi đọc, hãy chú ý dấu hiệu nhận biết, điều kiện áp dụng và hệ quả trước khi chuyển sang đoạn bàn giao.
+
+Phần “무결성 (Integrity / Tính toàn vẹn) 제약조건” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **개체 무결성 (Entity Integrity):** 기본키는 NULL이나 중복값을 가질 수 없다. (PK không được NULL hoặc trùng lặp).
+- **참조 무결성 (Referential Integrity):** 외래키 값은 NULL이거나 참조 릴레이션의 기본키 값과 동일해야 한다. (FK phải có giá trị tồn tại trong PK bảng mẹ, hoặc NULL).
+- **도메인 무결성 (Domain Integrity):** 특정 속성의 값이 그 속성이 정의된 도메인에 속한 값이어야 한다. (Giá trị phải nằm trong khoảng/định dạng hợp lệ).
+- 💡 **Mẹo ghi nhớ (Mnemonic):** **TTD** (Thực - Tham - Domain): **Thích Thì Dùng**.
+
+Các bullet của **무결성 (Integrity / Tính toàn vẹn) 제약조건** đang nén nhiều ý thành các dấu hiệu nhận biết. Hãy gom chúng thành một câu hoàn chỉnh gồm đối tượng, điều kiện và hệ quả; đó là cách biến ghi chú nguồn thành hiểu biết có thể dùng lại.
+
+Với **무결성 (Integrity / Tính toàn vẹn) 제약조건**, ta đã đi từ tên gọi và dấu hiệu nhận biết đến cách đặt nó trong mạch kiến thức. Hãy tự nói lại điểm chính bằng một câu có đủ đối tượng, điều kiện và giới hạn trước khi chuyển mục.
+
+Ta có thể khép mục **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

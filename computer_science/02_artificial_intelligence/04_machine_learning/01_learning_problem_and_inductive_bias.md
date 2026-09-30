@@ -479,6 +479,8 @@ Mô hình (model / 모델) selection should follow bài toán (problem / 문제)
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Finite data cannot uniquely determine future behavior.
 Inductive bias chooses which explanation to prefer.
@@ -514,5 +516,3 @@ Kiến trúc (architecture / 아키텍처) encodes strong các giả định (as
 Inductive độ lệch (bias / 편향) connects Statistics, tối ưu hóa (optimization / 최적화) and mô hình (model / 모델) kiến trúc (architecture / 아키텍처). Every thuật toán (algorithm / 알고리즘) chapter later should be read as: **what các giả định (assumptions / 가정들) does this phương thức (method / 메서드) encode, and when are those các giả định (assumptions / 가정들) useful or dangerous?**
 
 Xem tiếp: [Data, Features and Labels](./02_data_features_and_labels.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

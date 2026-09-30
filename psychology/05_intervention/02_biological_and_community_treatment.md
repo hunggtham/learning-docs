@@ -205,6 +205,8 @@ family / work / community
 
 ## 24. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Assessment + formulation
         ↓
@@ -224,5 +226,3 @@ Treatment tốt là quá trình cập nhật (update / 업데이트) dựa trên
 ## Kết nối kiến thức
 
 Đọc cùng [[00_psychotherapy_and_change]], [[01_cbt_behavioral_and_third_wave]], [[03_psychodynamic_humanistic_and_systemic_therapy]], [[../04_mental_health/01_assessment_and_diagnosis]], [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]], [[../06_applied/13_placebo_nocebo_expectation_and_context]] và [[../06_applied/22_career_vocational_psychology_and_person_environment_fit]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychotherapy and change](./00_psychotherapy_and_change.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

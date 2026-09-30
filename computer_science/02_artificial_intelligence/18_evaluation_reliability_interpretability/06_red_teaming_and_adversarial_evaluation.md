@@ -180,6 +180,8 @@ Do not perform destructive real-world actions just to kiểm thử (test / 테�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Red teaming = adversarial search over the whole AI system, guided by a threat model and impact.
 ```
@@ -201,5 +203,3 @@ Các mô hình (models / 모델들), prompts, tools và attackers thay đổi (c
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Robustness](./03_robustness_and_distribution_shift.md), [AI Testing](./05_ai_testing_and_behavioral_evaluation.md), [Reliable Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md) và [AI Safety/Security](../19_ai_safety_security_alignment/README.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

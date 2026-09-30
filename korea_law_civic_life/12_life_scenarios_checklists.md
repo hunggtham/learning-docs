@@ -30,6 +30,8 @@ Mục tiêu của checklist là xác định đúng loại tranh chấp và ch�
 
 ## 2. Làm overtime nhưng không hiểu cách tính
 
+Khi đã có hồ sơ lương, bước tiếp theo là phân loại chính xác giờ làm trước khi nhân hệ số. Checklist này nối lịch làm việc, loại giờ, mức lương chuẩn và ngoại lệ pháp luật.
+
 ```text
 1. lấy lịch làm việc thực tế
 2. tách 소정근로시간 và thời gian vượt
@@ -44,6 +46,8 @@ Không dùng một phép nhân duy nhất trước khi phân loại giờ làm.
 
 ## 3. Bị thông báo nghỉ việc
 
+Một thông báo nghỉ việc chỉ trở thành vấn đề pháp lý sau khi xác định bản chất và ngày hiệu lực. Hãy dùng các câu hỏi dưới đây để bảo toàn chứng cứ và deadline trước khi ký hoặc trả lời.
+
 ```text
 1. văn bản là 해고, 권고사직 hay 계약만료?
 2. có 서면통지 không?
@@ -57,6 +61,8 @@ Không dùng một phép nhân duy nhất trước khi phân loại giờ làm.
 Giữ bản gốc email, messenger và văn bản HR.
 
 ## 4. Chuẩn bị ký 월세
+
+Trước khi chuyển tiền thuê, cần kiểm tra cả người có quyền ký, khoản tiền, điều khoản đặc biệt và bước đăng ký sau khi nhận nhà. Checklist đi theo thứ tự từ quyền sở hữu tới bằng chứng thanh toán.
 
 ```text
 1. 확인 등기부등본
@@ -87,6 +93,8 @@ Không dùng checklist này để kết luận “an toàn”. Nó chỉ cho bi�
 
 ## 6. Chủ nhà không trả lại 보증금
 
+Tranh chấp tiền đặt cọc phụ thuộc vào thời điểm chấm dứt, tình trạng đăng ký và chứng cứ yêu cầu hoàn trả. Hãy kiểm tra từng mốc trước khi chọn biện pháp pháp lý.
+
 ```text
 1. hợp đồng đã chấm dứt hợp lệ chưa?
 2. đã thông báo trả nhà bằng chứng cứ chưa?
@@ -99,6 +107,8 @@ Không dùng checklist này để kết luận “an toàn”. Nó chỉ cho bi�
 Nếu số tiền lớn, nên kiểm tra cơ chế pháp lý chính thức sớm thay vì kéo dài thương lượng không có deadline.
 
 ## 7. Nhận giấy phạt hoặc giấy từ cơ quan nhà nước
+
+Đừng bắt đầu bằng việc dịch toàn bộ văn bản. Trước hết hãy trích các trường thông tin quyết định nghĩa vụ, số tiền, deadline và quyền phản đối.
 
 ```text
 제목
@@ -116,6 +126,8 @@ Sau đó mở luật và trang của cơ quan. Không trả lời chỉ dựa tr
 
 ## 8. Cần một giấy chứng nhận hành chính
 
+Mục tiêu của tình huống này là tìm đúng tên giấy tờ và đúng cơ quan cấp, vì nhiều giấy có tên gần giống nhưng giá trị khác nhau. Đi theo các bước từ từ khóa tiếng Hàn tới phương thức nhận và thời gian xử lý.
+
 ```text
 1. tìm tên tiếng Hàn chính xác
 2. search trên 정부24
@@ -129,6 +141,8 @@ Ví dụ các từ thường gặp: `증명서`, `확인서`, `납세증명`, `�
 
 ## 9. Không biết 민원 gửi cơ quan nào
 
+Khi chưa biết cơ quan, hãy phân loại vấn đề trước rồi mới chọn cổng gửi. Cách này tránh việc gửi một yêu cầu chung chung và bỏ sót deadline của thủ tục chuyên biệt.
+
 ```text
 1. xác định vấn đề thuộc bộ/ngành nào
 2. tìm 담당기관 trên gov.kr
@@ -140,6 +154,8 @@ Ví dụ các từ thường gặp: `증명서`, `확인서`, `납세증명`, `�
 Không giả định gửi 국민신문고 sẽ “đóng băng” mọi thời hạn khác.
 
 ## 10. Visa sắp hết hạn
+
+Gia hạn visa là bài toán deadline và route, không chỉ là điền một mẫu đơn. Checklist này giúp xác định tư cách hiện tại, loại thủ tục và nguồn chính thức cần kiểm tra trong ngày nộp.
 
 ```text
 1. xác nhận 체류만료일
@@ -169,6 +185,8 @@ Sau đó kiểm tra 4대보험 và thuế.
 
 ## 12. Muốn kiểm tra 국민연금 có đóng đúng không
 
+Đối chiếu bảo hiểm cần bắt đầu từ thời gian làm việc và trạng thái tham gia, rồi mới hỏi khoản hoàn trả hoặc quyền lợi. Hãy lưu bản ghi từ NPS để so sánh với hợp đồng và bảng lương.
+
 ```text
 1. vào NPS hoặc xin 가입내역
 2. đối chiếu thời gian làm việc
@@ -179,6 +197,8 @@ Sau đó kiểm tra 4대보험 và thuế.
 
 ## 13. Muốn kiểm tra 건강보험
 
+Bảo hiểm y tế phụ thuộc loại tham gia, người phụ thuộc và dữ liệu cư trú. Các bước sau giúp tách lỗi về tư cách, địa chỉ, phí và nợ trước khi liên hệ NHIS.
+
 ```text
 1. 직장가입자 hay 지역가입자?
 2. có 피부양자 không?
@@ -188,6 +208,8 @@ Sau đó kiểm tra 4대보험 và thuế.
 ```
 
 ## 14. Giao dịch online không được hoàn tiền
+
+Muốn đánh giá quyền hoàn tiền, cần xác định loại hàng, thời điểm và điều khoản trước khi kết luận. Checklist này nối chứng cứ giao dịch với luật thương mại điện tử và kênh bảo vệ người tiêu dùng.
 
 ```text
 1. loại hàng/dịch vụ
@@ -202,6 +224,8 @@ Sau đó kiểm tra 4대보험 và thuế.
 
 ## 15. Nghi ngờ giao dịch ngân hàng lạ
 
+Trong nghi ngờ gian lận, ưu tiên đầu tiên là chặn dòng tiền và bảo toàn bằng chứng. Sau đó mới xử lý báo cáo, thông tin tín dụng và thay đổi thông tin xác thực.
+
 ```text
 1. khóa thẻ/tài khoản
 2. gọi ngân hàng
@@ -214,6 +238,8 @@ Sau đó kiểm tra 4대보험 và thuế.
 Với `보이스피싱`, ưu tiên ngăn dòng tiền trước.
 
 ## 16. Chuẩn bị xin F-5
+
+F-5 có nhiều route và điều kiện chi tiết, nên checklist phải bắt đầu từ đúng loại hồ sơ chứ không từ một danh sách truyền miệng. Kiểm tra luật, phụ lục và yêu cầu hiện hành theo ngày nộp.
 
 ```text
 1. xác định đúng F-5 세부유형
@@ -229,6 +255,8 @@ Không lấy điều kiện F-5 của một người khác làm điều kiện c
 
 ## 17. Chuẩn bị 귀화
 
+Hồ sơ quốc tịch có hậu quả lâu dài và yêu cầu khác nhau theo route. Các bước sau giúp tách loại 귀화, căn cứ luật, yêu cầu ngôn ngữ và nguồn xác nhận trước khi chuẩn bị giấy tờ.
+
 ```text
 1. xác định 일반/간이/특별귀화 route
 2. đọc 국적법 đang hiệu lực vào ngày nộp
@@ -242,5 +270,3 @@ Quốc tịch là lĩnh vực có hậu quả lâu dài, nên không dựa vào 
 ## 18. Cách dùng tệp (file / 파일) này
 
 Mỗi checklist là **đường dẫn nghiên cứu**, không phải câu trả lời pháp lý. Sau khi đi hết checklist, bạn mới có dữ liệu đủ tốt để hỏi cơ quan, tư vấn viên hoặc luật sư một câu hỏi chính xác.
-
-> **Bàn giao:** Sau **18. Cách dùng tệp (file / 파일) này**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

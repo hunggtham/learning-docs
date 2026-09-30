@@ -19,6 +19,8 @@
 ---
 
 ## 핵심 096: 제어 데이터 (Control Data / Dữ liệu điều khiển)
+Phần “핵심 096: 제어 데이터 (Control Data / Dữ liệu điều khiển)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제어장치가 제어 신호를 발생하기 위한 자료로서, CPU가 특정한 메이저 상태와 타이밍 상태에 있을 때 제어 자료에 따른 제어 규칙에 의해 제어 신호가 발생한다. 
   (Dữ liệu để bộ điều khiển tạo ra tín hiệu điều khiển. Dựa trên trạng thái chính và trạng thái thời gian của CPU.)
@@ -53,12 +55,16 @@
 | 구성 (Cấu tạo) | 하드웨어 (Phần cứng) | 소프트웨어 (Phần mềm) |
 
 ### 마이크로 프로그램 (Micro-program)
+Phần “마이크로 프로그램 (Micro-program)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 내부 제어신호를 발생하는 여러 가지 마이크로 인스트럭션으로 작성된 것으로, 보통 **ROM**에 저장되어 있습니다.
   (Gồm các vi lệnh tạo tín hiệu điều khiển, thường lưu trong ROM.)
 - 제어 기억장치의 용량을 줄일 수 있다. (Giảm dung lượng bộ nhớ điều khiển.)
 - 마이크로 명령어의 코드화된 비트들을 해독하기 위한 지연이 발생한다. (Có độ trễ do phải giải mã các bit của vi lệnh.)
 
 ### 나노 명령 (Nano Instruction)
+Phần “나노 명령 (Nano Instruction)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 나노 메모리(Nano Memory)라는 낮은 레벨의 메모리에 저장된 마이크로 명령. (Vi lệnh lưu ở bộ nhớ cấp thấp gọi là Nano Memory.)
 - 수직 마이크로 명령을 수행하는 제어기에서 디코더를 ROM(나노 메모리)으로 대치하여 두 메모리 레벨로 구성한다.
   (Thay thế bộ giải mã bằng ROM 2 cấp để xử lý vi lệnh dọc.)
@@ -70,6 +76,8 @@
 ---
 
 ## 핵심 098: 마이크로 명령의 형식 (Format of Micro Instructions / Định dạng vi lệnh)
+Phần “핵심 098: 마이크로 명령의 형식 (Format of Micro Instructions / Định dạng vi lệnh)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **수평 마이크로 명령 (Horizontal Micro Instruction / Vi lệnh ngang):**
   - 마이크로 명령의 한 비트가 한 개의 마이크로 동작을 관할하는 명령이다. (Mỗi bit quản lý một vi thao tác.)
@@ -89,6 +97,8 @@
 ---
 
 ## 핵심 099: 입·출력장치의 구성 (Structure of I/O Devices / Cấu trúc thiết bị Vào/Ra)
+Phần “핵심 099: 입·출력장치의 구성 (Structure of I/O Devices / Cấu trúc thiết bị Vào/Ra)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **입·출력 제어장치 (I/O Control Unit / Bộ điều khiển Vào/Ra):**
   - 입·출력장치와 컴퓨터 사이의 자료 전송을 제어하는 장치이다. (Điều khiển truyền dữ liệu giữa I/O và máy tính.)
@@ -129,6 +139,8 @@
 ## 핵심 101: 스풀링(SPOOLING)과 버퍼링(Buffering) (Spooling vs Buffering)
 
 ### 스풀링 (SPOOLING: Simultaneous Peripheral Operation On-Line)
+Phần “스풀링 (SPOOLING: Simultaneous Peripheral Operation On-Line)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 디스크를 이용하여 입·출력할 데이터를 디스크에 모았다가 나중에 한꺼번에 입·출력하는 기법이다. (Dùng đĩa từ (HDD) làm bộ đệm khổng lồ chứa dữ liệu I/O, sau đó xử lý hàng loạt.)
 - 고속의 CPU와 저속의 입·출력장치가 동시에 독립적으로 동작하게 하여 효율을 높인다. (Giúp CPU tốc độ cao và thiết bị I/O tốc độ thấp hoạt động song song độc lập, không phải đợi nhau.)
 
@@ -146,6 +158,8 @@
 ---
 
 ## 핵심 102: 입·출력(Input-Output) 제어 방식 (I/O Control Methods / Các phương pháp điều khiển I/O)
+Phần “핵심 102: 입·출력(Input-Output) 제어 방식 (I/O Control Methods / Các phương pháp điều khiển I/O)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **Programmed I/O (Bằng chương trình):**
   - CPU가 상태 Flag를 계속 조사하여 자료 전송을 CPU가 직접 처리. (CPU liên tục kiểm tra cờ trạng thái để tự truyền dữ liệu - Polling).
@@ -181,6 +195,8 @@
 ---
 
 ## 핵심 103: 인터럽트의 종류 및 발생 원인 (Types and Causes of Interrupts / Các loại ngắt)
+Phần “핵심 103: 인터럽트의 종류 및 발생 원인 (Types and Causes of Interrupts / Các loại ngắt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **외부 인터럽트 (External Interrupt - Ngắt bên ngoài):** Do tín hiệu phần cứng.
   - 전원 이상 (Power Fail): Mất điện, nguồn lỗi.
@@ -204,6 +220,8 @@
 ## 핵심 104 & 105: 인터럽트 처리 (Interrupt Handling / Xử lý ngắt)
 
 ### CPU가 확인할 사항 (Những gì CPU cần xác nhận / lưu lại)
+Phần “CPU가 확인할 사항 (Những gì CPU cần xác nhận / lưu lại)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 프로그램 카운터의 내용 (Nội dung Program Counter - Địa chỉ lệnh tiếp theo).
 - 사용한 모든 레지스터의 내용 (Nội dung tất cả thanh ghi đang dùng).
 - 상태 조건의 내용(PSW - Program Status Word).
@@ -224,6 +242,8 @@
 ---
 
 ## 핵심 106 & 107: 인터럽트 우선순위 (Interrupt Priorities / Mức độ ưu tiên của Ngắt)
+Phần “핵심 106 & 107: 인터럽트 우선순위 (Interrupt Priorities / Mức độ ưu tiên của Ngắt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **우선순위 (Cao -> Thấp):** 
   전원 이상 (Power Fail) > 기계 착오 (Machine) > 외부 신호 (External) > 입·출력 (I/O) > 명령어 잘못 (Program Check) > SVC
@@ -244,6 +264,8 @@
 ## 핵심 108 & 109: 기억장치의 특성 및 ROM (Memory Characteristics & ROM)
 
 ### 특성을 결정하는 요소 (Yếu tố quyết định đặc tính bộ nhớ)
+Phần “특성을 결정하는 요소 (Yếu tố quyết định đặc tính bộ nhớ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **Access Time (Thời gian truy cập):** Thời gian từ lúc yêu cầu đến lúc lấy được dữ liệu.
   `Access Time = Seek Time + Latency Time (Search Time) + Transmission Time`
 - **Cycle Time (Thời gian chu kỳ):** Thời gian từ lúc đọc xong tín hiệu này đến lúc có thể đọc tín hiệu tiếp theo.
@@ -252,6 +274,8 @@
 - **접근 속도 (Tốc độ tiếp cận Nhanh -> Chậm):** CPU 레지스터 -> Cache -> RAM(Main Memory) -> ROM -> 자기 코어 -> 자기 디스크 (HDD) -> 자기 테이프 (Tape).
 
 ### ROM (Read Only Memory - Bộ nhớ chỉ đọc)
+Phần “ROM (Read Only Memory - Bộ nhớ chỉ đọc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 전원이 꺼져도 내용이 지워지지 않는 비휘발성 (Không bay hơi khi mất điện).
 - 주로 기본 입·출력 시스템(BIOS), 자가 진단 프로그램(POST) 저장 (Thường chứa BIOS, POST).
 - **ROM 종류 (Các loại ROM):**
@@ -265,6 +289,8 @@
 - 💡 **Mẹo ghi nhớ (Mnemonics):** "E" đầu tiên = Erasable (Xóa được). Nhớ: EPROM = UV (Tia cực tím), EEPROM = Điện (Electonic). Cycle Time ≥ Access Time.
 
 ## 핵심 110: RAM (Random Access Memory)
+Phần “핵심 110: RAM (Random Access Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자유롭게 읽고 쓸 수 있는 기억장치로, RWM(Read Write Memory)이라고도 한다. (Bộ nhớ có thể đọc và ghi tự do.)
 - RAM에는 현재 사용중인 프로그램이나 데이터가 저장되어 있다. (Lưu trữ chương trình và dữ liệu đang được sử dụng hiện tại.)
@@ -290,11 +316,15 @@
 ## 핵심 111 & 112: 반도체 기억소자 및 자기 코어 (Semiconductor Memory & Magnetic Core)
 
 ### RAM/ROM의 용량 계산 (Tính dung lượng RAM/ROM)
+Phần “RAM/ROM의 용량 계산 (Tính dung lượng RAM/ROM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 주소선 (Address Bus) số lượng quyết định số Word: Nếu có n đường thì có 2^n Word. (Liên quan đến MAR và PC).
 - 데이터 버스 (Data Bus) số lượng quyết định kích thước mỗi Word. (Liên quan đến MBR và IR).
 - `Dung lượng = Số Word × Kích thước Word`. Ví dụ: 7 Address lines, 8 Data lines => 2^7 × 8 Bit = 128 × 8 Bit.
 
 ### 자기 코어 (Magnetic Core - Lõi từ)
+Phần “자기 코어 (Magnetic Core - Lõi từ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 부피에 비해 용량이 작고 가격이 비싸 현재는 거의 사용하지 않는다. (Dung lượng nhỏ, giá đắt, ít dùng hiện nay.)
 - 데이터를 읽으면 읽은 내용이 지워지는 파괴 메모리(DRO Memory)이므로, 재저장(Restoration Time) 시간이 필요하다. (Đọc xong là mất dữ liệu (Phá hủy), nên cần thời gian ghi lại.)
 - Cấu tạo: 구동선(X, Y) 2개 (2 dây chọn địa chỉ), 센스 선 1개 (1 dây cảm biến trạng thái), 금지선 1개 (1 dây cấm).
@@ -307,6 +337,8 @@
 ## 핵심 113 & 114: 보조기억장치 및 디스크 접근 시간 (Auxiliary Memory & Disk Access Time)
 
 ### 보조기억장치 (Bộ nhớ phụ)
+Phần “보조기억장치 (Bộ nhớ phụ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 주기억장치에 비해 속도는 느리지만 저장 용량이 크다. 전원이 차단되어도 내용이 그대로 유지된다. (Chậm hơn RAM nhưng dung lượng lớn, lưu trữ vĩnh viễn.)
 - **자기 테이프 (Magnetic Tape - Băng từ):**
   - 순차처리(SASD)만 할 수 있는 대용량 저장매체. (Chỉ truy cập tuần tự, không nhảy cóc được.)
@@ -318,6 +350,8 @@
   - **Cylinder (Trụ):** Tập hợp các track cùng vị trí trên các mặt đĩa.
 
 ### 디스크의 Access Time (Thời gian truy cập đĩa)
+Phần “디스크의 Access Time (Thời gian truy cập đĩa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - `Access Time = Seek Time + Latency Time (Rotational Delay) + Transmission Time`
 - **Seek Time (Thời gian tìm rãnh):** Đầu đọc di chuyển đến đúng Track.
 - **Latency Time (Thời gian chờ xoay):** Đợi đĩa xoay đúng đến Sector cần đọc.
@@ -331,12 +365,16 @@
 ## 핵심 115 & 116: 연관 기억장치 및 메모리 인터리빙 (Associative Memory & Memory Interleaving)
 
 ### 연관 기억장치 (Associative Memory / CAM)
+Phần “연관 기억장치 (Associative Memory / CAM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 주소에 의해 접근하지 않고, 기억된 내용의 일부를 이용하여 접근할 수 있는 기억장치. (Không tìm bằng Địa chỉ, mà tìm bằng Nội dung - Content Addressable Memory.)
 - 정보 검색이 신속하다. (Tìm kiếm thông tin cực nhanh.)
 - 캐시 메모리나 가상 메모리 매핑 테이블에 사용된다. (Dùng trong Cache hoặc Bảng ánh xạ bộ nhớ ảo.)
 - 하드웨어 비용이 증가한다. (Tốn kém phần cứng vì cần mạch so sánh song song.)
 
 ### 메모리 인터리빙 (Memory Interleaving)
+Phần “메모리 인터리빙 (Memory Interleaving)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - CPU가 각 모듈로 전송할 주소를 교대로 분산 배치한 후 차례대로 전송하여 여러 모듈을 병행 접근하는 기법. (Kỹ thuật phân tán địa chỉ bộ nhớ thành nhiều module độc lập để CPU truy cập song song cùng lúc.)
 - 캐시 기억장치, 고속 DMA 전송 등에서 많이 사용된다. (Dùng trong Cache và DMA tốc độ cao.)
 
@@ -346,16 +384,22 @@
 ---
 
 ## 핵심 117: 캐시 메모리 (Cache Memory)
+Phần “핵심 117: 캐시 메모리 (Cache Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CPU의 속도와 메모리의 속도 차이를 줄이기 위해 사용하는 고속 Buffer Memory. (Bộ đệm tốc độ cao giảm chênh lệch tốc độ giữa CPU và RAM.)
 - 캐시 메모리는 메모리 계층 구조에서 가장 빠른 소자 (Nhanh nhất trong hệ thống phân cấp bên ngoài register, dùng SRAM.)
 - `적중률 (Hit Ratio) = 적중 횟수(Hits) / 총 접근 횟수 (Total Accesses)`
 
 ### 매핑 프로세스 (Mapping Process)
+Phần “매핑 프로세스 (Mapping Process)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 주기억장치로부터 캐시 메모리로 데이터를 전송하는 방법 (Cách ánh xạ RAM vào Cache.)
 - 종류: 직접(Direct) 매핑, 어소시에이티브(Associative) 매핑, 세트-어소시에이티브(Set-Associative) 매핑.
 
 ### 쓰기 정책 (Write Policy)
+Phần “쓰기 정책 (Write Policy)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 캐시에 저장되어 있는 데이터에 수정이 발생했을 때 주기억장치에 갱신하는 시기와 방법. (Khi Cache bị thay đổi, khi nào thì ghi lại vào RAM?)
 - **Write-Through:** 쓰기 동작이 이루어질 때마다 캐시와 주기억장치를 동시에 갱신. (Ghi đồng thời cả 2, an toàn nhưng chậm.)
 - **Write-Back:** 캐시로부터 제거될 때 주기억장치에 복사. (Chỉ ghi vào RAM khi bị đuổi khỏi Cache, nhanh nhưng rủi ro nếu mất điện.)
@@ -366,6 +410,8 @@
 ---
 
 ## 핵심 118: 가상 기억장치 (Virtual Memory)
+Phần “핵심 118: 가상 기억장치 (Virtual Memory)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기억 용량이 작은 주기억장치를 마치 큰 용량을 가진 것처럼 사용할 수 있도록 하는 운영체제의 메모리 운영 기법. (Lấy một phần ổ cứng ảo hóa thành RAM, giúp máy tính chạy được các chương trình nặng hơn dung lượng RAM thực tế.)
 - 보조기억장치는 디스크 같은 DASD 장치이어야 한다. (Bắt buộc dùng đĩa từ / HDD / SSD - DASD, không dùng băng từ được.)
@@ -383,12 +429,16 @@
 ## 핵심 119 & 120: 병렬 컴퓨터 분류 및 병렬처리기법 (Flynn's Taxonomy & Parallel Processing)
 
 ### 플린(Flynn)의 분류 (Phân loại Flynn)
+Phần “플린(Flynn)의 분류 (Phân loại Flynn)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **SISD (Single Instruction, Single Data):** 1 Lệnh xử lý 1 Dữ liệu. (Máy tính truyền thống Von Neumann).
 - **SIMD (Single Instruction, Multi Data):** 1 Lệnh xử lý Nhiều Dữ liệu. (Array Processor, xử lý đồng bộ).
 - **MISD (Multi Instruction, Single Data):** Nhiều Lệnh, 1 Dữ liệu. (Không dùng trong thực tế).
 - **MIMD (Multi Instruction, Multi Data):** Nhiều Lệnh xử lý Nhiều Dữ liệu. (Máy đa nhân hiện đại - Đa xử lý bất đồng bộ). Tightly Coupled (Multiprocessor), Loosely Coupled (Distributed).
 
 ### 병렬처리기법 (Kỹ thuật xử lý song song)
+Phần “병렬처리기법 (Kỹ thuật xử lý song song)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **파이프라인 프로세서 (Pipeline):** Chia lệnh thành các Sub-task (như dây chuyền nhà máy). Các bước: Fetch, Decode, Operand, Execute.
 - **벡터 프로세서 (Vector Processor):** Xử lý mảng dữ liệu cực nhanh (Systolic algorithm).
 - **배열 프로세서 (Array Processor):** Có nhiều bộ ALU (Processing Elements), điều khiển tập trung, tính toán song song theo không gian (SIMD).
@@ -407,6 +457,8 @@
 자료구조: 컴퓨터상 자료를 효율적으로 저장하기 위해 만들어진 논리적인 구조 (Cấu trúc logic để lưu trữ dữ liệu hiệu quả).
 
 ### 선형 구조 (Linear - Nối tiếp nhau)
+Phần “선형 구조 (Linear - Nối tiếp nhau)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **리스트 (List):** 순서에 의해 나열된 구조. (Cấu trúc tuyến tính).
   - **선형 리스트 (Linear List / Array):** Kích thước cố định (고정), lưu liên tục (연속). Tìm kiếm cực nhanh (검색 빠름), nhưng chèn/xóa cực chậm (삽입, 삭제 느림).
   - **연결 리스트 (Linked List):** Kích thước linh hoạt (가변), liên kết bằng Pointer. Chèn/xóa cực nhanh, nhưng tìm kiếm chậm (phải dò từng cái) và tốn không gian lưu Pointer.
@@ -415,6 +467,8 @@
 - **데크 (Deque):** Kết hợp Stack và Queue, có thể Vào/Ra ở CẢ HAI đầu.
 
 ### 비선형 구조 (Non-linear - Không nối tiếp)
+Phần “비선형 구조 (Non-linear - Không nối tiếp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **트리 (Tree):** Cây. Có Node (Đỉnh) và Branch (Nhánh). **Không có chu trình (Cycle).**
 - **그래프 (Graph):** Đồ thị. Có Đỉnh (Vertex) và Cạnh (Edge). Có thể có hướng hoặc vô hướng. (Cây là một dạng Đồ thị không có chu trình).
 
@@ -427,6 +481,8 @@
 ---
 
 ## 025: 트리 (Tree / Cây)
+Phần “025: 트리 (Tree / Cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | 용어 (Thuật ngữ) | 설명 (Giải thích) | 예시 (Ví dụ) |
 |---|---|---|
@@ -438,6 +494,8 @@
 | 트리의 차수 (Degree of Tree) | Bậc của cây: Bậc lớn nhất trong tất cả các nút. | Cả cây có nút max là 3 => Degree của cây = 3. |
 
 ### 트리 순회 (Tree Traversal - Duyệt cây)
+Phần “트리 순회 (Tree Traversal - Duyệt cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **전위 순회 (Preorder):** Root -> Left -> Right.
 - **중위 순회 (Inorder):** Left -> Root -> Right.
 - **후위 순회 (Postorder):** Left -> Right -> Root.
@@ -448,11 +506,15 @@
 ---
 
 ## 026: 그래프 (Graph / Đồ thị)
+Phần “026: 그래프 (Graph / Đồ thị)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **방향 그래프 (Directed Graph):** Có hướng. Tối đa `n(n-1)` cạnh (n là số đỉnh).
 - **무방향 그래프 (Undirected Graph):** Vô hướng. Tối đa `n(n-1)/2` cạnh.
 
 ### 탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)
+Phần “탐색 알고리즘 (Thuật toán tìm kiếm đồ thị)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **DFS (Depth-First Search - Tìm kiếm theo chiều sâu):** Đi sâu nhất có thể, hết đường mới lui lại (Dùng Stack).
 - **BFS (Breadth-First Search - Tìm kiếm theo chiều rộng):** Loang ra xung quanh, tầng nào xong mới xuống tầng sau (Dùng Queue).
 
@@ -463,12 +525,16 @@
 ## 027: 알고리즘 설계 기법과 시간 복잡도 (Algorithm Design & Time Complexity)
 
 ### 알고리즘 설계 기법 (Kỹ thuật thiết kế thuật toán)
+Phần “알고리즘 설계 기법 (Kỹ thuật thiết kế thuật toán)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **분할과 정복 (Divide & Conquer):** Chia để trị. Chia nhỏ vấn đề đến khi không chia được nữa rồi gộp lại. (VD: Merge Sort, Quick Sort).
 - **동적계획법 (Dynamic Programming - Quy hoạch động):** Chia bài toán, nhưng CÓ lưu lại kết quả (bộ nhớ) để tận dụng cho lần sau. (VD: Fibonacci).
 - **탐욕법 (Greedy):** Tham lam. Chọn cái tốt nhất ở *ngay thời điểm hiện tại*, không cần biết tương lai.
 - **백트래킹 (Backtracking):** Quay lui. Đi thử, nếu thấy bế tắc (không triển vọng - promising) thì quay lại nút cha.
 
 ### 시간 복잡도 (Time Complexity - Độ phức tạp thời gian)
+Phần “시간 복잡도 (Time Complexity - Độ phức tạp thời gian)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Đếm số lần thực thi các phép toán (không phải tính thời gian bằng giây).
 - Ký hiệu tiệm cận: Big-O là cận trên, Omega là cận dưới, Theta là cận chặt; chúng không tự động đồng nghĩa với worst/average/best case.
 - **Thứ tự (Nhanh -> Chậm):** O(1) < O(log n) < O(n) < O(n log n) < O(n²) < O(2ⁿ)
@@ -480,6 +546,8 @@
 ---
 
 ## 028: 정렬 (Sorting / Thuật toán sắp xếp)
+Phần “028: 정렬 (Sorting / Thuật toán sắp xếp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | 알고리즘 (Thuật toán) | 설명 (Giải thích) | 평균 복잡도 (Average) | 최악 (Worst) |
 |---|---|---|---|
@@ -498,16 +566,22 @@
 ## 029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)
 
 ### 검색 (Search - Tìm kiếm)
+Phần “검색 (Search - Tìm kiếm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **순차 검색 (Sequential/Linear Search):** Tìm tuần tự từ đầu đến cuối. Dùng cho mảng *chưa sắp xếp*. O(n).
 - **이진 검색 (Binary Search):** Tìm nhị phân. Chia đôi mảng liên tục. **Bắt buộc mảng phải ĐÃ SẮP XẾP.** O(log n). Rất nhanh.
 
 ### 해싱 (Hashing - Băm dữ liệu)
+Phần “해싱 (Hashing - Băm dữ liệu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Dùng hàm băm (Hash Function) tính ra trực tiếp địa chỉ bộ nhớ để lưu hoặc tìm kiếm dữ liệu. Nhanh nhất (O(1)).
 
 - **Vietnamese Explanation:** Tìm tuần tự là lật từng trang sách. Tìm nhị phân là mở giữa cuốn từ điển, xem vần nào rồi gập nửa bỏ đi, tìm tiếp ở nửa kia. Băm (Hashing) là nhìn Mục lục rồi lật thẳng trang đó.
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Binary Search = Phải Sắp Xếp (Sắp xếp), Chia đôi (절반). Hashing = O(1) Siêu Tốc.
 
 ### 해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)
+Phần “해시 충돌 해결 방법 (Hash Collision Resolution / Các phương pháp giải quyết đụng độ Hash)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | 방법 (Phương pháp) | 설명 (Giải thích) |
 |---|---|
@@ -525,6 +599,8 @@
 # Chapter 2. 통합 구현 (Integration Implementation)
 
 ## 핵심 031: 모듈 구현 (Module Implementation)
+Phần “핵심 031: 모듈 구현 (Module Implementation)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **구현 (Implementation):** 설계 명세서가 컴퓨터가 알 수 있는 모습으로 변환되는 과정. 프로그래밍 또는 코딩. (Quá trình chuyển thiết kế thành code.)
 - **작업 절차 (Trình tự):** 코딩 계획 (Lập kế hoạch) → 코딩 (Code) → 컴파일 (Compile) → 테스트 (Test).
@@ -539,21 +615,29 @@
 ## 핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)
 
 ### 형상 관리 (Configuration Management)
+Phần “형상 관리 (Configuration Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 개발 과정의 **변경 사항을 관리**하는 것. (Quản lý mọi thay đổi trong vòng đời phần mềm - Version Control).
 - 대상 (Đối tượng): 계획, 요구 분석서, 설계서, 소스 코드, 테스트 케이스, 지침서 등. (**개발 비용 - Chi phí phát triển KHÔNG nằm trong này**).
 - 절차 (Trình tự): 형상 식별 (Nhận dạng) → 형상 통제 (Kiểm soát bởi CCB) → 형상 감사 (Kiểm toán) → 형상 기록 (Ghi lại).
 
 ### 형상 관리 방식 (Các phương pháp quản lý phiên bản)
+Phần “형상 관리 방식 (Các phương pháp quản lý phiên bản)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **공유 폴더 방식 (Shared Folder):** Lưu vào chung một thư mục trên mạng nội bộ. (Ví dụ: RCS).
 - **클라이언트/서버 방식 (Client/Server):** Quản lý tập trung trên một máy chủ. (Ví dụ: CVS, SVN).
 - **분산 저장소 방식 (Distributed Repository):** Mỗi máy cá nhân đều chứa một bản copy của kho chứa, commit lên máy cá nhân trước rồi mới push lên server. Rất an toàn. (Ví dụ: **Git**).
 
 ### 형상 관리 도구 기능 (Chức năng công cụ)
+Phần “형상 관리 도구 기능 (Chức năng công cụ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **Check-In:** Đẩy code lên kho (Upload).
 - **Check-Out:** Lấy code mới nhất về (Download).
 - **Commit:** Xác nhận lưu sự thay đổi.
 
 ### IDE (Integrated Development Environment - Môi trường phát triển tích hợp)
+Phần “IDE (Integrated Development Environment - Môi trường phát triển tích hợp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 코딩, 컴파일, 디버깅, 배포 (Coding, Compile, Debug, Deployment) 기능을 하나로 통합. (Tích hợp tất cả công cụ lập trình vào một phần mềm).
 - Ví dụ: Eclipse (Java), Visual Studio (C#, C++), Xcode (iOS), Android Studio, IntelliJ IDEA.
 
@@ -563,6 +647,8 @@
 ---
 
 ## 핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)
+Phần “핵심 034: 재사용 기법 (Reuse Techniques / Kỹ thuật tái sử dụng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **재사용 (Reuse):** 이미 개발되어 인정받았던 소프트웨어의 전체 또는 일부분을 다시 사용하는 기법. (Sử dụng lại code/phần mềm cũ đã được kiểm chứng để tiết kiệm thời gian, chi phí và giảm lỗi.)
 - **Phân loại theo kỹ thuật:**
@@ -583,10 +669,14 @@
 ## 핵심 035 & 036: 소프트웨어 패키징 및 DRM (Software Packaging & DRM)
 
 ### 패키징 고려사항 (Lưu ý khi đóng gói)
+Phần “패키징 고려사항 (Lưu ý khi đóng gói)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **사용자를 중심**으로 진행. (Phải hướng tới người dùng, không phải lập trình viên).
 - 보안, 이기종 연동, 복잡성 및 비효율성 문제 고려, 적합한 암호화 알고리즘 적용. (Bảo mật, liên kết đa nền tảng, dễ dùng, mã hóa).
 
 ### DRM (Digital Rights Management - Quản lý bản quyền kỹ thuật số)
+Phần “DRM (Digital Rights Management - Quản lý bản quyền kỹ thuật số)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 허가된 권한 범위 내에서 콘텐츠의 이용이 가능하도록 통제하는 기술. (Kỹ thuật mã hóa, chống copy lậu, giới hạn số lần mở/in/sao chép nội dung kỹ thuật số).
 - **Thành phần (Cấu trúc DRM):**
   - **Contents Provider (Người cung cấp):** Tác giả, người tạo nội dung.
@@ -603,11 +693,15 @@
 ## 핵심 037 & 038: 매뉴얼 및 빌드/배포 도구 (Manuals & Build/Deploy Tools)
 
 ### 제품 소프트웨어 매뉴얼 (Tài liệu hướng dẫn)
+Phần “제품 소프트웨어 매뉴얼 (Tài liệu hướng dẫn)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **설치 매뉴얼 (Installation Manual):** Hướng dẫn cài đặt. (Lưu ý cách cài, cấu hình hệ thống, cách xóa cài đặt - Uninstall).
 - **사용자 매뉴얼 (User Manual):** Hướng dẫn sử dụng. (Giao diện UI, cấu hình tối thiểu, cách dùng tính năng).
 - Cả hai đều phải viết theo góc nhìn của **사용자 (Người dùng)**.
 
 ### 빌드 및 모니터링 도구 (Công cụ Build & Monitoring)
+Phần “빌드 및 모니터링 도구 (Công cụ Build & Monitoring)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **빌드 자동화 도구 (Build Automation):** Biến source code thành file chạy một cách tự động. Ví dụ: Ant, Maven, Gradle, **Jenkins**.
 - **버전 관리 도구 (Version Control):** Git, SVN.
 - **정적 분석 도구 (Static Analysis):** Phân tích code tìm lỗi mà **KHÔNG CHẠY** chương trình. Ví dụ: PMD, Cppcheck, SonarQube.
@@ -619,6 +713,8 @@
 ---
 
 ## 핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)
+Phần “핵심 039: 소프트웨어 품질 관련 국제 표준 (Software Quality Standards)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **ISO/IEC 9126:** Đánh giá chất lượng phần mềm gồm 6 đặc tính: **기신사효유이**
   - **기**능성 (Functionality): Đáp ứng đúng yêu cầu.
@@ -641,6 +737,8 @@
 ## 핵심 040: 애플리케이션 테스트 원리 및 종류 (Test Principles & Types)
 
 ### 테스트의 기본 원리 (Các nguyên lý cơ bản)
+Phần “테스트의 기본 원리 (Các nguyên lý cơ bản)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **완벽한 테스팅은 불가능:** Không bao giờ test ra 100% không còn lỗi.
 - **결함 집중 (Defect Clustering):** Lỗi thường tập trung ở 20% các module cốt lõi (Quy tắc Pareto 80/20).
 - **살충제 패러독스 (Pesticide Paradox):** Nghịch lý thuốc trừ sâu. Dùng mãi một bài test thì không tìm ra lỗi mới. Cần liên tục thay đổi bộ test.
@@ -648,6 +746,8 @@
 - **오류-부재의 궤변 (Absence of Errors Fallacy):** App không có lỗi nhưng không đúng ý khách hàng thì vẫn là rác.
 
 ### 정적 테스트 vs 동적 테스트 (Static vs Dynamic Test)
+Phần “정적 테스트 vs 동적 테스트 (Static vs Dynamic Test)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **정적 테스트 (Static):** Không chạy code. Đọc và review code/tài liệu. (Walkthrough, Inspection, Review). Phát hiện lỗi sớm, tiết kiệm tiền.
 - **동적 테스트 (Dynamic):** Phải chạy chương trình. Gồm Black Box và White Box testing.
 
@@ -656,6 +756,8 @@
 ---
 
 ## 핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)
+Phần “핵심 041: 테스트 케이스 / 시나리오 / 오라클 (Test Case/Scenario/Oracle)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **테스트 케이스 (Test Case):** Một bộ gồm: Dữ liệu đầu vào, Điều kiện chạy, Kết quả mong đợi.
 - **테스트 시나리오 (Test Scenario):** Kịch bản gồm nhiều Test Case nối tiếp nhau.
@@ -674,6 +776,8 @@
 Cả hai đều là **Dynamic Test** (Phải chạy code).
 
 ### 블랙박스 테스트 (Black-box / Hộp đen / Dựa trên Chức năng)
+Phần “블랙박스 테스트 (Black-box / Hộp đen / Dựa trên Chức năng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Không quan tâm bên trong code viết gì, chỉ quan tâm Đầu vào -> Đầu ra. (Dựa trên 명세 - Đặc tả).
 - **Kỹ thuật (Các loại):**
   - **동등 분할 (Equivalence Partitioning):** Chia vùng tương đương (Vd: Nhập từ 1-100, thì test số 50 là đủ diện cho vùng đúng).
@@ -682,6 +786,8 @@ Cả hai đều là **Dynamic Test** (Phải chạy code).
   - **오류 예측 (Error Guessing):** Dựa vào kinh nghiệm của tester để đoán lỗi.
 
 ### 화이트박스 테스트 (White-box / Hộp trắng / Dựa trên Cấu trúc Code)
+Phần “화이트박스 테스트 (White-box / Hộp trắng / Dựa trên Cấu trúc Code)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Soi thấu bên trong code. Đảm bảo mọi dòng lệnh (Statement), mọi nhánh (Branch/Decision) đều được chạy ít nhất 1 lần.
 - **Kỹ thuật (Các loại):**
   - **기본 경로 검사 (Base Path):** Đi qua tất cả các con đường code.
@@ -714,6 +820,8 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 ---
 
 ## 핵심 044: 테스트 자동화 도구 (Test Automation Tools)
+Phần “핵심 044: 테스트 자동화 도구 (Test Automation Tools)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **정적 분석 도구 (Static Analysis):** Phân tích không cần chạy code.
 - **성능 테스트 도구 (Performance Test):** Tạo ra người dùng ảo (Virtual Users) để ép tải, đo đạc băng thông, thời gian phản hồi (Load/Stress testing).
@@ -723,6 +831,8 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Driver (Tài xế) = Kẻ điều khiển từ trên. Stub (Gốc cây/Khúc gỗ) = Đứng ở dưới chịu đòn giả.
 
 ## 핵심 클린 코드 작성 원칙 (Clean Code Principles)
+Phần “핵심 클린 코드 작성 원칙 (Clean Code Principles)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **클린 코드 (Clean Code):** 누구나 쉽게 이해하고 수정 및 추가할 수 있는 단순 명료한 코드. (Code sạch: Dễ hiểu, dễ sửa, dễ thêm tính năng.)
 - **배드 코드 (Bad code):** 프로그램의 로직이 복잡하고 이해하기 어려운 코드. (Code rác: Lộn xộn, logic phức tạp.)
@@ -744,6 +854,8 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 # Chapter 5. 인터페이스 구현 (Interface Implementation)
 
 ## 핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)
+Phần “핵심 046: 인터페이스 설계 확인 (EAI 구축 유형 - EAI Integration Types)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **EAI (Enterprise Application Integration):** Doanh nghiệp có nhiều phần mềm (Kế toán, Nhân sự, Kho...), EAI giúp chúng nói chuyện được với nhau.
 
@@ -761,17 +873,23 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 ## 핵심 047: 인터페이스 보안, 기능 구현 및 검증 (Interface Security, Implementation, Verification)
 
 ### 네트워크 보안 기술 (Kỹ thuật bảo mật mạng)
+Phần “네트워크 보안 기술 (Kỹ thuật bảo mật mạng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **IPSec (IP Security):** 네트워크 계층 (Network Layer). Chống giả mạo, ẩn giấu gói tin IP.
 - **SSL (Secure Socket Layer):** TCP/IP ~ 애플리케이션 계층 사이. Chứng thực, mã hóa (thường dùng cho HTTPS).
 - **S-HTTP:** 애플리케이션 계층 (Application Layer). Mã hóa mọi tin nhắn giữa Client và Server.
 
 ### 인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)
+Phần “인터페이스 데이터 포맷 (Định dạng dữ liệu giao tiếp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **AJAX:** Bất đồng bộ (Asynchronous), dùng JS và XML để cập nhật một phần trang web mà không cần tải lại toàn bộ trang.
 - **JSON:** Cặp "Key-Value", định dạng nhẹ, dễ đọc (Thay thế cho XML rất nhiều).
 - **XML:** Thẻ Markup đa mục đích (như HTML nhưng tự tạo thẻ được).
 - **YAML:** "YAML Ain't Markup Language". Định dạng dữ liệu tuần tự hóa, rất dễ đọc cho con người (hay dùng làm file config).
 
 ### 인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)
+Phần “인터페이스 구현 검증 도구 (Công cụ kiểm chứng Test Interface)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **xUnit:** Test từng "Đơn vị" (Unit) - jUnit, cppUnit.
 - **STAF:** Test trong "Môi trường phân tán" (Distributed environment).
 - **FitNesse:** Framework test nền web (Điền bảng là tự chạy test).
@@ -787,14 +905,20 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 ## 073 & 074: 자료 구조의 정의 및 선형 리스트 (Data Structures & Linear List)
 
 ### 자료 구조의 분류 (Phân loại)
+Phần “자료 구조의 분류 (Phân loại)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **선형 구조 (Linear - Tuyến tính):** 배열 (Array), 리스트 (List), 스택 (Stack), 큐 (Queue), 데크 (Deque).
 - **비선형 구조 (Non-Linear - Phi tuyến):** 트리 (Tree), 그래프 (Graph).
 
 ### 배열 (Array - Mảng)
+Phần “배열 (Array - Mảng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 동일한 자료형 (Cùng kiểu dữ liệu). 첨자(Index)를 이용 (Dùng Index để truy cập cực nhanh).
 - 데이터 삭제 시 빈 공간으로 남아있어 메모리 낭비. (Xóa xong để lại lỗ hổng, lãng phí bộ nhớ).
 
 ### 연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)
+Phần “연속 리스트 vs 연결 리스트 (Contiguous vs Linked List)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **연속 리스트 (배열 / Array):** Mật độ = 1 (Kín bưng). Tìm nhanh, nhưng Thêm/Xóa chậm vì phải xô đẩy các phần tử khác.
 - **연결 리스트 (포인터 / Linked List):** Mật độ < 1 (Tốn chỗ cho Con trỏ Pointer). Tìm chậm, nhưng Thêm/Xóa cực nhanh (Chỉ việc trỏ lại hướng).
 
@@ -805,17 +929,23 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 ## 075 & 076: 스택, 큐, 데크 (Stack, Queue, Deque)
 
 ### 스택 (Stack)
+Phần “스택 (Stack)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **LIFO (Last-In-First-Out / 후입선출):** Vào sau ra trước.
 - **Con trỏ:** `Top` (Điểm vào/ra), `Bottom` (Đáy).
 - **Lỗi:** Overflow (Đầy mà cố nhét), Underflow (Rỗng mà cố lấy).
 - **Ứng dụng:** 재귀 호출 (Đệ quy), 후위 표기법 (Postfix).
 
 ### 큐 (Queue)
+Phần “큐 (Queue)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **FIFO (First-In-First-Out / 선입선출):** Vào trước ra trước.
 - **Con trỏ:** `Rear` (Chỗ đưa vào), `Front` (Chỗ lấy ra).
 - **Ứng dụng:** 작업 스케줄링 (Lập lịch OS - Xếp hàng chờ xử lý).
 
 ### 데크 (Deque - Double Ended Queue)
+Phần “데크 (Deque - Double Ended Queue)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 양쪽 끝에서 모두 입출력 가능. (Vào/Ra ở cả 2 đầu).
 - **Scroll (스크롤):** 입력 제한 (Hạn chế Đầu vào - Vào 1 bên, Ra 2 bên).
 - **Shelf (셸프):** 출력 제한 (Hạn chế Đầu ra - Vào 2 bên, Ra 1 bên).
@@ -831,11 +961,15 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 ## 077: 그래프 및 인접 행렬 (Graphs & Adjacency Matrix)
 
 ### 최대 간선 수 (Số Cạnh Tối Đa)
+Phần “최대 간선 수 (Số Cạnh Tối Đa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **무방향 그래프 (Vô hướng):** `n(n-1)/2`.
 - **방향 그래프 (Có hướng):** `n(n-1)`. (Gấp đôi vô hướng).
 *(n là số đỉnh / Vertex)*
 
 ### 인접 행렬 (Adjacency Matrix - Ma trận kề)
+Phần “인접 행렬 (Adjacency Matrix - Ma trận kề)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Biểu diễn đồ thị bằng ma trận `N x N`. (Có đường đi = 1, Không có = 0).
 - **방향 그래프:** Không đối xứng. Hàng (Row) là đi Ra (Out), Cột (Column) là đi Vào (In).
 - **무방향 그래프:** Đối xứng qua đường chéo (Symmetric).
@@ -848,6 +982,8 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 ## 078 & 079: 트리 및 운행법 (Tree & Tree Traversal)
 
 ### 트리 (Tree - Cây)
+Phần “트리 (Tree - Cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **사이클(Cycle)이 없는 그래프.** (Đồ thị không có vòng lặp / chu trình).
 - **단말 노드 (Leaf Node):** Nút lá (Không có con / Degree = 0).
 - **차수 (Degree):** Số nút con của một nút.
@@ -855,6 +991,8 @@ Thứ tự Test từ nhỏ đến lớn: **단위 (Unit) → 통합 (Integration
 - **깊이 (Depth):** Số tầng (Level) tối đa của cây.
 
 ### 트리의 운행법 (Tree Traversal - Duyệt cây)
+Phần “트리의 운행법 (Tree Traversal - Duyệt cây)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Theo vị trí của **Root (Gốc)**:
   - **Preorder (전위):** **Root** -> Left -> Right.
   - **Inorder (중위):** Left -> **Root** -> Right.
@@ -883,6 +1021,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)
+Phần “081: 삽입 정렬 (Insertion Sort - Sắp xếp chèn)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **이미 순서화된 파일(앞부분)**에 새로운 레코드를 **순서에 맞게 삽입**시켜 정렬. (Lấy phần tử hiện tại chèn vào đúng vị trí trong phần mảng đã sắp xếp phía trước nó).
 - **Thời gian (Time Complexity):** O(n²) cho cả Trung bình và Tệ nhất.
@@ -892,6 +1032,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 - 💡 **Mẹo ghi nhớ (Mnemonics):** 삽입 (Chèn) = Từ khóa "Đã được sắp xếp sẵn" (Đã sắp xếp sẵn). Luôn O(n²).
 
 ## 081-2: 셸 정렬 (Shell Sort)
+Phần “081-2: 셸 정렬 (Shell Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **삽입 정렬(Insertion Sort)을 보완/확장**한 알고리즘. (Phiên bản nâng cấp của Insertion Sort).
 - 입력 파일을 매개변수 **h(간격)** 만큼 떨어진 레코드들끼리 묶어 서브파일을 구성하고, 각 서브파일을 삽입 정렬. (Chia mảng thành các nhóm con cách nhau một khoảng $h$, sắp xếp chèn từng nhóm. Sau đó giảm $h$ dần dần về 1).
@@ -903,6 +1045,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 082: 선택 정렬 (Selection Sort)
+Phần “082: 선택 정렬 (Selection Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **최소값(Minimum)**을 찾아 첫 번째 위치에 놓고, 남은 것 중 또 최소값을 찾아 두 번째 위치에 놓는 방식. (Tìm phần tử nhỏ nhất đổi chỗ lên đầu, tiếp tục tìm số nhỏ nhì đổi chỗ lên thứ hai...).
 - **시간 복잡도:** O(n²) (Luôn luôn).
@@ -913,6 +1057,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 083: 버블 정렬 (Bubble Sort)
+Phần “083: 버블 정렬 (Bubble Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **인접한 두 개의 레코드** 키 값을 비교하여 크기에 따라 위치 교환(Swap). (So sánh 2 phần tử cạnh nhau, số to đẩy lùi về sau. Số to nhất sẽ "nổi bọt" chìm xuống cuối mảng sau vòng đầu tiên).
 - **종료 조건:** 더 이상 교환이 일어나지 않으면 정렬 끝. 플래그 비트(Flag Bit) 사용. (Dùng cờ Flag, nếu chạy hết 1 vòng mà không có ai đổi chỗ nghĩa là đã sắp xếp xong).
@@ -923,6 +1069,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 084: 퀵 정렬 (Quick Sort)
+Phần “084: 퀵 정렬 (Quick Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **분할과 정복 (Divide and Conquer):** 파일 나누어 정렬.
 - **피벗 (Pivot):** 기준값. Nhỏ hơn Pivot sang trái, lớn hơn Pivot sang phải.
@@ -935,6 +1083,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 085: 힙 정렬 (Heap Sort)
+Phần “085: 힙 정렬 (Heap Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **전이진 트리 (Complete Binary Tree)**를 힙 트리로 변환하여 정렬. (Xếp mảng thành Cây nhị phân hoàn chỉnh, tạo Heap max/min, lấy dần gốc ra ngoài).
 - **시간 복잡도:** Mọi trường hợp (Tốt, trung bình, xấu) đều là **O(n log n)**. Rất ổn định, ít tốn RAM.
@@ -944,6 +1094,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 086: 2-Way 합병 정렬 (Merge Sort)
+Phần “086: 2-Way 합병 정렬 (Merge Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 이미 정렬된 두 개의 파일을 하나의 파일로 **합치며 (Merge)** 정렬. (Cưa đôi mảng liên tục đến khi còn 1 phần tử, rồi gộp từ từ lại thành 2, 4, 8...).
 - **시간 복잡도:** Mọi trường hợp đều **O(n log n)**. 안정 정렬 (Stable Sort).
@@ -951,6 +1103,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 086-1: 기수 정렬 (Radix Sort / Bucket Sort)
+Phần “086-1: 기수 정렬 (Radix Sort / Bucket Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터를 비교하지 않음! **큐(Queue)**를 이용하여 데이터의 **자릿수(Digit)**별로 나누어 담았다가 꺼냄. (Không dùng dấu < hay > để so sánh. Nhìn vào chữ số hàng Đơn vị, phân vào 10 cái Queue (0-9). Xong ráp lại, làm tiếp hàng Chục, Trăm...).
 - **시간 복잡도:** **O(d*n)** (Trong đó d là số chữ số dài nhất). Cực kỳ nhanh, vượt qua giới hạn n log n của các thuật toán so sánh thông thường.
@@ -960,6 +1114,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)
+Phần “087: 이분 검색 (Binary Search - Tìm kiếm nhị phân)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **전제조건 (Bắt buộc):** 파일이 **반드시 순서화(정렬, Ordered)** 되어 있어야 함. (Mảng bắt buộc phải được sắp xếp từ trước).
 - **원리:** 찾고자 하는 값을 중간 레코드(Middle, `M = (F+L)/2`)와 비교하여 탐색 범위를 절반씩 줄임.
@@ -970,11 +1126,15 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ## 088: 해싱 (Hashing) & 088-1: 데이터저장소 (Data Storage)
 
 ### 해싱 함수 (Hash Function)
+Phần “해싱 함수 (Hash Function)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - Chuyển `Key` thành `Home Address` trong Hash Table. 
 - Từ khóa: Bucket (Xô), Slot (Khe), Collision (Đụng độ - 2 Key ra chung 1 Address), Overflow (Tràn - Bucket hết chỗ trống).
 - **제산법 (Division):** Phổ biến nhất. Lấy Key chia cho số nguyên tố $Q$ lấy phần dư (Modulus).
 
 ### 데이터저장소 (Data Storage)
+Phần “데이터저장소 (Data Storage)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **논리 (Logical):** 연관성, 구조 (Cấu trúc, liên kết, bản thiết kế trên giấy).
 - **물리 (Physical):** 하드웨어, 저장장치 (Phần cứng thực tế ổ cứng HDD/SSD).
 
@@ -985,12 +1145,16 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ## 088-2: 데이터베이스 (Database) & 089: DBMS
 
 ### 데이터베이스의 4가지 특징 (ISOS - 4 Đặc trưng của DB)
+Phần “데이터베이스의 4가지 특징 (ISOS - 4 Đặc trưng của DB)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **통합된 데이터 (Integrated Data):** 중복 배제 (Không trùng lặp).
 - **저장된 데이터 (Stored Data):** 저장 매체에 저장 (Lưu trên máy tính).
 - **운영 데이터 (Operational Data):** 반드시 필요한 고유 업무 자료 (Dữ liệu bắt buộc phải có để tổ chức hoạt động, không phải rác).
 - **공용 데이터 (Shared Data):** 공동으로 소유 (Nhiều người/app dùng chung).
 
 ### DBMS (Database Management System)
+Phần “DBMS (Database Management System)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소프트웨어 (Là phần mềm quản lý DB, ví dụ: MySQL, Oracle).
 - **3대 기능 (3 Chức năng chính):** 
   - **정의 (Definition / DDL):** Tạo cấu trúc, bảng (Table).
@@ -1002,6 +1166,8 @@ Chuyển đổi biểu thức toán học tương ứng với duyệt cây.
 ---
 
 ## 090-1: 데이터의 독립성 (Data Independence)
+Phần “090-1: 데이터의 독립성 (Data Independence)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **논리적 독립성 (Logical):** Đổi cấu trúc logic (Thêm/xóa cột) nhưng App đang chạy không bị sập.
 - **물리적 독립성 (Physical):** Đổi ổ cứng (Sang SSD, đổi server) nhưng App vẫn chạy bình thường.
@@ -1033,12 +1199,16 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 - 💡 **Mẹo ghi nhớ (Mnemonics):** Procedure = Gọi mới chạy. Trigger = Tự động (Event). Function = Trả về giá trị (Return).
 
 ### 절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)
+Phần “절차형 SQL의 테스트와 디버깅 (Testing & Debugging Procedural SQL)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 절차형 SQL은 DBMS 내부에서 직접 실행되므로, 애플리케이션과 DB 사이의 데이터 전송량을 줄일 수 있어 효율적임. (Chạy trực tiếp trong DBMS nên giảm nghẽn mạng).
 - **Quy trình Test & Debug:** `CREATE` (Biên dịch) -> Sửa lỗi cú pháp -> Comment các lệnh `INSERT/UPDATE/DELETE` (Tránh làm hỏng DB thật) -> Dùng `DBMS_OUTPUT` in giá trị ra màn hình để kiểm tra -> `EXEC / CALL` -> Xác nhận kết quả.
 
 ---
 
 ## 092-1: 쿼리 성능 최적화 (Query Performance Optimization)
+Phần “092-1: 쿼리 성능 최적화 (Query Performance Optimization)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 입·출력 애플리케이션의 성능 향상을 위해 **SQL 코드를 최적화**하는 작업. (Tối ưu hóa mã SQL để tăng tốc độ truy xuất).
 - **최적화 절차 (Trình tự tối ưu hóa):**
@@ -1053,14 +1223,20 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 093 & 093-1 & 093-2: 단위 모듈 및 명세서 (Unit Module & Specifications)
 
 ### 단위 모듈 (Unit Module)
+Phần “단위 모듈 (Unit Module)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 프로그램의 단위 기능을 구현하는 독립적인 최소 소프트웨어 단위. (Đơn vị phần mềm nhỏ nhất, độc lập, thực hiện 1 chức năng duy nhất).
 
 ### 단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)
+Phần “단위 기능 명세서 작성 원칙 (Nguyên tắc viết Đặc tả chức năng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **추상화 (Abstraction):** 복잡한 시스템을 단순하게 구현. (Trừu tượng hóa - ẩn đi sự phức tạp).
 - **구조화 (Structuring):** 대형 시스템을 분해하여 단위 기능별로 구분, 계층적으로 구성. (Cấu trúc hóa - chia nhỏ thành sơ đồ hình cây).
 - **정보 은닉 (Information Hiding):** 한 모듈 내의 정보가 다른 모듈에 영향을 주지 않도록 숨김. (Che giấu thông tin - dùng biến private để tránh đụng độ).
 
 ### 입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)
+Phần “입·출력 기능 및 알고리즘 구현 (I/O & Algorithm Implementation)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **입·출력 구현:** Nhận Input, trả Output. Chú ý liên kết giao diện (CLI/GUI) hoặc dùng Open Source API để kết nối mạng.
 - **알고리즘 구현:** Viết code xử lý logic bên trong (Process) sau khi đã có I/O.
 
@@ -1069,6 +1245,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)
 
 ### IPC (Inter-Process Communication - Giao tiếp giữa các tiến trình)
+Phần “IPC (Inter-Process Communication - Giao tiếp giữa các tiến trình)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 모듈 간 또는 복수의 프로세스 간 통신을 위한 인터페이스. (Cách các chương trình đang chạy nói chuyện với nhau).
 - **Các phương pháp IPC:**
   - **Shared Memory (Bộ nhớ chia sẻ):** Nhanh nhất. Các process dùng chung 1 vùng RAM.
@@ -1078,6 +1256,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
   - **Message Queueing (Hàng đợi tin nhắn):** Truyền tin bất đồng bộ.
 
 ### 알고리즘 구현 모듈 (Các loại Module khi lập trình)
+Phần “알고리즘 구현 모듈 (Các loại Module khi lập trình)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **디바이스 드라이버 모듈 (Device Driver):** Điều khiển phần cứng ngoại vi (vd: Máy in).
 - **네트워크 모듈 (Network):** Truyền thông dữ liệu mạng.
 - **파일 모듈 (File):** Truy xuất cấu trúc file trên đĩa cứng.
@@ -1091,10 +1271,14 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)
 
 ### 단위 모듈 테스트 (Unit Module Test)
+Phần “단위 모듈 테스트 (Unit Module Test)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 코딩 직후 최소 단위인 모듈이나 컴포넌트에 초점을 맞춤. (Test ngay sau khi code xong 1 hàm/module).
 - Chủ yếu dùng **화이트박스 (White-box test)** để tìm lỗi thuật toán, vòng lặp vô hạn, lỗi công thức toán học.
 
 ### 테스트 케이스 (Test Case)
+Phần “테스트 케이스 (Test Case)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 입력 값, 실행 조건, 기대 결과의 명세서. (Tài liệu ghi rõ: Nhập gì, Điều kiện gì, Kết quả mong đợi là gì).
 - 테스트 케이스를 미리 작성(사전에 정의)해야 인력과 시간 낭비를 방지. (Phải viết Test Case **trước** khi code hoặc test, để tránh test lung tung tốn thời gian).
 
@@ -1103,6 +1287,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)
+Phần “097 & 120: 통합 개발 환경 (IDE - Integrated Development Environment)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 코딩, 디버그, 컴파일, 배포 등 모든 작업을 하나의 프로그램에서 처리. (Phần mềm tất-cả-trong-một).
 - **4대 기능 (4 Chức năng chính):** 
@@ -1136,12 +1322,16 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 098 & 기타 협업 도구 (Build Tools & Collaboration Tools)
 
 ### 빌드 도구 (Build Tool)
+Phần “빌드 도구 (Build Tool)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 소스 코드를 실행할 수 있는 제품으로 변환(빌드)하는 과정을 자동화. (Công cụ tự động biên dịch và gom file code lại thành file chạy `.exe`, `.apk`...).
 - **Ant:** Cổ điển, dùng cho Java, của Apache.
 - **Maven:** Nâng cấp của Ant, quản lý thư viện (Dependencies) tự động.
 - **Gradle:** Hiện đại nhất, lai giữa Ant và Maven, dùng nhiều cho Android.
 
 ### 기타 협업 도구 (Groupware / Collaboration Tools)
+Phần “기타 협업 도구 (Groupware / Collaboration Tools)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **프로젝트 및 일정 관리 (Quản lý dự án):** Jira (지라), Trello, Google Calendar.
 - **메신저 (Giao tiếp):** Slack, Jandi.
 - **디자인 (Thiết kế UI -> Code):** Zeplin, Sketch.
@@ -1152,6 +1342,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 099: 소프트웨어 패키징 (Software Packaging)
+Phần “099: 소프트웨어 패키징 (Software Packaging)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 실행 파일들을 묶어 배포용 설치 파일을 만드는 과정. (Gom tất cả file thực thi, file hình, file cấu hình thành 1 file cài đặt (Setup.exe) để tung ra thị trường).
 - **Nguyên tắc:** 
@@ -1161,6 +1353,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 100 & 100-1: 패키징 시 고려사항 및 순서 (Packaging Considerations & Sequence)
 
 ### 패키징 시 고려사항
+Phần “패키징 시 고려사항” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 최소 환경 정의 (OS/CPU/RAM). (Phải ghi rõ cấu hình tối thiểu để chạy app).
 - UI와 매뉴얼 일치. (Hình ảnh UI trong thực tế và trong tài liệu phải giống nhau).
 - 보안 및 암호화, DRM 연동 고려. (Bảo mật, mã hóa, tích hợp chống copy).
@@ -1181,9 +1375,13 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 100-2 ~ 104: 저작권 및 DRM (Copyright & Digital Rights Management)
 
 ### 저작권 (Copyright)
+Phần “저작권 (Copyright)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 창작자가 가지는 **배타적 독점적 권리**. (Quyền độc quyền của tác giả). Phần mềm rất dễ bị copy (`Ctrl+C / Ctrl+V`) nên phải có DRM để bảo vệ.
 
 ### DRM의 핵심 구성 요소 (Thành phần chính của DRM)
+Phần “DRM의 핵심 구성 요소 (Thành phần chính của DRM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **패키저 (Packager):** 콘텐츠 암호화. (Người/Máy đóng gói và khóa file lại).
   - *실시간 패키징:* File nhỏ (Nhạc, ảnh) -> Khách bấm mua mới đóng gói.
   - *사전 패키징:* File to (Phim) -> Đóng gói sẵn trước khi bán.
@@ -1193,6 +1391,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 - **보안 컨테이너 (Security Container):** Hộp an toàn chứa file gốc để vận chuyển.
 
 ### DRM 기술 요소 (Kỹ thuật dùng trong DRM)
+Phần “DRM 기술 요소 (Kỹ thuật dùng trong DRM)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **암호화 (Encryption):** Mã hóa file.
 - **키 관리 (Key Management):** Quản lý khóa để mở mã hóa.
 - **식별 기술 (Identification):** Gắn mã định danh (DOI, URI) để biết file nào là file nào.
@@ -1207,6 +1407,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 104-1 ~ 108: 소프트웨어 매뉴얼 (Software Manuals)
 
 ### 설치 매뉴얼 (Installation Manual - Hướng dẫn cài đặt)
+Phần “설치 매뉴얼 (Installation Manual - Hướng dẫn cài đặt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **사용자 기준 (Góc nhìn người dùng):** Viết cho khách hàng, không phải cho Dev.
 - **순서대로 (Theo trình tự):** Từ lúc bấm Next đến lúc Finish.
 - **예외 상황 / 오류 메시지:** Phải có cách xử lý khi cài đặt bị lỗi.
@@ -1217,6 +1419,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
   - 설치 환경 체크 (Kiểm tra OS, tắt app khác trước khi cài).
 
 ### 사용자 매뉴얼 (User Manual - Hướng dẫn sử dụng)
+Phần “사용자 매뉴얼 (User Manual - Hướng dẫn sử dụng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **컴포넌트 단위 (Theo từng Component):** Chia nhỏ theo từng tính năng (Ví dụ: Hướng dẫn riêng cho Word, Excel).
 - **버전 관리 (Quản lý phiên bản):** App update tính năng thì Manual cũng phải update theo.
 - **시각 자료 (Hình ảnh):** Bắt buộc phải có hình chụp màn hình UI để dễ hiểu.
@@ -1224,6 +1428,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 105: 시각에 따른 테스트 (Verification vs Validation)
+Phần “105: 시각에 따른 테스트 (Verification vs Validation)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **검증 (Verification - Xác minh):** 개발자 시각 (Góc nhìn Dev). "Làm đúng thiết kế/mã code không?". (Are we building the product right?).
 - **확인 (Validation - Thẩm định):** 사용자 시각 (Góc nhìn User). "Phần mềm này có đúng cái khách hàng cần không?". (Are we building the right product?).
@@ -1233,6 +1439,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 109 ~ 112: 형상 관리 (SCM - Software Configuration Management)
+Phần “109 ~ 112: 형상 관리 (SCM - Software Configuration Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **형상 관리 (SCM):** 소프트웨어 변경 사항을 체계적으로 관리. (Quản lý mọi thay đổi của phần mềm: Source code, tài liệu, thiết kế... trong suốt vòng đời).
 - **목적:** 가시성 (Tính hiển thị - ai đang làm gì), 추적성 (Tính truy xuất - ai gây ra lỗi này), 무절제한 변경 방지 (Ngăn chặn việc sửa code vô tội vạ).
@@ -1245,6 +1453,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 5. **형상 기록 (Status Reporting):** Ghi chép lịch sử báo cáo.
 
 ### 버전 관리 용어 (Thuật ngữ Version Control)
+Phần “버전 관리 용어 (Thuật ngữ Version Control)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **저장소 (Repository):** Kho lưu trữ code.
 - **체크아웃 (Check-out):** Lấy code từ Kho về máy mình để sửa.
 - **체크인 (Check-in) / 커밋 (Commit):** Lưu code mình vừa sửa vào máy mình (Local) hoặc đưa lên Kho.
@@ -1253,6 +1463,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)
+Phần “113 ~ 115: 버전 관리 도구 방식 (Version Control Tool Types)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | 방식 (Cách thức) | 특징 (Đặc điểm) | 대표 도구 (Công cụ) |
 |---|---|---|
@@ -1269,12 +1481,16 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 116 & 117: 형상 관리 도구 (SVN vs Git)
 
 ### Subversion (SVN)
+Phần “Subversion (SVN)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 클라이언트/서버 구조 (Cấu trúc Client/Server tập trung).
 - **Trunk:** Thư mục chính (Main).
 - **Branches:** Th nhánh để làm tính năng riêng.
 - **Revision:** Mỗi lần Commit thành công, số Revision tăng lên 1.
 
 ### Git (깃)
+Phần “Git (깃)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - 분산 저장소 방식 (Lưu trữ phân tán). Phát minh bởi Linus Torvalds.
 - **Snapshot (스냅샷):** Lưu lại toàn bộ trạng thái file tại một thời điểm rất nhanh chóng.
 - **로컬 저장소 (Local Repo) vs 원격 저장소 (Remote Repo):** Internet đứt vẫn làm việc bình thường ở Local.
@@ -1284,6 +1500,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)
+Phần “118 ~ 120: 빌드 자동화 도구 (Build Automation Tools)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 소스 코드를 실행 파일로 만드는 과정과 배포를 자동화. (Tự động hóa việc dịch code, test và đóng gói phát hành - CI/CD).
 - **Jenkins:** Viết bằng Java, chạy trên web (Web GUI). Điểm mạnh là test phân tán trên nhiều máy.
@@ -1294,6 +1512,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 120-1: 소프트웨어의 분류 (Software Classification)
+Phần “120-1: 소프트웨어의 분류 (Software Classification)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **상용 소프트웨어 (Commercial):** Bán lấy tiền (Product). VD: Windows, Office, Game.
 - **서비스 제공 소프트웨어 (Service Provision / SI):** Làm theo đơn đặt hàng của 1 tổ chức (Dự án nội bộ). VD: Hệ thống ngân hàng.
@@ -1303,6 +1523,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ## 120-2 ~ 126: 애플리케이션 테스트 이론 (Application Test Theory)
 
 ### 테스트의 기본 원리 (Nguyên lý cơ bản)
+Phần “테스트의 기본 원리 (Nguyên lý cơ bản)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **완벽한 테스트 불가능:** Không thể khẳng định 100% hết bug.
 - **파레토 법칙 (Pareto):** 80% bug nằm ở 20% code cốt lõi. (Đám mây lỗi).
 - **살충제 패러독스 (Pesticide Paradox):** Test hoài 1 kịch bản sẽ bị "nhờn", phải liên tục thay đổi bộ test.
@@ -1327,6 +1549,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 127 ~ 129: 화이트박스 테스트 (White Box Test)
+Phần “127 ~ 129: 화이트박스 테스트 (White Box Test)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 내부 로직과 제어 구조를 직접 관찰. (Test dựa trên mã nguồn (Source Code). Nhìn thấu bên trong).
 - **종류 (Các kỹ thuật):** 기초 경로 (Đường dẫn cơ bản), 조건 (Điều kiện), 루프 (Vòng lặp), 데이터 흐름 (Luồng dữ liệu).
@@ -1340,6 +1564,8 @@ C, JAVA처럼 분기/반복 (If/For)이 가능한 SQL (SQL có thêm logic lập
 ---
 
 ## 130 & 131: 블랙박스 테스트 (Black Box Test)
+Phần “130 & 131: 블랙박스 테스트 (Black Box Test)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 명세를 기초로 기능 테스트. 내부 구조 무시. (Dựa vào chức năng UI, không thèm nhìn code).
 - **종류 (Các kỹ thuật):**

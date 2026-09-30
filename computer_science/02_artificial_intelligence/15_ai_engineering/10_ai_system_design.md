@@ -67,6 +67,8 @@ Prompt không phải ranh giới bảo mật (security boundary / 보안 경계)
 
 ## RAG, Fine-Tuning và Tooling giải quyết bài toán khác nhau
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 RAG       → kiến thức ngoài model hoặc cần cập nhật
 Fine-tune → điều chỉnh behavior, style hoặc task distribution
@@ -225,6 +227,8 @@ Downstream lời gọi (call / 호출) phải nhận deadline còn lại. hết 
 
 ## Fallback và Graceful Degradation
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 preferred model
 → fallback model
@@ -266,6 +270,8 @@ User query
 Thất bại (failure / 실패) có thể đến từ parser, chỉ mục (index / 인덱스) stale, ACL filter, retrieval miss, ngữ cảnh (context / 맥락) truncation hoặc unsupported claim. Vì vậy cần thành phần (component / 컴포넌트) evaluation riêng, xem [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md).
 
 ## Tác nhân (agent / 에이전트) kiến trúc (architecture / 아키텍처)
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 Goal
@@ -386,6 +392,8 @@ provider lock-in risk
 
 ## Thất bại (failure / 실패) Modes xuyên suốt hệ thống
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 ```text
 retrieval stale
 prompt/config mismatch
@@ -434,5 +442,3 @@ Không. Nếu không còn headroom, burst nhỏ cũng có thể làm tail độ 
 ## Liên kết kiến thức
 
 Chapter này nối [RAG](../09_retrieval_and_rag/README.md), [Agents](../10_agents_and_ai_systems/README.md), [Data for AI](../14_data_for_ai/README.md), [Model Serving](./03_model_serving.md), [MLOps / LLMOps](../16_mlops_and_llmops/README.md), [Evaluation](../18_evaluation_reliability_interpretability/README.md), [Reliability](../18_evaluation_reliability_interpretability/07_reliability_engineering.md) và [Security](../19_ai_safety_security_alignment/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

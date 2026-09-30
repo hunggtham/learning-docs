@@ -877,6 +877,8 @@ Từ lịch interleaving đơn giản phải nhận diện dirty read, lost cậ
 Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu khi có thể **giải thích bằng lời của mình và làm một câu biến thể**.
 
 ## Môn 1
+Phần “Môn 1” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [ ] phân loại functional / non-functional yêu cầu (requirement / 요구사항);
 - [ ] đọc DFD/UML và chọn đúng diagram theo mục đích;
@@ -887,6 +889,8 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] hiểu EAI/ESB, JSON/XML/AJAX và giao diện (interface / 인터페이스) bảo mật (security / 보안).
 
 ## Môn 2
+Phần “Môn 2” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [ ] ngăn xếp (stack / 스택)/hàng đợi (queue / 큐)/cây (tree / 트리)/đồ thị (graph / 그래프)/traversal;
 - [ ] sorting/tìm kiếm (search / 검색)/băm (hash / 해시) và độ phức tạp (complexity / 복잡도);
@@ -898,6 +902,8 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] giao diện (interface / 인터페이스) hiện thực (implementation / 구현)/xác minh (verification / 확인).
 
 ## Môn 3
+Phần “Môn 3” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [ ] lược đồ (schema / 스키마)/dữ liệu (data / 데이터) independence/ER mô hình (model / 모델);
 - [ ] all key types và functional phụ thuộc (dependency / 의존성);
@@ -911,6 +917,8 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] di chuyển (migration / 마이그레이션) kiểm tra hợp lệ (validation / 검증).
 
 ## Môn 4
+Phần “Môn 4” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [ ] C pointer/array/string/operator;
 - [ ] Java inheritance/overload/override/static/final/exception;
@@ -923,6 +931,8 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] IPv4/CIDR cơ bản.
 
 ## Môn 5
+Phần “Môn 5” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [ ] vòng đời (lifecycle / 생명주기)/methodology/estimation/tailoring;
 - [ ] mạng (network / 네트워크) thiết bị (device / 장치)/VLAN/NAT/tải (load / 로드) balancing;

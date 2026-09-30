@@ -40,5 +40,5 @@ Danh mục lĩnh vực (domain / 도메인) đầy đủ, siêu dữ liệu (met
 ## Quy ước biên soạn
 
 - Giữ thuật ngữ gốc để đối chiếu đề thi, kèm English và nghĩa tiếng Việt khi có thể.
-- Trình bày theo thứ tự: khái niệm → cơ chế/quy tắc → so sánh → ví dụ → ôn tập.
-- Không sửa nguồn thô; mọi bản học được tạo lại bằng script tương ứng trong `scripts/`.
+- Chọn cách trình bày phù hợp với topic; có thể dùng khái niệm, cơ chế, so sánh, ví dụ hoặc bảng khi chúng thực sự giúp người học.
+- Không sửa nguồn thô; bản học canonical được research, viết và review thủ công theo prompt của repository.

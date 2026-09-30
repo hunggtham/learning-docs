@@ -418,6 +418,8 @@ Hỏi:
 - quay lui (rollback / 롤백)/hotfix đường dẫn (path / 경로) là gì.
 
 ## 34. Official references
+Phần này nối mạch Android vừa học với “34. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - App tính tương thích (compatibility / 호환성): https://nhà phát triển (developer / 개발자).android.com/guide/app-compatibility
 - nền tảng (platform / 플랫폼) hành vi (behavior / 동작) changes: https://nhà phát triển (developer / 개발자).android.com/about/versions
@@ -425,6 +427,4 @@ Hỏi:
 - SDK Extensions: https://nhà phát triển (developer / 개발자).android.com/guide/sdk-extensions
 - mục tiêu (target / 대상) API requirements: https://nhà phát triển (developer / 개발자).android.com/google/play/requirements/target-sdk
 
-Tính tương thích (compatibility / 호환성) documentation là versioned nguồn chuẩn (source of truth / 정본). Mỗi lần mục tiêu (target / 대상)/OS upgrade phải đọc release-specific pages, không dựa duy nhất vào bộ nhớ (memory / 메모리) từ bản phát hành (release / 릴리스) trước.
-
-> **Bàn giao:** Sau **34. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Compatibility documentation là versioned source of truth. Mỗi lần target/OS upgrade phải đọc release-specific pages, không dựa duy nhất vào memory từ release trước.

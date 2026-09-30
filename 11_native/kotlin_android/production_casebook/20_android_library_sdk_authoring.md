@@ -532,6 +532,8 @@ Trước publish:
 - sản phẩm tạo ra (artifact / 산출물) immutable/provenance dấu vết (trace / 추적) được không.
 
 ## 46. Official references
+Phần này nối mạch Android vừa học với “46. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android thư viện (library / 라이브러리) modules: https://nhà phát triển (developer / 개발자).android.com/studio/projects/android-library
 - Publish your thư viện (library / 라이브러리): https://nhà phát triển (developer / 개발자).android.com/bản dựng (build / 빌드)/publish-library
@@ -539,6 +541,4 @@ Trước publish:
 - R8: https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/app-optimization
 - Android Lint: https://nhà phát triển (developer / 개발자).android.com/studio/ghi (write / 쓰기)/lint
 
-Thư viện (library / 라이브러리) authoring là tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링) dài hạn. API đẹp ở phiên bản (version / 버전) 1.0 nhưng không có evolution chiến lược (strategy / 전략) sẽ trở thành technical debt cho cả SDK nhóm (team / 팀) và mọi bên tiêu thụ (consumer / 소비자).
-
-> **Bàn giao:** Sau **46. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Library authoring là compatibility engineering dài hạn. API đẹp ở version 1.0 nhưng không có evolution strategy sẽ trở thành technical debt cho cả SDK team và mọi consumer.

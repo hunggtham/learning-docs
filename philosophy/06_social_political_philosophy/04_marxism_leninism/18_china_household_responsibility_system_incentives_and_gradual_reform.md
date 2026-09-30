@@ -248,6 +248,8 @@ institution change
 ```
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - World Bank historical document on China and the Household Responsibility Hệ thống (system / 시스템): https://documents1.worldbank.org/curated/en/142781468127495966/pdf/multi0page.pdf
 - World Bank, *Rà soát (review / 검토) of China’s Rural Development Tiến trình (process / 프로세스)*: https://documents1.worldbank.org/curated/en/759681468160181821/pdf/493190PUB0Spat101Official0Use0Only1.pdf

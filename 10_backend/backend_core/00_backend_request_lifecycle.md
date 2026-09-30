@@ -24,6 +24,8 @@ client
 > **Chuyển mạch:** Từ **Mục tiêu**, ta sang **bất biến (invariant / 불변식) cần giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bất biến (invariant / 불변식) cần giữ
+Phần “Bất biến (invariant / 불변식) cần giữ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Mỗi yêu cầu (request / 요청) có một correlation/yêu cầu (request / 요청) ID; log ở các tầng (layer / 계층) có thể nối lại.
 - Authentication được hoàn tất trước khi dùng định danh (identity / 식별자) để authorize.

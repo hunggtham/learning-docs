@@ -198,6 +198,8 @@ Long-running serving thời gian chạy (runtime / 런타임) có allocator và 
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Compute hỏi: cần bao nhiêu phép toán?
 Memory hỏi: dữ liệu ở đâu, phải di chuyển bao nhiêu byte và có thể reuse bao nhiêu lần?
@@ -222,5 +224,3 @@ Không. vật lý (physical / 물리적) dữ liệu (data / 데이터) movement
 ## Liên kết kiến thức
 
 Xem [GPU Architecture](./02_gpu_architecture.md), [Parallel Computing](./04_parallel_computing.md), [Quantization](../15_ai_engineering/06_quantization.md), [Caching/Batching](../15_ai_engineering/05_caching_and_batching.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 compute foundations](./00_compute_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

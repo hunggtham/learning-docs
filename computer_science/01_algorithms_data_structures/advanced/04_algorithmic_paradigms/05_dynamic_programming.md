@@ -619,6 +619,8 @@ Trước khi mã (code / 코드), estimate:
 
 ```text
 #states * transition cost * bytes/state
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 ```
 
 DP feasibility là kỹ thuật (engineering / 엔지니어링) calculation, không chỉ asymptotic label.
@@ -734,5 +736,3 @@ Có dominance/monotonicity/convexity để optimize không?
 ```
 
 Xem thêm: [Recursion & Backtracking](./02_recursion_and_backtracking.md), [Greedy](./04_greedy_algorithms.md), [DAG/SCC](../03_graphs/04_dag_topological_sort_and_scc.md), [Bit Manipulation](../05_specialized/02_bit_manipulation_and_bitsets.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 searching](./00_searching.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

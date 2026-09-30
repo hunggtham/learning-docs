@@ -306,6 +306,8 @@ tạo ra bao nhiêu gross profit bền vững?
 
 ## 24. ARR, bookings và RPO
 
+SaaS có nhiều thước đo nhìn giống doanh thu nhưng thuộc các thời điểm ghi nhận khác nhau. Phần này đặt ARR, bookings và RPO cạnh nhau để người mới biết chỉ số nào nói về quy mô lặp lại, hợp đồng mới hay nghĩa vụ chưa ghi nhận.
+
 - ARR: doanh thu lặp lại quy đổi năm;
 - bookings: giá trị hợp đồng ký trong kỳ;
 - RPO: nghĩa vụ hợp đồng còn lại chưa ghi nhận doanh thu.
@@ -481,6 +483,8 @@ Tỷ lệ lấp đầy cao chưa đủ. Cần xem:
 
 ## 42. Cap tỷ lệ (rate / 비율)
 
+Cap rate là cầu nối giữa NOI và giá trị tài sản. Hãy đọc nó cùng lãi suất tài trợ, tăng trưởng thuê và chất lượng tài sản; một cap rate thấp không tự động là tài sản tốt nếu dòng tiền không bền vững.
+
 ```text
 Cap Rate ≈ NOI / Property Value
 ```
@@ -536,6 +540,8 @@ Backlog lớn chỉ tốt nếu:
 - chi phí đầu vào được kiểm soát.
 
 ## 47. Book-to-bill
+
+Book-to-bill so đơn hàng mới với doanh thu đã ghi nhận để theo dõi hướng backlog. Chỉ số trên 1 có ý nghĩa khác nhau tùy khả năng giao hàng, biên lợi nhuận và điều khoản hủy hợp đồng.
 
 ```text
 Book-to-Bill

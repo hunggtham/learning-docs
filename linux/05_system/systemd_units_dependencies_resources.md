@@ -269,6 +269,8 @@ Nhưng secret management cần cẩn thận: môi trường (environment / 환�
 
 ## Working directory
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```ini
 WorkingDirectory=/opt/app
 ```
@@ -278,6 +280,8 @@ Nếu ứng dụng dùng relative đường dẫn (path / 경로) mà không kha
 Tốt hơn nữa là ứng dụng (application / 애플리케이션) dùng absolute/configured paths cho dữ liệu quan trọng.
 
 ## `User=` và `Group=`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```ini
 User=app
@@ -405,6 +409,8 @@ Ví dụ JVM nhận SIGTERM không nhất thiết luôn trả 143 tùy wrapper/t
 
 ## Hết thời gian chờ (timeout / 타임아웃) khi start/stop
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```ini
 TimeoutStartSec=60
 TimeoutStopSec=30
@@ -530,6 +536,8 @@ Nhưng tiến trình (process / 프로세스) đang chạy chưa tự thay đổ
 Sau đó tùy thay đổi có thể cần restart/reload dịch vụ (service / 서비스).
 
 ## Mask
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 sudo systemctl mask app.service
@@ -661,6 +669,4 @@ resource + security policy
 
 ## Kết nối kiến thức
 
-Đọc [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md) để hiểu tài nguyên (resource / 자원)/bảo mật (security / 보안) primitives phía dưới systemd, [Bảo mật và gia cố](../08_operations/security_hardening.md) để hiểu threat mô hình (model / 모델), và [Deployment/rollback](../08_operations/deployment_release_rollback.md) để nối vòng đời (lifecycle / 생명주기) dịch vụ (service / 서비스) với quy trình phát hành (release process / 릴리스 프로세스).
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [boot kernel initramfs](./boot_kernel_initramfs.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đọc [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md) để hiểu resource/security primitives phía dưới systemd, [Bảo mật và gia cố](../08_operations/security_hardening.md) để hiểu threat model, và [Deployment/rollback](../08_operations/deployment_release_rollback.md) để nối lifecycle service với release process.

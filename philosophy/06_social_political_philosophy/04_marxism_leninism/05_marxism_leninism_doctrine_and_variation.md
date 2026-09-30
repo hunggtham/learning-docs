@@ -283,6 +283,8 @@ materialist worldview / dialectical method
 But kiến trúc (architecture / 아키텍처) alone does not tell us what actual institutions did. The next chapter therefore changes bằng chứng (evidence / 증거) kiểu (type / 타입): from textual/doctrinal reconstruction to historical institutional phân tích (analysis / 분석).
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Lenin primary texts from the previous chapter remain necessary to distinguish Lenin's own arguments from later codification.

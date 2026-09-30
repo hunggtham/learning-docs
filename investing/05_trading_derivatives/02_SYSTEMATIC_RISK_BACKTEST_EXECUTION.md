@@ -108,15 +108,21 @@ Ví dụ dùng giá đóng cửa của ngày để quyết định một lệnh 
 
 ## 8. Thiên lệch sống sót
 
+Sau khi xác định dữ liệu và universe, cần kiểm tra xem mẫu lịch sử có loại bỏ những tài sản thất bại hay không. Survivorship bias làm chiến lược trông bền hơn vì chỉ giữ lại các “người sống sót”.
+
 **Thiên lệch sống sót (survivorship bias)** xảy ra khi chỉ dùng những tài sản còn tồn tại hôm nay cho dữ liệu lịch sử, bỏ các công ty phá sản hoặc bị hủy niêm yết.
 
 Kết quả thường đẹp giả tạo.
 
 ## 9. Thiên lệch lựa chọn
 
+Selection bias xảy ra khi ta chọn thị trường, giai đoạn hoặc tập tài sản vì đã biết nó phù hợp với rule. Cách chống là định nghĩa universe và khoảng thời gian trước khi xem kết quả.
+
 **Thiên lệch lựa chọn (selection bias)** xuất hiện khi chọn thị trường hoặc giai đoạn vì đã biết trước nó phù hợp chiến lược.
 
 ## 10. Đào bới dữ liệu
+
+Data snooping biến một kết quả đẹp trong nhiều thử nghiệm thành ảo giác bằng chứng. Mỗi thử nghiệm thêm vào làm tăng xác suất tìm thấy pattern ngẫu nhiên, nên cần ghi log và kiểm tra ngoài mẫu.
 
 **Đào bới dữ liệu (data snooping)** là thử quá nhiều biến, quy tắc và khung thời gian rồi chỉ giữ kết quả đẹp nhất.
 
@@ -149,11 +155,15 @@ Không nên liên tục nhìn tập kiểm tra rồi sửa chiến lược, vì 
 
 ## 13. Ngoài mẫu
 
+OOS là phần dữ liệu được giữ lại để kiểm tra sau khi rule đã khóa. Mục tiêu là đo khả năng tổng quát hóa, không phải tiếp tục chỉnh tham số cho đến khi OOS cũng đẹp.
+
 **Ngoài mẫu (out-of-sample, OOS)** là phần dữ liệu không dùng để xây quy tắc.
 
 Kết quả OOS thường đáng tin hơn trong mẫu, dù vẫn có thể chịu may mắn thống kê.
 
 ## 14. Kiểm thử cuốn chiếu
+
+Walk-forward mô phỏng cách một hệ thống được cập nhật theo thời gian: train trên quá khứ, kiểm tra trên đoạn kế tiếp, rồi cuốn cửa sổ về phía trước. Nó nối nghiên cứu với môi trường thông tin thay đổi.
 
 **Kiểm thử cuốn chiếu (walk-forward)** lặp quy trình:
 
@@ -178,6 +188,8 @@ Khái niệm này đặc biệt quan trọng với mô hình học máy dùng d�
 
 ## 16. Kỳ vọng mỗi giao dịch
 
+Expectancy là phép tóm tắt phân phối thắng/thua sau khi định nghĩa rõ sample, cost và execution. Hãy đọc công thức như điểm bắt đầu để kiểm tra độ bền, không như dự báo từng lệnh.
+
 ```text
 E
 = P(thắng) × Lãi trung bình
@@ -187,6 +199,8 @@ E
 Kỳ vọng dương mới là nền tảng; tỷ lệ thắng cao không đủ.
 
 ## 17. Bội số R
+
+R-multiple chuẩn hóa kết quả theo khoản lỗ ban đầu đã chấp nhận. Nhờ đó, các trade khác notional và stop có thể được so sánh trên cùng đơn vị rủi ro.
 
 **Bội số R (R-multiple)** chuẩn hóa kết quả theo mức rủi ro ban đầu, giúp so sánh các giao dịch có quy mô khác nhau.
 
@@ -243,6 +257,8 @@ Chiến lược có thể hợp lệ nhưng chỉ trong một chế độ; đi�
 
 ## 24. Kiểm tra giả
 
+Placebo test thay tín hiệu có ý nghĩa bằng tín hiệu ngẫu nhiên hoặc thời điểm dịch chuyển để kiểm tra liệu kết quả có còn xuất hiện mà không có cơ chế hay không. Nếu có, edge ban đầu có thể chỉ là artifact.
+
 **Kiểm tra giả (placebo test)** thay tín hiệu thật bằng tín hiệu ngẫu nhiên hoặc dịch thời gian để xem kết quả còn tương tự không.
 
 Nếu có, “lợi thế” có thể chỉ đến từ xu hướng chung của thị trường hoặc một thiên lệch dữ liệu.
@@ -262,6 +278,8 @@ Giữ quy tắc thoát và quản trị rủi ro nhưng ngẫu nhiên hóa đi�
 Chênh lệch mua–bán là chi phí trực tiếp giữa giá mua tốt nhất và giá bán tốt nhất. Kiểm thử dùng giá giữa hoặc giá đóng cửa mà bỏ qua chênh lệch thường quá lạc quan.
 
 ## 28. Trượt giá
+
+Slippage nối backtest với giá khớp thật. Nó phụ thuộc thanh khoản, kích thước lệnh, thời điểm, loại lệnh và trạng thái thị trường; vì vậy không nên dùng một mức phí cố định cho mọi phiên.
 
 **Trượt giá (slippage)** phụ thuộc:
 
@@ -305,6 +323,8 @@ Chiến lược futures cần mô hình hóa:
 
 ## 33. Lấy mẫu lại
 
+Bootstrap tạo nhiều đường kết quả từ mẫu lịch sử để nhìn uncertainty của expectancy và drawdown. Nó không tạo thêm thông tin độc lập và không sửa được sample bias hoặc regime chưa xuất hiện.
+
 **Bootstrap** lấy mẫu lại từ giao dịch hoặc lợi suất lịch sử để tạo nhiều đường kết quả khả dĩ.
 
 Mục tiêu là đánh giá bất định của lợi suất và mức suy giảm, thay vì chỉ nhìn một đường lịch sử.
@@ -332,6 +352,8 @@ Nếu lợi suất phụ thuộc vào chuỗi trước đó, giả định độ
 
 ## 37. Sharpe
 
+Sharpe đặt excess return cạnh volatility, nhưng có thể đánh giá sai chiến lược có skew, fat tail hoặc mark-to-market không thường xuyên. Luôn đọc nó cùng drawdown, liquidity và cost.
+
 ```text
 Sharpe
 = Lợi suất vượt chuẩn / Độ biến động
@@ -345,6 +367,8 @@ Sortino thay tổng độ biến động bằng độ lệch phía giảm, phù 
 
 ## 39. Calmar
 
+Calmar so CAGR với maximum drawdown, nên gần với câu hỏi khả năng sống sót hơn Sharpe trong một số hệ thống. Tuy nhiên nó vẫn phụ thuộc cửa sổ quan sát và không mô tả đầy đủ tail risk tương lai.
+
 ```text
 Calmar
 ≈ CAGR / Mức suy giảm tối đa
@@ -353,6 +377,8 @@ Calmar
 Thước đo này hữu ích với chiến lược có đường lợi nhuận kéo dài qua nhiều chu kỳ.
 
 ## 40. Hệ số lợi nhuận
+
+Profit factor so gross profit với gross loss. Chỉ số này cần được đặt cạnh số lượng trade, cost, drawdown và độ ổn định theo regime để tránh kết luận từ một mẫu nhỏ.
 
 ```text
 Profit Factor
@@ -401,6 +427,8 @@ Vòng quay cao làm chiến lược nhạy hơn với phí, trượt giá và ch
 
 ## 48. Kiểm thử tiến tới tương lai
 
+Forward test là bước kiểm tra hệ thống trong dữ liệu mới theo thời gian thật sau khi logic đã khóa. Nó giúp phát hiện drift, lỗi vận hành và chênh lệch giữa execution giả định với execution thực tế.
+
 **Kiểm thử tiến tới tương lai (forward test)** chạy chiến lược trên dữ liệu mới theo thời gian thật nhưng chưa nhất thiết dùng vốn thật.
 
 Nó giúp phát hiện:
@@ -444,6 +472,8 @@ Cơ chế **không lặp tác dụng (idempotency)** bảo đảm việc gửi l
 
 ## 53. Công tắc dừng
 
+Kill switch là điều kiện bảo vệ khi hệ thống lệch khỏi giả định an toàn: lỗi dữ liệu, lỗi lệnh, drawdown bất thường, exposure vượt giới hạn hoặc thị trường thay đổi trạng thái. Nó phải được viết trước khi có sự cố.
+
 **Công tắc dừng (kill switch)** cho phép ngừng hệ thống khi:
 
 - dữ liệu lỗi;
@@ -475,6 +505,8 @@ Lợi thế có thể giảm vì:
 - cách triển khai lệch khỏi nghiên cứu ban đầu.
 
 ## 56. Trôi phân phối đầu vào
+
+Feature drift xảy ra khi dữ liệu đầu vào hiện tại khác phân phối lúc xây mô hình. Khi drift làm thay đổi quan hệ giữa feature và outcome, cần giảm size, tái kiểm định hoặc dừng chiến lược thay vì giả định quá khứ còn đúng.
 
 **Trôi đặc trưng (feature drift)** là khi phân phối đầu vào thay đổi so giai đoạn dùng để xây mô hình.
 
@@ -541,5 +573,3 @@ Sai số dữ liệu
 ```
 
 Lợi thế thật là lợi thế còn tồn tại sau toàn bộ chuỗi đó, không phải đường kiểm thử đẹp nhất.
-
-> **Bàn giao:** Sau **61. Tách nghiên cứu và phê duyệt triển khai**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER TRADING FOREX RISK](./00_MASTER_TRADING_FOREX_RISK.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

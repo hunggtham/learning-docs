@@ -144,6 +144,8 @@ Một mô hình (model / 모델) có thể đạt benchmark cao nhưng vẫn ch�
 
 ## Paradigm map
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 flowchart TD
     AI[Artificial Intelligence]
@@ -189,5 +191,3 @@ Human feedback           → learning signal
 Vì vậy hiểu lịch sử paradigm giúp nhìn hệ thống (system / 시스템) hiện đại rõ hơn: hiện đại (modern / 현대적) AI không xóa sạch những idea cũ, mà thường recombine chúng ở quy mô (scale / 규모) và biểu diễn (representation / 표현) mới.
 
 Xem tiếp: [Intelligence, Agents and Environments](./02_intelligence_agents_and_environments.md).
-
-> **Bàn giao:** Sau **liên kết (connection / 연결) với AI hiện đại**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is artificial intelligence](./00_what_is_artificial_intelligence.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

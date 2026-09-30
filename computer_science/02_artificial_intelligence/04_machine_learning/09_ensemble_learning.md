@@ -119,6 +119,8 @@ Quá nhiều boosting rounds có thể overfit, dù cây (tree / 트리) boostin
 
 ## Bagging vs Boosting
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Aspect | Bagging | Boosting |
 |---|---|---|
 | Primary goal | giảm variance | giảm độ lệch (bias / 편향), tiếp tục sửa lỗi (error / 오류) |
@@ -155,6 +157,8 @@ Inductive độ lệch (bias / 편향) của trees rất hợp threshold, hetero
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Bagging  = nhiều góc nhìn độc lập + average → ổn định hơn
 Boosting = model sau sửa lỗi model trước → function mạnh dần
@@ -183,6 +187,4 @@ Nếu không dùng out-of-fold thiết kế (design / 설계), leakage làm meta
 
 Ensemble học tập (learning / 학습) là ứng dụng (application / 애플리케이션) trực tiếp của [Bias–Variance and Generalization](./14_bias_variance_and_generalization.md) và [Optimization](../01_mathematical_foundations/06_optimization.md).
 
-Xem tiếp: [Support Vector Machines](./10_support_vector_machines.md) để chuyển sang một family có inductive độ lệch (bias / 편향) hình học rất khác.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Xem tiếp: [Support Vector Machines](./10_support_vector_machines.md) để chuyển sang một family có inductive bias hình học rất khác.

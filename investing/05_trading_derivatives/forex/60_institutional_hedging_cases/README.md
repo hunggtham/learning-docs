@@ -49,6 +49,8 @@ KRW weakens
 Derivative mất mát (loss / 손실) không tự động là thất bại (failure / 실패).
 
 ## Các loại rủi ro (risk / 위험) phải tách
+Phần “Các loại rủi ro (risk / 위험) phải tách” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Transaction exposure
@@ -82,6 +84,8 @@ How is hedge effectiveness measured?
 ```
 
 ## Kết nối với các phần khác
+Phần “Kết nối với các phần khác” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [Intervention, reserves, REER and valuation](../90_connections/01_INTERVENTION_RESERVES_REER_AND_CURRENCY_VALUATION.md)
@@ -90,6 +94,8 @@ How is hedge effectiveness measured?
 - [Systematic risk/attribution project](../70_systematic_project/README.md)
 
 ## Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)
+Phần “Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Exposure map

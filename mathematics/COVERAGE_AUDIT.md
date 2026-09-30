@@ -34,31 +34,9 @@ Mỗi chapter được kiểm tra (audit / 감사) theo các câu hỏi sau. Kh�
 11. Dạng thất bại (failure mode / 실패 모드), misconception hoặc ranh giới (boundary / 경계) có được nói ra khi cần không?
 12. Liên kết (connection / 연결) cross-domain có dựa trên dùng chung (shared / 공유) mathematical cấu trúc (structure / 구조) hay chỉ là ứng dụng (application / 애플리케이션) danh sách (list / 목록)?
 
-Chuẩn biên soạn chi tiết nằm tại [EDITORIAL_STANDARD.md](./EDITORIAL_STANDARD.md).
+Audit này đánh giá độ sâu theo centrality và dependency, không theo số file. Mỗi dòng cho biết concept nào đã đủ làm nền, gap nào còn ảnh hưởng nhiều chapter và nên ưu tiên rewrite ở đâu.
 
-## 3. Phương pháp kiểm tra (audit / 감사)
-
-Final status không được suy ra chỉ từ tệp (file / 파일) kích thước (size / 크기). Kiểm tra (audit / 감사) dùng bốn lớp bằng chứng (evidence / 증거):
-
-**Inventory toàn thư viện (library / 라이브러리).** Xác nhận toàn bộ 10 conceptual groups và đúng 87 topic files.
-
-**Cumulative chất lượng (quality / 품질) rà soát (review / 검토).** Round 5–11 đã rewrite các dependency-central nodes theo từng batch. Các tệp (file / 파일) kiểm tra (audit / 감사) lịch sử được giữ để dấu vết (trace / 추적) lý do rewrite.
-
-**Deep rà soát (review / 검토) ở finalization.** Đọc lại các lĩnh vực (domain / 도메인) ưu tiên và các outlier ngắn: lô-gic (logic / 논리)/proof, functions, tuyến tính (linear / 선형) algebra, calculus, xác suất (probability / 확률)/Bayes, stochastic processes, numerical methods, Fourier/Laplace, ma trận (matrix / 행렬) calculus/autodiff, tối ưu hóa (optimization / 최적화) và động (dynamic / 동적) programming/điều khiển (control / 제어).
-
-**Branch-content rà soát (review / 검토).** So sánh mọi Mathematics branch cũ với `main`; không dùng tên branch như `final`, `ready`, `rebased` làm bằng chứng merge.
-
-## 4. Kiểm tra (audit / 감사) toàn bộ 87 chapter
-
-Status notation:
-
-- **Chuẩn gốc (canonical / 정본)**: độ sâu (depth / 깊이) và ranh giới (boundary / 경계) phù hợp với phạm vi (scope / 범위) hiện tại.
-- **Chuẩn gốc (canonical / 정본) — deepened**: đã qua một hoặc nhiều chất lượng (quality / 품질) rewrite quan trọng.
-- **Chuẩn gốc (canonical / 정본) — final links**: content đã đủ, finalization chỉ bổ sung điều hướng (navigation / 내비게이션)/cross-links thay vì kéo dài cơ học.
-
-### 00 — Foundations: 6/6 chuẩn gốc (canonical / 정본)
-
-| Chapter | Status | Final kiểm tra (audit / 감사) ghi chú (note / 노트) |
+| Domain | Depth hiện tại | Audit learning dependency |
 |---|---|---|
 | `00_foundations/00_mathematical_thinking.md` | Chuẩn gốc (canonical / 정본) | Entry điểm (point / 지점) cho lớp trừu tượng (abstraction / 추상화), modeling, invariants, approximation và first-principles lập luận (reasoning / 추론). |
 | `00_foundations/01_logic_and_proof.md` | Chuẩn gốc (canonical / 정본) — deepened | Proposition, implication, quantifiers, proof strategies, induction, invariants, counterexamples và formal-vs-testing lập luận (reasoning / 추론) đủ cho downstream CS/Math. |
@@ -353,4 +331,106 @@ Sau merge, thứ tự ưu tiên tài liệu là:
 4. `mathematics/COVERAGE_AUDIT.md` — phạm vi (scope / 범위)/finalization/branch-safety nguồn chuẩn (source of truth / 정본).
 5. `QUALITY_AUDIT_ROUND*.md` — historical rationale của các rewrite rounds, không phải competing chuẩn gốc (canonical / 정본) indexes.
 
-Ở trạng thái này, Mathematics không cần một thư viện (library / 라이브러리) mới, một `*_final` bản sao (copy / 복사) hay một branch độ sâu (depth / 깊이) mới. Future công việc (work / 작업) nên bắt đầu từ chuẩn gốc (canonical / 정본) `main` và chỉ mở branch mới khi có một thay đổi (change / 변경) cụ thể, reviewable và có conceptual reason rõ ràng.
+### Pythagorean Theorem and Distance
+
+Pythagoras được nâng từ triangle formula thành **orthogonal decomposition principle**. Inner product, generalized norm identity, projection proof của nearest point, law of cosines, least squares, statistics sum-of-squares, metrics và high-dimensional geometry đều được nối từ same structure.
+
+### Similarity, Area, Volume and Scaling
+
+Chapter hiện derive `k`, `k^2`, `k^3` từ independent dimensions, thêm square-cube law, determinant scaling, log-log power laws, resolution/voxel complexity, curse of dimensionality, Reynolds-style dynamic similarity và fractal/effective dimension intuition.
+
+## Các chapter vẫn thấp hơn depth median và nên ưu tiên Round 7
+
+Coverage hiện rộng và không có missing prerequisite lớn, nhưng các files sau vẫn tương đối ngắn so với dependency centrality:
+
+1. `01_algebra/01_equations_and_inequalities.md`
+2. `01_algebra/03_powers_roots_and_logarithms.md`
+3. `01_algebra/04_polynomials_and_factorization.md`
+4. `03_geometry_trigonometry/01_coordinate_geometry.md`
+5. `03_geometry_trigonometry/05_transformations_and_symmetry.md`
+6. `04_vectors_linear_algebra/00_vectors.md`
+7. `05_calculus/06_numerical_calculus.md` — overlap với numerical methods cần consolidate/reframe hơn là chỉ kéo dài.
+8. `06_probability_statistics/05_descriptive_and_inferential_statistics.md`
+9. `06_probability_statistics/06_regression_and_correlation.md`
+10. `07_discrete_cs/02_recurrence_and_induction_in_algorithms.md`
+11. `08_optimization_numerical/01_gradient_descent_and_convexity.md` — cần tránh duplication với rewritten optimization chapter; nên chuyên sâu convergence/conditioning hơn.
+
+Priority nên tiếp tục dựa trên **dependency centrality trước file count**.
+
+## Dependency path sau Round 6
+
+### Path cho AI/Data
+
+Path này nối algebra và functions với linear algebra, calculus, probability và optimization để người học hiểu pipeline mô hình hóa AI từ biểu diễn tới học tham số.
+
+```text
+ratio / logarithm
+→ functions
+→ vectors / matrices
+→ linear transformations
+→ projection / least squares / SVD
+→ derivatives
+→ multivariable calculus / matrix calculus
+→ probability / random variables
+→ statistics / likelihood
+→ optimization
+→ dynamic programming / information theory.
+```
+
+### Path cho Physics/Engineering
+
+Path này bắt đầu từ geometry và vectors rồi đi qua calculus, PDE, Fourier và control. Mỗi bước thêm một cách mô tả field, thay đổi hoặc truyền tín hiệu.
+
+```text
+geometry / trigonometry
+→ vectors / linear transformations
+→ derivatives / integrals
+→ ODE / eigenvalues
+→ multivariable / vector calculus
+→ PDE
+→ Fourier
+→ Laplace / Z-transform
+→ control.
+```
+
+### Path cho Computer Science
+
+Path này chuyển logic và sets thành structures, graph, complexity và probability. Nó phù hợp khi cần reasoning rời rạc và phân tích thuật toán.
+
+```text
+logic / proof
+→ sets / relations / mappings
+→ functions
+→ discrete mathematics
+→ induction / recurrence
+→ graph theory
+→ complexity
+→ probability
+→ numerical/optimization where needed.
+```
+
+### Path cho Finance
+
+Path này nối compounding và tỷ lệ với probability, covariance, statistics và optimization. Hãy dùng nó để kiểm tra một mô hình tài chính có đang bỏ qua bất định hay không.
+
+```text
+ratio / percentage / compounding
+→ exponential/logarithm
+→ probability / random variables
+→ expectation / covariance / statistics
+→ linear algebra / factor models
+→ optimization
+→ stochastic processes / Bayesian inference.
+```
+
+## Scope boundary
+
+Các topic như measure theory/Lebesgue integration, functional analysis, differential geometry/manifolds, stochastic calculus, advanced PDE, combinatorial optimization chuyên sâu và category theory vẫn là **optional upper-level expansion**, không phải missing prerequisite của current scope.
+
+Không nên thêm chúng chỉ để tăng số chapter. Một chapter mới chỉ nên được thêm khi nó lấp dependency gap thực sự hoặc tạo knowledge connection có giá trị rõ.
+
+## Kết luận
+
+Round 6 giữ nguyên **87 topics** nhưng nâng depth của **13 chapter có dependency centrality cao** qua bốn batches. Thay đổi trọng tâm từ “coverage completeness” sang “conceptual completeness”: intuition trước formalism, formula có provenance, assumptions/failure modes rõ, proof idea khi phù hợp, worked examples đủ reasoning transfer và connections chỉ dùng khi shared mathematical structure thực sự tồn tại.
+
+Ở trạng thái hiện tại, bottleneck chính không còn là thiếu lĩnh vực, mà là tiếp tục làm đồng đều chất lượng của nhóm chapter cũ còn ngắn hơn depth median.

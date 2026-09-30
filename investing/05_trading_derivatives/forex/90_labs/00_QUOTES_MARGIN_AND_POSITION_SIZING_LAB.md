@@ -34,6 +34,8 @@ Không bắt đầu bằng lot kích thước (size / 크기). Hãy tính theo �
 Sau đó trả lời: nếu broker cho leverage tối đa 1:100 thì thông tin đó có làm thay đổi position kích thước (size / 크기) vừa tính không? Giải thích tại sao.
 
 ## Trường hợp (case / 사례) B — USD/JPY, account USD
+Phần “Trường hợp (case / 사례) B — USD/JPY, account USD” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD/JPY = 148.40 / 148.42
@@ -55,6 +57,8 @@ Pip value in USD
 Sau đó thay tỷ giá USD/JPY thành 120 và 170 nhưng giữ `100,000 USD` position. Quan sát vì sao pip giá trị (value / 값) theo USD thay đổi dù đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) không đổi.
 
 ## Trường hợp (case / 사례) C — EUR/GBP, account KRW
+Phần “Trường hợp (case / 사례) C — EUR/GBP, account KRW” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 EUR/GBP entry = 0.8650

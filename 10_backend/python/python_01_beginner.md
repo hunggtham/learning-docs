@@ -365,6 +365,8 @@ connect(build_port())
 ```
 
 ### Packing và unpacking
+Phần “Packing và unpacking” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```python
 coords = (10, 20)
@@ -501,6 +503,8 @@ Vì mô-đun (module / 모듈) bộ nhớ đệm (cache / 캐시) theo tiến tr
 Nếu `a.py` import `b.py`, trong khi `b.py` import ngược `a.py` và truy cập name chưa được tạo, bạn đang quan sát mô-đun (module / 모듈) ở trạng thái partially initialized. Fix bền vững thường là sửa phụ thuộc (dependency / 의존성) direction: tách dùng chung (shared / 공유) lớp trừu tượng (abstraction / 추상화) sang mô-đun (module / 모듈) thứ ba, chuyển orchestration lên tầng (layer / 계층) cao hơn, hoặc trì hoãn import có chủ đích. Di chuyển import vào hàm (function / 함수) chỉ để “hết lỗi” mà không sửa kiến trúc (architecture / 아키텍처) dễ che cycle.
 
 ## 16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader
+Phần “16. Một mini trường hợp (case / 사례) study: cấu hình (config / 설정) loader” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```python
 from pathlib import Path
@@ -525,6 +529,8 @@ Hãy chắc rằng bạn có thể tự giải thích vì sao `b = a` không b�
 Phần cuối cùng mới chỉ là preview: `async` là cú pháp (syntax / 문법) tạo coroutine/asynchronous điều khiển (control / 제어) luồng (flow / 흐름); parallel thực thi (execution / 실행) là vấn đề khác, sẽ được tách rõ ở Part 3.
 
 ## Nguồn chính
+Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
 - Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조) — mô hình thực thi (execution model / 실행 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/executionmodel.html

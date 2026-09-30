@@ -261,6 +261,8 @@ Ví dụ tốt hơn:
 ---
 
 ## 10. Meta description
+Phần này nối mạch bài học với “10. Meta description”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <meta
@@ -796,6 +798,8 @@ Những tags này giúp technical documentation có ngữ nghĩa (semantics / �
 ---
 
 ## 35. `<abbr>`
+Phần này nối mạch bài học với “35. `<abbr>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <abbr title="HyperText Markup Language">
@@ -842,6 +846,8 @@ Không phải generic “nguồn URL” tag.
 ---
 
 ## 38. `<time>`
+Phần này nối mạch bài học với “38. `<time>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <time datetime="2026-09-12">
@@ -856,6 +862,8 @@ Date/thời gian (time / 시간) ngữ nghĩa (semantics / 의미론) hữu ích
 ---
 
 ## 39. `<data>`
+Phần này nối mạch bài học với “39. `<data>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <data value="SKU-123">
@@ -870,6 +878,8 @@ Hữu ích trong sản phẩm (product / 제품)/danh mục (catalog / 카탈로
 ---
 
 ## 40. `<sub>` và `<sup>`
+Phần này nối mạch bài học với “40. `<sub>` và `<sup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 H<sub>2</sub>O
@@ -947,7 +957,9 @@ Dùng `ol` khi thứ tự (order / 순서) mang meaning, `ul` khi thứ tự (or
 
 ---
 
-## 44. Description danh sách (list / 목록)
+## 44. Description list
+Phần này nối mạch bài học với “44. Description list”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <dl>
@@ -1018,6 +1030,8 @@ Không dùng `<a href="#">` để fake button nếu không có điều hướng 
 ---
 
 ## 47. `target="_blank"`
+Phần này nối mạch bài học với “47. `target="_blank"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <a
@@ -1062,6 +1076,8 @@ SEO quan hệ (relation / 관계) tokens không phải bảo mật (security / �
 ---
 
 ## 49. `download`
+Phần này nối mạch bài học với “49. `download`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <a
@@ -1080,6 +1096,8 @@ Nó là trình duyệt (browser / 브라우저) hint cho download hành vi (beha
 # PHẦN 8 — IMAGES VÀ RESPONSIVE IMAGES
 
 ## 50. `<img>`
+Phần này nối mạch bài học với “50. `<img>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <img
@@ -1118,6 +1136,8 @@ Alt tốt mô tả **purpose trong ngữ cảnh (context / 맥락)**, không ph�
 ---
 
 ## 52. `width` và `height`
+Phần này nối mạch bài học với “52. `width` và `height`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <img
@@ -1143,6 +1163,8 @@ img {
 ---
 
 ## 53. `loading`
+Phần này nối mạch bài học với “53. `loading`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <img
@@ -1158,6 +1180,8 @@ Không nên lazy-load hero/LCP ảnh (image / 이미지) một cách máy móc v
 ---
 
 ## 54. `srcset`
+Phần này nối mạch bài học với “54. `srcset`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <img
@@ -1174,6 +1198,8 @@ Bạn cung cấp ảnh (image / 이미지) candidates; trình duyệt (browser /
 ---
 
 ## 55. `sizes`
+Phần này nối mạch bài học với “55. `sizes`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <img
@@ -1221,6 +1247,8 @@ Nếu `sizes` sai, trình duyệt (browser / 브라우저) có thể chọn tài
 ---
 
 ## 57. `<figure>` và `<figcaption>`
+Phần này nối mạch bài học với “57. `<figure>` và `<figcaption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <figure>
@@ -1241,6 +1269,8 @@ Figure phù hợp với ảnh (image / 이미지), diagram, chart, mã (code / �
 # PHẦN 9 — AUDIO, VIDEO VÀ EMBEDDED CONTENT
 
 ## 58. `<audio>`
+Phần này nối mạch bài học với “58. `<audio>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <audio
@@ -1266,6 +1296,8 @@ Autoplay có nhiều trình duyệt (browser / 브라우저) restrictions, đặ
 ---
 
 ## 59. `<video>`
+Phần này nối mạch bài học với “59. `<video>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <video
@@ -1308,6 +1340,8 @@ Trình duyệt (browser / 브라우저) dùng năng lực (capability / 역량)/
 ---
 
 ## 61. `<track>`
+Phần này nối mạch bài học với “61. `<track>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <track
@@ -1322,6 +1356,8 @@ Trình duyệt (browser / 브라우저) dùng năng lực (capability / 역량)/
 ---
 
 ## 62. `<iframe>`
+Phần này nối mạch bài học với “62. `<iframe>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <iframe
@@ -1337,6 +1373,8 @@ Iframe embed một browsing ngữ cảnh (context / 맥락) khác.
 ---
 
 ## 63. `sandbox`
+Phần này nối mạch bài học với “63. `sandbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <iframe
@@ -1358,6 +1396,8 @@ Cấp cao (senior / 시니어) bảo mật (security / 보안) principle là **l
 ---
 
 ## 64. `allow`
+Phần này nối mạch bài học với “64. `allow`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <iframe
@@ -1373,6 +1413,8 @@ Permissions chính sách (policy / 정책) cho iframe capabilities.
 ---
 
 ## 65. `srcdoc`
+Phần này nối mạch bài học với “65. `srcdoc`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <iframe
@@ -1403,6 +1445,8 @@ Hiện đại (modern / 현대적) bố cục (layout / 레이아웃) dùng CSS 
 ---
 
 ## 67. `<caption>`
+Phần này nối mạch bài học với “67. `<caption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <table>
@@ -1415,7 +1459,9 @@ Caption mô tả mục đích/nội dung bảng (table / 테이블) và rất h�
 
 ---
 
-## 68. bảng (table / 테이블) cấu trúc (structure / 구조)
+## 68. Table structure
+Phần này nối mạch bài học với “68. Table structure”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <table>
@@ -1444,6 +1490,8 @@ Trình duyệt (browser / 브라우저) parser có table-specific rules; nguồn
 ---
 
 ## 69. `scope`
+Phần này nối mạch bài học với “69. `scope`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <th scope="col">Price</th>
@@ -1462,6 +1510,8 @@ Complex bảng (table / 테이블) có thể cần `headers`/`id` strategies, nh
 ---
 
 ## 70. `rowspan` và `colspan`
+Phần này nối mạch bài học với “70. `rowspan` và `colspan`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <td colspan="2">Total</td>
@@ -1480,6 +1530,8 @@ Merged bảng (table / 테이블) structures cần kiểm thử (test / 테스�
 # PHẦN 11 — FORMS: PHẦN QUAN TRỌNG NHẤT CỦA HTML ứng dụng (application / 애플리케이션)
 
 ## 71. `<form>`
+Phần này nối mạch bài học với “71. `<form>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <form
@@ -1496,6 +1548,8 @@ Form không chỉ là visual wrapper. Nó là một cơ chế (mechanism / 메�
 ---
 
 ## 72. `action`
+Phần này nối mạch bài học với “72. `action`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <form action="/users">
@@ -1550,6 +1604,8 @@ Nếu quên multipart, tệp (file / 파일) dữ liệu (data / 데이터) sẽ
 ---
 
 ## 75. `<label>`
+Phần này nối mạch bài học với “75. `<label>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <label for="email">
@@ -1638,6 +1694,8 @@ value
 # PHẦN 12 — đầu vào (input / 입력) TYPES
 
 ## 78. `text`
+Phần này nối mạch bài học với “78. `text`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1650,6 +1708,8 @@ General single-line văn bản (text / 텍스트).
 ---
 
 ## 79. `password`
+Phần này nối mạch bài học với “79. `password`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1665,6 +1725,8 @@ Bảo mật (security / 보안) vẫn phụ thuộc HTTPS, máy chủ (server / 
 ---
 
 ## 80. `email`
+Phần này nối mạch bài học với “80. `email`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1681,6 +1743,8 @@ Máy chủ (server / 서버) vẫn phải validate email/nghiệp vụ (business
 ---
 
 ## 81. `number`
+Phần này nối mạch bài học với “81. `number`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1724,6 +1788,8 @@ URL:
 ---
 
 ## 83. `checkbox`
+Phần này nối mạch bài học với “83. `checkbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1745,6 +1811,8 @@ Nếu unchecked, trường dữ liệu (field / 필드) thường không có ent
 ---
 
 ## 84. `radio`
+Phần này nối mạch bài học với “84. `radio`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <label>
@@ -1768,7 +1836,9 @@ Radio cùng `name` tạo group và thường chỉ một item được selected.
 
 ---
 
-## 85. Date/thời gian (time / 시간) types
+## 85. Date/time types
+Phần này nối mạch bài học với “85. Date/time types”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input type="date">
@@ -1787,6 +1857,8 @@ UI display cũng phụ thuộc locale/trình duyệt (browser / 브라우저).
 ---
 
 ## 86. `range`
+Phần này nối mạch bài học với “86. `range`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1803,6 +1875,8 @@ Nếu chính xác (exact / 정확한) giá trị (value / 값) quan trọng, nê
 ---
 
 ## 87. `color`
+Phần này nối mạch bài học với “87. `color`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1815,6 +1889,8 @@ Bản địa (native / 네이티브) color picker trong supporting browsers.
 ---
 
 ## 88. `file`
+Phần này nối mạch bài học với “88. `file`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1837,6 +1913,8 @@ Multiple:
 ---
 
 ## 89. `hidden`
+Phần này nối mạch bài học với “89. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1854,6 +1932,8 @@ Không bao giờ coi hidden giá trị (value / 값) là secret/trusted authoriz
 # PHẦN 13 — đầu vào (input / 입력) ATTRIBUTES VÀ FORM kiểm tra hợp lệ (validation / 검증)
 
 ## 90. `name`
+Phần này nối mạch bài học với “90. `name`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1896,6 +1976,8 @@ vẫn phản ánh markup attribute `"Alice"`.
 ---
 
 ## 92. `required`
+Phần này nối mạch bài học với “92. `required`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1910,6 +1992,8 @@ Máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검�
 ---
 
 ## 93. `disabled`
+Phần này nối mạch bài học với “93. `disabled`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input disabled>
@@ -1938,6 +2022,8 @@ Muốn false, remove attribute hoặc set DOM thuộc tính (property / 속성) 
 ---
 
 ## 94. `readonly`
+Phần này nối mạch bài học với “94. `readonly`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1982,6 +2068,8 @@ phản ánh trạng thái hiện tại (current state / 현재 상태), còn mar
 ---
 
 ## 96. `min`, `max`, `step`
+Phần này nối mạch bài học với “96. `min`, `max`, `step`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -1998,6 +2086,8 @@ Các ràng buộc (constraints / 제약조건들) này áp dụng phù hợp the
 ---
 
 ## 97. `minlength`, `maxlength`
+Phần này nối mạch bài học với “97. `minlength`, `maxlength`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -2012,6 +2102,8 @@ Không thay máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검
 ---
 
 ## 98. `pattern`
+Phần này nối mạch bài học với “98. `pattern`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -2082,6 +2174,8 @@ Không tắt autofill bừa chỉ vì “UI nhìn sạch hơn”.
 ---
 
 ## 101. `inputmode`
+Phần này nối mạch bài học với “101. `inputmode`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -2104,6 +2198,8 @@ Ví dụ postal mã (code / 코드) numeric-looking nhưng không phải number 
 ---
 
 ## 102. `enterkeyhint`
+Phần này nối mạch bài học với “102. `enterkeyhint`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -2127,6 +2223,8 @@ send
 ---
 
 ## 103. `<datalist>`
+Phần này nối mạch bài học với “103. `<datalist>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <label for="city">City</label>
@@ -2151,6 +2249,8 @@ Người dùng (user / 사용자) vẫn có thể nhập giá trị (value / 값
 # PHẦN 14 — TEXTAREA, SELECT, FIELDSET VÀ BUTTON
 
 ## 104. `<textarea>`
+Phần này nối mạch bài học với “104. `<textarea>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <textarea
@@ -2169,6 +2269,8 @@ không phải `value` attribute như đầu vào (input / 입력).
 ---
 
 ## 105. `<select>` và `<option>`
+Phần này nối mạch bài học với “105. `<select>` và `<option>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <select name="country">
@@ -2184,6 +2286,8 @@ Bản địa (native / 네이티브) select cung cấp keyboard/mobile/khả nă
 ---
 
 ## 106. `<optgroup>`
+Phần này nối mạch bài học với “106. `<optgroup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <select name="country">
@@ -2199,6 +2303,8 @@ Dùng để group options theo category.
 ---
 
 ## 107. `<fieldset>` và `<legend>`
+Phần này nối mạch bài học với “107. `<fieldset>` và `<legend>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <fieldset>
@@ -2223,6 +2329,8 @@ Dùng để group options theo category.
 ---
 
 ## 108. `<button>`
+Phần này nối mạch bài học với “108. `<button>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <button type="button">
@@ -2285,6 +2393,8 @@ Phần Master sẽ giải thích sâu submitter/form đơn vị sở hữu (owne
 # PHẦN 15 — bản địa (native / 네이티브) đầu ra (output / 출력) VÀ INTERACTIVE ELEMENTS
 
 ## 110. `<output>`
+Phần này nối mạch bài học với “110. `<output>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <output for="price quantity">
@@ -2297,6 +2407,8 @@ Biểu diễn kết quả (result / 결과) của calculation/người dùng (us
 ---
 
 ## 111. `<progress>`
+Phần này nối mạch bài học với “111. `<progress>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <progress
@@ -2311,6 +2423,8 @@ Dùng cho tác vụ (task / 작업) progress.
 ---
 
 ## 112. `<meter>`
+Phần này nối mạch bài học với “112. `<meter>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <meter
@@ -2328,6 +2442,8 @@ Dùng cho đo lường (measurement / 측정) trong known phạm vi (range / 범
 ---
 
 ## 113. `<details>` và `<summary>`
+Phần này nối mạch bài học với “113. `<details>` và `<summary>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <details>
@@ -2344,6 +2460,8 @@ Trước khi tự viết accordion bằng `div + onclick + aria-expanded`, hãy 
 ---
 
 ## 114. `<dialog>`
+Phần này nối mạch bài học với “114. `<dialog>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <dialog id="confirm">
@@ -2432,6 +2550,8 @@ Tính năng (feature / 기능) này sẽ được giải thích sâu ở Master 
 # PHẦN 16 — toàn cục (global / 전역) ATTRIBUTES
 
 ## 117. `id`
+Phần này nối mạch bài học với “117. `id`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <section id="pricing">
@@ -2446,6 +2566,8 @@ Duplicate IDs có thể gây khả năng tiếp cận (accessibility / 접근성
 ---
 
 ## 118. `class`
+Phần này nối mạch bài học với “118. `class`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="card active">
@@ -2462,6 +2584,8 @@ element.classList
 ---
 
 ## 119. `style`
+Phần này nối mạch bài học với “119. `style`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div style="display:none">
@@ -2472,6 +2596,8 @@ Inline style hợp lệ, nhưng large ứng dụng (application / 애플리케�
 ---
 
 ## 120. `title`
+Phần này nối mạch bài học với “120. `title`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <abbr title="HyperText Markup Language">
@@ -2486,6 +2612,8 @@ Không dùng nó làm accessible name duy nhất cho trọng yếu (critical / �
 ---
 
 ## 121. `hidden`
+Phần này nối mạch bài học với “121. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <section hidden>
@@ -2504,6 +2632,8 @@ Phần Master sẽ phân biệt `hidden`, `hidden="until-found"`, CSS hiding và
 ---
 
 ## 122. `inert`
+Phần này nối mạch bài học với “122. `inert`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <main inert>
@@ -2518,6 +2648,8 @@ Useful với custom overlay workflows, nhưng bản địa (native / 네이티�
 ---
 
 ## 123. `tabindex`
+Phần này nối mạch bài học với “123. `tabindex`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 tabindex="0"
@@ -2542,6 +2674,8 @@ thường là anti-pattern vì phá natural focus thứ tự (order / 순서) v�
 ---
 
 ## 124. `data-*`
+Phần này nối mạch bài học với “124. `data-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <button
@@ -2561,6 +2695,8 @@ Không chứa secret/đơn vị từ (token / 토큰) vì DOM thuộc máy khác
 ---
 
 ## 125. `contenteditable`
+Phần này nối mạch bài học với “125. `contenteditable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div contenteditable="true">
@@ -2575,6 +2711,8 @@ Selection, paste sanitization, undo, trình duyệt (browser / 브라우저) dif
 ---
 
 ## 126. `draggable`
+Phần này nối mạch bài học với “126. `draggable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div draggable="true">
@@ -2627,6 +2765,8 @@ Script loading chiến lược (strategy / 전략) ảnh hưởng parser và hi�
 ---
 
 ## 129. `defer`
+Phần này nối mạch bài học với “129. `defer`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <script
@@ -2642,6 +2782,8 @@ Classic deferred script được download song song và execute sau document par
 ---
 
 ## 130. `async`
+Phần này nối mạch bài học với “130. `async`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <script
@@ -2657,6 +2799,8 @@ Phù hợp với independent scripts như analytics.
 ---
 
 ## 131. `type="module"`
+Phần này nối mạch bài học với “131. `type="module"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <script
@@ -2674,6 +2818,8 @@ Hiện đại (modern / 현대적) frontend cần hiểu mô-đun (module / 모�
 ---
 
 ## 132. `nomodule`
+Phần này nối mạch bài học với “132. `nomodule`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <script
@@ -2689,6 +2835,8 @@ Ngày nay nhiều projects không cần nữa, nhưng cấp cao (senior / 시니
 ---
 
 ## 133. `integrity`
+Phần này nối mạch bài học với “133. `integrity`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <script
@@ -2705,6 +2853,8 @@ Hữu ích với pinned third-party CDN resources.
 ---
 
 ## 134. `nonce`
+Phần này nối mạch bài học với “134. `nonce`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <script nonce="RANDOM_PER_RESPONSE">
@@ -2717,6 +2867,8 @@ Nonce phải unpredictable và phù hợp chính sách (policy / 정책). Hardco
 ---
 
 ## 135. `<noscript>`
+Phần này nối mạch bài học với “135. `<noscript>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <noscript>
@@ -2752,7 +2904,9 @@ Tìm kiếm (search / 검색) engine phải hiểu content thật.
 
 ---
 
-## 137. chuẩn gốc (canonical / 정본)
+## 137. Canonical
+Phần này nối mạch bài học với “137. Canonical”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <link
@@ -2766,7 +2920,9 @@ Nó không phải redirect và không phải bảo mật (security / 보안) quy
 
 ---
 
-## 138. Robots siêu dữ liệu (metadata / 메타데이터)
+## 138. Robots metadata
+Phần này nối mạch bài học với “138. Robots metadata”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <meta
@@ -2780,7 +2936,9 @@ Nó không bảo vệ private admin page. Private page phải có authentication
 
 ---
 
-## 139. Open đồ thị (graph / 그래프)
+## 139. Open Graph
+Phần này nối mạch bài học với “139. Open Graph”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <meta
@@ -2800,7 +2958,9 @@ Dùng để tạo xã hội (social / 사회적) sharing previews trong supporti
 
 ---
 
-## 140. JSON-LD structured dữ liệu (data / 데이터)
+## 140. JSON-LD structured data
+Phần này nối mạch bài học với “140. JSON-LD structured data”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <script type="application/ld+json">
@@ -2873,6 +3033,8 @@ Nếu visible văn bản (text / 텍스트) tồn tại, ưu tiên để accessi
 ---
 
 ## 143. `aria-labelledby`
+Phần này nối mạch bài học với “143. `aria-labelledby`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <h2 id="dialog-title">
@@ -2891,6 +3053,8 @@ Accessible name lấy từ element khác.
 ---
 
 ## 144. `aria-describedby`
+Phần này nối mạch bài học với “144. `aria-describedby`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <label for="password">
@@ -2929,6 +3093,8 @@ ARIA trạng thái (state / 상태) không tự sync với visual trạng thái 
 ---
 
 ## 146. `aria-current`
+Phần này nối mạch bài học với “146. `aria-current`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <a
@@ -2943,6 +3109,8 @@ Cho assistive technology biết item hiện tại.
 ---
 
 ## 147. Live regions
+Phần này nối mạch bài học với “147. Live regions”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -3028,6 +3196,8 @@ Attribute thể hiện markup/default giá trị (value / 값) relationship; thu
 ---
 
 ## 151. `checked`
+Phần này nối mạch bài học với “151. `checked`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -3048,6 +3218,8 @@ input.checked
 ---
 
 ## 152. `href`
+Phần này nối mạch bài học với “152. `href`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <a href="/users">
@@ -3254,6 +3426,8 @@ preconnect đúng origin
 ---
 
 ## 163. `fetchpriority`
+Phần này nối mạch bài học với “163. `fetchpriority`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <img
@@ -3361,7 +3535,9 @@ Nếu bạn có thể trả lời những câu này, bạn đang rà soát (revi
 
 ---
 
-# PHẦN 25 — môi trường vận hành (production / 운영 환경) PAGE HOÀN CHỈNH
+# PHẦN 25 — PRODUCTION PAGE HOÀN CHỈNH
+Phần này nối mạch bài học với “PHẦN 25 — PRODUCTION PAGE HOÀN CHỈNH”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <!doctype html>

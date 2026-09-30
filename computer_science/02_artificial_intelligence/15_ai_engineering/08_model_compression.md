@@ -138,6 +138,8 @@ Nếu suy luận (inference / 추론) volume thấp và kỹ thuật (engineerin
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Compression = giữ lại hàm hữu ích trong khi giảm chi phí vật lý để lưu trữ và thực thi nó
 ```
@@ -159,5 +161,3 @@ Không. mô hình (model / 모델), dữ liệu (data / 데이터) và thời gi
 ## Liên kết kiến thức
 
 Xem [Quantization](./06_quantization.md), [Pruning and Distillation](./07_pruning_and_distillation.md), [Latency, Throughput and Cost](./09_latency_throughput_and_cost.md) và [AI Compute](../17_ai_compute_and_infrastructure/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

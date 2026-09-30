@@ -32,6 +32,8 @@ Cấu trúc chi tiêu quyết định tác động lên demand và potential gro
 
 ## 3. Primary balance
 
+Sau khi tách doanh thu và chi tiêu, primary balance cho biết ngân sách đang tạo thặng dư hay thâm hụt trước chi phí lãi vay. Nó là điểm bắt đầu để hỏi nợ tăng do chính sách hiện tại hay do gánh nặng lịch sử.
+
 **Cán cân sơ cấp (primary balance)** loại chi phí lãi vay khỏi ngân sách.
 
 ```text
@@ -105,6 +107,8 @@ Nợ ngắn làm pressure truyền nhanh.
 Do đó hai quốc gia cùng debt/GDP có thể có sensitivity với tỷ lệ (rate / 비율) shock hoàn toàn khác nhau.
 
 ## 10. Gross financing need
+
+Gross financing need nhìn lượng vốn phải huy động trong kỳ, không chỉ mức nợ tồn đọng. Đáo hạn lớn, thâm hụt sơ cấp và chi phí lãi có thể làm nhu cầu tái cấp vốn tăng nhanh ngay cả khi debt/GDP chưa đổi nhiều.
 
 **Nhu cầu tài trợ gộp (gross financing need)** gồm:
 
@@ -238,6 +242,8 @@ Fiscal dominance xảy ra khi nhu cầu tài trợ và debt-service pressure là
 Không nên dùng nhãn này chỉ vì debt/GDP cao.
 
 ## 25. Cơ chế tiềm năng
+
+Phần này nối lực lượng lao động, vốn và năng suất thành tăng trưởng tiềm năng. Sơ đồ cần được đọc như giới hạn dài hạn của nền kinh tế, không phải tốc độ tăng trưởng thực tế của một quý.
 
 ```text
 Debt Service ↑
@@ -443,6 +449,8 @@ Exchange tỷ lệ (rate / 비율), private saving và investment quyết địn
 
 ## 51. Fiscal
 
+Khi đánh giá fiscal impulse, hãy hỏi chi tiêu/thuế đang hỗ trợ hay kéo giảm tổng cầu, được tài trợ bằng cách nào và có làm thay đổi debt service hoặc kỳ vọng lạm phát không. Một con số thâm hụt không tự nói lên hướng tác động.
+
 ```text
 Debt/GDP
 Primary Balance
@@ -452,6 +460,8 @@ Maturity
 ```
 
 ## 52. Monetary
+
+Monetary policy cần được đọc qua policy rate, balance sheet, credit conditions và reaction function. Mức lãi suất hiện tại chỉ là một phần; điều thị trường quan tâm thường là đường đi và độ trễ truyền dẫn.
 
 ```text
 Inflation
@@ -463,6 +473,8 @@ FX Regime
 
 ## 53. bên ngoài (external / 외부)
 
+External balance nối nợ, dòng vốn, tỷ giá và khả năng tài trợ từ bên ngoài. Phần này giúp kiểm tra nền kinh tế có phụ thuộc funding ngoại tệ hoặc thặng dư xuất khẩu để duy trì ổn định hay không.
+
 ```text
 Current Account
 FX Reserves
@@ -472,6 +484,8 @@ Foreign Investor Share
 ```
 
 ## 54. Structural
+
+Structural factors như dân số, năng suất, thể chế và cơ cấu ngành quyết định tốc độ tăng trưởng bền vững và sức chịu đựng của nợ. Chúng thay đổi chậm nhưng có thể làm các giả định chu kỳ trở nên sai.
 
 ```text
 Demographics
@@ -509,6 +523,8 @@ Debt Sustainability?
 
 ## 58. Với FX
 
+Khi nối policy mix với FX, hãy tách chênh lệch lãi suất, fiscal credibility, external funding và risk sentiment. Tỷ giá có thể phản ứng trước khi dữ liệu tăng trưởng thực thay đổi rõ ràng.
+
 ```text
 Relative Rates
 Fiscal Credibility
@@ -544,6 +560,8 @@ Cần xem:
 
 ## 61. Khi phân tích nợ công
 
+Phân tích nợ công cần đi từ stock nợ tới dòng tái cấp vốn, lãi suất, kỳ hạn, đồng tiền và cơ sở nhà đầu tư. Debt/GDP là điểm bắt đầu, không phải toàn bộ câu trả lời về khả năng thanh toán.
+
 ```text
 Debt Level
 Primary Balance
@@ -557,6 +575,8 @@ Gross Financing Need
 
 ## 62. Khi phân tích potential growth
 
+Potential growth nên được dựng từ lao động, vốn và productivity, sau đó kiểm tra tính khả thi của từng giả định. Đừng dùng một tỷ lệ tăng trưởng dài hạn cố định mà không giải thích nguồn lực tạo ra nó.
+
 ```text
 Population
 Participation
@@ -567,6 +587,8 @@ Institutions
 ```
 
 ## 63. Khi phân tích chính sách (policy / 정책) mix
+
+Policy mix là kết quả tương tác giữa fiscal và monetary, không phải phép cộng hai chính sách độc lập. Hãy ghi rõ chính sách nào đang dẫn dắt tổng cầu, chính sách nào bị ràng buộc và phản ứng của tỷ giá/lạm phát có thể là gì.
 
 ```text
 Monetary Stance

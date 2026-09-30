@@ -167,6 +167,8 @@ Sau đó retrieval/clustering/classification hoạt động trong embedding khô
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Original high-dimensional observations
         ↓ choose what structure matters
@@ -198,5 +200,3 @@ Embedding còn thay đổi biểu diễn (representation / 표현) hình học (
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Linear Algebra for AI](../01_mathematical_foundations/01_linear_algebra_for_ai.md), [Clustering](./11_clustering.md) và sau này [Representation Learning](../05_neural_networks/08_representation_learning.md), [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -239,6 +239,8 @@ Bằng chứng (evidence / 증거) cần gồm raw bytes/sự kiện (event / �
 **“Không tính được K(x) nên khái niệm vô dụng.”** Không đúng. Nó cung cấp lower-bound intuition, proof technique và ngôn ngữ thống nhất cho compression/randomness/mô hình (model / 모델) độ phức tạp (complexity / 복잡도).
 
 ## 15. liên kết (connection / 연결) map
+Phần “15. liên kết (connection / 연결) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Computability

@@ -181,6 +181,8 @@ Swap line giải quyết **liquidity backstop**; nó không biến mọi borrowe
 > **Chuyển mạch:** Từ **7. chính sách (policy / 정책) phản hồi (response / 응답) và USD swap line**, ta sang **8. Phân biệt 2008 với 1997 và 2020** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Phân biệt 2008 với 1997 và 2020
+Phần “8. Phân biệt 2008 với 1997 và 2020” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | trường hợp (case / 사례) | Primary stress | Distinctive cơ chế (mechanism / 메커니즘) | Lesson |
 |---|---|---|---|
@@ -295,6 +297,8 @@ Nếu dữ liệu (data / 데이터) intraday không tồn tại, ghi rõ freque
 > **Chuyển mạch:** Từ **10. Research exercise: event-study ledger**, ta sang **11. rủi ro (risk / 위험) checklist** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 11. rủi ro (risk / 위험) checklist
+Phần “11. rủi ro (risk / 위험) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 [ ] Forward hedge có underlying thật và amount/timing chắc chắn không?
@@ -313,6 +317,8 @@ Nếu dữ liệu (data / 데이터) intraday không tồn tại, ghi rõ freque
 > **Chuyển mạch:** Từ **11. rủi ro (risk / 위험) checklist**, ta sang **12. Sources** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 12. Sources
+Phần “12. Sources” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [IMF — Republic of Korea 2008 Article IV Consultation, Country Report 08/297](https://www.imf.org/external/pubs/ft/scr/2008/cr08297.pdf)
 - [IMF — Macroprudential Policy, Korea case](https://www.elibrary.imf.org/view/journals/001/2011/238/article-A001-en.xml)

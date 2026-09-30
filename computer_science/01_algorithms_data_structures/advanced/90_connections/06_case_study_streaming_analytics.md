@@ -394,6 +394,8 @@ Không nên chỉ đo CPU thông lượng (throughput / 처리량) mà bỏ qua 
 
 ## 24. Kiến trúc khái niệm
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Event Stream
    ↓
@@ -418,5 +420,3 @@ Top-K / Alert / Dashboard
 > Streaming analytics là bài toán **quản lý trạng thái (state / 상태) dưới giới hạn tài nguyên**. chính xác (exact / 정확한) cấu trúc (structure / 구조) giữ chi tiết nhưng trạng thái (state / 상태) tăng theo dữ liệu; sketch chủ động nén thông tin và đổi lại sai số có kiểm soát. cửa sổ (window / 윈도우) thêm chiều thời gian, partitioning thêm chiều phân tán, còn backpressure quyết định hệ thống phản ứng thế nào khi tốc độ đến vượt khả năng xử lý.
 
 Xem thêm: [Hash Tables](../01_linear_structures/04_hash_tables.md), [Priority Queues](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Probabilistic Data Structures](../05_specialized/06_probabilistic_data_structures.md), [Two Pointers & Sliding Window](../04_algorithmic_paradigms/07_two_pointers_sliding_window_prefix_difference.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 choose the right data structure](./00_choose_the_right_data_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

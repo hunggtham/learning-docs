@@ -95,6 +95,8 @@ Mục tiêu không phải xóa độ lệch (bias / 편향) hoàn toàn mà gi�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 information
  + probability estimate

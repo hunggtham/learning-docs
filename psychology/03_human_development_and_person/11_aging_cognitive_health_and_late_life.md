@@ -192,6 +192,8 @@ Một lối sống đa thành phần thường hợp lý hơn claim rằng một
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 lão hóa sinh học
  + sức khỏe + giác quan
@@ -206,5 +208,3 @@ lão hóa sinh học
 ## Kết nối kiến thức
 
 Xem [[00_lifespan_development]], [[12_loneliness_social_connection_and_belonging]], [[../02_learning_and_cognition/01_memory]], [[../01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]], [[../04_mental_health/09_grief_loss_and_bereavement]] và [[../04_mental_health/11_sleep_insomnia_and_circadian_disorders]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

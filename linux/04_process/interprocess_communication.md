@@ -274,11 +274,15 @@ Mount Docker socket vào bộ chứa (container / 컨테이너) trao quyền đi
 
 ### Pipe/socket descriptors
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 sudo lsof -p <PID>
 ```
 
 ### Unix sockets
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 ss -xl
@@ -286,11 +290,15 @@ ss -xl
 
 ### TCP sockets
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 ss -antp
 ```
 
 ### Dùng chung (shared / 공유) bộ nhớ (memory / 메모리)
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 ls -lah /dev/shm
@@ -300,6 +308,8 @@ ipcs
 `ipcs` hiển thị hệ thống (system / 시스템) V IPC objects nếu hệ thống sử dụng.
 
 ### Syscalls
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 strace -e trace=network,ipc -p <PID>
@@ -348,5 +358,3 @@ Cần chờ rất nhiều descriptors?    → epoll/event loop
 Không chọn thành phần nguyên thủy (primitive / 기본 요소) chỉ vì “nhanh”; chọn theo ngữ nghĩa (semantics / 의미론), thất bại (failure / 실패) mô hình (model / 모델) và maintainability.
 
 Xem thêm: [Files, streams và file descriptors](../01_filesystem/files_streams_descriptors.md), [Networking](../07_networking/networking_dns_sockets_ports.md), [Process và threads](./processes_threads_signals_jobs.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [process address space fork exec wait](./process_address_space_fork_exec_wait.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

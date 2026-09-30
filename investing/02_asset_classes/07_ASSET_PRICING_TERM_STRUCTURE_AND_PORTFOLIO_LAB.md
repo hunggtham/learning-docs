@@ -280,6 +280,8 @@ Một tài sản có lợi suất danh nghĩa cao nhưng xác suất mất vốn
 
 ## 20. Định giá tương đối và tuyệt đối
 
+Sau khi đánh giá lợi suất và rủi ro, ta cần hỏi giá hiện tại đang được so với dòng tiền của chính tài sản hay với cơ hội thay thế. Hai góc nhìn bổ sung cho nhau và giúp đặt earnings yield trong bối cảnh lãi suất thực, tăng trưởng và rủi ro.
+
 **Định giá tuyệt đối** hỏi giá hiện tại so với dòng tiền tương lai của chính tài sản.
 
 **Định giá tương đối** hỏi tài sản rẻ hay đắt so với tài sản thay thế.
@@ -347,6 +349,8 @@ Sau đó kiểm tra xem bốn tài sản có thật sự đa dạng hóa hay ch�
 
 ## 25. Liên kết đọc tiếp
 
+Các tài liệu sau mở rộng từng nhóm tài sản và cách chúng kết hợp trong danh mục. Hãy chọn liên kết tương ứng với biến rủi ro còn chưa rõ sau bài lab, rồi quay lại kiểm tra giả định ban đầu.
+
 - [Cổ phiếu, ETF và quỹ](./01_STOCKS_ETF_AND_FUNDS.md)
 - [Trái phiếu, lãi suất và tín dụng](./02_BONDS_RATES_AND_CREDIT.md)
 - [Tài sản thực và thay thế](./03_REAL_ASSETS_AND_ALTERNATIVES.md)
@@ -369,5 +373,3 @@ Dòng tiền / lợi ích kinh tế
 ```
 
 Khi dùng chung khung này, người đọc có thể so sánh những tài sản rất khác nhau mà không rơi vào bẫy “tài sản nào tăng nhiều nhất gần đây”.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

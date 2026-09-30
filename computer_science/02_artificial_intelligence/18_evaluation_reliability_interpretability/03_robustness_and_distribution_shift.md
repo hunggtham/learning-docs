@@ -188,6 +188,8 @@ Do not demand mô hình (model / 모델) alone handle all bất định (uncerta
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Robustness = how gracefully behavior degrades when reality differs from the clean assumptions used to build the model.
 ```
@@ -209,5 +211,3 @@ Robustness depends threat/shift mô hình (model / 모델) and severity.
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Drift](../16_mlops_and_llmops/07_drift_and_retraining.md), [Uncertainty](./02_uncertainty_and_calibration.md), [Red Teaming](./06_red_teaming_and_adversarial_evaluation.md) và [Safety/Security](../19_ai_safety_security_alignment/README.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -158,6 +158,8 @@ Mục tiêu vì vậy không phải “nghi ngờ mọi thứ”, mà là **cali
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 memory + familiarity + identity
  + source cue + social reward
@@ -171,5 +173,3 @@ memory + familiarity + identity
 ## Kết nối kiến thức
 
 Xem [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]], [[05_digital_psychology_social_media_and_online_behavior]], [[../00_foundations/06_open_science_and_evidence_evaluation]], [[../00_foundations/08_causal_inference_and_psychological_evidence]], [[../90_connections/03_risk_uncertainty_and_science_communication]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 work organization and leadership](./00_work_organization_and_leadership.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

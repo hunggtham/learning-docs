@@ -114,6 +114,8 @@ ADHD có thể gây suy giảm chức năng đáng kể cần hỗ trợ
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 hồ sơ phát triển
  + điều hành / phần thưởng
@@ -126,5 +128,3 @@ chức năng ngoài đời
 ## Kết nối kiến thức
 
 Đọc cùng [[01_assessment_and_diagnosis]], [[05_neurodevelopmental_adhd_autism]], [[16_autism_social_communication_sensory_and_support]], [[../02_learning_and_cognition/01_memory]], [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]], [[../06_applied/01_education_learning_and_habit_design]] và [[../06_applied/00_work_organization_and_leadership]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

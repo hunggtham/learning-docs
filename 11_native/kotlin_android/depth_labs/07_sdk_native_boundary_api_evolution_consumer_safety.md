@@ -843,7 +843,9 @@ Nếu Maven sản phẩm tạo ra (artifact / 산출물) bị sự cố (inciden
 
 ---
 
-## 50. SDK độ tin cậy (reliability / 신뢰성) checklist
+## 50. SDK reliability checklist
+Phần này nối mạch Android vừa học với “50. SDK reliability checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | Ý nghĩa |
 |---|---|
@@ -880,6 +882,4 @@ small public contract
 -> reproducible artifact
 ```
 
-Ứng dụng (application / 애플리케이션) mã (code / 코드) có thể sửa theo cadence của chính nhóm (team / 팀). SDK mã (code / 코드) phải sống cùng cadence của nhiều bên tiêu thụ (consumer / 소비자), vì vậy mỗi công khai (public / 공개) quyết định (decision / 결정) đều có chi phí dài hạn.
-
-> **Bàn giao:** Sau **51. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Application code có thể sửa theo cadence của chính team. SDK code phải sống cùng cadence của nhiều consumer, vì vậy mỗi public decision đều có chi phí dài hạn.

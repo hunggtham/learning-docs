@@ -81,6 +81,8 @@ Khi biến động hoặc lo ngại tín dụng tăng, haircut có thể tăng, 
 
 ## 13. Vòng xoáy ký quỹ và haircut
 
+Repo và haircut không chỉ là thuật ngữ thị trường tiền tệ; chúng giải thích cách thiếu thanh khoản khuếch đại thành bán tháo. Chuỗi dưới đây cho thấy một thay đổi nhỏ ở giá tài sản có thể làm nhu cầu tài sản thế chấp tăng theo vòng lặp.
+
 ```text
 Giá tài sản giảm
 → Haircut tăng
@@ -267,6 +269,8 @@ Một khoản thoái vốn sớm có thể làm IRR rất cao dù tổng số ti
 
 ## 40. TVPI, DPI và RVPI
 
+Ba chỉ số này tách tiền đã trả về khỏi giá trị còn nằm trên sổ sách. Đọc chúng theo thứ tự giúp người mới không nhầm một NAV chưa hiện thực hóa với tiền mặt thực sự đã thu được.
+
 ```text
 TVPI = DPI + RVPI
 ```
@@ -439,5 +443,3 @@ Kịch bản xấu nhất có thể gây gì?
 ## Kết luận
 
 Những sản phẩm trông ổn định thường chỉ chuyển rủi ro từ biến động giá sang **tín dụng, thanh khoản, đối tác, quyền chọn ẩn hoặc định giá chậm**. Luôn bắt đầu từ bản chất kinh tế và quyền lợi pháp lý, sau đó mới nhìn coupon, IRR hoặc NAV được quảng cáo.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

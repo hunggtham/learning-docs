@@ -7,6 +7,8 @@ RAG là multi-stage hệ thống (system / 시스템) nên một final-answer sc
 
 ## Evaluation Layers
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 1. corpus/index quality
 2. retrieval quality
@@ -230,6 +232,8 @@ Every môi trường vận hành (production / 운영 환경) sự cố (inciden
 
 ## Eval-Driven Improvement vòng lặp (loop / 루프)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 observe failure
 → label root cause
@@ -274,6 +278,4 @@ Không. Judge itself needs evaluation.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-RAG evaluation extends [LLM Evaluation](../08_large_language_models/14_llm_evaluation.md) and becomes prerequisite for tác nhân (agent / 에이전트)/AI kỹ thuật (engineering / 엔지니어링) khả năng quan sát (observability / 관측 가능성).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 information retrieval foundations](./00_information_retrieval_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+RAG evaluation extends [LLM Evaluation](../08_large_language_models/14_llm_evaluation.md) and becomes prerequisite for Agent/AI Engineering observability.

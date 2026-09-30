@@ -42,6 +42,8 @@ Do đó nên filter.
 
 ### Theo dõi file-related calls
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 strace -e trace=file cat /etc/hosts
 ```
@@ -54,6 +56,8 @@ strace -e openat,read,write,close cat /etc/hosts
 
 ### Theo dõi mạng (network / 네트워크)
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 strace -e trace=network curl -s https://example.com >/dev/null
 ```
@@ -61,6 +65,8 @@ strace -e trace=network curl -s https://example.com >/dev/null
 Có thể thấy `socket()`, `connect()`, `sendto()`, `recvfrom()` hoặc calls liên quan.
 
 ## Attach vào tiến trình đang chạy
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 sudo strace -p 1234
@@ -86,6 +92,8 @@ sudo timeout 10s strace -tt -T -p 1234 -e trace=network -o /tmp/strace-net.txt
 `-tt` thêm timestamp chi tiết. `-T` cho thời gian syscall. `timeout` giới hạn tracing 10 giây.
 
 ## `-f` và multi-thread/tiến trình (process / 프로세스)
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 strace -f command
@@ -187,6 +195,8 @@ Không nên bắt đầu bằng công cụ (tool / 도구) phức tạp nhất.
 
 ## `pidstat`: cầu nối (bridge / 브리지) giữa metrics và tracing
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 pidstat -p 1234 1
 pidstat -t -p 1234 1
@@ -218,6 +228,8 @@ Có thể thấy:
 Đây là cách nối tiến trình (process / 프로세스) mô hình (model / 모델) với filesystem/mạng (network / 네트워크) mô hình (model / 모델).
 
 ## `ss`: trạng thái socket
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 sudo ss -antp
@@ -369,5 +381,3 @@ eBPF/kernel tracing     → event path sâu trong kernel/runtime
 Chọn tầng (layer / 계층) đủ để trả lời câu hỏi hiện tại, không chọn công cụ (tool / 도구) vì nó “nâng cao”.
 
 Xem thêm: [Production troubleshooting](./production_troubleshooting.md), [Java backend incident playbook](./java_backend_incident_playbook.md), [`/proc` và `/sys`](../00_foundations/proc_sysfs_kernel_interfaces.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [capacity planning server sizing](./capacity_planning_server_sizing.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

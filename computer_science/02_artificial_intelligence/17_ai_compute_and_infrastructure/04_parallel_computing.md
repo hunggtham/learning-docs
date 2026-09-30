@@ -7,6 +7,8 @@ Deep học tập (learning / 학습) có thể quy mô (scale / 규모) lớn v�
 
 ## Parallelism ở nhiều cấp
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 instruction-level
 thread-level
@@ -164,6 +166,8 @@ Khi `N` lớn, serial section và communication overhead chi phối. Scale-out k
 Large AI thường weak-scale mô hình (model / 모델) hoặc dữ liệu (data / 데이터) kích thước (size / 크기) thay vì chỉ dùng nhiều thiết bị (device / 장치) để chạy cùng một job cũ nhanh hơn.
 
 ## Mô hình tư duy
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Parallelism đổi local work lấy coordination overhead.

@@ -71,3 +71,19 @@ Korean firms internationalized môi trường vận hành (production / 운영 �
 Firms/banks with short-term foreign debt relied on ability to roll debt. When lenders withdrew, liquidity crisis could occur even if vật lý (physical / 물리적) factories still existed. Finance introduces thời gian (time / 시간) mismatch: asset may be valuable long term but debt due tomorrow can still bankrupt đơn vị sở hữu (owner / 오너).
 
 > **Bàn giao:** Sau **1997 as sudden stop**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+
+## Toàn cầu hóa đi vào thành phố và hộ gia đình
+
+Seoul Olympics năm **1988**, mở rộng tàu điện, sân bay và khu đô thị mới làm toàn cầu hóa hiện ra như đường đi, việc làm và giá đất chứ không chỉ là khẩu hiệu `segyehwa`. Người lao động có thể vào công ty xuất khẩu hoặc ngành dịch vụ quốc tế, nhưng hộ gia đình cũng đối mặt với học phí, tiền thuê và cạnh tranh việc làm tăng. Dân chủ hóa mở rộng quyền lên tiếng trong lúc phân phối lợi ích của tăng trưởng vẫn còn bất bình đẳng.
+
+## Việt Nam sau Đổi Mới: cùng hội nhập, khác điểm xuất phát
+
+Việt Nam bắt đầu Đổi Mới từ **1986**, bình thường hóa quan hệ với Hàn Quốc năm **1992** và gia nhập ASEAN năm **1995**. Cùng lúc Korea củng cố dân chủ và mở rộng các tập đoàn ra nước ngoài, Việt Nam chuyển dần từ kế hoạch hóa sang kinh tế thị trường định hướng xã hội chủ nghĩa. So sánh nên đặt vào cải cách tài chính, doanh nghiệp, giáo dục và đô thị hóa; không dùng hai mốc hội nhập để giả định hai chế độ đã có cùng cấu trúc chính trị.
+
+## Địa điểm để đọc dân chủ hóa sau 1987
+
+**Quảng trường Gwanghwamun** cho thấy không gian biểu tình và nghi lễ nhà nước có thể chồng lên nhau; **Seoul Olympic Park** cho thấy một mega-event để lại hạ tầng, ký ức và tranh luận về di dời. Đọc hai nơi cạnh nhau giúp nối quyền công dân với quy hoạch đô thị và cách quốc gia trình bày mình ra thế giới.
+
+## Cầu nối sang khủng hoảng 1997
+
+Một nền dân chủ mới không loại bỏ ngay rủi ro tài chính được tích lũy trong giai đoạn mở cửa. Khi nợ ngắn hạn, tỷ giá và giám sát ngân hàng gặp cú sốc, khủng hoảng sẽ đi từ bảng cân đối của tập đoàn tới việc làm và bữa ăn. Vì vậy chapter [`22_imf_crisis_digitalization_hallyu_1997_2010s.md`](22_imf_crisis_digitalization_hallyu_1997_2010s.md) cần đọc global integration cùng với đời sống lao động, không chỉ cùng với chỉ số GDP.

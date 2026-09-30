@@ -498,6 +498,8 @@ Thị trường (market / 시장) cấu trúc (structure / 구조) trả lời *
 → [02 — Quotes, pips, lots and P/L](./02_QUOTES_PIPS_LOTS_AND_PNL.md)
 
 ## Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - BIS — 2025 Triennial Central Bank Survey: https://www.bis.org/publications/triennial-central-bank-survey-foreign-exchange-and-over-the-counter-otc-derivatives-markets-2025
 - BIS — Toàn cục (global / 전역) FX trading turnover / 2025 survey bản phát hành (release / 릴리스): https://www.bis.org/media-releases/20250930-global-fx-trading-hits-96-trillion-day-april-2025-and-otc-interest-rate-derivatives-surge-79

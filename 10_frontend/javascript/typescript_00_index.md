@@ -50,6 +50,8 @@ Một consequence thực tế là khi đọc bài cũ, phải tách **ngôn ng�
 > **Chuyển mạch:** Từ **phiên bản (version / 버전) evolution nên hiểu**, ta sang **Thuật ngữ chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thuật ngữ chính
+Phần “Thuật ngữ chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Tiếng Việt | English term | 한국어 용어 | Ý nghĩa ngắn |
 |---|---|---|---|
@@ -88,6 +90,8 @@ Không tạo chapter riêng chỉ để liệt kê cú pháp (syntax / 문법) m
 > **Chuyển mạch:** Từ **Coverage kiểm tra (audit / 감사)**, ta sang **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nguồn chuẩn để đối chiếu phiên bản (version / 버전)
+Phần “Nguồn chuẩn để đối chiếu phiên bản (version / 버전)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - TypeScript Handbook, TSConfig tham chiếu (reference / 참조) và bản phát hành (release / 릴리스) notes trên `typescriptlang.org`.
 - TypeScript nhóm (team / 팀) blog trên `devblogs.microsoft.com/typescript/`, đặc biệt bản phát hành (release / 릴리스) notes 6.0 và 7.0.

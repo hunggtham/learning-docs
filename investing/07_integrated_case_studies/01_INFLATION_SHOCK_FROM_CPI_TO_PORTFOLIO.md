@@ -325,6 +325,8 @@ Giá đi ngược vài phiên không tự động làm luận điểm sai; cơ c
 
 ## 23. Mẫu dùng lại
 
+Mẫu này gom toàn bộ chuỗi truyền dẫn thành một thứ tự thao tác có thể lặp lại. Khi dùng cho dữ liệu mới, hãy đi từ bất ngờ ban đầu đến kết quả danh mục và ghi rõ mắt xích nào còn chưa được xác nhận.
+
 ```text
 1. Số thực tế so với đồng thuận
 2. Cấu phần
@@ -347,5 +349,3 @@ Giá đi ngược vài phiên không tự động làm luận điểm sai; cơ c
 ## Kết luận
 
 Một con số CPI không phải tín hiệu giao dịch tự động. Nó là một **cú sốc thông tin** làm thị trường cập nhật phân phối xác suất của tăng trưởng, lạm phát và chính sách. Nhà đầu tư cần theo dõi từng kênh truyền dẫn, kiểm tra điều gì đã nằm trong giá, nối nó tới dòng tiền doanh nghiệp và chỉ sau đó mới quyết định mức phơi nhiễm, công cụ phòng vệ và quy mô vị thế.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 CREDIT LIQUIDITY CRISIS TRANSMISSION](./02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

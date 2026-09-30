@@ -95,6 +95,8 @@ Real Wage = Nominal Wage / Price Level
 Nominal wage tăng 4% khi inflation 6% nghĩa real purchasing power giảm khoảng 2% theo approximation.
 
 ## 12. Inflation là growth tỷ lệ (rate / 비율) của price mức (level / 수준)
+Phần “12. Inflation là growth tỷ lệ (rate / 비율) của price mức (level / 수준)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 π_t = (P_t − P_{t−1}) / P_{t−1}

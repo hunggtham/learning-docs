@@ -42,6 +42,8 @@ Nhà nước có thể chuẩn hoá đo lường, bảo vệ tuyến vận chuy�
 Chữ viết, con dấu, lịch và đơn vị đo làm giảm chi phí ghi nhận nhưng không làm dữ liệu trung tính. Sổ thuế phản ánh thứ nhà nước muốn nhìn thấy; phụ nữ, lao động không chính thức, người lệ thuộc và vùng ngoài sổ thường bị mờ. Archive survival vì vậy là một selection cơ chế (mechanism / 메커니즘).
 
 ### Stock/luồng (flow / 흐름) và thất bại (failure / 실패) modes
+Phần “Stock/luồng (flow / 흐름) và thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: granary, canals, walls, trained scribes, legitimacy

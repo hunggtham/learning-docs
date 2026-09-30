@@ -229,6 +229,8 @@ Xem [[01_assessment_and_diagnosis]].
 
 ## 22. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 biology / temperament
       ↕
@@ -250,5 +252,3 @@ Developmental psychopathology thay câu hỏi “nguyên nhân là gì?” bằn
 ## Kết nối kiến thức
 
 Đọc cùng [[00_mental_health_and_psychopathology]], [[01_assessment_and_diagnosis]], [[05_neurodevelopmental_adhd_autism]], [[../03_human_development_and_person/00_lifespan_development]], [[../03_human_development_and_person/14_parenting_caregiving_and_family_development]], [[../01_brain_and_mind/05_neuroplasticity_brain_change_and_learning]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]] và [[../05_intervention/02_biological_and_community_treatment]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

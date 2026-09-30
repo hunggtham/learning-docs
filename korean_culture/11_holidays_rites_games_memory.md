@@ -11,6 +11,8 @@ Con người trải nghiệm thời gian liên tục, nhưng xã hội chia th�
 
 ### Mô hình tư duy
 
+Mô hình này giúp đọc lễ hội và nghi thức như một hệ gồm thời gian, người tham gia, vật thể và ký ức. Các thành phần không chỉ mô tả phong tục mà giải thích vì sao thực hành tiếp tục hoặc biến đổi.
+
 ```text
 ngày trên lịch
 → kỳ vọng chung
@@ -423,5 +425,3 @@ Mô hình này giúp tránh hai cực: hoặc cho rằng mọi biến thể đ�
 “Tham gia qua video không có giá trị” quá tuyệt đối; hiện diện số không thay thế hoàn toàn hiện diện vật lý nhưng có thể giữ liên kết trong gia đình phân tán.
 
 “Một nghi lễ đúng phải yêu cầu cùng một động tác cơ thể ở mọi người” bỏ qua nhu cầu thích nghi với tuổi tác, khuyết tật và tình trạng sức khoẻ.
-
-> **Bàn giao:** Sau **Những hiểu lầm phổ biến**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

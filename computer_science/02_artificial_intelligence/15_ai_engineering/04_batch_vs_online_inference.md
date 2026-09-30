@@ -116,6 +116,8 @@ Failure có thể retry sau không?
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Batch  = tối ưu hiệu quả tài nguyên trên cả dataset
 Online = tối ưu thời gian phản hồi bị giới hạn cho từng request
@@ -134,5 +136,3 @@ Không. Batch quy mô lớn vẫn cần checkpointing, lineage, thử lại (ret
 ## Liên kết kiến thức
 
 Xem [Model Serving](./03_model_serving.md), [Caching and Batching](./05_caching_and_batching.md) và [Data for AI](../14_data_for_ai/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -98,6 +98,8 @@ bảo mật (security / 보안) thành “phép màu của khung phần mềm (f
 > **Chuyển mạch:** Từ **Cách đọc chuẩn gốc (canonical / 정본)**, ta sang **Bản đồ thư mục và đơn vị sở hữu (owner / 오너)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ thư mục và đơn vị sở hữu (owner / 오너)
+Phần “Bản đồ thư mục và đơn vị sở hữu (owner / 오너)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | nhánh học (track / 트랙) | tệp chuẩn gốc (canonical file / 정본 파일) bắt đầu | Vai trò trong lĩnh vực (domain / 도메인) |
 |---|---|---|

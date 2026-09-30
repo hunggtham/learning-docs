@@ -370,6 +370,8 @@ per-screen memory/request growth
 Khi người dùng (user / 사용자) nói “mở càng nhiều tab càng chậm”, cần bằng chứng (evidence / 증거) shell-level chứ không chỉ profile một screen riêng lẻ.
 
 ## 23. Shell failure-mode ma trận (matrix / 행렬)
+Phần “23. Shell failure-mode ma trận (matrix / 행렬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Mở menu nhưng tab cũ hiện data khác

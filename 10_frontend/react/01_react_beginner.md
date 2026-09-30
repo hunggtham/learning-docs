@@ -358,6 +358,8 @@ const enhanced = React.cloneElement(original, {
 `cloneElement` tạo element mới dựa trên element cũ và merge props. API vẫn tồn tại nhưng thường làm luồng dữ liệu (data flow / 데이터 흐름) khó theo dõi hơn composition/ngữ cảnh (context / 맥락)/kết xuất (render / 렌더링) prop, nên mã (code / 코드) mới chỉ dùng khi có lý do rõ.
 
 ### `React.createFactory` — legacy trước khi JSX phổ biến
+Phần này nối mạch bài học với “`React.createFactory` — legacy trước khi JSX phổ biến”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const Button = React.createFactory("button");
@@ -526,6 +528,8 @@ setUser(user => ({
 ```
 
 ### `React.PureComponent`
+Phần này nối mạch bài học với “`React.PureComponent`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class UserCard extends React.PureComponent {
@@ -771,7 +775,9 @@ const [count, setCount] = useState(0);
 
 `useState(initialState)` trả `[state, setter]`. Gọi setter không biến đổi biến trạng thái (state / 상태) hiện tại ngay lập tức; nó yêu cầu React kết xuất (render / 렌더링) với trạng thái (state / 상태) mới.
 
-### Trạng thái (state / 상태) là snapshot
+### State là snapshot
+Phần này nối mạch bài học với “State là snapshot”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function handleClick() {
@@ -945,7 +951,9 @@ Khi length bằng `0`, React có thể kết xuất (render / 렌더링) `0`. Vi
 
 Thành phần (component / 컴포넌트) có thể return `null` nếu không muốn kết xuất (render / 렌더링) DOM đầu ra (output / 출력).
 
-## 12. danh sách (list / 목록) và `key`
+## 12. List và `key`
+Phần này nối mạch bài học với “12. List và `key`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <ul>
@@ -1040,6 +1048,8 @@ function Calculator() {
 Mỗi mẩu trạng thái (state / 상태) quan trọng nên có một đơn vị sở hữu (owner / 오너) rõ ràng.
 
 ## 15. Composition và `children`
+Phần này nối mạch bài học với “15. Composition và `children`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function Card({ children }) {
@@ -1101,7 +1111,9 @@ Phân biệt bốn lớp lỗi: JavaScript thời gian chạy (runtime / 런타�
 
 Khi gỡ lỗi (debug / 디버그) trạng thái (state / 상태), log đầu vào (input / 입력) và chuyển tiếp (transition / 전이) thay vì chỉ log trạng thái (state / 상태) ngay sau setter.
 
-## 19. Mini dự án (project / 프로젝트) Todo hoàn chỉnh
+## 19. Mini project Todo hoàn chỉnh
+Phần này nối mạch bài học với “19. Mini project Todo hoàn chỉnh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 import { useState } from "react";
@@ -1215,7 +1227,9 @@ Không nên lưu `fullName` nếu có thể tính từ `firstName` và `lastName
 const fullName = `${firstName} ${lastName}`.trim();
 ```
 
-### Định nghĩa thành phần (component / 컴포넌트) bên trong thành phần (component / 컴포넌트)
+### Định nghĩa component bên trong component
+Phần này nối mạch bài học với “Định nghĩa component bên trong component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function App() {

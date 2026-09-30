@@ -659,6 +659,8 @@ Adapter env → Settings nằm ở composition gốc (root / 루트). nghiệp v
 Cờ tính năng (feature flag / 기능 플래그) cũng là cấu hình (configuration / 구성) có vòng đời (lifecycle / 생명주기). Nếu flag thay đổi thời gian chạy (runtime / 런타임), mã (code / 코드) phải biết consistency phạm vi (scope / 범위): mỗi yêu cầu (request / 요청) snapshot một giá trị (value / 값) hay mỗi branch đọc live store? Hai hành vi (behavior / 동작) khác nhau và có thể tạo yêu cầu (request / 요청) chạy nửa theo old flag, nửa theo new flag nếu không định nghĩa snapshot ranh giới (boundary / 경계).
 
 ## 27. môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) ma trận (matrix / 행렬)
+Phần “27. môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) ma trận (matrix / 행렬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Hiện tượng | cơ chế (mechanism / 메커니즘) cần kiểm tra | Sai lầm thường gặp |
 |---|---|---|
@@ -693,6 +695,8 @@ Mã (code / 코드) đang giữ trạng thái (state / 상태) ở đâu và ai 
 Nếu trả lời được các câu đó, cú pháp (syntax / 문법)/API lookup còn lại thường là vấn đề nhỏ.
 
 ## 29. cầu nối (bridge / 브리지) ra ngoài Python cốt lõi (core / 핵심)
+Phần “29. cầu nối (bridge / 브리지) ra ngoài Python cốt lõi (core / 핵심)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - FastAPI example hiện có: [automation/app.py](../../automation/app.py). cốt lõi (core / 핵심) Python giải thích coroutine, vòng lặp sự kiện (event loop / 이벤트 루프), khóa (lock / 잠금) và `to_thread`; routing/phụ thuộc (dependency / 의존성) injection/ASGI thuộc FastAPI/backend lĩnh vực (domain / 도메인) khi chuẩn gốc (canonical / 정본) thư viện (library / 라이브러리) tương ứng được xây.
 - Automation worker: [automation/pipeline.py](../../automation/pipeline.py) và [automation/README.md](../../automation/README.md).
@@ -700,6 +704,8 @@ Nếu trả lời được các câu đó, cú pháp (syntax / 문법)/API looku
 - AI/kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) framework-specific hành vi (behavior / 동작) không được duplicate vào Python cốt lõi (core / 핵심). Khi các chuẩn gốc (canonical / 정본) lĩnh vực (domain / 도메인) đó tồn tại, Python README nên link trực tiếp tới chapter tương ứng.
 
 ## Nguồn chính
+Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Python ngôn ngữ (language / 언어) tham chiếu (reference / 참조): https://docs.python.org/3.14/tham chiếu (reference / 참조)/
 - mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html

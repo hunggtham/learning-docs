@@ -22,6 +22,8 @@ Dạng thứ hai có thể cho conclusion đúng trong một trường hợp c�
 > **Chuyển mạch:** Từ **Validity không phải truth**, ta sang **Deduction, induction và abduction** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Deduction, induction và abduction
+Phần “Deduction, induction và abduction” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Deduction** bảo toàn tính đúng theo cấu trúc: từ quy tắc (rule / 규칙) và trường hợp (case / 사례) suy ra consequence.
 - **Induction** mở rộng từ observations hữu hạn sang mẫu (pattern / 패턴) tổng quát; conclusion có độ tin cậy chứ không certainty.

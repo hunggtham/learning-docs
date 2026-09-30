@@ -43,11 +43,9 @@ Trước khi làm capstone cuối, hoàn thành ít nhất một vòng trong [Ad
 [05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md](./05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md) là capstone cuối cùng. tệp (file / 파일) này nối câu hỏi nghiên cứu → nguồn dữ liệu → giả định → macro/sector/company mô hình (model / 모델) → định giá → phân phối lợi suất kỳ vọng → quy mô vị thế → thực thi → theo dõi → phân rã kết quả → post-mortem. Đây là bài kiểm tra xem người đọc đã có thể vận hành toàn bộ thư viện như một hệ thống nghiên cứu hay chưa.
 
 
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Coverage map của trường hợp (case / 사례) study** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Bảng coverage dưới đây cho biết mỗi case đã đi qua những tầng nào của hệ thống nghiên cứu. Hãy đọc nó như bản đồ điều hướng: dấu ✓ chỉ có giá trị khi bên trong case có cơ chế, dữ liệu, cách diễn giải và failure mode tương ứng.
 
-## Coverage map của trường hợp (case / 사례) study
-
-| trường hợp (case / 사례) | Macro | Rates | Liquidity/Credit | Industry | Company | Valuation | Portfolio | Korea/Vietnam |
+| Case | Macro | Rates | Liquidity/Credit | Industry | Company | Valuation | Portfolio | Korea/Vietnam |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 01 CPI Shock | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | 02 Credit/Liquidity Crisis | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | một phần |
@@ -78,6 +76,8 @@ Sau đó mới đọc phần tiếp theo.
 > **Chuyển mạch:** Từ **Cách sử dụng tình huống**, ta sang **Ghi chú nên tạo sau mỗi tình huống** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ghi chú nên tạo sau mỗi tình huống
+
+Sau khi đọc hoặc tự chạy một case, hãy chuyển hiểu biết thành một ghi chú ngắn có thể xem lại. Việc ghi theo cùng một cấu trúc giúp so sánh các cú sốc khác nhau và phát hiện phần nào trong quy trình của mình còn bỏ trống.
 
 ```text
 Giả thuyết ban đầu
@@ -156,5 +156,3 @@ Sau phần này, khi nhìn một tin mới, người đọc không nên hỏi ng
 ```
 
 Đó là bước chuyển từ “biết kiến thức đầu tư” sang có một hệ thống vận hành nghiên cứu (research operating system).
-
-> **Bàn giao:** Sau **Mục tiêu cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 INFLATION SHOCK FROM CPI TO PORTFOLIO](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

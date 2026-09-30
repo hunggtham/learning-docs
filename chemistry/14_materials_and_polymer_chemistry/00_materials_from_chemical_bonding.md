@@ -318,6 +318,8 @@ Do đó tính chất luôn có **ký ức của quá trình chế tạo**.
 
 # Đặc trưng vật liệu ở nhiều thang
 
+Sau khi nối quy trình chế tạo với vi cấu trúc, ta cần các phép đo ở nhiều thang để kiểm tra mô hình. Mỗi kỹ thuật nhìn một lớp khác nhau; kết luận đáng tin chỉ xuất hiện khi các lớp đó khớp nhau.
+
 - XRD nhận diện pha và cấu trúc tinh thể;
 - SEM quan sát hình thái, thường kết hợp EDS để xem thành phần nguyên tố;
 - TEM quan sát cấu trúc nano, lệch mạng và giao diện (interface / 인터페이스);
@@ -357,5 +359,3 @@ Không. Hàng rào tạo mầm, khuếch tán và thời gian có thể giữ h�
 Khoa học vật liệu là **hóa học cộng với thang kích thước, khuyết tật và lịch sử**. Liên kết xác định khả năng cục bộ; nhiệt động lực học cho biết trạng thái nào được ưu tiên; động học và gia công quyết định cấu trúc nào thật sự hình thành; vi cấu trúc sau đó quyết định hiệu năng thực tế.
 
 Xem tiếp: [Kim loại, gốm và thủy tinh](./01_metals_ceramics_and_glasses.md).
-
-> **Bàn giao:** Sau **“Pha bền nhiệt động luôn xuất hiện”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 metals ceramics and glasses](./01_metals_ceramics_and_glasses.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

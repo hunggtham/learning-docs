@@ -392,6 +392,8 @@ unknown permission
 
 ## Defense in độ sâu (depth / 깊이): ví dụ tác nhân (agent / 에이전트) gửi email
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 User request
 → authenticate
@@ -409,6 +411,8 @@ User request
 Nếu LLM bị prompt injection, các lớp sau vẫn giới hạn impact.
 
 ## Defense in độ sâu (depth / 깊이): ví dụ RAG doanh nghiệp
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 User
@@ -438,6 +442,8 @@ Bảo mật (security / 보안) điều khiển (control / 제어) có chi phí:
 Mục tiêu không phải “khóa mọi thứ”, mà đặt điều khiển (control / 제어) tương xứng với impact của thất bại (failure / 실패).
 
 ## Dạng thất bại (failure mode / 실패 모드) của bảo mật (security / 보안) kiến trúc (architecture / 아키텍처)
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 - authorization chỉ kiểm ở UI;
 - mô hình (model / 모델) được truyền credential raw;
@@ -498,5 +504,3 @@ Không. đầu ra (output / 출력) mô hình (model / 모델), công cụ (tool
 ## Liên kết kiến thức
 
 Đọc cùng [Prompt Injection](./03_prompt_injection_and_jailbreaks.md), [Privacy Attacks](./06_privacy_attacks_and_data_protection.md), [Supply Chain Security](./07_model_and_supply_chain_security.md), [Reliable Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md), [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md) và [LLMOps](../16_mlops_and_llmops/08_llmops.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai safety foundations](./00_ai_safety_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

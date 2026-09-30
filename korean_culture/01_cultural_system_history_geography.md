@@ -506,10 +506,10 @@ Nguyên tắc **tiết kiệm lời giải thích (parsimony)** là: dùng cơ c
 
 ## Đọc tiếp
 
+Các liên kết sau mở rộng những mắt xích mà chapter này mới đặt nền: quan hệ, không gian, thiết chế và thay đổi hiện đại. Chọn đường đọc theo câu hỏi còn bỏ ngỏ thay vì đọc thêm theo số thứ tự.
+
 - [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md) — các lớp lịch sử chi tiết hơn.
 - [`14_regions_jeju_local_identity_peninsula.md`](14_regions_jeju_local_identity_peninsula.md) — khác biệt vùng.
 - [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md) — biến đổi dân số.
 - [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) — đồ thị kiến thức và mô hình nhân quả.
 - [`../korean_history/README.md`](../korean_history/README.md) — thư viện lịch sử khi cần niên đại và nguồn sâu hơn.
-
-> **Bàn giao:** Sau **Đọc tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

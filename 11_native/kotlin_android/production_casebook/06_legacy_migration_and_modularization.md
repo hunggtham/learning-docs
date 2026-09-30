@@ -401,7 +401,9 @@ Một legacy app đơn mô-đun (module / 모듈) không tự động cần 50 G
 
 Đo compile thời gian (time / 시간), quyền sở hữu (ownership / 소유권) xung đột (conflict / 충돌), kiểm thử (test / 테스트) isolation và phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) trước/sau.
 
-## 33. di chuyển (migration / 마이그레이션) roadmap mẫu
+## 33. Migration roadmap mẫu
+Phần này nối mạch Android vừa học với “33. Migration roadmap mẫu”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 Phase 0: inventory + metrics + critical characterization tests

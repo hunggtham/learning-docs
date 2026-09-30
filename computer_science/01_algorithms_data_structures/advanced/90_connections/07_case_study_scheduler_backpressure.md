@@ -436,6 +436,8 @@ Average thông lượng (throughput / 처리량) tốt nhưng p99 rất xấu c�
 
 ## 29. chuỗi xử lý (pipeline / 파이프라인) khái niệm
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Incoming Work
    ↓
@@ -463,5 +465,3 @@ backpressure / autoscaling / rejection
 > Scheduler là bài toán **chọn item tiếp theo dưới mục tiêu và ràng buộc tài nguyên**. hàng đợi (queue / 큐) lưu backlog, Priority hàng đợi (queue / 큐) mã hóa thứ tự ưu tiên, Deque hỗ trợ công việc (work / 작업) stealing, băm (hash / 해시) Map giữ trạng thái (state / 상태) theo job/tenant, còn backpressure bảo đảm backlog không biến thành sự cố tài nguyên. cấu trúc dữ liệu (data structure / 자료구조) chỉ là một nửa; chính sách (policy / 정책) và mục tiêu (objective / 목표) mới quyết định hệ thống có công bằng, ổn định và chịu tải tốt hay không.
 
 Xem thêm: [Queue, Deque & Priority Queue](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [Problem-Solving Workflow](./02_problem_solving_workflow.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 choose the right data structure](./00_choose_the_right_data_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

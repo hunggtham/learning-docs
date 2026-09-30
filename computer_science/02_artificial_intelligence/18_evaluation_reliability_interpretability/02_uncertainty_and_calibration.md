@@ -193,6 +193,8 @@ Xác suất (probability / 확률) chất lượng (quality / 품질) quan trọ
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Prediction nói model nghĩ điều gì sẽ xảy ra.
 Calibration nói mức confidence mà model đưa ra có đáng tin hay không.
@@ -215,5 +217,3 @@ Không. Natural-language self-assessment cần empirical kiểm tra hợp lệ (
 ## Liên kết kiến thức
 
 Xem [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [Statistics](../01_mathematical_foundations/03_statistics_for_ai.md), [Evaluation Foundations](./00_evaluation_foundations.md), [Robustness](./03_robustness_and_distribution_shift.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

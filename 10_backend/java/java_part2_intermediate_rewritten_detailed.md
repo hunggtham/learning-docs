@@ -268,6 +268,8 @@ Collection kiểu (type / 타입) nên nói intent của lĩnh vực (domain / �
 
 # 10. `ArrayList.remove()` overload trap
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 List<Integer> values =
     new ArrayList<>(
@@ -308,6 +310,8 @@ remove() không tìm thấy object
 ---
 
 # 12. Mutable keys là lỗi nguy hiểm
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 final class UserKey {
@@ -472,6 +476,8 @@ Comparator phải consistent enough với thứ tự (ordering / 순서) đặc 
 
 # 18. Immutable, Unmodifiable và Defensive bản sao (copy / 복사) khác nhau
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 List<String> original =
     new ArrayList<>();
@@ -505,6 +511,8 @@ Nhưng nếu elements mutable, shallow bản sao (copy / 복사) không deep-cop
 ---
 
 # 19. Stream là lazy chuỗi xử lý (pipeline / 파이프라인)
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 Stream<User> stream =
@@ -619,6 +627,8 @@ Collectors giúp biến stream thành aggregated dữ liệu (data / 데이터) 
 
 # 22. `toMap` duplicate key trap
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 users.stream()
      .collect(
@@ -666,6 +676,8 @@ Dùng specialized collectors/methods khi dễ đọc hơn. Không biến mọi a
 
 # 24. thành phần nguyên thủy (primitive / 기본 요소) Streams
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 int totalAge =
     users.stream()
@@ -680,6 +692,8 @@ Hot data-processing mã (code / 코드) có thể benefit, nhưng clarity trư�
 ---
 
 # 25. Parallel Stream
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 users.parallelStream()
@@ -777,6 +791,8 @@ Không expose raw SQL exception cho REST máy khách (client / 클라이언트).
 ---
 
 # 29. Try-with-resources và suppressed exceptions
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 try (Resource a = openA();
@@ -1137,6 +1153,8 @@ Trọng yếu (critical / 중요) section nên chỉ chứa trạng thái (state
 
 # 42. `volatile`
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 private volatile boolean running = true;
 ```
@@ -1166,6 +1184,8 @@ Volatile không phải “lightweight synchronized replacement”; nó giải đ
 ---
 
 # 43. Atomic Classes
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 AtomicInteger counter =
@@ -1218,6 +1238,8 @@ Chọn ngữ nghĩa (semantics / 의미론) trước thông lượng (throughput
 ---
 
 # 45. `ReentrantLock`
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 lock.lock();
@@ -1324,6 +1346,8 @@ Không chọn chính sách (policy / 정책) mà không biết nghiệp vụ (bu
 ---
 
 # 50. Future
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 Future<Result> future =
@@ -1437,6 +1461,8 @@ Tính đồng thời (concurrency / 동시성) collection name không tự nghĩ
 
 # 54. BlockingQueue và Producer/bên tiêu thụ (consumer / 소비자)
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 BlockingQueue<Job> queue =
     new ArrayBlockingQueue<>(1000);
@@ -1492,6 +1518,8 @@ future.thenCompose(
 
 # 56. Combine independent futures
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 CompletableFuture<User> user =
     loadUser();
@@ -1528,6 +1556,8 @@ Hidden dùng chung (common / 공통) pool là hidden sức chứa (capacity / �
 ---
 
 # 58. CompletableFuture errors
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 future.exceptionally(
@@ -1692,6 +1722,8 @@ Useful cho nested-like cục bộ (local / 로컬) khôi phục (recovery / 복�
 ---
 
 # 65. JDBC Batch
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 statement.addBatch();
@@ -1912,6 +1944,8 @@ chủ yếu hữu ích khi cần annotations trên lambda params.
 
 # 74. tiêu chuẩn (standard / 표준) HTTP máy khách (client / 클라이언트) Java 11
 
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
+
 ```java
 HttpClient client =
     HttpClient.newBuilder()
@@ -2027,6 +2061,8 @@ Dùng khi quyết định (decision / 결정) là data-oriented closed variants.
 ---
 
 # 78. bản ghi (record / 레코드) Patterns Java 21
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 record Point(int x, int y) {

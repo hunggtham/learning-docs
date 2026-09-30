@@ -114,6 +114,8 @@ Universal subword các mô hình (models / 모델들) trade linguistic purity fo
 
 ### Syntactic ambiguity
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 I saw the man with the telescope.
 ```
@@ -121,6 +123,8 @@ I saw the man with the telescope.
 Ai có telescope?
 
 ### Referential ambiguity
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 John told Mike that he was late.
@@ -241,6 +245,8 @@ This distinction becomes trọng yếu (critical / 중요) for hallucination.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 World / human intent
    ↓ expressed imperfectly
@@ -278,5 +284,3 @@ TF-IDF/BM25 remain excellent lexical retrieval/baselines and combine well with d
 Ngôn ngữ (language / 언어) biểu diễn (representation / 표현) connects [Sequence Models](../06_deep_learning_architectures/01_sequence_models.md), [Representation Learning](../05_neural_networks/08_representation_learning.md), xác suất (probability / 확률) and thông tin (information / 정보) lý thuyết (theory / 이론).
 
 Xem tiếp: [Text Normalization and Tokenization](./01_text_normalization_and_tokenization.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 text normalization and tokenization](./01_text_normalization_and_tokenization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

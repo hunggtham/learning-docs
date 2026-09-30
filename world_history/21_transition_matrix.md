@@ -23,6 +23,8 @@ Bảng này dùng để kiểm tra **điều gì đã đổi giữa hai giai đo
 | Globalization → Post-Cold War | digital nền tảng (platform / 플랫폼), climate/financial interdependence | sovereignty, multilateral quản trị (governance / 거버넌스) | power asymmetry, demographic thay đổi (change / 변경) |
 
 ## Cách đọc bảng
+Phần “Cách đọc bảng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Năng lực mới nổi** không có nghĩa lần đầu xuất hiện; nó có nghĩa đạt quy mô (scale / 규모) hoặc đổi phân phối (distribution / 분포).
 - **Institution chịu áp lực** không nhất thiết biến mất; nó có thể tái cấu trúc, đổi tên hoặc bị tầng (layer / 계층) bởi institution mới.

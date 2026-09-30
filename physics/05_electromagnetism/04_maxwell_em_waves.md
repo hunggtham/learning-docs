@@ -33,6 +33,8 @@ Mỗi phương trình có một vai trò riêng.
 
 ## Gauss cho điện trường
 
+Định luật Gauss nối thông lượng điện qua một mặt kín với điện tích bên trong. Hãy dùng nó như công cụ khai thác đối xứng, không chỉ như một công thức tính tích phân.
+
 ```math
 \nabla\cdot\mathbf E=\frac{\rho}{\varepsilon_0}.
 ```
@@ -49,6 +51,8 @@ Nó nối nguồn điện tích bên trong một mặt kín với tổng thông 
 
 ## Gauss cho từ trường
 
+Gauss cho từ trường nói rằng tổng thông lượng từ qua mặt kín bằng không. Kết quả này phản ánh các đường sức từ không bắt đầu hay kết thúc tại một magnetic monopole trong mô hình Maxwell hiện tại.
+
 ```math
 \nabla\cdot\mathbf B=0.
 ```
@@ -62,6 +66,8 @@ Tổng thông lượng từ qua mọi mặt kín bằng không:
 Trong điện từ học cổ điển, điều này phản ánh việc chưa quan sát thấy đơn cực từ tự do. Đường sức từ không bắt đầu hoặc kết thúc ở một điện tích từ riêng lẻ; chúng tạo các vòng kín hoặc kéo dài vô hạn.
 
 ## Định luật Faraday
+
+Faraday giải thích vì sao từ thông thay đổi tạo ra suất điện động. Đây là cầu nối từ field biến thiên tới máy phát, cảm ứng và sóng điện từ.
 
 ```math
 \nabla\times\mathbf E

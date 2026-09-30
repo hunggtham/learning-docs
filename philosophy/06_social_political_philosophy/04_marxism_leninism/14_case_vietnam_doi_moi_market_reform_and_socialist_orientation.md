@@ -143,6 +143,8 @@ Vietnam và China đều có gradual market-oriented reforms dưới continued C
 Chapter tiếp theo [Comparative synthesis](15_comparative_case_synthesis_soviet_china_vietnam.md) sẽ đặt Soviet Union, China và Vietnam cạnh nhau bằng cùng một ma trận (matrix / 행렬): quyết định (decision / 결정) rights, price formation, quyền sở hữu (ownership / 소유권), thông tin (information / 정보), incentives, coercion, trade openness, correction cơ chế (mechanism / 메커니즘) và measurable outcomes.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - World Bank, “Viet Nam — Overview”: https://www.worldbank.org/en/country/vietnam/overview
 - World Bank historical documentation on Đổi Mới and diversification: https://documents1.worldbank.org/curated/en/601001468027856008/pdf/604380WP0P11051ification0Experience.pdf

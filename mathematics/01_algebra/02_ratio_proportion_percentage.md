@@ -131,6 +131,8 @@ Thời gian (time / 시간) inverse-proportional với workers. Real teams viola
 
 ## Percentage chỉ là ratio trên cơ sở (base / 기반) 100
 
+Phần trăm là một ratio có mẫu chuẩn bằng 100. Đọc nó theo base giúp phân biệt phần trăm, percentage point và thay đổi tương đối trong các bài toán thực tế.
+
 ```math
 15\%=\frac{15}{100}=0.15.
 ```
@@ -412,5 +414,3 @@ Average of ratios may differ from ratio of totals. Weighted aggregation must mat
 **“A huge percentage thay đổi (change / 변경) always means a huge practical thay đổi (change / 변경).”** Small denominators can create huge percentages.
 
 **“Any straight line means direct proportionality.”** `y=kx+b` is proportional only when `b=0`.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 algebraic language](./00_algebraic_language.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

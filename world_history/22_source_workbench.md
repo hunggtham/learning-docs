@@ -3,6 +3,8 @@
 > **Mạch đọc:** Đặt **22 — nguồn (source / 소스) Workbench: đọc bằng chứng và kiểm soát narrative** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Bốn lớp bằng chứng** sang **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Bốn lớp bằng chứng
+Phần “1. Bốn lớp bằng chứng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Lớp | Ví dụ | Câu hỏi kiểm tra |
 | --- | --- | --- |
@@ -17,6 +19,8 @@ Không xếp một lớp “cao hơn” tuyệt đối. Số liệu có thể ch
 > **Chuyển mạch:** Từ **1. Bốn lớp bằng chứng**, ta sang **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim
+Phần “2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 claim → actor/scale → mechanism → expected evidence
@@ -29,6 +33,8 @@ Ví dụ claim “đường sắt củng cố nhà nước” cần hỏi: đư�
 > **Chuyển mạch:** Từ **2. Quy trình kiểm tra một nhân quả (causal / 인과적) claim**, ta sang **3. Archive độ lệch (bias / 편향) thường gặp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. Archive độ lệch (bias / 편향) thường gặp
+Phần “3. Archive độ lệch (bias / 편향) thường gặp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **trạng thái (state / 상태) độ lệch (bias / 편향):** archive thấy thuế, luật và chiến tranh nhưng không thấy unpaid care.
 - **Urban độ lệch (bias / 편향):** thành phố có chữ viết và vật liệu bền; nông thôn/di động bị thiếu.
@@ -52,6 +58,8 @@ Ví dụ claim “đường sắt củng cố nhà nước” cần hỏi: đư�
 > **Chuyển mạch:** Từ **4. Bộ câu hỏi khi dùng số liệu**, ta sang **5. tham chiếu (reference / 참조) map theo nhu cầu** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. tham chiếu (reference / 참조) map theo nhu cầu
+Phần “5. tham chiếu (reference / 참조) map theo nhu cầu” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Origins/agriculture:** khảo cổ, paleoecology, genetics, zooarchaeology, isotope.
 - **Early/classical states:** inscription, administrative tablet, law mã (code / 코드), settlement survey, coin/ceramic phân phối (distribution / 분포).

@@ -6,6 +6,8 @@
 Đây là **reading map**, không phải danh sách “một cuốn giải thích toàn bộ lịch sử”. Mỗi nhóm nên được đọc cùng nguồn sơ cấp, khảo cổ/dataset và scholarship từ nhiều khu vực.
 
 ## Khung tổng hợp và connected lịch sử (history / 이력)
+Phần “Khung tổng hợp và connected lịch sử (history / 이력)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **David Christian — *Maps of thời gian (time / 시간)*.** Hữu ích để nối biological, ecological, agrarian và industrial quy mô (scale / 규모); cần bổ sung tiếng nói khu vực và tránh biến Big lịch sử (history / 이력) thành tiến bộ tuyến tính.
 - **J. R. McNeill & William H. McNeill — *The Human Web*.** Mạnh về mạng trao đổi, disease và thông tin (information / 정보); dùng cùng trường hợp (case / 사례) study để kiểm tra những luồng (flow / 흐름) bị nhìn từ trung tâm.
@@ -17,6 +19,8 @@
 > **Chuyển mạch:** Từ **Khung tổng hợp và connected lịch sử (history / 이력)**, ta sang **Origins, agriculture và early states** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Origins, agriculture và early states
+Phần “Origins, agriculture và early states” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **James C. Scott — *Against the Grain*.** Đặt câu hỏi về trạng thái (state / 상태) legibility, cereal taxation và việc “văn minh” có thực sự tốt hơn cho mọi hộ hay không; nên đọc cùng phản biện khảo cổ.
 - **Ian Morris — *Why the West Rules—For Now*.** Có mô hình tư duy (mental model / 사고 모델) năng lượng–xã hội quy mô lớn; dùng như một hypothesis có thể kiểm tra, không phải verdict chung cuộc.
@@ -26,6 +30,8 @@
 > **Chuyển mạch:** Từ **Origins, agriculture và early states**, ta sang **Classical, medieval và các mạng trao đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Classical, medieval và các mạng trao đổi
+Phần “Classical, medieval và các mạng trao đổi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Janet L. Abu-Lughod — *Before European Hegemony*.** Hữu ích để hình dung world-system thế kỷ XIII với nhiều trung tâm; cần kiểm tra periodization và bằng chứng theo từng mạng (network / 네트워크).
 - **K. N. Chaudhuri — *Trade and Civilisation in the Indian Ocean*.** Nối monsoon, cổng (port / 포트), merchant và ecology; phù hợp với chapter 05–08.
@@ -36,6 +42,8 @@
 > **Chuyển mạch:** Từ **Classical, medieval và các mạng trao đổi**, ta sang **Đại dương, colonialism và industrialization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Đại dương, colonialism và industrialization
+Phần “Đại dương, colonialism và industrialization” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Kenneth Pomeranz — *The Great Divergence*.** So sánh ecology, coal, land và toàn cục (global / 전역) tài nguyên (resource / 자원) truy cập (access / 접근); hữu ích để tránh “Europe thắng vì văn hóa” như một lời giải đơn.
 - **Sven Beckert — *Empire of Cotton*.** Cho thấy plantation, slavery, finance, trạng thái (state / 상태) violence và factory nằm trong cùng commodity chuỗi (chain / 사슬).
@@ -47,6 +55,8 @@
 > **Chuyển mạch:** Từ **Đại dương, colonialism và industrialization**, ta sang **World wars, Cold War và decolonization** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## World wars, Cold War và decolonization
+Phần “World wars, Cold War và decolonization” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Christopher Clark — *The Sleepwalkers*.** Phân tích escalation trước WWI; đọc cùng scholarship về imperialism, Balkan và colonial participation.
 - **Adam Tooze — *The Deluge* và *The Wages of Destruction*.** Nối finance, môi trường vận hành (production / 운영 환경), debt và geopolitical thứ tự (order / 순서) trước/sau các cuộc thế chiến.
@@ -58,6 +68,8 @@
 > **Chuyển mạch:** Từ **World wars, Cold War và decolonization**, ta sang **Globalization, môi trường (environment / 환경) và phương pháp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Globalization, môi trường (environment / 환경) và phương pháp
+Phần “Globalization, môi trường (environment / 환경) và phương pháp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **William McNeill — *Plagues and Peoples*.** Gợi ý cách nối disease với mobility và ecology; các claim định lượng cần kiểm tra bằng nghiên cứu dịch tễ mới.
 - **John R. McNeill — *Something New Under the Sun*.** Nền tảng cho environmental lịch sử (history / 이력) thế kỷ XX: năng lượng (energy / 에너지), pollution và quy mô (scale / 규모).

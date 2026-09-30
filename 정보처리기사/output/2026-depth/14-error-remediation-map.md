@@ -182,6 +182,8 @@ Quay về explanation và scenario, không làm thêm 20 câu giống hệt.
 ---
 
 # 2. Remediation map — Môn 1
+Phần “2. Remediation map — Môn 1” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -208,6 +210,8 @@ Không đóng lỗi chỉ vì đọc lại. Phải tạo được một câu m�
 ---
 
 # 3. Remediation map — Môn 2
+Phần “3. Remediation map — Môn 2” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -234,6 +238,8 @@ Với thuật toán (algorithm / 알고리즘)/cấu trúc dữ liệu (data str
 ---
 
 # 4. Remediation map — Môn 3
+Phần “4. Remediation map — Môn 3” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -262,6 +268,8 @@ DB procedural lỗi chỉ đóng khi làm được **một ví dụ mới tự t
 ---
 
 # 5. Remediation map — Môn 4
+Phần “5. Remediation map — Môn 4” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -292,6 +300,8 @@ Với mã (code / 코드)/OS/mạng (network / 네트워크), phải viết tr�
 ---
 
 # 6. Remediation map — Môn 5
+Phần “6. Remediation map — Môn 5” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Nếu sai ở vùng | Primary check | Quay lại |
 |---|---|---|
@@ -405,6 +415,8 @@ Không ghi “careless” nếu thực ra bạn không hiểu concept. `READ` ch
 # 9. lỗi (error / 오류) clusters cần cảnh giác
 
 ## Cluster A — “đều là bảo mật (security / 보안)”
+Phần “Cluster A — “đều là bảo mật (security / 보안)”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Authentication
@@ -423,6 +435,8 @@ Nếu cứ chọn bằng cảm giác “security-related”, lỗi gốc là LAY
 ---
 
 ## Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”
+Phần “Cluster B — “đều là cơ sở dữ liệu (database / 데이터베이스) consistency”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 ACID
@@ -444,6 +458,8 @@ Cần phân: thuộc tính (property / 속성), tính đồng thời (concurrenc
 ---
 
 ## Cluster C — “đều là thiết kế (design / 설계)”
+Phần “Cluster C — “đều là thiết kế (design / 설계)”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Architecture
@@ -460,6 +476,8 @@ Hãy xác định lớp trừu tượng (abstraction / 추상화) mức (level /
 ---
 
 ## Cluster D — “đều là hiệu năng (performance / 성능)”
+Phần “Cluster D — “đều là hiệu năng (performance / 성능)”” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Complexity

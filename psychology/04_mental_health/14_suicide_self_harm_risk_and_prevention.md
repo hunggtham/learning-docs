@@ -194,6 +194,8 @@ Tài liệu học không thay emergency hỗ trợ (support / 지원). Nếu m�
 
 ## 18. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 long-term vulnerability
       +

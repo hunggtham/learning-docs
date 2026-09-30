@@ -7,6 +7,8 @@
 
 ## 1. Phương trình kế toán
 
+Trước khi đọc từng dòng báo cáo, cần có một khung giữ cho tài sản, nghĩa vụ và vốn chủ luôn liên kết. Phương trình dưới đây là điểm tựa để người mới hiểu một giao dịch di chuyển qua các báo cáo như thế nào.
+
 ```text
 Tài sản = Nợ phải trả + Vốn chủ sở hữu
 ```
@@ -119,6 +121,8 @@ Lợi nhuận ròng còn chịu cấu trúc vốn, thuế và khoản ngoài ho�
 
 ## 11. EPS cơ bản và pha loãng
 
+Sau khi đi qua doanh thu, biên lợi nhuận và bảng cân đối, ta chuyển kết quả về đơn vị mà cổ đông thực sự sở hữu: lợi nhuận trên mỗi cổ phiếu. Phần này làm rõ vì sao tăng trưởng lợi nhuận tổng chưa chắc là tăng trưởng của từng cổ đông.
+
 ```text
 EPS = Net Income Available to Common / Weighted Average Shares
 ```
@@ -177,6 +181,8 @@ Khoản phải trả là tiền còn nợ nhà cung cấp. Kéo dài thời gian
 Số ngày phải trả (DPO) tăng mạnh cùng dấu hiệu căng thẳng nhà cung cấp có thể là cảnh báo.
 
 ## 16. Chu kỳ chuyển đổi tiền mặt
+
+Các khoản phải thu, tồn kho và phải trả vừa xuất hiện trong bảng cân đối vừa làm dòng tiền hoạt động thay đổi. CCC nối ba khoản đó thành một câu hỏi kinh tế: vốn bị khóa trong hoạt động bao lâu trước khi quay lại thành tiền?
 
 ```text
 CCC = DSO + DIO - DPO
@@ -359,6 +365,8 @@ Không áp một bộ tỷ lệ giống nhau cho mọi ngành.
 
 ## 36. Checklist đọc báo cáo
 
+Checklist cuối cùng biến ba báo cáo thành một vòng đọc có thứ tự: hỏi doanh thu đến từ đâu, kiểm tra lợi nhuận chuyển thành tiền thế nào, rồi xem bảng cân đối và vốn cổ phần có làm thay đổi giá trị trên mỗi cổ phiếu hay không.
+
 ```text
 Doanh thu tăng do đâu?
 Biên lợi nhuận thay đổi vì gì?
@@ -375,5 +383,3 @@ FCF trên mỗi cổ phiếu đang đi hướng nào?
 ## Kết luận
 
 Báo cáo tài chính không phải ba bảng độc lập. Chúng là ba góc nhìn của cùng một hệ thống kinh tế. Nhà đầu tư cần theo dòng từ **doanh thu → lợi nhuận → vốn lưu động → tài sản/nợ → dòng tiền → vốn trên mỗi cổ phiếu**. Khi chuỗi này nhất quán, kế toán trở thành công cụ hiểu doanh nghiệp thay vì tập hợp các tỷ lệ rời rạc.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 BUSINESS QUALITY MOAT AND INDUSTRY](./02_BUSINESS_QUALITY_MOAT_AND_INDUSTRY.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

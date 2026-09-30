@@ -151,6 +151,8 @@ Tình trạng cư trú có deadline nghiêm ngặt. Một 민원 chung không ch
 
 ## 13. Nguồn chính thức
 
+Xuất nhập cảnh là lĩnh vực có deadline và điều kiện thay đổi theo loại tư cách lưu trú. Hãy dùng các nguồn chính thức sau để kiểm tra route, hồ sơ và ngày hiệu lực thay vì suy luận từ trường hợp của người khác.
+
 - Hi Korea: https://www.hikorea.go.kr/
 - 출입국·외국인정책본부: https://www.immigration.go.kr/
 - 국가법령정보센터: https://www.law.go.kr/
@@ -159,6 +161,4 @@ Tình trạng cư trú có deadline nghiêm ngặt. Một 민원 chung không ch
 
 ## 14. Nguyên tắc an toàn
 
-Với visa, F-5 và quốc tịch, luôn ghi **mã tư cách cụ thể + loại tuyến (route / 경로) + ngày kiểm tra**. Không dùng một ví dụ của người khác làm quy tắc cho hồ sơ của mình.
-
-> **Bàn giao:** Sau **14. Nguyên tắc an toàn**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Với visa, F-5 và quốc tịch, luôn ghi **mã tư cách cụ thể + loại route + ngày kiểm tra**. Không dùng một ví dụ của người khác làm quy tắc cho hồ sơ của mình.

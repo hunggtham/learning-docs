@@ -91,6 +91,8 @@ www.sinagong.co.kr
 소프트웨어 공학(SE; Software Engineering)은 소프트 웨어의 위기를 극복하기 위한 방안으로 연구된 학문이며 여러 가지 방법론과 도구, 관리 기법들을 통하여 소프트 웨어의 품질과 생산성 향상을 목적으로 한다. 
 
 ###### 소프트웨어 공학의 기본 원칙 
+Phần “소프트웨어 공학의 기본 원칙” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 현대적인 프로그래밍 기술을 계속적으로 적용해야 한다. 
 
@@ -168,6 +170,8 @@ www.sinagong.co.kr
 **4** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 애자일 모형은 기업 활동 전반에 걸쳐 사용된다. 
 
@@ -192,12 +196,16 @@ www.sinagong.co.kr
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### 스크럼 마스터(SM; Scrum Master) 
+Phần “스크럼 마스터(SM; Scrum Master)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 스크럼 팀이 스크럼을 잘 수행할 수 있도록 객관적인 시각에서 조언을 해주는 가이드 역할을 수행한다. 팀원 들을 통제하는 것이 목표가 아니다. 
 
 - 일일 스크럼 회의를 주관하여 진행 사항을 점검하고, 개 발 과정에서 발생된 장애 요소를 공론화하여 처리한다. 
 
 ###### 개발팀(DT; Development Team) 
+Phần “개발팀(DT; Development Team)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 제품 책임자와 스크럼 마스터를 제외한 모든 팀원으로, 개발자 외에도 디자이너, 테스터 등 제품 개발을 위해 참여하는 모든 사람이 대상이 된다. 
 
@@ -246,6 +254,8 @@ www.sinagong.co.kr
 2400202<br><!-- End of picture text -->
 
 ###### 22.3 
+Phần “22.3” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |제품 백로그<br>(Product Backlog)|제품 개발에 필요한 모든 요구사항(User<br>Story)을 우선순위에 따라 나열한 목록|
 |---|---|
@@ -317,6 +327,8 @@ XP(eXtreme Programming)는 수시로 발생하는 고객의 요구사항에 유�
 2400401<br><!-- End of picture text -->
 
 ### 21.3 핵심 **<mark>011</mark>** 현행 시스템 파악 
+Phần “21.3 핵심 **<mark>011</mark>** 현행 시스템 파악” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |단계|현행 시스템|내용|
 |---|---|---|
@@ -435,6 +447,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 요구사항은 소프트웨어가 어떤 문제를 해결하기 위해 제 공하는 서비스에 대한 설명과 정상적으로 운영되는데 필 요한 제약조건 등을 나타낸다. 
 
 ###### 요구사항의 유형 
+Phần “요구사항의 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |유형|내용|
 |---|---|
@@ -495,6 +509,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 ### 핵심 **<mark>017</mark>** 
 
 ###### 요구사항 명세 기법 
+Phần “요구사항 명세 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |구분|정형 명세 기법|비정형 명세 기법|
 |---|---|---|
@@ -620,6 +636,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 요구사항 분석을 위한 자동화 도구는 요구사항을 자동으 로 분석하고, 요구사항 분석 명세서를 기술하도록 개발된 도구를 의미한다. 
 
 ###### 종류 
+Phần “종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SADT(Structured Analysis and Design Technique) 
 
@@ -638,6 +656,8 @@ DBMS(DataBase Management System)는 사용자와 데 이터베이스 사이에�
 시험에 나오는 것만 공부한다! 시나공시리즈 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - PSL/PSA 
 
@@ -694,6 +714,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 - 시스템의 기능을 여러 개의 고유 모듈들로 분할하여 이 들 간의 인터페이스를 계층 구조로 표현한 것을 HIPO Chart라고 한다. 
 
 ###### HIPO Chart의 종류 
+Phần “HIPO Chart의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 가시적 도표(도식 목차) : 시스템의 전체적인 기능과 흐름 을 보여주는 계층(Tree) 구조도 
 
@@ -783,6 +805,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • 행위(Behavioral) 다이어그램의 종류 
+Phần “• 행위(Behavioral) 다이어그램의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |유스케이스<br>다이어그램<br>(Use Case<br>Diagram)|• 사용자의 요구를 분석하는 것으로 기능 모<br>델링 작업에 사용함<br>• 사용자(Actor)와 사용 사례(Use Case)로 구<br>성되며, 사용 사례 간에는 여러 형태의 관<br>계로 이루어짐|
 |---|---|
@@ -925,6 +949,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ###### 사용자 인터페이스(UI)의 특징 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 만족도에 가장 큰 영향을 미치는 중요한 요소 로, 소프트웨어 영역 중 변경이 가장 많이 발생한다. 
 
@@ -958,6 +984,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ###### 사용자 인터페이스의 구분 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CLI(Command Line Interface) : 명령과 출력이 텍스트 형 태로 이뤄지는 인터페이스 
 
@@ -990,6 +1018,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 2401106<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 입력을 검증할 수 있어야 한다. 
 
@@ -1020,6 +1050,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ### 20.8, 20.6 핵심 **<mark>032</mark>** 사용자 인터페이스의 기본 원칙 
 
 ### **<mark>032</mark>** 
+Phần “**<mark>032</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 직관성 : 누구나 쉽게 이해하고 사용할 수 있어야 한다. 
 
@@ -1039,6 +1071,8 @@ HIPO(Hierarchy Input Process Output)는 시스템의 분 석 및 설계나 문�
 ### **<mark>033</mark>** 
 
 ###### 사용자 인터페이스의 설계 지침 
+Phần “사용자 인터페이스의 설계 지침” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자 중심 : 사용자가 쉽게 이해하고 편리하게 사용할 수 있는 환경을 제공하며, 실사용자에 대한 이해가 바 탕이 되어야 한다. 
 
@@ -1075,6 +1109,8 @@ UI 설계 도구는 사용자의 요구사항에 맞게 UI의 화면 구 조나 
 - 스토리보드 툴 : 파워포인트, 키노트, 스케치, Axure 등 
 
 ###### 프로토타입(Prototype) 
+Phần “프로토타입(Prototype)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로토타입은 와이어프레임이나 스토리보드 등에 인터 랙션을 적용함으로써 실제 구현된 것처럼 테스트가 가 능한 동적인 형태의 모형이다. 
 
@@ -1142,6 +1178,8 @@ UI 설계 도구는 사용자의 요구사항에 맞게 UI의 화면 구 조나 
 ###### UI 요소 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 체크 박스(Check Box) : 여러 개의 선택 상황에서 1개 이 상의 값을 선택할 수 있는 버튼임 
 
@@ -1312,6 +1350,8 @@ Pipe1 Pipe2 Pipe3 SourceInput Filter1 Filter2 SinkInput
 ###### 21.8 
 
 ### 핵심 **<mark>045</mark>** 기타 패턴 
+Phần “핵심 **<mark>045</mark>** 기타 패턴” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 마스터 컴포넌트에서 슬레이브 컴포넌트로 작 
 
@@ -1360,6 +1400,8 @@ Pipe1 Pipe2 Pipe3 SourceInput Filter1 Filter2 SinkInput
 #### 정보처리기사 필기 핵심 요약 
 
 ###### • 객체의 특성 
+Phần “• 객체의 특성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 객체는 독립적으로 식별 가능한 이름을 가지고 있다. 
 
@@ -1633,6 +1675,8 @@ Pipe1 Pipe2 Pipe3 SourceInput Filter1 Filter2 SinkInput
 2402504<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 팬인은 어떤 모듈을 제어(호출)하는 모듈의 수를 나타 낸다. 
 
@@ -1745,6 +1789,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ### 22.3, 21.3, 20.9, 20.8 핵심 **<mark>061</mark>** 효과적인 모듈 설계 방안 
 
 ### **<mark>061</mark>** 
+Phần “**<mark>061</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 결합도는 줄이고 응집도는 높여서 모듈의 독립성과 재 사용성을 높인다. 
 
@@ -1857,6 +1903,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ###### 디자인 패턴 사용의 장·단점 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 범용적인 코딩 스타일로 인해 구조 파악이 용이하다. 
 
@@ -2054,6 +2102,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ### **<mark>069</mark>** 
 
 ###### 요구사항 검증 방법 
+Phần “요구사항 검증 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 요구사항 검토(Requirements Review) : 요구사항 명세서 의 오류 확인 및 표준 준수 여부 등의 결함 여부를 검토 담당자들이 수작업으로 분석하는 방법으로, 동료검토, 워크스루, 인스펙션 등이 있음 
 
@@ -2082,6 +2132,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 ###### 21.3 
 
 ### 핵심 **<mark>070</mark>** 시스템 연계 기술 
+Phần “핵심 **<mark>070</mark>** 시스템 연계 기술” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |DB Link|DB에서 제공하는 DB Link 객체를 이용하는 방식|
 |---|---|
@@ -2180,6 +2232,8 @@ N-S 차트는 논리의 기술에 중점을 둔 도형을 이용한 표현 방�
 #### 2 과목 
 
 ##### 소프트웨어 개발 
+Phần “소프트웨어 개발” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**073**<br>핵심<br>22.3, 21.8, 21.3|자료 구조의 분류|2403602|
 |---|---|---|
@@ -2397,6 +2451,8 @@ A
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### Inorder 운행법의 방문 순서 
+Phần “Inorder 운행법의 방문 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶ Inorder는 Left → Root → Right이므로 1A3이 된다. 
 
@@ -2424,6 +2480,8 @@ A<br>B C<br>D E F G<br>H I<br><!-- End of picture text -->
 - 방문 순서 : HDIBEAFCG 
 
 ###### Postorder 
+Phần “Postorder” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  Postorder는 Left → Right → Root이므로 13A가 된다. 
 
@@ -2443,14 +2501,20 @@ A<br>B C<br>D E F G<br>H I<br><!-- End of picture text -->
 ###### 21.5, 21.3, 20.9 핵심 
 
 ### **<mark>080</mark>** 수식의 표기법 
+Phần “**<mark>080</mark>** 수식의 표기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - + 
 
 ###### A 
+Phần “A” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - B 
 
 ###### Preorder 운행법의 방문 순서 
+Phần “Preorder 운행법의 방문 순서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ※  서브 트리를 하나의 노드로 생각할 수 있도록 그림 과 같이 서브트리 단위로 묶는다. Preorder, Inorder, Postorder 모두 공통으로 사용한다. 
 
@@ -2496,6 +2560,8 @@ Postfix나 Prefix는 스택을 이용하여 처리하므로 Infix는 Postfix나 
 **27** 
 
 #### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❸ 필요없는 괄호를 제거한다. 
 
@@ -2729,6 +2795,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 2403902<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제산법(Division) : 레코드 키(K)를 해시표(Hash Table) 의 크기보다 큰 수 중에서 가장 작은 소수(Prime, Q)로 나눈 나머지를 홈 주소로 삼는 방식, 즉 h(K) = K mod Q임 
 
@@ -2757,6 +2825,8 @@ Prefix는 Infix 표기법에서 연산자를 해당 피연산자 두 개 의 앞
 2404004<br><!-- End of picture text -->
 
 ### 핵심 **<mark>090</mark>** DBMS의 장·단점 
+Phần “핵심 **<mark>090</mark>** DBMS의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장점|•데이터의 논리적, 물리적 독립성이 보장됨<br>•데이터의 중복을 피할 수 있어 기억 공간이 절약됨<br>•저장된 자료를 공동으로 이용할 수 있음<br>•데이터의 일관성을 유지할 수 있음<br>•데이터의 무결성을 유지할 수 있음<br>•보안을 유지할 수 있음<br>•데이터를 표준화할 수 있음<br>•데이터를 통합하여 관리할 수 있음<br>•항상 최신의 데이터를 유지함<br>•데이터의 실시간 처리가 가능함|
 |---|---|
@@ -2839,6 +2909,8 @@ DBMS란 사용자와 데이터베이스 사이에서 사용자의 요구 에 따
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ###### • IPC의 대표 메소드 5가지 
+Phần “• IPC의 대표 메소드 5가지” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Shared<br>Memory|다수의 프로세스가 공유 가능한 메모리를 구성하<br>여 프로세스 간 통신을 수행|
 |---|---|
@@ -3054,6 +3126,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ###### 패키징 시 고려사항 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 시스템 환경, 즉 운영체제(OS), CPU, 메모리 등에 필요한 최소 환경을 정의한다. 
 
@@ -3141,6 +3215,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 2404803<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 클리어링 하우스(Clearing House) : 저작권에 대한 사용 권한, 라이선스 발급, 암호화된 키 관리, 사용량에 따른 결제 관리 등을 수행하는 곳 
 
@@ -3291,6 +3367,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ### 핵심 **<mark>110</mark>** 
 
 ###### 형상 관리의 중요성 
+Phần “형상 관리의 중요성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 지속적인 소프트웨어의 변경 사항을 체계적으로 추적 하고 통제할 수 있다. 
 
@@ -3320,6 +3398,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ###### 형상 관리 기능 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형상 식별 : 형상 관리 대상에 이름과 관리 번호를 부여 하고, 계층(Tree) 구조로 구분하여 수정 및 추적이 용이 하도록 하는 작업 
 
@@ -3379,6 +3459,8 @@ IPC는 모듈 간 통신 방식을 구현하기 위해 사용되는 대표 적�
 ###### 21.5, 20.8 
 
 ### 2405104 소프트웨어의 버전 등록 관련 핵심 **<mark>112</mark>** 주요 기능 
+Phần “2405104 소프트웨어의 버전 등록 관련 핵심 **<mark>112</mark>** 주요 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -3587,6 +3669,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 시험에<br>나오는 것만<br>공부한다!<br>시나공시리즈<br><!-- End of picture text -->
 
 ### 2405501 프로그램 실행 여부에 따른 핵심 **<mark>123</mark>** 테스트 
+Phần “2405501 프로그램 실행 여부에 따른 핵심 **<mark>123</mark>** 테스트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -3604,6 +3688,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 2405502<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |명세 기반<br>테스트|• 사용자의 요구사항에 대한 명세를 빠짐없이 테스트<br>케이스로 만들어 구현하고 있는지 확인하는 테스트<br>• 종류 : 동등 분할, 경계 값 분석 등|
 |---|---|
@@ -3640,6 +3726,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ###### 21.8 
 
 ### 핵심 **<mark>126</mark>** 목적에 따른 테스트 
+Phần “핵심 **<mark>126</mark>** 목적에 따른 테스트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |회복<br>(Recovery)<br>테스트|시스템에 여러 가지 결함을 주어 실패하도록 한<br>후 올바르게 복구되는지를 확인하는 테스트|
 |---|---|
@@ -3683,6 +3771,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ###### 화이트박스 테스트의 종류 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 대표적인 화이트박스 테스트 기법 
 
@@ -3717,6 +3807,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 
 
 ### 핵심 **<mark>129</mark>** 
+Phần “핵심 **<mark>129</mark>**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |문장 검증 기준<br>(Statement<br>Coverage)|소스 코드의 모든 구문이 한 번 이상 수행되도록<br>테스트 케이스 설계|
 |---|---|
@@ -3755,6 +3847,8 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 ###### 21.5, 21.3, 20.9, 20.8, 20.6 
 
 ### 핵심 **<mark>131</mark>** 블랙박스 테스트의 종류 
+Phần “핵심 **<mark>131</mark>** 블랙박스 테스트의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |동치 분할 검사<br>(Equivalence<br>Partitioning<br>Testing,<br>동치 클래스<br>분해)|• 입력 자료에 초점을 맞춰 테스트 케이스(동치<br>클래스)를 만들고 검사하는 방법으로 동등 분<br>할 기법이라고도 함<br>• 프로그램의 입력 조건에 타당한 입력 자료와<br>타당하지 않은 입력 자료의 개수를 균등하게<br>하여 테스트 케이스를 정하고, 해당 입력 자료<br>에 맞는 결과가 출력되는지 확인하는 기법|
 |---|---|
@@ -3997,4 +4091,3 @@ Gradle은 Groovy를 기반으로 한 오픈 소스 형태의 자동 화 도구�
 
 <!-- Start of picture text -->
 2406003<br><!-- End of picture text -->
-

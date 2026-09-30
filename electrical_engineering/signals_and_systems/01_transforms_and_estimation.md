@@ -40,6 +40,8 @@ Accelerometer cho phản hồi (response / 응답) nhanh nhưng drift khi tích 
 > **Chuyển mạch:** Từ **4. Worked lập luận (reasoning / 추론): sensor fusion**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - filter ổn định nhưng độ trễ (latency / 지연 시간) phá vòng điều khiển (control loop / 제어 루프);
 - timestamp không đồng bộ làm correlation sai;

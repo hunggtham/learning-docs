@@ -82,6 +82,8 @@ Không phải dịch vụ nào cũng hỗ trợ reload. `systemctl reload app` k
 
 ## `enable` khác `start`
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 systemctl is-active app
 systemctl is-enabled app
@@ -194,6 +196,4 @@ Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc
 
 ## Kết nối kiến thức
 
-Systemd tạo ra ranh giới vòng đời cho dịch vụ. [Nhật ký và khả năng quan sát](./logging_journal_observability.md) giải thích cách journal gắn sự kiện với đơn vị (unit / 단위). Các giới hạn tài nguyên và chỉ thị bảo mật của systemd cũng liên kết trực tiếp với các chương về bộ nhớ, tiến trình và gia cố hệ thống.
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [boot kernel initramfs](./boot_kernel_initramfs.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Systemd tạo ra ranh giới vòng đời cho dịch vụ. [Nhật ký và khả năng quan sát](./logging_journal_observability.md) giải thích cách journal gắn sự kiện với unit. Các giới hạn tài nguyên và chỉ thị bảo mật của systemd cũng liên kết trực tiếp với các chương về bộ nhớ, tiến trình và gia cố hệ thống.

@@ -49,6 +49,8 @@ Exit from the regime
 Sau mỗi trường hợp (case / 사례), viết một `mechanism map` và một `risk checklist` có thể áp dụng vào research hiện tại mà không giả định lịch sử sẽ lặp lại nguyên dạng.
 
 ## Liên kết
+Phần “Liên kết” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [04 — Macro drivers, rates, carry and sessions](../04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 - [05 — Execution, brokers, costs and risk](../05_EXECUTION_BROKERS_COSTS_AND_RISK.md)

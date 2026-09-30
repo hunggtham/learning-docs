@@ -741,6 +741,8 @@ Không nên dùng “probabilistic” như một từ thay thế chung cho “kh
 
 ## Chọn cấu trúc theo câu hỏi
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Câu hỏi | Cấu trúc thường đáng cân nhắc |
 |---|---|
 | Key có thể đã tồn tại? | Bloom/Cuckoo/XOR Filter |
@@ -817,5 +819,3 @@ Sau đó chạy nhiều seed/tải công việc (workload / 워크로드) để 
 Khi chọn sketch, hãy hỏi: **truy vấn thật sự là membership, frequency, heavy hitter, cardinality, similarity hay quantile; lỗi (error / 오류) được phép theo hướng nào; bộ nhớ (memory / 메모리) bao nhiêu; cập nhật (update / 업데이트) có delete không; cần merge giữa shard không; băm (hash / 해시) các giả định (assumptions / 가정들) có phù hợp threat mô hình (model / 모델) không; và downstream hệ thống (system / 시스템) sẽ dùng estimate như thế nào?**
 
 Xem tiếp: [Hash Tables](../01_linear_structures/04_hash_tables.md), [Amortized, Randomized & Probabilistic Thinking](./03_amortized_randomized_and_probabilistic_thinking.md), [Mathematical Toolkit](../00_foundations/04_mathematical_toolkit_for_dsa.md), [Bit Manipulation](./02_bit_manipulation_and_bitsets.md) và [DSA in Databases, Networks & Systems](../90_connections/01_dsa_in_databases_networks_and_systems.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

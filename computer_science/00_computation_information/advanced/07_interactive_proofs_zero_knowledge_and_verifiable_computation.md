@@ -434,6 +434,8 @@ Không log private witness chỉ để gỡ lỗi (debug / 디버그). Nếu c�
 **“Cryptographic proof thay thế monitoring.”** Không. hiện thực (implementation / 구현), key vòng đời (lifecycle / 생명주기), queueing và phiên bản (version / 버전) mismatch vẫn cần bằng chứng (evidence / 증거).
 
 ## 28. liên kết (connection / 연결) map
+Phần “28. liên kết (connection / 연결) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Complexity theory
@@ -462,6 +464,8 @@ Software systems
 ```
 
 ## 29. Checklist lập luận (reasoning / 추론)
+Phần “29. Checklist lập luận (reasoning / 추론)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Statement chính xác đang được chứng minh là gì?

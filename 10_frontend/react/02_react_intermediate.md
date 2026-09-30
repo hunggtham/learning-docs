@@ -71,7 +71,9 @@ Không truyền phụ thuộc (dependency / 의존성) array nghĩa tác động
 
 Trước Hooks, vòng đời (lifecycle / 생명주기) methods là cách chính để chạy lô-gic (logic / 논리) theo các giai đoạn của lớp (class / 클래스) thành phần (component / 컴포넌트). Khi bảo trì mã (code / 코드) cũ, đừng chỉ nhớ tên phương thức (method / 메서드); cần hiểu phương thức (method / 메서드) thuộc kết xuất (render / 렌더링) phase hay lần ghi nhận (commit / 커밋) phase và vì sao một số vòng đời (lifecycle / 생명주기) bị đánh dấu `UNSAFE_`.
 
-### Mount vòng đời (lifecycle / 생명주기)
+### Mount lifecycle
+Phần này nối mạch bài học với “Mount lifecycle”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class ChatRoom extends React.Component {
@@ -124,7 +126,9 @@ useEffect(() => {
 
 Đây là lý do không nên nghĩ `useEffect(..., [])` đơn giản là bản thay thế `componentDidMount`.
 
-### Cập nhật (update / 업데이트) vòng đời (lifecycle / 생명주기): `componentDidUpdate`
+### Update lifecycle: `componentDidUpdate`
+Phần này nối mạch bài học với “Update lifecycle: `componentDidUpdate`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 componentDidUpdate(prevProps) {
@@ -147,6 +151,8 @@ componentDidUpdate(prevProps) {
 Lớp (class / 클래스) nhà phát triển (developer / 개발자) phải tự so sánh previous/hiện tại (current / 현재) props. tác động (effect / 효과) phụ thuộc (dependency / 의존성) hiện đại biểu đạt intent đồng bộ theo `roomId` trực tiếp hơn.
 
 ### `shouldComponentUpdate`
+Phần này nối mạch bài học với “`shouldComponentUpdate`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 shouldComponentUpdate(
@@ -202,6 +208,8 @@ componentDidUpdate(
 Không có Hook một-một hoàn toàn tương đương mọi chi tiết vòng đời (lifecycle / 생명주기) này. Tùy mục tiêu có thể dùng `useLayoutEffect`, refs hoặc thay đổi mô hình dữ liệu (data model / 데이터 모델).
 
 ### `static getDerivedStateFromProps`
+Phần này nối mạch bài học với “`static getDerivedStateFromProps`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 static getDerivedStateFromProps(
@@ -371,6 +379,8 @@ function start() {
 Ref phù hợp với timer ID, DOM nút (node / 노드), instance thư viện, observer, mutable technical giá trị (value / 값). Không dùng ref thay trạng thái (state / 상태) nếu UI cần phản ánh giá trị đó.
 
 ## 7. DOM ref và imperative escape hatch
+Phần này nối mạch bài học với “7. DOM ref và imperative escape hatch”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function SearchBox() {
@@ -420,6 +430,8 @@ Không xóa `forwardRef` tùy tiện trong thư viện (library / 라이브러�
 Refs thay đổi nhiều qua lịch sử React.
 
 ### String refs — legacy và đã bị remove
+Phần này nối mạch bài học với “String refs — legacy và đã bị remove”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class Search extends React.Component {
@@ -436,6 +448,8 @@ class Search extends React.Component {
 React lưu nút (node / 노드) vào `this.refs.input`. String refs có hạn chế về đơn vị sở hữu (owner / 오너), static phân tích (analysis / 분석) và composition; bị deprecate từ React 16.3 và remove trong React 19.
 
 ### Callback refs
+Phần này nối mạch bài học với “Callback refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class Search extends React.Component {
@@ -458,6 +472,8 @@ class Search extends React.Component {
 Callback refs vẫn là API hợp lệ và rất linh hoạt.
 
 ### `React.createRef` — React 16.3+
+Phần này nối mạch bài học với “`React.createRef` — React 16.3+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class Search extends React.Component {
@@ -478,6 +494,8 @@ class Search extends React.Component {
 `createRef` thường dùng cho lớp (class / 클래스) thành phần (component / 컴포넌트); mỗi lần gọi tạo đối tượng (object / 객체) mới nên thường khởi tạo một lần.
 
 ### `useRef` — React 16.8+
+Phần này nối mạch bài học với “`useRef` — React 16.8+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function Search() {
@@ -496,6 +514,8 @@ function Search() {
 ```
 
 ### `forwardRef` — React 16.3+
+Phần này nối mạch bài học với “`forwardRef` — React 16.3+”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const MyInput = forwardRef(
@@ -840,7 +860,9 @@ const OnlineUser =
 
 HOC từng rất phổ biến trong Redux, routing và analytics. Nhược điểm thường gặp là wrapper hell, prop collision và phụ thuộc (dependency / 의존성) khó truy vết.
 
-### Kết xuất (render / 렌더링) Props
+### Render Props
+Phần này nối mạch bài học với “Render Props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <MousePosition>
@@ -856,6 +878,8 @@ HOC từng rất phổ biến trong Redux, routing và analytics. Nhược đi�
 Thành phần (component / 컴포넌트) sở hữu lô-gic (logic / 논리) nhưng giao quyền kết xuất (render / 렌더링) cho bên tiêu thụ (consumer / 소비자) qua hàm (function / 함수) prop.
 
 ### Custom Hook thay đổi điều gì?
+Phần này nối mạch bài học với “Custom Hook thay đổi điều gì?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function Tooltip() {
@@ -951,6 +975,8 @@ useLayoutEffect(() => {
 Chỉ dùng khi thật sự cần đo lường (measurement / 측정) hoặc tránh visual flicker. Nó có thể khối (block / 블록) paint; `useEffect` vẫn là mặc định.
 
 ## 16. Portals
+Phần này nối mạch bài học với “16. Portals”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 import { createPortal } from "react-dom";
@@ -994,6 +1020,8 @@ class ErrorBoundary extends React.Component {
 Lỗi (error / 오류) ranh giới (boundary / 경계) không thay `try/catch` cho sự kiện (event / 이벤트) handler hoặc async thao tác (operation / 연산) tự gọi.
 
 ## 18. `lazy` và Suspense cơ bản
+Phần này nối mạch bài học với “18. `lazy` và Suspense cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 import { lazy, Suspense } from "react";
@@ -1172,7 +1200,9 @@ src/
 
 Không đưa mã (code / 코드) vào `shared` quá sớm. Generalize sau khi nhu cầu tái sử dụng thật sự xuất hiện.
 
-## 25. Kiến trúc tính năng (feature / 기능) điển hình
+## 25. Kiến trúc feature điển hình
+Phần này nối mạch bài học với “25. Kiến trúc feature điển hình”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 UI component

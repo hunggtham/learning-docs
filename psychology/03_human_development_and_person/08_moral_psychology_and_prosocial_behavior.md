@@ -172,6 +172,8 @@ Xem [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connectio
 
 ## 21. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 intuition + emotion + reasoning
           +
@@ -189,5 +191,3 @@ Moral hành vi (behavior / 동작) là kết quả (outcome / 결과) của hệ
 ## Kết nối kiến thức
 
 Đọc cùng [[04_social_and_cultural_psychology]], [[10_group_dynamics_collective_behavior_and_cooperation]], [[15_power_status_hierarchy_and_inequality]], [[../00_foundations/04_ethics_and_critical_thinking]], [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]] và [[../06_applied/20_negotiation_conflict_and_joint_decision_making]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

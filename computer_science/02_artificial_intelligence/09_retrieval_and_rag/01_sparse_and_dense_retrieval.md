@@ -181,6 +181,8 @@ Conceptual điểm (point / 지점): sparse/dense không hoàn toàn đồng ngh
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Sparse → "có cùng words/identifiers không?"
 Dense  → "có cùng meaning pattern không?"
@@ -206,5 +208,3 @@ Raw score scales có thể incompatible; normalization/RRF cần xem xét.
 Dense retrieval dựa trực tiếp vào [Embeddings](../08_large_language_models/02_embeddings_and_semantic_space.md). Sparse retrieval dựa inverted chỉ mục (index / 인덱스)/IR. RAG tốt thường dùng multiple retrieval signals.
 
 Xem tiếp: [Embeddings for Retrieval](./02_embeddings_for_retrieval.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 information retrieval foundations](./00_information_retrieval_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

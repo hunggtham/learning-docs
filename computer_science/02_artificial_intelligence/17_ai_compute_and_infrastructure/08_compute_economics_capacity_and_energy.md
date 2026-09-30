@@ -210,6 +210,8 @@ Các đòn bẩy thường có hiệu quả cao theo thứ tự:
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Compute economics = lượng công việc hữu ích đã điều chỉnh theo chất lượng trên mỗi tài nguyên khan hiếm.
 ```

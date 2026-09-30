@@ -42,6 +42,8 @@ R3: 5회 연속 실패 시 계정 잠금
 R1 dẫn tới functional kiểm thử (test / 테스트). R2 dẫn tới hiệu năng (performance / 성능) kiểm thử (test / 테스트) với percentile/response-time criterion. R3 dẫn tới bảo mật (security / 보안)/business-rule kiểm thử (test / 테스트), đồng thời liên quan trạng thái (state / 상태) management và tính đồng thời (concurrency / 동시성).
 
 ### Liên kết (connection / 연결) cần nhớ
+Phần “Liên kết (connection / 연결) cần nhớ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Requirement
@@ -190,6 +192,8 @@ Locking, MVCC, log, checkpoint và khôi phục (recovery / 복구) là hiện t
 Hai thuật toán (algorithm / 알고리즘) đều O(n log n) có thể khác constant factor, bộ nhớ (memory / 메모리) locality và hành vi (behavior / 동작) trên đầu vào (input / 입력) cụ thể.
 
 ### Liên kết (connection / 연결)
+Phần “Liên kết (connection / 연결)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Algorithmic complexity
@@ -335,6 +339,8 @@ Một thay đổi (change / 변경) yêu cầu (request / 요청) không chỉ �
 Cấu hình (configuration / 구성) Management — 형상관리 — quản lý phiên bản (version / 버전)/baseline/thay đổi (change / 변경) của cấu hình (configuration / 구성) items. phiên bản (version / 버전) điều khiển (control / 제어) là một phần quan trọng nhưng không đồng nghĩa toàn bộ cấu hình (configuration / 구성) management.
 
 ### Chuỗi (chain / 사슬)
+Phần “Chuỗi (chain / 사슬)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Change request
@@ -385,6 +391,8 @@ Hai yêu cầu (request / 요청) cùng mua item cuối cùng.
 Các phương án có thể gồm pessimistic khóa (lock / 잠금), atomic conditional cập nhật (update / 업데이트), serializable giao dịch (transaction / 트랜잭션), optimistic phiên bản (version / 버전) check. Không có một answer duy nhất cho mọi kiến trúc (architecture / 아키텍처); đề thường cho ràng buộc (constraint / 제약조건) để chọn.
 
 ### Tự trả lời
+Phần “Tự trả lời” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - `SELECT stock` rồi `UPDATE stock = stock - 1` tách rời có race gì?
 - Atomic SQL `UPDATE ... WHERE stock > 0` thay đổi trọng yếu (critical / 중요) section như thế nào?
@@ -410,6 +418,8 @@ LIMIT 20;
 Composite chỉ mục (index / 인덱스) `(customer_id, created_at)` có thể phù hợp vì equality trên customer rồi phạm vi (range / 범위)/thứ tự (order / 순서) trên created thời gian (time / 시간). Nhưng quyết định cuối cùng phụ thuộc DBMS và tải công việc (workload / 워크로드).
 
 ### Tự trả lời
+Phần “Tự trả lời” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Tại sao băm (hash / 해시) chỉ mục (index / 인덱스) không tự nhiên cho phần phạm vi (range / 범위)/thứ tự (order / 순서)?
 - Normalization có giải quyết truy vấn (query / 쿼리) chậm này không?
@@ -422,6 +432,8 @@ Composite chỉ mục (index / 인덱스) `(customer_id, created_at)` có thể 
 Yêu cầu (requirement / 요구사항) cần tỷ lệ (rate / 비율) limit/lockout. thiết kế (design / 설계) phải tránh cho attacker khóa account người khác quá dễ. hiện thực (implementation / 구현) cần secure password hashing, constant-time comparison ở chỗ phù hợp, session/đơn vị từ (token / 토큰) handling. mạng (network / 네트워크) cần TLS. Monitoring cần phát hiện mẫu (pattern / 패턴) bất thường.
 
 ### Tự trả lời
+Phần “Tự trả lời” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Authentication khác authorization ở đâu trong scenario này?
 - TLS giải quyết phần nào và không giải quyết phần nào?
@@ -436,6 +448,8 @@ Job đọc toàn bộ tệp (file / 파일) 10 GB vào danh sách (list / 목록
 Giải pháp kiến trúc có thể là streaming/chunking. Đây là liên kết (connection / 연결) giữa thuật toán (algorithm / 알고리즘)/cấu trúc dữ liệu (data structure / 자료구조), bộ nhớ (memory / 메모리) management và ứng dụng (application / 애플리케이션) hiệu năng (performance / 성능).
 
 ### Tự trả lời
+Phần “Tự trả lời” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Big-O không gian (space / 공간) của cách tải (load / 로드) toàn bộ là gì theo đầu vào (input / 입력) kích thước (size / 크기)?
 - Streaming thay đổi peak bộ nhớ (memory / 메모리) ra sao?
@@ -450,6 +464,8 @@ Provider rename trường dữ liệu (field / 필드) `customerId` thành `user
 Đây là giao diện (interface / 인터페이스) tính tương thích (compatibility / 호환성), versioning và coupling bài toán (problem / 문제). tích hợp (integration / 통합) kiến trúc (architecture / 아키텍처) có thể giảm direct phụ thuộc (dependency / 의존성), nhưng lược đồ (schema / 스키마) evolution vẫn cần tính tương thích (compatibility / 호환성) chiến lược (strategy / 전략), bên tiêu thụ (consumer / 소비자) testing và thay đổi (change / 변경) management.
 
 ### Tự trả lời
+Phần “Tự trả lời” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Adapter có thể dùng ở đâu?
 - phiên bản (version / 버전) điều khiển (control / 제어) có đủ để ngăn breaking thay đổi (change / 변경) môi trường vận hành (production / 운영 환경) không?
@@ -464,6 +480,8 @@ Nếu hệ thống có replica nhưng failover mất 20 phút, availability có 
 RTO liên quan thời gian phục hồi. RPO liên quan mức dữ liệu (data / 데이터) mất mát (loss / 손실). Redundancy, replication, backup và DR phải được thiết kế theo mục tiêu (objective / 목표), không phải chỉ “có nhiều máy chủ (server / 서버)”.
 
 ### Tự trả lời
+Phần “Tự trả lời” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Async replication ảnh hưởng RPO thế nào?
 - Backup hàng đêm có thể đáp ứng RPO 5 phút không?
@@ -478,6 +496,8 @@ Giao dịch (transaction / 트랜잭션) T1 khóa (lock / 잠금) `order` rồi 
 Đây là circular wait. Có thể giảm bằng consistent khóa (lock / 잠금) thứ tự (ordering / 순서), hết thời gian chờ (timeout / 타임아웃)/deadlock detection hoặc giao dịch (transaction / 트랜잭션) redesign.
 
 ### Tự trả lời
+Phần “Tự trả lời” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Vì sao “khóa (lock / 잠금) nhiều hơn” không đồng nghĩa an toàn hơn?
 - Deadlock khác starvation ở đâu?
@@ -486,6 +506,8 @@ Giao dịch (transaction / 트랜잭션) T1 khóa (lock / 잠금) `order` rồi 
 ---
 
 # 14. liên kết (connection / 연결) ma trận (matrix / 행렬) để tự kiểm tra
+Phần “14. liên kết (connection / 연결) ma trận (matrix / 행렬) để tự kiểm tra” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Nếu gặp khái niệm này | Hãy nối ngay sang |
 |---|---|

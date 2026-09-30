@@ -209,7 +209,9 @@ Nếu use trường hợp (case / 사례) chỉ là click/toggle/scroll chuẩn,
 
 `pointerInput` nên dùng khi cần gesture custom thực sự.
 
-## 13. Gesture detector có vòng đời (lifecycle / 생명주기)
+## 13. Gesture detector có lifecycle
+Phần này nối mạch Android vừa học với “13. Gesture detector có lifecycle”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 Modifier.pointerInput(itemId) {
@@ -244,7 +246,9 @@ Văn bản (text / 텍스트) trường dữ liệu (field / 필드) đầu vào
 
 Có thể dùng `FocusRequester` cho luồng (flow / 흐름) có người dùng (user / 사용자) intent rõ, nhưng auto-focus quá mạnh có thể gây keyboard bật bất ngờ khi screen mở.
 
-## 16. IME hành động (action / 동작)
+## 16. IME action
+Phần này nối mạch Android vừa học với “16. IME action”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 TextField(
@@ -326,6 +330,8 @@ Compose tạo ngữ nghĩa (semantics / 의미론) cây (tree / 트리) song son
 Khả năng tiếp cận (accessibility / 접근성) vì vậy không được “thêm sau” chỉ bằng content description. ngữ nghĩa (semantic / 의미적) role, trạng thái (state / 상태), hành động (action / 동작), traversal và grouping đều quan trọng.
 
 ## 24. Icon cần mô tả khi mang ý nghĩa
+Phần này nối mạch Android vừa học với “24. Icon cần mô tả khi mang ý nghĩa”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 Icon(

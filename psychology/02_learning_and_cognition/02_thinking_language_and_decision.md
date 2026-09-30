@@ -186,6 +186,8 @@ Xem [[10_cognitive_offloading_external_memory_and_extended_cognition]] và [[../
 
 ## 20. mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Attention
    ↓
@@ -207,5 +209,3 @@ Lập luận (reasoning / 추론) tốt không phải cố loại bỏ mọi heu
 ## Kết nối kiến thức
 
 Đọc cùng [[04_cognitive_biases_and_metacognition]], [[05_language_social_cognition_and_theory_of_mind]], [[06_expertise_creativity_and_problem_solving]], [[08_decision_under_risk_uncertainty_and_ambiguity]], [[../00_foundations/08_causal_inference_and_psychological_evidence]] và [[../06_applied/18_financial_psychology_and_personal_decision_making]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 learning and conditioning](./00_learning_and_conditioning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

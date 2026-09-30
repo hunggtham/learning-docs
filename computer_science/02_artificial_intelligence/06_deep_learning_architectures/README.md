@@ -9,6 +9,8 @@ Lý do là **inductive độ lệch (bias / 편향) + computational cấu trúc 
 
 ## Phụ thuộc (dependency / 의존성) map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     NN[05 Neural Networks foundations] --> CNN[00 CNN]
@@ -55,6 +57,8 @@ flowchart TD
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 CNN         → exploit spatial locality + weight sharing
 RNN         → compress ordered history into recurrent state
@@ -80,6 +84,4 @@ Sau tầng (layer / 계층) này, kiến thức tách theo **modality và founda
 - `12_computer_vision/`: classification/detection/segmentation/ViT.
 - `13_speech_audio_and_multimodal/`: audio/speech + cross-modal biểu diễn (representation / 표현).
 
-Attention/Transformer không cần giải thích lại từ đầu ở các folder sau; chúng sẽ được reuse và mở rộng theo ngữ cảnh (context / 맥락).
-
-> **Bàn giao:** Sau **Chuyển tiếp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Attention/Transformer không cần giải thích lại từ đầu ở các folder sau; chúng sẽ được reuse và mở rộng theo context.

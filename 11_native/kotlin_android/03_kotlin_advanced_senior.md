@@ -92,6 +92,8 @@ Generated mã (code / 코드) là một phần bản dựng (build / 빌드) ki�
 
 ## 6.1 Suspension không đồng nghĩa background
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```kotlin
 suspend fun parseHugeJson(text: String): Model {
     return parser.parse(text) // vẫn CPU/blocking trên thread hiện tại nếu parser sync
@@ -144,6 +146,8 @@ Với `coroutineScope`, child thất bại (failure / 실패) thường cancel s
 `launch` và `async` khác mục đích: `launch` cho fire-and-join side tác động (effect / 효과) trong phạm vi (scope / 범위); `async` tạo giá trị (value / 값) cần `await`. Dùng `async` mà không `await` thường là smell.
 
 ## 7.1 Concurrent start không phải always faster
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```kotlin
 coroutineScope {
@@ -263,6 +267,8 @@ Không ép mọi screen thành sealed trạng thái (state / 상태) nếu UX c�
 
 ## 9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt
 
+Khối minh họa dưới đây đặt command, state và event vào cùng một state machine. Hãy theo dõi ai tạo tín hiệu, ai sở hữu state và event nào được phát ra để không trộn lẫn yêu cầu, trạng thái hiện tại và lịch sử đã xảy ra.
+
 ```text
 Command
 = yêu cầu làm việc: Refresh, Submit, Retry
@@ -347,6 +353,8 @@ Key phải biểu diễn định danh (identity / 식별자) bền vững, khôn
 
 ## 10.2 `remember` thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```kotlin
 val state = remember(key) { expensiveInitialization(key) }
 ```
@@ -417,6 +425,8 @@ Key sai có thể khiến text-field trạng thái (state / 상태)/animation c�
 
 <!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
 ## 10.2 tuyến (route / 경로) vs screen
+
+Khối minh họa dưới đây tách route khỏi screen và đặt ViewModel ở đúng state owner. Hãy theo dõi data flow từ lifecycle-aware state tới UI event để biết navigation boundary không biến thành business logic.
 
 ```kotlin
 @Composable
@@ -663,7 +673,9 @@ Mobile client là môi trường người dùng kiểm soát. Attacker có thể
 
 ## 21.1 Trust boundary
 
-```văn bản (text / 텍스트)
+Khối minh họa dưới đây làm rõ trust boundary giữa client và hệ thống có quyền. Hãy phân biệt điều gì chỉ giúp UX, điều gì phải được server kiểm chứng và giới hạn nào không thể giao cho client.
+
+```text
 client-side role check
 = UX tối ưu hóa (optimization / 최적화)
 
@@ -887,8 +899,10 @@ Configuration change recreate Activity/Fragment instance nhưng ViewModel có th
 
 ## 13.1 State placement theo khả năng phục hồi
 
-```văn bản (text / 텍스트)
-render-local ephemeral trạng thái (state / 상태)
+Khối minh họa dưới đây so sánh các vị trí lưu state theo khả năng phục hồi. Hãy đọc từ state tạm đến dữ liệu bền vững để biết boundary nào phù hợp với từng loại mất mát.
+
+```text
+render-local ephemeral state
 → remember
 
 small UI trạng thái (state / 상태) cần survive recreation

@@ -219,6 +219,8 @@ Chỉ khi xác định được kênh truyền dẫn mới có thể đưa tác 
 
 ### Kịch bản tiêu cực (bear scenario)
 
+Kịch bản tiêu cực kiểm tra rủi ro nhu cầu AI chậm lại, yield thấp hoặc công suất mới tạo dư cung. Mỗi yếu tố phải được nối tới ASP, margin, capex và cash flow.
+
 ```text
 Tăng trưởng hạ tầng AI chậm lại
 Nguồn cung HBM tăng nhanh
@@ -240,6 +242,8 @@ ASP bình quân ↓
 ```
 
 ### Kịch bản lợi thế cấu trúc
+
+Kịch bản này hỏi lợi thế HBM và năng lực đóng gói có đủ bền để vượt một chu kỳ hay không. Hãy phân biệt moat công nghệ với tailwind nhu cầu tạm thời.
 
 ```text
 Lượng bộ nhớ AI trên mỗi hệ thống tiếp tục tăng
@@ -281,5 +285,3 @@ Tạo bảng năm năm gồm doanh thu, biên lợi nhuận hoạt động, CFO,
 ## Liên kết
 
 Đọc cùng [14_semiconductors_electronics_display](../14_semiconductors_electronics_display.md), [21_economy_to_company_transmission](../21_economy_to_company_transmission.md), [36_credit_ratings_bonds_default_and_restructuring](../36_credit_ratings_bonds_default_and_restructuring.md) và [39_practical_company_analysis_workbook_and_case_patterns](../39_practical_company_analysis_workbook_and_case_patterns.md).
-
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

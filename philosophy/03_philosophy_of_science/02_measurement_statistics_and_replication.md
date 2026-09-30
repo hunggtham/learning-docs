@@ -5,6 +5,8 @@
 Đo lường (measurement / 측정) không phải cửa sổ trong suốt vào reality. Construct phải được operationalize; instrument có resolution, calibration, noise và độ lệch (bias / 편향); observed score thường là tín hiệu (signal / 신호) cộng lỗi (error / 오류). Vì vậy, một kết quả có ý nghĩa thống kê không tự cho biết tác động (effect / 효과) lớn, ổn định hay quan trọng về thực tế.
 
 ## Từ dữ liệu (data / 데이터) đến claim
+Phần “Từ dữ liệu (data / 데이터) đến claim” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 construct → operational measure → sampling/design

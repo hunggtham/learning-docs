@@ -442,6 +442,8 @@ Không cần xây lại toàn bộ thesis nếu chỉ một chỉ tiêu phụ th
 
 ## 28. Phân biệt thesis drift và thesis evolution
 
+Khi dữ liệu mới xuất hiện, luận điểm có thể được cập nhật hoặc bị thay thế. Phần này đặt tiêu chí để phân biệt việc sửa giả định có căn cứ với việc đổi câu chuyện chỉ để tránh thừa nhận thesis ban đầu sai.
+
 **Thesis evolution:** giả định được cập nhật hợp lý khi dữ liệu mới xuất hiện.
 
 **Thesis drift:** người đầu tư thay lý do nắm giữ để tránh thừa nhận luận điểm ban đầu sai.
@@ -468,6 +470,8 @@ Nếu làm được bài này mà không dựa vào một bội số duy nhất,
 
 ## 30. Liên kết đọc tiếp
 
+Đây là điểm bàn giao từ mô hình tích hợp sang các nguồn canonical: báo cáo tài chính, business quality, valuation, earnings quality và governance. Chọn link theo phần còn yếu rồi quay lại lab để cập nhật mô hình và thesis.
+
 - [Báo cáo tài chính và kế toán](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md)
 - [Chất lượng doanh nghiệp và lợi thế cạnh tranh](./02_BUSINESS_QUALITY_MOAT_AND_INDUSTRY.md)
 - [Định giá DCF và bội số](./03_VALUATION_DCF_AND_MULTIPLES.md)
@@ -492,5 +496,3 @@ Mô hình kinh doanh
 ```
 
 Một mô hình chỉ có giá trị khi nó giúp người đọc hiểu **vì sao** kết quả thay đổi và **điều gì phải xảy ra để luận điểm sai**.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

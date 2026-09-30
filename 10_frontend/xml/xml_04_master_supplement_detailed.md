@@ -889,6 +889,8 @@ Canonicalization có thứ tự (ordering / 순서) quy tắc (rule / 규칙) ri
 ---
 
 ## 56. Empty element lexical form
+Phần này nối mạch bài học với “56. Empty element lexical form”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <a/>

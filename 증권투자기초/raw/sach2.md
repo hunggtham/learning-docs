@@ -7,6 +7,8 @@ KOREA BANKING INSTITUTE
 | Al E1 EA | I8! ST #4 | 
 
 ###### Bas 
+Phần “Bas” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - + 809m 49294 Sah 
 
@@ -17,6 +19,8 @@ KOREA BANKING INSTITUTE
 - + Ê) HISAIO|B|ClStm! 2915t# Ae 
 
 ###### SHEA IS ZI|2z1 
+Phần “SHEA IS ZI|2z1” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |anwe|198914)SiAEtới|
 |---|---|
@@ -468,6 +472,8 @@ Cả I-2) ä421I9| £2L
 #†ol#t Ael7t vì 321 29] AA] 3429 # ASE AS Ps, ME SBS đelöl= BH SAUL # ASHE 2o)d. ee] 32} 29] AEE #8 ABO] WEY 1 mệm]|8o| gi 85v]. †z}2] B-Fo]gt 3 9z: 3} $e] ES] mệH|8-3 Wc. BSS 3412:#2)29]2) 24lEvl, ol] I BS 9| HAYS Awe co} Sa} đu], 
 
 ###### () B89] HAY 
+Phần “() B89] HAY” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - (-38123#2I'Ä(European term)3} "]3ÿ413E2|$|(American term) #82] HAT] Se] LPH het} zIe† Sse AS HA) 9]) 1 USS = 13009 
 
@@ -833,6 +839,8 @@ OAS Bs: MES APSO] SH + MEAS BHF Bch. S,
 OFUA HSA: IFS] AES HAD + UE AOE vise] 52H† 4 SAD eho] 4)48lo† eh 
 
 ###### () ANB] #I7ES23 
+Phần “() ANB] #I7ES23” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - @ FY AS MAS d: OH, EU, SH, 918, SIU], Saba 37} 5 3t Ut od AS SO] APIS ASS AGS AA + VES AAA oF Sich. 
 
@@ -875,6 +883,8 @@ AQ] AVBAS 2424181218810] VAL + Wis SA) BEM wpe} 1371] 4, 29919] Selo: 229] Vash,
 EUS 2 PAS AY, AVP ES ZIsläs AE oS 2191217} BI) SHE VARS PHOS 248 SH. r2} 29 7)9)59] 23-2-E dlfe|2} 7} BE BBS 9n 9)7] HM SA] 9)2}23⁄48 uel + 3191 #4 4-320] 22] UE, SAV] f7} AANA SYR dịte|2}?} 1E 238 tị BPOPSE 4 97] to] #5} AAS nể SAHA TBS MOA. ARS ole #|2}eZlo| vị AA] Lato} = Aaa Aas, AA ABS oP) K Slat HS SAS 377} 3⁄85} Al Ch. nz†2| 71919) At 71425 BUS S FJ} 31oiet Bspo] we] dị3| BH Me Seo] Bz 
 
 ###### 7.2.2. đ8/8.AI^B 
+Phần “7.2.2. đ8/8.AI^B” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 *#dslz UM AAT AetolFo] Fal BP 719i Aa] 345:o] tị FMS SAU + We BYBRAAM] HH F]0] Yolk girl. 4, 2111⁄432}7} 
 
@@ -1077,6 +1087,8 @@ ALS 32] #5244] 0I#-E2409 FR #82H0old tả old Oo] BALE nữ 2 WE AS Pos wha, "1?
 rL89| AMES 52H16 8 Male 2 HO] 2l4HE-9: n8-52449] spe 
 
 ###### St 
+Phần “St” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - (03149497) vo] AVY Row os, Poss we 203249, 2 BGS 22L 
 
@@ -1089,6 +1101,8 @@ rL89| AMES 52H16 8 Male 2 HO] 2l4HE-9: n8-52449] spe
 Ide] Sol 28a SIS ofeHo] 2I⁄4215+9 sale] Bshsh ec, K-IFRS9]2lE AGS] ABTS ENS O78} #41244 APIS 
 
 ###### ®#521d 
+Phần “®#521d” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ) 98 9! 8813 He: Bae AE AST + SIE Bast E†SDIHd FH G9] SOGSUS Tele, Ba 2H82 AS ga] wy 3A ole} SASHES SES 8t 
 
@@ -1107,6 +1121,8 @@ iil) 7IEHE+B2HE EES 872701 ESS Dee R) A1012: AALS $8. YESS] Teel WOH SoH 3192) U
 58 
 
 ###### @ 4-64 
+Phần “@ 4-64” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - !##-5212kÐ 217211191 52e] 1279 e]#o] ]2=>|E 2†4†o|t†. 
 
@@ -1159,6 +1175,8 @@ OFS HVE, AVS, ITE AMI, 915588 Sol si OSI SIMS MH AS SS WHF #4 Sal 2919] #
 © 7IEHEAt FS, UPS, 84+] So] seh 
 
 ###### (2)#lS* 
+Phần “(2)#lS*” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ® #84) UA, As, Als AA, AHS 69] 12718 9# 9] ZslE #29] ASS BA 
 
@@ -1302,6 +1320,8 @@ BREVAAS 913 714 SA 71ehol $9), wget Bw
 APRTAA đai 2J2]]it9| ABATE YEH Bet ob yeh, 7l9ie| oleh Wet BEI PUSS S| oo] LG AWS 2IlðSHE 1.149|t 
 
 ###### (2) BREVIS ETA 
+Phần “(2) BREVIS ETA” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |7IS##e9J2I4IA||8285829)14!4|||
 |---|---|---|---|
@@ -1328,6 +1348,8 @@ APRTAA đai 2J2]]it9| ABATE YEH Bet ob yeh, 7l9ie| oleh Wet BEI PUSS S| oo] LG A
 ZF#WlSEE 2429] 2719} 1 989] BRE 3515 ASehS ATRIA A ARES +35! WE ANE, ABU, ABA, EE EY TAA, 51919] °lz(34€8)9 so] Wt #3449] 2515 ase. 
 
 ###### ()2‡#5#9l 84 
+Phần “()2‡#5#9l 84” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - OABISHE FLO] ASUS] HT RA JOH 280] Se. 
 
@@ -1501,6 +1523,8 @@ APPRRENES E40 #2Hàe| ES YEHH FBO] 7h AS Me ARO.
 XI?IIE0|918 =  x100<br>e012<br>APIA<br><!-- End of picture text -->
 
 ###### 2]2#&o]9l#r CS} Lo] BA} 7Hz5†rL 
+Phần “2]2#&o]9l#r CS} Lo] BA} 7Hz5†rL” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |apIntel<br>=|20/9}<br>3<br>oy|eH<br> <br> <br>BAY|Bit<br>x<br>APIME<br>=DHESOHOIOIExSARNIAxl2|
 |---|---|---|---|
@@ -2167,6 +2191,8 @@ a BAS) 718 7S BA Bel FHS AAR WSS Pala a A8 ¬ SARIS PEO] Ach OBE 4719] #2196 918
 108 
 
 ###### 2.1.2, XIX|£lx‡ MSA] O10] 
+Phần “2.1.2, XIX|£lx‡ MSA] O10]” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - © 8A F719] SHAS 4⁄85 WAS FHSS FALSE. 
 
@@ -2207,6 +2233,8 @@ FALE F719] #2I9ell We} PY Sa} ES STE 397} Se] te} eh Ol] 477} 1858 AAW AAS YSU t
 3} AA, Aza DAT} TAS ole] SOM Fy} WIR BHA SAS IAB BEL] HATS BAUS 2 CI. -1#|1! SAE BSR), 5Ì2‡2-A|S -1zl7)% set ASHAIAE 214 
 
 ###### 2.2.2. #NIHI9| S& 
+Phần “2.2.2. #NIHI9| S&” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - FATS Bes Sa FE PSs} Pe SIS leh 
 
@@ -2444,6 +2472,8 @@ Al 7S] 95988446 72h] whe} g7]-671287)0)5288419 5 ese. HORTA SASL oH YH [Zo] beh 
 126 
 
 ###### ^9| BGS PATE WHR. 
+Phần “^9| BGS PATE WHR.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 9® F719] Wile] 47} > 4] > #71 > 371915188449) 21991 39:2 
 
@@ -2972,6 +3002,8 @@ OFA ASHE MBH AA] SIME BF A) ISS aM
 ANS FA EM A 165, 
 
 ###### aH Hee Bo, 
+Phần “aH Hee Bo,” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 3 FP} ASUS HOA] APB] WPF Bowl wig]S 2L5ð]r Sep See webct 
 
@@ -3761,6 +3793,8 @@ PBR =
 9989  091488<br>me<br>=<br>ele  ROE<br>uy<br><!-- End of picture text -->
 
 ###### PBR AHO SS FE QOS 
+Phần “PBR AHO SS FE QOS” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - © 9l' #410] APBRO} 5171 SISNA BIA 71S] BAKO %©2jo‡ tr ® 2IPBRo] 57] HAHA 7I9l9| APM] %92jo} eh. S, 71212} 3189] SeohoF WHE 2e 
 
@@ -3802,6 +3836,8 @@ the 219 71919 #7Hš #7] Be Blo] Fo} PSR ES HOV Et.
 ###### 6. 718A EAI 71% 
 
 ###### )7143 BA 3| 
+Phần “)7143 BA 3|” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - GA 3216: $749] OMAR wove + YES ole] ALITY a Xi# v)9†S†el VAHL, oF 3#2)ö†el AH Z2Hf ozs SHEA] =1 B40] St} 
 
@@ -3838,10 +3874,14 @@ WA, 485} BO] VES “1 WY AHESE 299 289] Balle UehH + EHO Oe AA 4 3199), EMO] YEE
 ###### 7. AIX ME 
 
 ###### 1) Aaa} 213145] 7 
+Phần “1) Aaa} 213145] 7” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - eA BAS 7# PS BAA wel 7S ARE ARE FAS OBA Balelches BHO] eh. ole AR FAS 7A BAS 3⁄49] Deh EE WIE # Ve Vo] OY VAIL BSS AF Basha Ela, o|d] Z/H#2l9l 9| AR} ARS o]2 8# Aa|Alole} a1, Was} 11838 9$: Ae aH se tt 
 
 ###### 2212415 AHA] SI] 
+Phần “2212415 AHA] SI]” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - © WA F719] SHAS AGO nJn]2l#F3 Hels} dị ABR, 
 
@@ -4343,6 +4383,8 @@ ABS #tiz† o]2‡9] JR] 2†49] 3512) Was 7S Aol. 7l$t SUN AAS] SALE Moto] 4£7
 AVS FS] BOSE Se] P1Saoleh. wep) AS eels AVE oJs|ol%: Y7ALS SAVoF sat, ÿ-3⁄89] Yo}slojof IE. GA) 49] SAVE 3922246) S Ale 2371800) Bsa] HT Selle FA 9| 8127} OVA, BANS #2HE 0g! MOH QW] AA] BAPE] Solo} AVLYo] Golslo} 2l:4239| Ao] 7Hzö†eL ole} #-do|2F#do| SAP] 94 Mole YAO Bas] Vase 26 Ae 710] 37]6)7] 4.9. 3 +t 
 
 ###### 1.4. S2 MBO KO = SH] Bast 
+Phần “1.4. S2 MBO KO = SH] Bast” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ABH FAS WATS] OW 4888 St ABA] +do|zle F 
 
@@ -4580,6 +4622,8 @@ ARS 3979 + VE ATS wool, HY] BRL 7l#Z2P? eJ39lslet 3S, #218989) "|4#87199] ARAL e
 IQA BAS 7s39] 3E AYO] UMS BP AMAA] EL AS 9ls] 21871491 4⁄89] oF. 5, #2) +9] S7 Ago} Sel PWS #219] AAAI 5}2‡zI =lEvl, 1M ARTAS APato] ABA} AWA] ©] YS MSM BQ We AW. AWS 4/89! 2 We BRE HAs} đt. O48 A 21871213 Bhs 8712198 ASS PYRE BP 
 
 ###### @ PISS ZW 42 
+Phần “@ PISS ZW 42” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - @ AWIAS Be #972495 Fa Blo] AOE AS + Me SUS BYHE 42 
 
@@ -4725,6 +4769,8 @@ S, BA AW 21874] FALE ADRS 2291 72491 Mele] 7} Aol #|8] 9} 9% B= ATO 2I37Hd 2†s
 4IZ912192)3]0 2IAl249l2] 914 70] 23H Fo] 9391 AG 2PP2)9 ø: 9i3J5)4)6] ASS oleh + 9lE Bel, S 23514 Aol 324 Sato HOW +p YE WEIS #olgl HAo|ch, AAPHOHe qe} 4129122119) 3/2} Bo} EAS SEC. 
 
 ###### 4.2.2. RCH Be] 0101| St BE 
+Phần “4.2.2. RCH Be] 0101| St BE” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - O Bey 41912090248 AFF] APIS WES 412412160 22 1iA)slo| #telstol YEP} Hse ASMA AHO 
 
@@ -4749,6 +4795,8 @@ CE II~7) MBAS LOLS SALAS] Hat
 
 
 #4 241 
+Phần “4 241” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |TE|BHAA|#lZ9l2+7EAII|
 |---|---|---|
@@ -5662,6 +5710,8 @@ ABA] BAVA n|le| oh 7l4†o] ALA 9l2E8, # nIdltgtol2+&# #E4l5 90 Ge 219.3 Thal Sp
 9# Bol, HAs} 2©: AO] FAS Fah 32hdo] AST veya 
 
 ###### OSS Fa BA 
+Phần “OSS Fa BA” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 * SAO: Sia pI2| Š†91ZI0] Z†#ILỊ. + EAE 2: IM 2t p!2| Solaiol| EA4äEn 2 S AtSS šI2-8†0] CHA] 163 gt7| AAO AHSEAPSEC. 
 
@@ -5953,6 +6003,8 @@ E II-16)9] YR BF Wt ANASS 9]2E8 W so] ng AWA] t1 BRS WV SIS AL ISS 9 4 WO.
 ###### X1 S82 ARGAVIAS DAS 8a7† 81) 
 
 #9l8 BSH TE AWA BSS v17} ABIES 7140. 54) WA AA BEM AVR Ao] et v12} Aas he} 221449 # Z7. Oe #249249 s MANS SOT] AEN] 825 Helse, AE 9| ASS 1 SASS APIS WIRLSAN 3 tị AS71Z10] YF 41 213 BRE BA] Alas Leh. 
+Phần “9l8 BSH TE AWA BSS v17} ABIES 7140. 54) WA AA BEM AVR Ao] et v12} Aas he} 221449 # Z7. Oe #249249 s MANS SOT] AEN] 825 Helse, AE 9| ASS 1 SASS APIS WIRLSAN 3 tị AS71Z10] YF 41 213 BRE BA] Alas Leh.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - @ Wt 3⁄39 GSU 3719| MAS 22498 UT 3471252350] Bet lS 549 s We AW BSS] 4 SAW 142 SS 
 
@@ -6767,10 +6819,14 @@ BWA AL diệt AAs] SL 3s Besa "AV Plz Ase FES] OFA}, gz|9| yy Apo] Yl BSS AAA #d
 ###### 2.3. MA POHOHALS 
 
 ###### 2.3.1. 80I2IPI 
+Phần “2.3.1. 80I2IPI” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 2)9)2islE 5-2)422)48 Bole] o|ZolzlE 28 tan 
 
 ###### (2149| ## 
+Phần “(2149| ##” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - O WR: Uso] 43288 BE SSO] US 2149 VE AI BOR, Ba, $24) eel AB, Sele aaa So] vIlsl2] 218k AI AOA] AO] WOM, MSF LY 9]d A 919 a7 3d #2i£ 7HsSIrl. UAVS FAA] IP yA. = ot OVO] 7}2‡22:9-5| AZo xe} po|7} oO] FO}. 
 
@@ -6785,6 +6841,8 @@ x28 FEA 349
 - @ 49)2)112)2†: Wt FAS] FLW SA S71 ASA S5 5 AS A ð]7} All FALE MU SSAA SIADS BIS Hl] 3] sto} 748 52+ SA AVON. AUS Palos wet AAAS SLY BE 8 212|2E5 SAH AMAA We FES 3 + et. 21122182 AMS FIFI, ALEASEA, AAA, A EABEAD 6o] 310. SAA MMS AHS OE n9) SA OES š† 7] Heol AALS 7122S SAR 489] 3g Aol] eto} Aes F YOM, SYA] BHM ABS BHAA 21419 + 311: 
 
 ###### (2) GREASE 
+Phần “(2) GREASE” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - (2181412218: 714149] AP Sa, Az, Spal, 282C), 21 9121224I(BW), mệ12}2J(ŒB), 9l AMAA S 8E ABO] HSA dort. 
 
@@ -6807,6 +6865,8 @@ O B73) moh EFAS]
 ###### O TAAL: 93 
 
 ###### ® 34 
+Phần “® 34” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||+|t8|
 |---|---|---|
@@ -6830,6 +6890,8 @@ EA IAS SSAA] BP 12S) A SALE #1 eJs}s] Azle} asec.
 ###### @ Aas A 
 
 ###### - AS SSA 
+Phần “- AS SSA” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - -ASHAAEAD FASS) 217A 
 
@@ -6838,6 +6900,8 @@ EA IAS SSAA] BP 12S) A SALE #1 eJs}s] Azle} asec.
 - BABES FHSAA, USA, SETA, WATS) EAE AA 
 
 ###### @ moa 
+Phần “@ moa” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |OHOHARHALZE|SHUTS998MStDOB09:00%/E|15:3071A]|
 |---|---|
@@ -7019,6 +7083,8 @@ M2ã! 2X 3B
 7% 2 Repo2l3l9† BAAS WIAA, S771, BV, SAPAMS 7 ALE Tg§to s2 WPS] ALBA Reports 8 + WES AWS HOSEL ICH. 9†-#z] RepoZltls† WAY HEPA] AWAY 32)9)1-E 2421 #+82P8#]9† SETS Mell 1S AA SAL 314. 
 
 ###### 2.4.9, (43124 Repo7t2H 
+Phần “2.4.9, (43124 Repo7t2H” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SALAS TVG H5) Repo} BAI HG-S 89†oidl traä† eh (0 #49723 SA, 2INAI, SEA, 383], BLAME 7H BAIS AA Alo), BSA 
 
@@ -7041,6 +7107,8 @@ M2ã! 2X 3B
 360 
 
 ###### Sela) 
+Phần “Sela)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - @ HEAD HAL: ÿtnl2e| o]339] AVIS Zest] Gs W9] Uo] S7} 9249) ABLE Hal 7S CHA 2| EAA sto} Beles. s SMe Belt Fels 329] SSAA] 71S Vere “Sha AVS HA 7Hs) 
 
@@ -7055,6 +7123,8 @@ t#t82'8#|9| UWA Repo#t#9Ft†9| 49, TEA HIS Wee A J2] 471. wea] oS AW AS 87119] 
 ###### 9 Wg See Hi2zt 
 
 ###### 1, AL 3319| 40] 
+Phần “1, AL 3319| 40]” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |TE|at|FA|
 |---|---|---|
@@ -7066,6 +7136,8 @@ t#t82'8#|9| UWA Repo#t#9Ft†9| 49, TEA HIS Wee A J2] 471. wea] oS AW AS 87119] 
 
 
 ###### 2. SHEAMES| SAt 
+Phần “2. SHEAMES| SAt” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |eng||<br>8l|s8|sa|
 |---|---|---|---|
@@ -7080,6 +7152,8 @@ t#t82'8#|9| UWA Repo#t#9Ft†9| 49, TEA HIS Wee A J2] 471. wea] oS AW AS 87119] 
 362 
 
 ###### 3, TRAY, 492-7151, TIÊM|JZI9| tla 
+Phần “3, TRAY, 492-7151, TIÊM|JZI9| tla” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |TE||<br>Be<br>||ARORA|mea|
 |---|---|---|---|
@@ -7093,6 +7167,8 @@ t#t82'8#|9| UWA Repo#t#9Ft†9| 49, TEA HIS Wee A J2] 471. wea] oS AW AS 87119] 
 
 
 ###### 4.7ltn0|89| SR 
+Phần “4.7ltn0|89| SR” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 1) 7|CHO|Z (Expectation Theory) 
 
@@ -7404,6 +7480,8 @@ OWS @2J829j8E OVI @482918
 1231 HARM A 37B. 
 
 ###### 50. CHE 8 CMF tị! BOR BRE AS?) 
+Phần “50. CHE 8 CMF tị! BOR BRE AS?)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - O ABS WV] BROKE BH Wal SE ME 9lo| Hz} Fo] Tape] of. YES] 
 
@@ -7880,4 +7958,3 @@ HA Poors +9I83z:4lsl 7|S7|2| Veotoy AICHE AS BS S| OBO] SSot= 2 8 8§I Hep 0|X�
 390 
 
 KOREA BANKING INSTITUTE ¬1214IE| 02-3700-1500 SS sey 
-

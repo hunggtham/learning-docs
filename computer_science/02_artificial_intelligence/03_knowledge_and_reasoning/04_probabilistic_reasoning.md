@@ -474,6 +474,8 @@ Reranking, citations and nguồn (source / 소스) kiểm tra hợp lệ (valida
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Logic         → what must follow if premises true
 Probability   → how belief is distributed under uncertainty
@@ -504,6 +506,4 @@ They can be dependent marginally but independent given a third variable.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Probabilistic lập luận (reasoning / 추론) bridges xác suất (probability / 확률), kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and quyết định (decision / 결정) lý thuyết (theory / 이론). [Bayesian Networks](./05_bayesian_networks.md) will make the conditional-dependency cấu trúc (structure / 구조) concrete, while later Machine học tập (learning / 학습) chapters will show how các mô hình (models / 모델들) estimate these distributions from dữ liệu (data / 데이터).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Probabilistic Reasoning bridges Probability, Knowledge Representation and Decision Theory. [Bayesian Networks](./05_bayesian_networks.md) will make the conditional-dependency structure concrete, while later Machine Learning chapters will show how models estimate these distributions from data.

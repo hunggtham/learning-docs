@@ -9,10 +9,12 @@ Kiểm tra (audit / 감사) này theo dõi **coverage, độ sâu, trạng thái
 
 ## Trạng thái
 
-- **Strong**: đủ độ sâu (depth / 깊이), cơ chế (mechanism / 메커니즘), bằng chứng (evidence / 증거) ranh giới (boundary / 경계), limitation và liên kết (connection / 연결).
-- **Strong / fast-moving**: đủ chất lượng hiện tại nhưng cần periodic bằng chứng (evidence / 증거) refresh vì literature thay đổi nhanh.
-- **cầu nối (bridge / 브리지)**: tính tương thích (compatibility / 호환성)/điều hướng (navigation / 내비게이션) tệp (file / 파일) sau khi chuẩn gốc (canonical / 정본) content đã tách.
-- **Historical-context**: historical lý thuyết (theory / 이론) được đặt đúng bối cảnh, không trình bày như consensus.
+Các nhãn dưới đây mô tả chất lượng giải thích và độ chắc của bằng chứng, không phải thứ hạng “đúng/sai” tuyệt đối. Đọc chúng cùng evidence taxonomy để biết claim nào cần refresh và claim nào đang ở bối cảnh lịch sử.
+
+- **Strong**: đủ depth, mechanism, evidence boundary, limitation và connection.
+- **Strong / fast-moving**: đủ chất lượng hiện tại nhưng cần periodic evidence refresh vì literature thay đổi nhanh.
+- **Bridge**: compatibility/navigation file sau khi canonical content đã tách.
+- **Historical-context**: historical theory được đặt đúng bối cảnh, không trình bày như consensus.
 
 Bằng chứng (evidence / 증거) taxonomy: [[EVIDENCE_STATUS_GUIDE]].
 
@@ -115,6 +117,4 @@ Không tạo chapter mới nếu không phát hiện conceptual gap thực sự.
 
 Về **content coverage/độ sâu (depth / 깊이)**, merge gate đã đạt: không còn cốt lõi (core / 핵심) chapter rỗng/quá sơ sài trong kiểm tra (audit / 감사) hiện tại.
 
-Psychology đã ở trên `main`; final targeted branch/điều hướng (navigation / 내비게이션) check và Study Shelf bản dựng (build / 빌드) là các kiểm tra hậu merge. Các branch cũ không còn được dùng để mô tả trạng thái chuẩn gốc (canonical / 정본).
-
-> **Bàn giao:** Sau **12. Merge gate**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CONCEPTUAL DEPENDENCIES](./CONCEPTUAL_DEPENDENCIES.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Tuy nhiên branch **chưa được merge tự động trong pass này**. Trước merge nên thực hiện một final targeted branch/navigation check theo workflow repo, đặc biệt xác minh canonical paths và build/site behavior nếu có.

@@ -393,18 +393,22 @@ Mục tiêu là tăng mức kiểm soát theo rủi ro (risk / 위험) và độ
 
 ## Thất bại (failure / 실패) Modes phổ biến
 
-- prompt thay đổi nhưng không phiên bản (version / 버전);
-- mô hình (model / 모델) provider cập nhật (update / 업데이트) âm thầm;
-- chỉ mục (index / 인덱스) mới bản dựng (build / 빌드) từ corpus thiếu dữ liệu;
-- embedding đổi nhưng chỉ mục (index / 인덱스) chưa rebuild;
-- công cụ (tool / 도구) lược đồ (schema / 스키마) thay đổi không có tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트);
-- ngữ nghĩa (semantic / 의미적) bộ nhớ đệm (cache / 캐시) trả kết quả (result / 결과) cũ;
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
+- prompt thay đổi nhưng không version;
+- model provider update âm thầm;
+- index mới build từ corpus thiếu dữ liệu;
+- embedding đổi nhưng index chưa rebuild;
+- tool schema thay đổi không có compatibility test;
+- semantic cache trả result cũ;
 - eval set overfit;
 - dấu vết (trace / 추적) thiếu phiên bản (version / 버전) siêu dữ liệu (metadata / 메타데이터);
 - tác nhân (agent / 에이전트) vòng lặp (loop / 루프) chi phí (cost / 비용) runaway;
 - quay lui (rollback / 롤백) chỉ đổi mô hình (model / 모델) nhưng không đổi prompt/chỉ mục (index / 인덱스).
 
 ## Mô hình triển khai LLMOps
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Git / config registry
@@ -448,5 +452,3 @@ Không. Provider chỉ vận hành mô hình (model / 모델) endpoint; ứng d�
 ## Liên kết kiến thức
 
 LLMOps nối [RAG Evaluation](../09_retrieval_and_rag/09_rag_evaluation.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md), [AI System Design](../15_ai_engineering/10_ai_system_design.md), [Evaluation Foundations](../18_evaluation_reliability_interpretability/00_evaluation_foundations.md), [Reliability](../18_evaluation_reliability_interpretability/07_reliability_engineering.md) và [Security](../19_ai_safety_security_alignment/08_secure_ai_system_design.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -1,34 +1,50 @@
-# 1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)
+# Python 클래스 (Class) - 기초 (Cơ bản)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **Python 클래스 (Class) - 기초 (Cơ bản)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **Python 클래스 (Class) - 기초 (Cơ bản)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **Python 클래스와 함수 (Class and Functions)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-메모리, 버퍼, 오버플로
+Python, 클래스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **스토리지 시스템 (Storage Systems)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **Python 제어문 (Control Statements): if문, for문**에서 만든 기준을 이어받아 **Python 클래스 (Class) - 기초 (Cơ bản)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)** và nối nó với **2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **Python 클래스 (Class) - 기초 (Cơ bản)** và nối nó với **Python 클래스와 함수 (Class and Functions)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)
-- **개념**: 연속된 메모리 공간을 사용하는 프로그램에서 할당된 메모리의 범위를 넘어선 위치에서 자료를 읽거나 쓰려고 할 때 발생하는 취약점.
-- **Tiếng Việt**: Lỗ hổng xảy ra khi chương trình ghi hoặc đọc dữ liệu vượt quá giới hạn vùng nhớ đã được cấp phát.
-- **예시 (Example)**:
-  - (KR) 10바이트 공간에 20바이트의 데이터를 입력하면 다른 메모리 영역을 침범함.
-  - (VN) Nhập 20 byte dữ liệu vào mảng chỉ có kích thước 10 byte, làm ghi đè lên các vùng nhớ khác.
-- **대책**: 버퍼의 크기를 적절히 설정.
-- 💡 **Mẹo ghi nhớ**: Buffer Overflow = Bơm nước quá đầy làm tràn ly.
+## Python 클래스 (Class) - 기초 (Cơ bản)
+
+Từ **Python 제어문 (Control Statements): if문, for문**, ta đã có điểm tựa để bước vào **Python 클래스 (Class) - 기초 (Cơ bản)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 51/86 trước khi đi vào chi tiết.
+
+Để đọc **Python 클래스 (Class) - 기초 (Cơ bản)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “Python 클래스 (Class) - 기초 (Cơ bản)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **정의 형식**:
+  ```python
+  class 클래스명:
+      def 메소드명(self, 인수):
+          실행할 문장
+          return 값
+  ```
+- `def`는 메소드(Method/Phương thức)를 정의하는 예약어입니다.
+- `self`는 메소드에서 자기 클래스에 속한 변수에 접근할 때 사용하는 명칭으로 첫 번째 인수로 반드시 작성합니다.
+
+> **Vietnamese Explanation**:
+> Class là khuôn mẫu để tạo ra các đối tượng (Objects). Hàm định nghĩa bên trong class được gọi là method (phương thức) và luôn phải có tham số `self` đại diện cho chính đối tượng đó.
+
+Điểm chốt của **Python 클래스 (Class) - 기초 (Cơ bản)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **Python 클래스와 함수 (Class and Functions)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

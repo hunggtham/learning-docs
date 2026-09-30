@@ -38,6 +38,8 @@ Một regression nhỏ ở tính năng (feature / 기능) ít rủi ro khác ho�
 
 ## Vòng đời Sự cố
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 phát hiện
 → phân loại ban đầu
@@ -211,6 +213,8 @@ Fallback chưa từng được kiểm thử thường chỉ tồn tại trên s�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Độ tin cậy không phải “không bao giờ fail”.
 Độ tin cậy là phát hiện → giới hạn ảnh hưởng → phục hồi → học hỏi.
@@ -233,5 +237,3 @@ Không. Mục tiêu là cải thiện điều khiển (control / 제어) của h
 ## Liên kết kiến thức
 
 Xem [Monitoring](./06_monitoring_and_observability.md), [LLMOps](./08_llmops.md), [Reliable Agent Design](../10_agents_and_ai_systems/10_reliable_agent_design.md), [Safety/Security](../19_ai_safety_security_alignment/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -527,6 +527,8 @@ Bạn nên có thể giải thích: vì sao venv không phải bộ chứa (cont
 Part 4 sẽ đi sâu hơn vào thời gian chạy (runtime / 런타임) internals, bytecode/specialization, descriptors, attribute lookup, đối tượng (object / 객체)/lớp (class / 클래스) creation, GC/hiệu năng (performance / 성능) trade-offs, free-threading, multiple interpreters và cách đọc mã (code / 코드) legacy bằng mô hình tư duy (mental model / 사고 모델) hiện đại.
 
 ## Nguồn chính
+Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - `venv`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/venv.html
 - Packaging người dùng (user / 사용자) Guide: https://packaging.python.org/

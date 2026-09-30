@@ -159,6 +159,8 @@ Không nên chỉ gửi raw transcript.
 
 ## Example: Software thay đổi (change / 변경)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Planner → identifies files/tests
 Implementer → edits code
@@ -212,5 +214,3 @@ Debate có thể tạo verbosity hoặc reinforce dùng chung (common / 공통) 
 Multi-agent các hệ thống (systems / 시스템들) nối phân tán (distributed / 분산) các hệ thống (systems / 시스템들), organizational thiết kế (design / 설계), workflow orchestration và ensemble lập luận (reasoning / 추론).
 
 Xem tiếp: [Agent Orchestration](./08_agent_orchestration.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

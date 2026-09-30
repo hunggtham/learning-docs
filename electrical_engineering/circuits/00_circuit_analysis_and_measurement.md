@@ -107,6 +107,8 @@ Nhưng ADC có sampling capacitor. Nếu Rth = R1 || R2 ≈ 7.3 kΩ quá lớn s
 > **Chuyển mạch:** Từ **7. Worked lập luận (reasoning / 추론): divider cho ADC**, ta sang **8. thất bại (failure / 실패) modes và giới hạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. thất bại (failure / 실패) modes và giới hạn
+Phần “8. thất bại (failure / 실패) modes và giới hạn” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Ground tham chiếu (reference / 참조) sai làm mọi điện áp “đúng tương đối” nhưng sai so với hệ thống (system / 시스템).
 - Tụ phân cực ngược có thể hỏng trước khi waveform nhìn thấy bất thường.

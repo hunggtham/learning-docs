@@ -162,6 +162,8 @@ Batch cluster thường muốn utilization cao. Online serving lại cần spare
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Cluster performance = compute placement × communication topology × scheduler policy × workload shape
 ```
@@ -183,5 +185,3 @@ Không. CPU, RAM, lưu trữ (storage / 저장소) và mạng (network / 네트�
 ## Liên kết kiến thức
 
 Xem [Distributed Training](./05_distributed_training.md), [Distributed Inference](./06_distributed_inference.md), [Memory/Bandwidth](./03_memory_and_bandwidth.md), [MLOps Incident Lifecycle](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 compute foundations](./00_compute_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -7,6 +7,8 @@ Bộ nhớ đệm (cache / 캐시) là một bản sao có thời hạn, không 
 thất bại (failure / 실패) khi bộ nhớ đệm (cache / 캐시) mất là gì.
 
 ## Mẫu (pattern / 패턴)
+Phần “Mẫu (pattern / 패턴)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Cache-aside**: đọc bộ nhớ đệm (cache / 캐시), miss thì đọc nguồn (source / 소스) rồi populate; dễ áp dụng nhưng
   có stampede và cửa sổ stale.

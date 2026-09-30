@@ -633,6 +633,8 @@ Tại Việt Nam, bất động sản, công ty chứng khoán và ngân hàng p
 
 ## 59. Mỗi ngành nên có
 
+Phần này gom một chuẩn chung để đọc mọi ngành: driver doanh thu, cấu trúc chi phí, bảng cân đối, chu kỳ, FX, policy, valuation và failure mode. Dùng nó như cầu nối từ các deep dive riêng lẻ sang một framework có thể so sánh.
+
 ```text
 Động cơ kinh tế
 Động lực nhu cầu
@@ -683,5 +685,3 @@ Nhu cầu / Nguồn cung
 ```
 
 Khi dùng cùng khung này cho Hàn Quốc và Việt Nam, người đọc có thể so sánh hai thị trường bằng cơ chế kinh tế thay vì chỉ bằng mã cổ phiếu hoặc bội số định giá.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

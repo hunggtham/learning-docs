@@ -428,6 +428,8 @@ Trước bản phát hành (release / 릴리스), hỏi:
 - startup crash/ANR metrics segment theo phiên bản (version / 버전)/thiết bị (device / 장치) chưa.
 
 ## 35. Official references
+Phần này nối mạch Android vừa học với “35. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - App startup thời gian (time / 시간): https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/vitals/launch-time
 - Baseline Profiles: https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/baselineprofiles/overview
@@ -435,6 +437,4 @@ Trước bản phát hành (release / 릴리스), hỏi:
 - App Startup thư viện (library / 라이브러리): https://nhà phát triển (developer / 개발자).android.com/topic/libraries/app-startup
 - Perfetto/hệ thống (system / 시스템) tracing: https://nhà phát triển (developer / 개발자).android.com/topic/hiệu năng (performance / 성능)/tracing
 
-Hiệu năng (performance / 성능) guidance evolve cùng thời gian chạy (runtime / 런타임)/toolchain. Benchmark trên release-like sản phẩm tạo ra (artifact / 산출물) và representative devices luôn quan trọng hơn con số trong tutorial.
-
-> **Bàn giao:** Sau **35. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Performance guidance evolve cùng runtime/toolchain. Benchmark trên release-like artifact và representative devices luôn quan trọng hơn con số trong tutorial.

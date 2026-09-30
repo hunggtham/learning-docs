@@ -5,6 +5,8 @@
 Analog electronics biến tín hiệu (signal / 신호) liên tục thành gain, filtering, sensing và actuation có thể thiết kế. Trọng tâm là độ lệch (bias / 편향) điểm (point / 지점), small-signal mô hình (model / 모델), phản hồi (feedback / 피드백), noise và stability dưới non-idealities.
 
 ## Cốt lõi (core / 핵심) tuyến (route / 경로)
+Phần “Cốt lõi (core / 핵심) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 diode → BJT/MOSFET stages → biasing → op-amp/feedback → filters → ADC/DAC front-end
@@ -14,6 +16,8 @@ diode → BJT/MOSFET stages → biasing → op-amp/feedback → filters → ADC/
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) tuyến (route / 경로)**, ta sang **cốt lõi (core / 핵심) chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) chapter
+Phần “Cốt lõi (core / 핵심) chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Device biasing and feedback](00_device_biasing_feedback.md) — operating điểm (point / 지점), small-signal gain, phản hồi (feedback / 피드백), stability, noise và sensor front-end.
 - [Data converters and noise budget](01_data_converters_noise_budget.md) — ADC/DAC, ENOB, tham chiếu (reference / 참조), settling và lỗi (error / 오류) allocation.
@@ -22,6 +26,8 @@ diode → BJT/MOSFET stages → biasing → op-amp/feedback → filters → ADC/
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) chapter**, ta sang **Cần nắm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cần nắm
+Phần “Cần nắm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - operating region và tải (load / 로드) line;
 - gain, đầu vào (input / 입력)/đầu ra (output / 출력) impedance, bandwidth và slew tỷ lệ (rate / 비율);

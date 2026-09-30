@@ -167,6 +167,8 @@ H(X,Y)=H(X)+H(Y|X).
 
 ## 8. Mutual thông tin (information / 정보): biết Y giảm bất định (uncertainty / 불확실성) về X bao nhiêu?
 
+Mutual information đo lượng bất định về X được giảm khi quan sát Y. Nó không yêu cầu quan hệ tuyến tính, nhưng vẫn phụ thuộc cách mô hình hóa phân phối và dữ liệu.
+
 ```math
 I(X;Y)=H(X)-H(X|Y).
 ```
@@ -224,6 +226,8 @@ L=-\log q(y_{true}).
 Confident wrong predictions bị phạt mạnh vì `-log q` tăng lớn khi `q→0`.
 
 ## 11. KL divergence là extra coding/log-loss chi phí (cost / 비용)
+
+KL divergence có thể đọc như chi phí thêm khi dùng Q thay cho P để mã hóa hoặc dự đoán. Hướng P‖Q rất quan trọng vì đổi hướng sẽ đổi ý nghĩa.
 
 ```math
 D_{KL}(p\|q)
@@ -436,6 +440,8 @@ Entropy depends on chosen random variable/biểu diễn (representation / 표현
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối nối entropy, mutual information và KL với machine learning, compression, privacy và decision theory. Hãy phân biệt đo thông tin với tối ưu loss trong từng context.
+
 ```text
 Probability → uncertainty
 Logarithm → additive information
@@ -450,6 +456,4 @@ Communication → capacity / error correction
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
-> xác suất (probability / 확률) mô tả bất định (uncertainty / 불확실성) trước khi biết kết quả (outcome / 결과). thông tin (information / 정보) đo bất định (uncertainty / 불확실성) giảm khi observation đến. Entropy là average bất định (uncertainty / 불확실성)/surprise theo phân phối (distribution / 분포). Nhưng hành động (action / 동작) cần thêm mất mát (loss / 손실)/utility; thông tin (information / 정보) nhiều không đồng nghĩa consequence lớn.
-
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 rate change and accumulation](./00_rate_change_and_accumulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> Probability mô tả uncertainty trước khi biết outcome. Information đo uncertainty giảm khi observation đến. Entropy là average uncertainty/surprise theo distribution. Nhưng action cần thêm loss/utility; information nhiều không đồng nghĩa consequence lớn.

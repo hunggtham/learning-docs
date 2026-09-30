@@ -19,6 +19,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 - [00 — Data as the Foundation of AI](./00_data_as_the_foundation_of_ai.md)
 - [01 — Data Collection](./01_data_collection.md)
 - [02 — Data Cleaning](./02_data_cleaning.md)
@@ -33,6 +35,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Dataset ≠ Reality
@@ -51,6 +55,8 @@ Pseudonymization ≠ Anonymization
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Reality
@@ -78,6 +84,4 @@ Nên đọc cùng:
 - [RAG Document Processing](../09_retrieval_and_rag/06_chunking_and_document_processing.md)
 - [Agent Memory](../10_agents_and_ai_systems/04_agent_memory.md)
 
-Tầng (layer / 계층) tiếp theo `15_ai_engineering/` chuyển từ học tập (learning / 학습) artifacts sang môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들): huấn luyện (training / 학습)/suy luận (inference / 추론) pipelines, serving, batching, quantization, compression, độ trễ (latency / 지연 시간)/chi phí (cost / 비용) và AI hệ thống (system / 시스템) thiết kế (design / 설계).
-
-> **Bàn giao:** Sau **Connections**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 data as the foundation of ai](./00_data_as_the_foundation_of_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Layer tiếp theo `15_ai_engineering/` chuyển từ learning artifacts sang production systems: training/inference pipelines, serving, batching, quantization, compression, latency/cost và AI system design.

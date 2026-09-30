@@ -606,6 +606,8 @@ Cadence này tránh hai cực: chỉ quan tâm khi crisis xảy ra và đo quá 
 
 ## 41. Mô hình tư duy tổng hợp
 
+Mô hình này gom di truyền, tuổi, môi trường và khả năng bù trừ thành một chuỗi rủi ro có thể can thiệp. Mục tiêu là chuyển từ việc nhớ danh sách bệnh sang hiểu khi nào dự trữ sinh lý bị vượt qua và cần hành động gì.
+
 ```text
 Genetics + Age + Environment
             ↓

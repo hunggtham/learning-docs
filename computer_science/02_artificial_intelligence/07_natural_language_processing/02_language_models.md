@@ -217,6 +217,8 @@ Predictive cấu trúc (structure / 구조) = compressible cấu trúc (structur
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Language model does not choose a sentence all at once.
 It repeatedly estimates:
@@ -245,6 +247,4 @@ It changes sampling phân phối (distribution / 분포) from same logits, not p
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Ngôn ngữ (language / 언어) các mô hình (models / 모델들) connect [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Sequence Models](../06_deep_learning_architectures/01_sequence_models.md), [Transformer](../06_deep_learning_architectures/05_transformer.md) and prepare LLM pretraining.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language as data](./00_language_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Language Models connect [Information Theory](../01_mathematical_foundations/05_information_theory.md), [Sequence Models](../06_deep_learning_architectures/01_sequence_models.md), [Transformer](../06_deep_learning_architectures/05_transformer.md) and prepare LLM pretraining.

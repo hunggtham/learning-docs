@@ -382,6 +382,8 @@ Xây SAM cho `A`, rồi quét `B`. Duy trì trạng thái (state / 상태) hiệ
 
 ## 26. SA, Suffix cây (tree / 트리) hay SAM?
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Nhu cầu | Cấu trúc thường phù hợp |
 |---|---|
 | văn bản (text / 텍스트) tĩnh, bộ nhớ (memory / 메모리) gọn, tìm kiếm nhị phân (binary search / 이진 탐색)/RMQ | Suffix Array + LCP |
@@ -526,5 +528,3 @@ Suffix Array khai thác **thứ tự**. LCP khai thác **mức giống nhau gi�
 Khi gặp bài substring lớn, hãy hỏi: **văn bản (text / 텍스트) tĩnh hay append-only, cần tìm kiếm (search / 검색) hay counting/rank/RMQ, cần đầu ra (output / 출력) mọi occurrence không, bộ nhớ (memory / 메모리) có quan trọng không, alphabet là gì, và có cần construction đủ đơn giản để kiểm chứng không?**
 
 Xem thêm: [String Algorithms](./00_string_algorithms.md), [Sparse Table](./05_sparse_table_and_static_range_queries.md), [Range Queries](./01_range_queries_fenwick_segment_tree.md), [Amortized & Probabilistic Thinking](./03_amortized_randomized_and_probabilistic_thinking.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

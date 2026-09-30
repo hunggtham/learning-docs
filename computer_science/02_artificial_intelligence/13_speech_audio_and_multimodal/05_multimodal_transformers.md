@@ -7,6 +7,8 @@ Transformer kiến trúc (architecture / 아키텍처) phù hợp multimodal AI 
 
 ## Mẫu (pattern / 패턴) 1: Separate Encoders + Late Fusion
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 image → vision encoder → embedding
 text → text encoder → embedding
@@ -204,5 +206,3 @@ Attention weights are tương tác (interaction / 상호작용) signals, not com
 Multimodal Transformers extend [Transformer](../06_deep_learning_architectures/05_transformer.md) across heterogeneous đơn vị từ (token / 토큰) spaces and form backbone for multimodal agents.
 
 Xem tiếp: [Multimodal Agents](./06_multimodal_agents.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 audio and speech representation](./00_audio_and_speech_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

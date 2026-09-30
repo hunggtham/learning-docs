@@ -47,6 +47,8 @@ Một số đường dẫn quan trọng:
 
 ### `/proc/<PID>/status`
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 cat /proc/1234/status
 ```
@@ -56,6 +58,8 @@ Tệp này cho thấy các trường như tên tiến trình, trạng thái, UID
 Nó hữu ích khi cần xác minh **trạng thái hiệu lực (effective state)** thay vì tin vào cấu hình mong muốn.
 
 ### `/proc/<PID>/cmdline`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 tr '\0' ' ' < /proc/1234/cmdline
@@ -67,6 +71,8 @@ Command line trong procfs dùng ký tự NUL để phân tách arguments, vì v�
 
 ### `/proc/<PID>/environ`
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 tr '\0' '\n' < /proc/1234/environ
 ```
@@ -76,6 +82,8 @@ Cho phép quan sát biến môi trường (environment variables) của tiến t
 Cần đặc biệt cẩn thận vì môi trường có thể chứa đơn vị từ (token / 토큰), mật khẩu hoặc secret. Không nên sao chép toàn bộ đầu ra (output / 출력) vào ticket/chat/log nếu chưa kiểm tra dữ liệu nhạy cảm.
 
 ### `/proc/<PID>/fd`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 ls -l /proc/1234/fd
@@ -117,6 +125,8 @@ less /proc/1234/maps
 
 ## `/proc/meminfo`
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 cat /proc/meminfo
 ```
@@ -128,6 +138,8 @@ Không nên tự tạo kết luận chỉ từ một trường. Ví dụ `Cached
 Xem thêm: [Bộ nhớ và bộ nhớ ảo](../06_resources/memory_virtual_memory.md).
 
 ## `/proc/loadavg`
+
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
 
 ```bash
 cat /proc/loadavg
@@ -160,6 +172,8 @@ sysctl net.ipv4.ip_forward
 `sysctl` cung cấp giao diện thân thiện hơn.
 
 ### Thay đổi tạm thời
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 sudo sysctl -w net.ipv4.ip_forward=1
@@ -198,6 +212,8 @@ ls /sys/devices
 
 ### Mạng (network / 네트워크) giao diện (interface / 인터페이스)
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 cat /sys/class/net/eth0/mtu
 cat /sys/class/net/eth0/operstate
@@ -206,6 +222,8 @@ cat /sys/class/net/eth0/operstate
 Có thể nhìn trạng thái và thuộc tính giao diện (interface / 인터페이스).
 
 ### Khối (block / 블록) thiết bị (device / 장치)
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 ls /sys/block/sda
@@ -317,5 +335,3 @@ Hãy xem `/proc` và `/sys` như hai bản đồ khác nhau của cùng hệ th�
 Ba khu vực này tạo một cầu nối quan trọng giữa lý thuyết kernel và công việc vận hành thực tế.
 
 Xem thêm: [Kernel, user space và system calls](./kernel_userspace_syscalls.md), [Process, thread và signal](../04_process/processes_threads_signals_jobs.md), [Storage và filesystem](../06_resources/storage_filesystems.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [cpu privilege exceptions syscall path](./cpu_privilege_exceptions_syscall_path.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

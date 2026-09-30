@@ -14,6 +14,8 @@ Xem [quy ước ngôn ngữ](./LANGUAGE_STYLE.md) để hiểu cách thư viện
 
 ## Bản đồ Nền tảng → Nâng cao
 
+Bảng này giải thích cách hai lớp của thư viện nối với nhau: nền tảng dựng mô hình chung, còn phần nâng cao mở rộng cơ chế, failure mode và trade-off. Hãy dùng nó để chọn đúng prerequisite thay vì coi “advanced” là một danh sách rời.
+
 | Lĩnh vực | Nền tảng | Nâng cao |
 |---|---|---|
 | Tính toán & Thông tin (Computation & information) | [`basic/00_computation_information`](./basic/00_computation_information/) | [`00_computation_information/advanced`](./00_computation_information/advanced/README.md) |
@@ -53,6 +55,8 @@ Không cần học hết phần nền tảng rồi mới đọc phần nâng cao
 
 ### Học tập (learning / 학습) tuyến (route / 경로) 1 — từ phần cứng đến ứng dụng (application / 애플리케이션)
 
+Route này đi từ nguyên nhân ở tầng thấp tới biểu hiện ở application. Mỗi mũi tên là một điểm cần kiểm tra khi hiệu năng hoặc hành vi chương trình không thể giải thích chỉ bằng code bề mặt.
+
 ```text
 CPU / cache / memory hierarchy
 ↓
@@ -71,6 +75,8 @@ Tuyến (route / 경로) này phù hợp khi muốn hiểu vì sao cùng một �
 
 ### Học tập (learning / 학습) tuyến (route / 경로) 2 — durability và consistency
 
+Route này theo dõi một thay đổi dữ liệu từ transaction tới device và replica. Nó giúp người học hiểu commit ở một tầng chưa chắc đồng nghĩa dữ liệu đã bền vững ở mọi tầng.
+
 ```text
 application transaction
 ↓
@@ -86,6 +92,8 @@ cache / event / replica visibility
 Tuyến (route / 경로) này dùng cho backend/cơ sở dữ liệu (database / 데이터베이스) kỹ thuật (engineering / 엔지니어링). Bắt đầu từ nền tảng giao dịch (transaction / 트랜잭션) rồi đọc cơ sở dữ liệu (database / 데이터베이스) Advanced, OS filesystem/I/O, phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và chapter [durability xuyên tầng](./90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
 ### Học tập (learning / 학습) tuyến (route / 경로) 3 — tính đồng thời (concurrency / 동시성) và thứ tự (ordering / 순서)
+
+Đường đọc này nối các nghĩa khác nhau của “thứ tự” từ memory model tới distributed system. Hãy giữ câu hỏi dữ liệu có thể quan sát ở thời điểm nào trước khi chọn cơ chế đồng bộ.
 
 ```text
 language memory model
@@ -104,6 +112,8 @@ distributed causality / consensus
 Tuyến (route / 경로) này giúp phân biệt dữ liệu (data / 데이터) race, logical race, luồng thực thi (thread / 스레드) scheduling, bộ nhớ (memory / 메모리) reordering và phân tán (distributed / 분산) thứ tự (ordering / 순서). Không dùng từ “concurrent” như một khái niệm duy nhất cho mọi tầng.
 
 ### Học tập (learning / 학습) tuyến (route / 경로) 4 — độ tin cậy (reliability / 신뢰성) và ranh giới bảo mật (security boundary / 보안 경계)
+
+Route cuối đặt security và reliability trên cùng một chuỗi boundary–dependency. Một control có thể giảm rủi ro tấn công nhưng đồng thời tạo dependency availability, nên cần đọc cả hai chiều.
 
 ```text
 identity / authorization
@@ -170,10 +180,4 @@ Cấu trúc dữ liệu và thuật toán (DSA) đã có phần nâng cao riêng
 
 ## Nguyên tắc biên soạn phần nâng cao
 
-Một chương nâng cao phải đào sâu hơn foundation ở ít nhất một hướng: cơ chế bên trong; bất biến (invariant / 불변식) hoặc chứng minh; mô hình hiệu năng (performance / 성능); tính đồng thời (concurrency / 동시성)/consistency ngữ nghĩa (semantics / 의미론); hành vi khi thất bại (failure behavior / 실패 동작); khả năng quan sát và gỡ lỗi; triển khai (deployment / 배포)/evolution sự đánh đổi (trade-off / 트레이드오프); hoặc tương tác (interaction / 상호작용) giữa nhiều lớp trừu tượng (abstraction / 추상화) layers.
-
-Ưu tiên giữ cấu trúc chuẩn gốc (canonical / 정본) hiện có. Nếu gap có cùng bất biến (invariant / 불변식) và thất bại (failure / 실패) mô hình (model / 모델) với chapter đang tồn tại, rewrite sâu chapter đó trước. Chỉ tạo tệp (file / 파일) mới khi topic có mô hình tư duy (mental model / 사고 모델) riêng, là phụ thuộc (dependency / 의존성) quan trọng cho nhiều phần khác và việc đặt vào chapter cũ thực sự làm mất conceptual ranh giới (boundary / 경계).
-
-Không thêm chapter chỉ vì một technology đang phổ biến.
-
-> **Bàn giao:** Sau **Nguyên tắc biên soạn phần nâng cao**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [99 glossary](./99_glossary.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Một chương nâng cao phải đào sâu hơn phần nền tảng ở ít nhất một hướng: cơ chế bên trong; bất biến hoặc chứng minh hình thức; mô hình hiệu năng; ngữ nghĩa đồng thời và lỗi; chiến lược triển khai; khả năng quan sát và gỡ lỗi; đánh đổi trong môi trường thực tế; hoặc tương tác giữa nhiều tầng trừu tượng. Không thêm một chương chỉ vì một công nghệ đang phổ biến nếu nó không tạo ra mô hình tư duy mới.

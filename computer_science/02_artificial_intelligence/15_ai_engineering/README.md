@@ -7,6 +7,8 @@
 
 ## Thứ tự đọc
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 00_ai_engineering.md
 01_training_pipeline.md
@@ -25,6 +27,8 @@
 > **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Bản đồ phụ thuộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ phụ thuộc
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```mermaid
 flowchart TD
@@ -47,6 +51,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **Bản đồ phụ thuộc**, ta sang **Mô hình tư duy cốt lõi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy cốt lõi
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Model artifact
@@ -72,6 +78,8 @@ AI kỹ thuật (engineering / 엔지니어링) khác với MLOps ở trọng t�
 > **Chuyển mạch:** Từ **Mô hình tư duy cốt lõi**, ta sang **Những phân biệt cần giữ rõ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những phân biệt cần giữ rõ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 Training pipeline      ≠ Inference pipeline
@@ -105,6 +113,4 @@ Một nguyên tắc xuyên suốt là:
 
 AI kỹ thuật (engineering / 엔지니어링) phụ thuộc vào [Dữ liệu cho AI](../14_data_for_ai/README.md), [RAG](../09_retrieval_and_rag/README.md), [Agent](../10_agents_and_ai_systems/README.md) và [Deep Learning](../06_deep_learning_architectures/README.md).
 
-Sau folder này nên đọc [MLOps / LLMOps](../16_mlops_and_llmops/README.md) và [AI Compute & Infrastructure](../17_ai_compute_and_infrastructure/README.md), nơi các concern về vòng đời (lifecycle / 생명주기), triển khai (deployment / 배포) automation, hardware, bộ nhớ (memory / 메모리), networking và phân tán (distributed / 분산) thực thi (execution / 실행) được mở rộng sâu hơn.
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Sau folder này nên đọc [MLOps / LLMOps](../16_mlops_and_llmops/README.md) và [AI Compute & Infrastructure](../17_ai_compute_and_infrastructure/README.md), nơi các concern về lifecycle, deployment automation, hardware, memory, networking và distributed execution được mở rộng sâu hơn.

@@ -9,6 +9,8 @@
 
 ## 1. Chuỗi truyền dẫn cốt lõi
 
+Mọi case cross-market bắt đầu từ một cú shock và theo dõi nó qua rates, liquidity, FX, industry, earnings, valuation và portfolio. Chuỗi dưới đây là khung để không dừng ở headline macro.
+
 ```text
 Cú sốc toàn cầu
 → Tăng trưởng / Lạm phát
@@ -46,6 +48,8 @@ Ví dụ nợ là một mức tích lũy, còn tăng trưởng tín dụng là d
 
 ## 4. Cơ chế toàn cầu
 
+Phần này xác định shock bắt đầu ở đâu và kênh nào truyền qua funding, trade, rates hoặc risk sentiment. Hãy phân biệt first-order với feedback trước khi chọn tài sản hưởng lợi/thua lỗ.
+
 ```text
 Đường đi lãi suất Fed cao hơn kỳ vọng
 → lợi suất 2Y / lợi suất thực Mỹ ↑
@@ -67,6 +71,8 @@ Lợi suất Mỹ ↑
 Doanh nghiệp xuất khẩu có thể được lợi về quy đổi tỷ giá nếu nhu cầu toàn cầu vẫn tốt, nên không nên nhìn KRW riêng lẻ.
 
 ## 6. Việt Nam
+
+Với Việt Nam, cần tách kênh hàng hóa, USD funding, thương mại, domestic credit và policy. Cùng một shock toàn cầu có thể truyền khác nhau qua tỷ giá và cấu trúc bảng cân đối trong nước.
 
 ```text
 USD ↑
@@ -96,6 +102,8 @@ USD yếu hơn có thể mở rộng dư địa chính sách, nhưng nếu nguy�
 
 ## 10. Kích thích của Trung Quốc phải tách thành phần
 
+China stimulus có thể đi qua property, infrastructure, consumption, credit hoặc export demand; mỗi thành phần ảnh hưởng Korea/Vietnam khác nhau. Không nên dùng một nhãn “stimulus” cho mọi cơ chế.
+
 ```text
 Kích thích bất động sản
 Kích thích hạ tầng
@@ -121,6 +129,8 @@ Nếu dầu tăng vì kinh tế toàn cầu mạnh, các ngành chu kỳ có th�
 
 ## 14. Dầu tăng do thiếu nguồn cung
 
+Supply-driven oil shock làm chi phí đầu vào tăng và có thể tạo inflation dù growth yếu. Hãy theo dõi trade balance, transport, margins, FX và policy thay vì kết luận từ giá dầu đơn lẻ.
+
 ```text
 Dầu ↑
 → lạm phát nhập khẩu ↑
@@ -139,6 +149,8 @@ Cần tách nhà sản xuất thượng nguồn, vận tải, hàng không, ti�
 # Phần VI — Bùng nổ AI và bán dẫn
 
 ## 17. Chi tiêu vốn AI toàn cầu
+
+AI capex truyền qua semiconductor demand, equipment, power, data center và valuation. Cần tách doanh thu thật, backlog, utilization và kỳ vọng đã price trong cổ phiếu.
 
 ```text
 Chi tiêu của hyperscaler
@@ -222,6 +234,8 @@ Doanh nghiệp xuất khẩu, cảng và logistics chịu tác động khác nha
 # Phần XI — Căng thẳng ngân hàng và thanh khoản
 
 ## 30. Thiếu nguồn vốn USD toàn cầu
+
+USD funding shortage truyền qua cross-currency basis, FX pressure, collateral và forced deleveraging. Đây là shock thanh khoản trước khi trở thành câu chuyện earnings.
 
 ```text
 Nguồn vốn USD căng
@@ -376,6 +390,8 @@ Cổ phiếu bất động sản hoặc chứng khoán có thể tăng nhờ tha
 
 ## 52. Tác động thay đổi theo thời gian
 
+Một shock có thể đổi tác động theo từng giai đoạn: ban đầu qua giá hàng hóa, sau đó qua policy, credit, earnings và cuối cùng là valuation. Phần này yêu cầu ghi rõ độ trễ và feedback ở mỗi bước.
+
 ```text
 Phút / giờ:
 lãi suất, tỷ giá, futures, dòng vốn vốn hóa lớn
@@ -426,6 +442,8 @@ Luận điểm nên được cập nhật theo bằng chứng mới, không thay
 
 # Phần XXIII — Mẫu phân tích cú sốc
 
+Mẫu cuối cùng biến case cross-market thành một quy trình lặp: câu hỏi, cơ chế, dữ liệu, scenario, exposure, hedge và review. Hãy điền theo thứ tự để bảo đảm mỗi kết luận có bằng chứng và điều kiện sai.
+
 ```text
 Cú sốc:
 Điều gì đã được định giá trước:
@@ -458,5 +476,3 @@ Cú sốc
 ```
 
 và luôn hỏi phần nào của chuỗi đã được phản ánh trong giá trước khi thay đổi mức phơi nhiễm.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER KOREA VIETNAM](./00_MASTER_KOREA_VIETNAM.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

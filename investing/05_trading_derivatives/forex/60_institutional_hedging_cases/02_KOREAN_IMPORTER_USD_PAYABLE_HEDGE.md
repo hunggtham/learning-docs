@@ -46,6 +46,8 @@ Long KRW
 ```
 
 ## 3. Unhedged scenarios
+Phần “3. Unhedged scenarios” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD/KRW 1,250 → 10.0bn KRW
@@ -518,6 +520,8 @@ Unhedged procurement FX effect
 ```
 
 ## 37. Procurement hedge dashboard
+Phần “37. Procurement hedge dashboard” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Supplier
@@ -585,6 +589,8 @@ You should explain:
 7. Why combined underlying + hedge kết quả (result / 결과) matters more than derivative P/L.
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)

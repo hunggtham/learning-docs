@@ -51,6 +51,8 @@ Nếu `r` liên tục lớn hơn số CPU khả dụng và mức sử dụng CPU
 
 ## CPU ở mức tiến trình và mức luồng
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 ps aux --sort=-%cpu | head -20
 ```
@@ -148,5 +150,3 @@ chỉ số nào chứng minh giả thuyết đó?
 ## Kết nối kiến thức
 
 Hành vi CPU gắn với mô hình tiến trình/luồng, bộ nhớ qua TLB và page fault, và thời gian chờ từ lưu trữ hoặc mạng. [Xử lý sự cố production](../09_production/production_troubleshooting.md) kết hợp nhiều tín hiệu tài nguyên để tránh chẩn đoán chỉ dựa trên một chỉ số.
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [block layer io scheduler](./block_layer_io_scheduler.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

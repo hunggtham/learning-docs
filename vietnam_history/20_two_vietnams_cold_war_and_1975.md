@@ -185,5 +185,7 @@ The war ended militarily in 1975 and trạng thái (state / 상태) reunificatio
 Chapter tiếp theo, [`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md), sẽ therefore begin with reconstruction các ràng buộc (constraints / 제약조건들)—not celebration or defeat narrative—and explain why postwar chính sách (policy / 정책), collectivization, foreign xung đột (conflict / 충돌), embargo/isolation and tài nguyên (resource / 자원) scarcity led into the crisis that made **Đổi Mới 1986** increasingly necessary.
 
 ### Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 *The Cambridge Lịch sử (history / 이력) of the Vietnam War* (2024–2025 volumes), especially chapters on the two Vietnams, origins of insurgency, internationalization and war termination; U.S. Office of the Historian collections on Geneva and later diplomacy; scholarship by Lien-Hang T. Nguyen, Pierre Asselin, Edward Miller and others on DRV/RVN state-building and Cold War; Vietnamese and international research on wartime society, di chuyển (migration / 마이그레이션) and bộ nhớ (memory / 메모리).

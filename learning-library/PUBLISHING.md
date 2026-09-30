@@ -14,9 +14,10 @@ The build runs `scripts/audit-library.mjs` and fails closed when a path is insid
 
 ## Current audit decision
 
-- Published: the author-confirmed technical notes listed in the manifest.
-- Published exception: `정보처리기사/output/` is exposed in the web library under the virtual `cert/` folder after the owner confirmed permission to publish that output. Its source captures remain held back.
-- Held back: Korean source captures and intermediate material, including `raw`, `raw_md`, `notion`, `generated_markdown*`, `final*`, `merged_subjects`, and PDF/DOCX captures. These contain source quotations and provenance notes and are not published.
+Phần này giải thích quyết định audit hiện tại, để người xuất bản hiểu tiêu chí nào đã được kiểm tra và bước tiếp theo cần làm trước khi phát hành.
+
+- Published: the author-confirmed technical notes and English grammar/exam guides listed in the manifest.
+- Held back: all Korean material for now, including `raw`, `raw_md`, `notion`, `generated_markdown*`, `final*`, `merged_subjects`, and PDF/DOCX captures. The generated Korean lessons contain source quotations and provenance notes, so they need a separate rights review and rewriting pass before publication.
 - Held back: `pmp/raw` and `pmp/workflow-output` because the cleaned text includes a publisher copyright notice and “all rights reserved”.
 - English-language study materials are maintained in the separate `language-docs` repository; this repository does not store or publish English study Markdown files.
 - Held back: imported SQL books and OCR/translation files, including `input/*`, `sql/raw*`, and the SQL lessons that explicitly say they closely follow a source PDF.

@@ -501,6 +501,8 @@ FFT only computes DFT efficiently.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối đặt Fourier cạnh linear algebra, complex numbers, convolution, filtering và PDE. Hãy xem frequency domain như một phép đổi biểu diễn để tách pattern, không phải một thế giới công thức riêng.
+
 ```text
 Trigonometry → sine/cosine
 Complex numbers → phase/exponential
@@ -516,6 +518,4 @@ AI → convolution / Fourier features
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
-> Fourier phân tích (analysis / 분석) is a thay đổi (change / 변경) of coordinates. thời gian (time / 시간)/không gian (space / 공간) lĩnh vực (domain / 도메인) shows where hành vi (behavior / 동작) happens; frequency lĩnh vực (domain / 도메인) shows which oscillatory modes compose it. The power comes from choosing coordinates where convolution, differentiation and many tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) become simpler — but localization, sampling and finite windows introduce real trade-offs.
-
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 rate change and accumulation](./00_rate_change_and_accumulation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> Fourier analysis is a change of coordinates. Time/space domain shows where behavior happens; frequency domain shows which oscillatory modes compose it. The power comes from choosing coordinates where convolution, differentiation and many linear systems become simpler — but localization, sampling and finite windows introduce real trade-offs.

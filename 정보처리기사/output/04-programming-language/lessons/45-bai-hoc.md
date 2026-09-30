@@ -1,54 +1,54 @@
-# 네트워크 통신 (Network Communication)
+# 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **네트워크 통신 (Network Communication)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-네트워크, 통신
+인터넷, 구성과, 네트워크, TCP, UDP, 흐름, 오류, 제어
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**에서 만든 기준을 이어받아 **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **네트워크 통신 (Network Communication)** và nối nó với **네트워크 프로토콜 및 장비 심화 (Network Protocols & Devices - Advanced)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** và nối nó với **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 네트워크 통신 (Network Communication)
-### 207. 인터넷 주소 체계 - IPv4 (IPv4 Addressing)
-- 8비트씩 4부분, 총 32비트 (4 phần, mỗi phần 8 bit -> 32 bit). A~E 클래스.
+## 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
 
-### 208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)
-- 16비트씩 8부분, 총 128비트 (8 phần, mỗi phần 16 bit -> 128 bit, dùng hệ Hex).
-- 유니캐스트(Unicast), 멀티캐스트(Multicast), 애니캐스트(Anycast).
-  - 💡 *Mẹo ghi nhớ*: IPv4 = 32 bit (dấu `.`). IPv6 = 128 bit (dấu `:`).
+Từ **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)**, ta đã có điểm tựa để bước vào **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 45/91 trước khi đi vào chi tiết.
 
-### OSI 7계층 (OSI 7 Layers)
-- **209. 데이터 링크 계층 (Data Link)**: 인접 시스템 간 신뢰성 있는 전송. 흐름/오류 제어 (HDLC, PPP). (Truyền tải tin cậy giữa các nút lân cận).
-- **210. 네트워크 계층 (Network)**: 경로 설정, 패킷 라우팅. (Định tuyến, chuyển mạch gói).
-- **211. 전송 계층 (Transport)**: 종단 간 투명한 데이터 전송. (Truyền tải End-to-End, TCP/UDP).
-- **212. 세션 계층 (Session)**: 대화 제어, 동기화 (Quản lý phiên, đồng bộ hóa hội thoại).
-  - 💡 *Mẹo ghi nhớ*: dữ liệu (data / 데이터) Link = Frame/MAC. mạng (network / 네트워크) = IP/Routing. vận chuyển (transport / 전송) = TCP/UDP/cổng (port / 포트). Session = Dialog/đơn vị từ (token / 토큰).
+Để đọc **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** như một bài học cho người mới, hãy giữ câu hỏi: **các thành phần trao đổi dữ liệu theo lớp, quy tắc và điều kiện nào?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **TCP (Transmission Control Protocol)**, **UDP (User Datagram Protocol)**, **TCP 흐름 제어 (Flow Control)**, **TCP 오류 제어 (Error Control)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-### 213. 네트워크 관련 주요 장비 (Network Devices / Thiết bị mạng)
-- **리피터 (Repeater)**: 신호 재생 (Khuếch đại tín hiệu).
-- **브리지 (Bridge)**: LAN 연결 (Kết nối mạng LAN cùng loại).
-- **라우터 (Router)**: 최적 경로 선택 (Chọn đường đi tối ưu).
-- **스위치 (Switch)**: 여러 랜선 연결 (Chuyển mạch mạng LAN).
-- **브라우터 (Brouter)**: cầu nối (bridge / 브리지) + Router.
+Phần “088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-### TCP/IP 프로토콜 (TCP/IP Protocols)
-- **214. MQTT**: IoT에서 사용하는 발행-구독 메시징 (Giao thức Publish/Subscribe cho IoT).
-- **215. TCP**: 신뢰성 있는 양방향 연결형 서비스 (Kết nối hai chiều, đáng tin cậy).
-- **216. UDP**: 비연결형, 빠른 속도, 실시간 전송 유리 (Không kết nối, truyền nhanh, hợp với Real-time).
-  - 💡 *Mẹo ghi nhớ*: TCP = Cẩn thận, chậm mà chắc. UDP = Nhanh, mất gói cũng không sao (Video call, Game).
+- **TCP (Transmission Control Protocol)**: 연결 지향, 신뢰성 높음, 흐름 및 오류 제어 지원. 속도는 느림.
+- **UDP (User Datagram Protocol)**: 비연결 지향, 신뢰성 낮음(오류 복구 안함). 실시간 전송(스트리밍)에 유리하여 속도가 빠름.
+- **TCP 흐름 제어 (Flow Control)**: 수신측이 처리할 수 있는 만큼만 보냄 (Window 크기 사용).
+  - Stop and Wait: 1개 보내고 응답 기다림.
+  - Sliding Window: 윈도우 크기만큼 한 번에 여러 개 보냄 (효율적).
+- **TCP 오류 제어 (Error Control)**:
+  - Go Back n: 오류 발생한 패킷부터 **그 이후의 모든 패킷** 재전송.
+  - Selective Repeat: 오류가 발생한 **해당 패킷만** 골라서 재전송.
+
+**Giải thích (Vietnamese):**
+- TCP giống như gửi thư bảo đảm, phải có người ký nhận mới yên tâm. Chậm nhưng chắc.
+- UDP giống như phát loa phóng thanh, cứ phát ra, ai nghe được thì nghe. Phù hợp gọi Video call (Rớt 1 hình cũng không sao, quan trọng là độ trễ thấp).
+- Trượt cửa sổ (Sliding Window): Kỹ thuật gửi liên tục nhiều gói tin mà không cần đợi từng gói báo nhận.
+- Go Back N: Bị lỗi gói số 3, hệ thống sẽ gửi lại từ gói 3, 4, 5... Selective Repeat: Lỗi gói 3 thì chỉ gửi lại đúng gói 3.
+
+---
+
+Điểm chốt của **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

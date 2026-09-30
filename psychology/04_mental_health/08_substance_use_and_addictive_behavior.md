@@ -154,6 +154,8 @@ Mục tiêu treatment phải phù hợp rủi ro (risk / 위험), preference và
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 reward learning + cue
       +
@@ -171,5 +173,3 @@ quyền kiểm soát hành vi
 ## Kết nối kiến thức
 
 Xem [[01_assessment_and_diagnosis]], [[12_depressive_disorders_and_anhedonia]], [[06_personality_pathology]], [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]], [[../05_intervention/01_cbt_behavioral_and_third_wave]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

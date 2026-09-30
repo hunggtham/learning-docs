@@ -11,6 +11,8 @@
 5. [Mixed Methods, Ethics, Reproducibility & Open Science](./04_mixed_methods_ethics_reproducibility_and_open_science.md) — tích hợp (integration / 통합) designs, consent/privacy, preregistration, reproducible pipelines, replication, dữ liệu (data / 데이터)/mã (code / 코드) sharing, reporting và AI-assisted research boundaries.
 
 ## Trục học (learning spine / 학습 축)
+Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Research problem
@@ -83,6 +85,8 @@ reproducibility materials
 ```
 
 ## Connections
+Phần “Connections” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Thinking Toolkit](../thinking/README.md): practical reasoning, claim evaluation, causal questions, uncertainty, forecasting and decision workflows before/after formal study design.
 - [Mathematics](../mathematics/README.md): xác suất (probability / 확률)/statistics foundation.

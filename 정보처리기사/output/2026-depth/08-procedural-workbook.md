@@ -35,6 +35,8 @@ V(G) = E - N + 2P
 với `P = 1`.
 
 ### Solution
+Phần “Solution” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 V(G) = 10 - 8 + 2 = 4
@@ -65,6 +67,8 @@ Tính biểu thức postfix:
 3. tính và push kết quả (result / 결과).
 
 ### Dấu vết (trace / 추적)
+Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 5       → [5]
@@ -143,6 +147,8 @@ h(k) = k mod 7
 Insert theo thứ tự `10, 17, 24, 11` bằng tuyến tính (linear / 선형) Probing.
 
 ### Dấu vết (trace / 추적)
+Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 10 mod 7 = 3 → slot 3 = 10
@@ -180,6 +186,8 @@ Sorted array:
 Tìm 31 bằng tìm kiếm nhị phân (binary search / 이진 탐색) với chỉ mục (index / 인덱스) 0-based.
 
 ### Dấu vết (trace / 추적)
+Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 low=0 high=8 mid=4 → a[4]=23 < 31 → low=5
@@ -265,6 +273,8 @@ CourseId  → CourseName
 Đây là **부분 함수 종속 — partial functional phụ thuộc (dependency / 의존성)**, vi phạm 2NF.
 
 ### Decompose
+Phần “Decompose” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Student(StudentId, StudentName)
@@ -296,6 +306,8 @@ DeptId → DeptName
 `EmpId` là key.
 
 ### Phân tích
+Phần “Phân tích” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 EmpId → DeptId → DeptName
@@ -323,6 +335,8 @@ Bảng (table / 테이블) `orders(customer_id, amount, status)`.
 Yêu cầu: chỉ tính các thứ tự (order / 순서) `PAID`, group theo customer, lấy customer có tổng amount > 1,000.
 
 ### SQL
+Phần “SQL” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```sql
 SELECT customer_id, SUM(amount) AS total_amount
@@ -370,6 +384,8 @@ GROUP BY c.id;
 ```
 
 ### Kết quả (result / 결과)
+Phần “Kết quả (result / 결과)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1 → 2
@@ -450,6 +466,8 @@ Processes cùng arrive thời gian (time / 시간) 0:
 FCFS thứ tự (order / 순서): P1 → P2 → P3.
 
 ### Waiting thời gian (time / 시간)
+Phần “Waiting thời gian (time / 시간)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 P1 = 0
@@ -464,6 +482,8 @@ Average waiting thời gian (time / 시간):
 ```
 
 ### Turnaround thời gian (time / 시간)
+Phần “Turnaround thời gian (time / 시간)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 P1 = 5
@@ -521,6 +541,8 @@ Quantum = 2
 ```
 
 ### Dấu vết (trace / 추적)
+Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 0-2   P1, remaining 3
@@ -566,6 +588,8 @@ Average waiting:
 ```
 
 ### Dấu vết (trace / 추적)
+Phần “Dấu vết (trace / 추적)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1 → [1,-,-] fault
@@ -749,6 +773,8 @@ int z = ++x;
 ```
 
 ### Trạng thái (state / 상태)
+Phần “Trạng thái (state / 상태)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 start: x=3
@@ -969,6 +995,8 @@ D. mạng (network / 네트워크) firewall / bảo mật (security / 보안) gr
 E. Context-appropriate đầu ra (output / 출력) encoding + đầu vào (input / 입력) handling
 
 ### Answer
+Phần “Answer” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1 → C
@@ -1109,6 +1137,8 @@ Normalization và vật lý (physical / 물리적)/hiệu năng (performance / �
 # Part F — Procedure templates phải nhớ
 
 ## Functional phụ thuộc (dependency / 의존성) / Key
+Phần “Functional phụ thuộc (dependency / 의존성) / Key” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1. Chọn attribute set X
@@ -1119,6 +1149,8 @@ Normalization và vật lý (physical / 물리적)/hiệu năng (performance / �
 ```
 
 ## Normalization
+Phần “Normalization” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1. Xác định candidate key
@@ -1131,6 +1163,8 @@ Normalization và vật lý (physical / 물리적)/hiệu năng (performance / �
 ```
 
 ## SQL Aggregate
+Phần “SQL Aggregate” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 FROM/JOIN
@@ -1145,6 +1179,8 @@ FROM/JOIN
 Đây là logical lập luận (reasoning / 추론) mô hình (model / 모델), không khẳng định DBMS physically execute đúng thứ tự đó.
 
 ## Xung đột (conflict / 충돌) Serializability
+Phần “Xung đột (conflict / 충돌) Serializability” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1. Tìm conflict pair trên cùng item
@@ -1155,6 +1191,8 @@ FROM/JOIN
 ```
 
 ## CPU Scheduling
+Phần “CPU Scheduling” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1. Vẽ timeline/Gantt
@@ -1165,6 +1203,8 @@ FROM/JOIN
 ```
 
 ## Page Replacement
+Phần “Page Replacement” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1. Ghi state frame sau từng reference
@@ -1175,6 +1215,8 @@ FROM/JOIN
 ```
 
 ## Subnetting
+Phần “Subnetting” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 1. prefix → host bits
@@ -1186,6 +1228,8 @@ FROM/JOIN
 ```
 
 ## PERT/CPM
+Phần “PERT/CPM” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 PERT expected = (O + 4M + P)/6

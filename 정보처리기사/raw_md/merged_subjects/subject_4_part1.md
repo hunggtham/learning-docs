@@ -7,6 +7,8 @@
 # **159** 
 
 ##### 치기초 **C/JAVA의 자료형** 
+Phần “치기초 **C/JAVA의 자료형**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ��생일이�‘01/09/69’에서�‘10/22/73’�사이인�자료만�검색 
 
@@ -18,6 +20,8 @@
 156<br><!-- End of picture text -->
 
 ##### 치기초 **그룹 함수** 
+Phần “치기초 **그룹 함수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종류|C|JAVA|
 |---|---|---|
@@ -55,6 +59,8 @@
 - •INTERSECT :�두�조회�결과�중�공통된�행만�출력함 
 
 # 초 **161** 치기 **Python의 시퀀스 자료형** 
+Phần “초 **161** 치기 **Python의 시퀀스 자료형**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 리스트(List) :�필요에�따라�개수를�늘리거나�줄일�수�있음 
 
@@ -74,6 +80,8 @@
 # **162** 
 
 ##### 치기초 **변수명 작성 규칙** 
+Phần “치기초 **변수명 작성 규칙**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>영문자,�숫자,�_(under�bar)를�사용할�수�있다.</u> 
 
@@ -109,6 +117,8 @@
 167 치기초 조건 연산자<br><!-- End of picture text -->
 
 ###### <u>조건에�따라�서로�다른�수식을�수행한다.</u> 
+Phần “<u>조건에�따라�서로�다른�수식을�수행한다.</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - mx = a < b ? b : a; 
 
@@ -170,6 +180,8 @@
 초<br>166 치기<br><!-- End of picture text -->
 
 ##### **논리 연산자** 
+Phần “**논리 연산자**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •! (not) :�부정 
 
@@ -225,6 +237,8 @@
    - r의 값과 은(는) 소수를 출력한 후, 커서를 다음 줄의 처 음으로 옮긴다. 
 
 # **173** 치기초 **switch문** 
+Phần “**173** 치기초 **switch문**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>�조건에�따라�분기할�곳이�여러�곳인�경우�간단하게�처리</u> 할�수�있는�제어문이다. 
 
@@ -316,6 +330,8 @@ do i = i + 1; while (i <= 10);
 a[0][0] a[0][1] a[0][2]<br>11 22 33<br>배열 b<br>44 55 66<br>a[1][0] a[1][1] a[1][2]<br><!-- End of picture text -->
 
 # **179** 치기초 **배열 형태의 문자열 변수** 
+Phần “**179** 치기초 **배열 형태의 문자열 변수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - “ ” 
 
@@ -339,6 +355,8 @@ a[0][0] a[0][1] a[0][2]<br>11 22 33<br>배열 b<br>44 55 66<br>a[1][0] a[1][1] a
 치기초 **1차원 배열** 
 
 ###### 변수들을�일직선상의�개념으로�조합한�배열이다. 
+Phần “변수들을�일직선상의�개념으로�조합한�배열이다.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - char a[3] = {‘A’, ‘B’, ‘C’}; 
 
@@ -366,6 +384,8 @@ main( ) { int a = 50; ❶ int *b; ❷ b = &a; ❸ *b = *b+20; ❹ printf("%d, %d
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **182** 치기 **Python의 input( ) 함수** 
+Phần “초 **182** 치기 **Python의 input( ) 함수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - <u>키보드로�입력받아�변수에�저장하는�함수이다.</u> 
 
@@ -394,6 +414,8 @@ main( ) { int a = 50; ❶ int *b; ❷ b = &a; ❸ *b = *b+20; ❹ printf("%d, %d
 -  print(82, 24, sep = ‘-’, end = ‘,’) 
 
 # **181** 치기초 **포인터와 배열** 
+Phần “**181** 치기초 **포인터와 배열**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
       - 82와 24 사이에 분리문자 ‘-’가 출력되고, 마지막에 종료문 자 ‘,’가 출력된다. 
 
@@ -518,6 +540,8 @@ a[‘이름’] a[‘나이’] a[‘주소’] 결과 리스트 a ‘이순신�
 초<br>치기 Python의 for문<br><!-- End of picture text -->
 
 # **189** 
+Phần “**189**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>range를 이용하는 방식</u> 
 
@@ -528,6 +552,8 @@ a[‘이름’] a[‘나이’] a[‘주소’] 결과 리스트 a ‘이순신�
 **28** 
 
 ## 정보처리기사 핵심 요약 
+Phần “정보처리기사 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>리스트(List)를 이용하는 방식</u> 
 
@@ -600,6 +626,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
    - 결과 <mark>10</mark> 
 
 # **193** 치기초 **스크립트 언어의 종류** 
+Phần “**193** 치기초 **스크립트 언어의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자바스크립트 :�웹�페이지의�동작을�제어하는�데�사용되 는�클라이언트용�스크립트�언어 
 
@@ -618,12 +646,16 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 ## 정보처리기사 핵심 요약 
 
 # **194** 치기초 **쉘 스크립트에서 사용되는 제어문** 
+Phần “**194** 치기초 **쉘 스크립트에서 사용되는 제어문**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 선택형 :�if,�case 
 
 - 반복형 :�for,�while,�until 
 
 # **198** 치기초 **UNIX - 커널(Kernel)의 기능** 
+Phần “**198** 치기초 **UNIX - 커널(Kernel)의 기능**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스(CPU�스케줄링)�관리 
 
@@ -634,18 +666,24 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 - 입·출력�관리 
 
 # **195** 치기초 **라이브러리** 
+Phần “**195** 치기초 **라이브러리**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 표준 라이브러리 :�프로그래밍�언어에�기본적으로�포함 <u>되어�있는�라이브러리로,�여러�종류의�모듈이나�패키지</u> 로�구성됨 
 
 - 외부 라이브러리 :�개발자들이�필요한�기능들을�만들어� 인터넷�등에�공유해�놓은�것으로,�외부�라이브러리를� 다운받아�설치한�후�사용함 
 
 # 초 **199** 치기 **UNIX - 쉘(Shell)** 
+Phần “초 **199** 치기 **UNIX - 쉘(Shell)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �사용자의�명령어를�인식하여�프로그램을�호출하고�명령 을�수행하는�명령어�해석기이다. 
 
 - <u>시스템과�사용자�간의�인터페이스를�담당한다.</u> 
 
 # **200** 치기초 **기억장치의 배치 전략** 
+Phần “**200** 치기초 **기억장치의 배치 전략**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •최초 적합(First Fit) :�첫�번째�분할�영역에�배치 
 
@@ -690,6 +728,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 **30** 
 
 ## 정보처리기사 핵심 요약 
+Phần “정보처리기사 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  참조 페이지를 각 페이지 프레임에 차례로 적재시키되 이미 적재된 페이지는 해당 위치의 페이지 프레임을 사용한다. 
 
@@ -772,6 +812,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 - •평균 반환 시간 : (20+22+30)/3 = 24 
 
 # **206** 치기초 **UNIX의 주요 명령어** 
+Phần “**206** 치기초 **UNIX의 주요 명령어**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •fork :�새로운�프로세스를�생성함 
 
@@ -790,6 +832,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 # **207** 
 
 ##### 치기초 **인터넷 주소 체계 - IPv4** 
+Phần “치기초 **인터넷 주소 체계 - IPv4**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>8비트씩�4부분,�총�32비트로�구성되어�있다.</u> 
 
@@ -802,6 +846,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 ## 정보처리기사 핵심 요약 
 
 # **208** 치기초 **인터넷 주소 체계 - IPv6** 
+Phần “**208** 치기초 **인터넷 주소 체계 - IPv6**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>16비트씩�8부분,�총�128비트로�구성되어�있다.</u> 
 
@@ -810,6 +856,8 @@ class Cls: x = 10 ❹       def add(self, a): ❺           return a + self.x �
 - �주소의�확장성, <u>융통성, 연동성이�뛰어나고,�품질�보장 이�용이하다.</u> 
 
 # 초 **OSI 7계층 - 세션 계층 212** 치기 **(Session Layer)** 
+Phần “초 **OSI 7계층 - 세션 계층 212** 치기 **(Session Layer)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - · 
 
@@ -1027,6 +1075,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 
 
 ###### 23.2, 21.3, 20.9 
+Phần “23.2, 21.3, 20.9” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**235**<br>핵심|JAVA의 데이터 타입 크기 및<br>기억 범위<br>400103|
 |---|---|
@@ -1061,6 +1111,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 - 변수는 저장하는 값에 따라 정수형, 실수형, 문자형, 포 인터형 등으로 구분한다. 
 
 ###### 변수명 작성 규칙 
+Phần “변수명 작성 규칙” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 영문자, 숫자, _(under bar)를 사용할 수 있다. 
 
@@ -1223,6 +1275,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 
 
 ### 핵심 **<mark>244</mark>** 조건 연산자 
+Phần “핵심 **<mark>244</mark>** 조건 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 
 
@@ -1247,6 +1301,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 ###### • 형식 
 
 ###### 조건 ? 수식1 : 수식2; 
+Phần “조건 ? 수식1 : 수식2;” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ‘조건’의 수식이 참이면 ‘수식1’을, 거짓이면 ‘수식2’를 실 행한다. 
 
@@ -1260,6 +1316,8 @@ struct sawon { char name[10]; char position[10]; int pay; }
 ### **<mark>245</mark>** 연산자 우선순위 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 개의 수식에 여러 개의 연산자가 사용되면 기본적으 로 아래 표의 순서대로 처리된다. 
 
@@ -1291,6 +1349,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 ### 정보처리기사 필기 핵심 요약 
 
 ###### 특징 
+Phần “특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 입력받을 데이터의 자료형, 자릿수 등을 지정할 수 있다. 
 
@@ -1303,6 +1363,8 @@ scanf( ) 함수는 C언어의 표준 입력 함수로, 키보드로 입 력받�
 -   printf("%-8.2f", 200.2); (∨는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -1398,6 +1460,8 @@ printf( ) 함수는 C언어의 표준 출력 함수로, 인수로 주어 진 값
 
 
 ### **<mark>250</mark>** JAVA에서의 표준 출력 
+Phần “**<mark>250</mark>** JAVA에서의 표준 출력” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - JAVA에서 값을 화면에 출력할 때는 System 클래스의 서브 클래스인 out 클래스의 메소드 print( ), println( ), printf( ) 등을 사용하여 출력한다. 
 
@@ -1412,10 +1476,14 @@ System.out.printf(서식 문자열, 변수)
 **73** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 -   System.out.printf(“%-8.2f”, 200.2); (V는 빈 칸을 의미함) 
 
 ###### <mark>200.20V V</mark> 
+Phần “<mark>200.20V V</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - % : 서식 문자임을 지정 
 
@@ -1450,6 +1518,8 @@ System.out.println( )
 -  System.out.print(“abc123” + “def”); 
 
 ###### abc123def 
+Phần “abc123def” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 | 
 
@@ -1741,6 +1811,8 @@ while문은 조건이 참인 동안 실행할 문장을 반복 수행하 는 제
 거짓<br>참<br>조건 실행할 문장 다음 코드<br>while문의 동작 과정<br><!-- End of picture text -->
 
 ###### • 형식 
+Phần “• 형식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - while(조건) • while은 반복문에 사용되는 예약어로 그대로 입력 한다. 
 
@@ -1881,6 +1953,8 @@ switch문이나 반복문의 실행을 제어하기 위해 사용되는 예약�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C 언어에서 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주소를 지정하는 것과 같다. 
 
@@ -1916,6 +1990,8 @@ switch문이나 반복문의 실행을 제어하기 위해 사용되는 예약�
 #### 2차원 배열 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 2차원 배열은 변수들을 평면, 즉 행과 열로 조합한 배 열이다. 
 
@@ -1942,6 +2018,8 @@ b[0][2] : b는 배열의 이름이고, 0은 행 첨자, 2는 열 첨자로서 �
 ###### 예제 3행 4열의 배열에 다음과 같이 숫자 저장하기 
 
 #include <stdio.h> main( ) { 
+Phần “include <stdio.h> main( ) {” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - int a[5]; 5개의 요소를 갖는 정수형 배열 a를 선언한다. 선언할 때는 사용할 개수를 선언하고, 사용할 때는 첨자를 0부터 사용하 므로 주의해야 한다. 
 
@@ -2029,6 +2107,8 @@ char 배열이름[크기] = “문자열”
 #### 배열의 초기화 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 배열 선언 시 초기값을 지정할 수 있다. 
 
@@ -2061,6 +2141,8 @@ a[0][0] a[0][1] a[0][2] a[0][3] 10 20 30 40 배열 a 50 60 70 80 a[1][0] a[1][1]
 > 예제 다음의 출력 결과를 확인하시오. 
 
 #include <stdio.h> main( ) { char a = 'A'; 문자형 변수 a에 문자 ‘A’를 저장한다. 문자 형 변수에는 한 글자만 저장되며, 저장될 때 는 아스키 코드값으로 변경되어 정수로 저 장된다. a가 저장하고 있는 값은 문자로 출 력하면 ‘A’가 출력되지만 숫자로 출력하면 ‘A’에 대한 아스키 코드 65가 출력된다. char b[9] = "SINAGONG"; 9개의 요소를 갖는 배열 b 를 선언하고 다음과 같이 초기화한다. 저장되는 글자 는 8자이지만 문자열의 끝 에 자동으로 저장되는 널 문자(‘\0’)를 고려하여 크기 를 9로 지정한 것이다. 배열 b S I N A G O N G \0 b[0] b[1] b[2] b[3] b[4] b[5] b[6] b[7] b[8] char *c = "SINAGONG"; ❶ 포인터 변수 c에 “SINAGONG” 이라는 문자열이 저장된 곳의 주소를 저장한다. printf("%c\n", a); 변수 a의 값을 문자로 출력한다. printf("%s\n", b); 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주 소를 지정하는 것과 같으므로 배열 b의 첫 번째 요소가 가리키는 곳의 값을 문자 열로 출력한다. 
+Phần “include <stdio.h> main( ) { char a = 'A'; 문자형 변수 a에 문자 ‘A’를 저장한다. 문자 형 변수에는 한 글자만 저장되며, 저장될 때 는 아스키 코드값으로 변경되어 정수로 저 장된다. a가 저장하고 있는 값은 문자로 출 력하면 ‘A’가 출력되지만 숫자로 출력하면 ‘A’에 대한 아스키 코드 65가 출력된다. char b[9] = "SINAGONG"; 9개의 요소를 갖는 배열 b 를 선언하고 다음과 같이 초기화한다. 저장되는 글자 는 8자이지만 문자열의 끝 에 자동으로 저장되는 널 문자(‘\0’)를 고려하여 크기 를 9로 지정한 것이다. 배열 b S I N A G O N G \0 b[0] b[1] b[2] b[3] b[4] b[5] b[6] b[7] b[8] char *c = "SINAGONG"; ❶ 포인터 변수 c에 “SINAGONG” 이라는 문자열이 저장된 곳의 주소를 저장한다. printf("%c\n", a); 변수 a의 값을 문자로 출력한다. printf("%s\n", b); 배열 위치를 나타내는 첨자 없이 배열 이 름을 사용하면 배열의 첫 번째 요소의 주 소를 지정하는 것과 같으므로 배열 b의 첫 번째 요소가 가리키는 곳의 값을 문자 열로 출력한다.” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 -   int a[5] = { 3, }; 또는 int a[5] = { 3 }; 
 
@@ -2160,6 +2242,8 @@ b = &a; ❸ 정수형 변수 a의 주소를 포인터 변수 b에 기 억시킨�
 printf(“%d, %d”, a, *b); ❺ 
 
 ###### 결과 <mark>70, 70</mark> 
+Phần “결과 <mark>70, 70</mark>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❷와 같이 선언할 때 *는 해당 변수가 포인 터 변수라는 것을 의미한다. 
 
@@ -2277,6 +2361,8 @@ a[0] a[1] a[2] a[3] a[4] ← 배열 표기 방법 배열 a 첫 번째 두 번째
 401101<br><!-- End of picture text -->
 
 ### 핵심 **<mark>264</mark>** Python의 기본 문법 
+Phần “핵심 **<mark>264</mark>** Python의 기본 문법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수의 자료형에 대한 선언이 없다. 
 
@@ -2324,6 +2410,8 @@ a[0] a[1] a[2] a[3] a[4] ← 배열 표기 방법 배열 a 첫 번째 두 번째
 401102<br><!-- End of picture text -->
 
 ###### input( ) 함수 
+Phần “input( ) 함수” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - input( ) 함수는 Python의 표준 입력 함수로, 키보드로 입력받아 변수에 저장하는 함수이다. 
 
@@ -2424,6 +2512,8 @@ a[0] a[1] a[2] 결과 리스트 a 10 mike 23.45 ※ 두 방법에 대한 결과�
 ### **<mark>267</mark>** 리스트(List) 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - C와 Java에서는 여러 요소들을 하나의 이름으로 처리 할 때 배열을 사용했는데 Python에서는 리스트를 사용 한다. 
 
@@ -2444,6 +2534,8 @@ a[0] a[1] a[2] 결과 리스트 a 10 mike 23.45 ※ 두 방법에 대한 결과�
 - 형식 
 
 ##### 딕셔너리명 = { 키1:값1, 키2:값2, … } 
+Phần “딕셔너리명 = { 키1:값1, 키2:값2, … }” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 딕셔너리명은 사용자가 임의로 지정하며, 딕셔너리를 의 미하는 중괄호 사이에 저장할 값들을 쉼표로 구분하여 입 력한다. 
 
@@ -2485,6 +2577,8 @@ a = 15 if a > 10:  ❶ a가 10보다 크면 ❷번 문장을 실행하고, 아�
 결과 5 
 
 ##### 객체명[초기위치:최종위치:증가값] 
+Phần “객체명[초기위치:최종위치:증가값]” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ‘초기위치’에서 ‘최종위치’-1까지 ‘증가값’만큼 증가하면서 해당 위치의 요소들을 가져온다. 
 
@@ -2568,6 +2662,8 @@ i += 1 ❸ i의 값을 1씩 증가시킨다. hap += i ❹ i의 값을 hap에 누
 ❻ print(hap, avg) 
 
 ###### 코드 해설 
+Phần “코드 해설” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |❶리스트 a를 선언하면서|초기값을 지정한다.|
 |---|---|
@@ -2620,6 +2716,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 ##### 실행할 문장 
 
 ##### def 메소드명(self, 인수): 
+Phần “def 메소드명(self, 인수):” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - def는 메소드를 정의하는 예약어로, 그대로 입력하고, 메소드명은 사 용자가 임의로 지정한다. 
 
@@ -2630,6 +2728,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 실행할 문장 
 
 #### return 값 
+Phần “return 값” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - return은 메소드를 호출한 위치로 값을 돌려주기 위해 사용하는 예약 어로, 그대로 입력한다. return 값이 없는 경우에는 생략할 수 있다. 
 
@@ -2644,6 +2744,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 - 객체의 선언 형식 
 
 ##### 변수명 = 클래스명( ) 
+Phần “변수명 = 클래스명( )” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 변수명은 사용자가 임의로 지정하고, 사전에 정의한 클래스명과 괄호( )를 적는다. 
 
@@ -2664,6 +2766,8 @@ class는 예약어로, 그대로 입력하고 클래스명은 사용자가 임�
 #### Python - While문 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 형식 
 
@@ -2708,6 +2812,8 @@ x, y = 10, 20 Cls 클래스의 변수(속성) x와 y를 선언하고, 각 각 10
 ### 정보처리기사 필기 핵심 요약 
 
 ###### 코드 해설 
+Phần “코드 해설” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - ❶  Cls 클래스의 객체 a를 생성한다. 객체 a는 Cls의 속성 x, y와 메소드 chg( )를 갖 는다. 
 
@@ -2793,6 +2899,8 @@ a, b = 3, 12  ❶ 변수 a와 b에 3과 12를 저장한다. a = calc(a, b)  ❷<
 **87** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**2**<br>핵심|객체지향 프로그래밍 언어의<br>종류<br>401503<br>**76**|
 |---|---|
@@ -2989,6 +3097,8 @@ C언어는 라이브러리를 헤더 파일로 제공하는데, 각 헤더 파�
 ### **<mark>284</mark>** 운영체제의 기능 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세서(처리기, Processor), 기억장치(주기억장치, 보조기억장치), 입·출력장치, 파일 및 정보 등의 자원 을 관리한다. 
 
@@ -3038,6 +3148,8 @@ Single-User 컴퓨터 한 대를 한 사람만이 독점해서 사용함 시스�
 #### Windows 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - Windows는 1990년대 마이크로소프트(Microsoft) 사 가 개발한 운영체제이다. 
 
@@ -3077,6 +3189,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ### 정보처리기사 필기 핵심 요약 
 
 ###### ※ 다중 사용자(Multi-User), 다중 작업(Multi-Tasking) 
+Phần “※ 다중 사용자(Multi-User), 다중 작업(Multi-Tasking)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 다중 사용자(Multi-User)는 여러 사용자가 동시 에 시스템을 사용하는 것이고, 다중 작업(MultiTasking)은 여러 개의 작업이나 프로그램을 동시에 수행하는 것을 의미한다. 
 
@@ -3113,6 +3227,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ###### 핵심 
 
 ###### 커널(Kernel) 
+Phần “커널(Kernel)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - UNIX의 가장 핵심적인 부분이다. 
 
@@ -3123,6 +3239,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 - 프로세스(CPU 스케줄링) 관리, 기억장치 관리, 파일 관 리, 입·출력 관리, 프로세스간 통신, 데이터 전송 및 변환 등 여러 가지 기능을 수행한다. 
 
 ###### 쉘(Shell) 
+Phần “쉘(Shell)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용자의 명령어를 인식하여 프로그램을 호출하고 명 령을 수행하는 명령어 해석기이다. 
 
@@ -3157,6 +3275,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 - 공용 Shell(Bourne Shell, C Shell, Korn Shell)이나 사용자 자신이 만든 Shell을 사용할 수 있다. 
 
 ###### Utility Program 
+Phần “Utility Program” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 일반 사용자가 작성한 응용 프로그램을 처리하는 데 사 용한다. 
 
@@ -3193,6 +3313,8 @@ UNIX는 1960년대 AT&T 벨(Bell) 연구소, MIT, General Electric이 공동 개
 ### 세그먼테이션 **291** (Segmentation) 기법 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 세그먼테이션 기법은 가상기억장치에 보관되어 있는 프로그램을 다양한 크기의 논리적인 단위로 나눈 후 주 기억장치에 적재시켜 실행시키는 기법이다. 
 
@@ -3251,6 +3373,8 @@ SCR(Second 가장 오랫동안 주기억장치에 있던 페이지 중 자주 Ch
 ### **<mark>293</mark>** 
 
 ###### 페이지 크기가 작을 경우 
+Phần “페이지 크기가 작을 경우” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 페이지 단편화가 감소되고, 한 개의 페이지를 주기억장 치로 이동하는 시간이 줄어든다. 
 
@@ -3263,6 +3387,8 @@ SCR(Second 가장 오랫동안 주기억장치에 있던 페이지 중 자주 Ch
 - 디스크 접근 횟수가 많아져서 전체적인 입·출력 시간 은 늘어난다. 
 
 ###### 페이지 크기가 클 경우 
+Phần “페이지 크기가 클 경우” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 페이지 정보를 갖는 페이지 맵 테이블의 크기가 작아지 고, 매핑 속도가 빨라진다. 
 
@@ -3499,6 +3625,8 @@ PCB(Process Control Block, 프로세스 제어 블록)는 운 영체제가 프�
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스의 일부 특성을 갖고 있기 때문에 경량(Light Weight) 프로세스라고도 한다. 
 
@@ -3507,6 +3635,8 @@ PCB(Process Control Block, 프로세스 제어 블록)는 운 영체제가 프�
 - 동일 프로세스 환경에서 서로 독립적인 다중 수행이 가 능하다. 
 
 ###### • 스레드의 분류 
+Phần “• 스레드의 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사용자 수준의<br>스레드|• 사용자가 만든 라이브러리를 사용하여 스레드를<br>운용함<br>•속도는 빠르지만 구현이 어려움|
 |---|---|
@@ -3516,6 +3646,8 @@ PCB(Process Control Block, 프로세스 제어 블록)는 운 영체제가 프�
 
 
 ###### • 스레드 사용의 장점 
+Phần “• 스레드 사용의 장점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 하나의 프로세스를 여러 개의 스레드로 생성하여 병 행성을 증진시킬 수 있다. 
 
@@ -3610,6 +3742,8 @@ FCFS는 준비상태 큐(대기 큐, 준비 완료 리스트, 작업준 비 큐,
 ###### 23.7, 23.5, 22.7, 21.3, 20.8 
 
 ### 핵심 **<mark>304</mark>** UNIX / LINUX 기본 명령어 
+Phần “핵심 **<mark>304</mark>** UNIX / LINUX 기본 명령어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |명령어|기능|
 |---|---|
@@ -3708,6 +3842,8 @@ IP 주소는 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위�
 #### IPv6의 구성 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 16비트씩 8부분, 총 128비트로 구성되어 있다. 
 
@@ -3818,6 +3954,8 @@ IP 주소는 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위�
 ### **<mark>311</mark>** 응용 계층의 주요 프로토콜 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |FTP<br>(File Transfer<br>Protocol)|컴퓨터와 컴퓨터 또는 컴퓨터와 인터넷 사이<br>에서 파일을 주고받을 수 있도록 하는 원격<br>파일 전송 프로토콜|
 |---|---|
@@ -3864,6 +4002,8 @@ IP 주소는 인터넷에 연결된 모든 컴퓨터 자원을 구분하기 위�
 ###### 23.7, 22.4, 21.8, 21.5, 21.3, 20.9, 20.8, 20.6 
 
 ### 핵심 **<mark>312</mark>** 전송 계층의 주요 프로토콜 
+Phần “핵심 **<mark>312</mark>** 전송 계층의 주요 프로토콜” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 양방향 연결(Full Duplex Connection)형 서 비스를 제공함 
 
@@ -3932,6 +4072,8 @@ www.sinagong.co.kr
 
 
 ###### • 소프트웨어의 특징 
+Phần “• 소프트웨어의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |상품성|개발된소프트웨어는상품화되어판매됨|
 |---|---|
@@ -3950,6 +4092,8 @@ www.sinagong.co.kr
 - 피드백(Feedback) : 출력된 결과가 예정된 목표를 만족 시키지 못할 경우 목표 달성을 위해 반복 처리하는 것 
 
 ###### 소프트웨어 위기(Crisis) 
+Phần “소프트웨어 위기(Crisis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 여러 가지 원인에 의해 소프트웨어 개발 속도가 하드 웨어 개발 속도를 따라가지 못해 소프트웨어에 대한 사용자들의 요구사항을 처리할 수 없는 문제가 발생한 것을 의미한다. 
 

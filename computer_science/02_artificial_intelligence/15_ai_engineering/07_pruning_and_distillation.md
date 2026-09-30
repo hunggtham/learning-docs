@@ -134,6 +134,8 @@ Pruning phù hợp khi mô hình overparameterized và thời gian chạy (runti
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Pruning      → loại bỏ capacity ít cần thiết
 Distillation → huấn luyện mô hình nhỏ bắt chước hành vi hữu ích của mô hình lớn
@@ -156,5 +158,3 @@ Không. Student học hành vi trên distillation phân phối (distribution / �
 ## Liên kết kiến thức
 
 Xem [Quantization](./06_quantization.md), [Model Compression](./08_model_compression.md), [Information Theory](../01_mathematical_foundations/05_information_theory.md) và [Supervised Fine-Tuning](../08_large_language_models/07_supervised_fine_tuning.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -700,7 +700,9 @@ Trình biên dịch (compiler / 컴파일러) upgrade không được che mất 
 
 ---
 
-# 20. Android phiên bản (version / 버전) axis: `minSdk`, `compileSdk`, `targetSdk` không thể gộp
+# 20. Android version axis: `minSdk`, `compileSdk`, `targetSdk` không thể gộp
+Phần này nối mạch Android vừa học với “20. Android version axis: `minSdk`, `compileSdk`, `targetSdk` không thể gộp”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 minSdk
@@ -1252,7 +1254,9 @@ Trình biên dịch (compiler / 컴파일러) flag bỏ check chỉ nên là dia
 
 ---
 
-# 43. Lỗi JVM mục tiêu (target / 대상) mismatch — playbook điều tra
+# 43. Lỗi JVM target mismatch — playbook điều tra
+Phần này nối mạch Android vừa học với “43. Lỗi JVM target mismatch — playbook điều tra”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 1. xem Java targetCompatibility
@@ -1424,7 +1428,9 @@ Không kết luận tốt/xấu chỉ từ bản phát hành (release / 릴리�
 
 ---
 
-# 51. bản dựng (build / 빌드) hiệu năng (performance / 성능) cũng phải được đo clean và incremental riêng
+# 51. Build performance cũng phải được đo clean và incremental riêng
+Phần này nối mạch Android vừa học với “51. Build performance cũng phải được đo clean và incremental riêng”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 clean build
@@ -1689,6 +1695,4 @@ Evidence nào chứng minh migration thành công?
 
 Phiên bản (version / 버전) kỹ thuật (engineering / 엔지니어링) tốt là khả năng giữ **nguồn (source / 소스), nhị phân (binary / 이진), siêu dữ liệu (metadata / 메타데이터), generated mã (code / 코드), Android hành vi (behavior / 동작), persisted dữ liệu (data / 데이터) và bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물)** cùng tiến hóa mà không làm hệ thống mất khả năng bản dựng (build / 빌드), chạy, quay lui (rollback / 롤백) hoặc được gỡ lỗi (debug / 디버그).
 
-Đó là điểm mà kiến thức phiên bản (version / 버전) vượt khỏi “biết Kotlin 2.4 mới hơn Kotlin 1.9” và trở thành **tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링)** thực sự.
-
-> **Bàn giao:** Sau **10.1 Generated mã (code / 코드) là một API ranh giới (boundary / 경계)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đó là điểm mà kiến thức version vượt khỏi “biết Kotlin 2.4 mới hơn Kotlin 1.9” và trở thành **compatibility engineering** thực sự.

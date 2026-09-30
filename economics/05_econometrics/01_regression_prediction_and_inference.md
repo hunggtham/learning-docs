@@ -75,6 +75,8 @@ Nếu Y là log wage và X là years education:
 Coefficient interpretation phụ thuộc transformation và units.
 
 ## 6. Multiple regression
+Phần “6. Multiple regression” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Y = β0 + β1X1 + β2X2 + ... + u
@@ -171,6 +173,8 @@ Multicollinearity không nhất thiết độ lệch (bias / 편향) OLS; nó t�
 Perfect multicollinearity khiến coefficient không identified.
 
 ## 15. R-squared
+Phần “15. R-squared” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 R² = 1 − SSR/TSS

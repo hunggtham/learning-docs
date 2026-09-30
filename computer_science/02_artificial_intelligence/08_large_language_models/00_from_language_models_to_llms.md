@@ -179,6 +179,8 @@ Changing chat template can materially affect chất lượng (quality / 품질)/
 
 ## LLM ngăn xếp (stack / 스택) như một hệ thống (system / 시스템)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 User/Application
 ↓
@@ -224,5 +226,3 @@ Ngữ cảnh (context / 맥락) is temporary đầu vào (input / 입력); persi
 Prerequisites: [Language Models](../07_natural_language_processing/02_language_models.md), [Transformer](../06_deep_learning_architectures/05_transformer.md), [NLP tokenization](../07_natural_language_processing/01_text_normalization_and_tokenization.md).
 
 Xem tiếp: [LLM Tokenization](./01_llm_tokenization.md), then embeddings/Transformer internals, pretraining and post-training.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 llm tokenization](./01_llm_tokenization.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

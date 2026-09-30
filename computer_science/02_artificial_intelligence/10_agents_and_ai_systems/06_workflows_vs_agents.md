@@ -87,14 +87,18 @@ Nếu toàn bộ ứng dụng (application / 애플리케이션) là one giant t
 
 ## When to Prefer Workflow
 
-- compliance-heavy tiến trình (process / 프로세스);
-- chính xác (exact / 정확한) financial calculation;
-- fixed approval chuỗi (chain / 사슬);
-- repeated ETL/dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인);
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- compliance-heavy process;
+- exact financial calculation;
+- fixed approval chain;
+- repeated ETL/data pipeline;
 - known API orchestration;
 - trạng thái (state / 상태) transitions defined by nghiệp vụ (business / 비즈니스) rules.
 
 ## When tác nhân (agent / 에이전트) Adds giá trị (value / 값)
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 - open-ended research;
 - debugging unknown codebase;
@@ -154,5 +158,3 @@ More autonomy cũng nghĩa more variance, chi phí (cost / 비용) và rủi ro 
 Phân biệt này là nền cho hệ thống (system / 시스템) thiết kế (design / 설계) ở các chapter orchestration và độ tin cậy (reliability / 신뢰성).
 
 Xem tiếp: [Multi-Agent Systems](./07_multi_agent_systems.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

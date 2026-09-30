@@ -1,47 +1,45 @@
-# 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
+# 190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **191. 결합도 (Coupling / Mức độ phụ thuộc)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-프로그래밍, 언어, 종류, 특징
+바람직한, 설계의, 특징
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **소프트웨어 공학 및 실무 (Software Engineering & Practice)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**에서 만든 기준을 이어받아 **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** và nối nó với **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** và nối nó với **191. 결합도 (Coupling / Mức độ phụ thuộc)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
-### 275. 절차적 프로그래밍 언어의 종류 (Procedural Programming Languages / Ngôn ngữ lập trình hướng thủ tục)
-- **C**: 1972년 데니스 리치 개발, UNIX 일부 구현, 포인터 제공. 고급+저급 특징 모두 가짐. (Phát triển bởi Dennis Ritchie năm 1972, có con trỏ, kết hợp đặc điểm của ngôn ngữ bậc cao và bậc thấp).
-- **ALGOL**: 과학 기술 계산용. PASCAL과 C의 모체. (Ngôn ngữ tính toán khoa học, là tiền thân của Pascal và C).
-- **COBOL**: 사무 처리용. 영어 문장 형식, 4개의 DIVISION. (Ngôn ngữ xử lý nghiệp vụ, cú pháp giống tiếng Anh, chia làm 4 phần - DIVISION).
-- **FORTRAN**: 과학 기술 계산용. 수학 공식 형태. (Ngôn ngữ tính toán khoa học kỹ thuật, cú pháp như công thức toán).
-  - 💡 *Mẹo ghi nhớ*: C = Pointer, ALGOL = thuật toán (algorithm / 알고리즘), COBOL = nghiệp vụ (business / 비즈니스), FORTRAN = Formula Translation.
+## 190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)
 
-### 276. 객체지향 프로그래밍 언어의 종류 (Object-Oriented Languages / Ngôn ngữ lập trình hướng đối tượng)
-- **JAVA**: 분산 네트워크, 멀티스레드, 운영체제에 독립적(이식성 강함). (Hỗ trợ mạng phân tán, đa luồng, chạy độc lập không phụ thuộc hệ điều hành nhờ JVM).
-- **C++**: C언어에 객체지향 개념 적용. (Bổ sung tính năng OOP vào ngôn ngữ C).
-- **Smalltalk**: 1세대, 순수한 객체지향, 최초의 GUI 제공. (Ngôn ngữ OOP thuần túy thế hệ 1, ngôn ngữ đầu tiên cung cấp giao diện đồ họa).
-  - 💡 *Mẹo ghi nhớ*: Java = Đa luồng/Độc lập HĐH, Smalltalk = Thuần OOP/GUI đầu tiên.
+Từ **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, ta đã có điểm tựa để bước vào **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 54/91 trước khi đi vào chi tiết.
 
-### 278. 선언형 프로그래밍 언어의 종류 (Declarative Programming Languages / Ngôn ngữ lập trình khai báo)
-- **HTML**: 하이퍼텍스트 문서. 단순 텍스트. (Ngôn ngữ đánh dấu văn bản siêu liên kết).
-- **XML**: 웹에서 구조화된 문서 상호 교환, 사용자 정의 태그. (Ngôn ngữ đánh dấu mở rộng, cho phép tự định nghĩa thẻ Tag, dùng để trao đổi dữ liệu).
-- **LISP**: 인공지능(AI), 연결 리스트, 재귀 호출. (Dùng trong AI, dùng danh sách liên kết, đệ quy nhiều).
-- **PROLOG**: 인공지능, 논리적 추론. (Dùng trong AI, suy luận logic).
-- **Haskell**: 함수형 언어, 부작용(Side Effect) 없음. (Ngôn ngữ hàm, không có hiệu ứng phụ).
-  - 💡 *Mẹo ghi nhớ*: AI = LISP & PROLOG. XML = Tag tự định nghĩa. Haskell = Hàm thuần túy.
+Để đọc **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 적당한 모듈 크기를 유지.
+- **결합도(Coupling)는 약하게, 응집도(Cohesion)는 강하게 설계한다**.
+
+**Giải thích (Vietnamese):**
+Một thiết kế phần mềm chuẩn mực phải đảm bảo: "Mối liên kết giữa các module càng lỏng lẻo càng tốt (Low Coupling), nhưng sự gắn kết nhiệm vụ bên trong một module phải càng chặt chẽ càng tốt (High Cohesion)".
+
+---
+
+Điểm chốt của **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **191. 결합도 (Coupling / Mức độ phụ thuộc)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

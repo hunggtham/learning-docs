@@ -216,8 +216,10 @@ Chỉ số (metric / 지표) không đi cùng dấu vết (trace / 추적) khi�
 
 ## Dạng thất bại (failure mode / 실패 모드) đặc thù của AI
 
-- phân phối (distribution / 분포) shift;
-- mô hình (model / 모델) unavailable;
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
+- distribution shift;
+- model unavailable;
 - tokenizer mismatch;
 - GPU OOM;
 - ngữ cảnh (context / 맥락) overflow;
@@ -284,5 +286,3 @@ Không. tính đồng thời (concurrency / 동시성), bộ nhớ (memory / 메
 Kỹ thuật AI kết nối [Kiến trúc hệ thống AI](../00_foundations/04_ai_system_architecture.md), dữ liệu (data / 데이터), tác nhân (agent / 에이전트)/RAG và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학).
 
 Xem tiếp: [Training Pipeline](./01_training_pipeline.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 training pipeline](./01_training_pipeline.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

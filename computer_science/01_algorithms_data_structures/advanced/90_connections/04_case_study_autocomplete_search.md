@@ -363,6 +363,8 @@ Một benchmark chỉ với từ ASCII ngẫu nhiên sẽ không đại diện t
 
 ## 20. Khi nào chọn cấu trúc nào?
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Dictionary tĩnh, bộ nhớ quan trọng:
     Sorted Array / FST
@@ -385,5 +387,3 @@ Popularity stream quy mô lớn:
 > Autocomplete không phải “bài Trie”. Nó là một hệ thống **retrieval + ranking + caching + streaming statistics**. Trie chỉ materialize quan hệ prefix; vùng nhớ động (heap / 힙) hỗ trợ Top-K; băm (hash / 해시) Map hỗ trợ bộ nhớ đệm (cache / 캐시)/counter; sketch giảm trạng thái (state / 상태); sorting/FST tối ưu dữ liệu tĩnh; Unicode và phân tán (distributed / 분산) partitioning quyết định tính đúng đắn ở cấp sản phẩm.
 
 Xem thêm: [Trie](../02_trees/04_tries.md), [String Algorithms](../05_specialized/00_string_algorithms.md), [Selection & Top-K](../04_algorithmic_paradigms/06_selection_and_top_k.md), [Probabilistic Data Structures](../05_specialized/06_probabilistic_data_structures.md), [Hash Tables](../01_linear_structures/04_hash_tables.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 choose the right data structure](./00_choose_the_right_data_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

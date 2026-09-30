@@ -290,7 +290,9 @@ Nhưng long-lived media/camera session thường nên đơn vị sở hữu (own
 
 # Lỗi (error / 오류) mô hình (model / 모델)
 
-## 35. thiết bị (device / 장치) tích hợp (integration / 통합) lỗi (error / 오류) không nên là string
+## 35. Device integration error không nên là string
+Phần này nối mạch Android vừa học với “35. Device integration error không nên là string”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 sealed interface DeviceError {

@@ -657,6 +657,8 @@ Không bắt đầu bằng việc rewrite hàm (function / 함수) dài nhất n
 ---
 
 ## 31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist
+Phần “31. sự kiện (event / 이벤트) kiến trúc (architecture / 아키텍처) rà soát (review / 검토) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Event này là user signal hay business command?
@@ -674,6 +676,8 @@ Async callback có stale-intent guard không?
 ---
 
 ## 32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist
+Phần “32. hiệu năng (performance / 성능) rà soát (review / 검토) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 User-visible budget được chia stage chưa?

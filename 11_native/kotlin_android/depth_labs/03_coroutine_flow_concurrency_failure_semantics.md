@@ -371,7 +371,9 @@ Sự đánh đổi (trade-off / 트레이드오프) là cần xử lý hàng đ�
 
 ---
 
-## 14. Cold luồng (flow / 흐름) là recipe, không phải running stream
+## 14. Cold Flow là recipe, không phải running stream
+Phần này nối mạch Android vừa học với “14. Cold Flow là recipe, không phải running stream”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 val flow = flow {
@@ -472,6 +474,8 @@ Không dùng `collectLatest` cho thao tác (operation / 연산) không được 
 ---
 
 ## 19. `flatMapLatest` bảo vệ stale-request race
+Phần này nối mạch Android vừa học với “19. `flatMapLatest` bảo vệ stale-request race”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 query
@@ -638,7 +642,9 @@ Tính đồng thời (concurrency / 동시성) operator không thay thế dữ l
 
 ---
 
-## 28. Race giữa logout và in-flight yêu cầu (request / 요청)
+## 28. Race giữa logout và in-flight request
+Phần này nối mạch Android vừa học với “28. Race giữa logout và in-flight request”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 T0 account A request start
@@ -664,7 +670,9 @@ Trạng thái (state / 상태) nên đi qua lifecycle-aware đơn vị sở hữ
 
 ---
 
-## 30. hết thời gian chờ (timeout / 타임아웃) cần ở ranh giới (boundary / 경계) đúng
+## 30. Timeout cần ở boundary đúng
+Phần này nối mạch Android vừa học với “30. Timeout cần ở boundary đúng”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 withTimeout(5_000) {
@@ -687,7 +695,9 @@ Một hết thời gian chờ (timeout / 타임아웃) toàn cục (global / 전
 
 ---
 
-## 31. thử lại (retry / 재시도) trong luồng (flow / 흐름) cần phân loại lỗi (error / 오류)
+## 31. Retry trong Flow cần phân loại error
+Phần này nối mạch Android vừa học với “31. Retry trong Flow cần phân loại error”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 flow.retry(3)
@@ -840,7 +850,9 @@ Quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프) thư�
 
 ---
 
-## 38. tính đồng thời (concurrency / 동시성) thiết kế (design / 설계) checklist
+## 38. Concurrency design checklist
+Phần này nối mạch Android vừa học với “38. Concurrency design checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | Ý nghĩa |
 |---|---|
@@ -876,6 +888,4 @@ owner
 -> deterministic test
 ```
 
-Khi những điểm này rõ, việc chọn `launch`, `async`, `stateIn`, `flatMapLatest`, `Mutex` hay `callbackFlow` trở thành quyết định có lý do thay vì mẫu (pattern / 패턴) bản sao (copy / 복사) từ mẫu (sample / 표본).
-
-> **Bàn giao:** Sau **39. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi những điểm này rõ, việc chọn `launch`, `async`, `stateIn`, `flatMapLatest`, `Mutex` hay `callbackFlow` trở thành quyết định có lý do thay vì pattern copy từ sample.

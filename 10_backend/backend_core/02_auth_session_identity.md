@@ -40,6 +40,8 @@ attribute cần kiểm tra ở use trường hợp (case / 사례). Kiểm tra �
 > **Chuyển mạch:** Từ **Authorization mô hình (model / 모델)**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - session fixation sau login nếu không rotate session ID;
 - đơn vị từ (token / 토큰) hết hạn giữa yêu cầu (request / 요청) và thử lại (retry / 재시도);

@@ -6,6 +6,8 @@
 
 ## Con số nên thuộc
 
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+
 | Fact | Số |
 |---|---:|
 | 대통령 임기 | 5년 |
@@ -35,6 +37,8 @@
 > **Chuyển mạch:** Từ **Bộ bốn cần phản xạ**, ta sang **Cơ quan dễ nhầm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cơ quan dễ nhầm
+
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
 
 | Cơ quan | Chức năng |
 |---|---|

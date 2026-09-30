@@ -65,6 +65,8 @@ flowchart TD
 
 ## Cấu trúc chuẩn gốc (canonical / 정본) hiện tại
 
+Danh sách dưới đây biến dependency flow thành các chapter có thể mở và học được. Mỗi thư mục tiếp nhận kết quả của phần trước, vì vậy nên đọc phần mô hình nền trước khi nhảy vào công thức chuyên đề.
+
 ```text
 chemistry/
 ├── README.md
@@ -351,6 +353,4 @@ Nấu ăn, làm sạch, bảo quản thực phẩm, gỉ sắt, thuốc, nhựa 
 
 Bắt đầu từ [Hóa học nghiên cứu điều gì?](./00_foundations/00_what_is_chemistry.md), tiếp theo [Vật chất và phép đo](./00_foundations/01_matter_and_measurement.md), rồi đi theo phụ thuộc (dependency / 의존성) luồng (flow / 흐름) ở đầu tệp (file / 파일).
 
-Trạng thái chi tiết của từng lĩnh vực (domain / 도메인) và các pass còn cần làm được theo dõi trong [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md).
-
-> **Bàn giao:** Sau **Bắt đầu học**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Trạng thái chi tiết của từng domain và các pass còn cần làm được theo dõi trong [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md).

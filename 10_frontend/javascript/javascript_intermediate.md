@@ -439,7 +439,9 @@ Nếu closure chỉ snapshot `"idle"`, đầu ra (output / 출력) đã là `"id
 
 Điều này giải thích cả sức mạnh lẫn bug của closure. Một callback có thể thấy trạng thái (state / 상태) mới nếu binding bị mutate; nhưng một hệ thống kết xuất (render / 렌더링) tạo **binding mới cho mỗi kết xuất (render / 렌더링)/lời gọi (call / 호출)** có thể khiến callback giữ binding cũ, tạo stale closure.
 
-## Mỗi factory lời gọi (call / 호출) có một private môi trường (environment / 환경) khác nhau
+## Mỗi factory call có một private environment khác nhau
+Phần này nối mạch bài học với “Mỗi factory call có một private environment khác nhau”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function createCounter() {
@@ -574,7 +576,9 @@ loggedAdd(1, 2);
 
 `withLogging` là Higher-Order hàm (function / 함수) vì nó nhận hàm (function / 함수) và trả hàm (function / 함수).
 
-### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — decorator-like wrapper
+### Programming pattern — decorator-like wrapper
+Phần này nối mạch bài học với “Programming pattern — decorator-like wrapper”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function withTiming(fn) {
@@ -667,6 +671,8 @@ Khi nhìn một normal hàm (function / 함수), hãy xác định `this` bằng
 Arrow hàm (function / 함수) là exception lớn vì không tạo own động (dynamic / 동적) `this`; nó dùng lexical `this` của surrounding ngữ cảnh (context / 맥락).
 
 ### Implicit receiver là expression ngay trước dấu `.`/`[]`
+Phần này nối mạch bài học với “Implicit receiver là expression ngay trước dấu `.`/`[]`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const account = {
@@ -692,7 +698,9 @@ account["owner"].show();
 
 receiver vẫn là đơn vị sở hữu (owner / 오너) đối tượng (object / 객체).
 
-### Detached phương thức (method / 메서드) làm mất receiver
+### Detached method làm mất receiver
+Phần này nối mạch bài học với “Detached method làm mất receiver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const show = account.owner.show;
@@ -713,6 +721,8 @@ button.addEventListener("click", handleClick);
 ```
 
 ### `this` và lexical variables là hai cơ chế khác nhau
+Phần này nối mạch bài học với “`this` và lexical variables là hai cơ chế khác nhau”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const name = "outer";
@@ -729,7 +739,9 @@ const user = {
 
 `name` được resolve qua lexical phạm vi (scope / 범위). `this.name` bắt đầu từ thời gian chạy (runtime / 런타임) receiver rồi thuộc tính (property / 속성) lookup. Nếu trộn hai mô hình tư duy (mental models / 사고 모델들), `this` sẽ luôn cảm giác “bí ẩn”.
 
-### Lớp (class / 클래스) không thay đổi quy tắc cốt lõi của detached phương thức (method / 메서드)
+### Class không thay đổi quy tắc cốt lõi của detached method
+Phần này nối mạch bài học với “Class không thay đổi quy tắc cốt lõi của detached method”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class User {
@@ -810,7 +822,9 @@ element.addEventListener(
 );
 ```
 
-### Partial ứng dụng (application / 애플리케이션)
+### Partial application
+Phần này nối mạch bài học với “Partial application”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function multiply(a, b) {
@@ -985,7 +999,9 @@ User.prototype
 
 Sau đó hàm (function / 함수) được gọi với receiver `user`, nên bên trong phương thức (method / 메서드) `this` vẫn là `user`, **không phải `User.prototype`**. Đây là chỗ `this` và prototype chuỗi (chain / 사슬) giao nhau: prototype quyết định **tìm hàm (function / 함수) ở đâu**; call-site quyết định **receiver là ai**.
 
-## Shadowing inherited thuộc tính (property / 속성)
+## Shadowing inherited property
+Phần này nối mạch bài học với “Shadowing inherited property”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const proto = {
@@ -1012,6 +1028,8 @@ Object.getPrototypeOf(account);
 Accessor descriptors có thể làm assignment ngữ nghĩa (semantics / 의미론) phức tạp hơn, vì inherited setter có thể được gọi. Chương thuộc tính (property / 속성) Descriptors giải thích cơ chế đó.
 
 ## `instanceof` kiểm tra prototype relationship
+Phần này nối mạch bài học với “`instanceof` kiểm tra prototype relationship”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 user instanceof User;
@@ -1021,7 +1039,9 @@ user instanceof User;
 
 Vì thế prototype mutation có thể thay đổi kết quả (result / 결과), và cross-realm objects có thể làm `instanceof Array`/`instanceof Error` không hoạt động như bạn kỳ vọng. Với arrays, `Array.isArray()` thường robust hơn cross-realm.
 
-## Prototype mutation là global-ish hành vi (behavior / 동작) thay đổi (change / 변경) cho descendants
+## Prototype mutation là global-ish behavior change cho descendants
+Phần này nối mạch bài học với “Prototype mutation là global-ish behavior change cho descendants”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 User.prototype.greet = function () {
@@ -1039,7 +1059,9 @@ Array.prototype.last = function () {
 
 Bạn đã thay hành vi (behavior / 동작) của mọi array trong realm và có nguy cơ xung đột (conflict / 충돌) với thư viện (library / 라이브러리)/tiêu chuẩn (standard / 표준) tương lai.
 
-## Lớp (class / 클래스) cú pháp (syntax / 문법) không xóa prototype mô hình (model / 모델)
+## Class syntax không xóa prototype model
+Phần này nối mạch bài học với “Class syntax không xóa prototype model”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class User {
@@ -1140,6 +1162,8 @@ class Counter {
 ---
 
 # Chương 12 — Inheritance và composition over inheritance
+Phần này nối mạch bài học với “Chương 12 — Inheritance và composition over inheritance”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class Employee extends User {
@@ -1536,6 +1560,8 @@ return Promise/thenable
 ```
 
 ## `.then()` không sửa Promise cũ
+Phần này nối mạch bài học với “`.then()` không sửa Promise cũ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const p1 = Promise.resolve(10);
@@ -1544,7 +1570,9 @@ const p2 = p1.then((value) => value * 2);
 
 `p1` và `p2` là hai Promise khác nhau. Đây là nền tảng của chaining. Mỗi `.then()` tạo một continuation và một Promise cho kết quả continuation đó.
 
-## Promise handlers luôn asynchronous so với hiện tại (current / 현재) synchronous ngăn xếp (stack / 스택)
+## Promise handlers luôn asynchronous so với current synchronous stack
+Phần này nối mạch bài học với “Promise handlers luôn asynchronous so với current synchronous stack”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 console.log("A");
@@ -1635,7 +1663,9 @@ const [profile, settings] = await Promise.all([
 ]);
 ```
 
-## `await` tạm dừng hàm (function / 함수), không tạm dừng luồng thực thi (thread / 스레드)
+## `await` tạm dừng function, không tạm dừng thread
+Phần này nối mạch bài học với “`await` tạm dừng function, không tạm dừng thread”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function load() {
@@ -1661,7 +1691,9 @@ return control to runtime
 resume function later with result
 ```
 
-## Async hàm (function / 함수) luôn wrap return giá trị (value / 값) thành Promise kết quả (outcome / 결과)
+## Async function luôn wrap return value thành Promise outcome
+Phần này nối mạch bài học với “Async function luôn wrap return value thành Promise outcome”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function getNumber() {
@@ -1696,6 +1728,8 @@ async function fail() {
 caller nhận rejected Promise.
 
 ## `try/catch` chỉ bắt rejection của phần bạn thật sự `await`
+Phần này nối mạch bài học với “`try/catch` chỉ bắt rejection của phần bạn thật sự `await`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function run() {
@@ -1752,6 +1786,8 @@ const [profile, settings] = await Promise.all([
 Cấp cao (senior / 시니어) concern ở đây là **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, không phải “await chậm”. Sequential là đúng khi thao tác (operation / 연산) B cần kết quả (result / 결과) A; concurrent là đúng khi chúng độc lập và tính đồng thời (concurrency / 동시성) mức (level / 수준) hợp lý.
 
 ### Async `forEach` trap
+Phần này nối mạch bài học với “Async `forEach` trap”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 items.forEach(async (item) => {
@@ -1861,6 +1897,8 @@ loop();
 Đây là mã (code / 코드) pathological; trình duyệt (browser / 브라우저) không có cơ hội bình thường để tiến tới tác vụ (task / 작업)/rendering tiếp theo.
 
 ## Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling
+Phần này nối mạch bài học với “Promise continuation và `queueMicrotask()` cùng thuộc microtask-level scheduling”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 console.log("A");
@@ -1908,7 +1946,9 @@ requestAnimationFrame(() => {
 
 Trong background tab, rendering/rAF có thể throttled hoặc pause tùy trình duyệt (browser / 브라우저). Vì vậy đừng dùng rAF làm nghiệp vụ (business / 비즈니스) clock.
 
-## Dấu vết (trace / 추적) một ví dụ đầy đủ
+## Trace một ví dụ đầy đủ
+Phần này nối mạch bài học với “Trace một ví dụ đầy đủ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 console.log("script start");
@@ -2248,7 +2288,9 @@ Pure hàm (function / 함수) dễ kiểm thử (test / 테스트) vì đầu ra
 
 Side effects như mạng (network / 네트워크)/lưu trữ (storage / 저장소)/DOM vẫn cần, nhưng nên tường minh (explicit / 명시적) ở ranh giới (boundary / 경계).
 
-### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — Functional cốt lõi (core / 핵심) / Imperative Shell
+### Programming pattern — Functional Core / Imperative Shell
+Phần này nối mạch bài học với “Programming pattern — Functional Core / Imperative Shell”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 read input
@@ -2407,7 +2449,9 @@ Benefits: ít listeners hơn, động (dynamic / 동적) children vẫn được
 
 ---
 
-# Chương 36 — DOM vòng đời (lifecycle / 생명주기): init và cleanup
+# Chương 36 — DOM lifecycle: init và cleanup
+Phần này nối mạch bài học với “Chương 36 — DOM lifecycle: init và cleanup”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function init() {
@@ -2692,7 +2736,9 @@ loading → error
 error → loading
 ```
 
-### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — tường minh (explicit / 명시적) máy trạng thái (state machine / 상태 머신) lite
+### Programming pattern — explicit state machine lite
+Phần này nối mạch bài học với “Programming pattern — explicit state machine lite”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const STATUS = {
@@ -2787,7 +2833,9 @@ Sự kiện (event / 이벤트) bus giảm coupling trực tiếp nhưng tạo h
 
 ---
 
-# Chương 45 — chiến lược (strategy / 전략) mẫu (pattern / 패턴) bằng hàm (function / 함수)
+# Chương 45 — Strategy Pattern bằng function
+Phần này nối mạch bài học với “Chương 45 — Strategy Pattern bằng function”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const discountStrategies = {
@@ -3180,7 +3228,9 @@ Dự án (project / 프로젝트) này kết hợp closure, cancellation, dịch
 
 ---
 
-# Chương 58 — Mini dự án (project / 프로젝트): Event-driven Store
+# Chương 58 — Mini Project: Event-driven Store
+Phần này nối mạch bài học với “Chương 58 — Mini Project: Event-driven Store”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function createStore(
@@ -3240,6 +3290,4 @@ Bạn cũng phải có thể refactor một tính năng (feature / 기능) trộ
 
 # Chương 60 — Hướng sang cấp cao (senior / 시니어)
 
-Cấp cao (senior / 시니어) JavaScript sẽ không tập trung thêm cú pháp (syntax / 문법). Nó tập trung thời gian chạy (runtime / 런타임)/engine, bộ nhớ (memory / 메모리)/GC, tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권), bounded tính đồng thời (concurrency / 동시성), Workers/Streams/backpressure, hiệu năng (performance / 성능) profiling, bảo mật (security / 보안), XSS/CSP/Trusted Types, prototype pollution, kiến trúc (architecture / 아키텍처) boundaries, resilience, caching, khả năng quan sát (observability / 관측 가능성) và môi trường vận hành (production / 운영 환경) testing. Đây là bước chuyển từ “nhà phát triển (developer / 개발자) hiểu ngôn ngữ (language / 언어)” sang “nhà phát triển (developer / 개발자) chịu trách nhiệm hệ thống chạy ổn trong môi trường vận hành (production / 운영 환경)”.
-
-> **Bàn giao:** Sau **cấp cao (senior / 시니어) ghi chú (note / 노트)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Senior JavaScript sẽ không tập trung thêm syntax. Nó tập trung runtime/engine, memory/GC, resource ownership, bounded concurrency, Workers/Streams/backpressure, performance profiling, security, XSS/CSP/Trusted Types, prototype pollution, architecture boundaries, resilience, caching, observability và production testing. Đây là bước chuyển từ “developer hiểu language” sang “developer chịu trách nhiệm hệ thống chạy ổn trong production”.

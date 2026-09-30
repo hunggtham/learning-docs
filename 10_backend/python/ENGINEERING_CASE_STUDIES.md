@@ -337,6 +337,8 @@ Bạn nên giải thích được vì sao shallow bản sao (copy / 복사) có 
 Nếu một câu chỉ trả lời được bằng tên API mà chưa mô tả bất biến (invariant / 불변식) và cơ chế (mechanism / 메커니즘), nên quay lại chuẩn gốc (canonical / 정본) part tương ứng.
 
 ## Nguồn chính
+Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Python 3.14 ngôn ngữ (language / 언어) tham chiếu (reference / 참조): https://docs.python.org/3.14/tham chiếu (reference / 참조)/
 - Python 3.14 thư viện chuẩn (standard library / 표준 라이브러리): https://docs.python.org/3.14/thư viện (library / 라이브러리)/

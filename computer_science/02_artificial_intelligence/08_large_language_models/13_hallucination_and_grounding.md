@@ -137,6 +137,8 @@ High-stakes workflow cần authoritative kiểm tra hợp lệ (validation / 검
 
 ## Grounded generation kiến trúc (architecture / 아키텍처)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 flowchart LR
     Q[Query] --> R[Retrieve / Tool]
@@ -189,5 +191,3 @@ Nó chỉ làm sampling ít random hơn.
 Hallucination nối [Pretraining](./04_pretraining.md), [Probability](../01_mathematical_foundations/02_probability_for_ai.md), thông tin (information / 정보) Retrieval và RAG.
 
 Xem tiếp: [LLM Evaluation](./14_llm_evaluation.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

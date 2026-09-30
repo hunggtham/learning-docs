@@ -132,6 +132,8 @@ Ngân sách (budget / 예산) at Completion (BAC) là ngân sách (budget / 예�
 Điểm dễ nhầm là EV không phải revenue và không phải giá trị thị trường (market value / 시장 가치). EV là “giá trị theo baseline” của công việc (work / 작업) hoàn thành.
 
 ### Variance
+Phần “Variance” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 SV = EV - PV = 400 - 500 = -100
@@ -141,6 +143,8 @@ CV = EV - AC = 400 - 450 = -50
 Schedule Variance (SV) âm nghĩa lượng planned công việc (work / 작업) đã earned thấp hơn mức dự kiến tại status date. chi phí (cost / 비용) Variance (CV) âm nghĩa dự án (project / 프로젝트) đã chi nhiều hơn budgeted giá trị (value / 값) của công việc (work / 작업) hoàn thành.
 
 ### Hiệu năng (performance / 성능) chỉ mục (index / 인덱스)
+Phần “Hiệu năng (performance / 성능) chỉ mục (index / 인덱스)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 SPI = EV / PV = 0.80
@@ -172,6 +176,8 @@ EAC = AC + (BAC - EV)
 Mô hình tư duy (mental model / 사고 모델): phần đã xảy ra được chấp nhận như sunk lịch sử (history / 이력); remaining công việc (work / 작업) quay lại efficiency 1.0.
 
 ### Trường hợp 2 — chi phí (cost / 비용) efficiency hiện tại sẽ tiếp tục
+Phần “Trường hợp 2 — chi phí (cost / 비용) efficiency hiện tại sẽ tiếp tục” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 EAC = BAC / CPI
@@ -559,6 +565,8 @@ Sanity check cũng áp dụng cho magnitude. Nếu thêm một engineer được
 Trước khi tin một đầu ra (output / 출력) phức tạp, hãy kiểm tra đơn vị, thứ tự (order / 순서) of magnitude và ranh giới (boundary / 경계). Đây là cách rẻ nhất để bắt mô hình (model / 모델) lỗi (error / 오류).
 
 ## Formula map theo meaning
+Phần “Formula map theo meaning” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 CPM

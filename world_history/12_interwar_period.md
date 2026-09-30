@@ -26,6 +26,8 @@ Gold tiêu chuẩn (standard / 표준) và war debt ràng buộc chính sách (p
 Radio, film, poster, party school và veteran mạng (network / 네트워크) làm politics đi vào đời sống hằng ngày. Fascism không chỉ là propaganda; nó kết hợp paramilitary, welfare có điều kiện, corporatist bargaining, racial exclusion và promise of national restoration. Communism, xã hội (social / 사회적) democracy, liberal reform và anti-colonial nationalism cũng cạnh tranh bằng các gói institution khác nhau.
 
 ### Stock/luồng (flow / 흐름)
+Phần “Stock/luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: war debt, industrial plant, party organization, public trust

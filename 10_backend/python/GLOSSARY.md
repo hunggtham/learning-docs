@@ -6,6 +6,8 @@
 Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên suốt Thư viện kiến thức Python (Python knowledge library / 파이썬 지식 라이브러리). Mục đích là giúp nhận diện cùng một concept khi đọc tài liệu Việt, documentation tiếng Anh hoặc tài liệu kỹ thuật Hàn Quốc. Đây không phải danh sách để học thuộc; phần giải thích đầy đủ vẫn nằm trong các chapter chuẩn gốc (canonical / 정본).
 
 ## Thực thi (execution / 실행), đối tượng (object / 객체) và dữ liệu (data / 데이터)
+Phần “Thực thi (execution / 실행), đối tượng (object / 객체) và dữ liệu (data / 데이터)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
 |---|---|
@@ -31,6 +33,8 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 > **Chuyển mạch:** Từ **thực thi (execution / 실행), đối tượng (object / 객체) và dữ liệu (data / 데이터)**, ta sang **hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)
+Phần “Hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
 |---|---|
@@ -50,6 +54,8 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 > **Chuyển mạch:** Từ **hàm (function / 함수), phạm vi (scope / 범위) và lỗi (error / 오류)**, ta sang **mô hình đối tượng (object model / 객체 모델), giao thức (protocol / 프로토콜) và typing** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình đối tượng (object model / 객체 모델), giao thức (protocol / 프로토콜) và typing
+Phần “Mô hình đối tượng (object model / 객체 모델), giao thức (protocol / 프로토콜) và typing” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
 |---|---|
@@ -86,6 +92,8 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 > **Chuyển mạch:** Từ **mô hình đối tượng (object model / 객체 모델), giao thức (protocol / 프로토콜) và typing**, ta sang **I/O và standard-library kỹ thuật (engineering / 엔지니어링)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## I/O và standard-library kỹ thuật (engineering / 엔지니어링)
+Phần “I/O và standard-library kỹ thuật (engineering / 엔지니어링)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
 |---|---|
@@ -103,6 +111,8 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 > **Chuyển mạch:** Từ **I/O và standard-library kỹ thuật (engineering / 엔지니어링)**, ta sang **dự án (project / 프로젝트), packaging, testing và thời gian chạy (runtime / 런타임)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Dự án (project / 프로젝트), packaging, testing và thời gian chạy (runtime / 런타임)
+Phần “Dự án (project / 프로젝트), packaging, testing và thời gian chạy (runtime / 런타임)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
 |---|---|
@@ -133,6 +143,8 @@ Glossary này chuẩn hóa các thuật ngữ quan trọng xuất hiện xuyên 
 > **Chuyển mạch:** Từ **dự án (project / 프로젝트), packaging, testing và thời gian chạy (runtime / 런타임)**, ta sang **tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경)
+Phần “Tính đồng thời (concurrency / 동시성) và môi trường vận hành (production / 운영 환경)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Thuật ngữ chuẩn | Ý nghĩa ngắn |
 |---|---|

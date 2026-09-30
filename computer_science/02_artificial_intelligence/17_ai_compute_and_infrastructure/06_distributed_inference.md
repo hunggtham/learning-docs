@@ -7,6 +7,8 @@
 
 ## Hai hướng quy mô (scale / 규모) chính
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Scale out request → nhiều replica
 Scale một model   → shard model qua nhiều device
@@ -180,6 +182,8 @@ Không có một mục tiêu (objective / 목표) duy nhất phù hợp mọi t�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Distributed inference = phân bố model state và request state trên hardware trong khi giảm communication và queueing.
 ```
@@ -201,5 +205,3 @@ Không phải lúc nào cũng đúng. Autoregressive generation, tác nhân (age
 ## Liên kết kiến thức
 
 Xem [Model Serving](../15_ai_engineering/03_model_serving.md), [Caching & Batching](../15_ai_engineering/05_caching_and_batching.md), [Parallel Computing](./04_parallel_computing.md), [Cluster Scheduling](./07_cluster_scheduling_and_interconnect.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 compute foundations](./00_compute_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

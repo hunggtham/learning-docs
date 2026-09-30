@@ -71,7 +71,9 @@ Cảm biến ghi năng lượng điện từ ở các dải bước sóng. Từ 
 
 ## Bốn loại độ phân giải
 
-- **Spatial resolution:** kích thước điểm ảnh (pixel / 픽셀).
+Trước khi chọn sensor hoặc sản phẩm raster, cần xác định mình đang tối ưu cho kích thước không gian, tần suất thời gian, dải phổ hay độ nhạy tín hiệu. Bốn loại resolution trả lời bốn câu hỏi khác nhau và không thể thay thế lẫn nhau.
+
+- **Spatial resolution:** kích thước pixel.
 - **Temporal resolution:** tần suất quan sát lại.
 - **Spectral resolution:** số và độ hẹp dải phổ.
 - **Radiometric resolution:** khả năng phân biệt mức tín hiệu.
@@ -155,5 +157,3 @@ Bản đồ cũng có thể làm lộ vị trí nhạy cảm. “Có thể vẽ�
 > GIS là **đo lường (measurement / 측정) mô hình (model / 모델) + coordinate hệ thống (system / 시스템) + spatial cơ sở dữ liệu (database / 데이터베이스) + phân tích (analysis / 분석) + visualization**. Viễn thám là chuỗi **bức xạ → cảm biến → preprocessing → tính năng (feature / 기능)/proxy → kiểm tra hợp lệ (validation / 검증)**. Luôn hỏi dữ liệu đã trải qua biến đổi nào trước khi trở thành điểm ảnh (pixel / 픽셀) hoặc polygon mà bạn nhìn thấy.
 
 Xem tiếp: [Bản đồ và phép chiếu](./03_cartography_projections_scale.md), [Địa lý + IT/GIS/Data](../90_connections/01_geography_it_gis_data.md), [Thủy văn](../01_physical_geography/04_hydrology_rivers_groundwater.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 geographical thinking](./00_geographical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

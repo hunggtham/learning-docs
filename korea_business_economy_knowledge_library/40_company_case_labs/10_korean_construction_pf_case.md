@@ -250,6 +250,8 @@ Dự án bất động sản
 
 ## 15. Thứ tự đọc DART cho nhà thầu
 
+Nhà thầu cần được đọc từ dự án, tiến độ và hợp đồng tới công nợ, PF, bảo lãnh và dòng tiền. Thứ tự DART dưới đây giúp phát hiện rủi ro bảng cân đối trước khi nhìn lợi nhuận kế toán.
+
 ```text
 1. Doanh thu theo mảng / backlog
 2. Danh sách dự án lớn
@@ -301,6 +303,8 @@ Sai vì bất động sản mang tính địa phương rất cao.
 
 ## 18. Bài tập nghiên cứu
 
+Bài tập này yêu cầu dựng một hồ sơ nhà thầu có timeline dự án, nghĩa vụ bảo lãnh và kịch bản tái cấp vốn. Mục tiêu là nối pháp lý và tiến độ với khả năng sống sót của bảng cân đối.
+
 | Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|
 | Đơn hàng mới | | | | | |
@@ -319,6 +323,4 @@ Bên cạnh bảng, hãy lập **bản đồ phơi nhiễm dự án (project exp
 
 > Phân tích xây dựng/PF Hàn Quốc là bài toán **thời điểm dòng tiền + vốn chủ sở hữu dự án mỏng + nghĩa vụ truy đòi có điều kiện**. Nhà thầu có thể trông khỏe trên báo cáo lợi nhuận nhưng yếu nếu nhiều dự án cùng lúc cần hỗ trợ thanh khoản. Luôn đi theo chuỗi: **kinh tế dự án → cấu trúc tài trợ → nghĩa vụ pháp lý → thanh khoản doanh nghiệp**.
 
-Trường hợp (case / 사례) này hoàn tất một vòng quan trọng của lớp thực hành: từ bán dẫn, ô tô, nền tảng số, SME, SI/SM tới ngân hàng, pin, quốc phòng, thương mại/logistics và tài chính bất động sản. Khi gặp công ty mới, hãy chọn trường hợp (case / 사례) có hàm sản xuất gần nhất rồi điều chỉnh cây động lực thay vì bắt đầu lại từ số 0.
-
-> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Case này hoàn tất một vòng quan trọng của lớp thực hành: từ bán dẫn, ô tô, nền tảng số, SME, SI/SM tới ngân hàng, pin, quốc phòng, thương mại/logistics và tài chính bất động sản. Khi gặp công ty mới, hãy chọn case có hàm sản xuất gần nhất rồi điều chỉnh cây động lực thay vì bắt đầu lại từ số 0.

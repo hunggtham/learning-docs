@@ -600,6 +600,8 @@ Nếu vòng phản hồi quá tập trung vào chỉ số ngắn hạn, hệ th�
 
 ## Liên hệ kiến thức: Hallyu như một chồng giao thức và chuỗi giá trị
 
+Sau khi theo dõi nội dung, nền tảng và fandom, ta có thể xem Hallyu như nhiều protocol chồng lên nhau: sáng tạo, quyền, phân phối, dữ liệu và doanh thu. Sơ đồ này giúp nối các lớp thay vì quy mọi thành công về “nội dung hay”.
+
 ```text
 lớp sáng tạo: bài hát / câu chuyện / trò chơi
 lớp lao động: tác giả / biên kịch / vũ công / biên tập / dịch giả
@@ -642,8 +644,8 @@ Lỗi hoặc bất cân xứng ở một lớp có thể làm thay đổi giá t
 
 ## Nguồn tham khảo cập nhật
 
-- Ministry of Culture, Sports and Tourism, 2025 Overseas Hallyu Survey, công bố 8/4/2025.
-- Ministry of Culture, Sports and Tourism, 2025 toàn cục (global / 전역) Hallyu Trend phân tích (analysis / 분석) Report, công bố 25/2/2026.
-- Khi nghiên cứu hợp đồng hoặc quyền sở hữu trí tuệ cụ thể, cần dùng luật hiện hành, hợp đồng thực tế và nguồn chuyên môn; chương này chỉ cung cấp khung phân tích văn hoá–kinh tế.
+Các nguồn này dùng để kiểm tra số liệu nền tảng, chính sách bản quyền và xu hướng thị trường theo thời điểm. Hãy ghi ngày truy cập vì dữ liệu Hallyu thay đổi nhanh.
 
-> **Bàn giao:** Sau **Nguồn tham khảo cập nhật**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- Ministry of Culture, Sports and Tourism, 2025 Overseas Hallyu Survey, công bố 8/4/2025.
+- Ministry of Culture, Sports and Tourism, 2025 Global Hallyu Trend Analysis Report, công bố 25/2/2026.
+- Khi nghiên cứu hợp đồng hoặc quyền sở hữu trí tuệ cụ thể, cần dùng luật hiện hành, hợp đồng thực tế và nguồn chuyên môn; chương này chỉ cung cấp khung phân tích văn hoá–kinh tế.

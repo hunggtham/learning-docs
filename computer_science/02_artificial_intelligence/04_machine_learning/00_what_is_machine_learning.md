@@ -468,6 +468,8 @@ Example tax formula should be mã (code / 코드)/rules. ML may predict missing 
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Data       = observed experience
 Model      = family of possible mappings
@@ -502,5 +504,3 @@ Thuật toán (algorithm / 알고리즘) still has mục tiêu (objective / 목�
 Machine học tập (learning / 학습) is where [Statistics](../01_mathematical_foundations/03_statistics_for_ai.md), [Optimization](../01_mathematical_foundations/06_optimization.md) and biểu diễn (representation / 표현) meet. The next chapters will make the học tập (learning / 학습) bài toán (problem / 문제) precise before introducing specific algorithms.
 
 Xem tiếp: [Learning Problem and Inductive Bias](./01_learning_problem_and_inductive_bias.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 learning problem and inductive bias](./01_learning_problem_and_inductive_bias.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

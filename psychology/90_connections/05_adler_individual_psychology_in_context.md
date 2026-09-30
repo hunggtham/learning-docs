@@ -132,6 +132,8 @@ Cả hai đều rời Freud, nhưng theo hai hướng khác nhau. Đọc họ nh
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Adlerian question
       ↓
@@ -149,5 +151,3 @@ Giá trị tốt nhất của Adler trong thư viện (library / 라이브러리
 ## Kết nối
 
 Xem [[00_freud_jung_and_depth_psychology_in_context]], [[06_historical_theories_and_modern_evidence_matrix]], [[../03_human_development_and_person/02_motivation_and_emotion]], [[../03_human_development_and_person/12_loneliness_social_connection_and_belonging]], [[../03_human_development_and_person/14_parenting_caregiving_and_family_development]] và [[../05_intervention/00_psychotherapy_and_change]].
-
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 freud jung and depth psychology in context](./00_freud_jung_and_depth_psychology_in_context.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

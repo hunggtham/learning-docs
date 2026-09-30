@@ -249,6 +249,8 @@ Thu nhập thực hộ gia đình giảm
 
 ### Kịch bản cải thiện mật độ
 
+Kịch bản này xem xét liệu đơn hàng trên mỗi tuyến, kho và người dùng có đủ tăng để cải thiện unit economics. Doanh thu tăng chưa đủ nếu chi phí giao hàng và khuyến mại tăng nhanh hơn.
+
 ```text
 Khách hàng hoạt động +8%
 Số đơn mỗi khách +10%
@@ -260,6 +262,8 @@ FCF cải thiện
 ```
 
 ### Kịch bản tăng trưởng nhưng kinh tế không cải thiện
+
+Kịch bản này cảnh báo tăng trưởng GMV có thể che lỗ vận hành và chi phí thu hút khách hàng. Hãy nối volume với contribution margin, cash burn và năng lực logistics.
 
 ```text
 GMV +20%
@@ -311,6 +315,8 @@ Sai vì hội viên tạo nghĩa vụ dịch vụ và làm thay đổi chi phí 
 
 ## 18. Bài tập nghiên cứu
 
+Bài tập biến câu chuyện thương mại điện tử thành các biến kiểm chứng được. Hãy tách growth, density, take rate, margin và capex trước khi kết luận về chất lượng mô hình.
+
 | Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|
 | Khách hàng hoạt động | | | | | |
@@ -329,5 +335,3 @@ Nếu doanh nghiệp không công bố chính xác số đơn hoặc mật độ
 > Thương mại điện tử tự vận hành fulfillment là một **mạng vật lý được điều phối bằng phần mềm**. Công nghệ giúp dự báo và điều phối; lợi thế kinh tế chỉ xuất hiện khi mật độ khách hàng, bố trí tồn kho và chất lượng vận hành làm đường chi phí–dịch vụ tốt hơn đối thủ một cách bền vững.
 
 Đọc tiếp [10_korean_construction_pf_case](./10_korean_construction_pf_case.md) để thấy mô hình thâm dụng dự án/tài sản, nơi thời điểm dòng tiền và bảo lãnh còn quan trọng hơn doanh thu báo cáo.
-
-> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

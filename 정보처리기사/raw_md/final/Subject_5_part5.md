@@ -1,6 +1,8 @@
 # ⦁ 보안 취약점 및 보안 기능 (Lỗ hổng bảo mật & Chức năng bảo mật)
 
 ## 1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)
+Phần “1. 메모리 버퍼 오버플로 (Memory Buffer Overflow / Tràn bộ đệm bộ nhớ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 연속된 메모리 공간을 사용하는 프로그램에서 할당된 메모리의 범위를 넘어선 위치에서 자료를 읽거나 쓰려고 할 때 발생하는 취약점.
 - **Tiếng Việt**: Lỗ hổng xảy ra khi chương trình ghi hoặc đọc dữ liệu vượt quá giới hạn vùng nhớ đã được cấp phát.
 - **예시 (Example)**: 
@@ -10,6 +12,8 @@
 - 💡 **Mẹo ghi nhớ**: Buffer Overflow = Bơm nước quá đầy làm tràn ly.
 
 ## 2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)
+Phần “2. 운영체제 명령어 삽입 (OS Command Injection / Tiêm lệnh hệ điều hành)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 외부 입력값을 통해 시스템 명령어의 실행을 유도함으로써 권한을 탈취하거나 장애를 유발하는 취약점.
 - **Tiếng Việt**: Chèn các lệnh hệ điều hành thông qua đầu vào của người dùng để thực thi trái phép trên server.
 - **예시 (Example)**: 
@@ -18,6 +22,8 @@
 - **대책**: 외부 입력값을 검증 없이 내부 명령어로 사용하지 않음.
 
 ## 3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)
+Phần “3. 사이트 간 요청 위조 (CSRF; Cross-Site Request Forgery / Giả mạo yêu cầu liên trang)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 사용자가 자신의 의지와 무관하게 공격자가 의도한 행위를 특정 웹사이트에 요청하게 하는 취약점.
 - **Tiếng Việt**: Lợi dụng phiên đăng nhập (session) hợp lệ của người dùng để thực hiện các yêu cầu không mong muốn.
 - **예시 (Example)**: 
@@ -27,6 +33,8 @@
 - 💡 **Mẹo ghi nhớ**: C-S-R-F = Cứ Sợ Rằng Fake (Sợ người dùng thật nhưng gửi request fake).
 
 ## 4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)
+Phần “4. 보안 기능 및 에러 처리 (Chức năng bảo mật & Xử lý lỗi)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **적절한 인증 없이 중요기능 허용 (Missing Authentication)**: 중대한 기능에 재인증이 없음. (Không yêu cầu xác thực lại khi làm việc quan trọng).
 - **중요정보 평문 저장 및 전송 (Plaintext Storage/Transmission)**: 패스워드를 암호화 없이 저장/전송. (Lưu hoặc truyền mật khẩu không mã hóa).
 - **하드코드된 비밀번호 (Hardcoded Password)**: 소스코드에 비밀번호를 직접 작성. (Ghi cứng mật khẩu trong source code).
@@ -40,6 +48,8 @@
 # ⦁ 코드 오류 및 API 오용 (Lỗi mã nguồn & Dùng sai API)
 
 ## 1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)
+Phần “1. 널 포인터 역참조 (Null Pointer Dereference / Tham chiếu ngược con trỏ Null)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 널 포인터(값이 없는 메모리 주소)가 가리키는 메모리에 값을 저장하거나 읽을 때 발생하는 오류.
 - **Tiếng Việt**: Lỗi xảy ra khi cố gắng đọc/ghi dữ liệu thông qua con trỏ đang có giá trị Null.
 - **예시 (Example)**: 
@@ -47,11 +57,15 @@
   - (VN) Gọi hàm của một đối tượng chưa được khởi tạo (bằng Null), làm app bị crash.
 
 ## 2. 자원 처리 오류 (Resource Handling Errors)
+Phần “2. 자원 처리 오류 (Resource Handling Errors)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **부적절한 자원 해제 (Improper Resource Release)**: 힙 메모리나 소켓을 사용 후 반환(close)하지 않아 자원 고갈 발생. (Không giải phóng bộ nhớ, kết nối sau khi dùng xong).
 - **해제된 자원 사용 (Use After Free)**: 반환된 메모리를 다시 참조하여 오작동 유발. (Dùng lại vùng nhớ đã được giải phóng).
 - **초기화되지 않은 변수 사용 (Uninitialized Variable)**: 변수 선언 후 값을 넣지 않고 사용하여 이전 쓰레기 값이 노출됨. (Dùng biến chưa khởi tạo giá trị).
 
 ## 3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)
+Phần “3. 취약한 API 사용 (Vulnerable API / API dễ bị tổn thương)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 보안 문제로 금지된 함수 (예: C언어의 `strcpy`, `strcat`) 사용.
 - **Tiếng Việt**: Sử dụng các hàm không an toàn, dễ gây lỗi tràn bộ đệm (như `strcpy`).
 - **예시 (Example)**: 
@@ -63,12 +77,16 @@
 # 106 암호 알고리즘 (Cryptography Algorithms / Thuật toán mã hoá)
 
 ## 1. 암호화 기본 개념 (Concepts)
+Phần “1. 암호화 기본 개념 (Concepts)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **평문 (Plain)**: Bản rõ (chưa mã hoá)
 - **암호문 (Cipher)**: Bản mã (đã mã hoá)
 - **치환 암호 (Substitution Cipher)**: 문자를 다른 문자로 대체 (Mã hoá thay thế, vd: A -> C).
 - **전치 암호 (Transposition Cipher)**: 문자의 위치를 바꿈 (Mã hoá hoán vị, vd: ABC -> BCA).
 
 ## 2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)
+Phần “2. 대칭 키 vs 비대칭 키 (Symmetric vs Asymmetric)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **대칭 키 (Symmetric Key)**: 암호화 키 = 복호화 키 (비밀 키).
   - 속도가 빠름, 키 관리가 어려움 (Nhanh nhưng khó quản lý phân phối key).
   - 종류 (Các loại): DES, AES, SEED, ARIA, IDEA (Block); RC4, LFSR (Stream).
@@ -82,6 +100,8 @@
 ---
 
 # 107 서비스 공격 기법 (Service Attack Techniques / Kỹ thuật tấn công dịch vụ)
+Phần “107 서비스 공격 기법 (Service Attack Techniques / Kỹ thuật tấn công dịch vụ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **Backdoor (백도어)**: 시스템 인증 절차를 우회하여 몰래 접속하는 경로 (Cửa sau, lách xác thực).
 - **Key Logger (키로거)**: 키보드 입력 움직임을 탐지하여 비밀번호 등을 탈취 (Ghi lại thao tác bàn phím).
@@ -100,12 +120,16 @@
 # 108 서버 인증 & 109 접근 제어 (Server Authentication & Access Control)
 
 ## 1. 인증 기술 (Authentication Types)
+Phần “1. 인증 기술 (Authentication Types)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **지식 기반 (Knowledge)**: 알고 있는 것 (Mật khẩu, mã PIN).
 - **소유 기반 (Possession)**: 가지고 있는 것 (Token, Smart Card, OTP).
 - **생체 기반 (Biometric)**: 고유한 신체 특징 (Vân tay, mống mắt).
 - **행위 기반 (Behavior)**: 행동 특징 (Chữ ký, dáng đi).
 
 ## 2. 접근 제어 정책 (Access Control Policies)
+Phần “2. 접근 제어 정책 (Access Control Policies)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **DAC (임의적 접근 통제 / Discretionary)**: 신분(Identity) 기반. 데이터 소유자가 권한 부여.
 - **MAC (강제적 접근 통제 / Mandatory)**: 보안등급(Label) 기반. 시스템 관리자가 강제로 권한 부여.
 - **RBAC (역할 기반 접근 통제 / Role-Based)**: 역할(Role) 기반. 변경이 용이.
@@ -114,6 +138,8 @@
 ---
 
 # 110 네트워크 보안 솔루션 (Network Security Solutions)
+Phần “110 네트워크 보안 솔루션 (Network Security Solutions)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **방화벽 (Firewall)**: 트래픽 접근 허용/차단 (Tường lửa cơ bản).
 - **WAF (웹 방화벽)**: SQL 인젝션, XSS 등 웹 특화 공격 방어 (Tường lửa chuyên cho Web).
 - **IDS (침입 탐지 시스템)**: 침입을 실시간으로 "탐지(Detect)" (Hệ thống phát hiện xâm nhập).
@@ -125,12 +151,16 @@
 # 5과목 추가: 소프트웨어 재사용, 산정 기법, 프레임워크
 
 ## 318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)
+Phần “318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 검증된 소프트웨어의 일부를 다시 사용 (Sử dụng lại các phần mềm đã được kiểm chứng để giảm chi phí, tăng chất lượng).
 - **방법**: 
   - **합성 중심 (Composition-Based)**: 블록 조립 (Lắp ráp các block như Lego).
   - **생성 중심 (Generation-Based)**: 추상적 명세로 코드 자동 생성 (Tự động sinh code từ bản đặc tả).
 
 ## 323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)
+Phần “323. 수학적 산정 기법 (Mathematical Estimation Techniques / Kỹ thuật ước lượng toán học)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 통계 공식을 활용한 비용 예측 기법 (Dự toán chi phí dựa trên công thức toán học).
 - **종류**:
   - **COCOMO**: LOC(라인 수) 기반 (Dựa vào số dòng code).
@@ -138,6 +168,8 @@
   - **FP (Function Point)**: 입력, 출력, 인터페이스 등 기능적 요인 기반 (Dựa vào điểm chức năng).
 
 ## 336. 소프트웨어 개발 프레임워크 (Software Development Framework)
+Phần “336. 소프트웨어 개발 프레임워크 (Software Development Framework)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **개념**: 개발에 공통 사용되는 구조를 제공하여 생산성을 높이는 기반.
 - **특성**: 모듈화, 재사용성, 확장성, **제어의 역흐름(IoC)**.
 - **Tiếng Việt**: Nền tảng cấu trúc sẵn giúp tăng năng suất (như Spring, .NET). Đặc tính: Module hóa, Tái sử dụng, Mở rộng, Đảo ngược luồng điều khiển (IoC).

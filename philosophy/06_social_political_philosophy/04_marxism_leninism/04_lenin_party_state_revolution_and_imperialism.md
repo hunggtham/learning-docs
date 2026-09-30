@@ -30,6 +30,8 @@ local grievance
 Nếu một movement chỉ tồn tại khi spontaneous anger cao, nó khó survive repression hoặc coordinate complex hành động (action / 동작). Lenin therefore emphasizes press, trained organizers, continuity và nationwide political công việc (work / 작업).
 
 ## Spontaneity và consciousness: một debate dễ bị caricature
+Phần “Spontaneity và consciousness: một debate dễ bị caricature” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 *What Is To Be Done?* thường được summarized như claim rằng workers tự mình chỉ đạt “trade-union consciousness” và political consciousness phải được brought from outside. Đây là một passage historically influential, nhưng không nên biến nó thành proposition rằng workers không thể think politically.
 
@@ -256,6 +258,8 @@ later systematization: Marxism–Leninism
 The next chapter examines what changes when a contested intellectual tradition becomes a doctrine used by party-state institutions, education and chính sách (policy / 정책) ngôn ngữ (language / 언어).
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Lenin, *What Is To Be Done?*: https://www.marxists.org/archive/lenin/works/1901/witbd/
 - Lenin, *The Trạng thái (state / 상태) and Revolution*: https://www.marxists.org/archive/lenin/works/1917/staterev/

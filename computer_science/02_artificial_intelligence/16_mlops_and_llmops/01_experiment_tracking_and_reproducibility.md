@@ -136,6 +136,8 @@ không phải chiến lược versioning. Danh tính của sản phẩm tạo ra
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Theo dõi thí nghiệm = sổ tay khoa học tự động của hệ thống ML
 ```
@@ -159,5 +161,3 @@ Không nhất thiết. Cần kiểm soát yếu tố gây nhiễu (confounder) v
 ## Liên kết kiến thức
 
 Xem [Data and Model Versioning](./02_data_and_model_versioning.md), [Model Registry](./03_model_registry.md), [Evaluation](../18_evaluation_reliability_interpretability/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

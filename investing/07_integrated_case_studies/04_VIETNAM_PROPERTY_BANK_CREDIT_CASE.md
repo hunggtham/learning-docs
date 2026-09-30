@@ -331,6 +331,8 @@ ROE cần được chuẩn hóa theo chi phí tín dụng và yêu cầu vốn.
 
 ### Hạ cánh mềm
 
+Kịch bản này giả định thanh khoản và pháp lý cải thiện đủ để giảm áp lực mà không cần một chu kỳ bùng nổ. Nó cho ta mốc cơ sở để kiểm tra doanh số, tái cấp vốn và NPL có cùng chuyển biến hay không.
+
 ```text
 Pháp lý cải thiện
 Doanh số ổn định
@@ -340,6 +342,8 @@ NPL chỉ tăng nhẹ
 ```
 
 ### Thanh khoản phục hồi nhưng cơ bản chưa phục hồi
+
+Ở trạng thái này, giá và thanh khoản có thể hồi trước dòng tiền doanh nghiệp. Tách riêng hai lớp giúp người học không nhầm một đợt mở rộng hệ số định giá với sự phục hồi của bán trước và lợi nhuận.
 
 ```text
 Lãi suất / thanh khoản cải thiện
@@ -351,6 +355,8 @@ Lợi nhuận còn chậm
 
 ### Chu kỳ tín dụng xấu
 
+Kịch bản xấu nối sự suy giảm doanh số với tái cấp vốn thất bại, dự phòng tăng và tiêu chuẩn tín dụng thắt chặt. Mỗi mắt xích làm suy yếu mắt xích kế tiếp, tạo vòng phản hồi cần được stress-test.
+
 ```text
 Doanh số giảm
 Tái cấp vốn đóng lại
@@ -361,6 +367,8 @@ Giá bất động sản giảm
 ```
 
 ### Sửa chữa cấu trúc
+
+Sửa chữa cấu trúc không phải một cú bật giá nhanh mà là quá trình ghi nhận lỗ, tăng vốn và giải quyết nút thắt pháp lý. Kịch bản này cho biết doanh nghiệp nào có thể sống sót để hưởng lợi khi ngành hợp nhất.
 
 ```text
 Dự án xấu được ghi giảm
@@ -439,6 +447,8 @@ Quy mô vị thế nên dựa trên giá trị giao dịch trung bình trong đi
 
 ## 32. Vòng phản hồi margin
 
+Sau khi đã theo dõi bảng cân đối, cần thêm cơ chế vi mô của tài khoản ký quỹ. Giá giảm làm tài sản bảo đảm yếu đi, và lực bán bắt buộc có thể khuếch đại biến động trước khi dữ liệu cơ bản kịp cập nhật.
+
 ```text
 Giá giảm
 → Tỷ lệ tài sản bảo đảm xấu đi
@@ -500,6 +510,8 @@ Luận điểm phục hồi có thể sai nếu pháp lý tiếp tục đình tr
 
 ### Hàng ngày
 
+Nhịp hàng ngày chỉ dành cho các biến có thể thay đổi nhanh và ảnh hưởng trực tiếp đến thanh khoản. Mục tiêu là phát hiện stress mới, không phải viết lại luận điểm dài hạn mỗi phiên.
+
 ```text
 Độ rộng VN-Index
 Thanh khoản
@@ -510,6 +522,8 @@ Dòng vốn nước ngoài
 
 ### Hàng tuần
 
+Nhịp hàng tuần gom các tín hiệu vận hành và chính sách có độ trễ vừa phải. Đây là lúc kiểm tra xem biến động hàng ngày có đang lan sang chi phí vốn, pháp lý hoặc margin hay không.
+
 ```text
 Lãi suất tiền gửi
 Thanh khoản margin
@@ -518,6 +532,8 @@ Cập nhật pháp lý / dự án lớn
 ```
 
 ### Hàng tháng / quý
+
+Nhịp tháng và quý quay về dữ liệu bảng cân đối, tín dụng và dòng tiền. Các số liệu này chậm hơn nhưng quyết định liệu đợt hồi phục có nền tảng hay chỉ là phản ứng thanh khoản.
 
 ```text
 Tăng trưởng tín dụng
@@ -537,6 +553,8 @@ Nếu lợi suất chỉ đến từ hệ số định giá và thanh khoản tr
 
 ## 40. Khung dùng lại
 
+Khung này tóm tắt cách tái sử dụng case cho một doanh nghiệp hoặc giai đoạn khác của chu kỳ. Hãy đi theo mũi tên từ pháp lý và tiền thu tới tín dụng, thanh khoản và định giá để không bỏ qua tầng trung gian.
+
 ```text
 Pháp lý
 → Bán trước / Thu tiền
@@ -554,5 +572,3 @@ Pháp lý
 ## Kết luận
 
 Chu kỳ bất động sản–ngân hàng Việt Nam không thể phân tích chỉ bằng `P/B ngân hàng thấp` hoặc `quỹ đất chủ đầu tư lớn`. Câu hỏi cốt lõi là **thời điểm dòng tiền và cách rủi ro truyền qua bảng cân đối**. Pháp lý quyết định tài sản có thể tạo tiền hay không; tái cấp vốn quyết định doanh nghiệp có sống đủ lâu không; dự phòng ngân hàng quyết định sức khỏe chu kỳ tín dụng; thanh khoản quyết định đường đi của giá; quản trị quyết định giá trị có thực sự tới cổ đông thiểu số hay không. Chỉ khi nối các lớp này lại, nhà đầu tư mới phân biệt được phục hồi bền vững với một đợt tăng tạm thời do thanh khoản.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 INFLATION SHOCK FROM CPI TO PORTFOLIO](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

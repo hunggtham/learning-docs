@@ -87,11 +87,15 @@ Chênh lệch giữa giá bán và giá mua lại phản ánh chi phí vốn c�
 
 ## 7. Tài sản bảo đảm
 
+Sau khi hiểu tiền và tín dụng, ta cần xem điều gì cho phép một khoản vay tồn tại trong thực tế. Collateral vừa giảm tổn thất khi vỡ nợ vừa quyết định lượng funding mà bảng cân đối có thể tiếp cận.
+
 **Tài sản bảo đảm (collateral)** không chỉ giảm rủi ro tín dụng mà còn quyết định khả năng vay vốn. Tài sản có chất lượng cao, dễ định giá và dễ bán thường cho phép vay nhiều hơn.
 
 Trong hệ thống tài chính, chất lượng của tài sản bảo đảm có thể quan trọng gần ngang lượng tiền mặt vì nhiều giao dịch tài trợ phụ thuộc vào nó.
 
 ## 8. Tỷ lệ chiết trừ tài sản bảo đảm
+
+Haircut biến giá trị thị trường của collateral thành giá trị được chấp nhận cho vay. Khi biến động hoặc thanh khoản xấu đi, haircut tăng có thể tạo nhu cầu vốn ngay cả khi tài sản chưa giảm nhiều trên báo giá.
 
 **Tỷ lệ chiết trừ (haircut)** là phần giá trị của tài sản bảo đảm không được tính vào khả năng vay.
 
@@ -174,6 +178,8 @@ Chính phủ có thể tài trợ bằng tín phiếu ngắn hạn, trái phiế
 
 ## 16. Phần bù kỳ hạn
 
+Sau khi tách kỳ vọng lãi suất ngắn hạn khỏi đường cong, term premium giải thích phần bù cho việc giữ duration dài. Nó có thể thay đổi theo cung cầu trái phiếu, bất định lạm phát và trạng thái bảng cân đối của nhà đầu tư.
+
 **Phần bù kỳ hạn (term premium)** là phần lợi suất nhà đầu tư yêu cầu để chịu rủi ro nắm trái phiếu dài hạn ngoài kỳ vọng lãi suất ngắn hạn tương lai.
 
 Một cơ chế có thể là:
@@ -191,6 +197,8 @@ Khi đó điều kiện tài chính có thể thắt chặt dù ngân hàng trun
 
 ## 17. Vốn và thanh khoản khác nhau
 
+Một tổ chức có thể có đủ vốn trên giấy nhưng vẫn thiếu tiền mặt đúng thời điểm. Phần này phân biệt lớp hấp thụ tổn thất với khả năng đáp ứng nghĩa vụ ngay lập tức, vì hai rủi ro cần công cụ xử lý khác nhau.
+
 **Vốn (capital)** là lớp hấp thụ tổn thất.
 
 **Thanh khoản (liquidity)** là khả năng đáp ứng nghĩa vụ tiền mặt đúng thời điểm.
@@ -198,6 +206,8 @@ Khi đó điều kiện tài chính có thể thắt chặt dù ngân hàng trun
 Một ngân hàng có vốn kế toán tốt vẫn có thể gặp khủng hoảng nếu dòng tiền rút quá nhanh và tài sản không thể chuyển thành tiền kịp thời.
 
 ## 18. Khả năng thanh toán dài hạn
+
+Solvency nhìn giá trị kinh tế dài hạn của tài sản so với nghĩa vụ, trong khi liquidity nhìn thời điểm dòng tiền. Phân biệt hai lớp giúp tránh gọi mọi khủng hoảng thanh khoản là mất khả năng thanh toán hoặc ngược lại.
 
 **Khả năng thanh toán dài hạn (solvency)** hỏi liệu giá trị kinh tế của tài sản có đủ lớn so với nghĩa vụ hay không.
 
@@ -263,6 +273,8 @@ Do đó giảm lãi suất không bảo đảm tín dụng tăng ngay.
 
 ## 24. Cơ chế khuếch đại tài chính
 
+Financial accelerator nối giá tài sản, collateral, credit và chi tiêu thành một vòng phản hồi. Khi tài sản tăng, borrowing dễ hơn; khi giá giảm, cùng một đòn bẩy có thể buộc giảm chi tiêu và bán tài sản.
+
 **Cơ chế khuếch đại tài chính (financial accelerator)** mô tả vòng phản hồi:
 
 ```text
@@ -280,6 +292,8 @@ Một cú sốc tài chính vì vậy có thể truyền sang nền kinh tế th
 # Phần X — Tổ chức tài chính phi ngân hàng
 
 ## 25. NBFI
+
+NBFI mở rộng hệ thống tín dụng ra ngoài ngân hàng truyền thống. Các tổ chức này có thể tạo thanh khoản và phân bổ vốn, nhưng cũng có thể dùng leverage, maturity transformation hoặc redemption terms làm rủi ro truyền qua thị trường khác.
 
 **Tổ chức tài chính phi ngân hàng (Non-Bank Financial Institution, NBFI)** gồm quỹ đầu tư, công ty bảo hiểm, quỹ hưu trí, công ty tài chính và các tổ chức khác ngoài ngân hàng truyền thống.
 
@@ -305,6 +319,8 @@ Chi phí vốn USD ↑
 ```
 
 ## 28. Cơ sở hoán đổi tiền tệ
+
+Cross-currency basis cho thấy việc huy động một đồng tiền thông qua swap không luôn ngang giá với công thức lãi suất lý thuyết. Nhu cầu USD, collateral và giới hạn bảng cân đối của trung gian có thể tạo chi phí funding riêng.
 
 **Cơ sở hoán đổi tiền tệ (cross-currency basis)** phản ánh phần chi phí hoặc mất cân bằng khi đổi nguồn vốn giữa hai đồng tiền thông qua hoán đổi.
 
@@ -352,6 +368,8 @@ Ngân hàng trung ương có thể đóng vai trò **người cho vay cuối cù
 Mục tiêu là ngăn thiếu tiền mặt ngắn hạn biến thành bán tháo tài sản không cần thiết.
 
 ## 33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu
+
+Hỗ trợ thanh khoản giải quyết khoảng cách thời điểm dòng tiền; recapitalization bổ sung vốn để hấp thụ tổn thất. Sơ đồ dưới đây cần được đọc để xác định tổ chức đang thiếu tiền tạm thời hay thiếu giá trị kinh tế.
 
 ```text
 Hỗ trợ thanh khoản
@@ -424,6 +442,8 @@ Không một chỉ số nào đủ để kết luận “thanh khoản tốt” 
 
 ## 39. Cầu nối sang tài sản đầu tư
 
+Phần này bàn giao từ monetary system sang asset pricing. Mục tiêu là theo dõi cách liquidity, collateral, funding và policy truyền vào yields, FX, credit, equities và commodities thay vì dừng ở headline vĩ mô.
+
 ```text
 Nguồn vốn căng
 → đòn bẩy giảm
@@ -452,5 +472,3 @@ Bảng cân đối
 ```
 
 Khi hiểu chuỗi này, các thuật ngữ như repo, haircut, QE, QT hay cơ sở hoán đổi chỉ còn là tên của các mắt xích cụ thể, không phải những từ tiếng Anh phải ghi nhớ mà chưa hiểu bản chất.
-
-> **Bàn giao:** Sau **40. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 BRIDGE COMPANY TO MACRO](./00_BRIDGE_COMPANY_TO_MACRO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

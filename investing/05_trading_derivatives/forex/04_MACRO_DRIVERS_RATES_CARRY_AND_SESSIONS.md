@@ -721,6 +721,8 @@ Macro giải thích **vì sao participant muốn thay đổi exposure**. Chươn
 → [05 — Execution, brokers, costs and operational risk](./05_EXECUTION_BROKERS_COSTS_AND_RISK.md)
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Macro Data Playbook](../../04_economics/03_MACRO_DATA_PLAYBOOK.md)
 - [Global Economy, Capital Flows and Crisis](../../04_economics/02_GLOBAL_ECONOMY_CAPITAL_FLOWS_AND_CRISIS.md)

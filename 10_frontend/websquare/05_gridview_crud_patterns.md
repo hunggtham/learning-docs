@@ -422,6 +422,8 @@ var USER_COL = {
 Tuy nhiên đừng lớp trừu tượng (abstraction / 추상화) quá mức khiến dev phải nhảy 5 tệp (file / 파일) mới biết column ID. Mục tiêu là giảm typo và giữ lĩnh vực (domain / 도메인) vocabulary rõ.
 
 ## 27. Example: search-edit-save hoàn chỉnh
+Phần “27. Example: search-edit-save hoàn chỉnh” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```javascript
 scwin.btnSearch_onclick = function () {

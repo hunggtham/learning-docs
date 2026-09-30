@@ -105,6 +105,8 @@ nation concept
 Chapter [Fascism](08_fascism.md) examines a historically specific far-right authoritarian family in which ultranationalism is joined with anti-pluralism, hierarchy, mass mobilization and leader-centered authority. Nationalism by itself must not be equated with fascism.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Nationalism”: https://plato.stanford.edu/entries/nationalism/
 - Stanford Encyclopedia of Philosophy, “Territorial Rights and Territorial Justice”: https://plato.stanford.edu/entries/territorial-rights/

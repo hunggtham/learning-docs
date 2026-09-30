@@ -460,6 +460,8 @@ Precise accumulation của wrong tỷ lệ (rate / 비율) law vẫn cho wrong k
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối cho thấy rate và accumulation xuất hiện trong physics, finance, population và software metrics. Cùng một cặp derivative–integral có thể mô tả những hệ khác nhau nếu xác định đúng state và time scale.
+
 ```text
 Algebra      → finite difference
 Calculus     → derivative/integral
@@ -473,6 +475,4 @@ Physics      → velocity/flux → conserved quantity
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
-> Mỗi khi gặp một quantity, hỏi: đây là trạng thái (state / 상태), cục bộ (local / 로컬) tỷ lệ (rate / 비율) hay accumulated total? Nếu biết trạng thái (state / 상태), derivative/difference nói nó đang đổi thế nào. Nếu biết tỷ lệ (rate / 비율), sum/integral reconstruct net accumulation. Rất nhiều công thức khác lĩnh vực (domain / 도메인) chỉ là cùng accounting cấu trúc (structure / 구조) dưới notation khác nhau.
-
-> **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 distance similarity and projection](./01_distance_similarity_and_projection.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> Mỗi khi gặp một quantity, hỏi: đây là state, local rate hay accumulated total? Nếu biết state, derivative/difference nói nó đang đổi thế nào. Nếu biết rate, sum/integral reconstruct net accumulation. Rất nhiều công thức khác domain chỉ là cùng accounting structure dưới notation khác nhau.

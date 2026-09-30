@@ -22,6 +22,8 @@ Các domains sắp xếp sao cho giảm repulsion hiệu dụng.
 
 # Các hình học miền electron cơ bản
 
+Sau khi đếm miền electron và hiểu lực đẩy, ta có thể dùng các hình học chuẩn làm mốc dự đoán. Bảng này là reference geometry; phân tử thực tế sẽ lệch khi lone pair, liên kết bội hoặc nhóm thế làm thay đổi phân bố electron.
+
 | Số miền | Hình học miền electron | Góc lý tưởng |
 |---:|---|---:|
 | 2 | thẳng (linear) | 180° |
@@ -423,5 +425,3 @@ Lewis electron domains
 Nó mạnh ở shape prediction, nhưng phải chuyển sang VB/MO khi câu hỏi trở thành “electron thực sự được tổ chức bằng orbital như thế nào?”.
 
 Xem tiếp: [Lý thuyết liên kết hóa trị và lai hóa](./05_valence_bond_and_hybridization.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 why atoms bond](./00_why_atoms_bond.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

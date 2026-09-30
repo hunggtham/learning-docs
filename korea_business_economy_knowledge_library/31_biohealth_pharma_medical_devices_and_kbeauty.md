@@ -363,6 +363,8 @@ Rủi ro pha loãng
 
 ## Biosimilar
 
+Biosimilar cần được đọc qua ba lớp: bằng chứng tương đương, quy định phê duyệt và economics hoàn trả. Doanh thu tiềm năng chỉ trở thành lợi nhuận khi sản xuất, bác sĩ và payer cùng chấp nhận.
+
 ```text
 Phê duyệt
 Thời điểm ra mắt
@@ -373,6 +375,8 @@ Chi phí sản xuất
 ```
 
 ## CDMO
+
+CDMO biến năng lực quy trình và compliance thành doanh thu theo hợp đồng. Hãy theo dõi capacity, yield, khách hàng, thời gian qualification và rủi ro tập trung.
 
 ```text
 Công suất
@@ -385,6 +389,8 @@ Lịch sử chất lượng / thanh tra
 
 ## Thiết bị / chẩn đoán
 
+Thiết bị và chẩn đoán có chu kỳ mua sắm, validation và reimbursement khác dược phẩm. Phân tích cần nối công nghệ với workflow bệnh viện và khả năng thanh toán.
+
 ```text
 Nền thiết bị đã lắp
 Doanh thu vật tư / thuốc thử
@@ -394,6 +400,8 @@ Biên dịch vụ
 ```
 
 ## Thương hiệu mỹ phẩm
+
+Thương hiệu mỹ phẩm phụ thuộc product cycle, kênh phân phối, marketing và niềm tin người dùng. Tăng doanh thu chỉ bền vững khi repeat purchase và unit economics cải thiện.
 
 ```text
 Mức tập trung SKU
@@ -405,6 +413,8 @@ Sell-through
 ```
 
 ## ODM mỹ phẩm
+
+ODM đứng sau nhiều thương hiệu nên driver nằm ở khách hàng, công suất, đổi mới công thức và chất lượng. Cần phân biệt backlog thật với đơn hàng ngắn hạn do trend.
 
 ```text
 Mức tập trung khách hàng
@@ -516,8 +526,8 @@ Dòng tiền
 
 ### Nguồn nền
 
+Nguồn nền giúp kiểm tra quy định, dữ liệu ngành và thuật ngữ y sinh–mỹ phẩm. Hãy ghi ngày truy cập vì phê duyệt và chính sách reimbursement có thể thay đổi.
+
 - Korea Health Industry Development Institute (KHIDI), kết quả xuất khẩu Biohealth 2025 công bố năm 2026: https://www.khidi.or.kr/board/view?linkId=48940966&menuId=MENU00100
 - Tài liệu triển vọng ngành/xuất khẩu của KHIDI.
 - Công bố của cơ quan quản lý Hàn Quốc/quốc tế và hồ sơ doanh nghiệp cho phân tích từng sản phẩm.
-
-> **Bàn giao:** Sau **Nguồn nền**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

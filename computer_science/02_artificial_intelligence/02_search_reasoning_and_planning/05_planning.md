@@ -526,6 +526,8 @@ For công cụ (tool / 도구) agents, plan chất lượng (quality / 품질) s
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Search   = explore possible states
 Planning = exploit action semantics to construct goal-achieving behavior
@@ -561,5 +563,3 @@ Overplanning fragile under bất định (uncertainty / 불확실성). Receding-
 Planning sits between tìm kiếm (search / 검색), CSP, lô-gic (logic / 논리) and quyết định (decision / 결정) lý thuyết (theory / 이론). It gives precise ngôn ngữ (language / 언어) for hiện đại (modern / 현대적) Agents: goal, trạng thái (state / 상태), hành động (action / 동작), precondition, tác động (effect / 효과), monitor and replan. Later `10_agents_and_ai_systems/` will reuse these concepts instead of redefining tác nhân (agent / 에이전트) planning from scratch.
 
 Xem tiếp: [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

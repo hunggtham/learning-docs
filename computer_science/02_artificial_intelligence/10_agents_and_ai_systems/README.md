@@ -23,6 +23,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 - [00 — From LLM to Agent](./00_from_llm_to_agent.md)
 - [01 — Tools and Function Calling](./01_tools_and_function_calling.md)
 - [02 — Agent Loop](./02_agent_loop.md)
@@ -40,6 +42,8 @@ flowchart TD
 
 ## Cốt lõi (core / 핵심) distinctions
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 ```text
 LLM ≠ Agent
 Tool Calling ≠ Agent
@@ -56,6 +60,8 @@ Model says “done” ≠ Verified completion
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Probabilistic policy / reasoning
@@ -84,6 +90,4 @@ Nên đọc trước:
 - [Large Language Models](../08_large_language_models/README.md)
 - [Retrieval and RAG](../09_retrieval_and_rag/README.md)
 
-Sau folder này, [Reinforcement Learning](../11_reinforcement_learning/README.md) sẽ đi theo một hướng khác: thay vì chỉ dùng pretrained LLM như chính sách (policy / 정책), tác nhân (agent / 에이전트) học chính sách (policy / 정책)/giá trị (value / 값) trực tiếp từ tương tác (interaction / 상호작용) và reward.
-
-> **Bàn giao:** Sau **Prerequisites**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Sau folder này, [Reinforcement Learning](../11_reinforcement_learning/README.md) sẽ đi theo một hướng khác: thay vì chỉ dùng pretrained LLM như policy, agent học policy/value trực tiếp từ interaction và reward.

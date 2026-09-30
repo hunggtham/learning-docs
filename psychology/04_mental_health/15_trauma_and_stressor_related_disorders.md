@@ -146,6 +146,8 @@ Xem [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../90_connection
 
 ## 18. Mô hình tư duy
 
+Phần này chốt mô hình stressor–response–recovery thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn chẩn đoán tự động.
+
 ```text
 traumatic event
 → threat learning + memory + appraisal
@@ -158,11 +160,11 @@ Khôi phục (recovery / 복구) có thể đi qua new học tập (learning / �
 
 ## Bằng chứng (evidence / 증거) anchors
 
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
+
 - VA/DoD Clinical Practice Guideline for PTSD and Acute Stress Disorder, 2023.
 - NICE NG116: Post-traumatic stress disorder.
 
 ## Kết nối kiến thức
 
 Đọc cùng [[13_anxiety_and_fear_related_disorders]], [[14_obsessive_compulsive_and_related_disorders]], [[10_dissociation_somatic_and_functional_symptoms]], [[../02_learning_and_cognition/11_emotion_memory_and_affective_cognition]], [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]], [[../05_intervention/01_cbt_behavioral_and_third_wave]] và [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

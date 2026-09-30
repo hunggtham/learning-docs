@@ -99,6 +99,8 @@ Nếu bạn dùng `xsl:for-each` cho mọi thứ, XSLT dễ biến thành impera
 ---
 
 ## 4. `xsl:value-of`
+Phần này nối mạch bài học với “4. `xsl:value-of`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xsl:value-of select="title"/>
@@ -117,6 +119,8 @@ và bạn muốn preserve markup ngữ nghĩa (semantics / 의미론), `apply-te
 ---
 
 ## 5. `xsl:for-each`
+Phần này nối mạch bài học với “5. `xsl:for-each`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xsl:for-each select="book">
@@ -161,6 +165,8 @@ XSLT conditions dùng XPath expressions. Vì vậy hiểu XPath kiểu (type / �
 ---
 
 ## 7. Variables trong XSLT
+Phần này nối mạch bài học với “7. Variables trong XSLT”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xsl:variable

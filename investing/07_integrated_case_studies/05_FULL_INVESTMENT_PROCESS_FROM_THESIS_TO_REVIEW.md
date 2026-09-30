@@ -146,6 +146,8 @@ Một công ty có ít nợ vẫn có thể chịu shock lớn nếu khách hàn
 
 ## 8. Xây cây ngành
 
+Sau khi xác định câu hỏi và dữ liệu, ta cần mô tả cơ chế của ngành trước khi chọn một mã cụ thể. Cây ngành biến headline thành chuỗi driver, giúp biết biến nào dẫn dắt và biến nào chỉ xác nhận sau đó.
+
 ```text
 Demand
 → inventory
@@ -161,6 +163,8 @@ Với từng ngành, thay các biến phù hợp. Điều quan trọng là xác 
 Không dùng một headline ngành thay cho driver cây (tree / 트리).
 
 ## 9. Xây cây doanh nghiệp
+
+Từ cây ngành, ta đi xuống cách một doanh nghiệp biến sản lượng, giá và cơ cấu thành doanh thu rồi thành lợi nhuận và dòng tiền. Đây là bước nối bối cảnh bên ngoài với con số mà mô hình định giá thực sự sử dụng.
 
 ```text
 Volume
@@ -272,6 +276,8 @@ One-off recurring item
 Một lợi nhuận “beat” nhưng cash conversion xấu có thể làm thesis khác hoàn toàn.
 
 ## 15. Xây ba kịch bản từ driver
+
+Ba kịch bản phải khác nhau ở các driver kinh tế chứ không chỉ khác một hệ số P/E. Viết chúng từ cùng một cây driver giúp mỗi thay đổi về nhu cầu, giá, công suất hay vốn đều có đường truyền rõ ràng vào định giá.
 
 ```text
 Bull:
@@ -695,6 +701,8 @@ Mỗi tệp (file / 파일) phải liên kết với dữ liệu và giả đị
 
 ## 40. Liên kết tới Advanced Labs và worked cases
 
+Khi quy trình chính đã hoàn tất, các liên kết sau đưa người học tới những phòng thực hành tương ứng với từng mắt xích. Hãy dùng chúng để kiểm tra lại mô hình, stress test và kế hoạch thực thi thay vì chỉ đọc thêm lý thuyết.
+
 - [Thiết kế danh mục nâng cao](../01_foundations/06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md)
 - [Định giá tài sản và cấu trúc kỳ hạn](../02_asset_classes/07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md)
 - [Mô hình doanh nghiệp tích hợp](../03_company_analysis/07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md)
@@ -725,5 +733,3 @@ Question
 ```
 
 Mục tiêu cuối cùng không phải luôn đúng. Mục tiêu là xây một quy trình có thể **phát hiện khi sai, giới hạn thiệt hại khi sai, phân biệt thesis với beta/may mắn và học được điều gì sau mỗi quyết định**.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 INFLATION SHOCK FROM CPI TO PORTFOLIO](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

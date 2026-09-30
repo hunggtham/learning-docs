@@ -128,6 +128,8 @@ economic power
 Chapter tiếp theo, [Anarchism](04_anarchism.md), giữ nhiều concern về hierarchy và domination nhưng đẩy câu hỏi authority xa hơn: nếu centralized trạng thái (state / 상태) itself là nguồn (source / 소스) of domination, xã hội (social / 사회적) coordination có thể tổ chức qua voluntary/decentralized association đến mức nào?
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Socialism”: https://plato.stanford.edu/entries/socialism/
 - Stanford Encyclopedia of Philosophy, “Markets”: https://plato.stanford.edu/entries/markets/

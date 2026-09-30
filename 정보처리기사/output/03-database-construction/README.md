@@ -1,6 +1,6 @@
 # Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)
 
-> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng lesson theo chủ đề để đào sâu từng mắt xích. Mỗi lesson phải được nối lại với tiêu chí phân biệt và câu hỏi của lesson kế tiếp, không học như danh sách thuật ngữ rời.
+> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
 
 ## Bài học
 
@@ -34,44 +34,50 @@
 24. [9. 인덱스와 트랜잭션 (Index và Giao dịch)](lessons/24-bai-hoc.md)
 25. [10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)](lessons/25-bai-hoc.md)
 26. [143-145. SQL 분류 (SQL Categories)](lessons/26-bai-hoc.md)
-27. [204-219. SQL 명령어 심화 (SQL Commands Detail)](lessons/27-bai-hoc.md)
-28. [3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)](lessons/28-bai-hoc.md)
-29. [4. SQL 문법의 종류 (Các loại cú pháp SQL)](lessons/29-bai-hoc.md)
-30. [A+ Deep Dive: SQL 결과를 행 단위로 추적하기](lessons/30-bai-hoc.md)
-31. [150-155. 데이터 조작어 (DML) 확장 및 조건 연산자](lessons/31-bai-hoc.md)
-32. [193. 뷰 (View)](lessons/32-bai-hoc.md)
-33. [8. 서브쿼리와 뷰 (Truy vấn con và View)](lessons/33-bai-hoc.md)
-34. [191-192. 인덱스 (Index)](lessons/34-bai-hoc.md)
-35. [136-137. 분산 데이터베이스 (Distributed DB)](lessons/35-bai-hoc.md)
-36. [195-196. 분산 데이터베이스 목표 (Distributed DB Goals)](lessons/36-bai-hoc.md)
-37. [197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)](lessons/37-bai-hoc.md)
-38. [17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)](lessons/38-bai-hoc.md)
-39. [201-203. 스토리지 시스템 (Storage Systems)](lessons/39-bai-hoc.md)
-40. [198. 암호화 심화 (Encryption Deep Dive)](lessons/40-bai-hoc.md)
-41. [18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)](lessons/41-bai-hoc.md)
-42. [19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)](lessons/42-bai-hoc.md)
-43. [106-107. 튜플(Tuple)과 속성(Attribute)](lessons/43-bai-hoc.md)
-44. [108. 도메인 (Domain)](lessons/44-bai-hoc.md)
-45. [178. 관계해석 (Relational Calculus)](lessons/45-bai-hoc.md)
-46. [183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)](lessons/46-bai-hoc.md)
-47. [186. 시스템 카탈로그 (System Catalog)](lessons/47-bai-hoc.md)
-48. [190. CRUD 분석](lessons/48-bai-hoc.md)
-49. [194. 파티션 (Partition)](lessons/49-bai-hoc.md)
-50. [199-200. 접근통제 모델 심화 (Access Control Models Deep Dive)](lessons/50-bai-hoc.md)
-51. [220-230. 하위 질의, 트리거, DBMS 접속 및 데이터 전환](lessons/51-bai-hoc.md)
-52. [6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)](lessons/52-bai-hoc.md)
-53. [7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)](lessons/53-bai-hoc.md)
-54. [15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)](lessons/54-bai-hoc.md)
-55. [21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)](lessons/55-bai-hoc.md)
-56. [22. 기타 주요 개념 (Các khái niệm quan trọng khác)](lessons/56-bai-hoc.md)
+27. [3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)](lessons/27-bai-hoc.md)
+28. [4. SQL 문법의 종류 (Các loại cú pháp SQL)](lessons/28-bai-hoc.md)
+29. [A+ Deep Dive: SQL 결과를 행 단위로 추적하기](lessons/29-bai-hoc.md)
+30. [150-155. 데이터 조작어 (DML) 확장 및 조건 연산자](lessons/30-bai-hoc.md)
+31. [193. 뷰 (View)](lessons/31-bai-hoc.md)
+32. [8. 서브쿼리와 뷰 (Truy vấn con và View)](lessons/32-bai-hoc.md)
+33. [191-192. 인덱스 (Index)](lessons/33-bai-hoc.md)
+34. [136-137. 분산 데이터베이스 (Distributed DB)](lessons/34-bai-hoc.md)
+35. [195-196. 분산 데이터베이스 목표 (Distributed DB Goals)](lessons/35-bai-hoc.md)
+36. [197. 분산 데이터베이스의 장단점 (Distributed DB Pros/Cons)](lessons/36-bai-hoc.md)
+37. [17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)](lessons/37-bai-hoc.md)
+38. [18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)](lessons/38-bai-hoc.md)
+39. [19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)](lessons/39-bai-hoc.md)
+40. [106-107. 튜플(Tuple)과 속성(Attribute)](lessons/40-bai-hoc.md)
+41. [108. 도메인 (Domain)](lessons/41-bai-hoc.md)
+42. [178. 관계해석 (Relational Calculus)](lessons/42-bai-hoc.md)
+43. [183. 함수적 종속과 이행적 종속 (Functional & Transitive Dependency)](lessons/43-bai-hoc.md)
+44. [186. 시스템 카탈로그 (System Catalog)](lessons/44-bai-hoc.md)
+45. [190. CRUD 분석](lessons/45-bai-hoc.md)
+46. [194. 파티션 (Partition)](lessons/46-bai-hoc.md)
+47. [148-154. 파일 시스템과 디렉터리, 보안 (File System & Security)](lessons/47-bai-hoc.md)
+48. [1. UNIX 파일 시스템의 구조 (Cấu trúc hệ thống tệp UNIX)](lessons/48-bai-hoc.md)
+49. [2. UNIX의 주요 명령어 (Các lệnh UNIX chính)](lessons/49-bai-hoc.md)
+50. [6. DDL, DML, DCL 상세 (Chi tiết DDL, DML, DCL)](lessons/50-bai-hoc.md)
+51. [7. 집합연산자 및 조인 (Toán tử tập hợp và JOIN)](lessons/51-bai-hoc.md)
+52. [15. 관계 데이터 언어 (Ngôn ngữ Dữ liệu Quan hệ - Đại số quan hệ)](lessons/52-bai-hoc.md)
+53. [21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)](lessons/53-bai-hoc.md)
+54. [22. 기타 주요 개념 (Các khái niệm quan trọng khác)](lessons/54-bai-hoc.md)
 
 ## Ghi chú học
+
+Phần này hướng dẫn cách dùng tài liệu như một bài giảng, để ghi chú và thuật ngữ luôn quay về mục tiêu học tập thay vì đứng riêng lẻ.
 
 - Thuật ngữ giữ tiếng Hàn để đối chiếu đề thi, theo sau là English và nghĩa Việt khi nguồn có nêu.
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
+## Mạch bài giảng
+
+Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
+
 ## 복습 체크리스트 (Checklist ôn tập)
+
+Checklist này khép lại bài bằng các câu hỏi kiểm tra; hãy dùng nó để xác nhận mình đã nối khái niệm, điều kiện và ví dụ thành một lời giải thích hoàn chỉnh.
 
 - [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
 - [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?

@@ -182,6 +182,8 @@ Các chapter LLM sau sẽ mở rộng distinction này.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Observed sample
    ↓ learning algorithm + inductive bias
@@ -220,5 +222,3 @@ Không. Đây là statistical estimation độ lệch (bias / 편향); fairness 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Generalization nối [Statistics for AI](../01_mathematical_foundations/03_statistics_for_ai.md), [Learning Problem and Inductive Bias](./01_learning_problem_and_inductive_bias.md), [Training/Validation/Testing](./03_training_validation_and_testing.md), [Ensemble Learning](./09_ensemble_learning.md) và [Model Evaluation](./15_model_evaluation.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -116,6 +116,8 @@ cách biểu diễn (representation / 표현) detail này ảnh hưởng trực 
 
 ## 9. Java cốt lõi (core / 핵심) cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 void dfs(int u, int parentEdge) {
     seen[u] = true;
@@ -428,5 +430,3 @@ Một connected undirected Eulerian đồ thị mà mọi đỉnh có even degre
 Nếu nút con không escape tới nút cha, nút cha cạnh là cầu nối (bridge / 브리지). Nếu nút con chỉ escape tới chính nút cha nhưng không vượt nút cha, xóa nút cha đỉnh sẽ cô lập nút con cây con. Từ cục bộ dữ liệu tóm lược `low`, ta suy ra toàn cục vulnerability trong `O(V+E)`.
 
 Xem thêm: [Graph Traversal](./01_graph_traversal_bfs_dfs.md), [MST](./03_minimum_spanning_trees.md), [SCC](./04_dag_topological_sort_and_scc.md), [Network Flow](./08_network_flow_and_matching.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

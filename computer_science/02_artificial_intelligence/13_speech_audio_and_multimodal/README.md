@@ -20,6 +20,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 - [00 — Audio and Speech Representation](./00_audio_and_speech_representation.md)
 - [01 — Speech Recognition](./01_speech_recognition.md)
 - [02 — Speech Synthesis](./02_speech_synthesis.md)
@@ -32,6 +34,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **Chapters**, ta sang **cốt lõi (core / 핵심) distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 Waveform ≠ Text
@@ -49,6 +53,8 @@ Multimodal Agent ≠ VLM With Click Tool Only
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) distinctions**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Physical signals / visual scenes
@@ -73,6 +79,4 @@ Nên đọc cùng:
 - [Large Language Models](../08_large_language_models/README.md)
 - [Agents](../10_agents_and_ai_systems/README.md)
 
-Tầng (layer / 계층) tiếp theo `14_data_for_ai/` tập trung vào material mà toàn bộ học tập (learning / 학습) hệ thống (system / 시스템) phụ thuộc: dữ liệu (data / 데이터) collection, labeling, chất lượng (quality / 품질), leakage, độ lệch (bias / 편향), synthetic dữ liệu (data / 데이터) và quản trị (governance / 거버넌스).
-
-> **Bàn giao:** Sau **Connections**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 audio and speech representation](./00_audio_and_speech_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Layer tiếp theo `14_data_for_ai/` tập trung vào material mà toàn bộ learning system phụ thuộc: data collection, labeling, quality, leakage, bias, synthetic data và governance.

@@ -81,6 +81,8 @@ Mỗi bước cần waveform/register/log bằng chứng (evidence / 증거). N�
 > **Chuyển mạch:** Từ **7. Bring-up và bằng chứng (evidence / 증거)**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - priority inversion làm tác vụ (task / 작업) quan trọng miss deadline;
 - ISR và main vòng lặp (loop / 루프) cùng sửa buffer không có quyền sở hữu (ownership / 소유권);

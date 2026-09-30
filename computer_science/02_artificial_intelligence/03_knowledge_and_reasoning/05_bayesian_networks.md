@@ -109,6 +109,8 @@ Three thành phần nguyên thủy (primitive / 기본 요소) đường dẫn (
 
 ### Chuỗi (chain / 사슬)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 X → Z → Y
 ```
@@ -121,6 +123,8 @@ X\perp Y\mid Z
 
 ### Fork
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 X ← Z → Y
 ```
@@ -132,6 +136,8 @@ X\perp Y\mid Z
 \]
 
 ### Collider
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 X → Z ← Y
@@ -409,6 +415,8 @@ LLM explains with sources
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Node      = random variable
 Edge      = direct dependency in factorization
@@ -441,6 +449,4 @@ No. They are different mô hình (model / 모델) families.
 
 Bayesian Networks make probabilistic lập luận (reasoning / 추론) structural: đồ thị (graph / 그래프) topology determines factorization and suy luận (inference / 추론) độ phức tạp (complexity / 복잡도). Concepts here reappear in nhân quả (causal / 인과적) suy luận (inference / 추론), HMMs, probabilistic programming and autoregressive generative các mô hình (models / 모델들).
 
-Xem tiếp: [Knowledge Graphs](./06_knowledge_graphs.md), which represents ngữ nghĩa (semantic / 의미적) relations rather than probabilistic phụ thuộc (dependency / 의존성) by default.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Xem tiếp: [Knowledge Graphs](./06_knowledge_graphs.md), which represents semantic relations rather than probabilistic dependency by default.

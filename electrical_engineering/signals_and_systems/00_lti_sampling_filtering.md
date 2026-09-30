@@ -71,6 +71,8 @@ Nếu clock jitter σt lớn, tín hiệu (signal / 신호) tần số cao chị
 > **Chuyển mạch:** Từ **6. Worked lập luận (reasoning / 추론): sensor 0–1 kHz**, ta sang **7. Đo và kiểm chứng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. Đo và kiểm chứng
+Phần “7. Đo và kiểm chứng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Dùng known sine để đo gain/phase theo tần số.
 - So sánh spectrum trước/sau filter, không chỉ nhìn thời gian (time / 시간) plot.
@@ -82,6 +84,8 @@ Nếu clock jitter σt lớn, tín hiệu (signal / 신호) tần số cao chị
 > **Chuyển mạch:** Từ **7. Đo và kiểm chứng**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Dùng FFT bin như frequency resolution mà quên bản ghi (record / 레코드) length/cửa sổ (window / 윈도우) leakage.
 - Lọc sau ADC khi alias đã xảy ra.

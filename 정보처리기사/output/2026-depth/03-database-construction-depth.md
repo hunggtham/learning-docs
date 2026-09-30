@@ -234,6 +234,8 @@ Một di chuyển (migration / 마이그레이션) thành công không chỉ là
 ETL: Extract → Transform → tải (load / 로드). ELT: Extract → tải (load / 로드) → Transform, phổ biến khi mục tiêu (target / 대상) nền tảng (platform / 플랫폼) có compute mạnh. Trong kỳ thi truyền thống ETL thường gặp hơn, nhưng hiểu cả hai giúp không nhầm.
 
 ## 13. Cặp dễ nhầm
+Phần “13. Cặp dễ nhầm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Cặp | Điểm tách |
 |---|---|

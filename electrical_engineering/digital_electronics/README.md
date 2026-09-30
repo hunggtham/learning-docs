@@ -5,6 +5,8 @@
 Nhánh này giải thích cách transistor và lô-gic (logic / 논리) gate trở thành máy trạng thái (state machine / 상태 머신), bộ nhớ (memory / 메모리), clocked hệ thống (system / 시스템) và programmable hardware. “0/1” là lớp trừu tượng (abstraction / 추상화) có voltage, noise margin, delay và năng lượng (energy / 에너지) ở bên dưới.
 
 ## Cốt lõi (core / 핵심) tuyến (route / 경로)
+Phần “Cốt lõi (core / 핵심) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Boolean logic → combinational circuits → flip-flop/register → FSM → memory/bus → HDL/FPGA
@@ -14,6 +16,8 @@ Boolean logic → combinational circuits → flip-flop/register → FSM → memo
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) tuyến (route / 경로)**, ta sang **cốt lõi (core / 핵심) chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) chapter
+Phần “Cốt lõi (core / 핵심) chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Logic, timing and state](00_logic_timing_state.md) — voltage margin, setup/hold, metastability, FSM, reset và xác minh (verification / 확인).
 - [Memory, buses and HDL verification](01_memory_buses_hdl_verification.md) — SRAM/DRAM/Flash, ready/valid, FIFO, assertions và synthesis ranh giới (boundary / 경계).
@@ -22,6 +26,8 @@ Boolean logic → combinational circuits → flip-flop/register → FSM → memo
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) chapter**, ta sang **Cần nắm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cần nắm
+Phần “Cần nắm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - voltage thresholds, noise margin, propagation delay và fan-out;
 - setup/hold, clock skew, metastability và synchronizer;

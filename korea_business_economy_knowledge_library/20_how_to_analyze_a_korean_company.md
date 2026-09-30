@@ -232,6 +232,8 @@ Một công ty tài chính mạnh chưa chắc cung cấp vai trò tốt cho s�
 
 ## Thứ tự ưu tiên nguồn nghiên cứu
 
+Phân tích công ty chỉ đáng tin khi nguồn được kiểm tra theo thứ tự từ pháp lý và công bố gốc tới diễn giải bên ngoài. Thứ tự dưới đây giúp giảm nguy cơ dùng câu chuyện thị trường làm dữ kiện.
+
 ```text
 Báo cáo đã kiểm toán trên DART
 ↓
@@ -251,6 +253,8 @@ Cộng đồng / đánh giá người dùng hoặc nhân viên
 Nguồn ở tầng thấp không vô dụng. Đánh giá nhân viên có thể hữu ích để hiểu văn hóa; báo chí có thể cung cấp bối cảnh. Tuy nhiên số liệu tài chính nên quay về nguồn sơ cấp bất cứ khi nào có thể.
 
 ## Mẫu nghiên cứu có thể tái sử dụng
+
+Mẫu này gom business, ngành, tài chính, định giá, quản trị và failure mode vào một hồ sơ có thể cập nhật. Mỗi mục nên trả lời một câu hỏi và chỉ rõ dữ liệu tiếp theo cần xác minh.
 
 ```markdown
 # Tên doanh nghiệp
@@ -272,6 +276,8 @@ Nguồn ở tầng thấp không vô dụng. Đánh giá nhân viên có thể h
 ## 15. Điều kiện bác bỏ giả thuyết / pre-mortem
 ## 16. Góc nhìn nghề nghiệp nếu cần
 ## Nguồn
+
+Các nguồn cuối bài là điểm bắt đầu để kiểm tra lại số liệu và sự kiện trong hồ sơ công ty. Hãy ghi ngày truy cập và phân biệt nguồn pháp lý, nguồn doanh nghiệp và nguồn diễn giải.
 ```
 
 ## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy

@@ -325,6 +325,8 @@ Information-theoretic chỉ số (metric / 지표) cho biết mô hình (model /
 **“Mutual thông tin (information / 정보) cao nghĩa X gây ra Y.”** Không. phụ thuộc (dependency / 의존성) không đồng nghĩa causality.
 
 ## 20. Checklist lập luận (reasoning / 추론)
+Phần “20. Checklist lập luận (reasoning / 추론)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Source distribution là gì và có ổn định không?

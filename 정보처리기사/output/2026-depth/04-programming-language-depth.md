@@ -97,6 +97,8 @@ Overloading: cùng phương thức (method / 메서드) name, parameter danh sá
 Overriding: subclass cung cấp hiện thực (implementation / 구현) mới cho instance phương thức (method / 메서드) có signature tương thích; thời gian chạy (runtime / 런타임) động (dynamic / 동적) dispatch chọn phương thức (method / 메서드) theo actual đối tượng (object / 객체).
 
 ### 4.3 Polymorphism
+Phần “4.3 Polymorphism” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```java
 Animal a = new Dog();
@@ -271,6 +273,8 @@ Hub phát frame/bit ra nhiều cổng (port / 포트) và hoạt động đơn g
 ARP map IPv4 address sang MAC trong cục bộ (local / 로컬) mạng (network / 네트워크). ICMP hỗ trợ điều khiển (control / 제어)/lỗi (error / 오류) diagnostics như ping concept. DNS không làm nhiệm vụ map IP sang MAC.
 
 ## 8. Cặp dễ nhầm
+Phần “8. Cặp dễ nhầm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Cặp | Điểm tách |
 |---|---|
@@ -291,6 +295,8 @@ ARP map IPv4 address sang MAC trong cục bộ (local / 로컬) mạng (network 
 ## 9. Procedural drills
 
 ### Drill 1 — C Pointer
+Phần “Drill 1 — C Pointer” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```c
 int x = 5;
@@ -306,6 +312,8 @@ Tự dấu vết (trace / 추적) đầu ra (output / 출력) và giải thích 
 Cho `Parent p = new Child();`, Child override `run()`. Khi gọi `p.run()` phương thức (method / 메서드) nào chạy? Nếu trường dữ liệu (field / 필드) `name` được khai báo ở cả Parent và Child thì trường dữ liệu (field / 필드) truy cập (access / 접근) có ngữ nghĩa (semantics / 의미론) giống phương thức (method / 메서드) dispatch không?
 
 ### Drill 3 — Python alias
+Phần “Drill 3 — Python alias” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```python
 a = [1, 2]

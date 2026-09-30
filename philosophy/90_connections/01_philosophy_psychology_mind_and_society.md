@@ -5,6 +5,8 @@
 Philosophy of mind cung cấp các câu hỏi về consciousness, self, reason và agency; [Psychology](../../psychology/README.md) đưa các câu hỏi đó vào operational definitions, đo lường (measurement / 측정) và bằng chứng (evidence / 증거). Kết quả thực nghiệm có thể bác bỏ một premise hoặc giới hạn một lý thuyết (theory / 이론), nhưng không tự quyết định toàn bộ vấn đề normative về personhood, responsibility hay good life.
 
 ## Các đường nối
+Phần “Các đường nối” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - perception, bộ nhớ (memory / 메모리) và attention nối epistemology với điều kiện thực tế của human kiến thức (knowledge / 지식);
 - moral psychology nối cơ chế phán đoán với ethics, nhưng “con người thường làm vậy” không đồng nghĩa “nên làm vậy”;

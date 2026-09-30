@@ -264,6 +264,8 @@ Xem [[09_self_concept_identity_and_self_regulation]].
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 culture nguồn + culture mới
      + language + status + network
@@ -281,5 +283,3 @@ culture nguồn + culture mới
 ## Kết nối kiến thức
 
 Xem [[04_social_and_cultural_psychology]], [[05_sex_gender_and_identity]], [[09_self_concept_identity_and_self_regulation]], [[12_loneliness_social_connection_and_belonging]], [[15_power_status_hierarchy_and_inequality]], [[../06_applied/00_work_organization_and_leadership]] và [[../06_applied/22_career_vocational_psychology_and_person_environment_fit]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

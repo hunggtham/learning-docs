@@ -91,6 +91,8 @@ Checkpoint có thể tiến trong khi sink chưa lần ghi nhận (commit / 커�
 Một chuỗi xử lý (pipeline / 파이프라인) có thể “đọc được” payload nhưng vẫn vi phạm đặc tả hợp đồng (contract / 계약) nếu nguồn (source / 소스) đổi timezone, đổi currency hoặc đổi ý nghĩa enum. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) nên kiểm tra ngữ nghĩa (semantics / 의미론) representative, không chỉ parser.
 
 ## 13. Sink mẫu (pattern / 패턴) theo loại đầu ra (output / 출력)
+Phần “13. Sink mẫu (pattern / 패턴) theo loại đầu ra (output / 출력)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | đầu ra (output / 출력) | ghi (write / 쓰기) mẫu (pattern / 패턴) thường phù hợp | Rủi ro chính |
 |---|---|---|

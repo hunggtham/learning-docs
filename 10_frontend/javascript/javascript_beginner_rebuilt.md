@@ -40,6 +40,8 @@ Vì vậy khi một đoạn mã (code / 코드) không chạy, câu hỏi đầu
 Tên chuẩn của lõi ngôn ngữ là ECMAScript. Khi tài liệu nhắc ES2015, ES2020 hay ES2025, đó là các phiên bản của chuẩn. Bạn không cần thuộc năm của từng tính năng (feature / 기능), nhưng cần hiểu JavaScript hiện đại được bổ sung dần qua các phiên bản ECMAScript.
 
 ### Ví dụ đầu tiên
+Phần này nối mạch bài học với “Ví dụ đầu tiên”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const userName = "Kim";
@@ -197,7 +199,9 @@ Nhưng:
 
 `var` có hàm (function / 함수) phạm vi (scope / 범위) và hoisting ngữ nghĩa (semantics / 의미론) cũ. Bạn sẽ gặp nó trong mã (code / 코드) WebSquare/legacy JavaScript, nhưng không nên dùng cho mã (code / 코드) mới nếu không có lý do đặc biệt.
 
-### Lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)
+### Language idiom
+Phần này nối mạch bài học với “Language idiom”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const users = [];
@@ -1104,7 +1108,9 @@ const hasAdmin = users.some(
 
 `every` hỏi “tất cả đều đúng không?”. `includes` check giá trị (value / 값) có tồn tại không.
 
-### Lối viết quen dùng của ngôn ngữ (language idiom / 언어 관용구)
+### Language idiom
+Phần này nối mạch bài học với “Language idiom”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const activeNames = users
@@ -1553,6 +1559,8 @@ try {
 `finally` chạy cả success và thất bại (failure / 실패), phù hợp cleanup/loading trạng thái (state / 상태).
 
 ### Anti-pattern
+Phần này nối mạch bài học với “Anti-pattern”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 try {
@@ -1566,7 +1574,9 @@ Swallowing lỗi (error / 오류) chỉ phù hợp nếu thất bại (failure /
 
 ---
 
-# Chương 36 — Custom lỗi (error / 오류) cơ bản
+# Chương 36 — Custom Error cơ bản
+Phần này nối mạch bài học với “Chương 36 — Custom Error cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 class ValidationError extends Error {
@@ -1684,6 +1694,8 @@ list.append(li);
 ---
 
 # Chương 40 — `classList`, attributes và style
+Phần này nối mạch bài học với “Chương 40 — `classList`, attributes và style”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 element.classList.add("active");
@@ -1707,7 +1719,9 @@ Trong codebase lớn, trạng thái (state / 상태) → CSS lớp (class / 클�
 
 ---
 
-# Chương 41 — Events và sự kiện (event / 이벤트) đối tượng (object / 객체)
+# Chương 41 — Events và event object
+Phần này nối mạch bài học với “Chương 41 — Events và event object”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 button.addEventListener("click", (event) => {
@@ -1733,7 +1747,9 @@ Không dùng `stopPropagation()` như default habit vì sự kiện (event / 이
 
 ---
 
-# Chương 42 — sự kiện (event / 이벤트) listener vòng đời (lifecycle / 생명주기) và cleanup
+# Chương 42 — Event listener lifecycle và cleanup
+Phần này nối mạch bài học với “Chương 42 — Event listener lifecycle và cleanup”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 function handleClick() {
@@ -1757,7 +1773,9 @@ button.removeEventListener(
 
 Phải cùng hàm (function / 함수) tham chiếu (reference / 참조). Vì vậy nếu bạn viết anonymous callback trực tiếp, sau này cleanup khó hơn nếu không giữ tham chiếu (reference / 참조).
 
-### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — vòng đời (lifecycle / 생명주기) pair
+### Programming pattern — lifecycle pair
+Phần này nối mạch bài học với “Programming pattern — lifecycle pair”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 addEventListener ↔ removeEventListener
@@ -1771,6 +1789,8 @@ Tư duy quyền sở hữu (ownership / 소유권) này sẽ trở thành chủ 
 ---
 
 # Chương 43 — Form và FormData
+Phần này nối mạch bài học với “Chương 43 — Form và FormData”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const form = document.querySelector("form");
@@ -1969,6 +1989,8 @@ Beginner cần hiểu distinction, nhưng đừng chạy hàng nghìn tác vụ 
 ---
 
 # Chương 49 — `fetch` và HTTP căn bản
+Phần này nối mạch bài học với “Chương 49 — `fetch` và HTTP căn bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 const response = await fetch("/api/users");
@@ -2093,7 +2115,9 @@ function saveUser(user) {
 
 Side tác động (effect / 효과) không xấu. UI ứng dụng (application / 애플리케이션) bắt buộc cần DOM, mạng (network / 네트워크), lưu trữ (storage / 저장소). Vấn đề là nếu nghiệp vụ (business / 비즈니스) calculations bị trộn với side effects, testing và lập luận (reasoning / 추론) khó hơn.
 
-### Mẫu lập trình (programming pattern / 프로그래밍 패턴) — Functional cốt lõi (core / 핵심) / Imperative Shell
+### Programming pattern — Functional Core / Imperative Shell
+Phần này nối mạch bài học với “Programming pattern — Functional Core / Imperative Shell”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 read input

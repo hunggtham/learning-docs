@@ -65,6 +65,8 @@ Sampling và computation delay biến controller thành discrete hệ thống (s
 > **Chuyển mạch:** Từ **6. Digital điều khiển (control / 제어)**, ta sang **7. xác minh (verification / 확인)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. xác minh (verification / 확인)
+Phần “7. xác minh (verification / 확인)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - mô hình (model / 모델) plant với bất định (uncertainty / 불확실성), không chỉ nominal;
 - step/frequency phản hồi (response / 응답) ở nhiều tải (load / 로드) và temperature;
@@ -76,6 +78,8 @@ Sampling và computation delay biến controller thành discrete hệ thống (s
 > **Chuyển mạch:** Từ **7. xác minh (verification / 확인)**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - sign phản hồi (feedback / 피드백) nhầm;
 - tune PID trên plant khác operating điểm (point / 지점);

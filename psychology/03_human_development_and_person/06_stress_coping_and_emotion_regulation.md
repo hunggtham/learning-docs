@@ -186,6 +186,8 @@ Mô hình tư duy (mental model / 사고 모델) này tốt hơn perfectionism v
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 stressor
    ↓
@@ -205,5 +207,3 @@ updated prediction cho lần sau
 ## Kết nối kiến thức
 
 Xem [[02_motivation_and_emotion]], [[09_self_concept_identity_and_self_regulation]], [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]], [[../06_applied/12_psychology_in_daily_life_and_self_regulation]], [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../05_intervention/01_cbt_behavioral_and_third_wave]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

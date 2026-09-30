@@ -393,7 +393,9 @@ Không dùng NDK chỉ để:
 
 Managed mã (code / 코드) thường an toàn, maintainable và portable hơn.
 
-## 34. ranh giới (boundary / 경계) thiết kế (design / 설계) mẫu
+## 34. Boundary design mẫu
+Phần này nối mạch Android vừa học với “34. Boundary design mẫu”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 interface ImageEngine {
@@ -430,12 +432,12 @@ Trước bản phát hành (release / 릴리스) app có bản địa (native / 
 10. third-party bản địa (native / 네이티브) thư viện (library / 라이브러리) inventory/CVE/license.
 
 ## 36. Official references
+Phần này nối mạch Android vừa học với “36. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 - Android NDK guides: https://nhà phát triển (developer / 개발자).android.com/ndk/guides
 - NDK API tham chiếu (reference / 참조): https://nhà phát triển (developer / 개발자).android.com/ndk/tham chiếu (reference / 참조)
 - JNI tips: https://nhà phát triển (developer / 개발자).android.com/huấn luyện (training / 학습)/articles/perf-jni
 - 16 KB page sizes: https://nhà phát triển (developer / 개발자).android.com/guide/practices/page-sizes
 
-Bản địa (native / 네이티브) toolchain và nền tảng (platform / 플랫폼) các ràng buộc (constraints / 제약조건들) thay đổi theo Android/NDK bản phát hành (release / 릴리스). Luôn kiểm tra documentation của NDK phiên bản (version / 버전) và thiết bị (device / 장치) mục tiêu (target / 대상) thực tế khi ship.
-
-> **Bàn giao:** Sau **36. Official references**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture end to end](./01_architecture_end_to_end.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Native toolchain và platform constraints thay đổi theo Android/NDK release. Luôn kiểm tra documentation của NDK version và device target thực tế khi ship.

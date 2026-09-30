@@ -23,6 +23,8 @@ Nếu chỉ biết đọc chart nhưng không hiểu các lớp này, người h
 Xem [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) để biết độ sâu (depth / 깊이) gate, ranh giới (boundary / 경계) và phần nào **không nên** tiếp tục mở rộng chỉ để tăng số tệp (file / 파일).
 
 ## Vị trí trong Investing thư viện (library / 라이브러리)
+Phần “Vị trí trong Investing thư viện (library / 라이브러리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 investing/
@@ -196,6 +198,8 @@ Forex có thể sử dụng đòn bẩy lớn. Tài liệu phục vụ **học c
 Đối với retail OTC/FX-margin products, broker/intermediary/legal thực thể (entity / 엔터티) là một phần của rủi ro (risk / 위험) mô hình (model / 모델). Regulatory details phải được re-check tại thời điểm sử dụng, đặc biệt chapter 15.
 
 ## Nguồn nền xuyên suốt
+Phần “Nguồn nền xuyên suốt” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Bank for International Settlements (BIS), Triennial Central Bank Survey và research về FX/funding markets.
 - CFTC retail FX rủi ro (risk / 위험) and registration guidance.

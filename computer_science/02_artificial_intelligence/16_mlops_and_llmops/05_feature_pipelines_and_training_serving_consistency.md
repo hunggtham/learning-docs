@@ -133,6 +133,8 @@ Nếu huấn luyện hoặc đánh giá dùng cách lắp ráp ngữ cảnh (con
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Mô hình nhìn thấy biểu diễn, không nhìn trực tiếp thực tại.
 Tính nhất quán của biểu diễn là một hợp đồng production.
@@ -155,5 +157,3 @@ Không đúng. Tokenizer, retrieval và quá trình lắp ráp prompt/ngữ cả
 ## Liên kết kiến thức
 
 Xem [Data Leakage](../14_data_for_ai/05_data_leakage.md), [Training Pipeline](../15_ai_engineering/01_training_pipeline.md), [Inference Pipeline](../15_ai_engineering/02_inference_pipeline.md), [Monitoring](./06_monitoring_and_observability.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

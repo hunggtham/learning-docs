@@ -366,6 +366,8 @@ DBMS optimizer/cardinality có thể làm quyết định cụ thể khác, như
 ## Lab 14 — LEFT phép nối (join / 조인) bị biến thành INNER phép nối (join / 조인) ngoài ý muốn
 
 ### Scenario
+Phần “Scenario” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```sql
 SELECT c.id, o.id
@@ -414,6 +416,8 @@ T1 muốn -20; T2 muốn -30.
 Dùng optimistic versioning để tránh lost cập nhật (update / 업데이트).
 
 ### Phân tích
+Phần “Phân tích” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```sql
 UPDATE account
@@ -522,6 +526,8 @@ TCP giải byte delivery ngữ nghĩa (semantics / 의미론); idempotency giả
 ## Lab 20 — Java tham chiếu (reference / 참조) kiểu (type / 타입) vs thời gian chạy (runtime / 런타임) kiểu (type / 타입)
 
 ### Scenario
+Phần “Scenario” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```java
 class A {
@@ -729,6 +735,8 @@ Mọi proposed solution đều có thể hợp lý trong một ngữ cảnh (con
 Phiên bản (version / 버전) mới deploy 10:00. 10:05 lỗi (error / 오류) tỷ lệ (rate / 비율) tăng mạnh. DB CPU bình thường, app CPU tăng 95%, GC liên tục. quay lui (rollback / 롤백) sản phẩm tạo ra (artifact / 산출물) lại bị nhầm phiên bản (version / 버전).
 
 ### Nối kiến thức
+Phần “Nối kiến thức” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - cấu hình (configuration / 구성) management/bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물);
 - ứng dụng (application / 애플리케이션) bộ nhớ (memory / 메모리) hành vi (behavior / 동작);

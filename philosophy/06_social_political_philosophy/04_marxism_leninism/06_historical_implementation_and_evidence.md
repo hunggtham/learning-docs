@@ -103,6 +103,8 @@ Khung phần mềm (framework / 프레임워크) trên được áp dụng trự
 Tuyến (route / 경로) này biến formula `ideas → institutions → policies → outcomes` thành worked phân tích (analysis / 분석). Điểm cần giữ khi đọc là kết quả (outcome / 결과) luôn là **véc-tơ (vector / 벡터)**, không phải một score duy nhất: growth, productivity, consumption, food bảo mật (security / 보안), poverty, inequality, political rights, coercion, môi trường (environment / 환경) và resilience có thể di chuyển theo hướng khác nhau.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Thư viện (library / 라이브러리) of Congress, “Nội bộ (internal / 내부) Workings of the Soviet Union — Collectivization and Industrialization”: https://www.loc.gov/exhibits/archives/intn.html
 - Encyclopaedia Britannica, “New Economic Chính sách (policy / 정책) (NEP)”.

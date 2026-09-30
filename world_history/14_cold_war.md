@@ -28,6 +28,8 @@ Một coup hoặc civil war có thể bắt đầu từ tầng trạng thái (st
 Nuclear weapons tạo “stability” giữa một số siêu cường bằng mutual vulnerability nhưng đẩy rủi ro (risk / 위험) sang proxy battlefield và civilian populations. Development aid xây đập, trường, factory, health hệ thống (system / 시스템) và military; nó mở sức chứa (capacity / 용량) nhưng cũng tạo nợ, displacement, surveillance và commodity dependence.
 
 ### Stock/luồng (flow / 흐름) và kết thúc
+Phần “Stock/luồng (flow / 흐름) và kết thúc” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: arsenals, alliance credibility, industrial capacity, ideological trust

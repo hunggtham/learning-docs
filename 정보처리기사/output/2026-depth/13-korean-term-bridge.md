@@ -25,6 +25,8 @@
 ---
 
 ## 구조적 분석 — Structured phân tích (analysis / 분석)
+Phần “구조적 분석 — Structured phân tích (analysis / 분석)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **자료 흐름도** → luồng dữ liệu (data flow / 데이터 흐름) Diagram, DFD → sơ đồ luồng dữ liệu.
 - **자료 사전** → dữ liệu (data / 데이터) Dictionary → từ điển dữ liệu.
@@ -36,6 +38,8 @@
 ---
 
 ## UML
+Phần “UML” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **유스케이스 다이어그램** → Use trường hợp (case / 사례) Diagram.
 - **클래스 다이어그램** → lớp (class / 클래스) Diagram.
@@ -63,6 +67,8 @@
 ---
 
 ## Mô-đun (module / 모듈) thiết kế (design / 설계)
+Phần “Mô-đun (module / 모듈) thiết kế (design / 설계)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **응집도** → Cohesion → mức gắn kết bên trong mô-đun (module / 모듈).
 - **결합도** → Coupling → mức phụ thuộc giữa modules.
@@ -92,6 +98,8 @@ Coupling: càng dữ liệu (data / 데이터) càng yếu/tốt trong bộ clas
 ---
 
 ## OOP / mẫu thiết kế (design pattern / 디자인 패턴)
+Phần “OOP / mẫu thiết kế (design pattern / 디자인 패턴)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **캡슐화** → Encapsulation → đóng gói/kiểm soát trạng thái (state / 상태).
 - **상속** → Inheritance → kế thừa.
@@ -123,6 +131,8 @@ Mẫu (pattern / 패턴) terms:
 # 2. 소프트웨어 개발 — Software Development
 
 ## Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)
+Phần “Cấu trúc dữ liệu (data structure / 자료구조) / thuật toán (algorithm / 알고리즘)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **자료구조** → cấu trúc dữ liệu (data structure / 자료구조).
 - **스택** → ngăn xếp (stack / 스택) → LIFO.
@@ -143,6 +153,8 @@ Mẫu (pattern / 패턴) terms:
 ---
 
 ## Testing
+Phần “Testing” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **단위 테스트** → đơn vị (unit / 단위) kiểm thử (test / 테스트).
 - **통합 테스트** → kiểm thử tích hợp (integration test / 통합 테스트).
@@ -172,6 +184,8 @@ Mẫu (pattern / 패턴) terms:
 ---
 
 ## Cấu hình (configuration / 구성) / Packaging
+Phần “Cấu hình (configuration / 구성) / Packaging” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **형상관리** → cấu hình (configuration / 구성) Management.
 - **버전 관리** → phiên bản (version / 버전) điều khiển (control / 제어).
@@ -187,6 +201,8 @@ Mẫu (pattern / 패턴) terms:
 # 3. 데이터베이스 구축 — cơ sở dữ liệu (database / 데이터베이스) Construction
 
 ## Relational mô hình (model / 모델)
+Phần “Relational mô hình (model / 모델)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **릴레이션** → quan hệ (relation / 관계).
 - **튜플** → Tuple → row.
@@ -204,6 +220,8 @@ Mẫu (pattern / 패턴) terms:
 ---
 
 ## Relational Algebra
+Phần “Relational Algebra” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **셀렉션/선택** → Selection → chọn row.
 - **프로젝션/투영** → Projection → chọn column.
@@ -216,6 +234,8 @@ Mẫu (pattern / 패턴) terms:
 ---
 
 ## Phụ thuộc (dependency / 의존성) / Normalization
+Phần “Phụ thuộc (dependency / 의존성) / Normalization” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **함수 종속** → Functional phụ thuộc (dependency / 의존성).
 - **완전 함수 종속** → Full Functional phụ thuộc (dependency / 의존성).
@@ -234,6 +254,8 @@ Mẫu (pattern / 패턴) terms:
 ---
 
 ## Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)
+Phần “Vật lý (physical / 물리적) DB / chỉ mục (index / 인덱스)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **인덱스** → chỉ mục (index / 인덱스).
 - **선택도** → Selectivity.
@@ -247,6 +269,8 @@ Mẫu (pattern / 패턴) terms:
 ---
 
 ## Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)
+Phần “Giao dịch (transaction / 트랜잭션) / tính đồng thời (concurrency / 동시성)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **트랜잭션** → giao dịch (transaction / 트랜잭션).
 - **원자성** → Atomicity.
@@ -272,6 +296,8 @@ Mẫu (pattern / 패턴) terms:
 # 4. 프로그래밍 언어 활용 — Programming ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)
 
 ## OS
+Phần “OS” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **프로세스** → tiến trình (process / 프로세스).
 - **스레드** → luồng thực thi (thread / 스레드).
@@ -307,6 +333,8 @@ Metrics:
 ---
 
 ## Bộ nhớ (memory / 메모리)
+Phần “Bộ nhớ (memory / 메모리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **페이징** → Paging.
 - **세그먼테이션** → Segmentation.
@@ -330,6 +358,8 @@ Replacement:
 ---
 
 ## Mạng (network / 네트워크)
+Phần “Mạng (network / 네트워크)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **물리 계층** → vật lý (physical / 물리적) tầng (layer / 계층).
 - **데이터 링크 계층** → dữ liệu (data / 데이터) Link tầng (layer / 계층).
@@ -386,6 +416,8 @@ Python:
 # 5. 정보시스템 구축 관리 — thông tin (information / 정보) hệ thống (system / 시스템) Construction Management
 
 ## Methodology / dự án (project / 프로젝트)
+Phần “Methodology / dự án (project / 프로젝트)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **폭포수 모델** → Waterfall mô hình (model / 모델).
 - **애자일** → Agile.
@@ -401,6 +433,8 @@ Python:
 ---
 
 ## Hạ tầng (infrastructure / 인프라) / Availability
+Phần “Hạ tầng (infrastructure / 인프라) / Availability” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **가용성** → Availability.
 - **고가용성** → High Availability, HA.
@@ -434,6 +468,8 @@ Cloud:
 ---
 
 ## Bảo mật (security / 보안)
+Phần “Bảo mật (security / 보안)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **인증** → Authentication.
 - **인가/권한 부여** → Authorization.

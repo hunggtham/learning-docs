@@ -1,59 +1,55 @@
-# 추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)
+# 200. 유지보수 (Maintenance / Bảo trì phần mềm)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **200. 유지보수 (Maintenance / Bảo trì phần mềm)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **200. 유지보수 (Maintenance / Bảo trì phần mềm)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-추가, 응용, 기초, 기술
+유지보수
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **232. 배치 프로그램 (Batch Program)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)**에서 만든 기준을 이어받아 **200. 유지보수 (Maintenance / Bảo trì phần mềm)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** và nối nó với **232. 배치 프로그램 (Batch Program)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **200. 유지보수 (Maintenance / Bảo trì phần mềm)** và nối nó với **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)
+## 200. 유지보수 (Maintenance / Bảo trì phần mềm)
 
-### 232. 배치 프로그램 (Batch Program)
-- 대량의 데이터를 사용자 개입 없이 정해진 순서에 따라 **일괄적으로 처리**하는 방식.
-- 야간 시간대 등 자원 소모가 적은 시간에 실행됨.
-- **필수 요소 5가지**: 대용량, 자동화, 견고성, 안정성, 성능.
+Sau khi đã đặt nền bằng **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)**, ta chuyển sang **200. 유지보수 (Maintenance / Bảo trì phần mềm)**. Đây là mắt xích 62/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **200. 유지보수 (Maintenance / Bảo trì phần mềm)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “200. 유지보수 (Maintenance / Bảo trì phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 개발 중 가장 많은 노력과 비용이 투입됨.
+- **유형 (Phân loại)**:
+  1. **수정(Corrective) 보수 (하자 보수)**: 검사 단계에서 못 찾은 '오류(버그) 수정'.
+  2. **적응(Adaptive) 보수 (환경 적응)**: OS 변경, 하드웨어 변경 등 '환경 변화에 적응'하기 위한 수정.
+  3. **완전화(Perfective) 보수 (기능 개선)**: 새로운 기능 추가, 성능 개선 (유지보수 중 가장 큰 비용 차지).
+  4. **예방(Preventive) 보수**: 장래의 오류 발생에 대비하여 미리 예방.
 
 **Giải thích (Vietnamese):**
-Chương trình Batch (xử lý hàng loạt) là loại phần mềm tự động chạy ngầm, thường vào ban đêm. Ví dụ: Cuối ngày ngân hàng tổng hợp lại toàn bộ giao dịch trong ngày, xử lý một lúc hàng triệu giao dịch mà không cần người bấm nút.
+- Corrective (Sửa lỗi): App bị crash, bạn phải vá lỗi.
+- Adaptive (Thích ứng): Apple ra iOS mới, bạn update app để không bị lỗi màn hình tai thỏ.
+- Perfective (Hoàn thiện): Thêm tính năng "Chat" vào app, cải tiến tốc độ tải (Chiếm nhiều ngân sách nhất).
+- Preventive (Phòng ngừa): Refactor code để sau này dễ nâng cấp.
 
-### 233 & 235. 데이터 타입 크기 (Data Type Sizes - C/C++ vs JAVA)
-- **C/C++**: `char`(1바이트), `short`(2바이트), `int`(4바이트), `float`(4바이트), `double`(8바이트).
-- **JAVA**: `byte`(1바이트), **`char`(2바이트, 유니코드 지원)**, `int`(4바이트), `boolean`(1바이트).
+**💡 Mẹo ghi nhớ (Mnemonics):**
+**수적완예** (Tu - Thích - Hoàn - Dự): **수**정, **적**응, **완**전, **예**방.
 
-**Giải thích (Vietnamese):**
-Lưu ý quan trọng: Trong C, `char` (kí tự) chiếm 1 byte. Nhưng trong Java, `char` chiếm 2 byte vì Java dùng bảng mã Unicode để hỗ trợ mọi ngôn ngữ trên thế giới (kể cả tiếng Hàn, tiếng Việt).
+---
 
-### 234. C언어의 구조체 (struct)
-- 서로 다른 데이터 타입을 하나로 묶어 관리하는 사용자 정의 자료형. 배열(동일 타입)과의 차이점.
-- (Ví dụ: Một `struct SinhVien` có thể chứa Tên(string), Tuổi(int), Điểm(float)).
-
-### 236. Python 시퀀스 자료형
-- 리스트(List): `[]` 변경 가능.
-- 튜플(Tuple): `()` **변경 불가능(Immutable)**.
-- (Ví dụ: Tuple dùng để lưu toạ độ GPS không bao giờ đổi).
-
-### 238. 가비지 콜렉터 (Garbage Collector)
-- 사용되지 않는 메모리를 자동으로 해제해주는 기능 (메모리 누수 방지). Java 등 현대 언어의 핵심.
-
-### 239 - 244. 각종 연산자
-- 산술(`%`, `++`), 관계(`==`, `!=`), 비트(`&`, `|`, `^`, `<<`), 논리(`&&`, `||`), 대입(`+=`), 조건 삼항연산자.
-- `a += 1`은 `a = a + 1`과 같다.
-- 비트 XOR(`^`): 두 비트가 다를 때만 1을 반환.
+Ta có thể khép mục **200. 유지보수 (Maintenance / Bảo trì phần mềm)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

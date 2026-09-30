@@ -7,6 +7,8 @@ Traditional software testing kiểm tra deterministic contracts tương đối r
 
 ## Pyramid mở rộng cho AI
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 unit tests
 → data/schema tests
@@ -217,6 +219,8 @@ Tests/evals can define blocking vs informational gates. High-severity an toàn (
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Software tests validate code contracts.
 AI behavioral tests validate learned/system behavior under representative situations.
@@ -239,5 +243,3 @@ Deterministic hạ tầng (infrastructure / 인프라) bugs often cause more mô
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Metrics & Benchmarks](./01_metrics_benchmarks_and_test_design.md), [Robustness](./03_robustness_and_distribution_shift.md), [Red Teaming](./06_red_teaming_and_adversarial_evaluation.md), [CI/CD/CT](../16_mlops_and_llmops/04_ci_cd_ct_for_ai.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

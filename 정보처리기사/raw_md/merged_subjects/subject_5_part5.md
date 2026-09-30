@@ -12,6 +12,8 @@
 
 
 # ⦁보안 기능 
+Phần “⦁보안 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**보안 취약점**|**설명**|**대책**|
 |---|---|---|
@@ -26,6 +28,8 @@
 
 
 # ⦁에러 처리 
+Phần “⦁에러 처리” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**보안 취약점**|**설명**|**대책**|
 |---|---|---|
@@ -51,6 +55,8 @@
 
 
 # ⦁코드 오류 
+Phần “⦁코드 오류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**보안 취약점**|**설명**|**대책**|
 |---|---|---|
@@ -81,6 +87,8 @@
 # **106 암호 알고리즘★★★** 
 
 # ⦁암호 알고리즘 관련 용어 
+Phần “⦁암호 알고리즘 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**용어**|**설명**|
 |---|---|
@@ -96,6 +104,8 @@
 
 
 # ⦁양방향 암호화 알고리즘 – 대칭키/비대칭 키 암호 방식 비교 
+Phần “⦁양방향 암호화 알고리즘 – 대칭키/비대칭 키 암호 방식 비교” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**대칭 키 암호 방식**|**비대칭 키 암호 방식**|
 |---|---|---|
@@ -113,6 +123,8 @@
 # **107 서비스 공격 기법★★** 
 
 # ⦁서비스 공격 유형과 공격도구/탐지 기법 
+Phần “⦁서비스 공격 유형과 공격도구/탐지 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**구분**|**공격기법**|**설명**|
 |---|---|---|
@@ -218,6 +230,8 @@ DAC MAC RBAC<br>구분 (Discretionary Access (Mandatory Access  (Role Based Acce
 **110 시스템 보안 구현 ★★** ⦁리눅스(LINUX)의 커널 로그 
 
 # ⦁네트워크 보안 솔루션 
+Phần “⦁네트워크 보안 솔루션” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**솔루션**|**설명**|
 |---|---|
@@ -250,6 +264,8 @@ Favorite: No
 ## 318. 소프트웨어 재사용 (Software Reuse)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 이미 개발되어 검증된 소프트웨어의 전체나 일부를 다른 소프트웨어 개발 시 다시 사용하는 활동이다.
 - * 핵심 키워드**: 비용 절감, 품질 향상, 생산성 증대, 지식 공유.
@@ -259,6 +275,8 @@ Favorite: No
 - **: 연관 설명**: 319, 320.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 재사용을 통해 프로젝트 실패 위험을 줄이고 개발 과정의 시행착오를 최소화할 수 있다.
 - 코드뿐만 아니라 요구사항 명세서, 설계서 등 모든 개발 산출물이 재사용 대상이 된다.
@@ -268,6 +286,8 @@ Favorite: No
 ## 319. 소프트웨어 재사용 방법 (합성 vs 생성)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어를 어떤 방식으로 재조립하거나 만들어내느냐에 따른 기술적 접근 분류이다.
 - * 핵심 키워드**: 합성 중심(블록), 생성 중심(패턴), 부품 조립.
@@ -277,6 +297,8 @@ Favorite: No
 - **: 연관 설명**: 318, 317.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 합성 중심(Composition-Based): 전자 칩과 같은 소프트웨어 블록을 만들어 끼워 맞추는 방식으로 블록 구성 방법이라고도 한다.
 - 생성 중심(Generation-Based): 추상화된 명세를 바탕으로 자동화 도구 등을 사용하여 코드를 생성하는 패턴 구성 방법이다.
@@ -285,6 +307,8 @@ Favorite: No
 ## 323. 수학적 산정 기법 (COCOMO, Putnam, FP)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 과거의 유사한 프로젝트 경험과 통계적 데이터를 공식에 대입하여 개발 비용을 예측하는 상향식 산정 기법이다.
 - * 핵심 키워드**: 경험적 추정, COCOMO, Putnam, 기능 점수(FP).
@@ -294,6 +318,8 @@ Favorite: No
 - **: 연관 설명**: 322, 324, 326.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - COCOMO: 보헴이 제안했으며, 소프트웨어의 규모(LOC)와 성격에 따라 비용을 산정하는 방식이다.
 - Putnam: Rayleigh-Norden 곡선을 기초로 하며, 시간에 따른 인력 배치를 예측하는 생명 주기 예측 모형이다.
@@ -303,6 +329,8 @@ Favorite: No
 ## 336. 소프트웨어 개발 프레임워크
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 소프트웨어 개발에 공통적으로 사용되는 구성 요소와 아키텍처를 일반화하여 제공하는 기반 구조이다.
 - * 핵심 키워드**: 스프링, 닷넷, 모듈화, 제어의 역흐름(IoC).
@@ -312,6 +340,8 @@ Favorite: No
 - **: 연관 설명**: 179, 337.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 모듈화: 캡슐화를 통해 변경의 영향을 최소화하고 품질과 유지보수성을 높인다.
 - 재사용성: 이미 검증된 모듈을 제공하여 개발 예산을 절감하고 신뢰성을 확보한다.

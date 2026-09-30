@@ -136,6 +136,8 @@ Xem [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 ## 17. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 cue / uncertainty
       ↓
@@ -154,6 +156,8 @@ learning loop maintained
 
 ## Bằng chứng (evidence / 증거) anchors
 
+Các evidence anchors giúp kiểm tra mô hình sợ hãi, né tránh và điều hòa theo nghiên cứu hiện hành. Hãy tách bằng chứng về mechanism khỏi kết luận điều trị cho từng cá nhân.
+
 - NICE CG113: Generalised anxiety disorder and panic disorder in adults.
 - NICE guidance for xã hội (social / 사회적) anxiety and digitally enabled anxiety therapies.
 - học tập (learning / 학습)/exposure bằng chứng (evidence / 증거) should be read with [[../00_foundations/06_open_science_and_evidence_evaluation]].
@@ -161,5 +165,3 @@ learning loop maintained
 ## Kết nối kiến thức
 
 Đọc cùng [[14_obsessive_compulsive_and_related_disorders]], [[15_trauma_and_stressor_related_disorders]], [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]] và [[../05_intervention/01_cbt_behavioral_and_third_wave]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

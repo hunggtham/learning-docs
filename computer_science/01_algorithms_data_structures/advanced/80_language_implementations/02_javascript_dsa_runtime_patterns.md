@@ -80,6 +80,8 @@ Các engine thường tối ưu tốt mảng dày đặc có kiểu phần tử 
 
 ## Mảng dày đặc, mảng thưa và lỗ trống
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```js
 const a = [];
 a[1_000_000] = 1;
@@ -173,6 +175,8 @@ Với bài toán DSA cần từ điển hoặc bảng ánh xạ tổng quát, `M
 
 ## Chuyển đổi khóa của `Object`
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```js
 const o = {};
 o[1] = 'a';
@@ -190,6 +194,8 @@ const dict = Object.create(null);
 nhưng `Map` vẫn thường là lựa chọn dễ hiểu hơn cho cấu trúc ánh xạ thuật toán.
 
 ## Định danh đối tượng trong `Map`
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```js
 const m = new Map();
@@ -665,6 +671,8 @@ CPU profile giúp tìm vòng lặp nóng, hàm so sánh tốn kém, thao tác b�
 
 ## Danh sách kiểm tra cách biểu diễn
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 ID số nguyên dày đặc?        -> Array / TypedArray
 Khóa thưa và tùy ý?          -> Map / Set
@@ -696,5 +704,3 @@ Kiểu TypedArray có đủ miền giá trị không?
 ```
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 c dsa implementation patterns](./00_c_dsa_implementation_patterns.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

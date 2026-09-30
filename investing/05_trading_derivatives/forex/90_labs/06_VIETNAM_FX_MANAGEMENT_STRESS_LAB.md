@@ -259,6 +259,8 @@ Bài chỉ đạt khi:
 ```
 
 ## 10. Đọc tiếp
+Phần “10. Đọc tiếp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Case 07 — Vietnam FX-management stress 2022–2023](../80_case_studies/07_VIETNAM_FX_MANAGEMENT_STRESS_2022_2023.md)
 - [15 — Korea / Vietnam FX market context and regulations](../15_KOREA_VIETNAM_FX_MARKET_CONTEXT_AND_REGULATIONS.md)

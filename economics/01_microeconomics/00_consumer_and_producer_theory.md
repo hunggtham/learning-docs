@@ -105,6 +105,8 @@ Trong ngắn hạn, ít nhất một đầu vào (input / 입력) bị cố đ�
 > **Chuyển mạch:** Từ **6. Producer bắt đầu từ technology**, ta sang **7. chi phí (cost / 비용): fixed, variable, average và marginal** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. chi phí (cost / 비용): fixed, variable, average và marginal
+Phần “7. chi phí (cost / 비용): fixed, variable, average và marginal” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Fixed chi phí (cost / 비용)** không đổi theo đầu ra (output / 출력) trong phạm vi ngắn hạn nhất định.
 - **Variable chi phí (cost / 비용)** thay đổi khi đầu ra (output / 출력) thay đổi.

@@ -90,6 +90,8 @@ self-ownership
 Libertarianism buộc comparative khung phần mềm (framework / 프레임워크) phải rất precise về coercion và entitlement. Nó không thể được đánh giá chỉ bằng kích thước (size / 크기) of government; cần xem rights baseline nào được assumed và institution nào bảo vệ baseline đó.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Libertarianism”: https://plato.stanford.edu/entries/libertarianism/
 - Stanford Encyclopedia of Philosophy, “Thuộc tính (property / 속성) and Quyền sở hữu (ownership / 소유권)”: https://plato.stanford.edu/entries/thuộc tính (property / 속성)/

@@ -3,6 +3,8 @@
 > **Mạch đọc:** Đọc **Philosophy, Science, Mathematics và AI** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Một vòng lặp chung** sang **Các cầu nối chính**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
 ## Một vòng lặp chung
+Phần “Một vòng lặp chung” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 question → formalization/model → measurement or computation
@@ -15,6 +17,8 @@ Mathematics làm rõ cấu trúc (structure / 구조) và consistency; Science k
 > **Chuyển mạch:** Từ **Một vòng lặp chung**, ta sang **Các cầu nối chính** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Các cầu nối chính
+Phần “Các cầu nối chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - lô-gic (logic / 논리) và [Mathematics](../../mathematics/README.md) làm rõ validity, xác suất (probability / 확률), proof, approximation và bất định (uncertainty / 불확실성).
 - [Physics](../../physics/README.md) minh họa realism, đo lường (measurement / 측정), idealization, symmetry và giới hạn quy mô (scale / 규모).

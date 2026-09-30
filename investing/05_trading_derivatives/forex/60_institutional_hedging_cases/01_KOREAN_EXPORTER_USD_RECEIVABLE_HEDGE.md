@@ -485,6 +485,8 @@ KRW strengthens structurally
 Forward hedge on 90-day receivable does not eliminate this **economic exposure**.
 
 ## 30. Giao dịch (transaction / 트랜잭션) vs economic exposure
+Phần “30. Giao dịch (transaction / 트랜잭션) vs economic exposure” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Transaction exposure
@@ -605,6 +607,8 @@ Risk/finance reviews limits and reporting
 Even in smaller company, separating responsibilities mentally reduces incentive problems.
 
 ## 39. Hedge report template
+Phần “39. Hedge report template” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Exposure period
@@ -726,6 +730,8 @@ You should be able to explain:
 7. Why 90-day hedge does not remove long-term competitiveness exposure.
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)

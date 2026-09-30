@@ -49,6 +49,8 @@ Một hộ thường kết hợp cây trồng, vật nuôi, hái lượm, thủ 
 Khi quyền sử dụng đất gắn với thừa kế, gia đình và cư trú, lao động tái sản xuất (sinh con, chăm sóc, chế biến, giữ giống) trở thành một phần của nền kinh tế dù thường không được ghi trong surplus chính thức. Cày kéo, chăn nuôi và chiến tranh có thể làm đổi phân công giới; không có một trajectory duy nhất.
 
 ### Stock/luồng (flow / 흐름)
+Phần “Stock/luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: soil fertility, seed stock, herd, stored grain, irrigation capital

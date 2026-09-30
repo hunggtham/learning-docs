@@ -473,6 +473,8 @@ Nhưng “compress tốt = intelligent” không phải equivalence universal. C
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Surprisal          = event hiếm mang nhiều information
 Entropy            = expected uncertainty/surprise
@@ -505,6 +507,4 @@ Nó có derivation từ likelihood và thông tin (information / 정보) lý thu
 
 Thông tin (information / 정보) lý thuyết (theory / 이론) nối [Probability](./02_probability_for_ai.md), [Statistics](./03_statistics_for_ai.md) và [Optimization](./06_optimization.md) với Machine học tập (learning / 학습) objectives. Sau này entropy, cross-entropy, KL và mutual-information ideas sẽ quay lại trong quyết định (decision / 결정) Trees, Neural Networks, ngôn ngữ (language / 언어) các mô hình (models / 모델들), VAEs, Distillation và Alignment.
 
-Khi gặp một information-theoretic quantity, hãy hỏi: phân phối (distribution / 분포) nào đang được so sánh, expectation dưới phân phối (distribution / 분포) nào, log đơn vị (unit / 단위) gì, và quantity đó có trực tiếp map tới sản phẩm (product / 제품) mục tiêu (objective / 목표) hay chỉ là proxy.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematics for ai](./00_mathematics_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi gặp một information-theoretic quantity, hãy hỏi: distribution nào đang được so sánh, expectation dưới distribution nào, log unit gì, và quantity đó có trực tiếp map tới product objective hay chỉ là proxy.

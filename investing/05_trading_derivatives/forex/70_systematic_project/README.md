@@ -15,6 +15,8 @@ Dự án (project / 프로젝트) nên được làm sau khi đã đọc ít nh�
 ```
 
 ## Kiến trúc tổng quát
+Phần “Kiến trúc tổng quát” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Raw Data

@@ -132,6 +132,8 @@ Low-precision huấn luyện (training / 학습) khác với suy luận (inferen
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Quantization = nén cách biểu diễn số, không trực tiếp thay đổi cấu trúc ngữ nghĩa của model
 ```
@@ -155,5 +157,3 @@ Không. thất bại (failure / 실패) theo năng lực (capability / 역량) c
 ## Liên kết kiến thức
 
 Quantization nối [Numerical Computation](../01_mathematical_foundations/07_numerical_computation.md), [Model Serving](./03_model_serving.md), [Latency, Throughput and Cost](./09_latency_throughput_and_cost.md) và [Compute Infrastructure](../17_ai_compute_and_infrastructure/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -460,6 +460,8 @@ Khi mở một page chưa từng thấy:
 Trả lời mười câu này trước khi sửa sâu.
 
 ## 29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)
+Phần “29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Engine/build target được ghi rõ

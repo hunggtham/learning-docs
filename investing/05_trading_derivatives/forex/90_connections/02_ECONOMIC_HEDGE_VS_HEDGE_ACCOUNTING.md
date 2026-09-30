@@ -310,6 +310,8 @@ Accounting treatment của spot thành phần (component / 컴포넌트), forwar
 ## 15. ánh xạ (mapping / 매핑) vào bốn institutional cases
 
 ### Korean exporter
+Phần “Korean exporter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Forecast USD receivable
@@ -319,6 +321,8 @@ Forecast USD receivable
 ```
 
 ### Korean importer
+Phần “Korean importer” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD payable or forecast purchase
@@ -328,6 +332,8 @@ USD payable or forecast purchase
 ```
 
 ### Toàn cục (global / 전역) asset manager
+Phần “Toàn cục (global / 전역) asset manager” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 foreign asset / benchmark exposure
@@ -337,6 +343,8 @@ foreign asset / benchmark exposure
 ```
 
 ### Cross-currency funding
+Phần “Cross-currency funding” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 debt and economic funding currency
@@ -377,6 +385,8 @@ exception / escalation status
 ```
 
 ## 17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)
+Phần “17. Monthly close điều khiển (control / 제어) luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Exposure register reconciliation
@@ -393,6 +403,8 @@ Exposure register reconciliation
 Treasury, accounting, rủi ro (risk / 위험) and kiểm tra (audit / 감사) may own different steps. A spreadsheet owned by one trader without thay đổi (change / 변경) log, kiểm soát truy cập (access control / 접근 제어) or rà soát (review / 검토) is a quản trị (governance / 거버넌스) weakness even if calculations are correct.
 
 ## 18. bằng chứng (evidence / 증거) hierarchy
+Phần “18. bằng chứng (evidence / 증거) hierarchy” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Executed contract / legal confirmation
@@ -407,6 +419,8 @@ Management assertion
 Assertions do not replace giao dịch (transaction / 트랜잭션) and forecast bằng chứng (evidence / 증거).
 
 ## 19. Red flags
+Phần “19. Red flags” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 designation created after seeing period-end P/L
@@ -433,6 +447,8 @@ local K-IFRS / tax / legal conclusion copied from generic IFRS summary
 10. tiêu chuẩn (standard / 표준)/adoption/local-policy nào phải verify trước khi áp dụng?
 
 ## 21. Sources and cập nhật (update / 업데이트) watch
+Phần “21. Sources and cập nhật (update / 업데이트) watch” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [IFRS Foundation — IFRS 9 Financial Instruments](https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/)
 - [IFRS Foundation — IFRS 9 project summary](https://www.ifrs.org/content/dam/ifrs/project/fi-hedge-accounting/ifrs-standard/project-summary.pdf)

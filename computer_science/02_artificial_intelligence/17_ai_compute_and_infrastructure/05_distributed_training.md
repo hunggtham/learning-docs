@@ -180,6 +180,8 @@ Toàn cục (global / 전역) batch lớn giúp hardware utilization tốt hơn 
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Distributed training = chia compute và state trong khi trả giá bằng communication, synchronization và failure complexity.
 ```
@@ -201,5 +203,3 @@ Không. Thời gian có thể giảm nhưng scaling kém có thể làm tổng a
 ## Liên kết kiến thức
 
 Xem [Parallel Computing](./04_parallel_computing.md), [Memory/Bandwidth](./03_memory_and_bandwidth.md), [Cluster & Interconnect](./07_cluster_scheduling_and_interconnect.md), [Training Pipeline](../15_ai_engineering/01_training_pipeline.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 compute foundations](./00_compute_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

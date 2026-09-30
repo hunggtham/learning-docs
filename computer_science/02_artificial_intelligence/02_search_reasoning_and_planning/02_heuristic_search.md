@@ -440,6 +440,8 @@ Dùng chung (common / 공통) mental mẫu (pattern / 패턴) is **avoid exhaust
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 g(n) = cost already paid
 h(n) = estimate cost still remaining
@@ -475,5 +477,3 @@ Greedy ignores accumulated chi phí (cost / 비용) `g`; A* includes it. This di
 Heuristic tìm kiếm (search / 검색) turns lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식) into computational savings. It connects classical AI to hiện đại (modern / 현대적) neural-guided tìm kiếm (search / 검색): handcrafted `h` can be replaced or complemented by learned giá trị (value / 값) estimates, while tìm kiếm (search / 검색) still handles combinatorial cấu trúc (structure / 구조).
 
 Xem tiếp: [Adversarial Search and Games](./03_adversarial_search_and_games.md), [Constraint Satisfaction](./04_constraint_satisfaction.md) và [Planning](./05_planning.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

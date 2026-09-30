@@ -1,39 +1,51 @@
-# 079. 프로그래밍 언어의 종류 (Types of Programming Languages)
+# 196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-프로그래밍, 언어의, 종류
+화이트, 박스, 테스트
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)**에서 만든 기준을 이어받아 **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** và nối nó với **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** và nối nó với **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 079. 프로그래밍 언어의 종류 (Types of Programming Languages)
-- **절차적 언어 (Procedural)**: 코드를 순차적인 함수(Procedure) 단위로 나누어 해결. (C, FORTRAN, ALGOL 등).
-- **객체지향 언어 (Object-Oriented)**: 데이터와 메소드를 묶어 '객체'로 만듦 (캡슐화, 상속, 다형성 지원). (C++, JAVA 등). JAVA는 '가비지 컬렉터(Garbage Collector)'가 메모리를 자동 관리함.
-- **스크립트 언어 (Scripting)**: 컴파일 없이 인터프리터 방식으로 바로 실행되는 언어. (Python, JavaScript, PHP, Bash 등).
-  - PHP: 웹 서버용 스크립트. `@`를 쓰면 에러 무시.
-  - JavaScript: 웹 브라우저 제어 (클래스와 프로토타입 기반).
+## 196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)
+
+Sau khi đã đặt nền bằng **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)**, ta chuyển sang **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)**. Đây là mắt xích 59/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** như một bài học cho người mới, hãy giữ câu hỏi: **ta kiểm tra chất lượng bằng tiêu chí nào, ở thời điểm nào và kết quả kiểm tra dẫn đến quyết định gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- 모듈의 **원시 코드(Source Code)를 오픈시킨 상태**에서 논리적인 모든 경로를 검사.
+- 내부 구조, 제어 흐름, 논리 흐름(루프)을 직접 관찰하며 테스트.
+- 조건의 참/거짓 경로를 적어도 한 번 이상 실행.
+- 테스트 과정 **초기**에 적용됨.
+- 종류: 기초 경로 검사 (Basic Path Testing), 조건 검사, 루프 검사, 데이터 흐름 검사.
 
 **Giải thích (Vietnamese):**
-- Ngôn ngữ thủ tục (như C) chạy từ trên xuống dưới, gọi các hàm.
-- Ngôn ngữ OOP (như Java, C++) nhóm mã (code / 코드) thành các "Thực thể" (Object). Java có Garbage Collector tự động dọn dẹp RAM không dùng đến.
-- Ngôn ngữ Script (Python, JS) không cần biên dịch ra tệp (file / 파일) `.exe` mà chạy trực tiếp, rất linh hoạt.
+Kiểm thử hộp trắng là bạn (thường là Dev) nhìn thấy toàn bộ source code và viết test case để đảm bảo mọi dòng code (if, else, vòng lặp) đều được chạy qua ít nhất 1 lần.
+
+**💡 Mẹo ghi nhớ (Mnemonics):**
+Hộp trắng trong suốt -> Nhìn thấu được code bên trong. Trọng tâm là "Logic đường đi" (경로).
 
 ---
+
+Ta có thể khép mục **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

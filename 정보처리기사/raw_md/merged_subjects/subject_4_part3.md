@@ -7,6 +7,8 @@
 -**: 연관 설명: 275, 276
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자바 스크립트: 웹 브라우저 내에서 동작하며 입력 사항 확인 등 클라이언트 측 제어에 사용된다.
 - PHP: 서버용 스크립트로 C, Java와 문법이 유사하여 웹 페이지 제작에 많이 사용된다.
@@ -17,6 +19,8 @@
 ## 284. Locality
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 실행되는 동안 주기억장치의 일부 페이지만을 집중적으로 참조하는 성질을 의미한다.
 - * 핵심 키워드**: 시간 구역성, 공간 구역성, 집중 참조, 워킹 셋 기반.
@@ -26,6 +30,8 @@
 -**: 연관 설명: 295, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 시간 구역성: 한 번 참조된 페이지는 가까운 시간 내에 다시 참조될 가능성이 높음을 말한다.
 - 공간 구역성: 특정 페이지가 참조되면 그 인근 위치의 페이지가 계속 참조될 가능성이 높음을 말한다.
@@ -36,6 +42,8 @@
 ## 285. 워킹 셋 (Working Set)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 원활한 수행을 위해 일정 시간 동안 자주 참조하는 페이지들의 집합이다.
 - * 핵심 키워드**: 데닝(Denning), Locality 활용, 페이지 부재 감소, 동적 변경.
@@ -45,6 +53,8 @@
 -**: 연관 설명: 294, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데닝(Denning)이 제안한 모델로, 프로그램의 국부성(Locality) 특징을 적극적으로 이용한다.
 - 워킹 셋은 시간에 따라 자주 참조하는 페이지가 달라지므로 지속적으로 변경된다.
@@ -54,6 +64,8 @@
 ## 287. UNIX 시스템의 구성
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: UNIX 운영체제를 이루는 핵심 요소인 커널, 쉘, 유틸리티 프로그램의 계층적 구조이다.
 - * 핵심 키워드**: 커널(Kernel), 쉘(Shell), 유틸리티(Utility), 계층 구조.
@@ -63,6 +75,8 @@
 -**: 연관 설명: 286
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 커널: 하드웨어를 보호하고 프로세스, 기억장치, 파일, 입출력 관리 등 가장 핵심적인 기능을 수행한다.
 - 쉘: 사용자의 명령을 인식하여 프로그램을 호출하고 명령을 수행하는 명령어 해석기이다.
@@ -72,6 +86,8 @@
 ## 292. 페이지 교체 알고리즘
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 페이지 부재 발생 시 주기억장치의 모든 프레임이 사용 중일 때 어떤 페이지를 교체할지 결정하는 기법이다.
 - * 핵심 키워드**: OPT, FIFO, LRU, LFU, NUR.
@@ -81,6 +97,8 @@
 -**: 연관 설명: 290, 293
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - OPT(Optimal): 향후 가장 오랫동안 사용되지 않을 페이지를 교체하는 가장 이론적으로 효율적인 방식이다.
 - FIFO: 주기억장치에 가장 먼저 들어와서 오래 있었던 페이지를 순차적으로 교체한다.
@@ -91,6 +109,8 @@
 ## 294. Locality
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 실행되는 동안 주기억장치를 참조할 때 특정 영역의 페이지만 집중적으로 참조하는 성질이다.
 - * 핵심 키워드**: 집중 참조, 시간 구역성, 공간 구역성, 스래싱 방지.
@@ -100,6 +120,8 @@
 -**: 연관 설명: 295, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 시간 구역성: 한 번 참조된 메모리 위치는 조만간 다시 참조될 가능성이 매우 높다는 이론이다.
 - 공간 구역성: 특정 메모리 위치가 참조되면 그 인접한 위치들도 곧 참조될 가능성이 높음을 의미한다.
@@ -110,6 +132,8 @@
 ## 295. 워킹 셋 (Working Set)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 프로세스가 일정 시간 동안 집중적으로 참조하여 주기억장치에 상주시켜야 하는 페이지들의 집합이다.
 - * 핵심 키워드**: 데닝(Denning), 집중 참조 집합, 페이지 부재 최소화, 안정적 실행.
@@ -119,6 +143,8 @@
 -**: 연관 설명: 294, 296
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로그램의 Locality(국부성) 특징을 실제 프로세스 관리에 응용한 모델이다.
 - 자주 참조되는 페이지 묶음을 주기억장치에 고정시킴으로써 페이지 부재 발생 빈도를 낮춘다.
@@ -128,6 +154,8 @@
 ## 298. PCB
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)**
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - * 개념**: 운영체제가 각 프로세스를 제어하고 관리하기 위해 필요한 정보를 저장해 두는 데이터 구조이다.
 - * 핵심 키워드**: 프로세스 제어 블록, 프로세스 상태, 고유 식별자, 스케줄링 우선순위.
@@ -137,6 +165,8 @@
 -**: 연관 설명: 297, 299
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)**
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - PCB에는 프로세스 식별자, 현재 상태(준비/실행/대기), CPU 레지스터 정보 등이 담겨 있다.
 - 부모 및 자식 프로세스에 대한 포인터와 할당된 자원 정보를 포함하여 복잡한 관리를 가능하게 한다.

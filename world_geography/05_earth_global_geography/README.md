@@ -68,6 +68,8 @@ Khi đọc một country profile, không nên bắt đầu từ thủ đô hay G
 
 ## Mô hình tổng hợp
 
+Sau khi nối Earth science với World Atlas, ta có thể nhìn toàn bộ thư viện như một chuỗi từ hình học và chuyển động của Địa cầu tới network xã hội. Sơ đồ này là điểm chốt để chuyển từ từng chapter sang cách đọc hệ thống.
+
 ```mermaid
 graph TD
   A[Earth shape + gravity] --> B[Geodesy + reference frame]
@@ -82,6 +84,4 @@ graph TD
   J --> K[Planetary footprint + telecoupling]
 ```
 
-Mô hình tư duy (mental model / 사고 모델) cuối cùng là: **Địa cầu là một hệ vật lý có hình học, trường, chuyển động và dòng; xã hội xây mạng (network / 네트워크) lên trên hệ đó; Geography nghiên cứu nơi các lớp này giao nhau.**
-
-> **Bàn giao:** Sau **Mô hình tổng hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 earth shape size geodesy](./00_earth_shape_size_geodesy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Mental model cuối cùng là: **Địa cầu là một hệ vật lý có hình học, trường, chuyển động và dòng; xã hội xây network lên trên hệ đó; Geography nghiên cứu nơi các lớp này giao nhau.**

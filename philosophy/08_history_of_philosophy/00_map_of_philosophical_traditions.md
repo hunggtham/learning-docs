@@ -5,6 +5,8 @@
 Lịch sử triết học là lịch sử của câu hỏi, khái niệm và cách sống trong các bối cảnh cụ thể — không phải bảng xếp hạng “ai đúng nhất”. Khi đọc một tác giả, hãy ghi bối cảnh, vấn đề họ đang giải quyết, premise, đối thủ và ảnh hưởng về sau.
 
 ## Các tuyến lớn
+Phần “Các tuyến lớn” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Ancient Greek**: nature, being, virtue, polis, lô-gic (logic / 논리) và life examined;
 - **Indian traditions**: self, suffering, liberation, kiến thức (knowledge / 지식), lô-gic (logic / 논리) và metaphysics trong nhiều trường phái khác nhau;

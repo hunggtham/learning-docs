@@ -15,6 +15,8 @@ Intermediate không cố biến mọi tính năng (feature / 기능) thành ki�
 
 ## 1.1 giá trị (value / 값) ngữ nghĩa (semantics / 의미론), tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) và sao chép khi ghi (copy-on-write / 쓰기 시 복사)
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 struct Profile {
     var name: String
@@ -31,6 +33,8 @@ Tham chiếu (reference / 참조) kiểu (type / 타입) có định danh (ident
 
 ## 1.2 `Equatable`, `Hashable`, `Comparable`, `Identifiable`
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 struct Product: Identifiable, Hashable {
     let id: UUID
@@ -41,6 +45,8 @@ struct Product: Identifiable, Hashable {
 `Identifiable.id` phải đại diện stable định danh (identity / 식별자) của thực thể (entity / 엔터티) trong khoảng thời gian tồn tại (lifetime / 수명) phù hợp. Nếu ID thay đổi theo vị trí array, diffing/điều hướng (navigation / 내비게이션)/trạng thái (state / 상태) restoration có thể gắn trạng thái (state / 상태) vào sai item.
 
 ## 1.3 Generic, `where` và capability-oriented API
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 func merge<C1: Collection, C2: Collection>(
@@ -55,6 +61,8 @@ where C1.Element == C2.Element {
 Chỉ yêu cầu năng lực (capability / 역량) thực sự cần. Nếu hàm (function / 함수) chỉ iterate một lần, `Sequence` có thể phù hợp hơn `Array`; nếu cần random truy cập (access / 접근), ràng buộc (constraint / 제약조건) mạnh hơn mới có ý nghĩa.
 
 ## 1.4 Associated kiểu (type / 타입), `some` và `any`
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 protocol Repository {
@@ -90,6 +98,8 @@ let result: Result<User, APIError>
 ---
 
 # 3. giao thức (protocol / 프로토콜) extension và dispatch trap
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 protocol Named {
@@ -146,6 +156,8 @@ Nếu bốn trục này rõ, phần lớn trình biên dịch (compiler / 컴파
 
 ## 5.1 Structured tính đồng thời (concurrency / 동시성) với `async let`
 
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
+
 ```swift
 async let profile = api.profile()
 async let messages = api.messages()
@@ -156,6 +168,8 @@ let (p, m) = try await (profile, messages)
 Child tác vụ (task / 작업) gắn thời gian tồn tại (lifetime / 수명) với lexical phạm vi (scope / 범위). phạm vi (scope / 범위) không kết thúc hợp lệ khi child tác vụ (task / 작업) còn bị bỏ quên; lỗi (error / 오류)/cancellation có quan hệ rõ hơn unstructured tác vụ (task / 작업).
 
 ## 5.2 động (dynamic / 동적) child tác vụ (task / 작업) với TaskGroup
+
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
 
 ```swift
 let values = try await withThrowingTaskGroup(of: Int.self) { group in
@@ -176,6 +190,8 @@ let values = try await withThrowingTaskGroup(of: Int.self) { group in
 Tác vụ (task / 작업) group phù hợp fan-out động. Đừng tạo vô hạn tác vụ (task / 작업) chỉ vì API cho phép; tính đồng thời (concurrency / 동시성) cần bounded theo tài nguyên (resource / 자원)/backend các ràng buộc (constraints / 제약조건들) khi đầu vào (input / 입력) lớn.
 
 ## 5.3 `Task {}` là unstructured tác vụ (task / 작업), không phải child phạm vi (scope / 범위) tự động
+
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
 
 ```swift
 let task = Task {
@@ -367,6 +383,8 @@ Swift 6.4 tiếp tục tăng tích hợp (integration / 통합) giữa Observati
 
 # 10. Continuation — cầu nối (bridge / 브리지) legacy callback có kỷ luật
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 func load() async throws -> Data {
     try await withCheckedThrowingContinuation { continuation in
@@ -401,6 +419,8 @@ Hãy phân loại:
 
 # 12. `@State` — lưu trữ (storage / 저장소) gắn với view định danh (identity / 식별자)
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```swift
 struct SearchView: View {
     @State private var query = ""
@@ -418,6 +438,8 @@ Với Xcode 27, `State` hiện thực (implementation / 구현) tiếp tục đ�
 
 # 13. `@Binding` — năng lực (capability / 역량) mutate trạng thái (state / 상태) của đơn vị sở hữu (owner / 오너) khác
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```swift
 struct NameField: View {
     @Binding var name: String
@@ -433,6 +455,8 @@ Binding không bản sao (copy / 복사) trạng thái (state / 상태) và cũn
 ---
 
 # 14. Observation với `@Observable`
+
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
 
 ```swift
 @Observable
@@ -471,6 +495,8 @@ struct ProfileEditor: View {
 ---
 
 # 16. môi trường (environment / 환경) và phụ thuộc (dependency / 의존성) phạm vi (scope / 범위)
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 @Environment(CartModel.self) private var cart
@@ -541,6 +567,8 @@ Danh sách (list / 목록)/ForEach định danh (identity / 식별자) cũng ph�
 
 # 20. `.task` và tác vụ (task / 작업) thời gian tồn tại (lifetime / 수명) theo view
 
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
+
 ```swift
 .task {
     await model.load()
@@ -570,6 +598,8 @@ Custom `Layout` hữu ích khi parent cần đo/place nhiều child theo thuật
 ---
 
 # 22. điều hướng (navigation / 내비게이션) là trạng thái (state / 상태)
+
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
 
 ```swift
 enum Route: Hashable {
@@ -642,6 +672,8 @@ GET thường idempotent; POST tạo tài nguyên (resource / 자원) có thể 
 
 # 25. Codable và tolerant ranh giới (boundary / 경계)
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 let decoder = JSONDecoder()
 decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -691,6 +723,8 @@ Repository/store lớp trừu tượng (abstraction / 추상화) chỉ có giá 
 ---
 
 # 28. phụ thuộc (dependency / 의존성) injection và composition gốc (root / 루트)
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 final class ProductService {
@@ -755,6 +789,8 @@ Cell reuse yêu cầu cancel/reset async ảnh (image / 이미지)/tác vụ (ta
 ---
 
 # 31. SwiftUI ↔ UIKit interoperability trung cấp
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 struct CameraView: UIViewControllerRepresentable {
@@ -868,6 +904,8 @@ Một mô-đun (module / 모듈) khỏe mạnh có cohesion rõ, API công khai 
 
 # 38. Availability và conditional compilation
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 #if DEBUG
 let endpoint = URL(string: "https://staging.example.com")!
@@ -915,6 +953,4 @@ FeatureCatalog/
 
 Bạn phải giải thích được sự khác nhau giữa structured child tác vụ (task / 작업), `Task {}` và detached tác vụ (task / 작업); actor reentrancy; MainActor isolation; `Sendable`/`@Sendable`; cancellation; `@State` quyền sở hữu (ownership / 소유권); `@Binding` projection; `@Bindable`; observable tham chiếu (reference / 참조) thời gian tồn tại (lifetime / 수명); view định danh (identity / 식별자); `.task(id:)`; persistence ngữ cảnh (context / 맥락) ranh giới (boundary / 경계); HTTP thử lại (retry / 재시도)/idempotency; và vì sao kiến trúc (architecture / 아키텍처) tốt làm trạng thái (state / 상태)/tác động (effect / 효과)/phụ thuộc (dependency / 의존성) luồng (flow / 흐름) rõ chứ không chỉ nhiều giao thức (protocol / 프로토콜).
 
-Nếu một trình biên dịch (compiler / 컴파일러) tính đồng thời (concurrency / 동시성) warning chỉ được “sửa” bằng annotation mà bạn không giải thích được quyền sở hữu (ownership / 소유권)/isolation trước và sau thay đổi, hãy xem đó là kiến thức chưa hoàn thành chứ không phải trình biên dịch (compiler / 컴파일러) khó tính.
-
-> **Bàn giao:** Sau **Checklist trước khi sang Advanced/cấp cao (senior / 시니어)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 INDEX](./00_INDEX.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nếu một compiler concurrency warning chỉ được “sửa” bằng annotation mà bạn không giải thích được ownership/isolation trước và sau thay đổi, hãy xem đó là kiến thức chưa hoàn thành chứ không phải compiler khó tính.

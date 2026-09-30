@@ -419,6 +419,8 @@ Một lỗi “không chạy được” phải được đặt vào đúng tầ
 
 ## Xem thêm
 
+Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
+
 - [Kernel, user space và system calls](../00_foundations/kernel_userspace_syscalls.md)
 - [Process, thread và signal](../04_process/processes_threads_signals_jobs.md)
 - [Package, software và shared libraries](./packages_software_libraries.md)

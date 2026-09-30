@@ -497,6 +497,8 @@ Calculus và xác suất (probability / 확률) vì vậy gắn chặt, không p
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Derivative      = output nhạy thế nào với một input nhỏ
 Partial derivative = sensitivity theo một variable
@@ -531,5 +533,3 @@ Autograd tính derivative, nhưng không giải thích vanishing gradients, satu
 Calculus nối trực tiếp sang [Optimization](./06_optimization.md), Neural Networks và Backpropagation. Khi gỡ lỗi (debug / 디버그) huấn luyện (training / 학습), hãy hỏi: độ dốc (gradient / 기울기) magnitude ra sao, computation đường dẫn (path / 경로) nào truyền độ dốc (gradient / 기울기), activation có saturate không, mất mát (loss / 손실) hình học (geometry / 기하학) cục bộ (local / 로컬) thế nào và numerical precision có làm độ dốc (gradient / 기울기) biến mất không.
 
 Xem tiếp: [Optimization for AI](./06_optimization.md) và [Numerical Computation](./07_numerical_computation.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematics for ai](./00_mathematics_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

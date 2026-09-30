@@ -40,6 +40,8 @@ Không nên đọc bảo mật (security / 보안) như một chủ đề tách 
 
 ## Thứ tự đọc
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 00_ai_safety_foundations.md
 01_alignment_and_objective_specification.md
@@ -57,6 +59,8 @@ Không nên đọc bảo mật (security / 보안) như một chủ đề tách 
 > **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Bản đồ phụ thuộc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ phụ thuộc
+
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
 
 ```mermaid
 flowchart TD
@@ -100,6 +104,8 @@ Nếu chỉ mô tả tên attack hoặc tên kỹ thuật mà không nối tới
 
 ## Mô hình tư duy xuyên suốt
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 xác định hazard / attacker / objective gap
 → xác định trust boundary
@@ -115,6 +121,8 @@ xác định hazard / attacker / objective gap
 > **Chuyển mạch:** Từ **Mô hình tư duy xuyên suốt**, ta sang **Những phân biệt phải giữ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Những phân biệt phải giữ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 An toàn                         ≠ Bảo mật
@@ -207,6 +215,4 @@ Bảo mật (security / 보안) tầng (layer / 계층) nối trực tiếp vớ
 - [Incident Response](../16_mlops_and_llmops/09_incident_response_and_lifecycle.md);
 - [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md).
 
-Đây là điểm kết thúc của tuyến môi trường vận hành (production / 운영 환경) hiện đã hoàn thiện. `20_ethics_governance_and_society/` và `90_connections/` là phần mở rộng dự kiến của roadmap tổng nhưng chưa được đưa vào branch hiện tại, vì vậy README này không tạo liên kết tới các đường dẫn chưa tồn tại.
-
-> **Bàn giao:** Sau **nội bộ (internal / 내부) links chính**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai safety foundations](./00_ai_safety_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đây là điểm kết thúc của tuyến production hiện đã hoàn thiện. `20_ethics_governance_and_society/` và `90_connections/` là phần mở rộng dự kiến của roadmap tổng nhưng chưa được đưa vào branch hiện tại, vì vậy README này không tạo liên kết tới các đường dẫn chưa tồn tại.

@@ -208,6 +208,8 @@ Compression chất lượng (quality / 품질) phụ thuộc xác suất (probab
 
 ## 13. Joint entropy
 
+Joint entropy đo bất định của cặp biến cùng lúc, làm nền để tách phần bất định riêng và phần phụ thuộc. Đây là bước trước khi định nghĩa conditional entropy và mutual information.
+
 ```math
 H(X,Y)
 ```
@@ -230,6 +232,8 @@ uncertainty of pair
 
 ## 14. Conditional entropy
 
+Conditional entropy hỏi còn bao nhiêu bất định của X sau khi đã biết Y. Nó biến ý tưởng “thông tin làm giảm bất định” thành đại lượng có thể tính.
+
 ```math
 H(Y|X)
 ```
@@ -249,6 +253,8 @@ H(Y|X)=H(Y).
 ```
 
 ## 15. Mutual thông tin (information / 정보)
+
+Mutual information đo lượng bất định về một biến được giảm khi quan sát biến kia. Nó bằng 0 khi độc lập trong điều kiện phù hợp và không yêu cầu quan hệ tuyến tính.
 
 ```math
 I(X;Y)
@@ -281,6 +287,8 @@ Nhưng estimating MI từ finite high-dimensional dữ liệu (data / 데이터)
 
 ## 17. KL divergence
 
+KL divergence đo chi phí khi dùng phân phối Q để mã hóa dữ liệu sinh từ P. Nó không đối xứng, nên phải giữ rõ hướng so sánh và không gọi nó là khoảng cách metric thông thường.
+
 ```math
 D_{KL}(p\|q)
 =
@@ -301,6 +309,8 @@ not triangle inequality
 Do đó KL không phải chỉ số (metric / 지표) distance.
 
 ## 18. Cross-entropy
+
+Cross-entropy là loss phổ biến khi phân phối thật gặp dự đoán xác suất. Tách phần entropy cố định khỏi KL giúp hiểu vì sao tối ưu cross-entropy hướng tới phân phối đúng.
 
 ```math
 H(p,q)
@@ -503,6 +513,8 @@ H_2(0.9)
 Even though one raw observation stored naively may use one bit, average bất định (uncertainty / 불확실성) is <1 bit because outcomes highly predictable.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
+
+Phần kết nối đưa entropy và coding sang machine learning, compression, privacy và decision theory. Hãy theo dõi xem “thông tin” đang được đo, truyền hay mất ở tầng nào.
 
 ```text
 logarithm

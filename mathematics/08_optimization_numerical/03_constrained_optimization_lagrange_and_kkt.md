@@ -251,6 +251,8 @@ Karush–Kuhn–Tucker conditions:
 
 ### Stationarity
 
+Stationarity yêu cầu gradient của Lagrangian cân bằng theo các hướng khả thi tại nghiệm tối ưu. Nó là điều kiện ứng viên, không tự đảm bảo global optimum nếu bài toán không lồi.
+
 ```math
 \nabla f(x^*)
 +
@@ -262,6 +264,8 @@ Karush–Kuhn–Tucker conditions:
 
 ### Primal feasibility
 
+Primal feasibility kiểm tra nghiệm có thỏa các ràng buộc gốc hay không. Một điểm làm objective tốt nhưng vi phạm constraint không phải nghiệm hợp lệ.
+
 ```math
 g_i(x^*)\le0,
 ```
@@ -272,11 +276,15 @@ h_j(x^*)=0.
 
 ### Dual feasibility
 
+Dual feasibility giới hạn dấu của multiplier theo loại ràng buộc. Điều kiện này giữ ý nghĩa kinh tế của shadow price và loại nghiệm không phù hợp khỏi hệ KKT.
+
 ```math
 \lambda_i^*\ge0.
 ```
 
 ### Complementary slackness
+
+Complementary slackness nối constraint đang chặt với multiplier có thể khác không. Nó cho biết ràng buộc nào thực sự “đang trả giá” trong nghiệm tối ưu.
 
 ```math
 \lambda_i^*g_i(x^*)=0.
@@ -651,6 +659,8 @@ If one ràng buộc (constraint / 제약조건) uses dollars ~`10^6` and another
 Rescaling variables/các ràng buộc (constraints / 제약조건들) may improve conditioning without changing underlying feasible set meaning.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
+
+Phần kết nối đặt KKT cạnh convexity, duality, machine learning và resource allocation. Hãy dùng nó để biết khi nào điều kiện cần trở thành điều kiện đủ và khi nào phải kiểm tra thêm.
 
 ```text
 gradient geometry

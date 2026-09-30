@@ -54,6 +54,8 @@ Số văn bản là khóa để liên hệ cơ quan. Khi gọi điện, đọc `
 
 ## 3. Các động từ pháp lý quan trọng
 
+Sau khi nhận diện loại văn bản, hãy tập trung vào các động từ vì chúng cho biết hành động nào đã xảy ra, ai phải làm gì và quyết định đang ở trạng thái nào. Đọc động từ cùng chủ thể và thời hạn, không dịch từng từ rời.
+
 - `신청하다`: nộp đơn;
 - `신고하다`: khai báo;
 - `제출하다`: nộp tài liệu;
@@ -77,6 +79,8 @@ Số văn bản là khóa để liên hệ cơ quan. Khi gọi điện, đọc `
 
 ## 4. Từ khóa deadline
 
+Các từ khóa thời hạn là cầu nối giữa việc hiểu văn bản và hành động đúng ngày. Hãy ghi lại ngày bắt đầu tính, ngày làm việc và ngoại lệ trước khi tự cộng ngày trên lịch.
+
 - `제출기한`: hạn nộp;
 - `납부기한`: hạn thanh toán;
 - `신청기간`: thời gian được nộp;
@@ -94,7 +98,11 @@ Không tự tính deadline bằng cách cộng số ngày trên lịch nếu vă
 
 ## 5. Cụm từ chỉ nghĩa vụ và ngoại lệ
 
+Một văn bản thường đặt nguyên tắc, quyền lựa chọn, điều cấm và ngoại lệ cạnh nhau. Phần này giúp người mới nhìn ra lực pháp lý của câu thay vì chỉ nhớ một từ khóa riêng lẻ.
+
 ### Nghĩa vụ
+
+Nhóm này báo hiệu hành động bắt buộc. Khi gặp nó, hãy tìm chủ thể, đối tượng và deadline đi kèm để biết nghĩa vụ cụ thể là gì.
 
 - `하여야 합니다`: phải;
 - `제출해야 합니다`: phải nộp;
@@ -103,16 +111,22 @@ Không tự tính deadline bằng cách cộng số ngày trên lịch nếu vă
 
 ### Quyền/lựa chọn
 
+Nhóm này cho biết người đọc có thể làm gì nhưng không nhất thiết phải làm. Cần kiểm tra thêm điều kiện để quyền lựa chọn có thực sự áp dụng cho hồ sơ hiện tại hay không.
+
 - `할 수 있습니다`: có thể;
 - `신청할 수 있습니다`: có quyền nộp đơn;
 - `선택할 수 있습니다`: có thể lựa chọn.
 
 ### Cấm
 
+Nhóm này đánh dấu hành vi bị loại khỏi phạm vi cho phép. Đọc nó cùng phần ngoại lệ để tránh biến một lệnh cấm có điều kiện thành kết luận tuyệt đối.
+
 - `하여서는 안 됩니다` / `해서는 아니 됩니다`: không được;
 - `금지됩니다`: bị cấm.
 
 ### Ngoại lệ
+
+Ngoại lệ là nơi nhiều bản dịch và cách hiểu máy móc bị sai. Khi thấy `다만` hoặc cụm loại trừ, hãy quay lại câu trước và ghi lại ranh giới mới của quy tắc.
 
 - `다만`: tuy nhiên / ngoại lệ;
 - `예외적으로`: ngoại lệ;
@@ -143,6 +157,8 @@ Khi thấy căn cứ, bản sao (copy / 복사) chính xác tên luật + số �
 
 ## 7. `별지`, `별표`, `첨부` khác nhau
 
+Sau khi hiểu câu chữ chính, hãy kiểm tra các phụ lục vì điều kiện hồ sơ thường nằm ở đó. Phân biệt đúng tên phụ lục giúp biết đâu là mẫu phải điền, đâu là bảng pháp lý và đâu là tài liệu đính kèm.
+
 - `별지`: form/biểu mẫu đính kèm;
 - `별표`: bảng/phụ lục pháp lý;
 - `첨부`: tệp (file / 파일) đính kèm nói chung;
@@ -155,6 +171,8 @@ Một hướng dẫn có thể ngắn nhưng toàn bộ điều kiện thực t�
 > **Chuyển mạch:** Từ **7. 별지, 별표, 첨부 khác nhau**, ta sang **8. Từ khóa trạng thái hồ sơ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 8. Từ khóa trạng thái hồ sơ
+
+Trạng thái hồ sơ mô tả hồ sơ đang ở đâu trong quy trình, không tự động nói rằng yêu cầu đã được chấp thuận. Hãy đọc trạng thái cùng hành động tiếp theo và deadline bổ sung.
 
 - `접수`: đã tiếp nhận;
 - `처리중`: đang xử lý;
@@ -193,6 +211,8 @@ Sau khi hoàn thành bảng này mới dịch các đoạn khó.
 > **Chuyển mạch:** Từ **9. Template dịch một văn bản**, ta sang **10. Ví dụ cấu trúc 보완요청** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 10. Ví dụ cấu trúc `보완요청`
+
+Ví dụ này cho thấy cách biến một thông báo bổ sung thành chuỗi câu hỏi có thể hành động. Hãy đi từ lý do thiếu, tài liệu được chấp nhận, thời hạn và cách nộp rồi mới quyết định có cần gọi 담당자.
 
 ```text
 보완요청
@@ -254,5 +274,3 @@ Dịch máy có thể dịch sai những cặp như:
 - `체류기간` vs `체류자격`.
 
 Giữ từ Hàn nguyên bản cạnh bản dịch khi quyết định có hậu quả pháp lý.
-
-> **Bàn giao:** Sau **12. Cảnh báo dịch máy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

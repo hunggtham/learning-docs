@@ -2,10 +2,9 @@
 
 > **Mạch đọc:** Đặt **Kotlin + Android — Coverage kiểm tra (audit / 감사)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Kotlin ngôn ngữ (language / 언어) foundations** sang **2. Coroutine và luồng (flow / 흐름)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
+## 1. Kotlin language foundations
+Phần này nối mạch Android vừa học với “1. Kotlin language foundations”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
 
-Tài liệu này kiểm tra bộ ghi chú (note / 노트) đã cover những lớp kiến thức nào và phần nào thuộc trục học (learning spine / 학습 축), deep-dive, môi trường vận hành (production / 운영 환경) casebook hay độ sâu (depth / 깊이) lab. Đây không phải cheat sheet. Vai trò của nó là tránh hai lỗi khi thư viện (library / 라이브러리) lớn dần: **bổ sung trùng lặp** và **bỏ sót một ranh giới (boundary / 경계)/dạng thất bại (failure mode / 실패 모드) quan trọng**.
-
-## 1. Kotlin ngôn ngữ (language / 언어) foundations
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -24,7 +23,9 @@ Tài liệu này kiểm tra bộ ghi chú (note / 노트) đã cover những l�
 | suspend máy trạng thái (state machine / 상태 머신)/lambda capture | Under the hood | trường hợp (case / 사례) 08 |
 | Java interop/ABI/trình biên dịch (compiler / 컴파일러) plugin | Master | Advanced + trường hợp (case / 사례) 08 + trường hợp (case / 사례) 20 + độ sâu (depth / 깊이) Lab 07 |
 
-## 2. Coroutine và luồng (flow / 흐름)
+## 2. Coroutine và Flow
+Phần này nối mạch Android vừa học với “2. Coroutine và Flow”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -44,7 +45,9 @@ Tài liệu này kiểm tra bộ ghi chú (note / 노트) đã cover những l�
 | stale-result/concurrent-session race | môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론) | độ sâu (depth / 깊이) Lab 03 |
 | bản địa (native / 네이티브) callback/luồng thực thi (thread / 스레드) crossing | môi trường vận hành (production / 운영 환경)/bản địa (native / 네이티브) | trường hợp (case / 사례) 17 + độ sâu (depth / 깊이) Lab 07 |
 
-## 3. Android thời gian chạy (runtime / 런타임) và thành phần (component / 컴포넌트) mô hình (model / 모델)
+## 3. Android runtime và component model
+Phần này nối mạch Android vừa học với “3. Android runtime và component model”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -62,6 +65,8 @@ Tài liệu này kiểm tra bộ ghi chú (note / 노트) đã cover những l�
 | startup initialization đường găng (critical path / 임계 경로) | môi trường vận hành (production / 운영 환경) sâu | trường hợp (case / 사례) 19 + độ sâu (depth / 깊이) Lab 06 |
 
 ## 4. Jetpack Compose UI
+Phần này nối mạch Android vừa học với “4. Jetpack Compose UI”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -86,7 +91,9 @@ Tài liệu này kiểm tra bộ ghi chú (note / 노트) đã cover những l�
 
 XML bố cục (layout / 레이아웃), View Binding, Fragment/View vòng đời (lifecycle / 생명주기), RecyclerView, dữ liệu (data / 데이터) Binding awareness và Compose/View interoperability được giữ từ Beginner/Intermediate. trường hợp (case / 사례) 06 mở rộng incremental di chuyển (migration / 마이그레이션) Java/XML/Fragment/LiveData/Rx → Kotlin/coroutine/luồng (flow / 흐름)/Compose. trường hợp (case / 사례) 11 cover `AndroidView`/`ComposeView` như interoperability ranh giới (boundary / 경계). Legacy API được phân loại thành deprecated/historical/still-valid thay vì gắn nhãn “sai” một cách máy móc.
 
-## 6. kiến trúc (architecture / 아키텍처) và trạng thái (state / 상태) management
+## 6. Architecture và state management
+Phần này nối mạch Android vừa học với “6. Architecture và state management”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Nhóm | Coverage | Nơi đọc chính |
 |---|---|---|
@@ -124,6 +131,8 @@ Constructor injection, Hilt/DI concept, phạm vi (scope / 범위)/thời gian t
 WorkManager, foreground dịch vụ (service / 서비스)/công việc (work / 작업), notification, exact-alarm awareness, coroutine thời gian tồn tại (lifetime / 수명) và background restriction đã được cover. Deep Dive 03 có quyết định (decision / 결정) khung phần mềm (framework / 프레임워크); trường hợp (case / 사례) 10 nối foreground thực thi (execution / 실행) với permission/hệ thống (system / 시스템) chính sách (policy / 정책); trường hợp (case / 사례) 14 phân biệt dịch vụ (service / 서비스)/Receiver/WorkManager theo thời gian tồn tại (lifetime / 수명)/durability; trường hợp (case / 사례) 18 đặt chúng vào target-SDK di chuyển (migration / 마이그레이션). độ sâu (depth / 깊이) Lab 02 nhấn mạnh WorkManager là scheduler chứ không phải sync tính đúng đắn (correctness / 정확성) engine.
 
 ## 12. Testing
+Phần này nối mạch Android vừa học với “12. Testing”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Tầng | Coverage |
 |---|---|

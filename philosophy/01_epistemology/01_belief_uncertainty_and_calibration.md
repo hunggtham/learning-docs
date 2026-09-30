@@ -13,6 +13,8 @@ Calibration hỏi: trong các claim được gắn 70% confidence, khoảng 70% 
 > **Chuyển mạch:** Từ **Tin một điều không phải là nhị phân**, ta sang **Bayes như quy tắc cập nhật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bayes như quy tắc cập nhật
+Phần “Bayes như quy tắc cập nhật” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 posterior ∝ likelihood × prior

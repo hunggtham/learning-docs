@@ -379,6 +379,8 @@ Rủi ro (risk / 위험) mô hình (model / 모델) must distinguish both.
 During gap:
 
 ### Thị trường (market / 시장) thứ tự (order / 순서)
+Phần “Thị trường (market / 시장) thứ tự (order / 순서)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Higher execution probability
@@ -386,6 +388,8 @@ Lower price certainty
 ```
 
 ### Limit thứ tự (order / 순서)
+Phần “Limit thứ tự (order / 순서)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Price protection
@@ -530,6 +534,8 @@ Counterparty dependency
 ```
 
 ## 28. Cơ chế (mechanism / 메커니즘) map
+Phần “28. Cơ chế (mechanism / 메커니즘) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Safe-haven demand for CHF
@@ -595,6 +601,8 @@ Effective leverage after first move
 Mục tiêu là thấy why stop-based rủi ro (risk / 위험) ngân sách (budget / 예산) fails under discontinuity.
 
 ## Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Swiss National Bank, press bản phát hành (release / 릴리스), **15 January 2015 — SNB discontinues minimum exchange tỷ lệ (rate / 비율) and lowers interest tỷ lệ (rate / 비율) to -0.75%**.
 - Swiss National Bank, monetary-policy chronology describing establishment and removal of the EUR/CHF minimum exchange tỷ lệ (rate / 비율).

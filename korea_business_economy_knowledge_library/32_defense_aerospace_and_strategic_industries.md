@@ -395,6 +395,8 @@ Tỷ trọng dịch vụ vòng đời
 
 ## Nhà cung cấp phân hệ
 
+Nhà cung cấp phân hệ tạo giá trị qua qualification, độ tin cậy và khả năng tích hợp chứ không chỉ qua sản lượng. Hãy đọc backlog cùng cycle nghiệm thu và yêu cầu bảo mật.
+
 ```text
 Mức tập trung nền tảng
 Quyền sở hữu IP
@@ -405,6 +407,8 @@ Giá trị linh kiện trên mỗi nền tảng
 
 ## Nhà cung cấp linh kiện hàng không
 
+Linh kiện hàng không chịu tiêu chuẩn an toàn và chu kỳ cấp phép dài. Vì vậy doanh thu tương lai phụ thuộc certification, fleet installed base và khả năng giao đúng hạn.
+
 ```text
 Mức tập trung Boeing/Airbus/khách hàng
 Tốc độ sản xuất nền tảng
@@ -414,6 +418,8 @@ Dịch vụ hậu mãi
 ```
 
 ## Công ty dữ liệu vũ trụ
+
+Dữ liệu vũ trụ chỉ có giá trị khi biến tín hiệu thành sản phẩm lặp lại được cho khách hàng. Cần tách chi phí phóng/vệ tinh, độ phủ dữ liệu, latency và khả năng kiếm tiền.
 
 ```text
 Quyền tiếp cận / chi phí vệ tinh
@@ -481,5 +487,3 @@ Bảo trì / nâng cấp
 # Liên kết
 
 Đọc cùng [`02_trade_export_and_global_value_chains.md`](./02_trade_export_and_global_value_chains.md), [`16_shipbuilding_steel_chemicals_heavy_industry.md`](./16_shipbuilding_steel_chemicals_heavy_industry.md), [`25_public_enterprises_and_state_owned_companies.md`](./25_public_enterprises_and_state_owned_companies.md), [`29_innovation_rnd_education_and_human_capital.md`](./29_innovation_rnd_education_and_human_capital.md), [`30_energy_security_power_market_and_transition.md`](./30_energy_security_power_market_and_transition.md) và [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
-
-> **Bàn giao:** Sau **Công ty dữ liệu vũ trụ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -497,6 +497,8 @@ Chiến lược (strategy / 전략) cần benchmark phù hợp:
 Một complex mô hình (model / 모델) chỉ có giá trị (value / 값) nếu vượt simple baseline sau chi phí (cost / 비용) và độ phức tạp (complexity / 복잡도) penalty.
 
 ## 36. Chiến lược (strategy / 전략) specification template
+Phần “36. Chiến lược (strategy / 전략) specification template” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Universe:
@@ -577,6 +579,8 @@ Bạn cần phân biệt được:
 → [10 — Backtesting and point-in-time FX data](./10_BACKTESTING_AND_POINT_IN_TIME_FX_DATA.md)
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [08 — Fundamental and event-driven FX analysis](./08_FUNDAMENTAL_AND_EVENT_DRIVEN_FX_ANALYSIS.md)
 - [07 — Technical indicators](./07_TECHNICAL_INDICATORS_AS_DATA_TRANSFORMATIONS.md)

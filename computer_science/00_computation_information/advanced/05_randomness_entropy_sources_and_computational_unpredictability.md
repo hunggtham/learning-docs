@@ -348,6 +348,8 @@ Entropy nguồn (source / 소스) cung cấp bất định (uncertainty / 불확
 **“Entropy nguồn (source / 소스) và CSPRNG là một thứ.”** Không. Một bên đưa bất định (uncertainty / 불확실성) vào; một bên quản lý/mở rộng trạng thái (state / 상태) để sinh đầu ra (output / 출력) hiệu quả.
 
 ## 23. Checklist lập luận (reasoning / 추론)
+Phần “23. Checklist lập luận (reasoning / 추론)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Random value này bảo vệ invariant gì?

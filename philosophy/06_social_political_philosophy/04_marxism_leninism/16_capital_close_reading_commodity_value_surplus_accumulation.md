@@ -5,6 +5,8 @@ Chapter này không cố “tóm tắt *Capital*” thành vài định nghĩa. 
 Prerequisite nên là [02 — Marxian political economy](02_marxian_political_economy.md). Chapter đó cho mô hình tư duy (mental model / 사고 모델) tổng quát; chapter hiện tại đi chậm hơn, bám sát cấu trúc argument của primary văn bản (text / 텍스트). Khi gặp claim về giá, profit hay productivity trong kinh tế hiện đại, quay về [Economics](../../../economics/README.md) để không đồng nhất Marxian categories với contemporary economic các mô hình (models / 모델들).
 
 ## 1. Vì sao Marx bắt đầu từ commodity?
+Phần “1. Vì sao Marx bắt đầu từ commodity?” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 *Capital* mở bằng commodity vì Marx muốn phân tích xã hội trong đó sản phẩm của lao động chủ yếu xuất hiện dưới dạng hàng hóa để trao đổi. **Commodity** (hàng hóa, 상품) vừa có **use-value** — công dụng cụ thể — vừa có một xã hội (social / 사회적) form cho phép nó trao đổi với các commodity khác.
 
@@ -239,6 +241,8 @@ Chapter này giải thích nội bộ (internal / 내부) kiến trúc (architec
 Điểm bàn giao là rõ: sau khi hiểu `commodity → money → capital → labour-power → surplus → accumulation`, ta mới có đủ basis để đánh giá claims về exploitation, technology, crisis và long-run capitalist dynamics.
 
 ## Primary sources và reading anchors
+Phần “Primary sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Karl Marx, *Capital, Volume I*, Chapter 1 — Commodities: https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm
 - Chapter 4 — The General Formula for Capital: https://www.marxists.org/archive/marx/works/1867-c1/ch04.htm

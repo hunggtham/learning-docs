@@ -444,6 +444,8 @@
 ## 060.재사용의 분류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **[1] 개념**: 재사용 대상과 방식에 따라 구분한 재사용 유형
 - **[2] 핵심 키워드**: 객체 재사용, 컴포넌트 재사용, 애플리케이션 재사용
@@ -452,6 +454,8 @@
 - **[5] 한 문장 설명**: 재사용은 객체, 컴포넌트, 애플리케이션 단위로 구분된다.
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 객체 재사용: 클래스·메서드 수준
 - 컴포넌트 재사용: 인터페이스 기반
@@ -489,6 +493,8 @@
 ## 062. 코드(Code)의 개요
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 자료를 처리하는 과정에서 분류, 조합, 집계를 용이하게 하기 위해 사용하는 기호.
 - 핵심 키워드: 식별 기능, 분류 기능, 배열 기능, 표준화 기능, 간소화 기능.
@@ -498,6 +504,8 @@
 - 연관 설명: 063
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 식별 기능: 데이터 간의 성격에 따라 구분을 가능하게 함.
 - 분류 기능: 특정 기준이나 동일 유형에 해당하는 데이터를 그룹화함.
@@ -509,6 +517,8 @@
 ## 063. 코드의 종류
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 데이터의 성격과 관리 목적에 따라 부여하는 다양한 방식의 코드 형태.
 - 핵심 키워드: 순차 코드, 블록 코드, 10진 코드, 그룹 분류 코드, 연상 코드.
@@ -518,6 +528,8 @@
 - 연관 설명: 062
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 순차 코드: 발생 순서나 크기 순서대로 일련번호를 부여함 (1, 2, 3...).
 - 블록 코드: 공통성이 있는 항목끼리 블록으로 구분하여 번호 부여.
@@ -1040,6 +1052,8 @@
 ## 071. 연계 매커니즘 구성요소
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 데이터를 생성하여 전송 형식을 변환하고 수신 측에 반영하는 일련의 구성 단위
 - 핵심 키워드: 송신 시스템, 수신 시스템, 연계 서버
@@ -1049,6 +1063,8 @@
 - 연관 설명: 070
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 송신 시스템: 데이터를 전송 형식(xml, csv, text 등)으로 변환하여 송신하는 시스템
 - 수신 시스템: 받은 데이터를 연계 프로그램에서 처리할 수 있는 형식으로 변환하여 반영함
@@ -1058,6 +1074,8 @@
 ## 072. 미들웨어 (Middleware)
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
+Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념: 운영체제와 응용 프로그램 사이에서 서비스를 제공하는 소프트웨어
 - 핵심 키워드: RPC, MOM, TP-Monitor, ORB, WAS
@@ -1067,6 +1085,8 @@
 - 연관 설명: 014
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
+Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - RPC(Remote Procedure Call): 원격 프로시저를 마치 로컬 프로시저처럼 호출하는 방식
 - MOM(Message Oriented Middleware): 메시지 기반 비동기 전달 방식, 이기종 간 데이터 동기화에 적합

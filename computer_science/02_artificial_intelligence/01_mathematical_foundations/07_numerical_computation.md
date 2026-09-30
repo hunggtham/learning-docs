@@ -519,6 +519,8 @@ At quy mô (scale / 규모), numerical phân tích (analysis / 분석) merge v�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Real-number formula ≠ floating-point computation
 Stable formula       = same mathematics, safer numerical path
@@ -552,6 +554,4 @@ Không trong floating điểm (point / 지점). Softmax và log-sum-exp là exam
 
 Numerical Computation nối Mathematics với [AI System Architecture](../00_foundations/04_ai_system_architecture.md), tối ưu hóa (optimization / 최적화) và Compute hạ tầng (infrastructure / 인프라). Những concepts này sẽ quay lại khi học mixed-precision huấn luyện (training / 학습), quantization, Transformer kernels, phân tán (distributed / 분산) huấn luyện (training / 학습) và efficient suy luận (inference / 추론).
 
-Khi mô hình (model / 모델) gặp instability hoặc triển khai (deployment / 배포) chi phí (cost / 비용) cao, hãy nhìn cả equation, precision format, tensor phạm vi (range / 범위), reduction thứ tự (order / 순서), bộ nhớ (memory / 메모리) movement và hardware kernel — không chỉ nhìn kiến trúc (architecture / 아키텍처) trên paper.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematics for ai](./00_mathematics_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi model gặp instability hoặc deployment cost cao, hãy nhìn cả equation, precision format, tensor range, reduction order, memory movement và hardware kernel — không chỉ nhìn architecture trên paper.

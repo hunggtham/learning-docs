@@ -566,6 +566,8 @@ with cục bộ (local / 로컬) asset +10%/-10% combinations.
 Observe that hedge ratio changes phân phối (distribution / 분포), not absolute “chất lượng (quality / 품질)”.
 
 ## 40. Strategic hedge quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
+Phần “40. Strategic hedge quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Liability currency
@@ -582,6 +584,8 @@ Regulatory/tax/accounting constraints
 No universal hedge ratio.
 
 ## 41. Attribution report
+Phần “41. Attribution report” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Local asset return
@@ -649,6 +653,8 @@ Explain:
 7. Why listing/trading currency is not always economic exposure.
 
 ## Nội bộ (internal / 내부) links
+Phần “Nội bộ (internal / 내부) links” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Portfolio FX risk](../11_PORTFOLIO_FX_RISK_CORRELATION_AND_FACTOR_EXPOSURE.md)
 - [Funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)

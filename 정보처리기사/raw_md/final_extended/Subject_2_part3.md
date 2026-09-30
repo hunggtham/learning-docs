@@ -345,6 +345,8 @@ ightarrow$ Phát chuông cảnh báo.
 ---
 
 # 162. APM (Application Performance Management)
+Phần “162. APM (Application Performance Management)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 *(Gộp chung hai nội dung lặp ở bản gốc)*
 
@@ -362,6 +364,8 @@ ightarrow$ Lập tức biết lỗi do kẹt DB chứ không phải do thiếu R
 ---
 
 # 💡 통합 비유 (Mẹo ghi nhớ tổng hợp)
+Phần “💡 통합 비유 (Mẹo ghi nhớ tổng hợp)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - **알고리즘 비유 (Thuật toán):**
   - **빅오(Big-O):** Mua balo, luôn nghĩ tới lúc đựng nặng nhất xem có rách không (Worst case).

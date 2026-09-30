@@ -5,6 +5,8 @@
 Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đo lường (measurement / 측정) phải ghi rõ setup, probe, bandwidth, tham chiếu (reference / 참조), calibration, mẫu (sample / 표본) tỷ lệ (rate / 비율) và điều kiện tải để người khác tái hiện được.
 
 ## 1. Oscilloscope
+Phần “1. Oscilloscope” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Ghi probe ratio, bandwidth limit, mẫu (sample / 표본) tỷ lệ (rate / 비율), bản ghi (record / 레코드) length và trigger.
 - Dùng short ground spring ở switch nút (node / 노드); ground lead dài có thể tạo ringing giả.
@@ -16,6 +18,8 @@ Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đ
 > **Chuyển mạch:** Từ **1. Oscilloscope**, ta sang **2. lô-gic (logic / 논리) analyzer** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. lô-gic (logic / 논리) analyzer
+Phần “2. lô-gic (logic / 논리) analyzer” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Chọn mẫu (sample / 표본) tỷ lệ (rate / 비율) đủ lớn so với fastest edge cần kiểm tra, không chỉ so với bit tỷ lệ (rate / 비율).
 - Ghi giao thức (protocol / 프로토콜) decoder phiên bản (version / 버전) và threshold voltage.
@@ -26,6 +30,8 @@ Một waveform đẹp không phải bằng chứng (evidence / 증거) đủ. đ
 > **Chuyển mạch:** Từ **2. lô-gic (logic / 논리) analyzer**, ta sang **3. Power đo lường (measurement / 측정)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 3. Power đo lường (measurement / 측정)
+Phần “3. Power đo lường (measurement / 측정)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Đo đầu vào (input / 입력) voltage ngay tại DUT, không chỉ ở bench supply.
 - Tách average, peak, inrush, sleep và transient tải (load / 로드).

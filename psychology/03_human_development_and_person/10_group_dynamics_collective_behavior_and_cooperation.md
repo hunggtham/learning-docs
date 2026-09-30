@@ -152,6 +152,8 @@ Documentation, quyền sở hữu (ownership / 소유권) map và kiến thức 
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 member ability + information diversity
             ↓
@@ -167,5 +169,3 @@ member ability + information diversity
 ## Kết nối kiến thức
 
 Đọc cùng [[15_power_status_hierarchy_and_inequality]], [[04_social_and_cultural_psychology]], [[../06_applied/00_work_organization_and_leadership]], [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]], [[../06_applied/03_interpersonal_communication_and_conflict]] và [[../90_connections/03_risk_uncertainty_and_science_communication]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

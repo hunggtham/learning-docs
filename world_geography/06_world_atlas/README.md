@@ -70,6 +70,8 @@ Các profile trọng tâm:
 
 ### Major continental/toàn cục (global / 전역) cases
 
+Nhóm case lục địa và toàn cầu mở rộng route Korea–Vietnam bằng bốn scale khác nhau. Mỗi profile được dùng để so sánh một cơ chế không gian, nên hãy đọc cùng câu hỏi về resource, settlement, corridor và external network.
+
 - [India](./asia/southern_asia/IND_india.md)
 - [United States](./americas/northern_america/USA_united_states.md)
 - [Brazil](./americas/south_america/BRA_brazil.md)
@@ -117,13 +119,4 @@ Một số Africa files đã qua độ sâu (depth / 깊이) pass và có giá t
 
 Nếu một tệp (file / 파일) chỉ lặp region chapter và không có cơ chế (mechanism / 메커니즘) riêng, nên merge kiến thức (knowledge / 지식) vào subregional/comparative chapter. Inventory vẫn giữ tên/mã nên không mất coverage.
 
-
-> **Chuyển mạch:** Từ **Khi nào nên merge thay vì giữ country tệp (file / 파일)?**, ta sang **Atlas phải phụ thuộc cốt lõi (core / 핵심)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Atlas phải phụ thuộc cốt lõi (core / 핵심)
-
-Nếu chưa hiểu monsoon, tectonics, demographic chuyển tiếp (transition / 전이), agglomeration, tài nguyên (resource / 자원) conversion hay chokepoint, quay lại cốt lõi (core / 핵심) chapter. Country profile không thay cốt lõi (core / 핵심).
-
 Bắt đầu từ [Learning Route](../LEARNING_ROUTE.md), sau đó mới chọn Atlas profile.
-
-> **Bàn giao:** Sau **Atlas phải phụ thuộc cốt lõi (core / 핵심)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 methodology and coverage](./00_methodology_and_coverage.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

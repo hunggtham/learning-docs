@@ -28,6 +28,8 @@ Nếu thiếu một thành phần, ta có thể không tái lập được mô h
 
 ## Vòng đời ML
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 định nghĩa bài toán
 → thu thập dữ liệu
@@ -100,7 +102,9 @@ Việc thăng cấp (promotion) nên dựa trên các cổng kiểm soát (gate)
 
 ## CI, CD và CT
 
-- **CI**: kiểm tra mã nguồn, lược đồ (schema / 스키마), kiểm thử (test / 테스트) và hợp đồng dữ liệu.
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- **CI**: kiểm tra mã nguồn, schema, test và hợp đồng dữ liệu.
 - **CD**: triển khai mô hình hoặc ứng dụng một cách an toàn.
 - **CT — Continuous huấn luyện (training / 학습)**: huấn luyện lại theo lịch hoặc khi điều kiện phù hợp.
 
@@ -147,6 +151,8 @@ Công cụ MLOps có thể hỗ trợ theo dõi, điều phối, registry và tr
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 MLOps = làm cho hành vi đã học có thể truy vết, tái lập, triển khai và quản trị
 LLMOps = MLOps + vòng đời của prompt / context / retrieval / tool / agent
@@ -169,5 +175,3 @@ Không. Hệ thống LLM còn có mô hình, truy xuất, công cụ, đánh gi�
 ## Liên kết kiến thức
 
 Nối trực tiếp [AI Engineering](../15_ai_engineering/README.md), [Data for AI](../14_data_for_ai/README.md), [RAG](../09_retrieval_and_rag/README.md) và [Agents](../10_agents_and_ai_systems/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 experiment tracking and reproducibility](./01_experiment_tracking_and_reproducibility.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

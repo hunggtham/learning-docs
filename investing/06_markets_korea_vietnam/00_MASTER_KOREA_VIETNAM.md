@@ -364,6 +364,8 @@ Khi ra quyết định thật phải kiểm tra:
 
 ## 28. Company research
 
+Sau khi đặt country/sector map, company research đi từ dữ liệu vận hành, bảng cân đối và exposure tiền tệ tới định giá và liquidity-aware sizing. Sơ đồ dưới đây là trình tự kiểm tra, không phải danh sách file để đọc rời rạc.
+
 ```text
 Business Model
 → Sector Driver
@@ -375,6 +377,8 @@ Business Model
 ```
 
 ## 29. thị trường (market / 시장) research
+
+Market research nối dữ liệu vĩ mô, flow, breadth, valuation và access rules thành một thesis có thể review. Hãy dùng sơ đồ để biết câu hỏi nào cần trả lời trước khi chọn cổ phiếu hoặc vị thế xuyên biên giới.
 
 ```text
 Macro

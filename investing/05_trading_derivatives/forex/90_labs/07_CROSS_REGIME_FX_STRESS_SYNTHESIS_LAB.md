@@ -299,6 +299,8 @@ Invalidation and kill condition
 Memo chưa đạt nếu chỉ viết “giống 1997”, “giống 2008” hoặc “central bank sẽ can thiệp”. Phải nêu nút (node / 노드) nào giống, nút (node / 노드) nào khác và dữ liệu nào xác nhận.
 
 ## 12. Scoring rubric
+Phần “12. Scoring rubric” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Criterion | Weight | thất bại (failure / 실패) example |
 |---|---:|---|
@@ -312,6 +314,8 @@ Memo chưa đạt nếu chỉ viết “giống 1997”, “giống 2008” ho�
 Điểm đạt tối thiểu là `80/100`, đồng thời không được thất bại (fail / 실패) cơ chế (mechanism / 메커니즘) separation hoặc point-in-time bằng chứng (evidence / 증거).
 
 ## 13. Đọc tiếp
+Phần “13. Đọc tiếp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Forex Historical Case Studies](../80_case_studies/README.md)
 - [00 — FX funding, NDF, basis and forward curve](../90_connections/00_FX_FUNDING_NDF_BASIS_AND_FORWARD_CURVE.md)

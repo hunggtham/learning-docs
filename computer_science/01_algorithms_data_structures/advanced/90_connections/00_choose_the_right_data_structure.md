@@ -343,12 +343,16 @@ Hệ thống thực tế thường ghép nhiều cấu trúc (structure / 구조
 
 ### LRU bộ nhớ đệm (cache / 캐시)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 HashMap       -> tìm node theo key
 Doubly List   -> recency order
 ```
 
 ### Dijkstra
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 adjacency list
@@ -358,6 +362,8 @@ adjacency list
 
 ### Truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) Engine
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 B+Tree / Hash Index
 + Buffer Pool
@@ -366,6 +372,8 @@ B+Tree / Hash Index
 ```
 
 ### Autocomplete
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 Trie/Radix index
@@ -384,6 +392,8 @@ Mỗi secondary chỉ mục (index / 인덱스), bộ nhớ đệm (cache / 캐�
 Một cấu trúc (structure / 구조) phụ chỉ đáng có nếu lợi ích truy vấn (query / 쿼리) lớn hơn chi phí (cost / 비용) cập nhật (update / 업데이트), bộ nhớ (memory / 메모리) và độ phức tạp (complexity / 복잡도) vận hành.
 
 ## 24. Một quyết định (decision / 결정) ma trận (matrix / 행렬) thực dụng
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 | Câu hỏi | Nếu “có”, hãy nghĩ tới |
 |---|---|
@@ -472,6 +482,8 @@ Nếu array + sort một lần đủ, không cần custom balanced cây (tree / 
 
 ## 30. Workflow chọn cấu trúc
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 1. Viết chính xác operation set.
 2. Ghi tần suất và đường chạy nóng.
@@ -492,5 +504,3 @@ Nếu array + sort một lần đủ, không cần custom balanced cây (tree / 
 Khi phân vân giữa hai cấu trúc, đừng hỏi “cái nào nhanh hơn?”. Hãy hỏi: **tải công việc (workload / 워크로드) của tôi là gì, bất biến (invariant / 불변식) nào thật sự cần, guarantee nào bắt buộc, bộ nhớ (memory / 메모리) hierarchy ra sao, và liệu một cấu trúc (structure / 구조) đơn giản hơn đã đủ chưa?**
 
 Xem thêm: [Problem Modeling](../00_foundations/00_dsa_as_problem_modeling.md), [Complexity](../00_foundations/02_complexity_analysis.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Problem-Solving Workflow](./02_problem_solving_workflow.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 dsa in databases networks and systems](./01_dsa_in_databases_networks_and_systems.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

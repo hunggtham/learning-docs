@@ -4,6 +4,8 @@ Luồng (flow / 흐름) này dùng GitHub cho cả đầu vào (input / 입력) 
 
 ## Đầu ra (output / 출력)
 
+Phần này mô tả hình dạng đầu ra để người vận hành biết pipeline tạo những tài liệu nào, sau đó dùng phần lecture contract để kiểm tra chất lượng nội dung.
+
 ```text
 output/정보처리기사/
 ├── 01_소프트웨어_설계.md
@@ -16,6 +18,10 @@ output/정보처리기사/
 ```
 
 Tài liệu không bị ép vào format cố định. AI được quyền đổi vị trí nguồn (source / 소스) để dễ hiểu, nhưng phải bảo toàn mã `핵심 001...`, không tự thêm fact thiếu căn cứ và đánh dấu phần chưa chắc chắn.
+
+## Lecture contract
+
+Prompt dùng chung nằm tại [`../prompt/COMMON_PROMPT.md`](../prompt/COMMON_PROMPT.md) và được pipeline nạp trực tiếp cho cả lượt sinh chương lẫn lượt QA. Mỗi section, kể cả `###`/`####`, phải có câu hỏi định vị, prose giải thích quan hệ giữa các ý nguồn, hệ quả hoặc boundary, rồi chốt và bàn giao sang phần kế tiếp. Header không được chỉ có wrapper chung trước/sau; bullet, bảng, công thức và ví dụ phải được dẫn vào và tổng hợp lại theo topic.
 
 ## Chuẩn bị một lần
 
@@ -72,9 +78,11 @@ Lần chạy thử đầu tiên đặt `TARGET_PARTS=1`, `MAX_CHUNKS_PER_PART=1`
 
 ## An toàn và khôi phục
 
-- Đơn vị từ (token / 토큰) chỉ nằm trong secret/môi trường (environment / 환경) của Coolify.
-- Worker reset cục bộ (local / 로컬) clone về branch GitHub trước mỗi lượt; GitHub vẫn là nguồn chuẩn (source of truth / 정본).
-- Nếu AI lỗi, API trả HTTP 500 và không push đầu ra (output / 출력) dở lên GitHub.
+Phần này nối quy trình triển khai với các rủi ro thực tế: bảo vệ secret, giữ GitHub làm nguồn chuẩn và khôi phục khi lượt sinh gặp lỗi.
+
+- Token chỉ nằm trong secret/environment của Coolify.
+- Worker reset local clone về branch GitHub trước mỗi lượt; GitHub vẫn là source of truth.
+- Nếu AI lỗi, API trả HTTP 500 và không push output dở lên GitHub.
 - Xem `quality-report.md` trước khi dùng tài liệu để ôn thi.
 
 ---

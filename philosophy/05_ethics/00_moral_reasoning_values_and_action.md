@@ -5,6 +5,8 @@
 Ethics hỏi điều gì làm một hành động đúng/sai, tốt/xấu hoặc đáng trách/đáng khen. Moral lập luận (reasoning / 추론) cần tách ít nhất ba lớp: mô tả tình huống, các giá trị được ưu tiên và nguyên tắc chuyển từ giá trị sang hành động.
 
 ## Ba họ lập luận quen thuộc
+Phần “Ba họ lập luận quen thuộc” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **consequentialism**: đánh giá theo hậu quả kỳ vọng, kể cả phân phối lợi ích và harm;
 - **deontology**: đánh giá theo duty, right, ràng buộc (constraint / 제약조건) và khả năng tôn trọng người khác như mục đích;

@@ -78,6 +78,8 @@ execution cost
 ```
 
 ## 5. Gross leverage
+Phần “5. Gross leverage” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Gross Leverage = Σ|notional_i| / Equity
@@ -270,6 +272,8 @@ notes
 Apply same scenarios across historical experiments for comparability.
 
 ## 18. Deterministic shock examples
+Phần “18. Deterministic shock examples” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD +5% broad
@@ -696,6 +700,8 @@ stress_loss_severe
 Store snapshots for later rà soát (review / 검토).
 
 ## 49. Scenario kết quả (result / 결과) lược đồ (schema / 스키마)
+Phần “49. Scenario kết quả (result / 결과) lược đồ (schema / 스키마)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 scenario_id
@@ -708,6 +714,8 @@ liquidation_flag
 ```
 
 ## 50. Attribution bản ghi (record / 레코드) lược đồ (schema / 스키마)
+Phần “50. Attribution bản ghi (record / 레코드) lược đồ (schema / 스키마)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 trade_id

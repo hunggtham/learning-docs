@@ -599,6 +599,8 @@ Rủi ro (risk / 위험) lies in translation tính đúng đắn (correctness / 
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Constant   = named object
 Variable   = placeholder object
@@ -633,5 +635,3 @@ Proof guarantees conclusion follows from formal premises. If premises/modeling a
 First-Order lô-gic (logic / 논리) upgrades propositional lập luận (reasoning / 추론) from flat Boolean symbols to relational structures, creating cầu nối (bridge / 브리지) to ontologies, quy tắc (rule / 규칙) engines and kiến thức (knowledge / 지식) Graphs. Its limitations motivate [Probabilistic Reasoning](./04_probabilistic_reasoning.md) and non-monotonic/hybrid approaches.
 
 Xem tiếp: [Inference and Reasoning](./03_inference_and_reasoning.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

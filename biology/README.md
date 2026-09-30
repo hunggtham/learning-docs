@@ -46,6 +46,8 @@ Nếu chapter chỉ kể tên cấu trúc (structure / 구조) mà không giải
 
 ## 1. Đồ thị kiến thức (knowledge graph) toàn thư viện
 
+Đồ thị này là bản đồ dependency, không phải danh sách cần học thuộc. Hãy đọc theo mũi tên để thấy cấu trúc tế bào, dòng năng lượng và thông tin dần mở rộng thành organism, evolution và ecosystem.
+
 ```mermaid
 flowchart TD
     A[Scientific thinking, scale, models]
@@ -105,6 +107,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **1. Đồ thị kiến thức (knowledge graph) toàn thư viện**, ta sang **2. Cấu trúc thư viện** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Cấu trúc thư viện
+
+Sau khi thấy quan hệ khái niệm, phần này cho biết mỗi lớp kiến thức nằm ở đâu trong thư mục. Cấu trúc file được sắp theo câu hỏi đang được giải quyết để người mới biết nên quay về prerequisite nào khi gặp thuật ngữ mới.
 
 ```text
 biology/
@@ -343,6 +347,4 @@ Chi tiết kiểm tra coverage và continuity nằm trong [Biology Knowledge Lib
 
 Phần giải thích dùng **tiếng Việt làm ngôn ngữ chính**. Thuật ngữ quốc tế được giữ trong ngoặc ở lần xuất hiện cần thiết, ví dụ `phản hồi âm (negative feedback)` hoặc `điện thế hoạt động (action potential)`. Không dùng từ tiếng Anh như thành phần ngữ pháp chính của câu nếu đã có cách diễn đạt tiếng Việt rõ ràng; các viết tắt chuẩn như DNA, RNA, ATP, PCR, CRISPR vẫn được giữ.
 
-Link giữa chapter dùng Markdown link chuẩn thay cho wikilink riêng của Obsidian để hoạt động trên GitHub và GitHub Pages. Mỗi chapter trong lộ trình học (learning path / 학습 경로) có footer điều hướng tới chapter trước, mục lục Biology và chapter kế tiếp. Vì vậy người đọc có thể đi liên tục từ phân tử → tế bào → cơ thể → quần thể → hệ sinh thái mà không phải quay lại cây thư mục.
-
-> **Bàn giao:** Sau **Quy ước ngôn ngữ và liên kết nội bộ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Link giữa chapter dùng Markdown link chuẩn thay cho wikilink riêng của Obsidian để hoạt động trên GitHub và GitHub Pages. Mỗi chapter trong learning path có footer điều hướng tới chapter trước, mục lục Biology và chapter kế tiếp. Vì vậy người đọc có thể đi liên tục từ phân tử → tế bào → cơ thể → quần thể → hệ sinh thái mà không phải quay lại cây thư mục.

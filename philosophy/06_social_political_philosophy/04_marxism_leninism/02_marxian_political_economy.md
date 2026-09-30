@@ -235,6 +235,8 @@ Luồng (flow / 흐름) này giải thích vì sao chapter về Lenin sau đó q
 Nếu cần đọc sát primary văn bản (text / 텍스트) thay vì reconstruction này, đi tới [Capital close reading](16_capital_close_reading_commodity_value_surplus_accumulation.md).
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”, economics and exploitation sections: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Exploitation”: https://plato.stanford.edu/entries/exploitation/

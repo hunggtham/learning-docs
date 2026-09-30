@@ -131,6 +131,8 @@ Mỗi lần tra một vấn đề, nên ghi theo mẫu:
 ...
 
 ## Luật gốc
+
+Đây là điểm bắt đầu để phân biệt luật, nghị định, hướng dẫn và nội dung giải thích đời sống. Hãy dùng lớp nguồn này làm mốc trước khi suy luận từ bài đăng cộng đồng hoặc mẫu cũ.
 - tên luật:
 - điều khoản:
 - 시행일:
@@ -171,5 +173,3 @@ Các cổng được dùng lặp lại trong toàn bộ tài liệu gồm:
 - `acrc.go.kr` — 국민권익위원회.
 
 Danh sách đầy đủ và mục đích sử dụng nằm trong [`SOURCES.md`](SOURCES.md).
-
-> **Bàn giao:** Sau **8. Nguồn lõi của thư viện (library / 라이브러리)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 constitution legal hierarchy and state structure](./01_constitution_legal_hierarchy_and_state_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

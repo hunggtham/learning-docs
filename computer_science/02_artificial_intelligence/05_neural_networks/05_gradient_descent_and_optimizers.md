@@ -247,6 +247,8 @@ Recipe phải evaluate cùng kiến trúc (architecture / 아키텍처)/dữ li�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Backprop = measure slope now
 Optimizer = remember history + scale/update policy
@@ -274,5 +276,3 @@ Adaptive scaling không đảm bảo; clipping/kiến trúc (architecture / 아�
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Xem [Optimization](../01_mathematical_foundations/06_optimization.md), [Backpropagation](./04_backpropagation.md), [Initialization and Normalization](./06_initialization_and_normalization.md) và [Training Dynamics](./09_deep_learning_training_dynamics.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from linear models to neural networks](./00_from_linear_models_to_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -162,6 +162,8 @@ Một người vẫn có trải nghiệm khác thường thỉnh thoảng nhưng
 
 ## 19. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 dễ tổn thương + phát triển
           ↓
@@ -179,5 +181,3 @@ diễn tiến lâm sàng + chức năng
 ## Kết nối kiến thức
 
 Đọc cùng [[01_assessment_and_diagnosis]], [[12_developmental_psychopathology_risk_and_resilience]], [[../01_brain_and_mind/01_sensation_and_perception]], [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]], [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]], [[../05_intervention/02_biological_and_community_treatment]] và [[../06_applied/00_work_organization_and_leadership]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -106,6 +106,8 @@ Mã tác vụ như `%1` là khái niệm cục bộ của shell, không phải `
 
 ## `nohup` giải quyết gì và không giải quyết gì?
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 nohup java -jar app.jar >app.log 2>&1 &
 ```
@@ -182,5 +184,3 @@ Khi gỡ lỗi, đừng chỉ hỏi "Java có chạy không?". Hãy tách thành
 ## Kết nối kiến thức
 
 Vòng đời tiến trình được systemd quản lý ở mức dịch vụ trong [Khởi động, systemd và dịch vụ](../05_system/systemd_boot_services.md). Cách CPU lập lịch và thực thi luồng được mở rộng tại [CPU, lập lịch và hiệu năng](../06_resources/cpu_scheduling_performance.md).
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [interprocess communication](./interprocess_communication.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

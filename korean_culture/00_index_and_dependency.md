@@ -22,6 +22,8 @@ Biểu thức này không phải công thức xã hội học dùng để “tí
 
 ## Quan hệ phụ thuộc giữa các nhóm kiến thức (knowledge dependency)
 
+Văn hoá được học như một hệ giao thức xã hội: lịch sử, thiết chế và ràng buộc vật chất tạo điều kiện cho hành vi, rồi công nghệ và phản hồi làm khuôn mẫu thay đổi. Sơ đồ dưới đây giúp người học biết nên nối chủ đề nào trước khi đưa ra một khái quát về xã hội Hàn Quốc.
+
 ```mermaid
 graph TD
     A[Địa lý + lịch sử bán đảo] --> A2[Các lớp lịch sử cổ đại → hiện đại]
@@ -91,7 +93,9 @@ Không bắt buộc đọc theo số tệp (file / 파일). Nếu muốn xây m�
 
 ## Cấu trúc thư mục
 
-| tệp (file / 파일) | Nội dung trung tâm |
+Sau khi hiểu dependency, bảng thư mục cho biết mỗi file đảm nhiệm lớp câu hỏi nào. Dùng nó để chọn chapter theo hiện tượng cần giải thích và để quay lại nguồn nền khi một ví dụ vượt quá phạm vi file hiện tại.
+
+| File | Nội dung trung tâm |
 |---|---|
 | [`01_cultural_system_history_geography.md`](01_cultural_system_history_geography.md) | Địa lý, bán đảo, nhà nước, chiến tranh, công nghiệp hoá và cách nhìn văn hoá như một hệ thống |
 | [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md) | Các lớp lịch sử Gojoseon, Tam Quốc (Three Kingdoms), Goryeo, Joseon, thuộc địa, chiến tranh và hiện đại hoá nén (compressed modernity) |
@@ -187,5 +191,3 @@ Câu hỏi này giúp nối văn hoá với kinh tế học, lao động và k�
 Khi đọc những từ như `빨리빨리`, `정`, `눈치`, `유교`, `군대문화`, `재벌`, không nên chuyển chúng thành câu kiểu “người Hàn luôn...”. Câu hỏi tốt hơn là: **chuẩn mực hoặc khuôn mẫu (pattern / 패턴) này được hình thành trong điều kiện lịch sử nào, được củng cố bởi thiết chế nào, xuất hiện mạnh trong bối cảnh nào, nhóm nào không tuân theo và đang thay đổi ra sao?**
 
 Một mô tả văn hoá tốt phải luôn chừa chỗ cho sự biến thiên. Seoul không phải toàn Hàn Quốc. Bình luận trực tuyến không phải dư luận xã hội. Một K-drama không phải nghiên cứu dân tộc học. Một công ty có thứ bậc cao không đại diện mọi nơi làm việc. Một gia đình dùng `산후조리원` không đại diện mọi hộ gia đình. Một khu căn hộ có quy tắc phân loại rác cụ thể không có nghĩa toàn quốc dùng đúng cùng cách triển khai. Một người Hàn không có nghĩa vụ “hành xử đúng như sách”.
-
-> **Bàn giao:** Sau **Nguyên tắc chống định kiến khái quát (stereotype)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 cultural system history geography](./01_cultural_system_history_geography.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

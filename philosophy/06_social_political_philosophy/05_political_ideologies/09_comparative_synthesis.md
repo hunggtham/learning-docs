@@ -205,6 +205,8 @@ Only after this decomposition should ideology labels be used. Labels are maps of
 Return to [Justice, power and political legitimacy](../00_justice_power_and_legitimacy.md) for normative foundations, [Comparative political economy](../04_marxism_leninism/10_comparative_political_economy.md) for quyền sở hữu (ownership / 소유권)/coordination mechanisms, and [Economics](../../../economics/README.md) or [Sociology](../../../sociology/README.md) when claims become empirical.
 
 ## Nguồn (source / 소스) anchors
+Phần “Nguồn (source / 소스) anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy: Liberalism, Conservatism, Socialism, Anarchism, Libertarianism, Republicanism, Nationalism.
 - United States Holocaust Memorial Museum and Encyclopaedia Britannica for historical fascism.

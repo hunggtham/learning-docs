@@ -205,6 +205,8 @@ Chapter này không tạo verdict về Soviet Union. Nó tạo một **đo lư�
 China và Vietnam đặc biệt hữu ích vì reform thay đổi quyết định (decision / 결정) rights, prices và incentives trong cùng political các hệ thống (systems / 시스템들). Điều đó tạo quasi-before/after bằng chứng (evidence / 증거) mạnh hơn việc chỉ compare labels giữa unrelated countries.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Cheremukhin, Golosov, Guriev & Tsyvinski, NBER Working Paper 19425, *Was Stalin Necessary for Russia's Economic Development?*: https://www.nber.org/papers/w19425
 - Thư viện (library / 라이브러리) of Congress, *Revelations from the Russian Archives — Collectivization and Industrialization*: https://www.loc.gov/exhibits/archives/intn.html

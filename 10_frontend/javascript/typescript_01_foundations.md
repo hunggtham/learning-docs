@@ -265,6 +265,8 @@ type LoadState = "idle" | "loading" | "done";
 `interface` có declaration merging và phù hợp công khai (public / 공개) extensible đối tượng (object / 객체) contracts trong một số thư viện (library / 라이브러리) mẫu (pattern / 패턴). `type` diễn đạt union, intersection, thành phần nguyên thủy (primitive / 기본 요소) alias, tuple và kiểu (type / 타입) transformations linh hoạt hơn. Đừng biến lựa chọn này thành style war; hãy chọn cấu trúc phản ánh intent và tránh accidental merging ở ứng dụng (application / 애플리케이션) mã (code / 코드) nếu bạn không cần nó.
 
 ## 11. Optional thuộc tính (property / 속성) và `undefined` không hoàn toàn giống nhau
+Phần “11. Optional thuộc tính (property / 속성) và `undefined` không hoàn toàn giống nhau” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 type A = { value?: string };
@@ -276,6 +278,8 @@ A cho phép thuộc tính (property / 속성) không tồn tại. B yêu cầu t
 Với strict modeling, đừng dùng optional chỉ để “cho trình biên dịch (compiler / 컴파일러) im”. Hỏi lĩnh vực (domain / 도메인) thật: trường dữ liệu (field / 필드) có thể absent hay luôn present nhưng unknown/empty?
 
 ## 12. `readonly` là compile-time restriction
+Phần “12. `readonly` là compile-time restriction” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 type Config = {
@@ -286,6 +290,8 @@ type Config = {
 `readonly` ngăn một số assignment qua kiểu (type / 타입) surface đó, nhưng không biến đối tượng (object / 객체) thành immutable thời gian chạy (runtime / 런타임) đối tượng (object / 객체). Nếu cùng đối tượng (object / 객체) được tham chiếu qua kiểu (type / 타입) mutable khác, thời gian chạy (runtime / 런타임) vẫn có thể thay đổi. Đây là ví dụ khác về việc static mô hình (model / 모델) không tự tạo thời gian chạy (runtime / 런타임) guarantee.
 
 ## 13. hàm (function / 함수) types, optional parameter và callback đặc tả hợp đồng (contract / 계약)
+Phần “13. hàm (function / 함수) types, optional parameter và callback đặc tả hợp đồng (contract / 계약)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 type Formatter = (value: number, locale?: string) => string;
@@ -304,6 +310,8 @@ function findUser(id: string): User | null | undefined {
 Nếu lĩnh vực (domain / 도메인) thực chỉ có “found hoặc not found”, chọn một biểu diễn (representation / 표현) duy nhất. kiểu (type / 타입) càng rộng, mọi caller càng phải carry ambiguity.
 
 ## 14. kiểu (type / 타입) assertion và non-null assertion là lời hứa của nhà phát triển (developer / 개발자)
+Phần “14. kiểu (type / 타입) assertion và non-null assertion là lời hứa của nhà phát triển (developer / 개발자)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 const input = document.querySelector("#name") as HTMLInputElement;

@@ -6,6 +6,8 @@ Folder KIIP là lớp ôn thi. Khi cần hiểu sâu, dùng các chapter cha tha
 
 ## Culture map
 
+Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → tự kiểm tra thay vì học thuộc danh sách rời.
+
 | KIIP | Đọc sâu trong `korean_culture/` |
 |---|---|
 | 효·예절·공동체 | [`../02_confucianism_relations_hierarchy.md`](../02_confucianism_relations_hierarchy.md) |
@@ -27,6 +29,8 @@ Folder KIIP là lớp ôn thi. Khi cần hiểu sâu, dùng các chapter cha tha
 > **Chuyển mạch:** Từ **Culture map**, ta sang **lịch sử (history / 이력) map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lịch sử (history / 이력) map
+
+Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → tự kiểm tra thay vì học thuộc danh sách rời.
 
 | KIIP | Đọc sâu trong `korean_history/` |
 |---|---|

@@ -56,6 +56,8 @@ Một histogram đẹp của mẫu (sample / 표본) không guarantee population
 
 ### Mean
 
+Mean là một summary của vị trí trung tâm, nhưng giá trị của nó phụ thuộc phân phối và outlier. Hãy chọn mean khi câu hỏi phù hợp với average arithmetic, không mặc định cho mọi dữ liệu.
+
 ```math
 \bar x=\frac1n\sum_i x_i.
 ```

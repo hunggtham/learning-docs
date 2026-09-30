@@ -247,6 +247,8 @@ Rủi ro chất lượng còn ảnh hưởng danh tiếng, chứng nhận khách
 
 ### Kịch bản cơ sở
 
+Kịch bản cơ sở đặt nhu cầu pin, giá nguyên liệu và utilization ở mức bình thường hóa. Đây là mốc để đánh giá dữ liệu mới đang cải thiện hay xấu đi.
+
 ```text
 Nhu cầu EV tăng vừa phải
 → sản lượng giao +15%
@@ -259,6 +261,8 @@ Nhu cầu EV tăng vừa phải
 
 ### Kịch bản bất lợi
 
+Kịch bản bất lợi kiểm tra tác động của EV demand yếu, ASP giảm, tồn kho và capex dư thừa. Hãy theo dõi cả margin và nghĩa vụ vốn, không chỉ doanh thu.
+
 ```text
 OEM trì hoãn nền tảng EV
 → sản lượng giao chỉ +0~5%
@@ -270,6 +274,8 @@ OEM trì hoãn nền tảng EV
 ```
 
 ### Kịch bản thuận lợi
+
+Kịch bản thuận lợi cần một cơ chế rõ như hợp đồng khách hàng, công suất đạt yield hoặc chi phí nguyên liệu giảm. Không coi mọi tin EV tích cực là bằng chứng đủ mạnh.
 
 ```text
 Mẫu xe mới của khách hàng thành công
@@ -336,5 +342,3 @@ Sau đó ghi chú các nhà máy mới, JV, nền tảng xe lớn, sự cố thu
 > Nhà sản xuất pin là một **doanh nghiệp phân bổ công suất dưới ràng buộc công nghệ và chính sách**. Nhu cầu EV tạo cơ hội, nhưng giá trị cho cổ đông chỉ xuất hiện khi doanh nghiệp biến CAPEX thành công suất được chứng nhận, biến công suất thành sản lượng đạt chuẩn, biến sản lượng thành giao hàng cho khách hàng và cuối cùng biến giao hàng thành tiền với ROIC đủ cao.
 
 Đọc tiếp [08_hanwha_aerospace_defense_backlog_case](./08_hanwha_aerospace_defense_backlog_case.md) để so sánh ngành pin — nơi chu kỳ nhu cầu và công suất rất quan trọng — với quốc phòng, nơi backlog, mua sắm công và lịch giao hàng đóng vai trò trung tâm.
-
-> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

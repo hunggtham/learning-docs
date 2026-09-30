@@ -72,7 +72,9 @@ resume -> state 2 -> combine -> return
 
 Điều này giải thích tại sao dấu vết ngăn xếp (stack trace / 스택 트레이스) coroutine có hình dạng khác synchronous lời gọi (call / 호출) và tại sao cục bộ (local / 로컬) variable cần survive suspension.
 
-## 5. Suspend không làm blocking mã (code / 코드) thành non-blocking
+## 5. Suspend không làm blocking code thành non-blocking
+Phần này nối mạch Android vừa học với “5. Suspend không làm blocking code thành non-blocking”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 suspend fun bad() {
@@ -227,7 +229,9 @@ fun Dog.sound() = "dog"
 
 Extension được resolve theo compile-time receiver kiểu (type / 타입), không polymorphic virtual dispatch. Nếu hành vi (behavior / 동작) cần override, dùng member/giao diện (interface / 인터페이스).
 
-## 20. chuỗi (sequence / 시퀀스) vs Collection
+## 20. Sequence vs Collection
+Phần này nối mạch Android vừa học với “20. Sequence vs Collection”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 items.map(...).filter(...).take(10)
@@ -249,7 +253,9 @@ val list: List<Int>  // elements boxed trên JVM
 
 Trong UI/nghiệp vụ (business / 비즈니스) mã (code / 코드) bình thường không đáng lo. Trong vòng lặp (loop / 루프) cực nóng/large numeric dữ liệu (data / 데이터), allocation/boxing có thể hiện trên profiler.
 
-## 22. giá trị (value / 값) lớp (class / 클래스) và boxing
+## 22. Value class và boxing
+Phần này nối mạch Android vừa học với “22. Value class và boxing”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @JvmInline
@@ -261,6 +267,8 @@ Giá trị (value / 값) lớp (class / 클래스) thường tránh allocation w
 Đừng hứa “zero allocation”. Dùng giá trị (value / 값) lớp (class / 클래스) trước hết cho kiểu (type / 타입) an toàn (safety / 안전)/lĩnh vực (domain / 도메인) modeling; hiệu năng (performance / 성능) là secondary và cần đo.
 
 ## 23. Lambda capture
+Phần này nối mạch Android vừa học với “23. Lambda capture”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 fun screen(activity: Activity): () -> Unit = {

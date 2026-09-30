@@ -301,10 +301,12 @@ Refusal tỷ lệ (rate / 비율) một mình không đủ.
 
 ## Dạng thất bại (failure mode / 실패 모드) phổ biến của defense
 
-- chỉ thêm từ khóa (keyword / 키워드) filter;
-- tin delimiter là ranh giới bảo mật (security boundary / 보안 경계);
-- cho mô hình (model / 모델) tự quyết permission;
-- retrieve dữ liệu rồi mới hy vọng mô hình (model / 모델) không tiết lộ;
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
+- chỉ thêm keyword filter;
+- tin delimiter là security boundary;
+- cho model tự quyết permission;
+- retrieve dữ liệu rồi mới hy vọng model không tiết lộ;
 - đặt secret trong prompt;
 - dùng công cụ (tool / 도구) quá generic;
 - approval dựa trên mô hình (model / 모델) summary;
@@ -352,5 +354,3 @@ Không. Filter chỉ là một defense tầng (layer / 계층) và dễ bị par
 ## Liên kết kiến thức
 
 Xem [RAG](../09_retrieval_and_rag/README.md), [Tool Calling](../10_agents_and_ai_systems/01_tools_and_function_calling.md), [Agent Memory](../10_agents_and_ai_systems/04_agent_memory.md), [Red Teaming](../18_evaluation_reliability_interpretability/06_red_teaming_and_adversarial_evaluation.md), [Reliability Engineering](../18_evaluation_reliability_interpretability/07_reliability_engineering.md) và [Secure AI System Design](./08_secure_ai_system_design.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai safety foundations](./00_ai_safety_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

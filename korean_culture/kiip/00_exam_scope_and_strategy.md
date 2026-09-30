@@ -18,6 +18,8 @@ Nguồn hiện tại (current / 현재) cấu trúc (structure / 구조): `법�
 
 ## Phạm vi cơ bản từ bộ PDF
 
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+
 ```text
 사회 1~8
 교육 9~12
@@ -38,7 +40,9 @@ Nguồn hiện tại (current / 현재) cấu trúc (structure / 구조): `법�
 
 ## Phần 심화 được gộp vào đâu?
 
-| Trục 심화 | tệp (file / 파일) chính |
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+
+| Trục 심화 | File chính |
 |---|---|
 | `대한민국의 국민` | `01_사회.md`, `06_법.md` |
 | `국민의 권리` | `04_정치.md`, `06_법.md` |

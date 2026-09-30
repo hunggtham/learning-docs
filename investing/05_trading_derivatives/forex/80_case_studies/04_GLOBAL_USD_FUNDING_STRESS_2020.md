@@ -418,6 +418,8 @@ Ex-post crisis stabilization question
 ```
 
 ## 27. What dữ liệu (data / 데이터) should be monitored?
+Phần “27. What dữ liệu (data / 데이터) should be monitored?” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Cross-currency basis
@@ -435,6 +437,8 @@ Margin and collateral conditions
 Not all dữ liệu (data / 데이터) are available in real thời gian (time / 시간) to retail researcher.
 
 ## 28. USD/KRW-specific stress dashboard
+Phần “28. USD/KRW-specific stress dashboard” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD/KRW spot
@@ -523,6 +527,8 @@ Ask:
 This is more useful for leveraged portfolio.
 
 ## 34. Cơ chế (mechanism / 메커니즘) map
+Phần “34. Cơ chế (mechanism / 메커니즘) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 COVID shock
@@ -606,6 +612,8 @@ Wrong lesson:
 Funding stress can strengthen USD during weak toàn cục (global / 전역)/US conditions.
 
 ## Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Federal Reserve, 15 March 2020 coordinated hành động (action / 동작) to enhance USD liquidity swap lines.
 - Federal Reserve, 19 March 2020 temporary USD liquidity arrangements with nine additional central banks, including Bank of Korea.

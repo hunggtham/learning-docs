@@ -202,6 +202,8 @@ Users × Users.
 
 ### Reflexive
 
+Reflexive hỏi mỗi phần tử có quan hệ với chính nó hay không. Tính chất này là một điều kiện cục bộ, nhưng nó giúp phân biệt các loại relation trước khi xét chúng tạo cấu trúc gì.
+
 ```math
 aRa
 ```
@@ -210,11 +212,15 @@ cho mọi `a`.
 
 ### Symmetric
 
+Symmetric kiểm tra chiều của quan hệ: nếu A liên hệ B thì B có liên hệ A không. Hãy dùng nó để nhận ra khi nào relation mô tả liên kết hai chiều và khi nào cần giữ hướng.
+
 ```math
 aRb\Rightarrow bRa.
 ```
 
 ### Antisymmetric
+
+Antisymmetric không có nghĩa là “không đối xứng” hoàn toàn; nó cấm hai phần tử khác nhau cùng liên hệ hai chiều. Đây là điều kiện nền cho thứ tự bộ phận.
 
 ```math
 aRb\land bRa\Rightarrow a=b.
@@ -223,6 +229,8 @@ aRb\land bRa\Rightarrow a=b.
 Antisymmetric không có nghĩa “không symmetric”; nó nói mutual quan hệ (relation / 관계) giữa distinct elements bị cấm.
 
 ### Transitive
+
+Transitive hỏi liệu quan hệ có truyền qua một phần tử trung gian hay không. Nó giúp nén chuỗi quan hệ và là cầu nối tới equivalence relation và order.
 
 ```math
 aRb\land bRc\Rightarrow aRc.
@@ -493,6 +501,4 @@ Proof set identities thường trở thành propositional lô-gic (logic / 논�
 
 ## Dùng chung (common / 공통) Misconceptions
 
-Set không phải danh sách (list / 목록): thứ tự (order / 순서) và duplicates không thuộc ordinary set. `A⊂B` convention có thể khác textbook về proper subset, nên nên dùng ký hiệu rõ. Antisymmetric không phải opposite của symmetric. Codomain không nhất thiết bằng ảnh (image / 이미지). Injective không imply surjective. Với infinite sets, proper subset có thể có cùng cardinality với parent set.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematical thinking](./00_mathematical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Set không phải list: order và duplicates không thuộc ordinary set. `A⊂B` convention có thể khác textbook về proper subset, nên nên dùng ký hiệu rõ. Antisymmetric không phải opposite của symmetric. Codomain không nhất thiết bằng image. Injective không imply surjective. Với infinite sets, proper subset có thể có cùng cardinality với parent set.

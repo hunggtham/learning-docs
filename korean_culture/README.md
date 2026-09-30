@@ -119,6 +119,8 @@ Không cần đọc theo số tệp (file / 파일). Nếu muốn đi theo quan 
 
 ### Lộ trình 1 — sống và làm việc hằng ngày ở Hàn Quốc
 
+Lộ trình này bắt đầu từ ngôn ngữ và quan hệ, rồi đi vào công sở, đô thị, nhà ở, dịch vụ và đời sống số. Mỗi bước mở rộng cùng một câu hỏi: thiết chế và hạ tầng biến chuẩn mực xã hội thành hành vi hằng ngày như thế nào?
+
 ```text
 03 ngôn ngữ / kính ngữ
 → 18 phép lịch sự / quan hệ
@@ -131,6 +133,8 @@ Không cần đọc theo số tệp (file / 파일). Nếu muốn đi theo quan 
 ```
 
 ### Lộ trình 2 — gia đình, giáo dục và sự nghiệp
+
+Đường đọc này theo một người qua các giai đoạn gia đình, trường học và việc làm. Hãy chú ý cách chăm sóc, credential và mạng quan hệ tạo cơ hội cũng như bất bình đẳng theo thời gian.
 
 ```text
 04 gia đình
@@ -145,6 +149,8 @@ Không cần đọc theo số tệp (file / 파일). Nếu muốn đi theo quan 
 
 ### Lộ trình 3 — truyền thống như một hệ thống sống
 
+Thay vì xem truyền thống là danh sách nghi lễ, route này nối lịch sử, không gian, vật thể, mùa và cách thực hành hiện tại. Phần sau sẽ cho thấy truyền thống được tái diễn giải thế nào khi bối cảnh đổi.
+
 ```text
 21 các lớp lịch sử
 → 09 tôn giáo / nghi lễ
@@ -156,6 +162,8 @@ Không cần đọc theo số tệp (file / 파일). Nếu muốn đi theo quan 
 ```
 
 ### Lộ trình 4 — Hàn Quốc như một hệ thống xã hội–kỹ thuật hiện đại
+
+Route này chuyển từ hành vi cá nhân sang hạ tầng và nền tảng: giao thông, giao hàng, kiosk, thanh toán và dữ liệu. Mục tiêu là nhìn sự tiện lợi cùng chi phí vận hành, lao động và loại trừ đi kèm.
 
 ```text
 01 hệ thống văn hoá
@@ -170,6 +178,8 @@ Không cần đọc theo số tệp (file / 파일). Nếu muốn đi theo quan 
 
 ### Lộ trình 5 — Hallyu và kinh tế sáng tạo
 
+Hallyu được đọc như chuỗi giá trị gồm IP, lao động sáng tạo, nền tảng, fandom và thị trường quốc tế. Các chapter nối sản phẩm văn hoá với cơ chế phân phối và quyền sở hữu thay vì chỉ mô tả hiện tượng nổi tiếng.
+
 ```text
 10 nghệ thuật / di sản
 → 13 Hallyu / nội dung / IP
@@ -181,6 +191,8 @@ Không cần đọc theo số tệp (file / 파일). Nếu muốn đi theo quan 
 ```
 
 ### Lộ trình 6 — học cách tự phân tích một hiện tượng văn hoá
+
+Đây là route phương pháp: chọn hiện tượng, dựng bối cảnh, xác định actor và constraint, rồi kiểm tra bằng chứng và phản ví dụ. Kết thúc route, người học có thể tự viết một phân tích không dựa vào stereotype.
 
 ```text
 01 phương pháp nền
@@ -204,6 +216,8 @@ Thư mục [`kiip/`](kiip/README.md) là **bộ ghi chú (note / 노트) duy nh�
 > **Chuyển mạch:** Từ **KIIP — 한국사회 이해 시험 대비**, ta sang **Nguyên tắc xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Nguyên tắc xuyên suốt
+
+Các nguyên tắc dưới đây là tiêu chuẩn để đọc và viết mọi chapter trong library. Hãy dùng chúng như câu hỏi kiểm tra sau mỗi route, không chỉ như lời giới thiệu.
 
 - Hiểu bản chất quan trọng hơn ghi nhớ (Understanding > Memorization).
 - Cơ chế quan trọng hơn định kiến khái quát (mechanism > stereotype).

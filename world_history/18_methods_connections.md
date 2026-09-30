@@ -17,6 +17,8 @@
 > **Chuyển mạch:** Từ **Bảy câu hỏi cho mọi chapter**, ta sang **mô hình tư duy (mental models / 사고 모델들) hữu ích** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental models / 사고 모델들) hữu ích
+Phần “Mô hình tư duy (mental models / 사고 모델들) hữu ích” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Năng lượng hữu dụng:** food/fuel → labor → môi trường vận hành (production / 운영 환경) → institution → warfare.
 - **Chi phí phối hợp:** writing, money, road, law, media và digital mạng (network / 네트워크) mở rộng nhóm có thể hành động cùng nhau.
@@ -29,6 +31,8 @@
 > **Chuyển mạch:** Từ **mô hình tư duy (mental models / 사고 모델들) hữu ích**, ta sang **Các mối nối trong repo** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Các mối nối trong repo
+Phần “Các mối nối trong repo” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - vật lý (physical / 물리적) ràng buộc (constraint / 제약조건) và spatial quy mô (scale / 규모): [`world_geography/`](../world_geography/).
 - Historical đường dẫn (path / 경로) của bán đảo Triều Tiên: [`korean_history/`](../korean_history/).

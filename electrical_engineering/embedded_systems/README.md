@@ -6,6 +6,8 @@
 Embedded các hệ thống (systems / 시스템들) là nơi điện tử, timing, firmware và vật lý (physical / 물리적) môi trường (environment / 환경) gặp nhau. Một hệ thống (system / 시스템) đúng không chỉ trả về giá trị đúng; nó phải đúng thời hạn, trong power/thermal/bộ nhớ (memory / 메모리) ngân sách (budget / 예산) và có hành vi an toàn khi peripheral hoặc sensor hỏng.
 
 ## Cốt lõi (core / 핵심) tuyến (route / 경로)
+Phần “Cốt lõi (core / 핵심) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 MCU/SoC → clock/reset/power → GPIO/timer/ADC → interrupt/DMA → RTOS/real-time → bring-up → verification
@@ -15,6 +17,8 @@ MCU/SoC → clock/reset/power → GPIO/timer/ADC → interrupt/DMA → RTOS/real
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) tuyến (route / 경로)**, ta sang **cốt lõi (core / 핵심) chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) chapter
+Phần “Cốt lõi (core / 핵심) chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [MCU runtime and real-time reasoning](00_mcu_runtime_real_time.md) — boot quyền sở hữu (ownership / 소유권), ISR/DMA, WCET, timer wrap, watchdog và bring-up bằng chứng (evidence / 증거).
 - [RTOS scheduling and verification](01_rtos_scheduling_verification.md) — priority inversion, WCET, isolation, HIL và fault injection.
@@ -23,6 +27,8 @@ MCU/SoC → clock/reset/power → GPIO/timer/ADC → interrupt/DMA → RTOS/real
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) chapter**, ta sang **Cần nắm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cần nắm
+Phần “Cần nắm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - boot chuỗi (chain / 사슬), bộ nhớ (memory / 메모리) map, register truy cập (access / 접근) và peripheral máy trạng thái (state machine / 상태 머신);
 - interrupt độ trễ (latency / 지연 시간), priority inversion, DMA quyền sở hữu (ownership / 소유권) và bộ nhớ đệm (cache / 캐시) coherency;

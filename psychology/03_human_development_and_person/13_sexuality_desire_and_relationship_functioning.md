@@ -234,6 +234,8 @@ Trauma-informed approach ưu tiên điều khiển (control / 제어), choice v�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 body + health + stress + relationship
  + sexual script + safety + attention
@@ -248,5 +250,3 @@ body + health + stress + relationship
 ## Kết nối kiến thức
 
 Xem [[01_attachment_and_relationships]], [[07_close_relationships_intimacy_and_family]], [[05_sex_gender_and_identity]], [[06_stress_coping_and_emotion_regulation]], [[../04_mental_health/07_eating_disorders_and_body_image]] và [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

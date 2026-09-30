@@ -7,6 +7,8 @@ Folder này giải thích Retrieval-Augmented Generation từ nền thông tin (
 
 ## Phụ thuộc (dependency / 의존성) Map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     IR[IR Foundations] --> SD[Sparse & Dense Retrieval]
@@ -26,6 +28,8 @@ flowchart TD
 
 ## Chapters
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```text
 00_information_retrieval_foundations.md
 01_sparse_and_dense_retrieval.md
@@ -43,6 +47,8 @@ flowchart TD
 > **Chuyển mạch:** Từ **Chapters**, ta sang **Full mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Full mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Source of Truth
@@ -72,6 +78,8 @@ Evaluation + Monitoring
 > **Chuyển mạch:** Từ **Full mô hình tư duy (mental model / 사고 모델)**, ta sang **Important Distinctions** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Important Distinctions
+
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
 
 ```text
 retrieval relevance    ≠ factual truth
@@ -106,6 +114,4 @@ citation có map đúng source không?
 
 ## Next
 
-RAG là một năng lực (capability / 역량) mà tác nhân (agent / 에이전트) có thể gọi như công cụ (tool / 도구). Tiếp theo: [Agents and AI Systems](../10_agents_and_ai_systems/README.md).
-
-> **Bàn giao:** Sau **Next**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 information retrieval foundations](./00_information_retrieval_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+RAG là một capability mà Agent có thể gọi như tool. Tiếp theo: [Agents and AI Systems](../10_agents_and_ai_systems/README.md).

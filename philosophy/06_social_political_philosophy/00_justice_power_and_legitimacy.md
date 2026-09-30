@@ -5,6 +5,8 @@
 Xã hội (social / 사회적)–political philosophy hỏi xã hội nên phân phối lợi ích, gánh nặng, quyền và tiếng nói thế nào; ai có quyền ra quyết định; và khi nào quyền lực trở nên chính đáng.
 
 ## Những trục cần tách
+Phần “Những trục cần tách” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **liberty**: không bị can thiệp và có năng lực thực tế để hành động;
 - **equality**: bình đẳng về quy tắc (rule / 규칙), opportunity, tài nguyên (resource / 자원) hay status;

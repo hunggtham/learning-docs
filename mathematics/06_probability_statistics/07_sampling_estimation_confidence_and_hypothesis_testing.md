@@ -759,6 +759,8 @@ Claim là associational hay causal?
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối đặt sampling và uncertainty cạnh experiment, regression và decision. Hãy phân biệt uncertainty do mẫu với bias do thiết kế trước khi diễn giải khoảng tin cậy.
+
 ```text
 probability
 → LLN / CLT
@@ -780,6 +782,4 @@ probability
 
 ## Dùng chung (common / 공통) Misconceptions
 
-P-value is not `P(H0 true | data)`. `p>0.05` does not prove no tác động (effect / 효과). 95% confidence does not mean 95% posterior xác suất (probability / 확률) in frequentist interpretation. Huge `n` cannot fix systematic độ lệch (bias / 편향). More rows do not equal more independent thông tin (information / 정보). Statistical significance is not practical significance or causality. Repeated peeking/multiple metrics can destroy nominal lỗi (error / 오류) rates. Narrow intervals can be precisely wrong if thiết kế (design / 설계) or đo lường (measurement / 측정) is biased.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 counting and combinatorics](./00_counting_and_combinatorics.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+P-value is not `P(H0 true | data)`. `p>0.05` does not prove no effect. 95% confidence does not mean 95% posterior probability in frequentist interpretation. Huge `n` cannot fix systematic bias. More rows do not equal more independent information. Statistical significance is not practical significance or causality. Repeated peeking/multiple metrics can destroy nominal error rates. Narrow intervals can be precisely wrong if design or measurement is biased.

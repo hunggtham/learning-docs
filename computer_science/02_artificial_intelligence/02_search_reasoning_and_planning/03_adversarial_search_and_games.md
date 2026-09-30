@@ -443,6 +443,8 @@ Bảo mật (security / 보안) often prefers robust worst-case các giả đị
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Single-agent search → world does not strategically oppose you
 Minimax             → assume opponent chooses worst response
@@ -475,5 +477,3 @@ Sometimes direct chính sách (policy / 정책) is enough, but many domains gain
 Adversarial tìm kiếm (search / 검색) links [Heuristic Search](./02_heuristic_search.md), Game lý thuyết (theory / 이론), Reinforcement học tập (learning / 학습) and hiện đại (modern / 현대적) neural-guided planning. It demonstrates a recurring AI kiến trúc (architecture / 아키텍처): **learned prior/giá trị (value / 값) + tường minh (explicit / 명시적) tìm kiếm (search / 검색) + phản hồi (feedback / 피드백)**.
 
 Xem tiếp: [Constraint Satisfaction](./04_constraint_satisfaction.md) và [Planning](./05_planning.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

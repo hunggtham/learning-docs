@@ -33,6 +33,8 @@ một giáo trình backend.
 > **Chuyển mạch:** Từ **Cách đọc**, ta sang **Bản đồ nội dung** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ nội dung
+Phần “Bản đồ nội dung” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Phần | Mục tiêu |
 |---|---|

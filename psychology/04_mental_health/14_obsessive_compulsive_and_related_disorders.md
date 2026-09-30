@@ -128,6 +128,8 @@ Cultural/religious ngữ cảnh (context / 맥락) phải được hiểu trư�
 
 ## 18. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 intrusive event
 → meaning / responsibility / threat
@@ -139,11 +141,11 @@ intrusive event
 
 ## Bằng chứng (evidence / 증거) anchors
 
+Các evidence anchors dưới đây nối mô hình obsession–compulsion với dữ liệu lâm sàng và giới hạn chẩn đoán. Hãy dùng chúng để kiểm tra claim, không để tự gắn nhãn từ một triệu chứng riêng lẻ.
+
 - NICE CG31: Obsessive-compulsive disorder and body dysmorphic disorder.
 - Treatment bằng chứng (evidence / 증거) should be interpreted with individual impairment, comorbidity and preference.
 
 ## Kết nối kiến thức
 
 Đọc cùng [[13_anxiety_and_fear_related_disorders]], [[15_trauma_and_stressor_related_disorders]], [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]], [[../05_intervention/01_cbt_behavioral_and_third_wave]] và [[01_assessment_and_diagnosis]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -82,9 +82,27 @@ Mỗi lesson phải giúp người học biết mình đang đứng ở đâu tr
 - phần giải thích đi theo `định nghĩa → cơ chế/quy tắc → điều kiện/ngoại lệ → ví dụ hoặc bẫy đề` khi phù hợp;
 - phần kết thúc chốt điểm phân biệt và nói rõ lesson sau sẽ dùng, mở rộng hoặc đối chiếu điều gì.
 
+Để câu nối có giá trị giảng dạy, mỗi lesson phải thể hiện đủ ba vế bằng thuật ngữ của chính topic:
+
+1. **Từ đâu:** gọi tên kiến thức nền, điều kiện hoặc câu hỏi mà `선행·연결 개념` đã chuẩn bị; lesson đầu tiên phải nói rõ phạm vi và lý do bắt đầu từ đây.
+2. **Đang giải quyết gì:** nêu câu hỏi trung tâm của lesson, rồi giải thích vì sao các bullet, bảng, công thức, đoạn mã hoặc ví dụ bên dưới cùng trả lời câu hỏi đó.
+3. **Dùng đi đâu:** chốt mental model và điểm dễ nhầm, sau đó bàn giao sang lesson/subject/README cụ thể bằng quan hệ `kế thừa`, `mở rộng`, `đối chiếu`, `áp dụng` hoặc `nguyên nhân–hệ quả` khi nguồn cho phép.
+
+Khung câu tham khảo (phải thay bằng nội dung thật, không sao chép nguyên mẫu): “Từ **[khái niệm nền]**, ta cần phân biệt **[câu hỏi/điểm thi]**; vì vậy lesson này dùng **[cơ chế hoặc tiêu chí]** để giải thích **[hệ quả]**. Khi đã nắm **[insight/boundary]**, người học có thể chuyển sang **[lesson hoặc nhu cầu kế tiếp]** để **[mục đích]**.” Với README, checklist và bảng tra cứu, câu nối phải chỉ rõ owner của khái niệm và đường quay lại lesson giảng giải; không dùng “xem tiếp” như một liên kết độc lập.
+
+Ưu tiên các quan hệ thường gặp trong đề thi: dùng **kế thừa** khi lesson sau sử dụng cùng mô hình hoặc thuật ngữ của lesson trước; dùng **đối chiếu** khi cần phân biệt hai đáp án gần nhau; dùng **áp dụng** khi chuyển từ quy tắc sang đoạn mã, công thức hoặc tình huống; dùng **nguyên nhân–hệ quả** khi giải thích trạng thái, lỗi, 이상 현상 hoặc kết quả đầu ra. Câu nối phải nêu tiêu chí giúp người học chọn đúng đáp án, không chỉ nói rằng hai lesson “có liên quan”.
+
+Trong lesson 정보처리기사, câu nối quanh từng dạng nội dung phải phục vụ việc làm bài: trước bảng/ danh sách hãy nói tiêu chí nhận diện đáp án; sau bảng hãy chốt khác biệt quyết định; trước công thức hoặc mã hãy nêu biến/trạng thái cần theo dõi; sau ví dụ hãy chỉ ra vì sao kết quả đó đúng và bẫy nào bị loại. Link về README, full guide hoặc lesson owner phải nói rõ phần đó dùng để ôn nền tảng, tra cứu hay đào sâu, không chỉ đặt link cạnh tiêu đề.
+
+Khi review, bỏ qua một câu nối nếu câu đó không gọi tên ít nhất một khái niệm/điều kiện thật của lesson, không nêu quan hệ giữa hai phần, hoặc có thể dán nguyên xi vào mọi lesson. Nếu nguồn không đủ thông tin để chỉ tên phần sau, hãy bàn giao theo nhu cầu học tập được suy ra từ lesson và ghi rõ giới hạn thay vì bịa topic.
+
+Áp dụng mạch này theo cấp heading trong lesson: tiêu đề `#` định vị topic và câu hỏi trung tâm; `##` nối topic với mục tiêu, từ khóa và kiến thức liên kết; `###`/`####` giải thích một khái niệm, cơ chế hoặc bẫy cụ thể rồi trả kết luận về `##` cha. Một heading con có bullet, bảng, công thức hoặc mã vẫn phải có câu hỏi cục bộ và câu nối với heading cha; không được coi cấp heading thấp là phần ghi chú rời.
+
 Không bản sao (copy / 복사) một câu “tiếp theo là…” cho mọi bài. Với `README`, bảng tra cứu hoặc checklist, câu nối phải hướng người đọc về lesson/subject đơn vị sở hữu (owner / 오너) cụ thể; với đầu ra (output / 출력) được generate, sửa generator/nguồn (source / 소스) rồi regenerate thay vì sửa tay từng tệp (file / 파일).
 
 ## 4. Quy tắc thuật ngữ và ngôn ngữ
+Phần “4. Quy tắc thuật ngữ và ngôn ngữ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Giữ nguyên thuật ngữ Hàn dùng trong đề.
 - Ghi English/acronym khi giúp nhận diện.
@@ -156,6 +174,8 @@ Luôn tách đối tượng, cơ chế, mục tiêu, dấu hiệu nhận biết 
 chống. Không gom nhiều attack có tên gần nhau vào cùng một định nghĩa.
 
 ## 7. Kiểm soát trùng lặp và độ phủ
+Phần “7. Kiểm soát trùng lặp và độ phủ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Một khái niệm có một định nghĩa chuẩn gốc (canonical / 정본); topic khác liên kết thay vì chép
   lại nguyên đoạn.
@@ -181,6 +201,8 @@ Chạy hoặc kiểm tra các điều sau:
 - web reader hiển thị được heading, danh sách (list / 목록), mã (code / 코드), bảng (table / 테이블) và link.
 
 ## 9. Mức ưu tiên sửa lỗi
+Phần “9. Mức ưu tiên sửa lỗi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - P0: lỗi kiến thức, công thức, đầu ra (output / 출력) mã (code / 코드)/SQL, sai ranh giới môn, link hỏng.
 - P1: thiếu topic quan trọng, thiếu phân biệt đề thi, trùng lặp gây nhầm,

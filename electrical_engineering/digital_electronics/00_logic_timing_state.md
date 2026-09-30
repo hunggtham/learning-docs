@@ -72,6 +72,8 @@ Một counter 32-bit chạy ở 100 MHz overflow sau khoảng 42.95 s. Nếu fir
 > **Chuyển mạch:** Từ **6. Worked lập luận (reasoning / 추론): counter 100 MHz**, ta sang **7. xác minh (verification / 확인)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. xác minh (verification / 확인)
+Phần “7. xác minh (verification / 확인)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - truth bảng (table / 테이블) và Boolean simplification cho combinational lô-gic (logic / 논리);
 - waveform với clock/reset/lỗi (error / 오류) cases;
@@ -84,6 +86,8 @@ Một counter 32-bit chạy ở 100 MHz overflow sau khoảng 42.95 s. Nếu fir
 > **Chuyển mạch:** Từ **7. xác minh (verification / 확인)**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - glitch combinational đi vào clock/reset;
 - inferred latch do thiếu assignment;

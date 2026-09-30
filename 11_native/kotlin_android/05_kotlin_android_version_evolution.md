@@ -419,6 +419,8 @@ Dự án (project / 프로젝트) cũ có thể dùng `sealed class` ở những
 
 ## 7.3 giá trị (value / 값) lớp (class / 클래스)
 
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
+
 ```kotlin
 @JvmInline
 value class UserId(val value: String)
@@ -590,6 +592,8 @@ data object Loading : UiState
 ---
 
 ## 11.3 Open-ended phạm vi (range / 범위)
+
+Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
 
 ```kotlin
 0..<size
@@ -921,7 +925,9 @@ same bytecode
 
 ---
 
-# 17. K1 vs K2 — bảng so sánh mô hình tư duy (mental model / 사고 모델)
+# 17. K1 vs K2 — bảng so sánh mental model
+Phần này nối mạch Android vừa học với “17. K1 vs K2 — bảng so sánh mental model”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Khía cạnh | K1 trình biên dịch (compiler / 컴파일러) | K2 trình biên dịch (compiler / 컴파일러) |
 |---|---|---|
@@ -943,6 +949,8 @@ Không nên nói K1 là “trình biên dịch (compiler / 컴파일러) sai” 
 Compose có ít nhất ba phiên bản (version / 버전) concern khác nhau.
 
 ## 18.1 Compose trình biên dịch (compiler / 컴파일러)
+
+Khối minh họa dưới đây đặt Compose compiler vào ma trận version và plugin. Hãy xác định dependency nào phải lockstep, dependency nào chỉ là compatibility mapping và bằng chứng build nào xác nhận kết luận.
 
 ```text
 < Kotlin 2.0
@@ -1427,6 +1435,8 @@ Trước khi đọc mã (code / 코드) sâu, hãy xác định phiên bản (ve
 
 ### Hệ thống dựng (build system / 빌드 시스템)
 
+Khối minh họa dưới đây là fingerprint để nhận diện thế hệ project. Hãy đọc từng dấu hiệu như một câu hỏi chẩn đoán trước khi chọn hướng migration.
+
 ```text
 Gradle wrapper version?
 AGP version?
@@ -1438,6 +1448,8 @@ Version Catalog có không?
 
 ### Kotlin
 
+Khối minh họa dưới đây là fingerprint của Kotlin compiler/toolchain. Hãy dùng nó để phân biệt K1/K2, API level và cách Compose compiler được gắn vào build.
+
 ```text
 K1 hay K2 generation?
 languageVersion/apiVersion?
@@ -1448,6 +1460,8 @@ Compose compiler setup kiểu cũ hay Kotlin 2.x plugin?
 
 ### Android
 
+Khối minh họa dưới đây là fingerprint của Android platform. Hãy tách minSdk, compileSdk, targetSdk và framework behavior trước khi kết luận project tương thích tới đâu.
+
 ```text
 minSdk?
 compileSdk?
@@ -1457,6 +1471,8 @@ Fragment-heavy hay single-activity Compose?
 ```
 
 ### Kiến trúc (architecture / 아키텍처) generation
+
+Khối minh họa dưới đây gom các dấu hiệu architecture generation để đọc project cũ. Hãy dùng chúng để chọn seam migration và giữ nguyên phần chưa cần đổi.
 
 ```text
 callbacks / AsyncTask?

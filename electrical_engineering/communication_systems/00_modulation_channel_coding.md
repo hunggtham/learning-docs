@@ -57,6 +57,8 @@ Tăng công suất 3 dB có thể đủ trên giấy, nhưng nếu fading margin
 > **Chuyển mạch:** Từ **6. Worked lập luận (reasoning / 추론): chọn link margin**, ta sang **7. Đo kiểm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. Đo kiểm
+Phần “7. Đo kiểm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Dùng calibrated nguồn (source / 소스)/attenuator trước khi đánh giá receiver sensitivity.
 - Phân biệt conducted kiểm thử (test / 테스트) với over-the-air kiểm thử (test / 테스트).
@@ -68,6 +70,8 @@ Tăng công suất 3 dB có thể đủ trên giấy, nhưng nếu fading margin
 > **Chuyển mạch:** Từ **7. Đo kiểm**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Nhầm dBm (log power) với dB (ratio).
 - Link ngân sách (budget / 예산) không trừ connector/cable/hiện thực (implementation / 구현) mất mát (loss / 손실).

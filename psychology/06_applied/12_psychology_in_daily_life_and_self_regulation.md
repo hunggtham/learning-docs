@@ -249,7 +249,9 @@ Xem [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading
 
 ## 23. Chọn chiến lược (strategy / 전략) theo cơ chế (mechanism / 메커니즘)
 
-| cơ chế (mechanism / 메커니즘) chính | Nhóm chiến lược (strategy / 전략) có thể phù hợp | ranh giới (boundary / 경계) |
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
+| Mechanism chính | Nhóm strategy có thể phù hợp | Boundary |
 |---|---|---|
 | interpretation biased | reappraisal / behavioral kiểm thử (test / 테스트) | không phủ nhận mục tiêu (objective / 목표) harm |
 | bất định (uncertainty / 불확실성) không thể loại bỏ | acceptance / defusion / tolerance | không thay quyết định (decision / 결정) phân tích (analysis / 분석) |
@@ -287,5 +289,3 @@ Self-regulation tốt không phải trạng thái không bao giờ dao động; 
 ## Kết nối kiến thức
 
 Đọc cùng [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]], [[../03_human_development_and_person/09_self_concept_identity_and_self_regulation]], [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]], [[01_education_learning_and_habit_design]], [[../05_intervention/01_cbt_behavioral_and_third_wave]] và [[../04_mental_health/02_anxiety_ocd_and_trauma]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 work organization and leadership](./00_work_organization_and_leadership.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

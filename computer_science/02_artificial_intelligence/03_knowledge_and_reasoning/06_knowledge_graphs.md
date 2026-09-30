@@ -526,6 +526,8 @@ Reliable enterprise mẫu (pattern / 패턴): LLM generates structured truy vấ
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Entity      = identifiable thing
 Relation    = typed semantic connection
@@ -561,5 +563,3 @@ It adds đồ thị (graph / 그래프) construction/truy vấn (query / 쿼리)
 Kiến thức (knowledge / 지식) Graphs sit at intersection of Databases, lô-gic (logic / 논리), đồ thị (graph / 그래프) Algorithms, NLP and ML. They are especially important later for RAG and Agents because they provide tường minh (explicit / 명시적) mutable bên ngoài (external / 외부) kiến thức (knowledge / 지식), while embeddings/LLMs provide flexible statistical ngôn ngữ (language / 언어) understanding.
 
 Xem tiếp: [Symbolic and Neuro-Symbolic AI](./07_symbolic_neurosymbolic_ai.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

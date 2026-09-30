@@ -45,6 +45,8 @@ Dữ kiện → Diễn giải → Giả định → Kịch bản → Định gi�
 
 ## 3. Giá trị danh nghĩa và giá trị thực
 
+Sau khi phân biệt fact với assumption, ta cần thống nhất đơn vị đo kết quả. Phần này trả lời câu hỏi: một con số tăng trên tài khoản có thực sự làm sức mua tăng hay chỉ phản ánh lạm phát?
+
 **Danh nghĩa (nominal)** là giá trị chưa điều chỉnh lạm phát. **Thực (real)** là giá trị đã điều chỉnh theo sức mua.
 
 Lợi suất thực chính xác gần:
@@ -61,7 +63,11 @@ Real Return ≈ Nominal Return - Inflation
 
 Không nên so lương, GDP, lợi suất trái phiếu hay kết quả danh mục dài hạn chỉ bằng số danh nghĩa khi các giai đoạn lạm phát khác nhau.
 
+Vì vậy, mọi so sánh dài hạn trong các chapter sau phải ghi rõ đang dùng giá trị danh nghĩa hay giá trị thực.
+
 ## 4. Lợi suất số học và lợi suất hình học
+
+Tiếp theo, ta tách mức lợi suất trung bình khỏi tốc độ tăng kép thực tế. Sự khác biệt này giải thích vì sao hai chuỗi có cùng mức trung bình vẫn có thể kết thúc ở giá trị tài sản rất khác nhau.
 
 **Lợi suất trung bình số học (arithmetic return)** là trung bình các mức lợi suất theo từng kỳ. **Lợi suất hình học (geometric return)** phản ánh tác động của lãi kép.
 
@@ -75,7 +81,11 @@ CAGR = (Ending Value / Beginning Value)^(1/n) - 1
 
 Trong quá trình tích lũy tài sản, lợi suất hình học thường quan trọng hơn lợi suất trung bình số học.
 
+Khi đã hiểu compounding, ta cần một thước đo cho mức độ dao động quanh đường đi đó: volatility.
+
 ## 5. Độ biến động, phương sai và độ lệch chuẩn
+
+Volatility mô tả độ phân tán của lợi suất, nhưng không đồng nghĩa với mất tiền vĩnh viễn. Phần này đặt công thức đo lường cạnh các giới hạn của nó để người mới không dùng một con số thống kê như toàn bộ khái niệm rủi ro.
 
 **Phương sai (variance)** đo độ lệch bình phương trung bình quanh giá trị trung bình. **Độ lệch chuẩn (standard deviation)** là căn bậc hai của phương sai và thường được dùng làm thước đo độ biến động (volatility).
 
@@ -87,7 +97,11 @@ Annual Volatility ≈ Period Volatility × √Periods Per Year
 
 Tuy nhiên lợi suất tài chính thường có hiện tượng cụm biến động (volatility clustering) và đuôi phân phối dày (fat tails), nên công thức căn bậc hai theo thời gian chỉ là xấp xỉ.
 
+Để chuyển từ rủi ro riêng của từng tài sản sang rủi ro kết hợp, ta cần covariance và correlation.
+
 ## 6. Hiệp phương sai và tương quan
+
+Hai tài sản không chỉ được đánh giá riêng lẻ; cách chúng di chuyển cùng nhau quyết định phần lớn lợi ích đa dạng hóa. Phần này giới thiệu ngôn ngữ định lượng cho mối quan hệ đó.
 
 **Hiệp phương sai (covariance)** đo mức hai tài sản biến động cùng nhau. **Tương quan (correlation)** chuẩn hóa hiệp phương sai về khoảng từ `-1` đến `+1`.
 
@@ -97,7 +111,11 @@ Correlation(A,B) = Cov(A,B) / (σA × σB)
 
 Tương quan thấp trong thời kỳ bình thường không đảm bảo đa dạng hóa tốt trong khủng hoảng. Vì vậy nên kết hợp tương quan trung bình với tương quan khi thị trường giảm, mức phơi nhiễm nhân tố (factor exposure) và kiểm thử kịch bản.
 
+Covariance của từng cặp sau đó được đưa vào variance của cả danh mục, thay vì cộng các volatility một cách máy móc.
+
 ## 7. Phương sai của danh mục
+
+Công thức dưới đây là bước nối từ covariance của từng cặp sang rủi ro tổng. Hãy đọc nó như một lời nhắc rằng trọng số và tương tác giữa tài sản quan trọng không kém volatility riêng.
 
 Với hai tài sản:
 
@@ -109,7 +127,11 @@ Với hai tài sản:
 
 Một tài sản có độ biến động cao vẫn có thể làm giảm rủi ro tổng thể nếu tương quan với phần còn lại đủ thấp.
 
+Sau khi đo rủi ro tổng, ta cần phân biệt phần lợi suất đến từ beta thị trường với phần còn lại được gọi là alpha.
+
 ## 8. Beta và Alpha
+
+Beta đặt một tài sản trong quan hệ với benchmark; alpha chỉ có ý nghĩa sau khi đã kiểm soát đúng exposure. Mục tiêu của phần này là ngăn việc gọi mọi kết quả vượt trội là kỹ năng.
 
 **Beta** đo gần đúng độ nhạy của tài sản so với chỉ số tham chiếu (benchmark).
 
@@ -119,7 +141,11 @@ Beta = Cov(Rasset, Rbenchmark) / Var(Rbenchmark)
 
 **Alpha** là phần lợi suất còn lại sau khi đã tính đến chỉ số tham chiếu hoặc mô hình nhân tố phù hợp. Không nên gọi toàn bộ phần vượt trội là alpha nếu nó chỉ đến từ việc nắm nhiều cổ phiếu giá trị, vốn hóa nhỏ hoặc một nhân tố quen thuộc khác.
 
-## 9. Sharpe, Sortino và thông tin (information / 정보) Ratio
+Các ratio Sharpe, Sortino và Information Ratio tiếp tục đánh giá kết quả theo các mẫu số risk khác nhau.
+
+## 9. Sharpe, Sortino và Information Ratio
+
+Ba ratio này là cách nén kết quả thành các câu hỏi so sánh: return vượt risk-free bao nhiêu, downside biến động ra sao và active return có xứng với tracking error không. Chúng hỗ trợ review, không thay thế phân tích đuôi rủi ro.
 
 Sharpe Ratio:
 
@@ -135,7 +161,11 @@ IR = Active Return / Tracking Error
 
 Các tỷ lệ này hữu ích để đánh giá quy trình nhưng không thay thế phân tích mức suy giảm, rủi ro đuôi, tính thanh khoản và đường đi của kết quả.
 
+Để hiểu đường đi xấu nhất của vốn, ta chuyển sang drawdown và toán phục hồi.
+
 ## 10. Mức suy giảm và toán phục hồi
+
+Drawdown đặt lợi suất vào thứ tự thời gian: mất bao nhiêu từ đỉnh và cần tăng bao nhiêu để quay lại. Đây là lý do cùng một mức volatility có thể tạo trải nghiệm và khả năng sống sót rất khác.
 
 **Mức suy giảm (drawdown)** đo mức giảm từ đỉnh trước đó:
 
@@ -153,11 +183,17 @@ Mất 50% → cần tăng 100%
 
 Vì vậy quản trị danh mục phải chú trọng khả năng sống sót và tăng trưởng kép, không chỉ lợi suất trung bình.
 
+VaR và Expected Shortfall tiếp tục đo các ngưỡng lỗ, nhưng cần đọc cùng giới hạn mô hình và đứt gãy thanh khoản.
+
 ## 11. VaR và Expected Shortfall
 
-**Giá trị chịu rủi ro (value at risk, VaR)** ước lượng ngưỡng tổn thất tại một mức tin cậy và khoảng thời gian nhất định. **Tổn thất kỳ vọng vượt ngưỡng (Expected Shortfall)** đo mức lỗ trung bình khi đã vượt ngưỡng VaR.
+Phần này phân biệt ngưỡng tổn thất với mức lỗ trung bình khi đã vượt ngưỡng. Người mới cần nhớ cả hai đều là ước lượng có điều kiện, không phải bảo đảm maximum loss.
+
+**Giá trị chịu rủi ro (Value at Risk, VaR)** ước lượng ngưỡng tổn thất tại một mức tin cậy và khoảng thời gian nhất định. **Tổn thất kỳ vọng vượt ngưỡng (Expected Shortfall)** đo mức lỗ trung bình khi đã vượt ngưỡng VaR.
 
 Không chỉ số nào là “mức lỗ tối đa”. Chúng đều phụ thuộc mô hình, dữ liệu và giả định phân phối, đồng thời có thể đánh giá thấp các cú nhảy giá hoặc sự đứt gãy thanh khoản.
+
+Sau khi thống nhất ngôn ngữ rủi ro, ta quay về định giá dòng tiền bằng giá trị hiện tại và tỷ lệ chiết khấu.
 
 ## 12. Giá trị hiện tại và chiết khấu
 
@@ -251,13 +287,19 @@ Một ETF niêm yết bằng KRW không có nghĩa rủi ro USD của tài sản
 
 ## 20. Giá trị danh nghĩa và ký quỹ của hợp đồng tương lai
 
+Phần này nối quy mô hợp đồng với collateral. Người mới cần tách “đang kiểm soát bao nhiêu giá trị danh nghĩa?” khỏi “broker đang khóa bao nhiêu tiền?”, vì hai con số đó không cho cùng một câu trả lời về rủi ro.
+
 ```text
 Futures Notional = Futures Price × Contract Multiplier
 ```
 
 Ký quỹ (margin) chỉ là tài sản bảo đảm, không phải toàn bộ vốn có thể mất. Quy mô vị thế phải dựa trên giá trị danh nghĩa, độ nhạy, mức lỗ trong kịch bản bất lợi và đường đi của yêu cầu ký quỹ.
 
+Sau khi tách notional và margin, ta có thể dùng cùng risk budget để đánh giá kỳ vọng của một chiến lược.
+
 ## 21. Quyền chọn và các độ nhạy Greek
+
+Quyền chọn cần được đọc từ payoff tại đáo hạn rồi mới mở rộng sang thời gian, implied volatility và Greek. Cách đi này giúp người mới không nhầm một độ nhạy cục bộ với dự báo chắc chắn.
 
 Giá trị tại đáo hạn:
 
@@ -270,7 +312,11 @@ Trước ngày đáo hạn, quyền chọn còn chịu ảnh hưởng của th�
 
 Delta, Gamma, Theta, Vega và Rho là các độ nhạy cục bộ; chúng không thay thế kiểm thử nhiều kịch bản khi thị trường có cú nhảy lớn.
 
+Khi payoff và độ nhạy đã rõ, ta quay về bài toán quy mô vị thế theo mức lỗ cho phép.
+
 ## 22. Quy mô vị thế theo ngân sách rủi ro
+
+Position sizing là phép dịch từ luận điểm sang số tiền có thể mất. Công thức chỉ có ý nghĩa khi invalidation, thanh khoản, factor overlap và rủi ro nhảy giá đã được nêu trước.
 
 Một khung cơ bản:
 
@@ -282,11 +328,15 @@ Mức lỗ cho phép phải được xem cùng tổng rủi ro đang mở của 
 
 ## 23. Kỳ vọng toán học
 
+Expectancy gom tần suất thắng và kích thước thắng/thua vào một câu hỏi: sau đủ nhiều lần và sau chi phí, phân phối kết quả có dương hay không? Nó không dự đoán lệnh kế tiếp và không thay thế stress test.
+
 ```text
 Expectancy = Win Rate × Average Win - Loss Rate × Average Loss
 ```
 
 Tỷ lệ thắng cao không đảm bảo kỳ vọng dương. Một chiến lược bán biến động (short-volatility strategy) có thể thắng thường xuyên nhưng chịu một số khoản lỗ rất lớn ở phần đuôi phân phối.
+
+Vì vậy, mọi kỳ vọng phải đi kèm điều kiện vô hiệu hóa, chất xúc tác và bằng chứng sẽ làm luận điểm thay đổi.
 
 ## 24. Chỉ số tham chiếu
 
@@ -348,15 +398,23 @@ Sau đó mới chuyển các động lực thành doanh thu, biên lợi nhuận
 
 ## 29. Chất xúc tác và điều kiện vô hiệu hóa
 
-**Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường cập nhật kỳ vọng. **Điều kiện vô hiệu hóa (invalidation / 무효화)** là bằng chứng cho thấy luận điểm đầu tư không còn đúng.
+Sau khi đã mô tả kịch bản, ta cần chỉ rõ điều gì có thể khiến thị trường cập nhật kỳ vọng và điều gì chứng minh luận điểm không còn đúng. Đây là phần chuyển từ câu chuyện sang tiêu chí kiểm tra.
+
+**Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường cập nhật kỳ vọng. **Điều kiện vô hiệu hóa (invalidation)** là bằng chứng cho thấy luận điểm đầu tư không còn đúng.
 
 Luận điểm không được biến thành niềm tin không thể kiểm chứng. Nếu cơ chế cốt lõi đã sai, phải cập nhật hoặc loại bỏ luận điểm.
 
+Để tránh đánh giá ngược bằng kết quả đã biết, phần tiếp theo tách những gì có thể biết trước hành động khỏi những gì chỉ biết sau đó.
+
 ## 30. Trước quyết định và sau kết quả
+
+Phân biệt ex-ante và ex-post bảo vệ việc review khỏi hindsight bias. Một quyết định được đánh giá bằng thông tin và quy trình tại thời điểm hành động, không chỉ bằng P/L cuối cùng.
 
 **Trước quyết định (ex-ante)** là những gì có thể biết hoặc ước tính trước khi hành động. **Sau kết quả (ex-post)** là kết quả thực tế sau đó.
 
 Một quyết định tốt vẫn có thể dẫn đến kết quả xấu do bất định. Một quyết định tệ vẫn có thể kiếm tiền do may mắn. Khi đánh giá, phải tách chất lượng quyết định khỏi thiên lệch theo kết quả.
+
+Khi đã tách được chất lượng quyết định, ta có thể phân rã kết quả để biết phần nào đến từ beta, factor, currency, execution hay may mắn.
 
 ## 31. Phân rã kết quả đầu tư
 

@@ -83,6 +83,8 @@ Shrink cũng cần hysteresis. Nếu grow khi 100% full và shrink ngay khi usag
 
 ## 4. C cách triển khai và transactional sự thay đổi dữ liệu
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```c
 typedef struct {
     int *data;
@@ -412,5 +414,3 @@ Nếu cần định danh nút ổn định và thường xuyên nối/tách ho�
 Mảng động thêm một lớp phân tích khấu hao để vùng lưu trữ có thể tăng kích thước. Từ đó, các đánh đổi về thay đổi kích thước, mất hiệu lực tham chiếu, chèn/xóa, hành vi bộ nhớ đệm, lát cắt và xử lý đồng thời đều có thể suy ra từ cùng cách biểu diễn này.
 
 Xem thêm: [Linked Lists](./01_linked_lists.md), [Queues/Deque](./03_queues_deques_and_priority_queues.md), [Range Queries](../05_specialized/01_range_queries_fenwick_segment_tree.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 linked lists](./01_linked_lists.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -80,6 +80,8 @@ Firmware phiên bản (version / 버전) phải tương thích với hardware re
 > **Chuyển mạch:** Từ **7. Boot, cập nhật (update / 업데이트) và tính tương thích (compatibility / 호환성)**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - register header đúng tên nhưng sai endianness/bitfield packing;
 - clear-on-read làm mất interrupt khi gỡ lỗi (debug / 디버그);

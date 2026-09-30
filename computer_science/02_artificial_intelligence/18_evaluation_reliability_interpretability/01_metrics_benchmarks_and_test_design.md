@@ -185,6 +185,8 @@ Evaluation dataset cũng là một dữ liệu (data / 데이터) asset cần qu
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Metric là một cảm biến.
 Benchmark là một thiết lập thí nghiệm.
@@ -208,5 +210,3 @@ Không. độ trễ (latency / 지연 시간), calibration, an toàn (safety / �
 ## Liên kết kiến thức
 
 Xem [Evaluation Foundations](./00_evaluation_foundations.md), [Uncertainty/Calibration](./02_uncertainty_and_calibration.md), [AI Testing](./05_ai_testing_and_behavioral_evaluation.md) và [Monitoring](../16_mlops_and_llmops/06_monitoring_and_observability.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 evaluation foundations](./00_evaluation_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

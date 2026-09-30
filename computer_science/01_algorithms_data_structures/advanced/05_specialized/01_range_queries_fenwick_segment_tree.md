@@ -559,7 +559,9 @@ Không có cấu trúc (structure / 구조) “mạnh hơn nên luôn tốt hơn
 
 ## truy vấn khoảng quyết định (decision / 결정) Guide
 
-| khối lượng công việc | cấu trúc (structure / 구조) phù hợp |
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+| khối lượng công việc | Structure phù hợp |
 |---|---|
 | tĩnh phạm vi (range / 범위) sum | tổng tiền tố |
 | nhiều truy vấn cực tiểu/cực đại trên dữ liệu tĩnh | Bảng thưa (Sparse Table) |
@@ -670,6 +672,4 @@ Tuy nhiên các hệ thống thực tế thường dùng B-trees, column stores,
 
 tổng tiền tố chọn mọi prefix nên truy vấn cực rẻ nhưng cập nhật đắt. Fenwick chọn nhị phân (binary / 이진) suffix blocks để cân bằng cập nhật điểm/prefix truy vấn. cây đoạn chọn hierarchy intervals để hỗ trợ aggregate linh hoạt và các cập nhật khoảng.
 
-Khi hiểu những decomposition này, bạn không còn cần học thuộc `i += i & -i` hay cây đệ quy như công thức rời rạc; bạn thấy chúng là các cách encode dùng chung (shared / 공유) phạm vi (range / 범위) thông tin theo khối lượng công việc.
-
-> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi hiểu những decomposition này, bạn không còn cần học thuộc `i += i & -i` hay cây đệ quy như công thức rời rạc; bạn thấy chúng là các cách encode shared range thông tin theo khối lượng công việc.

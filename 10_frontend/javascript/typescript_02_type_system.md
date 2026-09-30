@@ -239,6 +239,8 @@ type Getters<T> = {
 Khi mapped kiểu (type / 타입) trở nên khó đọc hơn nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) nó mô tả, hãy cân nhắc tường minh (explicit / 명시적) giao diện (interface / 인터페이스). Type-level lớp trừu tượng (abstraction / 추상화) cũng có maintenance chi phí (cost / 비용).
 
 ## 9. Conditional kiểu (type / 타입): branch ở tầng kiểu (type / 타입)
+Phần “9. Conditional kiểu (type / 타입): branch ở tầng kiểu (type / 타입)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 type ElementType<T> = T extends readonly (infer U)[] ? U : T;
@@ -277,6 +279,8 @@ type UnwrapPromise<T> = T extends Promise<infer U> ? U : T;
 Khi nested promise/thenable ngữ nghĩa (semantics / 의미론) phức tạp, built-in `Awaited<T>` thường đúng hơn custom utility vì nó mô hình (model / 모델) edge cases chuẩn hơn.
 
 ## 11. Template literal kiểu (type / 타입): string mẫu (pattern / 패턴) ở kiểu (type / 타입) mức (level / 수준)
+Phần “11. Template literal kiểu (type / 타입): string mẫu (pattern / 패턴) ở kiểu (type / 타입) mức (level / 수준)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 type EventName = "created" | "updated";
@@ -594,6 +598,8 @@ Một subtlety là phương thức (method / 메서드) cú pháp (syntax / 문�
 Cấp cao (senior / 시니어) lesson không phải thuộc từng exception, mà là: khi callback variance tạo diagnostic bất ngờ, kiểm tra **dữ liệu (data / 데이터) direction**, `strictFunctionTypes`, và xem signature được khai báo như phương thức (method / 메서드) hay hàm (function / 함수) thuộc tính (property / 속성). Đừng cast callback chỉ vì hai parameter “trông gần giống”.
 
 ## 32. chỉ mục (index / 인덱스) signature và key không gian (space / 공간): “mọi string key” là một lời hứa rất lớn
+Phần “32. chỉ mục (index / 인덱스) signature và key không gian (space / 공간): “mọi string key” là một lời hứa rất lớn” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 type UserMap = {

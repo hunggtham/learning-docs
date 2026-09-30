@@ -141,6 +141,8 @@ RLHF with PPO conceptually has chính sách (policy / 정책) actor and learned 
 
 ## Thất bại (failure / 실패) Modes
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 - critic divergence;
 - actor exploits critic errors;
 - insufficient exploration;
@@ -172,5 +174,3 @@ Critic cũng là learned approximator và có độ lệch (bias / 편향)/lỗi
 Actor-Critic kết hợp value-based và policy-based RL, là cầu nối (bridge / 브리지) trực tiếp sang Deep Reinforcement học tập (learning / 학습).
 
 Xem tiếp: [Deep Reinforcement Learning](./09_deep_reinforcement_learning.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reinforcement learning foundations](./00_reinforcement_learning_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

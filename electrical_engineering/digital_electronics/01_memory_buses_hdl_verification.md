@@ -26,6 +26,8 @@ Một đoạn HDL có thể suy ra combinational lô-gic (logic / 논리), latch
 > **Chuyển mạch:** Từ **3. HDL là mô tả hardware**, ta sang **4. xác minh (verification / 확인) chiến lược (strategy / 전략)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 4. xác minh (verification / 확인) chiến lược (strategy / 전략)
+Phần “4. xác minh (verification / 확인) chiến lược (strategy / 전략)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - đơn vị (unit / 단위) kiểm thử (test / 테스트) cho mô-đun (module / 모듈);
 - assertion cho giao thức (protocol / 프로토콜)/timing bất biến (invariant / 불변식);

@@ -7,6 +7,8 @@
 #### 데이터베이스 구축 
 
 # 초 **개념적 설계 101** 치기 **(정보 모델링, 개념화)** 
+Phần “초 **개념적 설계 101** 치기 **(정보 모델링, 개념화)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �정보의�구조를�얻기�위하여�현실�세계에�대한�인식을�추 <u>상적�개념으로�표현하는�과정이다.</u> 
 
@@ -17,6 +19,8 @@
 - �자료를�특정�DBMS가�지원하는�논리적�자료�구조로�변 <u>환(mapping)시키는�과정이다.</u> 
 
 # **105** 치기초 **E-R 다이어그램** 
+Phần “**105** 치기초 **E-R 다이어그램**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |기호|기호 이름|의미|
 |---|---|---|
@@ -31,6 +35,8 @@
 # **106** 
 
 ##### 초 치기 **튜플(Tuple)** 
+Phần “초 치기 **튜플(Tuple)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 릴레이션을�구성하는�각각의�행을�말한다. 
 
@@ -69,6 +75,8 @@
 하나의�애트리뷰트가�취할�수�있는� <u>같은�타입의�원자 (Atomic)값들의�집합이다.</u> 
 
 # **109** 치기초 **릴레이션의 특징** 
+Phần “**109** 치기초 **릴레이션의 특징**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �한�릴레이션에는�똑같은�튜플이�포함될�수�없으므로�릴 <u>레이션에�포함된�튜플들은�모두�상이하다.</u> 
 
@@ -85,6 +93,8 @@
 ## 정보처리기사 핵심 요약 
 
 # 초 **110** 치기 **후보키(Candidate Key)** 
+Phần “초 **110** 치기 **후보키(Candidate Key)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �릴레이션을�구성하는�속성들�중에서�튜플을�유일하게� <u>식별하기�위해�사용하는�속성들의�부분집합,�즉�기본키</u> 로�사용할�수�있는�속성들을�말한다. 
 
@@ -97,12 +107,16 @@
 - <u>NULL�값을�가질�수�없다.�</u> 
 
 # **115** 치기초 **무결성** 
+Phần “**115** 치기초 **무결성**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개체 무결성 :�기본�테이블의�기본키를�구성하는�어떤�속 <u>성도�Null�값이나�중복값을�가질�수�없다는�규정</u> 
 
 - •참조 무결성 :�외래키�값은�Null이거나�참조�릴레이션의� <u>기본키�값과�동일해야�함.�즉�릴레이션은�참조할�수�없</u> 는�외래키�값을�가질�수�없다는�규정 
 
 # **116** 치기초 **관계대수** 
+Phần “**116** 치기초 **관계대수**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �관계형�데이터베이스에서�원하는�정보와�그�정보를�검 색하기�위해서�어떻게�유도하는가를�기술하는�절차적인� <u>언어이다.</u> 
 
@@ -115,6 +129,8 @@
 - <u>보조키라고도�한다.</u> 
 
 # **117** 치기초 **순수 관계 연산자 - Select** 
+Phần “**117** 치기초 **순수 관계 연산자 - Select**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �릴레이션에�존재하는�튜플�중에서�선택�조건을�만족하 <u>는�튜플의�부분집합을�구하여�새로운�릴레이션을�만드</u> 는�연산이다. 
 
@@ -127,6 +143,8 @@
 - �릴레이션을�구성하는�모든�튜플에�대해�유일성은�만족 <u>시키지만,�최소성은�만족시키지�못한다.</u> 
 
 # 초 **118** 치기 **순수 관계 연산자 - Project** 
+Phần “초 **118** 치기 **순수 관계 연산자 - Project**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �주어진�릴레이션에서�속성�리스트에�제시된�속성�값만 <u>을�추출하여�새로운�릴레이션을�만드는�연산이다.</u> 
 
@@ -139,6 +157,8 @@
 - �한�릴레이션에�속한�속성�A와�참조�릴레이션의�기본키 <u>인�B가�동일한�도메인�상에서�정의되었을�때의�속성�A</u> 를�외래키라고�한다. 
 
 # **119** 치기초 **순수 관계 연산자 - Join** 
+Phần “**119** 치기초 **순수 관계 연산자 - Join**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �공통�속성을�중심으로�두�개의�릴레이션을�하나로�합쳐 <u>서�새로운�릴레이션을�만드는�연산이다.</u> 
 
@@ -163,12 +183,16 @@
 초 시험에<br>나오는 것만<br>치기 공부한다!<br><!-- End of picture text -->
 
 # 초 **124** 치기 **이상(Anomaly)** 
+Phần “초 **124** 치기 **이상(Anomaly)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �정규화를�거치지�않으면�데이터베이스�내에�데이터들이� <u>불필요하게�중복되어�릴레이션�조작�시�예기치�못한�곤 란한�현상이�발생하는�것을�의미한다.</u> 
 
 - 종류 :�삽입�이상,�삭제�이상,�갱신�이상 
 
 # 초 **일반 집합 연산자 - 교차곱 121** 치기 **(CARTESIAN PRODUCT)** 
+Phần “초 **일반 집합 연산자 - 교차곱 121** 치기 **(CARTESIAN PRODUCT)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �두�릴레이션에�있는� <u>튜플들의�순서쌍을�구하는�연산�</u> 이다. 
 
@@ -200,6 +224,8 @@
 비정규 릴레이션<br>도메인이 원자값<br>1NF<br>부분적 함수 종속 제거<br>2NF<br>이행적 함수 종속 제거<br>3NF<br>결정자이면서 후보키가 아닌 것 제거<br>BCNF<br>다치 종속 제거<br>4NF<br>조인 종속성 이용<br>5NF<br><!-- End of picture text -->
 
 # **123** 치기초 **정규화(Normalization)** 
+Phần “**123** 치기초 **정규화(Normalization)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �함수적�종속성�등의�종속성�이론을�이용하여�잘못�설계 <u>된�관계형�스키마를�더�작은�속성의�세트로�쪼개어�바람 직한�스키마로�만들어�가는�과정이다.</u> 
 
@@ -241,6 +267,8 @@
 ##### 치기초 **트랜잭션의 특성** 
 
 # **128** 치기초 **반정규화(Denormalization)** 
+Phần “**128** 치기초 **반정규화(Denormalization)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �시스템의�성능�향상,�개발�및�운영의�편의성�등을�위해� <u>정규화된�데이터�모델을�통합,�중복,�분리하는�과정으</u> 로,�의도적으로�정규화�원칙을�위배하는�행위이다. 
 
@@ -253,6 +281,8 @@
 - Isolation(독립성) :�둘�이상의�트랜잭션이�동시에�병행�실 행되는�경우�어느�하나의�트랜잭션�실행�중에�다른�트랜 <u>잭션의�연산이�끼어들�수�없음</u> 
 
 # 초 **시스템 카탈로그 129** 치기 **(System Catalog)** 
+Phần “초 **시스템 카탈로그 129** 치기 **(System Catalog)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - Durability(영속성) :�성공적으로�완료된�트랜잭션의�결과 <u>는�시스템이�고장나더라도�영구적으로�반영되어야�함</u> 
 
@@ -261,6 +291,8 @@
 - �사용자가�시스템�카탈로그�내용을�검색할�수는�있지만� <u>갱신할�수는�없다.</u> 
 
 # **133** 치기초 **인덱스(Index)** 
+Phần “**133** 치기초 **인덱스(Index)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �데이터�레코드를�빠르게�접근하기�위해�<키�값,�포인터>� <u>쌍으로�구성되는�데이터�구조이다.</u> 
 
@@ -275,10 +307,14 @@
 # **134** 
 
 ##### 치기초 **뷰(View)** 
+Phần “치기초 **뷰(View)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>�기본�테이블로부터�유도된,�이름을�가지는�가상�테이블</u> 이다. 
 
 # **131** 치기초 **트랜잭션의 상태** 
+Phần “**131** 치기초 **트랜잭션의 상태**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 활동(Active) :�트랜잭션이�실행�중인�상태 
 
@@ -301,6 +337,8 @@
 ## 정보처리기사 핵심 요약 
 
 # **135** 치기초 **파티션의 종류** 
+Phần “**135** 치기초 **파티션의 종류**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 장애 투명성(Failure Transparency) :�트랜잭션,�DBMS,�네 트워크,�컴퓨터�장애에도�불구하고�트랜잭션을�정확하 <u>게�처리함</u> 
 
@@ -315,6 +353,8 @@
 - 목록 분할(List Partitioning) :�지정한�열�값에�대한�목록을 만들어�이를�기준으로�분할함 
 
 # **138** 치기초 **암호화 · 복호화 과정** 
+Phần “**138** 치기초 **암호화 · 복호화 과정**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 암호화(Encryption) 과정 :�암호화되지�않은�평문을�정보� 보호를�위해�암호문으로�바꾸는�과정 
 
@@ -325,6 +365,8 @@
 # **136** 
 
 ##### 치기초 **분산 데이터베이스** 
+Phần “치기초 **분산 데이터베이스**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �논리적으로는�하나의�시스템에�속하지만�물리적으로는� <u>네트워크를�통해�연결된�여러�개의�컴퓨터�사이트(Site)</u> 에�분산되어�있는�데이터베이스를�말한다. 
 
@@ -333,6 +375,8 @@
 # **139** 
 
 ##### 치기초 **접근통제 기술** 
+Phần “치기초 **접근통제 기술**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 임의 접근통제(DAC; Discretionary Access Control) :�데이 터에�접근하는�사용자의�신원에�따라�접근�권한을�부여 하는�방식 
 
@@ -345,6 +389,8 @@
 # 초 **벨 라파듈라 모델 140** 치기 **(Bell-LaPadula Model)** 
 
 # **137** 치기초 **분산 데이터베이스의 목표** 
+Phần “**137** 치기초 **분산 데이터베이스의 목표**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 위치 투명성(Location Transparency) :�액세스하려는�데이 터베이스의�실제�위치를�알�필요�없이�단지�데이터베이 스의�논리적인�명칭만으로�액세스할�수�있음 
 
@@ -357,6 +403,8 @@
 - <u>�보안�취급자의�등급을�기준으로�읽기�권한과�쓰기�권한</u> 이�제한된다. 
 
 # 초 **DAS 141** 치기 **(Direct Attached Storage)** 
+Phần “초 **DAS 141** 치기 **(Direct Attached Storage)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>�서버와�저장장치를�전용�케이블로�직접�연결하는�방식</u> 이다. 
 
@@ -396,6 +444,8 @@
 - 표기 형식 
 
 # **143** 치기초 **DDL(데이터 정의어)** 
+Phần “**143** 치기초 **DDL(데이터 정의어)**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - �스키마,�도메인,�테이블,�뷰,�인덱스를�정의하거나�변경� <u>또는�삭제할�때�사용하는�언어이다.</u> 
 
@@ -452,6 +502,8 @@ ALTER TABLE 테이블명 ADD 속성명 데이터_타입  [DEFAULT ‘기 본값�
 치기초 DROP TABLE<br><!-- End of picture text -->
 
 # **148** 
+Phần “**148**” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - <u>기본�테이블을�제거하는�명령문이다.</u> 
 
@@ -597,6 +649,8 @@ UPDATE 테이블명 SET 속성명 = 데이터[, 속성명=데이터, …] [WHERE
 <!-- Source: 2025_정보처리기사_필기_핵심요약.md (Split) -->
 
 ### 3과목 데이터베이스 구축 
+Phần “3과목 데이터베이스 구축” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**163**<br>핵심|데이터베이스 설계 순서<br>2407603|
 |---|---|
@@ -638,6 +692,8 @@ UPDATE 테이블명 SET 속성명 = 데이터[, 속성명=데이터, …] [WHERE
 **47** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 개념 세계의 데이터를 필드로 기술된 데이터 타입과 이 데이터 타입들 간의 관계로 표현되는 논리적 구조의 데 이터로 모델화한다. 
 
@@ -653,6 +709,8 @@ UPDATE 테이블명 SET 속성명 = 데이터[, 속성명=데이터, …] [WHERE
 시험에<br>나오는 것만<br>공부한다!<br><!-- End of picture text -->
 
 ###### 데이터 모델에 표시할 요소 
+Phần “데이터 모델에 표시할 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |구조<br>(Structure)|논리적으로 표현된 개체 타입들 간의 관계로서 데이<br>터 구조 및 정적 성질을 표현함|
 |---|---|
@@ -695,6 +753,8 @@ UPDATE 테이블명 SET 속성명 = 데이터[, 속성명=데이터, …] [WHERE
 데이터 모델은 현실 세계의 정보들을 컴퓨터에 표현하기 위해서 단순화, 추상화하여 체계적으로 표현한 개념적 모 형이다. 
 
 ###### 데이터 모델의 구성 요소 
+Phần “데이터 모델의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |개체<br>(Entity)|데이터베이스에 표현하려는 것으로, 사람이 생각<br>하는 개념이나 정보 단위 같은 현실 세계의 대상체|
 |---|---|
@@ -772,6 +832,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 시험에<br>나오는 것만<br>공부한다!<br><!-- End of picture text -->
 
 ###### 튜플(Tuple) 
+Phần “튜플(Tuple)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 튜플은 릴레이션을 구성하는 각각의 행을 말한다. 
 
@@ -782,6 +844,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 - 튜플의 수를 카디널리티(Cardinality) 또는 기수, 대응 수라고 한다. 
 
 ###### 속성(Attribute) 
+Phần “속성(Attribute)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 속성은 데이터베이스를 구성하는 가장 작은 논리적 단 위이다. 
 
@@ -792,6 +856,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 - 속성의 수를 디그리(Degree) 또는 차수라고 한다. 
 
 ###### 도메인(Domain) 
+Phần “도메인(Domain)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 도메인은 하나의 애트리뷰트가 취할 수 있는 같은 타입 의 원자(Atomic)값들의 집합이다. 
 
@@ -802,6 +868,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 -   성별 애트리뷰트의 도메인은 ‘남’과 ‘여’로, 그 외의 값은 입력될 수 없다. 
 
 ###### 23.2, 22.4, 22.3, 21.5, 21.3, 20.9, 20.8, 20.6 
+Phần “23.2, 22.4, 22.3, 21.5, 21.3, 20.9, 20.8, 20.6” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |**171**<br>핵심|관계형<br>Relati|데이<br>on|터베<br>구조|이스의<br>2408402|
 |---|---|---|---|---|
@@ -829,6 +897,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 ### **<mark>172</mark>** 
 
 #### 릴레이션의 특징 
+Phần “릴레이션의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 한 릴레이션에는 똑같은 튜플이 포함될 수 없으므로 릴 레이션에 포함된 튜플들은 모두 상이하다. 
 
@@ -849,6 +919,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 릴레이션 스키마를 구성하는 속성들 간의 순서는 중요 하지 않다. 
 
@@ -940,6 +1012,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 **50** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 관계대수에는 관계 데이터베이스에 적용하기 위해 특 별히 개발한 순수 관계 연산자와 수학적 집합 이론에서 사용하는 일반 집합 연산자가 있다. 
 
@@ -1080,6 +1154,8 @@ E-R 모델은 개념적 데이터 모델의 가장 대표적인 것으 로, 1976
 #### 정규화의 목적 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 구조의 안정성 및 무결성을 유지한다. 
 
@@ -1167,6 +1243,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 ###### 20.6 
 
 ### 핵심 **<mark>185</mark>** 반정규화 방법 
+Phần “핵심 **<mark>185</mark>** 반정규화 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 두 개의 테이블이 조인(Join)되는 경우가 많아 하나의 테이블로 합쳐 사용하는 것이 성능 향상에 도움이 
 
@@ -1236,10 +1314,14 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 **53** 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 카탈로그의 갱신 : 사용자가 SQL문을 실행시켜 기본 테 이블, 뷰, 인덱스 등에 변화를 주면 시스템이 자동으로 갱신함 
 
 ###### ※ Data Directory 
+Phần “※ Data Directory” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터 사전에 수록된 데이터를 실제로 접근하는 데 필요한 정보를 관리 유지하는 시스템이다. 
 
@@ -1271,6 +1353,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 2409302<br><!-- End of picture text -->
 
 ### 핵심 **<mark>189</mark>** 트랜잭션의 특성 
+Phần “핵심 **<mark>189</mark>** 트랜잭션의 특성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 트랜잭션의 연산은 데이터베이스에 모두 반영되 도록 완료(Commit)되든지 아니면 전혀 반영되지 않도록 복구(Rollback)되어야 함 
 
@@ -1304,6 +1388,8 @@ A → B이고 B → C일 때 A → C를 만족하는 관계를 의미 한다.
 #### 트랜잭션의 상태 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 활동(Active) : 트랜잭션이 실행 중인 상태 
 
@@ -1366,6 +1452,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 뷰는 데이터 보정 작업, 처리 과정 시험 등 임시적인 작 업을 위한 용도로 활용된다. 
 
 ###### 뷰(View)의 특징 
+Phần “뷰(View)의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 뷰는 기본 테이블로부터 유도된 테이블이기 때문에 기 본 테이블과 같은 형태의 구조를 사용하며, 조작도 기 본 테이블과 거의 같다. 
 
@@ -1391,6 +1479,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 21.8 
 
 ### 핵심 **<mark>192</mark>** 인덱스의 종류 
+Phần “핵심 **<mark>192</mark>** 인덱스의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |트리 기반<br>인덱스|인덱스를 저장하는 블록들이 트리 구조를 이루고 있<br>는 것으로, 상용 DBMS에서는 트리 구조 기반의 B+<br>트리 인덱스를 주로 활용함|
 |---|---|
@@ -1404,6 +1494,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 - 뷰를 정의할 때는 CREATE문, 제거할 때는 DROP문을 사용한다. 
 
 ###### 뷰(View)의 장·단점 
+Phần “뷰(View)의 장·단점” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |장점|•논리적 데이터 독립성을 제공함<br>• 동일 데이터에 대해 동시에 여러 사용자의 상이한 응용<br>이나 요구를 지원해 줌<br>•사용자의 데이터 관리를 간단하게 해줌<br>•접근 제어를 통한 자동 보안이 제공됨|
 |---|---|
@@ -1436,6 +1528,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 시험에<br>나오는 것만<br>공부한다!<br><!-- End of picture text -->
 
 ###### • 분산 데이터베이스의 구성 요소 
+Phần “• 분산 데이터베이스의 구성 요소” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |분산 처리기|자체적으로 처리 능력을 가지며, 지리적으로 분산<br>되어 있는 컴퓨터 시스템|
 |---|---|
@@ -1491,6 +1585,8 @@ CRUD는 ‘생성(Create), 읽기(Read), 갱신(Update), 삭 제(Delete)’의 �
 ### **<mark>196</mark>** 분산 데이터베이스의 목표 
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 위치 투명성(Location Transparency) : 액세스하려는 데이 터베이스의 실제 위치를 알 필요 없이 단지 데이터베이 스의 논리적인 명칭만으로 액세스할 수 있음 
 
@@ -1692,6 +1788,8 @@ DAS는 서버와 저장장치를 전용 케이블로 직접 연결하는 방식�
 2410403<br><!-- End of picture text -->
 
 ###### 핵심 
+Phần “핵심” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - NAS는 서버와 저장장치를 네트워크를 통해 연결하는 방식이다. 
 
@@ -1772,6 +1870,8 @@ DML은 데이터베이스 사용자가 응용 프로그램이나 질의 어를 �
 CREATE TABLE은 테이블을 정의하는 명령문이다. 표기 형식 
 
 ###### CREATE TABLE 테이블명 
+Phần “CREATE TABLE 테이블명” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |(속성명 데이터_타입 [DEFAULT기본값] [NOT NULL], …|
 |---|
@@ -1926,6 +2026,8 @@ DROP SCHEMA 스키마명 [CASCADE | RESTRICT]; DROP DOMAIN 도메인명 [CASCADE
 > 예제 2 사용자 ID가 “STAR”인 사람에게 단순히 데이터베 이스에 있는 정보를 검색할 수 있는 권한을 부여하는 SQL 문을 작성하시오. 
 
 ###### GRANT CONNECT TO STAR; 
+Phần “GRANT CONNECT TO STAR;” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - CASCADE : 제거할 요소를 참조하는 다른 모든 개체를 함께 제거함. 즉 주 테이블의 데이터 제거 시 각 외래키 와 관계를 맺고 있는 모든 데이터를 제거하는 참조 무 결성 제약 조건을 설정하기 위해 사용됨 
 
@@ -1942,6 +2044,8 @@ DROP SCHEMA 스키마명 [CASCADE | RESTRICT]; DROP DOMAIN 도메인명 [CASCADE
 시험에 나오는 것만 공부한다! 
 
 ### 정보처리기사 필기 핵심 요약 
+Phần “정보처리기사 필기 핵심 요약” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 권한 종류 : ALL, SELECT, INSERT, DELETE, UPDATE, ALTER 등 
 
@@ -2003,6 +2107,8 @@ INSERT INTO 테이블명([속성명1, 속성명2,…]) VALUES (데이터1, 데�
 - SELECT문을 사용하여 다른 테이블의 검색 결과를 삽 입할 수 있다. 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -2051,6 +2157,8 @@ DELETE FROM 테이블명 [WHERE 조건];
 - 모든 레코드를 삭제하더라도 테이블 구조는 남아 있기 때문에 디스크에서 테이블을 완전히 제거하는 DROP과 는 다르다. 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -2090,6 +2198,8 @@ DELETE FROM 테이블명 [WHERE 조건];
 UPDATE 테이블명 SET 속성명 = 데이터[, 속성명=데이터, …] [WHERE 조건]; 
 
 ###### <사원> 
+Phần “<사원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -2113,6 +2223,8 @@ DELETE FROM 사원 WHERE 이름 = ‘임꺽정’;
 
 
 ### 핵심 **<mark>217</mark>** 데이터 조작문의 네 가지 유형 
+Phần “핵심 **<mark>217</mark>** 데이터 조작문의 네 가지 유형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - SELECT(검색) : SELECT~ FROM~ WHERE~ 
 
@@ -2177,6 +2289,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 ###### <사원> 
 
 ###### <여가활동> 
+Phần “<여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -2209,6 +2323,8 @@ SELECT DISTINCT 주소 FROM 사원;
 SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름<br>성춘향|부서<br>기획|생일<br>02/20/64|주소<br> 대흥동|기본급<br>100|
 |---|---|---|---|---|
@@ -2239,6 +2355,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 ###### 조건 연산자 
 
 ###### • 비교 연산자 
+Phần “• 비교 연산자” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |연산자||의미|
 |---|---|---|
@@ -2256,6 +2374,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 ###### <사원> 
 
 ###### <여가활동> 
+Phần “<여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -2275,6 +2395,8 @@ SELECT * FROM 사원 WHERE 부서 = ‘기획’ AND 주소 = ‘대흥동’;
 SELECT * FROM 사원 WHERE 이름 LIKE “김%”; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|
 |---|---|---|---|---|
@@ -2295,6 +2417,8 @@ SELECT * FROM 사원 WHERE 이름 LIKE “김%”;
 
 
 ###### 연산자 우선순위 
+Phần “연산자 우선순위” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |종류|연산자|우선순위|
 |---|---|---|
@@ -2316,6 +2440,8 @@ SELECT * FROM 사원 WHERE 이름 LIKE “김%”;
 하위 질의는 조건절에 주어진 질의를 먼저 수행하여 그 검 색 결과를 조건절의 피연산자로 사용한다. 
 
 ###### <사원> <여가활동> 
+Phần “<사원> <여가활동>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |이름|부서|생일|주소|기본급|이름|취미|경력|
 |---|---|---|---|---|---|---|---|
@@ -2353,6 +2479,8 @@ SELECT 부서 FROM 사원
 WHERE EXISTS  (SELECT 이름 FROM 여가활동 WHERE 여가활 동.이름 = 사원.이름); 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서<br>인터넷|
 |---|
@@ -2387,6 +2515,8 @@ SELECT  [PREDICATE] [테이블명.]속성명 [AS 별칭][, [테이블명.]속 �
 - HAVING절 : GROUP BY와 함께 사용되며, 그룹에 대한 조건을 지정함 
 
 ###### <상여금> 
+Phần “<상여금>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서|이름|상여내역|상여금|
 |---|---|---|---|
@@ -2416,6 +2546,8 @@ SELECT 부서, COUNT(*) AS 사원수 FROM 상여금 WHERE 상여금 >= 100 GROUP
 - [GROUP BY 속성명, 속성명, …] 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |부서<br>사원수<br>기획<br>3|
 |---|
@@ -2462,6 +2594,8 @@ GROUP BY절에 지정된 그룹별로 속성의 값을 집계할 때 사용된�
 ###### <사원> 
 
 ###### <직원> 
+Phần “<직원>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|사원|직급|
 |---|---|---|---|
@@ -2523,6 +2657,8 @@ UNION | UNION ALL | INTERSECT | EXCEPT SELECT 속성명1, 속성명2, … FROM �
 SELECT * FROM 사원 INTERSECT SELECT * FROM 직원; 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |사원|직급|
 |---|---|
@@ -2565,6 +2701,8 @@ SELECT [테이블명1.]속성명, [테이블명2.]속성명, … FROM 테이블�
 - SELECT 학번, 이름, 학생.학과코드, 학과명 FROM 학생 JOIN 학과 USING(학과코드); 
 
 ###### <결과> 
+Phần “<결과>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |학번|이름|학과코드|학과명|
 |---|---|---|---|
@@ -2654,6 +2792,8 @@ ODBC(Open DataBase Connectivity)
 - ODBC도 접속하려는 DBMS에 맞는 드라이버가 필요하 지만, 접속하려는 DBMS의 인터페이스를 알지 못하더 라도 ODBC 문장을 사용하여 SQL을 작성하면 ODBC에 포함된 드라이버 관리자가 해당 DBMS의 인터페이스에 맞게 연결해 주므로 DBMS의 종류를 몰라도 된다. 
 
 ###### MyBatis 
+Phần “MyBatis” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - MyBatis는 JDBC 코드를 단순화하여 사용할 수 있는 SQL Mapping 기반 오픈 소스 접속 프레임워크이다. 
 
@@ -2747,6 +2887,8 @@ ORM은 객체지향 프로그래밍의 객체(Object)와 관계형 데이터베�
 핵심 09.5, 08.3, 07.9, 06.5, 06.3, 04.5, 03.3, 02.5, 01.9, 01.6, 00.3, 99.10, 99.4 
 
 ## **<mark>121</mark>** 시스템 소프트웨어의 구성 
+Phần “**<mark>121</mark>** 시스템 소프트웨어의 구성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 제어 프로그램(Control Program)�:�시스템�전체의�작동� 상태�감시,�작업의�순서�지정(스케줄링),�작업에�사용 되는�데이터�관리,�인터럽트�처리�등의�역할을�수행하 는�프로그램 
 
@@ -2768,6 +2910,8 @@ ORM은 객체지향 프로그래밍의 객체(Object)와 관계형 데이터베�
 
 
 ## 07.3, 05.9, 05.5, 05.4, 05.3, 04.9, 03.8, 03.5, 03.3, 02.9, 02.5, 01.3, 00.10 00.3, 99.4 핵심 14.8, 14.5, 14.3, 13.8, 13.6, 13.3, 12.8, 12.5, 12.3, 11.8, 11.6, 11.3, 10.9, 10.5, 10.3, 09.8, 09.5, 09.3, 08.9, 08.5, 07.9, 07.5, **<mark>122</mark>** 운영체제의 개요 
+Phần “07.3, 05.9, 05.5, 05.4, 05.3, 04.9, 03.8, 03.5, 03.3, 02.9, 02.5, 01.3, 00.10 00.3, 99.4 핵심 14.8, 14.5, 14.3, 13.8, 13.6, 13.3, 12.8, 12.5, 12.3, 11.8, 11.6, 11.3, 10.9, 10.5, 10.3, 09.8, 09.5, 09.3, 08.9, 08.5, 07.9, 07.5, **<mark>122</mark>** 운영체제의 개요” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�컴퓨터�시스템의�자원들을�효율적으로�관리하며,�사용자가� 컴퓨터를�편리하고�효과적으로�사용할�수�있도록�환경을�제 
 
@@ -2820,6 +2964,8 @@ www.sinagong.co.kr
 ## **<mark>123</mark>** 운영체제 운용 기법 및 발달 과정 
 
 ###### 운영체제 운용 기법 
+Phần “운영체제 운용 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |일괄 처리(Batch<br>Processing)시스템|•초기의컴퓨터시스템에서사용된형태로,<br>일정량또는일정기간동안데이터를모아<br>서한꺼번에처리하는방식<br>•컴퓨터시스템을효율적으로사용할수있<br>음<br>•사용자측면에서는반환(응답)시간이늦지<br>만하나의작업이모든자원을독점하므로<br>CPU유휴시간이줄어듦<br>•급여계산,지불계산,연말결산등의업무<br>에사용됨|
 |---|---|
@@ -2831,6 +2977,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |다중 처리(Multi-<br>|•여러개의CPU와하나의주기억장치를이<br>용하여여러개의프로그램을동시에처리<br>하는방식|
 |---|---|
@@ -2847,6 +2995,8 @@ www.sinagong.co.kr
 일괄 처리 시스템 → 다중 프로그래밍, 다중 처리, 시분할, 실시간 처리 시스템 → 다중 모드 → 분산 처리 시스템 
 
 ## 핵심 07.3, 01.6, 00.3, 99.4, 99.4 **<mark>124</mark>** 컴파일러와 인터프리터 
+Phần “핵심 07.3, 01.6, 00.3, 99.4, 99.4 **<mark>124</mark>** 컴파일러와 인터프리터” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 ||•고급언어로작성된소스프로그램전체를목적<br>프로그램으로번역한후,링킹작업을통해컴퓨<br>터에서실행가능한실행프로그램을생성함|
 |---|---|
@@ -2870,6 +3020,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>125</mark>** 매크로와 매크로 프로세서 
+Phần “**<mark>125</mark>** 매크로와 매크로 프로세서” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 매크로 : 프로그램 작성 시 한 프로그램 내에서 동일한 코드가 반복될 경우 반복되는 코드를 한 번만 작성하 여 특정 이름으로 정의한 후 그 코드가 필요할 때마다 정의된 이름을 호출하여 사용하는 것으로, 매크로는 매크로 이름이 호출되면 호출된 횟수만큼 정의된 매크 로 코드가 해당 위치에 삽입되어 실행되며, 매크로 정 의 내에 또 다른 매크로를 정의할 수 있다. 
 
@@ -2888,6 +3040,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
+Phần “<u>정보처리기사 필기</u> ~~핵심 요약~~” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�Compile And Go 로더�:�별도의�로더�없이�언어�번역�프 로그램이�로더의�기능까지�수행하는�방식(할당,�재배치,� 적재�작업을�모두�언어�번역�프로그램이�담당) 
 
@@ -2904,12 +3058,16 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>127</mark>** 프로세스 
+Phần “**<mark>127</mark>** 프로세스” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스(Process)는 일반적으로 프로세서(처리기, CPU)에 의해 처리되는 사용자 프로그램이나, 시스템 프로그램을 의미하는 것으로, 프로세스는 필요한 각종 자원을 요구한다. 
 
 - 프로세스의 여러 가지 정의 
 
 ###### 링커 
+Phần “링커” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 언어 번역 프로그램이 생성한 목적 프로그램들과 라이브 러리, 또 다른 실행 프로그램(로드 모듈) 등을 연결하여 실행 가능한 로드 모듈을 만드는 시스템 소프트웨어이다. 
 
@@ -2944,6 +3102,8 @@ www.sinagong.co.kr
 핵심 14.3, 13.6, 12.5, 11.6, 10.9, 09.3, 05.5, 04.5, 03.8, 03.3, 02.5, 01.9, 00.10, 00.3, 99.4 
 
 ## **<mark>128</mark>** PCB(Process Control Block) 
+Phần “**<mark>128</mark>** PCB(Process Control Block)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •PCB : 운영체제가 프로세스에 대한 중요한 정보를 저 장해 놓는 곳으로 각 프로세스가 생성될 때마다 고유의 PCB가 생성되고, 프로세스가 완료되면 PCB가 제거됨 
 
@@ -2980,6 +3140,8 @@ www.sinagong.co.kr
 •�준비상태�큐에�있는�프로세스가�프로세서를�할당 받아�실행되는�상태 •�프로세스�수행이�완료되기�전에�프로세스에게�주 실행(Run) 어진�프로세서�할당�시간이�종료(Time�Run�Out) 되면�프로세스는�준비�상태로�전이됨 •�실행중인�프로세스에�입·출력(I/O)�처리가�필요 하면�실행중인�프로세스는�대기�상태로�전이됨 대기(Wait), 입·출력�요구가�발생되어�현재�실행중인�프로세스 보류, 가�중단되고,�입·출력�처리가�완료될�때까지�대기 블록(Block) 하고�있는�상태 
 
 ###### 프로세스 상태 전이 관련 용어 
+Phần “프로세스 상태 전이 관련 용어” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |Dispatch|준비상태에서대기하고있는프로세스중하나가<br>프로세서를할당받아실행상태로전이되는과정|
 |---|---|
@@ -3011,6 +3173,8 @@ www.sinagong.co.kr
 - 실행 환경을 공유시켜 기억장소 및 자원의 낭비가 줄어든다. 
 
 ## **<mark>130</mark>** 스케줄링 / 문맥 교환 
+Phần “**<mark>130</mark>** 스케줄링 / 문맥 교환” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 스케줄링 정의 : 프로세스가 생성되어 실행될 때 필요한 시스템의 여러 자원을 해당 프로세스에게 할당하는 작업 
 
@@ -3044,6 +3208,8 @@ www.sinagong.co.kr
 핵심<br><!-- End of picture text -->
 
 ## **<mark>131</mark>** 프로세서 스케줄링의 종류 
+Phần “**<mark>131</mark>** 프로세서 스케줄링의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�이미�할당된�CPU를�다른�프로세스가�강제로�빼앗아� 사용할�수�없는�스케줄링�기법 
 
@@ -3087,6 +3253,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�프로세스에게�일정한�시간을�주어�그�시간�안에� 프로세스를�완료하도록�하는�기법 
 
@@ -3097,12 +3265,16 @@ www.sinagong.co.kr
 
 
 ## 핵심 04.5, 04.3, 02.5, 00.10, 00.7 **<mark>133</mark>** 에이징(Aging) 기법 
+Phần “핵심 04.5, 04.3, 02.5, 00.10, 00.7 **<mark>133</mark>** 에이징(Aging) 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 시스템에서 특정 프로세스의 우선순위가 낮아 무한정 기다리게 되는 경우, 한번 양보하거나 기다린 시간에 비 례하여 일정 시간이 지나면 우선순위를 한 단계씩 높여 가까운 시간 안에 자원을 할당받도록 하는 기법이다. 
 
 - SJF나 우선순위 기법에서 발생할 수 있는 무한 연기 상태, 기아 상태를 예방할 수 있다. 
 
 ## 핵심 14.5, 12.8, 12.5, 10.9, 09.3, 08.5, 08.3, 06.5, 05.5, 04.9, 04.5, 03.8, 03.5, 02.3, 01.9, 01.6, 01.3, 99.10 **<mark>134</mark>** 선점 스케줄링의 종류 
+Phần “핵심 14.5, 12.8, 12.5, 10.9, 09.3, 08.5, 08.3, 06.5, 05.5, 04.9, 04.5, 03.8, 03.5, 02.3, 01.9, 01.6, 01.3, 99.10 **<mark>134</mark>** 선점 스케줄링의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |선점 우선순위|준비상태큐의프로세스들중에서우선순위가<br>가장높은프로세스에게먼저CPU를할당하는<br>기법|
 |---|---|
@@ -3172,6 +3344,8 @@ www.sinagong.co.kr
 - V 연산 : 대기중인 프로세스를 깨우는 신호(Wake Up) 로서, 자원의 개수를 증가시켜(S=S+1) 자원이 반납되 었음을 알림(Signal 동작) 
 
 ## 핵심 08.3, 04.9, 04.5, 03.5, 02.5, 01.6, 01.3 **<mark>136</mark>** 모니터(Monitor) 
+Phần “핵심 08.3, 04.9, 04.5, 03.5, 02.5, 01.6, 01.3 **<mark>136</mark>** 모니터(Monitor)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 동기화를 구현하기 위한 특수 프로그램 기법으로 특정 공유 자원을 프로세스에게 할당하는 데 필요한 데이터 와 이 데이터를 처리하는 프로시저로 구성된다. 
 
@@ -3224,6 +3398,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�Dijkstra가�제안한�것으로,�은행에서�모든�고 객의�요구가�충족되도록�현금을�할당하는�데 서�유래한�기법 
 
@@ -3244,6 +3420,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>138</mark>** 교착 상태 해결 방법 
+Phần “**<mark>138</mark>** 교착 상태 해결 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 예방(Prevention) 기법 : 교착 상태가 발생되지 않도록 사전에 시스템을 제어하는 방법으로, 교착 상태 발생 의 4가지 조건 중에서 어느 하나를 제거(부정)함으로 써 수행되며 일반적으로 자원의 낭비가 가장 심함 
 
@@ -3287,6 +3465,8 @@ www.sinagong.co.kr
 ## **<mark>140</mark>** 단편화 / 단편화 해결 방법 
 
 ###### 단편화 
+Phần “단편화” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 분할된 주기억장치에 프로그램을 할당하고 반납하는 과정을 반복하면서 사용되지 않고 남는 기억장치의 빈 공간 조각을 의미한다. 
 
@@ -3295,6 +3475,8 @@ www.sinagong.co.kr
 - 외부(External) 단편화 : 분할된 영역이 할당될 프로그램 의 크기보다 작기 때문에 프로그램이 할당될 수 없어 사 용되지 않고 빈 공간으로 남아 있는 분할된 전체 영역 
 
 ###### 단편화 해결 방법 
+Phần “단편화 해결 방법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 통합(Coalescing) 기법 : 주기억장치 내에 인접해 있는 단편화된 공간을 하나의 공간으로 통합하는 작업 
 
@@ -3303,6 +3485,8 @@ www.sinagong.co.kr
 핵심 14.3, 11.8, 11.3, 10.5, 09.8, 09.5, 09.3, 08.9, 08.3, 07.9, 06.5, 05.5, 05.3, 04.5, 00.7, 99.10, 99.8 
 
 ## **<mark>141</mark>** 가상 기억장치 
+Phần “**<mark>141</mark>** 가상 기억장치” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 보조기억장치(하드디스크)의 일부를 주기억장치처럼 사용하는 것으로, 용량이 작은 주기억장치를 마치 큰 용량을 가진 것처럼 사용하는 것으로, 현재 사용되는 운영체제에서 흔히 사용되는 기법이다. 
 
@@ -3321,6 +3505,8 @@ www.sinagong.co.kr
 ### <u>정보처리기사 필기</u> ~~핵심 요약~~ 
 
 ###### • 가상 기억장치 구현 기법 
+Phần “• 가상 기억장치 구현 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�가상�기억장치에�보관되어�있는�프로그램과�주기 억장치의�영역을�동일한�크기로�나눈�후�나눠진� 
 
@@ -3402,6 +3588,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>144</mark>** 국부성(Locality, 구역성) 
+Phần “**<mark>144</mark>** 국부성(Locality, 구역성)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 실행중인 프로세스가 주기억장치를 참조할 때는 일부 페 이지만 집중적으로 참조하는 성질이 있다는 이론으로 Denning에 의해 증명되었다. 
 
@@ -3448,6 +3636,8 @@ www.sinagong.co.kr
 - •�프로그램�수행에�불필요한�내용까지도�주기 억장치에�적재될�수�있음 
 
 ## **<mark>145</mark>** 워킹 셋 / 페이지 부재 
+Phần “**<mark>145</mark>** 워킹 셋 / 페이지 부재” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 워킹 셋(Working Set) 
 
@@ -3482,6 +3672,8 @@ www.sinagong.co.kr
 핵심 14.5, 13.8, 13.6, 12.8, 12.5, 10.9, 09.5, 08.5, 08.3, 07.9, 06.9, 06.5, 06.3, 05.4, 04.5, 04.3, 03.5, 03.3, 02.9, 02.3, 01.9, 
 
 ## **<mark>146</mark>** 스래싱(Thrashing) 
+Phần “**<mark>146</mark>** 스래싱(Thrashing)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 프로세스의 처리 시간보다 페이지 교체 시간이 더 많 아지는 현상이다. 
 
@@ -3510,6 +3702,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>147</mark>** 디스크 스케줄링 
+Phần “**<mark>147</mark>** 디스크 스케줄링” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 사용할 데이터가 디스크 상의 여러 곳에 저장되어 있 을 경우 데이터를 액세스하기 위해 디스크 헤드가 움 직이는 경로를 결정하는 기법이다. 
 
@@ -3560,6 +3754,8 @@ www.sinagong.co.kr
 ## **<mark>148</mark>** 파일 / 파일 시스템 
 
 ###### 파일 
+Phần “파일” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 파일은 사용자가 작성한 서로 관련 있는 레코드의 집 합체를 의미한다. 
 
@@ -3568,6 +3764,8 @@ www.sinagong.co.kr
 - 각 파일마다 이름, 위치, 크기, 작성 시기 등의 여러 속 성을 가지고 있다. 
 
 ###### 파일 시스템의 기능 
+Phần “파일 시스템의 기능” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 파일 시스템 : 파일의 저장, 액세스, 공유, 보호 등 보조 기억장치에서의 파일을 총괄하는 파일 관리 기술 
 
@@ -3588,6 +3786,8 @@ www.sinagong.co.kr
 핵심 
 
 ## **<mark>149</mark>** 파일 디스크립터(File Descriptor) 
+Phần “**<mark>149</mark>** 파일 디스크립터(File Descriptor)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 파일을 관리하기 위해 시스템(운영체제)이 필요로 하 는 파일에 대한 정보를 갖고 있는 제어 블록(파일 제어 블록, FCB)이다. 
 
@@ -3614,6 +3814,8 @@ www.sinagong.co.kr
 - 단점 : 파일에 새로운 레코드를 삽입하거나 삭제하는 경 우 파일 전체를 복사한 후 수행해야 하므로 시간이 많이 걸림, 검색 효율이 낮고, 접근 시간/응답 시간 느림 
 
 ###### 색인 순차 파일(Indexed Sequential File) 
+Phần “색인 순차 파일(Indexed Sequential File)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 순차 파일과 직접 파일에서 지원하는 편성 방법이 결 합된 형태이다. 
 
@@ -3630,6 +3832,8 @@ www.sinagong.co.kr
 ###### 핵심 13.8, 13.6, 11.6, 09.3, 08.3, 05.3, 03.5, 00.10 
 
 ## **<mark>151</mark>** 직접 파일(Direct File), 직접 접근방식 
+Phần “**<mark>151</mark>** 직접 파일(Direct File), 직접 접근방식” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 파일을 구성하는 레코드를 임의의 물리적 저장공간에 기 록하는 것이다. 
 
@@ -3700,6 +3904,8 @@ www.sinagong.co.kr
 - 디렉터리 •�공유된�파일을�삭제할�경우�고아�포인터(Dangling� Pointer)가�발생할�수�있음 
 
 ## **<mark>153</mark>** 자원 보호 기법 
+Phần “**<mark>153</mark>** 자원 보호 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 자원 보호 기법은 컴퓨터 시스템에서 사용자, 프로세 스 등과 같은 주체가 프로세서, CPU, 기억장치 등과 같은 객체(자원)에 불법적으로 접근하는 것을 제어하 고, 객체(자원)의 물리적인 손상을 예방하는 것이다. 
 
@@ -3738,6 +3944,8 @@ www.sinagong.co.kr
 
 
 ###### 보안의 요건 
+Phần “보안의 요건” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 기밀성(Confidentiality, 비밀성) : 시스템 내의 정보와 자 원은 인가된 사용자에게만 접근이 허용되며, 정보가 전송중에 노출되더라도 데이터를 읽을 수 없음 
 
@@ -3754,6 +3962,8 @@ www.sinagong.co.kr
 ## **<mark>155</mark>** 파일 보호 기법 / 보안 유지 기법 
 
 ###### 파일 보호 기법 
+Phần “파일 보호 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 파일 보호 기법은 파일에 대한 일방적인 접근과 손상 및 파괴를 방지하기 위한 기법이다. 
 
@@ -3766,6 +3976,8 @@ www.sinagong.co.kr
 - 접근 제어(Access Control) : 사용자에 따라 공유 데이터에 접근할 수 있는 권한을 제한하는 방법 
 
 ###### 보안 유지 기법 
+Phần “보안 유지 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |외부 보안|•시설 보안:천재지변이나외부침입자로부터<br>의보안<br>•운용 보안:전산소관리및경영자들의정책<br>과통제에의해이루어지는보안|
 |---|---|
@@ -3777,6 +3989,8 @@ www.sinagong.co.kr
 핵심 05.5, 00.10 
 
 ## **<mark>156</mark>** 암호화 기법 
+Phần “**<mark>156</mark>** 암호화 기법” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 데이터를 보낼 때 송신자가 지정한 수신자 이외에는 그 내용을 알 수 없도록 평문을 암호문으로 변환하는 것이다. 
 
@@ -3812,6 +4026,8 @@ www.sinagong.co.kr
 14.5, 14.3, 13.8, 13.6, 13.3, 12.3, 11.8, 11.6, 11.3, 10.9, 10.5, 10.3, 09.5, 08.9, 08.5, 08.3, 07.9, 07.5, 06.9, 04.3, 02.9, 
 
 ## 핵심 **<mark>158</mark>** 다중 처리기의 운영체제 구조 
+Phần “핵심 **<mark>158</mark>** 다중 처리기의 운영체제 구조” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�하나의�프로세서를�Master(주프로세서)로�지정 하고,�나머지들은�Slave(종프로세서)로�지정하는� 비대칭�구조 
 
@@ -3846,6 +4062,8 @@ www.sinagong.co.kr
 ## **<mark>160</mark>** 분산 처리 시스템의 목적 / 장·단점 
 
 ###### 분산 처리 시스템의 목적 
+Phần “분산 처리 시스템의 목적” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |자원 공유|각시스템이통신망을통해연결되어있으므로<br>유용한자원을공유하여사용할수있음|
 |---|---|
@@ -3876,6 +4094,8 @@ www.sinagong.co.kr
 - 단점 : 중앙 집중형 시스템에 비해 소프트웨어 개발이 어려움, 보안 문제 발생, 설계 복잡 등 
 
 ## 핵심 12.8, 12.5, 07.5, 05.5, 04.9, 02.5, 02.3 **<mark>161</mark>** 분산 처리 시스템의 투명성 
+Phần “핵심 12.8, 12.5, 07.5, 05.5, 04.9, 02.5, 02.3 **<mark>161</mark>** 분산 처리 시스템의 투명성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - 투명성(Transparency, Transparence) : 분산 처리 운영 체제에서 구체적인 시스템 환경을 사용자가 알 수 없도 록 하며, 또한 사용자들로 하여금 이에 대한 정보가 없 어도 원하는 작업을 수행할 수 있도록 지원하는 개념 
 
@@ -3894,6 +4114,8 @@ www.sinagong.co.kr
 ~~핵심 요약~~ 
 
 ###### • 투명성의 종류 
+Phần “• 투명성의 종류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |위치(Location)<br>투명성|사용자가하드웨어나소프트웨어와같은자원<br>(정보객체)의물리적위치를모르더라도자원<br>에접근할수있도록함|
 |---|---|
@@ -3912,6 +4134,8 @@ www.sinagong.co.kr
 14.3, 13.6, 12.5, 12.3, 11.3, 10.5, 08.3, 07.9, 07.3, 06.9, 06.5, 05.9, 05.5, 05.4, 05.3, 03.8, 03.5, 03.3, 02.9, 02.5, 02.3, 
 
 ## 핵심 **<mark>162</mark>** 위상에 따른 분산 처리 시스템의 분류 
+Phần “핵심 **<mark>162</mark>** 위상에 따른 분산 처리 시스템의 분류” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - •�각�사이트들이�시스템�내의�다른�모든�사이트 들과�직접�연결된�구조 
 
@@ -3940,6 +4164,8 @@ www.sinagong.co.kr
 
 
 ### <u>정보처리기사 필기</u> 
+Phần “<u>정보처리기사 필기</u>” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 - •�모든�사이트가�하나의�중앙�사이트에�직접�연 결되어�있고,�그�외의�다른�사이트와는�연결되 어�있지�않은�구조 
 
@@ -3960,6 +4186,8 @@ www.sinagong.co.kr
 ###### 핵심 
 
 ## **<mark>163</mark>** UNIX의 특징 
+Phần “**<mark>163</mark>** UNIX의 특징” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
    - 시분할 시스템을 위해 설계된 대화식 운영체제로, 소 스가 공개된 개방형 시스템(Open System)이다. 
 
@@ -3990,6 +4218,8 @@ www.sinagong.co.kr
 05.5, 05.3, 04.9, 04.3, 03.8, 03.5, 03.3, 02.9, 02.5, 02.3, 01.9, 01.6, 00.10 14.3, 13.8, 13.6, 12.5, 12.3, 11.8, 11.6, 10.9, 10.5, 09.8, 09.3, 08.9, 08.5, 07.5, 06.9, 06.5, 06.3, 05.9, 
 
 ## 핵심 **<mark>164</mark>** UNIX 시스템의 구성 
+Phần “핵심 **<mark>164</mark>** UNIX 시스템의 구성” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 
 |•UNIX의가장핵심적인부분|
 |---|
@@ -3997,4 +4227,3 @@ www.sinagong.co.kr
 
 
 - •�하드웨어를�보호(캡슐화)하고,�프로그램들과�하드 웨어�간의�인터페이스�역할을�담당함 
-

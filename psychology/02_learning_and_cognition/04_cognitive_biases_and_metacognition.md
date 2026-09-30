@@ -209,6 +209,8 @@ Expertise giảm một số errors nhưng tạo domain-specific blind spots và 
 
 ## 23. mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Evidence
    ↓

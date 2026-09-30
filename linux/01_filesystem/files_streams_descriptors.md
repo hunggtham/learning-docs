@@ -39,6 +39,8 @@ shell thiết lập lại tệp (file / 파일) descriptor trước khi chương
 
 ## Chuyển hướng là thay đổi cách nối các luồng I/O
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 command > out.log
 ```
@@ -202,6 +204,4 @@ Mô hình này giúp hiểu cú pháp shell mà không cần học thuộc từn
 
 ## Từ tệp (file / 파일) descriptor tới shell
 
-Khi đã hiểu tệp (file / 파일) descriptor, các ký hiệu `|`, `>`, `>>`, `2>`, `2>&1` trở thành hệ quả tự nhiên của mô hình I/O. Chương tiếp theo [Shell, Bash, pipe và chuyển hướng](../02_shell/shell_bash_pipes_redirection.md) mở rộng từ việc nối I/O sang cách phân tích lệnh, mở rộng biểu thức, mã thoát và kết hợp câu lệnh.
-
-> **Bàn giao:** Sau **Từ tệp (file / 파일) descriptor tới shell**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [filesystem paths inodes links](./filesystem_paths_inodes_links.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi đã hiểu file descriptor, các ký hiệu `|`, `>`, `>>`, `2>`, `2>&1` trở thành hệ quả tự nhiên của mô hình I/O. Chương tiếp theo [Shell, Bash, pipe và chuyển hướng](../02_shell/shell_bash_pipes_redirection.md) mở rộng từ việc nối I/O sang cách phân tích lệnh, mở rộng biểu thức, mã thoát và kết hợp câu lệnh.

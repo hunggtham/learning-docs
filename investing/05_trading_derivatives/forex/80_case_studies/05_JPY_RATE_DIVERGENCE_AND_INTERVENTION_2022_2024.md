@@ -187,6 +187,8 @@ Vì thế, “intervention rủi ro (risk / 위험)” phải được ghi như 
 > **Chuyển mạch:** Từ **6. Positioning và option thị trường (market / 시장)**, ta sang **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)
+Phần “7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Fed tightening + BoJ easing/YCC stance
@@ -307,6 +309,8 @@ Không được gán nhân quả (causal / 인과적) tác động (effect / 효
 > **Chuyển mạch:** Từ **10. Research exercise**, ta sang **11. rủi ro (risk / 위험) checklist** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 11. rủi ro (risk / 위험) checklist
+Phần “11. rủi ro (risk / 위험) checklist” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 [ ] Tách BOJ monetary policy khỏi MOF FX intervention
@@ -325,6 +329,8 @@ Không được gán nhân quả (causal / 인과적) tác động (effect / 효
 > **Chuyển mạch:** Từ **11. rủi ro (risk / 위험) checklist**, ta sang **12. Sources** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 12. Sources
+Phần “12. Sources” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Bank of Japan — Summary of Opinions, September 21–22, 2022](https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2022/opi220922.htm)
 - [Bank of Japan — Review of Monetary Policy from a Broad Perspective, 2024](https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k241219b.pdf)

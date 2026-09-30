@@ -176,5 +176,7 @@ Năm **1986** vì thế là institutional turning điểm (point / 지점): chí
 Chapter tiếp theo, [`22_doi_moi_market_transition_and_global_reintegration.md`](22_doi_moi_market_transition_and_global_reintegration.md), sẽ giải thích Đổi Mới như chuỗi (sequence / 시퀀스) thay đổi về agriculture, price, enterprise, foreign investment, trade và diplomacy—không phải sự kiện (event / 이벤트) duy nhất năm 1986.
 
 ### Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 *Economic Debates in Vietnam: Issues and Problems in Reconstruction and Development (1975–84)*, ISEAS; World Bank, các retrospective về Đổi Mới và economic chuyển tiếp (transition / 전이); nghiên cứu Cambridge về origins/evolution của Đổi Mới; scholarship về postwar reconstruction, di chuyển (migration / 마이그레이션) và Southeast Asian Cold War.

@@ -21,6 +21,8 @@ Folder này xây lớp **kiến thức (knowledge / 지식) + suy luận (infere
 
 ## Phụ thuộc (dependency / 의존성) map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     KR[00 Knowledge Representation] --> PL[01 Propositional Logic]
@@ -65,6 +67,8 @@ real-world validation
 
 ## Symbolic và probabilistic lập luận (reasoning / 추론)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Logic
 → true/false under formal semantics
@@ -106,6 +110,4 @@ deterministic / formal tool verifies or executes
 actual result becomes new state
 ```
 
-Đây là nền để hiểu RAG và tác nhân (agent / 에이전트) các hệ thống (systems / 시스템들) như **composed AI các hệ thống (systems / 시스템들)**, không phải một mô hình (model / 모델) duy nhất làm mọi thứ.
-
-> **Bàn giao:** Sau **liên kết (connection / 연결) với hiện đại (modern / 현대적) AI**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Đây là nền để hiểu RAG và Agent systems như **composed AI systems**, không phải một model duy nhất làm mọi thứ.

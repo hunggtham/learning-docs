@@ -164,6 +164,8 @@ Matching compares treated units to untreated with similar covariates.
 Chính xác (exact / 정확한) matching is difficult with many dimensions. Distance or propensity-score methods reduce dimensionality but do not solve hidden confounding.
 
 ## 19. Propensity score
+Phần “19. Propensity score” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 e(X) = P(D=1 | X)

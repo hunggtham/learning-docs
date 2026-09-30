@@ -116,6 +116,8 @@ Lịch sử Đảng Cộng sản Việt Nam
 Ranh giới (boundary / 경계) cuối cùng cần nhớ: **học Marxism–Leninism như một official curriculum, học Marx/Lenin như intellectual lịch sử (history / 이력), và đánh giá claim bằng philosophy/lịch sử (history / 이력)/economics là ba hoạt động liên quan nhưng không giống nhau**. Học tập (learning / 학습) Docs nên cho phép chuyển qua lại giữa cả ba mà không trộn chúng.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Chính phủ Việt Nam, Hiến pháp 2013, Điều 4: https://chinhphu.vn/hien-phap-nam-2013/chuong-i-che-do-chinh-tri-10052990
 - Bộ Giáo dục và Đào tạo, Quyết định 52/2008/QĐ-BGDĐT về chương trình các môn lý luận chính trị: https://vanban.chinhphu.vn/default.aspx?docid=77457&pageid=27160

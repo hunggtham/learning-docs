@@ -10,6 +10,8 @@ Economic Lịch sử (history / 이력) & Institutions là lớp cuối của Ec
 4. [Crises, Regime Change & Path Dependence](./03_crises_regime_change_and_path_dependence.md) — leverage/amplification, banking/sovereign/currency crises, fiscal/monetary regimes, reconstruction, Lucas critique, hysteresis, lock-in và historical identification.
 
 ## Trục học (learning spine / 학습 축)
+Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Rules + enforcement + distribution of power

@@ -700,6 +700,8 @@ C cần xét chiến lược cấp phát, bố trí `struct` và cờ trình bi�
 
 ## 48. Các lỗi benchmark phổ biến
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 đo bản dựng debug rồi suy ra production
 vô tình đo cả bước chuẩn bị dữ liệu
@@ -720,5 +722,3 @@ lấy microbenchmark để suy ra toàn bộ ứng dụng
 Ba lớp này phải liên kết với nhau nhưng không thay thế nhau. Một cách triển khai DSA tốt là nơi **hợp đồng toán học, kiểm thử có thể thực thi và số liệu hiệu năng thực nghiệm** cùng mô tả nhất quán một hệ thống.
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [C Implementation](./00_c_dsa_implementation_patterns.md), [Java Collections](./01_java_collections_and_dsa.md), [JavaScript Runtime](./02_javascript_dsa_runtime_patterns.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 c dsa implementation patterns](./00_c_dsa_implementation_patterns.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

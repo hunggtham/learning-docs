@@ -187,6 +187,8 @@ Khi cluster gần sức chứa (capacity / 용량), queueing có thể lớn hơ
 Batching/group lần ghi nhận (commit / 커밋) cải thiện thông lượng (throughput / 처리량) nhưng có thể thêm độ trễ (latency / 지연 시간) nhỏ để gom công việc (work / 작업). bất biến (invariant / 불변식) lần ghi nhận (commit / 커밋) không được yếu đi chỉ vì batching.
 
 ## 15. thất bại (failure / 실패) modes cần lập luận (reasoning / 추론) riêng
+Phần “15. thất bại (failure / 실패) modes cần lập luận (reasoning / 추론) riêng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 leader churn do timeout/jitter

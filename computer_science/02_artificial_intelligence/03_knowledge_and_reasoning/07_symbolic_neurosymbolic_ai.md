@@ -507,6 +507,8 @@ Kiến trúc (architecture / 아키텍처) label alone does not answer chất l�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Symbolic AI
   explicit facts/rules/constraints
@@ -544,6 +546,4 @@ It guarantees properties encoded in specification, not tính đúng đắn (corr
 
 Neuro-symbolic thiết kế (design / 설계) closes the kiến thức (knowledge / 지식) biểu diễn (representation / 표현) tầng (layer / 계층) and prepares the chuyển tiếp (transition / 전이) to Machine học tập (learning / 학습). The central lesson is architectural: learned các mô hình (models / 모델들) are powerful at perception, ngôn ngữ (language / 언어) and heuristic proposal; symbolic/deterministic các hệ thống (systems / 시스템들) are powerful at tường minh (explicit / 명시적) trạng thái (state / 상태), các ràng buộc (constraints / 제약조건들), chính xác (exact / 정확한) computation and xác minh (verification / 확인).
 
-Later sections on RAG, Agents and AI kỹ thuật (engineering / 엔지니어링) will reuse this mẫu (pattern / 패턴) repeatedly.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Later sections on RAG, Agents and AI Engineering will reuse this pattern repeatedly.

@@ -179,6 +179,8 @@ Một lý thuyết (theory / 이론) mới vẫn phải operationalize claim, t�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Subjective phenomenon
       ↓
@@ -203,9 +205,9 @@ Xem [[07_attention_consciousness_and_awareness]], [[01_sensation_and_perception]
 
 ## Nguồn nền nên đọc
 
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
+
 - Seth & Bayne (2022), *Theories of consciousness*, Nature Reviews Neuroscience.
 - Cogitate Consortium et al. (2025), *Adversarial testing of toàn cục (global / 전역) neuronal workspace and integrated thông tin (information / 정보) theories of consciousness*, Nature.
 
-Các nguồn này được dùng để định vị lý thuyết (theory / 이론) landscape và mức tranh luận, không phải để tuyên bố một lý thuyết (theory / 이론) đã thắng.
-
-> **Bàn giao:** Sau **Nguồn nền nên đọc**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 nervous system and brain](./00_nervous_system_and_brain.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Các nguồn này được dùng để định vị theory landscape và mức tranh luận, không phải để tuyên bố một theory đã thắng.

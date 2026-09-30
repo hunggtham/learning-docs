@@ -116,6 +116,8 @@ Sass đôi khi phải deprecate old ngôn ngữ (language / 언어) hành vi (be
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```text
 CSS evolves
 → syntax conflict appears
@@ -174,6 +176,8 @@ Import đồ thị (graph / 그래프) gần giống programming-language module
 ---
 
 # 6. cấu hình (configuration / 구성) Timing [MUST]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 @use "theme" with (
@@ -269,6 +273,8 @@ Treat emitted CSS itself as part of công khai (public / 공개) hành vi (behav
 
 ## Công cụ (tool / 도구) mô-đun (module / 모듈)
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```text
 functions
 mixins
@@ -277,6 +283,8 @@ no CSS emitted on load
 ```
 
 ## CSS side-effect mô-đun (module / 모듈)
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```scss
 .button { ... }
@@ -298,6 +306,8 @@ Prevents accidental CSS emission from tiện ích (utility) imports.
 ---
 
 # 12. Side-effect-free đơn vị từ (token / 토큰) mô-đun (module / 모듈) [ARCH]
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```scss
 // _tokens.scss
@@ -401,6 +411,8 @@ Don't dynamically lời gọi (call / 호출) everything just because possible.
 ---
 
 # 18. First-class các hàm (functions) [ADV]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $fn:
@@ -1009,6 +1021,8 @@ Inside some Sass contexts, nội suy (interpolation) can turn typed các giá tr
 Example:
 ```scss
 #{$number}
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 ```
 
 may lose numeric ngữ nghĩa (semantics / 의미론) for subsequent Sass operations.
@@ -1214,6 +1228,8 @@ Therefore robust thư viện (library / 라이브러리) relies on:
 ---
 
 # 69. Defensive hàm (function / 함수) mẫu (pattern / 패턴) [ARCH]
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```scss
 @function require-number(
@@ -1566,6 +1582,8 @@ Chính sách (policy / 정책):
 ---
 
 # 91. CI trạng thái ngừng khuyến nghị (deprecation) ngân sách (budget / 예산) mẫu (pattern / 패턴) [ARCH]
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 first-party warnings = 0
@@ -2321,32 +2339,48 @@ Different responsibilities.
 # 136. Master quyết định (decision / 결정) ma trận (matrix / 행렬)
 
 ## Use Sass biến (variable) when:
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - thời điểm biên dịch (compile-time) only,
 - generation,
 - gói (package / 패키지) cấu hình (config / 설정).
 
 ## CSS biến (variable) when:
-- thời gian chạy (runtime / 런타임) theme,
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+- thời gian chạy (runtime) theme,
 - cơ chế phân tầng (cascade),
 - thành phần (component / 컴포넌트) override.
 
-## Sass hàm (function / 함수) when:
-- thời điểm biên dịch (compile-time) giá trị (value / 값) transformation.
+## Sass hàm (function) when:
 
-## CSS hàm (function / 함수) when:
-- bố cục (layout / 레이아웃)/thời gian chạy (runtime / 런타임) giá trị (value / 값).
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+- thời điểm biên dịch (compile-time) giá trị (value) transformation.
+
+## CSS hàm (function) when:
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+- layout/thời gian chạy (runtime) giá trị (value).
 
 ## khối trộn tái sử dụng (mixin) when:
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - reusable style generation.
 
 ## tiện ích (utility) when:
-- thời gian chạy (runtime / 런타임) composition.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+- thời gian chạy (runtime) composition.
 
 ## `@forward` when:
-- gói (package / 패키지) facade.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+- package facade.
 
 ## `@extend` when:
-- true bộ chọn (selector) mang tính ngữ nghĩa (semantic / 의미적) extension.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+- true bộ chọn (selector) mang tính ngữ nghĩa (semantic) extension.
 
 ---
 
@@ -2639,14 +2673,18 @@ Reduce đầu ra (output / 출력) 30% without losing required API.
 
 # 155. Mastery Rubric
 
-## Cấp cao (senior / 시니어) SCSS
-- hiện đại (modern / 현대적) modules,
+## Senior SCSS
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+- modern modules,
 - các khối trộn tái sử dụng (mixins)/các hàm (functions),
 - các map khóa–giá trị (maps),
 - kiến trúc (architecture / 아키텍처),
 - clean deprecations.
 
-## Sass thư viện (library / 라이브러리) Engineer
+## Sass Library Engineer
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - facade API,
 - cấu hình (configuration / 구성),
 - kiểm tra hợp lệ (validation / 검증),
@@ -2655,6 +2693,8 @@ Reduce đầu ra (output / 출력) 30% without losing required API.
 - versioning.
 
 ## Sass Tooling Specialist
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 - JS API,
 - importer,
 - custom các hàm (functions),

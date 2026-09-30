@@ -137,6 +137,8 @@ Không có một technique phổ quát. Breathing, exercise, scheduling hoặc x
 
 ## 17. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Stressor + appraisal + resources
             ↓
@@ -156,5 +158,3 @@ Stress nên được hiểu như một hệ động, không phải một chất 
 ## Kết nối kiến thức
 
 Đọc cùng [[00_nervous_system_and_brain]], [[04_interoception_pain_and_embodied_mind]], [[08_sleep_circadian_and_recovery]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]], [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]] và [[../06_applied/14_work_stress_burnout_and_recovery]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 nervous system and brain](./00_nervous_system_and_brain.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

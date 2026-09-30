@@ -22,6 +22,8 @@ Technology không tự tạo “châu Âu thống trị”: ship thiết kế (d
 Gunpowder không tự tạo centralization. Nhà nước cần thuế ổn định, credit, arsenals, skilled officers, roads/ports và một thỏa thuận với landlord, merchant hoặc religious authority. Khi war chi phí (cost / 비용) tăng, sovereign có thể vay, bán office, farm thuế hoặc mở độc quyền; mỗi cách làm đổi legitimacy và phân phối surplus.
 
 ### Đại dương và silver luồng (flow / 흐름)
+Phần “Đại dương và silver luồng (flow / 흐름)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 mine/plantation → ship/insurance → port/merchant house

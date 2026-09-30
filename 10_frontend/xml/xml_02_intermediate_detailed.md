@@ -316,6 +316,8 @@ nghĩa là phone optional.
 ---
 
 ## 14. Choice
+Phần này nối mạch bài học với “14. Choice”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```dtd
 <!ELEMENT contact (email|phone)>
@@ -326,6 +328,8 @@ nghĩa là contact chứa một trong hai branch.
 ---
 
 ## 15. `#PCDATA`
+Phần này nối mạch bài học với “15. `#PCDATA`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```dtd
 <!ELEMENT name (#PCDATA)>
@@ -495,6 +499,8 @@ Nếu đổi `email` trước `name`, có thể invalid.
 ---
 
 ## 23. `xs:choice`
+Phần này nối mạch bài học với “23. `xs:choice`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xs:choice>
@@ -518,6 +524,8 @@ Choice rất hữu ích cho union-like structures nhưng nếu nested choice qu�
 ---
 
 ## 25. `minOccurs` và `maxOccurs`
+Phần này nối mạch bài học với “25. `minOccurs` và `maxOccurs`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xs:element
@@ -535,6 +543,8 @@ Nếu không ghi, nhiều declarations mặc định 1 occurrence.
 ---
 
 ## 26. XSD attribute declaration
+Phần này nối mạch bài học với “26. XSD attribute declaration”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xs:attribute
@@ -583,6 +593,8 @@ Facets là cách XSD biến generic kiểu (type / 타입) thành domain-specifi
 ---
 
 ## 28. Enumeration
+Phần này nối mạch bài học với “28. Enumeration”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xs:simpleType name="Status">
@@ -600,7 +612,9 @@ Nhưng hãy nhớ rằng thêm hoặc xóa enum giá trị (value / 값) có th�
 
 ---
 
-## 29. mẫu (pattern / 패턴)
+## 29. Pattern
+Phần này nối mạch bài học với “29. Pattern”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xml
 <xs:pattern value="[A-Z]{2}[0-9]{4}"/>
@@ -803,7 +817,9 @@ Bạn nên hình dung XPath như “đường đi + điều kiện” trên cây
 
 ---
 
-## 38. Absolute đường dẫn (path / 경로)
+## 38. Absolute path
+Phần này nối mạch bài học với “38. Absolute path”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xpath
 /library/book
@@ -814,6 +830,8 @@ Bạn nên hình dung XPath như “đường đi + điều kiện” trên cây
 ---
 
 ## 39. `//`
+Phần này nối mạch bài học với “39. `//`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xpath
 //book
@@ -826,6 +844,8 @@ Nó rất tiện nhưng dễ bị lạm dụng. Trên XML lớn, truy vấn (que
 ---
 
 ## 40. Attribute selection
+Phần này nối mạch bài học với “40. Attribute selection”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xpath
 /library/book/@id
@@ -836,6 +856,8 @@ chọn `id` attributes.
 ---
 
 ## 41. Predicate
+Phần này nối mạch bài học với “41. Predicate”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xpath
 /library/book[@id='2']
@@ -848,6 +870,8 @@ Predicate có thể dùng expression phức tạp hơn, không chỉ attribute e
 ---
 
 ## 42. Position
+Phần này nối mạch bài học với “42. Position”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xpath
 /library/book[1]
@@ -866,6 +890,8 @@ Khi dùng position với `//` hoặc grouped expressions, ngữ cảnh (context 
 ---
 
 ## 43. `text()`
+Phần này nối mạch bài học với “43. `text()`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xpath
 /library/book/title/text()
@@ -888,6 +914,8 @@ String-value của `p` có thể là `"Hello world!"` theo XPath mô hình dữ 
 ---
 
 ## 44. Wildcard
+Phần này nối mạch bài học với “44. Wildcard”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```xpath
 /library/*
@@ -1087,6 +1115,8 @@ Tuy nhiên đoạn mã (code / 코드) này chưa phải secure parser cấu hì
 ---
 
 ## 53. Java XPath cơ bản
+Phần này nối mạch bài học với “53. Java XPath cơ bản”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```java
 XPath xpath =

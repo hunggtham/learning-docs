@@ -435,6 +435,8 @@ Không có một loại guarantee luôn tốt nhất; phải khớp với SLA v�
 
 ## 33. Bảng phân biệt nhanh
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Loại bảo đảm | Câu hỏi chính |
 |---|---|
 | Worst-case | một thao tác/lần chạy tệ nhất có thể đắt tới đâu? |
@@ -451,5 +453,3 @@ Không có một loại guarantee luôn tốt nhất; phải khớp với SLA v�
 Khi thấy một bảo đảm không phải worst-case đơn giản, hãy hỏi: **đang lấy trung bình trên cái gì, adversary được phép làm gì, một thao tác riêng lẻ có thể đắt tới đâu, tail xác suất (probability / 확률) ra sao, đầu ra (output / 출력) có được phép sai không, và hệ thống cần thông lượng (throughput / 처리량) hay độ trễ (latency / 지연 시간) guarantee?**
 
 Xem thêm: [Complexity Analysis](../00_foundations/02_complexity_analysis.md), [Mathematical Toolkit](../00_foundations/04_mathematical_toolkit_for_dsa.md), [Hash Tables](../01_linear_structures/04_hash_tables.md), [Skip Lists](../02_trees/07_skip_lists.md), [Probabilistic Data Structures](./06_probabilistic_data_structures.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

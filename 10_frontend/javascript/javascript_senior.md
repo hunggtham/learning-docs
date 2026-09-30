@@ -1814,7 +1814,9 @@ Cấp cao (senior / 시니어) phải phiên bản (version / 버전) giao diệ
 
 ---
 
-# Chương 59 — tính năng (feature / 기능) Flags và vòng đời (lifecycle / 생명주기) của flag
+# Chương 59 — Feature Flags và lifecycle của flag
+Phần này nối mạch bài học với “Chương 59 — Feature Flags và lifecycle của flag”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 if (flags.newCheckout) {
@@ -2219,6 +2221,4 @@ JavaScript cấp cao (senior / 시니어) không phải mức (level / 수준) �
 
 Một câu hỏi cấp cao (senior / 시니어) không dừng ở “mã (code / 코드) chạy chưa?”. Nó tiếp tục: nếu người dùng (user / 사용자) rời page thì sao, yêu cầu (request / 요청) cũ trả về muộn thì sao, máy chủ (server / 서버) overloaded thì sao, bộ nhớ đệm (cache / 캐시) stale thì sao, đầu vào (input / 입력) malicious thì sao, worker không terminate thì sao, môi trường vận hành (production / 운영 환경) thất bại (fail / 실패) thì biết bằng cách nào, và nhóm (team / 팀) khác sửa sau một năm có hiểu quyền sở hữu (ownership / 소유권)/dependencies không.
 
-Nếu bạn có thể trả lời những câu hỏi đó một cách có hệ thống, JavaScript cốt lõi (core / 핵심) của bạn đã đủ mạnh để đi sâu vào khung phần mềm (framework / 프레임워크) và hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처) mà không bị phụ thuộc vào “phép màu của khung phần mềm (framework magic / 프레임워크 마법)”.
-
-> **Bàn giao:** Sau **di chuyển (migration / 마이그레이션) quy tắc (rule / 규칙)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nếu bạn có thể trả lời những câu hỏi đó một cách có hệ thống, JavaScript core của bạn đã đủ mạnh để đi sâu vào framework và system architecture mà không bị phụ thuộc vào “framework magic”.

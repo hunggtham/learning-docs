@@ -163,6 +163,8 @@ Dùng cho các hệ thống (systems / 시스템들) như classical Freud, Adler
 
 ## 19. mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Study riêng lẻ
    ↓ replication
@@ -180,6 +182,8 @@ Update confidence, không phải binary proof
 Đọc cùng [[03_measurement_statistics]], [[05_psychometrics_and_test_interpretation]], [[06_open_science_and_evidence_evaluation]], [[08_causal_inference_and_psychological_evidence]] và [[02_research_methods]].
 
 ### Nguồn định hướng
+
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
 - Open Science Collaboration và các replication projects về reproducibility trong psychology.
 - Literature về Bayesian re-analysis của replication nhấn mạnh effect-size overestimation, weak bằng chứng (evidence / 증거) và publication độ lệch (bias / 편향) có thể quan trọng hơn nhị phân (binary / 이진) replicated/not-replicated framing.

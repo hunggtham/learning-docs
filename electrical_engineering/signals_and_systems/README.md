@@ -5,6 +5,8 @@
 Nhánh này cung cấp ngôn ngữ chung cho sensor, audio, điều khiển (control / 제어) và communication: tín hiệu (signal / 신호) là gì, hệ thống (system / 시스템) biến đổi tín hiệu (signal / 신호) ra sao, thông tin (information / 정보) nào bị mất và sampling/filtering tạo artefact nào.
 
 ## Cốt lõi (core / 핵심) tuyến (route / 경로)
+Phần “Cốt lõi (core / 핵심) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 LTI systems → convolution → Fourier/Laplace/Z → sampling → filters → estimation
@@ -14,6 +16,8 @@ LTI systems → convolution → Fourier/Laplace/Z → sampling → filters → e
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) tuyến (route / 경로)**, ta sang **cốt lõi (core / 핵심) chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) chapter
+Phần “Cốt lõi (core / 핵심) chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [LTI, sampling and filtering](00_lti_sampling_filtering.md) — poles/zeros, aliasing, ADC quantization, FIR/IIR và đo PSD.
 - [Transforms and estimation](01_transforms_and_estimation.md) — Laplace/Z, matched filter, trạng thái (state / 상태) estimation, covariance và sensor fusion.
@@ -22,6 +26,8 @@ LTI systems → convolution → Fourier/Laplace/Z → sampling → filters → e
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) chapter**, ta sang **Cần nắm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cần nắm
+Phần “Cần nắm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - continuous/discrete thời gian (time / 시간), năng lượng (energy / 에너지)/power tín hiệu (signal / 신호) và state-space intuition;
 - impulse phản hồi (response / 응답), convolution, poles/zeros và stability;

@@ -7,6 +7,8 @@ Professional ethics xuất hiện khi role, expertise và power tạo duty vư�
 Animal ethics hỏi sentience, welfare, rights, speciesism và moral status. Environmental ethics mở rộng phạm vi từ individual welfare sang species, ecosystem, intrinsic giá trị (value / 값) và future generations. Các khái niệm này không loại trừ nhau nhưng có thể xung đột trong chính sách (policy / 정책).
 
 ## Một khung phân tích
+Phần “Một khung phân tích” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 actor/role → capability → foreseeable harm

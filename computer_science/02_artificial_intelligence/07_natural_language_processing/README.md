@@ -6,6 +6,8 @@ Folder này xây NLP (Natural Language Processing / 자연어 처리 / xử lý 
 
 ## Phụ thuộc (dependency / 의존성) map
 
+Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
+
 ```mermaid
 flowchart TD
     A[00 Language as Data] --> B[01 Normalization & Tokenization]
@@ -53,6 +55,8 @@ flowchart TD
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Human language
 → normalization/tokenization
@@ -83,6 +87,4 @@ Transformer LM
 → hallucination / grounding / evaluation
 ```
 
-Nhờ NLP tầng (layer / 계층) này, các từ `token`, `embedding`, `perplexity`, `autoregressive`, `retrieval`, `reranking` đã có cơ chế (mechanism / 메커니즘) rõ trước khi bước vào LLM.
-
-> **Bàn giao:** Sau **Chuyển tiếp sang Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 language as data](./00_language_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nhờ NLP layer này, các từ `token`, `embedding`, `perplexity`, `autoregressive`, `retrieval`, `reranking` đã có mechanism rõ trước khi bước vào LLM.

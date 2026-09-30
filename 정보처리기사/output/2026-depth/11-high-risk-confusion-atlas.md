@@ -13,6 +13,8 @@
 **kiểm tra hợp lệ (validation / 검증) — 확인/타당성 확인** hỏi: specification/sản phẩm có thực sự giải quyết nhu cầu stakeholder không?
 
 ### Dấu hiệu đề
+Phần “Dấu hiệu đề” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - “conforms to specification”, “built correctly” → xác minh (verification / 확인).
 - “meets người dùng (user / 사용자) needs”, “right sản phẩm (product / 제품)” → kiểm tra hợp lệ (validation / 검증).
@@ -60,6 +62,8 @@ Cả hai đều có “mũi tên” và “tiến trình (process / 프로세스
 **Activity Diagram**: workflow, branch, merge, parallel activity.
 
 ### Dấu hiệu đề
+Phần “Dấu hiệu đề” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - “message thứ tự (order / 순서) between objects” → chuỗi (sequence / 시퀀스).
 - “nghiệp vụ (business / 비즈니스) workflow / parallel branch” → Activity.

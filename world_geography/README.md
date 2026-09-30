@@ -41,6 +41,8 @@ World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer 
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
+Sơ đồ dưới đây cho thấy thứ tự phụ thuộc của thư viện: tư duy địa lý và dữ liệu làm nền, Earth systems tạo process, rồi các lớp dân cư–kinh tế–vùng nối thành global systems. Hãy dùng nó để chọn prerequisite trước khi mở một atlas profile.
+
 ```mermaid
 graph TD
   A[Geographical thinking] --> B[Coordinates / Maps / GIS]
@@ -149,5 +151,3 @@ Mã (code / 코드), formula, acronym, proper noun và chuẩn gốc (canonical 
 **vật lý (physical / 물리적) cross-link QA → population/urban/development nhân quả (causal / 인과적) examples → regional prerequisite/ứng dụng (application / 애플리케이션) links → selective Thailand/Philippines profiles nếu đủ chiều sâu → Atlas tham chiếu (reference / 참조) cleanup → internal-link kiểm tra hợp lệ (validation / 검증)**.
 
 Không quay lại chiến lược sinh hàng trăm country skeleton.
-
-> **Bàn giao:** Sau **Roadmap tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CORE COVERAGE AUDIT](./CORE_COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

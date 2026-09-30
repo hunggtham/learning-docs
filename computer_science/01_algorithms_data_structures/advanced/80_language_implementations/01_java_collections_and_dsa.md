@@ -41,6 +41,8 @@ Vì vậy câu “LinkedList chèn O(1)” chỉ đúng khi đã có vị trí n
 
 ## ArrayDeque cho ngăn xếp (stack / 스택), hàng đợi (queue / 큐) và deque
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```java
 Deque<Integer> dq = new ArrayDeque<>();
 dq.push(10);
@@ -138,6 +140,8 @@ Không sửa trường dùng để so sánh của đối tượng (object / 객�
 
 ## Mảng thành phần nguyên thủy (primitive / 기본 요소) thường tốt hơn collection đóng hộp trong DSA
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```java
 int[] parent;
 long[] dist;
@@ -178,6 +182,8 @@ record Cell(int r, int c, int mask) {}
 Tuy nhiên, bản ghi (record / 레코드) chỉ làm các tham chiếu (reference / 참조) thành phần không thể được gán lại. Nếu thành phần là một `List` có thể thay đổi thì nội dung bên trong vẫn mutable. Khóa băm cần mức bất biến đủ sâu để `equals/hashCode` không thay đổi trong thời gian khóa nằm trong map.
 
 ## computeIfAbsent, merge và miền khóa
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```java
 Map<String, List<String>> g = new HashMap<>();
@@ -344,6 +350,8 @@ Persistent cây (tree / 트리) có thể sao chép chỉ đường cập nhật
 
 ## Bảng chọn nhanh
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Nhu cầu | Lựa chọn thường phù hợp |
 |---|---|
 | Truy cập ngẫu nhiên theo chỉ số | `ArrayList` / array |
@@ -394,5 +402,3 @@ Ngoài đầu ra, vẫn nên kiểm tra bất biến sau các chuỗi thao tác 
 Khi chọn collection, hãy hỏi: **thao tác nào chiếm ưu thế, cần thứ tự hay chỉ membership, khóa có bất biến không, mảng thành phần nguyên thủy (primitive / 기본 요소) có đủ không, đối tượng (object / 객체) overhead có đáng kể không, có thật sự cần tính đồng thời (concurrency / 동시성) không, và view/iterator/tham chiếu (reference / 참조) có thể mất hiệu lực khi nào?**
 
 Xem thêm: [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md), [Cross-language Testing](./03_cross_language_testing_and_benchmarking.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 c dsa implementation patterns](./00_c_dsa_implementation_patterns.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

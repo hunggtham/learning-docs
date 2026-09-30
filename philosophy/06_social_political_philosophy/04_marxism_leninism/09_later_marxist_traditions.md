@@ -97,6 +97,8 @@ Cây (tree / 트리) này không nói các branches có giá trị ngang nhau ha
 Ta vừa chuyển từ genealogy “Marx → Lenin” sang một map đa nhánh. Bước tiếp theo là [Comparative political economy](10_comparative_political_economy.md), nơi Marxist/socialist frameworks được đặt cạnh liberal, social-democratic và market-oriented frameworks theo **cùng một bộ câu hỏi**: thuộc tính (property / 속성), coordination, power, freedom, equality, thông tin (information / 정보) và institutional thất bại (failure / 실패).
 
 ## Nguồn định hướng
+Phần “Nguồn định hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Antonio Gramsci”: https://plato.stanford.edu/entries/gramsci/

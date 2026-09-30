@@ -386,6 +386,8 @@ Nếu phần lớn kết quả đến từ beta thị trường, hãy thừa nh�
 
 ## 31. Vòng phản hồi hoàn chỉnh
 
+Vòng phản hồi là phần kết của attribution: ghi lại quyết định, đối chiếu kết quả, xác định sai ở đâu và chỉ thay đổi rule khi có bằng chứng. Mỗi mũi tên dưới đây là một bước cần để việc học không biến thành kể lại sau sự kiện.
+
 ```text
 Quyết định
 → Ghi lại dữ kiện và giả định
@@ -398,5 +400,3 @@ Quyết định
 ```
 
 Đây là cách biến đầu tư thành quá trình học có kỷ luật thay vì chuỗi câu chuyện được viết lại sau khi giá đã chạy.
-
-> **Bàn giao:** Sau **31. Vòng phản hồi hoàn chỉnh**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

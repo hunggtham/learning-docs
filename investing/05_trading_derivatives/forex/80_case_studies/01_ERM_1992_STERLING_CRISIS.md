@@ -361,6 +361,8 @@ capital-control regimes
 Nhưng institutional thiết kế (design / 설계) khác nhau nên không bản sao (copy / 복사) mechanical quy tắc (rule / 규칙).
 
 ## 22. Cơ chế (mechanism / 메커니즘) map
+Phần “22. Cơ chế (mechanism / 메커니즘) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 German reunification / tight German policy
@@ -392,6 +394,8 @@ What counterparties fail if volatility jumps?
 ```
 
 ## Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Bank of England, *Thao tác (operation / 연산) of monetary chính sách (policy / 정책)*, Quarterly Bulletin 1992 Q4.
 - Bank of England cơ sở dữ liệu (database / 데이터베이스) notes on 16 September 1992 minimum lending tỷ lệ (rate / 비율) changes and ERM exit.

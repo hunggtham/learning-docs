@@ -229,6 +229,8 @@ Sau đó kiểm tra CFO, tồn kho, khoản phải thu hoặc tài sản tài ch
 
 ### Kịch bản cơ cấu sản phẩm mạnh
 
+Kịch bản này kiểm tra trường hợp mix xe, giá bán và tài chính khách hàng cùng cải thiện. Đừng chỉ nhìn sản lượng; hãy nối mix với biên lợi nhuận, tín dụng và dòng tiền.
+
 ```text
 Số xe đi ngang
 Tỷ trọng SUV / Genesis / hybrid ↑
@@ -287,5 +289,3 @@ Không cần số hoàn hảo. Việc buộc thay đổi lợi nhuận vào từ
 ## Liên kết
 
 Đọc cùng [15_automotive_battery_mobility](../15_automotive_battery_mobility.md), [35_financial_sector_securities_insurance_asset_management](../35_financial_sector_securities_insurance_asset_management.md), [21_economy_to_company_transmission](../21_economy_to_company_transmission.md) và [39_practical_company_analysis_workbook_and_case_patterns](../39_practical_company_analysis_workbook_and_case_patterns.md).
-
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

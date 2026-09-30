@@ -180,6 +180,8 @@ Self-loop cũng cần cạnh ID; trong đồ thị vô hướng nó góp 2 vào 
 
 ## 14. JavaScript cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```js
 function eulerUndirected(n, edges, start) {
   const g = Array.from({ length: n }, () => []);
@@ -408,5 +410,3 @@ Một cách triển khai trả tuyến (route / 경로) ngắn hơn `E+1` thư�
 Khi balance + connectivity đúng, Hierholzer biến cục bộ cạnh consumption thành toàn cục tuyến (route / 경로) bằng reverse finishing/splicing. Đây là lý do Eulerian problems có linear-time cấu trúc (structure / 구조) đẹp trong khi các bài Hamilton đi qua đỉnh không có cùng tính chất.
 
 Xem thêm: [Graph Modeling](./00_graph_modeling_and_representation.md), [Bridges](./06_bridges_articulation_and_biconnectivity.md), [Network Flow](./08_network_flow_and_matching.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

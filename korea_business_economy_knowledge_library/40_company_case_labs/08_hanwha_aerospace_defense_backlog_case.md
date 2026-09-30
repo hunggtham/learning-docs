@@ -220,6 +220,8 @@ Cần kiểm tra M&A, sáp nhập, giao dịch nội bộ và phân bổ vốn �
 
 ### Kịch bản nhu cầu tăng nhưng thực thi bị giới hạn
 
+Backlog lớn chỉ tạo giá trị khi doanh nghiệp có thể giao hàng, giữ margin và thu tiền. Kịch bản này tách nhu cầu khỏi năng lực thực thi, chuỗi cung ứng và vốn lưu động.
+
 ```text
 Đơn hàng tăng nhanh
 → backlog tăng
@@ -232,6 +234,8 @@ Cần kiểm tra M&A, sáp nhập, giao dịch nội bộ và phân bổ vốn �
 
 ### Kịch bản bình thường hóa
 
+Kịch bản bình thường hóa hỏi kết quả sẽ ra sao khi đơn hàng và biên lợi nhuận quay về mức bền vững. Đây là cách tránh định giá doanh nghiệp bằng đỉnh chu kỳ.
+
 ```text
 Đơn hàng mới chậm lại
 → backlog hiện tại vẫn hỗ trợ giao hàng
@@ -241,6 +245,8 @@ Cần kiểm tra M&A, sáp nhập, giao dịch nội bộ và phân bổ vốn �
 ```
 
 ### Kịch bản rủi ro hợp đồng
+
+Kịch bản này kiểm tra việc thay đổi lịch giao, chi phí quốc phòng hoặc điều khoản hợp đồng truyền vào cash flow. Hãy xác định điểm vô hiệu hóa trước khi dùng backlog làm bằng chứng tăng trưởng.
 
 ```text
 Tài trợ của bên mua bị chậm
@@ -285,6 +291,8 @@ Sai. Đơn hàng, hiệu lực hợp đồng, sản xuất, giao hàng, ghi nh�
 
 ## 17. Bài tập nghiên cứu
 
+Bài tập dưới đây buộc người học thay các giả định bằng một bảng dữ liệu có thể kiểm tra. Hãy ghi rõ nguồn, thời điểm và cách mỗi biến đi vào mô hình doanh nghiệp.
+
 | Chỉ tiêu | Y-4 | Y-3 | Y-2 | Y-1 | Y0 |
 |---|---:|---:|---:|---:|---:|
 | Đơn hàng mới | | | | | |
@@ -304,5 +312,3 @@ Ghi chú các hợp đồng lớn theo `ngày ký → lịch giao dự kiến �
 > Doanh nghiệp quốc phòng không phải là “đại diện trực tiếp cho địa chính trị”. Nó là **doanh nghiệp kỹ thuật và thực thi hợp đồng chu kỳ dài**. Nhu cầu an ninh tạo backlog; chỉ năng lực sản xuất, kinh tế hợp đồng, kỷ luật vốn lưu động và dịch vụ vòng đời mới biến backlog thành dòng tiền bền vững.
 
 Đọc tiếp [09_coupang_commerce_logistics_case](./09_coupang_commerce_logistics_case.md) để chuyển từ mua sắm chính phủ chu kỳ dài sang thương mại tiêu dùng tần suất cao.
-
-> **Bàn giao:** Sau **Mô hình tư duy cuối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

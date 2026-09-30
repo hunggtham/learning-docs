@@ -32,6 +32,8 @@ Do đó cần normalized measure để so association across scales.
 
 ## 2. Pearson correlation là normalized covariance
 
+Pearson correlation chuẩn hóa covariance để so sánh mức liên hệ tuyến tính không phụ thuộc đơn vị. Nó hữu ích cho mô tả nhưng không tự chứng minh nguyên nhân hay độ phù hợp của một mô hình dự báo.
+
 ```math
 \rho_{XY}
 =
@@ -415,6 +417,8 @@ Hàm mất mát (loss function / 손실 함수) defines what “best fit” mean
 Train lỗi (error / 오류) measures fit observed dữ liệu (data / 데이터); kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) estimate generalization. phân phối (distribution / 분포) shift can break both regression các giả định (assumptions / 가정들) và ML hiệu năng (performance / 성능).
 
 ## 25. Correlation, regression và causality — relationship map
+
+Bản đồ này phân biệt ba câu hỏi: hai biến có cùng thay đổi không, một biến dự đoán biến kia tốt đến đâu, và can thiệp có làm kết quả đổi không. Giữ ranh giới này giúp tránh diễn giải hồi quy như bằng chứng nhân quả.
 
 ```text
 Correlation

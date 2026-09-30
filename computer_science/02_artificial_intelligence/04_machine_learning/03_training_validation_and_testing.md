@@ -482,6 +482,8 @@ But repeated API submissions still leak thông tin (information / 정보) throug
 
 ## Evaluation-driven development vòng lặp (loop / 루프)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 flowchart LR
     P[Problem] --> T[Train]
@@ -498,6 +500,8 @@ flowchart LR
 The kiểm thử (test / 테스트) is not the everyday vòng phản hồi (feedback loop / 피드백 루프); kiểm tra hợp lệ (validation / 검증) is.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Train      = learn parameters
@@ -532,5 +536,3 @@ Dữ liệu (data / 데이터) versions, software/hardware and nondeterministic 
 Evaluation giao thức (protocol / 프로토콜) is part of scientific validity of Machine học tập (learning / 학습). A sophisticated thuật toán (algorithm / 알고리즘) with contaminated split teaches less than a simple baseline evaluated correctly.
 
 Xem tiếp: [Loss, Objective and Risk](./04_loss_objective_and_risk.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 what is machine learning](./00_what_is_machine_learning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

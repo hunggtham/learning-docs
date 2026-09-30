@@ -819,6 +819,8 @@ Pip và lot cho biết **position thay đổi P/L bao nhiêu khi price move**. N
 → [03 — Leverage, margin and position sizing](./03_LEVERAGE_MARGIN_POSITION_SIZING.md)
 
 ## Liên kết liên quan
+Phần “Liên kết liên quan” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [01 — Market structure and instruments](./01_MARKET_STRUCTURE_AND_INSTRUMENTS.md)
 - [Trading & Forex master map](../00_MASTER_TRADING_FOREX_RISK.md)

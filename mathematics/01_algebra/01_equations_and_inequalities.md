@@ -296,6 +296,8 @@ Quadratic formula không phải quy tắc (rule / 규칙) rơi từ trên xuốn
 
 ## 6. Discriminant là thông tin hình học
 
+Discriminant không chỉ quyết định phương trình bậc hai có bao nhiêu nghiệm thực. Nó còn nói đường cong cắt trục như thế nào, nên nối đại số với hình học và giúp kiểm tra nghiệm trước khi tính tiếp.
+
 ```math
 \Delta=b^2-4ac
 ```

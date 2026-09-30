@@ -24,6 +24,8 @@ Một tài sản ít biến động nhưng không thể bán khi cần tiền v�
 
 ## 2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết
 
+Sau khi phân biệt volatility với rủi ro thất bại, ta cần tách ba câu hỏi thường bị trộn: tâm lý chịu được bao nhiêu, tài chính thực sự chịu được bao nhiêu và mục tiêu có buộc phải nhận mức rủi ro nào hay không.
+
 **Mức chịu đựng rủi ro (risk tolerance)** là mức dao động mà bạn có thể chịu về tâm lý mà không phá kế hoạch.
 
 **Khả năng chịu rủi ro (risk capacity)** là mức lỗ mà tài chính của bạn có thể chịu được dựa trên thu nhập, nợ, nghĩa vụ, quỹ dự phòng và thời gian.
@@ -114,6 +116,8 @@ Một danh mục beta thấp vẫn có thể chịu rủi ro lớn nếu tập t
 
 ## 10. Phân bổ chiến lược và phân bổ chiến thuật
 
+Khi đã biết mục tiêu và ngân sách rủi ro, ta phân biệt cấu trúc dài hạn với những điều chỉnh ngắn hạn. Đây là ranh giới giúp tactical view không biến thành đuổi theo hiệu suất.
+
 **Phân bổ chiến lược (strategic allocation)** là cấu trúc dài hạn dựa trên mục tiêu, thời hạn và khả năng chịu rủi ro.
 
 **Phân bổ chiến thuật (tactical allocation)** là điều chỉnh quanh cấu trúc dài hạn dựa trên định giá, vĩ mô hoặc cơ hội đặc biệt.
@@ -148,6 +152,8 @@ Hai người có cùng lợi suất trung bình nhưng thứ tự năm tăng/gi�
 Vì vậy giai đoạn gần mục tiêu cần chú trọng bộ đệm thanh khoản và tài sản ổn định hơn.
 
 ## 14. Toán phục hồi sau thua lỗ
+
+Phần này chuyển drawdown thành tỷ lệ tăng cần thiết để quay lại đỉnh. Hãy đọc các dòng dưới đây như một phép kiểm tra khả năng sống sót của kế hoạch, không chỉ như phép tính phần trăm.
 
 ```text
 Mất 10% → cần +11,1% để quay lại đỉnh
@@ -321,6 +327,8 @@ Nó có làm danh mục khó sống sót hơn trong kịch bản xấu không?
 
 ## 29. Mô hình tư duy cuối cùng
 
+Sơ đồ cuối cùng gom mục tiêu, nghĩa vụ, thanh khoản, rủi ro, phân bổ và hành vi thành một vòng quyết định. Hãy dùng nó để review một danh mục cụ thể và chỉ ra điểm nào chưa có quy tắc rõ ràng.
+
 ```text
 Mục tiêu
 → Nghĩa vụ
@@ -336,5 +344,3 @@ Mục tiêu
 ```
 
 Đây là nền tảng để chuyển từ việc “mua tài sản” sang quản trị một hệ thống tài chính cá nhân có mục tiêu.
-
-> **Bàn giao:** Sau **29. Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

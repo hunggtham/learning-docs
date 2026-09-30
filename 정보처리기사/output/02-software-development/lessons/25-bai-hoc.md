@@ -1,45 +1,44 @@
-# 109 ~ 112: 형상 관리 (SCM - Software Configuration Management)
+# 7. 이분 검색 (Binary Search)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **7. 이분 검색 (Binary Search)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **7. 이분 검색 (Binary Search)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-형상, 관리
+이분, 검색
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **핵심 032 & 033: 형상 관리 및 IDE (Configuration Management & IDE)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **116 & 117: 형상 관리 도구 (SVN vs Git)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**에서 만든 기준을 이어받아 **7. 이분 검색 (Binary Search)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **109 ~ 112: 형상 관리 (SCM - Software Configuration Management)** và nối nó với **116 & 117: 형상 관리 도구 (SVN vs Git)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
-
----
-
-## 109 ~ 112: 형상 관리 (SCM - Software Configuration Management)
-
-- **형상 관리 (SCM):** 소프트웨어 변경 사항을 체계적으로 관리. (Quản lý mọi thay đổi của phần mềm: Source code, tài liệu, thiết kế... trong suốt vòng đời).
-- **목적:** 가시성 (Tính hiển thị - ai đang làm gì), 추적성 (Tính truy xuất - ai gây ra lỗi này), 무절제한 변경 방지 (Ngăn chặn việc sửa code vô tội vạ).
-
-### 형상 관리 5대 기능 (5 Chức năng của SCM)
-1. **형상 식별 (Identification):** Đặt tên, đánh số phiên bản, phân nhánh (Tree) để dễ quản lý.
-2. **버전 제어 (Version Control):** Lưu lại các phiên bản (version / 버전) cũ/mới.
-3. **형상 통제 (Configuration Control):** Yêu cầu đổi mã (code / 코드) phải được xem xét kỹ trước khi nhập vào bản chính (Baseline).
-4. **형상 감사 (Audit):** Kiểm tra lại xem mã (code / 코드) đã chuẩn chưa.
-5. **형상 기록 (Status Reporting):** Ghi chép lịch sử báo cáo.
-
-### 버전 관리 용어 (Thuật ngữ Version Control)
-- **저장소 (Repository):** Kho lưu trữ mã (code / 코드).
-- **체크아웃 (Check-out):** Lấy mã (code / 코드) từ Kho về máy mình để sửa.
-- **체크인 (Check-in) / 커밋 (Commit):** Lưu mã (code / 코드) mình vừa sửa vào máy mình (Local) hoặc đưa lên Kho.
-- **동기화 (Update):** Lấy mã (code / 코드) mới nhất của người khác trên Kho về máy mình để đồng bộ.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **7. 이분 검색 (Binary Search)** và nối nó với **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
+
+## 7. 이분 검색 (Binary Search)
+
+Ở bước 25/101, **7. 이분 검색 (Binary Search)** xuất hiện như phần tiếp nối của **086-1: 기수 정렬 (Radix Sort / Bucket Sort)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
+
+Để đọc **7. 이분 검색 (Binary Search)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “7. 이분 검색 (Binary Search)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+* 검색할 데이터가 정렬되어 있어야 함.
+* 비교 횟수를 거듭할 때마다 검색 대상이 반(절반)으로 줄어듦.
+* 탐색 효율이 좋고 시간이 적게 소요됨. 중간 레코드 번호(M) = (F+L)/2.
+* **VI (Vietnamese) (Tiếng Việt):** Tìm kiếm nhị phân. Dữ liệu phải được sắp xếp trước. Mỗi lần chia đôi không gian tìm kiếm.
+* **Example**: 사전에서 단어를 찾을 때 책을 반으로 계속 쪼개며 찾는 방식입니다.
+* 💡 **Mẹo ghi nhớ**: Binary = chia đôi (phải sắp xếp trước!).
+
+Như vậy, **7. 이분 검색 (Binary Search)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **029 & 030: 검색 알고리즘 및 해싱 (Search Algorithms & Hashing)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

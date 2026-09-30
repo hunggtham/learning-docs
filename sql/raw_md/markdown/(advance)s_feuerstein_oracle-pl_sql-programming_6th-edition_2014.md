@@ -61,6 +61,8 @@ www.it-ebooks.info
 **Preface. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  xxv** 
 
 ###### **Part I. Programming in PL/SQL** 
+Phần này nối mạch SQL với “**Part I. Programming in PL/SQL**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 |**1. Introduction to PL/SQL. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .**|**. . . . . . . . . .  3**|
 |---|---|
@@ -1506,6 +1508,8 @@ www.it-ebooks.info
 Let’s take a more detailed look at this code in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 1–3 This is the declaration section of this so-called “anonymous” PL/SQL block, in which I declare an integer variable to hold the number of books that I have authored or coauthored. (I’ll say much more about the PL/SQL block structure in Chapter 3.) 
 
@@ -1622,6 +1626,8 @@ www.it-ebooks.info
 Let’s take a more detailed look at the error-handling aspects of this code in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 |5|I declare my own exception, called l_balance_below_minimum. Oracle provides a set of predefined exceptions, such<br>as DUP_VAL_ON_INDEX, but I need something specific to my application, so I must define it myself in this case.|
 |---|---|
@@ -2301,6 +2307,8 @@ REM  Filename: abc.pkg
 (Any line beginning with REM is a comment or “remark” that SQL*Plus ignores.) Ex‐ ecuting the _abc.pkg_ script is supposed to run _abc.pks_ and _abc.pkb_ . But because I have not included path information, where will SQL*Plus look for these other files? Let’s see: 
 
 ###### `C:` **`\BOB\FILES> sqlplus`** 
+Phần này nối mạch SQL với “`C:` **`\BOB\FILES> sqlplus`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ...
@@ -2452,6 +2460,8 @@ What happens if you modify some table data during your session but then exit bef
 To disconnect from the database but remain connected to SQL*Plus, use the command DISCONNECT, which will look something like this in action: 
 
 ###### `SQL>` **`DISCONNECT`** 
+Phần này nối mạch SQL với “`SQL>` **`DISCONNECT`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 Disconnected from Personal Oracle Database 10g Release 10.1.0.3.0 - Production
@@ -2826,6 +2836,8 @@ state. If, however, you mistype part of the CREATE syntax, the database won’t 
 We’ve already looked at two different ways to invoke a stored program: wrap it in a simple PL/SQL block or use the SQL*Plus EXECUTE command. You can also use stored programs inside other stored programs. For example, you can invoke a function such as wordcount in any location where you could use an integer expression. Here is a short illustration of how I might test the wordcount function with a strange input (CHR(9) is an ASCII “tab” character): 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    DBMS_OUTPUT.PUT_LINE('There are ' || wordcount(CHR(9)) || ' words in a tab');
@@ -4120,6 +4132,8 @@ www.it-ebooks.info
 The PL/SQL compiler reserves certain identifiers for its use only. In other words, you cannot declare a variable with the name of that identifier. These are called _reserved words_ . For example, one very important reserved word is END, which terminates blocks, IF statements, and loops. If you try to declare a variable named end: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    end VARCHAR2(10) := 'blip';  /* Will not work; "end" is reserved. */
@@ -6301,6 +6315,8 @@ Böhm and Jacopini proved that any program that uses any arbitrary synchronous c
 The continue statement is valuable because it makes code shorter, makes code easier to read, and reduces the need for Boolean variables whose exact meaning can be hard to decipher. The most common use is a loop where the exact processing that each item needs depends on detailed structural tests of the item. The skeleton of a loop might look like this; notice that it contains an exit to decide when enough items have been pro‐ cessed. Also notice that the last continue (after condition5) is not strictly necessary. But by putting a continue after each action, it is easy to add more actions in any order without breaking any other actions. 
 
 ###### `LOOP` 
+Phần này nối mạch SQL với “`LOOP`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    EXIT WHEN exit_condition_met;
@@ -6511,6 +6527,8 @@ There are, however, disadvantages to the 100% SQL approach. SQL statements are g
 PL/SQL offers more flexibility as well. Suppose, for example, that I want to transfer as many of the rows as possible, and simply write a message to the error log for any transfers of individual rows that fail. In this case, I really do need to rely on the cursor FOR loop, but with the added functionality of an exception section: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    FOR checked_out_rec IN checked_out_cur
@@ -8333,6 +8351,8 @@ A programming language uses _static_ typing, also called _strong_ typing, if typ
 PL/SQL supports both fixed- and variable-length strings as both traditional character and Unicode character data. CHAR and NCHAR are fixed-length datatypes; VAR‐ CHAR2 and NVARCHAR2 are variable-length datatypes. Here is a declaration of a variable-length string that can hold up to 2,000 characters: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    l_accident_description VARCHAR2(2000);
@@ -8446,6 +8466,8 @@ The REF CURSOR datatype allows developers to declare cursor variables. A cursor 
 Here is an example of a strong REF CURSOR declaration. I associate the cursor variable with a specific record structure (using a %ROWTYPE attribute): 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE book_data_t IS REF CURSOR RETURN book%ROWTYPE;
@@ -8459,6 +8481,8 @@ www.it-ebooks.info
 And here are two weak REF CURSOR declarations in which I do not associate any particular structure with the resulting variable. The second declaration (the last line) showcases SYS_REFCURSOR, a predefined weak REF CURSOR type: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE book_data_t IS REF CURSOR;
@@ -8523,6 +8547,8 @@ The following examples illustrate declarations of variables of different datatyp
 www.it-ebooks.info 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    -- Simple declaration of numeric variable
@@ -8571,6 +8597,8 @@ The value of a constant is set upon declaration and may not change thereafter.
 Here are some examples of declarations of constants: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - `-- The current year number; it's not going to change during my session. l_curr_year CONSTANT PLS_INTEGER :=` 
 
@@ -8807,6 +8835,8 @@ If only I had used %TYPE!
 When you declare a variable, you can also specify the need for the variable to be NOT NULL. This NOT NULL declaration constraint is transferred to variables declared with the %TYPE attribute. If I include a NOT NULL in my declaration of a source variable (one that is referenced afterward in a %TYPE declaration), I must also make sure to specify a default value for the variables that use that source variable. Suppose that I declare max_available_date NOT NULL in the following example: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    max_available_date DATE NOT NULL :=
@@ -9268,6 +9298,8 @@ If you omit the CHAR or BYTE qualifier when declaring a VARCHAR2 variable, then 
 www.it-ebooks.info 
 
 ###### Following are some examples of VARCHAR2 declarations: 
+Phần này nối mạch SQL với “Following are some examples of VARCHAR2 declarations:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DECLARE
@@ -9441,6 +9473,8 @@ Run this code, and you’ll find that the number of characters is 34.
 While this is not strictly a PL/SQL issue, you’ll often find that ampersand (&) characters cause problems if you’re executing PL/SQL code via SQL*Plus or SQL Developer. Both tools use ampersands to prefix substitution variables. When they encounter an amper‐ sand, these tools “see” the next word as a variable and prompt you to supply a value: 
 
 ###### `SQL>` **`BEGIN`** 
+Phần này nối mạch SQL với “`SQL>` **`BEGIN`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
   2     DBMS_OUTPUT.PUT_LINE ('Generating & saving test data.');
@@ -11394,6 +11428,8 @@ The PLS_INTEGER datatype stores signed integers in the range −2,147,483,648 th
 Following is an example of some PLS_INTEGER declarations: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    loop_counter PLS_INTEGER;
@@ -11567,6 +11603,8 @@ _Table 9-4. Comparison of floating-point types_
 To write literals of these new types, you apply a suffix—either _f_ or _d_ , depending on whether you want your literal to be interpreted as a BINARY_FLOAT or as a BINA‐ RY_DOUBLE. For example: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
   my_binary_float  BINARY_FLOAT  := .95f;
@@ -11611,6 +11649,8 @@ Determine whether or not an IEEE-754 value represents infinity.
 It’s _very_ important to understand that these BINARY types are indeed binary. I do not recommend them for any situation in which exact decimal representation is critical. The following code block illustrates why, for example, I would not use the new binary types to represent monetary values: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
     DBMS_OUTPUT.PUT_LINE(0.95f); -- BINARY_FLOAT
@@ -11961,6 +12001,8 @@ a := TO_NUMBER('1.23456E-24');
 Many of the number format model elements listed in Table B-1 ultimately derive their meaning from one of the NLS parameters. For example, the G element represents the numeric group separator, which is the second character in the NLS_NUMERIC_CHAR‐ ACTERS setting in effect when the conversion takes place. You can view current NLS parameter settings by querying the NLS_SESSION_PARAMETERS view: 
 
 ###### `SQL>` **`SELECT * FROM nls_session_parameters;`** 
+Phần này nối mạch SQL với “`SQL>` **`SELECT * FROM nls_session_parameters;`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 PARAMETER                 VALUE
@@ -12928,6 +12970,8 @@ www.it-ebooks.info
 If you decide to use a function that returns the time in the session time zone, be certain that you have correctly specified your session time zone. The functions SESSIONTI‐ MEZONE and DBTIMEZONE will report your session and database time zones, re‐ spectively. To report on the time in the database time zone, you must alter your session time zone to DBTIMEZONE and then use one of the session time zone functions. The following example illustrates some of these functions: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    DBMS_OUTPUT.PUT_LINE('Session Timezone='||SESSIONTIMEZONE);
@@ -14826,6 +14870,8 @@ DECLARE
 Use the TYPE...RECORD statement to define a record in which each field is defined explicitly (with its name and datatype) in the TYPE statement for that record; a field in a programmer-defined record can even be another record. In the following example, I declare a record TYPE containing some information about my bookwriting career and an “instance” of that type, a record: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE book_info_rt IS RECORD (
@@ -14957,6 +15003,8 @@ IS
 This is a three-field record structure that contains the primary key and name informa‐ tion for a customer, as well as a calculated, total amount of sales for the customer. I can then use this new record type to declare records with the same structure as this type: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    prev_customer_sales_rec customer_sales_pkg.customer_sales_rectype;
@@ -15072,6 +15120,8 @@ CREATE TABLE cust_sales_roundup (
 Then the three records defined as follows all have compatible structures, and I can “mix and match” the data in these records as shown: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    cust_sales_roundup_rec cust_sales_roundup%ROWTYPE;
@@ -15416,6 +15466,8 @@ Unfortunately, you cannot do that. Instead, to test for record equality, you mus
 www.it-ebooks.info 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    first_book summer.reading_list_rt := summer.must_read;
@@ -16922,6 +16974,8 @@ END;
 I could also choose to initialize the nested table in my executable section: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE company_aat IS TABLE OF company%ROWTYPE;
@@ -16946,6 +17000,8 @@ www.it-ebooks.info
 ###### and then declare some PL/SQL variables based on that type: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    my_favorite_colors color_tab_t := color_tab_t();
@@ -16980,6 +17036,8 @@ This code initializes wedding_colors and creates three elements that match those
 This kind of direct assignment is not possible when datatypes are merely “type com‐ patible.” Even if you have created two different types with the exact same definition, the fact that they have different names makes them different types. Thus, the following block of code fails to compile: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE tt1 IS TABLE OF employees%ROWTYPE;
@@ -17238,6 +17296,8 @@ END;
 I can also use a cursor FOR loop to move multiple rows into a collection, populating those rows _nonsequentially_ . In this case, I will switch to using an associative array, so that I can assign rows randomly—that is, using the primary key value of each row in the database as the row number in my collection: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE emp_copy_t IS TABLE OF employees%ROWTYPE INDEX BY PLS_INTEGER;
@@ -17253,6 +17313,8 @@ END;
 I can also use BULK COLLECT (described in Chapter 21) to retrieve all the rows of a table in a single assignment step, depositing the data into any of the three types of collections. When using a nested table or VARRAY, you do _not_ need to explicitly initi‐ alize the collection. Here is an example: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE emp_copy_nt IS TABLE OF employees%ROWTYPE;
@@ -17319,6 +17381,8 @@ Here is the body of a package that uses a collection to cache code-hairstyle pai
 The following table describes the interesting aspects of this program. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 3–8 Declare a collection type and the collection to hold my cached descriptions. 
 
@@ -17329,6 +17393,8 @@ The following table describes the interesting aspects of this program.
 www.it-ebooks.info 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 15–25 That very traditional query from the database. But in this case, it is just a private function within my main function, which is fitting because it is not the main attraction. 
 
@@ -17516,6 +17582,8 @@ My first pass at building a string_tracker package looked like this:
 The following table gives an explanation of the interesting parts of this package body. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 3–5 Declare a collection of strings indexed by integer, to hold the list of variable names that I have already used. 
 
@@ -17572,6 +17640,8 @@ www.it-ebooks.info
 First of all, notice that my package body has shrunk from 26 lines to 17 lines—a reduction of almost 33%. And, in the process, my code has been greatly simplified. The following table explains the changes. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 3–5 This time, I declare a collection of Booleans indexed by _strings_ . Actually, it doesn’t really matter what kind of data the collection holds. I could create a collection of Booleans, dates, numbers, XML documents, whatever. The only thing that matters (as you will see shortly) is the index value. 
 
@@ -17698,6 +17768,8 @@ You define a collection of records by specifying a record type (through either %
 Here is an example of a collection of records based on a custom record TYPE: 
 
 ###### `PACKAGE compensation_pkg IS` 
+Phần này nối mạch SQL với “`PACKAGE compensation_pkg IS`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE reward_rt IS RECORD (
@@ -17713,6 +17785,8 @@ Here is an example of a collection of records based on a custom record TYPE:
 With these types defined in my package specification, I can declare collections in other programs like this: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    holiday_bonuses compensation_pkg.reward_tt;
@@ -18242,6 +18316,8 @@ www.it-ebooks.info
 The following table explains the multilevel collection-related changes to this package. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 7 Once again, I have a collection type indexed by string to store the used strings. 
 
@@ -19463,6 +19539,8 @@ This is not an exhaustive list of LOB documentation, but you’ll find all the e
 Now that you understand the distinction between a LOB locator and the value to which it points, you need to wrap your mind around another key concept: the _empty LOB_ . An empty LOB is what you have when a LOB locator doesn’t point to any LOB data. This is not the same as a NULL LOB, which is a LOB column (or variable) that doesn’t hold a LOB locator. Clear as mud, right? Let’s look at some example code: 
 
 ###### **`DECLARE`** 
+Phần này nối mạch SQL với “**`DECLARE`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 directions CLOB;BEGIN
@@ -20018,6 +20096,8 @@ SQL> SELECT falls_directions
 ```
 
 ###### `FALLS_DIRECTIONS` 
+Phần này nối mạch SQL với “`FALLS_DIRECTIONS`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ----------------------------------------------------------------------
@@ -21313,6 +21393,8 @@ When an exception occurs in a PL/SQL block, the Oracle database does _not_ roll 
 www.it-ebooks.info 
 
 ###### Consider the following procedure: 
+Phần này nối mạch SQL với “Consider the following procedure:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 PROCEDURE empty_library (
@@ -22615,6 +22697,8 @@ www.it-ebooks.info
 This PL/SQL block performs the cursor actions outlined in the following table. 
 
 ###### **Line(s) Action** 
+Phần này nối mạch SQL với “**Line(s) Action**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 |4–7|Declare the cursor.|
 |---|---|
@@ -23571,6 +23655,8 @@ where _cursor_name_ is the name of the cursor, and _cursor_type_name_ is the nam
 Here is an example of the creation of a cursor variable: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    /* Create a cursor type for sports cars. */
@@ -23842,6 +23928,8 @@ This anonymous block illustrates the way cursor aliases work:
 The following table provides an explanation of the cursor variable actions. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 2–5 Declare my weak REF CURSOR type and cursor variables. 
 
@@ -23909,6 +23997,8 @@ In your program header, you must identify the REF CURSOR type of your cursor var
 If you are creating a local module within another program (see Chapter 17 for infor‐ mation about local modules), you can define the cursor type in the same program. It will then be available for the parameter. This approach is shown here: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    /* Define the REF CURSOR type. */
@@ -24791,6 +24881,8 @@ The USING clause contains the values that will be _bound_ into the SQL string af
 A method 3 dynamic SQL statement is a query with a fixed number of bind variables (or none). This likely is the type of dynamic SQL you will most often be writing. Here is an example: 
 
 ###### `EXECUTE IMMEDIATE` 
+Phần này nối mạch SQL với “`EXECUTE IMMEDIATE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    'SELECT last_name, salary FROM employees
@@ -25825,6 +25917,8 @@ www.it-ebooks.info
 Here are some examples of calls to intab, along with their output. First, the entire con‐ tents of the emp table: 
 
 ###### `SQL>` **`EXEC intab ('emp');`** 
+Phần này nối mạch SQL với “`SQL>` **`EXEC intab ('emp');`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 -----------------------------------------------------------------------
@@ -25872,6 +25966,8 @@ EMPNO ENAME      JOB       MGR  HIREDATE        SAL     COMM    DEPTNO
 And now an entirely different table, with a different number of columns: 
 
 ###### `SQL>` **`EXEC intab ('dept')`** 
+Phần này nối mạch SQL với “`SQL>` **`EXEC intab ('dept')`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ------------------------------------
@@ -27911,6 +28007,8 @@ BEGIN
 www.it-ebooks.info 
 
 ###### When the PL/SQL runtime engine encounters the following statement: 
+Phần này nối mạch SQL với “When the PL/SQL runtime engine encounters the following statement:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 IF value_ok (SYSDATE) THEN ...
@@ -28750,6 +28848,8 @@ Finally, I can write my stock pivot function:
 As with the pet_family function, the specifics of this program are not important, and your own transformation logic will be qualitatively more complex. The basic steps per‐ formed here, however, will likely be repeated in your own code, so I will review them in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 1–2 The function header: pass in a result set as a cursor variable, and return a nested table based on the object type. 
 
@@ -28764,6 +28864,8 @@ As with the pet_family function, the specifics of this program are not important
 www.it-ebooks.info 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 8–12 Start up a simple loop to fetch each row separately from the cursor variable, terminating the loop when no more data is in the cursor. 
 
@@ -28951,6 +29053,8 @@ www.it-ebooks.info
 The following function (a simple encapsulation on top of SUBSTR) is a deterministic function: 
 
 ###### `FUNCTION betwnstr (` 
+Phần này nối mạch SQL với “`FUNCTION betwnstr (`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    string_in IN VARCHAR2, start_in IN PLS_INTEGER, end_in IN PLS_INTEGER)
@@ -28958,6 +29062,8 @@ The following function (a simple encapsulation on top of SUBSTR) is a determinis
 ```
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    RETURN (SUBSTR (string_in, start_in, end_in - start_in + 1));
@@ -29169,6 +29275,8 @@ What I have done here is essentially _list_ the different elements I want to use
 Now, before I even show you the implementation of this package, let’s rewrite the original block of code using my packaged elements (notice the use of dot notation, which is very similar to its use in the form _table.column_ ): 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    l_name employee_pkg.fullname_t;
@@ -30289,6 +30397,8 @@ www.it-ebooks.info
 The following table gives an explanation of the changes made in this second version. 
 
 ###### **Line(s) Significance** 
+Phần này nối mạch SQL với “**Line(s) Significance**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 2–7 Declarations based on the underlying tables no longer use %TYPE and %ROWTYPE. Instead, a “types package” is provided that offers SUBTYPEs, which in turn rely on %TYPE and %ROWTYPE. When we take this approach, the application code no longer needs directly granted access to underlying tables (which would be unavailable in a fully encapsulated environment). 
 
@@ -30695,6 +30805,8 @@ To create (or replace) a DML trigger, use the syntax shown here:
 The following table provides an explanation of these different elements. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 1 States that a trigger is to be created with the name supplied. Specifying OR REPLACE is optional. If the trigger exists and REPLACE is not specified, then your attempt to create the trigger anew will result in an ORA-4081 error. It is possible, by the way, for a table and a trigger (or a procedure and a trigger, for that matter) to have the same name. I recommend, however, that you adopt naming conventions to avoid the confusion that will result from this sharing of names. 
 
@@ -31570,6 +31682,8 @@ The rules for standalone triggers apply to compound triggers as well—for examp
 So compound triggers look like packages, but do they behave in the same way? The short answer is no—they behave better! Consider this example: 
 
 ###### `SQL>` **`BEGIN`** 
+Phần này nối mạch SQL với “`SQL>` **`BEGIN`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
   2    insert into incremented_values values(1,1);
@@ -31731,6 +31845,8 @@ www.it-ebooks.info
 The following table summarizes what is happening in this code. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 1 This line specifies that a trigger is to be created with the name supplied. Specifying OR REPLACE is optional. If the trigger exists, and REPLACE is not specified, then good old Oracle error ORA-4081 will appear stating just that. 
 
@@ -32741,6 +32857,8 @@ www.it-ebooks.info
 The following table contains an explanation of this code. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 1 States that a trigger is to be created with the unique name supplied. Specifying OR REPLACE is optional. If the trigger exists, and REPLACE is not specified, then my attempt to create the trigger anew will result in an ORA-4081 error. 
 
@@ -33392,6 +33510,8 @@ www.it-ebooks.info
 ```
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
   IF ORA_SPACE_ERROR_INFO(...
@@ -34727,6 +34847,8 @@ END;
 To take advantage of this arrangement, your production system would then include an invocation such as this: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    EXECUTE IMMEDIATE 'ALTER SESSION SET REMOTE_DEPENDENCIES_MODE=SIGNATURE';
@@ -35348,6 +35470,8 @@ SP2-0804: Procedure created with compilation warnings
 ```
 
 ###### `SQL>` **`SHOW ERR`** 
+Phần này nối mạch SQL với “`SQL>` **`SHOW ERR`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 Errors for PROCEDURE PLW5003:
@@ -35639,6 +35763,8 @@ END betwnstr;
 That was easy, and I am very certain that this formula is correct—I reverse engineered it from an example. Still, I should test it. The problem is that I am under a lot of pressure, and this is just one little utility among many other programs I must write and test. So I throw together a crude “test script” built around DBMS_OUTPUT.PUT_LINE, and run it: 
 
 ###### **`BEGIN`** 
+Phần này nối mạch SQL với “**`BEGIN`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DBMS_OUTPUT.put_line (NVL (betwnstr ('abcdefg', 3, 5)
@@ -35650,6 +35776,8 @@ cde
 It worked—how exciting! But I should run more tests than that one. Let’s change the end value to 500. It should return the rest of the string, just like SUBSTR would: 
 
 ###### **`BEGIN`** 
+Phần này nối mạch SQL với “**`BEGIN`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DBMS_OUTPUT.put_line (NVL (betwnstr ('abcdefg', 3, 500)
@@ -35665,6 +35793,8 @@ www.it-ebooks.info
 It worked again! This is my lucky day. Now, let’s make sure it handles NULLs properly: 
 
 ###### **`BEGIN`** 
+Phần này nối mạch SQL với “**`BEGIN`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DBMS_OUTPUT.put_line (NVL (betwnstr ('abcdefg', NULL, 5)
@@ -37631,6 +37761,8 @@ ALTER PROCEDURE bigproc COMPILE PLSQL_OPTIMIZE_LEVEL = 0;
 ```
 
 ###### and then: 
+Phần này nối mạch SQL với “and then:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ALTER PROCEDURE bigproc COMPILE REUSE SETTINGS;
@@ -37997,6 +38129,8 @@ Here is a package body that offers two ways of querying data from this table—q
 The following table explains the interesting parts of this package. 
 
 ###### **Line(s) Significance** 
+Phần này nối mạch SQL với “**Line(s) Significance**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 3–4 Declare an associative array cache, g_cache, that mimics the structure of my products table: every element in the collection is a record with the same structure as a row in the table. 
 
@@ -38007,6 +38141,8 @@ The following table explains the interesting parts of this package.
 www.it-ebooks.info 
 
 ###### **Line(s) Significance** 
+Phần này nối mạch SQL với “**Line(s) Significance**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 16–21 The from_cache function also returns one row from the products table for a given primary key, but it does so by using that primary key as the index value, thereby locating the row in g_cache. 
 
@@ -38226,6 +38362,8 @@ Oracle has made it very easy to add function result caching to your functions. Y
 www.it-ebooks.info 
 
 ###### The syntax of the RESULT_CACHE clause is: 
+Phần này nối mạch SQL với “The syntax of the RESULT_CACHE clause is:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 RESULT_CACHE [ RELIES_ON (table_or_view [, table_or_view2 ...  table_or_viewN] ]
@@ -38278,6 +38416,8 @@ CREATE OR REPLACE FUNCTION name_for_id (id_in IN employees.employee_id%TYPE)
 ```
 
 ###### 2. A packaged function with a RELIES_ON clause (it may appear _only_ in the body): 
+Phần này nối mạch SQL với “2. A packaged function with a RELIES_ON clause (it may appear _only_ in the body):”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 CREATE OR REPLACE PACKAGE get_data
@@ -38864,6 +39004,8 @@ The VPD at work: when connected to SCOTT, I cannot see rows of data that are vis
 Now let’s see what happens when I execute the same query from within a result cache function owned by HR. First, I connect as HR and execute the function, then display the name returned: 
 
 ###### **`BEGIN`** 
+Phần này nối mạch SQL với “**`BEGIN`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DBMS_OUTPUT.put_line (emplu11g.last_name (198));END;/
@@ -38895,6 +39037,8 @@ And this is precisely the scenario that makes the VPD such a dangerous combinati
 To verify that the function really should return NO_DATA_FOUND if caching were not in place, let’s now connect to HR and invalidate the cache by committing a change to the employees table (any change will do): 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - `/* All us non-CEO employees deserve a 50% raise, don't we? */` 
 
@@ -39032,6 +39176,8 @@ Here are some rules and restrictions to keep in mind when using BULK COLLECT:
 Let’s explore these rules and the usefulness of BULK COLLECT through a series of examples. First, here is a rewrite of the major polluters example using BULK COLLECT: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    TYPE names_t IS TABLE OF transportation.name%TYPE;
@@ -39149,6 +39295,8 @@ Notice that I terminate the loop by checking the value of allrows_cur%NOTFOUND a
 So, either check the %NOTFOUND attribute at the _bottom_ of your loop, or check the contents of the collection immediately after the fetch: 
 
 ###### `LOOP` 
+Phần này nối mạch SQL với “`LOOP`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    FETCH allrows_cur BULK COLLECT INTO l_employees LIMIT 100;
@@ -39179,6 +39327,8 @@ As you have seen in previous examples, you certainly can bulk-fetch the contents
 Suppose that I would like to retrieve all the information in my transportation table for each vehicle whose mileage is less than 20 miles per gallon. I can do so with a minimum of coding fuss: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    -- Declare the type of collection
@@ -39754,6 +39904,8 @@ www.it-ebooks.info
 The following table describes the logic of the program. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 2–5 Define a collection of employee ID numbers. 
 
@@ -39823,6 +39975,8 @@ I then write the following program:
 The following table describes the logic of the program. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 2–6 Define a collection of employee ID numbers. 
 
@@ -40032,6 +40186,8 @@ www.it-ebooks.info
 Other than the general pipelined function syntax (that you should by now be familiar with from Chapter 17), the majority of the pipelined function’s code is recognizable from the legacy example. The main differences to consider are summarized in the fol‐ lowing table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 2 The legacy cursor is removed from the code and instead is passed as a REF CURSOR parameter. 
 
@@ -40611,6 +40767,8 @@ SQL> SELECT *
 ```
 
 ###### `Execution Plan` 
+Phần này nối mạch SQL với “`Execution Plan`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ----------------------------------------------------------
@@ -40643,6 +40801,8 @@ SQL> SELECT *
 - `4` **`WHERE  d.department_id = e.department_id;`** 
 
 ###### `Execution Plan` 
+Phần này nối mạch SQL với “`Execution Plan`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ----------------------------------------------------------
@@ -40713,6 +40873,8 @@ SQL> SELECT /*+ DYNAMIC_SAMPLING(e 5) */
 ```
 
 ###### `Execution Plan` 
+Phần này nối mạch SQL với “`Execution Plan`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ----------------------------------------------------------
@@ -40796,6 +40958,8 @@ Note the p_cardinality parameter. My pipe_employees body doesn’t use this para
 Note the points about this type specification listed in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 3 All object types must have at least one attribute, so I’ve included one called “dummy” because it is not needed for this example. 
 
@@ -40846,6 +41010,8 @@ www.it-ebooks.info
 This is a very simple interface implementation. The key points to note are listed in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 3–11 This mandatory assignment is needed by the Oracle database. No user-defined logic is required here. 
 
@@ -41060,6 +41226,8 @@ www.it-ebooks.info
 This function is parallel enabled, and it processes the source data in arrays for maximum performance. The main concepts specific to multityping are described in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 5 My function’s return is a collection of the customer supertype. This allows me to pipe subtypes instead. 
 
@@ -42681,6 +42849,8 @@ If I invoke the previous procedure like this:
 www.it-ebooks.info 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    send_mail_via_utl_smtp('myname@mydomain.com',
@@ -43007,6 +43177,8 @@ www.it-ebooks.info
 The following table looks at a few highlights. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 13 This constant governs how many bytes of the file to attempt to read at a time (see line 67), which should probably be as large as possible for performance reasons. It turns out that UTL_ENCODE.BASE64_ENCODE generates lines that are 64 characters wide. Because of the way base64 works, each 3 bytes of binary data gets translated into 4 bytes of character data. Add in 2 bytes of CRLF per emailed line of base64 text, and you get the largest possible read of 23,829 bytes—obtained from the expression TRUNC((0.75*64)*(32767/(64+2))−1. 
 
@@ -43356,6 +43528,8 @@ Oracle’s handy UTL_URL.ESCAPE function transforms the query by translating spe
 Let’s take a look at using POST in a slightly more complicated example. When I looked at the source HTML for _http://www.apache.org_ , I found that the search form’s “action” is _http://search.apache.org_ that the form uses the POST method, and that the search box is named “query”. With POST, you cannot simply append the data to the URL as with GET; instead, you send it to the web server in a particular form. Here is some code that POSTs a search for the string “oracle pl/sql” (relevant additions highlighted): 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    req UTL_HTTP.req;
@@ -43368,6 +43542,8 @@ Let’s take a look at using POST in a slightly more complicated example. When I
 www.it-ebooks.info 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    req :=
@@ -43927,6 +44103,8 @@ The following table analyzes the preceding code, line by line.
 www.it-ebooks.info 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 11 The input value is converted from VARCHAR2 to RAW. 
 
@@ -44091,6 +44269,8 @@ www.it-ebooks.info
 This code needs some explanation, shown in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 22 I declare the key for decryption. Note that the same key is used to encrypt and decrypt. 
 
@@ -44505,6 +44685,8 @@ Given how easy it is to use TDE, the big question is: does it make everything yo
 www.it-ebooks.info 
 
 ###### **Encryption in a Nutshell** 
+Phần này nối mạch SQL với “**Encryption in a Nutshell**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - Oracle provides two packages to implement encryption and related activities: DBMS_CRYPTO (available starting in Oracle Database 10 _g_ ) and DBMS_OBFUS‐ CATION_TOOLKIT. If you are running Oracle Database 10 _g_ or later, you should be using DBMS_CRYPTO. 
 
@@ -44806,6 +44988,8 @@ To see the policies defined on a table, you can check the data dictionary view D
 Starting with Oracle Database 10 _g_ , the parameter statement_types can have another value—INDEX. When you specify that, access to the rows even when creating indexes is also restricted. Suppose a user is trying to create a function-based index on the SAL column; the index creation script will need all the values of the column, effectively bypassing the security. To get around this, you can specify INDEX as a value in the parameter, as shown here: 
 
 ###### `1    BEGIN` 
+Phần này nối mạch SQL với “`1    BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - `2       DBMS_RLS.add_policy (object_schema  => 'HR',` 
 
@@ -45157,6 +45341,8 @@ In Oracle9 _i_ Database, RLS doesn’t help; in Oracle Database 10 _g_ and later
 www.it-ebooks.info 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    /* Drop the policy first. */
@@ -45241,6 +45427,8 @@ Let’s examine a slightly different situation now. In the previous case, I did 
 It’s easy, using another ADD_POLICY parameter, sec_relevant_cols_opt. Let’s recreate the policy with the parameter set to DBMS_RLS.ALL_ROWS, as follows: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    DBMS_RLS.drop_policy (object_schema             => 'HR',
@@ -45439,6 +45627,8 @@ www.it-ebooks.info
 policy on the table EMP or by exporting through a user who has the EXEMPT ACCESS POLICY system privilege. 
 
 ###### **Row-Level Security in a Nutshell** 
+Phần này nối mạch SQL với “**Row-Level Security in a Nutshell**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - RLS automatically applies a predicate (to be attached to a WHERE clause) to the queries issued by users so that only certain rows are visible. 
 
@@ -45838,6 +46028,8 @@ So how is this approach different from creating a dynamically generated policy f
 As of Oracle Database 12 _c_ , the context-sensitive policy has an even better advantage. In addition to the parameter policy_type, you can also define two different parameters— the namespace (or, more simply, the name) and the attribute of the context whose change should trigger a reevaluation of the policy function. In the preceding example I have used a context named DEPT_CTX, and more specifically an attribute called DEPT‐ NO_LIST, to show the list of department numbers the user is allowed to see. You could direct the policy function to be reexecuted only if the department number list changes. To do so, you will need to alter the policy to add the context and attribute dependencies, as in: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
  DBMS_RLS.alter_policy (object_schema   => 'HR',
@@ -45938,6 +46130,8 @@ WHERE ename = USER;
 ```
 
 ###### Now it is: 
+Phần này nối mạch SQL với “Now it is:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 WHERE ename = SYS_CONTEXT ('WEB_CTX','WEBUSER');
@@ -45946,6 +46140,8 @@ WHERE ename = SYS_CONTEXT ('WEB_CTX','WEBUSER');
 That selects the name of the web user and matches it against the ENAME column. 
 
 ###### **Application Contexts in a Nutshell** 
+Phần này nối mạch SQL với “**Application Contexts in a Nutshell**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - Contexts are like global package variables; once set, they retain their values and can be accessed for the duration of the session. Each session, furthermore, can set the variable differently. Contexts reside in the PGA. 
 
@@ -46089,6 +46285,8 @@ generates a trail. Why? Because the SAL column is present in the WHERE clause, t
 The audit condition need not reference the columns of the table on which the policy is defined; it can reference other values, such as pseudocolumns, as well. This becomes useful if you want to audit only a certain set of users, not all of them. Suppose you want to record accesses to table EMP made by Scott. You could define the policy as: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    DBMS_FGA.add_policy (object_schema        => 'HR',
@@ -46136,6 +46334,8 @@ this query will enable the user to see what salary is paid to each employee—th
 Of the three cases I’ve shown, the last one is the only one that will trigger generation of the audit trail (and the only one in which a trail would provide meaningful information). In Oracle9 _i_ Database, there was no provision to specify the combination of columns as an audit condition; in Oracle Database 10 _g_ and later, this is possible through the au‐ dit_colum_opts parameter in the ADD_POLICY procedure. By default, the value of the parameter is DBMS_FGA.ANY_COLUMNS, which triggers an audit trail if any of the columns is referenced. If you specify DBMS_FGA.ALL_COLUMNS as the value of the parameter, the audit trail is generated only if _all_ of the columns are referenced. In my example, if I want to have an FGA policy that creates an audit record only if the user selects both the SALARY and EMPNAME columns, I can create the policy as: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    DBMS_FGA.add_policy (object_schema          => 'HR',
@@ -46166,6 +46366,8 @@ SELECT db_user, sql_text
 www.it-ebooks.info 
 
 ###### This query produces the following output: 
+Phần này nối mạch SQL với “This query produces the following output:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DB_USER SQL_TEXT
@@ -46196,6 +46398,8 @@ The terminal or client machine from which the user is connected.
 In some cases, the user may be externally authenticated, for example via LDAP. In such cases, the username supplied to those external authentication mechanisms may be relevant; it is captured in this column. 
 
 ###### **Fine-Grained Auditing in a Nutshell** 
+Phần này nối mạch SQL với “**Fine-Grained Auditing in a Nutshell**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - FGA can record SELECT accesses to a table (in Oracle9 _i_ Database) or all types of DML access (in Oracle Database 10 _g_ and later) into an audit table named FGA_LOG $ in the SYS schema. 
 
@@ -46625,6 +46829,8 @@ then the exception would be handled and the word “Trapped!” displayed.
 In addition to the oddness of NO_DATA_FOUND, the lines pointed out in the following table also appear to be rather strange. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 2 Define a new type of data named DATE, which is actually of type NUMBER. 
 
@@ -48268,6 +48474,8 @@ number_tab.DELETE;
 ```
 
 ###### or: 
+Phần này nối mạch SQL với “or:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 number_tab := empty_tab;
@@ -48556,6 +48764,8 @@ Specifies a limit on the aggregate PGA memory consumed by the instance. When the
 You can also ask the DBA to force the shared pool to hold a PL/SQL program unit, sequence, table, or cursor in memory with the DBMS_SHARED_POOL.KEEP proce‐ dure.<sup>8</sup> For example, the following block would require that the database keep the STAN‐ DARD package pinned in memory: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    DBMS_SHARED_POOL.KEEP('SYS.STANDARD');
@@ -49921,6 +50131,8 @@ Those of us working with Oracle9 _i_ Database and later, however, benefit greatl
 Let’s take a look at an example of the TIMESTAMP, TIMESTAMP WITH TIME ZONE, and TIMESTAMP WITH LOCAL TIME ZONE datatypes in action: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    v_date_timestamp       TIMESTAMP ( 3 )                      := SYSDATE;
@@ -50736,6 +50948,8 @@ www.it-ebooks.info
 The interesting portions of this code are described in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 1 You can see that the syntax for indicating a subtype is the keyword UNDER in line 1, which makes a certain amount of intuitive sense. Oracle doesn’t use the phrase AS OBJECT here because it would be redundant; the only thing that can exist “under” an object type is another object type. 
 
@@ -50789,6 +51003,8 @@ www.it-ebooks.info
 The following table walks you through the code. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 5–6 The constructor assembles a new object and puts it into a book. My example takes advantage of PL/SQL’s named notation. It supplies values for only two of the four attributes, but the constructor creates the object anyway, which is what I asked it to do. 
 
@@ -52176,6 +52392,8 @@ To use this method, though, you have to declare an ANYTYPE variable into which O
 - 45–52 In the event that I’m trying to print an object with no print member method, the compiler will return an error at runtime that I can detect in this fashion. In this case, the code will just punt and return a generic message. 
 
 ###### Running my earlier invocations: 
+Phần này nối mạch SQL với “Running my earlier invocations:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DBMS_OUTPUT.PUT_LINE(printany(ANYDATA.ConvertDate(SYSDATE));
@@ -52184,6 +52402,8 @@ DBMS_OUTPUT.PUT_LINE(printany(ANYDATA.ConvertVarchar2('Hello world')));
 ```
 
 ###### yields: 
+Phần này nối mạch SQL với “yields:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 DATE: 2005-03-10 16:00:25
@@ -52364,6 +52584,8 @@ END;
 ```
 
 ###### which yields: 
+Phần này nối mạch SQL với “which yields:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 Matching item:id=10007; title=Oracle PL/SQL Programming;
@@ -52372,6 +52594,8 @@ isbn=1-56592-335-9; pages=987
 ```
 
 ###### The implementation is: 
+Phần này nối mạch SQL với “The implementation is:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
  1       MEMBER PROCEDURE save
@@ -52544,6 +52768,8 @@ SELECT * FROM catalog_history c
 ```
 
 ###### Attribute-level index creation is equally easy: 
+Phần này nối mạch SQL với “Attribute-level index creation is equally easy:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 CREATE INDEX catalog_history_old_id_idx ON catalog_history c (c.old_item.id);
@@ -52651,6 +52877,8 @@ The following table describes the important things to note.
 www.it-ebooks.info 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 21–24 This means that “books sort higher than serials.” 
 
@@ -53357,6 +53585,8 @@ CREATE TABLE catalog_items OF catalog_item_t;
 and/or like this: 
 
 ###### `DECLARE` 
+Phần này nối mạch SQL với “`DECLARE`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
   an_item catalog_item_t;
@@ -53954,6 +54184,8 @@ SQL> EXEC DBMS_OUTPUT.PUT_LINE (fdelete('c:\temp\te_employee.pkb'))
 ```
 
 ###### And I get: 
+Phần này nối mạch SQL với “And I get:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ERROR at line 1:
@@ -54422,6 +54654,8 @@ IS
 ```
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    /* Move the Java source code to a CLOB. */
@@ -54759,6 +54993,8 @@ SQL > BEGIN
 www.it-ebooks.info 
 
 ###### `7` **`DBMS_OUTPUT.PUT_LINE(SQLERRM);`** 
+Phần này nối mạch SQL với “`7` **`DBMS_OUTPUT.PUT_LINE(SQLERRM);`**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
   8  END;
@@ -54786,6 +55022,8 @@ WithTimeout(OracleStatement.java:1148)
 ```
 
 ###### `−29532` 
+Phần này nối mạch SQL với “`−29532`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 ORA-29532: Java call terminated by uncaught Java exception: java.sql.SQLException:
@@ -54793,6 +55031,8 @@ ORA-00942: table or view does not exist
 ```
 
 ###### This takes a little explaining. Everything between: 
+Phần này nối mạch SQL với “This takes a little explaining. Everything between:”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
 java.sql.SQLException: ORA-00942: table or view does not exist
@@ -56234,6 +56474,8 @@ www.it-ebooks.info
 Note the lines described in the following table. 
 
 ###### **Line(s) Description** 
+Phần này nối mạch SQL với “**Line(s) Description**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - 4 The first of the formal parameters is the context pointer. 
 
@@ -56540,6 +56782,8 @@ www.it-ebooks.info
 
 
 ###### _Table A-2. Quantifiers_ 
+Phần này nối mạch SQL với “_Table A-2. Quantifiers_”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 |**Syntax**|**Initial release **|**Description**|
 |---|---|---|
@@ -56855,6 +57099,8 @@ Table C-1 lists the date format model elements that you can use with the convers
 You have the option of specifying default date and timestamp formats at the session level, a capability that can come in handy if your particular needs differ from those of the majority of database users. Use the ALTER SESSION command to specify sessionlevel default date and timestamp formats. The following example works in Oracle8 _i_ Database or higher, and sets the default date format to MM/DD/YYYY: 
 
 ###### `BEGIN` 
+Phần này nối mạch SQL với “`BEGIN`”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 ```
    EXECUTE IMMEDIATE 'ALTER SESSION SET NLS_DATE_FORMAT=''MM/DD/YYYY''';
@@ -56878,6 +57124,8 @@ Some elements in Table C-1 apply only when translating datetime values from Orac
 www.it-ebooks.info 
 
 ###### _Table C-1. Date format model elements_ 
+Phần này nối mạch SQL với “_Table C-1. Date format model elements_”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 |**Element**|**Description**|
 |---|---|
@@ -57003,6 +57251,8 @@ www.it-ebooks.info
 ### **Index** 
 
 ###### **Symbols** 
+Phần này nối mạch SQL với “**Symbols**”, giải thích dữ liệu đầu vào, điều kiện xử lý và kết quả cần kiểm tra trước khi đọc ví dụ.
+
 
 - ! (exclamation mark) 
 
@@ -57577,4 +57827,3 @@ www.it-ebooks.info
 The cover image is a 19th century engraving from the Dover Pictorial Archive. The cover fonts are URW Typewriter and Guardian Sans. The text font is Adobe Minion Pro; the heading font is Adobe Myriad Condensed; and the code font is Dalton Maag’s Ubuntu Mono. 
 
 www.it-ebooks.info 
-

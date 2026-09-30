@@ -206,6 +206,8 @@ Phân tích phải chỉ rõ quy định đang tác động vào cỗ máy kinh 
 
 ### Đầu tư AI nhưng chưa kiếm tiền tương xứng
 
+Kịch bản này tách tăng chi phí hạ tầng khỏi doanh thu AI thực tế. Mục tiêu là nhận ra khi narrative công nghệ chưa chuyển thành margin, retention hoặc free cash flow.
+
 ```text
 Chi phí tính toán AI +40%
 Mức tương tác tìm kiếm +5%
@@ -217,6 +219,8 @@ Doanh thu AI doanh nghiệp tăng nhưng từ nền thấp
 Câu hỏi là phần lợi nhuận gộp tăng thêm từ quảng cáo, thương mại và doanh nghiệp có đủ bù chi phí tính toán và R&D hay không.
 
 ### Khả năng kiếm tiền của nền tảng cải thiện
+
+Kịch bản tích cực cần bằng chứng về pricing, quảng cáo, cloud utilization hoặc dịch vụ mới. Hãy kiểm tra liệu doanh thu tăng có đi cùng unit economics và chi phí vốn hay không.
 
 ```text
 Số người dùng đi ngang
@@ -285,5 +289,3 @@ Trên mỗi mũi tên, ghi chỉ số dùng để chứng minh. Nếu không tì
 ## Liên kết
 
 Đọc cùng [17_platform_telecom_content_retail_services](../17_platform_telecom_content_retail_services.md), [34_digital_fintech_cloud_and_it_services](../34_digital_fintech_cloud_and_it_services.md), [22_tax_regulation_and_competition](../22_tax_regulation_and_competition.md) và [38_forensic_accounting_red_flags_and_earnings_quality](../38_forensic_accounting_red_flags_and_earnings_quality.md).
-
-> **Bàn giao:** Sau **Liên kết**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 samsung electronics semiconductor cycle case](./00_samsung_electronics_semiconductor_cycle_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

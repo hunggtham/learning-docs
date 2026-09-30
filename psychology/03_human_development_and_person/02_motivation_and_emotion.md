@@ -341,6 +341,8 @@ No. Emotion supplies thông tin (information / 정보)/hành động (action / �
 
 ## 34. mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Need / goal
  + expected value
@@ -372,7 +374,7 @@ Regulation / behavior
 
 ### Nguồn định hướng
 
-- Meta-analysis gần đây về appraisal–emotion relations tổng hợp hàng nghìn tác động (effect / 효과) sizes và hỗ trợ nhiều quan hệ (relation / 관계) có hệ thống, nhưng không làm mọi appraisal lý thuyết (theory / 이론) trở nên identical.
-- Reviews comparing basic-emotion và constructed-emotion approaches nhấn mạnh rằng một phần tranh luận xuất phát từ việc theories mục tiêu (target / 대상) different aspects/levels of emotion.
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
-> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- Meta-analysis gần đây về appraisal–emotion relations tổng hợp hàng nghìn effect sizes và hỗ trợ nhiều relation có hệ thống, nhưng không làm mọi appraisal theory trở nên identical.
+- Reviews comparing basic-emotion và constructed-emotion approaches nhấn mạnh rằng một phần tranh luận xuất phát từ việc theories target different aspects/levels of emotion.

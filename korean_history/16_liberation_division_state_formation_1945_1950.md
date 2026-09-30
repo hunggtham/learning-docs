@@ -79,3 +79,21 @@ Jeju uprising and suppression emerged from cục bộ (local / 로컬) tensions,
 Both governments framed themselves not as two normal neighboring states but as sole legitimate government of Korea. This all-or-nothing claim reduced bargaining không gian (space / 공간). If each side treats the other as illegitimate temporary occupation, compromise over permanent coexistence becomes politically costly.
 
 > **Bàn giao:** Sau **Competing legitimacy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+
+## Sự chuyển tiếp được cảm nhận qua đất, gạo và giấy tờ
+
+Năm 1945, người dân không bước từ thuộc địa sang một nhà nước ổn định trong một đêm. Họ cần biết ai cấp giấy đi đường, ai thu thuế, ai bảo vệ chợ, ai trả lương cho giáo viên và ai có quyền đối với đất từng đăng ký dưới chế độ Nhật. Việc **tái sử dụng bộ máy (administrative reuse / 행정 재활용)** giúp chính quyền mới duy trì dịch vụ, nhưng đồng thời làm tranh cãi về cộng tác và thanh lọc trở nên gay gắt.
+
+Đất đai là điểm giao giữa kinh tế và tính chính danh. Cải cách ruộng đất ở miền Bắc năm **1946** và cải cách ở miền Nam khoảng **1949–1950** đều làm suy yếu địa chủ lớn, nhưng diễn ra dưới hai hệ thống chính trị khác nhau. Với hộ nông dân, thay đổi quyền sở hữu quyết định tiền thuê, nghĩa vụ, khả năng vay và tiếng nói trong làng; với nhà nước, nó tạo ra nhóm công dân mới có lý do để ủng hộ hoặc chống đối chế độ.
+
+## Việt Nam cùng thời: khoảng trống quyền lực sau 1945 không có một kịch bản
+
+Việt Nam tuyên bố độc lập ngày **2/9/1945** trong lúc quân Nhật giải giáp và quân Đồng minh phân vùng tiếp quản; chiến tranh với Pháp bắt đầu từ **1946**. Bán đảo Triều Tiên lại bị chia khu vực chiếm đóng ở vĩ tuyến 38 rồi hình thành hai nhà nước năm **1948**. Đặt cạnh nhau cho thấy “giải phóng” chỉ mở ra một khoảng trống: kết quả phụ thuộc lực lượng bản địa, quân đội nước ngoài, cải cách đất và khả năng kiểm soát các thành phố, cảng, đường sắt.
+
+## Địa điểm của một nhà nước chưa hoàn tất
+
+**Jeju 4·3 Peace Park** giúp đọc bạo lực nhà nước và vấn đề ký ức qua hồ sơ, tên người và không gian tưởng niệm; **Seoul Museum of History** và các khu hành chính cũ cho thấy một capital đang chuyển từ thuộc địa sang cạnh tranh chủ quyền. Các địa điểm này nhắc rằng đường biên 38 không chỉ nằm trên bản đồ ngoại giao: nó đi vào hộ khẩu, cuộc bầu cử, trường học và quyền di chuyển.
+
+## Cầu nối sang chiến tranh
+
+Đến năm 1950, hai bộ máy đã có quân đội, cảnh sát, hệ thống thuế và claim đối nghịch. Khi thỏa hiệp về một nhà nước chung trở nên đắt đỏ, một cuộc xung đột địa phương có thể nhanh chóng quốc tế hóa. Đọc tiếp [`17_korean_war_1950_1953.md`](17_korean_war_1950_1953.md) với câu hỏi: những năng lực nhà nước nào được hình thành trong giai đoạn 1945–1950 đã làm chiến tranh có thể kéo dài đến mức nào?

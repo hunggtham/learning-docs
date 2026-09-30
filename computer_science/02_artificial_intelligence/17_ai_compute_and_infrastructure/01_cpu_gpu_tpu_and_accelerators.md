@@ -136,6 +136,8 @@ Có thể đo bằng tokens/joule hoặc inferences/watt. Ở datacenter quy mô
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 CPU = control linh hoạt + tính toán tổng quát
 GPU = massively parallel tensor throughput
@@ -159,5 +161,3 @@ Không. Fallback kernel hoặc tensor shape không phù hợp có thể làm uti
 ## Liên kết kiến thức
 
 Xem [GPU Architecture](./02_gpu_architecture.md), [Memory and Bandwidth](./03_memory_and_bandwidth.md), [Parallel Computing](./04_parallel_computing.md) và [Model Serving](../15_ai_engineering/03_model_serving.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 compute foundations](./00_compute_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

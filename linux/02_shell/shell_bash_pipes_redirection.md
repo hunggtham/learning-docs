@@ -111,6 +111,8 @@ Lệnh phía sau `||` chỉ chạy nếu `curl` thất bại. Đây là **luồn
 
 ## Pipe và trạng thái của chuỗi xử lý (pipeline / 파이프라인)
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 producer | filter | consumer
 ```
@@ -172,6 +174,8 @@ NAME=app ./run.sh
 Điều này giải thích một lỗi kinh điển: chạy ứng dụng thủ công thì hoạt động nhưng dịch vụ systemd lại thất bại vì môi trường của shell tương tác không tự động được truyền vào trình quản lý dịch vụ.
 
 ## Thay thế kết quả câu lệnh
+
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
 
 ```bash
 backup="app.$(date +%F_%H%M%S).bak"
@@ -260,5 +264,3 @@ bash -x script.sh
 ## Kết nối sang chương tiếp theo
 
 Shell mạnh vì các công cụ Linux có giao diện văn bản và luồng dữ liệu dễ kết hợp. [Xử lý văn bản](./text_processing.md) giải thích cách `grep`, `find`, `sed`, `awk`, `sort` và `uniq` phối hợp để biến dữ liệu thô trên máy chủ thành bằng chứng có thể phân tích.
-
-> **Bàn giao:** Sau **Kết nối sang chương tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [bash scripting reliability](./bash_scripting_reliability.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -432,6 +432,8 @@ Do đó USD shortage có thể xuất hiện ở economies không có domestic U
 Trường hợp (case / 사례) 2020 ở later chapter mở rộng chính cơ chế (mechanism / 메커니즘) này.
 
 ## 27. What dữ liệu (data / 데이터) would a researcher monitor?
+Phần “27. What dữ liệu (data / 데이터) would a researcher monitor?” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Short-term external debt / reserves
@@ -450,6 +452,8 @@ Property/asset-price leverage
 Dữ liệu (data / 데이터) chất lượng (quality / 품질)/thời gian (time / 시간) availability là một phần của phân tích (analysis / 분석).
 
 ## 28. Korea-specific dashboard idea
+Phần “28. Korea-specific dashboard idea” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 USD/KRW
@@ -492,6 +496,8 @@ Sai lesson:
 Balance-sheet tác động (effect / 효과) có thể dominate.
 
 ## 30. Cơ chế (mechanism / 메커니즘) map
+Phần “30. Cơ chế (mechanism / 메커니즘) map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Stable exchange rate
@@ -555,6 +561,8 @@ Tính lại debt burden và liquidity need.
 Mục tiêu là chuyển FX move thành balance-sheet impact.
 
 ## Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - IMF, *Financial Sector Crisis and Restructuring: Lessons from Asia*.
 - IMF Finance & Development, *The Asian Crisis: Causes and Remedies*.

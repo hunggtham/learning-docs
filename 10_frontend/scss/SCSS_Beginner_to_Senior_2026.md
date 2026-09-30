@@ -94,6 +94,8 @@ Compile thành:
 
 ## Mô hình tư duy (mental model / 사고 모델) quan trọng
 
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
+
 ```text
 SCSS source
 → Sass compiler
@@ -127,6 +129,8 @@ thường CSS custom thuộc tính (property / 속성) phù hợp hơn Sass bi�
 
 ## Sass biến (variable)
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 $space-4: 1rem;
 ```
@@ -140,6 +144,8 @@ Sau compile:
 ```
 
 ## CSS custom thuộc tính (property / 속성)
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```css
 :root {
@@ -156,6 +162,8 @@ Có:
 - DevTools visibility.
 
 ## Mẫu (pattern / 패턴) — thời điểm biên dịch (compile-time) constants + thời gian chạy (runtime / 런타임) tokens
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```scss
 $prefix: "app";
@@ -237,6 +245,8 @@ Không cần viết:
 
 ## Idiom
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```text
 styles/
 ├─ _tokens.scss
@@ -280,6 +290,8 @@ Thường được giữ kể cả compressed đầu ra (output / 출력).
 ---
 
 # 5. Sass các biến (variables) [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $brand: #2563eb;
@@ -337,6 +349,8 @@ Cục bộ (local / 로컬) biến (variable) không nên assume available toàn
 
 # 7. che khuất biến (shadowing) [ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 $color: blue;
 
@@ -383,6 +397,8 @@ Không dùng `!default` cho mọi biến (variable).
 
 # 9. `!global` [ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 $flag: false;
 
@@ -423,6 +439,8 @@ function references
 ---
 
 # 11. Numbers & Units [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $size: 16px;
@@ -478,6 +496,8 @@ CSS đầu ra (output / 출력) vẫn có thể chứa slash:
 ---
 
 # 13. Numeric Operators [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $a: 10px + 5px;
@@ -551,6 +571,760 @@ nội suy (interpolation):
 
 ## Quy tắc (rule / 규칙)
 
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này giải thích cơ chế SCSS trước khi đưa ra rule hoặc code. Hãy theo dõi compile-time behavior, CSS output, scope và edge case khi tích hợp vào project lớn.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm styling thành một ví dụ hoặc rule có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra output, edge case và tác động lên các lớp giao diện liên quan.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 Không quote mọi identifier nếu CSS cần identifier.
 
 ---
@@ -594,6 +1368,8 @@ nội suy (interpolation) là powerful nhưng dễ biến Sass thành template s
 
 # 17. Booleans [cốt lõi (core / 핵심)]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 $enabled: true;
 $disabled: false;
@@ -610,6 +1386,8 @@ Used:
 ---
 
 # 18. `null` [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $value: null;
@@ -628,6 +1406,8 @@ $border: null;
 Có thể compile mà khai báo (declaration) không xuất.
 
 ## Mẫu (pattern / 패턴) — Optional khai báo (declaration)
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```scss
 @mixin box($radius: null) {
@@ -673,6 +1453,8 @@ Sass danh sách (list / 목록) không giống JS Array hoàn toàn.
 
 # 20. `sass:list` [cốt lõi (core / 핵심)]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 @use "sass:list";
 
@@ -713,6 +1495,8 @@ Dev từ JS/Java dễ nhầm 0-based.
 ---
 
 # 22. các map khóa–giá trị (maps) [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $colors: (
@@ -758,6 +1542,8 @@ Availability của deep APIs cần Dart Sass hiện đại.
 
 # 24. Nested các map khóa–giá trị (maps) [cốt lõi (core / 핵심)/ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 $theme: (
   colors: (
@@ -782,6 +1568,8 @@ Hiện đại (modern / 현대적) Dart Sass hỗ trợ nested keys ở mô-đun
 ---
 
 # 25. map khóa–giá trị (map) as cấu hình (configuration / 구성) [ARCH]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $button-sizes: (
@@ -841,6 +1629,8 @@ Hiện đại (modern / 현대적) Sass color APIs phải xét color không gian
 
 # 27. `sass:color` [cốt lõi (core / 핵심)/ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 @use "sass:color";
 ```
@@ -893,7 +1683,11 @@ background:
 
 Sass không thể thời điểm biên dịch (compile-time) resolve thời gian chạy (runtime / 런타임) custom thuộc tính (property / 속성).
 
-## Mẫu (pattern / 패턴)
+## Pattern
+Phần này nối kiến thức vừa học với “Pattern”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+
+Mục này chốt mental model của styling thành constraint, token, composition và runtime effect. Đọc code cùng lý do chọn pattern và failure mode khi scale.
 
 ```text
 Static design generation → Sass color APIs
@@ -903,6 +1697,8 @@ Runtime theme color       → CSS color functions
 ---
 
 # 29. lồng cú pháp (nesting) [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 .card {
@@ -940,6 +1736,8 @@ lồng cú pháp (nesting) chỉ nên giúp:
 
 # 30. Parent bộ chọn (selector) `&` [cốt lõi (core / 핵심)]
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```scss
 .button {
   &:hover {}
@@ -971,6 +1769,8 @@ biến thể (variant):
 ---
 
 # 31. Parent bộ chọn (selector) ngữ cảnh (context / 맥락) [ADV]
+
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
 
 ```scss
 .button {
@@ -1054,6 +1854,8 @@ nếu không có lý do cần interleave.
 
 # 34. Placeholder các bộ chọn (selectors) `%` [ADV]
 
+Phần này giải thích rule CSS/SCSS trong quan hệ với cascade, layout và breakpoint. Hãy xác định input, thứ tự áp dụng, invariant giao diện và cách kiểm tra trên viewport thực.
+
 ```scss
 %control-base {
   border: 1px solid;
@@ -1074,6 +1876,8 @@ Placeholder tự nó không emit bộ chọn (selector) nếu không được ex
 ---
 
 # 35. `@extend` [ADV]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 .error {
@@ -1153,6 +1957,8 @@ Không làm `.button` trở thành mang tính ngữ nghĩa (semantic / 의미적
 
 # 39. các khối trộn tái sử dụng (mixins) [cốt lõi (core / 핵심)]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 @mixin visually-hidden {
   position: absolute;
@@ -1174,6 +1980,8 @@ Use:
 
 # 40. khối trộn tái sử dụng (mixin) Arguments [cốt lõi (core / 핵심)]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 @mixin square($size) {
   width: $size;
@@ -1191,6 +1999,8 @@ Use:
 
 # 41. Default Arguments [cốt lõi (core / 핵심)]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 @mixin focus-ring(
   $width: 3px,
@@ -1204,6 +2014,8 @@ Use:
 ---
 
 # 42. từ khóa (keyword / 키워드) Arguments [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 @include focus-ring(
@@ -1225,6 +2037,8 @@ Renaming công khai (public / 공개) khối trộn tái sử dụng (mixin) arg
 
 # 43. Arbitrary Arguments `$args...` [ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 @mixin box-shadow($shadows...) {
   box-shadow: $shadows;
@@ -1243,6 +2057,8 @@ Lời gọi (call / 호출):
 ---
 
 # 44. Passing các danh sách (lists)/các map khóa–giá trị (maps) as Arguments [ADV]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 $args: 1rem, 2rem;
@@ -1267,6 +2083,8 @@ Use carefully; tường minh (explicit / 명시적) arguments thường readable
 
 # 45. Content Blocks `@content` [cốt lõi (core / 핵심)/ADV]
 
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
+
 ```scss
 @mixin hover-capable {
   @media (hover: hover) {
@@ -1290,6 +2108,8 @@ Use:
 ---
 
 # 46. Content khối (block / 블록) Arguments [ADV]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 @mixin media-types($types...) {
@@ -1327,6 +2147,8 @@ khối trộn tái sử dụng (mixin) content khối (block / 블록) giống t
 ---
 
 # 48. các hàm (functions) [cốt lõi (core / 핵심)]
+
+Phần này chuyển khái niệm frontend thành một rule hoặc ví dụ có thể quan sát. Hãy đọc mục đích trước, sau đó kiểm tra selector, computed style và hành vi responsive.
 
 ```scss
 @function rem($px, $base: 16px) {
@@ -1374,7 +2196,9 @@ Emit **styles/rules**:
 }
 ```
 
-## Quy tắc (rule / 규칙)
+## Rule
+Phần này nối kiến thức vừa học với “Rule”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 Value transformation → function
@@ -1413,7 +2237,9 @@ $_internal-scale: ...;
 
 Bên tiêu thụ (consumer / 소비자) mô-đun (module / 모듈) không nên truy cập (access / 접근).
 
-## Mẫu (pattern / 패턴)
+## Pattern
+Mẫu này phân biệt public và private member, giúp người mới hiểu phần nào có thể dùng từ bên ngoài module và phần nào chỉ phục vụ nội bộ.
+
 
 ```text
 Public:
@@ -1428,7 +2254,9 @@ $_raw-data
 
 ---
 
-# 52. `@if` / `@else` [cốt lõi (core / 핵심)]
+# 52. `@if` / `@else` [CORE]
+Phần này nối kiến thức vừa học với “52. `@if` / `@else` [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @mixin surface($elevated: false) {
@@ -1519,6 +2347,8 @@ Inclusive `through`:
 ---
 
 # 56. `@while` [ADV]
+Phần này nối kiến thức vừa học với “56. `@while` [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 $i: 1;
@@ -1563,7 +2393,9 @@ Generate từ **bounded thiết kế (design / 설계) quy mô (scale / 규모)*
 
 ---
 
-# 58. lỗi (error / 오류) Handling: `@error` [cốt lõi (core / 핵심)/ADV]
+# 58. Error Handling: `@error` [CORE/ADV]
+Phần này nối kiến thức vừa học với “58. Error Handling: `@error` [CORE/ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @function spacing($step) {
@@ -1582,6 +2414,8 @@ Good thư viện (library / 라이브러리) API:
 ---
 
 # 59. `@warn` [ADV]
+Phần này nối kiến thức vừa học với “59. `@warn` [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @warn "Deprecated mixin. Use new-name().";
@@ -1595,7 +2429,9 @@ Không spam warning cho normal usage.
 
 ---
 
-# 60. `@debug` [cốt lõi (core / 핵심)]
+# 60. `@debug` [CORE]
+Phần này nối kiến thức vừa học với “60. `@debug` [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @debug $tokens;
@@ -1609,7 +2445,9 @@ Không xem đầu ra (output / 출력) format như stable môi trường vận h
 
 ---
 
-# 61. `@use` — hiện đại (modern / 현대적) hệ mô-đun (module system) [cốt lõi (core / 핵심)]
+# 61. `@use` — Modern hệ mô-đun (module system) [CORE]
+Phần này nối kiến thức vừa học với “61. `@use` — Modern hệ mô-đun (module system) [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @use "tokens";
@@ -1648,7 +2486,9 @@ width: tokens.some-function(...);
 
 ---
 
-# 63. không gian tên (namespace / 네임스페이스) Alias [cốt lõi (core / 핵심)]
+# 63. không gian tên (namespace) Alias [CORE]
+Phần này nối kiến thức vừa học với “63. không gian tên (namespace) Alias [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @use "design/tokens" as t;
@@ -1665,6 +2505,8 @@ Good khi mô-đun (module / 모듈) name dài.
 ---
 
 # 64. `as *` [ADV]
+Phần này nối kiến thức vừa học với “64. `as *` [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @use "tokens" as *;
@@ -1768,6 +2610,8 @@ Thường forward trước để cấu hình (configuration / 구성) luồng (f
 ---
 
 # 69. Forward Prefix [ADV]
+Phần này nối kiến thức vừa học với “69. Forward Prefix [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @forward "list" as list-*;
@@ -1792,6 +2636,8 @@ Useful:
 ---
 
 # 70. `show` / `hide` [ADV]
+Phần này nối kiến thức vừa học với “70. `show` / `hide` [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @forward "internal"
@@ -1884,7 +2730,9 @@ Document tải (load / 로드) paths.
 
 ---
 
-# 74. Built-in Modules Overview [cốt lõi (core / 핵심)]
+# 74. Built-in Modules Overview [CORE]
+Phần này nối kiến thức vừa học với “74. Built-in Modules Overview [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @use "sass:math";
@@ -1952,7 +2800,9 @@ math.min(10px, 20px)
 
 thời điểm biên dịch (compile-time) numeric hàm (function / 함수).
 
-## Mô hình tư duy (mental model / 사고 모델)
+## mô hình tư duy (mental model)
+Phần này nối kiến thức vừa học với “mô hình tư duy (mental model)”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 Known at compile time → sass:math
@@ -2057,6 +2907,8 @@ Availability depends Dart Sass phiên bản (version / 버전).
 ---
 
 # 81. `meta.type-of()` [ADV]
+Phần này nối kiến thức vừa học với “81. `meta.type-of()` [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @use "sass:meta";
@@ -2069,7 +2921,9 @@ Useful kiểm tra hợp lệ (validation / 검증).
 
 ---
 
-# 82. động (dynamic / 동적) hàm (function / 함수) References [ADV]
+# 82. Dynamic hàm (function) References [ADV]
+Phần này nối kiến thức vừa học với “82. Dynamic hàm (function) References [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 $fn: meta.get-function("some-function");
@@ -2119,7 +2973,9 @@ Hiện đại (modern / 현대적) modules allow more tính năng (feature / 기
 
 ---
 
-# 85. Recommended hiện đại (modern / 현대적) SCSS cấu trúc (structure / 구조) [ARCH]
+# 85. Recommended Modern SCSS Structure [ARCH]
+Phần này nối kiến thức vừa học với “85. Recommended Modern SCSS Structure [ARCH]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 styles/
@@ -2190,7 +3046,9 @@ Good khi:
 
 ---
 
-# 88. thư viện (library / 라이브러리) Facade mẫu (pattern / 패턴) [ARCH]
+# 88. Library Facade Pattern [ARCH]
+Phần này nối kiến thức vừa học với “88. Library Facade Pattern [ARCH]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 design-system/
@@ -2217,7 +3075,9 @@ Bên tiêu thụ (consumer / 소비자):
 
 ---
 
-# 89. Sass đơn vị từ (token / 토큰) map khóa–giá trị (map) mẫu (pattern / 패턴) [cốt lõi (core / 핵심)/ARCH]
+# 89. Sass Token map khóa–giá trị (map) Pattern [CORE/ARCH]
+Phần này nối kiến thức vừa học với “89. Sass Token map khóa–giá trị (map) Pattern [CORE/ARCH]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 $spacing: (
@@ -2244,7 +3104,9 @@ Hàm (function / 함수):
 
 ---
 
-# 90. Generate CSS các biến (variables) from Sass map khóa–giá trị (map) [cốt lõi (core / 핵심)/ARCH]
+# 90. Generate CSS các biến (variables) from Sass map khóa–giá trị (map) [CORE/ARCH]
+Phần này nối kiến thức vừa học với “90. Generate CSS các biến (variables) from Sass map khóa–giá trị (map) [CORE/ARCH]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @use "sass:map";
@@ -2264,7 +3126,9 @@ $colors: (
 
 Đầu ra (output / 출력) thời gian chạy (runtime / 런타임) tokens.
 
-## Mẫu (pattern / 패턴)
+## Pattern
+Phần này nối kiến thức vừa học với “Pattern”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 Sass data source
@@ -2274,7 +3138,9 @@ Sass data source
 
 ---
 
-# 91. Nested đơn vị từ (token / 토큰) Generation [ADV]
+# 91. Nested Token Generation [ADV]
+Phần này nối kiến thức vừa học với “91. Nested Token Generation [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 $tokens: (
@@ -2295,7 +3161,9 @@ Nhưng recursion belongs more in master supplement.
 
 ---
 
-# 92. tiện ích (utility) Generation mẫu (pattern / 패턴) [cốt lõi (core / 핵심)/ADV]
+# 92. tiện ích (utility) Generation Pattern [CORE/ADV]
+Phần này nối kiến thức vừa học với “92. tiện ích (utility) Generation Pattern [CORE/ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 $spaces: (
@@ -2420,7 +3288,9 @@ Bad:
 
 không hẳn luôn bad, nhưng tiện ích (utility)/bố cục (layout / 레이아웃) lớp (class / 클래스) có thể reusable thời gian chạy (runtime / 런타임) tốt hơn nếu dùng nhiều.
 
-## Quyết định (decision / 결정)
+## Decision
+Phần này nối kiến thức vừa học với “Decision”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 Need CSS class composition? → utility/layout primitive
@@ -2429,7 +3299,9 @@ Need compile-time inline style set? → mixin
 
 ---
 
-# 97. truy vấn môi trường (media query) Content khối trộn tái sử dụng (mixin) Idiom [cốt lõi (core / 핵심)]
+# 97. truy vấn môi trường (media query) Content khối trộn tái sử dụng (mixin) Idiom [CORE]
+Phần này nối kiến thức vừa học với “97. truy vấn môi trường (media query) Content khối trộn tái sử dụng (mixin) Idiom [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @mixin reduced-motion {
@@ -2469,7 +3341,9 @@ CSS các trạng thái (states) nên remain visible trong thành phần (compone
 
 ---
 
-# 99. Function-based quy mô (scale / 규모) mẫu (pattern / 패턴) [ADV]
+# 99. Function-based Scale Pattern [ADV]
+Phần này nối kiến thức vừa học với “99. Function-based Scale Pattern [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @function pow-scale($base, $ratio, $step) {
@@ -2492,7 +3366,9 @@ Cấp cao (senior / 시니어) asks:
 
 ---
 
-# 100. BEM + SCSS [cốt lõi (core / 핵심)/ADV]
+# 100. BEM + SCSS [CORE/ADV]
+Phần này nối kiến thức vừa học với “100. BEM + SCSS [CORE/ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 .card {
@@ -2698,6 +3574,8 @@ Moves nested quy tắc (rule / 규칙) out of hiện tại (current / 현재) l�
 Advanced truy vấn (query / 쿼리) forms can điều khiển (control / 제어) which at-rules/các bộ chọn (selectors) stay.
 
 ## Use cases
+Phần này nối kiến thức vừa học với “Use cases”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 - thư viện (library / 라이브러리) bộ chọn (selector) generation,
 - escape contextual lồng cú pháp (nesting).
@@ -2708,7 +3586,9 @@ Frequent `@at-root` means lồng cú pháp (nesting) kiến trúc (architecture 
 
 ---
 
-# 109. At-rule lồng cú pháp (nesting) [cốt lõi (core / 핵심)]
+# 109. At-rule lồng cú pháp (nesting) [CORE]
+Phần này nối kiến thức vừa học với “109. At-rule lồng cú pháp (nesting) [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 .card {
@@ -2744,7 +3624,9 @@ Don't invent Sass workaround for bản địa (native / 네이티브) CSS tính 
 
 ---
 
-# 111. CSS Custom các thuộc tính (properties) in SCSS [cốt lõi (core / 핵심)]
+# 111. CSS Custom các thuộc tính (properties) in SCSS [CORE]
+Phần này nối kiến thức vừa học với “111. CSS Custom các thuộc tính (properties) in SCSS [CORE]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 :root {
@@ -3117,7 +3999,9 @@ generate:
 --color-action-primary: ...
 ```
 
-## Đơn vị từ (token / 토큰) layers
+## Token layers
+Phần này nối kiến thức vừa học với “Token layers”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 primitive Sass data
@@ -3128,7 +4012,9 @@ primitive Sass data
 
 ---
 
-# 129. Theme Generation mẫu (pattern / 패턴) [ADV]
+# 129. Theme Generation Pattern [ADV]
+Phần này nối kiến thức vừa học với “129. Theme Generation Pattern [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 $themes: (
@@ -3164,7 +4050,9 @@ Use CSS các biến (variables)/thời gian chạy (runtime / 런타임) JS/máy
 
 ---
 
-# 131. kiểm tra hợp lệ (validation / 검증) hàm (function / 함수) mẫu (pattern / 패턴) [ADV]
+# 131. Validation hàm (function) Pattern [ADV]
+Phần này nối kiến thức vừa học với “131. Validation hàm (function) Pattern [ADV]”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @function token($map, $key) {
@@ -3554,60 +4442,86 @@ Bản dựng (build / 빌드):
 # 151. 30-Day SCSS Roadmap
 
 ## Days 1–3
-- cú pháp (syntax / 문법),
+Phần này nối kiến thức vừa học với “Days 1–3”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+- syntax,
 - các biến (variables),
 - dữ liệu (data / 데이터) types,
 - lồng cú pháp (nesting).
 
 ## Days 4–6
+Phần này nối kiến thức vừa học với “Days 4–6”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 - các danh sách (lists),
 - các map khóa–giá trị (maps),
 - built-in modules.
 
 ## Days 7–9
+Phần này nối kiến thức vừa học với “Days 7–9”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 - các khối trộn tái sử dụng (mixins),
 - arguments,
 - `@content`.
 
 ## Days 10–12
+Phần này nối kiến thức vừa học với “Days 10–12”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 - các hàm (functions),
 - luồng điều khiển (control flow),
 - kiểm tra hợp lệ (validation / 검증).
 
 ## Days 13–15
+Phần này nối kiến thức vừa học với “Days 13–15”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 - `@use`,
 - không gian tên (namespace / 네임스페이스),
 - cấu hình (configuration / 구성).
 
 ## Days 16–18
+Phần này nối kiến thức vừa học với “Days 16–18”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 - `@forward`,
 - facade,
 - công khai (public / 공개)/private API.
 
 ## Days 19–21
-- đơn vị từ (token / 토큰) hệ thống (system / 시스템),
+Phần này nối kiến thức vừa học với “Days 19–21”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+- token system,
 - generators.
 
 ## Days 22–23
-- CSS các biến (variables) tích hợp (integration / 통합),
-- thời gian chạy (runtime / 런타임)/thời điểm biên dịch (compile-time) ranh giới (boundary / 경계).
+Phần này nối kiến thức vừa học với “Days 22–23”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+- CSS các biến (variables) integration,
+- thời gian chạy (runtime)/thời điểm biên dịch (compile-time) boundary.
 
 ## Days 24–25
-- kiến trúc (architecture / 아키텍처),
-- thành phần (component / 컴포넌트) quyền sở hữu (ownership / 소유권).
+Phần này nối kiến thức vừa học với “Days 24–25”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+- kiến trúc (architecture),
+- component ownership.
 
 ## Days 26–27
+Phần này nối kiến thức vừa học với “Days 26–27”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 - legacy chuyển đổi (migration),
 - deprecations.
 
 ## Day 28
-- đầu ra (output / 출력)/hiệu năng (performance / 성능) inspection.
+Phần này nối kiến thức vừa học với “Day 28”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+- output/hiệu năng (performance) inspection.
 
 ## Day 29
-- thư viện (library / 라이브러리) API rà soát (review / 검토).
+Phần này nối kiến thức vừa học với “Day 29”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+- library API review.
 
 ## Day 30
-- final design-system dự án (project / 프로젝트).
+Phần này nối kiến thức vừa học với “Day 30”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
+- final design-system project.
 
 ---
 
@@ -3649,6 +4563,8 @@ Bạn phải trả lời được:
 ---
 
 # 153. Cheat Sheet
+Phần này nối kiến thức vừa học với “153. Cheat Sheet”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```scss
 @use "sass:math";
@@ -3717,7 +4633,9 @@ $spaces: (
 
 ---
 
-# 154. Recommended kiến trúc vận hành (production architecture / 운영 아키텍처)
+# 154. Recommended Production kiến trúc (architecture)
+Phần này nối kiến thức vừa học với “154. Recommended Production kiến trúc (architecture)”, giúp người mới hiểu mục đích, cách dùng và giới hạn trước khi xem ví dụ bên dưới.
+
 
 ```text
 SCSS

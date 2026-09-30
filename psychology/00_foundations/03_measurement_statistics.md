@@ -145,6 +145,8 @@ Cách tốt nhất để mô hình (model / 모델) Likert dữ liệu (data / �
 
 ## 16. mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → cách áp dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi nội dung chapter.
+
 ```text
 Construct
    ↓
@@ -169,7 +171,7 @@ Statistical sophistication ở phần giữa không thể cứu một construct 
 
 ### Nguồn định hướng
 
-- *Standards for Educational and Psychological Testing* (AERA, APA, NCME): validity được hiểu là bằng chứng (evidence / 증거) và lý thuyết (theory / 이론) hỗ trợ interpretation score cho proposed use.
-- Các guideline hiện đại về phát triển thang đo tâm lý nhấn mạnh construct definition, content coverage, structural bằng chứng (evidence / 증거), độ tin cậy (reliability / 신뢰성), validity và cross-group evaluation thay vì chỉ báo Cronbach's alpha.
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
-> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- *Standards for Educational and Psychological Testing* (AERA, APA, NCME): validity được hiểu là evidence và theory hỗ trợ interpretation score cho proposed use.
+- Các guideline hiện đại về phát triển thang đo tâm lý nhấn mạnh construct definition, content coverage, structural evidence, reliability, validity và cross-group evaluation thay vì chỉ báo Cronbach's alpha.

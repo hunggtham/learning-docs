@@ -183,6 +183,8 @@ Kiểm thử (test / 테스트) happy đường dẫn (path / 경로) chưa đ�
 
 ## Độ tin cậy (reliability / 신뢰성) kiến trúc (architecture / 아키텍처) Example
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 flowchart TD
     U[User Goal] --> O[Orchestrator]
@@ -296,6 +298,4 @@ Xác minh (verification / 확인) tốt nhất dựa deterministic tests, indepe
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-Reliable tác nhân (agent / 에이전트) thiết kế (design / 설계) kết hợp Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학), bảo mật (security / 보안), phân tán (distributed / 분산) các hệ thống (systems / 시스템들), Databases, HCI, AI Evaluation và classical điều khiển (control / 제어) loops. Đây là điểm kết thúc tầng (layer / 계층) tác nhân (agent / 에이전트) trước khi chuyển sang Reinforcement học tập (learning / 학습), nơi tác nhân (agent / 에이전트) học chính sách (policy / 정책) trực tiếp từ reward/tương tác (interaction / 상호작용).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Reliable agent design kết hợp Software Engineering, Security, Distributed Systems, Databases, HCI, AI Evaluation và classical control loops. Đây là điểm kết thúc layer Agent trước khi chuyển sang Reinforcement Learning, nơi agent học policy trực tiếp từ reward/interaction.

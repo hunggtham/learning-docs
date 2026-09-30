@@ -307,6 +307,8 @@ Transformer success is kiến trúc (architecture / 아키텍처) + dữ liệu 
 
 ## Limitations
 
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
 - quadratic attention at long sequences;
 - autoregressive decoding độ trễ (latency / 지연 시간);
 - huge bộ nhớ (memory / 메모리)/compute requirements;
@@ -318,7 +320,9 @@ These motivate efficient attention, state-space các mô hình (models / 모델�
 
 ## Transformer vs RNN
 
-| thuộc tính (property / 속성) | RNN/LSTM | Transformer |
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+| Property | RNN/LSTM | Transformer |
 |---|---|---|
 | huấn luyện (training / 학습) position parallelism | thấp | cao |
 | Long-range đường dẫn (path / 경로) | nhiều recurrent steps | direct attention đường dẫn (path / 경로) |
@@ -335,6 +339,8 @@ CNN hardcodes locality/translation cấu trúc (structure / 구조). Transformer
 Vision architectures increasingly mix both ideas.
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 Residual stream holds token representations
@@ -367,6 +373,4 @@ Irrelevant/noisy ngữ cảnh (context / 맥락) can degrade hiệu năng (perfo
 
 Transformer synthesizes [Attention](./04_attention.md), [Residual/Backprop](../05_neural_networks/04_backpropagation.md), [RMSNorm](../05_neural_networks/06_initialization_and_normalization.md), [Representation Learning](../05_neural_networks/08_representation_learning.md).
 
-NLP and LLM folders will bản dựng (build / 빌드) tokenization, pretraining, scaling, instruction tuning and generation on top of this cơ chế (mechanism / 메커니즘).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+NLP and LLM folders will build tokenization, pretraining, scaling, instruction tuning and generation on top of this mechanism.

@@ -3,6 +3,8 @@
 > **Mạch đọc:** Đặt **Philosophy — Editorial tiêu chuẩn (standard / 표준)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Cấu trúc tối thiểu của chapter** sang **2. Phân loại claim**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
 ## 1. Cấu trúc tối thiểu của chapter
+Phần “1. Cấu trúc tối thiểu của chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 question / problem
@@ -21,6 +23,8 @@ Chapter ngắn vẫn phải có đủ các vai trò này, có thể gộp sectio
 > **Chuyển mạch:** Từ **1. Cấu trúc tối thiểu của chapter**, ta sang **2. Phân loại claim** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 2. Phân loại claim
+Phần “2. Phân loại claim” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Loại | Câu hỏi kiểm tra | Nguồn warrant |
 |---|---|---|
@@ -50,6 +54,8 @@ Giải thích chính bằng tiếng Việt, giữ English từ khóa (keyword / 
 > **Chuyển mạch:** Từ **4. Văn phong và thuật ngữ**, ta sang **5. cổng chất lượng (quality gate / 품질 게이트) trước khi merge** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 5. cổng chất lượng (quality gate / 품질 게이트) trước khi merge
+Phần “5. cổng chất lượng (quality gate / 품질 게이트) trước khi merge” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Có ít nhất một argument map hoặc nhân quả (causal / 인과적)/mô hình (model / 모델) diagram khi hữu ích.
 - Có ít nhất một objection mạnh, không phải straw man.

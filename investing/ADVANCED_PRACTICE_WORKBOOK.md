@@ -805,6 +805,8 @@ Một hồ sơ tốt phải cho phép người khác đọc và trả lời đư
 
 ## Rubric tự chấm 5 mức
 
+Rubric này là thang tiến bộ từ biết tên đến vận hành được quy trình. Hãy chấm theo bằng chứng trong bài đã làm, không theo cảm giác quen thuộc với thuật ngữ; mức cao hơn chỉ đạt khi bạn chỉ ra được cơ chế, dữ liệu, failure mode và cách review.
+
 **Mức 1 — Biết thuật ngữ:** giải thích được khái niệm nhưng chưa áp dụng.
 
 **Mức 2 — Áp dụng cơ học:** tính được công thức nhưng chưa hiểu giả định.

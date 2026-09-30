@@ -6,6 +6,8 @@
 Streaming là bài toán duy trì computation trên đầu vào (input / 입력) chưa bao giờ thực sự “đóng”. Vì vậy trọng tâm là thời gian, trạng thái (state / 상태), late sự kiện (event / 이벤트) và cách kết quả được sửa khi giả định (assumption / 가정) ban đầu thay đổi.
 
 ## 1. Ba loại thời gian
+Phần “1. Ba loại thời gian” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - sự kiện (event / 이벤트) thời gian (time / 시간): thời điểm sự kiện xảy ra theo lĩnh vực (domain / 도메인);
 - ingestion thời gian (time / 시간): lúc nền tảng (platform / 플랫폼) nhận sự kiện (event / 이벤트);

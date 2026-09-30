@@ -95,6 +95,8 @@ Nếu cohort cũ tiếp tục chi tiêu hoặc duy trì thuê bao tốt, tăng t
 
 ## 9. ROIC
 
+Sau khi hiểu driver ngành và economics của khách hàng, ta cần đo xem doanh nghiệp biến vốn sử dụng thành lợi nhuận hoạt động hiệu quả đến đâu. ROIC là điểm nối giữa chất lượng kinh doanh, tái đầu tư và khả năng tạo giá trị.
+
 ```text
 ROIC = NOPAT / Invested Capital
 ```
@@ -369,5 +371,3 @@ Không cần biến scorecard thành con số chính xác giả tạo; nó giúp
 ## 40. Kết luận
 
 Chất lượng doanh nghiệp là khả năng **biến lợi thế cạnh tranh thành dòng tiền trên vốn trong thời gian dài**. Một câu chuyện tăng trưởng chỉ có giá trị khi chuỗi `khách hàng → doanh thu → biên lợi nhuận → vốn đầu tư → ROIC → tái đầu tư → dòng tiền trên mỗi cổ phiếu` hoạt động bền vững. Moat là cơ chế kinh tế có thể kiểm chứng, không phải một tính từ.
-
-> **Bàn giao:** Sau **40. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 FINANCIAL STATEMENTS AND ACCOUNTING](./01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

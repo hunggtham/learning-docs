@@ -455,7 +455,9 @@ Property-based/ngẫu nhiên kiểm thử đặc biệt hữu ích vì siêu d�
 
 ## Phổ biến các dạng lỗi
 
-- BST thứ tự (ordering / 순서) đúng nhưng siêu dữ liệu stale;
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- BST ordering đúng nhưng siêu dữ liệu stale;
 - cập nhật siêu dữ liệu sai thứ tự sau rotation;
 - phần tử trùng chính sách không nhất quán với `size`;
 - interval ranh giới closed/half-open không rõ;

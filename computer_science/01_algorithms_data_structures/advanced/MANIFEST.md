@@ -23,7 +23,9 @@ Phần giải thích dùng tiếng Việt làm ngôn ngữ chính; thuật ngữ
 
 ## Độ phủ hiện tại
 
-| tệp (file / 파일) | Approx. words |
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+| File | Approx. words |
 |---|---:|
 | `00_foundations/00_dsa_as_problem_modeling.md` | ~4,800 |
 | `00_foundations/01_algorithm_correctness_and_invariants.md` | ~5,000 |
@@ -204,5 +206,3 @@ Một chapter chỉ được xem là hoàn thiện khi người đọc có thể
 10. Có biến thể nào đáng chọn khi tải công việc (workload / 워크로드) thay đổi?
 
 Nếu chapter thiếu một lớp quan trọng trong số này, nó vẫn là ứng viên cho pass tiếp theo.
-
-> **Bàn giao:** Sau **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Quay lại [README](./README.md) khi cần định vị lại prerequisite hoặc đơn vị sở hữu (owner / 오너).

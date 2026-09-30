@@ -287,6 +287,8 @@ Affordability
 
 ## 23. GDP theo chi tiêu
 
+Sau khi đọc tiêu dùng, đầu tư và tồn kho riêng lẻ, ta cần ghép chúng thành cấu trúc GDP để biết headline tăng trưởng đến từ đâu. Công thức dưới đây là bản đồ phân rã, không phải kết luận rằng mọi thành phần đều có chất lượng như nhau.
+
 ```text
 GDP = C + I + G + (X - M)
 ```
@@ -614,6 +616,8 @@ Kiểm tra:
 
 ## 53. sự kiện (event / 이벤트) ghi chú (note / 노트) chuẩn
 
+Event note là mẫu ghi chép biến một release thành quy trình có thể review: kỳ vọng trước sự kiện, số thực tế, mức bất ngờ, cấu phần, phản ứng chính sách và phản ứng tài sản. Hãy điền nó trước khi câu chuyện sau sự kiện làm lệch trí nhớ.
+
 ```text
 Event:
 Consensus:
@@ -635,6 +639,8 @@ What would invalidate it:
 
 ## 54. Inflation sự kiện (event / 이벤트)
 
+Với một sự kiện lạm phát, mục tiêu không phải chỉ ghi CPI tăng/giảm mà là xác định thành phần nào tạo surprise và điều đó thay đổi đường đi chính sách ra sao. Mẫu dưới đây giúp nối dữ liệu với yield, FX, credit và equities.
+
 ```text
 CPI Surprise
 → Persistence Assessment
@@ -647,6 +653,8 @@ CPI Surprise
 
 ## 55. Growth sự kiện (event / 이벤트)
 
+Với dữ liệu tăng trưởng, cần tách tốc độ headline khỏi chất lượng cầu cuối, tồn kho và đóng góp chính phủ. Câu hỏi dẫn đường là nền kinh tế đang mở rộng bền vững hay chỉ được nâng bởi một thành phần tạm thời.
+
 ```text
 Growth Surprise
 → Earnings Expectation
@@ -656,6 +664,8 @@ Growth Surprise
 ```
 
 ## 56. Credit sự kiện (event / 이벤트)
+
+Credit event cần được đọc qua spread, điều kiện tái cấp vốn, tài sản thế chấp và khả năng truyền dẫn sang doanh nghiệp/ngân hàng. Đừng dừng ở việc ghi spread mở rộng; hãy xác định lớp thanh khoản hoặc solvency nào đang thay đổi.
 
 ```text
 Funding Stress

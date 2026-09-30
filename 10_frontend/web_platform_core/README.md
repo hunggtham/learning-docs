@@ -8,6 +8,8 @@ script, đầu vào (input / 입력) và mạng (network / 네트워크) như th
 WebSquare sau đó hiện thực hoặc mở rộng các concept đó ở những ranh giới (boundary / 경계) riêng.
 
 ## Chuẩn gốc (canonical / 정본) conceptual spine
+Phần “Chuẩn gốc (canonical / 정본) conceptual spine” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Web Platform

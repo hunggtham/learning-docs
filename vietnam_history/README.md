@@ -15,6 +15,8 @@ Bắt đầu ở [`00_index_and_dependency.md`](00_index_and_dependency.md).
 Thư viện (library / 라이브러리) hiện có bốn tầng (layer / 계층):
 
 ### 1. Timeline nhân quả (causal / 인과적) — 01 đến 23
+Phần “1. Timeline nhân quả (causal / 인과적) — 01 đến 23” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - 01 phương thức (method / 메서드)/bằng chứng (evidence / 증거);
 - 02 historical geography;
@@ -27,6 +29,8 @@ Thư viện (library / 라이브러리) hiện có bốn tầng (layer / 계층)
 Mỗi chapter nối timeline với geography, economy, society, technology, institutions và di tích.
 
 ### 2. Structural histories — 24 đến 30
+Phần “2. Structural histories — 24 đến 30” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [`24_economic_history_land_tax_markets_and_reform.md`](24_economic_history_land_tax_markets_and_reform.md)
 - [`25_social_history_household_village_gender_migration_ethnicity.md`](25_social_history_household_village_gender_migration_ethnicity.md)
@@ -50,6 +54,8 @@ Tầng (layer / 계층) này tránh độ lệch (bias / 편향) xem vùng ngoà
 Sau khi đọc 34–37, nên quay lại chapter 14: frontier lúc đó sẽ hiện ra như tương tác (interaction / 상호작용) zone giữa nhiều hệ thống (system / 시스템), không phải một arrow “Nam tiến”.
 
 ### 4. Tham chiếu (reference / 참조) & trường dữ liệu (field / 필드) tầng (layer / 계층) — 31 đến 33
+Phần “4. Tham chiếu (reference / 참조) & trường dữ liệu (field / 필드) tầng (layer / 계층) — 31 đến 33” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [`31_chronology_quick_reference.md`](31_chronology_quick_reference.md): timeline tra nhanh.
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): thuật ngữ + nguồn (source / 소스)/bằng chứng (evidence / 증거) discipline.

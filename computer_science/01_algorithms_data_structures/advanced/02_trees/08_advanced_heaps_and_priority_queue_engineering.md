@@ -277,6 +277,8 @@ Property-based testing rất phù hợp vì lỗi vùng nhớ động (heap / �
 
 ## 20. Chọn vùng nhớ động (heap / 힙) theo tải công việc
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 | Tải công việc | Ứng viên thường hợp lý |
 |---|---|
 | General insert/extract | nhị phân (binary / 이진) vùng nhớ động (heap / 힙) |
@@ -309,5 +311,3 @@ Có cần concurrent scalability hay strict ordering không?
 ```
 
 Xem thêm: [Heap cơ bản](./03_heaps.md), [Queue/Deque/Priority Queue](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Shortest Paths](../03_graphs/02_shortest_paths.md), [Selection & Top-K](../04_algorithmic_paradigms/06_selection_and_top_k.md), [Scheduler Case Study](../90_connections/07_case_study_scheduler_backpressure.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 tree foundations](./00_tree_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

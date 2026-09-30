@@ -85,6 +85,8 @@ authority claim
 Chapter tiếp theo, [Libertarianism](05_libertarianism.md), cũng đặt individual liberty và coercion ở trung tâm nhưng thường khác anarchist socialism ở thuộc tính (property / 속성) rights, thị trường (market / 시장) thứ tự (order / 순서) và legitimacy của minimal trạng thái (state / 상태).
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Anarchism”: https://plato.stanford.edu/entries/anarchism/
 - Stanford Encyclopedia of Philosophy, “Political Obligation”: https://plato.stanford.edu/entries/political-obligation/

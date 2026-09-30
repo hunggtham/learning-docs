@@ -330,6 +330,8 @@ This is exactly why a thư viện kiến thức (knowledge library / 지식 라�
 The next chapter [Later Marxist traditions](09_later_marxist_traditions.md) shows how thinkers within or near the tradition responded by revising lớp (class / 클래스) lý thuyết (theory / 이론), culture, exploitation, methodology and institutional thiết kế (design / 설계) rather than preserving every thành phần (component / 컴포넌트) unchanged.
 
 ## Nguồn định hướng
+Phần “Nguồn định hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”: https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Analytical Marxism”: https://plato.stanford.edu/entries/marxism-analytical/

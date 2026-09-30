@@ -220,6 +220,8 @@ Integrity check có thể dùng băm (hash / 해시)/checksum. băm (hash / 해�
 Công cụ (tool / 도구) category thường gặp gồm xUnit-style đơn vị (unit / 단위) kiểm thử (test / 테스트) khung phần mềm (framework / 프레임워크), API testing tools, static/động (dynamic / 동적) phân tích (analysis / 분석), monitoring/APM. Hãy phân loại công cụ (tool / 도구) theo **mục đích**, không học tên công cụ (tool / 도구) đơn độc vì công cụ (tool / 도구) ecosystem thay đổi.
 
 ## 6. Các cặp dễ mất điểm
+Phần “6. Các cặp dễ mất điểm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Cặp | Phân biệt |
 |---|---|

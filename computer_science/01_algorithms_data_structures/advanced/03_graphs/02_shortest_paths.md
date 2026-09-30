@@ -101,6 +101,8 @@ Do đó khi pop một trạng thái (state / 상태) non-stale tốt nhất, kho
 
 ### Java với stale-entry mẫu
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 record Edge(int to, long w) {}
 record State(int node, long dist) {}
@@ -429,7 +431,9 @@ MST                -> tối ưu total infrastructure cost
 
 ## Quyết định (decision / 결정) bảng (table / 테이블)
 
-| trọng số / cấu trúc (structure / 구조) | thuật toán tự nhiên |
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
+| trọng số / structure | thuật toán tự nhiên |
 |---|---|
 | unweighted / equal trọng số | BFS |
 | các trọng số 0 hoặc 1 | 0–1 BFS |
@@ -498,6 +502,4 @@ Nhưng hệ thống thực tế thường thêm các ràng buộc: time-dependen
 
 BFS dựa vào thứ tự theo tầng. 0–1 BFS dùng deque để duy trì hai mức chi phí cục bộ. Dijkstra dựa vào trọng số không âm. Bellman–Ford dựa vào giới hạn số cạnh của đường đi đơn. Thuật toán trên DAG dùng thứ tự phụ thuộc. Floyd–Warshall dùng quy hoạch động theo tập đỉnh trung gian được phép.
 
-Nếu nhớ được điều kiện làm mỗi phương thức (method / 메서드) đúng, bạn có thể chọn thuật toán từ bản chất bài toán thay vì từ mẫu memorization.
-
-> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nếu nhớ được điều kiện làm mỗi method đúng, bạn có thể chọn thuật toán từ bản chất bài toán thay vì từ mẫu memorization.

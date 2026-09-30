@@ -8,6 +8,8 @@ danh sách liên kết tách **thứ tự lô-gic (logic / 논리)** khỏi **v�
 
 ## 1. danh sách liên kết đơn
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 typedef struct Node {
     int value;
@@ -125,6 +127,8 @@ Nó phù hợp lập lịch luân phiên, cyclic các bộ đệm lô-gic (logic
 Nhưng traversal không thể dùng `while (p != NULL)`. Termination điều kiện phải dựa vào quay lại start hoặc số bước. cách biểu diễn thay đổi bất biến vòng lặp.
 
 ## 8. Reverse danh sách liên kết và bất biến vòng lặp
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 Node *reverse(Node *head) {
@@ -388,5 +392,3 @@ Không nên chọn chỉ vì “chèn là `O(1)`”. Nếu phải tìm kiếm tr
 Khi hiểu cách biểu diễn này, mọi sự đánh đổi — predecessor bài toán (problem / 문제), giá trị canh gác (sentinel), ổn định định danh nút, LRU composition, persistence, tính đồng thời (concurrency / 동시성) — đều trở thành hệ quả tự nhiên.
 
 Xem thêm: [Arrays](./00_arrays_and_dynamic_arrays.md), [Stacks](./02_stacks.md), [Queues/Deque](./03_queues_deques_and_priority_queues.md), [Memory Models](../00_foundations/03_memory_models_c_java_javascript.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 arrays and dynamic arrays](./00_arrays_and_dynamic_arrays.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

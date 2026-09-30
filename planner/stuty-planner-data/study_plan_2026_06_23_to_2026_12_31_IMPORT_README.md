@@ -19,7 +19,8 @@ The script deletes previous rows from the same batch before inserting:
 - `tasks.note LIKE '%batch_id=study-plan-h2-2026-v1%'`
 - `goals.title LIKE '[H2-2026]%'`
 
-## Important các giả định (assumptions / 가정들)
+## Important assumptions
+Các giả định này giải thích cách dữ liệu kế hoạch được diễn giải; hãy kiểm tra chúng trước khi import để tránh biến một lựa chọn tạm thời thành lịch cố định.
 - SQLD exam fixed: 2026-08-22.
 - 정보처리기사 필기: registration around 2026-07-20, chính xác (exact / 정확한) exam date must be updated after registration.
 - 정보처리기사 실기: registration around 2026-09-21 only if 필기 is passed.
@@ -30,6 +31,7 @@ The script deletes previous rows from the same batch before inserting:
 - Weekend available from 11:00/12:00 onward.
 
 ## Recommended workflow
+Quy trình dưới đây nối việc đọc dữ liệu với thao tác import và kiểm tra kết quả, để mỗi bước đều có điểm xác nhận rõ ràng.
 - Import the SQL once.
 - In the app, cập nhật (update / 업데이트) tác vụ (task / 작업) `status` daily.
 - After 2026-07-20, cập nhật (update / 업데이트) actual 정보처리기사 필기 exam date.

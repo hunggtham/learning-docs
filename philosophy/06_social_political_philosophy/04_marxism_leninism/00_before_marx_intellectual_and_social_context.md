@@ -43,6 +43,8 @@ Marx trả lời theo hướng có. Tuy nhiên, không nên biến câu này th�
 Mô hình tư duy (mental model / 사고 모델) cần giữ sau chapter này là: **Marx hình thành tại giao điểm của historical philosophy, critique of alienation, political economy và industrial xã hội (social / 사회적) thay đổi (change / 변경)**. Chapter tiếp theo sẽ chuyển từ background sang cốt lõi (core / 핵심) explanatory kiến trúc (architecture / 아키텍처) của Marx: human activity, alienation, lớp (class / 클래스), môi trường vận hành (production / 운영 환경) và lịch sử (history / 이력).
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Karl Marx”, sections on alienation and lý thuyết (theory / 이론) of lịch sử (history / 이력): https://plato.stanford.edu/entries/marx/
 - Stanford Encyclopedia of Philosophy, “Capitalism”: https://plato.stanford.edu/entries/capitalism/

@@ -7,7 +7,9 @@ Mục tiêu của tệp (file / 파일) này là kiểm tra **đã cover gì, ph
 
 ## 1. Coverage theo 8 PDF
 
-| lĩnh vực (domain / 도메인) | Bài | tệp (file / 파일) | Nội dung chính đã cover | Trạng thái |
+Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nội dung KIIP. Hãy ghi rõ tài liệu nào là nền, nội dung nào cần cập nhật và điểm nào phải tra nguồn chính thức.
+
+| Domain | Bài | File | Nội dung chính đã cover | Trạng thái |
 |---|---:|---|---|---|
 | 사회 | 1~8 | `01_사회.md` | 국가상징, 가족, 직장, 주거, 도시·농촌, 교통·통신, 사회보험, 외국인 지원·안전 | ✅ cốt lõi (core / 핵심) covered |
 | 교육 | 9~12 | `02_교육.md` | 임신·보육, 어린이집/유치원, 6-3-3, 초·중·고, 외국인 학생, 수시/정시, 고등교육, 평생교육 | ✅ expanded |
@@ -59,6 +61,8 @@ Tất cả được tuyến (route / 경로) qua `00_current_facts_and_correctio
 > **Chuyển mạch:** Từ **3. Current-version risks**, ta sang **4. tầng (layer / 계층) học tập đã có** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 4. tầng (layer / 계층) học tập đã có
+
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
 
 ```text
 Source understanding   → 01~08

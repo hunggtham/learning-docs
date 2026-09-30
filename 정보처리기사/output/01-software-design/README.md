@@ -1,6 +1,6 @@
 # Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)
 
-> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng lesson theo chủ đề để đào sâu từng mắt xích. Mỗi lesson phải được nối lại với tiêu chí phân biệt và câu hỏi của lesson kế tiếp, không học như danh sách thuật ngữ rời.
+> **Mạch nối:** Đọc `01-tai-lieu-hoc-day-du.md` để dựng mô hình tư duy (mental model / 사고 모델) của môn, sau đó dùng từng bài để đào sâu một mắt xích. Mỗi bài phải nối với tiêu chí phân biệt và câu hỏi của bài kế tiếp, không học như danh sách thuật ngữ rời.
 
 ## Bài học
 
@@ -32,47 +32,67 @@
 22. [5. 요구공학 (Requirements Engineering)](lessons/22-bai-hoc.md)
 23. [8. UI 및 UX, HCI (UI, UX, HCI)](lessons/23-bai-hoc.md)
 24. [5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)](lessons/24-bai-hoc.md)
-25. [13. 소프트웨어 품질 및 아키텍처 패턴 (Chất lượng SW & Mẫu Kiến trúc)](lessons/25-bai-hoc.md)
-26. [1. 소프트웨어 아키텍처 (Software Architecture)](lessons/26-bai-hoc.md)
-27. [6. 객체지향 (Hướng Đối Tượng - OOP)](lessons/27-bai-hoc.md)
-28. [14. 객체지향 심화 (OOP chuyên sâu)](lessons/28-bai-hoc.md)
-29. [15. 객체지향 및 모듈화 방법론 (Phương pháp luận OOP & Mô-đun hóa)](lessons/29-bai-hoc.md)
-30. [2. 객체지향 (OOP - Object Oriented Programming)](lessons/30-bai-hoc.md)
-31. [1. 객체지향 설계 5대 원칙 (SOLID)](lessons/31-bai-hoc.md)
-32. [7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)](lessons/32-bai-hoc.md)
-33. [3. 모듈 (Module)](lessons/33-bai-hoc.md)
-34. [2. 모듈 (Module) & 독립성 (Independence)](lessons/34-bai-hoc.md)
-35. [7. 공통 모듈 (Common Module)](lessons/35-bai-hoc.md)
-36. [9. 효과적인 모듈 설계 방안 (Effective Module Design)](lessons/36-bai-hoc.md)
-37. [9. 소프트웨어 품질 특성 (ISO/IEC 9126)](lessons/37-bai-hoc.md)
-38. [8. 디자인 패턴 (Design Patterns)](lessons/38-bai-hoc.md)
-39. [16. 디자인 패턴 심화 (Design Patterns chuyên sâu)](lessons/39-bai-hoc.md)
-40. [4. 디자인 패턴 (Design Patterns - GoF)](lessons/40-bai-hoc.md)
-41. [11. 디자인 패턴 (Design Pattern)](lessons/41-bai-hoc.md)
-42. [2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)](lessons/42-bai-hoc.md)
-43. [13. 시스템 연계 및 인터페이스 (System Interface & Integration)](lessons/43-bai-hoc.md)
-44. [17. 시스템 연계 및 미들웨어 (Liên kết hệ thống & Middleware)](lessons/44-bai-hoc.md)
-45. [14. 미들웨어 (Middleware)](lessons/45-bai-hoc.md)
-46. [6. 애자일 방법론 (Agile Methodology)](lessons/46-bai-hoc.md)
-47. [7. 스크럼(Scrum) 및 XP(eXtreme Programming)](lessons/47-bai-hoc.md)
-48. [2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)](lessons/48-bai-hoc.md)
-49. [4. 운영 환경 구축 고려사항 (Operation Environment Considerations)](lessons/49-bai-hoc.md)
-50. [6. 구조적 분석 도구 (Structured Analysis Tools)](lessons/50-bai-hoc.md)
-51. [10. 소프트웨어 설계 원리 (Software Design Principles)](lessons/51-bai-hoc.md)
-52. [3. 결합도 (Coupling - Độ phụ thuộc)](lessons/52-bai-hoc.md)
-53. [4. 응집도 (Cohesion - Độ gắn kết)](lessons/53-bai-hoc.md)
-54. [5. Fan-In / Fan-Out (팬인 / 팬아웃)](lessons/54-bai-hoc.md)
-55. [6. N-S 차트 (Nassi-Schneiderman Chart)](lessons/55-bai-hoc.md)
-56. [8. 재사용 (Reuse)](lessons/56-bai-hoc.md)
-57. [10. 코드 (Code) 개요 & 종류](lessons/57-bai-hoc.md)
+25. [1. 소프트웨어 아키텍처 (Software Architecture)](lessons/25-bai-hoc.md)
+26. [6. 객체지향 (Hướng Đối Tượng - OOP)](lessons/26-bai-hoc.md)
+27. [2. 객체지향 (OOP - Object Oriented Programming)](lessons/27-bai-hoc.md)
+28. [1. 객체지향 설계 5대 원칙 (SOLID)](lessons/28-bai-hoc.md)
+29. [7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)](lessons/29-bai-hoc.md)
+30. [3. 모듈 (Module)](lessons/30-bai-hoc.md)
+31. [2. 모듈 (Module) & 독립성 (Independence)](lessons/31-bai-hoc.md)
+32. [7. 공통 모듈 (Common Module)](lessons/32-bai-hoc.md)
+33. [9. 효과적인 모듈 설계 방안 (Effective Module Design)](lessons/33-bai-hoc.md)
+34. [9. 소프트웨어 품질 특성 (ISO/IEC 9126)](lessons/34-bai-hoc.md)
+35. [8. 디자인 패턴 (Design Patterns)](lessons/35-bai-hoc.md)
+36. [4. 디자인 패턴 (Design Patterns - GoF)](lessons/36-bai-hoc.md)
+37. [11. 디자인 패턴 (Design Pattern)](lessons/37-bai-hoc.md)
+38. [2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)](lessons/38-bai-hoc.md)
+39. [13. 시스템 연계 및 인터페이스 (System Interface & Integration)](lessons/39-bai-hoc.md)
+40. [14. 미들웨어 (Middleware)](lessons/40-bai-hoc.md)
+41. [4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)](lessons/41-bai-hoc.md)
+42. [5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)](lessons/42-bai-hoc.md)
+43. [6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)](lessons/43-bai-hoc.md)
+44. [1. 회복 (Recovery)](lessons/44-bai-hoc.md)
+45. [2. Commit & Rollback 연산](lessons/45-bai-hoc.md)
+46. [3. 트랜잭션의 상태 (Transaction States)](lessons/46-bai-hoc.md)
+47. [4. 병행 제어 (Concurrency Control)](lessons/47-bai-hoc.md)
+48. [5. 보안 및 암호화 (Security & Encryption)](lessons/48-bai-hoc.md)
+49. [6. 분산 데이터베이스 (Distributed Database)](lessons/49-bai-hoc.md)
+50. [7. 자료 구조 (Data Structures)](lessons/50-bai-hoc.md)
+51. [8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)](lessons/51-bai-hoc.md)
+52. [9. 트리 (Tree) 용어](lessons/52-bai-hoc.md)
+53. [10. 이진 트리의 운행법 (Binary Tree Traversal)](lessons/53-bai-hoc.md)
+54. [11. 수식의 표기법 (Expression Notation)](lessons/54-bai-hoc.md)
+55. [12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)](lessons/55-bai-hoc.md)
+56. [13. 검색 및 해싱 (Search & Hashing)](lessons/56-bai-hoc.md)
+57. [14. 파일 편성 방식 (File Organization)](lessons/57-bai-hoc.md)
+58. [6. 애자일 방법론 (Agile Methodology)](lessons/58-bai-hoc.md)
+59. [7. 스크럼(Scrum) 및 XP(eXtreme Programming)](lessons/59-bai-hoc.md)
+60. [2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)](lessons/60-bai-hoc.md)
+61. [4. 운영 환경 구축 고려사항 (Operation Environment Considerations)](lessons/61-bai-hoc.md)
+62. [6. 구조적 분석 도구 (Structured Analysis Tools)](lessons/62-bai-hoc.md)
+63. [10. 소프트웨어 설계 원리 (Software Design Principles)](lessons/63-bai-hoc.md)
+64. [3. 결합도 (Coupling - Độ phụ thuộc)](lessons/64-bai-hoc.md)
+65. [4. 응집도 (Cohesion - Độ gắn kết)](lessons/65-bai-hoc.md)
+66. [5. Fan-In / Fan-Out (팬인 / 팬아웃)](lessons/66-bai-hoc.md)
+67. [6. N-S 차트 (Nassi-Schneiderman Chart)](lessons/67-bai-hoc.md)
+68. [8. 재사용 (Reuse)](lessons/68-bai-hoc.md)
+69. [10. 코드 (Code) 개요 & 종류](lessons/69-bai-hoc.md)
 
 ## Ghi chú học
+
+Phần này hướng dẫn cách dùng tài liệu như một bài giảng, để ghi chú và thuật ngữ luôn quay về mục tiêu học tập thay vì đứng riêng lẻ.
 
 - Thuật ngữ giữ tiếng Hàn để đối chiếu đề thi, theo sau là English và nghĩa Việt khi nguồn có nêu.
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
+## Mạch bài giảng
+
+Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
+
 ## 복습 체크리스트 (Checklist ôn tập)
+
+Checklist này khép lại bài bằng các câu hỏi kiểm tra; hãy dùng nó để xác nhận mình đã nối khái niệm, điều kiện và ví dụ thành một lời giải thích hoàn chỉnh.
 
 - [ ] 한국어 용어를 보고 English와 Tiếng Việt 의미를 말할 수 있는가?
 - [ ] 정의와 목적을 한 문장으로 설명할 수 있는가?
@@ -80,5 +100,7 @@
 - [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
 
 ## Bài học bổ sung / Deep Dive
+
+Phần này mở rộng một chủ đề đã có trong lesson chính; hãy dùng nó để kiểm tra cơ chế và trường hợp biên sau khi đã nắm khung cơ bản.
 
 - [Vòng đời và phương pháp phát triển phần mềm](01-vong-doi-va-phuong-phap-phat-trien.md)

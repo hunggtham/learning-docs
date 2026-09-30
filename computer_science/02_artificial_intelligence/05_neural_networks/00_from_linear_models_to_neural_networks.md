@@ -215,6 +215,8 @@ Không có một single “neural mạng (network / 네트워크) breakthrough�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Linear model:
 raw representation → simple decision
@@ -251,5 +253,3 @@ Nó giảm handcraft tính năng (feature / 기능) extraction nhưng dữ liệ
 Chapter này nối [Linear Regression](../04_machine_learning/05_linear_regression.md), [Logistic Regression](../04_machine_learning/06_logistic_regression.md), [Calculus](../01_mathematical_foundations/04_calculus_for_ai.md) và [Optimization](../01_mathematical_foundations/06_optimization.md).
 
 Xem tiếp: [Neuron, Perceptron and MLP](./01_neuron_perceptron_and_mlp.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 neuron perceptron and mlp](./01_neuron_perceptron_and_mlp.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

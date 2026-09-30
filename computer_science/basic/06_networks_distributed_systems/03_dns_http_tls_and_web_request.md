@@ -87,6 +87,8 @@ Các header như `Forwarded` hoặc `X-Forwarded-*` truyền ngữ cảnh ban đ
 
 ## Một yêu cầu từ đầu đến cuối
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 URL
  ↓

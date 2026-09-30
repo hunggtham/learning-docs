@@ -11,6 +11,8 @@ Chemistry đã hoàn tất pre-merge kiểm tra (audit / 감사) và được qu
 
 ## Thứ tự ưu tiên kiểm tra (audit / 감사)
 
+Audit bắt đầu từ những dependency có thể làm sai nhiều chapter phía sau. Đọc các bước theo thứ tự này để hiểu vì sao một gap về nguyên tử, năng lượng hoặc cân bằng được ưu tiên trước một chủ đề ứng dụng hẹp.
+
 ```text
 1. file rỗng / skeleton
 2. chapter quá sơ sài so với phạm vi
@@ -396,10 +398,12 @@ Các khái niệm calibration/bất định (uncertainty / 불확실성) xuất 
 
 ## Các overlap có chủ ý khác
 
-- activity: thermodynamics định nghĩa; acid–cơ sở (base / 기반)/electrochemistry áp dụng;
-- diffusion: matter giải thích vật lý; kinetics/electrochemistry/môi trường (environment / 환경) dùng như vận chuyển (transport / 전송) limit;
-- spectroscopy: atomic cấu trúc (structure / 구조) giải thích quantum origin; analytical chemistry giải thích đo lường (measurement / 측정)/suy luận (inference / 추론);
-- phase equilibrium: matter giới thiệu; thermodynamics/equilibrium xây khung phần mềm (framework / 프레임워크) thế hóa học;
+Những overlap dưới đây không phải nội dung trùng lặp cần xóa. Chúng là các khái niệm được định nghĩa ở một chapter rồi dùng lại trong domain khác, nên người học cần theo mũi tên để biết phần nào là nền và phần nào là ứng dụng.
+
+- activity: thermodynamics định nghĩa; acid–base/electrochemistry áp dụng;
+- diffusion: matter giải thích vật lý; kinetics/electrochemistry/environment dùng như transport limit;
+- spectroscopy: atomic structure giải thích quantum origin; analytical chemistry giải thích measurement/inference;
+- phase equilibrium: matter giới thiệu; thermodynamics/equilibrium xây framework thế hóa học;
 - hydrogen bonding: bonding định nghĩa; biochemistry/materials áp dụng.
 
 # Nội bộ (internal / 내부) links
@@ -440,6 +444,8 @@ Hiện cây chuẩn gốc (canonical / 정본), phụ thuộc (dependency / 의�
 
 # Trạng thái pre-merge cuối
 
+Đây là bước chốt trước khi hợp nhất branch: các tiêu chí cấu trúc, ngôn ngữ, prerequisite, ví dụ và liên kết phải được kiểm tra cùng nhau. Bảng dưới đây ghi trạng thái kiểm chứng, không thay thế việc đọc các gap còn lại.
+
 ```text
 không có file rỗng/skeleton quan trọng       ✓
 không còn core chapter mỏng bất hợp lý       ✓
@@ -457,4 +463,4 @@ Pre-merge kiểm tra (audit / 감사) xác nhận toàn bộ 119 tài liệu Che
 
 Chemistry thư viện (library / 라이브러리) hiện **content/link/build-ready trên main**. Các thay đổi sau này chỉ cần cập nhật trực tiếp chuẩn gốc (canonical / 정본) content và kiểm tra (audit / 감사) bản ghi (record / 레코드), không cần duy trì một branch chuẩn gốc (canonical / 정본) riêng.
 
-> **Bàn giao:** Sau **Các overlap có chủ ý khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Quay lại [README](./README.md) khi cần định vị lại prerequisite hoặc đơn vị sở hữu (owner / 오너).
+Chemistry Library hiện **content/link/build-ready cho việc merge**. Blocker manifest nói trên có thể làm workflow Pages toàn repo thất bại độc lập với Chemistry cho tới khi workstream tương ứng sửa nó.

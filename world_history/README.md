@@ -44,6 +44,8 @@ Vòng độ sâu (depth / 깊이) pass hiện tại giữ nguyên tuyến và ch
 > **Chuyển mạch:** Từ **Bắt đầu từ đâu**, ta sang **Phạm vi và ranh giới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Phạm vi và ranh giới
+Phần “Phạm vi và ranh giới” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - `world_history/` tập trung vào cơ chế xuyên vùng và so sánh; không thay thế lịch sử quốc gia chuyên sâu như [`korean_history/`](../korean_history/).
 - Địa hình, khí hậu, tài nguyên, tuyến biển và không gian được nối sang [`world_geography/`](../world_geography/); geography là ràng buộc (constraint / 제약조건) và opportunity, không phải định mệnh.

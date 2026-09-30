@@ -170,6 +170,8 @@ Một deep mô hình (model / 모델) có thể replace vài stage nhưng prepro
 
 ## When Classical Processing Still Wins
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 - deterministic industrial inspection;
 - tiny compute ngân sách (budget / 예산);
 - obvious geometric quy tắc (rule / 규칙);
@@ -206,5 +208,3 @@ Cùng đầu ra (output / 출력) mask nhưng các giả định (assumptions / 
 Convolution/filtering là cầu nối (bridge / 브리지) trực tiếp tới CNN; độ dốc (gradient / 기울기)/frequency connect Calculus và tín hiệu (signal / 신호) Processing.
 
 Xem tiếp: [Feature Representation](./02_feature_representation.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 images as data](./00_images_as_data.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

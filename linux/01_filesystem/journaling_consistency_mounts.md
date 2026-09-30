@@ -109,6 +109,8 @@ fsync directory khi durability của directory entry là yêu cầu nghiêm ng�
 
 ## Tại sao cross-filesystem rename không giống nhau?
 
+Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu output với mô hình kernel, process, filesystem hoặc network đã học.
+
 ```bash
 mv /tmp/a /data/a
 ```
@@ -291,5 +293,3 @@ Một lời gọi ghi chỉ đi qua từng tầng (layer / 계층) theo đặc t
 **“fsck có thể chạy bất kỳ lúc nào.”** Repair filesystem đang mounted có thể nguy hiểm; phải theo hướng dẫn filesystem cụ thể.
 
 Xem thêm: [Filesystem, path, inode và link](./filesystem_paths_inodes_links.md), [Storage và filesystem](../06_resources/storage_filesystems.md), [Backup và khôi phục](../08_operations/backup_restore_disaster_recovery.md).
-
-> **Bàn giao:** Sau **Những hiểu lầm phổ biến**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [files streams descriptors](./files_streams_descriptors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -374,6 +374,8 @@ loop();
 Một chuỗi (chain / 사슬) microtasks không kết thúc có thể **starve** trình duyệt (browser / 브라우저) khỏi cơ hội xử lý tác vụ (task / 작업) khác hoặc kết xuất (render / 렌더링). Vì vậy “microtask chạy sớm hơn” không có nghĩa “microtask luôn tốt hơn”.
 
 ### `await` nằm ở đâu?
+Phần này nối mạch bài học với “`await` nằm ở đâu?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 async function run() {
@@ -922,7 +924,9 @@ OS / native WebView container
 
 Điều này đặc biệt quan trọng với hybrid app. Chrome desktop mới nhất hỗ trợ (support / 지원) một Web API không có nghĩa Android WebView mà app đang ship cũng hỗ trợ (support / 지원). Và iOS WKWebView phiên bản (version / 버전) bị gắn với hệ điều hành/engine phân phối (distribution / 분포) khác Chrome.
 
-### Tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) nên là dự án (project / 프로젝트) sản phẩm tạo ra (artifact / 산출물)
+### Compatibility matrix nên là project artifact
+Phần này nối mạch bài học với “Compatibility matrix nên là project artifact”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 feature
@@ -975,7 +979,9 @@ Nguồn (source / 소스) maps là môi trường vận hành (production / 운�
 
 Enterprise các hệ thống (systems / 시스템들) thường chứa nhiều thế hệ JavaScript cùng lúc. cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) không nên nhìn legacy cú pháp (syntax / 문법) rồi kết luận “mã (code / 코드) xấu” trước khi hiểu thời gian chạy (runtime / 런타임)/tooling các ràng buộc (constraints / 제약조건들) lúc nó được viết.
 
-## IIFE thay mô-đun (module / 모듈) phạm vi (scope / 범위)
+## IIFE thay module scope
+Phần này nối mạch bài học với “IIFE thay module scope”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 (function () {
@@ -1419,7 +1425,9 @@ Mục tiêu không phải ghi nhớ như trivia. Khi gặp một hành vi (behav
 
 ---
 
-# 34. Coverage ma trận (matrix / 행렬) sau kiểm tra (audit / 감사)
+# 34. Coverage matrix sau audit
+Phần này nối mạch bài học với “34. Coverage matrix sau audit”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | Nhóm kiến thức | chuẩn gốc (canonical / 정본) mức (level / 수준) chính | Trạng thái sau kiểm tra (audit / 감사) |
 | --- | --- | --- |
@@ -1524,6 +1532,4 @@ Compatibility / deployment
 
 ES5, ES2015 và hiện đại (modern / 현대적) ECMAScript không phải ba ngôn ngữ khác nhau. Chúng là ba giai đoạn trong quá trình cùng một ngôn ngữ (language / 언어) trưởng thành: ES5 chuẩn hóa nền web đã tồn tại, ES2015 cung cấp những abstractions cần cho applications/modules lớn, và yearly ECMAScript sau đó bổ sung dần các patterns đã chứng minh giá trị trong ecosystem.
 
-Khi bạn hiểu **vì sao** một tính năng (feature / 기능) xuất hiện, bạn có thể đọc cả legacy và hiện đại (modern / 현대적) mã (code / 코드) mà không bị phụ thuộc vào thời điểm cú pháp (syntax / 문법) được viết. Đó mới là mục tiêu của Master mức (level / 수준).
-
-> **Bàn giao:** Sau **bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [javascript beginner rebuilt](./javascript_beginner_rebuilt.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi bạn hiểu **vì sao** một feature xuất hiện, bạn có thể đọc cả legacy và modern code mà không bị phụ thuộc vào thời điểm syntax được viết. Đó mới là mục tiêu của Master level.

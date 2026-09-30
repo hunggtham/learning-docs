@@ -110,6 +110,8 @@ Thử lại (retry / 재시도) không kiểm soát có thể làm I/O bottlenec
 
 ## `vmstat` và I/O
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 vmstat 1 10
 ```
@@ -271,6 +273,4 @@ Mỗi câu hỏi thu hẹp một tầng (layer / 계층).
 
 ## Kết nối kiến thức
 
-Chương này mở rộng [Storage và Filesystems](./storage_filesystems.md), liên kết với [Memory](./memory_virtual_memory.md) qua page bộ nhớ đệm (cache / 캐시), [CPU và Scheduling](./cpu_scheduling_performance.md) qua waiting/queueing, và [Production Troubleshooting](../09_production/production_troubleshooting.md).
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [block layer io scheduler](./block_layer_io_scheduler.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Chương này mở rộng [Storage và Filesystems](./storage_filesystems.md), liên kết với [Memory](./memory_virtual_memory.md) qua page cache, [CPU và Scheduling](./cpu_scheduling_performance.md) qua waiting/queueing, và [Production Troubleshooting](../09_production/production_troubleshooting.md).

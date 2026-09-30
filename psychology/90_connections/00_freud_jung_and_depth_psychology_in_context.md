@@ -204,6 +204,8 @@ Xem chapter riêng [[05_adler_individual_psychology_in_context]] và ma trận [
 
 ## Giao thức (protocol / 프로토콜) khi đọc historical psychology
 
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
+
 ```text
 1. Tác giả đang mô tả phenomenon nào?
 2. Đây là metaphor, clinical observation hay causal claim?
@@ -238,6 +240,8 @@ Giá trị lịch sử không cần được biến thành scientific consensus 
 
 ## Kết nối
 
+Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng liên kết để biết prerequisite nào đang được dùng, ứng dụng nào được mở rộng và ranh giới nào vẫn cần giữ.
+
 - [[../EVIDENCE_STATUS_GUIDE]]
 - [[05_adler_individual_psychology_in_context]]
 - [[06_historical_theories_and_modern_evidence_matrix]]
@@ -247,5 +251,3 @@ Giá trị lịch sử không cần được biến thành scientific consensus 
 - [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]]
 - [[../03_human_development_and_person/09_self_concept_identity_and_self_regulation]]
 - [[01_psychology_biology_statistics_and_ai]]
-
-> **Bàn giao:** Sau **Kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 psychology biology statistics and ai](./01_psychology_biology_statistics_and_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

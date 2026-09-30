@@ -120,9 +120,11 @@ pH\approx pK_a
 
 ## pH tại điểm tương đương không luôn bằng 7
 
-- acid mạnh + cơ sở (base / 기반) mạnh: gần 7 ở 25 °C trong hệ lý tưởng;
-- acid yếu + cơ sở (base / 기반) mạnh: thường >7 vì cơ sở (base / 기반) liên hợp thủy phân;
-- cơ sở (base / 기반) yếu + acid mạnh: thường <7 vì acid liên hợp thủy phân.
+Điểm tương đương chỉ nói về tỷ lượng phản ứng, không tự nói dung dịch sau phản ứng là trung tính. Ta cần xét acid/base liên hợp và thủy phân để chọn chỉ thị đúng vùng nhảy pH.
+
+- acid mạnh + base mạnh: gần 7 ở 25 °C trong hệ lý tưởng;
+- acid yếu + base mạnh: thường >7 vì base liên hợp thủy phân;
+- base yếu + acid mạnh: thường <7 vì acid liên hợp thủy phân.
 
 Do đó chọn chỉ thị phải dựa trên **vùng nhảy pH**, không dựa vào ý tưởng “điểm tương đương luôn trung tính”.
 
@@ -394,5 +396,3 @@ Không. Độ chính xác cuối cùng do toàn bộ chuỗi đo quyết định
 Phân tích thể tích là **một phép bảo toàn vật chất được neo vào phép đo thể tích**. Muốn suy luận đúng phải nối bốn tầng: titrant có nồng độ được chuẩn hóa → phản ứng có hóa lượng và cân bằng phù hợp → endpoint đại diện tốt cho equivalence điểm (point / 지점) → các thể tích và nguồn độ không đảm bảo được kiểm soát.
 
 Xem tiếp: [Phân tích khối lượng](./02_gravimetric_analysis.md).
-
-> **Bàn giao:** Sau **“Buret càng nhiều chữ số thì phép đo càng chính xác”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

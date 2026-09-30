@@ -2,7 +2,9 @@
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **143-145. SQL 분류 (SQL Categories)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **143-145. SQL 분류 (SQL Categories)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **143-145. SQL 분류 (SQL Categories)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
@@ -10,27 +12,36 @@ SQL, 분류
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **204-219. SQL 명령어 심화 (SQL Commands Detail)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**에서 만든 기준을 이어받아 **143-145. SQL 분류 (SQL Categories)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **143-145. SQL 분류 (SQL Categories)** và nối nó với **204-219. SQL 명령어 심화 (SQL Commands Detail)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **143-145. SQL 분류 (SQL Categories)** và nối nó với **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
 ## 143-145. SQL 분류 (SQL Categories)
+
+Sau khi đã đặt nền bằng **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, ta chuyển sang **143-145. SQL 분류 (SQL Categories)**. Đây là mắt xích 26/54 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **143-145. SQL 분류 (SQL Categories)** như một bài học cho người mới, hãy giữ câu hỏi: **dữ liệu được tổ chức, ràng buộc và truy vấn theo quy tắc nào để kết quả vẫn đúng?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “143-145. SQL 분류 (SQL Categories)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 - **DDL (데이터 정의어):** CREATE, ALTER, DROP (스키마, 테이블 등 정의/변경/삭제).
-- **DML (데이터 조작어):** SELECT, INSERT, DELETE, cập nhật (update / 업데이트).
+- **DML (데이터 조작어):** SELECT, INSERT, DELETE, UPDATE (데이터 조회 및 변경).
 - **DCL (데이터 제어어):** GRANT, REVOKE (권한 제어).
-- **TCL (트랜잭션 제어어):** lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT (트랜잭션 제어).
+- **TCL (트랜잭션 제어어):** COMMIT, ROLLBACK, SAVEPOINT (트랜잭션 제어).
 - **VI (Vietnamese) (Tiếng Việt):** Phân loại SQL.
   - DDL (Định nghĩa dữ liệu): CREATE, ALTER, DROP.
-  - DML (Thao tác dữ liệu): SELECT, INSERT, DELETE, cập nhật (update / 업데이트).
+  - DML (Thao tác dữ liệu): SELECT, INSERT, DELETE, UPDATE.
   - DCL (Điều khiển dữ liệu): GRANT, REVOKE (điều khiển quyền).
-  - TCL (Điều khiển giao dịch): lần ghi nhận (commit / 커밋), quay lui (rollback / 롤백), SAVEPOINT (điều khiển giao dịch).
+  - TCL (Điều khiển giao dịch): COMMIT, ROLLBACK, SAVEPOINT (điều khiển giao dịch).
+
+Ta có thể khép mục **143-145. SQL 분류 (SQL Categories)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **3. 데이터베이스와 절차형 SQL (Cơ sở dữ liệu và SQL thủ tục)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

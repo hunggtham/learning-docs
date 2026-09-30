@@ -590,6 +590,8 @@ For xã hội (social / 사회적)/high-impact AI, utility mô hình (model / �
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Probability = what may happen?
 Utility     = how much do outcomes matter?
@@ -623,6 +625,4 @@ If chuyển tiếp (transition / 전이)/reward mô hình (model / 모델) known
 
 Quyết định (decision / 결정) Making Under bất định (uncertainty / 불확실성) completes cầu nối (bridge / 브리지) from Classical tìm kiếm (search / 검색)/Planning to Reinforcement học tập (learning / 학습). tìm kiếm (search / 검색) handles deterministic alternatives; MDP adds stochastic transitions and long-term giá trị (value / 값); POMDP adds hidden trạng thái (state / 상태); RL learns hành vi (behavior / 동작) when mô hình (model / 모델)/giá trị (value / 값) unknown.
 
-Sau phần kiến thức (knowledge / 지식) biểu diễn (representation / 표현) và Machine học tập (learning / 학습), thư viện (library / 라이브러리) sẽ quay lại MDP/Bellman equations sâu hơn trong `11_reinforcement_learning/`.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Sau phần Knowledge Representation và Machine Learning, library sẽ quay lại MDP/Bellman equations sâu hơn trong `11_reinforcement_learning/`.

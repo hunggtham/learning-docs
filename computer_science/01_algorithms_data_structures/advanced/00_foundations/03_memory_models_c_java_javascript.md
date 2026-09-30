@@ -18,6 +18,8 @@ Môi trường chạy thực tế có thể tối ưu bằng **phân tích thoá
 
 ## 2. C: con trỏ và địa chỉ bộ nhớ
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 int *a = malloc(100 * sizeof(int));
 if (!a) return 1;
@@ -34,6 +36,8 @@ C cho quyền kiểm soát cách biểu diễn rất trực tiếp, nhưng đổ
 
 ## 3. Quyền sở hữu trong cấu trúc liên kết bằng C
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```c
 struct Node {
     int value;
@@ -46,6 +50,8 @@ Nếu mỗi nút được `malloc` riêng, khi hủy danh sách ta phải lưu `
 Do đó API C nên ghi rõ ai sở hữu vùng nhớ và ai chịu trách nhiệm giải phóng. Hợp đồng quyền sở hữu là một phần của tính đúng đắn, không phải chi tiết phụ của thuật toán.
 
 ## 4. Bí danh bộ nhớ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 int x = 10;
@@ -60,6 +66,8 @@ printf("%d", *p); // 20
 Aliasing làm việc suy luận khó hơn vì một hàm có thể thay đổi vùng nhớ mà nơi gọi vẫn giữ tham chiếu tới đó. Trong cấu trúc dữ liệu, chia sẻ nút giữa nhiều cấu trúc mà không có mô hình quyền sở hữu rõ ràng dễ gây lỗi thay đổi ngoài ý muốn hoặc giải phóng hai lần.
 
 ## 5. Cấp phát liên tiếp trong C
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```c
 int *a = malloc(n * sizeof *a);
@@ -93,6 +101,8 @@ Không nên tối ưu vi mô khi chưa cần, nhưng khi đánh giá bộ nhớ 
 
 ## 7. Java: tham chiếu và thu gom rác
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 Node a = new Node(10);
 Node b = a;
@@ -107,6 +117,8 @@ Bộ thu gom rác (Garbage Collector – GC) có thể thu hồi đối tượng
 GC loại bỏ nhiều lỗi use-after-free và double-free, nhưng quản lý bộ nhớ không trở thành miễn phí. Cấp phát, đánh dấu, sao chép, nén vùng nhớ động (heap / 힙) và các khoảng dừng GC đều có chi phí.
 
 ## 8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```java
 static final Map<String, Object> CACHE = new HashMap<>();
@@ -139,6 +151,8 @@ right[]
 có thể có tính cục bộ tốt hơn cách mỗi nút là một đối tượng (object / 객체) độc lập. Đây là một ví dụ của **thiết kế hướng dữ liệu (data-oriented design)**: cách bố trí được chọn theo mẫu truy cập thay vì chỉ theo mô hình đối tượng (object / 객체).
 
 ## 11. JavaScript và định danh đối tượng
+
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
 
 ```js
 const a = { value: 10 };
@@ -247,6 +261,8 @@ C truyền giá trị con trỏ. Java luôn truyền tham số theo giá trị; 
 Vì vậy, cách nói “pass by tham chiếu (reference / 참조)” dễ gây hiểu sai nếu không phân biệt cơ chế truyền tham số với việc nhiều biến cùng truy cập một đối tượng (object / 객체).
 
 ## 20. Sao chép nông và sao chép sâu
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```js
 const a = [{ x: 1 }];
@@ -366,5 +382,3 @@ Mảng mạnh không chỉ vì lập chỉ mục `O(1)` mà còn nhờ tính c�
 Khi chọn cấu trúc, hãy hỏi đồng thời: **độ phức tạp thao tác là gì, dữ liệu được bố trí thế nào, mỗi đối tượng (object / 객체) sống bao lâu, và thời gian chạy (runtime / 런타임)/phần cứng sẽ truy cập cách biểu diễn đó ra sao?**
 
 Xem thêm: [Arrays & Dynamic Arrays](../01_linear_structures/00_arrays_and_dynamic_arrays.md), [Linked Lists](../01_linear_structures/01_linked_lists.md), [C Implementation Patterns](../80_language_implementations/00_c_dsa_implementation_patterns.md), [JavaScript Runtime Patterns](../80_language_implementations/02_javascript_dsa_runtime_patterns.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 dsa as problem modeling](./00_dsa_as_problem_modeling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

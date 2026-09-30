@@ -25,11 +25,15 @@ Vì vậy tăng trưởng nội địa không thể luôn được phân tích r
 
 ## 2. Lợi thế so sánh
 
+Sau khi đặt thương mại vào bối cảnh dòng vốn và nhu cầu, ta cần hiểu vì sao trao đổi vẫn có thể tạo lợi ích dù năng suất tuyệt đối giữa các nước khác nhau. Lợi thế so sánh tập trung vào chi phí cơ hội, không chỉ vào ai sản xuất nhiều hơn.
+
 **Lợi thế so sánh (comparative advantage)** giải thích vì sao hai quốc gia vẫn có thể cùng hưởng lợi từ thương mại ngay cả khi một nước sản xuất hiệu quả hơn gần như mọi thứ.
 
 Điều quan trọng là chi phí cơ hội tương đối.
 
 ## 3. Terms of trade
+
+Khi đã hiểu quốc gia chuyên môn hóa ra sao, ta theo dõi giá xuất khẩu so với giá nhập khẩu để biết sức mua đối ngoại đang cải thiện hay xấu đi. Terms of trade nối thương mại hàng hóa với thu nhập quốc gia và tỷ giá.
 
 **Điều kiện thương mại (terms of trade)** đo tương quan giá hàng xuất khẩu so với hàng nhập khẩu.
 
@@ -132,6 +136,8 @@ Khi hệ thống kết thúc, tỷ giá lớn chuyển sang linh hoạt hơn nh�
 
 ## 12. Eurodollar và USD ngoài Mỹ
 
+Hệ thống USD toàn cầu không chỉ nằm trong tiền gửi tại ngân hàng nội địa Mỹ. Phần này giải thích vì sao USD ngoài Mỹ, funding và bảng cân đối ngân hàng có thể làm điều kiện tài chính toàn cầu thay đổi ngay cả khi policy rate Mỹ không đổi.
+
 **Eurodollar** là tiền gửi hoặc tín dụng USD được tạo ngoài hệ thống ngân hàng nội địa Mỹ.
 
 Điều này cho thấy nguồn cung USD toàn cầu không chỉ phụ thuộc trực tiếp vào Fed.
@@ -185,6 +191,8 @@ USD yếu
 Nhưng cùng điều kiện đó có thể đảo chiều nhanh.
 
 ## 17. Sudden stop
+
+Sau khi đi qua dòng vốn và funding, sudden stop là trường hợp kiểm tra khả năng sống sót của nền kinh tế phụ thuộc vốn ngoài. Câu hỏi chính là cú rút vốn truyền qua tỷ giá, dự trữ, tín dụng và bảng cân đối thế nào.
 
 **Dừng dòng vốn đột ngột (sudden stop)** xảy ra khi vốn nước ngoài ngừng vào hoặc rút nhanh.
 
@@ -289,6 +297,8 @@ Nhưng cấu trúc đáo hạn quyết định tốc độ áp lực truyền v�
 
 ## 26. Fiscal dominance
 
+Khi nợ và nhu cầu tài trợ trở nên quá lớn, chính sách tiền tệ có thể bị giới hạn bởi khả năng chịu đựng của ngân sách. Fiscal dominance cần được đọc như một tương tác giữa debt service, lạm phát, lãi suất và niềm tin chứ không chỉ là một mức nợ.
+
 **Ưu thế tài khóa (fiscal dominance)** xảy ra khi quy mô nợ và nhu cầu tài trợ làm chính sách tiền tệ khó ưu tiên ổn định giá hoàn toàn.
 
 Đây là khái niệm, không phải nhãn tự động áp cho mọi nước nợ cao.
@@ -296,6 +306,8 @@ Nhưng cấu trúc đáo hạn quyết định tốc độ áp lực truyền v�
 # Phần VIII — Sovereign–bank nexus
 
 ## 27. Vòng lặp ngân hàng – chính phủ
+
+Vòng lặp này mô tả cách ngân hàng nắm giữ nợ chính phủ, chính phủ bảo lãnh hệ thống ngân hàng và cú sốc ở một bên làm suy yếu bên kia. Sơ đồ dưới đây nên được đọc theo chiều truyền dẫn và điểm phá vòng lặp.
 
 ```text
 Sovereign Risk ↑
@@ -324,6 +336,8 @@ Các tổ chức tài chính phi ngân hàng (NBFI) như funds, insurers, pensio
 Rủi ro có thể di chuyển khỏi bank balance sheet chứ không biến mất.
 
 ## 30. Margin spiral
+
+Margin spiral là cơ chế trong đó giá giảm làm collateral giảm, buộc giảm vị thế, rồi việc bán tiếp tục làm giá giảm. Phần này nối leverage, liquidity và forced selling thành một vòng khuếch đại khủng hoảng.
 
 ```text
 Asset Price ↓
@@ -456,6 +470,8 @@ Thuế quan có thể làm giá nhập khẩu tăng nhưng mức truyền sang C
 Trợ cấp, tax credit và quy định nội địa hóa có thể làm thay đổi vị trí nhà máy và capex toàn cầu.
 
 ## 44. Friend-shoring và near-shoring
+
+Sau các cú sốc thương mại và địa chính trị, chuỗi cung ứng có thể được tái cấu trúc theo độ tin cậy chính trị hoặc khoảng cách địa lý. Hai khái niệm này ảnh hưởng capex, chi phí, năng suất và resilience khác nhau.
 
 **Friend-shoring** chuyển chuỗi cung ứng sang quốc gia được xem là đáng tin cậy hơn về chính trị. **Near-shoring** chuyển sản xuất gần thị trường tiêu thụ hơn.
 
@@ -621,6 +637,8 @@ Dữ liệu động phải luôn ghi thời điểm.
 Dashboard chỉ giúp tổ chức dữ liệu. Quyết định vẫn cần cơ chế nhân quả và kiểm tra kỳ vọng đã được phản ánh trong giá.
 
 ## 60. Checklist toàn cầu
+
+Checklist cuối cùng gom chuỗi toàn cầu từ thương mại, funding, chính sách, dòng vốn tới tỷ giá và tài sản. Hãy dùng nó để kiểm tra một cú shock có kênh truyền dẫn nào, dữ liệu nào xác nhận và rủi ro nào chưa được tính.
 
 ```text
 US Growth / Inflation

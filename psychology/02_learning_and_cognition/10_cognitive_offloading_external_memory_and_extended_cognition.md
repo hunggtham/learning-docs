@@ -89,6 +89,8 @@ Một checklist tốt không cố externalize toàn bộ expertise; nó bảo v�
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 năng lực nội tại
  + độ khó task
@@ -110,7 +112,7 @@ Xem [[01_memory]], [[04_cognitive_biases_and_metacognition]], [[09_learning_tran
 
 ## Nguồn đọc nền
 
-- Burnett LK, Richmond LL. *Meta-analytic investigations of the tác động (effect / 효과) of cognitive offloading on memory-based tác vụ (task / 작업) hiệu năng (performance / 성능) and interindividual variability*. bộ nhớ (memory / 메모리) & Cognition, 2026. PMID: 40500483.
-- Ngai C, Gilbert SJ. *Metacognitive huấn luyện (training / 학습) facilitates optimal cognitive offloading*. Cognitive Research: Principles and Implications, 2026. PMID: 41817942.
+Nguồn đọc nền đặt cognitive offloading và extended cognition trong bằng chứng về task, tool và context. Hãy kiểm tra khi nào công cụ thực sự mở rộng năng lực và khi nào chỉ chuyển chi phí sang nơi khác.
 
-> **Bàn giao:** Sau **Nguồn đọc nền**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 learning and conditioning](./00_learning_and_conditioning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- Burnett LK, Richmond LL. *Meta-analytic investigations of the effect of cognitive offloading on memory-based task performance and interindividual variability*. Memory & Cognition, 2026. PMID: 40500483.
+- Ngai C, Gilbert SJ. *Metacognitive training facilitates optimal cognitive offloading*. Cognitive Research: Principles and Implications, 2026. PMID: 41817942.

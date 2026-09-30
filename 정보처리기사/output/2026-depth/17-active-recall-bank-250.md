@@ -565,6 +565,8 @@ Mỗi câu:
 | 정보시스템 구축 관리 | ___ |
 
 ## Remediation thresholds
+Phần “Remediation thresholds” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **45–50:** breadth tốt; chuyển sang scenario/mock.
 - **38–44.5:** có gaps nhỏ; dùng `15-edge-case-coverage-supplement.md` + `11-high-risk-confusion-atlas.md`.

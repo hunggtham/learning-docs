@@ -353,6 +353,8 @@ The best “tìm kiếm (search / 검색) tối ưu hóa (optimization / 최적�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 State        = đủ information để continue solving
 Action       = operation chuyển state
@@ -387,5 +389,3 @@ Learned các mô hình (models / 모델들) thường guide tìm kiếm (search 
 State-space tìm kiếm (search / 검색) nối trực tiếp từ [Agents and Environments](../00_foundations/02_intelligence_agents_and_environments.md) và [Problem Representation](../00_foundations/03_problem_representation.md) sang BFS/DFS/UCS, heuristic tìm kiếm (search / 검색), planning và games.
 
 Xem tiếp: [Uninformed Search](./01_uninformed_search.md) và [Heuristic Search](./02_heuristic_search.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 uninformed search](./01_uninformed_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

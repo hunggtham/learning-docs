@@ -1028,6 +1028,8 @@ Tailwind vẫn có `space-y-*` và `space-x-*`, sử dụng bộ chọn (selecto
 ---
 
 ## 29. `divide-*` khác `gap-*`
+Phần này nối mạch bài học với “29. `divide-*` khác `gap-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <ul class="divide-y divide-gray-200">
@@ -1253,7 +1255,9 @@ Use khi một child thật sự có cross-axis alignment khác phần còn lại
 
 ---
 
-## 38. Flex mẫu (pattern / 패턴): Media đối tượng (object / 객체)
+## 38. Flex pattern: Media Object
+Phần này nối mạch bài học với “38. Flex pattern: Media Object”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="flex gap-4">
@@ -1408,6 +1412,8 @@ Vì screen reader/focus điều hướng (navigation / 내비게이션) thườn
 ---
 
 ## 45. Subgrid
+Phần này nối mạch bài học với “45. Subgrid”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="grid-cols-subgrid">
@@ -1520,6 +1526,8 @@ nghĩa là font-size `text-lg` với leading giá trị (value / 값) tương �
 ---
 
 ## 49. Font weight
+Phần này nối mạch bài học với “49. Font weight”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 font-thin
@@ -1545,6 +1553,8 @@ Không phải font nào cũng có thực glyph ở mọi weight. trình duyệt 
 ---
 
 ## 50. Line height
+Phần này nối mạch bài học với “50. Line height”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 leading-none
@@ -1576,6 +1586,8 @@ và:
 ---
 
 ## 51. Letter spacing
+Phần này nối mạch bài học với “51. Letter spacing”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 tracking-tighter
@@ -1592,7 +1604,9 @@ Large display heading đôi khi đẹp hơn với tracking hơi âm, uppercase l
 
 ---
 
-## 52. văn bản (text / 텍스트) alignment và logical alignment
+## 52. Text alignment và logical alignment
+Phần này nối mạch bài học với “52. Text alignment và logical alignment”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 text-left
@@ -1652,6 +1666,8 @@ Nếu văn bản (text / 텍스트) vẫn không ellipsis, kiểm tra sizing ng�
 ---
 
 ## 55. Multi-line clamp
+Phần này nối mạch bài học với “55. Multi-line clamp”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <p class="line-clamp-3">
@@ -1738,7 +1754,9 @@ Văn bản (text / 텍스트) decoration tốt cho link khả năng tiếp cận
 
 ---
 
-## 59. văn bản (text / 텍스트) transform
+## 59. Text transform
+Phần này nối mạch bài học với “59. Text transform”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 uppercase
@@ -1754,6 +1772,8 @@ Nếu acronym cần uppercase vì nội dung thật sự là acronym, tốt hơn
 ---
 
 ## 60. OpenType numeric features
+Phần này nối mạch bài học với “60. OpenType numeric features”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 tabular-nums
@@ -1808,6 +1828,8 @@ Nhưng numeric shade không có mang tính ý nghĩa (semantic meaning / 의미�
 ---
 
 ## 62. Alpha modifier `/`
+Phần này nối mạch bài học với “62. Alpha modifier `/`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="bg-blue-600/50">
@@ -1918,6 +1940,8 @@ Divider nên đặt ở parent với `divide-*` nếu mục tiêu là separator 
 ---
 
 ## 66. Border radius
+Phần này nối mạch bài học với “66. Border radius”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 rounded-none
@@ -1986,6 +2010,8 @@ Nhưng outline có lợi thế mang tính ngữ nghĩa (semantic / 의미적)/di
 ---
 
 ## 69. Box shadow
+Phần này nối mạch bài học với “69. Box shadow”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 shadow-xs
@@ -2021,6 +2047,8 @@ Không dùng heavy văn bản (text / 텍스트) shadow cho body văn bản (tex
 ---
 
 ## 71. Opacity
+Phần này nối mạch bài học với “71. Opacity”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 opacity-0
@@ -2127,6 +2155,8 @@ là cách hợp lệ.
 # PHẦN VII — IMAGES, SVG, TABLES VÀ CONTENT
 
 ## 76. `aspect-*`
+Phần này nối mạch bài học với “76. `aspect-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 aspect-square
@@ -2182,6 +2212,8 @@ giúp kiểm soát vùng crop.
 ---
 
 ## 78. `size-*`
+Phần này nối mạch bài học với “78. `size-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="size-10">
@@ -2263,6 +2295,8 @@ hữu ích cho print/editorial bố cục (layout / 레이아웃).
 # PHẦN VIII — TRANSFORM, chuyển tiếp (transition / 전이), ANIMATION
 
 ## 82. Translate
+Phần này nối mạch bài học với “82. Translate”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 translate-x-4
@@ -2297,7 +2331,9 @@ thường đơn giản hơn.
 
 ---
 
-## 83. quy mô (scale / 규모), rotate, skew
+## 83. Scale, rotate, skew
+Phần này nối mạch bài học với “83. Scale, rotate, skew”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 scale-95
@@ -2400,6 +2436,8 @@ Cấp cao (senior / 시니어) thường chọn mục tiêu (target / 대상) r�
 ---
 
 ## 87. Duration, delay và easing
+Phần này nối mạch bài học với “87. Duration, delay và easing”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 duration-75
@@ -2449,6 +2487,8 @@ Không phải animation nào cũng phải vòng lặp (loop / 루프). Animation
 ---
 
 ## 89. Custom animation bằng `@theme`
+Phần này nối mạch bài học với “89. Custom animation bằng `@theme`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @theme {
@@ -2480,6 +2520,8 @@ Theme đơn vị từ (token / 토큰) cho animation biến animation name/giá 
 ---
 
 ## 90. giảm chuyển động (reduced motion)
+Phần này nối mạch bài học với “90. giảm chuyển động (reduced motion)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -2500,7 +2542,9 @@ Nếu motion chỉ là decoration, giảm/tắt nó cho người dùng đã yêu
 
 # PHẦN IX — FORMS VÀ tương tác (interaction / 상호작용)
 
-## 91. Cursor không tạo ngữ nghĩa (semantics / 의미론)
+## 91. Cursor không tạo ngữ nghĩa (semantics)
+Phần này nối mạch bài học với “91. Cursor không tạo ngữ nghĩa (semantics)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 cursor-pointer
@@ -2533,6 +2577,8 @@ mang tính ngữ nghĩa (semantic / 의미적) HTML mang keyboard hành vi (beha
 ---
 
 ## 92. Pointer events
+Phần này nối mạch bài học với “92. Pointer events”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 pointer-events-none
@@ -2557,7 +2603,9 @@ Nó không phải mang tính ngữ nghĩa (semantic / 의미적) disabled. Một
 
 ---
 
-## 93. người dùng (user / 사용자) select
+## 93. User select
+Phần này nối mạch bài học với “93. User select”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 select-none
@@ -2570,7 +2618,9 @@ select-auto
 
 ---
 
-## 94. Appearance và bản địa (native / 네이티브) controls
+## 94. Appearance và native controls
+Phần này nối mạch bài học với “94. Appearance và native controls”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 appearance-none
@@ -2590,6 +2640,8 @@ appearance-auto
 ---
 
 ## 95. `accent-*`
+Phần này nối mạch bài học với “95. `accent-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -2627,6 +2679,8 @@ Bạn vẫn nên đặt min/max ràng buộc (constraint / 제약조건) để c
 ---
 
 ## 97. Resize
+Phần này nối mạch bài học với “97. Resize”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 resize
@@ -2648,6 +2702,8 @@ Textarea thường nên cho phép ít nhất vertical resize:
 # PHẦN X — SCROLL, TOUCH VÀ vùng nhìn (viewport) tương tác (interaction / 상호작용)
 
 ## 98. Smooth scroll
+Phần này nối mạch bài học với “98. Smooth scroll”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 scroll-smooth
@@ -2725,7 +2781,9 @@ Khi trình duyệt (browser / 브라우저) scroll tới `#billing`, `scroll-mar
 
 ---
 
-## 102. Touch hành động (action / 동작)
+## 102. Touch action
+Phần này nối mạch bài học với “102. Touch action”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 touch-auto
@@ -2780,6 +2838,8 @@ Scrollbar rendering vẫn phụ thuộc trình duyệt (browser / 브라우저)/
 # PHẦN XI — thiết kế đáp ứng (responsive design)
 
 ## 104. Mobile-first thật sự nghĩa là gì?
+Phần này nối mạch bài học với “104. Mobile-first thật sự nghĩa là gì?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -2843,7 +2903,9 @@ Nếu nhóm (team / 팀) muốn mang tính ngữ nghĩa (semantic / 의미적) �
 
 ---
 
-## 106. phạm vi (range / 범위) responsive các biến thể (variants)
+## 106. Range responsive các biến thể (variants)
+Phần này nối mạch bài học với “106. Range responsive các biến thể (variants)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="md:max-xl:grid">
@@ -2982,6 +3044,8 @@ Kích thước (size / 크기) containment có ảnh hưởng sizing mạnh hơn
 # PHẦN XIII — các biến thể trạng thái (state variants)
 
 ## 111. Hover
+Phần này nối mạch bài học với “111. Hover”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <button class="bg-blue-600 hover:bg-blue-700">
@@ -2994,6 +3058,8 @@ Tailwind generate hover bộ chọn (selector) cùng handling cho hover-capable 
 ---
 
 ## 112. Focus và `focus-visible`
+Phần này nối mạch bài học với “112. Focus và `focus-visible`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 focus:
@@ -3022,6 +3088,8 @@ Form group:
 ---
 
 ## 113. Active
+Phần này nối mạch bài học với “113. Active”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 active:
@@ -3153,7 +3221,9 @@ Nếu không name, một child sâu có thể vô tình react với wrong ancest
 
 ---
 
-## 118. `peer-*`: style sibling theo sibling trạng thái (state / 상태)
+## 118. `peer-*`: style sibling theo sibling trạng thái (state)
+Phần này nối mạch bài học với “118. `peer-*`: style sibling theo sibling trạng thái (state)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <input
@@ -3178,6 +3248,8 @@ Nếu mục tiêu (target / 대상) cần style previous sibling, dùng parent `
 ---
 
 ## 119. `has-*`: parent-aware styling
+Phần này nối mạch bài học với “119. `has-*`: parent-aware styling”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <label class="has-checked:bg-blue-50">
@@ -3215,6 +3287,8 @@ Cấp cao (senior / 시니어) preference: nếu quyền sở hữu (ownership /
 ---
 
 ## 121. Child các biến thể (variants) `*:` và `**:`
+Phần này nối mạch bài học với “121. Child các biến thể (variants) `*:` và `**:`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <ul class="*:rounded-md *:px-3">
@@ -3229,6 +3303,8 @@ Cấp cao (senior / 시니어) preference: nếu quyền sở hữu (ownership /
 ---
 
 ## 122. ARIA các biến thể (variants)
+Phần này nối mạch bài học với “122. ARIA các biến thể (variants)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <button
@@ -3246,7 +3322,9 @@ Nhưng không được set ARIA sai chỉ để style. Ví dụ random `<div ari
 
 ---
 
-## 123. dữ liệu (data / 데이터) các biến thể (variants)
+## 123. Data các biến thể (variants)
+Phần này nối mạch bài học với “123. Data các biến thể (variants)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -3277,7 +3355,9 @@ JS không cần hard-code visual CSS; Tailwind/CSS không cần biết lô-gic n
 
 # PHẦN XIV — DARK chế độ (mode / 모드) VÀ người dùng (user / 사용자) PREFERENCES
 
-## 124. Dark chế độ (mode / 모드) mặc định
+## 124. Dark mode mặc định
+Phần này nối mạch bài học với “124. Dark mode mặc định”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -3501,7 +3581,9 @@ Cấp cao (senior / 시니어) đơn vị từ (token / 토큰) thiết kế (de
 
 ---
 
-## 132. Reset không gian tên (namespace / 네임스페이스) cho strict hệ thống thiết kế (design system)
+## 132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)
+Phần này nối mạch bài học với “132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @theme {
@@ -3525,6 +3607,8 @@ Strict theme phù hợp hệ thống thiết kế (design system) mature hơn be
 # PHẦN XVI — CUSTOMIZATION API CỦA TAILWIND V4
 
 ## 133. `@utility`: đăng ký tiện ích (utility) riêng
+Phần này nối mạch bài học với “133. `@utility`: đăng ký tiện ích (utility) riêng”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @utility content-auto {
@@ -3595,6 +3679,8 @@ Một definition có thể hỗ trợ (support / 지원):
 ---
 
 ## 136. `--default()` trong v4.3
+Phần này nối mạch bài học với “136. `--default()` trong v4.3”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @utility tab-* {
@@ -3692,6 +3778,8 @@ và multiple:
 ---
 
 ## 140. `@apply`
+Phần này nối mạch bài học với “140. `@apply`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 .select2-dropdown {
@@ -3756,6 +3844,8 @@ Vì vậy phụ thuộc (dependency / 의존성) chứa Tailwind classes có th�
 ---
 
 ## 143. `@source`
+Phần này nối mạch bài học với “143. `@source`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @source "../node_modules/@acme/ui-lib";
@@ -3771,7 +3861,9 @@ Monorepo:
 
 ---
 
-## 144. `source()` cơ sở (base / 기반) đường dẫn (path / 경로)
+## 144. `source()` base path
+Phần này nối mạch bài học với “144. `source()` base path”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @import "tailwindcss"
@@ -3782,7 +3874,9 @@ Dùng khi hiện tại (current / 현재) working directory của bản dựng (
 
 ---
 
-## 145. Ignore đường dẫn (path / 경로)
+## 145. Ignore path
+Phần này nối mạch bài học với “145. Ignore path”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @source not "../src/legacy";
@@ -3793,6 +3887,8 @@ Nếu folder lớn không có Tailwind candidates, loại khỏi scan có thể 
 ---
 
 ## 146. `source(none)`
+Phần này nối mạch bài học với “146. `source(none)`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @import "tailwindcss"
@@ -4008,6 +4104,8 @@ mang tính ngữ nghĩa (semantic / 의미적) HTML vẫn phải chọn đúng e
 ---
 
 ## 154. `sr-only`
+Phần này nối mạch bài học với “154. `sr-only`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <button>
@@ -4274,6 +4372,8 @@ chuyển đổi (migration) không chỉ đổi cú pháp (syntax / 문법); nó
 ---
 
 ## 168. `@config`
+Phần này nối mạch bài học với “168. `@config`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @config "../../tailwind.config.js";
@@ -4286,6 +4386,8 @@ Nó là cầu nối (bridge / 브리지), không nhất thiết là mục tiêu 
 ---
 
 ## 169. `@plugin`
+Phần này nối mạch bài học với “169. `@plugin`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```css
 @plugin "@tailwindcss/typography";
@@ -4312,7 +4414,9 @@ thay vì old leading `!` style trong mã (code / 코드) cũ.
 
 # PHẦN XXIII — các mẫu dùng trong môi trường vận hành (production / 운영 환경) (production patterns)
 
-## 171. Page bộ chứa (container / 컨테이너)
+## 171. Page container
+Phần này nối mạch bài học với “171. Page container”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -4337,7 +4441,9 @@ Bạn không cần `.container-custom` nếu mẫu (pattern / 패턴) chỉ dùn
 
 ---
 
-## 172. ngăn xếp (stack / 스택)
+## 172. Stack
+Phần này nối mạch bài học với “172. Stack”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="flex flex-col gap-4">
@@ -4353,6 +4459,8 @@ Use cho:
 ---
 
 ## 173. Cluster
+Phần này nối mạch bài học với “173. Cluster”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="flex flex-wrap items-center gap-2">
@@ -4369,6 +4477,8 @@ Use cho:
 ---
 
 ## 174. Responsive card grid
+Phần này nối mạch bài học với “174. Responsive card grid”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div
@@ -4389,6 +4499,8 @@ Nếu thành phần (component / 컴포넌트) ngữ cảnh (context / 맥락) t
 ---
 
 ## 175. Sticky app header
+Phần này nối mạch bài học với “175. Sticky app header”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <header
@@ -4436,7 +4548,9 @@ Tailwind style không tự cung cấp quản lý tiêu điểm (focus management
 
 ---
 
-## 177. Form trường dữ liệu (field / 필드)
+## 177. Form field
+Phần này nối mạch bài học với “177. Form field”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <label class="grid gap-1.5">
@@ -4470,6 +4584,8 @@ Mỗi lớp (class / 클래스) có responsibility rõ: box, spacing, focus, ki�
 ---
 
 ## 178. Truncated row
+Phần này nối mạch bài học với “178. Truncated row”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```html
 <div class="flex items-center gap-3">

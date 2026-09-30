@@ -1,63 +1,48 @@
-# 연산자 (Operators)
+# 237. 변수명 작성 규칙 (Variable Naming Rules)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **연산자 (Operators)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **237. 변수명 작성 규칙 (Variable Naming Rules)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **237. 변수명 작성 규칙 (Variable Naming Rules)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **연산자 (Operators)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-연산자
+변수명, 작성, 규칙
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **237. 변수명 작성 규칙 (Variable Naming Rules)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **연산자 심화 (Operators - Advanced)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**에서 만든 기준을 이어받아 **237. 변수명 작성 규칙 (Variable Naming Rules)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **연산자 (Operators)** và nối nó với **연산자 심화 (Operators - Advanced)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **237. 변수명 작성 규칙 (Variable Naming Rules)** và nối nó với **연산자 (Operators)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 연산자 (Operators)
-### 164. 산술 연산자 (Arithmetic Operators / Toán tử số học)
-- `%`: 나머지 (Phần dư). 정수만 연산 가능 (Chỉ dùng cho số nguyên).
-- `++`: 증가 (Tăng 1).
-  - 전치 (Prefix): `++a` (Tăng rồi mới dùng).
-  - 후치 (Postfix): `a++` (Dùng rồi mới tăng).
-- `--`: 감소 (Giảm 1). `--a` hoặc `a--`.
-  - *Example / Ví dụ*: `int a = 5; b = ++a;` -> a=6, b=6.
-  - 💡 *Mẹo ghi nhớ*: Prefix (++a) = Làm trước. Postfix (a++) = Làm sau.
+## 237. 변수명 작성 규칙 (Variable Naming Rules)
 
-### 165. 비트 연산자 (Bitwise Operators / Toán tử bit)
-- `&` (and): 모든 비트가 1일 때만 1. (Chỉ bằng 1 khi tất cả các bit đều là 1).
-- `^` (xor): 다르면 1, 같으면 0. (Khác nhau là 1, giống nhau là 0).
-- `|` (or): 한 비트라도 1이면 1. (Chỉ cần một bit là 1 thì bằng 1).
-- `~` (not): 각 비트의 부정. (Phủ định từng bit).
-- `<<` / `>>`: 왼쪽/오른쪽 시프트. (Dịch trái/phải bit).
-  - *Example / Ví dụ*: `5 & 3` (0101 & 0011) = `1` (0001).
-  - 💡 *Mẹo ghi nhớ*: AND (&) khắt khe (đều phải 1). OR (|) dễ dãi (1 cái là đủ). XOR (^) thích sự khác biệt.
+Ở bước 7/91, **237. 변수명 작성 규칙 (Variable Naming Rules)** xuất hiện như phần tiếp nối của **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-### 166. 논리 연산자 (Logical Operators / Toán tử logic)
-- `!` (not): 부정 (Phủ định).
-- `&&` (and): 모두 참이면 참 (Cả hai đúng thì đúng).
-- `||` (or): 하나라도 참이면 참 (Một trong hai đúng thì đúng).
-  - *Example / Ví dụ*: `(a > 0) && (b > 0)`
-  - 💡 *Mẹo ghi nhớ*: Tương tự như toán tử bit nhưng áp dụng cho giá trị đúng/sai (true/false).
+Để đọc **237. 변수명 작성 규칙 (Variable Naming Rules)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-### 167. 조건 연산자 (Conditional Operator / Toán tử điều kiện)
-- 조건에 따라 서로 다른 수식을 수행한다. (Thực hiện các biểu thức khác nhau tùy thuộc vào điều kiện).
-- `조건 ? 참일 때 : 거짓일 때`
-  - *Example / Ví dụ*: `mx = a < b ? b : a;` (Nếu a < b thì mx = b, ngược lại mx = a).
-  - 💡 *Mẹo ghi nhớ*: Dấu `?` là hỏi xem điều kiện đúng không, nếu đúng lấy cái trước `:`, sai lấy cái sau `:`.
+Phần “237. 변수명 작성 규칙 (Variable Naming Rules)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-### 168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)
-- 단항 (Unary) > 산술 (Arithmetic) > 시프트 (Shift) > 관계 (Relational) > 비트 (Bitwise) > 논리 (Logical) > 조건 (Conditional) > 대입 (Assignment) > 순서 (Comma).
-- 산술 연산자 중에서는 `*, /, %` ưu tiên cao hơn `+, -`.
-  - *Example / Ví dụ*: `a + b * c` thì phép nhân `*` được thực hiện trước `+`.
-  - 💡 *Mẹo ghi nhớ*: Dấu ngoặc () luôn cao nhất. Đơn, Số, Dịch, Quan, Bit, lô-gic (logic / 논리), Điều, Gán.
+- 영문자, 숫자, 밑줄(`_`)의 조합만 가능.
+- **첫 글자는 숫자로 시작할 수 없음** (예: `1a` 안됨).
+- 공백이나 특수문자(`+`, `-`, `*`, `/`, `@` 등) 사용 금지.
+- 예약어(`if`, `for`, `while` 등) 사용 금지.
+- 대소문자 엄격히 구분.
+
+**Giải thích (Vietnamese):**
+Quy tắc đặt tên biến: Không được bắt đầu bằng số, không có khoảng trắng, không chứa ký tự đặc biệt (trừ dấu gạch dưới `_`), không dùng từ khoá của ngôn ngữ.
+
+---
+
+Như vậy, **237. 변수명 작성 규칙 (Variable Naming Rules)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **연산자 (Operators)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

@@ -29,6 +29,8 @@ Chính sách (policy / 정책) improvement theorem cho biết chính sách (poli
 
 ## Chính sách (policy / 정책) Iteration
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 initialize π
 repeat:
@@ -108,11 +110,13 @@ Classical planning tìm kiếm (search / 검색) enumerates trajectories; DP reu
 
 ## Limitations
 
-- cần known mô hình (model / 모델);
-- trạng thái (state / 상태) enumeration;
-- chính xác (exact / 정확한) expectation có thể expensive;
-- mô hình (model / 모델) errors propagate;
-- partial khả năng quan sát (observability / 관측 가능성) cần richer belief-state formulation.
+Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
+
+- cần known model;
+- state enumeration;
+- exact expectation có thể expensive;
+- model errors propagate;
+- partial observability cần richer belief-state formulation.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -137,5 +141,3 @@ Approximate/partial evaluation vẫn có thể tạo useful variants.
 DP nối Bellman equations với sample-based methods. Monte Carlo sẽ bỏ known chuyển tiếp (transition / 전이) mô hình (model / 모델) và dùng complete sampled returns.
 
 Xem tiếp: [Monte Carlo Methods](./04_monte_carlo_methods.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reinforcement learning foundations](./00_reinforcement_learning_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

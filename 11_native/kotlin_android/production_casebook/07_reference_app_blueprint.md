@@ -49,7 +49,9 @@ Một cấu trúc có thể là:
 
 Trong app nhỏ, nhiều mô-đun (module / 모듈) trên có thể chỉ là gói (package / 패키지). Đừng mô-đun (module / 모듈) hóa để đạt “kiến trúc chuẩn”. Tách mô-đun (module / 모듈) khi cần quyền sở hữu (ownership / 소유권)/bản dựng (build / 빌드)/API ranh giới (boundary / 경계).
 
-## 3. phụ thuộc (dependency / 의존성) direction
+## 3. Dependency direction
+Phần này nối mạch Android vừa học với “3. Dependency direction”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 feature UI
@@ -65,7 +67,9 @@ Không để `core:database` import Composable. Không để `core:network` navi
 
 `:app` là composition gốc (root / 루트): kết nối DI đồ thị (graph / 그래프), top-level điều hướng (navigation / 내비게이션) và ứng dụng (application / 애플리케이션) cấu hình (configuration / 구성).
 
-## 4. lĩnh vực (domain / 도메인) mô hình (model / 모델)
+## 4. Domain model
+Phần này nối mạch Android vừa học với “4. Domain model”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 data class Article(
@@ -82,7 +86,9 @@ value class ArticleId(val value: String)
 
 Giá trị (value / 값) lớp (class / 클래스) có thể giảm nhầm ID giữa thực thể (entity / 엔터티) khác nhau mà thời gian chạy (runtime / 런타임) overhead thấp trong nhiều trường hợp (case / 사례). Tuy nhiên interop/serialization/boxing cần hiểu trước khi dùng API công khai (public API / 공개 API) rộng.
 
-## 5. mạng (network / 네트워크) DTO
+## 5. Network DTO
+Phần này nối mạch Android vừa học với “5. Network DTO”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Serializable
@@ -96,7 +102,9 @@ data class ArticleDto(
 
 DTO phản ánh máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약), không expose thẳng lên UI.
 
-## 6. cơ sở dữ liệu (database / 데이터베이스) thực thể (entity / 엔터티)
+## 6. Database Entity
+Phần này nối mạch Android vừa học với “6. Database Entity”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Entity(tableName = "articles")
@@ -112,7 +120,9 @@ data class ArticleEntity(
 
 Thực thể (entity / 엔터티) phản ánh cục bộ (local / 로컬) lưu trữ (storage / 저장소). Local-only siêu dữ liệu (metadata / 메타데이터) không cần xuất hiện trong DTO/lĩnh vực (domain / 도메인) nếu không có ý nghĩa ở đó.
 
-## 7. Repository đặc tả hợp đồng (contract / 계약)
+## 7. Repository contract
+Phần này nối mạch Android vừa học với “7. Repository contract”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 interface ArticlesRepository {
@@ -141,7 +151,9 @@ network response
 
 Mạng (network / 네트워크) thất bại (fail / 실패) nhưng DB có bộ nhớ đệm (cache / 캐시): UI vẫn kết xuất (render / 렌더링) bộ nhớ đệm (cache / 캐시) + refresh lỗi (error / 오류) indicator.
 
-## 9. UI trạng thái (state / 상태)
+## 9. UI state
+Phần này nối mạch Android vừa học với “9. UI state”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 sealed interface FeedUiState {
@@ -161,6 +173,8 @@ sealed interface FeedUiState {
 Không bắt buộc sealed lớp (class / 클래스); dữ liệu (data / 데이터) lớp (class / 클래스) tổng hợp cũng được. Chọn biểu diễn (representation / 표현) làm invalid trạng thái (state / 상태) khó biểu diễn.
 
 ## 10. ViewModel
+Phần này nối mạch Android vừa học với “10. ViewModel”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 class FeedViewModel(
@@ -192,7 +206,9 @@ class FeedViewModel(
 
 Thực tế refresh trạng thái (state / 상태)/lỗi (error / 오류) cần kết hợp rõ hơn; snippet chỉ minh họa direction.
 
-## 11. Compose tuyến (route / 경로)
+## 11. Compose Route
+Phần này nối mạch Android vừa học với “11. Compose Route”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Composable
@@ -212,7 +228,9 @@ fun FeedRoute(
 
 `FeedScreen` pure hơn tuyến (route / 경로) và không giữ NavController/repository.
 
-## 12. điều hướng (navigation / 내비게이션) đặc tả hợp đồng (contract / 계약)
+## 12. Navigation contract
+Phần này nối mạch Android vừa học với “12. Navigation contract”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Serializable data object FeedRoute
@@ -238,7 +256,9 @@ Feed list | Article detail pane
 
 Nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) vẫn là selected article ID. Presentation khác theo cửa sổ (window / 윈도우) cấu hình (configuration / 구성).
 
-## 14. Session đồ thị (graph / 그래프)
+## 14. Session graph
+Phần này nối mạch Android vừa học với “14. Session graph”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 AppStart
@@ -253,7 +273,9 @@ AuthGraph      MainGraph
 
 Gốc (root / 루트) UI observe SessionRepository. Protected repository vẫn dựa backend authorization; điều hướng (navigation / 내비게이션) chỉ điều khiển UX.
 
-## 15. đơn vị từ (token / 토큰) tầng (layer / 계층)
+## 15. Token layer
+Phần này nối mạch Android vừa học với “15. Token layer”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 TokenStore
@@ -267,7 +289,9 @@ Repositories
 
 Không tính năng (feature / 기능) nào tự implement refresh đơn vị từ (token / 토큰).
 
-## 16. lỗi (error / 오류) hierarchy
+## 16. Error hierarchy
+Phần này nối mạch Android vừa học với “16. Error hierarchy”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 sealed interface AppError {
@@ -378,7 +402,9 @@ interface SettingsRepository {
 
 Compose gốc (root / 루트) collect settings và apply theme. UI con không tự đọc DataStore.
 
-## 22. Analytics ranh giới (boundary / 경계)
+## 22. Analytics boundary
+Phần này nối mạch Android vừa học với “22. Analytics boundary”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 interface Analytics {
@@ -420,6 +446,8 @@ ViewModel/state holder
 Đừng singleton đối tượng (object / 객체) chỉ vì “Hilt tiện”. phạm vi (scope / 범위) theo thời gian tồn tại (lifetime / 수명) và mutable trạng thái (state / 상태).
 
 ## 25. Dispatcher injection
+Phần này nối mạch Android vừa học với “25. Dispatcher injection”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 @Qualifier
@@ -479,7 +507,9 @@ Bản phát hành (release / 릴리스):
 - Macrobenchmark startup/scroll;
 - di chuyển (migration / 마이그레이션) kiểm thử (test / 테스트) all supported lược đồ (schema / 스키마) đường dẫn (path / 경로).
 
-## 28. CI chuỗi xử lý (pipeline / 파이프라인)
+## 28. CI pipeline
+Phần này nối mạch Android vừa học với “28. CI pipeline”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 PR
@@ -498,7 +528,9 @@ main/release
 └─ internal/staged distribution
 ```
 
-## 29. bản dựng (build / 빌드) variant
+## 29. Build variant
+Phần này nối mạch Android vừa học với “29. Build variant”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 debug

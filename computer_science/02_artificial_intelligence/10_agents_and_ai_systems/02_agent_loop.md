@@ -227,6 +227,8 @@ Nếu step 4 phát hiện thiếu pricing, tác nhân (agent / 에이전트) c�
 
 ## Example: coding tác nhân (agent / 에이전트)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 inspect issue
 → search relevant code
@@ -267,5 +269,3 @@ Transcript có thể chứa trạng thái (state / 상태), nhưng structured pe
 Tác nhân (agent / 에이전트) vòng lặp (loop / 루프) nối điều khiển (control / 제어) lý thuyết (theory / 이론) intuition, trạng thái (state / 상태) machines, phân tán (distributed / 분산) các hệ thống (systems / 시스템들) và classical tác nhân (agent / 에이전트) kiến trúc (architecture / 아키텍처). Phần tiếp theo tập trung vào cách phân rã goal thành plan có thể thực thi.
 
 Xem tiếp: [Planning and Task Decomposition](./03_planning_and_task_decomposition.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from llm to agent](./00_from_llm_to_agent.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

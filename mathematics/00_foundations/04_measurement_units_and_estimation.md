@@ -271,6 +271,8 @@ Nếu errors ngẫu nhiên, độc lập và small, variance propagation thườ
 
 ### Worked example: area của rectangle
 
+Ví dụ này cho thấy cách chọn đơn vị, ghi precision và truyền uncertainty qua một phép tính đơn giản. Hãy theo từng bước để thấy measurement không chỉ là thay số vào công thức.
+
 ```math
 A=LW.
 ```
@@ -468,6 +470,4 @@ Trong kỹ thuật (engineering / 엔지니어링) và dữ liệu (data / 데�
 
 ## Dùng chung (common / 공통) Misconceptions
 
-Nhiều decimal places không đồng nghĩa accurate. Dimensionally correct không đồng nghĩa physically correct. Relative lỗi (error / 오류) không ổn khi tham chiếu (reference / 참조) gần zero. Log quy mô (scale / 규모) không “bóp méo dữ liệu” một cách tùy tiện; nó đổi câu hỏi từ additive difference sang multiplicative ratio. Một estimate thô có các giả định (assumptions / 가정들) rõ thường hữu ích hơn một con số rất chính xác nhưng không biết denominator, đơn vị (unit / 단위) hoặc bất định (uncertainty / 불확실성).
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematical thinking](./00_mathematical_thinking.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nhiều decimal places không đồng nghĩa accurate. Dimensionally correct không đồng nghĩa physically correct. Relative error không ổn khi reference gần zero. Log scale không “bóp méo dữ liệu” một cách tùy tiện; nó đổi câu hỏi từ additive difference sang multiplicative ratio. Một estimate thô có assumptions rõ thường hữu ích hơn một con số rất chính xác nhưng không biết denominator, unit hoặc uncertainty.

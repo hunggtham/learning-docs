@@ -326,6 +326,8 @@ source distribution
 
 ## 24. chuỗi xử lý (pipeline / 파이프라인) hệ thống
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Topology events
     ↓
@@ -349,5 +351,3 @@ Mỗi tầng dùng một cấu trúc khác vì câu hỏi khác nhau.
 > Một hệ thống routing là sự kết hợp giữa **đồ thị (graph / 그래프) lập luận (reasoning / 추론) ở điều khiển (control / 제어) plane** và **prefix/băm (hash / 해시) lookup ở mặt phẳng dữ liệu (data plane / 데이터 플레인)**. Dijkstra giải một thành phần nguyên thủy (primitive / 기본 요소) quan trọng, nhưng thiết kế thật còn cần biểu diễn (representation / 표현), cập nhật (update / 업데이트) chiến lược (strategy / 전략), tie-break, failover, bộ nhớ đệm (cache / 캐시) và consistency.
 
 Xem thêm: [Graph Modeling](../03_graphs/00_graph_modeling_and_representation.md), [Shortest Paths](../03_graphs/02_shortest_paths.md), [Priority Queues](../01_linear_structures/03_queues_deques_and_priority_queues.md), [Trie](../02_trees/04_tries.md), [Hash Tables](../01_linear_structures/04_hash_tables.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 choose the right data structure](./00_choose_the_right_data_structure.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

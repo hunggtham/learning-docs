@@ -86,6 +86,8 @@ Nhưng chi phí (cost / 비용) tăng exponential theo `n`, nên truth tables kh
 
 ## 4. De Morgan's laws từ viewpoint complement
 
+De Morgan biến complement của AND thành OR của các complement và ngược lại. Đọc nó như một quy tắc đổi cấu trúc giúp đơn giản hóa logic, mạch số và điều kiện trong code.
+
 ```math
 \neg(P\land Q)
 \equiv

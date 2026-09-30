@@ -304,6 +304,8 @@ Exposure có trùng danh mục hiện tại không?
 
 ## 37. Mô hình tư duy cuối cùng
 
+Phần cuối chuyển kiến thức về factor thành một quy trình kiểm tra sản phẩm cụ thể. Bắt đầu từ nhãn và phương pháp chỉ số, ta lần lượt truy tới exposure thực, chi phí, rủi ro crowded trade và vai trò trong danh mục.
+
 ```text
 Nhãn sản phẩm
 → Phương pháp chỉ số
@@ -317,5 +319,3 @@ Nhãn sản phẩm
 ```
 
 Đầu tư nhân tố chỉ hữu ích khi nhà đầu tư hiểu **mình đang nhận phần bù nào, qua quy tắc nào và với chi phí/rủi ro gì**. Tên gọi `value`, `quality` hay `smart beta` không thay thế phân tích phương pháp.
-
-> **Bàn giao:** Sau **37. Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 STOCKS ETF AND FUNDS](./01_STOCKS_ETF_AND_FUNDS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

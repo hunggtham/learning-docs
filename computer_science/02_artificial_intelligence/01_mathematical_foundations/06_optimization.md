@@ -489,6 +489,8 @@ Adam mạnh trong nhiều Deep học tập (learning / 학습) tasks, nhưng kh�
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Model architecture → những functions nào có thể represent
 Loss/objective      → behavior nào được rewarded
@@ -522,6 +524,4 @@ Không. Optimizer faithfully follows provided tín hiệu (signal / 신호); mis
 
 Tối ưu hóa (optimization / 최적화) nối [Calculus](./04_calculus_for_ai.md) với Machine học tập (learning / 학습) huấn luyện (training / 학습) và nối trực tiếp tới AI an toàn (safety / 안전) qua mục tiêu (objective / 목표) specification. Sau này SGD/AdamW sẽ quay lại trong Neural Networks; constrained and chính sách (policy / 정책) tối ưu hóa (optimization / 최적화) quay lại trong Reinforcement học tập (learning / 학습); preference objectives quay lại trong LLM Alignment.
 
-Khi huấn luyện (training / 학습) fails, đừng chỉ đổi optimizer. Hãy kiểm tra mục tiêu (objective / 목표), dữ liệu (data / 데이터) quy mô (scale / 규모), normalization, độ dốc (gradient / 기울기) statistics, learning-rate schedule, batch kích thước (size / 크기), initialization và numerical precision như một coupled hệ thống (system / 시스템).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematics for ai](./00_mathematics_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi training fails, đừng chỉ đổi optimizer. Hãy kiểm tra objective, data scale, normalization, gradient statistics, learning-rate schedule, batch size, initialization và numerical precision như một coupled system.

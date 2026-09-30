@@ -148,6 +148,8 @@ Một trong những bài học quan trọng nhất của algebra là **biểu di
 
 ### Expanded form
 
+Expanded form làm lộ từng hạng tử và phù hợp khi cộng, trừ hoặc so sánh hệ số. Nó là một cách biểu diễn của cùng đa thức, không phải một đa thức khác.
+
 ```math
 ax^2+bx+c
 ```
@@ -156,6 +158,8 @@ làm coefficients và algebraic combination rõ.
 
 ### Factored form
 
+Factored form làm lộ các nhân tử và nghiệm tiềm năng. Dùng nó khi muốn thấy cấu trúc tích hoặc giải phương trình bằng zero-product rule.
+
 ```math
 a(x-r_1)(x-r_2)
 ```
@@ -163,6 +167,8 @@ a(x-r_1)(x-r_2)
 làm roots và sign cấu trúc (structure / 구조) rõ.
 
 ### Vertex form
+
+Vertex form làm lộ đỉnh và phép tịnh tiến của parabola. Nó nối hệ số đại số với vị trí, hướng mở và cực trị trên đồ thị.
 
 ```math
 a(x-h)^2+k

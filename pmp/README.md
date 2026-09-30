@@ -21,6 +21,8 @@ Exam 2026 cũng dùng item format gần dự án (project / 프로젝트) công 
 > **Chuyển mạch:** Từ **Bản chất của PMP trong thư viện này**, ta sang **học tập (learning / 학습) phụ thuộc (dependency / 의존성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Học tập (learning / 학습) phụ thuộc (dependency / 의존성)
+Phần “Học tập (learning / 학습) phụ thuộc (dependency / 의존성)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 project vs operations / outcome / value

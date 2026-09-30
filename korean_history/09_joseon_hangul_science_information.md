@@ -72,4 +72,16 @@ Nếu tới **Jongmyo**, hãy nhớ music/calendar/ritual không tách biệt. S
 
 Hangul giảm technical học tập (learning / 학습) chi phí (cost / 비용) nhưng xã hội (social / 사회적) adoption còn bị prestige và institution chặn. Điều này giải thích vì sao chapter tiếp theo về status/family/economy quan trọng: **truy cập (access / 접근) to thông tin (information / 정보) phụ thuộc xã hội (social / 사회적) position**. Một writing technology mới chỉ mở possibility; ai thực sự sử dụng nó còn do gender, lớp (class / 클래스), occupation, education và genre quyết định.
 
+## Ai thật sự dùng Hangul?
+
+Hangul xuất hiện trong văn bản cung đình, nhưng việc sử dụng thường nhật còn đi qua thư từ gia đình, truyện, lời cầu nguyện, sách thuốc, hợp đồng và ghi chép của phụ nữ hoặc người không theo con đường khoa cử. Nói “Hangul giải phóng mọi người” là quá nhanh; nhiều người vẫn bị giới hạn bởi khả năng mua giấy, đi học và được phép nói trong không gian công cộng. Cách chính xác hơn là: Hangul **mở một kênh có chi phí thấp hơn**, còn việc kênh đó có đến được ai phụ thuộc quan hệ xã hội.
+
+## Chuỗi cung ứng của một trang sách
+
+Một văn bản cần người soạn, người biên tập, giấy, mực, khuôn hoặc con chữ, người in, người vận chuyển và người đọc. Triều đình có thể huy động nguồn lực lớn cho lịch, luật và sách nông nghiệp; một hộ gia đình chỉ có thể tiếp cận những văn bản rẻ, ngắn hoặc được truyền miệng. Vì vậy lịch sử thông tin phải theo cả **chi phí sao chép (replication cost / 복제 비용)** và **chi phí tiếp cận (access cost / 접근 비용)**, không chỉ theo việc một phát minh có tồn tại hay không.
+
+## Bài tập đọc tại địa điểm
+
+Khi xem một bản Hunminjeongeum hoặc dụng cụ thiên văn, hãy ghi ba điều: vật thể đo hoặc mã hóa cái gì; ai có quyền đặt hàng và bảo quản; người dân gặp nó qua trường học, thuế, mùa vụ hay nghi lễ nào. Sau đó đối chiếu với `28_education_writing_science_technology_history.md` để phân biệt một thiết kế cung đình với mức độ lan tỏa trong xã hội.
+
 Đọc cùng [`08_early_joseon_state_confucian_order.md`](08_early_joseon_state_confucian_order.md), [`10_joseon_society_status_family_economy.md`](10_joseon_society_status_family_economy.md) và [`28_education_writing_science_technology_history.md`](28_education_writing_science_technology_history.md).

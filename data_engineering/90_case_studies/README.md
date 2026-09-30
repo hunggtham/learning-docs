@@ -77,6 +77,8 @@ Mỗi trường hợp (case / 사례) phải có `context → invariant → fail
 > **Chuyển mạch:** Từ **Cách viết trường hợp (case / 사례) study mới**, ta sang **Ma trận đối chiếu trường hợp (case / 사례)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Ma trận đối chiếu trường hợp (case / 사례)
+Phần “Ma trận đối chiếu trường hợp (case / 사례)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | trường hợp (case / 사례) | Primary thời gian (time / 시간) | trạng thái (state / 상태) | khôi phục (recovery / 복구) đơn vị (unit / 단위) | bằng chứng (evidence / 증거) |
 |---|---|---|---|---|

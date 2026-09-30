@@ -600,6 +600,8 @@ Vì vậy numerical rank là mô hình (model / 모델)/kỹ thuật (engineerin
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần này nối determinant, rank và null space với khả năng đảo, số chiều thông tin và nghiệm của hệ tuyến tính. Hãy dùng các connection để kiểm tra một ma trận đang giữ, nén hay làm mất thông tin.
+
 ```text
 volume scaling → determinant
 reachable outputs → rank
@@ -617,6 +619,4 @@ coordinate volume change → Jacobian determinant
 
 ## Dùng chung (common / 공통) Misconceptions
 
-Determinant không phải chỉ để kiểm thử (test / 테스트) inverse. Rank không phải số nonzero entries. `det(A)` nhỏ không tự động nghĩa ma trận (matrix / 행렬) ill-conditioned nếu chưa xét quy mô (scale / 규모). Square invertible ma trận (matrix / 행렬) có null không gian (space / 공간) `{0}`, nhưng rectangular matrices cần injective/surjective phân tích (analysis / 분석) riêng. tường minh (explicit / 명시적) inverse hiếm khi là cách tốt nhất để solve hệ thống (system / 시스템). Numerical rank phụ thuộc tolerance; chính xác (exact / 정확한) algebraic rank và practical rank có thể khác.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 vectors](./00_vectors.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Determinant không phải chỉ để test inverse. Rank không phải số nonzero entries. `det(A)` nhỏ không tự động nghĩa matrix ill-conditioned nếu chưa xét scale. Square invertible matrix có null space `{0}`, nhưng rectangular matrices cần injective/surjective analysis riêng. Explicit inverse hiếm khi là cách tốt nhất để solve system. Numerical rank phụ thuộc tolerance; exact algebraic rank và practical rank có thể khác.

@@ -13,6 +13,8 @@ Econometrics nối economic questions với dữ liệu (data / 데이터) bằn
 7. [Robustness, External Validity & Research Workflow](./06_robustness_external_validity_and_research_workflow.md) — threat-specific robustness, falsification, sensitivity/bounds, multiple testing, reproducibility/replication, transportability, scale-up, economic significance và paper-reading workflow.
 
 ## Trục học (learning spine / 학습 축)
+Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Economic question

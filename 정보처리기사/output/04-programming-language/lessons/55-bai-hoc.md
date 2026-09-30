@@ -1,60 +1,55 @@
-# 가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)
+# 191. 결합도 (Coupling / Mức độ phụ thuộc)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **191. 결합도 (Coupling / Mức độ phụ thuộc)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **191. 결합도 (Coupling / Mức độ phụ thuộc)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **192. 응집도 (Cohesion / Mức độ gắn kết)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-가상기억장치, 페이지, 교체
+결합도
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **소프트웨어 공학 (Software Engineering)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**에서 만든 기준을 이어받아 **191. 결합도 (Coupling / Mức độ phụ thuộc)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)** và nối nó với **소프트웨어 공학 (Software Engineering)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **191. 결합도 (Coupling / Mức độ phụ thuộc)** và nối nó với **192. 응집도 (Cohesion / Mức độ gắn kết)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
 
 ---
 
-## 가상기억장치 및 페이지 교체 (Virtual Memory & Page Replacement)
-### 290. 페이징 기법 (Paging / Phân trang)
-- 프로그램을 **동일한 크기**로 나눔 (Chia chương trình thành các phần có kích thước BẰNG NHAU).
-- 프로그램 단위 = 페이지 (Page), 기억장치 단위 = 페이지 프레임 (Page Frame).
-- **내부 단편화 (Internal Fragmentation)** 발생 가능. (Có thể xảy ra phân mảnh trong).
+## 191. 결합도 (Coupling / Mức độ phụ thuộc)
 
-### 291. 세그먼테이션 기법 (Segmentation / Phân đoạn)
-- 프로그램을 배열이나 함수 같은 **다양한 크기의 논리적인 단위**로 나눔. (Chia theo khối logic kích thước KHÁC NHAU).
-- **외부 단편화 (External Fragmentation)** 발생 가능. (Có thể xảy ra phân mảnh ngoài).
-  - 💡 *Mẹo ghi nhớ*: Page = Kích thước cố định (Sinh ra rác bên trong). Segment = Kích thước lô-gic (logic / 논리) (Sinh ra rác bên ngoài).
+Ở bước 55/91, **191. 결합도 (Coupling / Mức độ phụ thuộc)** xuất hiện như phần tiếp nối của **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**. Ta bắt đầu bằng việc xác định phạm vi và mục đích của nó, rồi mới đọc các quy tắc, điều kiện và ví dụ để thấy kiến thức hoạt động như thế nào.
 
-### 292. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang)
-- **OPT (Optimal)**: 앞으로 가장 오랫동안 사용하지 않을 페이지 교체. (Thay thế trang sẽ lâu được dùng nhất trong tương lai - Tốt nhất nhưng khó thực hiện).
-- **FIFO (First In First Out)**: 가장 먼저 들어온 페이지 교체. (Vào trước ra trước).
-- **LRU (Least Recently Used)**: 최근에 가장 오랫동안 사용하지 않은 페이지 교체. (Thay thế trang lâu nhất chưa được truy cập).
-- **LFU (Least Frequently Used)**: 사용 빈도가 가장 적은 페이지 교체. (Thay thế trang có số lần truy cập ít nhất).
-- **NUR (Not Used Recently)**: 참조 비트(R)와 변형/수정 비트(M)를 조합해 페이지를 네 등급으로 나누고 낮은 등급부터 교체한다. (Dùng hai bit R/M để phân loại bốn mức.)
+Để đọc **191. 결합도 (Coupling / Mức độ phụ thuộc)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
 
-### 293. 페이지 크기 (Page Size / Kích thước trang)
-- **작을 경우 (Kích thước nhỏ)**: 단편화 감소, 매핑 늦어짐, 디스크 접근 많아짐. (Phân mảnh ít, nhưng bảng ánh xạ lớn, truy cập ổ đĩa nhiều hơn).
-- **클 경우 (Kích thước lớn)**: 단편화 증가, 매핑 빨라짐, 불필요한 내용까지 적재될 수 있음. (Phân mảnh nhiều, ánh xạ nhanh, có thể load cả những phần thừa).
+Phần “191. 결합도 (Coupling / Mức độ phụ thuộc)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
-### 294. Locality (국부성 / Tính địa phương)
-- 프로세스가 실행되는 동안 주기억장치의 일부 페이지만 집중적으로 참조하는 성질. (Tiến trình có xu hướng chỉ tập trung truy cập một số trang cụ thể).
-- **시간 구역성 (Temporal Locality)**: vòng lặp (loop / 루프), 스택, 변수 (Vòng lặp, stack, biến - Truy cập cùng 1 chỗ nhiều lần).
-- **공간 구역성 (Spatial Locality)**: 배열 순회, 순차적 코드 (Mảng, mã tuần tự - Truy cập các ô nhớ cạnh nhau).
+- 모듈 간에 상호 의존하는 정도. 약할수록 독립성이 높고 품질이 좋음.
+- **결합도가 약한 것부터 강한 순서 (Tốt -> Xấu)**:
+  1. **자료 (Data)**: 파라미터로 단순 데이터(값)만 전달 (가장 좋음).
+  2. **스탬프 (Stamp)**: 배열이나 레코드 등 자료 구조를 전달.
+  3. **제어 (Control)**: 제어 신호(Flag)를 전달하여 상대 모듈의 흐름을 제어.
+  4. **외부 (External)**: 외부에서 선언된 데이터를 참조.
+  5. **공통 (Common)**: 전역 변수(공통 데이터 영역)를 여러 모듈이 사용.
+  6. **내용 (Content)**: 다른 모듈의 내부 기능이나 변수를 직접 참조/수정 (가장 나쁨).
 
-### 295. 워킹 셋 (Working Set / Tập làm việc)
-- 프로세스가 자주 참조하는 페이지들의 집합. (Tập hợp các trang được truy cập thường xuyên nhất).
-- 주기억장치에 상주시킴으로써 페이지 부재(Page Fault)를 줄인다. (Giữ trong RAM để giảm thiểu lỗi trang).
+**Giải thích (Vietnamese):**
+Coupling đánh giá mức độ "dính líu" giữa 2 module. Càng dính líu nhiều, khi sửa module này sẽ làm hỏng module kia.
+Tốt nhất là Data (chỉ truyền tham trị như `int a`). Tệ nhất là Content (module A nhảy thẳng vào code của module B để sửa biến).
 
-### 296. 스래싱 (Thrashing / Hiện tượng tráo đổi quá mức)
-- 페이지 교체 시간이 처리 시간보다 많아지는 현상. (Mất thời gian hoán đổi trang nhiều hơn thời gian xử lý thực tế).
-- 방지: 다중 프로그래밍 정도 조절, 워킹 셋 유지. (Kiểm soát đa nhiệm, dùng Working Set).
+**💡 Mẹo ghi nhớ (Mnemonics):**
+**자스제 외공내** (Tự - Tem - Chế - Ngoại - Công - Nội): 자료 (Data) -> 스탬프 (Stamp) -> 제어 (Control) -> 외부 (External) -> 공통 (Common) -> 내용 (Content). Từ Tốt đến Xấu.
+
+---
+
+Như vậy, **191. 결합도 (Coupling / Mức độ phụ thuộc)** không chỉ cung cấp các ý cần nhớ mà còn cho ta một cách định vị chúng trong mạch học. Khi chuyển sang **192. 응집도 (Cohesion / Mức độ gắn kết)**, hãy mang theo tiêu chí vừa hình thành và kiểm tra xem phần mới đang dùng, mở rộng hay đối chiếu với nó như thế nào.

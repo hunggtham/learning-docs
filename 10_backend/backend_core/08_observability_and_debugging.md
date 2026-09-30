@@ -3,6 +3,8 @@
 > **Mạch đọc:** Đặt **08. khả năng quan sát (observability / 관측 가능성) và debugging** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Ba tín hiệu, một câu hỏi** sang **Debugging vòng lặp (loop / 루프)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
 ## Ba tín hiệu, một câu hỏi
+Phần “Ba tín hiệu, một câu hỏi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Logs**: sự kiện có ngữ cảnh, yêu cầu (request / 요청) ID, actor/tenant đã redact.
 - **Metrics**: xu hướng và tỷ lệ (rate, error, duration, saturation).

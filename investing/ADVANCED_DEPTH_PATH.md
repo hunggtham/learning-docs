@@ -7,7 +7,9 @@
 
 ## Cách sử dụng
 
-Không nên đọc các tệp (file / 파일) Advanced Lab như sách tóm tắt. Với mỗi phần, hãy chọn một danh mục, doanh nghiệp, bộ dữ liệu vĩ mô hoặc chiến lược thật để làm bài tập đi kèm.
+File này là bản đồ chuyển từ đọc nền tảng sang làm lab có đầu ra. Hãy chọn một lab, mang theo một portfolio/doanh nghiệp/bộ dữ liệu cụ thể, rồi đi qua chuỗi concept → mechanism → data → interpretation → risk → failure mode → case. Không nên mở lab mới khi chưa có artifact để review từ lab trước.
+
+Không nên đọc các file Advanced Lab như sách tóm tắt. Với mỗi phần, hãy chọn một danh mục, doanh nghiệp, bộ dữ liệu vĩ mô hoặc chiến lược thật để làm bài tập đi kèm.
 
 Lộ trình khuyến nghị:
 
@@ -269,7 +271,9 @@ Capstone không được kết thúc bằng mục tiêu (target / 대상) price.
 
 ## Ma trận kiểm tra (audit / 감사) chiều sâu toàn thư viện (library / 라이브러리)
 
-| lĩnh vực (domain / 도메인) | Concept | cơ chế (mechanism / 메커니즘) | dữ liệu (data / 데이터) | Interpretation | rủi ro (risk / 위험) | dạng thất bại (failure mode / 실패 모드) | trường hợp (case / 사례) / Practice |
+Ma trận dưới đây là công cụ kiểm tra độ phủ, không phải tuyên bố rằng mọi domain đã hoàn thiện vĩnh viễn. Đọc mỗi hàng theo chiều ngang để hỏi concept đã có mechanism, data, risk và failure mode hay chưa; sau đó mở case hoặc workbook để kiểm chứng bằng đầu ra.
+
+| Domain | Concept | Mechanism | Data | Interpretation | Risk | Failure mode | Case / Practice |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Foundations | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Advanced Lab + Workbook |
 | Asset Classes | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | Advanced Lab + Workbook |
@@ -281,6 +285,8 @@ Capstone không được kết thúc bằng mục tiêu (target / 대상) price.
 Dấu ✓ không có nghĩa nội dung đã “xong vĩnh viễn”. Nó có nghĩa thư viện (library / 라이브러리) đã có vị trí chuẩn gốc (canonical / 정본) cho lớp kiến thức đó. Nội dung mới chỉ nên được thêm khi làm sâu cơ chế, dữ liệu, dạng thất bại (failure mode / 실패 모드) hoặc trường hợp (case / 사례), không nên tạo chapter mới chỉ vì gặp một thuật ngữ mới.
 
 ## Chuẩn đầu ra sau mỗi Advanced Lab
+
+Các đầu ra này biến “đã đọc lab” thành artefact có thể xem lại. Mỗi mũi tên chỉ ra sản phẩm tối thiểu cần tạo trước khi chuyển sang domain tiếp theo.
 
 ```text
 Portfolio lab      → IPS + stress matrix + reverse stress test
@@ -295,7 +301,9 @@ Capstone           → complete investment dossier + attribution/post-mortem
 
 ## Quy tắc học sâu
 
-Không chuyển sang lab tiếp theo nếu chỉ “đọc hiểu”. Hãy tự tạo ít nhất một mô hình, bảng phân tích hoặc trường hợp (case / 사례) thực hành.
+Phần này đặt điều kiện hoàn thành cho toàn bộ lộ trình. Đọc hiểu là điểm bắt đầu; bằng chứng hoàn thành phải là mô hình, bảng phân tích, case hoặc quy tắc vận hành có thể bị phản biện.
+
+Không chuyển sang lab tiếp theo nếu chỉ “đọc hiểu”. Hãy tự tạo ít nhất một mô hình, bảng phân tích hoặc case thực hành.
 
 Độ sâu không đến từ số trang đã đọc mà từ khả năng:
 
@@ -321,6 +329,8 @@ Có thể tự đánh giá theo năm mức:
 
 ## Kết luận
 
+Ba tầng dưới đây khép lại bản đồ bằng cách nối kiến thức domain với lab và deliberate practice. Hãy dùng chúng để chọn bước tiếp theo, rồi quay lại checkpoint và ghi điều kiện dừng/tiếp tục.
+
 Toàn bộ thư viện Investing hiện nên được dùng theo ba tầng:
 
 ```text
@@ -334,6 +344,4 @@ Tầng 3 — Deliberate Practice & Integration
 Workbook → Case Studies → Capstone
 ```
 
-Nếu tầng đầu giúp trả lời **“khái niệm này là gì?”**, tầng Advanced giúp trả lời **“cơ chế hoạt động thế nào và dữ liệu nào chứng minh?”**, còn Workbook/trường hợp (case / 사례)/Capstone phải giúp trả lời **“dạng thất bại (failure mode / 실패 모드) là gì, tác động tới valuation/danh mục bao nhiêu và làm sao biết mình đang sai?”**.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 GLOSSARY FORMULAS AND RESEARCH CONVENTIONS](./00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nếu tầng đầu giúp trả lời **“khái niệm này là gì?”**, tầng Advanced giúp trả lời **“cơ chế hoạt động thế nào và dữ liệu nào chứng minh?”**, còn Workbook/Case/Capstone phải giúp trả lời **“failure mode là gì, tác động tới valuation/danh mục bao nhiêu và làm sao biết mình đang sai?”**.

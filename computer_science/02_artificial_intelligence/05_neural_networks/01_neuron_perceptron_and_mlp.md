@@ -194,6 +194,8 @@ Không cần hand-code chính xác (exact / 정확한) logical features; huấn 
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Neuron = linear measurement + nonlinear response
 Layer  = many measurements learned together
@@ -224,6 +226,4 @@ Theoretical expressivity không thay efficiency/inductive độ lệch (bias / �
 
 Xem lại [Linear Algebra](../01_mathematical_foundations/01_linear_algebra_for_ai.md) và [From Linear Models to Neural Networks](./00_from_linear_models_to_neural_networks.md).
 
-Xem tiếp: [Activation Functions](./02_activation_functions.md), phần quyết định tầng (layer / 계층) composition có thực sự nonlinear và trainable hay không.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from linear models to neural networks](./00_from_linear_models_to_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Xem tiếp: [Activation Functions](./02_activation_functions.md), phần quyết định layer composition có thực sự nonlinear và trainable hay không.

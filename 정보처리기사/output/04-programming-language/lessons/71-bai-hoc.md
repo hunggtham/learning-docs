@@ -1,34 +1,48 @@
-# 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
+# 078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-매시업과, SOA
+사용자, 정의, 함수와, 클래스
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**에서 만든 기준을 이어받아 **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** và nối nó với **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** và nối nó với **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
+---
+
+## 078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)
+
+Sau khi đã đặt nền bằng **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)**, ta chuyển sang **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**. Đây là mắt xích 71/91 của lộ trình; mục đích là biến tiêu chí vừa có thành cách đọc và cách dùng kiến thức mới, thay vì học một định nghĩa đứng riêng.
+
+Để đọc **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Các bullet đang nén nhiều ý; hãy nối chúng thành chuỗi đối tượng → điều kiện → hệ quả để thấy quan hệ giữa chúng. Trong khối này, **접근 제어자 (JAVA Access Modifiers)**, **클래스와 생성자 (Class & Constructor)** không phải các đáp án rời: chúng lần lượt cho thấy các lựa chọn khác nhau trước cùng một vấn đề, nên hãy so sánh tiêu chí áp dụng và hệ quả của chúng trước khi ghi nhớ tên. Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **접근 제어자 (JAVA Access Modifiers)**:
+  1. `public`: 모든 접근 허용 (Bất cứ đâu cũng gọi được).
+  2. `protected`: 같은 패키지 + 상속받은 자식 클래스만 허용.
+  3. `default`: 같은 패키지(폴더) 내에서만 허용.
+  4. `private`: 오직 해당 객체 내에서만 허용 (Bảo mật cao nhất).
+- **클래스와 생성자 (Class & Constructor)**:
+  - JAVA: 생성자 이름은 클래스 이름과 동일하며 반환값이 없음. `this` 키워드로 인스턴스 변수(필드)를 가리킴.
+  - Python: `class` 키워드 사용. 생성자는 매직 메소드 `__init__(self, ...)`로 정의. `self`는 객체 자신을 참조(JAVA의 `this`와 유사).
 
 ---
 
-## 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
-- **매시업 (Mashup)**: 웹 서비스나 콘텐츠를 조합하여 **새로운 서비스를 만드는 기술** (예: 구글 지도 + 부동산 정보).
-- **SOA (Service Oriented Architecture, 서비스 지향 아키텍처)**: 시스템을 **공유/재사용 가능한 서비스 단위**로 구축하는 구조. (계층: 표현, 업무 프로세스, 서비스 중간, 애플리케이션, 데이터 저장).
-
-**Giải thích (Vietnamese):**
-- Mashup: Lấy dữ liệu bản đồ của Google kết hợp với dữ liệu danh sách quán ăn để tạo ra app "Tìm quán ăn gần đây". (Trộn lẫn dữ liệu có sẵn để làm ra cái mới).
-
----
+Ta có thể khép mục **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** bằng một câu hỏi bàn giao: điều gì trong phần này sẽ trở thành tiền đề cho **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**? Giữ câu hỏi đó khi đọc mục sau để mạch học tiếp tục liền thay vì tách thành các ghi chú độc lập.

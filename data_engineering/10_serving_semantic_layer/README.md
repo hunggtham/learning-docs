@@ -5,6 +5,8 @@
 Serving biến modeled dữ liệu (data / 데이터) thành giao diện (interface / 인터페이스) mà người khác dùng: dashboard, chỉ số (metric / 지표) API, tính năng (feature / 기능) chuỗi xử lý (pipeline / 파이프라인), reverse ETL hoặc operational read mô hình (model / 모델). ngữ nghĩa (semantic / 의미적) tầng (layer / 계층) bảo đảm hai bên tiêu thụ (consumer / 소비자) không tự định nghĩa “revenue”, “active người dùng (user / 사용자)” và “thứ tự (order / 순서)” theo ba cách khác nhau.
 
 ## 1. Các serving shape
+Phần “1. Các serving shape” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - analytical bảng (table / 테이블): scan và aggregate lớn;
 - dimensional mô hình (model / 모델): phép nối (join / 조인) theo dimension/fact với grain rõ;
@@ -59,6 +61,8 @@ Versioning chỉ số (metric / 지표) là cần thiết khi nghiệp vụ (bus
 > **Chuyển mạch:** Từ **5. ngữ nghĩa (semantic / 의미적) consistency**, ta sang **6. thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## 6. thất bại (failure / 실패) modes
+Phần “6. thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - dashboard fresh nhưng thiếu partition;
 - API trả số liệu stale vì bộ nhớ đệm (cache / 캐시) không invalidate;

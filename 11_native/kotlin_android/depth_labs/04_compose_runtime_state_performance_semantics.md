@@ -108,7 +108,9 @@ Tác động (effect / 효과) phải được đưa vào tác động (effect /
 
 ---
 
-## 5. `LaunchedEffect` là vòng đời (lifecycle / 생명주기) của coroutine theo composition key
+## 5. `LaunchedEffect` là lifecycle của coroutine theo composition key
+Phần này nối mạch Android vừa học với “5. `LaunchedEffect` là lifecycle của coroutine theo composition key”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 LaunchedEffect(userId) {
@@ -201,7 +203,9 @@ Mỗi tác động (effect / 효과) API encode một thời gian tồn tại (l
 
 ---
 
-## 9. `remember` chỉ sống theo composition định danh (identity / 식별자)
+## 9. `remember` chỉ sống theo composition identity
+Phần này nối mạch Android vừa học với “9. `remember` chỉ sống theo composition identity”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 val controller = remember { Controller() }
@@ -712,7 +716,9 @@ Form môi trường vận hành (production / 운영 환경) phải hoạt độ
 
 ---
 
-## 39. Pointer đầu vào (input / 입력) có thời gian tồn tại (lifetime / 수명) theo key
+## 39. Pointer input có lifetime theo key
+Phần này nối mạch Android vừa học với “39. Pointer input có lifetime theo key”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 Modifier.pointerInput(key) {
@@ -837,7 +843,9 @@ Nếu ViewModel tạo danh sách (list / 목록) mô hình (model / 모델) mớ
 
 ---
 
-## 48. Compose tính đúng đắn (correctness / 정확성) checklist
+## 48. Compose correctness checklist
+Phần này nối mạch Android vừa học với “48. Compose correctness checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | Ý nghĩa |
 |---|---|
@@ -871,6 +879,4 @@ state ownership
 -> measured performance
 ```
 
-Mục tiêu không phải “zero recomposition”. Mục tiêu là UI đúng, vòng đời (lifecycle / 생명주기) đúng, khả năng tiếp cận (accessibility / 접근성) đúng và chỉ làm lượng công việc (work / 작업) cần thiết ở phase cần thiết.
-
-> **Bàn giao:** Sau **49. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Mục tiêu không phải “zero recomposition”. Mục tiêu là UI đúng, lifecycle đúng, accessibility đúng và chỉ làm lượng work cần thiết ở phase cần thiết.

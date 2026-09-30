@@ -113,6 +113,8 @@ Xem [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connectio
 
 ## 17. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Câu hỏi khoa học
    ↓
@@ -146,5 +148,3 @@ Diễn giải
 ## Kết nối kiến thức
 
 Đọc cùng [[02_research_methods]], [[03_measurement_statistics]], [[05_psychometrics_and_test_interpretation]], [[06_open_science_and_evidence_evaluation]], [[08_causal_inference_and_psychological_evidence]], [[../06_applied/05_digital_psychology_social_media_and_online_behavior]] và [[../90_connections/03_risk_uncertainty_and_science_communication]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

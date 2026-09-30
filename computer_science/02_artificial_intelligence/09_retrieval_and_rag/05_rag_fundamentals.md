@@ -7,6 +7,8 @@
 
 ## Cốt lõi (core / 핵심) kiến trúc (architecture / 아키텍처)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```mermaid
 flowchart LR
     U[User Query] --> Q[Query Processing]
@@ -51,6 +53,8 @@ RAG có hai pipelines khác nhau.
 
 ### Ingestion
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 source documents
 → parse
@@ -61,6 +65,8 @@ source documents
 ```
 
 ### Truy vấn (query / 쿼리)
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 user query
@@ -237,6 +243,8 @@ For legal/kiểm tra (audit / 감사) contexts, UI may show answer + nguồn (so
 
 ## Minimal RAG Pseudocode
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```python
 query = rewrite(user_query, history)
 candidates = retrieve(query, filters=user_scope)
@@ -271,5 +279,3 @@ Generator vẫn có thất bại (failure / 실패) modes.
 RAG nối IR, embeddings, cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들), ngữ cảnh (context / 맥락) kỹ thuật (engineering / 엔지니어링) và LLM grounding.
 
 Xem tiếp: [Chunking and Document Processing](./06_chunking_and_document_processing.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 information retrieval foundations](./00_information_retrieval_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

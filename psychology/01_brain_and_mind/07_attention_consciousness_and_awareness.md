@@ -191,6 +191,8 @@ Xem [[../06_applied/02_hci_ai_and_human_decision_support]], [[../06_applied/00_w
 
 ## 22. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 salience + goal + reward history + state
                     ↓
@@ -208,5 +210,3 @@ Chú ý là một hệ thống phân bổ ưu tiên động, không phải nút 
 ## Kết nối kiến thức
 
 Đọc cùng [[01_sensation_and_perception]], [[09_consciousness_theories_and_evidence]], [[../02_learning_and_cognition/01_memory]], [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]], [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]], [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../06_applied/00_work_organization_and_leadership]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 nervous system and brain](./00_nervous_system_and_brain.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

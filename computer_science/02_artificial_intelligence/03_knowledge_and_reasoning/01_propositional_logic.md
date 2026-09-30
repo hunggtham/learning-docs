@@ -574,6 +574,8 @@ This illustrates representational reduction: planning becomes satisfiability.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Proposition  = atomic true/false claim
 Formula      = claims combined by logical operators
@@ -609,5 +611,3 @@ Worst-case hardness does not prevent solving many large structured instances eff
 Propositional lô-gic (logic / 논리) connects KR with CSP/SAT, planning and formal xác minh (verification / 확인). It introduces the ngữ nghĩa (semantic / 의미적)/syntactic distinction needed before First-Order lô-gic (logic / 논리) and gives a baseline for understanding why probabilistic/neural lập luận (reasoning / 추론) offer different trade-offs.
 
 Xem tiếp: [First-Order Logic](./02_first_order_logic.md) và [Inference and Reasoning](./03_inference_and_reasoning.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 knowledge representation](./00_knowledge_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

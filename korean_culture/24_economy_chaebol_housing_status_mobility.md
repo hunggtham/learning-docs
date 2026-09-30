@@ -415,6 +415,8 @@ Cảm nhận về khả năng đi lên quan trọng vì nó ảnh hưởng nỗ 
 
 ## Lợi thế tích luỹ: lợi thế nhỏ có thể nhân lên
 
+Sau khi nối doanh nghiệp, nhà ở và thị trường lao động, ta cần giải thích vì sao chênh lệch ban đầu có thể mở rộng theo thời gian. Mô hình này theo dõi feedback giữa tài sản, credential, mạng quan hệ và chi phí cơ hội.
+
 ```text
 nguồn lực gia đình tốt hơn
 → vị trí / khả năng tiếp cận giáo dục tốt hơn
@@ -467,6 +469,4 @@ Khung này hữu ích để hiểu đám cưới đơn giản, nghi lễ ngày l
 
 ## Nguồn tham khảo định hướng
 
-Với nhà ở và thị trường thuê: Ministry of Land, hạ tầng (infrastructure / 인프라) and vận chuyển (transport / 전송), Korea Real Estate Board, Statistics Korea và Bank of Korea. Với chaebol/tập đoàn kinh doanh: Korea Fair Trade Commission và nguồn công bố/quản trị doanh nghiệp đáng tin cậy. Với chính sách như `청약`, thuế, vay và bảo vệ người thuê, luôn dùng quy định hiện hành thay vì học cứng từ chương phân tích văn hoá.
-
-> **Bàn giao:** Sau **Nguồn tham khảo định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Với nhà ở và thị trường thuê: Ministry of Land, Infrastructure and Transport, Korea Real Estate Board, Statistics Korea và Bank of Korea. Với chaebol/tập đoàn kinh doanh: Korea Fair Trade Commission và nguồn công bố/quản trị doanh nghiệp đáng tin cậy. Với chính sách như `청약`, thuế, vay và bảo vệ người thuê, luôn dùng quy định hiện hành thay vì học cứng từ chương phân tích văn hoá.

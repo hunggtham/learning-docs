@@ -499,6 +499,8 @@ Bạn cần tự giải thích được:
 → [09 — Carry, momentum, value and macro FX strategies](./09_CARRY_MOMENTUM_VALUE_AND_MACRO_FX_STRATEGIES.md)
 
 ## Nguồn nền
+Phần “Nguồn nền” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Federal Reserve — FOMC calendars and official monetary-policy releases: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
 - ECB — Monetary chính sách (policy / 정책) decisions: https://www.ecb.europa.eu/press/govcdec/mopo/html/chỉ mục (index / 인덱스).en.html

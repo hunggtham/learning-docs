@@ -133,6 +133,8 @@ Xem [[../03_human_development_and_person/12_loneliness_social_connection_and_bel
 
 ## 17. Doomscrolling như threat-monitoring vòng lặp (loop / 루프)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 uncertainty / threat
 → tìm thêm information
@@ -182,6 +184,8 @@ Các chiến lược (strategy / 전략) rủi ro thấp có thể gồm tắt n
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 trạng thái người dùng
  + nhu cầu xã hội
@@ -203,5 +207,3 @@ outcome rất khác nhau giữa người dùng
 ## Kết nối kiến thức
 
 Đọc cùng [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]], [[../03_human_development_and_person/12_loneliness_social_connection_and_belonging]], [[17_misinformation_belief_revision_and_inoculation]], [[02_hci_ai_and_human_decision_support]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 work organization and leadership](./00_work_organization_and_leadership.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -63,6 +63,8 @@ các lũy thừa của hai không phải magic; chúng tạo hierarchy có số 
 
 ## Java construction cho RMQ
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 final class SparseMin {
     private final int[][] st;
@@ -614,5 +616,3 @@ Need online hay offline queries?
 ```
 
 Xem thêm: [Range Queries — Fenwick & Segment Tree](./01_range_queries_fenwick_segment_tree.md), [Tree Foundations — LCA](../02_trees/00_tree_foundations.md), [Bit Manipulation](./02_bit_manipulation_and_bitsets.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 string algorithms](./00_string_algorithms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

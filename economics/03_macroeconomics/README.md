@@ -12,6 +12,8 @@ Macroeconomics nghiên cứu nền kinh tế ở cấp aggregate nhưng không �
 6. [Open Economy, Exchange Rates & Crises](./05_open_economy_exchange_rates_and_crises.md) — balance of payments, `CA = S − I`, nominal/real FX, PPP, interest parity, trilemma, capital flows, currency/maturity mismatch, sudden stops và crisis mechanisms.
 
 ## Trục học (learning spine / 학습 축)
+Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Measurement / accounting identities

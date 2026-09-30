@@ -6,9 +6,19 @@ A lightweight GitHub Pages reader for the Markdown and PDF files stored in this 
 
 ## What it does
 
-The library builds a searchable catalogue, renders Markdown with TOC/bookmarks, opens PDFs, tracks reading position/status/progress, supports review/offline/PWA features, and keeps manual JSON export/import as a backup. All existing `study-shelf-*` localStorage data remains supported.
+Phần này định vị Study Library trước khi đi vào chi tiết: trình đọc lấy tài liệu đã kiểm tra, tạo chỉ mục tìm kiếm và giữ đường dẫn để người học quay lại bài giảng gốc.
+
+- Builds a searchable document catalogue from safe folder prefixes plus explicit `.md`/`.pdf` entries.
+- Renders Markdown in a clean reading layout with a table of contents.
+- Opens PDFs in the browser's native PDF reader.
+- Lets readers filter by Markdown/PDF and open or download the original file.
+- Shows subfolders and files; `raw`/`raw_md` are hidden, and `output` is flattened in the displayed path.
+- Runs a fail-closed publication audit before copying anything into the Pages artifact.
+- Works as a static site: no account, database, or server is required.
 
 ## Local preview
+Phần “Local preview” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```bash
 cd learning-library

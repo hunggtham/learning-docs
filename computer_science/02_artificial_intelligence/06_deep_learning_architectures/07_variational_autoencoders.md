@@ -256,6 +256,8 @@ VAE is not only autoencoder with noise. It is amortized variational suy luận (
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Encoder: x → distribution over plausible latent causes z
 Prior:   regularizes latent world to a sampleable space
@@ -286,5 +288,3 @@ No. Disentanglement requires stronger các giả định (assumptions / 가정�
 VAE combines [Probability](../01_mathematical_foundations/02_probability_for_ai.md), [KL Divergence / Information Theory](../01_mathematical_foundations/05_information_theory.md), [Autoencoders](./06_autoencoders.md) and variational suy luận (inference / 추론).
 
 Xem tiếp: [Generative Adversarial Networks](./08_generative_adversarial_networks.md) and [Diffusion Models](./09_diffusion_models.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 convolutional neural networks](./00_convolutional_neural_networks.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

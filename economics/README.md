@@ -19,6 +19,8 @@ Từ đây Economics không còn khoảng trống cốt lõi (core / 핵심) b�
 [`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ ứng dụng (application / 애플리케이션) tầng (layer / 계층) cho macro dữ liệu (data / 데이터), liquidity, thị trường (market / 시장) transmission, crisis cases, chính sách (policy / 정책) regimes và nowcasting; Economics cross-link thay vì duplicate.
 
 ## Học tập (learning / 학습) tuyến (route / 경로)
+Phần “Học tập (learning / 학습) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 00 Foundations
@@ -51,6 +53,8 @@ Problem / question
 Applied chapter thêm incidence và scale-up. Historical chapter thêm enforcement, phân phối (distribution / 분포) of power, persistence cơ chế (mechanism / 메커니즘) và historical-identification limits.
 
 ## Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)
+Phần “Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Thinking Toolkit](../thinking/README.md): lớp thực hành để mang opportunity cost, incentives, game theory, probability, expected value, risk, forecasting và systems thinking sang các quyết định/case ngoài chapter Economics mà không duplicate economic theory.
 - [Mathematics](../mathematics/README.md): calculus, tối ưu hóa (optimization / 최적화), xác suất (probability / 확률)/statistics, tuyến tính (linear / 선형) algebra và dynamical các hệ thống (systems / 시스템들).

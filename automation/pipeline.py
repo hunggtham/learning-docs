@@ -227,8 +227,13 @@ class Pipeline:
         return json.loads(raw[start:end + 1])
 
     def render_part(self, filename, part_name, source, translation):
-        chapter_prompt = (self.prompt_dir / "chapter.md").read_text(encoding="utf-8")
-        quality_prompt = (self.prompt_dir / "quality.md").read_text(encoding="utf-8")
+        # Inject the shared lecture contract into both model calls.  Keeping a
+        # prose reference in the specialist prompts is not enough: the model
+        # must receive the contract at generation and QA time so every section
+        # is held to the same opening → explanation → handoff → closing rule.
+        common_prompt = (self.prompt_dir.parent.parent / "prompt" / "COMMON_PROMPT.md").read_text(encoding="utf-8")
+        chapter_prompt = common_prompt + "\n\n--- Prompt chuyên môn ---\n\n" + (self.prompt_dir / "chapter.md").read_text(encoding="utf-8")
+        quality_prompt = common_prompt + "\n\n--- Prompt QA chuyên môn ---\n\n" + (self.prompt_dir / "quality.md").read_text(encoding="utf-8")
         source_chunks = self.chunks(source)
         drafts, used_models, all_issues = [], [], []
         for index, chunk in enumerate(source_chunks):
@@ -241,7 +246,16 @@ class Pipeline:
             )
             draft, model = self.ask(prompt, "draft")
             used_models.append(model)
-            qa_raw, qa_model = self.ask(quality_prompt.format(evidence=chunk, translation=translated, chapter=draft), "qa")
+            qa_raw, qa_model = self.ask(
+                quality_prompt.format(
+                    evidence=chunk,
+                    translation=translated,
+                    chapter=draft,
+                    chunk_number=index + 1,
+                    chunk_total=len(source_chunks),
+                ),
+                "qa",
+            )
             used_models.append(qa_model)
             try:
                 qa = self.json_object(qa_raw)

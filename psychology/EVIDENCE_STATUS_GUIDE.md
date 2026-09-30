@@ -170,6 +170,8 @@ Bối cảnh lịch sử
 
 ## 13. mô hình tư duy (mental model / 사고 모델) chung
 
+Mental model này mô tả đường đi từ quan sát tới kết luận có giới hạn. Mỗi mũi tên là một nơi có thể phát sinh bias, measurement error hoặc overclaim, nên cần kiểm tra trước khi chuyển sang ứng dụng.
+
 ```text
 Observation
    ↓

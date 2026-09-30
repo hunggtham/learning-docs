@@ -180,6 +180,8 @@ Tối ưu hóa (optimization / 최적화) ở cấp kiến trúc (architecture /
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Latency    = thời gian người dùng trải nghiệm cho một task
 Throughput = lượng công việc hoàn thành trong một đơn vị thời gian
@@ -205,5 +207,3 @@ Không. Retrieval, công cụ (tool / 도구), parsing và mạng (network / 네
 ## Liên kết kiến thức
 
 Xem [Caching and Batching](./05_caching_and_batching.md), [Model Compression](./08_model_compression.md), [Agent Evaluation](../10_agents_and_ai_systems/09_agent_evaluation.md) và [AI Compute](../17_ai_compute_and_infrastructure/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

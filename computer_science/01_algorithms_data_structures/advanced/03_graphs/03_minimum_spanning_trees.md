@@ -74,6 +74,8 @@ DSU trả lời connectivity nhanh; chứng minh optimality vẫn đến từ cu
 
 ### Java sketch
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 record Edge(int u, int v, long w) {}
 
@@ -409,5 +411,3 @@ Khi đó bài toán (problem / 문제) có thể không còn là pure MST. DSA m
 Khi gặp bài liên quan “connect tất cả với chi phí tổng nhỏ nhất”, hãy kiểm tra: đồ thị có undirected không, có cần redundancy không, có thêm các ràng buộc không. Nếu mục tiêu (objective / 목표) đúng là pure connectivity chi phí, MST là sự trừu tượng (abstraction) rất mạnh.
 
 Xem thêm: [Union-Find](./05_union_find.md), [Tree Foundations](../02_trees/00_tree_foundations.md), [Greedy Algorithms](../04_algorithmic_paradigms/04_greedy_algorithms.md).
-
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 graph modeling and representation](./00_graph_modeling_and_representation.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

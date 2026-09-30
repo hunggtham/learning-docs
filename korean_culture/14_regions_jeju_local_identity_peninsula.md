@@ -11,6 +11,8 @@ Một quốc gia hiện đại cần chương trình giáo dục chung, ngôn ng
 
 ### Mô hình tư duy
 
+Để hiểu bản sắc vùng miền, hãy nối địa hình, lịch sử, kinh tế, di chuyển và ký ức địa phương trước khi gán một tính cách chung. Sơ đồ sau là khung so sánh giữa các nơi, không phải nhãn cố định cho cư dân.
+
 ```text
 vùng miền
 = sinh thái
@@ -495,10 +497,10 @@ Muốn giảm tập trung không chỉ cần xây một toà nhà ở vùng khá
 
 ## Nguồn tham khảo
 
+Các nguồn sau dùng để kiểm tra địa danh, lịch sử và dữ liệu vùng miền. Hãy đọc chúng cùng phần phân tích để phân biệt fact, diễn giải và ký ức địa phương.
+
 - UNESCO Intangible Cultural Heritage: Culture of Jeju Haenyeo; Arirang inscriptions; traditional wrestling heritage.
 - `국립국어원` / National Institute of Korean ngôn ngữ (language / 언어): thuật ngữ về ngôn ngữ chuẩn và phương ngữ.
 - `국가데이터처` / Statistics Korea và dữ liệu chính quyền địa phương: dân số, hộ, di cư và thay đổi vùng; luôn ghi năm và định nghĩa mẫu số.
-- `국토교통부` / Ministry of Land, hạ tầng (infrastructure / 인프라) and vận chuyển (transport / 전송): hạ tầng giao thông và không gian đô thị khi cần dữ kiện hiện hành.
+- `국토교통부` / Ministry of Land, Infrastructure and Transport: hạ tầng giao thông và không gian đô thị khi cần dữ kiện hiện hành.
 - Các chương lịch sử trong [`../korean_history/`](../korean_history/README.md) cho niên đại và bối cảnh lịch sử cần độ chính xác cao hơn.
-
-> **Bàn giao:** Sau **Nguồn tham khảo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

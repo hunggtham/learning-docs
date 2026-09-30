@@ -472,6 +472,8 @@ Cùng sets nhưng thứ tự (order / 순서)/phân tích (analysis / 분석) ng
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Phần kết nối đặt tree, poset và lattice cạnh algorithms, scheduling, type systems và information order. Cấu trúc quan hệ quyết định phép duyệt và phép suy luận nào hợp lệ.
+
 ```text
 graph theory
 → trees / DAGs

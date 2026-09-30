@@ -23,6 +23,8 @@ Vì vậy thực thi lệnh không phải hậu cần; nó là một phần củ
 
 ## 2. Giá quyết định và giá thực thi
 
+Trước khi đo slippage, cần tách giá tại thời điểm strategy quyết định giao dịch khỏi giá thực tế được khớp. Khoảng cách giữa hai mức là phần execution risk mà backtest thường dễ bỏ qua.
+
 **Giá quyết định (decision price)** là mức giá khi chiến lược quyết định giao dịch.
 
 **Giá thực thi (execution price)** là mức giá khớp thật.
@@ -41,6 +43,8 @@ Khoảng cách giữa hai mức có thể đến từ:
 # Phần II — Sổ lệnh giới hạn
 
 ## 3. Sổ lệnh
+
+Order book cho thấy thanh khoản đang chờ ở từng mức giá, nhưng không bảo đảm các lệnh đó còn tồn tại khi lệnh của bạn tới. Hãy đọc độ sâu, sự thay đổi hàng chờ và khả năng rút lệnh cùng nhau.
 
 **Sổ lệnh giới hạn (limit order book)** chứa các lệnh mua và bán đang chờ theo từng mức giá.
 
@@ -65,6 +69,8 @@ Do đó kiểm thử giả định “giá chạm lệnh giới hạn = chắc c
 
 ## 5. Vị trí trong hàng chờ
 
+Queue position quyết định xác suất một lệnh limit được khớp trước khi giá rời vùng. Vì vậy, giá đặt đúng chưa đủ; cần biết khối lượng trước mình, tốc độ khớp và khả năng lệnh bị rút.
+
 **Vị trí hàng chờ (queue position)** ảnh hưởng xác suất khớp. Nó phụ thuộc:
 
 - khối lượng lệnh đang đứng trước;
@@ -76,6 +82,8 @@ Do đó kiểm thử giả định “giá chạm lệnh giới hạn = chắc c
 Với chiến lược rất ngắn hạn, mô hình hàng chờ có thể quan trọng gần ngang chất lượng tín hiệu.
 
 ## 6. Bên cung cấp và bên lấy thanh khoản
+
+Maker và taker chịu trade-off khác nhau giữa phí, xác suất khớp và rủi ro adverse selection. Phân biệt hai vai trò giúp chọn loại lệnh phù hợp với tốc độ mất giá của tín hiệu.
 
 **Bên cung cấp thanh khoản (maker)** thường đặt lệnh chờ. **Bên lấy thanh khoản (taker)** giao dịch chủ động với lệnh đang có sẵn.
 
@@ -91,17 +99,23 @@ Bên lấy thanh khoản có khả năng khớp nhanh hơn nhưng trả chênh l
 
 ## 7. Lệnh thị trường
 
+Market order ưu tiên certainty of execution hơn certainty of price. Nó phù hợp khi không khớp còn tệ hơn giá xấu, nhưng cần stress spread, depth và gap trước khi dùng.
+
 **Lệnh thị trường (market order)** ưu tiên khả năng được khớp, không bảo đảm mức giá chính xác.
 
 Trong thị trường mỏng hoặc khi có tin lớn, giá khớp có thể xa mức nhìn thấy trước khi gửi lệnh.
 
 ## 8. Lệnh giới hạn có thể khớp ngay
 
+Marketable limit order cố giữ trần giá trong khi vẫn muốn khớp ngay. Cần cân bằng rủi ro không khớp với rủi ro bị adverse selection nếu giá chạm giới hạn rồi đảo chiều.
+
 **Lệnh giới hạn chủ động (marketable limit order)** đi qua chênh lệch hiện tại nhưng vẫn đặt giới hạn cho mức giá tệ nhất chấp nhận được.
 
 Nó giảm nguy cơ khớp cực xấu nhưng có thể chỉ khớp một phần trong thị trường chạy nhanh.
 
 ## 9. Lệnh giới hạn thụ động
+
+Passive limit order tiết kiệm spread nhưng đổi lại chịu rủi ro không khớp và bị chọn bất lợi. Nó phù hợp hơn khi tín hiệu có độ bền và nhà giao dịch chấp nhận chờ.
 
 **Lệnh giới hạn thụ động (passive limit order)** kiểm soát giá nhưng có thể không khớp.
 
@@ -167,6 +181,8 @@ Khi bất định tăng, chênh lệch thường rộng hơn.
 
 ## 16. Chênh lệch niêm yết và chênh lệch hiệu dụng
 
+Quoted spread là chi phí nhìn thấy; realized spread và execution outcome mới cho biết chi phí thực sự sau khớp, adverse selection và biến động tiếp theo.
+
 **Chênh lệch niêm yết (quoted spread)** là khoảng bid–ask đang hiển thị.
 
 **Chênh lệch hiệu dụng (effective spread)** đo chi phí khớp thực tế so với điểm giữa hoặc mức tham chiếu.
@@ -174,6 +190,8 @@ Khi bất định tăng, chênh lệch thường rộng hơn.
 Khớp được giá tốt hơn có thể làm chi phí thấp hơn chênh lệch niêm yết; thị trường biến động nhanh có thể làm chi phí cao hơn.
 
 ## 17. Chênh lệch thực giữ được
+
+Realized spread giúp tách phần spread còn lại cho liquidity provider khỏi phần giá đi tiếp chống lại lệnh. Đây là bước nối quote quality với chất lượng thực thi và adverse selection.
 
 **Chênh lệch thực giữ được (realized spread)** đo phần chênh lệch còn lại sau một khoảng thời gian, giúp tách:
 
@@ -204,6 +222,8 @@ Ngược lại, thanh khoản đang hiển thị cũng có thể biến mất nh
 
 ## 20. Nơi giao dịch không hiển thị trước lệnh
 
+Dark pool và venue ngoài sở có thể giảm information leakage cho lệnh lớn, nhưng làm price discovery, routing và đánh giá benchmark phức tạp hơn. Lợi ích execution phải được so với độ minh bạch bị mất.
+
 **Dark pool** hoặc nơi giao dịch ngoài sở có thể giảm khả năng lệnh lớn tự tiết lộ ý định trước giao dịch, nhưng làm quá trình khám phá giá và đánh giá chất lượng thực thi phức tạp hơn.
 
 ## 21. Thị trường phân mảnh theo nhiều nơi giao dịch
@@ -223,6 +243,8 @@ Giá hiển thị tốt nhất chưa chắc tạo kết quả thực tế tốt 
 # Phần V — Khám phá giá và phiên đấu giá
 
 ## 22. Khám phá giá
+
+Price discovery là quá trình thông tin, lệnh và thanh khoản cùng cập nhật giá. Một lệnh lớn có thể vừa phản ánh thông tin vừa tự tạo market impact, nên cần tách alpha khỏi dấu chân thực thi.
 
 **Khám phá giá (price discovery)** là quá trình thông tin mới được phản ánh vào giá.
 
@@ -255,6 +277,8 @@ Mô hình chi phí nên phản ánh thời điểm giao dịch.
 
 ## 26. Trượt giá
 
+Slippage là kết quả cuối của spread, queue, depth, volatility, latency và loại lệnh. Đo nó theo từng trạng thái thị trường giúp mô hình cost không bị quá lạc quan.
+
 **Trượt giá (slippage)** là chênh lệch giữa giá kỳ vọng và giá thực thi.
 
 Nó phụ thuộc:
@@ -269,6 +293,8 @@ Nó phụ thuộc:
 Không nên dùng một con số trượt giá cố định cho mọi chế độ thị trường.
 
 ## 27. Mức thiếu hụt do thực thi
+
+Implementation shortfall đặt toàn bộ chi phí cơ hội và chi phí thực thi cạnh nhau: không giao dịch, trì hoãn, giá khớp, fees và market impact. Nó phù hợp để đánh giá quyết định thực thi ở cấp chiến lược.
 
 **Mức thiếu hụt do thực thi (implementation shortfall)** đo khoảng cách giữa kết quả giả định nếu giao dịch được thực hiện tại giá quyết định và kết quả thật sau thực thi.
 
@@ -307,6 +333,8 @@ Thực thi tốt cố giảm phần tác động không cần thiết.
 
 ## 31. Tỷ lệ tham gia
 
+Participation rate điều chỉnh tốc độ giao dịch theo volume thị trường. Nó giảm nguy cơ chiếm tỷ lệ quá lớn trong một thời điểm, nhưng có thể kéo dài execution khi thanh khoản giảm hoặc biến động tăng.
+
 ```text
 Tỷ lệ tham gia
 = Khối lượng của mình / Khối lượng thị trường
@@ -334,6 +362,8 @@ VWAP phân bổ lệnh theo hồ sơ khối lượng dự kiến hoặc thực t
 
 ## 35. POV
 
+POV duy trì tỷ lệ giao dịch gần cố định so với volume quan sát được. Hãy kiểm tra volume đó có bị phình do event hoặc toxic flow hay không trước khi coi POV là kiểm soát impact.
+
 **Tỷ lệ theo khối lượng (Percentage-of-Volume, POV)** duy trì một tỷ lệ giao dịch gần cố định so với khối lượng thị trường. Nó thích nghi với mức độ hoạt động nhưng có thể giao dịch nhiều hơn đúng lúc biến động tăng.
 
 ## 36. Thuật toán tối ưu mức thiếu hụt do thực thi
@@ -350,11 +380,15 @@ Mức khẩn cấp cao thường dẫn tới thực thi nhiều hơn ở đầu 
 
 ## 37. Giá tại thời điểm bắt đầu
 
+Arrival price là benchmark cho quyết định bắt đầu thực thi. Nó phù hợp với tín hiệu mất giá nhanh, nhưng cần ghi rõ khi nào benchmark thay đổi vì delay là một phần của chiến lược.
+
 **Giá lúc bắt đầu thực thi (arrival price)** là mức giá khi quá trình thực thi được khởi động và thường phù hợp với chiến lược có tín hiệu mất giá trị nhanh.
 
 Chuẩn so sánh phải được chọn trước khi nhìn kết quả.
 
 ## 38. Định tuyến lệnh thông minh
+
+SOR chọn venue bằng trade-off giữa giá, phí, queue, latency và xác suất fill. Routing tốt cần dữ liệu venue-level và phải được review khi cấu trúc thị trường thay đổi.
 
 **Định tuyến lệnh thông minh (Smart Order Routing, SOR)** chọn nơi giao dịch dựa trên giá, phí, hàng chờ, độ trễ và xác suất khớp.
 
@@ -403,6 +437,8 @@ Chiến lược không được thiết kế cho điều kiện sự kiện nên
 
 ## 43. Rủi ro nhảy giá
 
+Gap risk phá vỡ giả định rằng giá đi qua mọi mức trung gian. Stop, margin và hedge cần được stress bằng kịch bản không có fill tại trigger.
+
 **Rủi ro nhảy giá (gap risk)** xuất hiện khi giá thay đổi rời rạc và đi qua mức dừng mà không giao dịch tại mọi mức trung gian.
 
 Mô hình rủi ro phải tính những bước nhảy này thay vì giả định đường giá liên tục.
@@ -436,6 +472,8 @@ Hệ thống thực tế cần kiểm tra đầu vào và có hành vi an toàn 
 Thông báo “đã gửi lệnh” không có nghĩa lệnh đã khớp. Nếu kết nối mất, hệ thống phải hỏi lại trạng thái thật trước khi gửi lại.
 
 ## 50. Tính không lặp tác dụng
+
+Idempotency bảo đảm retry sau lỗi mạng không tạo lệnh trùng hoặc exposure ngoài ý muốn. Đây là lớp an toàn vận hành, ngang hàng với logic tín hiệu và risk limits.
 
 **Tính bất biến khi gửi lại (idempotency)** giúp tránh tạo lệnh trùng khi hệ thống thử lại sau lỗi mạng. Mã định danh lệnh phía khách hàng là công cụ quan trọng.
 
@@ -556,6 +594,8 @@ Phải sửa đúng lớp gây rò rỉ lợi thế.
 
 ## 67. Phân tích chi phí giao dịch
 
+TCA là bước tổng kết execution: gom lệnh theo strategy, venue, thời điểm, loại lệnh và market state để biết chi phí đến từ spread, impact, delay hay routing. Kết quả phải quay lại điều chỉnh model cost và rule thực thi.
+
 **Phân tích chi phí giao dịch (Transaction Cost Analysis, TCA)** phân nhóm lệnh theo:
 
 - chuẩn so sánh;
@@ -616,5 +656,3 @@ Tín hiệu
 ```
 
 Lợi thế không nằm riêng ở tín hiệu. Nó nằm ở khả năng bảo toàn giá trị của tín hiệu sau chi phí, thanh khoản, thực thi và các giới hạn vận hành.
-
-> **Bàn giao:** Sau **71. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER TRADING FOREX RISK](./00_MASTER_TRADING_FOREX_RISK.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

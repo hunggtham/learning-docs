@@ -15,6 +15,8 @@ Ba ngôn ngữ trong thư viện có vai trò khác nhau. **C** làm lộ bố t
 
 ## Vị trí trong thư viện Khoa học máy tính
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 computer_science/
 └── 01_algorithms_data_structures/
@@ -37,6 +39,8 @@ Từ **nâng cao (advanced)** mô tả vị trí của thư viện so với lớ
 > **Chuyển mạch:** Từ **Vị trí trong thư viện Khoa học máy tính**, ta sang **Cấu trúc đầy đủ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cấu trúc đầy đủ
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```text
 advanced/
@@ -116,6 +120,8 @@ Mỗi nhóm có `_index.md` để điều hướng ngắn gọn trong Obsidian, 
 > **Chuyển mạch:** Từ **Cấu trúc đầy đủ**, ta sang **Quan hệ phụ thuộc kiến thức** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Quan hệ phụ thuộc kiến thức
+
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
 
 ```mermaid
 flowchart TD
@@ -287,5 +293,3 @@ Mô hình thuật toán không đổi; các ràng buộc triển khai thay đổ
 ## Kiểm tra phạm vi thư viện
 
 [`MANIFEST.md`](./MANIFEST.md) liệt kê toàn bộ tệp và quy mô gần đúng. Thư viện được thiết kế để mỗi chương có thể đọc tương đối độc lập nhưng vẫn liên kết tới kiến thức tiên quyết cần thiết, tránh cả hai cực: một tệp “master book” khổng lồ và hàng trăm ghi chú nhỏ bị phân mảnh.
-
-> **Bàn giao:** Sau **Kiểm tra phạm vi thư viện**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [MANIFEST](./MANIFEST.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

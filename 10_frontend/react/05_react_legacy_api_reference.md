@@ -6,9 +6,13 @@
 
 ## 1. Cách dùng tệp (file / 파일) này
 
-Nếu gặp API lạ trong codebase cũ, hãy tìm ở đây để biết nó từng làm gì, phiên bản (version / 버전) nào thường dùng, trạng thái hiện tại và hướng migrate. Việc một API được giữ trong tài liệu không có nghĩa API đó được khuyên dùng cho mã (code / 코드) mới.
+## 1A. Old pattern → new pattern → reason → migration → khi còn gặp
+Phần này nối mạch bài học với “1A. Old pattern → new pattern → reason → migration → khi còn gặp”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ## 1A. Old mẫu (pattern / 패턴) → new mẫu (pattern / 패턴) → reason → di chuyển (migration / 마이그레이션) → khi còn gặp
+Phần “1A. Old mẫu (pattern / 패턴) → new mẫu (pattern / 패턴) → reason → di chuyển (migration / 마이그레이션) → khi còn gặp” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Old | New/default | Reason và di chuyển (migration / 마이그레이션) | Khi còn gặp |
 |---|---|---|---|
@@ -58,7 +62,9 @@ const Counter = React.createClass({
 
 Mixins bản sao (copy / 복사) một nhóm methods/vòng đời (lifecycle / 생명주기) vào nhiều `createClass` components. Chúng dễ tạo name collision và hidden phụ thuộc (dependency / 의존성). Về lịch sử, HOC/kết xuất (render / 렌더링) props và sau đó Hooks là các cách composition rõ hơn.
 
-### Higher-Order thành phần (component / 컴포넌트)
+### Higher-Order Component
+Phần này nối mạch bài học với “Higher-Order Component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const Enhanced =
@@ -67,7 +73,9 @@ const Enhanced =
 
 HOC không bị remove. Đây là mẫu (pattern / 패턴) vẫn có thể hợp lệ, đặc biệt khi thư viện (library / 라이브러리) API được thiết kế từ thời pre-Hooks.
 
-### Kết xuất (render / 렌더링) props
+### Render props
+Phần này nối mạch bài học với “Render props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <DataProvider>
@@ -133,6 +141,8 @@ Thêm shallow comparison mặc định cho props/trạng thái (state / 상태).
 ## 5. Refs
 
 ### String refs
+Phần này nối mạch bài học với “String refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <input ref="input" />
@@ -141,6 +151,8 @@ Thêm shallow comparison mặc định cho props/trạng thái (state / 상태).
 Đọc qua `this.refs.input`. Deprecated 16.3, removed 19.
 
 ### Callback refs
+Phần này nối mạch bài học với “Callback refs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <input
@@ -314,7 +326,9 @@ Legacy không đồng nghĩa phải rewrite. lớp (class / 클래스) thành ph
 
 Nên ưu tiên migrate khi old API đã bị remove ở mục tiêu (target / 대상) React, khi Strict/concurrent ngữ nghĩa (semantics / 의미론) phơi ra bug cleanup/purity, khi phụ thuộc (dependency / 의존성) cũ chặn bảo mật (security / 보안)/khung phần mềm (framework / 프레임워크) upgrade, hoặc khi mã (code / 코드) thay đổi thường xuyên và lớp trừu tượng (abstraction / 추상화) hiện tại làm tính năng (feature / 기능) công việc (work / 작업) ngày càng khó. Mục tiêu là giảm rủi ro (risk / 위험) và độ phức tạp (complexity / 복잡도) chứ không phải đạt “100% hàm (function / 함수) thành phần (component / 컴포넌트)”.
 
-## 15. Bảng phiên bản (version / 버전) nhanh
+## 15. Bảng version nhanh
+Phần này nối mạch bài học với “15. Bảng version nhanh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | API / khái niệm | Mốc phiên bản (version / 버전) cần nhớ |
 |---|---|

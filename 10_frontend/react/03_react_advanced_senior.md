@@ -55,6 +55,8 @@ Tính đồng thời (concurrency / 동시성) API không thay kiến trúc tố
 Concurrent rendering không thay định danh (identity / 식별자) rules; nó thay cách kết xuất (render / 렌더링) công việc (work / 작업) được schedule. React có thể bắt đầu, pause, restart hoặc abandon kết xuất (render / 렌더링) trước lần ghi nhận (commit / 커밋), nên kết xuất (render / 렌더링) phải pure. Reconciliation trả lời cây (tree / 트리) nào là cùng định danh (identity / 식별자) và cần thay gì; scheduling trả lời công việc (work / 작업) nào ưu tiên và có thể ngắt. bên ngoài (external / 외부) store cần snapshot nhất quán với tính đồng thời (concurrency / 동시성), là lý do React 18 có `useSyncExternalStore` thay cho subscription tác động (effect / 효과) tự chế dễ tearing.
 
 ## 5. `useTransition` và `startTransition`
+Phần này nối mạch bài học với “5. `useTransition` và `startTransition`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [isPending, startTransition] = useTransition();
@@ -72,6 +74,8 @@ function handleChange(event) {
 Chuyển tiếp (transition / 전이) không phải debounce. Debounce trì hoãn theo thời gian; chuyển tiếp (transition / 전이) biểu đạt priority. `startTransition` standalone dùng khi không cần pending trạng thái (state / 상태) tại caller.
 
 ## 6. `useDeferredValue`
+Phần này nối mạch bài học với “6. `useDeferredValue`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const deferredQuery = useDeferredValue(query);
@@ -91,6 +95,8 @@ return <SearchResults query={deferredQuery} />;
 Ví dụ tìm kiếm (search / 검색) box có thể cập nhật văn bản (text / 텍스트) ngay, defer kết xuất (render / 렌더링) danh sách lớn để typing mượt, đồng thời debounce mạng (network / 네트워크) yêu cầu (request / 요청) để giảm traffic. Nếu chỉ debounce toàn bộ trạng thái (state / 상태) đầu vào (input / 입력), UI có thể cảm giác lag; nếu chỉ chuyển tiếp (transition / 전이) yêu cầu (request / 요청), bạn vẫn có thể gửi quá nhiều HTTP calls. cấp cao (senior / 시니어) thiết kế (design / 설계) phải tách **responsiveness**, **kết xuất (render / 렌더링) priority** và **I/O tỷ lệ (rate / 비율) limiting**.
 
 ## 7. Suspense nâng cao
+Phần này nối mạch bài học với “7. Suspense nâng cao”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 <Suspense fallback={<Skeleton />}>
@@ -133,6 +139,8 @@ React 19 mở rộng async mutation qua Actions. Trong môi trường hỗ trợ
 Không phải cứ viết `"use server"` trong Vite SPA là có máy chủ (server / 서버) thời gian chạy (runtime / 런타임). máy chủ (server / 서버) Actions/Functions cần RSC/khung phần mềm (framework / 프레임워크) tích hợp (integration / 통합).
 
 ## 10. `useActionState`
+Phần này nối mạch bài học với “10. `useActionState`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [state, submitAction, isPending] =
@@ -171,6 +179,8 @@ function SubmitButton() {
 Thành phần (component / 컴포넌트) đọc status phải nằm trong form ngữ cảnh (context / 맥락) đúng cấu trúc.
 
 ## 12. `useOptimistic`
+Phần này nối mạch bài học với “12. `useOptimistic`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [optimisticMessages, addOptimisticMessage] =
@@ -274,33 +284,9 @@ Cấp cao (senior / 시니어) rà soát (review / 검토) cũng cần kiểm tr
 
 Fragment refs giải quyết trường hợp một hành vi (behavior / 동작) cần thao tác với **một nhóm sibling DOM nodes** nhưng không muốn thêm wrapper chỉ để có ref, hoặc children đến từ thành phần (component / 컴포넌트) không expose raw DOM ref.
 
-```jsx
-import {
-  Fragment,
-  useEffect,
-  useRef,
-} from "react";
+## 17. External store và `useSyncExternalStore`
+Phần này nối mạch bài học với “17. External store và `useSyncExternalStore`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-function FocusableGroup({ children }) {
-  const groupRef = useRef(null);
-
-  useEffect(() => {
-    groupRef.current?.focus();
-  }, []);
-
-  return (
-    <Fragment ref={groupRef}>
-      {children}
-    </Fragment>
-  );
-}
-```
-
-Ref này nhận một `FragmentInstance`, không phải một DOM element ảo. Instance cung cấp một tập năng lực (capability / 역량) giới hạn trên DOM children: quản lý sự kiện (event / 이벤트) ở first-level children, di chuyển focus bằng `focus`/`focusLast`/`blur`, gắn `IntersectionObserver` hoặc `ResizeObserver` qua `observeUsing`, lấy hình học (geometry / 기하학) bằng `getClientRects`, xác định gốc (root / 루트)/relative position và scroll group vào view. Nhờ vậy thành phần (component / 컴포넌트) có thể thêm focus/đo lường (measurement / 측정)/observation hành vi (behavior / 동작) mà không phá ngữ nghĩa (semantic / 의미적) HTML hoặc CSS bố cục (layout / 레이아웃) bằng một wrapper thừa.
-
-Đừng suy ra Fragment ref là “truy vấn (query / 쿼리) selector mới”. Nó cố ý chỉ expose năng lực (capability / 역량) React có thể duy trì qua một group children. Nếu lớp trừu tượng (abstraction / 추상화) nghiệp vụ cần một nút (node / 노드) cụ thể, tường minh (explicit / 명시적) ref vào nút (node / 노드) đó vẫn rõ hơn. thư viện (library / 라이브러리) công khai (public / 공개) dùng Fragment refs cũng phải khai minimum React 19.3 thay vì nói chung chung `>=19`.
-
-## 17. bên ngoài (external / 외부) store và `useSyncExternalStore`
 
 ```jsx
 const snapshot = useSyncExternalStore(
@@ -346,6 +332,8 @@ const load = cache(async url => {
 > `useSyncExternalStore` và `useInsertionEffect` được giới thiệu cùng React 18 chủ yếu để bên ngoài (external / 외부) store và CSS-in-JS thư viện (library / 라이브러리) tương thích tốt với concurrent rendering. ứng dụng (application / 애플리케이션) mã (code / 코드) bình thường hiếm khi cần tự dùng `useInsertionEffect`, còn `useSyncExternalStore` thường nằm phía dưới các state-management libraries.
 
 ## 19. `useImperativeHandle`
+Phần này nối mạch bài học với “19. `useImperativeHandle`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function MyInput({ ref }) {
@@ -846,7 +834,9 @@ Không nên nhìn cột “thay thế” như một bảng search-and-replace. V
 
 Giả sử cần subscribe một room theo `roomId`.
 
-### React lớp (class / 클래스) thành phần (component / 컴포넌트)
+### React Class Component
+Phần này nối mạch bài học với “React Class Component”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 class ChatRoom extends React.Component {
@@ -893,7 +883,9 @@ class ChatRoom extends React.Component {
 }
 ```
 
-### Hàm (function / 함수) thành phần (component / 컴포넌트) với Hooks
+### Function Component với Hooks
+Phần này nối mạch bài học với “Function Component với Hooks”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 function ChatRoom({

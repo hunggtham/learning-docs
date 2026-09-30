@@ -40,12 +40,16 @@ Malaysia vừa được promote từ compact tham chiếu (reference / 참조). 
 
 ### South Asia
 
-- **India** — monsoon–population–urban/manufacturing/dịch vụ (service / 서비스)–Indian Ocean hệ thống (system / 시스템).
+South Asia được giữ như một case về monsoon, dân số, đô thị và Indian Ocean; phần này chỉ cần một profile đại diện đủ sâu để minh họa cơ chế chung.
+
+- **India** — monsoon–population–urban/manufacturing/service–Indian Ocean system.
 
 ### Americas
 
-- **United States** — continental thị trường (market / 시장)/tài nguyên (resource / 자원)/vận chuyển (transport / 전송) mạng (network / 네트워크);
-- **Brazil** — Amazon basin + Atlantic metropolitan belt + interior commodity/tài nguyên (resource / 자원) corridors.
+Ở Americas, các profile được chọn để đối chiếu quy mô lục địa, basin, frontier và corridor hàng hóa, không phải để hoàn thành danh sách quốc gia.
+
+- **United States** — continental market/resource/transport network;
+- **Brazil** — Amazon basin + Atlantic metropolitan belt + interior commodity/resource corridors.
 
 Brazil vừa được promote từ compact tham chiếu (reference / 참조).
 
@@ -61,7 +65,9 @@ Các comparative học tập (learning / 학습) profiles đã có chiều sâu 
 
 ### Oceania
 
-- **Australia** — dry continental interior + coastal metropolitan hệ thống (system / 시스템) + mine/agriculture-to-port corridors + Asian trade mạng (network / 네트워크).
+Oceania minh họa cách một lãnh thổ khô rộng lớn tổ chức dân cư ven biển và nối tài nguyên nội địa với các cảng hướng sang châu Á.
+
+- **Australia** — dry continental interior + coastal metropolitan system + mine/agriculture-to-port corridors + Asian trade network.
 
 Australia vừa được promote và liên kết trực tiếp với regional Oceania chapter.
 
@@ -127,14 +133,4 @@ Học tập (learning / 학습) profile phải giải thích:
 Nếu chỉ có capital, climate, population và vài đoạn economy thì vẫn là tham chiếu (reference / 참조).
 
 
-> **Chuyển mạch:** Từ **Profile cổng chất lượng (quality gate / 품질 게이트)**, ta sang **hiện tại (current / 현재) direction** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Hiện tại (current / 현재) direction
-
-Cốt lõi (core / 핵심) và Regional Geography vẫn có priority cao hơn Atlas long tail. Sau Australia–Brazil–Malaysia, Atlas tạm quay lại trạng thái selective.
-
-Hướng tiếp theo là vật lý (physical / 물리적) cross-link QA và internal-link kiểm tra hợp lệ (validation / 검증). Thailand/Philippines chỉ được promote khi có batch đủ chiều sâu, không dùng profile count làm tiêu chí tiến độ.
-
 Xem [Atlas README](./README.md) và [Core Coverage Audit](../CORE_COVERAGE_AUDIT.md).
-
-> **Bàn giao:** Sau **hiện tại (current / 현재) direction**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 methodology and coverage](./00_methodology_and_coverage.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

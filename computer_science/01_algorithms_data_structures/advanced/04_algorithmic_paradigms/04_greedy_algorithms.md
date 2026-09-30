@@ -191,6 +191,8 @@ Greedy chứng minh luôn gắn với chính xác mô hình.
 
 ## Activity Selection bằng Java
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```java
 record Interval(int start, int end) {}
 
@@ -407,6 +409,4 @@ Khi greedy không chính xác và bài toán (problem / 문제) computationally 
 
 > Greedy không có nghĩa “tham lam chọn cái có vẻ tốt nhất”. Nó nghĩa là **có theorem cho phép khóa một quyết định mà không cần giữ alternatives**.
 
-Khi thiết kế greedy, hãy viết cục bộ choice bằng một câu chính xác, sau đó hỏi: tôi có thể lấy một phương án tối ưu bất kỳ và exchange choice đầu tiên của nó thành lựa chọn tham lam mà không làm tệ hơn không? Nếu không làm được, hãy tìm phản ví dụ trước khi viết mã (code / 코드) dài.
-
-> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 searching](./00_searching.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi thiết kế greedy, hãy viết cục bộ choice bằng một câu chính xác, sau đó hỏi: tôi có thể lấy một phương án tối ưu bất kỳ và exchange choice đầu tiên của nó thành lựa chọn tham lam mà không làm tệ hơn không? Nếu không làm được, hãy tìm phản ví dụ trước khi viết code dài.

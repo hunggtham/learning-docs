@@ -128,6 +128,8 @@ Do đó reward-model score không nên là only evaluation after huấn luyện 
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Human preferences
       ↓
@@ -159,5 +161,3 @@ PPO là một tối ưu hóa (optimization / 최적화) choice. RLHF rộng hơn
 RLHF là ứng dụng của [Reinforcement Learning](../11_reinforcement_learning/00_reinforcement_learning_foundations.md) và [Optimization](../01_mathematical_foundations/06_optimization.md), nhưng practical LLM post-training có cấu trúc (structure / 구조) riêng vì hành động (action / 동작) không gian (space / 공간) là đơn vị từ (token / 토큰) sequences và reward learned from preferences.
 
 Xem tiếp: [DPO](./09_preference_optimization_and_dpo.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 from language models to llms](./00_from_language_models_to_llms.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

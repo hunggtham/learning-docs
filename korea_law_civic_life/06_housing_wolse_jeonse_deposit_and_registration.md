@@ -179,6 +179,8 @@ Nguồn nên kiểm tra: HUG, HF, SGI tùy sản phẩm.
 
 ## 11. Nguồn chính thức
 
+Nhà ở kết hợp hợp đồng, đăng ký, quyền ưu tiên và rủi ro tài sản bảo đảm, nên nguồn tra cứu phải được kiểm tra theo đúng loại giao dịch. Hãy đối chiếu luật, đăng ký bất động sản và hướng dẫn cơ quan trước khi chuyển tiền hoặc rời nhà.
+
 - 주택임대차보호법 / 시행령: https://www.law.go.kr/
 - 찾기쉬운 생활법령정보 — 주택임대차: https://www.easylaw.go.kr/
 - 인터넷등기소: https://www.iros.go.kr/
@@ -191,6 +193,4 @@ Nguồn nên kiểm tra: HUG, HF, SGI tùy sản phẩm.
 
 ## 12. Không phải tư vấn giao dịch cá nhân
 
-Một hợp đồng 전세 cụ thể cần dữ liệu như giá nhà, thứ tự thế chấp, thuế nợ của chủ sở hữu, quyền ưu tiên, loại bất động sản và thời điểm đăng ký. tệp (file / 파일) này chỉ cung cấp **mô hình kiểm tra**; không kết luận một căn nhà cụ thể là “an toàn” hay “không an toàn”.
-
-> **Bàn giao:** Sau **12. Không phải tư vấn giao dịch cá nhân**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Một hợp đồng 전세 cụ thể cần dữ liệu như giá nhà, thứ tự thế chấp, thuế nợ của chủ sở hữu, quyền ưu tiên, loại bất động sản và thời điểm đăng ký. File này chỉ cung cấp **mô hình kiểm tra**; không kết luận một căn nhà cụ thể là “an toàn” hay “không an toàn”.

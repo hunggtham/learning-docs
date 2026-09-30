@@ -78,6 +78,8 @@ EMI filter thêm poles/impedance và có thể làm vòng điều khiển (contr
 > **Chuyển mạch:** Từ **7. EMI/EMC và bố cục (layout / 레이아웃)**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - switch nút (node / 노드) ringing vượt VDS rating;
 - diode reverse khôi phục (recovery / 복구) tạo shoot-through;

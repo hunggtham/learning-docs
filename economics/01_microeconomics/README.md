@@ -13,6 +13,8 @@ Microeconomics nghiên cứu cách household, firm và các tổ chức lựa ch
 Demand–supply và elasticity không được tách thành một “formula chapter” độc lập vì chúng là ngôn ngữ xuyên suốt bên tiêu thụ (consumer / 소비자), producer, welfare và chính sách (policy / 정책). Người học cần hiểu curve là kết quả của mục tiêu (objective / 목표) + ràng buộc (constraint / 제약조건) + ceteris-paribus các giả định (assumptions / 가정들), không phải hình vẽ tồn tại độc lập.
 
 ## Trục học (learning spine / 학습 축)
+Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Individual objective + constraint

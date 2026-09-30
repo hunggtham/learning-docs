@@ -425,6 +425,8 @@ Accretion chỉ là phép toán, không phải bằng chứng thương vụ tố
 
 ## 43. Tăng trưởng hữu cơ và tăng trưởng mua lại
 
+Tăng trưởng báo cáo cần được tách thành phần hữu cơ, phần do mua lại và ảnh hưởng FX. Nếu không, serial acquisition có thể che hoạt động cốt lõi đang yếu đi.
+
 ```text
 Reported Growth
 = Organic Growth
@@ -562,6 +564,8 @@ Giao dịch với công ty liên quan không tự động xấu nhưng phải c�
 Các khoản vay, bảo lãnh, mua bán tài sản và hợp đồng dịch vụ cần được kiểm tra.
 
 ## 56. Tunneling
+
+Tunneling là rủi ro giá trị bị chuyển khỏi cổ đông thiểu số thông qua giao dịch với bên kiểm soát. Phần này cần được đọc cùng related-party disclosure, giá giao dịch và quyền phê duyệt.
 
 **Tunneling** là chuyển giá trị từ công ty niêm yết hoặc cổ đông thiểu số sang bên kiểm soát thông qua giao dịch không theo điều kiện thị trường.
 

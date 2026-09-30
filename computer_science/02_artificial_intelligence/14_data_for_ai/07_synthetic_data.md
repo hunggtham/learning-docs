@@ -7,6 +7,8 @@
 
 ## Các nguồn synthetic dữ liệu (data / 데이터)
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 rule-based generation
 simulation / digital twin
@@ -189,5 +191,3 @@ Visual plausibility does not guarantee task-relevant joint phân phối (distrib
 Synthetic dữ liệu (data / 데이터) connects Generative AI, Simulation, Privacy, RL environments and dữ liệu (data / 데이터) quản trị (governance / 거버넌스).
 
 Xem tiếp: [Data Governance](./08_data_governance.md).
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 data as the foundation of ai](./00_data_as_the_foundation_of_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

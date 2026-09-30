@@ -46,6 +46,8 @@ chỉ bằng kiểu (type / 타입) hoặc thành phần (component / 컴포넌�
 > **Chuyển mạch:** Từ **Ba lớp cần tách**, ta sang **bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)
+Phần “Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Mỗi tài nguyên (resource / 자원), yêu cầu (request / 요청), DOM nút (node / 노드), thành phần (component / 컴포넌트)/page instance và async thao tác (operation / 연산)
   có định danh (identity / 식별자) và thời gian tồn tại (lifetime / 수명) rõ ràng.

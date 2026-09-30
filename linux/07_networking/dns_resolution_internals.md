@@ -490,6 +490,8 @@ DNS success chỉ giải quyết câu hỏi “địa chỉ nào?”, không gi�
 
 ## Xem thêm
 
+Các liên kết này là bước bàn giao sang cơ chế liên quan. Hãy mở chúng theo câu hỏi còn bỏ ngỏ, không coi danh sách link là phần kết luận tự thân.
+
 - [Networking, DNS, sockets và ports](./networking_dns_sockets_ports.md)
 - [IP routing, NAT và conntrack](./ip_routing_nat_conntrack.md)
 - [TCP, HTTP và TLS](./tcp_http_tls.md)

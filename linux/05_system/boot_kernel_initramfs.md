@@ -213,6 +213,8 @@ Một đơn vị (unit / 단위) có thời gian activate dài không nhất thi
 
 ## Journal của boot hiện tại và boot trước
 
+Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
+
 ```bash
 journalctl -b
 ```
@@ -371,5 +373,3 @@ Mỗi câu trả lời “có” loại bỏ một nhóm nguyên nhân phía tr�
 **“bộ chứa (container / 컨테이너) boot giống VM.”** bộ chứa (container / 컨테이너) thường không boot kernel riêng.
 
 Xem thêm: [systemd và services](./systemd_boot_services.md), [Storage và filesystem](../06_resources/storage_filesystems.md), [`/proc` và `/sys`](../00_foundations/proc_sysfs_kernel_interfaces.md).
-
-> **Bàn giao:** Sau **Những hiểu lầm phổ biến**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [journald rsyslog log pipeline](./journald_rsyslog_log_pipeline.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

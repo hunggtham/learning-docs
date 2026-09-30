@@ -359,6 +359,8 @@ Far-transfer bằng chứng (evidence / 증거) is limited.
 
 ### Established bằng chứng (evidence / 증거)
 
+Lớp này tóm tắt những kết quả có mức lặp lại và phạm vi áp dụng tương đối rõ. Hãy đọc cùng population, measurement và effect size để không biến một association thành bản chất cố định.
+
 - positive manifold;
 - hierarchical covariance cấu trúc (structure / 구조);
 - sai số đo lường (measurement error / 측정 오차)/norm dependence;
@@ -368,6 +370,8 @@ Far-transfer bằng chứng (evidence / 증거) is limited.
 
 ### Hiện tại (current / 현재) theories/các mô hình (models / 모델들)
 
+Các model hiện hành là những cách tổ chức bằng chứng và cơ chế, không phải nhãn thay thế cho dữ liệu. So sánh chúng theo dự đoán, boundary condition và khả năng kiểm tra.
+
 - g-as-causal factor interpretations;
 - CHC hierarchy;
 - process-overlap accounts;
@@ -375,12 +379,16 @@ Far-transfer bằng chứng (evidence / 증거) is limited.
 
 ### Hypotheses/debates
 
-- chính xác (exact / 정확한) biological cơ chế (mechanism / 메커니즘) of g;
-- degree/ngữ cảnh (context / 맥락) of differentiation across lifespan;
+Phần này giữ các giả thuyết và tranh luận còn mở ở đúng trạng thái của chúng. Hãy ghi rõ evidence nào đang ủng hộ, phản biện hoặc có thể làm thay đổi kết luận.
+
+- exact biological mechanism of g;
+- degree/context of differentiation across lifespan;
 - how much specific environmental interventions shift broad latent ability;
 - best fairness mô hình (model / 모델) for high-stakes assessment.
 
 ## 38. mô hình tư duy (mental model / 사고 모델)
+
+Mental model này nối capability quan sát được với task, context, strategy và measurement. Nó giúp tránh coi “intelligence” là một đặc tính đơn nhất không đổi giữa mọi nhiệm vụ.
 
 ```text
 Observed cognitive performance
@@ -401,8 +409,8 @@ Psychometric mô hình (model / 모델) summarizes patterns; nhân quả (causal
 
 ### Nguồn định hướng
 
-- hiện đại (modern / 현대적) reviews of intelligence genetics emphasize polygenicity and gene/môi trường (environment / 환경) contributions rather than deterministic genes.
-- Fairness literature stresses that cognitive assessment must be interpreted with equity, đo lường (measurement / 측정) validity and consequences of use.
-- Recent meta-analytic lifespan công việc (work / 작업) supports a general factor while showing that its cấu trúc (structure / 구조)/strength need not be uniform at every age/ability mức (level / 수준).
+Các nguồn này giúp kiểm tra claim về intelligence, test và cognitive differences theo bằng chứng hiện hành. Hãy ghi phạm vi mẫu và giới hạn diễn giải khi dùng chúng.
 
-> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 learning and conditioning](./00_learning_and_conditioning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- Modern reviews of intelligence genetics emphasize polygenicity and gene/environment contributions rather than deterministic genes.
+- Fairness literature stresses that cognitive assessment must be interpreted with equity, measurement validity and consequences of use.
+- Recent meta-analytic lifespan work supports a general factor while showing that its structure/strength need not be uniform at every age/ability level.

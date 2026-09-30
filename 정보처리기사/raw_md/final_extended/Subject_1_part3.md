@@ -161,6 +161,8 @@
 ---
 
 ## 9. 효과적인 모듈 설계 방안 (Effective Module Design)
+Phần “9. 효과적인 모듈 설계 방안 (Effective Module Design)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 *   **Korean:** 결합도↓, 응집도↑. 모듈의 영향 영역(Scope of Effect)이 제어 영역(Scope of Control) 안에 있어야 함. 단일 입구/단일 출구(Single Entry, Single Exit). 복잡도와 중복성 감소.
 *   **Vietnamese:** Coupling thấp, Cohesion cao. **Phạm vi ảnh hưởng (Scope of Effect) phải nằm TRONG Phạm vi kiểm soát (Scope of Control)** của module. Chỉ có 1 đầu vào và 1 đầu ra. Giảm độ phức tạp và dư thừa.
 *   **Example:** Một hàm sắp xếp chỉ nên thay đổi mảng truyền vào nó (trong vùng kiểm soát), không nên vô tình thay đổi giao diện UI (vùng ảnh hưởng ngoài kiểm soát).
@@ -230,6 +232,8 @@
 
 ## 12. 요구사항 (Requirements)
 ### 요구사항 분석 (Requirements Analysis)
+Phần “요구사항 분석 (Requirements Analysis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 *   **분류 (Phân loại):** 기능적(Functional) / 비기능적(Non-functional)으로 조직화.
 *   **절차 (Quy trình 5 bước):** 선별(목록 작성) -> 자료 준비 -> 분류(기능/비기능) -> 분석 및 수정 -> 전달 (Lọc -> Chuẩn bị -> Phân loại -> Phân tích/Sửa -> Truyền đạt).
 
@@ -261,6 +265,8 @@
 5.  **Web Service:** WSDL, UDDI, SOAP 프로토콜 사용 (Dịch vụ web dùng giao thức chuẩn XML/SOAP).
 
 ### 13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)
+Phần “13.2 인터페이스 통신 & 처리 유형 (Loại giao tiếp & xử lý)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 *   **통신 유형 (Loại Giao tiếp):**
     *   **단방향 (Unidirectional):** 응답 없음 (Chỉ gửi, không cần phản hồi).
     *   **동기 (Synchronous):** 응답 대기 (Gửi và đợi phản hồi).
@@ -271,6 +277,8 @@
     *   **배치 (Batch):** 대용량 일괄 처리 (Gom dữ liệu lớn xử lý 1 lần).
 
 ### 13.3 명세화 (Specification)
+Phần “13.3 명세화 (Specification)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
 *   **송수신 데이터 명세화:** 데이터 필드명, 타입, 사이즈, **암호화 여부** 정의 (Đặc tả dữ liệu: Tên trường, Kiểu, Kích thước, và có Cần Mã hóa không).
 *   **오류 식별 및 처리 방안 명세화:** 오류 코드, 메시지, 해결 방법 정의 (Đặc tả lỗi: Mã lỗi, Thông báo, Cách xử lý để dễ vận hành).
 

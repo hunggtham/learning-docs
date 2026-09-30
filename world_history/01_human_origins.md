@@ -10,6 +10,8 @@ Homo sapiens mở rộng không chỉ nhờ “thông minh hơn” mà nhờ ng�
 > **Chuyển mạch:** Từ **Luận đề**, ta sang **Chuỗi nhân quả** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chuỗi nhân quả
+Phần “Chuỗi nhân quả” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 biến thiên môi trường
@@ -21,6 +23,8 @@ biến thiên môi trường
 ```
 
 ### Bảy trục cần theo dõi
+Phần “Bảy trục cần theo dõi” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Technology:** đá ghè, composite tools, lửa, trang phục và hàng hải làm đổi năng lượng hữu dụng.
 - **Resources:** săn bắt–hái lượm là dòng thu nhập biến động; quyền tiếp cận phụ thuộc mùa và lãnh thổ.
@@ -58,6 +62,8 @@ Một nhóm không tối ưu “sản lượng tối đa” mà tối ưu **dòn
 Ngôn ngữ, bắt chước có chọn lọc và kể chuyện cho phép truyền kỹ năng vượt quá một đời người. Reciprocity hoạt động khi nhóm có lặp lại tương tác; nghi lễ và taboo làm cho cam kết trở nên dễ nhận biết trước người lạ. Đây là **institution mềm**, không phải bằng chứng rằng xã hội không có xung đột.
 
 ### Stock/luồng (flow / 흐름) cần vẽ
+Phần “Stock/luồng (flow / 흐름) cần vẽ” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 stock: knowledge, social trust, tools, fire sites, kin ties

@@ -66,6 +66,8 @@ O(\log n)
 
 ### JavaScript cách triển khai
 
+Trước khi đọc đoạn triển khai, hãy giữ invariant và complexity mà thuật toán phải bảo toàn. Code bên dưới là một cách hiện thực hóa; cần đối chiếu output, ownership và edge case với mô hình vừa học.
+
 ```js
 class MinHeap {
   constructor(compare = (a, b) => a - b) {
@@ -409,6 +411,4 @@ Lỗi vùng nhớ động (heap / 힙) thường xuất hiện ở các trườn
 
 > vùng nhớ động (heap / 힙) là một **động frontier cấu trúc (structure / 구조)**. Nó không cố giữ toàn bộ dữ liệu ordered; nó giữ đủ cục bộ bất biến để câu hỏi “ai là ứng viên tốt nhất tiếp theo?” luôn trả lời rẻ.
 
-Khi gặp một thuật toán có vòng lặp (loop / 루프) kiểu “liên tục chọn ứng viên nhỏ nhất/lớn nhất rồi sinh thêm các ứng viên”, hãy nghĩ tới hàng đợi ưu tiên. Sau đó mới hỏi đống nhị phân có đúng mô hình chi phí không, có cần decrease-key không, có bounded độ ưu tiên lĩnh vực (domain / 도메인) để dùng ngăn băm không, và quy tắc phân xử khi bằng nhau ngữ nghĩa là gì.
-
-> **Bàn giao:** Sau **Mô hình tư duy mở rộng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 tree foundations](./00_tree_foundations.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi gặp một thuật toán có loop kiểu “liên tục chọn ứng viên nhỏ nhất/lớn nhất rồi sinh thêm các ứng viên”, hãy nghĩ tới hàng đợi ưu tiên. Sau đó mới hỏi đống nhị phân có đúng mô hình chi phí không, có cần decrease-key không, có bounded độ ưu tiên domain để dùng ngăn băm không, và quy tắc phân xử khi bằng nhau ngữ nghĩa là gì.

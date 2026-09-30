@@ -112,7 +112,9 @@ Nó không optimal. Goal tìm đầu tiên phụ thuộc successor thứ tự (o
 
 ### Khi DFS useful?
 
-- bộ nhớ (memory / 메모리) constrained;
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+- memory constrained;
 - solution expected deep;
 - chỉ cần any solution;
 - exhaustive traversal/backtracking;
@@ -397,7 +399,9 @@ Weighted A* và iterative improvement methods can have anytime variants.
 
 ## Choosing an uninformed chiến lược (strategy / 전략)
 
-| Situation | chiến lược (strategy / 전략) intuition |
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
+| Situation | Strategy intuition |
 |---|---|
 | đơn vị (unit / 단위) chi phí (cost / 비용), shallow solution | BFS |
 | bộ nhớ (memory / 메모리) tight, any solution | DFS / DLS |
@@ -408,6 +412,8 @@ Weighted A* và iterative improvement methods can have anytime variants.
 Bảng (table / 테이블) này là starting heuristic, không substitute phân tích (analysis / 분석) of actual đồ thị (graph / 그래프) kích thước (size / 크기), cycles, các ràng buộc (constraints / 제약조건들) và bộ nhớ (memory / 메모리) biểu diễn (representation / 표현).
 
 ## Mô hình tư duy (mental model / 사고 모델)
+
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
 
 ```text
 BFS   = optimize depth
@@ -440,6 +446,4 @@ Goal cần được settled/popped theo lowest đường dẫn (path / 경로) c
 
 Uninformed tìm kiếm (search / 검색) cung cấp baseline để thấy heuristic mang lại gì. [Heuristic Search](./02_heuristic_search.md) sẽ thêm estimate `h(n)` để focus expansion, còn Planning sẽ add richer hành động (action / 동작) preconditions/effects.
 
-Khi chọn tìm kiếm (search / 검색) thuật toán (algorithm / 알고리즘), hãy bắt đầu bằng đồ thị (graph / 그래프) properties: branching factor, độ sâu (depth / 깊이), edge costs, cycles, bộ nhớ (memory / 메모리) ngân sách (budget / 예산) và whether goal/reverse transitions known.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi chọn search algorithm, hãy bắt đầu bằng graph properties: branching factor, depth, edge costs, cycles, memory budget và whether goal/reverse transitions known.

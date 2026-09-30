@@ -37,6 +37,8 @@ Một link 10 Msymbol/s, 16-QAM có 4 bit/symbol, nên raw tỷ lệ (rate / 비
 > **Chuyển mạch:** Từ **4. Worked lập luận (reasoning / 추론): thông lượng (throughput / 처리량) thực**, ta sang **thất bại (failure / 실패) modes** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Thất bại (failure / 실패) modes
+Phần “Thất bại (failure / 실패) modes” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - báo raw dữ liệu (data / 데이터) tỷ lệ (rate / 비율) như ứng dụng (application / 애플리케이션) thông lượng (throughput / 처리량);
 - tăng modulation thứ tự (order / 순서) khi EVM không đủ;

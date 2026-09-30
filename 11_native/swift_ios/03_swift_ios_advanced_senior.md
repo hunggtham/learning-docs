@@ -17,6 +17,8 @@ ARC chỉ quản lý thời gian tồn tại (lifetime / 수명) của reference
 
 ## 1.1 quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프) thay vì quy tắc `weak self`
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 final class Downloader {
     var onFinish: (() -> Void)?
@@ -342,6 +344,8 @@ Callback UIKit có thể đến trên hàng đợi (queue / 큐)/framework-defin
 ---
 
 # 15. UIKit → SwiftUI với UIHostingController
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 let host = UIHostingController(rootView: ProfileView(model: model))
@@ -696,6 +700,4 @@ Nếu reviewer phải mất rất lâu mới xác định trạng thái (state /
 
 ## Gate trước khi sang Master
 
-Bạn phải có khả năng lấy một hybrid app SwiftUI + UIKit thật và vẽ được: đối tượng (object / 객체) quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프), view/controller vòng đời (lifecycle / 생명주기), tác vụ (task / 작업) đồ thị (graph / 그래프), actor/isolation ranh giới (boundary / 경계), trạng thái (state / 상태) source-of-truth, mạng (network / 네트워크)/persistence ranh giới (boundary / 경계) và mô-đun (module / 모듈) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프). Master sẽ không dạy lại các đồ thị (graph / 그래프) này; nó dùng chúng để giải quyết phiên bản (version / 버전) evolution, ABI/thư viện (library / 라이브러리) evolution, large-scale độ tin cậy (reliability / 신뢰성), hiệu năng (performance / 성능)/bảo mật (security / 보안)/bản phát hành (release / 릴리스) quản trị (governance / 거버넌스).
-
-> **Bàn giao:** Sau **Gate trước khi sang Master**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 INDEX](./00_INDEX.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Bạn phải có khả năng lấy một hybrid app SwiftUI + UIKit thật và vẽ được: object ownership graph, view/controller lifecycle, task graph, actor/isolation boundary, state source-of-truth, network/persistence boundary và module dependency graph. Master sẽ không dạy lại các graph này; nó dùng chúng để giải quyết version evolution, ABI/library evolution, large-scale reliability, performance/security/release governance.

@@ -135,6 +135,8 @@ China sau 1978 và Vietnam sau 1986 có family resemblance: gradual reform, grea
 Vì vậy chapter tiếp theo, [Vietnam and Đổi Mới](14_case_vietnam_doi_moi_market_reform_and_socialist_orientation.md), không dùng China làm template. Nó dùng cùng analytical khung phần mềm (framework / 프레임워크) để xem Vietnam đã thay đổi institution nào, giữ institution nào và kết quả (outcome / 결과) nào đi cùng quá trình đó.
 
 ## Sources và reading anchors
+Phần “Sources và reading anchors” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - World Bank, “China — Overview”: https://www.worldbank.org/en/country/china
 - World Bank, *Reflections on Forty Years of China’s Reforms* and reform chronology: https://blogs.worldbank.org/en/eastasiapacific/reflections-on-forty-years-of-china-reforms

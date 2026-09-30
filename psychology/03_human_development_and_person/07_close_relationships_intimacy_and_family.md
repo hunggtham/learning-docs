@@ -219,6 +219,8 @@ Trong abuse, power asymmetry và an toàn (safety / 안전) cần được ưu t
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 history + attachment + stress + expectation
                  ↓
@@ -246,5 +248,3 @@ history + attachment + stress + expectation
 ## Kết nối kiến thức
 
 Xem [[01_attachment_and_relationships]], [[06_stress_coping_and_emotion_regulation]], [[12_loneliness_social_connection_and_belonging]], [[13_sexuality_desire_and_relationship_functioning]], [[14_parenting_caregiving_and_family_development]], [[../06_applied/03_interpersonal_communication_and_conflict]] và [[../06_applied/20_negotiation_conflict_and_joint_decision_making]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

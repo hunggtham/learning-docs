@@ -57,6 +57,8 @@ type User = {
 Adapter ranh giới (boundary / 경계) làm conversion + kiểm tra hợp lệ (validation / 검증). Lợi ích là nếu backend đổi format, damage được cô lập; UI/nghiệp vụ (business / 비즈니스) mã (code / 코드) không phải carry vận chuyển (transport / 전송) quirks khắp codebase.
 
 ## 3. Branded ID ngăn cross-domain mix-up nhưng không validate format
+Phần “3. Branded ID ngăn cross-domain mix-up nhưng không validate format” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```ts
 declare const userIdBrand: unique symbol;

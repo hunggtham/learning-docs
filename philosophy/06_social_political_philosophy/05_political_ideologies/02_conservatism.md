@@ -63,6 +63,8 @@ Conservative traditions có thể overlap nationalism về tradition/community v
 Conservatism bổ sung cho comparison khung phần mềm (framework / 프레임워크) một câu hỏi mà ideological blueprint dễ thiếu: **institution hiện tại đang giải bài toán (problem / 문제) gì mà ta chưa nhìn thấy?** [Socialism và social democracy](03_socialism_and_social_democracy.md) sẽ đảo perspective: nếu inherited thuộc tính (property / 속성) và authority chính là nguồn (source / 소스) of domination, cautious preservation có thể bảo tồn injustice như thế nào?
 
 ## Sources
+Phần “Sources” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - Stanford Encyclopedia of Philosophy, “Conservatism”: https://plato.stanford.edu/entries/conservatism/
 - Stanford Encyclopedia of Philosophy, “Ideology”: https://plato.stanford.edu/entries/ideology/

@@ -1,39 +1,47 @@
-# 095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)
+# 084: 퀵 정렬 (Quick Sort)
 
 ## 학습 목표 (Mục tiêu)
 
-이 단원을 읽은 뒤 **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)**의 정의와 핵심 차이를 한국어 용어와 베트남어 의미로 설명할 수 있어야 한다.
+Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nhau cốt lõi của **084: 퀵 정렬 (Quick Sort)**, đồng thời nối thuật ngữ 한국어 (tiếng Hàn) với nghĩa tiếng Việt.
+
+Mục đích của bài này là hiểu **084: 퀵 정렬 (Quick Sort)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **085: 힙 정렬 (Heap Sort)** khi chuyển sang phần tiếp theo.
 
 ## 핵심 키워드 (Từ khóa)
 
-단위, 모듈, 테스트, 케이스
+정렬
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
-이 단원은 앞의 **094 & 094-1: IPC 및 모듈별 알고리즘 구현 (IPC & Algorithm by Module Type)**에서 만든 기준을 바탕으로 절차와 비교 기준을 확장한다. 읽은 뒤에는 **13. 형상 관리 (SCM - Software Configuration Management)**에서 같은 기준이 어떻게 심화되거나 다른 형태로 적용되는지 확인한다. 먼저 용어의 주체·대상·목적을 확인한 뒤 세부 규칙을 읽으면 암기 부담이 줄어든다.
+이 단원은 **083: 버블 정렬 (Bubble Sort)**에서 만든 기준을 이어받아 **084: 퀵 정렬 (Quick Sort)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
 ## 읽는 방법 (Cách đọc)
 
 1. 제목에서 **무엇을(대상)**, **왜 쓰는지(목적)**를 먼저 찾는다.
-2. 본문에서 순서·조건·장단점을 표시하고, 비슷한 용어는 한 줄로 비교한다.
+2. 본문에서 순서·조건·장단점을 표시하고, 앞 단원과 다음 단원 사이의 연결 문장을 확인한다.
 3. 예시를 읽은 뒤 책을 덮고 핵심을 한국어 한 문장과 베트남어 한 문장으로 다시 말한다.
 
-> **Quy ước:** `한국어 (English) (Tiếng Việt)`. Đọc phần tiếng Việt liền sau ý tiếng Hàn để vừa hiểu nghĩa vừa giữ được từ khóa làm đề.
+> **Quy ước:** ở mọi lần xuất hiện, giải thích bằng tiếng Việt trước và giữ `English / 한국어` ngay cạnh để đối chiếu đề.
 
-> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)** và nối nó với **13. 형상 관리 (SCM - Software Configuration Management)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+> **Bàn giao:** Sau khi đọc, hãy tự nói lại điểm phân biệt quan trọng nhất của **084: 퀵 정렬 (Quick Sort)** và nối nó với **085: 힙 정렬 (Heap Sort)**; nếu không làm được, quay lại ví dụ thay vì học thuộc riêng định nghĩa.
+
+---
+
+## 084: 퀵 정렬 (Quick Sort)
+
+Từ **083: 버블 정렬 (Bubble Sort)**, ta đã có điểm tựa để bước vào **084: 퀵 정렬 (Quick Sort)**. Câu hỏi dẫn đường ở đây là: phần mới này đang làm rõ, mở rộng hay đối chiếu điều gì? Trả lời được câu hỏi đó sẽ giúp ta hiểu mục đích của mục 21/101 trước khi đi vào chi tiết.
+
+Để đọc **084: 퀵 정렬 (Quick Sort)** như một bài học cho người mới, hãy giữ câu hỏi: **khái niệm này đang giải quyết vấn đề nào, hoạt động theo điều kiện nào và tạo ra hệ quả gì?** Phần nguồn bên dưới cung cấp các dấu hiệu và quy tắc để trả lời câu hỏi này. Công thức cần được đọc từ ý nghĩa của biến và điều kiện áp dụng trước khi ghi nhớ ký hiệu.  Hãy chốt phần này bằng chuỗi **đối tượng → điều kiện → hệ quả** trước khi chuyển tiếp.
+
+Phần “084: 퀵 정렬 (Quick Sort)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
+
+- **분할과 정복 (Divide and Conquer):** 파일 나누어 정렬.
+- **피벗 (Pivot):** 기준값. Nhỏ hơn Pivot sang trái, lớn hơn Pivot sang phải.
+- **스택 (Stack) 필요:** 재귀 (Recursion) 호출을 위해. (Dùng đệ quy nên cần Stack nhớ vị trí).
+- **가장 빠른 방식:** Trung bình nhanh nhất.
+- **시간 복잡도:** 평균 **O(n log n)**, 최악 **O(n²)** (Khi mảng đã sắp xếp sẵn mà chọn Pivot ngu).
+
+- 💡 **Mẹo ghi nhớ (Mnemonics):** Quick = Pivot, Đệ quy, Stack. Tốt: n log n. Xấu: n².
 
 ---
 
-## 095 & 096: 단위 모듈 테스트 및 테스트 케이스 (Unit Test & Test Case)
-
-### 단위 모듈 테스트 (Unit Module Test)
-- 코딩 직후 최소 단위인 모듈이나 컴포넌트에 초점을 맞춤. (Test ngay sau khi code xong 1 hàm/module).
-- Chủ yếu dùng **화이트박스 (White-box test)** để tìm lỗi thuật toán, vòng lặp vô hạn, lỗi công thức toán học.
-
-### 테스트 케이스 (Test Case)
-- 입력 값, 실행 조건, 기대 결과의 명세서. (Tài liệu ghi rõ: Nhập gì, Điều kiện gì, Kết quả mong đợi là gì).
-- 테스트 케이스를 미리 작성(사전에 정의)해야 인력과 시간 낭비를 방지. (Phải viết Test Case **trước** khi code hoặc test, để tránh test lung tung tốn thời gian).
-
-- 💡 **Mẹo ghi nhớ (Mnemonics):** trường hợp kiểm thử (test case / 테스트 케이스) = đầu vào (input / 입력) + điều kiện (condition / 조건) + Expected đầu ra (output / 출력). Bắt buộc viết trước khi kiểm thử (test / 테스트).
-
----
+Điểm chốt của **084: 퀵 정렬 (Quick Sort)** là biết nó đứng ở đâu và có giới hạn nào trong nguồn. Bước kế tiếp là **085: 힙 정렬 (Heap Sort)**; hãy dùng phần vừa học như tiêu chí đối chiếu, không lặp lại toàn bộ định nghĩa khi chuyển mục.

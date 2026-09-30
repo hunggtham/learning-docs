@@ -4,6 +4,8 @@
 
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
+Phần “Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```mermaid
 graph TD
@@ -31,6 +33,8 @@ graph TD
 > **Chuyển mạch:** Từ **phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)**, ta sang **Câu hỏi xuyên suốt** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Câu hỏi xuyên suốt
+Phần “Câu hỏi xuyên suốt” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Trục | Câu hỏi cơ chế |
 | --- | --- |
@@ -46,6 +50,8 @@ graph TD
 > **Chuyển mạch:** Từ **Câu hỏi xuyên suốt**, ta sang **Lộ trình đọc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Lộ trình đọc
+Phần “Lộ trình đọc” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **Nền tảng vật chất:** 01 → 02 → 03.
 - **Đế chế và mạng ý tưởng:** 04 → 05 → 06.
@@ -60,6 +66,8 @@ Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, k
 > **Chuyển mạch:** Từ **Lộ trình đọc**, ta sang **Chapter map** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Chapter map
+Phần “Chapter map” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | # | Giai đoạn | Chapter |
 | --- | --- | --- |
@@ -91,6 +99,8 @@ Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, k
 > **Chuyển mạch:** Từ **Chapter map**, ta sang **Tài liệu điều hướng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Tài liệu điều hướng
+Phần “Tài liệu điều hướng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Learning Route](LEARNING_ROUTE.md): các đường đọc theo mục tiêu và cách ôn lại.
 - [Coverage Audit](COVERAGE_AUDIT.md): trạng thái breadth/độ sâu (depth / 깊이), ranh giới và ưu tiên vòng tiếp theo.

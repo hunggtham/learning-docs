@@ -5,6 +5,8 @@
 Điều khiển (control / 제어) các hệ thống (systems / 시스템들) biến đo lường (measurement / 측정) thành hành động (action / 동작) để giữ plant trong vùng mong muốn dưới disturbance, bất định (uncertainty / 불확실성) và delay. phản hồi (feedback / 피드백) không tự động làm hệ tốt hơn: gain, phase, saturation và sensor thất bại (failure / 실패) có thể tạo instability.
 
 ## Cốt lõi (core / 핵심) tuyến (route / 경로)
+Phần “Cốt lõi (core / 핵심) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 plant/sensor/actuator → transfer function → stability → PID → state-space → observer → digital/safety control
@@ -14,6 +16,8 @@ plant/sensor/actuator → transfer function → stability → PID → state-spac
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) tuyến (route / 경로)**, ta sang **cốt lõi (core / 핵심) chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) chapter
+Phần “Cốt lõi (core / 핵심) chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Feedback, stability and PID](00_feedback_stability_pid.md) — closed-loop sensitivity, poles, phase margin, saturation, anti-windup và digital điều khiển (control / 제어).
 - [State-space and discrete control](01_state_space_discrete_control.md) — controllability, khả năng quan sát (observability / 관측 가능성), discretization, deadline và HIL xác minh (verification / 확인).
@@ -22,6 +26,8 @@ plant/sensor/actuator → transfer function → stability → PID → state-spac
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) chapter**, ta sang **Cần nắm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cần nắm
+Phần “Cần nắm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - open-loop vs closed-loop, tham chiếu (reference / 참조), lỗi (error / 오류) và disturbance;
 - poles/zeros, Bode/Nyquist/gốc (root / 루트) locus và stability margin;

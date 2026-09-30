@@ -171,6 +171,8 @@ Accountability gồm transparency, rà soát (review / 검토), traceability và
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 resource control + status + role
             ↓
@@ -188,5 +190,3 @@ reinforcement của hierarchy
 ## Kết nối kiến thức
 
 Đọc cùng [[10_group_dynamics_collective_behavior_and_cooperation]], [[08_moral_psychology_and_prosocial_behavior]], [[16_acculturation_migration_and_bicultural_identity]], [[../06_applied/00_work_organization_and_leadership]], [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]], [[../06_applied/18_financial_psychology_and_personal_decision_making]] và [[../06_applied/20_negotiation_conflict_and_joint_decision_making]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 lifespan development](./00_lifespan_development.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

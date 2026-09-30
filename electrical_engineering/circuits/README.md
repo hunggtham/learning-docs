@@ -6,6 +6,8 @@
 Nhánh này xây ngôn ngữ nền của kỹ thuật điện: nút (node / 노드), branch, vòng lặp (loop / 루프), charge, voltage, hiện tại (current / 현재), power, impedance và năng lượng (energy / 에너지). Mạch được học như một mô hình có ranh giới (boundary / 경계), nguồn (source / 소스), tải (load / 로드), trạng thái (state / 상태) và đo lường (measurement / 측정) điểm (point / 지점).
 
 ## Cốt lõi (core / 핵심) tuyến (route / 경로)
+Phần “Cốt lõi (core / 핵심) tuyến (route / 경로)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 KCL/KVL → Thévenin/Norton → RC/RL/RLC → phasor/impedance → frequency response → measurement
@@ -15,6 +17,8 @@ KCL/KVL → Thévenin/Norton → RC/RL/RLC → phasor/impedance → frequency re
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) tuyến (route / 경로)**, ta sang **cốt lõi (core / 핵심) chapter** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cốt lõi (core / 핵심) chapter
+Phần “Cốt lõi (core / 핵심) chapter” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Circuit analysis and measurement](00_circuit_analysis_and_measurement.md) — KCL/KVL, loading, transient, AC impedance, ADC divider và đo kiểm.
 - [Network theorems and frequency response](01_network_theorems_frequency_response.md) — nodal/mesh, Thevenin/Norton, Bode, sensitivity và tolerance.
@@ -23,6 +27,8 @@ KCL/KVL → Thévenin/Norton → RC/RL/RLC → phasor/impedance → frequency re
 > **Chuyển mạch:** Từ **cốt lõi (core / 핵심) chapter**, ta sang **Cần nắm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Cần nắm
+Phần “Cần nắm” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - sign convention, tham chiếu (reference / 참조) nút (node / 노드), floating ground và common-mode;
 - DC operating điểm (point / 지점), transient phản hồi (response / 응답), thời gian (time / 시간) constant và initial điều kiện (condition / 조건);

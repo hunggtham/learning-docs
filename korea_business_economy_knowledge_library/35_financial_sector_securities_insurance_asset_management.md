@@ -289,10 +289,10 @@ Muốn phân tích một công ty tài chính, trước tiên xác định nó �
 
 ## Liên kết tiếp theo
 
+Đọc tiếp theo các liên kết giúp nối định chế tài chính với thị trường vốn, bảo hiểm, quản trị tài sản và rủi ro hệ thống. Hãy giữ câu hỏi về nguồn vốn và chuyển đổi thanh khoản khi chuyển chapter.
+
 - [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md) — cấu trúc thị trường và chứng khoán.
 - [`11_banks_finance_and_corporate_funding.md`](./11_banks_finance_and_corporate_funding.md) — tài trợ và đòn bẩy.
 - [`18_construction_real_estate_and_project_finance.md`](./18_construction_real_estate_and_project_finance.md) — PF.
 - [`27_demographics_households_and_consumption.md`](./27_demographics_households_and_consumption.md) — liên hệ hộ gia đình và quỹ hưu trí.
 - [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md) — fintech, tài chính số và cloud.
-
-> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

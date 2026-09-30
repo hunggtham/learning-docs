@@ -165,6 +165,8 @@ val s: String = "Hello"
 
 ## 5.1 String template
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```kotlin
 val name = "Lan"
 val age = 25
@@ -183,6 +185,8 @@ Null-safety là một trong các điểm khác Kotlin với Java. Tuy nhiên Kot
 
 ### Safe lời gọi (call / 호출) `?.`
 
+Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
+
 ```kotlin
 val length = nickname?.length
 ```
@@ -191,11 +195,15 @@ Nếu `nickname == null`, biểu thức trả `null` thay vì crash.
 
 ### Elvis operator `?:`
 
+Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
+
 ```kotlin
 val displayName = nickname ?: "Guest"
 ```
 
 ### Not-null assertion `!!`
+
+Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
 
 ```kotlin
 val length = nickname!!.length
@@ -205,6 +213,8 @@ val length = nickname!!.length
 
 ### Safe cast `as?`
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```kotlin
 val text = value as? String
 ```
@@ -212,6 +222,8 @@ val text = value as? String
 Nếu cast không hợp lệ, kết quả là null thay vì `ClassCastException`.
 
 ## 5.3 Smart cast
+
+Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
 
 ```kotlin
 fun printLength(value: Any) {
@@ -247,6 +259,8 @@ val y: Long = x.toLong()
 
 ## 7.1 `if` là expression
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```kotlin
 val max = if (a > b) a else b
 ```
@@ -277,6 +291,8 @@ fun describe(x: Any) = when (x) {
 
 ## 7.3 vòng lặp (loop / 루프)
 
+Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
+
 ```kotlin
 for (i in 0 until 5) println(i)
 for (i in 5 downTo 1) println(i)
@@ -288,6 +304,8 @@ for (i in 0..10 step 2) println(i)
 `while` và `do-while` hoạt động giống các ngôn ngữ C-family.
 
 # 8. hàm (function / 함수)
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```kotlin
 fun add(a: Int, b: Int): Int {
@@ -302,6 +320,8 @@ fun add(a: Int, b: Int) = a + b
 ```
 
 ## 8.1 Default argument và named argument
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```kotlin
 fun greet(name: String, prefix: String = "Hello") = "$prefix $name"
@@ -324,6 +344,8 @@ fun fail(message: String): Nothing = throw IllegalStateException(message)
 
 ## 8.3 Vararg
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```kotlin
 fun sum(vararg values: Int): Int = values.sum()
 ```
@@ -336,6 +358,8 @@ sum(*arr)
 ```
 
 # 9. lớp (class / 클래스) và đối tượng (object / 객체)
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```kotlin
 class User(val name: String, var age: Int)
@@ -356,6 +380,8 @@ class User(val name: String) {
 ```
 
 ## 9.1 Secondary constructor
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```kotlin
 class Person(val name: String) {
@@ -420,6 +446,8 @@ Abstract lớp (class / 클래스) phù hợp khi muốn chia sẻ trạng thái
 
 ## 12.1 dữ liệu (data / 데이터) lớp (class / 클래스)
 
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
+
 ```kotlin
 data class User(
     val id: Long,
@@ -437,6 +465,8 @@ Dữ liệu (data / 데이터) lớp (class / 클래스) rất phù hợp cho DT
 
 ## 12.2 Enum
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```kotlin
 enum class Role { ADMIN, USER, GUEST }
 ```
@@ -444,6 +474,8 @@ enum class Role { ADMIN, USER, GUEST }
 Enum phù hợp tập giá trị cố định cùng kiểu (type / 타입).
 
 ## 12.3 Sealed lớp (class / 클래스)/giao diện (interface / 인터페이스)
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```kotlin
 sealed interface UiState {
@@ -551,6 +583,8 @@ fun Greeting(name: String) {
 `@Composable` không đơn thuần là annotation trang trí. trình biên dịch (compiler / 컴파일러) Compose plugin biến đổi hàm (function / 함수) để thời gian chạy (runtime / 런타임) có thể theo dõi composition, trạng thái (state / 상태) read và recomposition.
 
 ## 17.1 bố cục (layout / 레이아웃) cơ bản
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```kotlin
 @Composable

@@ -415,6 +415,8 @@ Xã hội cũng tương tự. Lương hưu, trường học, nhà ở và thiế
 
 ## Dữ liệu và nguồn cần ghi mốc thời gian
 
+Dân số, di cư và nền tảng số đều là dữ liệu động. Phần này nhắc người đọc ghi rõ năm, định nghĩa mẫu và nguồn để không biến một snapshot thành quy luật dài hạn.
+
 - `2025 고령자 통계`: người 65+ chiếm 20,3% dân số năm 2025; tỷ lệ dùng Internet của nhóm 65+ năm 2024 là 76,9%. Nguồn: 국가데이터처/Statistics Korea, `2025 고령자 통계`.
 - `2025 출생·사망통계(잠정)`, công bố 25/02/2026: TFR 2025 sơ bộ khoảng 0,80. Nguồn: 국가데이터처/Statistics Korea.
 - `2024년 이주배경인구 통계`, công bố 08/12/2025: dân số có nền tảng di cư chiếm 5,2% tổng dân số năm 2024. Nguồn: 국가데이터처/Statistics Korea.
@@ -422,5 +424,3 @@ Xã hội cũng tương tự. Lương hưu, trường học, nhà ở và thiế
 - `Household Projections for Korea 2022–2052`: hộ một người 7,39 triệu năm 2022; dự báo khoảng 9,62 triệu năm 2052.
 
 Khi cập nhật chương này, luôn giữ **năm dữ liệu**, **ngày công bố** và **định nghĩa quần thể** cạnh nhau. Đây là yêu cầu để không biến thống kê thành “huyền thoại văn hoá”.
-
-> **Bàn giao:** Sau **Dữ liệu và nguồn cần ghi mốc thời gian**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

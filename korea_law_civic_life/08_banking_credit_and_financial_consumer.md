@@ -167,6 +167,8 @@ Chúng không thay thế nhau.
 
 ## 10. Nguồn chính thức
 
+Tài chính cá nhân cần nguồn cập nhật vì sản phẩm, cảnh báo lừa đảo và quy tắc bảo vệ người tiêu dùng thay đổi theo thời gian. Các nguồn này giúp nối giao dịch cụ thể với cơ quan giám sát và kênh xử lý phù hợp.
+
 - 금융감독원: https://www.fss.or.kr/
 - 금융소비자정보포털 FINE: https://fine.fss.or.kr/
 - 본인신용정보 열람 Credit4U: https://www.credit4u.or.kr/
@@ -180,5 +182,3 @@ Chúng không thay thế nhau.
 ## 11. Nguyên tắc tự bảo vệ
 
 Đối với ngân hàng và tín dụng, đừng đưa ra quyết định chỉ dựa trên “monthly payment”. Hãy quy mọi sản phẩm về bốn câu hỏi: **tôi nhận bao nhiêu tiền, tổng chi phí là bao nhiêu, điều gì xảy ra nếu trả chậm, và tôi có thể thoát khỏi hợp đồng bằng cách nào?**
-
-> **Bàn giao:** Sau **11. Nguyên tắc tự bảo vệ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 reading method and source policy](./00_reading_method_and_source_policy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

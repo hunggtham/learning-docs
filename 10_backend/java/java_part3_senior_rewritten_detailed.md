@@ -408,6 +408,8 @@ Reason bằng happens-before thay vì folklore như “volatile flush CPU bộ n
 
 # 19. `volatile` không phải giao dịch (transaction / 트랜잭션)
 
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
+
 ```java
 volatile int count;
 ```
@@ -683,6 +685,8 @@ Hiệu năng (performance / 성능) thành phần nguyên thủy (primitive / �
 ---
 
 # 31. ConcurrentHashMap Atomic Methods
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 map.compute(
@@ -982,6 +986,8 @@ GC cannot collect reachable garbage by nghiệp vụ (business / 비즈니스) m
 ---
 
 # 50. Static Collection Leak
+
+Phần này giải thích cơ chế Java/Spring trước khi đưa ra code hoặc bảng. Hãy giữ invariant, lifecycle, edge case và cách quan sát kết quả khi thử trên ứng dụng thật.
 
 ```java
 static final Map<String, User>
@@ -2295,6 +2301,8 @@ Use `AutoCloseable`/try-with-resources.
 
 # 130. Shutdown Hook
 
+Mục này biến kiến thức backend thành tiêu chí kiểm tra và quyết định triển khai. Hãy xác định contract, failure mode, evidence và cách rollback trước khi áp dụng.
+
 ```java
 Runtime.getRuntime()
        .addShutdownHook(
@@ -2626,6 +2634,8 @@ These principles carry into Spring/JPA.
 ---
 
 # 149. Boolean Parameter Explosion
+
+Phần này nối khái niệm backend với một ví dụ hoặc quy trình có thể kiểm tra. Hãy đọc mục tiêu trước, sau đó đối chiếu code với contract và failure mode của hệ thống.
 
 ```java
 send(

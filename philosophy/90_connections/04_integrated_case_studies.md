@@ -21,6 +21,8 @@ Physics/Biology mô tả hazard và ecological ràng buộc (constraint / 제약
 Psychology đo bộ nhớ (memory / 메모리) và hiệu năng (performance / 성능); philosophy of mind hỏi công cụ (tool / 도구) có trở thành extended cognitive tiến trình (process / 프로세스) không; epistemology hỏi nguồn (source / 소스) có đáng tin không; ethics hỏi phụ thuộc (dependency / 의존성) và autonomy; thiết kế (design / 설계) hỏi khi dịch vụ (service / 서비스) biến mất, người dùng (user / 사용자) có mất agency không.
 
 ### Template dùng lại
+Phần “Template dùng lại” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 claim → definitions → mechanism/model → evidence

@@ -537,7 +537,9 @@ Callback tồn tại trong lớp (class / 클래스) API cũ nhưng Hook setter 
 
 Yêu cầu thành phần (component / 컴포넌트) re-render dù React không được báo trạng thái (state / 상태) thay đổi (change / 변경) thông thường. Đây là escape hatch. Nếu app cần `forceUpdate` thường xuyên, có thể dữ liệu (data / 데이터) nguồn (source / 소스) nằm ngoài React mà không có subscription đúng. Với bên ngoài (external / 외부) store hiện đại, `useSyncExternalStore` là lớp trừu tượng (abstraction / 추상화) phù hợp hơn.
 
-### Lớp (class / 클래스) vòng đời (lifecycle / 생명주기) tham chiếu (reference / 참조)
+### Class lifecycle reference
+Phần này nối mạch bài học với “Class lifecycle reference”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 constructor
@@ -578,6 +580,8 @@ Các tên không có `UNSAFE_` từng tồn tại trong mã (code / 코드) cũ 
 `createFactory` và old DOM factories là legacy/removed như đã giải thích.
 
 ### Ref APIs theo thời đại
+Phần này nối mạch bài học với “Ref APIs theo thời đại”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 string ref
@@ -590,7 +594,9 @@ string ref
 
 Không phải bước sau luôn “xóa” bước trước. Callback ref vẫn hữu ích; `createRef` vẫn phù hợp lớp (class / 클래스); `forwardRef` vẫn quan trọng cho React 18 tính tương thích (compatibility / 호환성); ref-as-prop là API mới cho hàm (function / 함수) thành phần (component / 컴포넌트) React 19.
 
-### ReactDOM legacy gốc (root / 루트) APIs
+### ReactDOM legacy root APIs
+Phần này nối mạch bài học với “ReactDOM legacy root APIs”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 ReactDOM.render(element, container);
@@ -601,7 +607,9 @@ ReactDOM.findDOMNode(component);
 
 Các API này là dấu hiệu rõ nhất của codebase pre-modern gốc (root / 루트). React 18 deprecate gốc (root / 루트) legacy APIs và React 19 remove chúng. di chuyển (migration / 마이그레이션) mục tiêu (target / 대상) là `createRoot`, `hydrateRoot`, `root.unmount` và tường minh (explicit / 명시적) refs.
 
-### Legacy ngữ cảnh (context / 맥락)
+### Legacy Context
+Phần này nối mạch bài học với “Legacy Context”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```text
 childContextTypes
@@ -822,6 +830,8 @@ useEffect(() => {
 Thường nên gọi `save()` từ sự kiện (event / 이벤트)/hành động (action / 동작).
 
 ### Mirrored props
+Phần này nối mạch bài học với “Mirrored props”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```jsx
 const [value, setValue] = useState(propValue);
@@ -829,7 +839,9 @@ const [value, setValue] = useState(propValue);
 
 mà không có ngữ nghĩa (semantics / 의미론) cục bộ (local / 로컬) draft rõ.
 
-### Toàn cục (global / 전역) mutable singleton
+### Global mutable singleton
+Phần này nối mạch bài học với “Global mutable singleton”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 ```js
 export const state = {};
@@ -918,6 +930,8 @@ Hiệu năng (performance / 성능) engineer nên học trình duyệt (browser 
 React bản địa (native / 네이티브) cần học host môi trường (environment / 환경) riêng; DOM kiến thức (knowledge / 지식) không áp dụng nguyên xi.
 
 ## 41. Bản đồ API quan trọng
+Phần này nối mạch bài học với “41. Bản đồ API quan trọng”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
+
 
 | Nhóm | API / thành phần | Vai trò |
 |---|---|---|

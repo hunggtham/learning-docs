@@ -14,6 +14,8 @@
 Sau cốt lõi (core / 핵심) tuyến (route / 경로), dùng [Cross-domain Integration Bridge](./90_connections/00_sociology_psychology_economics_history_and_methods.md) để xác định khi nào một phenomenon nên được giải thích ở mức (level / 수준) Psychology, Sociology, Economics, Lịch sử (history / 이력)/Geography hay Research Methods/ Econometrics. Cầu nối (bridge / 브리지) này không tạo lý thuyết (theory / 이론) mới; nó giữ quyền sở hữu (ownership / 소유권) và bằng chứng (evidence / 증거) category rõ khi chuyển lĩnh vực (domain / 도메인).
 
 ## Trục học (learning spine / 학습 축)
+Phần “Trục học (learning spine / 학습 축)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Individual biography

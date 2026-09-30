@@ -172,6 +172,8 @@ XML biểu diễn dữ liệu (data / 데이터) có tag và lược đồ (sche
 Giao diện (interface / 인터페이스) cần kiểm soát confidentiality, integrity, authentication và authorization. băm (hash / 해시)/checksum có thể kiểm tra integrity nhưng không tự cung cấp confidentiality. Encryption bảo vệ confidentiality nhưng nếu không có authentication/integrity cơ chế (mechanism / 메커니즘) thì vẫn có thể bị tamper theo nhiều cách.
 
 ## 5. Bảng phân biệt phải thuộc bằng cơ chế
+Phần “5. Bảng phân biệt phải thuộc bằng cơ chế” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Cặp dễ nhầm | Điểm tách |
 |---|---|

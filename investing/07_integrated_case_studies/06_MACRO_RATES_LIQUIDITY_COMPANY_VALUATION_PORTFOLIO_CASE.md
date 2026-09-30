@@ -559,6 +559,8 @@ Trường hợp (case / 사례) study tích hợp phải giữ **company-specifi
 
 ## 24. vô hiệu hóa (invalidation / 무효화) theo từng tầng
 
+Một case tích hợp không thể chỉ có một điều kiện vô hiệu hóa chung. Ta cần kiểm tra riêng macro, rates, liquidity, industry và company để biết chính xác tầng nào đã hỏng và tầng nào vẫn còn đứng vững.
+
 ```text
 Macro invalidation:
 Lạm phát dịch vụ giảm nhanh, labor cooling mạnh
@@ -638,6 +640,8 @@ Tạo một ghi chú (note / 노트) gồm:
 
 ## 28. Liên kết học tiếp
 
+Các tài liệu sau mở rộng từng tầng của worked case theo đúng thứ tự đã thực hành. Đọc tiếp theo nhu cầu còn yếu sẽ hiệu quả hơn việc quay lại toàn bộ thư viện một cách rời rạc.
+
 - [Macro Transmission Lab](../04_economics/07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md)
 - [Bonds, Rates and Credit](../02_asset_classes/02_BONDS_RATES_AND_CREDIT.md)
 - [Monetary System and Liquidity](../04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md)
@@ -665,6 +669,4 @@ Macro
 → Attribution
 ```
 
-Nếu không thể chỉ ra dữ liệu, cơ chế, dạng thất bại (failure mode / 실패 모드) và độ nhạy ở từng tầng, phân tích vẫn chỉ là narrative.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 INFLATION SHOCK FROM CPI TO PORTFOLIO](./01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nếu không thể chỉ ra dữ liệu, cơ chế, failure mode và độ nhạy ở từng tầng, phân tích vẫn chỉ là narrative.

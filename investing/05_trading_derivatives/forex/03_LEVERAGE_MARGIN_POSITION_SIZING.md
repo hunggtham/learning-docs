@@ -114,6 +114,8 @@ CFTC cũng nhấn mạnh leverage trong retail OTC forex có thể khuếch đ�
 Balance thường phản ánh account giá trị (value / 값) sau các giao dịch (transaction / 트랜잭션) đã realized, chưa bao gồm floating P/L của open positions theo cách hiển thị phổ biến.
 
 ### Equity
+Phần “Equity” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Equity
@@ -682,6 +684,8 @@ Sau khi biết position tạo rủi ro (risk / 위험) ra sao, câu hỏi tiếp
 → [04 — Macro drivers, rates, carry and sessions](./04_MACRO_DRIVERS_RATES_CARRY_AND_SESSIONS.md)
 
 ## Nguồn và liên kết
+Phần “Nguồn và liên kết” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - CFTC — Eight Things You Should Know Before Trading Forex: https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/CustomerAdvisory_MustKnowForex.html
 - CFTC — Foreign Currency (Forex) Fraud / rủi ro (risk / 위험) thông tin (information / 정보): https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/fraudadv_forex.html

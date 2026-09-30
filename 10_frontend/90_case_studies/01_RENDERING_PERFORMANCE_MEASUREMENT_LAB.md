@@ -1080,6 +1080,8 @@ After: fast
 ---
 
 # 48. Ví dụ report ngắn
+Phần “48. Ví dụ report ngắn” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 Question:
@@ -1228,6 +1230,8 @@ What regression guard should remain?
 Nếu câu trả lời ban đầu và bằng chứng (evidence / 증거) khác nhau, đó không phải thất bại. Đó chính là lý do hiệu năng (performance / 성능) profiling tồn tại.
 
 ## Cross-link
+Phần “Cross-link” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - [Request → Pixel → Interaction Trace](./00_REQUEST_TO_PIXEL_AND_INTERACTION_TRACE.md)
 - [`../COVERAGE_AUDIT.md`](../COVERAGE_AUDIT.md)

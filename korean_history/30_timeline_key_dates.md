@@ -74,3 +74,18 @@ e1 --causes/constrains--> e2
 và xác định edge nào mạnh, edge nào chỉ correlation.
 
 > **Bàn giao:** Sau **mô hình tư duy (mental model / 사고 모델)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+
+## Cách dùng timeline với bốn neo
+
+Mỗi mốc dưới đây nên được đọc ít nhất qua bốn câu hỏi: **điều gì thay đổi trong thể chế**, **surplus hoặc chi phí đi qua nền kinh tế ra sao**, **Việt Nam cùng thời đang ở đâu**, và **địa điểm nào còn giữ bằng chứng**.
+
+| Cụm mốc | Neo Việt Nam | Địa điểm để bắt đầu | Câu hỏi nối sang chapter |
+|---|---|---|---|
+| 660–698 | Vạn Xuân và hậu kỳ Bắc thuộc | Gyeongju, các di tích Bột Hải qua hồ sơ | “Thống nhất” bao phủ không gian nào? |
+| 918–936 | Ngô Quyền và Bạch Đằng 938 | Gaeseong qua bản đồ, Haeinsa | Center tích hợp local elite bằng gì? |
+| 1592–1636 | Lê–Mạc, Trịnh–Nguyễn và chiến tranh khu vực | Busan, pháo đài ven biển, cung điện Joseon | Chiến tranh chuyển chi phí sang hộ gia đình nào? |
+| 1876–1910 | Pháp xâm lược Việt Nam từ 1858, Liên bang Đông Dương 1887 | Ganghwa, Deoksugung, Jeongdong | Hạ tầng và ngoại giao làm chủ quyền co lại ra sao? |
+| 1945–1954 | Độc lập 1945, Chiến tranh Đông Dương, Genève 1954 | Jeju, Busan, DMZ | Vì sao giải phóng không tạo cùng một kiểu nhà nước? |
+| 1961–1997 | Chiến tranh Việt Nam, 1975, Đổi Mới 1986 | Ulsan, Gwangju, Seoul Olympic Park | Tăng trưởng, dân chủ và phân phối nối với nhau thế nào? |
+
+Bảng này không thay thế các chapter theo giai đoạn. Nó là bộ định tuyến: nếu câu hỏi là về đất và thuế, đi sang `27` hoặc `35`; nếu là về ký ức, đi sang `29`; nếu là về địa lý và logistics, đi sang `34` hoặc `36`; nếu muốn luyện cách nối mọi lớp, đi sang `37_historical_case_labs.md`.

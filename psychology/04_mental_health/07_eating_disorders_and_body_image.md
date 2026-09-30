@@ -151,6 +151,8 @@ Treatment efficacy cho một nhóm không đồng nghĩa mọi cơ chế (mechan
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 sinh học + restriction/reward + fear
  + self-evaluation + monitoring
@@ -164,5 +166,3 @@ sinh học + restriction/reward + fear
 ## Kết nối kiến thức
 
 Xem [[01_assessment_and_diagnosis]], [[12_depressive_disorders_and_anhedonia]], [[06_personality_pathology]], [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]], [[../03_human_development_and_person/02_motivation_and_emotion]], [[../03_human_development_and_person/05_sex_gender_and_identity]], [[../06_applied/04_health_behavior_stress_and_psychosomatic_connections]] và [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mental health and psychopathology](./00_mental_health_and_psychopathology.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

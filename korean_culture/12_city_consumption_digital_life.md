@@ -416,6 +416,8 @@ Trải nghiệm ở lớp trên phụ thuộc độ tin cậy của lớp dướ
 
 ## Mô hình hành trình: khả năng tiếp cận là tính chất của toàn chuỗi
 
+Một dịch vụ có thể nhanh ở bước cuối nhưng vẫn khó tiếp cận nếu đăng ký, thanh toán, giao nhận hoặc hỗ trợ gặp friction. Mô hình dưới đây nối toàn bộ hành trình để tìm đúng điểm làm người dùng bị loại.
+
 ```text
 nhà
 → lối đi
@@ -451,5 +453,3 @@ Một mắt xích thất bại có thể làm toàn bộ hành trình thất b�
 “Hệ thống nhanh thì chắc chắn đáng tin” là sai; tốc độ bình thường và khả năng chịu sự cố là hai thuộc tính khác nhau.
 
 “Có phương án dự phòng trên giấy nghĩa là hệ thống có khả năng phục hồi” là sai nếu người dùng không biết đường thay thế hoặc đường đó cũng phụ thuộc cùng điểm lỗi.
-
-> **Bàn giao:** Sau **Hiểu lầm phổ biến (Common Misconceptions)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 index and dependency](./00_index_and_dependency.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

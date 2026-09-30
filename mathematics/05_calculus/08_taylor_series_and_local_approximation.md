@@ -698,6 +698,8 @@ Complex phân tích (analysis / 분석) explains convergence limits that real đ
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
+Taylor series nối đạo hàm cục bộ với mô hình xấp xỉ và sai số toàn cục. Nó cho biết khi nào một biểu diễn đơn giản đủ tốt và khi nào remainder trở thành rủi ro.
+
 ```text
 derivatives
 → local polynomial model
@@ -718,6 +720,4 @@ derivatives
 
 ## Dùng chung (common / 공통) Misconceptions
 
-`C^\infty` does not imply analytic. More Taylor terms are not automatically numerically better. A Taylor approximation valid near one center need not công việc (work / 작업) far away. `sin x\approx x` assumes radians and small `x`. Taylor polynomial and Taylor series are different objects. A convergent Taylor series must still be shown to converge to the original hàm (function / 함수), not merely converge to something.
-
-> **Bàn giao:** Sau **dùng chung (common / 공통) Misconceptions**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 limits and continuity](./00_limits_and_continuity.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+`C^\infty` does not imply analytic. More Taylor terms are not automatically numerically better. A Taylor approximation valid near one center need not work far away. `sin x\approx x` assumes radians and small `x`. Taylor polynomial and Taylor series are different objects. A convergent Taylor series must still be shown to converge to the original function, not merely converge to something.

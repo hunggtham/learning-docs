@@ -452,6 +452,8 @@ Grammar-constrained decoding reduces invalid cú pháp (syntax / 문법), but ng
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Variable   = thing we must choose
 Domain     = options available
@@ -484,6 +486,4 @@ Worst-case độ phức tạp (complexity / 복잡도) does not predict all stru
 
 CSP sits at intersection of tìm kiếm (search / 검색), lô-gic (logic / 논리), Graphs and tối ưu hóa (optimization / 최적화). It teaches a recurring AI lesson: **reason before branching**. ràng buộc (constraint / 제약조건) propagation converts kiến thức (knowledge / 지식) into lĩnh vực (domain / 도메인) reduction, just as heuristics convert kiến thức (knowledge / 지식) into tìm kiếm (search / 검색) priority.
 
-Xem tiếp: [Planning](./05_planning.md), nơi actions có preconditions/effects và goal thường cần một chuỗi (sequence / 시퀀스) thay vì chỉ final assignment.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 state space and search](./00_state_space_and_search.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Xem tiếp: [Planning](./05_planning.md), nơi actions có preconditions/effects và goal thường cần một sequence thay vì chỉ final assignment.

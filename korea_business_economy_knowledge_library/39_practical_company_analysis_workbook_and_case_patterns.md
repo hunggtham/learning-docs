@@ -320,6 +320,8 @@ Cách gắn nhãn này giúp tránh biến câu chuyện của ban quản lý th
 
 ## 19. Lập nhật ký nguồn
 
+Nhật ký nguồn nối từng con số trong mô hình với bằng chứng có thể truy lại. Đây là bước bảo vệ người phân tích khỏi việc quên nguồn, dùng dữ liệu cũ hoặc sửa câu chuyện sau khi biết kết quả.
+
 | Ngày | Nguồn | Dùng để chứng minh điều gì | Độ tin cậy |
 |---|---|---|---|
 | | Báo cáo năm DART | lịch đáo hạn nợ | Cao |

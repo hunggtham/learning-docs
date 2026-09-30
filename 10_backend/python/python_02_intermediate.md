@@ -388,6 +388,8 @@ def inspect_value(value: object) -> None:
 Vì vậy dùng `object` khi muốn biểu diễn unknown giá trị (value / 값) nhưng vẫn giữ kiểu (type / 타입) an toàn (safety / 안전); dùng `Any` khi ranh giới (boundary / 경계) thực sự cần escape hatch và kiểm soát nơi bất định (uncertainty / 불확실성) đi vào.
 
 ### `Protocol` và duck typing có kiểu (type / 타입) an toàn (safety / 안전)
+Phần “`Protocol` và duck typing có kiểu (type / 타입) an toàn (safety / 안전)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```python
 from typing import Protocol
@@ -687,6 +689,8 @@ Khi mã (code / 코드) bắt đầu có phụ thuộc (dependency / 의존성) 
 Trước khi sang Part 3, bạn nên tự giải thích được vì sao `property` là descriptor-based lookup chứ không phải magic cú pháp (syntax / 문법); vì sao `NotImplemented` khác `False`; vì sao mutate bộ chứa (container / 컨테이너) trong iteration nguy hiểm; vì sao generator và async generator có vòng đời (lifecycle / 생명주기) riêng; ngữ cảnh (context / 맥락) manager có thể suppress exception bằng đặc tả hợp đồng (contract / 계약) nào; vì sao `Any` khác `object`; vì sao mutable generic dẫn tới variance ràng buộc (constraint / 제약조건); `Self`/`TypeIs` đang hứa điều gì với checker; khi nào `memoryview` là view thay vì bản sao (copy / 복사); và vì sao một timestamp cục bộ (local / 로컬) không luôn ánh xạ đơn giản tới một instant.
 
 ## Nguồn chính
+Phần “Nguồn chính” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - mô hình dữ liệu (data model / 데이터 모델): https://docs.python.org/3.14/tham chiếu (reference / 참조)/datamodel.html
 - `dataclasses`: https://docs.python.org/3.14/thư viện (library / 라이브러리)/dataclasses.html

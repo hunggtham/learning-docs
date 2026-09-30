@@ -360,6 +360,8 @@ Before accepting adaptation claim, ask:
 
 ## 35. mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Genetic variation
       ↕
@@ -387,8 +389,8 @@ These questions connect but need separate bằng chứng (evidence / 증거).
 
 ### Nguồn định hướng
 
-- Reviews 2024 on gene–môi trường (environment / 환경) interactions emphasize joint genetic/environmental modeling and reporting heterogeneity.
-- Methodological công việc (work / 작업) 2024 reiterates that within-group heritability does not explain between-group differences.
-- hiện đại (modern / 현대적) hành vi (behavior / 동작) genetics increasingly combines twin/family and measured-DNA approaches rather than treating nature and nurture as separable causes.
+Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đọc tiếp. Hãy ghi rõ claim nào được nguồn hỗ trợ, mức chắc chắn ra sao và phần nào còn cần cập nhật.
 
-> **Bàn giao:** Sau **Nguồn định hướng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 nervous system and brain](./00_nervous_system_and_brain.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- Reviews 2024 on gene–environment interactions emphasize joint genetic/environmental modeling and reporting heterogeneity.
+- Methodological work 2024 reiterates that within-group heritability does not explain between-group differences.
+- Modern behavior genetics increasingly combines twin/family and measured-DNA approaches rather than treating nature and nurture as separable causes.

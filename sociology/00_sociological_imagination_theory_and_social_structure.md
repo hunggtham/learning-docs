@@ -72,6 +72,8 @@ A university is an organization; education is a broader institution.
 A bank is an organization; financial institutions include rules/markets/practices beyond one bank.
 
 ## 10. Macro, meso, micro
+Phần “10. Macro, meso, micro” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - micro: tương tác (interaction / 상호작용), định danh (identity / 식별자), small groups;
 - meso: organizations, communities, networks;

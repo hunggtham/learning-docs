@@ -3,6 +3,8 @@
 > **Mạch đọc:** Đặt **07. Testing, đặc tả hợp đồng (contract / 계약) và tích hợp (integration / 통합)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** sang **Hermeticity và dữ liệu**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
 
 ## Kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)
+Phần “Kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 - **đơn vị (unit / 단위)** kiểm tra quyết định (decision / 결정)/bất biến (invariant / 불변식) thuần, chạy nhanh và deterministic.
 - **thành phần (component / 컴포넌트)/tích hợp (integration / 통합)** kiểm tra wiring với cơ sở dữ liệu (database / 데이터베이스), hàng đợi (queue / 큐), auth adapter và

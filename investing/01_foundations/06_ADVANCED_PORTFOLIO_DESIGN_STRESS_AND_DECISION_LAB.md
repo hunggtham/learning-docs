@@ -154,6 +154,8 @@ Hai kịch bản đều có cổ phiếu giảm nhưng phần phòng vệ phù h
 
 ## 10. Kiểm thử ngược
 
+Sau khi đã chạy stress theo các cú sốc cụ thể, ta đảo câu hỏi để tìm điều kiện làm kế hoạch thất bại. Đây là bước kiểm tra ngưỡng sống còn trước khi tối ưu lợi suất.
+
 **Kiểm thử ngược (reverse stress test)** không hỏi “nếu X xảy ra thì lỗ bao nhiêu?”, mà hỏi:
 
 > Điều gì phải xảy ra để kế hoạch tài chính thất bại?
@@ -289,6 +291,8 @@ Nếu hoàn thành được bài tập này, người đọc đã chuyển từ 
 
 ## 19. Liên kết đọc tiếp
 
+Phần này là điểm bàn giao từ lab thiết kế danh mục sang các chapter đo lường, attribution, hedge và case study. Chọn link theo lỗ hổng còn lại, rồi quay lại lab để cập nhật giả định và quy tắc.
+
 - [Đo lường rủi ro và phân tích danh mục](./04_RISK_MEASUREMENT_PORTFOLIO_ANALYTICS_AND_DECISION_RULES.md)
 - [Phân rã kết quả, phí, thuế và hành vi](./05_PERFORMANCE_ATTRIBUTION_FEES_TAX_AND_BEHAVIORAL_REVIEW.md)
 - [Danh mục đa tài sản và phòng vệ](../02_asset_classes/05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md)
@@ -307,5 +311,3 @@ Tôi cần tiền cho việc gì?
 ```
 
 Một danh mục tốt không cần tối ưu hoàn hảo. Nó cần **đủ bền để người sở hữu có thể duy trì qua nhiều chế độ thị trường và nhiều giai đoạn cuộc sống**.
-
-> **Bàn giao:** Sau **Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

@@ -222,6 +222,8 @@ Không bước nào một mình đủ tạo certainty.
 
 ## 21. Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
+
 ```text
 Câu hỏi rõ
 → measurement phù hợp
@@ -237,5 +239,3 @@ Science đáng tin là một **tiến trình (process / 프로세스) tích lũy
 ## Kết nối kiến thức
 
 Đọc cùng [[02_research_methods]], [[03_measurement_statistics]], [[04_ethics_and_critical_thinking]], [[05_psychometrics_and_test_interpretation]], [[08_causal_inference_and_psychological_evidence]] và [[09_replication_meta_analysis_and_bayesian_reasoning]].
-
-> **Bàn giao:** Sau **Kết nối kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 psychology as science](./00_psychology_as_science.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

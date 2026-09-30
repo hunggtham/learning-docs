@@ -435,11 +435,11 @@ Sau đó hỏi ba câu:
 
 ## Liên kết tiếp theo
 
+Các tài liệu liên kết giúp kiểm tra cấu trúc sở hữu, kế toán, định giá và phản ứng thị trường quanh corporate action. Đọc tiếp để nối sự kiện pháp lý với cash flow và quyền cổ đông.
+
 - [`05_group_structure_affiliates_holding_companies.md`](./05_group_structure_affiliates_holding_companies.md)
 - [`08_corporate_governance_ownership_and_control.md`](./08_corporate_governance_ownership_and_control.md)
 - [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md)
 - [`10_capital_markets_kospi_kosdaq_konex.md`](./10_capital_markets_kospi_kosdaq_konex.md)
 - [`20_how_to_analyze_a_korean_company.md`](./20_how_to_analyze_a_korean_company.md)
 - [`36_credit_ratings_bonds_default_and_restructuring.md`](./36_credit_ratings_bonds_default_and_restructuring.md)
-
-> **Bàn giao:** Sau **Liên kết tiếp theo**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 economic model and history](./00_economic_model_and_history.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

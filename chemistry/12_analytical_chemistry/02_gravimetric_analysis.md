@@ -352,6 +352,8 @@ Nếu blank lớn hoặc biến thiên, độ tin cậy giảm dù cân rất ch
 
 ## Điểm mạnh
 
+Trước khi chọn gravimetry, hãy cân bằng lợi ích về traceability và độ đúng với thời gian, lượng mẫu và độ chọn lọc cần thiết. Các điểm mạnh sau giải thích vì sao phương pháp vẫn hữu ích dù chậm.
+
 - neo trực tiếp vào khối lượng và hóa lượng;
 - ít phụ thuộc đường hiệu chuẩn thiết bị;
 - có thể đạt độ đúng cao;
@@ -361,6 +363,8 @@ Nếu blank lớn hoặc biến thiên, độ tin cậy giảm dù cân rất ch
 > **Chuyển mạch:** Từ **Điểm mạnh**, ta sang **Giới hạn** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Giới hạn
+
+Chính các bước thủ công tạo nên những giới hạn của gravimetry. Khi analyte quá ít hoặc đồng kết tủa khó kiểm soát, phương pháp có thể mất ưu thế so với kỹ thuật instrumental.
 
 - thường chậm;
 - cần lượng analyte đủ lớn;
@@ -397,5 +401,3 @@ Không. Nó chỉ cho thấy khối lượng đã ổn định dưới chu kỳ 
 Phân tích khối lượng là **hóa lượng được neo vào một vật thể có thể cân**. Muốn phép neo đó đáng tin, phải biến analyte thành một pha có thành phần xác định, kiểm soát cách pha đó tạo mầm và lớn lên, loại tạp mà không mất sản phẩm, rồi đưa nó về trạng thái khối lượng ổn định. Con số cuối cùng tốt đến đâu phụ thuộc hóa học của toàn quá trình, không chỉ phụ thuộc chiếc cân.
 
 Xem tiếp: [Phổ học](./03_spectroscopy.md).
-
-> **Bàn giao:** Sau **“Khối lượng không đổi chứng minh mẫu hoàn toàn tinh khiết”**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 measurement and sampling](./00_measurement_and_sampling.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

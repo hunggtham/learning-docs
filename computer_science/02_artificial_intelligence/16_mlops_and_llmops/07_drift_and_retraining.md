@@ -153,6 +153,8 @@ Sản phẩm tạo ra (artifact / 산출물) đã lưu trữ vẫn cần chính 
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Drift là bằng chứng rằng thế giới hoặc pipeline đã thay đổi.
 Huấn luyện lại chỉ là một trong nhiều phản ứng có thể có.
@@ -175,5 +177,3 @@ Không. LLM, RAG và tác nhân (agent / 에이전트) cũng drift qua người 
 ## Liên kết kiến thức
 
 Xem [Monitoring](./06_monitoring_and_observability.md), [Continuous Training](./04_ci_cd_ct_for_ai.md), [Dataset Bias](../14_data_for_ai/06_dataset_bias.md) và [Evaluation](../18_evaluation_reliability_interpretability/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

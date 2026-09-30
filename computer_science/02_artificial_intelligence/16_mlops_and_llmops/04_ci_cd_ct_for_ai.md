@@ -135,6 +135,8 @@ Log của huấn luyện (training / 학습) hoặc CI không được làm lộ
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 CI → chứng minh thay đổi nhất quán nội bộ
 CT → tạo artifact đã học mới
@@ -158,5 +160,3 @@ Không. Regression về hành vi, bảo mật và retrieval mới là phần kh�
 ## Liên kết kiến thức
 
 Xem [Model Registry](./03_model_registry.md), [Monitoring](./06_monitoring_and_observability.md), [Drift](./07_drift_and_retraining.md), [LLMOps](./08_llmops.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mlops and llmops](./00_mlops_and_llmops.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

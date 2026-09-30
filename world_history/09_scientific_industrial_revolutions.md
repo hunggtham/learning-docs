@@ -26,6 +26,8 @@ Không gộp mọi phát minh vào một “cách mạng” đồng thời: chro
 > **Chuyển mạch:** Từ **Scientific practice không tách khỏi xã hội**, ta sang **Industrialization như hệ thống năng lượng** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Industrialization như hệ thống năng lượng
+Phần “Industrialization như hệ thống năng lượng” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 ```text
 coal seam + mine labor

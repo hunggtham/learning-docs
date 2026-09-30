@@ -47,6 +47,8 @@ Không cần học thuộc công cụ theo thứ tự này. phụ thuộc (depen
 > **Chuyển mạch:** Từ **Cách đọc**, ta sang **Bản đồ thư viện (library / 라이브러리)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
 ## Bản đồ thư viện (library / 라이브러리)
+Phần “Bản đồ thư viện (library / 라이브러리)” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
+
 
 | Phần | Mục tiêu |
 |---|---|

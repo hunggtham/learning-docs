@@ -477,6 +477,8 @@ Dù mechanisms khác nhau, xác suất (probability / 확률) là ngôn ngữ (l
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Distribution      = những outcome nào có thể xảy ra và mức belief tương đối
 Conditional P     = belief sau khi biết context
@@ -510,6 +512,4 @@ Hallucination không chỉ do sampling. Greedy decoding cũng có thể sinh fac
 
 Xác suất (probability / 확률) là prerequisite trực tiếp cho [Statistics for AI](./03_statistics_for_ai.md) và [Information Theory](./05_information_theory.md). Nó cũng quay lại trong classification, generative các mô hình (models / 모델들), Bayesian networks, Reinforcement học tập (learning / 학습), ngôn ngữ (language / 언어) modeling, calibration và uncertainty-aware các hệ thống (systems / 시스템들).
 
-Khi gặp một xác suất (probability / 확률) trong AI, hãy hỏi: random variable là gì, phân phối (distribution / 분포) conditional trên thông tin nào, xác suất (probability / 확률) này là mô hình (model / 모델) estimate hay observed frequency, và downstream quyết định (decision / 결정) sẽ dùng nó thế nào.
-
-> **Bàn giao:** Sau **liên kết kiến thức (knowledge connection / 지식 연결)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 mathematics for ai](./00_mathematics_for_ai.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi gặp một probability trong AI, hãy hỏi: random variable là gì, distribution conditional trên thông tin nào, probability này là model estimate hay observed frequency, và downstream decision sẽ dùng nó thế nào.

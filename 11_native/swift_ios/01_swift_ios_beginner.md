@@ -78,6 +78,8 @@ struct ReaderApp: App {
 
 ## 2.1 `let`, `var` và kiểu (type / 타입) suy luận (inference / 추론)
 
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
+
 ```swift
 let appName = "Reader"
 var launchCount = 0
@@ -175,6 +177,8 @@ Random truy cập (access / 접근) theo integer lặp đi lặp lại trên `St
 
 ## 3.2 Array, Set, Dictionary
 
+Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
+
 ```swift
 var names = ["An", "Bình", "Chi"]
 names.append("Dung")
@@ -192,6 +196,8 @@ Truy cập array chỉ mục (index / 인덱스) ngoài phạm vi (range / 범�
 
 ## 3.3 Collection algorithms
 
+Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
+
 ```swift
 let activeNames = users
     .filter(\.isActive)
@@ -208,6 +214,8 @@ let numbers = ["1", "x", "3"].compactMap(Int.init)
 # 4. điều khiển (control / 제어) luồng (flow / 흐름) và mẫu (pattern / 패턴) matching
 
 ## 4.1 `if`, ternary, `guard`
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 if age >= 18 {
@@ -229,6 +237,8 @@ func load(userID: String?) {
 ```
 
 ## 4.2 `switch` exhaustive
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 switch statusCode {
@@ -267,6 +277,8 @@ Các form này hữu ích khi chỉ quan tâm một mẫu (pattern / 패턴) mà
 
 ## 4.4 vòng lặp (loop / 루프) và phạm vi (range / 범위)
 
+Mục này biến quy tắc collection thành hành vi có thể quan sát. Hãy đối chiếu kiểu dữ liệu, thứ tự duyệt, mutation và kết quả cuối để biết lựa chọn API nào giữ đúng contract của bài toán.
+
 ```swift
 for number in 1...5 { }
 for number in 1..<5 { }
@@ -284,6 +296,8 @@ while retry > 0 {
 # 5. hàm (function / 함수), parameter và call-site thiết kế (design / 설계)
 
 ## 5.1 hàm (function / 함수) và argument label
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 func greet(_ person: String, from city: String) -> String {
@@ -310,6 +324,8 @@ func sum(_ numbers: Int...) -> Int {
 ```
 
 ## 5.2 hàm (function / 함수) là giá trị (value / 값)
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 func add(_ lhs: Int, _ rhs: Int) -> Int { lhs + rhs }
@@ -350,6 +366,8 @@ nickname = "Tom"
 
 ## 6.1 Unwrap
 
+Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
+
 ```swift
 if let nickname {
     print(nickname)
@@ -362,6 +380,8 @@ let length = user.profile?.name.count
 `guard let` phù hợp với early-exit; nil coalescing `??` phù hợp default giá trị (value / 값); optional chaining phù hợp chuỗi thuộc tính (property / 속성)/phương thức (method / 메서드) có thể nil.
 
 ## 6.2 Force unwrap
+
+Mục này dùng ví dụ để phân biệt giá trị có thể thiếu với giá trị đã được kiểm chứng. Hãy theo dõi điều kiện nào cho phép truy cập an toàn, failure mode nào còn lại và vì sao đoạn code không tự thay thế invariant của ứng dụng.
 
 ```swift
 let value = nickname!
@@ -376,6 +396,8 @@ Implicitly unwrapped Optional (`String!`) vẫn xuất hiện trong IBOutlet/API
 # 7. Struct, lớp (class / 클래스), enum và giao thức (protocol / 프로토콜)
 
 ## 7.1 Struct và giá trị (value / 값) ngữ nghĩa (semantics / 의미론)
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 struct User {
@@ -392,6 +414,8 @@ Về ngữ nghĩa (semantics / 의미론), `a` và `b` là hai giá trị (value
 
 ## 7.2 lớp (class / 클래스), định danh (identity / 식별자) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)
 
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
+
 ```swift
 final class Session {
     var token: String?
@@ -407,6 +431,8 @@ Nhiều tham chiếu (reference / 참조) có thể trỏ cùng instance. Vì v�
 Nếu không chủ đích thiết kế inheritance, `final class` thường thể hiện intent tốt hơn.
 
 ## 7.3 Enum: raw giá trị (value / 값), associated giá trị (value / 값) và recursive trạng thái (state / 상태)
+
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
 
 ```swift
 enum Direction: String {
@@ -433,6 +459,8 @@ indirect enum Expression {
 ```
 
 ## 7.4 giao thức (protocol / 프로토콜)
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 protocol Displayable {
@@ -466,6 +494,8 @@ Initializer phải đưa đối tượng (object / 객체) vào trạng thái h�
 
 ## 8.2 Extension
 
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
+
 ```swift
 extension String {
     var isBlank: Bool {
@@ -478,6 +508,8 @@ Extension nhóm hành vi (behavior / 동작)/conformance tốt, nhưng đừng r
 
 ## 8.3 Nested kiểu (type / 타입)
 
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
+
 ```swift
 struct APIRequest {
     enum Method {
@@ -489,6 +521,8 @@ struct APIRequest {
 Nested kiểu (type / 타입) hữu ích khi kiểu (type / 타입) con chỉ có ý nghĩa trong không gian tên (namespace / 네임스페이스) của kiểu (type / 타입) cha.
 
 ## 8.4 Subscript
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 struct Matrix {
@@ -630,6 +664,8 @@ Swift dùng Automatic tham chiếu (reference / 참조) Counting cho lớp (clas
 
 ## 12.1 Strong tham chiếu (reference / 참조) và đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명)
 
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
+
 ```swift
 final class Owner {
     let name: String
@@ -644,6 +680,8 @@ owner = nil
 Khi strong tham chiếu (reference / 참조) cuối cùng mất đi, instance có thể deinitialize. `deinit` phù hợp cleanup synchronous/tài nguyên (resource / 자원) quyền sở hữu (ownership / 소유권) rõ, nhưng không phải nơi đáng tin để gửi mạng (network / 네트워크) yêu cầu (request / 요청) hoặc lưu nghiệp vụ (business / 비즈니스) dữ liệu (data / 데이터) quan trọng.
 
 ## 12.2 Retain cycle giữa đối tượng (object / 객체)
+
+Mục này dùng implementation để kiểm tra API contract: input nào được chấp nhận, behavior nào được bảo đảm và boundary nào người gọi vẫn phải chịu trách nhiệm.
 
 ```swift
 final class Parent {
@@ -702,6 +740,8 @@ Khi nghi leak, dùng Xcode bộ nhớ (memory / 메모리) đồ thị (graph / 
 ---
 
 # 13. lỗi (error / 오류) handling và cleanup
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 enum LoginError: Error {
@@ -807,6 +847,8 @@ Nếu lô-gic (logic / 논리) là “ngày mai theo lịch”, không tự cộ
 
 ## 16.2 URL và URLComponents
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 var components = URLComponents(string: "https://api.example.com/search")!
 components.queryItems = [
@@ -818,6 +860,8 @@ let url = components.url!
 Không tự nối truy vấn (query / 쿼리) string vì escaping/encoding dễ sai.
 
 ## 16.3 `Codable`
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 struct APIUser: Codable {
@@ -870,6 +914,8 @@ struct CounterView: View {
 
 ## 17.1 Modifier và thứ tự (order / 순서)
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 Text("Hello")
     .font(.title)
@@ -884,6 +930,8 @@ Modifier trả về view description mới; thứ tự có thể thay đổi b�
 `VStack`, `HStack`, `ZStack`, `Spacer`, `frame`, `padding`, alignment và bố cục (layout / 레이아웃) priority là thành phần nguyên thủy (primitive / 기본 요소) chính. SwiftUI bố cục (layout / 레이아웃) là negotiation: parent propose kích thước (size / 크기), child chọn kích thước (size / 크기) phù hợp, parent đặt child. `frame` không đơn giản là UIKit frame assignment.
 
 ## 17.3 danh sách (list / 목록) và định danh (identity / 식별자)
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 struct Item: Identifiable {
@@ -906,6 +954,8 @@ Trước khi chọn wrapper, hỏi: **ai sở hữu giá trị (value / 값), ai
 
 ## 18.1 `@State`
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```swift
 @State private var isPresented = false
 ```
@@ -913,6 +963,8 @@ Trước khi chọn wrapper, hỏi: **ai sở hữu giá trị (value / 값), ai
 Dùng cho cục bộ (local / 로컬) mutable trạng thái (state / 상태) mà view định danh (identity / 식별자) sở hữu. `@State` không phải cách biến mọi thuộc tính (property / 속성) thành mutable; derived giá trị (value / 값) nên được tính từ nguồn (source / 소스) trạng thái (state / 상태) thay vì lưu trùng.
 
 ## 18.2 `@Binding`
+
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
 
 ```swift
 struct ToggleRow: View {
@@ -928,6 +980,8 @@ Binding không sở hữu giá trị (value / 값); nó là read/ghi (write / �
 
 ## 18.3 Observation hiện đại
 
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
+
 ```swift
 import Observation
 
@@ -942,6 +996,8 @@ SwiftUI theo dõi thuộc tính (property / 속성) observable mà view đọc. 
 
 ## 18.4 môi trường (environment / 환경)
 
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
+
 ```swift
 @Environment(\.dismiss) private var dismiss
 ```
@@ -951,6 +1007,8 @@ Môi trường (environment / 환경) phù hợp ngữ cảnh (context / 맥락)
 ---
 
 # 19. điều hướng (navigation / 내비게이션) và presentation
+
+Mục này đặt đoạn code vào câu hỏi state thuộc owner nào và sống qua boundary nào. Hãy theo dõi identity, cập nhật và khôi phục để phân biệt state tạm với dữ liệu cần persistence.
 
 ```swift
 NavigationStack {
@@ -989,6 +1047,8 @@ Màn hình phức tạp nên mô hình (model / 모델) điều hướng (naviga
 
 # 20. Networking căn bản với URLSession
 
+Mục này nối khái niệm với một cấu trúc có thể kiểm tra trong project. Hãy đọc code theo ownership, failure mode và bằng chứng runtime, rồi đối chiếu xem nó giải quyết câu hỏi kiến trúc nào.
+
 ```swift
 func fetchUsers() async throws -> [APIUser] {
     let url = URL(string: "https://example.com/users")!
@@ -1008,6 +1068,8 @@ Mạng (network / 네트워크) success không chỉ là “yêu cầu (request 
 ---
 
 # 21. tính đồng thời (concurrency / 동시성) nhập môn — tác vụ (task / 작업), suspension và cancellation
+
+Mục này dùng code để làm rõ lifetime và cancellation của công việc bất đồng bộ. Hãy xác định ai sở hữu task, nó chạy ở context nào, khi nào hoàn tất hoặc bị hủy, rồi mới đánh giá cú pháp.
 
 ```swift
 func loadUser() async throws -> User {
@@ -1061,6 +1123,8 @@ Không dùng UserDefaults làm cơ sở dữ liệu (database / 데이터베이�
 Credential/đơn vị từ (token / 토큰) nhạy cảm nên nằm trong Keychain thay vì UserDefaults/plain tệp (file / 파일). Cần hiểu truy cập (access / 접근) group và khả năng tiếp cận (accessibility / 접근성) option khi lên Intermediate/cấp cao (senior / 시니어).
 
 ## 22.3 SwiftData
+
+Đoạn code dưới đây là bằng chứng cho khái niệm vừa mở. Hãy đọc từ input và state đến output, ghi lại điều kiện áp dụng và giới hạn trước khi chuyển sang mục kế tiếp.
 
 ```swift
 @Model
@@ -1287,6 +1351,4 @@ Bạn cần giải thích được, không chỉ viết được cú pháp (synt
 9. mạng (network / 네트워크)/persistence có thất bại (failure / 실패) là trạng thái bình thường chứ không phải exception hiếm.
 10. Cách dùng Xcode breakpoint, kiểm thử (test / 테스트) và bộ nhớ (memory / 메모리) đồ thị (graph / 그래프) để xác minh giả định (assumption / 가정) thay vì đoán.
 
-Nếu các câu trên còn mơ hồ, hãy quay lại section tương ứng trước khi học actor, `Sendable`, kiến trúc (architecture / 아키텍처) và advanced trạng thái (state / 상태) management ở Intermediate.
-
-> **Bàn giao:** Sau **Checklist trước khi sang Intermediate**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 INDEX](./00_INDEX.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nếu các câu trên còn mơ hồ, hãy quay lại section tương ứng trước khi học actor, `Sendable`, architecture và advanced state management ở Intermediate.

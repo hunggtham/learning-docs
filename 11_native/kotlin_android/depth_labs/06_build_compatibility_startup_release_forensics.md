@@ -323,7 +323,9 @@ Phụ thuộc (dependency / 의존성) locking/phiên bản (version / 버전) p
 
 ---
 
-## 19. `minSdk`, `compileSdk`, `targetSdk` là ba đặc tả hợp đồng (contract / 계약) khác nhau
+## 19. `minSdk`, `compileSdk`, `targetSdk` là ba contract khác nhau
+Phần này nối mạch Android vừa học với “19. `minSdk`, `compileSdk`, `targetSdk` là ba contract khác nhau”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 minSdk -> device cũ nhất app hỗ trợ
@@ -382,7 +384,9 @@ Dùng toggle như diagnostic/di chuyển (migration / 마이그레이션) aid, k
 
 ---
 
-## 23. API guard bảo vệ nạp lớp (class loading / 클래스 로딩)/thời gian chạy (runtime / 런타임) truy cập (access / 접근)
+## 23. API guard bảo vệ class loading/runtime access
+Phần này nối mạch Android vừa học với “23. API guard bảo vệ class loading/runtime access”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```kotlin
 if (Build.VERSION.SDK_INT >= 33) {
@@ -619,6 +623,8 @@ proguard mapping?
 ---
 
 ## 40. Variant-only bug checklist
+Phần này nối mạch Android vừa học với “40. Variant-only bug checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 ```text
 sourceSet override?
@@ -723,7 +729,9 @@ Nguồn (source / 소스) kiểm thử (test / 테스트) pass chưa chứng min
 
 ---
 
-## 46. bản dựng (build / 빌드)/tính tương thích (compatibility / 호환성) checklist
+## 46. Build/compatibility checklist
+Phần này nối mạch Android vừa học với “46. Build/compatibility checklist”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
+
 
 | Câu hỏi | bằng chứng (evidence / 증거) |
 |---|---|
@@ -759,6 +767,4 @@ source
 -> production evidence
 ```
 
-Khi gỡ lỗi (debug / 디버그) theo phase và sản phẩm tạo ra (artifact / 산출물) thay vì chỉ đọc mã nguồn (source code / 소스 코드), nhiều bug “chỉ xảy ra trên bản phát hành (release / 릴리스)/thiết bị (device / 장치) X” trở nên có cấu trúc để điều tra.
-
-> **Bàn giao:** Sau **47. Kết luận**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [01 architecture invariants boundary reasoning](./01_architecture_invariants_boundary_reasoning.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Khi debug theo phase và artifact thay vì chỉ đọc source code, nhiều bug “chỉ xảy ra trên release/device X” trở nên có cấu trúc để điều tra.

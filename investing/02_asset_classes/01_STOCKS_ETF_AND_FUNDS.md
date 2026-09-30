@@ -5,6 +5,41 @@
 
 > Chương này giải thích cổ phiếu và quỹ từ bản chất quyền sở hữu tới cách triển khai qua ETF. Mục tiêu là nhìn xuyên tên sản phẩm để hiểu tài sản cơ sở, quyền lợi của cổ đông, cơ chế chỉ số, thanh khoản, chi phí và rủi ro thực tế.
 
+> **Cách đọc dễ hơn:** trước mỗi khái niệm, hãy hỏi “nó thay đổi quyền lợi kinh tế hoặc rủi ro của cổ đông như thế nào?”. Nếu cần ví dụ số và lộ trình từ cơ bản đến nâng cao, đọc [Bắt đầu từ đây — Cổ phiếu và Forex](../START_HERE_STOCKS_AND_FOREX.md) trước.
+
+## 0. Ví dụ đọc lợi nhuận cổ phiếu bằng ba lớp
+
+Giả sử ban đầu:
+
+```text
+EPS = 2 USD
+P/E = 15 lần
+Giá cổ phiếu = 2 × 15 = 30 USD
+```
+
+Sau một năm, doanh nghiệp tăng EPS lên `2,4 USD` nhưng thị trường chỉ trả `P/E = 12 lần`:
+
+```text
+Giá mới = 2,4 × 12 = 28,8 USD
+Lợi suất giá ≈ (28,8 / 30) - 1 = -4%
+```
+
+Nếu nhận thêm `1 USD` cổ tức:
+
+```text
+Tổng lợi suất trước thuế/phí ≈ (28,8 + 1) / 30 - 1 = -0,7%
+```
+
+Doanh nghiệp tốt lên về EPS nhưng khoản đầu tư vẫn gần như đi ngang vì **bội số định giá co lại**. Vì vậy luôn tách ba lớp:
+
+```text
+Tổng lợi suất ≈ tăng trưởng lợi nhuận trên mỗi cổ phiếu
+                 + thay đổi bội số định giá
+                 + cổ tức / mua lại ròng
+```
+
+Ví dụ này chỉ minh họa cơ chế; không dùng một P/E đơn lẻ để định giá mọi doanh nghiệp.
+
 ## 1. Cổ phiếu phổ thông là quyền lợi còn lại
 
 Người sở hữu cổ phiếu phổ thông là chủ sở hữu phần còn lại (residual owner). Sau khi doanh nghiệp trả lương, nhà cung cấp, thuế, lãi vay và nghĩa vụ với chủ nợ, phần giá trị còn lại thuộc cổ đông.
@@ -42,6 +77,8 @@ Số cổ phiếu cơ bản chỉ tính cổ phiếu hiện tại. Số cổ phi
 Định giá trên mỗi cổ phiếu nên nhìn số pha loãng khi khả năng chuyển đổi có ý nghĩa.
 
 ## 5. EPS và tăng trưởng trên mỗi cổ phiếu
+
+Sau khi phân biệt số cổ phiếu cơ bản và pha loãng, ta có thể tính phần lợi nhuận thực sự thuộc về từng đơn vị sở hữu. EPS là cầu nối từ kết quả doanh nghiệp sang định giá cổ phiếu.
 
 ```text
 EPS = Net Income Available to Common / Diluted Shares
@@ -181,6 +218,8 @@ Khi thị trường cơ sở đóng cửa, chênh lệch có thể phản ánh q
 
 ## 22. Tracking Difference và Tracking lỗi (error / 오류)
 
+Khi đã hiểu NAV, premium/discount và cơ chế tạo–mua lại, ta cần đo xem quỹ bám mục tiêu tốt đến đâu. Tracking difference nói về độ lệch tích lũy; tracking error nói về mức dao động của độ lệch đó.
+
 **Sai lệch lợi suất (tracking difference)** là chênh lệch lợi suất tích lũy giữa quỹ và chỉ số.
 
 **Sai số bám chỉ số (tracking error)** đo biến động của chênh lệch lợi suất theo thời gian.
@@ -285,6 +324,8 @@ Quỹ có phí quản lý thấp hơn chưa chắc cho lợi suất ròng tốt 
 
 ## 35. Checklist phân tích ETF
 
+Checklist này gom toàn bộ câu hỏi từ chỉ số, holdings và factor tới chi phí, FX, lending và hành vi khi căng thẳng. Hãy dùng nó sau khi hiểu cơ chế ETF, không dùng như danh sách kiểm tra tên sản phẩm đơn thuần.
+
 ```text
 Chỉ số / chiến lược cơ sở
 Phương pháp trọng số
@@ -304,6 +345,8 @@ Hành vi trong giai đoạn căng thẳng
 
 ## 36. Mô hình tư duy cuối cùng
 
+Sơ đồ cuối cùng bóc ETF thành từng lớp kinh tế: quyền sở hữu, quy tắc chỉ số, cấu trúc quỹ, cơ chế giao dịch và kết quả ròng sau chi phí. Hãy dùng nó để giải thích một ETF cụ thể bằng câu hoàn chỉnh trước khi chuyển sang chapter doanh nghiệp hoặc danh mục.
+
 ```text
 Cổ phiếu → Quyền sở hữu / Dòng tiền / Pha loãng
 Chỉ số → Quy tắc lựa chọn và trọng số
@@ -314,4 +357,20 @@ Kết quả thực → Tài sản cơ sở + FX + Chi phí + Thuế + Thực thi
 
 Mục tiêu là nhìn xuyên lớp bao bì để hiểu chính xác mình đang sở hữu exposure nào và đang trả chi phí gì để sở hữu nó.
 
-> **Bàn giao:** Sau **36. Mô hình tư duy cuối cùng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [02 BONDS RATES AND CREDIT](./02_BONDS_RATES_AND_CREDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+## Đi tiếp theo một đường duy nhất
+
+Sau chapter này, không cần đọc thêm ETF ngay. Chọn một trong hai nhánh:
+
+```text
+Cổ phiếu doanh nghiệp
+→ 03_company_analysis/01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md
+→ 03_company_analysis/07_INTEGRATED_COMPANY_MODELING_AND_THESIS_LAB.md
+→ STOCK_FOREX_RESEARCH_TEMPLATE.md
+
+ETF / danh mục
+→ 02_asset_classes/04_FACTORS_INDEXING_AND_MULTI_ASSET_BEHAVIOR.md
+→ 02_asset_classes/05_MULTI_ASSET_HEDGING_CURRENCY_AND_REGIME_ALLOCATION.md
+→ 01_foundations/06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md
+```
+
+Nếu muốn xem bản đơn giản trước khi tự làm, dùng [Hồ sơ mẫu đã điền — Cổ phiếu xuất khẩu và Forex](../STOCK_FOREX_WORKED_EXAMPLE.md). Nếu muốn đi sâu, dùng [Advanced Practice Workbook — Module 3](../ADVANCED_PRACTICE_WORKBOOK.md).

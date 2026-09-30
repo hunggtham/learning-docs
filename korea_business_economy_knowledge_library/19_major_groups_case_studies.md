@@ -333,6 +333,8 @@ Bảng này chỉ xác định **lăng kính phân tích khác nhau**, không ch
 
 ## Mẫu phân tích tập đoàn thực hành
 
+Mẫu này chuyển một tập đoàn từ tên thương hiệu thành một hệ có cấu trúc sở hữu, phân bổ vốn, công ty con và rủi ro liên kết. Hãy điền theo thứ tự để phân biệt dữ kiện công khai với giả định phân tích.
+
 ```markdown
 # Tập đoàn / Pháp nhân
 
@@ -347,6 +349,8 @@ Bảng này chỉ xác định **lăng kính phân tích khác nhau**, không ch
 ## Mức tiếp xúc vĩ mô và ngành
 ## Quản trị / kế nhiệm / phân bổ vốn
 ## Rủi ro theo kịch bản
+
+Sau khi lập bản đồ tập đoàn, cần kiểm tra nó dưới các trạng thái kinh tế khác nhau. Kịch bản giúp nhìn ra đòn bẩy, phụ thuộc nội bộ và điểm có thể truyền cú sốc giữa các công ty con.
 ```
 
 Mẫu này ép câu chuyện thương hiệu thành cấu trúc có thể kiểm chứng.

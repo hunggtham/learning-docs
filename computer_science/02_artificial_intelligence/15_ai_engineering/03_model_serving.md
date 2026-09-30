@@ -9,6 +9,8 @@ Serving không chỉ là `model.predict()`. Một môi trường vận hành (pr
 
 ## Đường đi của Serving
 
+Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
+
 ```text
 Client
   ↓
@@ -183,6 +185,8 @@ Triển khai (deployment / 배포) là đưa sản phẩm tạo ra (artifact / �
 
 ## Mô hình tư duy
 
+Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
+
 ```text
 Serving = mô hình + runtime + tài nguyên + queue + API + observability + failure policy
 ```
@@ -206,5 +210,3 @@ Không nhất thiết. Streaming chủ yếu giảm perceived độ trễ (laten
 ## Liên kết kiến thức
 
 Xem [Inference Pipeline](./02_inference_pipeline.md), [Batch vs Online Inference](./04_batch_vs_online_inference.md), [Caching and Batching](./05_caching_and_batching.md) và [AI Compute & Infrastructure](../17_ai_compute_and_infrastructure/README.md).
-
-> **Bàn giao:** Sau **Liên kết kiến thức**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 ai engineering](./00_ai_engineering.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
