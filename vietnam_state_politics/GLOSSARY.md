@@ -11,14 +11,21 @@
 | quyền lập pháp | legislative power | 입법권 | Quốc hội thực hiện theo Hiến pháp |
 | quyền hành pháp | executive power | 행정권 | Chính phủ thực hiện; Thủ tướng đứng đầu Chính phủ |
 | quyền tư pháp | judicial power | 사법권 | Tòa án nhân dân thực hiện |
-| Quốc hội | National Assembly | 국회 | tên giống Hàn Quốc nhưng thiết kế thể chế khác |
+| Quốc hội | National Assembly | 국회 | cơ quan một viện; không có Thượng viện |
+| Ủy ban Thường vụ Quốc hội | Standing Committee of the National Assembly | 국회 상임기관에 가까운 기구 | cơ quan thường trực, không phải viện thứ hai |
+| Hội đồng Dân tộc | Ethnic Council | 민족위원회 | cơ quan của Quốc hội có chức năng riêng theo Hiến pháp/luật |
+| Ủy ban của Quốc hội | National Assembly committee | 국회 위원회 | thẩm tra, giám sát và kiến nghị theo lĩnh vực |
+| thẩm tra dự án luật | legislative scrutiny | 법안 심사 | khác với biểu quyết thông qua luật |
+| chất vấn | parliamentary questioning | 대정부질문·질의 | cơ chế giám sát/trách nhiệm chính trị, không phải xét xử |
+| một viện | unicameral legislature | 단원제 의회 | Việt Nam và Hàn Quốc đều một viện nhưng thiết kế khác nhau |
+| lưỡng viện | bicameral legislature | 양원제 의회 | ví dụ Quốc hội liên bang Hoa Kỳ |
 | Chủ tịch nước | President / State President | 국가주석 | không ánh xạ trực tiếp sang 대통령 Hàn Quốc |
 | Chính phủ | Government | 정부 | cơ quan hành chính nhà nước cao nhất, thực hiện quyền hành pháp |
 | Thủ tướng | Prime Minister | 국무총리 | chức năng không đồng nhất với 국무총리 Hàn Quốc |
 | Bộ | Ministry | 부 | cơ quan của Chính phủ quản lý ngành/lĩnh vực |
 | cơ quan ngang Bộ | ministerial-level agency | 장관급 기관 | gồm NHNN, Thanh tra Chính phủ, VPCP ở snapshot 2026 |
 | Bộ trưởng | Minister | 장관 | thành viên Chính phủ và người đứng đầu Bộ |
-| Vụ | policy/functional department | 부처 내 정책부서 | thiên về tham mưu/chính sách; không ánh xạ cứng sang 조직 Hàn |
+| Vụ | policy/functional department | 부처 내 정책부서 | thiên về tham mưu/chính sách; không ánh xạ cứng sang tổ chức Hàn |
 | Cục | department/authority | 청·국에 가까운 집행조직 | quyền hạn tùy nghị định từng Bộ |
 | đơn vị sự nghiệp công lập | public service unit | 공공서비스 기관 | không đồng nghĩa cơ quan hành chính |
 | cán bộ | cadre | 간부 | khái niệm pháp lý riêng trong Luật 80/2025/QH15 |
@@ -33,7 +40,9 @@
 | tổ chức chính trị–xã hội | socio-political organization | 정치사회단체 | cấu trúc pháp lý Việt Nam; không đồng nghĩa NGO |
 | phản biện xã hội | social criticism / social policy review | 사회적 정책검토 | cơ chế của MTTQ/tổ chức chính trị–xã hội theo luật |
 | Tòa án nhân dân | People’s Court | 인민법원 | cơ quan xét xử |
+| Tòa án nhân dân khu vực | regional People’s Court | 지역 인민법원 | cấp tòa sau cải cách 2025; không phải một cấp hành chính |
 | Viện kiểm sát nhân dân | People’s Procuracy | 인민검찰원 | công tố và kiểm sát hoạt động tư pháp |
+| Viện kiểm sát nhân dân khu vực | regional People’s Procuracy | 지역 인민검찰원 | cấp VKS sau cải cách 2025 |
 | Kiểm toán nhà nước | State Audit | 국가감사기구 | cơ quan do Quốc hội thành lập, độc lập theo Điều 118 Hiến pháp |
 | Hội đồng nhân dân | People’s Council | 인민의회에 가까운 지방 대표기관 | cơ quan quyền lực nhà nước ở địa phương theo pháp luật Việt Nam |
 | Ủy ban nhân dân | People’s Committee | 인민위원회 | cơ quan hành chính nhà nước ở địa phương theo luật |
@@ -54,13 +63,25 @@
 | thông tư | circular | 부처 규칙에 가까운 규범 | ban hành trong phạm vi thẩm quyền của chủ thể luật định |
 | hiệu lực pháp lý | legal effect / legal force | 법적 효력 | cần phân biệt hiệu lực thời gian, không gian và cấp độ pháp lý |
 | điều khoản chuyển tiếp | transitional provision | 경과규정 | quyết định cách chuyển từ luật cũ sang luật mới |
+| sửa đổi Hiến pháp | constitutional amendment | 헌법 개정 | có quy trình/ngưỡng riêng theo Điều 120 |
+| lấy ý kiến Nhân dân | public consultation | 국민 의견수렴 | khác trưng cầu ý dân |
+| trưng cầu ý dân | referendum | 국민투표 | về Hiến pháp do Quốc hội quyết định theo Điều 120 |
 | giám sát | oversight / supervision | 감독 | nghĩa cụ thể phụ thuộc cơ quan và luật |
 | thanh tra | inspection | 감사·조사 | không đồng nghĩa kiểm toán hay điều tra hình sự |
 | trách nhiệm giải trình | accountability | 책임성 | quyền quyết định phải nối với thông tin và cơ chế chịu trách nhiệm |
+| tham nhũng | corruption | 부패 | nội hàm pháp lý phải đọc theo luật hiện hành |
+| lãng phí | waste | 낭비 | sử dụng nguồn lực không hiệu quả theo phạm vi pháp luật/quy định liên quan |
+| tìm kiếm đặc lợi | rent-seeking | 지대추구 | tìm lợi ích qua đặc quyền/quy định thay vì tạo giá trị mới |
+| xung đột lợi ích | conflict of interest | 이해충돌 | một công cụ trọng tâm của thiết kế phòng ngừa tham nhũng |
 | kiến nghị / phản ánh | petition / feedback | 민원·건의 | không tự đồng nghĩa khiếu nại pháp lý |
 | khiếu nại | administrative complaint | 행정불복에 가까운 이의제기 | yêu cầu xem lại quyết định/hành vi theo luật |
 | tố cáo | denunciation / report of violation | 위법행위 신고 | báo hành vi vi phạm theo thủ tục luật định |
 | tiếp công dân | citizen reception | 민원인 접견 | từ 2026 có cơ sở cho hình thức trực tuyến theo Luật 136/2025/QH15 |
+| điều ước quốc tế | international treaty | 국제조약 | phải phân biệt danh nghĩa ký và thẩm quyền phê chuẩn/gia nhập |
+| thỏa thuận quốc tế | international agreement | 국제협정 | khái niệm pháp lý riêng, không đồng nhất điều ước quốc tế |
+| phê chuẩn điều ước | ratification | 조약 비준 | thẩm quyền phụ thuộc loại điều ước |
+| hội nhập kinh tế | economic integration | 경제통합 | gắn thương mại, đầu tư, tiêu chuẩn và cam kết quốc tế |
+| cơ chế cam kết | commitment mechanism | 약속 메커니즘 | ràng buộc trước để tăng khả năng dự đoán, nhưng giảm một phần policy space |
 | chi phí tuân thủ | compliance cost | 규제 준수 비용 | thời gian, tiền và nguồn lực để đáp ứng quy định |
 | chi phí giao dịch | transaction cost | 거래비용 | rộng hơn chi phí tuân thủ hành chính |
 | chính sách tài khóa | fiscal policy | 재정정책 | thuế, chi ngân sách, vay nợ công trong khung pháp luật |

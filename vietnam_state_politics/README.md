@@ -6,7 +6,7 @@
 
 ## Phạm vi và câu hỏi trung tâm
 
-Thư viện trả lời một chuỗi câu hỏi: Việt Nam tổ chức quyền lực nhà nước theo nguyên tắc nào; Đảng Cộng sản Việt Nam và bộ máy Nhà nước khác nhau ở đâu; Quốc hội, Chủ tịch nước, Chính phủ, Tòa án nhân dân, Viện kiểm sát nhân dân, Kiểm toán nhà nước và chính quyền địa phương làm gì; hệ thống Đảng và Mặt trận nằm ở đâu; bộ máy hành chính đi từ Chính phủ xuống Bộ/Cục/địa phương ra sao; ai thực thi công vụ; người dân lựa chọn cơ quan đại diện và phản hồi quyết định công bằng cơ chế nào; một định hướng chính trị được chuyển thành chính sách, luật, ngân sách và hành chính ra sao; và vì sao những cấu trúc đó ảnh hưởng trực tiếp đến thuế, đất đai, đầu tư công, tín dụng, doanh nghiệp, thị trường lao động và tăng trưởng.
+Thư viện trả lời một chuỗi câu hỏi: Việt Nam tổ chức quyền lực nhà nước theo nguyên tắc nào; Đảng Cộng sản Việt Nam và bộ máy Nhà nước khác nhau ở đâu; Quốc hội, Chủ tịch nước, Chính phủ, Tòa án nhân dân, Viện kiểm sát nhân dân, Kiểm toán nhà nước và chính quyền địa phương làm gì; hệ thống Đảng và Mặt trận nằm ở đâu; bộ máy hành chính đi từ Chính phủ xuống Bộ/Cục/địa phương ra sao; ai thực thi công vụ; người dân lựa chọn cơ quan đại diện và phản hồi quyết định công bằng cơ chế nào; một định hướng chính trị được chuyển thành chính sách, luật, ngân sách và hành chính ra sao; đối ngoại và điều ước quốc tế ràng buộc chính sách trong nước thế nào; và vì sao những cấu trúc đó ảnh hưởng trực tiếp đến thuế, đất đai, đầu tư công, tín dụng, doanh nghiệp, thị trường lao động và tăng trưởng.
 
 Các khái niệm so sánh được dùng như **công cụ đối chiếu**, không phải bảng xếp hạng thể chế. Hàn Quốc giúp thấy rõ mô hình tổng thống, tam quyền và quản trị hành chính; Hoa Kỳ giúp hiểu hệ thống liên bang và cơ chế phân lập quyền lực (separation of powers / 권력분립); Trung Quốc giúp đối chiếu một hệ thống xã hội chủ nghĩa có đảng cộng sản lãnh đạo nhưng cấu trúc nhà nước và quy mô phân cấp khác Việt Nam.
 
@@ -46,10 +46,17 @@ Các khái niệm so sánh được dùng như **công cụ đối chiếu**, kh
 19. [Sơ đồ toàn hệ thống — trang tra cứu nhanh](18_system_map_quick_reference.md)
 20. [Case studies — quyết định Nhà nước đi vào nền kinh tế](19_case_studies_state_decisions_and_economy.md)
 
+### Phần V — Các cơ chế chiều sâu
+
+21. [Bên trong Quốc hội: Ủy ban Thường vụ, Hội đồng Dân tộc, các Ủy ban và đại biểu](20_inside_national_assembly_committees_and_delegates.md)
+22. [Phòng, chống tham nhũng, lãng phí, tiêu cực và kiểm soát quyền lực](21_anti_corruption_waste_and_power_control.md)
+23. [Đối ngoại, điều ước quốc tế và hội nhập kinh tế](22_foreign_policy_treaties_and_economic_integration.md)
+24. [Sửa đổi Hiến pháp và cải cách thể chế](23_constitutional_amendment_and_institutional_reform.md)
+
 ### Tra cứu
 
-21. [Glossary Việt–Anh–Hàn](GLOSSARY.md)
-22. [Nguồn chính thức và chính sách cập nhật](SOURCES.md)
+25. [Glossary Việt–Anh–Hàn](GLOSSARY.md)
+26. [Nguồn chính thức và chính sách cập nhật](SOURCES.md)
 
 ## Ba sơ đồ phải nhớ
 
