@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-25
+last_reviewed: 2026-09-29
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -225,7 +225,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean law, public administration, labor, housing, tax, insurance, finance, immigration, and daily procedures.
     prerequisites: [korean_history, korean_culture]
-    related: [kiip, korea_business_economy]
+    related: [kiip, korea_business_economy, personal_finance]
   - id: economics
     title: Economics
     group: Human & Society
@@ -235,7 +235,7 @@ domains:
     last_reviewed: 2026-09-24
     scope: Core-domain complete Economics library covering foundations, microeconomics, market structure/game theory, macroeconomics, applied economics, econometrics, and economic history/institutions with explicit evidence and integration boundaries.
     prerequisites: [mathematics]
-    related: [investing, korea_business_economy, psychology, sociology, world_history, world_geography, computer_science, research_methods]
+    related: [personal_finance, investing, korea_business_economy, psychology, sociology, world_history, world_geography, computer_science, research_methods]
   - id: world_geography
     title: World Geography
     group: Human & Society
@@ -247,6 +247,16 @@ domains:
     prerequisites: []
     related: [world_history, biology, physics, korea_business_economy, sociology]
 
+  - id: personal_finance
+    title: Personal Finance
+    group: Professional
+    path: personal-finance/
+    entrypoint: personal-finance/README.md
+    status: canonical
+    last_reviewed: 2026-09-29
+    scope: Personal and household financial literacy from money, banking, interest, inflation, credit, debt, insurance and taxes through housing, car finance, retirement, emergency liquidity, financial scams and personal balance-sheet reasoning.
+    prerequisites: []
+    related: [economics, investing, korea_law_civic_life]
   - id: investing
     title: Investing
     group: Professional
@@ -256,7 +266,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Investing foundations, asset classes, company analysis, applied economics, trading, derivatives, and Korea/Vietnam markets.
     prerequisites: [mathematics]
-    related: [economics, korea_business_economy, pmp, sql]
+    related: [personal_finance, economics, korea_business_economy, pmp, sql]
   - id: pmp
     title: Project Management / PMP
     group: Professional
@@ -361,6 +371,7 @@ Human & Society
 └── World Geography
 
 Professional
+├── Personal Finance
 ├── Investing
 └── Project Management / PMP
 
@@ -436,6 +447,22 @@ Physics
 ```
 
 Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
+
+## 11. Personal Finance: household financial system
+
+[`personal-finance/`](personal-finance/README.md) là canonical owner cho quyết định tài chính cá nhân/hộ gia đình: cash flow, banking, interest, inflation at household level, credit/debt, insurance, taxes, housing, car finance, retirement, emergency liquidity, scams và personal balance sheet. Nó không thay Economics và không biến mọi vấn đề tiền bạc thành Investing.
+
+Bridge kiến thức chủ đích:
+
+```text
+Personal Finance
+→ Economics
+→ Investing
+   ↙      ↘
+Stocks   Forex
+```
+
+Personal Finance quyết định phần vốn nào thực sự có thể chịu lock-up hoặc market risk; Economics giải thích môi trường lãi suất, inflation, growth và policy; Investing sở hữu asset allocation, valuation, portfolio risk, stocks và Forex. Các domain cross-link theo ownership này thay vì duplicate lý thuyết.
 
 ## Domain entrypoints
 
