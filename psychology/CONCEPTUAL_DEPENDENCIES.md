@@ -78,6 +78,8 @@ Durable learning ngày mai
 
 Vì vậy applied education phải dựa vào bộ nhớ (memory / 메모리)/transfer bằng chứng (evidence / 증거), không chỉ cảm giác học “trôi chảy”.
 
+Khi chuyển từ câu hỏi mô tả tâm lý — con người thường suy nghĩ, sai lệch hoặc phản ứng thế nào — sang câu hỏi thực hành “tôi nên xử lý uncertainty và ra quyết định thế nào?”, dùng [Thinking Toolkit](../thinking/README.md) làm lớp tích hợp. Cầu nối chính là [Cognitive Bias](../thinking/cognitive-bias/README.md) → [Probability](../thinking/probability/README.md) → [Decision Making](../thinking/decision-making/README.md); [calibration/Bayesian practice](../thinking/practice/01_calibration_and_bayesian_updating.md) và [decision journal/postmortem](../thinking/practice/04_decision_journal_and_postmortem.md) biến các concept này thành feedback loop. Psychology vẫn là canonical owner của cơ chế tâm lý và evidence; `thinking/` không dùng bias label như bằng chứng rằng một kết luận sai.
+
 
 > **Chuyển mạch:** Từ **3. học tập (learning / 학습) & Cognition**, ta sang **4. Development, self và xã hội (social / 사회적) world** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
 
@@ -195,6 +197,8 @@ graph TD
 ```
 
 Ứng dụng chỉ nên mạnh bằng upstream bằng chứng (evidence / 증거) của nó. Một practical recommendation không được nâng status chỉ vì nghe hợp lý hoặc dễ nhớ.
+
+Với negotiation và joint decision, có thể nối tiếp sang case [Negotiation, Bargaining & Conflict](../thinking/90_connections/06_negotiation_bargaining_and_conflict.md) để ghép psychological behavior với incentives, game theory, information asymmetry, BATNA/opportunity cost và update rule. Case này là integration layer; nó không thay thế evidence về cognition, emotion hay social behavior ở Psychology.
 
 
 > **Chuyển mạch:** Từ **8. Applied Psychology**, ta sang **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.

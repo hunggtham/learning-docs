@@ -39,6 +39,10 @@ Cross-link instead of duplicating equations/estimator derivations.
 
 [Philosophy](../philosophy/README.md) handles epistemology, philosophy of science, explanation, causation and normative questions at a foundational mức (level / 수준). Research Methods turns those questions into operational research decisions.
 
+## Ranh giới (boundary / 경계) với Thinking Toolkit
+
+[Thinking Toolkit](../thinking/README.md) là lớp dùng nhanh trước và sau formal research: framing câu hỏi, đọc claim, base rate, causal reasoning, model selection, cognitive bias, forecasting và decision-making. Research Methods vẫn là canonical owner khi câu hỏi chuyển thành study design, sampling, measurement, evidence synthesis, ethics hoặc reproducibility. Hai phần cross-link để tránh biến một checklist suy nghĩ thành methodology nghiên cứu hoàn chỉnh.
+
 ## Ranh giới (boundary / 경계) với lĩnh vực (domain / 도메인) applied
 
 Psychology, Sociology, Economics, Lịch sử (history / 이력), Education, Nghiệp vụ (business / 비즈니스) or Kỹ thuật (engineering / 엔지니어링) research should reuse this lĩnh vực (domain / 도메인) for dùng chung (common / 공통) methodology and keep domain-specific đo lường (measurement / 측정)/thiết kế (design / 설계) examples in their own libraries.
@@ -80,6 +84,7 @@ reproducibility materials
 
 ## Connections
 
+- [Thinking Toolkit](../thinking/README.md): practical reasoning, claim evaluation, causal questions, uncertainty, forecasting and decision workflows before/after formal study design.
 - [Mathematics](../mathematics/README.md): xác suất (probability / 확률)/statistics foundation.
 - [Economics / Econometrics](../economics/05_econometrics/README.md): nhân quả (causal / 인과적)/statistical estimators.
 - [Philosophy](../philosophy/README.md): epistemology, causation and explanation.

@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-29
+last_reviewed: 2026-09-30
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -13,7 +13,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: First-principles mathematics from foundations through analysis, probability, optimization, and connections.
     prerequisites: []
-    related: [physics, computer_science, investing]
+    related: [physics, computer_science, investing, thinking]
   - id: physics
     title: Physics
     group: Science
@@ -53,7 +53,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Life from chemistry and cells through genetics, evolution, physiology, ecology, biotechnology, and systems biology.
     prerequisites: [chemistry]
-    related: [psychology, chemistry, computer_science]
+    related: [psychology, chemistry, computer_science, thinking]
   - id: philosophy
     title: Philosophy
     group: Human & Society
@@ -63,7 +63,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Philosophical reasoning, epistemology, metaphysics, philosophy of science, philosophy of mind, ethics, social-political philosophy, technology, history, and cross-domain connections.
     prerequisites: []
-    related: [mathematics, physics, biology, psychology, computer_science, research_methods, sociology]
+    related: [mathematics, physics, biology, psychology, computer_science, research_methods, sociology, thinking]
   - id: research_methods
     title: Research Methods
     group: Methods
@@ -73,7 +73,17 @@ domains:
     last_reviewed: 2026-09-24
     scope: Research questions and design, measurement and sampling, survey design, qualitative methods, systematic review and evidence synthesis, mixed methods, ethics, reproducibility, and open science.
     prerequisites: []
-    related: [philosophy, mathematics, economics, psychology, sociology, world_history, computer_science]
+    related: [philosophy, mathematics, economics, psychology, sociology, world_history, computer_science, thinking]
+  - id: thinking
+    title: Thinking Toolkit
+    group: Methods
+    path: thinking/
+    entrypoint: thinking/README.md
+    status: canonical
+    last_reviewed: 2026-09-30
+    scope: Practical cross-domain reasoning integration layer covering problem framing, evidence, uncertainty, causality, forecasting, model selection, trade-offs, incentives, systems, risk and decision practice without duplicating canonical theory.
+    prerequisites: []
+    related: [philosophy, mathematics, psychology, economics, research_methods, investing, personal_finance, pmp, computer_science]
 
   - id: computer_science
     title: Computer Science
@@ -84,7 +94,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Computing foundations, algorithms, systems, AI, databases, networks, security, software engineering, and professional connections.
     prerequisites: [mathematics]
-    related: [electrical_engineering, data_engineering, devops_platform_engineering, backend, frontend]
+    related: [electrical_engineering, data_engineering, devops_platform_engineering, backend, frontend, thinking]
   - id: backend
     title: Backend Development
     group: Computing
@@ -94,7 +104,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Framework-independent backend core concepts plus Java, Spring, and Python language/framework tracks.
     prerequisites: [computer_science]
-    related: [data_engineering, devops_platform_engineering, frontend]
+    related: [data_engineering, devops_platform_engineering, frontend, thinking]
   - id: frontend
     title: Frontend Development
     group: Computing
@@ -104,7 +114,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Web platform, JavaScript, TypeScript, React, CSS, XML, WebSquare, and frontend production practice.
     prerequisites: [computer_science]
-    related: [backend, native, devops_platform_engineering]
+    related: [backend, native, devops_platform_engineering, thinking]
   - id: native
     title: Native Mobile Development
     group: Computing
@@ -124,7 +134,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Data lifecycle and pipeline semantics; analytical storage; modeling and transformation; distributed and streaming processing; orchestration/backfill; warehouse/lakehouse; serving and semantic metrics; governance, lineage, security, cost/capacity; and end-to-end case studies.
     prerequisites: [computer_science, mathematics]
-    related: [backend, devops_platform_engineering, sql]
+    related: [backend, devops_platform_engineering, sql, thinking]
   - id: devops_platform_engineering
     title: DevOps / Platform Engineering
     group: Computing
@@ -134,7 +144,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Runtime, delivery, containers, infrastructure, Kubernetes, GitOps, SRE, security, platform, and production practice.
     prerequisites: [computer_science, linux]
-    related: [backend, data_engineering, linux]
+    related: [backend, data_engineering, linux, thinking]
   - id: linux
     title: Linux
     group: Computing
@@ -165,7 +175,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Psychology as a science with concepts, mechanisms, evidence status, limitations, and cross-domain connections.
     prerequisites: [biology]
-    related: [computer_science, korean_culture, research_methods, sociology]
+    related: [computer_science, korean_culture, research_methods, sociology, thinking]
   - id: sociology
     title: Sociology
     group: Human & Society
@@ -175,7 +185,7 @@ domains:
     last_reviewed: 2026-09-25
     scope: Social structure, culture and socialization, identity and deviance, groups/networks/organizations, stratification and mobility, social institutions, population, urbanization, collective behavior, and social change.
     prerequisites: []
-    related: [research_methods, psychology, economics, world_history, world_geography, korean_culture]
+    related: [research_methods, psychology, economics, world_history, world_geography, korean_culture, thinking]
   - id: korean_history
     title: Korean History
     group: Human & Society
@@ -195,7 +205,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: World history as a causal system from human origins through agrarian states, classical and medieval networks, industrialisation, imperialism, world wars, the Cold War, decolonisation, and the post-Cold-War world.
     prerequisites: []
-    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life, research_methods, sociology]
+    related: [world_geography, korean_history, korean_culture, investing, korea_law_civic_life, research_methods, sociology, thinking]
   - id: korean_culture
     title: Korean Culture
     group: Human & Society
@@ -215,7 +225,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean business, economy, company cases, institutions, and market reasoning.
     prerequisites: [korean_history]
-    related: [economics, investing, korean_culture, korea_law_civic_life]
+    related: [economics, investing, korean_culture, korea_law_civic_life, thinking]
   - id: korea_law_civic_life
     title: Korea Law, Civic & Everyday Life
     group: Human & Society
@@ -225,7 +235,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Korean law, public administration, labor, housing, tax, insurance, finance, immigration, and daily procedures.
     prerequisites: [korean_history, korean_culture]
-    related: [kiip, korea_business_economy, personal_finance]
+    related: [kiip, korea_business_economy, personal_finance, thinking]
   - id: economics
     title: Economics
     group: Human & Society
@@ -235,7 +245,7 @@ domains:
     last_reviewed: 2026-09-24
     scope: Core-domain complete Economics library covering foundations, microeconomics, market structure/game theory, macroeconomics, applied economics, econometrics, and economic history/institutions with explicit evidence and integration boundaries.
     prerequisites: [mathematics]
-    related: [personal_finance, investing, korea_business_economy, psychology, sociology, world_history, world_geography, computer_science, research_methods]
+    related: [personal_finance, investing, korea_business_economy, psychology, sociology, world_history, world_geography, computer_science, research_methods, thinking]
   - id: world_geography
     title: World Geography
     group: Human & Society
@@ -256,7 +266,7 @@ domains:
     last_reviewed: 2026-09-29
     scope: Personal and household financial literacy from money, banking, interest, inflation, credit, debt, insurance and taxes through housing, car finance, retirement, emergency liquidity, financial scams and personal balance-sheet reasoning.
     prerequisites: []
-    related: [economics, investing, korea_law_civic_life]
+    related: [economics, investing, korea_law_civic_life, thinking]
   - id: investing
     title: Investing
     group: Professional
@@ -266,7 +276,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Investing foundations, asset classes, company analysis, applied economics, trading, derivatives, and Korea/Vietnam markets.
     prerequisites: [mathematics]
-    related: [personal_finance, economics, korea_business_economy, pmp, sql]
+    related: [personal_finance, economics, korea_business_economy, pmp, sql, thinking]
   - id: pmp
     title: Project Management / PMP
     group: Professional
@@ -276,7 +286,7 @@ domains:
     last_reviewed: 2026-09-23
     scope: Project value, delivery, people, planning, risk, governance, adaptive delivery, quantitative practice, and case studies.
     prerequisites: []
-    related: [investing, devops_platform_engineering, psychology]
+    related: [investing, devops_platform_engineering, psychology, thinking]
 
   - id: information_processing_engineer
     title: 정보처리기사
@@ -346,7 +356,8 @@ Engineering
 └── Electrical Engineering
 
 Methods
-└── Research Methods
+├── Research Methods
+└── Thinking Toolkit
 
 Computing
 ├── Computer Science
@@ -463,6 +474,22 @@ Stocks   Forex
 ```
 
 Personal Finance quyết định phần vốn nào thực sự có thể chịu lock-up hoặc market risk; Economics giải thích môi trường lãi suất, inflation, growth và policy; Investing sở hữu asset allocation, valuation, portfolio risk, stocks và Forex. Các domain cross-link theo ownership này thay vì duplicate lý thuyết.
+
+## 12. Thinking Toolkit: cross-domain reasoning integration
+
+[`thinking/`](thinking/README.md) là lớp tích hợp thực hành cho reasoning dùng xuyên domain. Nó không sở hữu lại logic, probability/statistics, cognitive science, economics hay research methodology; thay vào đó nó ghép problem framing, evidence, uncertainty, causality, forecasting, trade-offs, incentives, systems, risk và decision review thành workflow, deliberate-practice drills và applied casebook.
+
+Ownership chủ đích:
+
+```text
+canonical theory / evidence
+          ↓
+Thinking Toolkit
+          ↓
+cross-domain application + feedback loop
+```
+
+Khi một vấn đề chạm mechanics chuyên ngành — tài chính cá nhân, investing, medical evidence, software reliability, project governance hay institutions — `thinking/` handoff về canonical domain tương ứng thay vì biến generic mental model thành subject-matter advice.
 
 ## Domain entrypoints
 
