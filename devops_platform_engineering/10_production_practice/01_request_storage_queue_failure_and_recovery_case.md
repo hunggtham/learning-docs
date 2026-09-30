@@ -1,22 +1,22 @@
 # Case xuyên tầng: yêu cầu → lưu trữ → hàng đợi → thất bại → khôi phục
 
-> **Mạch đọc:** Case này đứng sau [Production troubleshooting: từ symptom đến evidence xuyên tầng](./00_production_troubleshooting_and_change_failure_patterns.md). Chapter trước cung cấp phương pháp thu hẹp giả thuyết; chapter này áp dụng phương pháp đó lên một luồng có cả yêu cầu đồng bộ (synchronous request / 동기 요청), giao dịch cơ sở dữ liệu (database transaction / 데이터베이스 트랜잭션), hàng đợi bất đồng bộ (asynchronous queue / 비동기 큐) và bên tiêu thụ (consumer / 소비자). Mục tiêu không phải học một message broker cụ thể mà hiểu failure semantics khi một thao tác đi qua nhiều boundary.
+> **Mạch đọc:** Case này đứng sau [Production troubleshooting: từ triệu chứng tới bằng chứng xuyên tầng](./00_production_troubleshooting_and_change_failure_patterns.md). Chapter trước dạy cách thu hẹp giả thuyết; chapter này áp dụng phương pháp đó lên một luồng có yêu cầu đồng bộ, giao dịch cơ sở dữ liệu, hàng đợi bất đồng bộ và tác động bên ngoài. Mục tiêu không phải học một message broker cụ thể mà hiểu **ngữ nghĩa thất bại (failure semantics / 실패 의미론)** khi một thao tác đi qua nhiều ranh giới.
 
 Prerequisite gần nhất là [đường đi của yêu cầu: DNS/TCP/TLS/proxy](../01_runtime_foundations/01_network_dns_tls_and_request_path.md), [timeout/retry/idempotency của Backend](../../10_backend/backend_core/06_timeout_retry_idempotency.md), [observability dựa trên bằng chứng](../07_observability_sre/00_observability_telemetry_and_evidence_driven_debugging.md) và [incident/resilience/recovery](../07_observability_sre/02_incidents_resilience_backup_and_disaster_recovery.md).
 
-Câu hỏi trung tâm: **khi người dùng thấy một request thất bại, điều gì thực sự đã thất bại?** Request có thể timeout trong khi database đã commit; database có thể commit nhưng event chưa được publish; broker có thể giao message hai lần; consumer có thể hoàn thành side effect rồi crash trước khi acknowledge; recovery có thể làm backlog tạo một đợt tải còn lớn hơn incident ban đầu. Vì vậy `HTTP 500`, `timeout` hay `queue lag` chỉ là symptom, không phải trạng thái nghiệp vụ cuối cùng.
+Câu hỏi trung tâm: **khi người dùng thấy một request thất bại, điều gì thực sự đã thất bại?** Request có thể timeout trong khi database đã commit; database có thể commit nhưng event chưa được publish; queue có thể giao message hai lần; worker có thể hoàn thành side effect rồi crash trước ACK. Vì vậy HTTP 500, timeout hoặc queue lag chỉ là triệu chứng, không phải trạng thái nghiệp vụ cuối cùng.
 
-## 1. Hệ thống mẫu và bất biến cần giữ
+## 1. Hệ thống mẫu và các bất biến
 
-Ta dùng một flow đặt hàng tối giản:
+Ta dùng luồng tạo đơn hàng:
 
 ```text
 Client
   ↓ HTTP request
 API service
-  ↓ transaction
+  ↓ database transaction
 Database
-  ↓ event handoff
+  ↓ outbox / event handoff
 Message broker / queue
   ↓ delivery
 Worker / consumer
@@ -24,346 +24,342 @@ Worker / consumer
 External provider
 ```
 
-Ví dụ nghiệp vụ: client gửi yêu cầu tạo đơn hàng. API xác thực dữ liệu, tạo bản ghi `order`, sau đó một worker xử lý tác vụ tiếp theo như gửi email, cập nhật kho hoặc gọi nhà cung cấp.
+Các **bất biến (invariant / 불변식)** cần giữ:
 
-Trước khi debug failure, cần định nghĩa **bất biến (invariant / 불변식)**. Với flow này, một tập bất biến hợp lý có thể là:
+```text
+mỗi order_id đại diện một ý định nghiệp vụ
+retry cùng ý định không tạo đơn hàng độc lập thứ hai
+state cần xử lý cuối cùng phải có đường tới queue hoặc reconciliation
+xử lý lặp message không được nhân đôi side effect ngoài ý muốn
+recovery phải hội tụ về state đúng, không chỉ làm metric xanh lại
+```
 
-- mỗi `order_id` đại diện đúng một ý định nghiệp vụ;
-- retry của cùng ý định không tạo hai đơn hàng độc lập;
-- nếu trạng thái database nói một tác vụ cần được xử lý, tác vụ đó cuối cùng phải có đường tới hàng đợi hoặc cơ chế reconciliation;
-- consumer xử lý lặp cùng message không được nhân đôi side effect không mong muốn;
-- recovery phải hội tụ về trạng thái nhất quán thay vì chỉ làm metric chuyển sang xanh.
+Nếu chưa định nghĩa invariant, troubleshooting dễ biến thành “service đỏ thì restart”. Restart chỉ đổi trạng thái process; nó không nói dữ liệu đã commit hay side effect đã xảy ra chưa.
 
-Nếu chưa viết được bất biến, troubleshooting dễ rơi vào “service nào đỏ thì restart service đó”. Nhưng restart chỉ tác động tiến trình; nó không trả lời dữ liệu đã commit hay side effect đã xảy ra chưa.
+## 2. Một request thành công có nhiều điểm cam kết độc lập
 
-> **Chuyển mạch:** Sau khi biết trạng thái đúng cần giữ, ta có thể đi theo timeline và đánh dấu nơi nào hệ thống mất khả năng biết chắc kết quả.
-
-## 2. Một request thành công bình thường đi qua nhiều điểm commit khác nhau
-
-Một flow thành công có thể trông như sau:
+Timeline đơn giản:
 
 ```text
 T0  client gửi POST /orders với idempotency key
 T1  API nhận request
-T2  API acquire database connection
+T2  API lấy database connection
 T3  transaction ghi order
 T4  database COMMIT
-T5  event/outbox state trở nên durable
-T6  API trả HTTP response
+T5  outbox/event state trở nên durable
+T6  API trả response
 T7  publisher đưa event lên queue
-T8  broker lưu / giao message
+T8  broker lưu/giao message
 T9  consumer nhận message
 T10 consumer gọi external provider
-T11 consumer ghi trạng thái kết quả
+T11 consumer ghi kết quả
 T12 consumer ACK message
 ```
 
-Điểm khó là `T4`, `T6`, `T8`, `T11` và `T12` không phải một atomic boundary duy nhất. Mỗi điểm có thể thành công trong khi điểm kế tiếp thất bại. Vì vậy “request thất bại” không đủ để suy ra “operation chưa xảy ra”.
+`T4`, `T6`, `T8`, `T11`, `T12` không phải một atomic boundary.
 
-Mental model quan trọng:
-
-```text
-transport outcome ≠ business outcome
-process outcome   ≠ durable-state outcome
-queue ACK outcome ≠ side-effect outcome
-```
-
-Từ đây, mỗi failure mode phải trả lời hai câu: **trạng thái durable cuối cùng là gì** và **caller/consumer biết được bao nhiêu về trạng thái đó**.
-
-## 3. Failure mode A — timeout trước khi lấy được database connection
-
-Giả sử traffic tăng mạnh. Pool có 100 connection, mọi connection đều bận; request mới chờ ở connection pool. Sau 2 giây, request timeout trước khi transaction bắt đầu.
-
-Symptom có thể là:
+Cần giữ ba phân biệt:
 
 ```text
-HTTP latency ↑
-DB query latency ≈ bình thường
-connection-pool wait ↑
-in-flight requests ↑
-timeout ↑
+kết quả vận chuyển ≠ kết quả nghiệp vụ
+kết quả process ≠ trạng thái bền
+ACK của queue ≠ kết quả side effect
 ```
 
-Nếu chỉ nhìn database query latency, team có thể kết luận sai rằng database khỏe. Thực tế bottleneck nằm **trước query execution**, ở chờ liên kết (connection-pool wait / 커넥션 풀 대기).
+## 3. Failure A — timeout trước khi có database connection
 
-Nếu client hoặc gateway retry ngay, lượng request mới tăng trong khi tài nguyên không tăng. Retry biến một vấn đề sức chứa thành **khuếch đại tải (load amplification / 부하 증폭)**. Đây là lý do timeout, retry và concurrency budget phải được xem như một hệ thống.
+Traffic tăng, connection pool đầy, request chờ rồi timeout trước khi transaction bắt đầu.
 
-Bằng chứng cần thu gồm pool utilization, pool wait histogram, request concurrency, database active sessions và tỷ lệ retry. Recovery hợp lý có thể là giảm intake, shed tải ít quan trọng hoặc sửa query/transaction giữ connection quá lâu; tăng pool mù quáng có thể chuyển bottleneck sang database max connections.
+Bằng chứng có thể là:
 
-> **Bàn giao:** Failure A tương đối dễ vì transaction chưa bắt đầu. Failure tiếp theo khó hơn: database đã commit nhưng client không nhận được câu trả lời.
+```text
+HTTP latency tăng
+DB query latency vẫn bình thường
+connection-pool wait tăng
+in-flight request tăng
+timeout tăng
+```
 
-## 4. Failure mode B — database commit thành công nhưng HTTP response bị mất
+Nếu chỉ nhìn query latency, team có thể kết luận database khỏe nhưng bỏ qua bottleneck ở pool.
+
+Nếu gateway/client retry ngay, tải mới lại tăng. **Khuếch đại do thử lại (retry amplification / 재시도 증폭)** biến thiếu sức chứa thành incident lớn hơn.
+
+## 4. Failure B — database đã commit nhưng client không nhận response
 
 Timeline:
 
 ```text
-T3 transaction ghi order
-T4 COMMIT thành công
-T5 process chuẩn bị response
-T6 network connection reset / gateway timeout
+DB COMMIT thành công
+→ response bị mất / connection đóng / timeout
+→ client không biết outcome
 ```
 
-Client thấy timeout và không biết request đã thành công hay chưa. Đây là **kết quả không xác định đối với caller (unknown outcome / 호출자 관점 결과 불명)**, không phải chắc chắn thất bại.
+Đây là **kết quả không xác định với caller (unknown outcome / 호출자 관점 결과 불명)**.
 
-Nếu client gửi lại một `POST /orders` hoàn toàn mới mà không có idempotency, hệ thống có thể tạo order thứ hai. Nếu thao tác có khóa idempotency (idempotency key / 멱등성 키) gắn với cùng principal/tenant và cùng payload fingerprint, server có thể trả lại kết quả của operation cũ thay vì tạo side effect mới.
+Nếu client retry và API không có **khóa lũy đẳng (idempotency key / 멱등성 키)**, cùng ý định có thể tạo hai order.
 
-Điểm quan trọng là timeout không hủy ngược một database commit đã xảy ra. **Hủy (cancellation / 취소)** và **quay lui giao dịch (transaction rollback / 트랜잭션 롤백)** chỉ có hiệu lực nếu chúng tới đúng boundary trước commit. Sau commit, caller phải chuyển sang query status/reconciliation, không giả định rollback.
+Timeout không rollback transaction đã commit. Vì vậy handler phải thiết kế cho trường hợp “caller không biết nhưng server đã làm”.
 
-Evidence tốt gồm request ID, idempotency key, transaction/order ID, commit timestamp và status query. Log “response failed” mà không có durable operation ID sẽ làm incident investigation khó hơn rất nhiều.
+## 5. Idempotency bảo vệ ý định nghiệp vụ
 
-## 5. Failure mode C — database commit nhưng event publish thất bại
+Idempotency không có nghĩa mọi request giống nhau đều trả cùng response mãi mãi. Nó nghĩa nhiều lần thực hiện **cùng một ý định logic** không tạo side effect lặp ngoài mong muốn.
 
-Một anti-pattern phổ biến:
+Một thiết kế phổ biến:
 
 ```text
-BEGIN TRANSACTION
-  INSERT order
-COMMIT
-publish OrderCreated
+idempotency_key + caller/tenant
+→ lookup operation
+→ nếu chưa có: tạo operation và thực hiện
+→ nếu đang xử lý: trả trạng thái phù hợp
+→ nếu đã hoàn tất: trả outcome đã lưu
 ```
 
-Nếu process crash giữa `COMMIT` và `publish`, database nói order tồn tại nhưng queue không có event. Nếu đảo thứ tự — publish trước rồi commit — consumer có thể nhận event cho dữ liệu cuối cùng rollback. Đây là **bài toán dual-write (dual-write problem / 이중 쓰기 문제)**: hai hệ thống durable không chia sẻ một transaction atomic đơn giản.
+Khóa cần có scope rõ; nếu global quá rộng có thể va chạm, nếu scope quá hẹp có thể không chặn duplicate thật.
 
-Một cách xử lý phổ biến là **transactional outbox (트랜잭셔널 아웃박스)**:
+## 6. Failure C — database commit nhưng event publish thất bại
+
+Nếu application làm:
 
 ```text
-BEGIN TRANSACTION
-  INSERT order
-  INSERT outbox_event
-COMMIT
-
-separate publisher:
-  read unsent outbox rows
-  publish to broker
-  mark / advance delivery state
+1. COMMIT order
+2. publish event
 ```
 
-Order và intent-to-publish cùng commit trong database. Publisher có thể retry việc publish. Cơ chế này không biến broker và database thành exactly-once toàn cục; nó biến trạng thái “cần publish” thành durable và có thể reconciliation.
+thì publish có thể thất bại sau commit. Đây là **bài toán ghi kép (dual-write problem / 이중 쓰기 문제)**.
 
-Bất biến trở thành:
+Retry toàn request không an toàn nếu bước 1 đã thành công. Chỉ retry publish cũng cần biết event identity.
+
+## 7. Transactional outbox nối commit với việc phát sự kiện
+
+**Mẫu outbox giao dịch (transactional outbox / 트랜잭셔널 아웃박스)** ghi business state và outbox record trong cùng database transaction:
 
 ```text
-committed business state
-→ durable event intent exists
-→ publisher retries until handed off or explicitly quarantined
+BEGIN
+→ insert/update business state
+→ insert outbox event
+→ COMMIT
 ```
 
-Observability cần đo outbox age/backlog, không chỉ broker queue depth. Nếu broker hoàn toàn trống vì publisher chết, queue depth có thể trông “healthy” trong khi event đang kẹt ở database.
+Sau đó publisher đọc outbox và gửi event.
 
-## 6. Failure mode D — broker giao message nhiều hơn một lần
+Outbox không tạo exactly-once end-to-end. Nó chuyển bài toán từ “mất event sau commit” sang “publisher/consumer phải idempotent khi delivery lặp”.
 
-Nhiều hệ thống queue thực tế cung cấp ngữ nghĩa **ít nhất một lần (at-least-once / 최소 한 번)**: message có thể được giao lại nếu consumer xử lý xong nhưng ACK bị mất, consumer crash trước ACK hoặc broker không chắc delivery trước đã hoàn thành.
+## 8. At-least-once delivery nghĩa là duplicate là trạng thái bình thường
 
-Timeline điển hình:
+Nhiều broker cung cấp **giao ít nhất một lần (at-least-once delivery / 최소 1회 전달)**: message có thể đến nhiều hơn một lần.
+
+Consumer phải giả định:
 
 ```text
-consumer receives message M
-→ calls external provider successfully
-→ process crashes
-→ ACK never reaches broker
-→ broker redelivers M
+message đã xử lý nhưng ACK bị mất
+→ broker giao lại
 ```
 
-Nếu consumer gọi provider lần nữa, side effect bị nhân đôi. Vì vậy idempotency phải đi **end-to-end**, không chỉ ở HTTP endpoint.
+Nếu side effect là gửi email, charge payment hoặc gọi provider không idempotent, duplicate delivery có thể tạo hậu quả thật.
 
-Các chiến lược tùy boundary gồm:
+## 9. Failure D — side effect thành công nhưng consumer crash trước khi ghi state
 
-- dùng operation key ổn định khi gọi provider nếu provider hỗ trợ idempotency;
-- lưu processed-message/business-operation state với unique constraint;
-- thiết kế state transition như `pending → completed` để lặp lại không tạo outcome thứ hai;
-- khi không thể làm side effect idempotent, dùng reconciliation/compensation có chủ đích thay vì giả định queue exactly-once.
-
-“Exactly once” ở một thành phần không tự đảm bảo exactly-once của toàn workflow. Một broker có thể deduplicate delivery nhưng external API bên ngoài broker vẫn có failure boundary riêng.
-
-## 7. Failure mode E — poison message và retry vô hạn
-
-Một message có payload hợp lệ về schema nhưng kích hoạt bug deterministic ở consumer. Nếu mọi failure đều retry với backoff vô hạn, message đó có thể giữ tài nguyên, làm queue lag tăng và che khuất traffic khỏe.
-
-Cần phân biệt:
-
-- **lỗi tạm thời (transient failure / 일시적 실패):** dependency timeout, rate limit, temporary unavailable;
-- **lỗi vĩnh viễn hoặc deterministic (permanent/deterministic failure / 영구적·결정적 실패):** invalid business state, unsupported version, bug luôn tái hiện với cùng input.
-
-Retry policy phải có classification, attempt budget và đường sang **hàng đợi thư chết (dead-letter queue / 데드 레터 큐)** hoặc quarantine. Nhưng DLQ không phải bãi rác cuối cùng. Nó cần owner, alert, inspect tooling, replay policy và khả năng đảm bảo replay vẫn idempotent.
-
-Một queue có depth ổn định nhưng DLQ tăng đều vẫn là system failure. Vì vậy operational contract phải bao phủ cả main path và exception path.
-
-## 8. Failure mode F — recovery tạo recovery storm
-
-Giả sử broker hoặc downstream provider down 40 phút. Trong thời gian đó producer vẫn ghi outbox và backlog tích tụ. Khi dependency phục hồi, hàng nghìn worker cùng bắt đầu drain backlog nhanh nhất có thể.
-
-Nếu steady-state arrival rate là 1.000 jobs/phút nhưng recovery chạy 8.000 jobs/phút, database/provider có thể bị quá tải, latency tăng, timeout xuất hiện, retry tăng và dependency lại sập. Hệ thống rơi vào **bão khôi phục (recovery storm / 복구 폭주)**.
-
-Recovery không phải “mở toàn bộ van”. Cần điều khiển tốc độ drain:
+Timeline:
 
 ```text
-new traffic budget
-+ backlog recovery budget
-< safe downstream capacity
+consumer gọi provider
+provider xử lý thành công
+consumer crash
+local result chưa ghi
+ACK chưa gửi
+message được giao lại
 ```
 
-Có thể dùng concurrency limit, token bucket/rate limit, tenant priority hoặc staged replay. Theo dõi **tuổi message (message age / 메시지 지연 시간)** cùng queue depth: depth giảm nhưng oldest message vẫn già có thể nghĩa fairness/order policy đang khiến một subset bị starve.
+Lúc này consumer không biết provider đã làm chưa.
 
-Exit criterion của recovery nên là trạng thái hội tụ: backlog về mức bình thường, error rate ổn định, downstream không còn saturation, reconciliation không còn discrepancy và business outcome được kiểm tra. Dashboard xanh ngay sau restart chưa đủ.
+Cần một trong các cơ chế:
 
-## 9. Một failure graph giúp tránh debug theo tên service
+- provider hỗ trợ idempotency key;
+- query/reconciliation được trạng thái provider;
+- local operation record có state machine đủ rõ;
+- compensation nếu action có thể đảo ngược.
 
-Thay vì vẽ kiến trúc như danh sách box, hãy vẽ **đồ thị thất bại (failure graph / 실패 그래프)** với boundary và observable evidence:
+## 10. Retry, replay, reconciliation, compensation, restore và rollback khác nhau
+
+Các từ này không thay thế nhau:
+
+- **thử lại (retry / 재시도):** thực hiện lại một operation vì tin rằng nó chưa thành công hoặc an toàn khi lặp;
+- **phát lại (replay / 재생):** chạy lại event/message lịch sử qua processor;
+- **đối soát (reconciliation / 대조):** so hai nguồn trạng thái và sửa chênh lệch;
+- **bù trừ (compensation / 보상):** thực hiện action mới để đảo/giảm tác động nghiệp vụ trước đó;
+- **khôi phục dữ liệu (restore / 복원):** phục hồi từ backup/snapshot;
+- **quay lui phiên bản (rollback / 롤백):** đưa code/config về version trước.
+
+Chọn sai từ thường dẫn tới chọn sai cơ chế recovery.
+
+## 11. Poison message cần cô lập, không retry vô hạn
+
+Một **message độc (poison message / 독성 메시지)** có thể luôn fail vì dữ liệu sai schema, bug deterministic hoặc dependency không hỗ trợ input đó.
+
+Retry vô hạn gây:
 
 ```text
-client
-  │ timeout / retry
-  ▼
-gateway
-  │ request ID, deadline
-  ▼
-API process
-  │ pool wait / concurrency
-  ▼
-database
-  │ commit / rollback / lock / durable state
-  ├──────────────┐
-  ▼              │
-outbox            │ business query
-  │ age/backlog  │
-  ▼              │
-publisher         │
-  │ publish ack  │
-  ▼              │
-broker            │
-  │ delivery attempt / lag
-  ▼              │
-consumer          │
-  │ operation key
-  ▼              │
-external provider
-  │ side-effect status
-  └──────────────┘ reconciliation
+CPU/network waste
+queue lag tăng
+log noise
+delay cho message hợp lệ
 ```
 
-Khi incident xảy ra, tìm boundary đầu tiên nơi expected state khác actual state. Không cần mở mọi dashboard cùng lúc.
+Cần giới hạn retry và có **hàng đợi thư chết (dead-letter queue, DLQ / 데드레터 큐)** hoặc cơ chế quarantine tương đương.
 
-## 10. Evidence contract: cần correlation xuyên tầng
+DLQ không phải nơi “vứt lỗi”; nó cần owner, reason, replay policy và evidence.
 
-Một trace ID duy nhất hữu ích nhưng chưa đủ nếu operation sống lâu hơn request ban đầu. Nên phân biệt một số định danh:
+## 12. Queue lag là triệu chứng, phải tách arrival rate và service rate
+
+Backlog tăng khi:
 
 ```text
-request_id       = một transport attempt
-operation_id     = một ý định nghiệp vụ
-idempotency_key  = khóa nhận diện retry cùng intent
-message_id       = một envelope/delivery identity
-trace_id         = một causal trace context
+arrival rate > effective service rate
 ```
 
-Một retry HTTP có `request_id` mới nhưng có thể giữ cùng `operation_id` và `idempotency_key`. Một message redelivery có thể giữ cùng business operation nhưng attempt number tăng. Nếu ép tất cả vào một ID, investigation dễ nhầm transport attempt với business intent.
+Nguyên nhân có thể là traffic tăng, consumer chậm, external provider chậm, retry storm hoặc poison message.
 
-Telemetry nên trả lời được:
+Chỉ tăng số worker có thể làm downstream quá tải hơn nếu bottleneck nằm ở database/provider.
 
-- request nào tạo operation nào;
-- operation durable state hiện ở đâu;
-- outbox event tương ứng đã publish chưa;
-- message đã được delivery bao nhiêu lần;
-- consumer side effect có operation key nào;
-- recovery/replay nào đã tác động lên record.
-
-Mục tiêu không phải log thật nhiều mà là có đủ bằng chứng để dựng lại state transition.
-
-## 11. Runbook reasoning: symptom → hypothesis → evidence → action
-
-Giả sử người dùng báo “đặt hàng bị timeout nhưng sau đó nhận hai email”. Một runbook reasoning tốt không bắt đầu bằng restart.
-
-### Bước 1 — xác định business outcome
-
-Tìm `operation_id`/idempotency key và số order durable. Nếu có một order nhưng hai email, duplication xảy ra sau business commit. Nếu có hai order, duplication có thể bắt đầu từ HTTP retry/idempotency boundary.
-
-### Bước 2 — dựng timeline
-
-So sánh commit timestamp, response failure, outbox publish, message delivery attempts và provider calls. Tìm điểm đầu tiên tạo hai branch hành vi.
-
-### Bước 3 — xác minh retry ownership
-
-Client, gateway, service, publisher và consumer có thể đều retry. Vẽ retry topology để xem amplification. Một operation không nên bị retry mù ở mọi layer.
-
-### Bước 4 — chọn mitigation có expected effect
-
-Nếu lỗi là consumer duplicate, pause/reduce consumer hoặc bật idempotency guard có thể phù hợp hơn rollback deployment toàn API. Nếu lỗi là pool saturation, restart consumer không giải quyết queueing ở API.
-
-### Bước 5 — preserve evidence trước mutation khi có thể
-
-Chụp relevant logs, queue offsets/delivery metadata, outbox records và database state trước mass replay/delete/restart. Hành động recovery có thể xóa dấu vết của failure ban đầu.
-
-## 12. Recovery correctness quan trọng hơn recovery speed đơn thuần
-
-Một hệ thống “phục hồi” về latency nhưng để lại missing event, duplicate side effect hoặc orphan record vẫn chưa thực sự phục hồi.
-
-Recovery cần ba lớp:
-
-**Khôi phục dịch vụ (service recovery / 서비스 복구).** Request mới hoạt động và dependency reachable.
-
-**Khôi phục dữ liệu (data recovery / 데이터 복구).** Durable state giữa database, outbox, broker và consumer converges; discrepancy được reconcile.
-
-**Khôi phục nghiệp vụ (business recovery / 비즈니스 복구).** User-visible outcome đúng: không mất order, không charge hai lần, không bỏ sót notification quan trọng.
-
-Thứ tự có thể khác tùy incident nhưng cả ba phải có owner. Đây là lý do incident commander cần tách “mitigation done” khỏi “recovery complete”.
-
-## 13. Khi nào dùng replay, khi nào dùng reconciliation, khi nào dùng compensation
-
-**Replay (재처리)** phù hợp khi cùng operation có thể được xử lý lại an toàn và input/event vẫn đáng tin. Điều kiện tiên quyết là idempotency hoặc state transition bảo vệ side effect.
-
-**Đối soát (reconciliation / 조정)** phù hợp khi hai hệ thống có thể lệch state và ta cần so sánh source of truth với observed state để tạo corrective work. Reconciliation đặc biệt quan trọng sau dual-write partial failure hoặc provider uncertainty.
-
-**Bù trừ (compensation / 보상)** là một operation nghiệp vụ mới nhằm trung hòa hiệu ứng cũ khi không thể rollback vật lý. Refund sau charge là ví dụ điển hình: nó không xóa lịch sử charge mà tạo một state transition mới.
-
-Không nên dùng ba từ này thay nhau. Replay cố thực hiện lại intent cũ; reconciliation phát hiện và sửa divergence; compensation tạo hành động nghiệp vụ đối nghịch/điều chỉnh.
-
-## 14. Capacity phải tính cả đường recovery
-
-Capacity planning chỉ dựa trên steady-state traffic bỏ sót một failure mode lớn. Hệ thống production cần headroom cho retry, failover và backlog drain.
-
-Một mô hình đơn giản:
+Cần đo:
 
 ```text
-steady load       = λ
-recovery backlog  = B
-safe capacity     = C
-recovery window   = T
-
-required average drain rate ≈ λ + B/T
+queue depth
+oldest message age
+arrival rate
+processing rate
+retry rate
+consumer saturation
+downstream latency/error
 ```
 
-Nếu `λ + B/T > C`, mục tiêu recovery window không khả thi nếu không tăng capacity, giảm incoming load hoặc kéo dài T. Đây không phải vấn đề “worker chưa đủ nhanh” mà là ràng buộc vật lý của hệ thống.
+## 13. Recovery storm có thể tạo incident thứ hai
 
-Case này nối trực tiếp với [SLI/SLO, error budget và capacity](../07_observability_sre/01_sli_slo_error_budget_and_capacity.md): reliability policy phải bao gồm degraded mode và recovery budget, không chỉ peak QPS bình thường.
+Khi dependency phục hồi, backlog lớn có thể được xử lý đồng loạt:
 
-## 15. Boundary với các canonical owner khác
+```text
+provider phục hồi
+→ worker tăng throughput
+→ DB/provider bị dồn tải
+→ latency tăng
+→ timeout/retry tăng
+→ dependency lại suy yếu
+```
 
-Chapter này chỉ sở hữu **lập luận xuyên tầng (cross-layer reasoning / 계층 간 추론)**. Cơ chế sâu hơn thuộc các đơn vị khác:
+Đây là **bão phục hồi (recovery storm / 복구 폭주)**.
 
-- request lifecycle, transaction boundary, timeout/retry/idempotency: [Backend Core](../../10_backend/backend_core/README.md);
-- process, socket, resource pressure và runtime evidence: [Linux](../../linux/README.md);
-- database transaction, durability, replication và storage internals: [Computer Science](../../computer_science/README.md);
-- pipeline/backfill/replay/data quality ở quy mô dữ liệu: [Data Engineering](../../data_engineering/README.md);
-- telemetry, SLO, incident response và DR: [`07_observability_sre`](../07_observability_sre/00_observability_telemetry_and_evidence_driven_debugging.md).
+Recovery plan cần rate limit, staged drain hoặc adaptive concurrency, không chỉ “mở toàn bộ consumer”.
 
-Nếu cần đào sâu một failure, hãy quay về canonical owner thay vì mở rộng case này thành textbook riêng cho database, broker hoặc Linux.
+## 14. Correlation ID và operation ID có vai trò khác nhau
 
-## 16. Checklist reasoning ngắn cho incident tương tự
+**Mã tương quan (correlation ID / 상관 ID)** nối telemetry qua service.
 
-Khi một request đi qua storage và queue rồi thất bại, hãy lần lượt hỏi:
+**Mã thao tác (operation ID / 작업 ID)** hoặc idempotency key đại diện ý định nghiệp vụ.
 
-1. **Ý định nghiệp vụ là gì?** Có stable operation/idempotency identity không?
-2. **Điểm durable cuối cùng ở đâu?** Chưa commit, đã commit, đã publish, đã side effect hay đã ACK?
-3. **Caller biết gì và durable state thực sự là gì?** Timeout có thể chỉ tạo uncertainty.
-4. **Retry nằm ở những layer nào?** Tổng amplification là bao nhiêu?
-5. **Có dual-write boundary không?** Nếu có, cơ chế reconcile là gì?
-6. **Consumer có chịu duplicate delivery không?** Side effect có idempotent không?
-7. **Backlog sẽ phục hồi với tốc độ nào?** Recovery có thể overload downstream không?
-8. **Exit criterion là gì?** Metric xanh hay state/business outcome đã hội tụ?
+**Message ID** đại diện delivery/event instance.
 
-Checklist này là công cụ nén reasoning, không thay thế evidence.
+Nếu dùng một ID cho mọi vai trò, trace có thể đẹp nhưng khó xác định duplicate nghiệp vụ hay duplicate delivery.
 
-## Kết luận: theo dõi trạng thái nghiệp vụ, không chỉ theo dõi request
+## 15. Một runbook tốt bắt đầu bằng câu hỏi trạng thái
 
-Bất biến (invariant / 불변식) quan trọng nhất của case là: **một failure ở transport không xác định business outcome, và một recovery ở process không đảm bảo state đã hội tụ**. Muốn debug đúng, ta phải theo một ý định nghiệp vụ xuyên qua request attempt, database commit, event handoff, message delivery, consumer side effect và reconciliation.
+Khi user báo “đặt hàng bị lỗi”, đừng bắt đầu bằng restart.
 
-Sau chapter này, quay lại [Production troubleshooting](./00_production_troubleshooting_and_change_failure_patterns.md) với một mental model cụ thể hơn: symptom đầu tiên chỉ là điểm vào. Khi hệ thống có nhiều durable boundary, câu hỏi quyết định luôn là **state nào đã trở thành sự thật, state nào chỉ là quan sát tạm thời, và cơ chế nào sẽ đưa toàn workflow trở lại một trạng thái nhất quán có thể kiểm chứng?**
+Runbook nên hỏi:
+
+```text
+operation ID là gì?
+request đã tới API chưa?
+transaction có commit không?
+outbox có record không?
+event đã publish chưa?
+queue đã giao chưa?
+consumer đã xử lý chưa?
+external provider đã làm chưa?
+final business state đang là gì?
+```
+
+Mỗi câu thu hẹp failure domain.
+
+## 16. Evidence cần gắn với boundary
+
+Ví dụ:
+
+```text
+API → request log/trace + operation ID
+DB → transaction state / row / commit evidence
+outbox → event record + publish status
+queue → offset/delivery/age
+consumer → processing state + retry count
+provider → idempotency/status API
+```
+
+Metric tổng như CPU 80% không đủ chứng minh operation cụ thể đã ở trạng thái nào.
+
+## 17. Capacity phải tính cả trạng thái recovery
+
+Hệ thống không chỉ cần chịu traffic bình thường mà còn phải chịu:
+
+```text
+normal traffic
++ retry traffic
++ backlog drain
++ reconciliation jobs
++ deployment/recovery overhead
+```
+
+Nếu capacity plan chỉ dựa trên steady state, incident nhỏ có thể tạo backlog mà hệ thống mất nhiều giờ để hấp thụ.
+
+## 18. Đối soát là lớp bảo hiểm cho distributed state
+
+Ngay cả khi thiết kế idempotency/outbox tốt, hệ thống vẫn nên có **đối soát (reconciliation / 대조)** cho state quan trọng.
+
+Ví dụ định kỳ so:
+
+```text
+order ở trạng thái paid
+↔ provider payment status
+↔ downstream fulfillment state
+```
+
+Reconciliation không thay correctness. Nó là cơ chế phát hiện/sửa divergence còn sót lại do failure bất thường.
+
+## 19. Recovery hoàn tất khi bất biến được khôi phục
+
+Service process chạy lại chưa đủ.
+
+Cần xác minh:
+
+```text
+new request hoạt động
+backlog đang giảm có kiểm soát
+duplicate không tăng
+outbox không bị kẹt
+provider state đã reconcile
+business invariant được giữ
+SLO/latency trở về vùng an toàn
+```
+
+Đây là khác biệt giữa “hệ thống xanh” và “nghiệp vụ đã phục hồi”.
+
+## 20. Mô hình tổng hợp
+
+```text
+ý định nghiệp vụ
+→ idempotency boundary
+→ transaction + durable state
+→ outbox/event handoff
+→ at-least-once delivery
+→ idempotent/reconcilable consumer
+→ external side effect
+→ evidence ở từng boundary
+→ retry / replay / reconciliation / compensation
+→ controlled recovery
+```
+
+Điểm quan trọng nhất: **failure xuyên nhiều lớp tạo trạng thái không chắc chắn; recovery tốt phải dựa trên bằng chứng về trạng thái đã bền và side effect đã thực sự xảy ra hay chưa.**
+
+## 21. Bàn giao
+
+Khi cần hiểu sâu application contract, đọc [Backend Core](../../10_backend/backend_core/README.md). Khi cần database transaction/WAL, đọc [Computer Science Databases](../../computer_science/05_data_databases/README.md). Khi cần host/resource evidence, đọc [Linux](../../linux/README.md). Khi cần incident/SLO/DR, quay lại [DevOps Observability & SRE](../07_observability_sre/README.md).
+
+> **Bàn giao:** Sau case này, người đọc nên có thể vẽ timeline của một operation, đánh dấu **durable boundary → unknown outcome → retry/replay path → evidence → recovery action**, thay vì suy ra business outcome chỉ từ HTTP status hoặc trạng thái process.
