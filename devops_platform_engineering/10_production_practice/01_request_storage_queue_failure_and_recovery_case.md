@@ -360,6 +360,6 @@ SLO/latency trở về vùng an toàn
 
 ## 21. Bàn giao
 
-Khi cần hiểu sâu application contract, đọc [Backend Core](../../10_backend/backend_core/README.md). Khi cần database transaction/WAL, đọc [Computer Science Databases](../../computer_science/05_data_databases/README.md). Khi cần host/resource evidence, đọc [Linux](../../linux/README.md). Khi cần incident/SLO/DR, quay lại [DevOps Observability & SRE](../07_observability_sre/README.md).
+Khi cần hiểu sâu application contract, đọc [Backend Core](../../10_backend/backend_core/README.md). Khi cần database transaction/WAL, đọc [Computer Science Databases](../../computer_science/05_data_databases/README.md). Khi cần host/resource evidence, đọc [Linux](../../linux/README.md). Khi cần incident/SLO/DR, quay lại [khả năng quan sát và debugging dựa trên bằng chứng](../07_observability_sre/00_observability_telemetry_and_evidence_driven_debugging.md) và [incident, resilience, backup, disaster recovery](../07_observability_sre/02_incidents_resilience_backup_and_disaster_recovery.md).
 
 > **Bàn giao:** Sau case này, người đọc nên có thể vẽ timeline của một operation, đánh dấu **durable boundary → unknown outcome → retry/replay path → evidence → recovery action**, thay vì suy ra business outcome chỉ từ HTTP status hoặc trạng thái process.
