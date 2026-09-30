@@ -1,6 +1,6 @@
 # Personal Finance — Coverage, Depth & Merge-Readiness Audit
 
-**Last reviewed:** 2026-09-30  
+**Last reviewed:** 2026-09-30
 **Scope:** `personal-finance/` canonical learning route 01–19 + `case-studies/` application layer
 
 ## Mục đích
