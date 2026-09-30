@@ -109,9 +109,9 @@ domains:
     title: Native Mobile Development
     group: Computing
     path: 11_native/
-    entrypoint: 11_native/00_INDEX.md
+    entrypoint: 11_native/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-09-29
     scope: Swift/iOS and Kotlin/Android from language foundations through platform and production engineering.
     prerequisites: [computer_science, frontend]
     related: [backend, frontend]
@@ -282,9 +282,9 @@ domains:
     title: 정보처리기사
     group: Certifications
     path: 정보처리기사/
-    entrypoint: 정보처리기사/output/README.md
+    entrypoint: 정보처리기사/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-09-29
     scope: Korean Information Processing Engineer certification subjects and structured study outputs.
     prerequisites: [computer_science]
     related: [sql, backend, computer_science]
@@ -292,9 +292,9 @@ domains:
     title: SQLD / SQL
     group: Certifications
     path: sql/
-    entrypoint: sql/output/README.md
+    entrypoint: sql/README.md
     status: canonical
-    last_reviewed: 2026-09-23
+    last_reviewed: 2026-09-29
     scope: Data modeling, SQL fundamentals, query patterns, normalization, and database reasoning.
     prerequisites: [computer_science]
     related: [data_engineering, investing]

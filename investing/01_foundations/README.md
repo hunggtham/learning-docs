@@ -1,6 +1,6 @@
 # 01 — Nền tảng đầu tư (Foundations)
 
-> **Mạch đọc:** Đọc **01 — Nền tảng đầu tư (Foundations)** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Thứ tự đọc** sang **Sau lĩnh vực này bạn cần làm được gì?**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README này là owner của nền tảng đầu tư. Bắt đầu bằng thứ tự đọc để thấy các lớp tiền, rủi ro và vận hành nối nhau ra sao; phần năng lực đầu ra dùng bản đồ đó để kiểm tra người học đã hiểu được gì trước khi đi vào case study.
 
 Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài sản hoặc chọn cổ phiếu. Mục tiêu là hiểu hệ thống tài chính, cách giá được hình thành, rủi ro danh mục, cách vận hành một kế hoạch đầu tư nhiều năm và cách đánh giá kết quả mà không nhầm may mắn hoặc beta thị trường với kỹ năng.
 
@@ -20,19 +20,23 @@ Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài
 
 [06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md](./06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md) là lớp học sâu: chuyển mục tiêu và nghĩa vụ thành bảng cân đối kinh tế, ngân sách rủi ro, MCTR, tương quan theo trạng thái, tầng thanh khoản, kiểm thử cú sốc kết hợp, kiểm thử ngược, quy tắc tái cân bằng và nhật ký quyết định.
 
+[07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md](./07_PERSONAL_FINANCE_CASHFLOW_DEBT_INSURANCE_AND_INVESTING.md) bổ sung lớp còn thiếu trước portfolio: dòng tiền, bảng cân đối cá nhân, liquidity ladder, debt economics, catastrophic-risk transfer, future liabilities, human capital và investable surplus. Chapter này cố ý đặt câu hỏi “hệ thống tài chính cá nhân có sống sót được không?” trước câu hỏi “asset allocation tối ưu là gì?”.
 
-> **Chuyển mạch:** Từ **Thứ tự đọc**, ta sang **Sau lĩnh vực này bạn cần làm được gì?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Danh sách chapter cho biết nên đi qua những lớp nào; phần kế tiếp đổi sang tiêu chí năng lực, để mỗi chapter được đọc như một công cụ giải thích chứ không phải một danh mục tài liệu.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng giải thích tiền của mình đi qua hệ thống nào khi mua chứng khoán, phân biệt rủi ro thị trường, thanh khoản, đối tác và vận hành; xây phân bổ theo mục tiêu thay vì theo mã chứng khoán; đo mức tập trung và đóng góp rủi ro; viết IPS; kiểm thử danh mục và phân tích vì sao danh mục lời hoặc lỗ thay vì chỉ nhìn tổng lợi suất.
 
+Trước khi đi tới portfolio optimization, bạn cũng cần tách được cash flow, liquidity, debt, insurance và future liabilities để biết phần vốn nào thật sự có thể đầu tư dài hạn. Nếu chưa làm được, hãy đọc `07_PERSONAL_FINANCE...` trước `02_PORTFOLIO...` dù số thứ tự file đặt nó ở cuối foundations để không phá cấu trúc hiện có.
 
-> **Chuyển mạch:** Từ **Sau lĩnh vực này bạn cần làm được gì?**, ta sang **Bài tập tích hợp** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi đã xác định được năng lực cần có, bài tập tích hợp đưa các khái niệm vào cùng một tình huống: nghĩa vụ, thanh khoản, rủi ro và quyết định đầu tư phải được nhìn trong một hệ thống.
 
 ## Bài tập tích hợp
 
 Đọc [Cú sốc CPI → Danh mục](../07_integrated_case_studies/01_INFLATION_SHOCK_FROM_CPI_TO_PORTFOLIO.md) để luyện kiểm thử căng thẳng, lập bản đồ nhân tố, phòng vệ và phân rã kết quả. Sau đó đọc [Khủng hoảng tín dụng và thanh khoản](../07_integrated_case_studies/02_CREDIT_LIQUIDITY_CRISIS_TRANSMISSION.md) để thấy bộ đệm thanh khoản, đòn bẩy, ký quỹ, tài sản thế chấp và rủi ro sống sót tương tác như thế nào.
+
+Để nối portfolio với đời sống thực, dùng [Practical-life decision route](../../psychology/90_connections/07_practical_life_decisions_finance_health_communication_and_career.md), nơi cash runway được đặt cạnh health capacity, negotiation BATNA và career option value thay vì xem chúng như các vấn đề tách rời.
 
 Để chuyển từ đọc sang tự làm, hoàn thành **mô-đun (module / 모듈) 1 — Foundations** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải có `portfolio_ips.md`, ma trận căng thẳng và một kiểm thử ngược chỉ ra điều kiện làm kế hoạch thất bại.
 
