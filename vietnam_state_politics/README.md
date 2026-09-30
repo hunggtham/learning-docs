@@ -41,10 +41,15 @@ Các khái niệm so sánh được dùng như **công cụ đối chiếu**, kh
 17. [Thứ bậc pháp luật và cách đọc văn bản quy phạm pháp luật](16_legal_hierarchy_and_normative_documents.md)
 18. [Quyền công dân, kiến nghị, khiếu nại, tố cáo và các kênh tham gia](17_citizen_rights_complaints_petitions_and_participation.md)
 
+### Phần IV — Tổng hợp và áp dụng
+
+19. [Sơ đồ toàn hệ thống — trang tra cứu nhanh](18_system_map_quick_reference.md)
+20. [Case studies — quyết định Nhà nước đi vào nền kinh tế](19_case_studies_state_decisions_and_economy.md)
+
 ### Tra cứu
 
-19. [Glossary Việt–Anh–Hàn](GLOSSARY.md)
-20. [Nguồn chính thức và chính sách cập nhật](SOURCES.md)
+21. [Glossary Việt–Anh–Hàn](GLOSSARY.md)
+22. [Nguồn chính thức và chính sách cập nhật](SOURCES.md)
 
 ## Ba sơ đồ phải nhớ
 
@@ -114,7 +119,7 @@ Sau khi đọc hết phần nền, hãy lấy một tình huống và lần ngư
 chủ trương / mục tiêu phát triển
 → chính sách
 → luật / nghị định / quyết định / ngân sách phù hợp
-→ Bộ KH&CN + Bộ Tài chính + Bộ GD&ĐT + các cơ quan liên quan
+→ các bộ/cơ quan theo chức năng
 → chính quyền địa phương
 → đất đai + hạ tầng + nhân lực + thuế + đầu tư
 → doanh nghiệp
@@ -123,10 +128,10 @@ chủ trương / mục tiêu phát triển
 → điều chỉnh chính sách
 ```
 
-Cách học này gắn chính trị với kinh tế thực thay vì biến chính trị thành danh sách chức danh.
+Cách học này gắn chính trị với kinh tế thực thay vì biến chính trị thành danh sách chức danh. [19](19_case_studies_state_decisions_and_economy.md) triển khai phương pháp này qua bán dẫn, đầu tư công, nhà ở, lạm phát và tranh chấp hành chính.
 
 ## Ranh giới
 
 Thư viện mô tả cấu trúc, thẩm quyền, quy trình và tác động thể chế. Nó không xếp hạng chế độ, đảng phái, nhân vật hay khuyến nghị lựa chọn chính trị. Những nội dung nhạy theo thời gian như nhân sự đương nhiệm, số lượng đơn vị hành chính, cơ cấu bộ/ngành, luật ngân sách hoặc quy định phân quyền phải được kiểm tra lại ở [`SOURCES.md`](SOURCES.md) trước khi sử dụng.
 
-> **Bàn giao:** Nếu đọc lần đầu, bắt đầu ở [01](01_constitution_political_system_and_state_power.md). Nếu đã hiểu bộ máy cơ bản và muốn xuống sâu ngay, bắt đầu ở [11](11_central_government_ministries_and_agencies.md).
+> **Bàn giao:** Nếu đọc lần đầu, bắt đầu ở [01](01_constitution_political_system_and_state_power.md). Nếu đã hiểu bộ máy cơ bản và muốn xuống sâu ngay, bắt đầu ở [11](11_central_government_ministries_and_agencies.md). Nếu cần ôn nhanh trước, mở [18](18_system_map_quick_reference.md).
