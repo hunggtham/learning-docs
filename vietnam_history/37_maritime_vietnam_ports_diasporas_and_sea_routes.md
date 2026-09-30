@@ -1,12 +1,12 @@
-# Maritime Vietnam: ports, merchant diasporas và sea routes từ cổ đại tới bộ chứa (container / 컨테이너) economy
+# Việt Nam hướng ra biển: cảng, cộng đồng thương nhân và tuyến hàng hải từ cổ đại tới kinh tế container
 
 ## Vì sao phải xoay bản đồ ra biển?
 
-Lịch sử Việt Nam thường được kể theo trục đất liền: capital → province → frontier. Cách nhìn đó dễ làm coastline trở thành edge của country. Nhưng trong nhiều thế kỷ, sea là một highway nối duyên hải Việt Nam với southern China, island Southeast Asia, Indian Ocean và xa hơn.
+Lịch sử Việt Nam thường được kể theo trục đất liền: kinh đô → tỉnh → biên giới. Cách nhìn đó dễ làm bờ biển thành rìa của đất nước. Nhưng trong nhiều thế kỷ, biển là một xa lộ nối duyên hải Việt Nam với nam Trung Hoa, Đông Nam Á hải đảo, Ấn Độ Dương và xa hơn.
 
-Chapter này hỏi: **khi nhìn từ sea vào land, các cổng (port / 포트), river mouth và merchant diaspora đã thay đổi economy, warfare, religion và trạng thái (state / 상태) sức chứa (capacity / 용량) như thế nào?**
+Chương này hỏi: **khi nhìn từ biển vào đất liền, các cảng, cửa sông và cộng đồng thương nhân đã thay đổi kinh tế, chiến tranh, tôn giáo và năng lực nhà nước như thế nào?** Hãy đặt Hội An, Vân Đồn, Sài Gòn và các cảng hiện đại cạnh chương 13, 17 và 23; như vậy biển trở thành một tuyến nối xuyên thời gian chứ không chỉ là “mép bản đồ”.
 
-Cốt lõi (core / 핵심) idea: cổng (port / 포트) không phải một dot độc lập. Nó là giao diện (interface / 인터페이스) giữa hinterland và long-distance mạng (network / 네트워크).
+Ý tưởng cốt lõi: cảng không phải một chấm độc lập. Nó là giao diện (interface / 인터페이스) giữa vùng hậu phương và mạng lưới đường dài.
 
 ```text
 upland / delta production
@@ -22,9 +22,9 @@ foreign goods / silver / technology / ideas
 
 Nếu một link đứt, cổng (port / 포트) suy yếu dù buildings vẫn còn.
 
-## Monsoon tạo calendar cho commerce
+## Gió mùa tạo lịch cho thương mại
 
-Premodern sailors không có diesel engine để đi bất kỳ lúc nào. Seasonal wind mẫu (pattern / 패턴) ảnh hưởng departure/arrival, waiting thời gian (time / 시간) và merchant residence.
+Thủy thủ tiền hiện đại không có động cơ diesel để đi bất kỳ lúc nào. Mô hình gió theo mùa ảnh hưởng giờ khởi hành–đến nơi, thời gian chờ và thời gian thương nhân lưu trú.
 
 Monsoon trade tạo một xã hội (social / 사회적) consequence quan trọng: merchants có thể phải ở lại cổng (port / 포트) nhiều tháng chờ wind thuận. Long residence encourages warehouse, foreign quarter, religious site, intermarriage và broker community.
 
@@ -70,7 +70,7 @@ If capital depends on harbour for bên ngoài (external / 외부) supply/communi
 
 This is **maritime logistics**, a tầng (layer / 계층) often missing when battle is narrated only by army movement on land.
 
-## Hội An: early-modern cổng (port / 포트) as a hệ thống (system / 시스템)
+## Hội An: cảng cận đại như một hệ thống
 
 UNESCO describes Hội An as a remarkably preserved Southeast Asian trading cổng (port / 포트) active from roughly the fifteenth to nineteenth centuries, with particularly strong international commerce in early-modern centuries.
 
@@ -91,7 +91,7 @@ commercial concentration
 
 No single thành phần (component / 컴포넌트) explains the cổng (port / 포트).
 
-## Merchant diasporas: foreign does not mean temporary
+## Cộng đồng thương nhân hải ngoại: người nước ngoài không có nghĩa là tạm thời
 
 Chinese and Japanese merchant communities in Hội An demonstrate how diaspora can become cục bộ (local / 로컬) institution. Traders need translators, credit, lưu trữ (storage / 저장소), dispute resolution, religious/community hỗ trợ (support / 지원) and quan hệ (relation / 관계) with authorities.
 
@@ -99,7 +99,7 @@ Diaspora mạng (network / 네트워크) reduces giao dịch (transaction / 트�
 
 This is why merchant association, temple and family house matter economically, not only culturally.
 
-## Silver, ceramics, silk and weapons: trade changes trạng thái (state / 상태) sức chứa (capacity / 용량)
+## Bạc, gốm, lụa và vũ khí: thương mại thay đổi năng lực nhà nước
 
 Early-modern Asian commerce moves many goods, but some flows have disproportionate political tác động (effect / 효과). Silver can deepen monetization; firearms/material can thay đổi (change / 변경) warfare; imported luxury goods can hỗ trợ (support / 지원) elite prestige; export ceramics/forest products generate revenue.
 
@@ -124,7 +124,7 @@ Writing lịch sử (history / 이력) as “Europeans discovered Vietnamese tra
 
 European advantage grows later through toàn cục (global / 전역) empire, industrial technology and naval power—not automatically from first arrival.
 
-## Missionaries, print and ngôn ngữ (language / 언어) travel through cổng (port / 포트) networks too
+## Nhà truyền giáo, in ấn và ngôn ngữ cũng đi qua mạng lưới cảng
 
 Christian missionaries often move along same shipping routes as merchants. Cổng (port / 포트) contact gives truy cập (access / 접근) to translators and cosmopolitan communities.
 
@@ -158,7 +158,7 @@ Mạc Cửu’s rise shows merchant-military brokerage can create semi-autonomou
 
 This is another example where sea-centred map changes “periphery” into strategic intersection.
 
-## Gia Định–Sài Gòn: river cổng (port / 포트) to colonial entrepôt
+## Gia Định–Sài Gòn: từ cảng sông đến trung tâm trung chuyển thuộc địa
 
 Southern expansion and rice economy make Saigon/Gia Định increasingly important as a river-commercial nút (node / 노드). Under French colonial quy tắc (rule / 규칙), cổng (port / 포트) hạ tầng (infrastructure / 인프라) links Mekong rice and colonial commodity flows to overseas markets.
 
@@ -166,7 +166,7 @@ Colonial cổng (port / 포트) investment can raise thông lượng (throughput
 
 Hạ tầng (infrastructure / 인프라) is therefore never neutral: ask **what luồng (flow / 흐름) was it optimized for?**
 
-## Hải Phòng and colonial northern hạ tầng (infrastructure / 인프라)
+## Hải Phòng và hạ tầng thuộc địa miền Bắc
 
 French colonial development of Hải Phòng tied cổng (port / 포트) to Hanoi and northern môi trường vận hành (production / 운영 환경)/mining zones via hiện đại (modern / 현대적) vận chuyển (transport / 전송). Railway and road reduce hinterland chi phí (cost / 비용) and allow export/import flows at larger quy mô (scale / 규모).
 
@@ -178,7 +178,7 @@ Sailing trade depends heavily on wind; steam reduces seasonal dependence and mak
 
 Vận chuyển (transport / 전송) revolution is therefore thông tin (information / 정보) revolution too. If ship arrives on schedule, đặc tả hợp đồng (contract / 계약) and administration can coordinate more tightly.
 
-## War and ports in the twentieth century
+## Chiến tranh và cảng trong thế kỷ XX
 
 Ports become military logistics targets because imported fuel, equipment and aid often enter by sea. Naval blockade, mining, bombing or cổng (port / 포트) closure can have economy-wide effects.
 
@@ -186,7 +186,7 @@ But this chapter avoids reducing ports to battle sites. Civilian supply, refugee
 
 Historical cổng (port / 포트) has multiple overlapping các hệ thống (systems / 시스템들): military, commercial and xã hội (social / 사회적).
 
-## After 1975: cổng (port / 포트) geography meets thị trường (market / 시장) reform
+## Sau 1975: địa lý cảng gặp cải cách thị trường
 
 Postwar reconstruction and later Đổi Mới increase importance of export manufacturing and international shipping. Containerization standardizes cargo handling and sharply lowers giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) when ports, road and customs are coordinated.
 
@@ -206,7 +206,7 @@ factory → truck/rail → container terminal → vessel → foreign hub
 
 Thông tin (information / 정보) hệ thống (system / 시스템) becomes as important as quay wall.
 
-## Sea is also ecological hệ thống (system / 시스템)
+## Biển cũng là một hệ sinh thái
 
 Maritime lịch sử (history / 이력) must include storm, sediment, mangrove, fisheries and coastline thay đổi (change / 변경). A cổng (port / 포트) may decline from environmental shift as much as chính sách (policy / 정책).
 
@@ -222,13 +222,13 @@ Historical map must use period-appropriate concept rather than color today’s r
 
 This is especially important for politically sensitive maritime lịch sử (history / 이력): bằng chứng (evidence / 증거) should specify what kind of điều khiển (control / 제어), presence or claim existed at a given thời gian (time / 시간) instead of using hiện đại (modern / 현대적) legal vocabulary loosely.
 
-## Places to read maritime lịch sử (history / 이력)
+## Địa điểm để đọc lịch sử hàng hải
 
 **Vân Đồn**: medieval northern trade and island geography. **Thu Bồn–Hội An–Cửa Đại**: river-port-international trade hệ thống (system / 시스템). **Thi Nại**: Champa/Bình Định political-maritime liên kết (connection / 연결). **Đà Nẵng**: deep-water cổng (port / 포트), colonial/military modernization. **Hà Tiên**: Gulf of Thailand frontier brokerage. **Sài Gòn/Ho Chi Minh City cổng (port / 포트) zone**: Mekong export/colonial-modern logistics. **Hải Phòng**: cổng (port / 포트)–railway–industrial northern mạng (network / 네트워크).
 
 At each place, ask where old shoreline was, where river channel moved, how goods reached hinterland and which vận chuyển (transport / 전송) technology defined the cổng (port / 포트)’s peak.
 
-## Recap: Việt Nam vừa continental vừa maritime
+## Tổng kết: Việt Nam vừa lục địa vừa hàng hải
 
 Vietnamese lịch sử (history / 이력) cannot be explained only by rice delta and land empires. Ports connect upland products, agricultural surplus, migrant communities, religion, warfare technology and toàn cục (global / 전역) markets. Maritime orientation varies by region and period, but sea repeatedly changes trạng thái (state / 상태) sức chứa (capacity / 용량) and xã hội (social / 사회적) life.
 

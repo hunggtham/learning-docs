@@ -1,10 +1,10 @@
-# Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction
+# Nhà Hồ → Minh thuộc → Lam Sơn: cải cách, chinh phục và tái thiết
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`09_tran_society_trade_and_mongol_wars.md`](09_tran_society_trade_and_mongol_wars.md) kết thúc với một nhà Trần đã thắng bên ngoài (external / 외부) invasions nhưng về sau gặp fiscal stress, elite fragmentation và military pressure. Trong ngữ cảnh (context / 맥락) đó, **Hồ Quý Ly** nổi lên như một reformer rất mạnh.
 
-Câu hỏi trung tâm của chapter là: **vì sao reform có thể cần thiết nhưng vẫn thất bại về legitimacy và bảo mật (security / 보안), và làm thế nào Minh conquest lại tạo conditions cho một coalition mới ở Thanh Hóa dưới Lê Lợi?**
+Câu hỏi trung tâm của chương là: **vì sao cải cách có thể cần thiết nhưng vẫn thất bại về tính chính danh (legitimacy / 정당성) và an ninh (security / 보안), và làm thế nào cuộc chinh phục của nhà Minh lại tạo điều kiện cho một liên minh mới ở Thanh Hóa dưới Lê Lợi?** Thành Nhà Hồ, Lam Kinh, vùng núi Thanh Hóa và mạng lương thực–nhân lực giúp nối mốc 1400–1428 với cơ chế, không chỉ với tên nhân vật.
 
 Đây là period rất tốt để thấy reform chính sách (policy / 정책) không thể tách khỏi power cơ sở (base / 기반).
 
@@ -30,17 +30,17 @@ Hồ Quý Ly bước vào đúng đoạn cuối của chuỗi (chain / 사슬) n
 
 ## Hồ Quý Ly: reformer không nên bị đọc chỉ qua moral story “cướp ngôi”
 
-Hồ Quý Ly nắm power ngày càng lớn cuối Trần và năm **1400** lập nhà Hồ. Reforms thường gắn với limits on large landholding, changes in taxation, education/examination, administrative reorganization và introduction of paper money.
+Hồ Quý Ly nắm quyền ngày càng lớn cuối Trần và năm **1400** lập nhà Hồ. Cải cách thường gắn với việc hạn chế đại điền chủ, thay đổi thuế khóa, giáo dục–khoa cử, tổ chức lại hành chính và đưa vào sử dụng tiền giấy.
 
-Mỗi reform nhằm solve một ràng buộc (constraint / 제약조건) khác nhau. Land reform tìm cách giảm elite concentration; monetary reform muốn tăng điều khiển (control / 제어) over exchange; educational reform shift curriculum và recruitment; administrative changes cố centralize trạng thái (state / 상태).
+Mỗi cải cách nhằm xử lý một ràng buộc khác nhau. Cải cách ruộng đất tìm cách giảm tập trung đất vào tinh hoa; cải cách tiền tệ muốn tăng khả năng điều tiết trao đổi; cải cách giáo dục thay đổi chương trình và tuyển dụng; thay đổi hành chính cố gắng tập trung hóa nhà nước.
 
 Nhưng chính sách (policy / 정책) thiết kế (design / 설계) không equal hiện thực (implementation / 구현). Paper currency chẳng hạn cần trust, enforcement và thị trường (market / 시장) acceptance. Nếu trạng thái (state / 상태) ép replacement khi people không tin redeemability hoặc mạng (network / 네트워크) chưa dùng quen, giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) có thể tăng.
 
 ## 1397 Thành Nhà Hồ: kiến trúc (architecture / 아키텍처) là bằng chứng (evidence / 증거) của mobilization sức chứa (capacity / 용량)
 
-Năm **1397**, Hồ Quý Ly xây Tây Đô, nay là **Thành Nhà Hồ** ở Thanh Hóa. UNESCO nhấn mạnh các wall lớn bằng stone blocks, geomantic planning và late-fourteenth-century Neo-Confucian trạng thái (state / 상태) ideology.
+Năm **1397**, Hồ Quý Ly xây Tây Đô, nay là **Thành Nhà Hồ** ở Thanh Hóa. UNESCO nhấn mạnh những bức tường lớn bằng khối đá, quy hoạch theo địa thế và hệ tư tưởng nhà nước Tân Nho giáo cuối thế kỷ XIV.
 
-Site này rất valuable vì kiến trúc (architecture / 아키텍처) làm visible một abstract concept: trạng thái (state / 상태) có khả năng quarry, vận chuyển (transport / 전송) và assemble massive stones trong thời gian ngắn. Đó là **labor mobilization + kỹ thuật (engineering / 엔지니어링) + command**.
+Di tích này có giá trị vì kiến trúc làm hiện rõ một khái niệm trừu tượng: nhà nước có khả năng khai thác đá, vận chuyển và lắp ghép những khối đá lớn trong thời gian ngắn. Đó là sự kết hợp giữa **huy động lao động, kỹ thuật (engineering / 공학) và mệnh lệnh hành chính**.
 
 Nhưng strong construction sức chứa (capacity / 용량) không tự động bằng strong legitimacy. Một trạng thái (state / 상태) có thể move stone rất giỏi nhưng vẫn không create durable coalition.
 
@@ -74,7 +74,7 @@ Ngay sau conquest có multiple revolts, trong đó các movements gắn với Tr
 
 ## 1418 Lam Sơn: advantage của peripheral cơ sở (base / 기반)
 
-**Lê Lợi** khởi nghĩa ở Lam Sơn, Thanh Hóa năm **1418**. Ban đầu force nhỏ và nhiều lần bị pressure nặng. Nhưng mountain–upland terrain và cục bộ (local / 로컬) hỗ trợ (support / 지원) cho phép movement survive.
+**Lê Lợi** khởi nghĩa ở Lam Sơn, Thanh Hóa năm **1418**. Ban đầu lực lượng nhỏ và nhiều lần chịu sức ép nặng. Nhưng địa hình núi–vùng cao và sự hỗ trợ địa phương cho phép phong trào sống sót.
 
 Lam Sơn không thắng vì tuyến tính (linear / 선형) expansion từ day one. Nó dùng **strategic độ sâu (depth / 깊이)**: retreat, rebuild, recruit, then shift theater.
 

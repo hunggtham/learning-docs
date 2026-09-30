@@ -26,7 +26,7 @@ state mới khác gì, và cái gì vẫn tiếp tục?
 
 Với thời chưa có nhiều văn bản bản địa, **material culture (văn hóa vật chất)** trở nên quan trọng: settlement, mộ táng, gốm, công cụ, phế liệu sản xuất, dấu thực vật, thành lũy, đường nước. Nhưng archaeology cũng là suy luận (inference / 추론). Tìm thấy nhiều đầu mũi tên đồng ở Cổ Loa cho phép nói nhiều về môi trường vận hành (production / 운영 환경) và military material; nó không tự động chứng minh từng chi tiết của chuyện “nỏ thần”.
 
-## Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력) không phải ba cách gọi cùng một thứ
+## Huyền thoại, ký ức và lịch sử không phải ba cách gọi cùng một thứ
 
 Lạc Long Quân – Âu Cơ, Hùng Vương, Sơn Tinh – Thủy Tinh hay Mỵ Châu – Trọng Thủy có historical giá trị (value / 값) ngay cả khi không thể đọc toàn bộ như biên bản sự kiện. Chúng có thể lưu giữ **collective bộ nhớ (memory / 메모리) (ký ức tập thể)**, cách cộng đồng giải thích origin, moral thứ tự (order / 순서), landscape hoặc legitimacy.
 

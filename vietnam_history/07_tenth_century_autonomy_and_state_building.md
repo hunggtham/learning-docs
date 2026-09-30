@@ -1,18 +1,18 @@
-# Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót
+# Thế kỷ X: từ tự trị (autonomy / 자치) đến nhà nước độc lập có khả năng sống sót
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`06_northern_rule_society_economy_and_resistance.md`](06_northern_rule_society_economy_and_resistance.md) kết thúc bằng một cục bộ (local / 로컬) society đã có administrative experience, elite networks và military sức chứa (capacity / 용량), trong khi nhà Đường suy yếu rồi sụp đổ. Điều đó mở ra opportunity, nhưng opportunity chưa phải trạng thái (state / 상태).
+[`06_northern_rule_society_economy_and_resistance.md`](06_northern_rule_society_economy_and_resistance.md) kết thúc bằng một xã hội địa phương đã có kinh nghiệm hành chính, mạng lưới tinh hoa và năng lực quân sự, trong khi nhà Đường suy yếu rồi sụp đổ. Điều đó mở ra cơ hội, nhưng cơ hội chưa phải là nhà nước.
 
-Câu hỏi trung tâm của thế kỷ X là: **làm thế nào một vùng từng là peripheral province chuyển thành một polity có thể tự thu tài nguyên (resource / 자원), dẹp rival, chống bên ngoài (external / 외부) intervention và duy trì succession?**
+Câu hỏi trung tâm của thế kỷ X là: **làm thế nào một vùng từng là tỉnh biên viễn chuyển thành một thực thể chính trị (polity / 정치체) có thể tự thu tài nguyên, dẹp đối thủ, chống can thiệp bên ngoài và duy trì kế vị?** Mốc 905–938–968–981, nguồn thu nông nghiệp và đường sông, cạnh tranh Nam Hán–Tống, cùng Hoa Lư–Bạch Đằng là bốn điểm phải giữ cùng lúc.
 
 Đây là lý do 938 rất quan trọng nhưng không đủ để giải thích toàn bộ chuyển tiếp (transition / 전이).
 
 ## 905: Khúc Thừa Dụ và autonomy từ bên trong administrative hệ thống (system / 시스템)
 
-Khoảng **905**, **Khúc Thừa Dụ** giành quyền kiểm soát Tĩnh Hải quân trong bối cảnh Tang authority tan rã. Điểm thú vị là autonomy ban đầu không nhất thiết cần tuyên bố một civilizational break hoàn toàn. Cục bộ (local / 로컬) ruler có thể tiếp quản chính administrative khung phần mềm (framework / 프레임워크) đang tồn tại.
+Khoảng **905**, **Khúc Thừa Dụ** giành quyền kiểm soát Tĩnh Hải quân trong bối cảnh quyền lực nhà Đường tan rã. Điểm thú vị là tự trị ban đầu không nhất thiết cần tuyên bố một sự đoạn tuyệt văn minh hoàn toàn. Người cai trị địa phương có thể tiếp quản chính khung hành chính (administrative framework / 행정 프레임워크) đang tồn tại.
 
-Đây là **institutional capture (tiếp quản thiết chế)** hơn là xây mọi thứ từ zero. Offices, territorial units, tax practice và written administration đã có sẵn; vấn đề là ai kiểm soát chúng.
+Đây là **tiếp quản thiết chế (institutional capture / 제도 장악)** hơn là xây mọi thứ từ đầu. Công sở, đơn vị lãnh thổ, cách thu thuế và hành chính bằng văn bản đã có sẵn; vấn đề là ai kiểm soát chúng.
 
 Khúc Hạo sau đó thường được gắn với reforms nhằm tổ chức administration sâu hơn và giảm burden. Dù detail trong sources cần đọc thận trọng, overall significance khá rõ: cục bộ (local / 로컬) authority đang cố biến military-political autonomy thành routine quản trị (governance / 거버넌스).
 
@@ -46,11 +46,11 @@ Mẫu (pattern / 패턴) này lặp lại ở nhiều nơi trong world lịch s�
 
 ## 938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)
 
-Năm **938**, Ngô Quyền đánh bại hạm đội Nam Hán trên sông **Bạch Đằng**. Tradition và later accounts mô tả việc bố trí cọc dưới lòng sông kết hợp tide cycle để trap fleet.
+Năm **938**, Ngô Quyền đánh bại hạm đội Nam Hán trên sông **Bạch Đằng**. Truyền thống và các ghi chép về sau mô tả việc bố trí cọc dưới lòng sông kết hợp chu kỳ thủy triều để bẫy hạm đội.
 
 Điều đáng học không phải mẹo “đóng cọc” tách khỏi geography. Bạch Đằng là maritime-river gateway vào đồng bằng Bắc Bộ. Một invading fleet từ coast muốn tiến sâu phải đi qua constrained waterways chịu ảnh hưởng thủy triều.
 
-Ngô Quyền biến cục bộ (local / 로컬) environmental kiến thức (knowledge / 지식) thành **force multiplier (hệ số nhân sức mạnh)**:
+Ngô Quyền biến hiểu biết môi trường địa phương thành **hệ số nhân sức mạnh (force multiplier / 전력 승수)**:
 
 ```text
 narrow river access + tides + prepared obstacle
@@ -74,7 +74,7 @@ Cụm di tích **Từ Lương Xâm** ở Hải Phòng được bảo tồn như 
 
 ## Sau 938: independence không tự động tạo stable trạng thái (state / 상태)
 
-Ngô Quyền xưng vương và đặt trung tâm ở Cổ Loa, nhưng sau khi ông mất năm **944**, succession xung đột (conflict / 충돌) nhanh chóng xuất hiện. Cuối cùng polity phân mảnh trong tình trạng thường gọi là **Loạn 12 sứ quân**.
+Ngô Quyền xưng vương và đặt trung tâm ở Cổ Loa, nhưng sau khi ông mất năm **944**, xung đột kế vị nhanh chóng xuất hiện. Cuối cùng chính thể phân mảnh trong tình trạng thường gọi là **Loạn 12 sứ quân**.
 
 Đây là natural kiểm thử (test / 테스트) của một trạng thái (state / 상태) mới. Winning independence là một sự kiện (event / 이벤트); monopolizing legitimate violence và institutionalizing succession là tiến trình (process / 프로세스) dài hơn.
 

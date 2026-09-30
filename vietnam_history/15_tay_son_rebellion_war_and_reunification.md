@@ -1,4 +1,4 @@
-# Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ
+# Tây Sơn: nổi dậy, lúa gạo, chiến tranh và khủng hoảng trật tự cũ
 
 ## Điểm tựa và câu hỏi trung tâm
 
@@ -6,7 +6,7 @@
 
 Đầu thế kỷ XVIII, hệ thống (system / 시스템) này vẫn có sức chứa (capacity / 용량) đáng kể. Nhưng tới nửa sau thế kỷ, fiscal pressure, elite xung đột (conflict / 충돌), corruption narratives, commercial disruption và hardship tạo ra môi trường dễ bùng nổ rebellion.
 
-Câu hỏi trung tâm: **vì sao một uprising xuất phát từ vùng Tây Sơn có thể phá hủy cả Nguyễn lẫn Trịnh thứ tự (order / 순서), rồi vẫn không tạo được một stable dynasty lâu dài?**
+Câu hỏi trung tâm: **vì sao một cuộc nổi dậy xuất phát từ vùng Tây Sơn có thể phá hủy cả trật tự Nguyễn lẫn Trịnh, rồi vẫn không tạo được một triều đại ổn định lâu dài?** Hãy theo mốc **1771–1789–1802**: từ Bình Định, lương thực và mạng huy động, đến Phú Xuân, Đống Đa và sự tái lập của nhà Nguyễn. Chuỗi mốc này sẽ nối chiến trường với thuế khóa, vận chuyển gạo và trải nghiệm của cộng đồng địa phương.
 
 ## 1771 là beginning coordinate, không phải explanation
 
@@ -40,9 +40,9 @@ rebellion recruitment cheaper
 
 Đây là cơ chế (mechanism / 메커니즘) tổng quát; từng locality có intensity khác nhau.
 
-## Rice là military variable
+## Lúa gạo là biến số quân sự
 
-Một điểm rất quan trọng của thế kỷ XVIII là **food supply**. Army, city và court đều cần rice. Southern water frontier đã tạo môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) lớn, nhưng civil war có thể cắt shipping tuyến (route / 경로) và biến abundance thành scarcity.
+Một điểm rất quan trọng của thế kỷ XVIII là **nguồn cung lương thực (food supply / 식량 공급)**. Quân đội, thành thị và triều đình đều cần gạo. Vùng biên sông nước phía Nam đã tạo mạng lưới sản xuất lớn, nhưng nội chiến có thể cắt tuyến vận chuyển và biến dồi dào thành khan hiếm.
 
 Nghiên cứu về food politics cho thấy khi rice shipment về political centres bị disrupted, military và urban stability suy giảm nhanh. Vì vậy rice boat đôi khi quan trọng không kém cannon.
 
@@ -62,17 +62,17 @@ military collapse / unrest
 
 Đây là một ví dụ điển hình cho liên kết (connection / 연결) Economy ↔ War.
 
-## Tây Sơn đánh Nguyễn: collapse của một regional trạng thái (state / 상태)
+## Tây Sơn đánh Nguyễn: sự sụp đổ của một nhà nước khu vực
 
 Tây Sơn nhanh chóng mở rộng và tấn công Nguyễn authority. Đến cuối thập niên 1770, phần lớn Nguyễn ruling family bị đánh bại; **Nguyễn Ánh** trở thành survivor quan trọng và về sau tổ chức resistance dài hạn.
 
 Không nên biến xung đột (conflict / 충돌) thành duel cá nhân Nguyễn Huệ vs Nguyễn Ánh quá sớm. Ở giai đoạn này, movement Tây Sơn có nhiều centre và nội bộ (internal / 내부) division; Nguyễn resistance cũng dựa vào regional allies, merchant tài nguyên (resource / 자원) và bên ngoài (external / 외부) hỗ trợ (support / 지원).
 
-## 1785 Rạch Gầm–Xoài Mút: river warfare và Siam intervention
+## 1785 Rạch Gầm–Xoài Mút: chiến tranh sông nước và can thiệp của Xiêm
 
-Nguyễn Ánh tìm hỗ trợ (support / 지원) từ Siam; Siamese forces tiến vào southern Vietnam. Nguyễn Huệ đánh bại lực lượng này tại **Rạch Gầm–Xoài Mút năm 1785**.
+Nguyễn Ánh tìm hỗ trợ từ Xiêm; quân Xiêm tiến vào Nam Bộ. Nguyễn Huệ đánh bại lực lượng này tại **Rạch Gầm–Xoài Mút năm 1785**.
 
-Nếu chỉ nhớ “trận đánh lớn”, ta bỏ qua geography. Mekong distributaries tạo môi trường (environment / 환경) mà fleet movement, ambush điểm (point / 지점), riverbank artillery và cục bộ (local / 로컬) kiến thức (knowledge / 지식) quyết định kết quả (outcome / 결과). Đây là water warfare khác hẳn Bạch Đằng nhưng cùng nhắc một principle: **điều khiển (control / 제어) movement corridor = điều khiển (control / 제어) battle hình học (geometry / 기하학)**.
+Nếu chỉ nhớ “trận đánh lớn”, ta bỏ qua địa lý. Các nhánh sông Mekong tạo môi trường mà sự cơ động của hạm đội, điểm phục kích, pháo binh ven sông và hiểu biết địa phương quyết định kết quả. Đây là chiến tranh sông nước khác hẳn Bạch Đằng nhưng cùng nhắc một nguyên tắc: **kiểm soát hành lang di chuyển = kiểm soát hình học trận đánh**.
 
 Khu vực Tiền Giang ngày nay là checkpoint tốt để đặt battle trên river map.
 

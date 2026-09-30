@@ -1,26 +1,26 @@
-# Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam
+# Bảng thuật ngữ và bản đồ nguồn — Lịch sử Việt Nam
 
 ## Cách dùng
 
-Tệp (file / 파일) này không phải dictionary độc lập. Nó chuẩn hóa các concept lặp lại trong thư viện (library / 라이브러리) và chỉ ra **kiểu ở mã nguồn (source type / 소스 타입) nào phù hợp với loại câu hỏi nào**.
+Tệp này không phải từ điển độc lập. Nó chuẩn hóa các khái niệm lặp lại trong thư viện và chỉ ra **loại nguồn nào phù hợp với loại câu hỏi nào**. Hãy dùng nó khi một chương 03–30 mở ra thuật ngữ mới hoặc khi cần kiểm tra giới hạn của chứng cứ.
 
-## Cốt lõi (core / 핵심) analytical terms
+## Các thuật ngữ phân tích cốt lõi
 
 ### Trạng thái (state / 상태) sức chứa (capacity / 용량) — năng lực nhà nước
 
-Khả năng của trạng thái (state / 상태) để collect thông tin (information / 정보)/tài nguyên (resource / 자원), enforce quy tắc (rule / 규칙), provide hạ tầng (infrastructure / 인프라), mobilize military và implement chính sách (policy / 정책) trên territory.
+Khả năng của nhà nước (state / 국가) thu thập thông tin, tài nguyên, thực thi quy tắc, cung cấp hạ tầng, huy động quân sự và triển khai chính sách trên lãnh thổ.
 
 Không đồng nghĩa “trạng thái (state / 상태) mạnh về quân sự”. Một trạng thái (state / 상태) có army lớn nhưng tax/cơ sở dữ liệu (database / 데이터베이스)/dịch vụ (service / 서비스) yếu vẫn có sức chứa (capacity / 용량) profile không đồng đều.
 
 ### Legitimacy — tính chính danh / sự chấp nhận quyền lực
 
-Cơ sở khiến quy tắc (rule / 규칙) được xem là có quyền cai trị: dynasty, ritual, law, ideology, hiệu năng (performance / 성능), revolution, election/institution tùy period/hệ thống (system / 시스템).
+Cơ sở khiến quyền lực được xem là có quyền cai trị: triều đại, nghi lễ, luật pháp, hệ tư tưởng, hiệu năng, cách mạng hoặc bầu cử–thiết chế tùy thời kỳ.
 
 Legitimacy là analytical term, không phải assistant phán xét regime nào “xứng đáng”.
 
 ### Extraction — huy động/thu tài nguyên (resource / 자원)
 
-Tax, tribute, rent, corvée labor, requisition hoặc other cơ chế (mechanism / 메커니즘) chuyển tài nguyên (resource / 자원) từ household/economy tới ruler/trạng thái (state / 상태)/elite.
+Thuế, cống nạp, tô, lao dịch, trưng dụng hoặc các cơ chế khác chuyển tài nguyên từ hộ gia đình/nền kinh tế tới người cai trị, nhà nước hoặc tinh hoa.
 
 ### Corvée — lao dịch
 
@@ -30,11 +30,11 @@ Obligation cung cấp labor thay/ngoài monetary tax. Premodern road, wall, dike
 
 Bundle of rights concerning cultivation, transfer, inheritance, rent and taxation. Avoid collapsing all arrangements into hiện đại (modern / 현대적) private quyền sở hữu (ownership / 소유권) concept.
 
-### Fiscal-military trạng thái (state / 상태)/hệ thống (system / 시스템) — hệ thống tài chính–quân sự
+### Hệ thống tài chính–quân sự (fiscal-military system / 재정 군사 체계)
 
 Relationship where warfare increases need for revenue and administrative extraction; fiscal reform in turn expands military sức chứa (capacity / 용량).
 
-### Political economy — kinh tế chính trị
+### Kinh tế chính trị (political economy / 정치경제)
 
 Study of how power, institution and economic tài nguyên (resource / 자원) influence each other; not simply “politics + economy” as separate sections.
 
@@ -42,7 +42,7 @@ Study of how power, institution and economic tài nguyên (resource / 자원) in
 
 Zone of tương tác (interaction / 상호작용), di chuyển (migration / 마이그레이션), trade and competing authority; not necessarily fixed line border.
 
-### Trạng thái (state / 상태) formation — hình thành nhà nước
+### Hình thành nhà nước (state formation / 국가 형성)
 
 Tiến trình (process / 프로세스) through which authority, extraction, territory and coordination become institutionalized above cục bộ (local / 로컬) community quy mô (scale / 규모).
 
@@ -50,7 +50,7 @@ Tiến trình (process / 프로세스) through which authority, extraction, terr
 
 Quy tắc (rule / 규칙) through specialized offices, records and officials. Early trạng thái (state / 상태) can exist without mature bureaucracy.
 
-### Legibility — khả năng làm xã hội “đọc được” đối với trạng thái (state / 상태)
+### Khả năng làm xã hội “đọc được” đối với nhà nước (legibility / 가독성)
 
 Census, land register, map, ID and cơ sở dữ liệu (database / 데이터베이스) turn complex society into categories usable for tax/dịch vụ (service / 서비스)/điều khiển (control / 제어).
 
@@ -82,7 +82,7 @@ Reading earlier lịch sử (history / 이력) as if it inevitably aimed at pres
 
 Môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) where thiết kế (design / 설계), đầu vào (input / 입력), assembly and sale occur across multiple countries.
 
-### Chuyển tiếp (transition / 전이) economy — nền kinh tế chuyển đổi
+### Nền kinh tế chuyển đổi (transition economy / 전환 경제)
 
 Economy in which coordination/thuộc tính (property / 속성)/enterprise institutions shift from one regime toward another over thời gian (time / 시간); old/new mechanisms coexist.
 
@@ -134,7 +134,7 @@ Strong for hiện đại (modern / 현대적) công khai (public / 공개) disco
 
 Strong for personal experience and perception. Limits: selective bộ nhớ (memory / 메모리) and individual representativeness.
 
-### Oral lịch sử (history / 이력)
+### Lịch sử truyền miệng (oral history / 구술사)
 
 Strong for lived experience, di chuyển (migration / 마이그레이션), cục bộ (local / 로컬) war/xã hội (social / 사회적) lịch sử (history / 이력). Limits: chronology drift and retrospective reinterpretation.
 
@@ -146,7 +146,7 @@ Strong for quantified hiện đại (modern / 현대적) mẫu (pattern / 패턴
 
 Strong for site description, legal status and preservation lịch sử (history / 이력). Limits: inscription status does not validate every associated legend.
 
-### Hiện đại (modern / 현대적) academic scholarship
+### Nghiên cứu học thuật hiện đại (modern academic scholarship / 현대 학술 연구)
 
 Best for synthesis and debate when peer-reviewed/source-based. Need compare schools and publication date when trường dữ liệu (field / 필드) evolves.
 
@@ -160,7 +160,7 @@ Bảo tàng Lịch sử Quốc gia; Viện Khảo cổ học; peer-reviewed arch
 
 Cục Di sản Văn hóa; UNESCO World Heritage/Intangible Heritage documentation; cục bộ (local / 로컬) conservation centres, checked against scholarship.
 
-### Premodern textual lịch sử (history / 이력)
+### Lịch sử văn bản tiền hiện đại (premodern textual history / 전근대 문헌사)
 
 Trọng yếu (critical / 중요) editions/translations of chronicles; academic histories by specialists; Chinese/Cham/Khmer nguồn (source / 소스) studies when relevant.
 
@@ -172,7 +172,7 @@ French colonial archives, Vietnamese press, scholarship on Indochina; avoid rely
 
 Vietnamese records from multiple sides where available, French/U.S./international archives, oral histories and hiện đại (modern / 현대적) scholarship. Distinguish nguồn (source / 소스) position explicitly.
 
-### Post-1986 economy
+### Nền kinh tế sau 1986
 
 World Bank, IMF where appropriate, WTO, ASEAN, Vietnam statistical/legal sources and peer-reviewed development research.
 
@@ -186,7 +186,7 @@ Vietnamese term comes first when natural. Important scholarly từ khóa (keywor
 
 Do not force Korean translation into every line; liên kết (connection / 연결) must be educationally useful.
 
-## Names and changing place names
+## Tên gọi và địa danh thay đổi
 
 Use historically appropriate name in ngữ cảnh (context / 맥락), then hiện đại (modern / 현대적) locator when helpful:
 

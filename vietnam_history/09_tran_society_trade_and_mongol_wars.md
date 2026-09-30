@@ -1,14 +1,14 @@
-# Nhà Trần: society, trade và chiến tranh trong Mongol world
+# Nhà Trần: xã hội, thương mại và chiến tranh trong thế giới Mông–Nguyên
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`08_ly_thang_long_state_and_economy.md`](08_ly_thang_long_state_and_economy.md) kết thúc với một Đại Việt đã có capital bền vững ở Thăng Long, agrarian cơ sở (base / 기반) lớn, court Buddhism, literate administration và các frontier cần quản lý. Đầu thế kỷ XIII, hệ thống (system / 시스템) này không biến mất; nó rơi vào succession crisis và được một elite mạng (network / 네트워크) khác tiếp quản.
 
-Câu hỏi trung tâm của chapter là: **nhà Trần đã kế thừa gì từ Lý, thay đổi cách tổ chức elite và military ra sao, và vì sao một polity tương đối nhỏ có thể sống sót trước áp lực của Mongol–Yuan empire?**
+Câu hỏi trung tâm của chương là: **nhà Trần đã kế thừa gì từ Lý, thay đổi cách tổ chức tầng lớp tinh hoa và quân đội ra sao, và vì sao một thực thể chính trị (polity / 정치체) tương đối nhỏ có thể sống sót trước áp lực của đế chế Mông–Nguyên?** Mốc 1225 và các cuộc xâm lược 1258–1288 phải được nối với ruộng đất, thương mại biển, hậu cần sông–biển và đời sống xã hội.
 
 Để trả lời, phải đặt chiến tranh cạnh economy, logistics và xã hội (social / 사회적) organization. Nếu chỉ học “ba lần chống Nguyên–Mông”, ta thấy kết quả nhưng không thấy cơ chế (mechanism / 메커니즘).
 
-## Từ Lý sang Trần: đổi dynasty nhưng không reset hệ thống (system / 시스템)
+## Từ Lý sang Trần: đổi triều đại nhưng không xóa lại hệ thống
 
 Nhà Trần lên ngôi năm **1225**, sau một giai đoạn court instability cuối Lý. Gia tộc Trần có nền tảng mạnh ở vùng ven biển và lower Red River mạng (network / 네트워크); scholarship cũng nhấn mạnh rằng thế kỷ XII–XIII là lúc coastal trade ngày càng quan trọng.
 
@@ -16,13 +16,13 @@ Nhà Trần lên ngôi năm **1225**, sau một giai đoạn court instability c
 
 Nhà Trần tiếp tục dùng Thăng Long, tiếp tục bureaucracy, education và Buddhist institutions của thời trước. Nhưng họ reorganize royal family và military elite theo cách riêng, đặc biệt dựa mạnh vào kinship within ruling house.
 
-## Royal clan như một quản trị (governance / 거버넌스) technology
+## Hoàng tộc như một công nghệ quản trị
 
 Trong trạng thái (state / 상태) chưa có professional bureaucracy đủ dày như hiện đại (modern / 현대적) government, trust là scarce tài nguyên (resource / 자원). Nhà Trần phân bố members của royal clan vào nhiều vị trí quân sự–chính trị để giảm agency bài toán (problem / 문제): ruler biết người chỉ huy là họ hàng gần và có stake trong survival của dynasty.
 
 Nhưng kinship quản trị (governance / 거버넌스) có sự đánh đổi (trade-off / 트레이드오프). Nó tăng trust trong short term nhưng dễ sinh rivalry nếu succession hoặc tài nguyên (resource / 자원) allocation không rõ. Vì vậy Trần vừa dùng family mạng (network / 네트워크) vừa cần rituals, offices và law để giữ mạng (network / 네트워크) đó coherent.
 
-## Agriculture vẫn là nền, nhưng coast và trade ngày càng quan trọng
+## Nông nghiệp vẫn là nền tảng, nhưng duyên hải và thương mại ngày càng quan trọng
 
 Rice agriculture của Red River Delta tiếp tục nuôi capital và army. Tuy nhiên Đại Việt thế kỷ XIII không phải economy đóng kín. Coastal mạng (network / 네트워크) kết nối với southern China và maritime Southeast Asia; ports, river mouths và craft môi trường vận hành (production / 운영 환경) tạo thêm tài nguyên (resource / 자원) luồng (flow / 흐름).
 
@@ -30,15 +30,15 @@ Một dynasty có cơ sở (base / 기반) mạnh ở coastal zone có thể hi�
 
 ## Buddhism, Confucian học tập (learning / 학습) và plural political culture
 
-Buddhism tiếp tục có ảnh hưởng sâu dưới Trần. Sau các wars, vua Trần Nhân Tông gắn với **Thiền phái Trúc Lâm** và Yên Tử, tạo một form Buddhist practice có strong court association.
+Phật giáo tiếp tục có ảnh hưởng sâu dưới Trần. Sau các cuộc chiến, vua Trần Nhân Tông gắn với **Thiền phái Trúc Lâm** và Yên Tử, tạo một hình thức thực hành Phật giáo có liên hệ chặt với triều đình.
 
 Đồng thời Confucian education và examinations tiếp tục mở rộng. Đây không phải replacement tức thì Buddhism → Confucianism, mà là coexistence của nhiều legitimacy các hệ thống (systems / 시스템들): royal ancestor cult, Buddhism, classical học tập (learning / 학습) và cục bộ (local / 로컬) ritual.
 
 Văn Miếu–Quốc Tử Giám tiếp tục được tu sửa và sử dụng dưới Trần; Chu Văn An về sau trở thành một symbol của learned official culture.
 
-## Mongol expansion làm thay đổi bảo mật (security / 보안) môi trường (environment / 환경) của toàn Eurasia
+## Mông Cổ bành trướng làm thay đổi môi trường an ninh của toàn lục địa Á–Âu
 
-Để hiểu Đại Việt thế kỷ XIII, phải zoom out. Mongol conquests không phải một xung đột (conflict / 충돌) song phương “Việt Nam–Trung Quốc”. Mongol armies đã đánh từ Central Asia tới Eastern Europe, chinh phục Dali/Yunnan, hủy Southern Song và pressure nhiều states ở Southeast Asia.
+Để hiểu Đại Việt thế kỷ XIII, phải mở rộng khung nhìn. Các cuộc chinh phục của Mông Cổ không phải một xung đột song phương “Việt Nam–Trung Quốc”. Quân Mông Cổ đã đánh từ Trung Á tới Đông Âu, chinh phục Đại Lý–Vân Nam, tiêu diệt Nam Tống và gây sức ép lên nhiều nhà nước Đông Nam Á.
 
 Vì vậy Đại Việt đối diện một **systemic shock**: một military empire có mobility, manpower và regional reach chưa từng thấy đang tiến xuống phía nam.
 
@@ -64,7 +64,7 @@ food / forage / disease / local resistance raise cost
 defender counterattacks when attacker weakens
 ```
 
-Đây là **defense in độ sâu (depth / 깊이) (phòng ngự chiều sâu)**, không phải đơn giản “bỏ chạy rồi thắng”.
+Đây là **phòng ngự chiều sâu (defense in depth / 종심 방어)**, không phải đơn giản “bỏ chạy rồi thắng”.
 
 ## 1285: chiến tranh lớn hơn, mobilization cũng lớn hơn
 
@@ -72,11 +72,11 @@ Sau Yuan conquest of Southern Song, pressure tăng mạnh. Campaign **1285** l�
 
 Các chiến thắng như Hàm Tử, Chương Dương thường được nhớ như heroic events; nhân quả (causal / 인과적) view cần đặt chúng vào broader collapse của attacker logistics. Tactical victory có giá trị nhất khi nó phá cầu nối (bridge / 브리지), fleet, food depot hoặc tuyến (route / 경로) mà opponent cần để sustain campaign.
 
-## 1287–1288: supply chuỗi (chain / 사슬) trở thành center của war
+## 1287–1288: chuỗi tiếp tế trở thành trung tâm của chiến tranh
 
 Trong campaign cuối, Yuan chuẩn bị cả land force và maritime supply. Trần forces đánh vào supply fleet, khiến invading army ở Thăng Long không nhận được đủ food. Khi Yuan retreat, naval force của Ô Mã Nhi đi qua Bạch Đằng và bị Trần Hưng Đạo phục kích.
 
-Đây là reason Bạch Đằng 1288 nên học như **logistics war**, không chỉ trap bằng cọc.
+Đây là lý do Bạch Đằng 1288 nên học như **chiến tranh hậu cần (logistics war / 군수전)**, không chỉ là một cái bẫy bằng cọc.
 
 ```text
 large invasion army
@@ -106,7 +106,7 @@ Một narrative quá heroic dễ quên rằng multiple invasions gây displaceme
 
 Để mobilize repeatedly, trạng thái (state / 상태) cần food reserve, boats, horses, cục bộ (local / 로컬) militia và communication. Military resilience vì vậy là đầu ra (output / 출력) của economic sức chứa (capacity / 용량) + xã hội (social / 사회적) coordination, không chỉ generalship.
 
-## Điền trang, thái ấp và elite economy
+## Điền trang, thái ấp và kinh tế tinh hoa
 
 Thời Trần thường gắn với growth của **điền trang / thái ấp** và landholding của royal–elite families, temples và institutions. Đây là tài nguyên (resource / 자원) cơ sở (base / 기반) cho elite nhưng cũng có thể giảm direct fiscal reach của center nếu cục bộ (local / 로컬) estates quá autonomous.
 
@@ -118,7 +118,7 @@ Không nên translate đơn giản thành European feudalism. Rights over land, 
 
 Ba site này đặt cạnh nhau cho ta một picture đầy đủ hơn: dynasty không tồn tại chỉ trong palace. Nó là mạng (network / 네트워크) của sacred landscape, family homeland, agricultural region và strategic corridor.
 
-## Sau war: victory không giải quyết structural problems cuối Trần
+## Sau chiến tranh: thắng lợi không giải quyết các vấn đề cấu trúc cuối Trần
 
 Thành công trước Yuan không làm dynasty immune với long-term stress. Thế kỷ XIV chứng kiến succession problems, elite competition, fiscal pressure, natural disaster và bên ngoài (external / 외부) xung đột (conflict / 충돌), đặc biệt với Champa dưới Chế Bồng Nga.
 

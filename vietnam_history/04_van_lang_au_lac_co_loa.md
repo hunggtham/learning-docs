@@ -6,21 +6,23 @@
 
 Đây là nơi dễ nhầm nhất giữa tradition và lịch sử (history / 이력), nên cần giữ hai tầng (layer / 계층) song song thay vì ép chúng thành một câu chuyện duy nhất.
 
-## Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn
+Với Âu Lạc, bốn lớp đọc phải đi cùng nhau: **mốc** cuối thiên niên kỷ I TCN, **kinh tế** lúa nước–luyện kim và lao động công trình, **bối cảnh** Nam Việt cùng các mạng phía nam Trung Hoa, và **địa điểm** Cổ Loa–Đền Hùng. Nếu bỏ một lớp, ta hoặc biến truyền thuyết thành niên đại chắc chắn, hoặc biến thành lũy thành một vật thể quân sự không có xã hội đứng sau.
+
+## Văn Lang: rất quan trọng trong ký ức lịch sử, nhưng niên đại truyền thống không phải mốc khảo cổ chắc chắn
 
 Trong truyền thống sử Việt, **Văn Lang** gắn với các vua Hùng và vùng Phong Châu. Con số “18 đời Hùng Vương” và niên đại rất sớm thường xuất hiện trong narrative phổ thông. Nhưng nguồn thành văn ghi lại những tradition này muộn hơn rất nhiều so với thời kỳ chúng mô tả, còn archaeology không cho phép xác nhận một danh sách 18 vị vua hay mốc 2879 TCN như một chronology chính xác.
 
 Điều đó không có nghĩa “Văn Lang không có giá trị lịch sử”. Ta cần tách ba câu hỏi:
 
-**Một:** cuối thiên niên kỷ II và thiên niên kỷ I TCN, Bắc Bộ có xã hội nông nghiệp–luyện kim ngày càng complex không? Archaeology cho thấy có.
+**Một:** cuối thiên niên kỷ II và thiên niên kỷ I TCN, Bắc Bộ có xã hội nông nghiệp–luyện kim ngày càng phức tạp (complex / 복합적) không? Khảo cổ học cho thấy có.
 
-**Hai:** có những political organization lớn hơn village xuất hiện trước Cổ Loa không? Đây là câu hỏi hợp lý và có dấu hiệu về differentiation, mạng (network / 네트워크) và chiefdom/trạng thái (state / 상태) formation, nhưng chính xác (exact / 정확한) institutional map còn tranh luận.
+**Hai:** có những tổ chức chính trị lớn hơn làng xuất hiện trước Cổ Loa không? Đây là câu hỏi hợp lý và có dấu hiệu về phân hóa, mạng lưới và quá trình hình thành thủ lĩnh quốc (chiefdom / 족장국) hoặc nhà nước, nhưng bản đồ thiết chế chính xác còn tranh luận.
 
 **Ba:** tradition Hùng Vương có vai trò gì? Nó là lớp collective bộ nhớ (memory / 메모리) cực kỳ quan trọng về origin và legitimacy, được các thời sau tiếp tục tổ chức thành ritual và national narrative.
 
 Ba câu trả lời có thể cùng tồn tại mà không cần giả vờ chúng có cùng độ chắc chắn.
 
-## Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology
+## Đền Hùng: nơi tốt để học ký ức lịch sử hơn là dùng như máy đo niên đại
 
 **Khu di tích lịch sử Đền Hùng (Phú Thọ)** gắn mạnh với tín ngưỡng thờ Hùng Vương. Khi đến đây, người học nên quan sát hai timeline đồng thời. Timeline thứ nhất là tradition kể về thời Hùng. Timeline thứ hai là lịch sử của chính việc thờ cúng, xây dựng, tu sửa và institutionalization ký ức qua các thời sau.
 
@@ -28,13 +30,13 @@ Vì vậy câu hỏi tốt không chỉ là “vua Hùng đã đứng ở chỗ 
 
 ## Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn
 
-Truyền thống gắn **Âu Lạc** với Thục Phán – An Dương Vương và Cổ Loa. Với Cổ Loa, archaeology cho ta một bước tiến lớn so với việc chỉ có truyền thuyết. Nghiên cứu hiện đại về rampart, pottery và radiometric chronology cho thấy một center quy mô lớn đã tồn tại vào khoảng **thế kỷ III TCN**, với các giai đoạn xây dựng lớn trong khoảng cuối thiên niên kỷ I TCN. Nam C. Kim mô tả Cổ Loa như bằng chứng mạnh cho một complex polity/early trạng thái (state / 상태) ở châu thổ sông Hồng trước khi vùng này bị đưa vào hệ thống đế quốc Hán.
+Truyền thống gắn **Âu Lạc** với Thục Phán – An Dương Vương và Cổ Loa. Với Cổ Loa, khảo cổ học cho ta một bước tiến lớn so với việc chỉ có truyền thuyết. Nghiên cứu hiện đại về thành lũy, đồ gốm và niên đại đo phóng xạ cho thấy một trung tâm quy mô lớn đã tồn tại vào khoảng **thế kỷ III TCN**, với các giai đoạn xây dựng lớn trong khoảng cuối thiên niên kỷ I TCN. Nam C. Kim mô tả Cổ Loa như bằng chứng mạnh cho một chính thể phức tạp hoặc nhà nước sơ kỳ ở châu thổ sông Hồng trước khi vùng này bị đưa vào hệ thống đế quốc Hán.
 
-Điểm quan trọng không phải tranh nhau một label “nhà nước đầu tiên”, mà là quy mô (scale / 규모). Massive earthworks đòi hỏi rất nhiều labor; moat/rampart hệ thống (system / 시스템) đòi hỏi planning; metallurgy và weapon môi trường vận hành (production / 운영 환경) đòi hỏi skilled môi trường vận hành (production / 운영 환경) mạng (network / 네트워크). Khi các đầu ra (output / 출력) này xuất hiện cùng nhau, hypothesis về centralized political sức chứa (capacity / 용량) mạnh hơn rất nhiều so với khi chỉ thấy một sản phẩm tạo ra (artifact / 산출물) elite riêng lẻ.
+Điểm quan trọng không phải tranh nhau một nhãn “nhà nước đầu tiên”, mà là quy mô. Công trình đất lớn đòi hỏi rất nhiều lao động; hệ thống hào–thành đòi hỏi quy hoạch; luyện kim và sản xuất vũ khí đòi hỏi mạng lưới thợ lành nghề. Khi các kết quả này xuất hiện cùng nhau, giả thuyết về năng lực chính trị tập trung (centralized political capacity / 중앙 정치 역량) mạnh hơn nhiều so với khi chỉ thấy một hiện vật riêng lẻ của tầng lớp tinh hoa.
 
 ## Vì sao Cổ Loa đặt ở đây?
 
-Cổ Loa nằm ở Đông Anh, phía bắc trung tâm Hà Nội hiện nay. Nếu bỏ bản đồ đường bộ hiện đại và nghĩ bằng river mạng (network / 네트워크), vị trí này có thể kết nối trung du với đồng bằng và các tuyến (route / 경로) nước. Earthwork kết hợp moat cho defense, movement và water management; vùng xung quanh có agricultural cơ sở (base / 기반).
+Cổ Loa nằm ở Đông Anh, phía bắc trung tâm Hà Nội hiện nay. Nếu bỏ bản đồ đường bộ hiện đại và nghĩ bằng mạng lưới sông (river network / 하천망), vị trí này có thể kết nối trung du với đồng bằng và các tuyến đường nước. Công trình đất kết hợp với hào phục vụ phòng thủ, di chuyển và quản lý nước; vùng xung quanh có nền nông nghiệp (agricultural base / 농업 기반) đủ để nuôi một trung tâm lớn.
 
 Nhân quả (causal / 인과적) mô hình (model / 모델) có thể viết:
 

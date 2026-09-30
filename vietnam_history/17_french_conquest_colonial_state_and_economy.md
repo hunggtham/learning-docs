@@ -1,10 +1,10 @@
-# Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc
+# Pháp chinh phục và thuộc địa: khoảng cách quân sự, nhà nước thuộc địa và nền kinh tế bị tái cấu trúc
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`16_early_nguyen_hue_administration_and_economy.md`](16_early_nguyen_hue_administration_and_economy.md) cho thấy Nguyễn trạng thái (state / 상태) đầu thế kỷ XIX có sức chứa (capacity / 용량) đáng kể: unify territory, reorganize provinces, bản dựng (build / 빌드) hạ tầng (infrastructure / 인프라) và mobilize labor. Vì vậy câu hỏi “vì sao Pháp thắng vì nhà Nguyễn yếu” là quá đơn giản.
 
-Câu hỏi trung tâm của chapter này là: **vì sao một premodern centralized trạng thái (state / 상태) có thể mất dần sovereignty trước một industrial imperial power, và colonial quy tắc (rule / 규칙) sau đó thay đổi land, tax, hạ tầng (infrastructure / 인프라), labor và cities như thế nào?**
+Câu hỏi trung tâm của chương này là: **vì sao một nhà nước tập quyền tiền hiện đại có thể mất dần chủ quyền trước một cường quốc đế quốc công nghiệp, và chính quyền thuộc địa sau đó thay đổi đất đai, thuế, hạ tầng, lao động và đô thị như thế nào?** Hãy theo mốc **1858–1862–1867–1884/85**, từ Đà Nẵng và Sài Gòn đến Hà Nội, Hải Phòng; các địa điểm này sẽ giúp nối khoảng cách công nghệ, lúa gạo Nam Bộ và mạng đường sắt–cảng vào cùng tiến trình thuộc địa hóa.
 
 Ta cần nối ba quy mô (scale / 규모): toàn cục (global / 전역) imperial competition, military-technology/finance gap, và cục bộ (local / 로컬) political-economic các ràng buộc (constraints / 제약조건들).
 
@@ -28,23 +28,23 @@ French-Spanish intervention 1858
 
 ## Đà Nẵng 1858: landing không bằng conquest
 
-Liên quân Pháp–Tây Ban Nha tấn công Đà Nẵng năm **1858**, nhưng không nhanh chóng ép Nguyễn court đầu hàng. Disease, logistics và cục bộ (local / 로컬) resistance làm campaign bị kẹt.
+Liên quân Pháp–Tây Ban Nha tấn công Đà Nẵng năm **1858**, nhưng không nhanh chóng ép triều Nguyễn đầu hàng. Bệnh dịch, hậu cần và sự kháng cự địa phương làm chiến dịch bị sa lầy.
 
-Điểm này quan trọng vì nó phá myth “vũ khí hiện đại = auto-win”. Technology tạo advantage, nhưng terrain, supply và occupation bài toán (problem / 문제) vẫn quyết định.
+Điểm này quan trọng vì nó phá bỏ huyền thoại “vũ khí hiện đại thì tự động chiến thắng”. Công nghệ tạo lợi thế, nhưng địa hình, tiếp tế và bài toán chiếm đóng vẫn quyết định.
 
 Pháp chuyển trọng tâm xuống **Gia Định/Sài Gòn**, nơi river truy cập (access / 접근) và southern rice economy tạo strategic lô-gic (logic / 논리) khác.
 
-## Vì sao Nam Bộ trở thành first colonial cơ sở (base / 기반)?
+## Vì sao Nam Bộ trở thành căn cứ thuộc địa đầu tiên?
 
-Sài Gòn–Mekong region có agricultural surplus, water vận chuyển (transport / 전송) và maritime truy cập (access / 접근). Nếu kiểm soát được nút (node / 노드) này, expedition force dễ resupply hơn và có revenue/tài nguyên (resource / 자원) cơ sở (base / 기반).
+Vùng Sài Gòn–Mekong có phần dư nông nghiệp, vận chuyển đường nước và lối ra biển. Nếu kiểm soát nút này, lực lượng viễn chinh dễ tiếp tế hơn và có nền nguồn thu–tài nguyên.
 
-French conquest vì vậy không chỉ là battle map; nó là tìm kiếm (search / 검색) for a sustainable cơ sở (base / 기반).
+Vì vậy cuộc chinh phục của Pháp không chỉ là bản đồ trận đánh; đó là việc tìm kiếm một căn cứ bền vững.
 
 Năm **1862**, Treaty of Saigon chuyển ba tỉnh miền Đông Nam Kỳ cho Pháp. Đến **1867**, Pháp kiểm soát toàn bộ sáu tỉnh Nam Kỳ và tổ chức Cochinchina như colony trực tiếp.
 
 Đây là một break lớn: southern Vietnam không còn chỉ là occupied zone mà trở thành laboratory của colonial administration, land chính sách (policy / 정책) và commercial agriculture.
 
-## Colonial thuộc tính (property / 속성) hệ thống (system / 시스템): biến land thành legible asset
+## Hệ thống thuộc địa: biến đất đai thành tài sản có thể phân loại
 
 French administration muốn revenue và điều khiển (control / 제어). Muốn tax land, mortgage, concession hoặc transfer thuộc tính (property / 속성) theo colonial law, trạng thái (state / 상태) cần category và records dễ đọc theo legal khung phần mềm (framework / 프레임워크) của mình.
 
@@ -92,7 +92,7 @@ export market
 
 Đây là cách một toàn cục (global / 전역) technology shift—automobile/tire demand—đi thẳng vào Vietnamese rural labor lịch sử (history / 이력).
 
-## Taxation: colonial trạng thái (state / 상태) cần tự finance
+## Thuế khóa: nhà nước thuộc địa phải tự tài trợ
 
 Colonial administration không chỉ nhận money từ Paris. Nó tìm revenue cục bộ (local / 로컬) qua land tax, customs, monopolies và indirect taxes.
 
@@ -128,7 +128,7 @@ Một số dựa vào scholar-gentry networks; một số gắn với village mi
 
 Đừng đọc Cần Vương như bản prototype hoàn chỉnh của twentieth-century nation-state nationalism. Nó nằm trong chuyển tiếp (transition / 전이): loyalty to monarch, defense of cục bộ (local / 로컬) thứ tự (order / 순서) và anti-colonial resistance chồng lên nhau.
 
-## Cities tạo xã hội (social / 사회적) category mới
+## Đô thị tạo ra các nhóm xã hội mới
 
 Colonial administration, commerce và education làm urban centres như Sài Gòn, Hà Nội, Hải Phòng biến đổi. New occupations xuất hiện: clerk, teacher, journalist, trình thông dịch (interpreter / 인터프리터), industrial worker, professional.
 
@@ -136,7 +136,7 @@ Urban society tạo new thông tin (information / 정보) mạng (network / 네�
 
 Đây là key handoff: colonial trạng thái (state / 상태) muốn train personnel và spread administrative ngôn ngữ (language / 언어), nhưng chính education/thông tin (information / 정보) mạng (network / 네트워크) lại giúp anti-colonial politics quy mô (scale / 규모).
 
-## Quốc ngữ chuyển từ niche writing hệ thống (system / 시스템) thành mass-information technology
+## Quốc ngữ chuyển từ hệ thống chữ viết hạn hẹp thành công nghệ thông tin đại chúng
 
 Chapter 13 đã nói Quốc ngữ tồn tại từ missionary linguistic công việc (work / 작업) trước đó. Dưới colonial era, Romanized Vietnamese được institutionalized và mở rộng qua education/printing ở quy mô (scale / 규모) lớn hơn.
 
@@ -154,7 +154,7 @@ new political/public sphere
 
 Nhưng literacy vẫn unequal theo region, lớp (class / 클래스) và gender.
 
-## Di tích: đọc colonial city bằng logistics và segregation
+## Di tích: đọc đô thị thuộc địa qua hậu cần và phân tách không gian
 
 Ở **Hà Nội**, hãy nhìn quan hệ (relation / 관계) giữa old quarter, citadel, French administrative quarter, Long Biên cầu nối (bridge / 브리지) và rail station. Ở **Hải Phòng**, nhìn cổng (port / 포트)–rail liên kết (connection / 연결). Ở **Sài Gòn–Chợ Lớn**, nhìn administrative cốt lõi (core / 핵심), Chinese commercial district, river/cổng (port / 포트) và plantation hinterland.
 

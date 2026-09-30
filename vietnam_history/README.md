@@ -55,11 +55,19 @@ Sau khi đọc 34–37, nên quay lại chapter 14: frontier lúc đó sẽ hi�
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): thuật ngữ + nguồn (source / 소스)/bằng chứng (evidence / 증거) discipline.
 - [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md): Đền Hùng, Cổ Loa, Hoa Lư, Thăng Long, Vân Đồn, Thành Nhà Hồ, Mỹ Sơn, Hội An, Huế, Mekong, Điện Biên, DMZ, industrial corridors… như học tập (learning / 학습) checkpoints.
 
+### 5. Lớp bối cảnh tích hợp (integrated context / 통합 맥락) — 38
+
+- [`38_period_context_economy_society_places.md`](38_period_context_economy_society_places.md): đọc tám giai đoạn lớn theo cùng một nhịp **mốc thời gian → kinh tế và đời sống → bối cảnh khu vực → địa điểm/di tích**. Tệp này không thay thế các chương niên đại (chronology chapters / 연대기 장); nó giúp người học biết khi nào cần quay lại chương chuyên sâu nào.
+
+Đường đọc ngắn được khuyến nghị là `38 → chương niên đại tương ứng → 24–30 → 33–37`. Nhờ vậy một mốc như **1010**, **1471**, **1858**, **1954** hoặc **1986** không đứng riêng: ta biết nó xảy ra trong nền kinh tế nào, tác động lên ai, nằm trong mạng khu vực nào và có thể quan sát dấu vết ở đâu.
+
 ## Cách đọc mỗi thời kỳ
 
 Mỗi giai đoạn cố gắng giữ đồng thời nhiều tầng (layer / 계층):
 
 **Timeline** để không đảo trước–sau. **Geography** để hiểu capital/battlefield/trade tuyến (route / 경로). **Economy** để biết food, land, tax, labor và exchange nuôi thứ tự (order / 순서) thế nào. **Society** để thấy household, village, elite, gender, ethnicity, di chuyển (migration / 마이그레이션). **Technology & hạ tầng (infrastructure / 인프라)** để nối metallurgy, irrigation, road, cổng (port / 포트), printing, rail, electricity và digital mạng (network / 네트워크) với sức chứa (capacity / 용량). **Religion / ideas / education** để hiểu legitimacy/thông tin (information / 정보). **Môi trường (environment / 환경)** để thấy flood, disease, delta và climate ràng buộc (constraint / 제약조건). **Di tích** để kiểm tra cơ chế (mechanism / 메커니즘) bằng landscape.
+
+Nếu một chương niên đại (chronology chapter / 연대기 장) chưa làm rõ đủ bốn câu hỏi “mốc nào, ai sống bằng gì, khu vực nào đang tác động, hôm nay nhìn thấy ở đâu”, hãy dùng `38` làm cầu nối rồi quay lại chương đó; không chèn một đoạn câu mẫu (boilerplate / 상투 문구) giống nhau vào mọi heading.
 
 Regional deep dives thêm một câu hỏi nữa: **đơn vị (unit / 단위) of phân tích (analysis / 분석) đúng là gì?** Một river basin, cổng (port / 포트) mạng (network / 네트워크) hoặc upland corridor có thể hữu ích hơn hiện đại (modern / 현대적) province/national border.
 

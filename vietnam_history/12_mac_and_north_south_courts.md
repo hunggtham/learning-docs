@@ -1,10 +1,10 @@
-# Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation
+# Lê–Mạc và Nam–Bắc triều: chính danh, dòng họ quân sự và phân mảnh quyền lực
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`11_le_so_bureaucracy_law_land_and_education.md`](11_le_so_bureaucracy_law_land_and_education.md) mô tả một Lê sơ có bureaucracy mạnh hơn, examination hệ thống (system / 시스템) dày hơn và central monarchy nhiều tài nguyên (resource / 자원) hơn. Chính vì throne kiểm soát nhiều tài nguyên (resource / 자원), succession crisis có stakes rất lớn.
 
-Câu hỏi của chapter này là: **khi central legitimacy vỡ, tại sao bureaucracy không tự giữ trạng thái (state / 상태) together, và vì sao competing dynasties có thể cùng claim một political tradition trong nhiều decades?**
+Câu hỏi của chương này là: **khi tính chính danh trung tâm vỡ, tại sao bộ máy quan liêu không tự giữ nhà nước (state / 국가) together, và vì sao các triều đại cạnh tranh có thể cùng tuyên bố kế thừa một truyền thống chính trị trong nhiều thập niên?** Mốc 1527, Thanh Hóa, Thăng Long, ngoại giao Minh và các gia tộc quân sự cần được đặt trên cùng một mạch.
 
 Đây là cầu nối (bridge / 브리지) từ centralized Lê sơ sang era của militarized family alliances.
 
@@ -28,15 +28,15 @@ Mạc Đăng Dung nổi lên trong ngữ cảnh (context / 맥락) này.
 
 ## 1527: Mạc Đăng Dung lập triều Mạc
 
-Năm **1527**, Mạc Đăng Dung thay nhà Lê và lập Mạc dynasty tại Thăng Long. Traditional Lê historiography thường frame sự kiện (event / 이벤트) bằng ngôn ngữ (language / 언어) usurpation. Hiện đại (modern / 현대적) historical reading vẫn cần acknowledge dynastic seizure nhưng cũng hỏi why it was possible.
+Năm **1527**, Mạc Đăng Dung thay nhà Lê và lập triều Mạc tại Thăng Long. Sử học truyền thống của nhà Lê thường đóng khung sự kiện bằng ngôn ngữ tiếm quyền. Cách đọc lịch sử hiện đại vẫn cần ghi nhận việc chuyển ngôi bằng cưỡng đoạt, nhưng cũng hỏi vì sao điều đó có thể xảy ra.
 
-Mạc had military điều khiển (control / 제어), administrative truy cập (access / 접근) và enough elite hỗ trợ (support / 지원) to operate government. Một regime tồn tại nhiều decades, tổ chức examinations và diplomacy không thể explain solely as one man's coup.
+Nhà Mạc có quyền kiểm soát quân sự, khả năng tiếp cận bộ máy hành chính và đủ sự ủng hộ của tinh hoa để vận hành chính quyền. Một chế độ tồn tại nhiều thập niên, tổ chức khoa cử và ngoại giao không thể chỉ được giải thích như cuộc đảo chính của một người.
 
 ## Legitimacy là tài nguyên (resource / 자원) có thể mobilize
 
 Lê dynasty chưa mất symbolic giá trị (value / 값). Loyalist forces gathered around surviving Lê claimants. Từ **1533**, Lê restoration movement phát triển ở Thanh Hóa dưới figures như Nguyễn Kim, sau đó Trịnh Kiểm.
 
-Từ đây hình thành mẫu (pattern / 패턴) thường gọi **Nam triều – Bắc triều**: Mạc điều khiển (control / 제어) north/Thăng Long trong nhiều giai đoạn, Lê restoration cơ sở (base / 기반) ở Thanh Hóa–Nghệ An.
+Từ đây hình thành cục diện thường gọi **Nam triều – Bắc triều**: nhà Mạc kiểm soát miền Bắc và Thăng Long trong nhiều giai đoạn, còn lực lượng phục hồi nhà Lê đặt căn cứ ở Thanh Hóa–Nghệ An.
 
 Terms “Nam” và “Bắc” là useful coordinate, nhưng territory changed repeatedly; không nên imagine a fixed hiện đại (modern / 현대적) border.
 
@@ -46,17 +46,17 @@ Thanh Hóa đã là cơ sở (base / 기반) của Hồ và Lam Sơn. Geography 
 
 Lê dynastic bộ nhớ (memory / 메모리) ở Lam Kinh tạo symbolic capital; families with military followings provide organizational capital. Khi Thăng Long controlled by Mạc, restoration movement needs an alternative center far enough to survive.
 
-## Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)
+## Triều Minh: nội chiến Đại Việt trở thành bài toán đối ngoại
 
 Mạc usurpation đặt nhà Minh trước difficult choice. Một faction favored intervention to restore Lê; others remembered high chi phí (cost / 비용) of 1407–1427 occupation and preferred caution.
 
-Cambridge scholarship notes Ming court debated whether to intervene and became increasingly cautious. Mạc Đăng Dung eventually used ritual submission and border diplomacy to avoid full-scale invasion.
+Nghiên cứu của Cambridge cho thấy triều Minh tranh luận về việc can thiệp rồi ngày càng thận trọng. Mạc Đăng Dung cuối cùng dùng nghi lễ quy phục và ngoại giao biên giới để tránh một cuộc xâm lược toàn diện.
 
 Đây là excellent example of **diplomatic signaling**. A weaker trạng thái (state / 상태) may accept humiliating ritual forms if doing so reduces xác suất (probability / 확률) of catastrophic war.
 
 Ritual hierarchy therefore không equal mất mát (loss / 손실) of all sovereignty.
 
-## Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break
+## Hệ thống khoa cử tiếp tục dưới Mạc: tính liên tục của nhà nước qua thay đổi triều đại
 
 Mạc rulers continued Confucian education, examinations và repair of Quốc Tử Giám. This matters because political legitimacy was contested through the same institutional ngôn ngữ (language / 언어) both sides dùng chung (shared / 공유).
 
@@ -64,15 +64,15 @@ The UNESCO-listed doctoral stelae include examinations from both Lê and Mạc p
 
 A regime seeking legitimacy often preserves institutions people already recognize.
 
-## Civil war economy: fragmentation không có nghĩa economy stops everywhere
+## Kinh tế thời nội chiến: phân mảnh không có nghĩa kinh tế dừng ở mọi nơi
 
-Long war raises tax, conscription and insecurity, but effects vary geographically. Some corridors become battle zones; others may benefit from trade diversion or cục bộ (local / 로컬) autonomy.
+Chiến tranh kéo dài làm tăng thuế, trưng binh và bất an, nhưng tác động khác nhau theo địa lý. Một số hành lang trở thành vùng chiến sự; nơi khác có thể hưởng lợi từ việc chuyển hướng thương mại hoặc quyền tự chủ địa phương.
 
 This is a general quy tắc (rule / 규칙): **political fragmentation and commercial activity can coexist**. In later sixteenth and seventeenth centuries, maritime trade becomes even more significant despite competing regimes.
 
 Do not infer GDP collapse merely from dynastic warfare without regional bằng chứng (evidence / 증거).
 
-## Military families replace a single court as the main political actors
+## Gia đình quân sự thay thế triều đình đơn nhất làm tác nhân chính trị chủ yếu
 
 Nguyễn Kim's death brings **Trịnh Kiểm** to dominance in Lê restoration government. From this điểm (point / 지점), the restored Lê king increasingly functions alongside powerful military family leadership.
 
@@ -96,7 +96,7 @@ Therefore 1592 is major coordinate, not an instant national reunification switch
 
 Trạng thái (state / 상태) fragmentation transitions into a new cấu hình (configuration / 구성) rather than disappearing.
 
-## From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis
+## Từ Lê–Mạc đến Trịnh–Nguyễn: vì sao trục phân chia tiếp theo thay đổi
 
 Nguyễn family members eventually bản dựng (build / 빌드) a power cơ sở (base / 기반) further south, especially after Nguyễn Hoàng enters Thuận Hóa. The political axis shifts from **Mạc vs restored Lê** to **Trịnh in north vs Nguyễn in south**, while Lê monarchs remain as nominal dynasty in north.
 

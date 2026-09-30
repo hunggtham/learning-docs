@@ -1,18 +1,18 @@
-# 1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War
+# 1954–1975: hai nhà nước, nội chiến và Chiến tranh Lạnh toàn cầu
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md) kết thúc với a provisional military division near the 17th parallel. Điều xảy ra sau đó không phải simply “Mỹ thay Pháp”.
+[`19_revolution_first_indochina_war_and_geneva.md`](19_revolution_first_indochina_war_and_geneva.md) kết thúc với việc quân sự tạm thời chia cắt gần vĩ tuyến 17. Điều xảy ra sau đó không đơn giản là “Mỹ thay Pháp”.
 
-Câu hỏi trung tâm của chapter là: **vì sao temporary regrouping hardened into two rival states, và vì sao xung đột (conflict / 충돌) giữa Vietnamese actors trở thành một trong những major international wars của Cold War?**
+Câu hỏi trung tâm của chương là: **vì sao việc tập kết tạm thời lại cứng hóa thành hai nhà nước đối địch, và vì sao xung đột giữa các lực lượng Việt Nam trở thành một trong những cuộc chiến quốc tế lớn của Chiến tranh Lạnh?** Hãy theo mốc **1954, 1955, 1968 và 1975**, đồng thời đặt cạnh di cư, cải cách ruộng đất, viện trợ, đô thị hóa và địa đạo Củ Chi; như vậy “hai miền” hiện ra vừa là cạnh tranh nhà nước vừa là đời sống của gia đình và cộng đồng.
 
-Hiện đại (modern / 현대적) scholarship emphasizes that xung đột (conflict / 충돌) này có nhiều tầng (layer / 계층) cùng lúc: struggle over national reunification, civil war, revolutionary war, anticommunist state-building và toàn cục (global / 전역) Cold War intervention. Không tầng (layer / 계층) nào một mình giải thích toàn bộ.
+Nghiên cứu hiện đại nhấn mạnh rằng xung đột này có nhiều tầng cùng lúc: tranh chấp thống nhất quốc gia, nội chiến, chiến tranh cách mạng, xây dựng nhà nước chống cộng và can thiệp toàn cầu trong Chiến tranh Lạnh. Không tầng nào một mình giải thích toàn bộ.
 
-## Hai state-building dự án (project / 프로젝트) sau Geneva
+## Hai dự án xây dựng nhà nước sau Geneva
 
-Ở north, **Democratic Republic of Vietnam (DRV)** consolidated a socialist revolutionary trạng thái (state / 상태) headquartered in Hanoi.
+Ở miền Bắc, **nước Việt Nam Dân chủ Cộng hòa (Democratic Republic of Vietnam, DRV)** củng cố một nhà nước cách mạng xã hội chủ nghĩa đặt thủ đô tại Hà Nội.
 
-Ở south, **Trạng thái (state / 상태) of Vietnam** transitioned into **Republic of Vietnam (RVN)** under Ngô Đình Diệm after 1955, with increasing United States hỗ trợ (support / 지원) and declining direct French influence.
+Ở miền Nam, **Quốc gia Việt Nam (State of Vietnam)** chuyển thành **Việt Nam Cộng hòa (Republic of Vietnam, RVN)** dưới thời Ngô Đình Diệm sau năm 1955, với sự hỗ trợ ngày càng tăng của Hoa Kỳ và ảnh hưởng trực tiếp của Pháp giảm dần.
 
 Both governments claimed national legitimacy beyond the territory they controlled. Vì vậy division was not treated by either as an ideal permanent settlement.
 
@@ -24,7 +24,7 @@ Movement changed demography, land demand, church/community networks and politics
 
 Di chuyển (migration / 마이그레이션) is not a footnote. When population chooses or is pressured to move, border becomes xã hội (social / 사회적) reality.
 
-## North Vietnam: socialist transformation and trạng thái (state / 상태) penetration
+## Miền Bắc: chuyển đổi xã hội chủ nghĩa và mức độ thâm nhập của nhà nước
 
 DRV pursued land reform, collectivization over thời gian (time / 시간), industrial planning and expansion of party-state institutions. These policies aimed to transform lớp (class / 클래스)/thuộc tính (property / 속성) relations and increase trạng thái (state / 상태) sức chứa (capacity / 용량).
 
@@ -50,7 +50,7 @@ South Vietnamese leadership rejected elections under conditions it argued could 
 
 The kết quả (result / 결과) was not peaceful reunification. Separate trạng thái (state / 상태) institutions deepened and mutual distrust rose.
 
-## Insurgency in the South: cục bộ (local / 로컬) roots + northern chiến lược (strategy / 전략)
+## Nổi dậy ở miền Nam: gốc rễ địa phương và chiến lược từ miền Bắc
 
 By late 1950s, armed xung đột (conflict / 충돌) in South Vietnam intensified. Former Viet Minh networks, cục bộ (local / 로컬) grievances, government repression and decisions by Hanoi leadership all mattered.
 
@@ -74,7 +74,7 @@ Cold War doctrine, fear of communist expansion, alliance credibility and South V
 
 Escalation was gradual and path-dependent: each commitment changed chi phí (cost / 비용) of withdrawing and expectation of partners/opponents.
 
-## 1963 crisis: trạng thái (state / 상태) legitimacy matters as much as military hardware
+## Khủng hoảng 1963: tính chính danh quan trọng ngang khí tài quân sự
 
 Tensions between Diệm government and Buddhist activists escalated in 1963. Political crisis, repression and military dissatisfaction culminated in a coup in November 1963 in which Diệm and Ngô Đình Nhu were killed.
 
@@ -82,7 +82,7 @@ Subsequent governments in South Vietnam experienced repeated political turnover 
 
 Lesson: bên ngoài (external / 외부) aid cannot substitute for domestic coalition management. Army kích thước (size / 크기) and equipment are only one dimension of trạng thái (state / 상태) sức chứa (capacity / 용량).
 
-## 1965: large-scale US ground war and North Vietnamese regular forces
+## 1965: chiến tranh bộ binh quy mô lớn của Hoa Kỳ và quân chính quy miền Bắc
 
 From 1965, United States deployed large ground forces and conducted sustained air campaigns. North Vietnam increased infiltration and triển khai (deployment / 배포) of regular forces to the south while continuing hỗ trợ (support / 지원) for NLF/People's Liberation Armed Forces.
 
@@ -90,7 +90,7 @@ War now operated at multiple scales: village-level insurgency, conventional batt
 
 The theater cannot be understood inside hiện đại (modern / 현대적) Vietnam borders alone.
 
-## Ho Chi Minh trail: logistics hệ thống (system / 시스템), not one road
+## Đường mòn Hồ Chí Minh: một hệ thống hậu cần, không phải một con đường duy nhất
 
 The so-called **Ho Chi Minh trail** was a mạng (network / 네트워크) of roads, paths, pipelines and supply nodes through Laos and Cambodia as well as Vietnam.
 
@@ -106,7 +106,7 @@ forces in south remain connected to north
 
 Again, logistics converts political intention into military năng lực (capability / 역량).
 
-## War economy and destruction
+## Kinh tế chiến tranh và sự tàn phá
 
 War transformed both economies. South Vietnam received massive foreign aid and military spending, accelerating urbanization and dịch vụ (service / 서비스) sectors while also creating phụ thuộc (dependency / 의존성) and inflationary/distortion risks.
 
@@ -116,7 +116,7 @@ Rural communities across xung đột (conflict / 충돌) zones faced displacemen
 
 GDP-style aggregate alone cannot describe wartime welfare.
 
-## 1968 Tet Offensive: military, political and media outcomes differ
+## Tổng tiến công Tết 1968: kết quả quân sự, chính trị và truyền thông khác nhau
 
 During **Tet 1968**, communist forces launched widespread attacks across South Vietnam. Militarily, attackers suffered heavy losses and failed to hold most urban objectives for long. Politically and psychologically, the offensive had major consequences, especially for perceptions in the United States about progress and war duration.
 
@@ -128,7 +128,7 @@ battlefield outcome ≠ strategic political effect
 
 A campaign can lose tactically while changing negotiation/công khai (public / 공개) opinion môi trường (environment / 환경)—or vice versa.
 
-## The war was internationalized far beyond US–Vietnam
+## Chiến tranh được quốc tế hóa vượt xa quan hệ Mỹ–Việt
 
 China and Soviet Union supplied major aid to North Vietnam while managing their own Sino-Soviet rivalry. South Korea, Australia, New Zealand, Thailand, Philippines and others contributed forces/hỗ trợ (support / 지원) on US/RVN side in different forms. Laos and Cambodia were deeply affected by cross-border war.
 
@@ -136,13 +136,13 @@ Thus “Vietnam War” is geographically convenient but analytically incomplete.
 
 Recent Cambridge scholarship explicitly treats it as toàn cục (global / 전역) Cold War, civil war and national liberation xung đột (conflict / 충돌) simultaneously.
 
-## Vietnamization and changing force cấu trúc (structure / 구조)
+## Việt Nam hóa chiến tranh và thay đổi cơ cấu lực lượng
 
 Under US President Richard Nixon, chính sách (policy / 정책) shifted toward **Vietnamization**: expanding responsibility of Republic of Vietnam Armed Forces while reducing US ground troop presence, alongside continued air power and aid.
 
 This changed burden phân phối (distribution / 분포) but did not end fighting. Xung đột (conflict / 충돌) expanded dramatically in Cambodia/Laos contexts and remained connected to US–China–Soviet diplomacy.
 
-## 1973 Paris Peace Accords: US withdrawal does not equal war termination
+## Hiệp định Paris 1973: Hoa Kỳ rút quân không đồng nghĩa chiến tranh kết thúc
 
 Paris Peace Accords in **January 1973** produced a ceasefire khung phần mềm (framework / 프레임워크) and withdrawal of US combat forces, while leaving Vietnamese armed actors in place and unresolved political competition in the South.
 
@@ -156,13 +156,13 @@ Saigon fell to communist-led forces on **30 April 1975**.
 
 The date is a clear military-political endpoint for the war, but naming varies by bộ nhớ (memory / 메모리) community: “Liberation of the South/Reunification” in official Vietnamese trạng thái (state / 상태) narrative; “Fall of Saigon” in much international and overseas Vietnamese usage. The sự kiện (event / 이벤트) is the same; labels encode different historical bộ nhớ (memory / 메모리) and political experience.
 
-## 1975 vs 1976: military end và formal trạng thái (state / 상태) reunification
+## 1975 và 1976: kết thúc quân sự và thống nhất nhà nước trên danh nghĩa pháp lý
 
 1975 ended the Republic of Vietnam and major war. Formal institutional reunification followed in **1976** with establishment of the Socialist Republic of Vietnam.
 
 Keeping these dates separate avoids a dùng chung (common / 공통) compression lỗi (error / 오류).
 
-## Human chi phí (cost / 비용) and displacement
+## Chi phí con người và sự ly tán dân cư
 
 The war killed very large numbers of Vietnamese civilians and combatants, as well as foreign soldiers, and caused massive nội bộ (internal / 내부) displacement. Bombing, artillery, mines, massacres, imprisonment and postwar reprisals affected communities differently.
 

@@ -1,16 +1,16 @@
-# Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới
+# Việt Nam thế kỷ XXI: chuỗi giá trị toàn cầu, đô thị hóa và những giới hạn mới
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`22_doi_moi_market_transition_and_global_reintegration.md`](22_doi_moi_market_transition_and_global_reintegration.md) cho thấy Đổi Mới đã thay đổi incentive, price, enterprise và bên ngoài (external / 외부) tích hợp (integration / 통합). Khi bước vào thế kỷ XXI, câu hỏi không còn chỉ là **làm sao thoát khỏi shortage và poverty** mà dần chuyển thành: **làm sao tăng productivity, move up giá trị (value / 값) chuỗi (chain / 사슬), quản lý urbanization, aging và environmental rủi ro (risk / 위험) trong một economy đã hội nhập sâu?**
+[`22_doi_moi_market_transition_and_global_reintegration.md`](22_doi_moi_market_transition_and_global_reintegration.md) cho thấy Đổi Mới đã thay đổi động lực, giá cả, doanh nghiệp và hội nhập bên ngoài. Khi bước vào thế kỷ XXI, câu hỏi không còn chỉ là **làm sao thoát khỏi thiếu thốn và nghèo đói** mà dần chuyển thành: **làm sao tăng năng suất, nâng vị trí trong chuỗi giá trị, quản lý đô thị hóa, già hóa và rủi ro môi trường trong một nền kinh tế đã hội nhập sâu?** Hãy nối mốc gia nhập WTO **2007**, các chuỗi sản xuất điện tử, đô thị Hà Nội–Thành phố Hồ Chí Minh và áp lực đồng bằng sông Cửu Long để thấy chương này tiếp tục câu chuyện Đổi Mới.
 
-Đây là chuyển tiếp (transition / 전이) từ **low-income catch-up bài toán (problem / 문제)** sang **middle-income structural transformation bài toán (problem / 문제)**.
+Đây là quá trình chuyển từ **bài toán bắt kịp của nước thu nhập thấp** sang **bài toán chuyển đổi cơ cấu của nước thu nhập trung bình**.
 
-## WTO-era tích hợp (integration / 통합): factory không phải một island
+## Hội nhập thời WTO: nhà máy không phải một hòn đảo
 
-Sau WTO accession năm 2007, Việt Nam tiếp tục tích hợp sâu vào toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크). Electronics, machinery, garment, footwear và nhiều manufacturing sector được tổ chức theo **toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)**.
+Sau khi gia nhập WTO năm 2007, Việt Nam tiếp tục hội nhập sâu vào mạng lưới sản xuất toàn cầu. Điện tử, máy móc, dệt may, giày dép và nhiều ngành chế tạo được tổ chức theo **chuỗi giá trị toàn cầu (global value chain / 글로벌 가치사슬)**.
 
-Một sản phẩm (product / 제품) “Made in Vietnam” có thể chứa thành phần (component / 컴포넌트) từ nhiều nước, thiết kế (design / 설계) ở nơi khác, assembly tại Việt Nam và sale trên toàn cục (global / 전역) thị trường (market / 시장).
+Một sản phẩm “Made in Vietnam” có thể chứa linh kiện từ nhiều nước, được thiết kế ở nơi khác, lắp ráp tại Việt Nam và bán trên thị trường toàn cầu.
 
 ```text
 design / IP
@@ -38,7 +38,7 @@ Key distinction:
 
 **export upgrading** không tự động bằng **technological upgrading**.
 
-## Hạ tầng: từ national road tới bộ chứa (container / 컨테이너) timetable
+## Hạ tầng: từ đường quốc lộ tới lịch vận chuyển container
 
 Industrial economy cần reliable hạ tầng (infrastructure / 인프라) ở quy mô (scale / 규모) khác agricultural economy. Highway, deep-water cổng (port / 포트), airport, electricity grid, telecom và logistics nền tảng (platform / 플랫폼) trở thành part của môi trường vận hành (production / 운영 환경) hàm (function / 함수).
 
@@ -46,7 +46,7 @@ Một factory có productivity cao nhưng truck kẹt đường, cổng (port / 
 
 Vì vậy hiện đại (modern / 현대적) hạ tầng (infrastructure / 인프라) không chỉ “phục vụ giao thông”; nó giảm **giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** và **coordination độ trễ (latency / 지연 시간)** của economy.
 
-## Urbanization: city là labor thị trường (market / 시장) lớn
+## Đô thị hóa: thành phố là thị trường lao động lớn
 
 Hà Nội, Thành phố Hồ Chí Minh cùng các urban–industrial region mở rộng mạnh. City tạo density: worker, firm, university, finance, customer và supplier ở gần nhau.
 
@@ -120,7 +120,7 @@ Normalization năm 1995 mở một important channel; sau đó trade và people-
 
 Historical significance nằm ở giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và option set mở rộng qua thời gian.
 
-## China: thị trường (market / 시장), supply chuỗi (chain / 사슬) và geopolitical ràng buộc (constraint / 제약조건) cùng lúc
+## Trung Quốc: thị trường, chuỗi cung ứng và ràng buộc địa chính trị cùng lúc
 
 China là neighbor lớn và major trade/supply-chain nút (node / 노드). Việt Nam nhập nhiều machinery/đầu vào (input / 입력) từ China trong khi cũng cạnh tranh và trade extensively.
 
@@ -186,7 +186,7 @@ Hai household cùng income hiện tại có thể có very different asset, land
 
 Xã hội (social / 사회적) cấu trúc (structure / 구조) therefore cannot be compressed into GDP per capita.
 
-## COVID-19 như hệ thống (system / 시스템) kiểm thử sức chịu tải (stress test / 스트레스 테스트)
+## COVID-19 như phép thử sức chịu tải của hệ thống
 
 Pandemic đầu 2020s là toàn cục (global / 전역) shock đối với supply chuỗi (chain / 사슬), mobility, công khai (public / 공개) health và dịch vụ (service / 서비스) employment.
 

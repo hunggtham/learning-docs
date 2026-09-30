@@ -1,8 +1,8 @@
-# Writing, Education & Kiến thức (knowledge / 지식) Các hệ thống (systems / 시스템들): Hán văn → Nôm → Quốc ngữ → mass schooling
+# Chữ viết, giáo dục và hệ thống tri thức: Hán văn → Nôm → Quốc ngữ → giáo dục đại chúng
 
-## Central question
+## Câu hỏi trung tâm
 
-A trạng thái (state / 상태) cannot govern only with soldiers. It needs names, records, laws, maps, exam answers, tax lists and reproducible kiến thức (knowledge / 지식). This chapter tracks **thông tin (information / 정보) technology of society**: script, school, examination, printing, press and digital mạng (network / 네트워크).
+Nhà nước không thể cai quản chỉ bằng binh lính. Nhà nước cần tên gọi, sổ sách, luật, bản đồ, bài thi, danh sách thuế và tri thức có thể truyền lại. Chương này theo dõi “công nghệ thông tin” của xã hội: chữ viết, trường học, khoa cử, in ấn, báo chí và mạng số; từ đó nối quản trị cổ–trung đại với xã hội đại chúng hiện đại.
 
 The cốt lõi (core / 핵심) chuỗi nhân quả (causal chain / 인과 사슬):
 
@@ -36,7 +36,7 @@ Analogous to hiện đại (modern / 현대적) states continuing legacy softwar
 
 ## Chữ Nôm: adapting script to Vietnamese
 
-**Chữ Nôm** uses/creates characters to represent Vietnamese words. It enables literature in vernacular more directly.
+**Chữ Nôm** dùng hoặc tạo chữ để biểu đạt từ tiếng Việt. Nó cho phép văn chương bằng tiếng bản địa phát triển trực tiếp hơn.
 
 But Nôm is complex and never fully replaces Hán văn in trạng thái (state / 상태) administration/exam hệ thống (system / 시스템).
 
@@ -46,9 +46,9 @@ Thus premodern literacy is layered:
 - Classical Chinese for elite official kiến thức (knowledge / 지식);
 - Nôm for significant vernacular writing/literature.
 
-## Examination as personnel technology
+## Khoa cử như công nghệ tuyển dụng quan lại
 
-Civil examination is not only education. It is a **recruitment giao thức (protocol / 프로토콜)** for bureaucracy.
+Khoa cử không chỉ là giáo dục. Nó là một **giao thức tuyển dụng (recruitment protocol / 채용 프로토콜)** cho bộ máy quan liêu.
 
 Exam standardizes what candidate must know, creates credential and records successful personnel. Văn Miếu–Quốc Tử Giám and doctoral stelae materialize this hệ thống (system / 시스템).
 
@@ -58,9 +58,9 @@ Các ràng buộc (constraints / 제약조건들): expensive preparation, narrow
 
 Hiện đại (modern / 현대적) standardized testing faces structurally similar sự đánh đổi (trade-off / 트레이드오프).
 
-## Village school and unequal truy cập (access / 접근)
+## Trường làng và khả năng tiếp cận không bình đẳng
 
-Premodern schooling often depends on teacher, family tài nguyên (resource / 자원) and cục bộ (local / 로컬) tradition. Elite family can supply book/thời gian (time / 시간)/mạng (network / 네트워크) more easily.
+Giáo dục tiền hiện đại thường phụ thuộc vào thầy dạy, tài nguyên gia đình và truyền thống địa phương. Gia đình tinh hoa dễ cung cấp sách, thời gian và mạng lưới hơn.
 
 Therefore exam can provide upward mobility without making society equal.
 
@@ -68,13 +68,13 @@ Truy cập (access / 접근) to literacy itself is an economic asset.
 
 ## Printing
 
-Woodblock printing lowers marginal reproduction chi phí (cost / 비용) relative to hand-copying once khối (block / 블록) is carved. Buddhist văn bản (text / 텍스트), official book and educational material become more reproducible.
+In khắc gỗ làm giảm chi phí tái bản so với chép tay sau khi ván khắc được tạo. Kinh Phật, sách quan phương và tài liệu giáo dục có thể được sao in nhiều hơn.
 
 Printing changes độ tin cậy (reliability / 신뢰성): multiple copies can share tiêu chuẩn (standard / 표준) wording.
 
 But khối (block / 블록) môi trường vận hành (production / 운영 환경) remains costly; phân phối (distribution / 분포)/logistics still limit reach.
 
-## Missionaries and Romanized Vietnamese
+## Nhà truyền giáo và chữ La-tinh hóa tiếng Việt
 
 European missionaries participate in development/use of Romanized Vietnamese writing that later becomes **chữ Quốc ngữ**. Alexandre de Rhodes is well known but should not be treated as single inventor; romanization emerged through cumulative missionary công việc (work / 작업) and linguistic tương tác (interaction / 상호작용).
 
@@ -82,13 +82,13 @@ Initially this script is not national mass literacy công cụ (tool / 도구). 
 
 ## Colonial schooling changes kiến thức (knowledge / 지식) hierarchy
 
-French colonial hệ thống (system / 시스템) reduces old Confucian examination thứ tự (order / 순서) and expands Franco-Vietnamese schooling, though truy cập (access / 접근) remains limited and structured by colonial goals.
+Hệ thống thuộc địa Pháp làm suy giảm trật tự khoa cử Nho giáo cũ và mở rộng trường Pháp–Việt, dù quyền tiếp cận vẫn hạn chế và được tổ chức theo mục tiêu thuộc địa.
 
 Traditional examination ends in early twentieth century. Credential hierarchy shifts toward hiện đại (modern / 현대적) school diploma, administrative ngôn ngữ (language / 언어) and professional education.
 
 Kiến thức (knowledge / 지식) useful for bureaucracy changes from classical canon toward French, hiện đại (modern / 현대적) science, law and accounting.
 
-## Quốc ngữ and low reproduction chi phí (cost / 비용)
+## Quốc ngữ và chi phí tái bản thấp
 
 Alphabetic Quốc ngữ has lower entry barrier for printing/typesetting and học tập (learning / 학습) than character-based classical literacy for many learners. Combined with printing press and school, it enables rapid expansion of newspapers and books.
 
@@ -110,7 +110,7 @@ Nationalism, reform, literature and political ideology spread through this công
 
 Press censorship also shows colonial trạng thái (state / 상태) understood thông tin (information / 정보) as power.
 
-## Hiện đại (modern / 현대적) science and translation
+## Khoa học hiện đại và dịch thuật
 
 New vocabulary must be built for politics, chemistry, physics, economics and law. Vietnamese hiện đại (modern / 현대적) terminology often enters through Chinese/Japanese/French/English-mediated concepts.
 
@@ -122,13 +122,13 @@ After 1945, mass literacy becomes state-building priority. Literacy allows citiz
 
 Education thus becomes both xã hội (social / 사회적) dịch vụ (service / 서비스) and capacity-building hạ tầng (infrastructure / 인프라).
 
-## Two education các hệ thống (systems / 시스템들) 1954–1975
+## Hai hệ thống giáo dục 1954–1975
 
 North and South develop different curricula/institutional connections under Cold War contexts. Universities, foreign ngôn ngữ (language / 언어) and huấn luyện (training / 학습) networks link to different international partners.
 
 Do not treat “Vietnamese education” as one uniform hệ thống (system / 시스템) during division.
 
-## Post-1975 unification and expansion
+## Thống nhất và mở rộng sau 1975
 
 Education hệ thống (system / 시스템) is integrated under national khung phần mềm (framework / 프레임워크). Shortage, reconstruction and population growth constrain chất lượng (quality / 품질), but schooling expands over thời gian (time / 시간).
 
@@ -140,7 +140,7 @@ As trade/FDI/toàn cục (global / 전역) technology expand, English becomes hi
 
 Comparison is functional, not claiming languages play identical political roles.
 
-## University and research hệ thống (system / 시스템)
+## Đại học và hệ thống nghiên cứu
 
 Moving from assembly economy toward higher giá trị (value / 값) requires research, kỹ thuật (engineering / 엔지니어링) and professional kiến thức (knowledge / 지식). University is therefore not just degree factory; it is part of national innovation hệ thống (system / 시스템).
 

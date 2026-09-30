@@ -1,10 +1,10 @@
-# Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation
+# Lịch sử môi trường và thiên tai: sông, lũ, hạn, dịch bệnh và thích ứng
 
 ## Nature không phải background cố định
 
 Historical narrative thường đặt môi trường (environment / 환경) như scenery: sông Hồng, dãy Trường Sơn, Mekong Delta. Nhưng môi trường (environment / 환경) itself changes and reacts to human intervention.
 
-Central question của chapter này là: **climate, river, disease, soil và disaster giới hạn option của society ra sao, và con người làm thay đổi chính môi trường (environment / 환경) bằng dike, canal, forest clearing, war và urbanization như thế nào?**
+Câu hỏi trung tâm của chương là: **khí hậu, sông ngòi, dịch bệnh, đất và thiên tai giới hạn lựa chọn của xã hội ra sao, và con người làm thay đổi chính môi trường bằng đê, kênh, phá rừng, chiến tranh và đô thị hóa như thế nào?** Hãy đặt các vòng phản hồi này cạnh lịch sử kinh tế, công nghệ và Đổi Mới; phần tiếp theo về ký ức sẽ cho thấy cộng đồng ghi nhớ thiên tai và di sản ấy ra sao.
 
 Mô hình tư duy (mental model / 사고 모델):
 
@@ -33,7 +33,7 @@ Calendar, irrigation, crop choice, lưu trữ (storage / 저장소) and communit
 
 Red River Delta supports dense settlement and rice môi trường vận hành (production / 운영 환경) partly because of alluvial processes. But the same river can flood destructively.
 
-Dike construction protects settlement/trường dữ liệu (field / 필드), enabling higher density behind dike. Yet dikes can also thay đổi (change / 변경) sediment deposition and make later flood management more path-dependent.
+Xây đê bảo vệ khu cư trú và ruộng đồng, cho phép mật độ dân cư phía trong cao hơn. Nhưng đê cũng thay đổi quá trình bồi lắng và khiến quản lý lũ về sau phụ thuộc vào con đường đã chọn.
 
 Once settlement becomes protected by dike, abandoning maintenance becomes costly.
 
@@ -41,13 +41,13 @@ This is hạ tầng (infrastructure / 인프라)–môi trường (environment /
 
 ## Delta is historical, not timeless land
 
-River delta shifts channel, deposits sediment and changes coastline over long thời gian (time / 시간). Place now inland may once have been closer to coast; cổng (port / 포트) importance can decline as channel silts or trade tuyến (route / 경로) moves.
+Đồng bằng sông thay đổi dòng chảy, bồi đắp phù sa và làm đường bờ biến đổi trong thời gian dài. Nơi nay nằm sâu trong đất liền có thể từng gần biển hơn; tầm quan trọng của cảng có thể giảm khi cửa sông bồi lấp hoặc tuyến thương mại dịch chuyển.
 
 This matters when reading ancient/medieval geography. Do not dự án (project / 프로젝트) today's coastline directly backward.
 
 ## Disease ecology
 
-Dense wet-rice settlement, tropical climate and trade tuyến (route / 경로) create disease môi trường (environment / 환경). Historical sources often describe epidemic without hiện đại (modern / 현대적) diagnosis, so avoid confidently assigning pathogen unless bằng chứng (evidence / 증거) supports it.
+Khu cư trú lúa nước dày đặc, khí hậu nhiệt đới và tuyến thương mại tạo môi trường bệnh tật. Nguồn lịch sử thường mô tả dịch bệnh mà không có chẩn đoán hiện đại, vì vậy không nên khẳng định tác nhân nếu chứng cứ không đủ.
 
 Disease can reduce labor, army sức chứa (capacity / 용량), tax revenue and di chuyển (migration / 마이그레이션) attractiveness.
 
@@ -55,7 +55,7 @@ Pandemic is therefore political-economic sự kiện (event / 이벤트) as well
 
 ## Famine: harvest thất bại (failure / 실패) alone rarely explains everything
 
-Food crisis emerges when môi trường vận hành (production / 운영 환경) shock combines with truy cập (access / 접근)/phân phối (distribution / 분포) thất bại (failure / 실패).
+Khủng hoảng lương thực xuất hiện khi cú sốc sản xuất kết hợp với thất bại trong tiếp cận hoặc phân phối.
 
 ```text
 bad harvest / flood / drought
@@ -68,7 +68,7 @@ famine risk
 
 This khung phần mềm (framework / 프레임워크) is crucial for understanding the 1944–45 famine: weather and crop problems interacted with wartime extraction, vận chuyển (transport / 전송) các ràng buộc (constraints / 제약조건들) and political-economic disruption.
 
-## Forest and upland tài nguyên (resource / 자원)
+## Rừng và tài nguyên vùng cao
 
 Forest provides timber, fuel, medicinal sản phẩm (product / 제품), wildlife and upland livelihood. Lowland trạng thái (state / 상태) often views forest as tài nguyên (resource / 자원)/frontier, while upland communities may have different land-use hệ thống (system / 시스템).
 
@@ -76,15 +76,15 @@ Commercial extraction and settlement expansion thay đổi (change / 변경) bot
 
 Thus deforestation lịch sử (history / 이력) is also frontier lịch sử (history / 이력).
 
-## Champa and central-coast môi trường (environment / 환경)
+## Champa và môi trường duyên hải miền Trung
 
-Central Vietnam has narrow coastal plains, mountain proximity and frequent storm/flood exposure. Political centres and ports must công việc (work / 작업) with short river các hệ thống (systems / 시스템들) and variable coastline.
+Miền Trung có đồng bằng ven biển hẹp, núi gần biển và thường xuyên chịu bão lũ. Trung tâm chính trị và cảng phải vận hành với các hệ thống sông ngắn và đường bờ biến đổi.
 
 This ecology differs sharply from Red River and Mekong, helping explain different settlement density and trạng thái (state / 상태) geography.
 
 But ecology constrains; it does not determine one inevitable culture/trạng thái (state / 상태) form.
 
-## Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium
+## Đồng bằng Mekong: nước như phương tiện vận chuyển và môi trường sản xuất
 
 Mekong Delta has seasonal flood, canal mạng (network / 네트워크) and low elevation. Settlement/productive expansion depends on reading water rather than simply excluding it.
 
@@ -92,7 +92,7 @@ Canal can drain, irrigate, move goods and extend administrative reach simultaneo
 
 Historical development therefore transforms hydrology.
 
-## Vĩnh Tế and canalization
+## Vĩnh Tế và việc đào kênh
 
 Early Nguyễn canal building illustrates multi-function hạ tầng (infrastructure / 인프라): military/frontier truy cập (access / 접근), settlement and trade.
 
@@ -100,7 +100,7 @@ Moving water tuyến (route / 경로) changes which land becomes economically ac
 
 Environmental lịch sử (history / 이력) asks not only “who built canal?” but what new luồng (flow / 흐름) of sediment, people and goods it created.
 
-## Typhoon and central/northern coast
+## Bão và duyên hải miền Trung–Bắc
 
 Storm periodically destroys crop, house, ship and cổng (port / 포트). Maritime economy must price weather rủi ro (risk / 위험).
 

@@ -1,16 +1,16 @@
-# Champa: nhiều trung tâm quyền lực, maritime economy và continuity sau các cuộc chinh phục
+# Champa: nhiều trung tâm quyền lực, kinh tế biển và sự tiếp nối sau chinh phục
 
-## Vì sao Champa cần một chapter riêng?
+## Vì sao Champa cần một chương riêng?
 
-[`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) đã đặt Champa vào bài toán frontier của Đại Việt và Nguyễn. Nhưng nếu chỉ đọc Champa tại những thời điểm nó va chạm với Đại Việt, ta lại vô tình biến một historical hệ thống (system / 시스템) tồn tại nhiều thế kỷ thành “phần phía nam của lịch sử Việt Nam”.
+[`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) đã đặt Champa vào bài toán vùng biên của Đại Việt và Nguyễn. Nhưng nếu chỉ đọc Champa tại những thời điểm va chạm với Đại Việt, ta vô tình biến một hệ thống lịch sử tồn tại nhiều thế kỷ thành “phần phía nam của lịch sử Việt Nam”.
 
-Chapter này đổi điểm nhìn. Câu hỏi trung tâm là: **các polity Chăm hình thành và duy trì quyền lực trong một dải duyên hải hẹp bằng cách nào, chúng kết nối coast với highlands và overseas trade ra sao, và vì sao việc một political centre thất bại không đồng nghĩa society Chăm biến mất?**
+Chương này đổi điểm nhìn. Câu hỏi trung tâm là: **các chính thể Chăm hình thành và duy trì quyền lực trong một dải duyên hải hẹp bằng cách nào, kết nối bờ biển với vùng cao và thương mại đường biển ra sao, và vì sao một trung tâm chính trị thất bại không đồng nghĩa xã hội Chăm biến mất?** Hãy đọc cạnh chương 14 và ghé Mỹ Sơn, Nha Trang, Ninh Thuận để nối trung tâm quyền lực với tôn giáo, cảng và cộng đồng còn tiếp tục sống.
 
-Điểm đầu tiên phải bỏ là hình ảnh Champa như một trạng thái (state / 상태) luôn thống nhất, có một capital cố định và ranh giới (boundary / 경계) giống nation-state hiện đại. Trong nhiều thời kỳ, các trung tâm như Amaravati/Indrapura ở phía bắc, Vijaya ở vùng Bình Định, Kauthara quanh Nha Trang và Panduranga ở vùng Ninh Thuận–Bình Thuận có mức độ nổi trội khác nhau. Political tích hợp (integration / 통합) thay đổi theo dynasty, warfare, trade tuyến (route / 경로) và cục bộ (local / 로컬) elite.
+Điểm đầu tiên phải bỏ là hình ảnh Champa như một nhà nước luôn thống nhất, có một kinh đô cố định và ranh giới giống quốc gia hiện đại. Trong nhiều thời kỳ, các trung tâm như Amaravati/Indrapura ở phía bắc, Vijaya ở Bình Định, Kauthara quanh Nha Trang và Panduranga ở Ninh Thuận–Bình Thuận có mức độ nổi trội khác nhau. Sự tích hợp chính trị thay đổi theo triều đại, chiến tranh, tuyến thương mại và tinh hoa địa phương.
 
 ## Geography: miền Trung hẹp nhưng không hề đơn giản
 
-Duyên hải miền Trung có mẫu (pattern / 패턴) rất khác đồng bằng sông Hồng. Trường Sơn tiến gần biển, tạo các basin và river valley tương đối tách nhau. Mỗi basin có thể nối một agricultural hinterland nhỏ với một cửa biển, trong khi mountain pass nối coast với upland tài nguyên (resource / 자원) zone.
+Duyên hải miền Trung có mô hình rất khác đồng bằng sông Hồng. Trường Sơn tiến gần biển, tạo các lòng chảo và thung lũng sông tương đối tách nhau. Mỗi lòng chảo có thể nối một vùng nông nghiệp phía sau với cửa biển, trong khi đèo núi nối bờ biển với vùng tài nguyên cao nguyên.
 
 Điều này tạo một political economy dạng mạng (network / 네트워크):
 
@@ -56,7 +56,7 @@ new local political/religious language
 
 Vì vậy một lingam, Sanskrit inscription hay temple plan cho thấy strong transregional liên kết (connection / 연결) nhưng không chứng minh cục bộ (local / 로컬) society bị thay thế bởi người từ India.
 
-## Mỹ Sơn: temple complex như political technology
+## Mỹ Sơn: quần thể đền tháp như công nghệ chính trị
 
 **Mỹ Sơn** ở Quảng Nam là checkpoint đặc biệt vì nó không chỉ là collection of towers. UNESCO xác định sanctuary phát triển từ khoảng thế kỷ IV tới XIII và từng là một religious/political centre quan trọng của Champa.
 
@@ -76,7 +76,7 @@ Khi Hội An nổi lên mạnh ở các thế kỷ sau, nó không xuất hiện
 
 Đây là reason thư viện (library / 라이브러리) không chia “Champa cổ” và “Hội An early hiện đại (modern / 현대적)” thành hai câu chuyện không liên quan.
 
-## Economy: agriculture + craft + forest products + maritime exchange
+## Kinh tế: nông nghiệp, nghề thủ công, sản vật rừng và trao đổi đường biển
 
 Champa không phải chỉ “vương quốc thương mại biển”, cũng không chỉ “xã hội nông nghiệp”. Coastal basin cần agriculture để nuôi population; uplands cung cấp nhiều forest commodity; cổng (port / 포트) cho phép exchange với wider Asia.
 
@@ -141,7 +141,7 @@ Relationship có thể gồm trade, alliance, tribute, raid, intermarriage và r
 
 Chính vì vậy chapter [`36_uplands_highlands_and_lowland_state_relations.md`](36_uplands_highlands_and_lowland_state_relations.md) phải được đọc song song với Champa.
 
-## Champa trong maritime Southeast Asia
+## Champa trong Đông Nam Á hàng hải
 
 Coastal orientation đặt Champa vào South China Sea mạng (network / 네트워크) nối southern China, island Southeast Asia và Indian Ocean routes. Maritime liên kết (connection / 연결) giúp giải thích vì sao foreign religious ideas, ceramics, luxury goods và merchant communities có thể xuất hiện trong một coast nhìn trên hiện đại (modern / 현대적) map tưởng như “peripheral”.
 
@@ -149,7 +149,7 @@ Thực tế peripheral so với Hanoi không nghĩa peripheral so với sea.
 
 Đây là một reversal quan trọng của map perspective: **nếu lấy South China Sea làm centre, duyên hải miền Trung trở thành một corridor, không phải edge.**
 
-## Địa điểm để đọc Champa như hệ thống (system / 시스템)
+## Địa điểm để đọc Champa như một hệ thống
 
 **Mỹ Sơn** dùng để đọc sacred centre + Thu Bồn mạng (network / 네트워크). **Trà Kiệu** giúp đặt political settlement gần river tuyến (route / 경로). **Vijaya/Đồ Bàn** ở Bình Định dùng để đọc military-political centre. **Po Nagar** ở Nha Trang giúp nhìn Kauthara và long ritual continuity. **Po Klong Garai** ở Phan Rang giúp đọc Panduranga và living Cham heritage.
 

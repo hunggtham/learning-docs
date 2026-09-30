@@ -1,12 +1,12 @@
-# Religion, Belief & Ritual Lịch sử (history / 이력): legitimacy, community và lived religion
+# Lịch sử tôn giáo, niềm tin và nghi lễ: tính chính danh, cộng đồng và đời sống thực
 
-## Không nên hỏi “Việt Nam theo tôn giáo nào?” như một single-choice trường dữ liệu (field / 필드)
+## Không nên hỏi “Việt Nam theo tôn giáo nào?” như một ô chọn duy nhất
 
 Vietnamese religious life historically combines ancestor ritual, cục bộ (local / 로컬) deity cult, Buddhism, Confucian ethics, Daoist practice, Christianity, Islam among some communities, Cao Đài, Hòa Hảo and many cục bộ (local / 로컬) traditions.
 
 People can participate in multiple ritual các hệ thống (systems / 시스템들) without seeing them as mutually exclusive định danh (identity / 식별자) boxes.
 
-Thus better concept is **lived religion (tôn giáo trong đời sống thực)**: what people actually do, where, for what bài toán (problem / 문제) and with whom.
+Vì vậy khái niệm hữu ích hơn là **tôn giáo trong đời sống thực**: người ta thực sự làm gì, ở đâu, vì nhu cầu nào và cùng với ai. Đọc chương này sau các chương về làng, nhà nước và ký ức sẽ giúp nối nghi lễ với đất đai, quyền lực và căn tính địa phương.
 
 ## Ancestor ritual as intergenerational institution
 
@@ -16,19 +16,19 @@ Hàm (function / 함수) can be simultaneously religious, moral and xã hội (s
 
 It also stabilizes thuộc tính (property / 속성)/family bộ nhớ (memory / 메모리): who belongs to lineage and where ancestral land/grave lies matters materially.
 
-## Cục bộ (local / 로컬) deity and village protection
+## Thần địa phương và sự bảo hộ làng xã
 
 Đình, temple and tutelary deity organize community festival and cục bộ (local / 로컬) định danh (identity / 식별자). Deity narrative often incorporates historical figure, natural force or legendary founder.
 
 Ritual therefore becomes cục bộ (local / 로컬) archive—though archive of bộ nhớ (memory / 메모리), not necessarily literal factual bản ghi (record / 레코드).
 
-## Buddhism and early states
+## Phật giáo và các nhà nước sơ kỳ
 
 Buddhism entered region through multiple routes and became particularly influential under Lý–Trần court. Monastery can hàm (function / 함수) as ritual centre, landholder, education mạng (network / 네트워크) and political symbolic tài nguyên (resource / 자원).
 
 Court patronage does not mean all society has uniform Buddhist doctrine.
 
-## Confucianism: more than religion label
+## Nho giáo: nhiều hơn một nhãn tôn giáo
 
 Confucian tradition is better understood partly as ethical-political and educational thứ tự (order / 순서): family hierarchy, ritual, classics, examination and official conduct.
 
@@ -36,17 +36,17 @@ Under Lê sơ and Nguyễn, Neo-Confucian trạng thái (state / 상태) ideolog
 
 Again normative văn bản (text / 텍스트) ≠ complete everyday hành vi (behavior / 동작).
 
-## Daoist and folk practice
+## Thực hành Đạo giáo và dân gian
 
-Daoist cosmology, ritual specialists, geomancy, spirit practice and cục bộ (local / 로컬) folk belief often intermingle.
+Vũ trụ quan Đạo giáo, thầy nghi lễ, thuật phong thủy, thực hành với thần linh và tín ngưỡng dân gian địa phương thường đan xen.
 
 Trying to classify every ritual as purely “Buddhist/Daoist/folk” can distort actual hybridity.
 
 Historical actors did not always use hiện đại (modern / 현대적) taxonomy.
 
-## Trạng thái (state / 상태) ritual and legitimacy
+## Nghi lễ nhà nước và tính chính danh
 
-Court sacrifices, temple recognition, royal genealogy and calendar are tools of legitimacy. Trạng thái (state / 상태) decides which cult receives official recognition and sometimes regulates heterodox practice.
+Tế lễ triều đình, việc công nhận đền miếu, gia phả hoàng gia và lịch pháp là những công cụ tạo chính danh. Nhà nước quyết định tín ngưỡng nào được công nhận chính thức và đôi khi kiểm soát các thực hành bị xem là dị giáo.
 
 Ritual is therefore quản trị (governance / 거버넌스) technology: it maps moral thứ tự (order / 순서) onto territory.
 
@@ -56,9 +56,9 @@ Hùng Vương worship illustrates transformation of origin tradition into nation
 
 UNESCO recognition of worship practices in hiện đại (modern / 현대적) period is bằng chứng (evidence / 증거) of living heritage, not archaeological proof of every legendary detail.
 
-## Champa and Hindu–Buddhist landscapes
+## Champa và cảnh quan Hindu giáo–Phật giáo
 
-Champa lịch sử (history / 이력) includes Hindu and Buddhist traditions with temple towers, Sanskrit/Cham inscriptions and maritime links.
+Lịch sử Champa bao gồm các truyền thống Hindu giáo và Phật giáo, với tháp đền, bia ký Sanskrit/Chăm và liên kết hàng hải.
 
 Mỹ Sơn is key checkpoint: kiến trúc (architecture / 아키텍처) and inscription reveal polity, ritual economy and liên kết (connection / 연결) with wider Indic world.
 
@@ -66,7 +66,7 @@ After territorial thay đổi (change / 변경), Chăm religious communities con
 
 ## Khmer Theravada Buddhism
 
-Khmer communities in Mekong Delta maintain Theravada Buddhist institutions. Pagoda can be religious, educational and cultural centre.
+Các cộng đồng Khmer ở đồng bằng sông Cửu Long duy trì thiết chế Phật giáo Theravada. Chùa có thể đồng thời là trung tâm tôn giáo, giáo dục và văn hóa.
 
 This demonstrates why “religion of Vietnam” cannot be reduced to lowland Kinh mẫu (pattern / 패턴).
 
@@ -76,21 +76,21 @@ Some Chăm communities practice forms of Islam, with regional variation. Religio
 
 Avoid treating Chăm as one religious khối (block / 블록).
 
-## Christianity and missionary mạng (network / 네트워크)
+## Kitô giáo và mạng lưới truyền giáo
 
-Catholicism grows through missionary activity from early-modern period and later becomes significant community. Missionary mạng (network / 네트워크) also participates in linguistic/educational thay đổi (change / 변경), including romanized writing.
+Công giáo phát triển qua hoạt động truyền giáo từ thời cận đại và về sau trở thành một cộng đồng quan trọng. Mạng lưới truyền giáo cũng tham gia vào thay đổi ngôn ngữ–giáo dục, trong đó có chữ viết La-tinh hóa.
 
 Under different regimes, Christian communities experience periods of protection, xung đột (conflict / 충돌), restriction or political sensitivity.
 
 Religious lịch sử (history / 이력) should distinguish doctrine from colonial politics: Christianity cannot be reduced to French conquest, even though missionary/imperial relations became historically entangled.
 
-## Colonial modernity and religious reform
+## Hiện đại thuộc địa và cải cách tôn giáo
 
 Urban print and new education stimulate Buddhist reform, Catholic organization and religious debate. Religion responds to modernity rather than simply declining before “science”.
 
 New association and print mạng (network / 네트워크) allow doctrine/organization to quy mô (scale / 규모).
 
-## Cao Đài and Hòa Hảo
+## Cao Đài và Hòa Hảo
 
 Twentieth-century southern Vietnam sees emergence of **Cao Đài** and **Hòa Hảo**, rooted in cục bộ (local / 로컬) religious môi trường (environment / 환경) and hiện đại (modern / 현대적) xã hội (social / 사회적) crisis.
 
@@ -98,13 +98,13 @@ They become not only religious communities but important xã hội (social / 사
 
 Their rise shows new religion can emerge from existing symbolic vocabulary while responding to colonial/hiện đại (modern / 현대적) conditions.
 
-## Religion during war
+## Tôn giáo trong chiến tranh
 
-War can transform religious institution into refuge, mạng (network / 네트워크), political actor or mục tiêu (target / 대상). Clergy/community positions vary; no religion has one political stance.
+Chiến tranh có thể biến thiết chế tôn giáo thành nơi trú ẩn, mạng lưới hỗ trợ, tác nhân chính trị hoặc mục tiêu. Lập trường của giáo sĩ và cộng đồng khác nhau; không tôn giáo nào chỉ có một thái độ chính trị.
 
 Use specific organization/person/thời gian (time / 시간) rather than generalizing “Buddhists supported X” or “Catholics supported Y”.
 
-## Post-1975 and contemporary religious life
+## Sau 1975 và đời sống tôn giáo đương đại
 
 Religious institutions operate within hiện đại (modern / 현대적) trạng thái (state / 상태) legal khung phần mềm (framework / 프레임워크) and have expanded/reorganized in different ways since late twentieth century.
 
@@ -112,7 +112,7 @@ Urbanization creates new mẫu (pattern / 패턴): large pilgrimage site, online
 
 Modernity often **reformats** ritual rather than eliminating it.
 
-## Festival economy
+## Kinh tế lễ hội
 
 Pilgrimage/festival generates vận chuyển (transport / 전송), food, accommodation and donation flows. Heritage and religion thus intersect economic lịch sử (history / 이력).
 

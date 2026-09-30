@@ -1,14 +1,14 @@
-# Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV
+# Lê sơ: bộ máy quan liêu, luật, ruộng đất và giáo dục ở Đại Việt thế kỷ XV
 
 ## Điểm tựa và câu hỏi trung tâm
 
 [`10_ho_ming_occupation_and_lam_son.md`](10_ho_ming_occupation_and_lam_son.md) kết thúc ở **1428**, khi Lê Lợi lập dynasty sau một decade resistance. Winning independence tạo legitimacy lớn, nhưng new regime vẫn phải convert wartime coalition thành peacetime government.
 
-Câu hỏi trung tâm của chapter là: **làm thế nào nhà Lê biến military coalition thành bureaucratic trạng thái (state / 상태) có rules về officials, land, law, education và territory?**
+Câu hỏi trung tâm của chương là: **làm thế nào nhà Lê biến liên minh quân sự thành một nhà nước quan liêu (bureaucratic state / 관료 국가) có quy tắc về quan lại, ruộng đất, luật, giáo dục và lãnh thổ?** Mốc 1428 và thời Hồng Đức cần được đọc cùng sổ sách, bia tiến sĩ, ruộng làng, kinh đô Thăng Long và những nhóm không xuất hiện đầy đủ trong văn bản triều đình.
 
 Đây là phase mà paperwork itself trở thành historical bằng chứng (evidence / 증거) quan trọng.
 
-## Từ war coalition sang administration
+## Từ liên minh chiến tranh sang quản trị
 
 Lam Sơn thắng nhờ personal loyalty, regional military networks và flexible command. Peace đòi thứ khác: predictable tax, appointments, courts, cadastral kiến thức (knowledge / 지식) và succession.
 
@@ -30,13 +30,13 @@ Bureaucratization không xóa patronage, nhưng làm trạng thái (state / 상�
 
 ## Early Lê: reconstruction sau hai decades disruption
 
-Ming occupation và Lam Sơn war làm fields, settlements và elite cấu trúc (structure / 구조) bị disruption. Postwar government cần restore agriculture, resettle population và regularize tax cơ sở (base / 기반).
+Chiếm đóng của nhà Minh và chiến tranh Lam Sơn làm ruộng đất, cư trú và cấu trúc tinh hoa bị gián đoạn. Chính quyền hậu chiến cần khôi phục nông nghiệp, tái định cư dân chúng và ổn định nền thuế.
 
 Land chính sách (policy / 정책) vì vậy không chỉ là ideology. Nếu peasants thiếu trường dữ liệu (field / 필드) hoặc fields abandoned, trạng thái (state / 상태) mất grain và labor. Reconstruction chính sách (policy / 정책) trực tiếp tied to fiscal survival.
 
 ## Quân điền: land allocation như fiscal-military cơ chế (mechanism / 메커니즘)
 
-Lê sơ thường gắn với **quân điền**, tức periodic allocation/use rights over công khai (public / 공개) or communal land according to status and obligation. Details vary by thời gian (time / 시간) and nguồn (source / 소스), nên không nên hình dung trạng thái (state / 상태) literally redistributing every parcel nationwide from a central spreadsheet.
+Lê sơ thường gắn với **quân điền**, tức phân bổ định kỳ quyền sử dụng đất công hoặc đất công xã theo địa vị và nghĩa vụ. Chi tiết thay đổi theo thời gian và nguồn, nên không nên hình dung nhà nước thực sự phân phối lại từng thửa ruộng trên toàn quốc từ một bảng tính trung tâm.
 
 Mô hình tư duy (mental model / 사고 모델) quan trọng hơn: ruler muốn keep cultivators attached to productive land while preserving a taxable/service-bearing population.
 
@@ -52,7 +52,7 @@ Nếu elite concentration quá mạnh, central trạng thái (state / 상태) lo
 
 ## Lê Thánh Tông 1460–1497: bureaucratization tăng tốc
 
-Reign của **Lê Thánh Tông** thường được xem là peak của Lê sơ. Scholarship của John Whitmore nhấn mạnh growth of bureaucracy và paperwork dưới reign này.
+Triều **Lê Thánh Tông** thường được xem là đỉnh cao của Lê sơ. Nghiên cứu của John Whitmore nhấn mạnh sự phát triển của bộ máy quan liêu và hồ sơ giấy tờ dưới triều vua này.
 
 Điều đó rất đáng chú ý. Trạng thái (state / 상태) sức chứa (capacity / 용량) không chỉ là soldiers; nó là ability to create and circulate **records**: personnel lists, geography, law, memorials, examinations, maps.
 
@@ -62,7 +62,7 @@ Thông tin (information / 정보) reduces ruler's blindness. Một center biết
 
 Lê trạng thái (state / 상태) refine provincial administration và ánh xạ (mapping / 매핑). **Hồng Đức bản đồ** trong tradition của reign Lê Thánh Tông biểu tượng cho effort represent territory as governable không gian (space / 공간).
 
-Map không chỉ mô tả. Nó là quản trị (governance / 거버넌스) công cụ (tool / 도구): border, tuyến (route / 경로), district và tài nguyên (resource / 자원) location trở thành thông tin (information / 정보) objects.
+Bản đồ không chỉ mô tả. Nó là công cụ quản trị: biên giới, tuyến đường, huyện và vị trí tài nguyên trở thành những đối tượng thông tin có thể ghi nhận và xử lý.
 
 Đây là một historical parallel với cơ sở dữ liệu (database / 데이터베이스): trạng thái (state / 상태) cannot manage what it cannot identify consistently.
 
@@ -76,7 +76,7 @@ Nhưng written law không equal daily practice. Village custom, bargaining và c
 
 Cần tách **legal văn bản (text / 텍스트)**, **legal ideology** và **actual practice**.
 
-## Education and examinations: recruiting officials through a kiến thức (knowledge / 지식) chuỗi xử lý (pipeline / 파이프라인)
+## Giáo dục và khoa cử: tuyển quan lại qua chuỗi tri thức
 
 Lê sơ mở rộng Nho học và examination hệ thống (system / 시스템). Năm **1484**, Lê Thánh Tông cho dựng những bia Tiến sĩ đầu tiên ở Văn Miếu–Quốc Tử Giám để bản ghi (record / 레코드) successful candidates từ các examinations bắt đầu năm 1442.
 
@@ -92,7 +92,7 @@ Collectively, stelae cho phép ask social-history questions: talent came from wh
 
 Đây là điểm (point / 지점) where monument becomes dataset.
 
-## Confucian trạng thái (state / 상태) không có nghĩa Buddhism biến mất
+## Nhà nước Nho giáo không có nghĩa Phật giáo biến mất
 
 Court ideology và official education trở nên more Confucian, nhưng village cults, Buddhism và Daoist practices vẫn tồn tại. State-sponsored orthodoxy không map one-to-one onto lived religion.
 
@@ -104,13 +104,13 @@ Trạng thái (state / 상태) revenue vẫn anchored in agriculture, nhưng mar
 
 Bureaucratic stability can lower giao dịch (transaction / 트랜잭션) rủi ro (risk / 위험), but tax and corvée also impose costs. Economic lịch sử (history / 이력) phải giữ both sides: trạng thái (state / 상태) thứ tự (order / 순서) may facilitate exchange while extraction funds army and court.
 
-## 1471 và Champa: trạng thái (state / 상태) sức chứa (capacity / 용량) biến thành territorial power
+## 1471 và Champa: năng lực nhà nước biến thành quyền lực lãnh thổ
 
 Năm **1471**, Lê Thánh Tông dẫn major campaign against Vijaya/Champa, producing a decisive shift in central Vietnam. Chapter này chỉ cần thấy một cơ chế (mechanism / 메커니즘): bureaucratic-fiscal trạng thái (state / 상태) có larger mobilization sức chứa (capacity / 용량) than earlier fragmented courts.
 
 Nhưng không nên kể sự kiện (event / 이벤트) này như empty “mở rộng lãnh thổ”. Nó involved war, population displacement, surviving Cham polities và long-term frontier tương tác (interaction / 상호작용). [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) sẽ xử lý đầy đủ from multiple sides.
 
-## Lam Kinh và Thăng Long: two centers of legitimacy
+## Lam Kinh và Thăng Long: hai trung tâm của tính chính danh
 
 Lê dynasty rules from Thăng Long but keeps **Lam Kinh** as ancestral–memorial center. Đây là useful distinction giữa administrative capital và dynastic sacred homeland.
 

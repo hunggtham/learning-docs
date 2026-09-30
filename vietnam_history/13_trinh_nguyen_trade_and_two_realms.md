@@ -4,7 +4,7 @@
 
 [`12_mac_and_north_south_courts.md`](12_mac_and_north_south_courts.md) kết thúc ở một hệ thống mà nhà Lê đã được phục hồi nhưng quyền lực thực tế không còn tập trung đơn giản trong tay hoàng đế. Ở phía bắc, họ Trịnh trở thành de facto ruler dưới danh nghĩa vua Lê; ở phía nam, họ Nguyễn xây dựng một căn cứ ngày càng tự chủ tại Thuận–Quảng.
 
-Câu hỏi trung tâm của chapter này là: **vì sao một không gian từng nằm trong cùng political tradition lại có thể vận hành lâu dài như hai political economy khác nhau, và vì sao biển, thương mại quốc tế cùng geography miền Trung trở thành một phần của trạng thái (state / 상태) sức chứa (capacity / 용량)?**
+Câu hỏi trung tâm của chương này là: **vì sao một không gian từng nằm trong cùng truyền thống chính trị lại có thể vận hành lâu dài như hai nền kinh tế–chính trị khác nhau, và vì sao biển, thương mại quốc tế cùng địa lý miền Trung trở thành một phần của năng lực nhà nước (state capacity / 국가 역량)?** Hãy giữ các mốc **1527–1771** và chiến tranh Trịnh–Nguyễn **1627–1672** làm trục: từ đó ta nối được quyền lực, nguồn thu, đời sống ven biển và các địa điểm như Hội An, lũy Quảng Bình vào cùng một câu chuyện.
 
 Đây là nơi cần tránh cách kể “hai họ đánh nhau vì tranh quyền” quá đơn giản. Quyền lực cần revenue, manpower, logistics, military technology và administrative networks. Hai realm tồn tại lâu vì mỗi bên dần tạo được những cơ chế riêng để nuôi chiến tranh và quản lý xã hội.
 
@@ -36,13 +36,13 @@ Nguyễn military-fiscal capacity
 
 Điều này không có nghĩa thương mại một mình tạo ra Đàng Trong. Nó nghĩa rằng geography làm thay đổi mix tài nguyên mà trạng thái (state / 상태) có thể khai thác.
 
-## Chiến tranh Trịnh–Nguyễn 1627–1672: logistics trước khi là battle danh sách (list / 목록)
+## Chiến tranh Trịnh–Nguyễn 1627–1672: hậu cần trước khi là danh sách trận đánh
 
 Các cuộc chiến lớn giữa Trịnh và Nguyễn diễn ra nhiều đợt từ **1627 đến 1672**. Thay vì học thuộc từng campaign, hãy hỏi tại sao không bên nào dễ dàng tiêu diệt bên kia.
 
-Đàng Ngoài có population và agrarian cơ sở (base / 기반) lớn hơn ở Red River delta, nhưng muốn tấn công xuống nam phải kéo quân qua một corridor dài, duy trì supply và vượt các defensive line. Đàng Trong có territory hẹp hơn nhưng có thể phòng thủ trên những choke điểm (point / 지점) địa lý phù hợp, đồng thời đầu tư fortification và gunpowder weaponry.
+Đàng Ngoài có dân số và nền nông nghiệp lớn hơn ở đồng bằng sông Hồng, nhưng muốn tấn công xuống nam phải kéo quân qua một hành lang dài, duy trì tiếp tế và vượt các tuyến phòng thủ. Đàng Trong có lãnh thổ hẹp hơn nhưng có thể phòng thủ tại những điểm nghẽn địa lý phù hợp, đồng thời đầu tư vào công sự và vũ khí thuốc súng.
 
-Các lũy ở Quảng Bình gắn với Đào Duy Từ là checkpoint tốt để hiểu **defense-in-depth**. Một bức lũy không tự thắng chiến tranh; nó làm cho attacker phải tăng chi phí (cost / 비용), tập trung quân ở những hướng dự đoán được và phụ thuộc mạnh hơn vào supply line.
+Các lũy ở Quảng Bình gắn với Đào Duy Từ là điểm kiểm tra tốt để hiểu **phòng thủ chiều sâu (defense in depth / 종심 방어)**. Một bức lũy không tự thắng chiến tranh; nó làm cho bên tấn công phải tăng chi phí, tập trung quân ở những hướng dự đoán được và phụ thuộc mạnh hơn vào tuyến tiếp tế.
 
 ```text
 attacker numerical advantage
@@ -56,7 +56,7 @@ defender can survive without conquering north
 
 Kết quả là chiến tranh kéo dài nhưng không tạo decisive unification. Khi active warfare giảm sau 1672, hai political hệ thống (system / 시스템) tiếp tục phát triển theo quỹ đạo khác nhau.
 
-## Đàng Ngoài: court, military government và Red River agrarian cốt lõi (core / 핵심)
+## Đàng Ngoài: triều đình, chính quyền quân sự và nền nông nghiệp sông Hồng
 
 Ở Đàng Ngoài, vua Lê tiếp tục giữ vị trí biểu tượng, trong khi chúa Trịnh xây dựng một apparatus song song đủ mạnh để điều hành military, finance và appointments. Nghiên cứu về institutional cấu trúc (structure / 구조) cho thấy chính quyền Trịnh không đơn giản là một household quân phiệt; nó hấp thụ literati và phát triển administrative routines để duy trì quy tắc (rule / 규칙).
 
@@ -64,11 +64,11 @@ Red River delta vẫn là agrarian cốt lõi (core / 핵심) với population d
 
 Đọc Đàng Ngoài vì vậy cần giữ hai hình ảnh cùng lúc: một cultural-political centre lâu đời quanh Thăng Long và một fiscal-military cấu trúc (structure / 구조) phải liên tục lấy resources từ countryside để duy trì army và elite.
 
-## Đàng Trong: một maritime political economy
+## Đàng Trong: một nền kinh tế chính trị hàng hải
 
-Đàng Trong nổi bật vì mức độ gắn với trade quốc tế. Các chúa Nguyễn khuyến khích commercial contact vì trade đem lại revenue, metal, weapon, luxury good, currency và diplomatic liên kết (connection / 연결).
+Đàng Trong nổi bật vì mức độ gắn với thương mại quốc tế. Các chúa Nguyễn khuyến khích tiếp xúc thương mại vì buôn bán đem lại nguồn thu, kim loại, vũ khí, hàng xa xỉ, tiền tệ và liên kết ngoại giao.
 
-Hội An trở thành một major international cổng (port / 포트), nơi merchant từ Nhật Bản, Trung Hoa, Đông Nam Á và châu Âu tương tác với cục bộ (local / 로컬) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크). UNESCO mô tả Hội An như một trading cổng (port / 포트) hoạt động mạnh từ thế kỷ XV đến XIX và là material bằng chứng (evidence / 증거) rõ về sự kết hợp văn hóa bản địa, Trung Hoa, Nhật Bản và sau đó là châu Âu.
+Hội An trở thành một cảng quốc tế lớn, nơi thương nhân từ Nhật Bản, Trung Hoa, Đông Nam Á và châu Âu tương tác với mạng lưới sản xuất địa phương. UNESCO mô tả Hội An như một cảng thương mại hoạt động mạnh từ thế kỷ XV đến XIX và là bằng chứng vật chất rõ về sự kết hợp văn hóa bản địa, Trung Hoa, Nhật Bản và sau đó là châu Âu.
 
 Điểm quan trọng là trade không nằm ngoài trạng thái (state / 상태). Cổng (port / 포트) chính sách (policy / 정책) có thể tác động trực tiếp tới military sức chứa (capacity / 용량). European firearms, imported metal, ships và tax/customs revenue làm thay đổi balance giữa các regional powers.
 
@@ -120,7 +120,7 @@ Nhưng ở thế kỷ XVII, Quốc ngữ chưa phải mass literacy hệ thống
 
 Do đó thay vì hỏi nhị phân “Việt Nam lúc đó có bị chia đôi không?”, hãy hỏi **cái gì bị chia, cái gì còn chung, và ở tầng (layer / 계층) nào**.
 
-## Di tích và địa điểm nên nối với chapter này
+## Di tích và địa điểm nên nối với chương này
 
 **Hội An** cho thấy maritime commercial hệ thống (system / 시스템). **Thanh Chiêm** gần Hội An gắn với administrative centre của Quảng Nam dinh và mạng (network / 네트워크) truyền giáo–thương mại. **Lũy Thầy/Quảng Bình** giúp đọc geography của Trịnh–Nguyễn warfare. **Phú Xuân–Huế** bắt đầu nổi lên như một political centre của họ Nguyễn và sẽ trở thành key nút (node / 노드) trong chapter Tây Sơn và Nguyễn dynasty.
 

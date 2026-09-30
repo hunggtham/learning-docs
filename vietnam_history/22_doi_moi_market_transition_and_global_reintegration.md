@@ -1,16 +1,16 @@
-# Đổi Mới từ 1986: thị trường (market / 시장) chuyển tiếp (transition / 전이), agriculture và tái hội nhập thế giới
+# Đổi Mới từ 1986: chuyển đổi thị trường, nông nghiệp và tái hội nhập thế giới
 
 ## Điểm tựa và câu hỏi trung tâm
 
-[`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md) kết thúc với một economy chịu đồng thời shortage, inflation, incentive bài toán (problem / 문제) và bên ngoài (external / 외부) ràng buộc (constraint / 제약조건). **Đổi Mới (Renovation)** được chính thức đặt thành hướng lớn tại Đại hội VI năm **1986**, nhưng reform không phải một switch bật từ “plan” sang “thị trường (market / 시장)”.
+[`21_reunification_planning_and_pre_doi_moi_crisis.md`](21_reunification_planning_and_pre_doi_moi_crisis.md) kết thúc với một nền kinh tế đồng thời chịu thiếu hụt, lạm phát, bài toán động lực và ràng buộc bên ngoài. **Đổi Mới (Renovation / 개혁)** được chính thức đặt thành hướng lớn tại Đại hội VI năm **1986**, nhưng cải cách không phải một công tắc chuyển từ “kế hoạch” sang thị trường.
 
-Câu hỏi của chapter này là: **những cơ chế nào thực sự thay đổi coordination của economy, vì sao agriculture phản ứng nhanh, vì sao international tích hợp (integration / 통합) trở thành part của domestic reform, và vì sao growth không đồng nghĩa mọi sector/region thay đổi giống nhau?**
+Câu hỏi của chương này là: **những cơ chế nào thực sự thay đổi cách nền kinh tế phối hợp, vì sao nông nghiệp phản ứng nhanh, vì sao hội nhập quốc tế trở thành một phần của cải cách trong nước, và vì sao tăng trưởng không đồng nghĩa mọi ngành hay vùng thay đổi giống nhau?** Hãy đi từ mốc **1986** qua khoán hộ, ổn định giá, đầu tư nước ngoài, ASEAN và WTO; các chặng này nối chính sách với ruộng đất, khu công nghiệp, đô thị và chênh lệch vùng miền.
 
-Mô hình tư duy (mental model / 사고 모델) cần giữ là **chuyển tiếp (transition / 전이) economy (nền kinh tế chuyển đổi)**: old institution không biến mất ngay, new thị trường (market / 시장) cơ chế (mechanism / 메커니즘) cũng không xuất hiện đồng bộ.
+Mô hình tư duy cần giữ là **nền kinh tế chuyển đổi (transition economy / 전환 경제)**: thiết chế cũ không biến mất ngay, còn cơ chế thị trường mới cũng không xuất hiện đồng bộ.
 
 ## Đổi Mới là tiến trình (process / 프로세스), không phải một ngày
 
-Năm 1986 là turning điểm (point / 지점) về chính sách (policy / 정책) direction. Nhưng nhiều practice market-oriented đã tồn tại trước đó dưới dạng cục bộ (local / 로컬) experiment, household exchange và đặc tả hợp đồng (contract / 계약) workaround. Sau 1986, direction này được mở rộng, institutionalized và kết nối với macroeconomic stabilization.
+Năm 1986 là điểm ngoặt về định hướng chính sách. Nhưng nhiều thực hành hướng thị trường đã tồn tại trước đó dưới dạng thử nghiệm địa phương, trao đổi hộ gia đình và cách vận dụng hợp đồng linh hoạt. Sau 1986, hướng này được mở rộng, thể chế hóa và kết nối với ổn định kinh tế vĩ mô.
 
 Có thể hình dung reform như nhiều tầng (layer / 계층):
 
@@ -54,7 +54,7 @@ Một điểm cần phân biệt là **land quyền sở hữu (ownership / 소�
 
 Đây là example tốt cho institutional economics: effective economic right không chỉ nằm ở label “private/công khai (public / 공개) quyền sở hữu (ownership / 소유권)”, mà ở bundle of rights thực tế.
 
-## Giá cả: price là thông tin (information / 정보) hệ thống (system / 시스템)
+## Giá cả: giá là hệ thống thông tin
 
 Trong planned hệ thống (system / 시스템), administrative price cố định có thể tách xa scarcity. Reform price làm thị trường (market / 시장) tín hiệu (signal / 신호) đóng vai trò lớn hơn.
 
@@ -72,7 +72,7 @@ Key concept là **soft ngân sách (budget / 예산) ràng buộc (constraint / 
 
 SOE reform vì thế là long tiến trình (process / 프로세스), không phải privatization wholesale.
 
-## Foreign Direct Investment: capital đi kèm technology và mạng (network / 네트워크)
+## Đầu tư trực tiếp nước ngoài: vốn đi kèm công nghệ và mạng lưới
 
 Luật Đầu tư nước ngoài năm **1987** mở khung phần mềm (framework / 프레임워크) mới cho foreign direct investment (FDI). FDI quan trọng không chỉ vì “mang tiền vào”. Một foreign factory có thể mang môi trường vận hành (production / 운영 환경) tiêu chuẩn (standard / 표준), machinery, supplier yêu cầu (requirement / 요구사항), management practice và export mạng (network / 네트워크).
 
@@ -193,7 +193,7 @@ Factory zone, bộ chứa (container / 컨테이너) tuyến (route / 경로), w
 
 Một smartphone thành phần (component / 컴포넌트) xuất khẩu không bắt đầu ở cổng (port / 포트); nó bắt đầu từ industrial land, electricity, worker commute, supplier, customs dữ liệu (data / 데이터) và shipping schedule.
 
-## Ranh giới (boundary / 경계): Đổi Mới không đồng nghĩa trạng thái (state / 상태) rút khỏi economy
+## Ranh giới: Đổi Mới không đồng nghĩa nhà nước rút khỏi nền kinh tế
 
 Một misconception phổ biến là Đổi Mới = “chuyển sang capitalism” theo nghĩa trạng thái (state / 상태) biến mất. Thực tế Việt Nam phát triển một **socialist-oriented thị trường (market / 시장) economy**, trong đó thị trường (market / 시장) cơ chế (mechanism / 메커니즘) mở rộng nhưng trạng thái (state / 상태) vẫn giữ regulatory, planning và quyền sở hữu (ownership / 소유권) roles đáng kể.
 

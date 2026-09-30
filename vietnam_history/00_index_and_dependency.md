@@ -149,6 +149,24 @@ Recommended phụ thuộc (dependency / 의존성):
 
 Không dùng chronology 31 thay cho explanatory chapter. Không dùng UNESCO/heritage label trong 33 như proof cho mọi legend.
 
+## Tuyến (route / 경로) 5 — Bối cảnh tích hợp (integrated context / 통합 맥락): 38
+
+[`38_period_context_economy_society_places.md`](38_period_context_economy_society_places.md) là lớp đọc song song với `01`–`23`. Mỗi phần trong đó trả lời bốn câu hỏi rồi bàn giao về chương sở hữu (owner chapter / 소유 장) cụ thể:
+
+```text
+anchor date
+   ↓
+economy + household life
+   ↓
+regional context + external actors
+   ↓
+place / landscape / material evidence
+   ↓
+chronology chapter → thematic chapter → field guide
+```
+
+`38` không phải một mạch thời gian (timeline / 연표) rút gọn. Nó là bộ định tuyến (router / 라우터) để người học không dừng ở “ai thắng ai”, cũng không nhảy thẳng tới di tích mà quên điều kiện kinh tế–xã hội tạo ra địa điểm đó.
+
 ## Những anchor thời gian cần nhớ
 
 Không cần học hàng trăm năm như password. Trước hết giữ các coordinate:
@@ -233,7 +251,7 @@ A traditional narrative can be historically important without being literal veri
 
 ### Nếu muốn hiểu toàn bộ lịch sử
 
-01 → 23, sau đó 24 → 30, rồi 34 → 37; cuối cùng dùng 31–33 để rà soát (review / 검토)/trường dữ liệu (field / 필드) học tập (learning / 학습).
+38 → 01 → 23, sau đó 24 → 30, rồi 34 → 37; cuối cùng dùng 31–33 để rà soát (review / 검토)/trường dữ liệu (field / 필드) học tập (learning / 학습).
 
 ### Nếu muốn hiểu miền Trung/Champa
 
@@ -253,12 +271,12 @@ A traditional narrative can be historically important without being literal veri
 
 ### Nếu đi du lịch/di tích và muốn hiểu tại chỗ
 
-01 → relevant timeline chapter → relevant regional deep dive → 30 → 33.
+38 → chương niên đại tương ứng → đào sâu khu vực tương ứng → 30 → 33.
 
 ### Nếu cần tra nhanh một mốc
 
-31 → quay lại chapter đơn vị sở hữu (owner / 오너); không dừng ở 31.
+31 → quay lại chương đơn vị sở hữu (owner / 오너); không dừng ở 31.
 
 ## Bàn giao
 
-Bắt đầu với [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md), rồi [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md). Sau timeline 01–23, dùng 24–30 để rebuild structural lịch sử (history / 이력) và 34–37 để thay modern-national map bằng regional/mạng (network / 네트워크) map trước khi rà soát (review / 검토) bằng 31–33.
+Bắt đầu với [`38_period_context_economy_society_places.md`](38_period_context_economy_society_places.md) để có bản đồ tư duy (mental map / 멘털 맵), rồi [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md) và [`02_geography_and_historical_space.md`](02_geography_and_historical_space.md). Sau timeline 01–23, dùng 24–30 để rebuild structural lịch sử (history / 이력) và 34–37 để thay modern-national map bằng regional/mạng (network / 네트워크) map trước khi rà soát (review / 검토) bằng 31–33.

@@ -1,6 +1,6 @@
 # Địa lý và không gian lịch sử: trước khi nhớ triều đại, hãy dựng bản đồ trong đầu
 
-## Điểm tựa từ chapter trước
+## Điểm tựa từ chương trước
 
 [`01_how_to_read_vietnamese_history.md`](01_how_to_read_vietnamese_history.md) đã cho hai coordinate: bằng chứng (evidence / 증거) và chronology. Chapter này thêm coordinate thứ ba là **historical geography (địa lý lịch sử)**. Câu hỏi trung tâm: vì sao cùng một lãnh thổ nhìn trên bản đồ hiện đại lại chứa nhiều vùng lịch sử có lô-gic (logic / 논리) kinh tế, giao thông và chính trị rất khác nhau?
 

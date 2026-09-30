@@ -1,4 +1,4 @@
-# Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ
+# Nhà Lý: Thăng Long, củng cố nhà nước (state consolidation / 국가 강화), Phật giáo (Buddhism / 불교) và kinh tế châu thổ
 
 ## Điểm tựa và câu hỏi trung tâm
 
@@ -6,7 +6,7 @@
 
 Câu hỏi trung tâm bây giờ là: **khi một trạng thái (state / 상태) không còn chỉ lo tồn tại, nó quy mô (scale / 규모) administration, capital, agriculture, legitimacy và frontier như thế nào?**
 
-Nhà Lý thường được mô tả như thời kỳ “xây dựng nhà nước phong kiến tập quyền”. Cụm này useful nhưng dễ quá phẳng. Scholarship đã tranh luận mức độ central điều khiển (control / 제어) thực sự mạnh tới đâu; village và regional powers vẫn có autonomy đáng kể. Vì vậy ta nên nói **trạng thái (state / 상태) consolidation (củng cố nhà nước)** thay vì giả định một bureaucracy hiện đại phủ đều lãnh thổ.
+Nhà Lý thường được mô tả như thời kỳ “xây dựng nhà nước phong kiến tập quyền”. Cụm này hữu ích nhưng dễ quá phẳng. Nghiên cứu còn tranh luận mức độ trung tâm điều khiển (control / 제어) thực sự mạnh tới đâu; làng và thế lực vùng vẫn có quyền tự chủ đáng kể. Vì vậy ta nên nói **củng cố nhà nước (state consolidation / 국가 강화)** thay vì giả định một bộ máy quan liêu hiện đại phủ đều lãnh thổ. Mốc 1010, nền lúa nước–thủy lợi, Phật giáo triều đình, bối cảnh Tống–Champa và Hoàng thành Thăng Long phải được đọc cùng nhau.
 
 ## 1009–1010: triều đại mới và quyết định rời Hoa Lư
 
@@ -30,11 +30,11 @@ Thăng Long becomes durable political center
 
 ## Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay
 
-Khu trung tâm **Hoàng thành Thăng Long** ngày nay là một rare place để thấy political geography kéo dài nhiều thế kỷ. UNESCO nhấn mạnh site được Lý xây dựng ở thế kỷ XI trên nền một fortress thời trước và tiếp tục là center of power qua nhiều dynasty.
+Khu trung tâm **Hoàng thành Thăng Long** ngày nay là một địa điểm hiếm để thấy địa lý quyền lực kéo dài nhiều thế kỷ. UNESCO nhấn mạnh nơi này được nhà Lý xây dựng ở thế kỷ XI trên nền một pháo đài thời trước và tiếp tục là trung tâm quyền lực qua nhiều triều đại.
 
 Khu khảo cổ **18 Hoàng Diệu** đặc biệt quan trọng vì các architectural foundation, drainage, ceramics và other remains nằm thành nhiều lớp. Đây là vật lý (physical / 물리적) bằng chứng (evidence / 증거) của continuity + rebuilding.
 
-Nếu đứng tại site, câu hỏi tốt là: capital cần palace, wall, water management, lưu trữ (storage / 저장소), workshop và road organization ra sao? Một royal city không chỉ là nơi vua ở; nó là **coordination hạ tầng (infrastructure / 인프라)**.
+Nếu đứng tại di tích, câu hỏi tốt là: kinh đô cần cung điện, tường thành, quản lý nước, kho chứa, xưởng và tổ chức đường sá ra sao? Một đô thị hoàng gia không chỉ là nơi vua ở; nó là **hạ tầng phối hợp (coordination infrastructure / 조정 인프라)**.
 
 ## Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)
 
@@ -54,7 +54,7 @@ more stable surplus when coordination works
 larger urban / military / religious population can be supported
 ```
 
-Hydraulic công việc (work / 작업) không tự động chứng minh absolute centralization. Village communities và regional actors có thể đóng vai trò lớn trong construction và maintenance.
+Công việc thủy lợi (hydraulic work / 수리 사업) không tự động chứng minh tập quyền tuyệt đối. Cộng đồng làng và các lực lượng vùng có thể đóng vai trò lớn trong xây dựng và bảo trì.
 
 ## Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)
 
@@ -64,7 +64,7 @@ Vì vậy khi nói “ruộng đất nhà nước” hay “ruộng tư”, cầ
 
 Land là economic cơ sở (base / 기반) nhưng cũng là political quan hệ (relation / 관계). Một ruler không cần sở hữu literal mọi trường dữ liệu (field / 필드); trạng thái (state / 상태) power thể hiện qua khả năng claim tax/dịch vụ (service / 서비스) và recognize cục bộ (local / 로컬) rights.
 
-## Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution
+## Phật giáo: tôn giáo, tính chính danh, mạng lưới và thiết chế
 
 Thời Lý, **Buddhism (Phật giáo)** có vị trí rất lớn trong court culture và political legitimacy. Monks không chỉ làm ritual; monasteries là places of học tập (learning / 학습), landholding, charity, văn bản (text / 텍스트) circulation và elite networking.
 
@@ -76,7 +76,7 @@ Tuy nhiên gọi Buddhism là “quốc giáo” có thể làm người đọc 
 
 Năm **1070**, Văn Miếu được dựng tại Thăng Long; **1075** thường được xem là mốc khoa thi đầu tiên của triều Lý; **1076** gắn với Quốc Tử Giám.
 
-Điểm cần hiểu không phải memorizing three dates mà là cơ chế (mechanism / 메커니즘): một expanding trạng thái (state / 상태) cần officials có dùng chung (shared / 공유) literacy và political vocabulary. Examination/education giúp ruler recruit ngoài narrow kin mạng (network / 네트워크), dù early hệ thống (system / 시스템) vẫn small và elite-dominated.
+Điểm cần hiểu không phải học thuộc ba ngày mà là cơ chế: một nhà nước đang mở rộng cần quan lại cùng sử dụng năng lực đọc viết và vốn từ chính trị. Khoa cử và giáo dục giúp người cai trị tuyển người ngoài mạng lưới họ hàng hẹp, dù hệ thống ban đầu vẫn nhỏ và thiên về tinh hoa.
 
 **Literacy chuỗi xử lý (pipeline / 파이프라인)** có thể nhìn như:
 
@@ -122,13 +122,13 @@ Cách an toàn hơn là nhìn centralization như **độ dốc (gradient / 기�
 
 Điều này không làm nhà Lý “yếu”. Nó chỉ giúp ta dùng đúng mô hình (model / 모델) cho premodern polity.
 
-## Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?
+## Nếu đi Hà Nội hôm nay, nối chương này vào đâu?
 
 **Hoàng thành Thăng Long**: đọc political layers và urban hạ tầng (infrastructure / 인프라). **Văn Miếu – Quốc Tử Giám**: đọc lịch sử (history / 이력) của literate elite và trạng thái (state / 상태) education, nhưng nhớ nhiều buildings hiện nay thuộc later reconstruction. **Chùa Một Cột** và các Buddhist monuments: dùng để thấy court Buddhism, song không coi kiến trúc (architecture / 아키텍처) hiện tồn là unchanged từ thế kỷ XI.
 
 Đi quanh hồ, sông và old urban cốt lõi (core / 핵심) cũng nên nhớ Thăng Long đã sống cùng water hệ thống (system / 시스템) trong một millennium. Hiện đại (modern / 현대적) Hanoi che lấp nhiều old waterways, nên historical map rất useful để recover geography.
 
-## Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?
+## Tại sao nhà Trần là chương tiếp theo chứ không phải chỉ “đổi triều”?
 
 Đến đầu thế kỷ XIII, nhà Lý đối mặt court instability, regional military power và succession bài toán (problem / 문제). Nhà Trần lên thay không xóa Thăng Long, Buddhist culture hay agrarian cơ sở (base / 기반). Họ inherit hệ thống (system / 시스템) rồi reorganize elite and military relations.
 
