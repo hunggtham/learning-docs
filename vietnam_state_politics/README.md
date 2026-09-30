@@ -6,7 +6,7 @@
 
 ## Phạm vi và câu hỏi trung tâm
 
-Thư viện trả lời một chuỗi câu hỏi: Việt Nam tổ chức quyền lực nhà nước theo nguyên tắc nào; Đảng Cộng sản Việt Nam và bộ máy Nhà nước khác nhau ở đâu; Quốc hội, Chủ tịch nước, Chính phủ, Tòa án nhân dân, Viện kiểm sát nhân dân, Kiểm toán nhà nước và chính quyền địa phương làm gì; một quyết định chính trị được chuyển thành luật, ngân sách, chính sách và hành chính ra sao; và vì sao những cấu trúc đó ảnh hưởng trực tiếp đến thuế, đầu tư công, tín dụng, doanh nghiệp, thị trường lao động và tăng trưởng.
+Thư viện trả lời một chuỗi câu hỏi: Việt Nam tổ chức quyền lực nhà nước theo nguyên tắc nào; Đảng Cộng sản Việt Nam và bộ máy Nhà nước khác nhau ở đâu; Quốc hội, Chủ tịch nước, Chính phủ, Tòa án nhân dân, Viện kiểm sát nhân dân, Kiểm toán nhà nước và chính quyền địa phương làm gì; người dân lựa chọn cơ quan đại diện theo cơ chế nào; một định hướng chính trị được chuyển thành chính sách, luật, ngân sách và hành chính ra sao; và vì sao những cấu trúc đó ảnh hưởng trực tiếp đến thuế, đất đai, đầu tư công, tín dụng, doanh nghiệp, thị trường lao động và tăng trưởng.
 
 Các khái niệm so sánh được dùng như **công cụ đối chiếu**, không phải bảng xếp hạng thể chế. Hàn Quốc giúp thấy rõ mô hình tổng thống và phân quyền giữa lập pháp–hành pháp–tư pháp; Hoa Kỳ giúp hiểu hệ thống liên bang và cơ chế phân lập quyền lực (separation of powers / 권력분립); Trung Quốc giúp đối chiếu một hệ thống xã hội chủ nghĩa có đảng cộng sản lãnh đạo nhưng cấu trúc nhà nước và quy mô phân cấp khác Việt Nam.
 
@@ -21,7 +21,12 @@ Các khái niệm so sánh được dùng như **công cụ đối chiếu**, kh
 5. [Chính quyền địa phương hai cấp sau cải cách 2025](04_local_government_two_level_model.md)
 6. [Nhà nước đi vào nền kinh tế như thế nào?](05_state_economy_budget_money_and_public_investment.md)
 7. [So sánh có chọn lọc: Việt Nam – Hàn Quốc – Hoa Kỳ – Trung Quốc](06_comparative_models_korea_us_china.md)
-8. [Nguồn chính thức và chính sách cập nhật](SOURCES.md)
+8. [Bầu cử, đại diện và sự hình thành cơ quan quyền lực](07_elections_representation_and_participation.md)
+9. [Từ định hướng đến chính sách, luật và ngân sách](08_policy_lawmaking_and_budget_cycle.md)
+10. [Giám sát, thanh tra, kiểm toán và trách nhiệm giải trình](09_oversight_inspection_audit_and_accountability.md)
+11. [Mô hình kinh tế, đất đai, tài sản công và vốn nhà nước](10_economic_system_land_public_assets_and_state_capital.md)
+12. [Glossary Việt–Anh–Hàn](GLOSSARY.md)
+13. [Nguồn chính thức và chính sách cập nhật](SOURCES.md)
 
 ## Mô hình tư duy đầu tiên
 
@@ -50,6 +55,6 @@ Khi thấy một hộp so sánh, hãy hỏi: “khác biệt này giúp mình hi
 
 ## Ranh giới
 
-Thư viện mô tả cấu trúc, thẩm quyền, quy trình và tác động thể chế. Nó không xếp hạng chế độ, đảng phái, nhân vật hay khuyến nghị lựa chọn chính trị. Những nội dung nhạy theo thời gian như nhân sự đương nhiệm, số lượng đơn vị hành chính, cơ cấu bộ/ngành hoặc quy định ngân sách phải được kiểm tra lại ở [`SOURCES.md`](SOURCES.md) trước khi sử dụng.
+Thư viện mô tả cấu trúc, thẩm quyền, quy trình và tác động thể chế. Nó không xếp hạng chế độ, đảng phái, nhân vật hay khuyến nghị lựa chọn chính trị. Những nội dung nhạy theo thời gian như nhân sự đương nhiệm, số lượng đơn vị hành chính, cơ cấu bộ/ngành, luật ngân sách hoặc quy định phân quyền phải được kiểm tra lại ở [`SOURCES.md`](SOURCES.md) trước khi sử dụng.
 
 > **Bàn giao:** Sau khi có bản đồ tổng thể, đọc [01](01_constitution_political_system_and_state_power.md) để hiểu vì sao không nên áp trực tiếp sơ đồ “tam quyền phân lập” của Hoa Kỳ hay Hàn Quốc vào Việt Nam.
