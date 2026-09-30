@@ -68,6 +68,7 @@ Các tuyến (route / 경로) nâng cao không phải thứ tự bắt buộc. C
 
 ## Kiến thức (knowledge / 지식) connections
 
+- [Thinking Toolkit](../thinking/README.md) chuyển logic, epistemology, uncertainty/calibration và model critique thành workflow thực hành cho claim evaluation, causal questions, forecasting và decision-making; Philosophy vẫn là canonical owner của các nền tảng conceptual.
 - [Philosophy, science, mathematics và AI](90_connections/00_philosophy_science_mathematics_and_ai.md) nối epistemology, mô hình (model / 모델), xác suất (probability / 확률), computation và AI.
 - [Philosophy, psychology, mind và society](90_connections/01_philosophy_psychology_mind_and_society.md) nối consciousness, định danh (identity / 식별자), moral psychology, institutions và technology.
 - [Mathematics](../mathematics/README.md) cung cấp lô-gic (logic / 논리), xác suất (probability / 확률), bất định (uncertainty / 불확실성) và formal các mô hình (models / 모델들).

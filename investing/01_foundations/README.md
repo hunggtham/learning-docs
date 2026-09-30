@@ -40,6 +40,12 @@ Trước khi đi tới portfolio optimization, bạn cũng cần tách được 
 
 Để chuyển từ đọc sang tự làm, hoàn thành **mô-đun (module / 모듈) 1 — Foundations** trong [Advanced Practice Workbook](../ADVANCED_PRACTICE_WORKBOOK.md). Đầu ra tối thiểu phải có `portfolio_ips.md`, ma trận căng thẳng và một kiểm thử ngược chỉ ra điều kiện làm kế hoạch thất bại.
 
+### Thinking Toolkit bridge
+
+Khi vấn đề không còn là “cơ chế đầu tư hoạt động thế nào?” mà chuyển thành “với uncertainty này tôi nên ra quyết định thế nào?”, dùng [Thinking Toolkit](../../thinking/README.md) như lớp reasoning chung. Các cầu nối trực tiếp nhất là [Probability](../../thinking/probability/README.md) → [Expected Value](../../thinking/expected-value/README.md) → [Risk](../../thinking/risk/README.md) → [Decision Making](../../thinking/decision-making/README.md). Để luyện thay vì chỉ đọc, dùng [calibration/Bayesian updating](../../thinking/practice/01_calibration_and_bayesian_updating.md), [sensitivity analysis](../../thinking/practice/02_sensitivity_analysis_and_uncertainty_decomposition.md), [scenario stress testing](../../thinking/practice/03_scenario_planning_and_stress_testing.md) và [decision journal/postmortem](../../thinking/practice/04_decision_journal_and_postmortem.md).
+
+Ranh giới ownership vẫn giữ nguyên: `investing/` sở hữu market/asset/portfolio mechanics; `thinking/` chỉ cung cấp công cụ reasoning có thể tái sử dụng ở nhiều domain.
+
 Sau khi hoàn thành, chuyển sang [02 — Các nhóm tài sản](../02_asset_classes/README.md).
 
 > **Bàn giao:** Sau **Bài tập tích hợp**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 MASTER FOUNDATIONS AND PORTFOLIO](./00_MASTER_FOUNDATIONS_AND_PORTFOLIO.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.

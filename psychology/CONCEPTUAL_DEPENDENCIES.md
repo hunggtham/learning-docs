@@ -1,6 +1,6 @@
 # Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)
 
-> **Mạch đọc:** Đặt **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. Trục khoa học nền** sang **2. Brain & Mind**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** README của Psychology là owner của bản đồ khái niệm. File này không đặt ra thứ tự học cứng; nó cho thấy mỗi nhánh dựa trên giả định nào và khi nào nên quay về nguồn upstream trước khi đọc một chủ đề downstream.
 
 
 Tệp (file / 파일) này mô tả **phụ thuộc (dependency / 의존성) về khái niệm**, không phải thứ tự học cứng. Mục tiêu là tránh đọc một concept downstream mà bỏ qua các giả định (assumptions / 가정들) ở upstream.
@@ -25,7 +25,7 @@ graph TD
 Ý nghĩa của đồ thị (graph / 그래프) này: trước khi kết luận một tác động (effect / 효과) “real”, cần biết construct được đo ra sao, phân tích (analysis / 분석) dựa các giả định (assumptions / 가정들) nào, nhân quả (causal / 인과적) question có hợp lệ không và kết quả (result / 결과) có đứng vững qua replication/synthesis không.
 
 
-> **Chuyển mạch:** Từ **1. Trục khoa học nền**, ta sang **2. Brain & Mind** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi xác định cách Psychology tạo và đánh giá bằng chứng, phần Brain & Mind đưa những nguyên tắc đó xuống mức hệ thần kinh, cảm giác và chú ý.
 
 ## 2. Brain & Mind
 
@@ -47,7 +47,7 @@ graph TD
 Neuroscience là một mức (level / 수준) of phân tích (analysis / 분석), không phải “final explanation” cho mọi psychological construct.
 
 
-> **Chuyển mạch:** Từ **2. Brain & Mind**, ta sang **3. học tập (learning / 학습) & Cognition** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Não và các quá trình nền giải thích điều kiện của hành vi; phần Learning & Cognition theo dõi cách ký ức, suy luận và ngôn ngữ biến điều kiện đó thành năng lực nhận thức.
 
 ## 3. học tập (learning / 학습) & Cognition
 
@@ -78,8 +78,10 @@ Durable learning ngày mai
 
 Vì vậy applied education phải dựa vào bộ nhớ (memory / 메모리)/transfer bằng chứng (evidence / 증거), không chỉ cảm giác học “trôi chảy”.
 
+Khi chuyển từ câu hỏi mô tả tâm lý — con người thường suy nghĩ, sai lệch hoặc phản ứng thế nào — sang câu hỏi thực hành “tôi nên xử lý uncertainty và ra quyết định thế nào?”, dùng [Thinking Toolkit](../thinking/README.md) làm lớp tích hợp. Cầu nối chính là [Cognitive Bias](../thinking/cognitive-bias/README.md) → [Probability](../thinking/probability/README.md) → [Decision Making](../thinking/decision-making/README.md); [calibration/Bayesian practice](../thinking/practice/01_calibration_and_bayesian_updating.md) và [decision journal/postmortem](../thinking/practice/04_decision_journal_and_postmortem.md) biến các concept này thành feedback loop. Psychology vẫn là canonical owner của cơ chế tâm lý và evidence; `thinking/` không dùng bias label như bằng chứng rằng một kết luận sai.
 
-> **Chuyển mạch:** Từ **3. học tập (learning / 학습) & Cognition**, ta sang **4. Development, self và xã hội (social / 사회적) world** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+> **Chuyển mạch:** Các cơ chế nhận thức không tồn tại tách khỏi thời gian sống và quan hệ xã hội. Phần Development, Self & Social World đặt chúng vào vòng đời, bản sắc và nhóm.
 
 ## 4. Development, self và xã hội (social / 사회적) world
 
@@ -104,7 +106,7 @@ graph TD
 Attachment không nên dùng như internet personality label. định danh (identity / 식별자), culture và family ngữ cảnh (context / 맥락) có bidirectional influence; không có một nhân quả (causal / 인과적) arrow duy nhất giải thích development.
 
 
-> **Chuyển mạch:** Từ **4. Development, self và xã hội (social / 사회적) world**, ta sang **5. Stress, emotion và regulation** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi bối cảnh xã hội và phát triển tạo ra yêu cầu, stress và emotion mô tả cách hệ thống huy động rồi điều chỉnh nguồn lực để đáp ứng yêu cầu đó.
 
 ## 5. Stress, emotion và regulation
 
@@ -128,7 +130,7 @@ Applied regulation content phải giữ ranh giới (boundary / 경계) giữa:
 - self-help claim chưa có bằng chứng (evidence / 증거).
 
 
-> **Chuyển mạch:** Từ **5. Stress, emotion và regulation**, ta sang **6. Mental Health** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Regulation cho biết một người thích nghi với áp lực ra sao; Mental Health dùng khung đó để phân biệt distress, impairment và các mức hỗ trợ mà không biến một triệu chứng thành chẩn đoán.
 
 ## 6. Mental Health
 
@@ -150,7 +152,7 @@ graph TD
 Diagnosis là classification/suy luận (inference / 추론) công cụ (tool / 도구), không phải định danh (identity / 식별자) sentence. Treatment bằng chứng (evidence / 증거) phải được tách khỏi theoretical truth của trường phái.
 
 
-> **Chuyển mạch:** Từ **6. Mental Health**, ta sang **7. Historical Schools** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Các khái niệm sức khỏe tâm thần hiện nay có lịch sử hình thành. Historical Schools giúp đọc các trường phái như những mô hình cạnh tranh, mỗi mô hình có giả định và giới hạn riêng.
 
 ## 7. Historical Schools
 
@@ -177,7 +179,7 @@ Modern scientific validation
 Freud, Adler và Jung phải được đọc qua [[EVIDENCE_STATUS_GUIDE]] và [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
 
-> **Chuyển mạch:** Từ **7. Historical Schools**, ta sang **8. Applied Psychology** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi đã thấy mỗi trường phái chọn một cách mô tả vấn đề, Applied Psychology chuyển câu hỏi sang việc dùng bằng chứng đó trong giáo dục, công việc, sức khỏe và đời sống.
 
 ## 8. Applied Psychology
 
@@ -196,8 +198,10 @@ graph TD
 
 Ứng dụng chỉ nên mạnh bằng upstream bằng chứng (evidence / 증거) của nó. Một practical recommendation không được nâng status chỉ vì nghe hợp lý hoặc dễ nhớ.
 
+Với negotiation và joint decision, có thể nối tiếp sang case [Negotiation, Bargaining & Conflict](../thinking/90_connections/06_negotiation_bargaining_and_conflict.md) để ghép psychological behavior với incentives, game theory, information asymmetry, BATNA/opportunity cost và update rule. Case này là integration layer; nó không thay thế evidence về cognition, emotion hay social behavior ở Psychology.
 
-> **Chuyển mạch:** Từ **8. Applied Psychology**, ta sang **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+
+> **Chuyển mạch:** Ứng dụng chỉ đáng tin khi biết mình đang dựa vào loại bằng chứng nào. Phần Five-level Evidence Dependency đặt các quyết định ứng dụng lên một thang kiểm chứng rõ hơn.
 
 ## 9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)
 
@@ -214,7 +218,7 @@ Historical theory
 Một chapter có thể chứa nhiều mức đồng thời. Status phải gắn vào **claim**, không gắn cứng vào toàn bộ topic.
 
 
-> **Chuyển mạch:** Từ **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)**, ta sang **10. cốt lõi (core / 핵심) điều hướng (navigation / 내비게이션)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Thang bằng chứng cho biết độ chắc của một kết luận; phần Core Navigation biến nhận định đó thành cách chọn đường đọc và tránh nhảy cóc prerequisite.
 
 ## 10. cốt lõi (core / 핵심) điều hướng (navigation / 내비게이션)
 
@@ -224,7 +228,7 @@ Một chapter có thể chứa nhiều mức đồng thời. Status phải gắn
 - Historical ngữ cảnh (context / 맥락): [[00_foundations/01_history_and_major_perspectives]] → [[90_connections/05_adler_individual_psychology_in_context]] / [[90_connections/00_freud_jung_and_depth_psychology_in_context]] → [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
 
-> **Chuyển mạch:** Từ **10. cốt lõi (core / 핵심) điều hướng (navigation / 내비게이션)**, ta sang **11. quy tắc (rule / 규칙) khi tạo chapter mới** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Sau khi biết cách điều hướng các owner hiện có, mục cuối đặt ra tiêu chí để thêm chapter mới mà không tạo duplicate hoặc phá dependency graph.
 
 ## 11. quy tắc (rule / 규칙) khi tạo chapter mới
 

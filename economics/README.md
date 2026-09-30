@@ -52,6 +52,7 @@ Applied chapter thêm incidence và scale-up. Historical chapter thêm enforceme
 
 ## Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)
 
+- [Thinking Toolkit](../thinking/README.md): lớp thực hành để mang opportunity cost, incentives, game theory, probability, expected value, risk, forecasting và systems thinking sang các quyết định/case ngoài chapter Economics mà không duplicate economic theory.
 - [Mathematics](../mathematics/README.md): calculus, tối ưu hóa (optimization / 최적화), xác suất (probability / 확률)/statistics, tuyến tính (linear / 선형) algebra và dynamical các hệ thống (systems / 시스템들).
 - [World History](../world_history/README.md) + [Korean History](../korean_history/README.md): chronology, actors, wars và institutional chuỗi (sequence / 시퀀스); Economics không duplicate timeline.
 - [Psychology](../psychology/README.md): bounded rationality, hành vi (behavior / 동작), salience, expectations và decision-making.
