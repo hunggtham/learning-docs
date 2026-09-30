@@ -1,68 +1,60 @@
 # Xác suất → hiệu chuẩn → quyết định và rủi ro
 
-> **Mạch đọc:** Chapter này không tạo một lĩnh vực (domain / 도메인) “decision science” mới. Nó là tuyến liên kết (connection route / 연결 경로) nối nền xác suất (probability / 확률) và thống kê (statistics / 통계) đã có trong Mathematics với đo lường bằng chứng (evidence / 증거), đánh giá mô hình (model evaluation / 모델 평가) và quyết định dưới bất định (decision under uncertainty / 불확실성하 의사결정). Nếu chưa chắc về xác suất có điều kiện (conditional probability / 조건부 확률), kỳ vọng (expectation / 기댓값) hoặc phân phối xác suất (probability distribution / 확률 분포), nên đọc [xác suất có điều kiện và Bayes](../06_probability_statistics/02_conditional_probability_and_bayes.md), [kỳ vọng và phương sai](../06_probability_statistics/04_expectation_variance_and_limit_laws.md) và [thống kê suy luận](../06_probability_statistics/05_descriptive_and_inferential_statistics.md) trước.
+> **Mạch đọc:** Chapter này là tuyến liên kết giữa xác suất, thống kê và quyết định dưới bất định; nó không tạo thêm một domain “decision science”. Nếu chưa chắc về xác suất có điều kiện (conditional probability / 조건부 확률), kỳ vọng (expectation / 기댓값) hoặc phân phối xác suất (probability distribution / 확률분포), đọc trước [xác suất có điều kiện và Bayes](../06_probability_statistics/02_conditional_probability_and_bayes.md), [kỳ vọng và phương sai](../06_probability_statistics/04_expectation_variance_and_limit_laws.md) và [thống kê suy luận](../06_probability_statistics/05_descriptive_and_inferential_statistics.md).
 
-Câu hỏi trung tâm của chapter là: **một con số xác suất tốt trở thành một quyết định tốt bằng cách nào?** Xác suất mô tả mức độ bất định; hiệu chuẩn (calibration / 보정) kiểm tra xem các xác suất đó có khớp với tần suất quan sát hay không; hàm mất mát (loss function / 손실 함수), tiện ích (utility / 효용) và ràng buộc (constraint / 제약조건) chuyển niềm tin thành hành động. Vì vậy đường đi đúng không phải `prediction → action`, mà là:
+Câu hỏi trung tâm là: **một xác suất tốt trở thành một quyết định tốt bằng cách nào?** Xác suất mô tả bất định; hiệu chuẩn (calibration / 보정) kiểm tra mức xác suất có phù hợp với tần suất thực tế hay không; hàm mất mát (loss function / 손실함수), tiện ích (utility / 효용) và ràng buộc (constraint / 제약조건) mới chuyển niềm tin thành hành động.
 
 ```text
-uncertain world
-→ evidence
-→ probability estimate
-→ calibration + discrimination check
-→ consequences / costs / utility
-→ decision threshold or policy
-→ observed outcome
-→ feedback and recalibration
+thế giới bất định
+→ bằng chứng
+→ ước lượng xác suất
+→ kiểm hiệu chuẩn + khả năng phân biệt
+→ hậu quả / chi phí / tiện ích
+→ ngưỡng hoặc chính sách quyết định
+→ kết quả thực tế
+→ phản hồi và hiệu chuẩn lại
 ```
 
-## 1. Xác suất là biểu diễn của bất định, chưa phải quyết định
+## 1. Xác suất chưa phải hành động
 
-Một dự báo xác suất (probabilistic forecast / 확률 예측) như “xác suất xảy ra sự kiện là 70%” không nói trực tiếp ta nên làm gì. Nó chỉ mô tả niềm tin định lượng về một biến cố. Hai người có cùng xác suất 70% vẫn có thể chọn hành động khác nhau nếu hậu quả, mức chịu rủi ro, ngân sách hoặc ràng buộc khác nhau.
+Một dự báo 70% chỉ nói mức bất định về một biến cố. Hai người có cùng xác suất vẫn có thể chọn khác nhau nếu hậu quả, ngân sách, khả năng chịu rủi ro hoặc ràng buộc khác nhau.
 
-Đây là ranh giới quan trọng giữa **suy luận (inference / 추론)** và **quyết định (decision / 의사결정)**. Suy luận hỏi “điều gì có khả năng đúng?”. Quyết định hỏi “với những gì ta biết và các hậu quả có thể xảy ra, hành động nào phù hợp với mục tiêu?”. Nhầm hai câu hỏi làm người học dễ biến một dự báo tốt thành một quy tắc hành động máy móc.
+Đây là ranh giới giữa **suy luận (inference / 추론)** và **quyết định (decision / 의사결정)**:
 
-Ví dụ, một hệ thống dự báo 10% khả năng giao dịch là gian lận. Nếu chặn nhầm một giao dịch hợp lệ chỉ gây một ít ma sát, ngưỡng hành động có thể thấp. Nếu chặn nhầm làm mất khách hàng lớn hoặc tạo nghĩa vụ pháp lý, cùng xác suất 10% có thể chưa đủ để hành động. Ta cần một lớp bổ sung: chi phí và lợi ích của mỗi kết quả.
+```text
+suy luận: điều gì có khả năng đúng?
+quyết định: với xác suất đó và hậu quả tương ứng, nên làm gì?
+```
 
-> **Chuyển mạch:** Trước khi tối ưu hành động, cần biết xác suất đầu vào có đáng tin không. Đó là vai trò của hiệu chuẩn (calibration / 보정).
+Ví dụ một giao dịch có 10% khả năng gian lận. Nếu chặn nhầm giao dịch hợp lệ chỉ gây ít chi phí, ngưỡng chặn có thể thấp. Nếu chặn nhầm làm mất khách hàng hoặc tạo trách nhiệm pháp lý lớn, cùng xác suất 10% có thể chưa đủ để hành động.
+
+> **Chuyển mạch:** Trước khi dùng xác suất để chọn hành động, phải biết con số xác suất đó có đáng tin không.
 
 ## 2. Hiệu chuẩn trả lời “70% có thật sự giống 70% không?”
 
-Một mô hình dự báo được **hiệu chuẩn tốt (well-calibrated / 잘 보정된)** khi trong nhóm các trường hợp được gán xác suất gần `p`, biến cố xảy ra với tần suất gần `p` trong dài hạn, với điều kiện population và cơ chế sinh dữ liệu đủ ổn định.
+Một mô hình được **hiệu chuẩn tốt (well-calibrated / 잘 보정된)** nếu trong nhóm các trường hợp được gán xác suất gần `p`, biến cố xảy ra với tần suất gần `p` trong dài hạn, với điều kiện population và cơ chế sinh dữ liệu tương đối ổn định.
 
-Nếu một mô hình đưa ra 100 dự báo quanh 0,70 và khoảng 70 trường hợp xảy ra, nhóm đó có bằng chứng hiệu chuẩn tốt hơn một mô hình mà chỉ 40 trường hợp xảy ra. Nhưng một nhóm nhỏ không đủ để kết luận mạnh; ta còn phải xem kích thước mẫu (sample size / 표본 크기), khoảng bất định (uncertainty interval / 불확실성 구간), sự dịch chuyển phân phối (distribution shift / 분포 이동) và cách chia bin.
+Nếu 1.000 trường hợp đều được gán khoảng 70% và khoảng 700 trường hợp thật sự xảy ra, đó là dấu hiệu hiệu chuẩn tốt hơn việc chỉ 400 trường hợp xảy ra.
 
-Hiệu chuẩn (calibration / 보정) là một thuộc tính của **xác suất dự báo**, không phải chỉ của nhãn cuối cùng. Một bộ phân loại có độ chính xác (accuracy / 정확도) cao vẫn có thể dự báo xác suất quá tự tin. Ngược lại, một mô hình có hiệu chuẩn tốt vẫn có thể phân biệt trường hợp dương và âm kém nếu mọi dự báo đều gần tỷ lệ nền.
-
-### Ví dụ tối giản
-
-Giả sử biến cố xảy ra 20% trong population. Hai mô hình dự báo 1.000 trường hợp:
-
-```text
-Model A: hầu hết dự báo quanh 0.20
-Model B: một số quanh 0.05, một số quanh 0.80
-```
-
-Nếu cả hai đều hiệu chuẩn, Model B thường hữu ích hơn cho quyết định vì nó tách được các trường hợp rủi ro thấp và cao. Điều này đưa ta tới khái niệm tiếp theo: **khả năng phân biệt (discrimination / 판별력)**.
+Nhưng cần xem thêm kích thước mẫu, khoảng bất định và sự dịch chuyển phân phối (distribution shift / 분포 이동). Một nhóm nhỏ không đủ để kết luận mạnh.
 
 ## 3. Hiệu chuẩn và khả năng phân biệt là hai trục khác nhau
 
-**Hiệu chuẩn (calibration / 보정)** hỏi xác suất có đúng mức hay không. **Khả năng phân biệt (discrimination / 판별력)** hỏi mô hình có xếp các trường hợp có biến cố cao hơn các trường hợp không có biến cố hay không. Một mô hình hữu ích thường cần cả hai, nhưng hai thuộc tính không thay thế nhau.
+**Hiệu chuẩn (calibration / 보정)** hỏi xác suất có đúng mức hay không. **Khả năng phân biệt (discrimination / 판별력)** hỏi mô hình có xếp trường hợp nguy cơ cao lên trên trường hợp nguy cơ thấp hay không.
 
-Một dự báo luôn bằng tỷ lệ nền 20% có thể được hiệu chuẩn hoàn hảo nếu dữ liệu thật đúng 20%, nhưng nó không giúp chọn trường hợp nào cần ưu tiên. Một mô hình xếp hạng rất tốt nhưng luôn đẩy 60% thành 90% và 20% thành 50% có thể có khả năng phân biệt tốt nhưng hiệu chuẩn kém; nếu ta dùng xác suất đó để tính kỳ vọng tiền tệ hoặc thiết lập ngưỡng hành động, sai số hiệu chuẩn sẽ đi thẳng vào quyết định.
+Một mô hình luôn dự báo 20% trong population có tỷ lệ nền 20% có thể được hiệu chuẩn tốt nhưng gần như không giúp ưu tiên ai. Ngược lại, một mô hình xếp hạng tốt nhưng luôn quá tự tin có thể hữu ích cho ranking nhưng nguy hiểm nếu output được dùng để tính expected loss.
 
-Vì vậy, khi đánh giá một hệ thống dự báo, không nên hỏi một câu “mô hình chính xác bao nhiêu?”. Cần tách ít nhất ba câu:
+Khi đánh giá hệ thống dự báo, nên tách ba câu hỏi:
 
-1. xác suất có hiệu chuẩn không;
-2. mô hình có phân biệt/ranking hữu ích không;
-3. với chi phí và mục tiêu thực tế, quyết định tạo ra từ mô hình có tốt hơn baseline không.
+```text
+xác suất có hiệu chuẩn không?
+mô hình có phân biệt tốt không?
+quyết định sinh ra từ model có tạo giá trị hơn baseline không?
+```
 
-Ba câu này tương ứng với ba lớp `belief → ranking → action`.
+## 4. Quy tắc chấm điểm đúng đắn đánh giá xác suất, không đánh giá toàn bộ quyết định
 
-## 4. Quy tắc chấm điểm đúng đắn giúp thưởng dự báo xác suất trung thực
-
-Để đánh giá dự báo xác suất, ta cần quy tắc chấm điểm đúng đắn (proper scoring rule / 적정 점수 규칙): về kỳ vọng, người dự báo đạt điểm tốt nhất khi báo đúng xác suất mà họ thực sự tin dựa trên thông tin đang có.
-
-### Brier score
+**Quy tắc chấm điểm đúng đắn (proper scoring rule / 적정점수규칙)** khuyến khích người dự báo báo xác suất trung thực.
 
 Với biến cố nhị phân `y ∈ {0,1}` và dự báo `p`, **điểm Brier (Brier score / 브라이어 점수)** là:
 
@@ -70,37 +62,45 @@ Với biến cố nhị phân `y ∈ {0,1}` và dự báo `p`, **điểm Brier (
 Brier = (p - y)^2
 ```
 
-Điểm càng nhỏ càng tốt. Dự báo 0,90 nhưng biến cố không xảy ra bị phạt mạnh hơn dự báo 0,60. Đây là một cách rất trực quan để thấy sự tự tin sai có giá.
+Điểm càng nhỏ càng tốt.
 
-### Log loss
-
-**Mất mát logarit (log loss / 로그 손실)** phạt đặc biệt mạnh các dự báo cực kỳ tự tin nhưng sai:
+**Mất mát logarit (log loss / 로그손실)** là:
 
 ```text
-log loss = -[y log(p) + (1-y) log(1-p)]
+-[y log(p) + (1-y) log(1-p)]
 ```
 
-Nếu `p` tiến sát 1 nhưng `y = 0`, mất mát tăng rất lớn. Điều này phù hợp với nhiều hệ thống nơi “gần như chắc chắn” là một tuyên bố mạnh và phải có bằng chứng tương xứng.
+Nó phạt mạnh dự báo cực kỳ tự tin nhưng sai.
 
-Không có một score duy nhất trả lời toàn bộ bài toán. Quy tắc chấm điểm đo chất lượng dự báo; nó chưa mã hóa toàn bộ chi phí kinh doanh, rủi ro vận hành hoặc quyền ưu tiên của người ra quyết định. Do đó score tốt là điều kiện hữu ích nhưng chưa đủ cho policy tốt.
+Hai thước đo này đánh giá chất lượng dự báo xác suất. Chúng chưa biết chi phí kinh doanh, hậu quả pháp lý hay ưu tiên của người ra quyết định, nên không thể thay trực tiếp cho chính sách quyết định (decision policy / 의사결정 정책).
 
-> **Chuyển mạch:** Khi xác suất đã được đo và kiểm tra, bước tiếp theo là ánh xạ kết quả có thể xảy ra thành giá trị hoặc tổn thất.
+## 5. Từ xác suất sang hành động: tổn thất kỳ vọng
 
-## 5. Từ xác suất sang quyết định: tổn thất kỳ vọng và tiện ích kỳ vọng
+Giả sử hành động là `a`, trạng thái thế giới là `s`, và `L(a,s)` là tổn thất.
 
-Giả sử ta có các hành động `a` và các trạng thái thế giới `s`. Mỗi cặp `(a, s)` tạo một tổn thất (loss / 손실) `L(a,s)`. Với xác suất hiện tại `P(s|evidence)`, ta có **tổn thất kỳ vọng (expected loss / 기대 손실)**:
+**Tổn thất kỳ vọng (expected loss / 기대손실)** là:
 
 ```text
-E[L | a] = Σ_s P(s | evidence) · L(a, s)
+E[L | a] = Σ P(s | evidence) · L(a,s)
 ```
 
-Một quy tắc quyết định cơ bản là chọn hành động có tổn thất kỳ vọng thấp nhất trong số hành động hợp lệ. Viết bằng tiện ích (utility / 효용) thì tương đương với tối đa hóa **tiện ích kỳ vọng (expected utility / 기대 효용)**.
+Một nguyên tắc đơn giản là chọn hành động có tổn thất kỳ vọng thấp nhất trong tập hành động hợp lệ. Viết theo tiện ích thì ta tối đa **tiện ích kỳ vọng (expected utility / 기대효용)**.
 
-Điểm quan trọng nằm ở chỗ `P(s|evidence)` và `L(a,s)` là hai loại tri thức khác nhau. Xác suất thuộc lớp mô tả bất định; hàm mất mát thuộc lớp mục tiêu/hậu quả. Tranh luận về “xác suất đúng” không giải quyết được bất đồng về giá trị, và thay đổi cost matrix không có nghĩa mô hình xác suất thay đổi.
+Điểm cần giữ là:
 
-### Ví dụ ngưỡng hành động
+```text
+xác suất
+≠
+giá trị / chi phí
+```
 
-Ta cân nhắc một hành động phòng ngừa có chi phí `C_action`. Nếu không hành động và biến cố xấu xảy ra, tổn thất là `C_failure`. Bỏ qua các chi tiết khác, hành động hợp lý khi:
+Xác suất trả lời “khả năng nào xảy ra?”. Hàm mất mát trả lời “nếu xảy ra thì hậu quả lớn tới đâu?”.
+
+## 6. Ngưỡng quyết định sinh từ hậu quả
+
+Giả sử hành động phòng ngừa có chi phí `C_action`; nếu không hành động và sự cố xảy ra, tổn thất là `C_failure`.
+
+Một quy tắc tối giản:
 
 ```text
 p · C_failure > C_action
@@ -112,133 +112,156 @@ hay:
 p > C_action / C_failure
 ```
 
-Tỷ lệ bên phải tạo một **ngưỡng quyết định (decision threshold / 의사결정 임계값)**. Ngưỡng không phải thuộc tính cố định của mô hình; nó sinh từ hậu quả. Khi chi phí thay đổi, ngưỡng tối ưu có thể thay đổi dù mô hình và dữ liệu không đổi.
+Tỷ lệ bên phải là **ngưỡng quyết định (decision threshold / 의사결정 임계값)**.
 
-## 6. Sai dương và sai âm chỉ có nghĩa khi gắn với hậu quả
+Ngưỡng không phải thuộc tính cố định của mô hình. Khi chi phí thay đổi, ngưỡng hợp lý cũng thay đổi dù mô hình không đổi.
 
-Trong phân loại nhị phân, **dương tính giả (false positive / 거짓 양성)** và **âm tính giả (false negative / 거짓 음성)** không có mức nghiêm trọng cố định. Tùy lĩnh vực, một loại có thể đắt hơn nhiều loại còn lại.
+## 7. Dương tính giả và âm tính giả chỉ có nghĩa khi gắn với chi phí
 
-Ví dụ trong phát hiện gian lận, âm tính giả có thể gây mất tiền; dương tính giả có thể làm khách hàng hợp lệ bị từ chối. Trong hệ thống cảnh báo vận hành, dương tính giả tạo mệt mỏi cảnh báo (alert fatigue / 경보 피로), còn âm tính giả làm sự cố bị bỏ sót. Trong đầu tư, một “tín hiệu sai” có thể tạo chi phí giao dịch và rủi ro vị thế; bỏ lỡ một cơ hội lại là chi phí cơ hội khác.
+**Dương tính giả (false positive / 거짓양성)** và **âm tính giả (false negative / 거짓음성)** không tự có mức nghiêm trọng cố định.
 
-Vì vậy, ma trận nhầm lẫn (confusion matrix / 혼동 행렬) chỉ là thống kê trung gian. Muốn ra quyết định phải nối nó với phân phối hậu quả, quy mô tổn thất và ràng buộc hành động.
+Trong phát hiện gian lận, âm tính giả có thể gây mất tiền; dương tính giả làm khách hàng hợp lệ bị chặn. Trong cảnh báo vận hành, dương tính giả có thể gây mệt mỏi cảnh báo; âm tính giả có thể làm sự cố trôi qua không phát hiện.
 
-## 7. Tỷ lệ nền quyết định cách ta đọc bằng chứng
+Do đó không nên tối ưu độ chính xác (accuracy / 정확도) chung nếu chi phí nghiệp vụ bất đối xứng.
 
-**Tỷ lệ nền (base rate / 기저율)** là tần suất trước khi quan sát bằng chứng cụ thể. Khi một biến cố hiếm, ngay cả test có sensitivity/specificity cao vẫn có thể tạo nhiều dương tính giả nếu áp dụng trên population rất rộng. Đây là ứng dụng trực tiếp của Bayes chứ không phải một mẹo riêng.
+## 8. Tỷ lệ nền làm thay đổi ý nghĩa của tín hiệu
 
-Một sai lầm phổ biến là đọc `P(test positive | event)` như `P(event | test positive)`. Hai đại lượng khác nhau. Từ [Bayes](../06_probability_statistics/02_conditional_probability_and_bayes.md), ta biết posterior còn phụ thuộc prior/base rate.
+Một tín hiệu có vẻ mạnh vẫn có thể tạo nhiều dương tính giả nếu biến cố nền rất hiếm.
 
-Trong quyết định thực tế, bỏ qua tỷ lệ nền (base rate / 기저율) tạo hai lỗi liên tiếp: xác suất hậu nghiệm bị phóng đại, rồi ngưỡng hành động được áp dụng trên một xác suất sai. Vì vậy pipeline tốt phải kiểm tra population trước cả calibration lẫn policy.
-
-## 8. Hiệu chuẩn không bất biến khi môi trường thay đổi
-
-Một mô hình hiệu chuẩn tốt trên dữ liệu lịch sử có thể mất hiệu chuẩn sau **dịch chuyển phân phối (distribution shift / 분포 이동)**. Có nhiều cơ chế:
-
-- tỷ lệ nền thay đổi theo thời gian;
-- hành vi người dùng thay đổi;
-- dữ liệu đầu vào được đo bằng công cụ mới;
-- policy của chính hệ thống làm thay đổi population quan sát;
-- chỉ các trường hợp được hành động mới có nhãn kết quả, tạo selection bias.
-
-Điểm cuối đặc biệt quan trọng: nếu dự báo khiến ta can thiệp, outcome sau đó không còn là counterfactual “nếu không can thiệp”. Hệ thống quyết định tự tạo dữ liệu cho lần học tiếp theo. Đây là vòng phản hồi (feedback loop / 피드백 루프), và calibration monitoring phải hiểu chính sách sinh dữ liệu chứ không chỉ vẽ reliability diagram.
-
-Do đó, hiệu chuẩn (calibration / 보정) cần được gắn với thời gian, cohort và phiên bản mô hình. Một giá trị tổng hợp trên toàn lịch sử có thể che drift gần đây.
-
-## 9. Giá trị của thông tin: đo xem bằng chứng mới có đáng thu thập không
-
-Không phải mọi bất định đều đáng loại bỏ. Nếu hai hành động có cùng kết quả tối ưu trên toàn phạm vi xác suất hợp lý, thu thêm dữ liệu có thể không đổi quyết định.
-
-**Giá trị kỳ vọng của thông tin hoàn hảo (expected value of perfect information / 완전정보 기대가치)** hỏi: nếu biết chắc trạng thái trước khi hành động, ta kỳ vọng cải thiện kết quả bao nhiêu so với quyết định tốt nhất hiện tại. **Giá trị kỳ vọng của thông tin mẫu (expected value of sample information / 표본정보 기대가치)** hỏi câu tương tự với một phép đo/test thực tế có nhiễu.
-
-Mental model quan trọng là:
+Đây là lý do cần giữ chuỗi Bayes:
 
 ```text
-information is valuable only when it can change a consequential decision
+xác suất trước bằng chứng
+→ chất lượng bằng chứng mới
+→ xác suất sau bằng chứng
 ```
 
-Vì vậy một dashboard, test hoặc nghiên cứu mới không tự có giá trị chỉ vì “thêm dữ liệu”. Nó có giá trị khi giảm bất định đủ để thay đổi hành động hoặc giảm tổn thất kỳ vọng nhiều hơn chi phí thu thập thông tin.
+Nếu bỏ qua **tỷ lệ nền (base rate / 기저율)**, người đọc dễ đánh giá quá cao một xét nghiệm, cảnh báo hoặc tín hiệu thị trường hiếm gặp.
 
-Tuyến này nối trực tiếp sang [Research Methods](../../research_methods/README.md): thiết kế nghiên cứu (research design / 연구 설계), đo lường (measurement / 측정) và lấy mẫu (sampling / 표본추출) quyết định chất lượng của bằng chứng dùng để cập nhật xác suất.
+## 9. Giá trị thông tin: có đáng thu thêm bằng chứng không?
 
-## 10. Rủi ro không chỉ là phương sai
+**Giá trị thông tin (value of information / 정보가치)** hỏi liệu dữ liệu mới có khả năng thay đổi quyết định đủ lớn để đáng chi phí thu thập hay không.
 
-Trong toán tài chính và nhiều bài toán kỹ thuật, phương sai (variance / 분산) là thước đo tiện lợi cho độ phân tán, nhưng **rủi ro (risk / 위험)** rộng hơn độ biến động. Hai phân phối có cùng phương sai có thể có xác suất đuôi, độ lệch, downside hoặc cấu trúc phụ thuộc rất khác nhau.
+Nếu hai hành động gần như tương đương và một phép đo rẻ có thể tách chúng rõ, giá trị thông tin cao. Nếu quyết định sẽ không đổi bất kể kết quả, thu thêm dữ liệu chỉ tạo chậm trễ hoặc chi phí.
 
-Một quyết định tốt cần hỏi ít nhất:
-
-- xác suất của các kết quả xấu là bao nhiêu;
-- mức độ xấu của chúng là bao nhiêu;
-- các rủi ro có đồng thời xảy ra không;
-- có giới hạn sống còn, thanh khoản, vốn hoặc an toàn nào khiến một tail event không thể chấp nhận không;
-- ước lượng xác suất đuôi có đủ dữ liệu hay đang quá tự tin.
-
-Ở Investing, đây là lý do không được biến `expected return` thành quyết định đầu tư trực tiếp. Cần portfolio context, covariance/dependence, downside, liquidity và giới hạn tổn thất. Chapter [Toán trong Finance, công việc và đời sống](./04_math_for_finance_work_and_daily_life.md) giữ lớp ứng dụng toán học, còn [Investing](../../investing/README.md) là đơn vị sở hữu (canonical owner / 정본 소유자) của quyết định đầu tư và quản trị danh mục.
-
-## 11. Một worked example: cảnh báo sự cố production
-
-Giả sử hệ thống dự báo xác suất một service sẽ gặp sự cố nghiêm trọng trong 30 phút tới. Mục tiêu không phải tạo một ví dụ DevOps đầy đủ mà để thấy toàn bộ tuyến toán học.
-
-Mô hình đưa ra xác suất 0,25. Trên dữ liệu validation gần đây, các dự báo quanh 0,25 dẫn đến sự cố khoảng 0,23–0,27 tùy cohort, nên calibration tạm chấp nhận được. Nếu chỉ nhìn `25%`, ta chưa biết phải làm gì.
-
-Giả sử hành động an toàn là chuyển 20% traffic sang vùng dự phòng, gây chi phí hiệu năng tương đương 2 đơn vị. Nếu không hành động và sự cố xảy ra, tổn thất kỳ vọng tương đương 15 đơn vị. Trong mô hình tối giản:
+Mô hình:
 
 ```text
-expected loss(no action) = 0.25 × 15 = 3.75
-expected loss(action)    = 2
+không chắc chắn hiện tại
+→ dữ liệu mới có thể thay xác suất sau bằng chứng bao nhiêu?
+→ xác suất mới có thể đổi hành động không?
+→ lợi ích của việc đổi hành động có vượt chi phí thu dữ liệu không?
 ```
 
-Hành động có tổn thất kỳ vọng thấp hơn. Nhưng nếu chuyển traffic làm tăng rủi ro cho vùng dự phòng hoặc nếu mô hình bị drift sau deploy mới, phép tính trên thiếu biến. Ta phải cập nhật loss model và kiểm tra calibration theo revision.
+## 10. Rủi ro không đồng nghĩa với phương sai
 
-Sau hành động, service không xảy ra sự cố. Ta **không** thể kết luận dự báo 25% là sai từ một trường hợp. Một biến cố xác suất 25% thường không xảy ra 75% số lần. Hơn nữa, hành động có thể đã ngăn sự cố; outcome quan sát không còn là outcome không can thiệp. Muốn đánh giá causal effect của policy cần thiết kế nghiên cứu/phân tích khác.
+Trong một số bài toán tài chính, phương sai hữu ích. Nhưng **rủi ro (risk / 위험)** rộng hơn biến động.
 
-Worked example này cho thấy một chuỗi reasoning đầy đủ:
+Rủi ro còn có thể là:
+
+- xác suất mất mát cực lớn;
+- không thể phục hồi trong thời hạn cần thiết;
+- mất thanh khoản;
+- vi phạm constraint;
+- failure có tính hệ thống;
+- nhiều rủi ro cùng tương quan trong stress case.
+
+Một quyết định có phương sai thấp vẫn có thể nguy hiểm nếu có tổn thất đuôi (tail loss / 꼬리손실) lớn nhưng hiếm.
+
+## 11. Phân phối thay đổi làm hiệu chuẩn cũ mất giá trị
+
+**Dịch chuyển phân phối (distribution shift / 분포이동)** xảy ra khi population, environment hoặc cơ chế sinh dữ liệu đổi.
+
+Ví dụ mô hình được hiệu chuẩn tốt trên khách hàng cũ nhưng product policy thay đổi làm population khác đi. Calibration cũ không tự động còn đúng.
+
+Cần theo dõi:
 
 ```text
-probability estimate
-→ calibration evidence
-→ consequence model
-→ expected loss
-→ action
-→ intervention changes data-generating process
-→ monitoring + research design
+phân phối đầu vào
+tỷ lệ nền
+định nghĩa nhãn
+policy downstream
+measurement process
 ```
 
-## 12. Năm lỗi tư duy thường gặp
+Khi một trong các lớp này đổi, phải xem lại hiệu chuẩn.
 
-**Một: biến xác suất thành khẳng định chắc chắn.** `70%` không có nghĩa “sẽ xảy ra”; nó mô tả một ensemble hoặc niềm tin có điều kiện trên thông tin hiện tại.
+## 12. Chất lượng quyết định khác với kết quả
 
-**Hai: dùng accuracy để thay calibration.** Accuracy phụ thuộc threshold và prevalence; nó không nói xác suất 0,80 có đáng tin như 0,80 hay không.
+Một quyết định tốt vẫn có thể cho outcome xấu vì randomness. Một quyết định kém vẫn có thể may mắn.
 
-**Ba: chọn threshold từ metric thay vì hậu quả.** F1/AUC có thể hữu ích cho model comparison nhưng không tự định nghĩa chi phí false positive/false negative trong môi trường thật.
-
-**Bốn: đánh đồng rủi ro với volatility.** Tail loss, correlation khi stress, giới hạn thanh khoản hoặc rủi ro ruin có thể quan trọng hơn variance trung bình.
-
-**Năm: thu thêm dữ liệu mà không hỏi quyết định nào sẽ thay đổi.** Measurement có chi phí; thông tin chỉ đáng giá khi nó cải thiện lựa chọn hoặc giảm bất định có hậu quả.
-
-## 13. Bản đồ owner: học tiếp ở đâu
-
-Chapter này chỉ giữ lớp kết nối. Mỗi phần sâu có đơn vị sở hữu (canonical owner / 정본 소유자) riêng:
-
-- nền xác suất (probability / 확률), Bayes, kỳ vọng (expectation / 기댓값), phân phối (distribution / 분포) và thống kê (statistics / 통계): [`mathematics/06_probability_statistics`](../06_probability_statistics/);
-- đo lường (measurement / 측정), sampling, study design và evidence synthesis: [Research Methods](../../research_methods/README.md);
-- econometrics và causal identification: [Economics](../../economics/README.md);
-- đánh giá mô hình AI/ML và production evaluation: [Computer Science — Artificial Intelligence](../../computer_science/02_artificial_intelligence/README.md);
-- nhận thức, bias và hành vi quyết định của con người: [Psychology](../../psychology/README.md);
-- risk/portfolio/application trong tài chính: [Investing](../../investing/README.md).
-
-Tuyến đọc ngắn nhất sau chapter này là:
+Do đó review nên hỏi:
 
 ```text
-Bayes / probability
-→ calibration + scoring
-→ expected loss / utility
-→ threshold / policy
-→ research design + monitoring
-→ domain-specific decision
+xác suất ban đầu có hợp lý không?
+model có calibrated không?
+loss/utility có phản ánh mục tiêu không?
+constraint có được tôn trọng không?
+threshold có sinh từ hậu quả thật không?
 ```
 
-## Kết luận: bất định chỉ trở nên hữu ích khi đi hết tới hành động và quay về bằng chứng
+Đây là cách tránh **thiên lệch kết quả (outcome bias / 결과편향)**.
 
-Bất biến (invariant / 불변식) quan trọng nhất là: **xác suất, chất lượng dự báo và chất lượng quyết định là ba lớp khác nhau**. Hiệu chuẩn (calibration / 보정) nối xác suất với thực tế quan sát; hàm mất mát (loss function / 손실 함수) và tiện ích (utility / 효용) nối thực tế bất định với hành động; vòng phản hồi (feedback loop / 피드백 루프) nối hành động trở lại dữ liệu và buộc ta kiểm tra lại calibration.
+## 13. Ví dụ tích hợp: cảnh báo production
 
-Ranh giới của chapter là không thay thế giáo trình decision theory, econometrics, AI evaluation hay portfolio management. Nó cung cấp đường đi xuyên repository để khi gặp một con số xác suất, người đọc biết hỏi tiếp: **nó được hiệu chuẩn thế nào, hậu quả của các lựa chọn là gì, dữ liệu mới có thể đổi quyết định không, và policy hiện tại có đang làm thay đổi dữ liệu dùng để đánh giá chính nó không?**
+Giả sử một tín hiệu báo 30% khả năng service sẽ vi phạm SLO trong 10 phút tới.
+
+Hai hành động:
+
+```text
+A — không scale thêm
+B — scale thêm 20% capacity
+```
+
+Nếu scale tốn ít nhưng SLO violation rất đắt, ngưỡng hành động có thể thấp hơn 30%. Nếu scale có rủi ro gây cascade hoặc chi phí lớn, cùng xác suất 30% có thể chưa đủ.
+
+Sau đó cần kiểm model có calibrated trong traffic regime hiện tại không. Nếu model được train trước khi architecture đổi, xác suất 30% có thể không còn mang nghĩa cũ.
+
+Case này cho thấy toàn chuỗi:
+
+```text
+tín hiệu
+→ xác suất
+→ hiệu chuẩn
+→ chi phí
+→ ngưỡng
+→ hành động
+→ kết quả
+→ phản hồi
+```
+
+## 14. Các lỗi tư duy thường gặp
+
+**Xác suất = chắc chắn:** 90% không có nghĩa biến cố chắc chắn xảy ra.
+
+**Độ chính xác = hiệu chuẩn:** mô hình đoán nhãn đúng nhiều chưa chắc xác suất đúng mức.
+
+**Metric cao = policy tốt:** mô hình có điểm tốt nhưng threshold sai vẫn tạo quyết định tệ.
+
+**Ngưỡng thuộc về mô hình:** ngưỡng thực ra phụ thuộc hậu quả và constraint.
+
+**Rủi ro = biến động:** bỏ qua tail loss, liquidity và irreversible damage.
+
+**Không cập nhật tỷ lệ nền:** giữ prior cũ sau khi environment đã đổi.
+
+## 15. Mô hình tổng hợp
+
+```text
+bằng chứng
+→ xác suất
+→ kiểm hiệu chuẩn + phân biệt
+→ hậu quả / mất mát / tiện ích
+→ ràng buộc
+→ chính sách hoặc ngưỡng
+→ hành động
+→ kết quả
+→ cập nhật mô hình và hiệu chuẩn
+```
+
+Insight quan trọng là: **một dự báo tốt là đầu vào cho quyết định, không phải bản thân quyết định**.
+
+## 16. Kết nối và bàn giao
+
+Để hiểu bằng chứng và suy luận nhân quả sâu hơn, đọc [Research Methods](../../research_methods/README.md). Để xem xác suất được dùng trong healthcare, đọc [Hiểu thông tin y tế](../../biology/90_connections/02_health_literacy_screening_diagnosis_evidence_and_shared_decisions.md). Để xem xác suất và hiệu chuẩn đi vào portfolio decision, đọc [Kinh tế vĩ mô + hành vi + bằng chứng → quyết định danh mục](../../investing/07_integrated_case_studies/08_MACRO_BEHAVIOR_EVIDENCE_TO_PORTFOLIO_DECISION.md). Để xem model probability được vận hành trong production AI, đọc [AI data → evaluation → provenance → production evidence](../../computer_science/90_connections/07_ai_data_evaluation_provenance_and_production_evidence.md).
+
+> **Bàn giao:** Khi gặp một con số xác suất, đừng hỏi ngay “nên làm gì?”. Hãy đi qua **xác suất có đáng tin không → hậu quả là gì → ràng buộc nào tồn tại → ngưỡng/chính sách nào phù hợp → kết quả nào sẽ dùng để hiệu chuẩn lại**.
