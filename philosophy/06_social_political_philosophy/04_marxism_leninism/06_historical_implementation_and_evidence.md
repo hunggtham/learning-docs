@@ -1,6 +1,6 @@
 # Historical hiện thực (implementation / 구현) — từ doctrine sang institutions và bằng chứng (evidence / 증거)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Historical hiện thực (implementation / 구현) — từ doctrine sang institutions và bằng chứng (evidence / 증거)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bốn lớp phải tách khi đọc lịch sử (history / 이력)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Soviet trường hợp (case / 사례) 1: War Communism → NEP** để đem mô hình vào tình huống cụ thể. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Historical hiện thực (implementation / 구현) — từ doctrine sang institutions và bằng chứng (evidence / 증거)**. Route đi từ doctrine và mục tiêu → chính sách/thể chế → kết quả, chi phí và phản ứng → bằng chứng lịch sử so sánh qua case, để không đánh đồng khẩu hiệu với cơ chế thực thi.
 
 Lý thuyết (theory / 이론) và historical hiện thực (implementation / 구현) phải được tách ra trước khi đem so sánh. Một philosophical claim của Marx không tự động giải thích mọi chính sách (policy / 정책) của Soviet Union; ngược lại, một historical thất bại (failure / 실패) hoặc success của một trạng thái (state / 상태) không tự động chứng minh hoặc bác bỏ toàn bộ Marxian lý thuyết (theory / 이론). Ta cần một cầu nối (bridge / 브리지): **institutional cơ chế (mechanism / 메커니즘) + historical bằng chứng (evidence / 증거)**.
 

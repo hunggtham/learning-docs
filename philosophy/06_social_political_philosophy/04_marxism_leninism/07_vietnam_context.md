@@ -1,6 +1,6 @@
 # Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vị trí trong constitutional khung phần mềm (framework / 프레임워크)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao sinh viên đại học gặp các môn này** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**. Route đi từ thuộc địa/độc lập và cách mạng → nhà nước, hiến định và giáo dục → chương trình đại học và đời sống chính trị → tranh luận, giới hạn và cách đọc bằng chứng ở Việt Nam, để đặt doctrine vào lịch sử cụ thể.
 
 Sau khi đã phân biệt Marx, Lenin, Marxism–Leninism và historical hiện thực (implementation / 구현), ta mới có đủ nền để hiểu vị trí của chủ đề này ở Việt Nam. Nếu bắt đầu từ university curriculum trước, người học dễ nhầm giữa ba thứ khác nhau: **historical lý thuyết (theory / 이론)**, **official ideological khung phần mềm (framework / 프레임워크)** và **academic phân tích (analysis / 분석)**.
 

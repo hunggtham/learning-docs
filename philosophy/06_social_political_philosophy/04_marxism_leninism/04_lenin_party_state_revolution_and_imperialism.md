@@ -1,6 +1,6 @@
 # Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Organization bài toán (problem / 문제): từ grievance tới political sức chứa (capacity / 용량)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Spontaneity và consciousness: một debate dễ bị caricature** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Lenin — organization, party, trạng thái (state / 상태), revolution và imperialism**. Route đi từ tổ chức và capacity chính trị → spontaneity/consciousness và đảng → nhà nước, cách mạng và imperialism → chiến lược/giới hạn trong thực tiễn, để không rút gọn Lenin thành một công thức tổ chức duy nhất.
 
 Chapter trước đã giải thích vì sao Lenin xuất hiện như một transformation bên trong Marxist tradition chứ không chỉ là người lặp lại Marx. Bây giờ cần đọc Lenin như một theorist của **organization under repression**, **revolutionary chuyển tiếp (transition / 전이)**, **trạng thái (state / 상태) power** và **capitalism in an imperial world hệ thống (system / 시스템)**.
 

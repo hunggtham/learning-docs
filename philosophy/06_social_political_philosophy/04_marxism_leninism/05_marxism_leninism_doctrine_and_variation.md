@@ -1,6 +1,6 @@
 # Marxism–Leninism — doctrine, systematization, institutions và variation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Marxism–Leninism — doctrine, systematization, institutions và variation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **From intellectual tradition to doctrine** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Canon formation: why “Marx–Engels–Lenin” becomes a lineage** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Marxism–Leninism — doctrine, systematization, institutions và variation**. Route đi từ truyền thống trí tuệ → canon hóa và doctrine → thể chế/giáo dục/chính thống → các biến thể quốc gia và lịch sử, để phân biệt văn bản lý thuyết với cách một hệ tư tưởng được tổ chức và thực thi.
 
 Tới đây ta đã tách Marx và Lenin thành hai historical layers. Bước tiếp theo là hiểu điều gì xảy ra khi một contested intellectual tradition được **codify thành official doctrine**, dùng trong party education, trạng thái (state / 상태) legitimacy, political ngôn ngữ (language / 언어) và interpretation of chính sách (policy / 정책).
 

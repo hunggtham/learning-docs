@@ -1,6 +1,6 @@
 # From Marx to Lenin — khi revolutionary bài toán (problem / 문제) đổi bối cảnh
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **From Marx to Lenin — khi revolutionary bài toán (problem / 문제) đổi bối cảnh**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Marxism sau Marx không còn là một line duy nhất** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Russian bài toán (problem / 문제): industrial proletariat nhỏ hơn nhưng politically strategic** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **From Marx to Lenin — khi revolutionary bài toán (problem / 문제) đổi bối cảnh**. Route đi từ các diễn giải sau Marx → đế quốc, chiến tranh và nhà nước → điều kiện Nga/đảng tiền phong → chuyển từ phê phán tư bản sang chiến lược cách mạng, để phân biệt kế thừa lý thuyết với thích ứng lịch sử.
 
 Marx’s mature phân tích (analysis / 분석) tập trung mạnh vào capitalism ở Western Europe, đặc biệt Britain. Lenin viết trong một bối cảnh khác: Russian Empire có industrial centers nhưng vẫn có một population nông dân rất lớn, autocratic political institutions và một revolutionary movement hoạt động dưới repression. Vì vậy không thể hiểu Lenin chỉ như người “nhắc lại Marx”.
 

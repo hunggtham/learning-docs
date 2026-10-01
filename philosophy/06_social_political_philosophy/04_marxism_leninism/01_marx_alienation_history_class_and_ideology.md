@@ -1,6 +1,6 @@
 # Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Productive activity: điểm xuất phát không phải chỉ là “kinh tế”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Alienation: khi activity của con người quay lại đối lập với chính họ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Marx — alienation, lịch sử (history / 이력), lớp (class / 클래스) và ideology**. Route đi từ productive activity và lao động → alienation → quan hệ sản xuất/giai cấp → ideology và lịch sử, để nối trải nghiệm bị tách rời với cấu trúc xã hội tạo ra nó.
 
 Chapter trước đã đặt Marx vào bối cảnh Hegel, Feuerbach, political economy và industrialization. Bây giờ cần dựng mô hình tư duy (mental model / 사고 모델) của riêng Marx: con người không tồn tại như những consciousness tách rời mà sống bằng productive activity trong những xã hội (social / 사회적) relations cụ thể. Từ điểm này mới có thể hiểu vì sao **alienation**, **lớp (class / 클래스)**, **historical thay đổi (change / 변경)**, **ideology** và về sau **commodity fetishism** nối thành một hệ thống phân tích thay vì năm khái niệm rời.
 

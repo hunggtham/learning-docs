@@ -1,6 +1,6 @@
 # Before Marx — intellectual và xã hội (social / 사회적) ngữ cảnh (context / 맥락)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Before Marx — intellectual và xã hội (social / 사회적) ngữ cảnh (context / 맥락)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hegel: lịch sử (history / 이력) không phải chuỗi sự kiện rời** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Feuerbach: từ theology về con người** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Before Marx — intellectual và xã hội (social / 사회적) ngữ cảnh (context / 맥락)**. Route đi từ Hegel, Feuerbach và kinh tế chính trị cổ điển → lịch sử, lao động và xã hội → phê phán tôn giáo/nhà nước → điều kiện trí tuệ–vật chất dẫn tới Marx, để không tách lý thuyết khỏi bối cảnh hình thành.
 
 Muốn hiểu Marx mà không biến ông thành một danh sách khẩu hiệu, cần biết ông đang phản ứng với những gì. Ba dòng chảy gặp nhau ở giữa thế kỷ XIX: German philosophy, đặc biệt Hegel và Feuerbach; classical political economy của Smith và Ricardo; và biến đổi xã hội do industrialization tạo ra. Marx không đơn giản “ghép” ba nguồn này, nhưng ông viết trong không gian vấn đề mà chúng tạo ra.
 
