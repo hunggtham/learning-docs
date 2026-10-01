@@ -40,7 +40,7 @@ PPE là hàng rào cuối, không phải giải pháp đầu tiên.
 
 Nếu có thể thay quy trình hoặc thuốc thử bằng lựa chọn ít nguy hiểm hơn, thiết kế lại thường đáng tin cậy hơn chỉ dựa vào găng tay dày hơn.
 
-> **Chuyển mạch:** Ở chặng này của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **Loại bỏ và thay thế** tiếp nhận điểm tựa từ **Hệ phân cấp kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm soát kỹ thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The hierarchy ranks interventions by reliability; elimination or substitution changes the hazard at its source, while engineering controls contain the residual exposure when the chemistry cannot be replaced.
 
 ## Loại bỏ và thay thế
 
@@ -48,7 +48,7 @@ Tư duy thiết kế an toàn có thể gồm giảm quy mô, tránh gia nhiệt
 
 Tuy nhiên thay thế chỉ có ý nghĩa sau khi kiểm tra mối nguy mới. Một vật liệu ít độc hơn có thể đồng thời dễ cháy hơn hoặc bền môi trường hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **Kiểm soát kỹ thuật** tiếp nhận điểm tựa từ **Loại bỏ và thay thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tủ hút — công cụ kiểm soát dòng khí, không phải tủ chứa đồ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Substitution can introduce a new hazard, so the revised exposure path must be checked; engineering controls then provide physical separation, with the fume hood as a concrete airflow barrier.
 
 ## Kiểm soát kỹ thuật
 
@@ -58,7 +58,7 @@ Các ví dụ thường gặp gồm tủ hút, hút cục bộ, hộp găng, t�
 
 Các biện pháp này đáng tin cậy hơn việc chỉ yêu cầu “hãy cẩn thận”.
 
-> **Chuyển mạch:** Trong **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **Tủ hút — công cụ kiểm soát dòng khí, không phải tủ chứa đồ** tiếp nhận điểm tựa từ **Kiểm soát kỹ thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hộp găng và khí quyển trơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Engineering controls create the barrier; a fume hood manages vapors and aerosols through airflow, while gloveboxes change the atmosphere itself for air- or moisture-sensitive materials.
 
 ## Tủ hút — công cụ kiểm soát dòng khí, không phải tủ chứa đồ
 
@@ -68,7 +68,7 @@ Trong sử dụng thông thường cần giữ cửa chắn theo độ cao làm 
 
 Tủ hút không tự động bảo vệ khỏi mọi sự kiện năng lượng cao hoặc mọi loại nguy cơ nổ.
 
-> **Chuyển mạch:** Ở chặng này của **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **Hộp găng và khí quyển trơ** tiếp nhận điểm tựa từ **Tủ hút — công cụ kiểm soát dòng khí, không phải tủ chứa đồ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PPE phải phù hợp với chất và đường phơi nhiễm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A fume hood removes airborne contaminants from the operator’s breathing zone; a glovebox controls oxygen and moisture but can accumulate incompatible chemicals, so PPE must still match the remaining substance and route of exposure.
 
 ## Hộp găng và khí quyển trơ
 
