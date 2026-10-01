@@ -92,7 +92,7 @@ Nếu còn tạp chất không tan, lọc khi dung dịch vẫn nóng giúp trá
 
 Giữ dụng cụ đủ ấm có thể giảm mất sản phẩm do kết tinh trước thời điểm mong muốn.
 
-> **Chuyển mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Tạo mầm và tăng trưởng tinh thể** tiếp nhận điểm tựa từ **Lọc nóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch mẹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Hot filtration removes insoluble matter before cooling; nucleation rate and crystal growth then determine whether the recovered solid is large enough to wash without trapping excess impurity.
 
 ## Tạo mầm và tăng trưởng tinh thể
 
@@ -102,7 +102,7 @@ Làm lạnh chậm thường tạo ít tâm hơn và tinh thể lớn hơn.
 
 Một số dung dịch rất tinh khiết có thể siêu lạnh; tạo xước bề mặt hoặc thêm mầm tinh thể có thể khởi động quá trình kết tinh.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Dịch mẹ** tiếp nhận điểm tựa từ **Tạo mầm và tăng trưởng tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điểm nóng chảy như bằng chứng độ tinh khiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cooling rate controls crystal size and impurity occlusion; the mother liquor retains uncrystallized product and soluble impurities, so its composition explains the recovery–purity trade-off.
 
 ## Dịch mẹ
 
@@ -112,7 +112,7 @@ Thu đợt tinh thể thứ hai có thể tăng hiệu suất nhưng độ tinh 
 
 Nếu độ tinh khiết quan trọng, nên giữ riêng các đợt tinh thể để đánh giá độc lập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Dịch mẹ** nêu điều cần giải thích; **Điểm nóng chảy như bằng chứng độ tinh khiết** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chiết lỏng–lỏng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The mother liquor records what the crystallization left behind; a melting-point range tests the recovered solid for impurity depression and broadening before a different partition-based separation is chosen.
 
 ## Điểm nóng chảy như bằng chứng độ tinh khiết
 
@@ -122,7 +122,7 @@ Tạp chất thường làm điểm nóng chảy giảm và khoảng chuyển ph
 
 Tuy nhiên điểm nóng chảy một mình không đủ chứng minh danh tính hay độ tinh khiết tuyệt đối.
 
-> **Chuyển mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Điểm nóng chảy như bằng chứng độ tinh khiết** nêu điều cần giải thích; **Chiết lỏng–lỏng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phần còn lại sau một lần chiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Melting point is a useful purity signal but not a complete identity proof; liquid–liquid extraction next exploits how the same solute partitions between immiscible phases.
 
 ## Chiết lỏng–lỏng
 
