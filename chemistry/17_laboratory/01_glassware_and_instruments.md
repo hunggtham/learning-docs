@@ -388,7 +388,7 @@ Bẫy lạnh có thể bảo vệ bơm và giảm lượng hơi đi vào đườ
 
 Bơm dầu bị nhiễm hơi phản ứng hoặc ăn mòn có thể trở thành vấn đề bảo trì và an toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Máy cô quay** tiếp nhận điểm tựa từ **Bơm chân không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các mô-đun của HPLC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Vacuum pressure and cold trapping protect the pump; the rotary evaporator combines pressure, thin-film area, rotation, and condenser temperature to concentrate solvent before chromatographic analysis.
 
 ## Máy cô quay
 
@@ -398,7 +398,7 @@ Tốc độ bay hơi phụ thuộc nhiệt độ bể, áp suất, tốc độ q
 
 Kiểm soát áp suất và quay phù hợp giúp giảm nguy cơ sôi bumping.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Các mô-đun của HPLC** tiếp nhận điểm tựa từ **Máy cô quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các mô-đun của GC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Rotary evaporation removes solvent under controlled boiling; HPLC then separates nonvolatile components through pump, injector, column, and detector stability, unlike the gas-phase path of GC.
 
 ## Các mô-đun của HPLC
 
@@ -410,7 +410,7 @@ dung môi → bơm → bộ tiêm mẫu → cột → đầu dò → chất th�
 
 Độ ổn định bơm, khử khí, tình trạng cột và hiệu chuẩn đầu dò đều ảnh hưởng chất lượng dữ liệu.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Các mô-đun của GC** tiếp nhận điểm tựa từ **Các mô-đun của HPLC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu chuẩn và xác minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** HPLC controls liquid transport and column interactions; GC controls carrier gas, injector, oven, and detector, so leaks and contamination become observable failure modes before calibration is trusted.
 
 ## Các mô-đun của GC
 
@@ -422,7 +422,7 @@ khí mang → bộ tiêm mẫu → cột trong lò → đầu dò
 
 Rò khí, nhiễm bẩn inlet và hư hỏng cột làm thời gian lưu và hình dạng peak thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Hiệu chuẩn và xác minh** tiếp nhận điểm tựa từ **Các mô-đun của GC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính truy xuất đo lường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Both HPLC and GC expose instrument-specific drift and contamination; calibration maps signal to a reference, while verification checks that the map still meets its acceptance criteria.
 
 ## Hiệu chuẩn và xác minh
 
