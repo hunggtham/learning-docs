@@ -16,7 +16,7 @@ Carbon có bốn electron hóa trị nên có thể tạo bốn liên kết cộ
 
 Các nguyên tố xuất hiện nhiều trong biomolecule thường được nhớ bằng CHNOPS: carbon, hydrogen, nitrogen, oxy (oxygen), phosphorus và sulfur. Nhưng cần hiểu vai trò thay vì học thuộc acronym. Carbon tạo skeleton; oxygen và hydrogen liên quan mạnh tới water/redox; nitrogen xuất hiện trong axit amin (amino acid) và nucleotit (nucleotide); phosphorus quan trọng trong ATP, axit nucleic (nucleic acid) và phospholipid; sulfur có thể tạo liên kết disulfide (disulfide bond) trong protein (protein).
 
-> **Chuyển mạch:** Atom structure giải thích electron arrangement; ion hình thành khi phân bố điện tích lệch, còn covalent bond tiếp theo dùng chia sẻ electron để tạo molecule.
+> **Chuyển mạch:** Cấu trúc nguyên tử quyết định cách electron được phân bố; khi phân bố điện tích lệch, nguyên tử trở thành ion và tương tác mạnh với nước. Từ đó, **liên kết cộng hóa trị** giải thích cách các nguyên tử chia sẻ electron để tạo phân tử bền hơn.
 
 ## 2. Ion: khi electron không được chia đều
 
@@ -28,7 +28,7 @@ Na⁺, K⁺, Ca²⁺, Cl⁻ và H⁺ không phải những ký hiệu ngẫu nhi
 
 Chapter về membrane sẽ cho thấy một ion rất nhỏ như Na⁺ vẫn không dễ xuyên lớp kép lipid (lipid bilayer) vì charge của nó tương tác mạnh với water.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học của sự sống — Chemistry, Water and năng lượng (energy / 에너지)**, sau nội dung của **2. Ion: khi electron không được chia đều**, **3. Liên kết cộng hóa trị: cùng chia electron để xây molecule** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **4. Nước: không chỉ là “môi trường chứa cell”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ion cho thấy điện tích không được chia đều và vì thế bị nước hydrat hóa; **liên kết cộng hóa trị** bổ sung cơ chế tạo khung phân tử bằng cách chia sẻ electron. Khi liên kết phân cực tạo partial charge, **nước** trở thành môi trường có tính chất chủ động chứ không chỉ là nơi chứa tế bào.
 
 ## 3. Liên kết cộng hóa trị: cùng chia electron để xây molecule
 
@@ -40,7 +40,7 @@ Một subtle điểm (point / 지점) quan trọng là electron không phải l�
 
 Chính polarity này dẫn ta sang một trong những molecule quan trọng nhất của life: nước (water).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — Chemistry, Water and năng lượng (energy / 에너지)**, **4. Nước: không chỉ là “môi trường chứa cell”** tiếp nhận điểm tựa từ **3. Liên kết cộng hóa trị: cùng chia electron để xây molecule** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Liên kết hydro giải thích nhiều phenomenon tưởng không liên quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Liên kết cộng hóa trị phân cực tạo nên hình học và partial charge của H₂O; **nước** dùng các đặc điểm đó để hòa tan ion, điều hòa nhiệt và tổ chức biomolecule. Nhiều hiệu ứng ở quy mô lớn bắt đầu từ **liên kết hydro**, nên mục kế tiếp nối tương tác phân tử với tính chất của mô và hệ sinh thái.
 
 ## 4. Nước: không chỉ là “môi trường chứa cell”
 
@@ -52,7 +52,7 @@ Liên kết hydro yếu hơn liên kết cộng hóa trị, nhưng số lượng
 
 Đây là mẫu (pattern / 패턴) quan trọng trong sinh học (biology): hệ thống (system / 시스템) thường dùng **rất nhiều tương tác (interaction / 상호작용) yếu** thay vì vài bond cực mạnh, vì tương tác (interaction / 상호작용) yếu cho phép recognition, assembly và disassembly có kiểm soát.
 
-> **Chuyển mạch:** Trong **Hóa học của sự sống — Chemistry, Water and năng lượng (energy / 에너지)**, sau nội dung của **4. Nước: không chỉ là “môi trường chứa cell”**, **5. Liên kết hydro giải thích nhiều phenomenon tưởng không liên quan** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **6. Hydrophilic và hydrophobic: vì sao membrane tự hình thành?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Liên kết hydro giải thích cohesion, nhiệt dung và mạng tinh thể của băng; cùng nguyên lý tương tác với nước còn quyết định phân tử nào tránh nước. Vì vậy, **hydrophilic/hydrophobic** là bước tiếp theo để giải thích vì sao phospholipid tự tổ chức thành màng.
 
 ## 5. Liên kết hydro giải thích nhiều phenomenon tưởng không liên quan
 
