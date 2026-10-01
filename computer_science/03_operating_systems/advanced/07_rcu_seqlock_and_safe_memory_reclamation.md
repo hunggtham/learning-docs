@@ -255,4 +255,4 @@ RCU/seqlock nối trực tiếp với [kernel execution context](./00_kernel_exe
 
 Điểm cuối cùng cần giữ là: **reader speed chỉ an toàn khi publication, thứ tự (ordering / 순서) và reclamation cùng tạo thành một proof hoàn chỉnh về đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명).**
 
-> **Bàn giao:** Sau **17. Kết nối sang các chapter khác**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại publication ordering, reader retry, grace/epoch progress và reclamation lifetime như một proof duy nhất. Sang [Kernel execution contexts](./00_kernel_execution_contexts_and_syscall_path.md) nếu cần nối preemption/RCU context, hoặc [Architecture memory ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md) nếu cần kiểm tra ordering/coherence; quay về [README](./README.md) để xác nhận owner.

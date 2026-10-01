@@ -206,4 +206,4 @@ Khi lớp trừu tượng (abstraction / 추상화) bộ chứa (container / 컨
 
 Xem tiếp: [Kernel execution contexts](./00_kernel_execution_contexts_and_syscall_path.md), [Security](../../07_security_reliability/advanced/README.md) và [Architecture](../../02_computer_architecture/advanced/README.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại bốn boundary trước khi rời chapter: namespace chỉ cô lập view, cgroup phân bổ ngân sách, capability/seccomp thu hẹp quyền và kernel vẫn là shared substrate. Sang [Kernel execution contexts](./00_kernel_execution_contexts_and_syscall_path.md) để theo dõi syscall/privilege, hoặc [Security advanced](../../07_security_reliability/advanced/README.md) khi câu hỏi chuyển sang threat boundary; quay về [README](./README.md) để xác nhận owner.

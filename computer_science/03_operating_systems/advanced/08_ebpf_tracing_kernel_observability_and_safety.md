@@ -322,4 +322,4 @@ symptom ở application
 
 Giá trị của eBPF không nằm ở việc có thêm một công cụ (tool / 도구), mà ở khả năng đưa **state-transition bằng chứng (evidence / 증거)** từ kernel vào cùng lập luận (reasoning / 추론) chuỗi (chain / 사슬) với thời gian chạy (runtime / 런타임), cơ sở dữ liệu (database / 데이터베이스), mạng (network / 네트워크) và dịch vụ (service / 서비스).
 
-> **Bàn giao:** Sau **16. Kết nối các tầng (layer / 계층)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại attachment-point semantics, bounded event transport, observer effect và verifier/security boundary trước khi coi trace là nguyên nhân. Sang [Scheduler internals](./01_scheduler_run_queues_fairness_and_latency.md) khi cần giải thích run-queue/off-CPU latency, hoặc [Advanced I/O](./05_epoll_io_uring_zero_copy_and_dma.md) khi evidence nằm ở queues/DMA; quay về [README](./README.md) để xác nhận owner.
