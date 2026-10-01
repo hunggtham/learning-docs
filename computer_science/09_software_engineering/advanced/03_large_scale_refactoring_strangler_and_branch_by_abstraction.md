@@ -21,7 +21,7 @@ new-only state an toàn
 
 và transitions giữa chúng không làm mất/duplicate authority.
 
-> **Chuyển mạch:** Trong **Large-scale refactoring, strangler di chuyển (migration / 마이그레이션) và branch-by-abstraction**, **2. bất biến (invariant / 불변식) trước roadmap** tiếp nhận điểm tựa từ **1. Bài toán ban đầu: môi trường vận hành (production / 운영 환경) không dừng để kiến trúc (architecture / 아키텍처) được thay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Big-bang rewrite tối đa hóa time-to-feedback và cutover rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Production cannot pause for architecture; preserve invariants while strangler/branch-by-abstraction create small cutovers, avoiding the feedback delay and risk of a big-bang rewrite.
 
 ## 2. bất biến (invariant / 불변식) trước roadmap
 

@@ -29,7 +29,7 @@ failure scenario:
 
 Diagram tĩnh không đủ để trả lời hành vi (behavior / 동작) dưới thay đổi (change / 변경)/thất bại (failure / 실패).
 
-> **Chuyển mạch:** Trong **Kiến trúc (architecture / 아키텍처) decisions, evolution và socio-technical các ràng buộc (constraints / 제약조건들)**, **2. Bắt đầu từ bất biến (invariant / 불변식), không bắt đầu từ thành phần (component / 컴포넌트)** tiếp nhận điểm tựa từ **1. kiến trúc (architecture / 아키텍처) là tập các ràng buộc (constraints / 제약조건들) trên thay đổi và thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. chất lượng (quality / 품질) attributes tạo sự đánh đổi (trade-off / 트레이드오프) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Architecture constrains change and failure; start from invariants before components, then make quality attributes explicit so latency, reliability and cost trade-offs can be reviewed.
 
 ## 2. Bắt đầu từ bất biến (invariant / 불변식), không bắt đầu từ thành phần (component / 컴포넌트)
 

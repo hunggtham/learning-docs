@@ -25,7 +25,7 @@ Một definition thực dụng:
 
 > Technical debt là một thiết kế (design / 설계)/hiện thực (implementation / 구현)/operational ràng buộc (constraint / 제약조건) làm chi phí hoặc rủi ro của các thay đổi tương lai cao hơn đáng kể so với một trạng thái thay thế hợp lý.
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **2. Debt metaphor hữu ích nhưng không phải accounting literal** tiếp nhận điểm tựa từ **1. Technical debt không đồng nghĩa mã (code / 코드) xấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Deliberate debt và accidental debt có quản trị (governance / 거버넌스) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Technical debt describes future cost, not simply bad code; deliberate and accidental debt need different governance, while metrics can become targets and trigger Goodhart failures.
 
 ## 2. Debt metaphor hữu ích nhưng không phải accounting literal
 
