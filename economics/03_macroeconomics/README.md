@@ -1,6 +1,6 @@
 # 03 — Macroeconomics
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **03 — Macroeconomics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **03 — Macroeconomics**. Route học đi từ national accounts và measurement → labor, inflation và money → short/long run fluctuations → fiscal, monetary, open-economy policy, để mỗi chính sách được đánh giá trong đúng mô hình và horizon.
 
 Macroeconomics nghiên cứu nền kinh tế ở cấp aggregate nhưng không được biến aggregate thành một “actor duy nhất”. Mô-đun (module / 모듈) này bắt đầu từ đo lường (measurement / 측정), đi qua long-run productive sức chứa (capacity / 용량), labor/inflation, money/banking, fiscal–monetary stabilization và kết thúc ở open-economy các ràng buộc (constraints / 제약조건들). Mỗi chapter phải tách accounting định danh (identity / 식별자) khỏi nhân quả (causal / 인과적) mô hình (model / 모델), short run khỏi long run, và domestic cơ chế (mechanism / 메커니즘) khỏi ứng dụng (application / 애플리케이션) vào financial markets.
 

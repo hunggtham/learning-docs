@@ -1,6 +1,6 @@
 # 01 — Microeconomics
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **01 — Microeconomics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **01 — Microeconomics**. Route học đi từ consumer/producer choice → cung/cầu và cân bằng → elasticity, welfare và policy → market structure/game theory, để các mô hình vi mô nối thành một chuỗi thay vì học từng công thức rời.
 
 Microeconomics nghiên cứu cách household, firm và các tổ chức lựa chọn dưới ràng buộc (constraint / 제약조건), cách giá và thông tin phối hợp các lựa chọn đó, và khi nào equilibrium tạo ra hoặc không tạo ra kết quả hiệu quả. Mô-đun (module / 모듈) đi từ individual tối ưu hóa (optimization / 최적화) đến welfare và thị trường (market / 시장) thất bại (failure / 실패); không coi một equilibrium đơn giản là câu trả lời đầy đủ cho phân phối, thể chế hoặc chính sách (policy / 정책).
 

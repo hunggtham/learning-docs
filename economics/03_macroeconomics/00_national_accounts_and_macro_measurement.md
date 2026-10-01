@@ -1,6 +1,6 @@
 # National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. GDP đo môi trường vận hành (production / 운영 환경) luồng (flow / 흐름), không đo toàn bộ welfare** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **2. Ba cách tính GDP phải khớp về accounting** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**. Route đi từ production/income/expenditure accounts → GDP, prices và real/nominal measures → stocks/flows và sector balances → giới hạn welfare, để số liệu vĩ mô không bị đọc ngoài định nghĩa đo lường.
 
 Macroeconomics bắt đầu bằng đo lường (measurement / 측정). Trước khi hỏi “nền kinh tế đang tăng trưởng hay suy thoái?”, phải biết đại lượng đang đo là luồng (flow / 흐름) hay stock, nominal hay real, aggregate hay per-capita, gross hay net, và số liệu đó đại diện cho môi trường vận hành (production / 운영 환경), income, expenditure hay wealth.
 

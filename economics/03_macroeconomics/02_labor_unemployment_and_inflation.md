@@ -1,6 +1,6 @@
 # Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Labor-force accounting trước khi giải thích unemployment** đưa mô hình vào một trường hợp đủ cụ thể để quan sát; sau đó sang **2. Employment-population ratio và hours** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**. Route đi từ labor-force accounting → matching/search và wage setting → unemployment dynamics → price/wage inflation và kỳ vọng, để biến động lao động được nối với động lực giá.
 
 Labor thị trường (market / 시장) không hoạt động như một single auction nơi wage điều chỉnh tức thời để mọi người có việc. Tìm kiếm (search / 검색), matching, contracts, bargaining, skills, geography và institutions tạo frictions. Inflation cũng không chỉ là “giá tăng vì tiền nhiều”: price setting, expectations, slack, supply shocks và chính sách (policy / 정책) regime cùng tương tác.
 

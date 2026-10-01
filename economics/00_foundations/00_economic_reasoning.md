@@ -1,6 +1,6 @@
 # Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Khan hiếm biến mong muốn thành bài toán lựa chọn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**. Route đi từ khan hiếm và ràng buộc → opportunity cost và incentives → cung/cầu, cân bằng và thất bại thị trường → đánh giá chính sách, để mỗi kết luận quay về cơ chế tạo ra lựa chọn.
 
 Economics bắt đầu từ một thực tế đơn giản: nhu cầu và mục tiêu có thể mở rộng, nhưng thời gian, thu nhập, lao động, vốn, đất đai, năng lượng và sự chú ý đều hữu hạn. Vì vậy mọi lựa chọn đều có chi phí cơ hội, và câu hỏi kinh tế tốt phải chỉ ra nguồn lực nào bị ràng buộc, ai ra quyết định, động lực nào thay đổi và kết quả được đo bằng gì.
 

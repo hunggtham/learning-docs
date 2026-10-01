@@ -1,6 +1,6 @@
 # Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. bên tiêu thụ (consumer / 소비자) bắt đầu từ ngân sách (budget / 예산) ràng buộc (constraint / 제약조건)** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **2. Preferences, utility và indifference curve** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Bên tiêu thụ (consumer / 소비자) & Producer lý thuyết (theory / 이론) — Lựa chọn, cầu, chi phí và cung**. Route đi từ budget/preferences và cầu → công nghệ, chi phí và cung → cân bằng thị trường → surplus, incidence và welfare, để nối quyết định vi mô với kết quả phân bổ.
 
 Bên tiêu thụ (consumer / 소비자) và producer lý thuyết (theory / 이론) là hai mô hình nền tảng của microeconomics. Mục tiêu không phải gán cho con người một công thức utility “đúng tuyệt đối”, mà tạo một ngôn ngữ để hỏi: tác nhân đang tối ưu gì, ràng buộc (constraint / 제약조건) nào ràng buộc, và thay đổi nào làm lựa chọn ở biên đổi hướng?
 

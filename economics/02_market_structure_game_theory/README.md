@@ -1,6 +1,6 @@
 # 02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thứ tự học chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Trục học (learning spine / 학습 축)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**. Route đi từ market power và entry → monopoly/oligopoly → strategic interaction và repeated games → regulation/industrial organization, để cấu trúc thị trường được đọc cùng hành vi và luật chơi.
 
 Thị trường (market / 시장) cấu trúc (structure / 구조) mô tả ràng buộc (constraint / 제약조건) mà firm đối mặt; game lý thuyết (theory / 이론) mô tả cách payoff của một tác nhân phụ thuộc vào hành động của tác nhân khác. Mô-đun (module / 모듈) này nối trực tiếp từ competitive benchmark của Microeconomics sang thị trường (market / 시장) power, oligopoly, repeated tương tác (interaction / 상호작용) và cơ chế (mechanism / 메커니즘) thiết kế (design / 설계).
 

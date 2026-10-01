@@ -1,6 +1,6 @@
 # Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Thị trường (market / 시장) definition là empirical substitution question** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **2. Concentration is not conduct** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**. Route đi từ market definition và demand substitution → markups/entry → mergers, concentration và conduct → platform effects/regulation, để cấu trúc ngành được kiểm tra bằng hành vi quan sát được.
 
 Industrial Organization (IO) áp dụng microeconomics, game lý thuyết (theory / 이론) và econometrics vào industries cụ thể. Mục tiêu không chỉ là gọi thị trường (market / 시장) “competitive” hay “concentrated”, mà là đo demand substitution, costs, markups, entry barriers, strategic responses và counterfactual chính sách (policy / 정책) outcomes.
 
