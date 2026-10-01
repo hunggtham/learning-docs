@@ -207,7 +207,7 @@ Dung dịch cơ sở (base / 기반) mạnh như NaOH hấp thụ `CO2` khí quy
 
 Với chuẩn độ chính xác, dung dịch cần được chuẩn bị, lưu trữ phù hợp và chuẩn hóa định kỳ.
 
-> **Chuyển mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Phần khối lượng** tiếp nhận điểm tựa từ **Cơ sở (base / 기반) mạnh và hấp thụ CO2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Molality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Atmospheric CO2 changes the effective amount of strong base; mass fraction reports composition without a volume expansion assumption, then molality provides a solvent-mass basis for temperature-sensitive work.
 
 ## Phần khối lượng
 
@@ -221,7 +221,7 @@ w=\frac{m_{solute}}{m_{solution}}
 
 Đại lượng này hữu ích trong công thức phối chế và thuốc thử thương mại đậm đặc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Molality** tiếp nhận điểm tựa từ **Phần khối lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ppm và ppb** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mass fraction describes total solution composition; molality normalizes solute moles to solvent mass, while ppm/ppb switch to trace-scale reporting where the unit convention must be explicit.
 
 ## Molality
 
@@ -233,7 +233,7 @@ Molality không thay đổi do giãn nở thể tích theo nhiệt độ nếu k
 
 Nó xuất hiện tự nhiên trong nhiệt động lực học của các tính chất tập hợp.
 
-> **Chuyển mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **ppm và ppb** tiếp nhận điểm tựa từ **Molality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn bị ở nồng độ vết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Molality avoids volume expansion, whereas ppm and ppb communicate very small ratios; at trace levels, density approximations and contamination can dominate the reported concentration.
 
 ## ppm và ppb
 
@@ -246,7 +246,7 @@ Với dung dịch nước loãng có khối lượng riêng gần 1 kg/L:
 
 Đây chỉ là xấp xỉ dựa trên khối lượng riêng và quy ước. Trong công việc nghiêm ngặt nên ghi rõ mg/kg, mg/L, mol/mol hoặc đơn vị thực sự được dùng.
 
-> **Chuyển mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Chuẩn bị ở nồng độ vết** tiếp nhận điểm tựa từ **ppm và ppb** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật liệu bình chứa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** ppm/ppb make trace quantities legible, but at µg/L the blank, dust, tips, and adsorption may be comparable to the sample; container material becomes part of the measurement system.
 
 ## Chuẩn bị ở nồng độ vết
 
