@@ -44,7 +44,7 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | 전세 | jeonse | hình thức thuê nhà đặt cọc lớn, không hoàn toàn tương đương tiền thuê tháng |
 | 월세 | wolse | hình thức thuê nhà trả tiền theo tháng |
 
-> **Chuyển mạch:** Glossary ổn định mapping Việt–Hàn–Anh; nguồn nền cho biết thuật ngữ dựa trên bằng chứng nào, còn nguyên tắc đối chiếu ngăn một bản dịch biến thành claim lịch sử mới.
+> **Chuyển mạch:** Glossary ổn định mapping Việt–Hàn–Anh để giữ identity xuyên chapter; **nguồn nền** cho biết thuật ngữ dựa trên loại bằng chứng nào, còn **nguyên tắc đối chiếu** ngăn bản dịch biến thành một claim lịch sử mới.
 
 ## Nguồn nền khuyến nghị
 
@@ -95,13 +95,13 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 Dùng để kiểm tra heritage inscription và documentary heritage, không dùng như sole nguồn (source / 소스) cho toàn bộ interpretation lịch sử.
 
-> **Chuyển mạch:** Ở chặng này của **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**, **Nguồn nền khuyến nghị** đã nêu tiêu chí phân biệt, còn **Nguyên tắc đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bản đồ tra cứu theo câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Nguồn nền cung cấp chronology, artifact và primary-source gateway nhưng mỗi nguồn có scope và institutional perspective riêng. **Nguyên tắc đối chiếu** đặt nhiều loại nguồn cạnh nhau; từ đó **bản đồ tra cứu theo câu hỏi** chỉ ra nên tìm bằng chứng nào trước.
 
 ## Nguyên tắc đối chiếu
 
 Khi một vấn đề liên quan colonial responsibility, wartime violence, authoritarian repression, territorial dispute hoặc hiện tại (current / 현재) political interpretation, không dùng một nguồn duy nhất. Tối thiểu cần tách: primary bằng chứng (evidence / 증거), institutional archive, peer-reviewed scholarship và later công khai (public / 공개) bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**, **Nguyên tắc đối chiếu** đã nêu tiêu chí phân biệt, còn **Bản đồ tra cứu theo câu hỏi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bảng tên riêng lịch sử và địa danh chuẩn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Đối chiếu tối thiểu primary evidence, institutional archive, scholarship và public memory để tách dữ kiện khỏi interpretation. **Question map** biến quy tắc đó thành đường đọc; **bảng tên riêng chuẩn hóa** tiếp theo giữ các identity và địa danh nhất quán khi đi qua nhiều file.
 
 ## Bản đồ tra cứu theo câu hỏi
 
@@ -118,7 +118,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 
 Bảng này là đường quay lại kiến thức giải thích, không phải danh sách link độc lập. Mỗi thuật ngữ chỉ nên được tra ở đây sau khi người học đã biết nó xuất hiện trong câu hỏi lịch sử nào.
 
-> **Chuyển mạch:** Question map chỉ ra lúc nào cần tra; normalized names giữ identity xuyên file, còn glossary giải thích variant và boundary của từng thuật ngữ.
+> **Chuyển mạch:** Question map chỉ ra lúc nào cần tra và chapter nào sở hữu câu trả lời; normalized names giữ identity xuyên file, còn glossary giải thích variant, boundary và cách dùng theo ngữ cảnh.
 
 ## Bảng tên riêng lịch sử và địa danh chuẩn hoá
 
