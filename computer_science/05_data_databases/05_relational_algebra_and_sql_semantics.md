@@ -10,7 +10,7 @@ Trong relational mô hình (model / 모델), quan hệ (relation / 관계) là m
 
 Đây là lý do truy vấn (query / 쿼리) trả rows “có vẻ cùng thứ tự” nhiều lần vẫn không tạo guarantee.
 
-> **Chuyển mạch:** Trong **Relational algebra và SQL ngữ nghĩa (semantics / 의미론)**, **Cốt lõi (core / 핵심) relational operations** tiếp nhận điểm tựa từ **Quan hệ (relation / 관계) không chỉ là bảng giao diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép nối (join / 조인) không phải chỉ một từ khóa (keyword / 키워드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Relation là đầu vào của selection/projection và các phép đại số cốt lõi; join ghép quan hệ theo điều kiện, còn SQL semantics phải nói rõ NULL, duplicate và thứ tự đánh giá.
 
 ## Cốt lõi (core / 핵심) relational operations
 

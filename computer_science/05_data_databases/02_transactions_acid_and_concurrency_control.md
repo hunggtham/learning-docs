@@ -10,7 +10,7 @@ Atomicity nghĩa giao dịch (transaction / 트랜잭션) effects được coi n
 
 Atomicity thường dựa log/khôi phục (recovery / 복구) hoặc sao chép khi ghi (copy-on-write / 쓰기 시 복사) techniques, không phải hardware thực hiện mọi writes cùng một nanosecond.
 
-> **Chuyển mạch:** Trong **Transactions, ACID và tính đồng thời (concurrency / 동시성) điều khiển (control / 제어)**, **Consistency trong ACID** tiếp nhận điểm tựa từ **Atomicity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Isolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Atomicity gom thay đổi thành một đơn vị; consistency giữ invariant của dữ liệu, rồi isolation quyết định các transaction đồng thời nhìn và ảnh hưởng nhau ở mức nào.
 
 ## Consistency trong ACID
 

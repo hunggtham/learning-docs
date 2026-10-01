@@ -10,7 +10,7 @@ Mô hình dữ liệu (data model / 데이터 모델) định nghĩa structures,
 
 Mô hình (model / 모델) không chỉ là lưu trữ (storage / 저장소) bố cục (layout / 레이아웃). Một relational bảng (table / 테이블) có thể physically stored row-wise, columnar, compressed hoặc phân tán (distributed / 분산) nhưng vẫn expose relational ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Trong **Mô hình dữ liệu (data model / 데이터 모델) và cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들)**, **Mô hình dữ liệu (data model / 데이터 모델) là cách nhìn dữ liệu** nêu điều cần giải thích; **Lược đồ (schema / 스키마) và các ràng buộc (constraints / 제약조건들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Logical vs vật lý (physical / 물리적) dữ liệu (data / 데이터) independence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Data model quy định cách biểu diễn và quan hệ; schema/constraints biến mô hình thành invariant có thể kiểm tra, rồi logical–physical independence tách cách dùng dữ liệu khỏi cách lưu trữ.
 
 ## Lược đồ (schema / 스키마) và các ràng buộc (constraints / 제약조건들)
 

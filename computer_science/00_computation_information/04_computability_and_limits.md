@@ -14,7 +14,7 @@ Church–Turing thesis không phải theorem vật lý chứng minh mọi máy c
 
 Programming languages general-purpose hiện đại về lý thuyết thường Turing-complete nếu có đủ bộ nhớ (memory / 메모리) và điều khiển (control / 제어) constructs. Điều đó không có nghĩa chúng giống nhau về hiệu năng (performance / 성능), an toàn (safety / 안전) hay ergonomics; chỉ nói về lớp (class / 클래스) functions có thể biểu đạt.
 
-> **Chuyển mạch:** Trong **Computability và giới hạn của tính toán**, **Decidable và undecidable** tiếp nhận điểm tựa từ **Một computation mô hình (model / 모델) cần những gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao undecidability liên quan công việc thực?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mô hình computation xác định thao tác và input; decidable nghĩa là luôn có thủ tục kết thúc, còn undecidable đặt giới hạn lý thuyết mà hệ thống thực phải xử lý bằng timeout, approximation hoặc restriction.
 
 ## Decidable và undecidable
 

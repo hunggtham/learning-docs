@@ -10,7 +10,7 @@ Trong decimal, `472 = 4×10² + 7×10¹ + 2×10⁰`. nhị phân (binary / 이�
 
 Hexadecimal (base 16 / 16진수) dùng digits `0–9, A–F`. Một hex digit tương ứng chính xác 4 bits, nên hex là shorthand rất tiện cho bit patterns. `0xFF = 11111111₂ = 255`. Đây là lý do bộ nhớ (memory / 메모리) addresses, bit masks, colors và mã máy (machine code / 기계어) thường hiển thị bằng hex.
 
-> **Chuyển mạch:** Trong **Hệ số, integer, floating điểm (point / 지점) và dữ liệu trong bộ nhớ**, **Unsigned integer: phạm vi (range / 범위) đến từ số patterns** tiếp nhận điểm tựa từ **Positional notation và vì sao nhị phân (binary / 이진)/hex xuất hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Signed integer và two's complement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Positional notation giải thích binary/hex; số bit quyết định range của unsigned integer, còn signed integer dùng two’s complement để mã hóa dấu và phép cộng trong cùng phần cứng.
 
 ## Unsigned integer: phạm vi (range / 범위) đến từ số patterns
 

@@ -10,7 +10,7 @@ Cơ sở dữ liệu (database / 데이터베이스) thường quản lý fixed-
 
 Page kích thước (size / 크기) cân bằng siêu dữ liệu (metadata / 메타데이터), I/O granularity và fragmentation. Large sequential scans khác random OLTP lookups.
 
-> **Chuyển mạch:** Trong **Lưu trữ (storage / 저장소) engine, WAL, khôi phục (recovery / 복구) và durability**, **Buffer pool** tiếp nhận điểm tựa từ **Pages là đơn vị quản lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Write-Ahead Logging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Pages là đơn vị đọc/ghi; buffer pool quản lý bản sao trong RAM, còn WAL ghi intent trước khi flush để recovery có thể khôi phục durability sau crash.
 
 ## Buffer pool
 

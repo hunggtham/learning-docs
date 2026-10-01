@@ -10,7 +10,7 @@ Trong mô hình (model / 모델) lý tưởng, quan hệ (relation / 관계) là
 
 Attribute có lĩnh vực (domain / 도메인) — tập giá trị hợp lệ. lược đồ (schema / 스키마) đặt types và các ràng buộc (constraints / 제약조건들) để approximate lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Trong **Relational mô hình (model / 모델), keys và normalization**, **Keys từ định danh (identity / 식별자) và functional phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Quan hệ (relation / 관계), tuple và attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Foreign key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Relation gồm tuple và attribute; keys biến định danh thành ràng buộc, functional dependency chỉ ra lặp dữ liệu, còn foreign key nối các quan hệ trước khi normalization giảm anomaly.
 
 ## Keys từ định danh (identity / 식별자) và functional phụ thuộc (dependency / 의존성)
 
