@@ -1,6 +1,6 @@
 # Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mối nguy không đồng nghĩa rủi ro** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **“Liều tạo nên độc tính” — nhưng liều nào?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**. Route đi từ hazard và dạng hóa học → đường phơi nhiễm/liều → hấp phụ, chuyển hóa và tích lũy → độc tính cá thể/quần thể và đánh giá rủi ro, để không suy ra rủi ro chỉ từ tên chất.
 
 > **Hóa học độc chất (toxic chemistry / 독성 화학)** không thể được suy ra chỉ từ tên một chất. Mức gây hại phụ thuộc **liều × đường phơi nhiễm × thời gian × dạng hóa học × chuyển hóa × độ nhạy của đối tượng**. Trong môi trường còn phải xét vận chuyển, độ bền và khả năng chất thật sự tới được sinh vật hay cơ quan đích.
 

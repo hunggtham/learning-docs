@@ -1,6 +1,6 @@
 # Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phòng ngừa là nguyên tắc đầu tiên** xác định điều kiện hoặc ranh giới mà các cơ chế sau phải tôn trọng; sau đó sang **Hiệu suất phản ứng chưa đủ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học xanh — loại bỏ mối nguy, chất thải và gánh nặng năng lượng ngay từ thiết kế**. Route đi từ hazard/waste prevention → hiệu suất nguyên tử và lựa chọn dung môi → xúc tác, năng lượng và thiết kế phân hủy → đánh giá vòng đời, để “xanh” là thuộc tính đo được của cả quy trình chứ không chỉ của sản phẩm.
 
 > **Hóa học xanh (green chemistry / 녹색화학)** là cách thiết kế phân tử và quy trình sao cho mối nguy, chất thải, tiêu thụ tài nguyên và nhu cầu năng lượng được giảm **ngay từ đầu**, thay vì tạo ô nhiễm rồi mới xử lý. Khác với khắc phục môi trường, vốn hỏi “làm sạch hậu quả thế nào?”, hóa học xanh hỏi “có thể thiết kế để hậu quả đó không được tạo ra ngay từ đầu hay không?”.
 

@@ -1,6 +1,6 @@
 # Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nước như một dung môi** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Khung acid–cơ sở (base / 기반)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học nước — dạng tồn tại, độ kiềm và xử lý nước**. Route đi từ nước/ion và hoạt độ → speciation acid–base, độ kiềm và độ cứng → oxy hóa–khử/hấp phụ → keo tụ, lọc và khử trùng, để chất lượng nước được đọc theo dạng tồn tại chứ không chỉ theo tổng nồng độ.
 
 > Nước tự nhiên không phải `H2O` tinh khiết. Nó là một dung dịch động chứa khí hòa tan, ion, phân tử hữu cơ, hạt keo, chất rắn lơ lửng và vi sinh vật. Hành vi của nước xuất hiện từ **cân bằng acid–cơ sở (base / 기반), oxy hóa–khử, hòa tan/kết tủa khoáng, tạo phức, hấp phụ và phản ứng sinh học trong một hệ có dòng vật chất liên tục**.
 

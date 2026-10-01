@@ -1,6 +1,6 @@
 # Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc khí quyển quyết định môi trường phản ứng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quang phân — ánh sáng là một tác nhân hóa học** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**. Route đi từ tầng khí quyển và nguồn phát thải → quang phân/gốc tự do → chu trình ozone, nitrogen oxide và aerosol → vận chuyển, lắng đọng và tác động khí hậu, để tốc độ phản ứng luôn gắn với độ cao và thời gian lưu.
 
 > Khí quyển có thể được xem như **một lò phản ứng hóa học được ánh sáng Mặt Trời dẫn động và đồng thời bị vận chuyển bởi chất lưu**. Nitrogen và oxygen chiếm phần lớn không khí, nhưng các chất vết ở mức ppm–ppt vẫn có thể chi phối ozone, khói quang hóa, aerosol và cân bằng bức xạ vì ảnh hưởng hóa học phụ thuộc độ phản ứng, thời gian sống và khả năng hấp thụ bức xạ chứ không chỉ phụ thuộc nồng độ.
 

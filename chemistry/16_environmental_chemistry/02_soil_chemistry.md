@@ -1,6 +1,6 @@
 # Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đất không chỉ là “đất + chất dinh dưỡng”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Khoáng sét và cấu trúc lớp** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**. Route đi từ khoáng sét/bề mặt tích điện → trao đổi cation và chất hữu cơ → ẩm, pH và trạng thái oxy hóa–khử → giữ/chuyển chất dinh dưỡng, kim loại và chất ô nhiễm, để đất được hiểu như một hệ phản ứng–vận chuyển.
 
 > Đất là một môi trường phản ứng không đồng nhất gồm khoáng vật, chất hữu cơ, nước, khí và sinh vật. Hóa học đất bị chi phối bởi **điện tích bề mặt, trao đổi ion, acid–cơ sở (base / 기반), hòa tan/kết tủa, oxy hóa–khử và biến đổi sinh học**. Vì tổng diện tích bề mặt rất lớn, đất hoạt động gần như một lò phản ứng mặt phân cách khổng lồ.
 
