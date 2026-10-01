@@ -12,7 +12,7 @@ Carbon là ví dụ kinh điển: kim cương và graphite đều chỉ gồm ca
 
 Vì vậy câu hỏi đúng không chỉ là “vật liệu gồm nguyên tố gì?” mà còn là “các nguyên tử đang liên kết và sắp xếp như thế nào?”.
 
-> **Chuyển mạch:** Trong **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Liên kết → vi cấu trúc** tiếp nhận điểm tựa từ **Thành phần → liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật có thể tạo chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Composition sets possible bonds; bonds organize into microstructure, and defects can then become controlled features that determine conductivity, strength or catalytic activity.
 
 ## Liên kết → vi cấu trúc
 

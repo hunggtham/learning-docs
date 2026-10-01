@@ -12,7 +12,7 @@ Ngược lại, một số tạp chất lại được chủ động thêm vào 
 
 Khuyết tật tinh thể cũng phải được quản lý vì tâm bẫy điện tích và tâm tái hợp có thể làm giảm hiệu suất hoặc độ tin cậy của linh kiện.
 
-> **Chuyển mạch:** Trong **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, **Pha tạp** tiếp nhận điểm tựa từ **Tinh chế silicon và tăng trưởng tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện môi cổng và bề mặt phân cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Purified silicon and crystal growth set the material baseline; doping tunes carrier concentration, then gate dielectric/interface chemistry controls how that charge becomes device behavior.
 
 ## Pha tạp
 

@@ -12,7 +12,7 @@ Nhiệt độ sôi phụ thuộc áp suất, vì vậy nồi áp suất làm nư
 
 Nấu ăn vì vậy là một phòng thí nghiệm động học, nhiệt động lực học và hóa học hữu cơ ngay trong đời sống.
 
-> **Chuyển mạch:** Trong **Hóa học trong đời sống — nhìn hiện tượng bằng cơ chế**, **Làm sạch** tiếp nhận điểm tựa từ **Nấu ăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo quản thực phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cooking changes molecules through heat, water and reaction kinetics; cleaning uses solubility/surfactant chemistry, while food preservation controls the same reactions and microbial growth over time.
 
 ## Làm sạch
 

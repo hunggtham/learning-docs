@@ -12,7 +12,7 @@ Bảng tuần hoàn xuất hiện vì electron phải điền vào các trạng 
 
 Vì vậy tính tuần hoàn hóa học là một mẫu hình nổi lên từ vật lý lượng tử, chứ không phải một bảng quy tắc độc lập được đặt ra riêng cho Hóa học.
 
-> **Chuyển mạch:** Trong **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, sau nội dung của **Cơ học lượng tử → cấu trúc nguyên tử**, **Điện từ học → liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cơ học thống kê → nhiệt độ và entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Quantum mechanics explains atomic structure; electromagnetism explains bonding forces, and statistical mechanics turns microscopic states into temperature, entropy and bulk behavior.
 
 ## Điện từ học → liên kết
 
