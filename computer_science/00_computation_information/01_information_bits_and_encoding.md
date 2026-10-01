@@ -12,7 +12,7 @@ Một bit chỉ phân biệt hai khả năng. Với `n` bit, ta có tối đa `2
 
 Tám bit thường được nhóm thành một **byte** (바이트). Byte trở thành đơn vị addressable phổ biến trong bộ nhớ (memory / 메모리) và lưu trữ (storage / 저장소), nhưng byte không mang nghĩa cố định. `01000001` có thể là integer 65 hay ký tự ASCII `A`.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보), bit, encoding và biểu diễn (representation / 표현)**, **Encoding là agreement giữa bit mẫu (pattern / 패턴) và meaning** tiếp nhận điểm tựa từ **Tại sao bit trở thành đơn vị nền tảng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn bản (text / 텍스트): từ ASCII tới Unicode và UTF-8** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Bit là pattern vật lý; encoding là agreement ánh xạ pattern sang meaning, từ đó ASCII/Unicode/UTF-8 giải quyết text, compatibility và byte boundaries.
 
 ## Encoding là agreement giữa bit mẫu (pattern / 패턴) và meaning
 

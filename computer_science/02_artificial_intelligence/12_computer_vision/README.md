@@ -33,7 +33,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [07 — Vision Transformers](./07_vision_transformers.md)
 - [08 — Modern Visual Representation](./08_modern_visual_representation.md)
 
-> **Chuyển mạch:** Trong **Computer Vision — Reading Map**, **Cốt lõi (core / 핵심) distinctions** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Reading map đặt các distinctions—pixels, geometry, recognition, localization và representation—trước chapter; mental model giúp chọn nhánh theo câu hỏi thay vì chỉ theo tên kỹ thuật.
 
 ## Cốt lõi (core / 핵심) distinctions
 

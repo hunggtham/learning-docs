@@ -10,7 +10,7 @@ Bộ nhớ (memory / 메모리) có thể hình dung như một dãy bytes, mỗ
 
 Một array của 1 triệu integers contiguous tạo mẫu (pattern / 패턴) địa chỉ đều. CPU prefetcher và bộ nhớ đệm (cache / 캐시) line có thể lấy nhiều neighboring values cùng lúc. Linked danh sách (list / 목록) đặt nodes rải rác, mỗi pointer dereference có thể dẫn tới trượt bộ nhớ đệm (cache miss / 캐시 미스).
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리) mô hình (model / 모델), locality và dữ liệu (data / 데이터) bố cục (layout / 레이아웃)**, **Spatial và temporal locality** tiếp nhận điểm tựa từ **Random-access bộ nhớ (memory / 메모리) mô hình (model / 모델) và address** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Address model cho biết cách truy cập; spatial/temporal locality giải thích cache, còn contiguous và linked layout đổi trade-off giữa locality, insertion cost và pointer overhead.
 
 ## Spatial và temporal locality
 

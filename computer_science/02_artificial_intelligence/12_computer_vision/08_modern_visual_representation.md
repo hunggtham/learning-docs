@@ -25,7 +25,7 @@ contrastive / alignment objectives
 masked / reconstruction objectives
 ```
 
-> **Chuyển mạch:** Trong **Hiện đại (modern / 현대적) Visual biểu diễn (representation / 표현)**, **Self-Supervised học tập (learning / 학습)** đã nêu tiêu chí phân biệt, còn **Contrastive học tập (learning / 학습)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **SimCLR Intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Self-supervised learning tạo target từ data; contrastive learning tổ chức positive/negative pairs trong representation space, và SimCLR minh họa cách augmentation định nghĩa identity.
 
 ## Contrastive học tập (learning / 학습)
 

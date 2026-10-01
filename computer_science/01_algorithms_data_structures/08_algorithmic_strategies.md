@@ -12,7 +12,7 @@ Recursion tính đúng đắn (correctness / 정확성) thường dùng inductio
 
 Thời gian chạy (runtime / 런타임) thường dùng ngăn xếp lời gọi (call stack / 호출 스택), nên recursion độ sâu (depth / 깊이) lớn có thể ngăn xếp (stack / 스택) overflow nếu ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) không có tail-call tối ưu hóa (optimization / 최적화) hoặc thuật toán (algorithm / 알고리즘) không cân bằng.
 
-> **Chuyển mạch:** Trong **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Divide-and-conquer** tiếp nhận điểm tựa từ **Recursion: định nghĩa bài toán (problem / 문제) bằng phiên bản nhỏ hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy: cục bộ (local / 로컬) choice cần proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Recursion thu nhỏ bài toán; divide-and-conquer tách rồi ghép lời giải, greedy chọn local action cần proof, còn backtracking/DP xử lý không gian lựa chọn và subproblem overlap.
 
 ## Divide-and-conquer
 
