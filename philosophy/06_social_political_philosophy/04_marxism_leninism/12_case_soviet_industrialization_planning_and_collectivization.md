@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ NEP sang Great Turn** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Planning kiến trúc (architecture / 아키텍처) — trạng thái (state / 상태) đang giải bài toán gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**. Route đi từ NEP và Great Turn → công nghiệp hóa/kế hoạch hóa → collectivization, cưỡng chế và phân bổ → sản lượng, chi phí xã hội và bằng chứng đối nghịch, để case được đọc bằng cả mục tiêu lẫn giá phải trả.
 
 Trường hợp (case / 사례) Liên Xô cuối thập niên 1920–1930 là nơi khung phần mềm (framework / 프레임워크) của chapter [Historical implementation](06_historical_implementation_and_evidence.md) trở nên cụ thể nhất. Đây không phải bài kiểm tra đơn giản kiểu “planning thành công hay thất bại”. Câu hỏi hữu ích hơn là: một trạng thái (state / 상태) có thể huy động nguồn lực để công nghiệp hóa nhanh bằng những institution nào, những institution đó tạo incentive và thông tin (information / 정보) luồng (flow / 흐름) ra sao, và chi phí được phân bổ cho những nhóm nào.
 

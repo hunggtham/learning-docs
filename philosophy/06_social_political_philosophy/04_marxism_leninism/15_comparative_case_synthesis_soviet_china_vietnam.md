@@ -1,6 +1,6 @@
 # Comparative synthesis — Soviet Union, China và Vietnam
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Comparative synthesis — Soviet Union, China và Vietnam**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Dimension 1 — quyết định (decision / 결정) rights nằm ở đâu?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dimension 2 — price formation** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Comparative synthesis — Soviet Union, China và Vietnam**. Route đi từ quyền quyết định và price formation → sở hữu, kế hoạch và thị trường → incentives, nhà nước và phân phối → so sánh outcome/chi phí qua ba case, để rút ra cơ chế chuyển giao được chứ không chỉ xếp hạng quốc gia.
 
 Ba trường hợp (case / 사례) trước không được xếp thành bảng “thành công/thất bại”. Mục tiêu của synthesis này là học cách **so sánh institutional mechanisms trong các country-period khác nhau** mà không để ideology label làm mất variation.
 

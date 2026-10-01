@@ -1,6 +1,6 @@
 # Comparative political economy — so sánh bằng institutional kiến trúc (architecture / 아키텍처)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Comparative political economy — so sánh bằng institutional kiến trúc (architecture / 아키텍처)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thuộc tính (property / 속성): “private” và “công khai (public / 공개)” đều là bundles of rights** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quyền sở hữu (ownership / 소유권) versus coordination: đừng ghép thị trường (market / 시장) = private thuộc tính (property / 속성)** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Comparative political economy — so sánh bằng institutional kiến trúc (architecture / 아키텍처)**. Route đi từ quyền sở hữu và coordination → thị trường, kế hoạch và hỗn hợp → incentives, thông tin và năng lực nhà nước → kết quả/phân phối, để so sánh thể chế bằng cơ chế chứ không bằng nhãn private/public.
 
 Sau khi thấy Marxism phân nhánh theo nhiều hướng, comparison phải đi sâu hơn labels như “capitalism”, “socialism”, “thị trường (market / 시장)” hay “planning”. Những labels này che giấu rất nhiều institutional variation bên trong.
 

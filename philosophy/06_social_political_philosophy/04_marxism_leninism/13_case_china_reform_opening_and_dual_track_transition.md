@@ -1,6 +1,6 @@
 # Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Starting điểm (point / 지점) — reform giải quyết vấn đề nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Agriculture — household responsibility hệ thống (system / 시스템)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Trường hợp (case / 사례) study — China after 1978: reform, opening và dual-track chuyển tiếp (transition / 전이)**. Route đi từ vấn đề hậu tập thể hóa → household responsibility và nông nghiệp → dual-track, doanh nghiệp địa phương và mở cửa → incentives, tăng trưởng, bất bình đẳng và giới hạn, để cải cách được đọc như chuỗi thử nghiệm thể chế.
 
 Nếu Soviet trường hợp (case / 사례) cho thấy một trạng thái (state / 상태) có thể dùng hierarchy và planning để huy động resources rất nhanh, China sau 1978 cho thấy một câu hỏi khác: **một hệ thống chính trị tự nhận là socialist có thể thay đổi economic coordination cơ chế (mechanism / 메커니즘) sâu đến mức nào mà vẫn giữ political continuity?**
 

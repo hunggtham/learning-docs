@@ -1,6 +1,6 @@
 # Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Revisionism và xã hội (social / 사회적) democracy** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Leninism — organization trở thành biến trung tâm** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**. Route đi từ revisionism/xã hội dân chủ → Leninism và council/left traditions → Frankfurt, Gramsci, Mao và các nhánh sau → khác biệt về nhà nước, chủ thể và chiến lược, để bản đồ truyền thống không bị rút thành một dòng chính thống duy nhất.
 
 Sau [Major critiques](08_major_critiques_and_open_questions.md), một câu hỏi tự nhiên xuất hiện: nếu Marxism gặp các vấn đề về prediction, lớp (class / 클래스) reductionism, institutional thiết kế (design / 설계) hoặc giá trị (value / 값) lý thuyết (theory / 이론), tradition này đã phản ứng thế nào? Câu trả lời là **không có một hậu duệ duy nhất của Marx**. Từ cuối thế kỷ XIX đến thế kỷ XX, nhiều dòng tư tưởng giữ lại một số câu hỏi của Marx nhưng thay đổi cơ chế (mechanism / 메커니즘), subject of politics hoặc phương thức (method / 메서드).
 
