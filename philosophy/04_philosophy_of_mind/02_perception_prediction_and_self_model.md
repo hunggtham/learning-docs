@@ -8,7 +8,7 @@ Perception không đơn giản là camera ghi lại world. Hệ thần kinh kế
 
 Prediction lỗi (error / 오류) có thể được giảm bằng cập nhật belief hoặc thay đổi world qua hành động (action / 동작). Vì vậy, perception gắn với active sampling, affordance và điều khiển (control / 제어). Illusion cho thấy experience có thể sai về đối tượng (object / 객체) nhưng vẫn hữu ích cho hành vi (behavior / 동작); “constructed” không đồng nghĩa “arbitrary”.
 
-> **Chuyển mạch:** Trong **Perception, Prediction và Self-Model**, **Self-model** tiếp nhận điểm tựa từ **Perception và lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Perception kết hợp tín hiệu với prediction và prediction error; self-model dùng cùng cơ chế để mô hình hóa “tôi” như một tác nhân trong thế giới.
 
 ## Self-model
 

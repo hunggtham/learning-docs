@@ -6,7 +6,7 @@
 
 Modal lập luận (reasoning / 추론) phân biệt điều **có thể**, **thực tế** và **tất yếu**. Một claim có thể đúng trong thế giới hiện tại nhưng không tất yếu; một ràng buộc (constraint / 제약조건) vật lý có thể khiến scenario không khả thi dù lô-gic (logic / 논리) không mâu thuẫn. Khi dùng “có thể” trong tranh luận, phải nói rõ là logical, vật lý (physical / 물리적), epistemic hay normative possibility.
 
-> **Chuyển mạch:** Trong **Modality, thời gian (time / 시간) và Free Will**, **Thời gian (time / 시간) và thay đổi (change / 변경)** tiếp nhận điểm tựa từ **Possibility và necessity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Free will và responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Possibility và necessity mô tả modality; time/change đặt các trạng thái vào thứ tự, rồi free will hỏi trách nhiệm còn có ý nghĩa nào trong những ràng buộc đó.
 
 ## Thời gian (time / 시간) và thay đổi (change / 변경)
 

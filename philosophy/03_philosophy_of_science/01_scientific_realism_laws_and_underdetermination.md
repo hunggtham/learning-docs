@@ -6,7 +6,7 @@
 
 Người realist có thể tin rằng thế giới tồn tại độc lập với observer, rằng lý thuyết (theory / 이론) tốt gần đúng cấu trúc thế giới, hoặc rằng các thực thể (entity / 엔터티) không quan sát trực tiếp như electron là có thật. Instrumentalist chỉ cần lý thuyết (theory / 이론) hữu ích để dự đoán. Hai lập trường cần tranh luận bằng lịch sử (history / 이력) of science, novel prediction, convergence và thất bại (failure / 실패) của rival các mô hình (models / 모델들) — không phải bằng định nghĩa.
 
-> **Chuyển mạch:** Trong **Scientific Realism, Laws và Underdetermination**, **Laws và ceteris paribus** tiếp nhận điểm tựa từ **Realism là claim nhiều tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Underdetermination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Realism có nhiều tầng từ tồn tại đến cấu trúc; laws và ceteris paribus mô tả quy luật trong điều kiện nêu rõ, còn underdetermination nhắc rằng dữ liệu có thể phù hợp nhiều theory.
 
 ## Laws và ceteris paribus
 

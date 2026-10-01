@@ -8,7 +8,7 @@ Technology không chỉ là vật thể trung tính nằm ngoài xã hội. Thi�
 
 Một recommender tối ưu watch thời gian (time / 시간) có thể làm tăng engagement nhưng thay đổi attention, exposure diversity và beliefs. Để đánh giá, không chỉ hỏi mô hình (model / 모델) có accurate không; cần hỏi mục tiêu (objective / 목표), vòng phản hồi (feedback loop / 피드백 루프), population-level externality, người dùng (user / 사용자) understanding, opt-out, vulnerable users và khả năng kiểm tra (audit / 감사). Nếu người dùng thích nội dung do hệ thống liên tục cho xem, preference quan sát được vừa là đầu vào (input / 입력) vừa là sản phẩm của thiết kế (design / 설계).
 
-> **Chuyển mạch:** Trong **Technology, thiết kế (design / 설계) và Human Agency**, **Trường hợp (case / 사례): recommendation hệ thống (system / 시스템)** cho ta quy tắc; **Agency dưới automation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ sâu (depth / 깊이) pass: technology, agency và quyền lực được vật chất hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Recommendation system cho thấy design có thể định hướng lựa chọn; automation phân phối agency và quyền lực qua interface, dữ liệu và các default được vật chất hóa.
 
 ## Agency dưới automation
 

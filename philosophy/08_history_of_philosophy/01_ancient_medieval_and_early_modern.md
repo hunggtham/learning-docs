@@ -6,7 +6,7 @@
 
 Pre-Socratic thinkers chuyển câu hỏi từ mythic genealogy sang arche, thay đổi (change / 변경) và being. Socrates đặt trọng tâm vào examined life và definition; Plato liên hệ kiến thức (knowledge / 지식), forms, soul và political thứ tự (order / 순서); Aristotle phân tích substance, causes, virtue, lô-gic (logic / 논리) và polis. Stoicism, Epicureanism và Skepticism xem philosophy như practice định hình judgment và đời sống.
 
-> **Chuyển mạch:** Trong **Ancient, Medieval và Early hiện đại (modern / 현대적): từ Cosmos đến Subject**, **Medieval** tiếp nhận điểm tựa từ **Ancient** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Early hiện đại (modern / 현대적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ancient đặt câu hỏi về cosmos và virtue; Medieval tái cấu trúc chúng qua theology, còn Early Modern chuyển trọng tâm sang subject, method và authority.
 
 ## Medieval
 
