@@ -91,7 +91,7 @@ Ngẫu nhiên hóa thứ tự chạy giúp phân bố xu hướng thời gian gi
 
 Ngẫu nhiên hóa không làm drift biến mất; nó chỉ ngăn drift luôn đi cùng một điều kiện xử lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Chặn theo yếu tố gây nhiễu đã biết** tiếp nhận điểm tựa từ **Ngẫu nhiên hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Làm mù** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Randomization distributes unknown drift; blocking explicitly groups known nuisance factors such as day, instrument, reagent lot, or sample source, while blinding protects the observation from expectation effects.
 
 ## Chặn theo yếu tố gây nhiễu đã biết
 
@@ -101,7 +101,7 @@ Ví dụ khối (block / 블록) có thể là ngày đo, thiết bị, lô thu�
 
 So sánh xử lý bên trong mỗi khối (block / 블록) cho phép mô hình thống kê tách biến thiên do khối (block / 블록) khỏi hiệu ứng cần nghiên cứu.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Làm mù** tiếp nhận điểm tựa từ **Chặn theo yếu tố gây nhiễu đã biết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu chuẩn là một phần của thiết kế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Blocking removes structured nuisance variation from the comparison; blinding addresses observer and analyst judgment, after which calibration must anchor the instrument signal to known input rather than post-hoc tuning.
 
 ## Làm mù
 
@@ -111,7 +111,7 @@ Khi phép đo chứa quyết định chủ quan như đọc điểm cuối, ch�
 
 Phân tích tự động cũng có thể bị độ lệch (bias / 편향) nếu tham số được chỉnh sau khi người phân tích đã nhìn nhãn nhóm, vì vậy tự động hóa không tự động loại bỏ thiên lệch.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Hiệu chuẩn là một phần của thiết kế** tiếp nhận điểm tựa từ **Làm mù** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương pháp thêm chuẩn cho ảnh hưởng nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Blinding protects interpretation from labels; calibration protects measurement from scale drift, and matrix effects still require standard addition when sample composition changes the response.
 
 ## Hiệu chuẩn là một phần của thiết kế
 
