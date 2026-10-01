@@ -414,7 +414,7 @@ Mạch sinh học tổng hợp (synthetic circuit) có thể thất bại (fail 
 
 Biology dạy một lesson kỹ thuật (engineering / 엔지니어링) ngược lại: giao diện (interface / 인터페이스) không bao giờ hoàn toàn context-free trong living hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)** cho ta quy tắc; **33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Oxygen delivery validates modular reasoning across ventilation, diffusion, perfusion, binding, and feedback; the action-potential case reuses that chain with electrochemical gradients and refractory feedback.
 
 ## 33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc
 
@@ -424,7 +424,7 @@ Một physiological hàm (function / 함수) duy nhất nối diffusion + hình 
 
 Đây là kiểu synthesis nên hướng tới thay vì thuộc riêng từng equation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc** cho ta quy tắc; **34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** An action potential turns electrochemical potential into a thresholded, delayed signal; the ecosystem tipping-point case asks when the same switch-like intuition applies at a larger scale.
 
 ## 34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi
 
@@ -432,7 +432,7 @@ Na⁺ độ dốc (gradient / 기울기) chứa electrochemical năng lượng (
 
 Điện thế hoạt động vì vậy là động (dynamic / 동적) sự kiện (event / 이벤트) của độ dốc (gradient / 기울기) + nonlinear conductance + phản hồi, không phải “electricity chạy dọc dây”.
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi** cho ta quy tắc; **35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **36. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The tipping-point comparison exposes where threshold mathematics transfers and where scale, noise, or feedback direction breaks the analogy; misconceptions are the next stress test for those boundaries.
 
 ## 35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition
 
@@ -440,7 +440,7 @@ Gene circuit có tính lưỡng ổn (bistability); shallow lake cũng có trạ
 
 Đây là sức mạnh của mathematical lớp trừu tượng (abstraction / 추상화): không nói hai hệ thống giống nhau về vật chất, mà nhận ra **cùng dynamical motif**.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition** cho ta quy tắc; **36. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **37. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Misconceptions mark failed transfers—such as treating correlation as causation or a model as the whole system—so the synthesis can retain only assumptions that survived the cases.
 
 ## 36. Các hiểu lầm phổ biến (common misconceptions)
 
