@@ -12,31 +12,31 @@ Sau 1987, direct presidential elections trở lại. Political competition dần
 
 Seoul Olympics là toàn cục (global / 전역) showcase và hạ tầng (infrastructure / 인프라) catalyst. Mega-event không chỉ là sport; nó là city redevelopment, branding, vận chuyển (transport / 전송) investment và diplomatic tín hiệu (signal / 신호) rằng South Korea đang bước vào một international position mới.
 
-> **Chuyển mạch:** Seoul Olympics expanded global exposure after institutional competition; civilian government translated legitimacy into reform, then segyehwa integrated Korea into global markets.
+> **Chuyển mạch:** Seoul Olympics mở rộng exposure quốc tế sau khi cạnh tranh thể chế được bình thường hóa; **civilian government** chuyển tính chính danh đó thành cải cách, rồi segyehwa đưa Korea vào dòng vốn và thị trường toàn cầu.
 
 ## Civilian government và reform
 
 1990s chứng kiến civilian presidency, anti-corruption drives, reform of financial transparency và prosecution of former military leaders liên quan 1979–1980 events. Đây là ví dụ **transitional justice**: democracy phải quyết định xử lý legacy của previous regime ra sao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1987–1997: democratic consolidation và globalization**, **Segyehwa và tích hợp (integration / 통합) vào toàn cục (global / 전역) economy** tiếp nhận điểm tựa từ **Civilian government và reform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vulnerability trước 1997** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Civilian government xử lý legacy quân sự và củng cố minh bạch, nhưng cải cách chính trị không tự loại bỏ exposure tài chính. **Segyehwa** nối chương trình cải cách với vay vốn, tự do hóa và mở rộng ra ngoài; **vulnerability trước 1997** sẽ kiểm tra cái giá của tốc độ đó.
 
 ## Segyehwa và tích hợp (integration / 통합) vào toàn cục (global / 전역) economy
 
 “Segyehwa” (세계화, globalization) trở thành chính sách (policy / 정책) từ khóa (keyword / 키워드). Korea gia nhập OECD năm 1996. Firms borrow and expand aggressively; financial liberalization tăng exposure to toàn cục (global / 전역) capital flows.
 
-> **Chuyển mạch:** Trong **1987–1997: democratic consolidation và globalization**, **Vulnerability trước 1997** tiếp nhận điểm tựa từ **Segyehwa và tích hợp (integration / 통합) vào toàn cục (global / 전역) economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결): robustness vs growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Segyehwa tăng dòng vốn và quy mô doanh nghiệp nhưng cũng làm lộ đòn bẩy cao, maturity mismatch và giám sát yếu khi dòng vốn đảo chiều. **Robustness vs growth** tiếp theo dùng bài học này để phân biệt throughput lớn với khả năng chịu shock.
 
 ## Vulnerability trước 1997
 
 Rapid growth không loại bỏ fragility. High leverage, maturity mismatch và weak financial supervision tạo systemic rủi ro (risk / 위험). Khi regional Asian Financial Crisis lan rộng, South Korea đối mặt severe foreign-currency liquidity crisis.
 
-> **Chuyển mạch:** Ở chặng này của **1987–1997: democratic consolidation và globalization**, sau nội dung của **Vulnerability trước 1997**, **Liên kết kiến thức (knowledge connection / 지식 연결): robustness vs growth** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Alternation and trust** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Vulnerability cho thấy tăng trưởng và mở cửa có thể tích lũy rủi ro hệ thống; **robustness vs growth** biến nhận xét đó thành câu hỏi về resilience. Trong chính trị, **alternation and trust** là phép thử tương tự: hệ thống có tiếp tục hoạt động khi phe thua chấp nhận luân phiên hay không.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결): robustness vs growth
 
 Một hệ thống (system / 시스템) có thông lượng (throughput / 처리량) cao không đồng nghĩa robust. Trong kỹ thuật (engineering / 엔지니어링), tối ưu hóa (optimization / 최적화) quá sát một operating điều kiện (condition / 조건) có thể giảm resilience. Economy cũng vậy: leverage giúp expansion nhưng làm shock transmission mạnh hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1987–1997: democratic consolidation và globalization**, **Alternation and trust** tiếp nhận điểm tựa từ **Liên kết kiến thức (knowledge connection / 지식 연결): robustness vs growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cục bộ (local / 로컬) autonomy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Robustness cần khả năng chịu thất bại lặp lại; trong dân chủ, **alternation and trust** tạo niềm tin rằng phe thua hôm nay vẫn có cơ hội thắng ngày mai. Khi niềm tin đó được thể chế hóa, **local autonomy** mở rộng nơi quyết định được thử nghiệm và kiểm chứng.
 
 ## Alternation and trust
 
