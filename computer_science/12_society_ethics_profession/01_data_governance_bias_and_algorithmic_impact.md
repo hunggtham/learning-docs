@@ -18,7 +18,7 @@ Ta thường không observe concept trực tiếp mà đo proxy. “Productivity
 
 Proxy mismatch tạo độ lệch (bias / 편향) ngay trước thuật toán (algorithm / 알고리즘).
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Đo lường (measurement / 측정) độ lệch (bias / 편향)** nêu điều cần giải thích; **Sampling độ lệch (bias / 편향)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Label độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A proxy defines what “bias” can mean operationally; sampling determines who is represented, and label construction determines which outcomes the model is trained to reproduce.
 
 ## Sampling độ lệch (bias / 편향)
 
@@ -26,7 +26,7 @@ Dataset chỉ phản ánh population được quan sát. Nếu dữ liệu huấ
 
 Random split không sửa biểu diễn (representation / 표현) gap nếu underlying dataset đã biased.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Sampling độ lệch (bias / 편향)** cho ta quy tắc; **Label độ lệch (bias / 편향)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Phản hồi (feedback / 피드백) loops** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sampling bias leaves representation gaps that random splitting cannot repair; labels then encode institutional decisions, and feedback loops can amplify both during deployment.
 
 ## Label độ lệch (bias / 편향)
 
@@ -34,7 +34,7 @@ Labels do humans/institutions tạo có inconsistency và historical chính sác
 
 ML có thể reproduce institutional độ lệch (bias / 편향) encoded trong labels.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Label độ lệch (bias / 편향)** cho ta quy tắc; **Phản hồi (feedback / 피드백) loops** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Fairness metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Labels can preserve historical policy rather than ground truth; when predictions change the environment and generate new labels, fairness metrics must inspect the resulting closed loop, not only the original dataset.
 
 ## Phản hồi (feedback / 피드백) loops
 
@@ -42,7 +42,7 @@ Prediction ảnh hưởng môi trường (environment / 환경), tạo dữ li�
 
 Closed-loop các hệ thống (systems / 시스템들) cần evaluate nhân quả (causal / 인과적)/behavioral effects, không chỉ offline accuracy.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Fairness metrics** tiếp nhận điểm tựa từ **Phản hồi (feedback / 피드백) loops** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị (governance / 거버넌스) controls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Feedback loops turn offline bias into changing exposure and outcomes; fairness metrics formalize competing goals, after which governance controls decide thresholds, review, documentation, and accountability.
 
 ## Fairness metrics
 
