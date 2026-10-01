@@ -18,7 +18,7 @@ Một thuộc tính (property / 속성) calibration lý tưởng là:
 
 > Trong các trường hợp (case / 사례) mà mô hình (model / 모델) dự đoán xác suất 0.8, khoảng 80% thực sự đúng.
 
-> **Chuyển mạch:** Trong **Bất định (uncertainty / 불확실성) và Calibration trong AI**, **Discrimination và Calibration** tiếp nhận điểm tựa từ **Xác suất (probability / 확률) đầu ra (output / 출력) không tự động là Confidence thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tin cậy (reliability / 신뢰성) Diagram** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Output probability không tự động là confidence; discrimination đo khả năng xếp hạng, calibration đo độ khớp xác suất với tần suất thực, và reliability diagram giúp thấy lệch ở đâu.
 
 ## Discrimination và Calibration
 

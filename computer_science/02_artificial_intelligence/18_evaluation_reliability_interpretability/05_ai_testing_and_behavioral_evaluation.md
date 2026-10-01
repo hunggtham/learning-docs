@@ -20,7 +20,7 @@ unit tests
 
 Không tầng (layer / 계층) nào thay thế hoàn toàn tầng (layer / 계층) khác.
 
-> **Chuyển mạch:** Trong **AI Testing và Behavioral Evaluation**, **Đơn vị (unit / 단위) Tests vẫn cần** tiếp nhận điểm tựa từ **Pyramid mở rộng cho AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) Tests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** AI vẫn cần unit tests cho code; pyramid mở rộng thêm data tests và behavioral tests để kiểm tra input distribution, output contract và hành vi ngoài các fixture quen thuộc.
 
 ## Đơn vị (unit / 단위) Tests vẫn cần
 

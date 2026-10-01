@@ -18,7 +18,7 @@ impact nào đáng lo?
 
 Threat mô hình (model / 모델) cho RAG assistant khác autonomous payment tác nhân (agent / 에이전트).
 
-> **Chuyển mạch:** Trong **Red Teaming và Adversarial Evaluation**, **Attack Surfaces** tiếp nhận điểm tựa từ **Threat mô hình (model / 모델) trước Attack danh sách (list / 목록)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prompt Injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Threat model xác định actor và capability trước khi lập attack list; attack surface gom các đường vào, còn prompt injection là một trường hợp input điều khiển hành vi ngoài ý muốn.
 
 ## Attack Surfaces
 

@@ -12,7 +12,7 @@ Property-based testing generate many inputs và check bất biến (invariant / 
 
 Fuzzing generate/mutate unexpected inputs để tìm crash/bảo mật (security / 보안) bugs, especially parsers and bản địa (native / 네이티브) mã (code / 코드).
 
-> **Chuyển mạch:** Trong **Testing, xác minh (verification / 확인) và debugging**, **Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Kiểm thử (test / 테스트) là mẫu (sample / 표본), specification là thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Determinism và flaky tests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Test là sample của behavior, specification là property cần giữ; unit/integration/system mở rộng phạm vi bằng chứng, còn determinism quyết định test có đáng tin hay flaky.
 
 ## Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)
 

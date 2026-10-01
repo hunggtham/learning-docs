@@ -10,7 +10,7 @@ Một phụ thuộc (dependency / 의존성) gói (package / 패키지) phụ th
 
 “mã (code / 코드) của chúng ta an toàn” không đủ nếu attacker compromise phụ thuộc (dependency / 의존성) publisher hoặc bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Trong **Software supply chuỗi (chain / 사슬) và secure software vòng đời (lifecycle / 생명주기)**, **Supply chuỗi (chain / 사슬) là đồ thị (graph / 그래프) trust** xác định đầu vào; **Phụ thuộc (dependency / 의존성) risks** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **SBOM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Supply chain là trust graph; dependency risk đi theo node và provenance, còn SBOM làm inventory để triage lỗ hổng và kiểm soát vòng đời phát hành.
 
 ## Phụ thuộc (dependency / 의존성) risks
 
