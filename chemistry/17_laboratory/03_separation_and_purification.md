@@ -58,7 +58,7 @@ Khi chất rắn tích lũy, chính bánh lọc trở thành một lớp lọc m
 
 Hạt cực nhỏ có thể đi qua ban đầu hoặc làm tắc lớp lọc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Ly tâm** tiếp nhận điểm tựa từ **Kích thước lỗ lọc và bánh lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết tinh lại — tinh sạch nhờ độ tan phụ thuộc nhiệt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** When a fine cake blocks filtration, centrifugation accelerates sedimentation through RCF; it separates particles or phases, while recrystallization changes the chemical purity of dissolved material through solubility.
 
 ## Ly tâm
 
@@ -68,13 +68,13 @@ Khả năng tách phụ thuộc kích thước hạt, chênh lệch khối lư�
 
 Ly tâm không “tinh sạch hóa học” các chất đang hòa tan; nó chủ yếu tách pha và hạt.
 
-> **Chuyển mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Kết tinh lại — tinh sạch nhờ độ tan phụ thuộc nhiệt độ** tiếp nhận điểm tựa từ **Ly tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chỉ nên dùng lượng dung môi nóng vừa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Centrifugation exploits density and particle size without removing dissolved impurities; recrystallization instead exploits a hot–cold solubility contrast, whose recovery depends on solvent volume.
 
 ## Kết tinh lại — tinh sạch nhờ độ tan phụ thuộc nhiệt độ
 
 Dung môi kết tinh lại lý tưởng nên hòa tan sản phẩm tốt khi nóng nhưng kém khi lạnh, đồng thời giữ tạp chất ở trạng thái luôn tan hoặc luôn không tan, không phản ứng với sản phẩm và có điểm sôi thuận tiện.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Vì sao chỉ nên dùng lượng dung môi nóng vừa đủ** tiếp nhận điểm tựa từ **Kết tinh lại — tinh sạch nhờ độ tan phụ thuộc nhiệt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lọc nóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Recrystallization needs a solvent that distinguishes hot from cold solubility; using too much loses product, too little traps impurity, so hot filtration must remove insoluble matter before crystals form.
 
 ## Vì sao chỉ nên dùng lượng dung môi nóng vừa đủ
 
@@ -84,7 +84,7 @@ Dùng quá ít làm mẫu không tan hoàn toàn và có thể giữ tạp chấ
 
 Kết tinh lại luôn là đánh đổi giữa độ tinh khiết và hiệu suất thu hồi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Lọc nóng** tiếp nhận điểm tựa từ **Vì sao chỉ nên dùng lượng dung môi nóng vừa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo mầm và tăng trưởng tinh thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Solvent volume sets the recovery–purity trade-off; hot filtration protects the supersaturated solution from premature blockage, after which nucleation and crystal growth determine the final solid.
 
 ## Lọc nóng
 
