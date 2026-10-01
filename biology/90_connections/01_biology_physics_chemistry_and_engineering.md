@@ -82,7 +82,7 @@ Equation cho thấy particle concentration có thể tạo áp suất (pressure)
 
 Plant tận dụng turgor; animal cell tránh swelling bằng ion pump và extracellular regulation.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **6. Chênh lệch nồng độ (concentration gradient) chưa đủ cho ion: cần electrochemical potential** tiếp nhận điểm tựa từ **5. Osmosis và thế hóa học (chemical potential)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Osmosis mô tả nước theo chemical potential; với ion, charge separation thêm electric potential, còn membrane capacitance giải thích cách điện thế tích lũy trên màng.
 
 ## 6. Chênh lệch nồng độ (concentration gradient) chưa đủ cho ion: cần electrochemical potential
 
@@ -98,7 +98,7 @@ E=\frac{RT}{zF}\ln\frac{[ion]_{out}}{[ion]_{in}}
 
 Nơron điện thế màng (membrane potential) và động lực proton (proton motive force) ở mitochondria cùng dùng một principle: **charge separation + concentration difference lưu năng lượng tự do (free energy)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học** tiếp nhận điểm tựa từ **6. Chênh lệch nồng độ (concentration gradient) chưa đủ cho ion: cần electrochemical potential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Thermodynamics: favorable không đồng nghĩa fast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Electrochemical potential quyết định lực ion; membrane capacitance biến dòng ion thành thay đổi voltage, rồi thermodynamics tách câu hỏi “có thuận lợi không?” khỏi “xảy ra nhanh không?”.
 
 ## 7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học
 
@@ -114,7 +114,7 @@ RC-like hằng số thời gian (time constant) giúp hiểu vì sao neuron inte
 
 Kỹ thuật (engineering / 엔지니어링) circuit analogy không nói neuron là wire; nó giúp formalize một phần biophysics.
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **8. Thermodynamics: favorable không đồng nghĩa fast** tiếp nhận điểm tựa từ **7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Membrane voltage mô tả trạng thái điện; thermodynamics cho biết hướng tự phát, còn kinetics quyết định tốc độ, trước khi ATP được dùng để couple các quá trình.
 
 ## 8. Thermodynamics: favorable không đồng nghĩa fast
 
