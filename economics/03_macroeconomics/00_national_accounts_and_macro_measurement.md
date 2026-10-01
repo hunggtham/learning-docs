@@ -61,7 +61,7 @@ Machine được firm mua là final investment good nếu nó không được re
 
 Used goods thường không vào hiện tại (current / 현재) GDP vì môi trường vận hành (production / 운영 환경) đã được ghi ở kỳ trước; dịch vụ (service / 서비스) fee của dealer lại là hiện tại (current / 현재) môi trường vận hành (production / 운영 환경) và được tính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **4. Nominal GDP và Real GDP** tiếp nhận điểm tựa từ **3. Final good không đồng nghĩa bên tiêu thụ (consumer / 소비자) good** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. GDP deflator và CPI đo khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Final-good accounting avoids double counting; nominal GDP combines prices and quantities, so real GDP and deflators are needed to separate the two.
 
 ## 4. Nominal GDP và Real GDP
 

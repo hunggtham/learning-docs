@@ -29,7 +29,7 @@ Measurement / accounting identities
 
 Mô-đun (module / 모듈) cố ý bắt đầu bằng đo lường (measurement / 측정) vì macro rất dễ nhầm định danh (identity / 식별자) với lý thuyết (theory / 이론). `S = I + NX`, government ngân sách (budget / 예산) ràng buộc (constraint / 제약조건) hay balance-of-payments equality là accounting structures; chúng không tự nói direction of causality. Nhân quả (causal / 인과적) interpretation phải đi qua behavioral các giả định (assumptions / 가정들), institutional regime và bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **03 — Macroeconomics**, **Kết quả cần đạt** tiếp nhận điểm tựa từ **Trục học (learning spine / 학습 축)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với Investing Economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Macro outcomes should show measurement, mechanism and policy transmission; the boundary with investing economics keeps aggregate claims separate from asset-pricing decisions.
 
 ## Kết quả cần đạt
 

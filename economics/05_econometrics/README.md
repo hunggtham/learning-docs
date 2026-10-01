@@ -32,7 +32,7 @@ Economic question
 
 Công cụ (tool / 도구) choice comes after thiết kế (design / 설계). `OLS`, `IV`, `DiD`, `RDD` hay `VAR` không phải labels cho sophistication; chúng answer different questions under different các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Ở chặng này của **05 — Econometrics**, **Ba mục tiêu phải tách riêng** tiếp nhận điểm tựa từ **Trục học (learning spine / 학습 축)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng chứng (evidence / 증거) discipline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Measurement, prediction and causal inference require different estimands and evidence; the econometrics spine makes that separation explicit before methods are chosen.
 
 ## Ba mục tiêu phải tách riêng
 

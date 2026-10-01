@@ -30,7 +30,7 @@ Economic mechanism
 
 Nếu một chapter chỉ có lý thuyết (theory / 이론) mà không nói dữ liệu (data / 데이터)/thiết kế (design / 설계), nó chưa đủ applied. Nếu chỉ có empirical correlation mà không có cơ chế (mechanism / 메커니즘)/counterfactual, nó cũng chưa đủ applied.
 
-> **Chuyển mạch:** Ở chặng này của **04 — Applied Economics**, **Phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Applied spine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng chứng (evidence / 증거) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Applied spine links theory to domain constraints; each dependency must be stated as evidence/contract so policy claims remain testable.
 
 ## Phụ thuộc (dependency / 의존성)
 

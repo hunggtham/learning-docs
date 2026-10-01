@@ -26,7 +26,7 @@ opportunity cost = value of the best forgone alternative
 
 **Sunk chi phí (cost / 비용)** là khoản chi phí đã phát sinh và không thể thu hồi bằng quyết định hiện tại. Nó không nên quyết định lựa chọn biên hiện tại. Quyết định tiếp tục hay dừng phải so sánh lợi ích và chi phí tăng thêm từ hôm nay, đồng thời tính các nghĩa vụ không thể tránh. Ví dụ, tiền vé xem phim đã mua không làm bộ phim trở nên đáng xem hơn nếu bạn đang bị ốm; khoản tiền đó đã mất dù bạn ở nhà hay đi xem.
 
-> **Chuyển mạch:** Ở chặng này của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”** tiếp nhận điểm tựa từ **2. Opportunity chi phí (cost / 비용) là giá trị của phương án tốt nhất bị bỏ qua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Opportunity cost compares the best forgone option; marginal analysis evaluates the next unit, and incentives transmit those constraints into behavior.
 
 ## 3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”
 

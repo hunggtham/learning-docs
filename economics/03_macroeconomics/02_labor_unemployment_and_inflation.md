@@ -34,7 +34,7 @@ Zero frictional unemployment không hẳn desirable: tìm kiếm (search / 검�
 
 Chính sách (policy / 정책) tốt không nhất thiết maximize speed nếu speed làm match chất lượng (quality / 품질) giảm mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**, **4. Structural unemployment** tiếp nhận điểm tựa từ **3. Frictional unemployment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Cyclical unemployment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Frictional unemployment reflects search time; structural unemployment reflects persistent mismatch, while cyclical unemployment follows aggregate demand conditions.
 
 ## 4. Structural unemployment
 

@@ -11,7 +11,7 @@ Thị trường (market / 시장) cấu trúc (structure / 구조) mô tả ràn
 3. [Repeated Games, Entry & Collusion](./02_repeated_games_entry_and_collusion.md) — discount factor, trigger strategies, monitoring, tacit/tường minh (explicit / 명시적) coordination, predation, entry deterrence, reputation và động (dynamic / 동적) competition.
 4. [Auctions & Mechanism Design](./03_auctions_and_mechanism_design.md) — private/dùng chung (common / 공통) values, first/second-price, winner’s curse, revenue equivalence, incentive tính tương thích (compatibility / 호환성), participation, revelation principle, VCG và matching.
 
-> **Chuyển mạch:** Trong **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**, **Trục học (learning spine / 학습 축)** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết quả cần đạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Canonical order moves from market power to strategic interaction, repeated games and mechanism design; each step adds a constraint, not just another vocabulary list.
 
 ## Trục học (learning spine / 학습 축)
 
