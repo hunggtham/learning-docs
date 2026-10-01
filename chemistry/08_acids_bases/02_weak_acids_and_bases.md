@@ -40,7 +40,7 @@ x\approx\sqrt{K_aC}
 
 Xấp xỉ phải được kiểm tra sau khi tính, không nên dùng tự động.
 
-> **Chuyển mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Phần trăm ion hóa** tiếp nhận điểm tựa từ **Acid yếu một proton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở (base / 기반) yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Với acid yếu, nghiệm (x) của cân bằng quyết định cả lượng ion hóa lẫn phần trăm so với nồng độ ban đầu. **Phần trăm ion hóa** làm rõ vì sao cùng một (K_a) lại cho tỉ lệ khác khi pha loãng; sau đó **Cơ sở yếu** áp dụng cùng khung cân bằng theo chiều tạo (OH^-).
 
 ## Phần trăm ion hóa
 
@@ -52,7 +52,7 @@ Với cùng một acid yếu, phần trăm ion hóa thường tăng khi pha loã
 
 Điều này không có nghĩa tổng số ion hydrogen nhất thiết tăng. **Tỉ lệ** phân tử bị ion hóa tăng trong khi nồng độ tổng giảm.
 
-> **Chuyển mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Cơ sở (base / 기반) yếu** tiếp nhận điểm tựa từ **Phần trăm ion hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ giữa cặp liên hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Phần trăm ion hóa tăng khi pha loãng nhưng nồng độ ion tuyệt đối không nhất thiết tăng. Với **Cơ sở yếu**, ta đổi (K_a) thành (K_b) và theo dõi (BH^+), (OH^-); hai mô tả này gặp nhau ở **quan hệ giữa cặp liên hợp**.
 
 ## Cơ sở (base / 기반) yếu
 
@@ -68,7 +68,7 @@ K_b=\frac{a_{BH^+}a_{OH^-}}{a_B}
 
 Trong dung dịch loãng gần lý tưởng, có thể thay hoạt độ bằng nồng độ để lập bảng cân bằng tương tự acid yếu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Quan hệ giữa cặp liên hợp** tiếp nhận điểm tựa từ **Cơ sở (base / 기반) yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thủy phân muối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** (K_a) của acid và (K_b) của base liên hợp không độc lập vì (K_aK_b=K_w). Khi một cặp liên hợp xuất hiện dưới dạng ion của muối, **Thủy phân muối** sẽ biến quan hệ cân bằng đó thành thay đổi pH quan sát được.
 
 ## Quan hệ giữa cặp liên hợp
 
@@ -88,7 +88,7 @@ khi dùng cùng dung môi và nhiệt độ.
 
 Acid càng mạnh thì cơ sở (base / 기반) liên hợp càng yếu, và ngược lại.
 
-> **Chuyển mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Thủy phân muối** tiếp nhận điểm tựa từ **Quan hệ giữa cặp liên hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ion chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Từ (K_aK_b=K_w), acetate và ammonium cho thấy ion liên hợp có thể phản ứng với nước nên dung dịch muối không luôn trung tính. Khi thêm chính một ion đang có trong cân bằng, **Ion chung** sẽ mô tả cách hệ dịch chuyển để khôi phục (Q=K).
 
 ## Thủy phân muối
 
@@ -108,7 +108,7 @@ NH_4^++H_2O\rightleftharpoons NH_3+H_3O^+
 
 Vì vậy “dung dịch muối luôn trung tính” là sai. Phải xét tính acid–cơ sở (base / 기반) của các ion tạo thành.
 
-> **Chuyển mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Ion chung** tiếp nhận điểm tựa từ **Thủy phân muối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Acid nhiều proton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Thủy phân cho thấy ion của muối tạo cân bằng acid–base mới; hiệu ứng ion chung cho thấy một thành phần ban đầu có thể ép cân bằng về phía còn lại. Với nhiều nấc cho proton, **Acid nhiều proton** cần theo dõi đồng thời nhiều (K_a) và các dạng phân bố.
 
 ## Ion chung
 
