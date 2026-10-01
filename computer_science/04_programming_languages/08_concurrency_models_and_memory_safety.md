@@ -12,7 +12,7 @@ Mutex bảo vệ trọng yếu (critical / 중요) section; điều kiện (cond
 
 Điểm khó là tính đúng đắn (correctness / 정확성) phụ thuộc **happens-before quan hệ (relation / 관계)**, không chỉ source-code thứ tự (order / 순서).
 
-> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Bộ nhớ (memory / 메모리) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Shared-memory threading** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Actors: isolate mutable trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Shared-memory threading cần memory model và synchronization để giữ invariant; actor model cô lập mutable state và giao tiếp bằng message, đổi race risk lấy coordination semantics.
 
 ## Bộ nhớ (memory / 메모리) mô hình (model / 모델)
 

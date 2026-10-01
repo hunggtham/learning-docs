@@ -18,7 +18,7 @@ Thực nghiệm không cho kết quả như vậy. Sáu liên kết C–C tươn
 
 Lời giải thích là **liên kết π phi định xứ (delocalized π bonding)** trên toàn vòng.
 
-> **Chuyển mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Góc nhìn orbital — sáu orbital p tạo một hệ vòng duy nhất** tiếp nhận điểm tựa từ **Bài toán benzene** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc Hückel — vì sao xuất hiện \(4n+2\)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Benzene đặt bài toán về delocalized π system; sáu p orbitals tạo một vòng liên tục, và Hückel (4n+2) giải thích khi hệ vòng đạt aromatic stabilization.
 
 ## Góc nhìn orbital — sáu orbital p tạo một hệ vòng duy nhất
 

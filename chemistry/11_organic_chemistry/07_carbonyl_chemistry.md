@@ -32,7 +32,7 @@ Cấu trúc thứ hai đóng góp ít hơn nhưng làm nổi bật sự phân c�
 
 Cặp electron tự do trên oxygen lại làm oxygen có tính cơ sở (base / 기반) và ái nhân đối với proton hoặc acid Lewis.
 
-> **Chuyển mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Thay đổi hình học khi nucleophile tấn công** tiếp nhận điểm tựa từ **Cấu trúc điện tử — vì sao carbon có tính ái điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Polarized C=O makes carbon electrophilic; nucleophile attack changes geometry from trigonal planar toward tetrahedral, and aldehydes usually react faster than ketones because of steric/electronic effects.
 
 ## Thay đổi hình học khi nucleophile tấn công
 

@@ -102,7 +102,7 @@ Nếu không có giá trị tham chiếu đáng tin cậy, việc nói phương 
 
 Độ chụm không phải một con số duy nhất.
 
-> **Chuyển mạch:** Trong **Thẩm định phương pháp và chemometrics — từ dữ liệu đo tới bằng chứng định lượng đáng tin cậy**, **Độ lặp lại** tiếp nhận điểm tựa từ **Thử nghiệm nhiễu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ chụm trung gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Interference testing tìm failure mode của method; repeatability đo biến thiên trong điều kiện giữ nguyên, còn intermediate precision kiểm tra biến thiên giữa ngày/người/thiết bị.
 
 ## Độ lặp lại
 
