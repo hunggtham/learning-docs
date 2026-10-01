@@ -1,6 +1,6 @@
 # Enthalpy và nhiệt hóa học — hạch toán năng lượng phản ứng ở áp suất gần không đổi
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Enthalpy và nhiệt hóa học — hạch toán năng lượng phản ứng ở áp suất gần không đổi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Enthalpy và nhiệt hóa học — hạch toán năng lượng phản ứng ở áp suất gần không đổi**. Route đi từ (H=U+pV) → (q_p=Delta H) → calorimetry/Hess → formation enthalpy và reaction energy, luôn ghi rõ boundary/pressure convention trước khi cộng trừ dữ liệu.
 
 > **Enthalpy (entanpi, \(H\) / 엔탈피)** là hàm trạng thái được định nghĩa bởi:
 

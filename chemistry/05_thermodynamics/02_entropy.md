@@ -1,6 +1,6 @@
 # Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao định luật thứ nhất chưa đủ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái vĩ mô và vi trạng thái** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**. Route đi từ macrostate/microstate → reversible heat và (dS) → second law → mixing/phase/temperature effects, để tách entropy accounting khỏi ẩn dụ “độ hỗn loạn”.
 
 > **Entropy (\(S\) / 엔트로피)** là hàm trạng thái nhiệt động mô tả mức độ năng lượng và vật chất có thể được phân bố giữa các cấu hình vi mô tương thích với trạng thái vĩ mô. Cách gọi entropy là “độ hỗn loạn” chỉ là phép so sánh rất thô và thường gây hiểu sai.
 

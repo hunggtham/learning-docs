@@ -1,6 +1,6 @@
 # Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần một thế nhiệt động mới?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vi phân cơ bản của G** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng tự do Gibbs — tiêu chuẩn nhiệt động ở nhiệt độ và áp suất không đổi**. Route đi từ (G=H-TS) → differential/chemical work → sign of (Delta G) → equilibrium/standard free energy, để biết khi nào Gibbs là criterion phù hợp và khi nào cần thêm constraints.
 
 > **Năng lượng tự do Gibbs (Gibbs free energy, \(G\) / Gibbs 자유 에너지)** kết hợp enthalpy và entropy theo \(G=H-TS\). Ở nhiệt độ và áp suất không đổi, dấu của \(\Delta G\) cho tiêu chuẩn nhiệt động về chiều biến đổi tự diễn ra.
 

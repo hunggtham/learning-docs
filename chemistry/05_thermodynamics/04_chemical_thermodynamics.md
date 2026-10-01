@@ -1,6 +1,6 @@
 # Nhiệt động lực học hóa học — thế hóa học, hoạt độ và hệ nhiều thành phần
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhiệt động lực học hóa học — thế hóa học, hoạt độ và hệ nhiều thành phần**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Phương trình vi phân của Gibbs** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thế hóa học là Gibbs mol riêng phần** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhiệt động lực học hóa học — thế hóa học, hoạt độ và hệ nhiều thành phần**. Route đi từ Gibbs differential → partial molar quantities/chemical potential → activity và non-ideality → phase/reaction equilibrium trong mixtures, nối thermodynamics với (K), (Q) và (K_{sp}).
 
 > **Nhiệt động lực học hóa học (chemical thermodynamics / 화학 열역학)** mở rộng các khái niệm về năng lượng, entropy và Gibbs sang hỗn hợp nhiều thành phần. Khái niệm trung tâm là **thế hóa học (chemical potential, \(\mu_i\) / 화학 퍼텐셜)**: mức thay đổi cận biên của năng lượng tự do Gibbs khi thêm một lượng nhỏ tiểu phần vào hệ trong điều kiện xác định.
 

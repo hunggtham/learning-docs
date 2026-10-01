@@ -1,6 +1,6 @@
 # Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Năng lượng, nhiệt và công — nền tảng hạch toán của nhiệt động lực học**. Route đi từ system/surroundings → state variables → heat/work boundary transfer → first law và energy accounting; đây là nền để đọc enthalpy, entropy và Gibbs ở các file sau.
 
 > **Nhiệt động lực học (thermodynamics / 열역학)** nghiên cứu trạng thái năng lượng của hệ, cách năng lượng truyền qua ranh giới và những ràng buộc quyết định chiều biến đổi. Trong Hóa học, nhiệt động lực học trả lời “trạng thái nào thuận lợi?” và “năng lượng được phân bố ra sao?”, nhưng không tự cho biết quá trình xảy ra nhanh đến mức nào.
 
