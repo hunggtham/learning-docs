@@ -191,4 +191,4 @@ Run hàng đợi (queue / 큐) là một hàng đợi (queue / 큐) giống nhi�
 
 Đọc tiếp [Page faults, reclaim và memory pressure](./02_page_faults_reclaim_dirty_pages_and_memory_pressure.md), [NUMA architecture](../../02_computer_architecture/advanced/04_numa_interconnects_and_scalable_coherence.md), [End-to-end request latency](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) và [Debugging xuyên abstraction layers](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại distinction giữa runnable, actually running, throttled và blocked trước khi diễn giải latency. Sang [Page faults, reclaim và memory pressure](./02_page_faults_reclaim_dirty_pages_and_memory_pressure.md) khi scheduler delay gắn với reclaim/I/O; quay về [README](./README.md) để xác nhận owner của OS advanced.
