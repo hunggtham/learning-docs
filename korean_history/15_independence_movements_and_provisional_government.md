@@ -6,25 +6,25 @@
 
 Resistance chống colonial quy tắc (rule / 규칙) tồn tại dưới nhiều hình thức: armed struggle, diplomacy, education, labor/peasant movement, cultural nationalism, socialist organization, religious networks và diaspora activism. Gọi tất cả là một khối thống nhất sẽ che đi disagreement về chiến lược (strategy / 전략) và future xã hội (social / 사회적) thứ tự (order / 순서).
 
-> **Chuyển mạch:** Independence movement gồm nhiều mạng lưới và chiến lược; 3·1운동 tạo mobilization rộng, còn Provisional Government thử chuyển tính chính danh đó thành đại diện và tổ chức đối ngoại.
+> **Chuyển mạch:** Phong trào độc lập gồm nhiều mạng lưới, chiến lược và tranh luận về tương lai; **3·1운동** mở rộng mobilization, còn Provisional Government thử chuyển tính chính danh ấy thành đại diện và tổ chức đối ngoại.
 
 ## Phong trào 1 tháng 3 (3·1운동 / March First Movement) 1919
 
 **3·1 Movement (삼일운동)** bùng nổ ngày 1 March 1919 với mass demonstrations rộng khắp. Đây là turning điểm (point / 지점) vì participation rộng, international visibility và influence lên political organization sau đó. Colonial authorities đàn áp movement; sau đó quản trị (governance / 거버넌스) style được điều chỉnh theo hướng ít military-symbolic hơn nhưng điều khiển (control / 제어) vẫn tiếp tục.
 
-> **Chuyển mạch:** Ở chặng này của **Phong trào độc lập và Korean Provisional Government**, **Provisional Government** tiếp nhận điểm tựa từ **Phong trào 1 tháng 3 (3·1운동 / March First Movement) 1919** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Armed struggle và diaspora geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** 3·1 Movement tạo mass participation và visibility nhưng không tự tạo một nhà nước; **Provisional Government** biến năng lượng đó thành claim về self-government, diplomacy và continuity trong exile. **Armed struggle và diaspora geography** tiếp theo cho thấy tổ chức ấy dựa vào không gian và nguồn lực nào.
 
 ## Provisional Government
 
 **Korean Provisional Government (대한민국임시정부)** được hình thành ở Shanghai năm 1919. Nó nỗ lực duy trì claim về Korean self-government, diplomacy và organizational continuity trong exile. sức chứa (capacity / 용량) thay đổi theo thời kỳ và funding luôn là ràng buộc (constraint / 제약조건), nhưng symbolic importance lớn đối với later Republic of Korea historical định danh (identity / 식별자).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phong trào độc lập và Korean Provisional Government**, **Armed struggle và diaspora geography** tiếp nhận điểm tựa từ **Provisional Government** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korean Liberation Army** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Provisional Government cung cấp claim và tổ chức đối ngoại, còn mạng armed struggle ở Mãn Châu, Nga và Trung Quốc cung cấp lực lượng, tuyến di chuyển và căn cứ. **Korean Liberation Army** sau đó cho thấy nỗ lực hợp nhất claim ấy vào Allied context trước 1945.
 
 ## Armed struggle và diaspora geography
 
 Manchuria, Russian Far East và China là không gian quan trọng cho armed groups. Battle of Bongodong và Cheongsanri thường được nhớ như symbols resistance, nhưng broader ecology gồm di chuyển (migration / 마이그레이션) communities, rival organizations và changing Chinese/Japanese military conditions.
 
-> **Chuyển mạch:** Trong **Phong trào độc lập và Korean Provisional Government**, **Korean Liberation Army** tiếp nhận điểm tựa từ **Armed struggle và diaspora geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Armed struggle phụ thuộc địa lý diaspora, rival organizations và điều kiện quân sự thay đổi; **Korean Liberation Army** là nỗ lực thể chế hóa một phần mạng lưới ấy trong chiến tranh thế giới. Từ đó, **mô hình tư duy** cần phân biệt continuity của mục tiêu với unity thực tế của tổ chức.
 
 ## Korean Liberation Army
 
