@@ -332,7 +332,7 @@ Giúp estimate exponent \(b\). Nhưng exponent có thể khác taxon/phạm vi (
 
 Quy mô (scale / 규모) thay ràng buộc (constraint / 제약조건) sinh lý học (physiology), life lịch sử (history / 이력) và sinh thái học (ecology).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)** tiếp nhận điểm tựa từ **24. Scaling law và allometry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Scaling tells us how much signal survives a size change; information theory makes the remaining uncertainty explicit, and noise analysis separates intrinsic variation from measurement error.
 
 ## 25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)
 
@@ -346,7 +346,7 @@ H=-\sum_i p_i\log_2p_i
 
 Nhưng Shannon thông tin (information / 정보) không tự chứa ý nghĩa sinh học (biological meaning). DNA chuỗi (sequence / 시퀀스) có hàm (function / 함수) vì molecular hệ thống (system / 시스템) interpret nó; lý thuyết thông tin chỉ formalize bất định (uncertainty / 불확실성)/năng lực (capacity).
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)** nêu điều cần giải thích; **26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. Tính bền vững, redundancy và fragility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Noise identifies which observations are unreliable; redundancy can average or route around that noise, while fragility appears when a shared dependency fails.
 
 ## 26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)
 
@@ -356,7 +356,7 @@ Ba loại variation phải tách nếu muốn hiểu cơ chế (mechanism / 메�
 
 Hệ thống (system / 시스템) có thể buffer noise bằng phản hồi âm, averaging molecule hoặc redundancy; đôi khi noise lại tạo bet-hedging.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)** nêu điều cần giải thích; **27. Tính bền vững, redundancy và fragility** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Redundancy improves resilience but costs energy, space, or speed; that tension is the concrete trade-off that prevents one-dimensional optimization.
 
 ## 27. Tính bền vững, redundancy và fragility
 
@@ -366,7 +366,7 @@ Một mạng (network / 네트워크) robust với single perturbation có thể
 
 Đây là lô-gic (logic / 논리) của synthetic lethality và khả năng phục hồi hệ sinh thái (ecosystem resilience).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều** tiếp nhận điểm tựa từ **27. Tính bền vững, redundancy và fragility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. tối ưu hóa (optimization / 최적화) và fitness landscape** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Once costs and benefits are explicit, optimization searches the feasible trade-off surface; the fitness landscape shows why local improvements need not reach a global best.
 
 ## 28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều
 
