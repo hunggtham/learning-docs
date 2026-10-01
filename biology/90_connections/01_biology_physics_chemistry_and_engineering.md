@@ -284,7 +284,7 @@ Glucose, nhiệt độ (temperature), huyết áp (blood pressure) và trục n�
 
 Kỹ thuật (engineering / 엔지니어링) ngôn ngữ (language / 언어) giúp hỏi: bộ cảm nhận (sensor) ở đâu? delay bao nhiêu? gain mạnh quá có oscillate không? nhiễu động (disturbance) đi vào điểm (point / 지점) nào?
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **21. Phản hồi dương (positive feedback) và ngưỡng (threshold)** tiếp nhận điểm tựa từ **20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Positive feedback pushes a state toward a threshold; once delay and recovery are added, the same loop can overshoot and generate oscillation instead of a stable switch.
 
 ## 21. Phản hồi dương (positive feedback) và ngưỡng (threshold)
 
@@ -294,7 +294,7 @@ Phản hồi dương amplifies phản hồi (response / 응답) nhưng cần sto
 
 Kết hợp positive + phản hồi âm thường tạo công tắc (switch) ổn định hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay** tiếp nhận điểm tựa từ **21. Phản hồi dương (positive feedback) và ngưỡng (threshold)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Delayed feedback creates temporal rhythm; reaction–diffusion adds spatial spread, so local chemistry can turn the same instability into a pattern across tissue.
 
 ## 22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay
 
@@ -304,7 +304,7 @@ Phản hồi âm + delay + tính phi tuyến (nonlinearity) là motif chung tạ
 
 Một static diagram không thể cho biết period hoặc phase. Sinh học động cần thời gian (time / 시간) dimension.
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Scaling law và allometry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Reaction–diffusion sets a characteristic length and time for patterns; scaling law and allometry test how those dimensions change as an organism grows.
 
 ## 23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)
 
@@ -312,7 +312,7 @@ Activator và inhibitor có sự tạo ra (production)/diffusion khác nhau có 
 
 Developmental mẫu (pattern / 패턴) không nhất thiết cần mỗi cell có coordinate prewritten. độ dốc (gradient / 기울기) và cục bộ (local / 로컬) tương tác (interaction / 상호작용) có thể tạo spatial thông tin (information / 정보).
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **24. Scaling law và allometry** tiếp nhận điểm tựa từ **23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Scaling compares signal, transport cost, and noise across size; information theory then quantifies how much uncertainty remains in those biological measurements.
 
 ## 24. Scaling law và allometry
 
