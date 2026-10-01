@@ -1,6 +1,6 @@
 # Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao đồng vị là chất đánh dấu tốt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Có chất mang và gần không có chất mang** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**. Route đi từ đồng vị và hoạt độ → chất mang/tracer và tách đồng vị → động học phân rã, đo bức xạ và dosimetry → chẩn đoán, điều trị, phân tích và quản lý chất thải, để tín hiệu hạt nhân luôn được diễn giải cùng hóa học mẫu.
 
 > **Hóa phóng xạ (radiochemistry / 방사화학)** nghiên cứu hóa học của các vật liệu phóng xạ và cách các biến đổi hạt nhân tương tác với những quá trình hóa học thông thường. Các đồng vị của cùng một nguyên tố có cấu trúc electron gần như giống nhau, vì vậy đồng vị phóng xạ có thể đóng vai trò **chất đánh dấu (tracer)** cực nhạy trong khi tín hiệu phân rã hạt nhân cung cấp một kênh đo độc lập.
 

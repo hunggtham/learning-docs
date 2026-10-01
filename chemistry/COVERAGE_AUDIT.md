@@ -1,6 +1,6 @@
 # Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Trạng thái chuẩn gốc (canonical / 정본)** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Thứ tự ưu tiên kiểm tra (audit / 감사)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là owner của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**. Route audit đi từ trạng thái canonical và bản đồ owner → coverage theo domain/chapter → prerequisite, link và ngôn ngữ → chiều sâu, trùng lặp và rủi ro phát hành; kết quả phải quay lại README để cập nhật thứ tự ưu tiên thay vì chỉ ghi nhận số lượng file.
 
 > Tài liệu này theo dõi **độ bao phủ khái niệm, quan hệ phụ thuộc, tính nhất quán ngôn ngữ, mức độ trùng lặp và chất lượng chiều sâu** của Chemistry thư viện kiến thức (knowledge library / 지식 라이브러리). Đây không phải bản tóm tắt để học nhanh. Nội dung Chemistry hiện là chuẩn gốc (canonical / 정본) trên `main`; các tên branch cũ chỉ được giữ trong lịch sử Git.
 
