@@ -10,7 +10,7 @@ Classification có precision, recall, F1, ROC-AUC, PR-AUC, calibration. Regressi
 
 Chỉ số (metric / 지표) chọn sai có thể tối ưu hành vi (behavior / 동작) sai.
 
-> **Chuyển mạch:** Metric phải khớp task và cost of error; class imbalance làm accuracy gây hiểu nhầm, còn calibration hỏi xác suất dự báo có đúng mức tin cậy thực tế không.
+> **Chuyển mạch:** Metric phải khớp task và chi phí lỗi; khi lớp lệch, accuracy có thể che failure của lớp hiếm. **Calibration** đi thêm một bước: kiểm tra xác suất dự báo có đúng mức tin cậy quan sát được hay không.
 
 ## Lớp (class / 클래스) imbalance
 
@@ -18,7 +18,7 @@ Nếu fraud tỷ lệ (rate / 비율) 0.1%, mô hình (model / 모델) luôn d�
 
 Precision trả lời trong alerts, bao nhiêu thật; recall trả lời trong positives thật, bắt được bao nhiêu. sự đánh đổi (trade-off / 트레이드오프) threshold phải gắn operational chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Calibration** tiếp nhận điểm tựa từ **Lớp (class / 클래스) imbalance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Benchmark leakage và overfitting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Class imbalance buộc ta chọn metric theo alert và cost; **calibration** hỏi các score đó có thể dùng như xác suất cho quyết định hay không. Sau khi đo chất lượng dự báo, **benchmark leakage** kiểm tra liệu điểm số có bị thổi phồng do dùng lại dữ liệu đánh giá hay không.
 
 ## Calibration
 
@@ -26,7 +26,7 @@ Mô hình (model / 모델) calibrated nếu predictions 0.8 xảy ra đúng kho�
 
 High ranking accuracy không đảm bảo calibrated probabilities.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Benchmark leakage và overfitting** tiếp nhận điểm tựa từ **Calibration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subgroup evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Calibration làm rõ độ tin cậy của score, nhưng score vẫn có thể lạc quan nếu benchmark đã trở thành tín hiệu huấn luyện gián tiếp. **Subgroup evaluation** tiếp theo kiểm tra liệu kết quả còn giữ được trên các nhóm nhỏ và phân phối khác nhau hay không.
 
 ## Benchmark leakage và overfitting
 
@@ -34,7 +34,7 @@ Nếu community repeatedly tune trên cùng benchmark, benchmark trở thành hu
 
 Evaluation cần held-out/private tests, temporal splits và realistic triển khai (deployment / 배포) tasks.
 
-> **Chuyển mạch:** Trong **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Subgroup evaluation** tiếp nhận điểm tựa từ **Benchmark leakage và overfitting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Human-in-the-loop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Benchmark leakage làm suy yếu khả năng khái quát, còn **subgroup evaluation** tìm failure bị che bởi metric trung bình và cỡ mẫu nhỏ. Khi phát hiện khác biệt nhóm, **human-in-the-loop** phải được đánh giá như một phần của workflow chứ không phải lớp sửa lỗi tự động.
 
 ## Subgroup evaluation
 
@@ -42,7 +42,7 @@ Aggregate chỉ số (metric / 지표) có thể che thất bại (failure / 실
 
 Fairness không reducible thành một chỉ số (metric / 지표) duy nhất; definitions như demographic parity, equalized odds có thể xung đột (conflict / 충돌) tùy cơ sở (base / 기반) rates/ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Human-in-the-loop** tiếp nhận điểm tựa từ **Subgroup evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) provenance và consent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Subgroup evaluation chỉ ra ai chịu lỗi nhiều hơn; **human-in-the-loop** kiểm tra cách người dùng tiếp nhận, bỏ qua hoặc lạm dụng output trong quyết định thật. Muốn diễn giải kết quả và quyền sử dụng, cần truy tiếp **data provenance và consent**.
 
 ## Human-in-the-loop
 
