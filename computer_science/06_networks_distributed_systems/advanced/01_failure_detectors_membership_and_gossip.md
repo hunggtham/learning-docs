@@ -126,4 +126,4 @@ Do đó stable membership và controlled reconfiguration là prerequisite cho l�
 
 Tiếp theo đọc [Leases, fencing tokens và split-brain prevention](./02_leases_fencing_tokens_and_split_brain_prevention.md). Sau đó consensus internals giải thích cách cluster đồng ý durable log/trạng thái (state / 상태) transitions.
 
-> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại suspicion ≠ proof, membership là state machine, gossip có convergence delay và failover cần fencing/quorum. Sang [Leases và fencing](./02_leases_fencing_tokens_and_split_brain_prevention.md) để biến suspicion thành quyền ghi an toàn; sau đó đọc consensus để theo dõi durable authority; quay về [README](./README.md) để xác nhận owner.

@@ -86,4 +86,4 @@ Fencing đơn vị từ (token / 토큰) tăng đơn điệu; lưu trữ (storag
 
 Foundation: [time/failure/consistency](../../basic/06_networks_distributed_systems/04_distributed_systems_time_failure_and_consistency.md), [replication/consensus](../../basic/06_networks_distributed_systems/05_replication_partitioning_and_consensus.md), [idempotency](../../basic/08_software_systems/04_time_serialization_and_idempotency.md) và [event-driven systems](../../basic/08_software_systems/06_event_driven_and_stream_processing.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại distinction giữa uncertain outcome, retry/dedup, atomic commit, compensation và fencing trước khi gọi một workflow là “exactly once”. Sang [Failure detectors và membership](./01_failure_detectors_membership_and_gossip.md) để xử lý suspicion/authority, hoặc [Leases và fencing](./02_leases_fencing_tokens_and_split_brain_prevention.md) khi stale actor có thể quay lại; quay về [README](./README.md) để xác nhận owner.

@@ -128,4 +128,4 @@ Mẫu (pattern / 패턴) này hữu ích cho batch, workflow engine và exactly-
 
 Đọc trước [Failure detectors và membership](./01_failure_detectors_membership_and_gossip.md). Chapter consensus tiếp theo sẽ cho thấy term/epoch, quorum và log authority tạo fencing ngữ nghĩa (semantics / 의미론) ở cấp giao thức (protocol / 프로토콜).
 
-> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại lease expiry, monotonic fencing token và downstream enforcement trước khi coi failover là hoàn tất. Sang [Failure detectors và membership](./01_failure_detectors_membership_and_gossip.md) để xem suspicion/membership cung cấp input nào, rồi đọc consensus để hiểu term/epoch/quorum tạo authority bền vững; quay về [README](./README.md) để xác nhận owner.
