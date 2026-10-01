@@ -44,7 +44,7 @@ Technology shift, trade exposure hoặc regional decline có thể tạo mismatc
 
 Retraining chỉ hiệu quả nếu huấn luyện (training / 학습) đúng demand, workers có thể di chuyển và jobs mới thực sự tồn tại.
 
-> **Chuyển mạch:** Trong **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**, **5. Cyclical unemployment** tiếp nhận điểm tựa từ **4. Structural unemployment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Search-and-matching mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Structural mismatch persists across cycles; cyclical unemployment follows demand fluctuations, and search-and-matching models connect both to vacancy and wage-setting mechanisms.
 
 ## 5. Cyclical unemployment
 

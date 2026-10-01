@@ -30,7 +30,7 @@ Competitive benchmark
 
 Perfect competition và monopoly là benchmarks chứ không phải two labels đủ để classify mọi thị trường (market / 시장). Oligopoly kết quả (outcome / 결과) phụ thuộc hành động (action / 동작) variable, sản phẩm (product / 제품) differentiation, sức chứa (capacity / 용량), thông tin (information / 정보) và timing. Repeated games thêm lịch sử (history / 이력)/future punishment. Cơ chế (mechanism / 메커니즘) thiết kế (design / 설계) đảo chiều lập luận (reasoning / 추론): thay vì nhận rules có sẵn rồi tìm equilibrium, designer chọn rules để tạo incentive mong muốn.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**, **Kết quả cần đạt** tiếp nhận điểm tựa từ **Trục học (learning spine / 학습 축)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Welfare và bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Learning outcomes should show how market structure changes strategy and welfare; evidence boundaries prevent treating a model equilibrium as an empirical conclusion.
 
 ## Kết quả cần đạt
 

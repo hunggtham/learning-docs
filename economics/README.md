@@ -20,7 +20,7 @@ Từ đây Economics không còn khoảng trống cốt lõi (core / 핵심) b�
 
 [`investing/04_economics/`](../investing/04_economics/README.md) tiếp tục giữ ứng dụng (application / 애플리케이션) tầng (layer / 계층) cho macro dữ liệu (data / 데이터), liquidity, thị trường (market / 시장) transmission, crisis cases, chính sách (policy / 정책) regimes và nowcasting; Economics cross-link thay vì duplicate.
 
-> **Chuyển mạch:** Trong **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Học tập (learning / 학습) tuyến (route / 경로)** tiếp nhận điểm tựa từ **Trạng thái hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Current state identifies the next learning route; depth work must preserve canonical ownership and add reasoning/evidence rather than duplicate a chapter.
 
 ## Học tập (learning / 학습) tuyến (route / 경로)
 

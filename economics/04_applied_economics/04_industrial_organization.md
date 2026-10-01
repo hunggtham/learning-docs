@@ -26,7 +26,7 @@ HHI/concentration mô tả cấu trúc (structure / 구조) nhưng không tự c
 
 High concentration có thể đến từ economies of quy mô (scale / 규모)/productivity; low concentration vẫn có cục bộ (local / 로컬)/nền tảng (platform / 플랫폼) power.
 
-> **Chuyển mạch:** Ở chặng này của **Industrial Organization — Demand estimation, markups, entry, mergers và nền tảng (platform / 플랫폼) markets**, **3. Demand estimation** tiếp nhận điểm tựa từ **2. Concentration is not conduct** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Discrete choice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Concentration is descriptive, not conduct; demand estimation recovers substitution and markups, with discrete-choice assumptions making the identification boundary explicit.
 
 ## 3. Demand estimation
 

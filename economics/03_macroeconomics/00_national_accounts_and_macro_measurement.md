@@ -75,7 +75,7 @@ Real GDP cố định price cơ sở (base / 기반) hoặc dùng chain-weightin
 
 Nếu nominal GDP tăng 8% nhưng price mức (level / 수준) tăng khoảng 5%, real môi trường vận hành (production / 운영 환경) không tăng 8%. Cần tách price và quantity.
 
-> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **5. GDP deflator và CPI đo khác nhau** tiếp nhận điểm tựa từ **4. Nominal GDP và Real GDP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Real GDP per capita gần living tiêu chuẩn (standard / 표준) hơn total GDP nhưng vẫn chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Nominal/real GDP separate price and quantity; GDP deflator covers domestic output while CPI follows a consumption basket, so per-capita welfare still needs additional measures.
 
 ## 5. GDP deflator và CPI đo khác nhau
 

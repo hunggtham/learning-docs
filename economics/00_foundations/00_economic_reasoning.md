@@ -40,7 +40,7 @@ choose more activity while marginal benefit ≥ marginal cost
 
 Nói ngắn gọn, marginal phân tích (analysis / 분석) hỏi: “Nếu làm thêm một chút, phần được thêm vào có đáng với phần chi phí phát sinh thêm không?”. **Externality** là chi phí hoặc lợi ích rơi sang người không trực tiếp tham gia; **bất định (uncertainty / 불확실성)** là khi kết quả chưa biết chắc. Hai yếu tố này khiến chi phí mà cá nhân tự nhìn thấy có thể khác chi phí của toàn xã hội.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Economic lập luận (reasoning / 추론) — Khan hiếm, lựa chọn và cơ chế**, **4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi** tiếp nhận điểm tựa từ **3. Marginal phân tích (analysis / 분석) hỏi “thêm một đơn vị có đáng không?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Equilibrium là trạng thái tương thích, không phải trạng thái tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Marginal comparison shapes incentives; equilibrium is the mutually compatible outcome of choices, not a claim that the outcome is socially good.
 
 ## 4. Incentives truyền ràng buộc (constraint / 제약조건) vào hành vi
 

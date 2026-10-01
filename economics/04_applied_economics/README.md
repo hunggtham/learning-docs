@@ -12,7 +12,7 @@ Applied Economics dùng lý thuyết (theory / 이론) từ Microeconomics, Th�
 4. [Development Economics](./03_development_economics.md) — poverty, credit/rủi ro (risk / 위험) các ràng buộc (constraints / 제약조건들), health/education, structural transformation, hạ tầng (infrastructure / 인프라), institutions/trạng thái (state / 상태) sức chứa (capacity / 용량), industrial chính sách (policy / 정책) và scale-up.
 5. [Industrial Organization](./04_industrial_organization.md) — demand estimation, substitution, markups, entry, vertical/nền tảng (platform / 플랫폼) markets, mergers, procurement, innovation và structural/reduced-form IO.
 
-> **Chuyển mạch:** Trong **04 — Applied Economics**, **Applied spine** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Canonical order supplies theory; applied spine adds domain institutions, measurement and policy constraints, making each dependency explicit.
 
 ## Applied spine
 

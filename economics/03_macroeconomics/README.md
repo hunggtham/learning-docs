@@ -59,7 +59,7 @@ Vì vậy bước tiếp theo là [Econometrics](../README.md#learning-route-và
 
 Labor, công khai (public / 공개) finance, trade, development và industrial organization sẽ dùng macro các ràng buộc (constraints / 제약조건들) nhưng cần micro foundations và nhân quả (causal / 인과적) bằng chứng (evidence / 증거) riêng. Economic Lịch sử (history / 이력) & Institutions sẽ dùng macro chuỗi (sequence / 시퀀스) để so sánh growth, crises, monetary regimes và trạng thái (state / 상태) sức chứa (capacity / 용량) qua thời gian; không duplicate chronology từ World Lịch sử (history / 이력).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Macroeconomics**, **Ranh giới (boundary / 경계) với Applied Economics và Lịch sử (history / 이력)** đã nêu tiêu chí phân biệt, còn **Checklist khi đọc một macro claim** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Boundary with applied economics/history separates aggregate mechanism from domain evidence; the macro-claim checklist then tests unit, horizon, identification and policy channel.
 
 ## Checklist khi đọc một macro claim
 
