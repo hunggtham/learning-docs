@@ -260,4 +260,4 @@ Một generic `SSL error` không đủ để phân biệt chuỗi (chain / 사�
 
 Đọc cùng [Secret/KMS lifecycle](./06_secrets_kms_hsm_rotation_and_envelope_encryption.md), [OAuth/OIDC lifecycle](./03_oauth_oidc_token_lifecycle_and_federation_threats.md), [End-to-end request path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) và [Incident containment path](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại certificate-to-identity binding, validation policy, rotation/revocation propagation và application authorization boundary trước khi coi mTLS là đủ. Sang [Secrets/KMS](./06_secrets_kms_hsm_rotation_and_envelope_encryption.md) để theo dõi key lifecycle, hoặc [OAuth/OIDC](./03_oauth_oidc_token_lifecycle_and_federation_threats.md) khi identity tiếp tục ở token/federation layer; quay về [README](./README.md) để xác nhận owner.
