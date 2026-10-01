@@ -1,6 +1,6 @@
 # Vật chất và phép đo
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật chất và phép đo**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quan sát không giống giải thích** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tính chất của vật chất** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vật chất và phép đo**. Route đi từ observation/classification → properties/state → measurand/instrument → uncertainty and reproducible evidence, để tách dữ liệu quan sát khỏi explanation được suy ra.
 
 Nếu Hóa học nghiên cứu vật chất, câu hỏi đầu tiên phải là: **vật chất là gì và ta biết gì về nó bằng cách nào?**
 

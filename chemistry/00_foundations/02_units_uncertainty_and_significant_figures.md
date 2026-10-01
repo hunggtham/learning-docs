@@ -1,6 +1,6 @@
 # Đơn vị, độ không đảm bảo và chữ số có nghĩa
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đơn vị SI và các đơn vị dẫn xuất** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tiền tố là cách quản lý thang độ lớn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**. Route đi từ SI/base units → prefixes/dimensional analysis → uncertainty/significant figures → reporting/propagation, để mọi con số giữ đúng scale và độ tin cậy.
 
 Hóa học là một khoa học định lượng. Khi nói một phản ứng “nhanh”, một dung dịch “đậm đặc” hay một vật “nặng”, ta mới chỉ có mô tả định tính. Muốn so sánh, kiểm chứng và tính toán, ta cần **phép đo (measurement)**. Nhưng phép đo không bao giờ hoàn toàn tách khỏi giới hạn của thiết bị và phương pháp.
 

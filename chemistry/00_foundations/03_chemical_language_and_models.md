@@ -1,6 +1,6 @@
 # Ngôn ngữ và mô hình hóa học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngôn ngữ và mô hình hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ký hiệu hóa học: một biểu tượng mang bản sắc nguyên tố** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Công thức hóa học: mô tả thành phần và đôi khi cả cấu trúc** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngôn ngữ và mô hình hóa học**. Route đi từ symbols → formulas → equations → structural/particle models → model limits, để phân biệt notation dùng để hạch toán với mô hình dùng để giải thích cơ chế.
 
 Hóa học không thể chỉ dựa vào câu chữ thông thường. Khi số lượng **tiểu phần hóa học (species)** tăng lên, ta cần một ngôn ngữ đủ ngắn để biểu diễn thành phần, điện tích, lượng chất và sự biến đổi mà vẫn giữ được ý nghĩa. **Ký hiệu hóa học (chemical symbols)**, **công thức hóa học (chemical formulas)** và **phương trình hóa học (chemical equations)** tồn tại vì lý do đó.
 

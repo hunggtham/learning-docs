@@ -1,6 +1,6 @@
 # Hóa học nghiên cứu điều gì?
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học nghiên cứu điều gì?**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ vật chất nhìn thấy đến cấu trúc không nhìn thấy** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hóa học nằm giữa Vật lý và Sinh học như thế nào?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học nghiên cứu điều gì?**. Route đi từ observable matter → particles/structure → properties/transformations → measurement/model/evidence, rồi nối sang physics, biology và materials theo câu hỏi cụ thể.
 
 Hóa học (**Chemistry / 화학**) thường được mô tả ngắn gọn là khoa học nghiên cứu vật chất và sự biến đổi của vật chất. Định nghĩa này đúng nhưng vẫn chưa cho thấy vì sao Hóa học tồn tại như một ngành riêng biệt.
 
