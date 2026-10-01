@@ -10,7 +10,7 @@ Trước khi tính, phải xác định chính xác nồng độ đang nói tớ
 
 Một mục tiêu “0,1%” là mơ hồ nếu không nói rõ `w/w`, `w/v` hay `v/v`.
 
-> **Chuyển mạch:** Target concentration xác định mol cần cân; pha từ chất rắn phải tính purity và chuyển định lượng vào volumetric flask để giữ traceability.
+> **Chuyển mạch:** Nồng độ mục tiêu quyết định số mol cần chuẩn bị; khi pha từ chất rắn phải hiệu chỉnh độ tinh khiết rồi chuyển định lượng vào bình định mức để giữ khả năng truy xuất.
 
 ## Pha dung dịch mol từ chất rắn
 
@@ -40,7 +40,7 @@ m=1.461\,g
 
 Kết quả này giả định NaCl tinh khiết, khô và thể tích cuối được thiết lập đúng bằng dụng cụ định mức.
 
-> **Chuyển mạch:** The stoichiometric mass assumes pure, dry reagent; purity correction converts the target amount into a weighing instruction, then hygroscopic behavior determines whether that instruction remains valid in air.
+> **Chuyển mạch:** Khối lượng theo hóa lượng giả định thuốc thử tinh khiết và khô; hiệu chỉnh độ tinh khiết biến lượng chất tinh khiết thành hướng dẫn cân, còn tính hút ẩm quyết định hướng dẫn đó có còn đúng ngoài không khí hay không.
 
 ## Hiệu chỉnh độ tinh khiết
 
@@ -54,7 +54,7 @@ Chứng chỉ phân tích có thể cho giá trị assay thật, hàm lượng n
 
 Với dung dịch chuẩn chính xác cao, giá trị danh nghĩa trên nhãn chai không phải lúc nào cũng đủ.
 
-> **Chuyển mạch:** Purity correction uses an assay value; hygroscopic solids add water and CO2 that make apparent mass drift, so a primary standard is needed when direct weighing cannot anchor the amount.
+> **Chuyển mạch:** Hiệu chỉnh độ tinh khiết dùng giá trị assay; chất rắn hút ẩm nhận thêm nước và CO2 làm khối lượng biểu kiến trôi, nên cần **chuẩn sơ cấp** khi phép cân trực tiếp không còn neo được lượng chất.
 
 ## Chất rắn hút ẩm
 
@@ -64,7 +64,7 @@ Khối lượng cân khi đó không còn đại diện đáng tin cậy cho lư
 
 Thay vì xem dung dịch pha trực tiếp là chuẩn chính xác, thường người ta pha gần đúng rồi **chuẩn hóa (standardize)** bằng một chuẩn sơ cấp phù hợp.
 
-> **Chuyển mạch:** A primary standard supplies a stable stoichiometric reference; once its amount is trusted, dissolving completely before filling to final volume prevents undissolved material from invalidating the concentration.
+> **Chuyển mạch:** Chuẩn sơ cấp cung cấp tham chiếu hóa lượng ổn định; khi lượng chất đã đáng tin, phải hòa tan hoàn toàn trước khi chỉnh thể tích cuối để phần chưa tan không làm sai nồng độ.
 
 ## Chuẩn sơ cấp
 
@@ -72,7 +72,7 @@ Một **chuẩn sơ cấp (primary standard)** tốt thường có độ tinh kh
 
 Chuẩn sơ cấp biến phép đo khối lượng thành tham chiếu đáng tin cậy cho lượng chất.
 
-> **Chuyển mạch:** The primary standard anchors moles; dissolving in a partial volume separates solute dissolution from final volume setting, after which quantitative transfer protects mass balance.
+> **Chuyển mạch:** Chuẩn sơ cấp neo số mol; hòa tan trong một phần dung môi tách bước hòa tan khỏi bước chỉnh thể tích cuối, rồi **chuyển định lượng** bảo toàn cân bằng vật chất.
 
 ## Hòa tan trước khi đưa tới thể tích cuối
 
@@ -91,7 +91,7 @@ cân
 
 Không nên cho chất rắn vào bình định mức rồi chỉnh ngay tới vạch trước khi hòa tan hoàn toàn nếu quá trình hòa tan làm thể tích hoặc nhiệt độ thay đổi đáng kể.
 
-> **Chuyển mạch:** Dissolving establishes the solute phase; quantitative transfer closes the mass balance by washing residue into the volumetric flask before final volume is defined.
+> **Chuyển mạch:** Hòa tan tạo pha chất tan; chuyển định lượng khép cân bằng vật chất bằng cách rửa phần cặn vào bình định mức trước khi xác lập thể tích cuối.
 
 ## Chuyển định lượng
 
@@ -101,7 +101,7 @@ Có thể rửa dụng cụ nguồn nhiều lần bằng lượng dung môi nh�
 
 “Chuyển định lượng” nghĩa là mức chuyển đủ hoàn toàn so với độ không đảm bảo mục tiêu, không phải khẳng định toán học rằng 100,000000% vật liệu đã đi qua.
 
-> **Chuyển mạch:** Quantitative transfer preserves moles, but solute–solvent interactions make volume non-additive; the final volume must therefore be established by filling the calibrated mark, not by subtracting two measured volumes.
+> **Chuyển mạch:** Chuyển định lượng giữ số mol, nhưng tương tác chất tan–dung môi khiến thể tích không cộng đơn giản; vì vậy phải chỉnh tới vạch đã hiệu chuẩn thay vì lấy thể tích cuối trừ một thể tích đo riêng.
 
 ## Vì sao thể tích cuối không bằng “thể tích dung môi đã thêm”
 
@@ -117,7 +117,7 @@ rồi đo riêng hai thể tích.
 
 Cách đúng là chuyển dung dịch stock rồi **pha loãng toàn dung dịch tới vạch thể tích cuối đã hiệu chuẩn**.
 
-> **Chuyển mạch:** Since final volume is set at the calibration mark, stock dilution preserves (C_1V_1=C_2V_2) by pipetting a measured aliquot; very large dilution factors then require serial steps.
+> **Chuyển mạch:** Vì thể tích cuối được đặt tại vạch chuẩn, pha loãng stock bảo toàn (C_1V_1=C_2V_2) bằng một aliquot đo bằng pipette; hệ số pha loãng rất lớn sẽ cần các bước nối tiếp.
 
 ## Pha loãng từ dung dịch stock
 
@@ -135,7 +135,7 @@ V_1=\frac{0.0100\times100.0}{0.1000}=10.00\,mL
 
 Dùng pipette phù hợp để lấy 10,00 mL rồi pha loãng tới thể tích cuối 100,0 mL.
 
-> **Chuyển mạch:** A single stock dilution can demand an impractically tiny aliquot; serial 1:10 steps keep each pipetting action measurable, but their uncertainties accumulate and must be propagated.
+> **Chuyển mạch:** Một lần pha loãng từ stock có thể đòi hỏi aliquot quá nhỏ để hút chính xác; các bước 1:10 nối tiếp giữ mỗi lần hút trong vùng đo được, nhưng độ không đảm bảo sẽ tích lũy và phải lan truyền.
 
 ## Pha loãng nối tiếp
 
