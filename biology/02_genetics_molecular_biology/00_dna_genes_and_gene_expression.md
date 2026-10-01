@@ -78,7 +78,7 @@ Mutation có thể là substitution, insertion, deletion, duplication, inversion
 
 Tác động (effect / 효과) phụ thuộc vị trí và bối cảnh (context), không chỉ “loại mutation”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **7. Từ DNA sang RNA: phiên mã (transcription)** tiếp nhận điểm tựa từ **6. Mutation không phải lúc nào cũng do replication lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Promoter và enhancer: gene cần địa chỉ và lôgic (logic) điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A mutation changes the DNA template, but transcription is selective: RNA polymerase reads only accessible, regulated loci, so promoter and enhancer logic determines which change is expressed.
 
 ## 7. Từ DNA sang RNA: phiên mã (transcription)
 
@@ -90,7 +90,7 @@ Chỉ một portion genome được transcribed ở tế bào/ngữ cảnh (cont
 
 Biểu hiện gen bắt đầu từ regulation của khả năng tiếp cận (accessibility / 접근성) và transcription initiation.
 
-> **Chuyển mạch:** Trong **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **8. Promoter và enhancer: gene cần địa chỉ và lôgic (logic) điều khiển (control / 제어)** tiếp nhận điểm tựa từ **7. Từ DNA sang RNA: phiên mã (transcription)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. RNA processing: eukaryotic transcript chưa phải mRNA hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Transcription produces a primary RNA in response to promoter/enhancer inputs; eukaryotic cells must then cap, tail, and splice that transcript before it can function as mature mRNA.
 
 ## 8. Promoter và enhancer: gene cần địa chỉ và lôgic (logic) điều khiển (control / 제어)
 
@@ -100,7 +100,7 @@ Biểu hiện gen bắt đầu từ regulation của khả năng tiếp cận (a
 
 Một gene có thể tích hợp nhiều tín hiệu (signal / 신호) qua nhiều regulatory element. Biểu hiện gen vì vậy giống lô-gic (logic / 논리) circuit hơn simple on/off switch.
 
-> **Chuyển mạch:** Ở chặng này của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **8. Promoter và enhancer: gene cần địa chỉ và lôgic (logic) điều khiển (control / 제어)** xác định đầu vào; **9. RNA processing: eukaryotic transcript chưa phải mRNA hoàn chỉnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Intron và exon: đừng hiểu exon = coding hoàn toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Promoter/enhancer activity sets transcript abundance; RNA processing changes its usable sequence, so intron/exon boundaries—not the vague label “coding”—determine what remains in mature RNA.
 
 ## 9. RNA processing: eukaryotic transcript chưa phải mRNA hoàn chỉnh
 
@@ -114,7 +114,7 @@ Primary transcript thường được processing:
 
 Điều này phá mô hình tư duy “một gene = một protein”. Relationship thực tế phức tạp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **9. RNA processing: eukaryotic transcript chưa phải mRNA hoàn chỉnh** xác định đầu vào; **10. Intron và exon: đừng hiểu exon = coding hoàn toàn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. RNA có nhiều role hơn messenger** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Capping, polyadenylation, and splicing create a mature transcript; exon can include untranslated sequence and splice-site errors can redirect the message, leading to RNA roles beyond messenger.
 
 ## 10. Intron và exon: đừng hiểu exon = coding hoàn toàn
 
