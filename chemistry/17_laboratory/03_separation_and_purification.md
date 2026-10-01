@@ -20,7 +20,7 @@ Một thuốc thử có thể đủ sạch cho tổng hợp thông thường nh�
 
 Cần định nghĩa trước hồ sơ tạp chất chấp nhận được và bằng chứng phân tích nào chứng minh yêu cầu đó.
 
-> **Chuyển mạch:** The purity target defines which impurities matter; filtration exploits a solid–fluid size or phase contrast, and gravity filtration is the low-shear baseline when throughput matters more than speed.
+> **Chuyển mạch:** Mục tiêu độ tinh khiết quyết định tạp chất nào cần loại; **Lọc** khai thác chênh lệch kích thước hoặc pha giữa rắn–lưu chất, còn lọc trọng lực là lựa chọn ít lực cắt khi ưu tiên xử lý ổn định hơn tốc độ.
 
 ## Lọc
 
@@ -30,7 +30,7 @@ Cơ chế có thể gồm sàng kích thước, hình thành bánh lọc, giữ 
 
 Cách chọn phụ thuộc mục tiêu là thu chất rắn hay làm trong phần chất lỏng.
 
-> **Chuyển mạch:** Filtration can target clarified liquid or recovered solid; gravity uses hydrostatic pressure and preserves a hot solution, while vacuum filtration trades cooling and solvent loss for faster collection.
+> **Chuyển mạch:** Lọc có thể nhằm thu dịch trong hoặc thu chất rắn; lọc trọng lực dùng áp suất thủy tĩnh và giữ dung dịch nóng, còn lọc chân không đổi nguy cơ nguội và mất dung môi lấy tốc độ thu tinh thể.
 
 ## Lọc trọng lực
 
@@ -38,7 +38,7 @@ Lọc trọng lực phù hợp khi cần loại tạp rắn khỏi dung dịch n
 
 Giấy lọc xếp nếp tăng diện tích hiệu dụng và tốc độ chảy.
 
-> **Chuyển mạch:** Vacuum adds a pressure gradient and accelerates crystal collection; the resulting retention depends on nominal pore size, particle loading, and the cake that forms during filtration.
+> **Chuyển mạch:** Lọc chân không tạo chênh áp để thu tinh thể nhanh hơn; khả năng giữ hạt vẫn phụ thuộc kích thước lỗ danh nghĩa, tải chất rắn và bánh lọc hình thành trong quá trình lọc.
 
 ## Lọc chân không
 
@@ -48,7 +48,7 @@ Cách này thường phù hợp để thu tinh thể sản phẩm.
 
 Bánh tinh thể có thể được rửa bằng lượng nhỏ dung môi lạnh để loại tạp tan, đồng thời hạn chế hòa tan lại sản phẩm.
 
-> **Chuyển mạch:** Pore size and cake permeability set filtration throughput and retention; when solids are too fine or the cake compacts, centrifugation supplies a different force field for phase separation.
+> **Chuyển mạch:** Kích thước lỗ và độ thấm của bánh lọc quyết định lưu lượng lẫn khả năng giữ hạt; khi hạt quá mịn hoặc bánh bị nén chặt, **Ly tâm** cung cấp trường lực khác để tách pha.
 
 ## Kích thước lỗ lọc và bánh lọc
 
