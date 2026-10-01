@@ -12,31 +12,31 @@ Korean lịch sử (history / 이력) sau 1945 không thể chỉ đọc từ Se
 
 North Korea xây centralized party-state và planned economy. Korean War phá huỷ phần lớn hạ tầng (infrastructure / 인프라); postwar reconstruction ban đầu đạt industrial growth đáng kể trong một số giai đoạn, với hỗ trợ (support / 지원) từ socialist bloc.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Juche và political consolidation** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) building và Chiến tranh Triều Tiên (한국전쟁 / Korean War)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economic divergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** State-building và chiến tranh tạo ra centralized party-state, planned economy và institutional constraints; **Juche/political consolidation** diễn giải rồi củng cố con đường tự chủ đó. Khi so sánh với South Korea theo thời gian, **economic divergence** sẽ cho thấy ideology và thể chế chuyển thành kết quả vật chất ra sao.
 
 ## Juche và political consolidation
 
 **Juche (주체)** dần trở thành ideological khung phần mềm (framework / 프레임워크) nhấn mạnh political autonomy/self-reliance nhưng trên thực tế North Korea vẫn phụ thuộc vào bên ngoài (external / 외부) trade và aid ở nhiều giai đoạn. Personality cult và hereditary leadership cấu trúc (structure / 구조) làm political hệ thống (system / 시스템) ngày càng khác các socialist states khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Economic divergence** tiếp nhận điểm tựa từ **Juche và political consolidation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Markets trong planned hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Juche và consolidation tạo cơ chế huy động, kiểm soát và phân bổ khác với South Korea; **economic divergence** phản ánh cả starting conditions lẫn quyết định thể chế và liên minh. Khi tăng trưởng chậm lại và viện trợ sụt, **markets trong planned system** xuất hiện như cơ chế sinh tồn ngoài phân phối chính thức.
 
 ## Economic divergence
 
 Từ 1960s onward, South Korea tăng nhanh; North Korean growth chậm lại. Collapse of Soviet bloc làm trade/hỗ trợ (support / 지원) shock lớn. 1990s famine, thường gọi “Arduous March” (고난의 행군), gây severe human suffering và thúc đẩy informal marketization từ dưới lên.
 
-> **Chuyển mạch:** Trong **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Markets trong planned hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Economic divergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo mật (security / 보안) trạng thái (state / 상태) và nuclear program** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Economic divergence làm lộ khoảng cách giữa kế hoạch chính thức và nhu cầu hộ gia đình; **Jangmadang** cung cấp giá, mạng lưới và hàng hóa mà hệ thống trung tâm thiếu. Đồng thời, survival của regime chuyển trọng tâm sang **state security và nuclear program**, nơi rủi ro bên ngoài được dùng để biện minh cho kiểm soát bên trong.
 
 ## Markets trong planned hệ thống (system / 시스템)
 
 Jangmadang (장마당) trở thành livelihood institution quan trọng. Đây là historical paradox: formal ideology giữ planned economy nhưng household survival tạo thị trường (market / 시장) practice. De facto institution có thể xuất hiện khi formal hệ thống (system / 시스템) không cung cấp đủ goods.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Bảo mật (security / 보안) trạng thái (state / 상태) và nuclear program** tiếp nhận điểm tựa từ **Markets trong planned hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Markets cho thấy household adaptation có thể tồn tại dưới planned economy; nuclear/security strategy cho thấy nhà nước ưu tiên survival và deterrence trong môi trường hậu Cold War. **Mô hình tư duy** cần giữ cả hai tầng: năng lực tự tổ chức từ dưới lên và cấu trúc cưỡng chế từ trên xuống.
 
 ## Bảo mật (security / 보안) trạng thái (state / 상태) và nuclear program
 
 Military and nuclear năng lực (capability / 역량) trở thành central survival chiến lược (strategy / 전략) của regime trong post-Cold War môi trường (environment / 환경). Vì developments hiện tại thay đổi nhanh, tệp (file / 파일) này tập trung historical trajectory hơn là đánh giá tình hình đương thời.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Triều Tiên: một lịch sử song song sau 1945**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Bảo mật (security / 보안) trạng thái (state / 상태) và nuclear program** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Postwar industrial chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cùng một peninsula sau 1945 tạo ra hai institutional experiments; security và nuclear program không thể tách khỏi công nghiệp hóa, viện trợ và phân phối. Từ mental model đó, **postwar industrial strategy** kiểm tra vì sao stock công nghiệp ban đầu không bảo đảm kết quả dài hạn.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
