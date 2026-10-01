@@ -58,7 +58,7 @@ Nếu mắt ở cao hoặc thấp hơn vạch, mức chất lỏng biểu kiến
 
 Đọc nhất quán ở ngang tầm mắt giúp giảm sai lệch hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Bình định mức** tiếp nhận điểm tựa từ **Meniscus và thị sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt độ và sự giãn nở của thủy tinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Meniscus/parallax define how the reading is observed; a volumetric flask turns that corrected reading into one calibrated final volume, so temperature becomes the next systematic limit.
 
 ## Bình định mức
 
@@ -70,7 +70,7 @@ Nó được dùng để pha dung dịch chuẩn và thực hiện pha loãng ch
 
 Quy trình khái niệm gồm hòa tan chất trong một phần dung môi, chuyển định lượng vào bình, đưa mức dung dịch gần vạch, chờ cân bằng nhiệt khi cần, thêm dung môi đúng tới vạch rồi trộn đồng nhất.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Nhiệt độ và sự giãn nở của thủy tinh** tiếp nhận điểm tựa từ **Bình định mức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pipette định mức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A volumetric flask is calibrated at a temperature and to contain a fixed volume; thermal expansion therefore sets the condition before a pipette is chosen to deliver a portion of that solution.
 
 ## Nhiệt độ và sự giãn nở của thủy tinh
 
@@ -80,7 +80,7 @@ Công việc đòi hỏi độ chính xác cao cần tôn trọng nhiệt độ 
 
 Bình định mức không được thiết kế để gia nhiệt trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Pipette định mức** tiếp nhận điểm tựa từ **Nhiệt độ và sự giãn nở của thủy tinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pipette chia độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Temperature control protects the concentration in the calibrated flask; a volumetric pipette then delivers one fixed aliquot, unlike the graduated pipette that trades accuracy for range.
 
 ## Pipette định mức
 
@@ -90,7 +90,7 @@ Nhiều pipette mang ký hiệu **TD / EX (to deliver)**, nghĩa là được hi
 
 Một số loại được thiết kế để giữ lại lớp chất lỏng mỏng trên thành; không nên thổi phần còn lại nếu pipette không được ghi là loại **blow-out**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Pipette chia độ** tiếp nhận điểm tựa từ **Pipette định mức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Micropipette** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A volumetric pipette optimizes one exact delivery; a graduated pipette offers several volumes, making scale reading and operator technique the trade-off before moving to a micropipette.
 
 ## Pipette chia độ
 
