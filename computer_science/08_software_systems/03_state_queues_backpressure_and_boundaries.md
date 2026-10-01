@@ -10,7 +10,7 @@ Producer may create công việc (work / 작업) faster temporarily than bên ti
 
 But for sustained arrival `λ > μ` dịch vụ (service / 서비스) tỷ lệ (rate / 비율), hàng đợi (queue / 큐) grows without bound. Stable hệ thống (system / 시스템) requires long-term dịch vụ (service / 서비스) sức chứa (capacity / 용량) exceed admitted tải (load / 로드) or rejection/degradation.
 
-> **Chuyển mạch:** Trong **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Bounded vs unbounded hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **Why queues exist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Queue tách producer khỏi consumer; bounded queue biến bộ nhớ thành giới hạn rõ ràng, còn backpressure lan tín hiệu chậm lại thay vì để backlog phình vô hạn.
 
 ## Bounded vs unbounded hàng đợi (queue / 큐)
 

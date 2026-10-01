@@ -20,7 +20,7 @@ across API/network/team boundaries
 
 Hệ thống (system / 시스템) thiết kế (design / 설계) là chọn **nơi độ phức tạp (complexity / 복잡도) rẻ nhất để sở hữu**, không phải xóa độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Trong **Hệ thống (system / 시스템) decomposition, services và boundaries**, **1. Bài toán ban đầu: độ phức tạp (complexity / 복잡도) phải được partition, nhưng không thể biến mất** đã nêu tiêu chí phân biệt, còn **2. bất biến (invariant / 불변식) trước ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. mô-đun (module / 모듈) trước microservice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Decomposition phân chia complexity chứ không xóa nó; invariant phải được giữ qua boundary, nên module thường là bước kiểm chứng trước khi tách thành microservice.
 
 ## 2. bất biến (invariant / 불변식) trước ranh giới (boundary / 경계)
 

@@ -38,7 +38,7 @@ không cần đọc `customer_name`, `shipping_address`, `comment` hoặc nhiề
 
 > Không chuyển bytes qua disk → bộ nhớ (memory / 메모리) → bộ nhớ đệm (cache / 캐시) → CPU nếu truy vấn (query / 쿼리) không cần chúng.
 
-> **Chuyển mạch:** Trong **Columnar lưu trữ (storage / 저장소), encoding, pruning và vectorized scans**, **2. Row group tạo compromise giữa locality và parallelism** tiếp nhận điểm tựa từ **1. Row store tối ưu locality theo bản ghi (record / 레코드); column store tối ưu locality theo attribute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Encoding và compression không chỉ để tiết kiệm disk** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Row store tối ưu theo record, column store theo attribute; row group cân bằng locality với parallelism, rồi encoding/compression biến layout đó thành lợi thế scan và pruning.
 
 ## 2. Row group tạo compromise giữa locality và parallelism
 

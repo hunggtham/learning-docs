@@ -10,7 +10,7 @@ Imperative style mô tả chuỗi (sequence / 시퀀스) commands thay đổi tr
 
 Điểm yếu xuất hiện khi mutable trạng thái (state / 상태) lan rộng: muốn hiểu hiện tại (current / 현재) giá trị (value / 값) phải biết lịch sử (history / 이력) of writes. cục bộ (local / 로컬) mutation có thể rõ và efficient; toàn cục (global / 전역) dùng chung (shared / 공유) mutation khó reason.
 
-> **Chuyển mạch:** Trong **Imperative, object-oriented, functional và declarative paradigms**, **Object-oriented programming** tiếp nhận điểm tựa từ **Imperative programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Functional programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Imperative code mô tả bước và state; object-oriented gom state với behavior, functional ưu tiên pure transformation, còn declarative mô tả kết quả cần đạt thay vì chuỗi thao tác.
 
 ## Object-oriented programming
 

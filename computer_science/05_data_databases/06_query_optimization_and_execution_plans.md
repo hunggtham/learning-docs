@@ -21,7 +21,7 @@ parse SQL
 
 Optimizer không “hiểu nghiệp vụ (business / 비즈니스) meaning”; nó dựa vào lược đồ (schema / 스키마), các ràng buộc (constraints / 제약조건들), statistics và chi phí (cost / 비용) mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Cardinality estimation là trái tim của chi phí (cost / 비용) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Từ truy vấn (query / 쿼리) văn bản (text / 텍스트) đến vật lý (physical / 물리적) plan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép nối (join / 조인) thứ tự (order / 순서) explosion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Optimizer biến query text thành physical plan; cardinality estimation cung cấp cost signal, còn join-order explosion buộc hệ thống dùng search/pruning thay vì thử mọi khả năng.
 
 ## Cardinality estimation là trái tim của chi phí (cost / 비용) mô hình (model / 모델)
 

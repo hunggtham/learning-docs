@@ -12,7 +12,7 @@ Ordered thuộc tính (property / 속성) hỗ trợ `<, >, BETWEEN`, prefix th�
 
 “Leftmost prefix” là consequence của thứ tự (ordering / 순서), không quy tắc (rule / 규칙) thần bí.
 
-> **Chuyển mạch:** Trong **Chỉ mục (index / 인덱스), B-tree, hashing và truy vấn (query / 쿼리) thực thi (execution / 실행)**, **Băm (hash / 해시) chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **B+ cây (tree / 트리) chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Clustered và secondary indexes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** B+ tree hỗ trợ range scan nhờ thứ tự; hash index tối ưu equality lookup, còn clustered/secondary index quyết định dữ liệu được tìm thấy rồi đọc từ storage với bao nhiêu lần I/O.
 
 ## Băm (hash / 해시) chỉ mục (index / 인덱스)
 
