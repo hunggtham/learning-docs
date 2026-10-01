@@ -130,7 +130,7 @@ Enzym (enzyme) giảm activation barrier, thay kinetics, nhưng không đổi eq
 
 Đây là distinction nền tảng giữa thermodynamics và kinetics.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản** tiếp nhận điểm tựa từ **8. Thermodynamics: favorable không đồng nghĩa fast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Redox potential và electron luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Thermodynamics nói phản ứng có thuận lợi; ATP coupling biến chênh lệch free energy thành work, còn redox potential theo dõi hướng electron qua hệ chuyển hóa.
 
 ## 9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản
 
@@ -160,7 +160,7 @@ Chuỗi chuyền electron (electron transport chain) tạo chênh lệch proton 
 
 Tiến hóa (evolution) đã tái sử dụng membrane độ dốc (gradient / 기울기) như universal năng lượng (energy / 에너지) transducer.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **12. Động học enzym (enzyme kinetics) và bão hòa (saturation)** tiếp nhận điểm tựa từ **11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Hill equation và cooperativity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Chemiosmosis biến gradient thành flux; enzyme kinetics đo tốc độ và saturation, rồi Hill equation/cooperativity mở rộng từ một binding site sang tương tác giữa nhiều site.
 
 ## 12. Động học enzym (enzyme kinetics) và bão hòa (saturation)
 
@@ -174,7 +174,7 @@ v=\frac{V_{max}[S]}{K_m+[S]}
 
 Saturation xuất hiện rộng hơn enzyme: transporter, thụ thể (receptor), oxy (oxygen) binding và many physiological phản hồi (response / 응답) đều có ceiling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **13. Hill equation và cooperativity** tiếp nhận điểm tựa từ **12. Động học enzym (enzyme kinetics) và bão hòa (saturation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Binding affinity và occupancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Saturation mô tả giới hạn rate; Hill equation mô tả cooperativity, còn affinity/occupancy chuyển curve đó thành xác suất ligand chiếm site.
 
 ## 13. Hill equation và cooperativity
 
@@ -188,7 +188,7 @@ Khi \(n>1\), curve steep hơn. Hemoglobin oxygen binding là classic ngữ cản
 
 Nhưng Hill coefficient là phenomenological summary, không tự nói full molecular cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **14. Binding affinity và occupancy** tiếp nhận điểm tựa từ **13. Hill equation và cooperativity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cooperativity làm occupancy phụ thuộc trạng thái lân cận; từ molecular binding, mạch nối sang fluid flow nơi pressure gradient biến thành bulk transport.
 
 ## 14. Binding affinity và occupancy
 
