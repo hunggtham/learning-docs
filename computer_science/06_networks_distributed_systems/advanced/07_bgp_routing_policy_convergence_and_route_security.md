@@ -243,4 +243,4 @@ BGP/routing nối trực tiếp với [HTTP/2, HTTP/3 và QUIC](../../basic/06_n
 
 Mô hình tư duy (mental model / 사고 모델) cuối cùng: **routing sự cố (incident / 인시던트) phải được gỡ lỗi (debug / 디버그) như một phân tán (distributed / 분산) chính sách (policy / 정책) máy trạng thái (state machine / 상태 머신): advertisement → chính sách (policy / 정책) → selected tuyến (route / 경로) → forwarding trạng thái (state / 상태) → observed traffic, không phải chỉ như “mạng chậm”.**
 
-> **Bàn giao:** Sau **22. Kết nối sang các chapter khác**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại chuỗi advertisement → policy → selected route → forwarding state → observed traffic, cùng distinction giữa leak/hijack, RPKI và containment. Sang [Multi-region replication](./05_multi_region_replication_and_geo_distributed_tradeoffs.md) khi topology ảnh hưởng authority/locality, hoặc [End-to-end request path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) khi cần nối route decision với reachability; quay về [README](./README.md) để xác nhận owner.

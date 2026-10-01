@@ -220,4 +220,4 @@ Khi thiết kế replication hoặc workflow, hãy hỏi: thao tác (operation /
 
 Xem thêm: [Consensus](./03_consensus_log_replication_reconfiguration_and_snapshots.md), [CRDT và causal consistency](./04_crdts_causal_consistency_and_conflict_resolution.md), [Leases và fencing](./02_leases_fencing_tokens_and_split_brain_prevention.md) và [Distributed tracing](../../90_connections/advanced/README.md).
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại distinction giữa physical time, logical order, causality, timeout suspicion và consensus authority trước khi rời chapter. Sang [Consensus internals](./03_consensus_log_replication_reconfiguration_and_snapshots.md) khi cần durable ordering, [CRDTs](./04_crdts_causal_consistency_and_conflict_resolution.md) khi cần causal merge, hoặc [Leases/fencing](./02_leases_fencing_tokens_and_split_brain_prevention.md) khi thời gian tham gia vào quyền ghi; quay về [README](./README.md) để xác nhận owner.
