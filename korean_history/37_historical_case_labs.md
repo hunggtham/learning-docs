@@ -8,7 +8,7 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 Đừng dùng các tình huống như sáu câu chuyện đại diện cho toàn bộ lịch sử. Chúng là điểm vào để luyện một thói quen: không giải thích sự kiện bằng một nguyên nhân duy nhất và không tách cung điện, cánh đồng, bến cảng, nhà máy khỏi nhau. Sau mỗi lab, hãy quay lại chapter chính được liên kết để mở rộng phần bị lược bỏ.
 
-> **Chuyển mạch:** Case lab yêu cầu nối mốc với đời sống qua place, institution, actor và evidence; Gyeongju cho thấy kinh đô sống nhờ network, còn Ganghwa kiểm tra resilience của state trong khủng hoảng.
+> **Chuyển mạch:** Case lab nối mốc với đời sống qua place, institution, actor và evidence; **Gyeongju** cho thấy kinh đô sống nhờ network, còn **Ganghwa** kiểm tra resilience của state trong khủng hoảng. Hai lab mở cùng một cách đọc nhưng đặt nó vào hai loại địa hình và quyền lực khác nhau.
 
 ## Lab 1 — Gyeongju, thế kỷ VII–VIII: một kinh đô được nuôi bằng mạng lưới
 
@@ -22,7 +22,7 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Khi nguồn lực của Silla được vật chất hóa ở Gyeongju, câu hỏi tiếp theo là vùng phía bắc bán đảo được tổ chức ra sao sau khi Cao Câu Ly sụp đổ. Chuyển sang [`04_unified_silla_and_balhae.md`](04_unified_silla_and_balhae.md) để đọc đồng thời Tân La và Bột Hải (발해 / Balhae), thay vì coi “thống nhất” là một đường biên đơn giản.
 
-> **Chuyển mạch:** Ở chặng này của **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**, **Lab 1 — Gyeongju, thế kỷ VII–VIII: một kinh đô được nuôi bằng mạng lưới** cho ta quy tắc; **Lab 2 — Ganghwa, thế kỷ XIII: đảo, bản khắc và sức chịu đựng của nhà nước** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 3 — Hanseong, thế kỷ XV: chữ viết đi qua căn bếp và công sở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Gyeongju dùng lăng mộ, cung điện và mạng vận chuyển để đọc năng lực huy động; Ganghwa dùng đảo, bản khắc và dân bị trưng dụng để đọc giới hạn của sức chịu đựng. **Lab 3 — Hanseong** chuyển cùng phương pháp sang hạ tầng chữ viết và câu hỏi ai được tiếp cận thông tin.
 
 ## Lab 2 — Ganghwa, thế kỷ XIII: đảo, bản khắc và sức chịu đựng của nhà nước
 
@@ -38,7 +38,7 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Câu hỏi về ai được bảo vệ và ai trả giá dẫn tới chương `07`, nơi chính quyền quân nhân (military rule / 무신정권) và thế giới Mông Cổ làm lộ giới hạn của một nhà nước quý tộc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**, **Lab 2 — Ganghwa, thế kỷ XIII: đảo, bản khắc và sức chịu đựng của nhà nước** cho ta quy tắc; **Lab 3 — Hanseong, thế kỷ XV: chữ viết đi qua căn bếp và công sở** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 4 — Seodaemun và ga Seoul, 1919–1945: hiện đại hóa dưới quyền lực thuộc địa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ganghwa cho thấy nhà nước có thể bảo vệ trung tâm nhưng chuyển chi phí chiến tranh ra đất liền; Hanseong cho thấy công nghệ chữ viết có thể giảm chi phí thông tin nhưng không tự xóa bất bình đẳng. **Lab 4 — Seodaemun và ga Seoul** tiếp tục hỏi hạ tầng hiện đại phục vụ ai dưới quyền lực thuộc địa.
 
 ## Lab 3 — Hanseong, thế kỷ XV: chữ viết đi qua căn bếp và công sở
 
@@ -54,7 +54,7 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Khi chữ viết mở rộng khả năng truyền đạt nhưng không tự động tạo bình đẳng, hãy chuyển sang [`10_joseon_society_status_family_economy.md`](10_joseon_society_status_family_economy.md) để theo dõi địa vị (status / 신분), gia đình và kinh tế đã lọc quyền tiếp cận đó như thế nào.
 
-> **Chuyển mạch:** Trong **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**, **Lab 3 — Hanseong, thế kỷ XV: chữ viết đi qua căn bếp và công sở** cho ta quy tắc; **Lab 4 — Seodaemun và ga Seoul, 1919–1945: hiện đại hóa dưới quyền lực thuộc địa** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 5 — Busan, 1950–1953: chiến tranh là một nền kinh tế sinh tồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Hanseong cho thấy chữ viết giảm chi phí thông tin nhưng vẫn bị lọc bởi địa vị; **Lab 4 — Seodaemun và ga Seoul** đặt hạ tầng hiện đại vào quan hệ thuộc địa, rồi **Lab 5 — Busan** theo dõi cách chiến tranh tái phân bổ người, hàng và giấy tờ.
 
 ## Lab 4 — Seodaemun và ga Seoul, 1919–1945: hiện đại hóa dưới quyền lực thuộc địa
 
@@ -70,7 +70,7 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Năm **1945** không xóa đường ray, sổ đất, người di cư hay tranh chấp cộng tác. Chuyển sang [`16_liberation_division_state_formation_1945_1950.md`](16_liberation_division_state_formation_1945_1950.md) để đọc giải phóng như một khủng hoảng chuyển tiếp nhà nước.
 
-> **Chuyển mạch:** Ở chặng này của **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**, **Lab 4 — Seodaemun và ga Seoul, 1919–1945: hiện đại hóa dưới quyền lực thuộc địa** cho ta quy tắc; **Lab 5 — Busan, 1950–1953: chiến tranh là một nền kinh tế sinh tồn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 6 — Ulsan và Gwangju, 1961–1987: tăng trưởng, cưỡng chế và quyền lên tiếng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Seodaemun và ga Seoul cho thấy hạ tầng vừa mở khả năng di chuyển vừa phục vụ cưỡng chế; **Busan** cho thấy cảng, viện trợ và thị trường sinh tồn trong chiến tranh. **Lab 6 — Ulsan và Gwangju** chuyển câu hỏi sang tăng trưởng công nghiệp, cưỡng chế và quyền lên tiếng.
 
 ## Lab 5 — Busan, 1950–1953: chiến tranh là một nền kinh tế sinh tồn
 
@@ -86,7 +86,7 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Khi chiến tranh để lại người tị nạn, hạ tầng hỏng và nhà nước an ninh hóa, hãy đọc [`18_postwar_reconstruction_and_first_republic.md`](18_postwar_reconstruction_and_first_republic.md) như bài toán phân bổ vốn và quyền lực, không phải chương “bắt đầu lại từ số không”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**, **Lab 5 — Busan, 1950–1953: chiến tranh là một nền kinh tế sinh tồn** cho ta quy tắc; **Lab 6 — Ulsan và Gwangju, 1961–1987: tăng trưởng, cưỡng chế và quyền lên tiếng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Phiếu tự kiểm tra sau mỗi lab** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Busan cho thấy chiến tranh đi qua cảng, viện trợ, chỗ ở và giấy tờ; **Lab 6 — Ulsan và Gwangju** cho thấy nhà máy và xuất khẩu tạo năng lực nhưng không tự tạo quyền chính trị. Phần **khung phản tư** sau lab tổng hợp evidence, actors và trade-offs thay vì biến lịch sử thành bài kiểm tra.
 
 ## Lab 6 — Ulsan và Gwangju, 1961–1987: tăng trưởng, cưỡng chế và quyền lên tiếng
 
@@ -102,9 +102,9 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Sau 1987, câu hỏi không còn chỉ là “ai nắm quyền” mà là dân chủ có thể hấp thụ toàn cầu hóa, khủng hoảng tài chính và bất bình đẳng tài sản ra sao. Chuyển sang [`21_democratic_consolidation_globalization_1987_1997.md`](21_democratic_consolidation_globalization_1987_1997.md) và [`22_imf_crisis_digitalization_hallyu_1997_2010s.md`](22_imf_crisis_digitalization_hallyu_1997_2010s.md).
 
-> **Chuyển mạch:** Lab 6 nối industrial growth, coercion và voice trong hai địa điểm; phần reflection sau lab phải tổng hợp evidence, actors và trade-offs thay vì trở thành bài kiểm tra tách rời.
+> **Chuyển mạch:** Lab 6 nối industrial growth, coercion và voice trong hai địa điểm; **khung phản tư** sau lab tổng hợp evidence, actors và trade-offs để quay lại chapter chính, không tách lịch sử thành một bài kiểm tra.
 
-## Phiếu tự kiểm tra sau mỗi lab
+## Khung phản tư sau mỗi lab
 
 1. Mốc nào là điểm neo, và điều gì đã diễn ra trước mốc đó để nó trở nên khả dĩ?
 2. Nguồn lực nào đi qua nhà nước, thị trường, gia đình hoặc quân đội?
@@ -114,4 +114,4 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 Nếu chưa trả lời được câu cuối, hãy quay lại `01_how_to_read_korean_history.md`: bằng chứng vật chất là điểm khởi đầu cho suy luận, không phải giấy phép để suy diễn mọi chi tiết.
 
-> **Bàn giao:** Sau **Phiếu tự kiểm tra sau mỗi lab**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Sau **Khung phản tư sau mỗi lab**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
