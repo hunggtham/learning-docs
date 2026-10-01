@@ -1,6 +1,6 @@
 # Nguyên tử, nguyên tố và đồng vị
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nguyên tử, nguyên tố và đồng vị**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ ý tưởng “nguyên tử” đến mô hình hiện đại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Proton quyết định bản sắc nguyên tố** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nguyên tử, nguyên tố và đồng vị**. Route đi từ atomic structure → proton/element identity → neutron/isotope → electron/ion → notation và mass evidence, để phân biệt bản sắc nguyên tố với biến thể đồng vị và trạng thái điện tích.
 
 Các ký hiệu hóa học như `H`, `C`, `O` chỉ thực sự có ý nghĩa khi ta hiểu điều gì quyết định bản sắc của một nguyên tố. Câu trả lời nằm ở cấu trúc của **nguyên tử (atom / 원자)**.
 

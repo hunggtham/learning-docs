@@ -1,6 +1,6 @@
 # Cấu hình electron
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu hình electron**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ obitan đến nguyên tử nhiều electron** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nguyên lý loại trừ Pauli** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cấu hình electron**. Route đi từ orbital/quantum numbers → Pauli/Hund/Aufbau → many-electron shielding → ground-state configurations/ions, rồi dùng cấu hình để giải thích periodicity và bonding.
 
 > **Cấu hình electron (electron configuration / 전자 배치)** mô tả cách các electron của một nguyên tử hoặc ion phân bố vào các obitan lượng tử có thể chiếm. Mục tiêu không phải học thuộc chuỗi `1s² 2s² 2p⁶...`, mà là hiểu vì sao cách sắp xếp electron quyết định tính tuần hoàn, liên kết hóa học và khả năng phản ứng của nguyên tố.
 

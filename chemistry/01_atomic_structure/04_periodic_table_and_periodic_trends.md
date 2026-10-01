@@ -1,6 +1,6 @@
 # Bảng tuần hoàn và các xu hướng tuần hoàn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bảng tuần hoàn và các xu hướng tuần hoàn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao tính chất hóa học lặp lại theo chu kỳ?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chu kỳ, nhóm và các khối s, p, d, f** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bảng tuần hoàn và các xu hướng tuần hoàn**. Route đi từ periodic blocks/groups → effective nuclear charge/shielding → radius/ionization/electron affinity → metallicity/reactivity, để mỗi trend quay lại một cơ chế electron cụ thể.
 
 > **Bảng tuần hoàn (periodic table / 주기율표)** không chỉ là bảng tra cứu nguyên tố. Hình dạng của nó là hệ quả trực tiếp của cấu trúc electron, còn các **xu hướng tuần hoàn (periodic trends / 주기적 성질)** xuất hiện vì điện tích hạt nhân hiệu dụng, che chắn electron, khả năng xuyên thấu của obitan, kích thước lớp electron và cấu hình electron thay đổi có quy luật.
 

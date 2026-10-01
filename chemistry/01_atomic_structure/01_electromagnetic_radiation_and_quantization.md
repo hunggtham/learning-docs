@@ -1,6 +1,6 @@
 # Bức xạ điện từ và lượng tử hóa
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bức xạ điện từ và lượng tử hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bức xạ điện từ là gì?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao bước sóng và tần số đều quan trọng?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bức xạ điện từ và lượng tử hóa**. Route đi từ wave/frequency/energy → blackbody/photoelectric evidence → line spectra → quantization, dùng dữ liệu ánh sáng để chỉ ra giới hạn của mô hình cổ điển trước khi sang quantum atom.
 
 Muốn hiểu electron trong nguyên tử, ta cần đi qua một vấn đề lịch sử quan trọng: **vật chất tương tác với ánh sáng như thế nào?** Chính các thí nghiệm về bức xạ và quang phổ đã cho thấy mô hình cổ điển không đủ để mô tả thế giới nguyên tử.
 

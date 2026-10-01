@@ -1,6 +1,6 @@
 # Mô hình lượng tử của nguyên tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình lượng tử của nguyên tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao mô hình cổ điển không đủ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Hàm sóng và phương trình Schrödinger** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Mô hình lượng tử của nguyên tử**. Route đi từ classical failures → wavefunction/ψ → Schrödinger observables → quantum numbers/orbitals → probability density, để không thay quỹ đạo cổ điển bằng một “quỹ đạo xác suất” đơn giản hóa.
 
 > **Mô hình cơ học lượng tử (quantum mechanical model / 양자역학적 원자 모형)** không mô tả electron như một hạt nhỏ bay trên quỹ đạo xác định quanh hạt nhân. Thay vào đó, trạng thái của electron được mô tả bằng **hàm sóng (wavefunction)** \(\psi\), và từ hàm sóng ta tính được xác suất tìm thấy electron trong các vùng không gian khác nhau.
 
