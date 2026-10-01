@@ -1,6 +1,6 @@
 # Quần thể, Quần xã và Hành vi — Population, Community and hành vi (behavior / 동작)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quần thể, Quần xã và Hành vi — Population, Community and hành vi (behavior / 동작)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Kích thước quần thể không đủ để mô tả quần thể** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Tăng trưởng theo hàm mũ: baseline khi giới hạn chưa chi phối mạnh** để soi ranh giới và điểm dễ nhầm. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Quần thể, Quần xã và Hành vi — Population, Community and hành vi (behavior / 동작)**. Route đi từ kích thước/cấu trúc quần thể → tăng trưởng và giới hạn → cạnh tranh, cộng sinh, săn mồi → hành vi, mạng tương tác và động lực quần xã, để số lượng luôn được giải thích cùng quan hệ sinh thái.
 
 Sau organismal biology, ta đã có một cá thể có physiology, hành vi (behavior / 동작) và reproduction. Nhưng ngoài tự nhiên, cá thể luôn chịu tài nguyên (resource / 자원) limitation, competition, predator, pathogen, mate choice và variation của môi trường. Vì vậy cấp tổ chức tiếp theo là **quần thể (population)** và **quần xã (community)**.
 

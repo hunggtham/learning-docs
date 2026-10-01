@@ -1,6 +1,6 @@
 # Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Quần thể là đơn vị tư duy trung tâm** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Hardy–Weinberg: mô hình không để phát hiện lực tiến hóa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**. Route đi từ biến dị trong quần thể → Hardy–Weinberg làm baseline → chọn lọc, drift, gene flow và mutation → thích nghi, phân hóa và loài mới, để tiến hóa được đọc bằng thay đổi tần số allele qua thế hệ.
 
 Di truyền học cho ta allele, đột biến, giảm phân và cơ chế truyền thông tin giữa các thế hệ. Tiến hóa đặt câu hỏi ở cấp cao hơn: **sau nhiều thế hệ, thành phần di truyền của một quần thể thay đổi vì những lực nào, và tại sao một số biến thể tăng lên trong khi biến thể khác biến mất?**
 

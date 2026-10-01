@@ -1,6 +1,6 @@
 # Vi sinh vật và Virus — Microorganisms and Viruses (미생물과 바이러스)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vi sinh vật và Virus — Microorganisms and Viruses (미생물과 바이러스)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. “Vi sinh vật” là mô tả kích thước, không phải một clade** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Kiến trúc tế bào bacteria** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Vi sinh vật và Virus — Microorganisms and Viruses (미생물과 바이러스)**. Route đi từ kích thước và lịch sử tiến hóa → kiến trúc tế bào/virus → trao đổi chất, sao chép và tương tác vật chủ → hệ sinh thái vi sinh, bệnh và ứng dụng, để không gom các tác nhân rất khác nhau vào một nhãn “vi sinh vật”.
 
 Sau khi hiểu tiến hóa và phylogeny, vi sinh vật là nơi nhiều nguyên lý sinh học hiện ra rất rõ: thế hệ ngắn, quần thể lớn, chuyển hóa đa dạng, chuyển gen ngang mạnh và phản ứng nhanh với môi trường. Virus lại đẩy câu hỏi về ranh giới sự sống xa hơn: chúng có genome và tiến hóa, nhưng phụ thuộc tế bào chủ để tạo thế hệ mới.
 

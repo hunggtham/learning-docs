@@ -1,6 +1,6 @@
 # Phylogeny, Taxonomy và Đa dạng sinh học — Phylogeny, Taxonomy and Biodiversity (계통학, 분류학과 생물다양성)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phylogeny, Taxonomy và Đa dạng sinh học — Phylogeny, Taxonomy and Biodiversity (계통학, 분류학과 생물다양성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. cây (tree / 트리) of life không phải “thứ bậc tiến hóa”** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Cách đọc một cây (tree / 트리) đúng** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phylogeny, Taxonomy và Đa dạng sinh học — Phylogeny, Taxonomy and Biodiversity (계통학, 분류학과 생물다양성)**. Route đi từ đặc điểm và dữ liệu trình tự → cây phát sinh và nhóm đơn ngành → phân loại/tên gọi → nguồn gốc và phân bố đa dạng, để taxonomy phản ánh quan hệ tiến hóa thay vì chỉ là hệ thống nhãn.
 
 Tiến hóa (evolution) cho ta một hình ảnh quan trọng: lịch sử (history / 이력) của life không phải chiếc thang mà là **cây phân nhánh**. Population tách ra, divergence tích lũy, lineage mới hình thành. Chapter này trả lời ba câu hỏi nối tiếp nhau: làm sao reconstruct cây lịch sử đó, làm sao đặt tên/phân loại organism theo ancestry, và biodiversity hiện tại được tổ chức ra sao?
 
