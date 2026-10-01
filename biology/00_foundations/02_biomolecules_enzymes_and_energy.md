@@ -18,7 +18,7 @@ Kiến trúc modular có hai lợi ích lớn. Thứ nhất, cell chỉ cần m�
 
 Điều này tương tự software: alphabet ký tự nhỏ có thể tạo vô số mã nguồn (source code / 소스 코드) khác nhau nhờ thứ tự (order / 순서).
 
-> **Chuyển mạch:** Monomer tạo polymer bằng condensation và được tháo bằng hydrolysis; carbohydrate tiếp theo cho thấy polymer vừa là vật liệu vừa là kho dự trữ, không chỉ là nhiên liệu.
+> **Chuyển mạch:** Monomer được nối bằng phản ứng ngưng tụ và tháo bằng thủy phân; **carbohydrate** cho thấy cùng một polymer có thể vừa làm vật liệu cấu trúc vừa làm kho dự trữ, không chỉ là nhiên liệu chuyển hóa.
 
 ## 2. Condensation và hydrolysis: xây và tháo polyme
 
@@ -30,7 +30,7 @@ Một protein không tự “mọc” từ axit amin trong cytoplasm. Ribosome, 
 
 Ngay từ đây ta thấy matter, năng lượng (energy / 에너지) và thông tin (information / 정보) đã gắn với nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Biomolecule, Enzyme và Năng lượng tế bào — Biomolecules, Enzymes and Cellular năng lượng (energy / 에너지)**, **3. Carbohydrate: không chỉ là “đường để lấy năng lượng”** tiếp nhận điểm tựa từ **2. Condensation và hydrolysis: xây và tháo polyme** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lipid: molecule kỵ nước tạo ranh giới (boundary / 경계) và lưu trữ (storage / 저장소)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ngưng tụ và thủy phân giải thích cách cell xây–tháo polymer, còn **carbohydrate** cho thấy cách liên kết và branching quyết định dự trữ hay vật liệu. Từ khác biệt đó, **lipid** mở một chiến lược khác: kỵ nước để lưu trữ năng lượng đậm đặc và dựng ranh giới màng.
 
 ## 3. Carbohydrate: không chỉ là “đường để lấy năng lượng”
 
@@ -50,7 +50,7 @@ Enzyme digestive của người nhận dạng linkage trong starch nhưng không
 
 Ruminant như cow giải quyết bài toán bằng microbial symbiont trong gut có enzyme thích hợp. liên kết (connection / 연결) này nối biochemistry với ecology và hệ vi sinh (microbiome).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biomolecule, Enzyme và Năng lượng tế bào — Biomolecules, Enzymes and Cellular năng lượng (energy / 에너지)**, **3. Carbohydrate: không chỉ là “đường để lấy năng lượng”** đã nêu tiêu chí phân biệt, còn **4. Lipid: molecule kỵ nước tạo ranh giới (boundary / 경계) và lưu trữ (storage / 저장소)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Protein: từ chuỗi (sequence / 시퀀스) tới machine phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Carbohydrate đổi chức năng khi linkage và branching đổi; **lipid** lại dùng tính kỵ nước để tạo bilayer và tích trữ năng lượng, không phải polymer lặp đều. Khi cần một phân tử vừa mang thông tin cấu trúc vừa thực hiện xúc tác, **protein** nối tiếp bằng chuỗi amino acid và folding ba chiều.
 
 ## 4. Lipid: molecule kỵ nước tạo ranh giới (boundary / 경계) và lưu trữ (storage / 저장소)
 
@@ -68,7 +68,7 @@ Axit béo **saturated** không có C=C double bond trong chuỗi (chain / 사슬
 
 Cell có thể điều chỉnh lipid composition để membrane không quá cứng hoặc quá lỏng khi nhiệt độ (temperature) đổi. Đây là cân bằng nội môi (homeostasis) ở molecular mức (level / 수준).
 
-> **Chuyển mạch:** Trong **Biomolecule, Enzyme và Năng lượng tế bào — Biomolecules, Enzymes and Cellular năng lượng (energy / 에너지)**, **4. Lipid: molecule kỵ nước tạo ranh giới (boundary / 경계) và lưu trữ (storage / 저장소)** đã nêu tiêu chí phân biệt, còn **5. Protein: từ chuỗi (sequence / 시퀀스) tới machine phân tử** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Protein không phải vật thể cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Lipid tạo ranh giới và kho năng lượng nhờ phần kỵ nước; **protein** dùng chuỗi amino acid, tương tác side chain và folding để trở thành máy phân tử. Vì hình dạng không cố định, mục **Protein không phải vật thể cứng** sẽ thêm động lực học vào mối quan hệ cấu trúc–chức năng.
 
 ## 5. Protein: từ chuỗi (sequence / 시퀀스) tới machine phân tử
 
