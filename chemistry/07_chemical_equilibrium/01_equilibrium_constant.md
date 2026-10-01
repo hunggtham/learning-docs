@@ -48,7 +48,7 @@ Vì vậy `K` mã hóa chênh lệch năng lượng tự do chuẩn theo dạng 
 
 Nếu \(\Delta_rG^\circ\) thay đổi chỉ vài kJ/mol, `K` có thể thay đổi nhiều lần vì hàm mũ rất nhạy.
 
-> **Chuyển mạch:** Trong **Hằng số cân bằng — định lượng vị trí cân bằng và nối với thế hóa học**, **Vì sao hoạt độ quan trọng hơn nồng độ?** tiếp nhận điểm tựa từ **Từ thế hóa học tới K** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoạt độ của khí và pha tinh khiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Chemical potential dẫn tới K; activity hiệu chỉnh concentration theo non-ideality, còn khí và pure phase cho thấy thành phần nào thực sự xuất hiện trong equilibrium expression.
 
 ## Vì sao hoạt độ quan trọng hơn nồng độ?
 

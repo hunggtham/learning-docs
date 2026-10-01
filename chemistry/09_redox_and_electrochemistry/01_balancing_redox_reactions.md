@@ -27,7 +27,7 @@ bảo toàn nguyên tố
 → ghép số electron mất = số electron nhận
 ```
 
-> **Chuyển mạch:** Trong **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**, **Electron trong bán phản ứng là công cụ ghi sổ** tiếp nhận điểm tựa từ **Vì sao phản ứng redox khó cân bằng hơn phản ứng thông thường?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bước 1: xác định quá trình oxy hóa và khử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Redox balancing must conserve atoms, charge and electrons; half-reactions make the bookkeeping explicit, starting by identifying oxidation and reduction before combining them.
 
 ## Electron trong bán phản ứng là công cụ ghi sổ
 

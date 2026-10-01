@@ -30,7 +30,7 @@ Q=K
 
 Ngoài cân bằng, \(Q\) có thể nhỏ hơn hoặc lớn hơn \(K\).
 
-> **Chuyển mạch:** Trong **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Định nghĩa tổng quát** đã nêu tiêu chí phân biệt, còn **Vì sao so sánh Q với K cho biết chiều tự diễn ra?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Q không phải “lượng sản phẩm”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Q là snapshot của activities hiện tại; so sánh Q với K suy ra chiều dịch chuyển, nhưng Q không phải lượng sản phẩm vì còn phụ thuộc stoichiometry và reactant activities.
 
 ## Vì sao so sánh Q với K cho biết chiều tự diễn ra?
 

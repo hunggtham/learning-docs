@@ -12,7 +12,7 @@ Routing là control-plane tiến trình (process / 프로세스) xây/cập nh�
 
 Tách mặt phẳng dữ liệu (data plane / 데이터 플레인) và điều khiển (control / 제어) plane giúp lập luận (reasoning / 추론): packet forwarding phải rất nhanh; tuyến (route / 경로) computation có thể phức tạp hơn và xảy ra ít thường xuyên hơn.
 
-> **Chuyển mạch:** Trong **Routing protocols và Internet**, **Longest Prefix Match** tiếp nhận điểm tựa từ **Forwarding khác routing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distance-vector intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Routing computes paths, forwarding selects a next hop; longest-prefix match applies the most specific route, while distance-vector protocols learn paths through neighbor information.
 
 ## Longest Prefix Match
 

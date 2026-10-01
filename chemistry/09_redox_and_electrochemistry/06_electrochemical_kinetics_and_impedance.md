@@ -40,7 +40,7 @@ quá thế → mức dịch khỏi cân bằng
 
 Đây là điểm quan trọng: điện thế lớn không tự động đồng nghĩa dòng lớn nếu hàng rào chuyển electron hoặc vận chuyển khối vẫn chậm.
 
-> **Chuyển mạch:** Trong **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**, **Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0** tiếp nhận điểm tựa từ **Điện thế cân bằng không quyết định dòng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Butler–Volmer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Equilibrium potential sets thermodynamic balance, not rate; exchange current measures hidden forward/backward activity, and Butler–Volmer links overpotential to net current.
 
 ## Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0
 

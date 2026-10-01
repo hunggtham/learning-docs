@@ -12,7 +12,7 @@ Sau liên kết (connection / 연결), ứng dụng (application / 애플리케�
 
 Vì vậy ứng dụng (application / 애플리케이션) giao thức (protocol / 프로토콜) phải tự framing: length-prefix, delimiter hoặc structured giao thức (protocol / 프로토콜).
 
-> **Chuyển mạch:** Trong **Sockets, IPv6, NAT, firewalls và VPN**, **Socket là giao diện (interface / 인터페이스) giữa ứng dụng (application / 애플리케이션) và mạng (network / 네트워크) ngăn xếp (stack / 스택)** xác định đầu vào; **Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **IPv6 không chỉ là “nhiều địa chỉ hơn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Socket nối application với network stack; port định danh endpoint chứ không phải process, còn IPv6 mở rộng address model trước khi NAT/firewall/VPN thêm các lớp boundary.
 
 ## Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID
 

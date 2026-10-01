@@ -30,7 +30,7 @@ Electron do Zn nhường ra chính là electron mà \(Cu^{2+}\) nhận. Trong m�
 
 Đây là lý do một phản ứng redox luôn gồm ít nhất hai quá trình ghép: một quá trình tạo electron theo cách ghi sổ và một quá trình tiêu thụ số electron tương ứng.
 
-> **Chuyển mạch:** Trong **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**, **Chất oxy hóa và chất khử** tiếp nhận điểm tựa từ **Oxy hóa và khử luôn đi cùng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số oxy hóa là công cụ hạch toán, không phải điện tích thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Oxidation and reduction are paired electron bookkeeping; oxidizing/reducing agents identify direction, while oxidation number is a formal accounting tool rather than literal charge.
 
 ## Chất oxy hóa và chất khử
 
