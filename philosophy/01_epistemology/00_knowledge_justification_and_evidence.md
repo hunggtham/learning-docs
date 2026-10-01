@@ -19,7 +19,7 @@ Justification không phải một nhãn tuyệt đối. Nó phụ thuộc vào l
 | “X nên làm” | premise thực nghiệm + premise giá trị + lập luận | is–ought gap |
 | “Khái niệm X nghĩa là…” | định nghĩa, usage, ranh giới (boundary / 경계) cases | tranh cãi từ ngữ bị tưởng là fact dispute |
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Claim–bằng chứng (evidence / 증거) matching** nêu điều cần giải thích; **Fallibilism và intellectual humility** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gettier và sự may mắn nhận thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Claim–evidence matching kiểm tra bằng chứng có đúng loại với mệnh đề hay không; **fallibilism** thêm điều kiện rằng lý do có thể bị sửa khi xuất hiện phản chứng. **Gettier** tiếp tục bằng cách hỏi liệu một belief đúng và có lý do vẫn có thể đúng chỉ nhờ may mắn.
 
 ## Fallibilism và intellectual humility
 
@@ -33,7 +33,7 @@ Xem [Belief, uncertainty và calibration](01_belief_uncertainty_and_calibration.
 
 Giả sử một người nhìn thấy đồng hồ chạy đúng vào 10:00 và tin rằng hiện là 10:00, nhưng đồng hồ đã hỏng từ hôm qua và chỉ tình cờ đứng đúng giờ. Belief là true, người đó có lý do quan sát, nhưng dường như chưa có kiến thức (knowledge / 지식) vì truth phụ thuộc vào luck. Bài học không phải “mọi kiến thức (knowledge / 지식) đều bất khả”, mà là justification cần một liên hệ không quá may rủi với truth — ví dụ độ tin cậy (reliability / 신뢰성) của tiến trình (process / 프로세스) trong hoàn cảnh đó.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Gettier và sự may mắn nhận thức** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) ladder** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Gettier cho thấy “đúng + có lý do” chưa loại trừ luck; **evidence ladder** vì thế phải xem bằng chứng loại trừ rival và confounder đến đâu, không chỉ đếm số nguồn. Từ bậc bằng chứng đó, **tiêu chuẩn nhận thức theo lĩnh vực** xác định mức justification phù hợp.
 
 ## Bằng chứng (evidence / 증거) ladder
 
@@ -45,13 +45,13 @@ assertion → anecdote → uncontrolled observation
 
 Ladder không phải thứ hạng tuyệt đối. Một observation hiếm có thể rất informative; một meta-analysis của studies biased vẫn có thể sai. Câu hỏi đúng là bằng chứng (evidence / 증거) này loại trừ hypothesis nào, còn confounder nào, và conclusion nên rộng đến đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Bằng chứng (evidence / 증거) ladder** nêu điều cần giải thích; **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Evidence ladder mô tả cách claim đi từ assertion tới intervention, replication và theory fit; nhưng một bậc không tự có cùng ý nghĩa trong mọi lĩnh vực. **Epistemic standards theo domain** sẽ đặt ngưỡng bằng chứng đúng cho toán học, lịch sử, nhân quả y học hay đạo đức.
 
 ## Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)
 
 Mathematical proof cần validity trong hệ tiên đề; historical claim cần provenance và nguồn (source / 소스) criticism; nhân quả (causal / 인과적) medical claim cần intervention và an toàn (safety / 안전) bằng chứng (evidence / 증거); moral claim cần normative premise có thể biện minh. Dùng tiêu chuẩn (standard / 표준) của lĩnh vực (domain / 도메인) này để kết luận lĩnh vực (domain / 도메인) khác là category lỗi (error / 오류).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**, **Độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?** tiếp nhận điểm tựa từ **Epistemic tiêu chuẩn (standard / 표준) theo lĩnh vực (domain / 도메인)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Tiêu chuẩn nhận thức phải khớp loại claim: proof cho mệnh đề toán, provenance cho lịch sử, intervention cho causal claim và premise giá trị cho phán đoán đạo đức. **Độ sâu pass** gom các tiêu chuẩn đó thành câu hỏi thực hành: khi nào belief đủ đáng tin để gọi là knowledge mà vẫn ghi rõ ranh giới và khả năng sửa?
 
 ## Độ sâu (depth / 깊이) pass: khi nào belief trở thành kiến thức (knowledge / 지식)?
 
