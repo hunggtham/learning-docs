@@ -22,37 +22,37 @@ Bronze (đồng thanh / 청동) đắt và khó sản xuất hơn stone. Vì v�
 
 Giai đoạn **Vệ Mãn Triều Tiên (Wiman Joseon / 위만조선)** cho thấy early Korean lịch sử (history / 이력) không phải một bộ chứa (container / 컨테이너) dân tộc khép kín. di chuyển (migration / 마이그레이션), trade và political competition xuyên biên giới diễn ra liên tục. Khi nhà Hán đánh bại Wiman Joseon năm 108 BCE và thiết lập commanderies, vùng này trở thành giao diện (interface / 인터페이스) phức tạp giữa cục bộ (local / 로컬) societies và imperial administration.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Buyeo, Okjeo, Dongye và Samhan** tiếp nhận điểm tựa từ **Cổ Triều Tiên (고조선 / Gojoseon) và vấn đề giữa myth với trạng thái (state / 상태) formation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Gojoseon cho thấy myth và state formation phải được tách; Buyeo, Okjeo, Dongye và Samhan mở rộng bức tranh thành nhiều polity cạnh tranh, trước khi mental model gom các biến số chung.
 
 ## Buyeo, Okjeo, Dongye và Samhan
 
 Các polity như Buyeo (부여), Okjeo (옥저), Dongye (동예), Mahan, Jinhan, Byeonhan không phải footnote. Chúng cho thấy trạng thái (state / 상태) formation là branching tiến trình (process / 프로세스): nhiều political form cạnh tranh và merge, không phải một line duy nhất từ Dangun đến hiện đại.
 
-> **Chuyển mạch:** Trong **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Buyeo, Okjeo, Dongye và Samhan** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Archaeology và suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Nhiều polity khiến state formation phải được đọc như một quá trình branching; archaeology tiếp theo cung cấp dấu vết để kiểm tra extraction, authority và coordination thay vì chỉ lặp lại tên gọi.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > trạng thái (state / 상태) formation xảy ra khi một mạng (network / 네트워크) cộng đồng có thể duy trì extraction, authority và coordination trên quy mô lớn hơn cục bộ (local / 로컬) village. Bronze weapon hay royal myth chỉ là visible đầu ra (output / 출력); phía sau là food surplus, labor organization, warfare và legitimacy.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Archaeology và suy luận (inference / 추론)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Rice agriculture và coordination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mental model nêu các cơ chế cần tìm; archaeology đo settlement, burial và imported goods, còn rice agriculture đặt câu hỏi cụ thể về surplus, timing và coordination.
 
 ## Archaeology và suy luận (inference / 추론)
 
 Không có văn bản (text / 텍스트) không có nghĩa “không có lịch sử”. Settlement kích thước (size / 크기), burial differentiation, imported objects, agricultural remains và fortification đều là variables. Nếu burial A có labor chi phí (cost / 비용) lớn hơn burial B nhiều orders of magnitude, ta có bằng chứng (evidence / 증거) về inequality—but chưa đủ để biết chính xác (exact / 정확한) title của người nằm trong mộ. Đây là difference giữa đo lường (measurement / 측정) và interpretation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Rice agriculture và coordination** tiếp nhận điểm tựa từ **Archaeology và suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iron và military-economic chuyển tiếp (transition / 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Archaeology cho thấy dấu vết coordination; wet-rice có thể tăng payoff của hợp tác và xung đột, còn iron technology tiếp theo mở rộng năng suất và năng lực quân sự khi institution đủ sức hấp thụ.
 
 ## Rice agriculture và coordination
 
 Wet-rice agriculture ở một số vùng cần seasonal timing và water điều khiển (control / 제어). Nó không mechanically tạo trạng thái (state / 상태), nhưng có thể tăng payoff của cooperation và xung đột (conflict / 충돌) over irrigation. Geography + technology làm thay đổi incentive cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Iron và military-economic chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **Rice agriculture và coordination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chinese commanderies như giao diện (interface / 인터페이스) zone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Rice agriculture thay đổi incentive của coordination; iron tools/weapons làm scale cạnh tranh tăng, rồi Chinese commanderies trở thành interface giữa local societies và imperial administration.
 
 ## Iron và military-economic chuyển tiếp (transition / 전이)
 
 Iron tools/weapons rẻ và scalable hơn bronze khi môi trường vận hành (production / 운영 환경) mạng (network / 네트워크) mature. Agricultural productivity và military equipment có thể expand; political competition intensifies. Technology thay đổi (change / 변경) ở đây giống nền tảng (platform / 플랫폼) shift: thành phần (component / 컴포넌트) mới rẻ hơn làm possible quy mô (scale / 규모) mới, nhưng kết quả (outcome / 결과) phụ thuộc institution.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền sử và các nhà nước sớm: từ settlement đến political organization**, **Chinese commanderies như giao diện (interface / 인터페이스) zone** tiếp nhận điểm tựa từ **Iron và military-economic chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mốc thời gian không phải đường thẳng từ “bộ lạc” tới “nhà nước”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Iron và military-economic transition mở rộng capacity nhưng không quyết định một trajectory duy nhất; commanderies cho thấy frontier exchange, và timeline tiếp theo phải giữ nhiều vùng phát triển đồng thời.
 
 ## Chinese commanderies như giao diện (interface / 인터페이스) zone
 
