@@ -100,7 +100,7 @@ Hai kiểu quen thuộc là Mohr, nơi vạch chia dừng trước đầu pipett
 
 Kỹ thuật phải phù hợp chính kiểu pipette đang dùng.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Micropipette** tiếp nhận điểm tựa từ **Pipette chia độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nấc thứ nhất và nấc thứ hai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A graduated pipette trades precision for a broad range; a micropipette narrows the range to microlitres, so piston travel and tip handling become the dominant error sources.
 
 ## Micropipette
 
@@ -108,7 +108,7 @@ Micropipette dịch chuyển không khí (**air-displacement micropipette**) ph�
 
 Độ chính xác phụ thuộc việc dùng đúng dải định mức, đầu tip tương thích, làm ướt trước khi cần tăng độ chụm, hút với tư thế phù hợp, thao tác piston trơn và tránh để chất lỏng đi ngược vào thân pipette.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Nấc thứ nhất và nấc thứ hai** tiếp nhận điểm tựa từ **Micropipette** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pipette dịch chuyển dương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The first stop defines the metered air volume and the second stop expels residue; confusing them overfills the tip, which motivates a positive-displacement design for difficult liquids.
 
 ## Nấc thứ nhất và nấc thứ hai
 
@@ -116,7 +116,7 @@ Micropipette dịch chuyển không khí (**air-displacement micropipette**) ph�
 
 Nếu hút mẫu từ nấc thứ hai, pipette sẽ hút quá thể tích dự kiến và tạo sai số.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Pipette dịch chuyển dương** tiếp nhận điểm tựa từ **Nấc thứ nhất và nấc thứ hai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra pipette bằng phương pháp trọng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Positive displacement removes the air cushion and lets the piston contact the sample, improving behavior for viscous or volatile liquids; gravimetric testing then checks whether the delivered mass matches the intended volume.
 
 ## Pipette dịch chuyển dương
 
@@ -124,7 +124,7 @@ Trong **pipette dịch chuyển dương (positive-displacement pipette)**, pisto
 
 Kiểu này hữu ích với chất nhớt, dễ bay hơi hoặc tạo bọt, nơi đệm không khí của micropipette thông thường gây sai lệch đáng kể.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Kiểm tra pipette bằng phương pháp trọng lượng** tiếp nhận điểm tựa từ **Pipette dịch chuyển dương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Burette** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Gravimetric verification converts delivered mass through water density at temperature into volume and uncertainty; the same calibration mindset carries to a burette with a continuous reading.
 
 ## Kiểm tra pipette bằng phương pháp trọng lượng
 
