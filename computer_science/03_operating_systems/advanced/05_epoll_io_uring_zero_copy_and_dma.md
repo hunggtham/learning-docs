@@ -287,4 +287,4 @@ Nếu fd “ready nhưng không chạy tiếp”, kiểm tra edge-triggered drai
 
 Ôn [OS async I/O foundation](../../basic/03_operating_systems/07_boot_device_drivers_and_async_io.md), [runtime coroutine/event loop](../../04_programming_languages/advanced/07_coroutines_continuations_async_runtimes_and_structured_concurrency.md), [queueing/backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md) và [end-to-end request path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại readiness/completion distinction, buffer ownership/lifetime và queue-depth/backpressure trước khi tối ưu syscall. Sang [Scheduler internals](./01_scheduler_run_queues_fairness_and_latency.md) nếu latency nằm ở wake-up/CPU contention; sang [End-to-end request path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md) để nối I/O evidence với p99 toàn tuyến; quay về [README](./README.md) để xác nhận owner.

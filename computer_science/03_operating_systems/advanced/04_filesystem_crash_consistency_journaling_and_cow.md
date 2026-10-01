@@ -283,4 +283,4 @@ Không cần học mọi filesystem hiện thực (implementation / 구현) đ�
 
 Ôn [filesystem foundation](../../basic/03_operating_systems/04_filesystems_storage_and_io.md), [storage hardware](../../basic/02_computer_architecture/06_storage_hardware_ssd_disks_and_persistence.md), [MVCC/WAL](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md), [buffer pool](../../05_data_databases/advanced/04_buffer_pool_replacement_and_dirty_page_management.md) và [durability path](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
-> **Bàn giao:** Sau **Kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại distinction giữa atomic visibility, persistence ordering và recovery invariant trước khi kết luận một thao tác là “an toàn”. Sang [Advanced I/O](./05_epoll_io_uring_zero_copy_and_dma.md) nếu cần nối writeback/queue với latency; sang [Virtual memory](./03_virtual_memory_page_tables_tlb_shootdown_and_huge_pages.md) nếu cần theo dõi dirty pages từ mapping; quay về [README](./README.md) để xác nhận owner.

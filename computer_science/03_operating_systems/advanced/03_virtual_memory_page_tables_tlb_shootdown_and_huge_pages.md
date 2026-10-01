@@ -64,4 +64,4 @@ Vì vậy câu “ứng dụng đã cấp phát X GB” có thể mang nhiều n
 
 > Bộ nhớ ảo là một hệ thống ánh xạ có quyền truy cập và vòng đời, không phải một vùng RAM giả. Hiệu năng phụ thuộc vào tính cục bộ của dịch địa chỉ, hành vi lỗi trang, cơ chế thu hồi và chi phí phối hợp giữa các lõi.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại bốn boundary trước khi rời chapter: address mapping, TLB coherence, page-fault/reclaim cost và overcommit/OOM semantics. Sang [Filesystem crash consistency](./04_filesystem_crash_consistency_journaling_and_cow.md) nếu cần theo dõi page dirty đi xuống storage; sang [Memory pressure](./02_page_faults_reclaim_dirty_pages_and_memory_pressure.md) nếu cần quay lại reclaim/working-set; quay về [README](./README.md) để xác nhận owner.
