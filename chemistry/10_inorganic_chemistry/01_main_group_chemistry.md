@@ -1,6 +1,6 @@
 # Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một khung suy luận chung trước khi đi từng nhóm** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Nhóm 1 — kim loại kiềm: một electron dễ rời khỏi hệ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**. Route đi từ cấu hình electron hóa trị → xu hướng tuần hoàn/độ âm điện → kiểu liên kết và trạng thái oxy hóa → phản ứng đặc trưng của từng nhóm, để đọc hóa học nhóm chính bằng cơ chế electron thay vì học thuộc danh sách nguyên tố.
 
 > **Nguyên tố nhóm chính (main-group elements / 주족 원소)** gồm các nguyên tố khối s và khối p. Hóa học của chúng cho thấy rất rõ cách **cấu hình electron hóa trị, kích thước nguyên tử, độ âm điện và năng lượng orbital** tạo nên xu hướng tuần hoàn, đồng thời cũng cho thấy vì sao các xu hướng đó luôn có những ngoại lệ có thể giải thích được.
 

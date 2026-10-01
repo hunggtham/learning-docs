@@ -1,6 +1,6 @@
 # Hợp chất vô cơ — bản đồ lớn của hóa học vô cơ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hợp chất vô cơ — bản đồ lớn của hóa học vô cơ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao ranh giới hữu cơ – vô cơ không tuyệt đối** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Từ nguyên tử tới hợp chất: bốn câu hỏi cần hỏi** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hợp chất vô cơ — bản đồ lớn của hóa học vô cơ**. Route đi từ nguyên tử và ion → kiểu liên kết/cấu trúc → acid–base, redox và phối trí → chất rắn, vật liệu và môi trường, để phân loại hợp chất theo cơ chế chi phối chứ không theo ranh giới hữu cơ–vô cơ cứng nhắc.
 
 > **Hóa học vô cơ (inorganic chemistry / 무기화학)** nghiên cứu hóa học của các nguyên tố và hợp chất vượt ra ngoài khung lấy carbon làm trung tâm của hóa học hữu cơ. Lĩnh vực này bao phủ chất rắn ion, hợp chất phân tử, kim loại, khoáng vật, phức phối trí, chất xúc tác, gốm, chất bán dẫn và nhiều loại vật liệu có cấu trúc mở rộng.
 

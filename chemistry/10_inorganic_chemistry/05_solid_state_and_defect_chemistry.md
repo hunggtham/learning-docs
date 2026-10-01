@@ -1,6 +1,6 @@
 # Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tại sao chất rắn cần một cách tư duy riêng?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ô cơ sở và mạng tinh thể** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**. Route đi từ ô cơ sở/mạng tinh thể → khuyết tật điểm, lệch mạng và biên hạt → khuếch tán, pha và cân bằng → dẫn điện, cơ học và tính năng vật liệu, để “khuyết tật” được đọc như biến thiết kế chứ không chỉ là lỗi.
 
 > **Hóa học trạng thái rắn (solid-state chemistry / 고체화학)** nghiên cứu cách thành phần, cấu trúc tinh thể, trạng thái oxy hóa, khuyết tật và chuyển động ion/electron trong chất rắn phối hợp để tạo ra tính chất. Khác với hóa học phân tử, ở đây “đơn vị phản ứng” thường không phải một phân tử riêng lẻ mà là **một mạng mở rộng** có hàng tỷ vị trí nguyên tử liên kết với nhau.
 

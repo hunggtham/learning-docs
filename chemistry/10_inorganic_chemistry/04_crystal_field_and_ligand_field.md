@@ -1,6 +1,6 @@
 # Trường tinh thể và trường phối tử — sự tách mức orbital d
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường tinh thể và trường phối tử — sự tách mức orbital d**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bắt đầu từ ion kim loại tự do** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trường bát diện — vì sao \(eg\) cao hơn \(t{2g}\)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Trường tinh thể và trường phối tử — sự tách mức orbital d**. Route đi từ ion kim loại tự do → đối xứng trường phối tử → tách mức d trong hình học bát diện/tứ diện/vuông phẳng → high-spin/low-spin, màu và từ tính, rồi mở rộng sang ligand-field/MO khi mô hình điểm điện tích không đủ.
 
 > **Lý thuyết trường tinh thể (crystal field theory, CFT / 결정장 이론)** mô hình hóa phối tử như nguồn trường tĩnh điện làm mất tính suy biến của các orbital d trên kim loại. **Lý thuyết trường phối tử (ligand field theory, LFT / 리간드장 이론)** mở rộng mô hình đó bằng liên kết orbital phân tử và thành phần cộng hóa trị. Hai mô hình giúp giải thích màu sắc, từ tính, trạng thái spin, hình học và một phần khả năng phản ứng của phức kim loại chuyển tiếp.
 

@@ -1,6 +1,6 @@
 # Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao hóa học khối d phong phú** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Trạng thái oxy hóa — vì sao đa dạng hơn nhóm chính** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kim loại chuyển tiếp — electron d, trạng thái oxy hóa và tính đa dạng xúc tác**. Route đi từ orbital d và che chắn → nhiều trạng thái oxy hóa → phức phối trí, màu/từ tính → chu trình xúc tác và electron transfer, để nối tính đa dạng quan sát được với cấu trúc d-electron.
 
 > **Kim loại chuyển tiếp (transition metals / 전이 금속)** là các nguyên tố có nguyên tử hoặc ion phổ biến chứa phân lớp d chưa được lấp đầy hoàn toàn. Hóa học phong phú của chúng xuất phát từ việc nhiều orbital d có năng lượng gần nhau, khiến một tâm kim loại có thể thay đổi trạng thái oxy hóa, trạng thái spin, hình học và kiểu liên kết mà không phải trả một chi phí năng lượng quá lớn.
 

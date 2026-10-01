@@ -1,6 +1,6 @@
 # Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Liên kết phối trí bắt đầu từ acid–cơ sở (base / 기반) Lewis, nhưng không kết thúc ở đó** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Nguyên tử cho electron và độ càng của phối tử** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**. Route đi từ acid–base Lewis và cho electron → độ càng/hình học phối trí → đồng phân, độ bền và trao đổi phối tử → màu, từ tính và phản ứng phức, để cấu trúc phức giải thích được cả tính chất lẫn cơ chế.
 
 > **Phức phối trí (coordination complex / 배위 화합물)** là một tiểu phân hóa học trong đó nguyên tử hoặc ion trung tâm — thường là kim loại — được bao quanh bởi **phối tử (ligand / 리간드)** cung cấp mật độ electron. Hóa học phối trí kết nối acid–cơ sở (base / 기반) Lewis, hình học, nhiệt động lực học, động học, phổ học, từ tính và xúc tác trong cùng một khung lý thuyết.
 
