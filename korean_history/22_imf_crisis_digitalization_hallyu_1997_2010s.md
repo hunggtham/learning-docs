@@ -12,7 +12,7 @@ Khủng hoảng năm 1997 phơi bày điểm yếu trong nợ nước ngoài ng�
 
 Chaebol restructuring, financial reform và labor-market flexibility tăng. thời gian tồn tại (lifetime / 수명) employment expectation suy yếu trong nhiều sector; irregular employment trở nên visible hơn. Vì vậy post-1997 culture of competition và credential pressure có economic lịch sử (history / 이력) cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Corporate restructuring và labor thị trường (market / 시장)** cho ta quy tắc; **Broadband hạ tầng (infrastructure / 인프라)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hallyu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Corporate restructuring sau IMF làm thay đổi rủi ro việc làm và áp lực cạnh tranh; **broadband infrastructure** là điều kiện vật chất mở ra PC bang, portal, gaming và phân phối nội dung. Từ hạ tầng đó, **Hallyu** cho thấy cải cách kinh tế có thể tạo một hệ sinh thái xuất khẩu văn hóa như thế nào.
 
 ## Broadband hạ tầng (infrastructure / 인프라)
 
@@ -20,19 +20,19 @@ Late 1990s–2000s, broadband rollout rất nhanh. Dense urban housing, telecom 
 
 Mạng (network / 네트워크) tác động (effect / 효과) làm online portal, gaming và messenger ecosystem phát triển. Technology không chỉ thêm convenience; nó thay đổi coordination chi phí (cost / 비용) của communities, fandom và commerce.
 
-> **Chuyển mạch:** Broadband infrastructure hạ chi phí sản xuất/phân phối cultural content; Hallyu biến capability đó thành export ecosystem, còn 2002 World Cup cho thấy soft power qua spectacle.
+> **Chuyển mạch:** Broadband làm giảm chi phí sản xuất và phân phối nội dung; **Hallyu** biến năng lực kết nối thành chuỗi xuất khẩu gồm công ty, fan, nền tảng và diaspora. **World Cup 2002** mở rộng cùng năng lực ấy sang tham gia đại chúng và nation branding.
 
 ## Hallyu
 
 Korean Wave (한류) ban đầu nổi ở East Asia qua television drama rồi mở rộng sang K-pop, film, games, webtoon, beauty và food. Hallyu không thể giải thích chỉ bằng “government made it”. Entertainment firms, huấn luyện (training / 학습) hệ thống (system / 시스템), broadband, nền tảng (platform / 플랫폼) phân phối (distribution / 분포), diaspora, fan labor và toàn cục (global / 전역) media shifts đều tham gia.
 
-> **Chuyển mạch:** Hallyu shows cultural export capability; the 2002 World Cup adds mass participation and branding, so the mental model must connect crisis reform, digital infrastructure and soft power.
+> **Chuyển mạch:** Hallyu chứng minh năng lực xuất khẩu văn hóa, còn World Cup 2002 cho thấy spectacle có thể huy động không gian công cộng và thương hiệu quốc gia. **Mô hình tư duy** cần nối ba đường dây: cải cách sau khủng hoảng, hạ tầng số và soft power.
 
 ## 2002 World Cup
 
 Co-hosted 2002 FIFA World Cup tạo mass street cheering và new ảnh (image / 이미지) of civic công khai (public / 공개) không gian (space / 공간). sự kiện (event / 이벤트) trở thành generational bộ nhớ (memory / 메모리) và nation-branding moment.
 
-> **Chuyển mạch:** Ở chặng này của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **2002 World Cup** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Labor dualization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** World Cup 2002 cho thấy hạ tầng số và cải cách thể chế không chỉ tạo ngành công nghiệp mà còn tạo ký ức, participation và branding. Mặt trái của cùng quá trình là **labor dualization**, nơi lợi ích đổi mới phân bổ không đều giữa regular và non-regular workers.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
