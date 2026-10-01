@@ -26,7 +26,7 @@ Tên như “Three Kingdoms”, “Tân La Thống nhất (통일신라 / Unifie
 
 Trước 1945, “lịch sử Hàn Quốc” chủ yếu là lịch sử của các cộng đồng và nhà nước trên bán đảo cùng những vùng liên quan. Sau 1945, cần phân biệt **Korean Peninsula (bán đảo Triều Tiên / 한반도)**, **Republic of Korea (Đại Hàn Dân Quốc / 대한민국)** và **Democratic People's Republic of Korea (CHDCND Triều Tiên / 조선민주주의인민공화국)**. Đọc quá khứ như thể mọi thứ tất yếu dẫn tới biên giới hiện nay là một dạng **teleology (mục đích luận / 목적론)**.
 
-> **Chuyển mạch:** Trong **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Nhân quả (causal / 인과적) đồ thị (graph / 그래프) như một mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Peninsula ≠ Republic of Korea** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bốn lớp phải gắn vào mỗi giai đoạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Separating peninsula history from the modern Republic of Korea prevents teleology; a causal graph makes geography, technology, institutions, and actors explicit before each period is read through four evidence layers.
 
 ## Nhân quả (causal / 인과적) đồ thị (graph / 그래프) như một mô hình tư duy (mental model / 사고 모델)
 
@@ -43,7 +43,7 @@ ideology ─> legitimacy ──────────┤
 
 Đồ thị (graph / 그래프) này không nói mọi xã hội đều đi cùng một đường. Nó chỉ buộc ta hỏi mỗi mũi tên có bằng chứng (evidence / 증거) nào và có biến trung gian nào bị bỏ quên.
 
-> **Chuyển mạch:** Ở chặng này của **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Bốn lớp phải gắn vào mỗi giai đoạn** gom các mảnh từ **Nhân quả (causal / 인과적) đồ thị (graph / 그래프) như một mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Một cách tự kiểm tra xem mình đã hiểu chưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The causal graph supplies candidate mechanisms; chronology, economy/everyday life, Vietnam comparison, and physical places turn those mechanisms into evidence before the reader attempts a compact recall.
 
 ## Bốn lớp phải gắn vào mỗi giai đoạn
 
@@ -59,7 +59,7 @@ Từ đây, một chapter chỉ có sự kiện (event / 이벤트) và nhân v�
 
 Ba companion tệp (file / 파일) `33`–`35` được xây để cung cấp các tầng (layer / 계층) này xuyên suốt thư viện (library / 라이브러리), nhưng mục tiêu cuối cùng vẫn là đọc chapter chính như một nhân quả (causal / 인과적) story chứ không phải đổi sang học một checklist mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Một cách tự kiểm tra xem mình đã hiểu chưa** tiếp nhận điểm tựa từ **Bốn lớp phải gắn vào mỗi giai đoạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiếu đọc một trang cho mỗi giai đoạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The four layers establish what must be explained; the self-check reconstructs the causal flow from constraint to shock to institution and outcome, then the one-page sheet records that chain consistently.
 
 ## Một cách tự kiểm tra xem mình đã hiểu chưa
 
@@ -67,7 +67,7 @@ Sau một chapter, thử kể lại mà không nhìn sách bằng một luồng 
 
 Nếu chỉ nhớ được tên vua, battle và năm thì mới có coordinate. Nếu kể được luồng (flow / 흐름) trên, ta bắt đầu có historical mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Phiếu đọc một trang cho mỗi giai đoạn** tiếp nhận điểm tựa từ **Một cách tự kiểm tra xem mình đã hiểu chưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách phân biệt fact, model và memory khi ghi chú** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The self-check tests whether the causal story can be retold; the one-page sheet preserves its dates, constraints, evidence, and comparisons, which must then be labeled as fact, model, or memory in notes.
 
 ## Phiếu đọc một trang cho mỗi giai đoạn
 
