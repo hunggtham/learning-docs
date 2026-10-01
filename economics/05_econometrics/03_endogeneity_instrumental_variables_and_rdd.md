@@ -1,5 +1,7 @@
 # Endogeneity, Instrumental Variables & RDD — Khi treatment không exogenous
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Endogeneity, Instrumental Variables & RDD — Khi treatment không exogenous**. File đi từ **1. Endogeneity** để chẩn đoán nguồn lệch, sang **6. Instrumental-variable idea** để hiểu logic IV, rồi sang **18. Regression Discontinuity Thiết kế (design / 설계)** để đối chiếu một thiết kế cục bộ khác. Các mục cuối kiểm tra diagnostics và giới hạn khi muốn diễn giải vượt ra ngoài margin được nhận diện.
+
 Endogeneity xuất hiện khi regressor liên quan với lỗi (error / 오류) term theo cách làm coefficient không còn phản ánh nhân quả (causal / 인과적) tác động (effect / 효과) cần tìm. Sources chính gồm omitted variables, simultaneity/reverse causality, sai số đo lường (measurement error / 측정 오차) và endogenous selection. Instrumental Variables (IV) và Regression Discontinuity Thiết kế (design / 설계) (RDD) là hai strategies quan trọng để tìm variation treatment có nhân quả (causal / 인과적) interpretation rõ hơn, nhưng cả hai chỉ mạnh khi institutional các giả định (assumptions / 가정들) thật sự credible.
 
 ## 1. Endogeneity là vấn đề về nguồn (source / 소스) of variation
@@ -56,6 +58,8 @@ Exogeneity / exclusion: Z affects Y only through D and is independent of relevan
 ```
 
 Relevance is partly testable. Exclusion is fundamentally substantive/institutional.
+
+> **Chuyển mạch:** Sáu mục đầu đã chỉ ra vì sao OLS có thể trộn variation nội sinh vào coefficient. Từ đây, **7. First stage and reduced form** tách hai câu hỏi kiểm chứng: instrument có thật sự làm treatment thay đổi không, và nó có kéo outcome theo không; chỉ sau đó mới có thể đọc 2SLS như một estimator.
 
 ## 7. First stage and reduced form
 
@@ -128,6 +132,8 @@ Under nhị phân (binary / 이진) assignment/treatment:
 
 Monotonicity rules out defiers. LATE applies to compliers whose treatment is changed by instrument.
 
+> **Chuyển mạch:** IV không tự động cho ATE; sau **13. Compliers, always-takers, never-takers, defiers**, ta phải xác định ai là nhóm được variation của instrument tác động. **14. Bên ngoài (external / 외부) validity of IV** tiếp tục câu hỏi đó bằng cách kiểm tra population và margin có thể chuyển sang bối cảnh khác hay không.
+
 ## 14. Bên ngoài (external / 외부) validity of IV
 
 Different instruments move different populations/margins. Draft lottery may identify tác động (effect / 효과) for people induced by draft rủi ro (risk / 위험); college-distance instrument for marginal students near truy cập (access / 접근) ranh giới (boundary / 경계).
@@ -173,6 +179,8 @@ Fuzzy RDD therefore has IV/LATE interpretation near threshold.
 RDD identifies tác động (effect / 효과) for units near cutoff, not necessarily far away.
 
 Scholarship cutoff tác động (effect / 효과) for students scoring around 80 does not automatically generalize to students scoring 50 or 100.
+
+> **Chuyển mạch:** Khi đã chấp nhận RDD là một estimand cục bộ quanh cutoff, **21. Continuity giả định (assumption / 가정)** phải giải thích vì sao hai phía có thể làm counterfactual cho nhau. Các mục tiếp theo vì vậy kiểm tra sorting, bandwidth và functional form thay vì chỉ nhìn vào một jump trên đồ thị.
 
 ## 21. Continuity giả định (assumption / 가정)
 
@@ -222,6 +230,8 @@ Instead of mức (level / 수준) jump, chính sách (policy / 정책) may thay 
 
 It is more sensitive to functional form and power.
 
+> **Chuyển mạch:** Sau diagnostics của RDD và regression kink, **29. Instrument vs điều khiển (control / 제어) confusion** quay lại ranh giới khái niệm: variation dùng để nhận diện không đồng nghĩa với một biến dự báo tốt. Từ đó, **30. Structural interpretation** đặt giới hạn cho việc ngoại suy estimate cục bộ thành dự báo chính sách rộng hơn.
+
 ## 29. Instrument vs điều khiển (control / 제어) confusion
 
 A điều khiển (control / 제어) blocks confounding by conditioning. An instrument supplies exogenous treatment variation and generally should not directly affect kết quả (outcome / 결과).
@@ -266,3 +276,5 @@ Khi dùng IV/RDD, hãy hỏi:
 10. Chính sách (policy / 정책) question có cần extrapolate beyond identified cục bộ (local / 로컬) tác động (effect / 효과) không?
 
 IV và RDD dùng special variation. Một family khác tận dụng variation across units and thời gian (time / 시간): panel fixed effects và Difference-in-Differences.
+
+> **Bàn giao:** Giữ lại nguồn nội sinh, giả định nhận diện và margin cục bộ trước khi rời file này. Sang [Panel, Fixed Effects & Difference-in-Differences](./04_panel_fixed_effects_and_difference_in_differences.md) để chuyển từ variation do instrument/cutoff sang variation theo đơn vị và thời gian; quay về [README](./README.md) nếu cần kiểm tra lại owner của nhánh Econometrics.

@@ -1,5 +1,7 @@
 # Panel Dữ liệu (data / 데이터), Fixed Effects & Difference-in-Differences — Dùng variation theo đơn vị (unit / 단위) và thời gian
 
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Panel Dữ liệu (data / 데이터), Fixed Effects & Difference-in-Differences — Dùng variation theo đơn vị (unit / 단위) và thời gian**. File đi từ cấu trúc panel và within variation, qua fixed effects, rồi mới sang DiD và các diagnostics về timing, spillover, clustering và staggered adoption. Đọc các mục đầu để biết variation nào còn lại sau khi hấp thụ FE; đọc các mục cuối để quyết định counterfactual có đủ đáng tin cho diễn giải nhân quả hay không.
+
 Panel dữ liệu (data / 데이터) theo dõi cùng units qua nhiều periods, cho phép so sánh một đơn vị (unit / 단위) với chính nó và tách một số unobserved differences cố định. Nhưng panel không tự động nhân quả (causal / 인과적). Fixed effects chỉ loại confounding **không đổi theo thời gian**; Difference-in-Differences (DiD) cần thêm parallel-trends các giả định (assumptions / 가정들) và careful treatment timing.
 
 ## 1. Panel cấu trúc (structure / 구조)
@@ -93,6 +95,8 @@ First differencing also removes time-invariant đơn vị (unit / 단위) effect
 
 With many periods, FE and FD differ in efficiency and phản hồi (response / 응답) to serial correlation.
 
+> **Chuyển mạch:** Sau **9. First differences**, ta đã có các cách loại bỏ phần cố định của đơn vị; nhưng đó chưa phải counterfactual cho một chính sách. **10. Difference-in-Differences idea** ghép thay đổi trước–sau của nhóm điều trị với thay đổi của nhóm đối chứng, nên câu hỏi kế tiếp là parallel trends chứ không phải thêm FE một cách máy móc.
+
 ## 10. Difference-in-Differences idea
 
 Suppose one group receives chính sách (policy / 정책) and another does not. Compare before-after thay đổi (change / 변경) in treated to before-after thay đổi (change / 변경) in điều khiển (control / 제어):
@@ -148,6 +152,8 @@ Y_it = α_i + λ_t + Σ_k β_k 1[event time = k] + u_it
 Pre-treatment coefficients diagnose trends/anticipation; post coefficients show dynamics.
 
 Tham chiếu (reference / 참조) period must be omitted.
+
+> **Chuyển mạch:** Event-study giúp nhìn động học và pre-trends, nhưng khi thời điểm áp dụng khác nhau giữa các đơn vị, nhóm đã điều trị có thể bị dùng nhầm làm đối chứng. **15. Staggered adoption bài toán (problem / 문제)** vì vậy kiểm tra lại chính cách TWFE tạo comparison trước khi diễn giải một hệ số tổng hợp.
 
 ## 15. Staggered adoption bài toán (problem / 문제)
 
@@ -213,6 +219,8 @@ Poor pre-treatment fit weakens credibility. Donor contamination, interpolation o
 
 Placebo-in-space/thời gian (time / 시간) helps assess unusual post-treatment divergence.
 
+> **Chuyển mạch:** Synthetic control làm counterfactual minh bạch hơn khi số đơn vị điều trị ít, nhưng vẫn phụ thuộc donor pool và fit trước điều trị. **25. Interactive fixed effects** mở rộng mô hình khi các shock ẩn tác động khác nhau theo đơn vị; sau đó **26. Clustered suy luận (inference / 추론) in DiD** kiểm tra uncertainty có khớp với mức assignment hay không.
+
 ## 25. Interactive fixed effects
 
 Simple đơn vị (unit / 단위)/thời gian (time / 시간) FE assume dùng chung (common / 공통) thời gian (time / 시간) shocks plus đơn vị (unit / 단위) constants. If latent factors affect units differently over thời gian (time / 시간), interactive-factor các mô hình (models / 모델들) can capture richer trends:
@@ -277,3 +285,5 @@ Khi đọc panel/DiD, hãy hỏi:
 10. Event-study dynamics có economic cơ chế (mechanism / 메커니즘) hợp lý không?
 
 Panel methods tận dụng không gian (space / 공간) × thời gian (time / 시간) variation. Với macro/financial dữ liệu (data / 데이터), dependence qua thời gian tự thân trở thành đối tượng (object / 객체) cần mô hình (model / 모델). Chapter tiếp theo đi vào thời gian (time / 시간) series, forecasting và macro identification.
+
+> **Bàn giao:** Trước khi sang [Time Series, Forecasting & Macro Identification](./05_time_series_forecasting_and_macro_identification.md), hãy giữ lại ba câu hỏi: variation nào nhận diện hệ số, counterfactual đến từ đâu, và uncertainty đã cluster đúng theo assignment chưa. Quay về [README](./README.md) để xác nhận owner nếu cần đổi nhánh học.
