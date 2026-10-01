@@ -1,6 +1,6 @@
 # Thought Experiments và Conceptual phân tích (analysis / 분석)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thought Experiments và Conceptual phân tích (analysis / 분석)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cách dùng có kỷ luật** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Equilibrium phản tư** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Thought Experiments và Conceptual phân tích (analysis / 분석)**. Route đi từ trực giác và khái niệm → thiết kế thought experiment → thay đổi một giả định tại một thời điểm → kiểm tra tính nhất quán, phạm vi và phản ví dụ, để công cụ tưởng tượng làm rõ cấu trúc chứ không thay thế bằng chứng.
 
 Thought experiment không phải dữ liệu thực nghiệm. Nó là một cách thay đổi có kiểm soát một premise để xem trực giác, khái niệm hoặc nguyên tắc có nhất quán không.
 

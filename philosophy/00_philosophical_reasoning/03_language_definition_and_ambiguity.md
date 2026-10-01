@@ -1,6 +1,6 @@
 # Ngôn ngữ (language / 언어), Definition và Ambiguity
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngôn ngữ (language / 언어), Definition và Ambiguity**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bốn kiểu định nghĩa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ambiguity kiểm tra (audit / 감사)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ngôn ngữ (language / 언어), Definition và Ambiguity**. Route đi từ từ ngữ và định nghĩa → nghĩa mô tả/quy ước/chuẩn tắc → mơ hồ từ vựng–cấu trúc → làm rõ phạm vi trước khi suy luận, để tranh luận không bị quyết định bởi việc đổi nghĩa giữa chừng.
 
 Nhiều tranh luận tưởng là bất đồng về thế giới nhưng thực ra bắt đầu từ cách dùng từ. Philosophy of ngôn ngữ (language / 언어) hỏi meaning đến từ tham chiếu (reference / 참조), usage, intention, inferential role hay xã hội (social / 사회적) practice nào; câu trả lời khác nhau sẽ thay đổi cách ta xử lý definition và disagreement.
 

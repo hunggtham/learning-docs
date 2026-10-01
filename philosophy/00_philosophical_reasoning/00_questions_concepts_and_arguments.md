@@ -1,6 +1,6 @@
 # Philosophical lập luận (reasoning / 추론): câu hỏi, khái niệm và lập luận
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophical lập luận (reasoning / 추론): câu hỏi, khái niệm và lập luận**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Câu hỏi trước khi trả lời** đặt câu hỏi trung tâm và tiêu chí dùng để đọc các phần sau; sau đó sang **Giải phẫu một lập luận** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Philosophical lập luận (reasoning / 추론): câu hỏi, khái niệm và lập luận**. Route đi từ câu hỏi và giả định → định nghĩa khái niệm → tiền đề/kết luận → bằng chứng, phản ví dụ và hệ quả, để một lập luận được đánh giá trước khi tranh luận đúng–sai ở kết luận cuối.
 
 ## Câu hỏi trước khi trả lời
 

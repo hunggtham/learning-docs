@@ -1,6 +1,6 @@
 # Lô-gic (logic / 논리), Validity và các dạng lập luận
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lô-gic (logic / 논리), Validity và các dạng lập luận**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Validity không phải truth** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Deduction, induction và abduction** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Lô-gic (logic / 논리), Validity và các dạng lập luận**. Route đi từ mệnh đề và cấu trúc → validity/soundness → deduction, induction và abduction → điều kiện phản ví dụ, để tách một suy luận hợp lệ khỏi tiền đề đúng hoặc kết luận đáng tin trong thực tế.
 
 ## Validity không phải truth
 
