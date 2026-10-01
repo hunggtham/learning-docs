@@ -145,7 +145,7 @@ Ví dụ hệ số 1:1000 có thể được tạo từ ba bước 1:10.
 
 Tuy nhiên độ không đảm bảo của từng bước sẽ tích lũy, vì vậy thiết kế phải cân bằng độ chính xác pipette và số thao tác.
 
-> **Chuyển mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Độ không đảm bảo của pha loãng** tiếp nhận điểm tựa từ **Pha loãng nối tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Acid thương mại đậm đặc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Serial dilution keeps aliquots measurable but compounds each volume error; uncertainty propagation turns that accumulation into a design criterion before handling concentrated commercial acid.
 
 ## Độ không đảm bảo của pha loãng
 
@@ -167,7 +167,7 @@ nếu các thành phần độc lập, độ không đảm bảo tương đối 
 
 Cách nhìn này giúp chọn dụng cụ thủy tinh dựa trên yêu cầu độ không đảm bảo thay vì thói quen.
 
-> **Chuyển mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Acid thương mại đậm đặc** tiếp nhận điểm tựa từ **Độ không đảm bảo của pha loãng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **An toàn khi pha loãng acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Propagated dilution uncertainty determines how much confidence remains; concentrated commercial acid adds assay and density inputs, so the calculation must precede the safety procedure.
 
 ## Acid thương mại đậm đặc
 
@@ -183,7 +183,7 @@ trong đó \(w\) viết dưới dạng phân số.
 
 Tính toán phải dựa trên assay và khối lượng riêng thực tế từ nhà cung cấp thay vì thuộc lòng một nồng độ danh nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **An toàn khi pha loãng acid** tiếp nhận điểm tựa từ **Acid thương mại đậm đặc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở (base / 기반) mạnh và hấp thụ CO2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Assay and density convert a commercial acid label into molarity; dilution then adds heat and splashing hazards, while cooling to calibration temperature protects the final volume.
 
 ## An toàn khi pha loãng acid
 
@@ -193,7 +193,7 @@ Nguyên tắc chung là thêm acid từ từ vào nước, có khuấy và kiể
 
 Sau khi pha, cần để dung dịch trở về gần nhiệt độ hiệu chuẩn trước khi chỉnh thể tích cuối. Nếu chỉnh vạch khi dung dịch còn nóng, thể tích đang giãn nở và nồng độ sau khi nguội sẽ bị lệch.
 
-> **Chuyển mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Cơ sở (base / 기반) mạnh và hấp thụ CO2** tiếp nhận điểm tựa từ **An toàn khi pha loãng acid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phần khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Acid dilution couples stoichiometry to heat control; a strong base introduces a different composition drift through atmospheric CO2, which motivates choosing a mass-based concentration when volume is not the only variable.
 
 ## Cơ sở (base / 기반) mạnh và hấp thụ CO2
 
