@@ -10,7 +10,7 @@ Một computation mô hình (model / 모델) xác định trạng thái (state /
 
 Điều này cho phép ta tách hai tầng: **expressive power** và **chi phí (cost / 비용) mô hình (model / 모델)**. Hai languages đều Turing-complete nhưng có thể khác rất xa về bộ nhớ (memory / 메모리) an toàn (safety / 안전), hiệu năng (performance / 성능) mô hình (model / 모델), tính đồng thời (concurrency / 동시성) ngữ nghĩa (semantics / 의미론) hay khả năng xác minh (verification / 확인). Turing-equivalence không làm các hiện thực (implementation / 구현) trở nên giống nhau.
 
-> **Chuyển mạch:** Trong **Formal các mô hình (models / 모델들), reductions và computability**, **Ánh xạ (mapping / 매핑) reduction như công cụ truyền độ khó** tiếp nhận điểm tựa từ **Mô hình (model / 모델) of computation là một hợp đồng lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Halting bài toán (problem / 문제) là nguồn reduction trung tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Computation model đặt contract cho machine và input; mapping reduction truyền độ khó giữa bài toán, còn halting problem là nguồn chuẩn để chứng minh giới hạn đó.
 
 ## Ánh xạ (mapping / 매핑) reduction như công cụ truyền độ khó
 

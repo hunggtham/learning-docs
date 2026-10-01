@@ -10,7 +10,7 @@ Lập trình viên thường muốn công cụ trả lời các câu như “ch�
 
 Suy luận ngữ nghĩa mạnh hơn nhưng cũng khó hơn vì có thể phải xét quá trình thực thi không có giới hạn hữu hạn biết trước.
 
-> **Chuyển mạch:** Trong **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**, **Định lý Rice** tiếp nhận điểm tựa từ **Cú pháp và ngữ nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với bài toán dừng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Syntax có thể được kiểm tra trực tiếp, nhưng semantic property nói về behavior của chương trình; Rice’s theorem nối distinction đó với undecidability và giới hạn của static analysis.
 
 ## Định lý Rice
 
