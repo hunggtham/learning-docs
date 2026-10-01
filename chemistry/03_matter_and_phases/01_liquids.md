@@ -1,6 +1,6 @@
 # Chất lỏng — cấu trúc động, dòng chảy và bề mặt
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Chất lỏng nằm giữa khí và rắn như thế nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chất lỏng có cấu trúc hay không?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất lỏng — cấu trúc động, dòng chảy và bề mặt**. Route đi từ local interactions/structure → viscosity và diffusion → surface tension/capillarity → flow/transport, để giải thích vì sao chất lỏng vừa giữ thể tích vừa chảy.
 
 > **Chất lỏng (liquid / 액체)** là trạng thái vật chất có mật độ cao và thể tích gần cố định nhưng không giữ hình dạng riêng. Các tiểu phần nằm gần nhau như trong chất rắn, song có đủ tự do để liên tục đổi hàng xóm, khuếch tán và chảy. Vì vậy chất lỏng phải được hiểu như một **mạng tương tác linh động**, không phải một chất rắn mất trật tự hoàn toàn hay một chất khí bị nén mạnh.
 

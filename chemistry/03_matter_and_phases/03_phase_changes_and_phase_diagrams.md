@@ -1,6 +1,6 @@
 # Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pha không đồng nghĩa chỉ với rắn, lỏng, khí** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chuyển pha vật lý khác phản ứng hóa học như thế nào?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**. Route đi từ phase/state definition → coexistence and latent heat → (P)-(T)/composition diagrams → critical/triple points và phase rule, để đọc stability map thay vì chỉ nhớ tên trạng thái.
 
 > **Pha (phase / 상)** là một vùng vật chất có tính chất và thành phần vĩ mô đồng nhất tương đối. **Chuyển pha (phase transition / 상전이)** xảy ra khi trạng thái ổn định hoặc trạng thái được quan sát của hệ thay đổi do nhiệt độ, áp suất hay thành phần thay đổi. Giản đồ pha là bản đồ cho biết những pha nào bền hoặc cùng tồn tại dưới các điều kiện khác nhau.
 

@@ -1,6 +1,6 @@
 # Chất rắn — cấu trúc, khuyết tật và tính chất tập thể
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Thành phần chưa đủ để xác định tính chất** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chất rắn tinh thể và vô định hình** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**. Route đi từ bonding/lattice → crystal vs amorphous → defects/dislocations → collective mechanical/electrical/thermal properties, để thành phần chỉ là đầu vào chứ không phải toàn bộ explanation.
 
 > **Chất rắn (solid / 고체)** là trạng thái vật chất có khả năng duy trì hình dạng trong khoảng thời gian quan sát vì các nguyên tử, ion hoặc phân tử bị ràng buộc trong một mạng tương tác đủ bền. Các hạt không đứng yên; chúng vẫn dao động nhiệt và lượng tử, nhưng không dễ dàng khuếch tán tự do như trong chất lỏng.
 

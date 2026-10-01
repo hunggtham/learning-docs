@@ -1,6 +1,6 @@
 # Chất khí — từ chuyển động phân tử tới khí thực
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất khí — từ chuyển động phân tử tới khí thực**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Từ hiện tượng vĩ mô tới mô hình vi mô** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bốn biến trạng thái cơ bản** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chất khí — từ chuyển động phân tử tới khí thực**. Route đi từ (P,V,T,n) và kinetic model → ideal-gas laws → intermolecular/real-gas corrections → phase boundary, để nối observable state với chuyển động và tương tác vi mô.
 
 > **Chất khí (gas / 기체)** là trạng thái vật chất trong đó khoảng cách trung bình giữa các hạt thường lớn hơn nhiều kích thước riêng của chúng và các hạt chuyển động liên tục trong không gian. Vì vậy khí dễ nén, nhanh chóng lấp đầy bình chứa và thể hiện rất rõ mối liên hệ giữa chuyển động vi mô với các đại lượng vĩ mô như áp suất, nhiệt độ và thể tích.
 

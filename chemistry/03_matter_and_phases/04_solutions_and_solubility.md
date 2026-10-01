@@ -1,6 +1,6 @@
 # Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hòa tan thực chất là tái tổ chức các tương tác** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vì sao “giống hòa tan giống” chỉ là quy tắc ghi nhớ?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dung dịch và độ tan — từ sự trộn phân tử đến tính không lý tưởng**. Route đi từ mixing/interactions → solution thermodynamics → solubility equilibrium → activity/non-ideality và selective separation, để “giống hòa tan giống” chỉ là hypothesis cần kiểm tra.
 
 > **Dung dịch (solution / 용액)** là hỗn hợp đồng nhất ở thang phân tử hoặc ion. **Độ tan (solubility / 용해도)** là lượng chất tan có thể tồn tại ở trạng thái hòa tan khi hệ đạt cân bằng dưới những điều kiện xác định. Muốn hiểu sâu hóa học dung dịch, không nên dừng ở câu “chất giống nhau thì hòa tan nhau”; cần nhìn đồng thời enthalpy, entropy, tương tác phân tử, hoạt độ và thế hóa học.
 
