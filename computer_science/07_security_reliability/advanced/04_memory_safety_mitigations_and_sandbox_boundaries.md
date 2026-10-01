@@ -72,4 +72,4 @@ Mitigation giảm xác suất (probability / 확률)/impact nhưng patch gốc (
 
 > bộ nhớ (memory / 메모리) bảo mật (security / 보안) là defense-in-depth quanh một bất biến (invariant / 불변식): mã (code / 코드) chỉ được truy cập bộ nhớ (memory / 메모리) nó có quyền trong thời gian tồn tại (lifetime / 수명) hợp lệ. Khi bất biến (invariant / 불변식) có thể vỡ, mitigations làm exploit chuỗi (chain / 사슬) dài hơn và sandbox giảm blast radius.
 
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại spatial/temporal invariant, mitigation layering, shared-kernel assumption và sandbox blast radius trước khi gọi một exploit “đã bị chặn”. Sang [Containers/namespaces/cgroups](../../03_operating_systems/advanced/06_containers_namespaces_cgroups_capabilities_and_seccomp.md) khi isolation là cơ chế chính, hoặc [Security boundaries](./00_security_boundaries_attack_chains_and_exploitability.md) khi cần nối exploit chain với authority graph; quay về [README](./README.md) để xác nhận owner.

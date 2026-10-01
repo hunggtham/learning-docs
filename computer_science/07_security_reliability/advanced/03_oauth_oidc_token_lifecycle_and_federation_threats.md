@@ -70,4 +70,4 @@ Xác thực trả lời “đây là ai”; phân quyền trả lời “thực 
 
 > OAuth/OIDC là giao thức liên kết nhiều ranh giới tin cậy. đơn vị từ (token / 토큰) chỉ an toàn khi bên phát hành, đối tượng nhận, thời hạn, cơ chế ràng buộc và luồng chuyển hướng đều đúng. Đừng suy luận từ hình dạng JWT; hãy suy luận từ quyền lực được trao và những nơi đơn vị từ (token / 토큰) có thể bị phát lại.
 
-> **Bàn giao:** Sau **Mô hình tư duy**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại client binding, redirect/PKCE, issuer/audience/nonce validation, refresh rotation và object-level authorization trước khi tin một token. Sang [PKI/mTLS](./02_pki_certificate_validation_mtls_and_service_identity.md) khi identity cần bind vào channel/service, hoặc [Browser isolation](./05_browser_isolation_csp_samesite_and_cross_origin_trust.md) khi token đi qua ambient browser credentials; quay về [README](./README.md) để xác nhận owner.

@@ -62,4 +62,4 @@ Hiện đại (modern / 현대적) browsers còn dùng tiến trình (process / 
 
 > Web bảo mật (security / 보안) là quản lý authority giữa origins. SOP đặt default ranh giới (boundary / 경계); CORS mở quyền đọc có kiểm soát; SameSite/CSRF bảo vệ ambient credentials; CSP giảm script authority khi injection xảy ra. Mỗi cơ chế (mechanism / 메커니즘) xử lý threat khác nhau.
 
-> **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
+> **Bàn giao:** Giữ lại origin boundary, CORS read authority, CSRF/ambient credential semantics, CSP script authority và site-isolation blast radius trước khi chọn storage/session pattern. Sang [OAuth/OIDC](./03_oauth_oidc_token_lifecycle_and_federation_threats.md) khi browser chuyển token giữa các issuer/client, hoặc [Security boundaries](./00_security_boundaries_attack_chains_and_exploitability.md) khi cần lập attack chain; quay về [README](./README.md) để xác nhận owner.
