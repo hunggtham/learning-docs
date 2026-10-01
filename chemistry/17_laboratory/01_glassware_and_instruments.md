@@ -224,7 +224,7 @@ Nhiệt kế thủy tinh, thermocouple, RTD và thermistor có dải đo, thời
 
 Giá trị đo còn phụ thuộc vị trí đầu dò. Đầu dò chạm thành bình nóng có thể không đại diện nhiệt độ trung bình của chất lỏng.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Cân phân tích** tiếp nhận điểm tựa từ **Nhiệt kế và đầu dò nhiệt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tare không loại bỏ mọi độ không đảm bảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A temperature probe validates whether the mixed sample is representative; the analytical balance then measures mass under its own environmental limits, which tare can only partially offset.
 
 ## Cân phân tích
 
@@ -232,7 +232,7 @@ Cân phân tích có độ phân giải cao, thường tới 0,1 mg hoặc tốt
 
 Các nguồn sai số thực tế gồm luồng gió, rung, mẫu nóng/lạnh tạo đối lưu, tĩnh điện, mẫu hút ẩm, dấu tay và vật chứa không ổn định.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Tare không loại bỏ mọi độ không đảm bảo** tiếp nhận điểm tựa từ **Cân phân tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân theo chênh lệch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The balance exposes wind, vibration, convection, and static as distinct error sources; tare resets the container baseline but does not erase those effects, motivating difference weighing.
 
 ## Tare không loại bỏ mọi độ không đảm bảo
 
@@ -240,7 +240,7 @@ Tare chỉ đặt lại mốc hiển thị sau khi có vật chứa.
 
 Nó không loại bỏ sai số hiệu chuẩn, giới hạn độ lặp lại, trôi tín hiệu, lực nổi không khí hay ảnh hưởng môi trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Cân theo chênh lệch** tiếp nhận điểm tựa từ **Tare không loại bỏ mọi độ không đảm bảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bình hút ẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Difference weighing measures what leaves the container, not an assumed transfer; a desiccator then controls moisture and cooling so the measured mass does not drift before the next assay.
 
 ## Cân theo chênh lệch
 
@@ -254,7 +254,7 @@ m_{transferred}=m_{before}-m_{after}
 
 Cách này thường đáng tin cậy hơn cố ép cân đúng một giá trị mục tiêu trên giấy cân rồi giả định toàn bộ đã được chuyển vào mẫu.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Bình hút ẩm** tiếp nhận điểm tựa từ **Cân theo chênh lệch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy đo pH — một thiết bị điện hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Difference weighing protects against incomplete transfer; the desiccator stabilizes sample water content and temperature, after which an electrochemical pH measurement can be interpreted without that mass/moisture confounder.
 
 ## Bình hút ẩm
 
