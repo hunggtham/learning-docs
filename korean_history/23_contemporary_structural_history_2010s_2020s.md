@@ -18,13 +18,13 @@ Low fertility và population aging chuyển từ forecast thành lived reality. 
 
 Apartment quyền sở hữu (ownership / 소유권), jeonse hệ thống (system / 시스템), mortgage conditions và metropolitan concentration khiến housing vừa là shelter vừa là asset. Khi asset price tăng nhanh hơn wage, generational wealth gap có thể lớn dù formal education truy cập (access / 접근) rộng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Platformization** tiếp nhận điểm tựa từ **Housing và asset inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công khai (public / 공개) mobilization và digital media** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Housing và asset inequality tạo nền vật chất; platformization tái cấu trúc access và việc làm, rồi public mobilization/digital media biến các căng thẳng đó thành tranh luận chính trị.
 
 ## Platformization
 
 Kakao, Naver, Coupang, delivery apps và toàn cục (global / 전역) platforms làm thị trường (market / 시장) coordination nhanh hơn nhưng cũng centralize dữ liệu (data / 데이터) và phụ thuộc (dependency / 의존성). Gig/algorithmic labor xuất hiện như một historical phase mới của công việc (work / 작업) organization.
 
-> **Chuyển mạch:** Trong **2010s–2020s: lịch sử của những chuyển đổi cấu trúc**, **Công khai (public / 공개) mobilization và digital media** tiếp nhận điểm tựa từ **Platformization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pandemic và trạng thái (state / 상태) sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Platformization thay đổi hạ tầng truyền thông và lao động; digital mobilization mở rộng participation, còn pandemic thử sức chứa và quyền điều phối của state.
 
 ## Công khai (public / 공개) mobilization và digital media
 

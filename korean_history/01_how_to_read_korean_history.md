@@ -8,7 +8,7 @@ Một lịch sử tốt không chỉ trả lời “chuyện gì xảy ra”. N�
 
 **Primary nguồn (source / 소스)** là tài liệu được tạo gần thời điểm nghiên cứu: inscription, annal, letter, census, treaty, newspaper, photograph, oral testimony, sản phẩm tạo ra (artifact / 산출물). **Secondary nguồn (source / 소스)** là công trình phân tích của sử gia dựa trên nhiều nguồn. Một nguồn sơ cấp không tự động “đúng hơn”: court chronicle có thể thiên về court; police bản ghi (record / 레코드) có thể mô tả xã hội theo mục tiêu quản trị; memoir có thể sai ký ức.
 
-> **Chuyển mạch:** Trong **Cách đọc lịch sử Hàn Quốc: nguồn, niên đại và quan hệ nhân quả**, **Lịch sử không phải cơ sở dữ liệu (database / 데이터베이스) của sự kiện** nêu điều cần giải thích; **Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Periodization là mô hình (model / 모델) chứ không phải tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Lịch sử không chỉ là danh sách sự kiện: myth và memory cần được đối chiếu với nguồn, còn periodization là model giúp đặt nguyên nhân, thể chế và hệ quả vào cùng một khung.
 
 ## Myth, bộ nhớ (memory / 메모리) và lịch sử (history / 이력)
 
