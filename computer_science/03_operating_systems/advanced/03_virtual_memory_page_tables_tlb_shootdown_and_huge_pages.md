@@ -10,7 +10,7 @@ Hai tiến trình có thể sử dụng cùng một địa chỉ ảo nhưng án
 
 `mmap`, mở rộng vùng nhớ động (heap / 힙), thư viện dùng chung và ánh xạ tệp (file / 파일) đều là các cách xây dựng không gian địa chỉ. Nhiều ánh xạ ban đầu chỉ tạo siêu dữ liệu; trang vật lý có thể chưa được cấp cho tới khi lần truy cập đầu tiên gây lỗi trang.
 
-> **Chuyển mạch:** Trong **Cơ chế bên trong của bộ nhớ ảo: bảng trang, TLB shootdown và trang lớn**, **Bảng trang nhiều cấp** tiếp nhận điểm tựa từ **Không gian địa chỉ là một hợp đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗi trang nhỏ và lỗi trang lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Address space là contract giữa process và OS; multi-level page tables map it, TLB caches the mapping, còn page faults và huge pages đổi chi phí translation với memory footprint.
 
 ## Bảng trang nhiều cấp
 

@@ -10,7 +10,7 @@ Instruction có opcode và operands encoded theo ISA. Assembly viết symbolic m
 
 Assembly không phải nguồn (source / 소스) “gần CPU tuyệt đối”: hiện đại (modern / 현대적) CPU có micro-ops và out-of-order internals. Nó là biểu diễn (representation / 표현) gần **architectural ISA**.
 
-> **Chuyển mạch:** Trong **Mã máy (machine code / 기계어), assembly, ABI và calling convention**, **Calling convention** tiếp nhận điểm tựa từ **Mã máy (machine code / 기계어) và assembly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngăn xếp (stack / 스택) frame** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Machine code là encoding CPU thực thi, assembly là notation dễ đọc; ABI nối binary giữa module, còn calling convention quy định register, argument và stack frame.
 
 ## Calling convention
 

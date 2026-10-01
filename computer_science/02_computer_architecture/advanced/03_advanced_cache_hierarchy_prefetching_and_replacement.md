@@ -10,7 +10,7 @@ Bộ nhớ đệm (cache / 캐시) dựa trên **tính cục bộ theo thời gi
 
 Một dòng bộ nhớ đệm (cache / 캐시) thường chứa nhiều byte hơn đúng đối tượng mà CPU đang cần. Điều này giảm số lần giao dịch bộ nhớ khi chương trình có tính cục bộ theo không gian, nhưng cũng có thể gây **chia sẻ giả (false sharing)** khi nhiều lõi sửa các biến độc lập nhưng các biến đó lại nằm chung một dòng bộ nhớ đệm (cache / 캐시).
 
-> **Chuyển mạch:** Trong **Phân cấp bộ nhớ đệm nâng cao, nạp trước và chính sách thay thế**, **Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **Tính cục bộ là giả định, không phải định luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân cấp bao hàm, loại trừ và không bao hàm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Locality giúp cache có ích nhưng set associativity quyết định conflict miss; prefetch và replacement policy tiếp theo phải cân bằng hit rate với bandwidth và pollution.
 
 ## Tính kết hợp theo tập và xung đột bộ nhớ đệm (cache / 캐시)
 

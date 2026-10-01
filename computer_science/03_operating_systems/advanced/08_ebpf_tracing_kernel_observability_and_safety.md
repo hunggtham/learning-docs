@@ -32,7 +32,7 @@ instrumentation không được phá safety của kernel
 instrumentation overhead phải đủ nhỏ để evidence còn đại diện workload thật
 ```
 
-> **Chuyển mạch:** Trong **eBPF, tracing, kernel khả năng quan sát (observability / 관측 가능성) và an toàn (safety / 안전) ranh giới (boundary / 경계)**, **2. Hook là nơi ngữ nghĩa (semantics / 의미론) được neo** tiếp nhận điểm tựa từ **1. Vì sao tracing kernel khó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Verifier là an toàn (safety / 안전) gate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Kernel tracing khó vì timing và context; eBPF hook neo semantics vào điểm sự kiện, còn verifier là safety gate trước khi chương trình chạy trong kernel.
 
 ## 2. Hook là nơi ngữ nghĩa (semantics / 의미론) được neo
 

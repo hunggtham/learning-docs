@@ -8,7 +8,7 @@ Gõ một URL nhìn như một hành động (action / 동작) đơn giản, nh�
 
 `https://example.com:443/path?q=1` chứa scheme `https`, host `example.com`, optional cổng (port / 포트), đường dẫn (path / 경로) và truy vấn (query / 쿼리). Scheme quyết định giao thức (protocol / 프로토콜) expectations; hostname không trực tiếp là IP address.
 
-> **Chuyển mạch:** Trong **DNS, HTTP, TLS và một web yêu cầu (request / 요청) end-to-end**, **DNS** tiếp nhận điểm tựa từ **URL decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Establish vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** URL decomposition xác định host và resource; DNS tìm địa chỉ, transport thiết lập kênh, TLS xác thực/mã hóa, rồi HTTP mang request qua toàn bộ đường đi.
 
 ## DNS
 
