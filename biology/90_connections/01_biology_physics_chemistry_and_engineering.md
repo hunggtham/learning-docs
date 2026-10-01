@@ -376,7 +376,7 @@ Biological thiết kế (design / 설계) gần như luôn multi-objective dư�
 
 Evolution không tìm toàn cục (global / 전역) optimum; nó thay đổi cục bộ (local / 로컬) population qua available variation và lịch sử (history / 이력).
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **29. tối ưu hóa (optimization / 최적화) và fitness landscape** tiếp nhận điểm tựa từ **28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Optimization selects an operating point on the trade-off surface; observability asks whether measured outputs are sufficient to infer the hidden biological state before control acts.
 
 ## 29. tối ưu hóa (optimization / 최적화) và fitness landscape
 
@@ -386,7 +386,7 @@ Landscape cũng thay khi môi trường (environment / 환경) hoặc species kh
 
 Kỹ thuật (engineering / 엔지니어링) tối ưu hóa (optimization / 최적화) hữu ích như analogy, nhưng biological mục tiêu (objective / 목표) không được engineer định trước.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)** tiếp nhận điểm tựa từ **29. tối ưu hóa (optimization / 최적화) và fitness landscape** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Observability depends on which nodes and signals are measured; network topology determines how perturbations propagate, without fixing the dynamics by itself.
 
 ## 30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)
 
@@ -394,7 +394,7 @@ Trong kỹ thuật (engineering / 엔지니어링), hệ thống (system / 시�
 
 Điều này giải thích vì sao multiple đo lường (measurement / 측정) tầng (layer / 계층) và time-series quan trọng. Hidden trạng thái (state / 상태) là challenge central của physiology và sinh học hệ thống (systems biology).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, sau nội dung của **30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)**, **31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Topology exposes dependencies and alternate paths; engineering modularity turns them into replaceable components, while biological context decides which interfaces are actually valid.
 
 ## 31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết
 
@@ -404,7 +404,7 @@ Nhưng edge kiểu (type / 타입), strength, sign và delay cũng quan trọng.
 
 Đồ thị (graph / 그래프) là biểu diễn (representation / 표현), không phải full hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Modularity gives a component-level checklist; oxygen delivery tests it against ventilation, diffusion, perfusion, hemoglobin binding, and feedback as one causal chain.
 
 ## 32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)
 
