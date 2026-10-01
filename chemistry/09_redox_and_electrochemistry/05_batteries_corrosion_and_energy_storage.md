@@ -1,6 +1,6 @@
 # Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cell, battery và lưu trữ điện hóa** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Năng lượng và công suất là hai đại lượng khác nhau** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**. Route đi từ cell→module/system → energy/power → transport/thermal limits → degradation/corrosion → safety and lifecycle, để nối chemistry metrics với engineering constraints.
 
 > **Pin điện hóa (battery / 전지)** biến năng lượng tự do hóa học thành công điện bằng cách tách quá trình oxy hóa và khử về các điện cực khác nhau. Tuy nhiên một pin thực tế không chỉ gồm hai bán phản ứng. Hiệu năng phụ thuộc đồng thời vào nhiệt động lực học, động học điện cực, vận chuyển ion, chuyển pha, bề mặt phân cách, nhiệt và quá trình suy giảm vật liệu.
 

@@ -1,6 +1,6 @@
 # Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao phản ứng redox khó cân bằng hơn phản ứng thông thường?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Electron trong bán phản ứng là công cụ ghi sổ** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng phản ứng oxy hóa–khử — bảo toàn nguyên tử, điện tích và electron**. Route đi từ oxidation-number diagnosis → half-reaction bookkeeping → môi trường acid/base → ghép electron và kiểm tra atom/charge; kết quả là một phương trình có thể dùng tiếp cho stoichiometry hoặc electrochemistry.
 
 > Cân bằng phản ứng oxy hóa–khử phải đồng thời thỏa **bảo toàn nguyên tử**, **bảo toàn điện tích** và **bảo toàn electron chuyển giao**. Phương pháp bán phản ứng (half-reaction method / 반쪽 반응법) biến một bài toán phức tạp thành hai bài toán ghi sổ electron rõ ràng rồi ghép chúng lại.
 

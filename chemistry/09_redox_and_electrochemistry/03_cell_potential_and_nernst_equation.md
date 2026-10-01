@@ -1,6 +1,6 @@
 # Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao phản ứng oxy hóa-khử tạo ra điện áp** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Điện thế chuẩn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**. Route đi từ ΔG và (E) → standard reduction potentials → reaction quotient/activity → Nernst correction → concentration/temperature effects, để phân biệt voltage thermodynamic với voltage thực tế dưới tải.
 
 > **Điện thế pin (cell potential / 전지 전위)** không phải một con số tách rời khỏi nhiệt động lực học. Nó biểu diễn mức công điện có thể thu được từ một phản ứng oxy hóa-khử. **Phương trình Nernst (Nernst equation / 네른스트 식)** mở rộng điện thế chuẩn sang điều kiện không chuẩn bằng cách đưa thương số phản ứng và hoạt độ vào mô hình.
 

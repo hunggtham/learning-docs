@@ -1,6 +1,6 @@
 # Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Oxy hóa và khử luôn đi cùng nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chất oxy hóa và chất khử** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Oxy hóa và khử — từ ghi sổ electron tới động lực điện hóa**. Route đi từ oxidation state/electron bookkeeping → oxidant/reductant → half-reactions → spontaneity và cuối cùng nối sang cell potential; mỗi bước biến “trao đổi electron” thành một claim có thể kiểm tra.
 
 > **Phản ứng oxy hóa–khử (oxidation–reduction, redox / 산화·환원)** là những biến đổi trong đó sự phân bố electron giữa các nguyên tử, ion hoặc phân tử thay đổi. Ở mức hạch toán, **oxy hóa** tương ứng với tăng số oxy hóa hoặc mất electron; **khử** tương ứng với giảm số oxy hóa hoặc nhận electron. Ở mức sâu hơn, redox là sự dịch chuyển electron giữa các trạng thái có thế hóa học khác nhau, và chính chênh lệch đó có thể được chuyển thành công điện trong pin.
 

@@ -1,6 +1,6 @@
 # Điện phân — dùng công điện để thúc đẩy biến đổi hóa học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Pin Galvani và bình điện phân** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Dấu điện cực** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Điện phân — dùng công điện để thúc đẩy biến đổi hóa học**. Route đi từ external work và electrode polarity → competing half-reactions → overpotential/current efficiency → Faraday stoichiometry → industrial/material consequences; không suy ra sản phẩm chỉ từ dấu điện cực.
 
 > **Điện phân (electrolysis / 전기분해)** sử dụng công điện từ nguồn bên ngoài để thúc đẩy phản ứng oxy hóa–khử theo chiều không tự phát trong điều kiện đang xét. Nếu pin Galvani chuyển năng lượng tự do hóa học thành công điện, thì bình điện phân làm chiều ngược lại: dùng điện năng để thay đổi thành phần hóa học.
 

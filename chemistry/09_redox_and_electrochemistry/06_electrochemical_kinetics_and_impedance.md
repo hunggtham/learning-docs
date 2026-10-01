@@ -1,6 +1,6 @@
 # Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Điện thế cân bằng không quyết định dòng điện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mật độ dòng trao đổi — phản ứng có thể nhanh dù dòng ròng bằng 0** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Động học điện hóa và trở kháng — từ điện thế cân bằng tới tốc độ phản ứng thực tế**. Route đi từ equilibrium potential → exchange current/Butler–Volmer → mass transport → impedance spectra và equivalent circuits, để tách thermodynamic possibility khỏi rate-limiting process.
 
 > Nhiệt động lực học điện hóa cho biết phản ứng oxy hóa–khử có xu hướng thuận lợi tới đâu; **động học điện hóa (electrochemical kinetics / 전기화학 반응속도론)** cho biết cần đẩy điện thế ra khỏi cân bằng bao nhiêu để tạo tốc độ phản ứng mong muốn. **Phổ trở kháng điện hóa (electrochemical impedance spectroscopy, EIS / 전기화학 임피던스 분광법)** dùng đáp ứng theo tần số để tách các quá trình xảy ra ở những thang thời gian khác nhau.
 

@@ -1,6 +1,6 @@
 # Pin Galvani — biến năng lượng tự do hóa học thành công điện
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Pin Galvani — biến năng lượng tự do hóa học thành công điện**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Mô hình tư duy** để gom các mảnh thành mental model có thể mang sang nhánh khác, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Pin Galvani — biến năng lượng tự do hóa học thành công điện**. Route đi từ tách half-cell → electron path/salt bridge → anode/cathode convention → cell notation và spontaneity; sau đó chuyển sang điện thế và Nernst để định lượng operating condition.
 
 > **Pin Galvani hay pin Volta (galvanic/voltaic cell / 갈바니 전지)** tách một phản ứng oxy hóa–khử tự phát thành hai vùng không gian khác nhau để electron buộc phải đi qua mạch ngoài. Nhờ vậy, một phần độ giảm năng lượng tự do Gibbs của phản ứng có thể được thu dưới dạng **công điện**, thay vì chủ yếu biến thành nhiệt tại cùng một vị trí phản ứng.
 
