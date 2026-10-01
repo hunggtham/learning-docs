@@ -121,7 +121,7 @@ Một hiệu chuẩn tốt nên bao phủ vùng nồng độ mẫu, có đủ đ
 
 Ngoại suy ngoài vùng hiệu chuẩn giả định đáp ứng vẫn giữ nguyên ở nơi chưa từng được kiểm nghiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Phương pháp thêm chuẩn cho ảnh hưởng nền** tiếp nhận điểm tựa từ **Hiệu chuẩn là một phần của thiết kế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết kế nhân tố — vì sao thay từng biến một dễ bỏ sót tương tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Hiệu chuẩn nối đầu vào đã biết với tín hiệu thiết bị nhưng vẫn có thể sai khi nền mẫu làm đổi độ nhạy. Vì vậy, **Phương pháp thêm chuẩn cho ảnh hưởng nền** đưa cùng nền của chính mẫu vào thiết kế; sau đó **Thiết kế nhân tố** mở rộng câu hỏi từ hiệu chỉnh một nguồn nhiễu sang kiểm tra tương tác giữa nhiều yếu tố.
 
 ## Phương pháp thêm chuẩn cho ảnh hưởng nền
 
@@ -131,7 +131,7 @@ Ngoại suy về tín hiệu 0 cho phép ước lượng lượng ban đầu.
 
 Cách này hiệu chỉnh một số ảnh hưởng nền vì chuẩn và mẫu cùng nền, nhưng tốn thêm phép đo và giả định ảnh hưởng nền tương đối ổn định trong dải bổ sung.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Thiết kế nhân tố — vì sao thay từng biến một dễ bỏ sót tương tác** tiếp nhận điểm tựa từ **Phương pháp thêm chuẩn cho ảnh hưởng nền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương pháp bề mặt đáp ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Thêm chuẩn xử lý ảnh hưởng nền bằng cách giữ nguyên ma trận mẫu, còn **Thiết kế nhân tố** hỏi đồng thời nhiệt độ, lượng xúc tác và tích tương tác để tránh kết luận từ từng lát cắt riêng. Khi các yếu tố quan trọng đã lộ ra, **Phương pháp bề mặt đáp ứng** sẽ mô hình hóa độ cong trong vùng khảo sát.
 
 ## Thiết kế nhân tố — vì sao thay từng biến một dễ bỏ sót tương tác
 
@@ -145,7 +145,7 @@ Cách thay từng yếu tố một (**one-factor-at-a-time**) dễ bỏ sót tư
 
 Trong tối ưu quy trình hóa học, tương tác rất phổ biến vì nhiệt độ đồng thời ảnh hưởng độ tan, hoạt tính xúc tác, phản ứng phụ và truyền khối.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Phương pháp bề mặt đáp ứng** tiếp nhận điểm tựa từ **Thiết kế nhân tố — vì sao thay từng biến một dễ bỏ sót tương tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết kế thí nghiệm động học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Thiết kế nhân tố giúp nhận diện hiệu ứng chính và tương tác; **Phương pháp bề mặt đáp ứng** dùng các yếu tố đã sàng lọc để ước lượng độ cong và vùng tối ưu, nhưng điểm tối ưu vẫn cần thí nghiệm xác nhận. Với phản ứng phụ thuộc thời gian, **Thiết kế thí nghiệm động học** tiếp tục bằng cách kiểm tra xem thiết bị có nhanh hơn hiện tượng hay không.
 
 ## Phương pháp bề mặt đáp ứng
 
@@ -159,7 +159,7 @@ y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_{12}x_1x_2+\beta_{11}x_1^2+\beta_{22}x_2^2
 
 Đây là xấp xỉ thực nghiệm trong vùng đã khảo sát, không phải định luật hóa học. Điểm tối ưu dự đoán cần được kiểm chứng bằng thí nghiệm độc lập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Thiết kế thí nghiệm động học** tiếp nhận điểm tựa từ **Phương pháp bề mặt đáp ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm soát nhiệt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Bề mặt đáp ứng tối ưu hóa trong không gian điều kiện, còn **Thiết kế thí nghiệm động học** phải bảo toàn trục thời gian và tách thời gian chết, trộn, truyền nhiệt khỏi tốc độ phản ứng. Vì nhiệt độ chi phối cả tốc độ lẫn cân bằng, mục **Kiểm soát nhiệt độ** sẽ xử lý biến gây nhiễu này trước khi diễn giải động học.
 
 ## Thiết kế thí nghiệm động học
 
