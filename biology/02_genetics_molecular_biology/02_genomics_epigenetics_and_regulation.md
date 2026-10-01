@@ -29,7 +29,7 @@ DNA packaging giải hai bài toán tưởng mâu thuẫn:
 
 Vì vậy chromatin không phải packaging thụ động. Nó là regulatory substrate.
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **3. Euchromatin và heterochromatin là spectrum, không phải hai hộp tuyệt đối** tiếp nhận điểm tựa từ **2. Chromatin tạo tầng (layer / 계층) organization đầu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Biến đổi histone (histone modification): “mã (code / 코드)” nhưng không phải dictionary đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Chromatin provides the regulatory substrate; accessibility varies by locus, cell type, and time, while histone marks modify that state through writer–reader–eraser networks rather than a fixed on/off dictionary.
 
 ## 3. Euchromatin và heterochromatin là spectrum, không phải hai hộp tuyệt đối
 
@@ -39,7 +39,7 @@ Nhưng trạng thái nhiễm sắc chất (chromatin state) phụ thuộc locus,
 
 Hệ gen (genome) giống thư viện (library / 라이브러리) mà mỗi loại tế bào mở một subset shelf khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **4. Biến đổi histone (histone modification): “mã (code / 코드)” nhưng không phải dictionary đơn giản** tiếp nhận điểm tựa từ **3. Euchromatin và heterochromatin là spectrum, không phải hai hộp tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Methyl hóa DNA (DNA methylation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Euchromatin/heterochromatin describe an accessibility spectrum; histone acetylation or methylation changes reader recruitment in context, and DNA methylation adds a complementary memory layer.
 
 ## 4. Biến đổi histone (histone modification): “mã (code / 코드)” nhưng không phải dictionary đơn giản
 
@@ -51,7 +51,7 @@ Methyl hóa histone (histone methylation) đặc biệt không có nghĩa “met
 
 Không nên học epigenetics như bảng “mark này bật, mark kia tắt” mà phải hiểu mark nằm trong mạng (network / 네트워크) writer–reader–eraser.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **5. Methyl hóa DNA (DNA methylation)** tiếp nhận điểm tựa từ **4. Biến đổi histone (histone modification): “mã (code / 코드)” nhưng không phải dictionary đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Epigenetics chính xác là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Histone marks recruit regulatory machinery at particular residues; CpG methylation can stabilize repression or cell memory, but its developmental dynamics require a precise definition of epigenetics rather than a universal “silencing” rule.
 
 ## 5. Methyl hóa DNA (DNA methylation)
 
@@ -61,7 +61,7 @@ Methylation mẫu (pattern / 패턴) có thể được bản sao (copy / 복사
 
 Nhưng methylation cũng động (dynamic / 동적) trong phát triển (development), germline và bệnh (disease).
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **6. Epigenetics chính xác là gì?** tiếp nhận điểm tựa từ **5. Methyl hóa DNA (DNA methylation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. X-chromosome inactivation: epigenetic regulation ở chromosome quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** DNA methylation is one mechanism among chromatin states and heritable regulation; the definition must distinguish somatic memory from stronger transgenerational claims before scaling to X-chromosome inactivation.
 
 ## 6. Epigenetics chính xác là gì?
 
