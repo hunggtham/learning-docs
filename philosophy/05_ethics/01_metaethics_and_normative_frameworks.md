@@ -1,6 +1,6 @@
 # Metaethics và Normative Frameworks
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Metaethics và Normative Frameworks**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khung phần mềm (framework / 프레임워크) là công cụ suy luận** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Moral bất định (uncertainty / 불확실성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Metaethics và Normative Frameworks**. Route đi từ nghĩa của phán đoán đạo đức → realism/anti-realism và lý do chuẩn tắc → consequentialism, deontology, virtue → moral uncertainty và lựa chọn framework, để phân biệt “điều đúng là gì” với “nên làm gì”.
 
 Metaethics hỏi moral claim là loại claim nào: có truth khách quan không, giá trị có giảm về preference không, và moral kiến thức (knowledge / 지식) đến từ đâu. Realism, constructivism, expressivism và lỗi (error / 오류) lý thuyết (theory / 이론) đưa ra câu trả lời khác nhau; không nên trộn ngữ nghĩa (semantic / 의미적) claim (“câu này có truth-value không?”) với epistemic claim (“ta biết nó bằng cách nào?”).
 

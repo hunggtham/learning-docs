@@ -1,6 +1,6 @@
 # Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba họ lập luận quen thuộc** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Is–ought và moral bất định (uncertainty / 불확실성)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Moral lập luận (reasoning / 추론), Values và hành động (action / 동작)**. Route đi từ giá trị và lợi ích → nghĩa vụ, hệ quả và đức hạnh → is–ought, xung đột giá trị và uncertainty → quyết định trong tình huống cụ thể, để lý do đạo đức được kiểm tra cùng hành động mà nó biện minh.
 
 Ethics hỏi điều gì làm một hành động đúng/sai, tốt/xấu hoặc đáng trách/đáng khen. Moral lập luận (reasoning / 추론) cần tách ít nhất ba lớp: mô tả tình huống, các giá trị được ưu tiên và nguyên tắc chuyển từ giá trị sang hành động.
 

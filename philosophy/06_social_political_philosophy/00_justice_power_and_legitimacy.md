@@ -1,6 +1,6 @@
 # Justice, Power và Political Legitimacy
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Justice, Power và Political Legitimacy**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Những trục cần tách** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Từ cá nhân đến thể chế** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Justice, Power và Political Legitimacy**. Route đi từ phân phối lợi ích/gánh nặng → quyền lực và phụ thuộc → luật, thể chế và tính chính đáng → phản kháng, cải cách và trách nhiệm, để công bằng được đánh giá ở cả kết quả lẫn quan hệ tạo ra nó.
 
 Xã hội (social / 사회적)–political philosophy hỏi xã hội nên phân phối lợi ích, gánh nặng, quyền và tiếng nói thế nào; ai có quyền ra quyết định; và khi nào quyền lực trở nên chính đáng.
 

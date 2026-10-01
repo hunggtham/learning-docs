@@ -1,6 +1,6 @@
 # Professional, Animal và Environmental Ethics
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Professional, Animal và Environmental Ethics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Một khung phân tích** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Professional, Animal và Environmental Ethics**. Route đi từ vai trò/nghĩa vụ nghề nghiệp → phúc lợi và địa vị đạo đức của động vật → giá trị hệ sinh thái và môi trường → xung đột lợi ích, trách nhiệm và thiết kế thể chế, để phạm vi của một quyết định được nêu rõ trước khi đánh giá.
 
 Professional ethics xuất hiện khi role, expertise và power tạo duty vượt quá ordinary morality. Kỹ sư phải quản lý an toàn (safety / 안전) margin; nhà nghiên cứu phải bảo vệ participant và integrity của bản ghi (record / 레코드); lập trình viên phải xem downstream harm và bảo mật (security / 보안); người quản lý phải tránh dùng thông tin bất cân xứng để ép lựa chọn.
 

@@ -1,6 +1,6 @@
 # Capitalism, Labor và Institutions
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Capitalism, Labor và Institutions**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Capitalism, Labor và Institutions** để đưa mô hình vào một trường hợp đủ cụ thể để quan sát, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Capitalism, Labor và Institutions**. Route đi từ sở hữu và trao đổi → lao động, quyền thương lượng và phân phối → doanh nghiệp/thị trường → luật, nhà nước và thể chế tái sản xuất, để mô hình kinh tế được đọc cùng quan hệ quyền lực.
 
 Philosophy of political economy hỏi thuộc tính (property / 속성), thị trường (market / 시장), wage, capital và trạng thái (state / 상태) phân phối quyền lực thế nào. Thị trường (market / 시장) price truyền tín hiệu (signal / 신호) và phối hợp decentralized hành động (action / 동작), nhưng không tự giải quyết externality, monopoly, unequal bargaining power, công khai (public / 공개) goods hay dignity of công việc (work / 작업).
 

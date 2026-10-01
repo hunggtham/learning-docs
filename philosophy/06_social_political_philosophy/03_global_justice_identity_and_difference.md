@@ -1,6 +1,6 @@
 # Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Toàn cục (global / 전역) Justice, định danh (identity / 식별자) và Difference**. Route đi từ biên giới/trách nhiệm → thuộc địa, di cư và chuỗi cung ứng → identity, difference và tiếng nói bị gạt ra ngoài → công bằng toàn cầu, để chuẩn tắc phân phối không che khuất lịch sử và vị thế.
 
 Toàn cục (global / 전역) justice đặt câu hỏi nghĩa vụ vượt biên giới: ai hưởng lợi từ trade, extraction, di chuyển (migration / 마이그레이션) và historical institutions; ai chịu climate harm, debt, war hoặc supply-chain rủi ro (risk / 위험); và ai có voice trong quy tắc (rule / 규칙) chung. Citizenship giải thích một phần quyền pháp lý nhưng không tự biện minh cho mọi bất bình đẳng giữa citizen và non-citizen.
 

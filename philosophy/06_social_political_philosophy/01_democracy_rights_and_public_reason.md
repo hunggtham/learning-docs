@@ -1,6 +1,6 @@
 # Democracy, Rights và công khai (public / 공개) Reason
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Democracy, Rights và công khai (public / 공개) Reason**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Democracy, Rights và công khai (public / 공개) Reason** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Democracy, Rights và công khai (public / 공개) Reason**. Route đi từ quyền và bình đẳng chính trị → đại diện, tham gia và kiểm soát quyền lực → lý do công khai, bất đồng và thiểu số → thiết kế dân chủ, để quyết định chung vừa có tính đáp ứng vừa có thể biện minh.
 
 Democracy không chỉ là majority vote. Nó gồm quyền tham gia, contestability, thông tin (information / 정보), association, minority protection và khả năng thay đổi người cầm quyền mà không bạo lực. Majority có thể hợp thức hóa quyết định bất công nếu không có constitutional rights và quy tắc (rule / 규칙) of law.
 

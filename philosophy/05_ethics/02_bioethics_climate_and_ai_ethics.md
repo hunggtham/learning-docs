@@ -1,6 +1,6 @@
 # Bioethics, Climate Ethics và AI Ethics
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bioethics, Climate Ethics và AI Ethics**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Bioethics, Climate Ethics và AI Ethics** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Bioethics, Climate Ethics và AI Ethics**. Route đi từ chủ thể bị tác động và quyền lợi → consent, rủi ro và phân bổ gánh nặng → khí hậu, công nghệ và bất công liên thế hệ → nguyên tắc quản trị, để từng lĩnh vực giữ được tiêu chí đạo đức riêng thay vì dùng một khẩu hiệu chung.
 
 Applied ethics bắt đầu từ trường hợp (case / 사례) cụ thể nhưng phải quay lại principle, stakeholder và nhân quả (causal / 인과적) bằng chứng (evidence / 증거). Bốn câu hỏi nền tảng thường xuyên xuất hiện trong bioethics là autonomy, beneficence, non-maleficence và justice; chúng không phải checklist tự động, vì consent có thể không đủ khi thông tin (information / 정보) bất cân xứng hoặc harm lan sang người khác.
 
