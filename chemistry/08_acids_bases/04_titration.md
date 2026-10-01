@@ -1,6 +1,6 @@
 # Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Trước khi thêm cơ sở (base / 기반) — cân bằng phân ly của acid yếu** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Trước điểm tương đương — vùng đệm** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Chuẩn độ acid–cơ sở (base / 기반) — đọc đường cong như một bản đồ cân bằng**. Route theo thể tích thuốc thử: initial equilibrium → buffer region → equivalence → post-equivalence excess; mỗi đoạn làm nổi bật một cân bằng khác và quyết định indicator/estimate phù hợp.
 
 > **Chuẩn độ (titration / 적정)** dùng một thuốc thử có nồng độ đã biết để đưa hệ đi qua một chuỗi trạng thái acid–cơ sở (base / 기반) có kiểm soát. Giá trị của chuẩn độ không chỉ nằm ở thể tích tại điểm cuối. Toàn bộ đường cong pH theo thể tích chứa thông tin về hóa lượng, \(pK_a\), khả năng đệm, trạng thái proton hóa và độ mạnh tương đối của acid/cơ sở (base / 기반).
 

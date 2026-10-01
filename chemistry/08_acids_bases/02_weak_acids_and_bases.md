@@ -1,6 +1,6 @@
 # Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Acid yếu một proton** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Phần trăm ion hóa** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**. Route đi từ mass/charge balance → dissociation equilibrium → approximation kiểm tra điều kiện → fraction ionized và polyprotic distribution, để pH là kết quả của cả hệ chứ không chỉ một công thức.
 
 > Acid và cơ sở (base / 기반) yếu không ion hóa hoàn toàn. Thành phần của dung dịch phải được xác định từ **cân bằng hóa học + cân bằng vật chất + cân bằng điện tích**. Đây là nơi hóa học acid–cơ sở (base / 기반) chuyển từ hóa lượng trực tiếp sang một bài toán cân bằng thực sự.
 

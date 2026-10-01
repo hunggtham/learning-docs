@@ -1,6 +1,6 @@
 # Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao cần nhiều mô hình acid–cơ sở (base / 기반)?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Mô hình Arrhenius** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Các mô hình acid–cơ sở (base / 기반) — Arrhenius, Brønsted–Lowry và Lewis**. Route mở từ ion trong nước → chuyển proton → cặp electron, rồi dùng từng mô hình ở đúng phạm vi thay vì coi một định nghĩa là đủ cho mọi phản ứng.
 
 > **Hóa học acid–cơ sở (base / 기반)** không có một định nghĩa duy nhất phù hợp cho mọi tình huống. Ba mô hình quan trọng — Arrhenius, Brønsted–Lowry và Lewis — mở rộng dần phạm vi từ ion trong dung dịch nước tới chuyển proton và tương tác cặp electron.
 

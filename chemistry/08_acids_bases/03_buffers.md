@@ -1,6 +1,6 @@
 # Dung dịch đệm — kiểm soát biến động của môi trường proton
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dung dịch đệm — kiểm soát biến động của môi trường proton**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cơ chế hoạt động của dung dịch đệm** cho thấy đối tượng vận hành qua những bước nào và tạo ra hệ quả gì; sau đó sang **Suy ra phương trình Henderson–Hasselbalch** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Dung dịch đệm — kiểm soát biến động của môi trường proton**. Route đi từ conjugate pair và capacity → Henderson–Hasselbalch → giới hạn pH/capacity → thiết kế buffer; công thức chỉ có nghĩa trong vùng mà các giả định cân bằng còn đúng.
 
 > **Dung dịch đệm (buffer / 완충 용액)** là hệ chứa một cặp acid–cơ sở (base / 기반) liên hợp có khả năng hấp thụ một lượng giới hạn acid hoặc cơ sở (base / 기반) được thêm vào, làm pH thay đổi ít hơn so với dung dịch không có đệm.
 

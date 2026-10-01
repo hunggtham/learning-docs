@@ -1,6 +1,6 @@
 # pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Định nghĩa pH** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **pOH và tích số ion của nước** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**. Route đi từ activity/pH → pOH và nước → acid strength/(K_a) → nhiệt động và giới hạn nồng độ; nhờ đó không đồng nhất pH, concentration, corrosiveness hay hazard.
 
 > **pH** là thang logarithm liên hệ với **hoạt độ ion hydrogen (hydrogen-ion activity)**. Độ mạnh acid mô tả xu hướng nhiệt động của một chất trong việc cho proton; nó không đồng nghĩa với nồng độ, độ ăn mòn hay mức nguy hiểm.
 

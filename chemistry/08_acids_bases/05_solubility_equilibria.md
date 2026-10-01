@@ -1,6 +1,6 @@
 # Cân bằng độ tan — kết tủa, \(K_{sp}\) và phân tách chọn lọc
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng độ tan — kết tủa, \(K{sp}\) và phân tách chọn lọc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Cân bằng độ tan — kết tủa, \(K{sp}\) và phân tách chọn lọc** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cân bằng độ tan — kết tủa, \(K_{sp}\) và phân tách chọn lọc**. Route đi từ ion product/Q versus (K_{sp}) → common-ion/pH/complexation effects → selective precipitation → kinetic caveats, để phân biệt thermodynamic equilibrium với lượng hòa tan quan sát được.
 
 > **Tích số tan \(K_{sp}\) (solubility product / 용해도곱 상수)** mô tả cân bằng giữa chất rắn ít tan và các ion của nó trong dung dịch. Nhưng độ tan quan sát không chỉ do một con số \(K_{sp}\) quyết định. pH, tạo phức, ion chung, lực ion, hoạt độ và động học tạo mầm có thể làm lượng hòa tan thực tế thay đổi nhiều bậc độ lớn.
 
