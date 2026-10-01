@@ -12,7 +12,7 @@ Người realist có thể tin rằng thế giới tồn tại độc lập vớ
 
 Scientific law thường mô tả bất biến (invariant / 불변식) quan hệ (relation / 관계) trong một lĩnh vực (domain / 도메인), không nhất thiết là mệnh lệnh metaphysical áp dụng không điều kiện. Ceteris paribus clause (“các điều kiện khác giữ nguyên”) là một phần của mô hình (model / 모델); khi hệ mở, phản hồi (feedback / 피드백) hoặc quy mô (scale / 규모) đổi, law có thể cần cơ chế (mechanism / 메커니즘) bổ sung.
 
-> **Chuyển mạch:** Ở chặng này của **Scientific Realism, Laws và Underdetermination**, **Underdetermination** tiếp nhận điểm tựa từ **Laws và ceteris paribus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Laws chỉ giữ ổn định quan hệ trong những điều kiện và domain đã nêu; ceteris paribus làm lộ các giả định có thể bị phá khi hệ mở hoặc scale đổi. **Underdetermination** tiếp theo hỏi một bộ dữ liệu như vậy còn cho phép bao nhiêu theory cạnh tranh, và cần experiment nào để phân biệt.
 
 ## Underdetermination
 
