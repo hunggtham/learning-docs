@@ -18,7 +18,7 @@ Ba ý phải giữ cùng lúc:
 
 GDP không trực tiếp đo leisure, inequality, unpaid household công việc (work / 작업), environmental damage, bảo mật (security / 보안), health chất lượng (quality / 품질) hoặc subjective well-being. Nó là production-accounting measure, không phải một welfare chỉ mục (index / 인덱스) hoàn chỉnh.
 
-> **Chuyển mạch:** Trong **National Accounts & Macro Đo lường (measurement / 측정) — GDP, income, prices và stock–luồng (flow / 흐름) lập luận (reasoning / 추론)**, **1. GDP đo môi trường vận hành (production / 운영 환경) luồng (flow / 흐름), không đo toàn bộ welfare** xác định đầu vào; **2. Ba cách tính GDP phải khớp về accounting** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Final good không đồng nghĩa bên tiêu thụ (consumer / 소비자) good** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** GDP đo production flow chứ không đo toàn bộ welfare; ba cách tính phải khớp về accounting, rồi phân biệt final good với consumer good để tránh đếm trùng.
 
 ## 2. Ba cách tính GDP phải khớp về accounting
 

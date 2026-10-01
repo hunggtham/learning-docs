@@ -16,7 +16,7 @@ Participation Rate = Labor Force / Working-age Population
 
 Unemployed thường phải không có việc, sẵn sàng làm việc và actively tìm kiếm (search / 검색) theo statistical definition. Người discouraged ngừng tìm kiếm (search / 검색) có thể rời labor force, làm unemployment tỷ lệ (rate / 비율) giảm dù labor-market health không cải thiện.
 
-> **Chuyển mạch:** Trong **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**, **1. Labor-force accounting trước khi giải thích unemployment** cho ta quy tắc; **2. Employment-population ratio và hours** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Frictional unemployment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Labor-force accounting xác định mẫu số trước khi diễn giải unemployment; employment–population ratio và hours bổ sung cường độ sử dụng lao động, rồi matching frictions giải thích thất nghiệp tạm thời.
 
 ## 2. Employment-population ratio và hours
 
