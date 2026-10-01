@@ -20,7 +20,7 @@ Các vạch thể tích thường chỉ gần đúng. Dùng becher để pha dun
 
 Miệng rộng giúp rót và bay hơi thuận tiện hơn nhưng cũng làm nguy cơ nhiễm bẩn và bay hơi tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Bình Erlenmeyer** tiếp nhận điểm tựa từ **Cốc becher** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bình cầu đáy tròn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Becher tối ưu cho trộn, rót và gia nhiệt thô; Erlenmeyer giữ cùng mục tiêu thao tác nhưng thêm hình học chống bắn, nên bước kế tiếp phải hỏi hình học nào phân bố nhiệt tốt hơn.
 
 ## Bình Erlenmeyer
 
@@ -30,7 +30,7 @@ Nó phù hợp làm bình nhận trong chuẩn độ, trộn phản ứng hoặc
 
 Vạch thể tích trên bình thông thường chỉ có tính ước lượng nếu không phải dụng cụ được hiệu chuẩn chuyên biệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Bình cầu đáy tròn** tiếp nhận điểm tựa từ **Bình Erlenmeyer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ống đong** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Erlenmeyer ưu tiên thao tác an toàn khi lắc và nhận mẫu; bình cầu đáy tròn đổi ưu tiên sang phân bố nhiệt và hồi lưu, đồng thời buộc người dùng kiểm soát giá đỡ trước khi định lượng.
 
 ## Bình cầu đáy tròn
 
@@ -38,7 +38,7 @@ Vạch thể tích trên bình thông thường chỉ có tính ước lượng 
 
 Bình không tự đứng được nếu không có giá đỡ và không phải dụng cụ đo thể tích chính xác.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Ống đong** tiếp nhận điểm tựa từ **Bình cầu đáy tròn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Meniscus và thị sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Bình cầu đáy tròn là vessel cho phản ứng và truyền nhiệt, không phải chuẩn thể tích; ống đong chuyển câu hỏi sang độ gần đúng của thể tích và cách đọc vạch.
 
 ## Ống đong
 
@@ -48,7 +48,7 @@ Khi đọc, mắt cần ngang mức meniscus để tránh sai số thị sai (**
 
 Với nhiều dung dịch nước tạo meniscus lõm, thường đọc đáy meniscus trừ khi quy ước của chất lỏng hoặc dụng cụ yêu cầu khác.
 
-> **Chuyển mạch:** Ở chặng này của **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Meniscus và thị sai** tiếp nhận điểm tựa từ **Ống đong** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bình định mức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Ống đong chỉ có ý nghĩa khi người đọc chọn đúng đáy meniscus và góc mắt; meniscus/parallax biến thao tác quan sát đó thành nguồn sai số cần kiểm soát trước khi dùng bình định mức.
 
 ## Meniscus và thị sai
 
