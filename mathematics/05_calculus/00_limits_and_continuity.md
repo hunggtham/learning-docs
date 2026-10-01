@@ -33,6 +33,8 @@ Mathematics cần statement không phụ thuộc cảm giác. Khi viết
 
 Đây là một đặc tả hợp đồng (contract / 계약) giữa **đầu vào (input / 입력) tolerance** và **đầu ra (output / 출력) tolerance**.
 
+> **Chuyển mạch:** “Gần” chỉ có nghĩa toán học khi được gắn với tolerance của đầu ra; ví dụ hàm không định nghĩa tại điểm cho thấy limit xét lân cận chứ không xét riêng giá trị đó. **Epsilon–delta** tiếp theo biến trực giác này thành hợp đồng định lượng giữa (\varepsilon) và (\delta).
+
 ## Một ví dụ quan trọng: hàm (function / 함수) không cần được định nghĩa tại điểm (point / 지점)
 
 Xét
@@ -70,6 +72,8 @@ f(1)=100
 ```
 
 mà limit vẫn là `2`, vì một isolated điểm (point / 지점) không thay hành vi (behavior / 동작) của nearby values.
+
+> **Chuyển mạch:** Ví dụ khử nhân tử cho thấy một lỗ hổng tại (x=a) không ngăn limit tồn tại; **epsilon–delta** giải thích chính xác vì sao mọi (x) đủ gần nhưng khác (a) đều cho đầu ra gần (L). Ví dụ epsilon–delta đơn giản tiếp theo luyện cách chọn (\delta) từ yêu cầu (\varepsilon).
 
 ## Epsilon–delta: biến “gần” thành đặc tả hợp đồng (contract / 계약) định lượng
 
@@ -114,6 +118,8 @@ Tưởng tượng một người thách thức chọn bất kỳ `ε>0`, dù c�
 Nếu ta luôn làm được, limit là `L`.
 
 Cách nhìn này giải thích vì sao definition dùng “for every `ε`” trước “there exists `δ`”. Ta không được chọn một tolerance dễ rồi tuyên bố limit tồn tại; phải đáp ứng mọi độ chính xác được yêu cầu.
+
+> **Chuyển mạch:** Định nghĩa epsilon–delta là tiêu chuẩn tổng quát; ví dụ đơn giản cho thấy cách biến (|f(x)-L|) thành một biểu thức bị chặn bởi (|x-a|). Khi kỹ thuật này rõ, **limit laws** cho phép ghép các giới hạn đã biết thay vì chứng minh lại từ đầu.
 
 ## Epsilon–delta example đơn giản
 
@@ -161,6 +167,8 @@ suy ra
 
 Proof này cho thấy epsilon–delta không phải nghi thức formal vô nghĩa. Nó tường minh (explicit / 명시적) hóa sensitivity giữa đầu vào (input / 입력) và đầu ra (output / 출력).
 
+> **Chuyển mạch:** Ví dụ epsilon–delta chứng minh một limit cụ thể, còn **limit laws** cung cấp phép cộng, nhân và chia có điều kiện để mở rộng kết quả. Bước kế tiếp hỏi khi nào có thể **direct substitution**, và khi nào mẫu số bằng 0 hoặc gián đoạn buộc phải biến đổi thêm.
+
 ## Limit laws: tại sao ta không phải chứng minh từ đầu mọi lần?
 
 Nếu
@@ -194,6 +202,8 @@ và nếu `M≠0`,
 Các laws này follow từ epsilon–delta cấu trúc (structure / 구조). Một khi đã được prove, chúng trở thành reusable building blocks.
 
 Đây là mẫu (pattern / 패턴) chung của mathematics: formal foundation được xây kỹ để later lập luận (reasoning / 추론) có thể dùng theorem thay vì re-prove mọi detail.
+
+> **Chuyển mạch:** Limit laws cho phép thế trực tiếp khi các phép toán vẫn xác định và liên tục tại điểm; **direct substitution** vì thế là kết luận có điều kiện, không phải mẹo phổ quát. Khi gặp dạng (0/0) hoặc (infty/infty), **indeterminate form** chỉ báo cần phân tích thêm chứ chưa phải đáp án.
 
 ## Khi direct substitution đúng?
 
