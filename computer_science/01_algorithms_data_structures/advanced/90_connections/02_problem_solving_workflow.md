@@ -43,7 +43,7 @@ walk          -> có thể lặp
 
 Nếu terminology chưa rõ, thuật toán chưa thể bắt đầu chắc chắn.
 
-> **Chuyển mạch:** Trong **Quy trình giải bài DSA và thiết kế thuật toán**, **2. Viết lại bài toán bằng một câu** tiếp nhận điểm tựa từ **1. Đọc đề như một specification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tách story khỏi computational mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Specification làm rõ input/output và invariant; viết lại bài toán thành một câu, rồi tách story khỏi computational model để chọn cấu trúc dữ liệu và proof obligation đúng.
 
 ## 2. Viết lại bài toán bằng một câu
 

@@ -10,7 +10,7 @@ Một API môi trường vận hành (production / 운영 환경) hiếm khi có
 
 Vì thuật ngữ dễ gây nhầm, kỹ thuật (engineering / 엔지니어링) document nên viết rõ producer phiên bản (version / 버전) nào nói chuyện với bên tiêu thụ (consumer / 소비자) phiên bản (version / 버전) nào thay vì chỉ ghi “backward compatible”.
 
-> **Chuyển mạch:** Trong **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** tiếp nhận điểm tựa từ **Tính tương thích (compatibility / 호환성) có hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tolerant reader có giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Compatibility có hướng theo producer/consumer; additive change thường mở rộng contract, destructive change phá consumer, còn tolerant reader chỉ an toàn khi giới hạn được kiểm thử.
 
 ## Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)
 

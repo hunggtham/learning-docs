@@ -26,7 +26,7 @@ chi phí thấp
 
 Nhưng FIFO không biết job nào quan trọng hơn hoặc job nào có deadline gần hơn.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Scheduler, hàng đợi (queue / 큐) và Backpressure**, **2. Priority hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **1. FIFO là baseline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Mutable Priority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** FIFO là baseline công bằng theo thời gian; priority queue đổi thứ tự phục vụ theo policy, còn mutable priority cần xử lý update/cancellation để tránh starvation và stale work.
 
 ## 2. Priority hàng đợi (queue / 큐)
 

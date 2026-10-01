@@ -39,7 +39,7 @@ Ngay lập tức ta thấy không có một cấu trúc duy nhất tối ưu m�
 
 Tra cứu chính xác cần **equality lookup**. Truy vấn theo thời gian cần **ordered phạm vi (range / 범위) scan**. Top-N cần thứ tự. Thống kê có thể cần scan, aggregation hoặc chỉ mục (index / 인덱스) khác. Đây là lý do hệ thống thật thường duy trì nhiều cấu trúc phụ trợ trên cùng dữ liệu.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Thiết kế chỉ mục cơ sở dữ liệu từ góc nhìn DSA**, **2. băm (hash / 해시) chỉ mục (index / 인덱스) cho equality lookup** tiếp nhận điểm tựa từ **1. Bắt đầu từ tải công việc (workload / 워크로드), không bắt đầu từ chỉ mục (index / 인덱스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. B+cây (tree / 트리) cho phạm vi (range / 범위) truy vấn (query / 쿼리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Workload xác định operation và selectivity; hash index phục vụ equality lookup, còn B+ tree giữ order để range query, với write cost và storage trade-off đi kèm.
 
 ## 2. băm (hash / 해시) chỉ mục (index / 인덱스) cho equality lookup
 

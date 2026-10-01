@@ -22,7 +22,7 @@ principal không truy cập resource ngoài policy
 
 Nếu oracle yếu, kiểm thử (test / 테스트) có thể chạy đúng đường dẫn (path / 경로) nhưng không phát hiện bug. Đây là lý do mã (code / 코드) coverage cao không tự tạo confidence cao.
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **1. trường hợp kiểm thử (test case / 테스트 케이스) chỉ có giá trị khi có oracle đủ mạnh** cho ta quy tắc; **2. đơn vị (unit / 단위) kiểm thử (test / 테스트) và hiện thực (implementation / 구현) coupling** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. đặc tả hợp đồng (contract / 계약) testing kiểm tra agreement tại ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Test case cần oracle mạnh; unit tests dễ couple implementation, còn contract/property/mutation tests mở rộng bằng chứng tới boundary, behavior và production-like invariants.
 
 ## 2. đơn vị (unit / 단위) kiểm thử (test / 테스트) và hiện thực (implementation / 구현) coupling
 

@@ -19,7 +19,7 @@ background jobs cũ
 
 Tính đúng đắn (correctness / 정확성) phải giữ trong **chuyển tiếp (transition / 전이) trạng thái (state / 상태)**, không chỉ ở trạng thái cuối.
 
-> **Chuyển mạch:** Trong **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **2. tính tương thích (compatibility / 호환성) là bất biến (invariant / 불변식) đầu tiên của rolling triển khai (deployment / 배포)** tiếp nhận điểm tựa từ **1. triển khai (deployment / 배포) là một phân tán (distributed / 분산) chuyển tiếp trạng thái (state transition / 상태 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Rolling triển khai (deployment / 배포) giữ sức chứa (capacity / 용량) nhưng làm trạng thái (state / 상태) không gian (space / 공간) lớn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Deployment là distributed state transition; rolling compatibility giữ invariant đầu tiên, còn canary/blue-green/flags giới hạn blast radius trước khi rollback hoặc mở rộng capacity.
 
 ## 2. tính tương thích (compatibility / 호환성) là bất biến (invariant / 불변식) đầu tiên của rolling triển khai (deployment / 배포)
 
