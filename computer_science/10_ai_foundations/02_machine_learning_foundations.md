@@ -10,7 +10,7 @@ Ta có examples `(x, y)` và muốn học hàm (function / 함수) `f(x) ≈ y`.
 
 Huấn luyện (training / 학습) chọn parameters giảm mất mát (loss / 손실) trên dữ liệu huấn luyện (training data / 학습 데이터); mục tiêu thật là generalization trên unseen dữ liệu (data / 데이터) từ mục tiêu (target / 대상) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) foundations**, **Unsupervised và self-supervised** tiếp nhận điểm tựa từ **Supervised học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Features và biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Supervised learning học từ nhãn; unsupervised tìm cấu trúc không nhãn, còn self-supervised tạo tín hiệu từ chính dữ liệu. Features và representation quyết định mô hình thấy được tín hiệu nào.
 
 ## Unsupervised và self-supervised
 

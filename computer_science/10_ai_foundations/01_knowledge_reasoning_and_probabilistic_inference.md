@@ -12,7 +12,7 @@ Ví dụ `Human(x) -> Mortal(x)` và `Human(Socrates)` cho phép infer `Mortal(S
 
 Lô-gic (logic / 논리) cho guarantees mạnh nhưng world thực thường incomplete/noisy.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현), lập luận (reasoning / 추론) và probabilistic suy luận (inference / 추론)**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Symbols và propositions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rules và suy luận (inference / 추론) engines** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Symbols và propositions biểu diễn mệnh đề; knowledge graph nối thực thể, còn rules/inference engines suy ra kết luận. Khi dữ liệu bất định, probabilistic inference phải nêu rõ giả định và độ tin cậy.
 
 ## Kiến thức (knowledge / 지식) đồ thị (graph / 그래프)
 

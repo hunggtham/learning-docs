@@ -24,7 +24,7 @@ Các luật này không chỉ dùng trong bài lô-gic (logic / 논리). Chúng 
 
 Xem nền toán chi tiết tại [Logic & Proof](../../mathematics/00_foundations/01_logic_and_proof.md) và [Boolean Algebra](../../mathematics/07_discrete_cs/03_boolean_algebra_and_digital_logic.md).
 
-> **Chuyển mạch:** Trong **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại** tiếp nhận điểm tựa từ **Boolean lô-gic (logic / 논리) là ngôn ngữ của điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Boolean logic biểu diễn điều kiện; state lưu dấu vết quá khứ, state machine mô tả chuyển tiếp, còn invariant là điều phải giữ đúng qua mọi chuyển tiếp.
 
 ## Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại
 

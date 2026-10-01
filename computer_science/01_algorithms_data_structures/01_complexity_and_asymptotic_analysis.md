@@ -10,7 +10,7 @@ Trước khi nói `O(n)`, phải định nghĩa `n`. Với array, thường `n` 
 
 Đây là chi tiết dễ bị bỏ qua và có thể làm classification sai hoàn toàn.
 
-> **Chuyển mạch:** Trong **Thời gian (time / 시간)/không gian (space / 공간) độ phức tạp (complexity / 복잡도) và asymptotic phân tích (analysis / 분석)**, **Chi phí (cost / 비용) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Đầu vào (input / 입력) kích thước (size / 크기) là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Big O, Big Theta và Big Omega** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Trước khi tính chi phí, phải chốt input size và cost model; Big O cho cận trên tăng trưởng, Big Theta mô tả cùng bậc, còn Big Omega giữ cận dưới để so sánh thuật toán.
 
 ## Chi phí (cost / 비용) mô hình (model / 모델)
 

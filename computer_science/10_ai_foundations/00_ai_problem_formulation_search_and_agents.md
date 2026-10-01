@@ -12,7 +12,7 @@ Môi trường (environment / 환경) có thể fully/partially observable, dete
 
 Phân loại này quyết định thuật toán (algorithm / 알고리즘) family phù hợp.
 
-> **Chuyển mạch:** Trong **AI bài toán (problem / 문제) formulation, tìm kiếm (search / 검색) và agents**, **State-space tìm kiếm (search / 검색)** tiếp nhận điểm tựa từ **Tác nhân (agent / 에이전트) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Agent model xác định trạng thái, hành động và mục tiêu; state-space search duyệt các khả năng đó, còn heuristic ưu tiên nhánh có vẻ gần lời giải nhưng phải được kiểm tra về tính đúng đắn.
 
 ## State-space tìm kiếm (search / 검색)
 

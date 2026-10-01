@@ -12,7 +12,7 @@ Static typing kiểm tra nhiều properties trước thời gian chạy (runtime
 
 Một static hệ kiểu (type system / 타입 시스템) vẫn có thể có unsafe escape hatches; một dynamically typed ngôn ngữ (language / 언어) vẫn có bộ nhớ (memory / 메모리) an toàn (safety / 안전) và strong thời gian chạy (runtime / 런타임) checks.
 
-> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **Kiểu (type / 타입) là một proposition về giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nominal và structural typing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Type là proposition về giá trị, nhưng type safety không tự bảo đảm business correctness; nominal và structural typing tiếp theo cho thấy mỗi hệ thống xác định tương thích bằng danh tính hay hình dạng.
 
 ## Kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)
 

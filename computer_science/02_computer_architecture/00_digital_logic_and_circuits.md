@@ -10,7 +10,7 @@ Transistor có thể hoạt động gần như switch được điều khiển. 
 
 NAND và NOR là functionally complete: chỉ một loại gate cũng có thể xây mọi Boolean hàm (function / 함수). Đây là ví dụ lớp trừu tượng (abstraction / 추상화) rất mạnh: từ thiết bị (device / 장치) physics → gate → combinational circuit → CPU datapath.
 
-> **Chuyển mạch:** Trong **Digital lô-gic (logic / 논리), gates và sequential circuits**, **Combinational lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Từ transistor đến lô-gic (logic / 논리) gate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sequential lô-gic (logic / 논리): bộ nhớ (memory / 메모리) xuất hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Transistor tạo gate; combinational logic tính đầu ra chỉ từ đầu vào hiện tại, còn sequential logic thêm trạng thái để lưu nhớ và tạo mạch theo thời gian.
 
 ## Combinational lô-gic (logic / 논리)
 

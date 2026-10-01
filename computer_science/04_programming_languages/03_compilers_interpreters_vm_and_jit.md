@@ -14,7 +14,7 @@ Regular-language techniques phù hợp nhiều đơn vị từ (token / 토큰) 
 
 AST bỏ bớt punctuation không cần thiết và giữ ngữ nghĩa (semantic / 의미적) cấu trúc (structure / 구조). `1 + 2 * 3` phải thành cây (tree / 트리) thể hiện multiplication binding mạnh hơn addition.
 
-> **Chuyển mạch:** Trong **Trình biên dịch (compiler / 컴파일러), trình thông dịch (interpreter / 인터프리터), VM và JIT**, **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Lexing và parsing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intermediate biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Lexing và parsing dựng cấu trúc; semantic analysis kiểm tra ý nghĩa, rồi intermediate representation cho compiler, interpreter và JIT một điểm chung để tối ưu hoặc thực thi.
 
 ## Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)
 
