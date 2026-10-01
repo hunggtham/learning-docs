@@ -1,6 +1,6 @@
 # Di truyền, Biến dị và Đột biến — Inheritance, Variation and Mutation (유전, 변이와 돌연변이)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Di truyền, Biến dị và Đột biến — Inheritance, Variation and Mutation (유전, 변이와 돌연변이)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Alen (allele), genotype và kiểu hình (phenotype)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Diploid organism và nhiễm sắc thể tương đồng (homologous chromosome)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Di truyền, Biến dị và Đột biến — Inheritance, Variation and Mutation (유전, 변이와 돌연변이)**. Route đi từ allele/genotype/phenotype → phân ly, tái tổ hợp và di truyền quần thể → nguồn biến dị/đột biến → chọn lọc và tiến hóa, để phân biệt truyền thông tin với thay đổi tần số trong quần thể.
 
 Chapter trước giải thích DNA lưu thông tin (information / 정보) và biểu hiện gen (gene expression) biến chuỗi (sequence / 시퀀스) thành hàm (function / 함수). Nhưng heredity chỉ thật sự trở thành vấn đề khi organism tạo offspring: **allele nào được truyền, chromosome phân ly ra sao, recombination tạo combination mới thế nào, và vì sao offspring vừa giống vừa khác parent?**
 

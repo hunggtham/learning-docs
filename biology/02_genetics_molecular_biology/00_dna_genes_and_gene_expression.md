@@ -1,6 +1,6 @@
 # DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Hệ gen (genome), chromosome và gene khác nhau thế nào?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. DNA cấu trúc (structure / 구조): chemistry tạo khả năng bản sao (copy / 복사) thông tin (information / 정보)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**. Route đi từ genome/chromosome/gene → cấu trúc và sao chép DNA → phiên mã, dịch mã và điều hòa → protein/kiểu hình, để thông tin di truyền được nối với cơ chế phân tử tạo ra chức năng.
 
 Truyền tín hiệu tế bào (cell signaling) ở chapter trước có thể đổi activity của protein trong vài giây, nhưng nhiều phản hồi (response / 응답) dài hạn cần thay đổi **biểu hiện gen (gene expression)**. Điều đó đưa ta tới câu hỏi nền tảng: **thông tin (information / 정보) sinh học được lưu dưới dạng nào, được bản sao (copy / 복사) ra sao, và làm thế nào chuỗi (sequence / 시퀀스) vật lý trong DNA trở thành protein/chức năng (function)?**
 

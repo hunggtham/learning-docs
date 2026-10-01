@@ -1,6 +1,6 @@
 # Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Genome không chỉ là danh sách gene** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Chromatin tạo tầng (layer / 계층) organization đầu tiên** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**. Route đi từ genome và chromatin → accessibility/epigenetic marks → enhancer, promoter và mạng điều hòa → biểu hiện theo mô, thời gian và môi trường, để “có gene” không bị đồng nhất với “gene đang hoạt động”.
 
 Hai chapter trước đi từ DNA chuỗi (sequence / 시퀀스) tới protein rồi sang inheritance. Bây giờ ta zoom out. Một cell không vận hành bằng một gene riêng lẻ mà bằng **toàn bộ genome và mạng lưới điều hòa (regulatory network)**. Hàng nghìn gene có thể thay expression cùng lúc; chromatin quyết định vùng nào accessible; environmental tín hiệu (signal / 신호) đổi transcriptional program; population chứa hàng triệu variant.
 
