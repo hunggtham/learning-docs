@@ -12,7 +12,7 @@ Without lớp trừu tượng (abstraction / 추상화), to append văn bản (t
 Lớp trừu tượng (abstraction / 추상화) creates **cục bộ (local / 로컬) lập luận (reasoning / 추론)**: solve bài toán (problem / 문제) using mô hình (model / 모델) without reproducing lower-layer mechanics.
 
 
-> **Chuyển mạch:** Từ **Why lớp trừu tượng (abstraction / 추상화) is essential**, ta sang **Leaky lớp trừu tượng (abstraction / 추상화)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Abstraction giảm chi phí nhận thức bằng contract; khi latency, failure hoặc resource detail xuyên qua contract, đó là leaky abstraction cần được đo ở đúng tầng.
 
 ## Leaky lớp trừu tượng (abstraction / 추상화)
 

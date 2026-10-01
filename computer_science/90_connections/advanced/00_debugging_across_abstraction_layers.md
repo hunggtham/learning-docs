@@ -67,7 +67,7 @@ mechanism thấp hơn nào giải thích behavior?
 
 Dấu vết (trace / 추적) cho nhân quả (causal / 인과적) cấu trúc (structure / 구조); metrics cho population/saturation; profiler/counters cho cơ chế (mechanism / 메커니즘); logs cho sự kiện (event / 이벤트)/ngữ cảnh (context / 맥락). Không công cụ (tool / 도구) nào một mình là “truth”.
 
-> **Chuyển mạch:** Sau khi xác định loại bằng chứng cần thu, các ví dụ tiếp theo cho thấy cùng một triệu chứng có thể dẫn tới các owner khác nhau; trước hết là request chậm nhưng query vẫn nhanh.
+> **Chuyển mạch:** Evidence type narrows ownership: metrics reveal saturation, traces reveal causal timing, logs reveal events. The first case separates a slow request from a fast query by locating queue wait before execution.
 
 ## 5. Ví dụ: yêu cầu (request / 요청) chậm nhưng truy vấn (query / 쿼리) nhanh
 

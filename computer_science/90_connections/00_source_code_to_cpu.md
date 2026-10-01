@@ -20,7 +20,7 @@ Nếu dùng `BigDecimal`, thao tác (operation / 연산) không còn map một l
 Ngay từ kiểu ở mã nguồn (source type / 소스 타입), ta đã chọn biểu diễn (representation / 표현)/chi phí (cost / 비용) mô hình (model / 모델) khác.
 
 
-> **Chuyển mạch:** Từ **tầng mã nguồn (source-level / 소스 수준) ngữ nghĩa (semantics / 의미론)**, ta sang **Parsing và bytecode** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Source semantics được parser biến thành cấu trúc, compiler/VM biến thành bytecode hoặc machine code, rồi runtime thực thi; mỗi bước giữ một phần contract và thêm một lớp failure.
 
 ## Parsing và bytecode
 
