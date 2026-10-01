@@ -34,7 +34,7 @@ Vì vậy một phép tách tốt phải thỏa hai điều:
 - các chất khác nhau có thời gian lưu trung bình đủ khác nhau;
 - các phân tử của cùng một chất có phân bố thời gian lưu đủ hẹp.
 
-> **Chuyển mạch:** Trong **Sắc ký — tách chất bằng sự phân bố khác nhau giữa hai pha**, **Cân bằng phân bố** tiếp nhận điểm tựa từ **Từ một lần phân bố tới một đỉnh sắc ký** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian lưu và thời gian chết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mỗi lần chất phân bố giữa hai pha góp phần tạo đỉnh; hệ số phân bố quyết định mức giữ, còn thời gian lưu phải được đọc cùng thời gian chết để tách retention khỏi transit.
 
 ## Cân bằng phân bố
 

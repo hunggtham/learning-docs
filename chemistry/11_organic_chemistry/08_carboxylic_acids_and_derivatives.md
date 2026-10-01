@@ -18,7 +18,7 @@ Nguyên nhân chính là điện tích âm của carboxylate được phi địn
 
 Ngược lại, cơ sở (base / 기반) liên hợp alkoxide của alcohol tập trung điện tích âm mạnh hơn trên một oxygen nên kém bền hơn.
 
-> **Chuyển mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Độ acid của acid carboxylic bắt nguồn từ cộng hưởng** nêu điều cần giải thích; **Ảnh hưởng nhóm thế tới độ acid** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Các dẫn xuất acyl như một họ khả năng phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cộng hưởng ổn định carboxylate nên quyết định độ acid; nhóm thế điều chỉnh ổn định đó, rồi các dẫn xuất acyl được so sánh theo khả năng rời nhóm và chuyển acyl.
 
 ## Ảnh hưởng nhóm thế tới độ acid
 

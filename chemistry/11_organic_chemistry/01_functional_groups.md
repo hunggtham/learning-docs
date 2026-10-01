@@ -24,7 +24,7 @@ Nguyên nhân nằm ở phân bố electron cục bộ. Một nhóm chức có t
 
 Vì vậy nhóm chức nên được hiểu như một **mô-đun điện tử (electronic module)** gắn lên khung phân tử.
 
-> **Chuyển mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Bốn câu hỏi khi gặp một nhóm chức mới** tiếp nhận điểm tựa từ **Nhóm chức không chỉ là nhãn phân loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ankan — nền hydrocarbon ít phân cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Nhóm chức là mô-đun điện tử, nên khi gặp nhóm mới hãy hỏi polarity, resonance, phản ứng đặc trưng và điều kiện; alkane làm baseline ít phân cực để so sánh.
 
 ## Bốn câu hỏi khi gặp một nhóm chức mới
 

@@ -28,7 +28,7 @@ cấu hình electron hóa trị
 
 Nhờ vậy ta tránh biến bảng tuần hoàn thành một tập mũi tên phải học thuộc.
 
-> **Chuyển mạch:** Trong **Hóa học nhóm chính — từ cấu hình hóa trị đến khả năng phản ứng**, **Nhóm 1 — kim loại kiềm: một electron dễ rời khỏi hệ** tiếp nhận điểm tựa từ **Một khung suy luận chung trước khi đi từng nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm 2 — kim loại kiềm thổ: +2 nhưng không đơn giản là “gấp đôi nhóm 1”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khung hóa trị dự đoán xu hướng phản ứng; nhóm 1 dễ mất một electron, còn nhóm 2 giữ hai electron hóa trị chặt hơn nên không thể suy ra hành vi bằng cách “gấp đôi” nhóm 1.
 
 ## Nhóm 1 — kim loại kiềm: một electron dễ rời khỏi hệ
 

@@ -144,7 +144,7 @@ Các cơ chế gồm nhiều loại.
 
 Ion tạp bám lên bề mặt hạt. Hiện tượng mạnh hơn với kết tủa keo có diện tích bề mặt lớn.
 
-> **Chuyển mạch:** Trong **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Bao giữ (occlusion)** tiếp nhận điểm tựa từ **Hấp phụ bề mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kẹt cơ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Hấp phụ giữ chất phân tích trên bề mặt; occlusion nhốt chất trong tinh thể đang lớn, còn kẹt cơ học giữ dung dịch giữa các hạt—ba sai lệch đều làm khối lượng kết tủa cao giả.
 
 ## Bao giữ (occlusion)
 

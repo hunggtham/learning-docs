@@ -63,7 +63,7 @@ Một phương pháp tốt chọn chỉ thị hoặc thuật toán phát hiện 
 
 Từ khối lượng chất chuẩn sơ cấp, số mol được xác định trực tiếp.
 
-> **Chuyển mạch:** Trong **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Dung dịch chuẩn thứ cấp** tiếp nhận điểm tựa từ **Chất chuẩn sơ cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **pH tại điểm tương đương không luôn bằng 7** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Chất chuẩn sơ cấp xác lập nồng độ đáng tin; dung dịch chuẩn thứ cấp phải được chuẩn hóa, sau đó điểm tương đương được diễn giải theo stoichiometry và acid–base chứ không mặc định pH bằng 7.
 
 ## Dung dịch chuẩn thứ cấp
 

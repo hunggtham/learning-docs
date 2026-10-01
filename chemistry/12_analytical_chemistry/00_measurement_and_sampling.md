@@ -61,7 +61,7 @@ Thiết bị có thể đo lặp với RSD 0,5%, nhưng nếu vật liệu khôn
 
 Đất, quặng, thực phẩm, bột dược phẩm, dòng nước thải và nguyên liệu công nghiệp đều có thể biến thiên mạnh theo không gian hoặc thời gian.
 
-> **Chuyển mạch:** Trong **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Quần thể và mẫu** tiếp nhận điểm tựa từ **Đại lượng cần đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lấy mẫu ngẫu nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Đại lượng cần đo phải được định nghĩa trước; quần thể và mẫu quyết định dữ liệu đại diện đến đâu, rồi lấy mẫu ngẫu nhiên giảm bias trước khi định lượng.
 
 ## Quần thể và mẫu
 

@@ -30,7 +30,7 @@ tia X            → electron lõi / cấu trúc ở thang nguyên tử
 
 Thứ tự này xuất phát từ chính thang năng lượng lượng tử của các bậc tự do khác nhau.
 
-> **Chuyển mạch:** Trong **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Hấp thụ, phát xạ và tán xạ** tiếp nhận điểm tựa từ **Năng lượng photon và vì sao bước sóng quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc chọn — đủ năng lượng chưa chắc tạo tín hiệu mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Năng lượng photon chọn được transition; hấp thụ, phát xạ và tán xạ là các đường tương tác khác nhau, còn selection rule quyết định tín hiệu có quan sát mạnh hay bị cấm.
 
 ## Hấp thụ, phát xạ và tán xạ
 
