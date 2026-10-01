@@ -1,6 +1,6 @@
 # Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Baseline trước reform** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Agricultural reform: từ collective môi trường vận hành (production / 운영 환경) sang household quyết định (decision / 결정)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Vietnam Đổi Mới bằng chứng (evidence / 증거) — growth, poverty và institutional thay đổi (change / 변경)**. Route đi từ baseline trước reform → nông nghiệp và household decision → tăng trưởng, nghèo đói và bất bình đẳng → thể chế/thị trường và giới hạn suy luận, để số liệu được đọc cùng mốc so sánh và cơ chế cải cách.
 
 [14 — Vietnam: Đổi Mới](14_case_vietnam_doi_moi_market_reform_and_socialist_orientation.md) đã giải thích reform kiến trúc (architecture / 아키텍처). Chapter này đi thêm một bước: đưa các claim về “thành công kinh tế”, “thị trường (market / 시장) reform” và “socialist orientation” về các observable variables cụ thể.
 

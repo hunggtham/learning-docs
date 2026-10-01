@@ -1,6 +1,6 @@
 # Close reading *Capital* — commodity, giá trị (value / 값), surplus và accumulation
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Close reading Capital — commodity, giá trị (value / 값), surplus và accumulation**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Vì sao Marx bắt đầu từ commodity?** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Use-value không phải giá trị (value / 값)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Close reading Capital — commodity, giá trị (value / 값), surplus và accumulation**. Route đi từ commodity/use-value → value-form và labor → money, surplus value và circulation → accumulation/tái sản xuất, để đọc *Capital* theo chuỗi khái niệm và quan hệ xã hội mà văn bản xây dựng.
 
 Chapter này không cố “tóm tắt *Capital*” thành vài định nghĩa. Mục tiêu là dựng lại đường suy luận trong *Capital, Volume I* để thấy vì sao Marx bắt đầu từ **commodity** thay vì bắt đầu từ “capitalist” hay “lớp (class / 클래스) struggle”, rồi từ đó đi qua giá trị (value / 값), money, labour-power, surplus giá trị (value / 값) và accumulation.
 

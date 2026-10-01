@@ -1,6 +1,6 @@
 # China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Starting điều kiện (condition / 조건): collective agriculture** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. HRS thay đổi cái gì?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **China household responsibility hệ thống (system / 시스템) — incentives, quyết định (decision / 결정) rights và gradual reform**. Route đi từ nông nghiệp tập thể → household responsibility và quyền quyết định → incentives, output và thị trường → gradual reform, để phân biệt thay đổi hợp đồng/quyền với thay đổi sở hữu trên giấy.
 
 [13 — China after 1978](13_case_china_reform_opening_and_dual_track_transition.md) đã mô tả reform đường dẫn (path / 경로) tổng quát. Chapter này zoom vào một institutional thay đổi (change / 변경) nhỏ hơn nhưng cực kỳ hữu ích về lập luận nhân quả (causal reasoning / 인과적 추론): **Household Responsibility Hệ thống (system / 시스템) (HRS)** trong nông nghiệp.
 

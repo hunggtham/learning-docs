@@ -1,6 +1,6 @@
 # Soviet bằng chứng (evidence / 증거) — đo lường (measurement / 측정), counterfactual và human chi phí (cost / 비용)
 
-> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Soviet bằng chứng (evidence / 증거) — đo lường (measurement / 측정), counterfactual và human chi phí (cost / 비용)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **1. Một economy có thể tăng đầu ra (output / 출력) nhưng vẫn tạo welfare mất mát (loss / 손실)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **2. Vì sao Soviet statistics khó đọc?** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Soviet bằng chứng (evidence / 증거) — đo lường (measurement / 측정), counterfactual và human chi phí (cost / 비용)**. Route đi từ output và welfare → chất lượng thống kê/đo lường → counterfactual về nguồn lực và lựa chọn chính sách → chi phí con người, để đánh giá thành tích cùng sai lệch dữ liệu và phương án thay thế.
 
 [12 — Soviet industrialization, planning và collectivization](12_case_soviet_industrialization_planning_and_collectivization.md) đã dựng trường hợp (case / 사례) ở mức (level / 수준) institution và cơ chế (mechanism / 메커니즘). Chapter này giải quyết một câu hỏi khó hơn: **ta biết các kết quả (outcome / 결과) đó bằng cách nào, và “so với cái gì” mới có ý nghĩa?**
 
