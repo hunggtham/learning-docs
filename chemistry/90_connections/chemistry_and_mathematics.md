@@ -12,7 +12,7 @@ Hóa lượng, nồng độ và định luật khí dựa mạnh vào tỉ lệ,
 
 Phương trình hóa học cân bằng cũng có thể được viết thành hệ ràng buộc tuyến tính dựa trên bảo toàn nguyên tố. Khi số chất tăng, bài toán cân bằng có thể được giải như bài toán tìm véc-tơ (vector / 벡터) trong không gian nghiệm của ma trận thành phần.
 
-> **Chuyển mạch:** Trong **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Logarithm** tiếp nhận điểm tựa từ **Đại số và phân tích thứ nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giải tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Algebra và dimensional analysis kiểm tra cấu trúc phương trình; logarithm nén scale như pH/pKa, còn calculus mô tả tốc độ biến đổi và kinetics.
 
 ## Logarithm
 

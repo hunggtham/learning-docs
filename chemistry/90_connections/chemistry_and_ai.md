@@ -12,7 +12,7 @@ Một bài toán phổ biến là nhận đầu vào dưới dạng cấu trúc 
 
 Điểm quan trọng là mô hình không “nhìn thấy phân tử” theo cách nhà hóa học nhìn cấu trúc Lewis. Nó chỉ nhận một biểu diễn, vì vậy giới hạn của biểu diễn sẽ trở thành giới hạn của mô hình.
 
-> **Chuyển mạch:** Trong **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Dự đoán phản ứng** tiếp nhận điểm tựa từ **Dự đoán tính chất từ cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học sinh phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Structure-to-property prediction tạo feature space; reaction prediction mở rộng sang transformation space, còn molecular generation phải giữ chemical validity và uncertainty thay vì chỉ tối ưu score.
 
 ## Dự đoán phản ứng
 

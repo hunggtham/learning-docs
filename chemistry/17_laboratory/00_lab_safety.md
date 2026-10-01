@@ -24,7 +24,7 @@ xác suất thế nào?
 hàng rào nào ngăn sự cố?
 ```
 
-> **Chuyển mạch:** Trong **An toàn phòng thí nghiệm — suy luận về mối nguy trước khi làm thí nghiệm**, **Hệ phân cấp kiểm soát** tiếp nhận điểm tựa từ **Mối nguy, phơi nhiễm và rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Loại bỏ và thay thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Hazard, exposure và risk mô tả vấn đề; hierarchy of controls chuyển mô tả đó thành lựa chọn can thiệp, bắt đầu từ elimination/substitution trước PPE.
 
 ## Hệ phân cấp kiểm soát
 

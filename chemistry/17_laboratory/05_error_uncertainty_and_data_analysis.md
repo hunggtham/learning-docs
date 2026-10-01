@@ -26,7 +26,7 @@ c=(10.24\pm0.08)\;mg/L
 
 có ý nghĩa hơn nhiều so với chỉ viết `10.240000 mg/L`, vì phần \(\pm0.08\) cho biết độ phân giải thông tin thực sự của phép đo.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Đại lượng cần đo và mô hình đo** tiếp nhận điểm tựa từ **Sai số và độ không đảm bảo không phải cùng một khái niệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ đúng, độ chụm và độ chệch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Measurement model xác định measurand và nguồn error; uncertainty mô tả độ tin cậy của kết quả, còn accuracy/precision/bias phân biệt đúng gần giá trị thật với lặp lại ổn định.
 
 ## Đại lượng cần đo và mô hình đo
 

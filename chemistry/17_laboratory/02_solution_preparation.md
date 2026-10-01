@@ -10,7 +10,7 @@ Trước khi tính, phải xác định chính xác nồng độ đang nói tớ
 
 Một mục tiêu “0,1%” là mơ hồ nếu không nói rõ `w/w`, `w/v` hay `v/v`.
 
-> **Chuyển mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Pha dung dịch mol từ chất rắn** tiếp nhận điểm tựa từ **Bắt đầu từ thông số cần đạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu chỉnh độ tinh khiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Target concentration xác định mol cần cân; pha từ chất rắn phải tính purity và chuyển định lượng vào volumetric flask để giữ traceability.
 
 ## Pha dung dịch mol từ chất rắn
 

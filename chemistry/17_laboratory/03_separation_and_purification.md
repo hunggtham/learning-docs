@@ -10,7 +10,7 @@ Mỗi bước tinh sạch tiêu tốn dung môi, năng lượng, thời gian, hi
 
 Vì vậy một tuyến tổng hợp tốt thường là tuyến **không tạo ra tạp chất khó loại ngay từ đầu**, thay vì chấp nhận phản ứng kém chọn lọc rồi thêm nhiều bước làm sạch.
 
-> **Chuyển mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **“Tinh khiết” phụ thuộc mục đích** tiếp nhận điểm tựa từ **Phân tách luôn có chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Purity là yêu cầu theo mục đích, còn separation luôn đánh đổi recovery, time và solvent; filtration là bước đầu khi khác biệt kích thước/pha đủ lớn.
 
 ## “Tinh khiết” phụ thuộc mục đích
 

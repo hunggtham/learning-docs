@@ -10,7 +10,7 @@ Trước khi dùng một thiết bị, cần hỏi: nó đo hoặc cấp đại 
 
 Đó là lý do vạch `100 mL` trên cốc becher không có cùng ý nghĩa với bình định mức 100 mL.
 
-> **Chuyển mạch:** Trong **Dụng cụ thủy tinh và thiết bị — giao diện đo lường đã được hiệu chuẩn**, **Cốc becher** tiếp nhận điểm tựa từ **Phép đo bắt đầu từ “hợp đồng” của dụng cụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bình Erlenmeyer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mỗi dụng cụ có measurement contract về thể tích, độ chính xác và cách dùng; beaker phù hợp thao tác chung, còn Erlenmeyer hỗ trợ trộn/đun trước khi chọn dụng cụ định lượng chính xác.
 
 ## Cốc becher
 

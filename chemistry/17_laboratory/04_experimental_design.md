@@ -19,7 +19,7 @@ Những câu hỏi này cần thiết kế khác nhau.
 
 Thí nghiệm nhân quả chủ động thay đổi một yếu tố và hỏi điều gì thay đổi do chính yếu tố đó. Phép đo phân tích lại có thể chỉ nhằm ước lượng một đại lượng chưa biết với hệ hiệu chuẩn có khả năng truy xuất. Thí nghiệm sàng lọc có thể nhằm tìm những yếu tố quan trọng trước khi cơ chế được hiểu đầy đủ.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Định nghĩa biến theo cách có thể đo** tiếp nhận điểm tựa từ **Bắt đầu từ câu hỏi nhân quả hoặc mô tả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị thí nghiệm và tính độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Câu hỏi mô tả/nhân quả phải được operationalize thành biến đo; experimental unit và independence sau đó quyết định bằng chứng có hỗ trợ inference hay chỉ lặp lại cùng một mẫu.
 
 ## Định nghĩa biến theo cách có thể đo
 
