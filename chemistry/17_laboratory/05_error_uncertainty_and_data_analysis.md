@@ -54,7 +54,7 @@ Ba ý tưởng thường bị trộn lẫn là **độ chụm (precision)**, **�
 
 Điểm cốt lõi là: lặp lại nhiều lần chỉ giúp hiểu biến thiên ngẫu nhiên tốt hơn; nó không tự sửa một phương pháp bị chệch có hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Biến thiên ngẫu nhiên** tiếp nhận điểm tựa từ **Độ đúng, độ chụm và độ chệch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng hệ thống và nguồn độ chệch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Độ chụm cho biết các lần đo tụ lại, độ đúng so sánh trung bình với giá trị tham chiếu, còn độ chệch dịch chuyển cả trung tâm kết quả. Vì thế, mục kế tiếp tách **Biến thiên ngẫu nhiên** để định lượng phần dao động còn lại sau khi nhận diện sai lệch hệ thống.
 
 ## Biến thiên ngẫu nhiên
 
@@ -68,7 +68,7 @@ SE(\bar{x})=\frac{s}{\sqrt n}
 
 Điều này giải thích vì sao tăng số phép lặp có thể cải thiện ước lượng trung bình. Tuy nhiên nó **không** có nghĩa mọi độ không đảm bảo đều giảm vô hạn theo \(1/\sqrt n\). Độ chệch hiệu chuẩn, mẫu không đại diện hoặc drift có tương quan có thể đặt ra giới hạn mà việc đo lặp không thể vượt qua.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Biến thiên ngẫu nhiên** nêu điều cần giải thích; **Hiệu ứng hệ thống và nguồn độ chệch** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Trung bình, phương sai và độ lệch chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Biến thiên ngẫu nhiên thay đổi giữa các lần lặp và có thể ước lượng bằng phép đo lặp; hiệu ứng hệ thống vẫn tồn tại qua các lần lặp nên phải truy nguồn bằng chuẩn, mẫu thêm chuẩn hoặc so sánh phương pháp. Khi hai phần đã tách, **Trung bình, phương sai và độ lệch chuẩn** sẽ tóm tắt tâm và độ phân tán của dữ liệu.
 
 ## Hiệu ứng hệ thống và nguồn độ chệch
 
@@ -85,7 +85,7 @@ Các nguồn gây độ chệch thường gồm:
 
 Muốn phát hiện chúng phải dùng bằng chứng độc lập như vật liệu chuẩn được chứng nhận, mẫu thêm chuẩn, chuẩn kiểm tra, so sánh phương pháp hoặc thử nghiệm thu hồi.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Hiệu ứng hệ thống và nguồn độ chệch** nêu điều cần giải thích; **Trung bình, phương sai và độ lệch chuẩn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ lệch chuẩn tương đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Sau khi nhận diện nguồn chệch, **Trung bình, phương sai và độ lệch chuẩn** lần lượt cho biết vị trí trung tâm, độ phân tán và độ ổn định của các lần đo. Khi cần so sánh độ chụm giữa những thang nồng độ khác nhau, mục **Độ lệch chuẩn tương đối** chuẩn hóa độ phân tán theo chính giá trị trung bình.
 
 ## Trung bình, phương sai và độ lệch chuẩn
 
@@ -111,7 +111,7 @@ Mẫu số \(n-1\) xuất hiện vì khi dùng chính dữ liệu để ước l
 
 **Độ lệch chuẩn (standard deviation, SD)** mô tả độ phân tán của các quan sát riêng lẻ. **Sai số chuẩn của trung bình (standard error, SE)** mô tả độ không chắc của ước lượng trung bình do lấy mẫu hữu hạn. Hai đại lượng trả lời hai câu hỏi khác nhau và không nên dùng thay nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Độ lệch chuẩn tương đối** tiếp nhận điểm tựa từ **Trung bình, phương sai và độ lệch chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng tin cậy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Trung bình và độ lệch chuẩn mô tả độ lớn tuyệt đối của tâm và độ phân tán; **Độ lệch chuẩn tương đối** chia độ phân tán cho trung bình để so sánh độ chụm giữa các mức nồng độ. Bước tiếp theo, **Khoảng tin cậy** đưa thêm bất định do lấy mẫu vào khoảng bao quanh ước lượng.
 
 ## Độ lệch chuẩn tương đối
 
@@ -123,7 +123,7 @@ RSD=\frac{s}{\bar{x}}\times100\%
 
 cho phép so sánh độ chụm ở các thang nồng độ khác nhau. Tuy nhiên khi \(\bar{x}\) gần 0, RSD trở nên rất lớn hoặc mất ý nghĩa, nên không nên sử dụng máy móc.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Khoảng tin cậy** tiếp nhận điểm tựa từ **Độ lệch chuẩn tương đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ không đảm bảo loại A và loại B** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** RSD mô tả độ phân tán tương đối nhưng chưa nói trực tiếp xác suất bao phủ của một ước lượng. **Khoảng tin cậy** diễn tả hành vi lặp lại của thủ tục lấy mẫu; từ đó cần phân biệt nó với phân loại độ không đảm bảo loại A và loại B trong đo lường.
 
 ## Khoảng tin cậy
 
@@ -139,7 +139,7 @@ Trong cách diễn giải tần suất (frequentist), khoảng tin cậy 95% kh�
 
 Đây là một ví dụ cho thấy cần phân biệt **mô hình thống kê** với cách nói trực giác hàng ngày.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Độ không đảm bảo loại A và loại B** tiếp nhận điểm tựa từ **Khoảng tin cậy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ không đảm bảo chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khoảng tin cậy mô tả độ bao phủ của một thủ tục lấy mẫu dưới mô hình thống kê; trong đo lường, **Độ không đảm bảo loại A và loại B** lại phân loại theo cách từng thành phần được đánh giá. Phân biệt hai ngôn ngữ này trước khi cộng các thành phần là bước cần thiết.
 
 ## Độ không đảm bảo loại A và loại B
 
@@ -151,7 +151,7 @@ Trong đo lường, người ta thường phân loại cách đánh giá độ k
 
 Loại A/B mô tả **cách đánh giá**, không hoàn toàn đồng nghĩa với “ngẫu nhiên/hệ thống”. Một chứng chỉ hiệu chuẩn chẳng hạn có thể chứa cả nhiều thành phần khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Độ không đảm bảo chuẩn** tiếp nhận điểm tựa từ **Độ không đảm bảo loại A và loại B** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lan truyền độ không đảm bảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Loại A dùng thống kê của phép đo lặp, còn loại B dùng chứng chỉ, độ phân giải, hiệu chuẩn hoặc thông tin trước; cả hai đều quy về các thành phần độ lệch chuẩn tương đương. **Độ không đảm bảo chuẩn** tiếp theo sẽ chuẩn hóa các thành phần ấy trước khi kết hợp.
 
 ## Độ không đảm bảo chuẩn
 
@@ -171,7 +171,7 @@ u=\frac{a}{\sqrt6}
 
 Việc chọn phân bố phải dựa trên thông tin thật về nguồn sai lệch, không phải chọn công thức nào cho số nhỏ hơn.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Lan truyền độ không đảm bảo** tiếp nhận điểm tựa từ **Độ không đảm bảo chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương quan và sai lệch chung nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Độ không đảm bảo chuẩn đưa các nguồn về cùng thang độ lệch chuẩn và không tự giả định nguồn nào nhỏ hơn. Khi các thành phần đi qua công thức (y=f(x_1,ldots,x_n)), **Lan truyền độ không đảm bảo** sẽ tính tác động của từng đạo hàm và mối tương quan.
 
 ## Lan truyền độ không đảm bảo
 
