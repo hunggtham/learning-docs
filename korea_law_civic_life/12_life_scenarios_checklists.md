@@ -27,7 +27,7 @@ Sau đó:
 
 Mục tiêu của checklist là xác định đúng loại tranh chấp và chứng cứ, không tự kết luận trách nhiệm pháp lý cuối cùng.
 
-> **Chuyển mạch:** Trong **12. Các tình huống đời sống và checklist tra cứu**, **2. Làm overtime nhưng không hiểu cách tính** tiếp nhận điểm tựa từ **1. Công ty trả thiếu lương hoặc chưa trả lương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Bị thông báo nghỉ việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Wage shortfall and overtime require separate evidence and calculation; after payroll, the checklist moves to dismissal notice, deadline and appropriate official route.
 
 ## 2. Làm overtime nhưng không hiểu cách tính
 

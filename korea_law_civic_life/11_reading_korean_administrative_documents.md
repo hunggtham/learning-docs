@@ -22,7 +22,7 @@ Thứ tự nên dùng:
 → 담당자 연락처
 ```
 
-> **Chuyển mạch:** Trong **11. Cách đọc văn bản hành chính tiếng Hàn**, **2. Từ khóa ở phần đầu văn bản** tiếp nhận điểm tựa từ **1. Đừng đọc từ đầu đến cuối như bài văn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Các động từ pháp lý quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Administrative documents are structured records, not essays; header keywords identify issuer/date/subject, then legal verbs reveal duty, permission, refusal or deadline.
 
 ## 2. Từ khóa ở phần đầu văn bản
 

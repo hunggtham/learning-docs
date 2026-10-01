@@ -20,7 +20,7 @@ tài khoản thanh toán
 
 Visa và thời gian cư trú có thể ảnh hưởng khả năng mở hoặc sử dụng một số sản phẩm, nhưng điều kiện cụ thể còn phụ thuộc ngân hàng và quy định hiện hành.
 
-> **Chuyển mạch:** Trong **08. Ngân hàng, tín dụng và bảo vệ người tiêu dùng tài chính**, **2. Tài khoản ngân hàng (계좌)** tiếp nhận điểm tựa từ **1. Hệ thống tài chính trong đời sống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tín dụng (신용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Financial system context explains where an account sits; 계좌 records access and transactions, while 신용 changes borrowing terms and consumer risk.
 
 ## 2. Tài khoản ngân hàng (계좌)
 

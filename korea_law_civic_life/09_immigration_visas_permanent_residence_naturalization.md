@@ -15,7 +15,7 @@ Người nước ngoài ở Hàn Quốc thường dùng chung từ “visa”, n
 
 Một người có thể sống lâu dài ở Hàn Quốc mà không có quốc tịch Hàn. `영주권` và `국적` không phải một khái niệm.
 
-> **Chuyển mạch:** Trong **09. Xuất nhập cảnh, visa, thường trú và nhập quốc tịch**, **2. Luật nền tảng** tiếp nhận điểm tựa từ **1. Bốn khái niệm phải tách riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Visa và 체류자격** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Entry, stay, permanent residence and nationality are distinct legal statuses; the foundation rules come first, then visa/체류자격 determine the permitted activity and duration.
 
 ## 2. Luật nền tảng
 

@@ -6,7 +6,7 @@
 
 Một người sống lâu dài tại Hàn Quốc nên biết **đi đâu trước khi hỏi cộng đồng**. tệp (file / 파일) này là bản đồ cổng chính thức theo loại vấn đề.
 
-> **Chuyển mạch:** Trong **10. Cổng chính thức và workflow tự tra cứu**, **2. Pháp luật** tiếp nhận điểm tựa từ **1. Mục tiêu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dịch vụ hành chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** A research goal determines evidence needed; official law portals provide the rule text, while administrative-service portals provide procedure, eligibility and submission paths.
 
 ## 2. Pháp luật
 
