@@ -1,6 +1,6 @@
 # Ancol, ete và amin — cặp electron tự do, proton hóa và cơ chế phản ứng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ancol, ete và amin — cặp electron tự do, proton hóa và cơ chế phản ứng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ancol — một nhóm vừa có tính acid vừa có tính cơ sở (base / 기반)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Alkoxide — dạng khử proton phản ứng mạnh hơn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ancol, ete và amin — cặp electron tự do, proton hóa và cơ chế phản ứng**. Route đi từ cặp electron tự do và proton hóa → acid–base/alkoxide → thế, loại và oxy hóa → liên kết hydrogen, độ tan và chức năng sinh học, để cùng một nhóm chức được đọc theo cả tính chất lẫn cơ chế.
 
 > Các nhóm chức chứa oxygen và nitrogen đưa **cặp electron tự do (lone pair)**, tính phân cực, liên kết hydrogen và hóa học acid–cơ sở (base / 기반) vào khung carbon. Thay vì học từng phản ứng như một danh sách, nên tổ chức chương quanh bốn câu hỏi: cặp electron tự do có sẵn để phản ứng không, dị nguyên tử đang ở trạng thái proton hóa nào, nhóm rời có đủ ổn định không và môi trường điện tử làm tâm nào trở nên ái nhân hay ái điện.
 

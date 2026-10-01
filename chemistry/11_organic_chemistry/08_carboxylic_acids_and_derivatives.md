@@ -1,6 +1,6 @@
 # Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Độ acid của acid carboxylic bắt nguồn từ cộng hưởng** gom dữ liệu hoặc nguồn để kiểm tra một nhận định cụ thể; sau đó sang **Ảnh hưởng nhóm thế tới độ acid** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**. Route đi từ cộng hưởng/carboxylate và độ acid → hoạt hóa carbonyl → cơ chế thế acyl nucleophile → acid, ester, amide và anhydride → ứng dụng sinh học, để so sánh dẫn xuất bằng khả năng rời nhóm và chuyển acyl.
 
 > Acid carboxylic và các dẫn xuất cùng chia sẻ **mô-típ acyl (acyl motif)** \(R-C(=O)-Y\). Hóa học của chúng được tổ chức quanh một câu hỏi trung tâm: sau khi nucleophile tấn công carbonyl, **Y có thể rời đi không?** Nếu có, bước cộng thường được theo sau bởi bước loại và carbonyl được tái tạo — **thế acyl ái nhân (nucleophilic acyl substitution / 친핵성 아실 치환)**.
 

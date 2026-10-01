@@ -1,6 +1,6 @@
 # Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ankan — không “trơ”, mà thiếu vị trí phản ứng dễ tiếp cận** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Liên kết C–H không hoàn toàn tương đương** để xác định owner và đường quay lại nguồn chuẩn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ankan, anken và ankin — từ liên kết sigma tới phản ứng của hệ pi**. Route đi từ lai hóa sp3/sp2/sp và liên kết σ/π → độ bền tương đối → thế, cộng, loại và oxy hóa → chọn lọc theo cấu trúc, để mức độ phản ứng được suy ra từ orbital và cơ chế.
 
 > Hydrocarbon là hệ đơn giản nhất để thấy một nguyên lý lớn của hóa học hữu cơ: chỉ cần thay đổi kiểu liên kết từ hệ chỉ có sigma sang hệ chứa pi, hình học, phân bố electron, độ acid và con đường phản ứng thay đổi mạnh. Vì vậy chương này không nên được học như danh sách phản ứng của ankan, anken và ankin; nó là bài học về cách **kiểu liên kết quyết định khả năng phản ứng**.
 

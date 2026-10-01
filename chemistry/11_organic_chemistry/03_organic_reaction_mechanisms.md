@@ -1,6 +1,6 @@
 # Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Mũi tên cong là quy tắc bảo toàn electron** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cơ chế khác phương trình tổng** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**. Route đi từ electron-flow và acid–base → trung gian/trạng thái chuyển tiếp → tọa độ năng lượng và động học → regio-, stereo- và chemoselectivity, để phương trình tổng luôn được giải thích bằng chuỗi biến đổi vi mô.
 
 > **Cơ chế phản ứng hữu cơ (organic reaction mechanism / 유기 반응 메커니즘)** là mô hình từng bước mô tả cách liên kết bị phá, liên kết mới hình thành, mật độ electron di chuyển và những chất trung gian/trạng thái chuyển tiếp nào nối chất phản ứng với sản phẩm. Cơ chế không phải một đoạn phim được ghi trực tiếp; nó là mô hình bị ràng buộc bởi động học, hóa lập thể, hiệu ứng đồng vị, phổ học, phân bố sản phẩm và cấu trúc điện tử.
 

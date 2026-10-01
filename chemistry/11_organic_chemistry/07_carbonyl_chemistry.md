@@ -1,6 +1,6 @@
 # Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Cấu trúc điện tử — vì sao carbon có tính ái điện** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thay đổi hình học khi nucleophile tấn công** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**. Route đi từ phân cực C=O và tính ái điện → cộng nucleophile/tạo trung gian tứ diện → chuyển proton và rời nhóm → aldehyde, ketone, acid và dẫn xuất acyl, để tính chất carbonyl nối thẳng vào cơ chế.
 
 > **Nhóm carbonyl (carbonyl group / 카보닐기)** chứa liên kết đôi carbon–oxygen. Vì oxygen âm điện hơn carbon, C=O có sự bất đối xứng điện tử thường trực: oxygen giàu electron còn carbon nghèo electron. Chính sự phân cực đơn giản này tạo ra một trong những lô-gic (logic / 논리) phản ứng tái sử dụng nhiều nhất trong hóa hữu cơ.
 

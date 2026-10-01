@@ -1,6 +1,6 @@
 # Đồng phân và hóa lập thể — cùng công thức, khác phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đồng phân cấu tạo — khi cách kết nối khác nhau** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Đồng phân lập thể — cùng đồ thị, khác cách sắp xếp 3D** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**. Route đi từ công thức phân tử → đồng phân cấu tạo → cấu hình/cấu dạng 3D → chirality, enantiomer/diastereomer và quy tắc R/S → tác động lên phản ứng, phổ và thuốc, để “cùng công thức” không bị đồng nhất với “cùng tính chất”.
 
 > **Đồng phân (isomers / 이성질체)** có cùng công thức phân tử nhưng khác cách các nguyên tử nối với nhau hoặc khác cách sắp xếp trong không gian. **Hóa lập thể (stereochemistry / 입체화학)** nghiên cứu cách cấu trúc phân tử tồn tại trong không gian ba chiều và vì sao cách sắp xếp 3D có thể làm thay đổi tính chất vật lý, con đường phản ứng và khả năng nhận diện sinh học.
 

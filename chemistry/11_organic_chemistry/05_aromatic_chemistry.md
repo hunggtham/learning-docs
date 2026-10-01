@@ -1,6 +1,6 @@
 # Hóa học thơm — hệ π vòng phi định xứ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học thơm — hệ π vòng phi định xứ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Bài toán benzene** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Góc nhìn orbital — sáu orbital p tạo một hệ vòng duy nhất** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hóa học thơm — hệ π vòng phi định xứ**. Route đi từ liên hợp và aromaticity → orbital π phi định xứ → ổn định hóa và thế điện tử thơm → định hướng nhóm thế, để benzene và hệ vòng khác được giải thích bằng tính đối xứng thay vì hình vẽ vòng tròn.
 
 > **Tính thơm (aromaticity / 방향족성)** là một kiểu ổn định đặc biệt xuất hiện trong một số hệ π vòng, phẳng và liên hợp. Nó không đồng nghĩa với “có vòng benzene” và về bản chất không liên quan đến mùi. Tính thơm xuất hiện từ **cấu trúc tô-pô orbital, số electron và sự phi định xứ vòng**.
 

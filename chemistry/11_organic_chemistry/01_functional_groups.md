@@ -1,6 +1,6 @@
 # Nhóm chức — các mô-đun điện tử của hóa học hữu cơ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Nhóm chức không chỉ là nhãn phân loại** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bốn câu hỏi khi gặp một nhóm chức mới** để mở câu hỏi trung tâm cho phần kế tiếp. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**. Route đi từ cấu trúc/điện tử của nhóm chức → acid–base, nucleophile/electrophile và liên hợp → phản ứng đặc trưng → phổ, tính chất và sinh học, để nhận diện nhóm chức luôn kéo theo dự đoán cơ chế.
 
 > **Nhóm chức (functional group / 작용기)** là một kiểu sắp xếp nguyên tử và liên kết lặp lại tạo ra một khuôn mẫu điện tử đủ nhất quán để dự đoán nhiều họ phản ứng. Nhờ nhóm chức, hóa học hữu cơ không trở thành việc ghi nhớ hàng triệu phân tử riêng lẻ: ta có thể suy luận từ phân bố electron, độ acid–cơ sở (base / 기반), tính ái nhân, tính ái điện, khả năng rời nhóm và ổn định cộng hưởng.
 

@@ -1,6 +1,6 @@
 # Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Vì sao carbon tạo được sự đa dạng đặc biệt** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Khung carbon như một đồ thị** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**. Route đi từ hóa trị và lai hóa carbon → khung carbon/độ tự do quay → nhóm chức và đồng phân → tính chất, phản ứng và vật liệu hữu cơ, để kiến trúc phân tử trở thành nền của toàn bộ nhánh hữu cơ.
 
 > **Hóa học hữu cơ (organic chemistry / 유기화학)** không nên được hiểu đơn giản là “hóa học của các hợp chất chứa carbon”. Giá trị thực sự của lĩnh vực này nằm ở việc carbon có thể tạo ra những **đồ thị phân tử (molecular graphs)** cực kỳ đa dạng, trong khi phân bố electron, hình học và nhóm chức biến các đồ thị đó thành một cảnh quan phản ứng có lô-gic (logic / 논리).
 
