@@ -27,7 +27,7 @@ Nếu power mất mát (loss / 손실) xảy ra sau bất kỳ bước nào, fil
 
 Đây là bất biến (invariant / 불변식) mạnh hơn “ghi (write / 쓰기) thường hoàn tất”.
 
-> **Chuyển mạch:** Trong **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **2. Atomicity, visibility và durability là ba thuộc tính (property / 속성) khác nhau** tiếp nhận điểm tựa từ **1. Bài toán ban đầu: một thao tác (operation / 연산) lô-gic (logic / 논리) gồm nhiều writes vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Page bộ nhớ đệm (cache / 캐시) làm write() chưa đồng nghĩa persistence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Một logical operation có thể gồm nhiều physical writes; atomicity, visibility và durability vì thế tách biệt, và page cache khiến `write()` thành công chưa đồng nghĩa dữ liệu đã bền.
 
 ## 2. Atomicity, visibility và durability là ba thuộc tính (property / 속성) khác nhau
 

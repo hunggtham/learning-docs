@@ -10,7 +10,7 @@ Dependability literature often distinguishes fault = underlying cause, lỗi (er
 
 Terminology varies, but distinction encourages defense before bên ngoài (external / 외부) impact.
 
-> **Chuyển mạch:** Trong **Fault tolerance, khả năng quan sát (observability / 관측 가능성) và độ tin cậy (reliability / 신뢰성)**, **Redundancy** tiếp nhận điểm tựa từ **Fault, lỗi (error / 오류) và thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thử lại (retry / 재시도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Fault gây error và failure; redundancy giảm blast radius khi failure độc lập, còn retry chỉ an toàn khi operation idempotent và có budget/backoff rõ ràng.
 
 ## Redundancy
 

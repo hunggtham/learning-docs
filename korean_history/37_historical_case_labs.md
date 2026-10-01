@@ -8,7 +8,7 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 Đừng dùng các tình huống như sáu câu chuyện đại diện cho toàn bộ lịch sử. Chúng là điểm vào để luyện một thói quen: không giải thích sự kiện bằng một nguyên nhân duy nhất và không tách cung điện, cánh đồng, bến cảng, nhà máy khỏi nhau. Sau mỗi lab, hãy quay lại chapter chính được liên kết để mở rộng phần bị lược bỏ.
 
-> **Chuyển mạch:** Trong **Xưởng đọc lịch sử: sáu tình huống nối mốc thời gian với đời sống**, **Cách dùng xưởng đọc** cho ta quy tắc; **Lab 1 — Gyeongju, thế kỷ VII–VIII: một kinh đô được nuôi bằng mạng lưới** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Lab 2 — Ganghwa, thế kỷ XIII: đảo, bản khắc và sức chịu đựng của nhà nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Case lab yêu cầu nối mốc với đời sống qua place, institution, actor và evidence; Gyeongju cho thấy kinh đô sống nhờ network, còn Ganghwa kiểm tra resilience của state trong khủng hoảng.
 
 ## Lab 1 — Gyeongju, thế kỷ VII–VIII: một kinh đô được nuôi bằng mạng lưới
 

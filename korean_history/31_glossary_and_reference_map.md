@@ -44,7 +44,7 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | 전세 | jeonse | hình thức thuê nhà đặt cọc lớn, không hoàn toàn tương đương tiền thuê tháng |
 | 월세 | wolse | hình thức thuê nhà trả tiền theo tháng |
 
-> **Chuyển mạch:** Trong **Glossary Việt–Hàn–Anh và tham chiếu (reference / 참조) Map**, **Thuật ngữ lịch sử** nêu điều cần giải thích; **Nguồn nền khuyến nghị** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nguyên tắc đối chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Glossary ổn định mapping Việt–Hàn–Anh; nguồn nền cho biết thuật ngữ dựa trên bằng chứng nào, còn nguyên tắc đối chiếu ngăn một bản dịch biến thành claim lịch sử mới.
 
 ## Nguồn nền khuyến nghị
 
