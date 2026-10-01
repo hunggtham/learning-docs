@@ -51,7 +51,7 @@ Bất biến (invariant / 불변식) của hardware không phải “mọi cốt
 
 Đọc sâu hơn tại [Memory consistency, cache coherence và ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md).
 
-> **Chuyển mạch:** Coherence chỉ nói về từng cache line; để giải thích nhiều biến cùng nhau, **4. trình biên dịch cũng reorder** chuyển câu hỏi sang đặc tả hợp đồng của ngôn ngữ.
+> **Chuyển mạch:** Cache coherence chỉ đảm bảo từng line; quan hệ giữa nhiều biến còn phụ thuộc compiler reordering và memory model của ngôn ngữ, nên correctness phải đi qua cả hai tầng.
 
 ## 4. trình biên dịch (compiler / 컴파일러) cũng reorder, nhưng theo đặc tả hợp đồng (contract / 계약) khác
 

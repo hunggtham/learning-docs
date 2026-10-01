@@ -27,7 +27,7 @@ Do đó bất biến (invariant / 불변식) không phải “disk luôn chỉ c
 
 Đọc sâu hơn tại [MVCC, visibility, WAL và recovery internals](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md).
 
-> **Chuyển mạch:** MVCC trả lời ai được nhìn thấy phiên bản nào; WAL phải bảo đảm lịch sử đó còn dựng lại được sau crash. **3. WAL giải bài toán gì?** là bước chuyển từ ngữ nghĩa giao dịch sang cơ chế ghi trước.
+> **Chuyển mạch:** MVCC quyết định visibility của version; WAL biến lịch sử giao dịch thành log có thể replay sau crash, nối semantics của commit với filesystem/device durability.
 
 ## 3. WAL giải bài toán gì?
 
