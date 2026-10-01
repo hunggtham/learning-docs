@@ -31,7 +31,7 @@ image
 → task head
 ```
 
-> **Chuyển mạch:** Trong **Vision Transformers**, **Vì sao cần Positional thông tin (information / 정보)?** tiếp nhận điểm tựa từ **Patch Tokenization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CLS đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Patch tokenization biến ảnh thành chuỗi token nhưng làm mất vị trí; positional information khôi phục trật tự không gian, rồi CLS token gom tín hiệu cho classification.
 
 ## Vì sao cần Positional thông tin (information / 정보)?
 

@@ -15,7 +15,7 @@ z = w^T x + b,
 
 Nếu chỉ ngăn xếp (stack / 스택) tuyến tính (linear / 선형) layers không có nonlinear activation, toàn mạng (network / 네트워크) vẫn collapse thành một tuyến tính (linear / 선형) transformation. Nonlinearity tạo khả năng biểu diễn functions phức tạp.
 
-> **Chuyển mạch:** Trong **Neural networks và biểu diễn (representation / 표현) học tập (learning / 학습)**, **Layers và representations** tiếp nhận điểm tựa từ **Neuron như affine transform + nonlinearity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward pass và mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Neuron là affine transform cộng nonlinearity; layers ghép các biến đổi thành representation, rồi forward pass tạo prediction để loss đo sai lệch cần tối ưu.
 
 ## Layers và representations
 

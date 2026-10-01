@@ -24,7 +24,7 @@ tensor/model parallelism
 
 Vì vậy “mô hình (model / 모델) có N parameters” không đủ để sức chứa (capacity / 용량) plan. Cần map tải công việc (workload / 워크로드) phân phối (distribution / 분포) vào tài nguyên (resource / 자원) consumption theo serving phase.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **1. Bài toán ban đầu: mô hình (model / 모델) math không tự nói serving hành vi (behavior / 동작)** xác định đầu vào; **2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Model math chưa nói rõ serving behavior; transformer block biến token stream thành state, rồi query/key/value attention xác định thông tin nào được trộn ở mỗi bước.
 
 ## 2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)
 

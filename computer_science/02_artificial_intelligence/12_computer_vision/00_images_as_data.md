@@ -25,7 +25,7 @@ Camera chuỗi xử lý (pipeline / 파이프라인) biến photons thành elect
 
 Computer Vision phải infer ngữ nghĩa (semantic / 의미적) cấu trúc (structure / 구조) từ đo lường (measurement / 측정) không hoàn hảo.
 
-> **Chuyển mạch:** Trong **Images as dữ liệu (data / 데이터)**, **Coordinate hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Từ scene thật tới pixels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Channels** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Scene được lấy mẫu thành pixels trong một coordinate system; channels sau đó tách cường độ màu, depth hoặc modality để mô hình biết mỗi pixel mang loại tín hiệu nào.
 
 ## Coordinate hệ thống (system / 시스템)
 

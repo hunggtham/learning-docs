@@ -10,7 +10,7 @@ Classification có precision, recall, F1, ROC-AUC, PR-AUC, calibration. Regressi
 
 Chỉ số (metric / 지표) chọn sai có thể tối ưu hành vi (behavior / 동작) sai.
 
-> **Chuyển mạch:** Trong **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Lớp (class / 클래스) imbalance** tiếp nhận điểm tựa từ **Chỉ số (metric / 지표) theo tác vụ (task / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Calibration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Metric phải khớp task và cost of error; class imbalance làm accuracy gây hiểu nhầm, còn calibration hỏi xác suất dự báo có đúng mức tin cậy thực tế không.
 
 ## Lớp (class / 클래스) imbalance
 

@@ -27,7 +27,7 @@ làm smooth cục bộ (local / 로컬) variation.
 
 Edge kernel như Sobel approximates spatial derivative. CNN sau này học kernels thay vì hand-design hoàn toàn.
 
-> **Chuyển mạch:** Trong **Xử lý ảnh (image processing / 이미지 처리) Foundations**, **Convolution như cục bộ (local / 로컬) filtering** đã nêu tiêu chí phân biệt, còn **Padding và ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Blur và Noise Reduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Convolution áp dụng kernel cục bộ; padding quyết định thông tin ở boundary, rồi blur/noise reduction cho thấy filter đánh đổi chi tiết lấy ổn định như thế nào.
 
 ## Padding và ranh giới (boundary / 경계)
 
