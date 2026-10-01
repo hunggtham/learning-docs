@@ -452,7 +452,7 @@ Gene circuit có tính lưỡng ổn (bistability); shallow lake cũng có trạ
 
 “Mô hình đơn giản là sai vì reality phức tạp” cũng sai. mô hình (model / 모델) đơn giản hữu ích nếu giữ đúng relationship cho câu hỏi cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **37. Mô hình tư duy tổng hợp** gom các mảnh từ **36. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The synthesis keeps the validated chain—state, mechanism, scale, feedback, and evidence—so the next reasoning template can reuse it from molecule to ecosystem.
 
 ## 37. Mô hình tư duy tổng hợp
 
@@ -482,7 +482,7 @@ Mục tiêu cuối cùng không phải nhớ thêm hàng chục formula, mà bi�
 
 <!-- depth-audit-2026:structure-mechanism-failure -->
 
-> **Chuyển mạch:** Trong **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem** gom các mảnh từ **37. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The molecule-to-ecosystem template turns each claim into state → mechanism → scale → test; the final bridge maps that reusable reasoning to the library’s next owner.
 
 ## Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem
 
@@ -492,7 +492,7 @@ Ví dụ membrane có phospholipid bilayer (structure) → selective diffusion/v
 
 Cùng template áp dụng cho kidney, immune hệ thống (system / 시스템), development, food web và synthetic circuit. Nó ngăn thư viện (library / 라이브러리) trở thành atlas tên gọi vì mỗi thành phần (component / 컴포넌트) chỉ có ý nghĩa khi được đặt trong nhân quả (causal / 인과적) hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật — Biology through Physics, Chemistry and kỹ thuật (engineering / 엔지니어링)**, **38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)** tiếp nhận điểm tựa từ **Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** The library bridge carries the validated reasoning template into the next domain; return here when a new topic needs a biological example of scale, mechanism, or feedback.
 
 ## 38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)
 
