@@ -260,7 +260,7 @@ import defer * as feature from "./expensive-feature.js";
 
 5.9 cũng có stable `--module node20`, hữu ích khi dự án (project / 프로젝트) muốn mô hình (model / 모델) nút (node / 노드) 20 cố định thay vì `nodenext` floating hành vi (behavior / 동작). Đồng thời có type-argument suy luận (inference / 추론) changes để sửa leak của kiểu (type / 타입) variables; một số generic calls có thể cần tường minh (explicit / 명시적) kiểu (type / 타입) arguments sau upgrade. Đây là reminder rằng patching suy luận (inference / 추론) tính đúng đắn (correctness / 정확성) có thể làm compile surface đổi dù thời gian chạy (runtime / 런타임) mã (code / 코드) không đổi.
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 05 — phiên bản (version / 버전) Evolution & di chuyển (migration / 마이그레이션)**, **6. TypeScript 6.0: chuyển tiếp (transition / 전이) bản phát hành (release / 릴리스), không phải “TypeScript 7 lite”** tiếp nhận điểm tựa từ **5. TypeScript 5.x: hiện đại (modern / 현대적) TypeScript toolchain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. TypeScript 7.0: trình biên dịch (compiler / 컴파일러) generation thay đổi, kiểu (type / 타입) kiến thức (knowledge / 지식) không reset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** TypeScript 5.x là baseline tooling; 6.0 là ranh giới chuyển tiếp, nên bằng chứng migration quan trọng hơn nhãn “7 lite”. Hãy kiểm tra typecheck, emit, declarations và runtime consumer trước khi kết luận.
 
 ## 6. TypeScript 6.0: chuyển tiếp (transition / 전이) bản phát hành (release / 릴리스), không phải “TypeScript 7 lite”
 

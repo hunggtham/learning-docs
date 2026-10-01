@@ -111,7 +111,7 @@ type LoginResult =
 
 Nhưng không phải mọi exception cần union khổng lồ. Unexpected programmer/thời gian chạy (runtime / 런타임) faults vẫn có thể throw. Hãy phân biệt expected nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과) với exceptional thất bại (failure / 실패); kiểu (type / 타입) mô hình (model / 모델) nên phản ánh chiến lược khôi phục (recovery strategy / 복구 전략).
 
-> **Chuyển mạch:** Ở chặng này của **TypeScript 04 — cấp cao (senior / 시니어) môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)**, **6. React + TypeScript: kiểu (type / 타입) thành phần (component / 컴포넌트) đặc tả hợp đồng (contract / 계약), không kiểu (type / 타입) khung phần mềm (framework / 프레임워크) theo cảm giác** tiếp nhận điểm tựa từ **5. lỗi (error / 오류) modeling: đừng biến mọi thất bại (failure / 실패) thành Error | null | undefined** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. sự kiện (event / 이벤트) và ref types: derive từ API thay vì nhớ bằng rote** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Mô hình hóa trạng thái lỗi giúp tránh các union mơ hồ; kiểu React component phải nói rõ public contract, rồi event/ref types được derive từ API thật thay vì ghi nhớ máy móc.
 
 ## 6. React + TypeScript: kiểu (type / 타입) thành phần (component / 컴포넌트) đặc tả hợp đồng (contract / 계약), không kiểu (type / 타입) khung phần mềm (framework / 프레임워크) theo cảm giác
 

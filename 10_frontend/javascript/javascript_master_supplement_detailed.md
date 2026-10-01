@@ -615,7 +615,7 @@ const result = await Array.fromAsync(source);
 
 Điểm mới không phải async iteration — nó đã có từ trước — mà là **collection constructor có hiểu async nguồn (source / 소스)**.
 
-> **Chuyển mạch:** Trong **JavaScript Master Supplement — Hoàn thiện thư viện kiến thức (knowledge library / 지식 라이브러리) từ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) đến hiện đại (modern / 현대적) ECMAScript**, **Math.sumPrecise()** tiếp nhận điểm tựa từ **Array.fromAsync()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iterator.concat()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** `Array.fromAsync()` thu các async iterable thành mảng; `Math.sumPrecise()` đặt lại câu hỏi về ngữ nghĩa cộng số; `Iterator.concat()` tiếp tục thay đổi cách ghép iterator lười. Đọc liền ba mục để theo dõi ranh giới collection → numeric precision → lazy composition.
 
 ## `Math.sumPrecise()`
 

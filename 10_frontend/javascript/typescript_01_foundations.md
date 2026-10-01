@@ -126,7 +126,7 @@ const request = {
 
 `as const` làm các literal được giữ hẹp và properties/tuple trở nên readonly ở kiểu (type / 타입) mức (level / 수준). Nó không `Object.freeze()` thời gian chạy (runtime / 런타임) đối tượng (object / 객체); đây tiếp tục là kiểu (type / 타입)/thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **TypeScript 01 — Foundations & thời gian chạy (runtime / 런타임) ranh giới (boundary / 경계)**, **5. thành phần nguyên thủy (primitive / 기본 요소), đối tượng (object / 객체) và sự khác biệt giữa string với String** tiếp nhận điểm tựa từ **4. Literal kiểu (type / 타입), widening và as const** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. any, unknown, never: ba kiểu (type / 타입) dễ dùng sai nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Literal và widening quyết định độ chính xác của kiểu; primitive so với boxed `String` làm rõ ranh giới giá trị/thời gian chạy, trước khi `any`, `unknown`, `never` đặt các mức an toàn.
 
 ## 5. thành phần nguyên thủy (primitive / 기본 요소), đối tượng (object / 객체) và sự khác biệt giữa `string` với `String`
 

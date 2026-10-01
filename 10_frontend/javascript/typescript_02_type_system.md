@@ -183,7 +183,7 @@ Array là ví dụ JavaScript thực dụng khiến variance có trường hợp
 
 Cấp cao (senior / 시니어) lesson: variance không phải từ học thuật để nhớ. Nó trả lời “generic lớp trừu tượng (abstraction / 추상화) này cho phép dữ liệu (data / 데이터) chảy vào hay ra theo hướng nào?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 02 — hệ kiểu (type system / 타입 시스템) Internals & Generic Modeling**, **7. keyof, indexed truy cập (access / 접근) và typeof là cầu nối cấu trúc (structure / 구조) → kiểu (type / 타입)** tiếp nhận điểm tựa từ **6. Variance: vì sao callback kiểu (type / 타입) có thể nguy hiểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Mapped kiểu (type / 타입): transform từng thuộc tính (property / 속성) theo key không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Variance cho thấy rủi ro khi thay thế callback; `keyof`, indexed access và `typeof` nối cấu trúc thời gian chạy với type space, rồi mapped types biến đổi từng property theo key.
 
 ## 7. `keyof`, indexed truy cập (access / 접근) và `typeof` là cầu nối cấu trúc (structure / 구조) → kiểu (type / 타입)
 

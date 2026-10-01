@@ -121,7 +121,7 @@ Emit giữ/chuyển syntax ra sao?
 Package/runtime sẽ load file với semantics nào?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript 03 — trình biên dịch (compiler / 컴파일러), Modules & Tooling**, **7. moduleResolution nên khớp môi trường thật** tiếp nhận điểm tựa từ **6. ESM và CommonJS: cú pháp (syntax / 문법) giống chưa chắc ngữ nghĩa (semantics / 의미론) giống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. import type và kiểu (type / 타입)/giá trị (value / 값) không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** ESM/CommonJS chỉ đúng khi khớp semantics của runtime; `moduleResolution` phải mô phỏng môi trường đó, còn `import type` giữ type namespace tách khỏi runtime values.
 
 ## 7. `moduleResolution` nên khớp môi trường thật
 

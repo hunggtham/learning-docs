@@ -78,7 +78,7 @@ Coverage phiên bản (version / 버전)/di chuyển (migration / 마이그레�
 
 Không tạo chapter riêng chỉ để liệt kê cú pháp (syntax / 문법) mới. tính năng (feature / 기능) mới chỉ được thêm khi nó thay đổi mô hình tư duy (mental model / 사고 모델), di chuyển (migration / 마이그레이션) hành vi (behavior / 동작) hoặc môi trường vận hành (production / 운영 환경) practice.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **TypeScript — chuẩn gốc (canonical / 정본) kiến thức (knowledge / 지식) nhánh học (track / 트랙)**, **Coverage kiểm tra (audit / 감사)** đã nêu tiêu chí phân biệt, còn **Nguồn chuẩn để đối chiếu phiên bản (version / 버전)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Coverage lập bản đồ cho nhánh TypeScript chuẩn gốc; nguồn phiên bản xác định ranh giới và điểm cần cập nhật. Vì vậy, các phần sau được đọc như một mạch bằng chứng, không nhầm snapshot hiện tại với bất biến lâu dài.
 
 ## Nguồn chuẩn để đối chiếu phiên bản (version / 버전)
 
