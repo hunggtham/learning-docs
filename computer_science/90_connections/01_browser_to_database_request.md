@@ -17,6 +17,8 @@ Trình duyệt (browser / 브라우저)/OS resolver tìm cached DNS entry hoặc
 
 DNS trả address, chưa tạo liên kết (connection / 연결).
 
+> **Chuyển mạch:** Name resolution mới trả lời “đi tới địa chỉ nào”; routing và transport phải biến địa chỉ đó thành đường đi, handshake và trust channel. Vì vậy **3. cục bộ (local / 로컬) mạng (network / 네트워크) và routing** tiếp tục bằng next hop, rồi **4. vận chuyển (transport / 전송) và TLS** chốt thứ tự byte và danh tính máy chủ.
+
 ## 3. cục bộ (local / 로컬) mạng (network / 네트워크) và routing
 
 Host quyết định destination cục bộ (local / 로컬) subnet hay via default gateway. ARP/Neighbor Discovery resolves next-hop link address. NIC sends frames; routers repeatedly longest-prefix tuyến (route / 경로) IP packets across networks.
@@ -29,6 +31,8 @@ TCP establishes ordered byte stream (or QUIC for HTTP/3). Congestion/luồng (fl
 
 A 50 ms RTT đường dẫn (path / 경로) means each handshake round trip is expensive relative to nanosecond CPU operations. liên kết (connection / 연결) reuse therefore matters.
 
+> **Chuyển mạch:** Sau TLS, request đã có channel nhưng chưa có quyền nghiệp vụ. **5. Edge/proxy/máy chủ (server / 서버) receives yêu cầu (request / 요청)** đưa byte vào application runtime; **6. Authentication và authorization** mới quyết định caller được phép làm gì với resource cụ thể.
+
 ## 5. Edge/proxy/máy chủ (server / 서버) receives yêu cầu (request / 요청)
 
 CDN/reverse proxy may terminate TLS, serve bộ nhớ đệm (cache / 캐시), enforce tỷ lệ (rate / 비율) limit, or forward to ứng dụng (application / 애플리케이션). bộ cân bằng tải (load balancer / 로드 밸런서) chooses instance.
@@ -40,6 +44,8 @@ Kernel NIC driver receives packets via DMA, mạng (network / 네트워크) ngă
 Ứng dụng (application / 애플리케이션) verifies session/đơn vị từ (token / 토큰), then checks permission for requested tài nguyên (resource / 자원). Authentication success is not enough; `GET /orders/123` must verify người dùng (user / 사용자) may read thứ tự (order / 순서) 123.
 
 Đầu vào (input / 입력) is validated before truy vấn (query / 쿼리)/nghiệp vụ (business / 비즈니스) thao tác (operation / 연산).
+
+> **Chuyển mạch:** Authorization đã gắn identity với resource và input đã được kiểm tra; bước kế tiếp là xem request tạo ra read/write nào và guarantee nào được giữ. **7. cơ sở dữ liệu (database / 데이터베이스) đường dẫn (path / 경로)** vì vậy theo plan, transaction, WAL và commit thay vì chỉ gọi “database latency”.
 
 ## 7. cơ sở dữ liệu (database / 데이터베이스) đường dẫn (path / 경로)
 
@@ -54,6 +60,8 @@ For ghi (write / 쓰기), DB updates bộ nhớ (memory / 메모리) pages/phiê
 Ứng dụng (application / 애플리케이션) maps lĩnh vực (domain / 도메인) kết quả (result / 결과) → DTO → JSON bytes, may compress, returns status/headers. Reverse proxy may bộ nhớ đệm (cache / 캐시); TLS encrypts records; TCP/QUIC transports; trình duyệt (browser / 브라우저) decrypts/parses.
 
 Trình duyệt (browser / 브라우저) updates trạng thái (state / 상태)/rendering. If phản hồi (response / 응답) arrives after người dùng (user / 사용자) navigated away, frontend must handle stale/cancelled yêu cầu (request / 요청) — phân tán (distributed / 분산) thời gian (time / 시간) at small quy mô (scale / 규모).
+
+> **Chuyển mạch:** DB commit chỉ là một điểm trong đường đi; response còn phải đi ngược qua serialization, proxy và browser state. **Thất bại (failure / 실패) can happen at every ranh giới (boundary / 경계)** gom các failure theo stage để trace không biến một timeout thành một nhãn nguyên nhân duy nhất.
 
 ## Thất bại (failure / 실패) can happen at every ranh giới (boundary / 경계)
 

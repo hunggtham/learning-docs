@@ -29,7 +29,7 @@ Ngay từ kiểu ở mã nguồn (source type / 소스 타입), ta đã chọn b
 Tệp lớp (class file / 클래스 파일) chứa constant pool, phương thức (method / 메서드) bytecode và siêu dữ liệu (metadata / 메타데이터). JVM verifier kiểm tra các ràng buộc (constraints / 제약조건들) trước thực thi (execution / 실행).
 
 
-> **Chuyển mạch:** Từ **Parsing và bytecode**, ta sang **nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Parsing đã biến tokens thành bytecode, nhưng bytecode chưa nói class nào được nạp hoặc dependency nào được liên kết. **Nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)** tiếp tục bằng chính câu hỏi đó: runtime giữ contract của source ở đâu, và failure xuất hiện khi classpath/initialization không khớp thế nào?
 
 ## Nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)
 
@@ -38,7 +38,7 @@ Bộ nạp lớp JVM (JVM class loader / JVM 클래스 로더) tải (load / 로
 JIT có thể inline getter, eliminate đối tượng (object / 객체) allocation, hoist checks hoặc constant-fold nếu các giả định (assumptions / 가정들)/profile permit. dòng mã nguồn (source line / 소스 코드 줄) và các lệnh cuối (final instructions / 최종 명령어) không 1:1.
 
 
-> **Chuyển mạch:** Từ **nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)**, ta sang **lệnh máy bản địa (native instructions / 네이티브 명령어)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Runtime đã quyết định code path, object lifetime và JIT policy; bước kế tiếp phải cho thấy quyết định đó thành thao tác nào trên ISA. **Lệnh máy bản địa (native instructions / 네이티브 명령어)** vì vậy kiểm tra register, branch và calling convention thay vì coi compiler output là “mã máy chung chung”.
 
 ## Lệnh máy bản địa (native instructions / 네이티브 명령어)
 
@@ -47,7 +47,7 @@ Suppose final mục tiêu (target / 대상) x86-64/ARM64. trình biên dịch (c
 Instruction bytes are fetched through I-cache, decoded, renamed/scheduled in hiện đại (modern / 현대적) microarchitecture, operands read from registers, đơn vị thực thi (execution unit / 실행 유닛) computes kết quả (result / 결과). CPU may overlap this with other independent instructions.
 
 
-> **Chuyển mạch:** Từ **lệnh máy bản địa (native instructions / 네이티브 명령어)**, ta sang **bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Instruction sequence chỉ giải thích phép tính nếu biết operand đến từ đâu và cache miss làm đổi chi phí thế nào. **Bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)** nối register với địa chỉ, locality và coherence; đây là cầu nối từ semantics sang performance.
 
 ## Bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)
 
@@ -56,7 +56,7 @@ Nếu `price` nằm trong đối tượng (object / 객체)/array, CPU needs t�
 Thus a dòng mã nguồn (source line / 소스 코드 줄) that “does one multiplication” can be dominated by bộ nhớ (memory / 메모리) truy cập (access / 접근).
 
 
-> **Chuyển mạch:** Từ **bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)**, ta sang **OS involvement — often none on đường xử lý nóng (hot path / 핫 패스)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Chuyển mạch:** Nếu dữ liệu đã nằm trong user-space cache thì hot path có thể không syscall; khi page fault, I/O hoặc scheduling xuất hiện, invariant lại thuộc OS. **OS involvement** phân biệt hai trường hợp để không gán mọi độ trễ cho kernel.
 
 ## OS involvement — often none on đường xử lý nóng (hot path / 핫 패스)
 

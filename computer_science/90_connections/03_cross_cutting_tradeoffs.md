@@ -19,11 +19,15 @@ Batching tăng thông lượng (throughput / 처리량) bằng amortizing fixed 
 
 Interactive các hệ thống (systems / 시스템들) ưu tiên tails; batch analytics ưu tiên aggregate thông lượng (throughput / 처리량).
 
+> **Chuyển mạch:** Time/space và latency/throughput đều nói về việc đổi tài nguyên này lấy tài nguyên kia. **Consistency ↔ Availability/độ trễ (latency / 지연 시간)** đưa trade-off vào guarantee quan sát được: chờ quorum để giữ durability/consistency hay trả sớm với replica lag.
+
 ## Consistency ↔ Availability/độ trễ (latency / 지연 시간)
 
 Synchronous quorum ghi (write / 쓰기) waits more replicas: stronger durability/consistency under failures but higher độ trễ (latency / 지연 시간)/less availability during partition. Async replication returns earlier but allows lag.
 
 CAP/PACELC are formalized views of some phân tán (distributed / 분산) trade-offs; they are not slogans for all thiết kế (design / 설계).
+
+> **Chuyển mạch:** Khi consistency/availability đã được đặt thành guarantee của hệ thống phân tán, **Isolation ↔ tính đồng thời (concurrency / 동시성)** chuyển câu hỏi vào transaction và shared state. Cả hai đều yêu cầu nêu rõ anomaly nào chấp nhận được trước khi tối ưu throughput.
 
 ## Isolation ↔ tính đồng thời (concurrency / 동시성)
 
@@ -32,6 +36,8 @@ Serializable giao dịch (transaction / 트랜잭션) gives strong lập luận 
 OS coarse khóa (lock / 잠금) simpler tính đúng đắn (correctness / 정확성) but reduces parallelism; fine locks increase tính đồng thời (concurrency / 동시성) and độ phức tạp (complexity / 복잡도)/deadlock surface.
 
 Same mental cấu trúc (structure / 구조) at different layers.
+
+> **Chuyển mạch:** Isolation và concurrency cho thấy một guarantee có thể mua bằng lock, abort hoặc complexity. **Lớp trừu tượng (abstraction / 추상화) ↔ điều khiển (control / 제어)** tiếp tục bằng câu hỏi layer nào sở hữu invariant và khi nào abstraction phải bị xuyên qua để chẩn đoán.
 
 ## Lớp trừu tượng (abstraction / 추상화) ↔ điều khiển (control / 제어)
 
@@ -68,6 +74,8 @@ Normalized DB reduces redundant facts/cập nhật (update / 업데이트) anoma
 Static guarantees catch classes bugs earlier but require kiểu (type / 타입) modeling and compile checks. động (dynamic / 동적) các hệ thống (systems / 시스템들) permit rapid structural thay đổi (change / 변경) but shift detection to thời gian chạy (runtime / 런타임)/tests/tooling. hiện đại (modern / 현대적) ecosystems mix gradual typing, suy luận (inference / 추론) and thời gian chạy (runtime / 런타임) contracts.
 
 ## Optimize the real ràng buộc (constraint / 제약조건)
+
+> **Chuyển mạch:** Các cặp trade-off đã cung cấp vocabulary; phần **Optimize the real ràng buộc (constraint / 제약조건)** gom chúng thành quy trình quyết định: xác định SLO/invariant, đo bottleneck, rồi kiểm tra option dưới workload đại diện thay vì tối ưu một nhãn công nghệ.
 
 First-principles sự đánh đổi (trade-off / 트레이드오프) tiến trình (process / 프로세스):
 
