@@ -1,6 +1,6 @@
 # Formal Epistemology và quyết định (decision / 결정) dưới bất định (uncertainty / 불확실성)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Formal Epistemology và quyết định (decision / 결정) dưới bất định (uncertainty / 불확실성)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Conditionalization và belief revision** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Quyết định (decision / 결정) không đồng nhất với belief** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Formal Epistemology và quyết định (decision / 결정) dưới bất định (uncertainty / 불확실성)**. Route đi từ trạng thái belief và xác suất → conditionalization/belief revision → utility và decision rule → value of information, để mô hình hình thức chỉ rõ giả định nào đang quyết định lựa chọn.
 
 Formal epistemology dùng xác suất (probability / 확률), quyết định (decision / 결정) lý thuyết (theory / 이론), lô-gic (logic / 논리) và game lý thuyết (theory / 이론) để mô tả belief revision và lựa chọn. Mục tiêu không phải biến mọi tri thức thành con số, mà làm giả định (assumption / 가정) lộ ra và kiểm tra consistency.
 

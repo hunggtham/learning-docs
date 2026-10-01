@@ -1,6 +1,6 @@
 # Xã hội (social / 사회적) Epistemology: Testimony, Trust và Disagreement
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Xã hội (social / 사회적) Epistemology: Testimony, Trust và Disagreement**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Khi nào testimony đáng tin?** biến nhận định thành tiêu chí kiểm tra hoặc cách gỡ lỗi; sau đó sang **Disagreement giữa peer** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Xã hội (social / 사회적) Epistemology: Testimony, Trust và Disagreement**. Route đi từ testimony và nguồn tin → năng lực, động cơ và mạng lưới tin cậy → bất đồng giữa peer → cơ chế sửa sai/tổng hợp, để tri thức tập thể không bị rút gọn thành đồng thuận số đông.
 
 Phần lớn kiến thức (knowledge / 지식) của một người đến từ testimony: lời nói, sách, cơ sở dữ liệu (database / 데이터베이스), chuyên gia và cộng đồng. Nếu chỉ chấp nhận điều tự mình quan sát, ta không thể học lịch sử, khoa học chuyên sâu hay kinh nghiệm của người khác.
 

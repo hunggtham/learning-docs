@@ -1,6 +1,6 @@
 # Reduction, Emergence và Naturalism
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Reduction, Emergence và Naturalism**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Reduction, Emergence và Naturalism** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Reduction, Emergence và Naturalism**. Route đi từ mức vi mô và giải thích → reduction/realization → tính chất nổi lên và causal powers → naturalism, để so sánh các mức mô tả mà không giả định trước rằng một mức phải loại bỏ mức kia.
 
 Reduction có ít nhất ba nghĩa: phân tích thành phần, giải thích bằng laws cấp thấp, hoặc loại bỏ ontology cấp cao. Một hệ có thể reducible về vật lý (physical / 물리적) constituents nhưng vẫn cần vocabulary cấp cao để mô tả organization, hàm (function / 함수) và ràng buộc (constraint / 제약조건).
 

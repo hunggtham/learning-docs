@@ -1,6 +1,6 @@
 # Belief, bất định (uncertainty / 불확실성) và Calibration
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Belief, bất định (uncertainty / 불확실성) và Calibration**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Tin một điều không phải là nhị phân** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Bayes như quy tắc cập nhật** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Belief, bất định (uncertainty / 불확실성) và Calibration**. Route đi từ mức độ tin và uncertainty → xác suất/Bayes → dự báo và calibration → cập nhật khi dữ liệu mới xuất hiện, để độ tự tin phản ánh đúng khả năng sai.
 
 ## Tin một điều không phải là nhị phân
 

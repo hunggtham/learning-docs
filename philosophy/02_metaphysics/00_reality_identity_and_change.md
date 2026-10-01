@@ -1,6 +1,6 @@
 # Reality, định danh (identity / 식별자) và thay đổi (change / 변경)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Reality, định danh (identity / 식별자) và thay đổi (change / 변경)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Một số phân biệt nền tảng** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Cầu nối** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Reality, định danh (identity / 식별자) và thay đổi (change / 변경)**. Route đi từ vật thể/sự kiện → identity và persistence → thuộc tính, quan hệ và thay đổi → các tiêu chí “cùng một thứ”, để phân biệt cái tồn tại với cách ta mô tả nó qua thời gian.
 
 Metaphysics hỏi cái gì tồn tại, tồn tại theo cách nào và một vật/hệ vẫn là “cùng một” vật/hệ qua thay đổi ra sao. Đây không phải giấy phép suy đoán không kiểm tra; các claim metaphysical cần phân biệt với claim thực nghiệm mà Physics, Biology hoặc Psychology có thể kiểm tra trực tiếp.
 

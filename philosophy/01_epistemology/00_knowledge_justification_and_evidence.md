@@ -1,6 +1,6 @@
 # Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ba thành phần cần tách** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Claim–bằng chứng (evidence / 증거) matching** để đối chiếu nhận định với dữ liệu và nguồn. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Kiến thức (knowledge / 지식), Justification và bằng chứng (evidence / 증거)**. Route đi từ claim → nguồn và quan sát → justification → độ mạnh, phản ví dụ và điều kiện thất bại, để “biết” được tách khỏi việc chỉ tin đúng một mệnh đề.
 
 ## Ba thành phần cần tách
 

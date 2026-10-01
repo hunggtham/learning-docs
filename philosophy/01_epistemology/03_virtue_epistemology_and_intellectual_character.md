@@ -1,6 +1,6 @@
 # Virtue Epistemology và Intellectual Character
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Virtue Epistemology và Intellectual Character**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Virtue không phải personality branding** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **From trait to practice** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Virtue Epistemology và Intellectual Character**. Route đi từ năng lực nhận thức → thói quen chú ý, kiểm tra và sửa sai → thực hành trong cộng đồng → phán đoán đáng tin dưới áp lực, để virtue được đánh giá bằng hành vi epistemic chứ không bằng thương hiệu cá nhân.
 
 Epistemic virtue chuyển câu hỏi từ “belief này có justified không?” sang “tác nhân (agent / 에이전트) này có thói quen nhận biết tốt không?”. Các virtue như intellectual humility, courage, curiosity, fairness và conscientiousness giúp giải thích vì sao cùng bằng chứng (evidence / 증거) nhưng người này cập nhật tốt hơn người kia.
 

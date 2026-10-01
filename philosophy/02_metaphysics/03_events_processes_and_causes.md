@@ -1,6 +1,6 @@
 # Events, Processes và nhân quả (causal / 인과적) Powers
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Events, Processes và nhân quả (causal / 인과적) Powers**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Causation như intervention và môi trường vận hành (production / 운영 환경)** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Tiến trình (process / 프로세스), persistence và thay đổi (change / 변경)** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Events, Processes và nhân quả (causal / 인과적) Powers**. Route đi từ sự kiện và tiến trình → cơ chế sản sinh/trao quyền nhân quả → intervention, counterfactual và môi trường → persistence/thay đổi, để phân biệt quan sát tương quan với giải thích nhân quả có thể can thiệp.
 
 Một sự kiện có thể được mô tả như thay đổi trạng thái; một tiến trình (process / 프로세스) là chuỗi biến đổi có cấu trúc theo thời gian; một nhân quả (causal / 인과적) power là khả năng tạo khác biệt trong điều kiện nhất định. Phân biệt này giúp tránh xem mọi regularity là “nguyên nhân”.
 

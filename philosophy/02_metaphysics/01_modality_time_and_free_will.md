@@ -1,6 +1,6 @@
 # Modality, thời gian (time / 시간) và Free Will
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Modality, thời gian (time / 시간) và Free Will**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Possibility và necessity** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Thời gian (time / 시간) và thay đổi (change / 변경)** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Modality, thời gian (time / 시간) và Free Will**. Route đi từ possibility/necessity → thế giới khả dĩ và điều kiện phản sự kiện → thời gian, nhân quả và persistence → agency, determinism và trách nhiệm, để không trộn “có thể” logic với “có thể” vật lý.
 
 ## Possibility và necessity
 
