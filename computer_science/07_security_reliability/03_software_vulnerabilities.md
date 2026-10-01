@@ -10,7 +10,7 @@ Trong memory-unsafe languages, out-of-bounds ghi (write / 쓰기), use-after-fre
 
 Mitigations tăng difficulty nhưng không thay fix gốc (root / 루트) bug. Memory-safe languages loại nhiều classes này by construction/checks, nhưng bản địa (native / 네이티브) libraries/unsafe blocks vẫn là ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **Bộ nhớ (memory / 메모리), web và injection vulnerabilities**, **Bộ nhớ (memory / 메모리) corruption** nêu điều cần giải thích; **Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **XSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Memory corruption phá invariant của address space; injection phá ranh giới khi data bị diễn giải thành code/command, và XSS là trường hợp web-specific của cùng một lỗi boundary.
 
 ## Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command
 

@@ -10,7 +10,7 @@ Cơ sở dữ liệu (database / 데이터베이스) password, API đơn vị t�
 
 “môi trường (environment / 환경) variable” chỉ là vận chuyển (transport / 전송) cơ chế (mechanism / 메커니즘), không tự động là secret manager. tiến trình (process / 프로세스) môi trường (environment / 환경) có thể bị logs/gỡ lỗi (debug / 디버그) dumps/child processes expose tùy nền tảng (platform / 플랫폼).
 
-> **Chuyển mạch:** Trong **Keys, secrets, certificates và secure operations**, **Secret khác cấu hình (configuration / 구성) thường** xác định đầu vào; **Key vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Envelope encryption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Secret có giá trị bảo mật khác config thường; key lifecycle bao gồm tạo, phân phối, rotation và thu hồi, còn envelope encryption tách data key khỏi key mã hóa chủ.
 
 ## Key vòng đời (lifecycle / 생명주기)
 
