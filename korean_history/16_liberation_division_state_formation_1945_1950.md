@@ -8,25 +8,25 @@ Japan surrendered in August 1945, kết thúc colonial quy tắc (rule / 규칙)
 
 Đây là một trọng yếu (critical / 중요) điểm (point / 지점) của **đường dẫn (path / 경로) dependence**: line được tạo trong wartime logistics sau đó trở thành political ranh giới (boundary / 경계) vì Cold War rivalry, cục bộ (local / 로컬) xung đột (conflict / 충돌) và failed negotiation.
 
-> **Chuyển mạch:** Liberation ended colonial rule without unified sovereignty; local organizations filled the gap, while trusteeship debate and Cold War polarization narrowed state-building options.
+> **Chuyển mạch:** Giải phóng chấm dứt thuộc địa nhưng không tạo chủ quyền thống nhất; các tổ chức địa phương lấp khoảng trống, trong khi tranh luận trusteeship và phân cực Cold War thu hẹp lựa chọn state-building.
 
 ## Cục bộ (local / 로컬) political organization
 
 People's committees và nhiều political groups xuất hiện sau liberation. Ở south, US Military Government xây administration trong môi trường shortage, refugee flows, ideological xung đột (conflict / 충돌) và legacy personnel. Ở north, Soviet-backed structures và communist leadership consolidation tiến nhanh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **1945–1950: giải phóng, chia cắt và hình thành hai nhà nước**, **Trusteeship debate và Cold War polarization** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) political organization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1948: hai trạng thái (state / 상태) structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Local organizations cho thấy xã hội có năng lực tự tổ chức sau khi Nhật rút, nhưng occupation authorities và rivalry quốc tế định hình phạm vi của chúng. **Trusteeship debate và Cold War polarization** biến tranh luận sovereignty, land reform và alignment thành điều kiện cho hai state structures năm 1948.
 
 ## Trusteeship debate và Cold War polarization
 
 International plans cho trusteeship tạo tranh cãi mạnh. Political labels “left/right” không thể hiểu chỉ bằng Western template; actors khác nhau về land reform, collaboration legacy, sovereignty timing và international alignment.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1945–1950: giải phóng, chia cắt và hình thành hai nhà nước**, **1948: hai trạng thái (state / 상태) structures** tiếp nhận điểm tựa từ **Trusteeship debate và Cold War polarization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Violence before the Chiến tranh Triều Tiên (한국전쟁 / Korean War)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Trusteeship và Cold War polarization thu hẹp không gian thỏa hiệp; **hai state structures năm 1948** biến partition hành chính thành competing claims về toàn peninsula. Khi mỗi bên xây legitimacy và security riêng, **violence trước Korean War** trở thành một phần của quá trình state formation.
 
 ## 1948: hai trạng thái (state / 상태) structures
 
 Republic of Korea được thành lập ở south tháng 8/1948; Democratic People's Republic of Korea được thành lập ở north tháng 9/1948. Cả hai đều claim legitimacy trên toàn peninsula. Đây là lý do division không chỉ là geographic partition mà là competing state-building dự án (project / 프로젝트).
 
-> **Chuyển mạch:** Trong **1945–1950: giải phóng, chia cắt và hình thành hai nhà nước**, **Violence before the Chiến tranh Triều Tiên (한국전쟁 / Korean War)** tiếp nhận điểm tựa từ **1948: hai trạng thái (state / 상태) structures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Hai nhà nước cạnh tranh legitimacy và kiểm soát lãnh thổ; **violence trước Korean War** cho thấy state capacity được xây qua repression, insurgency và ký ức nạn nhân, không chỉ qua hiến pháp. **Mô hình tư duy** sẽ giữ đồng thời khoảng trống hành chính, continuity và coercion trong khủng hoảng 1945–1950.
 
 ## Violence before the Chiến tranh Triều Tiên (한국전쟁 / Korean War)
 
