@@ -1,6 +1,6 @@
 # Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Định luật phân rã** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Chu kỳ bán rã** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**. Route đi từ nuclide không bền → định luật phân rã/chu kỳ bán rã → alpha, beta, gamma và chuỗi phân rã → tương tác, phát hiện và liều bức xạ, để tách hoạt độ nguồn khỏi năng lượng truyền cho vật chất.
 
 > **Phóng xạ (radioactivity / 방사능)** là sự biến đổi tự phát của các hạt nhân không bền. Mỗi sự kiện phân rã riêng lẻ có bản chất xác suất lượng tử, nhưng một quần thể lớn hạt nhân lại tuân theo thống kê hàm mũ rất chính xác. Đây là một ví dụ điển hình cho việc tính ngẫu nhiên vi mô có thể tạo ra khả năng dự đoán vĩ mô.
 

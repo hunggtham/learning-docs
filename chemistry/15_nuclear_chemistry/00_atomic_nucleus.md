@@ -1,6 +1,6 @@
 # Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Hạt nhân không phải một quả cầu rắn thu nhỏ** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Ký hiệu hạt nhân** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Hạt nhân nguyên tử — liên kết, độ bền và cấu trúc vượt ngoài electron**. Route đi từ nuclide và các số (Z,N,A) → lực hạt nhân/Coulomb và năng lượng liên kết → lớp, hình dạng và trạng thái kích thích → bàn giao sang phóng xạ và phản ứng hạt nhân, để không dùng mô hình electron giải thích nhầm cấu trúc hạt nhân.
 
 > **Hạt nhân nguyên tử (atomic nucleus / 원자핵)** chứa proton và neutron, gọi chung là **nucleon (핵자)**. Hóa học hạt nhân bắt đầu khi thang năng lượng chuyển từ các trạng thái electron cỡ eV sang các quá trình hạt nhân cỡ keV–MeV. Ở thang này, tương tác hạt nhân mạnh, lực Coulomb và cấu trúc lượng tử của nucleon cùng quyết định độ bền của nuclide.
 

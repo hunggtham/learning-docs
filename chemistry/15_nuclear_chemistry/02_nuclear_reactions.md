@@ -1,6 +1,6 @@
 # Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Ký hiệu tổng quát** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Các định luật bảo toàn** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**. Route đi từ phương trình hạt nhân → bảo toàn điện tích, nucleon và năng lượng–động lượng → giá trị (Q)/ngưỡng → tiết diện và xác suất va chạm → chuyển nguyên tố, để phân biệt phản ứng có thể xảy ra với phản ứng có tốc độ quan sát được.
 
 > **Phản ứng hạt nhân (nuclear reaction / 핵반응)** là quá trình trong đó hạt nhân trao đổi hạt, năng lượng hoặc thay đổi bản sắc. Khác với phản ứng hóa học thông thường chỉ tái sắp xếp electron, phản ứng hạt nhân có thể biến một nguyên tố thành nguyên tố khác. Các công cụ suy luận cốt lõi là định luật bảo toàn, cân bằng khối lượng–năng lượng, xác suất phản ứng và cấu trúc hạt nhân.
 

@@ -1,6 +1,6 @@
 # Phân hạch và nhiệt hạch — đưa hạt nhân về trạng thái liên kết bền hơn
 
-> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân hạch và nhiệt hạch — đưa hạt nhân về trạng thái liên kết bền hơn**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Đường cong năng lượng liên kết là bức tranh thống nhất** chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu; sau đó sang **Cơ chế phân hạch — từ biến dạng tới tách đôi** để giải thích cách điều kiện hoặc mục tiêu đó vận hành. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Phân hạch và nhiệt hạch — đưa hạt nhân về trạng thái liên kết bền hơn**. Route đi từ đường cong năng lượng liên kết → rào thế, biến dạng và xác suất xuyên hầm → phản ứng dây chuyền hoặc giam giữ plasma → cân bằng năng lượng, chất thải và hư hại vật liệu, để cùng một nguyên lý liên kết giải thích cả lợi ích lẫn giới hạn công nghệ.
 
 > **Phân hạch (fission / 핵분열)** chia một hạt nhân rất nặng thành các mảnh khối lượng trung bình; **nhiệt hạch (fusion / 핵융합)** kết hợp các hạt nhân nhẹ thành hạt nhân nặng hơn. Cả hai có thể giải phóng năng lượng vì sản phẩm dịch về vùng có năng lượng liên kết trên mỗi nucleon cao hơn. Nguyên lý nền không phải “tách thì sinh năng lượng” hay “ghép thì sinh năng lượng”, mà là **hệ chuyển tới trạng thái hạt nhân liên kết chặt hơn**.
 
