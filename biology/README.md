@@ -182,7 +182,7 @@ Các tình huống phân tích (case study) không dùng chỉ để “trang tr
 
 ---
 
-> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **4. Lộ trình đọc từ số 0** tiếp nhận điểm tựa từ **3. Chuẩn hoàn thiện của một chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Các motif xuyên toàn thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Chapter standard xác định mức bằng chứng cần đạt; reading path sắp prerequisite từ nền tảng tới ứng dụng, rồi motifs xuyên thư viện giúp nhận ra cùng một cơ chế ở nhiều quy mô.
 
 ## 4. Lộ trình đọc từ số 0
 
@@ -256,7 +256,7 @@ Hai chapter này không dùng để học tắt; chúng được đọc sau khi 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **5. Các motif xuyên toàn thư viện** tiếp nhận điểm tựa từ **4. Lộ trình đọc từ số 0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cách tự kiểm tra sau mỗi chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Reading path đưa người học qua prerequisite; motifs như gradient, feedback và scale tạo liên kết ngang, còn self-check kiểm tra người học có thể giải thích cơ chế chứ không chỉ nhớ thuật ngữ.
 
 ## 5. Các motif xuyên toàn thư viện
 
@@ -290,7 +290,7 @@ Chuyển hóa (metabolism), plant hydraulic/carbon allocation, tuần hoàn (cir
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **6. Cách tự kiểm tra sau mỗi chapter** tiếp nhận điểm tựa từ **5. Các motif xuyên toàn thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phạm vi của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cross-library motifs tạo câu hỏi tự kiểm tra theo cơ chế; scope tiếp theo nêu những gì thư viện bao phủ và những gì phải đối chiếu ở domain khác.
 
 ## 6. Cách tự kiểm tra sau mỗi chapter
 

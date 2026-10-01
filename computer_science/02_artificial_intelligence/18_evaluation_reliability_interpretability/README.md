@@ -19,7 +19,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 07_reliability_engineering.md
 ```
 
-> **Chuyển mạch:** Trong **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Phụ thuộc (dependency / 의존성) map** tiếp nhận điểm tựa từ **Reading thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Reading order đi từ task/metric đến uncertainty, calibration, interpretability và red teaming; dependency map biến thứ tự đó thành prerequisite, còn mental model nối metric với failure mode.
 
 ## Phụ thuộc (dependency / 의존성) map
 
