@@ -12,7 +12,7 @@ Một synchronous coordination round qua nhiều regions có độ trễ (latenc
 
 Tối ưu software có thể giảm overhead nhưng không bỏ khoảng cách vật lý. Vì vậy region placement là **ngữ nghĩa (semantic / 의미적)/sức chứa (capacity / 용량) quyết định (decision / 결정)**, không chỉ triển khai (deployment / 배포) preference.
 
-> **Chuyển mạch:** Trong **Sao chép đa vùng và các đánh đổi của hệ thống phân tán theo địa lý**, **1. Bài toán ban đầu: độ trễ (latency / 지연 시간), availability và consistency cùng chịu physics** cho ta quy tắc; **2. bất biến (invariant / 불변식) đầu tiên: chỉ một authority hợp lệ được phép quyết định lịch sử (history / 이력) cần single-writer** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Replication trạng thái (state / 상태) không phải nhị phân (binary / 이진) “đồng bộ/chưa đồng bộ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Multi-region phải đánh đổi latency, availability và consistency dưới cùng physics; single-writer giữ authority cho history, còn replication state cần được mô tả theo mức lag/conflict thay vì chỉ đồng bộ/chưa đồng bộ.
 
 ## 2. bất biến (invariant / 불변식) đầu tiên: chỉ một authority hợp lệ được phép quyết định lịch sử (history / 이력) cần single-writer
 

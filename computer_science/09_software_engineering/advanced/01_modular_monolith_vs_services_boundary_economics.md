@@ -10,7 +10,7 @@ Một **modular monolith** deploy như một ứng dụng (application / 애플�
 
 Nếu ranh giới (boundary / 경계) lô-gic (logic / 논리) không tồn tại trong monolith, tách tiến trình (process / 프로세스) thường chỉ biến coupling trong bộ nhớ (memory / 메모리) thành coupling qua mạng (network / 네트워크).
 
-> **Chuyển mạch:** Trong **Modular monolith vs services: ranh giới (boundary / 경계) economics và di chuyển (migration / 마이그레이션)**, **Monolith không đồng nghĩa spaghetti** đã nêu tiêu chí phân biệt, còn **Dịch vụ (service / 서비스) ranh giới (boundary / 경계) có chi phí cố định** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) là ranh giới (boundary / 경계) mạnh hơn endpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Modular monolith giữ boundary trong một deployable; services thêm fixed cost vận hành, nên data ownership là boundary kiểm chứng mạnh hơn endpoint khi cân nhắc migration.
 
 ## Dịch vụ (service / 서비스) ranh giới (boundary / 경계) có chi phí cố định
 

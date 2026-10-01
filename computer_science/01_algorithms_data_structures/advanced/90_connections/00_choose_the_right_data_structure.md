@@ -42,7 +42,7 @@ Sau đó đánh dấu thao tác nào chiếm phần lớn lưu lượng và thao
 
 Một thao tác khởi tạo chạy một lần không cần được tối ưu giống thao tác chạy hàng triệu lần mỗi giây.
 
-> **Chuyển mạch:** Trong **Chọn cấu trúc dữ liệu phù hợp**, **2. chính xác (exact / 정확한) Lookup hay Ordered truy vấn (query / 쿼리)?** tiếp nhận điểm tựa từ **1. Bắt đầu từ thao tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Static hay động (dynamic / 동적)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Start from operations and workload: exact lookup favors hashing, ordered/range queries favor trees, then static versus dynamic updates determines memory and maintenance cost.
 
 ## 2. chính xác (exact / 정확한) Lookup hay Ordered truy vấn (query / 쿼리)?
 

@@ -18,7 +18,7 @@ Ta cần phân biệt:
 
 Nếu máy chủ (server / 서버) A báo `12:00:00.100` và máy chủ (server / 서버) B báo `12:00:00.090`, không thể tự động kết luận sự kiện (event / 이벤트) ở B xảy ra trước sự kiện (event / 이벤트) ở A nếu clock offset chưa được kiểm soát đủ chặt.
 
-> **Chuyển mạch:** Trong **Thời gian, đồng hồ, thứ tự và quan hệ nhân quả trong hệ thống phân tán**, **2. Wall clock và monotonic clock** tiếp nhận điểm tựa từ **1. Đồng hồ vật lý không hoàn hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. “Happened-before” là quan hệ lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Physical clocks drift và jump; wall clock phục vụ timestamp, monotonic clock phục vụ duration, còn happened-before biểu diễn causality khi không có global order.
 
 ## 2. Wall clock và monotonic clock
 

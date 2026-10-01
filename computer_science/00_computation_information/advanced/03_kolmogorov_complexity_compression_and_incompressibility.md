@@ -40,7 +40,7 @@ K_U(x) = min |p|
 
 Một đối tượng (object / 객체) có `K(x)` nhỏ là **compressible**: có cấu trúc (structure / 구조) cho phép mô tả ngắn. đối tượng (object / 객체) có `K(x)` gần độ dài của chính nó là **incompressible**.
 
-> **Chuyển mạch:** Trong **Kolmogorov độ phức tạp (complexity / 복잡도), compression và trực giác incompressibility**, **1. Từ “dữ liệu dài” tới “mô tả ngắn”** nêu điều cần giải thích; **2. Tại sao phải cố định universal machine** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Compression là tìm mô hình (model / 모델), không chỉ xóa byte thừa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Kolmogorov complexity measures shortest description; fixing a universal machine makes comparisons meaningful, and compression becomes model discovery rather than merely removing repeated bytes.
 
 ## 2. Tại sao phải cố định universal machine
 
