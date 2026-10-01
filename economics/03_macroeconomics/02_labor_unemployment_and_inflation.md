@@ -34,7 +34,7 @@ Zero frictional unemployment không hẳn desirable: tìm kiếm (search / 검�
 
 Chính sách (policy / 정책) tốt không nhất thiết maximize speed nếu speed làm match chất lượng (quality / 품질) giảm mạnh.
 
-> **Chuyển mạch:** Frictional unemployment reflects search time; structural unemployment reflects persistent mismatch, while cyclical unemployment follows aggregate demand conditions.
+> **Chuyển mạch:** Thất nghiệp frictional phản ánh thời gian tìm match; structural phản ánh mismatch kỹ năng/địa điểm kéo dài; còn cyclical đi theo dao động aggregate demand. Ba cơ chế này cần được tách trước khi chọn chính sách.
 
 ## 4. Structural unemployment
 
@@ -44,7 +44,7 @@ Technology shift, trade exposure hoặc regional decline có thể tạo mismatc
 
 Retraining chỉ hiệu quả nếu huấn luyện (training / 학습) đúng demand, workers có thể di chuyển và jobs mới thực sự tồn tại.
 
-> **Chuyển mạch:** Structural mismatch persists across cycles; cyclical unemployment follows demand fluctuations, and search-and-matching models connect both to vacancy and wage-setting mechanisms.
+> **Chuyển mạch:** Structural mismatch có thể tồn tại qua nhiều chu kỳ, trong khi cyclical unemployment đổi theo cầu tổng hợp. **Search-and-matching models** nối hai loại này với vacancies, job-finding và wage-setting thay vì chỉ nhìn stock thất nghiệp.
 
 ## 5. Cyclical unemployment
 
@@ -52,7 +52,7 @@ Cyclical unemployment tăng khi aggregate demand/đầu ra (output / 출력) th�
 
 Đây là loại unemployment monetary/fiscal stabilization thường nhắm tới, khác với mismatch dài hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**, **6. Search-and-matching mô hình (model / 모델)** tiếp nhận điểm tựa từ **5. Cyclical unemployment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Job-finding và separation rates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Cyclical unemployment cho biết cầu yếu làm giảm hiring; **search-and-matching model** thêm vacancies và hiệu quả ghép để giải thích vì sao cùng mức cầu có thể tạo thất nghiệp khác nhau. **Job-finding và separation rates** tiếp theo chuyển mô hình thành các dòng vào–ra đo được.
 
 ## 6. Search-and-matching mô hình (model / 모델)
 
@@ -66,7 +66,7 @@ M = m(U, V)
 
 với `U` unemployed, `V` vacancies.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**, **7. Job-finding và separation rates** tiếp nhận điểm tựa từ **6. Search-and-matching mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Wage rigidity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Search-and-matching mô tả vacancy và unemployment cùng vận động; **job-finding/separation rates** cho biết stock thất nghiệp thay đổi qua những flow nào. Khi flow đã rõ, **wage rigidity** giải thích vì sao adjustment đôi khi đi qua employment hoặc hours thay vì giảm lương danh nghĩa.
 
 ## 7. Job-finding và separation rates
 
@@ -80,7 +80,7 @@ Unemployment tăng có thể do layoffs/separations tăng, hiring/job-finding gi
 
 Luồng (flow / 흐름) phân tích (analysis / 분석) thường informative hơn chỉ nhìn stock unemployment.
 
-> **Chuyển mạch:** Trong **Labor, Unemployment & Inflation — Matching frictions, wage setting và price dynamics**, **8. Wage rigidity** tiếp nhận điểm tựa từ **7. Job-finding và separation rates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Efficiency wages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Wage rigidity làm doanh nghiệp điều chỉnh số việc hoặc số giờ khi lương danh nghĩa khó giảm; **efficiency wages** đi xa hơn bằng cách hỏi liệu trả cao hơn có cải thiện effort, turnover và productivity hay không.
 
 ## 8. Wage rigidity
 
