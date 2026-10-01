@@ -166,7 +166,7 @@ Nếu protein membrane bị giữ trong ER do folding sai, chức năng ở cell
 
 Gen → phenotype luôn đi qua tế bào kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Ở chặng này của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **15. Học thuyết trung tâm nên hiểu thế nào cho đúng?** tiếp nhận điểm tựa từ **14. Protein targeting: tạo đúng protein nhưng gửi sai chỗ vẫn có thể mất hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Điều hòa gen (gene regulation) ở bacteria: operon cho thấy economy của unicellular life** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Protein targeting shows that DNA→RNA→protein is a causal chain with cellular context; bacterial operons add an economical control layer that decides when the chain should run.
 
 ## 15. Học thuyết trung tâm nên hiểu thế nào cho đúng?
 
@@ -182,7 +182,7 @@ Nhưng có reverse transcription RNA → DNA ở retrovirus; RNA có hàm (funct
 
 Học thuyết trung tâm không nói “mọi thứ chỉ đi một chiều đơn giản”; nó nhấn mạnh chuỗi (sequence / 시퀀스) thông tin (information / 정보) không thường được truyền từ protein trở lại nucleic-acid chuỗi (sequence / 시퀀스) theo cách template.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **16. Điều hòa gen (gene regulation) ở bacteria: operon cho thấy economy của unicellular life** tiếp nhận điểm tựa từ **15. Học thuyết trung tâm nên hiểu thế nào cho đúng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Điều hòa gen ở eukaryote: nhiều tầng (layer / 계층) hơn vì multicellularity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The central dogma identifies information flow; an operon couples transcription to substrate and energy availability, whereas multicellular eukaryotes need regulation at multiple layers and cell types.
 
 ## 16. Điều hòa gen (gene regulation) ở bacteria: operon cho thấy economy của unicellular life
 
@@ -194,7 +194,7 @@ Lô-gic (logic / 논리) này cho thấy biểu hiện gen gắn trực tiếp m
 
 Cell không muốn sản xuất enzyme tốn năng lượng (energy / 에너지) khi substrate không có.
 
-> **Chuyển mạch:** Trong **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **17. Điều hòa gen ở eukaryote: nhiều tầng (layer / 계층) hơn vì multicellularity** tiếp nhận điểm tựa từ **16. Điều hòa gen (gene regulation) ở bacteria: operon cho thấy economy của unicellular life** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Chromatin: DNA phải được đóng gói nhưng vẫn cần đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Bacterial operons coordinate nearby genes for economy; eukaryotic regulation distributes control across accessibility, transcription, RNA, translation, and degradation, making chromatin the first gate.
 
 ## 17. Điều hòa gen ở eukaryote: nhiều tầng (layer / 계층) hơn vì multicellularity
 
@@ -210,7 +210,7 @@ Eukaryotic điều hòa gen có thể diễn ra ở:
 
 Các tầng (layer / 계층) tạo khả năng điều khiển (control / 제어) chính xác theo loại tế bào (cell type), development và tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Ở chặng này của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **18. Chromatin: DNA phải được đóng gói nhưng vẫn cần đọc** tiếp nhận điểm tựa từ **17. Điều hòa gen ở eukaryote: nhiều tầng (layer / 계층) hơn vì multicellularity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Epigenetic regulation: cùng chuỗi (sequence / 시퀀스), khác trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Multilayer regulation requires a physical access mechanism; chromatin compaction controls that access, and epigenetic marks can change the state without changing the underlying DNA sequence.
 
 ## 18. Chromatin: DNA phải được đóng gói nhưng vẫn cần đọc
 
