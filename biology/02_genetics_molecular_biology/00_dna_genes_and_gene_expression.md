@@ -124,7 +124,7 @@ Splicing phải rất chính xác; mutation tại splice site có thể làm tra
 
 Gen kiến trúc (architecture / 아키텍처) là một phần của regulation.
 
-> **Chuyển mạch:** Trong **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **11. RNA có nhiều role hơn messenger** tiếp nhận điểm tựa từ **10. Intron và exon: đừng hiểu exon = coding hoàn toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Mã di truyền (genetic code): chuỗi (sequence / 시퀀스) cơ sở (base / 기반) được ánh xạ sang axit amin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Splicing defines mature RNA boundaries; RNA then acts as message, adapter, catalyst, or regulator, and the genetic code specifies how the coding message is read into amino acids.
 
 ## 11. RNA có nhiều role hơn messenger
 
@@ -134,7 +134,7 @@ Ngoài ra còn microRNA, long RNA không mã hóa, small nuclear RNA và nhiều
 
 RNA vì vậy vừa là message, adapter, chất xúc tác (catalyst), scaffold và regulator.
 
-> **Chuyển mạch:** Ở chặng này của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **11. RNA có nhiều role hơn messenger** xác định đầu vào; **12. Mã di truyền (genetic code): chuỗi (sequence / 시퀀스) cơ sở (base / 기반) được ánh xạ sang axit amin** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Dịch mã (translation): ribosome biến chuỗi (sequence / 시퀀스) thành polypeptide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** RNA’s roles provide the substrate and machinery; codons map triplets to amino acids with redundancy, then the ribosome converts that mapping into a growing polypeptide.
 
 ## 12. Mã di truyền (genetic code): chuỗi (sequence / 시퀀스) cơ sở (base / 기반) được ánh xạ sang axit amin
 
@@ -144,7 +144,7 @@ Vì 4³ = 64 codon nhưng chỉ khoảng 20 axit amin phổ biến, mã (code / 
 
 Đây là lý do một số substitution là **synonymous** và không đổi axit amin, dù vẫn có thể ảnh hưởng splicing, RNA stability hoặc translation efficiency trong ngữ cảnh (context / 맥락) tertentu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **12. Mã di truyền (genetic code): chuỗi (sequence / 시퀀스) cơ sở (base / 기반) được ánh xạ sang axit amin** xác định đầu vào; **13. Dịch mã (translation): ribosome biến chuỗi (sequence / 시퀀스) thành polypeptide** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Protein targeting: tạo đúng protein nhưng gửi sai chỗ vẫn có thể mất hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** The genetic code defines an amino-acid sequence, but translation produces only a nascent chain; folding, modification, assembly, and targeting determine whether that chain reaches its function.
 
 ## 13. Dịch mã (translation): ribosome biến chuỗi (sequence / 시퀀스) thành polypeptide
 
@@ -156,7 +156,7 @@ Nhưng protein mới tạo chưa chắc functional. Nó cần folding, modificat
 
 Học thuyết trung tâm vì vậy không kết thúc ở “protein được tạo”.
 
-> **Chuyển mạch:** Trong **DNA, Gene và Biểu hiện gene — DNA, Genes and Gene Expression (DNA, 유전자와 유전자 발현)**, **13. Dịch mã (translation): ribosome biến chuỗi (sequence / 시퀀스) thành polypeptide** xác định đầu vào; **14. Protein targeting: tạo đúng protein nhưng gửi sai chỗ vẫn có thể mất hàm (function / 함수)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Học thuyết trung tâm nên hiểu thế nào cho đúng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Translation makes a polypeptide, while targeting routes and folds it into the correct cellular compartment; the central dogma is therefore a causal chain, not a guarantee of function.
 
 ## 14. Protein targeting: tạo đúng protein nhưng gửi sai chỗ vẫn có thể mất hàm (function / 함수)
 
