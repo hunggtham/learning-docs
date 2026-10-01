@@ -16,7 +16,7 @@ Functional description, neural cơ chế (mechanism / 메커니즘) và first-pe
 
 Dualism nhấn mạnh sự khác biệt giữa mental và vật lý (physical / 물리적); physicalism tìm cách giải thích mind trong thế giới vật lý; functionalism nhận diện trạng thái qua vai trò nhân quả; enactivism/embodied views nhấn mạnh body–môi trường (environment / 환경) coupling. Đây là các khung triết học, không phải tên của một thí nghiệm duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Định danh (identity / 식별자) và continuity** tiếp nhận điểm tựa từ **Các lập trường cần phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo lường (measurement / 측정) không giải quyết ontology một mình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Dualism, physicalism, functionalism, and enactivism disagree about what mind is; personal identity tests those commitments against memory, body, agency, and continuity across change.
 
 ## Định danh (identity / 식별자) và continuity
 
@@ -24,19 +24,19 @@ Bộ nhớ (memory / 메모리), body, psychological mẫu (pattern / 패턴), a
 
 Đọc tiếp Psychology về [brain and mind](../../psychology/01_brain_and_mind/00_nervous_system_and_brain.md) và [consciousness](../../psychology/01_brain_and_mind/09_consciousness_theories_and_evidence.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Định danh (identity / 식별자) và continuity** nêu điều cần giải thích; **Đo lường (measurement / 측정) không giải quyết ontology một mình** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Định danh (identity / 식별자), agency và continuity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Identity criteria make continuity claims testable in thought experiments and psychology; measurement can constrain the evidence, but it cannot by itself decide which ontology the criteria presuppose.
 
 ## Đo lường (measurement / 측정) không giải quyết ontology một mình
 
 Một report chủ quan, behavioral truy cập (access / 접근), neural decoding và perturbation có thể cung cấp bằng chứng (evidence / 증거) cho các khía cạnh khác nhau của consciousness. Neural activity tương quan với report không tự chứng minh activity đó là sufficient điều kiện (condition / 조건); absence of report cũng có thể do communication thất bại (failure / 실패), attention hoặc tác vụ (task / 작업) demand. Vì vậy, lý thuyết (theory / 이론) cần tạo predictions phân biệt được giữa các mô hình (model / 모델), không chỉ giải thích mọi kết quả sau khi biết dữ liệu.
 
-> **Chuyển mạch:** Trong **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Đo lường (measurement / 측정) không giải quyết ontology một mình** nêu điều cần giải thích; **Định danh (identity / 식별자), agency và continuity** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Measurement narrows which neural, behavioral, and first-person reports co-vary; identity and agency ask how those observations relate to a continuing subject, leading to consciousness as experience plus access.
 
 ## Định danh (identity / 식별자), agency và continuity
 
 Trong thực hành, personal định danh (identity / 식별자) thường vận hành như một bundle: bộ nhớ (memory / 메모리) để quy trách nhiệm, body để duy trì nhân quả (causal / 인과적) continuity, values để nhận diện tác nhân (agent / 에이전트), xã hội (social / 사회적) recognition để phân bổ rights. Thought experiment hữu ích khi làm một thành phần biến mất, nhưng chính sách (policy / 정책) cần thêm empirical bằng chứng (evidence / 증거) về năng lực, vulnerability và khả năng phục hồi — không thể suy ra trực tiếp từ intuition về “cùng người”.
 
-> **Chuyển mạch:** Ở chặng này của **Mind, Consciousness và Personal định danh (identity / 식별자)**, **Định danh (identity / 식별자), agency và continuity** nêu điều cần giải thích; **Độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Agency and continuity frame the subject-level problem; the consciousness pass compares lived experience with measurable access and neural evidence, closing the file without collapsing phenomenology into a single metric.
 
 ## Độ sâu (depth / 깊이) pass: consciousness giữa experience và đo lường (measurement / 측정)
 
